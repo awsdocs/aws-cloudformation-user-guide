@@ -1,0 +1,52 @@
+# Amazon EC2 Systems Manager MaintenanceWindowTask NotificationConfig<a name="aws-properties-ssm-maintenancewindowtask-notificationconfig"></a>
+
+<a name="aws-properties-ssm-maintenancewindowtask-notificationconfig-description"></a>The `NotificationConfig` property type specifies configurations for sending notifications for an Amazon EC2 Systems Manager Maintenance Window task\.
+
+<a name="aws-properties-ssm-maintenancewindowtask-notificationconfig-inheritance"></a> `NotificationConfig` is a property of the [SSM MaintenanceWindowTask MaintenanceWindowRunCommandParameters](aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.md) property type\.
+
+## Syntax<a name="aws-properties-ssm-maintenancewindowtask-notificationconfig-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+
+### JSON<a name="aws-properties-ssm-maintenancewindowtask-notificationconfig-syntax.json"></a>
+
+```
+{
+  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationarn)" : String,
+  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationtype)" : String,
+  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationevents)" : [ String, ... ]
+}
+```
+
+### YAML<a name="aws-properties-ssm-maintenancewindowtask-notificationconfig-syntax.yaml"></a>
+
+```
+[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationarn): String
+[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationtype): String
+[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationevents): 
+  - String
+```
+
+## Properties<a name="aws-properties-ssm-maintenancewindowtask-notificationconfig-properties"></a>
+
+`NotificationArn`  
+An Amazon Resource Name \(ARN\) for an Amazon SNS topic\. Run Command pushes notifications about command status changes to this topic\.  
+ *Required*: No  
+ *Type*: String  
+ *Update requires*: No interruption 
+
+`NotificationType`  
+The notification type\.  
+
++ `Command`: Receive notification when the status of a command changes\.
+
++ `Invocation`: For commands sent to multiple instances, receive notification on a per\-instance basis when the status of a command changes\.
+ *Required*: No  
+ *Type*: String  
+ *Update requires*: No interruption 
+
+`NotificationEvents`  
+The different events that you can receive notifications for\. These events include the following: `All` \(events\), `InProgress`, `Success`, `TimedOut`, `Cancelled`, `Failed`\. To learn more about these events, see [ Setting Up Events and Notifications](http://docs.aws.amazon.com/systems-manager/latest/userguide/monitor-commands.html) in the *Amazon EC2 Systems Manager User Guide*\.  
+ *Required*: No  
+ *Type*: List of strings  
+ *Update requires*: No interruption 

@@ -1,0 +1,86 @@
+# AWS::IoT::PolicyPrincipalAttachment<a name="aws-resource-iot-policyprincipalattachment"></a>
+
+Use the `AWS::IoT::PolicyPrincipalAttachment` resource to attach an AWS IoT policy to a principal \(an X\.509 certificate or other credential\)\.
+
+For information about working with AWS IoT policies and principals, see [Authorization](http://docs.aws.amazon.com/iot/latest/developerguide/authorization.html) in the *AWS IoT Developer Guide*\.
+
+## Syntax<a name="w3ab2c21c10d750b7"></a>
+
+### JSON<a name="aws-resource-iot-policyprincipalattachment-syntax.json"></a>
+
+```
+{
+   "Type": "AWS::IoT::PolicyPrincipalAttachment",
+   "Properties": {
+      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-policyprincipalattachment-policyname)": String,
+      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-policyprincipalattachment-principal)": String
+    }
+}
+```
+
+### YAML<a name="aws-resource-iot-policyprincipalattachment-syntax.yaml"></a>
+
+```
+Type: "AWS::IoT::PolicyPrincipalAttachment"
+  Properties:
+    [[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-policyprincipalattachment-policyname): String
+    [[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-policyprincipalattachment-principal): String
+```
+
+## Properties<a name="w3ab2c21c10d750b9"></a>
+
+`PolicyName`  
+The name of the policy\.  
+*Required: *Yes  
+*Type*: String  
+*Update requires*: Replacement
+
+`Principal`  
+The principal, which can be a certificate ARN \(as returned from the `CreateCertificate` operation\) or an Amazon Cognito ID\.  
+*Required: *Yes  
+*Type*: String  
+*Update requires*: Replacement
+
+## Example<a name="w3ab2c21c10d750c11"></a>
+
+The following example attaches a policy to a principal\.
+
+### JSON<a name="aws-resource-iot-policyprincipalattachment-example.json"></a>
+
+```
+{
+   "AWSTemplateFormatVersion": "2010-09-09",
+   "Resources": {
+      "MyPolicyPrincipalAttachment": {
+         "Type": "AWS::IoT::PolicyPrincipalAttachment",
+         "Properties": {
+            "PolicyName": {
+               "Ref": "NameParameter"
+            },
+            "Principal": "arn:aws:iot:ap-southeast-2:123456789012:cert/a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2"
+         }
+      }
+   },
+   "Parameters": {
+      "NameParameter": {
+         "Type": "String"
+      }
+   }
+}
+```
+
+### YAML<a name="aws-resource-iot-policyprincipalattachment-example.yaml"></a>
+
+```
+AWSTemplateFormatVersion: "2010-09-09"
+Resources: 
+  MyPolicyPrincipalAttachment: 
+    Type: "AWS::IoT::PolicyPrincipalAttachment"
+    Properties: 
+      PolicyName: 
+        Ref: "NameParameter"
+      Principal: "arn:aws:iot:ap-southeast-2:123456789012:cert/a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2"
+Parameters: 
+  NameParameter: 
+    Type: "String"
+```

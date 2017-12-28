@@ -1,0 +1,242 @@
+# AWS::ApiGateway::DocumentationVersion<a name="aws-resource-apigateway-documentationversion"></a>
+
+The `AWS::ApiGateway::DocumentationVersion` resource creates a snapshot of the documentation for an Amazon API Gateway API entity\. For more information, see [Representation of API Documentation in API Gateway](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api-content-representation.html) in the *API Gateway Developer Guide*\.
+
+
++ [Syntax](#aws-resource-apigateway-documentationversion-syntax)
++ [Properties](#aws-resource-apigateway-documentationversion-properties)
++ [Example](#aws-resource-apigateway-documentationversion-examples)
+
+## Syntax<a name="aws-resource-apigateway-documentationversion-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+
+### JSON<a name="aws-resource-apigateway-documentationversion-syntax.json"></a>
+
+```
+{
+  "Type" : "AWS::ApiGateway::DocumentationVersion",
+  "Properties" : {
+    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationversion-description)" : String,
+    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationversion-documentationversion)" : String,
+    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationversion-restapiid)" : String
+  }
+}
+```
+
+### YAML<a name="aws-resource-apigateway-documentationversion-syntax.yaml"></a>
+
+```
+Type: "AWS::ApiGateway::DocumentationVersion"
+Properties:
+  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationversion-description): String
+  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationversion-documentationversion): String
+  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationversion-restapiid): String
+```
+
+## Properties<a name="aws-resource-apigateway-documentationversion-properties"></a>
+
+**Note**  
+For more information about each property, see [ DocumentationVersion](http://docs.aws.amazon.com/apigateway/api-reference/resource/documentation-version) in the *Amazon API Gateway REST API Reference*\.
+
+`Description`  
+The description of the API documentation snapshot\.  
+ *Required*: No  
+*Type*: String  
+ *Update requires*: No interruption 
+
+`DocumentationVersion`  
+The version identifier of the API documentation snapshot\.  
+ *Required*: Yes  
+*Type*: String  
+ *Update requires*: Replacement 
+
+`RestApiId`  
+The identifier of the targeted API entity\.  
+ *Required*: Yes  
+*Type*: String  
+ *Update requires*: Replacement 
+
+## Example<a name="aws-resource-apigateway-documentationversion-examples"></a>
+
+### <a name="w3ab2c21c10c44c11b3"></a>
+
+The following example associates a documentation version with an API stage\.
+
+#### JSON<a name="aws-resource-apigateway-documentationversion-example1.json"></a>
+
+```
+{
+    "Parameters": {
+        "apiName": {
+            "Type": "String"
+        },
+        "description": {
+            "Type": "String"
+        },
+        "property": {
+            "Type": "String"
+        },
+        "stageName": {
+            "Type": "String"
+        },
+        "type": {
+            "Type": "String"
+        },
+        "version": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "Deployment": {
+            "Type": "AWS::ApiGateway::Deployment",
+            "Properties": {
+                "RestApiId": {
+                    "Ref": "RestApi"
+                }
+            },
+            "DependsOn": [
+                "Method"
+            ]
+        },
+        "DocumentationPart": {
+            "Type": "AWS::ApiGateway::DocumentationPart",
+            "Properties": {
+                "Location": {
+                    "Type": {
+                        "Ref": "type"
+                    }
+                },
+                "RestApiId": {
+                    "Ref": "RestApi"
+                },
+                "Property": {
+                    "Ref": "property"
+                }
+            }
+        },
+        "DocumentationVersion": {
+            "Type": "AWS::ApiGateway::DocumentationVersion",
+            "Properties": {
+                "Description": {
+                    "Ref": "description"
+                },
+                "DocumentationVersion": {
+                    "Ref": "version"
+                },
+                "RestApiId": {
+                    "Ref": "RestApi"
+                }
+            },
+            "DependsOn": "DocumentationPart"
+        },
+        "Method": {
+            "Type": "AWS::ApiGateway::Method",
+            "Properties": {
+                "AuthorizationType": "NONE",
+                "HttpMethod": "POST",
+                "ResourceId": {
+                    "Fn::GetAtt": [
+                        "RestApi",
+                        "RootResourceId"
+                    ]
+                },
+                "RestApiId": {
+                    "Ref": "RestApi"
+                },
+                "Integration": {
+                    "Type": "MOCK"
+                }
+            }
+        },
+        "RestApi": {
+            "Type": "AWS::ApiGateway::RestApi",
+            "Properties": {
+                "Name": {
+                    "Ref": "apiName"
+                }
+            }
+        },
+        "Stage": {
+            "Type": "AWS::ApiGateway::Stage",
+            "Properties": {
+                "DeploymentId": {
+                    "Ref": "Deployment"
+                },
+                "DocumentationVersion": {
+                    "Ref": "version"
+                },
+                "RestApiId": {
+                    "Ref": "RestApi"
+                },
+                "StageName": {
+                    "Ref": "stageName"
+                }
+            },
+            "DependsOn": "DocumentationVersion"
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-apigateway-documentationversion-example1.yaml"></a>
+
+```
+Parameters:
+  apiName:
+    Type: String
+  description:
+    Type: String
+  property:
+    Type: String
+  stageName:
+    Type: String
+  type:
+    Type: String
+  version:
+    Type: String
+Resources:
+  Deployment:
+    Type: 'AWS::ApiGateway::Deployment'
+    Properties:
+      RestApiId: !Ref RestApi
+    DependsOn:
+      - Method
+  DocumentationPart:
+    Type: 'AWS::ApiGateway::DocumentationPart'
+    Properties:
+      Location:
+        Type: !Ref type
+      RestApiId: !Ref RestApi
+      Property: !Ref property
+  DocumentationVersion:
+    Type: 'AWS::ApiGateway::DocumentationVersion'
+    Properties:
+      Description: !Ref description
+      DocumentationVersion: !Ref version
+      RestApiId: !Ref RestApi
+    DependsOn: DocumentationPart
+  Method:
+    Type: 'AWS::ApiGateway::Method'
+    Properties:
+      AuthorizationType: NONE
+      HttpMethod: POST
+      ResourceId: !GetAtt 
+        - RestApi
+        - RootResourceId
+      RestApiId: !Ref RestApi
+      Integration:
+        Type: MOCK
+  RestApi:
+    Type: 'AWS::ApiGateway::RestApi'
+    Properties:
+      Name: !Ref apiName
+  Stage:
+    Type: 'AWS::ApiGateway::Stage'
+    Properties:
+      DeploymentId: !Ref Deployment
+      DocumentationVersion: !Ref version
+      RestApiId: !Ref RestApi
+      StageName: !Ref stageName
+    DependsOn: DocumentationVersion
+```
