@@ -12,28 +12,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-tagfilter-key)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-tagfilter-value)" : String
+  "[Key](#cfn-s3-bucket-tagfilter-key)" : String,
+  "[Value](#cfn-s3-bucket-tagfilter-value)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-s3-bucket-tagfilter-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-tagfilter-key): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-tagfilter-value): String
+[Key](#cfn-s3-bucket-tagfilter-key): String
+[Value](#cfn-s3-bucket-tagfilter-value): String
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-tagfilter-properties"></a>
 
-`Key`  
+`Key`  <a name="cfn-s3-bucket-tagfilter-key"></a>
 The tag key\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Value`  
+`Value`  <a name="cfn-s3-bucket-tagfilter-value"></a>
 The tag value\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

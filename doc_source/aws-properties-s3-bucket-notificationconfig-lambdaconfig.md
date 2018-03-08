@@ -2,45 +2,45 @@
 
 `LambdaConfigurations` is a property of the [Amazon S3 Bucket NotificationConfiguration](aws-properties-s3-bucket-notificationconfig.md) property that describes the AWS Lambda \(Lambda\) functions to invoke and the events for which to invoke them\.
 
-## Syntax<a name="w3ab2c21c14e1497b5"></a>
+## Syntax<a name="w3ab2c21c14e1537b5"></a>
 
 ### JSON<a name="aws-properties-s3-bucket-notificationconfig-lambdaconfig-syntax.json"></a>
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-notificationconfig-lambdaconfig-event)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-notificationconfig-lambdaconfig-filter)" : Filter,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-notificationconfig-lambdaconfig-function)" : String 
+  "[Event](#cfn-s3-bucket-notificationconfig-lambdaconfig-event)" : String,
+  "[Filter](#cfn-s3-bucket-notificationconfig-lambdaconfig-filter)" : Filter,
+  "[Function](#cfn-s3-bucket-notificationconfig-lambdaconfig-function)" : String 
 }
 ```
 
 ### YAML<a name="aws-properties-s3-bucket-notificationconfig-lambdaconfig-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-notificationconfig-lambdaconfig-event): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-notificationconfig-lambdaconfig-filter):
+[Event](#cfn-s3-bucket-notificationconfig-lambdaconfig-event): String
+[Filter](#cfn-s3-bucket-notificationconfig-lambdaconfig-filter):
   Filter
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-notificationconfig-lambdaconfig-function): String
+[Function](#cfn-s3-bucket-notificationconfig-lambdaconfig-function): String
 ```
 
-## Properties<a name="w3ab2c21c14e1497b7"></a>
+## Properties<a name="w3ab2c21c14e1537b7"></a>
 
-`Event`  
+`Event`  <a name="cfn-s3-bucket-notificationconfig-lambdaconfig-event"></a>
 The S3 bucket event for which to invoke the Lambda function\. For more information, see [Supported Event Types](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon Simple Storage Service Developer Guide*\.  
 *Required: *Yes  
 *Type*: String
 
-`Filter`  
+`Filter`  <a name="cfn-s3-bucket-notificationconfig-lambdaconfig-filter"></a>
 The filtering rules that determine which objects invoke the Lambda function\. For example, you can create a filter so that only image files with a `.jpg` extension invoke the function when they are added to the S3 bucket\.  
 *Required: *No  
 *Type*: [Amazon S3 Bucket NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md)
 
-`Function`  
+`Function`  <a name="cfn-s3-bucket-notificationconfig-lambdaconfig-function"></a>
 The Amazon Resource Name \(ARN\) of the Lambda function that Amazon S3 invokes when the specified event type occurs\.  
 *Required: *Yes  
 *Type*: String
 
-## Example<a name="w3ab2c21c14e1497b9"></a>
+## Example<a name="w3ab2c21c14e1537b9"></a>
 
 The following example creates a `NotificationConfiguration` for Lambda using an S3 bucket named `EncryptionServiceBucket`\.
 

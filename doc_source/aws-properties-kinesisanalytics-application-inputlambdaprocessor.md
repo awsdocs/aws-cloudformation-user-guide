@@ -12,28 +12,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-inputlambdaprocessor-resourcearn)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-inputlambdaprocessor-rolearn)" : String
+  "[ResourceARN](#cfn-kinesisanalytics-application-inputlambdaprocessor-resourcearn)" : String,
+  "[RoleARN](#cfn-kinesisanalytics-application-inputlambdaprocessor-rolearn)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisanalytics-application-inputlambdaprocessor-syntax.yaml"></a>
 
 ```
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-inputlambdaprocessor-resourcearn): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-inputlambdaprocessor-rolearn): String
+  [ResourceARN](#cfn-kinesisanalytics-application-inputlambdaprocessor-resourcearn): String
+  [RoleARN](#cfn-kinesisanalytics-application-inputlambdaprocessor-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-application-inputlambdaprocessor-properties"></a>
 
-`ResourceARN`  
+`ResourceARN`  <a name="cfn-kinesisanalytics-application-inputlambdaprocessor-resourcearn"></a>
 The ARN of the AWS Lambda function that operates on records in the stream\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`RoleARN`  
+`RoleARN`  <a name="cfn-kinesisanalytics-application-inputlambdaprocessor-rolearn"></a>
 The ARN of the IAM role that is used to access the AWS Lambda function\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

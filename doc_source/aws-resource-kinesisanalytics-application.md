@@ -12,10 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::KinesisAnalytics::Application",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-applicationname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-applicationdescription)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-applicationcode)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-inputs)" : [ Input, ... ]
+    "[ApplicationName](#cfn-kinesisanalytics-application-applicationname)" : String,
+    "[ApplicationDescription](#cfn-kinesisanalytics-application-applicationdescription)" : String,
+    "[ApplicationCode](#cfn-kinesisanalytics-application-applicationcode)" : String,
+    "[Inputs](#cfn-kinesisanalytics-application-inputs)" : [ [*Input*](aws-properties-kinesisanalytics-application-input.md), ... ]
   }
 }
 ```
@@ -25,38 +25,38 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::KinesisAnalytics::Application"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-applicationname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-applicationdescription): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-applicationcode): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-inputs): 
-    - Input
+  [ApplicationName](#cfn-kinesisanalytics-application-applicationname): String
+  [ApplicationDescription](#cfn-kinesisanalytics-application-applicationdescription): String
+  [ApplicationCode](#cfn-kinesisanalytics-application-applicationcode): String
+  [Inputs](#cfn-kinesisanalytics-application-inputs): 
+    - [*Input*](aws-properties-kinesisanalytics-application-input.md)
 ```
 
 ## Properties<a name="aws-resource-kinesisanalytics-application-properties"></a>
 
-`ApplicationName`  
+`ApplicationName`  <a name="cfn-kinesisanalytics-application-applicationname"></a>
 The name of your Amazon Kinesis Data Analytics application\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`ApplicationDescription`  
+`ApplicationDescription`  <a name="cfn-kinesisanalytics-application-applicationdescription"></a>
 The summary description of the application\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`ApplicationCode`  
+`ApplicationCode`  <a name="cfn-kinesisanalytics-application-applicationcode"></a>
 One or more SQL statements that read input data, transform it, and generate output\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Inputs`  
+`Inputs`  <a name="cfn-kinesisanalytics-application-inputs"></a>
 Use this parameter to configure the application input\.  
  *Required*: Yes  
  *Type*: List of [Kinesis Data Analytics Application Input](aws-properties-kinesisanalytics-application-input.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Example<a name="aws-resource-kinesisanalytics-application-examples"></a>
 

@@ -12,29 +12,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-servicerole)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-versionlifecycleconfig)" : ApplicationVersionLifecycleConfig
+  "[ServiceRole](#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-servicerole)" : String,
+  "[VersionLifecycleConfig](#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-versionlifecycleconfig)" : [*ApplicationVersionLifecycleConfig*](aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.md)
 }
 ```
 
 ### YAML<a name="aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-servicerole): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-versionlifecycleconfig):
+[ServiceRole](#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-servicerole): String
+[VersionLifecycleConfig](#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-versionlifecycleconfig):
   ApplicationVersionLifecycleConfig
 ```
 
 ## Properties<a name="aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig-properties"></a>
 
-`ServiceRole`  
+`ServiceRole`  <a name="cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-servicerole"></a>
 The ARN of an IAM service role that Elastic Beanstalk has permission to assume\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`VersionLifecycleConfig`  
+`VersionLifecycleConfig`  <a name="cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-versionlifecycleconfig"></a>
 Defines lifecycle settings for application versions\.  
  *Required*: No  
  *Type*: [Elastic Beanstalk Application ApplicationVersionLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

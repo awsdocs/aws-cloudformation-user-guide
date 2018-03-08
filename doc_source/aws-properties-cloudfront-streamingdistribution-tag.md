@@ -12,31 +12,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudfront-streamingdistribution-tag-key)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudfront-streamingdistribution-tag-value)" : String
+  "[Key](#cfn-cloudfront-streamingdistribution-tag-key)" : String,
+  "[Value](#cfn-cloudfront-streamingdistribution-tag-value)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-cloudfront-streamingdistribution-tag-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudfront-streamingdistribution-tag-key): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudfront-streamingdistribution-tag-value): String
+[Key](#cfn-cloudfront-streamingdistribution-tag-key): String
+[Value](#cfn-cloudfront-streamingdistribution-tag-value): String
 ```
 
 ## Properties<a name="aws-properties-cloudfront-streamingdistribution-tag-properties"></a>
 
-`Key`  
+`Key`  <a name="cfn-cloudfront-streamingdistribution-tag-key"></a>
 A string that contains `Tag` key\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Value`  
+`Value`  <a name="cfn-cloudfront-streamingdistribution-tag-value"></a>
 A string that contains an optional `Tag` value\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-cloudfront-streamingdistribution-seealso"></a>
 

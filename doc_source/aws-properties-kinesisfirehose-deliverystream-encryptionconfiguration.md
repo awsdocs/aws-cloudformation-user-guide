@@ -10,27 +10,27 @@ The `EncryptionConfiguration` property type specifies the encryption settings th
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-kmsencryptionconfig)" : KMSEncryptionConfig,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-noencryptionconfig)" : String
+  "[KMSEncryptionConfig](#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-kmsencryptionconfig)" : [KMSEncryptionConfig](aws-properties-kinesisfirehose-deliverystream-kmsencryptionconfig.md),
+  "[NoEncryptionConfig](#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-noencryptionconfig)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisfirehose-deliverystream-encryptionconfiguration-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-kmsencryptionconfig):
-  KMSEncryptionConfig
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-noencryptionconfig): String
+[KMSEncryptionConfig](#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-kmsencryptionconfig):
+  [KMSEncryptionConfig](aws-properties-kinesisfirehose-deliverystream-kmsencryptionconfig.md)
+[NoEncryptionConfig](#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-noencryptionconfig): String
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-encryptionconfiguration-properties"></a>
 
-`KMSEncryptionConfig`  
+`KMSEncryptionConfig`  <a name="cfn-kinesisfirehose-deliverystream-encryptionconfiguration-kmsencryptionconfig"></a>
 The AWS Key Management Service \(AWS KMS\) encryption key that Amazon S3 uses to encrypt your data\.  
 *Required: *No  
 *Type*: [Amazon Kinesis Firehose DeliveryStream KMSEncryptionConfig](aws-properties-kinesisfirehose-deliverystream-kmsencryptionconfig.md)
 
-`NoEncryptionConfig`  
+`NoEncryptionConfig`  <a name="cfn-kinesisfirehose-deliverystream-encryptionconfiguration-noencryptionconfig"></a>
 Disables encryption\. For valid values, see the `NoEncryptionConfig` content for the [EncryptionConfiguration](http://docs.aws.amazon.com/firehose/latest/APIReference/API_EncryptionConfiguration.html) data type in the *Amazon Kinesis Firehose API Reference*\.  
 *Required: *No  
 *Type*: String

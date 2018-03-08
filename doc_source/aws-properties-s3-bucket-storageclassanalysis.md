@@ -12,20 +12,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-storageclassanalysis-dataexport)" : DataExport
+  "[DataExport](#cfn-s3-bucket-storageclassanalysis-dataexport)" : [*DataExport*](aws-properties-s3-bucket-dataexport.md)
 }
 ```
 
 ### YAML<a name="aws-properties-s3-bucket-storageclassanalysis-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-storageclassanalysis-dataexport): DataExport
+[DataExport](#cfn-s3-bucket-storageclassanalysis-dataexport): DataExport
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-storageclassanalysis-properties"></a>
 
-`DataExport`  
+`DataExport`  <a name="cfn-s3-bucket-storageclassanalysis-dataexport"></a>
 Describes how data related to the storage class analysis should be exported\.  
  *Required*: No  
  *Type*: [Amazon S3 Bucket DataExport](aws-properties-s3-bucket-dataexport.md)   
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

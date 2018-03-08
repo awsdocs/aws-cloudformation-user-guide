@@ -12,31 +12,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecr-repository-lifecyclepolicy-lifecyclepolicytext)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecr-repository-lifecyclepolicy-registryid)" : String
+  "[LifecyclePolicyText](#cfn-ecr-repository-lifecyclepolicy-lifecyclepolicytext)" : String,
+  "[RegistryId](#cfn-ecr-repository-lifecyclepolicy-registryid)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-ecr-repository-lifecyclepolicy-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecr-repository-lifecyclepolicy-lifecyclepolicytext): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecr-repository-lifecyclepolicy-registryid): String
+[LifecyclePolicyText](#cfn-ecr-repository-lifecyclepolicy-lifecyclepolicytext): String
+[RegistryId](#cfn-ecr-repository-lifecyclepolicy-registryid): String
 ```
 
 ## Properties<a name="aws-properties-ecr-repository-lifecyclepolicy-properties"></a>
 
-`LifecyclePolicyText`  
+`LifecyclePolicyText`  <a name="cfn-ecr-repository-lifecyclepolicy-lifecyclepolicytext"></a>
 The JSON repository policy text to apply to the repository\. The length must be between 100 and 10,240 characters\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`RegistryId`  
+`RegistryId`  <a name="cfn-ecr-repository-lifecyclepolicy-registryid"></a>
 The AWS account ID that's associated with the registry that contains the repository\. If you do n't specify a registry, the default registry is used\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ecr-repository-lifecyclepolicy-seealso"></a>
 

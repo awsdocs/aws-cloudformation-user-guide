@@ -4,7 +4,7 @@ Use the `AWS::IoT::PolicyPrincipalAttachment` resource to attach an AWS IoT poli
 
 For information about working with AWS IoT policies and principals, see [Authorization](http://docs.aws.amazon.com/iot/latest/developerguide/authorization.html) in the *AWS IoT Developer Guide*\.
 
-## Syntax<a name="w3ab2c21c10d750b7"></a>
+## Syntax<a name="w3ab2c21c10d753b7"></a>
 
 ### JSON<a name="aws-resource-iot-policyprincipalattachment-syntax.json"></a>
 
@@ -12,8 +12,8 @@ For information about working with AWS IoT policies and principals, see [Authori
 {
    "Type": "AWS::IoT::PolicyPrincipalAttachment",
    "Properties": {
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-policyprincipalattachment-policyname)": String,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-policyprincipalattachment-principal)": String
+      "[PolicyName](#cfn-iot-policyprincipalattachment-policyname)": String,
+      "[Principal](#cfn-iot-policyprincipalattachment-principal)": String
     }
 }
 ```
@@ -23,25 +23,25 @@ For information about working with AWS IoT policies and principals, see [Authori
 ```
 Type: "AWS::IoT::PolicyPrincipalAttachment"
   Properties:
-    [[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-policyprincipalattachment-policyname): String
-    [[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-policyprincipalattachment-principal): String
+    [PolicyName](#cfn-iot-policyprincipalattachment-policyname): String
+    [Principal](#cfn-iot-policyprincipalattachment-principal): String
 ```
 
-## Properties<a name="w3ab2c21c10d750b9"></a>
+## Properties<a name="w3ab2c21c10d753b9"></a>
 
-`PolicyName`  
+`PolicyName`  <a name="cfn-iot-policyprincipalattachment-policyname"></a>
 The name of the policy\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Principal`  
+`Principal`  <a name="cfn-iot-policyprincipalattachment-principal"></a>
 The principal, which can be a certificate ARN \(as returned from the `CreateCertificate` operation\) or an Amazon Cognito ID\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Example<a name="w3ab2c21c10d750c11"></a>
+## Example<a name="w3ab2c21c10d753c11"></a>
 
 The following example attaches a policy to a principal\.
 

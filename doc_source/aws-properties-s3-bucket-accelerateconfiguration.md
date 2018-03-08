@@ -12,24 +12,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-accelerateconfiguration-accelerationstatus)" : String
+  "[AccelerationStatus](#cfn-s3-bucket-accelerateconfiguration-accelerationstatus)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-s3-bucket-accelerateconfiguration-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-accelerateconfiguration-accelerationstatus): String
+[AccelerationStatus](#cfn-s3-bucket-accelerateconfiguration-accelerationstatus): String
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-accelerateconfiguration-properties"></a>
 
-`AccelerationStatus`  
+`AccelerationStatus`  <a name="cfn-s3-bucket-accelerateconfiguration-accelerationstatus"></a>
 Sets the transfer acceleration state of the bucket\.  
  *Required*: Yes  
  *Type*: String  
 *Valid values*: `Enabled`, `Suspended`  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Example<a name="aws-properties-s3-bucket-accelerateconfiguration-examples"></a>
 

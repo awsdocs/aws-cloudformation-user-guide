@@ -10,30 +10,30 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-predefinedmetrictype)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-resourcelabel)" : String
+  "[PredefinedMetricType](#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-predefinedmetrictype)" : String,
+  "[ResourceLabel](#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-resourcelabel)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-predefinedmetrictype): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-resourcelabel): String
+[PredefinedMetricType](#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-predefinedmetrictype): String
+[ResourceLabel](#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-resourcelabel): String
 ```
 
 ## Properties<a name="aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification-properties"></a>
 
-For more information about each property, including constraints and valid values, see [PredefinedMetricSpecification](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_PredefinedMetricSpecification.html) in the *Auto Scaling API Reference*\.
+For more information about each property, including constraints and valid values, see [PredefinedMetricSpecification](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_PredefinedMetricSpecification.html) in the *Amazon EC2 Auto Scaling API Reference*\.
 
-`PredefinedMetricType`  
+`PredefinedMetricType`  <a name="cfn-autoscaling-scalingpolicy-predefinedmetricspecification-predefinedmetrictype"></a>
 The metric type\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ResourceLabel`  
+`ResourceLabel`  <a name="cfn-autoscaling-scalingpolicy-predefinedmetricspecification-resourcelabel"></a>
 Identifies the resource associated with the metric type\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

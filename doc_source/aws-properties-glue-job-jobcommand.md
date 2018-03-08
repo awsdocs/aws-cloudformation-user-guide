@@ -12,31 +12,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-jobcommand-scriptlocation)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-jobcommand-name)" : String
+  "[ScriptLocation](#cfn-glue-job-jobcommand-scriptlocation)" : String,
+  "[Name](#cfn-glue-job-jobcommand-name)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-glue-job-jobcommand-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-jobcommand-scriptlocation): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-jobcommand-name): String
+[ScriptLocation](#cfn-glue-job-jobcommand-scriptlocation): String
+[Name](#cfn-glue-job-jobcommand-name): String
 ```
 
 ## Properties<a name="aws-properties-glue-job-jobcommand-properties"></a>
 
 For more information, see [JobCommand Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-job.html#aws-glue-api-jobs-job-JobCommand) in the *AWS Glue Developer Guide*\.
 
-`ScriptLocation`  
+`ScriptLocation`  <a name="cfn-glue-job-jobcommand-scriptlocation"></a>
 The location of a script that executes a job\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Name`  
+`Name`  <a name="cfn-glue-job-jobcommand-name"></a>
 The name of the job command\.  
  *Required*: No  
  *Type*: String  
  *Valid values*: `glueetl`  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

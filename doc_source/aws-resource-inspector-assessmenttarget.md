@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Inspector::AssessmentTarget",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-inspector-assessmenttarget-assessmenttargetname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-inspector-assessmenttarget-resourcegrouparn)" : String
+    "[AssessmentTargetName](#cfn-inspector-assessmenttarget-assessmenttargetname)" : String,
+    "[ResourceGroupArn](#cfn-inspector-assessmenttarget-resourcegrouparn)" : String
   }
 }
 ```
@@ -29,23 +29,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Inspector::AssessmentTarget"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-inspector-assessmenttarget-assessmenttargetname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-inspector-assessmenttarget-resourcegrouparn): String
+  [AssessmentTargetName](#cfn-inspector-assessmenttarget-assessmenttargetname): String
+  [ResourceGroupArn](#cfn-inspector-assessmenttarget-resourcegrouparn): String
 ```
 
 ## Properties<a name="aws-resource-inspector-assessmenttarget-properties"></a>
 
-`AssessmentTargetName`  
+`AssessmentTargetName`  <a name="cfn-inspector-assessmenttarget-assessmenttargetname"></a>
 The name of the Amazon Inspector assessment target\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`ResourceGroupArn`  
+`ResourceGroupArn`  <a name="cfn-inspector-assessmenttarget-resourcegrouparn"></a>
 The ARN that specifies the resource group that is associated with the assessment target\.   
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-inspector-assessmenttarget-returnvalues"></a>
 
@@ -56,7 +56,7 @@ The ARN that specifies the resource group that is associated with the assessment
 `Arn`  
 The Amazon Resource Name \(ARN\) that specifies the assessment target that is created\. 
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\. 
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
 
 ## Examples<a name="aws-resource-inspector-assessmenttarget-examples"></a>
 

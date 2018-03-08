@@ -18,11 +18,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Batch::ComputeEnvironment",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-computeenvironment-type)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-computeenvironment-servicerole)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-computeenvironment-computeenvironmentname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-computeenvironment-computeresources)" : ComputeResources,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-computeenvironment-state)" : String
+    "[Type](#cfn-batch-computeenvironment-type)" : String,
+    "[ServiceRole](#cfn-batch-computeenvironment-servicerole)" : String,
+    "[ComputeEnvironmentName](#cfn-batch-computeenvironment-computeenvironmentname)" : String,
+    "[ComputeResources](#cfn-batch-computeenvironment-computeresources)" : [*ComputeResources*](aws-properties-batch-computeenvironment-computeresources.md),
+    "[State](#cfn-batch-computeenvironment-state)" : String
   }
 }
 ```
@@ -32,41 +32,41 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Batch::ComputeEnvironment"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-computeenvironment-type): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-computeenvironment-servicerole): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-computeenvironment-computeenvironmentname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-computeenvironment-computeresources): 
-    ComputeResources
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-computeenvironment-state): String
+  [Type](#cfn-batch-computeenvironment-type): String
+  [ServiceRole](#cfn-batch-computeenvironment-servicerole): String
+  [ComputeEnvironmentName](#cfn-batch-computeenvironment-computeenvironmentname): String
+  [ComputeResources](#cfn-batch-computeenvironment-computeresources): 
+    [*ComputeResources*](aws-properties-batch-computeenvironment-computeresources.md)
+  [State](#cfn-batch-computeenvironment-state): String
 ```
 
 ## Properties<a name="aws-resource-batch-computeenvironment-properties"></a>
 
-`Type`  
+`Type`  <a name="cfn-batch-computeenvironment-type"></a>
 The type of the compute environment\.  
  *Required*: yes  
 *Type*: String  
  *Update requires*: Replacement 
 
-`ServiceRole`  
+`ServiceRole`  <a name="cfn-batch-computeenvironment-servicerole"></a>
 The service role associated with the compute environment that allows AWS Batch to make calls to AWS API operations on your behalf\.  
  *Required*: yes  
 *Type*: String  
  *Update requires*: No Interruption 
 
-`ComputeEnvironmentName`  
+`ComputeEnvironmentName`  <a name="cfn-batch-computeenvironment-computeenvironmentname"></a>
 The name of the compute environment\.  
  *Required*: no  
 *Type*: String  
  *Update requires*: Replacement 
 
-`ComputeResources`  
+`ComputeResources`  <a name="cfn-batch-computeenvironment-computeresources"></a>
 The compute resources defined for the compute environment\.  
  *Required*: yes  
  *Type*: [AWS Batch ComputeEnvironment ComputeResources](aws-properties-batch-computeenvironment-computeresources.md)  
  *Update requires*: No Interruption 
 
-`State`  
+`State`  <a name="cfn-batch-computeenvironment-state"></a>
 The state of the compute environment\. The valid values are `ENABLED` or `DISABLED`\. An `ENABLED` state indicates that you can register instances with the compute environment and that the associated instances can accept jobs\.  
  *Required*: no  
 *Type*: String  
@@ -78,7 +78,7 @@ The state of the compute environment\. The valid values are `ENABLED` or `DISABL
 
 When you pass the logical ID of an `AWS::Batch::ComputeEnvironment` resource to the intrinsic `Ref` function, the function returns the compute environment ARN, such as `arn:aws:batch:us-east-1:555555555555:compute-environment/M4OnDemand`\. 
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Examples<a name="aws-resource-batch-computeenvironment-examples"></a>
 
@@ -133,31 +133,31 @@ The following example creates a managed compute environment called `C4OnDemand` 
 ComputeEnvironment:
   Type: AWS::Batch::ComputeEnvironment
   Properties:
-    [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-computeenvironment-type): MANAGED
-    [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-computeenvironment-servicerole): arn:aws:iam::111122223333:role/service-role/AWSBatchServiceRole
-    [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-computeenvironment-computeenvironmentname): C4OnDemand
-    [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-computeenvironment-computeresources):
-      [[ERROR] BAD/MISSING LINK TEXT](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-maxvcpus): 128
-      [[ERROR] BAD/MISSING LINK TEXT](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-securitygroupids):
+    [Type](#cfn-batch-computeenvironment-type): MANAGED
+    [ServiceRole](#cfn-batch-computeenvironment-servicerole): arn:aws:iam::111122223333:role/service-role/AWSBatchServiceRole
+    [ComputeEnvironmentName](#cfn-batch-computeenvironment-computeenvironmentname): C4OnDemand
+    [ComputeResources](#cfn-batch-computeenvironment-computeresources):
+      [MaxvCpus](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-maxvcpus): 128
+      [SecurityGroupIds](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-securitygroupids):
         - sg-abcd1234
-      [[ERROR] BAD/MISSING LINK TEXT](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-type): EC2
-      [[ERROR] BAD/MISSING LINK TEXT](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-subnets):
+      [Type](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-type): EC2
+      [Subnets](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-subnets):
         - subnet-aaaaaaaa
         - subnet-bbbbbbbb
         - subnet-cccccccc
-      [[ERROR] BAD/MISSING LINK TEXT](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-minvcpus): 0
-      [[ERROR] BAD/MISSING LINK TEXT](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-imageid): ami-a1b2c3d4
-      [[ERROR] BAD/MISSING LINK TEXT](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-instancerole): ecsInstanceRole
-      [[ERROR] BAD/MISSING LINK TEXT](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-instancetypes):
+      [MinvCpus](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-minvcpus): 0
+      [ImageId](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-imageid): ami-a1b2c3d4
+      [InstanceRole](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-instancerole): ecsInstanceRole
+      [InstanceTypes](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-instancetypes):
         - c4.large
         - c4.xlarge
         - c4.2xlarge
         - c4.4xlarge
         - c4.8xlarge
-      [[ERROR] BAD/MISSING LINK TEXT](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-ec2keypair): id_rsa
-      [[ERROR] BAD/MISSING LINK TEXT](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-tags): {"Name": "Batch Instance - C4OnDemand"}
-      [[ERROR] BAD/MISSING LINK TEXT](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-desiredvcpus): 48
-    [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-computeenvironment-state): ENABLED
+      [Ec2KeyPair](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-ec2keypair): id_rsa
+      [Tags](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-tags): {"Name": "Batch Instance - C4OnDemand"}
+      [DesiredvCpus](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-desiredvcpus): 48
+    [State](#cfn-batch-computeenvironment-state): ENABLED
 ```
 
 ### <a name="aws-resource-batch-computeenvironment-example2"></a>

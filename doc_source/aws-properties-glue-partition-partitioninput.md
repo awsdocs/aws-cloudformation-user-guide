@@ -12,42 +12,42 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-partition-partitioninput-parameters)" : JSON object,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-partition-partitioninput-storagedescriptor)" : StorageDescriptor,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-partition-partitioninput-values)" : [ String, ... ]
+  "[Parameters](#cfn-glue-partition-partitioninput-parameters)" : JSON object,
+  "[StorageDescriptor](#cfn-glue-partition-partitioninput-storagedescriptor)" : [*StorageDescriptor*](aws-properties-glue-partition-storagedescriptor.md),
+  "[Values](#cfn-glue-partition-partitioninput-values)" : [ String, ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-glue-partition-partitioninput-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-partition-partitioninput-parameters): 
+[Parameters](#cfn-glue-partition-partitioninput-parameters): 
   JSON object
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-partition-partitioninput-storagedescriptor): 
-  StorageDescriptor
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-partition-partitioninput-values): 
+[StorageDescriptor](#cfn-glue-partition-partitioninput-storagedescriptor): 
+  [*StorageDescriptor*](aws-properties-glue-partition-storagedescriptor.md)
+[Values](#cfn-glue-partition-partitioninput-values): 
   - String
 ```
 
 ## Properties<a name="aws-properties-glue-partition-partitioninput-properties"></a>
 
-`Parameters`  
+`Parameters`  <a name="cfn-glue-partition-partitioninput-parameters"></a>
 UTF\-8 string–to–UTF\-8 string key\-value pairs that specify the parameters for the partition\.  
  *Required*: No  
  *Type*: JSON object  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`StorageDescriptor`  
+`StorageDescriptor`  <a name="cfn-glue-partition-partitioninput-storagedescriptor"></a>
 Information about the physical storage of the partition\.  
  *Required*: No  
  *Type*: [AWS Glue Partition StorageDescriptor](aws-properties-glue-partition-storagedescriptor.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Values`  
+`Values`  <a name="cfn-glue-partition-partitioninput-values"></a>
 A list of UTF\-8 strings that specify the values of the partition\.  
  *Required*: Yes  
  *Type*: List of String values  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## See Also<a name="aws-properties-glue-partition-partitioninput-seealso"></a>
 

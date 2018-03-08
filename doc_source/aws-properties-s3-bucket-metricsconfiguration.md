@@ -12,39 +12,39 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-metricsconfiguration-id)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-metricsconfiguration-prefix)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-metricsconfiguration-tagfilters)" : [ TagFilter, ... ]
+  "[Id](#cfn-s3-bucket-metricsconfiguration-id)" : String,
+  "[Prefix](#cfn-s3-bucket-metricsconfiguration-prefix)" : String,
+  "[TagFilters](#cfn-s3-bucket-metricsconfiguration-tagfilters)" : [ [*TagFilter*](aws-properties-s3-bucket-tagfilter.md), ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-s3-bucket-metricsconfiguration-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-metricsconfiguration-id): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-metricsconfiguration-prefix): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-metricsconfiguration-tagfilters): 
-  - TagFilter
+[Id](#cfn-s3-bucket-metricsconfiguration-id): String
+[Prefix](#cfn-s3-bucket-metricsconfiguration-prefix): String
+[TagFilters](#cfn-s3-bucket-metricsconfiguration-tagfilters): 
+  - [*TagFilter*](aws-properties-s3-bucket-tagfilter.md)
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-metricsconfiguration-properties"></a>
 
 For more information and valid values, see [PUT Bucket metrics](http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTMetricConfiguration.html) in the *Amazon Simple Storage Service \(Amazon S3\) API Reference*\.
 
-`Id`  
+`Id`  <a name="cfn-s3-bucket-metricsconfiguration-id"></a>
 The ID used to identify the metrics configuration\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Prefix`  
+`Prefix`  <a name="cfn-s3-bucket-metricsconfiguration-prefix"></a>
 The prefix that an object must have to be included in the metrics results\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`TagFilters`  
+`TagFilters`  <a name="cfn-s3-bucket-metricsconfiguration-tagfilters"></a>
 Specifies a list of tag filters to use as a metrics configuration filter\. The metrics configuration includes only objects that meet the filter's criteria\.   
  *Required*: No  
  *Type*: List of [Amazon S3 Bucket TagFilter](aws-properties-s3-bucket-tagfilter.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

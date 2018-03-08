@@ -4,7 +4,7 @@ The `AWS::SNS::TopicPolicy` resource associates Amazon SNS topics with a policy\
 
 
 + [Syntax](#aws-resource-sns-policy-syntax)
-+ [Properties](#w3ab2c21c10d990b9)
++ [Properties](#w3ab2c21c10e1018b9)
 
 ## Syntax<a name="aws-resource-sns-policy-syntax"></a>
 
@@ -17,8 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SNS::TopicPolicy",
   "Properties" :
     {
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-sns-topicpolicy-policydocument)" : PolicyDocument,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-sns-topicpolicy-topics)" : [ List of SNS topic ARNs, ... ]
+      "[PolicyDocument](#cfn-sns-topicpolicy-policydocument)" : PolicyDocument,
+      "[Topics](#cfn-sns-topicpolicy-topics)" : [ List of SNS topic ARNs, ... ]
     }
 }
 ```
@@ -28,23 +28,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::SNS::TopicPolicy"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-sns-topicpolicy-policydocument): PolicyDocument
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-sns-topicpolicy-topics):
+  [PolicyDocument](#cfn-sns-topicpolicy-policydocument): PolicyDocument
+  [Topics](#cfn-sns-topicpolicy-topics):
     - List of SNS topic ARNs
 ```
 
-## Properties<a name="w3ab2c21c10d990b9"></a>
+## Properties<a name="w3ab2c21c10e1018b9"></a>
 
-`PolicyDocument`  
+`PolicyDocument`  <a name="cfn-sns-topicpolicy-policydocument"></a>
 A policy document that contains permissions to add to the specified SNS topics\.  
 *Required: *Yes  
 JSON or YAML  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Topics`  
-The Amazon Resource Names \(ARN\) of the topics to which you want to add the policy\. You can use the Ref function to specify an AWS::SNS::Topic resource\.  
+`Topics`  <a name="cfn-sns-topicpolicy-topics"></a>
+The Amazon Resource Names \(ARN\) of the topics to which you want to add the policy\. You can use the [Ref function](intrinsic-function-reference-ref.md) to specify an [AWS::SNS::Topic](aws-properties-sns-topic.md) resource\.  
 *Required: *Yes  
 *Type*: A list of Amazon SNS topics ARNs  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-For sample `AWS::SNS::TopicPolicy` snippets, see \.
+For sample `AWS::SNS::TopicPolicy` snippets, see [Declaring an Amazon SNS Topic Policy](quickref-iam.md#scenario-sns-policy)\.

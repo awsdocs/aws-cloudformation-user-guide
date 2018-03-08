@@ -19,8 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type" : "AWS::EC2::NetworkAcl",
    "Properties" : {
-      "Tags" : [ Resource Tag, ... ],
-      "VpcId" : String
+      "[Tags](#cfn-ec2-networkacl-tags)" : [ Resource Tag, ... ],
+      "[VpcId](#cfn-ec2-networkacl-vpcid)" : String
    }
 }
 ```
@@ -30,24 +30,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::NetworkAcl"
 Properties:
-  Tags:
+  [Tags](#cfn-ec2-networkacl-tags):
     - Resource Tag
-  VpcId: String
+  [VpcId](#cfn-ec2-networkacl-vpcid): String
 ```
 
 ## Properties<a name="w3ab2c21c10d387b9"></a>
 
-`Tags`  
+`Tags`  <a name="cfn-ec2-networkacl-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this ACL\.  
 *Required: *No  
-*Type*:   
-*Update requires*: No interruption\.
+*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
-`VpcId`  
+`VpcId`  <a name="cfn-ec2-networkacl-vpcid"></a>
 The ID of the VPC where the network ACL will be created\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Values<a name="w3ab2c21c10d387c11"></a>
 
@@ -55,7 +55,7 @@ The ID of the VPC where the network ACL will be created\.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d387c13"></a>
 

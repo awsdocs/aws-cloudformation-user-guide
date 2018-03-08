@@ -4,9 +4,9 @@ The `AWS::Logs::LogStream` resource creates an Amazon CloudWatch Logs log stream
 
 
 + [Syntax](#aws-resource-logs-logstream-syntax)
-+ [Properties](#w3ab2c21c10d826b9)
-+ [Return Values](#w3ab2c21c10d826c11)
-+ [Example](#w3ab2c21c10d826c13)
++ [Properties](#w3ab2c21c10d829b9)
++ [Return Values](#w3ab2c21c10d829c11)
++ [Example](#w3ab2c21c10d829c13)
 
 ## Syntax<a name="aws-resource-logs-logstream-syntax"></a>
 
@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Logs::LogStream",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-logs-logstream-loggroupname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-logs-logstream-logstreamname)" : String
+    "[LogGroupName](#cfn-logs-logstream-loggroupname)" : String,
+    "[LogStreamName](#cfn-logs-logstream-logstreamname)" : String
   }
 }
 ```
@@ -29,35 +29,35 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Logs::LogStream"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-logs-logstream-loggroupname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-logs-logstream-logstreamname): String
+  [LogGroupName](#cfn-logs-logstream-loggroupname): String
+  [LogStreamName](#cfn-logs-logstream-logstreamname): String
 ```
 
-## Properties<a name="w3ab2c21c10d826b9"></a>
+## Properties<a name="w3ab2c21c10d829b9"></a>
 
-`LogGroupName`  
+`LogGroupName`  <a name="cfn-logs-logstream-loggroupname"></a>
 The name of the log group where the log stream is created\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`LogStreamName`  
+`LogStreamName`  <a name="cfn-logs-logstream-logstreamname"></a>
 The name of the log stream to create\. The name must be unique within the log group\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w3ab2c21c10d826c11"></a>
+## Return Values<a name="w3ab2c21c10d829c11"></a>
 
-### Ref<a name="w3ab2c21c10d826c11b2"></a>
+### Ref<a name="w3ab2c21c10d829c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name, such as `MyAppLogStream`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10d826c13"></a>
+## Example<a name="w3ab2c21c10d829c13"></a>
 
-### <a name="w3ab2c21c10d826c13b2"></a>
+### <a name="w3ab2c21c10d829c13b2"></a>
 
 The following example creates a CloudWatch Logs log stream named `MyAppLogStream` in the `exampleLogGroup` log group\.
 

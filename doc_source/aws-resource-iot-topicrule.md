@@ -12,8 +12,8 @@ For information about working with AWS IoT rules, see [Rules for AWS IoT](http:/
 {
    "Type": "AWS::IoT::TopicRule",
    "Properties": {
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-rulename)": String,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-topicrulepayload)": TopicRulePayLoad
+      "[RuleName](#cfn-iot-topicrule-rulename)": String,
+      "[TopicRulePayload](#cfn-iot-topicrule-topicrulepayload)": TopicRulePayLoad
    }
 }
 ```
@@ -23,23 +23,23 @@ For information about working with AWS IoT rules, see [Rules for AWS IoT](http:/
 ```
 Type: "AWS::IoT::TopicRule"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-rulename): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-topicrulepayload): TopicRulePayLoad
+  [RuleName](#cfn-iot-topicrule-rulename): String
+  [TopicRulePayload](#cfn-iot-topicrule-topicrulepayload): TopicRulePayLoad
 ```
 
 ## Properties<a name="aws-resource-iot-topicrule-properties"></a>
 
-`RuleName`  
+`RuleName`  <a name="cfn-iot-topicrule-rulename"></a>
 The name \(the physical ID\) of the AWS IoT rule\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`TopicRulePayload`  
+`TopicRulePayload`  <a name="cfn-iot-topicrule-topicrulepayload"></a>
 The actions associated with the AWS IoT rule\.  
 *Required: *Yes  
-*Type*: `TopicRulePayload` object  
-*Update requires*: No interruption
+*Type*: [`TopicRulePayload`](aws-properties-iot-topicrule-topicrulepayload.md) object  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-iot-topicrule-returnvalues"></a>
 
@@ -57,7 +57,7 @@ For a stack named `My-Stack` \(the `–` character is omitted\), a value similar
 MyStackMyTopicRule12ABC3D456EFG
 ```
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ### Fn::GetAtt<a name="aws-resource-iot-topicrule-getatt"></a>
 
@@ -66,7 +66,7 @@ For more information about using the `Ref` function, see Ref\.
 `Arn`  
 The Amazon Resource Name \(ARN\) of the AWS IoT rule, such as `arn:aws:iot:us-east-2:123456789012:rule/MyIoTRule`\.
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\.
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
 ## Example<a name="aws-resource-iot-topicrule-examples"></a>
 

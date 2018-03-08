@@ -18,11 +18,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Inspector::AssessmentTemplate",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-inspector-assessmenttemplate-assessmenttargetarn)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-inspector-assessmenttemplate-durationinseconds)" : Integer,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-inspector-assessmenttemplate-assessmenttemplatename)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-inspector-assessmenttemplate-rulespackagearns)" : [ String, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-inspector-assessmenttemplate-userattributesforfindings)" : [ Resource Tag, ... ]
+    "[AssessmentTargetArn](#cfn-inspector-assessmenttemplate-assessmenttargetarn)" : String,
+    "[DurationInSeconds](#cfn-inspector-assessmenttemplate-durationinseconds)" : Integer,
+    "[AssessmentTemplateName](#cfn-inspector-assessmenttemplate-assessmenttemplatename)" : String,
+    "[RulesPackageArns](#cfn-inspector-assessmenttemplate-rulespackagearns)" : [ String, ... ],
+    "[UserAttributesForFindings](#cfn-inspector-assessmenttemplate-userattributesforfindings)" : [ Resource Tag, ... ]
   }
 }
 ```
@@ -32,46 +32,46 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Inspector::AssessmentTemplate"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-inspector-assessmenttemplate-assessmenttargetarn): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-inspector-assessmenttemplate-durationinseconds): Integer
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-inspector-assessmenttemplate-assessmenttemplatename): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-inspector-assessmenttemplate-rulespackagearns): 
+  [AssessmentTargetArn](#cfn-inspector-assessmenttemplate-assessmenttargetarn): String
+  [DurationInSeconds](#cfn-inspector-assessmenttemplate-durationinseconds): Integer
+  [AssessmentTemplateName](#cfn-inspector-assessmenttemplate-assessmenttemplatename): String
+  [RulesPackageArns](#cfn-inspector-assessmenttemplate-rulespackagearns): 
     - String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-inspector-assessmenttemplate-userattributesforfindings): 
+  [UserAttributesForFindings](#cfn-inspector-assessmenttemplate-userattributesforfindings): 
     - Resource Tag
 ```
 
 ## Properties<a name="aws-resource-inspector-assessmenttemplate-properties"></a>
 
-`AssessmentTargetArn`  
+`AssessmentTargetArn`  <a name="cfn-inspector-assessmenttemplate-assessmenttargetarn"></a>
 The ARN of the assessment target that corresponds to this assessment template\.   
  *Required*: Yes  
  *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`DurationInSeconds`  
+`DurationInSeconds`  <a name="cfn-inspector-assessmenttemplate-durationinseconds"></a>
 The duration in seconds specified for this assessment tempate\. The default value is 3600 seconds \(one hour\)\. The maximum value is 86400 seconds \(one day\)\.  
  *Required*: Yes  
  *Type*: Integer  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`AssessmentTemplateName`  
+`AssessmentTemplateName`  <a name="cfn-inspector-assessmenttemplate-assessmenttemplatename"></a>
 The name of the assessment template\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`RulesPackageArns`  
+`RulesPackageArns`  <a name="cfn-inspector-assessmenttemplate-rulespackagearns"></a>
 The rules packages that are specified for this assessment template\.  
  *Required*: Yes  
  *Type*: List of String values  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`UserAttributesForFindings`  
+`UserAttributesForFindings`  <a name="cfn-inspector-assessmenttemplate-userattributesforfindings"></a>
 The user\-defined attributes that are assigned to every generated finding from the assessment run that uses this assessment template\.   
  *Required*: No  
- *Type*: List of   
- *Update requires*: Replacement 
+ *Type*: List of [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## Return Values<a name="aws-resource-inspector-assessmenttemplate-returnvalues"></a>
 
@@ -82,7 +82,7 @@ The user\-defined attributes that are assigned to every generated finding from t
 `Arn`  
 The Amazon Resource Name \(ARN\) that specifies the assessment template that is created\. 
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\. 
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
 
 ## Examples<a name="aws-resource-inspector-assessmenttemplate-examples"></a>
 

@@ -4,9 +4,9 @@ To provision and configure your stack resources, you must understand AWS CloudFo
 
 If you're unfamiliar with JSON or YAML, you can use AWS CloudFormation Designer to help you get started with AWS CloudFormation templates\. AWS CloudFormation Designer is a tool for visually creating and modifying templates\. For more information, see [What Is AWS CloudFormation Designer?](working-with-templates-cfn-designer.md)\.
 
- provides examples that demonstrate how to write templates for a particular resource\. For example, you can view snippets for Amazon EC2 instances, Amazon S3 domains, AWS CloudFormation mappings, and more\. Snippets are grouped by resource, with general\-purpose AWS CloudFormation snippets in \.
+[Template Snippets](CHAP_TemplateQuickRef.md) provides examples that demonstrate how to write templates for a particular resource\. For example, you can view snippets for Amazon EC2 instances, Amazon S3 domains, AWS CloudFormation mappings, and more\. Snippets are grouped by resource, with general\-purpose AWS CloudFormation snippets in [General Template Snippets](quickref-general.md)\.
 
-For details about the supported resources, type names, intrinsic functions, and pseudo parameters you can use in your templates, see \.
+For details about the supported resources, type names, intrinsic functions, and pseudo parameters you can use in your templates, see [Template Reference](template-reference.md)\.
 
 
 + [AWS CloudFormation Template Formats](template-formats.md)

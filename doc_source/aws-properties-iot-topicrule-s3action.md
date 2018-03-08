@@ -2,39 +2,39 @@
 
 `S3` is a property of the `Actions` property that describes an action that writes data to an S3 bucket\.
 
-## Syntax<a name="w3ab2c21c14e1173b5"></a>
+## Syntax<a name="w3ab2c21c14e1198b5"></a>
 
 ### JSON<a name="aws-properties-iot-topicrule-s3action-syntax.json"></a>
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-s3action-bucketname)": String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-s3action-key)": String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-s3action-rolearn)": String
+  "[BucketName](#cfn-iot-topicrule-s3action-bucketname)": String,
+  "[Key](#cfn-iot-topicrule-s3action-key)": String,
+  "[RoleArn](#cfn-iot-topicrule-s3action-rolearn)": String
 }
 ```
 
 ### YAML<a name="aws-properties-iot-topicrule-s3action-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-s3action-bucketname): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-s3action-key): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-s3action-rolearn): String
+[BucketName](#cfn-iot-topicrule-s3action-bucketname): String
+[Key](#cfn-iot-topicrule-s3action-key): String
+[RoleArn](#cfn-iot-topicrule-s3action-rolearn): String
 ```
 
-## Properties<a name="w3ab2c21c14e1173b7"></a>
+## Properties<a name="w3ab2c21c14e1198b7"></a>
 
-`BucketName`  
+`BucketName`  <a name="cfn-iot-topicrule-s3action-bucketname"></a>
 The name of the S3 bucket\.  
 *Required: *Yes  
 *Type*: String
 
-`Key`  
+`Key`  <a name="cfn-iot-topicrule-s3action-key"></a>
 The object key \(the name of an object in the S3 bucket\)\.  
 *Required: *Yes  
 *Type*: String
 
-`RoleArn`  
+`RoleArn`  <a name="cfn-iot-topicrule-s3action-rolearn"></a>
 The ARN of the IAM role that grants access to Amazon S3\.  
 *Required: *Yes  
 *Type*: String

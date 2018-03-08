@@ -4,8 +4,8 @@ The `AWS::SSM::Association` resource associates an Amazon EC2 Systems Manager \(
 
 
 + [Syntax](#aws-resource-ssm-association-syntax)
-+ [Properties](#w3ab2c21c10e1005b9)
-+ [Example](#w3ab2c21c10e1005c11)
++ [Properties](#w3ab2c21c10e1033b9)
++ [Example](#w3ab2c21c10e1033c11)
 
 ## Syntax<a name="aws-resource-ssm-association-syntax"></a>
 
@@ -17,12 +17,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SSM::Association",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-association-documentationversion)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-association-instanceid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-association-name)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-association-parameters)" : { String: [String, ...] },
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-association-scheduleexpression)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-association-targets)" : [ Targets ]
+    "[AssociationName](#cfn-ssm-association-associationname)" : String,
+    "[DocumentVersion](#cfn-ssm-association-documentationversion)" : String,
+    "[InstanceId](#cfn-ssm-association-instanceid)" : String,
+    "[Name](#cfn-ssm-association-name)" : String,   
+    "[Parameters](#cfn-ssm-association-parameters)" : { String: [String, ...] },
+    "[ScheduleExpression](#cfn-ssm-association-scheduleexpression)" : String,
+    "[Targets](#cfn-ssm-association-targets)" : [ [*Targets*](aws-properties-ssm-association-targets.md) ]
   }
 }
 ```
@@ -32,58 +33,65 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::SSM::Association"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-association-documentationversion): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-association-instanceid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-association-name): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-association-parameters):
+  [AssociationName](#cfn-ssm-association-associationname): String
+  [DocumentVersion](#cfn-ssm-association-documentationversion): String
+  [InstanceId](#cfn-ssm-association-instanceid): String
+  [Name](#cfn-ssm-association-name): String
+  [Parameters](#cfn-ssm-association-parameters):
     String:
       - String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-association-scheduleexpression): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-association-targets):
-    - Targets
+  [ScheduleExpression](#cfn-ssm-association-scheduleexpression): String
+  [Targets](#cfn-ssm-association-targets):
+    - [*Targets*](aws-properties-ssm-association-targets.md)
 ```
 
-## Properties<a name="w3ab2c21c10e1005b9"></a>
+## Properties<a name="w3ab2c21c10e1033b9"></a>
 
-`DocumentVersion`  
+`AssociationName`  <a name="cfn-ssm-association-associationname"></a>
+The name of the association\.  
+*Required: *No  
+*Type*: String  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`DocumentVersion`  <a name="cfn-ssm-association-documentationversion"></a>
 The version of the SSM document to associate with the target\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`InstanceId`  
+`InstanceId`  <a name="cfn-ssm-association-instanceid"></a>
 The ID of the instance that the SSM document is associated with\.  
 *Required: *Conditional\. You must specify the `InstanceId` or `Targets` property\.  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Name`  
+`Name`  <a name="cfn-ssm-association-name"></a>
 The name of the SSM document\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Parameters`  
+`Parameters`  <a name="cfn-ssm-association-parameters"></a>
 Parameter values that the SSM document uses at runtime\.  
 *Required: *No  
 *Type*: String to list\-of\-strings map  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ScheduleExpression`  
+`ScheduleExpression`  <a name="cfn-ssm-association-scheduleexpression"></a>
 A Cron expression that specifies when the association is applied to the target\. For more on working with Cron expressions, see [Working with Cron and Rate Expressions for Systems Manager](http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-cron.html)\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Targets`  
+`Targets`  <a name="cfn-ssm-association-targets"></a>
 The targets that the SSM document sends commands to\.  
 *Required: *Conditional\. You must specify the `InstanceId` or `Targets` property\.  
 *Type*: List of [Amazon EC2 Systems Manager Association Targets](aws-properties-ssm-association-targets.md)  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Example<a name="w3ab2c21c10e1005c11"></a>
+## Example<a name="w3ab2c21c10e1033c11"></a>
 
-### <a name="w3ab2c21c10e1005c11b2"></a>
+### <a name="w3ab2c21c10e1033c11b2"></a>
 
 The following example associates an SSM document with a specific instance\. The ID of the instance is specified by the `myInstanceId` parameter\.
 

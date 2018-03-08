@@ -4,9 +4,9 @@ The `AWS::ApplicationAutoScaling::ScalingPolicy` resource defines an Application
 
 
 + [Syntax](#aws-resource-applicationautoscaling-scalingpolicy-syntax)
-+ [Properties](#w3ab2c21c10c99b9)
-+ [Return Value](#w3ab2c21c10c99c11)
-+ [Examples](#w3ab2c21c10c99c13)
++ [Properties](#w3ab2c21c10d102b9)
++ [Return Value](#w3ab2c21c10d102c11)
++ [Examples](#w3ab2c21c10d102c13)
 
 ## Syntax<a name="aws-resource-applicationautoscaling-scalingpolicy-syntax"></a>
 
@@ -18,14 +18,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApplicationAutoScaling::ScalingPolicy",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-policyname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-policytype)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-resourceid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-scalabledimension)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-scalingtargetid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-servicenamespace)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration)" : StepScalingPolicyConfiguration,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration)" : TargetTrackingScalingPolicyConfiguration
+    "[PolicyName](#cfn-applicationautoscaling-scalingpolicy-policyname)" : String,
+    "[PolicyType](#cfn-applicationautoscaling-scalingpolicy-policytype)" : String,
+    "[ResourceId](#cfn-applicationautoscaling-scalingpolicy-resourceid)" : String,
+    "[ScalableDimension](#cfn-applicationautoscaling-scalingpolicy-scalabledimension)" : String,
+    "[ScalingTargetId](#cfn-applicationautoscaling-scalingpolicy-scalingtargetid)" : String,
+    "[ServiceNamespace](#cfn-applicationautoscaling-scalingpolicy-servicenamespace)" : String,
+    "[StepScalingPolicyConfiguration](#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration)" : [*StepScalingPolicyConfiguration*](aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration.md),
+    "[TargetTrackingScalingPolicyConfiguration](#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration)" : [*TargetTrackingScalingPolicyConfiguration*](aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.md)
   }
 }
 ```
@@ -35,79 +35,79 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type : "AWS::ApplicationAutoScaling::ScalingPolicy"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-policyname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-policytype): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-resourceid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-scalabledimension): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-scalingtargetid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-servicenamespace): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration): 
-    StepScalingPolicyConfiguration
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration): 
-    TargetTrackingScalingPolicyConfiguration
+  [PolicyName](#cfn-applicationautoscaling-scalingpolicy-policyname): String
+  [PolicyType](#cfn-applicationautoscaling-scalingpolicy-policytype): String
+  [ResourceId](#cfn-applicationautoscaling-scalingpolicy-resourceid): String
+  [ScalableDimension](#cfn-applicationautoscaling-scalingpolicy-scalabledimension): String
+  [ScalingTargetId](#cfn-applicationautoscaling-scalingpolicy-scalingtargetid): String
+  [ServiceNamespace](#cfn-applicationautoscaling-scalingpolicy-servicenamespace): String
+  [StepScalingPolicyConfiguration](#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration): 
+    [*StepScalingPolicyConfiguration*](aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration.md)
+  [TargetTrackingScalingPolicyConfiguration](#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration): 
+    [*TargetTrackingScalingPolicyConfiguration*](aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.md)
 ```
 
-## Properties<a name="w3ab2c21c10c99b9"></a>
+## Properties<a name="w3ab2c21c10d102b9"></a>
 
-`PolicyName`  
+`PolicyName`  <a name="cfn-applicationautoscaling-scalingpolicy-policyname"></a>
 A name for the scaling policy\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`PolicyType`  
+`PolicyType`  <a name="cfn-applicationautoscaling-scalingpolicy-policytype"></a>
 An Application Auto Scaling policy type\.  
 For DynamoDB, only `TargetTrackingScaling` is supported\. For any other service, only `StepScaling` is supported\.
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ResourceId`  
-The unique resource identifier for the scalable target that this scaling policy applies to\. For more information, see the `ResourceId` parameter for the [PutScalingPolicy](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScalingPolicy.html) action in the *Application Auto Scaling API Reference*\.  
+`ResourceId`  <a name="cfn-applicationautoscaling-scalingpolicy-resourceid"></a>
+The unique resource identifier for the scalable target that this scaling policy applies to\. For more information, see the `ResourceId` parameter for the [PutScalingPolicy](http://docs.aws.amazon.com/autoscaling/application/APIReference/API_PutScalingPolicy.html) action in the *Application Auto Scaling API Reference*\.  
 *Required: *Conditional\. You must specify either the `ScalingTargetId` property or the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties\. If you specify the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties, don't specify the `ScalingTargetId` property\.  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`ScalableDimension`  
+`ScalableDimension`  <a name="cfn-applicationautoscaling-scalingpolicy-scalabledimension"></a>
 The scalable dimension of the scalable target that this scaling policy applies to\. The scalable dimension contains the service namespace, resource type, and scaling property, such as ecs:service:DesiredCount for the desired task count of an Amazon ECS service\.  
 *Required: *Conditional\. You must specify either the `ScalingTargetId` property or the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties\. If you specify the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties, don't specify the `ScalingTargetId` property\.  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`ServiceNamespace`  
+`ServiceNamespace`  <a name="cfn-applicationautoscaling-scalingpolicy-servicenamespace"></a>
 The AWS service namespace of the scalable target that this scaling policy applies to\. For a list of service namespaces, see [AWS Service Namespaces](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *AWS General Reference*\.  
 *Required: *Conditional\. You must specify either the `ScalingTargetId` property or the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties\. If you specify the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties, don't specify the `ScalingTargetId` property\.  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`ScalingTargetId`  
+`ScalingTargetId`  <a name="cfn-applicationautoscaling-scalingpolicy-scalingtargetid"></a>
 The AWS CloudFormation\-generated ID of an Application Auto Scaling scalable target\. For more information about the ID, see the Return Value section of the [AWS::ApplicationAutoScaling::ScalableTarget](aws-resource-applicationautoscaling-scalabletarget.md) resource\.  
 *Required: *Conditional\. You must specify either the `ScalingTargetId` property or the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties\. If you specify this property, don't specify the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties\.  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`StepScalingPolicyConfiguration`  
+`StepScalingPolicyConfiguration`  <a name="cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration"></a>
 A step policy that configures when Application Auto Scaling scales resources up or down, and by how much\.  
 *Required: *No  
 *Type*: [Application Auto Scaling ScalingPolicy StepScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`TargetTrackingScalingPolicyConfiguration`  
+`TargetTrackingScalingPolicyConfiguration`  <a name="cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration"></a>
 Configures a target tracking scaling policy\.  
 This parameter is required if you are creating a new policy and the policy type is `TargetTrackingScaling`\.  
 *Required: *No  
 *Type*: [Application Auto Scaling ScalingPolicy TargetTrackingScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10c99c11"></a>
+## Return Value<a name="w3ab2c21c10d102c11"></a>
 
-### Ref<a name="w3ab2c21c10c99c11b2"></a>
+### Ref<a name="w3ab2c21c10d102c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the Application Auto Scaling scaling policy Amazon Resource Name \(ARN\), such as `arn:aws:autoscaling:``us-east-2``:123456789012:scalingPolicy:12ab3c4d-56789-0ef1-2345-6ghi7jk8lm90:resource/ecs/service/ecsStack-MyECSCluster-AB12CDE3F4GH/ecsStack-MyECSService-AB12CDE3F4GH:policyName/MyStepPolicy`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w3ab2c21c10c99c13"></a>
+## Examples<a name="w3ab2c21c10d102c13"></a>
 
 ### Application Auto Scaling Scaling Policy with a Step Policy Configuration<a name="aws-resource-applicationautoscaling-scalingpolicy-example"></a>
 

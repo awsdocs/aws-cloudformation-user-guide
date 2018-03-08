@@ -4,7 +4,7 @@ Use the `AWS::IoT::ThingPrincipalAttachment` resource to attach a principal \(an
 
 For information about working with AWS IoT things and principals, see [Authorization](http://docs.aws.amazon.com/iot/latest/developerguide/authorization.html) in the *AWS IoT Developer Guide*\.
 
-## Syntax<a name="w3ab2c21c10d760b7"></a>
+## Syntax<a name="w3ab2c21c10d763b7"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
@@ -14,8 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type": "AWS::IoT::ThingPrincipalAttachment",
    "Properties": {
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-thingprincipalattachment-principal)": String,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-thingprincipalattachment-thingname)": String
+      "[Principal](#cfn-iot-thingprincipalattachment-principal)": String,
+      "[ThingName](#cfn-iot-thingprincipalattachment-thingname)": String
     }
 }
 ```
@@ -25,25 +25,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::IoT::ThingPrincipalAttachment"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-thingprincipalattachment-principal): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-thingprincipalattachment-thingname): String
+  [Principal](#cfn-iot-thingprincipalattachment-principal): String
+  [ThingName](#cfn-iot-thingprincipalattachment-thingname): String
 ```
 
-## Properties<a name="w3ab2c21c10d760b9"></a>
+## Properties<a name="w3ab2c21c10d763b9"></a>
 
-`Principal`  
+`Principal`  <a name="cfn-iot-thingprincipalattachment-principal"></a>
 The principal, which can be a certificate ARN \(as returned from the `CreateCertificate` operation\) or an Amazon Cognito ID\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`ThingName`  
+`ThingName`  <a name="cfn-iot-thingprincipalattachment-thingname"></a>
 The name of the AWS IoT thing\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Example<a name="w3ab2c21c10d760c11"></a>
+## Example<a name="w3ab2c21c10d763c11"></a>
 
 The following example attaches a principal to a thing\.
 

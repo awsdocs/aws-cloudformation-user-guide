@@ -12,20 +12,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-inputprocessingconfiguration-inputlambdaprocessor)" : InputLambdaProcessor
+  "[InputLambdaProcessor](#cfn-kinesisanalytics-application-inputprocessingconfiguration-inputlambdaprocessor)" : [*InputLambdaProcessor*](aws-properties-kinesisanalytics-application-inputlambdaprocessor.md)
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisanalytics-application-inputprocessingconfiguration-syntax.yaml"></a>
 
 ```
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-inputprocessingconfiguration-inputlambdaprocessor): InputLambdaProcessor
+  [InputLambdaProcessor](#cfn-kinesisanalytics-application-inputprocessingconfiguration-inputlambdaprocessor): [*InputLambdaProcessor*](aws-properties-kinesisanalytics-application-inputlambdaprocessor.md)
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-application-inputprocessingconfiguration-properties"></a>
 
-`InputLambdaProcessor`  
+`InputLambdaProcessor`  <a name="cfn-kinesisanalytics-application-inputprocessingconfiguration-inputlambdaprocessor"></a>
 The InputLambdaProcessor that is used to preprocess the records in the stream before they are processed by your application code\.   
  *Required*: No  
  *Type*: [Kinesis Data Analytics Application InputLambdaProcessor](aws-properties-kinesisanalytics-application-inputlambdaprocessor.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

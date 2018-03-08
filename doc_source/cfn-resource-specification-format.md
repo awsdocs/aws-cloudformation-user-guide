@@ -1,25 +1,25 @@
 # Specification Format<a name="cfn-resource-specification-format"></a>
 
-AWS CloudFormation creates a specification for each resource type, such as `AWS::S3::Bucket` or `AWS::EC2::Instance`\. The following sections describe the format and each field within the specification\.
+AWS CloudFormation creates a specification for each [resource type](aws-template-resource-type-ref.md), such as `AWS::S3::Bucket` or `AWS::EC2::Instance`\. The following sections describe the format and each field within the specification\.
 
 
-+ [Specification Sections](#w3ab2c21c18c19b7)
++ [Specification Sections](#w3ab2c21c18c21b7)
 + [Property Specification](#cfn-resource-specification-format-propertytypes)
 + [Resource Specification](#cfn-resource-specification-format-resourcetype)
-+ [Example Resource Specification](#w3ab2c21c18c19c13)
++ [Example Resource Specification](#w3ab2c21c18c21c13)
 
-## Specification Sections<a name="w3ab2c21c18c19b7"></a>
+## Specification Sections<a name="w3ab2c21c18c21b7"></a>
 
 The formal definition for each resource type is organized into three main sections: `PropertyTypes`, `ResourceSpecificationVersion`, and `ResourceTypes`, as shown in the following example:
 
 ```
 {
   "PropertyTypes": {
-    Property specifications
+    [*Property specifications*](#cfn-resource-specification-format-propertytypes)
   },
   "ResourceSpecificationVersion": "Specification version number",
   "ResourceTypes": {
-    Resource specification
+    [*Resource specification*](#cfn-resource-specification-format-resourcetype)
   }
 }
 ```
@@ -80,7 +80,7 @@ For non\-primitive types, valid values for the property\. The valid types are a 
 A list is a comma\-separated list of values\. A map is a set of key\-value pairs, where the keys are always strings\. The value type for lists and maps are indicated by the `ItemType` or `PrimitiveItemType` field\.
 
 `UpdateType`  
-During a stack update, the update behavior when you add, remove, or modify the property\. AWS CloudFormation replaces the resource when you change `Immutable` properties\. AWS CloudFormation doesn't replace the resource when you change `mutable` properties\. Conditional updates can be mutable or immutable, depending on, for example, which other properties you updated\. For more information, see the relevant resource type documentation\.
+During a stack update, the update behavior when you add, remove, or modify the property\. AWS CloudFormation replaces the resource when you change `Immutable` properties\. AWS CloudFormation doesn't replace the resource when you change `mutable` properties\. Conditional updates can be mutable or immutable, depending on, for example, which other properties you updated\. For more information, see the relevant [resource type](aws-template-resource-type-ref.md) documentation\.
 
 ## Resource Specification<a name="cfn-resource-specification-format-resourcetype"></a>
 
@@ -98,13 +98,13 @@ The specification for each resource type includes the following fields\.
   },
   "Documentation": "Link to the relevant documentation",
   "Properties": {
-    Property specifications
+    [*Property specifications*](#cfn-resource-specification-format-propertytypes)
   }
 }
 ```
 
 `Attributes`  
-A list of resource attributes that you can use in an `Fn::GetAtt` function\. For each attribute, this section provides the attribute name and the type of value that AWS CloudFormation returns\.    
+A list of resource attributes that you can use in an [`Fn::GetAtt`](intrinsic-function-reference-getatt.md) function\. For each attribute, this section provides the attribute name and the type of value that AWS CloudFormation returns\.    
 `ItemType`  
 If the value of the `Type` field is `List`, indicates the type of list that the `Fn::GetAtt` function returns for the attribute if the list contains non\-primitive types\. The valid type is a name of a property\.  
 `PrimitiveItemType`  
@@ -122,9 +122,9 @@ A link to the *AWS CloudFormation User Guide* for information about the resource
 `Properties`  
 A list of property specifications for the resource\. For details, see [Property Specification](#cfn-resource-specification-format-propertytypes)\.
 
-## Example Resource Specification<a name="w3ab2c21c18c19c13"></a>
+## Example Resource Specification<a name="w3ab2c21c18c21c13"></a>
 
-The following examples highlight and explain parts of the `AWS::Elasticsearch::Domain` resource specification\.
+The following examples highlight and explain parts of the [`AWS::Elasticsearch::Domain`](aws-resource-elasticsearch-domain.md) resource specification\.
 
 The `AWS::Elasticsearch::Domain` resource type contains subproperties, so the specification includes a `PropertyTypes` section\. This section is followed by the `ResourceSpecificationVersion` section, which shows the specification version as `1.0.0`\. After the specification version is the `ResourceType` section that specifies the resource type, provides a documentation link, and details the resource's properties\.
 

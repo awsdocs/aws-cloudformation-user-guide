@@ -12,28 +12,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-csvmappingparameters-recordcolumndelimiter)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-csvmappingparameters-recordrowdelimiter)" : String
+  "[RecordColumnDelimiter](#cfn-kinesisanalytics-application-csvmappingparameters-recordcolumndelimiter)" : String,
+  "[RecordRowDelimiter](#cfn-kinesisanalytics-application-csvmappingparameters-recordrowdelimiter)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisanalytics-application-csvmappingparameters-syntax.yaml"></a>
 
 ```
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-csvmappingparameters-recordcolumndelimiter): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-csvmappingparameters-recordrowdelimiter): String
+  [RecordColumnDelimiter](#cfn-kinesisanalytics-application-csvmappingparameters-recordcolumndelimiter): String
+  [RecordRowDelimiter](#cfn-kinesisanalytics-application-csvmappingparameters-recordrowdelimiter): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-application-csvmappingparameters-properties"></a>
 
-`RecordColumnDelimiter`  
+`RecordColumnDelimiter`  <a name="cfn-kinesisanalytics-application-csvmappingparameters-recordcolumndelimiter"></a>
 The column delimiter\. For example, in a CSV format, a comma \(","\) is the typical column delimiter\.   
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`RecordRowDelimiter`  
+`RecordRowDelimiter`  <a name="cfn-kinesisanalytics-application-csvmappingparameters-recordrowdelimiter"></a>
 The row delimiter\. For example, in a CSV format, "\\n" is the typical row delimiter\.   
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

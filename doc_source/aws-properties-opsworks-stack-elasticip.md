@@ -8,26 +8,26 @@
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-stack-elasticip-ip)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-stack-elasticip-name)" : String
+  "[Ip](#cfn-opsworks-stack-elasticip-ip)" : String,
+  "[Name](#cfn-opsworks-stack-elasticip-name)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-opsworks-stack-elasticip-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-stack-elasticip-ip): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-stack-elasticip-name): String
+[Ip](#cfn-opsworks-stack-elasticip-ip): String
+[Name](#cfn-opsworks-stack-elasticip-name): String
 ```
 
 ## Properties<a name="aws-properties-opsworks-stack-elasticip-properties"></a>
 
-`Ip`  
+`Ip`  <a name="cfn-opsworks-stack-elasticip-ip"></a>
 The Elastic IP address\.  
 *Required: *Yes  
 *Type*: String
 
-`Name`  
+`Name`  <a name="cfn-opsworks-stack-elasticip-name"></a>
 A name for the Elastic IP address\.  
 *Required: *No  
 *Type*: String

@@ -10,54 +10,54 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-dimensions)" : [ MetricDimension, ...],
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-metricname)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-namespace)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-statistic)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-unit)" : String
+  "[Dimensions](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-dimensions)" : [ [*MetricDimension*](aws-properties-autoscaling-scalingpolicy-metricdimension.md), ...],
+  "[MetricName](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-metricname)" : String,
+  "[Namespace](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-namespace)" : String,
+  "[Statistic](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-statistic)" : String,
+  "[Unit](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-unit)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-autoscaling-scalingpolicy-customizedmetricspecification-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-dimensions):
-  - MetricDimension
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-metricname): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-namespace): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-statistic): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-unit): String
+[Dimensions](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-dimensions):
+  - [*MetricDimension*](aws-properties-autoscaling-scalingpolicy-metricdimension.md)
+[MetricName](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-metricname): String
+[Namespace](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-namespace): String
+[Statistic](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-statistic): String
+[Unit](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-unit): String
 ```
 
 ## Properties<a name="aws-properties-autoscaling-scalingpolicy-customizedmetricspecification-properties"></a>
 
-`Dimensions`  
+`Dimensions`  <a name="cfn-autoscaling-scalingpolicy-customizedmetricspecification-dimensions"></a>
 The dimensions of the metric\. Duplicates not allowed\.  
 *Required: *No  
 *Type*: List of [Auto Scaling ScalingPolicy MetricDimension](aws-properties-autoscaling-scalingpolicy-metricdimension.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`MetricName`  
+`MetricName`  <a name="cfn-autoscaling-scalingpolicy-customizedmetricspecification-metricname"></a>
 The name of the metric\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Namespace`  
+`Namespace`  <a name="cfn-autoscaling-scalingpolicy-customizedmetricspecification-namespace"></a>
 The namespace of the metric\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Statistic`  
+`Statistic`  <a name="cfn-autoscaling-scalingpolicy-customizedmetricspecification-statistic"></a>
 The statistic of the metric\.  
-For valid values, see [CustomizedMetricSpecification](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CustomizedMetricSpecification.html) in the *Auto Scaling API Reference*\.  
+For valid values, see [CustomizedMetricSpecification](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CustomizedMetricSpecification.html) in the *Amazon EC2 Auto Scaling API Reference*\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Unit`  
+`Unit`  <a name="cfn-autoscaling-scalingpolicy-customizedmetricspecification-unit"></a>
 The unit of the metric\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

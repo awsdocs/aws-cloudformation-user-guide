@@ -17,8 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type" : "AWS::EC2::SubnetCidrBlock",
    "Properties" : {
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-subnetcidrblock-ipv6cidrblock)" : String,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-subnetcidrblock-subnetid)" : String
+      "[Ipv6CidrBlock](#cfn-ec2-subnetcidrblock-ipv6cidrblock)" : String,
+      "[SubnetId](#cfn-ec2-subnetcidrblock-subnetid)" : String
    }
 }
 ```
@@ -28,23 +28,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::SubnetCidrBlock"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-subnetcidrblock-ipv6cidrblock): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-subnetcidrblock-subnetid): String
+  [Ipv6CidrBlock](#cfn-ec2-subnetcidrblock-ipv6cidrblock): String
+  [SubnetId](#cfn-ec2-subnetcidrblock-subnetid): String
 ```
 
 ## Properties<a name="w3ab2c21c10d447b9"></a>
 
-`Ipv6CidrBlock`  
+`Ipv6CidrBlock`  <a name="cfn-ec2-subnetcidrblock-ipv6cidrblock"></a>
 The IPv6 CIDR block for the subnet\. The CIDR block must have a prefix length of /64\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`SubnetId`  
+`SubnetId`  <a name="cfn-ec2-subnetcidrblock-subnetid"></a>
 The ID of the subnet to associate the IPv6 CIDR block with\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Example<a name="w3ab2c21c10d447c11"></a>
 

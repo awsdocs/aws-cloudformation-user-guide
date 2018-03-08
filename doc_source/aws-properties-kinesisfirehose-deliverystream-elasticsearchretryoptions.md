@@ -10,19 +10,19 @@ The `ElasticsearchRetryOptions` property type configures the retry behavior for 
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-elasticsearchretryoptions-durationinseconds)" : Integer
+  "[DurationInSeconds](#cfn-kinesisfirehose-deliverystream-elasticsearchretryoptions-durationinseconds)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisfirehose-deliverystream-elasticsearchretryoptions-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-elasticsearchretryoptions-durationinseconds): Integer
+[DurationInSeconds](#cfn-kinesisfirehose-deliverystream-elasticsearchretryoptions-durationinseconds): Integer
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-elasticsearchretryoptions-properties"></a>
 
-`DurationInSeconds`  
+`DurationInSeconds`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchretryoptions-durationinseconds"></a>
 After an initial failure to deliver to Amazon ES, the total amount of time during which Kinesis Firehose re\-attempts delivery \(including the first attempt\)\. If Kinesis Firehose can't deliver the data within the specified time, it writes the data to the backup S3 bucket\. For valid values, see the `DurationInSeconds` content for the [ElasticsearchRetryOptions](http://docs.aws.amazon.com/firehose/latest/APIReference/API_ElasticsearchRetryOptions.html) data type in the *Amazon Kinesis Firehose API Reference*\.  
 *Required: *Yes  
 *Type*: Integer

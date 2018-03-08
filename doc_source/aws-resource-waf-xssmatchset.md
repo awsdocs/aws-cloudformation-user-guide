@@ -4,9 +4,9 @@ The `AWS::WAF::XssMatchSet` resource specifies the parts of web requests that yo
 
 
 + [Syntax](#aws-resource-waf-xssmatchset-syntax)
-+ [Properties](#w3ab2c21c10e1063b9)
-+ [Return Value](#w3ab2c21c10e1063c11)
-+ [Examples](#w3ab2c21c10e1063c13)
++ [Properties](#w3ab2c21c10e1091b9)
++ [Return Value](#w3ab2c21c10e1091c11)
++ [Examples](#w3ab2c21c10e1091c13)
 
 ## Syntax<a name="aws-resource-waf-xssmatchset-syntax"></a>
 
@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAF::XssMatchSet",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-waf-xssmatchset-name)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-waf-xssmatchset-xssmatchtuples)" : [ XssMatchTuple, ... ]
+    "[Name](#cfn-waf-xssmatchset-name)" : String,
+    "[XssMatchTuples](#cfn-waf-xssmatchset-xssmatchtuples)" : [ XssMatchTuple, ... ]
   }
 }
 ```
@@ -29,36 +29,36 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::WAF::XssMatchSet"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-waf-xssmatchset-name): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-waf-xssmatchset-xssmatchtuples):
+  [Name](#cfn-waf-xssmatchset-name): String
+  [XssMatchTuples](#cfn-waf-xssmatchset-xssmatchtuples):
     - XssMatchTuple
 ```
 
-## Properties<a name="w3ab2c21c10e1063b9"></a>
+## Properties<a name="w3ab2c21c10e1091b9"></a>
 
-`Name`  
+`Name`  <a name="cfn-waf-xssmatchset-name"></a>
 A friendly name or description for the `XssMatchSet`\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`XssMatchTuples`  
+`XssMatchTuples`  <a name="cfn-waf-xssmatchset-xssmatchtuples"></a>
 The parts of web requests that you want to inspect for cross\-site scripting attacks\.  
 *Required: *No  
 *Type*: List of [AWS WAF XssMatchSet XssMatchTuple](aws-properties-waf-xssmatchset-xssmatchtuple.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10e1063c11"></a>
+## Return Value<a name="w3ab2c21c10e1091c11"></a>
 
-### Ref<a name="w3ab2c21c10e1063c11b2"></a>
+### Ref<a name="w3ab2c21c10e1091c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource physical ID, such as `1234a1a-a1b1-12a1-abcd-a123b123456`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w3ab2c21c10e1063c13"></a>
+## Examples<a name="w3ab2c21c10e1091c13"></a>
 
-### Define Which Part of a Request to Check for Cross\-site Scripting<a name="w3ab2c21c10e1063c13b2"></a>
+### Define Which Part of a Request to Check for Cross\-site Scripting<a name="w3ab2c21c10e1091c13b2"></a>
 
 The following example looks for cross\-site scripting in the URI or query string of an HTTP request\.
 
@@ -105,7 +105,7 @@ DetectXSS:
         TextTransformation: "NONE"
 ```
 
-### Associate an XssMatchSet with a Web ACL Rule<a name="w3ab2c21c10e1063c13b4"></a>
+### Associate an XssMatchSet with a Web ACL Rule<a name="w3ab2c21c10e1091c13b4"></a>
 
 The following example associates the `DetectXSS` match set with a web access control list \(ACL\) rule\.
 
@@ -144,7 +144,7 @@ XSSRule:
         Type: "XssMatch"
 ```
 
-### Create a Web ACL<a name="w3ab2c21c10e1063c13b6"></a>
+### Create a Web ACL<a name="w3ab2c21c10e1091c13b6"></a>
 
 The following example associates the `XSSRule` rule with a web ACL\. The web ACL allows all requests except for ones that contain cross\-site scripting in the URI or query string of an HTTP request\.
 

@@ -12,32 +12,32 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-crawler-targets-s3targets)" : [ S3Target, ... ],
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-crawler-targets-jdbctargets)" : [ JdbcTarget, ... ]
+  "[S3Targets](#cfn-glue-crawler-targets-s3targets)" : [ [*S3Target*](aws-properties-glue-crawler-s3target.md), ... ],
+  "[JdbcTargets](#cfn-glue-crawler-targets-jdbctargets)" : [ [*JdbcTarget*](aws-properties-glue-crawler-jdbctarget.md), ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-glue-crawler-targets-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-crawler-targets-s3targets): 
-  - S3Target
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-crawler-targets-jdbctargets): 
-  - JdbcTarget
+[S3Targets](#cfn-glue-crawler-targets-s3targets): 
+  - [*S3Target*](aws-properties-glue-crawler-s3target.md)
+[JdbcTargets](#cfn-glue-crawler-targets-jdbctargets): 
+  - [*JdbcTarget*](aws-properties-glue-crawler-jdbctarget.md)
 ```
 
 ## Properties<a name="aws-properties-glue-crawler-targets-properties"></a>
 
 For more information, see [CrawlerTargets Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-crawling.html#aws-glue-api-crawler-crawling-CrawlerTargets) in the *AWS Glue Developer Guide*\.
 
-`S3Targets`  
+`S3Targets`  <a name="cfn-glue-crawler-targets-s3targets"></a>
 The Amazon S3 crawler targets\.  
  *Required*: No  
- *Type*: List of   
- *Update requires*: No interruption 
+ *Type*: List of [AWS Glue Crawler S3Target](aws-properties-glue-crawler-s3target.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`JdbcTargets`  
+`JdbcTargets`  <a name="cfn-glue-crawler-targets-jdbctargets"></a>
 The JDBC crawler targets\.  
  *Required*: No  
- *Type*: List of   
- *Update requires*: No interruption 
+ *Type*: List of [AWS Glue Crawler JdbcTarget](aws-properties-glue-crawler-jdbctarget.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

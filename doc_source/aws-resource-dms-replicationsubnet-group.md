@@ -8,9 +8,9 @@ Resource creation will fail if the `dms-vpc-role` IAM role doesn't already exist
 
 + [Syntax](#aws-resource-dms-replicationsubnet-group-syntax)
 + [Properties](#aws-resource-dms-replicationsubnet-group-prop)
-+ [Return Value](#w3ab2c21c10d327c13)
++ [Return Value](#w3ab2c21c10d328c13)
 + [Example](#aws-resource-dms-replicationsubnet-group-example)
-+ [See Also](#w3ab2c21c10d327c17)
++ [See Also](#w3ab2c21c10d328c17)
 
 ## Syntax<a name="aws-resource-dms-replicationsubnet-group-syntax"></a>
 
@@ -22,10 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::DMS::ReplicationSubnetGroup",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-replicationsubnetgroup-replicationsubnetgroupidentifier)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-replicationsubnetgroup-replicationsubnetgroupdescription)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-replicationsubnetgroup-subnetids)" : [ String, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-replicationsubnetgroup-tags)" : [ Resource Tag, ... ]
+    "[ReplicationSubnetGroupIdentifier](#cfn-dms-replicationsubnetgroup-replicationsubnetgroupidentifier)" : String,
+    "[ReplicationSubnetGroupDescription](#cfn-dms-replicationsubnetgroup-replicationsubnetgroupdescription)" : String,
+    "[SubnetIds](#cfn-dms-replicationsubnetgroup-subnetids)" : [ String, ... ],
+    "[Tags](#cfn-dms-replicationsubnetgroup-tags)" : [ Resource Tag, ... ]
   }
 }
 ```
@@ -35,47 +35,47 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::DMS::ReplicationSubnetGroup"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-replicationsubnetgroup-replicationsubnetgroupidentifier): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-replicationsubnetgroup-replicationsubnetgroupdescription): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-replicationsubnetgroup-subnetids):
+  [ReplicationSubnetGroupIdentifier](#cfn-dms-replicationsubnetgroup-replicationsubnetgroupidentifier): String
+  [ReplicationSubnetGroupDescription](#cfn-dms-replicationsubnetgroup-replicationsubnetgroupdescription): String
+  [SubnetIds](#cfn-dms-replicationsubnetgroup-subnetids):
     - String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-replicationsubnetgroup-tags):
+  [Tags](#cfn-dms-replicationsubnetgroup-tags):
     - Resource Tag
 ```
 
 ## Properties<a name="aws-resource-dms-replicationsubnet-group-prop"></a>
 
-`ReplicationSubnetGroupIdentifier`  
+`ReplicationSubnetGroupIdentifier`  <a name="cfn-dms-replicationsubnetgroup-replicationsubnetgroupidentifier"></a>
 The identifier for the replication subnet group\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the identifier\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`ReplicationSubnetGroupDescription`  
+`ReplicationSubnetGroupDescription`  <a name="cfn-dms-replicationsubnetgroup-replicationsubnetgroupdescription"></a>
 The description for the replication subnet group\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`SubnetIds`  
+`SubnetIds`  <a name="cfn-dms-replicationsubnetgroup-subnetids"></a>
 The EC2 subnet IDs for the replication subnet group\.  
 *Required: *Yes  
 *Type*: List of String values  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Tags`  
+`Tags`  <a name="cfn-dms-replicationsubnetgroup-tags"></a>
 The tags that you want to attach to the AWS DMS replication subnet group\.  
 *Required: *No  
-*Type*: A list of resource tags in key\-value format\.  
-*Update requires*: Replacement 
+*Type*: A list of [resource tags](aws-properties-resource-tags.md) in key\-value format\.  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-## Return Value<a name="w3ab2c21c10d327c13"></a>
+## Return Value<a name="w3ab2c21c10d328c13"></a>
 
-### Ref<a name="w3ab2c21c10d327c13b2"></a>
+### Ref<a name="w3ab2c21c10d328c13b2"></a>
 
 When you pass the logical ID of an `AWS::DMS::ReplicationSubnetGroup` resource to the intrinsic `Ref` function, the function returns the name of the replication subnet group, such as `mystack-myrepsubnetgroup-0a12bc456789de0fg`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="aws-resource-dms-replicationsubnet-group-example"></a>
 
@@ -117,7 +117,7 @@ Resources:
           Value: "String"
 ```
 
-## See Also<a name="w3ab2c21c10d327c17"></a>
+## See Also<a name="w3ab2c21c10d328c17"></a>
 
 + [CreateReplicationSubnetGroup](http://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationSubnetGroup.html) in the *AWS Database Migration Service API Reference*\.
 

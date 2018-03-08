@@ -10,24 +10,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-thing-attributepayload-attributes)" : { String:String, ... }
+  "[Attributes](#cfn-iot-thing-attributepayload-attributes)" : { String:String, ... }
 }
 ```
 
 ### YAML<a name="aws-properties-iot-thing-attributepayload-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-thing-attributepayload-attributes):
+[Attributes](#cfn-iot-thing-attributepayload-attributes):
   String: String
 ```
 
 ## Properties<a name="aws-properties-iot-thing-attributepayload-properties"></a>
 
-`Attributes`  
+`Attributes`  <a name="cfn-iot-thing-attributepayload-attributes"></a>
 A string that contains up to three key–value pairs\. Maximum length of 800\. Duplicates not allowed\.  
 *Required: *No  
 *Type*: String to string map  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Example<a name="aws-properties-iot-thing-attributepayload-example"></a>
 

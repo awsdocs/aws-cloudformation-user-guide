@@ -4,32 +4,32 @@ The `ConnectionDrainingPolicy` property describes how deregistered or unhealthy 
 
 For more information about connection draining and default values, see [Enable or Disable Connection Draining for Your Load Balancer](http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/config-conn-drain.html) in the *Elastic Load Balancing User Guide*\.
 
-## Syntax<a name="w3ab2c21c14d787b7"></a>
+## Syntax<a name="w3ab2c21c14d812b7"></a>
 
 ### JSON<a name="aws-properties-ec2-elb-connectiondrainingpolicy-syntax.json"></a>
 
 ```
 {
-   "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elb-connectiondrainingpolicy-enabled)" : Boolean,
-   "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elb-connectiondrainingpolicy-timeout)" : Integer
+   "[Enabled](#cfn-elb-connectiondrainingpolicy-enabled)" : Boolean,
+   "[Timeout](#cfn-elb-connectiondrainingpolicy-timeout)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-ec2-elb-connectiondrainingpolicy-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elb-connectiondrainingpolicy-enabled): Boolean
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elb-connectiondrainingpolicy-timeout): Integer
+[Enabled](#cfn-elb-connectiondrainingpolicy-enabled): Boolean
+[Timeout](#cfn-elb-connectiondrainingpolicy-timeout): Integer
 ```
 
-## Properties<a name="w3ab2c21c14d787b9"></a>
+## Properties<a name="w3ab2c21c14d812b9"></a>
 
-`Enabled`  
+`Enabled`  <a name="cfn-elb-connectiondrainingpolicy-enabled"></a>
 Whether or not connection draining is enabled for the load balancer\.  
 *Required: *Yes  
 *Type*: Boolean
 
-`Timeout`  
+`Timeout`  <a name="cfn-elb-connectiondrainingpolicy-timeout"></a>
 The time in seconds after the load balancer closes all connections to a deregistered or unhealthy instance\.  
 *Required: *No  
 *Type*: Integer

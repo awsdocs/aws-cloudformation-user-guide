@@ -21,10 +21,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type": "AWS::ApiGateway::DomainName",
   "Properties": {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-domainname-certificatearn)": String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-domainname-domainname)": String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-domainname-endpointconfiguration)" : EndpointConfiguration,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-domainname-regionalcertificatearn)" : String
+    "[CertificateArn](#cfn-apigateway-domainname-certificatearn)": String,
+    "[DomainName](#cfn-apigateway-domainname-domainname)": String,
+    "[EndpointConfiguration](#cfn-apigateway-domainname-endpointconfiguration)" : [*EndpointConfiguration*](aws-properties-apigateway-domainname-endpointconfiguration.md),
+    "[RegionalCertificateArn](#cfn-apigateway-domainname-regionalcertificatearn)" : String
   }
 }
 ```
@@ -34,38 +34,38 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ApiGateway::DomainName"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-domainname-certificatearn): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-domainname-domainname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-domainname-endpointconfiguration): 
-    EndpointConfiguration
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-domainname-regionalcertificatearn): String
+  [CertificateArn](#cfn-apigateway-domainname-certificatearn): String
+  [DomainName](#cfn-apigateway-domainname-domainname): String
+  [EndpointConfiguration](#cfn-apigateway-domainname-endpointconfiguration): 
+    [*EndpointConfiguration*](aws-properties-apigateway-domainname-endpointconfiguration.md)
+  [RegionalCertificateArn](#cfn-apigateway-domainname-regionalcertificatearn): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-domainname-properties"></a>
 
-`CertificateArn`  
+`CertificateArn`  <a name="cfn-apigateway-domainname-certificatearn"></a>
 The reference to an AWS\-managed certificate for use by the edge\-optimized endpoint for this domain name\. AWS Certificate Manager is the only supported source\. For requirements and additional information about setting up certificates, see [Get Certificates Ready in AWS Certificate Manager](http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html#how-to-custom-domains-prerequisites) in the *API Gateway Developer Guide*\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`DomainName`  
+`DomainName`  <a name="cfn-apigateway-domainname-domainname"></a>
 The custom domain name for your API in Amazon API Gateway\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`EndpointConfiguration`  
+`EndpointConfiguration`  <a name="cfn-apigateway-domainname-endpointconfiguration"></a>
 A list of the endpoint types of the domain name\.  
  *Required*: No  
  *Type*: [API Gateway DomainName EndpointConfiguration](aws-properties-apigateway-domainname-endpointconfiguration.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`RegionalCertificateArn`  
+`RegionalCertificateArn`  <a name="cfn-apigateway-domainname-regionalcertificatearn"></a>
 The reference to an AWS\-managed certificate for use by the regional endpoint for the domain name\. AWS Certificate Manager is the only supported source\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-apigateway-domainname-returnvalues"></a>
 
@@ -73,7 +73,7 @@ The reference to an AWS\-managed certificate for use by the regional endpoint fo
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the domain name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ### Fn::GetAtt<a name="w3ab2c21c10c49c13b4"></a>
 
@@ -83,7 +83,7 @@ For more information about using the `Ref` function, see Ref\.
 The Amazon CloudFront distribution domain name that's mapped to the custom domain name\.  
 Example: `d111111abcdef8.cloudfront.net`
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\.
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
 ## Examples<a name="aws-resource-apigateway-domainname-examples"></a>
 

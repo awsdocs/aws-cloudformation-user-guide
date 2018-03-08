@@ -10,22 +10,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationpart-location-method)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationpart-location-name)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationpart-location-path)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationpart-location-statuscode)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationpart-location-type)" : String
+  "[Method](#cfn-apigateway-documentationpart-location-method)" : String,
+  "[Name](#cfn-apigateway-documentationpart-location-name)" : String,
+  "[Path](#cfn-apigateway-documentationpart-location-path)" : String,
+  "[StatusCode](#cfn-apigateway-documentationpart-location-statuscode)" : String,
+  "[Type](#cfn-apigateway-documentationpart-location-type)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-apigateway-documentationpart-location-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationpart-location-method): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationpart-location-name): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationpart-location-path): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationpart-location-statuscode): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationpart-location-type): String
+[Method](#cfn-apigateway-documentationpart-location-method): String
+[Name](#cfn-apigateway-documentationpart-location-name): String
+[Path](#cfn-apigateway-documentationpart-location-path): String
+[StatusCode](#cfn-apigateway-documentationpart-location-statuscode): String
+[Type](#cfn-apigateway-documentationpart-location-type): String
 ```
 
 ## Properties<a name="aws-properties-apigateway-documentationpart-location-properties"></a>
@@ -33,32 +33,32 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 **Note**  
 For more information about each property, including constraints and valid values, see [ DocumentationPart](http://docs.aws.amazon.com/apigateway/api-reference/resource/documentation-part/#location) in the *Amazon API Gateway REST API Reference*\.
 
-`Method`  
+`Method`  <a name="cfn-apigateway-documentationpart-location-method"></a>
 The HTTP verb of a method\.  
  *Required*: No  
 *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`Name`  
+`Name`  <a name="cfn-apigateway-documentationpart-location-name"></a>
 The name of the targeted API entity\.  
  *Required*: No  
 *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`Path`  
+`Path`  <a name="cfn-apigateway-documentationpart-location-path"></a>
 The URL path of the target\.  
  *Required*: No  
 *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`StatusCode`  
+`StatusCode`  <a name="cfn-apigateway-documentationpart-location-statuscode"></a>
 The HTTP status code of a response\.  
  *Required*: No  
 *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`Type`  
+`Type`  <a name="cfn-apigateway-documentationpart-location-type"></a>
 The type of API entity that the documentation content applies to\.  
  *Required*: No  
 *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 

@@ -2,39 +2,39 @@
 
 `Ulimit` is a property of the [Amazon Elastic Container Service TaskDefinition ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md) property that specifies resource limits for an Amazon Elastic Container Service \(Amazon ECS\) container\.
 
-## Syntax<a name="w3ab2c21c14d715b5"></a>
+## Syntax<a name="w3ab2c21c14d740b5"></a>
 
 ### JSON<a name="aws-properties-ecs-taskdefinition-containerdefinitions-ulimit-syntax.json"></a>
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-containerdefinition-ulimit-hardlimit)" : Integer,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-containerdefinition-ulimit-name)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-containerdefinition-ulimit-softlimit)" : Integer
+  "[HardLimit](#cfn-ecs-taskdefinition-containerdefinition-ulimit-hardlimit)" : Integer,
+  "[Name](#cfn-ecs-taskdefinition-containerdefinition-ulimit-name)" : String,
+  "[SoftLimit](#cfn-ecs-taskdefinition-containerdefinition-ulimit-softlimit)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-ecs-taskdefinition-containerdefinitions-ulimit-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-containerdefinition-ulimit-hardlimit): Integer
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-containerdefinition-ulimit-name): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-containerdefinition-ulimit-softlimit): Integer
+[HardLimit](#cfn-ecs-taskdefinition-containerdefinition-ulimit-hardlimit): Integer
+[Name](#cfn-ecs-taskdefinition-containerdefinition-ulimit-name): String
+[SoftLimit](#cfn-ecs-taskdefinition-containerdefinition-ulimit-softlimit): Integer
 ```
 
-## Properties<a name="w3ab2c21c14d715b7"></a>
+## Properties<a name="w3ab2c21c14d740b7"></a>
 
-`HardLimit`  
+`HardLimit`  <a name="cfn-ecs-taskdefinition-containerdefinition-ulimit-hardlimit"></a>
 The hard limit for the ulimit type\.  
 *Required: *Yes  
 *Type*: Integer
 
-`Name`  
+`Name`  <a name="cfn-ecs-taskdefinition-containerdefinition-ulimit-name"></a>
 The type of ulimit\. For valid values, see the `name` content for the [Ulimit](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_Ulimit.html) data type in the *Amazon Elastic Container Service API Reference*\.  
 *Required: *No  
 *Type*: String
 
-`SoftLimit`  
+`SoftLimit`  <a name="cfn-ecs-taskdefinition-containerdefinition-ulimit-softlimit"></a>
 The soft limit for the ulimit type\.  
 *Required: *Yes  
 *Type*: Integer

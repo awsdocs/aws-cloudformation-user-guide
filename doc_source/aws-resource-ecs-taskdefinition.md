@@ -19,16 +19,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ECS::TaskDefinition",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-volumes)" : [ Volume Definition, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-cpu)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-executionrolearn)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-family)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-memory)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-networkmode)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-placementconstraints)" : TaskDefinitionPlacementConstraint,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-requirescompatibilities)" : [ String, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-taskrolearn)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-containerdefinition)" : [ Container Definition, ... ]
+    "[Volumes](#cfn-ecs-taskdefinition-volumes)" : [ Volume Definition, ... ],
+    "[Cpu](#cfn-ecs-taskdefinition-cpu)" : String,
+    "[ExecutionRoleArn](#cfn-ecs-taskdefinition-executionrolearn)" : String,
+    "[Family](#cfn-ecs-taskdefinition-family)" : String,
+    "[Memory](#cfn-ecs-taskdefinition-memory)" : String,
+    "[NetworkMode](#cfn-ecs-taskdefinition-networkmode)" : String,
+    "[PlacementConstraints](#cfn-ecs-taskdefinition-placementconstraints)" : TaskDefinitionPlacementConstraint,
+    "[RequiresCompatibilities](#cfn-ecs-taskdefinition-requirescompatibilities)" : [ String, ... ],
+    "[TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn)" : String,
+    "[ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinition)" : [ Container Definition, ... ]
   }
 }
 ```
@@ -38,19 +38,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ECS::TaskDefinition"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-volumes):
+  [Volumes](#cfn-ecs-taskdefinition-volumes):
     - Volume Definition
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-cpu): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-executionrolearn): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-family): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-memory): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-networkmode): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-placementconstraints):
+  [Cpu](#cfn-ecs-taskdefinition-cpu): String
+  [ExecutionRoleArn](#cfn-ecs-taskdefinition-executionrolearn): String
+  [Family](#cfn-ecs-taskdefinition-family): String
+  [Memory](#cfn-ecs-taskdefinition-memory): String
+  [NetworkMode](#cfn-ecs-taskdefinition-networkmode): String
+  [PlacementConstraints](#cfn-ecs-taskdefinition-placementconstraints):
     - TaskDefinitionPlacementConstraint
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-requirescompatibilities):
+  [RequiresCompatibilities](#cfn-ecs-taskdefinition-requirescompatibilities):
     - String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-taskrolearn): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-taskdefinition-containerdefinition):
+  [TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn): String
+  [ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinition):
     - Container Definition
 ```
 
@@ -58,13 +58,13 @@ Properties:
 
 For more information on properties and valid parameters, see [RegisterTaskDefinition](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_RegisterTaskDefinition.html) in the *Amazon Elastic Container Service API Reference*\.
 
-`ContainerDefinitions`  
+`ContainerDefinitions`  <a name="cfn-ecs-taskdefinition-containerdefinition"></a>
 A list of container definitions in JSON format that describes the containers that make up your task\.  
 *Required: *Yes  
 *Type*: List of [Amazon Elastic Container Service TaskDefinition ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md)  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Cpu`  
+`Cpu`  <a name="cfn-ecs-taskdefinition-cpu"></a>
 The number of `cpu` units used by the task\. If using the EC2 launch type, this field is optional and any value can be used\. If you are using the Fargate launch type, this field is required and you must use one of the following values, which determines your range of valid values for the `memory` parameter:  
 
 + 256 \(\.25 vCPU\) \- Available `memory` values: 0\.5GB, 1GB, 2GB
@@ -78,22 +78,22 @@ The number of `cpu` units used by the task\. If using the EC2 launch type, this 
 + 4096 \(4 vCPU\) \- Available `memory` values: Between 8GB and 30GB in 1GB increments
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`ExecutionRoleArn`  
+`ExecutionRoleArn`  <a name="cfn-ecs-taskdefinition-executionrolearn"></a>
 The Amazon Resource Name \(ARN\) of the task execution role that containers in this task can assume\. All containers in this task are granted the permissions that are specified in this role\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Family`  
+`Family`  <a name="cfn-ecs-taskdefinition-family"></a>
 The name of a family that this task definition is registered to\. A *family* groups multiple versions of a task definition\. Amazon ECS gives the first task definition that you registered to a family a revision number of 1\. Amazon ECS gives sequential revision numbers to each task definition that you add\.  
 To use revision numbers when you update a task definition, specify this property\. If you don't specify a value, AWS CloudFormation generates a new task definition each time that you update it\.
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Memory`  
+`Memory`  <a name="cfn-ecs-taskdefinition-memory"></a>
 The amount \(in MiB\) of memory used by the task\. If using the EC2 launch type, this field is optional and any value can be used\. If you are using the Fargate launch type, this field is required and you must use one of the following values, which determines your range of valid values for the `cpu` parameter:  
 
 + 0\.5GB, 1GB, 2GB \- Available `cpu` values: 256 \(\.25 vCPU\)
@@ -107,38 +107,38 @@ The amount \(in MiB\) of memory used by the task\. If using the EC2 launch type,
 + Between 8GB and 30GB in 1GB increments \- Available `cpu` values: 4096 \(4 vCPU\)
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`NetworkMode`  
+`NetworkMode`  <a name="cfn-ecs-taskdefinition-networkmode"></a>
 The Docker networking mode to use for the containers in the task, such as `none`, `bridge`, or `host`\. For information about network modes, see [http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_RegisterTaskDefinition.html](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_RegisterTaskDefinition.html) in the [Task Definition Parameters](http://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html) topic in the *Amazon Elastic Container Service Developer Guide*\.  
 For Fargate launch types, you can specify `awsvpc` only\. The `none`, `bridge`, or `host` option won't work for Fargate launch types\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`PlacementConstraints`  
+`PlacementConstraints`  <a name="cfn-ecs-taskdefinition-placementconstraints"></a>
 The placement constraints for the tasks in the service\.  
 *Required: *No  
 *Type*: [Amazon Elastic Container Service Service PlacementConstraint](aws-properties-ecs-taskdefinition-placementconstraints-taskdefinitionplacementconstraint.md)  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`RequiresCompatibilities`  
+`RequiresCompatibilities`  <a name="cfn-ecs-taskdefinition-requirescompatibilities"></a>
 The launch type the task requires\. If no value is specified, it will default to `EC2`\. Valid values include `EC2` and `FARGATE`\.  
 *Required: *No  
 *Type*: List of Strings  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`TaskRoleArn`  
+`TaskRoleArn`  <a name="cfn-ecs-taskdefinition-taskrolearn"></a>
 The Amazon Resource Name \(ARN\) of an AWS Identity and Access Management \(IAM\) role that grants containers in the task permission to call AWS APIs on your behalf\. For more information, see [IAM Roles for Tasks](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Volumes`  
+`Volumes`  <a name="cfn-ecs-taskdefinition-volumes"></a>
 A list of volume definitions in JSON format for the volumes that you can use in your container definitions\.  
 *Required: *No  
 *Type*: List of [Amazon Elastic Container Service TaskDefinition Volumes](aws-properties-ecs-taskdefinition-volumes.md)  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Value<a name="aws-resource-ecs-taskdefinition-returnvalues"></a>
 
@@ -152,7 +152,7 @@ In the following example, the `Ref` function returns the ARN of the `MyTaskDefin
 { "Ref": "MyTaskDefinition" }
 ```
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Examples<a name="aws-resource-ecs-taskdefinition-examples"></a>
 

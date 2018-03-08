@@ -19,8 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type" : "AWS::EC2::RouteTable",
    "Properties" : {
-      "VpcId" : String,
-      "Tags" : [ Resource Tag, ... ]
+      "[VpcId](#cfn-ec2-routetable-vpcid)" : String,
+      "[Tags](#cfn-ec2-routetable-tags)" : [ Resource Tag, ... ]
    }
 }
 ```
@@ -30,25 +30,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::RouteTable"
 Properties: 
-  VpcId: String
-  Tags:
+  [VpcId](#cfn-ec2-routetable-vpcid): String
+  [Tags](#cfn-ec2-routetable-tags):
     - Resource Tag
 ```
 
 ## Properties<a name="w3ab2c21c10d419b9"></a>
 
-`VpcId`  
+`VpcId`  <a name="cfn-ec2-routetable-vpcid"></a>
 The ID of the VPC where the route table will be created\.  
 Example: vpc\-11ad4878  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Tags`  
+`Tags`  <a name="cfn-ec2-routetable-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this route table\.  
 *Required: *No  
-*Type*:   
-*Update requires*: No interruption\.
+*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
 ## Return Values<a name="w3ab2c21c10d419c11"></a>
 
@@ -56,7 +56,7 @@ An arbitrary set of tags \(key–value pairs\) for this route table\.
 
 When you specify an `AWS::EC2::RouteTable` type as an argument to the `Ref` function, AWS CloudFormation returns the route table ID, such as `rtb-12a34567`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Examples<a name="w3ab2c21c10d419c13"></a>
 
@@ -96,7 +96,7 @@ Resources:
 
 ## See Also<a name="w3ab2c21c10d419c15"></a>
 
-+ AWS::EC2::Route
++ [AWS::EC2::Route](aws-resource-ec2-route.md)
 
 + [CreateRouteTable](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateRouteTable.html) in the *Amazon EC2 API Reference*
 

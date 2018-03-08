@@ -20,7 +20,7 @@ For stacks that contain transforms, choose **View original template** to view th
 
 **Parameters**  
 Displays the stack's parameters and their values\.  
-For stacks that contain `SSM` parameters, the **Resolved Value** column displays the values that are used in the stack definition for the `SSM` parameters\. For more information, see \.
+For stacks that contain `SSM` parameters, the **Resolved Value** column displays the values that are used in the stack definition for the `SSM` parameters\. For more information, see [`SSM` Parameter Types](parameters-section-structure.md#aws-ssm-parameter-types)\.
 
 **Tags**  
 Displays any tags that are associated with the stack\.
@@ -52,7 +52,7 @@ The following table describes stack status codes:
 |  `DELETE_COMPLETE`  |  Successful deletion of one or more stacks\. Deleted stacks are retained and viewable for 90 days\.  | 
 |  `DELETE_FAILED`  |  Unsuccessful deletion of one or more stacks\. Because the delete failed, you might have some resources that are still running; however, you cannot work with or update the stack\. Delete the stack again or view the stack events to see any associated error messages\.  | 
 |  `DELETE_IN_PROGRESS`  |  Ongoing removal of one or more stacks\.  | 
-| REVIEW\_IN\_PROGRESS | Ongoing creation of one or more stacks with an expected StackId but without any templates or resources\. A stack with this status code counts against the maximum possible number of stacks\.  | 
+| REVIEW\_IN\_PROGRESS | Ongoing creation of one or more stacks with an expected StackId but without any templates or resources\. A stack with this status code counts against the [maximum possible number of stacks](cloudformation-limits.md)\.  | 
 |  `ROLLBACK_COMPLETE`  |  Successful removal of one or more stacks after a failed stack creation or after an explicitly canceled stack creation\. Any resources that were created during the create stack action are deleted\. This status exists only after a failed stack creation\. It signifies that all operations from the partially created stack have been appropriately cleaned up\. When in this state, only a delete operation can be performed\.  | 
 |  `ROLLBACK_FAILED`  |  Unsuccessful removal of one or more stacks after a failed stack creation or after an explicitly canceled stack creation\. Delete the stack or view the stack events to see any associated error messages\.  | 
 |  `ROLLBACK_IN_PROGRESS`  |  Ongoing removal of one or more stacks after a failed stack creation or after an explicitly cancelled stack creation\.  | 
@@ -61,5 +61,5 @@ The following table describes stack status codes:
 |  `UPDATE_IN_PROGRESS`  |  Ongoing update of one or more stacks\.  | 
 |  `UPDATE_ROLLBACK_COMPLETE`  |  Successful return of one or more stacks to a previous working state after a failed stack update\.  | 
 |  `UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS`  |  Ongoing removal of new resources for one or more stacks after a failed stack update\. In this state, the stack has been rolled back to its previous working state and is usable, but AWS CloudFormation is still deleting any new resources it created during the stack update\.  | 
-|  `UPDATE_ROLLBACK_FAILED`  |  Unsuccessful return of one or more stacks to a previous working state after a failed stack update\. When in this state, you can delete the stack or continue rollback\. You might need to fix errors before your stack can return to a working state\. Or, you can contact customer support to restore the stack to a usable state\.  | 
+|  `UPDATE_ROLLBACK_FAILED`  |  Unsuccessful return of one or more stacks to a previous working state after a failed stack update\. When in this state, you can delete the stack or [continue rollback](using-cfn-updating-stacks-continueupdaterollback.md)\. You might need to fix errors before your stack can return to a working state\. Or, you can contact customer support to restore the stack to a usable state\.  | 
 |  `UPDATE_ROLLBACK_IN_PROGRESS`  |  Ongoing return of one or more stacks to the previous working state after failed stack update\.  | 

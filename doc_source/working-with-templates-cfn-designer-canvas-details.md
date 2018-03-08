@@ -134,7 +134,7 @@ WebServerSecurityGroup:
 
 ## Accessing Common Resource Actions with the Resource Menu<a name="w3ab2c17c18c13c15b9"></a>
 
-The **Resource** menu provides easy access to common resource actions: editing resource properties, duplicating a resource, deleting a resource, or viewing the documentation for the resource\. To view the **Resource** menu, right\-click on a resource in the **canvas** pane\. The documentation link goes to the template reference, which describes the properties and syntax for that resource\.
+The **Resource** menu provides easy access to common resource actions: editing resource properties, duplicating a resource, deleting a resource, or viewing the documentation for the resource\. To view the **Resource** menu, right\-click on a resource in the **canvas** pane\. The documentation link goes to the [template reference](aws-template-resource-type-ref.md), which describes the properties and syntax for that resource\.
 
 **Resource menu**
 

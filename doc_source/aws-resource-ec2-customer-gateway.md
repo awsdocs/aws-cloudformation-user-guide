@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type" : "AWS::EC2::CustomerGateway",
    "Properties" : {
-      "BgpAsn" : Number,
-      "IpAddress" : String,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-customergateway-tags)" :  [ Resource Tag, ... ],
-      "Type" : String
+      "[BgpAsn](#cfn-ec2-customergateway-bgpasn)" : Number,
+      "[IpAddress](#cfn-ec2-customergateway-ipaddress)" : String,
+      "[Tags](#cfn-ec2-customergateway-tags)" :  [ Resource Tag, ... ],
+      "[Type](#cfn-ec2-customergateway-type)" : String
    }
 }
 ```
@@ -32,38 +32,38 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::CustomerGateway"
 Properties:
-  BgpAsn: Number
-  IpAddress: String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-customergateway-tags):
+  [BgpAsn](#cfn-ec2-customergateway-bgpasn): Number
+  [IpAddress](#cfn-ec2-customergateway-ipaddress): String
+  [Tags](#cfn-ec2-customergateway-tags):
     Resource Tag
-  Type: String
+  [Type](#cfn-ec2-customergateway-type): String
 ```
 
 ## Properties<a name="w3ab2c21c10d342b9"></a>
 
-`BgpAsn`  
+`BgpAsn`  <a name="cfn-ec2-customergateway-bgpasn"></a>
 The customer gateway's Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\)\.  
 *Required: *Yes  
 *Type*: Number BgpAsn is always an integer value\.  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`IpAddress`  
+`IpAddress`  <a name="cfn-ec2-customergateway-ipaddress"></a>
 The internet\-routable IP address for the customer gateway's outside interface\. The address must be static\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Tags`  
+`Tags`  <a name="cfn-ec2-customergateway-tags"></a>
 The tags that you want to attach to the resource\.  
 *Required: *No  
 *Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)\.  
-*Update requires*: No interruption\.
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
-`Type`  
+`Type`  <a name="cfn-ec2-customergateway-type"></a>
 The type of VPN connection that this customer gateway supports\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)  
 *Example*: `ipsec.1`
 
 ## Return Value<a name="w3ab2c21c10d342c11"></a>
@@ -76,7 +76,7 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 For the resource with the logical ID "MyResource", `Ref` will return the AWS resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d342c13"></a>
 

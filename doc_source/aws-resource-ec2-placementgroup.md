@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::PlacementGroup",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-placementgroup-strategy)" : String
+    "[Strategy](#cfn-ec2-placementgroup-strategy)" : String
   }
 }
 ```
@@ -28,16 +28,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::PlacementGroup"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-placementgroup-strategy): String
+  [Strategy](#cfn-ec2-placementgroup-strategy): String
 ```
 
 ## Properties<a name="w3ab2c21c10d408b9"></a>
 
-`Strategy`  
+`Strategy`  <a name="cfn-ec2-placementgroup-strategy"></a>
 The placement strategy, which relates to the instance types that can be added to the placement group\. For example, for the `cluster` strategy, you can cluster C4 instance types but not T2 instance types\. For valid values, see [CreatePlacementGroup](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreatePlacementGroup.html) in the *Amazon EC2 API Reference*\. By default, AWS CloudFormation sets the value of this property to `cluster`\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Values<a name="w3ab2c21c10d408c11"></a>
 
@@ -45,7 +45,7 @@ The placement strategy, which relates to the instance types that can be added to
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d408c13"></a>
 

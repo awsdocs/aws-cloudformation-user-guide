@@ -8,8 +8,8 @@ This section provides detail about:
 
 ## In This Section<a name="w3ab2c17c26c17b7"></a>
 
-+ 
++ [Custom Resource Request Objects](crpg-ref-requests.md)
 
-+ 
++ [Custom Resource Response Objects](crpg-ref-responses.md)
 
-+ 
++ [Custom Resource Request Types](crpg-ref-requesttypes.md)

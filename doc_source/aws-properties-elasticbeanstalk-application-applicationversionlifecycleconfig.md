@@ -14,28 +14,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxagerule)" : MaxAgeRule,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxcountrule)" : MaxCountRule
+  "[MaxAgeRule](#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxagerule)" : [*MaxAgeRule*](aws-properties-elasticbeanstalk-application-maxagerule.md),
+  "[MaxCountRule](#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxcountrule)" : [*MaxCountRule*](aws-properties-elasticbeanstalk-application-maxcountrule.md)
 }
 ```
 
 ### YAML<a name="aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxagerule): MaxAgeRule
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxcountrule): MaxCountRule
+[MaxAgeRule](#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxagerule): MaxAgeRule
+[MaxCountRule](#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxcountrule): MaxCountRule
 ```
 
 ## Properties<a name="aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig-properties"></a>
 
-`MaxAgeRule`  
+`MaxAgeRule`  <a name="cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxagerule"></a>
 Specifies a max age rule to restrict the length of time that application versions are retained for an application\.  
  *Required*: No  
  *Type*: [Elastic Beanstalk Application MaxAgeRule](aws-properties-elasticbeanstalk-application-maxagerule.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`MaxCountRule`  
+`MaxCountRule`  <a name="cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxcountrule"></a>
 Specifies a max count rule to restrict the number of application versions that are retained for an application\.  
  *Required*: No  
  *Type*: [Elastic Beanstalk Application MaxCountRule](aws-properties-elasticbeanstalk-application-maxcountrule.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

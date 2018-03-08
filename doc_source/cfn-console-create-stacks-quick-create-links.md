@@ -41,5 +41,4 @@ https://eu-central-1.console.aws.amazon.com/cloudformation/home?region=eu-centra
 
 The example URL opens the **Create Stack Wizard** in the console, with the supplied values automatically used for the parameters\.
 
-![\[Parameters in the Create Stack Wizard that are prepopulated with the values
-                    from the URL query string.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cfn-console-create-stacks-quick-create-links_wizard.png)
+![\[Parameters in the Create Stack Wizard that are prepopulated with the values from the URL query string.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cfn-console-create-stacks-quick-create-links_wizard.png)

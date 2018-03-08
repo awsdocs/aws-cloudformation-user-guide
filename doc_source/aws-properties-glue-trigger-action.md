@@ -12,31 +12,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-action-jobname)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-action-arguments)" : JSON object
+  "[JobName](#cfn-glue-trigger-action-jobname)" : String,
+  "[Arguments](#cfn-glue-trigger-action-arguments)" : JSON object
 }
 ```
 
 ### YAML<a name="aws-properties-glue-trigger-action-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-action-jobname): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-action-arguments): JSON object
+[JobName](#cfn-glue-trigger-action-jobname): String
+[Arguments](#cfn-glue-trigger-action-arguments): JSON object
 ```
 
 ## Properties<a name="aws-properties-glue-trigger-action-properties"></a>
 
-`JobName`  
+`JobName`  <a name="cfn-glue-trigger-action-jobname"></a>
 The name of the associated job\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Arguments`  
+`Arguments`  <a name="cfn-glue-trigger-action-arguments"></a>
 UTF\-8 string–to–UTF\-8 string key\-value pairs that specify the arguments for the action\.  
  *Required*: No  
  *Type*: JSON object  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-glue-trigger-action-seealso"></a>
 

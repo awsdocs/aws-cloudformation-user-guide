@@ -12,24 +12,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights)" : [ VersionWeight, ... ]
+  "[AdditionalVersionWeights](#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights)" : [ [*VersionWeight*](aws-properties-lambda-alias-versionweight.md), ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-lambda-alias-aliasroutingconfiguration-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights): 
-  - VersionWeight
+[AdditionalVersionWeights](#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights): 
+  - [*VersionWeight*](aws-properties-lambda-alias-versionweight.md)
 ```
 
 ## Properties<a name="aws-properties-lambda-alias-aliasroutingconfiguration-properties"></a>
 
-`AdditionalVersionWeights`  
+`AdditionalVersionWeights`  <a name="cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights"></a>
 The percentage of traffic that will invoke the updated function version\.  
  *Required*: Yes  
  *Type*: List of [AWS Lambda Alias VersionWeight](aws-properties-lambda-alias-versionweight.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-lambda-alias-aliasroutingconfiguration-seealso"></a>
 

@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::NetworkInterfacePermission",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-networkinterfacepermission-awsaccountid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-networkinterfacepermission-networkinterfaceid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-networkinterfacepermission-permission)" : String
+    "[AwsAccountId](#cfn-ec2-networkinterfacepermission-awsaccountid)" : String,
+    "[NetworkInterfaceId](#cfn-ec2-networkinterfacepermission-networkinterfaceid)" : String,
+    "[Permission](#cfn-ec2-networkinterfacepermission-permission)" : String
   }
 }
 ```
@@ -30,30 +30,30 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::NetworkInterfacePermission"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-networkinterfacepermission-awsaccountid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-networkinterfacepermission-networkinterfaceid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-networkinterfacepermission-permission): String
+  [AwsAccountId](#cfn-ec2-networkinterfacepermission-awsaccountid): String
+  [NetworkInterfaceId](#cfn-ec2-networkinterfacepermission-networkinterfaceid): String
+  [Permission](#cfn-ec2-networkinterfacepermission-permission): String
 ```
 
 ## Properties<a name="aws-resource-ec2-networkinterfacepermission-properties"></a>
 
-`AwsAccountId`  
+`AwsAccountId`  <a name="cfn-ec2-networkinterfacepermission-awsaccountid"></a>
 The AWS account ID\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`NetworkInterfaceId`  
+`NetworkInterfaceId`  <a name="cfn-ec2-networkinterfacepermission-networkinterfaceid"></a>
 The ID of the network interface\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`Permission`  
+`Permission`  <a name="cfn-ec2-networkinterfacepermission-permission"></a>
 The type of permission to grant: `INSTANCE-ATTACH` or `EIP-ASSOCIATE`\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## Return Values<a name="aws-resource-ec2-networkinterfacepermission-returnvalues"></a>
 
@@ -61,7 +61,7 @@ The type of permission to grant: `INSTANCE-ATTACH` or `EIP-ASSOCIATE`\.
 
 When you pass the logical ID of an `AWS::EC2::NetworkInterfacePermission` resource to the intrinsic `Ref` function, the function returns the network interface permission ID\. For example, `eni-perm-055663b682ea24b48`\.
 
-For more information about using the `Ref` function, see Ref\. 
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
 ## Examples<a name="aws-resource-ec2-networkinterfacepermission-examples"></a>
 

@@ -4,9 +4,9 @@ Creates an Amazon Redshift parameter group that you can associate with an Amazon
 
 
 + [Syntax](#aws-resource-redshift-clusterparametergroup-syntax)
-+ [Properties](#w3ab2c21c10d922b9)
-+ [Return Values](#w3ab2c21c10d922c11)
-+ [Examples](#w3ab2c21c10d922c13)
++ [Properties](#w3ab2c21c10d926b9)
++ [Return Values](#w3ab2c21c10d926c11)
++ [Examples](#w3ab2c21c10d926c13)
 
 ## Syntax<a name="aws-resource-redshift-clusterparametergroup-syntax"></a>
 
@@ -18,10 +18,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Redshift::ClusterParameterGroup",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-redshift-clusterparametergroup-description)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-redshift-clusterparametergroup-parametergroupfamily)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-redshift-clusterparametergroup-parameters)" : [ Parameter, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-redshift-clusterparametergroup-tags)" : [ Resource Tag, ... ]
+    "[Description](#cfn-redshift-clusterparametergroup-description)" : String,
+    "[ParameterGroupFamily](#cfn-redshift-clusterparametergroup-parametergroupfamily)" : String,
+    "[Parameters](#cfn-redshift-clusterparametergroup-parameters)" : [ Parameter, ... ],
+    "[Tags](#cfn-redshift-clusterparametergroup-tags)" : [ Resource Tag, ... ]
   }
 }
 ```
@@ -31,43 +31,43 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Redshift::ClusterParameterGroup"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-redshift-clusterparametergroup-description): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-redshift-clusterparametergroup-parametergroupfamily): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-redshift-clusterparametergroup-parameters):
+  [Description](#cfn-redshift-clusterparametergroup-description): String
+  [ParameterGroupFamily](#cfn-redshift-clusterparametergroup-parametergroupfamily): String
+  [Parameters](#cfn-redshift-clusterparametergroup-parameters):
     - Parameter
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-redshift-clusterparametergroup-tags):
+  [Tags](#cfn-redshift-clusterparametergroup-tags):
     - Resource Tag
 ```
 
-## Properties<a name="w3ab2c21c10d922b9"></a>
+## Properties<a name="w3ab2c21c10d926b9"></a>
 
-`Description`  
+`Description`  <a name="cfn-redshift-clusterparametergroup-description"></a>
 A description of the parameter group\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`ParameterGroupFamily`  
+`ParameterGroupFamily`  <a name="cfn-redshift-clusterparametergroup-parametergroupfamily"></a>
 The Amazon Redshift engine version that applies to this cluster parameter group\. The cluster engine version determines the set of parameters that you can specify in the `Parameters` property\.   
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Parameters`  
+`Parameters`  <a name="cfn-redshift-clusterparametergroup-parameters"></a>
 A list of parameter names and values that are allowed by the Amazon Redshift engine version that you specified in the `ParameterGroupFamily` property\. For more information, see [Amazon Redshift Parameter Groups](http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html) in the *Amazon Redshift Cluster Management Guide*\.  
 *Required: *No  
 *Type*: [Amazon Redshift Parameter Type](aws-property-redshift-clusterparametergroup-parameter.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Tags`  
+`Tags`  <a name="cfn-redshift-clusterparametergroup-tags"></a>
 Specifies an arbitrary set of tags \(key–value pairs\) to associate with this parameter group\. Use tags to manage your resources\.  
 *Required: *No  
-*Type*:   
-*Update requires*: No interruption
+*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10d922c11"></a>
+## Return Values<a name="w3ab2c21c10d926c11"></a>
 
-### Ref<a name="w3ab2c21c10d922c11b2"></a>
+### Ref<a name="w3ab2c21c10d926c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -77,11 +77,11 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 For the Amazon Redshift cluster parameter group `myClusterParameterGroup`, `Ref` returns the name of the cluster parameter group\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w3ab2c21c10d922c13"></a>
+## Examples<a name="w3ab2c21c10d926c13"></a>
 
-### Single Parameter<a name="w3ab2c21c10d922c13b2"></a>
+### Single Parameter<a name="w3ab2c21c10d926c13b2"></a>
 
 The following example describes a parameter group with one parameter that is specified:
 
@@ -115,7 +115,7 @@ myClusterParameterGroup:
         ParameterValue: "true"
 ```
 
-### Workload Management Configuration<a name="w3ab2c21c10d922c13b4"></a>
+### Workload Management Configuration<a name="w3ab2c21c10d926c13b4"></a>
 
 The following example modifies the workload management configuration using the `wlm_json_configuration` parameter\. The parameter value is a JSON object that must be passed as a string enclosed in quotation marks \(`"`\)\.
 

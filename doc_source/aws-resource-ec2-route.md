@@ -19,15 +19,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::Route",
   "Properties" : {
-    "DestinationCidrBlock" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-route-destinationipv6cidrblock)" : String,
-    "EgressOnlyInternetGatewayId" : String,
-    "GatewayId" : String,
-    "InstanceId" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-route-natgatewayid)" : String,
-    "NetworkInterfaceId" : String,
-    "RouteTableId" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-route-vpcpeeringconnectionid)" : String
+    "[DestinationCidrBlock](#cfn-ec2-route-destinationcidrblock)" : String,
+    "[DestinationIpv6CidrBlock](#cfn-ec2-route-destinationipv6cidrblock)" : String,
+    "[EgressOnlyInternetGatewayId](#cfn-ec2-route-egressonlyinternetgatewayid)" : String,
+    "[GatewayId](#cfn-ec2-route-gatewayid)" : String,
+    "[InstanceId](#cfn-ec2-route-instanceid)" : String,
+    "[NatGatewayId](#cfn-ec2-route-natgatewayid)" : String,
+    "[NetworkInterfaceId](#cfn-ec2-route-networkinterfaceid)" : String,
+    "[RouteTableId](#cfn-ec2-route-routetableid)" : String,
+    "[VpcPeeringConnectionId](#cfn-ec2-route-vpcpeeringconnectionid)" : String
   }
 }
 ```
@@ -37,73 +37,73 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::Route"
 Properties: 
-  DestinationCidrBlock: String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-route-destinationipv6cidrblock): String
-  EgressOnlyInternetGatewayId: String
-  GatewayId: String
-  InstanceId: String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-route-natgatewayid): String
-  NetworkInterfaceId: String
-  RouteTableId: String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-route-vpcpeeringconnectionid): String
+  [DestinationCidrBlock](#cfn-ec2-route-destinationcidrblock): String
+  [DestinationIpv6CidrBlock](#cfn-ec2-route-destinationipv6cidrblock): String
+  [EgressOnlyInternetGatewayId](#cfn-ec2-route-egressonlyinternetgatewayid): String
+  [GatewayId](#cfn-ec2-route-gatewayid): String
+  [InstanceId](#cfn-ec2-route-instanceid): String
+  [NatGatewayId](#cfn-ec2-route-natgatewayid): String
+  [NetworkInterfaceId](#cfn-ec2-route-networkinterfaceid): String
+  [RouteTableId](#cfn-ec2-route-routetableid): String
+  [VpcPeeringConnectionId](#cfn-ec2-route-vpcpeeringconnectionid): String
 ```
 
 ## Properties<a name="w3ab2c21c10d413b9"></a>
 
-`DestinationCidrBlock`  
+`DestinationCidrBlock`  <a name="cfn-ec2-route-destinationcidrblock"></a>
 The IPv4 CIDR address block used for the destination match\. For example, `0.0.0.0/0`\. Routing decisions are based on the most specific match\.  
 *Required: *Conditional\. You must specify the `DestinationCidrBlock` or `DestinationIpv6CidrBlock` property\.  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`DestinationIpv6CidrBlock`  
+`DestinationIpv6CidrBlock`  <a name="cfn-ec2-route-destinationipv6cidrblock"></a>
 The IPv6 CIDR address block used for the destination match\. For example, `::/0`\. Routing decisions are based on the most specific match\.  
 *Required: *Conditional\. You must specify the `DestinationCidrBlock` or `DestinationIpv6CidrBlock` property\.  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`EgressOnlyInternetGatewayId`  
+`EgressOnlyInternetGatewayId`  <a name="cfn-ec2-route-egressonlyinternetgatewayid"></a>
 The ID of an egress\-only internet gateway that is attached to your VPC \(over IPv6 only\)\.  
 *Required: *Conditional\. You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\. For an example that uses this property, see [Amazon EC2 Route with Egress\-Only Internet Gateway](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2.html#quickref-ec2-route-egressonlyinternetgateway)\.  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`GatewayId`  
+`GatewayId`  <a name="cfn-ec2-route-gatewayid"></a>
 The ID of an internet gateway or virtual private gateway that is attached to your VPC\. For example: `igw-eaad4883`\.  
 For route entries that specify a gateway, you must specify a dependency on the gateway attachment resource\. For more information, see [DependsOn Attribute](aws-attribute-dependson.md)\.  
 *Required: *Conditional\. You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\.  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`InstanceId`  
+`InstanceId`  <a name="cfn-ec2-route-instanceid"></a>
 The ID of a NAT instance in your VPC\. For example, `i-1a2b3c4d`\.  
 *Required: *Conditional\. You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\.  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`NatGatewayId`  
+`NatGatewayId`  <a name="cfn-ec2-route-natgatewayid"></a>
 The ID of a NAT gateway\. For example, `nat-0a12bc456789de0fg`\.  
 *Required: *Conditional\. You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\.  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`NetworkInterfaceId`  
+`NetworkInterfaceId`  <a name="cfn-ec2-route-networkinterfaceid"></a>
 Allows the routing of network interface IDs\.  
 *Required: *Conditional\. You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\.  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`RouteTableId`  
-The ID of the route table where the route will be added\.  
+`RouteTableId`  <a name="cfn-ec2-route-routetableid"></a>
+The ID of the [route table](aws-resource-ec2-route-table.md) where the route will be added\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`VpcPeeringConnectionId`  
+`VpcPeeringConnectionId`  <a name="cfn-ec2-route-vpcpeeringconnectionid"></a>
 The ID of a VPC peering connection\.  
 *Required: *Conditional\. You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\.  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Values<a name="w3ab2c21c10d413c11"></a>
 
@@ -111,7 +111,7 @@ The ID of a VPC peering connection\.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Examples<a name="w3ab2c21c10d413c13"></a>
 
@@ -154,7 +154,7 @@ Resources:
 
 ## More Info<a name="w3ab2c21c10d413c15"></a>
 
-+ AWS::EC2::RouteTable
++ [AWS::EC2::RouteTable](aws-resource-ec2-route-table.md)
 
 + [CreateRoute](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateRoute.html) in the *Amazon EC2 API Reference*
 

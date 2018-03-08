@@ -1,48 +1,43 @@
 # CloudFormation Helper Scripts Reference<a name="cfn-helper-scripts-reference"></a>
 
+AWS CloudFormation provides the following Python helper scripts that you can use to install software and start services on an Amazon EC2 instance that you create as part of your stack:
 
-+ [cfn\-init](cfn-init.md)
-+ [cfn\-signal](cfn-signal.md)
-+ [cfn\-get\-metadata](cfn-get-metadata.md)
-+ [cfn\-hup](cfn-hup.md)
++  [cfn\-init](cfn-init.md): Use to retrieve and interpret resource metadata, install packages, create files, and start services\.
 
-AWS CloudFormation provides a set of Python helper scripts that you can use to install software and start services on an Amazon EC2 instance that you create as part of your stack\. You can call the helper scripts directly from your template\. The scripts work in conjunction with resource metadata that you define in the same template\. The helper scripts run on the Amazon EC2 instance as part of the stack creation process\.
++  [cfn\-signal](cfn-signal.md): Use to signal with a CreationPolicy or WaitCondition, so you can synchronize other resources in the stack when the prerequisite resource or application is ready\.
 
-The helper scripts are pre\-installed on the latest versions of the Amazon Linux AMI\. The helper scripts are also available from the Amazon Linux yum repository for use with other UNIX/Linux AMIs\.
++  [cfn\-get\-metadata](cfn-get-metadata.md): Use to retrieve metadata for a resource or path to a specific key\.
 
-Currently, AWS CloudFormation provides the following helpers:
++  [cfn\-hup](cfn-hup.md): Use to check for updates to metadata and execute custom hooks when changes are detected\.
 
-+  [cfn\-init](cfn-init.md): Used to retrieve and interpret the resource metadata, installing packages, creating files and starting services\.
+You call the scripts directly from your template\. The scripts work in conjunction with resource metadata that's defined in the same template\. The scripts run on the Amazon EC2 instance during the stack creation process\.
 
-+  [cfn\-signal](cfn-signal.md): A simple wrapper to signal an AWS CloudFormation CreationPolicy or WaitCondition, enabling you to synchronize other resources in the stack with the application being ready\.
+**Note**  
+The scripts are not executed by default\. You must include calls in your template to execute specific helper scripts\.
 
-+  [cfn\-get\-metadata](cfn-get-metadata.md): A wrapper script making it easy to retrieve either all metadata defined for a resource or path to a specific key or subtree of the resource metadata\.
+## Amazon Linux AMI Images<a name="cfn-helper-scripts-reference-amazon-amis"></a>
 
-+  [cfn\-hup](cfn-hup.md): A daemon to check for updates to metadata and execute custom hooks when the changes are detected\.
+The AWS CloudFormation helper scripts are preinstalled on Amazon Linux AMI images\.
 
-These scripts are installed by default on the latest Amazon Linux AMI in /opt/aws/bin\. They are also available in the Amazon Linux AMI yum repository for previous versions of the Amazon Linux AMI as well as via RPM for other Linux/Unix distributions\. You can also install the scripts on Microsoft Windows \(2008 or later\) by using Python for Windows\.
++ On the latest Amazon Linux AMI version, the scripts are installed in `/opt/aws/bin`\.
 
-The scripts are not executed by default\. You must include calls to execute specific helper scripts\.
++ On previous Amazon Linux AMI versions, the aws\-cfn\-bootstrap package that contains the scripts is located in the Yum repository\.
 
-The AWS CloudFormation helper scripts are available from the following locations:
+## Downloading Packages for Other Platforms<a name="cfn-helper-scripts-reference-downloads"></a>
 
-+ The latest version of the Amazon Linux AMI has the AWS CloudFormation helper scripts installed by default in /opt/aws/bin\.
+<a name="cfn-helper-scripts-reference-downloads"></a>For Linux/Unix distributions other than Amazon Linux AMI images and for Microsoft Windows \(2008 or later\), you can download the aws\-cfn\-bootstrap package\.
 
-+ The AWS helper scripts are available in the Amazon Linux AMI yum repository \(the package name is aws\-cfn\-bootstrap\) for previous versions of the Amazon Linux AMI\.
 
-+ The helpers are also available in other formats:
+| File Format | Download URL | 
+| --- | --- | 
+|  RPM  |  [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.amzn1\.noarch\.rpm](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.amzn1.noarch.rpm) Source files: [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.src\.rpm](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.src.rpm)  | 
+|  TAR\.GZ  |  [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.tar\.gz](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.tar.gz) Uses the Python easy\-install tools\. To complete the installation for Ubuntu, you must create a symlink: `ln -s /root/aws-cfn-bootstrap-latest/init/ubuntu/cfn-hup /etc/init.d/cfn-hup`  | 
+|  ZIP  |  [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.zip](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.zip)  | 
+|  MSI  |  32\-bit Windows: [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.msi](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.msi)  64\-bit Windows: [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-win64\-latest\.msi](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-win64-latest.msi)  | 
 
-  + [https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.amzn1\.noarch\.rpm](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.amzn1.noarch.rpm)
+## Using the Latest Version<a name="cfn-helper-scripts-reference-latest-version"></a>
 
-  + [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.tar\.gz](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.tar.gz) to install the helper scripts via the Python easy\-install tools\. For Ubuntu, to complete installation, you must create a symlink: `ln -s /root/aws-cfn-bootstrap-latest/init/ubuntu/cfn-hup /etc/init.d/cfn-hup`\.
-
-  + [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.zip](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.zip)
-
-  + 32 bit: [https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.msi](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.msi) or 64 bit: [https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-win64\-latest\.msi](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-win64-latest.msi) for installation on Microsoft Windows\.
-
-+ The source for the scripts is available at [https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.src\.rpm](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.src.rpm), which can be used for Linux distributions other than the Amazon Linux AMI\.
-
-The helper scripts are updated periodically\. If you use the helper scripts, ensure your launched instances are using the latest version of the scripts:
+The helper scripts are updated periodically\. If you use the helper scripts, ensure that your launched instances are using the latest version of the scripts:
 
 + Include the following command in the `UserData` property of your template before you call the scripts\. This command ensures that you get the latest version:
 
@@ -59,3 +54,14 @@ The helper scripts are updated periodically\. If you use the helper scripts, ens
   `sudo /sbin/service cfn-hup restart`
 
 + If you use the source code for the scripts to work with another version of Linux or a different platform, and you have created your own certificate trust store, you'll also need to keep the trust store updated\.
+
+For the version history of the aws\-cfn\-bootstrap package, see [Release History for AWS CloudFormation Helper Scripts](releasehistory-aws-cfn-bootstrap.md)\.
+
+
++ [Amazon Linux AMI Images](#cfn-helper-scripts-reference-amazon-amis)
++ [Downloading Packages for Other Platforms](#cfn-helper-scripts-reference-downloads)
++ [Using the Latest Version](#cfn-helper-scripts-reference-latest-version)
++ [cfn\-init](cfn-init.md)
++ [cfn\-signal](cfn-signal.md)
++ [cfn\-get\-metadata](cfn-get-metadata.md)
++ [cfn\-hup](cfn-hup.md)

@@ -4,8 +4,8 @@ The `AWS::Cognito::UserPoolUserToGroupAttachment` resource attaches a user to an
 
 
 + [Syntax](#aws-resource-cognito-userpoolusertogroupattachment-syntax)
-+ [Properties](#w3ab2c21c10d267b9)
-+ [Return Value](#w3ab2c21c10d267c11)
++ [Properties](#w3ab2c21c10d268b9)
++ [Return Value](#w3ab2c21c10d268c11)
 
 ## Syntax<a name="aws-resource-cognito-userpoolusertogroupattachment-syntax"></a>
 
@@ -17,9 +17,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Cognito::UserPoolUserToGroupAttachment",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolusertogroupattachment-groupname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolusertogroupattachment-username)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolusertogroupattachment-userpoolid)" : String
+    "[GroupName](#cfn-cognito-userpoolusertogroupattachment-groupname)" : String,
+    "[Username](#cfn-cognito-userpoolusertogroupattachment-username)" : String,
+    "[UserPoolId](#cfn-cognito-userpoolusertogroupattachment-userpoolid)" : String
   }
 }
 ```
@@ -29,35 +29,35 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Cognito::UserPoolUserToGroupAttachment"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolusertogroupattachment-groupname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolusertogroupattachment-username): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolusertogroupattachment-userpoolid): String
+  [GroupName](#cfn-cognito-userpoolusertogroupattachment-groupname): String
+  [Username](#cfn-cognito-userpoolusertogroupattachment-username): String
+  [UserPoolId](#cfn-cognito-userpoolusertogroupattachment-userpoolid): String
 ```
 
-## Properties<a name="w3ab2c21c10d267b9"></a>
+## Properties<a name="w3ab2c21c10d268b9"></a>
 
-`GroupName`  
+`GroupName`  <a name="cfn-cognito-userpoolusertogroupattachment-groupname"></a>
 The name of the group\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Username`  
+`Username`  <a name="cfn-cognito-userpoolusertogroupattachment-username"></a>
 The user's user name\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`UserPoolId`  
+`UserPoolId`  <a name="cfn-cognito-userpoolusertogroupattachment-userpoolid"></a>
 The ID of the user pool\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w3ab2c21c10d267c11"></a>
+## Return Value<a name="w3ab2c21c10d268c11"></a>
 
-### Ref<a name="w3ab2c21c10d267c11b2"></a>
+### Ref<a name="w3ab2c21c10d268c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns a generated ID, such as `UserToGroupAttachment-YejJvzrEXAMPLE`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.

@@ -12,22 +12,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-executionproperty-maxconcurrentruns)" : Double
+  "[MaxConcurrentRuns](#cfn-glue-job-executionproperty-maxconcurrentruns)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-glue-job-executionproperty-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-executionproperty-maxconcurrentruns): Double
+[MaxConcurrentRuns](#cfn-glue-job-executionproperty-maxconcurrentruns): Integer
 ```
 
 ## Properties<a name="aws-properties-glue-job-executionproperty-properties"></a>
 
 For more information, see [ExecutionProperty Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-job.html#aws-glue-api-jobs-job-ExecutionProperty) in the *AWS Glue Developer Guide*\.
 
-`MaxConcurrentRuns`  
+`MaxConcurrentRuns`  <a name="cfn-glue-job-executionproperty-maxconcurrentruns"></a>
 The maximum number of concurrent runs that are allowed for the job\.  
  *Required*: No  
- *Type*: Double  
- *Update requires*: No interruption 
+ *Type*: Integer  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

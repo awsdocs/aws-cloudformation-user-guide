@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EFS::FileSystem",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-efs-filesystem-encrypted)" : Boolean,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-efs-filesystem-filesystemtags)" : [ FileSystemTags, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-efs-filesystem-kmskeyid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-efs-filesystem-performancemode)" : String
+    "[Encrypted](#cfn-efs-filesystem-encrypted)" : Boolean,
+    "[FileSystemTags](#cfn-efs-filesystem-filesystemtags)" : [ FileSystemTags, ... ],
+    "[KmsKeyId](#cfn-efs-filesystem-kmskeyid)" : String,
+    "[PerformanceMode](#cfn-efs-filesystem-performancemode)" : String
   }
 }
 ```
@@ -32,39 +32,39 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EFS::FileSystem"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-efs-filesystem-encrypted): Boolean
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-efs-filesystem-filesystemtags):
+  [Encrypted](#cfn-efs-filesystem-encrypted): Boolean
+  [FileSystemTags](#cfn-efs-filesystem-filesystemtags):
     - FileSystemTags
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-efs-filesystem-kmskeyid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-efs-filesystem-performancemode): String
+  [KmsKeyId](#cfn-efs-filesystem-kmskeyid): String
+  [PerformanceMode](#cfn-efs-filesystem-performancemode): String
 ```
 
 ## Properties<a name="w3ab2c21c10d530b9"></a>
 
-`FileSystemTags`  
+`FileSystemTags`  <a name="cfn-efs-filesystem-filesystemtags"></a>
 Tags to associate with the file system\.  
 *Required: *No  
 *Type*: [Amazon Elastic File System FileSystem FileSystemTags](aws-properties-efs-filesystem-filesystemtags.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Encrypted`  
+`Encrypted`  <a name="cfn-efs-filesystem-encrypted"></a>
 A boolean value that, if true, creates an encrypted file system\. For more information, see [CreateFileSystem](http://docs.aws.amazon.com/efs/latest/ug/API_CreateFileSystem.html) in the *Amazon Elastic File System User Guide*\.  
 *Required: *No  
 *Type*: Boolean  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`KmsKeyId`  
+`KmsKeyId`  <a name="cfn-efs-filesystem-kmskeyid"></a>
 The ID of the AWS KMS customer master key \(CMK\) to use to protect the encrypted file system\. This parameter is only required if you want to use a non\-default CMK\. For more information, see [CreateFileSystem](http://docs.aws.amazon.com/efs/latest/ug/API_CreateFileSystem.html) in the *Amazon Elastic File System User Guide*\.  
 *Required: *Conditional\. This parameter is required if you use a non\-default CMK\.  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`PerformanceMode`  
+`PerformanceMode`  <a name="cfn-efs-filesystem-performancemode"></a>
 The performance mode of the file system\. For valid values, see the `PerformanceMode` parameter for the [CreateFileSystem](http://docs.aws.amazon.com/efs/latest/ug/API_CreateFileSystem.html) action in the *Amazon Elastic File System User Guide*\.  
 For more information about performance modes, see [Amazon EFS Performance](http://docs.aws.amazon.com/efs/latest/ug/performance.html) in the *Amazon Elastic File System User Guide*\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Value<a name="w3ab2c21c10d530c11"></a>
 
@@ -72,7 +72,7 @@ For more information about performance modes, see [Amazon EFS Performance](http:
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource ID, such as `fs-47a2c22e`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d530c13"></a>
 

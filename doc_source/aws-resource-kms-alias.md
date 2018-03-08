@@ -18,8 +18,8 @@ The `AWS::KMS::Alias` resource creates a display name for a customer master key 
 {
   "Type" : "AWS::KMS::Alias",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kms-alias-aliasname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kms-alias-targetkeyid)" : String
+    "[AliasName](#cfn-kms-alias-aliasname)" : String,
+    "[TargetKeyId](#cfn-kms-alias-targetkeyid)" : String
   }
 }
 ```
@@ -29,31 +29,31 @@ The `AWS::KMS::Alias` resource creates a display name for a customer master key 
 ```
 Type: "AWS::KMS::Alias"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kms-alias-aliasname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kms-alias-targetkeyid): String
+  [AliasName](#cfn-kms-alias-aliasname): String
+  [TargetKeyId](#cfn-kms-alias-targetkeyid): String
 ```
 
 ## Properties<a name="aws-resource-kms-alias-properties"></a>
 
-`AliasName`  
+`AliasName`  <a name="cfn-kms-alias-aliasname"></a>
 The name of the alias\. The name must start with `alias` followed by a forward slash, such as `alias/`\. You can't specify aliases that begin with `alias/AWS`\. These aliases are reserved\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`TargetKeyId`  
+`TargetKeyId`  <a name="cfn-kms-alias-targetkeyid"></a>
 The ID of the key for which you are creating the alias\. Specify the key's globally unique identifier or Amazon Resource Name \(ARN\)\. You can't specify another alias\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Value<a name="aws-resource-kms-alias-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d789c11b2"></a>
+### Ref<a name="w3ab2c21c10d792c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the alias name, such as `alias/myKeyAlias`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Examples<a name="aws-resource-kms-alias-examples"></a>
 

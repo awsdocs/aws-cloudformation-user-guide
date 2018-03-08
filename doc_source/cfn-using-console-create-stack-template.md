@@ -1,6 +1,6 @@
 # Selecting a Stack Template<a name="cfn-using-console-create-stack-template"></a>
 
-After starting the Create Stack wizard, you specify the template that you want AWS CloudFormation to use to create your stack\.
+After [starting the Create Stack wizard](cfn-console-create-stack.md#cfn-using-console-initiating-stack-creation), you specify the template that you want AWS CloudFormation to use to create your stack\.
 
 AWS CloudFormation templates are JSON\- or YAML\-formatted files that specify the AWS resources that make up your stack\. For more information about AWS CloudFormation templates, see [Working with AWS CloudFormation Templates](template-guide.md)\.
 
@@ -15,7 +15,7 @@ To create or modify a template, use AWS CloudFormation Designer, a drag\-and\-dr
 
      Select an AWS CloudFormation template from a list of samples\. For descriptions of the templates, see [Sample Templates](cfn-sample-templates.md)\.
 
-     To create a stack from existing AWS resources by using the CloudFormer tool, select **CloudFormer** from the list\. For more information, see \.
+     To create a stack from existing AWS resources by using the CloudFormer tool, select **CloudFormer** from the list\. For more information, see [Using CloudFormer to Create Templates](cfn-using-cloudformer.md)\.
 
    + **Upload a template to Amazon S3**\.
 
@@ -36,6 +36,6 @@ If your template includes nested stacks \(for example, stacks described in other
 
      The URL must point to a template with a maximum size of 460,800 bytes that is stored in an S3 bucket that you have read permissions to and that is located in the same region as the stack\. The URL can be a maximum of 1024 characters long\.
 
-1. To accept your settings, choose **Next**, and proceed with specifying the stack name and parameters\.
+1. To accept your settings, choose **Next**, and proceed with [specifying the stack name and parameters](cfn-using-console-create-stack-parameters.md)\.
 
    Before creating resources, AWS CloudFormation validates your template to catch syntactic and some semantic errors, such as circular dependencies\. During validation, AWS CloudFormation first checks if the template is valid JSON\. If it isn't, AWS CloudFormation checks if the template is valid YAML\. If both checks fail, AWS CloudFormation returns a template validation error\.

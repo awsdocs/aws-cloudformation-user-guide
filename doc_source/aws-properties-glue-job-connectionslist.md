@@ -12,14 +12,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-connectionslist-connections)" : [ String, ... ]
+  "[Connections](#cfn-glue-job-connectionslist-connections)" : [ String, ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-glue-job-connectionslist-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-connectionslist-connections): 
+[Connections](#cfn-glue-job-connectionslist-connections): 
   - String
 ```
 
@@ -27,8 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 For more information, see [ConnectionsList Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-job.html#aws-glue-api-jobs-job-ConnectionsList) in the *AWS Glue Developer Guide*\.
 
-`Connections`  
+`Connections`  <a name="cfn-glue-job-connectionslist-connections"></a>
 A list of UTF\-8 strings that specifies the connections that are used by the job\.  
  *Required*: No  
  *Type*: List of String values  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

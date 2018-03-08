@@ -12,32 +12,32 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudfront-streamingdistribution-trustedsigners-awsaccountnumbers)" : [ String, ... ]
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudfront-streamingdistribution-trustedsigners-enabled)" : Boolean
+  "[AwsAccountNumbers](#cfn-cloudfront-streamingdistribution-trustedsigners-awsaccountnumbers)" : [ String, ... ]
+  "[Enabled](#cfn-cloudfront-streamingdistribution-trustedsigners-enabled)" : Boolean
 }
 ```
 
 ### YAML<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudfront-streamingdistribution-trustedsigners-awsaccountnumbers): 
+[AwsAccountNumbers](#cfn-cloudfront-streamingdistribution-trustedsigners-awsaccountnumbers): 
   - String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudfront-streamingdistribution-trustedsigners-enabled): Boolean
+[Enabled](#cfn-cloudfront-streamingdistribution-trustedsigners-enabled): Boolean
 ```
 
 ## Properties<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners-properties"></a>
 
-`AwsAccountNumbers`  
+`AwsAccountNumbers`  <a name="cfn-cloudfront-streamingdistribution-trustedsigners-awsaccountnumbers"></a>
 The trusted signers for this cache behavior\.  
  *Required*: No  
  *Type*: StringList  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Enabled`  
+`Enabled`  <a name="cfn-cloudfront-streamingdistribution-trustedsigners-enabled"></a>
 Specifies whether you want to require viewers to use signed URLs to access the files specified by `PathPattern` and `TargetOriginId`\.  
  *Required*: Yes  
  *Type*: Boolean  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners-seealso"></a>
 

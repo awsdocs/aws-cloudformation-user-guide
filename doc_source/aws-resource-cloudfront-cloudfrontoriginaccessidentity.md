@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CloudFront::CloudFrontOriginAccessIdentity",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig)" : CloudFrontOriginAccessIdentityConfig
+    "[CloudFrontOriginAccessIdentityConfig](#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig)" : [*CloudFrontOriginAccessIdentityConfig*](aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig.md)
   }
 }
 ```
@@ -29,33 +29,33 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::CloudFront::CloudFrontOriginAccessIdentity"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig): CloudFrontOriginAccessIdentityConfig
+  [CloudFrontOriginAccessIdentityConfig](#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig): CloudFrontOriginAccessIdentityConfig
 ```
 
 ## Properties<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-properties"></a>
 
-`CloudFrontOriginAccessIdentityConfig`  
+`CloudFrontOriginAccessIdentityConfig`  <a name="cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig"></a>
 The configuration of the CloudFront origin access identity\.  
  *Required*: Yes  
- *Type*: CloudFrontOriginAccessIdentityConfig  
- *Update requires*: No interruption 
+ *Type*: [CloudFrontOriginAccessIdentityConfig](aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d189c11b3"></a>
+### Ref<a name="w3ab2c21c10d191c11b3"></a>
 
 When you pass the logical ID of an `AWS::CloudFront::CloudFrontOriginAccessIdentity` resource to the intrinsic `Ref` function, the function returns the origin access identity, such as `E15MNIMTCFKK4C`\. 
 
-For more information about using the `Ref` function, see Ref\. 
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
-### Fn::GetAtt<a name="w3ab2c21c10d189c11b5"></a>
+### Fn::GetAtt<a name="w3ab2c21c10d191c11b5"></a>
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
 `S3CanonicalUserId`  
 The Amazon S3 canonical user ID for the origin access identity, used when giving the origin access identity read permission to an object in Amazon S3\. For example: `b970b42360b81c8ddbd79d2f5df0069ba9033c8a79655752abe380cd6d63ba8bcf23384d568fcf89fc49700b5e11a0fd`\. 
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\. 
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
 
 ## Example<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-examples"></a>
 

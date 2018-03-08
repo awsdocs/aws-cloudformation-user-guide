@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ServiceDiscovery::PrivateDnsNamespace",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-servicediscovery-privatednsnamespace-description)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-servicediscovery-privatednsnamespace-vpc)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-servicediscovery-privatednsnamespace-name)" : String
+    "[Description](#cfn-servicediscovery-privatednsnamespace-description)" : String,
+    "[Vpc](#cfn-servicediscovery-privatednsnamespace-vpc)" : String,
+    "[Name](#cfn-servicediscovery-privatednsnamespace-name)" : String
   }
 }
 ```
@@ -30,30 +30,30 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ServiceDiscovery::PrivateDnsNamespace"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-servicediscovery-privatednsnamespace-description): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-servicediscovery-privatednsnamespace-vpc): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-servicediscovery-privatednsnamespace-name): String
+  [Description](#cfn-servicediscovery-privatednsnamespace-description): String
+  [Vpc](#cfn-servicediscovery-privatednsnamespace-vpc): String
+  [Name](#cfn-servicediscovery-privatednsnamespace-name): String
 ```
 
 ## Properties<a name="aws-resource-servicediscovery-privatednsnamespace-properties"></a>
 
-`Description`  
+`Description`  <a name="cfn-servicediscovery-privatednsnamespace-description"></a>
 A description for the namespace\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Vpc`  
+`Vpc`  <a name="cfn-servicediscovery-privatednsnamespace-vpc"></a>
 The ID of the Amazon VPC that you want to associate the namespace with\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Name`  
+`Name`  <a name="cfn-servicediscovery-privatednsnamespace-name"></a>
 The name that you want to assign to this namespace\. When you create a namespace, Route 53 automatically creates a hosted zone that has the same name as the namespace\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Values<a name="aws-resource-servicediscovery-privatednsnamespace-returnvalues"></a>
 
@@ -61,7 +61,7 @@ The name that you want to assign to this namespace\. When you create a namespace
 
 When you pass the logical ID of an `AWS::ServiceDiscovery::PrivateDnsNamespace` resource to the intrinsic `Ref` function, the function returns the value of `Id` for the namespace\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ### Fn::GetAtt<a name="aws-resource-servicediscovery-privatednsnamespace-getatt"></a>
 
@@ -73,7 +73,7 @@ The ID of the private namespace\.
 `Arn`  
 The Amazon Resource Name \(ARN\) of the private namespace\.
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\.
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
 ## See Also<a name="aws-resource-servicediscovery-privatednsnamespace-seealso"></a>
 

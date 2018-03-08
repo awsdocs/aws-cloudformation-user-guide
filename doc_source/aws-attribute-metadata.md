@@ -1,6 +1,6 @@
 # Metadata Attribute<a name="aws-attribute-metadata"></a>
 
-The Metadata attribute enables you to associate structured data with a resource\. By adding a Metadata attribute to a resource, you can add data in JSON or YAML to the resource declaration\. In addition, you can use intrinsic functions \(such as GetAtt and Ref\), parameters, and pseudo parameters within the Metadata attribute to add those interpreted values\.
+The Metadata attribute enables you to associate structured data with a resource\. By adding a Metadata attribute to a resource, you can add data in JSON or YAML to the resource declaration\. In addition, you can use intrinsic functions \(such as [GetAtt](intrinsic-function-reference-getatt.md) and [Ref](intrinsic-function-reference-ref.md)\), parameters, and pseudo parameters within the Metadata attribute to add those interpreted values\.
 
 **Note**  
 AWS CloudFormation does not validate the syntax within the Metadata attribute\.

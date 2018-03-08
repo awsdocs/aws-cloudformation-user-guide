@@ -19,8 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 { 
    "Type" : "AWS::EC2::VPCDHCPOptionsAssociation",
    "Properties" : {
-      "DhcpOptionsId" : String,
-      "VpcId" : String
+      "[DhcpOptionsId](#cfn-ec2-vpcdhcpoptionsassociation-dhcpoptionsid)" : String,
+      "[VpcId](#cfn-ec2-vpcdhcpoptionsassociation-vpcid)" : String
    }
 }
 ```
@@ -30,23 +30,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::VPCDHCPOptionsAssociation"
 Properties: 
-  DhcpOptionsId: String
-  VpcId: String
+  [DhcpOptionsId](#cfn-ec2-vpcdhcpoptionsassociation-dhcpoptionsid): String
+  [VpcId](#cfn-ec2-vpcdhcpoptionsassociation-vpcid): String
 ```
 
 ## Properties<a name="w3ab2c21c10d478b9"></a>
 
-`DhcpOptionsId`  
+`DhcpOptionsId`  <a name="cfn-ec2-vpcdhcpoptionsassociation-dhcpoptionsid"></a>
 The ID of the DHCP options you want to associate with the VPC\. Specify `default` if you want the VPC to use no DHCP options\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`VpcId`  
+`VpcId`  <a name="cfn-ec2-vpcdhcpoptionsassociation-vpcid"></a>
 The ID of the VPC to associate with this DHCP options set\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Values<a name="w3ab2c21c10d478c11"></a>
 
@@ -54,7 +54,7 @@ The ID of the VPC to associate with this DHCP options set\.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d478c13"></a>
 

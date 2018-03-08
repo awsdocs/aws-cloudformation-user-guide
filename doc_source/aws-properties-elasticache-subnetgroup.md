@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ElastiCache::SubnetGroup",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticache-subnetgroup-cachesubnetgroupname)" : String,
-    "Description" : String,
-    "SubnetIds" : [ String, ... ]
+    "[CacheSubnetGroupName](#cfn-elasticache-subnetgroup-cachesubnetgroupname)" : String,
+    "[Description](#cfn-elasticache-subnetgroup-description)" : String,
+    "[SubnetIds](#cfn-elasticache-subnetgroup-subnetids)" : [ String, ... ]
   }
 }
 ```
@@ -30,32 +30,32 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ElastiCache::SubnetGroup"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticache-subnetgroup-cachesubnetgroupname): String
-  Description: String
-  SubnetIds:
+  [CacheSubnetGroupName](#cfn-elasticache-subnetgroup-cachesubnetgroupname): String
+  [Description](#cfn-elasticache-subnetgroup-description): String
+  [SubnetIds](#cfn-elasticache-subnetgroup-subnetids):
     - String
 ```
 
 ## Properties<a name="w3ab2c21c10d565b9"></a>
 
-`CacheSubnetGroupName`  
+`CacheSubnetGroupName`  <a name="cfn-elasticache-subnetgroup-cachesubnetgroupname"></a>
 A name for the cache subnet group\. If you don't specify a name, AWS CloudFormation generates a unique physical ID\. For more information, see [Name Type](aws-properties-name.md)\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Description`  
+`Description`  <a name="cfn-elasticache-subnetgroup-description"></a>
 The description for the cache subnet group\.  
 *Type*: String  
 *Required*: Yes  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`SubnetIds`  
+`SubnetIds`  <a name="cfn-elasticache-subnetgroup-subnetids"></a>
 The Amazon EC2 subnet IDs for the cache subnet group\.  
 *Type*: String list  
 *Required*: Yes  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Value<a name="w3ab2c21c10d565c11"></a>
 
@@ -63,7 +63,7 @@ The Amazon EC2 subnet IDs for the cache subnet group\.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d565c13"></a>
 

@@ -12,30 +12,30 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-processorparameter-parametername)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-processorparameter-parametervalue)" : String
+  "[ParameterName](#cfn-kinesisfirehose-deliverystream-processorparameter-parametername)" : String,
+  "[ParameterValue](#cfn-kinesisfirehose-deliverystream-processorparameter-parametervalue)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisfirehose-deliverystream-processorparameter-syntax.yaml"></a>
 
 ```
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-processorparameter-parametername): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-processorparameter-parametervalue): String
+  [ParameterName](#cfn-kinesisfirehose-deliverystream-processorparameter-parametername): String
+  [ParameterValue](#cfn-kinesisfirehose-deliverystream-processorparameter-parametervalue): String
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-processorparameter-properties"></a>
 
 For more information about each property, including constraints and valid values, see [ProcessorParameter](http://docs.aws.amazon.com/firehose/latest/APIReference/API_ProcessorParameter.html) in the *Amazon Kinesis Firehose API Reference*\.
 
-`ParameterName`  
+`ParameterName`  <a name="cfn-kinesisfirehose-deliverystream-processorparameter-parametername"></a>
 The name of the parameter\.  
  *Required*: Yes  
 *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`ParameterValue`  
+`ParameterValue`  <a name="cfn-kinesisfirehose-deliverystream-processorparameter-parametervalue"></a>
 The parameter value\.  
  *Required*: Yes  
 *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

@@ -10,27 +10,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobqueue-computeenvironmentorder-computeenvironment)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobqueue-computeenvironmentorder-order)" : Integer
+  "[ComputeEnvironment](#cfn-batch-jobqueue-computeenvironmentorder-computeenvironment)" : String,
+  "[Order](#cfn-batch-jobqueue-computeenvironmentorder-order)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-batch-jobqueue-computeenvironmentorder-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobqueue-computeenvironmentorder-computeenvironment): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobqueue-computeenvironmentorder-order): Integer
+[ComputeEnvironment](#cfn-batch-jobqueue-computeenvironmentorder-computeenvironment): String
+[Order](#cfn-batch-jobqueue-computeenvironmentorder-order): Integer
 ```
 
 ## Properties<a name="aws-properties-batch-jobqueue-computeenvironmentorder-properties"></a>
 
-`ComputeEnvironment`  
+`ComputeEnvironment`  <a name="cfn-batch-jobqueue-computeenvironmentorder-computeenvironment"></a>
 The Amazon Resource Name \(ARN\) of the compute environment\.  
  *Required*: yes  
 *Type*: String  
  *Update requires*: No Interruption 
 
-`Order`  
+`Order`  <a name="cfn-batch-jobqueue-computeenvironmentorder-order"></a>
 The order of the compute environment\.  
  *Required*: yes  
 *Type*: Integer  

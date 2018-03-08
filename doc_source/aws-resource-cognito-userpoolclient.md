@@ -4,8 +4,8 @@ The `AWS::Cognito::UserPoolClient` resource creates an Amazon Cognito user pool 
 
 
 + [Syntax](#aws-resource-cognito-userpoolclient-syntax)
-+ [Properties](#w3ab2c21c10d254b9)
-+ [Return Value](#w3ab2c21c10d254c11)
++ [Properties](#w3ab2c21c10d255b9)
++ [Return Value](#w3ab2c21c10d255c11)
 
 ## Syntax<a name="aws-resource-cognito-userpoolclient-syntax"></a>
 
@@ -17,13 +17,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Cognito::UserPoolClient",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolclient-clientname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolclient-explicitauthflows)" : [ String, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolclient-generatesecret)" : Boolean,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolclient-readattributes)" : [ String, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolclient-refreshtokenvalidity)" : Integer,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolclient-userpoolid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolclient-writeattributes)" : [ String, ... ]
+    "[ClientName](#cfn-cognito-userpoolclient-clientname)" : String,
+    "[ExplicitAuthFlows](#cfn-cognito-userpoolclient-explicitauthflows)" : [ String, ... ],
+    "[GenerateSecret](#cfn-cognito-userpoolclient-generatesecret)" : Boolean,
+    "[ReadAttributes](#cfn-cognito-userpoolclient-readattributes)" : [ String, ... ],
+    "[RefreshTokenValidity](#cfn-cognito-userpoolclient-refreshtokenvalidity)" : Integer,
+    "[UserPoolId](#cfn-cognito-userpoolclient-userpoolid)" : String,
+    "[WriteAttributes](#cfn-cognito-userpoolclient-writeattributes)" : [ String, ... ]
   }
 }
 ```
@@ -33,73 +33,73 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Cognito::UserPoolClient"
 Properties:
-    [[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolclient-clientname): String,
-    [[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolclient-explicitauthflows): 
+    [ClientName](#cfn-cognito-userpoolclient-clientname): String,
+    [ExplicitAuthFlows](#cfn-cognito-userpoolclient-explicitauthflows): 
       - String
-    [[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolclient-generatesecret): Boolean
-    [[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolclient-readattributes): 
+    [GenerateSecret](#cfn-cognito-userpoolclient-generatesecret): Boolean
+    [ReadAttributes](#cfn-cognito-userpoolclient-readattributes): 
       - String
-    [[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolclient-refreshtokenvalidity): Integer
-    [[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolclient-userpoolid): String
-    [[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpoolclient-writeattributes): 
+    [RefreshTokenValidity](#cfn-cognito-userpoolclient-refreshtokenvalidity): Integer
+    [UserPoolId](#cfn-cognito-userpoolclient-userpoolid): String
+    [WriteAttributes](#cfn-cognito-userpoolclient-writeattributes): 
       - String
 ```
 
-## Properties<a name="w3ab2c21c10d254b9"></a>
+## Properties<a name="w3ab2c21c10d255b9"></a>
 
-`ClientName`  
+`ClientName`  <a name="cfn-cognito-userpoolclient-clientname"></a>
 The client name for the user pool client that you want to create\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)  
 MinLength: 1  
 MaxLength: 128
 
-`ExplicitAuthFlows`  
+`ExplicitAuthFlows`  <a name="cfn-cognito-userpoolclient-explicitauthflows"></a>
 The explicit authentication flows, which can be one of the following: `ADMIN_NO_SRP_AUTH` or `CUSTOM_AUTH_FLOW_ONLY`\.  
 *Required: *No  
 *Type*: List of Strings  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`GenerateSecret`  
+`GenerateSecret`  <a name="cfn-cognito-userpoolclient-generatesecret"></a>
 Specifies whether you want to generate a secret for the user pool client being created\.  
 *Required: *No  
 *Type*: Boolean  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`ReadAttributes`  
+`ReadAttributes`  <a name="cfn-cognito-userpoolclient-readattributes"></a>
 The read attributes\.  
 *Required: *No  
 *Type*: List of Strings  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`RefreshTokenValidity`  
+`RefreshTokenValidity`  <a name="cfn-cognito-userpoolclient-refreshtokenvalidity"></a>
 The time limit, in days, after which the refresh token is no longer valid\.  
 *Required: *No  
 *Type*: Integer  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`UserPoolId`  
+`UserPoolId`  <a name="cfn-cognito-userpoolclient-userpoolid"></a>
 The user pool ID for the user pool where you want to create a client\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`WriteAttributes`  
+`WriteAttributes`  <a name="cfn-cognito-userpoolclient-writeattributes"></a>
 The write attributes\.  
 *Required: *No  
 *Type*: List of Strings  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10d254c11"></a>
+## Return Value<a name="w3ab2c21c10d255c11"></a>
 
-### Ref<a name="w3ab2c21c10d254c11b2"></a>
+### Ref<a name="w3ab2c21c10d255c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the Amazon Cognito user pool client ID, such as `1h57kf5cpq17m0eml12EXAMPLE`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d254c11b4"></a>
+### Fn::GetAtt<a name="w3ab2c21c10d255c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -109,4 +109,4 @@ The client secret, as a `String`\.
 `Name`  
 The name of the user pool client, as a `String`\.
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\.
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.

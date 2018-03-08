@@ -8,26 +8,26 @@ The `StringAttributeConstraints` property type defines the string attribute cons
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-stringattributeconstraints-maxlength)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-stringattributeconstraints-minlength)" : String
+  "[MaxLength](#cfn-cognito-userpool-stringattributeconstraints-maxlength)" : String,
+  "[MinLength](#cfn-cognito-userpool-stringattributeconstraints-minlength)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-cognito-userpool-stringattributeconstraints-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-stringattributeconstraints-maxlength): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-stringattributeconstraints-minlength): String
+[MaxLength](#cfn-cognito-userpool-stringattributeconstraints-maxlength): String
+[MinLength](#cfn-cognito-userpool-stringattributeconstraints-minlength): String
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-stringattributeconstraints-properties"></a>
 
-`MaxLength`  
+`MaxLength`  <a name="cfn-cognito-userpool-stringattributeconstraints-maxlength"></a>
 The maximum value of an attribute that is of the string data type\.  
 *Type*: String  
 *Required: *No
 
-`MinLength`  
+`MinLength`  <a name="cfn-cognito-userpool-stringattributeconstraints-minlength"></a>
 The minimum value of an attribute that is of the string data type\.  
 *Type*: String  
 *Required: *No

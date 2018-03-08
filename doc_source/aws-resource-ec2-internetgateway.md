@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type" : "AWS::EC2::InternetGateway",
    "Properties" : {
-      "Tags" : [ Resource Tag, ... ]
+      "[Tags](#cfn-ec2-internetgateway-tags)" : [ Resource Tag, ... ]
    }
 }
 ```
@@ -29,17 +29,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::InternetGateway"
 Properties: 
-  Tags:
+  [Tags](#cfn-ec2-internetgateway-tags):
     - Resource Tag
 ```
 
 ## Properties<a name="w3ab2c21c10d378b9"></a>
 
-`Tags`  
+`Tags`  <a name="cfn-ec2-internetgateway-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this resource\.  
 *Required: *No  
-*Type*:   
-*Update requires*: No interruption
+*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Values<a name="w3ab2c21c10d378c11"></a>
 
@@ -47,7 +47,7 @@ An arbitrary set of tags \(key–value pairs\) for this resource\.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d378c13"></a>
 

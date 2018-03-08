@@ -7,7 +7,7 @@ The `AWS::DMS::Endpoint` resource creates an AWS DMS endpoint\.
 + [Properties](#aws-resource-dms-endpoint-properties)
 + [Return Value](#aws-resource-dms-endpoint-examples-returnvalues)
 + [Example](#aws-resource-dms-endpoint-examples)
-+ [See Also](#w3ab2c21c10d315c15)
++ [See Also](#w3ab2c21c10d316c15)
 
 ## Syntax<a name="aws-resource-dms-endpoint-syntax"></a>
 
@@ -19,22 +19,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type": "AWS::DMS::Endpoint",
   "Properties": {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-certificatearn)": String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-databasename)": String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-dynamodbsettings)": DynamoDbSettings,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-endpointidentifier)": String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-endpointtype)": String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-enginename)": String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-extraconnectionattributes)": String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-kmskeyid)": String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-mongodbsettings)": MongoDbSettings,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-password)": String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-port)": Integer,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-s3settings)": S3Settings,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-servername)": String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-sslmode)": String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-tags)": [ Resource Tag, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-username)": String
+    "[CertificateArn](#cfn-dms-endpoint-certificatearn)": String,
+    "[DatabaseName](#cfn-dms-endpoint-databasename)": String,
+    "[DynamoDbSettings](#cfn-dms-endpoint-dynamodbsettings)": DynamoDbSettings,
+    "[EndpointIdentifier](#cfn-dms-endpoint-endpointidentifier)": String,
+    "[EndpointType](#cfn-dms-endpoint-endpointtype)": String,
+    "[EngineName](#cfn-dms-endpoint-enginename)": String,
+    "[ExtraConnectionAttributes](#cfn-dms-endpoint-extraconnectionattributes)": String,
+    "[KmsKeyId](#cfn-dms-endpoint-kmskeyid)": String,
+    "[MongoDbSettings](#cfn-dms-endpoint-mongodbsettings)": MongoDbSettings,
+    "[Password](#cfn-dms-endpoint-password)": String,
+    "[Port](#cfn-dms-endpoint-port)": Integer,
+    "[S3Settings](#cfn-dms-endpoint-s3settings)": S3Settings,
+    "[ServerName](#cfn-dms-endpoint-servername)": String,
+    "[SslMode](#cfn-dms-endpoint-sslmode)": String,
+    "[Tags](#cfn-dms-endpoint-tags)": [ Resource Tag, ... ],
+    "[Username](#cfn-dms-endpoint-username)": String
   }
 }
 ```
@@ -44,134 +44,134 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::DMS::Endpoint"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-certificatearn): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-databasename): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-dynamodbsettings):
+  [CertificateArn](#cfn-dms-endpoint-certificatearn): String
+  [DatabaseName](#cfn-dms-endpoint-databasename): String
+  [DynamoDbSettings](#cfn-dms-endpoint-dynamodbsettings):
     DynamoDbSettings
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-endpointidentifier): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-endpointtype): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-enginename): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-extraconnectionattributes): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-kmskeyid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-mongodbsettings): 
+  [EndpointIdentifier](#cfn-dms-endpoint-endpointidentifier): String
+  [EndpointType](#cfn-dms-endpoint-endpointtype): String
+  [EngineName](#cfn-dms-endpoint-enginename): String
+  [ExtraConnectionAttributes](#cfn-dms-endpoint-extraconnectionattributes): String
+  [KmsKeyId](#cfn-dms-endpoint-kmskeyid): String
+  [MongoDbSettings](#cfn-dms-endpoint-mongodbsettings): 
     MongoDbSettings
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-password): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-port): Integer
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-s3settings):
+  [Password](#cfn-dms-endpoint-password): String
+  [Port](#cfn-dms-endpoint-port): Integer
+  [S3Settings](#cfn-dms-endpoint-s3settings):
     S3Settings
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-servername): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-sslmode): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-tags):
+  [ServerName](#cfn-dms-endpoint-servername): String
+  [SslMode](#cfn-dms-endpoint-sslmode): String
+  [Tags](#cfn-dms-endpoint-tags):
     - Resource Tag
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dms-endpoint-username): String
+  [Username](#cfn-dms-endpoint-username): String
 ```
 
 ## Properties<a name="aws-resource-dms-endpoint-properties"></a>
 
-`CertificateArn`  
+`CertificateArn`  <a name="cfn-dms-endpoint-certificatearn"></a>
 The Amazon Resource Number \(ARN\) for the certificate\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`DatabaseName`  
+`DatabaseName`  <a name="cfn-dms-endpoint-databasename"></a>
 The name of the endpoint database\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`DynamoDbSettings`  
+`DynamoDbSettings`  <a name="cfn-dms-endpoint-dynamodbsettings"></a>
 Settings in JSON format for the target DynamoDB endpoint\. For more information about the available settings, see the **Using Object Mapping to Migrate Data to DynamoDB** section at [ Using an Amazon DynamoDB Database as a Target for AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.DynamoDB.html)\.  
 *Required: *No  
 *Type: *[AWS DMS Endpoint DynamoDBSettings](aws-properties-dms-endpoint-dynamodbsettings.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`EndpointIdentifier`  
+`EndpointIdentifier`  <a name="cfn-dms-endpoint-endpointidentifier"></a>
 The database endpoint identifier\. Identifiers must begin with a letter; must contain only ASCII letters, digits, and hyphens; and must not end with a hyphen or contain two consecutive hyphens\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`EndpointType`  
+`EndpointType`  <a name="cfn-dms-endpoint-endpointtype"></a>
 The type of endpoint\. Valid values are `source` and `target`\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`EngineName`  
+`EngineName`  <a name="cfn-dms-endpoint-enginename"></a>
 The type of engine for the endpoint\. Valid values depend on the `EndPointType` and include `MYSQL`, `ORACLE`, `POSTGRES`, `MARIADB`, `AURORA`, `REDSHIFT`, `S3`, `SYBASE`, `DYNAMODB`, `MONGODB`, and `SQLSERVER`\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ExtraConnectionAttributes`  
+`ExtraConnectionAttributes`  <a name="cfn-dms-endpoint-extraconnectionattributes"></a>
 Additional attributes associated with the connection\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`KmsKeyId`  
+`KmsKeyId`  <a name="cfn-dms-endpoint-kmskeyid"></a>
 The KMS key identifier that will be used to encrypt the connection parameters\. If you do not specify a value for the `KmsKeyId` parameter, then AWS DMS will use your default encryption key\. AWS KMS creates the default encryption key for your AWS account\. Your AWS account has a different default encryption key for each AWS region\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`MongoDbSettings`  
+`MongoDbSettings`  <a name="cfn-dms-endpoint-mongodbsettings"></a>
 Settings in JSON format for the source MongoDB endpoint\. For more information about the available settings, see the **Configuration Properties When Using MongoDB as a Source for AWS Database Migration Service** section at [ Using Amazon S3 as a Target for AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html)\.  
 *Required: *No  
 *Type: *[AWS DMS Endpoint MongoDbSettings](aws-properties-dms-endpoint-mongodbsettings.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Password`  
+`Password`  <a name="cfn-dms-endpoint-password"></a>
 The password to be used to login to the endpoint database\. Do not use this parameter directly\. Use `Password` as an input parameter with `noEcho` as shown in the [Parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html)\. For best practices information, see [Do Not Embed Credentials in Your Templates](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds)\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Port`  
+`Port`  <a name="cfn-dms-endpoint-port"></a>
 The port used by the endpoint database\.  
 *Required: *No  
 *Type*: Integer  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`S3Settings`  
+`S3Settings`  <a name="cfn-dms-endpoint-s3settings"></a>
 Settings in JSON format for the target Amazon S3 endpoint\. For more information about the available settings, see the **Extra Connection Attributes** section at [ Using Amazon S3 as a Target for AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html) in the *AWS Database Migration Service User Guide*\.  
 *Required: *No  
 *Type:* [AWS DMS Endpoint S3Settings](aws-properties-dms-endpoint-s3settings.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ServerName`  
+`ServerName`  <a name="cfn-dms-endpoint-servername"></a>
 The name of the server where the endpoint database resides\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`SslMode`  
+`SslMode`  <a name="cfn-dms-endpoint-sslmode"></a>
 The SSL mode to use for the SSL connection\.  
 SSL mode can be one of four values: `none`, `require`, `verify-ca`, `verify-full`\. The default value is `none`\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Tags`  
+`Tags`  <a name="cfn-dms-endpoint-tags"></a>
 The tags that you want to attach to the DMS endpoint\.  
 *Required: *No  
-*Type*: List of resource tags in key\-value format  
-*Update requires*: Replacement 
+*Type*: List of [resource tags](aws-properties-resource-tags.md) in key\-value format  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`Username`  
+`Username`  <a name="cfn-dms-endpoint-username"></a>
 The user name to be used to login to the endpoint database\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Value<a name="aws-resource-dms-endpoint-examples-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d315c11b3"></a>
+### Ref<a name="w3ab2c21c10d316c11b3"></a>
 
 When you pass the logical ID of an `AWS::DMS::Endpoint` resource to the intrinsic `Ref` function, the function returns the ARN of the endpoint\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="aws-resource-dms-endpoint-examples"></a>
 
@@ -220,7 +220,7 @@ Resources:
           Value: "new"
 ```
 
-## See Also<a name="w3ab2c21c10d315c15"></a>
+## See Also<a name="w3ab2c21c10d316c15"></a>
 
 + [CreateEndpoint](http://docs.aws.amazon.com/dms/latest/APIReference/API_CreateEndpoint.html) in the *AWS Database Migration Service API Reference*\.
 

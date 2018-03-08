@@ -1,6 +1,6 @@
 # Working with Nested Stacks<a name="using-cfn-nested-stacks"></a>
 
-*Nested stacks* are stacks created as part of other stacks\. You create a nested stack within another stack by using the `AWS::CloudFormation::Stack` resource\.
+*Nested stacks* are stacks created as part of other stacks\. You create a nested stack within another stack by using the [`AWS::CloudFormation::Stack`](aws-properties-stack.md) resource\.
 
 As your infrastructure grows, common patterns can emerge in which you declare the same components in multiple templates\. You can separate out these common components and create dedicated templates for them\. Then use the resource in your template to reference other templates, creating nested stacks\.
 
@@ -14,10 +14,9 @@ Nested stacks can themselves contain other nested stacks, resulting in a hierarc
 
 + For stack D, stack C is the parent stack; while for stack C, stack B is the parent stack\.
 
-![\[Nested stacks, which are created as part of another stack, have an immediate
-                parent stack, as well as the top-level root stack.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cfn-console-nested-stacks.png)
+![\[Nested stacks, which are created as part of another stack, have an immediate parent stack, as well as the top-level root stack.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cfn-console-nested-stacks.png)
 
-Using nested stacks to declare common components is considered a best practice\. 
+Using nested stacks to declare common components is considered a [best practice](best-practices.md#nested)\. 
 
 Certain stack operations, such as stack updates, should be initiated from the root stack rather than performed directly on nested stacks themselves\. Also, in some cases, nested stacks affect how stack operations are performed\. For more information, refer to the following topics: 
 

@@ -19,9 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type" : "AWS::RDS::DBSubnetGroup",
    "Properties" : {
-      "DBSubnetGroupDescription" : String,
-      "SubnetIds" : [ String, ... ],
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-rds-dbsubnetgroup-tags)" : [ Resource Tag, ... ]
+      "[DBSubnetGroupDescription](#cfn-rds-dbsubnetgroup-dbsubnetgroupdescription)" : String,
+      "[DBSubnetGroupName](#cfn-rds-dbsubnetgroup-dbsubnetgroupname)" : String,
+      "[SubnetIds](#cfn-rds-dbsubnetgroup-subnetids)" : [ String, ... ],
+      "[Tags](#cfn-rds-dbsubnetgroup-tags)" : [ Resource Tag, ... ]
    }
 }
 ```
@@ -31,32 +32,40 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::RDS::DBSubnetGroup"
 Properties: 
-  DBSubnetGroupDescription: String
-  SubnetIds:
+  [DBSubnetGroupDescription](#cfn-rds-dbsubnetgroup-dbsubnetgroupdescription): String
+  [DBSubnetGroupName](#cfn-rds-dbsubnetgroup-dbsubnetgroupname): String
+  [SubnetIds](#cfn-rds-dbsubnetgroup-subnetids):
     - String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-rds-dbsubnetgroup-tags):
+  [Tags](#cfn-rds-dbsubnetgroup-tags):
     - Resource Tag
 ```
 
 ## Properties<a name="aws-resource-rds-dbsubnet-group-prop"></a>
 
-`DBSubnetGroupDescription`  
+`DBSubnetGroupDescription`  <a name="cfn-rds-dbsubnetgroup-dbsubnetgroupdescription"></a>
 The description for the DB Subnet Group\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`SubnetIds`  
+`DBSubnetGroupName`  <a name="cfn-rds-dbsubnetgroup-dbsubnetgroupname"></a>
+The name for the DB Subnet Group\. This value is stored as a lowercase string\.  
+Constraints: Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens\. Must not be default\.   
+*Required: *No  
+*Type*: String  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+
+`SubnetIds`  <a name="cfn-rds-dbsubnetgroup-subnetids"></a>
 The EC2 Subnet IDs for the DB Subnet Group\.  
 *Required: *Yes  
 *Type*: List of String values  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Tags`  
+`Tags`  <a name="cfn-rds-dbsubnetgroup-tags"></a>
 The tags that you want to attach to the RDS database subnet group\.  
 *Required: *No  
-*Type*: A list of resource tags in key\-value format\.  
-*Update requires*: No interruption
+*Type*: A list of [resource tags](aws-properties-resource-tags.md) in key\-value format\.  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Value<a name="aws-resource-rds-dbsubnet-group-return-value"></a>
 
@@ -64,7 +73,7 @@ The tags that you want to attach to the RDS database subnet group\.
 
 When you pass the logical ID of an `AWS::RDS::DBSubnetGroup` resource to the intrinsic `Ref` function, the function returns the name of the DB subnet group, such as `mystack-mydbsubnetgroup-0a12bc456789de0fg`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="aws-resource-rds-dbsubnet-group-example"></a>
 

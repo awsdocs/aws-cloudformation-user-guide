@@ -12,12 +12,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SSM::MaintenanceWindow",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindow-description)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindow-allowunassociatedtargets)" : Boolean,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindow-cutoff)" : Integer,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindow-schedule)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindow-duration)" : Integer,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindow-name)" : String
+    "[Description](#cfn-ssm-maintenancewindow-description)" : String,
+    "[AllowUnassociatedTargets](#cfn-ssm-maintenancewindow-allowunassociatedtargets)" : Boolean,
+    "[Cutoff](#cfn-ssm-maintenancewindow-cutoff)" : Integer,
+    "[Schedule](#cfn-ssm-maintenancewindow-schedule)" : String,
+    "[Duration](#cfn-ssm-maintenancewindow-duration)" : Integer,
+    "[Name](#cfn-ssm-maintenancewindow-name)" : String
   }
 }
 ```
@@ -27,59 +27,59 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::SSM::MaintenanceWindow"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindow-description): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindow-allowunassociatedtargets): Boolean
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindow-cutoff): Integer
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindow-schedule): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindow-duration): Integer
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindow-name): String
+  [Description](#cfn-ssm-maintenancewindow-description): String
+  [AllowUnassociatedTargets](#cfn-ssm-maintenancewindow-allowunassociatedtargets): Boolean
+  [Cutoff](#cfn-ssm-maintenancewindow-cutoff): Integer
+  [Schedule](#cfn-ssm-maintenancewindow-schedule): String
+  [Duration](#cfn-ssm-maintenancewindow-duration): Integer
+  [Name](#cfn-ssm-maintenancewindow-name): String
 ```
 
 ## Properties<a name="aws-resource-ssm-maintenancewindow-properties"></a>
 
-`Description`  
+`Description`  <a name="cfn-ssm-maintenancewindow-description"></a>
 A description of the Maintenance Window\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`AllowUnassociatedTargets`  
+`AllowUnassociatedTargets`  <a name="cfn-ssm-maintenancewindow-allowunassociatedtargets"></a>
 Enables a Maintenance Window task to execute on managed instances, even if you haven't registered those instances as targets\. If this is enabled, then you must specify the unregistered instances \(by instance ID\) when you register a task with the Maintenance Window\.  
  *Required*: Yes  
  *Type*: Boolean  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Cutoff`  
+`Cutoff`  <a name="cfn-ssm-maintenancewindow-cutoff"></a>
 The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution\.  
  *Required*: Yes  
  *Type*: Integer  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Schedule`  
+`Schedule`  <a name="cfn-ssm-maintenancewindow-schedule"></a>
 The schedule of the Maintenance Window in the form of a cron or rate expression\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Duration`  
+`Duration`  <a name="cfn-ssm-maintenancewindow-duration"></a>
 The duration of the Maintenance Window in hours\.  
  *Required*: Yes  
  *Type*: Integer  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Name`  
+`Name`  <a name="cfn-ssm-maintenancewindow-name"></a>
 The name of the Maintenance Window\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-ssm-maintenancewindow-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10e1010b9b3"></a>
+### Ref<a name="w3ab2c21c10e1038b9b3"></a>
 
 When you pass the logical ID of an `AWS::SSM::MaintenanceWindow` resource to the intrinsic `Ref` function, the function returns the physical ID of the resource, such as `mw-abcde1234567890yz`\. 
 
-For more information about using the `Ref` function, see Ref\. 
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
 ## See Also<a name="aws-resource-ssm-maintenancewindow-seealso"></a>
 

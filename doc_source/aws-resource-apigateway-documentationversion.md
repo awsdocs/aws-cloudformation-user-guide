@@ -17,9 +17,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::DocumentationVersion",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationversion-description)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationversion-documentationversion)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationversion-restapiid)" : String
+    "[Description](#cfn-apigateway-documentationversion-description)" : String,
+    "[DocumentationVersion](#cfn-apigateway-documentationversion-documentationversion)" : String,
+    "[RestApiId](#cfn-apigateway-documentationversion-restapiid)" : String
   }
 }
 ```
@@ -29,9 +29,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ApiGateway::DocumentationVersion"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationversion-description): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationversion-documentationversion): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationversion-restapiid): String
+  [Description](#cfn-apigateway-documentationversion-description): String
+  [DocumentationVersion](#cfn-apigateway-documentationversion-documentationversion): String
+  [RestApiId](#cfn-apigateway-documentationversion-restapiid): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-documentationversion-properties"></a>
@@ -39,23 +39,23 @@ Properties:
 **Note**  
 For more information about each property, see [ DocumentationVersion](http://docs.aws.amazon.com/apigateway/api-reference/resource/documentation-version) in the *Amazon API Gateway REST API Reference*\.
 
-`Description`  
+`Description`  <a name="cfn-apigateway-documentationversion-description"></a>
 The description of the API documentation snapshot\.  
  *Required*: No  
 *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`DocumentationVersion`  
+`DocumentationVersion`  <a name="cfn-apigateway-documentationversion-documentationversion"></a>
 The version identifier of the API documentation snapshot\.  
  *Required*: Yes  
 *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`RestApiId`  
+`RestApiId`  <a name="cfn-apigateway-documentationversion-restapiid"></a>
 The identifier of the targeted API entity\.  
  *Required*: Yes  
 *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## Example<a name="aws-resource-apigateway-documentationversion-examples"></a>
 

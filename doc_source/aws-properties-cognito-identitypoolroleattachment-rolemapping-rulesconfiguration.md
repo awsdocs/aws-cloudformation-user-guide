@@ -8,20 +8,20 @@
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration-rules)" : [ MappingRule, .. ]
+  "[Rules](#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration-rules)" : [ [*MappingRule*](aws-properties-cognito-identitypoolroleattachment-mappingrule.md), .. ]
 }
 ```
 
 ### YAML<a name="aws-properties-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration-rules): 
-  - MappingRule
+[Rules](#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration-rules): 
+  - [*MappingRule*](aws-properties-cognito-identitypoolroleattachment-mappingrule.md)
 ```
 
 ## Properties<a name="aws-properties-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration-properties"></a>
 
-`Rules`  
+`Rules`  <a name="cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration-rules"></a>
 A list of rules\. You can specify up to 25 rules per identity provider\.  
 *Required: *Yes  
-*Type*: List of [[ERROR] BAD/MISSING LINK TEXT](aws-properties-cognito-identitypoolroleattachment-mappingrule.md)
+*Type*: List of [Amazon Cognito IdentityPoolRoleAttachment MappingRule](aws-properties-cognito-identitypoolroleattachment-mappingrule.md)

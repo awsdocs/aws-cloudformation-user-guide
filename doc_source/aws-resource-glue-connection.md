@@ -17,8 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Glue::Connection",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-connection-connectioninput)" : ConnectionInput,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-connection-catalogid)" : String
+    "[ConnectionInput](#cfn-glue-connection-connectioninput)" : [*ConnectionInput*](aws-properties-glue-connection-connectioninput.md),
+    "[CatalogId](#cfn-glue-connection-catalogid)" : String
   }
 }
 ```
@@ -28,30 +28,30 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Glue::Connection"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-connection-connectioninput): 
-    ConnectionInput
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-connection-catalogid): String
+  [ConnectionInput](#cfn-glue-connection-connectioninput): 
+    [*ConnectionInput*](aws-properties-glue-connection-connectioninput.md)
+  [CatalogId](#cfn-glue-connection-catalogid): String
 ```
 
 ## Properties<a name="aws-resource-glue-connection-properties"></a>
 
-`ConnectionInput`  
+`ConnectionInput`  <a name="cfn-glue-connection-connectioninput"></a>
 The connection that you want to create\.  
  *Required*: Yes  
- *Type*:   
- *Update requires*: No interruption 
+ *Type*: [AWS Glue Connection ConnectionInput](aws-properties-glue-connection-connectioninput.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`CatalogId`  
+`CatalogId`  <a name="cfn-glue-connection-catalogid"></a>
 The ID of the data catalog to create the catalog object in\. Currently, this should be the AWS account ID\.  
 To specify the account ID, you can use the `Ref` intrinsic function with the `AWS::AccountId` pseudo parameter—for example `!Ref AWS::AccountId`\.
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-glue-connection-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d657c10b3"></a>
+### Ref<a name="w3ab2c21c10d656c10b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the `ConnectionInput` name\.
 
-For more information about using the `Ref` function, see Ref\. 
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 

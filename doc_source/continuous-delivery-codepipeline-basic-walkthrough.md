@@ -267,7 +267,7 @@ As AWS CodePipeline runs through the pipeline, it uses AWS CloudFormation to cre
 
 1. Depending on whether your pipeline is in the test or production stage, choose the `Test-MyWordPressSite` or the `Prod-MyWordPressSite` stack\.
 
-1. To check the status of your stack, view the stack events\.
+1. To check the status of your stack, view the stack [events](cfn-console-view-stack-data-resources.md)\.
 
 If the stack is in a failed state, view the status reason to find the stack error\. Fix the error, and then rerun the pipeline\. If the stack is in the `CREATE_COMPLETE` state, view its outputs to get the URL of your WordPress site\.
 

@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Glue::Classifier",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-classifier-grokclassifier)" : GrokClassifier
+    "[GrokClassifier](#cfn-glue-classifier-grokclassifier)" : [*GrokClassifier*](aws-properties-glue-classifier-grokclassifier.md)
   }
 }
 ```
@@ -27,22 +27,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Glue::Classifier"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-classifier-grokclassifier): 
-    GrokClassifier
+  [GrokClassifier](#cfn-glue-classifier-grokclassifier): 
+    [*GrokClassifier*](aws-properties-glue-classifier-grokclassifier.md)
 ```
 
 ## Properties<a name="aws-resource-glue-classifier-properties"></a>
 
-`GrokClassifier`  
+`GrokClassifier`  <a name="cfn-glue-classifier-grokclassifier"></a>
 A classifier that uses `grok`\.  
  *Required*: No  
- *Type*:   
- *Update requires*: No interruption 
+ *Type*: [AWS Glue Classifier GrokClassifier](aws-properties-glue-classifier-grokclassifier.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-glue-classifier-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d654c10b3"></a>
+### Ref<a name="w3ab2c21c10d653c10b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\. 
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 

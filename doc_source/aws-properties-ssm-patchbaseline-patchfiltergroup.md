@@ -12,21 +12,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-patchbaseline-patchfiltergroup-patchfilters)" : [ PatchFilter, ... ]
+  "[PatchFilters](#cfn-ssm-patchbaseline-patchfiltergroup-patchfilters)" : [ [*PatchFilter*](aws-properties-ssm-patchbaseline-patchfilter.md), ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-ssm-patchbaseline-patchfiltergroup-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-patchbaseline-patchfiltergroup-patchfilters): 
-  - PatchFilter
+[PatchFilters](#cfn-ssm-patchbaseline-patchfiltergroup-patchfilters): 
+  - [*PatchFilter*](aws-properties-ssm-patchbaseline-patchfilter.md)
 ```
 
 ## Properties<a name="aws-properties-ssm-patchbaseline-patchfiltergroup-properties"></a>
 
-`PatchFilters`  
+`PatchFilters`  <a name="cfn-ssm-patchbaseline-patchfiltergroup-patchfilters"></a>
 The set of patch filters that make up the group\.  
  *Required*: No  
  *Type*: List of [SSM PatchBaseline PatchFilter](aws-properties-ssm-patchbaseline-patchfilter.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

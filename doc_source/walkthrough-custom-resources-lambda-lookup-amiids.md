@@ -19,15 +19,15 @@ The following list summarizes the process\. You need AWS Identity and Access Man
 **Note**  
 AWS CloudFormation is a free service; however, you are charged for the AWS resources, such as the Lambda function and EC2 instance, that you include in your stacks at the current rate for each\. For more information about AWS pricing, see the detail page for each product at [http://aws\.amazon\.com](http://aws.amazon.com)\.
 
-1. Save the sample Lambda package in an Amazon Simple Storage Service \(Amazon S3\) bucket\.
+1. [Save the sample Lambda package in an Amazon Simple Storage Service \(Amazon S3\) bucket\.](#walkthrough-custom-resources-lambda-lookup-amiids-savesample)
 
    The sample package contains everything that's required to create the Lambda function\. You must save the package in a bucket that's in the same region in which you will create your stack\.
 
-1. Use the sample template to create a stack\.
+1. [Use the sample template to create a stack\.](#walkthrough-custom-resources-lambda-lookup-amiids-createfunction-createstack)
 
    The stack demonstrates how you associate the Lambda function with a custom resource and how to use the results from the function to specify an AMI ID\. The stack also creates an IAM role \(execution role\), which Lambda uses to make calls to Amazon EC2\.
 
-1. Delete the stack\.
+1. [Delete the stack\.](#walkthrough-custom-resources-lambda-lookup-amiids-createfunction-cleanup)
 
    Delete the stack to clean up all the stack resources that you created so that you aren't charged for unnecessary resources\.
 
@@ -242,7 +242,7 @@ AMIInfo:
 
 When AWS CloudFormation invokes the Lambda function, the function calls the EC2 `DescribeImages` API, using the region and instance architecture or the OS name to filter the list of images\. Then the function sorts the list of images by date and returns the ID of the latest AMI\.
 
-When returning the ID of the latest AMI, the function sends the ID to a pre\-signed URL in the `Data` property of the response object\. The data is structured as a name\-value pair, as shown in the following example:
+When returning the ID of the latest AMI, the function sends the ID to a pre\-signed URL in the `Data` property of the [response object](crpg-ref-responses.md)\. The data is structured as a name\-value pair, as shown in the following example:
 
 ```
 "Data": { 
@@ -326,4 +326,4 @@ Now that you understand how to create and use Lambda functions with AWS CloudFor
 
 ## Related Information<a name="w3ab2c17c26c14b7c29"></a>
 
-+ AWS CloudFormation Custom Resource Reference
++ [AWS CloudFormation Custom Resource Reference](crpg-ref.md)

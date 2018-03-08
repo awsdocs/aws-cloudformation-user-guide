@@ -17,9 +17,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Glue::Table",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-tableinput)" : TableInput,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-databasename)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-catalogid)" : String
+    "[TableInput](#cfn-glue-table-tableinput)" : [*TableInput*](aws-properties-glue-table-tableinput.md),
+    "[DatabaseName](#cfn-glue-table-databasename)" : String,
+    "[CatalogId](#cfn-glue-table-catalogid)" : String
   }
 }
 ```
@@ -29,37 +29,37 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Glue::Table"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-tableinput): 
-    TableInput
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-databasename): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-catalogid): String
+  [TableInput](#cfn-glue-table-tableinput): 
+    [*TableInput*](aws-properties-glue-table-tableinput.md)
+  [DatabaseName](#cfn-glue-table-databasename): String
+  [CatalogId](#cfn-glue-table-catalogid): String
 ```
 
 ## Properties<a name="aws-resource-glue-table-properties"></a>
 
-`TableInput`  
+`TableInput`  <a name="cfn-glue-table-tableinput"></a>
 The metadata of the table\.  
  *Required*: Yes  
- *Type*:   
- *Update requires*: Some interruptions 
+ *Type*: [AWS Glue Table TableInput](aws-properties-glue-table-tableinput.md)  
+ *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt) 
 
-`DatabaseName`  
+`DatabaseName`  <a name="cfn-glue-table-databasename"></a>
 The name of the catalog database for the table\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`CatalogId`  
+`CatalogId`  <a name="cfn-glue-table-catalogid"></a>
 The ID of the data catalog to create the catalog object in\. Currently, this should be the AWS account ID\.  
 To specify the account ID, you can use the `Ref` intrinsic function with the `AWS::AccountId` pseudo parameter—for example `!Ref AWS::AccountId`\.
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-glue-table-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d675c10b3"></a>
+### Ref<a name="w3ab2c21c10d674c10b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the `TableInput` name\.
 
-For more information about using the `Ref` function, see Ref\. 
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 

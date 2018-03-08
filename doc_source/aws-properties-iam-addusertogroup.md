@@ -6,9 +6,9 @@ This type supports updates\. For more information about updating stacks, see [AW
 
 
 + [Syntax](#aws-resource-iam-addusertogroup-syntax)
-+ [Properties](#w3ab2c21c10d735c11)
-+ [Return Value](#w3ab2c21c10d735c13)
-+ [Template Examples](#w3ab2c21c10d735c15)
++ [Properties](#w3ab2c21c10d738c11)
++ [Return Value](#w3ab2c21c10d738c13)
++ [Template Examples](#w3ab2c21c10d738c15)
 
 ## Syntax<a name="aws-resource-iam-addusertogroup-syntax"></a>
 
@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type": "AWS::IAM::UserToGroupAddition",
    "Properties": {
-      "GroupName": String,
-      "Users": [ User1, ... ]
+      "[GroupName](#cfn-iam-addusertogroup-groupname)": String,
+      "[Users](#cfn-iam-addusertogroup-users)": [ User1, ... ]
    }
 }
 ```
@@ -31,25 +31,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::IAM::UserToGroupAddition"
 Properties: 
-  GroupName: String
-  Users:
+  [GroupName](#cfn-iam-addusertogroup-groupname): String
+  [Users](#cfn-iam-addusertogroup-users):
     - User1
 ```
 
-## Properties<a name="w3ab2c21c10d735c11"></a>
+## Properties<a name="w3ab2c21c10d738c11"></a>
 
-`GroupName`  
+`GroupName`  <a name="cfn-iam-addusertogroup-groupname"></a>
 The name of group to add users to\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Users`  
+`Users`  <a name="cfn-iam-addusertogroup-users"></a>
 *Required*: Yes  
 *Type*: List of users  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10d735c13"></a>
+## Return Value<a name="w3ab2c21c10d738c13"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -59,8 +59,8 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 For the `AWS::IAM::UserToGroupAddition` with the logical ID "MyUserToGroupAddition", `Ref` will return the AWS resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Template Examples<a name="w3ab2c21c10d735c15"></a>
+## Template Examples<a name="w3ab2c21c10d738c15"></a>
 
-To view `AWS::IAM::UserToGroupAddition` snippets, see \.
+To view `AWS::IAM::UserToGroupAddition` snippets, see [Adding Users to a Group](quickref-iam.md#scenario-iam-addusertogroup)\.

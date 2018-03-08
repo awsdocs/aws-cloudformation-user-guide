@@ -18,11 +18,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::FlowLog",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-flowlog-deliverlogspermissionarn)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-flowlog-loggroupname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-flowlog-resourceid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-flowlog-resourcetype)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-flowlog-traffictype)" : String
+    "[DeliverLogsPermissionArn](#cfn-ec2-flowlog-deliverlogspermissionarn)" : String,
+    "[LogGroupName](#cfn-ec2-flowlog-loggroupname)" : String,
+    "[ResourceId](#cfn-ec2-flowlog-resourceid)" : String,
+    "[ResourceType](#cfn-ec2-flowlog-resourcetype)" : String,
+    "[TrafficType](#cfn-ec2-flowlog-traffictype)" : String
   }
 }
 ```
@@ -32,44 +32,44 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::FlowLog"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-flowlog-deliverlogspermissionarn) : String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-flowlog-loggroupname) : String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-flowlog-resourceid) : String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-flowlog-resourcetype) : String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-flowlog-traffictype) : String
+  [DeliverLogsPermissionArn](#cfn-ec2-flowlog-deliverlogspermissionarn) : String
+  [LogGroupName](#cfn-ec2-flowlog-loggroupname) : String
+  [ResourceId](#cfn-ec2-flowlog-resourceid) : String
+  [ResourceType](#cfn-ec2-flowlog-resourcetype) : String
+  [TrafficType](#cfn-ec2-flowlog-traffictype) : String
 ```
 
 ## Properties<a name="w3ab2c21c10d364b9"></a>
 
-`DeliverLogsPermissionArn`  
+`DeliverLogsPermissionArn`  <a name="cfn-ec2-flowlog-deliverlogspermissionarn"></a>
 The Amazon Resource Name \(ARN\) of an AWS Identity and Access Management \(IAM\) role that permits Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`LogGroupName`  
+`LogGroupName`  <a name="cfn-ec2-flowlog-loggroupname"></a>
 The name of a new or existing CloudWatch Logs log group where Amazon EC2 publishes your flow logs\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`ResourceId`  
+`ResourceId`  <a name="cfn-ec2-flowlog-resourceid"></a>
 The ID of the subnet, network interface, or VPC for which you want to create a flow log\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`ResourceType`  
+`ResourceType`  <a name="cfn-ec2-flowlog-resourcetype"></a>
 The type of resource that you specified in the `ResourceId` property\. For example, if you specified a VPC ID for the `ResourceId` property, specify `VPC` for this property\. For valid values, see the `ResourceType` parameter for the [CreateFlowLogs](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFlowLogs.html) action in the *Amazon EC2 API Reference*\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`TrafficType`  
+`TrafficType`  <a name="cfn-ec2-flowlog-traffictype"></a>
 The type of traffic to log\. You can log traffic that the resource accepts or rejects, or all traffic\. For valid values, see the `TrafficType` parameter for the [CreateFlowLogs](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFlowLogs.html) action in the *Amazon EC2 API Reference*\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Value<a name="w3ab2c21c10d364c11"></a>
 
@@ -77,7 +77,7 @@ The type of traffic to log\. You can log traffic that the resource accepts or re
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the flow log ID, such as `fl-1a23b456`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d364c13"></a>
 

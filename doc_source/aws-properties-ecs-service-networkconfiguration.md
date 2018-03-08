@@ -2,26 +2,26 @@
 
 `NetworkConfiguration` is a property of the [AWS::ECS::Service](aws-resource-ecs-service.md) resource that specifies the network configuration for an Amazon Elastic Container Service \(Amazon ECS\) task or service\.
 
-## Syntax<a name="w3ab2c21c14d665b5"></a>
+## Syntax<a name="w3ab2c21c14d690b5"></a>
 
 ### JSON<a name="aws-properties-ecs-service-networkconfiguration-syntax.json"></a>
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration)" : AwsVpcConfiguration
+  "[AwsvpcConfiguration](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration)" : [*AwsVpcConfiguration*](aws-properties-ecs-service-awsvpcconfiguration.md)
 }
 ```
 
 ### YAML<a name="aws-properties-ecs-service-networkconfiguration-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration): AwsVpcConfiguration
+[AwsvpcConfiguration](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration): [*AwsVpcConfiguration*](aws-properties-ecs-service-awsvpcconfiguration.md)
 ```
 
-## Properties<a name="w3ab2c21c14d665b7"></a>
+## Properties<a name="w3ab2c21c14d690b7"></a>
 
-`AwsvpcConfiguration`  
+`AwsvpcConfiguration`  <a name="cfn-ecs-service-networkconfiguration-awsvpcconfiguration"></a>
  The VPC subnets and security groups associated with a task\.  
 *Required: *No  
 *Type*: [Amazon Elastic Container Service Service AwsVpcConfiguration](aws-properties-ecs-service-awsvpcconfiguration.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

@@ -12,34 +12,34 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-deploymentstyle-deploymentoption)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-deploymentstyle-deploymenttype)" : String
+  "[DeploymentOption](#cfn-codedeploy-deploymentgroup-deploymentstyle-deploymentoption)" : String,
+  "[DeploymentType](#cfn-codedeploy-deploymentgroup-deploymentstyle-deploymenttype)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-deploymentstyle-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-deploymentstyle-deploymentoption): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-deploymentstyle-deploymenttype): String
+[DeploymentOption](#cfn-codedeploy-deploymentgroup-deploymentstyle-deploymentoption): String
+  [DeploymentType](#cfn-codedeploy-deploymentgroup-deploymentstyle-deploymenttype): String
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-deploymentstyle-properties"></a>
 
-`DeploymentOption`  
+`DeploymentOption`  <a name="cfn-codedeploy-deploymentgroup-deploymentstyle-deploymentoption"></a>
 Indicates whether to route deployment traffic behind a load balancer\.  
  *Required*: No  
  *Type*: String  
  *Valid values*: `WITH_TRAFFIC_CONTROL` or `WITHOUT_TRAFFIC_CONTROL`  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`DeploymentType`  
+`DeploymentType`  <a name="cfn-codedeploy-deploymentgroup-deploymentstyle-deploymenttype"></a>
 Indicates whether to run an in\-place or blue/green deployment\.  
 AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only\. For more information about deploying on a AWS Lambda compute platform, see [ Deployments on an AWS Lambda Compute Platform](http://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-steps.html#deployment-steps-lambda) in the *AWS CodeDeploy User Guide*\.  
  *Required*: No  
  *Type*: String  
  *Valid values*: `IN_PLACE` or `BLUE_GREEN`  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-codedeploy-deploymentgroup-deploymentstyle-seealso"></a>
 

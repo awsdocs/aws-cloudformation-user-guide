@@ -9,8 +9,7 @@ To modify a template, for example to add a new resource to your stack, modify a 
 1. In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), from the list of stacks, select the running stack for which you want to create a change set\.
 
 1. Choose **Actions**, and then choose **Create Change Set**\.  
-![\[The Create Change Set For Current Stack option in the
-              Actions menu.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-changeset-create.png)
+![\[The Create Change Set For Current Stack option in the Actions menu.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-changeset-create.png)
 
 1. If you modified the stack template, specify the location of the updated template\. If not, select **Use current template**\.
 
@@ -30,7 +29,7 @@ To modify a template, for example to add a new resource to your stack, modify a 
 
 1. Review the changes for this change set\.
 
-   If the template includes AWS Identity and Access Management \(IAM\) resources, select **I acknowledge that this template may create IAM resources** to acknowledge that AWS CloudFormation might create IAM resources if you execute this change set\. IAM resources can modify permissions in your AWS account; review these resources to ensure that you're permitting only the actions that you intend\. For more information, see \.
+   If the template includes AWS Identity and Access Management \(IAM\) resources, select **I acknowledge that this template may create IAM resources** to acknowledge that AWS CloudFormation might create IAM resources if you execute this change set\. IAM resources can modify permissions in your AWS account; review these resources to ensure that you're permitting only the actions that you intend\. For more information, see [Controlling Access with AWS Identity and Access Management](using-iam-template.md)\.
 
 1. Choose **Create change set**\.
 

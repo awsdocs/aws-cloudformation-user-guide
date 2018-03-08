@@ -4,19 +4,19 @@ AWS CloudFormation Designer graphically represents your templates to help you se
 
 In the walkthrough, you will complete the following steps:
 
-1. Add and connect resources\.
+1. [Add and connect resources\.](#working-with-templates-cfn-designer-walkthrough-createbasicwebserver-addresources)
 
    When you first open AWS CloudFormation Designer, you start with a blank template\. We'll use AWS CloudFormation Designer to start populating the template by dragging resources, such as a VPC and an EC2 instance into your template\. We'll also create links between them\. For example, we'll use AWS CloudFormation Designer to create a connection between the Internet gateway and the VPC\.
 
-1. Add template parameters, mappings, and outputs\.
+1. [Add template parameters, mappings, and outputs\.](#working-with-templates-cfn-designer-walkthrough-createbasicwebserver-addother)
 
    We'll use the AWS CloudFormation Designer integrated editor to add other template components to make the template more useful\. For example, we'll add parameters to the template so that you can specify input values when you create a stack\. That way you don't have to constantly edit the template for property values that you might commonly change\.
 
-1. Specify resource properties\.
+1. [Specify resource properties\.](#working-with-templates-cfn-designer-walkthrough-createbasicwebserver-resourceproperties)
 
    We'll use the integrated editor again to specify configuration settings for our resources\.
 
-1. Provision resources
+1. [Provision resources](#working-with-templates-cfn-designer-walkthrough-createbasicwebserver-provision)
 
    None of your template resources are up and running until you create a stack\. We'll use the template that you just created to launch an AWS CloudFormation stack, which will provision all the resources that are defined in your template\.
 **Note**  

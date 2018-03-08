@@ -19,12 +19,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::ApiKey",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-apikey-customerid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-apikey-description)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-apikey-enabled)" : Boolean,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-apikey-generatedistinctid)" : Boolean,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-apikey-name)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-apikey-stagekeys)" : [ StageKey, ... ]
+    "[CustomerId](#cfn-apigateway-apikey-customerid)" : String,
+    "[Description](#cfn-apigateway-apikey-description)" : String,
+    "[Enabled](#cfn-apigateway-apikey-enabled)" : Boolean,
+    "[GenerateDistinctId](#cfn-apigateway-apikey-generatedistinctid)" : Boolean,
+    "[Name](#cfn-apigateway-apikey-name)" : String,
+    "[StageKeys](#cfn-apigateway-apikey-stagekeys)" : [ [StageKey](aws-properties-apitgateway-apikey-stagekey.md), ... ]
   }
 }
 ```
@@ -34,54 +34,54 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ApiGateway::ApiKey"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-apikey-customerid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-apikey-description): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-apikey-enabled): Boolean
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-apikey-generatedistinctid): Boolean
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-apikey-name): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-apikey-stagekeys):
-    - StageKey
+  [CustomerId](#cfn-apigateway-apikey-customerid): String
+  [Description](#cfn-apigateway-apikey-description): String
+  [Enabled](#cfn-apigateway-apikey-enabled): Boolean
+  [GenerateDistinctId](#cfn-apigateway-apikey-generatedistinctid): Boolean
+  [Name](#cfn-apigateway-apikey-name): String
+  [StageKeys](#cfn-apigateway-apikey-stagekeys):
+    - [StageKey](aws-properties-apitgateway-apikey-stagekey.md)
     - ...
 ```
 
 ## Properties<a name="w3ab2c21c10c17b9"></a>
 
-`CustomerId`  
+`CustomerId`  <a name="cfn-apigateway-apikey-customerid"></a>
 An AWS Marketplace customer identifier to use when integrating with the AWS SaaS Marketplace\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Description`  
+`Description`  <a name="cfn-apigateway-apikey-description"></a>
 A description of the purpose of the API key\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Enabled`  
+`Enabled`  <a name="cfn-apigateway-apikey-enabled"></a>
 Indicates whether the API key can be used by clients\.  
 *Required: *No  
 *Type*: Boolean  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`GenerateDistinctId`  
+`GenerateDistinctId`  <a name="cfn-apigateway-apikey-generatedistinctid"></a>
 Specifies whether the key identifier is distinct from the created API key value\.  
 *Required: *No  
 *Type*: Boolean  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Name`  
+`Name`  <a name="cfn-apigateway-apikey-name"></a>
 A name for the API key\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the API key name\. For more information, see [Name Type](aws-properties-name.md)\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`StageKeys`  
+`StageKeys`  <a name="cfn-apigateway-apikey-stagekeys"></a>
 A list of stages to associate with this API key\.  
 *Required: *No  
 *Type*: List of [Amazon API Gateway ApiKey StageKey](aws-properties-apitgateway-apikey-stagekey.md) property types  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Value<a name="aws-resource-apigateway-apikey-returnvalues"></a>
 
@@ -89,7 +89,7 @@ A list of stages to associate with this API key\.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the API key ID, such as `m2m1k7sybf`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Examples<a name="aws-resource-apigateway-apikey-examples"></a>
 
