@@ -8,7 +8,7 @@ For example, assume that you have a load balancer configuration that you use for
 
 Nested stacks can themselves contain other nested stacks, resulting in a hierarchy of stacks, as in the diagram below\. The *root stack* is the top\-level stack to which all the nested stacks ultimately belong\. In addition, each nested stack has an immediate *parent stack*\. For the first level of nested stacks, the root stack is also the parent stack\. in the diagram below, for example:
 
-+ Stack A is the root stackfor all the other, nested, stacks in the hierarchy\.
++ Stack A is the root stack for all the other, nested, stacks in the hierarchy\.
 
 + For stack B, stack A is both the parent stack, as well as the root stack\.
 
