@@ -65,6 +65,15 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
+### Fn::GetAtt<a name="w3ab2c21c10d373c13b4"></a>
+
+`Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+`Arn`
+Returns the Amazon Resource Name \(ARN\) for the specified AWS::ECR::Repository resource\. For example: `arn:aws:ecr:eu-west-1:123456789012:repository/test-repository`\.
+
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
+
 ## Examples<a name="aws-resource-ecr-repository-examples"></a>
 
 ### <a name="aws-resource-ecr-repository-example1"></a>
