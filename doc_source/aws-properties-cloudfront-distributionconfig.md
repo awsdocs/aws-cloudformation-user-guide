@@ -32,10 +32,10 @@
 [Aliases](#cfn-cloudfront-distributionconfig-aliases):
   - String
 [CacheBehaviors](#cfn-cloudfront-distributionconfig-cachebehaviors):
-  CacheBehavior
+  - CacheBehavior
 [Comment](#cfn-cloudfront-distributionconfig-comment): String
 [CustomErrorResponses](#cfn-cloudfront-distributionconfig-customerrorresponses):
-  CustomErrorResponse
+  - CustomErrorResponse
 [DefaultCacheBehavior](#cfn-cloudfront-distributionconfig-defaultcachebehavior):
   DefaultCacheBehavior
 [DefaultRootObject](#cfn-cloudfront-distributionconfig-defaultrootobject): String
@@ -45,7 +45,7 @@
 [Logging](#cfn-cloudfront-distributionconfig-logging):
   Logging
 [Origins](#cfn-cloudfront-distributionconfig-origins):
-  Origin
+  - Origin
 [PriceClass](#cfn-cloudfront-distributionconfig-priceclass): String
 [Restrictions](#cfn-cloudfront-distributionconfig-restrictions):
   Restriction
