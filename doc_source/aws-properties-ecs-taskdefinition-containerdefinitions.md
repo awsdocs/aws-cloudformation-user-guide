@@ -181,7 +181,7 @@ Configures a custom log driver for the container\. For more information, see the
 *Type*: [Amazon ECS TaskDefinition LogConfiguration](aws-properties-ecs-taskdefinition-containerdefinitions-logconfiguration.md)
 
 `Memory`  <a name="cfn-ecs-taskdefinition-containerdefinition-memory"></a>
-The number of MiB of memory to reserve for the container\. If your container attempts to exceed the allocated memory, the container is terminated\.  
+The maximum number of MiB of memory that the container is allowed to use\. If your container attempts to exceed the allocated memory, the container is terminated\.  
 *Required*: Conditional\. You must specify one or both of the `Memory` or `MemoryReservation` properties\. If you specify both, the value for the `Memory` property must be greater than the value of the `MemoryReservation` property\.  
 *Type*: Integer
 
