@@ -66,7 +66,7 @@ The number of shards that the stream uses\. For greater provisioned throughput, 
 
 `StreamEncryption`  <a name="cfn-kinesis-stream-streamencryption"></a>
 Enables or updates server\-side encryption using an AWS KMS key for a specified stream\.  
-*Required: *Yes  
+*Required: *No  
 *Type:* [Kinesis StreamEncryption](aws-properties-kinesis-stream-streamencryption.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
