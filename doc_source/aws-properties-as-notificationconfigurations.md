@@ -9,7 +9,7 @@ The `NotificationConfigurations` property of the `[AWS::AutoScaling::AutoScaling
 ### JSON<a name="aws-properties-as-notificationconfigurations-syntax.json"></a>
 
 ```
-{s
+{
    "[NotificationTypes](#cfn-as-group-notificationconfigurations-notificationtypes)" : [ String, ... ],
    "[TopicARN](#cfn-as-group-notificationconfigurations-topicarn)" : String
 }
