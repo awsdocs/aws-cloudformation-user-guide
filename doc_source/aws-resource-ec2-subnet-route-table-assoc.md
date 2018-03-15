@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-subnetroutetableassociation-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::SubnetRouteTableAssociation"
+Type: AWS::EC2::SubnetRouteTableAssociation
 Properties: 
   [RouteTableId](#cfn-ec2-subnetroutetableassociation-routetableid): String
   [SubnetId](#cfn-ec2-subnetroutetableassociation-subnetid): String

@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-redshift-clustersecuritygroupingress-syntax.yaml"></a>
 
 ```
-Type: "AWS::Redshift::ClusterSecurityGroupIngress"
+Type: AWS::Redshift::ClusterSecurityGroupIngress
 Properties: 
   [ClusterSecurityGroupName](#cfn-redshift-clustersecuritygroupingress-clustersecuritygroupname): String
   [CIDRIP](#cfn-redshift-clustersecuritygroupingress-cidrip): String
@@ -83,7 +83,7 @@ The following snippet describes a ingress rules for an Amazon Redshift cluster s
 
 ```
 myClusterSecurityGroupIngressIP: 
-  Type: "AWS::Redshift::ClusterSecurityGroupIngress"
+  Type: AWS::Redshift::ClusterSecurityGroupIngress
   Properties: 
     ClusterSecurityGroupName: 
       Ref: "myClusterSecurityGroup"

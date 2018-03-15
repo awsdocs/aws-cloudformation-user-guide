@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ses-receiptfilter-syntax.yaml"></a>
 
 ```
-Type: "AWS::SES::ReceiptFilter"
+Type: AWS::SES::ReceiptFilter
 Properties:
   [Filter](#cfn-ses-receiptfilter-filter): [*Filter*](aws-properties-ses-receiptfilter-filter.md)
 ```

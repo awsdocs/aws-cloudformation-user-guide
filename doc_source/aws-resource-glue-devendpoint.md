@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-glue-devendpoint-syntax.yaml"></a>
 
 ```
-Type: "AWS::Glue::DevEndpoint"
+Type: AWS::Glue::DevEndpoint
 Properties:
   [EndpointName](#cfn-glue-devendpoint-endpointname): String
   [ExtraJarsS3Path](#cfn-glue-devendpoint-extrajarss3path): String

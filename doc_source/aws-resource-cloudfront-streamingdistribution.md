@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cloudfront-streamingdistribution-syntax.yaml"></a>
 
 ```
-Type: "AWS::CloudFront::StreamingDistribution"
+Type: AWS::CloudFront::StreamingDistribution
 Properties:
   [StreamingDistributionConfig](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig): StreamingDistributionConfig
   [Tags](#cfn-cloudfront-streamingdistribution-tags): 

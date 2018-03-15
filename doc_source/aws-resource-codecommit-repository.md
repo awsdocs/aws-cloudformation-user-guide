@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-codecommit-repository-syntax.yaml"></a>
 
 ```
-Type: "AWS::CodeCommit::Repository"
+Type: AWS::CodeCommit::Repository
 Properties: 
   [RepositoryDescription](#cfn-codecommit-repository-repositorydescription): String
   [RepositoryName](#cfn-codecommit-repository-repositoryname): String

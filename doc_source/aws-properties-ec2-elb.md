@@ -44,7 +44,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticloadbalancing-loadbalancer-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElasticLoadBalancing::LoadBalancer"
+Type: AWS::ElasticLoadBalancing::LoadBalancer
 Properties:
   [AccessLoggingPolicy](#cfn-ec2-elb-accessloggingpolicy):
     AccessLoggingPolicy

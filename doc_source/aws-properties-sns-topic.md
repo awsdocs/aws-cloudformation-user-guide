@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-sns-topic-syntax.yaml"></a>
 
 ```
-Type: "AWS::SNS::Topic"
+Type: AWS::SNS::Topic
 Properties: 
   [DisplayName](#cfn-sns-topic-displayname): String
   [Subscription](#cfn-sns-topic-subscription):
@@ -98,7 +98,7 @@ An example of an SNS topic subscribed to by two SQS queues:
 
 ```
 MySNSTopic: 
-  Type: "AWS::SNS::Topic"
+  Type: AWS::SNS::Topic
   Properties: 
     Subscription: 
       - 

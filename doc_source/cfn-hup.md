@@ -112,7 +112,7 @@ In the following template snippet, AWS CloudFormation triggers the `cfn-auto-rel
 ```
 ...
   LaunchConfig:
-    Type: "AWS::AutoScaling::LaunchConfiguration"
+    Type: AWS::AutoScaling::LaunchConfiguration
     Metadata:
       QBVersion: !Ref paramQBVersion
       AWS::CloudFormation::Init:

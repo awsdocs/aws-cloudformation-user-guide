@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-wafregional-bytematchset-syntax.yaml"></a>
 
 ```
-Type: "AWS::WAFRegional::ByteMatchSet"
+Type: AWS::WAFRegional::ByteMatchSet
 Properties: 
   [ByteMatchTuples](#cfn-wafregional-bytematchset-bytematchtuples):
     - Byte match tuple
@@ -97,7 +97,7 @@ The following example defines a set of HTTP referers to match\.
 
 ```
 BadReferers: 
-  Type: "AWS::WAFRegional::ByteMatchSet"
+  Type: AWS::WAFRegional::ByteMatchSet
   Properties: 
     Name: "ByteMatch for matching bad HTTP referers"
     ByteMatchTuples: 
@@ -144,7 +144,7 @@ The following example associates the `BadReferers` byte match set with a web acc
 
 ```
 BadReferersRule: 
-  Type: "AWS::WAFRegional::Rule"
+  Type: AWS::WAFRegional::Rule
   Properties: 
     Name: "BadReferersRule"
     MetricName: "BadReferersRule"
@@ -188,7 +188,7 @@ The following example associates the `BadReferersRule` rule with a web ACL\. The
 
 ```
 MyWebACL: 
-  Type: "AWS::WAFRegional::WebACL"
+  Type: AWS::WAFRegional::WebACL
   Properties: 
     Name: "WebACL to block blacklisted IP addresses"
     DefaultAction: 

@@ -42,7 +42,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-emr-cluster-syntax.yaml"></a>
 
 ```
-Type: "AWS::EMR::Cluster"
+Type: AWS::EMR::Cluster
 Properties: 
   [AdditionalInfo](#cfn-emr-cluster-additionalinfo): JSON object
   [Applications](#cfn-emr-cluster-applications):
@@ -241,7 +241,7 @@ The following example creates an Amazon EMR cluster with one master node and two
 
 ```
 TestCluster: 
-  Type: "AWS::EMR::Cluster"
+  Type: AWS::EMR::Cluster
   Properties: 
     Instances: 
       MasterInstanceGroup: 
@@ -315,7 +315,7 @@ The following example creates an Amazon EMR cluster with a bootstrap action\.
 
 ```
 TestCluster: 
-  Type: "AWS::EMR::Cluster"
+  Type: AWS::EMR::Cluster
   Properties: 
     BootstrapActions: 
       - 

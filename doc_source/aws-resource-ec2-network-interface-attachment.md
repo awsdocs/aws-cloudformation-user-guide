@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-networkinterfaceattachment-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::NetworkInterfaceAttachment"
+Type: AWS::EC2::NetworkInterfaceAttachment
 Properties: 
   [DeleteOnTermination](#cfn-ec2-network-interface-attachment-deleteonterm): Boolean
   [DeviceIndex](#cfn-ec2-network-interface-attachment-deviceindex): String

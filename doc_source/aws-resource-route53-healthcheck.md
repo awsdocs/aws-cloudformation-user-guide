@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-route53-healthcheck-syntax.yaml"></a>
 
 ```
-Type: "AWS::Route53::HealthCheck"
+Type: AWS::Route53::HealthCheck
 Properties: 
   [HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig):
     HealthCheckConfig
@@ -92,7 +92,7 @@ The following example creates an Amazon Route 53 health check that sends reques
 
 ```
 myHealthCheck: 
-  Type: "AWS::Route53::HealthCheck"
+  Type: AWS::Route53::HealthCheck
   Properties: 
     HealthCheckConfig: 
       IPAddress: "000.000.000.000"

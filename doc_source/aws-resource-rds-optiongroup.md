@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-rds-optiongroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::RDS::OptionGroup"
+Type: AWS::RDS::OptionGroup
 Properties: 
   [EngineName](#cfn-rds-optiongroup-enginename): String
   [MajorEngineVersion](#cfn-rds-optiongroup-majorengineversion): String
@@ -120,7 +120,7 @@ The following snippet creates an option group with two option configurations \(`
 
 ```
 OracleOptionGroup: 
-  Type: "AWS::RDS::OptionGroup"
+  Type: AWS::RDS::OptionGroup
   Properties: 
     EngineName: "oracle-ee"
     MajorEngineVersion: "12.1"

@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cloudformation-waitconditionhandle-syntax.yaml"></a>
 
 ```
-Type: "AWS::CloudFormation::WaitConditionHandle"
+Type: AWS::CloudFormation::WaitConditionHandle
 Properties:
 ```
 

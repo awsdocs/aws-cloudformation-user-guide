@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-subnetnetworkaclassociation-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::SubnetNetworkAclAssociation"
+Type: AWS::EC2::SubnetNetworkAclAssociation
 Properties:
   [SubnetId](#cfn-ec2-subnetnetworkaclassociation-associationid): String
   [NetworkAclId](#cfn-ec2-subnetnetworkaclassociation-networkaclid): String

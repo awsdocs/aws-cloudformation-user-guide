@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-servicediscovery-privatednsnamespace-syntax.yaml"></a>
 
 ```
-Type: "AWS::ServiceDiscovery::PrivateDnsNamespace"
+Type: AWS::ServiceDiscovery::PrivateDnsNamespace
 Properties:
   [Description](#cfn-servicediscovery-privatednsnamespace-description): String
   [Vpc](#cfn-servicediscovery-privatednsnamespace-vpc): String

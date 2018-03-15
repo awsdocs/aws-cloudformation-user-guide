@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cloudformation-waitcondition-syntax.yaml"></a>
 
 ```
-Type: "AWS::CloudFormation::WaitCondition"
+Type: AWS::CloudFormation::WaitCondition
 Properties: 
   [Count](#cfn-waitcondition-count): Integer
   [Handle](#cfn-waitcondition-handle): String
@@ -129,7 +129,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
 
 ```
 WebServerGroup: 
-  Type: "AWS::AutoScaling::AutoScalingGroup"
+  Type: AWS::AutoScaling::AutoScalingGroup
   Properties: 
     AvailabilityZones: 
       Fn::GetAZs: ""
@@ -143,9 +143,9 @@ WebServerGroup:
       - 
         Ref: "ElasticLoadBalancer"
 WaitHandle: 
-  Type: "AWS::CloudFormation::WaitConditionHandle"
+  Type: AWS::CloudFormation::WaitConditionHandle
 WaitCondition: 
-  Type: "AWS::CloudFormation::WaitCondition"
+  Type: AWS::CloudFormation::WaitCondition
   DependsOn: "WebServerGroup"
   Properties: 
     Handle: 

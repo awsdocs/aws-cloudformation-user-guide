@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-codedeploy-deploymentconfig-syntax.yaml"></a>
 
 ```
-Type: "AWS::CodeDeploy::DeploymentConfig"
+Type: AWS::CodeDeploy::DeploymentConfig
 Properties:
   [DeploymentConfigName](#cfn-codedeploy-deploymentconfig-deploymentconfigname): String
   [MinimumHealthyHosts](#cfn-codedeploy-deploymentconfig-minimumhealthyhosts):
@@ -80,7 +80,7 @@ The following example requires at least 75% of the fleet to be healthy\. For exa
 
 ```
 TwentyFivePercentAtATime: 
-  Type: "AWS::CodeDeploy::DeploymentConfig"
+  Type: AWS::CodeDeploy::DeploymentConfig
   Properties: 
     MinimumHealthyHosts: 
       Type: "FLEET_PERCENT"

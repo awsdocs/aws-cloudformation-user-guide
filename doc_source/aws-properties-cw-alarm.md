@@ -45,7 +45,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cw-alarm-syntax.yaml"></a>
 
 ```
-Type: "AWS::CloudWatch::Alarm"
+Type: AWS::CloudWatch::Alarm
 Properties:
   [ActionsEnabled](#cfn-cloudwatch-alarms-actionsenabled): Boolean
   [AlarmActions](#cfn-cloudwatch-alarms-alarmactions):

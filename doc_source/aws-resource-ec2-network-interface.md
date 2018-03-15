@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-networkinterface-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::NetworkInterface"
+Type: AWS::EC2::NetworkInterface
 Properties: 
   [Description](#cfn-awsec2networkinterface-description): String
   [GroupSet](#cfn-awsec2networkinterface-groupset):

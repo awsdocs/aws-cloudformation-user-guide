@@ -38,7 +38,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-emr-instancegroupconfig-syntax.yaml"></a>
 
 ```
-Type: "AWS::EMR::InstanceGroupConfig"
+Type: AWS::EMR::InstanceGroupConfig
 Properties: 
   [AutoScalingPolicy](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy):
     AutoScalingPolicy
@@ -155,7 +155,7 @@ The following example adds a task instance group to the `TestCluster` cluster\. 
 
 ```
 TestInstanceGroupConfig: 
-  Type: "AWS::EMR::InstanceGroupConfig"
+  Type: AWS::EMR::InstanceGroupConfig
   Properties: 
     InstanceCount: 2
     InstanceType: "m3.xlarge"

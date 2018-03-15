@@ -62,7 +62,7 @@ The cfn\-init helper script processes these configuration sections in the follow
 ```
 Resources: 
   MyInstance: 
-    Type: "AWS::EC2::Instance"
+    Type: AWS::EC2::Instance
     Metadata: 
       AWS::CloudFormation::Init: 
         config: 

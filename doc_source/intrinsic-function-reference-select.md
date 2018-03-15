@@ -103,7 +103,7 @@ To specify one of the three CIDR blocks, use `Fn::Select` in the Resources secti
 
 ```
 Subnet0: 
-  Type: "AWS::EC2::Subnet"
+  Type: AWS::EC2::Subnet
   Properties: 
     VpcId: !Ref VPC
     CidrBlock: !Select [ 0, !Ref DbSubnetIpBlocks ]

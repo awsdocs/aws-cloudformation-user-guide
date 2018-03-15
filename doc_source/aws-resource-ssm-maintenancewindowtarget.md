@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ssm-maintenancewindowtarget-syntax.yaml"></a>
 
 ```
-Type: "AWS::SSM::MaintenanceWindowTarget"
+Type: AWS::SSM::MaintenanceWindowTarget
 Properties:
   [OwnerInformation](#cfn-ssm-maintenancewindowtarget-ownerinformation): String
   [Description](#cfn-ssm-maintenancewindowtarget-description): String

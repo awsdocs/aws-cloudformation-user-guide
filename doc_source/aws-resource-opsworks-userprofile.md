@@ -27,7 +27,7 @@ The `AWS::OpsWorks::UserProfile` resource configures SSH access for users who re
 ### YAML<a name="aws-resource-opsworks-userprofile-syntax.yaml"></a>
 
 ```
-Type: "AWS::OpsWorks::UserProfile"
+Type: AWS::OpsWorks::UserProfile
 Properties:
   [AllowSelfManagement](#cfn-opsworks-userprofile-allowselfmanagement): Boolean
   [IamUserArn](#cfn-opsworks-userprofile-iamuserarn): String

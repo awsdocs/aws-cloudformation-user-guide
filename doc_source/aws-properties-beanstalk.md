@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticbeanstalk-application-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElasticBeanstalk::Application"
+Type: AWS::ElasticBeanstalk::Application
 Properties:
   [ApplicationName](#cfn-elasticbeanstalk-application-name): String
   [Description](#cfn-elasticbeanstalk-application-description): String
@@ -84,7 +84,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 ### YAML<a name="aws-resource-elasticbeanstalk-application-example.yaml"></a>
 
 ```
-Type: "AWS::ElasticBeanstalk::Application"
+Type: AWS::ElasticBeanstalk::Application
 Properties: 
   ApplicationName: "SampleAWSElasticBeanstalkApplication"
   Description: "AWS Elastic Beanstalk PHP Sample Application"

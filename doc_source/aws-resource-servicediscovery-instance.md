@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-servicediscovery-instance-syntax.yaml"></a>
 
 ```
-Type: "AWS::ServiceDiscovery::Instance"
+Type: AWS::ServiceDiscovery::Instance
 Properties:
   [InstanceAttributes](#cfn-servicediscovery-instance-instanceattributes): JSON object
   [InstanceId](#cfn-servicediscovery-instance-instanceid): String

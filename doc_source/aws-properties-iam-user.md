@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-iam-user-syntax.yaml"></a>
 
 ```
-Type: "AWS::IAM::User"
+Type: AWS::IAM::User
 Properties: 
   [Groups](#cfn-iam-user-groups):
     - String

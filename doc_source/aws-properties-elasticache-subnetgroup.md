@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticache-subnetgroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElastiCache::SubnetGroup"
+Type: AWS::ElastiCache::SubnetGroup
 Properties:
   [CacheSubnetGroupName](#cfn-elasticache-subnetgroup-cachesubnetgroupname): String
   [Description](#cfn-elasticache-subnetgroup-description): String
@@ -83,7 +83,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ```
 SubnetGroup: 
-  Type: "AWS::ElastiCache::SubnetGroup"
+  Type: AWS::ElastiCache::SubnetGroup
   Properties: 
     Description: "Cache Subnet Group"
     SubnetIds: 

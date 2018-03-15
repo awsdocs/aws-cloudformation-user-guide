@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-flowlog-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::FlowLog"
+Type: AWS::EC2::FlowLog
 Properties:
   [DeliverLogsPermissionArn](#cfn-ec2-flowlog-deliverlogspermissionarn) : String
   [LogGroupName](#cfn-ec2-flowlog-loggroupname) : String

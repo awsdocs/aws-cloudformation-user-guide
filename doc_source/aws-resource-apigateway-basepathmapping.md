@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-basepathmapping-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::BasePathMapping"
+Type: AWS::ApiGateway::BasePathMapping
 Properties:
   [BasePath](#cfn-apigateway-basepathmapping-basepath): String
   [DomainName](#cfn-apigateway-basepathmapping-domainname): String

@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticache-securitygroupingress-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElastiCache::SecurityGroupIngress"
+Type: AWS::ElastiCache::SecurityGroupIngress
 Properties:
   [CacheSecurityGroupName](#cfn-elasticache-securitygroupingress-cachesecuritygroupname): String
   [EC2SecurityGroupName](#cfn-elasticache-securitygroupingress-ec2securitygroupname): String

@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ssm-maintenancewindowtask-syntax.yaml"></a>
 
 ```
-Type: "AWS::SSM::MaintenanceWindowTask"
+Type: AWS::SSM::MaintenanceWindowTask
 Properties:
   [MaxErrors](#cfn-ssm-maintenancewindowtask-maxerrors): String
   [Description](#cfn-ssm-maintenancewindowtask-description): String

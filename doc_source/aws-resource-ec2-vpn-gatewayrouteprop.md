@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-vpngatewayroutepropagation-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::VPNGatewayRoutePropagation"
+Type: AWS::EC2::VPNGatewayRoutePropagation
 Properties: 
   [RouteTableIds](#cfn-ec2-vpngatewayrouteprop-routetableids):
     - String
@@ -82,7 +82,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ```
 myVPNGatewayRouteProp: 
-  Type: "AWS::EC2::VPNGatewayRoutePropagation"
+  Type: AWS::EC2::VPNGatewayRoutePropagation
   Properties:
     RouteTableIds: 
       - !Ref PrivateRouteTable

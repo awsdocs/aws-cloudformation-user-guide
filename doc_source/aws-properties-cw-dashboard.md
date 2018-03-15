@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cw-dashboard-syntax.yaml"></a>
 
 ```
-Type: "AWS::CloudWatch::Dashboard"
+Type: AWS::CloudWatch::Dashboard
 Properties:
       [DashboardName](#cfn-cloudwatch-dashboard-name): String
       [DashboardBody](#cfn-cloudwatch-dashboard-body): String

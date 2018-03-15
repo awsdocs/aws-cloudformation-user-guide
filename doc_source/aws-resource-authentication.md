@@ -53,7 +53,7 @@ You should be aware of the following considerations when using the AWS::CloudFor
 ### YAML<a name="aws-resource-cloudformation-authentication-syntax.yaml"></a>
 
 ```
-Type: "AWS::CloudFormation::Authentication"
+Type: AWS::CloudFormation::Authentication
 String:
   [accessKeyId](#cfn-cloudformation-authentication-accesskeyid): String
   [buckets](#cfn-cloudformation-authentication-buckets):
@@ -169,7 +169,7 @@ This template snippet shows how to get a file from a private S3 bucket within an
 
 ```
 WebServer: 
-  Type: "AWS::EC2::Instance"
+  Type: AWS::EC2::Instance
   DependsOn: "BucketPolicy"
   Metadata: 
     AWS::CloudFormation::Init: 

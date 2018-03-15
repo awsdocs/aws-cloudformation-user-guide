@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-config-configurationrecorder-syntax.yaml"></a>
 
 ```
-Type: "AWS::Config::ConfigurationRecorder"
+Type: AWS::Config::ConfigurationRecorder
 Properties:
   [Name](#cfn-config-configurationrecorder-name): String
   [RecordingGroup](#cfn-config-configurationrecorder-recordinggroup):
@@ -89,7 +89,7 @@ The following example creates a configuration recorder for EC2 volumes\.
 
 ```
 ConfigRecorder: 
-  Type: "AWS::Config::ConfigurationRecorder"
+  Type: AWS::Config::ConfigurationRecorder
   Properties: 
     Name: default
     RecordingGroup: 

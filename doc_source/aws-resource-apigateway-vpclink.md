@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-vpclink-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::VpcLink"
+Type: AWS::ApiGateway::VpcLink
 Properties:
   [Description](#cfn-apigateway-vpclink-description): String
   [Name](#cfn-apigateway-vpclink-name): String

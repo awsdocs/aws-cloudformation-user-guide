@@ -172,7 +172,7 @@ Mappings:
       "64": "ami-a003a8a1"
 Resources: 
   myEC2Instance: 
-    Type: "AWS::EC2::Instance"
+    Type: AWS::EC2::Instance
     Properties: 
       ImageId: !FindInMap [RegionMap, !Ref "AWS::Region", 32]
       InstanceType: m1.small

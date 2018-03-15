@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ssm-document-syntax.yaml"></a>
 
 ```
-Type: "AWS::SSM::Document"
+Type: AWS::SSM::Document
 Properties: 
   [Content](#cfn-ssm-document-content): JSON object
   [DocumentType](#cfn-ssm-document-documenttype): String
@@ -115,7 +115,7 @@ The following SSM document joins instances to a directory in AWS Directory Servi
 
 ```
 document: 
-  Type: "AWS::SSM::Document"
+  Type: AWS::SSM::Document
   Properties: 
     Content: 
       schemaVersion: "1.2"
@@ -175,7 +175,7 @@ The following example shows how to associate the SSM document with an instance\.
 
 ```
 myEC2: 
-  Type: "AWS::EC2::Instance"
+  Type: AWS::EC2::Instance
   Properties: 
     ImageId: 
       Ref: "myImageId"

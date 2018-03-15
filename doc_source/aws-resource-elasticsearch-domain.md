@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticsearch-domain-syntax.yaml"></a>
 
 ```
-Type: "AWS::Elasticsearch::Domain"
+Type: AWS::Elasticsearch::Domain
 Properties: 
   [AccessPolicies](#cfn-elasticsearch-domain-accesspolicies): JSON object
   [AdvancedOptions](#cfn-elasticsearch-domain-advancedoptions):
@@ -192,7 +192,7 @@ The following examples create an Amazon ES domain that contains two data nodes a
 
 ```
 ElasticsearchDomain: 
-  Type: "AWS::Elasticsearch::Domain"
+  Type: AWS::Elasticsearch::Domain
   Properties:
     DomainName: "test"
     ElasticsearchClusterConfig: 

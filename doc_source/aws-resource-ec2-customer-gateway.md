@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-customergateway-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::CustomerGateway"
+Type: AWS::EC2::CustomerGateway
 Properties:
   [BgpAsn](#cfn-ec2-customergateway-bgpasn): Number
   [IpAddress](#cfn-ec2-customergateway-ipaddress): String
@@ -104,7 +104,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 AWSTemplateFormatVersion: "2010-09-09"
 Resources: 
   myCustomerGateway: 
-    Type: "AWS::EC2::CustomerGateway"
+    Type: AWS::EC2::CustomerGateway
     Properties: 
       Type: ipsec.1
       BgpAsn: 64000

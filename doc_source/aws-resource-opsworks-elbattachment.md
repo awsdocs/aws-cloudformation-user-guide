@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-opsworks-elbattachment-syntax.yaml"></a>
 
 ```
-Type: "AWS::OpsWorks::ElasticLoadBalancerAttachment"
+Type: AWS::OpsWorks::ElasticLoadBalancerAttachment
 Properties: 
   [ElasticLoadBalancerName](#cfn-opsworks-elbattachment-elbname): String
   [LayerId](#cfn-opsworks-elbattachment-layerid): String
@@ -67,7 +67,7 @@ The following snippet specifies a load balancer attachment to an AWS OpsWorks la
 
 ```
 ELBAttachment: 
-  Type: "AWS::OpsWorks::ElasticLoadBalancerAttachment"
+  Type: AWS::OpsWorks::ElasticLoadBalancerAttachment
   Properties: 
     ElasticLoadBalancerName: 
       Ref: "ELB"

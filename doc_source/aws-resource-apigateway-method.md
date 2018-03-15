@@ -38,7 +38,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-method-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::Method"
+Type: AWS::ApiGateway::Method
 Properties:
   [ApiKeyRequired](#cfn-apigateway-method-apikeyrequired): Boolean
   [AuthorizationType](#cfn-apigateway-method-authorizationtype): String
@@ -165,7 +165,7 @@ The following example creates a mock GET method for the `MyApi` API\.
 
 ```
 MockMethod: 
-  Type: "AWS::ApiGateway::Method"
+  Type: AWS::ApiGateway::Method
   Properties: 
     RestApiId: 
       Ref: "MyApi"

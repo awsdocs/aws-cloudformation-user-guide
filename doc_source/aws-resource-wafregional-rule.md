@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-wafregional-rule-syntax.yaml"></a>
 
 ```
-Type: "AWS::WAFRegional::Rule"
+Type: AWS::WAFRegional::Rule
 Properties: 
   [MetricName](#cfn-wafregional-rule-metricname): String
   [Name](#cfn-wafregional-rule-name): String
@@ -95,7 +95,7 @@ The following example associates the `MyIPSetBlacklist` `IPSet` object with a we
 
 ```
 MyIPSetRule: 
-  Type: "AWS::WAFRegional::Rule"
+  Type: AWS::WAFRegional::Rule
   Properties: 
     Name: "MyIPSetRule"
     MetricName: "MyIPSetRule"

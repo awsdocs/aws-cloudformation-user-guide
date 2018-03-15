@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-lambda-eventsourcemapping-syntax.yaml"></a>
 
 ```
-Type: "AWS::Lambda::EventSourceMapping"
+Type: AWS::Lambda::EventSourceMapping
 Properties: 
   [BatchSize](#cfn-lambda-eventsourcemapping-batchsize): Integer
   [Enabled](#cfn-lambda-eventsourcemapping-enabled): Boolean
@@ -100,7 +100,7 @@ The following example associates an Kinesis stream with a Lambda function\.
 
 ```
 EventSourceMapping: 
-  Type: "AWS::Lambda::EventSourceMapping"
+  Type: AWS::Lambda::EventSourceMapping
   Properties: 
     EventSourceArn: 
       Fn::Join: 

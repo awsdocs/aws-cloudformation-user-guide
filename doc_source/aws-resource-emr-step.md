@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-emr-step-syntax.yaml"></a>
 
 ```
-Type: "AWS::EMR::Step"
+Type: AWS::EMR::Step
 Properties: 
   [ActionOnFailure](#cfn-emr-step-actiononfailure): String
   [HadoopJarStep](#cfn-emr-step-hadoopjarstep):
@@ -111,7 +111,7 @@ The following example creates a step that submits work to the `TestCluster` clus
 
 ```
 TestStep: 
-  Type: "AWS::EMR::Step"
+  Type: AWS::EMR::Step
   Properties: 
     ActionOnFailure: "CONTINUE"
     HadoopJarStep: 

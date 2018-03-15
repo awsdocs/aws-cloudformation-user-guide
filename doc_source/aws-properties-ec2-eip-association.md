@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-eipassociation-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::EIPAssociation"
+Type: AWS::EC2::EIPAssociation
 Properties:
   [AllocationId](#cfn-ec2-eipassociation-allocationid): String
   [EIP](#cfn-ec2-eipassociation-eip): String

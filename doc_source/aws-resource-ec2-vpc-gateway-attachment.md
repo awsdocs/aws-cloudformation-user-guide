@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-vpcgatewayattachment-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::VPCGatewayAttachment"
+Type: AWS::EC2::VPCGatewayAttachment
 Properties: 
   [InternetGatewayId](#cfn-ec2-vpcgatewayattachment-internetgatewayid): String
   [VpcId](#cfn-ec2-vpcgatewayattachment-vpcid): String

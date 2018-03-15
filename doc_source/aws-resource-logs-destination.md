@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-logs-destination-syntax.yaml"></a>
 
 ```
-Type: "AWS::Logs::Destination"
+Type: AWS::Logs::Destination
 Properties: 
   [DestinationName](#cfn-logs-destination-destinationname): String
   [DestinationPolicy](#cfn-logs-destination-destinationpolicy): String
@@ -103,7 +103,7 @@ In the following example, the target stream \(`TestStream`\) can receive log eve
 
 ```
 DestinationWithName: 
-  Type: "AWS::Logs::Destination"
+  Type: AWS::Logs::Destination
   Properties: 
     DestinationName: "TestDestination"
     RoleArn: "arn:aws:iam::123456789012:role/LogKinesisRole"

@@ -44,7 +44,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-applicationautoscaling-scalabletarget-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApplicationAutoScaling::ScalableTarget"
+Type: AWS::ApplicationAutoScaling::ScalableTarget
 Properties:
   [MaxCapacity](#cfn-applicationautoscaling-scalabletarget-maxcapacity): Integer
   [MinCapacity](#cfn-applicationautoscaling-scalabletarget-mincapacity): Integer
@@ -351,7 +351,7 @@ This example sets up Application Auto Scaling for an `AWS::DynamoDB::Table` reso
 ```
 Resources:
   DDBTable:
-    Type: "AWS::DynamoDB::Table"
+    Type: AWS::DynamoDB::Table
     Properties:
       AttributeDefinitions:
         -
@@ -386,7 +386,7 @@ Resources:
         ReadCapacityUnits: 5
         WriteCapacityUnits: 5
   WriteCapacityScalableTarget:
-    Type: "AWS::ApplicationAutoScaling::ScalableTarget"
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
     Properties:
       MaxCapacity: 15
       MinCapacity: 5
@@ -398,7 +398,7 @@ Resources:
       ScalableDimension: dynamodb:table:WriteCapacityUnits
       ServiceNamespace: dynamodb
   ScalingRole:
-    Type: "AWS::IAM::Role"
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
@@ -429,7 +429,7 @@ Resources:
                   - "cloudwatch:DeleteAlarms"
                 Resource: "*"
   WriteScalingPolicy:
-    Type: "AWS::ApplicationAutoScaling::ScalingPolicy"
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
     Properties:
       PolicyName: WriteAutoScalingPolicy
       PolicyType: TargetTrackingScaling

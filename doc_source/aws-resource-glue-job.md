@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-glue-job-syntax.yaml"></a>
 
 ```
-Type: "AWS::Glue::Job"
+Type: AWS::Glue::Job
 Properties:
   [Role](#cfn-glue-job-role): String
   [DefaultArguments](#cfn-glue-job-defaultarguments): JSON object

@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ecs-taskdefinition-syntax.yaml"></a>
 
 ```
-Type: "AWS::ECS::TaskDefinition"
+Type: AWS::ECS::TaskDefinition
 Properties: 
   [Volumes](#cfn-ecs-taskdefinition-volumes):
     - Volume Definition
@@ -225,7 +225,7 @@ The following example defines an Amazon ECS task definition, which includes two 
 
 ```
 taskdefinition: 
-  Type: "AWS::ECS::TaskDefinition"
+  Type: AWS::ECS::TaskDefinition
   Properties: 
     ContainerDefinitions: 
       - 
@@ -347,7 +347,7 @@ The following example defines an Amazon ECS task definition that specifies `EC2`
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   taskdefinition: 
-    Type: "AWS::ECS::TaskDefinition"
+    Type: AWS::ECS::TaskDefinition
     Properties: 
       RequiresCompatibilities:
         - "EC2"

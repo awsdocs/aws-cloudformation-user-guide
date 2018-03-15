@@ -45,7 +45,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-config-deliverychannel-syntax.yaml"></a>
 
 ```
-Type: "AWS::Config::DeliveryChannel"
+Type: AWS::Config::DeliveryChannel
 Properties:
   [ConfigSnapshotDeliveryProperties](#cfn-config-deliverychannel-configsnapshotdeliveryproperties):
     Config snapshot delivery properties
@@ -118,7 +118,7 @@ The following example creates a delivery channel that sends notifications to the
 
 ```
 DeliveryChannel: 
-  Type: "AWS::Config::DeliveryChannel"
+  Type: AWS::Config::DeliveryChannel
   Properties: 
     ConfigSnapshotDeliveryProperties: 
       DeliveryFrequency: "Six_Hours"

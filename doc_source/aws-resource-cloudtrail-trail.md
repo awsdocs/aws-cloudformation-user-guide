@@ -38,7 +38,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cloudtrail-trail-syntax.yaml"></a>
 
 ```
-Type: "AWS::CloudTrail::Trail"
+Type: AWS::CloudTrail::Trail
 Properties:
   [CloudWatchLogsLogGroupArn](#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn): String
   [CloudWatchLogsRoleArn](#cfn-cloudtrail-trail-cloudwatchlogsrolearn): String
@@ -263,10 +263,10 @@ For more information about the regions that CloudTrail supports, see [Supported 
   Resources: 
     S3Bucket: 
       DeletionPolicy: Retain
-      Type: "AWS::S3::Bucket"
+      Type: AWS::S3::Bucket
       Properties: {}
     BucketPolicy: 
-      Type: "AWS::S3::BucketPolicy"
+      Type: AWS::S3::BucketPolicy
       Properties: 
         Bucket: 
           Ref: S3Bucket
@@ -295,7 +295,7 @@ For more information about the regions that CloudTrail supports, see [Supported 
                 StringEquals:
                   s3:x-amz-acl: "bucket-owner-full-control"
     Topic: 
-      Type: "AWS::SNS::Topic"
+      Type: AWS::SNS::Topic
       Properties: 
         Subscription: 
           - 
@@ -303,7 +303,7 @@ For more information about the regions that CloudTrail supports, see [Supported 
               Ref: OperatorEmail
             Protocol: email
     TopicPolicy: 
-      Type: "AWS::SNS::TopicPolicy"
+      Type: AWS::SNS::TopicPolicy
       Properties: 
         Topics: 
           - Ref: "Topic"
@@ -321,7 +321,7 @@ For more information about the regions that CloudTrail supports, see [Supported 
       DependsOn: 
         - BucketPolicy
         - TopicPolicy
-      Type: "AWS::CloudTrail::Trail"
+      Type: AWS::CloudTrail::Trail
       Properties: 
         S3BucketName: 
           Ref: S3Bucket

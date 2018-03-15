@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-config-configrule-syntax.yaml"></a>
 
 ```
-Type: "AWS::Config::ConfigRule"
+Type: AWS::Config::ConfigRule
 Properties:
   [ConfigRuleName](#cfn-config-configrule-configrulename): String
   [Description](#cfn-config-configrule-description): String
@@ -134,7 +134,7 @@ The following example uses an AWS managed rule that checks whether EC2 volumes r
 
 ```
 ConfigRuleForVolumeTags: 
-  Type: "AWS::Config::ConfigRule"
+  Type: AWS::Config::ConfigRule
   Properties: 
     InputParameters: 
       tag1Key: CostCenter
@@ -235,7 +235,7 @@ The following example creates a custom configuration rule that uses a Lambda fun
 
 ```
 ConfigPermissionToCallLambda: 
-  Type: "AWS::Lambda::Permission"
+  Type: AWS::Lambda::Permission
   Properties: 
     FunctionName: 
       Fn::GetAtt: 
@@ -244,7 +244,7 @@ ConfigPermissionToCallLambda:
     Action: "lambda:InvokeFunction"
     Principal: "config.amazonaws.com"
 VolumeAutoEnableIOComplianceCheck: 
-  Type: "AWS::Lambda::Function"
+  Type: AWS::Lambda::Function
   Properties: 
     Code: 
       ZipFile: 
@@ -289,7 +289,7 @@ VolumeAutoEnableIOComplianceCheck:
         - LambdaExecutionRole
         - Arn
 ConfigRuleForVolumeAutoEnableIO: 
-  Type: "AWS::Config::ConfigRule"
+  Type: AWS::Config::ConfigRule
   Properties: 
     ConfigRuleName: ConfigRuleForVolumeAutoEnableIO
     Scope: 

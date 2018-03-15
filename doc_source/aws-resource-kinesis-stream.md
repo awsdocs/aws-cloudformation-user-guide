@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-kinesis-stream-syntax.yaml"></a>
 
 ```
-Type: "AWS::Kinesis::Stream"
+Type: AWS::Kinesis::Stream
 Properties: 
   [Name](#cfn-kinesis-stream-name): String
   [RetentionPeriodHours](#cfn-kinesis-stream-retentionperiodhours): Integer

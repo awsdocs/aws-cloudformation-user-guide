@@ -51,7 +51,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-dynamodb-table-syntax.yaml"></a>
 
 ```
-Type: "AWS::DynamoDB::Table"
+Type: AWS::DynamoDB::Table
 Properties:
   [AttributeDefinitions](#cfn-dynamodb-table-attributedef):
     - AttributeDefinition
@@ -296,7 +296,7 @@ For querying the sales of an album, the local secondary index uses the same hash
 AWSTemplateFormatVersion: "2010-09-09"
 Resources: 
   myDynamoDBTable: 
-    Type: "AWS::DynamoDB::Table"
+    Type: AWS::DynamoDB::Table
     Properties: 
       AttributeDefinitions: 
         - 
@@ -445,7 +445,7 @@ The following sample assumes that the `myFirstDDBTable` table is declared in the
 
 ```
 mySecondDDBTable: 
-  Type: "AWS::DynamoDB::Table"
+  Type: AWS::DynamoDB::Table
   DependsOn: "myFirstDDBTable"
   Properties: 
     AttributeDefinitions: 
@@ -640,7 +640,7 @@ This example sets up Application Auto Scaling for a `AWS::DynamoDB::Table` resou
 ```
 Resources:
   DDBTable:
-    Type: "AWS::DynamoDB::Table"
+    Type: AWS::DynamoDB::Table
     Properties:
       AttributeDefinitions:
         -
@@ -675,7 +675,7 @@ Resources:
         ReadCapacityUnits: 5
         WriteCapacityUnits: 5
   WriteCapacityScalableTarget:
-    Type: "AWS::ApplicationAutoScaling::ScalableTarget"
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
     Properties:
       MaxCapacity: 15
       MinCapacity: 5
@@ -687,7 +687,7 @@ Resources:
       ScalableDimension: dynamodb:table:WriteCapacityUnits
       ServiceNamespace: dynamodb
   ScalingRole:
-    Type: "AWS::IAM::Role"
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
@@ -718,7 +718,7 @@ Resources:
                   - "cloudwatch:DeleteAlarms"
                 Resource: "*"
   WriteScalingPolicy:
-    Type: "AWS::ApplicationAutoScaling::ScalingPolicy"
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
     Properties:
       PolicyName: WriteAutoScalingPolicy
       PolicyType: TargetTrackingScaling

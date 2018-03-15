@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-egressonlyinternetgateway-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::EgressOnlyInternetGateway"
+Type: AWS::EC2::EgressOnlyInternetGateway
 Properties: 
   [VpcId](#cfn-ec2-egressonlyinternetgateway-vpcid): String
 ```
@@ -74,7 +74,7 @@ The following example creates an egress\-only Internet gateway for the specified
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   myEgressOnlyInternetGateway:
-    Type: "AWS::EC2::EgressOnlyInternetGateway"
+    Type: AWS::EC2::EgressOnlyInternetGateway
     Properties:
       VpcId: vpc-1a2b3c4d
 ```

@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-vpcdhcpoptionsassociation-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::VPCDHCPOptionsAssociation"
+Type: AWS::EC2::VPCDHCPOptionsAssociation
 Properties: 
   [DhcpOptionsId](#cfn-ec2-vpcdhcpoptionsassociation-dhcpoptionsid): String
   [VpcId](#cfn-ec2-vpcdhcpoptionsassociation-vpcid): String

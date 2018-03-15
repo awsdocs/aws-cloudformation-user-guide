@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-rds-dbsecuritygroupingress-syntax.yaml"></a>
 
 ```
-Type: "AWS::RDS::DBSecurityGroupIngress"
+Type: AWS::RDS::DBSecurityGroupIngress
 Properties:  
   [CIDRIP](#cfn-rds-securitygroup-ingress-cidrip): String
   [DBSecurityGroupName](#cfn-rds-securitygroup-ingress-dbsecuritygroupname): String

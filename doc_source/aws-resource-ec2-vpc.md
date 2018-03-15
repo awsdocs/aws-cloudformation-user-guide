@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-vpc-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::VPC"
+Type: AWS::EC2::VPC
 Properties: 
   [CidrBlock](#cfn-aws-ec2-vpc-cidrblock): String
   [EnableDnsSupport](#cfn-aws-ec2-vpc-EnableDnsSupport): Boolean

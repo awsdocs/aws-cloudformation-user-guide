@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-lambda-alias-syntax.yaml"></a>
 
 ```
-Type: "AWS::Lambda::Alias"
+Type: AWS::Lambda::Alias
 Properties:     
   [Description](#cfn-lambda-alias-description): String         
   [FunctionName](#cfn-lambda-alias-functionname): String
@@ -103,7 +103,7 @@ The following example creates an alias named `TestingForMyApp`\. The alias point
 
 ```
 AliasForMyApp: 
-  Type: "AWS::Lambda::Alias"
+  Type: AWS::Lambda::Alias
   Properties: 
     FunctionName: 
       Ref: "MyFunction"

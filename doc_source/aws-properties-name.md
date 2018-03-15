@@ -42,7 +42,7 @@ If you want to use a custom name, specify a name property for that resource in y
 
 ```
 myDynamoDBTable: 
-  Type: "AWS::DynamoDB::Table"
+  Type: AWS::DynamoDB::Table
   Properties: 
     KeySchema: 
       HashKeyElement: 

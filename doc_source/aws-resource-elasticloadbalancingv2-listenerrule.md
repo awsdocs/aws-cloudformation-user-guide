@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticloadbalancingv2-listenerrule-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElasticLoadBalancingV2::ListenerRule"
+Type: AWS::ElasticLoadBalancingV2::ListenerRule
 Properties:
   [Actions](#cfn-elasticloadbalancingv2-listenerrule-actions):
     - [Actions](aws-properties-elasticloadbalancingv2-listenerrule-actions.md)

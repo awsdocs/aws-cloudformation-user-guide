@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-dms-replicationtask-syntax.yaml"></a>
 
 ```
-Type: "AWS::DMS::ReplicationTask"
+Type: AWS::DMS::ReplicationTask
 Properties:
   [CdcStartTime](#cfn-dms-replicationtask-cdcstarttime): Timestamp
   [MigrationType](#cfn-dms-replicationtask-migrationtype): String
@@ -142,7 +142,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   myReplicationTask:
-    Type: "AWS::DMS::ReplicationTask"
+    Type: AWS::DMS::ReplicationTask
     Properties:
       SourceEndpointArn: !Ref SourceEndpoint
       TargetEndpointArn: !Ref TargetEndpoint

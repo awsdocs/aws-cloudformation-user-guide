@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-autoscaling-lifecyclehook-syntax.yaml"></a>
 
 ```
-Type: "AWS::AutoScaling::LifecycleHook"
+Type: AWS::AutoScaling::LifecycleHook
 Properties:
   [AutoScalingGroupName](#cfn-as-lifecyclehook-autoscalinggroupname): String
   [DefaultResult](#cfn-as-lifecyclehook-defaultresult): String
@@ -132,7 +132,7 @@ In the following template snippet, the Auto Scaling pauses instances before comp
 
 ```
 myLifecycleHook: 
-  Type: "AWS::AutoScaling::LifecycleHook"
+  Type: AWS::AutoScaling::LifecycleHook
   Properties: 
     AutoScalingGroupName: 
       Ref: myAutoScalingGroup

@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-sdb-domain-syntax.yaml"></a>
 
 ```
-Type: "AWS::SDB::Domain"
+Type: AWS::SDB::Domain
 Properties: 
   [Description](#cfn-sdb-domain-description): String
 ```

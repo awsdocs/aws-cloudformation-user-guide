@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-codedeploy-application-syntax.yaml"></a>
 
 ```
-Type: "AWS::CodeDeploy::Application"
+Type: AWS::CodeDeploy::Application
 Properties:
   [ApplicationName](#cfn-codedeploy-application-applicationname): String	    
   [ComputePlatform](#cfn-codedeploy-application-computeplatform): String

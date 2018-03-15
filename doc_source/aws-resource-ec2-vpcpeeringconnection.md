@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-vpcpeeringconnection-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::VPCPeeringConnection"
+Type: AWS::EC2::VPCPeeringConnection
 Properties: 
   [PeerVpcId](#cfn-ec2-vpcpeeringconnection-peervpcid): String
   [Tags](#cfn-ec2-vpcpeeringconnection-tags):

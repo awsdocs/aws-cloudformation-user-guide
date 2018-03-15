@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-servicediscovery-service-syntax.yaml"></a>
 
 ```
-Type: "AWS::ServiceDiscovery::Service"
+Type: AWS::ServiceDiscovery::Service
 Properties:
   [Description](#cfn-servicediscovery-service-description): String
   [DnsConfig](#cfn-servicediscovery-service-dnsconfig): 

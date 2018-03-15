@@ -142,7 +142,7 @@ The following template snippet includes two scheduled actions that scale the num
 
 ```
 ScheduledActionUp: 
-  Type: "AWS::AutoScaling::ScheduledAction"
+  Type: AWS::AutoScaling::ScheduledAction
   Properties:
     AutoScalingGroupName: 
       Ref: "WebServerGroup"
@@ -150,7 +150,7 @@ ScheduledActionUp:
     MinSize: 5
     Recurrence: "0 7 * * *"
 ScheduledActionDown: 
-  Type: "AWS::AutoScaling::ScheduledAction"
+  Type: AWS::AutoScaling::ScheduledAction
   Properties:
     AutoScalingGroupName: 
       Ref: "WebServerGroup"

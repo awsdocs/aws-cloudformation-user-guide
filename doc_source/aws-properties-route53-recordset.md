@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-route53-recordset-syntax.yaml"></a>
 
 ```
-Type: "AWS::Route53::RecordSet"
+Type: AWS::Route53::RecordSet
 Properties: 
   [AliasTarget](#cfn-route53-recordset-aliastarget): 
     [*AliasTarget*](aws-properties-route53-aliastarget.md)

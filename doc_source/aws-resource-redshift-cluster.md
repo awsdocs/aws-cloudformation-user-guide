@@ -55,7 +55,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-redshift-cluster-syntax.yaml"></a>
 
 ```
-Type: "AWS::Redshift::Cluster"
+Type: AWS::Redshift::Cluster
 Properties: 
   [AllowVersionUpgrade](#cfn-redshift-cluster-allowversionupgrade): Boolean
   [AutomatedSnapshotRetentionPeriod](#cfn-redshift-cluster-automatedsnapshotretentionperiod): Integer
@@ -327,7 +327,7 @@ The following example describes a single\-node Amazon Redshift cluster\. The mas
 
 ```
 myCluster: 
-  Type: "AWS::Redshift::Cluster"
+  Type: AWS::Redshift::Cluster
   Properties:
     DBName: "mydb"
     MasterUsername: "master"

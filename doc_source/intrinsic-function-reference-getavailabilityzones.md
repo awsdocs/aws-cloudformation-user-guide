@@ -92,7 +92,7 @@ The following example uses `Fn::GetAZs` to specify a subnet's Availability Zone:
 
 ```
 mySubnet: 
-  Type: "AWS::EC2::Subnet"
+  Type: AWS::EC2::Subnet
   Properties: 
     VpcId: 
       !Ref VPC

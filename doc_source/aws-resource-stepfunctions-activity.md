@@ -20,7 +20,7 @@ For information about creating an activity and creating a state machine with an 
 ### YAML<a name="aws-resource-stepfunctions-activity-syntax.yaml"></a>
 
 ```
-Type: "AWS::StepFunctions::Activity"
+Type: AWS::StepFunctions::Activity
 Properties:
   [Name](#cfn-stepfunctions-activity-name): String
 ```
@@ -97,7 +97,7 @@ AWSTemplateFormatVersion: "2010-09-09"
 Description: "A sample template for a Step Functions activity"
 Resources: 
   MyActivity:
-    Type: "AWS::StepFunctions::Activity"
+    Type: AWS::StepFunctions::Activity
     Properties: 
       Name: myActivity
 ```

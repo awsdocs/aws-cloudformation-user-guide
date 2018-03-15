@@ -37,7 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticloadbalancingv2-loadbalancer-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElasticLoadBalancingV2::LoadBalancer"
+Type: AWS::ElasticLoadBalancingV2::LoadBalancer
 Properties:
   [LoadBalancerAttributes](#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes):
     - [LoadBalancerAttributes](aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes.md)

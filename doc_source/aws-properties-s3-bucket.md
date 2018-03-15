@@ -46,7 +46,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-s3-bucket-syntax.yaml"></a>
 
 ```
-Type: "AWS::S3::Bucket"
+Type: AWS::S3::Bucket
 Properties: 
   [AccessControl](#cfn-s3-bucket-accesscontrol): String
   [AccelerateConfiguration](#cfn-s3-bucket-accelerateconfiguration):

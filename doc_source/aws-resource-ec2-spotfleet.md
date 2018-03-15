@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-spotfleet-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::SpotFleet"
+Type: AWS::EC2::SpotFleet
 Properties: 
   [SpotFleetRequestConfigData](#cfn-ec2-spotfleet-spotfleetrequestconfigdata):
     SpotFleetRequestConfigData

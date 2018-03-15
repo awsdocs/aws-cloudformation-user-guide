@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ecr-repository-syntax.yaml"></a>
 
 ```
-Type: "AWS::ECR::Repository"
+Type: AWS::ECR::Repository
 Properties: 
   [LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy):
     [*LifecyclePolicy*](aws-properties-ecr-repository-lifecyclepolicy.md)
@@ -110,7 +110,7 @@ The following example creates a repository named `test-repository`\. Its policy 
 
 ```
 MyRepository: 
-  Type: "AWS::ECR::Repository"
+  Type: AWS::ECR::Repository
   Properties: 
     RepositoryName: "test-repository"
     RepositoryPolicyText: 

@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-codepipeline-pipeline-syntax.yaml"></a>
 
 ```
-Type: "AWS::CodePipeline::Pipeline"
+Type: AWS::CodePipeline::Pipeline
 Properties:
   [ArtifactStore](#cfn-codepipeline-pipeline-artifactstore):
     ArtifactStore
@@ -193,7 +193,7 @@ The following example creates a pipeline with a source, beta, and release stage\
 
 ```
 AppPipeline: 
-  Type: "AWS::CodePipeline::Pipeline"
+  Type: AWS::CodePipeline::Pipeline
   Properties: 
     RoleArn: 
       Ref: CodePipelineServiceRole

@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-routetable-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::RouteTable"
+Type: AWS::EC2::RouteTable
 Properties: 
   [VpcId](#cfn-ec2-routetable-vpcid): String
   [Tags](#cfn-ec2-routetable-tags):

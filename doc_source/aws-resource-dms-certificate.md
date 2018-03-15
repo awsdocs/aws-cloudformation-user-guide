@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-dms-certificate-syntax.yaml"></a>
 
 ```
-Type: "AWS::DMS::Certificate"
+Type: AWS::DMS::Certificate
 Properties:
   [CertificateIdentifier](#cfn-dms-certificate-certificateidentifier): String
   [CertificatePem](#cfn-dms-certificate-certificatepem): String

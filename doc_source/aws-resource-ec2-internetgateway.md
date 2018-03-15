@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-internetgateway-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::InternetGateway"
+Type: AWS::EC2::InternetGateway
 Properties: 
   [Tags](#cfn-ec2-internetgateway-tags):
     - Resource Tag
@@ -73,7 +73,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 AWSTemplateFormatVersion: '2010-09-09'
 Resources:
   myInternetGateway:
-    Type: "AWS::EC2::InternetGateway"
+    Type: AWS::EC2::InternetGateway
     Properties:
       Tags:
       - Key: foo

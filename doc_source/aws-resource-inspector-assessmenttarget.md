@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-inspector-assessmenttarget-syntax.yaml"></a>
 
 ```
-Type: "AWS::Inspector::AssessmentTarget"
+Type: AWS::Inspector::AssessmentTarget
 Properties:
   [AssessmentTargetName](#cfn-inspector-assessmenttarget-assessmenttargetname): String
   [ResourceGroupArn](#cfn-inspector-assessmenttarget-resourcegrouparn): String
@@ -80,7 +80,7 @@ The following example shows how to declare an AWS::Inspector::AssessmentTarget r
 
 ```
 myassessmenttarget: 
-  Type: "AWS::Inspector::AssessmentTarget"
+  Type: AWS::Inspector::AssessmentTarget
   Properties: 
     AssessmentTargetName : "MyAssessmentTarget"
     ResourceGroupArn : "arn:aws:inspector:us-west-2:123456789012:resourcegroup/0-AB6DMKnv"

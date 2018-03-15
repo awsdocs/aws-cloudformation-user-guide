@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-datapipeline-pipeline-syntax.yaml"></a>
 
 ```
-Type: "AWS::DataPipeline::Pipeline"
+Type: AWS::DataPipeline::Pipeline
 Properties:
   [Activate](#cfn-datapipeline-pipeline-activate): Boolean
   [Description](#cfn-datapipeline-pipeline-description): String
@@ -337,7 +337,7 @@ The following data pipeline backs up data from an Amazon DynamoDB \(DynamoDB\) t
 
 ```
 DynamoDBInputS3OutputHive: 
-  Type: "AWS::DataPipeline::Pipeline"
+  Type: AWS::DataPipeline::Pipeline
   Properties: 
     Name: DynamoDBInputS3OutputHive
     Description: "Pipeline to backup DynamoDB data to S3"

@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-glue-partition-syntax.yaml"></a>
 
 ```
-Type: "AWS::Glue::Partition"
+Type: AWS::Glue::Partition
 Properties:
   [TableName](#cfn-glue-partition-tablename): String
   [DatabaseName](#cfn-glue-partition-databasename): String

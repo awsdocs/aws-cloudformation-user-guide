@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cognito-userpoolclient-syntax.yaml"></a>
 
 ```
-Type: "AWS::Cognito::UserPoolClient"
+Type: AWS::Cognito::UserPoolClient
 Properties:
     [ClientName](#cfn-cognito-userpoolclient-clientname): String,
     [ExplicitAuthFlows](#cfn-cognito-userpoolclient-explicitauthflows): 

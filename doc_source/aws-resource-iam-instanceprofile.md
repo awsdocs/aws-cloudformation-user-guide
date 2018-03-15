@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-iam-instanceprofile-syntax.yaml"></a>
 
 ```
-Type: "AWS::IAM::InstanceProfile"
+Type: AWS::IAM::InstanceProfile
 Properties: 
   [Path](#cfn-iam-instanceprofile-path): String
   [Roles](#cfn-iam-instanceprofile-roles):

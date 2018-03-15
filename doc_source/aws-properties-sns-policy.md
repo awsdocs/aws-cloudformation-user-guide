@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-sns-policy-syntax.yaml"></a>
 
 ```
-Type: "AWS::SNS::TopicPolicy"
+Type: AWS::SNS::TopicPolicy
 Properties:
   [PolicyDocument](#cfn-sns-topicpolicy-policydocument): PolicyDocument
   [Topics](#cfn-sns-topicpolicy-topics):

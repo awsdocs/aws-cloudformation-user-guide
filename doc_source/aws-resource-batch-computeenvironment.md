@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-batch-computeenvironment-syntax.yaml"></a>
 
 ```
-Type: "AWS::Batch::ComputeEnvironment"
+Type: AWS::Batch::ComputeEnvironment
 Properties:
   [Type](#cfn-batch-computeenvironment-type): String
   [ServiceRole](#cfn-batch-computeenvironment-servicerole): String

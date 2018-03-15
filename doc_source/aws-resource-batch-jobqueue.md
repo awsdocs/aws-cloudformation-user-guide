@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-batch-jobqueue-syntax.yaml"></a>
 
 ```
-Type: "AWS::Batch::JobQueue"
+Type: AWS::Batch::JobQueue
 Properties:
   [ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder): 
     - [*ComputeEnvironmentOrder*](aws-properties-batch-jobqueue-computeenvironmentorder.md) 

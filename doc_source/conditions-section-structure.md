@@ -182,11 +182,11 @@ Conditions:
   CreateProdResources: !Equals [ !Ref EnvType, prod ]
 Resources: 
   EC2Instance: 
-    Type: "AWS::EC2::Instance"
+    Type: AWS::EC2::Instance
     Properties: 
       ImageId: !FindInMap [RegionMap, !Ref "AWS::Region", AMI]
   MountPoint: 
-    Type: "AWS::EC2::VolumeAttachment"
+    Type: AWS::EC2::VolumeAttachment
     Condition: CreateProdResources
     Properties: 
       InstanceId: 
@@ -195,7 +195,7 @@ Resources:
         !Ref NewVolume
       Device: /dev/sdh
   NewVolume: 
-    Type: "AWS::EC2::Volume"
+    Type: AWS::EC2::Volume
     Condition: CreateProdResources
     Properties: 
       Size: 100

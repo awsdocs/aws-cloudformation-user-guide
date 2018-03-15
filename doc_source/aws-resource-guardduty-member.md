@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-guardduty-member-syntax.yaml"></a>
 
 ```
-Type: "AWS::GuardDuty::Member"
+Type: AWS::GuardDuty::Member
 Properties:
   [Status](#cfn-guardduty-member-status): String
   [MemberId](#cfn-guardduty-member-memberid): String
@@ -104,7 +104,7 @@ The following example shows how to declare an AWS::GuardDuty::Member resource to
 
 ```
 GDmaster:
-  Type: "AWS::GuardDuty::Member"
+  Type: AWS::GuardDuty::Member
   Properties:
     Status: "Invited"    
     MemberId: "012345678901"

@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-networkacl-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::NetworkAcl"
+Type: AWS::EC2::NetworkAcl
 Properties:
   [Tags](#cfn-ec2-networkacl-tags):
     - Resource Tag

@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticache-parametergroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElastiCache::ParameterGroup"
+Type: AWS::ElastiCache::ParameterGroup
 Properties: 
   CacheParameterGroupFamily: String
   Description: String
@@ -95,7 +95,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ```
 MyParameterGroup: 
-  Type: "AWS::ElastiCache::ParameterGroup"
+  Type: AWS::ElastiCache::ParameterGroup
   Properties: 
     Description: "MyNewParameterGroup"
     CacheParameterGroupFamily: "memcached1.4"

@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-certificatemanager-certificate-syntax.yaml"></a>
 
 ```
-Type: "AWS::CertificateManager::Certificate"
+Type: AWS::CertificateManager::Certificate
 Properties: 
   [DomainName](#cfn-certificatemanager-certificate-domainname): String
   [DomainValidationOptions](#cfn-certificatemanager-certificate-domainvalidationoptions):

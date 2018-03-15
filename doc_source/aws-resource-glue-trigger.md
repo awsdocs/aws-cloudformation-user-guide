@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-glue-trigger-syntax.yaml"></a>
 
 ```
-Type: "AWS::Glue::Trigger"
+Type: AWS::Glue::Trigger
 Properties:
   [Type](#cfn-glue-trigger-type): String
   [Description](#cfn-glue-trigger-description): String

@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-subnet-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::Subnet"
+Type: AWS::EC2::Subnet
 Properties:
   [AssignIpv6AddressOnCreation](#cfn-ec2-subnet-assignipv6addressoncreation): Boolean
   [AvailabilityZone](#cfn-ec2-subnet-availabilityzone): String

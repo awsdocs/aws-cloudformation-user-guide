@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-logs-loggroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::Logs::LogGroup"
+Type: AWS::Logs::LogGroup
 Properties: 
   [LogGroupName](#cfn-cwl-loggroup-loggroupname): String
   [RetentionInDays](#cfn-cwl-loggroup-retentionindays): Integer
@@ -87,7 +87,7 @@ The following example creates a CloudWatch Logs log group that retains events fo
 
 ```
 myLogGroup: 
-  Type: "AWS::Logs::LogGroup"
+  Type: AWS::Logs::LogGroup
   Properties: 
     RetentionInDays: 7
 ```

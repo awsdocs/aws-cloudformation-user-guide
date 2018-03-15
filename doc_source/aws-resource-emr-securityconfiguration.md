@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-emr-securityconfiguration-syntax.yaml"></a>
 
 ```
-Type: "AWS::EMR::SecurityConfiguration"
+Type: AWS::EMR::SecurityConfiguration
 Properties: 
   [Name](#cfn-emr-securityconfiguration-name): String
   [SecurityConfiguration](#cfn-emr-securityconfiguration-securityconfiguration): String

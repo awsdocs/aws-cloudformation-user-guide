@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cloudfront-distribution-syntax.yaml"></a>
 
 ```
-Type: "AWS::CloudFront::Distribution"
+Type: AWS::CloudFront::Distribution
 Properties:
   [DistributionConfig](#cfn-cloudfront-distribution-distributionconfig): 
     [*DistributionConfig*](aws-properties-cloudfront-distributionconfig.md)

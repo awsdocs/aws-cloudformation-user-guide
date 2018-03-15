@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-syntax.yaml"></a>
 
 ```
-Type: "AWS::CloudFront::CloudFrontOriginAccessIdentity"
+Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
 Properties:
   [CloudFrontOriginAccessIdentityConfig](#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig): CloudFrontOriginAccessIdentityConfig
 ```

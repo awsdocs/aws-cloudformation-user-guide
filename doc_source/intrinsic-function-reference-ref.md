@@ -65,7 +65,7 @@ The following resource declaration for an Elastic IP address needs the instance 
 
 ```
 MyEIP:
-  Type: "AWS::EC2::EIP"
+  Type: AWS::EC2::EIP
   Properties:
     InstanceId: !Ref MyEC2Instance
 ```

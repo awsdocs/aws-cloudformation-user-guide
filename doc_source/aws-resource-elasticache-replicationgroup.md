@@ -55,7 +55,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticache-replicationgroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElastiCache::ReplicationGroup"
+Type: AWS::ElastiCache::ReplicationGroup
 Properties: 
   [AtRestEncryptionEnabled](#cfn-elasticache-replicationgroup-atrestencryptionenabled): Boolean
   [AuthToken](#cfn-elasticache-replicationgroup-authtoken): String
@@ -449,7 +449,7 @@ The following example declares a replication group with two nodes and automatic 
 
 ```
 myReplicationGroup: 
-  Type: "AWS::ElastiCache::ReplicationGroup"
+  Type: AWS::ElastiCache::ReplicationGroup
   Properties: 
     ReplicationGroupDescription: "my description"
     NumCacheClusters: "2"

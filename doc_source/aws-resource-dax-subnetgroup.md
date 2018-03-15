@@ -22,7 +22,7 @@ For more information, see [http://docs.aws.amazon.com/amazondynamodb/latest/APIR
 ### YAML<a name="aws-resource-dax-subnetgroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::DAX::SubnetGroup"
+Type: AWS::DAX::SubnetGroup
 Properties:
       [SubnetGroupName](#cfn-dax-subnetgroup-name): String
       [Description](#cfn-dax-subnetgroup-description): String

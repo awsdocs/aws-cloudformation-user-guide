@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-waf-ipset-syntax.yaml"></a>
 
 ```
-Type: "AWS::WAF::IPSet"
+Type: AWS::WAF::IPSet
 Properties: 
   [IPSetDescriptors](#cfn-waf-ipset-ipsetdescriptors):
     - IPSet descriptor
@@ -91,7 +91,7 @@ The following example defines a set of IP addresses for a web access control lis
 
 ```
 MyIPSetBlacklist: 
-  Type: "AWS::WAF::IPSet"
+  Type: AWS::WAF::IPSet
   Properties: 
     Name: "IPSet for blacklisted IP adresses"
     IPSetDescriptors: 
@@ -130,7 +130,7 @@ The following example associates the `MyIPSetBlacklist` IP Set with a web ACL ru
 
 ```
 MyIPSetRule: 
-  Type: "AWS::WAF::Rule"
+  Type: AWS::WAF::Rule
   Properties: 
     Name: "MyIPSetRule"
     MetricName: "MyIPSetRule"
@@ -174,7 +174,7 @@ The following example associates the `MyIPSetRule` rule with a web ACL\. The web
 
 ```
 MyWebACL: 
-  Type: "AWS::WAF::WebACL"
+  Type: AWS::WAF::WebACL
   Properties: 
     Name: "WebACL to block blacklisted IP addresses"
     DefaultAction: 

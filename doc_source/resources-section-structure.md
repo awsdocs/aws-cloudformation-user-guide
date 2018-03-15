@@ -59,7 +59,7 @@ Resource properties are additional options that you can specify for a resource\.
 ```
 Resources:
   MyEC2Instance:
-    Type: "AWS::EC2::Instance"
+    Type: AWS::EC2::Instance
     Properties:
       ImageId: "ami-2f726546"
 ```
@@ -133,7 +133,7 @@ The following example shows a resource declaration\. It defines two resources\. 
 ```
 Resources: 
   MyInstance: 
-    Type: "AWS::EC2::Instance"
+    Type: AWS::EC2::Instance
     Properties: 
       UserData: 
         "Fn::Base64":
@@ -142,6 +142,6 @@ Resources:
       AvailabilityZone: "us-east-1a"
       ImageId: "ami-20b65349"
   MyQueue: 
-    Type: "AWS::SQS::Queue"
+    Type: AWS::SQS::Queue
     Properties: {}
 ```

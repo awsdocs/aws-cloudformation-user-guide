@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-dms-replicationsubnetgroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::DMS::ReplicationSubnetGroup"
+Type: AWS::DMS::ReplicationSubnetGroup
 Properties: 
   [ReplicationSubnetGroupIdentifier](#cfn-dms-replicationsubnetgroup-replicationsubnetgroupidentifier): String
   [ReplicationSubnetGroupDescription](#cfn-dms-replicationsubnetgroup-replicationsubnetgroupdescription): String
@@ -104,7 +104,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 AWSTemplateFormatVersion: 2010-09-09
 Resources: 
   myReplicationSubnetGroup: 
-    Type: "AWS::DMS::ReplicationSubnetGroup"
+    Type: AWS::DMS::ReplicationSubnetGroup
     Properties: 
       ReplicationSubnetGroupIdentifier: "identifier"
       ReplicationSubnetGroupDescription: "description"

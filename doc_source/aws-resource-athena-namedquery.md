@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-athena-namedquery-syntax.yaml"></a>
 
 ```
-Type: "AWS::Athena::NamedQuery"
+Type: AWS::Athena::NamedQuery
 Properties:
   [Description](#cfn-athena-namedquery-description): String
   [QueryString](#cfn-athena-namedquery-querystring): String

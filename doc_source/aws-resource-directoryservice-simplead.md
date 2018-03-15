@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-directoryservice-simplead-syntax.yaml"></a>
 
 ```
-Type: "AWS::DirectoryService::SimpleAD"
+Type: AWS::DirectoryService::SimpleAD
 Properties:
   [CreateAlias](#cfn-directoryservice-simplead-createalias): Boolean
   [Description](#cfn-directoryservice-simplead-description): String
@@ -147,7 +147,7 @@ The following example creates a Simple AD directory, where the directory DNS nam
 
 ```
 myDirectory: 
-  Type: "AWS::DirectoryService::SimpleAD"
+  Type: AWS::DirectoryService::SimpleAD
   Properties: 
     Name: "corp.example.com"
     Password: 

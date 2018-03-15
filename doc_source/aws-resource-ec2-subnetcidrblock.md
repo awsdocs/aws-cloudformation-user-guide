@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-subnetcidrblock-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::SubnetCidrBlock"
+Type: AWS::EC2::SubnetCidrBlock
 Properties: 
   [Ipv6CidrBlock](#cfn-ec2-subnetcidrblock-ipv6cidrblock): String
   [SubnetId](#cfn-ec2-subnetcidrblock-subnetid): String
@@ -68,7 +68,7 @@ The following example associates an IPv6 CIDR block \(with a prefix length of /6
 
 ```
 Ipv6TestSubnetCidrBlock:
-  Type: "AWS::EC2::SubnetCidrBlock"
+  Type: AWS::EC2::SubnetCidrBlock
   Properties:
     Ipv6CidrBlock: !Ref Ipv6SubnetCidrBlock
     SubnetId: !Ref Ipv6TestSubnet

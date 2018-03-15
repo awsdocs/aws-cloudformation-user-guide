@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cognito-identitypoolroleattachment-syntax.yaml"></a>
 
 ```
-Type: "AWS::Cognito::IdentityPoolRoleAttachment"
+Type: AWS::Cognito::IdentityPoolRoleAttachment
 Properties:
   [IdentityPoolId](#cfn-cognito-identitypoolroleattachment-identitypoolid): String
   [RoleMappings](#cfn-cognito-identitypoolroleattachment-rolemappings): 

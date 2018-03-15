@@ -57,7 +57,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-volume-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::Volume"
+Type: AWS::EC2::Volume
 Properties:
   [AutoEnableIO](#cfn-ec2-ebs-volume-autoenableio): Boolean
   [AvailabilityZone](#cfn-ec2-ebs-volume-availabilityzone): String

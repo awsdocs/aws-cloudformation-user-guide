@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-events-rule-syntax.yaml"></a>
 
 ```
-Type: "AWS::Events::Rule"
+Type: AWS::Events::Rule
 Properties: 
   [Description](#cfn-events-rule-description): String
   [EventPattern](#cfn-events-rule-eventpattern): JSON object
@@ -135,7 +135,7 @@ The following example creates a rule that invokes the specified Lambda function 
 
 ```
 ScheduledRule: 
-  Type: "AWS::Events::Rule"
+  Type: AWS::Events::Rule
   Properties: 
     Description: "ScheduledRule"
     ScheduleExpression: "rate(10 minutes)"
@@ -148,7 +148,7 @@ ScheduledRule:
             - "Arn"
         Id: "TargetFunctionV1"
 PermissionForEventsToInvokeLambda: 
-  Type: "AWS::Lambda::Permission"
+  Type: AWS::Lambda::Permission
   Properties: 
     FunctionName: 
       Ref: "LambdaFunction"
@@ -206,7 +206,7 @@ The following example creates a rule that invokes the specified Lambda function 
 
 ```
 EventRule: 
-  Type: "AWS::Events::Rule"
+  Type: AWS::Events::Rule
   Properties: 
     Description: "EventRule"
     EventPattern: 
@@ -226,7 +226,7 @@ EventRule:
             - "Arn"
         Id: "TargetFunctionV1"
 PermissionForEventsToInvokeLambda: 
-  Type: "AWS::Lambda::Permission"
+  Type: AWS::Lambda::Permission
   Properties: 
     FunctionName: 
       Ref: "LambdaFunction"
@@ -272,7 +272,7 @@ The following example creates a rule that notifies an Amazon Simple Notification
 
 ```
 OpsEventRule: 
-  Type: "AWS::Events::Rule"
+  Type: AWS::Events::Rule
   Properties: 
     Description: "EventRule"
     EventPattern: 

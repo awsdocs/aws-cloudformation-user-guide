@@ -44,7 +44,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-opsworks-layer-syntax.yaml"></a>
 
 ```
-Type: "AWS::OpsWorks::Layer"
+Type: AWS::OpsWorks::Layer
 Properties:
   [Attributes](#cfn-opsworks-layer-attributes):
     String:String
@@ -229,7 +229,7 @@ The following snippet creates an AWS OpsWorks PHP layer that is associated with 
 
 ```
 myLayer: 
-  Type: "AWS::OpsWorks::Layer"
+  Type: AWS::OpsWorks::Layer
   DependsOn: "myApp"
   Properties: 
     StackId: 
@@ -287,7 +287,7 @@ The following snippet creates a load\-based automatic scaling AWS OpsWorks PHP l
 
 ```
 myLayer: 
-  Type: "AWS::OpsWorks::Layer"
+  Type: AWS::OpsWorks::Layer
   DependsOn: "myApp"
   Properties: 
     StackId: 

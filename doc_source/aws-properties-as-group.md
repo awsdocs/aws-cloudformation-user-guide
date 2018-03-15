@@ -47,7 +47,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-autoscaling-autoscalinggroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::AutoScaling::AutoScalingGroup"
+Type: AWS::AutoScaling::AutoScalingGroup
 Properties:
   [AutoScalingGroupName](#cfn-autoscaling-autoscalinggroup-autoscalinggroupname): String
   [AvailabilityZones](#cfn-as-group-availabilityzones):
@@ -251,7 +251,7 @@ To view more Auto Scaling examples, see [Auto Scaling Template Snippets](quickre
 
 ```
 WebServerGroup: 
-  Type: "AWS::AutoScaling::AutoScalingGroup"
+  Type: AWS::AutoScaling::AutoScalingGroup
   Properties: 
     AvailabilityZones: 
       Fn::GetAZs: ""
@@ -328,7 +328,7 @@ ASG1:
       MaxBatchSize: "1"
       PauseTime: "PT12M5S"
       WaitOnResourceSignals: "true"
-  Type: "AWS::AutoScaling::AutoScalingGroup"
+  Type: AWS::AutoScaling::AutoScalingGroup
   Properties: 
     AvailabilityZones: 
       Fn::GetAZs: 

@@ -40,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cloudformation-stack-syntax.yaml"></a>
 
 ```
-Type: "AWS::CloudFormation::Stack"
+Type: AWS::CloudFormation::Stack
 Properties:
   [NotificationARNs](#cfn-cloudformation-stack-notificationarns):
     - String

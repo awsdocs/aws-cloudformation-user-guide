@@ -76,7 +76,7 @@ The `BucketName` is unique and the `Value` contains a file extension without a p
 
 ```
 EncryptionServiceBucket:
-  Type: "AWS::S3::Bucket"
+  Type: AWS::S3::Bucket
   Properties:
     BucketName: !Sub ${User}-encryption-service
     NotificationConfiguration:

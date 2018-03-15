@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-efs-mounttarget-syntax.yaml"></a>
 
 ```
-Type: "AWS::EFS::MountTarget"
+Type: AWS::EFS::MountTarget
 Properties:
   [FileSystemId](#cfn-efs-mounttarget-filesystemid): String
   [IpAddress](#cfn-efs-mounttarget-ipaddress): String
@@ -103,7 +103,7 @@ The following example declares a mount target that is associated with a file sys
 
 ```
 MountTarget: 
-  Type: "AWS::EFS::MountTarget"
+  Type: AWS::EFS::MountTarget
   Properties: 
     FileSystemId: 
       Ref: "FileSystem"

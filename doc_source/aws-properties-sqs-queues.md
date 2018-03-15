@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-sqs-queues-syntax.yaml"></a>
 
 ```
-Type: "AWS::SQS::Queue"
+Type: AWS::SQS::Queue
 Properties:
   [ContentBasedDeduplication](#cfn-sqs-queue-contentbaseddeduplication): Boolean
   [DelaySeconds](#aws-sqs-queue-delayseconds): Integer
@@ -236,11 +236,11 @@ Parameters:
     Type: "String"
 Resources: 
   MyQueue: 
-    Type: "AWS::SQS::Queue"
+    Type: AWS::SQS::Queue
     Properties: 
       QueueName: "SampleQueue"
   AlarmTopic: 
-    Type: "AWS::SNS::Topic"
+    Type: AWS::SNS::Topic
     Properties: 
       Subscription: 
         - 
@@ -248,7 +248,7 @@ Resources:
             Ref: "AlarmEmail"
           Protocol: "email"
   QueueDepthAlarm: 
-    Type: "AWS::CloudWatch::Alarm"
+    Type: AWS::CloudWatch::Alarm
     Properties: 
       AlarmDescription: "Alarm if queue depth grows beyond 10 messages"
       Namespace: "AWS/SQS"
@@ -342,7 +342,7 @@ The following sample creates a source queue and a dead letter queue\. Because th
 AWSTemplateFormatVersion: "2010-09-09"
 Resources: 
   MySourceQueue: 
-    Type: "AWS::SQS::Queue"
+    Type: AWS::SQS::Queue
     Properties: 
       RedrivePolicy: 
         deadLetterTargetArn: 
@@ -351,7 +351,7 @@ Resources:
             - "Arn"
         maxReceiveCount: 5
   MyDeadLetterQueue: 
-    Type: "AWS::SQS::Queue"
+    Type: AWS::SQS::Queue
 Outputs: 
   SourceQueueURL: 
     Description: "URL of the source queue"

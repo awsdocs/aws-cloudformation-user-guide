@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticache-securitygroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElastiCache::SecurityGroup"
+Type: AWS::ElastiCache::SecurityGroup
 Properties:
   [Description](#cfn-elasticache-securitygroup-description): String
 ```

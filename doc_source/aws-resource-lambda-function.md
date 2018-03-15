@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-lambda-function-syntax.yaml"></a>
 
 ```
-Type: "AWS::Lambda::Function"
+Type: AWS::Lambda::Function
 Properties: 
   [Code](#cfn-lambda-function-code):
     Code
@@ -215,7 +215,7 @@ The following example uses a packaged file in an S3 bucket to create a Lambda fu
 
 ```
 AMIIDLookup: 
-  Type: "AWS::Lambda::Function"
+  Type: AWS::Lambda::Function
   Properties: 
     Handler: "index.handler"
     Role: 

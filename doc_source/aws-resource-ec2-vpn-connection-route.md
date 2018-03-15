@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-vpnconnectionroute-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::VPNConnectionRoute"
+Type: AWS::EC2::VPNConnectionRoute
 Properties: 
   [DestinationCidrBlock](#cfn-ec2-vpnconnectionroute-cidrblock): String
   [VpnConnectionId](#cfn-ec2-vpnconnectionroute-connectionid): String
@@ -74,7 +74,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ```
 MyConnectionRoute0: 
-  Type: "AWS::EC2::VPNConnectionRoute"
+  Type: AWS::EC2::VPNConnectionRoute
   Properties: 
     DestinationCidrBlock: 10.0.0.0/16
     VpnConnectionId: 

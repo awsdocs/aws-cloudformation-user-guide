@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-redshift-clusterparametergroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::Redshift::ClusterParameterGroup"
+Type: AWS::Redshift::ClusterParameterGroup
 Properties: 
   [Description](#cfn-redshift-clusterparametergroup-description): String
   [ParameterGroupFamily](#cfn-redshift-clusterparametergroup-parametergroupfamily): String
@@ -105,7 +105,7 @@ The following example describes a parameter group with one parameter that is spe
 
 ```
 myClusterParameterGroup: 
-  Type: "AWS::Redshift::ClusterParameterGroup"
+  Type: AWS::Redshift::ClusterParameterGroup
   Properties: 
     Description: "My parameter group"
     ParameterGroupFamily: "redshift-1.0"
@@ -145,7 +145,7 @@ The following example modifies the workload management configuration using the `
 
 ```
 RedshiftClusterParameterGroup: 
-  Type: "AWS::Redshift::ClusterParameterGroup"
+  Type: AWS::Redshift::ClusterParameterGroup
   Properties: 
     Description: "Cluster parameter group"
     ParameterGroupFamily: "redshift-1.0"

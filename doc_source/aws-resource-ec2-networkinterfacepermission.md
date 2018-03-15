@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-networkinterfacepermission-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::NetworkInterfacePermission"
+Type: AWS::EC2::NetworkInterfacePermission
 Properties:
   [AwsAccountId](#cfn-ec2-networkinterfacepermission-awsaccountid): String
   [NetworkInterfaceId](#cfn-ec2-networkinterfacepermission-networkinterfaceid): String

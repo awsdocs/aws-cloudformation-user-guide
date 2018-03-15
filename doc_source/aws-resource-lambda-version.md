@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-lambda-version-syntax.yaml"></a>
 
 ```
-Type: "AWS::Lambda::Version"
+Type: AWS::Lambda::Version
 Properties:     
   [CodeSha256](#cfn-lambda-version-codesha256) : String
   [Description](#cfn-lambda-version-description) : String         
@@ -92,7 +92,7 @@ The following example publishes a new version of the `MyFunction` Lambda functio
 
 ```
 TestingNewFeature: 
-  Type: "AWS::Lambda::Version"
+  Type: AWS::Lambda::Version
   Properties: 
     FunctionName: 
       Ref: "MyFunction"

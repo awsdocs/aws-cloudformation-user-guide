@@ -37,7 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-securitygroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::SecurityGroup"
+Type: AWS::EC2::SecurityGroup
 Properties: 
   [GroupName](#cfn-ec2-securitygroup-groupname): String
   [GroupDescription](#cfn-ec2-securitygroup-groupdescription): String

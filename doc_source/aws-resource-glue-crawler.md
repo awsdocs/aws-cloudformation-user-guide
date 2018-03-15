@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-glue-crawler-syntax.yaml"></a>
 
 ```
-Type: "AWS::Glue::Crawler"
+Type: AWS::Glue::Crawler
 Properties:
   [Role](#cfn-glue-crawler-role): String
   [Classifiers](#cfn-glue-crawler-classifiers): 

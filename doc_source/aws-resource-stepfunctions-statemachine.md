@@ -22,7 +22,7 @@ For information about creating state machines, see [Tutorial: A Lambda State Mac
 ### YAML<a name="aws-resource-stepfunctions-statemachine-syntax-yaml"></a>
 
 ```
-Type: "AWS::StepFunctions::StateMachine"
+Type: AWS::StepFunctions::StateMachine
 Properties:
   [StateMachineName](#cfn-stepfunctions-statemachine-definitionname): String
   [DefinitionString](#cfn-stepfunctions-statemachine-definitionstring): String

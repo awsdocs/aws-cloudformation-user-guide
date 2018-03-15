@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticloadbalancingv2-targetgroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElasticLoadBalancingV2::TargetGroup"
+Type: AWS::ElasticLoadBalancingV2::TargetGroup
 Properties:
   [HealthCheckIntervalSeconds](#cfn-elasticloadbalancingv2-targetgroup-healthcheckintervalseconds): Integer
   [HealthCheckPath](#cfn-elasticloadbalancingv2-targetgroup-healthcheckpath): String

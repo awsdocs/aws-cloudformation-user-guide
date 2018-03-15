@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-servicediscovery-publicdnsnamespace-syntax.yaml"></a>
 
 ```
-Type: "AWS::ServiceDiscovery::PublicDnsNamespace"
+Type: AWS::ServiceDiscovery::PublicDnsNamespace
 Properties:
   [Description](#cfn-servicediscovery-publicdnsnamespace-description): String
   [Name](#cfn-servicediscovery-publicdnsnamespace-name): String

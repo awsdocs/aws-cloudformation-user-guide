@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-autoscaling-scalingpolicy-syntax.yaml"></a>
 
 ```
-Type: "AWS::AutoScaling::ScalingPolicy"
+Type: AWS::AutoScaling::ScalingPolicy
 Properties:
   [AdjustmentType](#cfn-as-scalingpolicy-adjustmenttype): String
   [AutoScalingGroupName](#cfn-as-scalingpolicy-autoscalinggroupname): String
@@ -151,7 +151,7 @@ The following example is a simple scaling policy that increases the number insta
 
 ```
 SimpleScaling: 
-  Type: "AWS::AutoScaling::ScalingPolicy"
+  Type: AWS::AutoScaling::ScalingPolicy
   Properties: 
     AdjustmentType: "ChangeInCapacity"
     PolicyType: "SimpleScaling"
@@ -195,7 +195,7 @@ The following example is a step scaling policy that increases the number instanc
 
 ```
 StepScaling: 
-  Type: "AWS::AutoScaling::ScalingPolicy"
+  Type: AWS::AutoScaling::ScalingPolicy
   Properties: 
     AdjustmentType: "ChangeInCapacity"
     AutoScalingGroupName: 

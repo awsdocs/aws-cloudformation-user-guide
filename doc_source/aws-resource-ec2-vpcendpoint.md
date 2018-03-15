@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-vpcendpoint-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::VPCEndpoint"
+Type: AWS::EC2::VPCEndpoint
 Properties: 
   [PolicyDocument](#cfn-ec2-vpcendpoint-policydocument): JSON object
   [RouteTableIds](#cfn-ec2-vpcendpoint-routetableids):

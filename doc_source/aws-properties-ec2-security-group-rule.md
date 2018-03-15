@@ -145,7 +145,7 @@ The end of port range for the TCP and UDP protocols, or an ICMP code\. An ICMP c
 
 ```
 InstanceSecurityGroup: 
-  Type: "AWS::EC2::SecurityGroup"
+  Type: AWS::EC2::SecurityGroup
   Properties: 
     GroupDescription: "Enable SSH access via port 22"
     SecurityGroupIngress: 
@@ -180,7 +180,7 @@ InstanceSecurityGroup:
 
 ```
 InstanceSecurityGroup: 
-  Type: "AWS::EC2::SecurityGroup"
+  Type: AWS::EC2::SecurityGroup
   Properties: 
     GroupDescription: "Enable HTTP access on the configured port"
     VpcId: 
@@ -246,7 +246,7 @@ This snippet grants SSH access with CidrIp, and HTTP access with `SourceSecurity
 
 ```
 ElasticLoadBalancer: 
-  Type: "AWS::ElasticLoadBalancing::LoadBalancer"
+  Type: AWS::ElasticLoadBalancing::LoadBalancer
   Properties: 
     AvailabilityZones: 
       Fn::GetAZs: ""
@@ -270,7 +270,7 @@ ElasticLoadBalancer:
       Interval: "30"
       Timeout: "5"
 InstanceSecurityGroup: 
-  Type: "AWS::EC2::SecurityGroup"
+  Type: AWS::EC2::SecurityGroup
   Properties: 
     GroupDescription: "Enable SSH access and HTTP from the load balancer only"
     SecurityGroupIngress: 

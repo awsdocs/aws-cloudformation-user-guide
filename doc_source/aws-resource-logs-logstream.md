@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-logs-logstream-syntax.yaml"></a>
 
 ```
-Type: "AWS::Logs::LogStream"
+Type: AWS::Logs::LogStream
 Properties: 
   [LogGroupName](#cfn-logs-logstream-loggroupname): String
   [LogStreamName](#cfn-logs-logstream-logstreamname): String
@@ -77,7 +77,7 @@ The following example creates a CloudWatch Logs log stream named `MyAppLogStream
 
 ```
 LogStream: 
-  Type: "AWS::Logs::LogStream"
+  Type: AWS::Logs::LogStream
   Properties: 
     LogGroupName: "exampleLogGroup"
     LogStreamName: "MyAppLogStream"

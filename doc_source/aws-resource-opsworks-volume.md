@@ -27,7 +27,7 @@ The `AWS::OpsWorks::Volume` resource registers an Amazon Elastic Block Store \(A
 ### YAML<a name="aws-resource-opsworks-volume-syntax.yaml"></a>
 
 ```
-Type: "AWS::OpsWorks::Volume"
+Type: AWS::OpsWorks::Volume
 Properties:
   [Ec2VolumeId](#cfn-opsworks-volume-ec2volumeid): String
   [MountPoint](#cfn-opsworks-volume-mountpoint): String

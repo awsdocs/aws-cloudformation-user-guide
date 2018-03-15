@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-rds-dbsubnetgroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::RDS::DBSubnetGroup"
+Type: AWS::RDS::DBSubnetGroup
 Properties: 
   [DBSubnetGroupDescription](#cfn-rds-dbsubnetgroup-dbsubnetgroupdescription): String
   [DBSubnetGroupName](#cfn-rds-dbsubnetgroup-dbsubnetgroupname): String
@@ -101,7 +101,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 AWSTemplateFormatVersion: "2010-09-09"
 Resources: 
   myDBSubnetGroup: 
-    Type: "AWS::RDS::DBSubnetGroup"
+    Type: AWS::RDS::DBSubnetGroup
     Properties: 
       DBSubnetGroupDescription: "description"
       SubnetIds: 

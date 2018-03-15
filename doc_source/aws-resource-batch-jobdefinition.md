@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-batch-jobdefinition-syntax.yaml"></a>
 
 ```
-Type: "AWS::Batch::JobDefinition"
+Type: AWS::Batch::JobDefinition
 Properties:
   [Type](#cfn-batch-jobdefinition-type): String
   [Parameters](#cfn-batch-jobdefinition-parameters): Json object

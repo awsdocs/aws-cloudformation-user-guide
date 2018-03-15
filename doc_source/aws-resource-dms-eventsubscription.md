@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-dms-eventsubscription-syntax.yaml"></a>
 
 ```
-Type: "AWS::DMS::EventSubscription"
+Type: AWS::DMS::EventSubscription
 Properties: 
   [Enabled](#cfn-dms-eventsubscription-enabled): Boolean
   [EventCategories](#cfn-dms-eventsubscription-eventcategories): 

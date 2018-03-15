@@ -72,7 +72,7 @@ You could use the following template to embed a stack \(myStackWithParams\) usin
 1. AWSTemplateFormatVersion: "2010-09-09"
 2. Resources: 
 3.   myStackWithParams: 
-4.     Type: "AWS::CloudFormation::Stack"
+4.     Type: AWS::CloudFormation::Stack
 5.     Properties: 
 6.       TemplateURL: "https://s3.amazonaws.com/cloudformation-templates-us-east-1/EC2ChooseAMI.template"
 7.       Parameters: 

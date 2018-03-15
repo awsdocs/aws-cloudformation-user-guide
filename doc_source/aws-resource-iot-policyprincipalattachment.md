@@ -21,7 +21,7 @@ For information about working with AWS IoT policies and principals, see [Authori
 ### YAML<a name="aws-resource-iot-policyprincipalattachment-syntax.yaml"></a>
 
 ```
-Type: "AWS::IoT::PolicyPrincipalAttachment"
+Type: AWS::IoT::PolicyPrincipalAttachment
   Properties:
     [PolicyName](#cfn-iot-policyprincipalattachment-policyname): String
     [Principal](#cfn-iot-policyprincipalattachment-principal): String
@@ -75,7 +75,7 @@ The following example attaches a policy to a principal\.
 AWSTemplateFormatVersion: "2010-09-09"
 Resources: 
   MyPolicyPrincipalAttachment: 
-    Type: "AWS::IoT::PolicyPrincipalAttachment"
+    Type: AWS::IoT::PolicyPrincipalAttachment
     Properties: 
       PolicyName: 
         Ref: "NameParameter"

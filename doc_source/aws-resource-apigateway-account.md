@@ -30,7 +30,7 @@ The syntax for declaring this resource:
 ### YAML<a name="aws-resource-apigateway-account-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::Account"
+Type: AWS::ApiGateway::Account
 Properties: 
   [CloudWatchRoleArn](#cfn-apigateway-account-cloudwatchrolearn): String
 ```
@@ -85,7 +85,7 @@ The following example creates an IAM role that API Gateway can assume to push lo
 
 ```
 CloudWatchRole: 
- Type: "AWS::IAM::Role"
+ Type: AWS::IAM::Role
  Properties: 
   AssumeRolePolicyDocument: 
    Version: "2012-10-17"
@@ -99,7 +99,7 @@ CloudWatchRole:
   ManagedPolicyArns: 
    - "arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
 Account: 
- Type: "AWS::ApiGateway::Account"
+ Type: AWS::ApiGateway::Account
  Properties: 
   CloudWatchRoleArn: 
    "Fn::GetAtt": 

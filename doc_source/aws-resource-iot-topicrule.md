@@ -21,7 +21,7 @@ For information about working with AWS IoT rules, see [Rules for AWS IoT](http:/
 ### YAML<a name="aws-resource-iot-topicrule-syntax.yaml"></a>
 
 ```
-Type: "AWS::IoT::TopicRule"
+Type: AWS::IoT::TopicRule
 Properties:
   [RuleName](#cfn-iot-topicrule-rulename): String
   [TopicRulePayload](#cfn-iot-topicrule-topicrulepayload): TopicRulePayLoad
@@ -139,7 +139,7 @@ The following example declares an AWS IoT rule\.
 AWSTemplateFormatVersion: "2010-09-09"
 Resources: 
   MyTopicRule: 
-    Type: "AWS::IoT::TopicRule"
+    Type: AWS::IoT::TopicRule
     Properties: 
       RuleName: 
         Ref: "NameParameter"
@@ -158,10 +158,10 @@ Resources:
                   - "Arn"
               Key: "MyKey.txt"
   MyBucket: 
-    Type: "AWS::S3::Bucket"
+    Type: AWS::S3::Bucket
     Properties:
   MyRole: 
-    Type: "AWS::IAM::Role"
+    Type: AWS::IAM::Role
     Properties: 
       AssumeRolePolicyDocument: 
         Version: "2012-10-17"

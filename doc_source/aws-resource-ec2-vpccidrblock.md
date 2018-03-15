@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-vpccidrblock-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::VPCCidrBlock"
+Type: AWS::EC2::VPCCidrBlock
 Properties: 
   [AmazonProvidedIpv6CidrBlock](#cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock): Boolean
   [CidrBlock](#cfn-ec2-vpccidrblock-cidrblock): String
@@ -78,7 +78,7 @@ The following snippet associates an Amazon\-provided IPv6 CIDR block \(with a pr
 
 ```
 Ipv6VPCCidrBlock:
-  Type: "AWS::EC2::VPCCidrBlock"
+  Type: AWS::EC2::VPCCidrBlock
   Properties:
     AmazonProvidedIpv6CidrBlock: true
     VpcId: !Ref TestVPCIpv6
@@ -167,16 +167,16 @@ The following example associates an IPv4 CIDR block and an Amazon\-provided IPv6
 ```
 Resources:
   VPC:
-    Type: "AWS::EC2::VPC"
+    Type: AWS::EC2::VPC
     Properties:
       CidrBlock: 10.0.0.0/24
   VpcCidrBlock:
-    Type: "AWS::EC2::VPCCidrBlock"
+    Type: AWS::EC2::VPCCidrBlock
     Properties:
       VpcId: !Ref VPC
       CidrBlock: 192.0.0.0/24
   VpcCidrBlockIpv6:
-    Type: "AWS::EC2::VPCCidrBlock"
+    Type: AWS::EC2::VPCCidrBlock
     Properties:
       VpcId: !Ref VPC
       AmazonProvidedIpv6CidrBlock: true

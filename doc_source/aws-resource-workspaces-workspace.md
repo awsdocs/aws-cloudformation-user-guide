@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-workspaces-workspace-syntax.yaml"></a>
 
 ```
-Type: "AWS::WorkSpaces::Workspace"
+Type: AWS::WorkSpaces::Workspace
 Properties: 
   [BundleId](#cfn-workspaces-workspace-bundleid): String
   [DirectoryId](#cfn-workspaces-workspace-directoryid): String
@@ -110,7 +110,7 @@ The following example creates a workspace for user `test`\. The bundle and direc
 
 ```
 workspace1: 
-  Type: "AWS::WorkSpaces::Workspace"
+  Type: AWS::WorkSpaces::Workspace
   Properties: 
     BundleId: 
       Ref: "BundleId"

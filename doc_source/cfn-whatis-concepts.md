@@ -50,7 +50,7 @@ AWSTemplateFormatVersion: "2010-09-09"
 Description: A sample template
 Resources:
   MyEC2Instance:
-    Type: "AWS::EC2::Instance"
+    Type: AWS::EC2::Instance
     Properties: 
       ImageId: "ami-2f726546"
       InstanceType: t1.micro
@@ -110,7 +110,7 @@ AWSTemplateFormatVersion: "2010-09-09"
 Description: A sample template
 Resources:
   MyEC2Instance:
-    Type: "AWS::EC2::Instance"
+    Type: AWS::EC2::Instance
     Properties: 
       ImageId: "ami-2f726546"
       InstanceType: t1.micro

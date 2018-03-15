@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-efs-filesystem-syntax.yaml"></a>
 
 ```
-Type: "AWS::EFS::FileSystem"
+Type: AWS::EFS::FileSystem
 Properties: 
   [Encrypted](#cfn-efs-filesystem-encrypted): Boolean
   [FileSystemTags](#cfn-efs-filesystem-filesystemtags):

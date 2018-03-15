@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-domainname-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::DomainName"
+Type: AWS::ApiGateway::DomainName
 Properties: 
   [CertificateArn](#cfn-apigateway-domainname-certificatearn): String
   [DomainName](#cfn-apigateway-domainname-domainname): String

@@ -42,7 +42,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-dms-endpoint-syntax.yaml"></a>
 
 ```
-Type: "AWS::DMS::Endpoint"
+Type: AWS::DMS::Endpoint
 Properties:
   [CertificateArn](#cfn-dms-endpoint-certificatearn): String
   [DatabaseName](#cfn-dms-endpoint-databasename): String
@@ -206,7 +206,7 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: "Endpoint test"
 Resources:
   BasicEndpoint:
-    Type: "AWS::DMS::Endpoint"
+    Type: AWS::DMS::Endpoint
     Properties:
       EngineName: "mysql"
       EndpointType: "target"

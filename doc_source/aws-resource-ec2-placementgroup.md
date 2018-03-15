@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-placementgroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::PlacementGroup"
+Type: AWS::EC2::PlacementGroup
 Properties: 
   [Strategy](#cfn-ec2-placementgroup-strategy): String
 ```

@@ -22,7 +22,7 @@ For more information, see [http://docs.aws.amazon.com/amazondynamodb/latest/APIR
 ### YAML<a name="aws-resource-dax-parametergroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::DAX::ParameterGroup"
+Type: AWS::DAX::ParameterGroup
 Properties:
       [ParameterGroupName](#cfn-dax-parametergroup-name): String
       [Description](#cfn-dax-parametergroup-description): String

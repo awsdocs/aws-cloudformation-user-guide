@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-authorizer-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::Authorizer"
+Type: AWS::ApiGateway::Authorizer
 Properties:
   [AuthType](#cfn-apigateway-authorizer-authtype): String
   [AuthorizerCredentials](#cfn-apigateway-authorizer-authorizercredentials): String
@@ -156,7 +156,7 @@ The following examples create a custom authorizer that is an AWS Lambda function
 
 ```
 Authorizer: 
-  Type: "AWS::ApiGateway::Authorizer"
+  Type: AWS::ApiGateway::Authorizer
   Properties: 
     AuthorizerCredentials: 
       Fn::GetAtt: 

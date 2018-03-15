@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-redshift-clustersecuritygroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::Redshift::ClusterSecurityGroup"
+Type: AWS::Redshift::ClusterSecurityGroup
 Properties: 
   [Description](#cfn-redshift-clustersecuritygroup-description): String
   [Tags](#cfn-redshift-clustersecuritygroup-tags):
@@ -88,7 +88,7 @@ The following example creates an Amazon Redshift cluster security group that you
 
 ```
 myClusterSecurityGroup: 
-  Type: "AWS::Redshift::ClusterSecurityGroup"
+  Type: AWS::Redshift::ClusterSecurityGroup
   Properties: 
     Description: "Security group to determine where connections to the Amazon Redshift cluster can come from"
     Tags:

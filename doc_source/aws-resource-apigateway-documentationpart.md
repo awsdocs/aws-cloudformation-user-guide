@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-documentationpart-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::DocumentationPart"
+Type: AWS::ApiGateway::DocumentationPart
 Properties:
   [Location](#cfn-apigateway-documentationpart-location): 
     [*Location*](aws-properties-apigateway-documentationpart-location.md)

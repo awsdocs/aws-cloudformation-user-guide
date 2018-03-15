@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-iam-addusertogroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::IAM::UserToGroupAddition"
+Type: AWS::IAM::UserToGroupAddition
 Properties: 
   [GroupName](#cfn-iam-addusertogroup-groupname): String
   [Users](#cfn-iam-addusertogroup-users):

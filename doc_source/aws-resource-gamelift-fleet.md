@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-gamelift-fleet-syntax.yaml"></a>
 
 ```
-Type: "AWS::GameLift::Fleet"
+Type: AWS::GameLift::Fleet
 Properties: 
   [BuildId](#cfn-gamelift-fleet-buildid): String
   [Description](#cfn-gamelift-fleet-description): String
@@ -171,7 +171,7 @@ The following example creates a GameLift fleet named `MyGameFleet` with two inbo
 
 ```
 FleetResource: 
-  Type: "AWS::GameLift::Fleet"
+  Type: AWS::GameLift::Fleet
   Properties: 
     Name: "MyGameFleet"
     Description: "A fleet for my game"

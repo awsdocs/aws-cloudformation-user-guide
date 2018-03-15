@@ -26,7 +26,7 @@ The `AWS::ApiGateway::UsagePlanKey` resource associates an Amazon API Gateway AP
 ### YAML<a name="aws-resource-apigateway-usageplankey-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::UsagePlanKey"
+Type: AWS::ApiGateway::UsagePlanKey
 Properties:
   [KeyId](#cfn-apigateway-keyid): String
   [KeyType](#cfn-apigateway-keytype): String
@@ -86,7 +86,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ```
 usagePlanKey:
-  Type: "AWS::ApiGateway::UsagePlanKey"
+  Type: AWS::ApiGateway::UsagePlanKey
   Properties : 
     KeyId: !Ref 'myApiKey'
     KeyType: API_KEY

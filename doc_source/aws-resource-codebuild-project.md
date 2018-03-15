@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-codebuild-project-syntax.yaml"></a>
 
 ```
-Type: "AWS::CodeBuild::Project"
+Type: AWS::CodeBuild::Project
 Properties: 
   [Artifacts](#cfn-codebuild-project-artifacts):
     [*Artifacts*](aws-properties-codebuild-project-artifacts.md)

@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-rds-dbclusterparametergroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::RDS::DBClusterParameterGroup"
+Type: AWS::RDS::DBClusterParameterGroup
 Properties: 
   [Description](#cfn-rds-dbclusterparametergroup-description): String
   [Family](#cfn-rds-dbclusterparametergroup-family): String
@@ -107,7 +107,7 @@ The following snippet creates a parameter group that sets the character set data
 
 ```
 RDSDBClusterParameterGroup: 
-  Type: "AWS::RDS::DBClusterParameterGroup"
+  Type: AWS::RDS::DBClusterParameterGroup
   Properties: 
     Parameters: 
       character_set_database: "utf32"

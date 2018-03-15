@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ses-receiptrule-syntax.yaml"></a>
 
 ```
-Type: "AWS::SES::ReceiptRule"
+Type: AWS::SES::ReceiptRule
 Properties:
   [After](#cfn-ses-receiptrule-after): String
   [Rule](#cfn-ses-receiptrule-rule): [*Rule*](aws-properties-ses-receiptrule-rule.md)
@@ -157,7 +157,7 @@ Parameters:
 
 Resources:
   ReceiptRule1:
-    Type: "AWS::SES::ReceiptRule"
+    Type: AWS::SES::ReceiptRule
     Properties:
       RuleSetName: !Ref RuleSetName
       Rule:
@@ -171,7 +171,7 @@ Resources:
               HeaderValue: !Ref HeaderValue
 
   ReceiptRule2:
-    Type: "AWS::SES::ReceiptRule"
+    Type: AWS::SES::ReceiptRule
     Properties:
       RuleSetName: !Ref RuleSetName
       After: !Ref ReceiptRule1

@@ -38,7 +38,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-securitygroupingress-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::SecurityGroupIngress"
+Type: AWS::EC2::SecurityGroupIngress
 Properties: 
   [CidrIp](#cfn-ec2-security-group-ingress-cidrip): String
   [CidrIpv6](#cfn-ec2-security-group-ingress-cidripv6): String

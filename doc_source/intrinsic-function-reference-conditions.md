@@ -40,7 +40,7 @@ To conditionally create resources, resource properties, or outputs, you must ass
 
 ```
 NewVolume:
-  Type: "AWS::EC2::Volume"
+  Type: AWS::EC2::Volume
   Condition: CreateProdResources
   Properties: 
     Size: 100
@@ -71,7 +71,7 @@ For the `Fn::If` function, you only need to specify the condition name\. The fol
 
 ```
 NewVolume:
-  Type: "AWS::EC2::Volume"
+  Type: AWS::EC2::Volume
   Properties: 
     Size: 
       !If [CreateLargeSize, 100, 10]
@@ -333,7 +333,7 @@ The following snippet uses the `AWS::NoValue` pseudo parameter in an `Fn::If` fu
 
 ```
 MyDB:
-  Type: "AWS::RDS::DBInstance"
+  Type: AWS::RDS::DBInstance
   Properties: 
     AllocatedStorage: 5
     DBInstanceClass: db.m1.small

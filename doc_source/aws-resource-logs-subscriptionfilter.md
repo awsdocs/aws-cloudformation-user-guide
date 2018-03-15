@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-logs-subscriptionfilter-syntax.yaml"></a>
 
 ```
-Type: "AWS::Logs::SubscriptionFilter"
+Type: AWS::Logs::SubscriptionFilter
 Properties: 
   [DestinationArn](#cfn-cwl-subscriptionfilter-destinationarn): String
   [FilterPattern](#cfn-cwl-subscriptionfilter-filterpattern): String
@@ -93,7 +93,7 @@ The following example sends log events that are associated with the `Root` user 
 
 ```
 SubscriptionFilter: 
-  Type: "AWS::Logs::SubscriptionFilter"
+  Type: AWS::Logs::SubscriptionFilter
   Properties: 
     RoleArn: 
       Fn::GetAtt: 

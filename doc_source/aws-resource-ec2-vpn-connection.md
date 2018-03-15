@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-vpnconnection-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::VPNConnection"
+Type: AWS::EC2::VPNConnection
 Properties: 
   [Type](#cfn-ec2-vpnconnection-type): String
   [CustomerGatewayId](#cfn-ec2-vpnconnection-customergatewayid):
@@ -126,7 +126,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 AWSTemplateFormatVersion: "2010-09-09"
 Resources:
   myVPNConnection: 
-    Type: "AWS::EC2::VPNConnection"
+    Type: AWS::EC2::VPNConnection
     Properties: 
       Type: ipsec.1
       StaticRoutesOnly: true

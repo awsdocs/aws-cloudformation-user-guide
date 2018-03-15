@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticmapreduce-instancefleetconfig-syntax.yaml"></a>
 
 ```
-Type: "AWS::EMR::InstanceFleetConfig"
+Type: AWS::EMR::InstanceFleetConfig
 Properties: 
   [ClusterId](#cfn-elasticmapreduce-instancefleetconfig-clusterid): String
   [InstanceFleetType](#cfn-elasticmapreduce-instancefleetconfig-instancefleettype): String

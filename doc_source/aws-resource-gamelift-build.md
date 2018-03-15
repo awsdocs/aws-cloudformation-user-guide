@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-gamelift-build-syntax.yaml"></a>
 
 ```
-Type: "AWS::GameLift::Build"
+Type: AWS::GameLift::Build
 Properties: 
   [Name](#cfn-gamelift-build-name): String
   [StorageLocation](#cfn-gamelift-build-storagelocation):
@@ -120,7 +120,7 @@ The following example creates a GameLift build named `MyGameServerBuild`\. The b
 
 ```
 BuildResource: 
-  Type: "AWS::GameLift::Build"
+  Type: AWS::GameLift::Build
   Properties: 
     Name: "MyGameServerBuild"
     Version: "v15"
@@ -132,7 +132,7 @@ BuildResource:
           - "IAMRole"
           - "Arn"
 IAMRole: 
-  Type: "AWS::IAM::Role"
+  Type: AWS::IAM::Role
   Properties: 
     AssumeRolePolicyDocument: 
       Version: "2012-10-17"

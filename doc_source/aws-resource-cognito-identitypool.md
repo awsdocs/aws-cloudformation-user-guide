@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cognito-identitypool-syntax.yaml"></a>
 
 ```
-Type: "AWS::Cognito::IdentityPool"
+Type: AWS::Cognito::IdentityPool
 Properties:
   [IdentityPoolName](#cfn-cognito-identitypool-identitypoolname): String
   [AllowUnauthenticatedIdentities](#cfn-cognito-identitypool-allowunauthenticatedidentities): Boolean

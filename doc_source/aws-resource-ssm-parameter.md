@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ssm-parameter-syntax.yaml"></a>
 
 ```
-Type: "AWS::SSM::Parameter"
+Type: AWS::SSM::Parameter
 Properties: 
   [Name](#cfn-ssm-parameter-name): String
   [Description](#cfn-ssm-parameter-description): String
@@ -124,7 +124,7 @@ The following example snippet creates an SSM parameter in the Parameter Store\.
 Description: "Create SSM Parameter"
 Resources:
   BasicParameter:
-    Type: "AWS::SSM::Parameter"
+    Type: AWS::SSM::Parameter
     Properties:
       Name: "command"
       Type: "String"
@@ -163,7 +163,7 @@ The following example creates an SSM parameter with a `StringList` type\.
 Description: "Create SSM Parameter"
 Resources:
   BasicParameter:
-    Type: "AWS::SSM::Parameter"
+    Type: AWS::SSM::Parameter
     Properties:
       Name: "commands"
       Type: "StringList"

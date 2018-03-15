@@ -48,7 +48,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticache-cachecluster-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElastiCache::CacheCluster"
+Type: AWS::ElastiCache::CacheCluster
 Properties:
   [AutoMinorVersionUpgrade](#cfn-elasticache-cachecluster-autominorversionupgrade): Boolean
   [AZMode](#cfn-elasticache-cachecluster-azmode): String
@@ -282,7 +282,7 @@ For the cache cluster, the `VpcSecurityGroupIds` property is used to associate t
 
 ```
 ElasticacheSecurityGroup:
-  Type: "AWS::EC2::SecurityGroup"
+  Type: AWS::EC2::SecurityGroup
   Properties:
     GroupDescription: "Elasticache Security Group"
     SecurityGroupIngress:
@@ -293,7 +293,7 @@ ElasticacheSecurityGroup:
         SourceSecurityGroupName:
           Ref: "InstanceSecurityGroup"
 ElasticacheCluster:
-  Type: "AWS::ElastiCache::CacheCluster"
+  Type: AWS::ElastiCache::CacheCluster
   Properties:
     AutoMinorVersionUpgrade: "true"
     Engine: "memcached"
@@ -329,7 +329,7 @@ The following example launches a cache cluster with three nodes, where two nodes
 
 ```
 myCacheCluster:
-  Type: "AWS::ElastiCache::CacheCluster"
+  Type: AWS::ElastiCache::CacheCluster
   Properties:
     AZMode: "cross-az"
     CacheNodeType: "cache.m3.medium"

@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-stage-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::Stage"
+Type: AWS::ApiGateway::Stage
 Properties:
   [CacheClusterEnabled](#cfn-apigateway-stage-cacheclusterenabled): Boolean
   [CacheClusterSize](#cfn-apigateway-stage-cacheclustersize): String

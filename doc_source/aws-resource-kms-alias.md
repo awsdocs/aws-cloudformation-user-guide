@@ -27,7 +27,7 @@ The `AWS::KMS::Alias` resource creates a display name for a customer master key 
 ### YAML<a name="aws-resource-kms-alias-syntax.yaml"></a>
 
 ```
-Type: "AWS::KMS::Alias"
+Type: AWS::KMS::Alias
 Properties:
   [AliasName](#cfn-kms-alias-aliasname): String
   [TargetKeyId](#cfn-kms-alias-targetkeyid): String

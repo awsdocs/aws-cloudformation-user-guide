@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-apikey-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::ApiKey"
+Type: AWS::ApiGateway::ApiKey
 Properties: 
   [CustomerId](#cfn-apigateway-apikey-customerid): String
   [Description](#cfn-apigateway-apikey-description): String
@@ -119,7 +119,7 @@ The following example creates an API key and associates it with the `Test` stage
 
 ```
 ApiKey: 
-  Type: "AWS::ApiGateway::ApiKey"
+  Type: AWS::ApiGateway::ApiKey
   DependsOn: 
     - "TestAPIDeployment"
     - "Test"

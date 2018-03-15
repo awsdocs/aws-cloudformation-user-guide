@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-iam-managedpolicy-syntax.yaml"></a>
 
 ```
-Type: "AWS::IAM::ManagedPolicy"
+Type: AWS::IAM::ManagedPolicy
 Properties: 
   [Description](#cfn-iam-managedpolicy-description): String
   [Groups](#cfn-iam-managedpolicy-groups):
@@ -148,7 +148,7 @@ The following example creates a managed policy and associates it with the `TestD
 
 ```
 CreateTestDBPolicy: 
-  Type: "AWS::IAM::ManagedPolicy"
+  Type: AWS::IAM::ManagedPolicy
   Properties: 
     Description: "Policy for creating a test database"
     Path: "/"

@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-s3-bucketpolicy-syntax.yaml"></a>
 
 ```
-Type: "AWS::S3::BucketPolicy"
+Type: AWS::S3::BucketPolicy
 Properties: 
   [Bucket](#cfn-s3-bucketpolicy-bucket): String
   [PolicyDocument](#cfn-s3-bucketpolicy-policydocument): JSON
@@ -85,7 +85,7 @@ The following sample is a bucket policy that is attached to the `myExampleBucket
 
 ```
 SampleBucketPolicy: 
-  Type: "AWS::S3::BucketPolicy"
+  Type: AWS::S3::BucketPolicy
   Properties: 
     Bucket: 
       Ref: "myExampleBucket"

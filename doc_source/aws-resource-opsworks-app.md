@@ -38,7 +38,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-opsworks-app-syntax.yaml"></a>
 
 ```
-Type: "AWS::OpsWorks::App"
+Type: AWS::OpsWorks::App
 Properties: 
   [AppSource](#cfn-opsworks-app-appsource):
     Source
@@ -174,7 +174,7 @@ The following snippet creates an AWS OpsWorks app that uses a PHP application in
 
 ```
 myApp: 
-  Type: "AWS::OpsWorks::App"
+  Type: AWS::OpsWorks::App
   Properties: 
     StackId: 
       Ref: "myStack"

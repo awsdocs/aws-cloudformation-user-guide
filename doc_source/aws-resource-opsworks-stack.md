@@ -51,7 +51,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-opsworks-stack-syntax.yaml"></a>
 
 ```
-Type: "AWS::OpsWorks::Stack"
+Type: AWS::OpsWorks::Stack
 Properties: 
   [AgentVersion](#cfn-opsworks-stack-agentversion): String
   [Attributes](#cfn-opsworks-stack-attributes):
@@ -281,7 +281,7 @@ The following snippet creates an AWS OpsWorks stack that uses the default servic
 
 ```
 myStack: 
-  Type: "AWS::OpsWorks::Stack"
+  Type: AWS::OpsWorks::Stack
   Properties: 
     Name: 
       Ref: "OpsWorksStackName"

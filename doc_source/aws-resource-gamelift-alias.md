@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-gamelift-alias-syntax.yaml"></a>
 
 ```
-Type: "AWS::GameLift::Alias"
+Type: AWS::GameLift::Alias
 Properties: 
   [Name](#cfn-gamelift-alias-name): String
   [Description](#cfn-gamelift-alias-description): String
@@ -88,7 +88,7 @@ The following example creates a terminal alias named `TerminalAlias` with a gene
 
 ```
 AliasResource: 
-  Type: "AWS::GameLift::Alias"
+  Type: AWS::GameLift::Alias
   Properties: 
     Name: "TerminalAlias"
     Description: "A terminal alias"

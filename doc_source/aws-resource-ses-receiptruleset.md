@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ses-receiptruleset-syntax.yaml"></a>
 
 ```
-Type: "AWS::SES::ReceiptRuleSet"
+Type: AWS::SES::ReceiptRuleSet
 Properties:
   [RuleSetName](#cfn-ses-receiptruleset-rulesetname): String
 ```

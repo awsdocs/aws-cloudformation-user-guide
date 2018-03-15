@@ -69,7 +69,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-rds-dbinstance-syntax.yaml"></a>
 
 ```
-Type: "AWS::RDS::DBInstance"
+Type: AWS::RDS::DBInstance
 Properties:
   [AllocatedStorage](#cfn-rds-dbinstance-allocatedstorage): String
   [AllowMajorVersionUpgrade](#cfn-rds-dbinstance-allowmajorversionupgrade): Boolean
@@ -523,7 +523,7 @@ This example shows how to set the MySQL version that has a `[DeletionPolicy Attr
 
 ```
 MyDB: 
-  Type: "AWS::RDS::DBInstance"
+  Type: AWS::RDS::DBInstance
   Properties: 
     DBName: 
       Ref: "DBName"
@@ -569,7 +569,7 @@ This example sets a provisioned IOPS value in the [Iops](#cfn-rds-dbinstance-iop
 
 ```
 MyDB: 
-  Type: "AWS::RDS::DBInstance"
+  Type: AWS::RDS::DBInstance
   Properties: 
     AllocatedStorage: "100"
     DBInstanceClass: "db.m1.small"

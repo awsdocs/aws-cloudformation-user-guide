@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-vpcgateway-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::VPNGateway"
+Type: AWS::EC2::VPNGateway
 Properties: 
   [AmazonSideAsn](#cfn-ec2-vpngateway-amazonsideasn): Long
   [Type](#cfn-ec2-vpngateway-type): String
@@ -94,7 +94,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 AWSTemplateFormatVersion: "2010-09-09"
 Resources: 
   myVPNGateway: 
-    Type: "AWS::EC2::VPNGateway"
+    Type: AWS::EC2::VPNGateway
     Properties: 
       Type: ipsec.1
       Tags: 

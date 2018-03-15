@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-route-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::Route"
+Type: AWS::EC2::Route
 Properties: 
   [DestinationCidrBlock](#cfn-ec2-route-destinationcidrblock): String
   [DestinationIpv6CidrBlock](#cfn-ec2-route-destinationipv6cidrblock): String

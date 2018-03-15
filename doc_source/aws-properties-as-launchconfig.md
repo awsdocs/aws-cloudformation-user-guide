@@ -47,7 +47,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-autoscaling-launchconfig-syntax.yaml"></a>
 
 ```
-Type: "AWS::AutoScaling::LaunchConfiguration"
+Type: AWS::AutoScaling::LaunchConfiguration
 Properties:
   [AssociatePublicIpAddress](#cf-as-launchconfig-associatepubip): Boolean
   [BlockDeviceMappings](#cfn-as-launchconfig-blockdevicemappings):
@@ -240,7 +240,7 @@ This example shows a launch configuration that describes two Amazon Elastic Bloc
 
 ```
 LaunchConfig: 
-  Type: "AWS::AutoScaling::LaunchConfiguration"
+  Type: AWS::AutoScaling::LaunchConfiguration
   Properties: 
     KeyName: 
       Ref: "KeyName"
@@ -304,7 +304,7 @@ This example shows a launch configuration that features a spot price in the Auto
 
 ```
 LaunchConfig: 
-  Type: "AWS::AutoScaling::LaunchConfiguration"
+  Type: AWS::AutoScaling::LaunchConfiguration
   Properties: 
     KeyName: 
       Ref: "KeyName"
@@ -356,7 +356,7 @@ Only the `AWS::AutoScaling::LaunchConfiguration` specification is shown\. For th
 
 ```
 myLCOne: 
-  Type: "AWS::AutoScaling::LaunchConfiguration"
+  Type: AWS::AutoScaling::LaunchConfiguration
   Properties: 
     ImageId: 
       Fn::FindInMap: 
@@ -411,7 +411,7 @@ Use this AMI in your Auto Scaling launch configuration\. For example, an EBS\-op
 
 ```
 LaunchConfig: 
-  Type: "AWS::AutoScaling::LaunchConfiguration"
+  Type: AWS::AutoScaling::LaunchConfiguration
   Properties: 
     KeyName: 
       Ref: "KeyName"

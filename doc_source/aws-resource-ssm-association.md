@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ssm-association-syntax.yaml"></a>
 
 ```
-Type: "AWS::SSM::Association"
+Type: AWS::SSM::Association
 Properties: 
   [AssociationName](#cfn-ssm-association-associationname): String
   [DocumentVersion](#cfn-ssm-association-documentationversion): String

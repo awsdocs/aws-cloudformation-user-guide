@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-wafregional-webaclassociation-syntax.yaml"></a>
 
 ```
-Type: "AWS::WAFRegional::WebACLAssociation"
+Type: AWS::WAFRegional::WebACLAssociation
 Properties: 
   [ResourceArn](#cfn-wafregional-webaclassociation-resourcearn): String
   [WebACLId](#cfn-wafregional-webaclassociation-webaclid): String
@@ -71,7 +71,7 @@ The following example associates an Application load balancer resource with a we
 
 ```
 MyWebACLAssociation:
-  Type: "AWS::WAFRegional::WebACLAssociation"
+  Type: AWS::WAFRegional::WebACLAssociation
   Properties:
     ResourceArn:
       Ref: MyLoadBalancer

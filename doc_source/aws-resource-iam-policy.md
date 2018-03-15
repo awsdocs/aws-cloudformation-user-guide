@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-iam-policy-syntax.yaml"></a>
 
 ```
-Type: "AWS::IAM::Policy"
+Type: AWS::IAM::Policy
 Properties: 
   [Groups](#cfn-iam-policy-groups):
     - String
@@ -115,7 +115,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 #### YAML<a name="aws-resource-iam-policy-example1.yaml"></a>
 
 ```
-Type: "AWS::IAM::Policy"
+Type: AWS::IAM::Policy
 Properties: 
   PolicyName: "CFNUsers"
   PolicyDocument: 
@@ -156,7 +156,7 @@ Properties:
 #### YAML<a name="aws-resource-iam-policy-example2.yaml"></a>
 
 ```
-Type: "AWS::IAM::Policy"
+Type: AWS::IAM::Policy
 Properties: 
   PolicyName: "root"
   PolicyDocument: 

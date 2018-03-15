@@ -47,7 +47,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-opsworks-instance-syntax.yaml"></a>
 
 ```
-Type: "AWS::OpsWorks::Instance"
+Type: AWS::OpsWorks::Instance
 Properties:
   [AgentVersion](#cfn-opsworks-instance-agentversion): String
   [AmiId](#cfn-opsworks-instance-amiid): String
@@ -281,7 +281,7 @@ The following example creates two AWS OpsWorks instances that are associated wit
 
 ```
 myInstance1: 
-  Type: "AWS::OpsWorks::Instance"
+  Type: AWS::OpsWorks::Instance
   Properties: 
     StackId: 
       Ref: "myStack"
@@ -290,7 +290,7 @@ myInstance1:
         Ref: "myLayer"
     InstanceType: "m1.small"
 myInstance2: 
-  Type: "AWS::OpsWorks::Instance"
+  Type: AWS::OpsWorks::Instance
   Properties: 
     StackId: 
       Ref: "myStack"
@@ -327,7 +327,7 @@ In the following example, the `DBInstance` instance is online for four hours fro
 
 ```
 DBInstance: 
-  Type: "AWS::OpsWorks::Instance"
+  Type: AWS::OpsWorks::Instance
   Properties: 
     AutoScalingType: "timer"
     StackId: 

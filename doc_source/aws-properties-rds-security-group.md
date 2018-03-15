@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-rds-securitygroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::RDS::DBSecurityGroup"
+Type: AWS::RDS::DBSecurityGroup
 Properties:
   [EC2VpcId](#cfn-rds-dbsecuritygroup-ec2vpcid): String
   [DBSecurityGroupIngress](#cfn-rds-dbsecuritygroup-dbsecuritygroupingress):
@@ -99,7 +99,7 @@ This template snippet creates/updates a single VPC security group, referred to b
 
 ```
 DBSecurityGroup: 
-  Type: "AWS::RDS::DBSecurityGroup"
+  Type: AWS::RDS::DBSecurityGroup
   Properties: 
     EC2VpcId: 
       Ref: "VpcId"
@@ -153,7 +153,7 @@ This template snippet creates/updates multiple VPC security groups\.
 ```
 Resources: 
   DBinstance: 
-    Type: "AWS::RDS::DBInstance"
+    Type: AWS::RDS::DBInstance
     Properties: 
       DBSecurityGroups: 
         - 
@@ -165,7 +165,7 @@ Resources:
       MasterUserPassword: "YourPassword"
     DeletionPolicy: "Snapshot"
   DbSecurityByEC2SecurityGroup: 
-    Type: "AWS::RDS::DBSecurityGroup"
+    Type: AWS::RDS::DBSecurityGroup
     Properties: 
       GroupDescription: "Ingress for Amazon EC2 security group"
       DBSecurityGroupIngress: 

@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-logs-metricfilter-syntax.yaml"></a>
 
 ```
-Type: "AWS::Logs::MetricFilter"
+Type: AWS::Logs::MetricFilter
 Properties: 
   [FilterPattern](#cfn-cwl-metricfilter-filterpattern): String
   [LogGroupName](#cfn-cwl-metricfilter-loggroupname): String
@@ -89,7 +89,7 @@ The following example sends a value of `1` to the `404Count` metric whenever the
 
 ```
 404MetricFilter: 
-  Type: "AWS::Logs::MetricFilter"
+  Type: AWS::Logs::MetricFilter
   Properties: 
     LogGroupName: 
       Ref: "myLogGroup"

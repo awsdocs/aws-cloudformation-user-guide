@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-iam-role-syntax.yaml"></a>
 
 ```
-Type: "AWS::IAM::Role"
+Type: AWS::IAM::Role
 Properties: 
   [AssumeRolePolicyDocument](#cfn-iam-role-assumerolepolicydocument):
     JSON object
@@ -173,7 +173,7 @@ This example shows an embedded Policy in the IAM::Role\. The policy is specified
 AWSTemplateFormatVersion: "2010-09-09"
 Resources: 
   RootRole: 
-    Type: "AWS::IAM::Role"
+    Type: AWS::IAM::Role
     Properties: 
       AssumeRolePolicyDocument: 
         Version: "2012-10-17"
@@ -197,7 +197,7 @@ Resources:
                 Action: "*"
                 Resource: "*"
   RootInstanceProfile: 
-    Type: "AWS::IAM::InstanceProfile"
+    Type: AWS::IAM::InstanceProfile
     Properties: 
       Path: "/"
       Roles: 
@@ -267,7 +267,7 @@ In this example, the Policy and InstanceProfile resources are specified external
 AWSTemplateFormatVersion: "2010-09-09"
 Resources: 
   RootRole: 
-    Type: "AWS::IAM::Role"
+    Type: AWS::IAM::Role
     Properties: 
       AssumeRolePolicyDocument: 
         Version: "2012-10-17"
@@ -281,7 +281,7 @@ Resources:
               - "sts:AssumeRole"
       Path: "/"
   RolePolicies: 
-    Type: "AWS::IAM::Policy"
+    Type: AWS::IAM::Policy
     Properties: 
       PolicyName: "root"
       PolicyDocument: 
@@ -295,7 +295,7 @@ Resources:
         - 
           Ref: "RootRole"
   RootInstanceProfile: 
-    Type: "AWS::IAM::InstanceProfile"
+    Type: AWS::IAM::InstanceProfile
     Properties: 
       Path: "/"
       Roles: 

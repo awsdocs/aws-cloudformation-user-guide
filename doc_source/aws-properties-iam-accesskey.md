@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-iam-accesskey-syntax.yaml"></a>
 
 ```
-Type: "AWS::IAM::AccessKey"
+Type: AWS::IAM::AccessKey
 Properties: 
   [Serial](#cfn-iam-accesskey-serial): Integer
   [Status](#cfn-iam-accesskey-status): String

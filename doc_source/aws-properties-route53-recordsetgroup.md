@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-route53-recordsetgroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::Route53::RecordSetGroup"
+Type: AWS::Route53::RecordSetGroup
 Properties: 
   [Comment](#cfn-route53-recordsetgroup-comment): String
   [HostedZoneId](#cfn-route53-recordsetgroup-hostedzoneid): String

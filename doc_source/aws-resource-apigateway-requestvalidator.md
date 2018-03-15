@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-requestvalidator-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::RequestValidator"
+Type: AWS::ApiGateway::RequestValidator
 Properties:
   [Name](#cfn-apigateway-requestvalidator-name): String
   [RestApiId](#cfn-apigateway-requestvalidator-restapiid): String

@@ -50,7 +50,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-rds-dbcluster-syntax.yaml"></a>
 
 ```
-Type: "AWS::RDS::DBCluster"
+Type: AWS::RDS::DBCluster
 Properties:
   [AvailabilityZones](#cfn-rds-dbcluster-availabilityzones):
     - String

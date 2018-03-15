@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-dms-replicationinstance-syntax.yaml"></a>
 
 ```
-Type: "AWS::DMS::ReplicationInstance"
+Type: AWS::DMS::ReplicationInstance
 Properties:
   [AllocatedStorage](#cfn-dms-replicationinstance-allocatedstorage): Integer
   [AutoMinorVersionUpgrade](#cfn-dms-replicationinstance-autominorversionupgrade): Boolean

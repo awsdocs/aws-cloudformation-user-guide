@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cognito-userpoolusertogroupattachment-syntax.yaml"></a>
 
 ```
-Type: "AWS::Cognito::UserPoolUserToGroupAttachment"
+Type: AWS::Cognito::UserPoolUserToGroupAttachment
 Properties:
   [GroupName](#cfn-cognito-userpoolusertogroupattachment-groupname): String
   [Username](#cfn-cognito-userpoolusertogroupattachment-username): String

@@ -115,19 +115,19 @@ Conditions:
 
 Resources:
   EC2Instance:
-    Type: "AWS::EC2::Instance"
+    Type: AWS::EC2::Instance
     Properties:
       ImageId: !FindInMap [RegionMap, !Ref "AWS::Region", AMI]
       InstanceType: !If [CreateProdResources, c1.xlarge, !If [CreateDevResources, m1.large, m1.small]]    
   MountPoint:
-    Type: "AWS::EC2::VolumeAttachment"
+    Type: AWS::EC2::VolumeAttachment
     Condition: CreateProdResources
     Properties:
       InstanceId: !Ref EC2Instance
       VolumeId: !Ref NewVolume
       Device: /dev/sdh
   NewVolume:
-    Type: "AWS::EC2::Volume"
+    Type: AWS::EC2::Volume
     Condition: CreateProdResources
     Properties:
       Size: 100
@@ -246,7 +246,7 @@ Conditions:
   UseDBSnapshot: !Not [!Equals [!Ref DBSnapshotName, ""]]
 Resources: 
   MyDB: 
-    Type: "AWS::RDS::DBInstance"
+    Type: AWS::RDS::DBInstance
     Properties: 
       AllocatedStorage: 5
       DBInstanceClass: db.m1.small
@@ -257,7 +257,7 @@ Resources:
       DBParameterGroupName: !Ref MyRDSParamGroup
       DBSnapshotIdentifier: !If [UseDBSnapshot, !Ref DBSnapshotName, !Ref "AWS::NoValue"]
   MyRDSParamGroup: 
-    Type: "AWS::RDS::DBParameterGroup"
+    Type: AWS::RDS::DBParameterGroup
     Properties: 
       Family: MySQL5.5
       Description: CloudFormation Sample Database Parameter Group
@@ -350,12 +350,12 @@ Conditions:
   CreateNewSecurityGroup: !Equals [!Ref ExistingSecurityGroup, NONE
 Resources: 
   MyInstance: 
-    Type: "AWS::EC2::Instance"
+    Type: AWS::EC2::Instance
     Properties: 
       ImageId: "ami-1b814f72"
       SecurityGroups: !If [CreateNewSecurityGroup, !Ref NewSecurityGroup, !Ref ExistingSecurityGroup]
   NewSecurityGroup: 
-    Type: "AWS::EC2::SecurityGroup"
+    Type: AWS::EC2::SecurityGroup
     Condition: CreateNewSecurityGroup
     Properties: 
       GroupDescription: Enable HTTP access via port 80

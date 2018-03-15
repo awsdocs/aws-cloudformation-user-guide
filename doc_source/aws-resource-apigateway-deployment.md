@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-deployment-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::Deployment"
+Type: AWS::ApiGateway::Deployment
 Properties:
   [Description](#cfn-apigateway-deployment-description): String
   [RestApiId](#cfn-apigateway-deployment-restapiid): String
@@ -96,7 +96,7 @@ The following example deploys the `MyApi` API to a stage named `DummyStage`\.
 
 ```
 Deployment: 
-  Type: "AWS::ApiGateway::Deployment"
+  Type: AWS::ApiGateway::Deployment
   Properties: 
     RestApiId: 
       Ref: "MyApi"
@@ -127,7 +127,7 @@ If you create a `AWS::ApiGateway::RestApi` resource and its methods \(using `AWS
 ```
 Deployment: 
   DependsOn: "MyMethod"
-  Type: "AWS::ApiGateway::Deployment"
+  Type: AWS::ApiGateway::Deployment
   Properties: 
     RestApiId: 
       Ref: "MyApi"

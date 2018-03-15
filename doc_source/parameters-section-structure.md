@@ -374,7 +374,7 @@ The following example declares two parameters with the types `AWS::EC2::KeyPair:
 Parameters: 
   myKeyPair: 
     Description: Amazon EC2 Key Pair
-    Type: "AWS::EC2::KeyPair::KeyName"
+    Type: AWS::EC2::KeyPair::KeyName
   mySubnetIDs: 
     Description: Subnet IDs
     Type: "List<AWS::EC2::Subnet::Id>"

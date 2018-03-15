@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-rds-eventsubscription-syntax.yaml"></a>
 
 ```
-Type: "AWS::RDS::EventSubscription"
+Type: AWS::RDS::EventSubscription
 Properties: 
   [Enabled](#cfn-rds-eventsubscription-enabled): Boolean
   [EventCategories](#cfn-rds-eventsubscription-eventcategories):
@@ -109,7 +109,7 @@ The following snippet creates an event subscription for an existing database ins
 
 ```
 myEventSubscription: 
-  Type: "AWS::RDS::EventSubscription"
+  Type: AWS::RDS::EventSubscription
   Properties: 
     EventCategories: 
       - "configuration change"

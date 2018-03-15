@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-model-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::Model"
+Type: AWS::ApiGateway::Model
 Properties:
   [ContentType](#cfn-apigateway-model-contenttype): String
   [Description](#cfn-apigateway-model-description): String
@@ -115,7 +115,7 @@ The following example creates a model that transforms input data into the descri
 
 ```
 PetsModelNoFlatten: 
-  Type: "AWS::ApiGateway::Model"
+  Type: AWS::ApiGateway::Model
   Properties: 
     RestApiId: 
       Ref: RestApi

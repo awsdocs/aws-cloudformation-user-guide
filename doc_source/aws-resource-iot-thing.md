@@ -21,7 +21,7 @@ For information about working with things, see [How AWS IoT Works](http://docs.a
 ### YAML<a name="aws-resource-iot-thing-syntax.yaml"></a>
 
 ```
-Type: "AWS::IoT::Thing"
+Type: AWS::IoT::Thing
 Properties:
   [AttributePayload](#cfn-iot-thing-attributepayload):
     [*AttributePayload*](aws-properties-iot-thing-attributepayload.md)
@@ -118,7 +118,7 @@ The following example declares a thing and the values of its attributes\.
 AWSTemplateFormatVersion: "2010-09-09"
 Resources: 
   MyThing: 
-    Type: "AWS::IoT::Thing"
+    Type: AWS::IoT::Thing
     Properties: 
       ThingName: 
         Ref: "NameParameter"

@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-wafregional-sqlinjectionmatchset-syntax.yaml"></a>
 
 ```
-Type: "AWS::WAFRegional::SqlInjectionMatchSet"
+Type: AWS::WAFRegional::SqlInjectionMatchSet
 Properties: 
   [Name](#cfn-wafregional-sqlinjectionmatchset-name): String
   [SqlInjectionMatchTuples](#cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuples):
@@ -85,7 +85,7 @@ The following example looks for snippets of SQL code in the query string of an H
 
 ```
 SqlInjDetection: 
-  Type: "AWS::WAFRegional::SqlInjectionMatchSet"
+  Type: AWS::WAFRegional::SqlInjectionMatchSet
   Properties: 
     Name: "Find SQL injections in the query string"
     SqlInjectionMatchTuples: 
@@ -122,7 +122,7 @@ The following example associates the `SqlInjDetection` match set with a web acce
 
 ```
 SqlInjRule: 
-  Type: "AWS::WAFRegional::Rule"
+  Type: AWS::WAFRegional::Rule
   Properties: 
     Name: "SqlInjRule"
     MetricName: "SqlInjRule"
@@ -166,7 +166,7 @@ The following example associates the `SqlInjRule` rule with a web ACL\. The web 
 
 ```
 MyWebACL: 
-  Type: "AWS::WAFRegional::WebACL"
+  Type: AWS::WAFRegional::WebACL
   Properties: 
     Name: "Web ACL to block SQL injection in the query string"
     DefaultAction: 

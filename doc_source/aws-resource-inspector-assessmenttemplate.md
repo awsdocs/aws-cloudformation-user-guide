@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-inspector-assessmenttemplate-syntax.yaml"></a>
 
 ```
-Type: "AWS::Inspector::AssessmentTemplate"
+Type: AWS::Inspector::AssessmentTemplate
 Properties:
   [AssessmentTargetArn](#cfn-inspector-assessmenttemplate-assessmenttargetarn): String
   [DurationInSeconds](#cfn-inspector-assessmenttemplate-durationinseconds): Integer
@@ -124,5 +124,5 @@ myassessmenttemplate:
       - 
         Key: Example
         Value: example
-  Type: "AWS::Inspector::AssessmentTemplate"
+  Type: AWS::Inspector::AssessmentTemplate
 ```

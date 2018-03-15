@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-kinesisanalytics-application-syntax.yaml"></a>
 
 ```
-Type: "AWS::KinesisAnalytics::Application"
+Type: AWS::KinesisAnalytics::Application
 Properties:
   [ApplicationName](#cfn-kinesisanalytics-application-applicationname): String
   [ApplicationDescription](#cfn-kinesisanalytics-application-applicationdescription): String
@@ -71,7 +71,7 @@ The following example demonstrates how to create and configure a Kinesis Data An
 Description: "Sample KinesisAnalytics via CloudFormation"
 Resources:
   BasicApplication:
-    Type: "AWS::KinesisAnalytics::Application"
+    Type: AWS::KinesisAnalytics::Application
     Properties:
       ApplicationName: "sampleApplication"
       ApplicationDescription: "SampleApp"
@@ -92,11 +92,11 @@ Resources:
             ResourceARN: !GetAtt InputKinesisStream.Arn
             RoleARN: !GetAtt KinesisAnalyticsRole.Arn
   InputKinesisStream:
-    Type: "AWS::Kinesis::Stream"
+    Type: AWS::Kinesis::Stream
     Properties:
       ShardCount: 1
   KinesisAnalyticsRole:
-    Type: "AWS::IAM::Role"
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
@@ -115,7 +115,7 @@ Resources:
                 Action: "*"
                 Resource: "*"
   BasicApplicationOutputs:
-    Type: "AWS::KinesisAnalytics::ApplicationOutput"
+    Type: AWS::KinesisAnalytics::ApplicationOutput
     DependsOn: BasicApplication
     Properties:
       ApplicationName: !Ref BasicApplication
@@ -127,11 +127,11 @@ Resources:
           ResourceARN: !GetAtt OutputKinesisStream.Arn
           RoleARN: !GetAtt KinesisAnalyticsRole.Arn
   OutputKinesisStream:
-    Type: "AWS::Kinesis::Stream"
+    Type: AWS::Kinesis::Stream
     Properties:
       ShardCount: 1
   ApplicationReferenceDataSource:
-    Type: "AWS::KinesisAnalytics::ApplicationReferenceDataSource"
+    Type: AWS::KinesisAnalytics::ApplicationReferenceDataSource
     DependsOn: BasicApplicationOutputs
     Properties:
       ApplicationName: !Ref BasicApplication

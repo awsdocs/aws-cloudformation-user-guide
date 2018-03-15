@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-networkaclentry-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::NetworkAclEntry"
+Type: AWS::EC2::NetworkAclEntry
 Properties: 
   [CidrBlock](#cfn-ec2-networkaclentry-cidrblock): String
   [Egress](#cfn-ec2-networkaclentry-egress): Boolean

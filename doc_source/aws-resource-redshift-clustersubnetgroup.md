@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-redshift-clustersubnetgroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::Redshift::ClusterSubnetGroup"
+Type: AWS::Redshift::ClusterSubnetGroup
 Properties: 
   [Description](#cfn-redshift-clustersubnetgroup-description): String
   [SubnetIds](#cfn-redshift-clustersubnetgroup-subnetids):

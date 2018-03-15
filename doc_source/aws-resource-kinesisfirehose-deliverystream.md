@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-kinesisfirehose-deliverystream-syntax.yaml"></a>
 
 ```
-Type: "AWS::KinesisFirehose::DeliveryStream"
+Type: AWS::KinesisFirehose::DeliveryStream
 Properties: 
   [DeliveryStreamName](#cfn-kinesisfirehose-deliverystream-deliverystreamname): String
   [DeliveryStreamType](#cfn-kinesisfirehose-deliverystream-deliverystreamtype): String
@@ -169,7 +169,7 @@ The following example creates a Kinesis Firehose delivery stream that delivers d
 
 ```
 ElasticSearchDeliveryStream: 
-  Type: "AWS::KinesisFirehose::DeliveryStream"
+  Type: AWS::KinesisFirehose::DeliveryStream
   Properties: 
     ElasticsearchDestinationConfiguration: 
       BufferingHints: 

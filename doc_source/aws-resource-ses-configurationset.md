@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ses-configurationset-syntax.yaml"></a>
 
 ```
-Type: "AWS::SES::ConfigurationSet"
+Type: AWS::SES::ConfigurationSet
 Properties:
   [Name](#cfn-ses-configurationset-name): String
 ```
@@ -83,7 +83,7 @@ Parameters:
     Type: String
 Resources:
   ConfigSet:
-    Type: "AWS::SES::ConfigurationSet"
+    Type: AWS::SES::ConfigurationSet
     Properties:
       Name: !Ref ConfigSetName
 ```

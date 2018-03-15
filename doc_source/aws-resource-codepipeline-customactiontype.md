@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-codepipeline-customactiontype-syntax.yaml"></a>
 
 ```
-Type: "AWS::CodePipeline::CustomActionType"
+Type: AWS::CodePipeline::CustomActionType
 Properties:
   [Category](#cfn-codepipeline-customactiontype-category): String,
   [ConfigurationProperties](#cfn-codepipeline-customactiontype-configurationproperties):
@@ -143,7 +143,7 @@ The following example is a custom build action that requires users to specify on
 
 ```
 MyCustomActionType: 
-  Type: "AWS::CodePipeline::CustomActionType"
+  Type: AWS::CodePipeline::CustomActionType
   Properties: 
     Category: Build
     Provider: "My-Build-Provider-Name"

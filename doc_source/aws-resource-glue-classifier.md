@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-glue-classifier-syntax.yaml"></a>
 
 ```
-Type: "AWS::Glue::Classifier"
+Type: AWS::Glue::Classifier
 Properties:
   [GrokClassifier](#cfn-glue-classifier-grokclassifier): 
     [*GrokClassifier*](aws-properties-glue-classifier-grokclassifier.md)

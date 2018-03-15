@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-wafregional-xssmatchset-syntax.yaml"></a>
 
 ```
-Type: "AWS::WAFRegional::XssMatchSet"
+Type: AWS::WAFRegional::XssMatchSet
 Properties: 
   [Name](#cfn-wafregional-xssmatchset-name): String
   [XssMatchTuples](#cfn-wafregional-xssmatchset-xssmatchtuples):
@@ -91,7 +91,7 @@ The following example looks for cross\-site scripting in the URI or query string
 
 ```
 DetectXSS: 
-  Type: "AWS::WAFRegional::XssMatchSet"
+  Type: AWS::WAFRegional::XssMatchSet
   Properties: 
     Name: "XssMatchSet"
     XssMatchTuples: 
@@ -132,7 +132,7 @@ The following example associates the `DetectXSS` match set with a web access con
 
 ```
 XSSRule: 
-  Type: "AWS::WAFRegional::Rule"
+  Type: AWS::WAFRegional::Rule
   Properties: 
     Name: "XSSRule"
     MetricName: "XSSRule"
@@ -176,7 +176,7 @@ The following example associates the `XSSRule` rule with a web ACL\. The web ACL
 
 ```
 MyWebACL: 
-  Type: "AWS::WAFRegional::WebACL"
+  Type: AWS::WAFRegional::WebACL
   Properties: 
     Name: "Web ACL to block cross-site scripting"
     DefaultAction: 

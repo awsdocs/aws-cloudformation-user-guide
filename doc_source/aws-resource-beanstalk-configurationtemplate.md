@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticbeanstalk-configurationtemplate-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElasticBeanstalk::ConfigurationTemplate"
+Type: AWS::ElasticBeanstalk::ConfigurationTemplate
 Properties:
   [ApplicationName](#cfn-elasticbeanstalk-configurationtemplate-applicationname): String
   [Description](#cfn-elasticbeanstalk-configurationtemplate-description): String
@@ -134,7 +134,7 @@ This example of an ElasticBeanstalk `ConfigurationTemplate` is found in the AWS 
 
 ```
 myConfigTemplate: 
-  Type: "AWS::ElasticBeanstalk::ConfigurationTemplate"
+  Type: AWS::ElasticBeanstalk::ConfigurationTemplate
   Properties: 
     ApplicationName: 
       Ref: "myApp"

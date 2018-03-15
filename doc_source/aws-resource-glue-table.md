@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-glue-table-syntax.yaml"></a>
 
 ```
-Type: "AWS::Glue::Table"
+Type: AWS::Glue::Table
 Properties:
   [TableInput](#cfn-glue-table-tableinput): 
     [*TableInput*](aws-properties-glue-table-tableinput.md)

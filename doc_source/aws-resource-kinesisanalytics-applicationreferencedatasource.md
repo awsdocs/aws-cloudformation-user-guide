@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-kinesisanalytics-applicationreferencedatasource-syntax.yaml"></a>
 
 ```
-Type: "AWS::KinesisAnalytics::ApplicationReferenceDataSource"
+Type: AWS::KinesisAnalytics::ApplicationReferenceDataSource
 Properties:
   [ApplicationName](#cfn-kinesisanalytics-applicationreferencedatasource-applicationname): String
   [ReferenceDataSource](#cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource): 
@@ -57,7 +57,7 @@ The following example creates an `ApplicationReferenceDataSource` resource:
 
 ```
 ApplicationReferenceDataSource:
-    Type: "AWS::KinesisAnalytics::ApplicationReferenceDataSource"
+    Type: AWS::KinesisAnalytics::ApplicationReferenceDataSource
     Properties:
       ApplicationName: !Ref BasicApplication
       ReferenceDataSource:

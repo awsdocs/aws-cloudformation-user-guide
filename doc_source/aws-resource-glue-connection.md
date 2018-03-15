@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-glue-connection-syntax.yaml"></a>
 
 ```
-Type: "AWS::Glue::Connection"
+Type: AWS::Glue::Connection
 Properties:
   [ConnectionInput](#cfn-glue-connection-connectioninput): 
     [*ConnectionInput*](aws-properties-glue-connection-connectioninput.md)

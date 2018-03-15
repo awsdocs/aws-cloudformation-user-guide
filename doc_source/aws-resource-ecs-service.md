@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ecs-service-syntax.yaml"></a>
 
 ```
-Type: "AWS::ECS::Service"
+Type: AWS::ECS::Service
 Properties: 
   [Cluster](#cfn-ecs-service-cluster): String
   [DeploymentConfiguration](#cfn-ecs-service-deploymentconfiguration):
@@ -193,7 +193,7 @@ The following examples define an Amazon ECS service that uses a cluster and task
 
 ```
 WebApp: 
-  Type: "AWS::ECS::Service"
+  Type: AWS::ECS::Service
   Properties: 
     Cluster: 
       Ref: "cluster"

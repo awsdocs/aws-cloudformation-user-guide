@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cloud9-environmentec2-syntax.yaml"></a>
 
 ```
-Type: "AWS::Cloud9::EnvironmentEC2"
+Type: AWS::Cloud9::EnvironmentEC2
 Properties:
   [Repositories](#cfn-cloud9-environmentec2-repositories): 
     - [*Repository*](aws-properties-cloud9-environmentec2-repository.md)

@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-rds-dbparametergroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::RDS::DBParameterGroup"
+Type: AWS::RDS::DBParameterGroup
 Properties: 
   [Description](#cfn-rds-dbparametergroup-description): String
   [Family](#cfn-rds-dbparametergroup-family): String

@@ -40,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cognito-userpool-syntax.yaml"></a>
 
 ```
-Type: "AWS::Cognito::UserPool"
+Type: AWS::Cognito::UserPool
 Properties:
   [AdminCreateUserConfig](#cfn-cognito-userpool-admincreateuserconfig): 
     AdminCreateUserConfig

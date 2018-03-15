@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-directoryservice-microsoftad-syntax.yaml"></a>
 
 ```
-Type: "AWS::DirectoryService::MicrosoftAD"
+Type: AWS::DirectoryService::MicrosoftAD
 Properties:
   [CreateAlias](#cfn-directoryservice-microsoftad-createalias): Boolean
   [EnableSso](#cfn-directoryservice-microsoftad-enablesso): Boolean
@@ -131,7 +131,7 @@ The following example creates a Microsoft Active Directory in AWS, where the dir
 
 ```
 myDirectory: 
-  Type: "AWS::DirectoryService::MicrosoftAD"
+  Type: AWS::DirectoryService::MicrosoftAD
   Properties: 
     Name: "corp.example.com"
     Password: 

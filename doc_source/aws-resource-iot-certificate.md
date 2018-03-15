@@ -21,7 +21,7 @@ For information about working with X\.509 certificates, see [Authentication in A
 ### YAML<a name="aws-resource-iot-certificate-syntax.yaml"></a>
 
 ```
-Type: "AWS::IoT::Certificate"
+Type: AWS::IoT::Certificate
   Properties:
     [CertificateSigningRequest](#cfn-iot-certificate-certificatesigningrequest): String
     [Status](#cfn-iot-certificate-status): String
@@ -116,7 +116,7 @@ The following example declares an X\.509 certificate and its status\.
 AWSTemplateFormatVersion: "2010-09-09"
 Resources: 
   MyCertificate: 
-    Type: "AWS::IoT::Certificate"
+    Type: AWS::IoT::Certificate
     Properties: 
       CertificateSigningRequest: 
         Ref: "CSRParameter"

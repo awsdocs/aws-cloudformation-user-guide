@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cognito-userpoolgroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::Cognito::UserPoolGroup"
+Type: AWS::Cognito::UserPoolGroup
 Properties:
   [Description](#cfn-cognito-userpoolgroup-description): String
   [GroupName](#cfn-cognito-userpoolgroup-groupname): String

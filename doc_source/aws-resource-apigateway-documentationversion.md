@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-documentationversion-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::DocumentationVersion"
+Type: AWS::ApiGateway::DocumentationVersion
 Properties:
   [Description](#cfn-apigateway-documentationversion-description): String
   [DocumentationVersion](#cfn-apigateway-documentationversion-documentationversion): String

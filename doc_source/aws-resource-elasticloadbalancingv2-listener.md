@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticloadbalancingv2-listener-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElasticLoadBalancingV2::Listener"
+Type: AWS::ElasticLoadBalancingV2::Listener
 Properties: 
   [Certificates](#cfn-elasticloadbalancingv2-listener-certificates):
     - [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates.md)

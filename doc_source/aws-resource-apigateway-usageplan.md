@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-usageplan-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::UsagePlan"
+Type: AWS::ApiGateway::UsagePlan
 Properties:
   [ApiStages](#cfn-apigateway-usageplan-apistages): 
   - [ApiStage](aws-properties-apigateway-usageplan-apistage.md)

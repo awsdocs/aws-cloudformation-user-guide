@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-lambda-permission-syntax.yaml"></a>
 
 ```
-Type: "AWS::Lambda::Permission"
+Type: AWS::Lambda::Permission
 Properties: 
   [Action](#cfn-lambda-permission-action): String
   [EventSourceToken](#cfn-lambda-permission-eventsourcetoken): String

@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-wafregional-sizeconstraintset-syntax.yaml"></a>
 
 ```
-Type: "AWS::WAFRegional::SizeConstraintSet"
+Type: AWS::WAFRegional::SizeConstraintSet
 Properties: 
   [Name](#cfn-wafregional-sizeconstraintset-name): String
   [SizeConstraints](#cfn-wafregional-sizeconstraintset-sizeconstraints):
@@ -89,7 +89,7 @@ The following example checks that the body of an HTTP request equals `4096` byte
 
 ```
   MySizeConstraint: 
-    Type: "AWS::WAFRegional::SizeConstraintSet"
+    Type: AWS::WAFRegional::SizeConstraintSet
     Properties: 
       Name: "SizeConstraints"
       SizeConstraints: 
@@ -128,7 +128,7 @@ The following example associates the `MySizeConstraint` object with a web ACL ru
 
 ```
 SizeConstraintRule: 
-  Type: "AWS::WAFRegional::Rule"
+  Type: AWS::WAFRegional::Rule
   Properties: 
     Name: "SizeConstraintRule"
     MetricName: "SizeConstraintRule"
@@ -172,7 +172,7 @@ The following example associates the `SizeConstraintRule` rule with a web ACL\. 
 
 ```
 MyWebACL: 
-  Type: "AWS::WAFRegional::WebACL"
+  Type: AWS::WAFRegional::WebACL
   Properties: 
     Name: "Web ACL to allow requests with a specific size"
     DefaultAction: 

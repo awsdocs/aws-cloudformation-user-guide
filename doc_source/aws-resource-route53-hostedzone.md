@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-route53-hostedzone-syntax.yaml"></a>
 
 ```
-Type: "AWS::Route53::HostedZone"
+Type: AWS::Route53::HostedZone
 Properties: 
   [HostedZoneConfig](#cfn-route53-hostedzone-hostedzoneconfig):
     HostedZoneConfig
@@ -136,7 +136,7 @@ The following template snippet creates a private hosted zone for the `example.co
 
 ```
 DNS: 
-  Type: "AWS::Route53::HostedZone"
+  Type: AWS::Route53::HostedZone
   Properties: 
     HostedZoneConfig: 
       Comment: "My hosted zone for example.com"

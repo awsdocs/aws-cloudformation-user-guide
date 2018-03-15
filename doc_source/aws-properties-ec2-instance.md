@@ -59,7 +59,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-instance-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::Instance"
+Type: AWS::EC2::Instance
 Properties: 
   [Affinity](#cfn-ec2-instance-affinity): String
   [AvailabilityZone](#cfn-ec2-instance-availabilityzone): String
@@ -410,7 +410,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
   Description: "Ec2 block device mapping"
   Resources: 
     MyEC2Instance: 
-      Type: "AWS::EC2::Instance"
+      Type: AWS::EC2::Instance
       Properties: 
         ImageId: "ami-79fd7eee"
         KeyName: "testkey"
@@ -451,7 +451,7 @@ You can associate a public IP address with a network interface only if it has a 
 
 ```
   Ec2Instance: 
-    Type: "AWS::EC2::Instance"
+    Type: AWS::EC2::Instance
     Properties: 
       ImageId: 
         Fn::FindInMap: 

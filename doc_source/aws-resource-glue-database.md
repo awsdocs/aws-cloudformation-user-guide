@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-glue-database-syntax.yaml"></a>
 
 ```
-Type: "AWS::Glue::Database"
+Type: AWS::Glue::Database
 Properties:
   [DatabaseInput](#cfn-glue-database-databaseinput): 
     [*DatabaseInput*](aws-properties-glue-database-databaseinput.md)

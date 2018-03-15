@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-natgateway-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::NatGateway"
+Type: AWS::EC2::NatGateway
 Properties: 
   [AllocationId](#cfn-ec2-natgateway-allocationid): String
   [SubnetId](#cfn-ec2-natgateway-subnetid): String

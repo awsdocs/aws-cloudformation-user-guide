@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-sqs-queuepolicy-syntax.yaml"></a>
 
 ```
-Type: "AWS::SQS::QueuePolicy"
+Type: AWS::SQS::QueuePolicy
 Properties: 
   [PolicyDocument](#cfn-sqs-queuepolicy-policydoc): JSON
   [Queues](#cfn-sqs-queuepolicy-queues):

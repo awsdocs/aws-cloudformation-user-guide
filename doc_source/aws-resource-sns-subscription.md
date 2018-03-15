@@ -25,7 +25,7 @@ The `AWS::SNS::Subscription` resource subscribes an endpoint to an Amazon Simple
 ### YAML<a name="aws-resource-sns-subscription-syntax.yaml"></a>
 
 ```
-Type: "AWS::SNS::Subscription"
+Type: AWS::SNS::Subscription
 Properties:
   [Endpoint](#cfn-sns-endpoint): String
   [Protocol](#cfn-sns-protocol): String

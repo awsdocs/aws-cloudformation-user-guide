@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-resource-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::Resource"
+Type: AWS::ApiGateway::Resource
 Properties:
   [ParentId](#cfn-apigateway-resource-parentid): String
   [PathPart](#cfn-apigateway-resource-pathpart): String
@@ -84,7 +84,7 @@ The following example creates a `stack` resource for the `MyApi` API\.
 
 ```
 Stack: 
-  Type: "AWS::ApiGateway::Resource"
+  Type: AWS::ApiGateway::Resource
   Properties: 
     RestApiId: 
       Ref: "MyApi"

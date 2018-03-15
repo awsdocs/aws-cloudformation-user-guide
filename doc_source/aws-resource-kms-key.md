@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-kms-key-syntax.yaml"></a>
 
 ```
-Type: "AWS::KMS::Key"
+Type: AWS::KMS::Key
 Properties: 
   [Description](#cfn-kms-key-description): String
   [Enabled](#cfn-kms-key-enabled): Boolean
@@ -149,7 +149,7 @@ The following example creates a custom CMK, which permits the IAM user `Alice` t
 
 ```
 myKey: 
-  Type: "AWS::KMS::Key"
+  Type: AWS::KMS::Key
   Properties: 
     Description: "A sample key"
     KeyPolicy: 

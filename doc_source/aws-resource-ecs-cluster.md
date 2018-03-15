@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ecs-cluster-syntax.yaml"></a>
 
 ```
-Type: "AWS::ECS::Cluster"
+Type: AWS::ECS::Cluster
 Properties:
   [ClusterName](#cfn-ecs-cluster-clustername): String
 ```
@@ -79,5 +79,5 @@ The following sample declares an Amazon ECS cluster:
 
 ```
 MyCluster:
-  Type: "AWS::ECS::Cluster"
+  Type: AWS::ECS::Cluster
 ```

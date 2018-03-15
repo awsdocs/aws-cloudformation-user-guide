@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-waf-webacl-syntax.yaml"></a>
 
 ```
-Type: "AWS::WAF::WebACL"
+Type: AWS::WAF::WebACL
 Properties: 
   [DefaultAction](#cfn-waf-webacl-defaultaction):
     Action
@@ -122,7 +122,7 @@ The following example defines a web ACL that allows, by default, any web request
 
 ```
 MyWebACL: 
-  Type: "AWS::WAF::WebACL"
+  Type: AWS::WAF::WebACL
   Properties: 
     Name: "WebACL to with three rules"
     DefaultAction: 
@@ -209,7 +209,7 @@ The follow example associates the `MyWebACL` web ACL with a CloudFront distribut
 
 ```
 myDistribution: 
-  Type: "AWS::CloudFront::Distribution"
+  Type: AWS::CloudFront::Distribution
   Properties: 
     DistributionConfig: 
       WebACLId: 

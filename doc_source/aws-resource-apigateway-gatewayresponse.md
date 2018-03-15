@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-gatewayresponse-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::GatewayResponse"
+Type: AWS::ApiGateway::GatewayResponse
 Properties:
   [ResponseParameters](#cfn-apigateway-gatewayresponse-responseparameters): 
     String: String

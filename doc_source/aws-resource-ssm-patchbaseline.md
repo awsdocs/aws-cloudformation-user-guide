@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ssm-patchbaseline-syntax.yaml"></a>
 
 ```
-Type: "AWS::SSM::PatchBaseline"
+Type: AWS::SSM::PatchBaseline
 Properties:
   [OperatingSystem](#cfn-ssm-patchbaseline-operatingsystem): String
   [ApprovedPatches](#cfn-ssm-patchbaseline-approvedpatches): 

@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ses-template-syntax.yaml"></a>
 
 ```
-Type: "AWS::SES::Template"
+Type: AWS::SES::Template
 Properties:
   [Template](#cfn-ses-template-template): [*Template*](aws-properties-ses-template-template.md)
 ```

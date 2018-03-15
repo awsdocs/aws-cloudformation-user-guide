@@ -40,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-restapi-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::RestApi"
+Type: AWS::ApiGateway::RestApi
 Properties:
   [ApiKeySourceType](#cfn-apigateway-restapi-apikeysourcetype): String
   [BinaryMediaTypes](#cfn-apigateway-restapi-binarymediatypes):
@@ -173,7 +173,7 @@ The following example creates an API Gateway `RestApi` resource based on an Open
 
 ```
 MyRestApi: 
-  Type: "AWS::ApiGateway::RestApi"
+  Type: AWS::ApiGateway::RestApi
   Properties:
     Body:
       OpenAPI specification    

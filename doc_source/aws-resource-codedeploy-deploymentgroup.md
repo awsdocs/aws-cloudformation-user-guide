@@ -38,7 +38,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-codedeploy-deploymentgroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::CodeDeploy::DeploymentGroup"
+Type: AWS::CodeDeploy::DeploymentGroup
 Properties:
   [AlarmConfiguration](#cfn-codedeploy-deploymentgroup-alarmconfiguration):
     [*AlarmConfiguration*](aws-properties-codedeploy-deploymentgroup-alarmconfiguration.md)
@@ -190,7 +190,7 @@ The following example creates a deployment group that is associated with Auto Sc
 
 ```
 DeploymentGroup: 
-  Type: "AWS::CodeDeploy::DeploymentGroup"
+  Type: AWS::CodeDeploy::DeploymentGroup
   Properties: 
     ApplicationName: 
       Ref: "ApplicationName"
@@ -249,7 +249,7 @@ The following example creates a deployment group that uses instance tags to asso
 
 ```
 DeploymentGroup: 
-  Type: "AWS::CodeDeploy::DeploymentGroup"
+  Type: AWS::CodeDeploy::DeploymentGroup
   Properties: 
     ApplicationName: 
       Ref: "Application"

@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-guardduty-master-syntax.yaml"></a>
 
 ```
-Type: "AWS::GuardDuty::Master"
+Type: AWS::GuardDuty::Master
 Properties:
   [DetectorId](#cfn-guardduty-master-detectorid): String
   [MasterId](#cfn-guardduty-master-masterid): String
@@ -86,7 +86,7 @@ The following example shows how to declare an `AWS::GuardDuty::Master` resource 
 
 ```
 GDmaster:
-  Type: "AWS::GuardDuty::Master"
+  Type: AWS::GuardDuty::Master
   Properties:
     DetectorId: "a12abc34d567e8fa901bc2d34e56789f0"
     MasterId: "012345678901"

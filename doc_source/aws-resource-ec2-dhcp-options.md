@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-dhcpoptions-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::DHCPOptions"
+Type: AWS::EC2::DHCPOptions
 Properties:
   [DomainName](#cfn-ec2-dhcpoptions-domainname): String
   [DomainNameServers](#cfn-ec2-dhcpoptions-domainnameservers):
@@ -155,7 +155,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 AWSTemplateFormatVersion: "2010-09-09"
 Resources: 
   myDhcpOptions: 
-    Type: "AWS::EC2::DHCPOptions"
+    Type: AWS::EC2::DHCPOptions
     Properties: 
       DomainName: example.com
       DomainNameServers: 

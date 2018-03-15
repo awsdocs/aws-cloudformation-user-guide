@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ssm-maintenancewindow-syntax.yaml"></a>
 
 ```
-Type: "AWS::SSM::MaintenanceWindow"
+Type: AWS::SSM::MaintenanceWindow
 Properties:
   [Description](#cfn-ssm-maintenancewindow-description): String
   [AllowUnassociatedTargets](#cfn-ssm-maintenancewindow-allowunassociatedtargets): Boolean

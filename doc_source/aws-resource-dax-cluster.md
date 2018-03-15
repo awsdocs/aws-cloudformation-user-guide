@@ -31,7 +31,7 @@ For information about creating a DAX cluster, see [Creating a DAX Cluster](http:
 ### YAML<a name="aws-resource-dax-cluster-syntax.yaml"></a>
 
 ```
-Type: "AWS::DAX::Cluster"
+Type: AWS::DAX::Cluster
 Properties:
       [AvailabilityZones](#cfn-dax-cluster-availability-zones): [ String, ... ]
       [ClusterName](#cfn-dax-cluster-cluster-name): String

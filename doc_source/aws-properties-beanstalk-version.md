@@ -88,7 +88,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ```
 myAppVersion: 
-  Type: "AWS::ElasticBeanstalk::ApplicationVersion"
+  Type: AWS::ElasticBeanstalk::ApplicationVersion
   Properties: 
     ApplicationName: 
       Ref: "myApp"

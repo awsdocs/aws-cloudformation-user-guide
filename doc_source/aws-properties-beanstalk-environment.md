@@ -37,7 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticbeanstalk-environment-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElasticBeanstalk::Environment"
+Type: AWS::ElasticBeanstalk::Environment
 Properties:
   [ApplicationName](#cfn-beanstalk-environment-applicationname): String
   [CNAMEPrefix](#cfn-beanstalk-environment-cnameprefix): String
@@ -171,7 +171,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
 #### YAML<a name="aws-resource-elasticbeanstalk-environment-example1.yaml"></a>
 
 ```
-Type: "AWS::ElasticBeanstalk::Environment"
+Type: AWS::ElasticBeanstalk::Environment
 Properties: 
   ApplicationName: 
     Ref: sampleApplication
@@ -206,7 +206,7 @@ Properties:
 #### YAML<a name="aws-resource-elasticbeanstalk-environment-example2.yaml"></a>
 
 ```
-Type: "AWS::ElasticBeanstalk::Environment"
+Type: AWS::ElasticBeanstalk::Environment
 Properties: 
   ApplicationName: 
     Ref: sampleApplication
