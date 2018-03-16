@@ -44,4 +44,6 @@ Certain stack operations, such as stack updates, should be initiated from the ro
 
 1. Sign in to the AWS Management Console and open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation/](https://console.aws.amazon.com/cloudformation/)\. Click the name of the root stack whose nested stacks you want to view\.
 
-1. Expand the **Nested stacks** section\.
+1. Expand the **Resources** section\.
+
+1. Look for resources of type **AWS::CloudFormation::Stack**\.
