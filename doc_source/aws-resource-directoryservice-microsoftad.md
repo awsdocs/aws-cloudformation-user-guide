@@ -1,6 +1,6 @@
 # AWS::DirectoryService::MicrosoftAD<a name="aws-resource-directoryservice-microsoftad"></a>
 
-The `AWS::DirectoryService::MicrosoftAD` resource creates a Microsoft Active Directory in AWS so that your directory users and groups can access the AWS Management Console and AWS applications using their existing credentials\. For more information, see [What Is AWS Directory Service?](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html) in the *AWS Directory Service Administration Guide*\.
+The `AWS::DirectoryService::MicrosoftAD` resource creates a Enterprise Edition Microsoft Active Directory in AWS so that your directory users and groups can access the AWS Management Console and AWS applications using their existing credentials\. For more information, see [What Is AWS Directory Service?](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html) in the *AWS Directory Service Administration Guide*\.
 
 
 + [Syntax](#aws-resource-directoryservice-microsoftad-syntax)
