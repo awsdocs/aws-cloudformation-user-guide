@@ -7,6 +7,7 @@ Configuration sets
 **Topics**
 + [Syntax](#aws-resource-ses-configurationset-syntax)
 + [Properties](#aws-resource-ses-configurationset-properties)
++ [Return Values](#aws-resource-ses-configurationset-returnvalues)
 + [Example](#aws-resource-ses-configurationset-examples)
 + [See Also](#aws-resource-ses-configurationset-seealso)
 
@@ -42,6 +43,14 @@ The name of the configuration set\. The name must meet the following requirement
  *Required*: No  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+
+## Return Values<a name="aws-resource-ses-configurationset-returnvalues"></a>
+
+### Ref<a name="aws-resource-ses-configurationset-ref"></a>
+
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the name of the configuration set, such as `MyConfigurationSet-abcDEFghiJKL`\.
+
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="aws-resource-ses-configurationset-examples"></a>
 
