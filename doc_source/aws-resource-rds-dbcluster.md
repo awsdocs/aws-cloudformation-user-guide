@@ -221,7 +221,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 The connection endpoint for the DB cluster\. For example: `mystack-mydbcluster-1apw1j4phylrk.cg034hpkmmjt.``us-east-2``.rds.amazonaws.com`\.
 
 `Endpoint.Port`  
-The port number on which the Amazon Redshift cluster accepts connections\. For example: `5439`\.
+The port number on which the DB cluster accepts connections\. For example: `3306`\.
 
 `ReadEndpoint.Address`  
 The reader endpoint for the DB cluster\. For example: `mystack-mydbcluster-ro-1apw1j4phylrk.cg034hpkmmjt.``us-east-2``.rds.amazonaws.com`\.
