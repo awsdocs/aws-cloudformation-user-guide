@@ -47,11 +47,12 @@ Properties:
 
 ## Properties<a name="aws-resource-ec2-subnet-properties"></a>
 
-`AssignIpv6AddressOnCreation`  <a name="cfn-ec2-subnet-assignipv6addressoncreation"></a>
-Indicates whether a network interface created in this subnet receives an IPv6 address\.  
-*Required*: Conditional\. If `AssignIpv6AddressOnCreation` is `true`, `Ipv6CidrBlock` must be specified\.  
+`AssignIpv6AddressOnCreation`  
+Indicates whether a network interface created in this subnet receives an IPv6 address\. By default, the value is `false`\.  
+*Required*: No   
 *Type*: Boolean  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+ *Update requires*: No interruption   
+If `AssignIpv6AddressOnCreation` is specified. `MapPublicIpOnLaunch` cannot be specified\.
 
 `AvailabilityZone`  <a name="cfn-ec2-subnet-availabilityzone"></a>
 The availability zone in which you want the subnet\. Default: AWS selects a zone for you \(recommended\)\.  
@@ -69,15 +70,16 @@ If you update this property, you must also update the `AvailabilityZone` propert
 
 `Ipv6CidrBlock`  <a name="cfn-ec2-subnet-ipv6cidrblock"></a>
 The IPv6 network range for the subnet, in CIDR notation\. The subnet size must use a `/64` prefix length\.  
-*Required*: No  
+*Required*: Conditional\. If `AssignIpv6AddressOnCreation` is `true`, `Ipv6CidrBlock` must be specified\.   
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `MapPublicIpOnLaunch`  <a name="cfn-ec2-subnet-mappubliciponlaunch"></a>
 Indicates whether instances that are launched in this subnet receive a public IP address\. By default, the value is `false`\.  
-*Required: *No  
+*Required*: No  
 *Type*: Boolean  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)  
+If `MapPublicIpOnLaunch` is specified. `AssignIpv6AddressOnCreation` cannot be specified\.
 
 `Tags`  <a name="cfn-ec2-subnet-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this subnet\.  
