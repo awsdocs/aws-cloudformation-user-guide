@@ -113,11 +113,12 @@ Specifies the type of load balancer to create\. Valid values are `application` a
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`IpAddressType`  <a name="cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype"></a>
-\[Application Load Balancers\] The type of IP addresses that are used by the load balancer's subnets, such as `ipv4` \(for IPv4 addresses\) or `dualstack` \(for IPv4 and IPv6 addresses\)\. For valid values, see the `IpAddressType` parameter for the `[CreateLoadBalancer](http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateLoadBalancer.html)` action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
+`IpAddressType`  
+\[Application Load Balancers\] The type of IP addresses that are used by the load balancer's subnets, such as `ipv4` \(for IPv4 addresses\) or `dualstack` \(for IPv4 and IPv6 addresses\)\. For valid values, see the `IpAddressType` parameter for the `[CreateLoadBalancer](http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateLoadBalancer.html)` action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\. Default is `ipv4`\.   
 *Required: *No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+ *Update requires*: No interruption   
+If `Scheme` is `internal`. `IpAddressType` must use `ipv4`\.
 
 ## Return Values<a name="w3ab2c21c10d603c12"></a>
 
