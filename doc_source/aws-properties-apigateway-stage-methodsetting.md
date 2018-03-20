@@ -10,82 +10,82 @@ The `MethodSettings` property of the [AWS::ApiGateway::Stage](aws-resource-apiga
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-cachedataencrypted)" : Boolean,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-cachettlinseconds)" : Integer,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-cachingenabled)" : Boolean,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-datatraceenabled)" : Boolean,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-httpmethod)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-logginglevel)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-metricsenabled)" : Boolean,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-resourcepath)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-throttlingburstlimit)" : Integer,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-throttlingratelimit)" : Number
+  "[CacheDataEncrypted](#cfn-apigateway-stage-methodsetting-cachedataencrypted)" : Boolean,
+  "[CacheTtlInSeconds](#cfn-apigateway-stage-methodsetting-cachettlinseconds)" : Integer,
+  "[CachingEnabled](#cfn-apigateway-stage-methodsetting-cachingenabled)" : Boolean,
+  "[DataTraceEnabled](#cfn-apigateway-stage-methodsetting-datatraceenabled)" : Boolean,
+  "[HttpMethod](#cfn-apigateway-stage-methodsetting-httpmethod)" : String,
+  "[LoggingLevel](#cfn-apigateway-stage-methodsetting-logginglevel)" : String,
+  "[MetricsEnabled](#cfn-apigateway-stage-methodsetting-metricsenabled)" : Boolean,
+  "[ResourcePath](#cfn-apigateway-stage-methodsetting-resourcepath)" : String,
+  "[ThrottlingBurstLimit](#cfn-apigateway-stage-methodsetting-throttlingburstlimit)" : Integer,
+  "[ThrottlingRateLimit](#cfn-apigateway-stage-methodsetting-throttlingratelimit)" : Number
 }
 ```
 
 ### YAML<a name="aws-properties-apigateway-stage-methodsetting-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-cachedataencrypted): Boolean
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-cachettlinseconds): Integer
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-cachingenabled): Boolean
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-datatraceenabled): Boolean
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-httpmethod): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-logginglevel): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-metricsenabled): Boolean
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-resourcepath): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-throttlingburstlimit): Integer
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsetting-throttlingratelimit): Number
+[CacheDataEncrypted](#cfn-apigateway-stage-methodsetting-cachedataencrypted): Boolean
+[CacheTtlInSeconds](#cfn-apigateway-stage-methodsetting-cachettlinseconds): Integer
+[CachingEnabled](#cfn-apigateway-stage-methodsetting-cachingenabled): Boolean
+[DataTraceEnabled](#cfn-apigateway-stage-methodsetting-datatraceenabled): Boolean
+[HttpMethod](#cfn-apigateway-stage-methodsetting-httpmethod): String
+[LoggingLevel](#cfn-apigateway-stage-methodsetting-logginglevel): String
+[MetricsEnabled](#cfn-apigateway-stage-methodsetting-metricsenabled): Boolean
+[ResourcePath](#cfn-apigateway-stage-methodsetting-resourcepath): String
+[ThrottlingBurstLimit](#cfn-apigateway-stage-methodsetting-throttlingburstlimit): Integer
+[ThrottlingRateLimit](#cfn-apigateway-stage-methodsetting-throttlingratelimit): Number
 ```
 
 ## Properties<a name="w3ab2c21c14c36b9"></a>
 
-`CacheDataEncrypted`  
+`CacheDataEncrypted`  <a name="cfn-apigateway-stage-methodsetting-cachedataencrypted"></a>
 Indicates whether the cached responses are encrypted\.  
 *Required: *No  
 *Type*: Boolean
 
-`CacheTtlInSeconds`  
+`CacheTtlInSeconds`  <a name="cfn-apigateway-stage-methodsetting-cachettlinseconds"></a>
 The time\-to\-live \(TTL\) period, in seconds, that specifies how long API Gateway caches responses\.  
 *Required: *No  
 *Type*: Integer
 
-`CachingEnabled`  
+`CachingEnabled`  <a name="cfn-apigateway-stage-methodsetting-cachingenabled"></a>
 Indicates whether responses are cached and returned for requests\. You must enable a cache cluster on the stage to cache responses\.  
 *Required: *No  
 *Type*: Boolean
 
-`DataTraceEnabled`  
+`DataTraceEnabled`  <a name="cfn-apigateway-stage-methodsetting-datatraceenabled"></a>
 Indicates whether data trace logging is enabled for methods in the stage\. API Gateway pushes these logs to Amazon CloudWatch Logs\.  
 *Required: *No  
 *Type*: Boolean
 
-`HttpMethod`  
+`HttpMethod`  <a name="cfn-apigateway-stage-methodsetting-httpmethod"></a>
 The HTTP method\.  
 *Required: *Yes  
 *Type*: String
 
-`LoggingLevel`  
+`LoggingLevel`  <a name="cfn-apigateway-stage-methodsetting-logginglevel"></a>
 The logging level for this method\. For valid values, see the `loggingLevel` property of the [Stage](http://docs.aws.amazon.com/apigateway/api-reference/resource/stage/#loggingLevel) resource in the *Amazon API Gateway API Reference*\.  
 *Required: *No  
 *Type*: String
 
-`MetricsEnabled`  
+`MetricsEnabled`  <a name="cfn-apigateway-stage-methodsetting-metricsenabled"></a>
 Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage\.  
 *Required: *No  
 *Type*: Boolean
 
-`ResourcePath`  
+`ResourcePath`  <a name="cfn-apigateway-stage-methodsetting-resourcepath"></a>
 The resource path for this method\. Forward slashes \(`/`\) are encoded as `~1` and the initial slash must include a forward slash\. For example, the path value `/resource/subresource` must be encoded as `/~1resource~1subresource`\. To specify the root path, use only a slash \(`/`\)\.  
 *Required: *Yes  
 *Type*: String
 
-`ThrottlingBurstLimit`  
+`ThrottlingBurstLimit`  <a name="cfn-apigateway-stage-methodsetting-throttlingburstlimit"></a>
 The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account\. For more information, see [Manage API Request Throttling](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
 *Required: *No  
 *Type*: Integer
 
-`ThrottlingRateLimit`  
+`ThrottlingRateLimit`  <a name="cfn-apigateway-stage-methodsetting-throttlingratelimit"></a>
 The number of steady\-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account\. For more information, see [Manage API Request Throttling](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
 *Required: *No  
 *Type*: Number

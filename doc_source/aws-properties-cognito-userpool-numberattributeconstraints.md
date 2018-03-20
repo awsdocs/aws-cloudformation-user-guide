@@ -8,26 +8,26 @@ The `NumberAttributeConstraints` property type defines the number attribute cons
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-numberattributeconstraints-maxvalue)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-numberattributeconstraints-minvalue)" : String
+  "[MaxValue](#cfn-cognito-userpool-numberattributeconstraints-maxvalue)" : String,
+  "[MinValue](#cfn-cognito-userpool-numberattributeconstraints-minvalue)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-cognito-userpool-numberattributeconstraints-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-numberattributeconstraints-maxvalue): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-numberattributeconstraints-minvalue): String
+[MaxValue](#cfn-cognito-userpool-numberattributeconstraints-maxvalue): String
+[MinValue](#cfn-cognito-userpool-numberattributeconstraints-minvalue): String
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-numberattributeconstraints-properties"></a>
 
-`MaxValue`  
+`MaxValue`  <a name="cfn-cognito-userpool-numberattributeconstraints-maxvalue"></a>
 The maximum value of an attribute that is of the number data type\.  
 *Type*: String  
 *Required: *No
 
-`MinValue`  
+`MinValue`  <a name="cfn-cognito-userpool-numberattributeconstraints-minvalue"></a>
 The minimum value of an attribute that is of the number data type\.  
 *Type*: String  
 *Required: *No

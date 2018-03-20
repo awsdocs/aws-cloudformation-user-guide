@@ -11,40 +11,40 @@ On January 1, 2016, the Swagger Specification was donated to the [OpenAPI initia
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-restapi-s3location-bucket)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-restapi-s3location-etag)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-restapi-s3location-key)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-restapi-s3location-version)" : String
+  "[Bucket](#cfn-apigateway-restapi-s3location-bucket)" : String,
+  "[ETag](#cfn-apigateway-restapi-s3location-etag)" : String,
+  "[Key](#cfn-apigateway-restapi-s3location-key)" : String,
+  "[Version](#cfn-apigateway-restapi-s3location-version)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-apitgateway-restapi-bodys3location-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-restapi-s3location-bucket): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-restapi-s3location-etag): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-restapi-s3location-key): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-restapi-s3location-version): String
+[Bucket](#cfn-apigateway-restapi-s3location-bucket): String
+[ETag](#cfn-apigateway-restapi-s3location-etag): String
+[Key](#cfn-apigateway-restapi-s3location-key): String
+[Version](#cfn-apigateway-restapi-s3location-version): String
 ```
 
 ## Properties<a name="w3ab2c21c14c32b9"></a>
 
-`Bucket`  
+`Bucket`  <a name="cfn-apigateway-restapi-s3location-bucket"></a>
 The name of the S3 bucket where the OpenAPI file is stored\.  
 *Required: *No  
 *Type*: String
 
-`ETag`  
+`ETag`  <a name="cfn-apigateway-restapi-s3location-etag"></a>
 The Amazon S3 ETag \(a file checksum\) of the OpenAPI file\. If you don't specify a value, API Gateway skips ETag validation of your OpenAPI file\.  
 *Required: *No  
 *Type*: String
 
-`Key`  
+`Key`  <a name="cfn-apigateway-restapi-s3location-key"></a>
 The file name of the OpenAPI file \(Amazon S3 object name\)\.  
 *Required: *No  
 *Type*: String
 
-`Version`  
+`Version`  <a name="cfn-apigateway-restapi-s3location-version"></a>
 For versioning\-enabled buckets, a specific version of the OpenAPI file\.  
 *Required: *No  
 *Type*: String

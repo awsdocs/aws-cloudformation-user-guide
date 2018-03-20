@@ -12,36 +12,36 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-maxcountrule-deletesourcefroms3)" : Boolean,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-maxcountrule-enabled)" : Boolean,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-maxcountrule-maxcount)" : Integer
+  "[DeleteSourceFromS3](#cfn-elasticbeanstalk-application-maxcountrule-deletesourcefroms3)" : Boolean,
+  "[Enabled](#cfn-elasticbeanstalk-application-maxcountrule-enabled)" : Boolean,
+  "[MaxCount](#cfn-elasticbeanstalk-application-maxcountrule-maxcount)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-elasticbeanstalk-application-maxcountrule-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-maxcountrule-deletesourcefroms3): Boolean
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-maxcountrule-enabled): Boolean
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-maxcountrule-maxcount): Integer
+[DeleteSourceFromS3](#cfn-elasticbeanstalk-application-maxcountrule-deletesourcefroms3): Boolean
+[Enabled](#cfn-elasticbeanstalk-application-maxcountrule-enabled): Boolean
+[MaxCount](#cfn-elasticbeanstalk-application-maxcountrule-maxcount): Integer
 ```
 
 ## Properties<a name="aws-properties-elasticbeanstalk-application-maxcountrule-properties"></a>
 
-`DeleteSourceFromS3`  
+`DeleteSourceFromS3`  <a name="cfn-elasticbeanstalk-application-maxcountrule-deletesourcefroms3"></a>
 Set to `true` to delete a version's source bundle from Amazon S3 when Elastic Beanstalk deletes the application version\.  
  *Required*: No  
  *Type*: Boolean  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Enabled`  
+`Enabled`  <a name="cfn-elasticbeanstalk-application-maxcountrule-enabled"></a>
 Specify `true` to apply the rule, or `false` to disable it\.  
  *Required*: No  
  *Type*: Boolean  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`MaxCount`  
+`MaxCount`  <a name="cfn-elasticbeanstalk-application-maxcountrule-maxcount"></a>
 Specify the maximum number of application versions to retain\.  
  *Required*: No  
  *Type*: Integer  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

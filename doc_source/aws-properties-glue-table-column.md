@@ -12,41 +12,41 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-column-comment)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-column-type)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-column-name)" : String
+  "[Comment](#cfn-glue-table-column-comment)" : String,
+  "[Type](#cfn-glue-table-column-type)" : String,
+  "[Name](#cfn-glue-table-column-name)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-glue-table-column-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-column-comment): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-column-type): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-column-name): String
+[Comment](#cfn-glue-table-column-comment): String
+[Type](#cfn-glue-table-column-type): String
+[Name](#cfn-glue-table-column-name): String
 ```
 
 ## Properties<a name="aws-properties-glue-table-column-properties"></a>
 
 For more information, see [Column Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-Column) in the *AWS Glue Developer Guide*\.
 
-`Comment`  
+`Comment`  <a name="cfn-glue-table-column-comment"></a>
 A free\-form text comment\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Type`  
+`Type`  <a name="cfn-glue-table-column-type"></a>
 The data type of the column data\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Name`  
+`Name`  <a name="cfn-glue-table-column-name"></a>
 The name of the column\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-glue-table-column-seealso"></a>
 

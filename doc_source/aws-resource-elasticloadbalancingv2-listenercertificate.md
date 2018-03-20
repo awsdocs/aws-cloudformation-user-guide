@@ -17,8 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ElasticLoadBalancingV2::ListenerCertificate",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listenercertificate-certificates)" : [ Certificate, ... ]
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listenercertificate-listenerarn)" : String
+    "[Certificates](#cfn-elasticloadbalancingv2-listenercertificate-certificates)" : [ [*Certificate*](aws-properties-elasticloadbalancingv2-listenercertificate-certificate.md), ... ]
+    "[ListenerArn](#cfn-elasticloadbalancingv2-listenercertificate-listenerarn)" : String
   }
 }
 ```
@@ -28,24 +28,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ElasticLoadBalancingV2::ListenerCertificate"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listenercertificate-certificates): 
-    - Certificate
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listenercertificate-listenerarn): String
+  [Certificates](#cfn-elasticloadbalancingv2-listenercertificate-certificates): 
+    - [*Certificate*](aws-properties-elasticloadbalancingv2-listenercertificate-certificate.md)
+  [ListenerArn](#cfn-elasticloadbalancingv2-listenercertificate-listenerarn): String
 ```
 
 ## Properties<a name="aws-resource-elasticloadbalancingv2-listenercertificate-properties"></a>
 
-`Certificates`  
+`Certificates`  <a name="cfn-elasticloadbalancingv2-listenercertificate-certificates"></a>
 Certificates specified for the listener\. Duplicates not allowed\.  
  *Required*: Yes  
  *Type*: List of [Elastic Load Balancing ListenerCertificate Certificate](aws-properties-elasticloadbalancingv2-listenercertificate-certificate.md)  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`ListenerArn`  
+`ListenerArn`  <a name="cfn-elasticloadbalancingv2-listenercertificate-listenerarn"></a>
 The Amazon Resource Name \(ARN\) of the listener\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## Example<a name="aws-resource-elasticloadbalancingv2-listenercertificate-examples"></a>
 

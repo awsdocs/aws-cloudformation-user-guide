@@ -51,7 +51,7 @@ To resolve this situation, try the following:
 
 + You cannot delete stacks that have termination protection enabled\. If you attempt to delete a stack with termination protection enabled, the deletion fails and the stack\-\-including its status\-\-remains unchanged\. Disable termination protection on the stack, then perform the delete operation again\. 
 
-  This includes nested stacks whose root stacks have termination protection enabled\. Disable termination protection on the root stack, then perform the delete operation again\. It is strongly recommended that you do not delete nested stacks directly, but only delete them as part of deleting the root stack and all its resources\.
+  This includes [nested stacks](using-cfn-nested-stacks.md) whose root stacks have termination protection enabled\. Disable termination protection on the root stack, then perform the delete operation again\. It is strongly recommended that you do not delete nested stacks directly, but only delete them as part of deleting the root stack and all its resources\.
 
   For more information, see [Protecting a Stack From Being Deleted](using-cfn-protect-stacks.md)\.
 
@@ -75,7 +75,7 @@ When you work with an AWS CloudFormation stack, you not only need permissions to
 
 ### Invalid Value or Unsupported Resource Property<a name="troubleshooting-errors-invalid-value-or-unsupported-resource-property"></a>
 
-When you create or update an AWS CloudFormation stack, your stack can fail due to invalid input parameters, unsupported resource property names, or unsupported resource property values\. For input parameters, verify that the resource exists\. For example, when you specify an Amazon EC2 key pair or VPC ID, the resource must exist in your account and in the region in which you are creating or updating your stack\. You can use AWS\-specific parameter types to ensure that you use valid values\.
+When you create or update an AWS CloudFormation stack, your stack can fail due to invalid input parameters, unsupported resource property names, or unsupported resource property values\. For input parameters, verify that the resource exists\. For example, when you specify an Amazon EC2 key pair or VPC ID, the resource must exist in your account and in the region in which you are creating or updating your stack\. You can use AWS\-specific [parameter types](parameters-section-structure.md#parameters-section-structure-syntax) to ensure that you use valid values\.
 
 For resource property names and values, update your template to use valid names and values\. For a list of all the resources and their property names, see [AWS Resource Types Reference](aws-template-resource-type-ref.md)\.
 
@@ -93,11 +93,11 @@ A nested stack failed to roll back\. Because of potential resource dependencies 
 
 A nested stack might fail to roll back because of changes that were made outside of AWS CloudFormation, when the stack template doesn't accurately reflect the state of the stack\. A nested stack might also fail if an Auto Scaling group in a nested stack had an insufficient resource signal timeout period when the group was created or updated\.
 
-To fix the stack, contact AWS customer support\.
+To fix the stack, contact [AWS customer support](#contacting-support)\.
 
 ### No Updates to Perform<a name="troubleshooting-errors-no-updates-to-perform"></a>
 
-To update an AWS CloudFormation stack, you must submit template or parameter value changes to AWS CloudFormation\. However, AWS CloudFormation won't recognize some template changes as an update, such as changes to a deletion policy, update policy, condition declaration, or output declaration\. If you need to make such changes without making any other change, you can add or modify a metadata attribute for any of your resources\.
+To update an AWS CloudFormation stack, you must submit template or parameter value changes to AWS CloudFormation\. However, AWS CloudFormation won't recognize some template changes as an update, such as changes to a deletion policy, update policy, condition declaration, or output declaration\. If you need to make such changes without making any other change, you can add or modify a [metadata](aws-attribute-metadata.md) attribute for any of your resources\.
 
 For more information about modifying templates during an update, see [Modifying a Stack Template](using-cfn-updating-stacks-get-template.md)\.
 
@@ -121,9 +121,9 @@ If the AWS services have been running successfully, check if your stack contains
 
 + `AWS::Redshift::Cluster` for update operations
 
-Operations for these resources might take longer than the default timeout period\. The timeout period depends on the resource and credentials that you use\. To extend the timeout period, specify a service role when you perform the stack operation\. If you're already using a service role, or if your stack contains a resource that isn't listed, contact AWS customer support\.
+Operations for these resources might take longer than the default timeout period\. The timeout period depends on the resource and credentials that you use\. To extend the timeout period, specify a [service role](using-iam-servicerole.md) when you perform the stack operation\. If you're already using a service role, or if your stack contains a resource that isn't listed, contact [AWS customer support](#contacting-support)\.
 
-If your stack is in the `UPDATE_ROLLBACK_FAILED` state, see Update Rollback Failed\.
+If your stack is in the `UPDATE_ROLLBACK_FAILED` state, see [Update Rollback Failed](#troubleshooting-errors-update-rollback-failed)\.
 
 ### Security Group Does Not Exist in VPC<a name="troubleshooting-errors-security-group-does-not-exist-in-vpc"></a>
 
@@ -169,7 +169,7 @@ To resolve this situation, try the following:
 
 + Ensure that the AMI you're using has the AWS CloudFormation helper scripts installed\. If the AMI doesn't include the helper scripts, you can also download them to your instance\. For more information, see [CloudFormation Helper Scripts Reference](cfn-helper-scripts-reference.md)\.
 
-+ Verify that the `cfn-signal` command was successfully run on the instance\. You can view logs, such as `/var/log/cloud-init.log` or `/var/log/cfn-init.log`, to help you debug the instance launch\. You can retrieve the logs by logging in to your instance, but you must disable rollback on failure or else AWS CloudFormation deletes the instance after your stack fails to create\. You can also [publish the logs](https://aws.amazon.com/blogs/devops/view-cloudformation-logs-in-the-console/) to Amazon CloudWatch\. For Windows, you can view cfn logs in `C:\cfn\log` and EC2Config service logs in `%ProgramFiles%\Amazon\EC2ConfigService`\.
++ Verify that the `cfn-signal` command was successfully run on the instance\. You can view logs, such as `/var/log/cloud-init.log` or `/var/log/cfn-init.log`, to help you debug the instance launch\. You can retrieve the logs by logging in to your instance, but you must [disable rollback on failure](cfn-console-add-tags.md) or else AWS CloudFormation deletes the instance after your stack fails to create\. You can also [publish the logs](https://aws.amazon.com/blogs/devops/view-cloudformation-logs-in-the-console/) to Amazon CloudWatch\. For Windows, you can view cfn logs in `C:\cfn\log` and EC2Config service logs in `%ProgramFiles%\Amazon\EC2ConfigService`\.
 
 + Verify that the instance has a connection to the Internet\. If the instance is in a VPC, the instance should be able to connect to the Internet through a NAT device if it's is in a private subnet or through an Internet gateway if it's in a public subnet\. To test the instance's Internet connection, try to access a public web page, such as `http://aws.amazon.com`\. For example, you can run the following command on the instance\. It should return an HTTP 200 status code\.
 
@@ -183,7 +183,7 @@ To resolve this situation, try the following:
 
 If you have AWS Premium Support, you can create a technical support case at [https://console\.aws\.amazon\.com/support/home\#/](https://console.aws.amazon.com/support/home#/)\. Before you contact support, gather the following information:
 
-+ The ID of the stack\. You can find the stack ID in the **Overview** tab of the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation/)\. For more information, see \.
++ The ID of the stack\. You can find the stack ID in the **Overview** tab of the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation/)\. For more information, see [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)\.
 **Important**  
 Do not make changes to the stack outside of AWS CloudFormation\. Making changes to your stack outside of AWS CloudFormation might put your stack in an unrecoverable state\.
 

@@ -20,7 +20,7 @@ This example demonstrates how to:
 
 + Retrieve an IP for the instance with Amazon Elastic IP \(EIP\)\.
 
-The AWS CloudFormation helper script `cfn-init` is used to perform each of these actions, based on information in the AWS::CloudFormation::Init resource in the Windows Single Server Sharepoint Foundation template\.
+The AWS CloudFormation helper script `cfn-init` is used to perform each of these actions, based on information in the [AWS::CloudFormation::Init](aws-resource-init.md) resource in the Windows Single Server Sharepoint Foundation template\.
 
 The AWS::CloudFormation::Init section is named "SharePointFoundation", and begins with a standard declaration:
 

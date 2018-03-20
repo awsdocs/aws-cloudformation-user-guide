@@ -12,29 +12,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-autorollbackconfiguration-enabled)" : Boolean,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-autorollbackconfiguration-events)" : [ String, ... ]
+  "[Enabled](#cfn-codedeploy-deploymentgroup-autorollbackconfiguration-enabled)" : Boolean,
+  "[Events](#cfn-codedeploy-deploymentgroup-autorollbackconfiguration-events)" : [ String, ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-autorollbackconfiguration-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-autorollbackconfiguration-enabled): Boolean
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-autorollbackconfiguration-events): 
+[Enabled](#cfn-codedeploy-deploymentgroup-autorollbackconfiguration-enabled): Boolean
+[Events](#cfn-codedeploy-deploymentgroup-autorollbackconfiguration-events): 
   - String
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-autorollbackconfiguration-properties"></a>
 
-`Enabled`  
+`Enabled`  <a name="cfn-codedeploy-deploymentgroup-autorollbackconfiguration-enabled"></a>
 Indicates whether a defined automatic rollback configuration is currently enabled\.  
  *Required*: No  
  *Type*: Boolean  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Events`  
+`Events`  <a name="cfn-codedeploy-deploymentgroup-autorollbackconfiguration-events"></a>
 The event type or types that trigger a rollback\. Valid values are `DEPLOYMENT_FAILURE`, `DEPLOYMENT_STOP_ON_ALARM`, or `DEPLOYMENT_STOP_ON_REQUEST`\.  
  *Required*: No  
  *Type*: List of String values  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

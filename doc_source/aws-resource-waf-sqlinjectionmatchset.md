@@ -4,9 +4,9 @@ The `AWS::WAF::SqlInjectionMatchSet` resource creates an AWS WAF `SqlInjectionMa
 
 
 + [Syntax](#aws-resource-waf-sqlinjectionmatchset-syntax)
-+ [Properties](#w3ab2c21c10e1055b9)
-+ [Return Values](#w3ab2c21c10e1055c11)
-+ [Examples](#w3ab2c21c10e1055c13)
++ [Properties](#w3ab2c21c10e1083b9)
++ [Return Values](#w3ab2c21c10e1083c11)
++ [Examples](#w3ab2c21c10e1083c13)
 
 ## Syntax<a name="aws-resource-waf-sqlinjectionmatchset-syntax"></a>
 
@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAF::SqlInjectionMatchSet",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-waf-sqlinjectionmatchset-name)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples)" : [ SqlInjectionMatchTuple, ... ]
+    "[Name](#cfn-waf-sqlinjectionmatchset-name)" : String,
+    "[SqlInjectionMatchTuples](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples)" : [ SqlInjectionMatchTuple, ... ]
   }
 }
 ```
@@ -29,36 +29,36 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::WAF::SqlInjectionMatchSet"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-waf-sqlinjectionmatchset-name): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples):
+  [Name](#cfn-waf-sqlinjectionmatchset-name): String
+  [SqlInjectionMatchTuples](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples):
     - SqlInjectionMatchTuple
 ```
 
-## Properties<a name="w3ab2c21c10e1055b9"></a>
+## Properties<a name="w3ab2c21c10e1083b9"></a>
 
-`Name`  
+`Name`  <a name="cfn-waf-sqlinjectionmatchset-name"></a>
 A friendly name or description of the `SqlInjectionMatchSet`\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`SqlInjectionMatchTuples`  
+`SqlInjectionMatchTuples`  <a name="cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples"></a>
 The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header\.  
 *Required: *No  
 *Type*: List of [AWS WAF SqlInjectionMatchSet SqlInjectionMatchTuples](aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10e1055c11"></a>
+## Return Values<a name="w3ab2c21c10e1083c11"></a>
 
-### Ref<a name="w3ab2c21c10e1055c11b2"></a>
+### Ref<a name="w3ab2c21c10e1083c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource physical ID, such as `1234a1a-a1b1-12a1-abcd-a123b123456`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w3ab2c21c10e1055c13"></a>
+## Examples<a name="w3ab2c21c10e1083c13"></a>
 
-### Find SQL Injections<a name="w3ab2c21c10e1055c13b2"></a>
+### Find SQL Injections<a name="w3ab2c21c10e1083c13b2"></a>
 
 The following example looks for snippets of SQL code in the query string of an HTTP request\.
 
@@ -95,7 +95,7 @@ SqlInjDetection:
         TextTransformation: "URL_DECODE"
 ```
 
-### Associate a SQL Injection Match Set with a Web ACL Rule<a name="w3ab2c21c10e1055c13b4"></a>
+### Associate a SQL Injection Match Set with a Web ACL Rule<a name="w3ab2c21c10e1083c13b4"></a>
 
 The following example associates the `SqlInjDetection` match set with a web access control list \(ACL\) rule\.
 
@@ -134,7 +134,7 @@ SqlInjRule:
         Type: "SqlInjectionMatch"
 ```
 
-### Create a Web ACL<a name="w3ab2c21c10e1055c13b6"></a>
+### Create a Web ACL<a name="w3ab2c21c10e1083c13b6"></a>
 
 The following example associates the `SqlInjRule` rule with a web ACL\. The web ACL allows all requests except for ones with SQL code in the query string of a request\.
 

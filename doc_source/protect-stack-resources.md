@@ -1,6 +1,6 @@
 # Prevent Updates to Stack Resources<a name="protect-stack-resources"></a>
 
-When you create a stack, all update actions are allowed on all resources\. By default, anyone with stack update permissions can update all of the resources in the stack\. During an update, some resources might require an interruption or be completely replaced, resulting in new physical IDs or completely new storage\. You can prevent stack resources from being unintentionally updated or deleted during a stack update by using a stack policy\. A stack policy is a JSON document that defines the update actions that can be performed on designated resources\. 
+When you create a stack, all update actions are allowed on all resources\. By default, anyone with stack update permissions can update all of the resources in the stack\. During an update, some resources might require an interruption or be completely replaced, resulting in new physical IDs or completely new storage\. You can prevent [stack resources](aws-template-resource-type-ref.md) from being unintentionally updated or deleted during a stack update by using a stack policy\. A stack policy is a JSON document that defines the update actions that can be performed on designated resources\. 
 
 After you set a stack policy, all of the resources in the stack are protected by default\. To allow updates on specific resources, you specify an explicit `Allow` statement for those resources in your stack policy\. You can define only one stack policy per stack, but, you can protect multiple resources within a single policy\. A stack policy applies to all AWS CloudFormation users who attempt to update the stack\. You can't associate different stack policies with different users\. 
 
@@ -111,7 +111,7 @@ Principal
 The `Principal` element specifies the entity that the policy applies to\. This element is required but supports only the wild card \(`*`\), which means that the policy applies to all [principals](http://docs.aws.amazon.com/general/latest/gr/glos-chap.html#principal)\.
 
 Resource  
-Specifies the logical IDs of the resources that the policy applies to\. To specify types of resources, use the `Condition` element\.  
+Specifies the logical IDs of the resources that the policy applies to\. To specify [types of resources](aws-template-resource-type-ref.md), use the `Condition` element\.  
 To specify a single resource, use its logical ID\. For example:  
 
 ```
@@ -139,7 +139,7 @@ You can also use a `Not` element with resources\. For example, to allow updates 
 When you set a stack policy, any update not explicitly allowed is denied\. By allowing updates to all resources except for the `ProductionDatabase` resource, you deny updates to the `ProductionDatabase` resource\.
 
 Conditions  
-Specifies the resource type that the policy applies to\. To specify the logical IDs of specific resources, use the `Resource` element\.  
+Specifies the [resource type](aws-template-resource-type-ref.md) that the policy applies to\. To specify the logical IDs of specific resources, use the `Resource` element\.  
 You can specify a resource type, such as all EC2 and RDS DB instances, as shown in the following example:  
 
 ```
@@ -256,7 +256,7 @@ AWS CloudFormation applies the override policy only during this update\. The ove
 
 1. Review the stack information and the changes that you submitted\.
 
-   In the **Review** section, check that you submitted the correct information, such as the correct parameter values or template URL\. If your template contains IAM resources, choose **I acknowledge that this template may create IAM resources** to specify that you want to use IAM resources in the template\. For more information about using IAM resources in templates, see \.
+   In the **Review** section, check that you submitted the correct information, such as the correct parameter values or template URL\. If your template contains IAM resources, choose **I acknowledge that this template may create IAM resources** to specify that you want to use IAM resources in the template\. For more information about using IAM resources in templates, see [Controlling Access with AWS Identity and Access Management](using-iam-template.md)\.
 
    In the **Preview your changes** section, check that AWS CloudFormation will make all the changes that you expect\. For example, check that AWS CloudFormation adds, removes, and modifies the resources that you intended to add, remove, or modify\. AWS CloudFormation generates this preview by creating a change set for the stack\. For more information, see [Updating Stacks Using Change Sets](using-cfn-updating-stacks-changesets.md)\.
 

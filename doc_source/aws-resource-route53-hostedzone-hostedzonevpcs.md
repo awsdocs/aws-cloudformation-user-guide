@@ -2,32 +2,32 @@
 
 The `HostedZoneVPCs` property is part of the [AWS::Route53::HostedZone](aws-resource-route53-hostedzone.md) resource that specifies the VPCs to associate with the hosted zone\.
 
-## Syntax<a name="w3ab2c21c14e1467b5"></a>
+## Syntax<a name="w3ab2c21c14e1497b5"></a>
 
 ### JSON<a name="aws-properties-route53-hostedzone-hostedzonevpcs-syntax.json"></a>
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-route53-hostedzone-hostedzonevpcs-vpcid)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-route53-hostedzone-hostedzonevpcs-vpcregion)" : String
+  "[VPCId](#cfn-route53-hostedzone-hostedzonevpcs-vpcid)" : String,
+  "[VPCRegion](#cfn-route53-hostedzone-hostedzonevpcs-vpcregion)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-route53-hostedzone-hostedzonevpcs-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-route53-hostedzone-hostedzonevpcs-vpcid): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-route53-hostedzone-hostedzonevpcs-vpcregion): String
+[VPCId](#cfn-route53-hostedzone-hostedzonevpcs-vpcid): String
+[VPCRegion](#cfn-route53-hostedzone-hostedzonevpcs-vpcregion): String
 ```
 
-## Properties<a name="w3ab2c21c14e1467b7"></a>
+## Properties<a name="w3ab2c21c14e1497b7"></a>
 
-`VPCId`  
+`VPCId`  <a name="cfn-route53-hostedzone-hostedzonevpcs-vpcid"></a>
 The ID of the Amazon VPC that you want to associate with the hosted zone\.  
 *Required: *Yes  
 *Type*: String
 
-`VPCRegion`  
+`VPCRegion`  <a name="cfn-route53-hostedzone-hostedzonevpcs-vpcregion"></a>
 The region in which the Amazon VPC was created as specified in the `VPCId` property\.  
 *Required: *Yes  
 *Type*: String

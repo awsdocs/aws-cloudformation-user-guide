@@ -16,10 +16,10 @@ The `AWS::OpsWorks::UserProfile` resource configures SSH access for users who re
 {
   "Type" : "AWS::OpsWorks::UserProfile",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-userprofile-allowselfmanagement)" : Boolean,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-userprofile-iamuserarn)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-userprofile-sshpublickey)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-userprofile-sshusername)" : String
+    "[AllowSelfManagement](#cfn-opsworks-userprofile-allowselfmanagement)" : Boolean,
+    "[IamUserArn](#cfn-opsworks-userprofile-iamuserarn)" : String,
+    "[SshPublicKey](#cfn-opsworks-userprofile-sshpublickey)" : String,
+    "[SshUsername](#cfn-opsworks-userprofile-sshusername)" : String
   }
 }
 ```
@@ -29,47 +29,47 @@ The `AWS::OpsWorks::UserProfile` resource configures SSH access for users who re
 ```
 Type: "AWS::OpsWorks::UserProfile"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-userprofile-allowselfmanagement): Boolean
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-userprofile-iamuserarn): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-userprofile-sshpublickey): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-userprofile-sshusername): String
+  [AllowSelfManagement](#cfn-opsworks-userprofile-allowselfmanagement): Boolean
+  [IamUserArn](#cfn-opsworks-userprofile-iamuserarn): String
+  [SshPublicKey](#cfn-opsworks-userprofile-sshpublickey): String
+  [SshUsername](#cfn-opsworks-userprofile-sshusername): String
 ```
 
 ## Properties<a name="aws-resource-opsworks-userprofile-properties"></a>
 
-`AllowSelfManagement`  
+`AllowSelfManagement`  <a name="cfn-opsworks-userprofile-allowselfmanagement"></a>
 Indicates whether users can use the AWS OpsWorks **My Settings** page to specify their own SSH public key\. For more information, see [Setting an IAM User's Public SSH Key](http://docs.aws.amazon.com/opsworks/latest/userguide/security-settingsshkey.html) in the *AWS OpsWorks User Guide*\.  
 *Required: *No  
 *Type*: Boolean  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`IamUserArn`  
+`IamUserArn`  <a name="cfn-opsworks-userprofile-iamuserarn"></a>
 The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) user to associate with this configuration\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`SshPublicKey`  
+`SshPublicKey`  <a name="cfn-opsworks-userprofile-sshpublickey"></a>
 The public SSH key that is associated with the IAM user\. To access instances, the IAM user must have or be given the corresponding private key\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`SshUsername`  
+`SshUsername`  <a name="cfn-opsworks-userprofile-sshusername"></a>
 The user's SSH user name\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Value<a name="aws-resource-opsworks-userprofile-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d867c11b2"></a>
+### Ref<a name="w3ab2c21c10d870c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the IAM user ARN, such as `arn:aws:iam::123456789012:user/opsworksuser`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d867c11b4"></a>
+### Fn::GetAtt<a name="w3ab2c21c10d870c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -77,7 +77,7 @@ For more information about using the `Ref` function, see Ref\.
 
   The user's SSH user name, as a string\.
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\.
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
 ## Example<a name="aws-resource-opsworks-userprofile-examples"></a>
 

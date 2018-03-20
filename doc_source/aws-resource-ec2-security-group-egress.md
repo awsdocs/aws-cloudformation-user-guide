@@ -21,15 +21,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::SecurityGroupEgress",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-securitygroupegress-cidrip)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-securitygroupegress-cidripv6)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-securitygroupegress-description)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-securitygroupegress-destinationprefixlistid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-securitygroupegress-destinationsecuritygroupid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-securitygroupegress-fromport)" : Integer,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-securitygroupegress-groupid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-securitygroupegress-ipprotocol)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-securitygroupegress-toport)" : Integer
+    "[CidrIp](#cfn-ec2-securitygroupegress-cidrip)" : String,
+    "[CidrIpv6](#cfn-ec2-securitygroupegress-cidripv6)" : String,
+    "[Description](#cfn-ec2-securitygroupegress-description)" : String,
+    "[DestinationPrefixListId](#cfn-ec2-securitygroupegress-destinationprefixlistid)" : String,
+    "[DestinationSecurityGroupId](#cfn-ec2-securitygroupegress-destinationsecuritygroupid)" : String,
+    "[FromPort](#cfn-ec2-securitygroupegress-fromport)" : Integer,
+    "[GroupId](#cfn-ec2-securitygroupegress-groupid)" : String,
+    "[IpProtocol](#cfn-ec2-securitygroupegress-ipprotocol)" : String,
+    "[ToPort](#cfn-ec2-securitygroupegress-toport)" : Integer
   }
 }
 ```
@@ -39,15 +39,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::SecurityGroupEgress"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-securitygroupegress-cidrip): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-securitygroupegress-cidripv6): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-securitygroupegress-description): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-securitygroupegress-destinationprefixlistid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-securitygroupegress-destinationsecuritygroupid):  String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-securitygroupegress-fromport): Integer
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-securitygroupegress-groupid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-securitygroupegress-ipprotocol): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-securitygroupegress-toport): Integer
+  [CidrIp](#cfn-ec2-securitygroupegress-cidrip): String
+  [CidrIpv6](#cfn-ec2-securitygroupegress-cidripv6): String
+  [Description](#cfn-ec2-securitygroupegress-description): String
+  [DestinationPrefixListId](#cfn-ec2-securitygroupegress-destinationprefixlistid): String
+  [DestinationSecurityGroupId](#cfn-ec2-securitygroupegress-destinationsecuritygroupid):  String
+  [FromPort](#cfn-ec2-securitygroupegress-fromport): Integer
+  [GroupId](#cfn-ec2-securitygroupegress-groupid): String
+  [IpProtocol](#cfn-ec2-securitygroupegress-ipprotocol): String
+  [ToPort](#cfn-ec2-securitygroupegress-toport): Integer
 ```
 
 ## Properties<a name="w3ab2c21c10d429c11"></a>
@@ -57,59 +57,59 @@ For more information about adding egress rules to VPC security groups, go to [Au
 **Note**  
 If you change this resource's logical ID, you must also update a property value in order to trigger an update for this resource\.
 
-`CidrIp`  
+`CidrIp`  <a name="cfn-ec2-securitygroupegress-cidrip"></a>
 An IPv4 CIDR range\.  
 *Required: *Conditional\. You must specify a destination security group \(`DestinationPrefixListId` or `DestinationSecurityGroupId`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`CidrIpv6`  
+`CidrIpv6`  <a name="cfn-ec2-securitygroupegress-cidripv6"></a>
 An IPv6 CIDR range\.  
 *Type*: String  
 *Required: *Conditional\. You must specify a destination security group \(`DestinationPrefixListId` or `DestinationSecurityGroupId`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Description`  
+`Description`  <a name="cfn-ec2-securitygroupegress-description"></a>
 Description of the egress rule\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`DestinationPrefixListId`  
+`DestinationPrefixListId`  <a name="cfn-ec2-securitygroupegress-destinationprefixlistid"></a>
 The AWS service prefix of an Amazon VPC endpoint\. For more information, see [VPC Endpoints](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpoints.html) in the *Amazon VPC User Guide*\.  
 *Required: *Conditional\. You must specify a destination security group \(`DestinationPrefixListId` or `DestinationSecurityGroupId`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`DestinationSecurityGroupId`  
+`DestinationSecurityGroupId`  <a name="cfn-ec2-securitygroupegress-destinationsecuritygroupid"></a>
 Specifies the group ID of the destination Amazon VPC security group\.  
 *Required: *Conditional\. You must specify a destination security group \(`DestinationPrefixListId` or `DestinationSecurityGroupId`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`FromPort`  
+`FromPort`  <a name="cfn-ec2-securitygroupegress-fromport"></a>
 Start of port range for the TCP and UDP protocols, or an ICMP type number\. If you specify `icmp` for the `IpProtocol` property, you can specify \-1 as a wildcard \(i\.e\., any ICMP type number\)\.  
 *Required: *Yes  
 *Type*: Integer  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`GroupId`  
-ID of the Amazon VPC security group to modify\. This value can be a reference to an AWS::EC2::SecurityGroup resource that has a valid `VpcId` property or the ID of an existing Amazon VPC security group\.  
+`GroupId`  <a name="cfn-ec2-securitygroupegress-groupid"></a>
+ID of the Amazon VPC security group to modify\. This value can be a reference to an [AWS::EC2::SecurityGroup](aws-properties-ec2-security-group.md) resource that has a valid `VpcId` property or the ID of an existing Amazon VPC security group\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`IpProtocol`  
+`IpProtocol`  <a name="cfn-ec2-securitygroupegress-ipprotocol"></a>
 IP protocol name or number\. For valid values, see the IpProtocol parameter in [AuthorizeSecurityGroupIngress](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-AuthorizeSecurityGroupIngress.html)  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`ToPort`  
+`ToPort`  <a name="cfn-ec2-securitygroupegress-toport"></a>
 End of port range for the TCP and UDP protocols, or an ICMP code\. If you specify `icmp` for the `IpProtocol` property, you can specify \-1 as a wildcard \(i\.e\., any ICMP code\)\.  
 *Required: *Yes  
 *Type*: Integer  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Values<a name="w3ab2c21c10d429c13"></a>
 
@@ -117,7 +117,7 @@ End of port range for the TCP and UDP protocols, or an ICMP code\. If you specif
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## VPC Security Groups Example<a name="w3ab2c21c10d429c15"></a>
 

@@ -13,29 +13,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsblockdeviceconfigs)" : [ EbsBlockDeviceConfig, ...],
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsoptimized)" : Boolean
+  "[EbsBlockDeviceConfigs](#cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsblockdeviceconfigs)" : [ [*EbsBlockDeviceConfig*](aws-properties-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig.md), ...],
+  "[EbsOptimized](#cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsoptimized)" : Boolean
 }
 ```
 
 ### YAML<a name="aws-properties-elasticmapreduce-instancefleetconfig-ebsconfiguration-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsblockdeviceconfigs): 
-  - EbsBlockDeviceConfig
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsoptimized): Boolean
+[EbsBlockDeviceConfigs](#cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsblockdeviceconfigs): 
+  - [*EbsBlockDeviceConfig*](aws-properties-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig.md)
+[EbsOptimized](#cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsoptimized): Boolean
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-instancefleetconfig-ebsconfiguration-properties"></a>
 
-`EbsBlockDeviceConfigs`  
+`EbsBlockDeviceConfigs`  <a name="cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsblockdeviceconfigs"></a>
 A list of Amazon EBS volume specifications that are attached to an instance\. Duplicates not allowed\.  
 *Required: *No  
 *Type*: List of [Amazon EMR InstanceFleetConfig EbsBlockDeviceConfig](aws-properties-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig.md)  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`EbsOptimized`  
+`EbsOptimized`  <a name="cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsoptimized"></a>
 Indicates whether an Amazon EBS volume is EBS\-optimized\.  
 *Required: *No  
 *Type*: Boolean  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

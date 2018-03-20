@@ -18,12 +18,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ElasticLoadBalancingV2::Listener",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listener-certificates)" : [ Certificate ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listener-defaultactions)" : [ Action, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listener-loadbalancerarn)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listener-port)" : Integer,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listener-protocol)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listener-sslpolicy)" : String
+    "[Certificates](#cfn-elasticloadbalancingv2-listener-certificates)" : [ [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates.md) ],
+    "[DefaultActions](#cfn-elasticloadbalancingv2-listener-defaultactions)" : [ [Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md), ... ],
+    "[LoadBalancerArn](#cfn-elasticloadbalancingv2-listener-loadbalancerarn)" : String,
+    "[Port](#cfn-elasticloadbalancingv2-listener-port)" : Integer,
+    "[Protocol](#cfn-elasticloadbalancingv2-listener-protocol)" : String,
+    "[SslPolicy](#cfn-elasticloadbalancingv2-listener-sslpolicy)" : String
   }
 }
 ```
@@ -33,56 +33,56 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ElasticLoadBalancingV2::Listener"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listener-certificates):
-    - Certificate
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listener-defaultactions):
-    - Action
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listener-loadbalancerarn): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listener-port): Integer
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listener-protocol): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listener-sslpolicy): String
+  [Certificates](#cfn-elasticloadbalancingv2-listener-certificates):
+    - [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates.md)
+  [DefaultActions](#cfn-elasticloadbalancingv2-listener-defaultactions):
+    - [Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md)
+  [LoadBalancerArn](#cfn-elasticloadbalancingv2-listener-loadbalancerarn): String
+  [Port](#cfn-elasticloadbalancingv2-listener-port): Integer
+  [Protocol](#cfn-elasticloadbalancingv2-listener-protocol): String
+  [SslPolicy](#cfn-elasticloadbalancingv2-listener-sslpolicy): String
 ```
 
 ## Properties<a name="w3ab2c21c10d591b9"></a>
 
-`Certificates`  
+`Certificates`  <a name="cfn-elasticloadbalancingv2-listener-certificates"></a>
 The SSL server certificate for the listener\. With a certificate, you can encrypt traffic between the load balancer and the clients that initiate HTTPS sessions, and traffic between the load balancer and your targets\.  
 This property represents the default certificate for the listener\. You can specify only one certificate for the `AWS::ElasticLoadBalancingV2::Listener` resource\.  
 *Required: *Conditional\. If you specify `HTTPS` for the `Protocol` property, specify a certificate\.  
 *Type*: List of [Elastic Load Balancing Listener Certificate](aws-properties-elasticloadbalancingv2-listener-certificates.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`DefaultActions`  
+`DefaultActions`  <a name="cfn-elasticloadbalancingv2-listener-defaultactions"></a>
 The default actions that the listener takes when handling incoming requests\.  
 *Required: *Yes  
 *Type*: List of [Elastic Load Balancing Listener Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`LoadBalancerArn`  
+`LoadBalancerArn`  <a name="cfn-elasticloadbalancingv2-listener-loadbalancerarn"></a>
 The Amazon Resource Name \(ARN\) of the load balancer to associate with the listener\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Port`  
+`Port`  <a name="cfn-elasticloadbalancingv2-listener-port"></a>
 The port on which the listener listens for requests\.  
 For valid values, see the `Port` parameter for the [CreateListener](http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateListener.html) action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
 *Required: *Yes  
 *Type*: Integer  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Protocol`  
+`Protocol`  <a name="cfn-elasticloadbalancingv2-listener-protocol"></a>
 The protocol that clients must use to send requests to the listener\.  
 For valid values, see the `Protocol` parameter for the [CreateListener](http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateListener.html) action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`SslPolicy`  
+`SslPolicy`  <a name="cfn-elasticloadbalancingv2-listener-sslpolicy"></a>
 The security policy that defines the ciphers and protocols that the load balancer supports\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Value<a name="w3ab2c21c10d591c11"></a>
 
@@ -90,7 +90,7 @@ The security policy that defines the ciphers and protocols that the load balance
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the listener's ARN, such as `arn:aws:elasticloadbalancing:us-west-2:123456789012:listener/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d591c13"></a>
 

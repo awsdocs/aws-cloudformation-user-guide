@@ -4,8 +4,8 @@ The `AWS::ApiGateway::Stage` resource creates a stage for an Amazon API Gateway 
 
 
 + [Syntax](#aws-resource-apigateway-stage-syntax)
-+ [Properties](#w3ab2c21c10c81b9)
-+ [Return Value](#w3ab2c21c10c81c11)
++ [Properties](#w3ab2c21c10c80b9)
++ [Return Value](#w3ab2c21c10c80c11)
 + [Example](#aws-resource-apigateway-stage-examples)
 
 ## Syntax<a name="aws-resource-apigateway-stage-syntax"></a>
@@ -18,16 +18,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::Stage",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-cacheclusterenabled)" : Boolean,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-cacheclustersize)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-clientcertificateid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-deploymentid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-description)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-documentationversion)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsettings)" : [ MethodSetting, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-restapiid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-stagename)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-variables)" : { String:String, ... }
+    "[CacheClusterEnabled](#cfn-apigateway-stage-cacheclusterenabled)" : Boolean,
+    "[CacheClusterSize](#cfn-apigateway-stage-cacheclustersize)" : String,
+    "[ClientCertificateId](#cfn-apigateway-stage-clientcertificateid)" : String,
+    "[DeploymentId](#cfn-apigateway-stage-deploymentid)" : String,
+    "[Description](#cfn-apigateway-stage-description)" : String,
+    "[DocumentationVersion](#cfn-apigateway-stage-documentationversion)" : String,
+    "[MethodSettings](#cfn-apigateway-stage-methodsettings)" : [ [*MethodSetting*](aws-properties-apigateway-stage-methodsetting.md), ... ],
+    "[RestApiId](#cfn-apigateway-stage-restapiid)" : String,
+    "[StageName](#cfn-apigateway-stage-stagename)" : String,
+    "[Variables](#cfn-apigateway-stage-variables)" : { String:String, ... }
   }
 }
 ```
@@ -37,88 +37,88 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ApiGateway::Stage"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-cacheclusterenabled): Boolean
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-cacheclustersize): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-clientcertificateid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-deploymentid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-description): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-documentationversion): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-methodsettings):
-    - MethodSetting
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-restapiid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-stagename): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-stage-variables):
+  [CacheClusterEnabled](#cfn-apigateway-stage-cacheclusterenabled): Boolean
+  [CacheClusterSize](#cfn-apigateway-stage-cacheclustersize): String
+  [ClientCertificateId](#cfn-apigateway-stage-clientcertificateid): String
+  [DeploymentId](#cfn-apigateway-stage-deploymentid): String
+  [Description](#cfn-apigateway-stage-description): String
+  [DocumentationVersion](#cfn-apigateway-stage-documentationversion): String
+  [MethodSettings](#cfn-apigateway-stage-methodsettings):
+    - [*MethodSetting*](aws-properties-apigateway-stage-methodsetting.md)
+  [RestApiId](#cfn-apigateway-stage-restapiid): String
+  [StageName](#cfn-apigateway-stage-stagename): String
+  [Variables](#cfn-apigateway-stage-variables):
     String: String
 ```
 
-## Properties<a name="w3ab2c21c10c81b9"></a>
+## Properties<a name="w3ab2c21c10c80b9"></a>
 
-`CacheClusterEnabled`  
+`CacheClusterEnabled`  <a name="cfn-apigateway-stage-cacheclusterenabled"></a>
 Indicates whether cache clustering is enabled for the stage\.  
 *Required: *No  
 *Type*: Boolean  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`CacheClusterSize`  
+`CacheClusterSize`  <a name="cfn-apigateway-stage-cacheclustersize"></a>
 The stage's cache cluster size\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ClientCertificateId`  
+`ClientCertificateId`  <a name="cfn-apigateway-stage-clientcertificateid"></a>
 The identifier of the client certificate that API Gateway uses to call your integration endpoints in the stage\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`DeploymentId`  
+`DeploymentId`  <a name="cfn-apigateway-stage-deploymentid"></a>
 The ID of the deployment that the stage points to\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Description`  
+`Description`  <a name="cfn-apigateway-stage-description"></a>
 A description of the stage's purpose\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`DocumentationVersion`  
+`DocumentationVersion`  <a name="cfn-apigateway-stage-documentationversion"></a>
 The version identifier of the API documentation snapshot\.  
 *Required: *No  
 *Type*: String
 
-`MethodSettings`  
+`MethodSettings`  <a name="cfn-apigateway-stage-methodsettings"></a>
 Settings for all methods in the stage\.  
 *Required: *No  
 *Type*: List of [API Gateway Stage MethodSetting](aws-properties-apigateway-stage-methodsetting.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`RestApiId`  
+`RestApiId`  <a name="cfn-apigateway-stage-restapiid"></a>
 The ID of the `RestApi` resource that you're deploying with this stage\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`StageName`  
+`StageName`  <a name="cfn-apigateway-stage-stagename"></a>
 The name of the stage, which API Gateway uses as the first path segment in the invoked Uniform Resource Identifier \(URI\)\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Variables`  
+`Variables`  <a name="cfn-apigateway-stage-variables"></a>
 A map \(string\-to\-string map\) that defines the stage variables, where the variable name is the key and the variable value is the value\. Variable names are limited to alphanumeric characters\. Values must match the following regular expression: `[A-Za-z0-9-._~:/?#&amp;=,]+`\.  
 *Required: *No  
 *Type*: Mapping of key\-value pairs  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10c81c11"></a>
+## Return Value<a name="w3ab2c21c10c80c11"></a>
 
-### Ref<a name="w3ab2c21c10c81c11b2"></a>
+### Ref<a name="w3ab2c21c10c80c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the name of the stage, such as `MyTestStage`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="aws-resource-apigateway-stage-examples"></a>
 

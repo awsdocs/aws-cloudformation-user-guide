@@ -19,18 +19,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodeBuild::Project",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-artifacts)" : Artifacts,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-badgeenabled)" : Boolean,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-cache)" : ProjectCache,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-description)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-encryptionkey)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-environment)" : Environment,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-name)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-servicerole)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-source)" : Source,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-tags)" : [ Resource Tag, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-timeoutinminutes)" : Integer,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-vpcconfig)" : VpcConfig
+    "[Artifacts](#cfn-codebuild-project-artifacts)" : [*Artifacts*](aws-properties-codebuild-project-artifacts.md),
+    "[BadgeEnabled](#cfn-codebuild-project-badgeenabled)" : Boolean,
+    "[Cache](#cfn-codebuild-project-cache)" : [*ProjectCache*](aws-properties-codebuild-project-projectcache.md),
+    "[Description](#cfn-codebuild-project-description)" : String,
+    "[EncryptionKey](#cfn-codebuild-project-encryptionkey)" : String,
+    "[Environment](#cfn-codebuild-project-environment)" : [*Environment*](aws-properties-codebuild-project-environment.md),
+    "[Name](#cfn-codebuild-project-name)" : String,
+    "[ServiceRole](#cfn-codebuild-project-servicerole)" : String,
+    "[Source](#cfn-codebuild-project-source)" : [*Source*](aws-properties-codebuild-project-source.md),
+    "[Tags](#cfn-codebuild-project-tags)" : [ Resource Tag, ... ],
+    "[TimeoutInMinutes](#cfn-codebuild-project-timeoutinminutes)" : Integer,
+    "[Triggers](#cfn-codebuild-project-triggers)" : [*Triggers*](aws-properties-codebuild-project-projecttriggers.md),
+    "[VpcConfig](#cfn-codebuild-project-vpcconfig)" : [*VpcConfig*](aws-properties-codebuild-project-vpcconfig.md)
   }
 }
 ```
@@ -40,99 +41,106 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::CodeBuild::Project"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-artifacts):
-    Artifacts
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-badgeenabled): Boolean
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-cache): 
-    ProjectCache
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-description): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-encryptionkey): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-environment):
-    Environment
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-name): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-servicerole): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-source):
-    Source
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-tags):
+  [Artifacts](#cfn-codebuild-project-artifacts):
+    [*Artifacts*](aws-properties-codebuild-project-artifacts.md)
+  [BadgeEnabled](#cfn-codebuild-project-badgeenabled): Boolean
+  [Cache](#cfn-codebuild-project-cache): 
+    [*ProjectCache*](aws-properties-codebuild-project-projectcache.md)
+  [Description](#cfn-codebuild-project-description): String
+  [EncryptionKey](#cfn-codebuild-project-encryptionkey): String
+  [Environment](#cfn-codebuild-project-environment):
+    [*Environment*](aws-properties-codebuild-project-environment.md)
+  [Name](#cfn-codebuild-project-name): String
+  [ServiceRole](#cfn-codebuild-project-servicerole): String
+  [Source](#cfn-codebuild-project-source):
+    [*Source*](aws-properties-codebuild-project-source.md)
+  [Tags](#cfn-codebuild-project-tags):
     - Resource Tag
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-timeoutinminutes): Integer
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-vpcconfig): 
-    VpcConfig
+  [TimeoutInMinutes](#cfn-codebuild-project-timeoutinminutes): Integer
+  [Triggers](#cfn-codebuild-project-triggers): [*Triggers*](aws-properties-codebuild-project-projecttriggers.md)
+  [VpcConfig](#cfn-codebuild-project-vpcconfig): 
+    [*VpcConfig*](aws-properties-codebuild-project-vpcconfig.md)
 ```
 
 ## Properties<a name="aws-resource-codebuild-project-properties"></a>
 
-`Artifacts`  
+`Artifacts`  <a name="cfn-codebuild-project-artifacts"></a>
 The output settings for artifacts that the project generates during a build\.  
 *Required: *Yes  
 *Type*: [AWS CodeBuild Project Artifacts](aws-properties-codebuild-project-artifacts.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`BadgeEnabled`  
+`BadgeEnabled`  <a name="cfn-codebuild-project-badgeenabled"></a>
 Indicates whether AWS CodeBuild generates a publicly accessible URL for your project's build badge\. For more information, see [Build Badges Sample](http://docs.aws.amazon.com/codebuild/latest/userguide/sample-build-badges.html) in the *AWS CodeBuild User Guide*\.  
  *Required*: No  
  *Type*: Boolean  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Cache`  
+`Cache`  <a name="cfn-codebuild-project-cache"></a>
 Settings that AWS CodeBuild uses to store and reuse build dependencies\.  
  *Required*: No  
  *Type*: [AWS CodeBuild Project ProjectCache](aws-properties-codebuild-project-projectcache.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Description`  
+`Description`  <a name="cfn-codebuild-project-description"></a>
 A description of the project\. Use the description to identify the purpose of the project\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`EncryptionKey`  
+`EncryptionKey`  <a name="cfn-codebuild-project-encryptionkey"></a>
 The alias or Amazon Resource Name \(ARN\) of the AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) that AWS CodeBuild uses to encrypt the build output\. If you don't specify a value, AWS CodeBuild uses the AWS\-managed CMK for Amazon Simple Storage Service\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Environment`  
+`Environment`  <a name="cfn-codebuild-project-environment"></a>
 The build environment settings for the project, such as the environment type or the environment variables to use for the build environment\.  
 *Required: *Yes  
 *Type*: [AWS CodeBuild Project Environment](aws-properties-codebuild-project-environment.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Name`  
+`Name`  <a name="cfn-codebuild-project-name"></a>
 A name for the project\. The name must be unique across all of the projects in your AWS account\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`ServiceRole`  
+`ServiceRole`  <a name="cfn-codebuild-project-servicerole"></a>
 The ARN of the service role that AWS CodeBuild uses to interact with services on your behalf\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Source`  
+`Source`  <a name="cfn-codebuild-project-source"></a>
 The source code settings for the project, such as the source code's repository type and location\.  
 *Required: *Yes  
 *Type*: [AWS CodeBuild Project Source](aws-properties-codebuild-project-source.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Tags`  
+`Tags`  <a name="cfn-codebuild-project-tags"></a>
 An arbitrary set of tags \(key\-value pairs\) for the AWS CodeBuild project\.  
 *Required: *No  
-*Type*:   
-*Update requires*: No interruption
+*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`TimeoutInMinutes`  
+`TimeoutInMinutes`  <a name="cfn-codebuild-project-timeoutinminutes"></a>
 The number of minutes after which AWS CodeBuild stops the build if it's not complete\. For valid values, see the [http://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli](http://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli) field in the *AWS CodeBuild User Guide*\.  
 *Required: *No  
 *Type*: Integer  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`VpcConfig`  
+`Triggers`  <a name="cfn-codebuild-project-triggers"></a>
+For an existing AWS CodeBuild build project that has its source code stored in a GitHub repository, enables AWS CodeBuild to begin automatically rebuilding the source code every time a code change is pushed to the repository\.  
+*Required: *No  
+ *Type*: [AWS CodeBuild Project ProjectTriggers](aws-properties-codebuild-project-projecttriggers.md)   
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`VpcConfig`  <a name="cfn-codebuild-project-vpcconfig"></a>
 Settings that enable AWS CodeBuild to access resources in an Amazon VPC\. For more information, see [Use AWS CodeBuild with Amazon Virtual Private Cloud](http://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html) in the *AWS CodeBuild User Guide*\.  
  *Required*: No  
  *Type*: [AWS CodeBuild Project VpcConfig](aws-properties-codebuild-project-vpcconfig.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-codebuild-project-returnvalues"></a>
 
@@ -140,7 +148,7 @@ Settings that enable AWS CodeBuild to access resources in an Amazon VPC\. For mo
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the name of the AWS CodeBuild project, such as `myProjectName`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ### Fn::GetAtt<a name="aws-resource-codebuild-project-getatt"></a>
 
@@ -149,7 +157,7 @@ For more information about using the `Ref` function, see Ref\.
 `Arn`  
 The ARN of the AWS CodeBuild project, such as `arn:aws:codebuild:us-west-2:123456789012:project/myProjectName`\.
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\.
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
 ## Examples<a name="aws-resource-codebuild-project-examples"></a>
 

@@ -91,7 +91,7 @@ EC2Instance:
 
 ## Assigning an Amazon EC2 Elastic IP Using AWS::EC2::EIP Snippet<a name="scenario-ec2-eip"></a>
 
-This example shows how to allocate an Amazon EC2 Elastic IP address and assign it to an Amazon EC2 instance using a AWS::EC2::EIP resource\.
+This example shows how to allocate an Amazon EC2 Elastic IP address and assign it to an Amazon EC2 instance using a [AWS::EC2::EIP resource](aws-properties-ec2-eip.md)\.
 
 ### JSON<a name="quickref-ec2-example-3.json"></a>
 
@@ -115,7 +115,7 @@ This example shows how to allocate an Amazon EC2 Elastic IP address and assign i
 
 ## Assigning an Existing Elastic IP to an Amazon EC2 instance using AWS::EC2::EIPAssociation Snippet<a name="scenario-ec2-eip-association"></a>
 
-This example shows how to assign an existing Amazon EC2 Elastic IP address to an Amazon EC2 instance using an AWS::EC2::EIPAssociation resource\.
+This example shows how to assign an existing Amazon EC2 Elastic IP address to an Amazon EC2 instance using an [AWS::EC2::EIPAssociation resource](aws-properties-ec2-eip-association.md)\.
 
 ### JSON<a name="quickref-ec2-example-4.json"></a>
 
@@ -141,7 +141,7 @@ This example shows how to assign an existing Amazon EC2 Elastic IP address to an
 
 ## Assigning an Existing VPC Elastic IP to an Amazon EC2 instance using AWS::EC2::EIPAssociation Snippet<a name="scenario-ec2-eip-association-vpc"></a>
 
-This example shows how to assign an existing VPC Elastic IP address to an Amazon EC2 instance using an AWS::EC2::EIPAssociation resource\.
+This example shows how to assign an existing VPC Elastic IP address to an Amazon EC2 instance using an [AWS::EC2::EIPAssociation resource](aws-properties-ec2-eip-association.md)\.
 
 ### JSON<a name="quickref-ec2-example-5.json"></a>
 

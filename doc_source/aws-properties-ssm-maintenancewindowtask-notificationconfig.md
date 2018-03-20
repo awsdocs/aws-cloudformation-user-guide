@@ -12,30 +12,30 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationarn)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationtype)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationevents)" : [ String, ... ]
+  "[NotificationArn](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationarn)" : String,
+  "[NotificationType](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationtype)" : String,
+  "[NotificationEvents](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationevents)" : [ String, ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-ssm-maintenancewindowtask-notificationconfig-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationarn): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationtype): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationevents): 
+[NotificationArn](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationarn): String
+[NotificationType](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationtype): String
+[NotificationEvents](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationevents): 
   - String
 ```
 
 ## Properties<a name="aws-properties-ssm-maintenancewindowtask-notificationconfig-properties"></a>
 
-`NotificationArn`  
+`NotificationArn`  <a name="cfn-ssm-maintenancewindowtask-notificationconfig-notificationarn"></a>
 An Amazon Resource Name \(ARN\) for an Amazon SNS topic\. Run Command pushes notifications about command status changes to this topic\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`NotificationType`  
+`NotificationType`  <a name="cfn-ssm-maintenancewindowtask-notificationconfig-notificationtype"></a>
 The notification type\.  
 
 + `Command`: Receive notification when the status of a command changes\.
@@ -43,10 +43,10 @@ The notification type\.
 + `Invocation`: For commands sent to multiple instances, receive notification on a per\-instance basis when the status of a command changes\.
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`NotificationEvents`  
+`NotificationEvents`  <a name="cfn-ssm-maintenancewindowtask-notificationconfig-notificationevents"></a>
 The different events that you can receive notifications for\. These events include the following: `All` \(events\), `InProgress`, `Success`, `TimedOut`, `Cancelled`, `Failed`\. To learn more about these events, see [ Setting Up Events and Notifications](http://docs.aws.amazon.com/systems-manager/latest/userguide/monitor-commands.html) in the *Amazon EC2 Systems Manager User Guide*\.  
  *Required*: No  
  *Type*: List of strings  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

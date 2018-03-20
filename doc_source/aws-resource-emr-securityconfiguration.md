@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EMR::SecurityConfiguration",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-securityconfiguration-name)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-securityconfiguration-securityconfiguration)" : String
+    "[Name](#cfn-emr-securityconfiguration-name)" : String,
+    "[SecurityConfiguration](#cfn-emr-securityconfiguration-securityconfiguration)" : String
   }
 }
 ```
@@ -29,25 +29,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EMR::SecurityConfiguration"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-securityconfiguration-name): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-securityconfiguration-securityconfiguration): String
+  [Name](#cfn-emr-securityconfiguration-name): String
+  [SecurityConfiguration](#cfn-emr-securityconfiguration-securityconfiguration): String
 ```
 
 ## Properties<a name="aws-resource-emr-securityconfiguration-properties"></a>
 
 For more information about each property, including constraints and valid values, see [CreateSecurityConfiguration](http://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_CreateSecurityConfiguration.html) in the *Amazon EMR API Reference*\.
 
-`Name`  
+`Name`  <a name="cfn-emr-securityconfiguration-name"></a>
 The name of the security configuration\. For a list of valid parameters for encryption settings, see [ AWS CLI Security Configuration JSON Reference](http://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-encryption-enable-security-configuration.html#emr-encryption-cli-parameters) in the *Amazon EMR Release Guide*\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`SecurityConfiguration`  
+`SecurityConfiguration`  <a name="cfn-emr-securityconfiguration-securityconfiguration"></a>
 The security configuration details in JSON format\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Values<a name="aws-resource-emr-securityconfiguration-returnvalues"></a>
 
@@ -55,7 +55,7 @@ The security configuration details in JSON format\.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the security configuration name, such as `mySecurityConfiguration`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="aws-resource-emr-securityconfiguration-examples"></a>
 

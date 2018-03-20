@@ -12,41 +12,41 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-condition-logicaloperator)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-condition-jobname)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-condition-state)" : String
+  "[LogicalOperator](#cfn-glue-trigger-condition-logicaloperator)" : String,
+  "[JobName](#cfn-glue-trigger-condition-jobname)" : String,
+  "[State](#cfn-glue-trigger-condition-state)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-glue-trigger-condition-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-condition-logicaloperator): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-condition-jobname): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-condition-state): String
+[LogicalOperator](#cfn-glue-trigger-condition-logicaloperator): String
+[JobName](#cfn-glue-trigger-condition-jobname): String
+[State](#cfn-glue-trigger-condition-state): String
 ```
 
 ## Properties<a name="aws-properties-glue-trigger-condition-properties"></a>
 
-`LogicalOperator`  
+`LogicalOperator`  <a name="cfn-glue-trigger-condition-logicaloperator"></a>
 The logical operator for the condition\.  
 *Valid values*: `EQUALS`  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`JobName`  
+`JobName`  <a name="cfn-glue-trigger-condition-jobname"></a>
 The name of the associated job\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`State`  
+`State`  <a name="cfn-glue-trigger-condition-state"></a>
 The state of the condition\.  
 *Valid values*: `SUCCEEDED`  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-glue-trigger-condition-seealso"></a>
 

@@ -4,9 +4,9 @@ The `AWS::KMS::Key` resource creates a customer master key \(CMK\) in AWS Key Ma
 
 
 + [Syntax](#aws-resource-kms-key-syntax)
-+ [Properties](#w3ab2c21c10d793b9)
-+ [Return Values](#w3ab2c21c10d793c11)
-+ [Examples](#w3ab2c21c10d793c13)
++ [Properties](#w3ab2c21c10d796b9)
++ [Return Values](#w3ab2c21c10d796c11)
++ [Examples](#w3ab2c21c10d796c13)
 
 ## Syntax<a name="aws-resource-kms-key-syntax"></a>
 
@@ -18,11 +18,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::KMS::Key",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kms-key-description)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kms-key-enabled)" : Boolean,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kms-key-enablekeyrotation)" : Boolean,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kms-key-keypolicy)" : JSON object
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kms-key-tags)" : [ Resource Tag, ... ],
+    "[Description](#cfn-kms-key-description)" : String,
+    "[Enabled](#cfn-kms-key-enabled)" : Boolean,
+    "[EnableKeyRotation](#cfn-kms-key-enablekeyrotation)" : Boolean,
+    "[KeyPolicy](#cfn-kms-key-keypolicy)" : JSON object
+    "[Tags](#cfn-kms-key-tags)" : [ Resource Tag, ... ],
   }
 }
 ```
@@ -32,66 +32,66 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::KMS::Key"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kms-key-description): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kms-key-enabled): Boolean
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kms-key-enablekeyrotation): Boolean
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kms-key-keypolicy): JSON object
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kms-key-tags):
+  [Description](#cfn-kms-key-description): String
+  [Enabled](#cfn-kms-key-enabled): Boolean
+  [EnableKeyRotation](#cfn-kms-key-enablekeyrotation): Boolean
+  [KeyPolicy](#cfn-kms-key-keypolicy): JSON object
+  [Tags](#cfn-kms-key-tags):
     - Resource Tag
 ```
 
-## Properties<a name="w3ab2c21c10d793b9"></a>
+## Properties<a name="w3ab2c21c10d796b9"></a>
 
-`Description`  
+`Description`  <a name="cfn-kms-key-description"></a>
 A description of the key\. Use a description that helps your users decide whether the key is appropriate for a particular task\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Enabled`  
+`Enabled`  <a name="cfn-kms-key-enabled"></a>
 Indicates whether the key is available for use\. AWS CloudFormation sets this value to `true` by default\.  
 *Required: *No  
 *Type*: Boolean  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`EnableKeyRotation`  
+`EnableKeyRotation`  <a name="cfn-kms-key-enablekeyrotation"></a>
 Indicates whether AWS KMS rotates the key\. AWS CloudFormation sets this value to `false` by default\.  
 *Required: *No  
 *Type*: Boolean  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`KeyPolicy`  
+`KeyPolicy`  <a name="cfn-kms-key-keypolicy"></a>
 An AWS KMS key policy to attach to the key\. Use a policy to specify who has permission to use the key and which actions they can perform\. For more information, see [Key Policies](http://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html) in the *AWS Key Management Service Developer Guide*\.  
 *Required: *Yes  
 *Type*: JSON object  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Tags`  
+`Tags`  <a name="cfn-kms-key-tags"></a>
 Specifies an arbitrary set of tags \(key–value pairs\) to associate with this key\. Use tags to manage your resources\.  
 *Required: *No  
-*Type*:   
-*Update requires*: No interruption
+*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10d793c11"></a>
+## Return Values<a name="w3ab2c21c10d796c11"></a>
 
-### Ref<a name="w3ab2c21c10d793c11b2"></a>
+### Ref<a name="w3ab2c21c10d796c11b2"></a>
 
 When you provide the logical ID of this resource to the `Ref` intrinsic function, it returns the key ID, such as `123ab456-a4c2-44cb-95fd-b781f32fbb37`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d793c11b4"></a>
+### Fn::GetAtt<a name="w3ab2c21c10d796c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 `Arn`  
 The ARN of the AWS KMS key, such as `arn:aws:kms:us-west-2:123456789012:key/12a34567-8c90-1defg-af84-0bf06c1747f3`\.
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\.
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w3ab2c21c10d793c13"></a>
+## Examples<a name="w3ab2c21c10d796c13"></a>
 
-### <a name="w3ab2c21c10d793c13b2"></a>
+### <a name="w3ab2c21c10d796c13b2"></a>
 
 The following example creates a custom CMK, which permits the IAM user `Alice` to administer the key and allows `Bob` to use the key for encrypting and decrypting data\.
 

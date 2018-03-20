@@ -1,6 +1,6 @@
 # AWS::DynamoDB::Table<a name="aws-resource-dynamodb-table"></a>
 
-The `AWS::DynamoDB::Table` resource creates a DynamoDB table\.
+The `AWS::DynamoDB::Table` resource creates a DynamoDB table\. For more information, see [CreateTable](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_CreateTable.html) in the *Amazon DynamoDB API Reference*\.
 
 You should be aware of the following behaviors when working with DynamoDB tables:
 
@@ -20,8 +20,8 @@ You should be aware of the following behaviors when working with DynamoDB tables
 
 
 + [Syntax](#aws-resource-dynamodb-table-syntax)
-+ [Properties](#w3ab2c21c10d336c13)
-+ [Return Values](#w3ab2c21c10d336c15)
++ [Properties](#w3ab2c21c10d337c13)
++ [Return Values](#w3ab2c21c10d337c15)
 + [Examples](#cfn-dynamodb-table-examples)
 
 ## Syntax<a name="aws-resource-dynamodb-table-syntax"></a>
@@ -34,15 +34,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::DynamoDB::Table",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dynamodb-table-attributedef)" : [ AttributeDefinition, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dynamodb-table-gsi)" : [ GlobalSecondaryIndexes, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dynamodb-table-keyschema)" : [ KeySchema, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dynamodb-table-lsi)" : [ LocalSecondaryIndexes, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dynamodb-table-provisionedthroughput)" : ProvisionedThroughput,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dynamodb-table-streamspecification)" : StreamSpecification,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dynamodb-table-tablename)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dynamodb-table-tags)" : [ Resource Tag, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-dynamodb-table-timetolivespecification)" : TimeToLiveSpecification
+    "[AttributeDefinitions](#cfn-dynamodb-table-attributedef)" : [ AttributeDefinition, ... ],
+    "[GlobalSecondaryIndexes](#cfn-dynamodb-table-gsi)" : [ GlobalSecondaryIndexes, ... ],
+    "[KeySchema](#cfn-dynamodb-table-keyschema)" : [ KeySchema, ... ],
+    "[LocalSecondaryIndexes](#cfn-dynamodb-table-lsi)" : [ LocalSecondaryIndexes, ... ],
+    "[ProvisionedThroughput](#cfn-dynamodb-table-provisionedthroughput)" : ProvisionedThroughput,
+    "[SSESpecification](#cfn-dynamodb-table-ssespecification)" : SSESpecification,
+    "[StreamSpecification](#cfn-dynamodb-table-streamspecification)" : StreamSpecification,
+    "[TableName](#cfn-dynamodb-table-tablename)" : String,
+    "[Tags](#cfn-dynamodb-table-tags)" : [ Resource Tag, ... ],
+    "[TimeToLiveSpecification](#cfn-dynamodb-table-timetolivespecification)" : [TimeToLiveSpecification](aws-properties-dynamodb-table-timetolivespecification.md)
   }
 }
 ```
@@ -52,94 +53,102 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::DynamoDB::Table"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dynamodb-table-attributedef):
+  [AttributeDefinitions](#cfn-dynamodb-table-attributedef):
     - AttributeDefinition
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dynamodb-table-gsi):
+  [GlobalSecondaryIndexes](#cfn-dynamodb-table-gsi):
     - GlobalSecondaryIndexes
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dynamodb-table-keyschema):
+  [KeySchema](#cfn-dynamodb-table-keyschema):
     - KeySchema
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dynamodb-table-lsi):
+  [LocalSecondaryIndexes](#cfn-dynamodb-table-lsi):
     - LocalSecondaryIndexes
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dynamodb-table-provisionedthroughput):
+  [ProvisionedThroughput](#cfn-dynamodb-table-provisionedthroughput):
     ProvisionedThroughput
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dynamodb-table-streamspecification):
+  [SSESpecification](#cfn-dynamodb-table-ssespecification):
+    SSESpecification
+  [StreamSpecification](#cfn-dynamodb-table-streamspecification):
     StreamSpecification
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dynamodb-table-tablename): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dynamodb-table-tags): 
+  [TableName](#cfn-dynamodb-table-tablename): String
+  [Tags](#cfn-dynamodb-table-tags): 
     - Resource Tag
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-dynamodb-table-timetolivespecification): 
-    TimeToLiveSpecification
+  [TimeToLiveSpecification](#cfn-dynamodb-table-timetolivespecification): 
+    [TimeToLiveSpecification](aws-properties-dynamodb-table-timetolivespecification.md)
 ```
 
-## Properties<a name="w3ab2c21c10d336c13"></a>
+## Properties<a name="w3ab2c21c10d337c13"></a>
 
-`AttributeDefinitions`  
+`AttributeDefinitions`  <a name="cfn-dynamodb-table-attributedef"></a>
 A list of attributes that describe the key schema for the table and indexes\. Duplicates are allowed\.  
 *Required*: Yes  
 *Type*: List of [DynamoDB Table AttributeDefinition](aws-properties-dynamodb-attributedef.md)  
-*Update requires*: No interruption
+*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. Replacement if you edit an existing `AttributeDefinition`\.
 
-`GlobalSecondaryIndexes`  
+`GlobalSecondaryIndexes`  <a name="cfn-dynamodb-table-gsi"></a>
 Global secondary indexes to be created on the table\. You can create up to 5 global secondary indexes\.  
 If you update a table to include a new global secondary index, AWS CloudFormation initiates the index creation and then proceeds with the stack update\. AWS CloudFormation doesn't wait for the index to complete creation because the backfilling phase can take a long time, depending on the size of the table\. You can't use the index or update the table until the index's status is `ACTIVE`\. You can track its status by using the DynamoDB [http://docs.aws.amazon.com/cli/latest/reference/dynamodb/describe-table.html](http://docs.aws.amazon.com/cli/latest/reference/dynamodb/describe-table.html) command\.  
 If you add or delete an index during an update, we recommend that you don't update any other resources\. If your stack fails to update and is rolled back while adding a new index, you must manually delete the index\.
 *Required*: No  
-*Type*: List of   
+*Type*: List of [DynamoDB Table GlobalSecondaryIndex](aws-properties-dynamodb-gsi.md)  
 *Update requires*: Updates are not supported\. The following are exceptions:  
 
-+ If you update only the provisioned throughput values of global secondary indexes, you can update the table without interruption\.
++ If you update only the provisioned throughput values of global secondary indexes, you can update the table [without interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
-+ You can delete or add one global secondary index without interruption\. If you do both in the same update \(for example, by changing the index's logical ID\), the update fails\.
++ You can delete or add one global secondary index [without interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\. If you do both in the same update \(for example, by changing the index's logical ID\), the update fails\.
 
-`KeySchema`  
+`KeySchema`  <a name="cfn-dynamodb-table-keyschema"></a>
 Specifies the attributes that make up the primary key for the table\. The attributes in the `KeySchema` property must also be defined in the `AttributeDefinitions` property\.  
 *Required*: Yes  
-*Type*: List of   
-*Update requires*: Replacement
+*Type*: List of [DynamoDB Table KeySchema](aws-properties-dynamodb-keyschema.md)  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`LocalSecondaryIndexes`  
+`LocalSecondaryIndexes`  <a name="cfn-dynamodb-table-lsi"></a>
 Local secondary indexes to be created on the table\. You can create up to 5 local secondary indexes\. Each index is scoped to a given hash key value\. The size of each hash key can be up to 10 gigabytes\.  
 *Required*: No  
-*Type*: List of   
-*Update requires*: Replacement
+*Type*: List of [DynamoDB Table LocalSecondaryIndex](aws-properties-dynamodb-lsi.md)  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`ProvisionedThroughput`  
-Throughput for the specified table, which consists of values for `ReadCapacityUnits` and `WriteCapacityUnits`\. For more information about the contents of a provisioned throughput structure, see \.  
+`ProvisionedThroughput`  <a name="cfn-dynamodb-table-provisionedthroughput"></a>
+Throughput for the specified table, which consists of values for `ReadCapacityUnits` and `WriteCapacityUnits`\. For more information about the contents of a provisioned throughput structure, see [Amazon DynamoDB Table ProvisionedThroughput](aws-properties-dynamodb-provisionedthroughput.md)\.  
 *Required*: Yes  
-*Type*:   
-*Update requires*: No interruption
+*Type*: [DynamoDB Table ProvisionedThroughput](aws-properties-dynamodb-provisionedthroughput.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`StreamSpecification`  
+`SSESpecification`  <a name="cfn-dynamodb-table-ssespecification"></a>
+Specifies the settings to enable server\-side encryption\.  
+*Required: *No  
+*Type*: [DynamoDB SSESpecification](aws-properties-dynamodb-table-ssespecification.md)  
+*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
+
+`StreamSpecification`  <a name="cfn-dynamodb-table-streamspecification"></a>
 The settings for the DynamoDB table stream, which capture changes to items stored in the table\.  
 *Required*: No  
 *Type*: [DynamoDB Table StreamSpecification](aws-properties-dynamodb-streamspecification.md)  
-*Update requires*: No interruption to the table\. However, the stream is replaced\.
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) to the table\. However, the stream is replaced\.
 
-`TableName`  
+`TableName`  <a name="cfn-dynamodb-table-tablename"></a>
 A name for the table\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name\. For more information, see [Name Type](aws-properties-name.md)\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Required*: No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Tags`  
+`Tags`  <a name="cfn-dynamodb-table-tags"></a>
 Specifies an arbitrary set of tags \(key–value pairs\) to associate with this table\. Use tags to manage your resources\.  
 *Required: *No  
-*Type*:   
-*Update requires*: No interruption
+*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`TimeToLiveSpecification`  
+`TimeToLiveSpecification`  <a name="cfn-dynamodb-table-timetolivespecification"></a>
 Specifies the Time to Live \(TTL\) settings for the table\.  
 *Required: *No  
-*Type*:   
-*Update requires*: No interruption
+*Type*: [DynamoDB Table TimeToLiveSpecification](aws-properties-dynamodb-table-timetolivespecification.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 **Note**  
 For detailed information about the limits in DynamoDB, see [Limits in Amazon DynamoDB](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in the *Amazon DynamoDB Developer Guide*\.
 
-## Return Values<a name="w3ab2c21c10d336c15"></a>
+## Return Values<a name="w3ab2c21c10d337c15"></a>
 
-### Ref<a name="w3ab2c21c10d336c15b2"></a>
+### Ref<a name="w3ab2c21c10d337c15b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -149,9 +158,9 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 For the resource with the logical ID `myDynamoDBTable`, `Ref` will return the DynamoDB table name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d336c15b4"></a>
+### Fn::GetAtt<a name="w3ab2c21c10d337c15b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -162,7 +171,7 @@ The Amazon Resource Name \(ARN\) of the DynamoDB table, such as `arn:aws:dynamod
 The ARN of the DynamoDB stream, such as `arn:aws:dynamodb:us-east-1:123456789012:table/testddbstack-myDynamoDBTable-012A1SL7SMP5Q/stream/2015-11-30T20:10:00.000`\.  
 You must specify the `StreamSpecification` property to use this attribute\.
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\.
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
 ## Examples<a name="cfn-dynamodb-table-examples"></a>
 

@@ -15,9 +15,9 @@ The `AWS::SNS::Subscription` resource subscribes an endpoint to an Amazon Simple
 {
   "Type" : "AWS::SNS::Subscription",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-sns-endpoint)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-sns-protocol)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-sns-topicarn)" : String
+    "[Endpoint](#cfn-sns-endpoint)" : String,
+    "[Protocol](#cfn-sns-protocol)" : String,
+    "[TopicArn](#cfn-sns-topicarn)" : String
   }
 }
 ```
@@ -27,30 +27,30 @@ The `AWS::SNS::Subscription` resource subscribes an endpoint to an Amazon Simple
 ```
 Type: "AWS::SNS::Subscription"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-sns-endpoint): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-sns-protocol): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-sns-topicarn): String
+  [Endpoint](#cfn-sns-endpoint): String
+  [Protocol](#cfn-sns-protocol): String
+  [TopicArn](#cfn-sns-topicarn): String
 ```
 
 ## Properties<a name="aws-resource-sns-subscription-properties"></a>
 
-`Endpoint`  
+`Endpoint`  <a name="cfn-sns-endpoint"></a>
 The endpoint that receives notifications from the Amazon SNS topic\. The endpoint value depends on the protocol that you specify\. For more information, see the [Subscribe Endpoint](http://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html) parameter in the *Amazon Simple Notification Service API Reference*\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Protocol`  
+`Protocol`  <a name="cfn-sns-protocol"></a>
 The subscription's protocol\. For more information, see the [Subscribe Protocol](http://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html) parameter in the *Amazon Simple Notification Service API Reference*\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`TopicArn`  
+`TopicArn`  <a name="cfn-sns-topicarn"></a>
 The Amazon Resource Name \(ARN\) of the topic to subscribe to\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Example<a name="aws-resource-sns-subscription-examples"></a>
 

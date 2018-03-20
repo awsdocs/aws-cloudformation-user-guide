@@ -12,29 +12,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-mappingparameters)" : MappingParameters,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-recordformattype)" : String
+  "[MappingParameters](#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-mappingparameters)" : [*MappingParameters*](aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.md),
+  "[RecordFormatType](#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-recordformattype)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat-syntax.yaml"></a>
 
 ```
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-mappingparameters): 
-    MappingParameters
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-recordformattype): String
+  [MappingParameters](#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-mappingparameters): 
+    [*MappingParameters*](aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.md)
+  [RecordFormatType](#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-recordformattype): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat-properties"></a>
 
-`MappingParameters`  
+`MappingParameters`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-recordformat-mappingparameters"></a>
 When configuring application input at the time of creating or updating an application, provides additional mapping information specific to the record format \(such as JSON, CSV, or record fields delimited by some delimiter\) on the streaming source\.   
  *Required*: No  
  *Type*: [Kinesis Data Analytics ApplicationReferenceDataSource MappingParameters](aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`RecordFormatType`  
+`RecordFormatType`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-recordformat-recordformattype"></a>
 The type of record format \(CSV or JSON\)\.  
  *Required*: Yes  
  *Type*: String;  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

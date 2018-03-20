@@ -12,19 +12,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SSM::MaintenanceWindowTask",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-maxerrors)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-description)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-servicerolearn)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-priority)" : Integer,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-maxconcurrency)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-targets)" : [ Target, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-name)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-taskarn)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-taskinvocationparameters)" : TaskInvocationParameters,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-windowid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-taskparameters)" : JSON object,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-tasktype)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-logginginfo)" : LoggingInfo
+    "[MaxErrors](#cfn-ssm-maintenancewindowtask-maxerrors)" : String,
+    "[Description](#cfn-ssm-maintenancewindowtask-description)" : String,
+    "[ServiceRoleArn](#cfn-ssm-maintenancewindowtask-servicerolearn)" : String,
+    "[Priority](#cfn-ssm-maintenancewindowtask-priority)" : Integer,
+    "[MaxConcurrency](#cfn-ssm-maintenancewindowtask-maxconcurrency)" : String,
+    "[Targets](#cfn-ssm-maintenancewindowtask-targets)" : [ [*Target*](aws-properties-ssm-maintenancewindowtask-target.md), ... ],
+    "[Name](#cfn-ssm-maintenancewindowtask-name)" : String,
+    "[TaskArn](#cfn-ssm-maintenancewindowtask-taskarn)" : String,
+    "[TaskInvocationParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters)" : [*TaskInvocationParameters*](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md),
+    "[WindowId](#cfn-ssm-maintenancewindowtask-windowid)" : String,
+    "[TaskParameters](#cfn-ssm-maintenancewindowtask-taskparameters)" : JSON object,
+    "[TaskType](#cfn-ssm-maintenancewindowtask-tasktype)" : String,
+    "[LoggingInfo](#cfn-ssm-maintenancewindowtask-logginginfo)" : [*LoggingInfo*](aws-properties-ssm-maintenancewindowtask-logginginfo.md)
   }
 }
 ```
@@ -34,58 +34,58 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::SSM::MaintenanceWindowTask"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-maxerrors): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-description): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-servicerolearn): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-priority): Integer
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-maxconcurrency): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-targets): 
-    - Target
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-name): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-taskarn): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-taskinvocationparameters):
-    TaskInvocationParameters
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-windowid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-taskparameters):
+  [MaxErrors](#cfn-ssm-maintenancewindowtask-maxerrors): String
+  [Description](#cfn-ssm-maintenancewindowtask-description): String
+  [ServiceRoleArn](#cfn-ssm-maintenancewindowtask-servicerolearn): String
+  [Priority](#cfn-ssm-maintenancewindowtask-priority): Integer
+  [MaxConcurrency](#cfn-ssm-maintenancewindowtask-maxconcurrency): String
+  [Targets](#cfn-ssm-maintenancewindowtask-targets): 
+    - [*Target*](aws-properties-ssm-maintenancewindowtask-target.md)
+  [Name](#cfn-ssm-maintenancewindowtask-name): String
+  [TaskArn](#cfn-ssm-maintenancewindowtask-taskarn): String
+  [TaskInvocationParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters):
+    [*TaskInvocationParameters*](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md)
+  [WindowId](#cfn-ssm-maintenancewindowtask-windowid): String
+  [TaskParameters](#cfn-ssm-maintenancewindowtask-taskparameters):
     JSON object
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-tasktype): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-logginginfo): 
-    LoggingInfo
+  [TaskType](#cfn-ssm-maintenancewindowtask-tasktype): String
+  [LoggingInfo](#cfn-ssm-maintenancewindowtask-logginginfo): 
+    [*LoggingInfo*](aws-properties-ssm-maintenancewindowtask-logginginfo.md)
 ```
 
 ## Properties<a name="aws-resource-ssm-maintenancewindowtask-properties"></a>
 
-`MaxErrors`  
+`MaxErrors`  <a name="cfn-ssm-maintenancewindowtask-maxerrors"></a>
 The maximum number of errors allowed before this task stops being scheduled\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Description`  
+`Description`  <a name="cfn-ssm-maintenancewindowtask-description"></a>
 A description of the task\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`ServiceRoleArn`  
+`ServiceRoleArn`  <a name="cfn-ssm-maintenancewindowtask-servicerolearn"></a>
 The role that's used when the task is executed\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Priority`  
+`Priority`  <a name="cfn-ssm-maintenancewindowtask-priority"></a>
 The priority of the task in the Maintenance Window\. The lower the number, the higher the priority\. Tasks that have the same priority are scheduled in parallel\.  
  *Required*: Yes  
  *Type*: Integer  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`MaxConcurrency`  
+`MaxConcurrency`  <a name="cfn-ssm-maintenancewindowtask-maxconcurrency"></a>
 The maximum number of targets that you can run this task for, in parallel\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Targets`  
+`Targets`  <a name="cfn-ssm-maintenancewindowtask-targets"></a>
 The targets, either instances or tags\.  
 
 + Specify instances using `Key=instanceids,Values=instanceid1,instanceid2`\.
@@ -93,60 +93,60 @@ The targets, either instances or tags\.
 + Specify tags using `Key=tag name,Values=tag value`\.
  *Required*: Yes  
  *Type*: List of [SSM MaintenanceWindowTask Target](aws-properties-ssm-maintenancewindowtask-target.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Name`  
+`Name`  <a name="cfn-ssm-maintenancewindowtask-name"></a>
 The task name\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`TaskArn`  
+`TaskArn`  <a name="cfn-ssm-maintenancewindowtask-taskarn"></a>
 The resource that the task uses during execution\.  
 For `RUN_COMMAND` and `AUTOMATION` task types, `TaskArn` is the SSM document name or Amazon Resource Name \(ARN\)\.  
 For `LAMBDA` tasks, `TaskArn` is the function name or ARN\.  
 For `STEP_FUNCTION` tasks, `TaskArn` is the state machine ARN\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`TaskInvocationParameters`  
+`TaskInvocationParameters`  <a name="cfn-ssm-maintenancewindowtask-taskinvocationparameters"></a>
 The parameters for task execution\.  
  *Required*: No  
  *Type*: [SSM MaintenanceWindowTask TaskInvocationParameters](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`WindowId`  
+`WindowId`  <a name="cfn-ssm-maintenancewindowtask-windowid"></a>
 The ID of the Maintenance Window where the task is registered\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`TaskParameters`  
+`TaskParameters`  <a name="cfn-ssm-maintenancewindowtask-taskparameters"></a>
 The parameters to pass to the task when it's executed\.  
  *Required*: No  
  *Type*: JSON object  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`TaskType`  
+`TaskType`  <a name="cfn-ssm-maintenancewindowtask-tasktype"></a>
 The type of task\. Valid values: `RUN_COMMAND`, `AUTOMATION`, `LAMBDA`, `STEP_FUNCTION`\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`LoggingInfo`  
+`LoggingInfo`  <a name="cfn-ssm-maintenancewindowtask-logginginfo"></a>
 Information about an Amazon S3 bucket to write task\-level logs to\.  
  *Required*: No  
  *Type*: [SSM MaintenanceWindowTask LoggingInfo](aws-properties-ssm-maintenancewindowtask-logginginfo.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-ssm-maintenancewindowtask-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10e1018b9b3"></a>
+### Ref<a name="w3ab2c21c10e1046b9b3"></a>
 
 When you pass the logical ID of an `AWS::SSM::MaintenanceWindowTask` resource to the intrinsic `Ref` function, the function returns the physical ID of the resource, such as `12a345b6-bbb7-4bb6-90b0-8c9577a2d2b9`\. 
 
-For more information about using the `Ref` function, see Ref\. 
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
 ## See Also<a name="aws-resource-ssm-maintenancewindowtask-seealso"></a>
 

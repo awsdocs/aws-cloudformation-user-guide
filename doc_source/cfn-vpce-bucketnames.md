@@ -2,7 +2,7 @@
 
 You can use a [VPC endpoint](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpoints.html) to create a private connection between your VPC and another AWS service without requiring access over the Internet, through a NAT instance, a VPN connection, or AWS Direct Connect\. If you use AWS CloudFormation to create resources in a VPC with a VPC endpoint, you might need to modify your IAM endpoint policy so that it permits access to certain S3 buckets\.
 
-AWS CloudFormation has S3 buckets in each region to monitor responses to a custom resource request or a wait condition\. If a template includes custom resources or wait conditions in a VPC, the VPC endpoint policy must allow users to send responses to the following buckets:
+AWS CloudFormation has S3 buckets in each region to monitor responses to a [custom resource](template-custom-resources.md) request or a [wait condition](using-cfn-waitcondition.md)\. If a template includes custom resources or wait conditions in a VPC, the VPC endpoint policy must allow users to send responses to the following buckets:
 
 + For custom resources, permit traffic to the `cloudformation-custom-resource-response-region` bucket\.
 

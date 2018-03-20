@@ -12,16 +12,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-events-rule-runcommandtarget-key)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-events-rule-runcommandtarget-values)" : [ String, ... ]
+  "[Key](#cfn-events-rule-runcommandtarget-key)" : String,
+  "[Values](#cfn-events-rule-runcommandtarget-values)" : [ String, ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-events-rule-runcommandtarget-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-events-rule-runcommandtarget-key): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-events-rule-runcommandtarget-values): 
+[Key](#cfn-events-rule-runcommandtarget-key): String
+[Values](#cfn-events-rule-runcommandtarget-values): 
   - String
 ```
 
@@ -29,14 +29,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 For more information, including constraints, see [RunCommandTarget](http://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_RunCommandTarget.html) in the *Amazon CloudWatch Events API Reference*\.
 
-`Key`  
+`Key`  <a name="cfn-events-rule-runcommandtarget-key"></a>
 The key, either `tag: tag-key` or `InstanceIds`\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Values`  
+`Values`  <a name="cfn-events-rule-runcommandtarget-values"></a>
 A list of tag values or EC2 instance IDs\.  
  *Required*: Yes  
  *Type*: List of String values  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

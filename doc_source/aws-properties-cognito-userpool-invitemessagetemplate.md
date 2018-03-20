@@ -8,33 +8,33 @@
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-invitemessagetemplate-emailmessage)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-invitemessagetemplate-emailsubject)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-invitemessagetemplate-smsmessage)" : String
+  "[EmailMessage](#cfn-cognito-userpool-invitemessagetemplate-emailmessage)" : String,
+  "[EmailSubject](#cfn-cognito-userpool-invitemessagetemplate-emailsubject)" : String,
+  "[SMSMessage](#cfn-cognito-userpool-invitemessagetemplate-smsmessage)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-cognito-userpool-invitemessagetemplate-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-invitemessagetemplate-emailmessage): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-invitemessagetemplate-emailsubject): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-invitemessagetemplate-smsmessage): String
+[EmailMessage](#cfn-cognito-userpool-invitemessagetemplate-emailmessage): String
+[EmailSubject](#cfn-cognito-userpool-invitemessagetemplate-emailsubject): String
+[SMSMessage](#cfn-cognito-userpool-invitemessagetemplate-smsmessage): String
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-invitemessagetemplate-properties"></a>
 
-`EmailMessage`  
+`EmailMessage`  <a name="cfn-cognito-userpool-invitemessagetemplate-emailmessage"></a>
 The message template for email messages\.  
 *Type*: String  
 *Required: *No
 
-`EmailSubject`  
+`EmailSubject`  <a name="cfn-cognito-userpool-invitemessagetemplate-emailsubject"></a>
 The subject line for email messages\.  
 *Type*: String  
 *Required: *No
 
-`SMSMessage`  
+`SMSMessage`  <a name="cfn-cognito-userpool-invitemessagetemplate-smsmessage"></a>
 The message template for SMS messages\.  
 *Type*: String  
 *Required: *No

@@ -12,41 +12,41 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-vpcconfig-securitygroupids)" : [ String, ... ],
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-vpcconfig-subnets)" : [ String, ... ],
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-vpcconfig-vpcid)" : String
+  "[SecurityGroupIds](#cfn-codebuild-project-vpcconfig-securitygroupids)" : [ String, ... ],
+  "[Subnets](#cfn-codebuild-project-vpcconfig-subnets)" : [ String, ... ],
+  "[VpcId](#cfn-codebuild-project-vpcconfig-vpcid)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-codebuild-project-vpcconfig-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-vpcconfig-securitygroupids): 
+[SecurityGroupIds](#cfn-codebuild-project-vpcconfig-securitygroupids): 
   - String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-vpcconfig-subnets): 
+[Subnets](#cfn-codebuild-project-vpcconfig-subnets): 
   - String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-vpcconfig-vpcid): String
+[VpcId](#cfn-codebuild-project-vpcconfig-vpcid): String
 ```
 
 ## Properties<a name="aws-properties-codebuild-project-vpcconfig-properties"></a>
 
-`SecurityGroupIds`  
+`SecurityGroupIds`  <a name="cfn-codebuild-project-vpcconfig-securitygroupids"></a>
 The IDs of the security groups in the Amazon VPC\. The maximum count is 5\.  
  *Required*: Yes  
  *Type*: List of String values  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Subnets`  
+`Subnets`  <a name="cfn-codebuild-project-vpcconfig-subnets"></a>
 The IDs of the subnets in the Amazon VPC\. The maximum count is 16\.  
  *Required*: Yes  
  *Type*: List of String values  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`VpcId`  
+`VpcId`  <a name="cfn-codebuild-project-vpcconfig-vpcid"></a>
 The ID of the Amazon VPC\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-codebuild-project-vpcconfig-seealso"></a>
 

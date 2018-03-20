@@ -18,10 +18,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ElasticLoadBalancingV2::ListenerRule",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listenerrule-actions)" : [ Actions, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listenerrule-conditions)" : [ Conditions, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listenerrule-listenerarn)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listenerrule-priority)" : Integer
+    "[Actions](#cfn-elasticloadbalancingv2-listenerrule-actions)" : [ [Actions](aws-properties-elasticloadbalancingv2-listenerrule-actions.md), ... ],
+    "[Conditions](#cfn-elasticloadbalancingv2-listenerrule-conditions)" : [ [Conditions](aws-properties-elasticloadbalancingv2-listenerrule-conditions.md), ... ],
+    "[ListenerArn](#cfn-elasticloadbalancingv2-listenerrule-listenerarn)" : String,
+    "[Priority](#cfn-elasticloadbalancingv2-listenerrule-priority)" : Integer
   }
 }
 ```
@@ -31,41 +31,41 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ElasticLoadBalancingV2::ListenerRule"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listenerrule-actions):
-    - Actions
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listenerrule-conditions):
-    - Conditions
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listenerrule-listenerarn): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-listenerrule-priority): Integer
+  [Actions](#cfn-elasticloadbalancingv2-listenerrule-actions):
+    - [Actions](aws-properties-elasticloadbalancingv2-listenerrule-actions.md)
+  [Conditions](#cfn-elasticloadbalancingv2-listenerrule-conditions):
+    - [Conditions](aws-properties-elasticloadbalancingv2-listenerrule-conditions.md)
+  [ListenerArn](#cfn-elasticloadbalancingv2-listenerrule-listenerarn): String
+  [Priority](#cfn-elasticloadbalancingv2-listenerrule-priority): Integer
 ```
 
 ## Properties<a name="w3ab2c21c10d599b9"></a>
 
-`Actions`  
+`Actions`  <a name="cfn-elasticloadbalancingv2-listenerrule-actions"></a>
 The action that the listener takes when a request meets the specified condition\.  
 *Required: *Yes  
 *Type*: List of [Elastic Load Balancing ListenerRule Actions](aws-properties-elasticloadbalancingv2-listenerrule-actions.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Conditions`  
+`Conditions`  <a name="cfn-elasticloadbalancingv2-listenerrule-conditions"></a>
 The conditions under which a rule takes effect\.  
 *Required: *Yes  
 *Type*: List of [Elastic Load Balancing ListenerRule Conditions](aws-properties-elasticloadbalancingv2-listenerrule-conditions.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ListenerArn`  
+`ListenerArn`  <a name="cfn-elasticloadbalancingv2-listenerrule-listenerarn"></a>
 The Amazon Resource Name \(ARN\) of the listener that the rule applies to\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Priority`  
+`Priority`  <a name="cfn-elasticloadbalancingv2-listenerrule-priority"></a>
 The priority for the rule\. Elastic Load Balancing evaluates rules in priority order, from the lowest value to the highest value\. If a request satisfies a rule, Elastic Load Balancing ignores all subsequent rules\.  
 A listener can have only one rule with a given priority\.
 For valid values, see the `Priority` parameter for the [CreateRule](http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateRule.html) action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
 *Required: *Yes  
 *Type*: Integer  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Value<a name="w3ab2c21c10d599c11"></a>
 
@@ -73,7 +73,7 @@ For valid values, see the `Priority` parameter for the [CreateRule](http://docs.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the rule's ARN, such as `arn:aws:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d599c13"></a>
 

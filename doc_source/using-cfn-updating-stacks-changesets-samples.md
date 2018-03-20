@@ -2,7 +2,7 @@
 
 This section provides examples of the change sets that AWS CloudFormation would create for common stack changes\. They show how to edit a template directly; modify a single input parameter; plan for resource recreation \(replacements\), which prevents you from losing data that wasn't backed up or interrupting applications that are running in your stack; and add and remove resources\. To illustrate how change sets work, we'll walk through the changes that were submitted and discuss the resulting change set\. Because each example builds on and assumes that you understand the previous example, we recommend that you read them in order\. For a description of each field in a change set, see the [Change](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Change.html) data type in the *AWS CloudFormation API Reference*\.
 
-You can use the console, AWS CLI, or AWS CloudFormation [API](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeChangeSet.html) to view change set details\.
+You can use the [console](using-cfn-updating-stacks-changesets-view.md), AWS CLI, or AWS CloudFormation [API](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeChangeSet.html) to view change set details\.
 
 We generated each of the following change sets from a stack with the following [sample template](https://s3.amazonaws.com/cloudformation-examples/user-guide/changesets/ec2-instance.txt):
 
@@ -176,7 +176,7 @@ The `Purpose` parameter specifies a tag key value for the EC2 instance\. In the 
 }
 ```
 
-The `Changes` structure functions similar to way it does in the Directly Editing a Template example\. There's only one `ResourceChange` structure; it describes a change to the `Tags` attribute of the `i-1abc23d4` EC2 instance\.
+The `Changes` structure functions similar to way it does in the [Directly Editing a Template](#using-cfn-updating-stacks-changesets-samples-directly-editing-a-template) example\. There's only one `ResourceChange` structure; it describes a change to the `Tags` attribute of the `i-1abc23d4` EC2 instance\.
 
 However, in the `Details` structure, the change set shows two changes for the `Tags` attribute, even though only a single parameter value was changed\. Resources that reference a changed parameter value \(using the `Ref` intrinsic function\) always result in two changes: one with a `Dynamic` evaluation and another with a `Static` evaluation\. You can see these types of changes by viewing the following fields:
 

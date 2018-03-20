@@ -4,10 +4,10 @@ The `AWS::WAF::WebACL` resource creates an AWS WAF web access control group \(AC
 
 
 + [Syntax](#aws-resource-waf-webacl-syntax)
-+ [Properties](#w3ab2c21c10e1059b9)
-+ [Return Values](#w3ab2c21c10e1059c11)
-+ [Examples](#w3ab2c21c10e1059c13)
-+ [Associate a Web ACL with a CloudFront Distribution](#w3ab2c21c10e1059c15)
++ [Properties](#w3ab2c21c10e1087b9)
++ [Return Values](#w3ab2c21c10e1087c11)
++ [Examples](#w3ab2c21c10e1087c13)
++ [Associate a Web ACL with a CloudFront Distribution](#w3ab2c21c10e1087c15)
 
 ## Syntax<a name="aws-resource-waf-webacl-syntax"></a>
 
@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAF::WebACL",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-waf-webacl-defaultaction)" : Action,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-waf-webacl-metricname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-waf-webacl-name)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-waf-webacl-rules)" : [ Rule, ... ]
+    "[DefaultAction](#cfn-waf-webacl-defaultaction)" : Action,
+    "[MetricName](#cfn-waf-webacl-metricname)" : String,
+    "[Name](#cfn-waf-webacl-name)" : String,
+    "[Rules](#cfn-waf-webacl-rules)" : [ Rule, ... ]
   }
 }
 ```
@@ -32,51 +32,51 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::WAF::WebACL"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-waf-webacl-defaultaction):
+  [DefaultAction](#cfn-waf-webacl-defaultaction):
     Action
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-waf-webacl-metricname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-waf-webacl-name): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-waf-webacl-rules):
+  [MetricName](#cfn-waf-webacl-metricname): String
+  [Name](#cfn-waf-webacl-name): String
+  [Rules](#cfn-waf-webacl-rules):
     - Rule
 ```
 
-## Properties<a name="w3ab2c21c10e1059b9"></a>
+## Properties<a name="w3ab2c21c10e1087b9"></a>
 
-`DefaultAction`  
+`DefaultAction`  <a name="cfn-waf-webacl-defaultaction"></a>
 The action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL\.  
 *Required: *Yes  
 *Type*: [AWS WAF WebACL Action](aws-properties-waf-webacl-action.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`MetricName`  
+`MetricName`  <a name="cfn-waf-webacl-metricname"></a>
 A friendly name or description for the Amazon CloudWatch metric of this web ACL\. For valid values, see the `MetricName` parameter of the [CreateWebACL](http://docs.aws.amazon.com/waf/latest/APIReference/API_CreateWebACL.html) action in the *AWS WAF API Reference*\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Name`  
+`Name`  <a name="cfn-waf-webacl-name"></a>
 A friendly name or description of the web ACL\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Rules`  
+`Rules`  <a name="cfn-waf-webacl-rules"></a>
 The rules to associate with the web ACL and the settings for each rule\.  
 *Required: *No  
 *Type*: List of [AWS WAF WebACL Rules](aws-properties-waf-webacl-rules.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10e1059c11"></a>
+## Return Values<a name="w3ab2c21c10e1087c11"></a>
 
-### Ref<a name="w3ab2c21c10e1059c11b2"></a>
+### Ref<a name="w3ab2c21c10e1087c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name, such as `1234a1a-a1b1-12a1-abcd-a123b123456`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w3ab2c21c10e1059c13"></a>
+## Examples<a name="w3ab2c21c10e1087c13"></a>
 
-### Create a Web ACL<a name="w3ab2c21c10e1059c13b2"></a>
+### Create a Web ACL<a name="w3ab2c21c10e1087c13b2"></a>
 
 The following example defines a web ACL that allows, by default, any web request\. However, if the request matches any rule, AWS WAF blocks the request\. AWS WAF evaluates each rule in priority order, starting with the lowest value\.
 
@@ -149,7 +149,7 @@ MyWebACL:
           Ref: "SqlInjRule"
 ```
 
-## Associate a Web ACL with a CloudFront Distribution<a name="w3ab2c21c10e1059c15"></a>
+## Associate a Web ACL with a CloudFront Distribution<a name="w3ab2c21c10e1087c15"></a>
 
 The follow example associates the `MyWebACL` web ACL with a CloudFront distribution\. The web ACL restricts which requests can access content served by CloudFront\.
 

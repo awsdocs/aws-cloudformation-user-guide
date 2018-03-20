@@ -12,20 +12,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationoutput-destinationschema-recordformattype)" : String
+  "[RecordFormatType](#cfn-kinesisanalytics-applicationoutput-destinationschema-recordformattype)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisanalytics-applicationoutput-destinationschema-syntax.yaml"></a>
 
 ```
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationoutput-destinationschema-recordformattype): String
+  [RecordFormatType](#cfn-kinesisanalytics-applicationoutput-destinationschema-recordformattype): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-applicationoutput-destinationschema-properties"></a>
 
-`RecordFormatType`  
+`RecordFormatType`  <a name="cfn-kinesisanalytics-applicationoutput-destinationschema-recordformattype"></a>
 Specifies the format of the records on the output stream\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

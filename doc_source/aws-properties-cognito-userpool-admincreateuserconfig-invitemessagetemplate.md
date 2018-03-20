@@ -8,33 +8,33 @@
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate-emailmessage)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate-emailsubject)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate-smsmessage)" : String
+  "[EmailMessage](#cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate-emailmessage)" : String,
+  "[EmailSubject](#cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate-emailsubject)" : String,
+  "[SMSMessage](#cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate-smsmessage)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-cognito-userpool-admincreateuserconfig-invitemessagetemplate-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate-emailmessage): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate-emailsubject): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate-smsmessage): String
+[EmailMessage](#cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate-emailmessage): String
+[EmailSubject](#cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate-emailsubject): String
+[SMSMessage](#cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate-smsmessage): String
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-admincreateuserconfig-invitemessagetemplate-properties"></a>
 
-`EmailMessage`  
+`EmailMessage`  <a name="cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate-emailmessage"></a>
 The message template for email messages\.  
 *Type*: String  
 *Required: *No
 
-`EmailSubject`  
+`EmailSubject`  <a name="cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate-emailsubject"></a>
 The subject line for email messages\.  
 *Type*: String  
 *Required: *No
 
-`SMSMessage`  
+`SMSMessage`  <a name="cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate-smsmessage"></a>
 The message template for SMS messages\.  
 *Type*: String  
 *Required: *No

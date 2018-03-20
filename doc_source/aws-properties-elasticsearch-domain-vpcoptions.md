@@ -12,33 +12,33 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticsearch-domain-vpcoptions-securitygroupids)" : [ String, ... ],
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticsearch-domain-vpcoptions-subnetids)" : [ String, ... ]
+  "[SecurityGroupIds](#cfn-elasticsearch-domain-vpcoptions-securitygroupids)" : [ String, ... ],
+  "[SubnetIds](#cfn-elasticsearch-domain-vpcoptions-subnetids)" : [ String, ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-elasticsearch-domain-vpcoptions-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticsearch-domain-vpcoptions-securitygroupids): 
+[SecurityGroupIds](#cfn-elasticsearch-domain-vpcoptions-securitygroupids): 
   - String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticsearch-domain-vpcoptions-subnetids): 
+[SubnetIds](#cfn-elasticsearch-domain-vpcoptions-subnetids): 
   - String
 ```
 
 ## Properties<a name="aws-properties-elasticsearch-domain-vpcoptions-properties"></a>
 
-`SecurityGroupIds`  
+`SecurityGroupIds`  <a name="cfn-elasticsearch-domain-vpcoptions-securitygroupids"></a>
 The list of security group IDs that are associated with the VPC endpoints for the domain\. If you don't provide a security group ID, Amazon ES uses the default security group for the VPC\. To learn more, see [Security Groups for your VPC](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html) in the *Amazon VPC User Guide*\.  
  *Required*: No  
  *Type*: List of String values  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`SubnetIds`  
+`SubnetIds`  <a name="cfn-elasticsearch-domain-vpcoptions-subnetids"></a>
 A list of subnet IDs that are associated with the VPC endpoints for the domain\. If your domain has zone awareness enabled, you need to provide two subnet IDs, one per zone\. Otherwise, you only need to provide one\. To learn more, see [VPCs and Subnets](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html) in the *Amazon VPC User Guide*\.  
  *Required*: No  
  *Type*: List of String values  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-elasticsearch-domain-vpcoptions-seealso"></a>
 

@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Inspector::ResourceGroup",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-inspector-resourcegroup-resourcegrouptags)" : [ Resource Tag, ... ]
+    "[ResourceGroupTags](#cfn-inspector-resourcegroup-resourcegrouptags)" : [ Resource Tag, ... ]
   }
 }
 ```
@@ -28,17 +28,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Inspector::ResourceGroup"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-inspector-resourcegroup-resourcegrouptags): 
+  [ResourceGroupTags](#cfn-inspector-resourcegroup-resourcegrouptags): 
     - Resource Tag
 ```
 
 ## Properties<a name="aws-resource-inspector-resourcegroup-properties"></a>
 
-`ResourceGroupTags`  
+`ResourceGroupTags`  <a name="cfn-inspector-resourcegroup-resourcegrouptags"></a>
 The tags \(key and value pairs\) of the resource group\.  
  *Required*: Yes  
- *Type*: List of   
- *Update requires*: Replacement 
+ *Type*: List of [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## Return Values<a name="aws-resource-inspector-resourcegroup-returnvalues"></a>
 
@@ -49,7 +49,7 @@ The tags \(key and value pairs\) of the resource group\.
 `Arn`  
 The Amazon Resource Name \(ARN\) that specifies the resource group that is created\. 
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\. 
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
 
 ## Examples<a name="aws-resource-inspector-resourcegroup-examples"></a>
 

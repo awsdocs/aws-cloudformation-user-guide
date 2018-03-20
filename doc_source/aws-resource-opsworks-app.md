@@ -4,10 +4,10 @@ Defines an AWS OpsWorks app for an AWS OpsWorks stack\. The app specifies the co
 
 
 + [Syntax](#aws-resource-opsworks-app-syntax)
-+ [Properties](#w3ab2c21c10d839b9)
-+ [Return Values](#w3ab2c21c10d839c11)
-+ [Template Snippet](#w3ab2c21c10d839c13)
-+ [More Info](#w3ab2c21c10d839c15)
++ [Properties](#w3ab2c21c10d842b9)
++ [Return Values](#w3ab2c21c10d842c11)
++ [Template Snippet](#w3ab2c21c10d842c13)
++ [More Info](#w3ab2c21c10d842c15)
 
 ## Syntax<a name="aws-resource-opsworks-app-syntax"></a>
 
@@ -19,18 +19,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type": "AWS::OpsWorks::App",
   "Properties": {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-appsource)" : Source,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-attributes)" : { String:String, ... },
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-datasources)" : [ DataSource, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-description)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-domains)" :  [ String, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-enablessl)" : Boolean,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-environment)" : [ Environment, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-name)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-shortname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-sslconfig)" : { SslConfiguration },
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-stackid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-type)" : String
+    "[AppSource](#cfn-opsworks-app-appsource)" : Source,
+    "[Attributes](#cfn-opsworks-app-attributes)" : { String:String, ... },
+    "[DataSources](#cfn-opsworks-app-datasources)" : [ [DataSource](aws-properties-opsworks-app-datasource.md), ... ],
+    "[Description](#cfn-opsworks-app-description)" : String,
+    "[Domains](#cfn-opsworks-app-domains)" :  [ String, ... ],
+    "[EnableSsl](#cfn-opsworks-app-enablessl)" : Boolean,
+    "[Environment](#cfn-opsworks-app-environment)" : [ Environment, ... ],
+    "[Name](#cfn-opsworks-app-name)" : String,
+    "[Shortname](#cfn-opsworks-app-shortname)" : String,
+    "[SslConfiguration](#cfn-opsworks-app-sslconfig)" : { SslConfiguration },
+    "[StackId](#cfn-opsworks-app-stackid)" : String,
+    "[Type](#cfn-opsworks-app-type)" : String
   }
 }
 ```
@@ -40,103 +40,103 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::OpsWorks::App"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-appsource):
+  [AppSource](#cfn-opsworks-app-appsource):
     Source
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-attributes):
+  [Attributes](#cfn-opsworks-app-attributes):
     String: String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-description): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-datasources): 
-    - DataSource
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-domains):
+  [Description](#cfn-opsworks-app-description): String
+  [DataSources](#cfn-opsworks-app-datasources): 
+    - [DataSource](aws-properties-opsworks-app-datasource.md)
+  [Domains](#cfn-opsworks-app-domains):
     - String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-enablessl): Boolean
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-environment):
+  [EnableSsl](#cfn-opsworks-app-enablessl): Boolean
+  [Environment](#cfn-opsworks-app-environment):
     - Environment
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-name): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-shortname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-sslconfig):
+  [Name](#cfn-opsworks-app-name): String
+  [Shortname](#cfn-opsworks-app-shortname): String
+  [SslConfiguration](#cfn-opsworks-app-sslconfig):
     SslConfiguration
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-stackid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-app-type): String
+  [StackId](#cfn-opsworks-app-stackid): String
+  [Type](#cfn-opsworks-app-type): String
 ```
 
-## Properties<a name="w3ab2c21c10d839b9"></a>
+## Properties<a name="w3ab2c21c10d842b9"></a>
 
-`AppSource`  
+`AppSource`  <a name="cfn-opsworks-app-appsource"></a>
 The information required to retrieve an app from a repository\.  
 *Required: *No  
 *Type*: [AWS OpsWorks Source Type](aws-properties-opsworks-stack-source.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Attributes`  
+`Attributes`  <a name="cfn-opsworks-app-attributes"></a>
 One or more user\-defined key\-value pairs to be added to the app attributes bag\.  
 *Required: *No  
 *Type*: A list of key\-value pairs  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Description`  
+`Description`  <a name="cfn-opsworks-app-description"></a>
 A description of the app\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`DataSources`  
+`DataSources`  <a name="cfn-opsworks-app-datasources"></a>
 A list of databases to associate with the AWS OpsWorks app\.  
 *Required: *No  
 *Type*: List of [AWS OpsWorks App DataSource](aws-properties-opsworks-app-datasource.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Domains`  
+`Domains`  <a name="cfn-opsworks-app-domains"></a>
 The app virtual host settings, with multiple domains separated by commas\. For example, `'www.example.com`, `example.com'`\.  
 *Required: *No  
 *Type*: List of String values  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`EnableSsl`  
+`EnableSsl`  <a name="cfn-opsworks-app-enablessl"></a>
 Whether to enable SSL for this app\.  
 *Required: *No  
 *Type*: Boolean  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Environment`  
+`Environment`  <a name="cfn-opsworks-app-environment"></a>
 The environment variables to associate with the AWS OpsWorks app\.  
 *Required: *No  
 *Type*: List of [AWS OpsWorks App Environment](aws-properties-opsworks-app-environment.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Name`  
+`Name`  <a name="cfn-opsworks-app-name"></a>
 The name of the AWS OpsWorks app\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Shortname`  
+`Shortname`  <a name="cfn-opsworks-app-shortname"></a>
 The app short name, which is used internally by AWS OpsWorks and by Chef recipes\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`SslConfiguration`  
+`SslConfiguration`  <a name="cfn-opsworks-app-sslconfig"></a>
 The SSL configuration  
 *Required: *No  
 *Type*: [AWS OpsWorks SslConfiguration Type](aws-properties-opsworks-app-sslconfiguration.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`StackId`  
+`StackId`  <a name="cfn-opsworks-app-stackid"></a>
 The ID of the AWS OpsWorks stack to associate this app with\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Type`  
+`Type`  <a name="cfn-opsworks-app-type"></a>
 The app type\. Each supported type is associated with a particular layer\. For more information, see [CreateApp](http://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateApp.html) in the *AWS OpsWorks Stacks API Reference*\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10d839c11"></a>
+## Return Values<a name="w3ab2c21c10d842c11"></a>
 
-### Ref<a name="w3ab2c21c10d839c11b2"></a>
+### Ref<a name="w3ab2c21c10d842c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -146,9 +146,9 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 For the AWS OpsWorks stack `myApp`, `Ref` returns the ID of the AWS OpsWorks app\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Template Snippet<a name="w3ab2c21c10d839c13"></a>
+## Template Snippet<a name="w3ab2c21c10d842c13"></a>
 
 The following snippet creates an AWS OpsWorks app that uses a PHP application in a Git repository:
 
@@ -186,7 +186,7 @@ myApp:
       Revision: "version1"
 ```
 
-## More Info<a name="w3ab2c21c10d839c15"></a>
+## More Info<a name="w3ab2c21c10d842c15"></a>
 
 + [AWS::OpsWorks::Stack](aws-resource-opsworks-stack.md)
 

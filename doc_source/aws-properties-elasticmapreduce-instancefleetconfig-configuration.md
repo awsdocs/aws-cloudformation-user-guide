@@ -12,37 +12,37 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### JSON<a name="aws-properties-elasticmapreduce-instancefleetconfig-configuration-syntax.json"></a>
 
 ```
-"[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-instancefleetconfig-configuration-classification)" : String,
-"[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-instancefleetconfig-configuration-configurationproperties)" : { String:String, ... },
-"[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-instancefleetconfig-configuration-configurations)" : [ Configuration, ... ]
+"[Classification](#cfn-elasticmapreduce-instancefleetconfig-configuration-classification)" : String,
+"[ConfigurationProperties](#cfn-elasticmapreduce-instancefleetconfig-configuration-configurationproperties)" : { String:String, ... },
+"[Configurations](#cfn-elasticmapreduce-instancefleetconfig-configuration-configurations)" : [ [*Configuration*](#aws-properties-elasticmapreduce-instancefleetconfig-configuration), ... ]
 ```
 
 ### YAML<a name="aws-properties-elasticmapreduce-instancefleetconfig-configuration-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-instancefleetconfig-configuration-classification): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-instancefleetconfig-configuration-configurationproperties): 
+[Classification](#cfn-elasticmapreduce-instancefleetconfig-configuration-classification): String
+[ConfigurationProperties](#cfn-elasticmapreduce-instancefleetconfig-configuration-configurationproperties): 
   String: String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-instancefleetconfig-configuration-configurations): 
-  - Configuration
+[Configurations](#cfn-elasticmapreduce-instancefleetconfig-configuration-configurations): 
+  - [*Configuration*](#aws-properties-elasticmapreduce-instancefleetconfig-configuration)
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-instancefleetconfig-configuration-properties"></a>
 
-`Classification`  
+`Classification`  <a name="cfn-elasticmapreduce-instancefleetconfig-configuration-classification"></a>
 The application\-specific configuration file\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`ConfigurationProperties`  
+`ConfigurationProperties`  <a name="cfn-elasticmapreduce-instancefleetconfig-configuration-configurationproperties"></a>
 Within a configuration classification, a set of properties that represent the settings that you want to change in the configuration file\. Duplicates not allowed\.  
 *Required: *No  
 *Type*: String to String map  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Configurations`  
+`Configurations`  <a name="cfn-elasticmapreduce-instancefleetconfig-configuration-configurations"></a>
 The list of additional configurations to apply within a configuration object\. Duplicates not allowed\.  
 *Required: *No  
 *Type*: List of [Amazon EMR InstanceFleetConfig Configuration](#aws-properties-elasticmapreduce-instancefleetconfig-configuration)  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

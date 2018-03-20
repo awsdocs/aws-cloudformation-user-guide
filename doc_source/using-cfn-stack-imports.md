@@ -2,7 +2,7 @@
 
 When you export an output value, stacks that are in the same AWS account and region can import that value\. To see which stacks are importing a particular output value, use the list import action\.
 
-To delete or modify exported output values, use the `ListImports` action to track which stacks are importing them, and then modify those stacks to remove the `Fn::ImportValue` functions that reference the output values\. You must remove all of the imports that reference exported output values before you can delete or modify the exported output values\.
+To delete or modify exported output values, use the `ListImports` action to track which stacks are importing them, and then modify those stacks to remove the [`Fn::ImportValue`](intrinsic-function-reference-importvalue.md) functions that reference the output values\. You must remove all of the imports that reference exported output values before you can delete or modify the exported output values\.
 
 For more information about exporting and importing output values, see [Exporting Stack Output Values](using-cfn-stack-exports.md)\.
 

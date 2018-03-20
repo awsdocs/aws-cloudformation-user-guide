@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ECR::Repository",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecr-repository-lifecyclepolicy)" : LifecyclePolicy,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecr-repository-repositoryname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecr-repository-repositorypolicytext)" : JSON object
+    "[LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy)" : [*LifecyclePolicy*](aws-properties-ecr-repository-lifecyclepolicy.md),
+    "[RepositoryName](#cfn-ecr-repository-repositoryname)" : String,
+    "[RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext)" : JSON object
   }
 }
 ```
@@ -30,32 +30,32 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ECR::Repository"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ecr-repository-lifecyclepolicy):
-    LifecyclePolicy
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ecr-repository-repositoryname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ecr-repository-repositorypolicytext): JSON object
+  [LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy):
+    [*LifecyclePolicy*](aws-properties-ecr-repository-lifecyclepolicy.md)
+  [RepositoryName](#cfn-ecr-repository-repositoryname): String
+  [RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext): JSON object
 ```
 
 ## Properties<a name="aws-resource-ecr-repository-properties"></a>
 
-`LifecyclePolicy`  
+`LifecyclePolicy`  <a name="cfn-ecr-repository-lifecyclepolicy"></a>
 A lifecycle policy for the repository\.  
 *Required*: No  
-*Type*:   
-*Update requires*: No interruption
+*Type*: [Amazon ECR Repository LifecyclePolicy](aws-properties-ecr-repository-lifecyclepolicy.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`RepositoryName`  
+`RepositoryName`  <a name="cfn-ecr-repository-repositoryname"></a>
 A name for the image repository\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the repository name\. For more information, see [Name Type](aws-properties-name.md)\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`RepositoryPolicyText`  
+`RepositoryPolicyText`  <a name="cfn-ecr-repository-repositorypolicytext"></a>
 A policy that controls who has access to the repository and which actions they can perform on it\. For more information, see [Amazon ECR Repository Policies](http://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicies.html) in the *Amazon Elastic Container Registry User Guide*\.  
 *Required: *No  
 *Type*: JSON object  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-ecr-repository-returnvalues"></a>
 
@@ -63,7 +63,7 @@ A policy that controls who has access to the repository and which actions they c
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name, such as `test-repository`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Examples<a name="aws-resource-ecr-repository-examples"></a>
 

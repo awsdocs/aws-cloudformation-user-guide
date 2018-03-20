@@ -14,21 +14,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-elbinfo-name)" : String
+  "[Name](#cfn-codedeploy-deploymentgroup-elbinfo-name)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-elbinfo-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-elbinfo-name): String
+[Name](#cfn-codedeploy-deploymentgroup-elbinfo-name): String
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-elbinfo-properties"></a>
 
-`Name`  
+`Name`  <a name="cfn-codedeploy-deploymentgroup-elbinfo-name"></a>
 The name of the load balancer that instances are deregistered from so they are not serving traffic during a deployment, and then re\-registered with after the deployment completes\. No duplicates allowed\.  
 AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only\.
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

@@ -12,28 +12,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-environmentvariable-name)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-environmentvariable-type)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-environmentvariable-value)" : String
+  "[Name](#cfn-codebuild-project-environmentvariable-name)" : String,
+  "[Type](#cfn-codebuild-project-environmentvariable-type)" : String,
+  "[Value](#cfn-codebuild-project-environmentvariable-value)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-codebuild-project-environmentvariable-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-environmentvariable-name): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-environmentvariable-type): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-environmentvariable-value): String
+[Name](#cfn-codebuild-project-environmentvariable-name): String
+[Type](#cfn-codebuild-project-environmentvariable-type): String
+[Value](#cfn-codebuild-project-environmentvariable-value): String
 ```
 
-## Properties<a name="w3ab2c21c14d295b9"></a>
+## Properties<a name="w3ab2c21c14d296b9"></a>
 
-`Name`  
+`Name`  <a name="cfn-codebuild-project-environmentvariable-name"></a>
 The name of an environment variable\.  
 *Required: *Yes  
 *Type*: String
 
-`Type`  
+`Type`  <a name="cfn-codebuild-project-environmentvariable-type"></a>
 The type of environment variable\. Valid values are:  
 
 + `PARAMETER_STORE`: An environment variable stored in Systems Manager Parameter Store\.
@@ -42,7 +42,7 @@ The type of environment variable\. Valid values are:
 *Required: *No  
 *Type*: String
 
-`Value`  
+`Value`  <a name="cfn-codebuild-project-environmentvariable-value"></a>
 The value of the environment variable\.  
 *Required: *Yes  
 *Type*: String

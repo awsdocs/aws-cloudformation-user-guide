@@ -10,39 +10,39 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-triggerconfig-triggerevents)" : [ String, ... ],
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-triggerconfig-triggername)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn)" : String
+  "[TriggerEvents](#cfn-codedeploy-deploymentgroup-triggerconfig-triggerevents)" : [ String, ... ],
+  "[TriggerName](#cfn-codedeploy-deploymentgroup-triggerconfig-triggername)" : String,
+  "[TriggerTargetArn](#cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-triggerconfig-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-triggerconfig-triggerevents): 
+[TriggerEvents](#cfn-codedeploy-deploymentgroup-triggerconfig-triggerevents): 
   - String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-triggerconfig-triggername): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn): String
+[TriggerName](#cfn-codedeploy-deploymentgroup-triggerconfig-triggername): String
+[TriggerTargetArn](#cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn): String
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-triggerconfig-properties"></a>
 
 For more information about each property, including constraints and valid values, see [TriggerConfig](http://docs.aws.amazon.com/codedeploy/latest/APIReference/API_TriggerConfig.html) in the *AWS CodeDeploy API Reference*\.
 
-`TriggerEvents`  
+`TriggerEvents`  <a name="cfn-codedeploy-deploymentgroup-triggerconfig-triggerevents"></a>
 The event type or types that trigger notifications\.  
 *Required: *No  
 *Type*: List of String values  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`TriggerName`  
+`TriggerName`  <a name="cfn-codedeploy-deploymentgroup-triggerconfig-triggername"></a>
 The name of the notification trigger\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`TriggerTargetArn`  
+`TriggerTargetArn`  <a name="cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service topic through which notifications about deployment or instance events are sent\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

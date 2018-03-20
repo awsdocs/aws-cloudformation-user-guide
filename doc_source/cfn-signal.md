@@ -4,14 +4,14 @@
 
 The cfn\-signal helper script signals AWS CloudFormation to indicate whether Amazon EC2 instances have been successfully created or updated\. If you install and configure software applications on instances, you can signal AWS CloudFormation when those software applications are ready\.
 
-You use the cfn\-signal script in conjunction with a [CreationPolicy](aws-attribute-creationpolicy.md) or an Auto Scaling group with a `WaitOnResourceSignals` update policy\. When AWS CloudFormation creates or updates resources with those policies, it suspends work on the stack until the resource receives the requisite number of signals or until the timeout period is exceeded\. For each valid signal that AWS CloudFormation receives, AWS CloudFormation publishes the signals to the stack events so that you track each signal\. For a walkthrough that uses a creation policy and cfn\-signal, see [Deploying Applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
+You use the cfn\-signal script in conjunction with a [CreationPolicy](aws-attribute-creationpolicy.md) or an Auto Scaling group with a [`WaitOnResourceSignals`](aws-attribute-updatepolicy.md) update policy\. When AWS CloudFormation creates or updates resources with those policies, it suspends work on the stack until the resource receives the requisite number of signals or until the timeout period is exceeded\. For each valid signal that AWS CloudFormation receives, AWS CloudFormation publishes the signals to the stack events so that you track each signal\. For a walkthrough that uses a creation policy and cfn\-signal, see [Deploying Applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
+
+**Note**  
+cfn\-signal does not require credentials, so you do not need to use the `--access-key`, `--secret-key`, `--role`, or `--credential-file` options\. However, if no credentials are specified, AWS CloudFormation checks for stack membership and limits the scope of the call to the stack that the instance belongs to\.
 
 ## Syntax for Resource Signaling \(Recommended\)<a name="w3ab2c21c38c29b5"></a>
 
 If you want to signal AWS CloudFormation resources, use the following syntax\.
-
-**Note**  
-cfn\-signal does not require credentials, so you do not need to use the `--access-key`, `--secret-key`, `--role`, or `--credential-file` options\. However, if no credentials are specified, AWS CloudFormation checks for stack membership and limits the scope of the call to the stack that the instance belongs to\.
 
 ```
 cfn-signal --success|-s signal.to.send \
@@ -58,7 +58,7 @@ The options that you can use depend on whether you're signaling a creation polic
 |  `-i, --id`  |  The unique ID to send\. *Type*: String *Default*: The ID of the Amazon EC2 instance\. If the ID cannot be resolved, the machine's Fully Qualified Domain Name \(FQDN\) is returned\.  |  No  | 
 |  `-r, --reason ` \(wait condition handle only\)  |  A status reason for the resource event \(currently only used on failure\) \- defaults to 'Configuration failed' if success is false\. *Type*: String  |  No  | 
 | \-\-region \(resource signaling only\) |  The AWS CloudFormation regional endpoint to use\. *Type*: String *Default*: `us-east-1`  |  No  | 
-| \-\-resource \(resource signaling only\) |  The logical ID of the resource that contains the creations policy you want to signal\. *Type*: String  |  Yes  | 
+| \-\-resource \(resource signaling only\) |  The [logical ID](resources-section-structure.md) of the resource that contains the creations policy you want to signal\. *Type*: String  |  Yes  | 
 |  `--role` \(resource signaling only\)  |  The name of an IAM role that is associated with the instance\. *Type*: String Condition: The credential file parameter supersedes this parameter\.  |  No  | 
 |  `-s, --success`   |  if true, signal SUCCESS, else FAILURE\. *Type*: Boolean *Default*: `true`  |  No  | 
 |  `--secret-key` \(resource signaling only\)  |  AWS secret access key that corresponds to the specified AWS access key\. *Type*: String  |  No  | 

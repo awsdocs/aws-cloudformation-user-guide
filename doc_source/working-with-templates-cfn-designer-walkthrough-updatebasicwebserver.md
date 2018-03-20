@@ -2,25 +2,25 @@
 
 You can use AWS CloudFormation Designer to easily modify a stack's template, and then submit it to AWS CloudFormation to update the stack\. Typically, when you modify a stack, you need to get a copy of its template, modify the template in a text editor, and then use AWS CloudFormation to update the stack\. With AWS CloudFormation Designer, you can quickly get a copy of any running stack's template, modify it, and then update the stack without ever leaving the console\. 
 
-In this walkthrough, we'll start with a basic web server stack, and then modify it so that the web server is scalable and durable\. By the end of the walkthrough, you'll have a template similar to the following sample: [https://console\.aws\.amazon\.com/cloudformation/designer/home?templateUrl=https://s3\.amazonaws\.com/cloudformation\-examples/sample\-as\-vpc\.template&region=us\-east\-1](https://console.aws.amazon.com/cloudformation/designer/home?templateUrl=https://s3.amazonaws.com/cloudformation-examples/sample-as-vpc.template&region=us-east-1)\.
+In this walkthrough, we'll start with a [basic web server](working-with-templates-cfn-designer-walkthrough-createbasicwebserver.md) stack, and then modify it so that the web server is scalable and durable\. By the end of the walkthrough, you'll have a template similar to the following sample: [https://console\.aws\.amazon\.com/cloudformation/designer/home?templateUrl=https://s3\.amazonaws\.com/cloudformation\-examples/sample\-as\-vpc\.template&region=us\-east\-1](https://console.aws.amazon.com/cloudformation/designer/home?templateUrl=https://s3.amazonaws.com/cloudformation-examples/sample-as-vpc.template&region=us-east-1)\.
 
 In this walkthrough, we will complete the following steps:
 
-1. Get a stack's template\.
+1. [Get a stack's template\.](#working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-get-template)
 
    We'll get a copy of a running stack's template; the same basic web server stack in the following walkthrough: [Walkthrough: Use AWS CloudFormation Designer to Create a Basic Web Server](working-with-templates-cfn-designer-walkthrough-createbasicwebserver.md)\.
 
-1. Modify the template\.
+1. [Modify the template\.](#working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-modify-template)
 
    We'll use AWS CloudFormation Designer to modify the stack's template so that your website is scalable and durable by replacing the EC2 instance with an Auto Scaling group and an Elastic Load Balancing load balancer\. 
 
-1. Update the stack\.
+1. [Update the stack\.](#working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-update-stack)
 
    After saving the modifications, we'll update the basic web server stack with the modified template\.
 **Note**  
 AWS CloudFormation is a free service; however, you are charged for the AWS resources you include in your stacks at the current rate for each\. For more information about AWS pricing, see the detail page for each product on [http://aws\.amazon\.com](http://aws.amazon.com)\.
 
-1. Delete the stack\.
+1. [Delete the stack\.](#working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-delete-stack)
 
    We'll delete the stack to clean up all of the resources\.
 

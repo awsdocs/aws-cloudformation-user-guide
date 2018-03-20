@@ -19,17 +19,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type" : "AWS::ElasticBeanstalk::Environment",
    "Properties" : {
-      "ApplicationName" : String,
-      "CNAMEPrefix" : String,
-      "Description" :  String,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-beanstalk-environment-name)" :  String,
-      "OptionSettings" : [ OptionSetting, ... ],
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-beanstalk-environment-platformarn)" : String,
-      "SolutionStackName" : String,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-beanstalk-environment-tags)" : [ Resource Tag, ... ],
-      "TemplateName" : String,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-beanstalk-environment-tier)" : Environment Tier,
-      "VersionLabel" : String
+      "[ApplicationName](#cfn-beanstalk-environment-applicationname)" : String,
+      "[CNAMEPrefix](#cfn-beanstalk-environment-cnameprefix)" : String,
+      "[Description](#cfn-beanstalk-environment-description)" :  String,
+      "[EnvironmentName](#cfn-beanstalk-environment-name)" :  String,
+      "[OptionSettings](#cfn-beanstalk-environment-optionsettings)" : [ OptionSetting, ... ],
+      "[PlatformArn](#cfn-beanstalk-environment-platformarn)" : String,
+      "[SolutionStackName](#cfn-beanstalk-environment-solutionstackname)" : String,
+      "[Tags](#cfn-beanstalk-environment-tags)" : [ Resource Tag, ... ],
+      "[TemplateName](#cfn-beanstalk-environment-templatename)" : String,
+      "[Tier](#cfn-beanstalk-environment-tier)" : Environment Tier,
+      "[VersionLabel](#cfn-beanstalk-environment-versionlabel)" : String
    }
 }
 ```
@@ -39,96 +39,96 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ElasticBeanstalk::Environment"
 Properties:
-  ApplicationName: String
-  CNAMEPrefix: String
-  Description: String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-beanstalk-environment-name): String
-  OptionSettings: 
+  [ApplicationName](#cfn-beanstalk-environment-applicationname): String
+  [CNAMEPrefix](#cfn-beanstalk-environment-cnameprefix): String
+  [Description](#cfn-beanstalk-environment-description): String
+  [EnvironmentName](#cfn-beanstalk-environment-name): String
+  [OptionSettings](#cfn-beanstalk-environment-optionsettings): 
     - OptionSetting
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-beanstalk-environment-platformarn): String
-  SolutionStackName: String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-beanstalk-environment-tags):
+  [PlatformArn](#cfn-beanstalk-environment-platformarn): String
+  [SolutionStackName](#cfn-beanstalk-environment-solutionstackname): String
+  [Tags](#cfn-beanstalk-environment-tags):
     - Resource Tag, ...
-  TemplateName: String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-beanstalk-environment-tier):
+  [TemplateName](#cfn-beanstalk-environment-templatename): String
+  [Tier](#cfn-beanstalk-environment-tier):
     Environment Tier
-  VersionLabel: String
+  [VersionLabel](#cfn-beanstalk-environment-versionlabel): String
 ```
 
 ## Properties<a name="aws-properties-beanstalk-environment-prop"></a>
 
 For more information, see [ CreateEnvironment](http://docs.aws.amazon.com/elasticbeanstalk/latest/api/API_CreateEnvironment.html) in the *AWS Elastic Beanstalk API Reference*\.
 
-`ApplicationName`  
+`ApplicationName`  <a name="cfn-beanstalk-environment-applicationname"></a>
 The name of the application that is associated with this environment\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`CNAMEPrefix`  
+`CNAMEPrefix`  <a name="cfn-beanstalk-environment-cnameprefix"></a>
 A prefix for your Elastic Beanstalk environment URL\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Description`  
+`Description`  <a name="cfn-beanstalk-environment-description"></a>
 A description that helps you identify this environment\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`EnvironmentName`  
+`EnvironmentName`  <a name="cfn-beanstalk-environment-name"></a>
 A name for the Elastic Beanstalk environment\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the environment name\. For more information, see [Name Type](aws-properties-name.md)\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`OptionSettings`  
-Key\-value pairs defining configuration options for this environment, such as the instance type\. These options override the values that are defined in the solution stack or the configuration template\. If you remove any options during a stack update, the removed options revert to default values\.  
+`OptionSettings`  <a name="cfn-beanstalk-environment-optionsettings"></a>
+Key\-value pairs defining configuration options for this environment, such as the instance type\. These options override the values that are defined in the solution stack or the [configuration template](aws-resource-beanstalk-configurationtemplate.md)\. If you remove any options during a stack update, the removed options revert to default values\.  
 *Required*: Yes\. The `IamInstanceProfile` and `ServiceRole` options are required\.  
 *Type*: List of [Elastic Beanstalk Environment OptionSetting](aws-properties-beanstalk-option-settings.md)  
-*Update requires*: Some interruptions
+*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
-`PlatformArn`  
+`PlatformArn`  <a name="cfn-beanstalk-environment-platformarn"></a>
 The Amazon Resource Name \(ARN\) of the custom platform to use with the environment\. For more information, see [ Custom Platforms](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/custom-platforms.html) in the *AWS Elastic Beanstalk Developer Guide*\.  
 If you specify `PlatformArn`, then don't specify `SolutionStackName`\.
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption   
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)   
 *Example*: `"PlatformArn": "arn:aws:elasticbeanstalk:us-east-1::platform/PHP 5.4 running on 64bit Amazon Linux/2.4.4"`
 
-`SolutionStackName`  
+`SolutionStackName`  <a name="cfn-beanstalk-environment-solutionstackname"></a>
 The name of an Elastic Beanstalk solution stack that this configuration will use\. For more information, see [Supported Platforms](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html) in the *AWS Elastic Beanstalk Developer Guide*\.  
 If you specify `SolutionStackName`, then don't specify `PlatformArn` or `TemplateName`\.
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Tags`  
+`Tags`  <a name="cfn-beanstalk-environment-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this environment\.  
 *Required: *No  
-*Type*:   
+*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
 *Update requires*: You can update tags only if you update another property that requires that the environment be replaced, such as the `ApplicationName` property\.
 
-`TemplateName`  
+`TemplateName`  <a name="cfn-beanstalk-environment-templatename"></a>
 The name of the Elastic Beanstalk configuration template to use with the environment\.  
 If you specify `TemplateName`, then don't specify `SolutionStackName`\.
 *Required: *No  
 *Type*: String  
-*Update requires*: Some interruptions
+*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
-`Tier`  
+`Tier`  <a name="cfn-beanstalk-environment-tier"></a>
 Specifies the tier to use in creating this environment\. The environment tier that you choose determines whether Elastic Beanstalk provisions resources to support a web application that handles HTTP\(S\) requests or a web application that handles background\-processing tasks\.  
 *Required: *No  
 *Type*: [Elastic Beanstalk Environment Tier Property Type](aws-properties-beanstalk-environment-tier.md)  
 *Update requires*: See [Elastic Beanstalk Environment Tier Property Type](aws-properties-beanstalk-environment-tier.md)
 
-`VersionLabel`  
+`VersionLabel`  <a name="cfn-beanstalk-environment-versionlabel"></a>
 The version to associate with the environment\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Some interruptions
+*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 ## Return Values<a name="aws-properties-beanstalk-environment-ref"></a>
 
@@ -136,7 +136,7 @@ The version to associate with the environment\.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ### Fn::GetAtt<a name="w3ab2c21c10d582c11b4"></a>
 
@@ -147,7 +147,7 @@ The URL to the load balancer for this environment\.
 Example:  
 `awseb-myst-myen-132MQC4KRLAMD-1371280482.``us-east-2``.elb.amazonaws.com`
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\.
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
 ## Examples<a name="aws-resource-elasticbeanstalk-environment-examples"></a>
 

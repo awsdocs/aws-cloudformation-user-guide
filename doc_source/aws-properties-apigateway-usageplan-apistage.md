@@ -8,26 +8,26 @@
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-usageplan-apistage-apiid)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-usageplan-apistage-stage)" : String
+  "[ApiId](#cfn-apigateway-usageplan-apistage-apiid)" : String,
+  "[Stage](#cfn-apigateway-usageplan-apistage-stage)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-apigateway-usageplan-apistage-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-usageplan-apistage-apiid): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-usageplan-apistage-stage): String
+[ApiId](#cfn-apigateway-usageplan-apistage-apiid): String
+[Stage](#cfn-apigateway-usageplan-apistage-stage): String
 ```
 
 ## Properties<a name="aws-properties-apigateway-usageplan-apistage-properties"></a>
 
-`ApiId`  
+`ApiId`  <a name="cfn-apigateway-usageplan-apistage-apiid"></a>
 The ID of an API that is in the specified `Stage` property that you want to associate with the usage plan\.  
 *Required: *No  
 *Type*: String
 
-`Stage`  
+`Stage`  <a name="cfn-apigateway-usageplan-apistage-stage"></a>
 The name of an API Gateway stage to associate with the usage plan\.  
 *Required: *No  
 *Type*: String

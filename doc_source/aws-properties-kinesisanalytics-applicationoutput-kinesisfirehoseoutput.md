@@ -12,28 +12,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-resourcearn)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-rolearn)" : String
+  "[ResourceARN](#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-resourcearn)" : String,
+  "[RoleARN](#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-rolearn)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-syntax.yaml"></a>
 
 ```
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-resourcearn): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-rolearn): String
+  [ResourceARN](#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-resourcearn): String
+  [RoleARN](#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-properties"></a>
 
-`ResourceARN`  
+`ResourceARN`  <a name="cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-resourcearn"></a>
 The Amazon Resource Name \(ARN\) of the destination Amazon Kinesis Data Firehose delivery stream to write to\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`RoleARN`  
+`RoleARN`  <a name="cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-rolearn"></a>
 The ARN of the IAM role that Amazon Kinesis Data Analytics can assume to write to the destination stream on your behalf\.   
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

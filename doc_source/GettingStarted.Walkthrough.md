@@ -230,7 +230,7 @@ In the `WebServer` resource declaration, you see the `KeyName` property specifie
 6.     ...
 ```
 
-The braces contain a call to the Ref function with `KeyName` as its input\. The Ref function returns the value of the object it refers to\. In this case, the Ref function sets the `KeyName` property to the value that was specified for `KeyName` when the stack was created\.
+The braces contain a call to the [Ref](intrinsic-function-reference-ref.md) function with `KeyName` as its input\. The Ref function returns the value of the object it refers to\. In this case, the Ref function sets the `KeyName` property to the value that was specified for `KeyName` when the stack was created\.
 
 The Ref function can also set a resource's property to the value of another resource\. For example, the resource declaration `WebServer` contains the following property declaration:
 

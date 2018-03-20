@@ -83,7 +83,7 @@ This example adds an Amazon Route 53 resource record set containing A records fo
 
 ## Using RecordSetGroup to Set Up Weighted Resource Record Sets<a name="scenario-recordsetgroup-weighted"></a>
 
-This example uses an AWS::Route53::RecordSetGroup to set up two CNAME records for the "example\.com\." hosted zone\. The `RecordSets` property contains the CNAME record sets for the "mysite\.example\.com" DNS name\. Each record set contains an identifier \(SetIdentifier\) and weight \(Weight\)\. The weighting for Frontend One is 40% \(4 of 10\) and Frontend Two is 60% \(6 of 10\)\. For more information about weighted resource record sets, see [Setting Up Weighted Resource Record Sets](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/WeightedResourceRecordSets.html) in Route 53 Developer Guide\.
+This example uses an [AWS::Route53::RecordSetGroup](aws-properties-route53-recordsetgroup.md) to set up two CNAME records for the "example\.com\." hosted zone\. The `RecordSets` property contains the CNAME record sets for the "mysite\.example\.com" DNS name\. Each record set contains an identifier \(SetIdentifier\) and weight \(Weight\)\. The weighting for Frontend One is 40% \(4 of 10\) and Frontend Two is 60% \(6 of 10\)\. For more information about weighted resource record sets, see [Setting Up Weighted Resource Record Sets](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/WeightedResourceRecordSets.html) in Route 53 Developer Guide\.
 
 ### JSON<a name="quickref-route53-example-3.json"></a>
 
@@ -142,7 +142,7 @@ This example uses an AWS::Route53::RecordSetGroup to set up two CNAME records fo
 
 ## Using RecordSetGroup to Set Up an Alias Resource Record Set<a name="scenario-recordsetgroup-zoneapex"></a>
 
-This example uses an AWS::Route53::RecordSetGroup to set up an alias resource record set for the "example\.com\." hosted zone\. The `RecordSets` property contains the A record for the zone apex "example\.com\." The AliasTarget property specifies the hosted zone ID and DNS name for the myELB LoadBalancer by using the GetAtt intrinsic function to retrieve the CanonicalHostedZoneNameID and DNSName properties of myELB resource\. For more information about alias resource record sets, see [Creating Alias Resource Record Sets](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingAliasRRSets.html) in the *Route 53 Developer Guide*\.
+This example uses an [AWS::Route53::RecordSetGroup](aws-properties-route53-recordsetgroup.md) to set up an alias resource record set for the "example\.com\." hosted zone\. The `RecordSets` property contains the A record for the zone apex "example\.com\." The [AliasTarget](aws-properties-route53-aliastarget.md) property specifies the hosted zone ID and DNS name for the myELB LoadBalancer by using the [GetAtt](intrinsic-function-reference-getatt.md) intrinsic function to retrieve the CanonicalHostedZoneNameID and DNSName properties of myELB resource\. For more information about alias resource record sets, see [Creating Alias Resource Record Sets](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingAliasRRSets.html) in the *Route 53 Developer Guide*\.
 
 ### JSON<a name="quickref-route53-example-4.json"></a>
 

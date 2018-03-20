@@ -18,10 +18,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::VPCEndpoint",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpcendpoint-policydocument)" : JSON object,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpcendpoint-routetableids)" : [ String, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpcendpoint-servicename)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpcendpoint-vpcid)" : String
+    "[PolicyDocument](#cfn-ec2-vpcendpoint-policydocument)" : JSON object,
+    "[RouteTableIds](#cfn-ec2-vpcendpoint-routetableids)" : [ String, ... ],
+    "[ServiceName](#cfn-ec2-vpcendpoint-servicename)" : String,
+    "[VpcId](#cfn-ec2-vpcendpoint-vpcid)" : String
   }
 }
 ```
@@ -31,38 +31,38 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::VPCEndpoint"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpcendpoint-policydocument): JSON object
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpcendpoint-routetableids):
+  [PolicyDocument](#cfn-ec2-vpcendpoint-policydocument): JSON object
+  [RouteTableIds](#cfn-ec2-vpcendpoint-routetableids):
     - String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpcendpoint-servicename): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpcendpoint-vpcid): String
+  [ServiceName](#cfn-ec2-vpcendpoint-servicename): String
+  [VpcId](#cfn-ec2-vpcendpoint-vpcid): String
 ```
 
 ## Properties<a name="w3ab2c21c10d482b9"></a>
 
-`PolicyDocument`  
+`PolicyDocument`  <a name="cfn-ec2-vpcendpoint-policydocument"></a>
 A policy to attach to the endpoint that controls access to the service\. The policy must be valid JSON\. The default policy allows full access to the AWS service\. For more information, see [Controlling Access to Services](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpoints.html#vpc-endpoints-access) in the *Amazon VPC User Guide*\.  
 *Required: *No  
 *Type*: JSON object  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`RouteTableIds`  
+`RouteTableIds`  <a name="cfn-ec2-vpcendpoint-routetableids"></a>
 One or more route table IDs that are used by the VPC to reach the endpoint\.  
 *Required: *No  
 *Type*: List of String values  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ServiceName`  
+`ServiceName`  <a name="cfn-ec2-vpcendpoint-servicename"></a>
 The AWS service to which you want to establish a connection\. Specify the service name in the form of `com.amazonaws.region.service`\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`VpcId`  
+`VpcId`  <a name="cfn-ec2-vpcendpoint-vpcid"></a>
 The ID of the VPC in which the endpoint is used\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Value<a name="w3ab2c21c10d482c11"></a>
 
@@ -70,7 +70,7 @@ The ID of the VPC in which the endpoint is used\.
 
 When you pass the logical ID of an `AWS::EC2::VPCEndpoint` resource to the intrinsic `Ref` function, the function returns the endpoint ID, such as `vpce-a123d0d1`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d482c13"></a>
 

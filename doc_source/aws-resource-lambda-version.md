@@ -4,9 +4,9 @@ The `AWS::Lambda::Version` resource publishes a specified version of an AWS Lamb
 
 
 + [Syntax](#aws-resource-lambda-version-syntax)
-+ [Properties](#w3ab2c21c10d814b9)
-+ [Return Values](#w3ab2c21c10d814c11)
-+ [Example](#w3ab2c21c10d814c13)
++ [Properties](#w3ab2c21c10d817b9)
++ [Return Values](#w3ab2c21c10d817c11)
++ [Example](#w3ab2c21c10d817c13)
 
 ## Syntax<a name="aws-resource-lambda-version-syntax"></a>
 
@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Lambda::Version",
   "Properties" : {    
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-version-codesha256)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-version-description)" : String,         
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-version-functionname)" : String
+    "[CodeSha256](#cfn-lambda-version-codesha256)" : String,
+    "[Description](#cfn-lambda-version-description)" : String,         
+    "[FunctionName](#cfn-lambda-version-functionname)" : String
   }
 }
 ```
@@ -30,49 +30,49 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Lambda::Version"
 Properties:     
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-version-codesha256) : String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-version-description) : String         
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-version-functionname) : String
+  [CodeSha256](#cfn-lambda-version-codesha256) : String
+  [Description](#cfn-lambda-version-description) : String         
+  [FunctionName](#cfn-lambda-version-functionname) : String
 ```
 
-## Properties<a name="w3ab2c21c10d814b9"></a>
+## Properties<a name="w3ab2c21c10d817b9"></a>
 
-`CodeSha256`  
+`CodeSha256`  <a name="cfn-lambda-version-codesha256"></a>
 The SHA\-256 hash of the deployment package that you want to publish\. This value must match the SHA\-256 hash of the `$LATEST` version of the function\. Specify this property to validate that you are publishing the correct package\.   
 *Required: *No  
 *Type*: String  
 *Update requires*: Updates are not supported\.
 
-`Description`  
+`Description`  <a name="cfn-lambda-version-description"></a>
 A description of the version you are publishing\. If you don't specify a value, Lambda copies the description from the `$LATEST` version of the function\.  
 *Required: *No  
 *Type*: String  
 *Update requires*: Updates are not supported\.
 
-`FunctionName`  
+`FunctionName`  <a name="cfn-lambda-version-functionname"></a>
 The Lambda function for which you want to publish a version\. You can specify the function's name or its Amazon Resource Name \(ARN\)\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w3ab2c21c10d814c11"></a>
+## Return Values<a name="w3ab2c21c10d817c11"></a>
 
-### Ref<a name="w3ab2c21c10d814c11b2"></a>
+### Ref<a name="w3ab2c21c10d817c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN of the Lambda version, such as `arn:aws:lambda:us-west-2:123456789012:function:helloworld:1`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d814c11b4"></a>
+### Fn::GetAtt<a name="w3ab2c21c10d817c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of the specified resource type\.
 
 `Version`  
 The published version of a Lambda version, such as `1`\.
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\.
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Example<a name="w3ab2c21c10d814c13"></a>
+## Example<a name="w3ab2c21c10d817c13"></a>
 
 The following example publishes a new version of the `MyFunction` Lambda function\.
 

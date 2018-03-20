@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::ClientCertificate",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-clientcertificate-description)" : String
+    "[Description](#cfn-apigateway-clientcertificate-description)" : String
   }
 }
 ```
@@ -28,16 +28,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ApiGateway::ClientCertificate"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-clientcertificate-description): String
+  [Description](#cfn-apigateway-clientcertificate-description): String
 ```
 
 ## Properties<a name="w3ab2c21c10c31b9"></a>
 
-`Description`  
+`Description`  <a name="cfn-apigateway-clientcertificate-description"></a>
 A description of the client certificate\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Value<a name="w3ab2c21c10c31c11"></a>
 
@@ -45,7 +45,7 @@ A description of the client certificate\.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the client certificate name, such as `abc123`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10c31c13"></a>
 

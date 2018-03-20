@@ -665,7 +665,7 @@ So far, we've looked at changing existing properties of a resource in a template
 
 ## Change the Stack's Resources<a name="update.walkthrough.change.resources"></a>
 
-Since application needs can change over time, AWS CloudFormation allows you to change the set of resources that make up the stack\. To demonstrate, we’ll take the single instance application from  and convert it to an auto\-scaled, load\-balanced application by updating the stack\.
+Since application needs can change over time, AWS CloudFormation allows you to change the set of resources that make up the stack\. To demonstrate, we’ll take the single instance application from [Adding Resource Properties](#update.walkthrough.adding.properties) and convert it to an auto\-scaled, load\-balanced application by updating the stack\.
 
 This will create a simple, single instance PHP application using an Elastic IP address\. We'll now turn the application into a highly available, auto\-scaled, load balanced application by changing its resources during an update\.
 

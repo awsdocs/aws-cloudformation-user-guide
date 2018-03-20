@@ -10,7 +10,7 @@
 
 This example template contains a nested stack resource called `myStack`\. When AWS CloudFormation creates a stack from the template, it creates the `myStack`, whose template is specified in the `TemplateURL` property\.  The output value `StackRef` returns the stack ID for `myStack` and the value `OutputFromNestedStack` returns the output value `BucketName` from within the `myStack` resource\. The Outputs\.*nestedstackoutputname* format is reserved for specifying output values from nested stacks and can be used anywhere within the containing template\.
 
-For more information, see \.
+For more information, see [AWS::CloudFormation::Stack](aws-properties-stack.md)\.
 
 #### JSON<a name="quickref-cloudformation-example-1.json"></a>
 
@@ -56,7 +56,7 @@ For more information, see \.
 
 This example template contains a stack resource that specifies input parameters\. When AWS CloudFormation creates a stack from this template, it uses the value pairs declared within the Parameters property as the input parameters for the template used to create the `myStackWithParams` stack\. In this example, the `InstanceType` and `KeyName` parameters are specified\.
 
-For more information, see \.
+For more information, see [AWS::CloudFormation::Stack](aws-properties-stack.md)\.
 
 #### JSON<a name="quickref-cloudformation-example-2.json"></a>
 
@@ -99,9 +99,9 @@ For more information, see \.
 **Important**  
 For Amazon EC2 and Auto Scaling resources, we recommend that you use a CreationPolicy attribute instead of wait conditions\. Add a CreationPolicy attribute to those resources, and use the cfn\-signal helper script to signal when an instance creation process has completed successfully\.
 
-If you can't use a creation policy, you view the following example template, which declares an Amazon EC2 instance with a wait condition\. The wait condition myWaitCondition uses myWaitConditionHandle for signaling, uses the DependsOn attribute to specify that the wait condition will trigger after the Amazon EC2 instance resource has been created, and uses the Timeout property to specify a duration of 4500 seconds for the wait condition\. In addition, the presigned URL that signals the wait condition is passed to the Amazon EC2 instance with the UserData property of the Ec2Instance resource, thus enabling an application or script running on that Amazon EC2 instance to retrieve the pre\-signed URL and employ it to signal a success or failure to the wait condition\. Note that you need to create the application or script that signals the wait condition\. The output value ApplicationData contains the data passed back from the wait condition signal\.
+If you can't use a creation policy, you view the following example template, which declares an Amazon EC2 instance with a wait condition\. The wait condition myWaitCondition uses myWaitConditionHandle for signaling, uses the [DependsOn attribute](aws-attribute-dependson.md) to specify that the wait condition will trigger after the Amazon EC2 instance resource has been created, and uses the Timeout property to specify a duration of 4500 seconds for the wait condition\. In addition, the presigned URL that signals the wait condition is passed to the Amazon EC2 instance with the UserData property of the Ec2Instance resource, thus enabling an application or script running on that Amazon EC2 instance to retrieve the pre\-signed URL and employ it to signal a success or failure to the wait condition\. Note that you need to create the application or script that signals the wait condition\. The output value ApplicationData contains the data passed back from the wait condition signal\.
 
-For more information, see , , and \.
+For more information, see [Creating Wait Conditions in a Template](using-cfn-waitcondition.md), [AWS::CloudFormation::WaitCondition](aws-properties-waitcondition.md), and [AWS::CloudFormation::WaitConditionHandle](aws-properties-waitconditionhandle.md)\.
 
 #### JSON<a name="quickref-cloudformation-example-3.json"></a>
 

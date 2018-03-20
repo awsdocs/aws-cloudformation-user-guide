@@ -12,36 +12,36 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-bucketarn)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-filekey)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-referencerolearn)" : String
+  "[BucketARN](#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-bucketarn)" : String,
+  "[FileKey](#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-filekey)" : String,
+  "[ReferenceRoleARN](#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-referencerolearn)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-syntax.yaml"></a>
 
 ```
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-bucketarn): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-filekey): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-referencerolearn): String
+  [BucketARN](#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-bucketarn): String
+  [FileKey](#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-filekey): String
+  [ReferenceRoleARN](#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-referencerolearn): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-properties"></a>
 
-`BucketARN`  
+`BucketARN`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-bucketarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon S3 bucket\.  
  *Required*: Yes  
  *Type*: String;  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`FileKey`  
+`FileKey`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-filekey"></a>
 The object key name containing reference data\.  
  *Required*: Yes  
  *Type*: String;  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`ReferenceRoleARN`  
+`ReferenceRoleARN`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-referencerolearn"></a>
 The ARN of the IAM role that the service can assume to read data on your behalf\.  
  *Required*: Yes  
  *Type*: String;  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

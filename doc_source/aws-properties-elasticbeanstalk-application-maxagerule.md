@@ -12,36 +12,36 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-maxagerule-deletesourcefroms3)" : Boolean,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-maxagerule-enabled)" : Boolean,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-maxagerule-maxageindays)" : Integer
+  "[DeleteSourceFromS3](#cfn-elasticbeanstalk-application-maxagerule-deletesourcefroms3)" : Boolean,
+  "[Enabled](#cfn-elasticbeanstalk-application-maxagerule-enabled)" : Boolean,
+  "[MaxAgeInDays](#cfn-elasticbeanstalk-application-maxagerule-maxageindays)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-elasticbeanstalk-application-maxagerule-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-maxagerule-deletesourcefroms3): Boolean
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-maxagerule-enabled): Boolean
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-maxagerule-maxageindays): Integer
+[DeleteSourceFromS3](#cfn-elasticbeanstalk-application-maxagerule-deletesourcefroms3): Boolean
+[Enabled](#cfn-elasticbeanstalk-application-maxagerule-enabled): Boolean
+[MaxAgeInDays](#cfn-elasticbeanstalk-application-maxagerule-maxageindays): Integer
 ```
 
 ## Properties<a name="aws-properties-elasticbeanstalk-application-maxagerule-properties"></a>
 
-`DeleteSourceFromS3`  
+`DeleteSourceFromS3`  <a name="cfn-elasticbeanstalk-application-maxagerule-deletesourcefroms3"></a>
 Set to `true` to delete a version's source bundle from Amazon S3 when Elastic Beanstalk deletes the application version\.  
  *Required*: No  
  *Type*: Boolean  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Enabled`  
+`Enabled`  <a name="cfn-elasticbeanstalk-application-maxagerule-enabled"></a>
 Specify `true` to apply the rule, or `false` to disable it\.  
  *Required*: No  
  *Type*: Boolean  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`MaxAgeInDays`  
+`MaxAgeInDays`  <a name="cfn-elasticbeanstalk-application-maxagerule-maxageindays"></a>
 Specify the number of days to retain an application versions\.  
  *Required*: No  
  *Type*: Integer  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

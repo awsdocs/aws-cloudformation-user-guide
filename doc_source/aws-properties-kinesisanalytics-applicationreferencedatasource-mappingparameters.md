@@ -12,30 +12,30 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-csvmappingparameters)" : CSVMappingParameters,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-jsonmappingparameters)" : JSONMappingParameters
+  "[CSVMappingParameters](#cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-csvmappingparameters)" : [*CSVMappingParameters*](aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters.md),
+  "[JSONMappingParameters](#cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-jsonmappingparameters)" : [*JSONMappingParameters*](aws-properties-kinesisanalytics-applicationreferencedatasource-jsonmappingparameters.md)
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters-syntax.yaml"></a>
 
 ```
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-csvmappingparameters): 
-    CSVMappingParameters
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-jsonmappingparameters): 
-    JSONMappingParameters
+  [CSVMappingParameters](#cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-csvmappingparameters): 
+    [*CSVMappingParameters*](aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters.md)
+  [JSONMappingParameters](#cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-jsonmappingparameters): 
+    [*JSONMappingParameters*](aws-properties-kinesisanalytics-applicationreferencedatasource-jsonmappingparameters.md)
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters-properties"></a>
 
-`CSVMappingParameters`  
+`CSVMappingParameters`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-csvmappingparameters"></a>
 Provides additional mapping information when the record format uses delimiters \(for example, CSV\)\.   
  *Required*: No  
  *Type*: [Kinesis Data Analytics ApplicationReferenceDataSource CSVMappingParameters](aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`JSONMappingParameters`  
+`JSONMappingParameters`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-jsonmappingparameters"></a>
 Provides additional mapping information when JSON is the record format on the streaming source\.  
  *Required*: No  
  *Type*: [Kinesis Data Analytics ApplicationReferenceDataSource JSONMappingParameters](aws-properties-kinesisanalytics-applicationreferencedatasource-jsonmappingparameters.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

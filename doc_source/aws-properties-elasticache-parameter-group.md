@@ -39,19 +39,19 @@ Properties:
 
 ## Properties<a name="aws-properties-elasticache-parameter-group-prop"></a>
 
-`CacheParameterGroupFamily`  
+`CacheParameterGroupFamily`  <a name="cfn-elasticache-parametergroup-cacheparametergroupfamily"></a>
 The name of the cache parameter group family that the cache parameter group can be used with\.  
 *Required: *Yes  
 *Type*: String  
 *Update requires*: Updates are not supported\.
 
-`Description`  
+`Description`  <a name="cfn-elasticache-parametergroup-description"></a>
 The description for the Cache Parameter Group\.  
 *Required: *Yes  
 *Type*: String  
 *Update requires*: Updates are not supported\.
 
-`Properties`  
+`Properties`  <a name="cfn-elasticache-parametergroup-properties"></a>
 A comma\-delimited list of parameter name/value pairs\. For more information, go to [ModifyCacheParameterGroup](http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheParameterGroup.html) in the *Amazon ElastiCache API Reference Guide*\.  
 *Example*:  
 
@@ -71,7 +71,7 @@ A comma\-delimited list of parameter name/value pairs\. For more information, go
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d544c13"></a>
 
@@ -110,4 +110,4 @@ MyParameterGroup:
 
 + [ModifyCacheParameterGroup](http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheParameterGroup.html) in the *Amazon ElastiCache API Reference Guide*
 
-+ 
++ [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)

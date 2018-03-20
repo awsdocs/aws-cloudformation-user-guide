@@ -18,10 +18,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Batch::JobQueue",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobqueue-computeenvironmentorder)" : [ ComputeEnvironmentOrder, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobqueue-priority)" : Integer,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobqueue-state)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobqueue-jobqueuename)" : String
+    "[ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder)" : [ [*ComputeEnvironmentOrder*](aws-properties-batch-jobqueue-computeenvironmentorder.md), ... ],
+    "[Priority](#cfn-batch-jobqueue-priority)" : Integer,
+    "[State](#cfn-batch-jobqueue-state)" : String,
+    "[JobQueueName](#cfn-batch-jobqueue-jobqueuename)" : String
   }
 }
 ```
@@ -31,34 +31,34 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Batch::JobQueue"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobqueue-computeenvironmentorder): 
-    - ComputeEnvironmentOrder 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobqueue-priority): Integer
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobqueue-state): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobqueue-jobqueuename): String
+  [ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder): 
+    - [*ComputeEnvironmentOrder*](aws-properties-batch-jobqueue-computeenvironmentorder.md) 
+  [Priority](#cfn-batch-jobqueue-priority): Integer
+  [State](#cfn-batch-jobqueue-state): String
+  [JobQueueName](#cfn-batch-jobqueue-jobqueuename): String
 ```
 
 ## Properties<a name="aws-resource-batch-jobqueue-properties"></a>
 
-`ComputeEnvironmentOrder`  
+`ComputeEnvironmentOrder`  <a name="cfn-batch-jobqueue-computeenvironmentorder"></a>
 The compute environments that are attached to the job queue and the order in which job placement is preferred\. Compute environments are selected for job placement in ascending order\.  
  *Required*: yes  
  *Type*: List of [AWS Batch JobQueue ComputeEnvironmentOrder](aws-properties-batch-jobqueue-computeenvironmentorder.md)  
  *Update requires*: No Interruption 
 
-`State`  
+`State`  <a name="cfn-batch-jobqueue-state"></a>
 The status of the job queue \(for example, `CREATING` or `VALID`\)\.  
  *Required*: no  
 *Type*: String  
  *Update requires*: No Interruption 
 
-`Priority`  
+`Priority`  <a name="cfn-batch-jobqueue-priority"></a>
 The priority of the job queue\.  
  *Required*: yes  
 *Type*: Integer  
  *Update requires*: No Interruption 
 
-`JobQueueName`  
+`JobQueueName`  <a name="cfn-batch-jobqueue-jobqueuename"></a>
 The name of the job queue\.  
  *Required*: no  
 *Type*: String  
@@ -66,11 +66,11 @@ The name of the job queue\.
 
 ## Return Values<a name="aws-resource-batch-jobqueue-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d138c10b2"></a>
+### Ref<a name="w3ab2c21c10d140c10b2"></a>
 
 When you pass the logical ID of an `AWS::Batch::JobQueue` resource to the intrinsic `Ref` function, the function returns the job queue ARN, such as `arn:aws:batch:us-east-1:111122223333:job-queue/HighPriority`\. 
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Examples<a name="aws-resource-batch-jobqueue-examples"></a>
 
@@ -109,12 +109,12 @@ The following example defines a job queue called `HighPriority` that has two com
 JobQueue:
   Type: AWS::Batch::JobQueue
   Properties:
-    [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobqueue-computeenvironmentorder):
-      - [[ERROR] BAD/MISSING LINK TEXT](aws-properties-batch-jobqueue-computeenvironmentorder.md#cfn-batch-jobqueue-computeenvironmentorder-order): 1
-        [[ERROR] BAD/MISSING LINK TEXT](aws-properties-batch-jobqueue-computeenvironmentorder.md#cfn-batch-jobqueue-computeenvironmentorder-computeenvironment): C4OnDemand
-      - [[ERROR] BAD/MISSING LINK TEXT](aws-properties-batch-jobqueue-computeenvironmentorder.md#cfn-batch-jobqueue-computeenvironmentorder-order): 2
-        [[ERROR] BAD/MISSING LINK TEXT](aws-properties-batch-jobqueue-computeenvironmentorder.md#cfn-batch-jobqueue-computeenvironmentorder-computeenvironment): M4Spot
-    [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobqueue-state): ENABLED
-    [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobqueue-priority): 1
-    [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobqueue-jobqueuename): HighPriority
+    [ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder):
+      - [Order](aws-properties-batch-jobqueue-computeenvironmentorder.md#cfn-batch-jobqueue-computeenvironmentorder-order): 1
+        [ComputeEnvironment](aws-properties-batch-jobqueue-computeenvironmentorder.md#cfn-batch-jobqueue-computeenvironmentorder-computeenvironment): C4OnDemand
+      - [Order](aws-properties-batch-jobqueue-computeenvironmentorder.md#cfn-batch-jobqueue-computeenvironmentorder-order): 2
+        [ComputeEnvironment](aws-properties-batch-jobqueue-computeenvironmentorder.md#cfn-batch-jobqueue-computeenvironmentorder-computeenvironment): M4Spot
+    [State](#cfn-batch-jobqueue-state): ENABLED
+    [Priority](#cfn-batch-jobqueue-priority): 1
+    [JobQueueName](#cfn-batch-jobqueue-jobqueuename): HighPriority
 ```

@@ -18,10 +18,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Athena::NamedQuery",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-athena-namedquery-description)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-athena-namedquery-querystring)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-athena-namedquery-database)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-athena-namedquery-name)" : String
+    "[Description](#cfn-athena-namedquery-description)" : String,
+    "[QueryString](#cfn-athena-namedquery-querystring)" : String,
+    "[Database](#cfn-athena-namedquery-database)" : String,
+    "[Name](#cfn-athena-namedquery-name)" : String
   }
 }
 ```
@@ -31,47 +31,47 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Athena::NamedQuery"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-athena-namedquery-description): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-athena-namedquery-querystring): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-athena-namedquery-database): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-athena-namedquery-name): String
+  [Description](#cfn-athena-namedquery-description): String
+  [QueryString](#cfn-athena-namedquery-querystring): String
+  [Database](#cfn-athena-namedquery-database): String
+  [Name](#cfn-athena-namedquery-name): String
 ```
 
 ## Properties<a name="aws-resource-athena-namedquery-properties"></a>
 
 For constraints, see [NamedQuery](http://docs.aws.amazon.com/athena/latest/APIReference/API_NamedQuery.html) in the *Amazon Athena API Reference*\.
 
-`Description`  
+`Description`  <a name="cfn-athena-namedquery-description"></a>
 A brief description of the query\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`QueryString`  
+`QueryString`  <a name="cfn-athena-namedquery-querystring"></a>
 The SQL query statements that comprise the query\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Database`  
+`Database`  <a name="cfn-athena-namedquery-database"></a>
 The database to which the query belongs\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Name`  
+`Name`  <a name="cfn-athena-namedquery-name"></a>
 The plain\-language name of the query\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## Return Values<a name="aws-resource-athena-namedquery-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d104c11b3"></a>
+### Ref<a name="w3ab2c21c10d106c11b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\. 
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
 ## Examples<a name="aws-resource-athena-namedquery-examples"></a>
 

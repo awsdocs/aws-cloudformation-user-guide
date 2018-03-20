@@ -17,9 +17,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type" : "AWS::EC2::VPCCidrBlock",
    "Properties" : {
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock)" : Boolean,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpccidrblock-cidrblock)" : String,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpccidrblock-vpcid)" : String
+      "[AmazonProvidedIpv6CidrBlock](#cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock)" : Boolean,
+      "[CidrBlock](#cfn-ec2-vpccidrblock-cidrblock)" : String,
+      "[VpcId](#cfn-ec2-vpccidrblock-vpcid)" : String
    }
 }
 ```
@@ -29,30 +29,30 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::VPCCidrBlock"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock): Boolean
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpccidrblock-cidrblock): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpccidrblock-vpcid): String
+  [AmazonProvidedIpv6CidrBlock](#cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock): Boolean
+  [CidrBlock](#cfn-ec2-vpccidrblock-cidrblock): String
+  [VpcId](#cfn-ec2-vpccidrblock-vpcid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-vpccidrblock-properties"></a>
 
-`AmazonProvidedIpv6CidrBlock`  
+`AmazonProvidedIpv6CidrBlock`  <a name="cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock"></a>
 Whether to request an Amazon\-provided IPv6 CIDR block with a /56 prefix length for the VPC\. You can't specify the range of IPv6 addresses or the size of the CIDR block\.  
 *Required: *No  
 *Type*: Boolean  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`CidrBlock`  
+`CidrBlock`  <a name="cfn-ec2-vpccidrblock-cidrblock"></a>
 An IPv4 CIDR block to associate with the VPC\.   
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`VpcId`  
+`VpcId`  <a name="cfn-ec2-vpccidrblock-vpcid"></a>
 The ID of the VPC to associate the Amazon\-provided IPv6 CIDR block with\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Examples<a name="aws-resource-ec2-vpccidrblock-examples"></a>
 

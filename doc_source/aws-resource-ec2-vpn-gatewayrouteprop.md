@@ -3,7 +3,7 @@
 Enables a virtual private gateway \(VGW\) to propagate routes to the routing tables of a VPC\.
 
 **Note**  
-If you reference a VPN gateway that is in the same template as your VPN gateway route propagation, you must explicitly declare a dependency on the VPN gateway attachment\. The `AWS::EC2::VPNGatewayRoutePropagation` resource cannot use the VPN gateway until it has successfully attached to the VPC\. Add a DependsOn attribute in the `AWS::EC2::VPNGatewayRoutePropagation` resource to explicitly declare a dependency on the VPN gateway attachment\.
+If you reference a VPN gateway that is in the same template as your VPN gateway route propagation, you must explicitly declare a dependency on the VPN gateway attachment\. The `AWS::EC2::VPNGatewayRoutePropagation` resource cannot use the VPN gateway until it has successfully attached to the VPC\. Add a [DependsOn](aws-attribute-dependson.md) attribute in the `AWS::EC2::VPNGatewayRoutePropagation` resource to explicitly declare a dependency on the VPN gateway attachment\.
 
 
 + [Syntax](#aws-resource-ec2-vpngatewayroutepropagation-syntax)
@@ -22,8 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type" : "AWS::EC2::VPNGatewayRoutePropagation",
    "Properties" : {
-      "RouteTableIds" : [ String, ... ],
-      "VpnGatewayId" : String
+      "[RouteTableIds](#cfn-ec2-vpngatewayrouteprop-routetableids)" : [ String, ... ],
+      "[VpnGatewayId](#cfn-ec2-vpngatewayrouteprop-vpngatewayid)" : String
    }
 }
 ```
@@ -33,24 +33,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::VPNGatewayRoutePropagation"
 Properties: 
-  RouteTableIds:
+  [RouteTableIds](#cfn-ec2-vpngatewayrouteprop-routetableids):
     - String
-  VpnGatewayId: String
+  [VpnGatewayId](#cfn-ec2-vpngatewayrouteprop-vpngatewayid): String
 ```
 
 ## Properties<a name="w3ab2c21c10d510c11"></a>
 
-`RouteTableIds`  
+`RouteTableIds`  <a name="cfn-ec2-vpngatewayrouteprop-routetableids"></a>
 A list of routing table IDs that are associated with a VPC\. The routing tables must be associated with the same VPC that the virtual private gateway is attached to\.  
 *Required: *Yes  
 *Type*: List of route table IDs  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`VpnGatewayId`  
+`VpnGatewayId`  <a name="cfn-ec2-vpngatewayrouteprop-vpngatewayid"></a>
 The ID of the virtual private gateway that is attached to a VPC\. The virtual private gateway must be attached to the same VPC that the routing tables are associated with\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Value<a name="w3ab2c21c10d510c13"></a>
 
@@ -62,7 +62,7 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 For the VPN gateway with the logical ID `myVPNGatewayRouteProp`, `Ref` will return the gateway's resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d510c15"></a>
 

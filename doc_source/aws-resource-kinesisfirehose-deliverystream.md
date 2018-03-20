@@ -19,13 +19,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::KinesisFirehose::DeliveryStream",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-deliverystreamname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-deliverystreamtype)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration)" : ElasticsearchDestinationConfiguration,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration)" : ExtendedS3DestinationConfiguration,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration)" : KinesisStreamSourceConfiguration,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration)" : RedshiftDestinationConfiguration,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration)" : S3DestinationConfiguration
+    "[DeliveryStreamName](#cfn-kinesisfirehose-deliverystream-deliverystreamname)" : String,
+    "[DeliveryStreamType](#cfn-kinesisfirehose-deliverystream-deliverystreamtype)" : String,
+    "[ElasticsearchDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration)" : [*ElasticsearchDestinationConfiguration*](aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.md),
+    "[ExtendedS3DestinationConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration)" : [*ExtendedS3DestinationConfiguration*](aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.md),
+    "[KinesisStreamSourceConfiguration](#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration)" : [*KinesisStreamSourceConfiguration*](aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.md),
+    "[RedshiftDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration)" : [*RedshiftDestinationConfiguration*](aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.md),
+    "[S3DestinationConfiguration](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration)" : [*S3DestinationConfiguration*](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)
   }
 }
 ```
@@ -35,29 +35,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::KinesisFirehose::DeliveryStream"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-deliverystreamname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-deliverystreamtype): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration):
-    ElasticsearchDestinationConfiguration
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration):
-    ExtendedS3DestinationConfiguration
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration):
-    KinesisStreamSourceConfiguration
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration):
-    RedshiftDestinationConfiguration
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration):
-    S3DestinationConfiguration
+  [DeliveryStreamName](#cfn-kinesisfirehose-deliverystream-deliverystreamname): String
+  [DeliveryStreamType](#cfn-kinesisfirehose-deliverystream-deliverystreamtype): String
+  [ElasticsearchDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration):
+    [*ElasticsearchDestinationConfiguration*](aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.md)
+  [ExtendedS3DestinationConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration):
+    [*ExtendedS3DestinationConfiguration*](aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.md)
+  [KinesisStreamSourceConfiguration](#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration):
+    [*KinesisStreamSourceConfiguration*](aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.md)
+  [RedshiftDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration):
+    [*RedshiftDestinationConfiguration*](aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.md)
+  [S3DestinationConfiguration](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration):
+    [*S3DestinationConfiguration*](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)
 ```
 
 ## Properties<a name="aws-resource-kinesisfirehose-deliverystream-properties"></a>
 
-`DeliveryStreamName`  
+`DeliveryStreamName`  <a name="cfn-kinesisfirehose-deliverystream-deliverystreamname"></a>
 A name for the delivery stream\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`DeliveryStreamType`  
+`DeliveryStreamType`  <a name="cfn-kinesisfirehose-deliverystream-deliverystreamtype"></a>
 The delivery stream type\. This property can be one of the following values:  
 
 + `DirectPut`: Provider applications access the delivery stream directly\.
@@ -65,37 +65,37 @@ The delivery stream type\. This property can be one of the following values:
 + `KinesisStreamAsSource`: The delivery stream uses a Kinesis stream as a source\.
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`ElasticsearchDestinationConfiguration`  
+`ElasticsearchDestinationConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration"></a>
 An Amazon ES destination for the delivery stream\.  
 *Required: *Conditional\. You must specify only one destination configuration\.  
 *Type*: [Kinesis Firehose DeliveryStream ElasticsearchDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.md)  
-*Update requires*: No interruption\. If you change the delivery stream destination from an Amazon ES destination to an Amazon S3 or Amazon Redshift destination, update requires some interruptions\.
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\. If you change the delivery stream destination from an Amazon ES destination to an Amazon S3 or Amazon Redshift destination, update requires [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\.
 
-`ExtendedS3DestinationConfiguration`  
+`ExtendedS3DestinationConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration"></a>
 An Amazon S3 destination for the delivery stream\.  
 *Required: *Conditional\. You must specify only one destination configuration\.  
  *Type*: [Kinesis Firehose DeliveryStream ExtendedS3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.md)  
-*Update requires*: No interruption\. If you change the delivery stream destination from an Amazon Redshift destination to an Amazon ES destination, update requires some interruptions\.
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\. If you change the delivery stream destination from an Amazon Redshift destination to an Amazon ES destination, update requires [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\.
 
-`KinesisStreamSourceConfiguration`  
+`KinesisStreamSourceConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration"></a>
 When a Kinesis stream is used as the source for the delivery stream, a [Kinesis Data Firehose DeliveryStream KinesisStreamSourceConfiguration](aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.md) containing the Kinesis stream ARN and the role ARN for the source stream\.  
 *Required: *No  
 *Type*: [Kinesis Data Firehose DeliveryStream KinesisStreamSourceConfiguration](aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`RedshiftDestinationConfiguration`  
+`RedshiftDestinationConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration"></a>
 An Amazon Redshift destination for the delivery stream\.  
 *Required: *Conditional\. You must specify only one destination configuration\.  
 *Type*: [Kinesis Firehose DeliveryStream RedshiftDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.md)  
-*Update requires*: No interruption\. If you change the delivery stream destination from an Amazon Redshift destination to an Amazon ES destination, update requires some interruptions\.
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\. If you change the delivery stream destination from an Amazon Redshift destination to an Amazon ES destination, update requires [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\.
 
-`S3DestinationConfiguration`  
+`S3DestinationConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-s3destinationconfiguration"></a>
 An Amazon S3 destination for the delivery stream\.  
 *Required: *Conditional\. You must specify only one destination configuration\.  
 *Type*: [Kinesis Firehose DeliveryStream S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)  
-*Update requires*: No interruption\. If you change the delivery stream destination from an Amazon S3 destination to an Amazon ES destination, update requires some interruptions\.
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\. If you change the delivery stream destination from an Amazon S3 destination to an Amazon ES destination, update requires [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\.
 
 ## Return Values<a name="aws-resource-kinesisfirehose-deliverystream-returnvalues"></a>
 
@@ -103,7 +103,7 @@ An Amazon S3 destination for the delivery stream\.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the delivery stream name, such as `mystack-deliverystream-1ABCD2EF3GHIJ`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ### Fn::GetAtt<a name="aws-resource-kinesisfirehose-deliverystream-getatt"></a>
 
@@ -112,7 +112,7 @@ For more information about using the `Ref` function, see Ref\.
 `Arn`  
 The Amazon Resource Name \(ARN\) of the delivery stream, such as `arn:aws:firehose:``us-east-2``:123456789012:deliverystream/delivery-stream-name`\. 
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\.
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
 ## Examples<a name="aws-resource-kinesisfirehose-deliverystream-examples"></a>
 

@@ -10,7 +10,7 @@ When you need to update a stack, understanding how your changes will affect runn
 + [Example Change Sets](using-cfn-updating-stacks-changesets-samples.md)
 
 **Important**  
-Change sets don't indicate whether AWS CloudFormation will successfully update a stack\. For example, a change set doesn't check if you will surpass an account limit, if you're updating a resource that doesn't support updates, or if you have insufficient permissions to modify a resource, all of which can cause a stack update to fail\. If an update fails, AWS CloudFormation attempts to roll back your resources to their original state\.
+Change sets don't indicate whether AWS CloudFormation will successfully update a stack\. For example, a change set doesn't check if you will surpass an account [limit](cloudformation-limits.md), if you're updating a [resource](aws-template-resource-type-ref.md) that doesn't support updates, or if you have insufficient [permissions](using-iam-template.md) to modify a resource, all of which can cause a stack update to fail\. If an update fails, AWS CloudFormation attempts to roll back your resources to their original state\.
 
 Change Set Overview
 

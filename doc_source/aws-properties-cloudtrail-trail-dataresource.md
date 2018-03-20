@@ -12,32 +12,32 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudtrail-trail-dataresource-type)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudtrail-trail-dataresource-values)" : [ String, ... ]
+  "[Type](#cfn-cloudtrail-trail-dataresource-type)" : String,
+  "[Values](#cfn-cloudtrail-trail-dataresource-values)" : [ String, ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-cloudtrail-trail-dataresource-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudtrail-trail-dataresource-type): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudtrail-trail-dataresource-values): 
+[Type](#cfn-cloudtrail-trail-dataresource-type): String
+[Values](#cfn-cloudtrail-trail-dataresource-values): 
   - String
 ```
 
 ## Properties<a name="aws-properties-cloudtrail-trail-dataresource-properties"></a>
 
-`Type`  
+`Type`  <a name="cfn-cloudtrail-trail-dataresource-type"></a>
 The resource type to log data events for\. You can specify only the following value: `AWS::S3::Object`\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Values`  
+`Values`  <a name="cfn-cloudtrail-trail-dataresource-values"></a>
 A list of ARN\-like strings for the specified Amazon S3 objects\.  
 To log data events for all objects in all Amazon S3 buckets in your AWS account, specify the prefix as `arn:aws:s3:::`\.  
 To log data events for all objects in an Amazon S3 bucket, specify the bucket and an empty object prefix such as `arn:aws:s3:::bucket-1/`\. The trail logs data events for all objects in this Amazon S3 bucket\.  
 To log data events for specific objects, specify the Amazon S3 bucket and object prefix such as `arn:aws:s3:::bucket-1/example-images`\. The trail logs data events for objects in the bucket that match the prefix\.  
  *Required*: No  
  *Type*: List of String values  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

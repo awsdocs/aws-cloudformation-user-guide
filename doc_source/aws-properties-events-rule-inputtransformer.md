@@ -12,31 +12,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-events-rule-inputtransformer-inputpathsmap)" : { String:String, ... },
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-events-rule-inputtransformer-inputtemplate)" : String
+  "[InputPathsMap](#cfn-events-rule-inputtransformer-inputpathsmap)" : { String:String, ... },
+  "[InputTemplate](#cfn-events-rule-inputtransformer-inputtemplate)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-events-rule-inputtransformer-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-events-rule-inputtransformer-inputpathsmap): 
+[InputPathsMap](#cfn-events-rule-inputtransformer-inputpathsmap): 
   String: String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-events-rule-inputtransformer-inputtemplate): String
+[InputTemplate](#cfn-events-rule-inputtransformer-inputtemplate): String
 ```
 
 ## Properties<a name="aws-properties-events-rule-inputtransformer-properties"></a>
 
 For more information, including constraints, see [InputTransformer](http://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_InputTransformer.html) in the *Amazon CloudWatch Events API Reference*\.
 
-`InputPathsMap`  
+`InputPathsMap`  <a name="cfn-events-rule-inputtransformer-inputpathsmap"></a>
 The map of JSON paths to extract from the event, as key\-value pairs where each value is a JSON path\. You must use JSON dot notation, not bracket notation\. Duplicates aren't allowed\.  
  *Required*: No  
  *Type*: String\-to\-string map  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`InputTemplate`  
+`InputTemplate`  <a name="cfn-events-rule-inputtransformer-inputtemplate"></a>
 The input template where you can use the values of the keys from `InputPathsMap` to customize the data that's sent to the target\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

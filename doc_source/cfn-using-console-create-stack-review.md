@@ -12,6 +12,6 @@ The final step before your stack is launched is to review the values entered whi
 
    Your stack appears in the list of AWS CloudFormation stacks, with a status of **CREATE\_IN\_PROGRESS**\.
 
-   While your stack is being created \(or afterward\), you can use the stack detail pane to view your stack's events, data, or resources\. AWS CloudFormation automatically refreshes stack events every minute\. By viewing stack creation events, you can understand the sequence of events that lead to your stack's creation \(or failure, if you are debugging your stack\)\.
+   While your stack is being created \(or afterward\), you can use the stack detail pane to [view your stack's events, data, or resources](cfn-console-view-stack-data-resources.md)\. AWS CloudFormation automatically refreshes stack events every minute\. By viewing stack creation events, you can understand the sequence of events that lead to your stack's creation \(or failure, if you are debugging your stack\)\.
 
    After your stack has been successfully created, its status changes to **CREATE\_COMPLETE**\. You can then select it \(if necessary\) and click the **Outputs** tab to view your stack's outputs if you have defined any in the template\.

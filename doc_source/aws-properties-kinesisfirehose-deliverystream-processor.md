@@ -10,29 +10,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-processor-parameters)" : [ ProcessorParameter, ... ],
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-processor-type)" : String
+  "[Parameters](#cfn-kinesisfirehose-deliverystream-processor-parameters)" : [ [*ProcessorParameter*](aws-properties-kinesisfirehose-deliverystream-processorparameter.md), ... ],
+  "[Type](#cfn-kinesisfirehose-deliverystream-processor-type)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisfirehose-deliverystream-processor-syntax.yaml"></a>
 
 ```
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-processor-parameters): 
-    - ProcessorParameter 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-processor-type): String
+  [Parameters](#cfn-kinesisfirehose-deliverystream-processor-parameters): 
+    - [*ProcessorParameter*](aws-properties-kinesisfirehose-deliverystream-processorparameter.md) 
+  [Type](#cfn-kinesisfirehose-deliverystream-processor-type): String
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-processor-properties"></a>
 
-`Parameters`  
+`Parameters`  <a name="cfn-kinesisfirehose-deliverystream-processor-parameters"></a>
 The processor parameters\.  
  *Required*: Yes  
  *Type*: List of [Amazon Kinesis Firehose DeliveryStream ProcessorParameter](aws-properties-kinesisfirehose-deliverystream-processorparameter.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Type`  
+`Type`  <a name="cfn-kinesisfirehose-deliverystream-processor-type"></a>
 The type of processor\. Valid values: `Lambda`\.  
  *Required*: Yes  
 *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

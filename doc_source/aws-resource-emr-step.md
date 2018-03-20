@@ -7,9 +7,9 @@ You can't delete work flow steps\. During a stack update, if you remove a step, 
 
 
 + [Syntax](#aws-resource-emr-step-syntax)
-+ [Properties](#w3ab2c21c10d634c11)
-+ [Return Values](#w3ab2c21c10d634c13)
-+ [Example](#w3ab2c21c10d634c15)
++ [Properties](#w3ab2c21c10d633c11)
++ [Return Values](#w3ab2c21c10d633c13)
++ [Example](#w3ab2c21c10d633c15)
 
 ## Syntax<a name="aws-resource-emr-step-syntax"></a>
 
@@ -21,10 +21,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EMR::Step",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-step-actiononfailure)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-step-hadoopjarstep)" : HadoopJarStepConfig,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-step-jobflowid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-step-name)" : String
+    "[ActionOnFailure](#cfn-emr-step-actiononfailure)" : String,
+    "[HadoopJarStep](#cfn-emr-step-hadoopjarstep)" : HadoopJarStepConfig,
+    "[JobFlowId](#cfn-emr-step-jobflowid)" : String,
+    "[Name](#cfn-emr-step-name)" : String
   }
 }
 ```
@@ -34,16 +34,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EMR::Step"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-step-actiononfailure): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-step-hadoopjarstep):
+  [ActionOnFailure](#cfn-emr-step-actiononfailure): String
+  [HadoopJarStep](#cfn-emr-step-hadoopjarstep):
     HadoopJarStepConfig
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-step-jobflowid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-step-name): String
+  [JobFlowId](#cfn-emr-step-jobflowid): String
+  [Name](#cfn-emr-step-name): String
 ```
 
-## Properties<a name="w3ab2c21c10d634c11"></a>
+## Properties<a name="w3ab2c21c10d633c11"></a>
 
-`ActionOnFailure`  
+`ActionOnFailure`  <a name="cfn-emr-step-actiononfailure"></a>
 The action to take if the job flow step fails\. Currently, AWS CloudFormation supports `CONTINUE` and `CANCEL_AND_WAIT`\.  
 
 + `TERMINATE_CLUSTER` indicates that all associated cluster resources terminate if the step fails, and no subsequent steps or jobs are attempted\.
@@ -52,35 +52,35 @@ The action to take if the job flow step fails\. Currently, AWS CloudFormation su
 For more information, see [Managing Cluster Termination](http://docs.aws.amazon.com//ElasticMapReduce/latest/ManagementGuide/UsingEMR_TerminationProtection.html) in the *Amazon EMR Management Guide*\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`HadoopJarStep`  
+`HadoopJarStep`  <a name="cfn-emr-step-hadoopjarstep"></a>
 The JAR file that includes the main function that Amazon EMR executes\.  
 *Required: *Yes  
 *Type*: [Amazon EMR Step HadoopJarStepConfig](aws-properties-emr-step-hadoopjarstepconfig.md)  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`JobFlowId`  
+`JobFlowId`  <a name="cfn-emr-step-jobflowid"></a>
 The ID of a cluster in which you want to run this job flow step\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Name`  
+`Name`  <a name="cfn-emr-step-name"></a>
 A name for the job flow step\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w3ab2c21c10d634c13"></a>
+## Return Values<a name="w3ab2c21c10d633c13"></a>
 
-### Ref<a name="w3ab2c21c10d634c13b2"></a>
+### Ref<a name="w3ab2c21c10d633c13b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the step ID, such as `s-1A2BC3D4EFG56`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10d634c15"></a>
+## Example<a name="w3ab2c21c10d633c15"></a>
 
 The following example creates a step that submits work to the `TestCluster` cluster\. The step runs the `pi` program in the `hadoop-mapreduce-examples-2.6.0.jar` file with 5 maps and 10 samples, specified in the `Args` property\.
 

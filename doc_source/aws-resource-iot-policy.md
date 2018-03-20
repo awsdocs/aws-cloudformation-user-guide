@@ -12,8 +12,8 @@ For information about working with AWS IoT policies, see [Authorization](http://
 {
    "Type": "AWS::IoT::Policy",
    "Properties": {
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-policy-policydocument)": JSON object,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-policy-policyname)": String
+      "[PolicyDocument](#cfn-iot-policy-policydocument)": JSON object,
+      "[PolicyName](#cfn-iot-policy-policyname)": String
     }
 }
 ```
@@ -23,23 +23,23 @@ For information about working with AWS IoT policies, see [Authorization](http://
 ```
 Type: "AWS::IoT::Policy"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-policy-policydocument): JSON object
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-policy-policyname): String
+  [PolicyDocument](#cfn-iot-policy-policydocument): JSON object
+  [PolicyName](#cfn-iot-policy-policyname): String
 ```
 
 ## Properties<a name="aws-resource-iot-policy-properties"></a>
 
-`PolicyDocument`  
+`PolicyDocument`  <a name="cfn-iot-policy-policydocument"></a>
 The JSON document that describes the policy\.  
 *Required: *Yes  
 *Type*: JSON object  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`PolicyName`  
+`PolicyName`  <a name="cfn-iot-policy-policyname"></a>
 The name \(the physical ID\) of the AWS IoT policy\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Values<a name="aws-resource-iot-policy-returnvalues"></a>
 
@@ -51,7 +51,7 @@ When you provide the logical ID of this resource to the `Ref` intrinsic function
 { "Ref": "MyPolicy" }
 ```
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ### Fn::GetAtt<a name="aws-resource-iot-policy-getatt"></a>
 
@@ -60,7 +60,7 @@ For more information about using the `Ref` function, see Ref\.
 `Arn`  
 The Amazon Resource Name \(ARN\) of the AWS IoT policy, such as `arn:aws:iot:us-east-2:123456789012:policy/MyPolicy`\.
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\.
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
 ## Example<a name="aws-resource-iot-policy-examples"></a>
 

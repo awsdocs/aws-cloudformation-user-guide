@@ -18,16 +18,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Glue::Job",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-role)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-defaultarguments)" : JSON object,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-connections)" : ConnectionsList,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-maxretries)" : Double,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-description)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-loguri)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-command)" : JobCommand,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-allocatedcapacity)" : Double,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-executionproperty)" : ExecutionProperty,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-name)" : String
+    "[Role](#cfn-glue-job-role)" : String,
+    "[DefaultArguments](#cfn-glue-job-defaultarguments)" : JSON object,
+    "[Connections](#cfn-glue-job-connections)" : [*ConnectionsList*](aws-properties-glue-job-connectionslist.md),
+    "[MaxRetries](#cfn-glue-job-maxretries)" : Double,
+    "[Description](#cfn-glue-job-description)" : String,
+    "[LogUri](#cfn-glue-job-loguri)" : String,
+    "[Command](#cfn-glue-job-command)" : [*JobCommand*](aws-properties-glue-job-jobcommand.md),
+    "[AllocatedCapacity](#cfn-glue-job-allocatedcapacity)" : Double,
+    "[ExecutionProperty](#cfn-glue-job-executionproperty)" : [*ExecutionProperty*](aws-properties-glue-job-executionproperty.md),
+    "[Name](#cfn-glue-job-name)" : String
   }
 }
 ```
@@ -37,30 +37,30 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Glue::Job"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-role): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-defaultarguments): JSON object
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-connections): 
-    ConnectionsList
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-maxretries): Double
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-description): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-loguri): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-command): 
-    JobCommand
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-allocatedcapacity): Double
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-executionproperty): 
-    ExecutionProperty
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-job-name): String
+  [Role](#cfn-glue-job-role): String
+  [DefaultArguments](#cfn-glue-job-defaultarguments): JSON object
+  [Connections](#cfn-glue-job-connections): 
+    [*ConnectionsList*](aws-properties-glue-job-connectionslist.md)
+  [MaxRetries](#cfn-glue-job-maxretries): Double
+  [Description](#cfn-glue-job-description): String
+  [LogUri](#cfn-glue-job-loguri): String
+  [Command](#cfn-glue-job-command): 
+    [*JobCommand*](aws-properties-glue-job-jobcommand.md)
+  [AllocatedCapacity](#cfn-glue-job-allocatedcapacity): Double
+  [ExecutionProperty](#cfn-glue-job-executionproperty): 
+    [*ExecutionProperty*](aws-properties-glue-job-executionproperty.md)
+  [Name](#cfn-glue-job-name): String
 ```
 
 ## Properties<a name="aws-resource-glue-job-properties"></a>
 
-`Role`  
+`Role`  <a name="cfn-glue-job-role"></a>
 The role that's associated with the job\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`DefaultArguments`  
+`DefaultArguments`  <a name="cfn-glue-job-defaultarguments"></a>
 UTF\-8 string–to–UTF\-8 string key\-value pairs that specify the default parameters for the job\.  
 You can specify arguments here that your own job\-execution script consumes, as well as arguments that AWS Glue itself consumes\. For information about how to specify and consume your own Job arguments, see the [ Passing and Accessing Python Parameters in AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-pyspark-extensions-python-intro.html#aws-glue-api-crawler-pyspark-extensions-python-intro-parameters) in the *AWS Glue Developer Guide*\.  
 AWS Glue consumes the following arguments to set up the Job script environment:  
@@ -83,63 +83,63 @@ There are several argument names used by AWS Glue internally that you should nev
 + `--JOB_NAME` — Internal to AWS Glue\. Do not set\!
  *Required*: No  
  *Type*: JSON object  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Connections`  
+`Connections`  <a name="cfn-glue-job-connections"></a>
 The connections that are used by the job\.  
  *Required*: No  
- *Type*:   
- *Update requires*: No interruption 
+ *Type*: [AWS Glue Job ConnectionsList](aws-properties-glue-job-connectionslist.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`MaxRetries`  
+`MaxRetries`  <a name="cfn-glue-job-maxretries"></a>
 The maximum number of times to retry this job if it fails\.  
  *Required*: No  
  *Type*: Double  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Description`  
+`Description`  <a name="cfn-glue-job-description"></a>
 The description of the job\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`LogUri`  
+`LogUri`  <a name="cfn-glue-job-loguri"></a>
 The location of the logs for the job\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Command`  
+`Command`  <a name="cfn-glue-job-command"></a>
 The code that executes a job\.  
  *Required*: Yes  
- *Type*:   
- *Update requires*: No interruption 
+ *Type*: [AWS Glue Job JobCommand](aws-properties-glue-job-jobcommand.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`AllocatedCapacity`  
+`AllocatedCapacity`  <a name="cfn-glue-job-allocatedcapacity"></a>
 The number of capacity units that are allocated to this job\.  
  *Required*: No  
  *Type*: Double  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`ExecutionProperty`  
+`ExecutionProperty`  <a name="cfn-glue-job-executionproperty"></a>
 The execution property of the job, which specifies the maximum number of concurrent runs that are allowed for the job\.  
  *Required*: No  
- *Type*:   
- *Update requires*: No interruption 
+ *Type*: [AWS Glue Job ExecutionProperty](aws-properties-glue-job-executionproperty.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Name`  
+`Name`  <a name="cfn-glue-job-name"></a>
 The name of the job\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
  *Required*: No  
  *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## Return Values<a name="aws-resource-glue-job-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d669c10b3"></a>
+### Ref<a name="w3ab2c21c10d668c10b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\. 
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
 ## Examples<a name="aws-resource-glue-job-examples"></a>
 

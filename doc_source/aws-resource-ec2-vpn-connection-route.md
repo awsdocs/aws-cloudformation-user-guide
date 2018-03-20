@@ -19,8 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type" : "AWS::EC2::VPNConnectionRoute",
    "Properties" : {
-      "DestinationCidrBlock" : String,
-      "VpnConnectionId" : String
+      "[DestinationCidrBlock](#cfn-ec2-vpnconnectionroute-cidrblock)" : String,
+      "[VpnConnectionId](#cfn-ec2-vpnconnectionroute-connectionid)" : String
    }
 }
 ```
@@ -30,23 +30,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::VPNConnectionRoute"
 Properties: 
-  DestinationCidrBlock: String
-  VpnConnectionId: String
+  [DestinationCidrBlock](#cfn-ec2-vpnconnectionroute-cidrblock): String
+  [VpnConnectionId](#cfn-ec2-vpnconnectionroute-connectionid): String
 ```
 
 ## Properties<a name="w3ab2c21c10d500b9"></a>
 
-`DestinationCidrBlock`  
+`DestinationCidrBlock`  <a name="cfn-ec2-vpnconnectionroute-cidrblock"></a>
 The CIDR block that is associated with the local subnet of the customer network\.  
 *Required*: Yes\.  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`VpnConnectionId`  
+`VpnConnectionId`  <a name="cfn-ec2-vpnconnectionroute-connectionid"></a>
 The ID of the VPN connection\.  
 *Required*: Yes\.  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Values<a name="w3ab2c21c10d500c11"></a>
 
@@ -54,7 +54,7 @@ The ID of the VPN connection\.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d500c13"></a>
 

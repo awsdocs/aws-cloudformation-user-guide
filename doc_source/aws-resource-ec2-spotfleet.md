@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::SpotFleet",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-spotfleet-spotfleetrequestconfigdata)" : SpotFleetRequestConfigData
+    "[SpotFleetRequestConfigData](#cfn-ec2-spotfleet-spotfleetrequestconfigdata)" : SpotFleetRequestConfigData
   }
 }
 ```
@@ -29,17 +29,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::SpotFleet"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-spotfleet-spotfleetrequestconfigdata):
+  [SpotFleetRequestConfigData](#cfn-ec2-spotfleet-spotfleetrequestconfigdata):
     SpotFleetRequestConfigData
 ```
 
 ## Properties<a name="w3ab2c21c10d438b9"></a>
 
-`SpotFleetRequestConfigData`  
+`SpotFleetRequestConfigData`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata"></a>
 The configuration for a Spot fleet request\.  
 *Required: *Yes  
 *Type*: [Amazon EC2 SpotFleet SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md)  
-*Update requires*: Some interruptions
+*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 ## Return Values<a name="w3ab2c21c10d438c11"></a>
 
@@ -47,7 +47,7 @@ The configuration for a Spot fleet request\.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d438c13"></a>
 

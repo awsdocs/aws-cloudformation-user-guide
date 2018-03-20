@@ -21,22 +21,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type": "AWS::ElasticLoadBalancing::LoadBalancer",
    "Properties": {
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-elb-accessloggingpolicy)" : AccessLoggingPolicy,
-      "AppCookieStickinessPolicy" : [ AppCookieStickinessPolicy, ... ],
-      "AvailabilityZones" : [ String, ... ],
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-elb-connectiondrainingpolicy)" : ConnectionDrainingPolicy,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-elb-connectionsettings)" : ConnectionSettings,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-elb-crosszone)" : Boolean,
-      "HealthCheck" : HealthCheck,
-      "Instances" : [ String, ... ],
-      "LBCookieStickinessPolicy" : [ LBCookieStickinessPolicy, ... ],
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-elb-elbname)" : String,
-      "Listeners" : [ Listener, ... ],
-      "Policies" : [ ElasticLoadBalancing Policy, ... ],
-      "Scheme" : String,
-      "SecurityGroups" : [ Security Group, ... ],
-      "Subnets" : [ String, ... ],
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-elb-tags)" : [ Resource Tag, ... ]
+      "[AccessLoggingPolicy](#cfn-ec2-elb-accessloggingpolicy)" : AccessLoggingPolicy,
+      "[AppCookieStickinessPolicy](#cfn-ec2-elb-appcookiestickinesspolicy)" : [ AppCookieStickinessPolicy, ... ],
+      "[AvailabilityZones](#cfn-ec2-elb-availabilityzones)" : [ String, ... ],
+      "[ConnectionDrainingPolicy](#cfn-ec2-elb-connectiondrainingpolicy)" : ConnectionDrainingPolicy,
+      "[ConnectionSettings](#cfn-ec2-elb-connectionsettings)" : ConnectionSettings,
+      "[CrossZone](#cfn-ec2-elb-crosszone)" : Boolean,
+      "[HealthCheck](#cfn-ec2-elb-healthcheck)" : HealthCheck,
+      "[Instances](#cfn-ec2-elb-instances)" : [ String, ... ],
+      "[LBCookieStickinessPolicy](#cfn-ec2-elb-lbcookiestickinesspolicy)" : [ LBCookieStickinessPolicy, ... ],
+      "[LoadBalancerName](#cfn-ec2-elb-elbname)" : String,
+      "[Listeners](#cfn-ec2-elb-listeners)" : [ Listener, ... ],
+      "[Policies](#cfn-ec2-elb-policies)" : [ ElasticLoadBalancing Policy, ... ],
+      "[Scheme](#cfn-ec2-elb-scheme)" : String,
+      "[SecurityGroups](#cfn-ec2-elb-securitygroups)" : [ Security Group, ... ],
+      "[Subnets](#cfn-ec2-elb-subnets)" : [ String, ... ],
+      "[Tags](#cfn-ec2-elb-tags)" : [ Resource Tag, ... ]
    }
 }
 ```
@@ -46,139 +46,139 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ElasticLoadBalancing::LoadBalancer"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-elb-accessloggingpolicy):
+  [AccessLoggingPolicy](#cfn-ec2-elb-accessloggingpolicy):
     AccessLoggingPolicy
-  AppCookieStickinessPolicy:
+  [AppCookieStickinessPolicy](#cfn-ec2-elb-appcookiestickinesspolicy):
     - AppCookieStickinessPolicy
-  AvailabilityZones:
+  [AvailabilityZones](#cfn-ec2-elb-availabilityzones):
     - String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-elb-connectiondrainingpolicy):
+  [ConnectionDrainingPolicy](#cfn-ec2-elb-connectiondrainingpolicy):
     ConnectionDrainingPolicy
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-elb-connectionsettings):
+  [ConnectionSettings](#cfn-ec2-elb-connectionsettings):
     ConnectionSettings
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-elb-crosszone): Boolean
-  HealthCheck:
+  [CrossZone](#cfn-ec2-elb-crosszone): Boolean
+  [HealthCheck](#cfn-ec2-elb-healthcheck):
     HealthCheck
-  Instances:
+  [Instances](#cfn-ec2-elb-instances):
     - String
-  LBCookieStickinessPolicy:
+  [LBCookieStickinessPolicy](#cfn-ec2-elb-lbcookiestickinesspolicy):
     - LBCookieStickinessPolicy
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-elb-elbname): String
-  Listeners:
+  [LoadBalancerName](#cfn-ec2-elb-elbname): String
+  [Listeners](#cfn-ec2-elb-listeners):
     - Listener
-  Policies:
+  [Policies](#cfn-ec2-elb-policies):
     - ElasticLoadBalancing Policy
-  Scheme: String,
-  SecurityGroups:
+  [Scheme](#cfn-ec2-elb-scheme): String,
+  [SecurityGroups](#cfn-ec2-elb-securitygroups):
     - Security Group
-  Subnets:
+  [Subnets](#cfn-ec2-elb-subnets):
     - String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-elb-tags):
+  [Tags](#cfn-ec2-elb-tags):
     - Resource Tag
 ```
 
 ## Properties<a name="aws-properties-ec2-elb-prop"></a>
 
-`AccessLoggingPolicy`  
+`AccessLoggingPolicy`  <a name="cfn-ec2-elb-accessloggingpolicy"></a>
 Captures detailed information for all requests made to your load balancer, such as the time a request was received, client’s IP address, latencies, request path, and server responses\.  
 *Required: *No  
 *Type*: [Elastic Load Balancing AccessLoggingPolicy](aws-properties-ec2-elb-accessloggingpolicy.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`AppCookieStickinessPolicy`  
+`AppCookieStickinessPolicy`  <a name="cfn-ec2-elb-appcookiestickinesspolicy"></a>
 Generates one or more stickiness policies with sticky session lifetimes that follow that of an application\-generated cookie\. These policies can be associated only with HTTP/HTTPS listeners\.  
 *Required: *No  
-*Type*: A list of AppCookieStickinessPolicy objects\.  
-*Update requires*: No interruption
+*Type*: A list of [AppCookieStickinessPolicy](aws-properties-ec2-elb-AppCookieStickinessPolicy.md) objects\.  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`AvailabilityZones`  
+`AvailabilityZones`  <a name="cfn-ec2-elb-availabilityzones"></a>
 The Availability Zones in which to create the load balancer\. You can specify the `AvailabilityZones` or `Subnets` property, but not both\.  
 For load balancers that are in a VPC, specify the `Subnets` property\.
 *Required: *No  
 *Type*: List of String values  
-*Update requires*: Replacement if you did not have an Availability Zone specified and you are adding one or if you are removing all Availability Zones\. Otherwise, update requires no interruption\.
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) if you did not have an Availability Zone specified and you are adding one or if you are removing all Availability Zones\. Otherwise, update requires [no interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
-`ConnectionDrainingPolicy`  
+`ConnectionDrainingPolicy`  <a name="cfn-ec2-elb-connectiondrainingpolicy"></a>
 Whether deregistered or unhealthy instances can complete all in\-flight requests\.  
 *Required: *No  
 *Type*: [Elastic Load Balancing ConnectionDrainingPolicy](aws-properties-ec2-elb-connectiondrainingpolicy.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ConnectionSettings`  
+`ConnectionSettings`  <a name="cfn-ec2-elb-connectionsettings"></a>
 Specifies how long front\-end and back\-end connections of your load balancer can remain idle\.  
 *Required: *No  
 *Type*: [Elastic Load Balancing ConnectionSettings](aws-properties-ec2-elb-connectionsettings.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`CrossZone`  
+`CrossZone`  <a name="cfn-ec2-elb-crosszone"></a>
 Whether cross\-zone load balancing is enabled for the load balancer\. With cross\-zone load balancing, your load balancer nodes route traffic to the back\-end instances across all Availability Zones\. By default the `CrossZone` property is `false`\.  
 *Required: *No  
 *Type*: Boolean  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`HealthCheck`  
+`HealthCheck`  <a name="cfn-ec2-elb-healthcheck"></a>
 Application health check for the instances\.  
 *Required: *No  
-*Type*: \.  
-*Update requires*: Replacement if you did not have a health check specified and you are adding one or if you are removing a health check\. Otherwise, update requires no interruption\.
+*Type*: [ElasticLoadBalancing LoadBalancer HealthCheck](aws-properties-ec2-elb-health-check.md)\.  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) if you did not have a health check specified and you are adding one or if you are removing a health check\. Otherwise, update requires [no interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
-`Instances`  
+`Instances`  <a name="cfn-ec2-elb-instances"></a>
 A list of EC2 instance IDs for the load balancer\.  
 *Required: *No  
 *Type*: List of String values  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`LBCookieStickinessPolicy`  
+`LBCookieStickinessPolicy`  <a name="cfn-ec2-elb-lbcookiestickinesspolicy"></a>
 Generates a stickiness policy with sticky session lifetimes controlled by the lifetime of the browser \(user\-agent\), or by a specified expiration period\. This policy can be associated only with HTTP/HTTPS listeners\.  
 *Required: *No  
-*Type*: A list of LBCookieStickinessPolicy objects\.  
-*Update requires*: No interruption
+*Type*: A list of [LBCookieStickinessPolicy](aws-properties-ec2-elb-LBCookieStickinessPolicy.md) objects\.  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`LoadBalancerName`  
+`LoadBalancerName`  <a name="cfn-ec2-elb-elbname"></a>
 A name for the load balancer\. For valid values, see the `LoadBalancerName` parameter for the [http://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateLoadBalancer.html](http://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateLoadBalancer.html) action in the *Elastic Load Balancing API Reference version 2012\-06\-01*\.  
 If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the load balancer\. The name must be unique within your set of load balancers\. For more information, see [Name Type](aws-properties-name.md)\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Required*: No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Listeners`  
+`Listeners`  <a name="cfn-ec2-elb-listeners"></a>
 One or more listeners for this load balancer\. Each listener must be registered for a specific port, and you cannot have more than one listener for a given port\.  
 If you update the property values for a listener specified by the `Listeners` property, AWS CloudFormation will delete the existing listener and create a new one with the updated properties\. During the time that AWS CloudFormation is performing this action, clients will not be able to connect to the load balancer\.
 *Required: *Yes  
-*Type*: A list of  objects\.  
-*Update requires*: No interruption
+*Type*: A list of [ElasticLoadBalancing Listener Property Type](aws-properties-ec2-elb-listener.md) objects\.  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Policies`  
+`Policies`  <a name="cfn-ec2-elb-policies"></a>
 A list of elastic load balancing policies to apply to this elastic load balancer\. Specify only back\-end server policies\. For more information, see [DescribeLoadBalancerPolicyTypes](http://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_DescribeLoadBalancerPolicyTypes.html) in the *Elastic Load Balancing API Reference version 2012\-06\-01*\.  
 *Required: *No  
-*Type*: A list of ElasticLoadBalancing policy objects\.  
-*Update requires*: No interruption
+*Type*: A list of [ElasticLoadBalancing policy](aws-properties-ec2-elb-policy.md) objects\.  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Scheme`  
+`Scheme`  <a name="cfn-ec2-elb-scheme"></a>
 For load balancers attached to an Amazon VPC, this parameter can be used to specify the type of load balancer to use\. Specify `internal` to create an internal load balancer with a DNS name that resolves to private IP addresses or `internet-facing` to create a load balancer with a publicly resolvable DNS name, which resolves to public IP addresses\.  
 If you specify `internal`, you must specify subnets to associate with the load balancer, not Availability Zones\.
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`SecurityGroups`  
+`SecurityGroups`  <a name="cfn-ec2-elb-securitygroups"></a>
 *Required: *No  
 *Type*: A list of security groups assigned to your load balancer within your virtual private cloud \(VPC\)\.  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Subnets`  
+`Subnets`  <a name="cfn-ec2-elb-subnets"></a>
 A list of subnet IDs in your virtual private cloud \(VPC\) to attach to your load balancer\. Do not specify multiple subnets that are in the same Availability Zone\. You can specify the `AvailabilityZones` or `Subnets` property, but not both\.  
 For more information about using Elastic Load Balancing in a VPC, see [How Do I Use Elastic Load Balancing in Amazon VPC](http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/UserScenariosForVPC.html) in the *Elastic Load Balancing Developer Guide*\.  
 *Required: *No  
 *Type*: List of String values  
-*Update requires*: Replacement if you did not have an subnet specified and you are adding one or if you are removing all subnets\. Otherwise, update requires no interruption\. To update the load balancer to another subnet that is in the same Availability Zone, you must do two updates\. You must first update the load balancer to use a subnet in different Availability Zone\. After the update is complete, update the load balancer to use the new subnet that is in the original Availability Zone\.
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) if you did not have an subnet specified and you are adding one or if you are removing all subnets\. Otherwise, update requires [no interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\. To update the load balancer to another subnet that is in the same Availability Zone, you must do two updates\. You must first update the load balancer to use a subnet in different Availability Zone\. After the update is complete, update the load balancer to use the new subnet that is in the original Availability Zone\.
 
-`Tags`  
+`Tags`  <a name="cfn-ec2-elb-tags"></a>
 An arbitrary set of tags \(key\-value pairs\) for this load balancer\.  
 *Required: *No  
-*Type*:   
-*Update requires*: No interruption
+*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Values<a name="aws-properties-ec2-elb-ref"></a>
 
@@ -186,7 +186,7 @@ An arbitrary set of tags \(key\-value pairs\) for this load balancer\.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example, `mystack-myelb-1WQN7BJGDB5YQ`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ### Fn::GetAtt<a name="w3ab2c21c10d587c13b4"></a>
 
@@ -213,7 +213,7 @@ Example: `amazon-elb`
 The owner of the source security group\.  
 Example: `amazon-elb-sg`
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\.
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
 ## Examples<a name="w3ab2c21c10d587c15"></a>
 

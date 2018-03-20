@@ -12,38 +12,38 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordcolumns)" : [ RecordColumn, ... ],
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordencoding)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordformat)" : RecordFormat
+  "[RecordColumns](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordcolumns)" : [ [*RecordColumn*](aws-properties-kinesisanalytics-applicationreferencedatasource-recordcolumn.md), ... ],
+  "[RecordEncoding](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordencoding)" : String,
+  "[RecordFormat](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordformat)" : [*RecordFormat*](aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat.md)
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-referenceschema-syntax.yaml"></a>
 
 ```
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordcolumns): 
-    - RecordColumn 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordencoding): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordformat): 
-    RecordFormat
+  [RecordColumns](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordcolumns): 
+    - [*RecordColumn*](aws-properties-kinesisanalytics-applicationreferencedatasource-recordcolumn.md) 
+  [RecordEncoding](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordencoding): String
+  [RecordFormat](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordformat): 
+    [*RecordFormat*](aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat.md)
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-referenceschema-properties"></a>
 
-`RecordColumns`  
+`RecordColumns`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordcolumns"></a>
 A list of [Amazon Kinesis Data Analytics ApplicationReferenceDataSource RecordColumn](aws-properties-kinesisanalytics-applicationreferencedatasource-recordcolumn.md) objects\.  
  *Required*: Yes  
  *Type*: List of [Kinesis Data Analytics ApplicationReferenceDataSource RecordColumn](aws-properties-kinesisanalytics-applicationreferencedatasource-recordcolumn.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`RecordEncoding`  
+`RecordEncoding`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordencoding"></a>
 Specifies the encoding of the records in the streaming source; For example, UTF\-8\.  
  *Required*: No  
  *Type*: String;  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`RecordFormat`  
+`RecordFormat`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordformat"></a>
 Specifies the format of the records on the streaming source\.  
  *Required*: Yes  
  *Type*: [Kinesis Data Analytics ApplicationReferenceDataSource RecordFormat](aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

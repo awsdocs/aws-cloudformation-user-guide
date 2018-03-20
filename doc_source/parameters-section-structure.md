@@ -72,7 +72,7 @@ The following requirements apply when using parameters:
 
 + Each parameter must be given a logical name \(also called logical ID\), which must be alphanumeric and unique among all logical names within the template\.
 
-+ Each parameter must be assigned a parameter type that is supported by AWS CloudFormation\. For more information, see Type\.
++ Each parameter must be assigned a parameter type that is supported by AWS CloudFormation\. For more information, see [Type](#parameters-section-structure-properties-type)\.
 
 + Each parameter must be assigned a value at runtime for AWS CloudFormation to successfully provision the stack\. You can optionally specify a default value for AWS CloudFormation to use unless another value is provided\.
 
@@ -82,7 +82,7 @@ The following requirements apply when using parameters:
 
 The `Parameters` section consists of the key name `Parameters`\. For each parameter within the section, you must declare a logical name and type\. You can optionally specify additional properties\.
 
-AWS CloudFormation supports the following parameter types: `String`, `Number`, `List<Number>`, `CommaDelimitedList`, an AWS\-specific type, or an `SSM` Parameter type\. For more information, see Type\.
+AWS CloudFormation supports the following parameter types: `String`, `Number`, `List<Number>`, `CommaDelimitedList`, an AWS\-specific type, or an `SSM` Parameter type\. For more information, see [Type](#parameters-section-structure-properties-type)\.
 
 **Important**  
 For sensitive parameter values \(such as passwords\), set the `NoEcho` property to `true`\. That way, whenever anyone describes your stack, the parameter value is shown as asterisks \(`*****`\)\.
@@ -152,7 +152,7 @@ A numeric value that determines the smallest numeric value you want to allow for
 Whether to mask the parameter value when anyone makes a call that describes the stack\. If you set the value to `true`, the parameter value is masked with asterisks \(`*****`\)\.  
 *Required: *No
 
-`Type`  
+`Type`  <a name="parameters-section-structure-properties-type"></a>
 The data type for the parameter \(`DataType`\)\.  
 *Required: *Yes  
 AWS CloudFormation supports the following parameter types:    
@@ -169,16 +169,16 @@ For example, users could specify `"80,20"`, and a `Ref` would result in `["80","
 An array of literal strings that are separated by commas\. The total number of strings should be one more than the total number of commas\. Also, each member string is space trimmed\.  
 For example, users could specify `"test,dev,prod"`, and a `Ref` would result in `["test","dev","prod"]`\.  
 AWS\-Specific Parameter Types  
-AWS values such as Amazon EC2 key pair names and VPC IDs\. For more information, see \.  
+AWS values such as Amazon EC2 key pair names and VPC IDs\. For more information, see [AWS\-Specific Parameter Types](#aws-specific-parameter-types)\.  
 `SSM` Parameter Types  
-Parameters that correspond to existing parameters in Systems Manager Parameter Store\. You specify a Systems Manager parameter key as the value of the `SSM` parameter, and AWS CloudFormation fetches the latest value from Parameter Store to use for the stack\. For more information, see \.  
+Parameters that correspond to existing parameters in Systems Manager Parameter Store\. You specify a Systems Manager parameter key as the value of the `SSM` parameter, and AWS CloudFormation fetches the latest value from Parameter Store to use for the stack\. For more information, see [`SSM` Parameter Types](#aws-ssm-parameter-types)\.  
 AWS CloudFormation doesn't currently support the `SecureString` Systems Manager parameter type\.
 
 ## AWS\-Specific Parameter Types<a name="aws-specific-parameter-types"></a>
 
 For AWS\-specific parameter types, template users must specify existing AWS values that are in their account\. AWS CloudFormation validates these parameter values against existing values in users' AWS accounts\. AWS\-specific parameter types are helpful in catching invalid values at the start of creating or updating a stack\.
 
-AWS CloudFormation validates input values for these types against existing values in a user's account\. For example, with the `AWS::EC2::VPC::Id` type, a user must enter an existing VPC ID that is in her account and in the region in which she is creating the stack\.
+AWS CloudFormation validates input values for these types against existing values in a user's account\. For example, with the `AWS::EC2::VPC::Id` type, [a user must enter an existing VPC ID](cfn-using-console-create-stack-parameters.md) that is in her account and in the region in which she is creating the stack\.
 
 ### Supported AWS\-Specific Parameter Types<a name="aws-specific-parameter-types-supported"></a>
 
@@ -258,7 +258,7 @@ Because the value of an `SSM` parameter is a Systems Manager parameter key, you 
 
 + AWS CloudFormation can perform validation on Systems Manager parameter keys, but not on their corresponding values\. For validation purposes, you can treat parameter keys as strings\. You should do any validation for Systems Manager parameter values in Parameter Store\.
 
-See `SSM` Parameter Types for examples that use `SSM` parameter types\.
+See [`SSM` Parameter Types](#parameters-section-ssm-examples) for examples that use `SSM` parameter types\.
 
 ### Supported `SSM` Parameter Types<a name="aws-ssm-parameter-types-supported"></a>
 
@@ -275,11 +275,11 @@ A Systems Manager parameter whose value is a string\. This corresponds to the `S
 A Systems Manager parameter whose value is a list of strings\. This corresponds to the `StringList` parameter type in Parameter Store\.
 
 `AWS::SSM::Parameter::Value<AWS-specific parameter type>`  
-A Systems Manager parameter whose value is an AWS\-specific parameter type\. For example, the following specifies the `AWS::EC2::KeyPair::KeyName` type:  
+A Systems Manager parameter whose value is an [AWS\-specific parameter type](#aws-specific-parameter-types)\. For example, the following specifies the `AWS::EC2::KeyPair::KeyName` type:  
 `AWS::SSM::Parameter::Value<AWS::EC2::KeyPair::KeyPairName>`
 
 `AWS::SSM::Parameter::Value<List<AWS-specific parameter type>>`  
-A Systems Manager parameter whose value is a list of AWS\-specific parameter types\. For example, the following specifies a list of `AWS::EC2::KeyPair::KeyName` types:  
+A Systems Manager parameter whose value is a list of [AWS\-specific parameter types](#aws-specific-parameter-types)\. For example, the following specifies a list of `AWS::EC2::KeyPair::KeyName` types:  
 `AWS::SSM::Parameter::Value<List<AWS::EC2::KeyPair::KeyPairName>>`
 
 ### Unsupported `SSM` Parameter Types<a name="aws-ssm-parameter-types-unsupported"></a>
@@ -349,7 +349,7 @@ Parameters:
 
 When you use AWS\-specific parameter types, anyone who uses your template to create or update a stack must specify existing AWS values that are in his account and in the region for the current stack\. AWS\-specific parameter types help ensure that input values for these types exist and are correct before AWS CloudFormation creates or updates any resources\. For example, if you use the `AWS::EC2::KeyPair::KeyName` parameter type, AWS CloudFormation validates the input value against users' existing key pair names before it creates any resources, such as Amazon EC2 instances\.
 
-If a user uses the AWS Management Console, AWS CloudFormation prepopulates AWS\-specific parameter types with valid values\. That way the user doesn't have to remember and correctly enter a specific name or ID\. She just selects one or more values from a drop\-down list\. Also, depending on the parameter type, users can search for values by ID, name, or Name tag value\. For more information, see [Specifying Stack Name and Parameters](cfn-using-console-create-stack-parameters.md)\.
+If a user uses the AWS Management Console, AWS CloudFormation [prepopulates AWS\-specific parameter types with valid values](cfn-using-console-create-stack-parameters.md)\. That way the user doesn't have to remember and correctly enter a specific name or ID\. She just selects one or more values from a drop\-down list\. Also, depending on the parameter type, users can search for values by ID, name, or Name tag value\. For more information, see [Specifying Stack Name and Parameters](cfn-using-console-create-stack-parameters.md)\.
 
 The following example declares two parameters with the types `AWS::EC2::KeyPair::KeyName` and `AWS::EC2::Subnet::Id`\. These types limit valid values to existing key pair names and subnet IDs\. Because the `mySubnetIDs` parameter is specified as a list, a user can specify one or more subnet IDs\.
 

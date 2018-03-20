@@ -6,16 +6,17 @@ AWS CloudFormation supports the following AWS services and features through the 
 + [Analytics](#w3ab2c27c11b7)
 + [Application Services](#w3ab2c27c11b9)
 + [Compute](#w3ab2c27c11c11)
-+ [Database](#w3ab2c27c11c13)
-+ [Developer Tools](#w3ab2c27c11c15)
-+ [Enterprise Applications](#w3ab2c27c11c17)
-+ [Game Development](#w3ab2c27c11c19)
-+ [Internet of Things](#w3ab2c27c11c21)
-+ [Management Tools](#w3ab2c27c11c23)
-+ [Mobile Services](#w3ab2c27c11c25)
-+ [Networking](#w3ab2c27c11c27)
-+ [Security and Identity](#w3ab2c27c11c29)
-+ [Storage and Content Delivery](#w3ab2c27c11c31)
++ [Customer Engagement](#w3ab2c27c11c13)
++ [Database](#w3ab2c27c11c15)
++ [Developer Tools](#w3ab2c27c11c17)
++ [Enterprise Applications](#w3ab2c27c11c19)
++ [Game Development](#w3ab2c27c11c21)
++ [Internet of Things](#w3ab2c27c11c23)
++ [Management Tools](#w3ab2c27c11c25)
++ [Mobile Services](#w3ab2c27c11c27)
++ [Networking](#w3ab2c27c11c29)
++ [Security and Identity](#w3ab2c27c11c31)
++ [Storage and Content Delivery](#w3ab2c27c11c33)
 
 ## Analytics<a name="w3ab2c27c11b7"></a>
 
@@ -55,7 +56,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 
 ## Application Services<a name="w3ab2c27c11b9"></a>
 
-**Amazon API Gateway \(API Gateway\)** \(Updated in November 2017\)  
+**Amazon API Gateway \(API Gateway\)** \(Updated in February 2018\)  
 [AWS::ApiGateway::Account](aws-resource-apigateway-account.md)  
 [AWS::ApiGateway::ApiKey](aws-resource-apigateway-apikey.md)  
 [AWS::ApiGateway::Authorizer](aws-resource-apigateway-authorizer.md)  
@@ -73,7 +74,8 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::ApiGateway::RestApi](aws-resource-apigateway-restapi.md)  
 [AWS::ApiGateway::Stage](aws-resource-apigateway-stage.md)  
 [AWS::ApiGateway::UsagePlan](aws-resource-apigateway-usageplan.md)  
-[AWS::ApiGateway::UsagePlanKey](aws-resource-apigateway-usageplankey.md)
+[AWS::ApiGateway::UsagePlanKey](aws-resource-apigateway-usageplankey.md)  
+[AWS::ApiGateway::VpcLink](aws-resource-apigateway-vpclink.md)
 
 **Amazon Simple Queue Service \(Amazon SQS\)** \(Updated in August 2017\)  
 [AWS::SQS::Queue](aws-properties-sqs-queues.md)  
@@ -89,7 +91,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::ApplicationAutoScaling::ScalableTarget](aws-resource-applicationautoscaling-scalabletarget.md)  
 [AWS::ApplicationAutoScaling::ScalingPolicy](aws-resource-applicationautoscaling-scalingpolicy.md)
 
-**Auto Scaling** \(Updated in November 2017\)  
+**Amazon EC2 Auto Scaling** \(Updated in November 2017\)  
 [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md)  
 [AWS::AutoScaling::LaunchConfiguration](aws-properties-as-launchconfig.md)  
 [AWS::AutoScaling::LifecycleHook](aws-resource-as-lifecyclehook.md)  
@@ -146,7 +148,17 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::Lambda::Permission](aws-resource-lambda-permission.md)  
 [AWS::Lambda::Version](aws-resource-lambda-version.md)
 
-## Database<a name="w3ab2c27c11c13"></a>
+## Customer Engagement<a name="w3ab2c27c11c13"></a>
+
+**Amazon Simple Email Service \(Amazon SES\)** \(Added in March 2018\)  
+[AWS::SES::ConfigurationSet](aws-resource-ses-configurationset.md)  
+[AWS::SES::ConfigurationSetEventDestination](aws-resource-ses-configurationseteventdestination.md)  
+[AWS::SES::ReceiptFilter](aws-resource-ses-receiptfilter.md)  
+[AWS::SES::ReceiptRule](aws-resource-ses-receiptrule.md)  
+[AWS::SES::ReceiptRuleSet](aws-resource-ses-receiptruleset.md)  
+[AWS::SES::Template](aws-resource-ses-template.md)
+
+## Database<a name="w3ab2c27c11c15"></a>
 
 **Amazon DynamoDB \(DynamoDB\)** \(Updated in August 2017\)  
 [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md)
@@ -193,7 +205,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::DMS::ReplicationSubnetGroup](aws-resource-dms-replicationsubnet-group.md)  
 [AWS::DMS::ReplicationTask](aws-resource-dms-replicationtask.md)
 
-## Developer Tools<a name="w3ab2c27c11c15"></a>
+## Developer Tools<a name="w3ab2c27c11c17"></a>
 
 **AWS Cloud9** \(Added in November 2017\)  
 [AWS::Cloud9::EnvironmentEC2](aws-resource-cloud9-environmentec2.md)
@@ -213,19 +225,19 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::CodePipeline::CustomActionType](aws-resource-codepipeline-customactiontype.md)  
 [AWS::CodePipeline::Pipeline](aws-resource-codepipeline-pipeline.md)
 
-## Enterprise Applications<a name="w3ab2c27c11c17"></a>
+## Enterprise Applications<a name="w3ab2c27c11c19"></a>
 
 **Amazon WorkSpaces** \(Updated in December 2015\)  
 [AWS::WorkSpaces::Workspace](aws-resource-workspaces-workspace.md)
 
-## Game Development<a name="w3ab2c27c11c19"></a>
+## Game Development<a name="w3ab2c27c11c21"></a>
 
 **Amazon GameLift \(GameLift\)** \(Updated in April 2016\)  
 [AWS::GameLift::Alias](aws-resource-gamelift-alias.md)  
 [AWS::GameLift::Build](aws-resource-gamelift-build.md)  
 [AWS::GameLift::Fleet](aws-resource-gamelift-fleet.md)
 
-## Internet of Things<a name="w3ab2c27c11c21"></a>
+## Internet of Things<a name="w3ab2c27c11c23"></a>
 
 **AWS IoT** \(Updated in August 2017\)  
 [AWS::IoT::Certificate](aws-resource-iot-certificate.md)  
@@ -235,7 +247,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::IoT::ThingPrincipalAttachment](aws-resource-iot-thingprincipalattachment.md)  
 [AWS::IoT::TopicRule](aws-resource-iot-topicrule.md)
 
-## Management Tools<a name="w3ab2c27c11c23"></a>
+## Management Tools<a name="w3ab2c27c11c25"></a>
 
 **AWS CloudFormation \(AWS CloudFormation\)** \(Updated in April 2015\)  
 [AWS::CloudFormation::Authentication](aws-resource-authentication.md)  
@@ -272,7 +284,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::OpsWorks::UserProfile](aws-resource-opsworks-userprofile.md)  
 [AWS::OpsWorks::Volume](aws-resource-opsworks-volume.md)
 
-## Mobile Services<a name="w3ab2c27c11c25"></a>
+## Mobile Services<a name="w3ab2c27c11c27"></a>
 
 **Amazon Cognito** \(Added in April 2017\)  
 [AWS::Cognito::IdentityPool](aws-resource-cognito-identitypool.md)  
@@ -288,7 +300,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::SNS::Topic](aws-properties-sns-topic.md)  
 [AWS::SNS::TopicPolicy](aws-properties-sns-policy.md)
 
-## Networking<a name="w3ab2c27c11c27"></a>
+## Networking<a name="w3ab2c27c11c29"></a>
 
 **Amazon Route 53** \(Updated in March 2017\)  
 [AWS::Route53::HealthCheck](aws-resource-route53-healthcheck.md)  
@@ -336,7 +348,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::EC2::VPNGateway](aws-resource-ec2-vpn-gateway.md)  
 [AWS::EC2::VPNGatewayRoutePropagation](aws-resource-ec2-vpn-gatewayrouteprop.md)
 
-## Security and Identity<a name="w3ab2c27c11c29"></a>
+## Security and Identity<a name="w3ab2c27c11c31"></a>
 
 **AWS Certificate Manager \(ACM\)** \(Added in August 2016\)  
 [AWS::CertificateManager::Certificate](aws-resource-certificatemanager-certificate.md)
@@ -350,9 +362,11 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::Inspector::AssessmentTemplate](aws-resource-inspector-assessmenttemplate.md)  
 [AWS::Inspector::ResourceGroup](aws-resource-inspector-resourcegroup.md)
 
-**Amazon GuardDuty** \(Added in November 2017\)  
+**Amazon GuardDuty** \(Updated in March 2018\)  
 [AWS::GuardDuty::Detector](aws-resource-guardduty-detector.md)  
 [AWS::GuardDuty::IPSet](aws-resource-guardduty-ipset.md)  
+[AWS::GuardDuty::Master](aws-resource-guardduty-master.md)  
+[AWS::GuardDuty::Member](aws-resource-guardduty-member.md)  
 [AWS::GuardDuty::ThreatIntelSet](aws-resource-guardduty-threatintelset.md)
 
 **AWS Identity and Access Management \(IAM\)** \(Updated in April 2017\)  
@@ -386,7 +400,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::WAFRegional::WebACLAssociation](aws-resource-wafregional-webaclassociation.md)  
 [AWS::WAFRegional::XssMatchSet](aws-resource-wafregional-xssmatchset.md)
 
-## Storage and Content Delivery<a name="w3ab2c27c11c31"></a>
+## Storage and Content Delivery<a name="w3ab2c27c11c33"></a>
 
 **Amazon CloudFront \(CloudFront\)** \(Updated in November 2017\)  
 [AWS::CloudFront::CloudFrontOriginAccessIdentity](aws-resource-cloudfront-cloudfrontoriginaccessidentity.md)  

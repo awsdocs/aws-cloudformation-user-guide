@@ -12,29 +12,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-patchbaseline-patchfilter-key)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-patchbaseline-patchfilter-values)" : [ String, ... ]
+  "[Key](#cfn-ssm-patchbaseline-patchfilter-key)" : String,
+  "[Values](#cfn-ssm-patchbaseline-patchfilter-values)" : [ String, ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-ssm-patchbaseline-patchfilter-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-patchbaseline-patchfilter-key): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-patchbaseline-patchfilter-values): 
+[Key](#cfn-ssm-patchbaseline-patchfilter-key): String
+[Values](#cfn-ssm-patchbaseline-patchfilter-values): 
   - String
 ```
 
 ## Properties<a name="aws-properties-ssm-patchbaseline-patchfilter-properties"></a>
 
-`Key`  
+`Key`  <a name="cfn-ssm-patchbaseline-patchfilter-key"></a>
 The key for the filter\. For information about valid keys, see [PatchFilter](http://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html) in the *Amazon EC2 Systems Manager API Reference*\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Values`  
+`Values`  <a name="cfn-ssm-patchbaseline-patchfilter-values"></a>
 The values for the filter key\.  
  *Required*: No  
  *Type*: List of String values  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

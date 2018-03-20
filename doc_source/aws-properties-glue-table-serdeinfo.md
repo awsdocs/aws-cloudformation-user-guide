@@ -12,41 +12,41 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-serdeinfo-parameters)" : JSON object,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-serdeinfo-serializationlibrary)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-serdeinfo-name)" : String
+  "[Parameters](#cfn-glue-table-serdeinfo-parameters)" : JSON object,
+  "[SerializationLibrary](#cfn-glue-table-serdeinfo-serializationlibrary)" : String,
+  "[Name](#cfn-glue-table-serdeinfo-name)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-glue-table-serdeinfo-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-serdeinfo-parameters): JSON object
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-serdeinfo-serializationlibrary): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-serdeinfo-name): String
+[Parameters](#cfn-glue-table-serdeinfo-parameters): JSON object
+[SerializationLibrary](#cfn-glue-table-serdeinfo-serializationlibrary): String
+[Name](#cfn-glue-table-serdeinfo-name): String
 ```
 
 ## Properties<a name="aws-properties-glue-table-serdeinfo-properties"></a>
 
 For more information, see [SerDeInfo Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-SerDeInfo) in the *AWS Glue Developer Guide*\.
 
-`Parameters`  
+`Parameters`  <a name="cfn-glue-table-serdeinfo-parameters"></a>
 UTF\-8 string–to–UTF\-8 string key\-value pairs that specify the initialization parameters for the SerDe\.  
  *Required*: No  
  *Type*: JSON object  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`SerializationLibrary`  
+`SerializationLibrary`  <a name="cfn-glue-table-serdeinfo-serializationlibrary"></a>
 The serialization library\. This is usually the class that implements the SerDe, such as `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe`\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Name`  
+`Name`  <a name="cfn-glue-table-serdeinfo-name"></a>
 The name of the SerDe\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-glue-table-serdeinfo-seealso"></a>
 

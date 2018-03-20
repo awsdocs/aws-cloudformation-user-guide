@@ -18,7 +18,7 @@ A stack template file defines the resources that AWS CloudFormation provisions a
 
 ## Template Configuration File<a name="w3ab2c13c15c15"></a>
 
-A template configuration file is a JSON\-formatted text file that can specify template parameter values, a stack policy, and tags\. Use these configuration files to specify parameter values or a stack policy for a stack\. All of the parameter values that you specify must be declared in the associated template\.
+A template configuration file is a JSON\-formatted text file that can specify template parameter values, a [stack policy](protect-stack-resources.md), and tags\. Use these configuration files to specify parameter values or a stack policy for a stack\. All of the parameter values that you specify must be declared in the associated template\.
 
 If you include sensitive information—such as passwords—in this file, restrict access to it\. For example, if you upload your artifact to an S3 bucket, use [S3 bucket policies or user policies](http://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html) to restrict access\.
 

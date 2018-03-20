@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type" : "AWS::EC2::VPNGateway",
    "Properties" : {
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpngateway-amazonsideasn)" : Long,
-      "Type" : String,
-      "Tags" : [ Resource Tag, ... ]
+      "[AmazonSideAsn](#cfn-ec2-vpngateway-amazonsideasn)" : Long,
+      "[Type](#cfn-ec2-vpngateway-type)" : String,
+      "[Tags](#cfn-ec2-vpngateway-tags)" : [ Resource Tag, ... ]
    }
 }
 ```
@@ -31,31 +31,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::VPNGateway"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpngateway-amazonsideasn): Long
-  Type: String
-  Tags:
+  [AmazonSideAsn](#cfn-ec2-vpngateway-amazonsideasn): Long
+  [Type](#cfn-ec2-vpngateway-type): String
+  [Tags](#cfn-ec2-vpngateway-tags):
     Resource Tag
 ```
 
 ## Properties<a name="w3ab2c21c10d505b9"></a>
 
-`AmazonSideAsn`  
+`AmazonSideAsn`  <a name="cfn-ec2-vpngateway-amazonsideasn"></a>
 The private Autonomous System Number \(ASN\) for the Amazon side of a BGP session\.  
 *Required*: No  
 *Type*: Long  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Type`  
+`Type`  <a name="cfn-ec2-vpngateway-type"></a>
 The type of VPN connection this virtual private gateway supports\. The only valid value is `"ipsec.1"`\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Tags`  
+`Tags`  <a name="cfn-ec2-vpngateway-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this resource\.  
 *Required: *No  
-*Type*:   
-*Update requires*: No interruption\.
+*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
 ## Return Value<a name="w3ab2c21c10d505c11"></a>
 
@@ -67,7 +67,7 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 For the VPN gateway with the logical ID "MyVPNGateway", `Ref` will return the gateway's resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d505c13"></a>
 

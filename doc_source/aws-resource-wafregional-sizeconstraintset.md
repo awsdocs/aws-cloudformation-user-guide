@@ -4,9 +4,9 @@ The `AWS::WAFRegional::SizeConstraintSet` resource specifies a size constraint t
 
 
 + [Syntax](#aws-resource-wafregional-sizeconstraintset-syntax)
-+ [Properties](#w3ab2c21c10e1079b9)
-+ [Return Value](#w3ab2c21c10e1079c11)
-+ [Examples](#w3ab2c21c10e1079c13)
++ [Properties](#w3ab2c21c10e1107b9)
++ [Return Value](#w3ab2c21c10e1107c11)
++ [Examples](#w3ab2c21c10e1107c13)
 
 ## Syntax<a name="aws-resource-wafregional-sizeconstraintset-syntax"></a>
 
@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFRegional::SizeConstraintSet",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-wafregional-sizeconstraintset-name)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-wafregional-sizeconstraintset-sizeconstraints)" : [ SizeConstraint, ... ]
+    "[Name](#cfn-wafregional-sizeconstraintset-name)" : String,
+    "[SizeConstraints](#cfn-wafregional-sizeconstraintset-sizeconstraints)" : [ SizeConstraint, ... ]
   }
 }
 ```
@@ -29,38 +29,38 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::WAFRegional::SizeConstraintSet"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-wafregional-sizeconstraintset-name): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-wafregional-sizeconstraintset-sizeconstraints):
+  [Name](#cfn-wafregional-sizeconstraintset-name): String
+  [SizeConstraints](#cfn-wafregional-sizeconstraintset-sizeconstraints):
     - SizeConstraint
 ```
 
-## Properties<a name="w3ab2c21c10e1079b9"></a>
+## Properties<a name="w3ab2c21c10e1107b9"></a>
 
-`Name`  
+`Name`  <a name="cfn-wafregional-sizeconstraintset-name"></a>
 A friendly name or description for the `SizeConstraintSet`\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`SizeConstraints`  
+`SizeConstraints`  <a name="cfn-wafregional-sizeconstraintset-sizeconstraints"></a>
 The size constraint and the part of the web request to check\.  
 *Required: *Yes  
 *Type*: List of [AWS WAF Regional SizeConstraintSet SizeConstraint](aws-properties-wafregional-sizeconstraintset-sizeconstraint.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10e1079c11"></a>
+## Return Value<a name="w3ab2c21c10e1107c11"></a>
 
-### Ref<a name="w3ab2c21c10e1079c11b2"></a>
+### Ref<a name="w3ab2c21c10e1107c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource physical ID, such as `1234a1a-a1b1-12a1-abcd-a123b123456`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w3ab2c21c10e1079c13"></a>
+## Examples<a name="w3ab2c21c10e1107c13"></a>
 
 The following examples show you how to define a size constraint, add it to a rule, and add the rule to a web access control list \(ACL\)\.
 
-### Define a Size Constraint<a name="w3ab2c21c10e1079c13b4"></a>
+### Define a Size Constraint<a name="w3ab2c21c10e1107c13b4"></a>
 
 The following example checks that the body of an HTTP request equals `4096` bytes\.
 
@@ -101,7 +101,7 @@ The following example checks that the body of an HTTP request equals `4096` byte
           TextTransformation: "NONE"
 ```
 
-### Associate a `SizeConstraintSet` with a Web ACL Rule<a name="w3ab2c21c10e1079c13b6"></a>
+### Associate a `SizeConstraintSet` with a Web ACL Rule<a name="w3ab2c21c10e1107c13b6"></a>
 
 The following example associates the `MySizeConstraint` object with a web ACL rule\.
 
@@ -140,7 +140,7 @@ SizeConstraintRule:
         Type: "SizeConstraint"
 ```
 
-### Create a Web ACL<a name="w3ab2c21c10e1079c13b8"></a>
+### Create a Web ACL<a name="w3ab2c21c10e1107c13b8"></a>
 
 The following example associates the `SizeConstraintRule` rule with a web ACL\. The web ACL blocks all requests except for requests with a body size equal to `4096` bytes\.
 

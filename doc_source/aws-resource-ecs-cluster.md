@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ECS::Cluster",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-cluster-clustername)" : String
+    "[ClusterName](#cfn-ecs-cluster-clustername)" : String
   }
 }
 ```
@@ -28,17 +28,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ECS::Cluster"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ecs-cluster-clustername): String
+  [ClusterName](#cfn-ecs-cluster-clustername): String
 ```
 
 ## Properties<a name="aws-resource-servicename-cluster-properties"></a>
 
-`ClusterName`  
+`ClusterName`  <a name="cfn-ecs-cluster-clustername"></a>
 A name for the cluster\. If you don't specify a name, AWS CloudFormation generates a unique physical ID for the name\. For more information, see [Name Type](aws-properties-name.md)\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Values<a name="aws-resource-ecs-cluster-returnvalues"></a>
 
@@ -52,7 +52,7 @@ In the following sample, the `Ref` function returns the name of the `MyECSCluste
 { "Ref": "MyECSCluster" }
 ```
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ### Fn::GetAtt<a name="aws-resource-ecs-cluster-getatt"></a>
 
@@ -61,7 +61,7 @@ For more information about using the `Ref` function, see Ref\.
 `Arn`  
 The Amazon Resource Name \(ARN\) of the Amazon ECS cluster, such as `arn:aws:ecs:us-east-2:123456789012:cluster/MyECSCluster`\.
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\.
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
 ## Example<a name="w3ab2c21c10d518c13"></a>
 

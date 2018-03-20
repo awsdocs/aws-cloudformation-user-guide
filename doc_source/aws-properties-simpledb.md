@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SDB::Domain",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-sdb-domain-description)" : String
+    "[Description](#cfn-sdb-domain-description)" : String
   }
 }
 ```
@@ -25,12 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::SDB::Domain"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-sdb-domain-description): String
+  [Description](#cfn-sdb-domain-description): String
 ```
 
-## Properties<a name="w3ab2c21c10d967b9"></a>
+## Properties<a name="w3ab2c21c10d971b9"></a>
 
-`Description`  
+`Description`  <a name="cfn-sdb-domain-description"></a>
 Information about the Amazon SimpleDB domain\.  
 *Required: *No  
 *Type*: String  

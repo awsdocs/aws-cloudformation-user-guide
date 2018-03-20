@@ -8,26 +8,26 @@
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-emailconfiguration-replytoemailaddress)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-emailconfiguration-sourcearn)" : String
+  "[ReplyToEmailAddress](#cfn-cognito-userpool-emailconfiguration-replytoemailaddress)" : String,
+  "[SourceArn](#cfn-cognito-userpool-emailconfiguration-sourcearn)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-cognito-userpool-emailconfiguration-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-emailconfiguration-replytoemailaddress): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-emailconfiguration-sourcearn): String
+[ReplyToEmailAddress](#cfn-cognito-userpool-emailconfiguration-replytoemailaddress): String
+[SourceArn](#cfn-cognito-userpool-emailconfiguration-sourcearn): String
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-emailconfiguration-properties"></a>
 
-`ReplyToEmailAddress`  
+`ReplyToEmailAddress`  <a name="cfn-cognito-userpool-emailconfiguration-replytoemailaddress"></a>
 The REPLY\-TO email address\.  
 *Type*: String  
 *Required: *No
 
-`SourceArn`  
+`SourceArn`  <a name="cfn-cognito-userpool-emailconfiguration-sourcearn"></a>
 The Amazon Resource Name \(ARN\) of the email source\.  
 *Type*: String  
 *Required: *No
