@@ -1,8 +1,8 @@
 # Custom Resources<a name="template-custom-resources"></a>
 
-Custom resources enable you to write custom provisioning logic in templates that AWS CloudFormation runs anytime you create, update \(if you changed the custom resource\), or delete stacks\. For example, you might want to include resources that aren't available as AWS CloudFormation resource types\. You can include those resources by using custom resources\. That way you can still manage all your related resources in a single stack\.
+Custom resources enable you to write custom provisioning logic in templates that AWS CloudFormation runs anytime you create, update \(if you changed the custom resource\), or delete stacks\. For example, you might want to include resources that aren't available as AWS CloudFormation [resource types](aws-template-resource-type-ref.md)\. You can include those resources by using custom resources\. That way you can still manage all your related resources in a single stack\.
 
-Use the `AWS::CloudFormation::CustomResource` or `Custom::String` resource type to define custom resources in your templates\. Custom resources require one property: the service token, which specifies where AWS CloudFormation sends requests to, such as an Amazon SNS topic\.
+Use the [`AWS::CloudFormation::CustomResource`](aws-resource-cfn-customresource.md) or [`Custom::String`](aws-resource-cfn-customresource.md#aws-cfn-resource-type-name) resource type to define custom resources in your templates\. Custom resources require one property: the service token, which specifies where AWS CloudFormation sends requests to, such as an Amazon SNS topic\.
 
 **Note**  
 If you use the [VPC endpoint](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpoints.html) feature, custom resources in the VPC must have access to AWS CloudFormation\-specific S3 buckets\. Custom resources must send responses to a pre\-signed Amazon S3 URL\. If they can't send responses to Amazon S3, AWS CloudFormation won't receive a response and the stack operation fails\. For more information, see [AWS CloudFormation and VPC Endpoints](cfn-vpce-bucketnames.md)\.
@@ -73,4 +73,4 @@ If the name\-value pairs contain sensitive information, you should use the `NoEc
    }
    ```
 
-1. After getting a `SUCCESS` response, AWS CloudFormation proceeds with the stack operation\. If a `FAILURE` or no response is returned, the operation fails\. Any output data from the custom resource is stored in the pre\-signed URL location\. The template developer can retrieve that data by using the `Fn::GetAtt` function\.
+1. After getting a `SUCCESS` response, AWS CloudFormation proceeds with the stack operation\. If a `FAILURE` or no response is returned, the operation fails\. Any output data from the custom resource is stored in the pre\-signed URL location\. The template developer can retrieve that data by using the [`Fn::GetAtt`](intrinsic-function-reference-getatt.md) function\.

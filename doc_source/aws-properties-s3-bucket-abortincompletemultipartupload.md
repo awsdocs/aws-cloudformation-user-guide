@@ -12,20 +12,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-abortincompletemultipartupload-daysafterinitiation)" : Integer
+  "[DaysAfterInitiation](#cfn-s3-bucket-abortincompletemultipartupload-daysafterinitiation)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-s3-bucket-abortincompletemultipartupload-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-s3-bucket-abortincompletemultipartupload-daysafterinitiation): Integer
+[DaysAfterInitiation](#cfn-s3-bucket-abortincompletemultipartupload-daysafterinitiation): Integer
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-abortincompletemultipartupload-properties"></a>
 
-`DaysAfterInitiation`  
+`DaysAfterInitiation`  <a name="cfn-s3-bucket-abortincompletemultipartupload-daysafterinitiation"></a>
 The number of days after the upload is initiated before aborting the upload\.  
  *Required*: Yes  
  *Type*: Integer  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

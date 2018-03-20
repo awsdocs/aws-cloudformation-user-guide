@@ -12,28 +12,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-partition-order-column)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-partition-order-sortorder)" : Integer
+  "[Column](#cfn-glue-partition-order-column)" : String,
+  "[SortOrder](#cfn-glue-partition-order-sortorder)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-glue-partition-order-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-partition-order-column): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-partition-order-sortorder): Integer
+[Column](#cfn-glue-partition-order-column): String
+[SortOrder](#cfn-glue-partition-order-sortorder): Integer
 ```
 
 ## Properties<a name="aws-properties-glue-partition-order-properties"></a>
 
-`Column`  
+`Column`  <a name="cfn-glue-partition-order-column"></a>
 The name of the column\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`SortOrder`  
+`SortOrder`  <a name="cfn-glue-partition-order-sortorder"></a>
 Indicates whether the column is sorted in ascending order \(`1`\) or descending order \(`0`\)\.  
  *Required*: No  
  *Type*: Integer  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

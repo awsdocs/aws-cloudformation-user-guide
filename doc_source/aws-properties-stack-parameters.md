@@ -1,6 +1,6 @@
 # AWS CloudFormation Stack Parameters<a name="aws-properties-stack-parameters"></a>
 
-The `Parameters` type is an embedded property of the AWS::CloudFormation::Stack type\.
+The `Parameters` type is an embedded property of the [AWS::CloudFormation::Stack](aws-properties-stack.md) type\.
 
 The `Parameters` type contains a set of value pairs that represent the parameters that will be passed to the template used to create an `AWS::CloudFormation::Stack` resource\. Each parameter has a name corresponding to a parameter defined in the embedded template and a value representing the value that you want to set for the parameter\. For example, the sample template EC2ChooseAMI\.template contains the following `Parameters` section:
 
@@ -42,7 +42,7 @@ The `Parameters` type contains a set of value pairs that represent the parameter
 12.     Description: "Name of an existing EC2 KeyPair to enable SSH access to the web server"
 ```
 
-## Nested Stack<a name="w3ab2c21c14d151c11"></a>
+## Nested Stack<a name="w3ab2c21c14d152c11"></a>
 
 You could use the following template to embed a stack \(myStackWithParams\) using the EC2ChooseAMI\.template and use the Parameters property in the AWS::CloudFormation::Stack resource to specify an InstanceType and KeyName:
 

@@ -12,20 +12,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-inputparallelism-count)" : Integer
+  "[Count](#cfn-kinesisanalytics-application-inputparallelism-count)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisanalytics-application-inputparallelism-syntax.yaml"></a>
 
 ```
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-inputparallelism-count): Integer
+  [Count](#cfn-kinesisanalytics-application-inputparallelism-count): Integer
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-application-inputparallelism-properties"></a>
 
-`Count`  
+`Count`  <a name="cfn-kinesisanalytics-application-inputparallelism-count"></a>
 The number of in\-application streams to create\.   
  *Required*: No  
  *Type*: Integer  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

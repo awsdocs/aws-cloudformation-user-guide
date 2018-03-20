@@ -21,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type" : "AWS::EC2::VPCPeeringConnection",
    "Properties" : {
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpcpeeringconnection-peervpcid)" : String,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpcpeeringconnection-tags)" : [ Resource Tag, ... ],
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpcpeeringconnection-vpcid)" : String,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpcpeeringconnection-peerownerid)" : String,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpcpeeringconnection-peerrolearn)" :  String
+      "[PeerVpcId](#cfn-ec2-vpcpeeringconnection-peervpcid)" : String,
+      "[Tags](#cfn-ec2-vpcpeeringconnection-tags)" : [ Resource Tag, ... ],
+      "[VpcId](#cfn-ec2-vpcpeeringconnection-vpcid)" : String,
+      "[PeerOwnerId](#cfn-ec2-vpcpeeringconnection-peerownerid)" : String,
+      "[PeerRoleArn](#cfn-ec2-vpcpeeringconnection-peerrolearn)" :  String
    }
 }
 ```
@@ -35,45 +35,45 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::VPCPeeringConnection"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpcpeeringconnection-peervpcid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpcpeeringconnection-tags):
+  [PeerVpcId](#cfn-ec2-vpcpeeringconnection-peervpcid): String
+  [Tags](#cfn-ec2-vpcpeeringconnection-tags):
     - Resource Tag
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpcpeeringconnection-vpcid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpcpeeringconnection-peerownerid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-vpcpeeringconnection-peerrolearn):  String
+  [VpcId](#cfn-ec2-vpcpeeringconnection-vpcid): String
+  [PeerOwnerId](#cfn-ec2-vpcpeeringconnection-peerownerid): String
+  [PeerRoleArn](#cfn-ec2-vpcpeeringconnection-peerrolearn):  String
 ```
 
 ## Properties<a name="w3ab2c21c10d490c10"></a>
 
-`PeerVpcId`  
+`PeerVpcId`  <a name="cfn-ec2-vpcpeeringconnection-peervpcid"></a>
 The ID of the VPC with which you are creating the peering connection\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Tags`  
+`Tags`  <a name="cfn-ec2-vpcpeeringconnection-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this resource\.  
 *Required: *No  
-*Type*:   
-*Update requires*: No interruption\.
+*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
-`VpcId`  
+`VpcId`  <a name="cfn-ec2-vpcpeeringconnection-vpcid"></a>
 The ID of the VPC that is requesting a peering connection\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`PeerOwnerId`  
+`PeerOwnerId`  <a name="cfn-ec2-vpcpeeringconnection-peerownerid"></a>
 The AWS account ID of the owner of the VPC that you want to peer with\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`PeerRoleArn`  
+`PeerRoleArn`  <a name="cfn-ec2-vpcpeeringconnection-peerrolearn"></a>
 The Amazon Resource Name \(ARN\) of the VPC peer role for the peering connection in another AWS account\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Values<a name="w3ab2c21c10d490c12"></a>
 
@@ -81,7 +81,7 @@ The Amazon Resource Name \(ARN\) of the VPC peer role for the peering connection
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Examples<a name="w3ab2c21c10d490c14"></a>
 

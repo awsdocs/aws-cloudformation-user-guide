@@ -12,28 +12,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-input)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-name)" : String
+  "[Input](#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-input)" : String,
+  "[Name](#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-name)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-input): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-name): String
+[Input](#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-input): String
+[Name](#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-name): String
 ```
 
 ## Properties<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-properties"></a>
 
-`Input`  
+`Input`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-input"></a>
 The inputs for the `STEP_FUNCTION` task\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Name`  
+`Name`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-name"></a>
 The name of the `STEP_FUNCTION` task\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

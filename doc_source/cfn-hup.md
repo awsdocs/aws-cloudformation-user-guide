@@ -23,7 +23,9 @@ cfn-hup --config|-c config.dir \
 
 ## cfn\-hup\.conf Configuration File<a name="cfn-hup-config-file"></a>
 
-The cfn\-hup\.conf file stores the name of the stack and the AWS credentials that the cfn\-hup daemon targets\. The cfn\-hup\.conf file uses the following format:
+The cfn\-hup\.conf file stores the name of the stack and the AWS credentials that the cfn\-hup daemon targets\.
+
+The cfn\-hup\.conf file uses the following format:
 
 ```
 [main]
@@ -34,11 +36,12 @@ stack=<stack-name-or-id>
 | Name | Description | Required | 
 | --- | --- | --- | 
 |   `stack`   |  A stack name or ID\. *Type*: String  |  Yes  | 
-|   `credential-file`   |  An owner\-only credential file, in the same format used for the command line tools\. Example:  cfn\-hup does not require credentials, so you do not need to use the `--credential-file` option\. However, if no credentials are specified, AWS CloudFormation checks for stack membership and limits the scope of the call to the stack that the instance belongs to\.   |  No  | 
+|   `credential-file`   |  An owner\-only credential file, in the same format used for the command line tools\. *Type*: String *Condition*: The `role` parameter supersedes this parameter\.  |  No  | 
+|   `role`   |  The name of an IAM role that is associated with the instance\. *Type*: String  |  No  | 
 |   `region`   |  The name of the AWS region containing the stack\. *Example*: `us-east-2`  |  No  | 
 |   `umask`   |  The umask used by the cfn\-hup daemon\. This value can be specified with or without a leading 0\. In both cases, it is interpreted as an octal number \(very similar to the Linux `umask` command\)\. This parameter has no effect on Windows\. *Type*: Octal integer between `0` and `0777` *Default*: `022`, version 1\.4\-22 and higher\. The default value of `022` masks group and world write permissions, so files created by the cfn\-hup daemon are not group or world writable by default\. The default value for versions 1\.4\-21 and earlier is `0`, which masks nothing\.  |  No  | 
-|   `interval`   |  The interval used to check for changes to the resource metadata in minutes Type: Number *Default*: `15`  |  No  | 
-|   `verbose`   |  Specifies whether to use verbose logging\. Type: Boolean *Default*: `false`  |  No  | 
+|   `interval`   |  The interval used to check for changes to the resource metadata in minutes *Type*: Number *Default*: `15`  |  No  | 
+|   `verbose`   |  Specifies whether to use verbose logging\. *Type*: Boolean *Default*: `false`  |  No  | 
 
 ## hooks\.conf Configuration File<a name="cfn-hup-hook-file"></a>
 

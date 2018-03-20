@@ -8,26 +8,26 @@
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpooluser-attributetype-name)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpooluser-attributetype-value)" : String
+  "[Name](#cfn-cognito-userpooluser-attributetype-name)" : String,
+  "[Value](#cfn-cognito-userpooluser-attributetype-value)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-cognito-userpooluser-attributetype-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpooluser-attributetype-name): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpooluser-attributetype-value): String
+[Name](#cfn-cognito-userpooluser-attributetype-name): String
+[Value](#cfn-cognito-userpooluser-attributetype-value): String
 ```
 
 ## Properties<a name="aws-properties-cognito-userpooluser-attributetype-properties"></a>
 
-`Name`  
+`Name`  <a name="cfn-cognito-userpooluser-attributetype-name"></a>
 The name of the attribute\.  
 *Type*: String  
 *Required: *Yes
 
-`Value`  
+`Value`  <a name="cfn-cognito-userpooluser-attributetype-value"></a>
 The value of the attribute\.  
 *Type*: String  
 *Required: *No

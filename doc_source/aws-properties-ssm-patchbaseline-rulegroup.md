@@ -12,21 +12,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-patchbaseline-rulegroup-patchrules)" : [ Rule, ... ]
+  "[PatchRules](#cfn-ssm-patchbaseline-rulegroup-patchrules)" : [ [*Rule*](aws-properties-ssm-patchbaseline-rule.md), ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-ssm-patchbaseline-rulegroup-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-patchbaseline-rulegroup-patchrules): 
-  - Rule
+[PatchRules](#cfn-ssm-patchbaseline-rulegroup-patchrules): 
+  - [*Rule*](aws-properties-ssm-patchbaseline-rule.md)
 ```
 
 ## Properties<a name="aws-properties-ssm-patchbaseline-rulegroup-properties"></a>
 
-`PatchRules`  
+`PatchRules`  <a name="cfn-ssm-patchbaseline-rulegroup-patchrules"></a>
 The rules that make up the rule group\.  
  *Required*: No  
  *Type*: List of [SSM PatchBaseline Rule](aws-properties-ssm-patchbaseline-rule.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

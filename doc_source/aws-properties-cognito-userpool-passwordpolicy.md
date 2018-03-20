@@ -8,47 +8,47 @@
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-passwordpolicy-minimumlength)" : Integer,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-passwordpolicy-requirelowercase)" : Boolean,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-passwordpolicy-requirenumbers)" : Boolean,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-passwordpolicy-requiresymbols)" : Boolean,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-passwordpolicy-requireuppercase)" : Boolean
+  "[MinimumLength](#cfn-cognito-userpool-passwordpolicy-minimumlength)" : Integer,
+  "[RequireLowercase](#cfn-cognito-userpool-passwordpolicy-requirelowercase)" : Boolean,
+  "[RequireNumbers](#cfn-cognito-userpool-passwordpolicy-requirenumbers)" : Boolean,
+  "[RequireSymbols](#cfn-cognito-userpool-passwordpolicy-requiresymbols)" : Boolean,
+  "[RequireUppercase](#cfn-cognito-userpool-passwordpolicy-requireuppercase)" : Boolean
 }
 ```
 
 ### YAML<a name="aws-properties-cognito-userpool-passwordpolicy-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-passwordpolicy-minimumlength): Integer
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-passwordpolicy-requirelowercase): Boolean
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-passwordpolicy-requirenumbers): Boolean
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-passwordpolicy-requiresymbols): Boolean
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-userpool-passwordpolicy-requireuppercase): Boolean
+[MinimumLength](#cfn-cognito-userpool-passwordpolicy-minimumlength): Integer
+[RequireLowercase](#cfn-cognito-userpool-passwordpolicy-requirelowercase): Boolean
+[RequireNumbers](#cfn-cognito-userpool-passwordpolicy-requirenumbers): Boolean
+[RequireSymbols](#cfn-cognito-userpool-passwordpolicy-requiresymbols): Boolean
+[RequireUppercase](#cfn-cognito-userpool-passwordpolicy-requireuppercase): Boolean
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-passwordpolicy-properties"></a>
 
-`MinimumLength`  
+`MinimumLength`  <a name="cfn-cognito-userpool-passwordpolicy-minimumlength"></a>
 The minimum length of the password policy that you have set\. Cannot be less than 6\.  
 *Type*: Integer  
 *Required: *No
 
-`RequireLowercase`  
+`RequireLowercase`  <a name="cfn-cognito-userpool-passwordpolicy-requirelowercase"></a>
 In the password policy that you have set, refers to whether you have required users to use at least one lowercase letter in their password\.  
 *Type*: Boolean  
 *Required: *No
 
-`RequireNumbers`  
+`RequireNumbers`  <a name="cfn-cognito-userpool-passwordpolicy-requirenumbers"></a>
 In the password policy that you have set, refers to whether you have required users to use at least one number in their password\.  
 *Type*: Boolean  
 *Required: *No
 
-`RequireSymbols`  
+`RequireSymbols`  <a name="cfn-cognito-userpool-passwordpolicy-requiresymbols"></a>
 In the password policy that you have set, refers to whether you have required users to use at least one symbol in their password\.  
 *Type*: Boolean  
 *Required: *No
 
-`RequireUppercase`  
+`RequireUppercase`  <a name="cfn-cognito-userpool-passwordpolicy-requireuppercase"></a>
 In the password policy that you have set, refers to whether you have required users to use at least one uppercase letter in their password\.  
 *Type*: Boolean  
 *Required: *No

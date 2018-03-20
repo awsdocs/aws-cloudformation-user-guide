@@ -10,26 +10,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-apikey-stagekey-restapiid)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-apikey-stagekey-stagename)" : String
+  "[RestApiId](#cfn-apigateway-apikey-stagekey-restapiid)" : String,
+  "[StageName](#cfn-apigateway-apikey-stagekey-stagename)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-apitgateway-apikey-stagekey-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-apikey-stagekey-restapiid): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-apikey-stagekey-stagename): String
+[RestApiId](#cfn-apigateway-apikey-stagekey-restapiid): String
+[StageName](#cfn-apigateway-apikey-stagekey-stagename): String
 ```
 
 ## Properties<a name="w3ab2c21c14c12b7"></a>
 
-`RestApiId`  
+`RestApiId`  <a name="cfn-apigateway-apikey-stagekey-restapiid"></a>
 The ID of a `RestApi` resource that includes the stage with which you want to associate the API key\.  
 *Required: *No  
 *Type*: String
 
-`StageName`  
+`StageName`  <a name="cfn-apigateway-apikey-stagekey-stagename"></a>
 The name of the stage with which to associate the API key\. The stage must be included in the `RestApi` resource that you specified in the `RestApiId` property\.  
 *Required: *No  
 *Type*: String

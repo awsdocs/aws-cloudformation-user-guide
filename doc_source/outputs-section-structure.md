@@ -1,6 +1,6 @@
 # Outputs<a name="outputs-section-structure"></a>
 
-The optional `Outputs` section declares output values that you can import into other stacks \(to create cross\-stack references\), return in response \(to describe stack calls\), or view on the AWS CloudFormation console\. For example, you can output the S3 bucket name for a stack to make the bucket easier to find\.
+The optional `Outputs` section declares output values that you can [import into other stacks](intrinsic-function-reference-importvalue.md) \(to [create cross\-stack references](walkthrough-crossstackref.md)\), return in response \(to describe stack calls\), or [view on the AWS CloudFormation console](cfn-console-view-stack-data-resources.md)\. For example, you can output the S3 bucket name for a stack to make the bucket easier to find\.
 
 ## Syntax<a name="w3ab2c17c15c27b5"></a>
 
@@ -49,7 +49,7 @@ A `String` type that describes the output value\. The description can be a maxim
 The value of the property returned by the `aws cloudformation describe-stacks` command\. The value of an output can include literals, parameter references, pseudo\-parameters, a mapping value, or intrinsic functions\.
 
 **Export \(optional\)**  
-The name of the resource output to be exported for a cross\-stack reference\.  
+The name of the resource output to be exported for a [cross\-stack reference](walkthrough-crossstackref.md)\.  
 The following restrictions apply to cross\-stack references:  
 
 + For each AWS account, `Export` names must be unique within a region\.
@@ -80,7 +80,7 @@ Export:
   Name: !Join [ ":", [ !Ref "AWS::StackName", AccountVPC ] ]
 ```
 
-To associate a condition with an output, define the condition in the `Conditions` section of the template\.
+To associate a condition with an output, define the condition in the `[Conditions](conditions-section-structure.md)` section of the template\.
 
 ## Examples<a name="w3ab2c17c15c27b7"></a>
 

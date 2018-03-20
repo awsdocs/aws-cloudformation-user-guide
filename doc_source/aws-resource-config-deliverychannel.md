@@ -19,9 +19,9 @@ For more information, see [Managing the Delivery Channel](http://docs.aws.amazon
 
 
 + [Syntax](#aws-resource-config-deliverychannel-syntax)
-+ [Properties](#w3ab2c21c10d279c19)
-+ [Return Values](#w3ab2c21c10d279c21)
-+ [Example](#w3ab2c21c10d279c23)
++ [Properties](#w3ab2c21c10d280c19)
++ [Return Values](#w3ab2c21c10d280c21)
++ [Example](#w3ab2c21c10d280c23)
 
 ## Syntax<a name="aws-resource-config-deliverychannel-syntax"></a>
 
@@ -33,11 +33,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Config::DeliveryChannel",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-config-deliverychannel-configsnapshotdeliveryproperties)" : Config snapshot delivery properties,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-config-deliverychannel-name)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-config-deliverychannel-s3bucketname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-config-deliverychannel-s3keyprefix)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-config-deliverychannel-snstopicarn)" : String
+    "[ConfigSnapshotDeliveryProperties](#cfn-config-deliverychannel-configsnapshotdeliveryproperties)" : Config snapshot delivery properties,
+    "[Name](#cfn-config-deliverychannel-name)" : String,
+    "[S3BucketName](#cfn-config-deliverychannel-s3bucketname)" : String,
+    "[S3KeyPrefix](#cfn-config-deliverychannel-s3keyprefix)" : String,
+    "[SnsTopicARN](#cfn-config-deliverychannel-snstopicarn)" : String
   }
 }
 ```
@@ -47,55 +47,55 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Config::DeliveryChannel"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-config-deliverychannel-configsnapshotdeliveryproperties):
+  [ConfigSnapshotDeliveryProperties](#cfn-config-deliverychannel-configsnapshotdeliveryproperties):
     Config snapshot delivery properties
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-config-deliverychannel-name): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-config-deliverychannel-s3bucketname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-config-deliverychannel-s3keyprefix): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-config-deliverychannel-snstopicarn): String
+  [Name](#cfn-config-deliverychannel-name): String
+  [S3BucketName](#cfn-config-deliverychannel-s3bucketname): String
+  [S3KeyPrefix](#cfn-config-deliverychannel-s3keyprefix): String
+  [SnsTopicARN](#cfn-config-deliverychannel-snstopicarn): String
 ```
 
-## Properties<a name="w3ab2c21c10d279c19"></a>
+## Properties<a name="w3ab2c21c10d280c19"></a>
 
-`ConfigSnapshotDeliveryProperties`  
+`ConfigSnapshotDeliveryProperties`  <a name="cfn-config-deliverychannel-configsnapshotdeliveryproperties"></a>
 Provides options for how AWS Config delivers configuration snapshots to the S3 bucket in your delivery channel\.  
 *Required: *No  
 *Type*: [AWS Config DeliveryChannel ConfigSnapshotDeliveryProperties](aws-properties-config-deliverychannel-configsnapshotdeliveryproperties.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Name`  
+`Name`  <a name="cfn-config-deliverychannel-name"></a>
 A name for the delivery channel\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the delivery channel name\. For more information, see [Name Type](aws-properties-name.md)\.  
 *Required: *No  
 *Type*: String  
 *Update requires*: Updates are not supported\. To change the name, you must run two separate updates\. In the first update, delete this resource, and then recreate it with a new name in the second update\.
 
-`S3BucketName`  
+`S3BucketName`  <a name="cfn-config-deliverychannel-s3bucketname"></a>
 The name of an S3 bucket where you want to store configuration history for the delivery channel\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`S3KeyPrefix`  
+`S3KeyPrefix`  <a name="cfn-config-deliverychannel-s3keyprefix"></a>
 A key prefix \(folder\) for the specified S3 bucket\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`SnsTopicARN`  
+`SnsTopicARN`  <a name="cfn-config-deliverychannel-snstopicarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service \(Amazon SNS\) topic that AWS Config delivers notifications to\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10d279c21"></a>
+## Return Values<a name="w3ab2c21c10d280c21"></a>
 
-### Ref<a name="w3ab2c21c10d279c21b2"></a>
+### Ref<a name="w3ab2c21c10d280c21b2"></a>
 
 When you pass the logical ID of an `AWS::Config::DeliveryChannel` resource to the intrinsic `Ref` function, the function returns the delivery channel name, such as `default`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10d279c23"></a>
+## Example<a name="w3ab2c21c10d280c23"></a>
 
 The following example creates a delivery channel that sends notifications to the specified Amazon SNS topic\. The delivery channel also sends configuration changes and snapshots to the specified S3 bucket\.
 

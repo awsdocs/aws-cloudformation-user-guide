@@ -22,7 +22,7 @@ The syntax for declaring this resource:
 {
   "Type" : "AWS::ApiGateway::Account",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-account-cloudwatchrolearn)": String
+    "[CloudWatchRoleArn](#cfn-apigateway-account-cloudwatchrolearn)": String
   }
 }
 ```
@@ -32,16 +32,16 @@ The syntax for declaring this resource:
 ```
 Type: "AWS::ApiGateway::Account"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-account-cloudwatchrolearn): String
+  [CloudWatchRoleArn](#cfn-apigateway-account-cloudwatchrolearn): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-account-properties"></a>
 
-`CloudWatchRoleArn`  
+`CloudWatchRoleArn`  <a name="cfn-apigateway-account-cloudwatchrolearn"></a>
 The Amazon Resource Name \(ARN\) of an IAM role that has write access to CloudWatch Logs in your account\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Value<a name="aws-resource-apigateway-account-returnvalues"></a>
 
@@ -49,7 +49,7 @@ The Amazon Resource Name \(ARN\) of an IAM role that has write access to CloudWa
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ID of the resource, such as `mysta-accou-01234b567890example`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="aws-resource-apigateway-account-examples"></a>
 

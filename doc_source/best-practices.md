@@ -100,11 +100,11 @@ With constraints, you can describe allowed input values so that AWS CloudFormati
 
 When you launch stacks, you can install and configure software applications on Amazon EC2 instances by using the cfn\-init helper script and the `AWS::CloudFormation::Init` resource\. By using `AWS::CloudFormation::Init`, you can describe the configurations that you want rather than scripting procedural steps\. You can also update configurations without recreating instances\. And if anything goes wrong with your configuration, AWS CloudFormation generates logs that you can use to investigate issues\.
 
-In your template, specify installation and configuration states in the `AWS::CloudFormation::Init` resource\. For a walkthrough that shows how to use cfn\-init and `AWS::CloudFormation::Init`, see [Deploying Applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
+In your template, specify installation and configuration states in the [`AWS::CloudFormation::Init`](aws-resource-init.md) resource\. For a walkthrough that shows how to use cfn\-init and `AWS::CloudFormation::Init`, see [Deploying Applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
 
 ## Use the Latest Helper Scripts<a name="helper-scripts"></a>
 
-The helper scripts are updated periodically\. Be sure you include the following command in the `UserData` property of your template before you call the helper scripts to ensure that your launched instances get the latest helper scripts:
+The [helper scripts](cfn-helper-scripts-reference.md) are updated periodically\. Be sure you include the following command in the `UserData` property of your template before you call the helper scripts to ensure that your launched instances get the latest helper scripts:
 
 ```
 yum install -y aws-cfn-bootstrap

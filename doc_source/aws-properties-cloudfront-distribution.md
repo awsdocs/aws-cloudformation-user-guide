@@ -19,8 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type" : "AWS::CloudFront::Distribution",
    "Properties" : {
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudfront-distribution-distributionconfig)" : DistributionConfig,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudfront-distribution-tags)" : [ Tag, ... ]
+      "[DistributionConfig](#cfn-cloudfront-distribution-distributionconfig)" : [*DistributionConfig*](aws-properties-cloudfront-distributionconfig.md),
+      "[Tags](#cfn-cloudfront-distribution-tags)" : [ [*Tag*](aws-properties-cloudfront-streamingdistribution-tag.md), ... ]
    }
 }
 ```
@@ -30,43 +30,43 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::CloudFront::Distribution"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudfront-distribution-distributionconfig): 
-    DistributionConfig
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudfront-distribution-tags): 
-    - Tag
+  [DistributionConfig](#cfn-cloudfront-distribution-distributionconfig): 
+    [*DistributionConfig*](aws-properties-cloudfront-distributionconfig.md)
+  [Tags](#cfn-cloudfront-distribution-tags): 
+    - [*Tag*](aws-properties-cloudfront-streamingdistribution-tag.md)
 ```
 
 ## Properties<a name="aws-properties-cloudfront-distribution-prop"></a>
 
-`DistributionConfig`  
+`DistributionConfig`  <a name="cfn-cloudfront-distribution-distributionconfig"></a>
 The distribution's configuration information\.  
 *Required: *Yes  
-*Type*: DistributionConfig type  
-*Update requires*: No interruption
+*Type*: [DistributionConfig](aws-properties-cloudfront-distributionconfig.md) type  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Tags`  
+`Tags`  <a name="cfn-cloudfront-distribution-tags"></a>
 An arbitrary set of tags \(key–value pairs\) to associate with a CloudFront distribution\.  
  *Required*: No  
  *Type*: List of   
- *Update requires*: No interruption   
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)   
 Duplicates not allowed\.
 
 ## Return Values<a name="aws-properties-cloudfront-distribution-ref"></a>
 
-### Ref<a name="w3ab2c21c10d185c11b2"></a>
+### Ref<a name="w3ab2c21c10d187c11b2"></a>
 
 *Returns*: The CloudFront distribution ID\. For example: `E27LVI50CSW06W`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d185c11b4"></a>
+### Fn::GetAtt<a name="w3ab2c21c10d187c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 `DomainName`  
 *Returns*: The domain name of the resource\. For example: `d2fadu0nynjpfn.cloudfront.net`\.
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\.
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
 ## Example<a name="aws-properties-cloudfront-distribution-examples"></a>
 

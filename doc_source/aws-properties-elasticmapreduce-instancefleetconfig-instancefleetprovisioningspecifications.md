@@ -13,21 +13,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-instancefleetconfig-instancefleetprovisioningspecifications-spotspecification)" : SpotProvisioningSpecification
+  "[SpotSpecification](#cfn-elasticmapreduce-instancefleetconfig-instancefleetprovisioningspecifications-spotspecification)" : [*SpotProvisioningSpecification*](aws-properties-elasticmapreduce-instancefleetconfig-spotprovisioningspecification.md)
 }
 ```
 
 ### YAML<a name="aws-properties-elasticmapreduce-instancefleetconfig-instancefleetprovisioningspecifications-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-instancefleetconfig-instancefleetprovisioningspecifications-spotspecification):
-  SpotProvisioningSpecification
+[SpotSpecification](#cfn-elasticmapreduce-instancefleetconfig-instancefleetprovisioningspecifications-spotspecification):
+  [*SpotProvisioningSpecification*](aws-properties-elasticmapreduce-instancefleetconfig-spotprovisioningspecification.md)
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-instancefleetconfig-instancefleetprovisioningspecifications-properties"></a>
 
-`SpotSpecification`  
+`SpotSpecification`  <a name="cfn-elasticmapreduce-instancefleetconfig-instancefleetprovisioningspecifications-spotspecification"></a>
 The launch specification for Spot Instances in the fleet\. This determines the defined duration and provisioning timeout behavior\.  
 *Required: *Yes  
 *Type*: [Amazon EMR InstanceFleetConfig SpotProvisioningSpecification](aws-properties-elasticmapreduce-instancefleetconfig-spotprovisioningspecification.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

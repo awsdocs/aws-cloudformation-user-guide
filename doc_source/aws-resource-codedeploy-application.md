@@ -7,7 +7,7 @@ The `AWS::CodeDeploy::Application` resource creates an AWS CodeDeploy applicatio
 + [Properties](#aws-resource-codedeploy-application-properties)
 + [Return Value](#aws-resource-codedeploy-application-returnvalues)
 + [Example](#aws-resource-codedeploy-application-examples)
-+ [Related Resources](#w3ab2c21c10d221c15)
++ [Related Resources](#w3ab2c21c10d222c15)
 
 ## Syntax<a name="aws-resource-codedeploy-application-syntax"></a>
 
@@ -19,8 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodeDeploy::Application",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-application-applicationname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-application-computeplatform)" : String
+    "[ApplicationName](#cfn-codedeploy-application-applicationname)" : String,
+    "[ComputePlatform](#cfn-codedeploy-application-computeplatform)" : String
   }
 }
 ```
@@ -30,31 +30,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::CodeDeploy::Application"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-application-applicationname): String	    
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-application-computeplatform): String
+  [ApplicationName](#cfn-codedeploy-application-applicationname): String	    
+  [ComputePlatform](#cfn-codedeploy-application-computeplatform): String
 ```
 
 ## Properties<a name="aws-resource-codedeploy-application-properties"></a>
 
-`ApplicationName`  
+`ApplicationName`  <a name="cfn-codedeploy-application-applicationname"></a>
 A name for the application\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the application name\. For more information, see [Name Type](aws-properties-name.md)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: Updates are not supported\.
 
-`ComputePlatform`  
+`ComputePlatform`  <a name="cfn-codedeploy-application-computeplatform"></a>
 The compute platform that AWS CodeDeploy deploys the application to\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Value<a name="aws-resource-codedeploy-application-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d221c11b2"></a>
+### Ref<a name="w3ab2c21c10d222c11b2"></a>
 
 When you pass the logical ID of an `AWS::CodeDeploy::Application` resource to the intrinsic `Ref` function, the function returns the application name, such as `myapplication-a123d0d1`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="aws-resource-codedeploy-application-examples"></a>
 
@@ -80,6 +80,6 @@ CodeDeployApplication:
     ComputePlatform: Lambda
 ```
 
-## Related Resources<a name="w3ab2c21c10d221c15"></a>
+## Related Resources<a name="w3ab2c21c10d222c15"></a>
 
 For configuring your deployment and specifying your application revisions, see [AWS::CodeDeploy::DeploymentConfig](aws-resource-codedeploy-deploymentconfig.md) and [AWS::CodeDeploy::DeploymentGroup](aws-resource-codedeploy-deploymentgroup.md)\.

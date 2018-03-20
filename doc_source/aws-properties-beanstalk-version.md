@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ElasticBeanstalk::ApplicationVersion",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-applicationversion-applicationname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-applicationversion-description)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-applicationversion-sourcebundle)" : { SourceBundle }
+    "[ApplicationName](#cfn-elasticbeanstalk-applicationversion-applicationname)" : String,
+    "[Description](#cfn-elasticbeanstalk-applicationversion-description)" : String,
+    "[SourceBundle](#cfn-elasticbeanstalk-applicationversion-sourcebundle)" : { SourceBundle }
   }
 }
 ```
@@ -31,31 +31,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ElasticBeanstalk::ApplicationVersion
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-applicationversion-applicationname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-applicationversion-description): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-applicationversion-sourcebundle):
+  [ApplicationName](#cfn-elasticbeanstalk-applicationversion-applicationname): String
+  [Description](#cfn-elasticbeanstalk-applicationversion-description): String
+  [SourceBundle](#cfn-elasticbeanstalk-applicationversion-sourcebundle):
     SourceBundle
 ```
 
 ## Members<a name="w3ab2c21c10d574b9"></a>
 
-`ApplicationName`  
+`ApplicationName`  <a name="cfn-elasticbeanstalk-applicationversion-applicationname"></a>
 Name of the Elastic Beanstalk application that is associated with this application version\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Description`  
+`Description`  <a name="cfn-elasticbeanstalk-applicationversion-description"></a>
 A description of this application version\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Some interruptions
+*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
-`SourceBundle`  
+`SourceBundle`  <a name="cfn-elasticbeanstalk-applicationversion-sourcebundle"></a>
 The location of the source bundle for this version\.  
 *Required: *Yes  
-*Type*: Source Bundle  
-*Update requires*: Replacement
+*Type*: [Source Bundle](aws-properties-beanstalk-sourcebundle.md)  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Values<a name="w3ab2c21c10d574c11"></a>
 
@@ -63,7 +63,7 @@ The location of the source bundle for this version\.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d574c13"></a>
 

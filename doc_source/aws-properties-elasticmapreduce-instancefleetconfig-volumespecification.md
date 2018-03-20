@@ -13,36 +13,36 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-iops)" : Integer,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-sizeingb)" : Integer,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-volumetype)" : String
+  "[Iops](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-iops)" : Integer,
+  "[SizeInGB](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-sizeingb)" : Integer,
+  "[VolumeType](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-volumetype)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-elasticmapreduce-instancefleetconfig-volumespecification-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-iops): Integer
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-sizeingb): Integer
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-volumetype): String
+[Iops](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-iops): Integer
+[SizeInGB](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-sizeingb): Integer
+[VolumeType](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-volumetype): String
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-instancefleetconfig-volumespecification-properties"></a>
 
-`Iops`  
+`Iops`  <a name="cfn-elasticmapreduce-instancefleetconfig-volumespecification-iops"></a>
 The number of I/O operations per second \(IOPS\) that the volume supports\.  
 *Required: *No  
 *Type*: Integer  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`SizeInGB`  
+`SizeInGB`  <a name="cfn-elasticmapreduce-instancefleetconfig-volumespecification-sizeingb"></a>
 The volume size, in gibibytes \(GiB\)\. For valid values, see [VolumeSpecification](http://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_InstanceTypeConfig.html) in the *Amazon EMR API Reference*\.  
 *Required: *Yes  
 *Type*: Integer  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`VolumeType`  
+`VolumeType`  <a name="cfn-elasticmapreduce-instancefleetconfig-volumespecification-volumetype"></a>
 The volume type\. For valid values, see [VolumeSpecification](http://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_InstanceTypeConfig.html) in the *Amazon EMR API Reference*\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

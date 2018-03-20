@@ -12,36 +12,36 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-logginginfo-s3bucket)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-logginginfo-region)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-logginginfo-s3prefix)" : String
+  "[S3Bucket](#cfn-ssm-maintenancewindowtask-logginginfo-s3bucket)" : String,
+  "[Region](#cfn-ssm-maintenancewindowtask-logginginfo-region)" : String,
+  "[S3Prefix](#cfn-ssm-maintenancewindowtask-logginginfo-s3prefix)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-ssm-maintenancewindowtask-logginginfo-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-logginginfo-s3bucket): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-logginginfo-region): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-logginginfo-s3prefix): String
+[S3Bucket](#cfn-ssm-maintenancewindowtask-logginginfo-s3bucket): String
+[Region](#cfn-ssm-maintenancewindowtask-logginginfo-region): String
+[S3Prefix](#cfn-ssm-maintenancewindowtask-logginginfo-s3prefix): String
 ```
 
 ## Properties<a name="aws-properties-ssm-maintenancewindowtask-logginginfo-properties"></a>
 
-`S3Bucket`  
+`S3Bucket`  <a name="cfn-ssm-maintenancewindowtask-logginginfo-s3bucket"></a>
 The name of the Amazon S3 bucket where execution logs are stored\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Region`  
+`Region`  <a name="cfn-ssm-maintenancewindowtask-logginginfo-region"></a>
 The region where the Amazon S3 bucket is located\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`S3Prefix`  
+`S3Prefix`  <a name="cfn-ssm-maintenancewindowtask-logginginfo-s3prefix"></a>
 The Amazon S3 bucket subfolder\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

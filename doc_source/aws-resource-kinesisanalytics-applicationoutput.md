@@ -17,8 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::KinesisAnalytics::ApplicationOutput",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationoutput-applicationname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationoutput-output)" : Output
+    "[ApplicationName](#cfn-kinesisanalytics-applicationoutput-applicationname)" : String,
+    "[Output](#cfn-kinesisanalytics-applicationoutput-output)" : [*Output*](aws-properties-kinesisanalytics-applicationoutput-output.md)
   }
 }
 ```
@@ -28,24 +28,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::KinesisAnalytics::ApplicationOutput"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationoutput-applicationname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationoutput-output): 
-    Output
+  [ApplicationName](#cfn-kinesisanalytics-applicationoutput-applicationname): String
+  [Output](#cfn-kinesisanalytics-applicationoutput-output): 
+    [*Output*](aws-properties-kinesisanalytics-applicationoutput-output.md)
 ```
 
 ## Properties<a name="aws-resource-kinesisanalytics-applicationoutput-properties"></a>
 
-`ApplicationName`  
+`ApplicationName`  <a name="cfn-kinesisanalytics-applicationoutput-applicationname"></a>
 The name of the application to which you want to add the output configuration\.  
  *Required*: Yes  
 *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`Output`  
+`Output`  <a name="cfn-kinesisanalytics-applicationoutput-output"></a>
 An array of objects, each describing one output configuration\.   
  *Required*: Yes  
  *Type*: [Kinesis Data Analytics ApplicationOutput Output](aws-properties-kinesisanalytics-applicationoutput-output.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Examples<a name="aws-resource-kinesisanalytics-applicationoutput-examples"></a>
 

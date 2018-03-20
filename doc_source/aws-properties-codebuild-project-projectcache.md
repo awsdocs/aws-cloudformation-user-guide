@@ -12,27 +12,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-projectcache-location)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-projectcache-type)" : String
+  "[Location](#cfn-codebuild-project-projectcache-location)" : String,
+  "[Type](#cfn-codebuild-project-projectcache-type)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-codebuild-project-projectcache-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-projectcache-location): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-projectcache-type): String
+[Location](#cfn-codebuild-project-projectcache-location): String
+[Type](#cfn-codebuild-project-projectcache-type): String
 ```
 
 ## Properties<a name="aws-properties-codebuild-project-projectcache-properties"></a>
 
-`Location`  
+`Location`  <a name="cfn-codebuild-project-projectcache-location"></a>
 The Amazon S3 bucket name and prefix—for example, `mybucket/prefix`\. This value is ignored when `Type` is set to `NO_CACHE`\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Type`  
+`Type`  <a name="cfn-codebuild-project-projectcache-type"></a>
 The type of cache for the build project to use\. Valid values are:  
 
 + `NO_CACHE`: The build project doesn't use any cache\.
@@ -40,7 +40,7 @@ The type of cache for the build project to use\. Valid values are:
 + `S3`: The build project reads from and writes to Amazon S3\.
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-codebuild-project-projectcache-seealso"></a>
 

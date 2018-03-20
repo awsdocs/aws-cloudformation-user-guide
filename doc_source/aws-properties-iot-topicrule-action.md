@@ -2,114 +2,114 @@
 
 `Action` is a property of the `TopicRulePayload` property that describes an action associated with an AWS IoT rule\. For more information, see [Rules for AWS IoT](http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html)\.
 
-## Syntax<a name="w3ab2c21c14e1120b5"></a>
+## Syntax<a name="w3ab2c21c14e1145b5"></a>
 
 ### JSON<a name="aws-properties-iot-topicrule-action-syntax.json"></a>
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-cloudwatchalarm)": CloudwatchAlarm Action,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-cloudwatchmetric)": CloudwatchMetric Action,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-dynamodb)": DynamoDB Action,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-dynamodbv2)": DynamoDBv2 Action,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-elasticsearch)": Elasticsearch Action,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-firehose)": Firehose Action,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-kinesis)": Kinesis Action,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-lambda)": Lambda Action,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-republish)": Republish Action,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-s3)": S3 Action,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-sns)": Sns Action,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-sqs)": Sqs Action
+  "[CloudwatchAlarm](#cfn-iot-topicrule-action-cloudwatchalarm)": CloudwatchAlarm Action,
+  "[CloudwatchMetric](#cfn-iot-topicrule-action-cloudwatchmetric)": CloudwatchMetric Action,
+  "[DynamoDB](#cfn-iot-topicrule-action-dynamodb)": DynamoDB Action,
+  "[DynamoDBv2](#cfn-iot-topicrule-action-dynamodbv2)": DynamoDBv2 Action,
+  "[Elasticsearch](#cfn-iot-topicrule-action-elasticsearch)": Elasticsearch Action,
+  "[Firehose](#cfn-iot-topicrule-action-firehose)": Firehose Action,
+  "[Kinesis](#cfn-iot-topicrule-action-kinesis)": Kinesis Action,
+  "[Lambda](#cfn-iot-topicrule-action-lambda)": Lambda Action,
+  "[Republish](#cfn-iot-topicrule-action-republish)": Republish Action,
+  "[S3](#cfn-iot-topicrule-action-s3)": S3 Action,
+  "[Sns](#cfn-iot-topicrule-action-sns)": Sns Action,
+  "[Sqs](#cfn-iot-topicrule-action-sqs)": Sqs Action
 }
 ```
 
 ### YAML<a name="aws-properties-iot-topicrule-action-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-cloudwatchalarm):
+[CloudwatchAlarm](#cfn-iot-topicrule-action-cloudwatchalarm):
   CloudwatchAlarm Action
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-cloudwatchmetric):
+[CloudwatchMetric](#cfn-iot-topicrule-action-cloudwatchmetric):
   CloudwatchMetric Action
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-dynamodb):
+[DynamoDB](#cfn-iot-topicrule-action-dynamodb):
   DynamoDB Action
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-dynamodbv2):
+[DynamoDBv2](#cfn-iot-topicrule-action-dynamodbv2):
   DynamoDBv2 Action
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-elasticsearch):
+[Elasticsearch](#cfn-iot-topicrule-action-elasticsearch):
   Elasticsearch Action
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-firehose):
+[Firehose](#cfn-iot-topicrule-action-firehose):
   Firehose Action
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-kinesis):
+[Kinesis](#cfn-iot-topicrule-action-kinesis):
   Kinesis Action
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-lambda):
+[Lambda](#cfn-iot-topicrule-action-lambda):
   Lambda Action
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-republish):
+[Republish](#cfn-iot-topicrule-action-republish):
   Republish Action
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-s3):
+[S3](#cfn-iot-topicrule-action-s3):
   S3 Action
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-sns):
+[Sns](#cfn-iot-topicrule-action-sns):
   Sns Action
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-action-sqs):
+[Sqs](#cfn-iot-topicrule-action-sqs):
   Sqs Action
 ```
 
-## Properties<a name="w3ab2c21c14e1120b7"></a>
+## Properties<a name="w3ab2c21c14e1145b7"></a>
 
-`CloudwatchAlarm`  
+`CloudwatchAlarm`  <a name="cfn-iot-topicrule-action-cloudwatchalarm"></a>
 Changes the state of a CloudWatch alarm\.  
 *Required: *No  
-*Type*: 
+*Type*: [AWS IoT TopicRule CloudwatchAlarmAction](aws-properties-iot-topicrule-cloudwatchalarmaction.md)
 
-`CloudwatchMetric`  
+`CloudwatchMetric`  <a name="cfn-iot-topicrule-action-cloudwatchmetric"></a>
 Captures a CloudWatch metric\.  
 *Required: *No  
-*Type*: 
+*Type*: [AWS IoT TopicRule CloudwatchMetricAction](aws-properties-iot-topicrule-cloudwatchmetricaction.md)
 
-`DynamoDB`  
+`DynamoDB`  <a name="cfn-iot-topicrule-action-dynamodb"></a>
 Writes data to a DynamoDB table\.  
 *Required: *No  
-*Type*: 
+*Type*: [AWS IoT TopicRule DynamoDBAction](aws-properties-iot-topicrule-dynamodbaction.md)
 
-`DynamoDBv2`  
+`DynamoDBv2`  <a name="cfn-iot-topicrule-action-dynamodbv2"></a>
 Writes data to a DynamoDB table\.  
 *Required: *No  
-*Type*: 
+*Type*: [AWS IoT TopicRule DynamoDBv2Action](aws-properties-iot-topicrule-dynamodbv2action.md)
 
-`Elasticsearch`  
+`Elasticsearch`  <a name="cfn-iot-topicrule-action-elasticsearch"></a>
 Writes data to an Elasticsearch domain\.  
 *Required: *No  
-*Type*: 
+*Type*: [AWS IoT TopicRule ElasticsearchAction](aws-properties-iot-topicrule-elasticsearchaction.md)
 
-`Firehose`  
+`Firehose`  <a name="cfn-iot-topicrule-action-firehose"></a>
 Writes data to a Kinesis Data Firehose stream\.  
 *Required: *No  
-*Type*: 
+*Type*: [AWS IoT TopicRule FirehoseAction](aws-properties-iot-topicrule-firehoseaction.md)
 
-`Kinesis`  
+`Kinesis`  <a name="cfn-iot-topicrule-action-kinesis"></a>
 Writes data to an Kinesis stream\.  
 *Required: *No  
-*Type*: 
+*Type*: [AWS IoT TopicRule KinesisAction](aws-properties-iot-topicrule-kinesisaction.md)
 
-`Lambda`  
+`Lambda`  <a name="cfn-iot-topicrule-action-lambda"></a>
 Invokes a Lambda function\.  
 *Required: *No  
-*Type*: 
+*Type*: [AWS IoT TopicRule LambdaAction](aws-properties-iot-topicrule-lambdaaction.md)
 
-`Republish`  
+`Republish`  <a name="cfn-iot-topicrule-action-republish"></a>
 Publishes data to an MQ Telemetry Transport \(MQTT\) topic different from the one currently specified\.  
 *Required: *No  
-*Type*: 
+*Type*: [AWS IoT TopicRule RepublishAction](aws-properties-iot-topicrule-republishaction.md)
 
-`S3`  
+`S3`  <a name="cfn-iot-topicrule-action-s3"></a>
 Writes data to an S3 bucket\.  
 *Required: *No  
-*Type*: 
+*Type*: [AWS IoT TopicRule S3Action](aws-properties-iot-topicrule-s3action.md)
 
-`Sns`  
+`Sns`  <a name="cfn-iot-topicrule-action-sns"></a>
 Publishes data to an SNS topic\.  
 *Required: *No  
-*Type*: 
+*Type*: [AWS IoT TopicRule SnsAction](aws-properties-iot-topicrule-snsaction.md)
 
-`Sqs`  
+`Sqs`  <a name="cfn-iot-topicrule-action-sqs"></a>
 Publishes data to an SQS queue\.  
 *Required: *No  
-*Type*: 
+*Type*: [AWS IoT TopicRule SqsAction](aws-properties-iot-topicrule-sqsaction.md)

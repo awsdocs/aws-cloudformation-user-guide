@@ -17,32 +17,32 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-elbinfolist)" : [ ELBInfo, ... ],
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist)" : [ TargetGroupInfo, ... ]
+  "[ElbInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-elbinfolist)" : [ [*ELBInfo*](aws-properties-codedeploy-deploymentgroup-elbinfo.md), ... ],
+  "[TargetGroupInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist)" : [ [*TargetGroupInfo*](aws-properties-codedeploy-deploymentgroup-targetgroupinfo.md), ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-loadbalancerinfo-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-elbinfolist): 
-  - ELBInfo
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist): 
-  - TargetGroupInfo
+[ElbInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-elbinfolist): 
+  - [*ELBInfo*](aws-properties-codedeploy-deploymentgroup-elbinfo.md)
+[TargetGroupInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist): 
+  - [*TargetGroupInfo*](aws-properties-codedeploy-deploymentgroup-targetgroupinfo.md)
 ```
 
 ### Properties<a name="aws-properties-codedeploy-deploymentgroup-loadbalancerinfo-properties"></a>
 
-`ElbInfoList`  
+`ElbInfoList`  <a name="cfn-codedeploy-deploymentgroup-loadbalancerinfo-elbinfolist"></a>
 Information about the Elastic Load Balancing load balancer to use in the deployment\.  
 Conditional: You must specify either `ElbInfoList` or `TargetGroupInfoList`, but not both\.  
  *Required*: No  
  *Type*: List of [AWS CodeDeploy DeploymentGroup ELBInfo](aws-properties-codedeploy-deploymentgroup-elbinfo.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`TargetGroupInfoList`  
+`TargetGroupInfoList`  <a name="cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist"></a>
 information about the target groups to use in the deployment\. Instances are registered as targets in a target group, and traffic is routed to the target group\.   
 Conditional: You must specify either `ElbInfoList` or `TargetGroupInfoList`, but not both\.  
  *Required*: No  
  *Type*: List of [AWS CodeDeploy DeploymentGroup TargetGroupInfo](aws-properties-codedeploy-deploymentgroup-targetgroupinfo.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

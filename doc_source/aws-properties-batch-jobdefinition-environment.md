@@ -10,27 +10,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-environment-value)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-environment-name)" : String
+  "[Value](#cfn-batch-jobdefinition-environment-value)" : String,
+  "[Name](#cfn-batch-jobdefinition-environment-name)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-batch-jobdefinition-environment-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-environment-value): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-environment-name): String
+[Value](#cfn-batch-jobdefinition-environment-value): String
+[Name](#cfn-batch-jobdefinition-environment-name): String
 ```
 
 ## Properties<a name="aws-properties-batch-jobdefinition-environment-properties"></a>
 
-`Value`  
+`Value`  <a name="cfn-batch-jobdefinition-environment-value"></a>
 The value of the environment variable\.  
  *Required*: no  
 *Type*: String  
  *Update requires*: No Interruption 
 
-`Name`  
+`Name`  <a name="cfn-batch-jobdefinition-environment-name"></a>
 The name of the environment variable\.  
  *Required*: no  
 *Type*: String  

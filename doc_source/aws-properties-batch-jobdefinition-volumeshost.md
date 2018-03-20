@@ -10,19 +10,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-volumeshost-sourcepath)" : String
+  "[SourcePath](#cfn-batch-jobdefinition-volumeshost-sourcepath)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-batch-jobdefinition-volumeshost-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-volumeshost-sourcepath): String
+[SourcePath](#cfn-batch-jobdefinition-volumeshost-sourcepath): String
 ```
 
 ## Properties<a name="aws-properties-batch-jobdefinition-volumeshost-properties"></a>
 
-`SourcePath`  
+`SourcePath`  <a name="cfn-batch-jobdefinition-volumeshost-sourcepath"></a>
 The path on the host container instance that is presented to the container\. If this parameter is empty, then the Docker daemon has assigned a host path for you\. If the `VolumesHost` parameter contains a `SourcePath` file location, then the data volume persists at the specified location on the host container instance until you delete it manually\. If the `SourcePath` value does not exist on the host container instance, the Docker daemon creates it\. If the location does exist, the contents of the source path folder are exported\.  
  *Required*: no  
 *Type*: String  

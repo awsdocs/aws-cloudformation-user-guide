@@ -12,38 +12,38 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-inputschema-recordcolumns)" : [ RecordColumn, ... ],
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-inputschema-recordencoding)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-inputschema-recordformat)" : RecordFormat
+  "[RecordColumns](#cfn-kinesisanalytics-application-inputschema-recordcolumns)" : [ [*RecordColumn*](aws-properties-kinesisanalytics-application-recordcolumn.md), ... ],
+  "[RecordEncoding](#cfn-kinesisanalytics-application-inputschema-recordencoding)" : String,
+  "[RecordFormat](#cfn-kinesisanalytics-application-inputschema-recordformat)" : [*RecordFormat*](aws-properties-kinesisanalytics-application-recordformat.md)
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisanalytics-application-inputschema-syntax.yaml"></a>
 
 ```
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-inputschema-recordcolumns): 
-    - RecordColumn
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-inputschema-recordencoding): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-inputschema-recordformat): 
-    RecordFormat
+  [RecordColumns](#cfn-kinesisanalytics-application-inputschema-recordcolumns): 
+    - [*RecordColumn*](aws-properties-kinesisanalytics-application-recordcolumn.md)
+  [RecordEncoding](#cfn-kinesisanalytics-application-inputschema-recordencoding): String
+  [RecordFormat](#cfn-kinesisanalytics-application-inputschema-recordformat): 
+    [*RecordFormat*](aws-properties-kinesisanalytics-application-recordformat.md)
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-application-inputschema-properties"></a>
 
-`RecordColumns`  
+`RecordColumns`  <a name="cfn-kinesisanalytics-application-inputschema-recordcolumns"></a>
 A list of `RecordColumn` objects\.  
  *Required*: Yes  
  *Type*: List of [Kinesis Data Analytics Application RecordColumn](aws-properties-kinesisanalytics-application-recordcolumn.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`RecordEncoding`  
+`RecordEncoding`  <a name="cfn-kinesisanalytics-application-inputschema-recordencoding"></a>
 Specifies the encoding of the records in the streaming source; for example, `UTF-8`\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`RecordFormat`  
+`RecordFormat`  <a name="cfn-kinesisanalytics-application-inputschema-recordformat"></a>
 Specifies the format of the records on the streaming source\.  
  *Required*: Yes  
  *Type*: [Kinesis Data Analytics Application RecordFormat](aws-properties-kinesisanalytics-application-recordformat.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

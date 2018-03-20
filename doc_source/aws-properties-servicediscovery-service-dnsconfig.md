@@ -12,32 +12,32 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-servicediscovery-service-dnsconfig-dnsrecords)" : [ DnsRecord, ... ],
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-servicediscovery-service-dnsconfig-namespaceid)" : String
+  "[DnsRecords](#cfn-servicediscovery-service-dnsconfig-dnsrecords)" : [ [*DnsRecord*](aws-properties-servicediscovery-service-dnsrecord.md), ... ],
+  "[NamespaceId](#cfn-servicediscovery-service-dnsconfig-namespaceid)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-servicediscovery-service-dnsconfig-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-servicediscovery-service-dnsconfig-dnsrecords): 
-  - DnsRecord
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-servicediscovery-service-dnsconfig-namespaceid): String
+[DnsRecords](#cfn-servicediscovery-service-dnsconfig-dnsrecords): 
+  - [*DnsRecord*](aws-properties-servicediscovery-service-dnsrecord.md)
+[NamespaceId](#cfn-servicediscovery-service-dnsconfig-namespaceid): String
 ```
 
 ## Properties<a name="aws-properties-servicediscovery-service-dnsconfig-properties"></a>
 
-`DnsRecords`  
+`DnsRecords`  <a name="cfn-servicediscovery-service-dnsconfig-dnsrecords"></a>
 Contains one `DnsRecord` element for each DNS record that you want Route 53 to create when you register an instance\.  
 *Required*: Yes  
 *Type*: List of [Amazon Route 53 ServiceDiscovery DnsRecord](aws-properties-servicediscovery-service-dnsrecord.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`NamespaceId`  
+`NamespaceId`  <a name="cfn-servicediscovery-service-dnsconfig-namespaceid"></a>
 The ID of the namespace that you want to use for DNS configuration\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## See Also<a name="aws-properties-servicediscovery-service-dnsconfig-seealso"></a>
 

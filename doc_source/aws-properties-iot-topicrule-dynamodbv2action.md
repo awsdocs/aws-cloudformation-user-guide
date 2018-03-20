@@ -12,31 +12,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-dynamodbv2action-putitem)" : PutItemInput,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-dynamodbv2action-rolearn)" : String
+  "[PutItem](#cfn-iot-topicrule-dynamodbv2action-putitem)" : [*PutItemInput*](aws-properties-iot-topicrule-putiteminput.md),
+  "[RoleArn](#cfn-iot-topicrule-dynamodbv2action-rolearn)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-iot-topicrule-dynamodbv2action-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-dynamodbv2action-putitem): 
-  PutItemInput
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-iot-topicrule-dynamodbv2action-rolearn): String
+[PutItem](#cfn-iot-topicrule-dynamodbv2action-putitem): 
+  [*PutItemInput*](aws-properties-iot-topicrule-putiteminput.md)
+[RoleArn](#cfn-iot-topicrule-dynamodbv2action-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-dynamodbv2action-properties"></a>
 
 For more information, see [DynamoDBv2 Action](http://docs.aws.amazon.com/iot/latest/developerguide/dynamodb-v2-rule.html) in the *AWS IoT Developer Guide\.*\.
 
-`PutItem`  
+`PutItem`  <a name="cfn-iot-topicrule-dynamodbv2action-putitem"></a>
 Specifies the database table to which to write the item for an AWS IoT topic rule\.  
  *Required*: No  
- *Type*:   
- *Update requires*: No interruption 
+ *Type*: [AWS IoT TopicRule PutItemInput](aws-properties-iot-topicrule-putiteminput.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`RoleArn`  
+`RoleArn`  <a name="cfn-iot-topicrule-dynamodbv2action-rolearn"></a>
 The IAM role that allows access to the DynamoDB table\. At a minimum, the role must allow the `dynamoDB:PutItem` IAM action\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

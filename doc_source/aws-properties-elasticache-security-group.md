@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ElastiCache::SecurityGroup",
   "Properties" :
   {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticache-securitygroup-description)" : String
+    "[Description](#cfn-elasticache-securitygroup-description)" : String
   }
 }
 ```
@@ -30,12 +30,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ElastiCache::SecurityGroup"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticache-securitygroup-description): String
+  [Description](#cfn-elasticache-securitygroup-description): String
 ```
 
 ## Properties<a name="w3ab2c21c10d553c11"></a>
 
-`Description`  
+`Description`  <a name="cfn-elasticache-securitygroup-description"></a>
 A description for the cache security group\.  
 *Type*: String  
 *Required: *No  
@@ -47,4 +47,4 @@ A description for the cache security group\.
 
 When you specify the `AWS::ElastiCache::SecurityGroup` resource as an argument to the `Ref` function, AWS CloudFormation returns the `CacheSecurityGroupName` property of the cache security group\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.

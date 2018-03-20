@@ -4,34 +4,34 @@
 
 <a name="aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping-inheritance"></a> `SubnetMappings` is a property of the [AWS::ElasticLoadBalancingV2::LoadBalancer](aws-resource-elasticloadbalancingv2-loadbalancer.md) resource\. 
 
-## Syntax<a name="w3ab2c21c14d837b7"></a>
+## Syntax<a name="w3ab2c21c14d862b7"></a>
 
 ### JSON<a name="aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping-syntax.json"></a>
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid)" : String
+  "[SubnetId](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid)" : String,
+  "[AllocationId](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid): String
+[SubnetId](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid): String
+[AllocationId](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid): String
 ```
 
-## Properties<a name="w3ab2c21c14d837b9"></a>
+## Properties<a name="w3ab2c21c14d862b9"></a>
 
-`SubnetId`  
+`SubnetId`  <a name="cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid"></a>
 The ID of the subnet\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`AllocationId`  
+`AllocationId`  <a name="cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid"></a>
 \[Network Load Balancer\] The ID that represents the allocation of the Elastic IP address\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

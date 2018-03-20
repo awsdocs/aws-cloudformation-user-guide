@@ -4,8 +4,8 @@ The `AWS::Lambda::Alias` resource creates an alias that points to the version of
 
 
 + [Syntax](#aws-resource-lambda-alias-syntax)
-+ [Properties](#w3ab2c21c10d801b9)
-+ [Return Value](#w3ab2c21c10d801c11)
++ [Properties](#w3ab2c21c10d804b9)
++ [Return Value](#w3ab2c21c10d804c11)
 + [Examples](#aws-resource-lambda-alias-examples)
 
 ## Syntax<a name="aws-resource-lambda-alias-syntax"></a>
@@ -18,11 +18,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Lambda::Alias",
   "Properties" : { 
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-alias-description)" : String,         
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-alias-functionname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-alias-functionversion)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-alias-name)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-alias-routingconfig)" : AliasRoutingConfiguration
+    "[Description](#cfn-lambda-alias-description)" : String,         
+    "[FunctionName](#cfn-lambda-alias-functionname)" : String,
+    "[FunctionVersion](#cfn-lambda-alias-functionversion)" : String,
+    "[Name](#cfn-lambda-alias-name)" : String,
+    "[RoutingConfig](#cfn-lambda-alias-routingconfig)" : [*AliasRoutingConfiguration*](aws-properties-lambda-alias-aliasroutingconfiguration.md)
   }
 }
 ```
@@ -32,53 +32,53 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Lambda::Alias"
 Properties:     
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-alias-description): String         
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-alias-functionname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-alias-functionversion): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-alias-name): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-alias-routingconfig): 
+  [Description](#cfn-lambda-alias-description): String         
+  [FunctionName](#cfn-lambda-alias-functionname): String
+  [FunctionVersion](#cfn-lambda-alias-functionversion): String
+  [Name](#cfn-lambda-alias-name): String
+  [RoutingConfig](#cfn-lambda-alias-routingconfig): 
     AliasRoutingConfiguration
 ```
 
-## Properties<a name="w3ab2c21c10d801b9"></a>
+## Properties<a name="w3ab2c21c10d804b9"></a>
 
-`Description`  
+`Description`  <a name="cfn-lambda-alias-description"></a>
 Information about the alias, such as its purpose or the Lambda function that is associated with it\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`FunctionName`  
+`FunctionName`  <a name="cfn-lambda-alias-functionname"></a>
 The Lambda function that you want to associate with this alias\. You can specify the function's name or its Amazon Resource Name \(ARN\)\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`FunctionVersion`  
+`FunctionVersion`  <a name="cfn-lambda-alias-functionversion"></a>
 The version of the Lambda function that you want to associate with this alias\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Name`  
+`Name`  <a name="cfn-lambda-alias-name"></a>
 A name for the alias\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`RoutingConfig`  
+`RoutingConfig`  <a name="cfn-lambda-alias-routingconfig"></a>
 Use this parameter to point your alias to two different function versions, allowing you to dictate what percentage of traffic will invoke each version\. For more information, see [Routing Traffic to Different Function Versions Using Aliases](http://docs.aws.amazon.com/lambda/latest/dg/lambda-traffic-shifting-using-aliases.html) in the *AWS Lambda Developer Guide*\.  
  *Required*: No  
  *Type*: [AWS Lambda Alias AliasRoutingConfiguration](aws-properties-lambda-alias-aliasroutingconfiguration.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-## Return Value<a name="w3ab2c21c10d801c11"></a>
+## Return Value<a name="w3ab2c21c10d804c11"></a>
 
-### Ref<a name="w3ab2c21c10d801c11b2"></a>
+### Ref<a name="w3ab2c21c10d804c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN of the Lambda alias\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Examples<a name="aws-resource-lambda-alias-examples"></a>
 

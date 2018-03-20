@@ -12,36 +12,36 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-partition-column-comment)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-partition-column-type)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-partition-column-name)" : String
+  "[Comment](#cfn-glue-partition-column-comment)" : String,
+  "[Type](#cfn-glue-partition-column-type)" : String,
+  "[Name](#cfn-glue-partition-column-name)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-glue-partition-column-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-partition-column-comment): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-partition-column-type): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-partition-column-name): String
+[Comment](#cfn-glue-partition-column-comment): String
+[Type](#cfn-glue-partition-column-type): String
+[Name](#cfn-glue-partition-column-name): String
 ```
 
 ## Properties<a name="aws-properties-glue-partition-column-properties"></a>
 
-`Comment`  
+`Comment`  <a name="cfn-glue-partition-column-comment"></a>
 A free\-form text comment\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Type`  
+`Type`  <a name="cfn-glue-partition-column-type"></a>
 The data type of the column data\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Name`  
+`Name`  <a name="cfn-glue-partition-column-name"></a>
 The name of the column\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

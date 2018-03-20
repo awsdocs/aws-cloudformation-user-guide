@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type" : "AWS::EC2::VPCGatewayAttachment",
    "Properties" : {
-      "InternetGatewayId" : String,
-      "VpcId" : String,
-      "VpnGatewayId" : String
+      "[InternetGatewayId](#cfn-ec2-vpcgatewayattachment-internetgatewayid)" : String,
+      "[VpcId](#cfn-ec2-vpcgatewayattachment-vpcid)" : String,
+      "[VpnGatewayId](#cfn-ec2-vpcgatewayattachment-vpngatewayid)" : String
    }
 }
 ```
@@ -31,30 +31,30 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::VPCGatewayAttachment"
 Properties: 
-  InternetGatewayId: String
-  VpcId: String
-  VpnGatewayId: String
+  [InternetGatewayId](#cfn-ec2-vpcgatewayattachment-internetgatewayid): String
+  [VpcId](#cfn-ec2-vpcgatewayattachment-vpcid): String
+  [VpnGatewayId](#cfn-ec2-vpcgatewayattachment-vpngatewayid): String
 ```
 
 ## Properties<a name="w3ab2c21c10d486b9"></a>
 
-`InternetGatewayId`  
+`InternetGatewayId`  <a name="cfn-ec2-vpcgatewayattachment-internetgatewayid"></a>
 The ID of the Internet gateway\.  
 *Required: *Conditional You must specify either `InternetGatewayId` or `VpnGatewayId`, but not both\.  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`VpcId`  
+`VpcId`  <a name="cfn-ec2-vpcgatewayattachment-vpcid"></a>
 The ID of the VPC to associate with this gateway\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`VpnGatewayId`  
+`VpnGatewayId`  <a name="cfn-ec2-vpcgatewayattachment-vpngatewayid"></a>
 The ID of the virtual private network \(VPN\) gateway to attach to the VPC\.  
 *Required: *Conditional You must specify either `InternetGatewayId` or `VpnGatewayId`, but not both\.  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Values<a name="w3ab2c21c10d486c11"></a>
 
@@ -62,7 +62,7 @@ The ID of the virtual private network \(VPN\) gateway to attach to the VPC\.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Examples<a name="w3ab2c21c10d486c13"></a>
 

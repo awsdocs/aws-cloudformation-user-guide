@@ -10,19 +10,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-retrystrategy-attempts)" : Integer
+  "[Attempts](#cfn-batch-jobdefinition-retrystrategy-attempts)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-batch-jobdefinition-retrystrategy-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-retrystrategy-attempts): Integer
+[Attempts](#cfn-batch-jobdefinition-retrystrategy-attempts): Integer
 ```
 
 ## Properties<a name="aws-properties-batch-jobdefinition-retrystrategy-properties"></a>
 
-`Attempts`  
+`Attempts`  <a name="cfn-batch-jobdefinition-retrystrategy-attempts"></a>
 The number of times to move a job to the `RUNNABLE` status\. You may specify between 1 and 10 attempts\. If `attempts` is greater than one, the job is retried if it fails until it has moved to `RUNNABLE` that many times\.  
  *Required*: no  
 *Type*: Integer  

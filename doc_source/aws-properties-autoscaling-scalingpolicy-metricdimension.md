@@ -10,28 +10,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-autoscaling-scalingpolicy-metricdimension-name)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-autoscaling-scalingpolicy-metricdimension-value)" : String
+  "[Name](#cfn-autoscaling-scalingpolicy-metricdimension-name)" : String,
+  "[Value](#cfn-autoscaling-scalingpolicy-metricdimension-value)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-autoscaling-scalingpolicy-metricdimension-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-autoscaling-scalingpolicy-metricdimension-name): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-autoscaling-scalingpolicy-metricdimension-value): String
+[Name](#cfn-autoscaling-scalingpolicy-metricdimension-name): String
+[Value](#cfn-autoscaling-scalingpolicy-metricdimension-value): String
 ```
 
 ## Properties<a name="aws-properties-autoscaling-scalingpolicy-metricdimension-properties"></a>
 
-`Name`  
+`Name`  <a name="cfn-autoscaling-scalingpolicy-metricdimension-name"></a>
 The name of the dimension\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Value`  
+`Value`  <a name="cfn-autoscaling-scalingpolicy-metricdimension-value"></a>
 The value of the dimension\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

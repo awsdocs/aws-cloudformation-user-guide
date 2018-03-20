@@ -17,11 +17,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::GatewayResponse",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-gatewayresponse-responseparameters)" : { String:String, ... },
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-gatewayresponse-responsetemplates)" : { String:String, ... },
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-gatewayresponse-responsetype)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-gatewayresponse-restapiid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-gatewayresponse-statuscode)" : String
+    "[ResponseParameters](#cfn-apigateway-gatewayresponse-responseparameters)" : { String:String, ... },
+    "[ResponseTemplates](#cfn-apigateway-gatewayresponse-responsetemplates)" : { String:String, ... },
+    "[ResponseType](#cfn-apigateway-gatewayresponse-responsetype)" : String,
+    "[RestApiId](#cfn-apigateway-gatewayresponse-restapiid)" : String,
+    "[StatusCode](#cfn-apigateway-gatewayresponse-statuscode)" : String
   }
 }
 ```
@@ -31,46 +31,46 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ApiGateway::GatewayResponse"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-gatewayresponse-responseparameters): 
+  [ResponseParameters](#cfn-apigateway-gatewayresponse-responseparameters): 
     String: String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-gatewayresponse-responsetemplates): 
+  [ResponseTemplates](#cfn-apigateway-gatewayresponse-responsetemplates): 
     String: String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-gatewayresponse-responsetype): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-gatewayresponse-restapiid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-gatewayresponse-statuscode): String
+  [ResponseType](#cfn-apigateway-gatewayresponse-responsetype): String
+  [RestApiId](#cfn-apigateway-gatewayresponse-restapiid): String
+  [StatusCode](#cfn-apigateway-gatewayresponse-statuscode): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-gatewayresponse-properties"></a>
 
-`ResponseParameters`  
+`ResponseParameters`  <a name="cfn-apigateway-gatewayresponse-responseparameters"></a>
 The response parameters \(paths, query strings, and headers\) for the response\. Duplicates not allowed\.  
  *Required*: No  
  *Type*: String to string map  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`ResponseTemplates`  
+`ResponseTemplates`  <a name="cfn-apigateway-gatewayresponse-responsetemplates"></a>
 The response templates for the response\. Duplicates not allowed\.  
  *Required*: No  
  *Type*: String to string map  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`ResponseType`  
+`ResponseType`  <a name="cfn-apigateway-gatewayresponse-responsetype"></a>
 The response type\. For valid values, see [GatewayResponse](http://docs.aws.amazon.com/apigateway/api-reference/resource/gateway-response/) in the *API Gateway API Reference*\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`RestApiId`  
+`RestApiId`  <a name="cfn-apigateway-gatewayresponse-restapiid"></a>
 The identifier of the targeted API entity\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`StatusCode`  
+`StatusCode`  <a name="cfn-apigateway-gatewayresponse-statuscode"></a>
 The HTTP status code for the response\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Examples<a name="aws-resource-apigateway-gatewayresponse-examples"></a>
 

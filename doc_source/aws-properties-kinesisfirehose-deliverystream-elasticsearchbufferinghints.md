@@ -10,26 +10,26 @@ The `ElasticsearchBufferingHints` property type specifies how Amazon Kinesis Fir
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-intervalinseconds)" : Integer,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-sizeinmbs)" : Integer
+  "[IntervalInSeconds](#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-intervalinseconds)" : Integer,
+  "[SizeInMBs](#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-sizeinmbs)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisfirehose-deliverystream-elasticsearchbufferinghints-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-intervalinseconds): Integer
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-sizeinmbs): Integer
+[IntervalInSeconds](#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-intervalinseconds): Integer
+[SizeInMBs](#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-sizeinmbs): Integer
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-elasticsearchbufferinghints-properties"></a>
 
-`IntervalInSeconds`  
+`IntervalInSeconds`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-intervalinseconds"></a>
 The length of time, in seconds, that Kinesis Firehose buffers incoming data before delivering it to the destination\. For valid values, see the `IntervalInSeconds` content for the [BufferingHints](http://docs.aws.amazon.com/firehose/latest/APIReference/API_BufferingHints.html) data type in the *Amazon Kinesis Firehose API Reference*\.  
 *Required: *Yes  
 *Type*: Integer
 
-`SizeInMBs`  
+`SizeInMBs`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-sizeinmbs"></a>
 The size of the buffer, in MBs, that Kinesis Firehose uses for incoming data before delivering it to the destination\. For valid values, see the `SizeInMBs` content for the [BufferingHints](http://docs.aws.amazon.com/firehose/latest/APIReference/API_BufferingHints.html) data type in the *Amazon Kinesis Firehose API Reference*\.  
 *Required: *Yes  
 *Type*: Integer

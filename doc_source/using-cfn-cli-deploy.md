@@ -8,4 +8,4 @@ The following command creates a new stack by using the `my-template.json` templa
 aws cloudformation deploy --template /path_to_template/my-template.json --stack-name my-new-stack --parameter-overrides Key1=Value1 Key2=Value2
 ```
 
-For more information, see the `aws cloudformation deploy` command in the [AWS Command Line Interface Reference](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html)
+For more information, see the `aws cloudformation deploy` command in the [AWS CLI Command Reference](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html)

@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::DocumentationPart",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationpart-location)" : Location,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationpart-properties)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationpart-restapiid)" : String
+    "[Location](#cfn-apigateway-documentationpart-location)" : [*Location*](aws-properties-apigateway-documentationpart-location.md),
+    "[Properties](#cfn-apigateway-documentationpart-properties)" : String,
+    "[RestApiId](#cfn-apigateway-documentationpart-restapiid)" : String
   }
 }
 ```
@@ -30,10 +30,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ApiGateway::DocumentationPart"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationpart-location): 
-    Location
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationpart-properties): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-documentationpart-restapiid): String
+  [Location](#cfn-apigateway-documentationpart-location): 
+    [*Location*](aws-properties-apigateway-documentationpart-location.md)
+  [Properties](#cfn-apigateway-documentationpart-properties): String
+  [RestApiId](#cfn-apigateway-documentationpart-restapiid): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-documentationpart-properties"></a>
@@ -41,23 +41,23 @@ Properties:
 **Note**  
 For more information about each property, including constraints and valid values, see [ DocumentationPart](http://docs.aws.amazon.com/apigateway/api-reference/resource/documentation-part) in the *Amazon API Gateway REST API Reference*\.
 
-`Location`  
+`Location`  <a name="cfn-apigateway-documentationpart-location"></a>
 The location of the API entity that the documentation applies to\.  
  *Required*: Yes  
  *Type*: [Amazon API Gateway DocumentationPart Location](aws-properties-apigateway-documentationpart-location.md)  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`Properties`  
+`Properties`  <a name="cfn-apigateway-documentationpart-properties"></a>
 The documentation content map of the targeted API entity\.  
  *Required*: Yes  
 *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`RestApiId`  
+`RestApiId`  <a name="cfn-apigateway-documentationpart-restapiid"></a>
 The identifier of the targeted API entity\.  
  *Required*: Yes  
 *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## Return Value<a name="aws-resource-apigateway-documentationpart-returnvalues"></a>
 
@@ -65,7 +65,7 @@ The identifier of the targeted API entity\.
 
 When you pass the logical ID of an `AWS::ApiGateway::DocumentationPart` resource to the intrinsic `Ref` function, the function returns the ID of the documentation part, such as `abc123`\. 
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="aws-resource-apigateway-documentationpart-examples"></a>
 

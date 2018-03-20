@@ -12,31 +12,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudfront-streamingdistribution-s3origin-domainname)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudfront-streamingdistribution-s3origin-originaccessidentity)" : String
+  "[DomainName](#cfn-cloudfront-streamingdistribution-s3origin-domainname)" : String,
+  "[OriginAccessIdentity](#cfn-cloudfront-streamingdistribution-s3origin-originaccessidentity)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-cloudfront-streamingdistribution-s3origin-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudfront-streamingdistribution-s3origin-domainname): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cloudfront-streamingdistribution-s3origin-originaccessidentity): String
+[DomainName](#cfn-cloudfront-streamingdistribution-s3origin-domainname): String
+[OriginAccessIdentity](#cfn-cloudfront-streamingdistribution-s3origin-originaccessidentity): String
 ```
 
 ## Properties<a name="aws-properties-cloudfront-streamingdistribution-s3origin-properties"></a>
 
-`DomainName`  
+`DomainName`  <a name="cfn-cloudfront-streamingdistribution-s3origin-domainname"></a>
 The DNS name of the Amazon S3 origin\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`OriginAccessIdentity`  
+`OriginAccessIdentity`  <a name="cfn-cloudfront-streamingdistribution-s3origin-originaccessidentity"></a>
 The CloudFront origin access identity to associate with the RTMP distribution\. Use an origin access identity to configure the distribution so that end users can only access objects in an Amazon S3 bucket through CloudFront\. For more information, see the `OriginAccessIdentity` property for [S3Origin](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_S3Origin.html) in *Amazon CloudFront API Reference*\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-cloudfront-streamingdistribution-s3origin-seealso"></a>
 

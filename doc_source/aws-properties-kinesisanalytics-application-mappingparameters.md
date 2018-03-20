@@ -12,30 +12,30 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-mappingparameters-csvmappingparameters)" : CSVMappingParameters,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-mappingparameters-jsonmappingparameters)" : JSONMappingParameters
+  "[CSVMappingParameters](#cfn-kinesisanalytics-application-mappingparameters-csvmappingparameters)" : [*CSVMappingParameters*](aws-properties-kinesisanalytics-application-csvmappingparameters.md),
+  "[JSONMappingParameters](#cfn-kinesisanalytics-application-mappingparameters-jsonmappingparameters)" : [*JSONMappingParameters*](aws-properties-kinesisanalytics-application-jsonmappingparameters.md)
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisanalytics-application-mappingparameters-syntax.yaml"></a>
 
 ```
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-mappingparameters-csvmappingparameters): 
-    CSVMappingParameters
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-application-mappingparameters-jsonmappingparameters): 
-    JSONMappingParameters
+  [CSVMappingParameters](#cfn-kinesisanalytics-application-mappingparameters-csvmappingparameters): 
+    [*CSVMappingParameters*](aws-properties-kinesisanalytics-application-csvmappingparameters.md)
+  [JSONMappingParameters](#cfn-kinesisanalytics-application-mappingparameters-jsonmappingparameters): 
+    [*JSONMappingParameters*](aws-properties-kinesisanalytics-application-jsonmappingparameters.md)
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-application-mappingparameters-properties"></a>
 
-`CSVMappingParameters`  
+`CSVMappingParameters`  <a name="cfn-kinesisanalytics-application-mappingparameters-csvmappingparameters"></a>
 Provides additional mapping information when the record format uses delimiters \(for example, CSV\)\.   
  *Required*: No  
  *Type*: [Kinesis Data Analytics Application CSVMappingParameters](aws-properties-kinesisanalytics-application-csvmappingparameters.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`JSONMappingParameters`  
+`JSONMappingParameters`  <a name="cfn-kinesisanalytics-application-mappingparameters-jsonmappingparameters"></a>
 Provides additional mapping information when JSON is the record format on the streaming source\.  
  *Required*: No  
  *Type*: [Kinesis Data Analytics Application JSONMappingParameters](aws-properties-kinesisanalytics-application-jsonmappingparameters.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

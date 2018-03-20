@@ -10,54 +10,54 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-dimensions)" : [ MetricDimension, ...],
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-metricname)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-namespace)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-statistic)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-unit)" : String
+  "[Dimensions](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-dimensions)" : [ [MetricDimension](aws-properties-applicationautoscaling-scalingpolicy-metricdimension.md), ...],
+  "[MetricName](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-metricname)" : String,
+  "[Namespace](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-namespace)" : String,
+  "[Statistic](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-statistic)" : String,
+  "[Unit](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-unit)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-applicationautoscaling-scalingpolicy-customizedmetricspecification-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-dimensions):
-  - MetricDimension
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-metricname): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-namespace): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-statistic): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-unit): String
+[Dimensions](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-dimensions):
+  - [MetricDimension](aws-properties-applicationautoscaling-scalingpolicy-metricdimension.md)
+[MetricName](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-metricname): String
+[Namespace](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-namespace): String
+[Statistic](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-statistic): String
+[Unit](#cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-unit): String
 ```
 
 ## Properties<a name="aws-properties-applicationautoscaling-scalingpolicy-customizedmetricspecification-properties"></a>
 
-`Dimensions`  
+`Dimensions`  <a name="cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-dimensions"></a>
 The dimensions of the metric\. Duplicates not allowed\.  
 *Required: *No  
 *Type*: List of [Application Auto Scaling ScalingPolicy MetricDimension](aws-properties-applicationautoscaling-scalingpolicy-metricdimension.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`MetricName`  
+`MetricName`  <a name="cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-metricname"></a>
 The name of the metric\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Namespace`  
+`Namespace`  <a name="cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-namespace"></a>
 The namespace of the metric\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Statistic`  
+`Statistic`  <a name="cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-statistic"></a>
 The statistic of the metric\.  
-For valid values, see [CustomizedMetricSpecification](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_CustomizedMetricSpecification.html) in the *Application Auto Scaling API Reference*\.  
+For valid values, see [CustomizedMetricSpecification](http://docs.aws.amazon.com/autoscaling/application/APIReference/API_CustomizedMetricSpecification.html) in the *Application Auto Scaling API Reference*\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Unit`  
+`Unit`  <a name="cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-unit"></a>
 The unit of the metric\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

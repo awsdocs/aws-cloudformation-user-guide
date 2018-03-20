@@ -18,12 +18,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Glue::Trigger",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-type)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-description)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-actions)" : [ Action, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-schedule)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-name)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-predicate)" : Predicate
+    "[Type](#cfn-glue-trigger-type)" : String,
+    "[Description](#cfn-glue-trigger-description)" : String,
+    "[Actions](#cfn-glue-trigger-actions)" : [ [*Action*](aws-properties-glue-trigger-action.md), ... ],
+    "[Schedule](#cfn-glue-trigger-schedule)" : String,
+    "[Name](#cfn-glue-trigger-name)" : String,
+    "[Predicate](#cfn-glue-trigger-predicate)" : [*Predicate*](aws-properties-glue-trigger-predicate.md)
   }
 }
 ```
@@ -33,61 +33,61 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Glue::Trigger"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-type): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-description): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-actions): 
-    - Action 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-schedule): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-name): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-predicate): 
-    Predicate
+  [Type](#cfn-glue-trigger-type): String
+  [Description](#cfn-glue-trigger-description): String
+  [Actions](#cfn-glue-trigger-actions): 
+    - [*Action*](aws-properties-glue-trigger-action.md) 
+  [Schedule](#cfn-glue-trigger-schedule): String
+  [Name](#cfn-glue-trigger-name): String
+  [Predicate](#cfn-glue-trigger-predicate): 
+    [*Predicate*](aws-properties-glue-trigger-predicate.md)
 ```
 
 ## Properties<a name="aws-resource-glue-trigger-properties"></a>
 
-`Type`  
+`Type`  <a name="cfn-glue-trigger-type"></a>
 The type of job trigger\. Valid values are `SCHEDULED`, `CONDITIONAL`, or `ON_DEMAND`\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Description`  
+`Description`  <a name="cfn-glue-trigger-description"></a>
 The description of the job trigger\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Actions`  
+`Actions`  <a name="cfn-glue-trigger-actions"></a>
 The actions that the job trigger initiates when it fires\.  
  *Required*: Yes  
- *Type*: List of   
- *Update requires*: No interruption 
+ *Type*: List of [AWS Glue Trigger Action](aws-properties-glue-trigger-action.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Schedule`  
+`Schedule`  <a name="cfn-glue-trigger-schedule"></a>
 The `cron` schedule expression for the job trigger\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Name`  
+`Name`  <a name="cfn-glue-trigger-name"></a>
 The name of the job trigger\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`Predicate`  
+`Predicate`  <a name="cfn-glue-trigger-predicate"></a>
 The predicate of the job trigger, which determines when the trigger fires\.  
  *Required*: No  
- *Type*:   
- *Update requires*: No interruption 
+ *Type*: [AWS Glue Trigger Predicate](aws-properties-glue-trigger-predicate.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-glue-trigger-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d678c10b3"></a>
+### Ref<a name="w3ab2c21c10d677c10b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\. 
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
 ## Examples<a name="aws-resource-glue-trigger-examples"></a>
 

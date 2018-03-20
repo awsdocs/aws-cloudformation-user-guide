@@ -13,62 +13,62 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-cluster-instancetypeconfig-bidprice)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-cluster-instancetypeconfig-bidpriceaspercentageofondemandprice)" : Double,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-cluster-instancetypeconfig-configurations)" : [ Configuration, ...],
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-cluster-instancetypeconfig-ebsconfiguration)" : EbsConfiguration,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-cluster-instancetypeconfig-instancetype)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-cluster-instancetypeconfig-weightedcapacity)" : Integer
+  "[BidPrice](#cfn-elasticmapreduce-cluster-instancetypeconfig-bidprice)" : String,
+  "[BidPriceAsPercentageOfOnDemandPrice](#cfn-elasticmapreduce-cluster-instancetypeconfig-bidpriceaspercentageofondemandprice)" : Double,
+  "[Configurations](#cfn-elasticmapreduce-cluster-instancetypeconfig-configurations)" : [ [*Configuration*](aws-properties-emr-cluster-configuration.md), ...],
+  "[EbsConfiguration](#cfn-elasticmapreduce-cluster-instancetypeconfig-ebsconfiguration)" : [*EbsConfiguration*](aws-properties-emr-ebsconfiguration.md),
+  "[InstanceType](#cfn-elasticmapreduce-cluster-instancetypeconfig-instancetype)" : String,
+  "[WeightedCapacity](#cfn-elasticmapreduce-cluster-instancetypeconfig-weightedcapacity)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-instancetypeconfig-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-cluster-instancetypeconfig-bidprice): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-cluster-instancetypeconfig-bidpriceaspercentageofondemandprice): Double
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-cluster-instancetypeconfig-configurations):
-  - Configuration
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-cluster-instancetypeconfig-ebsconfiguration):
-  EbsConfiguration
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-cluster-instancetypeconfig-instancetype): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-cluster-instancetypeconfig-weightedcapacity): Integer
+[BidPrice](#cfn-elasticmapreduce-cluster-instancetypeconfig-bidprice): String
+[BidPriceAsPercentageOfOnDemandPrice](#cfn-elasticmapreduce-cluster-instancetypeconfig-bidpriceaspercentageofondemandprice): Double
+[Configurations](#cfn-elasticmapreduce-cluster-instancetypeconfig-configurations):
+  - [*Configuration*](aws-properties-emr-cluster-configuration.md)
+[EbsConfiguration](#cfn-elasticmapreduce-cluster-instancetypeconfig-ebsconfiguration):
+  [*EbsConfiguration*](aws-properties-emr-ebsconfiguration.md)
+[InstanceType](#cfn-elasticmapreduce-cluster-instancetypeconfig-instancetype): String
+[WeightedCapacity](#cfn-elasticmapreduce-cluster-instancetypeconfig-weightedcapacity): Integer
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-instancetypeconfig-properties"></a>
 
-`BidPrice`  
+`BidPrice`  <a name="cfn-elasticmapreduce-cluster-instancetypeconfig-bidprice"></a>
 The bid price for each EC2 Spot Instance type, as defined by `InstanceType`\. `BidPrice` is expressed in USD\. For more information, see [InstanceTypeConfig](http://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_InstanceTypeConfig.html) in the *Amazon EMR API Reference*\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`BidPriceAsPercentageOfOnDemandPrice`  
+`BidPriceAsPercentageOfOnDemandPrice`  <a name="cfn-elasticmapreduce-cluster-instancetypeconfig-bidpriceaspercentageofondemandprice"></a>
 The bid price, as a percentage of the On\-Demand price, for each EC2 Spot instance as defined by `InstanceType`\. `BidPriceAsPercentageOfOnDemandPrice`is expressed as a number\. For more information, see [InstanceTypeConfig](http://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_InstanceTypeConfig.html) in the *Amazon EMR API Reference*\.  
 *Required: *No  
 *Type*: Double  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Configurations`  
+`Configurations`  <a name="cfn-elasticmapreduce-cluster-instancetypeconfig-configurations"></a>
 A configuration classification that applies when provisioning cluster instances\. This  can include configurations for applications and software that run on the cluster\. Duplicates are not allowed\.  
 *Required: *No  
 *Type*: List of [Amazon EMR Cluster Configurations](aws-properties-emr-cluster-configuration.md)  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`EbsConfiguration`  
+`EbsConfiguration`  <a name="cfn-elasticmapreduce-cluster-instancetypeconfig-ebsconfiguration"></a>
 The configuration of Amazon Elastic Block Store \(Amazon EBS\) that is attached to each instance as defined by `InstanceType`\.  
 *Required: *No  
 *Type*: [Amazon EMR EbsConfiguration](aws-properties-emr-ebsconfiguration.md)  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`InstanceType`  
+`InstanceType`  <a name="cfn-elasticmapreduce-cluster-instancetypeconfig-instancetype"></a>
 An EC2 instance type, such as `m3.xlarge`\. For constraints, see [InstanceTypeConfig](http://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_InstanceTypeConfig.html) in the *Amazon EMR API Reference*\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`WeightedCapacity`  
+`WeightedCapacity`  <a name="cfn-elasticmapreduce-cluster-instancetypeconfig-weightedcapacity"></a>
 The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `InstanceFleetConfig`\. For more information, see [InstanceTypeConfig](http://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_InstanceTypeConfig.html) in the *Amazon EMR API Reference*\.  
 *Required: *No  
 *Type*: Integer  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

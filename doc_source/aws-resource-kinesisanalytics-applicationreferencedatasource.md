@@ -17,8 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::KinesisAnalytics::ApplicationReferenceDataSource",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-applicationname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource)" : ReferenceDataSource,
+    "[ApplicationName](#cfn-kinesisanalytics-applicationreferencedatasource-applicationname)" : String,
+    "[ReferenceDataSource](#cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource)" : [*ReferenceDataSource*](aws-properties-kinesisanalytics-applicationreferencedatasource-referencedatasource.md),
   }
 }
 ```
@@ -28,24 +28,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::KinesisAnalytics::ApplicationReferenceDataSource"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-applicationname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource): 
-    ReferenceDataSource
+  [ApplicationName](#cfn-kinesisanalytics-applicationreferencedatasource-applicationname): String
+  [ReferenceDataSource](#cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource): 
+    [*ReferenceDataSource*](aws-properties-kinesisanalytics-applicationreferencedatasource-referencedatasource.md)
 ```
 
 ## Properties<a name="aws-resource-kinesisanalytics-applicationreferencedatasource-properties"></a>
 
-`ApplicationName`  
+`ApplicationName`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-applicationname"></a>
 The name of an existing application\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`ReferenceDataSource`  
+`ReferenceDataSource`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource"></a>
 The reference data source, which is an object in your Amazon Simple Storage Service \(Amazon S3\) bucket\.   
  *Required*: Yes  
  *Type*: [Kinesis Data Analytics ApplicationReferenceDataSource ReferenceDataSource](aws-properties-kinesisanalytics-applicationreferencedatasource-referencedatasource.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Examples<a name="aws-resource-kinesisanalytics-applicationreferencedatasource-examples"></a>
 

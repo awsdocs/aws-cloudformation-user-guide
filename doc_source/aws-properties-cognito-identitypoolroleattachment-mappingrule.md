@@ -8,45 +8,45 @@
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-claim)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-matchtype)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-rolearn)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-value)" : String
+  "[Claim](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-claim)" : String,
+  "[MatchType](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-matchtype)" : String,
+  "[RoleARN](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-rolearn)" : String,
+  "[Value](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-value)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-cognito-identitypoolroleattachment-mappingrule-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-claim): String,
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-matchtype): String,
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-rolearn): String,
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-value): String
+[Claim](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-claim): String,
+[MatchType](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-matchtype): String,
+[RoleARN](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-rolearn): String,
+[Value](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-value): String
 ```
 
 ## Properties<a name="aws-properties-cognito-identitypoolroleattachment-mappingrule-properties"></a>
 
-`Claim`  
+`Claim`  <a name="cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-claim"></a>
 The claim name that must be present in the token, for example, "isAdmin" or "paid\."  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`MatchType`  
+`MatchType`  <a name="cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-matchtype"></a>
 The match condition that specifies how closely the claim value in the IdP token must match `Value`\.  
 Valid values are: `Equals`, `Contains`, `StartsWith`, and `NotEqual`\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`RoleARN`  
+`RoleARN`  <a name="cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the role\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Value`  
+`Value`  <a name="cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-value"></a>
 A brief string that the claim must match, for example, "paid" or "yes\."  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

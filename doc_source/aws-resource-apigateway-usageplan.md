@@ -18,11 +18,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::UsagePlan",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-usageplan-apistages)" : [ ApiStage, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-usageplan-description)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-usageplan-quota)" : QuotaSettings,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-usageplan-throttle)" : ThrottleSettings,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-usageplan-usageplanname)" : String
+    "[ApiStages](#cfn-apigateway-usageplan-apistages)" : [ [ApiStage](aws-properties-apigateway-usageplan-apistage.md), ... ],
+    "[Description](#cfn-apigateway-usageplan-description)" : String,
+    "[Quota](#cfn-apigateway-usageplan-quota)" : [QuotaSettings](aws-properties-apigateway-usageplan-quotasettings.md),
+    "[Throttle](#cfn-apigateway-usageplan-throttle)" : [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md),
+    "[UsagePlanName](#cfn-apigateway-usageplan-usageplanname)" : String
   }
 }
 ```
@@ -32,53 +32,53 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ApiGateway::UsagePlan"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-usageplan-apistages): 
-  - ApiStage
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-usageplan-description): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-usageplan-quota): QuotaSettings
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-usageplan-throttle): ThrottleSettings
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-usageplan-usageplanname): String
+  [ApiStages](#cfn-apigateway-usageplan-apistages): 
+  - [ApiStage](aws-properties-apigateway-usageplan-apistage.md)
+  [Description](#cfn-apigateway-usageplan-description): String
+  [Quota](#cfn-apigateway-usageplan-quota): [QuotaSettings](aws-properties-apigateway-usageplan-quotasettings.md)
+  [Throttle](#cfn-apigateway-usageplan-throttle): [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)
+  [UsagePlanName](#cfn-apigateway-usageplan-usageplanname): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-usageplan-properties"></a>
 
-`ApiStages`  
+`ApiStages`  <a name="cfn-apigateway-usageplan-apistages"></a>
 The API stages to associate with this usage plan\.  
 *Required: *No  
 *Type*: List of [Amazon API Gateway UsagePlan ApiStage](aws-properties-apigateway-usageplan-apistage.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Description`  
+`Description`  <a name="cfn-apigateway-usageplan-description"></a>
 The purpose of this usage plan\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Quota`  
+`Quota`  <a name="cfn-apigateway-usageplan-quota"></a>
 Configures the number of requests that users can make within a given interval\.  
 *Required: *No  
 *Type*: [Amazon API Gateway UsagePlan QuotaSettings](aws-properties-apigateway-usageplan-quotasettings.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Throttle`  
+`Throttle`  <a name="cfn-apigateway-usageplan-throttle"></a>
 Configures the overall request rate \(average requests per second\) and burst capacity\.  
 *Required: *No  
 *Type*: [Amazon API Gateway UsagePlan ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`UsagePlanName`  
+`UsagePlanName`  <a name="cfn-apigateway-usageplan-usageplanname"></a>
 A name for this usage plan\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Value<a name="aws-resource-apigateway-usageplan-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10c85c11b2"></a>
+### Ref<a name="w3ab2c21c10c84c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the usage plan ID, such as `MyUsagePlan`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Examples<a name="aws-resource-apigateway-usageplan-examples"></a>
 

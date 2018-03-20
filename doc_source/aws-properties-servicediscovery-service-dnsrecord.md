@@ -12,31 +12,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-servicediscovery-service-dnsrecord-type)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-servicediscovery-service-dnsrecord-ttl)" : String
+  "[Type](#cfn-servicediscovery-service-dnsrecord-type)" : String,
+  "[TTL](#cfn-servicediscovery-service-dnsrecord-ttl)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-servicediscovery-service-dnsrecord-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-servicediscovery-service-dnsrecord-type): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-servicediscovery-service-dnsrecord-ttl): String
+[Type](#cfn-servicediscovery-service-dnsrecord-type): String
+[TTL](#cfn-servicediscovery-service-dnsrecord-ttl): String
 ```
 
 ## Properties<a name="aws-properties-servicediscovery-service-dnsrecord-properties"></a>
 
-`Type`  
+`Type`  <a name="cfn-servicediscovery-service-dnsrecord-type"></a>
 The DNS type of the record that you want Route 53 to create\. Supported record types include `A`, `AAAA`, and `SRV`\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`TTL`  
+`TTL`  <a name="cfn-servicediscovery-service-dnsrecord-ttl"></a>
 The amount of time, in seconds, that you want DNS resolvers to cache the settings for this record\.   
 *Required*: Yes  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## See Also<a name="aws-properties-servicediscovery-service-dnsrecord-seealso"></a>
 

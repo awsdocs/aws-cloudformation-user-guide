@@ -69,7 +69,7 @@ For a list of all AWS CloudFormation actions that you can allow or deny, see the
 
 ### AWS CloudFormation Console\-Specific Actions<a name="w3ab2b7c14c11c16"></a>
 
-IAM users who use the AWS CloudFormation console require additional permissions that are not required for using the AWS Command Line Interface or AWS CloudFormation APIs\. Compared to the CLI and API, the console provides additional features that require additional permissions, such as template uploads to Amazon S3 buckets and drop\-down lists for AWS\-specific parameter types\.
+IAM users who use the AWS CloudFormation console require additional permissions that are not required for using the AWS Command Line Interface or AWS CloudFormation APIs\. Compared to the CLI and API, the console provides additional features that require additional permissions, such as template uploads to Amazon S3 buckets and drop\-down lists for [AWS\-specific parameter types](parameters-section-structure.md#aws-specific-parameter-types)\.
 
 For all the following actions, grant permissions to all resources; don't limit actions to specific stacks or buckets\.
 
@@ -88,7 +88,7 @@ s3:GetObject
 s3:CreateBucket
 ```
 
-For templates with AWS\-specific parameter types, users need permissions to make the corresponding describe API calls\. For example, if a template includes the `AWS::EC2::KeyPair::KeyName` parameter type, users need permission to call the EC2 `DescribeKeyPairs` action \(this is how the console gets values for the parameter drop\-down list\)\. The following examples are actions that users need for other parameter types:
+For templates with [AWS\-specific parameter types](parameters-section-structure.md#aws-specific-parameter-types), users need permissions to make the corresponding describe API calls\. For example, if a template includes the `AWS::EC2::KeyPair::KeyName` parameter type, users need permission to call the EC2 `DescribeKeyPairs` action \(this is how the console gets values for the parameter drop\-down list\)\. The following examples are actions that users need for other parameter types:
 
 ```
 ec2:DescribeSecurityGroups (for the AWS::EC2::SecurityGroup::Id parameter type)

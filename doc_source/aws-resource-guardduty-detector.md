@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::GuardDuty::Detector",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-guardduty-detector-enable)" : Boolean
+    "[Enable](#cfn-guardduty-detector-enable)" : Boolean
   }
 }
 ```
@@ -28,16 +28,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::GuardDuty::Detector"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-guardduty-detector-enable): Boolean
+  [Enable](#cfn-guardduty-detector-enable): Boolean
 ```
 
 ## Properties<a name="aws-resource-guardduty-detector-properties"></a>
 
-`Enable`  
+`Enable`  <a name="cfn-guardduty-detector-enable"></a>
 A Boolean value that specifies whether the detector is to be enabled\.  
  *Required*: Yes  
  *Type*: Boolean  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-guardduty-detector-returnvalues"></a>
 
@@ -45,7 +45,7 @@ A Boolean value that specifies whether the detector is to be enabled\.
 
 When you pass the logical ID of an `AWS::GuardDuty::Detector` resource to the intrinsic `Ref` function, the function returns the unique ID of the created detector\. 
 
-For more information about using the `Ref` function, see Ref\. 
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
 ## Examples<a name="aws-resource-guardduty-detector-examples"></a>
 

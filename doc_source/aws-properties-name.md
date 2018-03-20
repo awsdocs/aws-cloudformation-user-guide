@@ -57,7 +57,7 @@ myDynamoDBTable:
     TableName: "SampleTable"
 ```
 
-## Supported Resources<a name="w3ab2c21c14e1335c13"></a>
+## Supported Resources<a name="w3ab2c21c14e1365c13"></a>
 
 The following resource types support custom names:
 

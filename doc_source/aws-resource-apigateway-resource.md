@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::Resource",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-resource-parentid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-resource-pathpart)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-resource-resapiid)" : String
+    "[ParentId](#cfn-apigateway-resource-parentid)" : String,
+    "[PathPart](#cfn-apigateway-resource-pathpart)" : String,
+    "[RestApiId](#cfn-apigateway-resource-resapiid)" : String
   }
 }
 ```
@@ -30,30 +30,30 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ApiGateway::Resource"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-resource-parentid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-resource-pathpart): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-resource-resapiid): String
+  [ParentId](#cfn-apigateway-resource-parentid): String
+  [PathPart](#cfn-apigateway-resource-pathpart): String
+  [RestApiId](#cfn-apigateway-resource-resapiid): String
 ```
 
 ## Properties<a name="w3ab2c21c10c72b9"></a>
 
-`ParentId`  
+`ParentId`  <a name="cfn-apigateway-resource-parentid"></a>
 If you want to create a child resource, the ID of the parent resource\. For resources without a parent, specify the RestApi root resource ID, such as `{ "Fn::GetAtt": ["MyRestApi", "RootResourceId"] }`\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`PathPart`  
+`PathPart`  <a name="cfn-apigateway-resource-pathpart"></a>
 A path name for the resource\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`RestApiId`  
+`RestApiId`  <a name="cfn-apigateway-resource-resapiid"></a>
 The ID of the `RestApi` resource in which you want to create this resource\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Value<a name="w3ab2c21c10c72c11"></a>
 
@@ -61,7 +61,7 @@ The ID of the `RestApi` resource in which you want to create this resource\.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource ID, such as `abc123`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10c72c13"></a>
 

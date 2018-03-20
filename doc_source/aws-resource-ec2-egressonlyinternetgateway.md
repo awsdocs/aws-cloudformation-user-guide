@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type": "AWS::EC2::EgressOnlyInternetGateway",
   "Properties": {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-egressonlyinternetgateway-vpcid)": String
+    "[VpcId](#cfn-ec2-egressonlyinternetgateway-vpcid)": String
   }
 }
 ```
@@ -29,16 +29,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::EgressOnlyInternetGateway"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-ec2-egressonlyinternetgateway-vpcid): String
+  [VpcId](#cfn-ec2-egressonlyinternetgateway-vpcid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-egressonlyinternetgateway-properties"></a>
 
-`VpcId`  
+`VpcId`  <a name="cfn-ec2-egressonlyinternetgateway-vpcid"></a>
 The ID of the VPC for which to create the egress\-only Internet gateway\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Values<a name="w3ab2c21c10d351c11"></a>
 
@@ -46,7 +46,7 @@ The ID of the VPC for which to create the egress\-only Internet gateway\.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ID of the egress\-only Internet gateway \(the physical resource ID\)\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="aws-resource-ec2-egressonlyinternetgateway-examples"></a>
 

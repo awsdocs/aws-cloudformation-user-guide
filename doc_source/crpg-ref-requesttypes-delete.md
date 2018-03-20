@@ -93,13 +93,13 @@ Reason
 The reason for the failure\.
 
 RequestId  
-The `RequestId` value copied from the delete request\.
+The `RequestId` value copied from the [delete request](#crpg-ref-requesttypes-delete-request)\.
 
 LogicalResourceId  
-The `LogicalResourceId` value copied from the delete request\.
+The `LogicalResourceId` value copied from the [delete request](#crpg-ref-requesttypes-delete-request)\.
 
 StackId  
-The `StackId` value copied from the delete request\.
+The `StackId` value copied from the [delete request](#crpg-ref-requesttypes-delete-request)\.
 
 PhysicalResourceId  
 A required custom resource provider\-defined physical ID that is unique for that provider\.

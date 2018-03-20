@@ -30,7 +30,7 @@ Returns the AWS account ID of the account in which the stack is being created, s
 
 Returns the list of notification Amazon Resource Names \(ARNs\) for the current stack\.
 
-To get a single ARN from the list, use Fn::Select\.
+To get a single ARN from the list, use [Fn::Select](intrinsic-function-reference-select.md)\.
 
 ### JSON<a name="pseudo-parameter-reference-example-2.json"></a>
 

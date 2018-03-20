@@ -23,9 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type":"AWS::EC2::VolumeAttachment",
    "Properties" : {
-      "Device" : String,
-      "InstanceId" : String,
-      "VolumeId" : String
+      "[Device](#cfn-ec2-ebs-volumeattachment-device)" : String,
+      "[InstanceId](#cfn-ec2-ebs-volumeattachment-instanceid)" : String,
+      "[VolumeId](#cfn-ec2-ebs-volumeattachment-volumeid)" : String
    }
 }
 ```
@@ -35,27 +35,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::EC2::VolumeAttachment
 Properties:
-  Device: String
-  InstanceId: String
-  VolumeId: String
+  [Device](#cfn-ec2-ebs-volumeattachment-device): String
+  [InstanceId](#cfn-ec2-ebs-volumeattachment-instanceid): String
+  [VolumeId](#cfn-ec2-ebs-volumeattachment-volumeid): String
 ```
 
 ## Properties<a name="w3ab2c21c10d465c11"></a>
 
-`Device`  
+`Device`  <a name="cfn-ec2-ebs-volumeattachment-device"></a>
 How the device is exposed to the instance \(e\.g\., /dev/sdh, or xvdh\)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: Updates are not supported\.
 
-`InstanceId`  
-The ID of the instance to which the volume attaches\. This value can be a reference to an AWS::EC2::Instance resource, or it can be the physical ID of an existing EC2 instance\.  
+`InstanceId`  <a name="cfn-ec2-ebs-volumeattachment-instanceid"></a>
+The ID of the instance to which the volume attaches\. This value can be a reference to an [AWS::EC2::Instance](aws-properties-ec2-instance.md) resource, or it can be the physical ID of an existing EC2 instance\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: Updates are not supported\.
 
-`VolumeId`  
-The ID of the Amazon EBS volume\. The volume and instance must be within the same Availability Zone\. This value can be a reference to an AWS::EC2::Volume resource, or it can be the volume ID of an existing Amazon EBS volume\.  
+`VolumeId`  <a name="cfn-ec2-ebs-volumeattachment-volumeid"></a>
+The ID of the Amazon EBS volume\. The volume and instance must be within the same Availability Zone\. This value can be a reference to an [AWS::EC2::Volume](aws-properties-ec2-ebs-volume.md) resource, or it can be the volume ID of an existing Amazon EBS volume\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: Updates are not supported\.

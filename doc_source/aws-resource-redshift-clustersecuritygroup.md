@@ -4,10 +4,10 @@ Creates an Amazon Redshift security group\. You use security groups to control a
 
 
 + [Syntax](#aws-resource-redshift-clustersecuritygroup-syntax)
-+ [Properties](#w3ab2c21c10d927b9)
-+ [Return Values](#w3ab2c21c10d927c11)
-+ [Example](#w3ab2c21c10d927c13)
-+ [See Also](#w3ab2c21c10d927c15)
++ [Properties](#w3ab2c21c10d931b9)
++ [Return Values](#w3ab2c21c10d931c11)
++ [Example](#w3ab2c21c10d931c13)
++ [See Also](#w3ab2c21c10d931c15)
 
 ## Syntax<a name="aws-resource-redshift-clustersecuritygroup-syntax"></a>
 
@@ -19,8 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Redshift::ClusterSecurityGroup",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-redshift-clustersecuritygroup-description)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-redshift-clustersecuritygroup-tags)" : [ Resource Tag, ... ]
+    "[Description](#cfn-redshift-clustersecuritygroup-description)" : String,
+    "[Tags](#cfn-redshift-clustersecuritygroup-tags)" : [ Resource Tag, ... ]
   }
 }
 ```
@@ -30,28 +30,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Redshift::ClusterSecurityGroup"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-redshift-clustersecuritygroup-description): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-redshift-clustersecuritygroup-tags):
+  [Description](#cfn-redshift-clustersecuritygroup-description): String
+  [Tags](#cfn-redshift-clustersecuritygroup-tags):
     - Resource Tag
 ```
 
-## Properties<a name="w3ab2c21c10d927b9"></a>
+## Properties<a name="w3ab2c21c10d931b9"></a>
 
-`Description`  
+`Description`  <a name="cfn-redshift-clustersecuritygroup-description"></a>
 A description of the security group\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Tags`  
+`Tags`  <a name="cfn-redshift-clustersecuritygroup-tags"></a>
 Specifies an arbitrary set of tags \(key–value pairs\) to associate with this security group\. Use tags to manage your resources\.  
 *Required: *No  
-*Type*:   
-*Update requires*: No interruption
+*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10d927c11"></a>
+## Return Values<a name="w3ab2c21c10d931c11"></a>
 
-### Ref<a name="w3ab2c21c10d927c11b2"></a>
+### Ref<a name="w3ab2c21c10d931c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -61,9 +61,9 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 For the Amazon Redshift cluster security group `myClusterSecurityGroup`, `Ref` returns the name of the cluster security group\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10d927c13"></a>
+## Example<a name="w3ab2c21c10d931c13"></a>
 
 The following example creates an Amazon Redshift cluster security group that you can associate cluster security group ingress rules with:
 
@@ -96,6 +96,6 @@ myClusterSecurityGroup:
         Value: bar
 ```
 
-## See Also<a name="w3ab2c21c10d927c15"></a>
+## See Also<a name="w3ab2c21c10d931c15"></a>
 
 + [AWS::Redshift::ClusterSecurityGroupIngress](aws-resource-redshift-clustersecuritygroupingress.md)

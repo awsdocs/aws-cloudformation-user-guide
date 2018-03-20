@@ -12,28 +12,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-maxcapacity)" : Integer,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-mincapacity)" : Integer
+  "[MaxCapacity](#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-maxcapacity)" : Integer,
+  "[MinCapacity](#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-mincapacity)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-maxcapacity): Integer
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-mincapacity): Integer
+[MaxCapacity](#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-maxcapacity): Integer
+[MinCapacity](#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-mincapacity): Integer
 ```
 
 ## Properties<a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction-properties"></a>
 
-`MaxCapacity`  
+`MaxCapacity`  <a name="cfn-applicationautoscaling-scalabletarget-scalabletargetaction-maxcapacity"></a>
 The maximum capacity\.  
  *Required*: No  
  *Type*: Integer  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`MinCapacity`  
+`MinCapacity`  <a name="cfn-applicationautoscaling-scalabletarget-scalabletargetaction-mincapacity"></a>
 The minimum capacity\.  
  *Required*: No  
  *Type*: Integer  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

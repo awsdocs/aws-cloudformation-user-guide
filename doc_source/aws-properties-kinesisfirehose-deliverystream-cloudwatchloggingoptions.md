@@ -10,33 +10,33 @@ The `CloudWatchLoggingOptions` property type specifies Amazon CloudWatch Logs \(
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-enabled)" : Boolean,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-loggroupname)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-logstreamname)" : String
+  "[Enabled](#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-enabled)" : Boolean,
+  "[LogGroupName](#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-loggroupname)" : String,
+  "[LogStreamName](#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-logstreamname)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-enabled): Boolean
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-loggroupname): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-logstreamname): String
+[Enabled](#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-enabled): Boolean
+[LogGroupName](#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-loggroupname): String
+[LogStreamName](#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-logstreamname): String
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions-properties"></a>
 
-`Enabled`  
+`Enabled`  <a name="cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-enabled"></a>
 Indicates whether CloudWatch Logs logging is enabled\.  
 *Required: *No  
 *Type*: Boolean
 
-`LogGroupName`  
+`LogGroupName`  <a name="cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-loggroupname"></a>
 The name of the CloudWatch Logs log group that contains the log stream that Kinesis Firehose will use\.  
 *Required: *Conditional\. If you enable logging, you must specify this property\.  
 *Type*: String
 
-`LogStreamName`  
+`LogStreamName`  <a name="cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-logstreamname"></a>
 The name of the CloudWatch Logs log stream that Kinesis Firehose uses to send logs about data delivery\.  
 *Required: *Conditional\. If you enable logging, you must specify this property\.  
 *Type*: String

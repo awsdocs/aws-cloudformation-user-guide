@@ -7,7 +7,7 @@
 
 ## Creating an Amazon S3 Bucket with Defaults<a name="scenario-s3-bucket"></a>
 
-This example uses a  to create a bucket with default settings\.
+This example uses a [AWS::S3::Bucket](aws-properties-s3-bucket.md) to create a bucket with default settings\.
 
 ### JSON<a name="quickref-s3-example-1.json"></a>
 
@@ -26,7 +26,7 @@ This example uses a  to create a bucket with default settings\.
 
 ## Creating an Amazon S3 Bucket for Website Hosting and with a DeletionPolicy<a name="scenario-s3-bucket-website"></a>
 
-This example creates a bucket as a website\. The AccessControl property is set to the canned ACL PublicRead \(public read permissions are required for buckets set up for website hosting\)\. Because this bucket resource has a DeletionPolicy attribute set to `Retain`, AWS CloudFormation will not delete this bucket when it deletes the stack\. The Output section uses `Fn::GetAtt` to retrieve the WebsiteURL attribute and DomainName attribute of the S3Bucket resource\.
+This example creates a bucket as a website\. The AccessControl property is set to the canned ACL PublicRead \(public read permissions are required for buckets set up for website hosting\)\. Because this bucket resource has a [DeletionPolicy attribute](aws-attribute-deletionpolicy.md) set to `Retain`, AWS CloudFormation will not delete this bucket when it deletes the stack\. The Output section uses `Fn::GetAtt` to retrieve the WebsiteURL attribute and DomainName attribute of the S3Bucket resource\.
 
 ### JSON<a name="quickref-s3-example-2.json"></a>
 

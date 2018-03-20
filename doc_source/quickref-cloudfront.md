@@ -7,7 +7,7 @@
 
 ## Amazon CloudFront Distribution Resource with an Amazon S3 Origin<a name="scenario-cloudfront-s3origin"></a>
 
-The following example template shows an Amazon CloudFront Distribution using an S3Origin\.
+The following example template shows an Amazon CloudFront [Distribution](aws-properties-cloudfront-distribution.md) using an [S3Origin](aws-properties-cloudfront-s3origin.md)\.
 
 ### JSON<a name="quickref-cloudfront-example-1.json"></a>
 
@@ -115,7 +115,7 @@ The following example template shows an Amazon CloudFront Distribution using an 
 
 ## Amazon CloudFront Distribution Resource with Custom Origin<a name="scenario-cloudfront-customorigin"></a>
 
-The following example template shows an Amazon CloudFront Distribution using a CustomOrigin\.
+The following example template shows an Amazon CloudFront [Distribution](aws-properties-cloudfront-distribution.md) using a [CustomOrigin](aws-properties-cloudfront-customorigin.md)\.
 
 ### JSON<a name="quickref-cloudfront-example-2.json"></a>
 
@@ -237,7 +237,7 @@ The following example template shows an Amazon CloudFront Distribution using a C
 
 ## Amazon CloudFront Distribution with Multi\-origin Support\.<a name="scenario-cloudfront-multiorigin"></a>
 
-The following example template shows how to declare a CloudFront Distribution with multi\-origin support\. In the DistributionConfig, a list of origins is provided and a DefaultCacheBehavior is set\.
+The following example template shows how to declare a CloudFront [Distribution](aws-properties-cloudfront-distribution.md) with multi\-origin support\. In the [DistributionConfig](aws-properties-cloudfront-distributionconfig.md), a list of origins is provided and a [DefaultCacheBehavior](aws-properties-cloudfront-defaultcachebehavior.md) is set\.
 
 ### JSON<a name="quickref-cloudfront-example-3.json"></a>
 

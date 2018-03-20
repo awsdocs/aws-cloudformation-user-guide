@@ -12,33 +12,33 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-predicate-logical)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-predicate-conditions)" : [ Condition, ... ]
+  "[Logical](#cfn-glue-trigger-predicate-logical)" : String,
+  "[Conditions](#cfn-glue-trigger-predicate-conditions)" : [ [*Condition*](aws-properties-glue-trigger-condition.md), ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-glue-trigger-predicate-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-predicate-logical): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-trigger-predicate-conditions): 
-  - Condition
+[Logical](#cfn-glue-trigger-predicate-logical): String
+[Conditions](#cfn-glue-trigger-predicate-conditions): 
+  - [*Condition*](aws-properties-glue-trigger-condition.md)
 ```
 
 ## Properties<a name="aws-properties-glue-trigger-predicate-properties"></a>
 
-`Logical`  
+`Logical`  <a name="cfn-glue-trigger-predicate-logical"></a>
 The logical operator for the predicate\.  
 *Valid values*: `AND`  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Conditions`  
+`Conditions`  <a name="cfn-glue-trigger-predicate-conditions"></a>
 The conditions that determine when the trigger fires\.  
  *Required*: No  
- *Type*: List of   
- *Update requires*: No interruption 
+ *Type*: List of [AWS Glue Trigger Condition](aws-properties-glue-trigger-condition.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-glue-trigger-predicate-seealso"></a>
 

@@ -2,7 +2,7 @@
 
 After selecting a stack template, specify the stack name and values for the parameters that were defined in the template\.
 
-With parameters, you can customize your stack at creation time\. Your parameter values can be used in the stack template to modify how resources are configured\. That way you don't have to hard code values in multiple templates to specify different settings\. For more information about parameters in an AWS CloudFormation template, see \.
+With parameters, you can customize your stack at creation time\. Your parameter values can be used in the stack template to modify how resources are configured\. That way you don't have to hard code values in multiple templates to specify different settings\. For more information about parameters in an AWS CloudFormation template, see [Parameters](parameters-section-structure.md)\.
 
 **To specify the stack name parameter values**
 
@@ -14,7 +14,7 @@ With parameters, you can customize your stack at creation time\. Your parameter 
 
    You can use or change any parameters with default values\.
 
-1. When you are satisfied with the parameter values, click **Next** to proceed with setting options for your stack\.
+1. When you are satisfied with the parameter values, click **Next** to proceed with [setting options for your stack](cfn-console-add-tags.md)\.
 
 AWS\-specific Parameter Types
 

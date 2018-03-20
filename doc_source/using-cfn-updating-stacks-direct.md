@@ -32,7 +32,7 @@ When updating a stack, AWS CloudFormation might interrupt resources or replace u
 
 1. Review the stack information and the changes that you submitted\.
 
-   In the **Review** section, check that you submitted the correct information, such as the correct parameter values or template URL\. If your template contains IAM resources, select **I acknowledge that this template may create IAM resources** to specify that you want to use IAM resources in the template\. For more information about using IAM resources in templates, see \.
+   In the **Review** section, check that you submitted the correct information, such as the correct parameter values or template URL\. If your template contains IAM resources, select **I acknowledge that this template may create IAM resources** to specify that you want to use IAM resources in the template\. For more information about using IAM resources in templates, see [Controlling Access with AWS Identity and Access Management](using-iam-template.md)\.
 
    In the **Preview your changes** section, check that AWS CloudFormation will make all the changes that you expect\. For example, you can check that AWS CloudFormation adds, removes, and modifies the resources that you intended to add, remove, or modify\. AWS CloudFormation generates this preview by creating a change set for the stack\. For more information, see [Updating Stacks Using Change Sets](using-cfn-updating-stacks-changesets.md)\.
 
@@ -42,7 +42,7 @@ When updating a stack, AWS CloudFormation might interrupt resources or replace u
 
    If the stack update fails, AWS CloudFormation automatically rolls back changes, and sets the state to **UPDATE\_ROLLBACK\_COMPLETE**\.
 **Note**  
-You can cancel an update while it's in the **UPDATE\_IN\_PROGRESS** state\. For more information, see \.
+You can cancel an update while it's in the **UPDATE\_IN\_PROGRESS** state\. For more information, see [Canceling a Stack Update](using-cfn--stack-update-cancel.md)\.
 
 **To update a AWS CloudFormation stack \(AWS CLI\)**
 

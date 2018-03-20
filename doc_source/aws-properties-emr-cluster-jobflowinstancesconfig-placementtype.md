@@ -2,25 +2,25 @@
 
 The `PlacementType` property type specifies the Availability Zone \(AZ\) in which the job flow runs\. `PlacementType` is the property type for the `Placement` subproperty of the [Amazon EMR Cluster JobFlowInstancesConfig](aws-properties-emr-cluster-jobflowinstancesconfig.md) property type\.
 
-## Syntax<a name="w3ab2c21c14d916b5"></a>
+## Syntax<a name="w3ab2c21c14d941b5"></a>
 
 ### JSON<a name="aws-properties-emr-cluster-jobflowinstancesconfig-placementtype-syntax.json"></a>
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-cluster-jobflowinstancesconfig-placementtype-availabilityzone)" : String
+  "[AvailabilityZone](#cfn-emr-cluster-jobflowinstancesconfig-placementtype-availabilityzone)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-emr-cluster-jobflowinstancesconfig-placementtype-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-cluster-jobflowinstancesconfig-placementtype-availabilityzone): String
+[AvailabilityZone](#cfn-emr-cluster-jobflowinstancesconfig-placementtype-availabilityzone): String
 ```
 
-## Properties<a name="w3ab2c21c14d916b7"></a>
+## Properties<a name="w3ab2c21c14d941b7"></a>
 
-`AvailabilityZone`  
+`AvailabilityZone`  <a name="cfn-emr-cluster-jobflowinstancesconfig-placementtype-availabilityzone"></a>
 The Amazon Elastic Compute Cloud \(Amazon EC2\) AZ for the job flow\. For more information, see [http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
 *Required: *Yes  
 *Type*: String

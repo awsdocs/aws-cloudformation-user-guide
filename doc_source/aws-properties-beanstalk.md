@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type" : "AWS::ElasticBeanstalk::Application",
    "Properties" : {
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-name)" : String,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-description)" : String,
-      "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-resourcelifecycleconfig)" : ApplicationResourceLifecycleConfig
+      "[ApplicationName](#cfn-elasticbeanstalk-application-name)" : String,
+      "[Description](#cfn-elasticbeanstalk-application-description)" : String,
+      "[ResourceLifecycleConfig](#cfn-elasticbeanstalk-application-resourcelifecycleconfig)" : [*ApplicationResourceLifecycleConfig*](aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.md)
 
    }
 }
@@ -32,32 +32,32 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ElasticBeanstalk::Application"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-name): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-description): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticbeanstalk-application-resourcelifecycleconfig):
-     ApplicationResourceLifecycleConfig
+  [ApplicationName](#cfn-elasticbeanstalk-application-name): String
+  [Description](#cfn-elasticbeanstalk-application-description): String
+  [ResourceLifecycleConfig](#cfn-elasticbeanstalk-application-resourcelifecycleconfig):
+     [*ApplicationResourceLifecycleConfig*](aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.md)
 ```
 
 ## Properties<a name="w3ab2c21c10d570b9"></a>
 
-`ApplicationName`  
+`ApplicationName`  <a name="cfn-elasticbeanstalk-application-name"></a>
 A name for the Elastic Beanstalk application\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the application name\. For more information, see [Name Type](aws-properties-name.md)\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Description`  
+`Description`  <a name="cfn-elasticbeanstalk-application-description"></a>
 An optional description of this application\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ResourceLifecycleConfig`  
+`ResourceLifecycleConfig`  <a name="cfn-elasticbeanstalk-application-resourcelifecycleconfig"></a>
 Defines lifecycle settings for resources that belong to the application, and the service role that Elastic Beanstalk assumes in order to apply lifecycle settings\.  
 *Required*: No  
  *Type*: [Elastic Beanstalk Application ApplicationResourceLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="w3ab2c21c10d570c11"></a>
 
@@ -65,7 +65,7 @@ Defines lifecycle settings for resources that belong to the application, and the
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d570c13"></a>
 

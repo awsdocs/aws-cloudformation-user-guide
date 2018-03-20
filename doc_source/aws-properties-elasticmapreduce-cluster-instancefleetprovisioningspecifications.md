@@ -13,21 +13,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-spotspecification)" : SpotProvisioningSpecification
+  "[SpotSpecification](#cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-spotspecification)" : [*SpotProvisioningSpecification*](aws-properties-elasticmapreduce-cluster-spotprovisioningspecification.md)
 }
 ```
 
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-instancefleetprovisioningspecifications-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-spotspecification): 
-  SpotProvisioningSpecification
+[SpotSpecification](#cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-spotspecification): 
+  [*SpotProvisioningSpecification*](aws-properties-elasticmapreduce-cluster-spotprovisioningspecification.md)
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-instancefleetprovisioningspecifications-properties"></a>
 
-`SpotSpecification`  
+`SpotSpecification`  <a name="cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-spotspecification"></a>
 The launch specification for Spot instances in the fleet, which determines the defined duration and provisioning timeout behavior\.  
 *Required: *Yes  
 *Type*: [Amazon EMR Cluster SpotProvisioningSpecification](aws-properties-elasticmapreduce-cluster-spotprovisioningspecification.md)  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

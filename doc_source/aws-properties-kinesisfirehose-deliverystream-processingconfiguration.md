@@ -12,29 +12,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-processingconfiguration-enabled)" : Boolean,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-processingconfiguration-processors)" : [ Processor, ... ]
+  "[Enabled](#cfn-kinesisfirehose-deliverystream-processingconfiguration-enabled)" : Boolean,
+  "[Processors](#cfn-kinesisfirehose-deliverystream-processingconfiguration-processors)" : [ [*Processor*](aws-properties-kinesisfirehose-deliverystream-processor.md), ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisfirehose-deliverystream-processingconfiguration-syntax.yaml"></a>
 
 ```
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-processingconfiguration-enabled): Boolean
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-kinesisfirehose-deliverystream-processingconfiguration-processors): 
-    - Processor
+  [Enabled](#cfn-kinesisfirehose-deliverystream-processingconfiguration-enabled): Boolean
+  [Processors](#cfn-kinesisfirehose-deliverystream-processingconfiguration-processors): 
+    - [*Processor*](aws-properties-kinesisfirehose-deliverystream-processor.md)
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-processingconfiguration-properties"></a>
 
-`Enabled`  
+`Enabled`  <a name="cfn-kinesisfirehose-deliverystream-processingconfiguration-enabled"></a>
 Indicates whether data processing is enabled \(`true`\) or disabled \(`false`\)\.  
  *Required*: Yes  
 *Type*: Boolean  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Processors`  
+`Processors`  <a name="cfn-kinesisfirehose-deliverystream-processingconfiguration-processors"></a>
 The data processors\.  
  *Required*: Yes  
  *Type*: List of [Kinesis Firehose DeliveryStream Processor](aws-properties-kinesisfirehose-deliverystream-processor.md)  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

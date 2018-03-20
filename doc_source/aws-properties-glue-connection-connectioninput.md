@@ -12,64 +12,64 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-connection-connectioninput-description)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-connection-connectioninput-connectiontype)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-connection-connectioninput-matchcriteria)" : [ String, ... ],
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-connection-connectioninput-physicalconnectionrequirements)" : PhysicalConnectionRequirements,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-connection-connectioninput-connectionproperties)" : JSON object,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-connection-connectioninput-name)" : String
+  "[Description](#cfn-glue-connection-connectioninput-description)" : String,
+  "[ConnectionType](#cfn-glue-connection-connectioninput-connectiontype)" : String,
+  "[MatchCriteria](#cfn-glue-connection-connectioninput-matchcriteria)" : [ String, ... ],
+  "[PhysicalConnectionRequirements](#cfn-glue-connection-connectioninput-physicalconnectionrequirements)" : [*PhysicalConnectionRequirements*](aws-properties-glue-connection-physicalconnectionrequirements.md),
+  "[ConnectionProperties](#cfn-glue-connection-connectioninput-connectionproperties)" : JSON object,
+  "[Name](#cfn-glue-connection-connectioninput-name)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-glue-connection-connectioninput-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-connection-connectioninput-description): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-connection-connectioninput-connectiontype): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-connection-connectioninput-matchcriteria): 
+[Description](#cfn-glue-connection-connectioninput-description): String
+[ConnectionType](#cfn-glue-connection-connectioninput-connectiontype): String
+[MatchCriteria](#cfn-glue-connection-connectioninput-matchcriteria): 
   - String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-connection-connectioninput-physicalconnectionrequirements): 
-  PhysicalConnectionRequirements
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-connection-connectioninput-connectionproperties): JSON object
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-connection-connectioninput-name): String
+[PhysicalConnectionRequirements](#cfn-glue-connection-connectioninput-physicalconnectionrequirements): 
+  [*PhysicalConnectionRequirements*](aws-properties-glue-connection-physicalconnectionrequirements.md)
+[ConnectionProperties](#cfn-glue-connection-connectioninput-connectionproperties): JSON object
+[Name](#cfn-glue-connection-connectioninput-name): String
 ```
 
 ## Properties<a name="aws-properties-glue-connection-connectioninput-properties"></a>
 
 For more information, see [ConnectionInput Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-connections.html#aws-glue-api-catalog-connections-ConnectionInput) in the *AWS Glue Developer Guide*\.
 
-`Description`  
+`Description`  <a name="cfn-glue-connection-connectioninput-description"></a>
 The description of the connection\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`ConnectionType`  
+`ConnectionType`  <a name="cfn-glue-connection-connectioninput-connectiontype"></a>
 The type of the connection\. Valid values are `JDBC` or `SFTP`\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`MatchCriteria`  
+`MatchCriteria`  <a name="cfn-glue-connection-connectioninput-matchcriteria"></a>
 A list of UTF\-8 strings that specify the criteria that you can use in selecting this connection\.  
  *Required*: Yes  
  *Type*: List of String values  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`PhysicalConnectionRequirements`  
+`PhysicalConnectionRequirements`  <a name="cfn-glue-connection-connectioninput-physicalconnectionrequirements"></a>
 A map of physical connection requirements that are needed to make the connection, such as VPC and SecurityGroup\.  
  *Required*: Yes  
- *Type*:   
- *Update requires*: No interruption 
+ *Type*: [AWS Glue Connection PhysicalConnectionRequirements](aws-properties-glue-connection-physicalconnectionrequirements.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`ConnectionProperties`  
+`ConnectionProperties`  <a name="cfn-glue-connection-connectioninput-connectionproperties"></a>
 UTF\-8 string–to–UTF\-8 string key\-value pairs that specify the parameters for this connection\.  
  *Required*: Yes  
  *Type*: JSON object  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Name`  
+`Name`  <a name="cfn-glue-connection-connectioninput-name"></a>
 The name of the connection\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 

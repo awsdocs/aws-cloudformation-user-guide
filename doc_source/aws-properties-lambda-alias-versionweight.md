@@ -12,31 +12,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-alias-versionweight-functionversion)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-alias-versionweight-functionweight)" : Double
+  "[FunctionVersion](#cfn-lambda-alias-versionweight-functionversion)" : String,
+  "[FunctionWeight](#cfn-lambda-alias-versionweight-functionweight)" : Double
 }
 ```
 
 ### YAML<a name="aws-properties-lambda-alias-versionweight-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-alias-versionweight-functionversion): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-lambda-alias-versionweight-functionweight): Double
+[FunctionVersion](#cfn-lambda-alias-versionweight-functionversion): String
+[FunctionWeight](#cfn-lambda-alias-versionweight-functionweight): Double
 ```
 
 ## Properties<a name="aws-properties-lambda-alias-versionweight-properties"></a>
 
-`FunctionVersion`  
+`FunctionVersion`  <a name="cfn-lambda-alias-versionweight-functionversion"></a>
 Function version to which the alias points\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`FunctionWeight`  
+`FunctionWeight`  <a name="cfn-lambda-alias-versionweight-functionweight"></a>
 The percentage of traffic that will invoke the function version\.   
  *Required*: Yes  
  *Type*: Double  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-lambda-alias-versionweight-seealso"></a>
 

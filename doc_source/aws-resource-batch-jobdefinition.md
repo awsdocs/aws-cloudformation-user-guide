@@ -18,11 +18,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Batch::JobDefinition",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-type)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-parameters)" : Json object,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-containerproperties)" : ContainerProperties,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-jobdefinitionname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-retrystrategy)" : RetryStrategy
+    "[Type](#cfn-batch-jobdefinition-type)" : String,
+    "[Parameters](#cfn-batch-jobdefinition-parameters)" : Json object,
+    "[ContainerProperties](#cfn-batch-jobdefinition-containerproperties)" : [*ContainerProperties*](aws-properties-batch-jobdefinition-containerproperties.md),
+    "[JobDefinitionName](#cfn-batch-jobdefinition-jobdefinitionname)" : String,
+    "[RetryStrategy](#cfn-batch-jobdefinition-retrystrategy)" : [*RetryStrategy*](aws-properties-batch-jobdefinition-retrystrategy.md)
   }
 }
 ```
@@ -32,42 +32,42 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Batch::JobDefinition"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-type): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-parameters): Json object
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-containerproperties): 
-    ContainerProperties
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-jobdefinitionname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-retrystrategy): 
-    RetryStrategy
+  [Type](#cfn-batch-jobdefinition-type): String
+  [Parameters](#cfn-batch-jobdefinition-parameters): Json object
+  [ContainerProperties](#cfn-batch-jobdefinition-containerproperties): 
+    [*ContainerProperties*](aws-properties-batch-jobdefinition-containerproperties.md)
+  [JobDefinitionName](#cfn-batch-jobdefinition-jobdefinitionname): String
+  [RetryStrategy](#cfn-batch-jobdefinition-retrystrategy): 
+    [*RetryStrategy*](aws-properties-batch-jobdefinition-retrystrategy.md)
 ```
 
 ## Properties<a name="aws-resource-batch-jobdefinition-properties"></a>
 
-`Type`  
+`Type`  <a name="cfn-batch-jobdefinition-type"></a>
 The type of job definition\.  
  *Required*: yes  
 *Type*: String  
  *Update requires*: No Interruption 
 
-`Parameters`  
+`Parameters`  <a name="cfn-batch-jobdefinition-parameters"></a>
 Default parameters or parameter substitution placeholders that are set in the job definition\. Parameters are specified as a key\-value pair mapping\.  
  *Required*: yes  
 *Type*: JSON object  
  *Update requires*: No Interruption 
 
-`JobDefinitionName`  
+`JobDefinitionName`  <a name="cfn-batch-jobdefinition-jobdefinitionname"></a>
 The name of the job definition\.  
  *Required*: no  
 *Type*: String  
  *Update requires*: Replacement 
 
-`ContainerProperties`  
+`ContainerProperties`  <a name="cfn-batch-jobdefinition-containerproperties"></a>
 An object with various properties specific to container\-based jobs\.  
  *Required*: yes  
  *Type*: [AWS Batch JobDefinition ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md)  
  *Update requires*: No Interruption 
 
-`RetryStrategy`  
+`RetryStrategy`  <a name="cfn-batch-jobdefinition-retrystrategy"></a>
 The retry strategy to use for failed jobs that are submitted with this job definition\.  
  *Required*: no  
  *Type*: [AWS Batch JobDefinition RetryStrategy](aws-properties-batch-jobdefinition-retrystrategy.md)  
@@ -75,11 +75,11 @@ The retry strategy to use for failed jobs that are submitted with this job defin
 
 ## Return Values<a name="aws-resource-batch-jobdefinition-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d134c10b2"></a>
+### Ref<a name="w3ab2c21c10d136c10b2"></a>
 
 When you pass the logical ID of an `AWS::Batch::JobDefinition` resource to the intrinsic `Ref` function, the function returns the job definition ARN, such as `arn:aws:batch:us-east-1:111122223333:job-definition/test-gpu:2`\. 
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Examples<a name="aws-resource-batch-jobdefinition-examples"></a>
 

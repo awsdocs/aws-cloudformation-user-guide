@@ -2,7 +2,7 @@
 
 The `TagProperty` property type adds tags to all associated instances in an Auto Scaling group\.
 
-The `Tags` property of the [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md) resource contains a list of `TagProperty` property types\. For more information about Auto Scaling tags, see [Tagging Auto Scaling Groups and Amazon EC2 Instances](http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/ASTagging.html) in the *Auto Scaling User Guide*\.
+The `Tags` property of the [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md) resource contains a list of `TagProperty` property types\. For more information about Auto Scaling tags, see [Tagging Auto Scaling Groups and Amazon EC2 Instances](http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/ASTagging.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
 AWS CloudFormation adds the following tags to all Auto Scaling groups and associated instances:
 
@@ -12,39 +12,39 @@ AWS CloudFormation adds the following tags to all Auto Scaling groups and associ
 
 + aws:cloudformation:logical\-id
 
-## Syntax<a name="w3ab2c21c14c86c11"></a>
+## Syntax<a name="w3ab2c21c14c87c11"></a>
 
 ### JSON<a name="aws-properties-as-tags-syntax.json"></a>
 
 ```
 {
-   "Key" : String,
-   "Value" : String,
-   "PropagateAtLaunch" : Boolean
+   "[Key](#cfn-as-tags-Key)" : String,
+   "[Value](#cfn-as-tags-Value)" : String,
+   "[PropagateAtLaunch](#cfn-as-tags-PropagateAtLaunch)" : Boolean
 }
 ```
 
 ### YAML<a name="aws-properties-as-tags-syntax.yaml"></a>
 
 ```
-Key: String
-Value: String
-PropagateAtLaunch: Boolean
+[Key](#cfn-as-tags-Key): String
+[Value](#cfn-as-tags-Value): String
+[PropagateAtLaunch](#cfn-as-tags-PropagateAtLaunch): Boolean
 ```
 
-## Properties<a name="w3ab2c21c14c86c13"></a>
+## Properties<a name="w3ab2c21c14c87c13"></a>
 
-`Key`  
+`Key`  <a name="cfn-as-tags-Key"></a>
 The key name of the tag\.  
 *Required*: Yes  
 *Type*: String
 
-`Value`  
+`Value`  <a name="cfn-as-tags-Value"></a>
 The value for the tag\.  
 *Required*: Yes  
 *Type*: String
 
-`PropagateAtLaunch`  
+`PropagateAtLaunch`  <a name="cfn-as-tags-PropagateAtLaunch"></a>
 Set to `true` if you want AWS CloudFormation to copy the tag to EC2 instances that are launched as part of the auto scaling group\. Set to `false` if you want the tag attached only to the auto scaling group and not copied to any instances launched as part of the auto scaling group\.  
 *Required*: Yes  
 *Type*: Boolean

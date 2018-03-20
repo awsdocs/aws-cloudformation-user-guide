@@ -16,10 +16,10 @@ The `AWS::OpsWorks::Volume` resource registers an Amazon Elastic Block Store \(A
 {
   "Type" : "AWS::OpsWorks::Volume",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-volume-ec2volumeid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-volume-mountpoint)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-volume-name)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-volume-stackid)" : String
+    "[Ec2VolumeId](#cfn-opsworks-volume-ec2volumeid)" : String,
+    "[MountPoint](#cfn-opsworks-volume-mountpoint)" : String,
+    "[Name](#cfn-opsworks-volume-name)" : String,
+    "[StackId](#cfn-opsworks-volume-stackid)" : String
   }
 }
 ```
@@ -29,45 +29,45 @@ The `AWS::OpsWorks::Volume` resource registers an Amazon Elastic Block Store \(A
 ```
 Type: "AWS::OpsWorks::Volume"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-volume-ec2volumeid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-volume-mountpoint): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-volume-name): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-opsworks-volume-stackid): String
+  [Ec2VolumeId](#cfn-opsworks-volume-ec2volumeid): String
+  [MountPoint](#cfn-opsworks-volume-mountpoint): String
+  [Name](#cfn-opsworks-volume-name): String
+  [StackId](#cfn-opsworks-volume-stackid): String
 ```
 
 ## Properties<a name="aws-resource-opsworks-volume-properties"></a>
 
-`Ec2VolumeId`  
+`Ec2VolumeId`  <a name="cfn-opsworks-volume-ec2volumeid"></a>
 The ID of the Amazon EBS volume to register with the AWS OpsWorks stack\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`MountPoint`  
+`MountPoint`  <a name="cfn-opsworks-volume-mountpoint"></a>
 The mount point for the Amazon EBS volume, such as `/mnt/disk1`\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Name`  
+`Name`  <a name="cfn-opsworks-volume-name"></a>
 A name for the Amazon EBS volume\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`StackId`  
+`StackId`  <a name="cfn-opsworks-volume-stackid"></a>
 The ID of the AWS OpsWorks stack that AWS OpsWorks registers the volume to\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Value<a name="aws-resource-opsworks-volume-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d871c11b2"></a>
+### Ref<a name="w3ab2c21c10d874c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the AWS OpsWorks volume ID, such as `1ab23cd4-92ff-4501-b37c-example`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="aws-resource-opsworks-volume-examples"></a>
 

@@ -11,6 +11,7 @@ You can use intrinsic functions only in specific parts of a template\. Currently
 + [`Fn::FindInMap`](intrinsic-function-reference-findinmap.md)
 + [`Fn::GetAtt`](intrinsic-function-reference-getatt.md)
 + [`Fn::GetAZs`](intrinsic-function-reference-getavailabilityzones.md)
++ [`Fn::GetCidr`](intrinsic-function-reference-getcidr.md)
 + [Fn::ImportValue](intrinsic-function-reference-importvalue.md)
 + [`Fn::Join`](intrinsic-function-reference-join.md)
 + [`Fn::Select`](intrinsic-function-reference-select.md)

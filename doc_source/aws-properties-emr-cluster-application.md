@@ -2,48 +2,48 @@
 
 `Application` is a property of the [AWS::EMR::Cluster](aws-resource-emr-cluster.md) resource that adds an Amazon EMR \(Amazon EMR\) application bundle or third\-party software to an Amazon EMR cluster\.
 
-## Syntax<a name="w3ab2c21c14d868b5"></a>
+## Syntax<a name="w3ab2c21c14d893b5"></a>
 
 ### JSON<a name="aws-properties-emr-cluster-application-syntax.json"></a>
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-cluster-application-additionalinfo)" : { String:String, ... },
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-cluster-application-args)" : [ String, ... ],
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-cluster-application-name)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-cluster-application-version)" : String
+  "[AdditionalInfo](#cfn-emr-cluster-application-additionalinfo)" : { String:String, ... },
+  "[Args](#cfn-emr-cluster-application-args)" : [ String, ... ],
+  "[Name](#cfn-emr-cluster-application-name)" : String,
+  "[Version](#cfn-emr-cluster-application-version)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-emr-cluster-application-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-cluster-application-additionalinfo):
+[AdditionalInfo](#cfn-emr-cluster-application-additionalinfo):
   String: String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-cluster-application-args):
+[Args](#cfn-emr-cluster-application-args):
   - String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-cluster-application-name): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-emr-cluster-application-version): String
+[Name](#cfn-emr-cluster-application-name): String
+[Version](#cfn-emr-cluster-application-version): String
 ```
 
-## Properties<a name="w3ab2c21c14d868b7"></a>
+## Properties<a name="w3ab2c21c14d893b7"></a>
 
-`AdditionalInfo`  
+`AdditionalInfo`  <a name="cfn-emr-cluster-application-additionalinfo"></a>
 Metadata about third\-party applications that third\-party vendors use for testing purposes\.  
 *Required: *No  
 *Type*: String\-to\-string map
 
-`Args`  
+`Args`  <a name="cfn-emr-cluster-application-args"></a>
 Arguments that Amazon EMR passes to the application\.  
 *Required: *No  
 *Type*: List of String values
 
-`Name`  
+`Name`  <a name="cfn-emr-cluster-application-name"></a>
 The name of the application to add to your cluster, such as `Hadoop` or `Hive`\. For valid values, see the [Applications](http://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_RunJobFlow.html) parameter in the *Amazon EMR API Reference*\.  
 *Required: *No  
 *Type*: String
 
-`Version`  
+`Version`  <a name="cfn-emr-cluster-application-version"></a>
 The version of the application\.  
 *Required: *No  
 *Type*: String

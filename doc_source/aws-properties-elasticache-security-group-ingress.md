@@ -17,9 +17,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ElastiCache::SecurityGroupIngress",
   "Properties" :
   {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticache-securitygroupingress-cachesecuritygroupname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticache-securitygroupingress-ec2securitygroupname)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticache-securitygroupingress-ec2securitygroupownerid)" : String
+    "[CacheSecurityGroupName](#cfn-elasticache-securitygroupingress-cachesecuritygroupname)" : String,
+    "[EC2SecurityGroupName](#cfn-elasticache-securitygroupingress-ec2securitygroupname)" : String,
+    "[EC2SecurityGroupOwnerId](#cfn-elasticache-securitygroupingress-ec2securitygroupownerid)" : String
   }
 }
 ```
@@ -29,26 +29,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ElastiCache::SecurityGroupIngress"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticache-securitygroupingress-cachesecuritygroupname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticache-securitygroupingress-ec2securitygroupname): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-elasticache-securitygroupingress-ec2securitygroupownerid): String
+  [CacheSecurityGroupName](#cfn-elasticache-securitygroupingress-cachesecuritygroupname): String
+  [EC2SecurityGroupName](#cfn-elasticache-securitygroupingress-ec2securitygroupname): String
+  [EC2SecurityGroupOwnerId](#cfn-elasticache-securitygroupingress-ec2securitygroupownerid): String
 ```
 
 ## Properties<a name="w3ab2c21c10d558b9"></a>
 
-`CacheSecurityGroupName`  
+`CacheSecurityGroupName`  <a name="cfn-elasticache-securitygroupingress-cachesecuritygroupname"></a>
 The name of the Cache Security Group to authorize\.  
 *Type*: String  
 *Required: *Yes  
 *Update requires*: Updates are not supported\.
 
-`EC2SecurityGroupName`  
+`EC2SecurityGroupName`  <a name="cfn-elasticache-securitygroupingress-ec2securitygroupname"></a>
 Name of the EC2 Security Group to include in the authorization\.  
 *Type*: String  
 *Required: *Yes  
 *Update requires*: Updates are not supported\.
 
-`EC2SecurityGroupOwnerId`  
+`EC2SecurityGroupOwnerId`  <a name="cfn-elasticache-securitygroupingress-ec2securitygroupownerid"></a>
 Specifies the AWS Account ID of the owner of the EC2 security group specified in the EC2SecurityGroupName property\. The AWS access key ID is not an acceptable value\.  
 *Type*: String  
 *Required: *No  

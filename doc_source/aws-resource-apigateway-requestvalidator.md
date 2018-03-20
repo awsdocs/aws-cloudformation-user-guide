@@ -18,10 +18,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::RequestValidator",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-requestvalidator-name)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-requestvalidator-restapiid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-requestvalidator-validaterequestbody)" : Boolean,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-requestvalidator-validaterequestparameters)" : Boolean
+    "[Name](#cfn-apigateway-requestvalidator-name)" : String,
+    "[RestApiId](#cfn-apigateway-requestvalidator-restapiid)" : String,
+    "[ValidateRequestBody](#cfn-apigateway-requestvalidator-validaterequestbody)" : Boolean,
+    "[ValidateRequestParameters](#cfn-apigateway-requestvalidator-validaterequestparameters)" : Boolean
   }
 }
 ```
@@ -31,10 +31,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ApiGateway::RequestValidator"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-requestvalidator-name): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-requestvalidator-restapiid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-requestvalidator-validaterequestbody): Boolean
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-requestvalidator-validaterequestparameters): Boolean
+  [Name](#cfn-apigateway-requestvalidator-name): String
+  [RestApiId](#cfn-apigateway-requestvalidator-restapiid): String
+  [ValidateRequestBody](#cfn-apigateway-requestvalidator-validaterequestbody): Boolean
+  [ValidateRequestParameters](#cfn-apigateway-requestvalidator-validaterequestparameters): Boolean
 ```
 
 ## Properties<a name="w3ab2c21c10c68b9"></a>
@@ -42,29 +42,29 @@ Properties:
 **Note**  
 For more information about each property, see [ RequestValidator](http://docs.aws.amazon.com/apigateway/api-reference/resource/request-validator) in the *Amazon API Gateway REST API Reference*\.
 
-`Name`  
+`Name`  <a name="cfn-apigateway-requestvalidator-name"></a>
 The name of this request validator\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`RestApiId`  
+`RestApiId`  <a name="cfn-apigateway-requestvalidator-restapiid"></a>
 The identifier of the targeted API entity\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`ValidateRequestBody`  
+`ValidateRequestBody`  <a name="cfn-apigateway-requestvalidator-validaterequestbody"></a>
 Indicates whether to validate the request body according to the configured schema for the targeted API and method\.  
 *Required: *No  
 *Type*: Boolean  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ValidateRequestParameters`  
+`ValidateRequestParameters`  <a name="cfn-apigateway-requestvalidator-validaterequestparameters"></a>
 Indicates whether to validate request parameters\.  
 *Required: *No  
 *Type*: Boolean  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Value<a name="aws-resource-apigateway-requestvalidator-returnvalues"></a>
 
@@ -72,7 +72,7 @@ Indicates whether to validate request parameters\.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ID of the request validator, such as `abc123`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="aws-resource-apigateway-requestvalidator-examples"></a>
 

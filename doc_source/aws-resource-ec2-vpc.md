@@ -19,11 +19,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type" : "AWS::EC2::VPC",
    "Properties" : {
-      "CidrBlock" : String,
-      "EnableDnsSupport" : Boolean,
-      "EnableDnsHostnames" : Boolean,
-      "InstanceTenancy" : String,
-      "Tags" : [ Resource Tag, ... ]
+      "[CidrBlock](#cfn-aws-ec2-vpc-cidrblock)" : String,
+      "[EnableDnsSupport](#cfn-aws-ec2-vpc-EnableDnsSupport)" : Boolean,
+      "[EnableDnsHostnames](#cfn-aws-ec2-vpc-EnableDnsHostnames)" : Boolean,
+      "[InstanceTenancy](#cfn-aws-ec2-vpc-instancetenancy)" : String,
+      "[Tags](#cfn-aws-ec2-vpc-tags)" : [ Resource Tag, ... ]
    }
 }
 ```
@@ -33,50 +33,51 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::VPC"
 Properties: 
-  CidrBlock: String
-  EnableDnsSupport: Boolean
-  EnableDnsHostnames: Boolean
-  InstanceTenancy: String
-  Tags:
+  [CidrBlock](#cfn-aws-ec2-vpc-cidrblock): String
+  [EnableDnsSupport](#cfn-aws-ec2-vpc-EnableDnsSupport): Boolean
+  [EnableDnsHostnames](#cfn-aws-ec2-vpc-EnableDnsHostnames): Boolean
+  [InstanceTenancy](#cfn-aws-ec2-vpc-instancetenancy): String
+  [Tags](#cfn-aws-ec2-vpc-tags):
     - Resource Tag
 ```
 
 ## Properties<a name="w3ab2c21c10d470b9"></a>
 
-`CidrBlock`  
+`CidrBlock`  <a name="cfn-aws-ec2-vpc-cidrblock"></a>
 The CIDR block you want the VPC to cover\. For example: `"10.0.0.0/16"`\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`EnableDnsSupport`  
+`EnableDnsSupport`  <a name="cfn-aws-ec2-vpc-EnableDnsSupport"></a>
 Specifies whether DNS resolution is supported for the VPC\. If this attribute is `true`, the Amazon DNS server resolves DNS hostnames for your instances to their corresponding IP addresses; otherwise, it does not\. By default the value is set to `true`\.  
 *Required: *No  
 *Type*: Boolean  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`EnableDnsHostnames`  
+`EnableDnsHostnames`  <a name="cfn-aws-ec2-vpc-EnableDnsHostnames"></a>
 Specifies whether the instances launched in the VPC get DNS hostnames\. If this attribute is `true`, instances in the VPC get DNS hostnames; otherwise, they do not\. You can only set `EnableDnsHostnames` to `true` if you also set the `EnableDnsSupport` attribute to `true`\. By default, the value is set to `false`\.  
 *Required: *No  
 *Type*: Boolean  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`InstanceTenancy`  
+`InstanceTenancy`  <a name="cfn-aws-ec2-vpc-instancetenancy"></a>
 The allowed tenancy of instances launched into the VPC\.   
 
 + `"default"`: Instances can be launched with any tenancy\.
 
 + `"dedicated"`: Any instance launched into the VPC automatically has dedicated tenancy, unless you launch it with the default tenancy\.
+Update: Conditional\. Updating `InstanceTenancy` requires no replacement only if you are updating its value from `"dedicated"` to `"default"`\. Updating `InstanceTenancy` from `"default"` to `"dedicated"` requires replacement\.  
 *Required: *No  
 *Type*: String  
 *Valid values*: `"default"` or `"dedicated"`  
-*Update requires*: Replacement
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Tags`  
+`Tags`  <a name="cfn-aws-ec2-vpc-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this VPC\. To name a VPC resource, specify a value for the `Name` key\.  
 *Required: *No  
-*Type*:   
-*Update requires*: No interruption\.
+*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
 ## Return Values<a name="w3ab2c21c10d470c11"></a>
 
@@ -84,7 +85,7 @@ An arbitrary set of tags \(key–value pairs\) for this VPC\. To name a VPC reso
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource ID, such as `vpc-18ac277d`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ### Fn::GetAtt<a name="w3ab2c21c10d470c11b4"></a>
 
@@ -105,7 +106,7 @@ The default security group ID that is associated with the VPC\. For example, `sg
 `Ipv6CidrBlocks`  
 A list of IPv6 CIDR blocks that are associated with the VPC, such as `[ 2001:db8:1234:1a00::/56 ]`\.
 
-For more information about using `Fn::GetAtt`, see Fn::GetAtt\.
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
 ## Example<a name="w3ab2c21c10d470c13"></a>
 

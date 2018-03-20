@@ -30,13 +30,13 @@ If your template includes an unsupported change, AWS CloudFormation returns a me
 
    + Add, modify, or delete properties of existing resources\.
 
-     Consult the AWS Resource Types Reference for information about the effects of updating particular resource properties\. For each property, the effects of an update will be one of the following:
+     Consult the [AWS Resource Types Reference](aws-template-resource-type-ref.md) for information about the effects of updating particular resource properties\. For each property, the effects of an update will be one of the following:
 
-     + *Update requires*: No interruption
+     + *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-     + *Update requires*: Some interruptions
+     + *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
-     + *Update requires*: Replacement
+     + *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
    + Add, modify, or delete attributes for resources \(`Metadata`, `DependsOn`, `CreationPolicy`, `UpdatePolicy`, and `DeletionPolicy`\)\.
 **Important**  
@@ -54,9 +54,9 @@ You cannot update conditions by themselves\. You can update conditions only when
 
    + Add, modify, or delete output value declarations\.
 
-   Some resources or properties may have constraints on property values or changes to those values\. For example, changes to the `AllocatedStorage` property of an  AWS::RDS::DBInstance resource must be greater than the current setting\. If the value specified for the update does not meet those constraints, the update for that resource fails\. For the specific constraints on `AllocatedStorage` changes, see [ ModifyDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html)\.
+   Some resources or properties may have constraints on property values or changes to those values\. For example, changes to the `AllocatedStorage` property of an [ AWS::RDS::DBInstance](aws-properties-rds-database-instance.md) resource must be greater than the current setting\. If the value specified for the update does not meet those constraints, the update for that resource fails\. For the specific constraints on `AllocatedStorage` changes, see [ ModifyDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html)\.
 
-   Updates to a resource can affect the properties of other resources\. If you used the  Ref function  or the  Fn::GetAtt function to specify an attribute from an updated resource as part of a property value in another resource in the template, AWS CloudFormation also updates the resource that contains the reference to the property that has changed\. For example, if you updated the `MasterUsername` property of an `AWS::RDS::DBInstance` resource and you had an `AWS::AutoScaling::LaunchConfiguration` resource that had a `UserData` property that contained a reference to the DB instance name using the `Ref` function, AWS CloudFormation would recreate the DB instance with a new name and also update the `LaunchConfiguration` resource\.
+   Updates to a resource can affect the properties of other resources\. If you used the [ Ref function ](intrinsic-function-reference-ref.md) or the [ Fn::GetAtt function](intrinsic-function-reference-getatt.md) to specify an attribute from an updated resource as part of a property value in another resource in the template, AWS CloudFormation also updates the resource that contains the reference to the property that has changed\. For example, if you updated the `MasterUsername` property of an `AWS::RDS::DBInstance` resource and you had an `AWS::AutoScaling::LaunchConfiguration` resource that had a `UserData` property that contained a reference to the DB instance name using the `Ref` function, AWS CloudFormation would recreate the DB instance with a new name and also update the `LaunchConfiguration` resource\.
 
 1. To check for syntax errors in your template, from the AWS CloudFormation Designer toolbar, choose **Validate template** \(![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/designer-validate-icon.png)\)\.
 

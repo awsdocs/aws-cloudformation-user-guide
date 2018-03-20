@@ -12,46 +12,46 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-database-databaseinput-locationuri)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-database-databaseinput-description)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-database-databaseinput-parameters)" : JSON object,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-database-databaseinput-name)" : String
+  "[LocationUri](#cfn-glue-database-databaseinput-locationuri)" : String,
+  "[Description](#cfn-glue-database-databaseinput-description)" : String,
+  "[Parameters](#cfn-glue-database-databaseinput-parameters)" : JSON object,
+  "[Name](#cfn-glue-database-databaseinput-name)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-glue-database-databaseinput-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-database-databaseinput-locationuri): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-database-databaseinput-description): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-database-databaseinput-parameters): JSON object
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-database-databaseinput-name): String
+[LocationUri](#cfn-glue-database-databaseinput-locationuri): String
+[Description](#cfn-glue-database-databaseinput-description): String
+[Parameters](#cfn-glue-database-databaseinput-parameters): JSON object
+[Name](#cfn-glue-database-databaseinput-name): String
 ```
 
 ## Properties<a name="aws-properties-glue-database-databaseinput-properties"></a>
 
 For more information, see [DatabaseInput Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-databases.html#aws-glue-api-catalog-databases-DatabaseInput) in the *AWS Glue Developer Guide*\.
 
-`LocationUri`  
+`LocationUri`  <a name="cfn-glue-database-databaseinput-locationuri"></a>
 The location of the database \(for example, an HDFS path\)\. It must match the URI address multi\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Description`  
+`Description`  <a name="cfn-glue-database-databaseinput-description"></a>
 The description of the database\. It must match the URI address multi\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Parameters`  
+`Parameters`  <a name="cfn-glue-database-databaseinput-parameters"></a>
 UTF\-8 string–to–UTF\-8 string key\-value pairs that specify the properties that are associated with the database\.  
  *Required*: No  
  *Type*: JSON object  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Name`  
+`Name`  <a name="cfn-glue-database-databaseinput-name"></a>
 The name of the database\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
  *Required*: No  
  *Type*: String  
- *Update requires*: Replacement 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 

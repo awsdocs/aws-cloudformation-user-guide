@@ -2,7 +2,7 @@
 
 Associates a subnet with a route table\.
 
-When `AWS::EC2::SubnetRouteTableAssociation` resources are created during create or update operations, AWS CloudFormation adopts existing resources that share the same key properties \(the properties that contribute to uniquely identify the resource\)\. However, if the operation fails and rolls back, AWS CloudFormation deletes the previously out\-of\-band resources\. You can protect against this behavior by using `Retain` deletion policies\. For more information, see DeletionPolicy Attribute\.
+When `AWS::EC2::SubnetRouteTableAssociation` resources are created during create or update operations, AWS CloudFormation adopts existing resources that share the same key properties \(the properties that contribute to uniquely identify the resource\)\. However, if the operation fails and rolls back, AWS CloudFormation deletes the previously out\-of\-band resources\. You can protect against this behavior by using `Retain` deletion policies\. For more information, see [DeletionPolicy Attribute](aws-attribute-deletionpolicy.md)\.
 
 
 + [Syntax](#aws-resource-ec2-subnetroutetableassociation-syntax)
@@ -21,8 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::SubnetRouteTableAssociation",
   "Properties" : {
-    "RouteTableId" : String,
-    "SubnetId" : String
+    "[RouteTableId](#cfn-ec2-subnetroutetableassociation-routetableid)" : String,
+    "[SubnetId](#cfn-ec2-subnetroutetableassociation-subnetid)" : String
   }
 }
 ```
@@ -32,13 +32,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::SubnetRouteTableAssociation"
 Properties: 
-  RouteTableId: String
-  SubnetId: String
+  [RouteTableId](#cfn-ec2-subnetroutetableassociation-routetableid): String
+  [SubnetId](#cfn-ec2-subnetroutetableassociation-subnetid): String
 ```
 
 ## Properties<a name="w3ab2c21c10d457c11"></a>
 
-`RouteTableId`  
+`RouteTableId`  <a name="cfn-ec2-subnetroutetableassociation-routetableid"></a>
 The ID of the route table\. This is commonly written as a reference to a route table declared elsewhere in the template\. For example:  
 
 ```
@@ -46,9 +46,9 @@ The ID of the route table\. This is commonly written as a reference to a route t
 ```
 *Required*: Yes  
 *Type*: String  
-*Update requires*: No interruption\. However, the physical ID changes when the route table ID is changed\.
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\. However, the physical ID changes when the route table ID is changed\.
 
-`SubnetId`  
+`SubnetId`  <a name="cfn-ec2-subnetroutetableassociation-subnetid"></a>
 The ID of the subnet\. This is commonly written as a reference to a subnet declared elsewhere in the template\. For example:  
 
 ```
@@ -56,7 +56,7 @@ The ID of the subnet\. This is commonly written as a reference to a subnet decla
 ```
 *Required*: Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Value<a name="w3ab2c21c10d457c13"></a>
 
@@ -68,7 +68,7 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 For the subnet route table association with the logical ID "MyRTA", Ref will return the AWS resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d457c15"></a>
 

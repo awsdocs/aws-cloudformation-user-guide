@@ -6,6 +6,6 @@ The topics in this section are designed to demonstrate how common tasks related 
 
 ## In This Section<a name="w3ab2c15c25b7"></a>
 
-+ 
++ [Microsoft Windows Amazon Machine Images \(AMIs\) and AWS CloudFormation Templates](cfn-windows-stacks-amis-and-templates.md)
 
-+ 
++ [Bootstrapping AWS CloudFormation Windows Stacks](cfn-windows-stacks-bootstrapping.md)

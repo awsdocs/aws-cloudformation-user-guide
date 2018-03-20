@@ -1,12 +1,12 @@
 # AWS::CodePipeline::CustomActionType<a name="aws-resource-codepipeline-customactiontype"></a>
 
-The `AWS::CodePipeline::CustomActionType` resource creates a custom action for activities that aren't included in the AWS CodePipeline default actions, such as running an internally developed build process or a test suite\. You can use these custom actions in the stage of a pipeline\. For more information, see [Create and Add a Custom Action in AWS CodePipeline](http://docs.aws.amazon.com/codepipeline/latest/userguide/how-to-create-custom-action.html) in the *AWS CodePipeline User Guide*\.
+The `AWS::CodePipeline::CustomActionType` resource creates a custom action for activities that aren't included in the AWS CodePipeline default actions, such as running an internally developed build process or a test suite\. You can use these custom actions in the stage of a [pipeline](aws-resource-codepipeline-pipeline.md)\. For more information, see [Create and Add a Custom Action in AWS CodePipeline](http://docs.aws.amazon.com/codepipeline/latest/userguide/how-to-create-custom-action.html) in the *AWS CodePipeline User Guide*\.
 
 
 + [Syntax](#aws-resource-codepipeline-customactiontype-syntax)
-+ [Properties](#w3ab2c21c10d234b9)
-+ [Return Value](#w3ab2c21c10d234c11)
-+ [Example](#w3ab2c21c10d234c13)
++ [Properties](#w3ab2c21c10d235b9)
++ [Return Value](#w3ab2c21c10d235c11)
++ [Example](#w3ab2c21c10d235c13)
 
 ## Syntax<a name="aws-resource-codepipeline-customactiontype-syntax"></a>
 
@@ -18,13 +18,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodePipeline::CustomActionType",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codepipeline-customactiontype-category)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codepipeline-customactiontype-configurationproperties)" : [ ConfigurationProperties, ... ],
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codepipeline-customactiontype-inputartifactdetails)" : ArtifactDetails,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codepipeline-customactiontype-outputartifactdetails)" : ArtifactDetails,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codepipeline-customactiontype-provider)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codepipeline-customactiontype-settings)" : Settings,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codepipeline-customactiontype-version)" : String
+    "[Category](#cfn-codepipeline-customactiontype-category)" : String,
+    "[ConfigurationProperties](#cfn-codepipeline-customactiontype-configurationproperties)" : [ ConfigurationProperties, ... ],
+    "[InputArtifactDetails](#cfn-codepipeline-customactiontype-inputartifactdetails)" : ArtifactDetails,
+    "[OutputArtifactDetails](#cfn-codepipeline-customactiontype-outputartifactdetails)" : ArtifactDetails,
+    "[Provider](#cfn-codepipeline-customactiontype-provider)" : String,
+    "[Settings](#cfn-codepipeline-customactiontype-settings)" : Settings,
+    "[Version](#cfn-codepipeline-customactiontype-version)" : String
   }
 }
 ```
@@ -34,72 +34,72 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::CodePipeline::CustomActionType"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codepipeline-customactiontype-category): String,
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codepipeline-customactiontype-configurationproperties):
+  [Category](#cfn-codepipeline-customactiontype-category): String,
+  [ConfigurationProperties](#cfn-codepipeline-customactiontype-configurationproperties):
     - ConfigurationProperties
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codepipeline-customactiontype-inputartifactdetails):
+  [InputArtifactDetails](#cfn-codepipeline-customactiontype-inputartifactdetails):
     ArtifactDetails
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codepipeline-customactiontype-outputartifactdetails):
+  [OutputArtifactDetails](#cfn-codepipeline-customactiontype-outputartifactdetails):
     ArtifactDetails
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codepipeline-customactiontype-provider): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codepipeline-customactiontype-settings):
+  [Provider](#cfn-codepipeline-customactiontype-provider): String
+  [Settings](#cfn-codepipeline-customactiontype-settings):
     Settings
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-codepipeline-customactiontype-version): String
+  [Version](#cfn-codepipeline-customactiontype-version): String
 ```
 
-## Properties<a name="w3ab2c21c10d234b9"></a>
+## Properties<a name="w3ab2c21c10d235b9"></a>
 
-`Category`  
+`Category`  <a name="cfn-codepipeline-customactiontype-category"></a>
 The category of the custom action, such as a source action or a build action\. For valid values, see [CreateCustomActionType](http://docs.aws.amazon.com/codepipeline/latest/APIReference/API_CreateCustomActionType.html) in the *AWS CodePipeline API Reference*\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`ConfigurationProperties`  
+`ConfigurationProperties`  <a name="cfn-codepipeline-customactiontype-configurationproperties"></a>
 The configuration properties for the custom action\.  
 *Required: *No  
 *Type*: List of [AWS CodePipeline CustomActionType ConfigurationProperties](aws-resource-codepipeline-customactiontype-configurationproperties.md)  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`InputArtifactDetails`  
+`InputArtifactDetails`  <a name="cfn-codepipeline-customactiontype-inputartifactdetails"></a>
 The input artifact details for this custom action\.  
 *Required: *Yes  
 *Type*: [AWS CodePipeline CustomActionType ArtifactDetails](aws-resource-codepipeline-customactiontype-artifactdetails.md)  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`OutputArtifactDetails`  
+`OutputArtifactDetails`  <a name="cfn-codepipeline-customactiontype-outputartifactdetails"></a>
 The output artifact details for this custom action\.  
 *Required: *Yes  
 *Type*: [AWS CodePipeline CustomActionType ArtifactDetails](aws-resource-codepipeline-customactiontype-artifactdetails.md)  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Provider`  
+`Provider`  <a name="cfn-codepipeline-customactiontype-provider"></a>
 The name of the service provider that AWS CodePipeline uses for this custom action\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Settings`  
+`Settings`  <a name="cfn-codepipeline-customactiontype-settings"></a>
 URLs that provide users information about this custom action\.  
 *Required: *No  
 *Type*: [AWS CodePipeline CustomActionType Settings](aws-resource-codepipeline-customactiontype-settings.md)  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`Version`  
+`Version`  <a name="cfn-codepipeline-customactiontype-version"></a>
 The version number of this custom action\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w3ab2c21c10d234c11"></a>
+## Return Value<a name="w3ab2c21c10d235c11"></a>
 
-### Ref<a name="w3ab2c21c10d234c11b2"></a>
+### Ref<a name="w3ab2c21c10d235c11b2"></a>
 
 When you pass the logical ID of an `AWS::CodePipeline::CustomActionType` resource to the intrinsic `Ref` function, the function returns the custom action name, such as `custo-MyCus-A1BCDEFGHIJ2`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10d234c13"></a>
+## Example<a name="w3ab2c21c10d235c13"></a>
 
 The following example is a custom build action that requires users to specify one property: a project name\.
 

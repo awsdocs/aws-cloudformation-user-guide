@@ -16,9 +16,9 @@ The `AWS::ApiGateway::UsagePlanKey` resource associates an Amazon API Gateway AP
 {
   "Type" : "AWS::ApiGateway::UsagePlanKey",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-keyid)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-keytype)" : String,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-usageplanid)" : String
+    "[KeyId](#cfn-apigateway-keyid)" : String,
+    "[KeyType](#cfn-apigateway-keytype)" : String,
+    "[UsagePlanId](#cfn-apigateway-usageplanid)" : String
   }
 }
 ```
@@ -28,34 +28,34 @@ The `AWS::ApiGateway::UsagePlanKey` resource associates an Amazon API Gateway AP
 ```
 Type: "AWS::ApiGateway::UsagePlanKey"
 Properties:
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-keyid): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-keytype): String
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-apigateway-usageplanid): String
+  [KeyId](#cfn-apigateway-keyid): String
+  [KeyType](#cfn-apigateway-keytype): String
+  [UsagePlanId](#cfn-apigateway-usageplanid): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-usageplankey-properties"></a>
 
-`KeyId`  
+`KeyId`  <a name="cfn-apigateway-keyid"></a>
 The ID of the usage plan key\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`KeyType`  
+`KeyType`  <a name="cfn-apigateway-keytype"></a>
 The type of usage plan key\. Currently, the valid key type is `API_KEY`\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`UsagePlanId`  
+`UsagePlanId`  <a name="cfn-apigateway-usageplanid"></a>
 The value of the usage plan key\.  
 *Required: *Yes  
 *Type*: String  
-*Update requires*: Replacement
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Value<a name="aws-resource-apigateway-usageplankey-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10c89c11b2"></a>
+### Ref<a name="w3ab2c21c10c88c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -65,7 +65,7 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 For the `IAM::InstanceProfile` with the logical ID `MyProfile`, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="aws-resource-apigateway-usageplankey-examples"></a>
 

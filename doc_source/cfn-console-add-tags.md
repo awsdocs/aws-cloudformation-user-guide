@@ -1,6 +1,6 @@
 # Setting AWS CloudFormation Stack Options<a name="cfn-console-add-tags"></a>
 
-After specifying parameters that are defined in the template, you can set additional options for your stack\.
+After specifying [parameters](parameters-section-structure.md) that are defined in the template, you can set additional options for your stack\.
 
 You can set the following stack options:
 
@@ -32,4 +32,4 @@ Prevents a stack from being accidently deleted\. If a user attempts to delete a 
 
 1. On the **Options** screen of the **Create Stack** wizard, you can specify tags or set additional options by expanding the **Advanced** section\.
 
-1. When you have entered all of your stack options, click **Next Step** to proceed with reviewing your stack\.
+1. When you have entered all of your stack options, click **Next Step** to proceed with [reviewing your stack](cfn-using-console-create-stack-review.md)\.

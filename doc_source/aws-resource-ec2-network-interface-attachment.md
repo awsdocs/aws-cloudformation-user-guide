@@ -18,10 +18,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type" : "AWS::EC2::NetworkInterfaceAttachment",
    "Properties" : {
-      "DeleteOnTermination": Boolean,
-      "DeviceIndex": String,
-      "InstanceId": String,
-      "NetworkInterfaceId": String
+      "[DeleteOnTermination](#cfn-ec2-network-interface-attachment-deleteonterm)": Boolean,
+      "[DeviceIndex](#cfn-ec2-network-interface-attachment-deviceindex)": String,
+      "[InstanceId](#cfn-ec2-network-interface-attachment-instanceid)": String,
+      "[NetworkInterfaceId](#cfn-ec2-network-interface-attachment-networkinterfaceid)": String
    }
 }
 ```
@@ -31,37 +31,37 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::NetworkInterfaceAttachment"
 Properties: 
-  DeleteOnTermination: Boolean
-  DeviceIndex: String
-  InstanceId: String
-  NetworkInterfaceId: String
+  [DeleteOnTermination](#cfn-ec2-network-interface-attachment-deleteonterm): Boolean
+  [DeviceIndex](#cfn-ec2-network-interface-attachment-deviceindex): String
+  [InstanceId](#cfn-ec2-network-interface-attachment-instanceid): String
+  [NetworkInterfaceId](#cfn-ec2-network-interface-attachment-networkinterfaceid): String
 ```
 
 ## Properties<a name="w3ab2c21c10d402b9"></a>
 
-`DeleteOnTermination`  
+`DeleteOnTermination`  <a name="cfn-ec2-network-interface-attachment-deleteonterm"></a>
 Whether to delete the network interface when the instance terminates\. By default, this value is set to `True`\.  
 *Required: *No  
 *Type*: Boolean\.  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`DeviceIndex`  
+`DeviceIndex`  <a name="cfn-ec2-network-interface-attachment-deviceindex"></a>
 The network interface's position in the attachment order\. For example, the first attached network interface has a `DeviceIndex` of `0`\.  
 *Required*: Yes\.  
 *Type*: String\.  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`InstanceId`  
+`InstanceId`  <a name="cfn-ec2-network-interface-attachment-instanceid"></a>
 The ID of the instance to which you will attach the ENI\.  
 *Required*: Yes\.  
 *Type*: String\.  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`NetworkInterfaceId`  
+`NetworkInterfaceId`  <a name="cfn-ec2-network-interface-attachment-networkinterfaceid"></a>
 The ID of the ENI that you want to attach\.  
 *Required*: Yes\.  
 *Type*: String\.  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Values<a name="w3ab2c21c10d402c11"></a>
 
@@ -69,7 +69,7 @@ The ID of the ENI that you want to attach\.
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="w3ab2c21c10d402c13"></a>
 

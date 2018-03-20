@@ -12,29 +12,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters)" : JSON object,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion)" : String
+  "[Parameters](#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters)" : JSON object,
+  "[DocumentVersion](#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters):
+[Parameters](#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters):
   JSON object
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion): String
+[DocumentVersion](#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion): String
 ```
 
 ## Properties<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters-properties"></a>
 
-`Parameters`  
+`Parameters`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters"></a>
 The parameters for the `AUTOMATION` task\.  
  *Required*: No  
  *Type*: JSON object  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`DocumentVersion`  
+`DocumentVersion`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion"></a>
 The version of an Automation document to use during task execution\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

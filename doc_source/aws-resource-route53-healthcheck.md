@@ -4,9 +4,9 @@ Use the `AWS::Route53::HealthCheck` resource to check the health of your resourc
 
 
 + [Syntax](#aws-resource-route53-healthcheck-syntax)
-+ [Properties](#w3ab2c21c10d941b9)
-+ [Return Value](#w3ab2c21c10d941c11)
-+ [Example](#w3ab2c21c10d941c13)
++ [Properties](#w3ab2c21c10d945b9)
++ [Return Value](#w3ab2c21c10d945c11)
++ [Example](#w3ab2c21c10d945c13)
 
 ## Syntax<a name="aws-resource-route53-healthcheck-syntax"></a>
 
@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Route53::HealthCheck",
   "Properties" : {
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-route53-healthcheck-healthcheckconfig)" : HealthCheckConfig,
-    "[[ERROR] BAD/MISSING LINK TEXT](#cfn-route53-healthcheck-healthchecktags)" : [ HealthCheckTags, ... ]
+    "[HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig)" : HealthCheckConfig,
+    "[HealthCheckTags](#cfn-route53-healthcheck-healthchecktags)" : [ HealthCheckTags, ... ]
   }
 }
 ```
@@ -29,35 +29,35 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Route53::HealthCheck"
 Properties: 
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-route53-healthcheck-healthcheckconfig):
+  [HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig):
     HealthCheckConfig
-  [[ERROR] BAD/MISSING LINK TEXT](#cfn-route53-healthcheck-healthchecktags):
+  [HealthCheckTags](#cfn-route53-healthcheck-healthchecktags):
     - HealthCheckTags
 ```
 
-## Properties<a name="w3ab2c21c10d941b9"></a>
+## Properties<a name="w3ab2c21c10d945b9"></a>
 
-`HealthCheckConfig`  
+`HealthCheckConfig`  <a name="cfn-route53-healthcheck-healthcheckconfig"></a>
 An Amazon Route 53 health check\.  
 *Required: *Yes  
-*Type*: [Route 53 HealthCheckConfig](aws-properties-route53-healthcheck-healthcheckconfig.md)  
-*Update requires*: No interruption
+*Type*: [Route 53 HealthCheck HealthCheckConfig](aws-properties-route53-healthcheck-healthcheckconfig.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`HealthCheckTags`  
+`HealthCheckTags`  <a name="cfn-route53-healthcheck-healthchecktags"></a>
 An arbitrary set of tags \(key–value pairs\) for this health check\.  
 *Required: *No  
-*Type*: A list of [Amazon Route 53 HealthCheckTags](aws-properties-route53-healthcheck-healthchecktags.md)  
-*Update requires*: No interruption
+*Type*: A list of [Amazon Route 53 HealthCheck HealthCheckTags](aws-properties-route53-healthcheck-healthchecktags.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10d941c11"></a>
+## Return Value<a name="w3ab2c21c10d945c11"></a>
 
-### Ref<a name="w3ab2c21c10d941c11b2"></a>
+### Ref<a name="w3ab2c21c10d945c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the health check ID, such as `e0a123b4-4dba-4650-935e-example`\.
 
-For more information about using the `Ref` function, see Ref\.
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10d941c13"></a>
+## Example<a name="w3ab2c21c10d945c13"></a>
 
 The following example creates an Amazon Route 53 health check that sends request to the specified endpoint\.
 

@@ -12,33 +12,33 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-order-column)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-order-sortorder)" : Integer
+  "[Column](#cfn-glue-table-order-column)" : String,
+  "[SortOrder](#cfn-glue-table-order-sortorder)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-glue-table-order-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-order-column): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-glue-table-order-sortorder): Integer
+[Column](#cfn-glue-table-order-column): String
+[SortOrder](#cfn-glue-table-order-sortorder): Integer
 ```
 
 ## Properties<a name="aws-properties-glue-table-order-properties"></a>
 
 For more information, see [Order Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-Order) in the *AWS Glue Developer Guide*\.
 
-`Column`  
+`Column`  <a name="cfn-glue-table-order-column"></a>
 The name of the column\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`SortOrder`  
+`SortOrder`  <a name="cfn-glue-table-order-sortorder"></a>
 Indicates whether the column is sorted in ascending order \(`1`\) or descending order \(`0`\)\.  
  *Required*: Yes  
  *Type*: Integer  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-glue-table-order-seealso"></a>
 

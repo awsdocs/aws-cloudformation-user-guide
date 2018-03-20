@@ -10,35 +10,35 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-mountpoints-readonly)" : Boolean,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-mountpoints-sourcevolume)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-mountpoints-containerpath)" : String
+  "[ReadOnly](#cfn-batch-jobdefinition-mountpoints-readonly)" : Boolean,
+  "[SourceVolume](#cfn-batch-jobdefinition-mountpoints-sourcevolume)" : String,
+  "[ContainerPath](#cfn-batch-jobdefinition-mountpoints-containerpath)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-batch-jobdefinition-mountpoints-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-mountpoints-readonly): Boolean
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-mountpoints-sourcevolume): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-batch-jobdefinition-mountpoints-containerpath): String
+[ReadOnly](#cfn-batch-jobdefinition-mountpoints-readonly): Boolean
+[SourceVolume](#cfn-batch-jobdefinition-mountpoints-sourcevolume): String
+[ContainerPath](#cfn-batch-jobdefinition-mountpoints-containerpath): String
 ```
 
 ## Properties<a name="aws-properties-batch-jobdefinition-mountpoints-properties"></a>
 
-`ReadOnly`  
+`ReadOnly`  <a name="cfn-batch-jobdefinition-mountpoints-readonly"></a>
 If this value is `true`, the container has read\-only access to the volume; otherwise, the container can write to the volume\. The default value is `false`\.  
  *Required*: no  
 *Type*: Boolean  
  *Update requires*: No Interruption 
 
-`SourceVolume`  
+`SourceVolume`  <a name="cfn-batch-jobdefinition-mountpoints-sourcevolume"></a>
 The name of the volume to mount\.  
  *Required*: no  
 *Type*: String  
  *Update requires*: No Interruption 
 
-`ContainerPath`  
+`ContainerPath`  <a name="cfn-batch-jobdefinition-mountpoints-containerpath"></a>
 The path on the container at which to mount the host volume\.  
  *Required*: no  
 *Type*: String  

@@ -15,28 +15,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-sourceauth-type)" : String,
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-sourceauth-resource)" : String
+  "[Type](#cfn-codebuild-project-sourceauth-type)" : String,
+  "[Resource](#cfn-codebuild-project-sourceauth-resource)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-codebuild-project-sourceauth-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-sourceauth-type): String
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codebuild-project-sourceauth-resource): String
+[Type](#cfn-codebuild-project-sourceauth-type): String
+[Resource](#cfn-codebuild-project-sourceauth-resource): String
 ```
 
 ## Properties<a name="aws-properties-codebuild-project-sourceauth-properties"></a>
 
-`Type`  
+`Type`  <a name="cfn-codebuild-project-sourceauth-type"></a>
 The authorization type to use\. The only valid value is `OAUTH`, which represents the OAuth authorization type\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Resource`  
+`Resource`  <a name="cfn-codebuild-project-sourceauth-resource"></a>
 The resource value that applies to the specified authorization type\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: No interruption 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

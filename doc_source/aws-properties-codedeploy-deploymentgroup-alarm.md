@@ -10,20 +10,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-alarm-name)" : String
+  "[Name](#cfn-codedeploy-deploymentgroup-alarm-name)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-alarm-syntax.yaml"></a>
 
 ```
-[[ERROR] BAD/MISSING LINK TEXT](#cfn-codedeploy-deploymentgroup-alarm-name): String
+[Name](#cfn-codedeploy-deploymentgroup-alarm-name): String
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-alarm-properties"></a>
 
-`Name`  
+`Name`  <a name="cfn-codedeploy-deploymentgroup-alarm-name"></a>
 The name of the alarm\. For more information, see [Alarm](http://docs.aws.amazon.com//codedeploy/latest/APIReference/API_Alarm.html) in the *AWS CodeDeploy API Reference*\.  
 *Required: *No  
 *Type*: String  
-*Update requires*: No interruption
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
