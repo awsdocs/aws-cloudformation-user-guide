@@ -146,7 +146,7 @@ A list of volume definitions in JSON format for the volumes that you can use in 
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the Amazon Resource Name \(ARN\)\.
 
-In the following example, the `Ref` function returns the ARN of the `MyTaskDefinition` task, such as `arn:aws:ecs:us-west-2:123456789012:task/1abf0f6d-a411-4033-b8eb-a4eed3ad252a`\.
+In the following example, the `Ref` function returns the ARN of the `MyTaskDefinition` task, such as `arn:aws:ecs:us-west-2:123456789012:task-definition/<task_family>:1`\.
 
 ```
 { "Ref": "MyTaskDefinition" }
