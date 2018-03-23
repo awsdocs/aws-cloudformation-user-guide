@@ -77,7 +77,7 @@ The authorizer's Uniform Resource Identifier \(URI\)\. If you specify `TOKEN` fo
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `IdentitySource`  <a name="cfn-apigateway-authorizer-identitysource"></a>
-The source of the identity in an incoming request\. If you specify `TOKEN` for the authorizer's `Type` property, specify a mapping expression\. The custom header mapping expression has the form `method.request.header.name`, where *name* is the name of a custom authorization header that clients submit as part of their requests\.  
+The source of the identity in an incoming request\. If you specify `TOKEN` for the authorizer's `Type` property, specify a mapping expression\. The custom header mapping expression has the form `method.request.header.name`, where *name* is the name of a custom authorization header that clients submit as part of their requests\.  If you specify `REQUEST` for the authorizer's `Type` property, the expression may have the form `context.identity.name` where *name* is one of the provided context variables.
 *Required: *Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -109,7 +109,7 @@ The ID of the `RestApi` resource that API Gateway creates the authorizer in\.
 `Type`  <a name="cfn-apigateway-authorizer-type"></a>
 The type of authorizer:  
 
-+ For a custom authorizer that uses a Lambda function, use `TOKEN`\.
++ For a custom authorizer that uses a Lambda function, use `TOKEN` or `REQUEST` to specify the Lambda Event Payload\.
 
 + For an authorizer that uses Amazon Cognito user pools, use `COGNITO_USER_POOLS`\.
 *Required: *Yes  
