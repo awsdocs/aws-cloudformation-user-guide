@@ -67,6 +67,27 @@ The ARN of the Amazon SNS topic to notify when the message is saved to the Amazo
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
+### Example
+
+### YAML
+```
+  SesRuleSet:
+    Type: "AWS::SES::ReceiptRuleSet"
+
+  SesRule:
+    Type: "AWS::SES::ReceiptRule"
+    Properties:
+      Rule:
+        Recipients:
+          - String
+        Actions:
+          - S3Action:
+              BucketName: !Ref Bucket
+        Enabled: true
+        ScanEnabled: true
+      RuleSetName: !Ref SesRuleSet
+```
+
 ## See Also<a name="aws-properties-ses-receiptrule-s3action-seealso"></a>
 
 + [Creating Receipt Rules for Amazon SES Email Receiving](url-ses-dev;receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*
