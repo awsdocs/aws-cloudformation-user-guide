@@ -74,7 +74,7 @@ The following example uses `Fn::Join` to construct a string value\. It uses the 
 11.       }
 12.     ]
 13.   ]
-14. }}
+14. }
 ```
 
 #### YAML<a name="intrinsic-function-reference-join-example2.yaml"></a>
