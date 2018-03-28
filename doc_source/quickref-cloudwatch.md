@@ -172,8 +172,7 @@ Resources:
       EvaluationPeriods: '15'
       ComparisonOperator: GreaterThanThreshold
       Threshold: '0'
-      AlarmActions: !Sub >
-        "arn:aws:automate:${AWS::Region}:ec2:recover"
+      AlarmActions: [ !Sub "arn:aws:automate:${AWS::Region}:ec2:recover" ]
       Dimensions:
       - Name: InstanceId
         Value:
