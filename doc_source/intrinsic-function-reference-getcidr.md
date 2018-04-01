@@ -33,7 +33,7 @@ count
 The number of subnets to generate. Valid values for count are 1 to 256\.
 
 sizeMask  
-Optional\. The number of host bits for the subnet\. For example, a sizeMask of "8" will create a subnet with a range of "/24".
+The number of host bits for the subnet\. For example, a sizeMask of "8" will create a subnet with a range of "/24".
 
 
 ## Return Value<a name="w3ab2c21c28c37b9"></a>
