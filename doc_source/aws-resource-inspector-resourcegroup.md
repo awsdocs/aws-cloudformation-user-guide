@@ -80,7 +80,7 @@ myresourcegroup:
   Type: "AWS::Inspector::ResourceGroup"
   Properties: 
     ResourceGroupTags : 
-	  -
+      -
         Key: "Name"
         Value": "example"
 ```
