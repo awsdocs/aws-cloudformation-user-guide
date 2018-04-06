@@ -61,7 +61,7 @@ Indicates whether data trace logging is enabled for methods in the stage\. API G
 *Type*: Boolean
 
 `HttpMethod`  <a name="cfn-apigateway-stage-methodsetting-httpmethod"></a>
-The HTTP method\.  
+The HTTP method\. To apply method settings to multiple methods, wildcard (`*`) characters may be used\.  
 *Required: *Yes  
 *Type*: String
 
@@ -76,7 +76,7 @@ Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage
 *Type*: Boolean
 
 `ResourcePath`  <a name="cfn-apigateway-stage-methodsetting-resourcepath"></a>
-The resource path for this method\. Forward slashes \(`/`\) are encoded as `~1` and the initial slash must include a forward slash\. For example, the path value `/resource/subresource` must be encoded as `/~1resource~1subresource`\. To specify the root path, use only a slash \(`/`\)\.  
+The resource path for this method\. Forward slashes \(`/`\) are encoded as `~1` and the initial slash must include a forward slash\. For example, the path value `/resource/subresource` must be encoded as `/~1resource~1subresource`\. To specify the root path, use only a slash \(`/`\)\. To apply method settings to multiple methods, wildcard (`*`) characters may be used\.  
 *Required: *Yes  
 *Type*: String
 
