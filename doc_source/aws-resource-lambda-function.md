@@ -226,7 +226,7 @@ AMIIDLookup:
       S3Bucket: "lambda-functions"
       S3Key: "amilookup.zip"
     Runtime: "nodejs4.3"
-    Timeout: "25"
+    Timeout: 25
     TracingConfig:
       Mode: "Active"
 ```
