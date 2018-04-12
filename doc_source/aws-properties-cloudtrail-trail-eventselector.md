@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudtrail-trail-eventselector-properties"></a>
 
 `DataResources`  <a name="cfn-cloudtrail-trail-eventselector-dataresources"></a>
-The resources for data events\. CloudTrail supports logging data events for Amazon S3 objects only\. For more information, see [Data Events](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-data-events) in the *AWS CloudTrail User Guide*\.  
+The resources for data events\. CloudTrail supports logging data events for Amazon S3 objects and Lambda functions only\. For more information, see [Data Events](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-data-events) in the *AWS CloudTrail User Guide*\.  
  *Required*: No  
  *Type*: List of [CloudTrail Trail DataResource](aws-properties-cloudtrail-trail-dataresource.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
