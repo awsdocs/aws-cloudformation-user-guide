@@ -65,8 +65,8 @@ The following example shows how to declare an AWS::Inspector::ResourceGroup reso
         "Properties": {
             "ResourceGroupTags": [
                 {
-                    "key": "Name",
-                    "value": "example"
+                    "Key": "Name",
+                    "Value": "example"
                 }
             ]
         }
