@@ -40,7 +40,6 @@ The number of host bits for the subnet\. For example, a sizeMask of "8" will cre
 
 An array of Cidr address blocks\.
 
-
 ## Supported Functions<a name="w3ab2c21c28c37c13"></a>
 
 You can use the following functions in a `Fn::Cidr` function:
@@ -48,3 +47,12 @@ You can use the following functions in a `Fn::Cidr` function:
 + `[`Fn::Select`](intrinsic-function-reference-select.md)` 
 
 + `[`Ref`](intrinsic-function-reference-ref.md)` 
+
+
+## Example
+
+In order to use the "Fn::Cidr" function to create 6 subnets with mask "/27" inside a "/24" mask VPC, you should use the below values:
+
++ VpcCidr: "192.168.0.0/24"
++ CidrCount: "6"
++ sizeMask: "5" (i.e. 32-27=5)
