@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodeCommit::Repository",
   "Properties" : {
-    "[RepositoryDescription](#cfn-codecommit-repository-repositorydescription)" : String, required,
+    "[RepositoryDescription](#cfn-codecommit-repository-repositorydescription)" : String,
     "[RepositoryName](#cfn-codecommit-repository-repositoryname)" : String,
     "[Triggers](#cfn-codecommit-repository-triggers)" : [ [Trigger](aws-properties-codecommit-repository-triggers.md) ]
   }
