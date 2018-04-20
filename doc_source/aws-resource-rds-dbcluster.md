@@ -175,7 +175,7 @@ For valid values, see the `PreferredMaintenanceWindow` parameter of the [CreateD
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. For more information, see [ModifyDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html) in the *Amazon Relational Database Service API Reference*\.
 
 `ReplicationSourceIdentifier`  <a name="cfn-rds-dbcluster-replicationsourceidentifier"></a>
-The Amazon Resource Name \(ARN\) of the source Amazon RDS DB instance or DB cluster, f this DB cluster is created as a Read Replica\.  
+The Amazon Resource Name \(ARN\) of the source Amazon RDS DB instance or DB cluster, if this DB cluster is created as a Read Replica\.  
 *Required: *No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
