@@ -36,7 +36,7 @@ During a stack operation, sends a request to a service token that is specified i
    {
       "RequestType" : "Create",
       "ResponseURL" : "http://pre-signed-S3-url-for-response",
-      "StackId" : "arn:aws:cloudformation:us-west-2:EXAMPLE/stack-name/guid",
+      "StackId" : "arn:aws:cloudformation:us-west-2:123456789012:stack/stack-name/guid",
       "RequestId" : "unique id for this create request",
       "ResourceType" : "Custom::TestResource",
       "LogicalResourceId" : "MyTestResource",
