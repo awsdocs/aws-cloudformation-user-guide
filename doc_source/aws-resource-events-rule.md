@@ -240,7 +240,7 @@ PermissionForEventsToInvokeLambda:
 
 ### Notify a Topic in Response to a Log Entry<a name="w3ab2c21c10d637c13b6"></a>
 
-The following example creates a rule that notifies an Amazon Simple Notification Service topic if an AWS CloudTrail log entry contains a call by the `Root` user\.
+The following example creates a rule that notifies an Amazon Simple Notification Service topic if an AWS CloudTrail log entry contains a call by the `Root` user. The `EventTopicPolicy` resource grants CloudWatch Events permission to notify the associated SNS topic\.
 
 #### JSON<a name="aws-resource-events-rule-example3.json"></a>
 
@@ -266,6 +266,22 @@ The following example creates a rule that notifies an Amazon Simple Notification
     ]
   }
 }
+"EventTopicPolicy": {
+  "Type": "AWS::SNS::TopicPolicy",
+  "Properties": {
+    "PolicyDocument": {
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": { "Service": "events.amazonaws.com" },
+          "Action": "sns:Publish",
+          "Resource": "*"
+        }
+      ],
+      "Topics": [ "MySNSTopic" ]
+    }
+  }
+}
 ```
 
 #### YAML<a name="aws-resource-events-rule-example3.yaml"></a>
@@ -288,4 +304,16 @@ OpsEventRule:
         Arn: 
           Ref: "MySNSTopic"
         Id: "OpsTopic"
+EventTopicPolicy:
+  Type: "AWS::SNS::TopicPolicy"
+  Properties:
+    PolicyDocument:
+      Statement:
+        - Effect: Allow
+          Principal: 
+            Service: "events.amazonaws.com
+          Action: sns:Publish
+          Resource: "*"
+      Topics:
+        - !Ref MySNSTopic
 ```
