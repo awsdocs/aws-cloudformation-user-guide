@@ -57,6 +57,9 @@ Before you can get started, your administrator account and target accounts must 
 **Important**  
 Be aware that this template grants administrator access\. After you use the template to create a target account execution role, you must scope the permissions in the policy statement to the types of resources that you are creating by using StackSets\.
 
+**NOTE**
+The role names **AWSCloudFormationStackSetAdministrationRole** and **AWSCloudFormationStackSetExecutionRole** should be exactly named as specified since StackSet will try to look for the exact role names.
+
    The target account service role requires permissions to perform any operations that are specified in your AWS CloudFormation template\. For example, if your template is creating an S3 bucket, then you need permissions to create new objects for S3\. Your target account always needs full AWS CloudFormation permissions, which include permissions to create, update, delete, and describe stacks\. The role created by this template enables the following policy on a target account\.
 
    ```
