@@ -25,5 +25,5 @@ If you do not specify the `SSESpecification` property type, Amazon DynamoDB will
 `SSEEnabled`  <a name="cfn-dynamodb-table-ssespecification-sseenabled"></a>
 Whether server\-side encryption is enabled or not\.  
 *Required: *Yes  
-*Type*: String  
+*Type*: Boolean  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
