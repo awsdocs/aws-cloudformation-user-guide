@@ -6,7 +6,7 @@ The `AWS::CodeDeploy::Application` resource creates an AWS CodeDeploy applicatio
 + [Syntax](#aws-resource-codedeploy-application-syntax)
 + [Properties](#aws-resource-codedeploy-application-properties)
 + [Return Value](#aws-resource-codedeploy-application-returnvalues)
-+ [Example](#aws-resource-codedeploy-application-examples)
++ [Examples](#aws-resource-codedeploy-application-examples)
 + [Related Resources](#w3ab2c21c10d222c15)
 
 ## Syntax<a name="aws-resource-codedeploy-application-syntax"></a>
@@ -43,7 +43,7 @@ A name for the application\. If you don't specify a name, AWS CloudFormation gen
 *Update requires*: Updates are not supported\.
 
 `ComputePlatform`  <a name="cfn-codedeploy-application-computeplatform"></a>
-The compute platform that AWS CodeDeploy deploys the application to\.  
+The compute platform that AWS CodeDeploy deploys the application to\. For valid values see [CodeDeploy CreateApplication API](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_CreateApplication.html#CodeDeploy-CreateApplication-request-computePlatform)\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -56,7 +56,7 @@ When you pass the logical ID of an `AWS::CodeDeploy::Application` resource to th
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="aws-resource-codedeploy-application-examples"></a>
+## Examples<a name="aws-resource-codedeploy-application-examples"></a>
 
 The following example creates an AWS CodeDeploy application with a `Lambda` compute platform\.
 
@@ -78,6 +78,28 @@ CodeDeployApplication:
   Type: 'AWS::CodeDeploy::Application'
   Properties:
     ComputePlatform: Lambda
+```
+
+The following example creates an AWS CodeDeploy application with a `Server` compute platform\.
+
+### JSON<a name="aws-resource-codedeploy-application-example.json"></a>
+
+```
+"CodeDeployApplication": {
+  "Type": "AWS::CodeDeploy::Application",
+  "Properties": {
+    "ComputePlatform": "Server"
+  }
+}
+```
+
+### YAML<a name="aws-resource-codedeploy-application-example.yaml"></a>
+
+```
+CodeDeployApplication:
+  Type: 'AWS::CodeDeploy::Application'
+  Properties:
+    ComputePlatform: Server
 ```
 
 ## Related Resources<a name="w3ab2c21c10d222c15"></a>
