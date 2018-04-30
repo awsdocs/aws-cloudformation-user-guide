@@ -340,7 +340,7 @@ Reserved\.
 
 ### Ref<a name="aws-properties-ec2-instance-ref"></a>
 
-When you pass the logical ID of an AWS::EC2::Instance object to the intrinsic `Ref` function, the object's InstanceId is returned\. For example: `i-636be302`\.
+When you pass the logical ID of an AWS::EC2::Instance object to the intrinsic `Ref` function, the object's InstanceId is returned\. For example: `i-636be3023efb7fe52`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
