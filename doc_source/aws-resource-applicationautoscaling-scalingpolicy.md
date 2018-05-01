@@ -57,7 +57,7 @@ A name for the scaling policy\.
 
 `PolicyType`  <a name="cfn-applicationautoscaling-scalingpolicy-policytype"></a>
 An Application Auto Scaling policy type\.  
-For DynamoDB, only `TargetTrackingScaling` is supported\. For any other service, only `StepScaling` is supported\.
+For DynamoDB, only `TargetTrackingScaling` is supported\.
 *Required: *Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
