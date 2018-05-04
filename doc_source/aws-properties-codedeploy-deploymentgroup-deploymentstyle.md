@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 [DeploymentOption](#cfn-codedeploy-deploymentgroup-deploymentstyle-deploymentoption): String
-  [DeploymentType](#cfn-codedeploy-deploymentgroup-deploymentstyle-deploymenttype): String
+[DeploymentType](#cfn-codedeploy-deploymentgroup-deploymentstyle-deploymenttype): String
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-deploymentstyle-properties"></a>
