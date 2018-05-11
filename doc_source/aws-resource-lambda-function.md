@@ -42,7 +42,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: "AWS::Lambda::Function"
-Properties: 
+Properties:
   [Code](#cfn-lambda-function-code):
     Code
   [DeadLetterConfig](#cfn-lambda-function-deadletterconfig):
@@ -62,7 +62,7 @@ Properties:
     [*TracingConfig*](aws-properties-lambda-function-tracingconfig.md)
   [VpcConfig](#cfn-lambda-function-vpcconfig):
     [*VPCConfig*](aws-properties-lambda-function-vpcconfig.md)
-  [Tags](#cfn-lambda-function-tags): 
+  [Tags](#cfn-lambda-function-tags):
     Resource Tag
 ```
 
@@ -114,7 +114,7 @@ The Amazon Resource Name \(ARN\) of an AWS Key Management Service \(AWS KMS\) ke
 
 `MemorySize`  <a name="cfn-lambda-function-memorysize"></a>
 The amount of memory, in MB, that is allocated to your Lambda function\. Lambda uses this value to proportionally allocate the amount of CPU power\. For more information, see [Resource Model](http://docs.aws.amazon.com/lambda/latest/dg/resource-model.html) in the *AWS Lambda Developer Guide*\.  
-Your function use case determines your CPU and memory requirements\. For example, a database operation might need less memory than an image processing function\. You must specify a value that is greater than or equal to `128`, and it must be a multiple of 64\. You cannot specify a size larger than `1536`\. The default value is 128 MB\.  
+Your function use case determines your CPU and memory requirements\. For example, a database operation might need less memory than an image processing function\. You must specify a value that is greater than or equal to `128`, and it must be a multiple of 64\. You cannot specify a size larger than `3008`\. The default value is 128 MB\.  
 *Required: *No  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -214,15 +214,15 @@ The following example uses a packaged file in an S3 bucket to create a Lambda fu
 ### YAML<a name="aws-resource-lambda-function-example.yaml"></a>
 
 ```
-AMIIDLookup: 
+AMIIDLookup:
   Type: "AWS::Lambda::Function"
-  Properties: 
+  Properties:
     Handler: "index.handler"
-    Role: 
-      Fn::GetAtt: 
+    Role:
+      Fn::GetAtt:
         - "LambdaExecutionRole"
         - "Arn"
-    Code: 
+    Code:
       S3Bucket: "lambda-functions"
       S3Key: "amilookup.zip"
     Runtime: "nodejs4.3"
