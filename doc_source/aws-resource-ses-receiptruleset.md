@@ -5,6 +5,7 @@ The `AWS::SES::ReceiptRuleSet` resource specifies an empty rule set for Amazon S
 
 + [Syntax](#aws-resource-ses-receiptruleset-syntax)
 + [Properties](#aws-resource-ses-receiptruleset-properties)
++ [Return Values](#aws-resource-ses-receiptruleset-returnvalues)
 + [Example](#aws-resource-ses-receiptruleset-examples)
 + [See Also](#aws-resource-ses-receiptruleset-seealso)
 
@@ -44,6 +45,14 @@ The name of the rule set to create\. The name must:
  *Required*: No  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+
+## Return Values<a name="aws-resource-ses-receiptruleset-returnvalues">
+
+## Ref
+
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ID of the ReceiptRuleSet resource \(the physical resource ID\)\.
+
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="aws-resource-ses-receiptruleset-examples"></a>
 
