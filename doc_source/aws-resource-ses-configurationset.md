@@ -1,6 +1,6 @@
 # AWS::SES::ConfigurationSet<a name="aws-resource-ses-configurationset"></a>
 
-The `AWS::SES::ConfigurationSet` resource let syou create groups of rules that you can apply to the emails you send using Amazon SES\. For more information about using configuration sets, see [Using Amazon SES Configuration Sets](url-ses-dev;using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*\.
+The `AWS::SES::ConfigurationSet` resource lets you create groups of rules that you can apply to the emails you send using Amazon SES\. For more information about using configuration sets, see [Using Amazon SES Configuration Sets](url-ses-dev;using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*\.
 
 Configuration sets 
 
