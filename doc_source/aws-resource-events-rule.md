@@ -278,7 +278,7 @@ The following example creates a rule that notifies an Amazon Simple Notification
           "Resource": "*"
         }
       ],
-      "Topics": [ "MySNSTopic" ]
+      "Topics": [ "Ref": "MySNSTopic" ]
     }
   }
 }
@@ -311,7 +311,7 @@ EventTopicPolicy:
       Statement:
         - Effect: Allow
           Principal: 
-            Service: "events.amazonaws.com
+            Service: "events.amazonaws.com"
           Action: sns:Publish
           Resource: "*"
       Topics:
