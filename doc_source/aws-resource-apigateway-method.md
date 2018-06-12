@@ -153,7 +153,7 @@ The following example creates a mock GET method for the `MyApi` API\.
   "Type": "AWS::ApiGateway::Method",
   "Properties": {
     "RestApiId": { "Ref": "MyApi" },
-    "ResourceId": { "Fn::GetAtt": ["RestApi", "RootResourceId"] },
+    "ResourceId": { "Fn::GetAtt": ["MyApi", "RootResourceId"] },
     "HttpMethod": "GET",
     "AuthorizationType": "NONE",
     "Integration": { "Type": "MOCK" }
@@ -171,7 +171,7 @@ MockMethod:
       Ref: "MyApi"
     ResourceId: 
       Fn::GetAtt: 
-        - "RestApi"
+        - "MyApi"
         - "RootResourceId"
     HttpMethod: "GET"
     AuthorizationType: "NONE"
