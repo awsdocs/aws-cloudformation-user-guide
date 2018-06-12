@@ -1,6 +1,6 @@
 # Route 53 Template Snippets<a name="quickref-route53"></a>
 
-
+**Topics**
 + [Amazon Route 53 Resource Record Set Using Hosted Zone Name or ID](#scenario-route53-recordset-by-host)
 + [Using RecordSetGroup to Set Up Weighted Resource Record Sets](#scenario-recordsetgroup-weighted)
 + [Using RecordSetGroup to Set Up an Alias Resource Record Set](#scenario-recordsetgroup-zoneapex)

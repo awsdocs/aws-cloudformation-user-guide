@@ -26,12 +26,12 @@ For more information and property constraints, see [EnableLogging](http://docs.a
 
 `BucketName`  <a name="cfn-redshift-cluster-loggingproperties-bucketname"></a>
 The name of an existing S3 bucket where the log files are to be stored\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `S3KeyPrefix`  <a name="cfn-redshift-cluster-loggingproperties-s3keyprefix"></a>
 The prefix applied to the log file names\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

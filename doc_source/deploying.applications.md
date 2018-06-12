@@ -8,7 +8,7 @@ The following walkthrough describes how to create a template that launches a LAM
 
 For additional strategies and examples about deploying applications with AWS CloudFormation, see the [Bootstrapping Applications via AWS CloudFormation](http://aws.amazon.com/cloudformation/aws-cloudformation-articles-and-tutorials/) article\.
 
-
+**Topics**
 + [Basic Amazon EC2 Instance](#deployment-walkthrough-basic-server)
 + [LAMP Installation](#deployment-walkthrough-lamp-install)
 + [LAMP Configuration](#deployment-walkthrough-config)

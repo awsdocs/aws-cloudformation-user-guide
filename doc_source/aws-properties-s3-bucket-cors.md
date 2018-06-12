@@ -2,7 +2,7 @@
 
 Describes the cross\-origin access configuration for objects in an [ AWS::S3::Bucket](aws-properties-s3-bucket.md) resource\.
 
-## Syntax<a name="w3ab2c21c14e1516b5"></a>
+## Syntax<a name="w3ab2c21c14e1694b5"></a>
 
 ### JSON<a name="aws-properties-s3-bucket-cors-syntax.json"></a>
 
@@ -19,9 +19,9 @@ Describes the cross\-origin access configuration for objects in an [ AWS::S3::Bu
   - CorsRules
 ```
 
-## Properties<a name="w3ab2c21c14e1516b7"></a>
+## Properties<a name="w3ab2c21c14e1694b7"></a>
 
 `CorsRules`  <a name="cfn-s3-bucket-cors-corsrule"></a>
 A set of origins and methods that you allow\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: [Amazon S3 Bucket CorsRule](aws-properties-s3-bucket-cors-corsrule.md)

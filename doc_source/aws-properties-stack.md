@@ -12,11 +12,11 @@ When you apply template changes to update a top\-level stack, AWS CloudFormation
 **Note**  
 You must acknowledge IAM capabilities for nested stacks that contain IAM resources\. Also, verify that you have cancel update stack permissions, which is required if an update rolls back\. For more information about IAM and AWS CloudFormation, see [Controlling Access with AWS Identity and Access Management](using-iam-template.md)\.
 
-
+**Topics**
 + [Syntax](#aws-resource-cloudformation-stack-syntax)
 + [Properties](#aws-properties-stack-prop)
-+ [Return Values](#w3ab2c21c10d172c19)
-+ [Related Information](#w3ab2c21c10d172c21)
++ [Return Values](#w3ab2c21c10d200c19)
++ [Related Information](#w3ab2c21c10d200c21)
 
 ## Syntax<a name="aws-resource-cloudformation-stack-syntax"></a>
 
@@ -56,7 +56,7 @@ Properties:
 
 `NotificationARNs`  <a name="cfn-cloudformation-stack-notificationarns"></a>
 A list of existing Amazon SNS topics where notifications about stack events are sent\.  
-*Required: *No  
+*Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
@@ -69,25 +69,25 @@ If you use the `Ref` function to pass a parameter value to a nested stack, comma
 
 `Tags`  <a name="cfn-cloudformation-stack-tags"></a>
 An arbitrary set of tags \(key–value pairs\) to describe this stack\.  
-*Required: *No  
+*Required*: No  
 *Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
 `TemplateURL`  <a name="cfn-cloudformation-stack-templateurl"></a>
 The URL of a template that specifies the stack that you want to create as a resource\. Template files can use any extension, such as `.json`, `.yaml`, `.template`, or `.txt`\. The template must be stored on an Amazon S3 bucket, so the URL must have the form: `https://s3.amazonaws.com/.../TemplateName.extension`  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: Whether an update causes interruptions depends on the resources that are being updated\. An update never causes a nested stack to be replaced\.
 
 `TimeoutInMinutes`  <a name="cfn-cloudformation-stack-timeoutinminutes"></a>
 The length of time, in minutes, that AWS CloudFormation waits for the nested stack to reach the `CREATE_COMPLETE` state\. The default is no timeout\. When AWS CloudFormation detects that the nested stack has reached the `CREATE_COMPLETE` state, it marks the nested stack resource as `CREATE_COMPLETE` in the parent stack and resumes creating the parent stack\. If the timeout period expires before the nested stack reaches `CREATE_COMPLETE`, AWS CloudFormation marks the nested stack as failed and rolls back both the nested stack and parent stack\.  
-*Required: *No  
+*Required*: No  
 *Type*: Integer  
 *Update requires*: Updates are not supported\.
 
-## Return Values<a name="w3ab2c21c10d172c19"></a>
+## Return Values<a name="w3ab2c21c10d200c19"></a>
 
-### Ref<a name="w3ab2c21c10d172c19b2"></a>
+### Ref<a name="w3ab2c21c10d200c19b2"></a>
 
 For `AWS::CloudFormation::Stack`, `Ref` returns the Stack ID\. For example:
 
@@ -95,15 +95,13 @@ For `AWS::CloudFormation::Stack`, `Ref` returns the Stack ID\. For example:
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d172c19b4"></a>
+### Fn::GetAtt<a name="w3ab2c21c10d200c19b4"></a>
 
 `Outputs.NestedStackOutputName`  
 *Returns*: The output value from the specified nested stack where *NestedStackOutputName* is the name of the output value\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Related Information<a name="w3ab2c21c10d172c21"></a>
-
+## Related Information<a name="w3ab2c21c10d200c21"></a>
 + For sample template snippets, see Nested Stacks in [AWS CloudFormation Template Snippets](quickref-cloudformation.md)\.
-
 + If you have nested stacks that are stuck in an in\-progress operation, see Troubleshooting Errors in [Troubleshooting AWS CloudFormation](troubleshooting.md)\.

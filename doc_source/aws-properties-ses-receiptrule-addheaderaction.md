@@ -39,9 +39,6 @@ Must be less than 2048 characters, and must not contain newline characters \("\\
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ses-receiptrule-addheaderaction-seealso"></a>
-
 + [Creating Receipt Rules for Amazon SES Email Receiving](url-ses-dev;receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*
-
 + [CreateReceiptRule](url-ses-api;API_CreateReceiptRule.html) in the *Amazon Simple Email Service API Reference*
-
 + [AddHeaderAction](url-ses-api;API_AddHeaderAction.html) in the *Amazon Simple Email Service API Reference*

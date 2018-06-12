@@ -10,7 +10,6 @@ First, you'll need a template that specifies the resources that you want in your
 AWS CloudFormation is free, but the AWS resources that AWS CloudFormation creates are live \(and not running in a sandbox\)\. You will incur the standard usage fees for these resources until you terminate them in the last task in this tutorial\. The total charges will be minimal\. For information about how you might minimize any charges, go to [http://aws\.amazon\.com/free/](http://aws.amazon.com/free/)\.
 
 **To view the template**
-
 + You can view the [JSON](https://s3-us-west-2.amazonaws.com/cloudformation-templates-us-west-2/WordPress_Single_Instance.template) or [YAML](https://s3-us-west-2.amazonaws.com/cloudformation-templates-us-west-2/WordPress_Single_Instance.yaml) WordPress sample template\. You don't need to download it because you will use the template URL later in this guide\. For more information about the template formats, see [AWS CloudFormation Template Formats](template-formats.md)\.
 
 A template is a JSON or YAML text file that contains the configuration information about the AWS resources you want to create in the stack\. For this walkthrough, the sample template includes six top\-level sections: `AWSTemplateFormatVersion`, `Description`, `Parameters`, `Mappings`, `Resources`, and `Outputs`; however, only the `Resources` section is required\.

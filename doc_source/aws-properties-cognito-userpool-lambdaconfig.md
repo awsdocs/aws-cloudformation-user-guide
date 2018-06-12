@@ -37,39 +37,39 @@
 `CreateAuthChallenge`  <a name="cfn-cognito-userpool-lambdaconfig-createauthchallenge"></a>
 Creates an authentication challenge\.  
 *Type*: String  
-*Required: *No
+*Required*: No
 
 `CustomMessage`  <a name="cfn-cognito-userpool-lambdaconfig-custommessage"></a>
 A custom Message AWS Lambda trigger\.  
 *Type*: String  
-*Required: *No
+*Required*: No
 
 `DefineAuthChallenge`  <a name="cfn-cognito-userpool-lambdaconfig-defineauthchallenge"></a>
 Defines the authentication challenge\.  
 *Type*: String  
-*Required: *No
+*Required*: No
 
 `PostAuthentication`  <a name="cfn-cognito-userpool-lambdaconfig-postauthentication"></a>
 A post\-authentication AWS Lambda trigger\.  
 *Type*: String  
-*Required: *No
+*Required*: No
 
 `PostConfirmation`  <a name="cfn-cognito-userpool-lambdaconfig-postconfirmation"></a>
 A post\-confirmation AWS Lambda trigger\.  
 *Type*: String  
-*Required: *No
+*Required*: No
 
 `PreAuthentication`  <a name="cfn-cognito-userpool-lambdaconfig-preauthentication"></a>
 A pre\-authentication AWS Lambda trigger\.  
 *Type*: String  
-*Required: *No
+*Required*: No
 
 `PreSignUp`  <a name="cfn-cognito-userpool-lambdaconfig-presignup"></a>
 A pre\-registration AWS Lambda trigger\.  
 *Type*: String  
-*Required: *No
+*Required*: No
 
 `VerifyAuthChallengeResponse`  <a name="cfn-cognito-userpool-lambdaconfig-verifyauthchallengeresponse"></a>
 Verifies the authentication challenge response\.  
 *Type*: String  
-*Required: *No
+*Required*: No

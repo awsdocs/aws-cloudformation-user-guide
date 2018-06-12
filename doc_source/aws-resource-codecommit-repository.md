@@ -2,11 +2,11 @@
 
 The `AWS::CodeCommit::Repository` resource creates an AWS CodeCommit repository that is hosted by Amazon Web Services\. For more information, see [Create an AWS CodeCommit Repository](http://docs.aws.amazon.com/codecommit/latest/userguide/how-to-create-repository.html) in the *AWS CodeCommit User Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-codecommit-repository-syntax)
-+ [Properties](#w3ab2c21c10d218b9)
-+ [Return Values](#w3ab2c21c10d218c11)
-+ [Example](#w3ab2c21c10d218c13)
++ [Properties](#w3ab2c21c10d246b9)
++ [Return Values](#w3ab2c21c10d246c11)
++ [Example](#w3ab2c21c10d246c13)
 
 ## Syntax<a name="aws-resource-codecommit-repository-syntax"></a>
 
@@ -36,35 +36,35 @@ Properties:
   - [Trigger](aws-properties-codecommit-repository-triggers.md)
 ```
 
-## Properties<a name="w3ab2c21c10d218b9"></a>
+## Properties<a name="w3ab2c21c10d246b9"></a>
 
 `RepositoryDescription`  <a name="cfn-codecommit-repository-repositorydescription"></a>
 A description about the AWS CodeCommit repository\. For constraints, see the [CreateRepository](http://docs.aws.amazon.com/codecommit/latest/APIReference/API_CreateRepository.html) action in the *AWS CodeCommit API Reference*\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `RepositoryName`  <a name="cfn-codecommit-repository-repositoryname"></a>
 A name for the AWS CodeCommit repository\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Triggers`  <a name="cfn-codecommit-repository-triggers"></a>
 Defines the actions to take in response to events that occur in the repository\. For example, you can send email notifications when someone pushes to the repository\.  
-*Required: *No  
+*Required*: No  
 *Type*: List of [AWS CodeCommit Repository Trigger](aws-properties-codecommit-repository-triggers.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10d218c11"></a>
+## Return Values<a name="w3ab2c21c10d246c11"></a>
 
-### Ref<a name="w3ab2c21c10d218c11b2"></a>
+### Ref<a name="w3ab2c21c10d246c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the repository ID, such as `12a345b6-bbb7-4bb6-90b0-8c9577a2d2b9`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d218c11b4"></a>
+### Fn::GetAtt<a name="w3ab2c21c10d246c11b4"></a>
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
@@ -82,7 +82,7 @@ The name of the repository, such `MyDemoRepo`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Example<a name="w3ab2c21c10d218c13"></a>
+## Example<a name="w3ab2c21c10d246c13"></a>
 
 The following example creates an AWS CodeCommit repository with a trigger for all events in the `Master` branch\.
 

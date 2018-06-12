@@ -63,9 +63,6 @@ The SMTP enhanced status code, as defined by [RFC 3463](https://tools.ietf.org/h
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ses-receiptrule-bounceaction-seealso"></a>
-
 + [Creating Receipt Rules for Amazon SES Email Receiving](url-ses-dev;receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*
-
 + [CreateReceiptRule](url-ses-api;API_CreateReceiptRule.html) in the *Amazon Simple Email Service API Reference*
-
 + [BounceAction](url-ses-api;API_BounceAction.html) in the *Amazon Simple Email Service API Reference*

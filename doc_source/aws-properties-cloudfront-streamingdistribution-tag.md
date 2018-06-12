@@ -39,5 +39,4 @@ A string that contains an optional `Tag` value\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-cloudfront-streamingdistribution-seealso"></a>
-
 + [Tag](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Tag.html) in the *Amazon CloudFront API Reference*

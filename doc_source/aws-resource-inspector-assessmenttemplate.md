@@ -2,7 +2,7 @@
 
 The `AWS::Inspector::AssessmentTemplate` resource creates an Amazon Inspector assessment template \- a resource that contains information about an Amazon Inspector assessment template\.
 
-
+**Topics**
 + [Syntax](#aws-resource-inspector-assessmenttemplate-syntax)
 + [Properties](#aws-resource-inspector-assessmenttemplate-properties)
 + [Return Values](#aws-resource-inspector-assessmenttemplate-returnvalues)

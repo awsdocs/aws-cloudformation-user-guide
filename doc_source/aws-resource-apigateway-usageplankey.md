@@ -2,7 +2,7 @@
 
 The `AWS::ApiGateway::UsagePlanKey` resource associates an Amazon API Gateway API key with an API Gateway usage plan\. This association determines which users the usage plan is applied to\.
 
-
+**Topics**
 + [Syntax](#aws-resource-apigateway-usageplankey-syntax)
 + [Properties](#aws-resource-apigateway-usageplankey-properties)
 + [Return Value](#aws-resource-apigateway-usageplankey-returnvalues)
@@ -37,19 +37,19 @@ Properties:
 
 `KeyId`  <a name="cfn-apigateway-keyid"></a>
 The ID of the usage plan key\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `KeyType`  <a name="cfn-apigateway-keytype"></a>
 The type of usage plan key\. Currently, the valid key type is `API_KEY`\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `UsagePlanId`  <a name="cfn-apigateway-usageplanid"></a>
 The value of the usage plan key\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 

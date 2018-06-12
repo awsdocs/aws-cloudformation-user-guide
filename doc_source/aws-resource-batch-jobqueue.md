@@ -2,7 +2,7 @@
 
 The `AWS::Batch::JobQueue` resource defines your AWS Batch job queue\. For more information, see [Job Queues](http://docs.aws.amazon.com/batch/latest/userguide/job_queues.html) in the *AWS Batch User Guide*\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-batch-jobqueue-syntax)
 + [Properties](#aws-resource-batch-jobqueue-properties)
 + [Return Values](#aws-resource-batch-jobqueue-returnvalues)
@@ -66,7 +66,7 @@ The name of the job queue\.
 
 ## Return Values<a name="aws-resource-batch-jobqueue-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d140c10b2"></a>
+### Ref<a name="w3ab2c21c10d164c10b2"></a>
 
 When you pass the logical ID of an `AWS::Batch::JobQueue` resource to the intrinsic `Ref` function, the function returns the job queue ARN, such as `arn:aws:batch:us-east-1:111122223333:job-queue/HighPriority`\. 
 

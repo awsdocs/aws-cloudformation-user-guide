@@ -2,7 +2,7 @@
 
 The `AWS::ServiceDiscovery::PublicDnsNamespace` resource specifies information about a public namespace for Amazon Route 53\. Use a public namespace when you want to route internet traffic to your resources\. For more information, see [CreatePublicDnsNamespace](http://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_CreatePublicDnsNamespace.html) in the *Amazon Route 53 API Reference*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-servicediscovery-publicdnsnamespace-syntax)
 + [Properties](#aws-resource-servicediscovery-publicdnsnamespace-properties)
 + [Return Values](#aws-resource-servicediscovery-publicdnsnamespace-returnvalues)
@@ -68,7 +68,5 @@ The Amazon Resource Name \(ARN\) of the public namespace\.
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
 
 ## See Also<a name="aws-resource-servicediscovery-publicdnsnamespace-seealso"></a>
-
 + [Using Autonaming for Service Discovery](http://docs.aws.amazon.com/Route53/latest/APIReference/overview-service-discovery.html) in the *Amazon Route 53 API Reference*
-
 + [CreatePublicDnsNamespace](http://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_CreatePublicDnsNamespace.html) in the *Amazon Route 53 API Reference*

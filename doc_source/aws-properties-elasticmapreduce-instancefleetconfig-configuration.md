@@ -31,18 +31,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Classification`  <a name="cfn-elasticmapreduce-instancefleetconfig-configuration-classification"></a>
 The application\-specific configuration file\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ConfigurationProperties`  <a name="cfn-elasticmapreduce-instancefleetconfig-configuration-configurationproperties"></a>
 Within a configuration classification, a set of properties that represent the settings that you want to change in the configuration file\. Duplicates not allowed\.  
-*Required: *No  
+*Required*: No  
 *Type*: String to String map  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Configurations`  <a name="cfn-elasticmapreduce-instancefleetconfig-configuration-configurations"></a>
 The list of additional configurations to apply within a configuration object\. Duplicates not allowed\.  
-*Required: *No  
+*Required*: No  
 *Type*: List of [Amazon EMR InstanceFleetConfig Configuration](#aws-properties-elasticmapreduce-instancefleetconfig-configuration)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

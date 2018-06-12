@@ -1,8 +1,8 @@
 # AWS::SSM::Parameter<a name="aws-resource-ssm-parameter"></a>
 
-The `AWS::SSM::Parameter` resource creates an Amazon EC2 Systems Manager \(SSM\) parameter in Parameter Store\.
+The `AWS::SSM::Parameter` resource creates an SSM parameter in AWS Systems Manager Parameter Store\.
 
-
+**Topics**
 + [Syntax](#aws-resource-ssm-parameter-syntax)
 + [Properties](#aws-resource-ssm-parameter-properties)
 + [Return Value](#aws-resource-ssm-parameter-returnvalues)
@@ -43,44 +43,44 @@ Properties:
 
 `Name`  <a name="cfn-ssm-parameter-name"></a>
 The name of the parameter\. Names must not be prefixed with `aws` or `ssm`\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Description`  <a name="cfn-ssm-parameter-description"></a>
 Information about the parameter that you want to add to the system\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Type`  <a name="cfn-ssm-parameter-type"></a>
 The type of parameter\. Valid values include the following: `String` or `StringList`\.  
 AWS CloudFormation doesn't support the `SecureString` parameter type\.
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Value`  <a name="cfn-ssm-parameter-value"></a>
 The parameter value\. Value must not nest another parameter\. Do not use `{{}}` in the value\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `AllowedPattern`  <a name="cfn-ssm-parameter-allowedpattern"></a>
 A regular expression used to validate the parameter value\. For example, for String types with values restricted to numbers, you can specify the following: `AllowedPattern=^\d+$`  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Value<a name="aws-resource-ssm-parameter-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10e1049c11b2"></a>
+### Ref<a name="w3ab2c21c10e1165c11b3"></a>
 
 When you pass the logical ID of an `AWS::SSM::Parameter` resource to the intrinsic `Ref` function, the function returns the Name of the SSM parameter\. For example, `ssm-myparameter-ABCNPH3XCAO6`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10e1049c11b4"></a>
+### Fn::GetAtt<a name="w3ab2c21c10e1165c11b5"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -94,9 +94,9 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
 
 ## Examples<a name="aws-resource-ssm-parameter-examples"></a>
 
-### SSM Parameter \(String\) Example<a name="w3ab2c21c10e1049c13b2"></a>
+### SSM Parameter \(String\) Example<a name="w3ab2c21c10e1165c13b3"></a>
 
-The following example snippet creates an SSM parameter in the Parameter Store\.
+The following example snippet creates an SSM parameter in Parameter Store\.
 
 #### JSON<a name="aws-resource-ssm-parameter-example.json"></a>
 
@@ -133,7 +133,7 @@ Resources:
       AllowedPattern: "^[a-zA-Z]{1,10}$"
 ```
 
-### SSM Parameter \(StringList\) Example<a name="w3ab2c21c10e1049c13b4"></a>
+### SSM Parameter \(StringList\) Example<a name="w3ab2c21c10e1165c13b5"></a>
 
 The following example creates an SSM parameter with a `StringList` type\.
 

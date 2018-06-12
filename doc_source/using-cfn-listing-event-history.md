@@ -112,5 +112,5 @@ The most recent events are reported first\. The following table describe the fie
 |  ResourceProperties  |  Properties of the resource  | 
 |  ResourceType  |  Type of the resource  | 
 |  Timestamp  |  Time when the event occurred  | 
-|  ResourceStatus  |  The status of the resource, which can be one of the following status codes: `CREATE_COMPLETE` | `CREATE_FAILED` | `CREATE_IN_PROGRESS` | `DELETE_COMPLETE` | `DELETE_FAILED` | `DELETE_IN_PROGRESS` | `DELETE_SKIPPED` | `UPDATE_COMPLETE` | `UPDATE_FAILED` | `UPDATE_IN_PROGRESS`\. The `DELETE_SKIPPED` status applies to resources with a deletion policy attribute of retain\.  | 
+|  ResourceStatus  |  The status of the resource, which can be one of the following status codes: `CREATE_COMPLETE` \| `CREATE_FAILED` \| `CREATE_IN_PROGRESS` \| `DELETE_COMPLETE` \| `DELETE_FAILED` \| `DELETE_IN_PROGRESS` \| `DELETE_SKIPPED` \| `UPDATE_COMPLETE` \| `UPDATE_FAILED` \| `UPDATE_IN_PROGRESS`\. The `DELETE_SKIPPED` status applies to resources with a deletion policy attribute of retain\.  | 
 |  ResourceStatusReason  |  More information on the status  | 

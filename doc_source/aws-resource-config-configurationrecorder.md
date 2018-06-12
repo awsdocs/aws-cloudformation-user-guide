@@ -37,36 +37,36 @@ Properties:
   [RoleARN](#cfn-config-configurationrecorder-rolearn): String
 ```
 
-## Properties<a name="w3ab2c21c10d276c13"></a>
+## Properties<a name="w3ab2c21c10d312c13"></a>
 
 `Name`  <a name="cfn-config-configurationrecorder-name"></a>
 A name for the configuration recorder\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the configuration recorder name\. For more information, see [Name Type](aws-properties-name.md)\.  
 After you create a configuration recorder, you cannot rename it\. If you don't want a name that AWS CloudFormation generates, specify a value for this property\.
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: Updates are not supported\.
 
 `RecordingGroup`  <a name="cfn-config-configurationrecorder-recordinggroup"></a>
 Indicates whether to record configurations for all supported resources or for a list of resource types\. The resource types that you list must be supported by AWS Config\.  
-*Required: *No  
+*Required*: No  
 *Type*: [AWS Config ConfigurationRecorder RecordingGroup](aws-properties-config-configurationrecorder-recordinggroup.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `RoleARN`  <a name="cfn-config-configurationrecorder-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) role that is used to make read or write requests to the delivery channel that you specify and to get configuration details for supported AWS resources\. For more information, see [Permissions for the IAM Role Assigned to AWS Config](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-permissions.html) in the *AWS Config Developer Guide*\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10d276c15"></a>
+## Return Values<a name="w3ab2c21c10d312c15"></a>
 
-### Ref<a name="w3ab2c21c10d276c15b2"></a>
+### Ref<a name="w3ab2c21c10d312c15b2"></a>
 
 When you pass the logical ID of an `AWS::Config::ConfigurationRecorder` resource to the intrinsic `Ref` function, the function returns the configuration recorder name, such as `default`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10d276c17"></a>
+## Example<a name="w3ab2c21c10d312c17"></a>
 
 The following example creates a configuration recorder for EC2 volumes\.
 

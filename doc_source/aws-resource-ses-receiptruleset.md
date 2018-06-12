@@ -2,7 +2,7 @@
 
 The `AWS::SES::ReceiptRuleSet` resource specifies an empty rule set for Amazon SES\. For more information, see [CreateReceiptRuleSet](url-ses-api;API_CreateReceiptRuleSet.html) in the *Amazon Simple Email Service API Reference*\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-ses-receiptruleset-syntax)
 + [Properties](#aws-resource-ses-receiptruleset-properties)
 + [Example](#aws-resource-ses-receiptruleset-examples)
@@ -35,11 +35,8 @@ Properties:
 
 `RuleSetName`  <a name="cfn-ses-receiptruleset-rulesetname"></a>
 The name of the rule set to create\. The name must:  
-
 + Contain only ASCII letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), or dashes \(\-\)\.
-
 + Start and end with a letter or number\.
-
 + Contain less than 64 characters\.
  *Required*: No  
  *Type*: String  
@@ -89,7 +86,5 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-ses-receiptruleset-seealso"></a>
-
 + [Creating Receipt Rules for Amazon SES Email Receiving](url-ses-dev;receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*
-
 + [CreateReceiptRuleSet](url-ses-api;API_CreateReceiptRuleSet.html) in the *Amazon Simple Email Service API Reference*

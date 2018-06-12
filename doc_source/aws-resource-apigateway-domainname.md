@@ -4,7 +4,7 @@
 
 You can use a custom domain name to provide a URL that's more intuitive and easier to recall\. For more information about using custom domain names, see [Use Custom Domain Name as API Gateway API Host Name](http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html) in the *API Gateway Developer Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-apigateway-domainname-syntax)
 + [Properties](#aws-resource-apigateway-domainname-properties)
 + [Return Values](#aws-resource-apigateway-domainname-returnvalues)
@@ -51,7 +51,7 @@ The reference to an AWS\-managed certificate for use by the edge\-optimized endp
 
 `DomainName`  <a name="cfn-apigateway-domainname-domainname"></a>
 The custom domain name for your API in Amazon API Gateway\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
@@ -306,5 +306,4 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-apigateway-domainname-seealso"></a>
-
 + [domainname:create](http://docs.aws.amazon.com/apigateway/api-reference/link-relation/domainname-create/) operation in the *Amazon API Gateway REST API Reference*

@@ -7,12 +7,12 @@ Custom resources provide a way for you to write custom provisioning logic in AWS
 **Note**  
 If you use the [VPC endpoint](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpoints.html) feature, custom resources in the VPC must have access to AWS CloudFormation\-specific Amazon Simple Storage Service \(Amazon S3\) buckets\. Custom resources must send responses to a pre\-signed Amazon S3 URL\. If they can't send responses to Amazon S3, AWS CloudFormation won't receive a response and the stack operation fails\. For more information, see [AWS CloudFormation and VPC Endpoints](cfn-vpce-bucketnames.md)\.
 
-
+**Topics**
 + [Syntax](#aws-resource-cloudformation-customresource-syntax)
-+ [Properties](#w3ab2c21c10d158c13)
-+ [Return Values](#w3ab2c21c10d158c15)
-+ [Examples](#w3ab2c21c10d158c17)
-+ [Replacing a Custom Resource During an Update](#w3ab2c21c10d158c19)
++ [Properties](#w3ab2c21c10d186c13)
++ [Return Values](#w3ab2c21c10d186c15)
++ [Examples](#w3ab2c21c10d186c17)
++ [Replacing a Custom Resource During an Update](#w3ab2c21c10d186c19)
 
 ## Syntax<a name="aws-resource-cloudformation-customresource-syntax"></a>
 
@@ -49,24 +49,24 @@ Custom resource type names can include alphanumeric characters and the following
 
 Using your own resource type names helps you quickly differentiate the types of custom resources in your stack\. For example, if you had two custom resources that conduct two different ping tests, you could name their type as `Custom::PingTester` to make them easily identifiable as ping testers \(instead of using `AWS::CloudFormation::CustomResource`\)\.
 
-## Properties<a name="w3ab2c21c10d158c13"></a>
+## Properties<a name="w3ab2c21c10d186c13"></a>
 
 **Note**  
 Only one property is defined by AWS for a custom resource: `ServiceToken`\. All other properties are defined by the service provider\.
 
 `ServiceToken`  <a name="cfn-customresource-servicetoken"></a>
 The service token that was given to the template developer by the service provider to access the service, such as an Amazon SNS topic ARN or Lambda function ARN\. The service token must be from the same region in which you are creating the stack\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: Updates are not supported\.
 
-## Return Values<a name="w3ab2c21c10d158c15"></a>
+## Return Values<a name="w3ab2c21c10d186c15"></a>
 
 For a custom resource, return values are defined by the custom resource provider, and are retrieved by calling [`Fn::GetAtt`](intrinsic-function-reference-getatt.md) on the provider\-defined attributes\.
 
-## Examples<a name="w3ab2c21c10d158c17"></a>
+## Examples<a name="w3ab2c21c10d186c17"></a>
 
-### Creating a custom resource definition in a template<a name="w3ab2c21c10d158c17b2"></a>
+### Creating a custom resource definition in a template<a name="w3ab2c21c10d186c17b2"></a>
 
 The following example demonstrates how to create a custom resource definition in a template\.
 
@@ -128,7 +128,7 @@ Outputs:
         - responseKey2
 ```
 
-### Using an AWS Lambda function in a custom resource<a name="w3ab2c21c10d158c17b4"></a>
+### Using an AWS Lambda function in a custom resource<a name="w3ab2c21c10d186c17b4"></a>
 
 With Lambda functions and custom resources, you can run custom code in response to stack events \(create, update, and delete\)\. The following custom resource invokes a Lambda function and sends it the `StackName` property as input\. The function uses this property to get outputs from the appropriate stack\.
 
@@ -159,12 +159,10 @@ MyCustomResource:
       Ref: "NetworkStackName"
 ```
 
-## Replacing a Custom Resource During an Update<a name="w3ab2c21c10d158c19"></a>
+## Replacing a Custom Resource During an Update<a name="w3ab2c21c10d186c19"></a>
 
 You can update custom resources that require a replacement of the underlying physical resource\. When you update a custom resource in an AWS CloudFormation template, AWS CloudFormation sends an update request to that custom resource\. If the custom resource requires a replacement, the new custom resource must send a response with the new physical ID\. When AWS CloudFormation receives the response, it compares the `PhysicalResourceId` between the old and new custom resources\. If they are different, AWS CloudFormation recognizes the update as a replacement and sends a delete request to the old resource\. For a step\-by\-step walkthrough of this process, see [Stack Updates](template-custom-resources-sns.md#crpg-walkthrough-stack-updates)\. 
 
 Note the following: 
-
 + You can monitor the progress of the update in the **Events** tab\. For more information, see [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)\.
-
 + For more information about resource behavior during updates, see [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)\.

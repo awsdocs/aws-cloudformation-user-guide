@@ -25,9 +25,9 @@
 `ReplyToEmailAddress`  <a name="cfn-cognito-userpool-emailconfiguration-replytoemailaddress"></a>
 The REPLY\-TO email address\.  
 *Type*: String  
-*Required: *No
+*Required*: No
 
 `SourceArn`  <a name="cfn-cognito-userpool-emailconfiguration-sourcearn"></a>
 The Amazon Resource Name \(ARN\) of the email source\.  
 *Type*: String  
-*Required: *No
+*Required*: No

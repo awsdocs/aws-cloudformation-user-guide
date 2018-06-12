@@ -33,6 +33,6 @@ Type: "AWS::CloudFormation::WaitConditionHandle"
 Properties:
 ```
 
-## Related Resources<a name="w3ab2c21c10d182c13"></a>
+## Related Resources<a name="w3ab2c21c10d210c13"></a>
 
 For information about how to use wait conditions, see [Creating Wait Conditions in a Template](using-cfn-waitcondition.md)\.

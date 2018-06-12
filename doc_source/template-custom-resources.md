@@ -73,4 +73,4 @@ If the name\-value pairs contain sensitive information, you should use the `NoEc
    }
    ```
 
-1. After getting a `SUCCESS` response, AWS CloudFormation proceeds with the stack operation\. If a `FAILED` or no response is returned, the operation fails\. Any output data from the custom resource is stored in the pre\-signed URL location\. The template developer can retrieve that data by using the [`Fn::GetAtt`](intrinsic-function-reference-getatt.md) function\.
+1. After getting a `SUCCESS` response, AWS CloudFormation proceeds with the stack operation\. If a `FAILURE` or no response is returned, the operation fails\. Any output data from the custom resource is stored in the pre\-signed URL location\. The template developer can retrieve that data by using the [`Fn::GetAtt`](intrinsic-function-reference-getatt.md) function\.

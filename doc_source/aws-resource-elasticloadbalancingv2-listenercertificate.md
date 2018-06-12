@@ -2,7 +2,7 @@
 
 The `AWS::ElasticLoadBalancingV2::ListenerCertificate` resource specifies certificates for an Elastic Load Balancing secure listener\. For more information, see [Getting Started](http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/load-balancer-getting-started.html) in the *Elastic Load Balancing User Guide*\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-elasticloadbalancingv2-listenercertificate-syntax)
 + [Properties](#aws-resource-elasticloadbalancingv2-listenercertificate-properties)
 + [Example](#aws-resource-elasticloadbalancingv2-listenercertificate-examples)

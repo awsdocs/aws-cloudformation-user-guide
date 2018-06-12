@@ -24,10 +24,10 @@
 
 `Ip`  <a name="cfn-opsworks-stack-elasticip-ip"></a>
 The Elastic IP address\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String
 
 `Name`  <a name="cfn-opsworks-stack-elasticip-name"></a>
 A name for the Elastic IP address\.  
-*Required: *No  
+*Required*: No  
 *Type*: String

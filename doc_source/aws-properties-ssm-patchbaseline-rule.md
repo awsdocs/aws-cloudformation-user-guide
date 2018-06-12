@@ -1,8 +1,8 @@
-# Amazon EC2 Systems Manager PatchBaseline Rule<a name="aws-properties-ssm-patchbaseline-rule"></a>
+# AWS Systems Manager PatchBaseline Rule<a name="aws-properties-ssm-patchbaseline-rule"></a>
 
-<a name="aws-properties-ssm-patchbaseline-rule-description"></a>The `Rule` property type specifies an approval rule for an Amazon EC2 Systems Manager patch baseline\.
+<a name="aws-properties-ssm-patchbaseline-rule-description"></a>The `Rule` property type specifies an approval rule for a Systems Manager patch baseline\.
 
-<a name="aws-properties-ssm-patchbaseline-rule-inheritance"></a> The `PatchRules` property of the [SSM PatchBaseline RuleGroup](aws-properties-ssm-patchbaseline-rulegroup.md) property type contains a list of `Rule` property types\. 
+<a name="aws-properties-ssm-patchbaseline-rule-inheritance"></a> The `PatchRules` property of the [Systems Manager PatchBaseline RuleGroup](aws-properties-ssm-patchbaseline-rulegroup.md) property type contains a list of `Rule` property types\. 
 
 ## Syntax<a name="aws-properties-ssm-patchbaseline-rule-syntax"></a>
 
@@ -32,11 +32,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `PatchFilterGroup`  <a name="cfn-ssm-patchbaseline-rule-patchfiltergroup"></a>
 The patch filter group that defines the criteria for the rule\.  
  *Required*: No  
- *Type*: [SSM PatchBaseline PatchFilterGroup](aws-properties-ssm-patchbaseline-patchfiltergroup.md)  
+ *Type*: [Systems Manager PatchBaseline PatchFilterGroup](aws-properties-ssm-patchbaseline-patchfiltergroup.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ApproveAfterDays`  <a name="cfn-ssm-patchbaseline-rule-approveafterdays"></a>
-The number of days after the release date of each patch that matches the rule to mark the patch as approved in the patch baseline\. For example, a value of `7` means that patches are approved seven days after they are released\.  
+The number of days after the release date of each patch matched by the rule that the patch is marked as approved in the patch baseline\. For example, a value of `7` means that patches are approved seven days after they are released\.  
  *Required*: No  
  *Type*: Integer  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

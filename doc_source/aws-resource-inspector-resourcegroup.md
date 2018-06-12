@@ -2,7 +2,7 @@
 
 The `AWS::Inspector::ResourceGroup` resource is used to create Amazon Inspector resource groups\. A resource group defines a set of tags that, when queried, identify the AWS resources that make up the assessment target\.
 
-
+**Topics**
 + [Syntax](#aws-resource-inspector-resourcegroup-syntax)
 + [Properties](#aws-resource-inspector-resourcegroup-properties)
 + [Return Values](#aws-resource-inspector-resourcegroup-returnvalues)
@@ -65,8 +65,8 @@ The following example shows how to declare an AWS::Inspector::ResourceGroup reso
         "Properties": {
             "ResourceGroupTags": [
                 {
-                    "key": "Name",
-                    "value": "example"
+                    "Key": "Name",
+                    "Value": "example"
                 }
             ]
         }

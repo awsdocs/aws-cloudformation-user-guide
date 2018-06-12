@@ -2,7 +2,7 @@
 
 When you need to update a stack, understanding how your changes will affect running resources before you implement them can help you update stacks with confidence\. Change sets allow you to preview how proposed changes to a stack might impact your running resources, for example, whether your changes will delete or replace any critical resources, AWS CloudFormation makes the changes to your stack only when you decide to execute the change set, allowing you to decide whether to proceed with your proposed changes or explore other changes by creating another change set\. You can create and manage change sets using the AWS CloudFormation console, AWS CLI, or AWS CloudFormation API\.
 
-
+**Topics**
 + [Creating a Change Set](using-cfn-updating-stacks-changesets-create.md)
 + [Viewing a Change Set](using-cfn-updating-stacks-changesets-view.md)
 + [Executing a Change Set](using-cfn-updating-stacks-changesets-execute.md)

@@ -2,7 +2,7 @@
 
 The `AWS::KMS::Alias` resource creates a display name for a customer master key \(CMK\) in AWS Key Management Service \(AWS KMS\)\. Using an alias to refer to a key can help you simplify key management\. For example, when rotating keys, you can just update the alias mapping instead of tracking and changing key IDs\. For more information, see [Working with Aliases](http://docs.aws.amazon.com/kms/latest/developerguide/programming-aliases.html) in the *AWS Key Management Service Developer Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-kms-alias-syntax)
 + [Properties](#aws-resource-kms-alias-properties)
 + [Return Value](#aws-resource-kms-alias-returnvalues)
@@ -37,19 +37,19 @@ Properties:
 
 `AliasName`  <a name="cfn-kms-alias-aliasname"></a>
 The name of the alias\. The name must start with `alias` followed by a forward slash, such as `alias/`\. You can't specify aliases that begin with `alias/AWS`\. These aliases are reserved\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `TargetKeyId`  <a name="cfn-kms-alias-targetkeyid"></a>
 The ID of the key for which you are creating the alias\. Specify the key's globally unique identifier or Amazon Resource Name \(ARN\)\. You can't specify another alias\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Value<a name="aws-resource-kms-alias-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d792c11b2"></a>
+### Ref<a name="w3ab2c21c10d839c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the alias name, such as `alias/myKeyAlias`\.
 
