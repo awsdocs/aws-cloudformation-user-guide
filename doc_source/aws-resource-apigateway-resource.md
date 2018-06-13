@@ -2,7 +2,7 @@
 
 The `AWS::ApiGateway::Resource` resource creates a resource in an Amazon API Gateway \(API Gateway\) API\.
 
-
+**Topics**
 + [Syntax](#aws-resource-apigateway-resource-syntax)
 + [Properties](#w3ab2c21c10c72b9)
 + [Return Value](#w3ab2c21c10c72c11)
@@ -39,19 +39,19 @@ Properties:
 
 `ParentId`  <a name="cfn-apigateway-resource-parentid"></a>
 If you want to create a child resource, the ID of the parent resource\. For resources without a parent, specify the RestApi root resource ID, such as `{ "Fn::GetAtt": ["MyRestApi", "RootResourceId"] }`\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `PathPart`  <a name="cfn-apigateway-resource-pathpart"></a>
 A path name for the resource\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `RestApiId`  <a name="cfn-apigateway-resource-resapiid"></a>
 The ID of the `RestApi` resource in which you want to create this resource\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 

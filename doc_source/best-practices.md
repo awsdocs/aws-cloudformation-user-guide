@@ -3,45 +3,27 @@
 Best practices are recommendations that can help you use AWS CloudFormation more effectively and securely throughout its entire workflow\. Learn how to plan and organize your stacks, create templates that describe your resources and the software applications that run on them, and manage your stacks and their resources\. The following best practices are based on real\-world experience from current AWS CloudFormation customers\.
 
 **Planning and organizing**  
-
 + [Organize Your Stacks By Lifecycle and Ownership](#organizingstacks)
-
 + [Use Cross\-Stack References to Export Shared Resources](#cross-stack)
-
 + [Use IAM to Control Access](#use-iam-to-control-access)
-
 + [Reuse Templates to Replicate Stacks in Multiple Environments](#reuse)
-
 + [Verify Quotas for All Resource Types](#limits) 
-
 + [Use Nested Stacks to Reuse Common Template Patterns](#nested)
 
 **Creating templates**  
-
 + [Do Not Embed Credentials in Your Templates](#creds)
-
 + [Use AWS\-Specific Parameter Types](#parmtypes)
-
 + [Use Parameter Constraints](#parmconstraints)
-
 + [Use AWS::CloudFormation::Init to Deploy Software Applications on Amazon EC2 Instances](#cfninit)
-
 + [Use the Latest Helper Scripts](#helper-scripts)
-
 + [Validate Templates Before Using Them](#validate)
 
 **Managing stacks**  
-
 + [Manage All Stack Resources Through AWS CloudFormation](#donttouch)
-
 + [Create Change Sets Before Updating Your Stacks](#cfn-best-practices-changesets)
-
 + [Use Stack Policies](#stackpolicy)
-
 + [Use AWS CloudTrail to Log AWS CloudFormation Calls](#cloudtrail)
-
 + [Use Code Reviews and Revision Controls to Manage Your Templates](#code)
-
 + [Update Your Amazon EC2 Linux Instances Regularly](#update-ec2-linux)
 
 ## Organize Your Stacks By Lifecycle and Ownership<a name="organizingstacks"></a>

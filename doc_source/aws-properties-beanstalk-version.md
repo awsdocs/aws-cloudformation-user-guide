@@ -2,12 +2,12 @@
 
 Creates an application version, an iteration of deployable code, for an Elastic Beanstalk application\.
 
-
+**Topics**
 + [Syntax](#aws-resource-elasticbeanstalk-applicationversion-syntax)
-+ [Members](#w3ab2c21c10d574b9)
-+ [Return Values](#w3ab2c21c10d574c11)
-+ [Example](#w3ab2c21c10d574c13)
-+ [See Also](#w3ab2c21c10d574c15)
++ [Members](#w3ab2c21c10d619b9)
++ [Return Values](#w3ab2c21c10d619c11)
++ [Example](#w3ab2c21c10d619c13)
++ [See Also](#w3ab2c21c10d619c15)
 
 ## Syntax<a name="aws-resource-elasticbeanstalk-applicationversion-syntax"></a>
 
@@ -37,35 +37,35 @@ Properties:
     SourceBundle
 ```
 
-## Members<a name="w3ab2c21c10d574b9"></a>
+## Members<a name="w3ab2c21c10d619b9"></a>
 
 `ApplicationName`  <a name="cfn-elasticbeanstalk-applicationversion-applicationname"></a>
 Name of the Elastic Beanstalk application that is associated with this application version\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Description`  <a name="cfn-elasticbeanstalk-applicationversion-description"></a>
 A description of this application version\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 `SourceBundle`  <a name="cfn-elasticbeanstalk-applicationversion-sourcebundle"></a>
 The location of the source bundle for this version\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: [Source Bundle](aws-properties-beanstalk-sourcebundle.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w3ab2c21c10d574c11"></a>
+## Return Values<a name="w3ab2c21c10d619c11"></a>
 
-### Ref<a name="w3ab2c21c10d574c11b2"></a>
+### Ref<a name="w3ab2c21c10d619c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10d574c13"></a>
+## Example<a name="w3ab2c21c10d619c13"></a>
 
 ### JSON<a name="aws-resource-elasticbeanstalk-applicationversion-example.json"></a>
 
@@ -103,6 +103,5 @@ myAppVersion:
       S3Key: "php-sample.zip"
 ```
 
-## See Also<a name="w3ab2c21c10d574c15"></a>
-
+## See Also<a name="w3ab2c21c10d619c15"></a>
 + For a complete Elastic Beanstalk sample template, see [Elastic Beanstalk Template Snippets](quickref-elasticbeanstalk.md)\.

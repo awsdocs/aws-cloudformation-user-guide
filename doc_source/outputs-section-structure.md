@@ -51,17 +51,12 @@ The value of the property returned by the `aws cloudformation describe-stacks` c
 **Export \(optional\)**  
 The name of the resource output to be exported for a [cross\-stack reference](walkthrough-crossstackref.md)\.  
 The following restrictions apply to cross\-stack references:  
-
 + For each AWS account, `Export` names must be unique within a region\.
-
 + You can't create cross\-stack references across regions\. You can use the intrinsic function `Fn::ImportValue` to import only values that have been exported within the same region\.
-
 + For outputs, the value of the `Name` property of an `Export` can't use `Ref` or `GetAtt` functions that depend on a resource\.
 
   Similarly, the `ImportValue` function can't include `Ref` or `GetAtt` functions that depend on a resource\.
-
 + You can't delete a stack if another stack references one of its outputs\.
-
 + You can't modify or remove an output value that is referenced by another stack\.
 You can use intrinsic functions to customize the `Name` value of an export\. The following examples use the `Fn::Join` function\.  
 JSON  

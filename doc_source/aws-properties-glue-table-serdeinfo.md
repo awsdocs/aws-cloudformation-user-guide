@@ -49,5 +49,4 @@ The name of the SerDe\. It must match the single\-line string pattern: `[\u0020-
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-glue-table-serdeinfo-seealso"></a>
-
 + [SerDeInfo Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-SerDeInfo) in the *AWS Glue Developer Guide*

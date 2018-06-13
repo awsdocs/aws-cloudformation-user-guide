@@ -2,7 +2,7 @@
 
 The `AWS::GuardDuty::Detector` resource creates a single Amazon GuardDuty detector\. A detector is an object that represents the GuardDuty service\. You must create a detector for GuardDuty to become operational\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-guardduty-detector-syntax)
 + [Properties](#aws-resource-guardduty-detector-properties)
 + [Return Values](#aws-resource-guardduty-detector-returnvalues)

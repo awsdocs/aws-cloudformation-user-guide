@@ -2,7 +2,7 @@
 
 The `AWS::CloudFront::StreamingDistribution` resource specifies an RMTP distribution for Amazon CloudFront\. An RTMP distribution is similar to a web distribution, but an RTMP distribution streams media files using the Adobe Real\-Time Messaging Protocol \(RTMP\) instead of serving files using HTTP\. For more information, see [CreateStreamingDistribution](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateStreamingDistribution.html) in the *Amazon CloudFront API Reference*\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-cloudfront-streamingdistribution-syntax)
 + [Properties](#aws-resource-cloudfront-streamingdistribution-properties)
 + [Return Values](#aws-resource-cloudfront-streamingdistribution-returnvalues)
@@ -52,13 +52,13 @@ Duplicates not allowed\.
 
 ## Return Values<a name="aws-resource-cloudfront-streamingdistribution-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d195c12b3"></a>
+### Ref<a name="w3ab2c21c10d223c12b3"></a>
 
 When you pass the logical ID of an `AWS::CloudFront::StreamingDistribution` resource to the intrinsic `Ref` function, the function returns the streaming distribution ID, such as `E1E7FEN9T35R9W`\. 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
-### Fn::GetAtt<a name="w3ab2c21c10d195c12b5"></a>
+### Fn::GetAtt<a name="w3ab2c21c10d223c12b5"></a>
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
@@ -148,5 +148,4 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-cloudfront-streamingdistribution-seealso"></a>
-
 + [CreateStreamingDistribution](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateStreamingDistribution.html) in the *Amazon CloudFront API Reference*

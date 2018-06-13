@@ -2,7 +2,7 @@
 
 `Placement` is a property of the [Amazon Elastic Compute Cloud SpotFleet LaunchSpecifications](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md) property that defines the placement group for the Spot instances\.
 
-## Syntax<a name="w3ab2c21c14d663b5"></a>
+## Syntax<a name="w3ab2c21c14d814b5"></a>
 
 ### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement-syntax.json"></a>
 
@@ -20,14 +20,14 @@
 [GroupName](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement-groupname): String
 ```
 
-## Properties<a name="w3ab2c21c14d663b7"></a>
+## Properties<a name="w3ab2c21c14d814b7"></a>
 
 `AvailabilityZone`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement-availabilityzone"></a>
 The Availability Zone \(AZ\) of the placement group\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `GroupName`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement-groupname"></a>
 The name of the placement group \(for cluster instances\)\.  
-*Required: *No  
+*Required*: No  
 *Type*: String

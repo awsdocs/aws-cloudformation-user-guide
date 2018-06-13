@@ -42,7 +42,6 @@ AWS CloudFormation supports blue/green deployments on AWS Lambda compute platfor
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-codedeploy-deploymentgroup-deploymentstyle-seealso"></a>
-
 + [ DeploymentStyle](http://docs.aws.amazon.com/codedeploy/latest/APIReference/API_DeploymentStyle.html) in the *AWS CodeDeploy API Reference*
 
 ## Example<a name="aws-properties-codedeploy-deploymentgroup-deploymentstyle-examples"></a>
@@ -88,5 +87,4 @@ CodeDeployDeploymentGroup:
 ```
 
 ## See Also<a name="aws-properties-codedeploy-deploymentgroup-deploymentstyle-seealso"></a>
-
 + [ DeploymentStyle](http://docs.aws.amazon.com/codedeploy/latest/APIReference/API_DeploymentStyle.html) in the *AWS CodeDeploy API Reference*

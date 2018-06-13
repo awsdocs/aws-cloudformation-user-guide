@@ -69,5 +69,4 @@ Fn::Base64: AWS CloudFormation
 You can use any function that returns a string inside the `Fn::Base64` function\.
 
 ## See Also<a name="w3ab2c21c28c12c15"></a>
-
 + [Intrinsic Function Reference](intrinsic-function-reference.md)

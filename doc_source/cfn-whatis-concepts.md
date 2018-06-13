@@ -2,7 +2,7 @@
 
 When you use AWS CloudFormation, you work with *templates* and *stacks*\. You create templates to describe your AWS resources and their properties\. Whenever you create a stack, AWS CloudFormation provisions the resources that are described in your template\.
 
-
+**Topics**
 + [Templates](#w3ab2b5c15b7)
 + [Stacks](#w3ab2b5c15b9)
 + [Change Sets](#w3ab2b5c15c11)

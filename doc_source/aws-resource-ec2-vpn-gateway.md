@@ -2,12 +2,12 @@
 
 Creates a virtual private gateway\. A virtual private gateway is the VPC\-side endpoint for your VPN connection\.
 
-
+**Topics**
 + [Syntax](#aws-resource-ec2-vpcgateway-syntax)
-+ [Properties](#w3ab2c21c10d505b9)
-+ [Return Value](#w3ab2c21c10d505c11)
-+ [Example](#w3ab2c21c10d505c13)
-+ [See Also](#w3ab2c21c10d505c15)
++ [Properties](#w3ab2c21c10d546b9)
++ [Return Value](#w3ab2c21c10d546c11)
++ [Example](#w3ab2c21c10d546c13)
++ [See Also](#w3ab2c21c10d546c15)
 
 ## Syntax<a name="aws-resource-ec2-vpcgateway-syntax"></a>
 
@@ -37,7 +37,7 @@ Properties:
     Resource Tag
 ```
 
-## Properties<a name="w3ab2c21c10d505b9"></a>
+## Properties<a name="w3ab2c21c10d546b9"></a>
 
 `AmazonSideAsn`  <a name="cfn-ec2-vpngateway-amazonsideasn"></a>
 The private Autonomous System Number \(ASN\) for the Amazon side of a BGP session\.  
@@ -53,11 +53,11 @@ The type of VPN connection this virtual private gateway supports\. The only vali
 
 `Tags`  <a name="cfn-ec2-vpngateway-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this resource\.  
-*Required: *No  
+*Required*: No  
 *Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
-## Return Value<a name="w3ab2c21c10d505c11"></a>
+## Return Value<a name="w3ab2c21c10d546c11"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -69,7 +69,7 @@ For the VPN gateway with the logical ID "MyVPNGateway", `Ref` will return the ga
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10d505c13"></a>
+## Example<a name="w3ab2c21c10d546c13"></a>
 
 ### JSON<a name="aws-resource-ec2-vpcgateway-example.json"></a>
 
@@ -103,6 +103,5 @@ Resources:
           Value: Test
 ```
 
-## See Also<a name="w3ab2c21c10d505c15"></a>
-
+## See Also<a name="w3ab2c21c10d546c15"></a>
 + [CreateVpnGateway](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVpnGateway.html) in the *Amazon EC2 API Reference*\.

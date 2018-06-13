@@ -2,7 +2,7 @@
 
 The `AWS::ApiGateway::DocumentationPart` resource creates a documentation part for an Amazon API Gateway API entity\. For more information, see [ Representation of API Documentation in API Gateway](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api-content-representation.html) in the *API Gateway Developer Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-apigateway-documentationpart-syntax)
 + [Properties](#aws-resource-apigateway-documentationpart-properties)
 + [Return Value](#aws-resource-apigateway-documentationpart-returnvalues)

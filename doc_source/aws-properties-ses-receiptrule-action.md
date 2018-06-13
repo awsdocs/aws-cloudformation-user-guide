@@ -79,9 +79,6 @@ Calls Amazon WorkMail and, optionally, publishes a notification to Amazon SNS\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ses-receiptrule-action-seealso"></a>
-
 + [Creating Receipt Rules for Amazon SES Email Receiving](url-ses-dev;receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*
-
 + [CreateReceiptRule](url-ses-api;API_CreateReceiptRule.html) in the *Amazon Simple Email Service API Reference*
-
 + [ReceiptAction](url-ses-api;API_ReceiptAction.html) in the *Amazon Simple Email Service API Reference*

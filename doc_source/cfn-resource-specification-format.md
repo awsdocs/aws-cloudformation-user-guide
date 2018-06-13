@@ -2,7 +2,7 @@
 
 AWS CloudFormation creates a specification for each [resource type](aws-template-resource-type-ref.md), such as `AWS::S3::Bucket` or `AWS::EC2::Instance`\. The following sections describe the format and each field within the specification\.
 
-
+**Topics**
 + [Specification Sections](#w3ab2c21c18c21b7)
 + [Property Specification](#cfn-resource-specification-format-propertytypes)
 + [Resource Specification](#cfn-resource-specification-format-resourcetype)

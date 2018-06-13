@@ -2,7 +2,7 @@
 
 The `AWS::CodeBuild::Project` resource configures how AWS CodeBuild builds your source code\. For example, it tells AWS CodeBuild where to get the source code and which build environment to use\.
 
-
+**Topics**
 + [Syntax](#aws-resource-codebuild-project-syntax)
 + [Properties](#aws-resource-codebuild-project-properties)
 + [Return Values](#aws-resource-codebuild-project-returnvalues)
@@ -66,7 +66,7 @@ Properties:
 
 `Artifacts`  <a name="cfn-codebuild-project-artifacts"></a>
 The output settings for artifacts that the project generates during a build\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: [AWS CodeBuild Project Artifacts](aws-properties-codebuild-project-artifacts.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
@@ -84,55 +84,55 @@ Settings that AWS CodeBuild uses to store and reuse build dependencies\.
 
 `Description`  <a name="cfn-codebuild-project-description"></a>
 A description of the project\. Use the description to identify the purpose of the project\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `EncryptionKey`  <a name="cfn-codebuild-project-encryptionkey"></a>
 The alias or Amazon Resource Name \(ARN\) of the AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) that AWS CodeBuild uses to encrypt the build output\. If you don't specify a value, AWS CodeBuild uses the AWS\-managed CMK for Amazon Simple Storage Service\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Environment`  <a name="cfn-codebuild-project-environment"></a>
 The build environment settings for the project, such as the environment type or the environment variables to use for the build environment\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: [AWS CodeBuild Project Environment](aws-properties-codebuild-project-environment.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Name`  <a name="cfn-codebuild-project-name"></a>
 A name for the project\. The name must be unique across all of the projects in your AWS account\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ServiceRole`  <a name="cfn-codebuild-project-servicerole"></a>
 The ARN of the service role that AWS CodeBuild uses to interact with services on your behalf\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Source`  <a name="cfn-codebuild-project-source"></a>
 The source code settings for the project, such as the source code's repository type and location\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: [AWS CodeBuild Project Source](aws-properties-codebuild-project-source.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Tags`  <a name="cfn-codebuild-project-tags"></a>
 An arbitrary set of tags \(key\-value pairs\) for the AWS CodeBuild project\.  
-*Required: *No  
+*Required*: No  
 *Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `TimeoutInMinutes`  <a name="cfn-codebuild-project-timeoutinminutes"></a>
 The number of minutes after which AWS CodeBuild stops the build if it's not complete\. For valid values, see the [http://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli](http://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli) field in the *AWS CodeBuild User Guide*\.  
-*Required: *No  
+*Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Triggers`  <a name="cfn-codebuild-project-triggers"></a>
 For an existing AWS CodeBuild build project that has its source code stored in a GitHub repository, enables AWS CodeBuild to begin automatically rebuilding the source code every time a code change is pushed to the repository\.  
-*Required: *No  
+*Required*: No  
  *Type*: [AWS CodeBuild Project ProjectTriggers](aws-properties-codebuild-project-projecttriggers.md)   
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
@@ -473,5 +473,4 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-codebuild-project-seealso"></a>
-
 + [ CreateProject](http://docs.aws.amazon.com/codebuild/latest/APIReference/API_CreateProject.html) in the *AWS CodeBuild API Reference*
