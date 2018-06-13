@@ -132,3 +132,9 @@ Resources:
             Ipv6CidrBlock: !Select [ 0, !Cidr [ !Select [ 0, !GetAtt ExampleVpc.Ipv6CidrBlocks], 1, 64 ]]
             VpcId: !Ref ExampleVpc
 ```
+
+## Supported Functions<a name="w3ab2c21c28c16c13"></a>
+
+You can use the following functions in a `Fn::Cidr` function:
++ [`Fn::Select`](intrinsic-function-reference-select.md)
++ [`Ref`](intrinsic-function-reference-ref.md)
