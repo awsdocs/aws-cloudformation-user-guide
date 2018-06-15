@@ -133,7 +133,7 @@ The following example creates a managed policy and associates it with the `TestD
       {
         "Effect" : "Allow",           
         "Action" : "rds:CreateDBInstance",
-        "Resource" : {"Fn::Join" : [ "", [ "arn:aws:rds:", { "Ref" : "AWS::Region" }, ":", { "Ref" : "AWS::Region" }, ":db:test*" ] ]}, 
+        "Resource" : {"Fn::Join" : [ "", [ "arn:aws:rds:", { "Ref" : "AWS::Region" }, ":", { "Ref" : "AWS::AccountId" }, ":db:test*" ] ]}, 
         "Condition" : {
           "StringEquals" : { "rds:DatabaseClass" : "db.t2.micro" }
         }
@@ -184,7 +184,7 @@ CreateTestDBPolicy:
                   Ref: "AWS::Region"
                 - ":"
                 - 
-                  Ref: "AWS::Region"
+                  Ref: "AWS::AccountId"
                 - ":db:test*"
           Condition: 
             StringEquals: 
