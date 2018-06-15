@@ -1,6 +1,6 @@
 # UpdatePolicy Attribute<a name="aws-attribute-updatepolicy"></a>
 
-Use the `UpdatePolicy` attribute to specify how AWS CloudFormation handles updates to the [http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) or [http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-lambda-alias.html](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-lambda-alias.html) resource\.
+Use the `UpdatePolicy` attribute to specify how AWS CloudFormation handles updates to the [http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) or [http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html) resource\.
 
 For `AWS::AutoScaling::AutoScalingGroup` resources, AWS CloudFormation invokes one of three update policies depending on the type of change you make or whether a scheduled action is associated with the Auto Scaling group\.
 + The `AutoScalingReplacingUpdate` and `AutoScalingRollingUpdate` policies apply *only* when you do one or more of the following:
