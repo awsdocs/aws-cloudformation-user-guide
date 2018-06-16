@@ -1,6 +1,6 @@
 # Conditions<a name="conditions-section-structure"></a>
 
-The optional `Conditions` section includes statements that define when a resource is created or when a property is defined\. For example, you can compare whether a value is equal to another value\. Based on the result of that condition, you can conditionally create resources\. If you have multiple conditions, separate them with commas\.
+The optional `Conditions` section contains statements that determine whether a resource is created or a property is defined\. For example, you can compare if a value is equal to another value\. Based on the result of that condition, you can conditionally create resources\. If you have multiple conditions, separate them with commas\.
 
 You might use conditions when you want to reuse a template that can create resources in different contexts, such as a test environment versus a production environment\. In your template, you can add an `EnvironmentType` input parameter, which accepts either **prod** or **test** as inputs\. For the production environment, you might include Amazon EC2 instances with certain capabilities; however, for the test environment, you want to use reduced capabilities to save money\. With conditions, you can define which resources are created and how they're configured for each environment type\.
 
