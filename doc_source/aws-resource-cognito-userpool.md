@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
     "[AdminCreateUserConfig](#cfn-cognito-userpool-admincreateuserconfig)" : AdminCreateUserConfig,
     "[AliasAttributes](#cfn-cognito-userpool-aliasattributes)" : [ String ],
+    "[UsernameAttributes](#cfn-cognito-userpool-usernameattributes)": [ String ],
     "[AutoVerifiedAttributes](#cfn-cognito-userpool-autoverifiedattributes)" : [ String ],
     "[DeviceConfiguration](#cfn-cognito-userpool-deviceconfiguration)" : DeviceConfiguration,
     "[EmailConfiguration](#cfn-cognito-userpool-emailconfiguration)" : EmailConfiguration,
@@ -45,6 +46,8 @@ Properties:
   [AdminCreateUserConfig](#cfn-cognito-userpool-admincreateuserconfig): 
     AdminCreateUserConfig
   [AliasAttributes](#cfn-cognito-userpool-aliasattributes): 
+    - String
+  [UsernameAttributes](#cfn-cognito-userpool-usernameattributes):
     - String
   [AutoVerifiedAttributes](#cfn-cognito-userpool-autoverifiedattributes): 
     - String
@@ -82,7 +85,13 @@ The type of configuration for creating a new user profile\.
 Attributes supported as an alias for this user pool\. Possible values: `phone_number`, `email`, and/or `preferred_username`\.   
 *Required: *No  
 *Type*: List of String values  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+
+`UsernameAttributes`  <a name="cfn-cognito-userpool-usernamesattributes"></a>
+The attributes a user can use as their username to sign up and sign in\. Possible values: `phone_number`, and/or `email`\.
+*Required: *No
+*Type*: List of String values
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `AutoVerifiedAttributes`  <a name="cfn-cognito-userpool-autoverifiedattributes"></a>
 The attributes to be auto\-verified\. Possible values: `email` and/or `phone_number`\.   
