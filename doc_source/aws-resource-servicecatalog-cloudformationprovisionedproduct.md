@@ -90,13 +90,13 @@ A user\-friendly name for the provisioned product\. This name must be unique for
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `ProvisioningArtifactId`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactid"></a>
-The identifier of the provisioning artifact\. You must specify either the ID or the name of the provisioning artifact, but not both\.  
+The identifier of the provisioning artifact\. A provisioning artifact is also known as a product version\. You must specify either the ID or the name of the provisioning artifact, but not both\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ProvisioningArtifactName`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactname"></a>
-The name of the provisioning artifact\. This name must be unique for the product\. You must specify either the name or the ID of the provisioning artifact, but not both\.  
+The name of the provisioning artifact\. A provisioning artifact is also known as a product version\. This name must be unique for the product\. You must specify either the name or the ID of the provisioning artifact, but not both\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
