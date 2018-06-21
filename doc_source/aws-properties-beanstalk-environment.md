@@ -143,7 +143,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 `EndpointURL`  
-The returned value depends on the type of the environment. When `EnvironmentType` is *LoadBalanced* this attribute will contain the URL to the load balancer for this environment\. For environments with `EnvironmentType` set to *SingleInstance* this atribute will return the public IP address of the instance\. Note that this attribute does *not* return the Environment URL, and that there is currently no way to retrieve this value\.
+The returned value depends on the type of the environment. When `EnvironmentType` is *LoadBalanced* this attribute will contain the URL to the load balancer for this environment\. For environments with `EnvironmentType` set to *SingleInstance* this attribute will return the public IP address of the instance\. Note that this attribute does *not* return the Environment URL, and that there is currently no way to retrieve this value\.
 
 Examples:  
 + `awseb-myst-myen-132MQC4KRLAMD-1371280482.``us-east-2``.elb.amazonaws.com`
