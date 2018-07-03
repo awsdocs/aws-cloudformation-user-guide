@@ -45,6 +45,9 @@ Properties:
 
 ## Properties<a name="w3ab2c21c10d531c10"></a>
 
+**Note**  
+Currently, `PeerRegion` is not supported by CloudFormation, please use [the AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/ec2/create-vpc-peering-connection.html) or [the API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcPeeringConnection.html) if you need to create an inter-region VPC Peering Connection\.
+
 `PeerVpcId`  <a name="cfn-ec2-vpcpeeringconnection-peervpcid"></a>
 The ID of the VPC with which you are creating the peering connection\.  
 *Required*: Yes  
