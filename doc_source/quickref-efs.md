@@ -11,7 +11,7 @@ The security group of the mount target enables a network connection to TCP port 
 **Note**  
 If you make an update to the mount target that causes it to be replaced, instances or applications that use the associated file system might be disrupted\. This can cause uncommitted writes to be lost\. To avoid disruption, stop your instances when you update the mount target by setting the desired capacity to zero\. This allows the instances to unmount the file system before the mount target is deleted\. After the mount update has completed, start your instances in a subsequent update by setting the desired capacity\.
 
-## JSON<a name="quickref-efs-example-1.json"></a>
+### JSON<a name="quickref-efs-example-1.json"></a>
 
 ```
 {
@@ -932,4 +932,136 @@ Outputs:
     Description: File system ID
     Value:
       Ref: FileSystem
+```
+
+## Mounting Elastic File System with an IP Address 
+In case your DNS hostname is disabled and you are not in a state to enable it then also you can configure mounting a file system using the mount target IP address
+
+Before mounting to a traget Ip address, you have to create EFS with a specific IP addpress. It's just like you can select an IP from the range fo Ip's subnets have.
+
+*Creating-EFS-IP-addr.config*
+
+```
+option_settings:
+  aws:elasticbeanstalk:customoption:
+    EFSVolumeName: "EFS_Dir"
+    VPCId: "xxxx"
+## Subnet Options
+    SubnetA: "xxxx"
+  aws:elasticbeanstalk:application:environment:
+    FILE_SYSTEM_ID: '`{"Ref" : "FileSystem"}`'
+    MOUNT_TARGET_IP: 'xxxx'
+    MOUNT_DIRECTORY: '/efs'
+    REGION: '`{"Ref": "AWS::Region"}`'
+Resources:
+## Mount Target Resources
+  MountTargetA:
+    Type: AWS::EFS::MountTarget
+    Properties:
+      FileSystemId: {Ref: FileSystem}
+      IpAddress: xx.xx.xx.xx
+      SecurityGroups:
+      - {Ref: MountTargetSecurityGroup}
+      SubnetId:
+        Fn::GetOptionSetting: {OptionName: SubnetA}
+
+  FileSystem:
+    Type: AWS::EFS::FileSystem
+    Properties:
+      FileSystemTags:
+      - Key: Name
+        Value:
+          Fn::GetOptionSetting: {OptionName: EFSVolumeName, DefaultValue: "EFS_Dir"}
+
+  MountTargetSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Security group for mount target
+      SecurityGroupIngress:
+      - FromPort: '2049'
+        IpProtocol: tcp
+        SourceSecurityGroupId:
+          Fn::GetAtt: [AWSEBSecurityGroup, GroupId]
+        ToPort: '2049'
+      VpcId:
+        Fn::GetOptionSetting: {OptionName: VPCId}
+```
+
+*Mounting-EFS-IP-addr.config*
+
+```
+option_settings:
+  aws:elasticbeanstalk:application:environment:
+    FILE_SYSTEM_ID: '`{"Ref" : "FileSystem"}`'
+    MOUNT_TARGET_IP: 'xxxxx'
+    MOUNT_DIRECTORY: '/efs'
+    REGION: '`{"Ref": "AWS::Region"}`'
+
+packages:
+  yum:
+    nfs-utils: []
+    jq: []
+
+commands:
+  01_mount:
+    command: "/tmp/mount-efs.sh"
+
+files:
+  "/tmp/mount-efs.sh":
+      mode: "000755"
+      content : |
+        #!/bin/bash
+
+        EFS_REGION=$(/opt/elasticbeanstalk/bin/get-config environment | jq -r '.REGION')
+        EFS_MOUNT_DIR=$(/opt/elasticbeanstalk/bin/get-config environment | jq -r '.MOUNT_DIRECTORY')
+        EFS_FILE_SYSTEM_ID=$(/opt/elasticbeanstalk/bin/get-config environment | jq -r '.FILE_SYSTEM_ID')
+        EFS_FILE_SYSTEM_IP=$(/opt/elasticbeanstalk/bin/get-config environment | jq -r '.MOUNT_TARGET_IP')
+
+        echo "Mounting EFS filesystem ${EFS_DNS_NAME} to directory ${EFS_MOUNT_DIR} ..."
+
+        echo 'Stopping NFS ID Mapper...'
+        service rpcidmapd status &> /dev/null
+        if [ $? -ne 0 ] ; then
+            echo 'rpc.idmapd is already stopped!'
+        else
+            service rpcidmapd stop
+            if [ $? -ne 0 ] ; then
+                echo 'ERROR: Failed to stop NFS ID Mapper!'
+                exit 1
+            fi
+        fi
+
+        echo 'Checking if EFS mount directory exists...'
+        if [ ! -d ${EFS_MOUNT_DIR} ]; then
+            echo "Creating directory ${EFS_MOUNT_DIR} ..."
+            mkdir -p ${EFS_MOUNT_DIR}
+            if [ $? -ne 0 ]; then
+                echo 'ERROR: Directory creation failed!'
+                exit 1
+            fi
+        else
+            echo "Directory ${EFS_MOUNT_DIR} already exists!"
+        fi
+
+        mountpoint -q ${EFS_MOUNT_DIR}
+        if [ $? -ne 0 ]; then
+            echo "mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 ${EFS_FILE_SYSTEM_IP}:/ ${EFS_MOUNT_DIR}"
+            mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 ${EFS_FILE_SYSTEM_IP}:/ ${EFS_MOUNT_DIR}
+            if [ $? -ne 0 ] ; then
+                echo 'ERROR: Mount command failed!'
+                exit 1
+            fi
+            chmod 777 ${EFS_MOUNT_DIR}
+            runuser -l  ec2-user -c "touch ${EFS_MOUNT_DIR}/it_works"
+            if [[ $? -ne 0 ]]; then
+                echo 'ERROR: Permission Error!'
+                exit 1
+            else
+                runuser -l  ec2-user -c "rm -f ${EFS_MOUNT_DIR}/it_works"
+            fi
+        else
+            echo "Directory ${EFS_MOUNT_DIR} is already a valid mountpoint!"
+        fi
+
+        echo 'EFS mount complete.'
 ```
