@@ -11,7 +11,7 @@ The security group of the mount target enables a network connection to TCP port 
 **Note**  
 If you make an update to the mount target that causes it to be replaced, instances or applications that use the associated file system might be disrupted\. This can cause uncommitted writes to be lost\. To avoid disruption, stop your instances when you update the mount target by setting the desired capacity to zero\. This allows the instances to unmount the file system before the mount target is deleted\. After the mount update has completed, start your instances in a subsequent update by setting the desired capacity\.
 
-### JSON<a name="quickref-efs-example-1.json"></a>
+## JSON<a name="quickref-efs-example-1.json"></a>
 
 ```
 {
