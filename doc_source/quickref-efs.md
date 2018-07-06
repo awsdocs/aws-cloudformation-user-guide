@@ -937,7 +937,7 @@ Outputs:
 ## Mounting Elastic File System with an IP Address 
 In case your DNS hostname is disabled and you are not in a state to enable it then also you can configure mounting a file system using the mount target IP address
 
-Before mounting to a traget Ip address, you have to create EFS with a specific IP addpress. It's just like you can select an IP from the range fo Ip's subnets have.
+Before mounting to a traget Ip address, you have to create EFS with a specific IP address. It's just like you can select an IP from the range of Ip's subnets have.
 
 *Creating-EFS-IP-addr.config*
 
