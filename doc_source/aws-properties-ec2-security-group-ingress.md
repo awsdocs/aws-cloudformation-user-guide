@@ -164,7 +164,7 @@ The following template snippet creates an EC2 security group with an ingress rul
                 "IpProtocol": "tcp",
                 "FromPort": "80",
                 "ToPort": "80",
-                "SourceSecurityGroupName": {
+                "SourceSecurityGroupId": {
                     "Ref": "SGBase"
                 }
             }
@@ -194,7 +194,7 @@ Resources:
       IpProtocol: tcp
       FromPort: '80'
       ToPort: '80'
-      SourceSecurityGroupName: !Ref SGBase
+      SourceSecurityGroupId: !Ref SGBase
 ```
 
 ### VPC Security Groups with Egress and Ingress Rules<a name="w3ab2c21c10d475c13b4"></a>
