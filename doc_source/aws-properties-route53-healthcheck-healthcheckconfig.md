@@ -132,7 +132,7 @@ If the value of the `Type` property is `HTTP_STR_MATCH` or `HTTPS_STR_MATCH`, th
 *Type*: String
 
 `Type`  <a name="cfn-route53-healthcheck-healthcheckconfig-type"></a>
-The type of health check that you want to create\. This indicates how Route 53 determines whether an endpoint is healthy\. You can specify `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, or `TCP`\. For information about the different types, see the [http://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHealthCheck.html](http://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHealthCheck.html) element in the *Amazon Route 53 API Reference*\.  
+The type of health check that you want to create\. This indicates how Route 53 determines whether an endpoint is healthy\. You can specify `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED`, or `CLOUDWATCH_METRIC`\. For information about the different types, see the [http://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHealthCheck.html](https://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html#Route53-Type-HealthCheckConfig-Type) element in the *Amazon Route 53 API Reference*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
