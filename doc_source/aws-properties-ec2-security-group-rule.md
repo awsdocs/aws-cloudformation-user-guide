@@ -133,8 +133,8 @@ The end of port range for the TCP and UDP protocols, or an ICMP code\. An ICMP c
       "GroupDescription" : "Enable SSH access via port 22",
       "SecurityGroupIngress" : [ {
          "IpProtocol" : "tcp",
-         "FromPort" : "22",
-         "ToPort" : "22",
+         "FromPort" : 22,
+         "ToPort" : 22,
          "CidrIp" : "0.0.0.0/0"
       } ]
    }
@@ -151,8 +151,8 @@ InstanceSecurityGroup:
     SecurityGroupIngress: 
       - 
         IpProtocol: "tcp"
-        FromPort: "22"
-        ToPort: "22"
+        FromPort: 22
+        ToPort: 22
         CidrIp: "0.0.0.0/0"
 ```
 
@@ -228,8 +228,8 @@ This snippet grants SSH access with CidrIp, and HTTP access with `SourceSecurity
       "GroupDescription" : "Enable SSH access and HTTP from the load balancer only",
       "SecurityGroupIngress" : [ {
          "IpProtocol" : "tcp",
-         "FromPort" : "22",
-         "ToPort" : "22",
+         "FromPort" : 22,
+         "ToPort" : 22,
          "CidrIp" : "0.0.0.0/0"
       }, {
          "IpProtocol" : "tcp",
@@ -276,8 +276,8 @@ InstanceSecurityGroup:
     SecurityGroupIngress: 
       - 
         IpProtocol: "tcp"
-        FromPort: "22"
-        ToPort: "22"
+        FromPort: 22
+        ToPort: 22
         CidrIp: "0.0.0.0/0"
       - 
         IpProtocol: "tcp"
