@@ -14,12 +14,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
     "[MaxErrors](#cfn-ssm-maintenancewindowtask-maxerrors)" : String,
     "[Description](#cfn-ssm-maintenancewindowtask-description)" : String,
-    "[ServiceRoleArn](#cfn-ssm-maintenancewindowtask-servicerolearn)" : String,
+    "[ServiceRoleARN](#cfn-ssm-maintenancewindowtask-servicerolearn)" : String,
     "[Priority](#cfn-ssm-maintenancewindowtask-priority)" : Integer,
     "[MaxConcurrency](#cfn-ssm-maintenancewindowtask-maxconcurrency)" : String,
     "[Targets](#cfn-ssm-maintenancewindowtask-targets)" : [ [*Target*](aws-properties-ssm-maintenancewindowtask-target.md), ... ],
     "[Name](#cfn-ssm-maintenancewindowtask-name)" : String,
-    "[TaskArn](#cfn-ssm-maintenancewindowtask-taskarn)" : String,
+    "[TaskARN](#cfn-ssm-maintenancewindowtask-taskarn)" : String,
     "[TaskInvocationParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters)" : [*TaskInvocationParameters*](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md),
     "[WindowId](#cfn-ssm-maintenancewindowtask-windowid)" : String,
     "[TaskParameters](#cfn-ssm-maintenancewindowtask-taskparameters)" : JSON object,
@@ -36,13 +36,13 @@ Type: "AWS::SSM::MaintenanceWindowTask"
 Properties:
   [MaxErrors](#cfn-ssm-maintenancewindowtask-maxerrors): String
   [Description](#cfn-ssm-maintenancewindowtask-description): String
-  [ServiceRoleArn](#cfn-ssm-maintenancewindowtask-servicerolearn): String
+  [ServiceRoleARN](#cfn-ssm-maintenancewindowtask-servicerolearn): String
   [Priority](#cfn-ssm-maintenancewindowtask-priority): Integer
   [MaxConcurrency](#cfn-ssm-maintenancewindowtask-maxconcurrency): String
   [Targets](#cfn-ssm-maintenancewindowtask-targets): 
     - [*Target*](aws-properties-ssm-maintenancewindowtask-target.md)
   [Name](#cfn-ssm-maintenancewindowtask-name): String
-  [TaskArn](#cfn-ssm-maintenancewindowtask-taskarn): String
+  [TaskARN](#cfn-ssm-maintenancewindowtask-taskarn): String
   [TaskInvocationParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters):
     [*TaskInvocationParameters*](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md)
   [WindowId](#cfn-ssm-maintenancewindowtask-windowid): String
@@ -67,7 +67,7 @@ A description of the task\.
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`ServiceRoleArn`  <a name="cfn-ssm-maintenancewindowtask-servicerolearn"></a>
+`ServiceRoleARN`  <a name="cfn-ssm-maintenancewindowtask-servicerolearn"></a>
 The role that's used when the task is executed\.  
  *Required*: Yes  
  *Type*: String  
@@ -99,11 +99,11 @@ The task name\.
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`TaskArn`  <a name="cfn-ssm-maintenancewindowtask-taskarn"></a>
+`TaskARN`  <a name="cfn-ssm-maintenancewindowtask-taskarn"></a>
 The resource that the task uses during execution\.  
-For `RUN_COMMAND` and `AUTOMATION` task types, `TaskArn` is the SSM document name or Amazon Resource Name \(ARN\)\.  
-For `LAMBDA` tasks, `TaskArn` is the function name or ARN\.  
-For `STEP_FUNCTION` tasks, `TaskArn` is the state machine ARN\.  
+For `RUN_COMMAND` and `AUTOMATION` task types, `TaskARN` is the SSM document name or Amazon Resource Name \(ARN\)\.  
+For `LAMBDA` tasks, `TaskARN` is the function name or ARN\.  
+For `STEP_FUNCTION` tasks, `TaskARN` is the state machine ARN\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

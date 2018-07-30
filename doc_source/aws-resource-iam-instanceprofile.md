@@ -76,11 +76,11 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
+`ARN`  
 Returns the Amazon Resource Name \(ARN\) for the instance profile\. For example:  
 
 ```
-{"Fn::GetAtt" : ["MyProfile", "Arn"] }
+{"Fn::GetAtt" : ["MyProfile", "ARN"] }
 ```
 This returns a value such as `“arn:aws:iam::1234567890:instance-profile/MyProfile-ASDNSDLKJ”`\.
 

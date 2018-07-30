@@ -18,10 +18,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Logs::SubscriptionFilter",
   "Properties" : {
-    "[DestinationArn](#cfn-cwl-subscriptionfilter-destinationarn)" : String,
+    "[DestinationARN](#cfn-cwl-subscriptionfilter-destinationarn)" : String,
     "[FilterPattern](#cfn-cwl-subscriptionfilter-filterpattern)" : String,
     "[LogGroupName](#cfn-cwl-subscriptionfilter-loggroupname)" : String,
-    "[RoleArn](#cfn-cwl-subscriptionfilter-rolearn)" : String
+    "[RoleARN](#cfn-cwl-subscriptionfilter-rolearn)" : String
   }
 }
 ```
@@ -31,15 +31,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Logs::SubscriptionFilter"
 Properties: 
-  [DestinationArn](#cfn-cwl-subscriptionfilter-destinationarn): String
+  [DestinationARN](#cfn-cwl-subscriptionfilter-destinationarn): String
   [FilterPattern](#cfn-cwl-subscriptionfilter-filterpattern): String
   [LogGroupName](#cfn-cwl-subscriptionfilter-loggroupname): String
-  [RoleArn](#cfn-cwl-subscriptionfilter-rolearn): String
+  [RoleARN](#cfn-cwl-subscriptionfilter-rolearn): String
 ```
 
 ## Properties<a name="w3ab2c21c10d884b9"></a>
 
-`DestinationArn`  <a name="cfn-cwl-subscriptionfilter-destinationarn"></a>
+`DestinationARN`  <a name="cfn-cwl-subscriptionfilter-destinationarn"></a>
 The Amazon Resource Name \(ARN\) of the Kinesis stream, Kinesis Data Firehose delivery stream, or Lambda function that you want to use as the subscription feed destination\.  
 *Required*: Yes  
 *Type*: String  
@@ -57,7 +57,7 @@ The log group to associate with the subscription filter\. All log events that ar
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`RoleArn`  <a name="cfn-cwl-subscriptionfilter-rolearn"></a>
+`RoleARN`  <a name="cfn-cwl-subscriptionfilter-rolearn"></a>
 An IAM role that grants CloudWatch Logs permission to put data into the specified Kinesis stream\. For Lambda and CloudWatch Logs destinations, don't specify this property because CloudWatch Logs gets the necessary permissions from the destination resource\.  
 *Required*: No  
 *Type*: String  
@@ -81,10 +81,10 @@ The following example sends log events that are associated with the `Root` user 
 "SubscriptionFilter" : {
   "Type" : "AWS::Logs::SubscriptionFilter",
   "Properties" : {
-    "RoleArn" : { "Fn::GetAtt" : [ "CloudWatchIAMRole", "Arn" ] },
+    "RoleARN" : { "Fn::GetAtt" : [ "CloudWatchIAMRole", "ARN" ] },
     "LogGroupName" : { "Ref" : "LogGroup" },
     "FilterPattern" : "{$.userIdentity.type = Root}",
-    "DestinationArn" : { "Fn::GetAtt" : [ "KinesisStream", "Arn" ] }
+    "DestinationARN" : { "Fn::GetAtt" : [ "KinesisStream", "ARN" ] }
   }
 }
 ```
@@ -95,15 +95,15 @@ The following example sends log events that are associated with the `Root` user 
 SubscriptionFilter: 
   Type: "AWS::Logs::SubscriptionFilter"
   Properties: 
-    RoleArn: 
+    RoleARN: 
       Fn::GetAtt: 
         - "CloudWatchIAMRole"
-        - "Arn"
+        - "ARN"
     LogGroupName: 
       Ref: "LogGroup"
     FilterPattern: "{$.userIdentity.type = Root}"
-    DestinationArn: 
+    DestinationARN: 
       Fn::GetAtt: 
         - "KinesisStream"
-        - "Arn"
+        - "ARN"
 ```

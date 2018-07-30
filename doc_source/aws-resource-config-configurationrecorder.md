@@ -80,7 +80,7 @@ The following example creates a configuration recorder for EC2 volumes\.
     "RecordingGroup": {
       "ResourceTypes": ["AWS::EC2::Volume"]
     },
-    "RoleARN": {"Fn::GetAtt": ["ConfigRole", "Arn"]}
+    "RoleARN": {"Fn::GetAtt": ["ConfigRole", "ARN"]}
   }
 }
 ```
@@ -98,5 +98,5 @@ ConfigRecorder:
     RoleARN: 
       Fn::GetAtt: 
         - ConfigRole
-        - Arn
+        - ARN
 ```

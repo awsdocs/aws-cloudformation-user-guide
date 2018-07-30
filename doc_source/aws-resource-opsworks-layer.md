@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[Attributes](#cfn-opsworks-layer-attributes)" : { String:String },
     "[AutoAssignElasticIps](#cfn-opsworks-layer-autoassignelasticips)" : Boolean,
     "[AutoAssignPublicIps](#cfn-opsworks-layer-autoassignpublicips)" : Boolean,
-    "[CustomInstanceProfileArn](#cfn-opsworks-layer-custinstanceprofilearn)" : String,
+    "[CustomInstanceProfileARN](#cfn-opsworks-layer-custinstanceprofilearn)" : String,
     "[CustomJson](#cfn-opsworks-layer-customjson)" : JSON object,
     "[CustomRecipes](#cfn-opsworks-layer-customrecipes)" : Recipes,
     "[CustomSecurityGroupIds](#cfn-opsworks-layer-custsecuritygroupnids)" :  [ String, ... ],
@@ -50,7 +50,7 @@ Properties:
     String:String
   [AutoAssignElasticIps](#cfn-opsworks-layer-autoassignelasticips): Boolean
   [AutoAssignPublicIps](#cfn-opsworks-layer-autoassignpublicips): Boolean
-  [CustomInstanceProfileArn](#cfn-opsworks-layer-custinstanceprofilearn): String
+  [CustomInstanceProfileARN](#cfn-opsworks-layer-custinstanceprofilearn): String
   [CustomRecipes](#cfn-opsworks-layer-customrecipes):
     Recipes
   [CustomJson](#cfn-opsworks-layer-customjson):
@@ -95,7 +95,7 @@ For AWS OpsWorks stacks that are running in a VPC, whether to automatically assi
 *Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`CustomInstanceProfileArn`  <a name="cfn-opsworks-layer-custinstanceprofilearn"></a>
+`CustomInstanceProfileARN`  <a name="cfn-opsworks-layer-custinstanceprofilearn"></a>
 The Amazon Resource Name \(ARN\) of an IAM instance profile that is to be used for the Amazon EC2 instances in this layer\.  
 *Required*: No  
 *Type*: String  
@@ -405,16 +405,16 @@ The following complete template example specifies tags for an AWS OpsWorks layer
             "Type": "AWS::OpsWorks::Stack",
             "Properties": {
                 "Name": "TestStack",
-                "ServiceRoleArn": {
+                "ServiceRoleARN": {
                     "Fn::GetAtt": [
                         "ServiceRole",
-                        "Arn"
+                        "ARN"
                     ]
                 },
-                "DefaultInstanceProfileArn": {
+                "DefaultInstanceProfileARN": {
                     "Fn::GetAtt": [
                         "InstanceRole",
-                        "Arn"
+                        "ARN"
                     ]
                 },
                 "Tags": [
@@ -526,12 +526,12 @@ Resources:
     Type: 'AWS::OpsWorks::Stack'
     Properties:
       Name: TestStack
-      ServiceRoleArn: !GetAtt 
+      ServiceRoleARN: !GetAtt 
         - ServiceRole
-        - Arn
-      DefaultInstanceProfileArn: !GetAtt 
+        - ARN
+      DefaultInstanceProfileARN: !GetAtt 
         - InstanceRole
-        - Arn
+        - ARN
       Tags:
         - Key: !Ref StackKey
           Value: !Ref StackValue

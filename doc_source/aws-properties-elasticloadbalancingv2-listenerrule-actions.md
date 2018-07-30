@@ -8,7 +8,7 @@
 
 ```
 {
-  "[TargetGroupArn](#cfn-elasticloadbalancingv2-listener-actions-targetgrouparn)" : String,
+  "[TargetGroupARN](#cfn-elasticloadbalancingv2-listener-actions-targetgrouparn)" : String,
   "[Type](#cfn-elasticloadbalancingv2-listener-actions-type)" : String
 }
 ```
@@ -16,13 +16,13 @@
 ### YAML<a name="aws-properties-elasticloadbalancingv2-listenerrule-actions-syntax.yaml"></a>
 
 ```
-[TargetGroupArn](#cfn-elasticloadbalancingv2-listener-actions-targetgrouparn): String
+[TargetGroupARN](#cfn-elasticloadbalancingv2-listener-actions-targetgrouparn): String
 [Type](#cfn-elasticloadbalancingv2-listener-actions-type): String
 ```
 
 ## Properties<a name="w3ab2c21c14e1012b7"></a>
 
-`TargetGroupArn`  <a name="cfn-elasticloadbalancingv2-listener-actions-targetgrouparn"></a>
+`TargetGroupARN`  <a name="cfn-elasticloadbalancingv2-listener-actions-targetgrouparn"></a>
 The Amazon Resource Name \(ARN\) of the target group to which Elastic Load Balancing routes the traffic\.  
 *Required*: Yes  
 *Type*: String

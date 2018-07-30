@@ -21,13 +21,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties": {
     "[CdcStartTime](#cfn-dms-replicationtask-cdcstarttime)": Timestamp,
     "[MigrationType](#cfn-dms-replicationtask-migrationtype)": String,
-    "[ReplicationInstanceArn](#cfn-dms-replicationtask-replicationinstancearn)": String,
+    "[ReplicationInstanceARN](#cfn-dms-replicationtask-replicationinstancearn)": String,
     "[ReplicationTaskIdentifier](#cfn-dms-replicationtask-replicationtaskidentifier)": String,
     "[ReplicationTaskSettings](#cfn-dms-replicationtask-replicationstasksettings)": String,
-    "[SourceEndpointArn](#cfn-dms-replicationtask-sourceendpointarn)": String,
+    "[SourceEndpointARN](#cfn-dms-replicationtask-sourceendpointarn)": String,
     "[TableMappings](#cfn-dms-replicationtask-tablemappings)": String,
     "[Tags](#cfn-dms-replicationtask-tags)": [ Resource Tag, ... ],
-    "[TargetEndpointArn](#cfn-dms-replicationtask-targetendpointarn)": String
+    "[TargetEndpointARN](#cfn-dms-replicationtask-targetendpointarn)": String
   }
 }
 ```
@@ -39,14 +39,14 @@ Type: "AWS::DMS::ReplicationTask"
 Properties:
   [CdcStartTime](#cfn-dms-replicationtask-cdcstarttime): Timestamp
   [MigrationType](#cfn-dms-replicationtask-migrationtype): String
-  [ReplicationInstanceArn](#cfn-dms-replicationtask-replicationinstancearn): String
+  [ReplicationInstanceARN](#cfn-dms-replicationtask-replicationinstancearn): String
   [ReplicationTaskIdentifier](#cfn-dms-replicationtask-replicationtaskidentifier): String
   [ReplicationTaskSettings](#cfn-dms-replicationtask-replicationstasksettings): String
-  [SourceEndpointArn](#cfn-dms-replicationtask-sourceendpointarn): String
+  [SourceEndpointARN](#cfn-dms-replicationtask-sourceendpointarn): String
   [TableMappings](#cfn-dms-replicationtask-tablemappings): String
   [Tags](#cfn-dms-replicationtask-tags): 
     - Resource Tag
-  [TargetEndpointArn](#cfn-dms-replicationtask-targetendpointarn): String
+  [TargetEndpointARN](#cfn-dms-replicationtask-targetendpointarn): String
 ```
 
 ## Properties<a name="aws-resource-dms-replicationtask-prop"></a>
@@ -64,7 +64,7 @@ The migration type\.
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ReplicationInstanceArn`  <a name="cfn-dms-replicationtask-replicationinstancearn"></a>
+`ReplicationInstanceARN`  <a name="cfn-dms-replicationtask-replicationinstancearn"></a>
 The Amazon Resource Name \(ARN\) of the replication instance\.  
 *Required*: Yes  
 *Type*: String  
@@ -82,7 +82,7 @@ Settings for the task, such as target metadata settings\. For a complete list of
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`SourceEndpointArn`  <a name="cfn-dms-replicationtask-sourceendpointarn"></a>
+`SourceEndpointARN`  <a name="cfn-dms-replicationtask-sourceendpointarn"></a>
 The ARN string that uniquely identifies the endpoint\.  
 *Required*: Yes  
 *Type*: String  
@@ -100,7 +100,7 @@ The tags that you want to attach to the migration task\.
 *Type*: List of [resource tags](aws-properties-resource-tags.md) in key\-value format  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`TargetEndpointArn`  <a name="cfn-dms-replicationtask-targetendpointarn"></a>
+`TargetEndpointARN`  <a name="cfn-dms-replicationtask-targetendpointarn"></a>
 The ARN string that uniquely identifies the endpoint\.  
 *Required*: Yes  
 *Type*: String  
@@ -125,9 +125,9 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
     "myReplicationTask": {
       "Type": "AWS::DMS::ReplicationTask",
       "Properties": {
-        "SourceEndpointArn": 11,
-        "TargetEndpointArn": "12ff",
-        "ReplicationInstanceArn": "ert1",
+        "SourceEndpointARN": 11,
+        "TargetEndpointARN": "12ff",
+        "ReplicationInstanceARN": "ert1",
         "MigrationType": "full-load",
         "TableMappings": "{ \"rules\": [ { \"rule-type\": \"selection\", \"rule-id\": \"1\", \"rule-name\": \"1\", \"object-locator\": { \"schema-name\": \"%\", \"table-name\": \"%\" }, \"rule-action\": \"include\" } ] }"
       }
@@ -144,9 +144,9 @@ Resources:
   myReplicationTask:
     Type: "AWS::DMS::ReplicationTask"
     Properties:
-      SourceEndpointArn: !Ref SourceEndpoint
-      TargetEndpointArn: !Ref TargetEndpoint
-      ReplicationInstanceArn: !Ref ReplicationInstance
+      SourceEndpointARN: !Ref SourceEndpoint
+      TargetEndpointARN: !Ref TargetEndpoint
+      ReplicationInstanceARN: !Ref ReplicationInstance
       MigrationType: "full-load"
       TableMappings: "{
         \"rules\": [

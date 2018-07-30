@@ -33,7 +33,7 @@ The following example shows the specification for an AWS Key Management Service 
 ```
     "AWS::KMS::Key": {
       "Attributes": {
-        "Arn": {
+        "ARN": {
           "PrimitiveType": "String"
         }
       },

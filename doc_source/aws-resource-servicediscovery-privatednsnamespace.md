@@ -70,7 +70,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 `Id`  
 The ID of the private namespace\.
 
-`Arn`  
+`ARN`  
 The Amazon Resource Name \(ARN\) of the private namespace\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.

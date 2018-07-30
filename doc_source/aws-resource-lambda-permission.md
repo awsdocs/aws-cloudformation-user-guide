@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[FunctionName](#cfn-lambda-permission-functionname)" : String,
     "[Principal](#cfn-lambda-permission-principal)" : String,
     "[SourceAccount](#cfn-lambda-permission-sourceaccount)" : String,
-    "[SourceArn](#cfn-lambda-permission-sourcearn)" : String
+    "[SourceARN](#cfn-lambda-permission-sourcearn)" : String
   }
 }
 ```
@@ -37,7 +37,7 @@ Properties:
   [FunctionName](#cfn-lambda-permission-functionname): String
   [Principal](#cfn-lambda-permission-principal): String
   [SourceAccount](#cfn-lambda-permission-sourceaccount): String
-  [SourceArn](#cfn-lambda-permission-sourcearn): String
+  [SourceARN](#cfn-lambda-permission-sourcearn): String
 ```
 
 ## Properties<a name="w3ab2c21c10d860b9"></a>
@@ -69,15 +69,15 @@ The entity for which you are granting permission to invoke the Lambda function\.
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `SourceAccount`  <a name="cfn-lambda-permission-sourceaccount"></a>
-The AWS account ID \(without hyphens\) of the source owner\. For example, if you specify an S3 bucket in the `SourceArn` property, this value is the bucket owner's account ID\. You can use this property to ensure that all source principals are owned by a specific account\.  
+The AWS account ID \(without hyphens\) of the source owner\. For example, if you specify an S3 bucket in the `SourceARN` property, this value is the bucket owner's account ID\. You can use this property to ensure that all source principals are owned by a specific account\.  
 This property is not supported by all event sources\. For more information, see the `SourceAccount` parameter for the [AddPermission](http://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html) action in the *AWS Lambda Developer Guide*\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`SourceArn`  <a name="cfn-lambda-permission-sourcearn"></a>
+`SourceARN`  <a name="cfn-lambda-permission-sourcearn"></a>
 The ARN of a resource that is invoking your function\. When granting Amazon Simple Storage Service \(Amazon S3\) permission to invoke your function, specify this property with the bucket ARN as its value\. This ensures that events generated only from the specified bucket, not just any bucket from any AWS account that creates a mapping to your function, can invoke the function\.  
-This property is not supported by all event sources\. For more information, see the `SourceArn` parameter for the [AddPermission](http://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html) action in the *AWS Lambda Developer Guide*\.
+This property is not supported by all event sources\. For more information, see the `SourceARN` parameter for the [AddPermission](http://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html) action in the *AWS Lambda Developer Guide*\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -95,7 +95,7 @@ The following example grants an S3 bucket permission to invoke a Lambda function
 		"FunctionName": {
 			"Fn::GetAtt": [
 				"MyLambdaFunction",
-				"Arn"
+				"ARN"
 			]
 		},
 		"Action": "lambda:InvokeFunction",
@@ -103,10 +103,10 @@ The following example grants an S3 bucket permission to invoke a Lambda function
 		"SourceAccount": {
 			"Ref": "AWS::AccountId"
 		},
-		"SourceArn": {
+		"SourceARN": {
 			"Fn::GetAtt": [
 				"MyBucket",
-				"Arn"
+				"ARN"
 			]
 		}
 	}
@@ -121,11 +121,11 @@ LambdaInvokePermission:
   Properties:
     FunctionName: !GetAtt 
       - MyLambdaFunction
-      - Arn
+      - ARN
     Action: 'lambda:InvokeFunction'
     Principal: s3.amazonaws.com
     SourceAccount: !Ref 'AWS::AccountId'
-    SourceArn: !GetAtt 
+    SourceARN: !GetAtt 
       - MyBucket
-      - Arn
+      - ARN
 ```

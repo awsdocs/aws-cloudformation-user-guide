@@ -18,10 +18,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Inspector::AssessmentTemplate",
   "Properties" : {
-    "[AssessmentTargetArn](#cfn-inspector-assessmenttemplate-assessmenttargetarn)" : String,
+    "[AssessmentTargetARN](#cfn-inspector-assessmenttemplate-assessmenttargetarn)" : String,
     "[DurationInSeconds](#cfn-inspector-assessmenttemplate-durationinseconds)" : Integer,
     "[AssessmentTemplateName](#cfn-inspector-assessmenttemplate-assessmenttemplatename)" : String,
-    "[RulesPackageArns](#cfn-inspector-assessmenttemplate-rulespackagearns)" : [ String, ... ],
+    "[RulesPackageARNs](#cfn-inspector-assessmenttemplate-rulespackagearns)" : [ String, ... ],
     "[UserAttributesForFindings](#cfn-inspector-assessmenttemplate-userattributesforfindings)" : [ Resource Tag, ... ]
   }
 }
@@ -32,10 +32,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::Inspector::AssessmentTemplate"
 Properties:
-  [AssessmentTargetArn](#cfn-inspector-assessmenttemplate-assessmenttargetarn): String
+  [AssessmentTargetARN](#cfn-inspector-assessmenttemplate-assessmenttargetarn): String
   [DurationInSeconds](#cfn-inspector-assessmenttemplate-durationinseconds): Integer
   [AssessmentTemplateName](#cfn-inspector-assessmenttemplate-assessmenttemplatename): String
-  [RulesPackageArns](#cfn-inspector-assessmenttemplate-rulespackagearns): 
+  [RulesPackageARNs](#cfn-inspector-assessmenttemplate-rulespackagearns): 
     - String
   [UserAttributesForFindings](#cfn-inspector-assessmenttemplate-userattributesforfindings): 
     - Resource Tag
@@ -43,7 +43,7 @@ Properties:
 
 ## Properties<a name="aws-resource-inspector-assessmenttemplate-properties"></a>
 
-`AssessmentTargetArn`  <a name="cfn-inspector-assessmenttemplate-assessmenttargetarn"></a>
+`AssessmentTargetARN`  <a name="cfn-inspector-assessmenttemplate-assessmenttargetarn"></a>
 The ARN of the assessment target that corresponds to this assessment template\.   
  *Required*: Yes  
  *Type*: String  
@@ -61,7 +61,7 @@ The name of the assessment template\.
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`RulesPackageArns`  <a name="cfn-inspector-assessmenttemplate-rulespackagearns"></a>
+`RulesPackageARNs`  <a name="cfn-inspector-assessmenttemplate-rulespackagearns"></a>
 The rules packages that are specified for this assessment template\.  
  *Required*: Yes  
  *Type*: List of String values  
@@ -79,7 +79,7 @@ The user\-defined attributes that are assigned to every generated finding from t
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
-`Arn`  
+`ARN`  
 The Amazon Resource Name \(ARN\) that specifies the assessment template that is created\. 
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
@@ -96,10 +96,10 @@ The following example shows how to declare an AWS::Inspector::AssessmentTemplate
 "myassessmenttemplate": {
   "Type": "AWS::Inspector::AssessmentTemplate",
   "Properties": {
-      "AssessmentTargetArn" : "arn:aws:inspector:us-west-2:123456789012:target/0-nvgVhaxX",
+      "AssessmentTargetARN" : "arn:aws:inspector:us-west-2:123456789012:target/0-nvgVhaxX",
       "DurationInSeconds" : 180,
 	    "AssessmentTemplateName" : "MyAssessmentTemplate",
-	    "RulesPackageArns" : [ "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-11B9DBXp" ],
+	    "RulesPackageARNs" : [ "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-11B9DBXp" ],
 	    "UserAttributesForFindings" : [ 
 	       {
             "key": "Example",
@@ -115,10 +115,10 @@ The following example shows how to declare an AWS::Inspector::AssessmentTemplate
 ```
 myassessmenttemplate: 
   Properties: 
-    AssessmentTargetArn: "arn:aws:inspector:us-west-2:123456789012:target/0-nvgVhaxX"
+    AssessmentTargetARN: "arn:aws:inspector:us-west-2:123456789012:target/0-nvgVhaxX"
     AssessmentTemplateName: MyAssessmentTemplate
     DurationInSeconds: 180
-    RulesPackageArns: 
+    RulesPackageARNs: 
       - "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-11B9DBXp"
     UserAttributesForFindings: 
       - 

@@ -116,7 +116,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
+`ARN`  
 The Amazon Resource Name \(ARN\) of the delivery stream, such as `arn:aws:firehose:``us-east-2``:123456789012:deliverystream/delivery-stream-name`\. 
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
@@ -150,7 +150,7 @@ The following example creates a Kinesis Firehose delivery stream that delivers d
       "RetryOptions": {
          "DurationInSeconds": "60"
       },
-      "RoleARN": { "Fn::GetAtt" : ["ESdeliveryRole", "Arn"] },
+      "RoleARN": { "Fn::GetAtt" : ["ESdeliveryRole", "ARN"] },
       "S3BackupMode": "AllDocuments",
       "S3Configuration": { 
         "BucketARN": { "Ref" : "MyBackupBucketARN" },
@@ -160,7 +160,7 @@ The following example creates a Kinesis Firehose delivery stream that delivers d
         },
         "CompressionFormat": "UNCOMPRESSED",
         "Prefix": "firehose/",
-        "RoleARN": { "Fn::GetAtt" : ["S3deliveryRole", "Arn"] },
+        "RoleARN": { "Fn::GetAtt" : ["S3deliveryRole", "ARN"] },
         "CloudWatchLoggingOptions" : {
           "Enabled" : true,
           "LogGroupName" : "deliverystream",
@@ -197,7 +197,7 @@ ElasticSearchDeliveryStream:
       RoleARN: 
         Fn::GetAtt: 
           - "ESdeliveryRole"
-          - "Arn"
+          - "ARN"
       S3BackupMode: "AllDocuments"
       S3Configuration: 
         BucketARN: 
@@ -210,7 +210,7 @@ ElasticSearchDeliveryStream:
         RoleARN: 
           Fn::GetAtt: 
             - "S3deliveryRole"
-            - "Arn"
+            - "ARN"
         CloudWatchLoggingOptions: 
           Enabled: true
           LogGroupName: "deliverystream"
@@ -240,15 +240,15 @@ The following example uses the `ExtendedS3DestinationConfiguration` property to 
           },
           "CompressionFormat": "UNCOMPRESSED",
           "Prefix": "firehose/",
-          "RoleARN": {"Fn::GetAtt" : ["deliveryRole", "Arn"] },
+          "RoleARN": {"Fn::GetAtt" : ["deliveryRole", "ARN"] },
           "ProcessingConfiguration" : {
             "Enabled": "true",
             "Processors": [
             {
               "Parameters": [ 
               { 
-                "ParameterName": "LambdaArn",
-                "ParameterValue": {"Fn::GetAtt" : ["myLambda", "Arn"] } 
+                "ParameterName": "LambdaARN",
+                "ParameterValue": {"Fn::GetAtt" : ["myLambda", "ARN"] } 
               }],
               "Type": "Lambda"
             }]
@@ -339,13 +339,13 @@ Resources:
           SizeInMBs: '50'
         CompressionFormat: UNCOMPRESSED
         Prefix: firehose/
-        RoleARN: !GetAtt deliveryRole.Arn
+        RoleARN: !GetAtt deliveryRole.ARN
         ProcessingConfiguration:
           Enabled: 'true'
           Processors:
             - Parameters:
-                - ParameterName: LambdaArn
-                  ParameterValue: !GetAtt myLambda.Arn 
+                - ParameterName: LambdaARN
+                  ParameterValue: !GetAtt myLambda.ARN 
               Type: Lambda 
   s3bucket:
     Type: 'AWS::S3::Bucket'
@@ -404,7 +404,7 @@ The following example uses the `KinesisStreamSourceConfiguration` property to sp
 ```
 {
     "Parameters": {
-        "deliveryRoleArn": {
+        "deliveryRoleARN": {
             "Type": "String"
         },
         "deliveryStreamName": {
@@ -413,10 +413,10 @@ The following example uses the `KinesisStreamSourceConfiguration` property to sp
         "kinesisStreamARN": {
             "Type": "String"
         },
-        "kinesisStreamRoleArn": {
+        "kinesisStreamRoleARN": {
             "Type": "String"
         },
-        "s3bucketArn": {
+        "s3bucketARN": {
             "Type": "String"
         }
     },
@@ -433,12 +433,12 @@ The following example uses the `KinesisStreamSourceConfiguration` property to sp
                         "Ref": "kinesisStreamARN"
                     },
                     "RoleARN": {
-                        "Ref": "kinesisStreamRoleArn"
+                        "Ref": "kinesisStreamRoleARN"
                     }
                 },
                 "ExtendedS3DestinationConfiguration": {
                     "BucketARN": {
-                        "Ref": "s3bucketArn"
+                        "Ref": "s3bucketARN"
                     },
                     "BufferingHints": {
                         "IntervalInSeconds": 60,
@@ -447,7 +447,7 @@ The following example uses the `KinesisStreamSourceConfiguration` property to sp
                     },
                     "Prefix": "firehose/",
                     "RoleARN": {
-                        "Ref": "deliveryRoleArn"
+                        "Ref": "deliveryRoleARN"
                     }
                 }
             }
@@ -460,15 +460,15 @@ The following example uses the `KinesisStreamSourceConfiguration` property to sp
 
 ```
 Parameters:
-    deliveryRoleArn:
+    deliveryRoleARN:
         Type: String
     deliveryStreamName:
         Type: String
     kinesisStreamARN :
         Type : String
-    kinesisStreamRoleArn:
+    kinesisStreamRoleARN:
         Type : String
-    s3bucketArn:
+    s3bucketARN:
         Type: String
 Resources :
     Deliverystream: 
@@ -478,15 +478,15 @@ Resources :
             DeliveryStreamType: KinesisStreamAsSource
             KinesisStreamSourceConfiguration: 
                 KinesisStreamARN: !Ref kinesisStreamARN
-                RoleARN: !Ref kinesisStreamRoleArn
+                RoleARN: !Ref kinesisStreamRoleARN
             ExtendedS3DestinationConfiguration: 
-                BucketARN: !Ref s3bucketArn
+                BucketARN: !Ref s3bucketARN
                 BufferingHints: 
                     IntervalInSeconds: 60
                     SizeInMBs: 50
                     CompressionFormat: UNCOMPRESSED
                 Prefix: firehose/
-                RoleARN: !Ref deliveryRoleArn
+                RoleARN: !Ref deliveryRoleARN
 ```
 
 ## See Also<a name="aws-resource-kinesisfirehose-deliverystream-seealso"></a>

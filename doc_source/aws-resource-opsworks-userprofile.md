@@ -17,7 +17,7 @@ The `AWS::OpsWorks::UserProfile` resource configures SSH access for users who re
   "Type" : "AWS::OpsWorks::UserProfile",
   "Properties" : {
     "[AllowSelfManagement](#cfn-opsworks-userprofile-allowselfmanagement)" : Boolean,
-    "[IamUserArn](#cfn-opsworks-userprofile-iamuserarn)" : String,
+    "[IamUserARN](#cfn-opsworks-userprofile-iamuserarn)" : String,
     "[SshPublicKey](#cfn-opsworks-userprofile-sshpublickey)" : String,
     "[SshUsername](#cfn-opsworks-userprofile-sshusername)" : String
   }
@@ -30,7 +30,7 @@ The `AWS::OpsWorks::UserProfile` resource configures SSH access for users who re
 Type: "AWS::OpsWorks::UserProfile"
 Properties:
   [AllowSelfManagement](#cfn-opsworks-userprofile-allowselfmanagement): Boolean
-  [IamUserArn](#cfn-opsworks-userprofile-iamuserarn): String
+  [IamUserARN](#cfn-opsworks-userprofile-iamuserarn): String
   [SshPublicKey](#cfn-opsworks-userprofile-sshpublickey): String
   [SshUsername](#cfn-opsworks-userprofile-sshusername): String
 ```
@@ -43,7 +43,7 @@ Indicates whether users can use the AWS OpsWorks **My Settings** page to specify
 *Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`IamUserArn`  <a name="cfn-opsworks-userprofile-iamuserarn"></a>
+`IamUserARN`  <a name="cfn-opsworks-userprofile-iamuserarn"></a>
 The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) user to associate with this configuration\.  
 *Required*: Yes  
 *Type*: String  
@@ -88,8 +88,8 @@ The following example registers a public key to the `testUser` IAM user\. The us
 "userProfile": {
   "Type": "AWS::OpsWorks::UserProfile",
   "Properties": {
-    "IamUserArn": {
-      "Fn::GetAtt": ["testUser", "Arn"]
+    "IamUserARN": {
+      "Fn::GetAtt": ["testUser", "ARN"]
     },
     "AllowSelfManagement": "true",
     "SshPublicKey": "xyz1234567890"
@@ -103,7 +103,7 @@ The following example registers a public key to the `testUser` IAM user\. The us
 userProfile:
   Type: AWS::OpsWorks::UserProfile
   Properties:
-    IamUserArn: !GetAtt [testUser, Arn]
+    IamUserARN: !GetAtt [testUser, ARN]
     AllowSelfManagement: 'true'
     SshPublicKey: xyz1234567890
 ```

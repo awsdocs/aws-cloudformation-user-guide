@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[Environment](#cfn-lambda-function-environment)" : [*Environment*](aws-properties-lambda-function-environment.md),
     "[FunctionName](#cfn-lambda-function-functionname)" : String,
     "[Handler](#cfn-lambda-function-handler)" : String,
-    "[KmsKeyArn](#cfn-lambda-function-kmskeyarn)" : String,
+    "[KmsKeyARN](#cfn-lambda-function-kmskeyarn)" : String,
     "[MemorySize](#cfn-lambda-function-memorysize)" : Integer,
     "[ReservedConcurrentExecutions](#cfn-lambda-function-reservedconcurrentexecutions)" : Integer,
     "[Role](#cfn-lambda-function-role)" : String,
@@ -52,7 +52,7 @@ Properties:
     [*Environment*](aws-properties-lambda-function-environment.md)
   [FunctionName](#cfn-lambda-function-functionname): String
   [Handler](#cfn-lambda-function-handler): String
-  [KmsKeyArn](#cfn-lambda-function-kmskeyarn): String
+  [KmsKeyARN](#cfn-lambda-function-kmskeyarn): String
   [MemorySize](#cfn-lambda-function-memorysize): Integer
   [ReservedConcurrentExecutions](#cfn-lambda-function-reservedconcurrentexecutions): Integer
   [Role](#cfn-lambda-function-role): String
@@ -106,7 +106,7 @@ If you specify your source code as inline text by specifying the `ZipFile` prope
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`KmsKeyArn`  <a name="cfn-lambda-function-kmskeyarn"></a>
+`KmsKeyARN`  <a name="cfn-lambda-function-kmskeyarn"></a>
 The Amazon Resource Name \(ARN\) of an AWS Key Management Service \(AWS KMS\) key that Lambda uses to encrypt and decrypt environment variable values\.  
 *Type*: String  
 *Required*: No  
@@ -182,7 +182,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
+`ARN`  
 The ARN of the Lambda function, such as `arn:aws:lambda:us-west-2:123456789012:MyStack-AMILookUp-NT5EUXTNTXXD`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
@@ -198,7 +198,7 @@ The following example uses a packaged file in an S3 bucket to create a Lambda fu
   "Type": "AWS::Lambda::Function",
   "Properties": {
     "Handler": "index.handler",
-    "Role": { "Fn::GetAtt" : ["LambdaExecutionRole", "Arn"] },
+    "Role": { "Fn::GetAtt" : ["LambdaExecutionRole", "ARN"] },
     "Code": {
       "S3Bucket": "lambda-functions",
       "S3Key": "amilookup.zip"
@@ -222,7 +222,7 @@ AMIIDLookup:
     Role: 
       Fn::GetAtt: 
         - "LambdaExecutionRole"
-        - "Arn"
+        - "ARN"
     Code: 
       S3Bucket: "lambda-functions"
       S3Key: "amilookup.zip"

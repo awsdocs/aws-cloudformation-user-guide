@@ -63,7 +63,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
+`ARN`  
 The Amazon Resource Name \(ARN\) of the AWS IoT rule, such as `arn:aws:iot:us-east-2:123456789012:rule/MyIoTRule`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
@@ -92,8 +92,8 @@ The following example declares an AWS IoT rule\.
                      "BucketName": {
                         "Ref": "MyBucket"
                      },
-                     "RoleArn": {
-                        "Fn::GetAtt": ["MyRole", "Arn"]
+                     "RoleARN": {
+                        "Fn::GetAtt": ["MyRole", "ARN"]
                      },
                      "Key": "MyKey.txt"
                   }
@@ -152,10 +152,10 @@ Resources:
             S3: 
               BucketName: 
                 Ref: "MyBucket"
-              RoleArn: 
+              RoleARN: 
                 Fn::GetAtt: 
                   - "MyRole"
-                  - "Arn"
+                  - "ARN"
               Key: "MyKey.txt"
   MyBucket: 
     Type: "AWS::S3::Bucket"

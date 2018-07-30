@@ -94,9 +94,9 @@ The following example defines a value for the `ParameterName` parameter by using
 ```
 This property is optional\.
 
-`RoleArn`  
+`RoleARN`  
 The Amazon Resource Name \(ARN\) of the IAM service role that AWS CloudFormation assumes when it operates on resources in a stack\.  
-This property is required for the following action modes: `CREATE_UPDATE`, `REPLACE_ON_FAILURE`, `DELETE_ONLY`, and `CHANGE_SET_REPLACE`\. Note: `RoleArn` is not applied when executing a change set\. If you do not use CodePipeline to create the change set, you must ensure that the change set or stack has an associated role\.
+This property is required for the following action modes: `CREATE_UPDATE`, `REPLACE_ON_FAILURE`, `DELETE_ONLY`, and `CHANGE_SET_REPLACE`\. Note: `RoleARN` is not applied when executing a change set\. If you do not use CodePipeline to create the change set, you must ensure that the change set or stack has an associated role\.
 
 `StackName`  
 The name of an existing stack or a stack that you want to create\.  

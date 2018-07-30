@@ -10,7 +10,7 @@
 {
   "[BucketName](#cfn-iot-topicrule-s3action-bucketname)": String,
   "[Key](#cfn-iot-topicrule-s3action-key)": String,
-  "[RoleArn](#cfn-iot-topicrule-s3action-rolearn)": String
+  "[RoleARN](#cfn-iot-topicrule-s3action-rolearn)": String
 }
 ```
 
@@ -19,7 +19,7 @@
 ```
 [BucketName](#cfn-iot-topicrule-s3action-bucketname): String
 [Key](#cfn-iot-topicrule-s3action-key): String
-[RoleArn](#cfn-iot-topicrule-s3action-rolearn): String
+[RoleARN](#cfn-iot-topicrule-s3action-rolearn): String
 ```
 
 ## Properties<a name="w3ab2c21c14e1370b7"></a>
@@ -34,7 +34,7 @@ The object key \(the name of an object in the S3 bucket\)\.
 *Required*: Yes  
 *Type*: String
 
-`RoleArn`  <a name="cfn-iot-topicrule-s3action-rolearn"></a>
+`RoleARN`  <a name="cfn-iot-topicrule-s3action-rolearn"></a>
 The ARN of the IAM role that grants access to Amazon S3\.  
 *Required*: Yes  
 *Type*: String

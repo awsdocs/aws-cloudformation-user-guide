@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
     "[Type](#cfn-appsync-datasource-type)" : String,
     "[Description](#cfn-appsync-datasource-description)" : String,
-    "[ServiceRoleArn](#cfn-appsync-datasource-servicerolearn)" : String,
+    "[ServiceRoleARN](#cfn-appsync-datasource-servicerolearn)" : String,
     "[LambdaConfig](#cfn-appsync-datasource-lambdaconfig)" : [*LambdaConfig*](aws-properties-appsync-datasource-lambdaconfig.md),
     "[ApiId](#cfn-appsync-datasource-apiid)" : String,
     "[Name](#cfn-appsync-datasource-name)" : String,
@@ -38,7 +38,7 @@ Type: "AWS::AppSync::DataSource"
 Properties:
   [Type](#cfn-appsync-datasource-type): String
   [Description](#cfn-appsync-datasource-description): String
-  [ServiceRoleArn](#cfn-appsync-datasource-servicerolearn): String
+  [ServiceRoleARN](#cfn-appsync-datasource-servicerolearn): String
   [LambdaConfig](#cfn-appsync-datasource-lambdaconfig): [*LambdaConfig*](aws-properties-appsync-datasource-lambdaconfig.md)
   [ApiId](#cfn-appsync-datasource-apiid): String
   [Name](#cfn-appsync-datasource-name): String
@@ -60,7 +60,7 @@ Friendly description for this data source\.
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`ServiceRoleArn`  <a name="cfn-appsync-datasource-servicerolearn"></a>
+`ServiceRoleARN`  <a name="cfn-appsync-datasource-servicerolearn"></a>
 IAM role ARN which the data source will use to connect to a resource\.  
  *Required*: No  
  *Type*: String  
@@ -108,7 +108,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
-`DataSourceArn`  
+`DataSourceARN`  
 The Amazon Resource Name \(ARN\) of the API key, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/datasources/datasourcename`\. 
 
 `Name`  
@@ -136,10 +136,10 @@ The following example creates a data source and associates it with an existing G
     "dataSourceDescription": {
       "Type": "String"
     },
-    "serviceRoleArn": {
+    "serviceRoleARN": {
       "Type": "String"
     },
-    "lambdaFunctionArn": {
+    "lambdaFunctionARN": {
       "Type": "String"
     }
   },
@@ -157,12 +157,12 @@ The following example creates a data source and associates it with an existing G
           "Ref": "dataSourceDescription"
         },
         "Type": "AWS_LAMBDA",
-        "ServiceRoleArn": {
-           "Ref": "serviceRoleArn"
+        "ServiceRoleARN": {
+           "Ref": "serviceRoleARN"
         },
         "LambdaConfig": {
-          "LambdaFunctionArn": {
-            "Ref": "lambdaFunctionArn"
+          "LambdaFunctionARN": {
+            "Ref": "lambdaFunctionARN"
           }
         }
       }
@@ -181,9 +181,9 @@ Parameters:
     Type: String
   dataSourceDescription:
     Type: String
-  serviceRoleArn:
+  serviceRoleARN:
     Type: String
-  lambdaFunctionArn:
+  lambdaFunctionARN:
     Type: String
 Resources:
   DataSource:
@@ -196,11 +196,11 @@ Resources:
       Description:
         Ref: dataSourceDescription
       Type: "AWS_LAMBDA"
-      ServiceRoleArn:
-        Ref: serviceRoleArn
+      ServiceRoleARN:
+        Ref: serviceRoleARN
       LambdaConfig:
-        LambdaFunctionArn:
-          Ref: lambdaFunctionArn
+        LambdaFunctionARN:
+          Ref: lambdaFunctionARN
 ```
 
 ## See Also<a name="aws-resource-appsync-datasource-seealso"></a>

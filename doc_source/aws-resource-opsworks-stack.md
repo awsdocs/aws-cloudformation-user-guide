@@ -28,17 +28,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[CustomCookbooksSource](#cfn-opsworks-stack-custcookbooksource)" : { Source },
     "[CustomJson](#cfn-opsworks-stack-custjson)" : JSON,
     "[DefaultAvailabilityZone](#cfn-opsworks-stack-defaultaz)" : String,
-    "[DefaultInstanceProfileArn](#cfn-opsworks-stack-defaultinstanceprof)" : String,
+    "[DefaultInstanceProfileARN](#cfn-opsworks-stack-defaultinstanceprof)" : String,
     "[DefaultOs](#cfn-opsworks-stack-defaultos)" : String,
     "[DefaultRootDeviceType](#cfn-opsworks-stack-defaultrootdevicetype)" : String,
     "[DefaultSshKeyName](#cfn-opsworks-stack-defaultsshkeyname)" : String,
     "[DefaultSubnetId](#cfn-opsworks-stack-defaultsubnet)" : String,
-    "[EcsClusterArn](#cfn-opsworks-stack-ecsclusterarn)" : String,
+    "[EcsClusterARN](#cfn-opsworks-stack-ecsclusterarn)" : String,
     "[ElasticIps](#cfn-opsworks-stack-elasticips)" : [ [ElasticIp](aws-properties-opsworks-stack-elasticip.md), ... ],
     "[HostnameTheme](#cfn-opsworks-stack-hostnametheme)" : String,
     "[Name](#cfn-opsworks-stack-name)" : String,
     "[RdsDbInstances](#cfn-opsworks-stack-rdsdbinstances)" : [ [RdsDbInstance](aws-properties-opsworks-stack-rdsdbinstance.md), ... ],
-    "[ServiceRoleArn](#cfn-opsworks-stack-servicerolearn)" : String,
+    "[ServiceRoleARN](#cfn-opsworks-stack-servicerolearn)" : String,
     "[SourceStackId](#cfn-opsworks-stack-sourcestackid)" : String,
     "[Tags](#cfn-opsworks-stack-tags)" : [ [Tags](aws-properties-resource-tags.md), ... ], 
     "[UseCustomCookbooks](#cfn-opsworks-stack-usecustcookbooks)" : Boolean,
@@ -67,19 +67,19 @@ Properties:
     Source
   [CustomJson](#cfn-opsworks-stack-custjson): JSON
   [DefaultAvailabilityZone](#cfn-opsworks-stack-defaultaz): String
-  [DefaultInstanceProfileArn](#cfn-opsworks-stack-defaultinstanceprof): String
+  [DefaultInstanceProfileARN](#cfn-opsworks-stack-defaultinstanceprof): String
   [DefaultOs](#cfn-opsworks-stack-defaultos): String
   [DefaultRootDeviceType](#cfn-opsworks-stack-defaultrootdevicetype): String
   [DefaultSshKeyName](#cfn-opsworks-stack-defaultsshkeyname): String
   [DefaultSubnetId](#cfn-opsworks-stack-defaultsubnet): String
-  [EcsClusterArn](#cfn-opsworks-stack-ecsclusterarn): String
+  [EcsClusterARN](#cfn-opsworks-stack-ecsclusterarn): String
   [ElasticIps](#cfn-opsworks-stack-elasticips): 
   - [ElasticIp](aws-properties-opsworks-stack-elasticip.md)
   [HostnameTheme](#cfn-opsworks-stack-hostnametheme): String
   [Name](#cfn-opsworks-stack-name): String
   [RdsDbInstances](#cfn-opsworks-stack-rdsdbinstances): 
   - [RdsDbInstance](aws-properties-opsworks-stack-rdsdbinstance.md)
-  [ServiceRoleArn](#cfn-opsworks-stack-servicerolearn): String
+  [ServiceRoleARN](#cfn-opsworks-stack-servicerolearn): String
   [SourceStackId](#cfn-opsworks-stack-sourcestackid): String
   [Tags](#cfn-opsworks-stack-tags): 
   - [Tags](aws-properties-resource-tags.md)
@@ -146,7 +146,7 @@ The stack's default Availability Zone, which must be in the specified region\.
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`DefaultInstanceProfileArn`  <a name="cfn-opsworks-stack-defaultinstanceprof"></a>
+`DefaultInstanceProfileARN`  <a name="cfn-opsworks-stack-defaultinstanceprof"></a>
 The Amazon Resource Name \(ARN\) of an IAM instance profile that is the default profile for all of the stack's Amazon EC2 instances\.  
 *Required*: Yes  
 *Type*: String  
@@ -176,7 +176,7 @@ The stack's default subnet ID\. All instances are launched into this subnet unle
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`EcsClusterArn`  <a name="cfn-opsworks-stack-ecsclusterarn"></a>
+`EcsClusterARN`  <a name="cfn-opsworks-stack-ecsclusterarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon Elastic Container Service \(Amazon ECS\) cluster to register with the AWS OpsWorks stack\.  
 If you specify a cluster that's registered with another AWS OpsWorks stack, AWS CloudFormation deregisters the existing association before registering the cluster\.
 *Required*: No  
@@ -209,7 +209,7 @@ If you specify a DB instance that's registered with another AWS OpsWorks stack, 
 *Type*: List of [AWS OpsWorks Stack RdsDbInstance](aws-properties-opsworks-stack-rdsdbinstance.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ServiceRoleArn`  <a name="cfn-opsworks-stack-servicerolearn"></a>
+`ServiceRoleARN`  <a name="cfn-opsworks-stack-servicerolearn"></a>
 The AWS Identity and Access Management \(IAM\) role that AWS OpsWorks uses to work with AWS resources on your behalf\. You must specify an Amazon Resource Name \(ARN\) for an existing IAM role\.  
 *Required*: Yes  
 *Type*: String  
@@ -270,8 +270,8 @@ The following snippet creates an AWS OpsWorks stack that uses the default servic
   "Type" : "AWS::OpsWorks::Stack",
   "Properties" : {
     "Name" : {"Ref":"OpsWorksStackName"},
-    "ServiceRoleArn" : { "Fn::Join": ["", ["arn:aws:iam::", {"Ref":"AWS::AccountId"}, ":role/aws-opsworks-service-role"]] },
-    "DefaultInstanceProfileArn" : { "Fn::Join": ["", ["arn:aws:iam::", {"Ref":"AWS::AccountId"}, ":instance-profile/aws-opsworks-ec2-role"]] },
+    "ServiceRoleARN" : { "Fn::Join": ["", ["arn:aws:iam::", {"Ref":"AWS::AccountId"}, ":role/aws-opsworks-service-role"]] },
+    "DefaultInstanceProfileARN" : { "Fn::Join": ["", ["arn:aws:iam::", {"Ref":"AWS::AccountId"}, ":instance-profile/aws-opsworks-ec2-role"]] },
     "DefaultSshKeyName" : {"Ref":"KeyName"}
   }
 }
@@ -285,7 +285,7 @@ myStack:
   Properties: 
     Name: 
       Ref: "OpsWorksStackName"
-    ServiceRoleArn: 
+    ServiceRoleARN: 
       Fn::Join: 
         - ""
         - 
@@ -293,7 +293,7 @@ myStack:
           - 
             Ref: "AWS::AccountId"
           - ":role/aws-opsworks-service-role"
-    DefaultInstanceProfileArn: 
+    DefaultInstanceProfileARN: 
       Fn::Join: 
         - ""
         - 
@@ -394,16 +394,16 @@ The following complete template example specifies tags for an AWS OpsWorks layer
             "Type": "AWS::OpsWorks::Stack",
             "Properties": {
                 "Name": "TestStack",
-                "ServiceRoleArn": {
+                "ServiceRoleARN": {
                     "Fn::GetAtt": [
                         "ServiceRole",
-                        "Arn"
+                        "ARN"
                     ]
                 },
-                "DefaultInstanceProfileArn": {
+                "DefaultInstanceProfileARN": {
                     "Fn::GetAtt": [
                         "InstanceRole",
-                        "Arn"
+                        "ARN"
                     ]
                 },
                 "Tags": [
@@ -515,12 +515,12 @@ Resources:
     Type: 'AWS::OpsWorks::Stack'
     Properties:
       Name: TestStack
-      ServiceRoleArn: !GetAtt 
+      ServiceRoleARN: !GetAtt 
         - ServiceRole
-        - Arn
-      DefaultInstanceProfileArn: !GetAtt 
+        - ARN
+      DefaultInstanceProfileARN: !GetAtt 
         - InstanceRole
-        - Arn
+        - ARN
       Tags:
         - Key: !Ref StackKey
           Value: !Ref StackValue

@@ -108,7 +108,7 @@ The following AWS CloudFormation template snippets, from an AWS CodePipeline pip
         ActionMode: CREATE_UPDATE
         Capabilities: CAPABILITY_IAM
         OutputFileName: TestOutput.json
-        RoleArn: !GetAtt [CFNRole, Arn]
+        RoleARN: !GetAtt [CFNRole, ARN]
         StackName: StackA
         TemplateConfiguration: TemplateSource::test-configuration.json
         TemplatePath: TemplateSource::teststackA.yaml
@@ -135,7 +135,7 @@ In a subsequent stage, stack B uses the outputs from stack A\. In the `Parameter
       Configuration:
         ActionMode: CREATE_UPDATE
         Capabilities: CAPABILITY_IAM
-        RoleArn: !GetAtt [CFNRole, Arn]
+        RoleARN: !GetAtt [CFNRole, ARN]
         StackName: StackB
         TemplateConfiguration: TemplateSource::test-configuration.json
         TemplatePath: TemplateSource::teststackB.yaml

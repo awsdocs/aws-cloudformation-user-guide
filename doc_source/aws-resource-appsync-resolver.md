@@ -111,7 +111,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 `TypeName`  
 The GraphQL type that will invoke this resolver\. 
 
-`ResolverArn`  
+`ResolverARN`  
 ARN of the Resolver, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/types/typename/resolvers/resolvername`\. 
 
 `FieldName`  

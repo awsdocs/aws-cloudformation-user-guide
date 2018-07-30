@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[ProvisioningParameters](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameters)" : [ [*ProvisioningParameter*](aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter.md), ... ],
     "[ProductName](#cfn-servicecatalog-cloudformationprovisionedproduct-productname)" : String,
     "[ProvisioningArtifactName](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactname)" : String,
-    "[NotificationArns](#cfn-servicecatalog-cloudformationprovisionedproduct-notificationarns)" : [ String, ... ],
+    "[NotificationARNs](#cfn-servicecatalog-cloudformationprovisionedproduct-notificationarns)" : [ String, ... ],
     "[AcceptLanguage](#cfn-servicecatalog-cloudformationprovisionedproduct-acceptlanguage)" : String,
     "[ProductId](#cfn-servicecatalog-cloudformationprovisionedproduct-productid)" : String,
     "[Tags](#cfn-servicecatalog-cloudformationprovisionedproduct-tags)" : [ [*Tag*](aws-properties-resource-tags.md), ... ],
@@ -41,7 +41,7 @@ Properties:
     - [*ProvisioningParameter*](aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter.md)
   [ProductName](#cfn-servicecatalog-cloudformationprovisionedproduct-productname): String
   [ProvisioningArtifactName](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactname): String
-  [NotificationArns](#cfn-servicecatalog-cloudformationprovisionedproduct-notificationarns): 
+  [NotificationARNs](#cfn-servicecatalog-cloudformationprovisionedproduct-notificationarns): 
     - String
   [AcceptLanguage](#cfn-servicecatalog-cloudformationprovisionedproduct-acceptlanguage): String
   [ProductId](#cfn-servicecatalog-cloudformationprovisionedproduct-productid): String
@@ -59,7 +59,7 @@ The language code\.
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`NotificationArns`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-notificationarns"></a>
+`NotificationARNs`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-notificationarns"></a>
 The SNS topic ARNs for stack\-related events\.  
  *Required*: No  
  *Type*: List of String values  
@@ -170,7 +170,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
-`CloudformationStackArn`  
+`CloudformationStackARN`  
 The Amazon Resource Name \(ARN\) of the CloudFormation stack, such as `arn:aws:cloudformation:eu-west-1:123456789012:stack/SC-499278721343-pp-hfyszaotincww/8f3df460-346a-11e8-9444-503abe701c29`\. 
 
 `RecordId`  

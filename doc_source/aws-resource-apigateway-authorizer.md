@@ -132,13 +132,13 @@ The following examples create a custom authorizer that is an AWS Lambda function
 "Authorizer": {
   "Type": "AWS::ApiGateway::Authorizer",
   "Properties": {
-    "AuthorizerCredentials": { "Fn::GetAtt": ["LambdaInvocationRole", "Arn"] },
+    "AuthorizerCredentials": { "Fn::GetAtt": ["LambdaInvocationRole", "ARN"] },
     "AuthorizerResultTtlInSeconds": "300",
     "AuthorizerUri" : {"Fn::Join" : ["", [
       "arn:aws:apigateway:",
       {"Ref" : "AWS::Region"},
       ":lambda:path/2015-03-31/functions/",
-      {"Fn::GetAtt" : ["LambdaAuthorizer", "Arn"]}, "/invocations"
+      {"Fn::GetAtt" : ["LambdaAuthorizer", "ARN"]}, "/invocations"
     ]]},
     "Type": "TOKEN",
     "IdentitySource": "method.request.header.Auth",
@@ -159,7 +159,7 @@ Authorizer:
     AuthorizerCredentials: 
       Fn::GetAtt: 
         - "LambdaInvocationRole"
-        - "Arn"
+        - "ARN"
     AuthorizerResultTtlInSeconds: "300"
     AuthorizerUri: 
       Fn::Join: 
@@ -170,7 +170,7 @@ Authorizer:
           - ":lambda:path/2015-03-31/functions/"
           - Fn::GetAtt: 
               - "LambdaAuthorizer"
-              - "Arn"
+              - "ARN"
           - "/invocations"
     Type: "TOKEN"
     IdentitySource: "method.request.header.Auth"

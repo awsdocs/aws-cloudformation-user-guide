@@ -13,7 +13,7 @@
   "[MetricTimestamp](#cfn-iot-topicrule-cloudwatchmetricaction-metrictimestamp)": String,
   "[MetricUnit](#cfn-iot-topicrule-cloudwatchmetricaction-metricunit)": String,
   "[MetricValue](#cfn-iot-topicrule-cloudwatchmetricaction-metricvalue)": String,
-  "[RoleArn](#cfn-iot-topicrule-cloudwatchmetricaction-rolearn)": String
+  "[RoleARN](#cfn-iot-topicrule-cloudwatchmetricaction-rolearn)": String
 }
 ```
 
@@ -25,7 +25,7 @@
 [MetricTimestamp](#cfn-iot-topicrule-cloudwatchmetricaction-metrictimestamp): String
 [MetricUnit](#cfn-iot-topicrule-cloudwatchmetricaction-metricunit): String
 [MetricValue](#cfn-iot-topicrule-cloudwatchmetricaction-metricvalue): String
-[RoleArn](#cfn-iot-topicrule-cloudwatchmetricaction-rolearn): String
+[RoleARN](#cfn-iot-topicrule-cloudwatchmetricaction-rolearn): String
 ```
 
 ## Properties<a name="w3ab2c21c14e1327b7"></a>
@@ -55,7 +55,7 @@ The value to publish to the metric\. For example, if you count the occurrences o
 *Required*: Yes  
 *Type*: String
 
-`RoleArn`  <a name="cfn-iot-topicrule-cloudwatchmetricaction-rolearn"></a>
+`RoleARN`  <a name="cfn-iot-topicrule-cloudwatchmetricaction-rolearn"></a>
 The ARN of the IAM role that grants access to the CloudWatch metric\.  
 *Required*: Yes  
 *Type*: String

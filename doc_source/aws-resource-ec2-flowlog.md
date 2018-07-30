@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::FlowLog",
   "Properties" : {
-    "[DeliverLogsPermissionArn](#cfn-ec2-flowlog-deliverlogspermissionarn)" : String,
+    "[DeliverLogsPermissionARN](#cfn-ec2-flowlog-deliverlogspermissionarn)" : String,
     "[LogGroupName](#cfn-ec2-flowlog-loggroupname)" : String,
     "[ResourceId](#cfn-ec2-flowlog-resourceid)" : String,
     "[ResourceType](#cfn-ec2-flowlog-resourcetype)" : String,
@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::EC2::FlowLog"
 Properties:
-  [DeliverLogsPermissionArn](#cfn-ec2-flowlog-deliverlogspermissionarn) : String
+  [DeliverLogsPermissionARN](#cfn-ec2-flowlog-deliverlogspermissionarn) : String
   [LogGroupName](#cfn-ec2-flowlog-loggroupname) : String
   [ResourceId](#cfn-ec2-flowlog-resourceid) : String
   [ResourceType](#cfn-ec2-flowlog-resourcetype) : String
@@ -41,7 +41,7 @@ Properties:
 
 ## Properties<a name="w3ab2c21c10d400b9"></a>
 
-`DeliverLogsPermissionArn`  <a name="cfn-ec2-flowlog-deliverlogspermissionarn"></a>
+`DeliverLogsPermissionARN`  <a name="cfn-ec2-flowlog-deliverlogspermissionarn"></a>
 The Amazon Resource Name \(ARN\) of an AWS Identity and Access Management \(IAM\) role that permits Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account\.  
 *Required*: Yes  
 *Type*: String  
@@ -87,7 +87,7 @@ The following example creates a flow log for the VPC called `MyVPC` and logs all
 "MyFlowLog" : {
   "Type" : "AWS::EC2::FlowLog",
   "Properties" : {
-    "DeliverLogsPermissionArn" : { "Fn::GetAtt" : ["FlowLogRole", "Arn"] },
+    "DeliverLogsPermissionARN" : { "Fn::GetAtt" : ["FlowLogRole", "ARN"] },
     "LogGroupName" : "FlowLogsGroup",
     "ResourceId" : { "Ref" : "MyVPC" },
     "ResourceType" : "VPC",

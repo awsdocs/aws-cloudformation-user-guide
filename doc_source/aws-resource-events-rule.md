@@ -94,7 +94,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
+`ARN`  
 The event rule Amazon Resource Name \(ARN\), such as `arn:aws:events:``us-east-2``:123456789012:rule/example`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
@@ -115,7 +115,7 @@ The following example creates a rule that invokes the specified Lambda function 
     "ScheduleExpression": "rate(10 minutes)",
     "State": "ENABLED",
     "Targets": [{
-      "Arn": { "Fn::GetAtt": ["LambdaFunction", "Arn"] },
+      "ARN": { "Fn::GetAtt": ["LambdaFunction", "ARN"] },
       "Id": "TargetFunctionV1"
     }]
   }
@@ -126,7 +126,7 @@ The following example creates a rule that invokes the specified Lambda function 
     "FunctionName": { "Ref": "LambdaFunction" },
     "Action": "lambda:InvokeFunction",
     "Principal": "events.amazonaws.com",
-    "SourceArn": { "Fn::GetAtt": ["ScheduledRule", "Arn"] }
+    "SourceARN": { "Fn::GetAtt": ["ScheduledRule", "ARN"] }
   }
 }
 ```
@@ -142,10 +142,10 @@ ScheduledRule:
     State: "ENABLED"
     Targets: 
       - 
-        Arn: 
+        ARN: 
           Fn::GetAtt: 
             - "LambdaFunction"
-            - "Arn"
+            - "ARN"
         Id: "TargetFunctionV1"
 PermissionForEventsToInvokeLambda: 
   Type: "AWS::Lambda::Permission"
@@ -154,10 +154,10 @@ PermissionForEventsToInvokeLambda:
       Ref: "LambdaFunction"
     Action: "lambda:InvokeFunction"
     Principal: "events.amazonaws.com"
-    SourceArn: 
+    SourceARN: 
       Fn::GetAtt: 
         - "ScheduledRule"
-        - "Arn"
+        - "ARN"
 ```
 
 ### Invoke Lambda Function in Response to an Event<a name="w3ab2c21c10d682c13b4"></a>
@@ -186,7 +186,7 @@ The following example creates a rule that invokes the specified Lambda function 
     },
     "State": "ENABLED",
     "Targets": [{
-      "Arn": { "Fn::GetAtt": ["LambdaFunction", "Arn"] },
+      "ARN": { "Fn::GetAtt": ["LambdaFunction", "ARN"] },
       "Id": "TargetFunctionV1"
     }]
   }
@@ -197,7 +197,7 @@ The following example creates a rule that invokes the specified Lambda function 
     "FunctionName": { "Ref": "LambdaFunction" },
     "Action": "lambda:InvokeFunction",
     "Principal": "events.amazonaws.com",
-    "SourceArn": { "Fn::GetAtt": ["EventRule", "Arn"] }
+    "SourceARN": { "Fn::GetAtt": ["EventRule", "ARN"] }
   }
 }
 ```
@@ -220,10 +220,10 @@ EventRule:
     State: "ENABLED"
     Targets: 
       - 
-        Arn: 
+        ARN: 
           Fn::GetAtt: 
             - "LambdaFunction"
-            - "Arn"
+            - "ARN"
         Id: "TargetFunctionV1"
 PermissionForEventsToInvokeLambda: 
   Type: "AWS::Lambda::Permission"
@@ -232,10 +232,10 @@ PermissionForEventsToInvokeLambda:
       Ref: "LambdaFunction"
     Action: "lambda:InvokeFunction"
     Principal: "events.amazonaws.com"
-    SourceArn: 
+    SourceARN: 
       Fn::GetAtt: 
         - "EventRule"
-        - "Arn"
+        - "ARN"
 ```
 
 ### Notify a Topic in Response to a Log Entry<a name="w3ab2c21c10d682c13b6"></a>
@@ -260,7 +260,7 @@ The following example creates a rule that notifies an Amazon Simple Notification
     "State": "ENABLED",
     "Targets": [
       {
-        "Arn": { "Ref": "MySNSTopic" },
+        "ARN": { "Ref": "MySNSTopic" },
         "Id": "OpsTopic"
       }
     ]
@@ -285,7 +285,7 @@ OpsEventRule:
     State: "ENABLED"
     Targets: 
       - 
-        Arn: 
+        ARN: 
           Ref: "MySNSTopic"
         Id: "OpsTopic"
 ```

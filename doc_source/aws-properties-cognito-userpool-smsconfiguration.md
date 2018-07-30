@@ -9,7 +9,7 @@
 ```
 {
   "[ExternalId](#cfn-cognito-userpool-smsconfiguration-externalid)" : String,
-  "[SnsCallerArn](#cfn-cognito-userpool-smsconfiguration-snscallerarn)" : String
+  "[SnsCallerARN](#cfn-cognito-userpool-smsconfiguration-snscallerarn)" : String
 }
 ```
 
@@ -17,7 +17,7 @@
 
 ```
 [ExternalId](#cfn-cognito-userpool-smsconfiguration-externalid): String
-[SnsCallerArn](#cfn-cognito-userpool-smsconfiguration-snscallerarn): String
+[SnsCallerARN](#cfn-cognito-userpool-smsconfiguration-snscallerarn): String
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-smsconfiguration-properties"></a>
@@ -28,7 +28,7 @@ For more information about using external IDs, see [How to Use an External ID Wh
 *Type*: String  
 *Required*: No
 
-`SnsCallerArn`  <a name="cfn-cognito-userpool-smsconfiguration-snscallerarn"></a>
+`SnsCallerARN`  <a name="cfn-cognito-userpool-smsconfiguration-snscallerarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service \(SNS\) caller\.  
 *Type*: String  
 *Required*: Yes

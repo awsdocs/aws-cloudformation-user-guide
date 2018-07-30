@@ -780,7 +780,7 @@ The CloudWatch Logs agent on Windows \(SSM agent on Windows 2012R2 and Windows 2
                                 }
                             ]
                         },
-                        "ManagedPolicyArns" : [ "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM"],
+                        "ManagedPolicyARNs" : [ "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM"],
                         "Path": "/",
                         "Policies": [
                             {
@@ -1282,7 +1282,7 @@ Resources:
             - ec2.amazonaws.com
           Action:
           - sts:AssumeRole
-      ManagedPolicyArns:
+      ManagedPolicyARNs:
       - arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM
       Path: /
       Policies:

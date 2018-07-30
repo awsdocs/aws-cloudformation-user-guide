@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
     "[Enabled](#cfn-rds-eventsubscription-enabled)" : Boolean,
     "[EventCategories](#cfn-rds-eventsubscription-eventcategories)" : [ String, ... ],
-    "[SnsTopicArn](#cfn-rds-eventsubscription-snstopicarn)" : String,
+    "[SnsTopicARN](#cfn-rds-eventsubscription-snstopicarn)" : String,
     "[SourceIds](#cfn-rds-eventsubscription-sourceids)" : [ String, ... ],
     "[SourceType](#cfn-rds-eventsubscription-sourcetype)" : String
   }
@@ -35,7 +35,7 @@ Properties:
   [Enabled](#cfn-rds-eventsubscription-enabled): Boolean
   [EventCategories](#cfn-rds-eventsubscription-eventcategories):
     - String
-  [SnsTopicArn](#cfn-rds-eventsubscription-snstopicarn): String
+  [SnsTopicARN](#cfn-rds-eventsubscription-snstopicarn): String
   [SourceIds](#cfn-rds-eventsubscription-sourceids):
     - String
   [SourceType](#cfn-rds-eventsubscription-sourcetype): String
@@ -55,7 +55,7 @@ A list of event categories that you want to subscribe to for a given source type
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`SnsTopicArn`  <a name="cfn-rds-eventsubscription-snstopicarn"></a>
+`SnsTopicARN`  <a name="cfn-rds-eventsubscription-snstopicarn"></a>
 The Amazon Resource Name \(ARN\) of an Amazon SNS topic that you want to send event notifications to\.  
 *Required*: Yes  
 *Type*: String  
@@ -97,7 +97,7 @@ The following snippet creates an event subscription for an existing database ins
   "Type": "AWS::RDS::EventSubscription",
   "Properties": {
     "EventCategories": ["configuration change", "failure", "deletion"],
-    "SnsTopicArn": "arn:aws:sns:us-west-2:123456789012:example-topic",
+    "SnsTopicARN": "arn:aws:sns:us-west-2:123456789012:example-topic",
     "SourceIds": ["db-instance-1", { "Ref" : "myDBInstance" }],
     "SourceType":"db-instance",
     "Enabled" : false
@@ -115,7 +115,7 @@ myEventSubscription:
       - "configuration change"
       - "failure"
       - "deletion"
-    SnsTopicArn: "arn:aws:sns:us-west-2:123456789012:example-topic"
+    SnsTopicARN: "arn:aws:sns:us-west-2:123456789012:example-topic"
     SourceIds: 
       - "db-instance-1"
       - 

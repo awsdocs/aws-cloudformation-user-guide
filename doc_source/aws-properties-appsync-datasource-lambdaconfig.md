@@ -12,19 +12,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[LambdaFunctionArn](#cfn-appsync-datasource-lambdaconfig-lambdafunctionarn)" : String
+  "[LambdaFunctionARN](#cfn-appsync-datasource-lambdaconfig-lambdafunctionarn)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-appsync-datasource-lambdaconfig-syntax.yaml"></a>
 
 ```
-[LambdaFunctionArn](#cfn-appsync-datasource-lambdaconfig-lambdafunctionarn): String
+[LambdaFunctionARN](#cfn-appsync-datasource-lambdaconfig-lambdafunctionarn): String
 ```
 
 ## Properties<a name="aws-properties-appsync-datasource-lambdaconfig-properties"></a>
 
-`LambdaFunctionArn`  <a name="cfn-appsync-datasource-lambdaconfig-lambdafunctionarn"></a>
+`LambdaFunctionARN`  <a name="cfn-appsync-datasource-lambdaconfig-lambdafunctionarn"></a>
 The ARN for the Lambda function\.  
  *Required*: Yes  
  *Type*: String  

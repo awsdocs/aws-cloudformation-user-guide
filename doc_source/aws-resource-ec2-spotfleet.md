@@ -60,7 +60,7 @@ The following example creates a Spot fleet with two launch specifications\. The 
   "Type": "AWS::EC2::SpotFleet",
   "Properties": {
     "SpotFleetRequestConfigData": {
-      "IamFleetRole": { "Fn::GetAtt": [ "IAMFleetRole", "Arn"] },
+      "IamFleetRole": { "Fn::GetAtt": [ "IAMFleetRole", "ARN"] },
       "SpotPrice": "1000",
       "TargetCapacity": { "Ref": "TargetCapacity" },
       "LaunchSpecifications": [
@@ -82,7 +82,7 @@ The following example creates a Spot fleet with two launch specifications\. The 
         "Monitoring": { "Enabled": "true" },
         "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "SG0", "GroupId" ] } } ],
         "SubnetId": { "Ref": "Subnet0" },
-        "IamInstanceProfile": { "Arn": { "Fn::GetAtt": [ "RootInstanceProfile", "Arn" ] } },
+        "IamInstanceProfile": { "ARN": { "Fn::GetAtt": [ "RootInstanceProfile", "ARN" ] } },
         "WeightedCapacity": "8"
       }
       ]
@@ -98,7 +98,7 @@ SpotFleet:
   Type: AWS::EC2::SpotFleet
   Properties:
     SpotFleetRequestConfigData:
-      IamFleetRole: !GetAtt [IAMFleetRole, Arn]
+      IamFleetRole: !GetAtt [IAMFleetRole, ARN]
       SpotPrice: '1000'
       TargetCapacity:
         Ref: TargetCapacity
@@ -138,10 +138,10 @@ SpotFleet:
         SubnetId:
           Ref: Subnet0
         IamInstanceProfile:
-          Arn:
+          ARN:
             Fn::GetAtt:
             - RootInstanceProfile
-            - Arn
+            - ARN
         WeightedCapacity: '8'
 ```
 

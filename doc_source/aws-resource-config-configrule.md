@@ -95,7 +95,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
+`ARN`  
 The Amazon Resource Name \(ARN\) of the AWS Config rule, such as `arn:aws:config:us-east-1:123456789012:config-rule/config-rule-a1bzhi`\.
 
 `ConfigRuleId`  
@@ -156,7 +156,7 @@ The following example creates a custom configuration rule that uses a Lambda fun
 "ConfigPermissionToCallLambda": {
   "Type": "AWS::Lambda::Permission",
   "Properties": {
-    "FunctionName": {"Fn::GetAtt": ["VolumeAutoEnableIOComplianceCheck", "Arn"]},
+    "FunctionName": {"Fn::GetAtt": ["VolumeAutoEnableIOComplianceCheck", "ARN"]},
     "Action": "lambda:InvokeFunction",
     "Principal": "config.amazonaws.com"
   }
@@ -207,7 +207,7 @@ The following example creates a custom configuration rule that uses a Lambda fun
     "Handler": "index.handler",
     "Runtime": "nodejs4.3",
     "Timeout": "30",
-    "Role": {"Fn::GetAtt": ["LambdaExecutionRole", "Arn"]}
+    "Role": {"Fn::GetAtt": ["LambdaExecutionRole", "ARN"]}
   }
 },
 "ConfigRuleForVolumeAutoEnableIO": {
@@ -224,7 +224,7 @@ The following example creates a custom configuration rule that uses a Lambda fun
           "EventSource": "aws.config",
           "MessageType": "ConfigurationItemChangeNotification"
       }],
-      "SourceIdentifier": {"Fn::GetAtt": ["VolumeAutoEnableIOComplianceCheck", "Arn"]}
+      "SourceIdentifier": {"Fn::GetAtt": ["VolumeAutoEnableIOComplianceCheck", "ARN"]}
     }
   },
   "DependsOn": "ConfigPermissionToCallLambda"
@@ -240,7 +240,7 @@ ConfigPermissionToCallLambda:
     FunctionName: 
       Fn::GetAtt: 
         - VolumeAutoEnableIOComplianceCheck
-        - Arn
+        - ARN
     Action: "lambda:InvokeFunction"
     Principal: "config.amazonaws.com"
 VolumeAutoEnableIOComplianceCheck: 
@@ -287,7 +287,7 @@ VolumeAutoEnableIOComplianceCheck:
     Role: 
       Fn::GetAtt: 
         - LambdaExecutionRole
-        - Arn
+        - ARN
 ConfigRuleForVolumeAutoEnableIO: 
   Type: "AWS::Config::ConfigRule"
   Properties: 
@@ -306,6 +306,6 @@ ConfigRuleForVolumeAutoEnableIO:
       SourceIdentifier: 
         Fn::GetAtt: 
           - VolumeAutoEnableIOComplianceCheck
-          - Arn
+          - ARN
   DependsOn: ConfigPermissionToCallLambda
 ```

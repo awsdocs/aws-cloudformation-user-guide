@@ -11,7 +11,7 @@
   "[ContainerName](#cfn-ecs-service-loadbalancers-containername)" : String,
   "[ContainerPort](#cfn-ecs-service-loadbalancers-containerport)" : Integer,
   "[LoadBalancerName](#cfn-ecs-service-loadbalancers-loadbalancername)" : String,
-  "[TargetGroupArn](#cfn-ecs-service-loadbalancers-targetgrouparn)" : String
+  "[TargetGroupARN](#cfn-ecs-service-loadbalancers-targetgrouparn)" : String
 }
 ```
 
@@ -21,7 +21,7 @@
 [ContainerName](#cfn-ecs-service-loadbalancers-containername): String
 [ContainerPort](#cfn-ecs-service-loadbalancers-containerport): Integer
 [LoadBalancerName](#cfn-ecs-service-loadbalancers-loadbalancername): String
-[TargetGroupArn](#cfn-ecs-service-loadbalancers-targetgrouparn): String
+[TargetGroupARN](#cfn-ecs-service-loadbalancers-targetgrouparn): String
 ```
 
 ## Properties<a name="w3ab2c21c14d853b7"></a>
@@ -41,7 +41,7 @@ The name of a Classic Load Balancer to associate with the Amazon ECS service\.
 *Required*: No  
 *Type*: String
 
-`TargetGroupArn`  <a name="cfn-ecs-service-loadbalancers-targetgrouparn"></a>
+`TargetGroupARN`  <a name="cfn-ecs-service-loadbalancers-targetgrouparn"></a>
 An Application load balancer target group Amazon Resource Name \(ARN\) to associate with the Amazon ECS service\.  
 *Required*: No  
 *Type*: String

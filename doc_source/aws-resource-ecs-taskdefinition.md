@@ -21,13 +21,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
     "[Volumes](#cfn-ecs-taskdefinition-volumes)" : [ Volume Definition, ... ],
     "[Cpu](#cfn-ecs-taskdefinition-cpu)" : String,
-    "[ExecutionRoleArn](#cfn-ecs-taskdefinition-executionrolearn)" : String,
+    "[ExecutionRoleARN](#cfn-ecs-taskdefinition-executionrolearn)" : String,
     "[Family](#cfn-ecs-taskdefinition-family)" : String,
     "[Memory](#cfn-ecs-taskdefinition-memory)" : String,
     "[NetworkMode](#cfn-ecs-taskdefinition-networkmode)" : String,
     "[PlacementConstraints](#cfn-ecs-taskdefinition-placementconstraints)" : TaskDefinitionPlacementConstraint,
     "[RequiresCompatibilities](#cfn-ecs-taskdefinition-requirescompatibilities)" : [ String, ... ],
-    "[TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn)" : String,
+    "[TaskRoleARN](#cfn-ecs-taskdefinition-taskrolearn)" : String,
     "[ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinition)" : [ Container Definition, ... ]
   }
 }
@@ -41,7 +41,7 @@ Properties:
   [Volumes](#cfn-ecs-taskdefinition-volumes):
     - Volume Definition
   [Cpu](#cfn-ecs-taskdefinition-cpu): String
-  [ExecutionRoleArn](#cfn-ecs-taskdefinition-executionrolearn): String
+  [ExecutionRoleARN](#cfn-ecs-taskdefinition-executionrolearn): String
   [Family](#cfn-ecs-taskdefinition-family): String
   [Memory](#cfn-ecs-taskdefinition-memory): String
   [NetworkMode](#cfn-ecs-taskdefinition-networkmode): String
@@ -49,7 +49,7 @@ Properties:
     - TaskDefinitionPlacementConstraint
   [RequiresCompatibilities](#cfn-ecs-taskdefinition-requirescompatibilities):
     - String
-  [TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn): String
+  [TaskRoleARN](#cfn-ecs-taskdefinition-taskrolearn): String
   [ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinition):
     - Container Definition
 ```
@@ -75,7 +75,7 @@ The number of `cpu` units used by the task\. If using the EC2 launch type, this 
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`ExecutionRoleArn`  <a name="cfn-ecs-taskdefinition-executionrolearn"></a>
+`ExecutionRoleARN`  <a name="cfn-ecs-taskdefinition-executionrolearn"></a>
 The Amazon Resource Name \(ARN\) of the task execution role that containers in this task can assume\. All containers in this task are granted the permissions that are specified in this role\.  
 *Required*: No  
 *Type*: String  
@@ -118,7 +118,7 @@ The launch type the task requires\. If no value is specified, it will default to
 *Type*: List of Strings  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`TaskRoleArn`  <a name="cfn-ecs-taskdefinition-taskrolearn"></a>
+`TaskRoleARN`  <a name="cfn-ecs-taskdefinition-taskrolearn"></a>
 The Amazon Resource Name \(ARN\) of an AWS Identity and Access Management \(IAM\) role that grants containers in the task permission to call AWS APIs on your behalf\. For more information, see [IAM Roles for Tasks](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  

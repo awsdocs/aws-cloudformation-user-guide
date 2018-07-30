@@ -230,7 +230,7 @@ The Amazon ECS service requires an explicit dependency on the Application load b
     "TaskDefinition" : { "Ref" : "taskdefinition" },
     "DesiredCount" : "1",
     "LoadBalancers" : [{
-      "TargetGroupArn" : { "Ref" : "TargetGroup" },
+      "TargetGroupARN" : { "Ref" : "TargetGroup" },
       "ContainerPort" : "80",
       "ContainerName" : "sample-app"
     }],
@@ -253,7 +253,7 @@ service:
       Ref: taskdefinition
     DesiredCount: 1
     LoadBalancers:
-    - TargetGroupArn:
+    - TargetGroupARN:
         Ref: TargetGroup
       ContainerPort: 80
       ContainerName: sample-app
@@ -444,7 +444,7 @@ The following example defines a service with a parameter that enables users to s
             }
           ]
         },
-        "ManagedPolicyArns": ["arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceRole"]
+        "ManagedPolicyARNs": ["arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceRole"]
       }
     }
   },
@@ -583,7 +583,7 @@ Resources:
             Principal:
               Service: ecs.amazonaws.com
             Action: 'sts:AssumeRole'
-      ManagedPolicyArns:
+      ManagedPolicyARNs:
         - 'arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceRole'
 Outputs:
   Cluster:

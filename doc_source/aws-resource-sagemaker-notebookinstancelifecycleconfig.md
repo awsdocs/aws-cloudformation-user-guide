@@ -90,7 +90,7 @@ The following example creates a notebook instance with an associated lifecycle c
       "Type": "AWS::SageMaker::NotebookInstance",
       "Properties": {
         "InstanceType": "ml.t2.medium",
-        "RoleArn": { "Fn::GetAtt" : [ "ExecutionRole", "Arn" ] },
+        "RoleARN": { "Fn::GetAtt" : [ "ExecutionRole", "ARN" ] },
         "LifecycleConfigName": { "Fn::GetAtt" : [ "BasicNotebookInstanceLifecycleConfig", "NotebookInstanceLifecycleConfigName" ] }
     },
     "BasicNotebookInstanceLifecycleConfig": {
@@ -163,7 +163,7 @@ Resources:
     Type: "AWS::SageMaker::NotebookInstance"
     Properties:
       InstanceType: "ml.t2.medium"
-      RoleArn: !GetAtt ExecutionRole.Arn
+      RoleARN: !GetAtt ExecutionRole.ARN
       LifecycleConfigName: !GetAtt BasicNotebookInstanceLifecycleConfig.NotebookInstanceLifecycleConfigName
   BasicNotebookInstanceLifecycleConfig:
     Type: "AWS::SageMaker::NotebookInstanceLifecycleConfig"

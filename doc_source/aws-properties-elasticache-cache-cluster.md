@@ -29,13 +29,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ClusterName](#cfn-elasticache-cachecluster-clustername)" : String,
       "[Engine](#cfn-elasticache-cachecluster-engine)" : String,
       "[EngineVersion](#cfn-elasticache-cachecluster-engineversion)" : String,
-      "[NotificationTopicArn](#cfn-elasticache-cachecluster-notificationtopicarn)" : String,
+      "[NotificationTopicARN](#cfn-elasticache-cachecluster-notificationtopicarn)" : String,
       "[NumCacheNodes](#cfn-elasticache-cachecluster-numcachenodes)" : Integer,
       "[Port](#cfn-elasticache-cachecluster-port)" : Integer,
       "[PreferredAvailabilityZone](#cfn-elasticache-cachecluster-preferredavailabilityzone)" : String,
       "[PreferredAvailabilityZones](#cfn-elasticache-cachecluster-preferredavailabilityzones)" : [String, ... ],
       "[PreferredMaintenanceWindow](#cfn-elasticache-cachecluster-preferredmaintenancewindow)" : String,
-      "[SnapshotArns](#cfn-elasticache-cachecluster-snapshotarn)" : [String, ... ],
+      "[SnapshotARNs](#cfn-elasticache-cachecluster-snapshotarn)" : [String, ... ],
       "[SnapshotName](#cfn-elasticache-cachecluster-snapshotname)" : String,
       "[SnapshotRetentionLimit](#cfn-elasticache-cachecluster-snapshotretentionlimit)" : Integer,
       "[SnapshotWindow](#cfn-elasticache-cachecluster-snapshotwindow)" : String,
@@ -60,14 +60,14 @@ Properties:
   [ClusterName](#cfn-elasticache-cachecluster-clustername): String
   [Engine](#cfn-elasticache-cachecluster-engine): String
   [EngineVersion](#cfn-elasticache-cachecluster-engineversion): String
-  [NotificationTopicArn](#cfn-elasticache-cachecluster-notificationtopicarn): String
+  [NotificationTopicARN](#cfn-elasticache-cachecluster-notificationtopicarn): String
   [NumCacheNodes](#cfn-elasticache-cachecluster-numcachenodes): Integer
   [Port](#cfn-elasticache-cachecluster-port): Integer
   [PreferredAvailabilityZone](#cfn-elasticache-cachecluster-preferredavailabilityzone): String
   [PreferredAvailabilityZones](#cfn-elasticache-cachecluster-preferredavailabilityzones):
     - String
   [PreferredMaintenanceWindow](#cfn-elasticache-cachecluster-preferredmaintenancewindow): String
-  [SnapshotArns](#cfn-elasticache-cachecluster-snapshotarn):
+  [SnapshotARNs](#cfn-elasticache-cachecluster-snapshotarn):
     - String
   [SnapshotName](#cfn-elasticache-cachecluster-snapshotname): String
   [SnapshotRetentionLimit](#cfn-elasticache-cachecluster-snapshotretentionlimit): Integer
@@ -139,7 +139,7 @@ The version of the cache engine to be used for this cluster\.
 *Type*: String  
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
-`NotificationTopicArn`  <a name="cfn-elasticache-cachecluster-notificationtopicarn"></a>
+`NotificationTopicARN`  <a name="cfn-elasticache-cachecluster-notificationtopicarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service \(SNS\) topic to which notifications will be sent\.  
 *Required*: No  
 *Type*: String  
@@ -178,7 +178,7 @@ The weekly time range \(in UTC\) during which system maintenance can occur\.
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`SnapshotArns`  <a name="cfn-elasticache-cachecluster-snapshotarn"></a>
+`SnapshotARNs`  <a name="cfn-elasticache-cachecluster-snapshotarn"></a>
 The ARN of the snapshot file that you want to use to seed a new Redis cache cluster\. If you manage a Redis instance outside of Amazon ElastiCache, you can create a new cache cluster in ElastiCache by using a snapshot file that is stored in an Amazon S3 bucket\.  
 *Required*: No  
 *Type*: List of String values  

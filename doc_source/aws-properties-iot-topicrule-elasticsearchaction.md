@@ -11,7 +11,7 @@
   "[Endpoint](#cfn-iot-topicrule-elasticsearchaction-endpoint)": String,
   "[Id](#cfn-iot-topicrule-elasticsearchaction-id)": String,
   "[Index](#cfn-iot-topicrule-elasticsearchaction-index)": String,
-  "[RoleArn](#cfn-iot-topicrule-elasticsearchaction-rolearn)": String,
+  "[RoleARN](#cfn-iot-topicrule-elasticsearchaction-rolearn)": String,
   "[Type](#cfn-iot-topicrule-elasticsearchaction-type)": String
 }
 ```
@@ -22,7 +22,7 @@
 [Endpoint](#cfn-iot-topicrule-elasticsearchaction-endpoint): String
 [Id](#cfn-iot-topicrule-elasticsearchaction-id)": String
 [Index](#cfn-iot-topicrule-elasticsearchaction-index)": String
-[RoleArn](#cfn-iot-topicrule-elasticsearchaction-rolearn)": String
+[RoleARN](#cfn-iot-topicrule-elasticsearchaction-rolearn)": String
 [Type](#cfn-iot-topicrule-elasticsearchaction-type)": String
 ```
 
@@ -43,7 +43,7 @@ The Elasticsearch index where the data is stored\.
 *Required*: Yes  
 *Type*: String
 
-`RoleArn`  <a name="cfn-iot-topicrule-elasticsearchaction-rolearn"></a>
+`RoleARN`  <a name="cfn-iot-topicrule-elasticsearchaction-rolearn"></a>
 The ARN of the IAM role that grants access to Elasticsearch\.  
 *Required*: Yes  
 *Type*: String

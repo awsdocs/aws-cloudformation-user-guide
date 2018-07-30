@@ -189,7 +189,7 @@ The provider name of the Amazon Cognito user pool, specified as a `String`\.
 `ProviderURL`  
 The URL of the provider of the Amazon Cognito user pool, specified as a `String`\.
 
-`Arn`  
+`ARN`  
 The Amazon Resource Name \(ARN\) of the user pool, such as `arn:aws:cognito-idp:``us-east-2``:123412341234:userpool/us-east-1 _123412341`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.

@@ -86,8 +86,8 @@ An example of an SNS topic subscribed to by two SQS queues:
    "Type" : "AWS::SNS::Topic",
    "Properties" : {
       "Subscription" : [
-         { "Endpoint" : { "Fn::GetAtt" : [ "MyQueue1", "Arn" ] }, "Protocol" : "sqs" },
-         { "Endpoint" : { "Fn::GetAtt" : [ "MyQueue2", "Arn" ] }, "Protocol" : "sqs" }
+         { "Endpoint" : { "Fn::GetAtt" : [ "MyQueue1", "ARN" ] }, "Protocol" : "sqs" },
+         { "Endpoint" : { "Fn::GetAtt" : [ "MyQueue2", "ARN" ] }, "Protocol" : "sqs" }
       ],
       "TopicName" : "SampleTopic"
    }
@@ -105,13 +105,13 @@ MySNSTopic:
         Endpoint: 
           Fn::GetAtt: 
             - "MyQueue1"
-            - "Arn"
+            - "ARN"
         Protocol: "sqs"
       - 
         Endpoint: 
           Fn::GetAtt: 
             - "MyQueue2"
-            - "Arn"
+            - "ARN"
         Protocol: "sqs"
     TopicName: "SampleTopic"
 ```

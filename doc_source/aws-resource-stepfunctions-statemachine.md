@@ -14,7 +14,7 @@ For information about creating state machines, see [Tutorial: A Lambda State Mac
    "Properties": {
       "[StateMachineName](#cfn-stepfunctions-statemachine-definitionname)": String,
       "[DefinitionString](#cfn-stepfunctions-statemachine-definitionstring)": String,
-      "[RoleArn](#cfn-stepfunctions-statemachine-rolearn)": String
+      "[RoleARN](#cfn-stepfunctions-statemachine-rolearn)": String
     }
 }
 ```
@@ -26,7 +26,7 @@ Type: "AWS::StepFunctions::StateMachine"
 Properties:
   [StateMachineName](#cfn-stepfunctions-statemachine-definitionname): String
   [DefinitionString](#cfn-stepfunctions-statemachine-definitionstring): String
-  [RoleArn](#cfn-stepfunctions-statemachine-rolearn): String
+  [RoleARN](#cfn-stepfunctions-statemachine-rolearn): String
 ```
 
 ## Properties<a name="aws-resource-stepfunctions-statemachine-properties"></a>
@@ -43,7 +43,7 @@ The Amazon States Language definition of the state machine\. For more informatio
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`RoleArn`  <a name="cfn-stepfunctions-statemachine-rolearn"></a>
+`RoleARN`  <a name="cfn-stepfunctions-statemachine-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role to use for this state machine\.  
 *Required*: Yes  
 *Type*: String  
@@ -108,7 +108,7 @@ The following examples create a Step Functions state machine\.
          "Properties" : {
             "StateMachineName" : "HelloWorld-StateMachine",
             "DefinitionString" : "{\"StartAt\": \"HelloWorld\", \"States\": {\"HelloWorld\": {\"Type\": \"Task\", \"Resource\": \"arn:aws:lambda:us-east-1:111122223333:function:HelloFunction\", \"End\": true}}}",
-            "RoleArn" : "arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1"
+            "RoleARN" : "arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1"
          }
       }
    }
@@ -143,7 +143,7 @@ The following examples create a Step Functions state machine\.
                       ]
                    ]
                 },
-   	      "RoleArn" : "arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1"
+   	      "RoleARN" : "arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1"
             }
         }
     }
@@ -171,5 +171,5 @@ Resources:
             }
           }
         }
-      RoleArn: arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1
+      RoleARN: arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1
 ```

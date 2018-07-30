@@ -123,7 +123,7 @@ The following example creates a ConfigurationAggregator for an organization\.
     "Type": "AWS::Config::ConfigurationAggregator",
     "Properties": {
       "OrganizationAggregationSource": {
-        "RoleArn": "arn:aws:iam::012345678912:role/aws-service-role/organizations.amazonaws.com/AWSServiceRoleForOrganizations",
+        "RoleARN": "arn:aws:iam::012345678912:role/aws-service-role/organizations.amazonaws.com/AWSServiceRoleForOrganizations",
         "AwsRegions": [
           "us-west-2",
           "us-east-1"
@@ -142,7 +142,7 @@ ConfigurationAggregator:
     Type: "AWS::Config::ConfigurationAggregator"
     Properties: 
       OrganizationAggregationSource: 
-        RoleArn: "arn:aws:iam::012345678912:role/aws-service-role/organizations.amazonaws.com/AWSServiceRoleForOrganizations"
+        RoleARN: "arn:aws:iam::012345678912:role/aws-service-role/organizations.amazonaws.com/AWSServiceRoleForOrganizations"
         AwsRegions:
           - "us-west-2"
           - "us-east-1"

@@ -9,7 +9,7 @@
 ```
 {
   "[AlarmName](#cfn-iot-topicrule-cloudwatchalarmaction-alarmname)": String,
-  "[RoleArn](#cfn-iot-topicrule-cloudwatchalarmaction-rolearn)": String,
+  "[RoleARN](#cfn-iot-topicrule-cloudwatchalarmaction-rolearn)": String,
   "[StateReason](#cfn-iot-topicrule-cloudwatchalarmaction-statereason)": String,
   "[StateValue](#cfn-iot-topicrule-cloudwatchalarmaction-statevalue)": String
 }
@@ -19,7 +19,7 @@
 
 ```
 [AlarmName](#cfn-iot-topicrule-cloudwatchalarmaction-alarmname): String
-[RoleArn](#cfn-iot-topicrule-cloudwatchalarmaction-rolearn): String
+[RoleARN](#cfn-iot-topicrule-cloudwatchalarmaction-rolearn): String
 [StateReason](#cfn-iot-topicrule-cloudwatchalarmaction-statereason): String
 [StateValue](#cfn-iot-topicrule-cloudwatchalarmaction-statevalue): String
 ```
@@ -31,7 +31,7 @@ The CloudWatch alarm name\.
 *Required*: Yes  
 *Type*: String
 
-`RoleArn`  <a name="cfn-iot-topicrule-cloudwatchalarmaction-rolearn"></a>
+`RoleARN`  <a name="cfn-iot-topicrule-cloudwatchalarmaction-rolearn"></a>
 The IAM role that allows access to the CloudWatch alarm\.  
 *Required*: Yes  
 *Type*: String

@@ -8,7 +8,7 @@
 
 ```
 {
-  "[RoleArn](#cfn-cognito-identitypool-cognitostreams-rolearn)" : String,
+  "[RoleARN](#cfn-cognito-identitypool-cognitostreams-rolearn)" : String,
   "[StreamingStatus](#cfn-cognito-identitypool-cognitostreams-streamingstatus)" : String,
   "[StreamName](#cfn-cognito-identitypool-cognitostreams-streamname)" : String
 }
@@ -17,14 +17,14 @@
 ### YAML<a name="aws-properties-cognito-identitypool-cognitostreams-syntax.yaml"></a>
 
 ```
-[RoleArn](#cfn-cognito-identitypool-cognitostreams-rolearn): String
+[RoleARN](#cfn-cognito-identitypool-cognitostreams-rolearn): String
 [StreamingStatus](#cfn-cognito-identitypool-cognitostreams-streamingstatus): String
 [StreamName](#cfn-cognito-identitypool-cognitostreams-streamname): String
 ```
 
 ## Properties<a name="aws-properties-cognito-identitypool-cognitostreams-properties"></a>
 
-`RoleArn`  <a name="cfn-cognito-identitypool-cognitostreams-rolearn"></a>
+`RoleARN`  <a name="cfn-cognito-identitypool-cognitostreams-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the role Amazon Cognito can assume to publish to the stream\. This role must grant access to Amazon Cognito \(cognito\-sync\) to invoke `PutRecord` on your Amazon Cognito stream\.  
 *Type*: String  
 *Required*: No

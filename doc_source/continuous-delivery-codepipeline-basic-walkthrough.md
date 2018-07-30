@@ -148,7 +148,7 @@ The source code is located in an S3 bucket and is identified by its filename\. Y
 
 In the `TestStage` stage, the pipeline creates the test stack, waits for approval, and then deletes the test stack\.
 
-For the `CreateStack` action, the pipeline uses the test configuration file and WordPress template to create the test stack\. Both files are contained in the `TemplateSource` input artifact, which is brought in from the source stage\. The snippet uses the `REPLACE_ON_FAILURE` action mode\. If stack creation fails, the pipeline replaces it so that you don't need to clean up or troubleshoot the stack before you can rerun the pipeline\. The action mode is useful for quickly iterating on test stacks\. For the `RoleArn` property, the value is an AWS CloudFormation service role that is declared elsewhere in the template\.
+For the `CreateStack` action, the pipeline uses the test configuration file and WordPress template to create the test stack\. Both files are contained in the `TemplateSource` input artifact, which is brought in from the source stage\. The snippet uses the `REPLACE_ON_FAILURE` action mode\. If stack creation fails, the pipeline replaces it so that you don't need to clean up or troubleshoot the stack before you can rerun the pipeline\. The action mode is useful for quickly iterating on test stacks\. For the `RoleARN` property, the value is an AWS CloudFormation service role that is declared elsewhere in the template\.
 
 The `ApproveTestStack` action pauses the pipeline and sends a notification to the email address that you specified when you created the pipeline stack\. While the pipeline is paused, you can check the WordPress test stack and its resources\. Use AWS CodePipeline to [approve or reject](http://docs.aws.amazon.com/codepipeline/latest/userguide/approvals-approve-or-reject.html) this action\. The `CustomData` property includes a description of the action you're approving, which the pipeline adds to the notification email\.
 
@@ -167,7 +167,7 @@ After you approve this action, AWS CodePipeline moves to the `DeleteTestStack` a
         - Name: TemplateSource
       Configuration:
         ActionMode: REPLACE_ON_FAILURE
-        RoleArn: !GetAtt [CFNRole, Arn]
+        RoleARN: !GetAtt [CFNRole, ARN]
         StackName: !Ref TestStackName
         TemplateConfiguration: !Sub "TemplateSource::${TestStackConfig}"
         TemplatePath: !Sub "TemplateSource::${TemplateFileName}"
@@ -179,7 +179,7 @@ After you approve this action, AWS CodePipeline moves to the `DeleteTestStack` a
         Provider: Manual
         Version: '1'
       Configuration:
-        NotificationArn: !Ref CodePipelineSNSTopic
+        NotificationARN: !Ref CodePipelineSNSTopic
         CustomData: !Sub 'Do you want to create a change set against the production stack and delete the ${TestStackName} stack?'
       RunOrder: '2'
     - Name: DeleteTestStack
@@ -190,7 +190,7 @@ After you approve this action, AWS CodePipeline moves to the `DeleteTestStack` a
         Version: '1'
       Configuration:
         ActionMode: DELETE_ONLY
-        RoleArn: !GetAtt [CFNRole, Arn]
+        RoleARN: !GetAtt [CFNRole, ARN]
         StackName: !Ref TestStackName
       RunOrder: '3'
 ```
@@ -218,7 +218,7 @@ After you approve this action, the `ExecuteChangeSet` action executes the change
         - Name: TemplateSource
       Configuration:
         ActionMode: CHANGE_SET_REPLACE
-        RoleArn: !GetAtt [CFNRole, Arn]
+        RoleARN: !GetAtt [CFNRole, ARN]
         StackName: !Ref ProdStackName
         ChangeSetName: !Ref ChangeSetName
         TemplateConfiguration: !Sub "TemplateSource::${ProdStackConfig}"
@@ -231,7 +231,7 @@ After you approve this action, the `ExecuteChangeSet` action executes the change
         Provider: Manual
         Version: '1'
       Configuration:
-        NotificationArn: !Ref CodePipelineSNSTopic
+        NotificationARN: !Ref CodePipelineSNSTopic
         CustomData: !Sub 'A new change set was created for the ${ProdStackName} stack. Do you want to implement the changes?'
       RunOrder: '2'
     - Name: ExecuteChangeSet
@@ -243,7 +243,7 @@ After you approve this action, the `ExecuteChangeSet` action executes the change
       Configuration:
         ActionMode: CHANGE_SET_EXECUTE
         ChangeSetName: !Ref ChangeSetName
-        RoleArn: !GetAtt [CFNRole, Arn]
+        RoleARN: !GetAtt [CFNRole, ARN]
         StackName: !Ref ProdStackName
       RunOrder: '3'
 ```

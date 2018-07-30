@@ -9,7 +9,7 @@
 ```
 {
   "[QueueUrl](#cfn-iot-topicrule-sqsaction-queueurl)": String,
-  "[RoleArn](#cfn-iot-topicrule-sqsaction-rolearn)": String,
+  "[RoleARN](#cfn-iot-topicrule-sqsaction-rolearn)": String,
   "[UseBase64](#cfn-iot-topicrule-sqsaction-usebase64)": Boolean
 }
 ```
@@ -18,7 +18,7 @@
 
 ```
 [QueueUrl](#cfn-iot-topicrule-sqsaction-queueurl): String
-[RoleArn](#cfn-iot-topicrule-sqsaction-rolearn): String
+[RoleARN](#cfn-iot-topicrule-sqsaction-rolearn): String
 [UseBase64](#cfn-iot-topicrule-sqsaction-usebase64): Boolean
 ```
 
@@ -29,7 +29,7 @@ The URL of the Amazon Simple Queue Service \(Amazon SQS\) queue\.
 *Required*: Yes  
 *Type*: String
 
-`RoleArn`  <a name="cfn-iot-topicrule-sqsaction-rolearn"></a>
+`RoleARN`  <a name="cfn-iot-topicrule-sqsaction-rolearn"></a>
 The ARN of the IAM role that grants access to Amazon SQS\.  
 *Required*: Yes  
 *Type*: String

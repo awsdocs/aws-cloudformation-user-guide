@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[AllAwsRegions](#cfn-config-configurationaggregator-organizationaggregationsource-allawsregions)" : Boolean,
   "[AwsRegions](#cfn-config-configurationaggregator-organizationaggregationsource-awsregions)" : [ String, ... ],
-  "[RoleArn](#cfn-config-configurationaggregator-organizationaggregationsource-rolearn)" : String
+  "[RoleARN](#cfn-config-configurationaggregator-organizationaggregationsource-rolearn)" : String
 }
 ```
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [AllAwsRegions](#cfn-config-configurationaggregator-organizationaggregationsource-allawsregions): Boolean
 [AwsRegions](#cfn-config-configurationaggregator-organizationaggregationsource-awsregions): 
   - String
-[RoleArn](#cfn-config-configurationaggregator-organizationaggregationsource-rolearn): 
+[RoleARN](#cfn-config-configurationaggregator-organizationaggregationsource-rolearn): 
   String
 ```
 
@@ -42,7 +42,7 @@ The source regions being aggregated\.
  *Type*: List of String values  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`RoleArn`  <a name="cfn-config-configurationaggregator-organizationaggregationsource-rolearn"></a>
+`RoleARN`  <a name="cfn-config-configurationaggregator-organizationaggregationsource-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role used to retreive AWS Organizations details associated with the aggregator account\.  
  *Required*: Yes  
  *Type*: String  

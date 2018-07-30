@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SSM::ResourceDataSync",
   "Properties" : {
-    "[KMSKeyArn](#cfn-ssm-resourcedatasync-kmskeyarn)" : String,
+    "[KMSKeyARN](#cfn-ssm-resourcedatasync-kmskeyarn)" : String,
     "[BucketName](#cfn-ssm-resourcedatasync-bucketname)" : String,
     "[BucketRegion](#cfn-ssm-resourcedatasync-bucketregion)" : String,
     "[SyncFormat](#cfn-ssm-resourcedatasync-syncformat)" : String,
@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::SSM::ResourceDataSync"
 Properties:
-  [KMSKeyArn](#cfn-ssm-resourcedatasync-kmskeyarn): String
+  [KMSKeyARN](#cfn-ssm-resourcedatasync-kmskeyarn): String
   [BucketName](#cfn-ssm-resourcedatasync-bucketname): String
   [BucketRegion](#cfn-ssm-resourcedatasync-bucketregion): String
   [SyncFormat](#cfn-ssm-resourcedatasync-syncformat): String
@@ -43,7 +43,7 @@ Properties:
 
 ## Properties<a name="aws-resource-ssm-resourcedatasync-properties"></a>
 
-`KMSKeyArn`  <a name="cfn-ssm-resourcedatasync-kmskeyarn"></a>
+`KMSKeyARN`  <a name="cfn-ssm-resourcedatasync-kmskeyarn"></a>
 The ARN of an encryption key for a destination in Amazon S3\. You can use a KMS key to encrypt inventory data in Amazon S3\. You must specify a key that exist in the same region as the destination Amazon S3 bucket\.  
  *Required*: No  
  *Type*: String  

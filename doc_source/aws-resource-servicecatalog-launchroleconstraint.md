@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[AcceptLanguage](#cfn-servicecatalog-launchroleconstraint-acceptlanguage)" : String,
     "[PortfolioId](#cfn-servicecatalog-launchroleconstraint-portfolioid)" : String,
     "[ProductId](#cfn-servicecatalog-launchroleconstraint-productid)" : String,
-    "[RoleArn](#cfn-servicecatalog-launchroleconstraint-rolearn)" : String
+    "[RoleARN](#cfn-servicecatalog-launchroleconstraint-rolearn)" : String
   }
 }
 ```
@@ -35,7 +35,7 @@ Properties:
   [AcceptLanguage](#cfn-servicecatalog-launchroleconstraint-acceptlanguage): String
   [PortfolioId](#cfn-servicecatalog-launchroleconstraint-portfolioid): String
   [ProductId](#cfn-servicecatalog-launchroleconstraint-productid): String
-  [RoleArn](#cfn-servicecatalog-launchroleconstraint-rolearn): String
+  [RoleARN](#cfn-servicecatalog-launchroleconstraint-rolearn): String
 ```
 
 ## Properties<a name="aws-resource-servicecatalog-launchroleconstraint-properties"></a>
@@ -64,7 +64,7 @@ The product identifier\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`RoleArn`  <a name="cfn-servicecatalog-launchroleconstraint-rolearn"></a>
+`RoleARN`  <a name="cfn-servicecatalog-launchroleconstraint-rolearn"></a>
 The ARN of the launch role\.  
 *Required*: Yes  
 *Type*: String  

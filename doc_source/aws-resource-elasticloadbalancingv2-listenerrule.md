@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
     "[Actions](#cfn-elasticloadbalancingv2-listenerrule-actions)" : [ [Actions](aws-properties-elasticloadbalancingv2-listenerrule-actions.md), ... ],
     "[Conditions](#cfn-elasticloadbalancingv2-listenerrule-conditions)" : [ [Conditions](aws-properties-elasticloadbalancingv2-listenerrule-conditions.md), ... ],
-    "[ListenerArn](#cfn-elasticloadbalancingv2-listenerrule-listenerarn)" : String,
+    "[ListenerARN](#cfn-elasticloadbalancingv2-listenerrule-listenerarn)" : String,
     "[Priority](#cfn-elasticloadbalancingv2-listenerrule-priority)" : Integer
   }
 }
@@ -35,7 +35,7 @@ Properties:
     - [Actions](aws-properties-elasticloadbalancingv2-listenerrule-actions.md)
   [Conditions](#cfn-elasticloadbalancingv2-listenerrule-conditions):
     - [Conditions](aws-properties-elasticloadbalancingv2-listenerrule-conditions.md)
-  [ListenerArn](#cfn-elasticloadbalancingv2-listenerrule-listenerarn): String
+  [ListenerARN](#cfn-elasticloadbalancingv2-listenerrule-listenerarn): String
   [Priority](#cfn-elasticloadbalancingv2-listenerrule-priority): Integer
 ```
 
@@ -53,7 +53,7 @@ The conditions under which a rule takes effect\.
 *Type*: List of [Elastic Load Balancing ListenerRule Conditions](aws-properties-elasticloadbalancingv2-listenerrule-conditions.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ListenerArn`  <a name="cfn-elasticloadbalancingv2-listenerrule-listenerarn"></a>
+`ListenerARN`  <a name="cfn-elasticloadbalancingv2-listenerrule-listenerarn"></a>
 The Amazon Resource Name \(ARN\) of the listener that the rule applies to\.  
 *Required*: Yes  
 *Type*: String  
@@ -87,13 +87,13 @@ The following example creates a rule that forwards requests to the `TargetGroup`
   "Properties": {
     "Actions": [{
       "Type": "forward",
-      "TargetGroupArn": { "Ref": "TargetGroup" }
+      "TargetGroupARN": { "Ref": "TargetGroup" }
     }],
     "Conditions": [{
       "Field": "path-pattern",
       "Values": [ "/img/*" ]
     }],
-    "ListenerArn": { "Ref": "Listener" },
+    "ListenerARN": { "Ref": "Listener" },
     "Priority": 1
   }
 }
@@ -107,13 +107,13 @@ ListenerRule:
   Properties:
     Actions:
     - Type: forward
-      TargetGroupArn:
+      TargetGroupARN:
         Ref: TargetGroup
     Conditions:
     - Field: path-pattern
       Values:
       - "/img/*"
-    ListenerArn:
+    ListenerARN:
       Ref: Listener
     Priority: 1
 ```

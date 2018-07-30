@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-beanstalk-environment-description)" :  String,
       "[EnvironmentName](#cfn-beanstalk-environment-name)" :  String,
       "[OptionSettings](#cfn-beanstalk-environment-optionsettings)" : [ OptionSetting, ... ],
-      "[PlatformArn](#cfn-beanstalk-environment-platformarn)" : String,
+      "[PlatformARN](#cfn-beanstalk-environment-platformarn)" : String,
       "[SolutionStackName](#cfn-beanstalk-environment-solutionstackname)" : String,
       "[Tags](#cfn-beanstalk-environment-tags)" : [ Resource Tag, ... ],
       "[TemplateName](#cfn-beanstalk-environment-templatename)" : String,
@@ -45,7 +45,7 @@ Properties:
   [EnvironmentName](#cfn-beanstalk-environment-name): String
   [OptionSettings](#cfn-beanstalk-environment-optionsettings): 
     - OptionSetting
-  [PlatformArn](#cfn-beanstalk-environment-platformarn): String
+  [PlatformARN](#cfn-beanstalk-environment-platformarn): String
   [SolutionStackName](#cfn-beanstalk-environment-solutionstackname): String
   [Tags](#cfn-beanstalk-environment-tags):
     - Resource Tag, ...
@@ -90,17 +90,17 @@ Key\-value pairs defining configuration options for this environment, such as th
 *Type*: List of [Elastic Beanstalk Environment OptionSetting](aws-properties-beanstalk-option-settings.md)  
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
-`PlatformArn`  <a name="cfn-beanstalk-environment-platformarn"></a>
+`PlatformARN`  <a name="cfn-beanstalk-environment-platformarn"></a>
 The Amazon Resource Name \(ARN\) of the custom platform to use with the environment\. For more information, see [ Custom Platforms](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/custom-platforms.html) in the *AWS Elastic Beanstalk Developer Guide*\.  
-If you specify `PlatformArn`, then don't specify `SolutionStackName`\.
+If you specify `PlatformARN`, then don't specify `SolutionStackName`\.
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)   
-*Example*: `"PlatformArn": "arn:aws:elasticbeanstalk:us-east-1::platform/PHP 5.4 running on 64bit Amazon Linux/2.4.4"`
+*Example*: `"PlatformARN": "arn:aws:elasticbeanstalk:us-east-1::platform/PHP 5.4 running on 64bit Amazon Linux/2.4.4"`
 
 `SolutionStackName`  <a name="cfn-beanstalk-environment-solutionstackname"></a>
 The name of an Elastic Beanstalk solution stack that this configuration will use\. For more information, see [Supported Platforms](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html) in the *AWS Elastic Beanstalk Developer Guide*\.  
-If you specify `SolutionStackName`, then don't specify `PlatformArn` or `TemplateName`\.
+If you specify `SolutionStackName`, then don't specify `PlatformARN` or `TemplateName`\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -224,7 +224,7 @@ Properties:
 
 ### Custom or Supported Platform<a name="aws-resource-elasticbeanstalk-environment-example3"></a>
 
-The following example contains parameters that enable specifying `PlatformArn` for a custom platform or `SolutionStackName` for a supported platform when creating the stack\.
+The following example contains parameters that enable specifying `PlatformARN` for a custom platform or `SolutionStackName` for a supported platform when creating the stack\.
 
 #### JSON<a name="aws-resource-elasticbeanstalk-environment-example3.json"></a>
 
@@ -245,7 +245,7 @@ The following example contains parameters that enable specifying `PlatformArn` f
     "SolutionStackName": {
       "Type": "String"
     },
-    "PlatformArn": {
+    "PlatformARN": {
       "Type": "String"
     }
   },
@@ -274,7 +274,7 @@ The following example contains parameters that enable specifying `PlatformArn` f
           "Ref": "Application"
         },
         "Description": "AWS Elastic Beanstalk Environment running Python Sample Application",
-        "PlatformArn": { "Ref" : "PlatformArn"},
+        "PlatformARN": { "Ref" : "PlatformARN"},
         "SolutionStackName": {
           "Ref": "SolutionStackName"
         },
@@ -554,7 +554,7 @@ Parameters:
     Type: String
   SolutionStackName:
     Type: String
-  PlatformArn:
+  PlatformARN:
     Type: String
 Resources:
   Application:
@@ -574,7 +574,7 @@ Resources:
     Properties:
       ApplicationName: !Ref Application
       Description: AWS Elastic Beanstalk Environment running Python Sample Application
-      PlatformArn: !Ref PlatformArn
+      PlatformARN: !Ref PlatformARN
       SolutionStackName: !Ref SolutionStackName
       VersionLabel: Initial Version
       OptionSettings:

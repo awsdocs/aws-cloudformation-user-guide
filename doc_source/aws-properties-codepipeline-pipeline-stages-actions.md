@@ -13,7 +13,7 @@
   "[InputArtifacts](#cfn-codepipeline-pipeline-stages-actions-inputartifacts)" : [ InputArtifacts, ... ],
   "[Name](#cfn-codepipeline-pipeline-stages-actions-name)" : String,
   "[OutputArtifacts](#cfn-codepipeline-pipeline-stages-actions-outputartifacts)" : [ OutputArtifacts, ... ],
-  "[RoleArn](#cfn-codepipeline-pipeline-stages-actions-rolearn)" : String,
+  "[RoleARN](#cfn-codepipeline-pipeline-stages-actions-rolearn)" : String,
   "[RunOrder](#cfn-codepipeline-pipeline-stages-actions-runorder)" : Integer
 }
 ```
@@ -30,7 +30,7 @@
 [Name](#cfn-codepipeline-pipeline-stages-actions-name): String
 [OutputArtifacts](#cfn-codepipeline-pipeline-stages-actions-outputartifacts):
   - OutputArtifacts
-[RoleArn](#cfn-codepipeline-pipeline-stages-actions-rolearn): String
+[RoleARN](#cfn-codepipeline-pipeline-stages-actions-rolearn): String
 [RunOrder](#cfn-codepipeline-pipeline-stages-actions-runorder): Integer
 ```
 
@@ -61,7 +61,7 @@ The artifact name or ID that is a result of the action, such as a test or build 
 *Required*: No  
 *Type*: List of [AWS CodePipeline Pipeline Stages Actions OutputArtifacts](aws-properties-codepipeline-pipeline-stages-actions-outputartifacts.md)
 
-`RoleArn`  <a name="cfn-codepipeline-pipeline-stages-actions-rolearn"></a>
+`RoleARN`  <a name="cfn-codepipeline-pipeline-stages-actions-rolearn"></a>
 The Amazon Resource Name \(ARN\) of a service role that the action uses\. The pipeline's role assumes this role\.  
 *Required*: No  
 *Type*: String

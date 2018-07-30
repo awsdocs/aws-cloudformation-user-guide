@@ -9,7 +9,7 @@
 ```
 {
   "[DeliveryStreamName](#cfn-iot-topicrule-firehoseaction-deliverystreamname)": String,
-  "[RoleArn](#cfn-iot-topicrule-firehoseaction-rolearn)": String,
+  "[RoleARN](#cfn-iot-topicrule-firehoseaction-rolearn)": String,
   "[Separator](#cfn-iot-topicrule-firehoseaction-separator)": String
 }
 ```
@@ -18,7 +18,7 @@
 
 ```
 [DeliveryStreamName](#cfn-iot-topicrule-firehoseaction-deliverystreamname): String
-[RoleArn](#cfn-iot-topicrule-firehoseaction-rolearn): String
+[RoleARN](#cfn-iot-topicrule-firehoseaction-rolearn): String
 [Separator](#cfn-iot-topicrule-firehoseaction-separator): String
 ```
 
@@ -29,7 +29,7 @@ The delivery stream name\.
 *Required*: Yes  
 *Type*: String
 
-`RoleArn`  <a name="cfn-iot-topicrule-firehoseaction-rolearn"></a>
+`RoleARN`  <a name="cfn-iot-topicrule-firehoseaction-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role that grants access to the Kinesis Data Firehose stream\.  
 *Required*: Yes  
 *Type*: String

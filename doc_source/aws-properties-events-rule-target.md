@@ -10,14 +10,14 @@ The `Targets` property of the [AWS::Events::Rule](aws-resource-events-rule.md) r
 
 ```
 {
-  "[Arn](#cfn-events-rule-target-arn)" : String,
+  "[ARN](#cfn-events-rule-target-arn)" : String,
   "[EcsParameters](#cfn-events-rule-target-ecsparameters)" : [*EcsParameters*](aws-properties-events-rule-ecsparameters.md),
   "[Id](#cfn-events-rule-target-id)" : String,
   "[Input](#cfn-events-rule-target-input)" : String,
   "[InputPath](#cfn-events-rule-target-inputpath)" : String,
   "[InputTransformer](#cfn-events-rule-target-inputtransformer)" : [*InputTransformer*](aws-properties-events-rule-inputtransformer.md),
   "[KinesisParameters](#cfn-events-rule-target-kinesisparameters)" : [*KinesisParameters*](aws-properties-events-rule-kinesisparameters.md),
-  "[RoleArn](#cfn-events-rule-target-rolearn)" : String,
+  "[RoleARN](#cfn-events-rule-target-rolearn)" : String,
   "[RunCommandParameters](#cfn-events-rule-target-runcommandparameters)" : [*RunCommandParameters*](aws-properties-events-rule-runcommandparameters.md)
 }
 ```
@@ -25,7 +25,7 @@ The `Targets` property of the [AWS::Events::Rule](aws-resource-events-rule.md) r
 ### YAML<a name="aws-properties-events-rule-target-syntax.yaml"></a>
 
 ```
-[Arn](#cfn-events-rule-target-arn): String
+[ARN](#cfn-events-rule-target-arn): String
 [EcsParameters](#cfn-events-rule-target-ecsparameters):
   [*EcsParameters*](aws-properties-events-rule-ecsparameters.md)
 [Id](#cfn-events-rule-target-id): String
@@ -35,7 +35,7 @@ The `Targets` property of the [AWS::Events::Rule](aws-resource-events-rule.md) r
   [*InputTransformer*](aws-properties-events-rule-inputtransformer.md)
 [KinesisParameters](#cfn-events-rule-target-kinesisparameters):
   [*KinesisParameters*](aws-properties-events-rule-kinesisparameters.md)
-[RoleArn](#cfn-events-rule-target-rolearn): String
+[RoleARN](#cfn-events-rule-target-rolearn): String
 [RunCommandParameters](#cfn-events-rule-target-runcommandparameters):
   [*RunCommandParameters*](aws-properties-events-rule-runcommandparameters.md)
 ```
@@ -45,7 +45,7 @@ The `Targets` property of the [AWS::Events::Rule](aws-resource-events-rule.md) r
 **Note**  
 For more information about each property, including constraints and valid values, see [Amazon CloudWatch Events Rule Target](http://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_Target.html) in the *Amazon CloudWatch Events API Reference*\.
 
-`Arn`  <a name="cfn-events-rule-target-arn"></a>
+`ARN`  <a name="cfn-events-rule-target-arn"></a>
 The Amazon Resource Name \(ARN\) of the target\.  
 *Required*: Yes  
 *Type*: String
@@ -80,7 +80,7 @@ Settings that control shard assignment, when the target is a Kinesis stream\. If
  *Required*: No  
  *Type*: [CloudWatch Events Rule KinesisParameters](aws-properties-events-rule-kinesisparameters.md)
 
-`RoleArn`  <a name="cfn-events-rule-target-rolearn"></a>
+`RoleARN`  <a name="cfn-events-rule-target-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) role to use for this target when the rule is triggered\. If one rule triggers multiple targets, you can use a different IAM role for each target\.  
 CloudWatch Events needs appropriate permissions to make API calls against the resources you own\. For Kinesis streams, CloudWatch Events relies on IAM roles\. For Lambda, Amazon SNS, and Amazon SQS resources, CloudWatch Events relies on resource\-based policies\. For more information, see [ Using Resource\-Based Policies for CloudWatch Events](http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/resource-based-policies-cwe.html) in the *Amazon CloudWatch User Guide*\.
 *Required*: No  
@@ -111,27 +111,27 @@ The following snippet creates a Kinesis stream target\.
                 "aws.ec2"
             ]
         },
-        "RoleArn": {
+        "RoleARN": {
             "Fn::GetAtt": [
                 "EventsInvokeKinesisTargetRole",
-                "Arn"
+                "ARN"
             ]
         },
         "ScheduleExpression": "rate(5 minutes)",
         "State": "ENABLED",
         "Targets": [
             {
-                "Arn": {
+                "ARN": {
                     "Fn::GetAtt": [
                         "MyFirstStream",
-                        "Arn"
+                        "ARN"
                     ]
                 },
                 "Id": "Id123",
-                "RoleArn": {
+                "RoleARN": {
                     "Fn::GetAtt": [
                         "EventsInvokeKinesisTargetRole",
-                        "Arn"
+                        "ARN"
                     ]
                 },
                 "KinesisParameters": {
@@ -153,19 +153,19 @@ MyEventsRule:
     EventPattern:
       source:
         - aws.ec2
-    RoleArn: !GetAtt 
+    RoleARN: !GetAtt 
       - EventsInvokeKinesisTargetRole
-      - Arn
+      - ARN
     ScheduleExpression: rate(5 minutes)
     State: ENABLED
     Targets:
-      - Arn: !GetAtt 
+      - ARN: !GetAtt 
           - MyFirstStream
-          - Arn
+          - ARN
         Id: Id123
-        RoleArn: !GetAtt 
+        RoleARN: !GetAtt 
           - EventsInvokeKinesisTargetRole
-          - Arn
+          - ARN
         KinesisParameters:
           PartitionKeyPath: $
 ```
@@ -198,22 +198,22 @@ The following snippet creates an Amazon ECS task target\.
       "State": "DISABLED",
       "Targets": [
           {
-              "Arn": {
+              "ARN": {
                   "Fn::GetAtt": [
                       "MyCluster",
-                      "Arn"
+                      "ARN"
                   ]
               },
-              "RoleArn": {
+              "RoleARN": {
                   "Fn::GetAtt": [
                       "ECSTaskRole",
-                      "Arn"
+                      "ARN"
                   ]
               },
               "Id": "Id345",
               "EcsParameters": {
                   "TaskCount": 1,
-                  "TaskDefinitionArn": {
+                  "TaskDefinitionARN": {
                       "Ref": "MyECSTask"
                   }
               }
@@ -241,14 +241,14 @@ MyEventsRule:
     ScheduleExpression: rate(15 minutes)
     State: DISABLED
     Targets:
-      - Arn: !GetAtt 
+      - ARN: !GetAtt 
           - MyCluster
-          - Arn
-        RoleArn: !GetAtt 
+          - ARN
+        RoleARN: !GetAtt 
           - ECSTaskRole
-          - Arn
+          - ARN
         Id: Id345
         EcsParameters:
           TaskCount: 1
-          TaskDefinitionArn: !Ref MyECSTask
+          TaskDefinitionARN: !Ref MyECSTask
 ```

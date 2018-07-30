@@ -62,10 +62,10 @@ The following example creates deployment group with a `BLUE_GREEN` deployment ty
       "DeploymentType": "BLUE_GREEN",
       "DeploymentOption": "WITH_TRAFFIC_CONTROL"
     },
-    "ServiceRoleArn": {
+    "ServiceRoleARN": {
       "Fn::GetAtt": [
         "CodeDeployServiceRole",
-        "Arn"
+        "ARN"
       ]
     }
   }
@@ -83,7 +83,7 @@ CodeDeployDeploymentGroup:
     DeploymentStyle:
       DeploymentType: BLUE_GREEN
       DeploymentOption: WITH_TRAFFIC_CONTROL
-    ServiceRoleArn: !GetAtt CodeDeployServiceRole.Arn
+    ServiceRoleARN: !GetAtt CodeDeployServiceRole.ARN
 ```
 
 ## See Also<a name="aws-properties-codedeploy-deploymentgroup-deploymentstyle-seealso"></a>

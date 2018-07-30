@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Cloud9::EnvironmentEC2",
   "Properties" : {
     "[Repositories](#cfn-cloud9-environmentec2-repositories)" : [ [*Repository*](aws-properties-cloud9-environmentec2-repository.md), ... ],
-    "[OwnerArn](#cfn-cloud9-environmentec2-ownerarn)" : String,
+    "[OwnerARN](#cfn-cloud9-environmentec2-ownerarn)" : String,
     "[Description](#cfn-cloud9-environmentec2-description)" : String,
     "[AutomaticStopTimeMinutes](#cfn-cloud9-environmentec2-automaticstoptimeminutes)" : Integer,
     "[InstanceType](#cfn-cloud9-environmentec2-instancetype)" : String,
@@ -35,7 +35,7 @@ Type: "AWS::Cloud9::EnvironmentEC2"
 Properties:
   [Repositories](#cfn-cloud9-environmentec2-repositories): 
     - [*Repository*](aws-properties-cloud9-environmentec2-repository.md)
-  [OwnerArn](#cfn-cloud9-environmentec2-ownerarn): String
+  [OwnerARN](#cfn-cloud9-environmentec2-ownerarn): String
   [Description](#cfn-cloud9-environmentec2-description): String
   [AutomaticStopTimeMinutes](#cfn-cloud9-environmentec2-automaticstoptimeminutes): Integer
   [InstanceType](#cfn-cloud9-environmentec2-instancetype): String
@@ -51,7 +51,7 @@ Any AWS CodeCommit source code repositories to be cloned into the development en
  *Type*: List of [AWS Cloud9 EnvironmentEC2 Repository](aws-properties-cloud9-environmentec2-repository.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`OwnerArn`  <a name="cfn-cloud9-environmentec2-ownerarn"></a>
+`OwnerARN`  <a name="cfn-cloud9-environmentec2-ownerarn"></a>
 The Amazon Resource Name \(ARN\) of the environment owner\. If this value is not specified, the ARN defaults to this environment's creator\.   
  *Required*: No  
  *Type*: String  
@@ -99,7 +99,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
-`Arn`  
+`ARN`  
 The Amazon Resource Name \(ARN\) of the development environment, such as `arn:aws:cloud9:us-east-2:123456789012:environment:2bc3642873c342e485f7e0c561234567`\. 
 
 `Name`  

@@ -86,9 +86,9 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ### Fn::GetAtt<a name="w3ab2c21c10d820c11b4"></a>
 
-`Fn::GetAtt` returns a value for the `Arn` attribute\.
+`Fn::GetAtt` returns a value for the `ARN` attribute\.
 
-`Arn`  
+`ARN`  
 The Amazon resource name \(ARN\) of the Kinesis stream, such as `arn:aws:kinesis:``us-east-2``:123456789012:stream/mystream`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.

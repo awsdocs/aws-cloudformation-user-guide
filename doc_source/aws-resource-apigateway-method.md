@@ -210,7 +210,7 @@ Use the [AWS::Lambda::Permission](aws-resource-lambda-permission.md) resource to
     "Integration": {
       "Type": "AWS_PROXY",
       "IntegrationHttpMethod": "POST",
-      "Uri": { "Fn::Sub":"arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${LambdaForSimpleProxy.Arn}/invocations"}
+      "Uri": { "Fn::Sub":"arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${LambdaForSimpleProxy.ARN}/invocations"}
     }
   }
 }
@@ -235,7 +235,7 @@ ProxyResourceANY:
     Integration:
       Type: AWS_PROXY
       IntegrationHttpMethod: POST
-      Uri: !Sub arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${LambdaForSimpleProxy.Arn}/invocations
+      Uri: !Sub arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${LambdaForSimpleProxy.ARN}/invocations
 ```
 
 ### Associated Request Validator<a name="aws-resource-apigateway-method-example3"></a>

@@ -140,7 +140,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
+`ARN`  
 Returns the Amazon Resource Name \(ARN\) of the queue\. For example: `arn:aws:sqs:``us-east-2``:123456789012:mystack-myqueue-15PG5C2FC1CW8`\.
 
 `QueueName`  
@@ -214,7 +214,7 @@ Returns the queue name\. For example:
     },
     "QueueARN" : {
       "Description" : "ARN of newly created SQS Queue",
-      "Value" : { "Fn::GetAtt" : ["MyQueue", "Arn"]}
+      "Value" : { "Fn::GetAtt" : ["MyQueue", "ARN"]}
     },
     "QueueName" : {
       "Description" : "Name newly created SQS Queue",
@@ -281,7 +281,7 @@ Outputs:
     Value: 
       Fn::GetAtt: 
         - "MyQueue"
-        - "Arn"
+        - "ARN"
   QueueName: 
     Description: "Name newly created SQS Queue"
     Value: 
@@ -305,7 +305,7 @@ The following sample creates a source queue and a dead letter queue\. Because th
       "Type" : "AWS::SQS::Queue",
       "Properties" : {
         "RedrivePolicy": {
-          "deadLetterTargetArn" : {"Fn::GetAtt" : [ "MyDeadLetterQueue" , "Arn" ]},
+          "deadLetterTargetARN" : {"Fn::GetAtt" : [ "MyDeadLetterQueue" , "ARN" ]},
           "maxReceiveCount" : 5
         }
       }
@@ -322,7 +322,7 @@ The following sample creates a source queue and a dead letter queue\. Because th
     },
     "SourceQueueARN" : {
       "Description" : "ARN of the source queue",
-      "Value" : { "Fn::GetAtt" : ["MySourceQueue", "Arn"]}
+      "Value" : { "Fn::GetAtt" : ["MySourceQueue", "ARN"]}
     },
     "DeadLetterQueueURL" : {
       "Description" : "URL of the dead letter queue",
@@ -330,7 +330,7 @@ The following sample creates a source queue and a dead letter queue\. Because th
     },
     "DeadLetterQueueARN" : {
       "Description" : "ARN of the dead letter queue",
-      "Value" : { "Fn::GetAtt" : ["MyDeadLetterQueue", "Arn"]}
+      "Value" : { "Fn::GetAtt" : ["MyDeadLetterQueue", "ARN"]}
     }    
   }
 }
@@ -345,10 +345,10 @@ Resources:
     Type: "AWS::SQS::Queue"
     Properties: 
       RedrivePolicy: 
-        deadLetterTargetArn: 
+        deadLetterTargetARN: 
           Fn::GetAtt: 
             - "MyDeadLetterQueue"
-            - "Arn"
+            - "ARN"
         maxReceiveCount: 5
   MyDeadLetterQueue: 
     Type: "AWS::SQS::Queue"
@@ -362,7 +362,7 @@ Outputs:
     Value: 
       Fn::GetAtt: 
         - "MySourceQueue"
-        - "Arn"
+        - "ARN"
   DeadLetterQueueURL: 
     Description: "URL of the dead letter queue"
     Value: 
@@ -372,7 +372,7 @@ Outputs:
     Value: 
       Fn::GetAtt: 
         - "MyDeadLetterQueue"
-        - "Arn"
+        - "ARN"
 ```
 
 ## See Also<a name="w3ab2c21c10e1138c17"></a>

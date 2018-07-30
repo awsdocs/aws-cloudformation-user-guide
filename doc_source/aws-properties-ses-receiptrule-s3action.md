@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[BucketName](#cfn-ses-receiptrule-s3action-bucketname)" : String,
-  "[KmsKeyArn](#cfn-ses-receiptrule-s3action-kmskeyarn)" : String,
-  "[TopicArn](#cfn-ses-receiptrule-s3action-topicarn)" : String,
+  "[KmsKeyARN](#cfn-ses-receiptrule-s3action-kmskeyarn)" : String,
+  "[TopicARN](#cfn-ses-receiptrule-s3action-topicarn)" : String,
   "[ObjectKeyPrefix](#cfn-ses-receiptrule-s3action-objectkeyprefix)" : String
 }
 ```
@@ -30,8 +30,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 [BucketName](#cfn-ses-receiptrule-s3action-bucketname): String
-[KmsKeyArn](#cfn-ses-receiptrule-s3action-kmskeyarn): String
-[TopicArn](#cfn-ses-receiptrule-s3action-topicarn): String
+[KmsKeyARN](#cfn-ses-receiptrule-s3action-kmskeyarn): String
+[TopicARN](#cfn-ses-receiptrule-s3action-topicarn): String
 [ObjectKeyPrefix](#cfn-ses-receiptrule-s3action-objectkeyprefix): String
 ```
 
@@ -43,7 +43,7 @@ The name of the Amazon S3 bucket that incoming email will be saved to\.
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`KmsKeyArn`  <a name="cfn-ses-receiptrule-s3action-kmskeyarn"></a>
+`KmsKeyARN`  <a name="cfn-ses-receiptrule-s3action-kmskeyarn"></a>
 The customer master key that Amazon SES should use to encrypt your emails before saving them to the Amazon S3 bucket\. You can use the default master key or a custom master key you created in AWS KMS as follows:  
 + To use the default master key, provide an ARN in the form of `arn:aws:kms:REGION:ACCOUNT-ID-WITHOUT-HYPHENS:alias/aws/ses`\. For example, if your AWS account ID is `123456789012` and you want to use the default master key in the US West \(Oregon\) region, the ARN of the default master key would be `arn:aws:kms:us-west-2:123456789012:alias/aws/ses`\. If you use the default master key, you don't need to perform any extra steps to give Amazon SES permission to use the key\.
 + To use a custom master key you created in AWS KMS, provide the ARN of the master key and ensure that you add a statement to your key's policy to give Amazon SES permission to use it\. For more information about giving permissions, see [Giving Permissions to Amazon SES for Email Receiving](url-ses-dev;receiving-email-permissions.html) in the *Amazon Simple Email Service Developer Guide*\.
@@ -59,7 +59,7 @@ The key prefix of the Amazon S3 bucket\. The key prefix is similar to a director
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`TopicArn`  <a name="cfn-ses-receiptrule-s3action-topicarn"></a>
+`TopicARN`  <a name="cfn-ses-receiptrule-s3action-topicarn"></a>
 The ARN of the Amazon SNS topic to notify when the message is saved to the Amazon S3 bucket\. An example of an Amazon SNS topic ARN is `arn:aws:sns:us-west-2:123456789012:MyTopic`\.  
  *Required*: No  
  *Type*: String  

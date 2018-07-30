@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Arn](#cfn-ec2-launchtemplate-iaminstanceprofile-arn)" : String,
+  "[ARN](#cfn-ec2-launchtemplate-iaminstanceprofile-arn)" : String,
   "[Name](#cfn-ec2-launchtemplate-iaminstanceprofile-name)" : String
 }
 ```
@@ -20,13 +20,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-iaminstanceprofile-syntax.yaml"></a>
 
 ```
-[Arn](#cfn-ec2-launchtemplate-iaminstanceprofile-arn): String
+[ARN](#cfn-ec2-launchtemplate-iaminstanceprofile-arn): String
 [Name](#cfn-ec2-launchtemplate-iaminstanceprofile-name): String
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-iaminstanceprofile-properties"></a>
 
-`Arn`  <a name="cfn-ec2-launchtemplate-iaminstanceprofile-arn"></a>
+`ARN`  <a name="cfn-ec2-launchtemplate-iaminstanceprofile-arn"></a>
 The Amazon Resource Name \(ARN\) of the instance profile\.  
  *Required*: No  
  *Type*: String  

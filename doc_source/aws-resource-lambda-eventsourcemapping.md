@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
     "[BatchSize](#cfn-lambda-eventsourcemapping-batchsize)" : Integer,
     "[Enabled](#cfn-lambda-eventsourcemapping-enabled)" : Boolean,
-    "[EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn)" : String,
+    "[EventSourceARN](#cfn-lambda-eventsourcemapping-eventsourcearn)" : String,
     "[FunctionName](#cfn-lambda-eventsourcemapping-functionname)" : String,
     "[StartingPosition](#cfn-lambda-eventsourcemapping-startingposition)" : String
   }
@@ -34,7 +34,7 @@ Type: "AWS::Lambda::EventSourceMapping"
 Properties: 
   [BatchSize](#cfn-lambda-eventsourcemapping-batchsize): Integer
   [Enabled](#cfn-lambda-eventsourcemapping-enabled): Boolean
-  [EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn): String
+  [EventSourceARN](#cfn-lambda-eventsourcemapping-eventsourcearn): String
   [FunctionName](#cfn-lambda-eventsourcemapping-functionname): String
   [StartingPosition](#cfn-lambda-eventsourcemapping-startingposition): String
 ```
@@ -53,7 +53,7 @@ Indicates whether Lambda begins polling the event source\.
 *Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`EventSourceArn`  <a name="cfn-lambda-eventsourcemapping-eventsourcearn"></a>
+`EventSourceARN`  <a name="cfn-lambda-eventsourcemapping-eventsourcearn"></a>
 The Amazon Resource Name \(ARN\) of the Kinesis or DynamoDB stream that is the source of events\. Any record added to this stream can invoke the Lambda function\. For more information, see [CreateEventSourceMapping](http://docs.aws.amazon.com/lambda/latest/dg/API_CreateEventSourceMapping.html) in the *AWS Lambda Developer Guide*\.  
 *Required*: Yes  
 *Type*: String  
@@ -89,8 +89,8 @@ The following example associates an Kinesis stream with a Lambda function\.
 "EventSourceMapping": {  
   "Type": "AWS::Lambda::EventSourceMapping",
   "Properties": {
-    "EventSourceArn" : { "Fn::Join" : [ "", [ "arn:aws:kinesis:", { "Ref" : "AWS::Region" }, ":", { "Ref" : "AWS::AccountId" }, ":stream/", { "Ref" : "KinesisStream" }] ] },
-    "FunctionName" : { "Fn::GetAtt" : ["LambdaFunction", "Arn"] },
+    "EventSourceARN" : { "Fn::Join" : [ "", [ "arn:aws:kinesis:", { "Ref" : "AWS::Region" }, ":", { "Ref" : "AWS::AccountId" }, ":stream/", { "Ref" : "KinesisStream" }] ] },
+    "FunctionName" : { "Fn::GetAtt" : ["LambdaFunction", "ARN"] },
     "StartingPosition" : "TRIM_HORIZON"
   }
 }
@@ -102,7 +102,7 @@ The following example associates an Kinesis stream with a Lambda function\.
 EventSourceMapping: 
   Type: "AWS::Lambda::EventSourceMapping"
   Properties: 
-    EventSourceArn: 
+    EventSourceARN: 
       Fn::Join: 
         - ""
         - 
@@ -118,6 +118,6 @@ EventSourceMapping:
     FunctionName: 
       Fn::GetAtt: 
         - "LambdaFunction"
-        - "Arn"
+        - "ARN"
     StartingPosition: "TRIM_HORIZON"
 ```

@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ServiceCatalog::LaunchNotificationConstraint",
   "Properties" : {
     "[Description](#cfn-servicecatalog-launchnotificationconstraint-description)" : String,
-    "[NotificationArns](#cfn-servicecatalog-launchnotificationconstraint-notificationarns)" : [ String, ... ],
+    "[NotificationARNs](#cfn-servicecatalog-launchnotificationconstraint-notificationarns)" : [ String, ... ],
     "[AcceptLanguage](#cfn-servicecatalog-launchnotificationconstraint-acceptlanguage)" : String,
     "[PortfolioId](#cfn-servicecatalog-launchnotificationconstraint-portfolioid)" : String,
     "[ProductId](#cfn-servicecatalog-launchnotificationconstraint-productid)" : String
@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: "AWS::ServiceCatalog::LaunchNotificationConstraint"
 Properties:
   [Description](#cfn-servicecatalog-launchnotificationconstraint-description): String
-  [NotificationArns](#cfn-servicecatalog-launchnotificationconstraint-notificationarns): 
+  [NotificationARNs](#cfn-servicecatalog-launchnotificationconstraint-notificationarns): 
     - String
   [AcceptLanguage](#cfn-servicecatalog-launchnotificationconstraint-acceptlanguage): String
   [PortfolioId](#cfn-servicecatalog-launchnotificationconstraint-portfolioid): String
@@ -53,7 +53,7 @@ The description of the constraint\.
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`NotificationArns`  <a name="cfn-servicecatalog-launchnotificationconstraint-notificationarns"></a>
+`NotificationARNs`  <a name="cfn-servicecatalog-launchnotificationconstraint-notificationarns"></a>
 The notification ARNs\.  
 *Required*: Yes  
 *Type*: List of String values  

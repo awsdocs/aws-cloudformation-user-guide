@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[Description](#cfn-elasticbeanstalk-configurationtemplate-description)" : String,
     "[EnvironmentId](#cfn-elasticbeanstalk-configurationtemplate-environmentid)" : String,
     "[OptionSettings](#cfn-elasticbeanstalk-configurationtemplate-optionsettings)" : [ [*ConfigurationOptionSetting*](aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting.md), ... ],
-    "[PlatformArn](#cfn-elasticbeanstalk-configurationtemplate-platformarn)" : String,
+    "[PlatformARN](#cfn-elasticbeanstalk-configurationtemplate-platformarn)" : String,
     "[SolutionStackName](#cfn-elasticbeanstalk-configurationtemplate-solutionstackname)" : String,
     "[SourceConfiguration](#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration)" : [*SourceConfiguration*](aws-properties-beanstalk-configurationtemplate-sourceconfiguration.md)
   } 
@@ -40,7 +40,7 @@ Properties:
   [EnvironmentId](#cfn-elasticbeanstalk-configurationtemplate-environmentid): String
   [OptionSettings](#cfn-elasticbeanstalk-configurationtemplate-optionsettings):
     - [*ConfigurationOptionSetting*](aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting.md)
-  [PlatformArn](#cfn-elasticbeanstalk-configurationtemplate-platformarn): String
+  [PlatformARN](#cfn-elasticbeanstalk-configurationtemplate-platformarn): String
   [SolutionStackName](#cfn-elasticbeanstalk-configurationtemplate-solutionstackname): String
   [SourceConfiguration](#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration):
     [*SourceConfiguration*](aws-properties-beanstalk-configurationtemplate-sourceconfiguration.md)
@@ -74,16 +74,16 @@ The options for the Elastic Beanstalk configuration, such as the instance type\.
 *Required*: No  
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
-`PlatformArn`  <a name="cfn-elasticbeanstalk-configurationtemplate-platformarn"></a>
+`PlatformARN`  <a name="cfn-elasticbeanstalk-configurationtemplate-platformarn"></a>
 The Amazon Resource Name \(ARN\) of the custom platform\. For more information, see [ Custom Platforms](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/custom-platforms.html) in the *AWS Elastic Beanstalk Developer Guide*\.  
-If you specify `PlatformArn`, then don't specify `SolutionStackName`\.
+If you specify `PlatformARN`, then don't specify `SolutionStackName`\.
  *Required*: No  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `SolutionStackName`  <a name="cfn-elasticbeanstalk-configurationtemplate-solutionstackname"></a>
 The name of an Elastic Beanstalk solution stack that this configuration will use\. A solution stack specifies the operating system, architecture, and application server for a configuration template, such as `64bit Amazon Linux 2013.09 running Tomcat 7 Java 7`\. For more information, see [Supported Platforms](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html) in the *AWS Elastic Beanstalk Developer Guide*\.  
-You must specify this property if you don't specify the `PlatformArn`, `EnvironmentId`, or `SourceConfiguration` properties\.  
+You must specify this property if you don't specify the `PlatformARN`, `EnvironmentId`, or `SourceConfiguration` properties\.  
 *Type*: String  
 *Required*: Conditional  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

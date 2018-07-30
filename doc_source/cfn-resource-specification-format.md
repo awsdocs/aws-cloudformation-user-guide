@@ -318,7 +318,7 @@ For your reference, the following example provides the entire `AWS::Elasticsearc
   "ResourceType": {
     "AWS::Elasticsearch::Domain": {
       "Attributes": {
-        "DomainArn": {
+        "DomainARN": {
           "PrimitiveType": "String"
         },
         "DomainEndpoint": {

@@ -97,7 +97,7 @@ In this step, you'll create the VPC and role in the *accepter account*\.
          "Value": {
            "Fn::GetAtt": [
              "peerRole",
-             "Arn"
+             "ARN"
            ]
          }
        }
@@ -145,7 +145,7 @@ In this step, you'll create the VPC and role in the *accepter account*\.
      RoleARN:
        Value: !GetAtt 
          - peerRole
-         - Arn
+         - ARN
    ```
 
 1. Choose **Next**\.
@@ -184,7 +184,7 @@ Now that you've created the VPC and cross\-account role, you can peer with the V
        "PeerVPCId": {
          "Type": "String"
        },
-       "PeerRoleArn": {
+       "PeerRoleARN": {
          "Type": "String"
        }
      },
@@ -210,8 +210,8 @@ Now that you've created the VPC and cross\-account role, you can peer with the V
            "PeerOwnerId": {
              "Ref": "PeerVPCAccountId"
            },
-           "PeerRoleArn": {
-             "Ref": "PeerRoleArn"
+           "PeerRoleARN": {
+             "Ref": "PeerRoleARN"
            }
          }
        }
@@ -240,7 +240,7 @@ Now that you've created the VPC and cross\-account role, you can peer with the V
        Type: String
      PeerVPCId:
        Type: String
-     PeerRoleArn:
+     PeerRoleARN:
        Type: String
    Resources:
      vpc:
@@ -256,7 +256,7 @@ Now that you've created the VPC and cross\-account role, you can peer with the V
          VpcId: !Ref vpc
          PeerVpcId: !Ref PeerVPCId
          PeerOwnerId: !Ref PeerVPCAccountId
-         PeerRoleArn: !Ref PeerRoleArn
+         PeerRoleARN: !Ref PeerRoleARN
    Outputs:
      VPCId:
        Value: !Ref vpc
@@ -358,7 +358,7 @@ The following example template shows how to change the VPC peer owner template \
                 "Value": {
                     "Fn::GetAtt": [
                         "peerRole",
-                        "Arn"
+                        "ARN"
                     ]
                 }
             },
@@ -422,7 +422,7 @@ Outputs:
     Value:
       'Fn::GetAtt':
         - peerRole
-        - Arn
+        - ARN
   VPCId:
     Value:
       Ref: vpc

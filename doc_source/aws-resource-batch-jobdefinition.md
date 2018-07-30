@@ -117,7 +117,7 @@ The following example tests the nvidia\-smi command on a GPU instance to verify 
         ],
         "Memory": 2000,
         "Privileged": true,
-        "JobRoleArn": "String",
+        "JobRoleARN": "String",
         "ReadonlyRootFilesystem": true,
         "Vcpus": 2,
         "Image": "nvidia/cuda"
@@ -148,7 +148,7 @@ JobDefinition:
         - nvidia-smi
       Memory: 2000
       Privileged: true
-      JobRoleArn: String
+      JobRoleARN: String
       ReadonlyRootFilesystem: true
       Vcpus: 2
       Image: nvidia/cuda

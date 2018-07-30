@@ -56,7 +56,7 @@ The `BucketName` is unique and the `Value` contains a file extension without a p
     "BucketName" : { "Fn::Sub" : "${User}-encryption-service" },
     "NotificationConfiguration" : {
       "LambdaConfigurations" : [{
-        "Function" : { "Ref" : "LambdaDeploymentArn" },
+        "Function" : { "Ref" : "LambdaDeploymentARN" },
         "Event" : "s3:ObjectCreated:*",
         "Filter" : {
           "S3Key" : {
@@ -82,7 +82,7 @@ EncryptionServiceBucket:
     NotificationConfiguration:
       LambdaConfigurations:
         -
-          Function: !Ref LambdaDeploymentArn
+          Function: !Ref LambdaDeploymentARN
           Event: "s3:ObjectCreated:*"
           Filter:
             S3Key:

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CloudTrail::Trail",
   "Properties" : {
-    "[CloudWatchLogsLogGroupArn](#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn)" : String,
-    "[CloudWatchLogsRoleArn](#cfn-cloudtrail-trail-cloudwatchlogsrolearn)" : String,
+    "[CloudWatchLogsLogGroupARN](#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn)" : String,
+    "[CloudWatchLogsRoleARN](#cfn-cloudtrail-trail-cloudwatchlogsrolearn)" : String,
     "[EnableLogFileValidation](#cfn-cloudtrail-trail-enablelogfilevalidation)" : Boolean,
     "[EventSelectors](#cfn-cloudtrail-trail-eventselectors)" : [ [*EventSelector*](aws-properties-cloudtrail-trail-eventselector.md), ... ],
     "[IncludeGlobalServiceEvents](#cfn-cloudtrail-trail-includeglobalserviceevents)" : Boolean,
@@ -40,8 +40,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::CloudTrail::Trail"
 Properties:
-  [CloudWatchLogsLogGroupArn](#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn): String
-  [CloudWatchLogsRoleArn](#cfn-cloudtrail-trail-cloudwatchlogsrolearn): String
+  [CloudWatchLogsLogGroupARN](#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn): String
+  [CloudWatchLogsRoleARN](#cfn-cloudtrail-trail-cloudwatchlogsrolearn): String
   [EnableLogFileValidation](#cfn-cloudtrail-trail-enablelogfilevalidation): Boolean
   [EventSelectors](#cfn-cloudtrail-trail-eventselectors):
     - [*EventSelector*](aws-properties-cloudtrail-trail-eventselector.md)
@@ -61,13 +61,13 @@ Properties:
 
 For more information and property constraints, see [CreateTrail](http://docs.aws.amazon.com/awscloudtrail/latest/APIReference/ API_CreateTrail.html) in the *AWS CloudTrail API Reference*\.
 
-`CloudWatchLogsLogGroupArn`  <a name="cfn-cloudtrail-trail-cloudwatchlogsloggrouparn"></a>
+`CloudWatchLogsLogGroupARN`  <a name="cfn-cloudtrail-trail-cloudwatchlogsloggrouparn"></a>
 The Amazon Resource Name \(ARN\) of a log group to which CloudTrail logs will be delivered\.  
-*Required*: Conditional\. This property is required if you specify the `CloudWatchLogsRoleArn` property\.  
+*Required*: Conditional\. This property is required if you specify the `CloudWatchLogsRoleARN` property\.  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`CloudWatchLogsRoleArn`  <a name="cfn-cloudtrail-trail-cloudwatchlogsrolearn"></a>
+`CloudWatchLogsRoleARN`  <a name="cfn-cloudtrail-trail-cloudwatchlogsrolearn"></a>
 The role ARN that Amazon CloudWatch Logs \(CloudWatch Logs\) assumes to write logs to a log group\. For more information, see [Role Policy Document for CloudTrail to Use CloudWatch Logs for Monitoring](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-required-policy-for-cloudwatch-logs.html) in the *AWS CloudTrail User Guide*\.  
 *Required*: No  
 *Type*: String  
@@ -151,10 +151,10 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
+`ARN`  
 The ARN of the CloudTrail trail, such as `arn:aws:cloudtrail:us-east-2:123456789012:trail/myCloudTrail`\.
 
-`SnsTopicArn`  
+`SnsTopicARN`  
 The ARN of the Amazon SNS topic that's associated with the CloudTrail trail, such as `arn:aws:sns:us-east-2:123456789012:mySNSTopic`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.

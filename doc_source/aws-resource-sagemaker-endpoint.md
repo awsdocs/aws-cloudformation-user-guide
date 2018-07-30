@@ -139,7 +139,7 @@ The following example creates an endpoint configuration from a trained model, an
         "PrimaryContainer": {
           "Image": { "Fn::FindInMap" : [ "AWS::Region", "NullTransformer"] }
         },
-        "ExecutionRoleArn": { "Fn::GetAtt" : [ "ExecutionRole", "Arn" ] }
+        "ExecutionRoleARN": { "Fn::GetAtt" : [ "ExecutionRole", "ARN" ] }
       }
     },
     "ExecutionRole": {
@@ -235,7 +235,7 @@ Resources:
     Properties:
       PrimaryContainer:
         Image: !FindInMap [RegionMap, !Ref "AWS::Region", "NullTransformer"]
-      ExecutionRoleArn: !GetAtt ExecutionRole.Arn
+      ExecutionRoleARN: !GetAtt ExecutionRole.ARN
 
   ExecutionRole: 
     Type: "AWS::IAM::Role"
