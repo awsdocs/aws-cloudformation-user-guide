@@ -41,7 +41,7 @@ Properties:
   [ManagedPolicyArns](#cfn-iam-role-managepolicyarns):
     - String
   [MaxSessionDuration](#cfn-iam-role-maxsessionduration): Integer
-   [Path](#cfn-iam-role-path): String
+  [Path](#cfn-iam-role-path): String
   [Policies](#cfn-iam-role-policies):
     - Policies
   [RoleName](#cfn-iam-role-rolename): String
