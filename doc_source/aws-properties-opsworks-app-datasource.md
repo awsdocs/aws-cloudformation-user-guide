@@ -25,7 +25,7 @@
 ## Properties<a name="aws-properties-opsworks-app-datasource-properties"></a>
 
 `Arn`  <a name="cfn-opsworks-app-datasource-arn"></a>
-The ARN of the data source\.  
+The Arn of the data source\.  
 *Required*: No  
 *Type*: String
 

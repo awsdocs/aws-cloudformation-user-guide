@@ -66,6 +66,6 @@ The definition of the external table\.
 *Type*: String
 
 `ServiceAccessRoleArn`  <a name="cfn-dms-endpoint-s3settings-serviceaccessrolearn"></a>
-The Amazon Resource Name \(ARN\) used by the service access IAM role\.  
+The Amazon Resource Name \(Arn\) used by the service access IAM role\.  
 *Required*: No  
 *Type*: String

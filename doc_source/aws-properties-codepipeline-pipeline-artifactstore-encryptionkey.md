@@ -23,7 +23,7 @@
 ## Properties<a name="w3ab2c21c14d452b7"></a>
 
 `Id`  <a name="cfn-codepipeline-pipeline-artifactstore-encryptionkey-id"></a>
-The ID of the key\. For an AWS KMS key, specify the key ID or key Amazon Resource Number \(ARN\)\.  
+The ID of the key\. For an AWS KMS key, specify the key ID or key Amazon Resource Number \(Arn\)\.  
 *Required*: Yes  
 *Type*: String
 

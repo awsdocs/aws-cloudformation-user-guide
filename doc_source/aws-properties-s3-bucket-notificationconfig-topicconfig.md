@@ -36,6 +36,6 @@ The filtering rules that determine for which objects to send notifications\. For
 *Type*: [Amazon S3 Bucket NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md)
 
 `Topic`  <a name="cfn-s3-bucket-notificationconfig-topicconfig-topic"></a>
-The Amazon SNS topic Amazon Resource Name \(ARN\) to which Amazon S3 reports the specified events\.  
+The Amazon SNS topic Amazon Resource Name \(Arn\) to which Amazon S3 reports the specified events\.  
 *Required*: Yes  
 *Type*: String

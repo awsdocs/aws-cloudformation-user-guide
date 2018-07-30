@@ -58,13 +58,13 @@ Describes the format of the data in the streaming source, and how each data elem
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `KinesisFirehoseInput`  <a name="cfn-kinesisanalytics-application-input-kinesisfirehoseinput"></a>
-If the streaming source is an Amazon Kinesis Firehose delivery stream, identifies the delivery stream's Amazon Resource Name \(ARN\) and an IAM role that enables Kinesis Data Analytics to access the stream on your behalf\.   
+If the streaming source is an Amazon Kinesis Firehose delivery stream, identifies the delivery stream's Amazon Resource Name \(Arn\) and an IAM role that enables Kinesis Data Analytics to access the stream on your behalf\.   
  *Required*: No  
  *Type*: [Kinesis Data Analytics Application KinesisFirehoseInput](aws-properties-kinesisanalytics-application-kinesisfirehoseinput.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `KinesisStreamsInput`  <a name="cfn-kinesisanalytics-application-input-kinesisstreamsinput"></a>
-If the streaming source is an Amazon Kinesis stream, identifies the stream's ARN and an IAM role that enables Kinesis Data Analytics to access the stream on your behalf\.   
+If the streaming source is an Amazon Kinesis stream, identifies the stream's Arn and an IAM role that enables Kinesis Data Analytics to access the stream on your behalf\.   
  *Required*: No  
  *Type*: [Kinesis Data Analytics Application KinesisStreamsInput](aws-properties-kinesisanalytics-application-kinesisstreamsinput.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

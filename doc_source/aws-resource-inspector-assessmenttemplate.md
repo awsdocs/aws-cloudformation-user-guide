@@ -44,7 +44,7 @@ Properties:
 ## Properties<a name="aws-resource-inspector-assessmenttemplate-properties"></a>
 
 `AssessmentTargetArn`  <a name="cfn-inspector-assessmenttemplate-assessmenttargetarn"></a>
-The ARN of the assessment target that corresponds to this assessment template\.   
+The Arn of the assessment target that corresponds to this assessment template\.   
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
@@ -80,7 +80,7 @@ The user\-defined attributes that are assigned to every generated finding from t
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
 `Arn`  
-The Amazon Resource Name \(ARN\) that specifies the assessment template that is created\. 
+The Amazon Resource Name \(Arn\) that specifies the assessment template that is created\. 
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
 

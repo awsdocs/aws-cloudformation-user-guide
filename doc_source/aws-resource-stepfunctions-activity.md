@@ -37,7 +37,7 @@ The name of the activity to create\. This name must be unique for your AWS accou
 
 ### Ref<a name="w3ab2c21c10e1176c11b2"></a>
 
-When you provide the logical ID of this resource to the `Ref` intrinsic function, `Ref` returns the ARN of the created activity\. For example:
+When you provide the logical ID of this resource to the `Ref` intrinsic function, `Ref` returns the Arn of the created activity\. For example:
 
 ```
 { "Ref": "MyActivity" }

@@ -35,6 +35,6 @@ The object key \(the name of an object in the S3 bucket\)\.
 *Type*: String
 
 `RoleArn`  <a name="cfn-iot-topicrule-s3action-rolearn"></a>
-The ARN of the IAM role that grants access to Amazon S3\.  
+The Arn of the IAM role that grants access to Amazon S3\.  
 *Required*: Yes  
 *Type*: String

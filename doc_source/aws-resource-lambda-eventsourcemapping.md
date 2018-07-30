@@ -54,13 +54,13 @@ Indicates whether Lambda begins polling the event source\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `EventSourceArn`  <a name="cfn-lambda-eventsourcemapping-eventsourcearn"></a>
-The Amazon Resource Name \(ARN\) of the Kinesis or DynamoDB stream that is the source of events\. Any record added to this stream can invoke the Lambda function\. For more information, see [CreateEventSourceMapping](http://docs.aws.amazon.com/lambda/latest/dg/API_CreateEventSourceMapping.html) in the *AWS Lambda Developer Guide*\.  
+The Amazon Resource Name \(Arn\) of the Kinesis or DynamoDB stream that is the source of events\. Any record added to this stream can invoke the Lambda function\. For more information, see [CreateEventSourceMapping](http://docs.aws.amazon.com/lambda/latest/dg/API_CreateEventSourceMapping.html) in the *AWS Lambda Developer Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `FunctionName`  <a name="cfn-lambda-eventsourcemapping-functionname"></a>
-The name or ARN of a Lambda function to invoke when Lambda detects an event on the stream\.  
+The name or Arn of a Lambda function to invoke when Lambda detects an event on the stream\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

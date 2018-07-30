@@ -43,7 +43,7 @@ The source regions being aggregated\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `RoleArn`  <a name="cfn-config-configurationaggregator-organizationaggregationsource-rolearn"></a>
-The Amazon Resource Name \(ARN\) of the IAM role used to retreive AWS Organizations details associated with the aggregator account\.  
+The Amazon Resource Name \(Arn\) of the IAM role used to retreive AWS Organizations details associated with the aggregator account\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

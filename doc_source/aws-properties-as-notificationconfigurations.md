@@ -11,7 +11,7 @@ The `NotificationConfigurations` property of the `[AWS::AutoScaling::AutoScaling
 ```
 {
    "[NotificationTypes](#cfn-as-group-notificationconfigurations-notificationtypes)" : [ String, ... ],
-   "[TopicARN](#cfn-as-group-notificationconfigurations-topicarn)" : String
+   "[TopicArn](#cfn-as-group-notificationconfigurations-topicarn)" : String
 }
 ```
 
@@ -20,7 +20,7 @@ The `NotificationConfigurations` property of the `[AWS::AutoScaling::AutoScaling
 ```
 [NotificationTypes](#cfn-as-group-notificationconfigurations-notificationtypes):
   - String
-[TopicARN](#cfn-as-group-notificationconfigurations-topicarn): String
+[TopicArn](#cfn-as-group-notificationconfigurations-topicarn): String
 ```
 
 ## Properties<a name="w3ab2c21c14d109b9"></a>
@@ -30,8 +30,8 @@ A list of event types that trigger a notification\. Event types can include any 
 *Required*: Yes  
 *Type*: List of String values
 
-`TopicARN`  <a name="cfn-as-group-notificationconfigurations-topicarn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service \(SNS\) topic\.  
+`TopicArn`  <a name="cfn-as-group-notificationconfigurations-topicarn"></a>
+The Amazon Resource Name \(Arn\) of the Amazon Simple Notification Service \(SNS\) topic\.  
 *Required*: Yes  
 *Type*: String
 

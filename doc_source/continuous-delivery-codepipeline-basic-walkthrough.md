@@ -269,7 +269,7 @@ You've successfully used AWS CodePipeline to build a continuous delivery workflo
 To make sure that you are not charged for unwanted services, delete your resources\.
 
 **Important**  
-Delete the test and production WordPress stacks before deleting the pipeline stack\. The pipeline stack contains a service role that's required to delete the WordPress stacks\. If you deleted the pipeline stack first, you can [associate another service role Amazon Resource Name \(ARN\)](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeleteStack.html) with the WordPress stacks, and then delete them\.
+Delete the test and production WordPress stacks before deleting the pipeline stack\. The pipeline stack contains a service role that's required to delete the WordPress stacks\. If you deleted the pipeline stack first, you can [associate another service role Amazon Resource Name \(Arn\)](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeleteStack.html) with the WordPress stacks, and then delete them\.
 
 **To delete objects in the artifact store**
 

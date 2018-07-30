@@ -17,8 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[LifecycleHookName](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecyclehookname)" : String,
   "[LifecycleTransition](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecycletransition)" : String,
   "[NotificationMetadata](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationmetadata)" : String,
-  "[NotificationTargetARN](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationtargetarn)" : String,
-  "[RoleARN](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-rolearn)" : String
+  "[NotificationTargetArn](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationtargetarn)" : String,
+  "[RoleArn](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-rolearn)" : String
 }
 ```
 
@@ -30,8 +30,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [LifecycleHookName](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecyclehookname): String
 [LifecycleTransition](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecycletransition): String
 [NotificationMetadata](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationmetadata): String
-[NotificationTargetARN](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationtargetarn): String
-[RoleARN](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-rolearn): String
+[NotificationTargetArn](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationtargetarn): String
+[RoleArn](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification-properties"></a>
@@ -69,14 +69,14 @@ Additional information to include when Auto Scaling sends a message to the notif
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`NotificationTargetARN`  <a name="cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationtargetarn"></a>
-The Amazon Resource Name \(ARN\) of the target that Auto Scaling sends notifications to when an instance is in the transition state for the lifecycle hook\. The notification target can be either an Amazon SQS queue or an Amazon SNS topic\.  
+`NotificationTargetArn`  <a name="cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationtargetarn"></a>
+The Amazon Resource Name \(Arn\) of the target that Auto Scaling sends notifications to when an instance is in the transition state for the lifecycle hook\. The notification target can be either an Amazon SQS queue or an Amazon SNS topic\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`RoleARN`  <a name="cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-rolearn"></a>
-The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target\.  
+`RoleArn`  <a name="cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-rolearn"></a>
+The Arn of the IAM role that allows the Auto Scaling group to publish to the specified notification target\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
@@ -114,7 +114,7 @@ The following snippet specifies a lifecycle hook for an `AWS::AutoScaling::AutoS
             "LifecycleTransition": "autoscaling: EC2_INSTANCE_LAUNCHING",
             "LifecycleHookName": "myFirstLifecycleHook",
             "HeartbeatTimeout": 4800,
-            "NotificationTargetARN": {
+            "NotificationTargetArn": {
               "Fn::GetAtt": [
                 "SQS",
                 "Arn"
@@ -149,7 +149,7 @@ Resources:
         - LifecycleTransition: 'autoscaling:EC2_INSTANCE_LAUNCHING'
           LifecycleHookName: 'myFirstLifecycleHook'
           HeartbeatTimeout: 4800
-          NotificationTargetARN: !GetAtt SQS.Arn
+          NotificationTargetArn: !GetAtt SQS.Arn
   SQS:
     Type: 'AWS::SQS::Queue'
 ```

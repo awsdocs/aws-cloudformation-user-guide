@@ -22,8 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[DeveloperProviderName](#cfn-cognito-identitypool-developerprovidername)" : String,
     "[SupportedLoginProviders](#cfn-cognito-identitypool-supportedloginproviders)" : { String:String, ... },
     "[CognitoIdentityProviders](#cfn-cognito-identitypool-cognitoidentityproviders)" : [ [*CognitoIdentityProvider*](aws-properties-cognito-identitypool-cognitoidentityprovider.md), ... ], 
-    "[SamlProviderARNs](#cfn-cognito-identitypool-samlproviderarns)" : [ String, ... ],
-    "[OpenIdConnectProviderARNs](#cfn-cognito-identitypool-openidconnectproviderarns)" : [ String, ... ],
+    "[SamlProviderArns](#cfn-cognito-identitypool-samlproviderarns)" : [ String, ... ],
+    "[OpenIdConnectProviderArns](#cfn-cognito-identitypool-openidconnectproviderarns)" : [ String, ... ],
     "[CognitoStreams](#cfn-cognito-identitypool-cognitostreams)" : CognitoStreams, 
     "[PushSync](#cfn-cognito-identitypool-pushsync)" : PushSync,
     "[CognitoEvents](#cfn-cognito-identitypool-cognitoevents)" : { String:String, ... }
@@ -43,9 +43,9 @@ Properties:
     String: String
   [CognitoIdentityProviders](#cfn-cognito-identitypool-cognitoidentityproviders): 
     - [*CognitoIdentityProvider*](aws-properties-cognito-identitypool-cognitoidentityprovider.md)
-  [SamlProviderARNs](#cfn-cognito-identitypool-samlproviderarns): 
+  [SamlProviderArns](#cfn-cognito-identitypool-samlproviderarns): 
     - String
-  [OpenIdConnectProviderARNs](#cfn-cognito-identitypool-openidconnectproviderarns): 
+  [OpenIdConnectProviderArns](#cfn-cognito-identitypool-openidconnectproviderarns): 
     - String
   [CognitoStreams](#cfn-cognito-identitypool-cognitostreams): 
     - CognitoStreams
@@ -91,14 +91,14 @@ An array of Amazon Cognito user pools and their client IDs\.
 *Type*: An array of [Amazon Cognito IdentityPool CognitoIdentityProvider](aws-properties-cognito-identitypool-cognitoidentityprovider.md)\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`SamlProviderARNs`  <a name="cfn-cognito-identitypool-samlproviderarns"></a>
-A list of Amazon Resource Names \(ARNs\) of Security Assertion Markup Language \(SAML\) providers\.  
+`SamlProviderArns`  <a name="cfn-cognito-identitypool-samlproviderarns"></a>
+A list of Amazon Resource Names \(Arns\) of Security Assertion Markup Language \(SAML\) providers\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`OpenIdConnectProviderARNs`  <a name="cfn-cognito-identitypool-openidconnectproviderarns"></a>
-A list of ARNs for the OpendID Connect provider\.  
+`OpenIdConnectProviderArns`  <a name="cfn-cognito-identitypool-openidconnectproviderarns"></a>
+A list of Arns for the OpendID Connect provider\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

@@ -35,7 +35,7 @@ Client\-specific information to pass to the Lambda function that you're invoking
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Qualifier`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-qualifier"></a>
-A Lambda function version or alias name\. If you specify a function version, the action uses the qualified function Amazon Resource Name \(ARN\) to invoke a specific Lambda function\. If you specify an alias name, the action uses the alias ARN to invoke the Lambda function version that the alias points to\.  
+A Lambda function version or alias name\. If you specify a function version, the action uses the qualified function Amazon Resource Name \(Arn\) to invoke a specific Lambda function\. If you specify an alias name, the action uses the alias Arn to invoke the Lambda function version that the alias points to\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

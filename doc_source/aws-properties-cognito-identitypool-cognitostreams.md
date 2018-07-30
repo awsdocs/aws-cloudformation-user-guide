@@ -25,7 +25,7 @@
 ## Properties<a name="aws-properties-cognito-identitypool-cognitostreams-properties"></a>
 
 `RoleArn`  <a name="cfn-cognito-identitypool-cognitostreams-rolearn"></a>
-The Amazon Resource Name \(ARN\) of the role Amazon Cognito can assume to publish to the stream\. This role must grant access to Amazon Cognito \(cognito\-sync\) to invoke `PutRecord` on your Amazon Cognito stream\.  
+The Amazon Resource Name \(Arn\) of the role Amazon Cognito can assume to publish to the stream\. This role must grant access to Amazon Cognito \(cognito\-sync\) to invoke `PutRecord` on your Amazon Cognito stream\.  
 *Type*: String  
 *Required*: No
 

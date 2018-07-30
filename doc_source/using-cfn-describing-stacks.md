@@ -20,7 +20,7 @@ PROMPT> aws cloudformation list-stacks --stack-status-filter CREATE_COMPLETE
     {
         "StackId": "arn:aws:cloudformation:us-east-2:123456789012:stack/myteststack/
 644df8e0-0dff-11e3-8e2f-5088487c4896",
-        "TemplateDescription": "AWS CloudFormation Sample Template S3_Bucket: Sample template showing how to create a publicly accessible S3 bucket. **WARNING** This template creates an
+        "TemplateDescription": "AWS CloudFormation Sample Template S3_Bucket: Sample template showing how to create a publicly accessible S3 bucket. **WArnING** This template creates an
 S3 bucket. You will be billed for the AWS resources used if you create a stack from this template.",
         "StackStatusReason": null,
         "CreationTime": "2013-08-26T03:27:10.190Z",
@@ -42,7 +42,7 @@ PROMPT> aws cloudformation describe-stacks --stack-name myteststack
     "Stacks":  [
         {
             "StackId": "arn:aws:cloudformation:us-east-2:123456789012:stack/myteststack/a69442d0-0b8f-11e3-8b8a-500150b352e0",
-            "Description": "AWS CloudFormation Sample Template S3_Bucket: Sample template showing how to create a publicly accessible S3 bucket. **WARNING** This template creates an S3 bucket.
+            "Description": "AWS CloudFormation Sample Template S3_Bucket: Sample template showing how to create a publicly accessible S3 bucket. **WArnING** This template creates an S3 bucket.
 You will be billed for the AWS resources used if you create a stack from this template.",
             "Tags": [],
             "Outputs": [

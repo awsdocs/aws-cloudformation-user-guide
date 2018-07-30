@@ -16,7 +16,7 @@ If you make an update to the mount target that causes it to be replaced, instanc
 ```
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "This template creates an Amazon EFS file system and mount target and associates it with Amazon EC2 instances in an Auto Scaling group. **WARNING** This template creates Amazon EC2 instances and related resources. You will be billed for the AWS resources used if you create a stack from this template.",
+  "Description": "This template creates an Amazon EFS file system and mount target and associates it with Amazon EC2 instances in an Auto Scaling group. **WArnING** This template creates Amazon EC2 instances and related resources. You will be billed for the AWS resources used if you create a stack from this template.",
   "Parameters": {
     "InstanceType" : {
       "Description" : "WebServer EC2 instance type",
@@ -434,7 +434,7 @@ If you make an update to the mount target that causes it to be replaced, instanc
 ```
 AWSTemplateFormatVersion: '2010-09-09'
 Description: This template creates an Amazon EFS file system and mount target and
-  associates it with Amazon EC2 instances in an Auto Scaling group. **WARNING** This
+  associates it with Amazon EC2 instances in an Auto Scaling group. **WArnING** This
   template creates Amazon EC2 instances and related resources. You will be billed
   for the AWS resources used if you create a stack from this template.
 Parameters:

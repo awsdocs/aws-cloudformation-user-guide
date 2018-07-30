@@ -21,7 +21,7 @@ This value should be an identifier unique to the custom resource vendor, and can
 *Type*: String
 
 StackId  <a name="crpg-ref-responses-stackid"></a>
-The Amazon Resource Name \(ARN\) that identifies the stack that contains the custom resource\. This response value should be copied *verbatim* from the request\.  
+The Amazon Resource Name \(Arn\) that identifies the stack that contains the custom resource\. This response value should be copied *verbatim* from the request\.  
 *Required*: Yes  
 *Type*: String
 

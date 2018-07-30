@@ -182,7 +182,7 @@ The name of the HSM configuration that contains the information that the Amazon 
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `IamRoles`  <a name="cfn-redshift-cluster-iamroles"></a>
-A list of AWS Identity and Access Management \(IAM\) roles that the cluster can use to access other AWS services\. Supply the IAM roles by their Amazon Resource Name \(ARN\)\. You can provide a maximum of 10 IAM roles in a single request\. A cluster can have a maximum of 10 IAM roles associated with it at a time\.  
+A list of AWS Identity and Access Management \(IAM\) roles that the cluster can use to access other AWS services\. Supply the IAM roles by their Amazon Resource Name \(Arn\)\. You can provide a maximum of 10 IAM roles in a single request\. A cluster can have a maximum of 10 IAM roles associated with it at a time\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

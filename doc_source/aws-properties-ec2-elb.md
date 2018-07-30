@@ -497,7 +497,7 @@ The following snippet creates a load balancer with listeners on port 80 and 443\
         "LoadBalancerPort": "443",
         "InstancePort": "443",
         "Protocol": "HTTPS",
-        "SSLCertificateId" : { "Ref" : "CertARN" },
+        "SSLCertificateId" : { "Ref" : "CertArn" },
         "PolicyNames" : ["MySSLNegotiationPolicy", "MyAppCookieStickinessPolicy"]
       }
     ],
@@ -572,7 +572,7 @@ ElasticLoadBalancer:
       InstancePort: '443'
       Protocol: HTTPS
       SSLCertificateId:
-        Ref: CertARN
+        Ref: CertArn
       PolicyNames:
       - MySSLNegotiationPolicy
       - MyAppCookieStickinessPolicy

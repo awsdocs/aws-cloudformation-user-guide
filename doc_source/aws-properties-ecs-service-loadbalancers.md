@@ -42,6 +42,6 @@ The name of a Classic Load Balancer to associate with the Amazon ECS service\.
 *Type*: String
 
 `TargetGroupArn`  <a name="cfn-ecs-service-loadbalancers-targetgrouparn"></a>
-An Application load balancer target group Amazon Resource Name \(ARN\) to associate with the Amazon ECS service\.  
+An Application load balancer target group Amazon Resource Name \(Arn\) to associate with the Amazon ECS service\.  
 *Required*: No  
 *Type*: String

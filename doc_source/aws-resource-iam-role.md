@@ -57,7 +57,7 @@ AWS Identity and Access Management \(IAM\) requires that policies be in JSON for
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ManagedPolicyArns`  <a name="cfn-iam-role-managepolicyarns"></a>
-One or more managed policy ARNs to attach to this role\.  
+One or more managed policy Arns to attach to this role\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -114,7 +114,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 `Arn`  
-Returns the Amazon Resource Name \(ARN\) for the instance profile\. For example:  
+Returns the Amazon Resource Name \(Arn\) for the instance profile\. For example:  
 
 ```
 {"Fn::GetAtt" : ["MyRole", "Arn"] }

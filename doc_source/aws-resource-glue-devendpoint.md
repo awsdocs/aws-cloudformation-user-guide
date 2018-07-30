@@ -80,7 +80,7 @@ The public key for the endpoint to use for authentication\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `RoleArn`  <a name="cfn-glue-devendpoint-rolearn"></a>
-The Amazon Resource Name \(ARN\) of the IAM role for the endpoint\. It must match the AWS ARN string pattern: `arn:aws:iam::\d{12}:role/.*`  
+The Amazon Resource Name \(Arn\) of the IAM role for the endpoint\. It must match the AWS Arn string pattern: `arn:aws:iam::\d{12}:role/.*`  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

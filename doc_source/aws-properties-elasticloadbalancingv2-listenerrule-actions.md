@@ -23,7 +23,7 @@
 ## Properties<a name="w3ab2c21c14e1012b7"></a>
 
 `TargetGroupArn`  <a name="cfn-elasticloadbalancingv2-listener-actions-targetgrouparn"></a>
-The Amazon Resource Name \(ARN\) of the target group to which Elastic Load Balancing routes the traffic\.  
+The Amazon Resource Name \(Arn\) of the target group to which Elastic Load Balancing routes the traffic\.  
 *Required*: Yes  
 *Type*: String
 

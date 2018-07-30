@@ -153,7 +153,7 @@ Specifies the VPC security group to be used with the replication instance\. The 
 
 ### Ref<a name="w3ab2c21c10d360c11b2"></a>
 
-When you pass the logical ID of an `AWS::DMS::ReplicationInstance` resource to the intrinsic `Ref` function, the function returns the replication instance ARN\.
+When you pass the logical ID of an `AWS::DMS::ReplicationInstance` resource to the intrinsic `Ref` function, the function returns the replication instance Arn\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 

@@ -35,7 +35,7 @@ The number of tasks to create based on the task definition\. The default is `1`\
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `TaskDefinitionArn`  <a name="cfn-events-rule-ecsparameters-taskdefinitionarn"></a>
-The Amazon Resource Name \(ARN\) of the task definition to use\.  
+The Amazon Resource Name \(Arn\) of the task definition to use\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

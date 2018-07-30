@@ -65,7 +65,7 @@ If this property isn't defined, the request payload is passed through from the m
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Credentials`  <a name="cfn-apigateway-method-integration-credentials"></a>
-The credentials that are required for the integration\. To specify an AWS Identity and Access Management \(IAM\) role that API Gateway assumes, specify the role's Amazon Resource Name \(ARN\)\. To require that the caller's identity be passed through from the request, specify `arn:aws:iam::*:user/*`\.  
+The credentials that are required for the integration\. To specify an AWS Identity and Access Management \(IAM\) role that API Gateway assumes, specify the role's Amazon Resource Name \(Arn\)\. To require that the caller's identity be passed through from the request, specify `arn:aws:iam::*:user/*`\.  
 To use resource\-based permissions on the AWS Lambda \(Lambda\) function, don't specify this property\. Use the [AWS::Lambda::Permission](aws-resource-lambda-permission.md) resource to permit API Gateway to call the function\. For more information, see [Allow Amazon API Gateway to Invoke a Lambda Function](http://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html#access-control-resource-based-example-apigateway-invoke-function) in the *AWS Lambda Developer Guide*\.  
 *Required*: No  
 *Type*: String
@@ -112,6 +112,6 @@ The type of backend that your method is running, such as `HTTP` or `MOCK`\. For 
 The Uniform Resource Identifier \(URI\) for the integration\.  
 If you specify `HTTP` for the `Type` property, specify the API endpoint URL\.  
 If you specify `MOCK` for the `Type` property, don't specify this property\.  
-If you specify `AWS` for the `Type` property, specify an AWS service that follows this form: `arn:aws:apigateway:region:subdomain.service|service:path|action/service_api`\. For example, a Lambda function URI follows this form: `arn:aws:apigateway:region:lambda:path/path`\. The path is usually in the form `/2015-03-31/functions/LambdaFunctionARN/invocations`\. For more information, see the `uri` property of the [Integration](http://docs.aws.amazon.com/apigateway/api-reference/resource/integration/) resource in the *Amazon API Gateway REST API Reference*\.  
+If you specify `AWS` for the `Type` property, specify an AWS service that follows this form: `arn:aws:apigateway:region:subdomain.service|service:path|action/service_api`\. For example, a Lambda function URI follows this form: `arn:aws:apigateway:region:lambda:path/path`\. The path is usually in the form `/2015-03-31/functions/LambdaFunctionArn/invocations`\. For more information, see the `uri` property of the [Integration](http://docs.aws.amazon.com/apigateway/api-reference/resource/integration/) resource in the *Amazon API Gateway REST API Reference*\.  
 *Required*: Conditional\. If you specified `HTTP` or `AWS` for the `Type` property, you must specify this property\.  
 *Type*: String

@@ -38,7 +38,7 @@ Properties:
 For more information about constraints and values for each property, see [AssociateWebACL](http://docs.aws.amazon.com/waf/latest/APIReference/API_regional_AssociateWebACL.html) in the *AWS WAF Regional API Reference*\.
 
 `ResourceArn`  <a name="cfn-wafregional-webaclassociation-resourcearn"></a>
-The Amazon Resource Name \(ARN\) of the resource to protect with the web ACL\.  
+The Amazon Resource Name \(Arn\) of the resource to protect with the web ACL\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

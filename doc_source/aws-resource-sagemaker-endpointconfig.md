@@ -69,7 +69,7 @@ An array of key\-value pairs\. For more information, see [Using Cost Allocation 
 
 ### Ref<a name="aws-resource-sagemaker-endpointconfig-ref"></a>
 
-When you pass the logical ID of an `AWS::SageMaker::EndpointConfig` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the endpoint configuration, such as `arn:aws:sagemaker:us-west-2:012345678901:endpoint-config/myendpointconfig`\. 
+When you pass the logical ID of an `AWS::SageMaker::EndpointConfig` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(Arn\) of the endpoint configuration, such as `arn:aws:sagemaker:us-west-2:012345678901:endpoint-config/myendpointconfig`\. 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 

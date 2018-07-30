@@ -31,11 +31,11 @@ For more information, see [Appendix: Message and JSON Formats](http://docs.aws.a
 *Type*: String
 
 `RoleArn`  <a name="cfn-iot-topicrule-snsaction-rolearn"></a>
-The ARN of the IAM role that grants access to Amazon SNS\.  
+The Arn of the IAM role that grants access to Amazon SNS\.  
 *Required*: Yes  
 *Type*: String
 
 `TargetArn`  <a name="cfn-iot-topicrule-snsaction-targetarn"></a>
-The ARN of the Amazon SNS topic\.  
+The Arn of the Amazon SNS topic\.  
 *Required*: Yes  
 *Type*: String

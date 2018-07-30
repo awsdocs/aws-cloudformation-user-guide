@@ -61,7 +61,7 @@ A shell script that runs only once, when you create a notebook instance\.
 
 ### Ref<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-ref"></a>
 
-When you pass the logical ID of an `AWS::SageMaker::NotebookInstanceLifecycleConfig` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the lifecycle configuration, such as `arn:aws:sagemaker:us-west-2:012345678901:notebook-instance-lifecycle-config/mylifecycleconfig`\. 
+When you pass the logical ID of an `AWS::SageMaker::NotebookInstanceLifecycleConfig` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(Arn\) of the lifecycle configuration, such as `arn:aws:sagemaker:us-west-2:012345678901:notebook-instance-lifecycle-config/mylifecycleconfig`\. 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 

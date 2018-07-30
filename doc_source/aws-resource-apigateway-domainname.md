@@ -233,7 +233,7 @@ Outputs:
 
 ### <a name="aws-resource-apigateway-domainname-example3"></a>
 
-The following example creates a custom domain name that specifies a regional certificate ARN and an endpoint type\.
+The following example creates a custom domain name that specifies a regional certificate Arn and an endpoint type\.
 
 #### JSON<a name="aws-resource-apigateway-domainname-example3.json"></a>
 

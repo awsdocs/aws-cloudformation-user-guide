@@ -44,7 +44,7 @@ Indicates whether users can use the AWS OpsWorks **My Settings** page to specify
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `IamUserArn`  <a name="cfn-opsworks-userprofile-iamuserarn"></a>
-The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) user to associate with this configuration\.  
+The Amazon Resource Name \(Arn\) of the AWS Identity and Access Management \(IAM\) user to associate with this configuration\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -65,7 +65,7 @@ The user's SSH user name\.
 
 ### Ref<a name="w3ab2c21c10d939c11b2"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the IAM user ARN, such as `arn:aws:iam::123456789012:user/opsworksuser`\.
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the IAM user Arn, such as `arn:aws:iam::123456789012:user/opsworksuser`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 

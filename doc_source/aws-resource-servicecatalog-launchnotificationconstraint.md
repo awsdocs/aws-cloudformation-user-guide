@@ -54,7 +54,7 @@ The description of the constraint\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `NotificationArns`  <a name="cfn-servicecatalog-launchnotificationconstraint-notificationarns"></a>
-The notification ARNs\.  
+The notification Arns\.  
 *Required*: Yes  
 *Type*: List of String values  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

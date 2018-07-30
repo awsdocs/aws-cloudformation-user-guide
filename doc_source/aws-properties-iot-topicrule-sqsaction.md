@@ -30,7 +30,7 @@ The URL of the Amazon Simple Queue Service \(Amazon SQS\) queue\.
 *Type*: String
 
 `RoleArn`  <a name="cfn-iot-topicrule-sqsaction-rolearn"></a>
-The ARN of the IAM role that grants access to Amazon SQS\.  
+The Arn of the IAM role that grants access to Amazon SQS\.  
 *Required*: Yes  
 *Type*: String
 

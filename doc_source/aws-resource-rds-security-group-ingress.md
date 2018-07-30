@@ -51,7 +51,7 @@ For an overview of CIDR ranges, go to the [Wikipedia Tutorial](http://en.wikiped
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `DBSecurityGroupName`  <a name="cfn-rds-securitygroup-ingress-dbsecuritygroupname"></a>
-The name \(ARN\) of the [AWS::RDS::DBSecurityGroup](aws-properties-rds-security-group.md) to which this ingress will be added\.  
+The name \(Arn\) of the [AWS::RDS::DBSecurityGroup](aws-properties-rds-security-group.md) to which this ingress will be added\.  
 *Type*: String  
 *Required*: Yes  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

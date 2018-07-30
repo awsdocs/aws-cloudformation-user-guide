@@ -51,7 +51,7 @@ The region authorized to collect aggregated data\.
 
 ### Ref<a name="aws-resource-config-aggregationauthorization-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN of the AggregationAuthorization, for example:
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the Arn of the AggregationAuthorization, for example:
 
 ```
 arn:aws:config:us-east-1:123456789012:aggregation-authorization/987654321012/us-west-2
@@ -293,7 +293,7 @@ The following example enables AWS Config, creates an AWS Config rule, an aggrega
                 "ConfigBucketPolicy"
             ],
             "Properties": {
-                "RoleARN": {
+                "RoleArn": {
                     "Fn::GetAtt": [
                         "ConfigRecorderRole",
                         "Arn"
@@ -494,7 +494,7 @@ Resources:
       - ConfigRecorderRole
       - ConfigBucketPolicy
     Properties:
-      RoleARN: !GetAtt ConfigRecorderRole.Arn
+      RoleArn: !GetAtt ConfigRecorderRole.Arn
       RecordingGroup:
         AllSupported: True
         IncludeGlobalResourceTypes: !If

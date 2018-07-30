@@ -22,7 +22,7 @@ LogicalResourceId
 The template developer\-chosen name \(logical ID\) of the custom resource in the AWS CloudFormation template\. 
 
 StackId  
-The Amazon Resource Name \(ARN\) that identifies the stack that contains the custom resource\.
+The Amazon Resource Name \(Arn\) that identifies the stack that contains the custom resource\.
 
 ResourceProperties  
 This field contains the contents of the `Properties` object sent by the template developer\. Its contents are defined by the custom resource provider\.
@@ -61,7 +61,7 @@ LogicalResourceId
 The template developer\-chosen name \(logical ID\) of the custom resource in the AWS CloudFormation template\. This response value should be copied *verbatim* from the request\.
 
 StackId  
-The Amazon Resource Name \(ARN\) that identifies the stack that contains the custom resource\. This response value should be copied *verbatim* from the request\.
+The Amazon Resource Name \(Arn\) that identifies the stack that contains the custom resource\. This response value should be copied *verbatim* from the request\.
 
 PhysicalResourceId  
 This value should be an identifier unique to the custom resource vendor, and can be up to 1 Kb in size\. The value must be a non\-empty string and must be identical for all responses for the same resource\.
@@ -106,7 +106,7 @@ LogicalResourceId
 The template developer\-chosen name \(logical ID\) of the custom resource in the AWS CloudFormation template\. This response value should be copied *verbatim* from the request\.
 
 StackId  
-The Amazon Resource Name \(ARN\) that identifies the stack that contains the custom resource\. This response value should be copied *verbatim* from the request\.
+The Amazon Resource Name \(Arn\) that identifies the stack that contains the custom resource\. This response value should be copied *verbatim* from the request\.
 
 PhysicalResourceId  
 This value should be an identifier unique to the custom resource vendor, and can be up to 1 Kb in size\. The value must be a non\-empty string and must be identical for all responses for the same resource\.

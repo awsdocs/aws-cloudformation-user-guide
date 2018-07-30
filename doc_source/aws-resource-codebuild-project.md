@@ -89,7 +89,7 @@ A description of the project\. Use the description to identify the purpose of th
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `EncryptionKey`  <a name="cfn-codebuild-project-encryptionkey"></a>
-The alias or Amazon Resource Name \(ARN\) of the AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) that AWS CodeBuild uses to encrypt the build output\. If you don't specify a value, AWS CodeBuild uses the AWS\-managed CMK for Amazon Simple Storage Service\.  
+The alias or Amazon Resource Name \(Arn\) of the AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) that AWS CodeBuild uses to encrypt the build output\. If you don't specify a value, AWS CodeBuild uses the AWS\-managed CMK for Amazon Simple Storage Service\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -107,7 +107,7 @@ A name for the project\. The name must be unique across all of the projects in y
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ServiceRole`  <a name="cfn-codebuild-project-servicerole"></a>
-The ARN of the service role that AWS CodeBuild uses to interact with services on your behalf\.  
+The Arn of the service role that AWS CodeBuild uses to interact with services on your behalf\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -155,7 +155,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 `Fn::GetAtt` returns a value for a specified attribute of this type\. This section lists the available attribute and a sample return value\.
 
 `Arn`  
-The ARN of the AWS CodeBuild project, such as `arn:aws:codebuild:us-west-2:123456789012:project/myProjectName`\.
+The Arn of the AWS CodeBuild project, such as `arn:aws:codebuild:us-west-2:123456789012:project/myProjectName`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 

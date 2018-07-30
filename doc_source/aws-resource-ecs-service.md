@@ -72,7 +72,7 @@ For more information on properties and valid parameters, see [CreateService](htt
 When you use Auto Scaling or Amazon Elastic Compute Cloud \(Amazon EC2\) to create container instances for an Amazon ECS cluster, the Amazon ECS service resource must have a dependency on the Auto Scaling group or the Amazon EC2 instances\. This makes the container instances available and associates them with the Amazon ECS cluster before AWS CloudFormation creates the Amazon ECS service\.
 
 `Cluster`  <a name="cfn-ecs-service-cluster"></a>
-The name or Amazon Resource Name \(ARN\) of the cluster that you want to run your Amazon ECS service on\. If you do not specify a cluster, Amazon ECS uses the default cluster\.  
+The name or Amazon Resource Name \(Arn\) of the cluster that you want to run your Amazon ECS service on\. If you do not specify a cluster, Amazon ECS uses the default cluster\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -132,7 +132,7 @@ The platform version on which to run your service\. If one is not specified, the
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `Role`  <a name="cfn-ecs-service-role"></a>
-The name or ARN of an AWS Identity and Access Management \(IAM\) role that allows your Amazon ECS container agent to make calls to your load balancer\.  
+The name or Arn of an AWS Identity and Access Management \(IAM\) role that allows your Amazon ECS container agent to make calls to your load balancer\.  
 In some cases, you might need to add a dependency on the service role's policy\. For more information, see IAM role policy in [DependsOn Attribute](aws-attribute-dependson.md)\.
 *Required*: Conditional\. Required only if you specify the `LoadBalancers` property\.  
 *Type*: String  
@@ -151,7 +151,7 @@ Details of the service registry\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `TaskDefinition`  <a name="cfn-ecs-service-taskdefinition"></a>
-The ARN of the task definition \(including the revision number\) that you want to run on the cluster, such as `arn:aws:ecs:us-east-1:123456789012:task-definition/mytask:3`\. You can't use `:latest` to specify a revision because it's ambiguous\. For example, if AWS CloudFormation needed to roll back an update, it wouldn't know which revision to roll back to\.  
+The Arn of the task definition \(including the revision number\) that you want to run on the cluster, such as `arn:aws:ecs:us-east-1:123456789012:task-definition/mytask:3`\. You can't use `:latest` to specify a revision because it's ambiguous\. For example, if AWS CloudFormation needed to roll back an update, it wouldn't know which revision to roll back to\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
@@ -160,9 +160,9 @@ The ARN of the task definition \(including the revision number\) that you want t
 
 ### Ref<a name="w3ab2c21c10d563c11b2"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN\.
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the Arn\.
 
-In the following sample, the `Ref` function returns the ARN of the `MyECSService` service, such as `arn:aws:ecs:us-west-2:123456789012:service/sample-webapp`\.
+In the following sample, the `Ref` function returns the Arn of the `MyECSService` service, such as `arn:aws:ecs:us-west-2:123456789012:service/sample-webapp`\.
 
 ```
 { "Ref": "MyECSService" }

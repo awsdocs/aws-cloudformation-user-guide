@@ -57,7 +57,7 @@ A unique token that must be supplied by the principal invoking the function\.
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `FunctionName`  <a name="cfn-lambda-permission-functionname"></a>
-The name \(physical ID\), Amazon Resource Name \(ARN\), or alias ARN of the Lambda function that you want to associate with this statement\. Lambda adds this statement to the function's access policy\.  
+The name \(physical ID\), Amazon Resource Name \(Arn\), or alias Arn of the Lambda function that you want to associate with this statement\. Lambda adds this statement to the function's access policy\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -76,7 +76,7 @@ This property is not supported by all event sources\. For more information, see 
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `SourceArn`  <a name="cfn-lambda-permission-sourcearn"></a>
-The ARN of a resource that is invoking your function\. When granting Amazon Simple Storage Service \(Amazon S3\) permission to invoke your function, specify this property with the bucket ARN as its value\. This ensures that events generated only from the specified bucket, not just any bucket from any AWS account that creates a mapping to your function, can invoke the function\.  
+The Arn of a resource that is invoking your function\. When granting Amazon Simple Storage Service \(Amazon S3\) permission to invoke your function, specify this property with the bucket Arn as its value\. This ensures that events generated only from the specified bucket, not just any bucket from any AWS account that creates a mapping to your function, can invoke the function\.  
 This property is not supported by all event sources\. For more information, see the `SourceArn` parameter for the [AddPermission](http://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html) action in the *AWS Lambda Developer Guide*\.
 *Required*: No  
 *Type*: String  

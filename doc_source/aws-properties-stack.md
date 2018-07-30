@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CloudFormation::Stack",
   "Properties" : {
-    "[NotificationARNs](#cfn-cloudformation-stack-notificationarns)" : [ String, ... ],
+    "[NotificationArns](#cfn-cloudformation-stack-notificationarns)" : [ String, ... ],
     "[Parameters](#cfn-cloudformation-stack-parameters)" : { [AWS CloudFormation Stack Parameters](aws-properties-stack-parameters.md) },
     "[Tags](#cfn-cloudformation-stack-tags)" : [ Resource Tag, ... ],
     "[TemplateURL](#cfn-cloudformation-stack-templateurl)" : String,
@@ -42,7 +42,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::CloudFormation::Stack"
 Properties:
-  [NotificationARNs](#cfn-cloudformation-stack-notificationarns):
+  [NotificationArns](#cfn-cloudformation-stack-notificationarns):
     - String
   [Parameters](#cfn-cloudformation-stack-parameters):
     [AWS CloudFormation Stack Parameters](aws-properties-stack-parameters.md)
@@ -54,7 +54,7 @@ Properties:
 
 ## Properties<a name="aws-properties-stack-prop"></a>
 
-`NotificationARNs`  <a name="cfn-cloudformation-stack-notificationarns"></a>
+`NotificationArns`  <a name="cfn-cloudformation-stack-notificationarns"></a>
 A list of existing Amazon SNS topics where notifications about stack events are sent\.  
 *Required*: No  
 *Type*: List of String values  

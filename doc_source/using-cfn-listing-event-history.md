@@ -11,7 +11,7 @@ The following example creates a stack with the name `myteststack` using the `sam
  2. [
  3.     {
  4.         "StackId": "arn:aws:cloudformation:us-east-2:123456789012:stack/myteststack/466df9e0-0dff-08e3-8e2f-5088487c4896",
- 5.         "Description": "AWS CloudFormation Sample Template S3_Bucket: Sample template showing how to create a publicly accessible S3 bucket. **WARNING** This template creates an S3 bucket.
+ 5.         "Description": "AWS CloudFormation Sample Template S3_Bucket: Sample template showing how to create a publicly accessible S3 bucket. **WArnING** This template creates an S3 bucket.
  6. You will be billed for the AWS resources used if you create a stack from this template.",
  7.         "Tags": [],
  8.         "Outputs": [

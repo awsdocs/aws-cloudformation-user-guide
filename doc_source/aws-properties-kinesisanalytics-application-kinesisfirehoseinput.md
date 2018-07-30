@@ -12,28 +12,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ResourceARN](#cfn-kinesisanalytics-application-kinesisfirehoseinput-resourcearn)" : String,
-  "[RoleARN](#cfn-kinesisanalytics-application-kinesisfirehoseinput-rolearn)" : String
+  "[ResourceArn](#cfn-kinesisanalytics-application-kinesisfirehoseinput-resourcearn)" : String,
+  "[RoleArn](#cfn-kinesisanalytics-application-kinesisfirehoseinput-rolearn)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisanalytics-application-kinesisfirehoseinput-syntax.yaml"></a>
 
 ```
-  [ResourceARN](#cfn-kinesisanalytics-application-kinesisfirehoseinput-resourcearn): String
-  [RoleARN](#cfn-kinesisanalytics-application-kinesisfirehoseinput-rolearn): String
+  [ResourceArn](#cfn-kinesisanalytics-application-kinesisfirehoseinput-resourcearn): String
+  [RoleArn](#cfn-kinesisanalytics-application-kinesisfirehoseinput-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-application-kinesisfirehoseinput-properties"></a>
 
-`ResourceARN`  <a name="cfn-kinesisanalytics-application-kinesisfirehoseinput-resourcearn"></a>
-The Amazon Resource Name \(ARN\) of the input Kinesis Firehose delivery stream\.  
+`ResourceArn`  <a name="cfn-kinesisanalytics-application-kinesisfirehoseinput-resourcearn"></a>
+The Amazon Resource Name \(Arn\) of the input Kinesis Firehose delivery stream\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`RoleARN`  <a name="cfn-kinesisanalytics-application-kinesisfirehoseinput-rolearn"></a>
-The ARN of the IAM role that Kinesis Data Analytics can assume to access the stream on your behalf\.   
+`RoleArn`  <a name="cfn-kinesisanalytics-application-kinesisfirehoseinput-rolearn"></a>
+The Arn of the IAM role that Kinesis Data Analytics can assume to access the stream on your behalf\.   
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

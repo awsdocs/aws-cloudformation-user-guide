@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-encryptionconfiguration-properties"></a>
 
 `ReplicaKmsKeyID`  <a name="cfn-s3-bucket-encryptionconfiguration-replicakmskeyid"></a>
-Specifies the AWS KMS Key ID \(Key ARN or Alias ARN\) for the destination bucket\. Amazon S3 uses this key to encrypt replicas\.  
+Specifies the AWS KMS Key ID \(Key Arn or Alias Arn\) for the destination bucket\. Amazon S3 uses this key to encrypt replicas\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

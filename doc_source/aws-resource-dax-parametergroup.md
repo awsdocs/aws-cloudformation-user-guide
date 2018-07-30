@@ -53,7 +53,7 @@ A map of DAX parameter names and values\.
 
 ### Ref<a name="w3ab2c21c10d331c11b2"></a>
 
-When you provide the logical ID of this resource to the `Ref` intrinsic function, `Ref` returns the ARN of the created parameter group\. For example:
+When you provide the logical ID of this resource to the `Ref` intrinsic function, `Ref` returns the Arn of the created parameter group\. For example:
 
 ```
 { "Ref": "MyDAXParameterGroup" }

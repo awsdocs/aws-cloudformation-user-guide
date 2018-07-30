@@ -10,19 +10,19 @@ The `KMSEncryptionConfig` property type specifies the AWS Key Management Service
 
 ```
 {
-  "[AWSKMSKeyARN](#cfn-kinesisfirehose-deliverystream-kmsencryptionconfig-awskmskeyarn)" : String
+  "[AWSKMSKeyArn](#cfn-kinesisfirehose-deliverystream-kmsencryptionconfig-awskmskeyarn)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisfirehose-deliverystream-kmsencryptionconfig-syntax.yaml"></a>
 
 ```
-[AWSKMSKeyARN](#cfn-kinesisfirehose-deliverystream-kmsencryptionconfig-awskmskeyarn): String
+[AWSKMSKeyArn](#cfn-kinesisfirehose-deliverystream-kmsencryptionconfig-awskmskeyarn): String
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-kmsencryptionconfig-properties"></a>
 
-`AWSKMSKeyARN`  <a name="cfn-kinesisfirehose-deliverystream-kmsencryptionconfig-awskmskeyarn"></a>
-The Amazon Resource Name \(ARN\) of the AWS KMS encryption key that Amazon S3 uses to encrypt data delivered by the Kinesis Firehose stream\. The key must belong to the same region as the destination S3 bucket\.  
+`AWSKMSKeyArn`  <a name="cfn-kinesisfirehose-deliverystream-kmsencryptionconfig-awskmskeyarn"></a>
+The Amazon Resource Name \(Arn\) of the AWS KMS encryption key that Amazon S3 uses to encrypt data delivered by the Kinesis Firehose stream\. The key must belong to the same region as the destination S3 bucket\.  
 *Required*: Yes  
 *Type*: String

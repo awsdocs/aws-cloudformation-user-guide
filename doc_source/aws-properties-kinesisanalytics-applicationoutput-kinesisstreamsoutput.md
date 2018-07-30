@@ -12,28 +12,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ResourceARN](#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-resourcearn)" : String,
-  "[RoleARN](#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-rolearn)" : String
+  "[ResourceArn](#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-resourcearn)" : String,
+  "[RoleArn](#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-rolearn)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput-syntax.yaml"></a>
 
 ```
-  [ResourceARN](#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-resourcearn): String
-  [RoleARN](#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-rolearn): String
+  [ResourceArn](#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-resourcearn): String
+  [RoleArn](#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput-properties"></a>
 
-`ResourceARN`  <a name="cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-resourcearn"></a>
-The Amazon Resource Name \(ARN\) of the destination Amazon Kinesis stream to write to\.  
+`ResourceArn`  <a name="cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-resourcearn"></a>
+The Amazon Resource Name \(Arn\) of the destination Amazon Kinesis stream to write to\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`RoleARN`  <a name="cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-rolearn"></a>
-The ARN of the IAM role that Amazon Kinesis Data Analytics can assume to write to the destination stream on your behalf\.   
+`RoleArn`  <a name="cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-rolearn"></a>
+The Arn of the IAM role that Amazon Kinesis Data Analytics can assume to write to the destination stream on your behalf\.   
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

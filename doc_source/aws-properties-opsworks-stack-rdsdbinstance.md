@@ -35,6 +35,6 @@ The master user name of the registered database\.
 *Type*: String
 
 `RdsDbInstanceArn`  <a name="cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon RDS DB instance to register with the AWS OpsWorks stack\.  
+The Amazon Resource Name \(Arn\) of the Amazon RDS DB instance to register with the AWS OpsWorks stack\.  
 *Required*: Yes  
 *Type*: String

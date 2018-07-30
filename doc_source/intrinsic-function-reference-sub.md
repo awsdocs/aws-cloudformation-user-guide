@@ -93,7 +93,7 @@ Name: !Sub
 
 ### Fn::Sub without a Mapping<a name="w3ab2c21c28c59c11b6"></a>
 
-The following example uses Fn::Sub with the `AWS::Region` and `AWS::AccountId` pseudo parameters and the `vpc` resource logical ID to create an Amazon Resource Name \(ARN\) for a VPC\.
+The following example uses Fn::Sub with the `AWS::Region` and `AWS::AccountId` pseudo parameters and the `vpc` resource logical ID to create an Amazon Resource Name \(Arn\) for a VPC\.
 
 #### JSON<a name="intrinsic-function-reference-sub-example-3.json"></a>
 

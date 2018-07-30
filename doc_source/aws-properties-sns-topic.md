@@ -62,7 +62,7 @@ If you specify a name, you cannot perform updates that require replacement of th
 
 ### Ref<a name="w3ab2c21c10e1128c11b2"></a>
 
-For the `AWS::SNS::Topic` resource, the `Ref` intrinsic function returns the topic ARN, for example: `arn:aws:sns:us-east-1:123456789012:mystack-mytopic-NZJ5JSMVGFIE`\.
+For the `AWS::SNS::Topic` resource, the `Ref` intrinsic function returns the topic Arn, for example: `arn:aws:sns:us-east-1:123456789012:mystack-mytopic-NZJ5JSMVGFIE`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 

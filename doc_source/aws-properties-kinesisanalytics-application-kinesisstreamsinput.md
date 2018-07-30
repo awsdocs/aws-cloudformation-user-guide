@@ -12,28 +12,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ResourceARN](#cfn-kinesisanalytics-application-kinesisstreamsinput-resourcearn)" : String,
-  "[RoleARN](#cfn-kinesisanalytics-application-kinesisstreamsinput-rolearn)" : String
+  "[ResourceArn](#cfn-kinesisanalytics-application-kinesisstreamsinput-resourcearn)" : String,
+  "[RoleArn](#cfn-kinesisanalytics-application-kinesisstreamsinput-rolearn)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisanalytics-application-kinesisstreamsinput-syntax.yaml"></a>
 
 ```
-  [ResourceARN](#cfn-kinesisanalytics-application-kinesisstreamsinput-resourcearn): String
-  [RoleARN](#cfn-kinesisanalytics-application-kinesisstreamsinput-rolearn): String
+  [ResourceArn](#cfn-kinesisanalytics-application-kinesisstreamsinput-resourcearn): String
+  [RoleArn](#cfn-kinesisanalytics-application-kinesisstreamsinput-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-application-kinesisstreamsinput-properties"></a>
 
-`ResourceARN`  <a name="cfn-kinesisanalytics-application-kinesisstreamsinput-resourcearn"></a>
-The Amazon Resource Name \(ARN\) of the input Amazon Kinesis stream to read\.  
+`ResourceArn`  <a name="cfn-kinesisanalytics-application-kinesisstreamsinput-resourcearn"></a>
+The Amazon Resource Name \(Arn\) of the input Amazon Kinesis stream to read\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`RoleARN`  <a name="cfn-kinesisanalytics-application-kinesisstreamsinput-rolearn"></a>
-The ARN of the IAM role that Kinesis Data Analytics can assume to access the stream on your behalf\.   
+`RoleArn`  <a name="cfn-kinesisanalytics-application-kinesisstreamsinput-rolearn"></a>
+The Arn of the IAM role that Kinesis Data Analytics can assume to access the stream on your behalf\.   
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

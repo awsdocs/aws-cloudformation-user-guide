@@ -107,7 +107,7 @@ If you specify your source code as inline text by specifying the `ZipFile` prope
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `KmsKeyArn`  <a name="cfn-lambda-function-kmskeyarn"></a>
-The Amazon Resource Name \(ARN\) of an AWS Key Management Service \(AWS KMS\) key that Lambda uses to encrypt and decrypt environment variable values\.  
+The Amazon Resource Name \(Arn\) of an AWS Key Management Service \(AWS KMS\) key that Lambda uses to encrypt and decrypt environment variable values\.  
 *Type*: String  
 *Required*: No  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -127,7 +127,7 @@ The maximum of concurrent executions you want reserved for the function\. For mo
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Role`  <a name="cfn-lambda-function-role"></a>
-The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) execution role that Lambda assumes when it runs your code to access AWS services\.  
+The Amazon Resource Name \(Arn\) of the AWS Identity and Access Management \(IAM\) execution role that Lambda assumes when it runs your code to access AWS services\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -183,7 +183,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 `Arn`  
-The ARN of the Lambda function, such as `arn:aws:lambda:us-west-2:123456789012:MyStack-AMILookUp-NT5EUXTNTXXD`\.
+The Arn of the Lambda function, such as `arn:aws:lambda:us-west-2:123456789012:MyStack-AMILookUp-NT5EUXTNTXXD`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 

@@ -35,6 +35,6 @@ The prefix \(folder name\) where the GameLift build package files are located\.
 *Type*: String
 
 `RoleArn`  <a name="cfn-gamelift-build-storage-rolearn"></a>
-An AWS Identity and Access Management \(IAM\) role Amazon Resource Name \(ARN\) that GameLift can assume to retrieve the build package files from Amazon Simple Storage Service \(Amazon S3\)\.  
+An AWS Identity and Access Management \(IAM\) role Amazon Resource Name \(Arn\) that GameLift can assume to retrieve the build package files from Amazon Simple Storage Service \(Amazon S3\)\.  
 *Required*: Yes  
 *Type*: String

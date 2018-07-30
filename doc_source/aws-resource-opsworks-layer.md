@@ -96,7 +96,7 @@ For AWS OpsWorks stacks that are running in a VPC, whether to automatically assi
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `CustomInstanceProfileArn`  <a name="cfn-opsworks-layer-custinstanceprofilearn"></a>
-The Amazon Resource Name \(ARN\) of an IAM instance profile that is to be used for the Amazon EC2 instances in this layer\.  
+The Amazon Resource Name \(Arn\) of an IAM instance profile that is to be used for the Amazon EC2 instances in this layer\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

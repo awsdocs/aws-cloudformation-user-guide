@@ -37,9 +37,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MinSize](#cfn-as-group-minsize)" : String,
       "[NotificationConfigurations](#cfn-as-group-notificationconfigurations)" : [ [*NotificationConfiguration*](aws-properties-as-notificationconfigurations.md), ... ],
       "[PlacementGroup](#cfn-as-group-placementgroup)" : String,
-      "[ServiceLinkedRoleARN](#cfn-autoscaling-autoscalinggroup-servicelinkedrolearn)" : String,
+      "[ServiceLinkedRoleArn](#cfn-autoscaling-autoscalinggroup-servicelinkedrolearn)" : String,
       "[Tags](#cfn-as-group-tags)" : [ [*TagProperty*](aws-properties-as-tags.md), ... ],
-      "[TargetGroupARNs](#cfn-as-group-targetgrouparns)" : [ String, ... ],
+      "[TargetGroupArns](#cfn-as-group-targetgrouparns)" : [ String, ... ],
       "[TerminationPolicies](#cfn-as-group-termpolicy)" : [ String, ... ],
       "[VPCZoneIdentifier](#cfn-as-group-vpczoneidentifier)" : [ String, ... ]
    }
@@ -72,10 +72,10 @@ Properties:
   [NotificationConfigurations](#cfn-as-group-notificationconfigurations):
     - [*NotificationConfiguration*](aws-properties-as-notificationconfigurations.md)
   [PlacementGroup](#cfn-as-group-placementgroup): String
-  [ServiceLinkedRoleARN](#cfn-autoscaling-autoscalinggroup-servicelinkedrolearn): String
+  [ServiceLinkedRoleArn](#cfn-autoscaling-autoscalinggroup-servicelinkedrolearn): String
   [Tags](#cfn-as-group-tags):
     - [*TagProperty*](aws-properties-as-tags.md)
-  [TargetGroupARNs](#cfn-as-group-targetgrouparns):
+  [TargetGroupArns](#cfn-as-group-targetgrouparns):
     - String
   [TerminationPolicies](#cfn-as-group-termpolicy):
     - String
@@ -153,7 +153,7 @@ The lifecycle hooks for the group, which specify actions to perform when Auto Sc
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `LoadBalancerNames`  <a name="cfn-as-group-loadbalancernames"></a>
-A list of Classic load balancers associated with this Auto Scaling group\. To specify Application load balancers, use `TargetGroupARNs`\.  
+A list of Classic load balancers associated with this Auto Scaling group\. To specify Application load balancers, use `TargetGroupArns`\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -188,8 +188,8 @@ The name of an existing cluster placement group into which you want to launch yo
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ServiceLinkedRoleARN`  <a name="cfn-autoscaling-autoscalinggroup-servicelinkedrolearn"></a>
-The Amazon Resource Name \(ARN\) of the service\-linked role that the Auto Scaling group uses to call other AWS services on your behalf\. By default, Auto Scaling uses a service\-linked role named AWSServiceRoleForAutoScaling, which it creates if it does not exist\.  
+`ServiceLinkedRoleArn`  <a name="cfn-autoscaling-autoscalinggroup-servicelinkedrolearn"></a>
+The Amazon Resource Name \(Arn\) of the service\-linked role that the Auto Scaling group uses to call other AWS services on your behalf\. By default, Auto Scaling uses a service\-linked role named AWSServiceRoleForAutoScaling, which it creates if it does not exist\.  
 Length Constraints: Minimum length of 1\. Maximum length of 1600\.  
 Pattern: \[\\u0020\-\\uD7FF\\uE000\-\\uFFFD\\uD800\\uDC00\-\\uDBFF\\uDFFF\\r\\n\\t\]\*  
 *Required*: No  
@@ -202,8 +202,8 @@ The Auto Scaling tags to attach to this resource\. For more information about Au
 *Type*: List of [Amazon EC2 Auto Scaling AutoScalingGroup TagProperty](aws-properties-as-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`TargetGroupARNs`  <a name="cfn-as-group-targetgrouparns"></a>
-A list of Amazon Resource Names \(ARN\) of target groups to associate with the Auto Scaling group\.  
+`TargetGroupArns`  <a name="cfn-as-group-targetgrouparns"></a>
+A list of Amazon Resource Names \(Arn\) of target groups to associate with the Auto Scaling group\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

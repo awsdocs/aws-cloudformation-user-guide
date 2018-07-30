@@ -95,7 +95,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 `Arn`  
-The event rule Amazon Resource Name \(ARN\), such as `arn:aws:events:``us-east-2``:123456789012:rule/example`\.
+The event rule Amazon Resource Name \(Arn\), such as `arn:aws:events:``us-east-2``:123456789012:rule/example`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 

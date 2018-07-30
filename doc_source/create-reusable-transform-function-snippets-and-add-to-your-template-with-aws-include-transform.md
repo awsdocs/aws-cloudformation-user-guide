@@ -70,7 +70,7 @@ The location is an Amazon S3 URI, with a specific file name in an S3 bucket\. Fo
 
 When using `AWS::Include`, keep the following in mind:
 + `AWS::Include` is supported only in regions where AWS Lambda is available\. For a list of regions where Lambda is available, see [http://docs.aws.amazon.com/general/latest/gr/rande.html#lambda_region](http://docs.aws.amazon.com/general/latest/gr/rande.html#lambda_region)\.
-+ We currently support Amazon S3 URI, but no other Amazon S3 format \(such as Amazon S3 ARN\)\. It must be an Amazon S3 bucket, as opposed to something like a GitHub repository\.
++ We currently support Amazon S3 URI, but no other Amazon S3 format \(such as Amazon S3 Arn\)\. It must be an Amazon S3 bucket, as opposed to something like a GitHub repository\.
 + Anyone with access to the Amazon S3 URL can include the snippet in their template\.
 + Your template snippets must be valid YAML or JSON\.
 + Your template snippets must be valid key–value objects, for example `"KeyName": "keyValue"`\.

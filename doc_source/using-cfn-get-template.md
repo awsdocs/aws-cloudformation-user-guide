@@ -20,7 +20,7 @@ The following example shows the template for the `myteststack` stack:
 10.                 }
 11.             }
 12.         },
-13.         "Description": "AWS CloudFormation Sample Template S3_Bucket: Sample template showing how to create a publicly accessible S3 bucket. **WARNING** This template creates an S3 bucket.
+13.         "Description": "AWS CloudFormation Sample Template S3_Bucket: Sample template showing how to create a publicly accessible S3 bucket. **WArnING** This template creates an S3 bucket.
 14. You will be billed for the AWS resources used if you create a stack from this template.",
 15.         "Resources": {
 16.             "S3Bucket": {

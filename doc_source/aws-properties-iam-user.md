@@ -60,7 +60,7 @@ Creates a login profile so that the user can access the AWS Management Console\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ManagedPolicyArns`  <a name="cfn-iam-user-managepolicyarns"></a>
-One or more managed policy ARNs to attach to this user\.  
+One or more managed policy Arns to attach to this user\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -100,7 +100,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 `Arn`  
-Returns the Amazon Resource Name \(ARN\) for the specified AWS::IAM::User resource\. For example: `arn:aws:iam::123456789012:user/mystack-myuser-1CCXAFG2H2U4D`\.
+Returns the Amazon Resource Name \(Arn\) for the specified AWS::IAM::User resource\. For example: `arn:aws:iam::123456789012:user/mystack-myuser-1CCXAFG2H2U4D`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 

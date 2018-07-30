@@ -47,7 +47,7 @@ The subscription's protocol\. For more information, see the [Subscribe Protocol]
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `TopicArn`  <a name="cfn-sns-topicarn"></a>
-The Amazon Resource Name \(ARN\) of the topic to subscribe to\.  
+The Amazon Resource Name \(Arn\) of the topic to subscribe to\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

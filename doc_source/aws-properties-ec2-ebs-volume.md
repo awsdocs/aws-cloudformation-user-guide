@@ -96,7 +96,7 @@ The number of I/O operations per second \(IOPS\) that the volume supports\. For 
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-ec2-ebs-volume-kmskeyid"></a>
-The Amazon Resource Name \(ARN\) of the AWS Key Management Service master key that is used to create the encrypted volume, such as `arn:aws:kms:``us-east-2``:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef`\. If you create an encrypted volume and don't specify this property, AWS CloudFormation uses the default master key\.  
+The Amazon Resource Name \(Arn\) of the AWS Key Management Service master key that is used to create the encrypted volume, such as `arn:aws:kms:``us-east-2``:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef`\. If you create an encrypted volume and don't specify this property, AWS CloudFormation uses the default master key\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: Updates are not supported\.

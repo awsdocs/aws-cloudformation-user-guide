@@ -156,7 +156,7 @@ The [AWS::CloudWatch::Alarm](aws-properties-cw-alarm.md) resource CPUAlarmHigh s
 
 ## Auto Scaling Group with Notifications<a name="scenario-as-notification"></a>
 
-This example shows an [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md) resource that sends Amazon SNS notifications when the specified events take place\. The `NotificationConfigurations` property specifies the SNS topic where AWS CloudFormation sends a notification and the events that will cause AWS CloudFormation to send notifications\. When the events specified by `NotificationTypes` occur, AWS CloudFormation will send a notification to the SNS topic specified by `TopicARN`\. In this example, AWS CloudFormation sends a notification to the SNS topic topic1 when the `autoscaling:EC2_INSTANCE_LAUNCH` and `autoscaling:EC2_INSTANCE_LAUNCH_ERROR` events occur\.
+This example shows an [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md) resource that sends Amazon SNS notifications when the specified events take place\. The `NotificationConfigurations` property specifies the SNS topic where AWS CloudFormation sends a notification and the events that will cause AWS CloudFormation to send notifications\. When the events specified by `NotificationTypes` occur, AWS CloudFormation will send a notification to the SNS topic specified by `TopicArn`\. In this example, AWS CloudFormation sends a notification to the SNS topic topic1 when the `autoscaling:EC2_INSTANCE_LAUNCH` and `autoscaling:EC2_INSTANCE_LAUNCH_ERROR` events occur\.
 
 ### JSON<a name="quickref-autoscaling-example-4.json"></a>
 
@@ -171,7 +171,7 @@ This example shows an [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-gro
  8.     "DesiredCapacity" : "1",
  9.     "NotificationConfigurations" : [
 10.       {
-11.         "TopicARN" : { "Ref" : "topic1" },
+11.         "TopicArn" : { "Ref" : "topic1" },
 12.         "NotificationTypes" : [
 13.           "autoscaling:EC2_INSTANCE_LAUNCH",
 14.           "autoscaling:EC2_INSTANCE_LAUNCH_ERROR",
@@ -198,7 +198,7 @@ This example shows an [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-gro
  9.     MaxSize: '2'
 10.     DesiredCapacity: '1'
 11.     NotificationConfigurations:
-12.     - TopicARN:
+12.     - TopicArn:
 13.         Ref: topic1
 14.       NotificationTypes:
 15.       - autoscaling:EC2_INSTANCE_LAUNCH

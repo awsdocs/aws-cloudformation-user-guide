@@ -23,7 +23,7 @@ The `RedrivePolicy` type is a property of the [AWS::SQS::Queue](aws-properties-s
 ## Properties<a name="w3ab2c21c14e1987b7"></a>
 
 `deadLetterTargetArn`  <a name="aws-sqs-queue-redrivepolicy-targetarn"></a>
-The Amazon Resource Name \(ARN\) of the dead\-letter queue to which Amazon SQS moves messages after the value of `maxReceiveCount` is exceeded\.  
+The Amazon Resource Name \(Arn\) of the dead\-letter queue to which Amazon SQS moves messages after the value of `maxReceiveCount` is exceeded\.  
 *Required*: Yes  
 *Type*: String
 

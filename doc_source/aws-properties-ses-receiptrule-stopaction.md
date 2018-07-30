@@ -34,7 +34,7 @@ Valid values include: `RuleSet`\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `TopicArn`  <a name="cfn-ses-receiptrule-stopaction-topicarn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon SNS topic to notify when the stop action is taken\. An example of an Amazon SNS topic ARN is `arn:aws:sns:us-west-2:123456789012:MyTopic`\.   
+The Amazon Resource Name \(Arn\) of the Amazon SNS topic to notify when the stop action is taken\. An example of an Amazon SNS topic Arn is `arn:aws:sns:us-west-2:123456789012:MyTopic`\.   
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

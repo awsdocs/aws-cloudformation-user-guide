@@ -21,6 +21,6 @@
 ## Properties<a name="w3ab2c21c14e1520b7"></a>
 
 `TargetArn`  <a name="cfn-lambda-function-deadletterconfig-targetarn"></a>
-The Amazon Resource Name \(ARN\) of a resource where Lambda delivers unprocessed events, such as an Amazon SNS topic or Amazon Simple Queue Service \(Amazon SQS\) queue\. For the Lambda function [execution role](http://docs.aws.amazon.com/lambda/latest/dg/with-s3-example-create-iam-role.html), you must explicitly provide the relevant permissions so that access to your DLQ resource is part of the execution role for your Lambda function\.   
+The Amazon Resource Name \(Arn\) of a resource where Lambda delivers unprocessed events, such as an Amazon SNS topic or Amazon Simple Queue Service \(Amazon SQS\) queue\. For the Lambda function [execution role](http://docs.aws.amazon.com/lambda/latest/dg/with-s3-example-create-iam-role.html), you must explicitly provide the relevant permissions so that access to your DLQ resource is part of the execution role for your Lambda function\.   
 *Required*: No  
 *Type*: String

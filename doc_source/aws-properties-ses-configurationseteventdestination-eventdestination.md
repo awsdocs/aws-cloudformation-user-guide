@@ -51,7 +51,7 @@ Sets whether Amazon SES publishes events to this destination when you send an em
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `KinesisFirehoseDestination`  <a name="cfn-ses-configurationseteventdestination-eventdestination-kinesisfirehosedestination"></a>
-Contains the delivery stream ARN and the IAM role ARN associated with an Kinesis Firehose event destination\.  
+Contains the delivery stream Arn and the IAM role Arn associated with an Kinesis Firehose event destination\.  
  *Required*: No  
  *Type*: [Amazon SES ConfigurationSetEventDestination KinesisFirehoseDestination](aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

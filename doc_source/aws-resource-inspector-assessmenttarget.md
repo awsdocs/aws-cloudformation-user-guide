@@ -42,7 +42,7 @@ The name of the Amazon Inspector assessment target\.
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `ResourceGroupArn`  <a name="cfn-inspector-assessmenttarget-resourcegrouparn"></a>
-The ARN that specifies the resource group that is associated with the assessment target\.   
+The Arn that specifies the resource group that is associated with the assessment target\.   
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
@@ -54,7 +54,7 @@ The ARN that specifies the resource group that is associated with the assessment
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
 `Arn`  
-The Amazon Resource Name \(ARN\) that specifies the assessment target that is created\. 
+The Amazon Resource Name \(Arn\) that specifies the assessment target that is created\. 
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
 

@@ -140,7 +140,7 @@ The version of the cache engine to be used for this cluster\.
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 `NotificationTopicArn`  <a name="cfn-elasticache-cachecluster-notificationtopicarn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service \(SNS\) topic to which notifications will be sent\.  
+The Amazon Resource Name \(Arn\) of the Amazon Simple Notification Service \(SNS\) topic to which notifications will be sent\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -179,7 +179,7 @@ The weekly time range \(in UTC\) during which system maintenance can occur\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `SnapshotArns`  <a name="cfn-elasticache-cachecluster-snapshotarn"></a>
-The ARN of the snapshot file that you want to use to seed a new Redis cache cluster\. If you manage a Redis instance outside of Amazon ElastiCache, you can create a new cache cluster in ElastiCache by using a snapshot file that is stored in an Amazon S3 bucket\.  
+The Arn of the snapshot file that you want to use to seed a new Redis cache cluster\. If you manage a Redis instance outside of Amazon ElastiCache, you can create a new cache cluster in ElastiCache by using a snapshot file that is stored in an Amazon S3 bucket\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

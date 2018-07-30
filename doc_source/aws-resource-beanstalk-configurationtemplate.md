@@ -75,7 +75,7 @@ The options for the Elastic Beanstalk configuration, such as the instance type\.
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 `PlatformArn`  <a name="cfn-elasticbeanstalk-configurationtemplate-platformarn"></a>
-The Amazon Resource Name \(ARN\) of the custom platform\. For more information, see [ Custom Platforms](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/custom-platforms.html) in the *AWS Elastic Beanstalk Developer Guide*\.  
+The Amazon Resource Name \(Arn\) of the custom platform\. For more information, see [ Custom Platforms](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/custom-platforms.html) in the *AWS Elastic Beanstalk Developer Guide*\.  
 If you specify `PlatformArn`, then don't specify `SolutionStackName`\.
  *Required*: No  
  *Type*: String  

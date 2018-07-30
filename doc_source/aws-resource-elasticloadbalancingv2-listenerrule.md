@@ -54,7 +54,7 @@ The conditions under which a rule takes effect\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ListenerArn`  <a name="cfn-elasticloadbalancingv2-listenerrule-listenerarn"></a>
-The Amazon Resource Name \(ARN\) of the listener that the rule applies to\.  
+The Amazon Resource Name \(Arn\) of the listener that the rule applies to\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -71,7 +71,7 @@ For valid values, see the `Priority` parameter for the [CreateRule](http://docs.
 
 ### Ref<a name="w3ab2c21c10d644c11b2"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the rule's ARN, such as `arn:aws:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee`\.
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the rule's Arn, such as `arn:aws:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 

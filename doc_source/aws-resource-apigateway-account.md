@@ -38,7 +38,7 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-account-properties"></a>
 
 `CloudWatchRoleArn`  <a name="cfn-apigateway-account-cloudwatchrolearn"></a>
-The Amazon Resource Name \(ARN\) of an IAM role that has write access to CloudWatch Logs in your account\.  
+The Amazon Resource Name \(Arn\) of an IAM role that has write access to CloudWatch Logs in your account\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

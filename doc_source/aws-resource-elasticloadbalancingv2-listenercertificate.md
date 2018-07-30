@@ -42,7 +42,7 @@ Certificates specified for the listener\. Duplicates not allowed\.
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `ListenerArn`  <a name="cfn-elasticloadbalancingv2-listenercertificate-listenerarn"></a>
-The Amazon Resource Name \(ARN\) of the listener\.  
+The Amazon Resource Name \(Arn\) of the listener\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 

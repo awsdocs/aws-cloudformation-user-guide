@@ -23,7 +23,7 @@
 ## Properties<a name="w3ab2c21c14e1365b7"></a>
 
 `RoleArn`  <a name="cfn-iot-topicrule-republishaction-rolearn"></a>
-The ARN of the IAM role that grants publishing access\.  
+The Arn of the IAM role that grants publishing access\.  
 *Required*: Yes  
 *Type*: String
 

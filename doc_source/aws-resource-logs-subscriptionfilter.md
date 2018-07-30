@@ -40,7 +40,7 @@ Properties:
 ## Properties<a name="w3ab2c21c10d884b9"></a>
 
 `DestinationArn`  <a name="cfn-cwl-subscriptionfilter-destinationarn"></a>
-The Amazon Resource Name \(ARN\) of the Kinesis stream, Kinesis Data Firehose delivery stream, or Lambda function that you want to use as the subscription feed destination\.  
+The Amazon Resource Name \(Arn\) of the Kinesis stream, Kinesis Data Firehose delivery stream, or Lambda function that you want to use as the subscription feed destination\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

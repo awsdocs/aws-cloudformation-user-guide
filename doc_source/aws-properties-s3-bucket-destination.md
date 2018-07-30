@@ -38,7 +38,7 @@ Although optional, we recommend that the value be set to prevent problems if the
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `BucketArn`  <a name="cfn-s3-bucket-destination-bucketarn"></a>
-The Amazon Resource Name \(ARN\) of the bucket where analytics results are published\. This destination bucket must be in the same region as the bucket used for the analytics or inventory configuration\.  
+The Amazon Resource Name \(Arn\) of the bucket where analytics results are published\. This destination bucket must be in the same region as the bucket used for the analytics or inventory configuration\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

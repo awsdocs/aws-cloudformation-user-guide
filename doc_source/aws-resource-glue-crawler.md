@@ -54,7 +54,7 @@ Properties:
 ## Properties<a name="aws-resource-glue-crawler-properties"></a>
 
 `Role`  <a name="cfn-glue-crawler-role"></a>
-The Amazon Resource Name \(ARN\) of an IAM role that's used to access customer resources, such as Amazon S3 data\.  
+The Amazon Resource Name \(Arn\) of an IAM role that's used to access customer resources, such as Amazon S3 data\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

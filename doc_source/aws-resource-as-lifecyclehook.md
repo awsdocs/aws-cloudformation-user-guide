@@ -25,8 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[LifecycleHookName](#cfn-as-lifecyclehook-lifecyclehookname)" : String,
     "[LifecycleTransition](#cfn-as-lifecyclehook-lifecycletransition)" : String,
     "[NotificationMetadata](#cfn-as-lifecyclehook-notificationmetadata)" : String,
-    "[NotificationTargetARN](#cfn-as-lifecyclehook-notificationtargetarn)" : String,
-    "[RoleARN](#cfn-as-lifecyclehook-rolearn)" : String
+    "[NotificationTargetArn](#cfn-as-lifecyclehook-notificationtargetarn)" : String,
+    "[RoleArn](#cfn-as-lifecyclehook-rolearn)" : String
   }
 }
 ```
@@ -42,8 +42,8 @@ Properties:
   [LifecycleHookName](#cfn-as-lifecyclehook-lifecyclehookname): String
   [LifecycleTransition](#cfn-as-lifecyclehook-lifecycletransition): String
   [NotificationMetadata](#cfn-as-lifecyclehook-notificationmetadata): String
-  [NotificationTargetARN](#cfn-as-lifecyclehook-notificationtargetarn): String
-  [RoleARN](#cfn-as-lifecyclehook-rolearn): String
+  [NotificationTargetArn](#cfn-as-lifecyclehook-notificationtargetarn): String
+  [RoleArn](#cfn-as-lifecyclehook-rolearn): String
 ```
 
 ## Properties<a name="w3ab2c21c10d139b9"></a>
@@ -86,14 +86,14 @@ Additional information that you want to include when Auto Scaling sends a messag
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`NotificationTargetARN`  <a name="cfn-as-lifecyclehook-notificationtargetarn"></a>
-The Amazon resource name \(ARN\) of the notification target that Auto Scaling uses to notify you when an instance is in the transition state for the lifecycle hook\. You can specify an Amazon SQS queue or an Amazon SNS topic\. The notification message includes the following information: lifecycle action token, user account ID, Auto Scaling group name, lifecycle hook name, instance ID, lifecycle transition, and notification metadata\.  
+`NotificationTargetArn`  <a name="cfn-as-lifecyclehook-notificationtargetarn"></a>
+The Amazon resource name \(Arn\) of the notification target that Auto Scaling uses to notify you when an instance is in the transition state for the lifecycle hook\. You can specify an Amazon SQS queue or an Amazon SNS topic\. The notification message includes the following information: lifecycle action token, user account ID, Auto Scaling group name, lifecycle hook name, instance ID, lifecycle transition, and notification metadata\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`RoleARN`  <a name="cfn-as-lifecyclehook-rolearn"></a>
-The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target\. The role requires permissions to Amazon SNS and Amazon SQS\.  
+`RoleArn`  <a name="cfn-as-lifecyclehook-rolearn"></a>
+The Arn of the IAM role that allows the Auto Scaling group to publish to the specified notification target\. The role requires permissions to Amazon SNS and Amazon SQS\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -122,8 +122,8 @@ In the following template snippet, the Auto Scaling pauses instances before comp
   "Properties": {
     "AutoScalingGroupName": { "Ref": "myAutoScalingGroup" },
     "LifecycleTransition": "autoscaling:EC2_INSTANCE_TERMINATING",
-    "NotificationTargetARN": { "Ref": "lifecycleHookTopic" },
-    "RoleARN": { "Fn::GetAtt": [ "lifecycleHookRole", "Arn" ] }
+    "NotificationTargetArn": { "Ref": "lifecycleHookTopic" },
+    "RoleArn": { "Fn::GetAtt": [ "lifecycleHookRole", "Arn" ] }
   }
 }
 ```
@@ -137,9 +137,9 @@ myLifecycleHook:
     AutoScalingGroupName: 
       Ref: myAutoScalingGroup
     LifecycleTransition: "autoscaling:EC2_INSTANCE_TERMINATING"
-    NotificationTargetARN: 
+    NotificationTargetArn: 
       Ref: lifecycleHookTopic
-    RoleARN: 
+    RoleArn: 
       Fn::GetAtt: 
         - lifecycleHookRole
         - Arn
