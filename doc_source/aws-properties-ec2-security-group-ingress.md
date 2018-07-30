@@ -149,8 +149,8 @@ The following template snippet creates an EC2 security group with an ingress rul
                     {
                         "IpProtocol": "tcp",
                         "CidrIp": "0.0.0.0/0",
-                        "FromPort": "22",
-                        "ToPort": "22"
+                        "FromPort": 22,
+                        "ToPort": 22
                     }
                 ]
             }
@@ -162,8 +162,8 @@ The following template snippet creates an EC2 security group with an ingress rul
                     "Ref": "SGBase"
                 },
                 "IpProtocol": "tcp",
-                "FromPort": "80",
-                "ToPort": "80",
+                "FromPort": 80,
+                "ToPort": 80,
                 "SourceSecurityGroupName": {
                     "Ref": "SGBase"
                 }
@@ -185,15 +185,15 @@ Resources:
       SecurityGroupIngress:
         - IpProtocol: tcp
           CidrIp: 0.0.0.0/0
-          FromPort: '22'
-          ToPort: '22'
+          FromPort: 22
+          ToPort: 22
   SGBaseIngress:
     Type: 'AWS::EC2::SecurityGroupIngress'
     Properties:
       GroupName: !Ref SGBase
       IpProtocol: tcp
-      FromPort: '80'
-      ToPort: '80'
+      FromPort: 80
+      ToPort: 80
       SourceSecurityGroupName: !Ref SGBase
 ```
 
@@ -225,8 +225,8 @@ In some cases, you might have an originating \(source\) security group to which 
       "Type": "AWS::EC2::SecurityGroupEgress",
       "Properties":{
         "IpProtocol": "tcp",
-        "FromPort": "0",
-        "ToPort": "65535",
+        "FromPort": 0,
+        "ToPort": 65535,
         "DestinationSecurityGroupId": {
           "Fn::GetAtt": [
             "TargetSG",
@@ -245,8 +245,8 @@ In some cases, you might have an originating \(source\) security group to which 
       "Type": "AWS::EC2::SecurityGroupIngress",
       "Properties":{
         "IpProtocol": "tcp",
-        "FromPort": "0",
-        "ToPort": "65535",
+        "FromPort": 0,
+        "ToPort": 65535,
         "SourceSecurityGroupId": {
           "Fn::GetAtt": [
             "SourceSG",
@@ -284,8 +284,8 @@ Resources:
     Type: AWS::EC2::SecurityGroupEgress
     Properties:
       IpProtocol: tcp
-      FromPort: '0'
-      ToPort: '65535'
+      FromPort: 0
+      ToPort: 65535
       DestinationSecurityGroupId:
         Fn::GetAtt:
         - TargetSG
@@ -298,8 +298,8 @@ Resources:
     Type: AWS::EC2::SecurityGroupIngress
     Properties:
       IpProtocol: tcp
-      FromPort: '0'
-      ToPort: '65535'
+      FromPort: 0
+      ToPort: 65535
       SourceSecurityGroupId:
         Fn::GetAtt:
         - SourceSG
@@ -324,8 +324,8 @@ To allow ping requests, add the ICMP protocol type and specify `8` \(echo reques
     "GroupDescription" : "SG to test ping",
     "VpcId" : {"Ref" : "VPC"},
     "SecurityGroupIngress" : [ 
-      { "IpProtocol" : "tcp", "FromPort" : "22", "ToPort" : "22", "CidrIp" : "10.0.0.0/24" },
-      { "IpProtocol" : "icmp", "FromPort" : "8", "ToPort" : "-1", "CidrIp" : "10.0.0.0/24" }
+      { "IpProtocol" : "tcp", "FromPort" : 22, "ToPort" : 22, "CidrIp" : "10.0.0.0/24" },
+      { "IpProtocol" : "icmp", "FromPort" : 8, "ToPort" : -1, "CidrIp" : "10.0.0.0/24" }
     ]
   }
 }
@@ -343,11 +343,11 @@ SGPing:
       Ref: VPC
     SecurityGroupIngress:
     - IpProtocol: tcp
-      FromPort: '22'
-      ToPort: '22'
+      FromPort: 22
+      ToPort: 22
       CidrIp: 10.0.0.0/24
     - IpProtocol: icmp
-      FromPort: '8'
-      ToPort: "-1"
+      FromPort: 8
+      ToPort: -1
       CidrIp: 10.0.0.0/24
 ```

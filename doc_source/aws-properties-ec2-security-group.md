@@ -125,14 +125,14 @@ The following example defines a security group with an ingress and egress rule\.
       "VpcId" : {"Ref" : "myVPC"},
       "SecurityGroupIngress" : [{
             "IpProtocol" : "tcp",
-            "FromPort" : "80",
-            "ToPort" : "80",
+            "FromPort" : 80,
+            "ToPort" : 80,
             "CidrIp" : "0.0.0.0/0"
          }],
       "SecurityGroupEgress" : [{
          "IpProtocol" : "tcp",
-         "FromPort" : "80",
-         "ToPort" : "80",
+         "FromPort" : 80,
+         "ToPort" : 80,
          "CidrIp" : "0.0.0.0/0"
       }]
    }
@@ -150,13 +150,13 @@ InstanceSecurityGroup:
       Ref: myVPC
     SecurityGroupIngress:
     - IpProtocol: tcp
-      FromPort: '80'
-      ToPort: '80'
+      FromPort: 80
+      ToPort: 80
       CidrIp: 0.0.0.0/0
     SecurityGroupEgress:
     - IpProtocol: tcp
-      FromPort: '80'
-      ToPort: '80'
+      FromPort: 80
+      ToPort: 80
       CidrIp: 0.0.0.0/0
 ```
 
