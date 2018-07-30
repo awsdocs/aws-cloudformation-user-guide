@@ -37,7 +37,7 @@ Properties:
 ## Properties<a name="w3ab2c21c10e1036c11"></a>
 
 `Bucket`  <a name="cfn-s3-bucketpolicy-bucket"></a>
-The Amazon S3 bucket that the policy applies to\.  
+The name of the Amazon S3 bucket to which the policy applies\.  
 *Required*: Yes  
 *Type*: String  
 You cannot update this property\. If you want to add or remove a bucket from a bucket policy, you must modify your AWS CloudFormation template by creating a new bucket policy resource and removing the old one\. Then use the modified template to update your AWS CloudFormation stack\.
