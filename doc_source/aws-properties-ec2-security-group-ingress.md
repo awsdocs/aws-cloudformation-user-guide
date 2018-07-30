@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: "AWS::EC2::SecurityGroupIngress"
-Properties: 
+Properties:
   [CidrIp](#cfn-ec2-security-group-ingress-cidrip): String
   [CidrIpv6](#cfn-ec2-security-group-ingress-cidripv6): String
   [Description](#cfn-ec2-security-group-ingress-description): String
@@ -323,7 +323,7 @@ To allow ping requests, add the ICMP protocol type and specify `8` \(echo reques
   "Properties" : {
     "GroupDescription" : "SG to test ping",
     "VpcId" : {"Ref" : "VPC"},
-    "SecurityGroupIngress" : [ 
+    "SecurityGroupIngress" : [
       { "IpProtocol" : "tcp", "FromPort" : "22", "ToPort" : "22", "CidrIp" : "10.0.0.0/24" },
       { "IpProtocol" : "icmp", "FromPort" : "8", "ToPort" : "-1", "CidrIp" : "10.0.0.0/24" }
     ]
@@ -350,4 +350,58 @@ SGPing:
       FromPort: '8'
       ToPort: "-1"
       CidrIp: 10.0.0.0/24
+```
+
+### Allow Access from a Security Group within a Peered VPC
+
+In some cases, it may become necessary to allow specific traffic from a targeted originating (source) security group in a different AWS Account to specific ports on the target. An example of this scenario could include a one-way security scanning resource that exists in a separate AWS Account that needs to run diagnostics into a peered account. The following snippet creates a security group that allows this access on Port 80 from the client side, ensuring only desired resources are scanned.
+
+#### JSON<a name="aws-resource-ec2-securitygroupingress-example-4.json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "SecurityScanGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "VpcId": "vpc-e063f789",
+        "GroupDescription": "Security Group allowing ingress for Security Scanners"
+      }
+    },
+    "SecurityScanGroupIngress": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "Properties": {
+        "GroupId": "SecurityScanGroup.GroupId",
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "SourceSecurityGroupId": "sg-12345678",
+        "SourceSecurityGroupOwnerId": "123456789012"
+      }
+    }
+  }
+}
+```
+#### YAML<a name="aws-resource-ec2-securitygroupingress-example-4.yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+
+Resources:
+  SecurityScanGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      VpcId: vpc-e063f789
+      GroupDescription: "Security Group allowing ingress for Security Scanners"
+
+  SecurityScanGroupIngress:
+    Type: 'AWS::EC2::SecurityGroupIngress'
+    Properties:
+          GroupId: !GetAtt SecurityScanGroup.GroupId
+          IpProtocol: tcp
+          FromPort: '80'
+          ToPort: '80'
+          SourceSecurityGroupId: sg-12345678
+          SourceSecurityGroupOwnerId: '123456789012'
 ```
