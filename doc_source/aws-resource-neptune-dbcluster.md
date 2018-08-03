@@ -102,7 +102,7 @@ A DB subnet group that you want to associate with this DB cluster\.
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `IamAuthEnabled`  <a name="cfn-neptune-dbcluster-iamauthenabled"></a>
-Enable IAM authentication and authoriation on this cluster\.  
+Enable IAM authentication and authorization on this cluster\.  
 *Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
