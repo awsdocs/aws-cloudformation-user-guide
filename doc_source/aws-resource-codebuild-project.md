@@ -256,7 +256,6 @@ The following example creates a project that caches build dependencies in Amazon
         "Artifacts": {
           "Type": "CODEPIPELINE"
         },
-        "BadgeEnabled": "true",
         "Environment": {
           "Type": "LINUX_CONTAINER",
           "ComputeType": "BUILD_GENERAL1_SMALL",
@@ -397,7 +396,6 @@ Resources:
       ServiceRole: !Ref CodeBuildRole
       Artifacts:
         Type: CODEPIPELINE
-      BadgeEnabled: 'true'
       Environment:
         Type: LINUX_CONTAINER
         ComputeType: BUILD_GENERAL1_SMALL
