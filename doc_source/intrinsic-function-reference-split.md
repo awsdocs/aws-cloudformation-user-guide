@@ -108,4 +108,5 @@ For the `Fn::Split` list of values, you can use the following functions:
 + `Fn::If`
 + `Fn::Join`
 + `Fn::Select`
++ `Fn::Sub`
 + `Ref`
