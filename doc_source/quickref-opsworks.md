@@ -7,7 +7,7 @@ AWS OpsWorks is an application management service that simplifies a wide range o
 The following sample template deploys a sample AWS OpsWorks PHP web application that is stored in public Git repository\. The AWS OpsWorks stack includes two application servers with a load balancer that distributes incoming traffic evenly across the servers\. The AWS OpsWorks stack also includes a back\-end MySQL database server to store data\. For more information about the sample AWS OpsWorks application, see [Walkthrough: Learn AWS AWS OpsWorks Basics by Creating an Application Server Stack](http://docs.aws.amazon.com/opsworks/latest/userguide/gettingstarted.html) in the *AWS OpsWorks User Guide*\.
 
 **Note**  
-The `ServiceRoleArn` and `DefaultInstanceProfileArn` properties reference IAM roles that are created after you use AWS OpsWorks for the first time\.
+The `ServiceRoleARN` and `DefaultInstanceProfileARN` properties reference IAM roles that are created after you use AWS OpsWorks for the first time\.
 
 ### JSON<a name="quickref-opsworks-example-1.json"></a>
 
@@ -55,13 +55,13 @@ The `ServiceRoleArn` and `DefaultInstanceProfileArn` properties reference IAM ro
         "Name": {
           "Ref": "AWS::StackName"
         },
-        "ServiceRoleArn": {
+        "ServiceRoleARN": {
           "Fn::Join": [
             "", ["arn:aws:iam::", {"Ref": "AWS::AccountId"},
                   ":role/", {"Ref": "ServiceRole"}]
           ]
         },
-        "DefaultInstanceProfileArn": {
+        "DefaultInstanceProfileARN": {
           "Fn::Join": [
             "", ["arn:aws:iam::", {"Ref": "AWS::AccountId"},
               ":instance-profile/", {"Ref": "InstanceRole"}]
@@ -223,8 +223,8 @@ Resources:
     Properties:
       Name:
         Ref: AWS::StackName
-      ServiceRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/${ServiceRole}"
-      DefaultInstanceProfileArn: !Sub "arn:aws:iam::${AWS::AccountId}:instance-profile/${InstanceRole}"
+      ServiceRoleARN: !Sub "arn:aws:iam::${AWS::AccountId}:role/${ServiceRole}"
+      DefaultInstanceProfileARN: !Sub "arn:aws:iam::${AWS::AccountId}:instance-profile/${InstanceRole}"
       UseCustomCookbooks: 'true'
       CustomCookbooksSource:
         Type: git

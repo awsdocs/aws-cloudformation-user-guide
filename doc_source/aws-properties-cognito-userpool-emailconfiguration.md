@@ -9,7 +9,7 @@
 ```
 {
   "[ReplyToEmailAddress](#cfn-cognito-userpool-emailconfiguration-replytoemailaddress)" : String,
-  "[SourceArn](#cfn-cognito-userpool-emailconfiguration-sourcearn)" : String
+  "[SourceARN](#cfn-cognito-userpool-emailconfiguration-sourcearn)" : String
 }
 ```
 
@@ -17,7 +17,7 @@
 
 ```
 [ReplyToEmailAddress](#cfn-cognito-userpool-emailconfiguration-replytoemailaddress): String
-[SourceArn](#cfn-cognito-userpool-emailconfiguration-sourcearn): String
+[SourceARN](#cfn-cognito-userpool-emailconfiguration-sourcearn): String
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-emailconfiguration-properties"></a>
@@ -27,7 +27,7 @@ The REPLY\-TO email address\.
 *Type*: String  
 *Required*: No
 
-`SourceArn`  <a name="cfn-cognito-userpool-emailconfiguration-sourcearn"></a>
+`SourceARN`  <a name="cfn-cognito-userpool-emailconfiguration-sourcearn"></a>
 The Amazon Resource Name \(ARN\) of the email source\.  
 *Type*: String  
 *Required*: No

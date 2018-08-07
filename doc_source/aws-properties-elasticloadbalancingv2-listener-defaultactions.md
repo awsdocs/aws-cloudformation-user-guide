@@ -10,7 +10,7 @@ The `DefaultActions` property of the [AWS::ElasticLoadBalancingV2::Listener](aws
 
 ```
 {
-  "[TargetGroupArn](#cfn-elasticloadbalancingv2-listener-defaultactions-targetgrouparn)" : String,
+  "[TargetGroupARN](#cfn-elasticloadbalancingv2-listener-defaultactions-targetgrouparn)" : String,
   "[Type](#cfn-elasticloadbalancingv2-listener-defaultactions-type)" : String
 }
 ```
@@ -18,13 +18,13 @@ The `DefaultActions` property of the [AWS::ElasticLoadBalancingV2::Listener](aws
 ### YAML<a name="aws-properties-elasticloadbalancingv2-listener-defaultactions-syntax.yaml"></a>
 
 ```
-[TargetGroupArn](#cfn-elasticloadbalancingv2-listener-defaultactions-targetgrouparn): String
+[TargetGroupARN](#cfn-elasticloadbalancingv2-listener-defaultactions-targetgrouparn): String
 [Type](#cfn-elasticloadbalancingv2-listener-defaultactions-type): String
 ```
 
 ## Properties<a name="w3ab2c21c14e1008b9"></a>
 
-`TargetGroupArn`  <a name="cfn-elasticloadbalancingv2-listener-defaultactions-targetgrouparn"></a>
+`TargetGroupARN`  <a name="cfn-elasticloadbalancingv2-listener-defaultactions-targetgrouparn"></a>
 The Amazon Resource Name \(ARN\) of the target group to which Elastic Load Balancing routes the traffic\.  
 *Required*: Yes  
 *Type*: String

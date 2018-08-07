@@ -8,19 +8,19 @@
 
 ```
 {
-  "[Arn](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile-arn)" : String
+  "[ARN](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile-arn)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile-syntax.yaml"></a>
 
 ```
-[Arn](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile-arn): String
+[ARN](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile-arn): String
 ```
 
 ## Properties<a name="w3ab2c21c14d790b7"></a>
 
-`Arn`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile-arn"></a>
+`ARN`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile-arn"></a>
 The Amazon Resource Name \(ARN\) of the instance profile to associate with the instances\. The instance profile contains the IAM role that is associated with the instances\.  
 *Required*: No  
 *Type*: String

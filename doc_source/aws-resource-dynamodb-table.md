@@ -165,10 +165,10 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
+`ARN`  
 The Amazon Resource Name \(ARN\) of the DynamoDB table, such as `arn:aws:dynamodb:us-east-2:123456789012:table/myDynamoDBTable`\.
 
-`StreamArn`  
+`StreamARN`  
 The ARN of the DynamoDB stream, such as `arn:aws:dynamodb:us-east-1:123456789012:table/testddbstack-myDynamoDBTable-012A1SL7SMP5Q/stream/2015-11-30T20:10:00.000`\.  
 You must specify the `StreamSpecification` property to use this attribute\.
 
@@ -563,7 +563,7 @@ This example sets up Application Auto Scaling for a `AWS::DynamoDB::Table` resou
           ]
         ] },
         "RoleARN": {
-          "Fn::GetAtt": ["ScalingRole", "Arn"]
+          "Fn::GetAtt": ["ScalingRole", "ARN"]
         },
         "ScalableDimension": "dynamodb:table:WriteCapacityUnits",
         "ServiceNamespace": "dynamodb"
@@ -684,7 +684,7 @@ Resources:
         - /
         - - table
           - !Ref DDBTable
-      RoleARN: !GetAtt ScalingRole.Arn
+      RoleARN: !GetAtt ScalingRole.ARN
       ScalableDimension: dynamodb:table:WriteCapacityUnits
       ServiceNamespace: dynamodb
   ScalingRole:

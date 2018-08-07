@@ -21,7 +21,7 @@ The `HashKeyValue` and `RangeKeyValue` fields use the `${sql-expression}` substi
   "[RangeKeyField](#cfn-iot-topicrule-dynamodbaction-rangekeyfield)": String,
   "[RangeKeyType](#cfn-iot-topicrule-dynamodbaction-rangekeytype)": String,
   "[RangeKeyValue](#cfn-iot-topicrule-dynamodbaction-rangekeyvalue)": String,
-  "[RoleArn](#cfn-iot-topicrule-dynamodbaction-rolearn)": String,
+  "[RoleARN](#cfn-iot-topicrule-dynamodbaction-rolearn)": String,
   "[TableName](#cfn-iot-topicrule-dynamodbaction-tablename)": String
 }
 ```
@@ -36,7 +36,7 @@ The `HashKeyValue` and `RangeKeyValue` fields use the `${sql-expression}` substi
 [RangeKeyField](#cfn-iot-topicrule-dynamodbaction-rangekeyfield): String
 [RangeKeyType](#cfn-iot-topicrule-dynamodbaction-rangekeytype): String
 [RangeKeyValue](#cfn-iot-topicrule-dynamodbaction-rangekeyvalue): String
-[RoleArn](#cfn-iot-topicrule-dynamodbaction-rolearn): String
+[RoleARN](#cfn-iot-topicrule-dynamodbaction-rolearn): String
 [TableName](#cfn-iot-topicrule-dynamodbaction-tablename): String
 ```
 
@@ -79,7 +79,7 @@ The value of the range key\.
 *Required*: No  
 *Type*: String
 
-`RoleArn`  <a name="cfn-iot-topicrule-dynamodbaction-rolearn"></a>
+`RoleARN`  <a name="cfn-iot-topicrule-dynamodbaction-rolearn"></a>
 The ARN of the IAM role that grants access to the DynamoDB table\.  
 *Required*: Yes  
 *Type*: String

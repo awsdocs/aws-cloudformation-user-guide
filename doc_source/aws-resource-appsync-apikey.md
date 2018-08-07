@@ -71,7 +71,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 `ApiKey`  
 The API key\. 
 
-`Arn`  
+`ARN`  
 The Amazon Resource Name \(ARN\) of the API key, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/apikey/apikeya1bzhi`\. 
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 

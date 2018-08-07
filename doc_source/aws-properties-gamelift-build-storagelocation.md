@@ -10,7 +10,7 @@
 {
   "[Bucket](#cfn-gamelift-build-storage-bucket)" : String,
   "[Key](#cfn-gamelift-build-storage-key)" : String,
-  "[RoleArn](#cfn-gamelift-build-storage-rolearn)" : String
+  "[RoleARN](#cfn-gamelift-build-storage-rolearn)" : String
 }
 ```
 
@@ -19,7 +19,7 @@
 ```
 [Bucket](#cfn-gamelift-build-storage-bucket): String
 [Key](#cfn-gamelift-build-storage-key): String
-[RoleArn](#cfn-gamelift-build-storage-rolearn): String
+[RoleARN](#cfn-gamelift-build-storage-rolearn): String
 ```
 
 ## Properties<a name="w3ab2c21c14e1213b7"></a>
@@ -34,7 +34,7 @@ The prefix \(folder name\) where the GameLift build package files are located\.
 *Required*: Yes  
 *Type*: String
 
-`RoleArn`  <a name="cfn-gamelift-build-storage-rolearn"></a>
+`RoleARN`  <a name="cfn-gamelift-build-storage-rolearn"></a>
 An AWS Identity and Access Management \(IAM\) role Amazon Resource Name \(ARN\) that GameLift can assume to retrieve the build package files from Amazon Simple Storage Service \(Amazon S3\)\.  
 *Required*: Yes  
 *Type*: String

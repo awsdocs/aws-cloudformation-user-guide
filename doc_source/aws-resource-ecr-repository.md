@@ -171,11 +171,11 @@ The following example creates a repository with a lifecycle policy\.
     }
   },
   "Outputs": {
-    "Arn": {
+    "ARN": {
       "Value": {
         "Fn::GetAtt": [
           "MyRepository",
-          "Arn"
+          "ARN"
         ]
       }
     }
@@ -202,6 +202,6 @@ Resources:
         RegistryId: !Ref registryId
       RepositoryName: !Ref repositoryName
 Outputs:    
-  Arn:
-    Value: !GetAtt MyRepository.Arn
+  ARN:
+    Value: !GetAtt MyRepository.ARN
 ```

@@ -205,7 +205,7 @@ The following example creates a crawler for an Amazon S3 target\.
                 "Role": {
                     "Fn::GetAtt": [
                         "MyRole",
-                        "Arn"
+                        "ARN"
                     ]
                 },
                 "DatabaseName": {
@@ -297,7 +297,7 @@ Resources:
     Type: AWS::Glue::Crawler
     Properties:
       Name: "testcrawler1"
-      Role: !GetAtt MyRole.Arn
+      Role: !GetAtt MyRole.ARN
       DatabaseName: !Ref MyDatabase
       Classifiers:
         - !Ref MyClassifier

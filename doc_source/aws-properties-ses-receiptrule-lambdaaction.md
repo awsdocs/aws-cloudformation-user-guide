@@ -14,8 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[FunctionArn](#cfn-ses-receiptrule-lambdaaction-functionarn)" : String,
-  "[TopicArn](#cfn-ses-receiptrule-lambdaaction-topicarn)" : String,
+  "[FunctionARN](#cfn-ses-receiptrule-lambdaaction-functionarn)" : String,
+  "[TopicARN](#cfn-ses-receiptrule-lambdaaction-topicarn)" : String,
   "[InvocationType](#cfn-ses-receiptrule-lambdaaction-invocationtype)" : String
 }
 ```
@@ -23,14 +23,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ses-receiptrule-lambdaaction-syntax.yaml"></a>
 
 ```
-[FunctionArn](#cfn-ses-receiptrule-lambdaaction-functionarn): String
-[TopicArn](#cfn-ses-receiptrule-lambdaaction-topicarn): String
+[FunctionARN](#cfn-ses-receiptrule-lambdaaction-functionarn): String
+[TopicARN](#cfn-ses-receiptrule-lambdaaction-topicarn): String
 [InvocationType](#cfn-ses-receiptrule-lambdaaction-invocationtype): String
 ```
 
 ## Properties<a name="aws-properties-ses-receiptrule-lambdaaction-properties"></a>
 
-`FunctionArn`  <a name="cfn-ses-receiptrule-lambdaaction-functionarn"></a>
+`FunctionARN`  <a name="cfn-ses-receiptrule-lambdaaction-functionarn"></a>
 The Amazon Resource Name \(ARN\) of the AWS Lambda function\. An example of an AWS Lambda function ARN is `arn:aws:lambda:us-west-2:account-id:function:MyFunction`\.   
  *Required*: Yes  
  *Type*: String  
@@ -44,7 +44,7 @@ There is a 30\-second timeout on `RequestResponse` invocations\. You should use 
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`TopicArn`  <a name="cfn-ses-receiptrule-lambdaaction-topicarn"></a>
+`TopicARN`  <a name="cfn-ses-receiptrule-lambdaaction-topicarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon SNS topic to notify when the Lambda action is taken\. An example of an Amazon SNS topic ARN is `arn:aws:sns:us-west-2:123456789012:MyTopic`\.   
  *Required*: No  
  *Type*: String  

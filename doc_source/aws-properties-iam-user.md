@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties": {
     "[Groups](#cfn-iam-user-groups)": [ String, ... ],
     "[LoginProfile](#cfn-iam-user-loginprofile)": LoginProfile Type,
-    "[ManagedPolicyArns](#cfn-iam-user-managepolicyarns)": [ String, ... ],
+    "[ManagedPolicyARNs](#cfn-iam-user-managepolicyarns)": [ String, ... ],
     "[Path](#cfn-iam-user-path)": String,
     "[Policies](#cfn-iam-user-policies)": [ Policies, ... ],
     "[UserName](#cfn-iam-user-username)": String
@@ -37,7 +37,7 @@ Properties:
     - String
   [LoginProfile](#cfn-iam-user-loginprofile):
     LoginProfile Type
-  [ManagedPolicyArns](#cfn-iam-user-managepolicyarns):
+  [ManagedPolicyARNs](#cfn-iam-user-managepolicyarns):
     - String
   [Path](#cfn-iam-user-path): String
   [Policies](#cfn-iam-user-policies):
@@ -59,7 +59,7 @@ Creates a login profile so that the user can access the AWS Management Console\.
 *Type*: [IAM User LoginProfile](aws-properties-iam-user-loginprofile.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ManagedPolicyArns`  <a name="cfn-iam-user-managepolicyarns"></a>
+`ManagedPolicyARNs`  <a name="cfn-iam-user-managepolicyarns"></a>
 One or more managed policy ARNs to attach to this user\.  
 *Required*: No  
 *Type*: List of String values  
@@ -99,7 +99,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
+`ARN`  
 Returns the Amazon Resource Name \(ARN\) for the specified AWS::IAM::User resource\. For example: `arn:aws:iam::123456789012:user/mystack-myuser-1CCXAFG2H2U4D`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.

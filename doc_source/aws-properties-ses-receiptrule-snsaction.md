@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[TopicArn](#cfn-ses-receiptrule-snsaction-topicarn)" : String,
+  "[TopicARN](#cfn-ses-receiptrule-snsaction-topicarn)" : String,
   "[Encoding](#cfn-ses-receiptrule-snsaction-encoding)" : String
 }
 ```
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ses-receiptrule-snsaction-syntax.yaml"></a>
 
 ```
-[TopicArn](#cfn-ses-receiptrule-snsaction-topicarn): String
+[TopicARN](#cfn-ses-receiptrule-snsaction-topicarn): String
 [Encoding](#cfn-ses-receiptrule-snsaction-encoding): String
 ```
 
@@ -40,7 +40,7 @@ Valid values include `Base64` and `UTF-8`\.
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`TopicArn`  <a name="cfn-ses-receiptrule-snsaction-topicarn"></a>
+`TopicARN`  <a name="cfn-ses-receiptrule-snsaction-topicarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon SNS topic to notify\. An example of an Amazon SNS topic ARN is `arn:aws:sns:us-west-2:123456789012:MyTopic`\.   
  *Required*: No  
  *Type*: String  

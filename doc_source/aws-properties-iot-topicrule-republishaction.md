@@ -8,7 +8,7 @@
 
 ```
 {
-  "[RoleArn](#cfn-iot-topicrule-republishaction-rolearn)": String,
+  "[RoleARN](#cfn-iot-topicrule-republishaction-rolearn)": String,
   "[Topic](#cfn-iot-topicrule-republishaction-topic)": String
 }
 ```
@@ -16,13 +16,13 @@
 ### YAML<a name="aws-properties-iot-topicrule-republishaction-syntax.yaml"></a>
 
 ```
-[RoleArn](#cfn-iot-topicrule-republishaction-rolearn): String
+[RoleARN](#cfn-iot-topicrule-republishaction-rolearn): String
 [Topic](#cfn-iot-topicrule-republishaction-topic): String
 ```
 
 ## Properties<a name="w3ab2c21c14e1365b7"></a>
 
-`RoleArn`  <a name="cfn-iot-topicrule-republishaction-rolearn"></a>
+`RoleARN`  <a name="cfn-iot-topicrule-republishaction-rolearn"></a>
 The ARN of the IAM role that grants publishing access\.  
 *Required*: Yes  
 *Type*: String

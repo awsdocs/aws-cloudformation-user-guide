@@ -151,28 +151,28 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 | --- | --- | --- | 
 |  [AWS::ApiGateway::DomainName](aws-resource-apigateway-domainname.md)  |  `DistributionDomainName`  |  The Amazon CloudFront distribution domain name that is mapped to the custom domain name\. Example: `d111111abcdef8.cloudfront.net`  | 
 |  [AWS::ApiGateway::RestApi](aws-resource-apigateway-restapi.md)  |  `RootResourceId`  |  The root resource ID for a `RestApi` resource\. Example: `a0bc123d4e`  | 
-|  [AWS::Cloud9::EnvironmentEC2](aws-resource-cloud9-environmentec2.md)  |  `Arn`  |  The Amazon Resource Name \(ARN\) of the AWS Cloud9 development environment\. Example: `arn:aws:cloud9:us-east-2:123456789012:environment:2bc3642873c342e485f7e0c561234567`  | 
+|  [AWS::Cloud9::EnvironmentEC2](aws-resource-cloud9-environmentec2.md)  |  `ARN`  |  The Amazon Resource Name \(ARN\) of the AWS Cloud9 development environment\. Example: `arn:aws:cloud9:us-east-2:123456789012:environment:2bc3642873c342e485f7e0c561234567`  | 
 |  [AWS::Cloud9::EnvironmentEC2](aws-resource-cloud9-environmentec2.md)  |  `Name`  |  The name of the AWS Cloud9 development environment\. Example: `my-demo-environment`  | 
 |  [AWS::CloudFormation::WaitCondition](aws-properties-waitcondition.md)  |  `Data`  |  A JSON\-format string containing the `UniqueId` and `Data` values from the wait condition signal\(s\) for the specified wait condition\. For more information about wait condition signals, see [Wait Condition Signal JSON Format](using-cfn-waitcondition.md#using-cfn-waitcondition-signaljson)\. Example of a wait condition with two signals: <pre>{"Signal1":"Step 1 complete.","Signal2":"Step 2 complete."}</pre>  | 
 |  [AWS::CloudFormation::Stack](aws-properties-stack.md)  |  `Outputs.NestedStackOutputName`  |  The output value from the nested stack that you specified, where *NestedStackOutputName* is the name of the output value\.  | 
 |  [AWS::CloudFront::Distribution](aws-resource-cloudfront-distribution.md)  |  `DomainName`  |  Example: `d2fadu0nynjpfn.cloudfront.net`  | 
-|  [AWS::CloudTrail::Trail](aws-resource-cloudtrail-trail.md)  |  `Arn`  |  Example: `arn:aws:cloudtrail:us-east-2:123456789012:trail/myCloudTrail`  | 
-|  [AWS::CloudTrail::Trail](aws-resource-cloudtrail-trail.md)  |  `SnsTopicArn`  |  The Amazon Resource Name \(ARN\) of the Amazon SNS topic that is associated with the CloudTrail trail\. Example: `arn:aws:sns:us-east-2:123456789012:mySNSTopic`  | 
-|  [AWS::CloudWatch::Alarm](aws-properties-cw-alarm.md)  |  `Arn`  |  Example: `arn:aws:cloudwatch:us-east-2:123456789012:alarm:myCloudWatchAlarm-CPUAlarm-UXMMZK36R55Z`  | 
-|  [AWS::CodeBuild::Project](aws-resource-codebuild-project.md)  |  `Arn`  |  Example: `arn:aws:codebuild:us-west-2:123456789012:project/myProjectName`  | 
-|  [AWS::CodeCommit::Repository](aws-resource-codecommit-repository.md)  |  `Arn`  |  Example: `arn:aws:codecommit:``us-east-2``:123456789012:MyDemoRepo`  | 
+|  [AWS::CloudTrail::Trail](aws-resource-cloudtrail-trail.md)  |  `ARN`  |  Example: `arn:aws:cloudtrail:us-east-2:123456789012:trail/myCloudTrail`  | 
+|  [AWS::CloudTrail::Trail](aws-resource-cloudtrail-trail.md)  |  `SnsTopicARN`  |  The Amazon Resource Name \(ARN\) of the Amazon SNS topic that is associated with the CloudTrail trail\. Example: `arn:aws:sns:us-east-2:123456789012:mySNSTopic`  | 
+|  [AWS::CloudWatch::Alarm](aws-properties-cw-alarm.md)  |  `ARN`  |  Example: `arn:aws:cloudwatch:us-east-2:123456789012:alarm:myCloudWatchAlarm-CPUAlarm-UXMMZK36R55Z`  | 
+|  [AWS::CodeBuild::Project](aws-resource-codebuild-project.md)  |  `ARN`  |  Example: `arn:aws:codebuild:us-west-2:123456789012:project/myProjectName`  | 
+|  [AWS::CodeCommit::Repository](aws-resource-codecommit-repository.md)  |  `ARN`  |  Example: `arn:aws:codecommit:``us-east-2``:123456789012:MyDemoRepo`  | 
 |  [AWS::CodeCommit::Repository](aws-resource-codecommit-repository.md)  |  `CloneUrlHttp`  |  Example: `https://codecommit.``us-east-2``.amazonaws.com/v1/repos/MyDemoRepo`  | 
 |  [AWS::CodeCommit::Repository](aws-resource-codecommit-repository.md)  |  `CloneUrlSsh`  |  Example: `ssh://git-codecommit.``us-east-2``.amazonaws.com/v1/repos//v1/repos/MyDemoRepo`  | 
 |  [AWS::CodeCommit::Repository](aws-resource-codecommit-repository.md)  |  `Name`  |  Example: `MyDemoRepo`  | 
-|  [AWS::Config::ConfigRule](aws-resource-config-configrule.md)  |  `Arn`  |  Example: `arn:aws:config:``us-east-2``:123456789012:config-rule/config-rule-a1bzhi`  | 
+|  [AWS::Config::ConfigRule](aws-resource-config-configrule.md)  |  `ARN`  |  Example: `arn:aws:config:``us-east-2``:123456789012:config-rule/config-rule-a1bzhi`  | 
 |  [AWS::Config::ConfigRule](aws-resource-config-configrule.md)  |  `ConfigRuleId`  |  Example: `config-rule-a1bzhi`  | 
 |  [AWS::Config::ConfigRule](aws-resource-config-configrule.md)  |  `Compliance.Type`  |  Example: `COMPLIANT`  | 
-|  [AWS::DAX::Cluster](aws-resource-dax-cluster.md)  |  `Arn`  |  Example: `arn:aws:dax:us-east-1:111122223333:cache/MyDAXCluster`  | 
+|  [AWS::DAX::Cluster](aws-resource-dax-cluster.md)  |  `ARN`  |  Example: `arn:aws:dax:us-east-1:111122223333:cache/MyDAXCluster`  | 
 |  [AWS::DAX::Cluster](aws-resource-dax-cluster.md)  |  `ClusterDiscoveryEndpoint`  |  Example: `mydaxcluster.0h3d6x.clustercfg.dax.use1.cache.amazonaws.com:8111`  | 
 |  [AWS::DirectoryService::MicrosoftAD](aws-resource-directoryservice-microsoftad.md) and [AWS::DirectoryService::SimpleAD](aws-resource-directoryservice-simplead.md)  |  `Alias`  |  The alias for a directory\. Examples: `d-12373a053a` or `alias4-mydirectory-12345abcgmzsk` \(if you have the `CreateAlias` property set to true\)  | 
 |  [AWS::DirectoryService::MicrosoftAD](aws-resource-directoryservice-microsoftad.md) and [AWS::DirectoryService::SimpleAD](aws-resource-directoryservice-simplead.md)  |  `DnsIpAddresses`  |  The IP addresses of the DNS servers for the directory\. Example: `[ "192.0.2.1", "192.0.2.2" ]`  | 
-|  [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md)  |  `Arn`  |  Example: `arn:aws:dynamodb:us-east-2:123456789012:table/myDynamoDBTable`  | 
-|  [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md)  |  `StreamArn`  |  The Amazon Resource Name \(ARN\) of the DynamoDB table stream\. To use this attribute, you must specify the DynamoDB table `StreamSpecification` property\. Example: `arn:aws:dynamodb:us-east-2:123456789012:table/testddbstack-myDynamoDBTable-012A1SL7SMP5Q/stream/2015-11-30T20:10:00.000`  | 
+|  [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md)  |  `ARN`  |  Example: `arn:aws:dynamodb:us-east-2:123456789012:table/myDynamoDBTable`  | 
+|  [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md)  |  `StreamARN`  |  The Amazon Resource Name \(ARN\) of the DynamoDB table stream\. To use this attribute, you must specify the DynamoDB table `StreamSpecification` property\. Example: `arn:aws:dynamodb:us-east-2:123456789012:table/testddbstack-myDynamoDBTable-012A1SL7SMP5Q/stream/2015-11-30T20:10:00.000`  | 
 |  [AWS::EC2::EIP](aws-properties-ec2-eip.md)  |  `AllocationId`  |  The ID that AWS assigns to represent the allocation of the address for use with Amazon VPC\. It is returned only for VPC Elastic IP addresses\. Example: `eipalloc-5723d13e`  | 
 |  [AWS::EC2::Instance](aws-properties-ec2-instance.md)  |  `AvailabilityZone`  |  The Availability Zone where the instance that you specified is launched\. Example: `us-east-1b`  | 
 |  [AWS::EC2::Instance](aws-properties-ec2-instance.md)  |  `PrivateDnsName`  |  The private DNS name of the instance that you specified\. Example: `ip-10-24-34-0.ec2.internal`  | 
@@ -192,9 +192,9 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 |  [AWS::EC2::VPC](aws-resource-ec2-vpc.md)  |  `DefaultNetworkAcl`  |  The default network ACL ID that is associated with the VPC, which AWS creates when you create a VPC\. Example: `acl-814dafe3`  | 
 |  [AWS::EC2::VPC](aws-resource-ec2-vpc.md)  |  `DefaultSecurityGroup`  |  The default security group ID that is associated with the VPC, which AWS creates when you create a VPC\. Example: `sg-b178e0d3`  | 
 |  [AWS::EC2::VPC](aws-resource-ec2-vpc.md)  |  `Ipv6CidrBlocks`  |  A list of IPv6 CIDR blocks that are associated with the VPC\. Example: `[ 2001:db8:1234:1a00::/56 ]`  | 
-|  [AWS::ECS::Cluster](aws-resource-ecs-cluster.md)  |  `Arn`  |  Example: `arn:aws:ecs:us-east-2:123456789012:cluster/MyECSCluster`  | 
+|  [AWS::ECS::Cluster](aws-resource-ecs-cluster.md)  |  `ARN`  |  Example: `arn:aws:ecs:us-east-2:123456789012:cluster/MyECSCluster`  | 
 |  [AWS::ECS::Service](aws-resource-ecs-service.md)  |  `Name`  |  The name of an Amazon Elastic Container Service service\. Example: `sample-webapp`  | 
-|  [AWS::EKS::Cluster](aws-resource-eks-cluster.md)  |  `Arn`  |  The ARN of the cluster\. Example: `arn:aws:eks:us-east-2:123456789012:cluster/MyECSCluster`  | 
+|  [AWS::EKS::Cluster](aws-resource-eks-cluster.md)  |  `ARN`  |  The ARN of the cluster\. Example: `arn:aws:eks:us-east-2:123456789012:cluster/MyECSCluster`  | 
 |  [AWS::EKS::Cluster](aws-resource-eks-cluster.md)  |  `CertificateAuthorityData`  |  The `certificate-authority-data` for your cluster\.   | 
 |  [AWS::EKS::Cluster](aws-resource-eks-cluster.md)  |  `Endpoint`  |  The endpoint for your Kubernetes API server\. Example: `https://EXAMPLEFBBB3BA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com`  | 
 |  [AWS::ElastiCache::CacheCluster](aws-properties-elasticache-cache-cluster.md)  |  `ConfigurationEndpoint.Address`  |  The DNS address of the configuration endpoint for the Memcached cache cluster\. Example: `test.abc12a.cfg.use1.cache.amazonaws.com:11111`  | 
@@ -220,28 +220,28 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 |  [AWS::ElasticLoadBalancingV2::LoadBalancer](aws-resource-elasticloadbalancingv2-loadbalancer.md)  |  `LoadBalancerFullName`  |  The full name of the application load balancer\. Example: `app/my-load-balancer/50dc6c495c0c9188`  | 
 |  [AWS::ElasticLoadBalancingV2::LoadBalancer](aws-resource-elasticloadbalancingv2-loadbalancer.md)  |  `LoadBalancerName`  |  The name of the application load balancer\. Example: `my-load-balancer`  | 
 |  [AWS::ElasticLoadBalancingV2::LoadBalancer](aws-resource-elasticloadbalancingv2-loadbalancer.md)  |  `SecurityGroups`  |  The IDs of the security groups for the application load balancer\. Example: `sg-123456a`  | 
-|  [AWS::ElasticLoadBalancingV2::TargetGroup](aws-resource-elasticloadbalancingv2-targetgroup.md)  |  `LoadBalancerArns`  |  The Amazon Resource Names \(ARNs\) of the load balancers that route traffic to this target group\. Example: `[ "arn:aws:elasticloadbalancing:us-west-2:123456789012:loadbalancer/app/my-load-balancer/50dc6c495c0c9188" ]`  | 
+|  [AWS::ElasticLoadBalancingV2::TargetGroup](aws-resource-elasticloadbalancingv2-targetgroup.md)  |  `LoadBalancerARNs`  |  The Amazon Resource Names \(ARNs\) of the load balancers that route traffic to this target group\. Example: `[ "arn:aws:elasticloadbalancing:us-west-2:123456789012:loadbalancer/app/my-load-balancer/50dc6c495c0c9188" ]`  | 
 |  [AWS::ElasticLoadBalancingV2::TargetGroup](aws-resource-elasticloadbalancingv2-targetgroup.md)  |  `TargetGroupFullName`  | The full name of the target group\.Example: `targetgroup/my-target-group/cbf133c568e0d028` | 
 |  [AWS::ElasticLoadBalancingV2::TargetGroup](aws-resource-elasticloadbalancingv2-targetgroup.md)  |  `TargetGroupName`  | The name of the target group\.Example: `my-target-group` | 
-|  [AWS::Elasticsearch::Domain](aws-resource-elasticsearch-domain.md)  |  `DomainArn`  |  The Amazon Resource Name \(ARN\) of the domain\. Example: `arn:aws:es:us-west-2:123456789012:domain/mystack-elasti-1ab2cdefghij`  | 
+|  [AWS::Elasticsearch::Domain](aws-resource-elasticsearch-domain.md)  |  `DomainARN`  |  The Amazon Resource Name \(ARN\) of the domain\. Example: `arn:aws:es:us-west-2:123456789012:domain/mystack-elasti-1ab2cdefghij`  | 
 |  [AWS::Elasticsearch::Domain](aws-resource-elasticsearch-domain.md)  |  `DomainEndpoint`  |  The domain\-specific endpoint that is used to submit index, search, and data upload requests to an Amazon Elasticsearch Service domain\. Example: `search-mystack-elasti-1ab2cdefghij-ab1c2deckoyb3hofw7wpqa3cm.us-west-2.es.amazonaws.com`  | 
 |  [AWS::EMR::Cluster](aws-resource-emr-cluster.md)  |  `MasterPublicDNS`  |  The public DNS name of the master node \(instance\)\. Example: `ec2-12-123-123-123.us-west-2.compute.amazonaws.com`  | 
-|  [AWS::Events::Rule](aws-resource-events-rule.md)  |  `Arn`  |  Example: `arn:aws:events:``us-east-2``:123456789012:rule/example`  | 
+|  [AWS::Events::Rule](aws-resource-events-rule.md)  |  `ARN`  |  Example: `arn:aws:events:``us-east-2``:123456789012:rule/example`  | 
 |  [AWS::IAM::AccessKey](aws-properties-iam-accesskey.md)  |  `SecretAccessKey`  |  The secret access key for the specified `Access Key`\. Example: `wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY`  | 
-|  [AWS::IAM::Group](aws-properties-iam-group.md)  |  `Arn`  |  Example: `arn:aws:iam::123456789012:group/mystack-mygroup-1DZETITOWEKVO`  | 
-|  [AWS::IAM::InstanceProfile](aws-resource-iam-instanceprofile.md)  |  `Arn`  |  Example: `arn:aws:iam::1234567890:instance-profile/MyProfile-ASDNSDLKJ`  | 
-|  [AWS::IAM::Role](aws-resource-iam-role.md)  |  `Arn`  |  Example: `arn:aws:iam::1234567890:role/MyRole-AJJHDSKSDF`  | 
-|  [AWS::IAM::User](aws-properties-iam-user.md)  |  `Arn`  |  Example: `arn:aws:iam::123456789012:user/mystack-myuser-1CCXAFG2H2U4D`  | 
-|  [AWS::IoT::Certificate](aws-resource-iot-certificate.md)  | Arn | Example: arn:aws:iot:ap\-southeast\-2:123456789012:cert/a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2 | 
-|  [AWS::IoT::Policy](aws-resource-iot-policy.md)  |  `Arn`  |  Example: `arn:aws:iot:us-east-2:123456789012:policy/MyIoTPolicy`  | 
-|  [AWS::IoT::TopicRule](aws-resource-iot-topicrule.md)  |  `Arn`  |  Example: `arn:aws:iot:us-east-2:123456789012:rule/MyIoTRule`  | 
-|  [AWS::Kinesis::Stream](aws-resource-kinesis-stream.md)  |  `Arn`  |  Example: `arn:aws:kinesis:``us-east-2``:123456789012:stream/stream-name`  | 
-|  [AWS::KinesisFirehose::DeliveryStream](aws-resource-kinesisfirehose-deliverystream.md)  |  `Arn`  |  Example: `arn:aws:firehose:``us-east-2``:123456789012:deliverystream/delivery-stream-name`  | 
-|  [AWS::KMS::Key](aws-resource-kms-key.md)  |  `Arn`  |  Example: `arn:aws:kms:us-west-2:123456789012:key/12a34567-8c90-1defg-af84-0bf06c1747f3`  | 
-|  [AWS::Lambda::Function](aws-resource-lambda-function.md)  |  `Arn`  |  Example: `arn:aws:lambda:us-west-2:123456789012:MyStack-AMILookUp-NT5EUXTNTXXD`  | 
+|  [AWS::IAM::Group](aws-properties-iam-group.md)  |  `ARN`  |  Example: `arn:aws:iam::123456789012:group/mystack-mygroup-1DZETITOWEKVO`  | 
+|  [AWS::IAM::InstanceProfile](aws-resource-iam-instanceprofile.md)  |  `ARN`  |  Example: `arn:aws:iam::1234567890:instance-profile/MyProfile-ASDNSDLKJ`  | 
+|  [AWS::IAM::Role](aws-resource-iam-role.md)  |  `ARN`  |  Example: `arn:aws:iam::1234567890:role/MyRole-AJJHDSKSDF`  | 
+|  [AWS::IAM::User](aws-properties-iam-user.md)  |  `ARN`  |  Example: `arn:aws:iam::123456789012:user/mystack-myuser-1CCXAFG2H2U4D`  | 
+|  [AWS::IoT::Certificate](aws-resource-iot-certificate.md)  | ARN | Example: arn:aws:iot:ap\-southeast\-2:123456789012:cert/a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2 | 
+|  [AWS::IoT::Policy](aws-resource-iot-policy.md)  |  `ARN`  |  Example: `arn:aws:iot:us-east-2:123456789012:policy/MyIoTPolicy`  | 
+|  [AWS::IoT::TopicRule](aws-resource-iot-topicrule.md)  |  `ARN`  |  Example: `arn:aws:iot:us-east-2:123456789012:rule/MyIoTRule`  | 
+|  [AWS::Kinesis::Stream](aws-resource-kinesis-stream.md)  |  `ARN`  |  Example: `arn:aws:kinesis:``us-east-2``:123456789012:stream/stream-name`  | 
+|  [AWS::KinesisFirehose::DeliveryStream](aws-resource-kinesisfirehose-deliverystream.md)  |  `ARN`  |  Example: `arn:aws:firehose:``us-east-2``:123456789012:deliverystream/delivery-stream-name`  | 
+|  [AWS::KMS::Key](aws-resource-kms-key.md)  |  `ARN`  |  Example: `arn:aws:kms:us-west-2:123456789012:key/12a34567-8c90-1defg-af84-0bf06c1747f3`  | 
+|  [AWS::Lambda::Function](aws-resource-lambda-function.md)  |  `ARN`  |  Example: `arn:aws:lambda:us-west-2:123456789012:MyStack-AMILookUp-NT5EUXTNTXXD`  | 
 |  [AWS::Lambda::Version](aws-resource-lambda-version.md)  |  `Version`  |  The version of a Lambda function\. Example: `1`  | 
-|  [AWS::Logs::Destination](aws-resource-logs-destination.md)  |  `Arn`  |  Example: `arn:aws:logs:us-east-2:123456789012:destination:MyDestination`  | 
-|  [AWS::Logs::LogGroup](aws-resource-logs-loggroup.md)  |  `Arn`  |  Example: `arn:aws:logs:``us-east-2``:123456789012:log-group:/mystack-testgroup-12ABC1AB12A1:*`  | 
+|  [AWS::Logs::Destination](aws-resource-logs-destination.md)  |  `ARN`  |  Example: `arn:aws:logs:us-east-2:123456789012:destination:MyDestination`  | 
+|  [AWS::Logs::LogGroup](aws-resource-logs-loggroup.md)  |  `ARN`  |  Example: `arn:aws:logs:``us-east-2``:123456789012:log-group:/mystack-testgroup-12ABC1AB12A1:*`  | 
 |  [AWS::OpsWorks::Instance](aws-resource-opsworks-instance.md)  |  `AvailabilityZone`  |  The Availability Zone of an AWS OpsWorks instance\. Example: `us-east-2a`\.  | 
 |  [AWS::OpsWorks::Instance](aws-resource-opsworks-instance.md)  |  `PrivateDnsName`  |  The private DNS name of an AWS OpsWorks instance\.  | 
 |  [AWS::OpsWorks::Instance](aws-resource-opsworks-instance.md)  |  `PrivateIp`  |  The private IP address of an AWS OpsWorks instance\.  | 
@@ -256,20 +256,20 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 |  [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)  |  `Endpoint.Address`  |  The connection endpoint for the database\. Example: `mystack-mydb-1apw1j4phylrk.cg034hpkmmjt.``us-east-2``.rds.amazonaws.com`  | 
 |  [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)  |  `Endpoint.Port`  |  The port number on which the database accepts connections\. Example: `3306`  | 
 |  [AWS::Route53::HostedZone](aws-resource-route53-hostedzone.md)  |  `NameServers`  |  The set of name servers for the specific hosted zone\. Example: `ns1.example.com` This attribute is not supported for private hosted zones\.  | 
-|  [AWS::S3::Bucket](aws-properties-s3-bucket.md)  |  `Arn`  |  Example: `arn:aws:s3:::mybucket`  | 
+|  [AWS::S3::Bucket](aws-properties-s3-bucket.md)  |  `ARN`  |  Example: `arn:aws:s3:::mybucket`  | 
 |  [AWS::S3::Bucket](aws-properties-s3-bucket.md)  |  `DomainName`  |  The DNS name of the specified bucket\. Example: `mystack-mybucket-kdwwxmddtr2g.s3.amazonaws.com`  | 
 |  [AWS::S3::Bucket](aws-properties-s3-bucket.md)  |  `DualStackDomainName`  |  The IPv6 DNS name of the specified bucket\. Example: `mystack-mybucket-kdwwxmddtr2g.s3.dualstack.``us-east-2``.amazonaws.com/`  | 
 |  [AWS::S3::Bucket](aws-properties-s3-bucket.md)  |  `WebsiteURL`  |  The Amazon S3 website endpoint for the specified bucket\. Example: `http://mystack-mybucket-kdwwxmddtr2g.s3-website-``us-east-2``.amazonaws.com/`  | 
 |  [AWS::Serverless::Function](transform-aws-serverless.md)  |  No attribute\.  |  The ARN of an `AWS::Serverless::Function` resource\.  | 
 |  [AWS::ServiceDiscovery::PrivateDnsNamespace](aws-resource-servicediscovery-privatednsnamespace.md)  |  `Id`  |  Example: `ns-t2kl4fs6xexample`  | 
-|  [AWS::ServiceDiscovery::PrivateDnsNamespace](aws-resource-servicediscovery-privatednsnamespace.md)  |  `Arn`  |  Example: `arn:aws:servicediscovery:us-west-2:1234567890:namespace/ns-t2kl4fs6xexample`  | 
+|  [AWS::ServiceDiscovery::PrivateDnsNamespace](aws-resource-servicediscovery-privatednsnamespace.md)  |  `ARN`  |  Example: `arn:aws:servicediscovery:us-west-2:1234567890:namespace/ns-t2kl4fs6xexample`  | 
 |  [AWS::ServiceDiscovery::PublicDnsNamespace](aws-resource-servicediscovery-publicdnsnamespace.md)  |  `Id`  |  Example: `ns-d6wz3hq6kexample`  | 
-|  [AWS::ServiceDiscovery::PublicDnsNamespace](aws-resource-servicediscovery-publicdnsnamespace.md)  |  `Arn`  |  Example: `arn:aws:servicediscovery:us-west-2:1234567890:namespace/ns-d6wz3hq6kexample`  | 
+|  [AWS::ServiceDiscovery::PublicDnsNamespace](aws-resource-servicediscovery-publicdnsnamespace.md)  |  `ARN`  |  Example: `arn:aws:servicediscovery:us-west-2:1234567890:namespace/ns-d6wz3hq6kexample`  | 
 |  [AWS::ServiceDiscovery::Service](aws-resource-servicediscovery-service.md)  |  `Id`  |  Example: `srv-7dfj3r6cyexample`  | 
-|  [AWS::ServiceDiscovery::Service](aws-resource-servicediscovery-service.md)  |  `Arn`  |  Example: `arn:aws:servicediscovery:us-west-2:1234567890:service/srv-7dfj3r6cyexample`  | 
+|  [AWS::ServiceDiscovery::Service](aws-resource-servicediscovery-service.md)  |  `ARN`  |  Example: `arn:aws:servicediscovery:us-west-2:1234567890:service/srv-7dfj3r6cyexample`  | 
 |  [AWS::ServiceDiscovery::Service](aws-resource-servicediscovery-service.md)  |  `Name`  |  Example: `example`  | 
 | [AWS::SNS::Topic](aws-properties-sns-topic.md) | TopicName |  The name of an Amazon SNS topic\. Example: `my-sns-topic`  | 
 | [AWS::StepFunctions::Activity](aws-resource-stepfunctions-activity.md) | Name | The name of the AWS Step Functions activity\. | 
 | [AWS::StepFunctions::StateMachine](aws-resource-stepfunctions-statemachine.md) | Name | The name of the Step Functions state machine\. | 
-|  [AWS::SQS::Queue](aws-properties-sqs-queues.md)  |  `Arn`  |  Example: `arn:aws:sqs:``us-east-2``:123456789012:mystack-myqueue-15PG5C2FC1CW8`  | 
+|  [AWS::SQS::Queue](aws-properties-sqs-queues.md)  |  `ARN`  |  Example: `arn:aws:sqs:``us-east-2``:123456789012:mystack-myqueue-15PG5C2FC1CW8`  | 
 |  [AWS::SQS::Queue](aws-properties-sqs-queues.md)  |  `QueueName`  |  The name of an Amazon SQS queue\. Example: `mystack-myqueue-1VF9BKQH5BJVI`  | 

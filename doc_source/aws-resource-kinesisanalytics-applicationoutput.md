@@ -64,6 +64,6 @@ Type: "AWS::KinesisAnalytics::ApplicationOutput"
         DestinationSchema:
           RecordFormatType: "CSV"
         KinesisStreamsOutput:
-          ResourceARN: !GetAtt OutputKinesisStream.Arn
-          RoleARN: !GetAtt KinesisAnalyticsRole.Arn
+          ResourceARN: !GetAtt OutputKinesisStream.ARN
+          RoleARN: !GetAtt KinesisAnalyticsRole.ARN
 ```

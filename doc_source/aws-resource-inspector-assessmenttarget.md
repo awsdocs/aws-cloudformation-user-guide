@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Inspector::AssessmentTarget",
   "Properties" : {
     "[AssessmentTargetName](#cfn-inspector-assessmenttarget-assessmenttargetname)" : String,
-    "[ResourceGroupArn](#cfn-inspector-assessmenttarget-resourcegrouparn)" : String
+    "[ResourceGroupARN](#cfn-inspector-assessmenttarget-resourcegrouparn)" : String
   }
 }
 ```
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: "AWS::Inspector::AssessmentTarget"
 Properties:
   [AssessmentTargetName](#cfn-inspector-assessmenttarget-assessmenttargetname): String
-  [ResourceGroupArn](#cfn-inspector-assessmenttarget-resourcegrouparn): String
+  [ResourceGroupARN](#cfn-inspector-assessmenttarget-resourcegrouparn): String
 ```
 
 ## Properties<a name="aws-resource-inspector-assessmenttarget-properties"></a>
@@ -41,7 +41,7 @@ The name of the Amazon Inspector assessment target\.
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`ResourceGroupArn`  <a name="cfn-inspector-assessmenttarget-resourcegrouparn"></a>
+`ResourceGroupARN`  <a name="cfn-inspector-assessmenttarget-resourcegrouparn"></a>
 The ARN that specifies the resource group that is associated with the assessment target\.   
  *Required*: Yes  
  *Type*: String  
@@ -53,7 +53,7 @@ The ARN that specifies the resource group that is associated with the assessment
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
-`Arn`  
+`ARN`  
 The Amazon Resource Name \(ARN\) that specifies the assessment target that is created\. 
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
@@ -71,7 +71,7 @@ The following example shows how to declare an AWS::Inspector::AssessmentTarget r
   "Type": "AWS::Inspector::AssessmentTarget",
   "Properties": {
     "AssessmentTargetName" : "MyAssessmentTarget",
-    "ResourceGroupArn" : "arn:aws:inspector:us-west-2:123456789012:resourcegroup/0-AB6DMKnv"
+    "ResourceGroupARN" : "arn:aws:inspector:us-west-2:123456789012:resourcegroup/0-AB6DMKnv"
   }
 }
 ```
@@ -83,5 +83,5 @@ myassessmenttarget:
   Type: "AWS::Inspector::AssessmentTarget"
   Properties: 
     AssessmentTargetName : "MyAssessmentTarget"
-    ResourceGroupArn : "arn:aws:inspector:us-west-2:123456789012:resourcegroup/0-AB6DMKnv"
+    ResourceGroupARN : "arn:aws:inspector:us-west-2:123456789012:resourcegroup/0-AB6DMKnv"
 ```

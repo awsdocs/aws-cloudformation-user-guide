@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFRegional::WebACLAssociation",
   "Properties" : {
-    "[ResourceArn](#cfn-wafregional-webaclassociation-resourcearn)" : String,
+    "[ResourceARN](#cfn-wafregional-webaclassociation-resourcearn)" : String,
     "[WebACLId](#cfn-wafregional-webaclassociation-webaclid)" : String
   }
 }
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::WAFRegional::WebACLAssociation"
 Properties: 
-  [ResourceArn](#cfn-wafregional-webaclassociation-resourcearn): String
+  [ResourceARN](#cfn-wafregional-webaclassociation-resourcearn): String
   [WebACLId](#cfn-wafregional-webaclassociation-webaclid): String
 ```
 
@@ -37,7 +37,7 @@ Properties:
 **Note**  
 For more information about constraints and values for each property, see [AssociateWebACL](http://docs.aws.amazon.com/waf/latest/APIReference/API_regional_AssociateWebACL.html) in the *AWS WAF Regional API Reference*\.
 
-`ResourceArn`  <a name="cfn-wafregional-webaclassociation-resourcearn"></a>
+`ResourceARN`  <a name="cfn-wafregional-webaclassociation-resourcearn"></a>
 The Amazon Resource Name \(ARN\) of the resource to protect with the web ACL\.  
 *Required*: Yes  
 *Type*: String  
@@ -61,7 +61,7 @@ The following example associates an Application load balancer resource with a we
 "MyWebACLAssociation": {
   "Type": "AWS::WAFRegional::WebACLAssociation",
   "Properties": {
-    "ResourceArn": { "Ref": "MyLoadBalancer" },
+    "ResourceARN": { "Ref": "MyLoadBalancer" },
     "WebACLId": { "Ref": "MyWebACL" }
   }
 }
@@ -73,7 +73,7 @@ The following example associates an Application load balancer resource with a we
 MyWebACLAssociation:
   Type: "AWS::WAFRegional::WebACLAssociation"
   Properties:
-    ResourceArn:
+    ResourceARN:
       Ref: MyLoadBalancer
     WebACLId:
       Ref: MyWebACL

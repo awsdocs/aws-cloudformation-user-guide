@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[Engine](#cfn-elasticache-replicationgroup-engine)" : String,
     "[EngineVersion](#cfn-elasticache-replicationgroup-engineversion)" : String,
     "[NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration)" : [ [NodeGroupConfiguration](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md) ],
-    "[NotificationTopicArn](#cfn-elasticache-replicationgroup-notificationtopicarn)" : String,
+    "[NotificationTopicARN](#cfn-elasticache-replicationgroup-notificationtopicarn)" : String,
     "[NumCacheClusters](#cfn-elasticache-replicationgroup-numcacheclusters)" : Integer,
     "[NumNodeGroups](#cfn-elasticache-replicationgroup-numnodegroups)" : Integer,
     "[Port](#cfn-elasticache-replicationgroup-port)" : Integer,
@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[ReplicationGroupDescription](#cfn-elasticache-replicationgroup-replicationgroupdescription)" : String,
     "[ReplicationGroupId](#cfn-elasticache-replicationgroup-replicationgroupid)" : String,
     "[SecurityGroupIds](#cfn-elasticache-replicationgroup-securitygroupids)" : [ String, ... ],
-    "[SnapshotArns](#cfn-elasticache-replicationgroup-snapshotarns)" : [ String, ... ],
+    "[SnapshotARNs](#cfn-elasticache-replicationgroup-snapshotarns)" : [ String, ... ],
     "[SnapshotName](#cfn-elasticache-replicationgroup-snapshotname)" : String,
     "[SnapshotRetentionLimit](#cfn-elasticache-replicationgroup-snapshotrentionlimit)" : Integer,
     "[SnapshottingClusterId](#cfn-elasticache-replicationgroup-snapshottingclusterid)" : String,
@@ -70,7 +70,7 @@ Properties:
   [EngineVersion](#cfn-elasticache-replicationgroup-engineversion): String
   [NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration):
     - [NodeGroupConfiguration](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md)
-  [NotificationTopicArn](#cfn-elasticache-replicationgroup-notificationtopicarn): String
+  [NotificationTopicARN](#cfn-elasticache-replicationgroup-notificationtopicarn): String
   [NumCacheClusters](#cfn-elasticache-replicationgroup-numcacheclusters): Integer
   [NumNodeGroups](#cfn-elasticache-replicationgroup-numnodegroups): Integer
   [Port](#cfn-elasticache-replicationgroup-port): Integer
@@ -83,7 +83,7 @@ Properties:
   [ReplicationGroupId](#cfn-elasticache-replicationgroup-replicationgroupid): String
   [SecurityGroupIds](#cfn-elasticache-replicationgroup-securitygroupids):
     - String
-  [SnapshotArns](#cfn-elasticache-replicationgroup-snapshotarns):
+  [SnapshotARNs](#cfn-elasticache-replicationgroup-snapshotarns):
     - String
   [SnapshotName](#cfn-elasticache-replicationgroup-snapshotname): String
   [SnapshotRetentionLimit](#cfn-elasticache-replicationgroup-snapshotrentionlimit): Integer
@@ -185,7 +185,7 @@ If you specify the `PrimaryClusterId`, you can use only the following additional
 *Type*: List of [Amazon ElastiCache ReplicationGroup NodeGroupConfiguration](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`NotificationTopicArn`  <a name="cfn-elasticache-replicationgroup-notificationtopicarn"></a>
+`NotificationTopicARN`  <a name="cfn-elasticache-replicationgroup-notificationtopicarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service topic to which notifications are sent\.  
 *Required*: No  
 *Type*: String  
@@ -289,7 +289,7 @@ The `CacheSecurityGroupNames` property is only for EC2\-Classic security groups\
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`SnapshotArns`  <a name="cfn-elasticache-replicationgroup-snapshotarns"></a>
+`SnapshotARNs`  <a name="cfn-elasticache-replicationgroup-snapshotarns"></a>
 A single\-element string list that specifies an ARN of a Redis `.rdb` snapshot file that is stored in Amazon Simple Storage Service \(Amazon S3\)\. The snapshot file populates the node group\. The Amazon S3 object name in the ARN cannot contain commas\. For example, you can specify `arn:aws:s3:::my_bucket/snapshot1.rdb`\.  
 *Required*: No  
 *Type*: List of String values  

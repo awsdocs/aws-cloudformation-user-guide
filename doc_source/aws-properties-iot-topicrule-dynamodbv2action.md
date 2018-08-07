@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[PutItem](#cfn-iot-topicrule-dynamodbv2action-putitem)" : [*PutItemInput*](aws-properties-iot-topicrule-putiteminput.md),
-  "[RoleArn](#cfn-iot-topicrule-dynamodbv2action-rolearn)" : String
+  "[RoleARN](#cfn-iot-topicrule-dynamodbv2action-rolearn)" : String
 }
 ```
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 [PutItem](#cfn-iot-topicrule-dynamodbv2action-putitem): 
   [*PutItemInput*](aws-properties-iot-topicrule-putiteminput.md)
-[RoleArn](#cfn-iot-topicrule-dynamodbv2action-rolearn): String
+[RoleARN](#cfn-iot-topicrule-dynamodbv2action-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-dynamodbv2action-properties"></a>
@@ -35,7 +35,7 @@ Specifies the database table to which to write the item for an AWS IoT topic rul
  *Type*: [AWS IoT TopicRule PutItemInput](aws-properties-iot-topicrule-putiteminput.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`RoleArn`  <a name="cfn-iot-topicrule-dynamodbv2action-rolearn"></a>
+`RoleARN`  <a name="cfn-iot-topicrule-dynamodbv2action-rolearn"></a>
 The IAM role that allows access to the DynamoDB table\. At a minimum, the role must allow the `dynamoDB:PutItem` IAM action\.  
  *Required*: No  
  *Type*: String  

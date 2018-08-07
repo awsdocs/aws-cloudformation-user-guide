@@ -68,7 +68,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
-`Arn`  
+`ARN`  
 The Amazon Resource Name \(ARN\) of the repository, such as `arn:aws:codecommit:us-east-1:123456789012:MyDemoRepo`\.
 
 `CloneUrlHttp`  
@@ -98,7 +98,7 @@ The following example creates an AWS CodeCommit repository with a trigger for al
       {
         "Name" : "MasterTrigger",
         "CustomData" : "Project ID 12345",
-        "DestinationArn" : { "Ref":"SNSarn" },
+        "DestinationARN" : { "Ref":"SNSarn" },
         "Branches" : ["Master"],
         "Events" : ["all"]
       }
@@ -118,7 +118,7 @@ MyRepo:
     Triggers:
     - Name: MasterTrigger
       CustomData: Project ID 12345
-      DestinationArn:
+      DestinationARN:
         Ref: SNSarn
       Branches:
       - Master

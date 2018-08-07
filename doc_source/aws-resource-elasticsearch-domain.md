@@ -138,11 +138,11 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
+`ARN`  
 The Amazon Resource Name \(ARN\) of the domain, such as `arn:aws:es:us-west-2:123456789012:domain/mystack-elasti-1ab2cdefghij`\.
 
-`DomainArn` \(deprecated\)  
-This attribute has been deprecated\. Use the `Arn` attribute instead\.
+`DomainARN` \(deprecated\)  
+This attribute has been deprecated\. Use the `ARN` attribute instead\.
 
 `DomainEndpoint`  
 The domain\-specific endpoint that's used to submit index, search, and data upload requests to an Amazon ES domain, such as `search-mystack-elasti-1ab2cdefghij-ab1c2deckoyb3hofw7wpqa3cm.us-west-2.es.amazonaws.com`\.
@@ -345,9 +345,9 @@ The following example creates a domain with VPC options\.
     }
   },
   "Outputs": {
-    "DomainArn": {
+    "DomainARN": {
       "Value": {
-        "Fn::GetAtt": ["ElasticsearchDomain", "DomainArn"]
+        "Fn::GetAtt": ["ElasticsearchDomain", "DomainARN"]
       }
     },
     "DomainEndpoint": {
@@ -447,8 +447,8 @@ Resources:
           ToPort: '443'
           CidrIp: 0.0.0.0/0
 Outputs:
-  DomainArn:
-    Value: !GetAtt ElasticsearchDomain.DomainArn
+  DomainARN:
+    Value: !GetAtt ElasticsearchDomain.DomainARN
   DomainEndpoint:
     Value: !GetAtt ElasticsearchDomain.DomainEndpoint
   SecurityGroupId:

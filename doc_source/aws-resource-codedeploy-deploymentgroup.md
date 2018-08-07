@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[Ec2TagFilters](#cfn-codedeploy-deploymentgroup-ec2tagfilters)" : [ [*Ec2TagFilter, \.\.\.*](aws-properties-codedeploy-deploymentgroup-ec2tagfilters.md) ],
     "[LoadBalancerInfo](#cfn-codedeploy-deploymentgroup-loadbalancerinfo)" : [*LoadBalancerInfo*](aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.md),
     "[OnPremisesInstanceTagFilters](#cfn-codedeploy-deploymentgroup-onpremisesinstancetagfilters)" : [ [*OnPremisesInstanceTagFilter, \.\.\.*](aws-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters.md) ],
-    "[ServiceRoleArn](#cfn-codedeploy-deploymentgroup-servicerolearn)" : String,
+    "[ServiceRoleARN](#cfn-codedeploy-deploymentgroup-servicerolearn)" : String,
     "[TriggerConfigurations](#cfn-codedeploy-deploymentgroup-triggerconfigurations)" : [ [*TriggerConfig, \.\.\.*](aws-properties-codedeploy-deploymentgroup-triggerconfig.md) ]
   }
 }
@@ -59,7 +59,7 @@ Properties:
     [*LoadBalancerInfo*](aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.md)
   [OnPremisesInstanceTagFilters](#cfn-codedeploy-deploymentgroup-onpremisesinstancetagfilters):
     - [*OnPremisesInstanceTagFilters*](aws-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters.md)
-  [ServiceRoleArn](#cfn-codedeploy-deploymentgroup-servicerolearn): String
+  [ServiceRoleARN](#cfn-codedeploy-deploymentgroup-servicerolearn): String
   [TriggerConfigurations](#cfn-codedeploy-deploymentgroup-triggerconfigurations):
     - [*TriggerConfig*](aws-properties-codedeploy-deploymentgroup-triggerconfig.md)
 ```
@@ -135,7 +135,7 @@ The on\-premises instance tags already applied to on\-premises instances that yo
 *Type*: List of [AWS CodeDeploy DeploymentGroup OnPremisesInstanceTagFilters](aws-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ServiceRoleArn`  <a name="cfn-codedeploy-deploymentgroup-servicerolearn"></a>
+`ServiceRoleARN`  <a name="cfn-codedeploy-deploymentgroup-servicerolearn"></a>
 A service role Amazon Resource Name \(ARN\) that grants AWS CodeDeploy permission to make calls to AWS services on your behalf\. For more information, see [Create a Service Role for AWS CodeDeploy](http://docs.aws.amazon.com/codedeploy/latest/userguide/how-to-create-service-role.html) in the *AWS CodeDeploy User Guide\.*  
 In some cases, you might need to add a dependency on the service role's policy\. For more information, see IAM role policy in [DependsOn Attribute](aws-attribute-dependson.md)\.
 *Required*: Yes  
@@ -181,7 +181,7 @@ The following example creates a deployment group that is associated with Auto Sc
         }
       }
     },
-    "ServiceRoleArn" : {"Ref" : "RoleArn"}
+    "ServiceRoleARN" : {"Ref" : "RoleARN"}
   }
 }
 ```
@@ -206,8 +206,8 @@ DeploymentGroup:
             Ref: CommitId
           Repository: 
             Ref: Repository
-    ServiceRoleArn: 
-      Ref: RoleArn
+    ServiceRoleARN: 
+      Ref: RoleARN
 ```
 
 ### Associate EC2 Instances<a name="w3ab2c21c10d258c13b4"></a>
@@ -240,7 +240,7 @@ The following example creates a deployment group that uses instance tags to asso
       "Value" : {"Ref" : "TagValue"},
       "Type" : "KEY_AND_VALUE"
     }],
-    "ServiceRoleArn" : {"Ref" : "RoleArn"}
+    "ServiceRoleARN" : {"Ref" : "RoleARN"}
   }
 }
 ```
@@ -275,8 +275,8 @@ DeploymentGroup:
         Value: 
           Ref: TagValue
         Type: "KEY_AND_VALUE"
-    ServiceRoleArn: 
-      Ref: RoleArn
+    ServiceRoleARN: 
+      Ref: RoleARN
 ```
 
 ### Alarm and Trigger<a name="w3ab2c21c10d258c13b6"></a>
@@ -385,7 +385,7 @@ The following example configures a billing alarm and a notification trigger for 
             "Type": "VALUE_ONLY"
           }
         ],
-        "ServiceRoleArn": {
+        "ServiceRoleARN": {
           "Ref": "CodeDeployServiceRole"
         },
         "TriggerConfigurations": [
@@ -395,7 +395,7 @@ The following example configures a billing alarm and a notification trigger for 
               "DeploymentRollback"
             ],
             "TriggerName": "MyTarget",
-            "TriggerTargetArn": {
+            "TriggerTargetARN": {
               "Ref": "mySNSTopic"
             }
           }
@@ -466,13 +466,13 @@ Resources:
           Type: KEY_ONLY
         - Value: !Ref EC2TagValue1
           Type: VALUE_ONLY
-      ServiceRoleArn: !Ref CodeDeployServiceRole
+      ServiceRoleARN: !Ref CodeDeployServiceRole
       TriggerConfigurations:
         - TriggerEvents:
             - DeploymentSuccess
             - DeploymentRollback
           TriggerName: MyTarget
-          TriggerTargetArn: !Ref mySNSTopic
+          TriggerTargetARN: !Ref mySNSTopic
 ```
 
 ### Automatic Rollback Configuration<a name="w3ab2c21c10d258c13b8"></a>
@@ -582,14 +582,14 @@ The following example configures automatic rollback for the deployment group\.
             "Type": "VALUE_ONLY"
           }
         ],
-        "ServiceRoleArn": {
+        "ServiceRoleARN": {
           "Ref": "CodeDeployServiceRole"
         },
         "TriggerConfigurations": [
           {
             "TriggerEvents": [ "DeploymentSuccess", "DeploymentRollback" ],
             "TriggerName": "MyTarget",
-            "TriggerTargetArn": { "Ref": "mySNSTopic" }
+            "TriggerTargetARN": { "Ref": "mySNSTopic" }
           }
         ]
       }
@@ -661,13 +661,13 @@ Resources:
           Type: KEY_ONLY
         - Value: !Ref EC2TagValue1
           Type: VALUE_ONLY
-      ServiceRoleArn: !Ref CodeDeployServiceRole
+      ServiceRoleARN: !Ref CodeDeployServiceRole
       TriggerConfigurations:
         - TriggerEvents:
             - DeploymentSuccess
             - DeploymentRollback
           TriggerName: MyTarget
-          TriggerTargetArn: !Ref mySNSTopic
+          TriggerTargetARN: !Ref mySNSTopic
 ```
 
 ### Load Balancer<a name="w3ab2c21c10d258c13c10"></a>
@@ -796,14 +796,14 @@ The following example configures an Elastic Load Balancing load balancer for the
         "DeploymentStyle": {
           "DeploymentOption": "WITH_TRAFFIC_CONTROL"
         },
-        "ServiceRoleArn": {
+        "ServiceRoleARN": {
           "Ref": "CodeDeployServiceRole"
         },
         "TriggerConfigurations": [
           {
             "TriggerEvents": [ "DeploymentSuccess", "DeploymentFailure" ],
             "TriggerName": "MyTarget",
-            "TriggerTargetArn": { "Ref": "mySNSTopic" }
+            "TriggerTargetARN": { "Ref": "mySNSTopic" }
           }
         ]
       }
@@ -896,13 +896,13 @@ Resources:
           - Name: !Ref myELB
       DeploymentStyle:
         DeploymentOption: WITH_TRAFFIC_CONTROL
-      ServiceRoleArn: !Ref CodeDeployServiceRole
+      ServiceRoleARN: !Ref CodeDeployServiceRole
       TriggerConfigurations:
         - TriggerEvents:
             - DeploymentSuccess
             - DeploymentFailure
           TriggerName: MyTarget
-          TriggerTargetArn: !Ref mySNSTopic
+          TriggerTargetARN: !Ref mySNSTopic
 Outputs:
   ELB:
     Description: ELB for DeploymentGroup
@@ -933,7 +933,7 @@ The following example specifies the target group to use in a deployment\. Instan
                         }
                     ]
                 },
-                "ServiceRoleArn": "arn:aws:iam::12345678:role/CodeDeployServiceRole"
+                "ServiceRoleARN": "arn:aws:iam::12345678:role/CodeDeployServiceRole"
             }
         }
     }
@@ -954,5 +954,5 @@ Resources:
       LoadBalancerInfo:
         TargetGroupInfoList:
           - Name: !GetAtt MyTargetGroup.TargetGroupName
-      ServiceRoleArn: 'arn:aws:iam::12345678:role/CodeDeployServiceRole'
+      ServiceRoleARN: 'arn:aws:iam::12345678:role/CodeDeployServiceRole'
 ```

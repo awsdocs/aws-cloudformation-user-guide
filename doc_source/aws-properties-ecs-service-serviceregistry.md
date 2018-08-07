@@ -11,7 +11,7 @@
 ```
 {
   "[Port](#cfn-ecs-service-serviceregistry-port)" : Integer,
-  "[RegistryArn](#cfn-ecs-service-serviceregistry-registryarn)" : String
+  "[RegistryARN](#cfn-ecs-service-serviceregistry-registryarn)" : String
 }
 ```
 
@@ -19,7 +19,7 @@
 
 ```
 [Port](#cfn-ecs-service-serviceregistry-port): Integer
-[RegistryArn](#cfn-ecs-service-serviceregistry-registryarn): String
+[RegistryARN](#cfn-ecs-service-serviceregistry-registryarn): String
 ```
 
 ## Properties<a name="w3ab2c21c14d857b9"></a>
@@ -29,7 +29,7 @@ The port value used if your service discovery service specified an SRV record\.
 *Required*: No  
 *Type*: Integer
 
-`RegistryArn`  <a name="cfn-ecs-service-serviceregistry-registryarn"></a>
+`RegistryARN`  <a name="cfn-ecs-service-serviceregistry-registryarn"></a>
 The Amazon Resource Name \(ARN\) of the service registry\. The currently supported service registry is Amazon Route 53 auto naming\.   
 *Required*: No  
 *Type*: String

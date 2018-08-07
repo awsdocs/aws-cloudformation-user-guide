@@ -90,7 +90,7 @@ To create the Lambda function, you declare the `AWS::Lambda::Function` resource,
     "Handler": { "Fn::Join" : [ "", [{ "Ref": "ModuleName" },".handler"] ] },
     "Runtime": "nodejs4.3",
     "Timeout": "30",
-    "Role": { "Fn::GetAtt" : ["LambdaExecutionRole", "Arn"] }
+    "Role": { "Fn::GetAtt" : ["LambdaExecutionRole", "ARN"] }
   }
 }
 ```
@@ -107,7 +107,7 @@ AMIInfoFunction:
     Handler: !Sub "${ModuleName}.handler"
     Runtime: nodejs4.3
     Timeout: 30
-    Role: !GetAtt LambdaExecutionRole.Arn
+    Role: !GetAtt LambdaExecutionRole.ARN
 ```
 
 The `Code` property specifies the Amazon S3 location \(bucket name and file name\) where you uploaded the sample package\. The sample template uses input parameters \(`"Ref": "S3Bucket"` and `"Ref": "S3Key"`\) to set the bucket and file names so that you are able to specify the names when you create the stack\. Similarly, the handler name, which corresponds to the name of the source file \(the JavaScript file\) in the `.zip` package, also uses an input parameter \(`"Ref": "ModuleName"`\)\. Because the source file is JavaScript code, the runtime is specified as `nodejs4.3`\.
@@ -192,7 +192,7 @@ For both the Linux and Windows templates, the custom resource invokes the Lambda
 "AMIInfo": {
   "Type": "Custom::AMIInfo",
   "Properties": {
-    "ServiceToken": { "Fn::GetAtt" : ["AMIInfoFunction", "Arn"] },
+    "ServiceToken": { "Fn::GetAtt" : ["AMIInfoFunction", "ARN"] },
     "Region": { "Ref": "AWS::Region" },
     "Architecture": { "Fn::FindInMap" : [ "AWSInstanceType2Arch", { "Ref" : "InstanceType" }, "Arch" ] }
   }
@@ -205,7 +205,7 @@ For both the Linux and Windows templates, the custom resource invokes the Lambda
 AMIInfo:
   Type: Custom::AMIInfo
   Properties:
-    ServiceToken: !GetAtt AMIInfoFunction.Arn
+    ServiceToken: !GetAtt AMIInfoFunction.ARN
     Region: !Ref "AWS::Region"
     Architecture:
       Fn::FindInMap:
@@ -222,7 +222,7 @@ For Windows, the custom resource provides the Windows version to the Lambda func
 "AMIInfo": {
   "Type": "Custom::AMIInfo",
   "Properties": {
-    "ServiceToken": { "Fn::GetAtt" : ["AMIInfoFunction", "Arn"] },
+    "ServiceToken": { "Fn::GetAtt" : ["AMIInfoFunction", "ARN"] },
     "Region": { "Ref": "AWS::Region" },
     "OSName": { "Ref": "WindowsVersion" }
   }
@@ -235,7 +235,7 @@ For Windows, the custom resource provides the Windows version to the Lambda func
 AMIInfo:
   Type: Custom::AMIInfo
   Properties:
-    ServiceToken: !GetAtt AMIInfoFunction.Arn
+    ServiceToken: !GetAtt AMIInfoFunction.ARN
     Region: !Ref "AWS::Region"
     OSName: !Ref "WindowsVersion"
 ```

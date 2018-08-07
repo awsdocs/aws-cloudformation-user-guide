@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[TriggerEvents](#cfn-codedeploy-deploymentgroup-triggerconfig-triggerevents)" : [ String, ... ],
   "[TriggerName](#cfn-codedeploy-deploymentgroup-triggerconfig-triggername)" : String,
-  "[TriggerTargetArn](#cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn)" : String
+  "[TriggerTargetARN](#cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn)" : String
 }
 ```
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [TriggerEvents](#cfn-codedeploy-deploymentgroup-triggerconfig-triggerevents): 
   - String
 [TriggerName](#cfn-codedeploy-deploymentgroup-triggerconfig-triggername): String
-[TriggerTargetArn](#cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn): String
+[TriggerTargetARN](#cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn): String
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-triggerconfig-properties"></a>
@@ -41,7 +41,7 @@ The name of the notification trigger\.
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`TriggerTargetArn`  <a name="cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn"></a>
+`TriggerTargetARN`  <a name="cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service topic through which notifications about deployment or instance events are sent\.  
 *Required*: No  
 *Type*: String  

@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Sender](#cfn-ses-receiptrule-bounceaction-sender)" : String,
   "[SmtpReplyCode](#cfn-ses-receiptrule-bounceaction-smtpreplycode)" : String,
   "[Message](#cfn-ses-receiptrule-bounceaction-message)" : String,
-  "[TopicArn](#cfn-ses-receiptrule-bounceaction-topicarn)" : String,
+  "[TopicARN](#cfn-ses-receiptrule-bounceaction-topicarn)" : String,
   "[StatusCode](#cfn-ses-receiptrule-bounceaction-statuscode)" : String
 }
 ```
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [Sender](#cfn-ses-receiptrule-bounceaction-sender): String
 [SmtpReplyCode](#cfn-ses-receiptrule-bounceaction-smtpreplycode): String
 [Message](#cfn-ses-receiptrule-bounceaction-message): String
-[TopicArn](#cfn-ses-receiptrule-bounceaction-topicarn): String
+[TopicARN](#cfn-ses-receiptrule-bounceaction-topicarn): String
 [StatusCode](#cfn-ses-receiptrule-bounceaction-statuscode): String
 ```
 
@@ -50,7 +50,7 @@ The SMTP reply code, as defined by [RFC 5321](https://tools.ietf.org/html/rfc532
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`TopicArn`  <a name="cfn-ses-receiptrule-bounceaction-topicarn"></a>
+`TopicARN`  <a name="cfn-ses-receiptrule-bounceaction-topicarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon SNS topic to notify when the bounce action is taken\. An example of an Amazon SNS topic ARN is `arn:aws:sns:us-west-2:123456789012:MyTopic`\. For more information about Amazon SNS topics, see [Create a Topic](url-sns-dg;CreateTopic.html) in the *Amazon Simple Notification Service Developer Guide*\.  
  *Required*: No  
  *Type*: String  

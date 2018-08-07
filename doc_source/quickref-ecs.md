@@ -287,12 +287,12 @@ For the latest AMI IDs, see [Amazon ECS\-optimized AMI](http://docs.aws.amazon.c
         "DefaultActions":[
           {
             "Type":"forward",
-            "TargetGroupArn":{
+            "TargetGroupARN":{
               "Ref":"ECSTG"
             }
           }
         ],
-        "LoadBalancerArn":{
+        "LoadBalancerARN":{
           "Ref":"ECSALB"
         },
         "Port":"80",
@@ -306,7 +306,7 @@ For the latest AMI IDs, see [Amazon ECS\-optimized AMI](http://docs.aws.amazon.c
         "Actions":[
           {
             "Type":"forward",
-            "TargetGroupArn":{
+            "TargetGroupARN":{
               "Ref":"ECSTG"
             }
           }
@@ -319,7 +319,7 @@ For the latest AMI IDs, see [Amazon ECS\-optimized AMI](http://docs.aws.amazon.c
             ]
           }
         ],
-        "ListenerArn":{
+        "ListenerARN":{
           "Ref":"ALBListener"
         },
         "Priority":1
@@ -438,7 +438,7 @@ For the latest AMI IDs, see [Amazon ECS\-optimized AMI](http://docs.aws.amazon.c
           {
             "ContainerName":"simple-app",
             "ContainerPort":"80",
-            "TargetGroupArn":{
+            "TargetGroupARN":{
               "Ref":"ECSTG"
             }
           }
@@ -521,7 +521,7 @@ For the latest AMI IDs, see [Amazon ECS\-optimized AMI](http://docs.aws.amazon.c
         "RoleARN":{
           "Fn::GetAtt":[
             "AutoscalingRole",
-            "Arn"
+            "ARN"
           ]
         },
         "ScalableDimension":"ecs:service:DesiredCount",
@@ -861,8 +861,8 @@ Resources:
     Properties:
       DefaultActions:
       - Type: forward
-        TargetGroupArn: !Ref 'ECSTG'
-      LoadBalancerArn: !Ref 'ECSALB'
+        TargetGroupARN: !Ref 'ECSTG'
+      LoadBalancerARN: !Ref 'ECSALB'
       Port: '80'
       Protocol: HTTP
   ECSALBListenerRule:
@@ -871,11 +871,11 @@ Resources:
     Properties:
       Actions:
       - Type: forward
-        TargetGroupArn: !Ref 'ECSTG'
+        TargetGroupARN: !Ref 'ECSTG'
       Conditions:
       - Field: path-pattern
         Values: [/]
-      ListenerArn: !Ref 'ALBListener'
+      ListenerARN: !Ref 'ALBListener'
       Priority: 1
   ECSTG:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
@@ -928,7 +928,7 @@ Resources:
       LoadBalancers:
       - ContainerName: simple-app
         ContainerPort: '80'
-        TargetGroupArn: !Ref 'ECSTG'
+        TargetGroupARN: !Ref 'ECSTG'
       Role: !Ref 'ECSServiceRole'
       TaskDefinition: !Ref 'taskdefinition'
   ECSServiceRole:
@@ -957,7 +957,7 @@ Resources:
       MaxCapacity: 2
       MinCapacity: 1
       ResourceId: !Join ['', [service/, !Ref 'ECSCluster', /, !GetAtt [service, Name]]]
-      RoleARN: !GetAtt [AutoscalingRole, Arn]
+      RoleARN: !GetAtt [AutoscalingRole, ARN]
       ScalableDimension: ecs:service:DesiredCount
       ServiceNamespace: ecs
   ServiceScalingPolicy:

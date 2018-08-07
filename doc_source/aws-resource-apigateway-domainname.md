@@ -21,10 +21,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type": "AWS::ApiGateway::DomainName",
   "Properties": {
-    "[CertificateArn](#cfn-apigateway-domainname-certificatearn)": String,
+    "[CertificateARN](#cfn-apigateway-domainname-certificatearn)": String,
     "[DomainName](#cfn-apigateway-domainname-domainname)": String,
     "[EndpointConfiguration](#cfn-apigateway-domainname-endpointconfiguration)" : [*EndpointConfiguration*](aws-properties-apigateway-domainname-endpointconfiguration.md),
-    "[RegionalCertificateArn](#cfn-apigateway-domainname-regionalcertificatearn)" : String
+    "[RegionalCertificateARN](#cfn-apigateway-domainname-regionalcertificatearn)" : String
   }
 }
 ```
@@ -34,16 +34,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ApiGateway::DomainName"
 Properties: 
-  [CertificateArn](#cfn-apigateway-domainname-certificatearn): String
+  [CertificateARN](#cfn-apigateway-domainname-certificatearn): String
   [DomainName](#cfn-apigateway-domainname-domainname): String
   [EndpointConfiguration](#cfn-apigateway-domainname-endpointconfiguration): 
     [*EndpointConfiguration*](aws-properties-apigateway-domainname-endpointconfiguration.md)
-  [RegionalCertificateArn](#cfn-apigateway-domainname-regionalcertificatearn): String
+  [RegionalCertificateARN](#cfn-apigateway-domainname-regionalcertificatearn): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-domainname-properties"></a>
 
-`CertificateArn`  <a name="cfn-apigateway-domainname-certificatearn"></a>
+`CertificateARN`  <a name="cfn-apigateway-domainname-certificatearn"></a>
 The reference to an AWS\-managed certificate for use by the edge\-optimized endpoint for this domain name\. AWS Certificate Manager is the only supported source\. For requirements and additional information about setting up certificates, see [Get Certificates Ready in AWS Certificate Manager](http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html#how-to-custom-domains-prerequisites) in the *API Gateway Developer Guide*\.  
 *Required*: No  
 *Type*: String  
@@ -61,7 +61,7 @@ A list of the endpoint types of the domain name\.
  *Type*: [API Gateway DomainName EndpointConfiguration](aws-properties-apigateway-domainname-endpointconfiguration.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`RegionalCertificateArn`  <a name="cfn-apigateway-domainname-regionalcertificatearn"></a>
+`RegionalCertificateARN`  <a name="cfn-apigateway-domainname-regionalcertificatearn"></a>
 The reference to an AWS\-managed certificate for use by the regional endpoint for the domain name\. AWS Certificate Manager is the only supported source\.  
  *Required*: No  
  *Type*: String  
@@ -98,7 +98,7 @@ The following example creates a custom domain name of `api.mydomain.com`\.
   "Type": "AWS::ApiGateway::DomainName",
   "Properties": {
     "DomainName": "api.mydomain.com",
-    "CertificateArn": "arn:aws:acm:us-east-1:111122223333:certificate/fb1b9770-a305-495d-aefb-27e5e101ff3"
+    "CertificateARN": "arn:aws:acm:us-east-1:111122223333:certificate/fb1b9770-a305-495d-aefb-27e5e101ff3"
   }
 }
 ```
@@ -110,7 +110,7 @@ MyDomainName:
   Type: 'AWS::ApiGateway::DomainName'
   Properties:
     DomainName: api.mydomain.com
-    CertificateArn: arn:aws:acm:us-east-1:111122223333:certificate/fb1b9770-a305-495d-aefb-27e5e101ff3
+    CertificateARN: arn:aws:acm:us-east-1:111122223333:certificate/fb1b9770-a305-495d-aefb-27e5e101ff3
 ```
 
 ### Create Custom Domain from Parameters<a name="aws-resource-apigateway-domainname-example2"></a>
@@ -147,7 +147,7 @@ The following example creates a custom domain name of `example.mydomain.com`\.
     "myDomainName": {
       "Type": "AWS::ApiGateway::DomainName",
       "Properties": {
-        "CertificateArn": {
+        "CertificateARN": {
           "Ref": "myCertificate"
         },
         "DomainName": {
@@ -212,7 +212,7 @@ Resources:
   myDomainName:
     Type: 'AWS::ApiGateway::DomainName'
     Properties:
-      CertificateArn: !Ref myCertificate
+      CertificateARN: !Ref myCertificate
       DomainName: !Ref domainName
   myMapping:
     Type: 'AWS::ApiGateway::BasePathMapping'
@@ -243,7 +243,7 @@ The following example creates a custom domain name that specifies a regional cer
     "cfnDomainName": {
       "Type": "String"
     },
-    "certificateArn": {
+    "certificateARN": {
       "Type": "String"
     },
     "type": {
@@ -254,8 +254,8 @@ The following example creates a custom domain name that specifies a regional cer
     "myDomainName": {
       "Type": "AWS::ApiGateway::DomainName",
       "Properties": {
-        "CertificateArn": {
-          "Ref": "certificateArn"
+        "CertificateARN": {
+          "Ref": "certificateARN"
         },
         "DomainName": {
           "Ref": "cfnDomainName"
@@ -267,8 +267,8 @@ The following example creates a custom domain name that specifies a regional cer
             }
           ]
         },
-        "RegionalCertificateArn": {
-          "Ref": "certificateArn"
+        "RegionalCertificateARN": {
+          "Ref": "certificateARN"
         }
       }
     },
@@ -287,7 +287,7 @@ The following example creates a custom domain name that specifies a regional cer
 Parameters:
   cfnDomainName:
     Type: String
-  certificateArn:
+  certificateARN:
     Type: String
   type:
     Type: String
@@ -295,12 +295,12 @@ Resources:
   myDomainName:
     Type: 'AWS::ApiGateway::DomainName'
     Properties:
-      CertificateArn: !Ref certificateArn
+      CertificateARN: !Ref certificateARN
       DomainName: !Ref cfnDomainName
       EndpointConfiguration:
         Types:
           - !Ref type
-      RegionalCertificateArn: !Ref certificateArn
+      RegionalCertificateARN: !Ref certificateARN
   DomainName:
     Value: !Ref myDomainName
 ```

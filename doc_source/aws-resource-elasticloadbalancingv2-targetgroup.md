@@ -178,7 +178,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
-`LoadBalancerArns`  
+`LoadBalancerARNs`  
 A list of Amazon Resource Names \(ARNs\) of the load balancers that route traffic to this target group, such as `[ "arn:aws:elasticloadbalancing:us-west-2:123456789012:loadbalancer/app/my-load-balancer/50dc6c495c0c9188" ]`\.
 
 `TargetGroupFullName`  
@@ -276,9 +276,9 @@ The following example creates an Elastic Load Balancing listener and associates 
   "Properties" : {
     "DefaultActions" : [{
       "Type" : "forward",
-      "TargetGroupArn" : { "Ref" : "ALBTargetGroup" }
+      "TargetGroupARN" : { "Ref" : "ALBTargetGroup" }
     }],
-    "LoadBalancerArn" : { "Ref" : "ApplicationLoadBalancer" },
+    "LoadBalancerARN" : { "Ref" : "ApplicationLoadBalancer" },
     "Port" : "80",
     "Protocol" : "HTTP"
   }
@@ -313,9 +313,9 @@ ALBListener:
   Properties:
     DefaultActions:
       Type: forward
-      TargetGroupArn:
+      TargetGroupARN:
         Ref: ALBTargetGroup
-      LoadBalancerArn:
+      LoadBalancerARN:
         Ref: ApplicationLoadBalancer
       Port: 80
       Protocol: HTTP

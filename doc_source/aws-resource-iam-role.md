@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type": "AWS::IAM::Role",
   "Properties": {
     "[AssumeRolePolicyDocument](#cfn-iam-role-assumerolepolicydocument)": { JSON },
-    "[ManagedPolicyArns](#cfn-iam-role-managepolicyarns)": [ String, ... ],
+    "[ManagedPolicyARNs](#cfn-iam-role-managepolicyarns)": [ String, ... ],
     "[MaxSessionDuration](#cfn-iam-role-maxsessionduration)": Integer,
     "[Path](#cfn-iam-role-path)": String,
     "[Policies](#cfn-iam-role-policies)": [ Policies, ... ],
@@ -38,7 +38,7 @@ Type: "AWS::IAM::Role"
 Properties: 
   [AssumeRolePolicyDocument](#cfn-iam-role-assumerolepolicydocument):
     JSON object
-  [ManagedPolicyArns](#cfn-iam-role-managepolicyarns):
+  [ManagedPolicyARNs](#cfn-iam-role-managepolicyarns):
     - String
   [MaxSessionDuration](#cfn-iam-role-maxsessionduration): Integer
   [Path](#cfn-iam-role-path): String
@@ -56,7 +56,7 @@ The trust policy that is associated with this role\. You can associate only one 
 AWS Identity and Access Management \(IAM\) requires that policies be in JSON format\. However, for templates formatted in YAML, you can create an IAM policy in either JSON or YAML format\. AWS CloudFormation always converts a policy to JSON format before submitting it to IAM\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ManagedPolicyArns`  <a name="cfn-iam-role-managepolicyarns"></a>
+`ManagedPolicyARNs`  <a name="cfn-iam-role-managepolicyarns"></a>
 One or more managed policy ARNs to attach to this role\.  
 *Required*: No  
 *Type*: List of String values  
@@ -113,11 +113,11 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
+`ARN`  
 Returns the Amazon Resource Name \(ARN\) for the instance profile\. For example:  
 
 ```
-{"Fn::GetAtt" : ["MyRole", "Arn"] }
+{"Fn::GetAtt" : ["MyRole", "ARN"] }
 ```
 This will return a value such as `“arn:aws:iam::1234567890:role/MyRole-AJJHDSKSDF”`\.
 

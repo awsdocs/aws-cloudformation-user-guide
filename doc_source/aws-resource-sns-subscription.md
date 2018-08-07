@@ -17,7 +17,7 @@ The `AWS::SNS::Subscription` resource subscribes an endpoint to an Amazon Simple
   "Properties" : {
     "[Endpoint](#cfn-sns-endpoint)" : String,
     "[Protocol](#cfn-sns-protocol)" : String,
-    "[TopicArn](#cfn-sns-topicarn)" : String
+    "[TopicARN](#cfn-sns-topicarn)" : String
   }
 }
 ```
@@ -29,7 +29,7 @@ Type: "AWS::SNS::Subscription"
 Properties:
   [Endpoint](#cfn-sns-endpoint): String
   [Protocol](#cfn-sns-protocol): String
-  [TopicArn](#cfn-sns-topicarn): String
+  [TopicARN](#cfn-sns-topicarn): String
 ```
 
 ## Properties<a name="aws-resource-sns-subscription-properties"></a>
@@ -46,7 +46,7 @@ The subscription's protocol\. For more information, see the [Subscribe Protocol]
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`TopicArn`  <a name="cfn-sns-topicarn"></a>
+`TopicARN`  <a name="cfn-sns-topicarn"></a>
 The Amazon Resource Name \(ARN\) of the topic to subscribe to\.  
 *Required*: Yes  
 *Type*: String  
@@ -64,7 +64,7 @@ The following
   "Properties" : {
     "Endpoint" : "test@email.com",
     "Protocol" : "email",
-    "TopicArn" : {"Ref" : "MySNSTopic"}
+    "TopicARN" : {"Ref" : "MySNSTopic"}
   }
 }
 ```
@@ -77,5 +77,5 @@ MySubscription:
   Properties:
     Endpoint: test@email.com
     Protocol: email
-    TopicArn: !Ref 'MySNSTopic'
+    TopicARN: !Ref 'MySNSTopic'
 ```

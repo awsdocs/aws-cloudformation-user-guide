@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::Model",
   "Properties" : {
-    "[ExecutionRoleArn](#cfn-sagemaker-model-executionrolearn)" : String,
+    "[ExecutionRoleARN](#cfn-sagemaker-model-executionrolearn)" : String,
     "[PrimaryContainer](#cfn-sagemaker-model-primarycontainer)" : [*Tag*](aws-properties-sagemaker-model-containerdefinition.md),
     "[ModelName](#cfn-sagemaker-model-modelname)" : String,
     "[VpcConfig](#cfn-sagemaker-model-vpcconfig)" : [*Tag*](aws-properties-sagemaker-notebookinstance-tag.md),
@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::SageMaker::Model"
 Properties:
-  [ExecutionRoleArn](#cfn-sagemaker-model-executionrolearn): String
+  [ExecutionRoleARN](#cfn-sagemaker-model-executionrolearn): String
   [PrimaryContainer](#cfn-sagemaker-model-primarycontainer): [*Tag*](aws-properties-sagemaker-model-containerdefinition.md)
   [ModelName](#cfn-sagemaker-model-modelname): String
   [VpcConfig](#cfn-sagemaker-model-vpcconfig): [*Tag*](aws-properties-sagemaker-notebookinstance-tag.md)
@@ -42,7 +42,7 @@ Properties:
 
 ## Properties<a name="aws-resource-sagemaker-model-properties"></a>
 
-`ExecutionRoleArn`  <a name="cfn-sagemaker-model-executionrolearn"></a>
+`ExecutionRoleARN`  <a name="cfn-sagemaker-model-executionrolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role that Amazon SageMaker can assume to access model artifacts and docker image for deployment on ML compute instances\. Deploying on ML compute instances is part of model hosting\. For more information, see [Amazon SageMaker Roles](http://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html)\.  
  *Required*: Yes  
  *Type*: String  
@@ -155,7 +155,7 @@ The following example creates an endpoint configuration from a trained model, an
         "PrimaryContainer": {
           "Image": { "Fn::FindInMap" : [ "AWS::Region", "NullTransformer"] }
         },
-        "ExecutionRoleArn": { "Fn::GetAtt" : [ "ExecutionRole", "Arn" ] }
+        "ExecutionRoleARN": { "Fn::GetAtt" : [ "ExecutionRole", "ARN" ] }
       }
     },
     "ExecutionRole": {
@@ -251,7 +251,7 @@ Resources:
     Properties:
       PrimaryContainer:
         Image: !FindInMap [RegionMap, !Ref "AWS::Region", "NullTransformer"]
-      ExecutionRoleArn: !GetAtt ExecutionRole.Arn
+      ExecutionRoleARN: !GetAtt ExecutionRole.ARN
 
   ExecutionRole: 
     Type: "AWS::IAM::Role"

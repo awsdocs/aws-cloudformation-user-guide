@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type": "AWS::DMS::Endpoint",
   "Properties": {
-    "[CertificateArn](#cfn-dms-endpoint-certificatearn)": String,
+    "[CertificateARN](#cfn-dms-endpoint-certificatearn)": String,
     "[DatabaseName](#cfn-dms-endpoint-databasename)": String,
     "[DynamoDbSettings](#cfn-dms-endpoint-dynamodbsettings)": DynamoDbSettings,
     "[EndpointIdentifier](#cfn-dms-endpoint-endpointidentifier)": String,
@@ -44,7 +44,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::DMS::Endpoint"
 Properties:
-  [CertificateArn](#cfn-dms-endpoint-certificatearn): String
+  [CertificateARN](#cfn-dms-endpoint-certificatearn): String
   [DatabaseName](#cfn-dms-endpoint-databasename): String
   [DynamoDbSettings](#cfn-dms-endpoint-dynamodbsettings):
     DynamoDbSettings
@@ -68,7 +68,7 @@ Properties:
 
 ## Properties<a name="aws-resource-dms-endpoint-properties"></a>
 
-`CertificateArn`  <a name="cfn-dms-endpoint-certificatearn"></a>
+`CertificateARN`  <a name="cfn-dms-endpoint-certificatearn"></a>
 The Amazon Resource Number \(ARN\) for the certificate\.  
 *Required*: No  
 *Type*: String  

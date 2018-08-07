@@ -154,7 +154,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. This section lists the available attribute and a sample return value\.
 
-`Arn`  
+`ARN`  
 The ARN of the AWS CodeBuild project, such as `arn:aws:codebuild:us-west-2:123456789012:project/myProjectName`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
@@ -174,7 +174,7 @@ The following example creates an AWS CodeBuild project\.
     "Properties": {
       "Name": "myProjectName",
       "Description": "A description about my project",
-      "ServiceRole": { "Fn::GetAtt": [ "ServiceRole", "Arn" ] },
+      "ServiceRole": { "Fn::GetAtt": [ "ServiceRole", "ARN" ] },
       "Artifacts": {
         "Type": "no_artifacts"
       },
@@ -217,7 +217,7 @@ Project:
   Properties:
     Name: myProjectName
     Description: A description about my project
-    ServiceRole: !GetAtt ServiceRole.Arn
+    ServiceRole: !GetAtt ServiceRole.ARN
     Artifacts:
       Type: no_artifacts
     Environment:

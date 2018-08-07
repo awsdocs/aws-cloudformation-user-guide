@@ -10,7 +10,7 @@
 {
   "[DbPassword](#cfn-opsworks-stack-rdsdbinstance-dbpassword)" : String,
   "[DbUser](#cfn-opsworks-stack-rdsdbinstance-dbuser)" : String,
-  "[RdsDbInstanceArn](#cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn)" : String
+  "[RdsDbInstanceARN](#cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn)" : String
 }
 ```
 
@@ -19,7 +19,7 @@
 ```
 [DbPassword](#cfn-opsworks-stack-rdsdbinstance-dbpassword): String
 [DbUser](#cfn-opsworks-stack-rdsdbinstance-dbuser): String
-[RdsDbInstanceArn](#cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn): String
+[RdsDbInstanceARN](#cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn): String
 ```
 
 ## Properties<a name="aws-properties-opsworks-stack-rdsdbinstance-properties"></a>
@@ -34,7 +34,7 @@ The master user name of the registered database\.
 *Required*: Yes  
 *Type*: String
 
-`RdsDbInstanceArn`  <a name="cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn"></a>
+`RdsDbInstanceARN`  <a name="cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon RDS DB instance to register with the AWS OpsWorks stack\.  
 *Required*: Yes  
 *Type*: String

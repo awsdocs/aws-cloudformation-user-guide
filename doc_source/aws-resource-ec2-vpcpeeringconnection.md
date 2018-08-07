@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Tags](#cfn-ec2-vpcpeeringconnection-tags)" : [ Resource Tag, ... ],
       "[VpcId](#cfn-ec2-vpcpeeringconnection-vpcid)" : String,
       "[PeerOwnerId](#cfn-ec2-vpcpeeringconnection-peerownerid)" : String,
-      "[PeerRoleArn](#cfn-ec2-vpcpeeringconnection-peerrolearn)" :  String
+      "[PeerRoleARN](#cfn-ec2-vpcpeeringconnection-peerrolearn)" :  String
    }
 }
 ```
@@ -40,7 +40,7 @@ Properties:
     - Resource Tag
   [VpcId](#cfn-ec2-vpcpeeringconnection-vpcid): String
   [PeerOwnerId](#cfn-ec2-vpcpeeringconnection-peerownerid): String
-  [PeerRoleArn](#cfn-ec2-vpcpeeringconnection-peerrolearn):  String
+  [PeerRoleARN](#cfn-ec2-vpcpeeringconnection-peerrolearn):  String
 ```
 
 ## Properties<a name="w3ab2c21c10d531c10"></a>
@@ -69,7 +69,7 @@ The AWS account ID of the owner of the VPC that you want to peer with\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`PeerRoleArn`  <a name="cfn-ec2-vpcpeeringconnection-peerrolearn"></a>
+`PeerRoleARN`  <a name="cfn-ec2-vpcpeeringconnection-peerrolearn"></a>
 The Amazon Resource Name \(ARN\) of the VPC peer role for the peering connection in another AWS account\.  
 *Required*: No  
 *Type*: String  

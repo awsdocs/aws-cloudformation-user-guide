@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CloudWatchLogsRoleArn](#cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn)" : String,
+  "[CloudWatchLogsRoleARN](#cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn)" : String,
   "[FieldLogLevel](#cfn-appsync-graphqlapi-logconfig-fieldloglevel)" : String
 }
 ```
@@ -20,13 +20,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appsync-graphqlapi-logconfig-syntax.yaml"></a>
 
 ```
-[CloudWatchLogsRoleArn](#cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn): String
+[CloudWatchLogsRoleARN](#cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn): String
 [FieldLogLevel](#cfn-appsync-graphqlapi-logconfig-fieldloglevel): String
 ```
 
 ## Properties<a name="aws-properties-appsync-graphqlapi-logconfig-properties"></a>
 
-`CloudWatchLogsRoleArn`  <a name="cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn"></a>
+`CloudWatchLogsRoleARN`  <a name="cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn"></a>
 The IAM role that will allow publishing CloudWatch logs into the customer's account\.  
  *Required*: No  
  *Type*: String  

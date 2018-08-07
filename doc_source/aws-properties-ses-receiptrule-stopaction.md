@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Scope](#cfn-ses-receiptrule-stopaction-scope)" : String,
-  "[TopicArn](#cfn-ses-receiptrule-stopaction-topicarn)" : String
+  "[TopicARN](#cfn-ses-receiptrule-stopaction-topicarn)" : String
 }
 ```
 
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 [Scope](#cfn-ses-receiptrule-stopaction-scope): String
-[TopicArn](#cfn-ses-receiptrule-stopaction-topicarn): String
+[TopicARN](#cfn-ses-receiptrule-stopaction-topicarn): String
 ```
 
 ## Properties<a name="aws-properties-ses-receiptrule-stopaction-properties"></a>
@@ -33,7 +33,7 @@ Valid values include: `RuleSet`\.
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`TopicArn`  <a name="cfn-ses-receiptrule-stopaction-topicarn"></a>
+`TopicARN`  <a name="cfn-ses-receiptrule-stopaction-topicarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon SNS topic to notify when the stop action is taken\. An example of an Amazon SNS topic ARN is `arn:aws:sns:us-west-2:123456789012:MyTopic`\.   
  *Required*: No  
  *Type*: String  

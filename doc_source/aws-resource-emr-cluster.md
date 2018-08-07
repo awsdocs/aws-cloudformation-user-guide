@@ -429,7 +429,7 @@ The following example template enables you to specify a custom Amazon Linux AMI 
           ]
         },
         "Path": "/",
-        "ManagedPolicyArns": ["arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole"]
+        "ManagedPolicyARNs": ["arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole"]
       }
     },
     "emrEc2Role": {
@@ -449,7 +449,7 @@ The following example template enables you to specify a custom Amazon Linux AMI 
           ]
         },
         "Path": "/",
-        "ManagedPolicyArns": ["arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role"]
+        "ManagedPolicyARNs": ["arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role"]
       }
     },
     "emrEc2InstanceProfile": {
@@ -523,7 +523,7 @@ Resources:
               Service: !Ref ElasticMapReducePrincipal
             Action: 'sts:AssumeRole'
       Path: /
-      ManagedPolicyArns:
+      ManagedPolicyARNs:
         - 'arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole'
   emrEc2Role:
     Type: 'AWS::IAM::Role'
@@ -537,7 +537,7 @@ Resources:
               Service: !Ref Ec2Principal
             Action: 'sts:AssumeRole'
       Path: /
-      ManagedPolicyArns:
+      ManagedPolicyARNs:
         - 'arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role'
   emrEc2InstanceProfile:
     Type: 'AWS::IAM::InstanceProfile'
@@ -625,7 +625,7 @@ The following example template enables you to specify the size of the EBS root v
           ]
         },
         "Path": "/",
-        "ManagedPolicyArns": ["arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole"]
+        "ManagedPolicyARNs": ["arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole"]
       }
     },
     "emrEc2Role": {
@@ -645,7 +645,7 @@ The following example template enables you to specify the size of the EBS root v
           ]
         },
         "Path": "/",
-        "ManagedPolicyArns": ["arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role"]
+        "ManagedPolicyARNs": ["arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role"]
       }
     },
     "emrEc2InstanceProfile": {
@@ -715,7 +715,7 @@ Resources:
               Service: elasticmapreduce.amazonaws.com
             Action: 'sts:AssumeRole'
       Path: /
-      ManagedPolicyArns:
+      ManagedPolicyARNs:
         - 'arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole'
   emrEc2Role:
     Type: 'AWS::IAM::Role'
@@ -729,7 +729,7 @@ Resources:
               Service: ec2.amazonaws.com
             Action: 'sts:AssumeRole'
       Path: /
-      ManagedPolicyArns:
+      ManagedPolicyARNs:
         - 'arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role'
   emrEc2InstanceProfile:
     Type: 'AWS::IAM::InstanceProfile'

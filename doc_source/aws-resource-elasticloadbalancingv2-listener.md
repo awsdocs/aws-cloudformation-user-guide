@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
     "[Certificates](#cfn-elasticloadbalancingv2-listener-certificates)" : [ [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates.md) ],
     "[DefaultActions](#cfn-elasticloadbalancingv2-listener-defaultactions)" : [ [Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md), ... ],
-    "[LoadBalancerArn](#cfn-elasticloadbalancingv2-listener-loadbalancerarn)" : String,
+    "[LoadBalancerARN](#cfn-elasticloadbalancingv2-listener-loadbalancerarn)" : String,
     "[Port](#cfn-elasticloadbalancingv2-listener-port)" : Integer,
     "[Protocol](#cfn-elasticloadbalancingv2-listener-protocol)" : String,
     "[SslPolicy](#cfn-elasticloadbalancingv2-listener-sslpolicy)" : String
@@ -37,7 +37,7 @@ Properties:
     - [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates.md)
   [DefaultActions](#cfn-elasticloadbalancingv2-listener-defaultactions):
     - [Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md)
-  [LoadBalancerArn](#cfn-elasticloadbalancingv2-listener-loadbalancerarn): String
+  [LoadBalancerARN](#cfn-elasticloadbalancingv2-listener-loadbalancerarn): String
   [Port](#cfn-elasticloadbalancingv2-listener-port): Integer
   [Protocol](#cfn-elasticloadbalancingv2-listener-protocol): String
   [SslPolicy](#cfn-elasticloadbalancingv2-listener-sslpolicy): String
@@ -58,7 +58,7 @@ The default actions that the listener takes when handling incoming requests\.
 *Type*: List of [Elastic Load Balancing Listener Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`LoadBalancerArn`  <a name="cfn-elasticloadbalancingv2-listener-loadbalancerarn"></a>
+`LoadBalancerARN`  <a name="cfn-elasticloadbalancingv2-listener-loadbalancerarn"></a>
 The Amazon Resource Name \(ARN\) of the load balancer to associate with the listener\.  
 *Required*: Yes  
 *Type*: String  
@@ -104,9 +104,9 @@ The following example creates a listener for the `myLoadBalancer` resource\. The
   "Properties": {
     "DefaultActions": [{
       "Type": "forward",
-      "TargetGroupArn": { "Ref": "myTargetGroup" }
+      "TargetGroupARN": { "Ref": "myTargetGroup" }
     }],
-    "LoadBalancerArn": { "Ref": "myLoadBalancer" },
+    "LoadBalancerARN": { "Ref": "myLoadBalancer" },
     "Port": "8000",
     "Protocol": "HTTP"
   }
@@ -121,9 +121,9 @@ Listener:
   Properties:
     DefaultActions:
     - Type: forward
-      TargetGroupArn:
+      TargetGroupARN:
         Ref: myTargetGroup
-    LoadBalancerArn:
+    LoadBalancerARN:
       Ref: myLoadBalancer
     Port: '8000'
     Protocol: HTTP

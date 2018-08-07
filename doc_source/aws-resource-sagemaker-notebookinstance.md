@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[InstanceType](#cfn-sagemaker-notebookinstance-instancetype)" : String,
     "[LifecycleConfigName](#cfn-sagemaker-notebookinstance-lifecycleconfigname)" : String,
     "[SecurityGroupIds](#cfn-sagemaker-notebookinstance-securitygroupids)" : [ String, ... ],
-    "[RoleArn](#cfn-sagemaker-notebookinstance-rolearn)" : String,
+    "[RoleARN](#cfn-sagemaker-notebookinstance-rolearn)" : String,
     "[Tags](#cfn-sagemaker-notebookinstance-tags)" : [ [*Tag*](aws-properties-sagemaker-notebookinstance-tag.md), ... ]
   }
 }
@@ -45,7 +45,7 @@ Properties:
   [SecurityGroupIds](#cfn-sagemaker-notebookinstance-securitygroupids): String
   [SecurityGroupIds](#cfn-sagemaker-notebookinstance-securitygroupids): 
     - String
-  [RoleArn](#cfn-sagemaker-notebookinstance-rolearn): String
+  [RoleARN](#cfn-sagemaker-notebookinstance-rolearn): String
   [Tags](#cfn-sagemaker-notebookinstance-tags): 
     - [*Tag*](aws-properties-sagemaker-notebookinstance-tag.md)
 ```
@@ -94,7 +94,7 @@ The VPC security group IDs, in the form sg\-xxxxxxxx\. The security groups must 
  *Type*: List of Strings  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`RoleArn`  <a name="cfn-sagemaker-notebookinstance-rolearn"></a>
+`RoleARN`  <a name="cfn-sagemaker-notebookinstance-rolearn"></a>
 When you send any requests to AWS resources from the notebook instance, Amazon SageMaker assumes this role to perform tasks on your behalf\. You must grant this role necessary permissions so Amazon SageMaker can perform these tasks\. The policy must allow the Amazon SageMaker service principal \(sagemaker\.amazonaws\.com\) permissions to assume this role\. For more information, see [Amazon SageMaker Roles](http://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html)\.  
  *Required*: Yes  
  *Type*:   
@@ -139,7 +139,7 @@ The following example creates a notebook instance\.
       "Type": "AWS::SageMaker::NotebookInstance",
       "Properties": {
         "InstanceType": "ml.t2.large",
-        "RoleArn": { "Fn::GetAtt" : [ "ExecutionRole", "Arn" ] }
+        "RoleARN": { "Fn::GetAtt" : [ "ExecutionRole", "ARN" ] }
       }
     },
     "ExecutionRole": {
@@ -198,7 +198,7 @@ Resources:
     Type: "AWS::SageMaker::NotebookInstance"
     Properties:
       InstanceType: "ml.t2.large"
-      RoleArn: !GetAtt ExecutionRole.Arn
+      RoleARN: !GetAtt ExecutionRole.ARN
   ExecutionRole: 
     Type: "AWS::IAM::Role"
     Properties: 

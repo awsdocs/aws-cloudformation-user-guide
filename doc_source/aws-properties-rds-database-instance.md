@@ -48,7 +48,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[MasterUsername](#cfn-rds-dbinstance-masterusername)" : String,
     "[MasterUserPassword](#cfn-rds-dbinstance-masteruserpassword)" : String,
     "[MonitoringInterval](#cfn-rds-dbinstance-monitoringinterval)" : Integer,
-    "[MonitoringRoleArn](#cfn-rds-dbinstance-monitoringrolearn)" : String,
+    "[MonitoringRoleARN](#cfn-rds-dbinstance-monitoringrolearn)" : String,
     "[MultiAZ](#cfn-rds-dbinstance-multiaz)" : Boolean,
     "[OptionGroupName](#cfn-rds-dbinstance-optiongroupname)" : String,
     "[Port](#cfn-rds-dbinstance-port)" : String,
@@ -97,7 +97,7 @@ Properties:
   [MasterUsername](#cfn-rds-dbinstance-masterusername): String
   [MasterUserPassword](#cfn-rds-dbinstance-masteruserpassword): String
   [MonitoringInterval](#cfn-rds-dbinstance-monitoringinterval): Integer
-  [MonitoringRoleArn](#cfn-rds-dbinstance-monitoringrolearn): String
+  [MonitoringRoleARN](#cfn-rds-dbinstance-monitoringrolearn): String
   [MultiAZ](#cfn-rds-dbinstance-multiaz): Boolean
   [OptionGroupName](#cfn-rds-dbinstance-optiongroupname): String
   [Port](#cfn-rds-dbinstance-port): String
@@ -311,13 +311,13 @@ If you specify the `SourceDBInstanceIdentifier` or `DBSnapshotIdentifier` proper
 `MonitoringInterval`  <a name="cfn-rds-dbinstance-monitoringinterval"></a>
 The interval, in seconds, between points when Amazon RDS collects enhanced monitoring metrics for the DB instance\. To disable metrics collection, specify `0`\.  
 For default and valid values, see the `MonitoringInterval` parameter for the [CreateDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) action in the *Amazon RDS API Reference*\.  
-*Required*: Conditional\. If you specify the `MonitoringRoleArn` property, specify a value other than `0` for `MonitoringInterval`\.  
+*Required*: Conditional\. If you specify the `MonitoringRoleARN` property, specify a value other than `0` for `MonitoringInterval`\.  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. For more information, see [ModifyDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html) in the *Amazon RDS API Reference*\.
 
-`MonitoringRoleArn`  <a name="cfn-rds-dbinstance-monitoringrolearn"></a>
+`MonitoringRoleARN`  <a name="cfn-rds-dbinstance-monitoringrolearn"></a>
 The ARN of the AWS Identity and Access Management \(IAM\) role that permits Amazon RDS to send enhanced monitoring metrics to Amazon CloudWatch, for example, `arn:aws:iam::123456789012:role/emaccess`\. For information on creating a monitoring role, see [To create an IAM role for Amazon RDS Enhanced Monitoring](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html#USER_Monitoring.OS.IAMRole) in the *Amazon RDS User Guide*\.  
-*Required*: Conditional\. If you specify a value other than `0` for the `MonitoringInterval` property, specify a value for `MonitoringRoleArn`\.  
+*Required*: Conditional\. If you specify a value other than `0` for the `MonitoringInterval` property, specify a value for `MonitoringRoleARN`\.  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 

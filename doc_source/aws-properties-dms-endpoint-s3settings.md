@@ -14,7 +14,7 @@ Use the `S3Settings` property to specify settings for an Amazon S3 endpoint for 
   "[CsvDelimiter](#cfn-dms-endpoint-s3settings-csvdelimiter)" : String,
   "[CsvRowDelimiter](#cfn-dms-endpoint-s3settings-csvrowdelimiter)" : String,
   "[ExternalTableDefinition](#cfn-dms-endpoint-s3settings-externaltabledefinition)" : String,
-  "[ServiceAccessRoleArn](#cfn-dms-endpoint-s3settings-serviceaccessrolearn)" : String
+  "[ServiceAccessRoleARN](#cfn-dms-endpoint-s3settings-serviceaccessrolearn)" : String
 }
 ```
 
@@ -27,7 +27,7 @@ Use the `S3Settings` property to specify settings for an Amazon S3 endpoint for 
 [CsvDelimiter](#cfn-dms-endpoint-s3settings-csvdelimiter): String
 [CsvRowDelimiter](#cfn-dms-endpoint-s3settings-csvrowdelimiter): String
 [ExternalTableDefinition](#cfn-dms-endpoint-s3settings-externaltabledefinition): String
-[ServiceAccessRoleArn](#cfn-dms-endpoint-s3settings-serviceaccessrolearn): String
+[ServiceAccessRoleARN](#cfn-dms-endpoint-s3settings-serviceaccessrolearn): String
 ```
 
 ## Properties<a name="w3ab2c21c14d586b7"></a>
@@ -65,7 +65,7 @@ The definition of the external table\.
 *Required*: No  
 *Type*: String
 
-`ServiceAccessRoleArn`  <a name="cfn-dms-endpoint-s3settings-serviceaccessrolearn"></a>
+`ServiceAccessRoleARN`  <a name="cfn-dms-endpoint-s3settings-serviceaccessrolearn"></a>
 The Amazon Resource Name \(ARN\) used by the service access IAM role\.  
 *Required*: No  
 *Type*: String

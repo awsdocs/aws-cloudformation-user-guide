@@ -157,11 +157,11 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
+`ARN`  
 Returns the ARN of the DAX cluster\. For example:  
 
 ```
-{ "Fn::GetAtt": ["MyDAXCluster", "Arn"] }
+{ "Fn::GetAtt": ["MyDAXCluster", "ARN"] }
 ```
 Returns a value similar to the following:  
 

@@ -9,8 +9,8 @@
 ```
 {
   "[MessageFormat](#cfn-iot-topicrule-snsaction-messageformat)": String,
-  "[RoleArn](#cfn-iot-topicrule-snsaction-rolearn)": String,
-  "[TargetArn](#cfn-iot-topicrule-snsaction-targetarn)": String
+  "[RoleARN](#cfn-iot-topicrule-snsaction-rolearn)": String,
+  "[TargetARN](#cfn-iot-topicrule-snsaction-targetarn)": String
 }
 ```
 
@@ -18,8 +18,8 @@
 
 ```
 [MessageFormat](#cfn-iot-topicrule-snsaction-messageformat): String
-[RoleArn](#cfn-iot-topicrule-snsaction-rolearn): String
-[TargetArn](#cfn-iot-topicrule-snsaction-targetarn): String
+[RoleARN](#cfn-iot-topicrule-snsaction-rolearn): String
+[TargetARN](#cfn-iot-topicrule-snsaction-targetarn): String
 ```
 
 ## Properties<a name="w3ab2c21c14e1375b7"></a>
@@ -30,12 +30,12 @@ For more information, see [Appendix: Message and JSON Formats](http://docs.aws.a
 *Required*: No  
 *Type*: String
 
-`RoleArn`  <a name="cfn-iot-topicrule-snsaction-rolearn"></a>
+`RoleARN`  <a name="cfn-iot-topicrule-snsaction-rolearn"></a>
 The ARN of the IAM role that grants access to Amazon SNS\.  
 *Required*: Yes  
 *Type*: String
 
-`TargetArn`  <a name="cfn-iot-topicrule-snsaction-targetarn"></a>
+`TargetARN`  <a name="cfn-iot-topicrule-snsaction-targetarn"></a>
 The ARN of the Amazon SNS topic\.  
 *Required*: Yes  
 *Type*: String

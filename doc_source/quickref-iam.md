@@ -20,7 +20,7 @@ When creating or updating a stack using a template containing IAM resources, you
 
 This snippet shows how to declare an `[AWS::IAM::User](aws-properties-iam-user.md)` resource to create an IAM user\. The user is declared with the path \(`"/"`\) and a login profile with the password \(`myP@ssW0rd`\)\.
 
-The policy document named `giveaccesstoqueueonly` gives the user permission to perform all Amazon SQS actions on the Amazon SQS queue resource `myqueue`, and denies access to all other Amazon SQS queue resources\. The `[Fn::GetAtt](intrinsic-function-reference-getatt.md)` function gets the Arn attribute of the `[AWS::SQS::Queue](aws-properties-sqs-queues.md)` resource `myqueue`\. 
+The policy document named `giveaccesstoqueueonly` gives the user permission to perform all Amazon SQS actions on the Amazon SQS queue resource `myqueue`, and denies access to all other Amazon SQS queue resources\. The `[Fn::GetAtt](intrinsic-function-reference-getatt.md)` function gets the ARN attribute of the `[AWS::SQS::Queue](aws-properties-sqs-queues.md)` resource `myqueue`\. 
 
 The policy document named `giveaccesstotopiconly` is added to the user to give the user permission to perform all Amazon SNS actions on the Amazon SNS topic resource `mytopic` and to deny access to all other Amazon SNS resources\. The [`Ref`](intrinsic-function-reference-ref.md) function gets the ARN of the `[AWS::SNS::Topic](aws-properties-sns-topic.md)` resource `mytopic`\.
 
@@ -42,13 +42,13 @@ The policy document named `giveaccesstotopiconly` is added to the user to give t
                "Effect" : "Allow",
                "Action" : [ "sqs:*" ],
                "Resource" : [ {
-                  "Fn::GetAtt" : [ "myqueue", "Arn" ]
+                  "Fn::GetAtt" : [ "myqueue", "ARN" ]
                } ]
             }, {
                "Effect" : "Deny",
                "Action" : [ "sqs:*" ],
                "NotResource" : [ {
-                  "Fn::GetAtt" : [ "myqueue", "Arn" ]
+                  "Fn::GetAtt" : [ "myqueue", "ARN" ]
                } ]
             }
          ] }
@@ -89,12 +89,12 @@ myuser:
           Action:
           - sqs:*
           Resource:
-          - !GetAtt myqueue.Arn
+          - !GetAtt myqueue.ARN
         - Effect: Deny
           Action:
           - sqs:*
           NotResource:
-          - !GetAtt myqueue.Arn
+          - !GetAtt myqueue.ARN
     - PolicyName: giveaccesstotopiconly
       PolicyDocument:
         Version: '2012-10-17'
@@ -233,13 +233,13 @@ To assign a policy to a resource, IAM requires the Amazon Resource Name \(ARN\) 
 10.                "Effect" : "Allow",
 11.                "Action" : [ "sqs:*" ],
 12.                "Resource" : [ {
-13.                   "Fn::GetAtt" : [ "myqueue", "Arn" ]
+13.                   "Fn::GetAtt" : [ "myqueue", "ARN" ]
 14.                } ]
 15.             },
 16.             {
 17.                "Effect" : "Deny",
 18.                "Action" : [ "sqs:*" ],
-19.                "NotResource" : [ { "Fn::GetAtt" : [ "myqueue", "Arn" ] } ]
+19.                "NotResource" : [ { "Fn::GetAtt" : [ "myqueue", "ARN" ] } ]
 20.             }
 21.          ] }
 22.       } ]
@@ -262,11 +262,11 @@ To assign a policy to a resource, IAM requires the Amazon Resource Name \(ARN\) 
 10.         - Effect: Allow
 11.           Action:
 12.           - sqs:*
-13.           Resource: !GetAtt myqueue.Arn
+13.           Resource: !GetAtt myqueue.ARN
 14.         - Effect: Deny
 15.           Action:
 16.           - sqs:*
-17.           NotResource: !GetAtt myqueue.Arn
+17.           NotResource: !GetAtt myqueue.ARN
 ```
 
 ## Adding Users to a Group<a name="scenario-iam-addusertogroup"></a>
@@ -367,7 +367,7 @@ This snippet shows how to create a policy and apply it to an Amazon S3 bucket us
 12.                   "", [ "arn:aws:s3:::", { "Ref" : "mybucket" } , "/*" ]
 13.                ] },
 14.             "Principal" : {
-15.                "AWS" : { "Fn::GetAtt" : [ "user1", "Arn" ] }
+15.                "AWS" : { "Fn::GetAtt" : [ "user1", "ARN" ] }
 16.             }
 17.          } ]
 18.       },
@@ -392,7 +392,7 @@ This snippet shows how to create a policy and apply it to an Amazon S3 bucket us
 11.         Effect: Allow
 12.         Resource: !Sub "arn:aws:s3:::${mybucket}/*"
 13.         Principal:
-14.           AWS: !GetAtt user1.Arn
+14.           AWS: !GetAtt user1.ARN
 15.     Bucket: !Ref mybucket
 ```
 
@@ -416,7 +416,7 @@ The Amazon SNS policy actions that are [declared in the `AWS::IAM::Policy` resou
  8.             "Sid" : "My-statement-id",
  9.             "Effect" : "Allow",
 10.             "Principal" : {
-11.                "AWS" : { "Fn::GetAtt" : [ "myuser", "Arn" ] }
+11.                "AWS" : { "Fn::GetAtt" : [ "myuser", "ARN" ] }
 12.             },
 13.             "Action" : "sns:Publish",
 14.             "Resource" : "*"
@@ -440,7 +440,7 @@ The Amazon SNS policy actions that are [declared in the `AWS::IAM::Policy` resou
  8.       - Sid: My-statement-id
  9.         Effect: Allow
 10.         Principal:
-11.           AWS: !GetAtt myuser.Arn
+11.           AWS: !GetAtt myuser.ARN
 12.         Action: sns:Publish
 13.         Resource: "*"
 14.     Topics:

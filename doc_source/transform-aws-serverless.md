@@ -27,7 +27,7 @@ When the template is submitted, AWS CloudFormation expands the AWS SAM syntax, a
           "S3Key": "mySourceCode.zip"
         },
         "Role": {
-          "Fn::GetAtt": ["FunctionNameRole", "Arn"]
+          "Fn::GetAtt": ["FunctionNameRole", "ARN"]
         },
         "Runtime": "nodejs4.3"
       }
@@ -35,7 +35,7 @@ When the template is submitted, AWS CloudFormation expands the AWS SAM syntax, a
     "FunctionNameRole": {
       "Type": "AWS::IAM::Role",
       "Properties": {
-        "ManagedPolicyArns": ["arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"],
+        "ManagedPolicyARNs": ["arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"],
         "AssumeRolePolicyDocument": {
           "Version": "2012-10-17",
           "Statement": [{

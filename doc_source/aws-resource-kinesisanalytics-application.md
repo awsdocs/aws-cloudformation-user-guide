@@ -89,8 +89,8 @@ Resources:
                 JSONMappingParameters:
                   RecordRowPath: "$"
           KinesisStreamsInput:
-            ResourceARN: !GetAtt InputKinesisStream.Arn
-            RoleARN: !GetAtt KinesisAnalyticsRole.Arn
+            ResourceARN: !GetAtt InputKinesisStream.ARN
+            RoleARN: !GetAtt KinesisAnalyticsRole.ARN
   InputKinesisStream:
     Type: "AWS::Kinesis::Stream"
     Properties:
@@ -124,8 +124,8 @@ Resources:
         DestinationSchema:
           RecordFormatType: "CSV"
         KinesisStreamsOutput:
-          ResourceARN: !GetAtt OutputKinesisStream.Arn
-          RoleARN: !GetAtt KinesisAnalyticsRole.Arn
+          ResourceARN: !GetAtt OutputKinesisStream.ARN
+          RoleARN: !GetAtt KinesisAnalyticsRole.ARN
   OutputKinesisStream:
     Type: "AWS::Kinesis::Stream"
     Properties:
@@ -148,9 +148,9 @@ Resources:
               JSONMappingParameters:
                 RecordRowPath: "$"
         S3ReferenceDataSource:
-          BucketARN: !GetAtt S3Bucket.Arn
+          BucketARN: !GetAtt S3Bucket.ARN
           FileKey: 'fakeKey'
-          ReferenceRoleARN: !GetAtt KinesisAnalyticsRole.Arn
+          ReferenceRoleARN: !GetAtt KinesisAnalyticsRole.ARN
   S3Bucket:
     Type: AWS::S3::Bucket
 Outputs:

@@ -123,7 +123,7 @@ In the following template snippet, the Auto Scaling pauses instances before comp
     "AutoScalingGroupName": { "Ref": "myAutoScalingGroup" },
     "LifecycleTransition": "autoscaling:EC2_INSTANCE_TERMINATING",
     "NotificationTargetARN": { "Ref": "lifecycleHookTopic" },
-    "RoleARN": { "Fn::GetAtt": [ "lifecycleHookRole", "Arn" ] }
+    "RoleARN": { "Fn::GetAtt": [ "lifecycleHookRole", "ARN" ] }
   }
 }
 ```
@@ -142,7 +142,7 @@ myLifecycleHook:
     RoleARN: 
       Fn::GetAtt: 
         - lifecycleHookRole
-        - Arn
+        - ARN
 ```
 
 ## See Also<a name="aws-resource-autoscaling-lifecyclehook-seealso"></a>

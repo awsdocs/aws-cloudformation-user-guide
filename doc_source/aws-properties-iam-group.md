@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
    "Type": "AWS::IAM::Group",
    "Properties": {
       "[GroupName](#cfn-iam-group-groupname)": String,
-      "[ManagedPolicyArns](#cfn-iam-group-managepolicyarns)": [ String, ... ],
+      "[ManagedPolicyARNs](#cfn-iam-group-managepolicyarns)": [ String, ... ],
       "[Path](#cfn-iam-group-path)": String,
       "[Policies](#cfn-iam-group-policies)": [ Policies, ... ]
    }
@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: "AWS::IAM::Group"
 Properties:
   [GroupName](#cfn-iam-group-groupname): String
-  [ManagedPolicyArns](#cfn-iam-group-managepolicyarns): [ String, ... ]
+  [ManagedPolicyARNs](#cfn-iam-group-managepolicyarns): [ String, ... ]
   [Path](#cfn-iam-group-path): String
   [Policies](#cfn-iam-group-policies):
     - Policies
@@ -51,7 +51,7 @@ Naming an IAM resource can cause an unrecoverable error if you reuse the same te
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`ManagedPolicyArns`  <a name="cfn-iam-group-managepolicyarns"></a>
+`ManagedPolicyARNs`  <a name="cfn-iam-group-managepolicyarns"></a>
 One or more managed policy ARNs to attach to this group\.  
 *Required*: No  
 *Type*: List of String values  
@@ -81,7 +81,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
+`ARN`  
 Returns the Amazon Resource Name \(ARN\) for the `AWS::IAM::Group` resource\. For example: `arn:aws:iam::123456789012:group/mystack-mygroup-1DZETITOWEKVO`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.

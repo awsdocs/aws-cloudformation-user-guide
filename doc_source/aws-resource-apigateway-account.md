@@ -22,7 +22,7 @@ The syntax for declaring this resource:
 {
   "Type" : "AWS::ApiGateway::Account",
   "Properties" : {
-    "[CloudWatchRoleArn](#cfn-apigateway-account-cloudwatchrolearn)": String
+    "[CloudWatchRoleARN](#cfn-apigateway-account-cloudwatchrolearn)": String
   }
 }
 ```
@@ -32,12 +32,12 @@ The syntax for declaring this resource:
 ```
 Type: "AWS::ApiGateway::Account"
 Properties: 
-  [CloudWatchRoleArn](#cfn-apigateway-account-cloudwatchrolearn): String
+  [CloudWatchRoleARN](#cfn-apigateway-account-cloudwatchrolearn): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-account-properties"></a>
 
-`CloudWatchRoleArn`  <a name="cfn-apigateway-account-cloudwatchrolearn"></a>
+`CloudWatchRoleARN`  <a name="cfn-apigateway-account-cloudwatchrolearn"></a>
 The Amazon Resource Name \(ARN\) of an IAM role that has write access to CloudWatch Logs in your account\.  
 *Required*: No  
 *Type*: String  
@@ -70,13 +70,13 @@ The following example creates an IAM role that API Gateway can assume to push lo
       }]
     },
     "Path": "/",
-    "ManagedPolicyArns": ["arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"]
+    "ManagedPolicyARNs": ["arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"]
   }
 },
 "Account": {
   "Type": "AWS::ApiGateway::Account",
   "Properties": {
-    "CloudWatchRoleArn": { "Fn::GetAtt": ["CloudWatchRole", "Arn"] }
+    "CloudWatchRoleARN": { "Fn::GetAtt": ["CloudWatchRole", "ARN"] }
   }
 }
 ```
@@ -96,13 +96,13 @@ CloudWatchRole:
         - "apigateway.amazonaws.com"
       Action: "sts:AssumeRole"
   Path: "/"
-  ManagedPolicyArns: 
+  ManagedPolicyARNs: 
    - "arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
 Account: 
  Type: "AWS::ApiGateway::Account"
  Properties: 
-  CloudWatchRoleArn: 
+  CloudWatchRoleARN: 
    "Fn::GetAtt": 
     - CloudWatchRole
-    - Arn
+    - ARN
 ```

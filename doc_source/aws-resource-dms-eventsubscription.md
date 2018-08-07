@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
     "[Enabled](#cfn-dms-eventsubscription-enabled)" : Boolean,
     "[EventCategories](#cfn-dms-eventsubscription-eventcategories)" : [ String, ... ],
-    "[SnsTopicArn](#cfn-dms-eventsubscription-snstopicarn)" : String,
+    "[SnsTopicARN](#cfn-dms-eventsubscription-snstopicarn)" : String,
     "[SourceIds](#cfn-dms-eventsubscription-sourceids)" : [ String, ... ],
     "[SourceType](#cfn-dms-eventsubscription-sourcetype)" : String,
     "[SubscriptionName](#cfn-dms-eventsubscription-subscriptionname)" : [ String, ... ],
@@ -37,7 +37,7 @@ Properties:
   [Enabled](#cfn-dms-eventsubscription-enabled): Boolean
   [EventCategories](#cfn-dms-eventsubscription-eventcategories): 
     - String
-  [SnsTopicArn](#cfn-dms-eventsubscription-snstopicarn): String
+  [SnsTopicARN](#cfn-dms-eventsubscription-snstopicarn): String
   [SourceIds](#cfn-dms-eventsubscription-sourceids):
     - String
   [SourceType](#cfn-dms-eventsubscription-sourcetype): String
@@ -61,7 +61,7 @@ A list of event categories that you want to subscribe to for a given source type
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`SnsTopicArn`  <a name="cfn-dms-eventsubscription-snstopicarn"></a>
+`SnsTopicARN`  <a name="cfn-dms-eventsubscription-snstopicarn"></a>
 The Amazon Resource Name \(ARN\) of an Amazon SNS topic that you want to send event notifications to\.  
 *Required*: Yes  
 *Type*: String  
@@ -123,7 +123,7 @@ The following snippet creates an event subscription for an existing replication 
           "failure",
           "deletion"
         ],
-        "SnsTopicArn": "arn:aws:sns:us-west-2:123456789012:example-topic",
+        "SnsTopicARN": "arn:aws:sns:us-west-2:123456789012:example-topic",
         "SourceIds": [
           "rep-instance-1"
         ],
@@ -147,7 +147,7 @@ Resources:
         - configuration change
         - failure
         - deletion
-      SnsTopicArn: 'arn:aws:sns:us-west-2:123456789012:example-topic'
+      SnsTopicARN: 'arn:aws:sns:us-west-2:123456789012:example-topic'
       SourceIds:
         - rep-instance-1
       SourceType: replication-instance

@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[Description](#cfn-cognito-userpoolgroup-description)" : String,
     "[GroupName](#cfn-cognito-userpoolgroup-groupname)" : String,
     "[Precedence](#cfn-cognito-userpoolgroup-precedence)" : Number,
-    "[RoleArn](#cfn-cognito-userpoolgroup-rolearn)" : String,
+    "[RoleARN](#cfn-cognito-userpoolgroup-rolearn)" : String,
     "[UserPoolId](#cfn-cognito-userpoolgroup-userpoolid)" : String
   }
 }
@@ -34,7 +34,7 @@ Properties:
   [Description](#cfn-cognito-userpoolgroup-description): String
   [GroupName](#cfn-cognito-userpoolgroup-groupname): String
   [Precedence](#cfn-cognito-userpoolgroup-precedence): Number
-  [RoleArn](#cfn-cognito-userpoolgroup-rolearn): String
+  [RoleARN](#cfn-cognito-userpoolgroup-rolearn): String
   [UserPoolId](#cfn-cognito-userpoolgroup-userpoolid): String
 ```
 
@@ -61,7 +61,7 @@ The default `Precedence` value is null\.
 *Type*: Number  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`RoleArn`  <a name="cfn-cognito-userpoolgroup-rolearn"></a>
+`RoleARN`  <a name="cfn-cognito-userpoolgroup-rolearn"></a>
 The role ARN for the group\.  
 *Required*: No  
 *Type*: String  

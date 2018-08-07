@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
     "[Name](#cfn-eks-cluster-name)" : String,
     "[ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig)" : [EKS Cluster ResourcesVpcConfig](aws-properties-eks-cluster-resourcesvpcconfig.md),
-    "[RoleArn](#cfn-eks-cluster-rolearn)" : String,
+    "[RoleARN](#cfn-eks-cluster-rolearn)" : String,
     "[Version](#cfn-eks-cluster-version)" : String
   }
 }
@@ -34,7 +34,7 @@ Type: "AWS::EKS::Cluster"
 Properties:
   [Name](#cfn-eks-cluster-name): String
   [ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig): [EKS Cluster ResourcesVpcConfig](aws-properties-eks-cluster-resourcesvpcconfig.md)
-  [RoleArn](#cfn-eks-cluster-rolearn): String
+  [RoleARN](#cfn-eks-cluster-rolearn): String
   [Version](#cfn-eks-cluster-version): String
 ```
 
@@ -52,7 +52,7 @@ The VPC subnets and security groups used by the cluster control plane\. Amazon E
  *Type*: [EKS Cluster ResourcesVpcConfig](aws-properties-eks-cluster-resourcesvpcconfig.md)  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`RoleArn`  <a name="cfn-eks-cluster-rolearn"></a>
+`RoleARN`  <a name="cfn-eks-cluster-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf\.  
  *Required*: Yes  
  *Type*: String  
@@ -76,7 +76,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
-`Arn`  
+`ARN`  
 The ARN of the cluster, such as `arn:aws:eks:us-west-2:666666666666:cluster/prod`\. 
 
 `CertificateAuthorityData`  
@@ -101,7 +101,7 @@ The following example creates an Amazon EKS cluster called `prod`\.
   "Properties": {
     "Name": "prod",
     "Version": "1.10",
-    "RoleArn": "arn:aws:iam::012345678910:role/eks-service-role-AWSServiceRoleForAmazonEKS-EXAMPLEBQ4PI",
+    "RoleARN": "arn:aws:iam::012345678910:role/eks-service-role-AWSServiceRoleForAmazonEKS-EXAMPLEBQ4PI",
     "ResourcesVpcConfig": {
       "SecurityGroupIds": [
         "sg-6979fe18"
@@ -122,7 +122,7 @@ Type: "AWS::EKS::Cluster"
 Properties:
   Name: "prod"
   Version: "1.10"
-  RoleArn: "arn:aws:iam::012345678910:role/eks-service-role-AWSServiceRoleForAmazonEKS-EXAMPLEBQ4PI"
+  RoleARN: "arn:aws:iam::012345678910:role/eks-service-role-AWSServiceRoleForAmazonEKS-EXAMPLEBQ4PI"
   ResourcesVpcConfig:
     SecurityGroupIds: ["sg-6979fe18"]
     SubnetIds: ["subnet-6782e71e", "subnet-e7e761ac"]

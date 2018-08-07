@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
     "[DestinationName](#cfn-logs-destination-destinationname)" : String,
     "[DestinationPolicy](#cfn-logs-destination-destinationpolicy)" : String,
-    "[RoleArn](#cfn-logs-destination-rolearn)" : String,
-    "[TargetArn](#cfn-logs-destination-targetarn)" : String
+    "[RoleARN](#cfn-logs-destination-rolearn)" : String,
+    "[TargetARN](#cfn-logs-destination-targetarn)" : String
   }
 }
 ```
@@ -33,8 +33,8 @@ Type: "AWS::Logs::Destination"
 Properties: 
   [DestinationName](#cfn-logs-destination-destinationname): String
   [DestinationPolicy](#cfn-logs-destination-destinationpolicy): String
-  [RoleArn](#cfn-logs-destination-rolearn): String
-  [TargetArn](#cfn-logs-destination-targetarn): String
+  [RoleARN](#cfn-logs-destination-rolearn): String
+  [TargetARN](#cfn-logs-destination-targetarn): String
 ```
 
 ## Properties<a name="w3ab2c21c10d868b9"></a>
@@ -51,13 +51,13 @@ An AWS Identity and Access Management \(IAM\) policy that specifies who can writ
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`RoleArn`  <a name="cfn-logs-destination-rolearn"></a>
-The Amazon Resource Name \(ARN\) of an IAM role that permits CloudWatch Logs to send data to the specified AWS resource \(`TargetArn`\)\.  
+`RoleARN`  <a name="cfn-logs-destination-rolearn"></a>
+The Amazon Resource Name \(ARN\) of an IAM role that permits CloudWatch Logs to send data to the specified AWS resource \(`TargetARN`\)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`TargetArn`  <a name="cfn-logs-destination-targetarn"></a>
+`TargetARN`  <a name="cfn-logs-destination-targetarn"></a>
 The ARN of the AWS resource that receives log events\. Currently, you can specify only an Kinesis stream\.  
 *Required*: Yes  
 *Type*: String  
@@ -75,7 +75,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
+`ARN`  
 The ARN of the CloudWatch Logs destination, such as `arn:aws:logs:us-east-2:123456789012:destination:MyDestination`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
@@ -91,8 +91,8 @@ In the following example, the target stream \(`TestStream`\) can receive log eve
   "Type" : "AWS::Logs::Destination",
   "Properties" : {
     "DestinationName": "TestDestination",
-    "RoleArn": "arn:aws:iam::123456789012:role/LogKinesisRole",
-    "TargetArn": "arn:aws:kinesis:us-east-1:123456789012:stream/TestStream",
+    "RoleARN": "arn:aws:iam::123456789012:role/LogKinesisRole",
+    "TargetARN": "arn:aws:kinesis:us-east-1:123456789012:stream/TestStream",
     "DestinationPolicy": "{\"Version\" : \"2012-10-17\",\"Statement\" : [{\"Effect\" : \"Allow\", \"Principal\" : {\"AWS\" : \"arn:aws:iam::234567890123:user/logger\"},
 \"Action\" : \"logs:PutSubscriptionFilter\", \"Resource\" : \"arn:aws:logs:us-east-1:123456789012:destination:TestDestination\"}]}"
   }
@@ -106,8 +106,8 @@ DestinationWithName:
   Type: "AWS::Logs::Destination"
   Properties: 
     DestinationName: "TestDestination"
-    RoleArn: "arn:aws:iam::123456789012:role/LogKinesisRole"
-    TargetArn: "arn:aws:kinesis:us-east-1:123456789012:stream/TestStream"
+    RoleARN: "arn:aws:iam::123456789012:role/LogKinesisRole"
+    TargetARN: "arn:aws:kinesis:us-east-1:123456789012:stream/TestStream"
     DestinationPolicy: >
       {"Version" : "2012-10-17","Statement" : [{"Effect" : "Allow", "Principal" : {"AWS" : "arn:aws:iam::234567890123:user/logger"},"Action" : "logs:PutSubscriptionFilter", "Resource" : "arn:aws:logs:us-east-1:123456789012:destination:TestDestination"}]}
 ```

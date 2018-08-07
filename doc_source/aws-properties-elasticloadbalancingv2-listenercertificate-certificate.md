@@ -12,19 +12,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CertificateArn](#cfn-elasticloadbalancingv2-listenercertificate-certificate-certificatearn)" : String
+  "[CertificateARN](#cfn-elasticloadbalancingv2-listenercertificate-certificate-certificatearn)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-elasticloadbalancingv2-listenercertificate-certificate-syntax.yaml"></a>
 
 ```
-[CertificateArn](#cfn-elasticloadbalancingv2-listenercertificate-certificate-certificatearn): String
+[CertificateARN](#cfn-elasticloadbalancingv2-listenercertificate-certificate-certificatearn): String
 ```
 
 ## Properties<a name="aws-properties-elasticloadbalancingv2-listenercertificate-certificate-properties"></a>
 
-`CertificateArn`  <a name="cfn-elasticloadbalancingv2-listenercertificate-certificate-certificatearn"></a>
+`CertificateARN`  <a name="cfn-elasticloadbalancingv2-listenercertificate-certificate-certificatearn"></a>
 The Amazon Resource Name \(ARN\) of the certificate\.  
  *Required*: No  
  *Type*: String  

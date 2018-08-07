@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Branches](#cfn-codecommit-repository-triggers-branches)" : [ String, ... ],
   "[CustomData](#cfn-codecommit-repository-triggers-customdata)" : String,
-  "[DestinationArn](#cfn-codecommit-repository-triggers-destinationarn)" : String,
+  "[DestinationARN](#cfn-codecommit-repository-triggers-destinationarn)" : String,
   "[Events](#cfn-codecommit-repository-triggers-events)" : [ String, ... ],
   "[Name](#cfn-codecommit-repository-triggers-name)" : String
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [Branches](#cfn-codecommit-repository-triggers-branches):
 - String
 [CustomData](#cfn-codecommit-repository-triggers-customdata): String
-[DestinationArn](#cfn-codecommit-repository-triggers-destinationarn): String
+[DestinationARN](#cfn-codecommit-repository-triggers-destinationarn): String
 [Events](#cfn-codecommit-repository-triggers-events):
 - String
 [Name](#cfn-codecommit-repository-triggers-name): String
@@ -42,13 +42,13 @@ When an event is triggered, additional information that AWS CodeCommit includes 
 *Required*: No  
 *Type*: String
 
-`DestinationArn`  <a name="cfn-codecommit-repository-triggers-destinationarn"></a>
+`DestinationARN`  <a name="cfn-codecommit-repository-triggers-destinationarn"></a>
 The Amazon Resource Name \(ARN\) of the resource that is the target for this trigger\. For valid targets, see [Manage Triggers for an AWS CodeCommit Repository](http://docs.aws.amazon.com/codecommit/latest/userguide/how-to-notify.html) in the *AWS CodeCommit User Guide*\.  
 *Required*: No  
 *Type*: String
 
 `Events`  <a name="cfn-codecommit-repository-triggers-events"></a>
-The repository events for which AWS CodeCommit sends information to the target, which you specified in the `DestinationArn` property\. If you don't specify events, the trigger runs for all repository events\. For valid values, see the [RepositoryTrigger](http://docs.aws.amazon.com/codecommit/latest/APIReference/API_RepositoryTrigger.html) data type in the *AWS CodeCommit API Reference*\.  
+The repository events for which AWS CodeCommit sends information to the target, which you specified in the `DestinationARN` property\. If you don't specify events, the trigger runs for all repository events\. For valid values, see the [RepositoryTrigger](http://docs.aws.amazon.com/codecommit/latest/APIReference/API_RepositoryTrigger.html) data type in the *AWS CodeCommit API Reference*\.  
 *Required*: No  
 *Type*: List of String values
 

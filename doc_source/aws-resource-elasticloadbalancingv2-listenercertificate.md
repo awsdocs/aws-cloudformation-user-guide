@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ElasticLoadBalancingV2::ListenerCertificate",
   "Properties" : {
     "[Certificates](#cfn-elasticloadbalancingv2-listenercertificate-certificates)" : [ [*Certificate*](aws-properties-elasticloadbalancingv2-listenercertificate-certificate.md), ... ]
-    "[ListenerArn](#cfn-elasticloadbalancingv2-listenercertificate-listenerarn)" : String
+    "[ListenerARN](#cfn-elasticloadbalancingv2-listenercertificate-listenerarn)" : String
   }
 }
 ```
@@ -30,7 +30,7 @@ Type: "AWS::ElasticLoadBalancingV2::ListenerCertificate"
 Properties:
   [Certificates](#cfn-elasticloadbalancingv2-listenercertificate-certificates): 
     - [*Certificate*](aws-properties-elasticloadbalancingv2-listenercertificate-certificate.md)
-  [ListenerArn](#cfn-elasticloadbalancingv2-listenercertificate-listenerarn): String
+  [ListenerARN](#cfn-elasticloadbalancingv2-listenercertificate-listenerarn): String
 ```
 
 ## Properties<a name="aws-resource-elasticloadbalancingv2-listenercertificate-properties"></a>
@@ -41,7 +41,7 @@ Certificates specified for the listener\. Duplicates not allowed\.
  *Type*: List of [Elastic Load Balancing ListenerCertificate Certificate](aws-properties-elasticloadbalancingv2-listenercertificate-certificate.md)  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`ListenerArn`  <a name="cfn-elasticloadbalancingv2-listenercertificate-listenerarn"></a>
+`ListenerARN`  <a name="cfn-elasticloadbalancingv2-listenercertificate-listenerarn"></a>
 The Amazon Resource Name \(ARN\) of the listener\.  
  *Required*: Yes  
  *Type*: String  
@@ -58,16 +58,16 @@ The following example specifies a listener certificate, containing a single cert
 ```
 {
     "Parameters": {
-        "CertificateArn1": {
+        "CertificateARN1": {
             "Type": "String"
         },
-        "CertificateArn2": {
+        "CertificateARN2": {
             "Type": "String"
         },
-        "LoadBalancerArn": {
+        "LoadBalancerARN": {
             "Type": "String"
         },
-        "TargetGroupArn": {
+        "TargetGroupARN": {
             "Type": "String"
         }
     },
@@ -77,12 +77,12 @@ The following example specifies a listener certificate, containing a single cert
             "Properties": {
                 "Certificates": [
                     {
-                        "CertificateArn": {
-                            "Ref": "CertificateArn1"
+                        "CertificateARN": {
+                            "Ref": "CertificateARN1"
                         }
                     }
                 ],
-                "ListenerArn": {
+                "ListenerARN": {
                     "Ref": "Listener"
                 }
             }
@@ -93,20 +93,20 @@ The following example specifies a listener certificate, containing a single cert
                 "DefaultActions": [
                     {
                         "Type": "forward",
-                        "TargetGroupArn": {
-                            "Ref": "TargetGroupArn"
+                        "TargetGroupARN": {
+                            "Ref": "TargetGroupARN"
                         }
                     }
                 ],
-                "LoadBalancerArn": {
-                    "Ref": "LoadBalancerArn"
+                "LoadBalancerARN": {
+                    "Ref": "LoadBalancerARN"
                 },
                 "Port": "8000",
                 "Protocol": "HTTPS",
                 "Certificates": [
                     {
-                        "CertificateArn": {
-                            "Ref": "CertificateArn2"
+                        "CertificateARN": {
+                            "Ref": "CertificateARN2"
                         }
                     }
                 ]
@@ -120,30 +120,30 @@ The following example specifies a listener certificate, containing a single cert
 
 ```
 Parameters:
-  CertificateArn1:
+  CertificateARN1:
     Type: String
-  CertificateArn2:
+  CertificateARN2:
     Type: String
-  LoadBalancerArn:
+  LoadBalancerARN:
     Type: String
-  TargetGroupArn:
+  TargetGroupARN:
     Type: String
 Resources:
   ListenerCertificate:
     Type: 'AWS::ElasticLoadBalancingV2::ListenerCertificate'
     Properties:
       Certificates:
-        - CertificateArn: !Ref CertificateArn1
-      ListenerArn: !Ref Listener
+        - CertificateARN: !Ref CertificateARN1
+      ListenerARN: !Ref Listener
   Listener:
     Type: 'AWS::ElasticLoadBalancingV2::Listener'
     Properties:
       DefaultActions:
         - Type: forward
-          TargetGroupArn: !Ref TargetGroupArn
-      LoadBalancerArn: !Ref LoadBalancerArn
+          TargetGroupARN: !Ref TargetGroupARN
+      LoadBalancerARN: !Ref LoadBalancerARN
       Port: '8000'
       Protocol: HTTPS
       Certificates:
-        - CertificateArn: !Ref CertificateArn2
+        - CertificateARN: !Ref CertificateARN2
 ```

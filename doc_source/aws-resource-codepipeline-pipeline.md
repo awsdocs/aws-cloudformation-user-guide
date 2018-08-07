@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[DisableInboundStageTransitions](#cfn-codepipeline-pipeline-disableinboundstagetransitions)" : [ DisableInboundStageTransitions, ... ],
     "[Name](#cfn-codepipeline-pipeline-name)" : String,
     "[RestartExecutionOnUpdate](#cfn-codepipeline-pipeline-restartexecutiononupdate)" : Boolean,
-    "[RoleArn](#cfn-codepipeline-pipeline-rolearn)" : String,
+    "[RoleARN](#cfn-codepipeline-pipeline-rolearn)" : String,
     "[Stages](#cfn-codepipeline-pipeline-stages)" : [ Stages, ... ]
   }
 }
@@ -39,7 +39,7 @@ Properties:
     - DisableInboundStageTransitions
   [Name](#cfn-codepipeline-pipeline-name): String
   [RestartExecutionOnUpdate](#cfn-codepipeline-pipeline-restartexecutiononupdate): Boolean
-  [RoleArn](#cfn-codepipeline-pipeline-rolearn): String
+  [RoleARN](#cfn-codepipeline-pipeline-rolearn): String
   [Stages](#cfn-codepipeline-pipeline-stages):
     - Stages
 ```
@@ -70,7 +70,7 @@ Indicates whether to rerun the AWS CodePipeline pipeline after you update it\.
 *Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`RoleArn`  <a name="cfn-codepipeline-pipeline-rolearn"></a>
+`RoleARN`  <a name="cfn-codepipeline-pipeline-rolearn"></a>
 A service role Amazon Resource Name \(ARN\) that grants AWS CodePipeline permission to make calls to AWS services on your behalf\. For more information, see [AWS CodePipeline Access Permissions Reference](http://docs.aws.amazon.com/codepipeline/latest/userguide/access-permissions.html) in the *AWS CodePipeline User Guide*\.  
 *Required*: Yes  
 *Type*: String  
@@ -100,7 +100,7 @@ The following example creates a pipeline with a source, beta, and release stage\
 "AppPipeline": {
   "Type": "AWS::CodePipeline::Pipeline",
   "Properties": {
-    "RoleArn": { "Ref" : "CodePipelineServiceRole" },
+    "RoleARN": { "Ref" : "CodePipelineServiceRole" },
     "Stages": [
       {
         "Name": "Source",
@@ -195,7 +195,7 @@ The following example creates a pipeline with a source, beta, and release stage\
 AppPipeline: 
   Type: "AWS::CodePipeline::Pipeline"
   Properties: 
-    RoleArn: 
+    RoleARN: 
       Ref: CodePipelineServiceRole
     Stages: 
       - 

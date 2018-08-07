@@ -189,7 +189,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
+`ARN`  
 Returns the Amazon Resource Name \(ARN\) of the specified bucket\.  
 Example: `arn:aws:s3:::mybucket`
 
@@ -226,7 +226,7 @@ The following example creates an S3 bucket and grants it permission to write to 
       "Role": {
         "Fn::GetAtt": [
           "WorkItemBucketBackupRole",
-          "Arn"
+          "ARN"
         ]
       },
       "Rules": [{
@@ -337,7 +337,7 @@ RecordServiceS3Bucket:
   DeletionPolicy: Retain
   Properties:
     ReplicationConfiguration:
-      Role: !GetAtt [WorkItemBucketBackupRole, Arn]
+      Role: !GetAtt [WorkItemBucketBackupRole, ARN]
       Rules:
       - Destination:
           Bucket: !Join ['', ['arn:aws:s3:::', !Join ['-', [!Ref 'AWS::Region', !Ref 'AWS::StackName',
@@ -819,10 +819,10 @@ The following example specifies analytics and inventory results to be generated 
                         "StorageClassAnalysis": {
                             "DataExport": {
                                 "Destination": {
-                                    "BucketArn": {
+                                    "BucketARN": {
                                         "Fn::GetAtt": [
                                             "Helper",
-                                            "Arn"
+                                            "ARN"
                                         ]
                                     },
                                     "Format": "CSV",
@@ -844,10 +844,10 @@ The following example specifies analytics and inventory results to be generated 
                     {
                         "Id": "InventoryConfigurationId",
                         "Destination": {
-                            "BucketArn": {
+                            "BucketARN": {
                                 "Fn::GetAtt": [
                                     "Helper",
-                                    "Arn"
+                                    "ARN"
                                 ]
                             },
                             "Format": "CSV",
@@ -881,9 +881,9 @@ Resources:
           StorageClassAnalysis:
             DataExport:
               Destination:
-                BucketArn: !GetAtt 
+                BucketARN: !GetAtt 
                   - Helper
-                  - Arn
+                  - ARN
                 Format: CSV
                 Prefix: AnalyticsDestinationPrefix
               OutputSchemaVersion: V_1
@@ -894,9 +894,9 @@ Resources:
       InventoryConfigurations:
         - Id: InventoryConfigurationId
           Destination:
-            BucketArn: !GetAtt 
+            BucketARN: !GetAtt 
               - Helper
-              - Arn
+              - ARN
             Format: CSV
             Prefix: InventoryDestinationPrefix
           Enabled: 'true'

@@ -90,7 +90,7 @@ The following example declares an encrypted file system:
                 "KmsKeyId": {
                     "Fn::GetAtt": [
                         "key",
-                        "Arn"
+                        "ARN"
                     ]
                 }
             }
@@ -134,7 +134,7 @@ The following example declares an encrypted file system:
             "Value": {
                 "Fn::GetAtt": [
                     "key",
-                    "Arn"
+                    "ARN"
                 ]
             }
         }
@@ -152,7 +152,7 @@ Resources:
       Encrypted: true
       KmsKeyId: !GetAtt 
         - key
-        - Arn
+        - ARN
   key:
     Type: 'AWS::KMS::Key'
     Properties:
@@ -175,7 +175,7 @@ Outputs:
   KeyId:
     Value: !GetAtt 
       - key
-      - Arn
+      - ARN
 ```
 
 ## Additional Resources<a name="w3ab2c21c10d571c15"></a>

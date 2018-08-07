@@ -87,7 +87,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 `GraphQLUrl`  
 The Endpoint URL of your GraphQL API\. 
 
-`Arn`  
+`ARN`  
 The Amazon Resource Name \(ARN\) of the API key, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid`\. 
 
 `ApiId`  

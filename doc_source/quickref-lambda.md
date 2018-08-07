@@ -66,7 +66,7 @@ In the example, when AWS CloudFormation creates the `AllSecurityGroups` custom r
     "AllSecurityGroups": {
       "Type": "Custom::Split",
       "Properties": {
-        "ServiceToken": { "Fn::GetAtt" : ["AppendItemToListFunction", "Arn"] },
+        "ServiceToken": { "Fn::GetAtt" : ["AppendItemToListFunction", "ARN"] },
         "List": { "Ref" : "ExistingSecurityGroups" },
         "AppendedItem": { "Ref" : "SecurityGroup" }
       }
@@ -75,7 +75,7 @@ In the example, when AWS CloudFormation creates the `AllSecurityGroups` custom r
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Handler": "index.handler",
-        "Role": { "Fn::GetAtt" : ["LambdaExecutionRole", "Arn"] },
+        "Role": { "Fn::GetAtt" : ["LambdaExecutionRole", "ARN"] },
         "Code": {
           "ZipFile":  { "Fn::Join": ["", [
             "var response = require('cfn-response');",
@@ -200,7 +200,7 @@ Resources:
   AllSecurityGroups:
     Type: Custom::Split
     Properties:
-      ServiceToken: !GetAtt AppendItemToListFunction.Arn
+      ServiceToken: !GetAtt AppendItemToListFunction.ARN
       List:
         Ref: ExistingSecurityGroups
       AppendedItem:
@@ -209,7 +209,7 @@ Resources:
     Type: AWS::Lambda::Function
     Properties:
       Handler: index.handler
-      Role: !GetAtt LambdaExecutionRole.Arn
+      Role: !GetAtt LambdaExecutionRole.ARN
       Code:
         ZipFile: !Sub |
           var response = require('cfn-response');

@@ -10,19 +10,19 @@ The `Certificates` property of the [AWS::ElasticLoadBalancingV2::Listener](aws-r
 
 ```
 {
-  "[CertificateArn](#cfn-elasticloadbalancingv2-listener-certificates-certificatearn)" : String
+  "[CertificateARN](#cfn-elasticloadbalancingv2-listener-certificates-certificatearn)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-elasticloadbalancingv2-listener-certificates-syntax.yaml"></a>
 
 ```
-[CertificateArn](#cfn-elasticloadbalancingv2-listener-certificates-certificatearn): String
+[CertificateARN](#cfn-elasticloadbalancingv2-listener-certificates-certificatearn): String
 ```
 
 ## Properties<a name="w3ab2c21c14e1000b9"></a>
 
-`CertificateArn`  <a name="cfn-elasticloadbalancingv2-listener-certificates-certificatearn"></a>
+`CertificateARN`  <a name="cfn-elasticloadbalancingv2-listener-certificates-certificatearn"></a>
 The Amazon Resource Name \(ARN\) of the certificate to associate with the listener\.  
 *Required*: No  
 *Type*: String

@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
     "[Description](#cfn-apigateway-vpclink-description)" : String,
     "[Name](#cfn-apigateway-vpclink-name)" : String,
-    "[TargetArns](#cfn-apigateway-vpclink-targetarns)" : [ String, ... ]
+    "[TargetARNs](#cfn-apigateway-vpclink-targetarns)" : [ String, ... ]
   }
 }
 ```
@@ -33,7 +33,7 @@ Type: "AWS::ApiGateway::VpcLink"
 Properties:
   [Description](#cfn-apigateway-vpclink-description): String
   [Name](#cfn-apigateway-vpclink-name): String
-  [TargetArns](#cfn-apigateway-vpclink-targetarns):
+  [TargetARNs](#cfn-apigateway-vpclink-targetarns):
     - String
 ```
 
@@ -51,7 +51,7 @@ The name used to label and identify the VPC link\.
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`TargetArns`  <a name="cfn-apigateway-vpclink-targetarns"></a>
+`TargetARNs`  <a name="cfn-apigateway-vpclink-targetarns"></a>
 The ARNs of network load balancers of the VPC targeted by the VPC link\. The network load balancers must be owned by the same AWS account of the API owner\.  
 *Required*: Yes  
 List of *Type*: String  
@@ -91,7 +91,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
                 "Name": {
                     "Ref": "name"
                 },
-                "TargetArns": [
+                "TargetARNs": [
                     {
                         "Ref": "MyLoadBalancer"
                     }
@@ -156,7 +156,7 @@ Resources:
         Properties:
             Description: !Ref description
             Name: !Ref name
-            TargetArns:
+            TargetARNs:
                - !Ref MyLoadBalancer
     MyLoadBalancer:
             Type: AWS::ElasticLoadBalancingV2::LoadBalancer

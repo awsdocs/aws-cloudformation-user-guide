@@ -121,7 +121,7 @@ The following example creates a scalable target for an Amazon Elastic Container 
     "MaxCapacity" : 2,
     "MinCapacity" : 1,
     "ResourceId" : "service/ecsStack-MyECSCluster-AB12CDE3F4GH/ecsStack-MyECSService-AB12CDE3F4GH",
-    "RoleARN" : {"Fn::GetAtt" : ["ApplicationAutoScalingRole", "Arn"] },
+    "RoleARN" : {"Fn::GetAtt" : ["ApplicationAutoScalingRole", "ARN"] },
     "ScalableDimension" : "ecs:service:DesiredCount",
     "ServiceNamespace" : "ecs"
   }
@@ -137,7 +137,7 @@ scalableTarget:
     MaxCapacity: 2
     MinCapacity: 1
     ResourceId: service/ecsStack-MyECSCluster-AB12CDE3F4GH/ecsStack-MyECSService-AB12CDE3F4GH
-    RoleARN: !GetAtt [ ApplicationAutoScalingRole, Arn ]
+    RoleARN: !GetAtt [ ApplicationAutoScalingRole, ARN ]
     ScalableDimension: ecs:service:DesiredCount
     ServiceNamespace: ecs
 ```
@@ -168,7 +168,7 @@ The following example uses the `Fn::Join` and `Ref` intrinsic functions to const
     "RoleARN": {
       "Fn::GetAtt": [
         "AutoScalingRole",
-        "Arn"
+        "ARN"
       ]
     },
     "ScalableDimension": "ec2:spot-fleet-request:TargetCapacity",
@@ -191,7 +191,7 @@ SpotFleetScalingTarget:
         - !Ref ECSSpotFleet
     RoleARN: !GetAtt 
       - AutoScalingRole
-      - Arn
+      - ARN
     ScalableDimension: 'ec2:spot-fleet-request:TargetCapacity'
     ServiceNamespace: ec2
 ```
@@ -269,7 +269,7 @@ This example sets up Application Auto Scaling for an `AWS::DynamoDB::Table` reso
           ]
         ] },
         "RoleARN": {
-          "Fn::GetAtt": ["ScalingRole", "Arn"]
+          "Fn::GetAtt": ["ScalingRole", "ARN"]
         },
         "ScalableDimension": "dynamodb:table:WriteCapacityUnits",
         "ServiceNamespace": "dynamodb"
@@ -390,7 +390,7 @@ Resources:
         - /
         - - table
           - !Ref DDBTable
-      RoleARN: !GetAtt ScalingRole.Arn
+      RoleARN: !GetAtt ScalingRole.ARN
       ScalableDimension: dynamodb:table:WriteCapacityUnits
       ServiceNamespace: dynamodb
   ScalingRole:
@@ -491,7 +491,7 @@ The following example creates a scheduled action for a target\.
         "RoleARN": {
           "Fn::GetAtt": [
             "scalingRole",
-            "Arn"
+            "ARN"
           ]
         },
         "MaxCapacity": "2",
@@ -666,7 +666,7 @@ Resources:
       ScalableDimension: 'ecs:service:DesiredCount'
       RoleARN: !GetAtt 
         - scalingRole
-        - Arn
+        - ARN
       MaxCapacity: '2'
       MinCapacity: '1'
       ScheduledActions:

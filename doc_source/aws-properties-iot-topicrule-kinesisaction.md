@@ -9,7 +9,7 @@
 ```
 {
   "[PartitionKey](#cfn-iot-topicrule-kinesisaction-partitionkey)": String,
-  "[RoleArn](#cfn-iot-topicrule-kinesisaction-rolearn)": String,
+  "[RoleARN](#cfn-iot-topicrule-kinesisaction-rolearn)": String,
   "[StreamName](#cfn-iot-topicrule-kinesisaction-streamname)": String
 }
 ```
@@ -18,7 +18,7 @@
 
 ```
 [PartitionKey](#cfn-iot-topicrule-kinesisaction-partitionkey): String
-[RoleArn](#cfn-iot-topicrule-kinesisaction-rolearn): String
+[RoleARN](#cfn-iot-topicrule-kinesisaction-rolearn): String
 [StreamName](#cfn-iot-topicrule-kinesisaction-streamname): String
 ```
 
@@ -29,7 +29,7 @@ The partition key \(the grouping of data by shard within an Kinesis stream\)\.
 *Required*: No  
 *Type*: String
 
-`RoleArn`  <a name="cfn-iot-topicrule-kinesisaction-rolearn"></a>
+`RoleARN`  <a name="cfn-iot-topicrule-kinesisaction-rolearn"></a>
 The ARN of the IAM role that grants access to an Kinesis stream\.  
 *Required*: Yes  
 *Type*: String

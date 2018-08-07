@@ -117,7 +117,7 @@ The following snippet specifies a lifecycle hook for an `AWS::AutoScaling::AutoS
             "NotificationTargetARN": {
               "Fn::GetAtt": [
                 "SQS",
-                "Arn"
+                "ARN"
               ]
             }
           }
@@ -149,7 +149,7 @@ Resources:
         - LifecycleTransition: 'autoscaling:EC2_INSTANCE_LAUNCHING'
           LifecycleHookName: 'myFirstLifecycleHook'
           HeartbeatTimeout: 4800
-          NotificationTargetARN: !GetAtt SQS.Arn
+          NotificationTargetARN: !GetAtt SQS.ARN
   SQS:
     Type: 'AWS::SQS::Queue'
 ```

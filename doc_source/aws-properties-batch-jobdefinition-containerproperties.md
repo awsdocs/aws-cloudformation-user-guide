@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Memory](#cfn-batch-jobdefinition-containerproperties-memory)" : Integer,
   "[Privileged](#cfn-batch-jobdefinition-containerproperties-privileged)" : Boolean,
   "[Environment](#cfn-batch-jobdefinition-containerproperties-environment)" : [ [*Environment*](aws-properties-batch-jobdefinition-environment.md), ... ],
-  "[JobRoleArn](#cfn-batch-jobdefinition-containerproperties-jobrolearn)" : String,
+  "[JobRoleARN](#cfn-batch-jobdefinition-containerproperties-jobrolearn)" : String,
   "[ReadonlyRootFilesystem](#cfn-batch-jobdefinition-containerproperties-readonlyrootfilesystem)" : Boolean,
   "[Ulimits](#cfn-batch-jobdefinition-containerproperties-ulimits)" : [ [*Ulimit*](aws-properties-batch-jobdefinition-ulimit.md), ... ],
   "[Vcpus](#cfn-batch-jobdefinition-containerproperties-vcpus)" : Integer,
@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [Privileged](#cfn-batch-jobdefinition-containerproperties-privileged): Boolean
 [Environment](#cfn-batch-jobdefinition-containerproperties-environment): 
   - [*Environment*](aws-properties-batch-jobdefinition-environment.md)
-[JobRoleArn](#cfn-batch-jobdefinition-containerproperties-jobrolearn): String
+[JobRoleARN](#cfn-batch-jobdefinition-containerproperties-jobrolearn): String
 [ReadonlyRootFilesystem](#cfn-batch-jobdefinition-containerproperties-readonlyrootfilesystem): Boolean
 [Ulimits](#cfn-batch-jobdefinition-containerproperties-ulimits): 
   - [*Ulimit*](aws-properties-batch-jobdefinition-ulimit.md)
@@ -85,7 +85,7 @@ When this parameter is true, the container is given elevated privileges on the h
 *Type*: Boolean  
  *Update requires*: No Interruption 
 
-`JobRoleArn`  <a name="cfn-batch-jobdefinition-containerproperties-jobrolearn"></a>
+`JobRoleARN`  <a name="cfn-batch-jobdefinition-containerproperties-jobrolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role that the container can assume for AWS permissions\.  
  *Required*: no  
 *Type*: String  

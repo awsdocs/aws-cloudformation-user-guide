@@ -281,7 +281,7 @@ The following example enables AWS Config, creates an AWS Config rule, an aggrega
                     ]
                 },
                 "Path": "/",
-                "ManagedPolicyArns": [
+                "ManagedPolicyARNs": [
                     "arn:aws:iam::aws:policy/service-role/AWSConfigRole"
                 ]
             }
@@ -296,7 +296,7 @@ The following example enables AWS Config, creates an AWS Config rule, an aggrega
                 "RoleARN": {
                     "Fn::GetAtt": [
                         "ConfigRecorderRole",
-                        "Arn"
+                        "ARN"
                     ]
                 },
                 "RecordingGroup": {
@@ -485,7 +485,7 @@ Resources:
             Action:
               - sts:AssumeRole
       Path: /
-      ManagedPolicyArns:
+      ManagedPolicyARNs:
         - arn:aws:iam::aws:policy/service-role/AWSConfigRole
 
   ConfigRecorder:
@@ -494,7 +494,7 @@ Resources:
       - ConfigRecorderRole
       - ConfigBucketPolicy
     Properties:
-      RoleARN: !GetAtt ConfigRecorderRole.Arn
+      RoleARN: !GetAtt ConfigRecorderRole.ARN
       RecordingGroup:
         AllSupported: True
         IncludeGlobalResourceTypes: !If

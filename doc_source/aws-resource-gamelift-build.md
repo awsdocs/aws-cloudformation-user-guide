@@ -79,7 +79,7 @@ The following example creates a GameLift build named `MyGameServerBuild`\. The b
     "StorageLocation": {
       "Bucket": "mybucket",
       "Key": "buildpackagefiles/",
-      "RoleArn": { "Fn::GetAtt": [ "IAMRole", "Arn" ] }
+      "RoleARN": { "Fn::GetAtt": [ "IAMRole", "ARN" ] }
     }
   }
 },
@@ -127,10 +127,10 @@ BuildResource:
     StorageLocation: 
       Bucket: "mybucket"
       Key: "buildpackagefiles/"
-      RoleArn: 
+      RoleARN: 
         Fn::GetAtt: 
           - "IAMRole"
-          - "Arn"
+          - "ARN"
 IAMRole: 
   Type: "AWS::IAM::Role"
   Properties: 
