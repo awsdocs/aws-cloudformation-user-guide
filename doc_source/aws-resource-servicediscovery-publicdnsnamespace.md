@@ -63,7 +63,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 The ID of the public namespace\.
 
 `Arn`  
-The Amazon Resource Name \(ARN\) of the public namespace\.
+The Amazon Resource Name \(Arn\) of the public namespace\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
 

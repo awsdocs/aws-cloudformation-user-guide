@@ -59,7 +59,7 @@ The default actions that the listener takes when handling incoming requests\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `LoadBalancerArn`  <a name="cfn-elasticloadbalancingv2-listener-loadbalancerarn"></a>
-The Amazon Resource Name \(ARN\) of the load balancer to associate with the listener\.  
+The Amazon Resource Name \(Arn\) of the load balancer to associate with the listener\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -88,7 +88,7 @@ The security policy that defines the ciphers and protocols that the load balance
 
 ### Ref<a name="w3ab2c21c10d636c11b2"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the listener's ARN, such as `arn:aws:elasticloadbalancing:us-west-2:123456789012:listener/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2`\.
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the listener's Arn, such as `arn:aws:elasticloadbalancing:us-west-2:123456789012:listener/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 

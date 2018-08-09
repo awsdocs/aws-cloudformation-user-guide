@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" :
     {
       "[PolicyDocument](#cfn-sns-topicpolicy-policydocument)" : PolicyDocument,
-      "[Topics](#cfn-sns-topicpolicy-topics)" : [ List of SNS topic ARNs, ... ]
+      "[Topics](#cfn-sns-topicpolicy-topics)" : [ List of SNS topic Arns, ... ]
     }
 }
 ```
@@ -30,7 +30,7 @@ Type: "AWS::SNS::TopicPolicy"
 Properties:
   [PolicyDocument](#cfn-sns-topicpolicy-policydocument): PolicyDocument
   [Topics](#cfn-sns-topicpolicy-topics):
-    - List of SNS topic ARNs
+    - List of SNS topic Arns
 ```
 
 ## Properties<a name="w3ab2c21c10e1133b9"></a>
@@ -42,9 +42,9 @@ JSON or YAML
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Topics`  <a name="cfn-sns-topicpolicy-topics"></a>
-The Amazon Resource Names \(ARN\) of the topics to which you want to add the policy\. You can use the [Ref function](intrinsic-function-reference-ref.md) to specify an [AWS::SNS::Topic](aws-properties-sns-topic.md) resource\.  
+The Amazon Resource Names \(Arn\) of the topics to which you want to add the policy\. You can use the [Ref function](intrinsic-function-reference-ref.md) to specify an [AWS::SNS::Topic](aws-properties-sns-topic.md) resource\.  
 *Required*: Yes  
-*Type*: A list of Amazon SNS topics ARNs  
+*Type*: A list of Amazon SNS topics Arns  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 For sample `AWS::SNS::TopicPolicy` snippets, see [Declaring an Amazon SNS Topic Policy](quickref-iam.md#scenario-sns-policy)\.

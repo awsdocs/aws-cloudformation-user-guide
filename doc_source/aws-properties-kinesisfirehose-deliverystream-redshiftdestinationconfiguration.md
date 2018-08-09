@@ -15,7 +15,7 @@ The `RedshiftDestinationConfiguration` property type specifies an Amazon Redshif
   "[CopyCommand](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-copycommand)" : [*CopyCommand*](aws-properties-kinesisfirehose-deliverystream-copycommand.md),
   "[Password](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-password)" : String,
   "[ProcessingConfiguration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-processingconfiguration)" : [*ProcessingConfiguration*](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md),
-  "[RoleARN](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-rolearn)" : String,
+  "[RoleArn](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-rolearn)" : String,
   "[S3Configuration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-s3configuration)" : [*S3Configuration*](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md),
   "[Username](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-username)" : String
 }
@@ -32,7 +32,7 @@ The `RedshiftDestinationConfiguration` property type specifies an Amazon Redshif
 [Password](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-password): String
 [ProcessingConfiguration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-processingconfiguration): 
   [*ProcessingConfiguration*](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md)
-[RoleARN](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-rolearn): String
+[RoleArn](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-rolearn): String
 [S3Configuration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-s3configuration):
   [*S3Configuration*](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)
 [Username](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-username): String
@@ -65,8 +65,8 @@ The data processing configuration for the Kinesis Firehose delivery stream\.
  *Required*: No  
  *Type*: [Kinesis Firehose DeliveryStream ProcessingConfiguration](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md)
 
-`RoleARN`  <a name="cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-rolearn"></a>
-The ARN of the AWS Identity and Access Management \(IAM\) role that grants Kinesis Firehose access to your Amazon S3 bucket and AWS KMS \(if you enable data encryption\)\.  
+`RoleArn`  <a name="cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-rolearn"></a>
+The Arn of the AWS Identity and Access Management \(IAM\) role that grants Kinesis Firehose access to your Amazon S3 bucket and AWS KMS \(if you enable data encryption\)\.  
 For more information, see [Grant Kinesis Firehose Access to an Amazon Redshift Destination ](http://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-rs) in the *Amazon Kinesis Firehose Developer Guide*\.  
 *Required*: Yes  
 *Type*: String

@@ -30,7 +30,7 @@ The port value used if your service discovery service specified an SRV record\.
 *Type*: Integer
 
 `RegistryArn`  <a name="cfn-ecs-service-serviceregistry-registryarn"></a>
-The Amazon Resource Name \(ARN\) of the service registry\. The currently supported service registry is Amazon Route 53 auto naming\.   
+The Amazon Resource Name \(Arn\) of the service registry\. The currently supported service registry is Amazon Route 53 auto naming\.   
 *Required*: No  
 *Type*: String
 

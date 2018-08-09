@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ssm-maintenancewindowtask-notificationconfig-properties"></a>
 
 `NotificationArn`  <a name="cfn-ssm-maintenancewindowtask-notificationconfig-notificationarn"></a>
-An Amazon Resource Name \(ARN\) for an Amazon SNS topic\. Run Command pushes notifications about command status changes to this topic\.  
+An Amazon Resource Name \(Arn\) for an Amazon SNS topic\. Run Command pushes notifications about command status changes to this topic\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

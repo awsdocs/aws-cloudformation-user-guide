@@ -56,6 +56,6 @@ The value to publish to the metric\. For example, if you count the occurrences o
 *Type*: String
 
 `RoleArn`  <a name="cfn-iot-topicrule-cloudwatchmetricaction-rolearn"></a>
-The ARN of the IAM role that grants access to the CloudWatch metric\.  
+The Arn of the IAM role that grants access to the CloudWatch metric\.  
 *Required*: Yes  
 *Type*: String

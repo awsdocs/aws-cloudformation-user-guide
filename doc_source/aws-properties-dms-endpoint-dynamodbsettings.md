@@ -23,6 +23,6 @@ Use the `DynamoDBSettings` property to specify settings for an DynamoDB endpoint
 For more information about option settings, see [Using an Amazon DynamoDB Database as a Target for AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.DynamoDB.html) in the *AWS Database Migration Service User Guide*
 
 `ServiceAccessRoleArn`  <a name="cfn-dms-endpoint-dynamodbsettings-serviceaccessrolearn"></a>
-The Amazon Resource Name \(ARN\) used by the service access IAM role\.  
+The Amazon Resource Name \(Arn\) used by the service access IAM role\.  
 *Required*: Yes  
 *Type*: String

@@ -40,7 +40,7 @@ Conditional: If you specify the `AccessControlTranslation` property, the `Accoun
 *Type*: String
 
 `Bucket`  <a name="cfn-s3-bucket-replicationconfiguration-rules-destination-bucket"></a>
-The Amazon resource name \(ARN\) of an S3 bucket where Amazon S3 stores replicated objects\. This destination bucket must be in a different region than your source bucket\.  
+The Amazon resource name \(Arn\) of an S3 bucket where Amazon S3 stores replicated objects\. This destination bucket must be in a different region than your source bucket\.  
 If you have multiple rules in your replication configuration, specify the same destination bucket for all of the rules\.  
 *Required*: Yes  
 *Type*: String

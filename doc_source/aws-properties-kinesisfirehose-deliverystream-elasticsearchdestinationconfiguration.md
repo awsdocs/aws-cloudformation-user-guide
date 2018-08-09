@@ -12,12 +12,12 @@ The `ElasticsearchDestinationConfiguration` property type specifies an Amazon El
 {
   "[BufferingHints](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-bufferinghints)" : [*BufferingHints*](aws-properties-kinesisfirehose-deliverystream-elasticsearchbufferinghints.md),
   "[CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-cloudwatchloggingoptions)" : [*CloudWatchLoggingOptions*](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md),
-  "[DomainARN](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-domainarn)" : String,
+  "[DomainArn](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-domainarn)" : String,
   "[IndexName](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-indexname)" : String,
   "[IndexRotationPeriod](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-indexrotationperiod)" : String,
   "[ProcessingConfiguration](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-processingconfiguration)" : [*ProcessingConfiguration*](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md),
   "[RetryOptions](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-retryoptions)" : [*RetryOptions*](aws-properties-kinesisfirehose-deliverystream-elasticsearchretryoptions.md),
-  "[RoleARN](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-rolearn)" : String,
+  "[RoleArn](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-rolearn)" : String,
   "[S3BackupMode](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-s3backupmodee)" : String,
   "[S3Configuration](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-s3configuration)" : [*S3Configuration*](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md),
   "[TypeName](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-typename)" : String
@@ -31,14 +31,14 @@ The `ElasticsearchDestinationConfiguration` property type specifies an Amazon El
   [*BufferingHints*](aws-properties-kinesisfirehose-deliverystream-elasticsearchbufferinghints.md)
 [CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-cloudwatchloggingoptions):
   [*CloudWatchLoggingOptions*](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md)
-[DomainARN](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-domainarn): String
+[DomainArn](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-domainarn): String
 [IndexName](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-indexname): String
 [IndexRotationPeriod](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-indexrotationperiod): String
 [ProcessingConfiguration](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-processingconfiguration):
   [*ProcessingConfiguration*](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md)
 [RetryOptions](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-retryoptions):
   [*RetryOptions*](aws-properties-kinesisfirehose-deliverystream-elasticsearchretryoptions.md)
-[RoleARN](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-rolearn): String
+[RoleArn](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-rolearn): String
 [S3BackupMode](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-s3backupmodee): String
 [S3Configuration](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-s3configuration):
   [*S3Configuration*](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)
@@ -57,8 +57,8 @@ The Amazon CloudWatch Logs logging options for the delivery stream\.
 *Required*: No  
 *Type*: [Kinesis Firehose DeliveryStream CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md)
 
-`DomainARN`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-domainarn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon ES domain that Kinesis Firehose delivers data to\.  
+`DomainArn`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-domainarn"></a>
+The Amazon Resource Name \(Arn\) of the Amazon ES domain that Kinesis Firehose delivers data to\.  
 *Required*: Yes  
 *Type*: String
 
@@ -82,8 +82,8 @@ The retry behavior when Kinesis Firehose is unable to deliver data to Amazon ES\
  *Required*: Yes  
 *Type*: [Kinesis Firehose DeliveryStream ElasticsearchRetryOptions](aws-properties-kinesisfirehose-deliverystream-elasticsearchretryoptions.md)
 
-`RoleARN`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-rolearn"></a>
-The ARN of the AWS Identity and Access Management \(IAM\) role that grants Kinesis Firehose access to your Amazon S3 bucket, AWS KMS \(if you enable data encryption\), and Amazon CloudWatch Logs \(if you enable logging\)\.  
+`RoleArn`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-rolearn"></a>
+The Arn of the AWS Identity and Access Management \(IAM\) role that grants Kinesis Firehose access to your Amazon S3 bucket, AWS KMS \(if you enable data encryption\), and Amazon CloudWatch Logs \(if you enable logging\)\.  
 For more information, see [Grant Kinesis Firehose Access to an Amazon Elasticsearch Service Destination ](http://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-es) in the *Amazon Kinesis Firehose Developer Guide*\.  
 *Required*: Yes  
 *Type*: String

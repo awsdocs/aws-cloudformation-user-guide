@@ -68,7 +68,7 @@ The name of the job queue\.
 
 ### Ref<a name="w3ab2c21c10d164c10b2"></a>
 
-When you pass the logical ID of an `AWS::Batch::JobQueue` resource to the intrinsic `Ref` function, the function returns the job queue ARN, such as `arn:aws:batch:us-east-1:111122223333:job-queue/HighPriority`\. 
+When you pass the logical ID of an `AWS::Batch::JobQueue` resource to the intrinsic `Ref` function, the function returns the job queue Arn, such as `arn:aws:batch:us-east-1:111122223333:job-queue/HighPriority`\. 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 

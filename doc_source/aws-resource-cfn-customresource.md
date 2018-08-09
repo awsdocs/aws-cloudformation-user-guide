@@ -55,7 +55,7 @@ Using your own resource type names helps you quickly differentiate the types of 
 Only one property is defined by AWS for a custom resource: `ServiceToken`\. All other properties are defined by the service provider\.
 
 `ServiceToken`  <a name="cfn-customresource-servicetoken"></a>
-The service token that was given to the template developer by the service provider to access the service, such as an Amazon SNS topic ARN or Lambda function ARN\. The service token must be from the same region in which you are creating the stack\.  
+The service token that was given to the template developer by the service provider to access the service, such as an Amazon SNS topic Arn or Lambda function Arn\. The service token must be from the same region in which you are creating the stack\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: Updates are not supported\.

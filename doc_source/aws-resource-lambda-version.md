@@ -50,7 +50,7 @@ A description of the version you are publishing\. If you don't specify a value, 
 *Update requires*: Updates are not supported\.
 
 `FunctionName`  <a name="cfn-lambda-version-functionname"></a>
-The Lambda function for which you want to publish a version\. You can specify the function's name or its Amazon Resource Name \(ARN\)\.  
+The Lambda function for which you want to publish a version\. You can specify the function's name or its Amazon Resource Name \(Arn\)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -59,7 +59,7 @@ The Lambda function for which you want to publish a version\. You can specify th
 
 ### Ref<a name="w3ab2c21c10d864c11b2"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN of the Lambda version, such as `arn:aws:lambda:us-west-2:123456789012:function:helloworld:1`\.
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the Arn of the Lambda version, such as `arn:aws:lambda:us-west-2:123456789012:function:helloworld:1`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 

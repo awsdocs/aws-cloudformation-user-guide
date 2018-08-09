@@ -21,6 +21,6 @@
 ## Properties<a name="w3ab2c21c14d790b7"></a>
 
 `Arn`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile-arn"></a>
-The Amazon Resource Name \(ARN\) of the instance profile to associate with the instances\. The instance profile contains the IAM role that is associated with the instances\.  
+The Amazon Resource Name \(Arn\) of the instance profile to associate with the instances\. The instance profile contains the IAM role that is associated with the instances\.  
 *Required*: No  
 *Type*: String

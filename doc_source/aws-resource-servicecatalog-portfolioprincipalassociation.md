@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ServiceCatalog::PortfolioPrincipalAssociation",
   "Properties" : {
-    "[PrincipalARN](#cfn-servicecatalog-portfolioprincipalassociation-principalarn)" : String,
+    "[PrincipalArn](#cfn-servicecatalog-portfolioprincipalassociation-principalarn)" : String,
     "[AcceptLanguage](#cfn-servicecatalog-portfolioprincipalassociation-acceptlanguage)" : String,
     "[PortfolioId](#cfn-servicecatalog-portfolioprincipalassociation-portfolioid)" : String,
     "[PrincipalType](#cfn-servicecatalog-portfolioprincipalassociation-principaltype)" : String
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ServiceCatalog::PortfolioPrincipalAssociation"
 Properties:
-  [PrincipalARN](#cfn-servicecatalog-portfolioprincipalassociation-principalarn): String
+  [PrincipalArn](#cfn-servicecatalog-portfolioprincipalassociation-principalarn): String
   [AcceptLanguage](#cfn-servicecatalog-portfolioprincipalassociation-acceptlanguage): String
   [PortfolioId](#cfn-servicecatalog-portfolioprincipalassociation-portfolioid): String
   [PrincipalType](#cfn-servicecatalog-portfolioprincipalassociation-principaltype): String
@@ -50,8 +50,8 @@ The portfolio identifier\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`PrincipalARN`  <a name="cfn-servicecatalog-portfolioprincipalassociation-principalarn"></a>
-The ARN of the principal \(IAM user, role, or group\)\.  
+`PrincipalArn`  <a name="cfn-servicecatalog-portfolioprincipalassociation-principalarn"></a>
+The Arn of the principal \(IAM user, role, or group\)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

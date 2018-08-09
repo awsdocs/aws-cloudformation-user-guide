@@ -49,7 +49,7 @@ Information about the alias, such as its purpose or the Lambda function that is 
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `FunctionName`  <a name="cfn-lambda-alias-functionname"></a>
-The Lambda function that you want to associate with this alias\. You can specify the function's name or its Amazon Resource Name \(ARN\)\.  
+The Lambda function that you want to associate with this alias\. You can specify the function's name or its Amazon Resource Name \(Arn\)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -76,7 +76,7 @@ Use this parameter to point your alias to two different function versions, allow
 
 ### Ref<a name="w3ab2c21c10d851c11b2"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN of the Lambda alias\.
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the Arn of the Lambda alias\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 

@@ -70,7 +70,7 @@ The AWS account ID of the owner of the VPC that you want to peer with\.
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `PeerRoleArn`  <a name="cfn-ec2-vpcpeeringconnection-peerrolearn"></a>
-The Amazon Resource Name \(ARN\) of the VPC peer role for the peering connection in another AWS account\.  
+The Amazon Resource Name \(Arn\) of the VPC peer role for the peering connection in another AWS account\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

@@ -44,7 +44,7 @@ Properties:
 ## Properties<a name="aws-resource-ssm-resourcedatasync-properties"></a>
 
 `KMSKeyArn`  <a name="cfn-ssm-resourcedatasync-kmskeyarn"></a>
-The ARN of an encryption key for a destination in Amazon S3\. You can use a KMS key to encrypt inventory data in Amazon S3\. You must specify a key that exist in the same region as the destination Amazon S3 bucket\.  
+The Arn of an encryption key for a destination in Amazon S3\. You can use a KMS key to encrypt inventory data in Amazon S3\. You must specify a key that exist in the same region as the destination Amazon S3 bucket\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 

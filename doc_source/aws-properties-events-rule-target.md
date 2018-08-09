@@ -46,7 +46,7 @@ The `Targets` property of the [AWS::Events::Rule](aws-resource-events-rule.md) r
 For more information about each property, including constraints and valid values, see [Amazon CloudWatch Events Rule Target](http://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_Target.html) in the *Amazon CloudWatch Events API Reference*\.
 
 `Arn`  <a name="cfn-events-rule-target-arn"></a>
-The Amazon Resource Name \(ARN\) of the target\.  
+The Amazon Resource Name \(Arn\) of the target\.  
 *Required*: Yes  
 *Type*: String
 
@@ -81,7 +81,7 @@ Settings that control shard assignment, when the target is a Kinesis stream\. If
  *Type*: [CloudWatch Events Rule KinesisParameters](aws-properties-events-rule-kinesisparameters.md)
 
 `RoleArn`  <a name="cfn-events-rule-target-rolearn"></a>
-The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) role to use for this target when the rule is triggered\. If one rule triggers multiple targets, you can use a different IAM role for each target\.  
+The Amazon Resource Name \(Arn\) of the AWS Identity and Access Management \(IAM\) role to use for this target when the rule is triggered\. If one rule triggers multiple targets, you can use a different IAM role for each target\.  
 CloudWatch Events needs appropriate permissions to make API calls against the resources you own\. For Kinesis streams, CloudWatch Events relies on IAM roles\. For Lambda, Amazon SNS, and Amazon SQS resources, CloudWatch Events relies on resource\-based policies\. For more information, see [ Using Resource\-Based Policies for CloudWatch Events](http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/resource-based-policies-cwe.html) in the *Amazon CloudWatch User Guide*\.
 *Required*: No  
 *Type*: String

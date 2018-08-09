@@ -65,7 +65,7 @@ The product identifier\.
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `RoleArn`  <a name="cfn-servicecatalog-launchroleconstraint-rolearn"></a>
-The ARN of the launch role\.  
+The Arn of the launch role\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

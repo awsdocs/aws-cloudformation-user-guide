@@ -29,7 +29,7 @@
 ## Properties<a name="w3ab2c21c14d307b7"></a>
 
 `AcmCertificateArn`  <a name="cfn-cloudfront-distribution-viewercertificate-acmcertificatearn"></a>
-If you're using an alternate domain name, the Amazon Resource Name \(ARN\) of an AWS Certificate Manager \(ACM\) certificate\. Use the ACM service to provision and manage your certificates\. For more information, see the [AWS Certificate Manager User Guide](http://docs.aws.amazon.com/acm/latest/userguide/)\.  
+If you're using an alternate domain name, the Amazon Resource Name \(Arn\) of an AWS Certificate Manager \(ACM\) certificate\. Use the ACM service to provision and manage your certificates\. For more information, see the [AWS Certificate Manager User Guide](http://docs.aws.amazon.com/acm/latest/userguide/)\.  
 Currently, you can specify only certificates that are in the US East \(N\. Virginia\) region\.
 *Required*: Conditional\. You must specify one of the following properties: `AcmCertificateArn`, `CloudFrontDefaultCertificate`, or `IamCertificateId`\.  
 *Type*: String

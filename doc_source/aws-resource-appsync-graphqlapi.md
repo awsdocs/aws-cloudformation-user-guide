@@ -76,7 +76,7 @@ Logging configuration when writing GraphQL operations and tracing to Amazon Clou
 
 ### Ref<a name="aws-resource-appsync-graphqlapi-ref"></a>
 
-When you pass the logical ID of an `AWS::AppSync::GraphQLApi` resource to the intrinsic `Ref` function, the function returns the ARN of the GraphQL API, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid`\. 
+When you pass the logical ID of an `AWS::AppSync::GraphQLApi` resource to the intrinsic `Ref` function, the function returns the Arn of the GraphQL API, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid`\. 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
@@ -88,7 +88,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 The Endpoint URL of your GraphQL API\. 
 
 `Arn`  
-The Amazon Resource Name \(ARN\) of the API key, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid`\. 
+The Amazon Resource Name \(Arn\) of the API key, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid`\. 
 
 `ApiId`  
 Unique AWS AppSync GraphQL API Identifier\. 

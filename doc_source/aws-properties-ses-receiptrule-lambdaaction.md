@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ses-receiptrule-lambdaaction-properties"></a>
 
 `FunctionArn`  <a name="cfn-ses-receiptrule-lambdaaction-functionarn"></a>
-The Amazon Resource Name \(ARN\) of the AWS Lambda function\. An example of an AWS Lambda function ARN is `arn:aws:lambda:us-west-2:account-id:function:MyFunction`\.   
+The Amazon Resource Name \(Arn\) of the AWS Lambda function\. An example of an AWS Lambda function Arn is `arn:aws:lambda:us-west-2:account-id:function:MyFunction`\.   
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
@@ -45,7 +45,7 @@ There is a 30\-second timeout on `RequestResponse` invocations\. You should use 
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `TopicArn`  <a name="cfn-ses-receiptrule-lambdaaction-topicarn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon SNS topic to notify when the Lambda action is taken\. An example of an Amazon SNS topic ARN is `arn:aws:sns:us-west-2:123456789012:MyTopic`\.   
+The Amazon Resource Name \(Arn\) of the Amazon SNS topic to notify when the Lambda action is taken\. An example of an Amazon SNS topic Arn is `arn:aws:sns:us-west-2:123456789012:MyTopic`\.   
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

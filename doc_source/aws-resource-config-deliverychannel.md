@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[Name](#cfn-config-deliverychannel-name)" : String,
     "[S3BucketName](#cfn-config-deliverychannel-s3bucketname)" : String,
     "[S3KeyPrefix](#cfn-config-deliverychannel-s3keyprefix)" : String,
-    "[SnsTopicARN](#cfn-config-deliverychannel-snstopicarn)" : String
+    "[SnsTopicArn](#cfn-config-deliverychannel-snstopicarn)" : String
   }
 }
 ```
@@ -49,7 +49,7 @@ Properties:
   [Name](#cfn-config-deliverychannel-name): String
   [S3BucketName](#cfn-config-deliverychannel-s3bucketname): String
   [S3KeyPrefix](#cfn-config-deliverychannel-s3keyprefix): String
-  [SnsTopicARN](#cfn-config-deliverychannel-snstopicarn): String
+  [SnsTopicArn](#cfn-config-deliverychannel-snstopicarn): String
 ```
 
 ## Properties<a name="w3ab2c21c10d316c19"></a>
@@ -78,8 +78,8 @@ A key prefix \(folder\) for the specified S3 bucket\.
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`SnsTopicARN`  <a name="cfn-config-deliverychannel-snstopicarn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service \(Amazon SNS\) topic that AWS Config delivers notifications to\.  
+`SnsTopicArn`  <a name="cfn-config-deliverychannel-snstopicarn"></a>
+The Amazon Resource Name \(Arn\) of the Amazon Simple Notification Service \(Amazon SNS\) topic that AWS Config delivers notifications to\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -106,7 +106,7 @@ The following example creates a delivery channel that sends notifications to the
       "DeliveryFrequency": "Six_Hours"
     },
     "S3BucketName": {"Ref": "ConfigBucket"},
-    "SnsTopicARN": {"Ref": "ConfigTopic"}
+    "SnsTopicArn": {"Ref": "ConfigTopic"}
   }
 }
 ```
@@ -121,6 +121,6 @@ DeliveryChannel:
       DeliveryFrequency: "Six_Hours"
     S3BucketName: 
       Ref: ConfigBucket
-    SnsTopicARN: 
+    SnsTopicArn: 
       Ref: ConfigTopic
 ```

@@ -76,7 +76,7 @@ The state of the compute environment\. The valid values are `ENABLED` or `DISABL
 
 ### Ref<a name="aws-resource-batch-computeenvironment-ref"></a>
 
-When you pass the logical ID of an `AWS::Batch::ComputeEnvironment` resource to the intrinsic `Ref` function, the function returns the compute environment ARN, such as `arn:aws:batch:us-east-1:555555555555:compute-environment/M4OnDemand`\. 
+When you pass the logical ID of an `AWS::Batch::ComputeEnvironment` resource to the intrinsic `Ref` function, the function returns the compute environment Arn, such as `arn:aws:batch:us-east-1:555555555555:compute-environment/M4OnDemand`\. 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 

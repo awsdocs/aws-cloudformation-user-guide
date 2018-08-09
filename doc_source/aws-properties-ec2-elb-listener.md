@@ -60,6 +60,6 @@ Specifies the load balancer transport protocol to use for routing: HTTP, HTTPS, 
 *Type*: String
 
 `SSLCertificateId`  <a name="cfn-ec2-elb-listener-sslcertificateid"></a>
-The ARN of the SSL certificate to use\. For more information about SSL certificates, see [Managing Server Certificates](http://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingServerCerts.html) in the *AWS Identity and Access Management User Guide*\.  
+The Arn of the SSL certificate to use\. For more information about SSL certificates, see [Managing Server Certificates](http://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingServerCerts.html) in the *AWS Identity and Access Management User Guide*\.  
 *Required*: No  
 *Type*: String

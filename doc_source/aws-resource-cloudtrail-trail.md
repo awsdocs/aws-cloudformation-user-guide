@@ -62,13 +62,13 @@ Properties:
 For more information and property constraints, see [CreateTrail](http://docs.aws.amazon.com/awscloudtrail/latest/APIReference/ API_CreateTrail.html) in the *AWS CloudTrail API Reference*\.
 
 `CloudWatchLogsLogGroupArn`  <a name="cfn-cloudtrail-trail-cloudwatchlogsloggrouparn"></a>
-The Amazon Resource Name \(ARN\) of a log group to which CloudTrail logs will be delivered\.  
+The Amazon Resource Name \(Arn\) of a log group to which CloudTrail logs will be delivered\.  
 *Required*: Conditional\. This property is required if you specify the `CloudWatchLogsRoleArn` property\.  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `CloudWatchLogsRoleArn`  <a name="cfn-cloudtrail-trail-cloudwatchlogsrolearn"></a>
-The role ARN that Amazon CloudWatch Logs \(CloudWatch Logs\) assumes to write logs to a log group\. For more information, see [Role Policy Document for CloudTrail to Use CloudWatch Logs for Monitoring](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-required-policy-for-cloudwatch-logs.html) in the *AWS CloudTrail User Guide*\.  
+The role Arn that Amazon CloudWatch Logs \(CloudWatch Logs\) assumes to write logs to a log group\. For more information, see [Role Policy Document for CloudTrail to Use CloudWatch Logs for Monitoring](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-required-policy-for-cloudwatch-logs.html) in the *AWS CloudTrail User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -104,7 +104,7 @@ Indicates whether the CloudTrail trail is created in the region in which you cre
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `KMSKeyId`  <a name="cfn-cloudtrail-trail-kmskeyid"></a>
-The AWS Key Management Service \(AWS KMS\) key ID that you want to use to encrypt CloudTrail logs\. You can specify an alias name \(prefixed with `alias/`\), an alias ARN, a key ARN, or a globally unique identifier\.  
+The AWS Key Management Service \(AWS KMS\) key ID that you want to use to encrypt CloudTrail logs\. You can specify an alias name \(prefixed with `alias/`\), an alias Arn, a key Arn, or a globally unique identifier\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -152,10 +152,10 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 `Arn`  
-The ARN of the CloudTrail trail, such as `arn:aws:cloudtrail:us-east-2:123456789012:trail/myCloudTrail`\.
+The Arn of the CloudTrail trail, such as `arn:aws:cloudtrail:us-east-2:123456789012:trail/myCloudTrail`\.
 
 `SnsTopicArn`  
-The ARN of the Amazon SNS topic that's associated with the CloudTrail trail, such as `arn:aws:sns:us-east-2:123456789012:mySNSTopic`\.
+The Arn of the Amazon SNS topic that's associated with the CloudTrail trail, such as `arn:aws:sns:us-east-2:123456789012:mySNSTopic`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 

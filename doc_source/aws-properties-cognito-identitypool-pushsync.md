@@ -24,7 +24,7 @@
 ## Properties<a name="aws-properties-cognito-identitypool-pushsync-properties"></a>
 
 `ApplicationArns`  <a name="cfn-cognito-identitypool-pushsync-applicationarns"></a>
-List of Amazon SNS platform application ARNs that could be used by clients\.  
+List of Amazon SNS platform application Arns that could be used by clients\.  
 *Type*: List of String values  
 *Required*: No
 

@@ -42,7 +42,7 @@ The name of the alias\. The name must start with `alias` followed by a forward s
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `TargetKeyId`  <a name="cfn-kms-alias-targetkeyid"></a>
-The ID of the key for which you are creating the alias\. Specify the key's globally unique identifier or Amazon Resource Name \(ARN\)\. You can't specify another alias\.  
+The ID of the key for which you are creating the alias\. Specify the key's globally unique identifier or Amazon Resource Name \(Arn\)\. You can't specify another alias\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

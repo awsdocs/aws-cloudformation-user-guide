@@ -44,7 +44,7 @@ The Amazon States Language definition of the state machine\. For more informatio
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-stepfunctions-statemachine-rolearn"></a>
-The Amazon Resource Name \(ARN\) of the IAM role to use for this state machine\.  
+The Amazon Resource Name \(Arn\) of the IAM role to use for this state machine\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -53,7 +53,7 @@ The Amazon Resource Name \(ARN\) of the IAM role to use for this state machine\.
 
 ### Ref<a name="aws-resource-stepfunctions-statemachine-returnvalues-ref"></a>
 
-When you provide the logical ID of this resource to the `Ref` intrinsic function, `Ref` returns the ARN of the created state machine\. For example:
+When you provide the logical ID of this resource to the `Ref` intrinsic function, `Ref` returns the Arn of the created state machine\. For example:
 
 ```
 { "Ref": "MyStateMachine" }

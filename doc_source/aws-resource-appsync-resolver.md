@@ -100,7 +100,7 @@ The GraphQL field on a type that will invoke the resolver\.
 
 ### Ref<a name="aws-resource-appsync-resolver-ref"></a>
 
-When you pass the logical ID of an `AWS::AppSync::Resolver` resource to the intrinsic `Ref` function, the function returns the ARN of the Resolver, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/types/typename/resolvers/resolvername`\. 
+When you pass the logical ID of an `AWS::AppSync::Resolver` resource to the intrinsic `Ref` function, the function returns the Arn of the Resolver, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/types/typename/resolvers/resolvername`\. 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
@@ -112,7 +112,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 The GraphQL type that will invoke this resolver\. 
 
 `ResolverArn`  
-ARN of the Resolver, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/types/typename/resolvers/resolvername`\. 
+Arn of the Resolver, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/types/typename/resolvers/resolvername`\. 
 
 `FieldName`  
 The GraphQL field on a type that will invoke the resolver\. 

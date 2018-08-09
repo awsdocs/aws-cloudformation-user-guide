@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CloudFormationStackARN](#cfn-autoscalingplans-scalingplan-applicationsource-cloudformationstackarn)" : String,
+  "[CloudFormationStackArn](#cfn-autoscalingplans-scalingplan-applicationsource-cloudformationstackarn)" : String,
   "[TagFilters](#cfn-autoscalingplans-scalingplan-applicationsource-tagfilters)" : [ [*TagFilter*](aws-properties-autoscalingplans-scalingplan-tagfilter.md), ... ]
 }
 ```
@@ -20,15 +20,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-autoscalingplans-scalingplan-applicationsource-syntax.yaml"></a>
 
 ```
-[CloudFormationStackARN](#cfn-autoscalingplans-scalingplan-applicationsource-cloudformationstackarn): String
+[CloudFormationStackArn](#cfn-autoscalingplans-scalingplan-applicationsource-cloudformationstackarn): String
 [TagFilters](#cfn-autoscalingplans-scalingplan-applicationsource-tagfilters): 
   - [*TagFilter*](aws-properties-autoscalingplans-scalingplan-tagfilter.md)
 ```
 
 ## Properties<a name="aws-properties-autoscalingplans-scalingplan-applicationsource-properties"></a>
 
-`CloudFormationStackARN`  <a name="cfn-autoscalingplans-scalingplan-applicationsource-cloudformationstackarn"></a>
-The Amazon Resource Name \(ARN\) of a CloudFormation stack\.  
+`CloudFormationStackArn`  <a name="cfn-autoscalingplans-scalingplan-applicationsource-cloudformationstackarn"></a>
+The Amazon Resource Name \(Arn\) of a CloudFormation stack\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

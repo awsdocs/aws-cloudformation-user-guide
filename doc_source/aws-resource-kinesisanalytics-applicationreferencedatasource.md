@@ -73,7 +73,7 @@ ApplicationReferenceDataSource:
               JSONMappingParameters:
                 RecordRowPath: "$"
         S3ReferenceDataSource:
-          BucketARN: !GetAtt S3Bucket.Arn
+          BucketArn: !GetAtt S3Bucket.Arn
           FileKey: 'fakeKey'
-          ReferenceRoleARN: !GetAtt KinesisAnalyticsRole.Arn
+          ReferenceRoleArn: !GetAtt KinesisAnalyticsRole.Arn
 ```

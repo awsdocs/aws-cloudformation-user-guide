@@ -32,7 +32,7 @@ Properties:
 ## Properties<a name="w3ab2c21c10d810b9"></a>
 
 `Principal`  <a name="cfn-iot-thingprincipalattachment-principal"></a>
-The principal, which can be a certificate ARN \(as returned from the `CreateCertificate` operation\) or an Amazon Cognito ID\.  
+The principal, which can be a certificate Arn \(as returned from the `CreateCertificate` operation\) or an Amazon Cognito ID\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

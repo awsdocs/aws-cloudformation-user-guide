@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
     "[Name](#cfn-config-configurationrecorder-name)" : String,
     "[RecordingGroup](#cfn-config-configurationrecorder-recordinggroup)" : Recording group,
-    "[RoleARN](#cfn-config-configurationrecorder-rolearn)" : String
+    "[RoleArn](#cfn-config-configurationrecorder-rolearn)" : String
   }
 }
 ```
@@ -34,7 +34,7 @@ Properties:
   [Name](#cfn-config-configurationrecorder-name): String
   [RecordingGroup](#cfn-config-configurationrecorder-recordinggroup):
     Recording group
-  [RoleARN](#cfn-config-configurationrecorder-rolearn): String
+  [RoleArn](#cfn-config-configurationrecorder-rolearn): String
 ```
 
 ## Properties<a name="w3ab2c21c10d312c13"></a>
@@ -52,8 +52,8 @@ Indicates whether to record configurations for all supported resources or for a 
 *Type*: [AWS Config ConfigurationRecorder RecordingGroup](aws-properties-config-configurationrecorder-recordinggroup.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`RoleARN`  <a name="cfn-config-configurationrecorder-rolearn"></a>
-The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) role that is used to make read or write requests to the delivery channel that you specify and to get configuration details for supported AWS resources\. For more information, see [Permissions for the IAM Role Assigned to AWS Config](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-permissions.html) in the *AWS Config Developer Guide*\.  
+`RoleArn`  <a name="cfn-config-configurationrecorder-rolearn"></a>
+The Amazon Resource Name \(Arn\) of the AWS Identity and Access Management \(IAM\) role that is used to make read or write requests to the delivery channel that you specify and to get configuration details for supported AWS resources\. For more information, see [Permissions for the IAM Role Assigned to AWS Config](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-permissions.html) in the *AWS Config Developer Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -80,7 +80,7 @@ The following example creates a configuration recorder for EC2 volumes\.
     "RecordingGroup": {
       "ResourceTypes": ["AWS::EC2::Volume"]
     },
-    "RoleARN": {"Fn::GetAtt": ["ConfigRole", "Arn"]}
+    "RoleArn": {"Fn::GetAtt": ["ConfigRole", "Arn"]}
   }
 }
 ```
@@ -95,7 +95,7 @@ ConfigRecorder:
     RecordingGroup: 
       ResourceTypes: 
         - "AWS::EC2::Volume"
-    RoleARN: 
+    RoleArn: 
       Fn::GetAtt: 
         - ConfigRole
         - Arn

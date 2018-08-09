@@ -46,7 +46,7 @@ The scaling instructions\.
 
 ### Ref<a name="aws-resource-autoscalingplans-scalingplan-ref"></a>
 
-When you pass the logical ID of an `AWS::AutoScalingPlans::ScalingPlan` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the scaling plan\. The format of the ARN is as follows:
+When you pass the logical ID of an `AWS::AutoScalingPlans::ScalingPlan` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(Arn\) of the scaling plan\. The format of the Arn is as follows:
 
 ```
 arn:aws:autoscaling:region:123456789012:scalingPlan:scalingPlanName/plan-name:scalingPlanVersion/plan-version

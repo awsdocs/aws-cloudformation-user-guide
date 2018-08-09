@@ -10,20 +10,20 @@ The `S3DestinationConfiguration` property type specifies an Amazon Simple Storag
 
 ```
 {
-  "[BucketARN](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-bucketarn)" : String,
+  "[BucketArn](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-bucketarn)" : String,
   "[BufferingHints](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-bufferinghints)" : [`BufferingHints`](aws-properties-kinesisfirehose-deliverystream-bufferinghints.md),
   "[CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-cloudwatchloggingoptions)" : [`CloudWatchLoggingOptions`](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md),
   "[CompressionFormat](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-compressionformat)" : String,
   "[EncryptionConfiguration](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-encryptionconfiguration)" : [`EncryptionConfiguration`](aws-properties-kinesisfirehose-deliverystream-encryptionconfiguration.md),
   "[Prefix](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-prefix)" : String,
-  "[RoleARN](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-rolearn)" : String
+  "[RoleArn](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-rolearn)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration-syntax.yaml"></a>
 
 ```
-[BucketARN](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-bucketarn): String
+[BucketArn](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-bucketarn): String
 [BufferingHints](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-bufferinghints):
   [`BufferingHints`](aws-properties-kinesisfirehose-deliverystream-bufferinghints.md)
 [CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-cloudwatchloggingoptions):
@@ -32,13 +32,13 @@ The `S3DestinationConfiguration` property type specifies an Amazon Simple Storag
 [EncryptionConfiguration](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-encryptionconfiguration):
   [`EncryptionConfiguration`](aws-properties-kinesisfirehose-deliverystream-encryptionconfiguration.md)
 [Prefix](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-prefix): String
-[RoleARN](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-rolearn): String
+[RoleArn](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration-properties"></a>
 
-`BucketARN`  <a name="cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-bucketarn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon S3 bucket to send data to\.  
+`BucketArn`  <a name="cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-bucketarn"></a>
+The Amazon Resource Name \(Arn\) of the Amazon S3 bucket to send data to\.  
 *Required*: Yes  
 *Type*: String
 
@@ -67,8 +67,8 @@ A prefix that Kinesis Firehose adds to the files that it delivers to the Amazon 
 *Required: *No  
 *Type*: String
 
-`RoleARN`  <a name="cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-rolearn"></a>
-The ARN of an AWS Identity and Access Management \(IAM\) role that grants Kinesis Firehose access to your Amazon S3 bucket and AWS KMS \(if you enable data encryption\)\.  
+`RoleArn`  <a name="cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-rolearn"></a>
+The Arn of an AWS Identity and Access Management \(IAM\) role that grants Kinesis Firehose access to your Amazon S3 bucket and AWS KMS \(if you enable data encryption\)\.  
 For more information, see [Grant Kinesis Firehose Access to an Amazon S3 Destination](http://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-s3) in the *Amazon Kinesis Firehose Developer Guide*\.  
 *Required*: Yes  
 *Type*: String

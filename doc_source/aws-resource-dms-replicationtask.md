@@ -65,13 +65,13 @@ The migration type\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ReplicationInstanceArn`  <a name="cfn-dms-replicationtask-replicationinstancearn"></a>
-The Amazon Resource Name \(ARN\) of the replication instance\.  
+The Amazon Resource Name \(Arn\) of the replication instance\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ReplicationTaskIdentifier`  <a name="cfn-dms-replicationtask-replicationtaskidentifier"></a>
-The ARN string that uniquely identifies the endpoint\.  
+The Arn string that uniquely identifies the endpoint\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -83,7 +83,7 @@ Settings for the task, such as target metadata settings\. For a complete list of
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `SourceEndpointArn`  <a name="cfn-dms-replicationtask-sourceendpointarn"></a>
-The ARN string that uniquely identifies the endpoint\.  
+The Arn string that uniquely identifies the endpoint\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -101,7 +101,7 @@ The tags that you want to attach to the migration task\.
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `TargetEndpointArn`  <a name="cfn-dms-replicationtask-targetendpointarn"></a>
-The ARN string that uniquely identifies the endpoint\.  
+The Arn string that uniquely identifies the endpoint\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -110,7 +110,7 @@ The ARN string that uniquely identifies the endpoint\.
 
 ### Ref<a name="w3ab2c21c10d368c11b2"></a>
 
-When you pass the logical ID of an `AWS::DMS::ReplicationTask` resource to the intrinsic `Ref` function, the function returns the replication task ARN\.
+When you pass the logical ID of an `AWS::DMS::ReplicationTask` resource to the intrinsic `Ref` function, the function returns the replication task Arn\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 

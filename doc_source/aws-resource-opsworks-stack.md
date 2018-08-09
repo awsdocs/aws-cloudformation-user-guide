@@ -147,7 +147,7 @@ The stack's default Availability Zone, which must be in the specified region\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `DefaultInstanceProfileArn`  <a name="cfn-opsworks-stack-defaultinstanceprof"></a>
-The Amazon Resource Name \(ARN\) of an IAM instance profile that is the default profile for all of the stack's Amazon EC2 instances\.  
+The Amazon Resource Name \(Arn\) of an IAM instance profile that is the default profile for all of the stack's Amazon EC2 instances\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -177,7 +177,7 @@ The stack's default subnet ID\. All instances are launched into this subnet unle
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `EcsClusterArn`  <a name="cfn-opsworks-stack-ecsclusterarn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon Elastic Container Service \(Amazon ECS\) cluster to register with the AWS OpsWorks stack\.  
+The Amazon Resource Name \(Arn\) of the Amazon Elastic Container Service \(Amazon ECS\) cluster to register with the AWS OpsWorks stack\.  
 If you specify a cluster that's registered with another AWS OpsWorks stack, AWS CloudFormation deregisters the existing association before registering the cluster\.
 *Required*: No  
 *Type*: String  
@@ -210,7 +210,7 @@ If you specify a DB instance that's registered with another AWS OpsWorks stack, 
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ServiceRoleArn`  <a name="cfn-opsworks-stack-servicerolearn"></a>
-The AWS Identity and Access Management \(IAM\) role that AWS OpsWorks uses to work with AWS resources on your behalf\. You must specify an Amazon Resource Name \(ARN\) for an existing IAM role\.  
+The AWS Identity and Access Management \(IAM\) role that AWS OpsWorks uses to work with AWS resources on your behalf\. You must specify an Amazon Resource Name \(Arn\) for an existing IAM role\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

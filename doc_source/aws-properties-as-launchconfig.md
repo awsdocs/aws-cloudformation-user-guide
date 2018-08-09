@@ -108,7 +108,7 @@ Additional fees are incurred when using EBS\-optimized instances\. For more info
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `IamInstanceProfile`  <a name="cfn-as-launchconfig-iaminstanceprofile"></a>
-Provides the name or the Amazon Resource Name \(ARN\) of the instance profile associated with the IAM role for the instance\. The instance profile contains the IAM role\.  
+Provides the name or the Amazon Resource Name \(Arn\) of the instance profile associated with the IAM role for the instance\. The instance profile contains the IAM role\.  
 *Required*: No  
 *Type*: String \(1–1600 chars\)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

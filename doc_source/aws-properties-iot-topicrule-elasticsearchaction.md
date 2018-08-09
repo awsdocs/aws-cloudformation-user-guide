@@ -44,7 +44,7 @@ The Elasticsearch index where the data is stored\.
 *Type*: String
 
 `RoleArn`  <a name="cfn-iot-topicrule-elasticsearchaction-rolearn"></a>
-The ARN of the IAM role that grants access to Elasticsearch\.  
+The Arn of the IAM role that grants access to Elasticsearch\.  
 *Required*: Yes  
 *Type*: String
 

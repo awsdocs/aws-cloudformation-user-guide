@@ -43,7 +43,7 @@ Properties:
 ## Properties<a name="aws-resource-sagemaker-model-properties"></a>
 
 `ExecutionRoleArn`  <a name="cfn-sagemaker-model-executionrolearn"></a>
-The Amazon Resource Name \(ARN\) of the IAM role that Amazon SageMaker can assume to access model artifacts and docker image for deployment on ML compute instances\. Deploying on ML compute instances is part of model hosting\. For more information, see [Amazon SageMaker Roles](http://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html)\.  
+The Amazon Resource Name \(Arn\) of the IAM role that Amazon SageMaker can assume to access model artifacts and docker image for deployment on ML compute instances\. Deploying on ML compute instances is part of model hosting\. For more information, see [Amazon SageMaker Roles](http://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html)\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
@@ -76,7 +76,7 @@ An array of key\-value pairs\. For more information, see [Using Cost Allocation 
 
 ### Ref<a name="aws-resource-sagemaker-model-ref"></a>
 
-When you pass the logical ID of an `AWS::SageMaker::Model` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the model, such as `arn:aws:sagemaker:us-west-2:012345678901:model/mymodel`\.
+When you pass the logical ID of an `AWS::SageMaker::Model` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(Arn\) of the model, such as `arn:aws:sagemaker:us-west-2:012345678901:model/mymodel`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 

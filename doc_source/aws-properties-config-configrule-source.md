@@ -37,6 +37,6 @@ Provides the source and type of event that triggers AWS Config to evaluate your 
 
 `SourceIdentifier`  <a name="cfn-config-configrule-source-sourceidentifier"></a>
 For AWS managed rules, the identifier of the rule\. For a list of identifiers, see [AWS Managed Rules](http://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html) in the *AWS Config Developer Guide*\.  
-For customer managed rules, the Amazon Resource Name \(ARN\) of the rule's Lambda function\.  
+For customer managed rules, the Amazon Resource Name \(Arn\) of the rule's Lambda function\.  
 *Required*: Yes  
 *Type*: String

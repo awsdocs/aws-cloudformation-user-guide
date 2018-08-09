@@ -23,6 +23,6 @@ The `Certificates` property of the [AWS::ElasticLoadBalancingV2::Listener](aws-r
 ## Properties<a name="w3ab2c21c14e1000b9"></a>
 
 `CertificateArn`  <a name="cfn-elasticloadbalancingv2-listener-certificates-certificatearn"></a>
-The Amazon Resource Name \(ARN\) of the certificate to associate with the listener\.  
+The Amazon Resource Name \(Arn\) of the certificate to associate with the listener\.  
 *Required*: No  
 *Type*: String

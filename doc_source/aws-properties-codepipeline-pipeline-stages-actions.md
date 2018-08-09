@@ -62,7 +62,7 @@ The artifact name or ID that is a result of the action, such as a test or build 
 *Type*: List of [AWS CodePipeline Pipeline Stages Actions OutputArtifacts](aws-properties-codepipeline-pipeline-stages-actions-outputartifacts.md)
 
 `RoleArn`  <a name="cfn-codepipeline-pipeline-stages-actions-rolearn"></a>
-The Amazon Resource Name \(ARN\) of a service role that the action uses\. The pipeline's role assumes this role\.  
+The Amazon Resource Name \(Arn\) of a service role that the action uses\. The pipeline's role assumes this role\.  
 *Required*: No  
 *Type*: String
 

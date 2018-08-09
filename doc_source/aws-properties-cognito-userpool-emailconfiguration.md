@@ -28,6 +28,6 @@ The REPLY\-TO email address\.
 *Required*: No
 
 `SourceArn`  <a name="cfn-cognito-userpool-emailconfiguration-sourcearn"></a>
-The Amazon Resource Name \(ARN\) of the email source\.  
+The Amazon Resource Name \(Arn\) of the email source\.  
 *Type*: String  
 *Required*: No

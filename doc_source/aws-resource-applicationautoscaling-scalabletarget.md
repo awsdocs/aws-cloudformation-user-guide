@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[MaxCapacity](#cfn-applicationautoscaling-scalabletarget-maxcapacity)" : Integer,
     "[MinCapacity](#cfn-applicationautoscaling-scalabletarget-mincapacity)" : Integer,
     "[ResourceId](#cfn-applicationautoscaling-scalabletarget-resourceid)" : String,
-    "[RoleARN](#cfn-applicationautoscaling-scalabletarget-rolearn)" : String,
+    "[RoleArn](#cfn-applicationautoscaling-scalabletarget-rolearn)" : String,
     "[ScalableDimension](#cfn-applicationautoscaling-scalabletarget-scalabledimension)" : String,
     "[ScheduledActions](#cfn-applicationautoscaling-scalabletarget-scheduledactions)" : [ [*ScheduledAction*](aws-properties-applicationautoscaling-scalabletarget-scheduledaction.md), ... ],
     "[ServiceNamespace](#cfn-applicationautoscaling-scalabletarget-servicenamespace)" : String
@@ -45,7 +45,7 @@ Properties:
   [MaxCapacity](#cfn-applicationautoscaling-scalabletarget-maxcapacity): Integer
   [MinCapacity](#cfn-applicationautoscaling-scalabletarget-mincapacity): Integer
   [ResourceId](#cfn-applicationautoscaling-scalabletarget-resourceid): String
-  [RoleARN](#cfn-applicationautoscaling-scalabletarget-rolearn): String
+  [RoleArn](#cfn-applicationautoscaling-scalabletarget-rolearn): String
   [ScalableDimension](#cfn-applicationautoscaling-scalabletarget-scalabledimension): String
   [ScheduledActions](#cfn-applicationautoscaling-scalabletarget-scheduledactions): 
     - [*ScheduledAction*](aws-properties-applicationautoscaling-scalabletarget-scheduledaction.md)
@@ -72,8 +72,8 @@ The resource identifier to associate with this scalable target\. This string con
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`RoleARN`  <a name="cfn-applicationautoscaling-scalabletarget-rolearn"></a>
-The Amazon Resource Name \(ARN\) of an AWS Identity and Access Management \(IAM\) role that allows Application Auto Scaling to modify your scalable target\.  
+`RoleArn`  <a name="cfn-applicationautoscaling-scalabletarget-rolearn"></a>
+The Amazon Resource Name \(Arn\) of an AWS Identity and Access Management \(IAM\) role that allows Application Auto Scaling to modify your scalable target\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -121,7 +121,7 @@ The following example creates a scalable target for an Amazon Elastic Container 
     "MaxCapacity" : 2,
     "MinCapacity" : 1,
     "ResourceId" : "service/ecsStack-MyECSCluster-AB12CDE3F4GH/ecsStack-MyECSService-AB12CDE3F4GH",
-    "RoleARN" : {"Fn::GetAtt" : ["ApplicationAutoScalingRole", "Arn"] },
+    "RoleArn" : {"Fn::GetAtt" : ["ApplicationAutoScalingRole", "Arn"] },
     "ScalableDimension" : "ecs:service:DesiredCount",
     "ServiceNamespace" : "ecs"
   }
@@ -137,7 +137,7 @@ scalableTarget:
     MaxCapacity: 2
     MinCapacity: 1
     ResourceId: service/ecsStack-MyECSCluster-AB12CDE3F4GH/ecsStack-MyECSService-AB12CDE3F4GH
-    RoleARN: !GetAtt [ ApplicationAutoScalingRole, Arn ]
+    RoleArn: !GetAtt [ ApplicationAutoScalingRole, Arn ]
     ScalableDimension: ecs:service:DesiredCount
     ServiceNamespace: ecs
 ```
@@ -165,7 +165,7 @@ The following example uses the `Fn::Join` and `Ref` intrinsic functions to const
         ]
       ]
     },
-    "RoleARN": {
+    "RoleArn": {
       "Fn::GetAtt": [
         "AutoScalingRole",
         "Arn"
@@ -189,7 +189,7 @@ SpotFleetScalingTarget:
       - /
       - - spot-fleet-request
         - !Ref ECSSpotFleet
-    RoleARN: !GetAtt 
+    RoleArn: !GetAtt 
       - AutoScalingRole
       - Arn
     ScalableDimension: 'ec2:spot-fleet-request:TargetCapacity'
@@ -268,7 +268,7 @@ This example sets up Application Auto Scaling for an `AWS::DynamoDB::Table` reso
             { "Ref": "DDBTable" }
           ]
         ] },
-        "RoleARN": {
+        "RoleArn": {
           "Fn::GetAtt": ["ScalingRole", "Arn"]
         },
         "ScalableDimension": "dynamodb:table:WriteCapacityUnits",
@@ -390,7 +390,7 @@ Resources:
         - /
         - - table
           - !Ref DDBTable
-      RoleARN: !GetAtt ScalingRole.Arn
+      RoleArn: !GetAtt ScalingRole.Arn
       ScalableDimension: dynamodb:table:WriteCapacityUnits
       ServiceNamespace: dynamodb
   ScalingRole:
@@ -488,7 +488,7 @@ The following example creates a scheduled action for a target\.
         },
         "ServiceNamespace": "ecs",
         "ScalableDimension": "ecs:service:DesiredCount",
-        "RoleARN": {
+        "RoleArn": {
           "Fn::GetAtt": [
             "scalingRole",
             "Arn"
@@ -664,7 +664,7 @@ Resources:
           - !GetAtt service.Name
       ServiceNamespace: ecs
       ScalableDimension: 'ecs:service:DesiredCount'
-      RoleARN: !GetAtt 
+      RoleArn: !GetAtt 
         - scalingRole
         - Arn
       MaxCapacity: '2'

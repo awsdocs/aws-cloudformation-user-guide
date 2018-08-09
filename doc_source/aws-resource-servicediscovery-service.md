@@ -81,7 +81,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 The ID of the service\.
 
 `Arn`  
-The Amazon Resource Name \(ARN\) of the service\.
+The Amazon Resource Name \(Arn\) of the service\.
 
 `Name`  
 The name that you assigned to the service\.

@@ -91,7 +91,7 @@ The following example defines an `AutoScalingPolicy` for an `InstanceGroupConfig
               "Statistic": "AVERAGE",
               "Threshold": 15,
               "Unit": "PERCENT",
-              "MetricName": "YARNMemoryAvailablePercentage"
+              "MetricName": "YArnMemoryAvailablePercentage"
             }
           }
         },
@@ -120,7 +120,7 @@ The following example defines an `AutoScalingPolicy` for an `InstanceGroupConfig
               "Statistic": "AVERAGE",
               "Threshold": 75,
               "Unit": "PERCENT",
-              "MetricName": "YARNMemoryAvailablePercentage"
+              "MetricName": "YArnMemoryAvailablePercentage"
             }
           }
         }
@@ -166,7 +166,7 @@ MyInstanceGroupConfig:
               Statistic: AVERAGE
               Threshold: 15
               Unit: PERCENT
-              MetricName: YARNMemoryAvailablePercentage
+              MetricName: YArnMemoryAvailablePercentage
         - Name: Scale-in
           Description: Scale-in policy
           Action:
@@ -186,5 +186,5 @@ MyInstanceGroupConfig:
               Statistic: AVERAGE
               Threshold: 75
               Unit: PERCENT
-              MetricName: YARNMemoryAvailablePercentage
+              MetricName: YArnMemoryAvailablePercentage
 ```

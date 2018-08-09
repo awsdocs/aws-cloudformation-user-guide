@@ -91,17 +91,17 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::ApiGateway::RestApi](aws-resource-apigateway-restapi.md)  |  Rest API resource ID  |  `a1bcdef2gh`  | 
 |  [AWS::ApiGateway::Stage](aws-resource-apigateway-stage.md)   |  Stage name  |  `MyTestStage`  | 
 | [AWS::ApplicationAutoScaling::ScalableTarget](aws-resource-applicationautoscaling-scalabletarget.md) |  Scalable Target ID  |  `service/ecsStack-MyECSCluster-AB12CDE3F4GH/ecsStack-MyECSService-AB12CDE3F4GH\|ecs:service:DesiredCount\|ecs`  | 
-| [AWS::ApplicationAutoScaling::ScalingPolicy](aws-resource-applicationautoscaling-scalingpolicy.md) |  Application Auto Scaling policy Amazon Resource Name \(ARN\)  | arn:aws:autoscaling:us\-east\-1:123456789012:scalingPolicy:12ab3c4d\-56789\-0ef1\-2345\-6ghi7jk8lm90:resource/ecs/service/ecsStack\-MyECSCluster\-AB12CDE3F4GH/ecsStack\-MyECSService\-AB12CDE3F4GH:policyName/MyStepPolicy | 
+| [AWS::ApplicationAutoScaling::ScalingPolicy](aws-resource-applicationautoscaling-scalingpolicy.md) |  Application Auto Scaling policy Amazon Resource Name \(Arn\)  | arn:aws:autoscaling:us\-east\-1:123456789012:scalingPolicy:12ab3c4d\-56789\-0ef1\-2345\-6ghi7jk8lm90:resource/ecs/service/ecsStack\-MyECSCluster\-AB12CDE3F4GH/ecsStack\-MyECSService\-AB12CDE3F4GH:policyName/MyStepPolicy | 
 |  [AWS::Athena::NamedQuery](aws-resource-athena-namedquery.md)  |  Named query name  |  `abc123`  | 
 |  [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md)  |  Name  |  `mystack-myasgroup-NT5EUXTNTXXD`  | 
 |  [AWS::AutoScaling::LaunchConfiguration](aws-properties-as-launchconfig.md)  |  Name  |  `mystack-mylaunchconfig-1DDYF1E3B3I`  | 
 |  [AWS::AutoScaling::LifecycleHook](aws-resource-as-lifecyclehook.md)  |  Name  |  `mylifecyclehookname`  | 
-|  [AWS::AutoScaling::ScalingPolicy](aws-properties-as-policy.md)  |  Scaling policy Amazon Resource Name \(ARN\)  |  `arn:aws:autoscaling:us-east-1:123456789012:scalingPolicy:ab12c4d5-a1b2-a1b2-a1b2-ab12c4d56789:autoScalingGroupName/myStack-AutoScalingGroup-AB12C4D5E6:policyName/myStack-myScalingPolicy-AB12C4D5E6`  | 
+|  [AWS::AutoScaling::ScalingPolicy](aws-properties-as-policy.md)  |  Scaling policy Amazon Resource Name \(Arn\)  |  `arn:aws:autoscaling:us-east-1:123456789012:scalingPolicy:ab12c4d5-a1b2-a1b2-a1b2-ab12c4d56789:autoScalingGroupName/myStack-AutoScalingGroup-AB12C4D5E6:policyName/myStack-myScalingPolicy-AB12C4D5E6`  | 
 |  [AWS::AutoScaling::ScheduledAction](aws-resource-as-scheduledaction.md)  |  Name  |  `mystack-myscheduledaction-NT5EUXTNTXXD`  | 
-| [AWS::Batch::ComputeEnvironment](aws-resource-batch-computeenvironment.md) |  AWS Batch Compute Environment Amazon Resource Name \(ARN\)  |  `arn:aws:batch:us-east-1:555555555555:compute-environment/M4OnDemand`  | 
-| [AWS::Batch::JobDefinition](aws-resource-batch-jobdefinition.md) |  AWS Batch Job Definition Amazon Resource Name \(ARN\)  |  `arn:aws:batch:us-east-1:111122223333:job-definition/test-gpu:2`  | 
-| [AWS::Batch::JobQueue](aws-resource-batch-jobqueue.md) |  AWS Batch Job Queue Amazon Resource Name \(ARN\)  |  `arn:aws:batch:us-east-1:111122223333:job-queue/HighPriority`  | 
-| [AWS::CertificateManager::Certificate](aws-resource-certificatemanager-certificate.md) |  Certificate Amazon Resource Name \(ARN\)  |  `arn:aws:acm:us-east-1:123456789012:certificate/12ab3c4d-56789-0ef1-2345-3dab6fa3ee50`  | 
+| [AWS::Batch::ComputeEnvironment](aws-resource-batch-computeenvironment.md) |  AWS Batch Compute Environment Amazon Resource Name \(Arn\)  |  `arn:aws:batch:us-east-1:555555555555:compute-environment/M4OnDemand`  | 
+| [AWS::Batch::JobDefinition](aws-resource-batch-jobdefinition.md) |  AWS Batch Job Definition Amazon Resource Name \(Arn\)  |  `arn:aws:batch:us-east-1:111122223333:job-definition/test-gpu:2`  | 
+| [AWS::Batch::JobQueue](aws-resource-batch-jobqueue.md) |  AWS Batch Job Queue Amazon Resource Name \(Arn\)  |  `arn:aws:batch:us-east-1:111122223333:job-queue/HighPriority`  | 
+| [AWS::CertificateManager::Certificate](aws-resource-certificatemanager-certificate.md) |  Certificate Amazon Resource Name \(Arn\)  |  `arn:aws:acm:us-east-1:123456789012:certificate/12ab3c4d-56789-0ef1-2345-3dab6fa3ee50`  | 
 |  [AWS::Cloud9::EnvironmentEC2](aws-resource-cloud9-environmentec2.md)  |  Development environment ID  |  `2bc3642873c342e485f7e0c56example`  | 
 |  [AWS::CloudFormation::Stack](aws-properties-stack.md)  |  Stack ID  |  `arn:aws:cloudformation:``us-east-2``:803981987763:stack/mystack-mynestedstack-sggfrhxhum7w/f449b250-b969-11e0-a185-5081d0136786`  | 
 |  [AWS::CloudFormation::WaitCondition](aws-properties-waitcondition.md)  |  Name  |  `arn:aws:cloudformation:``us-east-2``:803981987763:stack/mystack/c325e210-bdf2-11e0-9638-50690880c386/mywaithandle`  | 
@@ -144,17 +144,17 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::EC2::VPCEndpoint](aws-resource-ec2-vpcendpoint.md)  |  Endpoint ID  |  `vpce-a123d0d1`  | 
 |  [AWS::ECR::Repository](aws-resource-ecr-repository.md)  |  Repository name  |  `test-repository`  | 
 |  [AWS::ECS::Cluster](aws-resource-ecs-cluster.md)  |  Name  |  `MyStack-MyECSCluster-NT5EUXTNTXXD`  | 
-|  [AWS::ECS::Service](aws-resource-ecs-service.md)  |  Service ARN  |  `arn:aws:ecs:us-west-2:123456789012:service/sample-webapp`  | 
-|  [AWS::ECS::TaskDefinition](aws-resource-ecs-taskdefinition.md)  |  Task definition ARN  |  `arn:aws:ecs:us-west-2:123456789012:task-definition/TaskDefinitionFamily:1`  | 
+|  [AWS::ECS::Service](aws-resource-ecs-service.md)  |  Service Arn  |  `arn:aws:ecs:us-west-2:123456789012:service/sample-webapp`  | 
+|  [AWS::ECS::TaskDefinition](aws-resource-ecs-taskdefinition.md)  |  Task definition Arn  |  `arn:aws:ecs:us-west-2:123456789012:task-definition/TaskDefinitionFamily:1`  | 
 |  [AWS::EFS::FileSystem](aws-resource-efs-filesystem.md)  |  File system ID  |  `fs-47a2c22e`  | 
 |  [AWS::EFS::MountTarget](aws-resource-efs-mounttarget.md)  |  Mount target ID  |  `fsmt-55a4413c`  | 
 |  [AWS::EKS::Cluster](aws-resource-eks-cluster.md)  |  Name  |  `EKSCluster-NT5EUXTNTXXD`  | 
 |  [AWS::ElastiCache::ReplicationGroup](aws-resource-elasticache-replicationgroup.md)  |  Name  |  `abc12xmy3d1w3hv6`  | 
 |  [AWS::ElastiCache::SubnetGroup](aws-properties-elasticache-subnetgroup.md)  |  Name  |  `myCachesubnetgroup`  | 
-|  [AWS::ElasticLoadBalancingV2::Listener](aws-resource-elasticloadbalancingv2-listener.md)  |  Listener's Amazon Resource Name \(ARN\)  |  `arn:aws:elasticloadbalancing:us-west-2:123456789012:listener/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2`  | 
-|  [AWS::ElasticLoadBalancingV2::ListenerRule](aws-resource-elasticloadbalancingv2-listenerrule.md)  |  Listener rule's Amazon Resource Name \(ARN\)  |  `arn:aws:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee`  | 
-|  [AWS::ElasticLoadBalancingV2::LoadBalancer](aws-resource-elasticloadbalancingv2-loadbalancer.md)  |  Application load balancer's Amazon Resource Name \(ARN\)  |  `arn:aws:elasticloadbalancing:us-west-2:123456789012:loadbalancer/app/my-internal-load-balancer/50dc6c495c0c9188`  | 
-|  [AWS::ElasticLoadBalancingV2::TargetGroup](aws-resource-elasticloadbalancingv2-targetgroup.md)  |  Target group's Amazon Resource Name \(ARN\)  |  `arn:aws:elasticloadbalancing:us-west-2:123456789012:targetgroup/my-targets/73e2d6bc24d8a067`  | 
+|  [AWS::ElasticLoadBalancingV2::Listener](aws-resource-elasticloadbalancingv2-listener.md)  |  Listener's Amazon Resource Name \(Arn\)  |  `arn:aws:elasticloadbalancing:us-west-2:123456789012:listener/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2`  | 
+|  [AWS::ElasticLoadBalancingV2::ListenerRule](aws-resource-elasticloadbalancingv2-listenerrule.md)  |  Listener rule's Amazon Resource Name \(Arn\)  |  `arn:aws:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee`  | 
+|  [AWS::ElasticLoadBalancingV2::LoadBalancer](aws-resource-elasticloadbalancingv2-loadbalancer.md)  |  Application load balancer's Amazon Resource Name \(Arn\)  |  `arn:aws:elasticloadbalancing:us-west-2:123456789012:loadbalancer/app/my-internal-load-balancer/50dc6c495c0c9188`  | 
+|  [AWS::ElasticLoadBalancingV2::TargetGroup](aws-resource-elasticloadbalancingv2-targetgroup.md)  |  Target group's Amazon Resource Name \(Arn\)  |  `arn:aws:elasticloadbalancing:us-west-2:123456789012:targetgroup/my-targets/73e2d6bc24d8a067`  | 
 |  [AWS::Elasticsearch::Domain](aws-resource-elasticsearch-domain.md)  |  Domain name  |  `mystack-elasticsea-abc1d2efg3h4`  | 
 |  [AWS::EMR::Cluster](aws-resource-emr-cluster.md)  |  Cluster ID  |  `j-1ABCD123AB1A`  | 
 |  [AWS::EMR::InstanceGroupConfig](aws-resource-emr-instancegroupconfig.md)  |  Instance group ID  |  `ig-ABC12DEF3456`  | 
@@ -183,7 +183,7 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::GuardDuty::ThreatIntelSet](aws-resource-guardduty-threatintelset.md)  |  ThreatIntel Set ID  |  `12a34567890bc1de2345f67ab8901234`  | 
 |  [AWS::IAM::AccessKey](aws-properties-iam-accesskey.md)  |  AccessKeyId  |  `AKIAIOSFODNN7EXAMPLE`  | 
 |  [AWS::IAM::Group](aws-properties-iam-group.md)  |  Group name  |  `mystack-mygroup-1DZETITOWEKVO`  | 
-|  [AWS::IAM::ManagedPolicy](aws-resource-iam-managedpolicy.md)  |  Policy ARN  |  `arn:aws:iam::123456789012:policy/teststack-CreateTestDBPolicy-16M23YE3CS700`  | 
+|  [AWS::IAM::ManagedPolicy](aws-resource-iam-managedpolicy.md)  |  Policy Arn  |  `arn:aws:iam::123456789012:policy/teststack-CreateTestDBPolicy-16M23YE3CS700`  | 
 |  [AWS::IAM::User](aws-properties-iam-user.md)  |  User name  |  `mystack-myuser-1CCXAFG2H2U4D`  | 
 | [AWS::IoT::Certificate](aws-resource-iot-certificate.md) | Certificate ID | a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2 | 
 | [AWS::IoT::Policy](aws-resource-iot-policy.md) | Policy name | MyPolicyName | 
@@ -220,15 +220,15 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::Route53::HostedZone](aws-resource-route53-hostedzone.md)  | Hosted zone ID |  `Z23ABC4XYZL05B`  | 
 |  [AWS::S3::Bucket](aws-properties-s3-bucket.md)  |  Name  |  `mystack-mys3bucket-1hbsmonr9mytq`  | 
 |  [AWS::SDB::Domain](aws-properties-simpledb.md)  |  Name  |  `mystack-mysdbdomain-IVNAOZTDFVXL`  | 
-|  [AWS::SNS::Topic](aws-properties-sns-topic.md)  |  Topic ARN  |  `arn:aws:sns:``us-east-2``:123456789012:mystack-mytopic-NZJ5JSMVGFIE`  | 
+|  [AWS::SNS::Topic](aws-properties-sns-topic.md)  |  Topic Arn  |  `arn:aws:sns:``us-east-2``:123456789012:mystack-mytopic-NZJ5JSMVGFIE`  | 
 |  [AWS::SQS::Queue](aws-properties-sqs-queues.md)  |  Queue URL  |  `https://sqs.``us-east-2``.amazonaws.com/803981987763/aa4-MyQueue-Z5NOSZO2PZE9`  | 
 |  [AWS::SSM::Document](aws-resource-ssm-document.md)  |  SSM document name  |  `ssm-myinstanceconfig-ABCNPH3XCAO6`  | 
 |  [AWS::SSM::MaintenanceWindow](aws-resource-ssm-maintenancewindow.md)  |  Maintenance window ID  |  `mw-abcde1234567890yz`  | 
 |  [AWS::SSM::MaintenanceWindowTarget](aws-resource-ssm-maintenancewindowtarget.md)  |  Maintenance window target ID  |  `12a345b6-bbb7-4bb6-90b0-8c9577a2d2b9`  | 
 |  [AWS::SSM::MaintenanceWindowTask](aws-resource-ssm-maintenancewindowtask.md)  |  Maintenance window task ID  |  `12a345b6-bbb7-4bb6-90b0-8c9577a2d2b9`  | 
-|  [AWS::SSM::PatchBaseline](aws-resource-ssm-patchbaseline.md)  |  Patch baseline ID  |  `pb-abcde1234567890yz` The ID of the default patch baseline provided by AWS is an ARN—for example `arn:aws:ssm:us-west-2:123456789012:patchbaseline/abcde1234567890yz`\.  | 
-| [AWS::StepFunctions::Activity](aws-resource-stepfunctions-activity.md) | Amazon Resource Name \(ARN\) of the AWS Step Functions activity | arn:aws:states:us\-east\-1:111122223333:activity:myActivity | 
-| [AWS::StepFunctions::StateMachine](aws-resource-stepfunctions-statemachine.md) | ARN of the created Step Functions state machine | arn:aws:states:us\-east\-1:111122223333:stateMachine:MyStateMachine\-ABCDEFGHIJ1K | 
+|  [AWS::SSM::PatchBaseline](aws-resource-ssm-patchbaseline.md)  |  Patch baseline ID  |  `pb-abcde1234567890yz` The ID of the default patch baseline provided by AWS is an Arn—for example `arn:aws:ssm:us-west-2:123456789012:patchbaseline/abcde1234567890yz`\.  | 
+| [AWS::StepFunctions::Activity](aws-resource-stepfunctions-activity.md) | Amazon Resource Name \(Arn\) of the AWS Step Functions activity | arn:aws:states:us\-east\-1:111122223333:activity:myActivity | 
+| [AWS::StepFunctions::StateMachine](aws-resource-stepfunctions-statemachine.md) | Arn of the created Step Functions state machine | arn:aws:states:us\-east\-1:111122223333:stateMachine:MyStateMachine\-ABCDEFGHIJ1K | 
 |  [AWS::WAF::ByteMatchSet](aws-resource-waf-bytematchset.md)  |  Byte match ID  |  `aabc123a-fb4f-4fc6-becb-2b00831cadcf`  | 
 |  [AWS::WAF::IPSet](aws-resource-waf-ipset.md)  |  IP set ID  |  `aabc123a-fb4f-4fc6-becb-2b00831cadcf`  | 
 |  [AWS::WAF::Rule](aws-resource-waf-rule.md)  |  Rule ID  |  `aabc123a-fb4f-4fc6-becb-2b00831cadcf`  | 
@@ -245,7 +245,7 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::WAFRegional::XssMatchSet](aws-resource-wafregional-xssmatchset.md)  |  XSS match set ID  |  `aabc123a-fb4f-4fc6-becb-2b00831cadcf`  | 
 |  [AWS::WorkSpaces::Workspace](aws-resource-workspaces-workspace.md)  |  Workspace ID  |  `ws-cdd1gggh7`  | 
 |  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::AccountId  |  `123456789012`  | 
-|  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::NotificationARNs  |  `[arn:aws:sns:us-east-1:123456789012:MyTopic]`  | 
+|  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::NotificationArns  |  `[arn:aws:sns:us-east-1:123456789012:MyTopic]`  | 
 |  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::NoValue  |  Does not return a value\.  | 
 |  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::Partition  |  `aws`  | 
 |  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::Region  |  `us-east-2`  | 

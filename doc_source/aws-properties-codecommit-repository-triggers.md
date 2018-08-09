@@ -43,7 +43,7 @@ When an event is triggered, additional information that AWS CodeCommit includes 
 *Type*: String
 
 `DestinationArn`  <a name="cfn-codecommit-repository-triggers-destinationarn"></a>
-The Amazon Resource Name \(ARN\) of the resource that is the target for this trigger\. For valid targets, see [Manage Triggers for an AWS CodeCommit Repository](http://docs.aws.amazon.com/codecommit/latest/userguide/how-to-notify.html) in the *AWS CodeCommit User Guide*\.  
+The Amazon Resource Name \(Arn\) of the resource that is the target for this trigger\. For valid targets, see [Manage Triggers for an AWS CodeCommit Repository](http://docs.aws.amazon.com/codecommit/latest/userguide/how-to-notify.html) in the *AWS CodeCommit User Guide*\.  
 *Required*: No  
 *Type*: String
 

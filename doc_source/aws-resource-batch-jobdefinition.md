@@ -77,7 +77,7 @@ The retry strategy to use for failed jobs that are submitted with this job defin
 
 ### Ref<a name="w3ab2c21c10d160c10b2"></a>
 
-When you pass the logical ID of an `AWS::Batch::JobDefinition` resource to the intrinsic `Ref` function, the function returns the job definition ARN, such as `arn:aws:batch:us-east-1:111122223333:job-definition/test-gpu:2`\. 
+When you pass the logical ID of an `AWS::Batch::JobDefinition` resource to the intrinsic `Ref` function, the function returns the job definition Arn, such as `arn:aws:batch:us-east-1:111122223333:job-definition/test-gpu:2`\. 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 

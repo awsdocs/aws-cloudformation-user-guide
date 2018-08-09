@@ -518,7 +518,7 @@ For the latest AMI IDs, see [Amazon ECS\-optimized AMI](http://docs.aws.amazon.c
             ]
           ]
         },
-        "RoleARN":{
+        "RoleArn":{
           "Fn::GetAtt":[
             "AutoscalingRole",
             "Arn"
@@ -957,7 +957,7 @@ Resources:
       MaxCapacity: 2
       MinCapacity: 1
       ResourceId: !Join ['', [service/, !Ref 'ECSCluster', /, !GetAtt [service, Name]]]
-      RoleARN: !GetAtt [AutoscalingRole, Arn]
+      RoleArn: !GetAtt [AutoscalingRole, Arn]
       ScalableDimension: ecs:service:DesiredCount
       ServiceNamespace: ecs
   ServiceScalingPolicy:

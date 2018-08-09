@@ -124,7 +124,7 @@ Specifies the type of load balancer to create\. Valid values are `application` a
 
 ### Ref<a name="w3ab2c21c10d648c12b2"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN of the load balancer, for example:
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the Arn of the load balancer, for example:
 
 ```
 arn:aws:elasticloadbalancing:us-west-2:123456789012:loadbalancer/app/my-internal-load-balancer/50dc6c495c0c9188

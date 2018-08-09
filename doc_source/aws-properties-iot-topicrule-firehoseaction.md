@@ -30,7 +30,7 @@ The delivery stream name\.
 *Type*: String
 
 `RoleArn`  <a name="cfn-iot-topicrule-firehoseaction-rolearn"></a>
-The Amazon Resource Name \(ARN\) of the IAM role that grants access to the Kinesis Data Firehose stream\.  
+The Amazon Resource Name \(Arn\) of the IAM role that grants access to the Kinesis Data Firehose stream\.  
 *Required*: Yes  
 *Type*: String
 

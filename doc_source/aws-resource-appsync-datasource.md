@@ -61,13 +61,13 @@ Friendly description for this data source\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ServiceRoleArn`  <a name="cfn-appsync-datasource-servicerolearn"></a>
-IAM role ARN which the data source will use to connect to a resource\.  
+IAM role Arn which the data source will use to connect to a resource\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `LambdaConfig`  <a name="cfn-appsync-datasource-lambdaconfig"></a>
-A valid ARN of a Lambda function in your account\.  
+A valid Arn of a Lambda function in your account\.  
  *Required*: No  
  *Type*: [AWS AppSync DataSource LambdaConfig](aws-properties-appsync-datasource-lambdaconfig.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
@@ -100,7 +100,7 @@ AwsRegion and Endpoints for an Amazon Elasticsearch Service domain in your accou
 
 ### Ref<a name="aws-resource-appsync-datasource-ref"></a>
 
-When you pass the logical ID of an `AWS::AppSync::DataSource` resource to the intrinsic `Ref` function, the function returns the ARN of the Data Source, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/datasources/datasourcename`\. 
+When you pass the logical ID of an `AWS::AppSync::DataSource` resource to the intrinsic `Ref` function, the function returns the Arn of the Data Source, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/datasources/datasourcename`\. 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
@@ -109,7 +109,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
 `DataSourceArn`  
-The Amazon Resource Name \(ARN\) of the API key, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/datasources/datasourcename`\. 
+The Amazon Resource Name \(Arn\) of the API key, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/datasources/datasourcename`\. 
 
 `Name`  
 Friendly name for you to identify your AppSync data source after creation\. 

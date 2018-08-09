@@ -89,7 +89,7 @@ The following example specifies a distribution and assigns it a single tag\.
                             "LambdaFunctionAssociations": [
                                 {
                                     "EventType": "string-value",
-                                    "LambdaFunctionARN": "string-value"
+                                    "LambdaFunctionArn": "string-value"
                                 }
                             ]
                         }
@@ -98,7 +98,7 @@ The following example specifies a distribution and assigns it a single tag\.
                         "LambdaFunctionAssociations": [
                             {
                                 "EventType": "string-value",
-                                "LambdaFunctionARN": "string-value"
+                                "LambdaFunctionArn": "string-value"
                             }
                         ]
                     },
@@ -136,11 +136,11 @@ Resources:
         CacheBehaviors:
           - LambdaFunctionAssociations:
               - EventType: string-value
-                LambdaFunctionARN: string-value
+                LambdaFunctionArn: string-value
         DefaultCacheBehavior:
           LambdaFunctionAssociations:
             - EventType: string-value
-              LambdaFunctionARN: string-value
+              LambdaFunctionArn: string-value
         IPV6Enabled: boolean-value
         Origins:
           - CustomOriginConfig:

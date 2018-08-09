@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-batch-jobqueue-computeenvironmentorder-properties"></a>
 
 `ComputeEnvironment`  <a name="cfn-batch-jobqueue-computeenvironmentorder-computeenvironment"></a>
-The Amazon Resource Name \(ARN\) of the compute environment\.  
+The Amazon Resource Name \(Arn\) of the compute environment\.  
  *Required*: yes  
 *Type*: String  
  *Update requires*: No Interruption 

@@ -53,7 +53,7 @@ The VPC subnets and security groups used by the cluster control plane\. Amazon E
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `RoleArn`  <a name="cfn-eks-cluster-rolearn"></a>
-The Amazon Resource Name \(ARN\) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf\.  
+The Amazon Resource Name \(Arn\) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
@@ -77,7 +77,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
 `Arn`  
-The ARN of the cluster, such as `arn:aws:eks:us-west-2:666666666666:cluster/prod`\. 
+The Arn of the cluster, such as `arn:aws:eks:us-west-2:666666666666:cluster/prod`\. 
 
 `CertificateAuthorityData`  
 The `certificate-authority-data` for your cluster\. 

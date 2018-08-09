@@ -69,7 +69,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
 `Arn`  
-The Amazon Resource Name \(ARN\) of the repository, such as `arn:aws:codecommit:us-east-1:123456789012:MyDemoRepo`\.
+The Amazon Resource Name \(Arn\) of the repository, such as `arn:aws:codecommit:us-east-1:123456789012:MyDemoRepo`\.
 
 `CloneUrlHttp`  
 The URL to use for cloning the repository over HTTPS, such as `https://codecommit.us-east-1.amazonaws.com/v1/repos/MyDemoRepo`\.

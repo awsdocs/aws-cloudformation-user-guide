@@ -26,11 +26,11 @@ Outputs:
 
 Returns the AWS account ID of the account in which the stack is being created, such as `123456789012`\.
 
-## AWS::NotificationARNs<a name="cfn-pseudo-param-notificationarns"></a>
+## AWS::NotificationArns<a name="cfn-pseudo-param-notificationarns"></a>
 
-Returns the list of notification Amazon Resource Names \(ARNs\) for the current stack\.
+Returns the list of notification Amazon Resource Names \(Arns\) for the current stack\.
 
-To get a single ARN from the list, use [Fn::Select](intrinsic-function-reference-select.md)\.
+To get a single Arn from the list, use [Fn::Select](intrinsic-function-reference-select.md)\.
 
 ### JSON<a name="pseudo-parameter-reference-example-2.json"></a>
 
@@ -44,7 +44,7 @@ To get a single ARN from the list, use [Fn::Select](intrinsic-function-reference
       "MinSize" : "0",
       "MaxSize" : "0",
       "NotificationConfigurations" : [{
-         "TopicARN" : { "Fn::Select" : [ "0", { "Ref" : "AWS::NotificationARNs" } ] },
+         "TopicArn" : { "Fn::Select" : [ "0", { "Ref" : "AWS::NotificationArns" } ] },
          "NotificationTypes" : [ "autoscaling:EC2_INSTANCE_LAUNCH", "autoscaling:EC2_INSTANCE_LAUNCH_ERROR" ]
       }]
    }
@@ -65,10 +65,10 @@ myASGrpOne:
     MinSize: '0'
     MaxSize: '0'
     NotificationConfigurations:
-    - TopicARN:
+    - TopicArn:
         Fn::Select:
         - '0'
-        - Ref: AWS::NotificationARNs
+        - Ref: AWS::NotificationArns
       NotificationTypes:
       - autoscaling:EC2_INSTANCE_LAUNCH
       - autoscaling:EC2_INSTANCE_LAUNCH_ERROR

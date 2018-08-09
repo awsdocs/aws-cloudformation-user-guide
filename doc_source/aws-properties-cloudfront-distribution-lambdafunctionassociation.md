@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[EventType](#cfn-cloudfront-distribution-lambdafunctionassociation-eventtype)" : String,
-  "[LambdaFunctionARN](#cfn-cloudfront-distribution-lambdafunctionassociation-lambdafunctionarn)" : String
+  "[LambdaFunctionArn](#cfn-cloudfront-distribution-lambdafunctionassociation-lambdafunctionarn)" : String
 }
 ```
 
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 [EventType](#cfn-cloudfront-distribution-lambdafunctionassociation-eventtype): String
-[LambdaFunctionARN](#cfn-cloudfront-distribution-lambdafunctionassociation-lambdafunctionarn): String
+[LambdaFunctionArn](#cfn-cloudfront-distribution-lambdafunctionassociation-lambdafunctionarn): String
 ```
 
 ## Properties<a name="aws-properties-cloudfront-distribution-lambdafunctionassociation-properties"></a>
@@ -32,8 +32,8 @@ Specifies the event type that triggers a Lambda function invocation\. For valid 
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`LambdaFunctionARN`  <a name="cfn-cloudfront-distribution-lambdafunctionassociation-lambdafunctionarn"></a>
-The ARN of the Lambda function\. You must specify the ARN of a function version; you can't specify a Lambda alias or $LATEST\.  
+`LambdaFunctionArn`  <a name="cfn-cloudfront-distribution-lambdafunctionassociation-lambdafunctionarn"></a>
+The Arn of the Lambda function\. You must specify the Arn of a function version; you can't specify a Lambda alias or $LATEST\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

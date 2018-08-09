@@ -36,6 +36,6 @@ The filtering rules that determine for which objects to send notifications\. For
 *Type*: [Amazon S3 Bucket NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md)
 
 `Queue`  <a name="cfn-s3-bucket-notificationconfig-queueconfig-queue"></a>
-The Amazon Resource Name \(ARN\) of the Amazon SQS queue that Amazon S3 publishes messages to when the specified event type occurs\.  
+The Amazon Resource Name \(Arn\) of the Amazon SQS queue that Amazon S3 publishes messages to when the specified event type occurs\.  
 *Required*: Yes  
 *Type*: String

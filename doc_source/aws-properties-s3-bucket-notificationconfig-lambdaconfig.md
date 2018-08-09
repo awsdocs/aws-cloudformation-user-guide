@@ -36,7 +36,7 @@ The filtering rules that determine which objects invoke the Lambda function\. Fo
 *Type*: [Amazon S3 Bucket NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md)
 
 `Function`  <a name="cfn-s3-bucket-notificationconfig-lambdaconfig-function"></a>
-The Amazon Resource Name \(ARN\) of the Lambda function that Amazon S3 invokes when the specified event type occurs\.  
+The Amazon Resource Name \(Arn\) of the Lambda function that Amazon S3 invokes when the specified event type occurs\.  
 *Required*: Yes  
 *Type*: String
 

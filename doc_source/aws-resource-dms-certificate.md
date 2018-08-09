@@ -60,7 +60,7 @@ The location of the imported Oracle Wallet certificate for use with SSL\.
 
 ### Ref<a name="w3ab2c21c10d348c11b3"></a>
 
-When you pass the certificate of an `AWS::DMS::Certificate` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the certificate\.
+When you pass the certificate of an `AWS::DMS::Certificate` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(Arn\) of the certificate\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 

@@ -12,7 +12,7 @@ During validation, AWS CloudFormation first checks if the template is valid JSON
 ```
 PROMPT> aws cloudformation validate-template --template-url https://s3.amazonaws.com/cloudformation-templates-us-east-1/S3_Bucket.template
 {
-    "Description": "AWS CloudFormation Sample Template S3_Bucket: Sample template showing how to create a publicly accessible S3 bucket. **WARNING** This template creates an S3 bucket.
+    "Description": "AWS CloudFormation Sample Template S3_Bucket: Sample template showing how to create a publicly accessible S3 bucket. **WArnING** This template creates an S3 bucket.
 You will be billed for the AWS resources used if you create a stack from this template.",
     "Parameters": [],
     "Capabilities": []

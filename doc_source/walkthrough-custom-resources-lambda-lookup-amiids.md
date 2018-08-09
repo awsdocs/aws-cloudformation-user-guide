@@ -75,7 +75,7 @@ The following snippets explain relevant parts of the sample template to help you
 
 Stack Template Snippets
 
-To create the Lambda function, you declare the `AWS::Lambda::Function` resource, which requires the function's source code, handler name, runtime environment, and execution role ARN\.
+To create the Lambda function, you declare the `AWS::Lambda::Function` resource, which requires the function's source code, handler name, runtime environment, and execution role Arn\.
 
 **Example JSON Syntax**  
 
@@ -184,7 +184,7 @@ LambdaExecutionRole:
           Resource: "*"
 ```
 
-For both the Linux and Windows templates, the custom resource invokes the Lambda function that is associated with it\. To associate a function with a custom resource, you specify the Amazon Resource Name \(ARN\) of the function for the `ServiceToken` property, using the `Fn::GetAtt` intrinsic function\. AWS CloudFormation sends the additional properties that are included in the custom resource declaration, such as `Region` and `Architecture`, to the Lambda function as inputs\. The Lambda function determines the correct names and values for these input properties\.
+For both the Linux and Windows templates, the custom resource invokes the Lambda function that is associated with it\. To associate a function with a custom resource, you specify the Amazon Resource Name \(Arn\) of the function for the `ServiceToken` property, using the `Fn::GetAtt` intrinsic function\. AWS CloudFormation sends the additional properties that are included in the custom resource declaration, such as `Region` and `Architecture`, to the Lambda function as inputs\. The Lambda function determines the correct names and values for these input properties\.
 
 **Example JSON Syntax**  
 

@@ -52,7 +52,7 @@ Any AWS CodeCommit source code repositories to be cloned into the development en
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `OwnerArn`  <a name="cfn-cloud9-environmentec2-ownerarn"></a>
-The Amazon Resource Name \(ARN\) of the environment owner\. If this value is not specified, the ARN defaults to this environment's creator\.   
+The Amazon Resource Name \(Arn\) of the environment owner\. If this value is not specified, the Arn defaults to this environment's creator\.   
  *Required*: No  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
@@ -100,7 +100,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
 `Arn`  
-The Amazon Resource Name \(ARN\) of the development environment, such as `arn:aws:cloud9:us-east-2:123456789012:environment:2bc3642873c342e485f7e0c561234567`\. 
+The Amazon Resource Name \(Arn\) of the development environment, such as `arn:aws:cloud9:us-east-2:123456789012:environment:2bc3642873c342e485f7e0c561234567`\. 
 
 `Name`  
 The name of the development environment, such as `my-demo-environment`\. 

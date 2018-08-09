@@ -141,7 +141,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 `Arn`  
-Returns the Amazon Resource Name \(ARN\) of the queue\. For example: `arn:aws:sqs:``us-east-2``:123456789012:mystack-myqueue-15PG5C2FC1CW8`\.
+Returns the Amazon Resource Name \(Arn\) of the queue\. For example: `arn:aws:sqs:``us-east-2``:123456789012:mystack-myqueue-15PG5C2FC1CW8`\.
 
 `QueueName`  
 Returns the queue name\. For example:  
@@ -157,7 +157,7 @@ Returns the queue name\. For example:
 {
   "AWSTemplateFormatVersion" : "2010-09-09",
  
-  "Description" : "AWS CloudFormation Sample Template SQS_With_CloudWatch_Alarms: Sample template showing how to create an SQS queue with Amazon CloudWatch alarms on queue depth. **WARNING** This template creates an Amazon SQS queue and one or more Amazon CloudWatch alarms. You will be billed for the AWS resources used if you create a stack from this template.",
+  "Description" : "AWS CloudFormation Sample Template SQS_With_CloudWatch_Alarms: Sample template showing how to create an SQS queue with Amazon CloudWatch alarms on queue depth. **WArnING** This template creates an Amazon SQS queue and one or more Amazon CloudWatch alarms. You will be billed for the AWS resources used if you create a stack from this template.",
  
   "Parameters" : {
     "AlarmEmail": {
@@ -212,8 +212,8 @@ Returns the queue name\. For example:
       "Description" : "URL of newly created SQS Queue",
       "Value" : { "Ref" : "MyQueue" }
     },
-    "QueueARN" : {
-      "Description" : "ARN of newly created SQS Queue",
+    "QueueArn" : {
+      "Description" : "Arn of newly created SQS Queue",
       "Value" : { "Fn::GetAtt" : ["MyQueue", "Arn"]}
     },
     "QueueName" : {
@@ -228,7 +228,7 @@ Returns the queue name\. For example:
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"
-Description: "AWS CloudFormation Sample Template SQS_With_CloudWatch_Alarms: Sample template showing how to create an SQS queue with Amazon CloudWatch alarms on queue depth. **WARNING** This template creates an Amazon SQS queue and one or more Amazon CloudWatch alarms. You will be billed for the AWS resources used if you create a stack from this template."
+Description: "AWS CloudFormation Sample Template SQS_With_CloudWatch_Alarms: Sample template showing how to create an SQS queue with Amazon CloudWatch alarms on queue depth. **WArnING** This template creates an Amazon SQS queue and one or more Amazon CloudWatch alarms. You will be billed for the AWS resources used if you create a stack from this template."
 Parameters: 
   AlarmEmail: 
     Default: "nobody@amazon.com"
@@ -276,8 +276,8 @@ Outputs:
     Description: "URL of newly created SQS Queue"
     Value: 
       Ref: "MyQueue"
-  QueueARN: 
-    Description: "ARN of newly created SQS Queue"
+  QueueArn: 
+    Description: "Arn of newly created SQS Queue"
     Value: 
       Fn::GetAtt: 
         - "MyQueue"
@@ -320,16 +320,16 @@ The following sample creates a source queue and a dead letter queue\. Because th
       "Description" : "URL of the source queue",
       "Value" : { "Ref" : "MySourceQueue" }
     },
-    "SourceQueueARN" : {
-      "Description" : "ARN of the source queue",
+    "SourceQueueArn" : {
+      "Description" : "Arn of the source queue",
       "Value" : { "Fn::GetAtt" : ["MySourceQueue", "Arn"]}
     },
     "DeadLetterQueueURL" : {
       "Description" : "URL of the dead letter queue",
       "Value" : { "Ref" : "MyDeadLetterQueue" }
     },
-    "DeadLetterQueueARN" : {
-      "Description" : "ARN of the dead letter queue",
+    "DeadLetterQueueArn" : {
+      "Description" : "Arn of the dead letter queue",
       "Value" : { "Fn::GetAtt" : ["MyDeadLetterQueue", "Arn"]}
     }    
   }
@@ -357,8 +357,8 @@ Outputs:
     Description: "URL of the source queue"
     Value: 
       Ref: "MySourceQueue"
-  SourceQueueARN: 
-    Description: "ARN of the source queue"
+  SourceQueueArn: 
+    Description: "Arn of the source queue"
     Value: 
       Fn::GetAtt: 
         - "MySourceQueue"
@@ -367,8 +367,8 @@ Outputs:
     Description: "URL of the dead letter queue"
     Value: 
       Ref: "MyDeadLetterQueue"
-  DeadLetterQueueARN: 
-    Description: "ARN of the dead letter queue"
+  DeadLetterQueueArn: 
+    Description: "Arn of the dead letter queue"
     Value: 
       Fn::GetAtt: 
         - "MyDeadLetterQueue"

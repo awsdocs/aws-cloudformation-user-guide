@@ -31,13 +31,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ses-receiptrule-workmailaction-properties"></a>
 
 `OrganizationArn`  <a name="cfn-ses-receiptrule-workmailaction-organizationarn"></a>
-The ARN of the Amazon WorkMail organization\. An example of an Amazon WorkMail organization ARN is `arn:aws:workmail:us-west-2:123456789012:organization/m-68755160c4cb4e29a2b2f8fb58f359d7`\. For information about Amazon WorkMail organizations, see [Working with Organizations](url-wm-admin;organizations_overview.html) in the *Amazon WorkMail Administrator Guide*\.  
+The Arn of the Amazon WorkMail organization\. An example of an Amazon WorkMail organization Arn is `arn:aws:workmail:us-west-2:123456789012:organization/m-68755160c4cb4e29a2b2f8fb58f359d7`\. For information about Amazon WorkMail organizations, see [Working with Organizations](url-wm-admin;organizations_overview.html) in the *Amazon WorkMail Administrator Guide*\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `TopicArn`  <a name="cfn-ses-receiptrule-workmailaction-topicarn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon SNS topic to notify when the WorkMail action is called\. An example of an Amazon SNS topic ARN is `arn:aws:sns:us-west-2:123456789012:MyTopic`\.   
+The Amazon Resource Name \(Arn\) of the Amazon SNS topic to notify when the WorkMail action is called\. An example of an Amazon SNS topic Arn is `arn:aws:sns:us-west-2:123456789012:MyTopic`\.   
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

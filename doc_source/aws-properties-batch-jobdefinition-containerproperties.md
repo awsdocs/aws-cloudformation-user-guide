@@ -86,7 +86,7 @@ When this parameter is true, the container is given elevated privileges on the h
  *Update requires*: No Interruption 
 
 `JobRoleArn`  <a name="cfn-batch-jobdefinition-containerproperties-jobrolearn"></a>
-The Amazon Resource Name \(ARN\) of the IAM role that the container can assume for AWS permissions\.  
+The Amazon Resource Name \(Arn\) of the IAM role that the container can assume for AWS permissions\.  
  *Required*: no  
 *Type*: String  
  *Update requires*: No Interruption 

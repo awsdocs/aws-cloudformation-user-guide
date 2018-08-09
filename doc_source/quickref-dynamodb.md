@@ -76,7 +76,7 @@ This example sets up Application Auto Scaling for a `AWS::DynamoDB::Table` resou
             { "Ref": "DDBTable" }
           ]
         ] },
-        "RoleARN": {
+        "RoleArn": {
           "Fn::GetAtt": ["ScalingRole", "Arn"]
         },
         "ScalableDimension": "dynamodb:table:WriteCapacityUnits",
@@ -198,7 +198,7 @@ Resources:
         - /
         - - table
           - !Ref DDBTable
-      RoleARN: !GetAtt ScalingRole.Arn
+      RoleArn: !GetAtt ScalingRole.Arn
       ScalableDimension: dynamodb:table:WriteCapacityUnits
       ServiceNamespace: dynamodb
   ScalingRole:

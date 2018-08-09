@@ -10,7 +10,7 @@
 {
   "[Claim](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-claim)" : String,
   "[MatchType](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-matchtype)" : String,
-  "[RoleARN](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-rolearn)" : String,
+  "[RoleArn](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-rolearn)" : String,
   "[Value](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-value)" : String
 }
 ```
@@ -20,7 +20,7 @@
 ```
 [Claim](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-claim): String,
 [MatchType](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-matchtype): String,
-[RoleARN](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-rolearn): String,
+[RoleArn](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-rolearn): String,
 [Value](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-value): String
 ```
 
@@ -39,8 +39,8 @@ Valid values are: `Equals`, `Contains`, `StartsWith`, and `NotEqual`\.
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`RoleARN`  <a name="cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-rolearn"></a>
-The Amazon Resource Name \(ARN\) of the role\.  
+`RoleArn`  <a name="cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-mappingrule-rolearn"></a>
+The Amazon Resource Name \(Arn\) of the role\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

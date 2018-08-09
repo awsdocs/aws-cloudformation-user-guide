@@ -62,7 +62,7 @@ A list of event categories that you want to subscribe to for a given source type
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `SnsTopicArn`  <a name="cfn-dms-eventsubscription-snstopicarn"></a>
-The Amazon Resource Name \(ARN\) of an Amazon SNS topic that you want to send event notifications to\.  
+The Amazon Resource Name \(Arn\) of an Amazon SNS topic that you want to send event notifications to\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

@@ -29,7 +29,7 @@ The response URL identifies a presigned S3 bucket that receives responses from t
 *Type*: String
 
 StackId  <a name="crpg-ref-request-stackid"></a>
-The Amazon Resource Name \(ARN\) that identifies the stack that contains the custom resource\.  
+The Amazon Resource Name \(Arn\) that identifies the stack that contains the custom resource\.  
 Combining the `StackId` with the `RequestId` forms a value that you can use to uniquely identify a request on a particular custom resource\.  
 *Required*: Yes  
 *Type*: String

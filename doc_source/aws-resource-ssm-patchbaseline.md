@@ -109,7 +109,7 @@ A list of explicitly rejected patches for the baseline\.
 When you pass the logical ID of an `AWS::SSM::PatchBaseline` resource to the intrinsic `Ref` function, the function returns the physical ID of the resource, such as `pb-abcde1234567890yz`\. 
 
 **Note**  
-The ID of the default patch baseline provided by AWS is an ARN—for example `arn:aws:ssm:us-west-2:123456789012:patchbaseline/abcde1234567890yz`\.
+The ID of the default patch baseline provided by AWS is an Arn—for example `arn:aws:ssm:us-west-2:123456789012:patchbaseline/abcde1234567890yz`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 

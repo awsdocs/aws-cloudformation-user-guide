@@ -80,7 +80,7 @@ The value of the range key\.
 *Type*: String
 
 `RoleArn`  <a name="cfn-iot-topicrule-dynamodbaction-rolearn"></a>
-The ARN of the IAM role that grants access to the DynamoDB table\.  
+The Arn of the IAM role that grants access to the DynamoDB table\.  
 *Required*: Yes  
 *Type*: String
 

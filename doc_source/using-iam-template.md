@@ -161,8 +161,8 @@ Specify all custom resources\.
 `Custom::resource_type`  
 Specify a specific custom resource type, which is defined in the template\.
 
-`cloudformation:RoleARN`  
-The Amazon Resource Name \(ARN\) of an IAM service role that you want to associate with a policy\. Use this condition to control which service role IAM users can use when they work with stacks or change sets\.
+`cloudformation:RoleArn`  
+The Amazon Resource Name \(Arn\) of an IAM service role that you want to associate with a policy\. Use this condition to control which service role IAM users can use when they work with stacks or change sets\.
 
 `cloudformation:StackPolicyUrl`  
 An Amazon S3 stack policy URL that you want to associate with a policy\. Use this condition to control which stack policies IAM users can associate with a stack during a create or update stack action\. For more information about stack policies, see [Prevent Updates to Stack Resources](protect-stack-resources.md)\.  

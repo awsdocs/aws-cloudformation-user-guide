@@ -101,9 +101,9 @@ The task name\.
 
 `TaskArn`  <a name="cfn-ssm-maintenancewindowtask-taskarn"></a>
 The resource that the task uses during execution\.  
-For `RUN_COMMAND` and `AUTOMATION` task types, `TaskArn` is the SSM document name or Amazon Resource Name \(ARN\)\.  
-For `LAMBDA` tasks, `TaskArn` is the function name or ARN\.  
-For `STEP_FUNCTION` tasks, `TaskArn` is the state machine ARN\.  
+For `RUN_COMMAND` and `AUTOMATION` task types, `TaskArn` is the SSM document name or Amazon Resource Name \(Arn\)\.  
+For `LAMBDA` tasks, `TaskArn` is the function name or Arn\.  
+For `STEP_FUNCTION` tasks, `TaskArn` is the state machine Arn\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

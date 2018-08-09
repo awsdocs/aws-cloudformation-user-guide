@@ -30,7 +30,7 @@ The partition key \(the grouping of data by shard within an Kinesis stream\)\.
 *Type*: String
 
 `RoleArn`  <a name="cfn-iot-topicrule-kinesisaction-rolearn"></a>
-The ARN of the IAM role that grants access to an Kinesis stream\.  
+The Arn of the IAM role that grants access to an Kinesis stream\.  
 *Required*: Yes  
 *Type*: String
 

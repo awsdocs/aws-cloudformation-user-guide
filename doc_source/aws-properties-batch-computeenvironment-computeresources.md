@@ -54,7 +54,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 For more information about each property, see [ ComputeResource](http://docs.aws.amazon.com/batch/latest/APIReference/API_ComputeResource.html) in the *AWS Batch API Reference*\.
 
 `SpotIamFleetRole`  <a name="cfn-batch-computeenvironment-computeresources-spotiamfleetrole"></a>
-The Amazon Resource Name \(ARN\) of the Amazon EC2 Spot Fleet IAM role applied to a `SPOT` compute environment\.  
+The Amazon Resource Name \(Arn\) of the Amazon EC2 Spot Fleet IAM role applied to a `SPOT` compute environment\.  
  *Required*: No  
 *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 

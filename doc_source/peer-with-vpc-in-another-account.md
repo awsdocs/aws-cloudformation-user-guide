@@ -93,7 +93,7 @@ In this step, you'll create the VPC and role in the *accepter account*\.
            "Ref": "vpc"
          }
        },
-       "RoleARN": {
+       "RoleArn": {
          "Value": {
            "Fn::GetAtt": [
              "peerRole",
@@ -142,7 +142,7 @@ In this step, you'll create the VPC and role in the *accepter account*\.
    Outputs:
      VPCId:
        Value: !Ref vpc
-     RoleARN:
+     RoleArn:
        Value: !GetAtt 
          - peerRole
          - Arn
@@ -354,7 +354,7 @@ The following example template shows how to change the VPC peer owner template \
             }
         },
         "Outputs": {
-            "RoleARN": {
+            "RoleArn": {
                 "Value": {
                     "Fn::GetAtt": [
                         "peerRole",
@@ -418,7 +418,7 @@ Resources:
       InstanceTenancy: default
     Type: 'AWS::EC2::VPC'
 Outputs:
-  RoleARN:
+  RoleArn:
     Value:
       'Fn::GetAtt':
         - peerRole

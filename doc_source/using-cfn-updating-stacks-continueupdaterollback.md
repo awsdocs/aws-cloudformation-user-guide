@@ -56,7 +56,7 @@ Note that we specified resources from nested stacks by using the `NestedStackNam
 
 **Finding the stack name of a nested stack**
 
-You can find a child stack's name in its stack ID or Amazon Resource Name \(ARN\)\. In the following example, the stack name is *WebInfra\-Storage\-Z2VKC706XKXT*:
+You can find a child stack's name in its stack ID or Amazon Resource Name \(Arn\)\. In the following example, the stack name is *WebInfra\-Storage\-Z2VKC706XKXT*:
 
 `arn:aws:cloudformation:us-east-1:123456789012:stack/WebInfra-Storage-Z2VKC706XKXT/ea9e7f90-54f7-11e6-a032-028f3d2330bd`
 

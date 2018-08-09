@@ -98,9 +98,9 @@ If you specify a name, you cannot perform updates that require replacement of th
 
 ### Ref<a name="w3ab2c21c10d759c11b2"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN\.
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the Arn\.
 
-In the following sample, the `Ref` function returns the ARN of the `CreateTestDBPolicy` managed policy, such as `arn:aws:iam::123456789012:policy/teststack-CreateTestDBPolicy-16M23YE3CS700`\.
+In the following sample, the `Ref` function returns the Arn of the `CreateTestDBPolicy` managed policy, such as `arn:aws:iam::123456789012:policy/teststack-CreateTestDBPolicy-16M23YE3CS700`\.
 
 ```
 { "Ref": "CreateTestDBPolicy" }

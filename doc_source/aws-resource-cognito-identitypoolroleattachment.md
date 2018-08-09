@@ -51,7 +51,7 @@ How users for a specific identity provider are to mapped to roles\. This is a st
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Roles`  <a name="cfn-cognito-identitypoolroleattachment-roles"></a>
-The map of roles associated with this pool\. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN\.  
+The map of roles associated with this pool\. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role Arn\.  
 *Required*: No  
 *Type:* String to string map  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

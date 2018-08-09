@@ -117,7 +117,7 @@ After you create a change set, you can view the proposed changes before executin
        "CreationTime": "2016-03-17T23:35:25.813Z",
        "Capabilities": [],
        "StackName": "SampleStack",
-       "NotificationARNs": [],
+       "NotificationArns": [],
        "ChangeSetId": "arn:aws:cloudformation:us-east-1:123456789012:changeSet/SampleChangeSet-direct/9edde307-960d-4e6e-ad66-b09ea2f20255"
    }
    ```

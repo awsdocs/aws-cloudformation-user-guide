@@ -1,6 +1,6 @@
 # AWS AppSync DataSource LambdaConfig<a name="aws-properties-appsync-datasource-lambdaconfig"></a>
 
-<a name="aws-properties-appsync-datasource-lambdaconfig-description"></a>The `LambdaConfig` property type specifies the Lambda function ARN for an AWS AppSync data source\.
+<a name="aws-properties-appsync-datasource-lambdaconfig-description"></a>The `LambdaConfig` property type specifies the Lambda function Arn for an AWS AppSync data source\.
 
 <a name="aws-properties-appsync-datasource-lambdaconfig-inheritance"></a> `LambdaConfig` is a property of the [AWS::AppSync::DataSource](aws-resource-appsync-datasource.md) property type\.
 
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appsync-datasource-lambdaconfig-properties"></a>
 
 `LambdaFunctionArn`  <a name="cfn-appsync-datasource-lambdaconfig-lambdafunctionarn"></a>
-The ARN for the Lambda function\.  
+The Arn for the Lambda function\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

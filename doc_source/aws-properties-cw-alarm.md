@@ -80,7 +80,7 @@ Indicates whether actions should be executed during changes to the CloudWatch al
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `AlarmActions`  <a name="cfn-cloudwatch-alarms-alarmactions"></a>
-The list of actions to execute when this alarm transitions into an ALARM state from any other state\. Specify each action as an Amazon Resource Name \(ARN\)\. For more information about creating alarms and the actions that you can specify, see [PutMetricAlarm](http://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricAlarm.html) in the *Amazon CloudWatch API Reference* and [Creating Amazon CloudWatch Alarms](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/AlarmThatSendsEmail.html) in the *Amazon CloudWatch User Guide*\.  
+The list of actions to execute when this alarm transitions into an ALARM state from any other state\. Specify each action as an Amazon Resource Name \(Arn\)\. For more information about creating alarms and the actions that you can specify, see [PutMetricAlarm](http://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricAlarm.html) in the *Amazon CloudWatch API Reference* and [Creating Amazon CloudWatch Alarms](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/AlarmThatSendsEmail.html) in the *Amazon CloudWatch User Guide*\.  
 For Auto Scaling scaling polices, you can specify only one policy\. If you associate more than one policy, Amazon CloudWatch executes only the first scaling policy\.
 *Required*: No  
 *Type*: List of String values  
@@ -131,7 +131,7 @@ The percentile statistic for the metric\. Specify a value between p0\.0 and p100
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `InsufficientDataActions`  <a name="cfn-cloudwatch-alarms-insufficientdataactions"></a>
-The list of actions to execute when this alarm transitions into an INSUFFICIENT\_DATA state\. Specify each action as an Amazon Resource Number \(ARN\)\. Currently, the only action supported is publishing to an Amazon SNS topic or an Auto Scaling policy\.  
+The list of actions to execute when this alarm transitions into an INSUFFICIENT\_DATA state\. Specify each action as an Amazon Resource Number \(Arn\)\. Currently, the only action supported is publishing to an Amazon SNS topic or an Auto Scaling policy\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -149,7 +149,7 @@ The namespace of the metric that is associated with the alarm\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `OKActions`  <a name="cfn-cloudwatch-alarms-okactions"></a>
-The list of actions to execute when this alarm transitions into an OK state\. Specify each action as an Amazon Resource Number \(ARN\)\. Currently, the only action supported is publishing to an SNS topic or an Auto Scaling policy\.  
+The list of actions to execute when this alarm transitions into an OK state\. Specify each action as an Amazon Resource Number \(Arn\)\. Currently, the only action supported is publishing to an SNS topic or an Auto Scaling policy\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -200,7 +200,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 `Arn`  
-The Amazon Resource Name \(ARN\) of the CloudWatch alarm, such as `arn:aws:cloudwatch:us-east-2:123456789012:alarm:myCloudWatchAlarm-CPUAlarm-UXMMZK36R55Z`\.
+The Amazon Resource Name \(Arn\) of the CloudWatch alarm, such as `arn:aws:cloudwatch:us-east-2:123456789012:alarm:myCloudWatchAlarm-CPUAlarm-UXMMZK36R55Z`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 

@@ -50,7 +50,7 @@ Properties:
 ## Properties<a name="w3ab2c21c10d148c11"></a>
 
 `AutoScalingGroupName`  <a name="cfn-as-scheduledaction-asgname"></a>
-The name or ARN of the Auto Scaling group\.  
+The name or Arn of the Auto Scaling group\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

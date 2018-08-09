@@ -15,9 +15,9 @@ For information about creating a DAX cluster, see [Creating a DAX Cluster](http:
       "[AvailabilityZones](#cfn-dax-cluster-availability-zones)": [ String, ... ],
       "[ClusterName](#cfn-dax-cluster-cluster-name)": String,
       "[Description](#cfn-dax-cluster-description)": String,
-      "[IAMRoleARN](#cfn-dax-cluster-iam-role-arn)": String,
+      "[IAMRoleArn](#cfn-dax-cluster-iam-role-arn)": String,
       "[NodeType](#cfn-dax-cluster-node-type)": String,
-      "[NotificationTopicARN](#cfn-dax-cluster-notification-topic-arn)": String,
+      "[NotificationTopicArn](#cfn-dax-cluster-notification-topic-arn)": String,
       "[ParameterGroupName](#cfn-dax-cluster-parameter-group-name)": String,
       "[PreferredMaintenanceWindow](#cfn-dax-cluster-preferred-maintenance-window)": String,
       "[ReplicationFactor](#cfn-dax-cluster-replication-factor)": Integer,
@@ -36,9 +36,9 @@ Properties:
       [AvailabilityZones](#cfn-dax-cluster-availability-zones): [ String, ... ]
       [ClusterName](#cfn-dax-cluster-cluster-name): String
       [Description](#cfn-dax-cluster-description): String
-      [IAMRoleARN](#cfn-dax-cluster-iam-role-arn): String
+      [IAMRoleArn](#cfn-dax-cluster-iam-role-arn): String
       [NodeType](#cfn-dax-cluster-node-type): String
-      [NotificationTopicARN](#cfn-dax-cluster-notification-topic-arn): String
+      [NotificationTopicArn](#cfn-dax-cluster-notification-topic-arn): String
       [ParameterGroupName](#cfn-dax-cluster-parameter-group-name): String
       [PreferredMaintenanceWindow](#cfn-dax-cluster-preferred-maintenance-window): String
       [ReplicationFactor](#cfn-dax-cluster-replication-factor): Integer
@@ -68,8 +68,8 @@ A description of the cluster\.
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`IAMRoleARN`  <a name="cfn-dax-cluster-iam-role-arn"></a>
-A valid Amazon Resource Name \(ARN\) that identifies an IAM role\. At runtime, DAX will assume this role and use the role's permissions to access DynamoDB on your behalf\.  
+`IAMRoleArn`  <a name="cfn-dax-cluster-iam-role-arn"></a>
+A valid Amazon Resource Name \(Arn\) that identifies an IAM role\. At runtime, DAX will assume this role and use the role's permissions to access DynamoDB on your behalf\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: Updates are not supported\.
@@ -80,8 +80,8 @@ The compute and memory capacity of the nodes in the cluster\.
 *Type*: String  
 *Update requires*: Updates are not supported\.
 
-`NotificationTopicARN`  <a name="cfn-dax-cluster-notification-topic-arn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon SNS topic to which notifications will be sent\.  
+`NotificationTopicArn`  <a name="cfn-dax-cluster-notification-topic-arn"></a>
+The Amazon Resource Name \(Arn\) of the Amazon SNS topic to which notifications will be sent\.  
 The Amazon SNS topic owner must be same as the DAX cluster owner\.
 *Required*: No  
 *Type*: String  
@@ -158,7 +158,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 `Arn`  
-Returns the ARN of the DAX cluster\. For example:  
+Returns the Arn of the DAX cluster\. For example:  
 
 ```
 { "Fn::GetAtt": ["MyDAXCluster", "Arn"] }
@@ -200,7 +200,7 @@ The following example creates a DAX cluster\.
         "ClusterName": "MyDAXCluster",
         "NodeType": "dax.r3.large",
         "ReplicationFactor": 1,
-        "IAMRoleARN": "arn:aws:iam::111122223333:role/DaxAccess",
+        "IAMRoleArn": "arn:aws:iam::111122223333:role/DaxAccess",
         "Description": "DAX cluster created with CloudFormation",
         "SubnetGroupName": {"Ref":"subnetGroupClu"}
       }
@@ -273,7 +273,7 @@ Resources:
       ClusterName: "MyDAXCluster"
       NodeType: "dax.r3.large"
       ReplicationFactor: 1
-      IAMRoleARN: "arn:aws:iam::111122223333:role/DaxAccess"
+      IAMRoleArn: "arn:aws:iam::111122223333:role/DaxAccess"
       Description: "DAX cluster created with CloudFormation"
       SubnetGroupName: !Ref subnetGroupClu
   subnetGroupClu:

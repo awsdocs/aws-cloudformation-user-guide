@@ -36,7 +36,7 @@ The name of the policy\.
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Principal`  <a name="cfn-iot-policyprincipalattachment-principal"></a>
-The principal, which can be a certificate ARN \(as returned from the `CreateCertificate` operation\) or an Amazon Cognito ID\.  
+The principal, which can be a certificate Arn \(as returned from the `CreateCertificate` operation\) or an Amazon Cognito ID\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

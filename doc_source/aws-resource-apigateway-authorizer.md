@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[IdentitySource](#cfn-apigateway-authorizer-identitysource)" : String,
     "[IdentityValidationExpression](#cfn-apigateway-authorizer-identityvalidationexpression)" : String,
     "[Name](#cfn-apigateway-authorizer-name)" : String,
-    "[ProviderARNs](#cfn-apigateway-authorizer-providerarns)" : [ String, ... ],
+    "[ProviderArns](#cfn-apigateway-authorizer-providerarns)" : [ String, ... ],
     "[RestApiId](#cfn-apigateway-authorizer-restapiid)" : String,
     "[Type](#cfn-apigateway-authorizer-type)" : String
   }
@@ -44,7 +44,7 @@ Properties:
   [IdentitySource](#cfn-apigateway-authorizer-identitysource): String
   [IdentityValidationExpression](#cfn-apigateway-authorizer-identityvalidationexpression): String
   [Name](#cfn-apigateway-authorizer-name): String
-  [ProviderARNs](#cfn-apigateway-authorizer-providerarns):
+  [ProviderArns](#cfn-apigateway-authorizer-providerarns):
     - String
   [RestApiId](#cfn-apigateway-authorizer-restapiid): String
   [Type](#cfn-apigateway-authorizer-type): String
@@ -59,7 +59,7 @@ An optional customer\-defined field that's used in Swagger imports and exports w
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `AuthorizerCredentials`  <a name="cfn-apigateway-authorizer-authorizercredentials"></a>
-The credentials that are required for the authorizer\. To specify an AWS Identity and Access Management \(IAM\) role that API Gateway assumes, specify the role's Amazon Resource Name \(ARN\)\. To use resource\-based permissions on the AWS Lambda \(Lambda\) function, specify null\.  
+The credentials that are required for the authorizer\. To specify an AWS Identity and Access Management \(IAM\) role that API Gateway assumes, specify the role's Amazon Resource Name \(Arn\)\. To use resource\-based permissions on the AWS Lambda \(Lambda\) function, specify null\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -71,7 +71,7 @@ The time\-to\-live \(TTL\) period, in seconds, that specifies how long API Gatew
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `AuthorizerUri`  <a name="cfn-apigateway-authorizer-authorizeruri"></a>
-The authorizer's Uniform Resource Identifier \(URI\)\. If you specify `TOKEN` for the authorizer's `Type` property, specify a Lambda function URI that has the form `arn:aws:apigateway:region:lambda:path/path`\. The path usually has the form `/2015-03-31/functions/LambdaFunctionARN/invocations`\.  
+The authorizer's Uniform Resource Identifier \(URI\)\. If you specify `TOKEN` for the authorizer's `Type` property, specify a Lambda function URI that has the form `arn:aws:apigateway:region:lambda:path/path`\. The path usually has the form `/2015-03-31/functions/LambdaFunctionArn/invocations`\.  
 *Required*: Conditional\. Specify this property for Lambda functions only\.  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -94,8 +94,8 @@ The name of the authorizer\.
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ProviderARNs`  <a name="cfn-apigateway-authorizer-providerarns"></a>
-A list of the Amazon Cognito user pool Amazon Resource Names \(ARNs\) to associate with this authorizer\. For more information, see [Use Amazon Cognito Your User Pool](http://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html#apigateway-enable-cognito-user-pool) in the *API Gateway Developer Guide*\.  
+`ProviderArns`  <a name="cfn-apigateway-authorizer-providerarns"></a>
+A list of the Amazon Cognito user pool Amazon Resource Names \(Arns\) to associate with this authorizer\. For more information, see [Use Amazon Cognito Your User Pool](http://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html#apigateway-enable-cognito-user-pool) in the *API Gateway Developer Guide*\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

@@ -53,7 +53,7 @@ A list of subnets associated with the subnet group\.
 
 ### Ref<a name="w3ab2c21c10d336c11b2"></a>
 
-When you provide the logical ID of this resource to the `Ref` intrinsic function, `Ref` returns the ARN of the created activity\. For example:
+When you provide the logical ID of this resource to the `Ref` intrinsic function, `Ref` returns the Arn of the created activity\. For example:
 
 ```
 { "Ref": "MyDAXSubnetGroup" }

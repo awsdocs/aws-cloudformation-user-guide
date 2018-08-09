@@ -69,7 +69,7 @@ Properties:
 ## Properties<a name="aws-resource-dms-endpoint-properties"></a>
 
 `CertificateArn`  <a name="cfn-dms-endpoint-certificatearn"></a>
-The Amazon Resource Number \(ARN\) for the certificate\.  
+The Amazon Resource Number \(Arn\) for the certificate\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -169,7 +169,7 @@ The user name to be used to login to the endpoint database\.
 
 ### Ref<a name="w3ab2c21c10d352c11b3"></a>
 
-When you pass the logical ID of an `AWS::DMS::Endpoint` resource to the intrinsic `Ref` function, the function returns the ARN of the endpoint\.
+When you pass the logical ID of an `AWS::DMS::Endpoint` resource to the intrinsic `Ref` function, the function returns the Arn of the endpoint\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 

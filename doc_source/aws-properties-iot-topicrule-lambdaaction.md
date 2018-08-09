@@ -21,6 +21,6 @@
 ## Properties<a name="w3ab2c21c14e1356b7"></a>
 
 `FunctionArn`  <a name="cfn-iot-topicrule-lambdaaction-functionarn"></a>
-The ARN of the Lambda function\.  
+The Arn of the Lambda function\.  
 *Required*: Yes  
 *Type*: String

@@ -24,7 +24,7 @@ During a stack operation, sends a request to a service token that is specified i
 
 1. The template developer defines a custom resource in his or her template, which includes a service token and any input data parameters\. Depending on the custom resource, the input data might be required; however, the service token is always required\.
 
-   The service token specifies where AWS CloudFormation sends requests to, such as to an Amazon SNS topic ARN or to an AWS Lambda function ARN\. For more information, see [AWS::CloudFormation::CustomResource](aws-resource-cfn-customresource.md)\. The service token and the structure of the input data is defined by the custom resource provider\.
+   The service token specifies where AWS CloudFormation sends requests to, such as to an Amazon SNS topic Arn or to an AWS Lambda function Arn\. For more information, see [AWS::CloudFormation::CustomResource](aws-resource-cfn-customresource.md)\. The service token and the structure of the input data is defined by the custom resource provider\.
 
 1. Whenever anyone uses the template to create, update, or delete a custom resource, AWS CloudFormation sends a request to the specified service token\. The service token must be in the same region in which you are creating the stack\.
 
@@ -55,7 +55,7 @@ In this example, `ResourceProperties` allows AWS CloudFormation to create a cust
 **Important**  
 If the name\-value pairs contain sensitive information, you should use the `NoEcho` field to mask the output of the custom resource\. Otherwise, the values are visible through APIs that surface property values \(such as `DescribeStackEvents`\)\.
 
-   The custom resource provider is responsible for listening and responding to the request\. For example, for Amazon SNS notifications, the custom resource provider must listen and respond to notifications that are sent to a specific topic ARN\. AWS CloudFormation waits and listens for a response in the pre\-signed URL location\.
+   The custom resource provider is responsible for listening and responding to the request\. For example, for Amazon SNS notifications, the custom resource provider must listen and respond to notifications that are sent to a specific topic Arn\. AWS CloudFormation waits and listens for a response in the pre\-signed URL location\.
 
    The following sample data shows what a custom resource might include in a response:
 

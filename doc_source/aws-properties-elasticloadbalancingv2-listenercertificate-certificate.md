@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticloadbalancingv2-listenercertificate-certificate-properties"></a>
 
 `CertificateArn`  <a name="cfn-elasticloadbalancingv2-listenercertificate-certificate-certificatearn"></a>
-The Amazon Resource Name \(ARN\) of the certificate\.  
+The Amazon Resource Name \(Arn\) of the certificate\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

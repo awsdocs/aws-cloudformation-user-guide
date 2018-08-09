@@ -110,7 +110,7 @@ A list of tags to associate with the notebook instance\.
 
 ### Ref<a name="aws-resource-sagemaker-notebookinstance-ref"></a>
 
-When you pass the logical ID of an `AWS::SageMaker::NotebookInstance` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the notebook instance, such as `arn:aws:sagemaker:us-west-2:012345678901:notebook-instance/mynotebookinstance`\. 
+When you pass the logical ID of an `AWS::SageMaker::NotebookInstance` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(Arn\) of the notebook instance, such as `arn:aws:sagemaker:us-west-2:012345678901:notebook-instance/mynotebookinstance`\. 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 

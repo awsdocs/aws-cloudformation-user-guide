@@ -52,7 +52,7 @@ Naming an IAM resource can cause an unrecoverable error if you reuse the same te
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ManagedPolicyArns`  <a name="cfn-iam-group-managepolicyarns"></a>
-One or more managed policy ARNs to attach to this group\.  
+One or more managed policy Arns to attach to this group\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -82,7 +82,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 `Arn`  
-Returns the Amazon Resource Name \(ARN\) for the `AWS::IAM::Group` resource\. For example: `arn:aws:iam::123456789012:group/mystack-mygroup-1DZETITOWEKVO`\.
+Returns the Amazon Resource Name \(Arn\) for the `AWS::IAM::Group` resource\. For example: `arn:aws:iam::123456789012:group/mystack-mygroup-1DZETITOWEKVO`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
