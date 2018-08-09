@@ -136,11 +136,11 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Fn::GetAtt` returns a value for the following attributes\.
 
-`DNSName`  
-The DNS name for the load balancer, for example `my-load-balancer-424835706.us-west-2.elb.amazonaws.com`\.
-
 `CanonicalHostedZoneID`  
 The ID of the Amazon Route 53 hosted zone associated with the load balancer, for example `Z2P70J7EXAMPLE`\.
+
+`DNSName`  
+The DNS name for the load balancer, for example `my-load-balancer-424835706.us-west-2.elb.amazonaws.com`\.
 
 `LoadBalancerFullName`  
 The full name of the load balancer, for example `app/my-load-balancer/50dc6c495c0c9188`\.
