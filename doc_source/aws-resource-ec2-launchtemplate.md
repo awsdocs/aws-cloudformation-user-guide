@@ -37,8 +37,8 @@ Properties:
 
 `LaunchTemplateName`  <a name="cfn-ec2-launchtemplate-launchtemplatename"></a>
 A name for the launch template\.  
-Length Constraints: Minimum length of 3\. Maximum length of 128\.  
-Pattern: \[a\-zA\-Z0\-9\\\(\\\)\\\.\-/\_\]\+  
+Length Constraints: Minimum length of 3\. Maximum length of 125\.  
+Pattern: \[a\-zA\-Z0\-9\\\(\\\)\\\./\_\]\+  
  *Required*: No  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
