@@ -47,7 +47,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[LicenseModel](#cfn-rds-dbinstance-licensemodel)" : String,
     "[MasterUsername](#cfn-rds-dbinstance-masterusername)" : String,
     "[MasterUserPassword](#cfn-rds-dbinstance-masteruserpassword)" : String,
-    "[MonitoringInterval](#cfn-rds-dbinstance-monitoringinterval)" : Integer,
+    "[MonitoringInterval](#cfn-rds-dbinstance-monitoringinterval)" : Number,
     "[MonitoringRoleArn](#cfn-rds-dbinstance-monitoringrolearn)" : String,
     "[MultiAZ](#cfn-rds-dbinstance-multiaz)" : Boolean,
     "[OptionGroupName](#cfn-rds-dbinstance-optiongroupname)" : String,
@@ -96,7 +96,7 @@ Properties:
   [LicenseModel](#cfn-rds-dbinstance-licensemodel): String
   [MasterUsername](#cfn-rds-dbinstance-masterusername): String
   [MasterUserPassword](#cfn-rds-dbinstance-masteruserpassword): String
-  [MonitoringInterval](#cfn-rds-dbinstance-monitoringinterval): Integer
+  [MonitoringInterval](#cfn-rds-dbinstance-monitoringinterval): Number
   [MonitoringRoleArn](#cfn-rds-dbinstance-monitoringrolearn): String
   [MultiAZ](#cfn-rds-dbinstance-multiaz): Boolean
   [OptionGroupName](#cfn-rds-dbinstance-optiongroupname): String
@@ -312,7 +312,7 @@ If you specify the `SourceDBInstanceIdentifier` or `DBSnapshotIdentifier` proper
 The interval, in seconds, between points when Amazon RDS collects enhanced monitoring metrics for the DB instance\. To disable metrics collection, specify `0`\.  
 For default and valid values, see the `MonitoringInterval` parameter for the [CreateDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) action in the *Amazon RDS API Reference*\.  
 *Required*: Conditional\. If you specify the `MonitoringRoleArn` property, specify a value other than `0` for `MonitoringInterval`\.  
-*Type*: Integer  
+*Type*: Number  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. For more information, see [ModifyDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html) in the *Amazon RDS API Reference*\.
 
 `MonitoringRoleArn`  <a name="cfn-rds-dbinstance-monitoringrolearn"></a>
