@@ -30,8 +30,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[HealthCheck](#cfn-ec2-elb-healthcheck)" : HealthCheck,
       "[Instances](#cfn-ec2-elb-instances)" : [ String, ... ],
       "[LBCookieStickinessPolicy](#cfn-ec2-elb-lbcookiestickinesspolicy)" : [ LBCookieStickinessPolicy, ... ],
-      "[LoadBalancerName](#cfn-ec2-elb-elbname)" : String,
       "[Listeners](#cfn-ec2-elb-listeners)" : [ Listener, ... ],
+      "[LoadBalancerName](#cfn-ec2-elb-elbname)" : String,
       "[Policies](#cfn-ec2-elb-policies)" : [ ElasticLoadBalancing Policy, ... ],
       "[Scheme](#cfn-ec2-elb-scheme)" : String,
       "[SecurityGroups](#cfn-ec2-elb-securitygroups)" : [ Security Group, ... ],
@@ -63,9 +63,9 @@ Properties:
     - String
   [LBCookieStickinessPolicy](#cfn-ec2-elb-lbcookiestickinesspolicy):
     - LBCookieStickinessPolicy
-  [LoadBalancerName](#cfn-ec2-elb-elbname): String
   [Listeners](#cfn-ec2-elb-listeners):
     - Listener
+  [LoadBalancerName](#cfn-ec2-elb-elbname): String
   [Policies](#cfn-ec2-elb-policies):
     - ElasticLoadBalancing Policy
   [Scheme](#cfn-ec2-elb-scheme): String,
@@ -134,6 +134,13 @@ Generates a stickiness policy with sticky session lifetimes controlled by the li
 *Type*: A list of [LBCookieStickinessPolicy](aws-properties-ec2-elb-LBCookieStickinessPolicy.md) objects\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
+`Listeners`  <a name="cfn-ec2-elb-listeners"></a>
+One or more listeners for this load balancer\. Each listener must be registered for a specific port, and you cannot have more than one listener for a given port\.  
+If you update the property values for a listener specified by the `Listeners` property, AWS CloudFormation will delete the existing listener and create a new one with the updated properties\. During the time that AWS CloudFormation is performing this action, clients will not be able to connect to the load balancer\.
+*Required*: Yes  
+*Type*: A list of [ElasticLoadBalancing Listener Property Type](aws-properties-ec2-elb-listener.md) objects\.  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
 `LoadBalancerName`  <a name="cfn-ec2-elb-elbname"></a>
 A name for the load balancer\. For valid values, see the `LoadBalancerName` parameter for the [http://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateLoadBalancer.html](http://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateLoadBalancer.html) action in the *Elastic Load Balancing API Reference version 2012\-06\-01*\.  
 If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the load balancer\. The name must be unique within your set of load balancers\. For more information, see [Name Type](aws-properties-name.md)\.  
@@ -141,13 +148,6 @@ If you specify a name, you cannot perform updates that require replacement of th
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
-
-`Listeners`  <a name="cfn-ec2-elb-listeners"></a>
-One or more listeners for this load balancer\. Each listener must be registered for a specific port, and you cannot have more than one listener for a given port\.  
-If you update the property values for a listener specified by the `Listeners` property, AWS CloudFormation will delete the existing listener and create a new one with the updated properties\. During the time that AWS CloudFormation is performing this action, clients will not be able to connect to the load balancer\.
-*Required*: Yes  
-*Type*: A list of [ElasticLoadBalancing Listener Property Type](aws-properties-ec2-elb-listener.md) objects\.  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Policies`  <a name="cfn-ec2-elb-policies"></a>
 A list of elastic load balancing policies to apply to this elastic load balancer\. Specify only back\-end server policies\. For more information, see [DescribeLoadBalancerPolicyTypes](http://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_DescribeLoadBalancerPolicyTypes.html) in the *Elastic Load Balancing API Reference version 2012\-06\-01*\.  
