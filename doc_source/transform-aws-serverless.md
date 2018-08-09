@@ -13,7 +13,7 @@ Resources:
       CodeUri: 's3://testBucket/mySourceCode.zip'
 ```
 
-When the template is submitted, AWS CloudFormation expands the AWS SAM syntax, as defined by the transform\. The processed template expands the `AWS::Serverless::Function` resource, declaring an Lambda function and an execution role\.
+When the template is submitted, AWS CloudFormation expands the AWS SAM syntax, as defined by the transform\. The processed template expands the `AWS::Serverless::Function` resource, declaring a Lambda function and an execution role\.
 
 ```
 {
