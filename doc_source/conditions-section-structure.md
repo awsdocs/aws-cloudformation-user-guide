@@ -13,10 +13,7 @@ During a stack update, you cannot update conditions by themselves\. You can upda
 
 ## How to Use Conditions Overview<a name="w3ab2c17c15c21c13"></a>
 
-To conditionally create resources, you must include statements in at least three different sections of a template:
-
-`Parameters` section  
-Define the input values that you want to evaluate in your conditions\. Conditions will result in true or false based on values from these input parameters\.
+To conditionally create resources, you must include statements in at least two different sections of a template:
 
 `Conditions` section  
 Define conditions by using the intrinsic condition functions\. These conditions determine when AWS CloudFormation creates the associated resources\.
