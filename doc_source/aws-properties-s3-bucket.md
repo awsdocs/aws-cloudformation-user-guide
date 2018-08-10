@@ -912,23 +912,23 @@ The following example specifies configuration to enable bucket cloudwatch metric
 
 ```
 {
-	"AWSTemplateFormatVersion": "2010-09-09",
-	"Description": "S3 Bucket with Bucket Metrics Configuration",
-	"Resources": {
-		"Helper": {
-			"Type": "AWS::S3::Bucket"
-		},
-		"S3Bucket": {
-			"Type": "AWS::S3::Bucket",
-			"Properties": {
-				"MetricsConfigurations": [
-					{
-						"Id": "EntireBucket"
-					}
-				]
-			}
-		}
-	}
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "S3 Bucket with Bucket Metrics Configuration",
+  "Resources": {
+    "Helper": {
+      "Type": "AWS::S3::Bucket"
+    },
+    "S3Bucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "MetricsConfigurations": [
+          {
+            "Id": "EntireBucket"
+          }
+        ]
+      }
+    }
+  }
 }
 ```
 
