@@ -904,6 +904,26 @@ Resources:
           Prefix: InventoryConfigurationPrefix
           ScheduleFrequency: Weekly
 ```
+#### YAML<a name="aws-resource-s3-bucket-example8.yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: S3 Bucket with Entire Bucket Metrics Configuration
+Resources:
+  Helper:
+    Type: 'AWS::S3::Bucket'
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      MetricsConfigurations:
+        - Id: EntireBucket
+        - Id: PrefixOnly
+          Prefix: MetricsConfigurationPrefix
+          TagFilters:
+            - Key: MetricsTagKey
+              Value: MetricsTagValue
+```
+
 
 ## More Info<a name="w3ab2c21c10e1032c19"></a>
 + For more examples, see [Amazon S3 Template Snippets](quickref-s3.md)\.
