@@ -29,7 +29,7 @@ Syntax for the full function name:
 Ref: logicalName
 ```
 
-Syntax for the short form:
+Syntax for the "short" form:
 
 ```
 !Ref logicalName
