@@ -239,9 +239,6 @@ For detailed information about the request and response objects involved in `Upd
 For detailed information about the request and response objects involved in `Delete` requests, see [Delete](crpg-ref-requesttypes-delete.md) in the [Custom Resource Reference](crpg-ref.md)\.
 
 ### See Also<a name="w3ab2c17c26c12b5c12"></a>
-
 + [AWS CloudFormation Custom Resource Reference](crpg-ref.md)
-
 + [AWS::CloudFormation::CustomResource](aws-resource-cfn-customresource.md)
-
 + [Fn::GetAtt](intrinsic-function-reference-getatt.md)

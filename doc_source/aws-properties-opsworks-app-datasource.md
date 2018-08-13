@@ -26,15 +26,15 @@
 
 `Arn`  <a name="cfn-opsworks-app-datasource-arn"></a>
 The ARN of the data source\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `DatabaseName`  <a name="cfn-opsworks-app-datasource-databasename"></a>
 The name of the database\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `Type`  <a name="cfn-opsworks-app-datasource-type"></a>
 The type of the data source, such as `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`\. For valid values, see the [DataSource](http://docs.aws.amazon.com/opsworks/latest/APIReference/API_DataSource.html) type in the *AWS OpsWorks Stacks API Reference*\.  
-*Required: *No  
+*Required*: No  
 *Type*: String

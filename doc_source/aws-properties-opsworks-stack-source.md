@@ -4,7 +4,7 @@ Describes the information required to retrieve a cookbook or app from a reposito
 
 For more information and valid values, see [Source](http://docs.aws.amazon.com/opsworks/latest/APIReference/API_Source.html) in the *AWS OpsWorks Stacks API Reference*\.
 
-## Syntax<a name="w3ab2c21c14e1413b7"></a>
+## Syntax<a name="w3ab2c21c14e1589b7"></a>
 
 ### JSON<a name="aws-properties-opsworks-stack-source-syntax.json"></a>
 
@@ -30,16 +30,16 @@ For more information and valid values, see [Source](http://docs.aws.amazon.com/o
 [Username](#cfn-opsworks-custcookbooksource-username): String
 ```
 
-## Properties<a name="w3ab2c21c14e1413b9"></a>
+## Properties<a name="w3ab2c21c14e1589b9"></a>
 
 `Password`  <a name="cfn-opsworks-custcookbooksource-pw"></a>
 This parameter depends on the repository type\. For Amazon S3 bundles, set `Password` to the appropriate IAM secret access key\. For HTTP bundles, Git repositories, and Subversion repositories, set `Password` to the appropriate password\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `Revision`  <a name="cfn-opsworks-custcookbooksource-revision"></a>
 The application's version\. With AWS OpsWorks, you can deploy new versions of an application\. One of the simplest approaches is to have branches or revisions in your repository that represent different versions that can potentially be deployed\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `SshKey`  <a name="cfn-opsworks-custcookbooksource-sshkey"></a>
@@ -65,20 +65,20 @@ To pass in an SSH key as a parameter, see the following example:
 
 ...
 ```
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `Type`  <a name="cfn-opsworks-custcookbooksource-type"></a>
 The repository type\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `Url`  <a name="cfn-opsworks-custcookbooksource-url"></a>
 The source URL\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `Username`  <a name="cfn-opsworks-custcookbooksource-username"></a>
 This parameter depends on the repository type\. For Amazon S3 bundles, set `Username` to the appropriate IAM access key ID\. For HTTP bundles, Git repositories, and Subversion repositories, set `Username` to the appropriate user name\.  
-*Required: *No  
+*Required*: No  
 *Type*: String

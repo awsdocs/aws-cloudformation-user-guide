@@ -37,34 +37,34 @@
 `AttributeDataType`  <a name="cfn-cognito-userpool-schemaattribute-attributedatatype"></a>
 The attribute data type\. Can be one of the following: `String`, `Number`, `DateTime`, or `Boolean`\.  
 *Type*: String  
-*Required: *No
+*Required*: No
 
 `DeveloperOnlyAttribute`  <a name="cfn-cognito-userpool-schemaattribute-developeronlyattribute"></a>
 Specifies whether the attribute type is developer only\.  
 *Type*: Boolean  
-*Required: *No
+*Required*: No
 
 `Mutable`  <a name="cfn-cognito-userpool-schemaattribute-mutable"></a>
 Specifies whether the attribute can be changed after it has been created\. `True` means mutable and `False` means immutable\.  
 *Type*: Boolean  
-*Required: *No
+*Required*: No
 
 `Name`  <a name="cfn-cognito-userpool-schemaattribute-name"></a>
 A schema attribute of the name type\.  
 *Type*: String  
-*Required: *No
+*Required*: No
 
 `NumberAttributeConstraints`  <a name="cfn-cognito-userpool-schemaattribute-numberattributeconstraints"></a>
 Specifies the constraints for an attribute of the number type\.  
 *Type*: [Amazon Cognito UserPool NumberAttributeConstraints](aws-properties-cognito-userpool-numberattributeconstraints.md)  
-*Required: *No
+*Required*: No
 
 `StringAttributeConstraints`  <a name="cfn-cognito-userpool-schemaattribute-stringattributeconstraints"></a>
 Specifies the constraints for an attribute of the string type\.  
 *Type*: [Amazon Cognito UserPool StringAttributeConstraints](aws-properties-cognito-userpool-stringattributeconstraints.md)  
-*Required: *No
+*Required*: No
 
 `Required`  <a name="cfn-cognito-userpool-schemaattribute-required"></a>
 Specifies whether a user pool attribute is required\. If the attribute is required and the user does not provide a value, registration or sign\-in fails\.  
 *Type*: Boolean  
-*Required: *No
+*Required*: No

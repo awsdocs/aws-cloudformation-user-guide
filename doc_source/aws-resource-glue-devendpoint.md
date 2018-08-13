@@ -2,7 +2,7 @@
 
 The `AWS::Glue::DevEndpoint` resource specifies a development endpoint where a developer can remotely debug ETL scripts for AWS Glue\. For more information, see [DevEndpoint Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-dev-endpoint.html#aws-glue-api-jobs-dev-endpoint-DevEndpoint) in the *AWS Glue Developer Guide*\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-glue-devendpoint-syntax)
 + [Properties](#aws-resource-glue-devendpoint-properties)
 + [See Also](#aws-resource-glue-devendpoint-seealso)
@@ -98,5 +98,4 @@ The subnet ID for the endpoint\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-resource-glue-devendpoint-seealso"></a>
-
 + [DevEndpoint Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-dev-endpoint.html#aws-glue-api-jobs-dev-endpoint-DevEndpoint) in the *AWS Glue Developer Guide* 

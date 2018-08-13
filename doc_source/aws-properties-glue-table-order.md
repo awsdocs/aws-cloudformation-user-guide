@@ -41,5 +41,4 @@ Indicates whether the column is sorted in ascending order \(`1`\) or descending 
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-glue-table-order-seealso"></a>
-
 + [Order Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-Order) in the *AWS Glue Developer Guide*

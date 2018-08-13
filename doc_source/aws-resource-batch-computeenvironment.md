@@ -2,7 +2,7 @@
 
 The `AWS::Batch::ComputeEnvironment` resource to define your AWS Batch compute environment\. For more information, see [Compute Environments](http://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-batch-computeenvironment-syntax)
 + [Properties](#aws-resource-batch-computeenvironment-properties)
 + [Return Values](#aws-resource-batch-computeenvironment-returnvalues)

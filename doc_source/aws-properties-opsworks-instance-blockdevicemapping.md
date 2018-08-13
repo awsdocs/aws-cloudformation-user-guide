@@ -29,20 +29,20 @@
 
 `DeviceName`  <a name="cfn-opsworks-instance-blockdevicemapping-devicename"></a>
 The name of the device that is exposed to the instance, such as `/dev/dsh` or `xvdh`\. For the root device, you can use the explicit device name or you can set this parameter to `ROOT_DEVICE`\. If you set the parameter to `ROOT_DEVICE`, AWS OpsWorks provides the correct device name\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `Ebs`  <a name="cfn-opsworks-instance-blockdevicemapping-ebs"></a>
 Configuration information about the Amazon Elastic Block Store \(Amazon EBS\) volume\.  
-*Required: *Conditional You can specify either the `VirtualName` or `Ebs`, but not both\.  
+*Required*: Conditional You can specify either the `VirtualName` or `Ebs`, but not both\.  
 *Type*: [AWS OpsWorks Instance BlockDeviceMapping EbsBlockDevice](aws-properties-opsworks-instance-blockdevicemapping-ebsblockdevice.md)
 
 `NoDevice`  <a name="cfn-opsworks-instance-blockdevicemapping-nodevice"></a>
 Suppresses the device that is specified in the block device mapping of the AWS OpsWorks instance Amazon Machine Image \(AMI\)\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `VirtualName`  <a name="cfn-opsworks-instance-blockdevicemapping-virtualname"></a>
 The name of the virtual device\. The name must be in the form `ephemeralX`, where *X* is a number equal to or greater than zero \(0\), for example, `ephemeral0`\.  
-*Required: *Conditional You can specify either the `VirtualName` or `Ebs`, but not both\.  
+*Required*: Conditional You can specify either the `VirtualName` or `Ebs`, but not both\.  
 *Type*: String

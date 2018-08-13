@@ -1,6 +1,6 @@
 # Amazon RDS Template Snippets<a name="quickref-rds"></a>
 
-
+**Topics**
 + [Amazon RDS DB Instance Resource](#scenario-rds-instance)
 + [Amazon RDS Oracle Database DB Instance Resource](#scenario-rds-oracleinstance)
 + [Amazon RDS DBSecurityGroup Resource for CIDR Range](#scenario-rds-security-group-cidr)

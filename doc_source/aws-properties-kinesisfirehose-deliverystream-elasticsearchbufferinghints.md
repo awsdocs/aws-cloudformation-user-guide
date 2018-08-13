@@ -26,10 +26,10 @@ The `ElasticsearchBufferingHints` property type specifies how Amazon Kinesis Fir
 
 `IntervalInSeconds`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-intervalinseconds"></a>
 The length of time, in seconds, that Kinesis Firehose buffers incoming data before delivering it to the destination\. For valid values, see the `IntervalInSeconds` content for the [BufferingHints](http://docs.aws.amazon.com/firehose/latest/APIReference/API_BufferingHints.html) data type in the *Amazon Kinesis Firehose API Reference*\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: Integer
 
 `SizeInMBs`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-sizeinmbs"></a>
 The size of the buffer, in MBs, that Kinesis Firehose uses for incoming data before delivering it to the destination\. For valid values, see the `SizeInMBs` content for the [BufferingHints](http://docs.aws.amazon.com/firehose/latest/APIReference/API_BufferingHints.html) data type in the *Amazon Kinesis Firehose API Reference*\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: Integer

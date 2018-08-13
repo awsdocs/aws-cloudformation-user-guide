@@ -17,7 +17,7 @@ cfn-hup --config|-c config.dir \
 
 | Name | Description | Required | 
 | --- | --- | --- | 
-|   `--config|-c config.dir`   |  Specifies the path that the cfn\-hup script looks for the `cfn-hup.conf` and the `hooks.d` directories\. On Windows, the default path is `system_drive\cfn`\. On Linux, the default path is `/etc/cfn`\.  |  No  | 
+|   `--config\|-c config.dir`   |  Specifies the path that the cfn\-hup script looks for the `cfn-hup.conf` and the `hooks.d` directories\. On Windows, the default path is `system_drive\cfn`\. On Linux, the default path is `/etc/cfn`\.  |  No  | 
 |   `--no-daemon`   |  Specify this option to run the cfn\-hup script once and exit\.  |  No  | 
 |   `-v, --verbose `   |  Specify this option to use verbose mode\.  |  No  | 
 
@@ -130,6 +130,6 @@ In the following template snippet, AWS CloudFormation triggers the `cfn-auto-rel
 ...
 ```
 
-### Additional Example<a name="w3ab2c21c38c33c15b8"></a>
+### Additional Example<a name="w3ab2c21c38c35c15b8"></a>
 
 For a sample template, see [Deploying Applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.

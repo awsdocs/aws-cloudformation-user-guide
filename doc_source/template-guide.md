@@ -8,7 +8,7 @@ If you're unfamiliar with JSON or YAML, you can use AWS CloudFormation Designer 
 
 For details about the supported resources, type names, intrinsic functions, and pseudo parameters you can use in your templates, see [Template Reference](template-reference.md)\.
 
-
+**Topics**
 + [AWS CloudFormation Template Formats](template-formats.md)
 + [Template Anatomy](template-anatomy.md)
 + [What Is AWS CloudFormation Designer?](working-with-templates-cfn-designer.md)

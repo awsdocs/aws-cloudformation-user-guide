@@ -5,7 +5,7 @@ The `AWS::ApiGateway::RestApi` resource contains a collection of Amazon API Gate
 **Note**  
 On January 1, 2016, the Swagger Specification was donated to the [OpenAPI initiative](https://www.openapis.org/), becoming the foundation of the OpenAPI Specification\.
 
-
+**Topics**
 + [Syntax](#aws-resource-apigateway-restapi-syntax)
 + [Properties](#w3ab2c21c10c76c11)
 + [Return Values](#aws-resource-apigateway-restapi-returnvalues)
@@ -32,7 +32,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[FailOnWarnings](#cfn-apigateway-restapi-failonwarning)" : Boolean,
     "[MinimumCompressionSize](#cfn-apigateway-restapi-minimumcompressionsize)" : Integer,
     "[Name](#cfn-apigateway-restapi-name)" : String,
-    "[Parameters](#cfn-apigateway-restapi-parameters)" : { String:String, ... }
+    "[Parameters](#cfn-apigateway-restapi-parameters)" : { String:String, ... },
+    "[Policy](#cfn-apigateway-restapi-policy)" : JSON object,
   }
 }
 ```
@@ -56,47 +57,46 @@ Properties:
   [Name](#cfn-apigateway-restapi-name): String
   [Parameters](#cfn-apigateway-restapi-parameters):
     String: String
+  [Policy](#cfn-apigateway-restapi-policy): JSON object
 ```
 
 ## Properties<a name="w3ab2c21c10c76c11"></a>
 
 `ApiKeySourceType`  <a name="cfn-apigateway-restapi-apikeysourcetype"></a>
 The source of the API key for metering requests according to a usage plan\. Valid values are:  
-
 + `HEADER` to read the API key from the `X-API-Key` header of a request\.
-
 + `AUTHORIZER` to read the API key from the `UsageIdentifierKey` from a custom authorizer\.
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `BinaryMediaTypes`  <a name="cfn-apigateway-restapi-binarymediatypes"></a>
 The list of binary media types that are supported by the `RestApi` resource, such as `image/png` or `application/octet-stream`\. By default, `RestApi` supports only UTF\-8\-encoded text payloads\. For more information, see [Enable Support for Binary Payloads in API Gateway](http://docs.aws.amazon.com//apigateway/latest/developerguide/api-gateway-payload-encodings.html) in the *API Gateway Developer Guide*\. Duplicates are not allowed\.  
-*Required: *No  
+*Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Body`  <a name="cfn-apigateway-restapi-body"></a>
 An OpenAPI specification that defines a set of RESTful APIs in the JSON format\. For YAML templates, you can also provide the specification in the YAML format\.  
-*Required: *No  
+*Required*: No  
 *Type*: JSON object  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `BodyS3Location`  <a name="cfn-apigateway-restapi-bodys3location"></a>
 The Amazon Simple Storage Service \(Amazon S3\) location that points to an OpenAPI file, which defines a set of RESTful APIs in JSON or YAML format\.  
-*Required: *No  
+*Required*: No  
 *Type*: [Amazon API Gateway RestApi S3Location](aws-properties-apitgateway-restapi-bodys3location.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `CloneFrom`  <a name="cfn-apigateway-restapi-clonefrom"></a>
 The ID of the API Gateway `RestApi` resource that you want to clone\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Description`  <a name="cfn-apigateway-restapi-description"></a>
 A description of the purpose of this API Gateway `RestApi` resource\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
@@ -108,27 +108,33 @@ A list of the endpoint types of the API\. Use this property when creating an API
 
 `FailOnWarnings`  <a name="cfn-apigateway-restapi-failonwarning"></a>
 Indicates whether to roll back the resource if a warning occurs while API Gateway is creating the `RestApi` resource\.  
-*Required: *No  
+*Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `MinimumCompressionSize`  <a name="cfn-apigateway-restapi-minimumcompressionsize"></a>
 A nullable integer that is used to enable compression \(with non\-negative between 0 and 10485760 \(10M\) bytes, inclusive\) or disable compression \(with a null value\) on an API\. When compression is enabled, compression or decompression is not applied on the payload if the payload size is smaller than this value\. Setting it to zero allows compression for any payload size\.  
-*Required: *No  
+*Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Name`  <a name="cfn-apigateway-restapi-name"></a>
 A name for the API Gateway `RestApi` resource\.  
-*Required: *Conditional\. Required if you don't specify a OpenAPI definition\.  
+*Required*: Conditional\. Required if you don't specify a OpenAPI definition\.  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Parameters`  <a name="cfn-apigateway-restapi-parameters"></a>
 Custom header parameters for the request\.  
 For more information on specifying parameters when importing an API, see [import\-rest\-api](http://docs.aws.amazon.com/cli/latest/reference/apigateway/import-rest-api.html) operation in the *AWS CLI Command Reference*\.  
-*Required: *No  
+*Required*: No  
 *Type*: String to String map  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`Policy`  <a name="cfn-apigateway-restapi-policy"></a>
+A policy document that contains the permissions for this `RestApi` resource, in JSON format\.  
+*Required*: No  
+*Type*: JSON object  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-apigateway-restapi-returnvalues"></a>
@@ -375,7 +381,5 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-apigateway-restapi-seealso"></a>
-
 + [restapi:create](http://docs.aws.amazon.com/apigateway/api-reference/link-relation/restapi-create/) operation in the *Amazon API Gateway REST API Reference*
-
 + [import\-rest\-api](http://docs.aws.amazon.com/cli/latest/reference/apigateway/import-rest-api.html) operation in the *AWS CLI Command Reference*

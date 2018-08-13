@@ -26,12 +26,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Name`  <a name="cfn-applicationautoscaling-scalingpolicy-metricdimension-name"></a>
 The name of the dimension\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Value`  <a name="cfn-applicationautoscaling-scalingpolicy-metricdimension-value"></a>
 The value of the dimension\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

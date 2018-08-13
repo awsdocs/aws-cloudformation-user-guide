@@ -2,12 +2,12 @@
 
 The `AWS::EC2::EgressOnlyInternetGateway` resource creates an egress\-only Internet gateway for your VPC \(over IPv6 only\)\. An egress\-only Internet gateway enables outbound communication over IPv6 from instances in your VPC to the Internet\. It also prevents hosts outside of your VPC from initiating an IPv6 connection with your instance\.
 
-
+**Topics**
 + [Syntax](#aws-resource-ec2-egressonlyinternetgateway-syntax)
 + [Properties](#aws-resource-ec2-egressonlyinternetgateway-properties)
-+ [Return Values](#w3ab2c21c10d351c11)
++ [Return Values](#w3ab2c21c10d387c11)
 + [Example](#aws-resource-ec2-egressonlyinternetgateway-examples)
-+ [More Info](#w3ab2c21c10d351c15)
++ [More Info](#w3ab2c21c10d387c15)
 
 ## Syntax<a name="aws-resource-ec2-egressonlyinternetgateway-syntax"></a>
 
@@ -36,13 +36,13 @@ Properties:
 
 `VpcId`  <a name="cfn-ec2-egressonlyinternetgateway-vpcid"></a>
 The ID of the VPC for which to create the egress\-only Internet gateway\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w3ab2c21c10d351c11"></a>
+## Return Values<a name="w3ab2c21c10d387c11"></a>
 
-### Ref<a name="w3ab2c21c10d351c11b2"></a>
+### Ref<a name="w3ab2c21c10d387c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ID of the egress\-only Internet gateway \(the physical resource ID\)\.
 
@@ -79,6 +79,5 @@ Resources:
       VpcId: vpc-1a2b3c4d
 ```
 
-## More Info<a name="w3ab2c21c10d351c15"></a>
-
+## More Info<a name="w3ab2c21c10d387c15"></a>
 + [CreateEgressOnlyInternetGateway](http://docs.aws.amazon.com//AWSEC2/latest/APIReference/API_CreateEgressOnlyInternetGateway.html) in the *Amazon EC2 API Reference*\.

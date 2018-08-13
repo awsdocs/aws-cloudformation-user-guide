@@ -50,5 +50,4 @@ This property requires at least version 1\.25 of the *Docker Remote API* on your
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## See Also<a name="aws-properties-ecs-taskdefinition-linuxparameters-seealso"></a>
-
 + [LinuxParameters](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_LinuxParameters.html) in the *Amazon Elastic Container Service API Reference*

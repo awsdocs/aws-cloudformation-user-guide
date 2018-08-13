@@ -1,19 +1,15 @@
 # UpdatePolicy Attribute<a name="aws-attribute-updatepolicy"></a>
 
-Use the `UpdatePolicy` attribute to specify how AWS CloudFormation handles updates to the [http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) or [http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-lambda-alias.html](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-lambda-alias.html) resource\.
+Use the `UpdatePolicy` attribute to specify how AWS CloudFormation handles updates to the [http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) or [http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html) resource\.
 
 For `AWS::AutoScaling::AutoScalingGroup` resources, AWS CloudFormation invokes one of three update policies depending on the type of change you make or whether a scheduled action is associated with the Auto Scaling group\.
-
 + The `AutoScalingReplacingUpdate` and `AutoScalingRollingUpdate` policies apply *only* when you do one or more of the following:
-
   + Change the Auto Scaling group's `[AWS::AutoScaling::LaunchConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html)`\.
-
   + Change the Auto Scaling group's `VPCZoneIdentifier` property
-
+  + Change the Auto Scaling group's `LaunchTemplate` property
   + Update an Auto Scaling group that contains instances that don't match the current `LaunchConfiguration`\.
 
   If both the `AutoScalingReplacingUpdate` and `AutoScalingRollingUpdate` policies are specified, setting the `WillReplace` property to `true` gives `AutoScalingReplacingUpdate` precedence\.
-
 + The `AutoScalingScheduledAction` policy applies when you update a stack that includes an Auto Scaling group with an associated scheduled action\.
 
 For `AWS::Lambda::Alias` resources, AWS CloudFormation performs an AWS CodeDeploy deployment when the version changes on the alias\. For more information, see [CodeDeployLambdaAliasUpdate Policy](#cfn-attributes-updatepolicy-codedeploylambdaaliasupdate)\.
@@ -52,7 +48,7 @@ Specifies whether an Auto Scaling group and the instances it contains are replac
 While AWS CloudFormation creates the new group, it doesn't detach or attach any instances\. After successfully creating the new Auto Scaling group, AWS CloudFormation deletes the old Auto Scaling group during the cleanup process\.  
 When you set the `WillReplace` parameter, remember to specify a matching `[CreationPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-creationpolicy.html)`\. If the minimum number of instances \(specified by the `MinSuccessfulInstancesPercent` property\) don't signal success within the `Timeout` period \(specified in the `CreationPolicy` policy\), the replacement update fails and AWS CloudFormation rolls back to the old Auto Scaling group\.  
 *Type*: Boolean  
-*Required: *No
+*Required*: No
 
 ## AutoScalingRollingUpdate Policy<a name="cfn-attributes-updatepolicy-rollingupdate"></a>
 
@@ -98,13 +94,13 @@ UpdatePolicy:
 Specifies the maximum number of instances that AWS CloudFormation updates\.  
 *Default*: `1`  
 *Type*: Integer  
-*Required: *No
+*Required*: No
 
 `MinInstancesInService`  <a name="cfn-attributes-updatepolicy-rollingupdate-mininstancesinservice"></a>
 Specifies the minimum number of instances that must be in service within the Auto Scaling group while AWS CloudFormation updates old instances\.  
 *Default*: `0`  
 *Type*: Integer  
-*Required: *No
+*Required*: No
 
 `MinSuccessfulInstancesPercent`  <a name="cfn-attributes-updatepolicy-rollingupdate-minsuccessfulinstancespercent"></a>
 Specifies the percentage of instances in an Auto Scaling rolling update that must signal success for an update to succeed\. You can specify a value from `0` to `100`\. AWS CloudFormation rounds to the nearest tenth of a percent\. For example, if you update five instances with a minimum successful percentage of `50`, three instances must signal success\.  
@@ -112,7 +108,7 @@ If an instance doesn't send a signal within the time specified in the `PauseTime
 If you specify this property, you must also enable the `WaitOnResourceSignals` and `PauseTime` properties\.  
 *Default*: `100`  
 *Type*: Integer  
-*Required: *No
+*Required*: No
 
 `PauseTime`  <a name="cfn-attributes-updatepolicy-rollingupdate-pausetime"></a>
 The amount of time that AWS CloudFormation pauses after making a change to a batch of instances to give those instances time to start software applications\. For example, you might need to specify `PauseTime` when scaling up the number of instances in an Auto Scaling group\.   
@@ -120,20 +116,20 @@ If you enable the `WaitOnResourceSignals` property, `PauseTime` is the amount of
 Specify `PauseTime` in the [ISO8601 duration format](http://en.wikipedia.org/wiki/ISO_8601#Durations) \(in the format `PT#H#M#S`, where each *\#* is the number of hours, minutes, and seconds, respectively\)\. The maximum `PauseTime` is one hour \(`PT1H`\)\.  
 *Default*: `PT0S` \(zero seconds\)\. If the `WaitOnResourceSignals` property is set to `true`, the default is `PT5M`\.  
 *Type*: String  
-*Required: *No
+*Required*: No
 
 `SuspendProcesses`  <a name="cfn-attributes-updatepolicy-rollingupdate-suspendprocesses"></a>
 Specifies the Auto Scaling processes to suspend during a stack update\. Suspending processes prevents Auto Scaling from interfering with a stack update\. For example, you can suspend alarming so that Amazon EC2 Auto Scaling doesn't execute scaling policies associated with an alarm\. For valid values, see the `ScalingProcesses.member.N` parameter for the [SuspendProcesses](http://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_SuspendProcesses.html) action in the *Amazon EC2 Auto Scaling API Reference*\.  
 *Default*: Not specified  
 *Type*: List of Auto Scaling processes  
-*Required: *No
+*Required*: No
 
 `WaitOnResourceSignals`  <a name="cfn-attributes-updatepolicy-rollingupdate-waitonresourcesignals"></a>
 Specifies whether the Auto Scaling group waits on signals from new instances during an update\. Use this property to ensure that instances have completed installing and configuring applications before the Auto Scaling group update proceeds\. AWS CloudFormation suspends the update of an Auto Scaling group after new EC2 instances are launched into the group\. AWS CloudFormation must receive a signal from each new instance within the specified `PauseTime` before continuing the update\. To signal the Auto Scaling group, use the [cfn\-signal](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-signal.html) helper script or [http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SignalResource.html](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SignalResource.html) API\.  
 To have instances wait for an Elastic Load Balancing health check before they signal success, add a health\-check verification by using the [cfn\-init](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html) helper script\. For an example, see the `verify_instance_health` command in the [Auto Scaling rolling updates](https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services/AutoScaling/AutoScalingRollingUpdates.yaml) sample template\.  
 *Default*: `false`  
 *Type*: Boolean  
-*Required: *Conditional\. If you specify the `MinSuccessfulInstancesPercent` property, you must also enable the `WaitOnResourceSignals` and `PauseTime` properties\.
+*Required*: Conditional\. If you specify the `MinSuccessfulInstancesPercent` property, you must also enable the `WaitOnResourceSignals` and `PauseTime` properties\.
 
 ## AutoScalingScheduledAction Policy<a name="cfn-attributes-updatepolicy-scheduledactions"></a>
 
@@ -169,7 +165,7 @@ UpdatePolicy:
 Specifies whether AWS CloudFormation ignores differences in group size properties between your current Auto Scaling group and the Auto Scaling group described in the `AWS::AutoScaling::AutoScalingGroup` resource of your template during a stack update\. If you modify any of the group size property values in your template, AWS CloudFormation uses the modified values and updates your Auto Scaling group\.  
 *Default*: `false`  
 *Type*: Boolean  
-*Required: *No
+*Required*: No
 
 ## CodeDeployLambdaAliasUpdate Policy<a name="cfn-attributes-updatepolicy-codedeploylambdaaliasupdate"></a>
 

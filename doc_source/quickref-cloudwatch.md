@@ -1,6 +1,6 @@
 # Amazon CloudWatch Template Snippets<a name="quickref-cloudwatch"></a>
 
-
+**Topics**
 + [Billing Alarm](#cloudwatch-sample-billing-alarm)
 + [CPU Utilization Alarm](#cloudwatch-sample-cpu-utilization-alarm)
 + [Recover an Amazon Elastic Compute Cloud Instance](#cloudwatch-sample-recover-instance)

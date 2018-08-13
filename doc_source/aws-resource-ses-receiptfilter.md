@@ -2,7 +2,7 @@
 
 The `AWS::SES::ReceiptFilter` resource whether to accept or reject mail originating from an IP address or range of IP addresses for Amazon SES\. For more information, see [Creating IP Address Filters for Amazon SES Email Receiving](url-ses-dev;receiving-email-ip-filters.html) in the *Amazon Simple Email Service Developer Guide*\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-ses-receiptfilter-syntax)
 + [Properties](#aws-resource-ses-receiptfilter-properties)
 + [Example](#aws-resource-ses-receiptfilter-examples)
@@ -107,7 +107,5 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-ses-receiptfilter-seealso"></a>
-
 + [Creating IP Address Filters for Amazon SES Email Receiving](url-ses-dev;receiving-email-ip-filters.html) in the *Amazon Simple Email Service Developer Guide*
-
 + [ReceiptFilter](http://docs.aws.amazon.com/ses/latest/APIReference/API_ReceiptFilter.html) in the *Amazon Simple Email Service API Reference*

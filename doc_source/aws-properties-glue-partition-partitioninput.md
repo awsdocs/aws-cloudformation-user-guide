@@ -50,5 +50,4 @@ A list of UTF\-8 strings that specify the values of the partition\.
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## See Also<a name="aws-properties-glue-partition-partitioninput-seealso"></a>
-
 + [PartitionInput](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-PartitionInput) in the *AWS Glue Developer Guide*

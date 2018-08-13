@@ -31,24 +31,24 @@
 `MinimumLength`  <a name="cfn-cognito-userpool-passwordpolicy-minimumlength"></a>
 The minimum length of the password policy that you have set\. Cannot be less than 6\.  
 *Type*: Integer  
-*Required: *No
+*Required*: No
 
 `RequireLowercase`  <a name="cfn-cognito-userpool-passwordpolicy-requirelowercase"></a>
 In the password policy that you have set, refers to whether you have required users to use at least one lowercase letter in their password\.  
 *Type*: Boolean  
-*Required: *No
+*Required*: No
 
 `RequireNumbers`  <a name="cfn-cognito-userpool-passwordpolicy-requirenumbers"></a>
 In the password policy that you have set, refers to whether you have required users to use at least one number in their password\.  
 *Type*: Boolean  
-*Required: *No
+*Required*: No
 
 `RequireSymbols`  <a name="cfn-cognito-userpool-passwordpolicy-requiresymbols"></a>
 In the password policy that you have set, refers to whether you have required users to use at least one symbol in their password\.  
 *Type*: Boolean  
-*Required: *No
+*Required*: No
 
 `RequireUppercase`  <a name="cfn-cognito-userpool-passwordpolicy-requireuppercase"></a>
 In the password policy that you have set, refers to whether you have required users to use at least one uppercase letter in their password\.  
 *Type*: Boolean  
-*Required: *No
+*Required*: No

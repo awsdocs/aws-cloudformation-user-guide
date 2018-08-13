@@ -7,9 +7,6 @@ Each request type has a particular set of fields that are sent with the request,
 This section provides information about the request and response fields, with examples, for each request type\.
 
 ## In This Section<a name="w3ab2c17c26c17c20b9"></a>
-
 + [Create](crpg-ref-requesttypes-create.md)
-
 + [Delete](crpg-ref-requesttypes-delete.md)
-
 + [Update](crpg-ref-requesttypes-update.md)

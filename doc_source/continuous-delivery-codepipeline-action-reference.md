@@ -2,7 +2,7 @@
 
 When you build an AWS CodePipeline pipeline, you add a `Deploy` action to the pipeline with AWS CloudFormation as a provider\. You then must specify which AWS CloudFormation action the pipeline invokes and the action's settings\. This topic describes the AWS CloudFormation configuration properties\. To specify properties, you can use the AWS CodePipeline console, or you can create a [JSON object](http://docs.aws.amazon.com/codepipeline/latest/userguide/how-to-create-pipelines.html#how-to-create-pipeline-cli) to use for the AWS CLI, AWS CodePipeline API, or AWS CloudFormation templates\.
 
-
+**Topics**
 + [Configuration Properties \(Console\)](#w3ab2c13c13b7)
 + [Configuration Properties \(JSON Object\)](#w3ab2c13c13b9)
 
@@ -15,15 +15,10 @@ When you create a new pipeline, you can specify only the **Create or update a st
 
 **Action mode**  
 The AWS CloudFormation action that AWS CodePipeline invokes when processing the associated stage\. Choose one of the following action modes:  
-
 + **Create or replace a change set** creates the change set if it doesn't exist based on the stack name and template that you submit\. If the change set exists, AWS CloudFormation deletes it, and then creates a new one\.
-
 + **Create or update a stack** creates the stack if the specified stack doesn't exist\. If the stack exists, AWS CloudFormation updates the stack\. Use this action to update existing stacks\. AWS CodePipeline won't replace the stack\.
-
 + **Delete a stack** deletes a stack\. If you specify a stack that doesn't exist, the action completes successfully without deleting a stack\.
-
 + **Execute a change set** executes a change set\.
-
 + **Replace a failed stack** creates the stack if the specified stack doesn't exist\. If the stack exists and is in a failed state \(reported as `ROLLBACK_COMPLETE`, `ROLLBACK_FAILED`, `CREATE_FAILED`, `DELETE_FAILED`, or `UPDATE_ROLLBACK_FAILED`\), AWS CloudFormation deletes the stack and then creates a new stack\. If the stack isn't in a failed state, AWS CloudFormation updates it\. Use this action to automatically replace failed stacks without recovering or troubleshooting them\. You would typically choose this mode for testing\.
 
 **Stack name**  
@@ -67,15 +62,10 @@ When you specify `CloudFormation` as a provider for a stage action, define the f
 
 `ActionMode`  
 The AWS CloudFormation action that AWS CodePipeline invokes when processing the associated stage\. Specify only one of the following action modes:  
-
 + `CHANGE_SET_EXECUTE` executes a change set\.
-
 + `CHANGE_SET_REPLACE` creates the change set if it doesn't exist based on the stack name and template that you submit\. If the change set exists, AWS CloudFormation deletes it, and then creates a new one\.
-
 + `CREATE_UPDATE` creates the stack if the specified stack doesn't exist\. If the stack exists, AWS CloudFormation updates the stack\. Use this action to update existing stacks\. AWS CodePipeline won't replace the stack\.
-
 + `DELETE_ONLY` deletes a stack\. If you specify a stack that doesn't exist, the action completes successfully without deleting a stack\.
-
 + `REPLACE_ON_FAILURE` creates a stack if the specified stack doesn't exist\. If the stack exists and is in a failed state \(reported as `ROLLBACK_COMPLETE`, `ROLLBACK_FAILED`, `CREATE_FAILED`, `DELETE_FAILED`, or `UPDATE_ROLLBACK_FAILED`\), AWS CloudFormation deletes the stack and then creates a new stack\. If the stack isn't in a failed state, AWS CloudFormation updates it\. Use this action to automatically replace failed stacks without recovering or troubleshooting them\. You would typically choose this mode for testing\.
 This property is required\.
 

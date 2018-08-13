@@ -34,18 +34,13 @@ The IP addresses to block or allow, and whether to block or allow incoming mail 
 
 `Name`  <a name="cfn-ses-receiptfilter-filter-name"></a>
 The name of the IP address filter\. The name must:  
-
 + Contain only ASCII letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), or dashes \(\-\)\.
-
 + Start and end with a letter or number\.
-
 + Contain less than 64 characters\.
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ses-receiptfilter-filter-seealso"></a>
-
 + [Creating IP Address Filters for Amazon SES Email Receiving](url-ses-dev;receiving-email-ip-filters.html) in the *Amazon Simple Email Service Developer Guide*
-
 + [ReceiptFilter](http://docs.aws.amazon.com/ses/latest/APIReference/API_ReceiptFilter.html) in the *Amazon Simple Email Service API Reference*

@@ -2,7 +2,7 @@
 
 The `AWS::Glue::Crawler` resource specifies an AWS Glue crawler\. For more information, see [Cataloging Tables with a Crawler](http://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) and [Crawler Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-crawling.html#aws-glue-api-crawler-crawling-Crawler) in the *AWS Glue Developer Guide*\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-glue-crawler-syntax)
 + [Properties](#aws-resource-glue-crawler-properties)
 + [Return Values](#aws-resource-glue-crawler-returnvalues)
@@ -109,7 +109,7 @@ The name of the crawler\. Must match the single\-line string pattern: `[\u0020-\
 
 ## Return Values<a name="aws-resource-glue-crawler-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d659c10b3"></a>
+### Ref<a name="w3ab2c21c10d704c10b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 

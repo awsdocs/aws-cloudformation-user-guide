@@ -2,11 +2,11 @@
 
 The `AWS::CodeDeploy::DeploymentGroup` resource creates an AWS CodeDeploy deployment group that specifies which instances your application revisions are deployed to, along with other deployment options\. For more information, see [CreateDeploymentGroup](http://docs.aws.amazon.com//codedeploy/latest/APIReference/API_CreateDeploymentGroup.html) in the *AWS CodeDeploy API Reference*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-codedeploy-deploymentgroup-syntax)
-+ [Properties](#w3ab2c21c10d230b9)
-+ [Return Value](#w3ab2c21c10d230c11)
-+ [Examples](#w3ab2c21c10d230c13)
++ [Properties](#w3ab2c21c10d258b9)
++ [Return Value](#w3ab2c21c10d258c11)
++ [Examples](#w3ab2c21c10d258c13)
 
 ## Syntax<a name="aws-resource-codedeploy-deploymentgroup-syntax"></a>
 
@@ -64,17 +64,17 @@ Properties:
     - [*TriggerConfig*](aws-properties-codedeploy-deploymentgroup-triggerconfig.md)
 ```
 
-## Properties<a name="w3ab2c21c10d230b9"></a>
+## Properties<a name="w3ab2c21c10d258b9"></a>
 
 `AlarmConfiguration`  <a name="cfn-codedeploy-deploymentgroup-alarmconfiguration"></a>
 Information about the Amazon CloudWatch alarms that are associated with the deployment group\.  
-*Required: *No  
+*Required*: No  
 *Type*: [AWS CodeDeploy DeploymentGroup AlarmConfiguration](aws-properties-codedeploy-deploymentgroup-alarmconfiguration.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ApplicationName`  <a name="cfn-codedeploy-deploymentgroup-applicationname"></a>
 The name of an existing AWS CodeDeploy application to associate this deployment group with\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
@@ -86,26 +86,26 @@ Information about the automatic rollback configuration that is associated with t
 
 `AutoScalingGroups`  <a name="cfn-codedeploy-deploymentgroup-autoscalinggroups"></a>
 A list of associated Auto Scaling groups that AWS CodeDeploy automatically deploys revisions to when new instances are created\. Duplicates are not allowed\.  
-*Required: *No  
+*Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Deployment`  <a name="cfn-codedeploy-deploymentgroup-deployment"></a>
 The application revision to deploy to this deployment group\. If you specify this property, your target application revision will be deployed as soon as the provisioning process is complete\. If you specify this property, don't specify the `AutoRollbackConfiguration` property\.  
-*Required: *No  
+*Required*: No  
 *Type*: [AWS CodeDeploy DeploymentGroup Deployment](aws-properties-codedeploy-deploymentgroup-deployment.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `DeploymentConfigName`  <a name="cfn-codedeploy-deploymentgroup-deploymentconfigname"></a>
 A deployment configuration name or a predefined configuration name\. With predefined configurations, you can deploy application revisions to one instance at a time, half of the instances at a time, or all the instances at once\. For more information and valid values, see [Working with Deployment Configurations](http://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-configurations.html) in the *AWS CodeDeploy User Guide*\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `DeploymentGroupName`  <a name="cfn-codedeploy-deploymentgroup-deploymentgroupname"></a>
 A name for the deployment group\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the deployment group name\. For more information, see [Name Type](aws-properties-name.md)\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
@@ -119,7 +119,7 @@ For blue/green deployments, AWS CloudFormation supports deployments on AWS Lambd
 
 `Ec2TagFilters`  <a name="cfn-codedeploy-deploymentgroup-ec2tagfilters"></a>
 The EC2 tags that are already applied to EC2 instances that you want to include in the deployment group\. AWS CodeDeploy includes all EC2 instances identified by any of the tags you specify in this deployment group\. Duplicates are not allowed\.  
-*Required: *No  
+*Required*: No  
 *Type*: List of [AWS CodeDeploy DeploymentGroup Ec2TagFilters](aws-properties-codedeploy-deploymentgroup-ec2tagfilters.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
@@ -131,34 +131,34 @@ Information about the load balancer used in the deployment\. For more informatio
 
 `OnPremisesInstanceTagFilters`  <a name="cfn-codedeploy-deploymentgroup-onpremisesinstancetagfilters"></a>
 The on\-premises instance tags already applied to on\-premises instances that you want to include in the deployment group\. AWS CodeDeploy includes all on\-premises instances identified by any of the tags you specify in this deployment group\. To register on\-premises instances with AWS CodeDeploy, see [Working with On\-Premises Instances for AWS CodeDeploy](http://docs.aws.amazon.com/codedeploy/latest/userguide/instances-on-premises.html) in the *AWS CodeDeploy User Guide*\. Duplicates are not allowed\.  
-*Required: *No  
+*Required*: No  
 *Type*: List of [AWS CodeDeploy DeploymentGroup OnPremisesInstanceTagFilters](aws-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ServiceRoleArn`  <a name="cfn-codedeploy-deploymentgroup-servicerolearn"></a>
 A service role Amazon Resource Name \(ARN\) that grants AWS CodeDeploy permission to make calls to AWS services on your behalf\. For more information, see [Create a Service Role for AWS CodeDeploy](http://docs.aws.amazon.com/codedeploy/latest/userguide/how-to-create-service-role.html) in the *AWS CodeDeploy User Guide\.*  
 In some cases, you might need to add a dependency on the service role's policy\. For more information, see IAM role policy in [DependsOn Attribute](aws-attribute-dependson.md)\.
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `TriggerConfigurations`  <a name="cfn-codedeploy-deploymentgroup-triggerconfigurations"></a>
 Information about the notification triggers for the deployment group\. Duplicates are not allowed\.  
-*Required: *No  
+*Required*: No  
 *Type*: List of [AWS CodeDeploy DeploymentGroup TriggerConfig](aws-properties-codedeploy-deploymentgroup-triggerconfig.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10d230c11"></a>
+## Return Value<a name="w3ab2c21c10d258c11"></a>
 
-### Ref<a name="w3ab2c21c10d230c11b2"></a>
+### Ref<a name="w3ab2c21c10d258c11b2"></a>
 
 When you pass the logical ID of an `AWS::CodeDeploy::DeploymentGroup` resource to the intrinsic `Ref` function, the function returns the deployment group name, such as `mydeploymentgroup-a123d0d1`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w3ab2c21c10d230c13"></a>
+## Examples<a name="w3ab2c21c10d258c13"></a>
 
-### Revision in GitHub<a name="w3ab2c21c10d230c13b2"></a>
+### Revision in GitHub<a name="w3ab2c21c10d258c13b2"></a>
 
 The following example creates a deployment group that is associated with Auto Scaling groups and uses an application revision that is stored in a GitHub repository\. You specify the repository information as input parameters\.
 
@@ -210,7 +210,7 @@ DeploymentGroup:
       Ref: RoleArn
 ```
 
-### Associate EC2 Instances<a name="w3ab2c21c10d230c13b4"></a>
+### Associate EC2 Instances<a name="w3ab2c21c10d258c13b4"></a>
 
 The following example creates a deployment group that uses instance tags to associate EC2 instances with the deployment group\. The deployment group uses an application revision that is stored in an S3 bucket\.
 
@@ -279,7 +279,7 @@ DeploymentGroup:
       Ref: RoleArn
 ```
 
-### Alarm and Trigger<a name="w3ab2c21c10d230c13b6"></a>
+### Alarm and Trigger<a name="w3ab2c21c10d258c13b6"></a>
 
 The following example configures a billing alarm and a notification trigger for the deployment group\.
 
@@ -475,7 +475,7 @@ Resources:
           TriggerTargetArn: !Ref mySNSTopic
 ```
 
-### Automatic Rollback Configuration<a name="w3ab2c21c10d230c13b8"></a>
+### Automatic Rollback Configuration<a name="w3ab2c21c10d258c13b8"></a>
 
 The following example configures automatic rollback for the deployment group\.
 
@@ -670,7 +670,7 @@ Resources:
           TriggerTargetArn: !Ref mySNSTopic
 ```
 
-### Load Balancer<a name="w3ab2c21c10d230c13c10"></a>
+### Load Balancer<a name="w3ab2c21c10d258c13c10"></a>
 
 The following example configures an Elastic Load Balancing load balancer for the deployment group\.
 
@@ -909,7 +909,7 @@ Outputs:
     Value: !Ref myELB
 ```
 
-### Target Group Info<a name="w3ab2c21c10d230c13c12"></a>
+### Target Group Info<a name="w3ab2c21c10d258c13c12"></a>
 
 The following example specifies the target group to use in a deployment\. Instances are registered as targets in a target group, and traffic is routed to the target group\.
 
