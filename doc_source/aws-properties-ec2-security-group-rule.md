@@ -225,7 +225,7 @@ This snippet grants SSH access with CidrIp, and HTTP access with `SourceSecurity
 "InstanceSecurityGroup" : {
    "Type" : "AWS::EC2::SecurityGroup",
    "Properties" : {
-      "GroupDescription" : "Enable SSH access and HTTP from the load balancer only",
+      "GroupDescription" : "Allow SSH access from all IP addresses and HTTP from the load balancer only",
       "SecurityGroupIngress" : [ {
          "IpProtocol" : "tcp",
          "FromPort" : 22,
@@ -272,7 +272,7 @@ ElasticLoadBalancer:
 InstanceSecurityGroup: 
   Type: "AWS::EC2::SecurityGroup"
   Properties: 
-    GroupDescription: "Enable SSH access and HTTP from the load balancer only"
+    GroupDescription: "Allow SSH access from all IP addresses and HTTP from the load balancer only"
     SecurityGroupIngress: 
       - 
         IpProtocol: "tcp"
