@@ -120,7 +120,8 @@ Properties:
 `AllocatedStorage`  <a name="cfn-rds-dbinstance-allocatedstorage"></a>
 The allocated storage size, specified in gigabytes \(GB\)\.  
 If any value is set in the `Iops` parameter, `AllocatedStorage` must be at least 100 GB, which corresponds to the minimum `Iops` value of 1,000\. If you increase the `Iops` value \(in 1,000 IOPS increments\), then you must also increase the `AllocatedStorage` value \(in 100\-GB increments\)\.  
-*Required*: Conditional\. This property is required except when you specify the `DBClusterIdentifier` property or when you create a read replica from AWS CloudFormation by using the `AWS::RDS::DBInstance` resource\. In these cases, don't specify this property\.  
+*Required*: Conditional\. This property is required except when you specify the `DBClusterIdentifier` property or when you create a read replica from AWS CloudFormation by using the `AWS::RDS::DBInstance` resource\. In these cases, don't specify this property\.
+*Required:* Yes
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
