@@ -1,6 +1,6 @@
 # AWS CloudFormation Template Snippets<a name="quickref-cloudformation"></a>
 
-
+**Topics**
 + [Nested Stacks](#w3ab2c17c24c19b5)
 + [Wait Condition](#w3ab2c17c24c19b7)
 

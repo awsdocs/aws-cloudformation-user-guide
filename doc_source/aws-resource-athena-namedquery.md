@@ -2,7 +2,7 @@
 
 The `AWS::Athena::NamedQuery` resource creates an Amazon Athena query\. For more information, see [CreateNamedQuery](http://docs.aws.amazon.com/athena/latest/APIReference/API_CreateNamedQuery.html) in the *Amazon Athena Documentation*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-athena-namedquery-syntax)
 + [Properties](#aws-resource-athena-namedquery-properties)
 + [Return Values](#aws-resource-athena-namedquery-returnvalues)
@@ -67,7 +67,7 @@ The plain\-language name of the query\.
 
 ## Return Values<a name="aws-resource-athena-namedquery-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d106c11b3"></a>
+### Ref<a name="w3ab2c21c10d126c11b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 

@@ -25,9 +25,9 @@ The `NumberAttributeConstraints` property type defines the number attribute cons
 `MaxValue`  <a name="cfn-cognito-userpool-numberattributeconstraints-maxvalue"></a>
 The maximum value of an attribute that is of the number data type\.  
 *Type*: String  
-*Required: *No
+*Required*: No
 
 `MinValue`  <a name="cfn-cognito-userpool-numberattributeconstraints-minvalue"></a>
 The minimum value of an attribute that is of the number data type\.  
 *Type*: String  
-*Required: *No
+*Required*: No

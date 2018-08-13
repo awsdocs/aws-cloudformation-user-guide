@@ -69,35 +69,20 @@ The location is an Amazon S3 URI, with a specific file name in an S3 bucket\. Fo
 ## Remarks<a name="aws-include-transform-remarks"></a>
 
 When using `AWS::Include`, keep the following in mind:
-
 + `AWS::Include` is supported only in regions where AWS Lambda is available\. For a list of regions where Lambda is available, see [http://docs.aws.amazon.com/general/latest/gr/rande.html#lambda_region](http://docs.aws.amazon.com/general/latest/gr/rande.html#lambda_region)\.
-
 + We currently support Amazon S3 URI, but no other Amazon S3 format \(such as Amazon S3 ARN\)\. It must be an Amazon S3 bucket, as opposed to something like a GitHub repository\.
-
 + Anyone with access to the Amazon S3 URL can include the snippet in their template\.
-
 + Your template snippets must be valid YAML or JSON\.
-
 + Your template snippets must be valid key–value objects, for example `"KeyName": "keyValue"`\.
-
 + A template snippet must pass validation checks for a create stack or update stack operation\.
-
 + AWS CloudFormation resolves transforms first, and then processes the template\. The resulting template must be valid JSON or YAML and must not exceed the template size limit\.
-
 + If your snippets change, your stack doesn't automatically pick up those changes\. To get those changes, you must update the stack with the updated snippets\. If you update your stack, make sure your included snippets haven't changed without your knowledge\. To verify before updating the stack, check the change set\.
-
 + When using the update rollback feature, AWS CloudFormation uses a copy of the original template\. It will roll back to the original template even if the included snippet was changed\.
-
 + Nested transforms do not work because we do not process transforms iteratively\.
-
 + When creating templates and snippets, you can mix YAML and JSON template languages\.
-
 + We do not currently support using shorthand notations for YAML snippets\.
-
 + The `Fn::ImportValue` intrinsic function isn't currently supported in transforms\.
-
 + You can use multiple transforms within a single template\. Nevertheless, you cannot simultaneously have `AWS::Include` transforms at both the top level of a template and embedded within a section of a template\.
-
 + You can provide a cross\-region replication Amazon S3 URI with `AWS::Include`\. Be sure to check Amazon S3 bucket names when accessing cross\-region replication objects\. For more information, see [Cross\-Region Replication](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html)\.
 
 ## Example<a name="aws-include-transform-examples"></a>

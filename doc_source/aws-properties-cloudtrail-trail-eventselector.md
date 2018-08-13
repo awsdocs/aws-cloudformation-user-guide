@@ -42,7 +42,7 @@ Specifies whether the event selector includes management events for the trail\. 
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ReadWriteType`  <a name="cfn-cloudtrail-trail-eventselector-readwritetype"></a>
-Specifies whether to log read\-only events, write\-only events, or all events\. The default value is `All`\.  
+Specifies whether to log read\-only events (`ReadOnly`), write\-only events (`WriteOnly`), or all events (`All`)\. The default value is `All`\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

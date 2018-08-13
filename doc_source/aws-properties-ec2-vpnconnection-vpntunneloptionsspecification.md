@@ -36,24 +36,16 @@ The pre\-shared key \(PSK\) to establish initial authentication between the virt
 `TunnelInsideCidr`  <a name="cfn-ec2-vpnconnection-vpntunneloptionsspecification-tunnelinsidecidr"></a>
 The range of inside IP addresses for the tunnel\. Any specified CIDR blocks must be unique across all VPN connections that use the same virtual private gateway\.  
  *Constraints*: A size /30 CIDR block from the `169.254.0.0/16` range\. The following CIDR blocks are reserved and cannot be used:  
-
 + `169.254.0.0/30`
-
 + `169.254.1.0/30`
-
 + `169.254.2.0/30`
-
 + `169.254.3.0/30`
-
 + `169.254.4.0/30`
-
 + `169.254.5.0/30`
-
 + `169.254.169.252/30`
  *Required*: No  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## See Also<a name="aws-properties-ec2-vpnconnection-vpntunneloptionsspecification-seealso"></a>
-
 +  [VpnTunnelOptionsSpecification](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnTunnelOptionsSpecification.html) in the *Amazon EC2 API Reference*

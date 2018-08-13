@@ -4,7 +4,7 @@ Describes a set of provisioned throughput values for an [AWS::DynamoDB::Table](a
 
 For a complete discussion of DynamoDB provisioned throughput values, see [Specifying Read and Write Requirements](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#ProvisionedThroughput) in the *DynamoDB Developer Guide*\.
 
-## Syntax<a name="w3ab2c21c14d544b7"></a>
+## Syntax<a name="w3ab2c21c14d627b7"></a>
 
 ### JSON<a name="aws-properties-dynamodb-provisionedthroughput-syntax.json"></a>
 
@@ -22,16 +22,16 @@ For a complete discussion of DynamoDB provisioned throughput values, see [Specif
 [WriteCapacityUnits](#cfn-dynamodb-provisionedthroughput-writecapacityunits): Number
 ```
 
-## Parameters<a name="w3ab2c21c14d544b9"></a>
+## Parameters<a name="w3ab2c21c14d627b9"></a>
 
 `ReadCapacityUnits`  <a name="cfn-dynamodb-provisionedthroughput-readcapacityunits"></a>
 Sets the desired minimum number of consistent reads of items \(up to 1KB in size\) per second for the specified table before Amazon DynamoDB balances the load\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: Number
 
 `WriteCapacityUnits`  <a name="cfn-dynamodb-provisionedthroughput-writecapacityunits"></a>
 Sets the desired minimum number of consistent writes of items \(up to 1KB in size\) per second for the specified table before Amazon DynamoDB balances the load\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: Number
 
 **Note**  

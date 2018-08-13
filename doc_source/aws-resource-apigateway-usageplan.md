@@ -2,7 +2,7 @@
 
 The `AWS::ApiGateway::UsagePlan` resource specifies a usage plan for deployed Amazon API Gateway \(API Gateway\) APIs\. A usage plan enforces throttling and quota limits on individual client API keys\. For more information, see [Creating and Using API Usage Plans in Amazon API Gateway](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html) in the *API Gateway Developer Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-apigateway-usageplan-syntax)
 + [Properties](#aws-resource-apigateway-usageplan-properties)
 + [Return Value](#aws-resource-apigateway-usageplan-returnvalues)
@@ -44,31 +44,31 @@ Properties:
 
 `ApiStages`  <a name="cfn-apigateway-usageplan-apistages"></a>
 The API stages to associate with this usage plan\.  
-*Required: *No  
+*Required*: No  
 *Type*: List of [Amazon API Gateway UsagePlan ApiStage](aws-properties-apigateway-usageplan-apistage.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Description`  <a name="cfn-apigateway-usageplan-description"></a>
 The purpose of this usage plan\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Quota`  <a name="cfn-apigateway-usageplan-quota"></a>
 Configures the number of requests that users can make within a given interval\.  
-*Required: *No  
+*Required*: No  
 *Type*: [Amazon API Gateway UsagePlan QuotaSettings](aws-properties-apigateway-usageplan-quotasettings.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Throttle`  <a name="cfn-apigateway-usageplan-throttle"></a>
 Configures the overall request rate \(average requests per second\) and burst capacity\.  
-*Required: *No  
+*Required*: No  
 *Type*: [Amazon API Gateway UsagePlan ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `UsagePlanName`  <a name="cfn-apigateway-usageplan-usageplanname"></a>
 A name for this usage plan\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 

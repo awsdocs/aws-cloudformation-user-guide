@@ -8,7 +8,7 @@ The following walkthrough describes how to create a template that launches a LAM
 
 For additional strategies and examples about deploying applications with AWS CloudFormation, see the [Bootstrapping Applications via AWS CloudFormation](http://aws.amazon.com/cloudformation/aws-cloudformation-articles-and-tutorials/) article\.
 
-
+**Topics**
 + [Basic Amazon EC2 Instance](#deployment-walkthrough-basic-server)
 + [LAMP Installation](#deployment-walkthrough-lamp-install)
 + [LAMP Configuration](#deployment-walkthrough-config)
@@ -233,7 +233,7 @@ In the following example, sections marked with an ellipsis \(`...`\) are omitted
                   "      $DBPassword = \"", {"Ref" : "DBPassword"}, "\";\n",
                   "      print \"Database = \" . $Database . \"<br />\";\n",
                   "      $dbconnection = mysql_connect($Database, $DBUser, $DBPassword)\n",
-                  "                      or die(\"Could not connect: \" . ysql_error());\n",
+                  "                      or die(\"Could not connect: \" . mysql_error());\n",
                   "      print (\"Connected to $Database successfully\");\n",
                   "      mysql_close($dbconnection);\n",
                   "    ?>\n",
@@ -535,7 +535,7 @@ The following example adds a creation policy to the Amazon EC2 instance to ensur
 
 The creation policy attribute uses the ISO 8601 format to define a timeout period of 5 minutes\. And because you're waiting for just 1 instance to be configured, you only need to wait for one success signal, which is the default count\.
 
-In the `UserData` property, the template runs the cfn\-signal script to send a success signal with an exit code if all the services are configured and started successfully\. When you use the cfn\-signal script, you must include the stack ID or name and the logical ID of the resource that you want to signal\. If the configuration fails or if the timeout period is exceeded, cfn\-signal sends a failure signal that causes the resource creation to fail\.
+In the `UserData` property, the template runs the cfn\-signal script to send a success signal with an exit code if all the services are configured and started successfully\. When you use the cfn\-signal script, you must include the stack ID or name and the logical ID of the resource that you want to signal\. If the configuration fails, cfn\-signal sends a failure signal that causes the resource creation to fail\.  The resource creation also fails if the cfn\-signal is not received within the timeout period.
 
 The following example shows final complete template\. You can also view the template at the following location:
 
@@ -739,7 +739,7 @@ The following example shows final complete template\. You can also view the temp
                   "      $DBPassword = \"", {"Ref" : "DBPassword"}, "\";\n",
                   "      print \"Database = \" . $Database . \"<br />\";\n",
                   "      $dbconnection = mysql_connect($Database, $DBUser, $DBPassword)\n",
-                  "                      or die(\"Could not connect: \" . ysql_error());\n",
+                  "                      or die(\"Could not connect: \" . mysql_error());\n",
                   "      print (\"Connected to $Database successfully\");\n",
                   "      mysql_close($dbconnection);\n",
                   "    ?>\n",

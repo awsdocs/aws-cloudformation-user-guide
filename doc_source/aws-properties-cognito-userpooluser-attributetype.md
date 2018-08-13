@@ -25,9 +25,9 @@
 `Name`  <a name="cfn-cognito-userpooluser-attributetype-name"></a>
 The name of the attribute\.  
 *Type*: String  
-*Required: *Yes
+*Required*: Yes
 
 `Value`  <a name="cfn-cognito-userpooluser-attributetype-value"></a>
 The value of the attribute\.  
 *Type*: String  
-*Required: *No
+*Required*: No

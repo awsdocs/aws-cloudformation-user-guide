@@ -2,7 +2,7 @@
 
 The `AWS::SNS::Subscription` resource subscribes an endpoint to an Amazon Simple Notification Service \(Amazon SNS\) topic\. The owner of the endpoint must confirm the subscription before Amazon SNS creates the subscription\.
 
-
+**Topics**
 + [Syntax](#aws-resource-sns-subscription-syntax)
 + [Properties](#aws-resource-sns-subscription-properties)
 + [Example](#aws-resource-sns-subscription-examples)
@@ -36,19 +36,19 @@ Properties:
 
 `Endpoint`  <a name="cfn-sns-endpoint"></a>
 The endpoint that receives notifications from the Amazon SNS topic\. The endpoint value depends on the protocol that you specify\. For more information, see the [Subscribe Endpoint](http://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html) parameter in the *Amazon Simple Notification Service API Reference*\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Protocol`  <a name="cfn-sns-protocol"></a>
 The subscription's protocol\. For more information, see the [Subscribe Protocol](http://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html) parameter in the *Amazon Simple Notification Service API Reference*\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `TopicArn`  <a name="cfn-sns-topicarn"></a>
 The Amazon Resource Name \(ARN\) of the topic to subscribe to\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 

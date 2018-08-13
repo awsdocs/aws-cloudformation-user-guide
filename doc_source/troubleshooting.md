@@ -4,7 +4,7 @@ When you use AWS CloudFormation, you might encounter issues when you create, upd
 
 For general questions about AWS CloudFormation, see the [AWS CloudFormation FAQs](https://aws.amazon.com/cloudformation/faqs/)\. You can also search for answers and post questions in the [AWS CloudFormation forums](https://forums.aws.amazon.com/forum.jspa?forumID=92)\.
 
-
+**Topics**
 + [Troubleshooting Guide](#basic-ts-guide)
 + [Troubleshooting Errors](#troubleshooting-errors)
 + [Contacting Support](#contacting-support)
@@ -12,9 +12,7 @@ For general questions about AWS CloudFormation, see the [AWS CloudFormation FAQs
 ## Troubleshooting Guide<a name="basic-ts-guide"></a>
 
 If AWS CloudFormation fails to create, update, or delete your stack, you can view error messages or logs to help you learn more about the issue\. The following tasks describe general methods for troubleshooting a AWS CloudFormation issue\. For information about specific errors and solutions, see the [Troubleshooting Errors](#troubleshooting-errors) section\.
-
 + Use the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation/) to view the status of your stack\. In the console, you can view a list of stack events while your stack is being created, updated, or deleted\. From this list, find the failure event and then view the status reason for that event\. The status reason might contain an error message from AWS CloudFormation or from a particular service that can help you troubleshoot your problem\. For more information about viewing stack events, see [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)\.
-
 + For Amazon EC2 issues, view the cloud\-init and cfn logs\. These logs are published on the Amazon EC2 instance in the `/var/log/` directory\. These logs capture processes and command outputs while AWS CloudFormation is setting up your instance\. For Windows, view the EC2Configure service and cfn logs in `%ProgramFiles%\Amazon\EC2ConfigService` and `C:\cfn\log`\.
 
   You can also configure your AWS CloudFormation template so that the logs are published to Amazon CloudWatch, which displays logs in the AWS Management Console so you don't have to connect to your Amazon EC2 instance\. For more information, see [View CloudFormation Logs in the Console](https://aws.amazon.com/blogs/devops/view-cloudformation-logs-in-the-console/) in the Application Management Blog\.
@@ -23,7 +21,7 @@ If AWS CloudFormation fails to create, update, or delete your stack, you can vie
 
 When you come across the following errors with your AWS CloudFormation stack, you can use the following solutions to help you find the source of the problems and fix them\.
 
-
+**Topics**
 + [Delete Stack Fails](#troubleshooting-errors-delete-stack-fails)
 + [Dependency Error](#troubleshooting-errors-dependency-error)
 + [Error Parsing Parameter When Passing a List](#troubleshooting-errors-error-parsing-parameter-when-passing-a-list)
@@ -40,21 +38,16 @@ When you come across the following errors with your AWS CloudFormation stack, yo
 ### Delete Stack Fails<a name="troubleshooting-errors-delete-stack-fails"></a>
 
 To resolve this situation, try the following:
-
 + Some resources must be empty before they can be deleted\. For example, you must delete all objects in an Amazon S3 bucket or remove all instances in an Amazon EC2 security group before you can delete the bucket or security group\.
-
 + Ensure that you have the necessary IAM permissions to delete the resources in the stack\. In addition to AWS CloudFormation permissions, you must be allowed to use the underlying services, such as Amazon S3 or Amazon EC2\.
-
 + When stacks are in the `DELETE_FAILED` state because AWS CloudFormation couldn't delete a resource, rerun the deletion with the [http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeleteStack.html](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeleteStack.html) parameter and specify the resource that AWS CloudFormation can't delete\. AWS CloudFormation deletes the stack without deleting the retained resource\. Retaining resources is useful when you can't delete a resource, such as an S3 bucket that contains objects that you want to keep, but you still want to delete the stack\.
 
   After you delete the stack, you can manually delete retained resources by using their associated AWS service\.
-
 + You cannot delete stacks that have termination protection enabled\. If you attempt to delete a stack with termination protection enabled, the deletion fails and the stack\-\-including its status\-\-remains unchanged\. Disable termination protection on the stack, then perform the delete operation again\. 
 
   This includes [nested stacks](using-cfn-nested-stacks.md) whose root stacks have termination protection enabled\. Disable termination protection on the root stack, then perform the delete operation again\. It is strongly recommended that you do not delete nested stacks directly, but only delete them as part of deleting the root stack and all its resources\.
 
   For more information, see [Protecting a Stack From Being Deleted](using-cfn-protect-stacks.md)\.
-
 + For all other issues, if you have AWS Premium Support, you can create a Technical Support case\. See [Contacting Support](#contacting-support)\.
 
 ### Dependency Error<a name="troubleshooting-errors-dependency-error"></a>
@@ -106,19 +99,12 @@ For more information about modifying templates during an update, see [Modifying 
 A resource did not respond because the operation exceeded the AWS CloudFormation timeout period or an AWS service was interrupted\. For service interruptions, [check](http://status.aws.amazon.com/) that the relevant AWS service is running, and then retry the stack operation\.
 
 If the AWS services have been running successfully, check if your stack contains one of the following resources:
-
 + `AWS::AutoScaling::AutoScalingGroup` for create, update, and delete operations
-
 + `AWS::CertificateManager::Certificate` for create operations
-
 + `AWS::CloudFormation::Stack` for create, update, and delete operations
-
 + `AWS::ElasticSearch::Domain` for update operations
-
 + `AWS::RDS::DBCluster` for create and update operations
-
 + `AWS::RDS::DBInstance` for create, update, and delete operations
-
 + `AWS::Redshift::Cluster` for update operations
 
 Operations for these resources might take longer than the default timeout period\. The timeout period depends on the resource and credentials that you use\. To extend the timeout period, specify a [service role](using-iam-servicerole.md) when you perform the stack operation\. If you're already using a service role, or if your stack contains a resource that isn't listed, contact [AWS customer support](#contacting-support)\.
@@ -134,27 +120,21 @@ Verify that the security group exists in the VPC that you specified\. If the sec
 A dependent resource cannot return to its original state, causing the rollback to fail \(`UPDATE_ROLLBACK_FAILED` state\)\. For example, you might have a stack that is rolling back to an old database instance that was deleted outside of AWS CloudFormation\. Because AWS CloudFormation doesn't know the database was deleted, it assumes that the database instance still exists and attempts to roll back to it, causing the update rollback to fail\.
 
 Depending on the cause of the failure, you can manually fix the error and continue the rollback\. By continuing the rollback, you can return your stack to a working state \(the `UPDATE_ROLLBACK_COMPLETE` state\), and then try to update the stack again\. The following list describes solutions to common errors that cause update rollback failures:
-
 +   
 Failed to receive the required number of signals  
 Use the [signal\-resource](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/signal-resource.html) command to manually send the required number of successful signals to the resource that is waiting for them, and then continue rolling back the update\. For example, during an update rollback, instances in an Auto Scaling group might fail to signal success within the specified timeout duration\. Manually send success signals to the Auto Scaling group\. When you continue the update rollback, AWS CloudFormation sees your signals and proceeds with the rollback\.
-
 +   
 Changes to a resource were made outside of AWS CloudFormation  
 Manually sync resources so that they match the original stack's template, and then continue rolling back the update\. For example, if you manually deleted a resource that AWS CloudFormation is attempting to roll back to, you must manually create that resource with the same name and properties it had in the original stack\.
-
 +   
 Insufficient permissions  
 Check that you have sufficient IAM permissions to modify resources, and then continue the update rollback\. For example, your IAM policy might allow you to create an S3 bucket, but not modify the bucket\. Add the modify actions to your policy\.
-
 +   
 Invalid security token  
 AWS CloudFormation requires a new set of credentials\. No change is required\. Continue rolling back the update, which refreshes the credentials\.
-
 +   
 Limitation error  
 Delete resources that you don't need or request a [limit increase](http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html), and then continue rolling back the update\. For example, if your account limit for the number of EC2 instances is 20 and the update rollback exceeds that limit, it will fail\.
-
 +   
 Resource did not stabilize  
 A resource did not respond because the operation might have exceeded the AWS CloudFormation timeout period or an AWS service might have been interrupted\. No change is required\. After the resource operation is complete or the AWS service is back in operation, continue rolling back the update\.
@@ -166,11 +146,8 @@ If none of these solutions work, you can skip the resources that AWS CloudFormat
 ### Wait Condition Didn't Receive the Required Number of Signals from an Amazon EC2 Instance<a name="troubleshooting-errors-wait-condition-didnt-receive-the-required-number-of-signals"></a>
 
 To resolve this situation, try the following:
-
 + Ensure that the AMI you're using has the AWS CloudFormation helper scripts installed\. If the AMI doesn't include the helper scripts, you can also download them to your instance\. For more information, see [CloudFormation Helper Scripts Reference](cfn-helper-scripts-reference.md)\.
-
 + Verify that the `cfn-signal` command was successfully run on the instance\. You can view logs, such as `/var/log/cloud-init.log` or `/var/log/cfn-init.log`, to help you debug the instance launch\. You can retrieve the logs by logging in to your instance, but you must [disable rollback on failure](cfn-console-add-tags.md) or else AWS CloudFormation deletes the instance after your stack fails to create\. You can also [publish the logs](https://aws.amazon.com/blogs/devops/view-cloudformation-logs-in-the-console/) to Amazon CloudWatch\. For Windows, you can view cfn logs in `C:\cfn\log` and EC2Config service logs in `%ProgramFiles%\Amazon\EC2ConfigService`\.
-
 + Verify that the instance has a connection to the Internet\. If the instance is in a VPC, the instance should be able to connect to the Internet through a NAT device if it's is in a private subnet or through an Internet gateway if it's in a public subnet\. To test the instance's Internet connection, try to access a public web page, such as `http://aws.amazon.com`\. For example, you can run the following command on the instance\. It should return an HTTP 200 status code\.
 
   ```
@@ -182,13 +159,10 @@ To resolve this situation, try the following:
 ## Contacting Support<a name="contacting-support"></a>
 
 If you have AWS Premium Support, you can create a technical support case at [https://console\.aws\.amazon\.com/support/home\#/](https://console.aws.amazon.com/support/home#/)\. Before you contact support, gather the following information:
-
 + The ID of the stack\. You can find the stack ID in the **Overview** tab of the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation/)\. For more information, see [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)\.
 **Important**  
 Do not make changes to the stack outside of AWS CloudFormation\. Making changes to your stack outside of AWS CloudFormation might put your stack in an unrecoverable state\.
-
 + Any stack error messages\. For information about viewing stack error messages, see the [Troubleshooting Guide](#basic-ts-guide) section\.
-
 + For Amazon EC2 issues, gather the cloud\-init and cfn logs\. These logs are published on the Amazon EC2 instance in the `/var/log/` directory\. These logs capture processes and command outputs while your instance is setting up\. For Windows, gather the EC2Configure service and cfn logs in `%ProgramFiles%\Amazon\EC2ConfigService` and `C:\cfn\log`\.
 
 You can also search for answers and post questions in the [AWS CloudFormation forums](https://forums.aws.amazon.com/forum.jspa?forumID=92)\.

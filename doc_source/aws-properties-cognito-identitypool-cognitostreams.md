@@ -27,14 +27,14 @@
 `RoleArn`  <a name="cfn-cognito-identitypool-cognitostreams-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the role Amazon Cognito can assume to publish to the stream\. This role must grant access to Amazon Cognito \(cognito\-sync\) to invoke `PutRecord` on your Amazon Cognito stream\.  
 *Type*: String  
-*Required: *No
+*Required*: No
 
 `StreamingStatus`  <a name="cfn-cognito-identitypool-cognitostreams-streamingstatus"></a>
 Status of the Cognito streams\. Valid values are: `ENABLED` or `DISABLED`\.  
 *Type*: String  
-*Required: *No
+*Required*: No
 
 `StreamName`  <a name="cfn-cognito-identitypool-cognitostreams-streamname"></a>
 The name of the Amazon Cognito stream to receive updates\. This stream must be in the developer's account and in the same region as the identity pool\.  
 *Type*: String  
-*Required: *No
+*Required*: No

@@ -4,7 +4,7 @@ Use the `AWS::IoT::PolicyPrincipalAttachment` resource to attach an AWS IoT poli
 
 For information about working with AWS IoT policies and principals, see [Authorization](http://docs.aws.amazon.com/iot/latest/developerguide/authorization.html) in the *AWS IoT Developer Guide*\.
 
-## Syntax<a name="w3ab2c21c10d753b7"></a>
+## Syntax<a name="w3ab2c21c10d800b7"></a>
 
 ### JSON<a name="aws-resource-iot-policyprincipalattachment-syntax.json"></a>
 
@@ -27,21 +27,21 @@ Type: "AWS::IoT::PolicyPrincipalAttachment"
     [Principal](#cfn-iot-policyprincipalattachment-principal): String
 ```
 
-## Properties<a name="w3ab2c21c10d753b9"></a>
+## Properties<a name="w3ab2c21c10d800b9"></a>
 
 `PolicyName`  <a name="cfn-iot-policyprincipalattachment-policyname"></a>
 The name of the policy\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Principal`  <a name="cfn-iot-policyprincipalattachment-principal"></a>
 The principal, which can be a certificate ARN \(as returned from the `CreateCertificate` operation\) or an Amazon Cognito ID\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Example<a name="w3ab2c21c10d753c11"></a>
+## Example<a name="w3ab2c21c10d800c11"></a>
 
 The following example attaches a policy to a principal\.
 
