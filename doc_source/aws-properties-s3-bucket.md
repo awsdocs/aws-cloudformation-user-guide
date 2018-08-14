@@ -100,7 +100,7 @@ The configuration and any analyses for the analytics filter of an Amazon S3 buck
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `BucketEncryption`  <a name="cfn-s3-bucket-bucketencryption"></a>
-Specifies default encryption for a bucket using server\-side encryption with Amazon S3\-managed keys SSE\-S3 or AWS KMS\-managed Keys \(SSE\-KMS\) bucket\.\.  
+Specifies default encryption for a bucket using server\-side encryption with Amazon S3\-managed keys SSE\-S3 or AWS KMS\-managed Keys \(SSE\-KMS\)\.
 *Required*: No  
 *Type*: [Amazon S3 Bucket BucketEncryption](aws-properties-s3-bucket-bucketencryption.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
