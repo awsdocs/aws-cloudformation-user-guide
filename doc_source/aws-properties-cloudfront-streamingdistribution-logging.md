@@ -47,5 +47,4 @@ An optional string that you want CloudFront to prefix to the access log filename
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-cloudfront-streamingdistribution-logging-seealso"></a>
-
 + [StreamingLoggingConfig](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_StreamingLoggingConfig.html) in the *Amazon CloudFront API Reference*

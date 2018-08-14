@@ -24,10 +24,10 @@
 
 `ApiId`  <a name="cfn-apigateway-usageplan-apistage-apiid"></a>
 The ID of an API that is in the specified `Stage` property that you want to associate with the usage plan\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `Stage`  <a name="cfn-apigateway-usageplan-apistage-stage"></a>
 The name of an API Gateway stage to associate with the usage plan\.  
-*Required: *No  
+*Required*: No  
 *Type*: String

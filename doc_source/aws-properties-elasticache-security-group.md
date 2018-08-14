@@ -4,10 +4,10 @@ The `AWS::ElastiCache::SecurityGroup` resource creates a cache security group\. 
 
 To create an ElastiCache cluster in a VPC, use the [AWS::EC2::SecurityGroup](aws-properties-ec2-security-group.md) resource\. For more information, see the `VpcSecurityGroupIds` property in the [AWS::ElastiCache::CacheCluster](aws-properties-elasticache-cache-cluster.md) resource\.
 
-
+**Topics**
 + [Syntax](#aws-resource-elasticache-securitygroup-syntax)
-+ [Properties](#w3ab2c21c10d553c11)
-+ [Return Values](#w3ab2c21c10d553c13)
++ [Properties](#w3ab2c21c10d598c11)
++ [Return Values](#w3ab2c21c10d598c13)
 
 ## Syntax<a name="aws-resource-elasticache-securitygroup-syntax"></a>
 
@@ -33,17 +33,17 @@ Properties:
   [Description](#cfn-elasticache-securitygroup-description): String
 ```
 
-## Properties<a name="w3ab2c21c10d553c11"></a>
+## Properties<a name="w3ab2c21c10d598c11"></a>
 
 `Description`  <a name="cfn-elasticache-securitygroup-description"></a>
 A description for the cache security group\.  
 *Type*: String  
-*Required: *No  
+*Required*: No  
 *Update requires*: Updates are not supported\.
 
-## Return Values<a name="w3ab2c21c10d553c13"></a>
+## Return Values<a name="w3ab2c21c10d598c13"></a>
 
-### Ref<a name="w3ab2c21c10d553c13b2"></a>
+### Ref<a name="w3ab2c21c10d598c13b2"></a>
 
 When you specify the `AWS::ElastiCache::SecurityGroup` resource as an argument to the `Ref` function, AWS CloudFormation returns the `CacheSecurityGroupName` property of the cache security group\.
 

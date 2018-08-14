@@ -2,7 +2,7 @@
 
 The `AWS::ApiGateway::ApiKey` resource creates a unique key that you can distribute to clients who are executing Amazon API Gateway \(API Gateway\) `Method` resources that require an API key\. To specify which API key clients must use, map the API key with the `RestApi` and `Stage` resources that include the methods that require a key\.
 
-
+**Topics**
 + [Syntax](#aws-resource-apigateway-apikey-syntax)
 + [Properties](#w3ab2c21c10c17b9)
 + [Return Value](#aws-resource-apigateway-apikey-returnvalues)
@@ -54,13 +54,13 @@ An AWS Marketplace customer identifier to use when integrating with the AWS SaaS
 
 `Description`  <a name="cfn-apigateway-apikey-description"></a>
 A description of the purpose of the API key\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Enabled`  <a name="cfn-apigateway-apikey-enabled"></a>
 Indicates whether the API key can be used by clients\.  
-*Required: *No  
+*Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
@@ -73,13 +73,13 @@ Specifies whether the key identifier is distinct from the created API key value\
 `Name`  <a name="cfn-apigateway-apikey-name"></a>
 A name for the API key\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the API key name\. For more information, see [Name Type](aws-properties-name.md)\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `StageKeys`  <a name="cfn-apigateway-apikey-stagekeys"></a>
 A list of stages to associate with this API key\.  
-*Required: *No  
+*Required*: No  
 *Type*: List of [Amazon API Gateway ApiKey StageKey](aws-properties-apitgateway-apikey-stagekey.md) property types  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
@@ -191,5 +191,4 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-apigateway-apikey-seealso"></a>
-
 + [ apikey:create](http://docs.aws.amazon.com/apigateway/api-reference/link-relation/apikey-create/) operation in the *Amazon API Gateway REST API Reference*

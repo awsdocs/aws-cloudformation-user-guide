@@ -8,11 +8,8 @@ Resource B is created before resource A\.
 Resource A is deleted before resource B\.
 
 You can use the `DependsOn` attribute with any resource\. Here are some typical uses:
-
 + Determine when a wait condition goes into effect\. For more information, see [Creating Wait Conditions in a Template](using-cfn-waitcondition.md)\.
-
 + Declare dependencies for resources that must be created or deleted in a specific order\. For example, you must explicitly declare dependencies on gateway attachments for some resources in a VPC\. For more information, see [When a DependsOn attribute is required](#gatewayattachment)\.
-
 + Override default parallelism when creating, updating, or deleting resources\. AWS CloudFormation creates, updates, and deletes resources in parallel to the extent possible\. It automatically determines which resources in a template can be parallelized and which have dependencies that require other operations to finish first\. You can use `DependsOn` to explicitly specify dependencies, which overrides the default parallelism and directs CloudFormation to operate on those resources in a specified order\.
 
 **Note**  
@@ -113,17 +110,11 @@ VPC\-gateway attachment
 Some resources in a VPC require a gateway \(either an Internet or VPN gateway\)\. If your AWS CloudFormation template defines a VPC, a gateway, and a gateway attachment, any resources that require the gateway are dependent on the gateway attachment\. For example, an Amazon EC2 instance with a public IP address is dependent on the VPC\-gateway attachment if the `VPC` and `InternetGateway` resources are also declared in the same template\.
 
 Currently, the following resources depend on a VPC\-gateway attachment when they have an associated public IP address and are in a VPC:
-
 + Auto Scaling groups
-
 + Amazon EC2 instances
-
 + Elastic Load Balancing load balancers
-
 + Elastic IP addresses
-
 + Amazon RDS database instances
-
 + Amazon VPC routes that include the Internet gateway
 
 A VPN gateway route propagation depends on a VPC\-gateway attachment when you have a VPN gateway\.

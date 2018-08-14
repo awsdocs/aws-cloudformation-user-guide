@@ -4,7 +4,7 @@ AWS CloudFormation Designer \(Designer\) is a graphic tool for creating, viewing
 
 Designer is part of the AWS CloudFormation console\. To use it, open Designer at [https://console\.aws\.amazon\.com/cloudformation/designer](https://console.aws.amazon.com/cloudformation/designer) and sign in with your AWS credentials\.
 
-
+**Topics**
 + [Why Use AWS CloudFormation Designer?](working-with-templates-cfn-designer-why.md)
 + [AWS CloudFormation Designer Interface Overview](working-with-templates-cfn-designer-overview.md)
 + [How to Get Started With Designer](working-with-templates-cfn-designer-additional-info.md)

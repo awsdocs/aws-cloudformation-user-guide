@@ -2,7 +2,7 @@
 
 The AWS::RDS::DBSubnetGroup type creates an RDS database subnet group\. Subnet groups must contain at least two subnets in two different Availability Zones in the same region\.
 
-
+**Topics**
 + [Syntax](#aws-resource-rds-dbsubnetgroup-syntax)
 + [Properties](#aws-resource-rds-dbsubnet-group-prop)
 + [Return Value](#aws-resource-rds-dbsubnet-group-return-value)
@@ -44,26 +44,26 @@ Properties:
 
 `DBSubnetGroupDescription`  <a name="cfn-rds-dbsubnetgroup-dbsubnetgroupdescription"></a>
 The description for the DB Subnet Group\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `DBSubnetGroupName`  <a name="cfn-rds-dbsubnetgroup-dbsubnetgroupname"></a>
 The name for the DB Subnet Group\. This value is stored as a lowercase string\.  
 Constraints: Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens\. Must not be default\.   
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `SubnetIds`  <a name="cfn-rds-dbsubnetgroup-subnetids"></a>
 The EC2 Subnet IDs for the DB Subnet Group\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Tags`  <a name="cfn-rds-dbsubnetgroup-tags"></a>
 The tags that you want to attach to the RDS database subnet group\.  
-*Required: *No  
+*Required*: No  
 *Type*: A list of [resource tags](aws-properties-resource-tags.md) in key\-value format\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
@@ -114,9 +114,6 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-rds-dbsubnet-group-see-also"></a>
-
 + [CreateDBSubnetGroup](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBSubnetGroup.html) in the *Amazon Relational Database Service API Reference*
-
 + [ModifyDBSubnetGroup](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBSubnetGroup.html) in the *Amazon Relational Database Service API Reference*
-
 + [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)

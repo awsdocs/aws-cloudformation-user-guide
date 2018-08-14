@@ -2,10 +2,10 @@
 
 The `AWS::EC2::SubnetCidrBlock` resource associates a single IPv6 CIDR block with an Amazon VPC subnet\.
 
-
+**Topics**
 + [Syntax](#aws-resource-ec2-subnetcidrblock-syntax)
-+ [Properties](#w3ab2c21c10d447b9)
-+ [Example](#w3ab2c21c10d447c11)
++ [Properties](#w3ab2c21c10d488b9)
++ [Example](#w3ab2c21c10d488c11)
 
 ## Syntax<a name="aws-resource-ec2-subnetcidrblock-syntax"></a>
 
@@ -32,21 +32,21 @@ Properties:
   [SubnetId](#cfn-ec2-subnetcidrblock-subnetid): String
 ```
 
-## Properties<a name="w3ab2c21c10d447b9"></a>
+## Properties<a name="w3ab2c21c10d488b9"></a>
 
 `Ipv6CidrBlock`  <a name="cfn-ec2-subnetcidrblock-ipv6cidrblock"></a>
 The IPv6 CIDR block for the subnet\. The CIDR block must have a prefix length of /64\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `SubnetId`  <a name="cfn-ec2-subnetcidrblock-subnetid"></a>
 The ID of the subnet to associate the IPv6 CIDR block with\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Example<a name="w3ab2c21c10d447c11"></a>
+## Example<a name="w3ab2c21c10d488c11"></a>
 
 The following example associates an IPv6 CIDR block \(with a prefix length of /64\) with the `Ipv6TestSubnet` subnet\.
 

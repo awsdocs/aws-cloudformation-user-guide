@@ -2,7 +2,7 @@
 
 The `AWS::Cloud9::EnvironmentEC2` resource creates an Amazon EC2 development environment in AWS Cloud9\. For more information, see [Creating an Environment](http://docs.aws.amazon.com/cloud9/latest/user-guide/create-environment.html) in the *AWS Cloud9 User Guide*\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-cloud9-environmentec2-syntax)
 + [Properties](#aws-resource-cloud9-environmentec2-properties)
 + [Return Values](#aws-resource-cloud9-environmentec2-returnvalues)

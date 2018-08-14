@@ -42,7 +42,7 @@ The `Parameters` type contains a set of value pairs that represent the parameter
 12.     Description: "Name of an existing EC2 KeyPair to enable SSH access to the web server"
 ```
 
-## Nested Stack<a name="w3ab2c21c14d152c11"></a>
+## Nested Stack<a name="w3ab2c21c14d223c11"></a>
 
 You could use the following template to embed a stack \(myStackWithParams\) using the EC2ChooseAMI\.template and use the Parameters property in the AWS::CloudFormation::Stack resource to specify an InstanceType and KeyName:
 

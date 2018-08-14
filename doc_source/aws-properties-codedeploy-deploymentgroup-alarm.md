@@ -24,6 +24,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Name`  <a name="cfn-codedeploy-deploymentgroup-alarm-name"></a>
 The name of the alarm\. For more information, see [Alarm](http://docs.aws.amazon.com//codedeploy/latest/APIReference/API_Alarm.html) in the *AWS CodeDeploy API Reference*\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

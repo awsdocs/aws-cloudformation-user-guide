@@ -2,7 +2,7 @@
 
 The `AWS::ApiGateway::DocumentationVersion` resource creates a snapshot of the documentation for an Amazon API Gateway API entity\. For more information, see [Representation of API Documentation in API Gateway](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api-content-representation.html) in the *API Gateway Developer Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-apigateway-documentationversion-syntax)
 + [Properties](#aws-resource-apigateway-documentationversion-properties)
 + [Example](#aws-resource-apigateway-documentationversion-examples)

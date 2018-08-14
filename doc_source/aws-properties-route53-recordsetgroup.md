@@ -2,11 +2,11 @@
 
 The `AWS::Route53::RecordSetGroup` resource creates record sets for a hosted zone\. For more information about constraints and values for each property, see [POST CreateHostedZone](http://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html) for hosted zones and [POST ChangeResourceRecordSet](http://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) for resource record sets\.
 
-
+**Topics**
 + [Syntax](#aws-resource-route53-recordsetgroup-syntax)
-+ [Properties](#w3ab2c21c10d959b9)
-+ [Return Value](#w3ab2c21c10d959c11)
-+ [Examples](#w3ab2c21c10d959c13)
++ [Properties](#w3ab2c21c10e1028b9)
++ [Return Value](#w3ab2c21c10e1028c11)
++ [Examples](#w3ab2c21c10e1028c13)
 
 ## Syntax<a name="aws-resource-route53-recordsetgroup-syntax"></a>
 
@@ -38,7 +38,7 @@ Properties:
     - RecordSet1
 ```
 
-## Properties<a name="w3ab2c21c10d959b9"></a>
+## Properties<a name="w3ab2c21c10e1028b9"></a>
 
 `Comment`  <a name="cfn-route53-recordsetgroup-comment"></a>
 Any comments you want to include about the hosted zone\.  
@@ -62,7 +62,7 @@ If you have multiple hosted zones with the same domain name, you must explicitly
 
 `RecordSets`  <a name="cfn-route53-recordsetgroup-recordsets"></a>
 List of resource record sets to add\. The maximum number of records is 1,000\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*:: List of [AWS::Route53::RecordSet](aws-properties-route53-recordset.md) objects, as shown in the following example:   
 
 ```
@@ -87,7 +87,7 @@ List of resource record sets to add\. The maximum number of records is 1,000\.
 ```
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10d959c11"></a>
+## Return Value<a name="w3ab2c21c10e1028c11"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -99,6 +99,6 @@ For the resource with the logical ID "MyRecordSetGroup", `Ref` will return the A
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w3ab2c21c10d959c13"></a>
+## Examples<a name="w3ab2c21c10e1028c13"></a>
 
 For AWS::Route53::RecordSetGroup snippets, see [Route 53 Template Snippets](quickref-route53.md)\.

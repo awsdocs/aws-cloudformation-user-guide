@@ -2,7 +2,7 @@
 
 The intrinsic function `Fn::Join` appends a set of values into a single value, separated by the specified delimiter\. If a delimiter is the empty string, the set of values are concatenated with no delimiter\.
 
-## Declaration<a name="w3ab2c21c28c47b5"></a>
+## Declaration<a name="w3ab2c21c28c46b5"></a>
 
 ### JSON<a name="intrinsic-function-reference-join-syntax.json"></a>
 
@@ -96,25 +96,14 @@ Also see the [`Fn::Sub`](intrinsic-function-reference-sub.md) function for simil
 For the `Fn::Join` delimiter, you cannot use any functions\. You must specify a string value\.
 
 For the `Fn::Join` list of values, you can use the following functions:
-
 + `Fn::Base64`
-
 + `Fn::FindInMap`
-
 + `Fn::GetAtt`
-
 + `Fn::GetAZs`
-
 + `Fn::If`
-
 + `Fn::ImportValue`
-
 + `Fn::Join`
-
 + `Fn::Split`
-
 + `Fn::Select`
-
 + `Fn::Sub`
-
 + `Ref`

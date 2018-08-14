@@ -2,7 +2,7 @@
 
 The `AWS::SES::Template` resource specifies the content of an email \(composed of a subject line, an HTML part, and a text\-only part\) for Amazon SES\. For more information, see [Template](http://docs.aws.amazon.com/ses/latest/APIReference/API_Template.html) in the *Amazon Simple Email Service API Reference*\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-ses-template-syntax)
 + [Properties](#aws-resource-ses-template-properties)
 + [Example](#aws-resource-ses-template-examples)
@@ -113,5 +113,4 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-ses-template-seealso"></a>
-
 + [Template](http://docs.aws.amazon.com/ses/latest/APIReference/API_Template.html) in the *Amazon Simple Email Service API Reference*

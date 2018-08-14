@@ -26,9 +26,9 @@
 `ApplicationArns`  <a name="cfn-cognito-identitypool-pushsync-applicationarns"></a>
 List of Amazon SNS platform application ARNs that could be used by clients\.  
 *Type*: List of String values  
-*Required: *No
+*Required*: No
 
 `RoleArn`  <a name="cfn-cognito-identitypool-pushsync-rolearn"></a>
 An IAM role configured to allow Amazon Cognito to call SNS on behalf of the developer\.  
 *Type*: String  
-*Required: *No
+*Required*: No

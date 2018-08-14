@@ -4,7 +4,7 @@ The `MethodSetting` property type configures settings for all methods in an Amaz
 
 The `MethodSettings` property of the [AWS::ApiGateway::Stage](aws-resource-apigateway-stage.md) resource contains a list of `MethodSetting` property types\.
 
-## Syntax<a name="w3ab2c21c14c36b7"></a>
+## Syntax<a name="w3ab2c21c14c37b7"></a>
 
 ### JSON<a name="aws-properties-apigateway-stage-methodsetting-syntax.json"></a>
 
@@ -38,54 +38,54 @@ The `MethodSettings` property of the [AWS::ApiGateway::Stage](aws-resource-apiga
 [ThrottlingRateLimit](#cfn-apigateway-stage-methodsetting-throttlingratelimit): Number
 ```
 
-## Properties<a name="w3ab2c21c14c36b9"></a>
+## Properties<a name="w3ab2c21c14c37b9"></a>
 
 `CacheDataEncrypted`  <a name="cfn-apigateway-stage-methodsetting-cachedataencrypted"></a>
 Indicates whether the cached responses are encrypted\.  
-*Required: *No  
+*Required*: No  
 *Type*: Boolean
 
 `CacheTtlInSeconds`  <a name="cfn-apigateway-stage-methodsetting-cachettlinseconds"></a>
 The time\-to\-live \(TTL\) period, in seconds, that specifies how long API Gateway caches responses\.  
-*Required: *No  
+*Required*: No  
 *Type*: Integer
 
 `CachingEnabled`  <a name="cfn-apigateway-stage-methodsetting-cachingenabled"></a>
 Indicates whether responses are cached and returned for requests\. You must enable a cache cluster on the stage to cache responses\.  
-*Required: *No  
+*Required*: No  
 *Type*: Boolean
 
 `DataTraceEnabled`  <a name="cfn-apigateway-stage-methodsetting-datatraceenabled"></a>
 Indicates whether data trace logging is enabled for methods in the stage\. API Gateway pushes these logs to Amazon CloudWatch Logs\.  
-*Required: *No  
+*Required*: No  
 *Type*: Boolean
 
 `HttpMethod`  <a name="cfn-apigateway-stage-methodsetting-httpmethod"></a>
-The HTTP method\.  
-*Required: *Yes  
+The HTTP method\. To apply method settings to multiple methods, wildcard (`*`) characters may be used\.  
+*Required*: Yes  
 *Type*: String
 
 `LoggingLevel`  <a name="cfn-apigateway-stage-methodsetting-logginglevel"></a>
 The logging level for this method\. For valid values, see the `loggingLevel` property of the [Stage](http://docs.aws.amazon.com/apigateway/api-reference/resource/stage/#loggingLevel) resource in the *Amazon API Gateway API Reference*\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `MetricsEnabled`  <a name="cfn-apigateway-stage-methodsetting-metricsenabled"></a>
 Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage\.  
-*Required: *No  
+*Required*: No  
 *Type*: Boolean
 
 `ResourcePath`  <a name="cfn-apigateway-stage-methodsetting-resourcepath"></a>
-The resource path for this method\. Forward slashes \(`/`\) are encoded as `~1` and the initial slash must include a forward slash\. For example, the path value `/resource/subresource` must be encoded as `/~1resource~1subresource`\. To specify the root path, use only a slash \(`/`\)\.  
-*Required: *Yes  
+The resource path for this method\. Forward slashes \(`/`\) are encoded as `~1` and the initial slash must include a forward slash\. For example, the path value `/resource/subresource` must be encoded as `/~1resource~1subresource`\. To specify the root path, use only a slash \(`/`\)\. To apply method settings to multiple methods, wildcard (`*`) characters may be used\.  
+*Required*: Yes  
 *Type*: String
 
 `ThrottlingBurstLimit`  <a name="cfn-apigateway-stage-methodsetting-throttlingburstlimit"></a>
 The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account\. For more information, see [Manage API Request Throttling](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
-*Required: *No  
+*Required*: No  
 *Type*: Integer
 
 `ThrottlingRateLimit`  <a name="cfn-apigateway-stage-methodsetting-throttlingratelimit"></a>
 The number of steady\-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account\. For more information, see [Manage API Request Throttling](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
-*Required: *No  
+*Required*: No  
 *Type*: Number

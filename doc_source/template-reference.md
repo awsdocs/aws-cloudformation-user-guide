@@ -2,7 +2,7 @@
 
 This section details the supported resources, type names, intrinsic functions and pseudo parameters used in AWS CloudFormation templates\.
 
-
+**Topics**
 + [AWS Resource Types Reference](aws-template-resource-type-ref.md)
 + [Resource Property Types Reference](aws-product-property-reference.md)
 + [AWS CloudFormation Resource Specification](cfn-resource-specification.md)

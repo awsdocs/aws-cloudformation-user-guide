@@ -31,13 +31,13 @@ Properties:
 
 `RuleName`  <a name="cfn-iot-topicrule-rulename"></a>
 The name \(the physical ID\) of the AWS IoT rule\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `TopicRulePayload`  <a name="cfn-iot-topicrule-topicrulepayload"></a>
 The actions associated with the AWS IoT rule\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: [`TopicRulePayload`](aws-properties-iot-topicrule-topicrulepayload.md) object  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 

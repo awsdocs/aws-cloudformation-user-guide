@@ -2,7 +2,7 @@
 
 The `AWS::ApiGateway::Model` resource defines the structure of a request or response payload for an Amazon API Gateway \(API Gateway\) method\.
 
-
+**Topics**
 + [Syntax](#aws-resource-apigateway-model-syntax)
 + [Properties](#aws-resource-apigateway-model-props)
 + [Return Value](#aws-resource-apigateway-model-return-value)
@@ -43,32 +43,32 @@ Properties:
 
 `ContentType`  <a name="cfn-apigateway-model-contenttype"></a>
 The content type for the model\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Description`  <a name="cfn-apigateway-model-description"></a>
 A description that identifies this model\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Name`  <a name="cfn-apigateway-model-name"></a>
 A name for the model\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name\. For more information, see [Name Type](aws-properties-name.md)\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `RestApiId`  <a name="cfn-apigateway-model-restapiid"></a>
 The ID of a REST API with which to associate this model\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Schema`  <a name="cfn-apigateway-model-schema"></a>
 The schema to use to transform data to one or more output formats\. Specify null \(`{}`\) if you don't want to specify a schema\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: JSON object  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 

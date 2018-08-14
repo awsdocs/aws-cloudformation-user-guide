@@ -31,13 +31,13 @@ Properties:
 
 `PolicyDocument`  <a name="cfn-iot-policy-policydocument"></a>
 The JSON document that describes the policy\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: JSON object  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `PolicyName`  <a name="cfn-iot-policy-policyname"></a>
 The name \(the physical ID\) of the AWS IoT policy\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 

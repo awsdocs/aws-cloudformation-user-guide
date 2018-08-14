@@ -2,7 +2,7 @@
 
 The `AWS::ServiceDiscovery::Service` resource defines a template for up to five records and an optional health check that you want Amazon Route 53 to create when you register an instance\. For more information, see [CreateService](http://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_CreateService.html) in the *Amazon Route 53 API Reference*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-servicediscovery-service-syntax)
 + [Properties](#aws-resource-servicediscovery-service-properties)
 + [Return Values](#aws-resource-servicediscovery-service-returnvalues)
@@ -89,7 +89,5 @@ The name that you assigned to the service\.
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
 ## See Also<a name="aws-resource-servicediscovery-service-seealso"></a>
-
 + [Using Autonaming for Service Discovery](http://docs.aws.amazon.com/Route53/latest/APIReference/overview-service-discovery.html) in the *Amazon Route 53 API Reference*
-
 + [CreateService](http://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_CreateService.html) in the *Amazon Route 53 API Reference*

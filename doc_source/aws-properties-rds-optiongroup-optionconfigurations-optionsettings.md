@@ -2,7 +2,7 @@
 
 Use the `OptionSettings` property to specify settings for an option in the [`OptionConfigurations`](aws-properties-rds-optiongroup-optionconfigurations.md) property\.
 
-## Syntax<a name="w3ab2c21c14e1458b5"></a>
+## Syntax<a name="w3ab2c21c14e1634b5"></a>
 
 ### JSON<a name="aws-properties-rds-optiongroup-optionconfigurations-optionsettings-syntax.json"></a>
 
@@ -20,18 +20,17 @@ Use the `OptionSettings` property to specify settings for an option in the [`Opt
 [Value](#cfn-rds-optiongroup-optionconfigurations-optionsettings-value): String
 ```
 
-## Properties<a name="w3ab2c21c14e1458b7"></a>
+## Properties<a name="w3ab2c21c14e1634b7"></a>
 
 `Name`  <a name="cfn-rds-optiongroup-optionconfigurations-optionsettings-name"></a>
 The name of the option setting that you want to specify\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `Value`  <a name="cfn-rds-optiongroup-optionconfigurations-optionsettings-value"></a>
 The value of the option setting\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 ## See Also<a name="aws-properties-rds-optiongroup-optionsettings-seealso"></a>
-
-+ [Working with Option Groups](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithOptionGroups.html) in the *Amazon Relational Database Service User Guide*
++ [Working with Option Groups](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithOptionGroups.html) in the *Amazon RDS User Guide*
