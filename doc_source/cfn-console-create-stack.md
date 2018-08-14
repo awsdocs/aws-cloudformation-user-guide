@@ -26,13 +26,10 @@ After creating a stack, you can monitor the stack's progress, view the stack's r
 1. Log in to the AWS Management Console and select **CloudFormation** in the **Services** menu\.
 
 1. Create a new stack by using one of the following options:
-
    + Click **Create Stack**\. This is the *only* option if you have a currently running stack\.  
 ![\[The Create Stack menu button in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-create-stack-button2.png)
-
    + Click **Create New Stack** in the **CloudFormation Stacks** main window\. This option is visible only if you have no running stacks\.  
 ![\[The Create New Stack button in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-create-stack-button1.png)
-
    + Click **Launch CloudFormer** in the **CloudFormation Stacks** main window to create a stack from currently running resources\. This option is visible only if you have no running stacks\.  
 ![\[The Launch CloudFormer button in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-create-stack-cloudformer-button.png)
 

@@ -47,15 +47,10 @@ Conditions:
 #### Condition Intrinsic Functions<a name="w3ab2c17c15c21c15b6b4"></a>
 
 You can use the following intrinsic functions to define conditions:
-
 + `Fn::And`
-
 + `Fn::Equals`
-
 + `Fn::If`
-
 + `Fn::Not`
-
 + `Fn::Or`
 
 For the syntax and information about each function, see [Condition Functions](intrinsic-function-reference-conditions.md)\. 

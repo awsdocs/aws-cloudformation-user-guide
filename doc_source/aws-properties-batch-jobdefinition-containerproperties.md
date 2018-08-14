@@ -118,13 +118,9 @@ The number of vCPUs reserved for the container\. This parameter maps to `CpuShar
 
 `Image`  <a name="cfn-batch-jobdefinition-containerproperties-image"></a>
 The image used to start a container\. This string is passed directly to the Docker daemon\. Images in the Docker Hub registry are available by default\. Other repositories are specified with ` repository-url/image:tag `\. Up to 255 letters \(uppercase and lowercase\), numbers, hyphens, underscores, colons, periods, forward slashes, and number signs are allowed\. This parameter maps to `Image` in the [Create a container](https://docs.docker.com/engine/reference/api/docker_remote_api_v1.19/#create-a-container) section of the [Docker Remote API](https://docs.docker.com/engine/reference/api/docker_remote_api_v1.19/) and the `IMAGE` parameter of [docker run](https://docs.docker.com/engine/reference/run/)\.  
-
 + Images in Amazon ECR repositories use the full registry and repository URI \(for example, `012345678910.dkr.ecr.region-name.amazonaws.com/repository-name`\)\. 
-
 + Images in official repositories on Docker Hub use a single name \(for example, `ubuntu` or `mongo`\)\.
-
 + Images in other repositories on Docker Hub are qualified with an organization name \(for example, `amazon/amazon-ecs-agent`\)\.
-
 + Images in other online repositories are qualified further by a domain name \(for example, `quay.io/assemblyline/ubuntu`\)\.
  *Required*: yes  
 *Type*: String  

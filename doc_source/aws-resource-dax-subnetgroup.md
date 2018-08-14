@@ -29,29 +29,29 @@ Properties:
       [SubnetIds](#cfn-dax-subnetgroup-name-values): [ String, ... ]
 ```
 
-## Properties<a name="w3ab2c21c10d300b9"></a>
+## Properties<a name="w3ab2c21c10d336b9"></a>
 
 `SubnetGroupName`  <a name="cfn-dax-subnetgroup-name"></a>
 The name of the subnet group\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: Updates are not supported\.
 
 `Description`  <a name="cfn-dax-subnetgroup-description"></a>
 The description of the subnet group\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `SubnetIds`  <a name="cfn-dax-subnetgroup-name-values"></a>
 A list of subnets associated with the subnet group\.  
-*Required: *No  
+*Required*: No  
 *Type*: List of String values;  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-dax-subnetgroup-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d300c11b2"></a>
+### Ref<a name="w3ab2c21c10d336c11b2"></a>
 
 When you provide the logical ID of this resource to the `Ref` intrinsic function, `Ref` returns the ARN of the created activity\. For example:
 
@@ -67,7 +67,7 @@ my-dax-subnet-group
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d300c11b4"></a>
+### Fn::GetAtt<a name="w3ab2c21c10d336c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 

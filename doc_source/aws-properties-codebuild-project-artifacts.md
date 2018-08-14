@@ -30,34 +30,34 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [Type](#cfn-codebuild-project-artifacts-type): String
 ```
 
-## Properties<a name="w3ab2c21c14d292b7"></a>
+## Properties<a name="w3ab2c21c14d363b7"></a>
 
 `Location`  <a name="cfn-codebuild-project-artifacts-location"></a>
 The location where AWS CodeBuild saves the build output artifacts\. For valid values, see the [http://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli](http://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli) field in the *AWS CodeBuild User Guide*\.  
-*Required: *Conditional\. If you specify `CODEPIPELINE` or `NO_ARTIFACTS` for the `Type` property, don't specify this property\. For all of the other types, you must specify this property\.  
+*Required*: Conditional\. If you specify `CODEPIPELINE` or `NO_ARTIFACTS` for the `Type` property, don't specify this property\. For all of the other types, you must specify this property\.  
 *Type*: String
 
 `Name`  <a name="cfn-codebuild-project-artifacts-name"></a>
 The name of the build output folder where AWS CodeBuild saves the build output artifacts\. For \.zip packages, the name of the build output \.zip file that contains the build output artifacts\.  
-*Required: *Conditional\. If you specify `CODEPIPELINE` or `NO_ARTIFACTS` for the `Type` property, don't specify this property\. For all of the other types, you must specify this property\.  
+*Required*: Conditional\. If you specify `CODEPIPELINE` or `NO_ARTIFACTS` for the `Type` property, don't specify this property\. For all of the other types, you must specify this property\.  
 *Type*: String
 
 `NamespaceType`  <a name="cfn-codebuild-project-artifacts-namespacetype"></a>
 The information AWS CodeBuild adds to the build output path, such as a build ID\. For more information, see the [http://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli](http://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli) field in the *AWS CodeBuild User Guide*\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `Packaging`  <a name="cfn-codebuild-project-artifacts-packaging"></a>
 Indicates how AWS CodeBuild packages the build output artifacts\. For valid values, see the [http://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli](http://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli) field in the *AWS CodeBuild User Guide*\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `Path`  <a name="cfn-codebuild-project-artifacts-path"></a>
 The path to the build output folder where AWS CodeBuild saves the build output artifacts\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `Type`  <a name="cfn-codebuild-project-artifacts-type"></a>
 The type of build output artifact\. For valid values, see the [http://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli](http://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli) field in the *AWS CodeBuild User Guide*\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String

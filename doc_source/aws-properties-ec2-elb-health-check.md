@@ -4,7 +4,7 @@ The `HealthCheck` property configures health checks for the availability of your
 
 `HealthCheck` is a property of the [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md) resource\.
 
-## Syntax<a name="w3ab2c21c14d821b7"></a>
+## Syntax<a name="w3ab2c21c14d983b7"></a>
 
 ### JSON<a name="aws-properties-ec2-elb-health-check-syntax.json"></a>
 
@@ -28,7 +28,7 @@ The `HealthCheck` property configures health checks for the availability of your
 [UnhealthyThreshold](#cfn-elb-healthcheck-unhealthythreshold): String
 ```
 
-## Properties<a name="w3ab2c21c14d821b9"></a>
+## Properties<a name="w3ab2c21c14d983b9"></a>
 
 `HealthyThreshold`  <a name="cfn-elb-healthcheck-healthythreshold"></a>
 Specifies the number of consecutive health probe successes required before moving the instance to the Healthy state\.  

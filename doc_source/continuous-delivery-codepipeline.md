@@ -6,7 +6,7 @@ For example, you can create a workflow that automatically builds a test stack wh
 
 Use AWS CodePipeline to build a continuous delivery workflow by building a pipeline for AWS CloudFormation stacks\. AWS CodePipeline has built\-in integration with AWS CloudFormation, so you can specify AWS CloudFormation\-specific actions, such as creating, updating, or deleting a stack, within a pipeline\. For more information about AWS CodePipeline, see the [AWS CodePipeline User Guide](http://docs.aws.amazon.com/codepipeline/latest/userguide/)\.
 
-
+**Topics**
 + [Walkthrough: Building a Pipeline for Test and Production Stacks](continuous-delivery-codepipeline-basic-walkthrough.md)
 + [AWS CloudFormation Configuration Properties Reference](continuous-delivery-codepipeline-action-reference.md)
 + [AWS CloudFormation Artifacts](continuous-delivery-codepipeline-cfn-artifacts.md)

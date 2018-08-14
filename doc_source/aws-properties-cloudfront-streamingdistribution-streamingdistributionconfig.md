@@ -86,5 +86,4 @@ Specifies any AWS accounts that you want to permit to create signed URLs for pri
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig-seealso"></a>
-
 + [CreateStreamingDistribution](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateStreamingDistribution.html)

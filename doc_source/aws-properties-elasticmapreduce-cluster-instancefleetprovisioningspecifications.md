@@ -28,6 +28,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `SpotSpecification`  <a name="cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-spotspecification"></a>
 The launch specification for Spot instances in the fleet, which determines the defined duration and provisioning timeout behavior\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: [Amazon EMR Cluster SpotProvisioningSpecification](aws-properties-elasticmapreduce-cluster-spotprovisioningspecification.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

@@ -2,7 +2,7 @@
 
 The `AWS::ServiceDiscovery::PrivateDnsNamespace` resource specifies information about a private namespace for Amazon Route 53\. Use a private namespace when you want to route traffic inside an Amazon VPC\. For more information, see [CreatePrivateDnsNamespace](http://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_CreatePrivateDnsNamespace.html) in the *Amazon Route 53 API Reference*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-servicediscovery-privatednsnamespace-syntax)
 + [Properties](#aws-resource-servicediscovery-privatednsnamespace-properties)
 + [Return Values](#aws-resource-servicediscovery-privatednsnamespace-returnvalues)
@@ -76,7 +76,5 @@ The Amazon Resource Name \(ARN\) of the private namespace\.
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
 ## See Also<a name="aws-resource-servicediscovery-privatednsnamespace-seealso"></a>
-
 + [Using Autonaming for Service Discovery](http://docs.aws.amazon.com/Route53/latest/APIReference/overview-service-discovery.html) in the *Amazon Route 53 API Reference*
-
 + [CreatePrivateDnsNamespace](http://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_CreatePrivateDnsNamespace.html) in the *Amazon Route 53 API Reference*

@@ -4,11 +4,11 @@ Creates a new VPN connection between an existing virtual private gateway and a V
 
 For more information, see [CreateVpnConnection](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVpnConnection.html) in the *Amazon EC2 API Reference*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-ec2-vpnconnection-syntax)
-+ [Properties](#w3ab2c21c10d496c11)
-+ [Return Value](#w3ab2c21c10d496c13)
-+ [Template Example](#w3ab2c21c10d496c15)
++ [Properties](#w3ab2c21c10d537c11)
++ [Return Value](#w3ab2c21c10d537c13)
++ [Template Example](#w3ab2c21c10d537c15)
 + [See Also](#aws-resource-ec2-vpnconnection-seealso)
 
 ## Syntax<a name="aws-resource-ec2-vpnconnection-syntax"></a>
@@ -48,7 +48,7 @@ Properties:
     - [*VpnTunnelOptionsSpecification*](aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.md)
 ```
 
-## Properties<a name="w3ab2c21c10d496c11"></a>
+## Properties<a name="w3ab2c21c10d537c11"></a>
 
 `Type`  <a name="cfn-ec2-vpnconnection-type"></a>
 The type of VPN connection this virtual private gateway supports\.  
@@ -71,7 +71,7 @@ Indicates whether the VPN connection requires static routes\.
 
 `Tags`  <a name="cfn-ec2-vpnconnection-tags"></a>
 The tags that you want to attach to the resource\.  
-*Required: *No  
+*Required*: No  
 *Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
@@ -87,7 +87,7 @@ The tunnel options for the VPN connection\. Duplicates not allowed\.
  *Type*: List of [EC2 VPNConnection VpnTunnelOptionsSpecification](aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.md)  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-## Return Value<a name="w3ab2c21c10d496c13"></a>
+## Return Value<a name="w3ab2c21c10d537c13"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -99,7 +99,7 @@ For the VPNConnection with the logical ID "MyVPNConnection", `Ref` will return t
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Template Example<a name="w3ab2c21c10d496c15"></a>
+## Template Example<a name="w3ab2c21c10d537c15"></a>
 
 ### JSON<a name="aws-resource-ec2-vpnconnection-example.json"></a>
 
@@ -137,5 +137,4 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-ec2-vpnconnection-seealso"></a>
-
 +  [VpnConnection](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnConnection.html) in the *Amazon EC2 API Reference*

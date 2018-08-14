@@ -23,5 +23,5 @@
 
 `Rules`  <a name="cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration-rules"></a>
 A list of rules\. You can specify up to 25 rules per identity provider\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: List of [Amazon Cognito IdentityPoolRoleAttachment MappingRule](aws-properties-cognito-identitypoolroleattachment-mappingrule.md)

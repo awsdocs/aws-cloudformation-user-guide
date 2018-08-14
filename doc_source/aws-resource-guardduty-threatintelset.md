@@ -2,7 +2,7 @@
 
 The `AWS::GuardDuty::ThreatIntelSet` resource creates a ThreatIntelSet\. A ThreatIntelSet consists of known malicious IP addresses\. GuardDuty generates findings based on ThreatIntelSets\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-guardduty-threatintelset-syntax)
 + [Properties](#aws-resource-guardduty-threatintelset-properties)
 + [Return Values](#aws-resource-guardduty-threatintelset-returnvalues)

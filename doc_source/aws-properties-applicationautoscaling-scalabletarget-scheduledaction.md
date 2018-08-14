@@ -47,15 +47,12 @@ The new minimum and maximum capacity\. You can set both values or just one\. Dur
 
 `Schedule`  <a name="cfn-applicationautoscaling-scalabletarget-scheduledaction-schedule"></a>
 The schedule for this action\. The following formats are supported:  
-
 + At expressions \- `at(yyyy-mm-ddThh:mm:ss)`
 
   At expressions are useful for one\-time schedules\. Specify the time in UTC\.
-
 + Rate expressions \- `rate(value unit)`
 
   For rate expressions, `value` is a positive integer, and `unit` is `minute`, `minutes`, `hour`, `hours`, `day`, or `days`\.
-
 + Cron expressions \- `cron(fields)`
 
   For more information about cron expressions, see [ Cron](https://en.wikipedia.org/wiki/Cron)\.
@@ -77,5 +74,4 @@ The date and time that the action is scheduled to begin\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-applicationautoscaling-scalabletarget-scheduledaction-seealso"></a>
-
 + [ ScheduledAction](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_ScheduledAction.html) data type in the *Application Auto Scaling API Reference*

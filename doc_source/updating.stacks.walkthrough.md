@@ -479,9 +479,7 @@ You can optionally specify a version string for a package\. If you change the ve
 ### Updating Auto Scaling Groups<a name="updating.autoscaling"></a>
 
 If you are using Auto Scaling groups in your template, as opposed to Amazon EC2 instance resources, updating the application will work in exactly the same way; however, AWS CloudFormation does not provide any synchronization or serialization across the Amazon EC2 instances in an Auto Scaling group\. The cfn\-hup daemon on each host will run independently and update the application on its own schedule\. When you use cfn\-hup to update the on\-instance configuration, each instance will run the cfn\-hup hooks on its own schedule; there is no coordination between the instances in the stack\. You should consider the following:
-
 + If the cfn\-hup changes run on all Amazon EC2 instances in the Auto Scaling group at the same time, your service might be unavailable during the update\.
-
 + If the cfn\-hup changes run at different times, old and new versions of the software may be running at the same\.
 
 To avoid these issues, consider forcing a rolling update on your instances in the Auto Scaling group\. For more information, see [UpdatePolicy](aws-attribute-updatepolicy.md)\.
@@ -1053,11 +1051,8 @@ Different properties have different impacts on the resources in the stack\. You 
 ## Related Resources<a name="update.walkthrough.related"></a>
 
 For more information about using AWS CloudFormation to start applications and on integrating with other configuration and deployment services such as Puppet and Opscode Chef, see the following whitepapers:
-
 +  [ Bootstrapping Applications via AWS CloudFormation](https://s3.amazonaws.com/cloudformation-examples/BoostrappingApplicationsWithAWSCloudFormation.pdf) 
-
 +  [ Integrating AWS CloudFormation with Opscode Chef](https://s3.amazonaws.com/cloudformation-examples/IntegratingAWSCloudFormationWithOpscodeChef.pdf) 
-
 +  [ Integrating AWS CloudFormation with Puppet](https://s3.amazonaws.com/cloudformation-examples/IntegratingAWSCloudFormationWithPuppet.pdf) 
 
 The template used throughout this section is a "Hello, World" PHP application\. The template library also has an Amazon ElastiCache sample template that shows how to integrate a PHP application with ElasticCache using cfn\-hup and cfn\-init to respond to changes in the Amazon ElastiCache Cache Cluster configuration, all of which can be performed by Update Stack\.

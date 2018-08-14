@@ -27,10 +27,10 @@ The `EncryptionConfiguration` property type specifies the encryption settings th
 
 `KMSEncryptionConfig`  <a name="cfn-kinesisfirehose-deliverystream-encryptionconfiguration-kmsencryptionconfig"></a>
 The AWS Key Management Service \(AWS KMS\) encryption key that Amazon S3 uses to encrypt your data\.  
-*Required: *No  
+*Required*: No  
 *Type*: [Amazon Kinesis Firehose DeliveryStream KMSEncryptionConfig](aws-properties-kinesisfirehose-deliverystream-kmsencryptionconfig.md)
 
 `NoEncryptionConfig`  <a name="cfn-kinesisfirehose-deliverystream-encryptionconfiguration-noencryptionconfig"></a>
 Disables encryption\. For valid values, see the `NoEncryptionConfig` content for the [EncryptionConfiguration](http://docs.aws.amazon.com/firehose/latest/APIReference/API_EncryptionConfiguration.html) data type in the *Amazon Kinesis Firehose API Reference*\.  
-*Required: *No  
+*Required*: No  
 *Type*: String

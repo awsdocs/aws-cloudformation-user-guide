@@ -2,11 +2,11 @@
 
 The AWS::EC2::EIP resource allocates an Elastic IP \(EIP\) address and can, optionally, associate it with an Amazon EC2 instance\.
 
-
+**Topics**
 + [Syntax](#aws-resource-ec2-eip-syntax)
-+ [Properties](#w3ab2c21c10d355b9)
++ [Properties](#w3ab2c21c10d391b9)
 + [Return Values](#aws-resource-ec2-eip-ref)
-+ [Examples](#w3ab2c21c10d355c13)
++ [Examples](#w3ab2c21c10d391c13)
 
 ## Syntax<a name="aws-resource-ec2-eip-syntax"></a>
 
@@ -33,7 +33,7 @@ Properties:
   [Domain](#cfn-ec2-eip-domain): String
 ```
 
-## Properties<a name="w3ab2c21c10d355b9"></a>
+## Properties<a name="w3ab2c21c10d391b9"></a>
 
 `InstanceId`  <a name="cfn-ec2-eip-instanceid"></a>
 The Instance ID of the Amazon EC2 instance that you want to associate with this Elastic IP address\.  
@@ -51,13 +51,13 @@ For more information, see [AllocateAddress](http://docs.aws.amazon.com/AWSEC2/la
 
 ## Return Values<a name="aws-resource-ec2-eip-ref"></a>
 
-### Ref<a name="w3ab2c21c10d355c11b2"></a>
+### Ref<a name="w3ab2c21c10d391c11b2"></a>
 
 When you specify the logical ID of an AWS::EC2::EIP object as an argument to the `Ref` function, AWS CloudFormation returns the value of the instance's `PublicIp`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d355c11b4"></a>
+### Fn::GetAtt<a name="w3ab2c21c10d391c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -66,6 +66,6 @@ The ID that AWS assigns to represent the allocation of the address for use with 
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w3ab2c21c10d355c13"></a>
+## Examples<a name="w3ab2c21c10d391c13"></a>
 
 To view AWS::EC2::EIP snippets, see [Assigning an Amazon EC2 Elastic IP Using AWS::EC2::EIP Snippet](quickref-ec2.md#scenario-ec2-eip)\.

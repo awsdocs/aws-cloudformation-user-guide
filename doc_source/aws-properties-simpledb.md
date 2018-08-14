@@ -28,10 +28,10 @@ Properties:
   [Description](#cfn-sdb-domain-description): String
 ```
 
-## Properties<a name="w3ab2c21c10d971b9"></a>
+## Properties<a name="w3ab2c21c10e1060b9"></a>
 
 `Description`  <a name="cfn-sdb-domain-description"></a>
 Information about the Amazon SimpleDB domain\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: Updates are not supported\.

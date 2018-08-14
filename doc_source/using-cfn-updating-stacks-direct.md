@@ -15,9 +15,14 @@ When updating a stack, AWS CloudFormation might interrupt resources or replace u
 ![\[The Update Stack option in the Actions menu.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cfn-update-stack-initiating.png)
 
 1. If you modified the stack template, specify the location of the updated template\. If not, select **Use current template**\.
-
    + For a template stored locally on your computer, select **Upload a template to Amazon S3**\. Choose **Choose File** to navigate to the file and select it, and then click **Next**\.
-
+**Note**  
+If you upload a local template file, AWS CloudFormation uploads it to an Amazon Simple Storage Service \(Amazon S3\) bucket in your AWS account\. If you don't already have an S3 bucket that was created by AWS CloudFormation, it creates a unique bucket for each Region in which you upload a template file\. If you already have an S3 bucket that was created by AWS CloudFormation in your AWS account, AWS CloudFormation adds the template to that bucket\.  
+Considerations to keep in mind about S3 buckets created by AWS CloudFormation  
+The buckets are accessible to anyone with Amazon S3 permissions in your AWS account\.
+AWS CloudFormation creates the buckets with server\-side encryption enabled by default, thereby encrypting all objects stored in the bucket\.   
+You can directly manage encryption options for buckets that AWS CloudFormation has created; for example, using the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/) , or the AWS CLI\. For more information, see [Amazon S3 Default Encryption for S3 Buckets](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) in the *[Amazon Simple Storage Service Developer Guide](http://docs.aws.amazon.com/AmazonS3/latest/dev/)*\.
+You can use your own bucket and manage its permissions by manually uploading templates to Amazon S3\. When you create or update a stack, specify the Amazon S3 URL of a template file\.
    + For a template stored in an Amazon S3 bucket, select **Specify an Amazon S3 URL**\. Enter or paste the URL for the template, and then click **Next**\.
 
      If you have a template in a versioning\-enabled bucket, you can specify a specific version of the template, such as `https://s3.amazonaws.com/templates/myTemplate.template?versionId=123ab1cdeKdOW5IH4GAcYbEngcpTJTDW`\. For more information, see [Managing Objects in a Versioning\-Enabled Bucket](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/managing-objects-versioned-bucket.html) in the *Amazon Simple Storage Service Console User Guide*\.
@@ -45,7 +50,6 @@ When updating a stack, AWS CloudFormation might interrupt resources or replace u
 You can cancel an update while it's in the **UPDATE\_IN\_PROGRESS** state\. For more information, see [Canceling a Stack Update](using-cfn--stack-update-cancel.md)\.
 
 **To update a AWS CloudFormation stack \(AWS CLI\)**
-
 + Use the [http://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html) command to directly update a stack\. You specify the stack, and parameter values and capabilities that you want to update, and, if you want use an updated template, the name of the template\.
 
   The following example updates the template and input parameters for the `mystack` stack:

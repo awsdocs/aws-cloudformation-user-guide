@@ -43,11 +43,8 @@ After you build your artifact, you'll upload it to an S3 bucket\.
 1. Download and open the sample artifact: [https://s3\.amazonaws\.com/cloudformation\-examples/user\-guide/continuous\-deployment/wordpress\-single\-instance\.zip](https://s3.amazonaws.com/cloudformation-examples/user-guide/continuous-deployment/wordpress-single-instance.zip)\.
 
    The artifact contains three files:
-
    + The sample WordPress template: `wordpress-single-instance.yaml`
-
    + The template configuration file for the test stack\.: `test-stack-configuration.json` 
-
    + The template configuration file for the production stack: `prod-stack-configuration.json`
 
 1. Extract all of the files, and then use any text editor to modify the template configuration files\.
@@ -55,9 +52,7 @@ After you build your artifact, you'll upload it to an S3 bucket\.
    Open the configuration files to see that they contain key\-value pairs that map to the WordPress template's parameters\. The configuration files specify the parameter values that your pipeline uses when it creates the test and production stacks\.
 
    Edit the `test-stack-configuration.json` file to specify parameter values for the test stack and the `prod-stack-configuration.json` file for the production stack\.
-
    + Change the values of the `DBPassword` and `DBRootPassword` keys to passwords that you can use to log in to your WordPress database\. As defined in the WordPress template, the parameter values must contain only alphanumeric characters\.
-
    + Change the value of the `KeyName` key to an existing EC2 key\-pair name in the region in which you will create your pipeline\.
 
 1. Add the modified configuration files to the original artifact \(`.zip`\) file, replacing duplicate files\.
@@ -69,13 +64,9 @@ After you build your artifact, you'll upload it to an S3 bucket\.
    Note the file's location\. You'll specify the location of this file when you build your pipeline\.
 
    Notes about the artifact and S3 bucket:
-
    + Use a bucket that is in the same AWS region in which you will create your pipeline\.
-
    + AWS CodePipeline requires that the bucket is [versioning enabled](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/enable-bucket-versioning.html)\.
-
    + You can also use services that don't require you to zip your files before uploading them, like GitHub or AWS CodeCommit, for your source repository\.
-
    + Artifacts can contain sensitive information such as passwords\. [Limit access](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/EditingPermissionsonanObject.html) so that only permitted users can view the file\. When you do, ensure that AWS CodePipeline can still access the file\.
 
 You now have an artifact that AWS CodePipeline can pull in to your pipeline\. In the next step, you'll specify the artifact's location and build the WordPress pipeline\.

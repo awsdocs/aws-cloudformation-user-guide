@@ -4,7 +4,7 @@ AWS CloudFormation is integrated with AWS CloudTrail, a service that captures AP
 
 To learn more about CloudTrail, including how to configure and enable it, see the [http://docs.aws.amazon.com/awscloudtrail/latest/userguide/](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/)\. 
 
-
+**Topics**
 + [AWS CloudFormation Information in CloudTrail](#cloudformation_info_in_cloudtrail)
 + [Understanding AWS CloudFormation Log File Entries](#understanding_cloudformation_entries)
 

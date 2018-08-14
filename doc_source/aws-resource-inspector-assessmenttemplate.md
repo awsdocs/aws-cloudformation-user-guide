@@ -2,7 +2,7 @@
 
 The `AWS::Inspector::AssessmentTemplate` resource creates an Amazon Inspector assessment template \- a resource that contains information about an Amazon Inspector assessment template\.
 
-
+**Topics**
 + [Syntax](#aws-resource-inspector-assessmenttemplate-syntax)
 + [Properties](#aws-resource-inspector-assessmenttemplate-properties)
 + [Return Values](#aws-resource-inspector-assessmenttemplate-returnvalues)
@@ -114,6 +114,7 @@ The following example shows how to declare an AWS::Inspector::AssessmentTemplate
 
 ```
 myassessmenttemplate: 
+  Type: "AWS::Inspector::AssessmentTemplate"
   Properties: 
     AssessmentTargetArn: "arn:aws:inspector:us-west-2:123456789012:target/0-nvgVhaxX"
     AssessmentTemplateName: MyAssessmentTemplate
@@ -124,5 +125,4 @@ myassessmenttemplate:
       - 
         Key: Example
         Value: example
-  Type: "AWS::Inspector::AssessmentTemplate"
 ```
