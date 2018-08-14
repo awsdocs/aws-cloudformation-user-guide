@@ -53,8 +53,8 @@ Properties:
 
 `CdcStartTime`  <a name="cfn-dms-replicationtask-cdcstarttime"></a>
 The start time for the Change Data Capture \(CDC\) operation\.  
-*Required*: No  
-*Type: *Number, epic value in milliseconds  
+*Required: *No  
+*Type: *Number, epoch value in milliseconds  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `MigrationType`  <a name="cfn-dms-replicationtask-migrationtype"></a>
