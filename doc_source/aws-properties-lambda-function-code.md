@@ -94,11 +94,11 @@ Whether the function successfully completed\. Use the `cfnresponse` module const
 `responseData`  
 The `Data` field of a custom resource [response object](crpg-ref-responses.md)\. The data is a list of name\-value pairs\.
 
-`noEcho`  
-Optional\. Indicates whether to mask the output of the custom resource when it's retrieved by using the `Fn::GetAtt` function\. If set to `true`, all returned values are masked with asterisks \(\*\*\*\*\*\)\. By default, this value is `false`\.
-
 `physicalResourceId`  
 Optional\. The unique identifier of the custom resource that invoked the function\. By default, the module uses the name of the Amazon CloudWatch Logs log stream that's associated with the Lambda function\.
+
+`noEcho`
+Optional\. Indicates whether to mask the output of the custom resource when it's retrieved by using the `Fn::GetAtt` function\. If set to `true`, all returned values are masked with asterisks \(\*\*\*\*\*\)\. By default, this value is `false`\.
 
 ### Examples<a name="w3ab2c21c14e1528c11c12"></a>
 
