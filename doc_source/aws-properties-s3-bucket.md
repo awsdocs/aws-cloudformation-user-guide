@@ -944,7 +944,7 @@ Resources:
     Type: AWS::S3::Bucket
     DeletionPolicy: Delete
     Properties:
-      BucketName: !Sub 'sshkeys-${AWS::Region}-${AWS::AccountId}'
+      BucketName: !Sub 'encryptedbucket-${AWS::Region}-${AWS::AccountId}'
       BucketEncryption:
         ServerSideEncryptionConfiguration:
           - ServerSideEncryptionByDefault:
