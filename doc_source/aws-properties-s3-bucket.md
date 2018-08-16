@@ -951,6 +951,53 @@ Resources:
               SSEAlgorithm: AES256
 ```
 
+## More Info<a name="w3ab2c21c10d963c19"></a>
+>>>>>>> f7527c3e5e1eaa0cead94f9a4eb52fe19e512e3f
+
+This example demonstrates creating bucket with server-side bucket encryption configured\.  This example uses S3 managed keys, but can be adapted to use KMS-managed keys by modifying the [ServerSideEncryptionByDefault](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionbydefault.html) properties.
+
+#### JSON<a name="aws-resource-s3-bucket-example1.json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "S3 bucket with default encryption",
+  "Resources": {
+    "EncryptedS3Bucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": {
+          "Fn::Sub": "encryptedbucket-${AWS::Region}-${AWS::AccountId}"
+        },
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [{
+            "ServerSideEncryptionByDefault": {
+              "SSEAlgorithm": "AES256"
+            }
+          }]
+        }
+      },
+      "DeletionPolicy": "Delete"
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-s3-bucket-example1.yaml"></a>
+
+```
+Resources:
+  EncryptedS3Bucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Delete
+    Properties:
+      BucketName: !Sub 'encryptedbucket-${AWS::Region}-${AWS::AccountId}'
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+```
+
 + For more examples, see [Amazon S3 Template Snippets](quickref-s3.md)\.
 + [DeletionPolicy Attribute](aws-attribute-deletionpolicy.md)
 + [Access Control List \(ACL\) Overview](http://docs.aws.amazon.com/AmazonS3/latest/dev/CannedACL.html) in the *Amazon Simple Storage Service Developer Guide*
