@@ -5,12 +5,12 @@ The `AWS::DMS::ReplicationSubnetGroup` resource creates an AWS DMS replication s
 **Note**  
 Resource creation will fail if the `dms-vpc-role` IAM role doesn't already exist\. For more information, see [ Creating the IAM Roles to Use With the AWS CLI and AWS DMS API](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.APIRole.html) in the *AWS Database Migration Service User Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-dms-replicationsubnet-group-syntax)
 + [Properties](#aws-resource-dms-replicationsubnet-group-prop)
-+ [Return Value](#w3ab2c21c10d328c13)
++ [Return Value](#w3ab2c21c10d364c13)
 + [Example](#aws-resource-dms-replicationsubnet-group-example)
-+ [See Also](#w3ab2c21c10d328c17)
++ [See Also](#w3ab2c21c10d364c17)
 
 ## Syntax<a name="aws-resource-dms-replicationsubnet-group-syntax"></a>
 
@@ -47,31 +47,31 @@ Properties:
 
 `ReplicationSubnetGroupIdentifier`  <a name="cfn-dms-replicationsubnetgroup-replicationsubnetgroupidentifier"></a>
 The identifier for the replication subnet group\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the identifier\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ReplicationSubnetGroupDescription`  <a name="cfn-dms-replicationsubnetgroup-replicationsubnetgroupdescription"></a>
 The description for the replication subnet group\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `SubnetIds`  <a name="cfn-dms-replicationsubnetgroup-subnetids"></a>
 The EC2 subnet IDs for the replication subnet group\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Tags`  <a name="cfn-dms-replicationsubnetgroup-tags"></a>
 The tags that you want to attach to the AWS DMS replication subnet group\.  
-*Required: *No  
+*Required*: No  
 *Type*: A list of [resource tags](aws-properties-resource-tags.md) in key\-value format\.  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-## Return Value<a name="w3ab2c21c10d328c13"></a>
+## Return Value<a name="w3ab2c21c10d364c13"></a>
 
-### Ref<a name="w3ab2c21c10d328c13b2"></a>
+### Ref<a name="w3ab2c21c10d364c13b2"></a>
 
 When you pass the logical ID of an `AWS::DMS::ReplicationSubnetGroup` resource to the intrinsic `Ref` function, the function returns the name of the replication subnet group, such as `mystack-myrepsubnetgroup-0a12bc456789de0fg`\.
 
@@ -117,8 +117,6 @@ Resources:
           Value: "String"
 ```
 
-## See Also<a name="w3ab2c21c10d328c17"></a>
-
+## See Also<a name="w3ab2c21c10d364c17"></a>
 + [CreateReplicationSubnetGroup](http://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationSubnetGroup.html) in the *AWS Database Migration Service API Reference*\.
-
 + [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)

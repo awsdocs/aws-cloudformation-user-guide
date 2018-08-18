@@ -6,7 +6,7 @@ The `AWS::ApiGateway::Account` resource specifies the AWS Identity and Access Ma
 If an API Gateway resource has never been created in your AWS account, you must add a dependency on another API Gateway resource, such as an [AWS::ApiGateway::RestApi](aws-resource-apigateway-restapi.md) or [AWS::ApiGateway::ApiKey](aws-resource-apigateway-apikey.md) resource\.  
 If an API Gateway resource has been created in your AWS account, no dependency is required \(even if the resource was deleted\)\.
 
-
+**Topics**
 + [Syntax](#aws-resource-apigateway-account-syntax)
 + [Properties](#aws-resource-apigateway-account-properties)
 + [Return Value](#aws-resource-apigateway-account-returnvalues)
@@ -39,7 +39,7 @@ Properties:
 
 `CloudWatchRoleArn`  <a name="cfn-apigateway-account-cloudwatchrolearn"></a>
 The Amazon Resource Name \(ARN\) of an IAM role that has write access to CloudWatch Logs in your account\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 

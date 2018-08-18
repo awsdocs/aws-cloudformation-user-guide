@@ -1,6 +1,6 @@
 # Amazon DynamoDB Template Snippets<a name="quickref-dynamodb"></a>
 
-
+**Topics**
 + [Application Auto Scaling with an Amazon DynamoDB Table](#quickref-dynamodb-application-autoscaling)
 + [See Also](#w3ab2c17c24c35b7)
 

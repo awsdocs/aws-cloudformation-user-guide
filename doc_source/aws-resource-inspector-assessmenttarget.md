@@ -2,7 +2,7 @@
 
 The `AWS::Inspector::AssessmentTarget` resource creates an Amazon Inspector assessment target \- a resource that contains information about an Amazon Inspector application\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-inspector-assessmenttarget-syntax)
 + [Properties](#aws-resource-inspector-assessmenttarget-properties)
 + [Return Values](#aws-resource-inspector-assessmenttarget-returnvalues)

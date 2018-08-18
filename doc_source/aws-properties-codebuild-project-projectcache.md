@@ -34,14 +34,11 @@ The Amazon S3 bucket name and prefix—for example, `mybucket/prefix`\. This val
 
 `Type`  <a name="cfn-codebuild-project-projectcache-type"></a>
 The type of cache for the build project to use\. Valid values are:  
-
 + `NO_CACHE`: The build project doesn't use any cache\.
-
 + `S3`: The build project reads from and writes to Amazon S3\.
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-codebuild-project-projectcache-seealso"></a>
-
 + [ ProjectCache](http://docs.aws.amazon.com/codebuild/latest/APIReference/API_ProjectCache.html) in the *AWS CodeBuild API Reference*

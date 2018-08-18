@@ -36,7 +36,6 @@ You can delete stack instances from a stack set in either the AWS Management Con
 **To delete stack instances by using the AWS CLI**
 
 When you are ready to delete stack instances, run the `delete-stack-instances` AWS CLI command\.
-
 + Run the following command, and replace *account\_ID* with the accounts you used to create your stack set in [Create a New Stack Set](stacksets-getting-started-create.md)\. For *stack set name*, specify the stack set name `my-awsconfig-stackset`\.
 
   Set the failure tolerance and maximum concurrent accounts by setting `FailureToleranceCount` to `0`, and `MaxConcurrentCount` to `1` in the `--operation-preferences` parameter, as shown in the following example\. To apply percentages instead, use `FailureTolerancePercentage` or `MaxConcurrentPercentage`\. For the purposes of this walkthrough, we are using count, not percentage\.

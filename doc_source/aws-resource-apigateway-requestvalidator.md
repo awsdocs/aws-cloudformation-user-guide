@@ -2,7 +2,7 @@
 
 The `AWS::ApiGateway::RequestValidator` resource sets up basic validation rules for incoming requests to your API Gateway API\. For more information, see [ Enable Basic Request Validation for an API in API Gateway](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html) in the *API Gateway Developer Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-apigateway-requestvalidator-syntax)
 + [Properties](#w3ab2c21c10c68b9)
 + [Return Value](#aws-resource-apigateway-requestvalidator-returnvalues)
@@ -44,25 +44,25 @@ For more information about each property, see [ RequestValidator](http://docs.aw
 
 `Name`  <a name="cfn-apigateway-requestvalidator-name"></a>
 The name of this request validator\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `RestApiId`  <a name="cfn-apigateway-requestvalidator-restapiid"></a>
 The identifier of the targeted API entity\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ValidateRequestBody`  <a name="cfn-apigateway-requestvalidator-validaterequestbody"></a>
 Indicates whether to validate the request body according to the configured schema for the targeted API and method\.  
-*Required: *No  
+*Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ValidateRequestParameters`  <a name="cfn-apigateway-requestvalidator-validaterequestparameters"></a>
 Indicates whether to validate request parameters\.  
-*Required: *No  
+*Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 

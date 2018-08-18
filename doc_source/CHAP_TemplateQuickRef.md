@@ -2,7 +2,7 @@
 
 This section provides a number of example scenarios that you can use to understand how to declare various AWS CloudFormation template parts\. You can also use the snippets as a starting point for sections of your custom templates\. 
 
-
+**Topics**
 + [General Template Snippets](quickref-general.md)
 + [Auto Scaling Template Snippets](quickref-autoscaling.md)
 + [AWS CloudFormation Template Snippets](quickref-cloudformation.md)

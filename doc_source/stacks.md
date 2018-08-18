@@ -9,7 +9,7 @@ You can work with stacks by using the AWS CloudFormation [console](https://conso
 **Note**  
 You are charged for the stack resources for the time they were operating \(even if you deleted the stack right away\)\.
 
-
+**Topics**
 + [Using the AWS CloudFormation Console](cfn-using-console.md)
 + [Using the AWS Command Line Interface](cfn-using-cli.md)
 + [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)

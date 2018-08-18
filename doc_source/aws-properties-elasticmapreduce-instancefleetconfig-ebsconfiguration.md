@@ -30,12 +30,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `EbsBlockDeviceConfigs`  <a name="cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsblockdeviceconfigs"></a>
 A list of Amazon EBS volume specifications that are attached to an instance\. Duplicates not allowed\.  
-*Required: *No  
+*Required*: No  
 *Type*: List of [Amazon EMR InstanceFleetConfig EbsBlockDeviceConfig](aws-properties-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `EbsOptimized`  <a name="cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsoptimized"></a>
 Indicates whether an Amazon EBS volume is EBS\-optimized\.  
-*Required: *No  
+*Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

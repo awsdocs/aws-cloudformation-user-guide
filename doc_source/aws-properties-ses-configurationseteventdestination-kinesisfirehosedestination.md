@@ -39,7 +39,5 @@ The ARN of the Amazon Kinesis Firehose stream that email sending events should b
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination-seealso"></a>
-
 + [Using Amazon SES Configuration Sets](url-ses-dev;using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*
-
 + [KinesisFirehoseDestination](http://docs.aws.amazon.com/ses/latest/APIReference/API_KinesisFirehoseDestination.html) in the *Amazon Simple Email Service API Reference*

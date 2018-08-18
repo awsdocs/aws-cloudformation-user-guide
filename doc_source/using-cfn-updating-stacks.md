@@ -13,7 +13,7 @@ AWS CloudFormation provides two methods for updating stacks: *direct update* or 
 
 With change sets, you can preview the changes AWS CloudFormation will make to your stack, and then decide whether to apply those changes\. Change sets are JSON\-formatted documents that summarize the changes AWS CloudFormation will make to a stack\. Use change sets when you want to ensure that AWS CloudFormation doesn't make unintentional changes or when you want to consider several options\. For example, you can use a change set to verify that AWS CloudFormation won't replace your stack's database instances during an update\.
 
-
+**Topics**
 + [Update Behaviors of Stack Resources](using-cfn-updating-stacks-update-behaviors.md)
 + [Modifying a Stack Template](using-cfn-updating-stacks-get-template.md)
 + [Updating Stacks Using Change Sets](using-cfn-updating-stacks-changesets.md)

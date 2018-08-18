@@ -2,7 +2,7 @@
 
 When you use StackSets, you work with *stack sets*, *stack instances*, and *stacks*\.
 
-
+**Topics**
 + [Administrator and target accounts](#stacksets-concepts-accts)
 + [Stack sets](#stacksets-concepts-stackset)
 + [Stack instances](#stacksets-concepts-stackinstances)
@@ -40,22 +40,15 @@ Creating a new stack set includes specifying an AWS CloudFormation template that
 
 Update stack set  
 When you update a stack set, you push changes out to stacks in your stack set\. You can update a stack set in one of the following ways\. Note that your template updates always affect all stacks; you cannot selectively update the template for some stacks in the stacks set, but not others\.  
-
 + Change existing settings in the template or add new resources, such as updating parameter settings for a specific service, or adding new Amazon EC2 instances\.
-
 + Replace the template with a different template\.
-
 + Add stacks in existing or additional target accounts, across existing or additional regions\.
 
 Delete stacks  
 When you delete stacks, you are removing a stack and all its associated resources from the target accounts you specify, within the regions you specify\. You can delete stacks in the following ways\.  
-
 + Delete stacks from some target accounts, while leaving other stacks in other target accounts running\.
-
 + Delete stacks from some regions, while leaving stacks in other regions running\.
-
 + Delete stacks from your stack set, but save them so they continue to run independently of your stack set by choosing the **Retain Stacks** option\. Retained stacks are managed in AWS CloudFormation, outside of your stack set\.
-
 + Delete all stacks in your stack set, in preparation for deleting your entire stack set\.
 
 Delete stack set  

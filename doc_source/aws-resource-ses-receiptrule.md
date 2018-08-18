@@ -2,7 +2,7 @@
 
 The `AWS::SES::ReceiptRule` resource specifies which actions Amazon SES should take when it receives mail on behalf of one or more email addresses or domains that you own\. For more information, see [Creating Receipt Rules for Amazon SES Email Receiving](url-ses-dev;receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-ses-receiptrule-syntax)
 + [Properties](#aws-resource-ses-receiptrule-properties)
 + [Example](#aws-resource-ses-receiptrule-examples)
@@ -180,9 +180,6 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-ses-receiptrule-seealso"></a>
-
 + [Creating Receipt Rules for Amazon SES Email Receiving](url-ses-dev;receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*
-
 + [CreateReceiptRule](url-ses-api;API_CreateReceiptRule.html) in the *Amazon Simple Email Service API Reference*
-
 + [ReceiptRule](url-ses-api;API_ReceiptRule.html) in the *Amazon Simple Email Service API Reference*

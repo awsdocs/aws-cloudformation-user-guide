@@ -2,7 +2,7 @@
 
 Amazon CloudWatch Logs can monitor your system, application, and custom log files from Amazon EC2 instances or other sources\. You can use AWS CloudFormation to provision and manage log groups and metric filters\. For more information about getting started with Amazon CloudWatch Logs, see [Monitoring System, Application, and Custom Log Files ](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatchLogs.html) in the *Amazon CloudWatch User Guide*\.
 
-
+**Topics**
 + [Send Logs to CloudWatch Logs from a Linux Instance](#quickref-cloudwatchlogs-example1)
 + [Send Logs to CloudWatch Logs from a Windows Instance](#quickref-cloudwatchlogs-example2)
 + [See Also](#w3ab2c17c24c31c11)
@@ -674,9 +674,7 @@ Outputs:
 The following template configures CloudWatch Logs for a Windows 2012R2 instance\.
 
 The CloudWatch Logs agent on Windows \(SSM agent on Windows 2012R2 and Windows 2016 AMIs\) only sends logs after it is started, so any logs that are generated prior to startup are not sent\. To work around this, the template helps to ensure that the agent starts before any logs are written by:
-
 + Configuring the agent setup as the first `config` item in cfn\-init `configSets`\.
-
 + Using `waitAfterCompletion` to insert a pause after the command that starts the agent\.
 
 ### JSON<a name="quickref-cloudwatchlogs-example2.json"></a>

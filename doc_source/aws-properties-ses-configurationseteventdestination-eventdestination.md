@@ -65,16 +65,12 @@ For a list of valid values, see [EventDestination](http://docs.aws.amazon.com/se
 
 `Name`  <a name="cfn-ses-configurationseteventdestination-eventdestination-name"></a>
 The name of the event destination\. The name can:  
-
 + Contain ASCII letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), or dashes \(\-\)\.
-
 + Contain up to 64 characters\.
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ses-configurationseteventdestination-eventdestination-seealso"></a>
-
 + [Using Amazon SES Configuration Sets](url-ses-dev;using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*
-
 + [EventDestination](http://docs.aws.amazon.com/ses/latest/APIReference/API_EventDestination.html) in the *Amazon Simple Email Service API Reference*

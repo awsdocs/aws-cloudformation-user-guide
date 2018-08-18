@@ -47,11 +47,7 @@ The Amazon Resource Name \(ARN\) of the Amazon SNS topic to notify\. An example 
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ses-receiptrule-snsaction-seealso"></a>
-
 + [Creating Receipt Rules for Amazon SES Email Receiving](url-ses-dev;receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*
-
 + [Giving Permissions to Amazon SES for Email Receiving](url-ses-dev;receiving-email-permissions.html) in the *Amazon Simple Email Service Developer Guide*
-
 + [SNS Action](url-ses-dev;receiving-email-action-sns.html) in the *Amazon Simple Email Service Developer Guide*
-
 + [SNSAction](url-ses-api;API_SNSAction.html) in the *Amazon Simple Email Service API Reference*

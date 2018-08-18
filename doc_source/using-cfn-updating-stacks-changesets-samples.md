@@ -179,9 +179,7 @@ The `Purpose` parameter specifies a tag key value for the EC2 instance\. In the 
 The `Changes` structure functions similar to way it does in the [Directly Editing a Template](#using-cfn-updating-stacks-changesets-samples-directly-editing-a-template) example\. There's only one `ResourceChange` structure; it describes a change to the `Tags` attribute of the `i-1abc23d4` EC2 instance\.
 
 However, in the `Details` structure, the change set shows two changes for the `Tags` attribute, even though only a single parameter value was changed\. Resources that reference a changed parameter value \(using the `Ref` intrinsic function\) always result in two changes: one with a `Dynamic` evaluation and another with a `Static` evaluation\. You can see these types of changes by viewing the following fields:
-
 + For the `Static` evaluation change, view the `ChangeSource` field\. In this example, the `ChangeSource` field equals `ParameterReference`, meaning that this change is a result of an updated parameter reference value\. The change set must contain a similar `Dynamic` evaluation change\.
-
 + You can find the matching `Dynamic` evaluation change by comparing the `Target` structure for both changes, which will contain the same information\. In this example, the `Target` structures for both changes contain the same values for the `Attribute` and `RequireRecreation` fields\.
 
 For these types of changes, focus on the static evaluation, which gives you the most detailed information about the change\. In this example, the static evaluation shows that the change is the result of a change in a parameter reference value \(`ParameterReference`\)\. The exact parameter that was changed is indicated by the `CauseEntity` field \(the `Purpose` parameter\)\.
