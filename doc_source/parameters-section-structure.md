@@ -167,7 +167,6 @@ AWS\-Specific Parameter Types
 AWS values such as Amazon EC2 key pair names and VPC IDs\. For more information, see [AWS\-Specific Parameter Types](#aws-specific-parameter-types)\.  
 `SSM` Parameter Types  
 Parameters that correspond to existing parameters in AWS Systems Manager Parameter Store\. You specify a Systems Manager parameter key as the value of the `SSM` parameter, and AWS CloudFormation fetches the latest value from Parameter Store to use for the stack\. For more information, see [`SSM` Parameter Types](#aws-ssm-parameter-types)\.  
-AWS CloudFormation doesn't currently support the `SecureString` Systems Manager parameter type\.
 
 ## AWS\-Specific Parameter Types<a name="aws-specific-parameter-types"></a>
 
@@ -276,9 +275,6 @@ A Systems Manager parameter whose value is a list of [AWS\-specific parameter ty
 `AWS::SSM::Parameter::Value<List<AWS::EC2::KeyPair::KeyPairName>>`
 
 ### Unsupported `SSM` Parameter Types<a name="aws-ssm-parameter-types-unsupported"></a>
-
-AWS CloudFormation doesn't support the following `SSM` parameter types:
-+ `SecureString` Systems Manager parameter types
 + List of `SSM` parameter types—for example: `List<AWS::SSM::Parameter::Value<String>>`
 
 ## Grouping and Sorting Parameters in the AWS CloudFormation Console<a name="parameters-section-structure-grouping"></a>
