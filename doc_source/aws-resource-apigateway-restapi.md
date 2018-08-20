@@ -57,7 +57,7 @@ Properties:
   [Name](#cfn-apigateway-restapi-name): String
   [Parameters](#cfn-apigateway-restapi-parameters):
     String: String
- [Policy](#cfn-apigateway-restapi-policy): JSON object
+  [Policy](#cfn-apigateway-restapi-policy): JSON object
 ```
 
 ## Properties<a name="w3ab2c21c10c76c11"></a>

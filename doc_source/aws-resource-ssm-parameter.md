@@ -18,11 +18,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SSM::Parameter",
   "Properties" : {
-    "[Name](#cfn-ssm-parameter-name)" : String,
+    "[AllowedPattern](#cfn-ssm-parameter-allowedpattern)" : String,
     "[Description](#cfn-ssm-parameter-description)" : String,
+    "[Name](#cfn-ssm-parameter-name)" : String,
     "[Type](#cfn-ssm-parameter-type)" : String,
-    "[Value](#cfn-ssm-parameter-value)" : String,
-    "[AllowedPattern](#cfn-ssm-parameter-allowedpattern)" : String
+    "[Value](#cfn-ssm-parameter-value)" : String
   }
 }
 ```
@@ -31,27 +31,33 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: "AWS::SSM::Parameter"
-Properties: 
-  [Name](#cfn-ssm-parameter-name): String
+Properties:
+  [AllowedPattern](#cfn-ssm-parameter-allowedpattern): String
   [Description](#cfn-ssm-parameter-description): String
+  [Name](#cfn-ssm-parameter-name): String
   [Type](#cfn-ssm-parameter-type): String
   [Value](#cfn-ssm-parameter-value): String
-  [AllowedPattern](#cfn-ssm-parameter-allowedpattern): String
 ```
 
 ## Properties<a name="aws-resource-ssm-parameter-properties"></a>
 
-`Name`  <a name="cfn-ssm-parameter-name"></a>
-The name of the parameter\. Names must not be prefixed with `aws` or `ssm`\.  
+`AllowedPattern`  <a name="cfn-ssm-parameter-allowedpattern"></a>
+A regular expression used to validate the parameter value\. For example, for String types with values restricted to numbers, you can specify the following: `AllowedPattern=^\d+$`  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Description`  <a name="cfn-ssm-parameter-description"></a>
 Information about the parameter that you want to add to the system\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`Name`  <a name="cfn-ssm-parameter-name"></a>
+The name of the parameter\. Names must not be prefixed with `aws` or `ssm`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Type`  <a name="cfn-ssm-parameter-type"></a>
 The type of parameter\. Valid values include the following: `String` or `StringList`\.  
@@ -63,12 +69,6 @@ AWS CloudFormation doesn't support the `SecureString` parameter type\.
 `Value`  <a name="cfn-ssm-parameter-value"></a>
 The parameter value\. Value must not nest another parameter\. Do not use `{{}}` in the value\.  
 *Required*: Yes  
-*Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
-
-`AllowedPattern`  <a name="cfn-ssm-parameter-allowedpattern"></a>
-A regular expression used to validate the parameter value\. For example, for String types with values restricted to numbers, you can specify the following: `AllowedPattern=^\d+$`  
-*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 

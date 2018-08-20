@@ -34,7 +34,7 @@ AWS CloudFormation increments the patch number when the service makes a backward
 Backwards incompatible changes increment the major version number\. A backwards incompatible change can result from a change in the resource specification, such as a name change to a field, or a change to a resource, such as the making an optional resource property required\.
 
 `ResourceTypes`  
-The list of resources and information about each resource's properties, such as its property names, which properties are requires, and their update behavior\. For more information, see [Resource Specification](#cfn-resource-specification-format-resourcetype)\.  
+The list of resources and information about each resource's properties, such as its property names, which properties are required, and their update behavior\. For more information, see [Resource Specification](#cfn-resource-specification-format-resourcetype)\.  
 If you view a file that contains the definition of one resource type, this property name is `ResourceType` \(singular\)\. 
 
 ## Property Specification<a name="cfn-resource-specification-format-propertytypes"></a>

@@ -247,6 +247,7 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::AccountId  |  `123456789012`  | 
 |  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::NotificationARNs  |  `[arn:aws:sns:us-east-1:123456789012:MyTopic]`  | 
 |  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::NoValue  |  Does not return a value\.  | 
+|  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::Partition  |  `aws`  | 
 |  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::Region  |  `us-east-2`  | 
 |  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::StackId  |  `arn:aws:cloudformation:us-east-1:123456789012:stack/MyStack/1c2fa620-982a-11e3-aff7-50e2416294e0`  | 
 |  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::StackName  |  `MyStack`  | 

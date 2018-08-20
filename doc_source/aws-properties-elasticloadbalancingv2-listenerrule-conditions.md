@@ -25,7 +25,7 @@
 
 `Field`  <a name="cfn-elasticloadbalancingv2-listenerrule-conditions-field"></a>
 The name of the condition that you want to define, such as `path-pattern` \(which forwards requests based on the URL of the request\)\.  
-For valid values, see the `Field` contents for the [RuleCondition](http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_RuleCondition.html) data type in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
+For valid values, see the `Field` contents for the [RuleCondition](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_RuleCondition.html) data type in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
 *Required*: No  
 *Type*: String
 

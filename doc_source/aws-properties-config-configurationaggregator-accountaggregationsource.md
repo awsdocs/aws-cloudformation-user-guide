@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-config-configurationaggregator-accountaggregationsource-properties"></a>
 
 `AllAwsRegions`  <a name="cfn-config-configurationaggregator-accountaggregationsource-allawsregions"></a>
-If true aggreagate existing AWS Config regions and future regions\.  
+If true aggregate existing AWS Config regions and future regions\.  
  *Required*: No  
  *Type*: Boolean  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

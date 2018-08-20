@@ -248,7 +248,7 @@ The weekly time range \(in UTC\) during which automated cluster maintenance can 
 Indicates whether the cluster can be accessed from a public network\.  
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 `SnapshotClusterIdentifier`  <a name="cfn-redshift-cluster-snapshotclusteridentifier"></a>
 The name of the cluster that the source snapshot was created from\. For more information about restoring from a snapshot, see the [RestoreFromClusterSnapshot](http://docs.aws.amazon.com/redshift/latest/APIReference/API_RestoreFromClusterSnapshot.html) action in the *Amazon Redshift API Reference*\.  

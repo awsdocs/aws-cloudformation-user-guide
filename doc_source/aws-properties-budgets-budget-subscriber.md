@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-budgets-budget-subscriber-properties"></a>
 
 `SubscriptionType`  <a name="cfn-budgets-budget-subscriber-subscriptiontype"></a>
-The type of notification that AWS sends to a subscriber, such as `email` or `SNS`\.  
+The type of notification that AWS sends to a subscriber, such as `EMAIL` or `SNS`\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

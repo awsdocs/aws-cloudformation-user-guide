@@ -60,7 +60,7 @@ Properties:
   [HealthCheckType](#cfn-as-group-healthchecktype): String
   [InstanceId](#cfn-as-group-instanceid): String
   [LaunchConfigurationName](#cfn-as-group-launchconfigurationname): String
-  [LaunchTemplate](#cfn-as-group-launchtemplate)" : [*LaunchTemplateSpecification*](aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.md)
+  [LaunchTemplate](#cfn-as-group-launchtemplate): [*LaunchTemplateSpecification*](aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.md)
   [LifecycleHookSpecificationList](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecificationlist): 
     - [*LifecycleHookSpecification*](aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.md)
   [LoadBalancerNames](#cfn-as-group-loadbalancernames):

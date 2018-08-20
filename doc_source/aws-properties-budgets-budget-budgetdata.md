@@ -1,6 +1,6 @@
 # AWS Billing and Cost Management Budget BudgetData<a name="aws-properties-budgets-budget-budgetdata"></a>
 
-<a name="aws-properties-budgets-budget-budgetdata-description"></a>The `BudgetData` property type specifies all of the parameters that CloudFront uses to create the budget\. These parameters include the time period that the budget covers, the amount that the budget is for, the name of the budget, what costs, usage, or RI utilization the Billing and Cost Management budget is for, and whether the budget tracks what you have spent or what you are forecast to spend\.
+<a name="aws-properties-budgets-budget-budgetdata-description"></a>The `BudgetData` property type specifies all of the parameters that CloudFormation uses to create the budget\. These parameters include the time period that the budget covers, the amount that the budget is for, the name of the budget, what costs, usage, or RI utilization the Billing and Cost Management budget is for, and whether the budget tracks what you have spent or what you are forecast to spend\.
 
 <a name="aws-properties-budgets-budget-budgetdata-inheritance"></a> `BudgetData` is a property of the [AWS::Budgets::Budget](aws-resource-budgets-budget.md) resource\.
 

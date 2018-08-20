@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ElasticLoadBalancingV2::LoadBalancer",
   "Properties" : {    
+    "[IpAddressType](#cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype)" : String,
     "[LoadBalancerAttributes](#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes)" : [ [*LoadBalancerAttributes*](aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes.md), ... ],
     "[Name](#cfn-elasticloadbalancingv2-loadbalancer-name)" : String,
     "[Scheme](#cfn-elasticloadbalancingv2-loadbalancer-scheme)" : String,
@@ -28,8 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[SubnetMappings](#cfn-elasticloadbalancingv2-loadbalancer-subnetmappings)" : [ [*SubnetMapping*](aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.md), ... ],
     "[Subnets](#cfn-elasticloadbalancingv2-loadbalancer-subnets)" : [ String, ... ],
     "[Tags](#cfn-elasticloadbalancingv2-loadbalancer-tags)" : [ Resource Tag, ... ],
-    "[Type](#cfn-elasticloadbalancingv2-loadbalancer-type)" : String,
-    "[IpAddressType](#cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype)" : String
+    "[Type](#cfn-elasticloadbalancingv2-loadbalancer-type)" : String
   }
 }
 ```
@@ -39,6 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ElasticLoadBalancingV2::LoadBalancer"
 Properties:
+  [IpAddressType](#cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype): String
   [LoadBalancerAttributes](#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes):
     - [LoadBalancerAttributes](aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes.md)
   [Name](#cfn-elasticloadbalancingv2-loadbalancer-name): String
@@ -52,12 +53,18 @@ Properties:
   [Tags](#cfn-elasticloadbalancingv2-loadbalancer-tags):
     - Resource Tag
   [Type](#cfn-elasticloadbalancingv2-loadbalancer-type): String
-  [IpAddressType](#cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype): String
 ```
 
 ## Properties<a name="w3ab2c21c10d648c10"></a>
 
 For more information and valid parameter values, see the see the `[CreateLoadBalancer](http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateLoadBalancer.html)` action in the [Elastic Load Balancing API Reference version 2015\-12\-01](http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/)\.
+
+`IpAddressType`  <a name="cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype"></a>
+\[Application Load Balancers\] The type of IP addresses that are used by the load balancer's subnets, such as `ipv4` \(for IPv4 addresses\) or `dualstack` \(for IPv4 and IPv6 addresses\)\. For valid values, see the `IpAddressType` parameter for the `[CreateLoadBalancer](http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateLoadBalancer.html)` action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\. The default value is `ipv4`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)  
+If `Scheme` is `internal`, then `IpAddressType` must be `ipv4`\.
 
 `LoadBalancerAttributes`  <a name="cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes"></a>
 Specifies the load balancer configuration\.  
@@ -113,13 +120,6 @@ Specifies the type of load balancer to create\. Valid values are `application` a
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`IpAddressType`  <a name="cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype"></a>
-\[Application Load Balancers\] The type of IP addresses that are used by the load balancer's subnets, such as `ipv4` \(for IPv4 addresses\) or `dualstack` \(for IPv4 and IPv6 addresses\)\. For valid values, see the `IpAddressType` parameter for the `[CreateLoadBalancer](http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateLoadBalancer.html)` action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\. The default value is `ipv4`\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)  
-If `Scheme` is `internal`, then `IpAddressType` must be `ipv4`\.
-
 ## Return Values<a name="w3ab2c21c10d648c12"></a>
 
 ### Ref<a name="w3ab2c21c10d648c12b2"></a>
@@ -136,11 +136,11 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Fn::GetAtt` returns a value for the following attributes\.
 
-`DNSName`  
-The DNS name for the load balancer, for example `my-load-balancer-424835706.us-west-2.elb.amazonaws.com`\.
-
 `CanonicalHostedZoneID`  
 The ID of the Amazon Route 53 hosted zone associated with the load balancer, for example `Z2P70J7EXAMPLE`\.
+
+`DNSName`  
+The DNS name for the load balancer, for example `my-load-balancer-424835706.us-west-2.elb.amazonaws.com`\.
 
 `LoadBalancerFullName`  
 The full name of the load balancer, for example `app/my-load-balancer/50dc6c495c0c9188`\.
