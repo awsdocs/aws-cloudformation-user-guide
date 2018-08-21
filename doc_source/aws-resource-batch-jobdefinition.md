@@ -2,7 +2,7 @@
 
 The `AWS::Batch::JobDefinition` resource specifies the parameters for an AWS Batch job definition\. For more information, see [Job Definitions](http://docs.aws.amazon.com/batch/latest/userguide/job_definitions.html) in the *AWS Batch User Guide*\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-batch-jobdefinition-syntax)
 + [Properties](#aws-resource-batch-jobdefinition-properties)
 + [Return Values](#aws-resource-batch-jobdefinition-returnvalues)
@@ -75,7 +75,7 @@ The retry strategy to use for failed jobs that are submitted with this job defin
 
 ## Return Values<a name="aws-resource-batch-jobdefinition-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d136c10b2"></a>
+### Ref<a name="w3ab2c21c10d160c10b2"></a>
 
 When you pass the logical ID of an `AWS::Batch::JobDefinition` resource to the intrinsic `Ref` function, the function returns the job definition ARN, such as `arn:aws:batch:us-east-1:111122223333:job-definition/test-gpu:2`\. 
 

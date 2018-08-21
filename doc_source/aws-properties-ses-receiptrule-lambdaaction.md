@@ -51,11 +51,7 @@ The Amazon Resource Name \(ARN\) of the Amazon SNS topic to notify when the Lamb
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ses-receiptrule-lambdaaction-seealso"></a>
-
 + [Creating Receipt Rules for Amazon SES Email Receiving](url-ses-dev;receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*
-
 + [Giving Permissions to Amazon SES for Email Receiving](url-ses-dev;receiving-email-permissions.html) in the *Amazon Simple Email Service Developer Guide*
-
 + [Lambda Action](url-ses-dev;receiving-email-action-lambda.html) in the *Amazon Simple Email Service Developer Guide*
-
 + [LambdaAction](url-ses-api;API_LambdaAction.html) in the *Amazon Simple Email Service API Reference*

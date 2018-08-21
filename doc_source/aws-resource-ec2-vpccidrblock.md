@@ -2,7 +2,7 @@
 
 The `AWS::EC2::VPCCidrBlock` resource associates a single Amazon\-provided IPv6 CIDR block or a single user\-specified IPv4 CIDR block with a Virtual Private Cloud \(VPC\)\.
 
-
+**Topics**
 + [Syntax](#aws-resource-ec2-vpccidrblock-syntax)
 + [Properties](#aws-resource-ec2-vpccidrblock-properties)
 + [Examples](#aws-resource-ec2-vpccidrblock-examples)
@@ -38,19 +38,19 @@ Properties:
 
 `AmazonProvidedIpv6CidrBlock`  <a name="cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock"></a>
 Whether to request an Amazon\-provided IPv6 CIDR block with a /56 prefix length for the VPC\. You can't specify the range of IPv6 addresses or the size of the CIDR block\.  
-*Required: *No  
+*Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `CidrBlock`  <a name="cfn-ec2-vpccidrblock-cidrblock"></a>
 An IPv4 CIDR block to associate with the VPC\.   
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `VpcId`  <a name="cfn-ec2-vpccidrblock-vpcid"></a>
 The ID of the VPC to associate the Amazon\-provided IPv6 CIDR block with\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 

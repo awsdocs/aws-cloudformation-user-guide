@@ -8,7 +8,7 @@ You can add as many files as you need to your repository\. For example, you migh
 
 This topic describes each artifact type\.
 
-
+**Topics**
 + [Stack Template File](#w3ab2c13c15c13)
 + [Template Configuration File](#w3ab2c13c15c15)
 

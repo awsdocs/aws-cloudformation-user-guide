@@ -5,11 +5,11 @@ A VPC peering connection enables a network connection between two virtual privat
 **Note**  
 You can create a peering connection with another AWS account\. For a detailed walkthrough, see [Walkthrough: Peer with an Amazon VPC in Another AWS Account](peer-with-vpc-in-another-account.md)\.
 
-
+**Topics**
 + [Syntax](#aws-resource-ec2-vpcpeeringconnection-syntax)
-+ [Properties](#w3ab2c21c10d490c10)
-+ [Return Values](#w3ab2c21c10d490c12)
-+ [Examples](#w3ab2c21c10d490c14)
++ [Properties](#w3ab2c21c10d531c10)
++ [Return Values](#w3ab2c21c10d531c12)
++ [Examples](#w3ab2c21c10d531c14)
 
 ## Syntax<a name="aws-resource-ec2-vpcpeeringconnection-syntax"></a>
 
@@ -43,47 +43,47 @@ Properties:
   [PeerRoleArn](#cfn-ec2-vpcpeeringconnection-peerrolearn):  String
 ```
 
-## Properties<a name="w3ab2c21c10d490c10"></a>
+## Properties<a name="w3ab2c21c10d531c10"></a>
 
 `PeerVpcId`  <a name="cfn-ec2-vpcpeeringconnection-peervpcid"></a>
 The ID of the VPC with which you are creating the peering connection\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Tags`  <a name="cfn-ec2-vpcpeeringconnection-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this resource\.  
-*Required: *No  
+*Required*: No  
 *Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
 `VpcId`  <a name="cfn-ec2-vpcpeeringconnection-vpcid"></a>
 The ID of the VPC that is requesting a peering connection\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `PeerOwnerId`  <a name="cfn-ec2-vpcpeeringconnection-peerownerid"></a>
 The AWS account ID of the owner of the VPC that you want to peer with\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `PeerRoleArn`  <a name="cfn-ec2-vpcpeeringconnection-peerrolearn"></a>
 The Amazon Resource Name \(ARN\) of the VPC peer role for the peering connection in another AWS account\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w3ab2c21c10d490c12"></a>
+## Return Values<a name="w3ab2c21c10d531c12"></a>
 
-### Ref<a name="w3ab2c21c10d490c12b2"></a>
+### Ref<a name="w3ab2c21c10d531c12b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w3ab2c21c10d490c14"></a>
+## Examples<a name="w3ab2c21c10d531c14"></a>
 
 The following example template creates two VPCs to demonstrate how to configure a peering connection\. For a VPC peering connection, you must create a VPC peering route for each VPC route table, as shown in the example by `PeeringRoute1` and `PeeringRoute2`\. If you launch the template, you can connect to the `myInstance` instance using SSH, and then ping the `myPrivateInstance` instance although both instances are in separate VPCs\.
 

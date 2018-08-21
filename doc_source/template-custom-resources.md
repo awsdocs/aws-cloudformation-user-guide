@@ -36,7 +36,7 @@ During a stack operation, sends a request to a service token that is specified i
    {
       "RequestType" : "Create",
       "ResponseURL" : "http://pre-signed-S3-url-for-response",
-      "StackId" : "arn:aws:cloudformation:us-west-2:EXAMPLE/stack-name/guid",
+      "StackId" : "arn:aws:cloudformation:us-west-2:123456789012:stack/stack-name/guid",
       "RequestId" : "unique id for this create request",
       "ResourceType" : "Custom::TestResource",
       "LogicalResourceId" : "MyTestResource",
@@ -73,4 +73,4 @@ If the name\-value pairs contain sensitive information, you should use the `NoEc
    }
    ```
 
-1. After getting a `SUCCESS` response, AWS CloudFormation proceeds with the stack operation\. If a `FAILED` or no response is returned, the operation fails\. Any output data from the custom resource is stored in the pre\-signed URL location\. The template developer can retrieve that data by using the [`Fn::GetAtt`](intrinsic-function-reference-getatt.md) function\.
+1. After getting a `SUCCESS` response, AWS CloudFormation proceeds with the stack operation\. If a `FAILURE` or no response is returned, the operation fails\. Any output data from the custom resource is stored in the pre\-signed URL location\. The template developer can retrieve that data by using the [`Fn::GetAtt`](intrinsic-function-reference-getatt.md) function\.

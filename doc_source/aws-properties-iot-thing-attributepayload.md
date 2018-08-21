@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Attributes`  <a name="cfn-iot-thing-attributepayload-attributes"></a>
 A string that contains up to three key–value pairs\. Maximum length of 800\. Duplicates not allowed\.  
-*Required: *No  
+*Required*: No  
 *Type*: String to string map  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 

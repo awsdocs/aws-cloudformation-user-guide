@@ -1,8 +1,8 @@
-# Amazon EC2 Systems Manager MaintenanceWindowTask MaintenanceWindowRunCommandParameters<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters"></a>
+# AWS Systems Manager MaintenanceWindowTask MaintenanceWindowRunCommandParameters<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters"></a>
 
-<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-description"></a>The `MaintenanceWindowRunCommandParameters` property type specifies the parameters for a `RUN_COMMAND` task type for an Amazon EC2 Systems Manager Maintenance Window task\.
+<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-description"></a>The `MaintenanceWindowRunCommandParameters` property type specifies the parameters for a `RUN_COMMAND` task type for a Maintenance Window task in AWS Systems Manager\.
 
-<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-inheritance"></a> `MaintenanceWindowRunCommandParameters` is a property of the [SSM MaintenanceWindowTask TaskInvocationParameters](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md) property type\.
+<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-inheritance"></a> `MaintenanceWindowRunCommandParameters` is a property of the [Systems Manager MaintenanceWindowTask TaskInvocationParameters](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md) property type\.
 
 ## Syntax<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-syntax"></a>
 
@@ -81,7 +81,7 @@ The IAM service role that's used during task execution\.
 `NotificationConfig`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-notificationconfig"></a>
 Configurations for sending notifications about command status changes on a per\-instance basis\.  
  *Required*: No  
- *Type*: [SSM MaintenanceWindowTask NotificationConfig](aws-properties-ssm-maintenancewindowtask-notificationconfig.md)  
+ *Type*: [Systems Manager MaintenanceWindowTask NotificationConfig](aws-properties-ssm-maintenancewindowtask-notificationconfig.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `OutputS3BucketName`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-outputs3bucketname"></a>

@@ -2,7 +2,7 @@
 
 The `AWS::Glue::Partition` resource creates an AWS Glue partition, which represents a slice of table data\. For more information, see [CreatePartition Action](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-CreatePartition) and [Partition Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-Partition) in the *AWS Glue Developer Guide*\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-glue-partition-syntax)
 + [Properties](#aws-resource-glue-partition-properties)
 + [See Also](#aws-resource-glue-partition-seealso)
@@ -65,7 +65,5 @@ The metadata of the partition\.
  *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt) 
 
 ## See Also<a name="aws-resource-glue-partition-seealso"></a>
-
 + [CreatePartition Action](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-CreatePartition) in the *AWS Glue Developer Guide*
-
 + [Partition Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-Partition) in the *AWS Glue Developer Guide*

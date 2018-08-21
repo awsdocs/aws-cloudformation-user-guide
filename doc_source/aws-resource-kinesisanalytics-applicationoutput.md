@@ -2,7 +2,7 @@
 
 The `AWS::KinesisAnalytics::ApplicationOutput` resource adds an external destination to your Amazon Kinesis Data Analytics application\. For more information, see [AddApplicationOutput](http://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_AddApplicationOutput.html) in the *Amazon Kinesis Data Analytics Developer Guide*\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-kinesisanalytics-applicationoutput-syntax)
 + [Properties](#aws-resource-kinesisanalytics-applicationoutput-properties)
 + [Examples](#aws-resource-kinesisanalytics-applicationoutput-examples)

@@ -1,8 +1,8 @@
 # Amazon EC2 Instance SsmAssociations AssociationParameters<a name="aws-properties-ec2-instance-ssmassociations-associationparameters"></a>
 
-`AssociationParameters` is a property of the [Amazon EC2 Instance SsmAssociations](aws-properties-ec2-instance-ssmassociations.md) property that specifies input parameter values for an Amazon EC2 Systems Manager \(SSM\) document\.
+`AssociationParameters` is a property of the [Amazon EC2 Instance SsmAssociations](aws-properties-ec2-instance-ssmassociations.md) property that specifies input parameter values for an SSM document in AWS Systems Manager\.
 
-## Syntax<a name="w3ab2c21c14d578b5"></a>
+## Syntax<a name="w3ab2c21c14d665b5"></a>
 
 ### JSON<a name="aws-properties-ec2-instance-ssmassociations-associationparameters-syntax.json"></a>
 
@@ -21,14 +21,14 @@
   - String
 ```
 
-## Properties<a name="w3ab2c21c14d578b7"></a>
+## Properties<a name="w3ab2c21c14d665b7"></a>
 
 `Key`  <a name="cfn-ec2-instance-ssmassociations-associationparameters-key"></a>
 The name of an input parameter that is in the associated SSM document\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String
 
 `Value`  <a name="cfn-ec2-instance-ssmassociations-associationparameters-value"></a>
 The value of an input parameter\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: List of String values

@@ -2,7 +2,7 @@
 
 The `AWS::ApiGateway::ClientCertificate` resource creates a client certificate that Amazon API Gateway \(API Gateway\) uses to configure client\-side SSL authentication for sending requests to the integration endpoint\.
 
-
+**Topics**
 + [Syntax](#aws-resource-apigateway-clientcertificate-syntax)
 + [Properties](#w3ab2c21c10c31b9)
 + [Return Value](#w3ab2c21c10c31c11)
@@ -35,7 +35,7 @@ Properties:
 
 `Description`  <a name="cfn-apigateway-clientcertificate-description"></a>
 A description of the client certificate\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 

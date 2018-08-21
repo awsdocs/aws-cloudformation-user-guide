@@ -6,7 +6,7 @@ After you set a stack policy, all of the resources in the stack are protected by
 
 A stack policy applies only during stack updates\. It doesn't provide access controls like an AWS Identity and Access Management \(IAM\) policy\. Use a stack policy only as a fail\-safe mechanism to prevent accidental updates to specific stack resources\. To control access to AWS resources or actions, use IAM\.
 
-
+**Topics**
 + [Example Stack Policy](#stack-policy-intro-example)
 + [Defining a Stack Policy](#stack-policy-reference)
 + [Setting a Stack Policy](#protect-stack-resources-protecting)
@@ -198,11 +198,9 @@ For information about writing stack policies, see [Defining a Stack Policy](#sta
 1. Choose `Browse`, and then choose the file that contains the stack policy, or type the policy in the `Stack policy` text box\.
 
 **To set a stack policy when you create a stack \(CLI\)**
-
 + Use the `[aws cloudformation create\-stack](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html)` command with the `--stack-policy-body` option to type in a modified policy or the `--stack-policy-url` option to specify a file containing the policy\. 
 
 **To set a stack policy on an existing stack \(CLI only\)**
-
 + Use the `[aws cloudformation set\-stack\-policy](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/set-stack-policy.html)` command with the `--stack-policy-body` option to type in a modified policy or the `--stack-policy-url` option to specify a file containing the policy\.
 **Note**  
 To add a policy to an existing stack, you must have permission to the AWS CloudFormation `SetStackPolicy` action\.
@@ -224,9 +222,7 @@ During a stack update, AWS CloudFormation automatically updates resources that d
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cfn-update-stack-initiating.png)
 
 1. If you modified the stack template, specify the location of the updated template\. If not, choose **Use current template**\.
-
    + For a template stored locally on your computer, choose **Upload a template to Amazon S3**\. Choose **Choose File** to navigate to the file, select it, and then choose **Next**\.
-
    + For a template stored in an Amazon S3 bucket, choose **Specify an Amazon S3 URL**\. Type or paste the URL for the template, and then choose **Next**\.
 
      If you have a template in a versioning\-enabled bucket, you can specify a specific version of the template, such as `https://s3.amazonaws.com/templates/myTemplate.template?versionId=123ab1cdeKdOW5IH4GAcYbEngcpTJTDW`\. For more information, see [Managing Objects in a Versioning\-Enabled Bucket](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/managing-objects-versioned-bucket.html) in the *Amazon Simple Storage Service Console User Guide*\.
@@ -267,7 +263,6 @@ AWS CloudFormation applies the override policy only during this update\. The ove
    If the stack update fails, AWS CloudFormation automatically rolls back changes, and sets the state to **UPDATE\_ROLLBACK\_COMPLETE**\.
 
 **To update a protected resource \(CLI\)**
-
 + Use the `[aws cloudformation update\-stack](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html)` command with the `--stack-policy-during-update-body` option to type in a modified policy or the `--stack-policy-during-update-url` option to specify a file containing the policy\.
 **Note**  
 AWS CloudFormation applies the override policy only during this update\. The override policy doesn't permanently change the stack policy\. To modify a stack policy, see [Modifying a Stack Policy ](#protect-stack-resources-modifying)\.
@@ -279,7 +274,6 @@ To protect additional resources or to remove protection from resources, modify t
 Use the AWS CLI to modify stack policies\.
 
 **To modify a stack policy \(CLI\)**
-
 + Use the `[aws cloudformation set\-stack\-policy](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/set-stack-policy.html)` command with the `--stack-policy-body` option to type in a modified policy or the `--stack-policy-url` option to specify a file containing the policy\.
 
 You can't delete a stack policy\. To remove all protection from all resources, you modify the policy to explicitly allow all actions on all resources\. The following policy allows all updates on all resources:

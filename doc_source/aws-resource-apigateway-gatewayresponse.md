@@ -2,7 +2,7 @@
 
 The `AWS::ApiGateway::GatewayResponse` resource creates a custom response for your API Gateway API\. For more information, see [API Gateway Responses ](http://docs.aws.amazon.com/apigateway/latest/developerguide/customize-gateway-responses.html#api-gateway-gatewayResponse-definition) in the *API Gateway Developer Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-apigateway-gatewayresponse-syntax)
 + [Properties](#aws-resource-apigateway-gatewayresponse-properties)
 + [Examples](#aws-resource-apigateway-gatewayresponse-examples)

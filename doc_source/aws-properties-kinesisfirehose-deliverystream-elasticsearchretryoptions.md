@@ -24,5 +24,5 @@ The `ElasticsearchRetryOptions` property type configures the retry behavior for 
 
 `DurationInSeconds`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchretryoptions-durationinseconds"></a>
 After an initial failure to deliver to Amazon ES, the total amount of time during which Kinesis Firehose re\-attempts delivery \(including the first attempt\)\. If Kinesis Firehose can't deliver the data within the specified time, it writes the data to the backup S3 bucket\. For valid values, see the `DurationInSeconds` content for the [ElasticsearchRetryOptions](http://docs.aws.amazon.com/firehose/latest/APIReference/API_ElasticsearchRetryOptions.html) data type in the *Amazon Kinesis Firehose API Reference*\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: Integer

@@ -26,15 +26,15 @@
 
 `DbPassword`  <a name="cfn-opsworks-stack-rdsdbinstance-dbpassword"></a>
 The password of the registered database\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String
 
 `DbUser`  <a name="cfn-opsworks-stack-rdsdbinstance-dbuser"></a>
 The master user name of the registered database\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String
 
 `RdsDbInstanceArn`  <a name="cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon RDS DB instance to register with the AWS OpsWorks stack\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String

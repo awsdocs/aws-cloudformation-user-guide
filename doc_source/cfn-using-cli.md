@@ -7,7 +7,7 @@ If you use Windows PowerShell, AWS also offers the [AWS Tools for Windows PowerS
 **Note**  
 The prior AWS CloudFormation CLI tools are still available, but not recommended\. If you need information about the prior AWS CloudFormation CLI tools, see the [AWS CloudFormation CLI Reference](https://s3.amazonaws.com/awsdocs/AWSCloudFormation/2010-05-15/cfn-ug-cli-ref-09172013.pdf) in the documentation archive\.
 
-
+**Topics**
 + [Creating a Stack](using-cfn-cli-creating-stack.md)
 + [Describing and Listing Your Stacks](using-cfn-describing-stacks.md)
 + [Viewing Stack Event History](using-cfn-listing-event-history.md)

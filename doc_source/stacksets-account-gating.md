@@ -9,11 +9,8 @@ Account gating is only available for StackSets operations\. This functionality i
 ## Setup Requirements<a name="stacksets-accountgating_reqs"></a>
 
 The following list describes setup requirements for account gating\.
-
 + To work with the StackSets account gating functionality, your Lambda function must be named **AWSCloudFormationStackSetAccountGate**\.
-
 + The **AWSCloudFormationStackSetExecutionRole** needs permissions to invoke your Lambda function\. Without these permissions, StackSets skips the account gating check, and continues with stack operations\.
-
 + The Lambda `InvokeFunction` permission must be added to target accounts for account gating to work\. The target account trust policy must have a trust relationship with the administrator account\. The following is an example of a policy statement that grants Lambda `invokefunction` permissions\.
 
   ```

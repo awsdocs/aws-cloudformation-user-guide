@@ -7,7 +7,7 @@ When you create or update an event destination, you must provide one, and only o
 
 An event destination is the AWS service to which Amazon SES publishes the email sending events associated with a configuration set\. For information, see [Using Amazon SES Configuration Sets](url-ses-dev;using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-ses-configurationseteventdestination-syntax)
 + [Properties](#aws-resource-ses-configurationseteventdestination-properties)
 + [Example](#aws-resource-ses-configurationseteventdestination-examples)
@@ -218,7 +218,5 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-ses-configurationseteventdestination-seealso"></a>
-
 + [Using Amazon SES Configuration Sets](url-ses-dev;using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*
-
 + [CreateConfigurationSetEventDestination](http://docs.aws.amazon.com/ses/latest/APIReference/API_CreateConfigurationSetEventDestination.html) in the *Amazon Simple Email Service API Reference*
