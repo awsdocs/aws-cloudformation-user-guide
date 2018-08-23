@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `ServiceRole`  <a name="cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-servicerole"></a>
 The ARN of an IAM service role that Elastic Beanstalk has permission to assume\.  
- *Required*: No  
+ *Required*: Yes
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
