@@ -37,7 +37,7 @@ Parameters:
 
 ## Referencing a Parameter within a Template<a name="parameters-section-structure-referencing"></a>
 
-You use the `Ref` intrinsic function to reference a parameter, and AWS CloudFormation uses the parameter's value to provision the stack\. You can reference parameters from the `Resources` and `Outputs` sections of the same template\.
+You use the `Ref` intrinsic function to reference a parameter, and AWS CloudFormation uses the parameter's value to provision the stack\. You can reference parameters from the `Resources`, `Conditions`, and `Outputs` sections of the same template\.
 
 In the following example, the `InstanceType` property of the EC2 instance resource references the `InstanceTypeParameter` parameter value:
 
