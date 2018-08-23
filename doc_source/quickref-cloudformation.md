@@ -99,7 +99,7 @@ For more information, see [AWS::CloudFormation::Stack](aws-properties-stack.md)\
 **Important**  
 For Amazon EC2 and Auto Scaling resources, we recommend that you use a CreationPolicy attribute instead of wait conditions\. Add a CreationPolicy attribute to those resources, and use the cfn\-signal helper script to signal when an instance creation process has completed successfully\.
 
-If you can't use a creation policy, you view the following example template, which declares an Amazon EC2 instance with a wait condition\. The wait condition myWaitCondition uses myWaitConditionHandle for signaling, uses the [DependsOn attribute](aws-attribute-dependson.md) to specify that the wait condition will trigger after the Amazon EC2 instance resource has been created, and uses the Timeout property to specify a duration of 4500 seconds for the wait condition\. In addition, the presigned URL that signals the wait condition is passed to the Amazon EC2 instance with the UserData property of the Ec2Instance resource, thus enabling an application or script running on that Amazon EC2 instance to retrieve the pre\-signed URL and employ it to signal a success or failure to the wait condition\. Note that you need to create the application or script that signals the wait condition\. The output value ApplicationData contains the data passed back from the wait condition signal\.
+If you can't use a creation policy, you view the following example template, which declares an Amazon EC2 instance with a wait condition\. The wait condition myWaitCondition uses myWaitConditionHandle for signaling, uses the [DependsOn attribute](aws-attribute-dependson.md) to specify that the wait condition will trigger after the Amazon EC2 instance resource has been created, and uses the Timeout property to specify a duration of 4500 seconds for the wait condition\. In addition, the presigned URL that signals the wait condition is passed to the Amazon EC2 instance with the UserData property of the Ec2Instance resource, thus enabling an application or script running on that Amazon EC2 instance to retrieve the pre\-signed URL and employ it to signal a success or failure to the wait condition\. Note that you need to use cfn-signal or create the application or script that signals the wait condition\. The output value ApplicationData contains the data passed back from the wait condition signal\.
 
 For more information, see [Creating Wait Conditions in a Template](using-cfn-waitcondition.md), [AWS::CloudFormation::WaitCondition](aws-properties-waitcondition.md), and [AWS::CloudFormation::WaitConditionHandle](aws-properties-waitconditionhandle.md)\.
 
@@ -198,6 +198,25 @@ For more information, see [Creating Wait Conditions in a Template](using-cfn-wai
 35.   ApplicationData:
 36.     Value: !GetAtt myWaitCondition.Data
 37.     Description: The data passed back as part of signalling the WaitCondition.
+```
+
+### Using cfn-signal helper script to signal a Wait Condition<a name="scenario-waitcondition-cfn-signal"></a>
+
+This example shows a [cfn-signal](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-signal.html) command line that signals success to a wait condition\.
+The command line should be defined within UserData property\.
+
+```
+ 1. "UserData": {
+ 2.   "Fn::Base64": {
+ 3.     "Fn::Join": ["", [
+ 4.       "#!/bin/bash -xe\n",
+ 5.       "/opt/aws/bin/cfn-signal --exit-code 0 '", {
+ 6.         "Ref": "myWaitHandle"
+ 7.       },
+ 8.       "'\n"
+ 9.     ]]
+10.   }
+11. }
 ```
 
 ### Using Curl to signal a Wait Condition<a name="scenario-waitcondition-curl"></a>
