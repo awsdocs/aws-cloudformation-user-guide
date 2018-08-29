@@ -2,7 +2,7 @@
 
 Use the AWS CloudFormation `AWS::KinesisAnalytics::ApplicationReferenceDataSource` resource to add a reference data source to an existing Amazon Kinesis Data Analytics application\. For more information, see `[AddApplicationReferenceDataSource](http://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_AddApplicationReferenceDataSource.html)` in the *Amazon Kinesis Data Analytics Developer Guide*\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-kinesisanalytics-applicationreferencedatasource-syntax)
 + [Properties](#aws-resource-kinesisanalytics-applicationreferencedatasource-properties)
 + [Examples](#aws-resource-kinesisanalytics-applicationreferencedatasource-examples)

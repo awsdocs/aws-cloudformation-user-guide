@@ -3,18 +3,14 @@
 The `AWS::ApplicationAutoScaling::ScalableTarget` resource specifies a resource that Application Auto Scaling can scale up or down\. For more information, see the [RegisterScalableTarget](http://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html) action in the *Application Auto Scaling API Reference*\.
 
 Updates to `AWS::DynamoDB::Table` resources that are associated with `AWS::ApplicationAutoScaling::ScalableTarget` resources will always result in an update failure and then an update rollback failure\. The following `ScalableDimension` attributes cause this problem when associated with the table:
-
 + dynamodb:table:ReadCapacityUnits
-
 + dynamodb:table:WriteCapacityUnits
-
 + dynamodb:index:ReadCapacityUnits
-
 + dynamodb:index:WriteCapacityUnits
 
 As a workaround, please deregister scalable targets before performing updates to `AWS::DynamoDB::Table` resources\.
 
-
+**Topics**
 + [Syntax](#w3ab2c21c10c97c13)
 + [Properties](#w3ab2c21c10c97c15)
 + [Return Value](#aws-resource-applicationautoscaling-scalabletarget-returnvalues)
@@ -60,31 +56,31 @@ Properties:
 
 `MaxCapacity`  <a name="cfn-applicationautoscaling-scalabletarget-maxcapacity"></a>
 The maximum value that Application Auto Scaling can use to scale a target during a scaling activity\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `MinCapacity`  <a name="cfn-applicationautoscaling-scalabletarget-mincapacity"></a>
 The minimum value that Application Auto Scaling can use to scale a target during a scaling activity\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ResourceId`  <a name="cfn-applicationautoscaling-scalabletarget-resourceid"></a>
 The resource identifier to associate with this scalable target\. This string consists of the resource type and unique identifier\. For more information, see the `ResourceId` parameter for the [RegisterScalableTarget](http://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html) action in the *Application Auto Scaling API Reference*, or see the [`ScalableTarget` examples](#aws-resource-applicationautoscaling-scalabletarget-examples)\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `RoleARN`  <a name="cfn-applicationautoscaling-scalabletarget-rolearn"></a>
 The Amazon Resource Name \(ARN\) of an AWS Identity and Access Management \(IAM\) role that allows Application Auto Scaling to modify your scalable target\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ScalableDimension`  <a name="cfn-applicationautoscaling-scalabletarget-scalabledimension"></a>
 The scalable dimension that's associated with the scalable target\. Specify the service namespace, resource type, and scaling property—for example, `ecs:service:DesiredCount` for the desired task count of an Amazon Elastic Container Service service\. For valid values, see the `ScalableDimension` content for the [ScalingPolicy](http://docs.aws.amazon.com/autoscaling/application/APIReference/API_ScalingPolicy.html) data type in the *Application Auto Scaling API Reference*\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
@@ -96,7 +92,7 @@ The scheduled actions for the scalable target\. Duplicates aren't allowed\.
 
 `ServiceNamespace`  <a name="cfn-applicationautoscaling-scalabletarget-servicenamespace"></a>
 The AWS service namespace of the scalable target\. For a list of service namespaces, see [AWS Service Namespaces](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *AWS General Reference*\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 

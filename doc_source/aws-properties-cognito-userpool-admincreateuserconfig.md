@@ -27,14 +27,14 @@
 `AllowAdminCreateUserOnly`  <a name="cfn-cognito-userpool-admincreateuserconfig-allowadmincreateuseronly"></a>
 Set to True if only the administrator is allowed to create user profiles\. Set to False if users can sign themselves up via an app\.  
 *Type*: Boolean  
-*Required: *No
+*Required*: No
 
 `InviteMessageTemplate`  <a name="cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate"></a>
 The message template to be used for the welcome message to new users\.  
 *Type*: [Amazon Cognito UserPool InviteMessageTemplate](aws-properties-cognito-userpool-admincreateuserconfig-invitemessagetemplate.md)  
-*Required: *No
+*Required*: No
 
 `UnusedAccountValidityDays`  <a name="cfn-cognito-userpool-admincreateuserconfig-unusedaccountvaliditydays"></a>
 The user account expiration limit, in days, after which the account is no longer usable\. To reset the account after that time limit, you must call AdminCreateUser again, specifying `RESEND` for the `MessageAction` parameter\. The default value for this parameter is 7\.  
 *Type*: Number  
-*Required: *No
+*Required*: No

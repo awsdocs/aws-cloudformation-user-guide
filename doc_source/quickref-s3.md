@@ -1,6 +1,6 @@
 # Amazon S3 Template Snippets<a name="quickref-s3"></a>
 
-
+**Topics**
 + [Creating an Amazon S3 Bucket with Defaults](#scenario-s3-bucket)
 + [Creating an Amazon S3 Bucket for Website Hosting and with a DeletionPolicy](#scenario-s3-bucket-website)
 + [Creating a Static Website Using a Custom Domain](#scenario-s3-bucket-website-customdomain)

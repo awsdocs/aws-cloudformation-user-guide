@@ -31,9 +31,6 @@ Be aware that access to Amazon CloudWatch requires credentials\. Those credentia
 1. Enter the ARN of the Cloudwatch alarm you want to use as a rollback trigger, and click the plus icon\. You can add a maximum of five rollback triggers\.
 
 **To view rollback triggers for a stack**
-
 + There are two ways to view rollback triggers for a given stack:
-
   + On the **Stacks** page, select the checkbox for the stack you wish to view, and then select the **Rollback Triggers** tab in the detail section\.
-
   + On the **Stack Detail** page, go to the **Rollback Triggers** section\.

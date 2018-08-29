@@ -2,10 +2,10 @@
 
 The `AWS::Cognito::UserPoolUserToGroupAttachment` resource attaches a user to an Amazon Cognito user pool user group\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-cognito-userpoolusertogroupattachment-syntax)
-+ [Properties](#w3ab2c21c10d268b9)
-+ [Return Value](#w3ab2c21c10d268c11)
++ [Properties](#w3ab2c21c10d296b9)
++ [Return Value](#w3ab2c21c10d296c11)
 
 ## Syntax<a name="aws-resource-cognito-userpoolusertogroupattachment-syntax"></a>
 
@@ -34,29 +34,29 @@ Properties:
   [UserPoolId](#cfn-cognito-userpoolusertogroupattachment-userpoolid): String
 ```
 
-## Properties<a name="w3ab2c21c10d268b9"></a>
+## Properties<a name="w3ab2c21c10d296b9"></a>
 
 `GroupName`  <a name="cfn-cognito-userpoolusertogroupattachment-groupname"></a>
 The name of the group\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Username`  <a name="cfn-cognito-userpoolusertogroupattachment-username"></a>
 The user's user name\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `UserPoolId`  <a name="cfn-cognito-userpoolusertogroupattachment-userpoolid"></a>
 The ID of the user pool\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w3ab2c21c10d268c11"></a>
+## Return Value<a name="w3ab2c21c10d296c11"></a>
 
-### Ref<a name="w3ab2c21c10d268c11b2"></a>
+### Ref<a name="w3ab2c21c10d296c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns a generated ID, such as `UserToGroupAttachment-YejJvzrEXAMPLE`\.
 

@@ -6,7 +6,7 @@ For the primary key of an Amazon DynamoDB table that consists of only a hash att
 
 For a complete discussion of DynamoDB primary keys, see [Primary Key](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DataModel.html#DataModelPrimaryKey) in the *Amazon DynamoDB Developer Guide*\.
 
-## Syntax<a name="w3ab2c21c14d530b9"></a>
+## Syntax<a name="w3ab2c21c14d609b9"></a>
 
 ### JSON<a name="aws-properties-dynamodb-keyschema-syntax.json"></a>
 
@@ -24,18 +24,18 @@ For a complete discussion of DynamoDB primary keys, see [Primary Key](http://doc
 [KeyType](#cfn-dynamodb-keyschema-keytype): HASH or RANGE
 ```
 
-## Properties<a name="w3ab2c21c14d530c11"></a>
+## Properties<a name="w3ab2c21c14d609c11"></a>
 
 `AttributeName`  <a name="cfn-dynamodb-keyschema-attributename"></a>
 The attribute name that is used as the primary key for this table\. Primary key element names can be 1 – 255 characters long and have no character restrictions\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String
 
 `KeyType`  <a name="cfn-dynamodb-keyschema-keytype"></a>
 Represents the attribute data, consisting of the data type and the attribute value itself\. You can specify `HASH` or `RANGE`\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String
 
-## Examples<a name="w3ab2c21c14d530c13"></a>
+## Examples<a name="w3ab2c21c14d609c13"></a>
 
 For an example of a declared key schema, see [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md)\.

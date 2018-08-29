@@ -6,9 +6,9 @@ AWS CloudFormation StackSets extends the functionality of stacks by enabling you
 
 This section helps you get started using StackSets, and answers common questions about how to work with and troubleshoot stack set creation, updates, and deletion\.
 
-
+**Topics**
 + [StackSets Concepts](stacksets-concepts.md)
-+ [Prerequisites](stacksets-prereqs.md)
++ [Prerequisites: Granting Permissions for Stack Set Operations](stacksets-prereqs.md)
 + [Getting Started with AWS CloudFormation StackSets](stacksets-getting-started.md)
 + [Configuring a target account gate in AWS CloudFormation StackSets](stacksets-account-gating.md)
 + [Best Practices](stacksets-bestpractices.md)

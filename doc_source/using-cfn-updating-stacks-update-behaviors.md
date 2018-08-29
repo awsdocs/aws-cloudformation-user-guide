@@ -14,20 +14,12 @@ AWS CloudFormation recreates the resource during an update, which also generates
 The method AWS CloudFormation uses depends on which property you update for a given resource type\. The update behavior for each property is described in the [AWS Resource Types Reference](aws-template-resource-type-ref.md)\.
 
 Depending on the update behavior, you can decide when to modify resources to reduce the impact of these changes on your application\. In particular, you can plan when resources must be *replaced* during an update\. For example, if you update the `Port` property of an [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md) resource type, AWS CloudFormation replaces the DB instance by creating a new DB instance with the updated port setting and deletes the old DB instance\. Before the update, you might plan to do the following to prepare for the database replacement:
-
 + Take a snapshot of the current databases\.
-
 + Prepare a strategy for how applications that use that DB instance will handle an interruption while the DB instance is being replaced\.
-
 + Ensure that the applications that use that DB instance take into account the updated port setting and any other updates you have made\.
-
 + Use the DB snapshot to restore the databases on the new DB instance\.
 
 This example is not exhaustive; it's meant to give you an idea of the things to plan for when a resource is replaced during an update\.
 
 **Note**  
 If the template includes one or more [nested stacks](aws-properties-stack.md), AWS CloudFormation also initiates an update for every nested stack\. This is necessary to determine whether the nested stacks have been modified\. AWS CloudFormation updates only those resources in the nested stacks that have changes specified in corresponding templates\.
-
-## Renaming `AWS::EC2::SubnetNetworkAclAssociation` and `AWS::EC2::SubnetRouteTableAssociation` resources<a name="w3ab2c15c17c17c19"></a>
-
-If you change the logical ID of an `AWS::EC2::SubnetNetworkAclAssociation` or `AWS::EC2::SubnetRouteTableAssociation` resource during an update operation, AWS CloudFormation deletes the resource after the operation is finished\. This happens because changing a logical ID triggers the creation of a new resource followed by the removal of the old resource\. For these resource types, AWS CloudFormation "adopts" the existing resource to use as the new resource during the creation process, but then deletes it during the removal process\. 

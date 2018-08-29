@@ -2,7 +2,7 @@
 
 The `AWS::GuardDuty::IPSet` resource creates an Amazon GuardDuty IP set\. An IP set is a list of trusted IP addresses that have been whitelisted for secure communication with your AWS environment\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-guardduty-ipset-syntax)
 + [Properties](#aws-resource-guardduty-ipset-properties)
 + [Return Values](#aws-resource-guardduty-ipset-returnvalues)

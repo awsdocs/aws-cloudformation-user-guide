@@ -25,9 +25,9 @@ The `StringAttributeConstraints` property type defines the string attribute cons
 `MaxLength`  <a name="cfn-cognito-userpool-stringattributeconstraints-maxlength"></a>
 The maximum value of an attribute that is of the string data type\.  
 *Type*: String  
-*Required: *No
+*Required*: No
 
 `MinLength`  <a name="cfn-cognito-userpool-stringattributeconstraints-minlength"></a>
 The minimum value of an attribute that is of the string data type\.  
 *Type*: String  
-*Required: *No
+*Required*: No

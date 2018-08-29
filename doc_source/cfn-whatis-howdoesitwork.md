@@ -86,7 +86,5 @@ If you want to delete a stack but want to retain some resources in that stack, y
 After all the resources have been deleted, AWS CloudFormation signals that your stack has been successfully deleted\. If AWS CloudFormation cannot delete a resource, the stack will not be deleted\. Any resources that haven't been deleted will remain until you can successfully delete the stack\.
 
 ## Additional Resources<a name="w3ab2b5c17c21"></a>
-
 + For more information about creating AWS CloudFormation templates, see [Template Anatomy](template-anatomy.md)\.
-
 + For more information about creating, updating, or deleting stacks, see [Working with Stacks](stacks.md)\.

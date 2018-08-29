@@ -27,14 +27,14 @@
 `EmailMessage`  <a name="cfn-cognito-userpool-invitemessagetemplate-emailmessage"></a>
 The message template for email messages\.  
 *Type*: String  
-*Required: *No
+*Required*: No
 
 `EmailSubject`  <a name="cfn-cognito-userpool-invitemessagetemplate-emailsubject"></a>
 The subject line for email messages\.  
 *Type*: String  
-*Required: *No
+*Required*: No
 
 `SMSMessage`  <a name="cfn-cognito-userpool-invitemessagetemplate-smsmessage"></a>
 The message template for SMS messages\.  
 *Type*: String  
-*Required: *No
+*Required*: No

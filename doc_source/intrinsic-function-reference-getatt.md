@@ -2,7 +2,7 @@
 
 The `Fn::GetAtt` intrinsic function returns the value of an attribute from a resource in the template\.
 
-## Declaration<a name="w3ab2c21c28c27b5"></a>
+## Declaration<a name="w3ab2c21c28c31b5"></a>
 
 ### JSON<a name="intrinsic-function-reference-getatt-syntax.json"></a>
 
@@ -24,7 +24,7 @@ Syntax for the short form:
 !GetAtt logicalNameOfResource.attributeName
 ```
 
-## Parameters<a name="w3ab2c21c28c27b7"></a>
+## Parameters<a name="w3ab2c21c28c31b7"></a>
 
 `logicalNameOfResource`  
 The logical name \(also called *logical ID*\) of the resource that contains the attribute that you want\.
@@ -136,7 +136,7 @@ Resources:
           SourceSecurityGroupName: !GetAtt myELB.SourceSecurityGroup.GroupName
 ```
 
-## Supported Functions<a name="w3ab2c21c28c27c13"></a>
+## Supported Functions<a name="w3ab2c21c28c31c13"></a>
 
 For the `Fn::GetAtt` logical resource name, you cannot use functions\. You must specify a string that is a resource's logical ID\.
 
@@ -155,7 +155,7 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 |  [AWS::Cloud9::EnvironmentEC2](aws-resource-cloud9-environmentec2.md)  |  `Name`  |  The name of the AWS Cloud9 development environment\. Example: `my-demo-environment`  | 
 |  [AWS::CloudFormation::WaitCondition](aws-properties-waitcondition.md)  |  `Data`  |  A JSON\-format string containing the `UniqueId` and `Data` values from the wait condition signal\(s\) for the specified wait condition\. For more information about wait condition signals, see [Wait Condition Signal JSON Format](using-cfn-waitcondition.md#using-cfn-waitcondition-signaljson)\. Example of a wait condition with two signals: <pre>{"Signal1":"Step 1 complete.","Signal2":"Step 2 complete."}</pre>  | 
 |  [AWS::CloudFormation::Stack](aws-properties-stack.md)  |  `Outputs.NestedStackOutputName`  |  The output value from the nested stack that you specified, where *NestedStackOutputName* is the name of the output value\.  | 
-|  [AWS::CloudFront::Distribution](aws-properties-cloudfront-distribution.md)  |  `DomainName`  |  Example: `d2fadu0nynjpfn.cloudfront.net`  | 
+|  [AWS::CloudFront::Distribution](aws-resource-cloudfront-distribution.md)  |  `DomainName`  |  Example: `d2fadu0nynjpfn.cloudfront.net`  | 
 |  [AWS::CloudTrail::Trail](aws-resource-cloudtrail-trail.md)  |  `Arn`  |  Example: `arn:aws:cloudtrail:us-east-2:123456789012:trail/myCloudTrail`  | 
 |  [AWS::CloudTrail::Trail](aws-resource-cloudtrail-trail.md)  |  `SnsTopicArn`  |  The Amazon Resource Name \(ARN\) of the Amazon SNS topic that is associated with the CloudTrail trail\. Example: `arn:aws:sns:us-east-2:123456789012:mySNSTopic`  | 
 |  [AWS::CloudWatch::Alarm](aws-properties-cw-alarm.md)  |  `Arn`  |  Example: `arn:aws:cloudwatch:us-east-2:123456789012:alarm:myCloudWatchAlarm-CPUAlarm-UXMMZK36R55Z`  | 
@@ -194,6 +194,9 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 |  [AWS::EC2::VPC](aws-resource-ec2-vpc.md)  |  `Ipv6CidrBlocks`  |  A list of IPv6 CIDR blocks that are associated with the VPC\. Example: `[ 2001:db8:1234:1a00::/56 ]`  | 
 |  [AWS::ECS::Cluster](aws-resource-ecs-cluster.md)  |  `Arn`  |  Example: `arn:aws:ecs:us-east-2:123456789012:cluster/MyECSCluster`  | 
 |  [AWS::ECS::Service](aws-resource-ecs-service.md)  |  `Name`  |  The name of an Amazon Elastic Container Service service\. Example: `sample-webapp`  | 
+|  [AWS::EKS::Cluster](aws-resource-eks-cluster.md)  |  `Arn`  |  The ARN of the cluster\. Example: `arn:aws:eks:us-east-2:123456789012:cluster/MyECSCluster`  | 
+|  [AWS::EKS::Cluster](aws-resource-eks-cluster.md)  |  `CertificateAuthorityData`  |  The `certificate-authority-data` for your cluster\.   | 
+|  [AWS::EKS::Cluster](aws-resource-eks-cluster.md)  |  `Endpoint`  |  The endpoint for your Kubernetes API server\. Example: `https://EXAMPLEFBBB3BA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com`  | 
 |  [AWS::ElastiCache::CacheCluster](aws-properties-elasticache-cache-cluster.md)  |  `ConfigurationEndpoint.Address`  |  The DNS address of the configuration endpoint for the Memcached cache cluster\. Example: `test.abc12a.cfg.use1.cache.amazonaws.com:11111`  | 
 |  [AWS::ElastiCache::CacheCluster](aws-properties-elasticache-cache-cluster.md)  |  `ConfigurationEndpoint.Port`  |  The port number of the configuration endpoint for the Memcached cache cluster\.  | 
 |  [AWS::ElastiCache::CacheCluster](aws-properties-elasticache-cache-cluster.md)  |  `RedisEndpoint.Address`  |  The DNS address of the configuration endpoint for the Redis cache cluster\. Example: `test.abc12a.cfg.use1.cache.amazonaws.com:11111`  | 

@@ -39,7 +39,5 @@ The percentage of traffic that will invoke the function version\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-lambda-alias-versionweight-seealso"></a>
-
 + [Routing Traffic to Different Function Versions Using Aliases](http://docs.aws.amazon.com/lambda/latest/dg/lambda-traffic-shifting-using-aliases.html) in the *AWS Lambda Developer Guide*
-
 + [AliasRoutingConfiguration](http://docs.aws.amazon.com/lambda/latest/dg/API_AliasRoutingConfiguration.html) in the *AWS Lambda Developer Guide*

@@ -2,9 +2,9 @@
 
 The `AWS::EMR::Cluster` resource creates an Amazon EMR cluster\. This cluster is a collection of EC2 instances that you can run big data frameworks on to process and analyze vast amounts of data\. For more information, see [Plan an Amazon EMR Cluster](http://docs.aws.amazon.com//ElasticMapReduce/latest/ManagementGuide/emr-plan.html) in the *Amazon EMR Management Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-emr-cluster-syntax)
-+ [Properties](#w3ab2c21c10d615b9)
++ [Properties](#w3ab2c21c10d660b9)
 + [Return Values](#aws-resource-emr-cluster-returnvalues)
 + [Examples](#aws-resource-emr-cluster-examples)
 
@@ -68,44 +68,44 @@ Properties:
   [VisibleToAllUsers](#cfn-emr-cluster-visibletoallusers): Boolean
 ```
 
-## Properties<a name="w3ab2c21c10d615b9"></a>
+## Properties<a name="w3ab2c21c10d660b9"></a>
 
 **Note**  
 For more information about the constraints and valid values of each property, see the [ Cluster](http://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_Cluster.html) data type in the *Amazon EMR API Reference*\.
 
 `AdditionalInfo`  <a name="cfn-emr-cluster-additionalinfo"></a>
 \(Intended for advanced uses only\.\) Additional features that you want to select\. This is meta information about third\-party applications that third\-party vendors use for testing purposes\.  
-*Required: *No  
+*Required*: No  
 *Type*: JSON object  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Applications`  <a name="cfn-emr-cluster-applications"></a>
 The software applications to deploy on the cluster, and the arguments that Amazon EMR passes to those applications\.  
-*Required: *No  
+*Required*: No  
 *Type*: List of [Amazon EMR Cluster Application](aws-properties-emr-cluster-application.md) property types  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `AutoScalingRole`  <a name="cfn-emr-cluster-autoscalingrole"></a>
 An AWS Identity and Access Management \(IAM\) role for automatic scaling policies\. The default role is `EMR_AutoScaling_DefaultRole`\. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate Amazon EC2 instances in an instance group\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `BootstrapActions`  <a name="cfn-emr-cluster-bootstrapactions"></a>
 A list of bootstrap actions that Amazon EMR runs before starting applications on the cluster\.  
-*Required: *No  
+*Required*: No  
 *Type*: List of [Amazon EMR Cluster BootstrapActionConfig](aws-properties-emr-cluster-bootstrapactionconfig.md) property types  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Configurations`  <a name="cfn-emr-cluster-configurations"></a>
 The software configuration of the Amazon EMR cluster\.  
-*Required: *No  
+*Required*: No  
 *Type*: List of [Amazon EMR Cluster Configurations](aws-properties-emr-cluster-configuration.md) property types  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `CustomAmiId`  <a name="cfn-elasticmapreduce-cluster-customamiid"></a>
 A custom Amazon Linux AMI for the cluster \(instead of an EMR\-owned AMI\)\. For more information, see [Using a Custom AMI](http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-custom-ami.html) in the *Amazon EMR Management Guide*\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)  
 *Example*: `"CustomAmiId" : "ami-7fb3bc69"`
@@ -119,62 +119,62 @@ Currently, AWS CloudFormation supports only Amazon EMR 4\.0 and later software r
 
 `Instances`  <a name="cfn-emr-cluster-instances"></a>
 Configures the EC2 instances that run jobs in the Amazon EMR cluster\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: [Amazon EMR Cluster JobFlowInstancesConfig](aws-properties-emr-cluster-jobflowinstancesconfig.md)  
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 `JobFlowRole`  <a name="cfn-emr-cluster-jobflowrole"></a>
 \(Also called *instance profile* and *EC2 role*\.\) Accepts an instance profile that's associated with the role that you want to use\. All EC2 instances in the cluster assume this role\. For more information, see [Create and Use IAM Roles for Amazon EMR](http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-iam-roles-creatingroles.html) in the *Amazon EMR Management Guide*\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `LogUri`  <a name="cfn-emr-cluster-loguri"></a>
 An S3 bucket location that Amazon EMR writes logs files to from a job flow\. If you don't specify a value, Amazon EMR doesn't write any log files\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Name`  <a name="cfn-emr-cluster-name"></a>
 A name for the Amazon EMR cluster\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ReleaseLabel`  <a name="cfn-emr-cluster-releaselabel"></a>
 The Amazon EMR software release label\. A release is a set of software applications and components that you can install and configure on an Amazon EMR cluster\. For more information, see [About Amazon EMR Releases](http://docs.aws.amazon.com//ElasticMapReduce/latest/ReleaseGuide/emr-release-components.html) in the *Amazon EMR Release Guide*\.  
 Currently, AWS CloudFormation supports only Amazon EMR 4\.0 and later software releases\.  
-*Required: *Conditional\. If you specify the `Applications` property, you must specify this property\.  
+*Required*: Conditional\. If you specify the `Applications` property, you must specify this property\.  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ScaleDownBehavior`  <a name="cfn-emr-cluster-scaledownbehavior"></a>
 Indicates how individual EC2 instances terminate when an automatic scale\-in activity occurs or an instance group is resized\. For more information, see [Cluster](http://docs.aws.amazon.com//ElasticMapReduce/latest/API/API_Cluster.html) in the Amazon EMR API Reference\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `SecurityConfiguration`  <a name="cfn-emr-cluster-securityconfiguration"></a>
 The name of the security configuration that's applied to the cluster\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ServiceRole`  <a name="cfn-emr-cluster-servicerole"></a>
 The IAM role that Amazon EMR assumes to access AWS resources on your behalf\. For more information, see [Configure IAM Roles for Amazon EMR](http://docs.aws.amazon.com//ElasticMapReduce/latest/ManagementGuide/emr-iam-roles.html) in the *Amazon EMR Management Guide*\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Tags`  <a name="cfn-emr-cluster-tags"></a>
 An arbitrary set of tags \(key–value pairs\) to help you identify the Amazon EMR cluster\.  
-*Required: *No  
+*Required*: No  
 *Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `VisibleToAllUsers`  <a name="cfn-emr-cluster-visibletoallusers"></a>
 Indicates whether the instances in the cluster are visible to all IAM users in the AWS account\. If you specify `true`, all IAM users can view and \(if they have permissions\) manage the instances\. If you specify `false`, only the IAM user that created the cluster can view and manage it\.  
-*Required: *No  
+*Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)  
 *Default value*: `false`

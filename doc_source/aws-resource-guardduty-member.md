@@ -1,8 +1,8 @@
 # AWS::GuardDuty::Member<a name="aws-resource-guardduty-member"></a>
 
-The `AWS::GuardDuty::Member` resource creates an Amazon GuardDuty member account\. 
+You can use the `AWS::GuardDuty::Member` resource to add an AWS account as a GuardDuty member account to the current GuardDuty master account\. If the value of the Status property is not provided or set to CREATED, a member account is only created\. If the value of the Status property is set to INVITED, a member account is created and invited\. `AWS::GuardDuty::Member` resource has to be created with the Status property set to INVITED before the `AWS::GuardDuty::Master` resource can be created in a GuardDuty member account\.
 
-
+**Topics**
 + [Syntax](#aws-resource-guardduty-member-syntax)
 + [Properties](#aws-resource-guardduty-member-properties)
 + [Return Values](#aws-resource-guardduty-member-returnvalues)
@@ -22,7 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[MemberId](#cfn-guardduty-member-memberid)" : String,
     "[Email](#cfn-guardduty-member-email)" : String,
     "[Message](#cfn-guardduty-member-message)" : String,
-    "[DetectorId](#cfn-guardduty-member-detectorid)" : String
+    "[DetectorId](#cfn-guardduty-member-detectorid)" : String,
+    "[DisableEmailNotification](#cfn-guardduty-member-disableemailnotification)" : Boolean 
   }
 }
 ```
@@ -37,12 +38,13 @@ Properties:
   [Email](#cfn-guardduty-member-email): String
   [Message](#cfn-guardduty-member-message): String
   [DetectorId](#cfn-guardduty-member-detectorid): String
+  [DisableEmailNotification](#cfn-guardduty-member-disableemailnotification): Boolean
 ```
 
 ## Properties<a name="aws-resource-guardduty-member-properties"></a>
 
 `Status`  <a name="cfn-guardduty-member-status"></a>
-You can use this property to update the status of the relationship between the member account and its master account\. Valid values are CREATED | INVITED | DISABLED | ENABLED | REMOVED | RESIGNED\. If the value for this property is not provided or set to CREATED, a member account is only created\. If the value of this property is set to INVITED, a member account is created and invited\.   
+You can use this property to update the status of the relationship between the member account and its master account\. Valid values are CREATED \| INVITED \| DISABLED \| ENABLED \| REMOVED \| RESIGNED\. If the value for this property is not provided or set to CREATED, a member account is only created\. If the value of this property is set to INVITED, a member account is created and invited\.   
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
@@ -66,10 +68,16 @@ The invitation message that you want to send to the account that you invite to G
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `DetectorId`  <a name="cfn-guardduty-member-detectorid"></a>
-The unique ID of the detector in a GuardDuty member account\.  
+The unique ID of the detector in a GuardDuty master account\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+
+`DisableEmailNotification`  <a name="cfn-guardduty-member-disableemailnotification"></a>
+Specifies whether an email notification is sent to the accounts that you want to invite to GuardDuty as members\. When set to 'True', email notification is not sent to the invitees\.  
+ *Required*: No  
+ *Type*: Boolean  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-guardduty-member-returnvalues"></a>
 
@@ -95,7 +103,8 @@ The following example shows how to declare an AWS::GuardDuty::Member resource to
     "MemberId": "012345678901",
     "Email": "guarddutymember@amazon.com",
     "Message": "You are invited to enable Amazon Guardduty.",
-    "DetectorId": "a12abc34d567e8fa901bc2d34e56789f0"
+    "DetectorId": "a12abc34d567e8fa901bc2d34e56789f0",
+    "DisableEmailNotification": true
     }
 }
 ```
@@ -111,4 +120,5 @@ GDmaster:
     Email: "guarddutymember@amazon.com"
     Message: "You are invited to enable Amazon Guardduty."
     DetectorId: "a12abc34d567e8fa901bc2d34e56789f0"
+    DisableEmailNotification: true
 ```

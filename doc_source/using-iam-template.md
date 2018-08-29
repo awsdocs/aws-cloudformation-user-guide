@@ -6,7 +6,7 @@ In addition to AWS CloudFormation actions, you can manage what AWS services and 
 
 For more information about all the services that you can control access to, see [AWS Services that Support IAM](http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_SpecificProducts.html) in *IAM User Guide*\.
 
-
+**Topics**
 + [AWS CloudFormation Actions](#using-iam-template-actions)
 + [AWS CloudFormation Resources](#resource-level-permissions)
 + [AWS CloudFormation Conditions](#using-iam-template-conditions)
@@ -263,11 +263,8 @@ The following example policy is similar to the preceding example\. The policy al
 Before you can create a stack, AWS CloudFormation validates your template\. During validation, AWS CloudFormation checks your template for IAM resources that it might create\. IAM resources, such as an IAM user with full access, can access and modify any resource in your AWS account\. Therefore, we recommend that you review the permissions associated with each IAM resource before proceeding so that you don't unintentionally create resources with escalated permissions\. To ensure that you've done so, you must acknowledge that the template contains those resources, giving AWS CloudFormation the specified capabilities before it creates the stack\.
 
 You can acknowledge the capabilities of AWS CloudFormation templates by using the AWS CloudFormation console, AWS Command Line Interface \(CLI\), or API:
-
 + In the AWS CloudFormation console, on the **Review** page of the Create Stack or Update Stack wizards, choose **I acknowledge that this template may create IAM resources**\.
-
 + In the CLI, when you use the [http://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html) and [http://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html) commands, specify the `CAPABILITY_IAM` or `CAPABILITY_NAMED_IAM` value for the `--capabilities` parameter\. If your template includes IAM resources, you can specify either capability\. If your template includes custom names for IAM resources, you must specify `CAPABILITY_NAMED_IAM`\.
-
 + In the API, when you use the [CreateStack](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html) and [UpdateStack](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStack.html) actions, specify `Capabilities.member.1=CAPABILITY_IAM` or `Capabilities.member.1=CAPABILITY_NAMED_IAM`\. If your template includes IAM resources, you can specify either capability\. If your template includes custom names for IAM resources, you must specify `CAPABILITY_NAMED_IAM`\.
 
 **Important**  
@@ -298,7 +295,5 @@ You cannot work with IAM when you use temporary security credentials that were g
 AWS CloudFormation interacts with many other AWS services\. When you use temporary security credentials with AWS CloudFormation, verify that all the services that you want to use support temporary security credentials\. For more information, see [AWS Services that Support AWS STS](http://docs.aws.amazon.com/STS/latest/UsingSTS/UsingTokens.html)\.
 
 For more information, see the following related resources in *Using Temporary Security Credentials*:
-
 + [Scenarios for Granting Temporary Access](http://docs.aws.amazon.com/STS/latest/UsingSTS/STSUseCases.html)
-
 + [Giving Federated Users Direct Access to the AWS Management Console](http://docs.aws.amazon.com/STS/latest/UsingSTS/STSMgmtConsole.html)

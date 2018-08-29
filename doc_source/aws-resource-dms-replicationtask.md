@@ -2,12 +2,12 @@
 
 The `AWS::DMS::ReplicationTask` resource creates an AWS DMS replication task\.
 
-
+**Topics**
 + [Syntax](#aws-resource-dms-replicationtask-syntax)
 + [Properties](#aws-resource-dms-replicationtask-prop)
-+ [Return Value](#w3ab2c21c10d332c11)
++ [Return Value](#w3ab2c21c10d368c11)
 + [Example](#aws-resource-dms-replicationtask-example)
-+ [See Also](#w3ab2c21c10d332c15)
++ [See Also](#w3ab2c21c10d368c15)
 
 ## Syntax<a name="aws-resource-dms-replicationtask-syntax"></a>
 
@@ -54,61 +54,61 @@ Properties:
 `CdcStartTime`  <a name="cfn-dms-replicationtask-cdcstarttime"></a>
 The start time for the Change Data Capture \(CDC\) operation\.  
 *Required: *No  
-*Type: *Number, epic value in milliseconds  
+*Type: *Number, epoch value in milliseconds  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `MigrationType`  <a name="cfn-dms-replicationtask-migrationtype"></a>
 The migration type\.  
 `Valid Values`: `full-load`, `cdc`, `full-load-and-cdc`  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ReplicationInstanceArn`  <a name="cfn-dms-replicationtask-replicationinstancearn"></a>
 The Amazon Resource Name \(ARN\) of the replication instance\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ReplicationTaskIdentifier`  <a name="cfn-dms-replicationtask-replicationtaskidentifier"></a>
 The ARN string that uniquely identifies the endpoint\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ReplicationTaskSettings`  <a name="cfn-dms-replicationtask-replicationstasksettings"></a>
 Settings for the task, such as target metadata settings\. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html) in the *AWS Database Migration Service User Guide*\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `SourceEndpointArn`  <a name="cfn-dms-replicationtask-sourceendpointarn"></a>
 The ARN string that uniquely identifies the endpoint\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `TableMappings`  <a name="cfn-dms-replicationtask-tablemappings"></a>
 The JSON that contains additional parameter values\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Tags`  <a name="cfn-dms-replicationtask-tags"></a>
 The tags that you want to attach to the migration task\.  
-*Required: *No  
+*Required*: No  
 *Type*: List of [resource tags](aws-properties-resource-tags.md) in key\-value format  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `TargetEndpointArn`  <a name="cfn-dms-replicationtask-targetendpointarn"></a>
 The ARN string that uniquely identifies the endpoint\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w3ab2c21c10d332c11"></a>
+## Return Value<a name="w3ab2c21c10d368c11"></a>
 
-### Ref<a name="w3ab2c21c10d332c11b2"></a>
+### Ref<a name="w3ab2c21c10d368c11b2"></a>
 
 When you pass the logical ID of an `AWS::DMS::ReplicationTask` resource to the intrinsic `Ref` function, the function returns the replication task ARN\.
 
@@ -164,8 +164,6 @@ Resources:
       }"
 ```
 
-## See Also<a name="w3ab2c21c10d332c15"></a>
-
+## See Also<a name="w3ab2c21c10d368c15"></a>
 + [CreateReplicationTask](http://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationTask.html) in the *AWS Database Migration Service API Reference*\.
-
 + [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)
