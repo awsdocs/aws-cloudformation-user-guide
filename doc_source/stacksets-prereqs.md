@@ -13,6 +13,10 @@ Because stack sets perform stack operations across multiple accounts, before you
    + Which resources users and groups can include in their stack sets\. 
    + Which stack set operations specific users and groups can perform\. 
 
+
+Note: The StackSet IAM Roles must have the same names described below, these are AWSCloudFormationStackSetAdministrationRole and AWSCloudFormationStackSetExecutionRole.
+
+
 1. Create the necessary IAM service roles in your adminstrator and target accounts to define the permissions you want\.
 
 **Topics**
