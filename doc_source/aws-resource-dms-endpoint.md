@@ -99,7 +99,7 @@ The type of endpoint\. Valid values are `source` and `target`\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `EngineName`  <a name="cfn-dms-endpoint-enginename"></a>
-The type of engine for the endpoint\. Valid values depend on the `EndPointType` and include `MYSQL`, `ORACLE`, `POSTGRES`, `MARIADB`, `AURORA`, `REDSHIFT`, `S3`, `SYBASE`, `DYNAMODB`, `MONGODB`, and `SQLSERVER`\.  
+The type of engine for the endpoint\. Valid values depend on the `EndPointType` and include `MYSQL`, `ORACLE`, `POSTGRES`, `MARIADB`, `AURORA`, `AURORA-POSTGRES`, `REDSHIFT`, `S3`, `SYBASE`, `DYNAMODB`, `MONGODB`, and `SQLSERVER`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
