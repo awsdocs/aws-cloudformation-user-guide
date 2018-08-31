@@ -122,7 +122,7 @@ In the following Node\.js example, the inline Lambda function takes an input val
 ##### YAML<a name="cfn-lambda-function-code-zipfile-examplenodejs.yaml"></a>
 
 ```
-ZipFile: >
+ZipFile: |
   var response = require('cfn-response');
   exports.handler = function(event, context) {
     var input = parseInt(event.ResourceProperties.Input);
