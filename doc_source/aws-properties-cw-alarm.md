@@ -131,7 +131,7 @@ The percentile statistic for the metric\. Specify a value between p0\.0 and p100
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `InsufficientDataActions`  <a name="cfn-cloudwatch-alarms-insufficientdataactions"></a>
-The list of actions to execute when this alarm transitions into an INSUFFICIENT\_DATA state\. Specify each action as an Amazon Resource Number \(ARN\)\. Currently, the only action supported is publishing to an Amazon SNS topic or an Auto Scaling policy\.  
+The list of actions to execute when this alarm transitions into an INSUFFICIENT\_DATA state\. Specify each action as an Amazon Resource Number \(ARN\)\. Currently, the only actions supported are publishing to an Amazon SNS topic or an Auto Scaling policy\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
