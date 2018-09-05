@@ -127,7 +127,7 @@ The following example creates a GraphQL API
           "Ref": "graphQlApiName"
         },
         "AuthenticationType": "AMAZON_COGNITO_USER_POOLS",
-        UserPoolConfig": {
+        "UserPoolConfig": {
           "UserPoolId": {
             "Ref": "userPoolId"
           },
@@ -163,7 +163,7 @@ Resources:
       Name:
 	Ref: graphQlApiName
       AuthenticationType: "AMAZON_COGNITO_USER_POOLS"
-      "UserPoolConfig":
+      UserPoolConfig:
         UserPoolId:
           Ref: userPoolId
         AwsRegion:
