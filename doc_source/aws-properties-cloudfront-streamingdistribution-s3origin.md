@@ -39,5 +39,4 @@ The CloudFront origin access identity to associate with the RTMP distribution\. 
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-cloudfront-streamingdistribution-s3origin-seealso"></a>
-
 + [S3Origin](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_S3Origin.html) in the *Amazon CloudFront API Reference*

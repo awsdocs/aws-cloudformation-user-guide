@@ -129,7 +129,7 @@ MyDB:
 
 ## AWS::Partition<a name="cfn-pseudo-param-partition"></a>
 
-Returns the partition that the resource is in\. For standard AWS regions, the partition is `aws`\. For resources in other partitions, the partition is `aws-`*partitionname*\. For example, the partition for resources in the China \(Beijing\) region is `aws-cn`\.
+Returns the partition that the resource is in\. For standard AWS regions, the partition is `aws`\. For resources in other partitions, the partition is `aws-`*partitionname*\. For example, the partition for resources in the China \(Beijing and Ningxia\) region is `aws-cn`\, for GovCloud US region is 'aws-us-gov'\.
 
 ## AWS::Region<a name="cfn-pseudo-param-region"></a>
 

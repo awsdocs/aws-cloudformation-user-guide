@@ -4,12 +4,12 @@ Associates a subnet with a route table\.
 
 When `AWS::EC2::SubnetRouteTableAssociation` resources are created during create or update operations, AWS CloudFormation adopts existing resources that share the same key properties \(the properties that contribute to uniquely identify the resource\)\. However, if the operation fails and rolls back, AWS CloudFormation deletes the previously out\-of\-band resources\. You can protect against this behavior by using `Retain` deletion policies\. For more information, see [DeletionPolicy Attribute](aws-attribute-deletionpolicy.md)\.
 
-
+**Topics**
 + [Syntax](#aws-resource-ec2-subnetroutetableassociation-syntax)
-+ [Properties](#w3ab2c21c10d457c11)
-+ [Return Value](#w3ab2c21c10d457c13)
-+ [Example](#w3ab2c21c10d457c15)
-+ [See Also](#w3ab2c21c10d457c17)
++ [Properties](#w3ab2c21c10d498c11)
++ [Return Value](#w3ab2c21c10d498c13)
++ [Example](#w3ab2c21c10d498c15)
++ [See Also](#w3ab2c21c10d498c17)
 
 ## Syntax<a name="aws-resource-ec2-subnetroutetableassociation-syntax"></a>
 
@@ -36,7 +36,7 @@ Properties:
   [SubnetId](#cfn-ec2-subnetroutetableassociation-subnetid): String
 ```
 
-## Properties<a name="w3ab2c21c10d457c11"></a>
+## Properties<a name="w3ab2c21c10d498c11"></a>
 
 `RouteTableId`  <a name="cfn-ec2-subnetroutetableassociation-routetableid"></a>
 The ID of the route table\. This is commonly written as a reference to a route table declared elsewhere in the template\. For example:  
@@ -58,7 +58,7 @@ The ID of the subnet\. This is commonly written as a reference to a subnet decla
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w3ab2c21c10d457c13"></a>
+## Return Value<a name="w3ab2c21c10d498c13"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -70,7 +70,7 @@ For the subnet route table association with the logical ID "MyRTA", Ref will ret
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10d457c15"></a>
+## Example<a name="w3ab2c21c10d498c15"></a>
 
 ### JSON<a name="aws-resource-subnetroutetableassociation-example-1.json"></a>
 
@@ -103,6 +103,5 @@ Resources:
         Ref: myRouteTable
 ```
 
-## See Also<a name="w3ab2c21c10d457c17"></a>
-
+## See Also<a name="w3ab2c21c10d498c17"></a>
 + [AssociateRouteTable](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-AssociateRouteTable.html) in the *Amazon EC2 API Reference*

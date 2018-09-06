@@ -54,11 +54,8 @@ If `true`, the receipt rule is active\. The default value is `false`\.
 
 `Name`  <a name="cfn-ses-receiptrule-rule-name"></a>
 The name of the receipt rule\. The name must:   
-
 + Contain only ASCII letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), or dashes \(\-\)\.
-
 + Start and end with a letter or number\.
-
 + Contain less than 64 characters\.
  *Required*: No  
  *Type*: String  
@@ -84,9 +81,6 @@ Valid values include `Optional` and `Require`\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ses-receiptrule-rule-seealso"></a>
-
 + [Creating Receipt Rules for Amazon SES Email Receiving](url-ses-dev;receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*
-
 + [CreateReceiptRule](url-ses-api;API_CreateReceiptRule.html) in the *Amazon Simple Email Service API Reference*
-
 + [ReceiptRule](url-ses-api;API_ReceiptRule.html) in the *Amazon Simple Email Service API Reference*

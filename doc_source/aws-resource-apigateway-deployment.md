@@ -2,7 +2,7 @@
 
 The `AWS::ApiGateway::Deployment` resource deploys an Amazon API Gateway \(API Gateway\) `[RestApi](aws-resource-apigateway-restapi.md)` resource to a stage so that clients can call the API over the Internet\. The stage acts as an environment\.
 
-
+**Topics**
 + [Syntax](#aws-resource-apigateway-deployment-syntax)
 + [Properties](#w3ab2c21c10c35b9)
 + [Return Value](#w3ab2c21c10c35c11)
@@ -41,25 +41,25 @@ Properties:
 
 `Description`  <a name="cfn-apigateway-deployment-description"></a>
 A description of the purpose of the API Gateway deployment\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `RestApiId`  <a name="cfn-apigateway-deployment-restapiid"></a>
 The ID of the [RestApi](aws-resource-apigateway-restapi.md) resource to deploy\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `StageDescription`  <a name="cfn-apigateway-deployment-stagedescription"></a>
 Configures the stage that API Gateway creates with this deployment\.  
-*Required: *No  
+*Required*: No  
 *Type*: [Amazon API Gateway Deployment StageDescription](aws-properties-apigateway-deployment-stagedescription.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `StageName`  <a name="cfn-apigateway-deployment-stagename"></a>
 A name for the stage that API Gateway creates with this deployment\. Use only alphanumeric characters\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 

@@ -21,9 +21,6 @@ In some cases, you might have underlying resources that you want to upgrade incr
 When you provision your infrastructure with AWS CloudFormation, the AWS CloudFormation template describes exactly what resources are provisioned and their settings\. Because these templates are text files, you simply track differences in your templates to track changes to your infrastructure, similar to the way developers control revisions to source code\. For example, you can use a version control system with your templates so that you know exactly what changes were made, who made them, and when\. If at any point you need to reverse changes to your infrastructure, you can use a previous version of your template\.
 
 ## Related Information<a name="w3ab2b5c13"></a>
-
 + For more information about AWS CloudFormation stacks and templates, see [AWS CloudFormation Concepts](cfn-whatis-concepts.md)\.
-
 + For an overview about how to use AWS CloudFormation, see [How Does AWS CloudFormation Work?](cfn-whatis-howdoesitwork.md)\.
-
 + For pricing information, see [AWS CloudFormation Pricing](http://aws.amazon.com/cloudformation/pricing/)\.

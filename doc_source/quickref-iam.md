@@ -2,7 +2,7 @@
 
 This section contains AWS Identity and Access Management template snippets\.
 
-
+**Topics**
 + [Declaring an IAM User Resource](#scenario-iam-user)
 + [Declaring an IAM Access Key Resource](#scenario-iam-accesskey)
 + [Declaring an IAM Group Resource](#scenario-iam-group)

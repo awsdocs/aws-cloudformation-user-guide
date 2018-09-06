@@ -2,7 +2,7 @@
 
 The `AWS::Glue::Database` resource specifies a logical grouping of tables in AWS Glue\. For more information, see [Defining a Database in Your Data Catalog](http://docs.aws.amazon.com/glue/latest/dg/define-database.html) and [Database Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-databases.html#aws-glue-api-catalog-databases-Database) in the *AWS Glue Developer Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-glue-database-syntax)
 + [Properties](#aws-resource-glue-database-properties)
 + [Return Values](#aws-resource-glue-database-returnvalues)
@@ -50,7 +50,7 @@ To specify the account ID, you can use the `Ref` intrinsic function with the `AW
 
 ## Return Values<a name="aws-resource-glue-database-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d662c11b3"></a>
+### Ref<a name="w3ab2c21c10d707c11b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the `DatabaseInput` name\.
 

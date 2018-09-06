@@ -31,18 +31,18 @@ For more information about each property, including constraints and valid values
 
 `Alarms`  <a name="cfn-codedeploy-deploymentgroup-alarmconfiguration-alarms"></a>
 The list of alarms configured for the deployment group\. Duplicates are not allowed\.  
-*Required: *No  
+*Required*: No  
 *Type*: List of [AWS CodeDeploy DeploymentGroup Alarm](aws-properties-codedeploy-deploymentgroup-alarm.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Enabled`  <a name="cfn-codedeploy-deploymentgroup-alarmconfiguration-enabled"></a>
 Indicates whether the alarm configuration is enabled\.  
-*Required: *No  
+*Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `IgnorePollAlarmFailure`  <a name="cfn-codedeploy-deploymentgroup-alarmconfiguration-ignorepollalarmfailure"></a>
 Indicates whether a deployment should continue if information about the current state of alarms cannot be retrieved from CloudWatch\. The default value is `false`\.  
-*Required: *No  
+*Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

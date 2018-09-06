@@ -2,7 +2,7 @@
 
 `Lambda` is a property of the `Actions` property that describes an action that invokes a Lambda function\.
 
-## Syntax<a name="w3ab2c21c14e1184b5"></a>
+## Syntax<a name="w3ab2c21c14e1356b5"></a>
 
 ### JSON<a name="aws-properties-iot-topicrule-lambdaaction-syntax.json"></a>
 
@@ -18,9 +18,9 @@
 [FunctionArn](#cfn-iot-topicrule-lambdaaction-functionarn): String
 ```
 
-## Properties<a name="w3ab2c21c14e1184b7"></a>
+## Properties<a name="w3ab2c21c14e1356b7"></a>
 
 `FunctionArn`  <a name="cfn-iot-topicrule-lambdaaction-functionarn"></a>
 The ARN of the Lambda function\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String

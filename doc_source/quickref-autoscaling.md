@@ -1,6 +1,6 @@
 # Auto Scaling Template Snippets<a name="quickref-autoscaling"></a>
 
-
+**Topics**
 + [Auto Scaling Launch Configuration Resource](#scenario-as-launch-config)
 + [Auto Scaling Group Resource](#scenario-as-group)
 + [Auto Scaling Policy Triggered by CloudWatch Alarm](#scenario-as-policy)

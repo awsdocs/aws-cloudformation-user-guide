@@ -2,7 +2,7 @@
 
 <a name="aws-properties-s3-bucket-encryptionconfiguration-description"></a>The `EncryptionConfiguration` property type specifies encryption\-related information for an Amazon S3 bucket that is a destination for replicated objects\.
 
-<a name="aws-properties-s3-bucket-encryptionconfiguration-inheritance"></a>`EncryptionConfiguration` is a property type of the [AWS::S3::Bucket](aws-properties-s3-bucket.md) resource\.
+<a name="aws-properties-s3-bucket-encryptionconfiguration-inheritance"></a>`EncryptionConfiguration` is a property of the [Amazon S3 Bucket ReplicationDestination](aws-properties-s3-bucket-replicationconfiguration-rules-destination.md) property\.
 
 ## Syntax<a name="aws-properties-s3-bucket-encryptionconfiguration-syntax"></a>
 

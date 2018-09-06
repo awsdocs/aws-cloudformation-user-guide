@@ -7,10 +7,10 @@ If you use DB security groups, the settings that you can specify for your DB ins
 
 When you specify an AWS::RDS::DBSecurityGroup as an argument to the `Ref` function, AWS CloudFormation returns the value of the `DBSecurityGroupName`\.
 
-
+**Topics**
 + [Syntax](#aws-resource-rds-securitygroup-syntax)
-+ [Properties](#w3ab2c21c10d898c13)
-+ [Template Examples](#w3ab2c21c10d898c15)
++ [Properties](#w3ab2c21c10d967c13)
++ [Template Examples](#w3ab2c21c10d967c15)
 
 ## Syntax<a name="aws-resource-rds-securitygroup-syntax"></a>
 
@@ -44,7 +44,7 @@ Properties:
     - Resource Tag
 ```
 
-## Properties<a name="w3ab2c21c10d898c13"></a>
+## Properties<a name="w3ab2c21c10d967c13"></a>
 
 `EC2VpcId`  <a name="cfn-rds-dbsecuritygroup-ec2vpcid"></a>
 The Id of the VPC\. Indicates which VPC this DB Security Group should belong to\.  
@@ -67,16 +67,16 @@ Description of the security group\.
 
 `Tags`  <a name="cfn-rds-dbsecuritygroup-tags"></a>
 The tags that you want to attach to the Amazon RDS DB security group\.  
-*Required: *No  
+*Required*: No  
 *Type*: A list of [resource tags](aws-properties-resource-tags.md)\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Template Examples<a name="w3ab2c21c10d898c15"></a>
+## Template Examples<a name="w3ab2c21c10d967c15"></a>
 
 **Tip**  
 For more RDS template examples, see [Amazon RDS Template Snippets](quickref-rds.md)\.
 
-### Single VPC security group<a name="w3ab2c21c10d898c15b4"></a>
+### Single VPC security group<a name="w3ab2c21c10d967c15b4"></a>
 
 This template snippet creates/updates a single VPC security group, referred to by EC2SecurityGroupName\.
 
@@ -110,7 +110,7 @@ DBSecurityGroup:
     GroupDescription: "Frontend Access"
 ```
 
-### Multiple VPC security groups<a name="w3ab2c21c10d898c15b6"></a>
+### Multiple VPC security groups<a name="w3ab2c21c10d967c15b6"></a>
 
 This template snippet creates/updates multiple VPC security groups\.
 

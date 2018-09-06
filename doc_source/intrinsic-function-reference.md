@@ -5,8 +5,9 @@ AWS CloudFormation provides several built\-in functions that help you manage you
 **Note**  
 You can use intrinsic functions only in specific parts of a template\. Currently, you can use intrinsic functions in resource properties, outputs, metadata attributes, and update policy attributes\. You can also use intrinsic functions to conditionally create stack resources\.
 
-
+**Topics**
 + [`Fn::Base64`](intrinsic-function-reference-base64.md)
++ [`Fn::Cidr`](intrinsic-function-reference-cidr.md)
 + [Condition Functions](intrinsic-function-reference-conditions.md)
 + [`Fn::FindInMap`](intrinsic-function-reference-findinmap.md)
 + [`Fn::GetAtt`](intrinsic-function-reference-getatt.md)

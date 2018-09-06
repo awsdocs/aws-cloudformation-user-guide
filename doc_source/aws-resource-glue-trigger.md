@@ -2,7 +2,7 @@
 
 The `AWS::Glue::Trigger` resource specifies triggers that run AWS Glue jobs\. For more information, see [Triggering Jobs in AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/trigger-job.html) and [Trigger Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-Trigger) in the *AWS Glue Developer Guide*\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-glue-trigger-syntax)
 + [Properties](#aws-resource-glue-trigger-properties)
 + [Return Values](#aws-resource-glue-trigger-returnvalues)
@@ -83,7 +83,7 @@ The predicate of the job trigger, which determines when the trigger fires\.
 
 ## Return Values<a name="aws-resource-glue-trigger-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d677c10b3"></a>
+### Ref<a name="w3ab2c21c10d722c10b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 

@@ -32,7 +32,7 @@ After you have deleted all stack instances, you can delete the stack set\.
 
 ## Delete Service Roles \(Optional\)<a name="stacksets-delete-roles"></a>
 
-Delete the service roles that you created as part of the [Prerequisites](stacksets-prereqs.md) for the walkthrough in this guide\. The roles that you created to get started with StackSets are named **AWSCloudFormationStackSetAdministrationRole** in the administrator account, and **AwsCloudFormationStackSetExecutionRole** in each target account\. For more information about deleting roles, see [Deleting Roles and Instance Profiles](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_manage_delete.html) in the *IAM User Guide*\.
+Delete the service roles that you created as part of the [Prerequisites: Granting Permissions for Stack Set Operations](stacksets-prereqs.md) for the walkthrough in this guide\. The roles that you created to get started with StackSets are named **AWSCloudFormationStackSetAdministrationRole** in the administrator account, and **AwsCloudFormationStackSetExecutionRole** in each target account\. For more information about deleting roles, see [Deleting Roles and Instance Profiles](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_manage_delete.html) in the *IAM User Guide*\.
 
 **To delete a service role by using the AWS Management Console**
 
@@ -45,7 +45,6 @@ Delete the service roles that you created as part of the [Prerequisites](stackse
 1. In the confirmation dialog box, choose **Yes, Delete**\. If you are sure, you can proceed with the deletion even if the service last accessed data is still loading\.
 
 **To delete a service role by using the AWS CLI**
-
 + Run the following command\. When you are prompted to confirm, type **y**, and then press **Enter**\.
 
   ```

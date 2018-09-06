@@ -37,7 +37,7 @@ If a resource update fails, AWS CloudFormation rolls back any resources that it 
 2011-09-30 09:37 PDT AWS::CloudFormation::Stack MyStack UPDATE_ROLLBACK_IN_PROGRESS The following resource(s) failed to update: [MyDB]
 ```
 
-
+**Topics**
 + [To view stack events by using the console](#using-cfn-updating-stacks-monitor-stack.CON)
 + [To view stack events by using the command line](#using-cfn-updating-stacks-monitor-stack.CLI)
 
@@ -48,5 +48,4 @@ If a resource update fails, AWS CloudFormation rolls back any resources that it 
 1. To update the event list with the most recent events, click the refresh button in the AWS CloudFormation console\.
 
 ## To view stack events by using the command line<a name="using-cfn-updating-stacks-monitor-stack.CLI"></a>
-
 + Use the command [http://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-events.html](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-events.html) to view the events for a stack\.

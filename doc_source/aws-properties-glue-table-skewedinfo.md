@@ -51,5 +51,4 @@ UTF\-8 string–to–UTF\-8 string key\-value pairs that map skewed values to th
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-glue-table-skewedinfo-seealso"></a>
-
 + [SkewedInfo Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-SkewedInfo) in the *AWS Glue Developer Guide*
