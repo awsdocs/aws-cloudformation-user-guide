@@ -70,7 +70,7 @@ The time in seconds that the delivery of all messages in the queue is delayed\. 
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `FifoQueue`  <a name="cfn-sqs-queue-fifoqueue"></a>
-Indicates whether this queue is a FIFO queue\. For more information, see [FIFO \(First\-In\-First\-Out\) Queues](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html) in the *Amazon Simple Queue Service Developer Guide*\.  
+Indicates whether this queue is a FIFO queue\. For more information, see [FIFO \(First\-In\-First\-Out\) Queues](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html) in the *Amazon Simple Queue Service Developer Guide*\. The default value is `false`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
