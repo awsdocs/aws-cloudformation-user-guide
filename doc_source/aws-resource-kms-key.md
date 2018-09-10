@@ -21,8 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[Description](#cfn-kms-key-description)" : String,
     "[Enabled](#cfn-kms-key-enabled)" : Boolean,
     "[EnableKeyRotation](#cfn-kms-key-enablekeyrotation)" : Boolean,
-    "[KeyPolicy](#cfn-kms-key-keypolicy)" : JSON object
-    "[Tags](#cfn-kms-key-tags)" : [ Resource Tag, ... ],
+    "[KeyPolicy](#cfn-kms-key-keypolicy)" : JSON object,
+    "[Tags](#cfn-kms-key-tags)" : [ Resource Tag, ... ]
   }
 }
 ```
