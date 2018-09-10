@@ -33,7 +33,7 @@ Type: "AWS::SNS::Topic"
 Properties: 
   [DisplayName](#cfn-sns-topic-displayname): String
   [Subscription](#cfn-sns-topic-subscription):
-    SNS Subscription
+    - SNS Subscription
   [TopicName](#cfn-sns-topic-name): String
 ```
 
