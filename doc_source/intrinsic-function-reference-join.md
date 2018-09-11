@@ -45,13 +45,13 @@ The following example returns: `"a:b:c"`\.
 #### JSON<a name="intrinsic-function-reference-join-example1.json"></a>
 
 ```
-1. "Fn::Join" : [ ":", [ "a", "b", "c" ] ]
+"Fn::Join" : [ ":", [ "a", "b", "c" ] ]
 ```
 
 #### YAML<a name="intrinsic-function-reference-join-example1.yaml"></a>
 
 ```
-1. !Join [ ":", [ a, b, c ] ]
+!Join [ ":", [ a, b, c ] ]
 ```
 
 ### Join Using the Ref Function with Parameters<a name="intrinsic-function-reference-join-example2"></a>
@@ -61,31 +61,31 @@ The following example uses `Fn::Join` to construct a string value\. It uses the 
 #### JSON<a name="intrinsic-function-reference-join-example2.json"></a>
 
 ```
- 1. {
- 2.   "Fn::Join": [
- 3.     "", [
- 4.       "arn:",
- 5.       {
- 6.         "Ref": "Partition"
- 7.       },
- 8.       ":s3:::elasticbeanstalk-*-",
- 9.       {
-10.         "Ref": "AWS::AccountId"
-11.       }
-12.     ]
-13.   ]
-14. }
+{
+  "Fn::Join": [
+    "", [
+      "arn:",
+      {
+        "Ref": "Partition"
+      },
+      ":s3:::elasticbeanstalk-*-",
+      {
+        "Ref": "AWS::AccountId"
+      }
+    ]
+  ]
+}
 ```
 
 #### YAML<a name="intrinsic-function-reference-join-example2.yaml"></a>
 
 ```
-1. !Join
-2.   - ''
-3.   - - 'arn:'
-4.     - !Ref Partition
-5.     - ':s3:::elasticbeanstalk-*-'
-6.     - !Ref 'AWS::AccountId'
+!Join
+  - ''
+  - - 'arn:'
+    - !Ref Partition
+    - ':s3:::elasticbeanstalk-*-'
+    - !Ref 'AWS::AccountId'
 ```
 
 **Note**  

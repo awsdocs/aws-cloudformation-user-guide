@@ -74,46 +74,46 @@ The following sample snippet creates an alarm that sends a notification when the
 ### JSON<a name="quickref-cloudwatch-example-2.json"></a>
 
 ```
- 1. "CPUAlarm" : {
- 2.   "Type" : "AWS::CloudWatch::Alarm",
- 3.   "Properties" : {
- 4.     "AlarmDescription" : "CPU alarm for my instance",
- 5.     "AlarmActions" : [ { "Ref" : "logical name of an AWS::SNS::Topic resource" } ],
- 6.     "MetricName" : "CPUUtilization",
- 7.     "Namespace" : "AWS/EC2",
- 8.     "Statistic" : "Average",
- 9.     "Period" : "60",
-10.     "EvaluationPeriods" : "3",
-11.     "Threshold" : "90",
-12.     "ComparisonOperator" : "GreaterThanThreshold",
-13.     "Dimensions" : [ {
-14.       "Name" : "InstanceId",
-15.       "Value" : { "Ref" : "logical name of an AWS::EC2::Instance resource" }
-16.     } ]
-17.   }
-18. }
+ "CPUAlarm" : {
+   "Type" : "AWS::CloudWatch::Alarm",
+   "Properties" : {
+     "AlarmDescription" : "CPU alarm for my instance",
+     "AlarmActions" : [ { "Ref" : "logical name of an AWS::SNS::Topic resource" } ],
+     "MetricName" : "CPUUtilization",
+     "Namespace" : "AWS/EC2",
+     "Statistic" : "Average",
+     "Period" : "60",
+     "EvaluationPeriods" : "3",
+     "Threshold" : "90",
+     "ComparisonOperator" : "GreaterThanThreshold",
+     "Dimensions" : [ {
+       "Name" : "InstanceId",
+       "Value" : { "Ref" : "logical name of an AWS::EC2::Instance resource" }
+     } ]
+   }
+ }
 ```
 
 ### YAML<a name="quickref-cloudwatch-example-2.yaml"></a>
 
 ```
- 1. CPUAlarm:
- 2.   Type: AWS::CloudWatch::Alarm
- 3.   Properties:
- 4.     AlarmDescription: CPU alarm for my instance
- 5.     AlarmActions:
- 6.     - Ref: "logical name of an AWS::SNS::Topic resource"
- 7.     MetricName: CPUUtilization
- 8.     Namespace: AWS/EC2
- 9.     Statistic: Average
-10.     Period: '60'
-11.     EvaluationPeriods: '3'
-12.     Threshold: '90'
-13.     ComparisonOperator: GreaterThanThreshold
-14.     Dimensions:
-15.     - Name: InstanceId
-16.       Value:
-17.         Ref: "logical name of an AWS::EC2::Instance resource"
+CPUAlarm:
+  Type: AWS::CloudWatch::Alarm
+  Properties:
+    AlarmDescription: CPU alarm for my instance
+    AlarmActions:
+    - Ref: "logical name of an AWS::SNS::Topic resource"
+    MetricName: CPUUtilization
+    Namespace: AWS/EC2
+    Statistic: Average
+    Period: '60'
+    EvaluationPeriods: '3'
+    Threshold: '90'
+    ComparisonOperator: GreaterThanThreshold
+    Dimensions:
+    - Name: InstanceId
+      Value:
+        Ref: "logical name of an AWS::EC2::Instance resource"
 ```
 
 ## Recover an Amazon Elastic Compute Cloud Instance<a name="cloudwatch-sample-recover-instance"></a>

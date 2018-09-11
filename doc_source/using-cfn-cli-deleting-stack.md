@@ -5,7 +5,7 @@ To delete a stack, you run the `[aws cloudformation delete\-stack](http://docs.a
 The following example deletes the `myteststack` stack:
 
 ```
-1. PROMPT> aws cloudformation delete-stack --stack-name myteststack
+aws cloudformation delete-stack --stack-name myteststack
 ```
 
 **Note**  

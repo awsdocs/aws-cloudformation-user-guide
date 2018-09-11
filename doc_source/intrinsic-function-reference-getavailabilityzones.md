@@ -53,18 +53,18 @@ For these examples, AWS CloudFormation evaluates `Fn::GetAZs` to the following a
 #### JSON<a name="intrinsic-function-reference-getazs-example1.json"></a>
 
 ```
-1. { "Fn::GetAZs" : "" }
-2. { "Fn::GetAZs" : { "Ref" : "AWS::Region" } }
-3. { "Fn::GetAZs" : "us-east-1" }
+{ "Fn::GetAZs" : "" }
+{ "Fn::GetAZs" : { "Ref" : "AWS::Region" } }
+{ "Fn::GetAZs" : "us-east-1" }
 ```
 
 #### YAML<a name="intrinsic-function-reference-getazs-example1.yaml"></a>
 
 ```
-1. Fn::GetAZs: ""
-2. Fn::GetAZs:
-3.   Ref: "AWS::Region"
-4. Fn::GetAZs: us-east-1
+Fn::GetAZs: ""
+Fn::GetAZs:
+  Ref: "AWS::Region"
+Fn::GetAZs: us-east-1
 ```
 
  
@@ -112,18 +112,18 @@ The following examples show valid patterns for using nested intrinsic functions 
 #### YAML<a name="intrinsic-function-reference-select-example3.yaml"></a>
 
 ```
-1. AvailabilityZone: !Select 
-2.   - 0
-3.   - !GetAZs 
-4.     Ref: 'AWS::Region'
+AvailabilityZone: !Select 
+  - 0
+  - !GetAZs 
+    Ref: 'AWS::Region'
 ```
 
 #### YAML<a name="intrinsic-function-reference-select-example4.yaml"></a>
 
 ```
-1. AvailabilityZone: !Select 
-2.   - 0
-3.   - Fn::GetAZs: !Ref 'AWS::Region'
+AvailabilityZone: !Select 
+  - 0
+  - Fn::GetAZs: !Ref 'AWS::Region'
 ```
 
 ## Supported Functions<a name="w3ab2c21c28c36c19"></a>

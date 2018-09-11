@@ -14,25 +14,25 @@ The following template contains an Amazon S3 bucket resource with a Metadata att
 ### JSON<a name="aws-attribute-metadata-example.json"></a>
 
 ```
-1. {
-2.    "AWSTemplateFormatVersion" : "2010-09-09",
-3.    "Resources" : {
-4.       "MyS3Bucket" : {
-5.          "Type" : "AWS::S3::Bucket",
-6.          "Metadata" : { "Object1" : "Location1",  "Object2" : "Location2" }
-7.       }
-8.    }
-9. }
+{
+   "AWSTemplateFormatVersion" : "2010-09-09",
+   "Resources" : {
+      "MyS3Bucket" : {
+         "Type" : "AWS::S3::Bucket",
+         "Metadata" : { "Object1" : "Location1",  "Object2" : "Location2" }
+      }
+   }
+}
 ```
 
 ### YAML<a name="aws-attribute-metadata-example.yaml"></a>
 
 ```
-1. AWSTemplateFormatVersion: '2010-09-09'
-2. Resources:
-3.   MyS3Bucket:
-4.     Type: AWS::S3::Bucket
-5.     Metadata:
-6.       Object1: Location1
-7.       Object2: Location2
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  MyS3Bucket:
+    Type: AWS::S3::Bucket
+    Metadata:
+      Object1: Location1
+      Object2: Location2
 ```

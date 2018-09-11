@@ -45,13 +45,13 @@ This example snippet returns a string containing the DNS name of the load balanc
 #### JSON<a name="intrinsic-function-reference-getatt-example.json"></a>
 
 ```
-1. "Fn::GetAtt" : [ "myELB" , "DNSName" ]
+"Fn::GetAtt" : [ "myELB" , "DNSName" ]
 ```
 
 #### YAML<a name="intrinsic-function-reference-getatt-example.yaml"></a>
 
 ```
-1. !GetAtt myELB.DNSName
+!GetAtt myELB.DNSName
 ```
 
 #### <a name="intrinsic-function-reference-getatt-example2"></a>

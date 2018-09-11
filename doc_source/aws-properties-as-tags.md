@@ -53,44 +53,44 @@ The following example template snippet creates two Auto Scaling tags\. The first
 ### JSON<a name="aws-properties-as-tags-example.json"></a>
 
 ```
- 1. "WebServerGroup" : {
- 2.    "Type" : "AWS::AutoScaling::AutoScalingGroup",
- 3.    "Properties" : {
- 4.       "AvailabilityZones" : { "Fn::GetAZs" : "" },
- 5.       "LaunchConfigurationName" : { "Ref" : "LaunchConfig" },
- 6.       "MinSize" : "1",
- 7.       "MaxSize" : "2",
- 8.       "LoadBalancerNames" : [ { "Ref" : "ElasticLoadBalancer" } ],
- 9.       "Tags" : [ {
-10.          "Key" : "MyTag1",
-11.          "Value" : "Hello World 1",
-12.          "PropagateAtLaunch" : "true"
-13.       }, {
-14.          "Key" : "MyTag2",
-15.          "Value" : "Hello World 2",
-16.          "PropagateAtLaunch" : "false"
-17.       } ]
-18.    }
-19. }
+"WebServerGroup" : {
+   "Type" : "AWS::AutoScaling::AutoScalingGroup",
+   "Properties" : {
+      "AvailabilityZones" : { "Fn::GetAZs" : "" },
+      "LaunchConfigurationName" : { "Ref" : "LaunchConfig" },
+      "MinSize" : "1",
+      "MaxSize" : "2",
+      "LoadBalancerNames" : [ { "Ref" : "ElasticLoadBalancer" } ],
+      "Tags" : [ {
+         "Key" : "MyTag1",
+         "Value" : "Hello World 1",
+         "PropagateAtLaunch" : "true"
+      }, {
+         "Key" : "MyTag2",
+         "Value" : "Hello World 2",
+         "PropagateAtLaunch" : "false"
+      } ]
+   }
+}
 ```
 
 ### YAML<a name="aws-properties-as-tags-example.yaml"></a>
 
 ```
- 1. WebServerGroup:
- 2.   Type: 'AWS::AutoScaling::AutoScalingGroup'
- 3.   Properties:
- 4.     AvailabilityZones: !GetAZs ''
- 5.     LaunchConfigurationName: !Ref LaunchConfig
- 6.     MinSize: '1'
- 7.     MaxSize: '2'
- 8.     LoadBalancerNames:
- 9.       - !Ref ElasticLoadBalancer
-10.     Tags:
-11.       - Key: MyTag1
-12.         Value: Hello World 1
-13.         PropagateAtLaunch: 'true'
-14.       - Key: MyTag2
-15.         Value: Hello World 2
-16.         PropagateAtLaunch: 'false'
+WebServerGroup:
+  Type: 'AWS::AutoScaling::AutoScalingGroup'
+  Properties:
+    AvailabilityZones: !GetAZs ''
+    LaunchConfigurationName: !Ref LaunchConfig
+    MinSize: '1'
+    MaxSize: '2'
+    LoadBalancerNames:
+      - !Ref ElasticLoadBalancer
+    Tags:
+      - Key: MyTag1
+        Value: Hello World 1
+        PropagateAtLaunch: 'true'
+      - Key: MyTag2
+        Value: Hello World 2
+        PropagateAtLaunch: 'false'
 ```
