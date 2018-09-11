@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[AllowMajorVersionUpgrade](#cfn-rds-dbinstance-allowmajorversionupgrade)" : Boolean,
     "[AutoMinorVersionUpgrade](#cfn-rds-dbinstance-autominorversionupgrade)" : Boolean,
     "[AvailabilityZone](#cfn-rds-dbinstance-availabilityzone)" : String,
-    "[BackupRetentionPeriod](#cfn-rds-dbinstance-backupretentionperiod)" : String,
+    "[BackupRetentionPeriod](#cfn-rds-dbinstance-backupretentionperiod)" : Integer,
     "[CharacterSetName](#cfn-rds-dbinstance-charactersetname)" : String,
     "[CopyTagsToSnapshot](#cfn-rds-dbinstance-copytagstosnapshot)" : Boolean,
     "[DBClusterIdentifier](#cfn-rds-dbinstance-dbclusteridentifier)" : String,
@@ -75,7 +75,7 @@ Properties:
   [AllowMajorVersionUpgrade](#cfn-rds-dbinstance-allowmajorversionupgrade): Boolean
   [AutoMinorVersionUpgrade](#cfn-rds-dbinstance-autominorversionupgrade): Boolean
   [AvailabilityZone](#cfn-rds-dbinstance-availabilityzone): String
-  [BackupRetentionPeriod](#cfn-rds-dbinstance-backupretentionperiod): String
+  [BackupRetentionPeriod](#cfn-rds-dbinstance-backupretentionperiod): Integer
   [CharacterSetName](#cfn-rds-dbinstance-charactersetname): String
   [CopyTagsToSnapshot](#cfn-rds-dbinstance-copytagstosnapshot): Boolean
   [DBClusterIdentifier](#cfn-rds-dbinstance-dbclusteridentifier): String
@@ -146,7 +146,7 @@ The name of the Availability Zone where the DB instance is located\. You can't s
 The number of days during which automatic DB snapshots are retained\.   
 If this DB instance is deleted or replaced during an update, AWS CloudFormation deletes all automated snapshots\. However, it retains manual DB snapshots\.
 *Required*: No  
-*Type*: String  
+*Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. For more information, see [ModifyDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html) in the *Amazon RDS API Reference*\.
 
 `CharacterSetName`  <a name="cfn-rds-dbinstance-charactersetname"></a>
