@@ -49,28 +49,28 @@ This example shows a `Tags` property\. You specify this property within the `Pro
 ### JSON<a name="aws-properties-resource-tags-example.json"></a>
 
 ```
- 1. "Tags" : [
- 2.       {
- 3.         "Key" : "keyname1",
- 4.         "Value" : "value1"
- 5.       },
- 6.       {
- 7.         "Key" : "keyname2",
- 8.         "Value" : "value2"
- 9.       }
-10.     ]
+"Tags" : [
+      {
+        "Key" : "keyname1",
+        "Value" : "value1"
+      },
+      {
+        "Key" : "keyname2",
+        "Value" : "value2"
+      }
+    ]
 ```
 
 ### YAML<a name="aws-properties-resource-tags-example.yaml"></a>
 
 ```
-1. Tags: 
-2.   - 
-3.     Key: "keyname1"
-4.     Value: "value1"
-5.   - 
-6.     Key: "keyname2"
-7.     Value: "value2"
+Tags: 
+  - 
+    Key: "keyname1"
+    Value: "value1"
+  - 
+    Key: "keyname2"
+    Value: "value2"
 ```
 
 ## See Also<a name="w3ab2c21c14e1626c19"></a>

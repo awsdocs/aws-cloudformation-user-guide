@@ -6,94 +6,96 @@ In the following example, a sample stack is created from a template file by usin
 
 The following example creates a stack with the name `myteststack` using the `sampletemplate.json` template file: 
 
+`aws cloudformation create-stack --stack-name myteststack --template-body file:///home/local/test/sampletemplate.json `
+
 ```
- 1. PROMPT> aws cloudformation create-stack --stack-name myteststack --template-body file:///home/local/test/sampletemplate.json  
- 2. [
- 3.     {
- 4.         "StackId": "arn:aws:cloudformation:us-east-2:123456789012:stack/myteststack/466df9e0-0dff-08e3-8e2f-5088487c4896",
- 5.         "Description": "AWS CloudFormation Sample Template S3_Bucket: Sample template showing how to create a publicly accessible S3 bucket. **WARNING** This template creates an S3 bucket.
- 6. You will be billed for the AWS resources used if you create a stack from this template.",
- 7.         "Tags": [],
- 8.         "Outputs": [
- 9.             {
-10.                 "Description": "Name of S3 bucket to hold website content",
-11.                 "OutputKey": "BucketName",
-12.                 "OutputValue": "myteststack-s3bucket-jssofi1zie2w"
-13.             }
-14.         ],
-15.         "StackStatusReason": null,
-16.         "CreationTime": "2013-08-23T01:02:15.422Z",
-17.         "Capabilities": [],
-18.         "StackName": "myteststack",
-19.         "StackStatus": "CREATE_COMPLETE",
-20.         "DisableRollback": false
-21.     }
-22. ]
+ [
+     {
+         "StackId": "arn:aws:cloudformation:us-east-2:123456789012:stack/myteststack/466df9e0-0dff-08e3-8e2f-5088487c4896",
+         "Description": "AWS CloudFormation Sample Template S3_Bucket: Sample template showing how to create a publicly accessible S3 bucket. **WARNING** This template creates an S3 bucket.
+ You will be billed for the AWS resources used if you create a stack from this template.",
+         "Tags": [],
+         "Outputs": [
+             {
+                 "Description": "Name of S3 bucket to hold website content",
+                 "OutputKey": "BucketName",
+                 "OutputValue": "myteststack-s3bucket-jssofi1zie2w"
+             }
+         ],
+         "StackStatusReason": null,
+         "CreationTime": "2013-08-23T01:02:15.422Z",
+         "Capabilities": [],
+         "StackName": "myteststack",
+         "StackStatus": "CREATE_COMPLETE",
+         "DisableRollback": false
+     }
+ ]
 ```
 
 The following example describes the `myteststack` stack:
 
+`aws cloudformation describe-stack-events --stack-name myteststack`
+
 ```
- 1. PROMPT> aws cloudformation describe-stack-events --stack-name myteststack
- 2. {
- 3.     "StackEvents": [
- 4.         {
- 5.             "StackId": "arn:aws:cloudformation:us-east-2:123456789012:stack/myteststack/466df9e0-0dff-08e3-8e2f-5088487c4896",
- 6.             "EventId": "af67ef60-0b8f-11e3-8b8a-500150b352e0",
- 7.             "ResourceStatus": "CREATE_COMPLETE",
- 8.             "ResourceType": "AWS::CloudFormation::Stack",
- 9.             "Timestamp": "2013-08-23T01:02:30.070Z",
-10.             "StackName": "myteststack",
-11.             "PhysicalResourceId": "arn:aws:cloudformation:us-east-2:123456789012:stack/myteststack/a69442d0-0b8f-11e3-8b8a-500150b352e0",
-12.             "LogicalResourceId": "myteststack"
-13.         },
-14.         {
-15.             "StackId": "arn:aws:cloudformation:us-east-2:123456789012:stack/myteststack/466df9e0-0dff-08e3-8e2f-5088487c4896",
-16.             "EventId": "S3Bucket-CREATE_COMPLETE-1377219748025",
-17.             "ResourceStatus": "CREATE_COMPLETE",
-18.             "ResourceType": "AWS::S3::Bucket",
-19.             "Timestamp": "2013-08-23T01:02:28.025Z",
-20.             "StackName": "myteststack",
-21.             "ResourceProperties": "{\"AccessControl\":\"PublicRead\"}",
-22.             "PhysicalResourceId": "myteststack-s3bucket-jssofi1zie2w",
-23.             "LogicalResourceId": "S3Bucket"
-24.         },
-25.         {
-26.             "StackId": "arn:aws:cloudformation:us-east-2:123456789012:stack/myteststack/466df9e0-0dff-08e3-8e2f-5088487c4896",
-27.             "EventId": "S3Bucket-CREATE_IN_PROGRESS-1377219746688",
-28.             "ResourceStatus": "CREATE_IN_PROGRESS",
-29.             "ResourceType": "AWS::S3::Bucket",
-30.             "Timestamp": "2013-08-23T01:02:26.688Z",
-31.             "ResourceStatusReason": "Resource creation Initiated",
-32.             "StackName": "myteststack",
-33.             "ResourceProperties": "{\"AccessControl\":\"PublicRead\"}",
-34.             "PhysicalResourceId": "myteststack-s3bucket-jssofi1zie2w",
-35.             "LogicalResourceId": "S3Bucket"
-36.         },
-37.         {
-38.             "StackId": "arn:aws:cloudformation:us-east-2:123456789012:stack/myteststack/466df9e0-0dff-08e3-8e2f-5088487c4896",
-39.             "EventId": "S3Bucket-CREATE_IN_PROGRESS-1377219743862",
-40.             "ResourceStatus": "CREATE_IN_PROGRESS",
-41.             "ResourceType": "AWS::S3::Bucket",
-42.             "Timestamp": "2013-08-23T01:02:23.862Z",
-43.             "StackName": "myteststack",
-44.             "ResourceProperties": "{\"AccessControl\":\"PublicRead\"}",
-45.             "PhysicalResourceId": null,
-46.             "LogicalResourceId": "S3Bucket"
-47.         },
-48.         {
-49.             "StackId": "arn:aws:cloudformation:us-east-2:123456789012:stack/myteststack/466df9e0-0dff-08e3-8e2f-5088487c4896",
-50.             "EventId": "a69469e0-0b8f-11e3-8b8a-500150b352e0",
-51.             "ResourceStatus": "CREATE_IN_PROGRESS",
-52.             "ResourceType": "AWS::CloudFormation::Stack",
-53.             "Timestamp": "2013-08-23T01:02:15.422Z",
-54.             "ResourceStatusReason": "User Initiated",
-55.             "StackName": "myteststack",
-56.             "PhysicalResourceId": "arn:aws:cloudformation:us-east-2:123456789012:stack/myteststack/a69442d0-0b8f-11e3-8b8a-500150b352e0",
-57.             "LogicalResourceId": "myteststack"
-58.         }
-59.     ]
-60. }
+{
+    "StackEvents": [
+        {
+            "StackId": "arn:aws:cloudformation:us-east-2:123456789012:stack/myteststack/466df9e0-0dff-08e3-8e2f-5088487c4896",
+            "EventId": "af67ef60-0b8f-11e3-8b8a-500150b352e0",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "ResourceType": "AWS::CloudFormation::Stack",
+            "Timestamp": "2013-08-23T01:02:30.070Z",
+            "StackName": "myteststack",
+            "PhysicalResourceId": "arn:aws:cloudformation:us-east-2:123456789012:stack/myteststack/a69442d0-0b8f-11e3-8b8a-500150b352e0",
+            "LogicalResourceId": "myteststack"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-2:123456789012:stack/myteststack/466df9e0-0dff-08e3-8e2f-5088487c4896",
+            "EventId": "S3Bucket-CREATE_COMPLETE-1377219748025",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "ResourceType": "AWS::S3::Bucket",
+            "Timestamp": "2013-08-23T01:02:28.025Z",
+            "StackName": "myteststack",
+            "ResourceProperties": "{\"AccessControl\":\"PublicRead\"}",
+            "PhysicalResourceId": "myteststack-s3bucket-jssofi1zie2w",
+            "LogicalResourceId": "S3Bucket"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-2:123456789012:stack/myteststack/466df9e0-0dff-08e3-8e2f-5088487c4896",
+            "EventId": "S3Bucket-CREATE_IN_PROGRESS-1377219746688",
+            "ResourceStatus": "CREATE_IN_PROGRESS",
+            "ResourceType": "AWS::S3::Bucket",
+            "Timestamp": "2013-08-23T01:02:26.688Z",
+            "ResourceStatusReason": "Resource creation Initiated",
+            "StackName": "myteststack",
+            "ResourceProperties": "{\"AccessControl\":\"PublicRead\"}",
+            "PhysicalResourceId": "myteststack-s3bucket-jssofi1zie2w",
+            "LogicalResourceId": "S3Bucket"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-2:123456789012:stack/myteststack/466df9e0-0dff-08e3-8e2f-5088487c4896",
+            "EventId": "S3Bucket-CREATE_IN_PROGRESS-1377219743862",
+            "ResourceStatus": "CREATE_IN_PROGRESS",
+            "ResourceType": "AWS::S3::Bucket",
+            "Timestamp": "2013-08-23T01:02:23.862Z",
+            "StackName": "myteststack",
+            "ResourceProperties": "{\"AccessControl\":\"PublicRead\"}",
+            "PhysicalResourceId": null,
+            "LogicalResourceId": "S3Bucket"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-2:123456789012:stack/myteststack/466df9e0-0dff-08e3-8e2f-5088487c4896",
+            "EventId": "a69469e0-0b8f-11e3-8b8a-500150b352e0",
+            "ResourceStatus": "CREATE_IN_PROGRESS",
+            "ResourceType": "AWS::CloudFormation::Stack",
+            "Timestamp": "2013-08-23T01:02:15.422Z",
+            "ResourceStatusReason": "User Initiated",
+            "StackName": "myteststack",
+            "PhysicalResourceId": "arn:aws:cloudformation:us-east-2:123456789012:stack/myteststack/a69442d0-0b8f-11e3-8b8a-500150b352e0",
+            "LogicalResourceId": "myteststack"
+        }
+    ]
+}
 ```
 
 **Note**  

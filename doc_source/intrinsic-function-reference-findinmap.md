@@ -58,28 +58,28 @@ The example template contains an `AWS::EC2::Instance` resource whose `ImageId` p
 ### JSON<a name="intrinsic-function-reference-findinmap-example.json"></a>
 
 ```
- 1. {
- 2.   ...
- 3.   "Mappings" : {
- 4.     "RegionMap" : {
- 5.       "us-east-1" : { "32" : "ami-6411e20d", "64" : "ami-7a11e213" },
- 6.       "us-west-1" : { "32" : "ami-c9c7978c", "64" : "ami-cfc7978a" },
- 7.       "eu-west-1" : { "32" : "ami-37c2f643", "64" : "ami-31c2f645" },
- 8.       "ap-southeast-1" : { "32" : "ami-66f28c34", "64" : "ami-60f28c32" },
- 9.       "ap-northeast-1" : { "32" : "ami-9c03a89d", "64" : "ami-a003a8a1" }
-10.     }
-11.   },
-12. 
-13.   "Resources" : {
-14.      "myEC2Instance" : {
-15.         "Type" : "AWS::EC2::Instance",
-16.         "Properties" : {
-17.            "ImageId" : { "Fn::FindInMap" : [ "RegionMap", { "Ref" : "AWS::Region" }, "32"]},
-18.            "InstanceType" : "m1.small"
-19.         }
-20.      }
-21.  }
-22. }
+{
+  ...
+  "Mappings" : {
+    "RegionMap" : {
+      "us-east-1" : { "32" : "ami-6411e20d", "64" : "ami-7a11e213" },
+      "us-west-1" : { "32" : "ami-c9c7978c", "64" : "ami-cfc7978a" },
+      "eu-west-1" : { "32" : "ami-37c2f643", "64" : "ami-31c2f645" },
+      "ap-southeast-1" : { "32" : "ami-66f28c34", "64" : "ami-60f28c32" },
+      "ap-northeast-1" : { "32" : "ami-9c03a89d", "64" : "ami-a003a8a1" }
+    }
+  },
+
+  "Resources" : {
+     "myEC2Instance" : {
+        "Type" : "AWS::EC2::Instance",
+        "Properties" : {
+           "ImageId" : { "Fn::FindInMap" : [ "RegionMap", { "Ref" : "AWS::Region" }, "32"]},
+           "InstanceType" : "m1.small"
+        }
+     }
+  }
+}
 ```
 
 ### YAML<a name="intrinsic-function-reference-findinmap-example.yaml"></a>

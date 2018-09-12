@@ -135,26 +135,24 @@ The value for the tag\. You can specify a value that is 1 to 255 Unicode charact
 *Type*: String    Example  This example shows a `Tags` property\. You specify this property within the `Properties` section of a resource that supports it\. When the resource is created, it is tagged with the tags you declare\. JSON 
 
 ```
- 1. "Tags" : [
- 2.       {
- 3.         "Key" : "keyname1",
- 4.         "Value" : "value1"
- 5.       },
- 6.       {
- 7.         "Key" : "keyname2",
- 8.         "Value" : "value2"
- 9.       }
-10.     ]
+"Tags" : [
+      {
+        "Key" : "keyname1",
+        "Value" : "value1"
+      },
+      {
+        "Key" : "keyname2",
+        "Value" : "value2"
+      }
+    ]
 ```  YAML 
 
 ```
-1. Tags: 
-2.   - 
-3.     Key: "keyname1"
-4.     Value: "value1"
-5.   - 
-6.     Key: "keyname2"
-7.     Value: "value2"
+Tags: 
+  - Key: "keyname1"
+    Value: "value1"
+  - Key: "keyname2"
+    Value: "value2"
 ```   See Also   [Setting Stack Options](cfn-console-add-tags.md)   [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)    ](aws-properties-resource-tags.md) property types  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 

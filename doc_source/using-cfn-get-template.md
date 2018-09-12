@@ -8,30 +8,31 @@ The `aws cloudformation get-template` command returns the deleted stacks templat
 The following example shows the template for the `myteststack` stack:
 
 ```
- 1. PROMPT> aws cloudformation get-template --stack-name myteststack
- 2. {
- 3.     "TemplateBody": {
- 4.         "AWSTemplateFormatVersion": "2010-09-09",
- 5.         "Outputs": {
- 6.             "BucketName": {
- 7.                 "Description": "Name of S3 bucket to hold website content",
- 8.                 "Value": {
- 9.                     "Ref": "S3Bucket"
-10.                 }
-11.             }
-12.         },
-13.         "Description": "AWS CloudFormation Sample Template S3_Bucket: Sample template showing how to create a publicly accessible S3 bucket. **WARNING** This template creates an S3 bucket.
-14. You will be billed for the AWS resources used if you create a stack from this template.",
-15.         "Resources": {
-16.             "S3Bucket": {
-17.                 "Type": "AWS::S3::Bucket",
-18.                 "Properties": {
-19.                     "AccessControl": "PublicRead"
-20.                 }
-21.             }
-22.         }
-23.     }
-24. }
+ PROMPT> aws cloudformation get-template --stack-name myteststack
+
+ {
+     "TemplateBody": {
+         "AWSTemplateFormatVersion": "2010-09-09",
+         "Outputs": {
+             "BucketName": {
+                 "Description": "Name of S3 bucket to hold website content",
+                 "Value": {
+                     "Ref": "S3Bucket"
+                 }
+             }
+         },
+         "Description": "AWS CloudFormation Sample Template S3_Bucket: Sample template showing how to create a publicly accessible S3 bucket. **WARNING** This template creates an S3 bucket.
+ You will be billed for the AWS resources used if you create a stack from this template.",
+         "Resources": {
+             "S3Bucket": {
+                 "Type": "AWS::S3::Bucket",
+                 "Properties": {
+                     "AccessControl": "PublicRead"
+                 }
+             }
+         }
+     }
+ }
 ```
 
 The output contains the entire template body, enclosed in quotation marks\.

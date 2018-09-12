@@ -30,77 +30,89 @@ The following template contains an [AWS::EC2::Instance](aws-properties-ec2-insta
 ### JSON<a name="aws-attribute-dependson-example-1.json"></a>
 
 ```
- 1. {
- 2.     "AWSTemplateFormatVersion" : "2010-09-09",
- 3.     "Mappings" : {
- 4.         "RegionMap" : {
- 5.             "us-east-1" : { "AMI" : "ami-76f0061f" },
- 6.             "us-west-1" : { "AMI" : "ami-655a0a20" },
- 7.             "eu-west-1" : { "AMI" : "ami-7fd4e10b" },
- 8.             "ap-northeast-1" : { "AMI" : "ami-8e08a38f" },
- 9.             "ap-southeast-1" : { "AMI" : "ami-72621c20" }
-10.         }
-11.     },
-12.     "Resources" : {
-13.         "Ec2Instance" : {
-14.             "Type" : "AWS::EC2::Instance",
-15.             "Properties" : {
-16.                 "ImageId" : {
-17.                    "Fn::FindInMap" : [ "RegionMap", { "Ref" : "AWS::Region" }, "AMI" ]
-18.                 }
-19.             },
-20.             "DependsOn" : "myDB"
-21.         },
-22.         "myDB" : {
-23.             "Type" : "AWS::RDS::DBInstance",
-24.             "Properties" : {
-25.                "AllocatedStorage" : "5",
-26.                "DBInstanceClass" : "db.m1.small",
-27.                "Engine" : "MySQL",
-28.                "EngineVersion" : "5.5",
-29.                "MasterUsername" : "MyName",
-30.                "MasterUserPassword" : "MyPassword"
-31.             }
-32.         }
-33.     }
-34. }
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Mappings": {
+        "RegionMap": {
+            "us-east-1": {
+                "AMI": "ami-76f0061f"
+            },
+            "us-west-1": {
+                "AMI": "ami-655a0a20"
+            },
+            "eu-west-1": {
+                "AMI": "ami-7fd4e10b"
+            },
+            "ap-northeast-1": {
+                "AMI": "ami-8e08a38f"
+            },
+            "ap-southeast-1": {
+                "AMI": "ami-72621c20"
+            }
+        }
+    },
+    "Resources": {
+        "Ec2Instance": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "ImageId": {
+                    "Fn::FindInMap": ["RegionMap", {
+                        "Ref": "AWS::Region"
+                    }, "AMI"]
+                }
+            },
+            "DependsOn": "myDB"
+        },
+        "myDB": {
+            "Type": "AWS::RDS::DBInstance",
+            "Properties": {
+                "AllocatedStorage": "5",
+                "DBInstanceClass": "db.t2.small",
+                "Engine": "MySQL",
+                "EngineVersion": "5.5",
+                "MasterUsername": "MyName",
+                "MasterUserPassword": "MyPassword"
+            }
+        }
+    }
+}
 ```
 
 ### YAML<a name="aws-attribute-dependson-example-1.yaml"></a>
 
 ```
- 1. AWSTemplateFormatVersion: '2010-09-09'
- 2. Mappings:
- 3.   RegionMap:
- 4.     us-east-1:
- 5.       AMI: ami-76f0061f
- 6.     us-west-1:
- 7.       AMI: ami-655a0a20
- 8.     eu-west-1:
- 9.       AMI: ami-7fd4e10b
-10.     ap-northeast-1:
-11.       AMI: ami-8e08a38f
-12.     ap-southeast-1:
-13.       AMI: ami-72621c20
-14. Resources:
-15.   Ec2Instance:
-16.     Type: AWS::EC2::Instance
-17.     Properties:
-18.       ImageId:
-19.         Fn::FindInMap:
-20.         - RegionMap
-21.         - Ref: AWS::Region
-22.         - AMI
-23.     DependsOn: myDB
-24.   myDB:
-25.     Type: AWS::RDS::DBInstance
-26.     Properties:
-27.       AllocatedStorage: '5'
-28.       DBInstanceClass: db.m1.small
-29.       Engine: MySQL
-30.       EngineVersion: '5.5'
-31.       MasterUsername: MyName
-32.       MasterUserPassword: MyPassword
+AWSTemplateFormatVersion: '2010-09-09'
+Mappings:
+  RegionMap:
+    us-east-1:
+      AMI: ami-76f0061f
+    us-west-1:
+      AMI: ami-655a0a20
+    eu-west-1:
+      AMI: ami-7fd4e10b
+    ap-northeast-1:
+      AMI: ami-8e08a38f
+    ap-southeast-1:
+      AMI: ami-72621c20
+Resources:
+  Ec2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId:
+        Fn::FindInMap:
+        - RegionMap
+        - Ref: AWS::Region
+        - AMI
+    DependsOn: myDB
+  myDB:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      AllocatedStorage: '5'
+      DBInstanceClass: db.t2.small
+      Engine: MySQL
+      EngineVersion: '5.5'
+      MasterUsername: MyName
+      MasterUserPassword: MyPassword
 ```
 
 ## When a DependsOn attribute is required<a name="gatewayattachment"></a>
@@ -124,29 +136,50 @@ The following snippet shows a sample gateway attachment and an Amazon EC2 instan
 ### JSON<a name="aws-attribute-dependson-example-2.json"></a>
 
 ```
-"GatewayToInternet" : {
-  "Type" : "AWS::EC2::VPCGatewayAttachment",
-  "Properties" : {
-    "VpcId" : { "Ref" : "VPC" },
-    "InternetGatewayId" : { "Ref" : "InternetGateway" }
-  }
+"GatewayToInternet": {
+    "Type": "AWS::EC2::VPCGatewayAttachment",
+    "Properties": {
+        "VpcId": {
+            "Ref": "VPC"
+        },
+        "InternetGatewayId": {
+            "Ref": "InternetGateway"
+        }
+    }
 },
 
-"EC2Host" : {
-  "Type" : "AWS::EC2::Instance",
-  "DependsOn" : "GatewayToInternet",
-    "Properties" : {
-      "InstanceType" : { "Ref" : "EC2InstanceType" },
-      "KeyName"  : { "Ref" : "KeyName" },
-      "ImageId"  : { "Fn::FindInMap" : [ "AWSRegionArch2AMI", { "Ref" : "AWS::Region" },
-        { "Fn::FindInMap" : [ "AWSInstanceType2Arch", { "Ref" : "EC2InstanceType" }, "Arch" ] } ] },
-      "NetworkInterfaces" : [{
-        "GroupSet"                 : [{ "Ref" : "EC2SecurityGroup" }],
-        "AssociatePublicIpAddress" : "true",
-        "DeviceIndex"              : "0",
-        "DeleteOnTermination"      : "true",
-        "SubnetId"                 : { "Ref" : "PublicSubnet" }
-      }]
+"EC2Host": {
+    "Type": "AWS::EC2::Instance",
+    "DependsOn": "GatewayToInternet",
+    "Properties": {
+        "InstanceType": {
+            "Ref": "EC2InstanceType"
+        },
+        "KeyName": {
+            "Ref": "KeyName"
+        },
+        "ImageId": {
+            "Fn::FindInMap": ["AWSRegionArch2AMI", {
+                    "Ref": "AWS::Region"
+                },
+                {
+                    "Fn::FindInMap": ["AWSInstanceType2Arch", {
+                        "Ref": "EC2InstanceType"
+                    }, "Arch"]
+                }
+            ]
+        },
+        "NetworkInterfaces": [{
+            "GroupSet": [{
+                "Ref": "EC2SecurityGroup"
+            }],
+            "AssociatePublicIpAddress": "true",
+            "DeviceIndex": "0",
+            "DeleteOnTermination": "true",
+            "SubnetId": {
+                "Ref": "PublicSubnet"
+            }
+        }]
     }
 }
 ```

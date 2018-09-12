@@ -51,13 +51,13 @@ The following example splits a string at each vertical bar \(`|`\)\. The functio
 #### JSON<a name="intrinsic-function-reference-split-example.json"></a>
 
 ```
-1. { "Fn::Split" : [ "|" , "a|b|c" ] }
+{ "Fn::Split" : [ "|" , "a|b|c" ] }
 ```
 
 #### YAML<a name="intrinsic-function-reference-split-example.yaml"></a>
 
 ```
-1. !Split [ "|" , "a|b|c" ]
+!Split [ "|" , "a|b|c" ]
 ```
 
  
@@ -69,13 +69,13 @@ If you split a string with consecutive delimiters, the resulting list will inclu
 #### JSON<a name="w3ab2c21c28c55c13b6b4"></a>
 
 ```
-1. { "Fn::Split" : [ "|" , "a||c|" ] }
+{ "Fn::Split" : [ "|" , "a||c|" ] }
 ```
 
 #### YAML<a name="w3ab2c21c28c55c13b6b6"></a>
 
 ```
-1. !Split [ "|" , "a||c|" ]
+!Split [ "|" , "a||c|" ]
 ```
 
  
@@ -87,13 +87,13 @@ The following example splits an imported output value, and then selects the thir
 #### JSON<a name="w3ab2c21c28c55c13b8b4"></a>
 
 ```
-1. { "Fn::Select" : [ "2", { "Fn::Split": [",", {"Fn::ImportValue": "AccountSubnetIDs"}]}] }
+{ "Fn::Select" : [ "2", { "Fn::Split": [",", {"Fn::ImportValue": "AccountSubnetIDs"}]}] }
 ```
 
 #### YAML<a name="w3ab2c21c28c55c13b8b6"></a>
 
 ```
-1. !Select [2, !Split [",", !ImportValue AccountSubnetIDs]]
+!Select [2, !Split [",", !ImportValue AccountSubnetIDs]]
 ```
 
 ## Supported Functions<a name="w3ab2c21c28c55c15"></a>

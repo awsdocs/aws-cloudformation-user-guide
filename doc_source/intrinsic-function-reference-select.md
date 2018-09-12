@@ -66,23 +66,23 @@ You can use `Fn::Select` to select an object from a `CommaDelimitedList` paramet
 #### JSON<a name="intrinsic-function-reference-select-example1.json"></a>
 
 ```
-1. "Parameters" : {
-2.   "DbSubnetIpBlocks": {
-3.     "Description": "Comma-delimited list of three CIDR blocks",
-4.     "Type": "CommaDelimitedList",
-5.       "Default": "10.0.48.0/24, 10.0.112.0/24, 10.0.176.0/24"
-6.   }
-7. }
+"Parameters" : {
+  "DbSubnetIpBlocks": {
+    "Description": "Comma-delimited list of three CIDR blocks",
+    "Type": "CommaDelimitedList",
+      "Default": "10.0.48.0/24, 10.0.112.0/24, 10.0.176.0/24"
+  }
+}
 ```
 
 #### YAML<a name="intrinsic-function-reference-select-example1.yaml"></a>
 
 ```
-1. Parameters: 
-2.   DbSubnetIpBlocks: 
-3.     Description: "Comma-delimited list of three CIDR blocks"
-4.     Type: CommaDelimitedList
-5.     Default: "10.0.48.0/24, 10.0.112.0/24, 10.0.176.0/24"
+Parameters: 
+  DbSubnetIpBlocks: 
+    Description: "Comma-delimited list of three CIDR blocks"
+    Type: CommaDelimitedList
+    Default: "10.0.48.0/24, 10.0.112.0/24, 10.0.176.0/24"
 ```
 
 To specify one of the three CIDR blocks, use `Fn::Select` in the Resources section of the same template, as shown in the following sample snippet:
@@ -118,18 +118,18 @@ The following examples show valid patterns for using nested intrinsic functions 
 #### YAML<a name="intrinsic-function-reference-select-example3.yaml"></a>
 
 ```
-1. AvailabilityZone: !Select 
-2.   - 0
-3.   - !GetAZs 
-4.     Ref: 'AWS::Region'
+AvailabilityZone: !Select 
+  - 0
+  - !GetAZs 
+    Ref: 'AWS::Region'
 ```
 
 #### YAML<a name="intrinsic-function-reference-select-example4.yaml"></a>
 
 ```
-1. AvailabilityZone: !Select 
-2.   - 0
-3.   - Fn::GetAZs: !Ref 'AWS::Region'
+AvailabilityZone: !Select 
+  - 0
+  - Fn::GetAZs: !Ref 'AWS::Region'
 ```
 
 ## Supported Functions<a name="w3ab2c21c28c51c15"></a>

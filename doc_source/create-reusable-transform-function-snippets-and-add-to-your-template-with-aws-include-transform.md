@@ -1,6 +1,6 @@
 # AWS::Include Transform<a name="create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform"></a>
 
-You can use the `AWS::Include` transform to work with template snippets that are stored separately from the main AWS CloudFormation template\. When you specify `Name: 'AWS::Include'` and the `Location` parameter, the `Transform` key is a placeholder where snippets are injected\. AWS CloudFormation inserts those snippets into your main template when [Creating a Change Set](using-cfn-updating-stacks-changesets-create.md) or [Updating Stacks Using Change Sets](using-cfn-updating-stacks-changesets.md)\.
+You can use the `AWS::Include` transform to work with template snippets that are stored separately from the main AWS CloudFormation template\. When you specify `Name: "AWS::Include"` and the `Location` parameter, the `Transform` key is a placeholder where snippets are injected\. AWS CloudFormation inserts those snippets into your main template when [Creating a Change Set](using-cfn-updating-stacks-changesets-create.md) or [Updating Stacks Using Change Sets](using-cfn-updating-stacks-changesets.md)\.
 
 You might have a Lambda function that you want to reuse in one or more AWS CloudFormation templates\. The `AWS::Include` transform lets you create a reference to a transform snippet in an Amazon S3 bucket\. You can add `AWS::Include` to the `Transform` function in your AWS CloudFormation template\. The `AWS::Include` function behaves similarly to an `include`, `copy`, or `import` directive in programming languages\.
 
@@ -15,23 +15,23 @@ To include a transform at the top level of a template, use the following syntax\
 #### JSON<a name="aws-include-syntax-top-level.json"></a>
 
 ```
-1. {
-2.    "Transform" : {
-3.        "Name" : "AWS::Include",
-4.        "Parameters" : {
-5.            "Location" : "s3://MyAmazonS3BucketName/MyFileName.json"
-6.         }
-7.     }
-8. }
+{
+    "Transform": {
+        "Name": "AWS::Include",
+        "Parameters": {
+            "Location": "s3://MyAmazonS3BucketName/MyFileName.json"
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-include-syntax-top-level.yaml"></a>
 
 ```
-1. Transform:
-2.   Name: 'AWS::Include'
-3.   Parameters:
-4.     Location: 's3://MyAmazonS3BucketName/MyFileName.yaml'
+Transform:
+  Name: "AWS::Include"
+  Parameters:
+    Location: "s3://MyAmazonS3BucketName/MyFileName.yaml"
 ```
 
 ### Syntax When the Transform Is Embedded Within a Section of a Template<a name="aws-include-syntax-embedded-within-section-overview"></a>
@@ -41,23 +41,23 @@ To include a transform that is embedded within a section, use the following synt
 #### JSON<a name="aws-include-syntax-within-section.json"></a>
 
 ```
-1. {
-2.    "Fn::Transform" : {
-3.        "Name" : "AWS::Include",
-4.        "Parameters" : {
-5.            "Location" : "s3://MyAmazonS3BucketName/MyFileName.json"
-6.         }
-7.     }
-8. }
+{
+    "Fn::Transform": {
+        "Name": "AWS::Include",
+        "Parameters": {
+            "Location": "s3://MyAmazonS3BucketName/MyFileName.json"
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-include-syntax-embedded-within-section.yaml"></a>
 
 ```
-1. 'Fn::Transform':
-2.   Name: 'AWS::Include'
-3.   Parameters:
-4.     Location: s3://MyAmazonS3BucketName/MyFileName.yaml
+"Fn::Transform":
+  Name: "AWS::Include"
+  Parameters:
+    Location: s3://MyAmazonS3BucketName/MyFileName.yaml
 ```
 
 ## Parameters<a name="aws-include-transform-parameters"></a>
@@ -93,35 +93,35 @@ Both the JSON and the YAML versions use the following wait condition snippet\. S
 
 ```
 WebServerWaitHandle:
-  Type: 'AWS::CloudFormation::WaitConditionHandle'
+  Type: "AWS::CloudFormation::WaitConditionHandle"
 ```
 
 ### JSON<a name="aws-include-example.json"></a>
 
 ```
- 1. {
- 2.    "Resources": {
- 3.       "MyWaitHandle": {
- 4.          "Type": "AWS::CloudFormation::WaitConditionHandle"
- 5.       },
- 6.       "Fn::Transform": {
- 7.          "Name": "AWS::Include",
- 8.          "Parameters": {
- 9.             "Location": "s3://MyAmazonS3BucketName/single_wait_condition.yaml"
-10.          }
-11.       }
-12.    }
-13. }
+{
+   "Resources": {
+      "MyWaitHandle": {
+         "Type": "AWS::CloudFormation::WaitConditionHandle"
+      },
+      "Fn::Transform": {
+         "Name": "AWS::Include",
+         "Parameters": {
+            "Location": "s3://MyAmazonS3BucketName/single_wait_condition.yaml"
+         }
+      }
+   }
+}
 ```
 
 ### YAML<a name="aws-include-example.yaml"></a>
 
 ```
-1. Resources:
-2.   MyWaitHandle:
-3.     Type: 'AWS::CloudFormation::WaitConditionHandle'
-4.   'Fn::Transform':
-5.     Name: 'AWS::Include'
-6.     Parameters:
-7.       Location : "s3://MyAmazonS3BucketName/single_wait_condition.yaml"
+Resources:
+  MyWaitHandle:
+    Type: "AWS::CloudFormation::WaitConditionHandle"
+  "Fn::Transform":
+    Name: "AWS::Include"
+    Parameters:
+      Location : "s3://MyAmazonS3BucketName/single_wait_condition.yaml"
 ```
