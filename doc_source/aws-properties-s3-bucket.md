@@ -904,6 +904,49 @@ Resources:
           Prefix: InventoryConfigurationPrefix
           ScheduleFrequency: Weekly
 ```
+### Specify Bucket Metrics for an Amazon S3 Bucket<a name="aws-resource-s3-bucket-example8"></a>
+
+The following example specifies configuration to enable bucket cloudwatch metrics for an entire S3 bucket\. Request metrics such as PutObject and GetObject and Data transfer metrics such as BytesUploaded and BytesDownloaded will be available in AWS CloudWatch\.
+
+#### YAML<a name="aws-resource-s3-bucket-example8.json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "S3 Bucket with Bucket Metrics Configuration",
+  "Resources": {
+    "Helper": {
+      "Type": "AWS::S3::Bucket"
+    },
+    "S3Bucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "MetricsConfigurations": [
+          {
+            "Id": "EntireBucket"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+
+#### YAML<a name="aws-resource-s3-bucket-example8.yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: S3 Bucket with Bucket Metrics Configuration
+Resources:
+  Helper:
+    Type: 'AWS::S3::Bucket'
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      MetricsConfigurations:
+        - Id: EntireBucket
+```
 
 ## More Info<a name="w3ab2c21c10e1032c19"></a>
 + For more examples, see [Amazon S3 Template Snippets](quickref-s3.md)\.
