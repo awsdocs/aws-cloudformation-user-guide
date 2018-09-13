@@ -117,7 +117,7 @@ Throughput for the specified table, which consists of values for `ReadCapacityUn
 Specifies the settings to enable server\-side encryption\.  
 *Required*: No  
 *Type*: [DynamoDB SSESpecification](aws-properties-dynamodb-table-ssespecification.md)  
-*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `StreamSpecification`  <a name="cfn-dynamodb-table-streamspecification"></a>
 The settings for the DynamoDB table stream, which capture changes to items stored in the table\.  
