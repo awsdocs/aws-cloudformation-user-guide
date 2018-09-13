@@ -52,6 +52,9 @@ You can use the following intrinsic functions to define conditions:
 
 For the syntax and information about each function, see [Condition Functions](intrinsic-function-reference-conditions.md)\. 
 
+**Note**
+Conditions cannot refer to other Conditions.
+
 **Note**  
 `Fn::If` is only supported in the metadata attribute, update policy attribute, and property values in the Resources section and Outputs sections of a template\.
 
