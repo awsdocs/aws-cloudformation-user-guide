@@ -2,7 +2,7 @@
 
 `CustomOriginConfig` is a property of the [Amazon CloudFront Origin](aws-properties-cloudfront-distribution-origin.md) property that describes an HTTP server\.
 
-## Syntax<a name="w3ab2c21c14d257b5"></a>
+## Syntax<a name="w4ab1c21c14d285b5"></a>
 
 ### JSON<a name="aws-properties-cloudfront-distribution-customoriginconfig-syntax.json"></a>
 
@@ -29,10 +29,10 @@
   - String
 ```
 
-## Properties<a name="w3ab2c21c14d257b7"></a>
+## Properties<a name="w4ab1c21c14d285b7"></a>
 
 **Note**  
-For more information about the constraints and valid values of each property, see the [CustomOriginConfig](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CustomOriginConfig.html) data type in the *Amazon CloudFront API Reference*\.
+For more information about the constraints and valid values of each property, see the [CustomOriginConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CustomOriginConfig.html) data type in the *Amazon CloudFront API Reference*\.
 
 `HTTPPort`  <a name="cfn-cloudfront-distribution-customoriginconfig-httpport"></a>
 The HTTP port the custom origin listens on\.  

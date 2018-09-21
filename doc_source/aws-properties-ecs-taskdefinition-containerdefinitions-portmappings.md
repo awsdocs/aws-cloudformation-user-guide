@@ -2,7 +2,7 @@
 
 `PortMappings` is a property of the [Amazon Elastic Container Service TaskDefinition ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md) property that maps a container port to a host port\.
 
-## Syntax<a name="w3ab2c21c14d894b5"></a>
+## Syntax<a name="w4ab1c21c14d978b5"></a>
 
 ### JSON<a name="aws-properties-ecs-taskdefinition-containerdefinitions-portmappings-syntax.json"></a>
 
@@ -22,9 +22,9 @@
 [Protocol](#cfn-ecs-taskdefinition-containerdefinition-portmappings-protocol): String
 ```
 
-## Properties<a name="w3ab2c21c14d894b7"></a>
+## Properties<a name="w4ab1c21c14d978b7"></a>
 
-For more information about each property, see [Task Definition Parameters](http://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html) in the *Amazon Elastic Container Service Developer Guide*\.
+For more information about each property, see [Task Definition Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html) in the *Amazon Elastic Container Service Developer Guide*\.
 
 `ContainerPort`  <a name="cfn-ecs-taskdefinition-containerdefinition-portmappings-containerport"></a>
 The port number on the container bound to the host port\.  
@@ -38,6 +38,6 @@ Don't specify a host port in the `49153` to `65535` port range; these ports are 
 *Type*: Integer
 
 `Protocol`  <a name="cfn-ecs-taskdefinition-containerdefinition-portmappings-protocol"></a>
-The protocol used for the port mapping\. For valid values, see the [http://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html](http://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html) parameter in the *Amazon Elastic Container Service Developer Guide*\. By default, AWS CloudFormation specifies `tcp`\.  
+The protocol used for the port mapping\. For valid values, see the [https://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html](https://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html) parameter in the *Amazon Elastic Container Service Developer Guide*\. By default, AWS CloudFormation specifies `tcp`\.  
 *Required*: No  
 *Type*: String

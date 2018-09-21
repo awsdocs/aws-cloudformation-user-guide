@@ -55,4 +55,4 @@ The action that you want your GraphQL API to take when a request that uses Amazo
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-appsync-graphqlapi-userpoolconfig-seealso"></a>
-+ [ UserPoolConfig](http://docs.aws.amazon.com/appsync/latest/APIReference/API_UserPoolConfig.html) operation in the *AWS AppSync API Reference*
++ [ UserPoolConfig](https://docs.aws.amazon.com/appsync/latest/APIReference/API_UserPoolConfig.html) operation in the *AWS AppSync API Reference*

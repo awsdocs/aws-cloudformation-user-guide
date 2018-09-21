@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticloadbalancingv2-listenercertificate-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElasticLoadBalancingV2::ListenerCertificate"
+Type: AWS::ElasticLoadBalancingV2::ListenerCertificate
 Properties:
   [Certificates](#cfn-elasticloadbalancingv2-listenercertificate-certificates): 
     - [*Certificate*](aws-properties-elasticloadbalancingv2-listenercertificate-certificate.md)
@@ -130,13 +130,13 @@ Parameters:
     Type: String
 Resources:
   ListenerCertificate:
-    Type: 'AWS::ElasticLoadBalancingV2::ListenerCertificate'
+    Type: AWS::ElasticLoadBalancingV2::ListenerCertificate
     Properties:
       Certificates:
         - CertificateArn: !Ref CertificateArn1
       ListenerArn: !Ref Listener
   Listener:
-    Type: 'AWS::ElasticLoadBalancingV2::Listener'
+    Type: AWS::ElasticLoadBalancingV2::Listener
     Properties:
       DefaultActions:
         - Type: forward

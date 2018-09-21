@@ -2,7 +2,7 @@
 
 `DeploymentConfiguration` is a property of the [AWS::ECS::Service](aws-resource-ecs-service.md) resource that configures how many tasks run when you update a running Amazon Elastic Container Service \(Amazon ECS\) service\.
 
-## Syntax<a name="w3ab2c21c14d837b5"></a>
+## Syntax<a name="w4ab1c21c14d918b5"></a>
 
 ### JSON<a name="aws-properties-ecs-service-deploymentconfiguration-syntax.json"></a>
 
@@ -20,7 +20,7 @@
 [MinimumHealthyPercent](#cfn-ecs-service-deploymentconfiguration-minimumhealthypercent): Integer
 ```
 
-## Properties<a name="w3ab2c21c14d837b7"></a>
+## Properties<a name="w4ab1c21c14d918b7"></a>
 
 `MaximumPercent`  <a name="cfn-ecs-service-deploymentconfiguration-maximumpercent"></a>
 The maximum number of tasks, specified as a percentage of the Amazon ECS service's `DesiredCount` value, that can run in a service during a deployment\. To calculate the maximum number of tasks, Amazon ECS uses this formula: the value of `DesiredCount` \* \(the value of the `MaximumPercent`/100\), rounded down to the nearest integer value\.  

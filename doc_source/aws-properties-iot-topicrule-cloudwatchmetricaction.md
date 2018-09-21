@@ -2,7 +2,7 @@
 
 `CloudwatchMetric` is a property of the `Actions` property that describes an action that captures a CloudWatch metric\.
 
-## Syntax<a name="w3ab2c21c14e1327b5"></a>
+## Syntax<a name="w4ab1c21c14e1430b5"></a>
 
 ### JSON<a name="aws-properties-iot-topicrule-cloudwatchmetricaction-syntax.json"></a>
 
@@ -28,7 +28,7 @@
 [RoleArn](#cfn-iot-topicrule-cloudwatchmetricaction-rolearn): String
 ```
 
-## Properties<a name="w3ab2c21c14e1327b7"></a>
+## Properties<a name="w4ab1c21c14e1430b7"></a>
 
 `MetricName`  <a name="cfn-iot-topicrule-cloudwatchmetricaction-metricname"></a>
 The name of the CloudWatch metric\.  
@@ -41,12 +41,12 @@ The name of the CloudWatch metric namespace\.
 *Type*: String
 
 `MetricTimestamp`  <a name="cfn-iot-topicrule-cloudwatchmetricaction-metrictimestamp"></a>
-An optional [Unix timestamp](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp)\.  
+An optional [Unix timestamp](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp)\.  
 *Required*: No  
 *Type*: String
 
 `MetricUnit`  <a name="cfn-iot-topicrule-cloudwatchmetricaction-metricunit"></a>
-The [metric unit](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#Unit) supported by Amazon CloudWatch\.  
+The [metric unit](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#Unit) supported by Amazon CloudWatch\.  
 *Required*: Yes  
 *Type*: String
 

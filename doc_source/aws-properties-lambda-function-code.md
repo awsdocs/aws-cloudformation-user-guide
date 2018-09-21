@@ -5,7 +5,7 @@
 **Note**  
 To update a Lambda function whose source code is in an Amazon S3 bucket, you must trigger an update by updating the `S3Bucket`, `S3Key`, or `S3ObjectVersion` property\. Updating the source code alone doesn't update the function\.
 
-## Syntax<a name="w3ab2c21c14e1528b7"></a>
+## Syntax<a name="w4ab1c21c14e1631b7"></a>
 
 ### JSON<a name="aws-properties-lambda-function-code-syntax.json"></a>
 
@@ -27,7 +27,7 @@ To update a Lambda function whose source code is in an Amazon S3 bucket, you mus
 [ZipFile](#cfn-lambda-function-code-zipfile): String
 ```
 
-## Properties<a name="w3ab2c21c14e1528b9"></a>
+## Properties<a name="w4ab1c21c14e1631b9"></a>
 
 `S3Bucket`  <a name="cfn-lambda-function-code-s3bucket"></a>
 The name of the Amazon S3 bucket where the `.zip` file that contains your deployment package is stored\. This bucket must reside in the same AWS Region that you're creating the Lambda function in\. You can specify a bucket from another AWS account as long as the Lambda function and the bucket are in the same region\.  
@@ -61,7 +61,7 @@ After executing the `send` method, the Lambda function terminates, so anything y
 **Note**  
 The `cfn-response` module is available only when you use the `ZipFile` property to write your source code\. It isn't available for source code that's stored in Amazon S3 buckets\. For code in buckets, you must write your own functions to send responses\.
 
-### Loading the `cfn-response` Module<a name="w3ab2c21c14e1528c11b8"></a>
+### Loading the `cfn-response` Module<a name="w4ab1c21c14e1631c11b8"></a>
 
 For the `nodejs4.3` or `nodejs6.10` runtime environment, use the `require()` function to load the `cfn-response` module\. For example, the following code example creates a `cfn-response` object with the name `response`:
 
@@ -78,7 +78,7 @@ Use this exact import statement\. If you use other variants of the import statem
 import cfnresponse
 ```
 
-### `send` Method Parameters<a name="w3ab2c21c14e1528c11c10"></a>
+### `send` Method Parameters<a name="w4ab1c21c14e1631c11c10"></a>
 
 You can use the following parameters with the `send` method\.
 
@@ -86,7 +86,7 @@ You can use the following parameters with the `send` method\.
 The fields in a [custom resource request](crpg-ref-requesttypes.md)\.
 
 `context`  
-An object, specific to Lambda functions, that you can use to specify when the function and any callbacks have completed execution, or to access information from within the Lambda execution environment\. For more information, see [Programming Model \(Node\.js\)](http://docs.aws.amazon.com/lambda/latest/dg/programming-model.html) in the *AWS Lambda Developer Guide*\.
+An object, specific to Lambda functions, that you can use to specify when the function and any callbacks have completed execution, or to access information from within the Lambda execution environment\. For more information, see [Programming Model \(Node\.js\)](https://docs.aws.amazon.com/lambda/latest/dg/programming-model.html) in the *AWS Lambda Developer Guide*\.
 
 `responseStatus`  
 Whether the function successfully completed\. Use the `cfnresponse` module constants to specify the status: `SUCCESS` for successful executions and `FAILED` for failed executions\.
@@ -97,12 +97,12 @@ The `Data` field of a custom resource [response object](crpg-ref-responses.md)\.
 `physicalResourceId`  
 Optional\. The unique identifier of the custom resource that invoked the function\. By default, the module uses the name of the Amazon CloudWatch Logs log stream that's associated with the Lambda function\.
 
-`noEcho`
+`noEcho`  
 Optional\. Indicates whether to mask the output of the custom resource when it's retrieved by using the `Fn::GetAtt` function\. If set to `true`, all returned values are masked with asterisks \(\*\*\*\*\*\)\. By default, this value is `false`\.
 
-### Examples<a name="w3ab2c21c14e1528c11c12"></a>
+### Examples<a name="w4ab1c21c14e1631c11c12"></a>
 
-#### Node\.js<a name="w3ab2c21c14e1528c11c12b2"></a>
+#### Node\.js<a name="w4ab1c21c14e1631c11c12b2"></a>
 
 In the following Node\.js example, the inline Lambda function takes an input value and multiplies it by 5\. Inline functions are especially useful for smaller functions because they allow you to specify the source code directly in the template, instead of creating a package and uploading it to an Amazon S3 bucket\. The function uses the `cfn-response` `send` method to send the result back to the custom resource that invoked it\.
 
@@ -131,7 +131,7 @@ ZipFile: >
   };
 ```
 
-#### Python<a name="w3ab2c21c14e1528c11c12b4"></a>
+#### Python<a name="w4ab1c21c14e1631c11c12b4"></a>
 
 As in the preceding example, in the following Python example \(the example works in both version 2\.7 and 3\.6\), the inline Lambda function takes an integer value and multiplies it by 5\.
 
@@ -162,7 +162,7 @@ ZipFile: |
     cfnresponse.send(event, context, cfnresponse.SUCCESS, responseData, "CustomResourcePhysicalID")
 ```
 
-### Module Source Code<a name="w3ab2c21c14e1528c11c14"></a>
+### Module Source Code<a name="w4ab1c21c14e1631c11c14"></a>
 
 The following is the response module source code for the `nodejs4.3` or `nodejs6.10` runtime environment\. Review it to understand what the module does and for help with implementing your own response functions\.
 

@@ -2,7 +2,7 @@
 
 ## Custom Resource Provider Response Fields<a name="crpg-ref-responses-fields"></a>
 
-The following are properties that the custom resource provider includes when it sends the JSON file to the presigned URL\. For more information about uploading objects by using presigned URLs, see the related [topic](http://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html) in the *Amazon Simple Storage Service Developer Guide*\.
+The following are properties that the custom resource provider includes when it sends the JSON file to the presigned URL\. For more information about uploading objects by using presigned URLs, see the related [topic](https://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 Status  <a name="crpg-ref-responses-status"></a>
 The status value sent by the custom resource provider in response to an AWS CloudFormation\-generated request\.  

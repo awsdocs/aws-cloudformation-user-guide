@@ -55,4 +55,4 @@ The number of milliseconds a token is valid after being authenticated\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-appsync-graphqlapi-openidconnectconfig-seealso"></a>
-+ [ OpenIDConnectConfig](http://docs.aws.amazon.com/appsync/latest/APIReference/API_OpenIDConnectConfig.html) operation in the *AWS AppSync API Reference*
++ [ OpenIDConnectConfig](https://docs.aws.amazon.com/appsync/latest/APIReference/API_OpenIDConnectConfig.html) operation in the *AWS AppSync API Reference*

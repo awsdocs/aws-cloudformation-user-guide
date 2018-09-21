@@ -4,10 +4,10 @@ Creates an AWS OpsWorks layer\. A layer defines, for example, which packages and
 
 **Topics**
 + [Syntax](#aws-resource-opsworks-layer-syntax)
-+ [Properties](#w3ab2c21c10d926b9)
-+ [Return Values](#w3ab2c21c10d926c11)
-+ [Template Examples](#w3ab2c21c10d926c13)
-+ [See Also](#w3ab2c21c10d926c15)
++ [Properties](#w4ab1c21c10d957b9)
++ [Return Values](#w4ab1c21c10d957c11)
++ [Template Examples](#w4ab1c21c10d957c13)
++ [See Also](#w4ab1c21c10d957c15)
 
 ## Syntax<a name="aws-resource-opsworks-layer-syntax"></a>
 
@@ -75,7 +75,7 @@ Properties:
     - VolumeConfiguration
 ```
 
-## Properties<a name="w3ab2c21c10d926b9"></a>
+## Properties<a name="w4ab1c21c10d957b9"></a>
 
 `Attributes`  <a name="cfn-opsworks-layer-attributes"></a>
 One or more user\-defined key\-value pairs to be added to the stack attributes bag\.  
@@ -102,7 +102,7 @@ The Amazon Resource Name \(ARN\) of an IAM instance profile that is to be used f
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `CustomJson`  <a name="cfn-opsworks-layer-customjson"></a>
-A custom stack configuration and deployment attributes that AWS OpsWorks installs on the layer's instances\. For more information, see the `CustomJson` parameter for the [CreateLayer](http://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateLayer.html) action in the *AWS OpsWorks Stacks API Reference*\.  
+A custom stack configuration and deployment attributes that AWS OpsWorks installs on the layer's instances\. For more information, see the `CustomJson` parameter for the [CreateLayer](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateLayer.html) action in the *AWS OpsWorks Stacks API Reference*\.  
 *Required*: No  
 *Type*: JSON object
 
@@ -175,7 +175,7 @@ Specifies an arbitrary set of tags \(key–value pairs\) to associate with this 
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Type`  <a name="cfn-opsworks-layer-type"></a>
-The layer type\. A stack cannot have more than one layer of the same type, except for the `custom` type\. You can have any number of `custom` types\. For more information, see [CreateLayer](http://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateLayer.html) in the *AWS OpsWorks Stacks API Reference*\.  
+The layer type\. A stack cannot have more than one layer of the same type, except for the `custom` type\. You can have any number of `custom` types\. For more information, see [CreateLayer](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateLayer.html) in the *AWS OpsWorks Stacks API Reference*\.  
 If you update a property that requires the layer to be replaced, you must specify a new type unless you have a `custom` type\. You can have any number of `custom` types\.
 *Required*: Yes  
 *Type*: String  
@@ -187,9 +187,9 @@ Describes the Amazon EBS volumes for this layer\.
 *Type*: A list of [AWS OpsWorks VolumeConfiguration Type](aws-properties-opsworks-layer-volumeconfig.md)  
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
-## Return Values<a name="w3ab2c21c10d926c11"></a>
+## Return Values<a name="w4ab1c21c10d957c11"></a>
 
-### Ref<a name="w3ab2c21c10d926c11b2"></a>
+### Ref<a name="w4ab1c21c10d957c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -201,9 +201,9 @@ For the AWS OpsWorks layer `myLayer`, `Ref` returns the AWS OpsWorks layer ID\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Template Examples<a name="w3ab2c21c10d926c13"></a>
+## Template Examples<a name="w4ab1c21c10d957c13"></a>
 
-### AWS OpsWorks PHP Layer<a name="w3ab2c21c10d926c13b2"></a>
+### AWS OpsWorks PHP Layer<a name="w4ab1c21c10d957c13b2"></a>
 
 The following snippet creates an AWS OpsWorks PHP layer that is associated with the `myStack` AWS OpsWorks stack\. The layer is dependent on the `myApp` AWS OpsWorks application\.
 
@@ -242,7 +242,7 @@ myLayer:
     Name: "MyPHPApp"
 ```
 
-### Load\-based Auto Scaling Layer<a name="w3ab2c21c10d926c13b4"></a>
+### Load\-based Auto Scaling Layer<a name="w4ab1c21c10d957c13b4"></a>
 
 The following snippet creates a load\-based automatic scaling AWS OpsWorks PHP layer that is associated with the `myStack` AWS OpsWorks stack\.
 
@@ -482,7 +482,7 @@ The following complete template example specifies tags for an AWS OpsWorks layer
 ```
 Resources:
   ServiceRole:
-    Type: 'AWS::IAM::Role'
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Statement:
@@ -505,7 +505,7 @@ Resources:
                   - 'elasticloadbalancing:*'
                 Resource: '*'
   OpsWorksEC2Role:
-    Type: 'AWS::IAM::Role'
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Statement:
@@ -517,13 +517,13 @@ Resources:
               - 'sts:AssumeRole'
       Path: /
   InstanceRole:
-    Type: 'AWS::IAM::InstanceProfile'
+    Type: AWS::IAM::InstanceProfile
     Properties:
       Path: /
       Roles:
         - !Ref OpsWorksEC2Role
   myStack:
-    Type: 'AWS::OpsWorks::Stack'
+    Type: AWS::OpsWorks::Stack
     Properties:
       Name: TestStack
       ServiceRoleArn: !GetAtt 
@@ -536,7 +536,7 @@ Resources:
         - Key: !Ref StackKey
           Value: !Ref StackValue
   myLayer:
-    Type: 'AWS::OpsWorks::Layer'
+    Type: AWS::OpsWorks::Layer
     Properties:
       EnableAutoHealing: 'true'
       AutoAssignElasticIps: 'false'
@@ -563,7 +563,7 @@ Parameters:
     Type: String
 ```
 
-## See Also<a name="w3ab2c21c10d926c15"></a>
+## See Also<a name="w4ab1c21c10d957c15"></a>
 + [AWS::OpsWorks::Stack](aws-resource-opsworks-stack.md)
 + [AWS::OpsWorks::App](aws-resource-opsworks-app.md)
 + [AWS::OpsWorks::Instance](aws-resource-opsworks-instance.md)

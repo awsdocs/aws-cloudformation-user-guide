@@ -30,7 +30,7 @@ The syntax for declaring this resource:
 ### YAML<a name="aws-resource-apigateway-account-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::Account"
+Type: AWS::ApiGateway::Account
 Properties: 
   [CloudWatchRoleArn](#cfn-apigateway-account-cloudwatchrolearn): String
 ```
@@ -45,7 +45,7 @@ The Amazon Resource Name \(ARN\) of an IAM role that has write access to CloudWa
 
 ## Return Value<a name="aws-resource-apigateway-account-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10c13c13b2"></a>
+### Ref<a name="w4ab1c21c10c21c13b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ID of the resource, such as `mysta-accou-01234b567890example`\.
 
@@ -85,7 +85,7 @@ The following example creates an IAM role that API Gateway can assume to push lo
 
 ```
 CloudWatchRole: 
- Type: "AWS::IAM::Role"
+ Type: AWS::IAM::Role
  Properties: 
   AssumeRolePolicyDocument: 
    Version: "2012-10-17"
@@ -99,7 +99,7 @@ CloudWatchRole:
   ManagedPolicyArns: 
    - "arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
 Account: 
- Type: "AWS::ApiGateway::Account"
+ Type: AWS::ApiGateway::Account
  Properties: 
   CloudWatchRoleArn: 
    "Fn::GetAtt": 

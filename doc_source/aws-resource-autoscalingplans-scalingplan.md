@@ -1,6 +1,6 @@
 # AWS::AutoScalingPlans::ScalingPlan<a name="aws-resource-autoscalingplans-scalingplan"></a>
 
-Creates a scaling plan for AWS Auto Scaling\. For more information, see the [AWS Auto Scaling User Guide](http://docs.aws.amazon.com/autoscaling/plans/userguide/)\.
+Creates a scaling plan for AWS Auto Scaling\. For more information, see the [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/)\.
 
 ## Syntax<a name="aws-resource-autoscalingplans-scalingplan-syntax"></a>
 

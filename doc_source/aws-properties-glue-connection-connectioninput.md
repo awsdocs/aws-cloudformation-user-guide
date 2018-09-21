@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-glue-connection-connectioninput-properties"></a>
 
-For more information, see [ConnectionInput Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-connections.html#aws-glue-api-catalog-connections-ConnectionInput) in the *AWS Glue Developer Guide*\.
+For more information, see [ConnectionInput Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-connections.html#aws-glue-api-catalog-connections-ConnectionInput) in the *AWS Glue Developer Guide*\.
 
 `Description`  <a name="cfn-glue-connection-connectioninput-description"></a>
 The description of the connection\.  

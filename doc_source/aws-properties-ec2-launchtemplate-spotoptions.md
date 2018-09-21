@@ -49,4 +49,4 @@ Valid values include: `one-time` and `persistent`\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ec2-launchtemplate-spotoptions-seealso"></a>
-+ [LaunchTemplateSpotMarketOptionsRequest](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateSpotMarketOptionsRequest.html) in the *Amazon EC2 API Reference*
++ [LaunchTemplateSpotMarketOptionsRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateSpotMarketOptionsRequest.html) in the *Amazon EC2 API Reference*

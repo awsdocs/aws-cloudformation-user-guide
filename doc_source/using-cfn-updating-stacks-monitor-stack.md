@@ -48,4 +48,4 @@ If a resource update fails, AWS CloudFormation rolls back any resources that it 
 1. To update the event list with the most recent events, click the refresh button in the AWS CloudFormation console\.
 
 ## To view stack events by using the command line<a name="using-cfn-updating-stacks-monitor-stack.CLI"></a>
-+ Use the command [http://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-events.html](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-events.html) to view the events for a stack\.
++ Use the command [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-events.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-events.html) to view the events for a stack\.

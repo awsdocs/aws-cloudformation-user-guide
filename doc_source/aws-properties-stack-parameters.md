@@ -7,75 +7,75 @@ The `Parameters` type contains a set of value pairs that represent the parameter
 ## JSON<a name="aws-properties-stack-parameters-example1.json"></a>
 
 ```
-"Parameters" : {
-   "InstanceType" : {
-      "Type" : "String",
-      "Default" : "m5.small",
-      "Description" : "EC2 instance type, e.g. m1.small, m1.large, etc."
-   },
-   "WebServerPort" : {
-      "Type" : "String",
-      "Default" : "80",
-      "Description" : "TCP/IP port of the web server"
-   },
-   "KeyName" : {
-      "Type" : "String",
-      "Description" : "Name of an existing EC2 KeyPair to enable SSH access to the web server"
-   }
-}
+ 1. "Parameters" : {
+ 2.    "InstanceType" : {
+ 3.       "Type" : "String",
+ 4.       "Default" : "m1.small",
+ 5.       "Description" : "EC2 instance type, e.g. m1.small, m1.large, etc."
+ 6.    },
+ 7.    "WebServerPort" : {
+ 8.       "Type" : "String",
+ 9.       "Default" : "80",
+10.       "Description" : "TCP/IP port of the web server"
+11.    },
+12.    "KeyName" : {
+13.       "Type" : "String",
+14.       "Description" : "Name of an existing EC2 KeyPair to enable SSH access to the web server"
+15.    }
+16. }
 ```
 
 ## YAML<a name="aws-properties-stack-parameters-example1.yaml"></a>
 
 ```
-Parameters: 
-  InstanceType: 
-    Type: "String"
-    Default: "m5.large"
-    Description: "EC2 instance type, e.g. m1.small, m1.large, etc."
-  WebServerPort:
-    Type: "String"
-    Default: "80"
-    Description: "TCP/IP port of the web server"
-  KeyName:
-    Type: "String"
-    Description: "Name of an existing EC2 KeyPair to enable SSH access to the web server"
+ 1. Parameters: 
+ 2.   InstanceType: 
+ 3.     Type: "String"
+ 4.     Default: "m1.small"
+ 5.     Description: "EC2 instance type, e.g. m1.small, m1.large, etc."
+ 6.   WebServerPort: 
+ 7.     Type: "String"
+ 8.     Default: "80"
+ 9.     Description: "TCP/IP port of the web server"
+10.   KeyName: 
+11.     Type: "String"
+12.     Description: "Name of an existing EC2 KeyPair to enable SSH access to the web server"
 ```
 
-## Nested Stack<a name="w3ab2c21c14d223c11"></a>
+## Nested Stack<a name="w4ab1c21c14d251c11"></a>
 
 You could use the following template to embed a stack \(myStackWithParams\) using the EC2ChooseAMI\.template and use the Parameters property in the AWS::CloudFormation::Stack resource to specify an InstanceType and KeyName:
 
 ### JSON<a name="aws-properties-stack-parameters-example2.json"></a>
 
 ```
-{
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Resources": {
-        "myStackWithParams": {
-            "Type": "AWS::CloudFormation::Stack",
-            "Properties": {
-                "TemplateURL": "https://s3.amazonaws.com/cloudformation-templates-us-east-1/EC2ChooseAMI.template",
-                "Parameters": {
-                    "InstanceType": "t3.micro",
-                    "KeyName": "mykey"
-                }
-            }
-        }
-    }
-}
+ 1. {
+ 2.    "AWSTemplateFormatVersion" : "2010-09-09",
+ 3.    "Resources" : {
+ 4.       "myStackWithParams" : {
+ 5.          "Type" : "AWS::CloudFormation::Stack",
+ 6.          "Properties" : {
+ 7.             "TemplateURL" : "https://s3.amazonaws.com/cloudformation-templates-us-east-2/EC2ChooseAMI.template",
+ 8.             "Parameters" : {
+ 9.                "InstanceType" : "t1.micro",
+10.                "KeyName" : "mykey"
+11.             }
+12.          }
+13.       }
+14.    }
+15. }
 ```
 
 ### YAML<a name="aws-properties-stack-parameters-example2.yaml"></a>
 
 ```
-AWSTemplateFormatVersion: "2010-09-09"
-Resources: 
-  myStackWithParams: 
-    Type: "AWS::CloudFormation::Stack"
-    Properties: 
-      TemplateURL: "https://s3.amazonaws.com/cloudformation-templates-us-east-1/EC2Choose.template"
-      Parameters: 
-        InstanceType: "t1.micro"
-        KeyName: "mykey"
+1. AWSTemplateFormatVersion: "2010-09-09"
+2. Resources: 
+3.   myStackWithParams: 
+4.     Type: AWS::CloudFormation::Stack
+5.     Properties: 
+6.       TemplateURL: "https://s3.amazonaws.com/cloudformation-templates-us-east-2/EC2ChooseAMI.template"
+7.       Parameters: 
+8.         InstanceType: "t1.micro"
+9.         KeyName: "mykey"
 ```

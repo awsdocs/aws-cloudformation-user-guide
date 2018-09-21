@@ -4,9 +4,9 @@ Attaches an elastic network interface \(ENI\) to an Amazon EC2 instance\. You ca
 
 **Topics**
 + [Syntax](#aws-resource-ec2-networkinterfaceattachment-syntax)
-+ [Properties](#w3ab2c21c10d443b9)
-+ [Return Values](#w3ab2c21c10d443c11)
-+ [Example](#w3ab2c21c10d443c13)
++ [Properties](#w4ab1c21c10d454b9)
++ [Return Values](#w4ab1c21c10d454c11)
++ [Example](#w4ab1c21c10d454c13)
 
 ## Syntax<a name="aws-resource-ec2-networkinterfaceattachment-syntax"></a>
 
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-networkinterfaceattachment-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::NetworkInterfaceAttachment"
+Type: AWS::EC2::NetworkInterfaceAttachment
 Properties: 
   [DeleteOnTermination](#cfn-ec2-network-interface-attachment-deleteonterm): Boolean
   [DeviceIndex](#cfn-ec2-network-interface-attachment-deviceindex): String
@@ -37,7 +37,7 @@ Properties:
   [NetworkInterfaceId](#cfn-ec2-network-interface-attachment-networkinterfaceid): String
 ```
 
-## Properties<a name="w3ab2c21c10d443b9"></a>
+## Properties<a name="w4ab1c21c10d454b9"></a>
 
 `DeleteOnTermination`  <a name="cfn-ec2-network-interface-attachment-deleteonterm"></a>
 Whether to delete the network interface when the instance terminates\. By default, this value is set to `True`\.  
@@ -63,15 +63,15 @@ The ID of the ENI that you want to attach\.
 *Type*: String\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10d443c11"></a>
+## Return Values<a name="w4ab1c21c10d454c11"></a>
 
-### Ref<a name="w3ab2c21c10d443c11b2"></a>
+### Ref<a name="w4ab1c21c10d454c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10d443c13"></a>
+## Example<a name="w4ab1c21c10d454c13"></a>
 
 Attaching `MyNetworkInterface` to `MyInstance`
 

@@ -1,11 +1,11 @@
 # AWS::Elasticsearch::Domain<a name="aws-resource-elasticsearch-domain"></a>
 
-The `AWS::Elasticsearch::Domain` resource creates an Amazon Elasticsearch Service \(Amazon ES\) domain that encapsulates the Amazon ES engine instances\. For more information, see [CreateElasticsearchDomain](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-configuration-api.html#es-configuration-api-actions-createelasticsearchdomain) in the *Amazon Elasticsearch Service Developer Guide*\.
+The `AWS::Elasticsearch::Domain` resource creates an Amazon Elasticsearch Service \(Amazon ES\) domain that encapsulates the Amazon ES engine instances\. For more information, see [CreateElasticsearchDomain](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-configuration-api.html#es-configuration-api-actions-createelasticsearchdomain) in the *Amazon Elasticsearch Service Developer Guide*\.
 
 **Topics**
 + [Syntax](#aws-resource-elasticsearch-domain-syntax)
-+ [Properties](#w3ab2c21c10d656b9)
-+ [Return Values](#w3ab2c21c10d656c11)
++ [Properties](#aws-resource-elasticsearch-domain-properties)
++ [Return Values](#aws-resource-elasticsearch-domain-return-values)
 + [Examples](#aws-resource-elasticsearch-domain-examples)
 
 ## Syntax<a name="aws-resource-elasticsearch-domain-syntax"></a>
@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticsearch-domain-syntax.yaml"></a>
 
 ```
-Type: "AWS::Elasticsearch::Domain"
+Type: AWS::Elasticsearch::Domain
 Properties: 
   [AccessPolicies](#cfn-elasticsearch-domain-accesspolicies): JSON object
   [AdvancedOptions](#cfn-elasticsearch-domain-advancedoptions):
@@ -56,16 +56,16 @@ Properties:
     [*VPCOptions*](aws-properties-elasticsearch-domain-vpcoptions.md)
 ```
 
-## Properties<a name="w3ab2c21c10d656b9"></a>
+## Properties<a name="aws-resource-elasticsearch-domain-properties"></a>
 
 `AccessPolicies`  <a name="cfn-elasticsearch-domain-accesspolicies"></a>
-An AWS Identity and Access Management \(IAM\) policy document that specifies who can access the Amazon ES domain and their permissions\. For more information, see [Configuring Access Policies](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-access-policies) in the *Amazon Elasticsearch Service Developer Guide*\.  
+An AWS Identity and Access Management \(IAM\) policy document that specifies who can access the Amazon ES domain and their permissions\. For more information, see [Configuring Access Policies](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-access-policies) in the *Amazon Elasticsearch Service Developer Guide*\.  
 *Required*: No  
 *Type*: JSON object  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `AdvancedOptions`  <a name="cfn-elasticsearch-domain-advancedoptions"></a>
-Additional options to specify for the Amazon ES domain\. For more information, see [Configuring Advanced Options](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-advanced-options) in the *Amazon Elasticsearch Service Developer Guide*\.  
+Additional options to specify for the Amazon ES domain\. For more information, see [Configuring Advanced Options](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-advanced-options) in the *Amazon Elasticsearch Service Developer Guide*\.  
 *Required*: No  
 *Type*: A JSON object that consists of a string key\-value pair, such as:  
 
@@ -77,7 +77,7 @@ Additional options to specify for the Amazon ES domain\. For more information, s
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `DomainName`  <a name="cfn-elasticsearch-domain-domainname"></a>
-A name for the Amazon ES domain\. For valid values, see the [DomainName](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-configuration-api.html#es-configuration-api-datatypes-domainname) data type in the *Amazon Elasticsearch Service Developer Guide*\.  
+A name for the Amazon ES domain\. For valid values, see the [DomainName](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-configuration-api.html#es-configuration-api-datatypes-domainname) data type in the *Amazon Elasticsearch Service Developer Guide*\.  
 If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the domain name\. For more information, see [Name Type](aws-properties-name.md)\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Required*: No  
@@ -85,19 +85,19 @@ If you specify a name, you cannot perform updates that require replacement of th
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `EBSOptions`  <a name="cfn-elasticsearch-domain-ebsoptions"></a>
-The configurations of Amazon Elastic Block Store \(Amazon EBS\) volumes that are attached to data nodes in the Amazon ES domain\. For more information, see [Configuring EBS\-based Storage](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs) in the *Amazon Elasticsearch Service Developer Guide*\.  
+The configurations of Amazon Elastic Block Store \(Amazon EBS\) volumes that are attached to data nodes in the Amazon ES domain\. For more information, see [Configuring EBS\-based Storage](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs) in the *Amazon Elasticsearch Service Developer Guide*\.  
 *Required*: No  
 *Type*: [Amazon ES Domain EBSOptions](aws-properties-elasticsearch-domain-ebsoptions.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ElasticsearchClusterConfig`  <a name="cfn-elasticsearch-domain-elasticsearchclusterconfig"></a>
-The cluster configuration for the Amazon ES domain\. You can specify options such as the instance type and the number of instances\. For more information, see [Configuring Amazon ES Domains](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains-configure-cluster-cli) in the *Amazon Elasticsearch Service Developer Guide*\.  
+The cluster configuration for the Amazon ES domain\. You can specify options such as the instance type and the number of instances\. For more information, see [Configuring Amazon ES Domains](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains-configure-cluster-cli) in the *Amazon Elasticsearch Service Developer Guide*\.  
 *Required*: No  
 *Type*: [Amazon ES Domain ElasticsearchClusterConfig](aws-properties-elasticsearch-domain-elasticsearchclusterconfig.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ElasticsearchVersion`  <a name="cfn-elasticsearch-domain-elasticsearchversion"></a>
-The version of Elasticsearch to use, such as `2.3`\. For information about the versions that Amazon ES supports, see the `Elasticsearch-Version` parameter for the [CreateElasticsearchDomain](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-configuration-api.html#es-configuration-api-actions-createelasticsearchdomain) action in the *Amazon Elasticsearch Service Developer Guide*\.  
+The version of Elasticsearch to use, such as `2.3`\. For information about the versions that Amazon ES supports, see the `Elasticsearch-Version` parameter for the [CreateElasticsearchDomain](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-configuration-api.html#es-configuration-api-actions-createelasticsearchdomain) action in the *Amazon Elasticsearch Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -121,28 +121,25 @@ An arbitrary set of tags \(key–value pairs\) to associate with the Amazon ES d
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `VPCOptions`  <a name="cfn-elasticsearch-domain-vpcoptions"></a>
-The virtual private cloud \(VPC\) configuration for the Amazon ES domain\. For more information, see [VPC Support for Amazon Elasticsearch Service Domains](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html) in the *Amazon Elasticsearch Service Developer Guide*\.  
+The virtual private cloud \(VPC\) configuration for the Amazon ES domain\. For more information, see [VPC Support for Amazon Elasticsearch Service Domains](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html) in the *Amazon Elasticsearch Service Developer Guide*\.  
  *Required*: No  
  *Type*: [Amazon ES Domain VPCOptions](aws-properties-elasticsearch-domain-vpcoptions.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-## Return Values<a name="w3ab2c21c10d656c11"></a>
+## Return Values<a name="aws-resource-elasticsearch-domain-return-values"></a>
 
-### Ref<a name="w3ab2c21c10d656c11b2"></a>
+### Ref<a name="aws-resource-elasticsearch-domain-ref"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name, such as `mystack-elasticsea-abc1d2efg3h4`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d656c11b4"></a>
+### Fn::GetAtt<a name="aws-resource-elasticsearch-domain-getatt"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
+`DomainArn`   
 The Amazon Resource Name \(ARN\) of the domain, such as `arn:aws:es:us-west-2:123456789012:domain/mystack-elasti-1ab2cdefghij`\.
-
-`DomainArn` \(deprecated\)  
-This attribute has been deprecated\. Use the `Arn` attribute instead\.
 
 `DomainEndpoint`  
 The domain\-specific endpoint that's used to submit index, search, and data upload requests to an Amazon ES domain, such as `search-mystack-elasti-1ab2cdefghij-ab1c2deckoyb3hofw7wpqa3cm.us-west-2.es.amazonaws.com`\.
@@ -151,7 +148,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
 
 ## Examples<a name="aws-resource-elasticsearch-domain-examples"></a>
 
-### <a name="w3ab2c21c10d656c13b2"></a>
+### <a name="aws-resource-elasticsearch-domain-example-1"></a>
 
 The following examples create an Amazon ES domain that contains two data nodes and three master nodes\. Automated snapshots of the indices are taken daily between midnight and 1:00 AM \(UTC\)\. The access policy permits the IAM user `es-user` to take all Amazon ES actions on the domain, such as `es:UpdateElasticsearchDomainConfig`\.
 
@@ -201,7 +198,7 @@ The following examples create an Amazon ES domain that contains two data nodes a
 
 ```
 ElasticsearchDomain: 
-  Type: "AWS::Elasticsearch::Domain"
+  Type: AWS::Elasticsearch::Domain
   Properties:
     DomainName: "test"
     ElasticsearchClusterConfig: 
@@ -393,7 +390,7 @@ Parameters:
     Type: String
 Resources:
   ElasticsearchDomain:
-    Type: 'AWS::Elasticsearch::Domain'
+    Type: AWS::Elasticsearch::Domain
     Properties:
       DomainName: !Ref DomainName
       ElasticsearchVersion: !Ref ElasticsearchVersion
@@ -426,17 +423,17 @@ Resources:
         SecurityGroupIds:
           - !Ref mySecurityGroup
   vpc:
-    Type: 'AWS::EC2::VPC'
+    Type: AWS::EC2::VPC
     Properties:
       CidrBlock: 10.0.0.0/16
   subnet:
-    Type: 'AWS::EC2::Subnet'
+    Type: AWS::EC2::Subnet
     Properties:
       VpcId: !Ref vpc
       CidrBlock: !Ref CidrBlock
       AvailabilityZone: !Ref AvailabilityZone
   mySecurityGroup:
-    Type: 'AWS::EC2::SecurityGroup'
+    Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: !Ref GroupDescription
       VpcId: !Ref vpc

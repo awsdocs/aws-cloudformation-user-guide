@@ -1,6 +1,6 @@
 # AWS::KinesisAnalytics::ApplicationReferenceDataSource<a name="aws-resource-kinesisanalytics-applicationreferencedatasource"></a>
 
-Use the AWS CloudFormation `AWS::KinesisAnalytics::ApplicationReferenceDataSource` resource to add a reference data source to an existing Amazon Kinesis Data Analytics application\. For more information, see `[AddApplicationReferenceDataSource](http://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_AddApplicationReferenceDataSource.html)` in the *Amazon Kinesis Data Analytics Developer Guide*\. 
+Use the AWS CloudFormation `AWS::KinesisAnalytics::ApplicationReferenceDataSource` resource to add a reference data source to an existing Amazon Kinesis Data Analytics application\. For more information, see `[AddApplicationReferenceDataSource](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_AddApplicationReferenceDataSource.html)` in the *Amazon Kinesis Data Analytics Developer Guide*\. 
 
 **Topics**
 + [Syntax](#aws-resource-kinesisanalytics-applicationreferencedatasource-syntax)
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-kinesisanalytics-applicationreferencedatasource-syntax.yaml"></a>
 
 ```
-Type: "AWS::KinesisAnalytics::ApplicationReferenceDataSource"
+Type: AWS::KinesisAnalytics::ApplicationReferenceDataSource
 Properties:
   [ApplicationName](#cfn-kinesisanalytics-applicationreferencedatasource-applicationname): String
   [ReferenceDataSource](#cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource): 
@@ -57,7 +57,7 @@ The following example creates an `ApplicationReferenceDataSource` resource:
 
 ```
 ApplicationReferenceDataSource:
-    Type: "AWS::KinesisAnalytics::ApplicationReferenceDataSource"
+    Type: AWS::KinesisAnalytics::ApplicationReferenceDataSource
     Properties:
       ApplicationName: !Ref BasicApplication
       ReferenceDataSource:

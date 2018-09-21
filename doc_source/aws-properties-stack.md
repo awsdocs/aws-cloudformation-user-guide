@@ -15,8 +15,8 @@ You must acknowledge IAM capabilities for nested stacks that contain IAM resourc
 **Topics**
 + [Syntax](#aws-resource-cloudformation-stack-syntax)
 + [Properties](#aws-properties-stack-prop)
-+ [Return Values](#w3ab2c21c10d200c19)
-+ [Related Information](#w3ab2c21c10d200c21)
++ [Return Values](#w4ab1c21c10d209c19)
++ [Related Information](#w4ab1c21c10d209c21)
 
 ## Syntax<a name="aws-resource-cloudformation-stack-syntax"></a>
 
@@ -40,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cloudformation-stack-syntax.yaml"></a>
 
 ```
-Type: "AWS::CloudFormation::Stack"
+Type: AWS::CloudFormation::Stack
 Properties:
   [NotificationARNs](#cfn-cloudformation-stack-notificationarns):
     - String
@@ -85,9 +85,9 @@ The length of time, in minutes, that AWS CloudFormation waits for the nested sta
 *Type*: Integer  
 *Update requires*: Updates are not supported\.
 
-## Return Values<a name="w3ab2c21c10d200c19"></a>
+## Return Values<a name="w4ab1c21c10d209c19"></a>
 
-### Ref<a name="w3ab2c21c10d200c19b2"></a>
+### Ref<a name="w4ab1c21c10d209c19b2"></a>
 
 For `AWS::CloudFormation::Stack`, `Ref` returns the Stack ID\. For example:
 
@@ -95,13 +95,13 @@ For `AWS::CloudFormation::Stack`, `Ref` returns the Stack ID\. For example:
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d200c19b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d209c19b4"></a>
 
 `Outputs.NestedStackOutputName`  
 *Returns*: The output value from the specified nested stack where *NestedStackOutputName* is the name of the output value\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Related Information<a name="w3ab2c21c10d200c21"></a>
+## Related Information<a name="w4ab1c21c10d209c21"></a>
 + For sample template snippets, see Nested Stacks in [AWS CloudFormation Template Snippets](quickref-cloudformation.md)\.
 + If you have nested stacks that are stuck in an in\-progress operation, see Troubleshooting Errors in [Troubleshooting AWS CloudFormation](troubleshooting.md)\.

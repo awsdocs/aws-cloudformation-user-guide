@@ -1,8 +1,8 @@
-# AWS WAF WebACL Rules<a name="aws-properties-waf-webacl-rules"></a>
+# AWS WAF WebACL ActivatedRule<a name="aws-properties-waf-webacl-rules"></a>
 
-`Rules` is a property of the [AWS::WAF::WebACL](aws-resource-waf-webacl.md) resource that specifies the rule to associate with an AWS WAF web access control list \(ACL\) and the rule's settings\.
+`ActivatedRule` is a property of the [AWS::WAF::WebACL](aws-resource-waf-webacl.md) resource that specifies a rule to associate with an AWS WAF web access control list \(ACL\), and the rule's settings\.
 
-## Syntax<a name="w3ab2c21c14e2036b5"></a>
+## Syntax<a name="aws-properties-waf-webacl-rules-syntax"></a>
 
 ### JSON<a name="aws-properties-waf-webacl-rules-syntax.json"></a>
 
@@ -22,11 +22,11 @@
 [RuleId](#cfn-waf-webacl-rules-ruleid): String
 ```
 
-## Properties<a name="w3ab2c21c14e2036b7"></a>
+## Properties<a name="aws-properties-waf-webacl-rules-properties"></a>
 
 `Action`  <a name="cfn-waf-webacl-rules-action"></a>
 The action that Amazon CloudFront \(CloudFront\) or AWS WAF takes when a web request matches all conditions in the rule, such as allow, block, or count the request\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [AWS WAF WebACL Action](aws-properties-waf-webacl-action.md)
 
 `Priority`  <a name="cfn-waf-webacl-rules-priority"></a>

@@ -4,10 +4,10 @@ Creates an AWS OpsWorks stack\. An AWS OpsWorks stack represents a set of instan
 
 **Topics**
 + [Syntax](#aws-resource-opsworks-stack-syntax)
-+ [Properties](#w3ab2c21c10d935b9)
-+ [Return Values](#w3ab2c21c10d935c11)
-+ [Template Examples](#w3ab2c21c10d935c13)
-+ [Additional Information](#w3ab2c21c10d935c15)
++ [Properties](#w4ab1c21c10d966b9)
++ [Return Values](#w4ab1c21c10d966c11)
++ [Template Examples](#w4ab1c21c10d966c13)
++ [Additional Information](#w4ab1c21c10d966c15)
 
 ## Syntax<a name="aws-resource-opsworks-stack-syntax"></a>
 
@@ -88,10 +88,10 @@ Properties:
   [VpcId](#cfn-opsworks-stack-vpcid): String
 ```
 
-## Properties<a name="w3ab2c21c10d935b9"></a>
+## Properties<a name="w4ab1c21c10d966b9"></a>
 
 `AgentVersion`  <a name="cfn-opsworks-stack-agentversion"></a>
-The AWS OpsWorks agent version that you want to use\. The agent communicates with the service and handles tasks such as initiating Chef runs in response to lifecycle events\. For valid values, see the [AgentVersion](http://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateStack.html#opsworks-CreateStack-request-AgentVersion) parameter for the `CreateStack` action in the *AWS OpsWorks Stacks API Reference*\.  
+The AWS OpsWorks agent version that you want to use\. The agent communicates with the service and handles tasks such as initiating Chef runs in response to lifecycle events\. For valid values, see the [AgentVersion](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateStack.html#opsworks-CreateStack-request-AgentVersion) parameter for the `CreateStack` action in the *AWS OpsWorks Stacks API Reference*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -103,7 +103,7 @@ One or more user\-defined key\-value pairs to be added to the stack attributes b
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ChefConfiguration`  <a name="cfn-opsworks-stack-chefconfiguration"></a>
-Describes the Chef configuration\. For more information, see the [CreateStack ChefConfiguration](http://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateStack.html#opsworks-CreateStack-request-ChefConfiguration) parameter in the *AWS OpsWorks Stacks API Reference*\.  
+Describes the Chef configuration\. For more information, see the [CreateStack ChefConfiguration](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateStack.html#opsworks-CreateStack-request-ChefConfiguration) parameter in the *AWS OpsWorks Stacks API Reference*\.  
 To enable Berkshelf, you must select a Chef version in the `ConfigurationManager` property that supports Berkshelf\.
 *Required*: No  
 *Type*: [AWS OpsWorks ChefConfiguration Type](aws-properties-opsworks-stack-chefconfiguration.md)  
@@ -122,7 +122,7 @@ If you're cloning an AWS OpsWorks stack, indicates whether to clone the source s
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ConfigurationManager`  <a name="cfn-opsworks-stack-configmanager"></a>
-Describes the configuration manager\. When you create a stack, you use the configuration manager to specify the Chef version\. For supported Chef versions, see the [CreateStack ConfigurationManager](http://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateStack.html#opsworks-CreateStack-request-ConfigurationManager) parameter in the *AWS OpsWorks Stacks API Reference*\.  
+Describes the configuration manager\. When you create a stack, you use the configuration manager to specify the Chef version\. For supported Chef versions, see the [CreateStack ConfigurationManager](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateStack.html#opsworks-CreateStack-request-ConfigurationManager) parameter in the *AWS OpsWorks Stacks API Reference*\.  
 *Required*: No  
 *Type*: [AWS OpsWorks StackConfigurationManager Type](aws-properties-opsworks-stack-stackconfigmanager.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -134,7 +134,7 @@ Contains the information required to retrieve a cookbook from a repository\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `CustomJson`  <a name="cfn-opsworks-stack-custjson"></a>
-A user\-defined custom JSON object\. The custom JSON is used to override the corresponding default stack configuration JSON values\. For more information, see [CreateStack](http://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateStack.html) in the *AWS OpsWorks Stacks API Reference*\.  
+A user\-defined custom JSON object\. The custom JSON is used to override the corresponding default stack configuration JSON values\. For more information, see [CreateStack](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateStack.html) in the *AWS OpsWorks Stacks API Reference*\.  
 AWS CloudFormation submits all JSON attributes as strings, including any Boolean or number attributes\. If you have recipes that expect booleans or numbers, you must modify the recipes to accept strings and to interpret those strings as booleans or numbers\.
 *Required*: No  
 *Type*: JSON object  
@@ -153,13 +153,13 @@ The Amazon Resource Name \(ARN\) of an IAM instance profile that is the default 
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `DefaultOs`  <a name="cfn-opsworks-stack-defaultos"></a>
-The stack's default operating system\. For more information, see [CreateStack](http://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateStack.html) in the *AWS OpsWorks Stacks API Reference*\.  
+The stack's default operating system\. For more information, see [CreateStack](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateStack.html) in the *AWS OpsWorks Stacks API Reference*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `DefaultRootDeviceType`  <a name="cfn-opsworks-stack-defaultrootdevicetype"></a>
-The default root device type\. This value is used by default for all instances in the stack, but you can override it when you create an instance\. For more information, see [CreateStack](http://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateStack.html) in the *AWS OpsWorks Stacks API Reference*\.  
+The default root device type\. This value is used by default for all instances in the stack, but you can override it when you create an instance\. For more information, see [CreateStack](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateStack.html) in the *AWS OpsWorks Stacks API Reference*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -191,7 +191,7 @@ If you specify an IP address that's registered with another AWS OpsWorks stack, 
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `HostnameTheme`  <a name="cfn-opsworks-stack-hostnametheme"></a>
-The stack's host name theme, with spaces replaced by underscores\. The theme is used to generate host names for the stack's instances\. For more information, see [CreateStack](http://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateStack.html) in the *AWS OpsWorks Stacks API Reference*\.  
+The stack's host name theme, with spaces replaced by underscores\. The theme is used to generate host names for the stack's instances\. For more information, see [CreateStack](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateStack.html) in the *AWS OpsWorks Stacks API Reference*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -245,9 +245,9 @@ The ID of the VPC that the stack is to be launched into, which must be in the sp
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w3ab2c21c10d935c11"></a>
+## Return Values<a name="w4ab1c21c10d966c11"></a>
 
-### Ref<a name="w3ab2c21c10d935c11b2"></a>
+### Ref<a name="w4ab1c21c10d966c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -259,7 +259,7 @@ For the AWS OpsWorks stack `myStack`, `Ref` returns the AWS OpsWorks stack ID\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Template Examples<a name="w3ab2c21c10d935c13"></a>
+## Template Examples<a name="w4ab1c21c10d966c13"></a>
 
 The following snippet creates an AWS OpsWorks stack that uses the default service role and Amazon EC2 role, which are created after you use AWS OpsWorks for the first time:
 
@@ -471,7 +471,7 @@ The following complete template example specifies tags for an AWS OpsWorks layer
 ```
 Resources:
   ServiceRole:
-    Type: 'AWS::IAM::Role'
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Statement:
@@ -494,7 +494,7 @@ Resources:
                   - 'elasticloadbalancing:*'
                 Resource: '*'
   OpsWorksEC2Role:
-    Type: 'AWS::IAM::Role'
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Statement:
@@ -506,13 +506,13 @@ Resources:
               - 'sts:AssumeRole'
       Path: /
   InstanceRole:
-    Type: 'AWS::IAM::InstanceProfile'
+    Type: AWS::IAM::InstanceProfile
     Properties:
       Path: /
       Roles:
         - !Ref OpsWorksEC2Role
   myStack:
-    Type: 'AWS::OpsWorks::Stack'
+    Type: AWS::OpsWorks::Stack
     Properties:
       Name: TestStack
       ServiceRoleArn: !GetAtt 
@@ -525,7 +525,7 @@ Resources:
         - Key: !Ref StackKey
           Value: !Ref StackValue
   myLayer:
-    Type: 'AWS::OpsWorks::Layer'
+    Type: AWS::OpsWorks::Layer
     Properties:
       EnableAutoHealing: 'true'
       AutoAssignElasticIps: 'false'
@@ -552,7 +552,7 @@ Parameters:
     Type: String
 ```
 
-## Additional Information<a name="w3ab2c21c10d935c15"></a>
+## Additional Information<a name="w4ab1c21c10d966c15"></a>
 + For a complete sample AWS OpsWorks template, see [AWS OpsWorks Template Snippets](quickref-opsworks.md)\.
 + [AWS::OpsWorks::Layer](aws-resource-opsworks-layer.md)
 + [AWS::OpsWorks::App](aws-resource-opsworks-app.md)

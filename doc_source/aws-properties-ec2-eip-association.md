@@ -2,13 +2,13 @@
 
 The AWS::EC2::EIPAssociation resource type associates an Elastic IP address with an Amazon EC2 instance\. The Elastic IP address can be an existing Elastic IP address or an Elastic IP address allocated through an [AWS::EC2::EIP resource](aws-properties-ec2-eip.md)\.
 
-For more information EC2\-Classic and EC2\-VPC, see [AssociateAddress](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AssociateAddress.html) in the *Amazon EC2 API Reference*\.
+For more information EC2\-Classic and EC2\-VPC, see [AssociateAddress](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AssociateAddress.html) in the *Amazon EC2 API Reference*\.
 
 **Topics**
 + [Syntax](#aws-resource-ec2-eipassociation-syntax)
 + [Properties](#aws-resource-ec2-eip-association-prop)
-+ [Return Values](#w3ab2c21c10d396c13)
-+ [Examples](#w3ab2c21c10d396c15)
++ [Return Values](#w4ab1c21c10d408c13)
++ [Examples](#w4ab1c21c10d408c15)
 
 ## Syntax<a name="aws-resource-ec2-eipassociation-syntax"></a>
 
@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-eipassociation-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::EIPAssociation"
+Type: AWS::EC2::EIPAssociation
 Properties:
   [AllocationId](#cfn-ec2-eipassociation-allocationid): String
   [EIP](#cfn-ec2-eipassociation-eip): String
@@ -73,21 +73,21 @@ Instance ID of the Amazon EC2 instance that you want to associate with the Elast
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10d396c13"></a>
+## Return Values<a name="w4ab1c21c10d408c13"></a>
 
-### Ref<a name="w3ab2c21c10d396c13b2"></a>
+### Ref<a name="w4ab1c21c10d408c13b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w3ab2c21c10d396c15"></a>
+## Examples<a name="w4ab1c21c10d408c15"></a>
 
 The following example creates an instance with two elastic network interfaces \(ENI\)\. The example assumes that you have an existing VPC\.
 
 For additional examples, see [Assigning an Amazon EC2 Elastic IP Using AWS::EC2::EIP Snippet](quickref-ec2.md#scenario-ec2-eip)\.
 
-### JSON<a name="w3ab2c21c10d396c15b6"></a>
+### JSON<a name="w4ab1c21c10d408c15b6"></a>
 
 ```
   "Resources" : {
@@ -172,7 +172,7 @@ For additional examples, see [Assigning an Amazon EC2 Elastic IP Using AWS::EC2:
   }
 ```
 
-### YAML<a name="w3ab2c21c10d396c15b8"></a>
+### YAML<a name="w4ab1c21c10d408c15b8"></a>
 
 ```
 Resources:

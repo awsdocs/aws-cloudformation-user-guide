@@ -40,4 +40,4 @@ The options for Spot Instances\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ec2-launchtemplate-instancemarketoptions-seealso"></a>
-+ [LaunchTemplateInstanceMarketOptionsRequest](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateInstanceMarketOptionsRequest.html) in the *Amazon EC2 API Reference*
++ [LaunchTemplateInstanceMarketOptionsRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateInstanceMarketOptionsRequest.html) in the *Amazon EC2 API Reference*

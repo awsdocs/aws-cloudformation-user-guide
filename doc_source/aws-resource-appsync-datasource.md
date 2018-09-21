@@ -26,7 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[ApiId](#cfn-appsync-datasource-apiid)" : String,
     "[Name](#cfn-appsync-datasource-name)" : String,
     "[DynamoDBConfig](#cfn-appsync-datasource-dynamodbconfig)" : [*DynamoDBConfig*](aws-properties-appsync-datasource-dynamodbconfig.md),
-    "[ElasticsearchConfig](#cfn-appsync-datasource-elasticsearchconfig)" : [*ElasticsearchConfig*](aws-properties-appsync-datasource-elasticsearchconfig.md)
+    "[ElasticsearchConfig](#cfn-appsync-datasource-elasticsearchconfig)" : [*ElasticsearchConfig*](aws-properties-appsync-datasource-elasticsearchconfig.md),
+    "[HttpConfig](#cfn-appsync-datasource-httpconfig)" : [*HttpConfig*](aws-properties-appsync-datasource-httpconfig.md)
   }
 }
 ```
@@ -44,12 +45,14 @@ Properties:
   [Name](#cfn-appsync-datasource-name): String
   [DynamoDBConfig](#cfn-appsync-datasource-dynamodbconfig): [*DynamoDBConfig*](aws-properties-appsync-datasource-dynamodbconfig.md)
   [ElasticsearchConfig](#cfn-appsync-datasource-elasticsearchconfig): [*ElasticsearchConfig*](aws-properties-appsync-datasource-elasticsearchconfig.md)
+  [HttpConfig](#cfn-appsync-datasource-httpconfig): [*HttpConfig*](aws-properties-appsync-datasource-httpconfig.md)
 ```
 
 ## Properties<a name="aws-resource-appsync-datasource-properties"></a>
 
 `Type`  <a name="cfn-appsync-datasource-type"></a>
-Mandatory resource to return data from in customer AWS account\. You can also specify NONE to use Local Resolvers\. See [http://docs.aws.amazon.com/appsync/latest/devguide/tutorial-local-resolvers.html](http://docs.aws.amazon.com/appsync/latest/devguide/tutorial-local-resolvers.html) for more information\.  
+Mandatory resource to return data from in customer AWS account\. For a complete list of values, see [CreateDataSource](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateDataSource.html) in the *AWS AppSync API Reference* for more information\.  
+You can also specify `NONE` to use local resolvers\. See [Local Resolvers Tutorial](https://docs.aws.amazon.com/appsync/latest/devguide/tutorial-local-resolvers.html) in the *AWS AppSync Developer Guide* for more information\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
@@ -61,8 +64,8 @@ Friendly description for this data source\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ServiceRoleArn`  <a name="cfn-appsync-datasource-servicerolearn"></a>
-IAM role ARN which the data source will use to connect to a resource\.  
- *Required*: No  
+The Amazon Resource Name \(ARN\) of the IAM role which the data source will use to connect to a resource\.  
+ *Required*: Conditional\. Required if `Type` is specified as `AWS_LAMBDA`, `AMAZON_DYNAMODB`, or `AMAZON_ELASTICSEARCH`\.  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
@@ -94,6 +97,12 @@ AwsRegion and TableName for an Amazon DynamoDB table in your account\.
 AwsRegion and Endpoints for an Amazon Elasticsearch Service domain in your account\.  
  *Required*: No  
  *Type*: [AWS AppSync DataSource ElasticsearchConfig](aws-properties-appsync-datasource-elasticsearchconfig.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+
+`HttpConfig`  <a name="cfn-appsync-datasource-httpconfig"></a>
+Endpoints for an HTTP DataSource\.  
+ *Required*: No  
+ *Type*: [AWS AppSync DataSource HttpConfig](aws-properties-appsync-datasource-httpconfig.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-appsync-datasource-returnvalues"></a>
@@ -187,7 +196,7 @@ Parameters:
     Type: String
 Resources:
   DataSource:
-    Type: "AWS::AppSync::DataSource"
+    Type: AWS::AppSync::DataSource
     Properties:
       ApiId:
         Ref: graphQlApiId
@@ -204,4 +213,4 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-appsync-datasource-seealso"></a>
-+ [ CreateDataSource](http://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateDataSource.html) operation in the *AWS AppSync API Reference*
++ [ CreateDataSource](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateDataSource.html) operation in the *AWS AppSync API Reference*

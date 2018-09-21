@@ -2,7 +2,7 @@
 
 Describes the Amazon EBS volumes for the [AWS::OpsWorks::Layer](aws-resource-opsworks-layer.md) resource type\.
 
-## Syntax<a name="w3ab2c21c14e1613b5"></a>
+## Syntax<a name="w4ab1c21c14e1716b5"></a>
 
 ### JSON<a name="aws-properties-opsworks-layer-volumeconfig-syntax.json"></a>
 
@@ -28,7 +28,7 @@ Describes the Amazon EBS volumes for the [AWS::OpsWorks::Layer](aws-resource-ops
 [VolumeType](#cfn-opsworks-layer-volconfig-volumetype): String
 ```
 
-## Properties<a name="w3ab2c21c14e1613b7"></a>
+## Properties<a name="w4ab1c21c14e1716b7"></a>
 
 `Iops`  <a name="cfn-opsworks-layer-volconfig-iops"></a>
 The number of I/O operations per second \(IOPS\) to provision for the volume\.  
@@ -56,6 +56,6 @@ The volume size\.
 *Type*: Integer
 
 `VolumeType`  <a name="cfn-opsworks-layer-volconfig-volumetype"></a>
-The type of volume, such as magnetic or SSD\. For valid values, see [VolumeConfiguration](http://docs.aws.amazon.com/opsworks/latest/APIReference/API_VolumeConfiguration.html) in the *AWS OpsWorks Stacks API Reference*\.  
+The type of volume, such as magnetic or SSD\. For valid values, see [VolumeConfiguration](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_VolumeConfiguration.html) in the *AWS OpsWorks Stacks API Reference*\.  
 *Required*: No  
 *Type*: String

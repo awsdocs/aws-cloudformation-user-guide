@@ -6,9 +6,9 @@ For more information about constraints and values for each property, see [POST C
 
 **Topics**
 + [Syntax](#aws-resource-route53-recordset-syntax)
-+ [Properties](#w3ab2c21c10e1023c11)
-+ [Return Value](#w3ab2c21c10e1023c13)
-+ [Example](#w3ab2c21c10e1023c15)
++ [Properties](#w4ab1c21c10e1053c11)
++ [Return Value](#w4ab1c21c10e1053c13)
++ [Example](#w4ab1c21c10e1053c15)
 
 ## Syntax<a name="aws-resource-route53-recordset-syntax"></a>
 
@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-route53-recordset-syntax.yaml"></a>
 
 ```
-Type: "AWS::Route53::RecordSet"
+Type: AWS::Route53::RecordSet
 Properties: 
   [AliasTarget](#cfn-route53-recordset-aliastarget): 
     [*AliasTarget*](aws-properties-route53-aliastarget.md)
@@ -62,25 +62,25 @@ Properties:
   [Weight](#cfn-route53-recordset-weight): Integer
 ```
 
-## Properties<a name="w3ab2c21c10e1023c11"></a>
+## Properties<a name="w4ab1c21c10e1053c11"></a>
 
 `AliasTarget`  <a name="cfn-route53-recordset-aliastarget"></a>
 *Alias resource record sets only:* Information about the domain to which you are redirecting traffic\.  
 If you specify this property, do not specify the `TTL` property\. The alias uses a TTL value from the alias target record\.  
-For more information about alias resource record sets, see [Creating Alias Resource Record Sets](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingAliasRRSets.html) in the *Route 53 Developer Guide* and [POST ChangeResourceRecordSets](http://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html#API_ChangeResourceRecordSets_RequestAliasSyntax) in the Route 53 API reference\.  
+For more information about alias resource record sets, see [Creating Alias Resource Record Sets](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingAliasRRSets.html) in the *Route 53 Developer Guide* and [POST ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html#API_ChangeResourceRecordSets_RequestAliasSyntax) in the Route 53 API reference\.  
 *Required*: Conditional\. Required if you are creating an alias resource record set\.   
 *Type*: [AliasTarget](aws-properties-route53-aliastarget.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Comment`  <a name="cfn-route53-recordset-comment"></a>
-Any comments that you want to include about the hosted zone\.  
+Any comments that you want to include about the change batch\.  
 If the record set is part of a record set group, this property isn't valid\. Don't specify this property\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Failover`  <a name="cfn-route53-recordset-failover"></a>
-Designates the record set as a `PRIMARY` or `SECONDARY` failover record set\. When you have more than one resource performing the same function, you can configure Route 53 to check the health of your resources and use only health resources to respond to DNS queries\. You cannot create nonfailover resource record sets that have the same `Name` and `Type` property values as failover resource record sets\. For more information, see the [Failover](http://docs.aws.amazon.com/Route53/latest/APIReference/API_ResourceRecordSet.html#Route53-Type-ResourceRecordSet-Failover) content in the *Amazon Route 53 API Reference*\.  
+Designates the record set as a `PRIMARY` or `SECONDARY` failover record set\. When you have more than one resource performing the same function, you can configure Route 53 to check the health of your resources and use only health resources to respond to DNS queries\. You cannot create nonfailover resource record sets that have the same `Name` and `Type` property values as failover resource record sets\. For more information, see the [Failover](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResourceRecordSet.html#Route53-Type-ResourceRecordSet-Failover) content in the *Amazon Route 53 API Reference*\.  
 If you specify this property, you must specify the `SetIdentifier` property\.  
 *Required*: No  
 *Type*: String  
@@ -127,7 +127,7 @@ The following restrictions must be followed:
 + You are not required to create latency resource record sets for all Amazon EC2 regions\. Route 53 will choose the region with the best latency from among the regions for which you create latency resource record sets\.
 + You cannot create both weighted and latency resource record sets that have the same values for the Name and Type elements\.
 + This property is not compatible with the `GeoLocation` property\.
-To see a list of regions by service, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) in the *AWS General Reference*\.
+To see a list of regions by service, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the *AWS General Reference*\.
 
 `ResourceRecords`  <a name="cfn-route53-recordset-resourcerecords"></a>
 List of resource records to add\. Each record should be in the format appropriate for the record type specified by the `Type` property\. For information about different record types and their record formats, see [Values for Basic Resource Record Sets](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values-basic.html) and [Appendix: Domain Name Format](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DomainNameFormat.html) in the *Route 53 Developer Guide*\.  
@@ -138,7 +138,7 @@ List of resource records to add\. Each record should be in the format appropriat
 `SetIdentifier`  <a name="cfn-route53-recordset-setidentifier"></a>
 A unique identifier that differentiates among multiple resource record sets that have the same combination of DNS name and type\.  
 *Required*: Conditional\. Required if you are creating a weighted, latency, failover, or geolocation resource record set\.  
-For more information, see the [SetIdentifier](http://docs.aws.amazon.com/Route53/latest/APIReference/API_ResourceRecordSet.html#Route53-Type-ResourceRecordSet-SetIdentifier) content in the *Route 53 Developer Guide*\.  
+For more information, see the [SetIdentifier](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResourceRecordSet.html#Route53-Type-ResourceRecordSet-SetIdentifier) content in the *Route 53 Developer Guide*\.  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
@@ -150,7 +150,7 @@ If you specify this property, you must specify the `ResourceRecords` property\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Type`  <a name="cfn-route53-recordset-type"></a>
-The type of records to add\. For valid values, see the [Type](http://docs.aws.amazon.com/Route53/latest/APIReference/API_ResourceRecordSet.html#Route53-Type-ResourceRecordSet-Type) content in the *Amazon Route 53 API Reference*\.  
+The type of records to add\. For valid values, see the [Type](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResourceRecordSet.html#Route53-Type-ResourceRecordSet-Type) content in the *Amazon Route 53 API Reference*\.  
 In AWS CloudFormation, you cannot modify the NS and SOA records for a hosted zone created automatically by Route 53\. Specifically, you can't create or delete NS or SOA records for the root domain of your hosted zone, but you can create them for subdomains to delegate\. For example, for hosted zone `mydomain.net`, you cannot create an NS record for `mydomain.net` but you can create an NS record for `nnnn.mydomain.net` for delegation\.  
 *Required*: Yes  
 *Type*: String  
@@ -163,15 +163,15 @@ For more information about weighted resource record sets, see [Setting Up Weight
 *Type*: Number\. Weight expects integer values\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10e1023c13"></a>
+## Return Value<a name="w4ab1c21c10e1053c13"></a>
 
 When you specify an `AWS::Route53::RecordSet` type as an argument to the `Ref` function, AWS CloudFormation returns the value of the domain name of the record set\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10e1023c15"></a>
+## Example<a name="w4ab1c21c10e1053c15"></a>
 
-### Mapping an Route 53 A record to the public IP of an Amazon EC2 instance<a name="w3ab2c21c10e1023c15b2"></a>
+### Mapping a Route 53 A record to the public IP of an Amazon EC2 instance<a name="w4ab1c21c10e1053c15b2"></a>
 
 #### JSON<a name="aws-resource-route53-recordset-example.json"></a>
 
@@ -227,6 +227,6 @@ Resources:
       - !GetAtt Ec2Instance.PublicIp
 ```
 
-### Additional Information<a name="w3ab2c21c10e1023c15b4"></a>
+### Additional Information<a name="w4ab1c21c10e1053c15b4"></a>
 
 For additional `AWS::Route53::RecordSet` snippets, see [Route 53 Template Snippets](quickref-route53.md) \.

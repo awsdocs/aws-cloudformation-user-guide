@@ -17,7 +17,7 @@ A new or existing Amazon Simple Notification Service topic where notifications a
 If you create an Amazon SNS topic, you must specify a name and an email address, where stack event notifications are sent\.
 
 **Timeout**  
-The number of minutes before stack creation times out\. If the stack could not be created before the time expires, creation fails due to timeout and the stack is rolled back\. By default, the stack creation never times out\.
+Specifies the amount of time, in minutes, that CloudFormation should allot before timing out stack creation operations\. If CloudFormation cannot create the entire stack in the time allotted, it fails the stack creation due to timeout and rolls back the stack\. By default, there is no timeout for stack creation\. However, individual resources may have their own timeouts based on the nature of the service they implement\. For example, if an individual resource in your stack times out, stack creation also times out even if the timeout you specified for stack creation has not yet been reached\.
 
 **Rollback on failure**  
 Specifies whether the stack should be rolled back if stack creation fails\. Typically, you want to accept the default value of **Yes**\. Select **No** if you want the stack's state retained even if creation fails, such as when you are debugging a stack template\.

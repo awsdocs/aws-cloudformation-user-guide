@@ -2,6 +2,8 @@
 
 The `AWS::SSM::Parameter` resource creates an SSM parameter in AWS Systems Manager Parameter Store\.
 
+For information about valid values for parameters, see [Requirements and Constraints for Parameter Names](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html) in the *AWS Systems Manager User Guide* and [PutParameter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PutParameter.html) in the *AWS Systems Manager API Reference*\.
+
 **Topics**
 + [Syntax](#aws-resource-ssm-parameter-syntax)
 + [Properties](#aws-resource-ssm-parameter-properties)
@@ -31,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: "AWS::SSM::Parameter"
-Properties:
+Properties: 
   [AllowedPattern](#cfn-ssm-parameter-allowedpattern): String
   [Description](#cfn-ssm-parameter-description): String
   [Name](#cfn-ssm-parameter-name): String
@@ -54,7 +56,8 @@ Information about the parameter that you want to add to the system\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Name`  <a name="cfn-ssm-parameter-name"></a>
-The name of the parameter\. Names must not be prefixed with `aws` or `ssm`\.  
+The name of the parameter\.  
+For information about valid values for parameter names, see [Requirements and Constraints for Parameter Names](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html) in the *AWS Systems Manager User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -74,13 +77,13 @@ The parameter value\. Value must not nest another parameter\. Do not use `{{}}` 
 
 ## Return Value<a name="aws-resource-ssm-parameter-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10e1165c11b3"></a>
+### Ref<a name="w4ab1c21c10e1191c13b3"></a>
 
 When you pass the logical ID of an `AWS::SSM::Parameter` resource to the intrinsic `Ref` function, the function returns the Name of the SSM parameter\. For example, `ssm-myparameter-ABCNPH3XCAO6`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10e1165c11b5"></a>
+### Fn::GetAtt<a name="w4ab1c21c10e1191c13b5"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -94,7 +97,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
 
 ## Examples<a name="aws-resource-ssm-parameter-examples"></a>
 
-### SSM Parameter \(String\) Example<a name="w3ab2c21c10e1165c13b3"></a>
+### SSM Parameter \(String\) Example<a name="w4ab1c21c10e1191c15b3"></a>
 
 The following example snippet creates an SSM parameter in Parameter Store\.
 
@@ -133,7 +136,7 @@ Resources:
       AllowedPattern: "^[a-zA-Z]{1,10}$"
 ```
 
-### SSM Parameter \(StringList\) Example<a name="w3ab2c21c10e1165c13b5"></a>
+### SSM Parameter \(StringList\) Example<a name="w4ab1c21c10e1191c15b5"></a>
 
 The following example creates an SSM parameter with a `StringList` type\.
 

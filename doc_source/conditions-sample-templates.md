@@ -1,6 +1,6 @@
 # Sample Templates<a name="conditions-sample-templates"></a>
 
-## Conditionally create resources for a production, development, or test stack<a name="w3ab2c21c28c21c47b3"></a>
+## Conditionally create resources for a production, development, or test stack<a name="w4ab1c21c28c21c47b3"></a>
 
 In some cases, you might want to create stacks that are similar but with minor tweaks\. For example, you might have a template that you use for production applications\. You want to create the same production stack so that you can use it for development or testing\. However, for development and testing, you might not require all the extra capacity that's included in a production\-level stack\. Instead, you can use an environment type input parameter in order to conditionally create stack resources that are specific to production, development, or testing, as shown in the following sample: 
 
@@ -12,14 +12,14 @@ In some cases, you might want to create stacks that are similar but with minor t
 
   "Mappings" : {
     "RegionMap" : {
-      "us-east-1"      : { "AMI" : "ami-aecd60c7"},
-      "us-west-1"      : { "AMI" : "ami-734c6936"},
-      "us-west-2"      : { "AMI" : "ami-48da5578"},
-      "eu-west-1"      : { "AMI" : "ami-6d555119"},
-      "sa-east-1"      : { "AMI" : "ami-fe36e8e3"},
-      "ap-southeast-1" : { "AMI" : "ami-3c0b4a6e"},
-      "ap-southeast-2" : { "AMI" : "ami-bd990e87"},
-      "ap-northeast-1" : { "AMI" : "ami-2819aa29"}
+      "us-east-1"      : { "AMI" : "ami-0ff8a91507f77f867"},
+      "us-west-1"      : { "AMI" : "ami-0bdb828fd58c52235"},
+      "us-west-2"      : { "AMI" : "ami-a0cfeed8"},
+      "eu-west-1"      : { "AMI" : "ami-047bb4163c506cd98"},
+      "sa-east-1"      : { "AMI" : "ami-07b14488da8ea02a0"},
+      "ap-southeast-1" : { "AMI" : "ami-08569b978cc4dfa10"},
+      "ap-southeast-2" : { "AMI" : "ami-09b42976632b27e9b"},
+      "ap-northeast-1" : { "AMI" : "ami-06cd52961ce9f0d85"}
     }
   },
   
@@ -85,21 +85,21 @@ AWSTemplateFormatVersion: "2010-09-09"
 Mappings:
   RegionMap:
     us-east-1:
-      AMI: "ami-aecd60c7"
+      AMI: "ami-0ff8a91507f77f867"
     us-west-1:
-      AMI: "ami-734c6936"
+      AMI: "ami-0bdb828fd58c52235"
     us-west-2:
-      AMI: "ami-48da5578"
+      AMI: "ami-a0cfeed8"
     eu-west-1:
-      AMI: "ami-6d555119"
+      AMI: "ami-047bb4163c506cd98"
     sa-east-1:
-      AMI: "ami-fe36e8e3"
+      AMI: "ami-07b14488da8ea02a0"
     ap-southeast-1:
-      AMI: "ami-3c0b4a6e"
+      AMI: "ami-08569b978cc4dfa10"
     ap-southeast-2:
-      AMI: "ami-bd990e87"
+      AMI: "ami-09b42976632b27e9b"
     ap-northeast-1:
-      AMI: "ami-2819aa29"
+      AMI: "ami-06cd52961ce9f0d85"
 
 Parameters:
   EnvType:
@@ -140,7 +140,7 @@ In the `InstanceType` property, the template nests two `Fn::If` intrinsic functi
 
  In addition to the instance type, the production environment creates and attaches an Amazon EC2 volume to the instance\. The `MountPoint` and `NewVolume` resources are associated with the `CreateProdResources` condition so that the resources are created only if the condition evaluates to true\.
 
-## Conditionally assign a resource property<a name="w3ab2c21c28c21c47b5"></a>
+## Conditionally assign a resource property<a name="w4ab1c21c28c21c47b5"></a>
 
 In this example, you can create an Amazon RDS DB instance from a snapshot\. If you specify the `DBSnapshotName` parameter, AWS CloudFormation uses the parameter value as the snapshot name when creating the DB instance\. If you keep the default value \(empty string\), AWS CloudFormation removes the `DBSnapshotIdentifier` property and creates a DB instance from scratch\.
 
@@ -269,7 +269,7 @@ Resources:
 
 The `UseDBSnapshot` condition evaluates to true only if the `DBSnapshotName` is not an empty string\. If the `UseDBSnapshot` condition evaluates to true, AWS CloudFormation uses the `DBSnapshotName` parameter value for the `DBSnapshotIdentifier` property\. If the condition evaluates to false, AWS CloudFormation removes the `DBSnapshotIdentifier` property\. The `AWS::NoValue` pseudo parameter removes the corresponding resource property when it is used as a return value\.
 
-## Conditionally use an existing resource<a name="w3ab2c21c28c21c47b7"></a>
+## Conditionally use an existing resource<a name="w4ab1c21c28c21c47b7"></a>
 
 In this example, you can use an Amazon EC2 security group that has already been created or you can create a new security group, which is specified in the template\. For the `ExistingSecurityGroup` parameter, you can specify the `default` security group name or `NONE`\. If you specify `default`, AWS CloudFormation uses a security group that has already been created and is named `default`\. If you specify `NONE`, AWS CloudFormation creates the security group that's defined in the template\.
 
@@ -294,7 +294,7 @@ In this example, you can use an Amazon EC2 security group that has already been 
     "MyInstance" : {
       "Type" : "AWS::EC2::Instance",
         "Properties" : {
-          "ImageId" : "ami-1b814f72",
+          "ImageId" : "ami-0ff8a91507f77f867",
           "SecurityGroups" : [{
             "Fn::If" : [
               "CreateNewSecurityGroup",
@@ -347,12 +347,12 @@ Parameters:
       - default
       - NONE
 Conditions: 
-  CreateNewSecurityGroup: !Equals [!Ref ExistingSecurityGroup, NONE
+  CreateNewSecurityGroup: !Equals [!Ref ExistingSecurityGroup, NONE]
 Resources: 
   MyInstance: 
     Type: "AWS::EC2::Instance"
     Properties: 
-      ImageId: "ami-1b814f72"
+      ImageId: "ami-0ff8a91507f77f867"
       SecurityGroups: !If [CreateNewSecurityGroup, !Ref NewSecurityGroup, !Ref ExistingSecurityGroup]
   NewSecurityGroup: 
     Type: "AWS::EC2::SecurityGroup"

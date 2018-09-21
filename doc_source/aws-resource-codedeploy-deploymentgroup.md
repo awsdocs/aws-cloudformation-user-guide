@@ -1,12 +1,12 @@
 # AWS::CodeDeploy::DeploymentGroup<a name="aws-resource-codedeploy-deploymentgroup"></a>
 
-The `AWS::CodeDeploy::DeploymentGroup` resource creates an AWS CodeDeploy deployment group that specifies which instances your application revisions are deployed to, along with other deployment options\. For more information, see [CreateDeploymentGroup](http://docs.aws.amazon.com//codedeploy/latest/APIReference/API_CreateDeploymentGroup.html) in the *AWS CodeDeploy API Reference*\.
+The `AWS::CodeDeploy::DeploymentGroup` resource creates an AWS CodeDeploy deployment group that specifies which instances your application revisions are deployed to, along with other deployment options\. For more information, see [CreateDeploymentGroup](https://docs.aws.amazon.com//codedeploy/latest/APIReference/API_CreateDeploymentGroup.html) in the *AWS CodeDeploy API Reference*\.
 
 **Topics**
 + [Syntax](#aws-resource-codedeploy-deploymentgroup-syntax)
-+ [Properties](#w3ab2c21c10d258b9)
-+ [Return Value](#w3ab2c21c10d258c11)
-+ [Examples](#w3ab2c21c10d258c13)
++ [Properties](#w4ab1c21c10d267b9)
++ [Return Value](#w4ab1c21c10d267c11)
++ [Examples](#w4ab1c21c10d267c13)
 
 ## Syntax<a name="aws-resource-codedeploy-deploymentgroup-syntax"></a>
 
@@ -27,8 +27,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[DeploymentGroupName](#cfn-codedeploy-deploymentgroup-deploymentgroupname)" : String,
     "[DeploymentStyle](#cfn-codedeploy-deploymentgroup-deploymentstyle)" : [*DeploymentStyle*](aws-properties-codedeploy-deploymentgroup-deploymentstyle.md),
     "[Ec2TagFilters](#cfn-codedeploy-deploymentgroup-ec2tagfilters)" : [ [*Ec2TagFilter, \.\.\.*](aws-properties-codedeploy-deploymentgroup-ec2tagfilters.md) ],
+    "[Ec2TagSet](#cfn-codedeploy-deploymentgroup-ec2tagset)" : [*Ec2TagSet*](aws-properties-codedeploy-deploymentgroup-ec2tagset.md),
     "[LoadBalancerInfo](#cfn-codedeploy-deploymentgroup-loadbalancerinfo)" : [*LoadBalancerInfo*](aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.md),
     "[OnPremisesInstanceTagFilters](#cfn-codedeploy-deploymentgroup-onpremisesinstancetagfilters)" : [ [*OnPremisesInstanceTagFilter, \.\.\.*](aws-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters.md) ],
+    "[OnPremisesInstanceTagSet](#cfn-codedeploy-deploymentgroup-onpremisestagset)" : [*OnPremisesInstanceTagSet*](aws-properties-codedeploy-deploymentgroup-onpremisestagset.md),
     "[ServiceRoleArn](#cfn-codedeploy-deploymentgroup-servicerolearn)" : String,
     "[TriggerConfigurations](#cfn-codedeploy-deploymentgroup-triggerconfigurations)" : [ [*TriggerConfig, \.\.\.*](aws-properties-codedeploy-deploymentgroup-triggerconfig.md) ]
   }
@@ -38,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-codedeploy-deploymentgroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::CodeDeploy::DeploymentGroup"
+Type: AWS::CodeDeploy::DeploymentGroup
 Properties:
   [AlarmConfiguration](#cfn-codedeploy-deploymentgroup-alarmconfiguration):
     [*AlarmConfiguration*](aws-properties-codedeploy-deploymentgroup-alarmconfiguration.md)
@@ -55,16 +57,18 @@ Properties:
     [*DeploymentStyle*](aws-properties-codedeploy-deploymentgroup-deploymentstyle.md)
   [Ec2TagFilters](#cfn-codedeploy-deploymentgroup-ec2tagfilters):
     - [*Ec2TagFilters*](aws-properties-codedeploy-deploymentgroup-ec2tagfilters.md)
+  [Ec2TagSet](#cfn-codedeploy-deploymentgroup-ec2tagset) : [*Ec2TagSet*](aws-properties-codedeploy-deploymentgroup-ec2tagset.md)
   [LoadBalancerInfo](#cfn-codedeploy-deploymentgroup-loadbalancerinfo): 
     [*LoadBalancerInfo*](aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.md)
   [OnPremisesInstanceTagFilters](#cfn-codedeploy-deploymentgroup-onpremisesinstancetagfilters):
     - [*OnPremisesInstanceTagFilters*](aws-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters.md)
+  [OnPremisesInstanceTagSet](#cfn-codedeploy-deploymentgroup-onpremisestagset): [*OnPremisesInstanceTagSet*](aws-properties-codedeploy-deploymentgroup-onpremisestagset.md)
   [ServiceRoleArn](#cfn-codedeploy-deploymentgroup-servicerolearn): String
   [TriggerConfigurations](#cfn-codedeploy-deploymentgroup-triggerconfigurations):
     - [*TriggerConfig*](aws-properties-codedeploy-deploymentgroup-triggerconfig.md)
 ```
 
-## Properties<a name="w3ab2c21c10d258b9"></a>
+## Properties<a name="w4ab1c21c10d267b9"></a>
 
 `AlarmConfiguration`  <a name="cfn-codedeploy-deploymentgroup-alarmconfiguration"></a>
 Information about the Amazon CloudWatch alarms that are associated with the deployment group\.  
@@ -97,7 +101,7 @@ The application revision to deploy to this deployment group\. If you specify thi
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `DeploymentConfigName`  <a name="cfn-codedeploy-deploymentgroup-deploymentconfigname"></a>
-A deployment configuration name or a predefined configuration name\. With predefined configurations, you can deploy application revisions to one instance at a time, half of the instances at a time, or all the instances at once\. For more information and valid values, see [Working with Deployment Configurations](http://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-configurations.html) in the *AWS CodeDeploy User Guide*\.  
+A deployment configuration name or a predefined configuration name\. With predefined configurations, you can deploy application revisions to one instance at a time, half of the instances at a time, or all the instances at once\. For more information and valid values, see [Working with Deployment Configurations](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-configurations.html) in the *AWS CodeDeploy User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -119,24 +123,40 @@ For blue/green deployments, AWS CloudFormation supports deployments on AWS Lambd
 
 `Ec2TagFilters`  <a name="cfn-codedeploy-deploymentgroup-ec2tagfilters"></a>
 The EC2 tags that are already applied to EC2 instances that you want to include in the deployment group\. AWS CodeDeploy includes all EC2 instances identified by any of the tags you specify in this deployment group\. Duplicates are not allowed\.  
+You can specify `EC2TagFilters` or `Ec2TagSet`, but not both\.  
 *Required*: No  
 *Type*: List of [AWS CodeDeploy DeploymentGroup Ec2TagFilters](aws-properties-codedeploy-deploymentgroup-ec2tagfilters.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
+`Ec2TagSet`  <a name="cfn-codedeploy-deploymentgroup-ec2tagset"></a>
+Specifies information about groups of tags applied to EC2 instances\. The deployment group will include only EC2 instances identified by all the tag groups\.  
+You can specify `EC2TagFilters` or `Ec2TagSet`, but not both\.  
+*Required*: No  
+*Type*: [AWS CodeDeploy DeploymentGroup EC2TagSet](aws-properties-codedeploy-deploymentgroup-ec2tagset.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
 `LoadBalancerInfo`  <a name="cfn-codedeploy-deploymentgroup-loadbalancerinfo"></a>
-Information about the load balancer used in the deployment\. For more information, see [ Integrating AWS CodeDeploy with Elastic Load Balancing](http://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-aws-elastic-load-balancing.html) in the *AWS CodeDeploy User Guide*\.  
+Information about the load balancer used in the deployment\. For more information, see [ Integrating AWS CodeDeploy with Elastic Load Balancing](https://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-aws-elastic-load-balancing.html) in the *AWS CodeDeploy User Guide*\.  
  *Required*: No  
  *Type*: [AWS CodeDeploy DeploymentGroup LoadBalancerInfo](aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `OnPremisesInstanceTagFilters`  <a name="cfn-codedeploy-deploymentgroup-onpremisesinstancetagfilters"></a>
-The on\-premises instance tags already applied to on\-premises instances that you want to include in the deployment group\. AWS CodeDeploy includes all on\-premises instances identified by any of the tags you specify in this deployment group\. To register on\-premises instances with AWS CodeDeploy, see [Working with On\-Premises Instances for AWS CodeDeploy](http://docs.aws.amazon.com/codedeploy/latest/userguide/instances-on-premises.html) in the *AWS CodeDeploy User Guide*\. Duplicates are not allowed\.  
+The on\-premises instance tags already applied to on\-premises instances that you want to include in the deployment group\. AWS CodeDeploy includes all on\-premises instances identified by any of the tags you specify in this deployment group\. To register on\-premises instances with AWS CodeDeploy, see [Working with On\-Premises Instances for AWS CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-on-premises.html) in the *AWS CodeDeploy User Guide*\. Duplicates are not allowed\.  
+You can specify `OnPremisesInstanceTagFilters` or `OnPremisesInstanceTagSet`, but not both\.  
 *Required*: No  
-*Type*: List of [AWS CodeDeploy DeploymentGroup OnPremisesInstanceTagFilters](aws-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters.md)  
+*Type*: List of [AWS CodeDeploy DeploymentGroup TagFilters](aws-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`OnPremisesInstanceTagSet`  <a name="cfn-codedeploy-deploymentgroup-onpremisestagset"></a>
+Information about groups of tags applied to on\-premises instances\. The deployment group will include only on\-premises instances identified by all the tag groups\.  
+You can specify `OnPremisesInstanceTagFilters` or `OnPremisesInstanceTagSet`, but not both\.  
+*Required*: No  
+*Type*:[AWS CodeDeploy DeploymentGroup OnPremisesTagSet](aws-properties-codedeploy-deploymentgroup-onpremisestagset.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ServiceRoleArn`  <a name="cfn-codedeploy-deploymentgroup-servicerolearn"></a>
-A service role Amazon Resource Name \(ARN\) that grants AWS CodeDeploy permission to make calls to AWS services on your behalf\. For more information, see [Create a Service Role for AWS CodeDeploy](http://docs.aws.amazon.com/codedeploy/latest/userguide/how-to-create-service-role.html) in the *AWS CodeDeploy User Guide\.*  
+A service role Amazon Resource Name \(ARN\) that grants AWS CodeDeploy permission to make calls to AWS services on your behalf\. For more information, see [Create a Service Role for AWS CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/how-to-create-service-role.html) in the *AWS CodeDeploy User Guide\.*  
 In some cases, you might need to add a dependency on the service role's policy\. For more information, see IAM role policy in [DependsOn Attribute](aws-attribute-dependson.md)\.
 *Required*: Yes  
 *Type*: String  
@@ -148,17 +168,17 @@ Information about the notification triggers for the deployment group\. Duplicate
 *Type*: List of [AWS CodeDeploy DeploymentGroup TriggerConfig](aws-properties-codedeploy-deploymentgroup-triggerconfig.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10d258c11"></a>
+## Return Value<a name="w4ab1c21c10d267c11"></a>
 
-### Ref<a name="w3ab2c21c10d258c11b2"></a>
+### Ref<a name="w4ab1c21c10d267c11b2"></a>
 
 When you pass the logical ID of an `AWS::CodeDeploy::DeploymentGroup` resource to the intrinsic `Ref` function, the function returns the deployment group name, such as `mydeploymentgroup-a123d0d1`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w3ab2c21c10d258c13"></a>
+## Examples<a name="w4ab1c21c10d267c13"></a>
 
-### Revision in GitHub<a name="w3ab2c21c10d258c13b2"></a>
+### Revision in GitHub<a name="w4ab1c21c10d267c13b2"></a>
 
 The following example creates a deployment group that is associated with Auto Scaling groups and uses an application revision that is stored in a GitHub repository\. You specify the repository information as input parameters\.
 
@@ -181,7 +201,12 @@ The following example creates a deployment group that is associated with Auto Sc
         }
       }
     },
-    "ServiceRoleArn" : {"Ref" : "RoleArn"}
+    "ServiceRoleArn" : {
+      "Fn::GetAtt" : [
+        "RoleArn", 
+        "Arn"
+      ]
+    }
   }
 }
 ```
@@ -190,7 +215,7 @@ The following example creates a deployment group that is associated with Auto Sc
 
 ```
 DeploymentGroup: 
-  Type: "AWS::CodeDeploy::DeploymentGroup"
+  Type: AWS::CodeDeploy::DeploymentGroup
   Properties: 
     ApplicationName: 
       Ref: "ApplicationName"
@@ -207,10 +232,10 @@ DeploymentGroup:
           Repository: 
             Ref: Repository
     ServiceRoleArn: 
-      Ref: RoleArn
+      Fn::GetAtt: [ RoleArn, Arn ]
 ```
 
-### Associate EC2 Instances<a name="w3ab2c21c10d258c13b4"></a>
+### Associate EC2 Instances<a name="w4ab1c21c10d267c13b4"></a>
 
 The following example creates a deployment group that uses instance tags to associate EC2 instances with the deployment group\. The deployment group uses an application revision that is stored in an S3 bucket\.
 
@@ -240,7 +265,12 @@ The following example creates a deployment group that uses instance tags to asso
       "Value" : {"Ref" : "TagValue"},
       "Type" : "KEY_AND_VALUE"
     }],
-    "ServiceRoleArn" : {"Ref" : "RoleArn"}
+    "ServiceRoleArn" : { 
+      "Fn::GetAtt" : [ 
+        "RoleArn", 
+        "Arn" 
+      ] 
+    } 
   }
 }
 ```
@@ -249,7 +279,7 @@ The following example creates a deployment group that uses instance tags to asso
 
 ```
 DeploymentGroup: 
-  Type: "AWS::CodeDeploy::DeploymentGroup"
+  Type: AWS::CodeDeploy::DeploymentGroup
   Properties: 
     ApplicationName: 
       Ref: "Application"
@@ -276,10 +306,10 @@ DeploymentGroup:
           Ref: TagValue
         Type: "KEY_AND_VALUE"
     ServiceRoleArn: 
-      Ref: RoleArn
+      Fn::GetAtt: [ RoleArn, Arn ]
 ```
 
-### Alarm and Trigger<a name="w3ab2c21c10d258c13b6"></a>
+### Alarm and Trigger<a name="w4ab1c21c10d267c13b6"></a>
 
 The following example configures a billing alarm and a notification trigger for the deployment group\.
 
@@ -386,7 +416,10 @@ The following example configures a billing alarm and a notification trigger for 
           }
         ],
         "ServiceRoleArn": {
-          "Ref": "CodeDeployServiceRole"
+          "Fn::GetAtt": [
+            "CodeDeployServiceRole", 
+            "Arn"
+          ]
         },
         "TriggerConfigurations": [
           {
@@ -429,7 +462,7 @@ Parameters:
     Type: String
 Resources:
   myAlarm:
-    Type: 'AWS::CloudWatch::Alarm'
+    Type: AWS::CloudWatch::Alarm
     Properties:
       Namespace: AWS/Billing
       MetricName: EstimatedCharges
@@ -439,18 +472,18 @@ Resources:
       Threshold: 1000
       ComparisonOperator: GreaterThanThreshold
   mySNSTopic:
-    Type: 'AWS::SNS::Topic'
+    Type: AWS::SNS::Topic
     Properties: {}
   Application:
-    Type: 'AWS::CodeDeploy::Application'
+    Type: AWS::CodeDeploy::Application
   DeploymentConfig:
-    Type: 'AWS::CodeDeploy::DeploymentConfig'
+    Type: AWS::CodeDeploy::DeploymentConfig
     Properties:
       MinimumHealthyHosts:
         Type: FLEET_PERCENT
         Value: '25'
   DeploymentGroup:
-    Type: 'AWS::CodeDeploy::DeploymentGroup'
+    Type: AWS::CodeDeploy::DeploymentGroup
     Properties:
       AlarmConfiguration:
         Alarms:
@@ -466,7 +499,7 @@ Resources:
           Type: KEY_ONLY
         - Value: !Ref EC2TagValue1
           Type: VALUE_ONLY
-      ServiceRoleArn: !Ref CodeDeployServiceRole
+      ServiceRoleArn: !GetAtt CodeDeployServiceRole.Arn
       TriggerConfigurations:
         - TriggerEvents:
             - DeploymentSuccess
@@ -475,7 +508,7 @@ Resources:
           TriggerTargetArn: !Ref mySNSTopic
 ```
 
-### Automatic Rollback Configuration<a name="w3ab2c21c10d258c13b8"></a>
+### Automatic Rollback Configuration<a name="w4ab1c21c10d267c13b8"></a>
 
 The following example configures automatic rollback for the deployment group\.
 
@@ -583,7 +616,10 @@ The following example configures automatic rollback for the deployment group\.
           }
         ],
         "ServiceRoleArn": {
-          "Ref": "CodeDeployServiceRole"
+          "Fn::GetAtt": [
+            "CodeDeployServiceRole",
+            "Arn"
+          ]
         },
         "TriggerConfigurations": [
           {
@@ -620,7 +656,7 @@ Parameters:
     Type: String
 Resources:
   myAlarm:
-    Type: 'AWS::CloudWatch::Alarm'
+    Type: AWS::CloudWatch::Alarm
     Properties:
       Namespace: AWS/Billing
       MetricName: EstimatedCharges
@@ -630,18 +666,18 @@ Resources:
       Threshold: 1000
       ComparisonOperator: GreaterThanThreshold
   mySNSTopic:
-    Type: 'AWS::SNS::Topic'
+    Type: AWS::SNS::Topic
     Properties: {}
   Application:
-    Type: 'AWS::CodeDeploy::Application'
+    Type: AWS::CodeDeploy::Application
   DeploymentConfig:
-    Type: 'AWS::CodeDeploy::DeploymentConfig'
+    Type: AWS::CodeDeploy::DeploymentConfig
     Properties:
       MinimumHealthyHosts:
         Type: FLEET_PERCENT
         Value: '25'
   DeploymentGroup:
-    Type: 'AWS::CodeDeploy::DeploymentGroup'
+    Type: AWS::CodeDeploy::DeploymentGroup
     Properties:
       AlarmConfiguration:
         Alarms:
@@ -661,7 +697,7 @@ Resources:
           Type: KEY_ONLY
         - Value: !Ref EC2TagValue1
           Type: VALUE_ONLY
-      ServiceRoleArn: !Ref CodeDeployServiceRole
+      ServiceRoleArn: !GetAtt CodeDeployServiceRole.Arn
       TriggerConfigurations:
         - TriggerEvents:
             - DeploymentSuccess
@@ -670,7 +706,7 @@ Resources:
           TriggerTargetArn: !Ref mySNSTopic
 ```
 
-### Load Balancer<a name="w3ab2c21c10d258c13c10"></a>
+### Load Balancer<a name="w4ab1c21c10d267c13c10"></a>
 
 The following example configures an Elastic Load Balancing load balancer for the deployment group\.
 
@@ -797,7 +833,10 @@ The following example configures an Elastic Load Balancing load balancer for the
           "DeploymentOption": "WITH_TRAFFIC_CONTROL"
         },
         "ServiceRoleArn": {
-          "Ref": "CodeDeployServiceRole"
+          "Fn::GetAtt": [
+            "CodeDeployServiceRole", 
+            "Arn"
+          ]
         },
         "TriggerConfigurations": [
           {
@@ -844,23 +883,23 @@ Parameters:
     Type: String
 Resources:
   myVpc:
-    Type: 'AWS::EC2::VPC'
+    Type: AWS::EC2::VPC
     Properties:
       CidrBlock: !Ref VpcCidr
   mySubnet:
-    Type: 'AWS::EC2::Subnet'
+    Type: AWS::EC2::Subnet
     Properties:
       VpcId: !Ref myVpc
       CidrBlock: !Ref SubnetCidr
   InternetGateway:
-    Type: 'AWS::EC2::InternetGateway'
+    Type: AWS::EC2::InternetGateway
   AttachGateway:
-    Type: 'AWS::EC2::VPCGatewayAttachment'
+    Type: AWS::EC2::VPCGatewayAttachment
     Properties:
       VpcId: !Ref myVpc
       InternetGatewayId: !Ref InternetGateway
   myELB:
-    Type: 'AWS::ElasticLoadBalancing::LoadBalancer'
+    Type: AWS::ElasticLoadBalancing::LoadBalancer
     Properties:
       Listeners:
         - InstancePort: '8000'
@@ -869,18 +908,18 @@ Resources:
       Subnets:
         - !Ref mySubnet
   mySNSTopic:
-    Type: 'AWS::SNS::Topic'
+    Type: AWS::SNS::Topic
     Properties: {}
   Application:
-    Type: 'AWS::CodeDeploy::Application'
+    Type: AWS::CodeDeploy::Application
   DeploymentConfig:
-    Type: 'AWS::CodeDeploy::DeploymentConfig'
+    Type: AWS::CodeDeploy::DeploymentConfig
     Properties:
       MinimumHealthyHosts:
         Type: FLEET_PERCENT
         Value: '25'
   DeploymentGroup:
-    Type: 'AWS::CodeDeploy::DeploymentGroup'
+    Type: AWS::CodeDeploy::DeploymentGroup
     Properties:
       ApplicationName: !Ref Application
       DeploymentConfigName: !Ref DeploymentConfig
@@ -896,7 +935,7 @@ Resources:
           - Name: !Ref myELB
       DeploymentStyle:
         DeploymentOption: WITH_TRAFFIC_CONTROL
-      ServiceRoleArn: !Ref CodeDeployServiceRole
+      ServiceRoleArn: !GetAtt CodeDeployServiceRole.Arn
       TriggerConfigurations:
         - TriggerEvents:
             - DeploymentSuccess
@@ -909,7 +948,7 @@ Outputs:
     Value: !Ref myELB
 ```
 
-### Target Group Info<a name="w3ab2c21c10d258c13c12"></a>
+### Target Group Info<a name="w4ab1c21c10d267c13c12"></a>
 
 The following example specifies the target group to use in a deployment\. Instances are registered as targets in a target group, and traffic is routed to the target group\.
 
@@ -946,7 +985,7 @@ The following example specifies the target group to use in a deployment\. Instan
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   AppDeploymentGroup:
-    Type: 'AWS::CodeDeploy::DeploymentGroup'
+    Type: AWS::CodeDeploy::DeploymentGroup
     Properties:
       ApplicationName: MyApp
       DeploymentStyle:

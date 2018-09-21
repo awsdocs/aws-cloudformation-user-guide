@@ -4,10 +4,10 @@ Creates an application version, an iteration of deployable code, for an Elastic 
 
 **Topics**
 + [Syntax](#aws-resource-elasticbeanstalk-applicationversion-syntax)
-+ [Members](#w3ab2c21c10d619b9)
-+ [Return Values](#w3ab2c21c10d619c11)
-+ [Example](#w3ab2c21c10d619c13)
-+ [See Also](#w3ab2c21c10d619c15)
++ [Members](#w4ab1c21c10d638b9)
++ [Return Values](#w4ab1c21c10d638c11)
++ [Example](#w4ab1c21c10d638c13)
++ [See Also](#w4ab1c21c10d638c15)
 
 ## Syntax<a name="aws-resource-elasticbeanstalk-applicationversion-syntax"></a>
 
@@ -37,7 +37,7 @@ Properties:
     SourceBundle
 ```
 
-## Members<a name="w3ab2c21c10d619b9"></a>
+## Members<a name="w4ab1c21c10d638b9"></a>
 
 `ApplicationName`  <a name="cfn-elasticbeanstalk-applicationversion-applicationname"></a>
 Name of the Elastic Beanstalk application that is associated with this application version\.  
@@ -57,15 +57,15 @@ The location of the source bundle for this version\.
 *Type*: [Source Bundle](aws-properties-beanstalk-sourcebundle.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w3ab2c21c10d619c11"></a>
+## Return Values<a name="w4ab1c21c10d638c11"></a>
 
-### Ref<a name="w3ab2c21c10d619c11b2"></a>
+### Ref<a name="w4ab1c21c10d638c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10d619c13"></a>
+## Example<a name="w4ab1c21c10d638c13"></a>
 
 ### JSON<a name="aws-resource-elasticbeanstalk-applicationversion-example.json"></a>
 
@@ -78,7 +78,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
     "SourceBundle" : {
       "S3Bucket" : { "Fn::Join" :
         ["-", [ "elasticbeanstalk-samples", { "Ref" : "AWS::Region" } ] ] },
-      "S3Key" : "php-sample.zip"
+      "S3Key" : "php-newsample-app.zip"
     } 
   }
 }
@@ -88,7 +88,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ```
 myAppVersion: 
-  Type: "AWS::ElasticBeanstalk::ApplicationVersion"
+  Type: AWS::ElasticBeanstalk::ApplicationVersion
   Properties: 
     ApplicationName: 
       Ref: "myApp"
@@ -100,8 +100,8 @@ myAppVersion:
           - 
             - "elasticbeanstalk-samples"
             - Ref: "AWS::Region"
-      S3Key: "php-sample.zip"
+      S3Key: "php-newsample-app.zip"
 ```
 
-## See Also<a name="w3ab2c21c10d619c15"></a>
+## See Also<a name="w4ab1c21c10d638c15"></a>
 + For a complete Elastic Beanstalk sample template, see [Elastic Beanstalk Template Snippets](quickref-elasticbeanstalk.md)\.

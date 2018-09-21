@@ -2,7 +2,7 @@
 
 Pseudo parameters are parameters that are predefined by AWS CloudFormation\. You do not declare them in your template\. Use them the same way as you would a parameter, as the argument for the `Ref` function\.
 
-## Example<a name="w3ab2c21c33b5"></a>
+## Example<a name="w4ab1c21c33b5"></a>
 
 The following snippet assigns the value of the `AWS::Region` pseudo parameter to an output value:
 
@@ -129,7 +129,7 @@ MyDB:
 
 ## AWS::Partition<a name="cfn-pseudo-param-partition"></a>
 
-Returns the partition that the resource is in\. For standard AWS regions, the partition is `aws`\. For resources in other partitions, the partition is `aws-`*partitionname*\. For example, the partition for resources in the China \(Beijing and Ningxia\) region is `aws-cn`\, for GovCloud US region is 'aws-us-gov'\.
+Returns the partition that the resource is in\. For standard AWS regions, the partition is `aws`\. For resources in other partitions, the partition is `aws-`*partitionname*\. For example, the partition for resources in the China \(Beijing and Ningxia\) region is `aws-cn` and the partition for resources in the AWS GovCloud \(US\) region is `aws-us-gov`\.
 
 ## AWS::Region<a name="cfn-pseudo-param-region"></a>
 

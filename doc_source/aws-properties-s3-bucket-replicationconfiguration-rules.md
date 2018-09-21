@@ -2,7 +2,7 @@
 
 The `ReplicationRule` property type specifies which Amazon Simple Storage Service \(Amazon S3\) objects to replicate and where to store them\. The `Rules` subproperty of the [Amazon S3 Bucket ReplicationConfiguration](aws-properties-s3-bucket-replicationconfiguration.md) property contains a list of `ReplicationRule` property types\.
 
-## Syntax<a name="w3ab2c21c14e1758b5"></a>
+## Syntax<a name="w4ab1c21c14e1865b5"></a>
 
 ### JSON<a name="aws-properties-s3-bucket-replicationconfiguration-rules-syntax.json"></a>
 
@@ -27,7 +27,7 @@ The `ReplicationRule` property type specifies which Amazon Simple Storage Servic
 [Status](#cfn-s3-bucket-replicationconfiguration-rules-status): String
 ```
 
-## Properties<a name="w3ab2c21c14e1758b7"></a>
+## Properties<a name="w4ab1c21c14e1865b7"></a>
 
 `Destination`  <a name="cfn-s3-bucket-replicationconfiguration-rules-destination"></a>
 Defines the destination where Amazon S3 stores replicated objects\.  
@@ -51,6 +51,6 @@ Currently, Amazon S3 supports only the filter that you can specify for objects c
 *Type*: [Amazon S3 Bucket SourceSelectionCriteria](aws-properties-s3-bucket-sourceselectioncriteria.md)
 
 `Status`  <a name="cfn-s3-bucket-replicationconfiguration-rules-status"></a>
-Whether the rule is enabled\. For valid values, see the `Status` element of the [PUT Bucket replication](http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html) action in the *Amazon Simple Storage Service API Reference*\.  
+Whether the rule is enabled\. For valid values, see the `Status` element of the [PUT Bucket replication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html) action in the *Amazon Simple Storage Service API Reference*\.  
 *Required*: Yes  
 *Type*: String

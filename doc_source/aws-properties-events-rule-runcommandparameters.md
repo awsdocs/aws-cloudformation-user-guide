@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-events-rule-runcommandparameters-properties"></a>
 
-For more information, including constraints and valid values, see [RunCommandParameters](http://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_RunCommandParameters.html) in the *Amazon CloudWatch Events API Reference*\.
+For more information, including constraints and valid values, see [RunCommandParameters](https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_RunCommandParameters.html) in the *Amazon CloudWatch Events API Reference*\.
 
 `RunCommandTargets`  <a name="cfn-events-rule-runcommandparameters-runcommandtargets"></a>
 The criteria \(either InstanceIds or a tag\) that specifies which EC2 instances the command is sent to\.  

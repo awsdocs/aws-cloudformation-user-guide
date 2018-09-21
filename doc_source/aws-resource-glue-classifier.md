@@ -1,6 +1,6 @@
 # AWS::Glue::Classifier<a name="aws-resource-glue-classifier"></a>
 
-The `AWS::Glue::Classifier` resource creates an AWS Glue classifier that categorizes data sources and specifies schemas\. For more information, see [Adding Classifiers to a Crawler](http://docs.aws.amazon.com/glue/latest/dg/add-classifier.html) and [Classifier Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-classifiers.html#aws-glue-api-crawler-classifiers-Classifier) in the *AWS Glue Developer Guide*\. 
+The `AWS::Glue::Classifier` resource creates an AWS Glue classifier that categorizes data sources and specifies schemas\. For more information, see [Adding Classifiers to a Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-classifier.html) and [Classifier Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-classifiers.html#aws-glue-api-crawler-classifiers-Classifier) in the *AWS Glue Developer Guide*\. 
 
 **Topics**
 + [Syntax](#aws-resource-glue-classifier-syntax)
@@ -18,6 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Glue::Classifier",
   "Properties" : {
     "[GrokClassifier](#cfn-glue-classifier-grokclassifier)" : [*GrokClassifier*](aws-properties-glue-classifier-grokclassifier.md)
+    "[JsonClassifier](#cfn-glue-classifier-jsonclassifier)" : [*JsonClassifier*](aws-properties-glue-classifier-jsonclassifier.md)
+    "[XMLClassifier](#cfn-glue-classifier-xmlclassifier)" : [*XMLClassifier*](aws-properties-glue-classifier-xmlclassifier.md)
   }
 }
 ```
@@ -25,10 +27,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-glue-classifier-syntax.yaml"></a>
 
 ```
-Type: "AWS::Glue::Classifier"
+Type: AWS::Glue::Classifier
 Properties:
   [GrokClassifier](#cfn-glue-classifier-grokclassifier): 
     [*GrokClassifier*](aws-properties-glue-classifier-grokclassifier.md)
+  [JsonClassifier](#cfn-glue-classifier-jsonclassifier): 
+    [*JsonClassifier*](aws-properties-glue-classifier-jsonclassifier.md)
+  [XMLClassifier](#cfn-glue-classifier-xmlclassifier): 
+    [*XMLClassifier*](aws-properties-glue-classifier-xmlclassifier.md)
 ```
 
 ## Properties<a name="aws-resource-glue-classifier-properties"></a>
@@ -39,9 +45,21 @@ A classifier that uses `grok`\.
  *Type*: [AWS Glue Classifier GrokClassifier](aws-properties-glue-classifier-grokclassifier.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
+`JsonClassifier`  <a name="cfn-glue-classifier-jsonclassifier"></a>
+A classifier for JSON content\.  
+ *Required*: No  
+ *Type*: [AWS Glue Classifier JsonClassifier](aws-properties-glue-classifier-jsonclassifier.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+
+`XMLClassifier`  <a name="cfn-glue-classifier-xmlclassifier"></a>
+A classifier for XML content\.  
+ *Required*: No  
+ *Type*: [AWS Glue Classifier XMLClassifier](aws-properties-glue-classifier-xmlclassifier.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+
 ## Return Values<a name="aws-resource-glue-classifier-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d698c10b3"></a>
+### Ref<a name="w4ab1c21c10d716c10b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 

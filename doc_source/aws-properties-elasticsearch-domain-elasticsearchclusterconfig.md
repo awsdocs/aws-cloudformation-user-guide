@@ -2,7 +2,7 @@
 
 `ElasticsearchClusterConfig` is a property of the [AWS::Elasticsearch::Domain](aws-resource-elasticsearch-domain.md) resource that configures the cluster of an Amazon Elasticsearch Service \(Amazon ES\) domain\.
 
-## Syntax<a name="w3ab2c21c14e1044b5"></a>
+## Syntax<a name="w4ab1c21c14e1136b5"></a>
 
 ### JSON<a name="aws-properties-elasticsearch-domain-elasticsearchclusterconfig-syntax.json"></a>
 
@@ -28,7 +28,7 @@
 [ZoneAwarenessEnabled](#cfn-elasticsearch-domain-elasticseachclusterconfig-zoneawarenessenabled): Boolean
 ```
 
-## Properties<a name="w3ab2c21c14e1044b7"></a>
+## Properties<a name="w4ab1c21c14e1136b7"></a>
 
 `DedicatedMasterCount`  <a name="cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastercount"></a>
 The number of instances to use for the master node\.  
@@ -42,7 +42,7 @@ Indicates whether to use a dedicated master node for the Amazon ES domain\. A de
 *Type*: Boolean
 
 `DedicatedMasterType`  <a name="cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastertype"></a>
-The hardware configuration of the computer that hosts the dedicated master node, such as `m3.medium.elasticsearch`\. For valid values, see [Configuring Amazon ES Domains](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains-configure-cluster-cli) in the *Amazon Elasticsearch Service Developer Guide*\.  
+The hardware configuration of the computer that hosts the dedicated master node, such as `m3.medium.elasticsearch`\. For valid values, see [Configuring Amazon ES Domains](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains-configure-cluster-cli) in the *Amazon Elasticsearch Service Developer Guide*\.  
 If you specify this property, you must specify `true` for the `DedicatedMasterEnabled` property  
 *Required*: No  
 *Type*: String
@@ -53,11 +53,11 @@ The number of data nodes \(instances\) to use in the Amazon ES domain\.
 *Type*: Integer
 
 `InstanceType`  <a name="cfn-elasticsearch-domain-elasticseachclusterconfig-instancetype"></a>
-The instance type for your data nodes, such as `m3.medium.elasticsearch`\. For valid values, see [Configuring Amazon ES Domains](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains-configure-cluster-cli) in the *Amazon Elasticsearch Service Developer Guide*\.  
+The instance type for your data nodes, such as `m3.medium.elasticsearch`\. For valid values, see [Configuring Amazon ES Domains](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains-configure-cluster-cli) in the *Amazon Elasticsearch Service Developer Guide*\.  
 *Required*: No  
 *Type*: String
 
 `ZoneAwarenessEnabled`  <a name="cfn-elasticsearch-domain-elasticseachclusterconfig-zoneawarenessenabled"></a>
-Indicates whether to enable zone awareness for the Amazon ES domain\. When you enable zone awareness, Amazon ES allocates the nodes and replica index shards that belong to a cluster across two Availability Zones \(AZs\) in the same region to prevent data loss and minimize downtime in the event of node or data center failure\. Don't enable zone awareness if your cluster has no replica index shards or is a single\-node cluster\. For more information, see [Enabling Zone Awareness](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-managedomains.html#es-managedomains-zoneawareness) in the *Amazon Elasticsearch Service Developer Guide*\.  
+Indicates whether to enable zone awareness for the Amazon ES domain\. When you enable zone awareness, Amazon ES allocates the nodes and replica index shards that belong to a cluster across two Availability Zones \(AZs\) in the same region to prevent data loss and minimize downtime in the event of node or data center failure\. Don't enable zone awareness if your cluster has no replica index shards or is a single\-node cluster\. For more information, see [Enabling Zone Awareness](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-managedomains.html#es-managedomains-zoneawareness) in the *Amazon Elasticsearch Service Developer Guide*\.  
 *Required*: No  
 *Type*: Boolean

@@ -40,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig-properties"></a>
 
-For more information and valid property values, see [CreateStreamingDistribution](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateStreamingDistribution.html) in the *Amazon CloudFront API Reference*\.
+For more information and valid property values, see [CreateStreamingDistribution](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateStreamingDistribution.html) in the *Amazon CloudFront API Reference*\.
 
 `Aliases`  <a name="cfn-cloudfront-streamingdistribution-streamingdistributionconfig-aliases"></a>
 Lists the CNAMEs \(alternate domain names\), if any, for this streaming distribution\.  
@@ -80,10 +80,10 @@ Information about the Amazon S3 bucket from which you want CloudFront to get you
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `TrustedSigners`  <a name="cfn-cloudfront-streamingdistribution-streamingdistributionconfig-trustedsigners"></a>
-Specifies any AWS accounts that you want to permit to create signed URLs for private content\. If you want the distribution to use signed URLs, include this element; if you want the distribution to use public URLs, remove this property\. For more information, see [Serving Private Content through CloudFront](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the *Amazon CloudFront Developer Guide*\.  
+Specifies any AWS accounts that you want to permit to create signed URLs for private content\. If you want the distribution to use signed URLs, include this element; if you want the distribution to use public URLs, remove this property\. For more information, see [Serving Private Content through CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the *Amazon CloudFront Developer Guide*\.  
  *Required*: Yes  
  *Type*: [CloudFront StreamingDistribution TrustedSigners](aws-properties-cloudfront-streamingdistribution-trustedsigners.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig-seealso"></a>
-+ [CreateStreamingDistribution](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateStreamingDistribution.html)
++ [CreateStreamingDistribution](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateStreamingDistribution.html)

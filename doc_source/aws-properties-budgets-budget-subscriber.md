@@ -39,4 +39,4 @@ The address that AWS sends budget notifications to, either an SNS topic or an em
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## See Also<a name="aws-properties-budgets-budget-subscriber-seealso"></a>
-+ [Subscriber](http://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_Subscriber.html) in the [AWS Billing and Cost Management API Reference](http://docs.aws.amazon.com/aws-cost-management/latest/APIReference/Welcome.html)\. 
++ [Subscriber](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_Subscriber.html) in the [AWS Billing and Cost Management API Reference](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/Welcome.html)\. 

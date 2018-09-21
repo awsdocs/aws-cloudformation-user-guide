@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-inspector-assessmenttemplate-syntax.yaml"></a>
 
 ```
-Type: "AWS::Inspector::AssessmentTemplate"
+Type: AWS::Inspector::AssessmentTemplate
 Properties:
   [AssessmentTargetArn](#cfn-inspector-assessmenttemplate-assessmenttargetarn): String
   [DurationInSeconds](#cfn-inspector-assessmenttemplate-durationinseconds): Integer
@@ -94,19 +94,21 @@ The following example shows how to declare an AWS::Inspector::AssessmentTemplate
 
 ```
 "myassessmenttemplate": {
-  "Type": "AWS::Inspector::AssessmentTemplate",
-  "Properties": {
-      "AssessmentTargetArn" : "arn:aws:inspector:us-west-2:123456789012:target/0-nvgVhaxX",
-      "DurationInSeconds" : 180,
-	    "AssessmentTemplateName" : "MyAssessmentTemplate",
-	    "RulesPackageArns" : [ "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-11B9DBXp" ],
-	    "UserAttributesForFindings" : [ 
-	       {
-            "key": "Example",
-            "value": "example"
-         }
-	]
- }
+    "Type": "AWS::Inspector::AssessmentTemplate",
+    "Properties": {
+        "AssessmentTargetArn": "arn:aws:inspector:us-west-2:123456789012:target/0-nvgVhaxX",
+        "DurationInSeconds": 180,
+        "AssessmentTemplateName": "MyAssessmentTemplate",
+        "RulesPackageArns": [
+            "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-11B9DBXp"
+        ],
+        "UserAttributesForFindings": [
+            {
+                "Key": "Example",
+                "Value": "example"
+            }
+        ]
+    }
 }
 ```
 
@@ -114,7 +116,7 @@ The following example shows how to declare an AWS::Inspector::AssessmentTemplate
 
 ```
 myassessmenttemplate: 
-  Type: "AWS::Inspector::AssessmentTemplate"
+  Type: AWS::Inspector::AssessmentTemplate
   Properties: 
     AssessmentTargetArn: "arn:aws:inspector:us-west-2:123456789012:target/0-nvgVhaxX"
     AssessmentTemplateName: MyAssessmentTemplate

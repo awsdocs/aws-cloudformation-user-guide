@@ -3,24 +3,24 @@
 AWS CloudFormation supports the following AWS services and features through the listed resources\.
 
 **Topics**
-+ [Analytics](#w3ab2c27c11b7)
-+ [Application Services](#w3ab2c27c11b9)
-+ [Compute](#w3ab2c27c11c11)
-+ [Customer Engagement](#w3ab2c27c11c13)
-+ [Database](#w3ab2c27c11c15)
-+ [Developer Tools](#w3ab2c27c11c17)
-+ [Enterprise Applications](#w3ab2c27c11c19)
-+ [Game Development](#w3ab2c27c11c21)
-+ [Internet of Things](#w3ab2c27c11c23)
-+ [Machine Learning](#w3ab2c27c11c25)
-+ [Management Tools](#w3ab2c27c11c27)
-+ [Mobile Services](#w3ab2c27c11c29)
-+ [Networking](#w3ab2c27c11c31)
-+ [Security and Identity](#w3ab2c27c11c33)
-+ [Storage and Content Delivery](#w3ab2c27c11c35)
-+ [Additional Software and Services](#w3ab2c27c11c37)
++ [Analytics](#cfn-supported-resources-analytics)
++ [Application Services](#cfn-supported-resources-application-services)
++ [Compute](#cfn-supported-resources-compute)
++ [Customer Engagement](#cfn-supported-resources-customer-engagement)
++ [Database](#cfn-supported-resources-database)
++ [Developer Tools](#cfn-supported-resources-developer-tools)
++ [Enterprise Applications](#cfn-supported-resources-enterprise-applications)
++ [Game Development](#cfn-supported-resources-game-development)
++ [Internet of Things](#cfn-supported-resources-internet-of-things)
++ [Machine Learning](#cfn-supported-resources-machine-learning)
++ [Management Tools](#w4ab1c27c15c27)
++ [Mobile Services](#cfn-supported-resources-mobile-services)
++ [Networking](#cfn-supported-resources-networking)
++ [Security and Identity](#cfn-supported-resources-security-and-identity)
++ [Storage and Content Delivery](#cfn-supported-resources-storage-and-content-delivery)
++ [Additional Software and Services](#w4ab1c27c15c37)
 
-## Analytics<a name="w3ab2c27c11b7"></a>
+## Analytics<a name="cfn-supported-resources-analytics"></a>
 
 **Amazon Athena** \(Added in September 2017\)  
 [AWS::Athena::NamedQuery](aws-resource-athena-namedquery.md)
@@ -56,7 +56,11 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::KinesisAnalytics::ApplicationOutput](aws-resource-kinesisanalytics-applicationoutput.md)  
 [AWS::KinesisAnalytics::ApplicationReferenceDataSource](aws-resource-kinesisanalytics-applicationreferencedatasource.md)
 
-## Application Services<a name="w3ab2c27c11b9"></a>
+## Application Services<a name="cfn-supported-resources-application-services"></a>
+
+**Amazon MQ ** \(Added in June 2018\)  
+[AWS::AmazonMQ::Broker](aws-resource-amazonmq-broker.md)  
+[AWS::AmazonMQ::Configuration](aws-resource-amazonmq-configuration.md)
 
 **Amazon API Gateway \(API Gateway\)** \(Updated in February 2018\)  
 [AWS::ApiGateway::Account](aws-resource-apigateway-account.md)  
@@ -87,7 +91,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::StepFunctions::Activity](aws-resource-stepfunctions-activity.md)  
 [AWS::StepFunctions::StateMachine](aws-resource-stepfunctions-statemachine.md)
 
-## Compute<a name="w3ab2c27c11c11"></a>
+## Compute<a name="cfn-supported-resources-compute"></a>
 
 **Application Auto Scaling** \(Added in July 2017\)  
 [AWS::ApplicationAutoScaling::ScalableTarget](aws-resource-applicationautoscaling-scalabletarget.md)  
@@ -100,13 +104,14 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::AutoScaling::ScalingPolicy](aws-properties-as-policy.md)  
 [AWS::AutoScaling::ScheduledAction](aws-resource-as-scheduledaction.md)
 
-**Amazon Elastic Compute Cloud \(Amazon EC2\)** \(Updated in March 2018\)  
+**Amazon Elastic Compute Cloud \(Amazon EC2\)** \(Updated September 2018\)  
 [AWS::EC2::Host](aws-resource-ec2-host.md)  
 [AWS::EC2::Instance](aws-properties-ec2-instance.md)  
 [AWS::EC2::LaunchTemplate](aws-resource-ec2-launchtemplate.md)  
 [AWS::EC2::PlacementGroup](aws-resource-ec2-placementgroup.md)  
 [AWS::EC2::SpotFleet](aws-resource-ec2-spotfleet.md)  
-[AWS::EC2::VPCPeeringConnection](aws-resource-ec2-vpcpeeringconnection.md)
+[AWS::EC2::VPCPeeringConnection](aws-resource-ec2-vpcpeeringconnection.md)  
+[AWS::EC2::VPCEndpointServicePermissions](aws-resource-ec2-vpcendpointservicepermissions.md)
 
 **Amazon Elastic Container Registry \(Amazon ECR\)** \(Added in February 2016\)  
 [AWS::ECR::Repository](aws-resource-ecr-repository.md)
@@ -148,14 +153,14 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::ElasticLoadBalancingV2::LoadBalancer](aws-resource-elasticloadbalancingv2-loadbalancer.md)  
 [AWS::ElasticLoadBalancingV2::TargetGroup](aws-resource-elasticloadbalancingv2-targetgroup.md)
 
-**AWS Lambda \(Lambda\)** \(Updated in April 2017\)  
+**AWS Lambda \(Lambda\)** \(Updated in November 2017\)  
 [AWS::Lambda::Alias](aws-resource-lambda-alias.md)  
 [AWS::Lambda::EventSourceMapping](aws-resource-lambda-eventsourcemapping.md)  
 [AWS::Lambda::Function](aws-resource-lambda-function.md)  
 [AWS::Lambda::Permission](aws-resource-lambda-permission.md)  
 [AWS::Lambda::Version](aws-resource-lambda-version.md)
 
-## Customer Engagement<a name="w3ab2c27c11c13"></a>
+## Customer Engagement<a name="cfn-supported-resources-customer-engagement"></a>
 
 **Amazon Simple Email Service \(Amazon SES\)** \(Added in March 2018\)  
 [AWS::SES::ConfigurationSet](aws-resource-ses-configurationset.md)  
@@ -165,7 +170,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::SES::ReceiptRuleSet](aws-resource-ses-receiptruleset.md)  
 [AWS::SES::Template](aws-resource-ses-template.md)
 
-## Database<a name="w3ab2c27c11c15"></a>
+## Database<a name="cfn-supported-resources-database"></a>
 
 **Amazon DynamoDB \(DynamoDB\)** \(Updated in August 2017\)  
 [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md)
@@ -181,7 +186,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::ElastiCache::ReplicationGroup](aws-resource-elasticache-replicationgroup.md)  
 [AWS::ElastiCache::SecurityGroup](aws-properties-elasticache-security-group.md)  
 [AWS::ElastiCache::SecurityGroupIngress](aws-properties-elasticache-security-group-ingress.md)  
-[AWS::ElastiCache::SubnetGroup ](aws-properties-elasticache-subnetgroup.md)
+[AWS::ElastiCache::SubnetGroup](aws-properties-elasticache-subnetgroup.md)
 
 **Amazon Neptune \(Neptune\)** \(Added in May 2018\)  
 [AWS::Neptune::DBCluster](aws-resource-neptune-dbcluster.md)  
@@ -219,7 +224,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::DMS::ReplicationSubnetGroup](aws-resource-dms-replicationsubnet-group.md)  
 [AWS::DMS::ReplicationTask](aws-resource-dms-replicationtask.md)
 
-## Developer Tools<a name="w3ab2c27c11c17"></a>
+## Developer Tools<a name="cfn-supported-resources-developer-tools"></a>
 
 **AWS Cloud9** \(Added in November 2017\)  
 [AWS::Cloud9::EnvironmentEC2](aws-resource-cloud9-environmentec2.md)
@@ -235,33 +240,37 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::CodeDeploy::DeploymentConfig](aws-resource-codedeploy-deploymentconfig.md)  
 [AWS::CodeDeploy::DeploymentGroup](aws-resource-codedeploy-deploymentgroup.md)
 
-**AWS CodePipeline** \(Added in December 2015\)  
+**AWS CodePipeline** \(Updated in May 2018\)  
 [AWS::CodePipeline::CustomActionType](aws-resource-codepipeline-customactiontype.md)  
-[AWS::CodePipeline::Pipeline](aws-resource-codepipeline-pipeline.md)
+[AWS::CodePipeline::Pipeline](aws-resource-codepipeline-pipeline.md)  
+[AWS::CodePipeline::Webhook](aws-resource-codepipeline-webhook.md)
 
-## Enterprise Applications<a name="w3ab2c27c11c19"></a>
+## Enterprise Applications<a name="cfn-supported-resources-enterprise-applications"></a>
 
 **Amazon WorkSpaces** \(Updated in December 2015\)  
 [AWS::WorkSpaces::Workspace](aws-resource-workspaces-workspace.md)
 
-## Game Development<a name="w3ab2c27c11c21"></a>
+## Game Development<a name="cfn-supported-resources-game-development"></a>
 
 **Amazon GameLift \(GameLift\)** \(Updated in April 2016\)  
 [AWS::GameLift::Alias](aws-resource-gamelift-alias.md)  
 [AWS::GameLift::Build](aws-resource-gamelift-build.md)  
 [AWS::GameLift::Fleet](aws-resource-gamelift-fleet.md)
 
-## Internet of Things<a name="w3ab2c27c11c23"></a>
+## Internet of Things<a name="cfn-supported-resources-internet-of-things"></a>
 
-**AWS IoT** \(Updated in August 2017\)  
+**AWS IoT** \(Updated in Septmeber 2018\)  
 [AWS::IoT::Certificate](aws-resource-iot-certificate.md)  
 [AWS::IoT::Policy](aws-resource-iot-policy.md)  
 [AWS::IoT::PolicyPrincipalAttachment](aws-resource-iot-policyprincipalattachment.md)  
 [AWS::IoT::Thing](aws-resource-iot-thing.md)  
 [AWS::IoT::ThingPrincipalAttachment](aws-resource-iot-thingprincipalattachment.md)  
-[AWS::IoT::TopicRule](aws-resource-iot-topicrule.md)
+[AWS::IoT::TopicRule](aws-resource-iot-topicrule.md)  
+[AWS::IoT1Click::Device](aws-resource-iot1click-device.md)  
+[AWS::IoT1Click::Placement](aws-resource-iot1click-placement.md)  
+[AWS::IoT1Click::Project](aws-resource-iot1click-project.md)
 
-## Machine Learning<a name="w3ab2c27c11c25"></a>
+## Machine Learning<a name="cfn-supported-resources-machine-learning"></a>
 
 **Amazon SageMaker ** \(Added in May 2018\)  
 [AWS::SageMaker::Endpoint](aws-resource-sagemaker-endpoint.md)  
@@ -270,15 +279,16 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::SageMaker::NotebookInstance](aws-resource-sagemaker-notebookinstance.md)  
 [AWS::SageMaker::NotebookInstanceLifecycleConfig](aws-resource-sagemaker-notebookinstancelifecycleconfig.md)
 
-## Management Tools<a name="w3ab2c27c11c27"></a>
+## Management Tools<a name="w4ab1c27c15c27"></a>
 
 **AWS Auto Scaling ** \(Added in May 2018\)  
 [AWS::AutoScalingPlans::ScalingPlan](aws-resource-autoscalingplans-scalingplan.md)
 
-**AWS CloudFormation \(AWS CloudFormation\)** \(Updated in April 2015\)  
+**AWS CloudFormation \(AWS CloudFormation\)** \(Updated in June 2018\)  
 [AWS::CloudFormation::Authentication](aws-resource-authentication.md)  
 [AWS::CloudFormation::CustomResource](aws-resource-cfn-customresource.md)  
 [AWS::CloudFormation::Init](aws-resource-init.md)  
+[AWS::CloudFormation::Macro](aws-resource-cloudformation-macro.md)  
 [AWS::CloudFormation::Stack](aws-properties-stack.md)  
 [AWS::CloudFormation::WaitCondition](aws-properties-waitcondition.md)  
 [AWS::CloudFormation::WaitConditionHandle](aws-properties-waitconditionhandle.md)
@@ -336,7 +346,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::SSM::PatchBaseline](aws-resource-ssm-patchbaseline.md)  
 [AWS::SSM::ResourceDataSync](aws-resource-ssm-resourcedatasync.md)
 
-## Mobile Services<a name="w3ab2c27c11c29"></a>
+## Mobile Services<a name="cfn-supported-resources-mobile-services"></a>
 
 **AWS AppSync** \(Added in April 2018\)  
 [AWS::AppSync::ApiKey](aws-resource-appsync-apikey.md)  
@@ -359,7 +369,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::SNS::Topic](aws-properties-sns-topic.md)  
 [AWS::SNS::TopicPolicy](aws-properties-sns-policy.md)
 
-## Networking<a name="w3ab2c27c11c31"></a>
+## Networking<a name="cfn-supported-resources-networking"></a>
 
 **Amazon Route 53** \(Updated in March 2017\)  
 [AWS::Route53::HealthCheck](aws-resource-route53-healthcheck.md)  
@@ -407,7 +417,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::EC2::VPNGateway](aws-resource-ec2-vpn-gateway.md)  
 [AWS::EC2::VPNGatewayRoutePropagation](aws-resource-ec2-vpn-gatewayrouteprop.md)
 
-## Security and Identity<a name="w3ab2c27c11c33"></a>
+## Security and Identity<a name="cfn-supported-resources-security-and-identity"></a>
 
 **AWS Certificate Manager \(ACM\)** \(Added in August 2016\)  
 [AWS::CertificateManager::Certificate](aws-resource-certificatemanager-certificate.md)
@@ -460,7 +470,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::WAFRegional::WebACLAssociation](aws-resource-wafregional-webaclassociation.md)  
 [AWS::WAFRegional::XssMatchSet](aws-resource-wafregional-xssmatchset.md)
 
-## Storage and Content Delivery<a name="w3ab2c27c11c35"></a>
+## Storage and Content Delivery<a name="cfn-supported-resources-storage-and-content-delivery"></a>
 
 **Amazon CloudFront \(CloudFront\)** \(Updated in November 2017\)  
 [AWS::CloudFront::CloudFrontOriginAccessIdentity](aws-resource-cloudfront-cloudfrontoriginaccessidentity.md)  
@@ -479,7 +489,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::S3::Bucket](aws-properties-s3-bucket.md)  
 [AWS::S3::BucketPolicy](aws-properties-s3-policy.md)
 
-## Additional Software and Services<a name="w3ab2c27c11c37"></a>
+## Additional Software and Services<a name="w4ab1c27c15c37"></a>
 
 **AWS Billing and Cost Management \(Billing and Cost Management\)** \(Added in May 2018\)  
 [AWS::Budgets::Budget](aws-resource-budgets-budget.md)

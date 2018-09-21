@@ -24,10 +24,10 @@ Amazon EBS does not support modifying a Magnetic volume\. For more information, 
 
 **Topics**
 + [Syntax](#aws-resource-ec2-volume-syntax)
-+ [Properties](#w3ab2c21c10d502c25)
-+ [Return Values](#w3ab2c21c10d502c27)
-+ [Examples](#w3ab2c21c10d502c29)
-+ [More Info](#w3ab2c21c10d502c31)
++ [Properties](#w4ab1c21c10d513c25)
++ [Return Values](#w4ab1c21c10d513c27)
++ [Examples](#w4ab1c21c10d513c29)
++ [More Info](#w4ab1c21c10d513c31)
 
 ## Syntax<a name="aws-resource-ec2-volume-syntax"></a>
 
@@ -55,7 +55,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-volume-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::Volume"
+Type: AWS::EC2::Volume
 Properties:
   [AutoEnableIO](#cfn-ec2-ebs-volume-autoenableio): Boolean
   [AvailabilityZone](#cfn-ec2-ebs-volume-availabilityzone): String
@@ -69,10 +69,10 @@ Properties:
   [VolumeType](#cfn-ec2-ebs-volume-volumetype): String
 ```
 
-## Properties<a name="w3ab2c21c10d502c25"></a>
+## Properties<a name="w4ab1c21c10d513c25"></a>
 
 `AutoEnableIO`  <a name="cfn-ec2-ebs-volume-autoenableio"></a>
-Indicates whether the volume is auto\-enabled for I/O operations\. By default, Amazon EBS disables I/O to the volume from attached EC2 instances when it determines that a volume's data is potentially inconsistent\. If the consistency of the volume is not a concern, and you prefer that the volume be made available immediately if it's impaired, you can configure the volume to automatically enable I/O\. For more information, see [Working with the AutoEnableIO Volume Attribute](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volume-status.html#volumeIO) in the *Amazon EC2 User Guide for Linux Instances*\.  
+Indicates whether the volume is auto\-enabled for I/O operations\. By default, Amazon EBS disables I/O to the volume from attached EC2 instances when it determines that a volume's data is potentially inconsistent\. If the consistency of the volume is not a concern, and you prefer that the volume be made available immediately if it's impaired, you can configure the volume to automatically enable I/O\. For more information, see [Working with the AutoEnableIO Volume Attribute](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volume-status.html#volumeIO) in the *Amazon EC2 User Guide for Linux Instances*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -84,13 +84,13 @@ The Availability Zone in which to create the new volume\.
 *Update requires*: Updates are not supported\.
 
 `Encrypted`  <a name="cfn-ec2-ebs-volume-encrypted"></a>
-Indicates whether the volume is encrypted\. You can attach encrypted Amazon EBS volumes only to instance types that support Amazon EBS encryption\. Volumes that are created from encrypted snapshots are automatically encrypted\. You can't create an encrypted volume from an unencrypted snapshot, or vice versa\. If your AMI uses encrypted volumes, you can launch the AMI only on supported instance types\. For more information, see [Amazon EBS encryption](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+Indicates whether the volume is encrypted\. You can attach encrypted Amazon EBS volumes only to instance types that support Amazon EBS encryption\. Volumes that are created from encrypted snapshots are automatically encrypted\. You can't create an encrypted volume from an unencrypted snapshot, or vice versa\. If your AMI uses encrypted volumes, you can launch the AMI only on supported instance types\. For more information, see [Amazon EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
 *Required*: Conditional\. If you specify the `KmsKeyId` property, you must enable encryption\.  
 *Type*: Boolean  
 *Update requires*: Updates are not supported\.
 
 `Iops`  <a name="cfn-ec2-ebs-volume-iops"></a>
-The number of I/O operations per second \(IOPS\) that the volume supports\. For more information about the valid sizes for each volume type, see the `Iops` parameter for the [http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVolume.html](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVolume.html) action in the *Amazon EC2 API Reference*\.  
+The number of I/O operations per second \(IOPS\) that the volume supports\. For more information about the valid sizes for each volume type, see the `Iops` parameter for the [https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVolume.html](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVolume.html) action in the *Amazon EC2 API Reference*\.  
 *Required*: Conditional\. *Required* when the volume type is `io1`; not used with other volume types\.  
 *Type*: Number  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -102,7 +102,7 @@ The Amazon Resource Name \(ARN\) of the AWS Key Management Service master key th
 *Update requires*: Updates are not supported\.
 
 `Size`  <a name="cfn-ec2-ebs-volume-size"></a>
-The size of the volume, in gibibytes \(GiBs\)\. For more information about the valid sizes for each volume type, see the `Size` parameter for the [http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVolume.html](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVolume.html) action in the *Amazon EC2 API Reference*\.  
+The size of the volume, in gibibytes \(GiBs\)\. For more information about the valid sizes for each volume type, see the `Size` parameter for the [https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVolume.html](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVolume.html) action in the *Amazon EC2 API Reference*\.  
 If you specify the `SnapshotId` property, specify a size that is equal to or greater than the size of the snapshot\. If you don't specify a size, EC2 uses the size of the snapshot as the volume size\.  
 *Required*: Conditional\. If you don't specify a value for the `SnapshotId` property, you must specify this property\.  
 *Type*: Integer  
@@ -121,20 +121,20 @@ An arbitrary set of tags \(key–value pairs\) for this volume\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `VolumeType`  <a name="cfn-ec2-ebs-volume-volumetype"></a>
-The volume type\. If you set the type to `io1`, you must also set the `Iops` property\. For valid values, see the `VolumeType` parameter for the [CreateVolume](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVolume.html) action in the *Amazon EC2 API Reference*\.  
+The volume type\. If you set the type to `io1`, you must also set the `Iops` property\. For valid values, see the `VolumeType` parameter for the [CreateVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVolume.html) action in the *Amazon EC2 API Reference*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10d502c27"></a>
+## Return Values<a name="w4ab1c21c10d513c27"></a>
 
-### Ref<a name="w3ab2c21c10d502c27b2"></a>
+### Ref<a name="w4ab1c21c10d513c27b2"></a>
 
 When you specify an `AWS::EC2::Volume` type as an argument to the `Ref` function, AWS CloudFormation returns the volume's physical ID\. For example: `vol-5cb85026`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w3ab2c21c10d502c29"></a>
+## Examples<a name="w4ab1c21c10d513c29"></a>
 
 **Example Encrypted Amazon EBS Volume with DeletionPolicy to Make a Snapshot on Delete**  
 
@@ -168,6 +168,6 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 }
 ```
 
-## More Info<a name="w3ab2c21c10d502c31"></a>
+## More Info<a name="w4ab1c21c10d513c31"></a>
 + [CreateVolume](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVolume.html) in the *Amazon Elastic Compute Cloud API Reference*
 + [DeletionPolicy Attribute](aws-attribute-deletionpolicy.md)

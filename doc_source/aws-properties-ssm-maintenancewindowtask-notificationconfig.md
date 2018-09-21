@@ -44,7 +44,7 @@ The notification type\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `NotificationEvents`  <a name="cfn-ssm-maintenancewindowtask-notificationconfig-notificationevents"></a>
-The different events that you can receive notifications for\. These events include the following: `All` \(events\), `InProgress`, `Success`, `TimedOut`, `Cancelled`, `Failed`\. To learn more about these events, see [Understanding Command Statuses](http://docs.aws.amazon.com/systems-manager/latest/userguide/monitor-commands.html) in the *AWS Systems Manager User Guide*\.  
+The different events that you can receive notifications for\. These events include the following: `All` \(events\), `InProgress`, `Success`, `TimedOut`, `Cancelled`, `Failed`\. To learn more about these events, see [Understanding Command Statuses](https://docs.aws.amazon.com/systems-manager/latest/userguide/monitor-commands.html) in the *AWS Systems Manager User Guide*\.  
  *Required*: No  
  *Type*: List of strings  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

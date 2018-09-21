@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-glue-job-connectionslist-properties"></a>
 
-For more information, see [ConnectionsList Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-job.html#aws-glue-api-jobs-job-ConnectionsList) in the *AWS Glue Developer Guide*\.
+For more information, see [ConnectionsList Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-job.html#aws-glue-api-jobs-job-ConnectionsList) in the *AWS Glue Developer Guide*\.
 
 `Connections`  <a name="cfn-glue-job-connectionslist-connections"></a>
 A list of UTF\-8 strings that specifies the connections that are used by the job\.  

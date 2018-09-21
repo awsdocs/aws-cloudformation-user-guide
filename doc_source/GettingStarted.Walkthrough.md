@@ -274,7 +274,7 @@ Make sure you have a valid Amazon EC2 key pair and record the key pair name befo
 To see your key pairs, open the Amazon EC2 console, then click **Key Pairs** in the navigation pane\. 
 
 **Note**  
-If you don't have an Amazon EC2 key pair, you must create the key pair in the same region where you are creating the stack\. For information about creating a key pair, see [Getting an SSH Key Pair](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) in the *Amazon EC2 User Guide for Linux Instances*\.
+If you don't have an Amazon EC2 key pair, you must create the key pair in the same region where you are creating the stack\. For information about creating a key pair, see [Getting an SSH Key Pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) in the *Amazon EC2 User Guide for Linux Instances*\.
 
 Now that you have a valid key pair, let's use the WordPress template to create a stack\.
 
@@ -302,7 +302,7 @@ On the **Specify Parameters** page, you'll recognize the parameters from the Par
 
 1. Click **Next**\.
 
-1. In this scenario, we won't add any tags\. Click **Next**\. Tags, which are key\-value pairs, can help you identify your stacks\. For more information, see [ Adding Tags to Your AWS CloudFormation Stack](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide//cfn-console-add-tags.html)\. 
+1. In this scenario, we won't add any tags\. Click **Next**\. Tags, which are key\-value pairs, can help you identify your stacks\. For more information, see [ Adding Tags to Your AWS CloudFormation Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide//cfn-console-add-tags.html)\. 
 
 1. Review the information for the stack\. When you're satisfied with the settings, click **Create**\.
 

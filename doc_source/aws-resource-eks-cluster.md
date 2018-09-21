@@ -1,6 +1,6 @@
 # AWS::EKS::Cluster<a name="aws-resource-eks-cluster"></a>
 
-The `AWS::EKS::Cluster` resource creates an Amazon EKS cluster control plane\. The Amazon EKS cluster control plane consists of control plane instances that run the Kubernetes software, like `etcd` and the Kubernetes API server\. The control plane runs in an account managed by AWS, and the Kubernetes API is exposed via the Amazon EKS endpoint associated with your cluster\. For more information, see [Clusters](http://docs.aws.amazon.com/eks/latest/userguide/clusters.html) in the *Amazon EKS User Guide*\.
+The `AWS::EKS::Cluster` resource creates an Amazon EKS cluster control plane\. The Amazon EKS cluster control plane consists of control plane instances that run the Kubernetes software, like `etcd` and the Kubernetes API server\. The control plane runs in an account managed by AWS, and the Kubernetes API is exposed via the Amazon EKS endpoint associated with your cluster\. For more information, see [Clusters](https://docs.aws.amazon.com/eks/latest/userguide/clusters.html) in the *Amazon EKS User Guide*\.
 
 **Topics**
 + [Syntax](#aws-resource-eks-cluster-syntax)
@@ -47,7 +47,7 @@ The name of the cluster\.
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `ResourcesVpcConfig`  <a name="cfn-eks-cluster-resourcesvpcconfig"></a>
-The VPC subnets and security groups used by the cluster control plane\. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes\. For more information, see [Cluster VPC Considerations](http://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](http://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the *Amazon EKS User Guide*\.  
+The VPC subnets and security groups used by the cluster control plane\. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes\. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the *Amazon EKS User Guide*\.  
  *Required*: Yes  
  *Type*: [EKS Cluster ResourcesVpcConfig](aws-properties-eks-cluster-resourcesvpcconfig.md)  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
@@ -129,5 +129,5 @@ Properties:
 ```
 
 ## See Also<a name="aws-resource-eks-cluster-seealso"></a>
-+ [Clusters](http://docs.aws.amazon.com/eks/latest/userguide/clusters.html) in the *Amazon EKS User Guide*\.
-+ [CreateCluster](http://docs.aws.amazon.com/eks/latest/APIReference/API_CreateCluster.html) in the *Amazon EKS API Reference*\.
++ [Clusters](https://docs.aws.amazon.com/eks/latest/userguide/clusters.html) in the *Amazon EKS User Guide*\.
++ [CreateCluster](https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateCluster.html) in the *Amazon EKS API Reference*\.

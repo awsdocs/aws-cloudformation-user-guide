@@ -1,6 +1,6 @@
 # AWS::ServiceCatalog::Portfolio<a name="aws-resource-servicecatalog-portfolio"></a>
 
-Creates a portfolio for AWS Service Catalog\. For more information, see [CreatePortfolio](http://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreatePortfolio.html) in the *AWS Service Catalog Developer Guide*\.
+Creates a portfolio for AWS Service Catalog\. For more information, see [CreatePortfolio](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreatePortfolio.html) in the *AWS Service Catalog Developer Guide*\.
 
 **Topics**
 + [Syntax](#aws-resource-servicecatalog-portfolio-syntax)

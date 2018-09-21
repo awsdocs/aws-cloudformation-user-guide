@@ -2,9 +2,9 @@
 
 Use the `AWS::DAX::Cluster` resource to create a DAX cluster for use with Amazon DynamoDB\.
 
-For information about creating a DAX cluster, see [Creating a DAX Cluster](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.create-cluster.html) in the *Amazon DynamoDB Developer Guide* and [http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_dax_CreateCluster.html](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_dax_CreateCluster.html) in the *Amazon DynamoDB Developer Guide*\.
+For information about creating a DAX cluster, see [Creating a DAX Cluster](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.create-cluster.html) in the *Amazon DynamoDB Developer Guide* and [https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_dax_CreateCluster.html](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_dax_CreateCluster.html) in the *Amazon DynamoDB Developer Guide*\.
 
-## Syntax<a name="w3ab2c21c10d326b7"></a>
+## Syntax<a name="w4ab1c21c10d338b7"></a>
 
 ### JSON<a name="aws-resource-dax-cluster-syntax.json"></a>
 
@@ -22,6 +22,7 @@ For information about creating a DAX cluster, see [Creating a DAX Cluster](http:
       "[PreferredMaintenanceWindow](#cfn-dax-cluster-preferred-maintenance-window)": String,
       "[ReplicationFactor](#cfn-dax-cluster-replication-factor)": Integer,
       "[SecurityGroupIds](#cfn-dax-cluster-security-group-ids)": [ String, ... ],
+      "[SSESpecification](#cfn-dax-cluster-ssespecification)" : [*SSESpecification*](aws-properties-daxservice-cluster-ssespecification.md),
       "[SubnetGroupName](#cfn-dax-cluster-subnet-group-name)": String,
       "[Tags](#cfn-dax-cluster-tags)": { String:String, ... }
     }
@@ -31,7 +32,7 @@ For information about creating a DAX cluster, see [Creating a DAX Cluster](http:
 ### YAML<a name="aws-resource-dax-cluster-syntax.yaml"></a>
 
 ```
-Type: "AWS::DAX::Cluster"
+Type: AWS::DAX::Cluster
 Properties:
       [AvailabilityZones](#cfn-dax-cluster-availability-zones): [ String, ... ]
       [ClusterName](#cfn-dax-cluster-cluster-name): String
@@ -43,6 +44,8 @@ Properties:
       [PreferredMaintenanceWindow](#cfn-dax-cluster-preferred-maintenance-window): String
       [ReplicationFactor](#cfn-dax-cluster-replication-factor): Integer
       [SecurityGroupIds](#cfn-dax-cluster-security-group-ids): [ String, ... ]
+      [SSESpecification](#cfn-dax-cluster-ssespecification): 
+        [*SSESpecification*](aws-properties-daxservice-cluster-ssespecification.md)
       [SubnetGroupName](#cfn-dax-cluster-subnet-group-name): String
       [Tags](#cfn-dax-cluster-tags): { String:String, ... }
 ```
@@ -121,6 +124,12 @@ If this parameter is not specified, DAX assigns the default VPC security group t
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`SSESpecification`  <a name="cfn-dax-cluster-ssespecification"></a>
+Whether server\-side encryption is enabled or not\.  
+*Required*: No  
+*Type*: [DAX Cluster SSESpecification](aws-properties-daxservice-cluster-ssespecification.md)   
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `SubnetGroupName`  <a name="cfn-dax-cluster-subnet-group-name"></a>
 The name of the subnet group to be used for the replication group\.  

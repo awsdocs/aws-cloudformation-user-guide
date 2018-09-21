@@ -2,7 +2,7 @@
 
 `LaunchSpecifications` is a property of the [Amazon EC2 SpotFleet SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md) property that defines the launch specifications for the Spot fleet request\.
 
-## Syntax<a name="w3ab2c21c14d773b5"></a>
+## Syntax<a name="w4ab1c21c14d835b5"></a>
 
 ### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-syntax.json"></a>
 
@@ -56,7 +56,7 @@
 [WeightedCapacity](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-weightedcapacity): Number
 ```
 
-## Properties<a name="w3ab2c21c14d773b7"></a>
+## Properties<a name="w4ab1c21c14d835b7"></a>
 
 `BlockDeviceMappings`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings"></a>
 Defines the block devices that are mapped to the Spot instances\.  
@@ -119,7 +119,7 @@ One or more security group IDs to associate with the instances\.
 *Type*: List of [Amazon Elastic Compute Cloud SpotFleet SecurityGroups](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups.md)
 
 `SpotPrice`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-spotprice"></a>
-The bid price per unit hour for the specified instance type\. If you don't specify a value, Amazon EC2 uses the Spot bid price for the fleet\. For more information, see [How Spot Fleet Works](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+The bid price per unit hour for the specified instance type\. If you don't specify a value, Amazon EC2 uses the Spot bid price for the fleet\. For more information, see [How Spot Fleet Works](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
 *Required*: No  
 *Type*: String
 
@@ -139,7 +139,7 @@ Base64\-encoded MIME user data that instances use when starting up\.
 *Type*: String
 
 `WeightedCapacity`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-weightedcapacity"></a>
-The number of units provided by the specified instance type\. These units are the same units that you chose to set the target capacity in terms of instances or a performance characteristic, such as vCPUs, memory, or I/O\. For more information, see [How Spot Fleet Works](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+The number of units provided by the specified instance type\. These units are the same units that you chose to set the target capacity in terms of instances or a performance characteristic, such as vCPUs, memory, or I/O\. For more information, see [How Spot Fleet Works](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
 If the target capacity divided by this value is not a whole number, Amazon EC2 rounds the number of instances to the next whole number\.  
 *Required*: No  
 *Type*: Number

@@ -2,7 +2,7 @@
 
 `SsmAssociations` is a property of the [AWS::EC2::Instance](aws-properties-ec2-instance.md) resource that specifies the SSM document and parameter values in AWS Systems Manager to associate with an instance\.
 
-## Syntax<a name="w3ab2c21c14d670b5"></a>
+## Syntax<a name="w4ab1c21c14d732b5"></a>
 
 ### JSON<a name="aws-properties-ec2-instance-ssmassociations-syntax.json"></a>
 
@@ -21,7 +21,7 @@
 [DocumentName](#cfn-ec2-instance-ssmassociations-documentname): String
 ```
 
-## Properties<a name="w3ab2c21c14d670b7"></a>
+## Properties<a name="w4ab1c21c14d732b7"></a>
 
 `AssociationParameters`  <a name="cfn-ec2-instance-ssmassociations-associationparameters"></a>
 The input parameter values to use with the associated SSM document\.  

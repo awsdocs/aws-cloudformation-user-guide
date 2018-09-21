@@ -9,9 +9,9 @@ The EC2 API Reference refers to the `SubnetId` parameter as the `AssociationId`\
 
 **Topics**
 + [Syntax](#aws-resource-ec2-subnetnetworkaclassociation-syntax)
-+ [Properties](#w3ab2c21c10d493c13)
-+ [Return Values](#w3ab2c21c10d493c15)
-+ [Template Examples](#w3ab2c21c10d493c17)
++ [Properties](#w4ab1c21c10d504c13)
++ [Return Values](#w4ab1c21c10d504c15)
++ [Template Examples](#w4ab1c21c10d504c17)
 
 ## Syntax<a name="aws-resource-ec2-subnetnetworkaclassociation-syntax"></a>
 
@@ -32,13 +32,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-subnetnetworkaclassociation-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::SubnetNetworkAclAssociation"
+Type: AWS::EC2::SubnetNetworkAclAssociation
 Properties:
   [SubnetId](#cfn-ec2-subnetnetworkaclassociation-associationid): String
   [NetworkAclId](#cfn-ec2-subnetnetworkaclassociation-networkaclid): String
 ```
 
-## Properties<a name="w3ab2c21c10d493c13"></a>
+## Properties<a name="w4ab1c21c10d504c13"></a>
 
 `SubnetId`  <a name="cfn-ec2-subnetnetworkaclassociation-associationid"></a>
 The ID representing the current association between the original network ACL and the subnet\.  
@@ -52,15 +52,15 @@ The ID of the new ACL to associate with the subnet\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w3ab2c21c10d493c15"></a>
+## Return Values<a name="w4ab1c21c10d504c15"></a>
 
-### Ref<a name="w3ab2c21c10d493c15b2"></a>
+### Ref<a name="w4ab1c21c10d504c15b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d493c15b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d504c15b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -69,7 +69,7 @@ Returns the value of this object's [SubnetId](#cfn-ec2-subnetnetworkaclassociati
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Template Examples<a name="w3ab2c21c10d493c17"></a>
+## Template Examples<a name="w4ab1c21c10d504c17"></a>
 
 ### JSON<a name="aws-resource-subnetnetworkaclassociation-example-1.json"></a>
 

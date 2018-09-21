@@ -1,8 +1,8 @@
 # AWS IoT TopicRule TopicRulePayload<a name="aws-properties-iot-topicrule-topicrulepayload"></a>
 
-`TopicRulePayload` is a property of the `[AWS::IoT::TopicRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html)` resource that describes the payload of an AWS IoT rule\.
+`TopicRulePayload` is a property of the `[AWS::IoT::TopicRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html)` resource that describes the payload of an AWS IoT rule\.
 
-## Syntax<a name="w3ab2c21c14e1389b5"></a>
+## Syntax<a name="w4ab1c21c14e1492b5"></a>
 
 ### JSON<a name="aws-properties-iot-topicrule-topicrulepayload-syntax.json"></a>
 
@@ -27,7 +27,7 @@
 [Sql](#cfn-iot-topicrule-topicrulepayload-sql): String
 ```
 
-## Properties<a name="w3ab2c21c14e1389b7"></a>
+## Properties<a name="w4ab1c21c14e1492b7"></a>
 
 `Actions`  <a name="cfn-iot-topicrule-topicrulepayload-actions"></a>
 The actions associated with the rule\.  
@@ -54,7 +54,7 @@ Specifies whether the rule is disabled\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Sql`  <a name="cfn-iot-topicrule-topicrulepayload-sql"></a>
-The SQL statement that queries the topic\. For more information, see [Rules for AWS IoT](http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the *AWS IoT Developer Guide*\.  
+The SQL statement that queries the topic\. For more information, see [Rules for AWS IoT](https://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the *AWS IoT Developer Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

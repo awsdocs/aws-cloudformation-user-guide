@@ -23,14 +23,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   - String
 ```
 
-## Properties<a name="w3ab2c21c14e1938b7"></a>
+## Properties<a name="w4ab1c21c14e2047b7"></a>
 
 `Key`  <a name="cfn-ssm-association-targets-key"></a>
-The name of the criteria that EC2 instances must meet\. For valid keys, see the [Target](http://docs.aws.amazon.com/systems-manager/latest/APIReference/API_Target.html) data type in the *AWS Systems Manager API Reference*\.  
+The name of the criteria that EC2 instances must meet\. For valid keys, see the [Target](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_Target.html) data type in the *AWS Systems Manager API Reference*\.  
 *Required*: Yes  
 *Type*: String
 
 `Values`  <a name="cfn-ssm-association-targets-values"></a>
-The value of the criteria\. Systems Manager runs targeted commands on EC2 instances that match the criteria\. For more information, see the [Target](http://docs.aws.amazon.com/systems-manager/latest/APIReference/API_Target.html) data type in the *AWS Systems Manager API Reference*\.  
+The value of the criteria\. Systems Manager runs targeted commands on EC2 instances that match the criteria\. For more information, see the [Target](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_Target.html) data type in the *AWS Systems Manager API Reference*\.  
 *Required*: Yes  
 *Type*: List of String values

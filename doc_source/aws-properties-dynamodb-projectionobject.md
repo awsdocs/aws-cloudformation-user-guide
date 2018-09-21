@@ -4,7 +4,7 @@ Attributes that are copied \(projected\) from the source table into the index\. 
 
 Projection is a property of the [DynamoDB Table GlobalSecondaryIndex](aws-properties-dynamodb-gsi.md) and [DynamoDB Table LocalSecondaryIndex](aws-properties-dynamodb-lsi.md) property types\.
 
-## Syntax<a name="w3ab2c21c14d623b7"></a>
+## Syntax<a name="w4ab1c21c14d685b7"></a>
 
 ### JSON<a name="aws-properties-dynamodb-projectionobject-syntax.json"></a>
 
@@ -23,9 +23,9 @@ Projection is a property of the [DynamoDB Table GlobalSecondaryIndex](aws-proper
 [ProjectionType](#cfn-dynamodb-projectionobj-projtype): String
 ```
 
-## Properties<a name="w3ab2c21c14d623b9"></a>
+## Properties<a name="w4ab1c21c14d685b9"></a>
 
-For more information about each property, including constraints, see [ Projection](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_Projection.html) in the *Amazon DynamoDB API Reference*\.
+For more information about each property, including constraints, see [ Projection](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_Projection.html) in the *Amazon DynamoDB API Reference*\.
 
 `NonKeyAttributes`  <a name="cfn-dynamodb-projectionobj-nonkeyatt"></a>
 The non\-key attribute names that are projected into the index\.  

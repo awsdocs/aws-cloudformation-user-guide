@@ -10,14 +10,14 @@ You can use a wait condition for situations like the following:
 For these situations, we recommend that you associate a [CreationPolicy](aws-attribute-creationpolicy.md) attribute with the wait condition so that you don't have to use a wait condition handle\. For more information and an example, see [Creating Wait Conditions in a Template](using-cfn-waitcondition.md)\. If you use a CreationPolicy with a wait condition, do not specify any of the wait condition's properties\.
 
 **Note**  
-If you use the [VPC endpoint](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpoints.html) feature, resources in the VPC that respond to wait conditions must have access to AWS CloudFormation\-specific Amazon Simple Storage Service \(Amazon S3\) buckets\. Resources must send wait condition responses to a pre\-signed Amazon S3 URL\. If they can't send responses to Amazon S3, AWS CloudFormation won't receive a response and the stack operation fails\. For more information, see [AWS CloudFormation and VPC Endpoints](cfn-vpce-bucketnames.md)\.
+If you use the [VPC endpoint](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html) feature, resources in the VPC that respond to wait conditions must have access to AWS CloudFormation\-specific Amazon Simple Storage Service \(Amazon S3\) buckets\. Resources must send wait condition responses to a pre\-signed Amazon S3 URL\. If they can't send responses to Amazon S3, AWS CloudFormation won't receive a response and the stack operation fails\. For more information, see [Setting Up VPC Endpoints for AWS CloudFormation](cfn-vpce-bucketnames.md)\.
 
 **Topics**
 + [Syntax](#aws-resource-cloudformation-waitcondition-syntax)
-+ [Properties](#w3ab2c21c10d205c17)
-+ [Return Values](#w3ab2c21c10d205c19)
-+ [Examples](#w3ab2c21c10d205c21)
-+ [See Also](#w3ab2c21c10d205c23)
++ [Properties](#w4ab1c21c10d214c17)
++ [Return Values](#w4ab1c21c10d214c19)
++ [Examples](#w4ab1c21c10d214c21)
++ [See Also](#w4ab1c21c10d214c23)
 
 ## Syntax<a name="aws-resource-cloudformation-waitcondition-syntax"></a>
 
@@ -39,14 +39,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cloudformation-waitcondition-syntax.yaml"></a>
 
 ```
-Type: "AWS::CloudFormation::WaitCondition"
+Type: AWS::CloudFormation::WaitCondition
 Properties: 
   [Count](#cfn-waitcondition-count): Integer
   [Handle](#cfn-waitcondition-handle): String
   [Timeout](#cfn-waitcondition-timeout): String
 ```
 
-## Properties<a name="w3ab2c21c10d205c17"></a>
+## Properties<a name="w4ab1c21c10d214c17"></a>
 
 `Count`  <a name="cfn-waitcondition-count"></a>
 The number of success signals that AWS CloudFormation must receive before it continues the stack creation process\. When the wait condition receives the requisite number of success signals, AWS CloudFormation resumes the creation of the stack\. If the wait condition does not receive the specified number of success signals before the Timeout period expires, AWS CloudFormation assumes that the wait condition has failed and rolls the stack back\.  
@@ -67,15 +67,15 @@ The length of time \(in seconds\) to wait for the number of signals that the `Co
 *Type*: String  
 *Update requires*: Updates are not supported\.
 
-## Return Values<a name="w3ab2c21c10d205c19"></a>
+## Return Values<a name="w4ab1c21c10d214c19"></a>
 
-### Ref<a name="w3ab2c21c10d205c19b2"></a>
+### Ref<a name="w4ab1c21c10d214c19b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d205c19b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d214c19b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -89,9 +89,9 @@ Example return value for a wait condition with 2 signals:
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w3ab2c21c10d205c21"></a>
+## Examples<a name="w4ab1c21c10d214c21"></a>
 
-### WaitCondition that waits for the desired number of instances in a web server group<a name="w3ab2c21c10d205c21b2"></a>
+### WaitCondition that waits for the desired number of instances in a web server group<a name="w4ab1c21c10d214c21b2"></a>
 
 #### JSON<a name="aws-resource-cloudformation-waitcondition-example.json"></a>
 
@@ -127,7 +127,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
 
 ```
 WebServerGroup: 
-  Type: "AWS::AutoScaling::AutoScalingGroup"
+  Type: AWS::AutoScaling::AutoScalingGroup
   Properties: 
     AvailabilityZones: 
       Fn::GetAZs: ""
@@ -141,9 +141,9 @@ WebServerGroup:
       - 
         Ref: "ElasticLoadBalancer"
 WaitHandle: 
-  Type: "AWS::CloudFormation::WaitConditionHandle"
+  Type: AWS::CloudFormation::WaitConditionHandle
 WaitCondition: 
-  Type: "AWS::CloudFormation::WaitCondition"
+  Type: AWS::CloudFormation::WaitCondition
   DependsOn: "WebServerGroup"
   Properties: 
     Handle: 
@@ -153,6 +153,6 @@ WaitCondition:
       Ref: "WebServerCapacity"
 ```
 
-## See Also<a name="w3ab2c21c10d205c23"></a>
+## See Also<a name="w4ab1c21c10d214c23"></a>
 + [Creating Wait Conditions in a Template](using-cfn-waitcondition.md)
 + [DependsOn Attribute](aws-attribute-dependson.md)

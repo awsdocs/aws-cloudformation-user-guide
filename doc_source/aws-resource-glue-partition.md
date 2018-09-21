@@ -1,6 +1,6 @@
 # AWS::Glue::Partition<a name="aws-resource-glue-partition"></a>
 
-The `AWS::Glue::Partition` resource creates an AWS Glue partition, which represents a slice of table data\. For more information, see [CreatePartition Action](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-CreatePartition) and [Partition Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-Partition) in the *AWS Glue Developer Guide*\. 
+The `AWS::Glue::Partition` resource creates an AWS Glue partition, which represents a slice of table data\. For more information, see [CreatePartition Action](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-CreatePartition) and [Partition Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-Partition) in the *AWS Glue Developer Guide*\. 
 
 **Topics**
 + [Syntax](#aws-resource-glue-partition-syntax)
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-glue-partition-syntax.yaml"></a>
 
 ```
-Type: "AWS::Glue::Partition"
+Type: AWS::Glue::Partition
 Properties:
   [TableName](#cfn-glue-partition-tablename): String
   [DatabaseName](#cfn-glue-partition-databasename): String
@@ -65,5 +65,5 @@ The metadata of the partition\.
  *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt) 
 
 ## See Also<a name="aws-resource-glue-partition-seealso"></a>
-+ [CreatePartition Action](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-CreatePartition) in the *AWS Glue Developer Guide*
-+ [Partition Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-Partition) in the *AWS Glue Developer Guide*
++ [CreatePartition Action](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-CreatePartition) in the *AWS Glue Developer Guide*
++ [Partition Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-Partition) in the *AWS Glue Developer Guide*

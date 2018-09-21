@@ -15,7 +15,7 @@ You can use the `DependsOn` attribute with any resource\. Here are some typical 
 **Note**  
 During a stack update, resources that depend on updated resources are updated automatically\. AWS CloudFormation makes no changes to the automatically\-updated resources, but, if a stack policy is associated with these resources, your account must have the permissions to update them\.
 
-## Syntax<a name="w3ab2c21c23c15c13"></a>
+## Syntax<a name="w4ab1c21c23c15c13"></a>
 
 The `DependsOn` attribute can take a single string or list of strings\.
 
@@ -23,96 +23,100 @@ The `DependsOn` attribute can take a single string or list of strings\.
 "DependsOn" : [ String, ... ]
 ```
 
-## Example<a name="w3ab2c21c23c15c15"></a>
+## Example<a name="w4ab1c21c23c15c15"></a>
 
 The following template contains an [AWS::EC2::Instance](aws-properties-ec2-instance.md) resource with a `DependsOn` attribute that specifies myDB, an [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)\. When AWS CloudFormation creates this stack, it first creates myDB, then creates Ec2Instance\.
 
 ### JSON<a name="aws-attribute-dependson-example-1.json"></a>
 
 ```
-{
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Mappings": {
-        "RegionMap": {
-            "us-east-1": {
-                "AMI": "ami-76f0061f"
-            },
-            "us-west-1": {
-                "AMI": "ami-655a0a20"
-            },
-            "eu-west-1": {
-                "AMI": "ami-7fd4e10b"
-            },
-            "ap-northeast-1": {
-                "AMI": "ami-8e08a38f"
-            },
-            "ap-southeast-1": {
-                "AMI": "ami-72621c20"
-            }
-        }
-    },
-    "Resources": {
-        "Ec2Instance": {
-            "Type": "AWS::EC2::Instance",
-            "Properties": {
-                "ImageId": {
-                    "Fn::FindInMap": ["RegionMap", {
-                        "Ref": "AWS::Region"
-                    }, "AMI"]
-                }
-            },
-            "DependsOn": "myDB"
-        },
-        "myDB": {
-            "Type": "AWS::RDS::DBInstance",
-            "Properties": {
-                "AllocatedStorage": "5",
-                "DBInstanceClass": "db.t2.small",
-                "Engine": "MySQL",
-                "EngineVersion": "5.5",
-                "MasterUsername": "MyName",
-                "MasterUserPassword": "MyPassword"
-            }
-        }
-    }
-}
+ 1. {
+ 2.     "AWSTemplateFormatVersion" : "2010-09-09",
+ 3.     "Mappings" : {
+ 4.         "RegionMap" : {
+ 5.             "us-east-1" : { 
+ 6.                 "AMI" : "ami-0ff8a91507f77f867" 
+ 7.             },
+ 8.             "us-west-1" : { 
+ 9.                 "AMI" : "ami-0bdb828fd58c52235" 
+10.             },
+11.             "eu-west-1" : { 
+12.                 "AMI" : "ami-047bb4163c506cd98" 
+13.             },
+14.             "ap-northeast-1" : { 
+15.                 "AMI" : "ami-06cd52961ce9f0d85" 
+16.             },
+17.             "ap-southeast-1" : { 
+18.                 "AMI" : "ami-08569b978cc4dfa10" 
+19.             }
+20.         }
+21.     },
+22.     "Resources" : {
+23.         "Ec2Instance" : {
+24.             "Type" : "AWS::EC2::Instance",
+25.             "Properties" : {
+26.                 "ImageId": {
+27.                     "Fn::FindInMap": [
+28.                         "RegionMap",
+29.                         {
+30.                             "Ref": "AWS::Region"
+31.                         },
+32.                         "AMI"
+33.                     ]
+34.                 }
+35.             },
+36.             "DependsOn" : "myDB"
+37.         },
+38.         "myDB" : {
+39.             "Type" : "AWS::RDS::DBInstance",
+40.             "Properties" : {
+41.                "AllocatedStorage" : "5",
+42.                "DBInstanceClass" : "db.m1.small",
+43.                "Engine" : "MySQL",
+44.                "EngineVersion" : "5.5",
+45.                "MasterUsername" : "MyName",
+46.                "MasterUserPassword" : "MyPassword"
+47.             }
+48.         }
+49.     }
+50. }
 ```
 
 ### YAML<a name="aws-attribute-dependson-example-1.yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09'
-Mappings:
-  RegionMap:
-    us-east-1:
-      AMI: ami-76f0061f
-    us-west-1:
-      AMI: ami-655a0a20
-    eu-west-1:
-      AMI: ami-7fd4e10b
-    ap-northeast-1:
-      AMI: ami-8e08a38f
-    ap-southeast-1:
-      AMI: ami-72621c20
-Resources:
-  Ec2Instance:
-    Type: AWS::EC2::Instance
-    Properties:
-      ImageId:
-        Fn::FindInMap:
-        - RegionMap
-        - Ref: AWS::Region
-        - AMI
-    DependsOn: myDB
-  myDB:
-    Type: AWS::RDS::DBInstance
-    Properties:
-      AllocatedStorage: '5'
-      DBInstanceClass: db.t2.small
-      Engine: MySQL
-      EngineVersion: '5.5'
-      MasterUsername: MyName
-      MasterUserPassword: MyPassword
+ 1. AWSTemplateFormatVersion: '2010-09-09'
+ 2. Mappings:
+ 3.   RegionMap:
+ 4.     us-east-1:
+ 5.       AMI: ami-0ff8a91507f77f867
+ 6.     us-west-1:
+ 7.       AMI: ami-0bdb828fd58c52235
+ 8.     eu-west-1:
+ 9.       AMI: ami-047bb4163c506cd98
+10.     ap-northeast-1:
+11.       AMI: ami-06cd52961ce9f0d85
+12.     ap-southeast-1:
+13.       AMI: ami-08569b978cc4dfa10
+14. Resources:
+15.   Ec2Instance:
+16.     Type: AWS::EC2::Instance
+17.     Properties:
+18.       ImageId:
+19.         Fn::FindInMap:
+20.         - RegionMap
+21.         - Ref: AWS::Region
+22.         - AMI
+23.     DependsOn: myDB
+24.   myDB:
+25.     Type: AWS::RDS::DBInstance
+26.     Properties:
+27.       AllocatedStorage: '5'
+28.       DBInstanceClass: db.m1.small
+29.       Engine: MySQL
+30.       EngineVersion: '5.5'
+31.       MasterUsername: MyName
+32.       MasterUserPassword: MyPassword
 ```
 
 ## When a DependsOn attribute is required<a name="gatewayattachment"></a>
@@ -136,51 +140,61 @@ The following snippet shows a sample gateway attachment and an Amazon EC2 instan
 ### JSON<a name="aws-attribute-dependson-example-2.json"></a>
 
 ```
-"GatewayToInternet": {
-    "Type": "AWS::EC2::VPCGatewayAttachment",
-    "Properties": {
-        "VpcId": {
-            "Ref": "VPC"
-        },
-        "InternetGatewayId": {
-            "Ref": "InternetGateway"
-        }
+"GatewayToInternet" : {
+  "Type" : "AWS::EC2::VPCGatewayAttachment",
+  "Properties" : {
+    "VpcId" : { 
+      "Ref" : "VPC" 
+    },
+    "InternetGatewayId" : { 
+      "Ref" : "InternetGateway" 
     }
+  }
 },
 
-"EC2Host": {
-    "Type": "AWS::EC2::Instance",
-    "DependsOn": "GatewayToInternet",
-    "Properties": {
-        "InstanceType": {
-            "Ref": "EC2InstanceType"
+"EC2Host" : {
+  "Type" : "AWS::EC2::Instance",
+  "DependsOn" : "GatewayToInternet",
+  "Properties" : {
+    "InstanceType" : { 
+      "Ref" : "EC2InstanceType" 
+    },
+    "KeyName"  : { 
+      "Ref" : "KeyName" 
+    },
+    "ImageId": {
+      "Fn::FindInMap": [
+        "AWSRegionArch2AMI",
+        {
+          "Ref": "AWS::Region"
         },
-        "KeyName": {
-            "Ref": "KeyName"
-        },
-        "ImageId": {
-            "Fn::FindInMap": ["AWSRegionArch2AMI", {
-                    "Ref": "AWS::Region"
-                },
-                {
-                    "Fn::FindInMap": ["AWSInstanceType2Arch", {
-                        "Ref": "EC2InstanceType"
-                    }, "Arch"]
-                }
-            ]
-        },
-        "NetworkInterfaces": [{
-            "GroupSet": [{
-                "Ref": "EC2SecurityGroup"
-            }],
-            "AssociatePublicIpAddress": "true",
-            "DeviceIndex": "0",
-            "DeleteOnTermination": "true",
-            "SubnetId": {
-                "Ref": "PublicSubnet"
-            }
-        }]
-    }
+        {
+          "Fn::FindInMap": [
+            "AWSInstanceType2Arch",
+            {
+              "Ref": "EC2InstanceType"
+            },
+            "Arch"
+          ]
+        }
+      ]
+    },
+    "NetworkInterfaces" : [
+      {
+        "GroupSet" : [
+          { 
+            "Ref" : "EC2SecurityGroup" 
+          }
+        ],
+        "AssociatePublicIpAddress" : "true",
+        "DeviceIndex" : "0",
+        "DeleteOnTermination" : "true",
+        "SubnetId" : { 
+          "Ref" : "PublicSubnet" 
+        }
+      }
+    ]
+  }
 }
 ```
 
@@ -220,7 +234,7 @@ EC2Host:
         Ref: PublicSubnet
 ```
 
-### Amazon ECS Service and Auto Scaling Group<a name="w3ab2c21c23c15c17c18"></a>
+### Amazon ECS Service and Auto Scaling Group<a name="w4ab1c21c23c15c17c18"></a>
 
 When you use Auto Scaling or Amazon Elastic Compute Cloud \(Amazon EC2\) to create container instances for an Amazon ECS cluster, the Amazon ECS service resource must have a dependency on the Auto Scaling group or Amazon EC2 instances, as shown in the following snippet\. That way the container instances are available and associated with the Amazon ECS cluster before AWS CloudFormation creates the Amazon ECS service\.
 
@@ -229,19 +243,29 @@ When you use Auto Scaling or Amazon Elastic Compute Cloud \(Amazon EC2\) to crea
 ```
 "service": {
   "Type": "AWS::ECS::Service",
-  "DependsOn": ["ECSAutoScalingGroup"],
+  "DependsOn": [
+    "ECSAutoScalingGroup"
+  ],
   "Properties" : {
-    "Cluster": {"Ref": "ECSCluster"},
+    "Cluster": {
+      "Ref": "ECSCluster"
+    },
     "DesiredCount": "1",
     "LoadBalancers": [
       {
         "ContainerName": "simple-app",
         "ContainerPort": "80",
-        "LoadBalancerName" : { "Ref" : "EcsElasticLoadBalancer" }
+        "LoadBalancerName" : { 
+          "Ref" : "EcsElasticLoadBalancer" 
+        }
       }
     ],
-    "Role" : {"Ref":"ECSServiceRole"},
-    "TaskDefinition" : {"Ref":"taskdefinition"}
+    "Role" : {
+      "Ref":"ECSServiceRole"
+    },
+    "TaskDefinition" : {
+      "Ref":"taskdefinition"
+    }
   }
 }
 ```
@@ -268,7 +292,7 @@ service:
       Ref: taskdefinition
 ```
 
-### IAM Role Policy<a name="w3ab2c21c23c15c17c20"></a>
+### IAM Role Policy<a name="w4ab1c21c23c15c17c20"></a>
 
 Resources that make additional calls to AWS require a service role, which permits a service to make calls to AWS on your behalf\. For example, the `AWS::CodeDeploy::DeploymentGroup` resource requires a service role so that AWS CodeDeploy has permissions to deploy applications to your instances\. When you have a single template that defines a service role, the role's policy \(by using the `AWS::IAM::Policy` or `AWS::IAM::ManagedPolicy` resource\), and a resource that uses the role, add a dependency so that the resource depends on the role's policy\. This dependency ensures that the policy is available throughout the resource's lifecycle\.
 

@@ -1,6 +1,6 @@
 # AWS::CloudFront::CloudFrontOriginAccessIdentity<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity"></a>
 
-The `AWS::CloudFront::CloudFrontOriginAccessIdentity` resource specifies the CloudFront origin access identity to associate with the origin of a CloudFront distribution\. For more information, see [OriginAccessIdentity](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_S3OriginConfig.html#cloudfront-Type-S3OriginConfig-OriginAccessIdentity) in the *Amazon CloudFront API Reference*\. 
+The `AWS::CloudFront::CloudFrontOriginAccessIdentity` resource specifies the CloudFront origin access identity to associate with the origin of a CloudFront distribution\. For more information, see [OriginAccessIdentity](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_S3OriginConfig.html#cloudfront-Type-S3OriginConfig-OriginAccessIdentity) in the *Amazon CloudFront API Reference*\. 
 
 **Topics**
 + [Syntax](#aws-resource-cloudfront-cloudfrontoriginaccessidentity-syntax)
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-syntax.yaml"></a>
 
 ```
-Type: "AWS::CloudFront::CloudFrontOriginAccessIdentity"
+Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
 Properties:
   [CloudFrontOriginAccessIdentityConfig](#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig): CloudFrontOriginAccessIdentityConfig
 ```
@@ -42,13 +42,13 @@ The configuration of the CloudFront origin access identity\.
 
 ## Return Values<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d219c11b3"></a>
+### Ref<a name="w4ab1c21c10d228c11b3"></a>
 
 When you pass the logical ID of an `AWS::CloudFront::CloudFrontOriginAccessIdentity` resource to the intrinsic `Ref` function, the function returns the origin access identity, such as `E15MNIMTCFKK4C`\. 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
-### Fn::GetAtt<a name="w3ab2c21c10d219c11b5"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d228c11b5"></a>
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
@@ -87,11 +87,11 @@ The following example specifies the comment for an origin access identity\.
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   cloudfrontoriginaccessidentity:
-    Type: 'AWS::CloudFront::CloudFrontOriginAccessIdentity'
+    Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
     Properties:
       CloudFrontOriginAccessIdentityConfig:
         Comment: string-value
 ```
 
 ## See Also<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-seealso"></a>
-+ [OriginAccessIdentity](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_S3OriginConfig.html#cloudfront-Type-S3OriginConfig-OriginAccessIdentity) in the *Amazon CloudFront API Reference*
++ [OriginAccessIdentity](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_S3OriginConfig.html#cloudfront-Type-S3OriginConfig-OriginAccessIdentity) in the *Amazon CloudFront API Reference*

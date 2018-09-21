@@ -4,9 +4,9 @@ Creates an Amazon Redshift parameter group that you can associate with an Amazon
 
 **Topics**
 + [Syntax](#aws-resource-redshift-clusterparametergroup-syntax)
-+ [Properties](#w3ab2c21c10d995b9)
-+ [Return Values](#w3ab2c21c10d995c11)
-+ [Examples](#w3ab2c21c10d995c13)
++ [Properties](#w4ab1c21c10e1025b9)
++ [Return Values](#w4ab1c21c10e1025c11)
++ [Examples](#w4ab1c21c10e1025c13)
 
 ## Syntax<a name="aws-resource-redshift-clusterparametergroup-syntax"></a>
 
@@ -39,7 +39,7 @@ Properties:
     - Resource Tag
 ```
 
-## Properties<a name="w3ab2c21c10d995b9"></a>
+## Properties<a name="w4ab1c21c10e1025b9"></a>
 
 `Description`  <a name="cfn-redshift-clusterparametergroup-description"></a>
 A description of the parameter group\.  
@@ -54,7 +54,7 @@ The Amazon Redshift engine version that applies to this cluster parameter group\
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Parameters`  <a name="cfn-redshift-clusterparametergroup-parameters"></a>
-A list of parameter names and values that are allowed by the Amazon Redshift engine version that you specified in the `ParameterGroupFamily` property\. For more information, see [Amazon Redshift Parameter Groups](http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html) in the *Amazon Redshift Cluster Management Guide*\.  
+A list of parameter names and values that are allowed by the Amazon Redshift engine version that you specified in the `ParameterGroupFamily` property\. For more information, see [Amazon Redshift Parameter Groups](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html) in the *Amazon Redshift Cluster Management Guide*\.  
 *Required*: No  
 *Type*: [Amazon Redshift Parameter Type](aws-property-redshift-clusterparametergroup-parameter.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -65,9 +65,9 @@ Specifies an arbitrary set of tags \(key–value pairs\) to associate with this 
 *Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10d995c11"></a>
+## Return Values<a name="w4ab1c21c10e1025c11"></a>
 
-### Ref<a name="w3ab2c21c10d995c11b2"></a>
+### Ref<a name="w4ab1c21c10e1025c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -79,9 +79,9 @@ For the Amazon Redshift cluster parameter group `myClusterParameterGroup`, `Ref`
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w3ab2c21c10d995c13"></a>
+## Examples<a name="w4ab1c21c10e1025c13"></a>
 
-### Single Parameter<a name="w3ab2c21c10d995c13b2"></a>
+### Single Parameter<a name="w4ab1c21c10e1025c13b2"></a>
 
 The following example describes a parameter group with one parameter that is specified:
 
@@ -115,7 +115,7 @@ myClusterParameterGroup:
         ParameterValue: "true"
 ```
 
-### Workload Management Configuration<a name="w3ab2c21c10d995c13b4"></a>
+### Workload Management Configuration<a name="w4ab1c21c10e1025c13b4"></a>
 
 The following example modifies the workload management configuration using the `wlm_json_configuration` parameter\. The parameter value is a JSON object that must be passed as a string enclosed in quotation marks \(`"`\)\.
 

@@ -1,6 +1,6 @@
 # AWS::ServiceCatalog::PortfolioProductAssociation<a name="aws-resource-servicecatalog-portfolioproductassociation"></a>
 
-Associates the specified product with the specified portfolio for AWS Service Catalog\. For more information, see [AssociateProductWithPortfolio](http://docs.aws.amazon.com/servicecatalog/latest/dg/API_AssociateProductWithPortfolio.html) in the *AWS Service Catalog Developer Guide*\.
+Associates the specified product with the specified portfolio for AWS Service Catalog\. For more information, see [AssociateProductWithPortfolio](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_AssociateProductWithPortfolio.html) in the *AWS Service Catalog Developer Guide*\.
 
 **Topics**
 + [Syntax](#aws-resource-servicecatalog-portfolioproductassociation-syntax)

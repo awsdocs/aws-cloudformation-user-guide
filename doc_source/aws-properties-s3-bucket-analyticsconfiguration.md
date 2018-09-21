@@ -2,7 +2,7 @@
 
 <a name="aws-properties-s3-bucket-analyticsconfiguration-description"></a>The `AnalyticsConfiguration` property type specifies the configuration and any analyses for the analytics filter of an Amazon S3 bucket\.
 
-For more information, see [GET Bucket analytics](http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETAnalyticsConfig.html) in the *Amazon Simple Storage Service API Reference*
+For more information, see [GET Bucket analytics](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETAnalyticsConfig.html) in the *Amazon Simple Storage Service API Reference*
 
 <a name="aws-properties-s3-bucket-analyticsconfiguration-inheritance"></a> `AnalyticsConfigurations` is a property of the [AWS::S3::Bucket](aws-properties-s3-bucket.md) resource type\. 
 

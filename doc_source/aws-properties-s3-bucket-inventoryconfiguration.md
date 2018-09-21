@@ -2,7 +2,7 @@
 
 <a name="aws-properties-s3-bucket-inventoryconfiguration-description"></a>The `InventoryConfiguration` property type specifies the inventory configuration for an Amazon S3 bucket\.
 
-For more information, see [GET Bucket inventory](http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in the *Amazon Simple Storage Service API Reference*
+For more information, see [GET Bucket inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in the *Amazon Simple Storage Service API Reference*
 
 <a name="aws-properties-s3-bucket-inventoryconfiguration-inheritance"></a> `InventoryConfiguration` is a property of the [AWS::S3::Bucket](aws-properties-s3-bucket.md) resource type\. 
 

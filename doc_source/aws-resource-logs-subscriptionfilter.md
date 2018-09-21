@@ -4,9 +4,9 @@ The `AWS::Logs::SubscriptionFilter` resource creates an Amazon CloudWatch Logs \
 
 **Topics**
 + [Syntax](#aws-resource-logs-subscriptionfilter-syntax)
-+ [Properties](#w3ab2c21c10d884b9)
-+ [Return Values](#w3ab2c21c10d884c11)
-+ [Example](#w3ab2c21c10d884c13)
++ [Properties](#w4ab1c21c10d915b9)
++ [Return Values](#w4ab1c21c10d915c11)
++ [Example](#w4ab1c21c10d915c13)
 
 ## Syntax<a name="aws-resource-logs-subscriptionfilter-syntax"></a>
 
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-logs-subscriptionfilter-syntax.yaml"></a>
 
 ```
-Type: "AWS::Logs::SubscriptionFilter"
+Type: AWS::Logs::SubscriptionFilter
 Properties: 
   [DestinationArn](#cfn-cwl-subscriptionfilter-destinationarn): String
   [FilterPattern](#cfn-cwl-subscriptionfilter-filterpattern): String
@@ -37,7 +37,7 @@ Properties:
   [RoleArn](#cfn-cwl-subscriptionfilter-rolearn): String
 ```
 
-## Properties<a name="w3ab2c21c10d884b9"></a>
+## Properties<a name="w4ab1c21c10d915b9"></a>
 
 `DestinationArn`  <a name="cfn-cwl-subscriptionfilter-destinationarn"></a>
 The Amazon Resource Name \(ARN\) of the Kinesis stream, Kinesis Data Firehose delivery stream, or Lambda function that you want to use as the subscription feed destination\.  
@@ -46,7 +46,7 @@ The Amazon Resource Name \(ARN\) of the Kinesis stream, Kinesis Data Firehose de
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `FilterPattern`  <a name="cfn-cwl-subscriptionfilter-filterpattern"></a>
-The filtering expressions that restrict what gets delivered to the destination AWS resource\. For more information about the filter pattern syntax, see [Filter and Pattern Syntax](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/FilterAndPatternSyntax.html) in the *Amazon CloudWatch User Guide*\.  
+The filtering expressions that restrict what gets delivered to the destination AWS resource\. For more information about the filter pattern syntax, see [Filter and Pattern Syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/FilterAndPatternSyntax.html) in the *Amazon CloudWatch User Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -63,15 +63,15 @@ An IAM role that grants CloudWatch Logs permission to put data into the specifie
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w3ab2c21c10d884c11"></a>
+## Return Values<a name="w4ab1c21c10d915c11"></a>
 
-### Ref<a name="w3ab2c21c10d884c11b2"></a>
+### Ref<a name="w4ab1c21c10d915c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10d884c13"></a>
+## Example<a name="w4ab1c21c10d915c13"></a>
 
 The following example sends log events that are associated with the `Root` user to an Kinesis stream\.
 
@@ -93,7 +93,7 @@ The following example sends log events that are associated with the `Root` user 
 
 ```
 SubscriptionFilter: 
-  Type: "AWS::Logs::SubscriptionFilter"
+  Type: AWS::Logs::SubscriptionFilter
   Properties: 
     RoleArn: 
       Fn::GetAtt: 

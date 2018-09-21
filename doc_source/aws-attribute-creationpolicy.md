@@ -1,12 +1,12 @@
 # CreationPolicy Attribute<a name="aws-attribute-creationpolicy"></a>
 
-Associate the `CreationPolicy` attribute with a resource to prevent its status from reaching create complete until AWS CloudFormation receives a specified number of success signals or the timeout period is exceeded\. To signal a resource, you can use the [cfn\-signal](cfn-signal.md) helper script or [http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SignalResource.html](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SignalResource.html) API\. AWS CloudFormation publishes valid signals to the stack events so that you track the number of signals sent\.
+Associate the `CreationPolicy` attribute with a resource to prevent its status from reaching create complete until AWS CloudFormation receives a specified number of success signals or the timeout period is exceeded\. To signal a resource, you can use the [cfn\-signal](cfn-signal.md) helper script or [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SignalResource.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SignalResource.html) API\. AWS CloudFormation publishes valid signals to the stack events so that you track the number of signals sent\.
 
 The creation policy is invoked only when AWS CloudFormation creates the associated resource\. Currently, the only AWS CloudFormation resources that support creation policies are [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md), [AWS::EC2::Instance](aws-properties-ec2-instance.md), and [AWS::CloudFormation::WaitCondition](aws-properties-waitcondition.md)\.
 
 Use the `CreationPolicy` attribute when you want to wait on resource configuration actions before stack creation proceeds\. For example, if you install and configure software applications on an EC2 instance, you might want those applications to be running before proceeding\. In such cases, you can add a `CreationPolicy` attribute to the instance, and then send a success signal to the instance after the applications are installed and configured\. For a detailed example, see [Deploying Applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
 
-## Syntax<a name="w3ab2c21c23b7b9"></a>
+## Syntax<a name="w4ab1c21c23b7b9"></a>
 
 ### JSON<a name="aws-attribute-creationpolicy-syntax.json"></a>
 
@@ -57,13 +57,13 @@ The value must be in [ISO8601 duration format](http://en.wikipedia.org/wiki/ISO_
 *Type*: String  
 *Required*: No
 
-## Examples<a name="w3ab2c21c23b7c13"></a>
+## Examples<a name="w4ab1c21c23b7c13"></a>
 
-### Auto Scaling Group<a name="w3ab2c21c23b7c13b2"></a>
+### Auto Scaling Group<a name="w4ab1c21c23b7c13b2"></a>
 
 The following example shows how to add a creation policy to an Auto Scaling group\. The creation policy requires three success signals and times out after 15 minutes\.
 
-To have instances wait for an Elastic Load Balancing health check before they signal success, add a health\-check verification by using the [cfn\-init](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html) helper script\. For an example, see the `verify_instance_health` command in the [Auto Scaling rolling updates](https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services/AutoScaling/AutoScalingRollingUpdates.yaml) sample template\.
+To have instances wait for an Elastic Load Balancing health check before they signal success, add a health\-check verification by using the [cfn\-init](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html) helper script\. For an example, see the `verify_instance_health` command in the [Auto Scaling rolling updates](https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services/AutoScaling/AutoScalingRollingUpdates.yaml) sample template\.
 
 #### JSON<a name="aws-attribute-creationpolicy-example-1.json"></a>
 
@@ -153,7 +153,7 @@ LaunchConfig:
           /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource AutoScalingGroup --region ${AWS::Region}
 ```
 
-### WaitCondition<a name="w3ab2c21c23b7c13b4"></a>
+### WaitCondition<a name="w4ab1c21c23b7c13b4"></a>
 
 The following example shows how to add a creation policy to a wait condition\.
 

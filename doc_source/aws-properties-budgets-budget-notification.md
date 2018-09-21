@@ -55,4 +55,4 @@ The type of threshold for a notification\. Valid values are `PERCENTAGE ` and `A
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## See Also<a name="aws-properties-budgets-budget-notification-seealso"></a>
-+ [Notification](http://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_Notification.html) in the [AWS Billing and Cost Management API Reference](http://docs.aws.amazon.com/aws-cost-management/latest/APIReference/Welcome.html)\. 
++ [Notification](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_Notification.html) in the [AWS Billing and Cost Management API Reference](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/Welcome.html)\. 

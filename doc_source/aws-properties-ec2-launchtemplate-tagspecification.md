@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `ResourceType`  <a name="cfn-ec2-launchtemplate-tagspecification-resourcetype"></a>
 The type of resource to tag\. Currently, the resource types that support tagging on creation are `instance` and `volume`\.  
-For a list of valid values, see [LaunchTemplateTagSpecificationRequest](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateTagSpecificationRequest.html) in the *Amazon EC2 API Reference*  
+For a list of valid values, see [LaunchTemplateTagSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateTagSpecificationRequest.html) in the *Amazon EC2 API Reference*  
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
@@ -41,4 +41,4 @@ The tags to apply to the resource\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ec2-launchtemplate-tagspecification-seealso"></a>
-+ [LaunchTemplateTagSpecificationRequest](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateTagSpecificationRequest.html) in the *Amazon EC2 API Reference*
++ [LaunchTemplateTagSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateTagSpecificationRequest.html) in the *Amazon EC2 API Reference*

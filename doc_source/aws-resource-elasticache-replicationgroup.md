@@ -55,7 +55,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticache-replicationgroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElastiCache::ReplicationGroup"
+Type: AWS::ElastiCache::ReplicationGroup
 Properties: 
   [AtRestEncryptionEnabled](#cfn-elasticache-replicationgroup-atrestencryptionenabled): Boolean
   [AuthToken](#cfn-elasticache-replicationgroup-authtoken): String
@@ -89,7 +89,7 @@ Properties:
   [SnapshotRetentionLimit](#cfn-elasticache-replicationgroup-snapshotrentionlimit): Integer
   [SnapshottingClusterId](#cfn-elasticache-replicationgroup-snapshottingclusterid): String
   [SnapshotWindow](#cfn-elasticache-replicationgroup-snapshotwindow): String
-  [Tags](#cfn-elasticache-replicationgroup-tags)
+  [Tags](#cfn-elasticache-replicationgroup-tags):
     - Resource Tag
   [TransitEncryptionEnabled](#cfn-elasticache-replicationgroup-transitencryptionenabled): Boolean
 ```
@@ -115,7 +115,7 @@ For HIPAA compliance, you must specify `TransitEncryptionEnabled` as `true`, an 
 `AutomaticFailoverEnabled`  <a name="cfn-elasticache-replicationgroup-automaticfailoverenabled"></a>
 Indicates whether Multi\-AZ is enabled\. When Multi\-AZ is enabled, a read\-only replica is automatically promoted to a read\-write primary cluster if the existing primary cluster fails\. If you specify `true`, you must specify a value greater than `1` for the `NumCacheClusters` property\. By default, AWS CloudFormation sets the value to `true`\.  
 For Redis \(clustered mode enabled\) replication groups, you must enable automatic failover\.  
-For information about Multi\-AZ constraints, see [Replication with Multi\-AZ and Automatic Failover \(Redis\)](http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/AutoFailover.html) in the *Amazon ElastiCache User Guide*\.  
+For information about Multi\-AZ constraints, see [Replication with Multi\-AZ and Automatic Failover \(Redis\)](https://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/AutoFailover.html) in the *Amazon ElastiCache User Guide*\.  
 You cannot enable automatic failover for Redis versions earlier than 2\.8\.6 or for T1 cache node types\. Automatic failover is supported on T2 node types only if you are running Redis version 3\.2\.4 or later with cluster mode enabled\.
 If you specify the `PrimaryClusterId`, you can use only the following additional parameters:  
 + `AutomaticFailoverEnabled`
@@ -162,7 +162,7 @@ The name of a cache subnet group to use for this replication group\.
 
 `Engine`  <a name="cfn-elasticache-replicationgroup-engine"></a>
 The name of the cache engine to use for the cache clusters in this replication group\. Currently, you can specify only `redis`\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
@@ -183,7 +183,7 @@ If you specify the `PrimaryClusterId`, you can use only the following additional
 + `ReplicationGroupDescription`
 *Required*: No  
 *Type*: List of [Amazon ElastiCache ReplicationGroup NodeGroupConfiguration](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md)  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt) Update requires no interruption if the resource contains an `UseOnlineResharding` update policy set to `true`\. Update requires replacement if the resource does not contain an `UseOnlineResharding` update policy, or the policy is set to `false`\. For more information, see [UseOnlineResharding Policy](aws-attribute-updatepolicy.md#cfn-attributes-updatepolicy-useonlineresharding)\.
 
 `NotificationTopicArn`  <a name="cfn-elasticache-replicationgroup-notificationtopicarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service topic to which notifications are sent\.  
@@ -206,7 +206,7 @@ If you specify the `PrimaryClusterId`, you can use only the following additional
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `NumNodeGroups`  <a name="cfn-elasticache-replicationgroup-numnodegroups"></a>
-The number of node groups \(shards\) for this Redis \(clustered mode enabled\) replication group\. For Redis \(clustered mode disabled\), omit this property\.  
+The number of node groups \(shards\) for this Redis \(clustered mode enabled\) replication group\. For Redis \(clustered mode disabled\), either omit this property or set it to 1\.  
 If you specify the `PrimaryClusterId`, you can use only the following additional parameters:  
 + `AutomaticFailoverEnabled`
 + `NodeGroupConfiguration`
@@ -216,7 +216,7 @@ If you specify the `PrimaryClusterId`, you can use only the following additional
 + `ReplicationGroupDescription`
 *Required*: No  
 *Type*: Integer  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt) Update requires no interruption if the resource contains an `UseOnlineResharding` update policy set to `true`\. Update requires replacement if the resource does not contain an `UseOnlineResharding` update policy, or the policy is set to `false`\. For more information, see [UseOnlineResharding Policy](aws-attribute-updatepolicy.md#cfn-attributes-updatepolicy-useonlineresharding)\.
 
 `Port`  <a name="cfn-elasticache-replicationgroup-port"></a>
 The port number on which each member of the replication group accepts connections\.  
@@ -351,7 +351,8 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
 `ConfigurationEndPoint.Address`  
-The DNS hostname of the cache node\.
+The DNS hostname of the cache node\.  
+Redis \(cluster mode disabled\) replication groups don't have this attribute\. Therefore, `Fn::GetAtt` returns a value for this attribute only if the replication group is clustered\. Otherwise, `Fn::GetAtt` fails\.
 
 `ConfigurationEndPoint.Port`  
 The port number that the cache engine is listening on\.
@@ -407,7 +408,7 @@ The following example declares a replication group with two nodes and automatic 
 
 ```
 myReplicationGroup: 
-  Type: "AWS::ElastiCache::ReplicationGroup"
+  Type: AWS::ElastiCache::ReplicationGroup
   Properties: 
     ReplicationGroupDescription: "my description"
     NumCacheClusters: "2"

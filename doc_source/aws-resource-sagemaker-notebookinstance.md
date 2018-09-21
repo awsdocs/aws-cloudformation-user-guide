@@ -1,6 +1,6 @@
 # AWS::SageMaker::NotebookInstance<a name="aws-resource-sagemaker-notebookinstance"></a>
 
-The `AWS::SageMaker::NotebookInstance` resource Creates an Amazon SageMaker notebook instance\. A notebook instance is a machine learning \(ML\) compute instance running on a Jupyter notebook\. For more information, see [Using Notebook Instances](http://docs.aws.amazon.com/sagemaker/latest/dg/nbi.html) in the *Amazon SageMaker Developer Guide*\. 
+The `AWS::SageMaker::NotebookInstance` resource Creates an Amazon SageMaker notebook instance\. A notebook instance is a machine learning \(ML\) compute instance running on a Jupyter notebook\. For more information, see [Using Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi.html) in the *Amazon SageMaker Developer Guide*\. 
 
 **Topics**
 + [Syntax](#aws-resource-sagemaker-notebookinstance-syntax)
@@ -42,7 +42,6 @@ Properties:
   [NotebookInstanceName](#cfn-sagemaker-notebookinstance-notebookinstancename): String
   [InstanceType](#cfn-sagemaker-notebookinstance-instancetype): String
   [LifecycleConfigName](#cfn-sagemaker-notebookinstance-lifecycleconfigname): String
-  [SecurityGroupIds](#cfn-sagemaker-notebookinstance-securitygroupids): String
   [SecurityGroupIds](#cfn-sagemaker-notebookinstance-securitygroupids): 
     - String
   [RoleArn](#cfn-sagemaker-notebookinstance-rolearn): String
@@ -83,7 +82,7 @@ The type of ML compute instance to launch for the notebook instance\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `LifecycleConfigName`  <a name="cfn-sagemaker-notebookinstance-lifecycleconfigname"></a>
-The name of a lifecycle configuration to associate with the notebook instance\. For information about lifestyle configurations, see [Customize a Notebook Instance](http://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html) in the *Amazon SageMaker Developer Guide*\.  
+The name of a lifecycle configuration to associate with the notebook instance\. For information about lifestyle configurations, see [Customize a Notebook Instance](https://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html) in the *Amazon SageMaker Developer Guide*\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
@@ -95,7 +94,7 @@ The VPC security group IDs, in the form sg\-xxxxxxxx\. The security groups must 
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `RoleArn`  <a name="cfn-sagemaker-notebookinstance-rolearn"></a>
-When you send any requests to AWS resources from the notebook instance, Amazon SageMaker assumes this role to perform tasks on your behalf\. You must grant this role necessary permissions so Amazon SageMaker can perform these tasks\. The policy must allow the Amazon SageMaker service principal \(sagemaker\.amazonaws\.com\) permissions to assume this role\. For more information, see [Amazon SageMaker Roles](http://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html)\.  
+When you send any requests to AWS resources from the notebook instance, Amazon SageMaker assumes this role to perform tasks on your behalf\. You must grant this role necessary permissions so Amazon SageMaker can perform these tasks\. The policy must allow the Amazon SageMaker service principal \(sagemaker\.amazonaws\.com\) permissions to assume this role\. For more information, see [Amazon SageMaker Roles](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html)\.  
  *Required*: Yes  
  *Type*:   
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

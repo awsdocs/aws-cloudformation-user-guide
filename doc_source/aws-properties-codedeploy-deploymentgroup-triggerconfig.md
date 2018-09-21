@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-triggerconfig-properties"></a>
 
-For more information about each property, including constraints and valid values, see [TriggerConfig](http://docs.aws.amazon.com/codedeploy/latest/APIReference/API_TriggerConfig.html) in the *AWS CodeDeploy API Reference*\.
+For more information about each property, including constraints and valid values, see [TriggerConfig](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_TriggerConfig.html) in the *AWS CodeDeploy API Reference*\.
 
 `TriggerEvents`  <a name="cfn-codedeploy-deploymentgroup-triggerconfig-triggerevents"></a>
 The event type or types that trigger notifications\.  

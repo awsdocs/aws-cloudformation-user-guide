@@ -1,6 +1,6 @@
 # Creating a Stack<a name="using-cfn-cli-creating-stack"></a>
 
-To create a stack you run the `[aws cloudformation create\-stack](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html)` command\. You must provide the stack name, the location of a valid template, and any input parameters\.
+To create a stack you run the `[aws cloudformation create\-stack](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html)` command\. You must provide the stack name, the location of a valid template, and any input parameters\.
 
 Parameters are separated with a space and the key names are case sensitive\. If you mistype a parameter key name when you run `aws cloudformation create-stack`, AWS CloudFormation doesn't create the stack and reports that the template doesn't contain that parameter\.
 
@@ -13,9 +13,8 @@ By default, `aws cloudformation describe-stacks` returns parameter values\. To p
 The following example creates the `myteststack` stack:
 
 ```
-PROMPT> aws cloudformation create-stack --stack-name myteststack --template-body file:///home/testuser/mytemplate.json --parameters ParameterKey=Parm1,ParameterValue=test1 ParameterKey=Parm2,ParameterValue=test2
-
-{
-   "StackId" : "arn:aws:cloudformation:us-west-2:123456789012:stack/myteststack/330b0120-1771-11e4-af37-50ba1b98bea6"
-}
+1. PROMPT> aws cloudformation create-stack --stack-name myteststack --template-body file:///home/testuser/mytemplate.json --parameters ParameterKey=Parm1,ParameterValue=test1 ParameterKey=Parm2,ParameterValue=test2
+2. {
+3.   "StackId" : "arn:aws:cloudformation:us-west-2:123456789012:stack/myteststack/330b0120-1771-11e4-af37-50ba1b98bea6"
+4. }
 ```

@@ -63,7 +63,7 @@ The ID of the AWS OpsWorks stack that AWS OpsWorks registers the volume to\.
 
 ## Return Value<a name="aws-resource-opsworks-volume-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d943c11b2"></a>
+### Ref<a name="w4ab1c21c10d974c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the AWS OpsWorks volume ID, such as `1ab23cd4-92ff-4501-b37c-example`\.
 

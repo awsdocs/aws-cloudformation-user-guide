@@ -42,7 +42,7 @@ If you want to use a custom name, specify a name property for that resource in y
 
 ```
 myDynamoDBTable: 
-  Type: "AWS::DynamoDB::Table"
+  Type: AWS::DynamoDB::Table
   Properties: 
     KeySchema: 
       HashKeyElement: 
@@ -57,7 +57,7 @@ myDynamoDBTable:
     TableName: "SampleTable"
 ```
 
-## Supported Resources<a name="w3ab2c21c14e1541c13"></a>
+## Supported Resources<a name="w4ab1c21c14e1644c13"></a>
 
 The following resource types support custom names:
 + [AWS::ApiGateway::ApiKey](aws-resource-apigateway-apikey.md)
@@ -73,6 +73,8 @@ The following resource types support custom names:
 + [AWS::Config::DeliveryChannel](aws-resource-config-deliverychannel.md)
 + [AWS::Config::ConfigurationRecorder](aws-resource-config-configurationrecorder.md)
 + [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md)
++ [AWS::ElasticLoadBalancingV2::LoadBalancer](aws-resource-elasticloadbalancingv2-loadbalancer.md)
++ [AWS::ElasticLoadBalancingV2::TargetGroup](aws-resource-elasticloadbalancingv2-targetgroup.md)
 + [AWS::EC2::SecurityGroup](aws-properties-ec2-security-group.md)
 + [AWS::ElastiCache::CacheCluster](aws-properties-elasticache-cache-cluster.md)
 + [AWS::ECR::Repository](aws-resource-ecr-repository.md)

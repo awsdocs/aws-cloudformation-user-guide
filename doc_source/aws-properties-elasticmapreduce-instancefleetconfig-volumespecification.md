@@ -36,13 +36,13 @@ The number of I/O operations per second \(IOPS\) that the volume supports\.
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `SizeInGB`  <a name="cfn-elasticmapreduce-instancefleetconfig-volumespecification-sizeingb"></a>
-The volume size, in gibibytes \(GiB\)\. For valid values, see [VolumeSpecification](http://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_InstanceTypeConfig.html) in the *Amazon EMR API Reference*\.  
+The volume size, in gibibytes \(GiB\)\. For valid values, see [VolumeSpecification](https://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_InstanceTypeConfig.html) in the *Amazon EMR API Reference*\.  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `VolumeType`  <a name="cfn-elasticmapreduce-instancefleetconfig-volumespecification-volumetype"></a>
-The volume type\. For valid values, see [VolumeSpecification](http://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_InstanceTypeConfig.html) in the *Amazon EMR API Reference*\.  
+The volume type\. For valid values, see [VolumeSpecification](https://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_InstanceTypeConfig.html) in the *Amazon EMR API Reference*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

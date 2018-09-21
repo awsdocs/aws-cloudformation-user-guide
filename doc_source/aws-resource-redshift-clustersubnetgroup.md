@@ -4,9 +4,9 @@ Creates an Amazon Redshift subnet group\. You must provide a list of one or more
 
 **Topics**
 + [Syntax](#aws-resource-redshift-clustersubnetgroup-syntax)
-+ [Properties](#w3ab2c21c10e1010b9)
-+ [Return Values](#w3ab2c21c10e1010c11)
-+ [Example](#w3ab2c21c10e1010c13)
++ [Properties](#w4ab1c21c10e1040b9)
++ [Return Values](#w4ab1c21c10e1040c11)
++ [Example](#w4ab1c21c10e1040c13)
 
 ## Syntax<a name="aws-resource-redshift-clustersubnetgroup-syntax"></a>
 
@@ -37,7 +37,7 @@ Properties:
     - Resource Tag
 ```
 
-## Properties<a name="w3ab2c21c10e1010b9"></a>
+## Properties<a name="w4ab1c21c10e1040b9"></a>
 
 `Description`  <a name="cfn-redshift-clustersubnetgroup-description"></a>
 A description of the subnet group\.  
@@ -57,9 +57,9 @@ Specifies an arbitrary set of tags \(key–value pairs\) to associate with this 
 *Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10e1010c11"></a>
+## Return Values<a name="w4ab1c21c10e1040c11"></a>
 
-### Ref<a name="w3ab2c21c10e1010c11b2"></a>
+### Ref<a name="w4ab1c21c10e1040c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -71,7 +71,7 @@ For the Amazon Redshift cluster subnet group `myClusterSubnetGroup`, `Ref` retur
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10e1010c13"></a>
+## Example<a name="w4ab1c21c10e1040c13"></a>
 
 The following example specifies one subnet for an Amazon Redshift cluster subnet group\.
 

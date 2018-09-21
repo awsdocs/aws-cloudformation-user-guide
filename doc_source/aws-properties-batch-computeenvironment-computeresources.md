@@ -1,6 +1,6 @@
 # AWS Batch ComputeEnvironment ComputeResources<a name="aws-properties-batch-computeenvironment-computeresources"></a>
 
-The `ComputeResources` property type specifies details of the compute resources managed by the compute environment\. This parameter is required for managed compute environments\. For more information, see [ Compute Environments](http://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.
+The `ComputeResources` property type specifies details of the compute resources managed by the compute environment\. This parameter is required for managed compute environments\. For more information, see [ Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.
 
 `ComputeResources` is a property of the [AWS::Batch::ComputeEnvironment](aws-resource-batch-computeenvironment.md) resource\.
 
@@ -51,7 +51,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-batch-computeenvironment-computeresources-properties"></a>
 
-For more information about each property, see [ ComputeResource](http://docs.aws.amazon.com/batch/latest/APIReference/API_ComputeResource.html) in the *AWS Batch API Reference*\.
+For more information about each property, see [ ComputeResource](https://docs.aws.amazon.com/batch/latest/APIReference/API_ComputeResource.html) in the *AWS Batch API Reference*\.
 
 `SpotIamFleetRole`  <a name="cfn-batch-computeenvironment-computeresources-spotiamfleetrole"></a>
 The Amazon Resource Name \(ARN\) of the Amazon EC2 Spot Fleet IAM role applied to a `SPOT` compute environment\.  

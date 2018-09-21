@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-glue-connection-physicalconnectionrequirements-properties"></a>
 
-For more information, see [PhysicalConnectionRequirements Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-connections.html#aws-glue-api-catalog-connections-PhysicalConnectionRequirements) in the *AWS Glue Developer Guide*\.
+For more information, see [PhysicalConnectionRequirements Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-connections.html#aws-glue-api-catalog-connections-PhysicalConnectionRequirements) in the *AWS Glue Developer Guide*\.
 
 `AvailabilityZone`  <a name="cfn-glue-connection-physicalconnectionrequirements-availabilityzone"></a>
 The connection's Availability Zone\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  

@@ -47,4 +47,4 @@ Set to TRUE to use Amazon Cognito credentials with this data source\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-appsync-datasource-dynamodbconfig-seealso"></a>
-+ [ DynamodbDataSourceConfig](http://docs.aws.amazon.com/appsync/latest/APIReference/API_DynamodbDataSourceConfig.html) operation in the *AWS AppSync API Reference*
++ [ DynamodbDataSourceConfig](https://docs.aws.amazon.com/appsync/latest/APIReference/API_DynamodbDataSourceConfig.html) operation in the *AWS AppSync API Reference*

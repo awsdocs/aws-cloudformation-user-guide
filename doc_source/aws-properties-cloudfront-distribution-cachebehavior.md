@@ -2,7 +2,7 @@
 
 `CacheBehavior` is a property of the [DistributionConfig](aws-properties-cloudfront-distribution-distributionconfig.md) property that describes the Amazon CloudFront \(CloudFront\) cache behavior when the requested URL matches a pattern\.
 
-## Syntax<a name="w3ab2c21c14d244b5"></a>
+## Syntax<a name="w4ab1c21c14d272b5"></a>
 
 ### JSON<a name="aws-properties-cloudfront-distribution-cachebehavior-syntax.json"></a>
 
@@ -12,6 +12,7 @@
   "[CachedMethods](#cfn-cloudfront-distribution-cachebehavior-cachedmethods)" : [ String, ... ],
   "[Compress](#cfn-cloudfront-distribution-cachebehavior-compress)" : Boolean,
   "[DefaultTTL](#cfn-cloudfront-distribution-cachebehavior-defaultttl)" : Number,
+  "[FieldLevelEncryptionId](#cfn-cloudfront-distribution-cachebehavior-fieldlevelencryptionid)" : String,
   "[ForwardedValues](#cfn-cloudfront-distribution-cachebehavior-forwardedvalues)" : ForwardedValues,
   "[LambdaFunctionAssociations](#cfn-cloudfront-distribution-cachebehavior-lambdafunctionassociations)" : [ [*LambdaFunctionAssociation*](aws-properties-cloudfront-distribution-lambdafunctionassociation.md), ... ]
   "[MaxTTL](#cfn-cloudfront-distribution-cachebehavior-maxttl)" : Number,
@@ -33,6 +34,7 @@
   - String
 [Compress](#cfn-cloudfront-distribution-cachebehavior-compress): Boolean
 [DefaultTTL](#cfn-cloudfront-distribution-cachebehavior-defaultttl): Number
+[FieldLevelEncryptionId](#cfn-cloudfront-distribution-cachebehavior-fieldlevelencryptionid) : String,
 [ForwardedValues](#cfn-cloudfront-distribution-cachebehavior-forwardedvalues):
   ForwardedValues
 [LambdaFunctionAssociations](#cfn-cloudfront-distribution-cachebehavior-lambdafunctionassociations): 
@@ -47,10 +49,10 @@
 [ViewerProtocolPolicy](#cfn-cloudfront-distribution-cachebehavior-viewerprotocolpolicy): String
 ```
 
-## Properties<a name="w3ab2c21c14d244b7"></a>
+## Properties<a name="w4ab1c21c14d272b7"></a>
 
 **Note**  
-For more information about the constraints and valid values of each property, see the [CacheBehavior](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CacheBehavior.html) data type in the *Amazon CloudFront API Reference*\.
+For more information about the constraints and valid values of each property, see the [CacheBehavior](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CacheBehavior.html) data type in the *Amazon CloudFront API Reference*\.
 
 `AllowedMethods`  <a name="cfn-cloudfront-distribution-cachebehavior-allowedmethods"></a>
 HTTP methods that CloudFront processes and forwards to your Amazon S3 bucket or your custom origin\. You can specify `["HEAD", "GET"]`, `["GET", "HEAD", "OPTIONS"]`, or `["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]`\. If you don't specify a value, AWS CloudFormation specifies `["HEAD", "GET"]`\.  
@@ -63,7 +65,7 @@ HTTP methods for which CloudFront caches responses\. You can specify `["HEAD", "
 *Type*: List of String values
 
 `Compress`  <a name="cfn-cloudfront-distribution-cachebehavior-compress"></a>
-Indicates whether CloudFront automatically compresses certain files for this cache behavior\. For more information, see [Serving Compressed Files](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/ServingCompressedFiles.html) in the *Amazon CloudFront Developer Guide*\.  
+Indicates whether CloudFront automatically compresses certain files for this cache behavior\. For more information, see [Serving Compressed Files](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/ServingCompressedFiles.html) in the *Amazon CloudFront Developer Guide*\.  
 *Required*: No  
 *Type*: Boolean
 
@@ -72,6 +74,11 @@ The default time in seconds that objects stay in CloudFront caches before CloudF
 By default, AWS CloudFormation specifies `86400` seconds \(one day\)\. If the value of the `MinTTL` property is greater than the default value, CloudFront uses the minimum Time to Live \(TTL\) value\.  
 *Required*: No  
 *Type*: Number
+
+`FieldLevelEncryptionId`  <a name="cfn-cloudfront-distribution-cachebehavior-fieldlevelencryptionid"></a>
+The value of ID for the field\-level encryption configuration that you want CloudFront to use for encrypting specific fields of data for a cache behavior in your distribution\. The default is an empty string\.  
+*Required*: No  
+*Type*: String
 
 `ForwardedValues`  <a name="cfn-cloudfront-distribution-cachebehavior-forwardedvalues"></a>
 Specifies how CloudFront handles query strings or cookies\.  
@@ -117,6 +124,6 @@ A list of AWS accounts that can create signed URLs in order to access private co
 *Type*: List of String values
 
 `ViewerProtocolPolicy`  <a name="cfn-cloudfront-distribution-cachebehavior-viewerprotocolpolicy"></a>
-The protocol that users can use to access the files in the origin that you specified in the `TargetOriginId` property when a request matches the value of the `PathPattern` property\. For more information about the valid values, see the `ViewerProtocolPolicy` content for the [CacheBehavior](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CacheBehavior.html) data type in the *Amazon CloudFront API Reference*\.  
+The protocol that users can use to access the files in the origin that you specified in the `TargetOriginId` property when a request matches the value of the `PathPattern` property\. For more information about the valid values, see the `ViewerProtocolPolicy` content for the [CacheBehavior](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CacheBehavior.html) data type in the *Amazon CloudFront API Reference*\.  
 *Required*: Yes  
 *Type*: String

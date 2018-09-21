@@ -1,6 +1,6 @@
 # AWS::AppSync::Resolver<a name="aws-resource-appsync-resolver"></a>
 
-The `AWS::AppSync::Resolver` resource defines the logical GraphQL resolver that you will attach to fields in a schema\. Request and Response templates for resolvers are written in Apache Velocity Template Language \(VTL\) format\. More information on resolvers can be found in the [http://docs.aws.amazon.com/appsync/latest/devguide/resolver-mapping-template-reference.html](http://docs.aws.amazon.com/appsync/latest/devguide/resolver-mapping-template-reference.html)\. 
+The `AWS::AppSync::Resolver` resource defines the logical GraphQL resolver that you will attach to fields in a schema\. Request and Response templates for resolvers are written in Apache Velocity Template Language \(VTL\) format\. More information on resolvers can be found in the [https://docs.aws.amazon.com/appsync/latest/devguide/resolver-mapping-template-reference.html](https://docs.aws.amazon.com/appsync/latest/devguide/resolver-mapping-template-reference.html)\. 
 
 **Topics**
 + [Syntax](#aws-resource-appsync-resolver-syntax)
@@ -195,7 +195,7 @@ Parameters:
     Type: String
 Resources:
   Resolver:
-    Type: "AWS::AppSync::Resolver"
+    Type: AWS::AppSync::Resolver
     Properties:
       ApiId:
 	Ref: graphQlApiId
@@ -212,4 +212,4 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-appsync-resolver-seealso"></a>
-+ [ CreateResolver](http://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateResolver.html) operation in the *AWS AppSync API Reference*
++ [ CreateResolver](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateResolver.html) operation in the *AWS AppSync API Reference*

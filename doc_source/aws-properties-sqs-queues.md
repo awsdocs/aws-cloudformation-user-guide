@@ -8,8 +8,8 @@ For more information about creating FIFO \(first\-in\-first\-out\) queues, see t
 + [Syntax](#aws-resource-sqs-queues-syntax)
 + [Properties](#aws-properties-sqs-queues-prop)
 + [Return Values](#aws-properties-sqs-queues-ref)
-+ [Examples](#w3ab2c21c10e1138c15)
-+ [See Also](#w3ab2c21c10e1138c17)
++ [Examples](#w4ab1c21c10e1168c15)
++ [See Also](#w4ab1c21c10e1168c17)
 
 ## Syntax<a name="aws-resource-sqs-queues-syntax"></a>
 
@@ -31,6 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[QueueName](#aws-sqs-queue-name)": String,
       "[ReceiveMessageWaitTimeSeconds](#aws-sqs-queue-receivemsgwaittime)": Integer,
       "[RedrivePolicy](#aws-sqs-queue-redrive)": RedrivePolicy,
+      "[Tags](#cfn-sqs-queue-tags)" : [ Resource Tag, ... ],
       "[VisibilityTimeout](#aws-sqs-queue-visibilitytimeout)": Integer
    }
 }
@@ -39,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-sqs-queues-syntax.yaml"></a>
 
 ```
-Type: "AWS::SQS::Queue"
+Type: AWS::SQS::Queue
 Properties:
   [ContentBasedDeduplication](#cfn-sqs-queue-contentbaseddeduplication): Boolean
   [DelaySeconds](#aws-sqs-queue-delayseconds): Integer
@@ -52,13 +53,15 @@ Properties:
   [ReceiveMessageWaitTimeSeconds](#aws-sqs-queue-receivemsgwaittime): Integer
   [RedrivePolicy](#aws-sqs-queue-redrive):
     RedrivePolicy
+  [Tags](#cfn-sqs-queue-tags):
+    Resource Tag 
   [VisibilityTimeout](#aws-sqs-queue-visibilitytimeout): Integer
 ```
 
 ## Properties<a name="aws-properties-sqs-queues-prop"></a>
 
 `ContentBasedDeduplication`  <a name="cfn-sqs-queue-contentbaseddeduplication"></a>
-For first\-in\-first\-out \(FIFO\) queues, specifies whether to enable content\-based deduplication\. During the deduplication interval, Amazon SQS treats messages that are sent with identical content as duplicates and delivers only one copy of the message\. For more information, see the `ContentBasedDeduplication` attribute for the [CreateQueue](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_CreateQueue.html) action in the *Amazon Simple Queue Service API Reference*\.  
+For first\-in\-first\-out \(FIFO\) queues, specifies whether to enable content\-based deduplication\. During the deduplication interval, Amazon SQS treats messages that are sent with identical content as duplicates and delivers only one copy of the message\. For more information, see the `ContentBasedDeduplication` attribute for the [CreateQueue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_CreateQueue.html) action in the *Amazon Simple Queue Service API Reference*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -70,20 +73,20 @@ The time in seconds that the delivery of all messages in the queue is delayed\. 
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `FifoQueue`  <a name="cfn-sqs-queue-fifoqueue"></a>
-Indicates whether this queue is a FIFO queue\. For more information, see [FIFO \(First\-In\-First\-Out\) Queues](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html) in the *Amazon Simple Queue Service Developer Guide*\. The default value is `false`\.  
+If set to `true`, creates a FIFO queue\. If you don't specify this property, Amazon SQS creates a standard queue\. For more information, see [FIFO \(First\-In\-First\-Out\) Queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html) in the *Amazon Simple Queue Service Developer Guide*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `KmsMasterKeyId`  <a name="aws-sqs-queue-kmsmasterkeyid"></a>
-The ID of an AWS managed customer master key \(CMK\) for Amazon SQS or a custom CMK\. To use the AWS managed CMK for Amazon SQS, specify the alias `alias/aws/sqs`\. For more information, see [CreateQueue](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_CreateQueue.html) in the *Amazon Simple Queue Service API Reference*, [Protecting Data Using Server\-Side Encryption \(SSE\) and AWS KMS](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html) in the *Amazon Simple Queue Service Developer Guide*, or **Customer Master Keys** in the [AWS Key Management Service Best Practices](https://d0.awsstatic.com/whitepapers/aws-kms-best-practices.pdf) whitepaper\.  
+The ID of an AWS managed customer master key \(CMK\) for Amazon SQS or a custom CMK\. To use the AWS managed CMK for Amazon SQS, specify the alias `alias/aws/sqs`\. For more information, see [CreateQueue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_CreateQueue.html) in the *Amazon Simple Queue Service API Reference*, [Protecting Data Using Server\-Side Encryption \(SSE\) and AWS KMS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html) in the *Amazon Simple Queue Service Developer Guide*, or **Customer Master Keys** in the [AWS Key Management Service Best Practices](https://d0.awsstatic.com/whitepapers/aws-kms-best-practices.pdf) whitepaper\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `KmsDataKeyReusePeriodSeconds`  <a name="aws-sqs-queue-kmsdatakeyreuseperiodseconds"></a>
 The length of time in seconds that Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again\. The value must be an integer between 60 \(1 minute\) and 86,400 \(24 hours\)\. The default is 300 \(5 minutes\)\.  
-A shorter time period provides better security, but results in more calls to AWS KMS, which might incur charges after Free Tier\. For more information, see [ How Does the Data Key Reuse Period Work?](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html#sqs-how-does-the-data-key-reuse-period-work) in the *Amazon Simple Queue Service Developer Guide*\.
+A shorter time period provides better security, but results in more calls to AWS KMS, which might incur charges after Free Tier\. For more information, see [ How Does the Data Key Reuse Period Work?](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html#sqs-how-does-the-data-key-reuse-period-work) in the *Amazon Simple Queue Service Developer Guide*\.
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -109,7 +112,7 @@ If you specify a name, you cannot perform updates that require replacement of th
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ReceiveMessageWaitTimeSeconds`  <a name="aws-sqs-queue-receivemsgwaittime"></a>
-Specifies the duration, in seconds, that the `ReceiveMessage` action call waits until a message is in the queue in order to include it in the response, as opposed to returning an empty response if a message isn't yet available\. You can specify an integer from `1` to `20`\. The short polling is used as the default or when you specify `0` for this property\. For more information, see [Amazon SQS Long Poll](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-long-polling.html)\.  
+Specifies the duration, in seconds, that the `ReceiveMessage` action call waits until a message is in the queue in order to include it in the response, as opposed to returning an empty response if a message isn't yet available\. You can specify an integer from `1` to `20`\. The short polling is used as the default or when you specify `0` for this property\. For more information, see [Amazon SQS Long Poll](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-long-polling.html)\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -118,6 +121,12 @@ Specifies the duration, in seconds, that the `ReceiveMessage` action call waits 
 Specifies an existing dead letter queue to receive messages after the source queue \(this queue\) fails to process a message a specified number of times\.  
 *Required*: No  
 *Type*: [Amazon SQS RedrivePolicy](aws-properties-sqs-queues-redrivepolicy.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`Tags`  <a name="cfn-sqs-queue-tags"></a>
+The tags that you want to attach to this queue\.  
+*Required*: No  
+*Type*: A list of [resource tags](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `VisibilityTimeout`  <a name="aws-sqs-queue-visibilitytimeout"></a>
@@ -130,13 +139,13 @@ For more information about Amazon SQS queue visibility timeouts, see [Visibility
 
 ## Return Values<a name="aws-properties-sqs-queues-ref"></a>
 
-### Ref<a name="w3ab2c21c10e1138c13b2"></a>
+### Ref<a name="w4ab1c21c10e1168c13b2"></a>
 
 The `AWS::SQS::Queue` type returns the queue URL\. For example: `https://sqs.``us-east-2``.amazonaws.com/123456789012/aa4-MyQueue-Z5NOSZO2PZE9`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10e1138c13b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10e1168c13b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -147,9 +156,9 @@ Returns the Amazon Resource Name \(ARN\) of the queue\. For example: `arn:aws:sq
 Returns the queue name\. For example:  
 `mystack-myqueue-1VF9BKQH5BJVI`
 
-## Examples<a name="w3ab2c21c10e1138c15"></a>
+## Examples<a name="w4ab1c21c10e1168c15"></a>
 
-### SQS Queue with Cloudwatch Alarms<a name="w3ab2c21c10e1138c15b2"></a>
+### SQS Queue with Cloudwatch Alarms<a name="w4ab1c21c10e1168c15b2"></a>
 
 #### JSON<a name="aws-resource-sqs-queues-example1.json"></a>
 
@@ -236,11 +245,11 @@ Parameters:
     Type: "String"
 Resources: 
   MyQueue: 
-    Type: "AWS::SQS::Queue"
+    Type: AWS::SQS::Queue
     Properties: 
       QueueName: "SampleQueue"
   AlarmTopic: 
-    Type: "AWS::SNS::Topic"
+    Type: AWS::SNS::Topic
     Properties: 
       Subscription: 
         - 
@@ -248,7 +257,7 @@ Resources:
             Ref: "AlarmEmail"
           Protocol: "email"
   QueueDepthAlarm: 
-    Type: "AWS::CloudWatch::Alarm"
+    Type: AWS::CloudWatch::Alarm
     Properties: 
       AlarmDescription: "Alarm if queue depth grows beyond 10 messages"
       Namespace: "AWS/SQS"
@@ -290,7 +299,7 @@ Outputs:
         - "QueueName"
 ```
 
-### SQS Queue with a Dead Letter Queue<a name="w3ab2c21c10e1138c15b4"></a>
+### SQS Queue with a Dead Letter Queue<a name="w4ab1c21c10e1168c15b4"></a>
 
 The following sample creates a source queue and a dead letter queue\. Because the source queue specifies the dead letter queue in its redrive policy, the source queue is dependent on the creation of the dead letter queue\.
 
@@ -342,7 +351,7 @@ The following sample creates a source queue and a dead letter queue\. Because th
 AWSTemplateFormatVersion: "2010-09-09"
 Resources: 
   MySourceQueue: 
-    Type: "AWS::SQS::Queue"
+    Type: AWS::SQS::Queue
     Properties: 
       RedrivePolicy: 
         deadLetterTargetArn: 
@@ -351,7 +360,7 @@ Resources:
             - "Arn"
         maxReceiveCount: 5
   MyDeadLetterQueue: 
-    Type: "AWS::SQS::Queue"
+    Type: AWS::SQS::Queue
 Outputs: 
   SourceQueueURL: 
     Description: "URL of the source queue"
@@ -375,6 +384,6 @@ Outputs:
         - "Arn"
 ```
 
-## See Also<a name="w3ab2c21c10e1138c17"></a>
-+ [CreateQueue](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/Query_QueryCreateQueue.html) in the *Amazon Simple Queue Service API Reference*
+## See Also<a name="w4ab1c21c10e1168c17"></a>
++ [CreateQueue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_CreateQueue.html) in the *Amazon Simple Queue Service API Reference*
 + [What is Amazon Simple Queue Service?](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/Welcome.html) in the *Amazon Simple Queue Service Developer Guide*

@@ -7,7 +7,7 @@ Creates a subnet in an existing VPC\.
 + [Properties](#aws-resource-ec2-subnet-properties)
 + [Return Values](#aws-resource-ec2-subnet-returnvalues)
 + [Example](#aws-resource-ec2-subnet-examples)
-+ [More Info](#w3ab2c21c10d484c15)
++ [More Info](#w4ab1c21c10d495c15)
 
 ## Syntax<a name="aws-resource-ec2-subnet-syntax"></a>
 
@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-subnet-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::Subnet"
+Type: AWS::EC2::Subnet
 Properties:
   [AssignIpv6AddressOnCreation](#cfn-ec2-subnet-assignipv6addressoncreation): Boolean
   [AvailabilityZone](#cfn-ec2-subnet-availabilityzone): String
@@ -167,6 +167,6 @@ Resources:
         Value: bar
 ```
 
-## More Info<a name="w3ab2c21c10d484c15"></a>
+## More Info<a name="w4ab1c21c10d495c15"></a>
 + [CreateSubnet](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateSubnet.html) in the *Amazon EC2 API Reference*
 + [Using Tags](http://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/Using_Tags.html) in the *Amazon Elastic Compute Cloud User Guide*

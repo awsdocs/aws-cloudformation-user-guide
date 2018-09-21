@@ -1,6 +1,6 @@
 # AWS::Cloud9::EnvironmentEC2<a name="aws-resource-cloud9-environmentec2"></a>
 
-The `AWS::Cloud9::EnvironmentEC2` resource creates an Amazon EC2 development environment in AWS Cloud9\. For more information, see [Creating an Environment](http://docs.aws.amazon.com/cloud9/latest/user-guide/create-environment.html) in the *AWS Cloud9 User Guide*\. 
+The `AWS::Cloud9::EnvironmentEC2` resource creates an Amazon EC2 development environment in AWS Cloud9\. For more information, see [Creating an Environment](https://docs.aws.amazon.com/cloud9/latest/user-guide/create-environment.html) in the *AWS Cloud9 User Guide*\. 
 
 **Topics**
 + [Syntax](#aws-resource-cloud9-environmentec2-syntax)
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cloud9-environmentec2-syntax.yaml"></a>
 
 ```
-Type: "AWS::Cloud9::EnvironmentEC2"
+Type: AWS::Cloud9::EnvironmentEC2
 Properties:
   [Repositories](#cfn-cloud9-environmentec2-repositories): 
     - [*Repository*](aws-properties-cloud9-environmentec2-repository.md)

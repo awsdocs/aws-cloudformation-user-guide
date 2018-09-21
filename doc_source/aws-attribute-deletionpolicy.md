@@ -40,7 +40,7 @@ Resources:
     DeletionPolicy: Retain
 ```
 
-## DeletionPolicy Options<a name="w3ab2c21c23c11c21"></a>
+## DeletionPolicy Options<a name="w4ab1c21c23c11c21"></a>
 
 Delete  
 AWS CloudFormation deletes the resource and all its content if applicable during stack deletion\. You can add this deletion policy to any resource type\. By default, if you don't specify a DeletionPolicy, AWS CloudFormation deletes your resources\. However, be aware of the following considerations:  

@@ -45,8 +45,8 @@ Unique description of your API Key\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Expires`  <a name="cfn-appsync-apikey-expires"></a>
-Expiration time of the API Key in seconds \(using Unix Epoch time\), with a minimum of 1 day and a maximum of 365 days\.  
- *Required*: Yes  
+Expiration time of the API Key in seconds \(using Unix Epoch time\), with a minimum of 1 day and a maximum of 365 days\. The default value is 7 days\.  
+ *Required*: No  
  *Type*: Number  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
@@ -128,7 +128,7 @@ Parameters:
     Type: Number
 Resources:
   ApiKey:
-    Type: "AWS::AppSync::ApiKey"
+    Type: AWS::AppSync::ApiKey
     Properties:
       ApiId:
 	Ref: graphQlApiId
@@ -139,4 +139,4 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-appsync-apikey-seealso"></a>
-+ [ CreateApiKey](http://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateApiKey.html) operation in the *AWS AppSync API Reference*
++ [ CreateApiKey](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateApiKey.html) operation in the *AWS AppSync API Reference*

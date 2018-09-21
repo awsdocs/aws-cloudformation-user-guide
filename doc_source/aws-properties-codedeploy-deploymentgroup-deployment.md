@@ -2,7 +2,7 @@
 
 `Deployment` is a property of the [AWS::CodeDeploy::DeploymentGroup](aws-resource-codedeploy-deploymentgroup.md) resource that specifies an AWS CodeDeploy application revision to be deployed to instances in the deployment group\. If you specify an application revision, your target revision will be deployed as soon as the provisioning process is complete\.
 
-## Syntax<a name="w3ab2c21c14d399b5"></a>
+## Syntax<a name="w4ab1c21c14d433b5"></a>
 
 ### JSON<a name="aws-properties-codedeploy-deploymentgroup-deployment-syntax.json"></a>
 
@@ -23,7 +23,7 @@
   Revision
 ```
 
-## Properties<a name="w3ab2c21c14d399b7"></a>
+## Properties<a name="w4ab1c21c14d433b7"></a>
 
 `Description`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-description"></a>
 A description about this deployment\.  

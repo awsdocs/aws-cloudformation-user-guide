@@ -6,8 +6,8 @@ The AWS::ElastiCache::CacheCluster type creates an Amazon ElastiCache cache clus
 + [Syntax](#aws-resource-elasticache-cachecluster-syntax)
 + [Properties](#aws-properties-elasticache-cache-cluster-prop)
 + [Return Values](#aws-properties-elasticache-cache-cluster-ref)
-+ [Template Snippets](#w3ab2c21c10d584c13)
-+ [See Also](#w3ab2c21c10d584c15)
++ [Template Snippets](#w4ab1c21c10d603c13)
++ [See Also](#w4ab1c21c10d603c15)
 
 ## Syntax<a name="aws-resource-elasticache-cachecluster-syntax"></a>
 
@@ -48,7 +48,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticache-cachecluster-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElastiCache::CacheCluster"
+Type: AWS::ElastiCache::CacheCluster
 Properties:
   [AutoMinorVersionUpgrade](#cfn-elasticache-cachecluster-autominorversionupgrade): Boolean
   [AZMode](#cfn-elasticache-cachecluster-azmode): String
@@ -80,7 +80,7 @@ Properties:
 
 ## Properties<a name="aws-properties-elasticache-cache-cluster-prop"></a>
 
-For valid values, see [CreateCacheCluster](http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheCluster.html) in the *Amazon ElastiCache API Reference*\.
+For valid values, see [CreateCacheCluster](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheCluster.html) in the *Amazon ElastiCache API Reference*\.
 
 `AutoMinorVersionUpgrade`  <a name="cfn-elasticache-cachecluster-autominorversionupgrade"></a>
 Indicates that minor engine upgrades will be applied automatically to the cache cluster during the maintenance window\.  
@@ -90,7 +90,7 @@ Indicates that minor engine upgrades will be applied automatically to the cache 
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `AZMode`  <a name="cfn-elasticache-cachecluster-azmode"></a>
-For Memcached cache clusters, indicates whether the nodes are created in a single Availability Zone or across multiple Availability Zones in the cluster's region\. For valid values, see [CreateCacheCluster](http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheCluster.html) in the *Amazon ElastiCache API Reference*\.  
+For Memcached cache clusters, indicates whether the nodes are created in a single Availability Zone or across multiple Availability Zones in the cluster's region\. For valid values, see [CreateCacheCluster](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheCluster.html) in the *Amazon ElastiCache API Reference*\.  
 *Required*: Conditional\. If you specify multiple Availability Zones in the `PreferredAvailabilityZones` property, you must specify cross Availability Zones for this property\.  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -210,20 +210,20 @@ An arbitrary set of tags \(key–value pairs\) for this cache cluster\.
 
 `VpcSecurityGroupIds`  <a name="cfn-elasticache-cachecluster-vpcsecuritygroupids"></a>
 A list of VPC security group IDs\. If your cache cluster isn't in a VPC, specify the `CacheSecurityGroupNames` property instead\.  
-You must use the `AWS::EC2::SecurityGroup` resource instead of the `AWS::ElastiCache::SecurityGroup` resource in order to specify an ElastiCache security group that is in a VPC\. In addition, if you use the [default VPC](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html) for your AWS account, you must use the `Fn::GetAtt` function and the `GroupId` attribute to retrieve security group IDs \(instead of the `Ref` function\)\. To see a sample template, see the Template Snippet section\.
+You must use the `AWS::EC2::SecurityGroup` resource instead of the `AWS::ElastiCache::SecurityGroup` resource in order to specify an ElastiCache security group that is in a VPC\. In addition, if you use the [default VPC](https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html) for your AWS account, you must use the `Fn::GetAtt` function and the `GroupId` attribute to retrieve security group IDs \(instead of the `Ref` function\)\. To see a sample template, see the Template Snippet section\.
 *Required*: Conditional: If your cache cluster is in a VPC, you must specify this property\.  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Values<a name="aws-properties-elasticache-cache-cluster-ref"></a>
 
-### Ref<a name="w3ab2c21c10d584c11b2"></a>
+### Ref<a name="w4ab1c21c10d603c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d584c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d603c11b4"></a>
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
@@ -241,11 +241,11 @@ The port number of the configuration endpoint for the Redis cache cluster\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Template Snippets<a name="w3ab2c21c10d584c13"></a>
+## Template Snippets<a name="w4ab1c21c10d603c13"></a>
 
-### Cluster in a Default VPC<a name="w3ab2c21c10d584c13b2"></a>
+### Cluster in a Default VPC<a name="w4ab1c21c10d603c13b2"></a>
 
-The following snippet describes an ElastiCache cluster in a security group that is in a [default VPC](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html)\. Usually, a security group in a VPC requires the VPC ID to be specified\. In this case, no VPC ID is needed because the security group uses the default VPC\. If you want to specify a VPC for the security group, specify its `VpcId` property\.
+The following snippet describes an ElastiCache cluster in a security group that is in a [default VPC](https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html)\. Usually, a security group in a VPC requires the VPC ID to be specified\. In this case, no VPC ID is needed because the security group uses the default VPC\. If you want to specify a VPC for the security group, specify its `VpcId` property\.
 
 For the cache cluster, the `VpcSecurityGroupIds` property is used to associate the cluster with the security group\. Because the `VpcSecurityGroupIds` property requires security group IDs \(not security group names\), the template snippet uses the `Fn::GetAtt` function instead of a `Ref` function on the `ElasticacheSecurityGroup` resource\. The `Ref` function will return the security group name\. If you specify a VPC ID for the security group, `Ref` returns the security group ID\.
 
@@ -282,7 +282,7 @@ For the cache cluster, the `VpcSecurityGroupIds` property is used to associate t
 
 ```
 ElasticacheSecurityGroup:
-  Type: "AWS::EC2::SecurityGroup"
+  Type: AWS::EC2::SecurityGroup
   Properties:
     GroupDescription: "Elasticache Security Group"
     SecurityGroupIngress:
@@ -293,7 +293,7 @@ ElasticacheSecurityGroup:
         SourceSecurityGroupName:
           Ref: "InstanceSecurityGroup"
 ElasticacheCluster:
-  Type: "AWS::ElastiCache::CacheCluster"
+  Type: AWS::ElastiCache::CacheCluster
   Properties:
     AutoMinorVersionUpgrade: "true"
     Engine: "memcached"
@@ -306,7 +306,7 @@ ElasticacheCluster:
           - "GroupId"
 ```
 
-### Memcached Nodes in Multiple Availability Zones<a name="w3ab2c21c10d584c13b4"></a>
+### Memcached Nodes in Multiple Availability Zones<a name="w4ab1c21c10d603c13b4"></a>
 
 The following example launches a cache cluster with three nodes, where two nodes are created in us\-west\-2a and one is created in us\-west\-2b\.
 
@@ -329,7 +329,7 @@ The following example launches a cache cluster with three nodes, where two nodes
 
 ```
 myCacheCluster:
-  Type: "AWS::ElastiCache::CacheCluster"
+  Type: AWS::ElastiCache::CacheCluster
   Properties:
     AZMode: "cross-az"
     CacheNodeType: "cache.m3.medium"
@@ -341,6 +341,6 @@ myCacheCluster:
       - "us-west-2b"
 ```
 
-## See Also<a name="w3ab2c21c10d584c15"></a>
+## See Also<a name="w4ab1c21c10d603c15"></a>
 + [CreateCacheCluster](http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheCluster.html) in the *Amazon ElastiCache API Reference Guide*
 + [ModifyCacheCluster](http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html) in the *Amazon ElastiCache API Reference Guide*

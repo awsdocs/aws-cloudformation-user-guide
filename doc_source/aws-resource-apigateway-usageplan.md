@@ -1,6 +1,6 @@
 # AWS::ApiGateway::UsagePlan<a name="aws-resource-apigateway-usageplan"></a>
 
-The `AWS::ApiGateway::UsagePlan` resource specifies a usage plan for deployed Amazon API Gateway \(API Gateway\) APIs\. A usage plan enforces throttling and quota limits on individual client API keys\. For more information, see [Creating and Using API Usage Plans in Amazon API Gateway](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html) in the *API Gateway Developer Guide*\.
+The `AWS::ApiGateway::UsagePlan` resource specifies a usage plan for deployed Amazon API Gateway \(API Gateway\) APIs\. A usage plan enforces throttling and quota limits on individual client API keys\. For more information, see [Creating and Using API Usage Plans in Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html) in the *API Gateway Developer Guide*\.
 
 **Topics**
 + [Syntax](#aws-resource-apigateway-usageplan-syntax)
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-usageplan-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::UsagePlan"
+Type: AWS::ApiGateway::UsagePlan
 Properties:
   [ApiStages](#cfn-apigateway-usageplan-apistages): 
   - [ApiStage](aws-properties-apigateway-usageplan-apistage.md)
@@ -74,7 +74,7 @@ A name for this usage plan\.
 
 ## Return Value<a name="aws-resource-apigateway-usageplan-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10c84c11b2"></a>
+### Ref<a name="w4ab1c21c10c89c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the usage plan ID, such as `MyUsagePlan`\.
 

@@ -2,7 +2,7 @@
 
 <a name="aws-properties-s3-bucket-accesscontroltranslation-description"></a>The `AccessControlTranslation` property type specifies replica ownership of the AWS account that owns the destination bucket\.
 
-<a name="aws-properties-s3-bucket-accesscontroltranslation-inheritance"></a> `AccessControlTranslation` is a property of the [AWS::S3::Bucket](aws-properties-s3-bucket.md) resource\.
+<a name="aws-properties-s3-bucket-accesscontroltranslation-inheritance"></a> `AccessControlTranslation` is a property of the [Amazon S3 Bucket ReplicationDestination](aws-properties-s3-bucket-replicationconfiguration-rules-destination.md) property type\.
 
 ## Syntax<a name="aws-properties-s3-bucket-accesscontroltranslation-syntax"></a>
 
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-accesscontroltranslation-properties"></a>
 
 `Owner`  <a name="cfn-s3-bucket-accesscontroltranslation-owner"></a>
-Specifies the replica ownership\.  
+Specifies the replica ownership\. For default and valid values, see [PUT bucket replication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html) in the *Amazon Simple Storage Service API Reference*\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

@@ -1,11 +1,12 @@
 # AWS::SSM::ResourceDataSync<a name="aws-resource-ssm-resourcedatasync"></a>
 
-The `AWS::SSM::ResourceDataSync` resource creates or deletes a Resource Data Sync for Systems Manager Inventory\. You can use Resource Data Sync to send Inventory data collected from all of your Systems Manager managed instances to a single Amazon S3 bucket\. Resource Data Sync then automatically updates the centralized data when new Inventory data is collected\. For more information, see [Configuring Resource Data Sync for Inventory](http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-configuring.html#sysman-inventory-datasync) in the *AWS Systems Manager User Guide*\. 
+The `AWS::SSM::ResourceDataSync` resource creates or deletes a Resource Data Sync for Systems Manager Inventory\. You can use Resource Data Sync to send Inventory data collected from all of your Systems Manager managed instances to a single Amazon S3 bucket that you have already created in your account\. Resource Data Sync then automatically updates the centralized data when new Inventory data is collected\. For more information, see [Configuring Resource Data Sync for Inventory](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-configuring.html#sysman-inventory-datasync) in the *AWS Systems Manager User Guide*\. 
 
 **Topics**
 + [Syntax](#aws-resource-ssm-resourcedatasync-syntax)
 + [Properties](#aws-resource-ssm-resourcedatasync-properties)
 + [Return Values](#aws-resource-ssm-resourcedatasync-returnvalues)
++ [Examples](#aws-resource-ssm-resourcedatasync-examples)
 + [See Also](#aws-resource-ssm-resourcedatasync-seealso)
 
 ## Syntax<a name="aws-resource-ssm-resourcedatasync-syntax"></a>
@@ -62,7 +63,7 @@ The AWS Region with the Amazon S3 bucket targeted by the Resource Data Sync\.
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `SyncFormat`  <a name="cfn-ssm-resourcedatasync-syncformat"></a>
-A supported sync format\. The following format is currently supported: JsonSerDe  
+The format in which Resource Data Sync output will be stored in Amazon S3\. The following format is currently supported: JsonSerDe  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
@@ -87,7 +88,49 @@ When you pass the logical ID of an `AWS::SSM::ResourceDataSync` resource to the 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
+## Examples<a name="aws-resource-ssm-resourcedatasync-examples"></a>
+
+### AWS Systems Manager Resource Data Sync<a name="w4ab1c21c10e1198c17b3"></a>
+
+The following examples send Inventory data collected from all of your managed instances in the US East \(Ohio\) Region \(us\-east\-2\) to a single Amazon S3 bucket\. Resource Data Sync then automatically updates the centralized data when new Inventory data is collected\.
+
+#### JSON<a name="aws-resource-ssm-resourcedatasync-example1.json"></a>
+
+```
+{
+  "Description": "Create a Resource Data Sync for Systems Manager Inventory",
+  "Resources": {
+    "BasicResourceDataSync": {
+      "Type": "AWS::SSM::ResourceDataSync",
+      "Properties": {
+        "SyncName": "My-USEAST2-Resource-Data-Sync",
+        "BucketName": "my-us-east-2-rds-bucket",
+        "BucketRegion": "us-east-2",
+        "SyncFormat": "JsonSerDe",
+        "BucketPrefix": "rds"
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-ssm-resourcedatasync-example1.yaml"></a>
+
+```
+---
+Description: "Create a Resource Data Sync for Systems Manager Inventory"
+Resources:
+  BasicResourceDataSync:
+    Type: "AWS::SSM::ResourceDataSync"
+    Properties:
+      SyncName: "My-USEAST2-Resource-Data-Sync"
+      BucketName: "my-us-east-2-rds-bucket"
+      BucketRegion: "us-east-2"
+      SyncFormat: "JsonSerDe"
+      BucketPrefix: "rds"
+```
+
 ## See Also<a name="aws-resource-ssm-resourcedatasync-seealso"></a>
-+ [What is Systems Manager?](http://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html)
-+ [AWS Systems Manager Inventory Manager](http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html)
-+ [Configuring Inventory Collection](http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-configuring.html)
++ [What is Systems Manager?](https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html)
++ [AWS Systems Manager Inventory Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html)
++ [Configuring Inventory Collection](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-configuring.html)

@@ -4,9 +4,9 @@ Describes a primary key for the [AWS::DynamoDB::Table](aws-resource-dynamodb-tab
 
 For the primary key of an Amazon DynamoDB table that consists of only a hash attribute, specify one element with a `KeyType` of `HASH`\. For the primary key of an Amazon DynamoDB table that consists of a hash and range attributes, specify two elements: one with a `KeyType` of `HASH` and one with a `KeyType` of `RANGE`\.
 
-For a complete discussion of DynamoDB primary keys, see [Primary Key](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DataModel.html#DataModelPrimaryKey) in the *Amazon DynamoDB Developer Guide*\.
+For a complete discussion of DynamoDB primary keys, see [Primary Key](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DataModel.html#DataModelPrimaryKey) in the *Amazon DynamoDB Developer Guide*\.
 
-## Syntax<a name="w3ab2c21c14d609b9"></a>
+## Syntax<a name="w4ab1c21c14d671b9"></a>
 
 ### JSON<a name="aws-properties-dynamodb-keyschema-syntax.json"></a>
 
@@ -24,7 +24,7 @@ For a complete discussion of DynamoDB primary keys, see [Primary Key](http://doc
 [KeyType](#cfn-dynamodb-keyschema-keytype): HASH or RANGE
 ```
 
-## Properties<a name="w3ab2c21c14d609c11"></a>
+## Properties<a name="w4ab1c21c14d671c11"></a>
 
 `AttributeName`  <a name="cfn-dynamodb-keyschema-attributename"></a>
 The attribute name that is used as the primary key for this table\. Primary key element names can be 1 – 255 characters long and have no character restrictions\.  
@@ -36,6 +36,6 @@ Represents the attribute data, consisting of the data type and the attribute val
 *Required*: Yes  
 *Type*: String
 
-## Examples<a name="w3ab2c21c14d609c13"></a>
+## Examples<a name="w4ab1c21c14d671c13"></a>
 
 For an example of a declared key schema, see [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md)\.

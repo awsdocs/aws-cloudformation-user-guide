@@ -1,12 +1,12 @@
 # AWS::DirectoryService::SimpleAD<a name="aws-resource-directoryservice-simplead"></a>
 
-The `AWS::DirectoryService::SimpleAD` resource creates an AWS Directory Service Simple Active Directory \(Simple AD\) in AWS so that your directory users and groups can access the AWS Management Console and AWS applications using their existing credentials\. Simple AD is a Microsoft Active Directory–compatible directory\. For more information, see [What Is AWS Directory Service?](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html) in the *AWS Directory Service Administration Guide*\.
+The `AWS::DirectoryService::SimpleAD` resource creates an AWS Directory Service Simple Active Directory \(Simple AD\) in AWS so that your directory users and groups can access the AWS Management Console and AWS applications using their existing credentials\. Simple AD is a Microsoft Active Directory–compatible directory\. For more information, see [What Is AWS Directory Service?](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html) in the *AWS Directory Service Administration Guide*\.
 
 **Topics**
 + [Syntax](#aws-resource-directoryservice-simplead-syntax)
-+ [Properties](#w3ab2c21c10d344b9)
-+ [Return Values](#w3ab2c21c10d344c11)
-+ [Example](#w3ab2c21c10d344c13)
++ [Properties](#w4ab1c21c10d356b9)
++ [Return Values](#w4ab1c21c10d356c11)
++ [Example](#w4ab1c21c10d356c13)
 
 ## Syntax<a name="aws-resource-directoryservice-simplead-syntax"></a>
 
@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-directoryservice-simplead-syntax.yaml"></a>
 
 ```
-Type: "AWS::DirectoryService::SimpleAD"
+Type: AWS::DirectoryService::SimpleAD
 Properties:
   [CreateAlias](#cfn-directoryservice-simplead-createalias): Boolean
   [Description](#cfn-directoryservice-simplead-description): String
@@ -46,10 +46,10 @@ Properties:
     VpcSettings
 ```
 
-## Properties<a name="w3ab2c21c10d344b9"></a>
+## Properties<a name="w4ab1c21c10d356b9"></a>
 
 `CreateAlias`  <a name="cfn-directoryservice-simplead-createalias"></a>
-A unique alias to assign to the directory\. AWS Directory Service uses the alias to construct the access URL for the directory, such as `http://alias.awsapps.com`\. By default, AWS CloudFormation does not create an alias\.  
+If set to `true`, creates an alias for a directory and assigns the alias to the directory\. AWS Directory Service uses the alias to construct the access URL for the directory, such as `http://alias.awsapps.com`\. By default, this property is set to `false`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -85,7 +85,7 @@ The NetBIOS name of the on\-premises directory, such as `CORP`\.
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Size`  <a name="cfn-directoryservice-simplead-size"></a>
-The size of the directory\. For valid values, see [CreateDirectory](http://docs.aws.amazon.com/directoryservice/latest/devguide/API_CreateDirectory.html) in the *AWS Directory Service API Reference*\.  
+The size of the directory\. For valid values, see [CreateDirectory](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_CreateDirectory.html) in the *AWS Directory Service API Reference*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -96,9 +96,9 @@ Specifies the VPC settings of the directory server\.
 *Type*: [AWS Directory Service SimpleAD VpcSettings](aws-properties-directoryservice-simplead-vpcsettings.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w3ab2c21c10d344c11"></a>
+## Return Values<a name="w4ab1c21c10d356c11"></a>
 
-### Ref<a name="w3ab2c21c10d344c11b2"></a>
+### Ref<a name="w4ab1c21c10d356c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource ID\.
 
@@ -110,7 +110,7 @@ In the following sample, the `Ref` function returns the ID of the `myDirectory` 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d344c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d356c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -122,7 +122,7 @@ The IP addresses of the DNS servers for the directory, such as `[ "172.31.3.154"
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Example<a name="w3ab2c21c10d344c13"></a>
+## Example<a name="w4ab1c21c10d356c13"></a>
 
 The following example creates a Simple AD directory, where the directory DNS name is `corp.example.com`:
 
@@ -147,7 +147,7 @@ The following example creates a Simple AD directory, where the directory DNS nam
 
 ```
 myDirectory: 
-  Type: "AWS::DirectoryService::SimpleAD"
+  Type: AWS::DirectoryService::SimpleAD
   Properties: 
     Name: "corp.example.com"
     Password: 

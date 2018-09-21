@@ -37,4 +37,4 @@ Certain stack operations, such as stack updates, should be initiated from the ro
 
 1. Expand the **Resources** section\.
 
-1. Look for resources of type **AWS::CloudFormation::Stack**\.
+   Look for resources of type **AWS::CloudFormation::Stack**\.

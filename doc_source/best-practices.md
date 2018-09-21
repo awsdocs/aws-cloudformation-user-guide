@@ -52,7 +52,7 @@ In most cases, users require full access to manage all of the resources in a tem
 
 ## Verify Quotas for All Resource Types<a name="limits"></a>
 
-Before launching a stack, ensure that you can create all the resources that you want without hitting your AWS account limits\. If you hit a limit, AWS CloudFormation won't create your stack successfully until you increase your quota or delete extra resources\. Each service can have various limits that you should be aware of before launching a stack\. For example, by default, you can only launch 200 AWS CloudFormation stacks per region in your AWS account\. For more information about limits and how to increase the default limits, see [AWS Service Limits](http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.
+Before launching a stack, ensure that you can create all the resources that you want without hitting your AWS account limits\. If you hit a limit, AWS CloudFormation won't create your stack successfully until you increase your quota or delete extra resources\. Each service can have various limits that you should be aware of before launching a stack\. For example, by default, you can only launch 200 AWS CloudFormation stacks per region in your AWS account\. For more information about limits and how to increase the default limits, see [AWS Service Limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.
 
 ## Reuse Templates to Replicate Stacks in Multiple Environments<a name="reuse"></a>
 
@@ -96,13 +96,13 @@ For more information about getting the latest helper scripts, see the [CloudForm
 
 ## Validate Templates Before Using Them<a name="validate"></a>
 
-Before you use a template to create or update a stack, you can use AWS CloudFormation to validate it\. Validating a template can help you catch syntax and some semantic errors, such as circular dependencies, before AWS CloudFormation creates any resources\. If you use the AWS CloudFormation console, the console automatically validates the template after you specify input parameters\. For the AWS CLI or AWS CloudFormation API, use the [aws cloudformation validate\-template](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/validate-template.html) command or [ValidateTemplate](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ValidateTemplate.html) action\.
+Before you use a template to create or update a stack, you can use AWS CloudFormation to validate it\. Validating a template can help you catch syntax and some semantic errors, such as circular dependencies, before AWS CloudFormation creates any resources\. If you use the AWS CloudFormation console, the console automatically validates the template after you specify input parameters\. For the AWS CLI or AWS CloudFormation API, use the [aws cloudformation validate\-template](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/validate-template.html) command or [ValidateTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ValidateTemplate.html) action\.
 
 During validation, AWS CloudFormation first checks if the template is valid JSON\. If it isn't, AWS CloudFormation checks if the template is valid YAML\. If both checks fail, AWS CloudFormation returns a template validation error\.
 
 ## Manage All Stack Resources Through AWS CloudFormation<a name="donttouch"></a>
 
-After you launch a stack, use the AWS CloudFormation [console](https://console.aws.amazon.com/cloudformation/home), [API](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/), or [AWS CLI](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html) to update resources in your stack\. Do not make changes to stack resources outside of AWS CloudFormation\. Doing so can create a mismatch between your stack's template and the current state of your stack resources, which can cause errors if you update or delete the stack\. For more information, see [Walkthrough: Updating a Stack](updating.stacks.walkthrough.md)\.
+After you launch a stack, use the AWS CloudFormation [console](https://console.aws.amazon.com/cloudformation/home), [API](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/), or [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html) to update resources in your stack\. Do not make changes to stack resources outside of AWS CloudFormation\. Doing so can create a mismatch between your stack's template and the current state of your stack resources, which can cause errors if you update or delete the stack\. For more information, see [Walkthrough: Updating a Stack](updating.stacks.walkthrough.md)\.
 
 ## Create Change Sets Before Updating Your Stacks<a name="cfn-best-practices-changesets"></a>
 
@@ -118,7 +118,7 @@ During a stack update, you must explicitly specify the protected resources that 
 
 ## Use AWS CloudTrail to Log AWS CloudFormation Calls<a name="cloudtrail"></a>
 
-AWS CloudTrail tracks anyone making AWS CloudFormation API calls in your AWS account\. API calls are logged whenever anyone uses the AWS CloudFormation API, the AWS CloudFormation console, a back\-end console, or AWS CloudFormation AWS CLI commands\. Enable logging and specify an Amazon S3 bucket to store the logs\. That way, if you ever need to, you can audit who made what AWS CloudFormation call in your account\. For more information, see [Logging AWS CloudFormation API Calls in AWS CloudTrail](cfn-api-logging-cloudtrail.md)\.
+AWS CloudTrail tracks anyone making AWS CloudFormation API calls in your AWS account\. API calls are logged whenever anyone uses the AWS CloudFormation API, the AWS CloudFormation console, a back\-end console, or AWS CloudFormation AWS CLI commands\. Enable logging and specify an Amazon S3 bucket to store the logs\. That way, if you ever need to, you can audit who made what AWS CloudFormation call in your account\. For more information, see [Logging AWS CloudFormation API Calls with AWS CloudTrail](cfn-api-logging-cloudtrail.md)\.
 
 ## Use Code Reviews and Revision Controls to Manage Your Templates<a name="code"></a>
 

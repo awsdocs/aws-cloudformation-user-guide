@@ -4,10 +4,10 @@ The `AWS::ECS::Service` resource creates an Amazon Elastic Container Service \(A
 
 **Topics**
 + [Syntax](#aws-resource-ecs-service-syntax)
-+ [Properties](#w3ab2c21c10d563b9)
-+ [Return Values](#w3ab2c21c10d563c11)
-+ [Examples](#w3ab2c21c10d563c13)
-+ [More Info](#w3ab2c21c10d563c15)
++ [Properties](#aws-resource-ecs-service-properties)
++ [Return Values](#aws-resource-ecs-service-return-values)
++ [Examples](#aws-resource-ecs-service-examples)
++ [More Info](#aws-resource-ecs-service-seealso)
 
 ## Syntax<a name="aws-resource-ecs-service-syntax"></a>
 
@@ -30,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[Role](#cfn-ecs-service-role)" : String,
     "[PlacementStrategies](#cfn-ecs-service-placementstrategies)" : [ PlacementStrategies, ... ],
     "[PlatformVersion](#cfn-ecs-service-platformversion)" : String,
+    "[SchedulingStrategy](#cfn-ecs-service-schedulingstrategy)" : String,
     "[ServiceName](#cfn-ecs-service-servicename)" : String,
     "[ServiceRegistries](#cfn-ecs-service-serviceregistries)" : [ [*ServiceRegistry*](aws-properties-ecs-service-serviceregistry.md), ... ,
     "[TaskDefinition](#cfn-ecs-service-taskdefinition)" : String
@@ -40,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ecs-service-syntax.yaml"></a>
 
 ```
-Type: "AWS::ECS::Service"
+Type: AWS::ECS::Service
 Properties: 
   [Cluster](#cfn-ecs-service-cluster): String
   [DeploymentConfiguration](#cfn-ecs-service-deploymentconfiguration):
@@ -57,16 +58,17 @@ Properties:
   [PlacementStrategies](#cfn-ecs-service-placementstrategies): 
    - PlacementStrategies, ...
   [PlatformVersion](#cfn-ecs-service-platformversion): String
-  [Role](#cfn-ecs-service-role): String
+  [Role](#cfn-ecs-service-role): String 
+  [SchedulingStrategy](#cfn-ecs-service-schedulingstrategy): String
   [ServiceName](#cfn-ecs-service-servicename): String
   [ServiceRegistries](#cfn-ecs-service-serviceregistries): 
    - [*ServiceRegistry*](aws-properties-ecs-service-serviceregistry.md)
   [TaskDefinition](#cfn-ecs-service-taskdefinition): String
 ```
 
-## Properties<a name="w3ab2c21c10d563b9"></a>
+## Properties<a name="aws-resource-ecs-service-properties"></a>
 
-For more information on properties and valid parameters, see [CreateService](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html)in the *Amazon Elastic Container Service API Reference*\.
+For more information on properties and valid parameters, see [CreateService](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html) in the *Amazon Elastic Container Service API Reference*\.
 
 **Note**  
 When you use Auto Scaling or Amazon Elastic Compute Cloud \(Amazon EC2\) to create container instances for an Amazon ECS cluster, the Amazon ECS service resource must have a dependency on the Auto Scaling group or the Amazon EC2 instances\. This makes the container instances available and associates them with the Amazon ECS cluster before AWS CloudFormation creates the Amazon ECS service\.
@@ -102,13 +104,13 @@ The launch type on which to run your service\. If one is not specified, `EC2` wi
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `LoadBalancers`  <a name="cfn-ecs-service-loadbalancers"></a>
-A list of load balancer objects to associate with the cluster\. If you specify the `Role` property, `LoadBalancers` must be specified as well\. For information about the number of load balancers that you can specify per service, see [Service Load Balancing](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+A list of load balancer objects to associate with the cluster\. If you specify the `Role` property, `LoadBalancers` must be specified as well\. For information about the number of load balancers that you can specify per service, see [Service Load Balancing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: Conditional  
 *Type*: List of [Amazon Elastic Container Service Service LoadBalancers](aws-properties-ecs-service-loadbalancers.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `NetworkConfiguration`  <a name="cfn-ecs-service-networkconfiguration"></a>
-The network configuration for the service\. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes\. For more information, see [Task Networking](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/developerguidetask-networking.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+The network configuration for the service\. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes\. For more information, see [Task Networking](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/developerguidetask-networking.html) in the *Amazon Elastic Container Service Developer Guide*\.  
  *Required*: No  
  *Type*: [Amazon ECS Service NetworkConfiguration](aws-properties-ecs-service-networkconfiguration.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
@@ -134,7 +136,18 @@ The platform version on which to run your service\. If one is not specified, the
 `Role`  <a name="cfn-ecs-service-role"></a>
 The name or ARN of an AWS Identity and Access Management \(IAM\) role that allows your Amazon ECS container agent to make calls to your load balancer\.  
 In some cases, you might need to add a dependency on the service role's policy\. For more information, see IAM role policy in [DependsOn Attribute](aws-attribute-dependson.md)\.
-*Required*: Conditional\. Required only if you specify the `LoadBalancers` property\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+
+`SchedulingStrategy`  <a name="cfn-ecs-service-schedulingstrategy"></a>
+The scheduling strategy to use for the service\.   
+There are two service scheduler strategies available:  
++ `REPLICA`: The replica scheduling strategy places and maintains the desired number of tasks across your cluster\. By default, the service scheduler spreads tasks across Availability Zones\. You can use task placement strategies and constraints to customize task placement decisions\.
++ `DAEMON`: The daemon scheduling strategy deploys exactly one task on each container instance in your cluster\. When using this strategy, do not specify a desired number of tasks or any task placement strategies\.
+Valid values include `REPLICA` and `DAEMON`\.  
+Fargate tasks do not support the `DAEMON` scheduling strategy
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
@@ -148,7 +161,7 @@ The name of your service\. The name is limited to 255 letters \(uppercase and lo
 Details of the service registry\.  
 *Required*: No  
 *Type*: [Amazon ECS Service ServiceRegistry](aws-properties-ecs-service-serviceregistry.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `TaskDefinition`  <a name="cfn-ecs-service-taskdefinition"></a>
 The ARN of the task definition \(including the revision number\) that you want to run on the cluster, such as `arn:aws:ecs:us-east-1:123456789012:task-definition/mytask:3`\. You can't use `:latest` to specify a revision because it's ambiguous\. For example, if AWS CloudFormation needed to roll back an update, it wouldn't know which revision to roll back to\.  
@@ -156,9 +169,9 @@ The ARN of the task definition \(including the revision number\) that you want t
 *Type*: String  
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
-## Return Values<a name="w3ab2c21c10d563c11"></a>
+## Return Values<a name="aws-resource-ecs-service-return-values"></a>
 
-### Ref<a name="w3ab2c21c10d563c11b2"></a>
+### Ref<a name="w4ab1c21c10d582c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN\.
 
@@ -170,7 +183,7 @@ In the following sample, the `Ref` function returns the ARN of the `MyECSService
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d563c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d582c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -179,9 +192,9 @@ The name of the Amazon ECS service, such as `sample-webapp`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w3ab2c21c10d563c13"></a>
+## Examples<a name="aws-resource-ecs-service-examples"></a>
 
-### Define a Basic Amazon ECS Service<a name="w3ab2c21c10d563c13b2"></a>
+### Define a Basic Amazon ECS Service<a name="w4ab1c21c10d582c13b2"></a>
 
 The following examples define an Amazon ECS service that uses a cluster and task definition that are declared elsewhere in the same template\.
 
@@ -202,7 +215,7 @@ The following examples define an Amazon ECS service that uses a cluster and task
 
 ```
 WebApp: 
-  Type: "AWS::ECS::Service"
+  Type: AWS::ECS::Service
   Properties: 
     Cluster: 
       Ref: "cluster"
@@ -212,7 +225,7 @@ WebApp:
       Ref: "taskdefinition"
 ```
 
-### Associate an Application Load Balancer with a Service<a name="w3ab2c21c10d563c13b4"></a>
+### Associate an Application Load Balancer with a Service<a name="w4ab1c21c10d582c13b4"></a>
 
 The following example associates an Application Load Balancer with an Amazon ECS service by referencing an `AWS::ElasticLoadBalancingV2::TargetGroup` resource\. 
 
@@ -261,7 +274,7 @@ service:
       Ref: ECSCluster
 ```
 
-### Define a Service with a Health Check Grace Period<a name="w3ab2c21c10d563c13b6"></a>
+### Define a Service with a Health Check Grace Period<a name="w4ab1c21c10d582c13b6"></a>
 
 The following example defines a service with a parameter that enables users to specify how many seconds that the Amazon ECS service scheduler should ignore unhealthy Elastic Load Balancing target health checks after a task has first started\.
 
@@ -482,9 +495,9 @@ Parameters:
     Type: String
 Resources:
   cluster:
-    Type: 'AWS::ECS::Cluster'
+    Type: AWS::ECS::Cluster
   taskdefinition:
-    Type: 'AWS::ECS::TaskDefinition'
+    Type: AWS::ECS::TaskDefinition
     Properties:
       ContainerDefinitions:
         - Name: !Ref AppName
@@ -521,7 +534,7 @@ Resources:
             SourcePath: /var/lib/docker/vfs/dir/
           Name: my-vol
   service:
-    Type: 'AWS::ECS::Service'
+    Type: AWS::ECS::Service
     Properties:
       Cluster: !Ref cluster
       DeploymentConfiguration:
@@ -546,7 +559,7 @@ Resources:
       ServiceName: !Ref ServiceName
       Role: !Ref Role
   elb:
-    Type: 'AWS::ElasticLoadBalancing::LoadBalancer'
+    Type: AWS::ElasticLoadBalancing::LoadBalancer
     Properties:
       LoadBalancerName: !Ref LoadBalancerName
       Listeners:
@@ -557,23 +570,23 @@ Resources:
         - !Ref Subnet1
     DependsOn: GatewayAttachment
   VPC:
-    Type: 'AWS::EC2::VPC'
+    Type: AWS::EC2::VPC
     Properties:
       CidrBlock: 10.0.0.0/24
   Subnet1:
-    Type: 'AWS::EC2::Subnet'
+    Type: AWS::EC2::Subnet
     Properties:
       VpcId: !Ref VPC
       CidrBlock: 10.0.0.0/25
   InternetGateway:
-    Type: 'AWS::EC2::InternetGateway'
+    Type: AWS::EC2::InternetGateway
   GatewayAttachment:
-    Type: 'AWS::EC2::VPCGatewayAttachment'
+    Type: AWS::EC2::VPCGatewayAttachment
     Properties:
       InternetGatewayId: !Ref InternetGateway
       VpcId: !Ref VPC
   Role:
-    Type: 'AWS::IAM::Role'
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Version: 2008-10-17
@@ -590,7 +603,7 @@ Outputs:
     Value: !Ref cluster
 ```
 
-## More Info<a name="w3ab2c21c10d563c15"></a>
+## More Info<a name="aws-resource-ecs-service-seealso"></a>
 + To use Application Auto Scaling to scale an Amazon ECS service in response to Amazon CloudWatch alarms, use the [AWS::ApplicationAutoScaling::ScalableTarget](aws-resource-applicationautoscaling-scalabletarget.md) and [AWS::ApplicationAutoScaling::ScalingPolicy](aws-resource-applicationautoscaling-scalingpolicy.md) resources\.
 + To use an Application Load Balancer to distribute incoming application traffic across multiple targets, use the [AWS::ElasticLoadBalancingV2::TargetGroup](aws-resource-elasticloadbalancingv2-targetgroup.md), [AWS::ElasticLoadBalancingV2::Listener](aws-resource-elasticloadbalancingv2-listener.md), [AWS::ElasticLoadBalancingV2::ListenerRule](aws-resource-elasticloadbalancingv2-listenerrule.md), and [AWS::ElasticLoadBalancingV2::LoadBalancer](aws-resource-elasticloadbalancingv2-loadbalancer.md) resources\.
 + For a complete sample template that shows how you can create an Amazon ECS cluster and service, see [Amazon Elastic Container Service Template Snippets](quickref-ecs.md)\.

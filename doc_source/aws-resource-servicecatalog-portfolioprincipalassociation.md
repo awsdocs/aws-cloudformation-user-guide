@@ -1,6 +1,6 @@
 # AWS::ServiceCatalog::PortfolioPrincipalAssociation<a name="aws-resource-servicecatalog-portfolioprincipalassociation"></a>
 
-Associates the specified principal with the specified portfolio for AWS Service Catalog\. For more information, see [AssociatePrincipalWithPortfolio](http://docs.aws.amazon.com/servicecatalog/latest/dg/API_AssociatePrincipalWithPortfolio.html) in the *AWS Service Catalog Developer Guide*\.
+Associates the specified principal with the specified portfolio for AWS Service Catalog\. For more information, see [AssociatePrincipalWithPortfolio](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_AssociatePrincipalWithPortfolio.html) in the *AWS Service Catalog Developer Guide*\.
 
 **Topics**
 + [Syntax](#aws-resource-servicecatalog-portfolioprincipalassociation-syntax)

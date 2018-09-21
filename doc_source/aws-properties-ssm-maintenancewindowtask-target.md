@@ -28,13 +28,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ssm-maintenancewindowtask-target-properties"></a>
 
 `Key`  <a name="cfn-ssm-maintenancewindowtask-target-key"></a>
-User\-defined criteria for sending commands that target instances that meet the criteria\. `Key` can be `tag:Amazon EC2 tag`or `InstanceIds`\. For more information about how to send commands that target instances by using `Key,Value` parameters, see [ Sending Commands to a Fleet](http://docs.aws.amazon.com/systems-manager/latest/userguide/send-commands-multiple.html) in the *AWS Systems Manager User Guide*\.  
+User\-defined criteria for sending commands that target instances that meet the criteria\. `Key` can be `tag:Amazon EC2 tag` or `InstanceIds`\. For more information about how to send commands that target instances by using `Key,Value` parameters, see [ Sending Commands to a Fleet](https://docs.aws.amazon.com/systems-manager/latest/userguide/send-commands-multiple.html) in the *AWS Systems Manager User Guide*\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Values`  <a name="cfn-ssm-maintenancewindowtask-target-values"></a>
-User\-defined criteria that maps to `Key`\. For example, if you specify `tag:ServerRole`, you can specify `value:WebServer` to execute a command on instances that include Amazon EC2 tags of `ServerRole,WebServer`\. For more information about how to send commands that target instances using `Key,Value` parameters, see [ Sending Commands to a Fleet](http://docs.aws.amazon.com/systems-manager/latest/userguide/send-commands-multiple.html) in the *AWS Systems Manager User Guide*\.  
+User\-defined criteria that maps to `Key`\. For example, if you specify `tag:ServerRole`, you can specify `value:WebServer` to execute a command on instances that include Amazon EC2 tags of `ServerRole,WebServer`\. For more information about how to send commands that target instances using `Key,Value` parameters, see [ Sending Commands to a Fleet](https://docs.aws.amazon.com/systems-manager/latest/userguide/send-commands-multiple.html) in the *AWS Systems Manager User Guide*\.  
  *Required*: No  
  *Type*: List of String values  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

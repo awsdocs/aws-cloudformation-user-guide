@@ -1,8 +1,8 @@
 # AWS OpsWorks LoadBasedAutoScaling Type<a name="aws-properties-opsworks-layer-loadbasedautoscaling"></a>
 
-Describes the load\-based automatic scaling configuration for an [AWS::OpsWorks::Layer](aws-resource-opsworks-layer.md) resource type\. For more information, see [SetLoadBasedAutoScaling](http://docs.aws.amazon.com/opsworks/latest/APIReference/API_SetLoadBasedAutoScaling.html) in the *AWS OpsWorks Stacks API Reference*\.
+Describes the load\-based automatic scaling configuration for an [AWS::OpsWorks::Layer](aws-resource-opsworks-layer.md) resource type\. For more information, see [SetLoadBasedAutoScaling](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_SetLoadBasedAutoScaling.html) in the *AWS OpsWorks Stacks API Reference*\.
 
-## Syntax<a name="w3ab2c21c14e1569b5"></a>
+## Syntax<a name="w4ab1c21c14e1672b5"></a>
 
 ### JSON<a name="aws-properties-opsworks-layer-loadbasedautoscaling-syntax.json"></a>
 
@@ -24,7 +24,7 @@ Describes the load\-based automatic scaling configuration for an [AWS::OpsWorks:
   AutoScalingThresholds
 ```
 
-## Properties<a name="w3ab2c21c14e1569b7"></a>
+## Properties<a name="w4ab1c21c14e1672b7"></a>
 
 `DownScaling`  <a name="cfn-opsworks-layer-loadbasedautoscaling-downscaling"></a>
 The threshold below which the instances are scaled down \(stopped\)\. If the load falls below this threshold for a specified amount of time, AWS OpsWorks stops a specified number of instances\.  

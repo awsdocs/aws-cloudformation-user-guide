@@ -5,9 +5,9 @@ The `AWS::DMS::ReplicationInstance` resource creates an AWS DMS replication inst
 **Topics**
 + [Syntax](#aws-resource-dms-replicationinstance-syntax)
 + [Properties](#aws-resource-dms-replicationinstance-prop)
-+ [Return Value](#w3ab2c21c10d360c11)
++ [Return Value](#w4ab1c21c10d372c11)
 + [Example](#aws-resource-dms-replicationinstance-example)
-+ [See Also](#w3ab2c21c10d360c15)
++ [See Also](#w4ab1c21c10d372c15)
 
 ## Syntax<a name="aws-resource-dms-replicationinstance-syntax"></a>
 
@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-dms-replicationinstance-syntax.yaml"></a>
 
 ```
-Type: "AWS::DMS::ReplicationInstance"
+Type: AWS::DMS::ReplicationInstance
 Properties:
   [AllocatedStorage](#cfn-dms-replicationinstance-allocatedstorage): Integer
   [AutoMinorVersionUpgrade](#cfn-dms-replicationinstance-autominorversionupgrade): Boolean
@@ -121,7 +121,7 @@ The compute and memory capacity of the replication instance as specified by the 
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 `ReplicationInstanceIdentifier`  <a name="cfn-dms-replicationinstance-replicationinstanceidentifier"></a>
-A name for the replication instance\. If you specify a name, AWS CloudFormation converts it to lower case\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the replication instance identifier\. For more information, see [Name Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
+A name for the replication instance\. If you specify a name, AWS CloudFormation converts it to lower case\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the replication instance identifier\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
 *Constraints*:  
 + Must contain from 1 to 63 alphanumeric characters or hyphens\.
 + First character must be a letter\.
@@ -149,9 +149,9 @@ Specifies the VPC security group to be used with the replication instance\. The 
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10d360c11"></a>
+## Return Value<a name="w4ab1c21c10d372c11"></a>
 
-### Ref<a name="w3ab2c21c10d360c11b2"></a>
+### Ref<a name="w4ab1c21c10d372c11b2"></a>
 
 When you pass the logical ID of an `AWS::DMS::ReplicationInstance` resource to the intrinsic `Ref` function, the function returns the replication instance ARN\.
 
@@ -181,11 +181,11 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   BasicReplicationInstance:
-    Type: 'AWS::DMS::ReplicationInstance'
+    Type: AWS::DMS::ReplicationInstance
     Properties:
       ReplicationInstanceClass: dms.t2.small
 ```
 
-## See Also<a name="w3ab2c21c10d360c15"></a>
+## See Also<a name="w4ab1c21c10d372c15"></a>
 + [CreateReplicationInstance](http://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationInstance.html) in the *AWS Database Migration Service API Reference*\.
 + [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)

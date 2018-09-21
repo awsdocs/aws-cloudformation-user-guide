@@ -4,9 +4,9 @@ Specifies inbound \(ingress\) rules for an Amazon Redshift security group\.
 
 **Topics**
 + [Syntax](#aws-resource-redshift-clustersecuritygroupingress-syntax)
-+ [Properties](#w3ab2c21c10e1005b9)
-+ [Template Snippet](#w3ab2c21c10e1005c11)
-+ [See Also](#w3ab2c21c10e1005c13)
++ [Properties](#w4ab1c21c10e1035b9)
++ [Template Snippet](#w4ab1c21c10e1035c11)
++ [See Also](#w4ab1c21c10e1035c13)
 
 ## Syntax<a name="aws-resource-redshift-clustersecuritygroupingress-syntax"></a>
 
@@ -37,7 +37,7 @@ Properties:
   [EC2SecurityGroupOwnerId](#cfn-redshift-clustersecuritygroupingress-ec2securitygroupownerid): String
 ```
 
-## Properties<a name="w3ab2c21c10e1005b9"></a>
+## Properties<a name="w4ab1c21c10e1035b9"></a>
 
 `ClusterSecurityGroupName`  <a name="cfn-redshift-clustersecuritygroupingress-clustersecuritygroupname"></a>
 The name of the Amazon Redshift security group that will be associated with the ingress rule\.  
@@ -63,7 +63,7 @@ The 12\-digit AWS account number of the owner of the Amazon EC2 security group t
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Template Snippet<a name="w3ab2c21c10e1005c11"></a>
+## Template Snippet<a name="w4ab1c21c10e1035c11"></a>
 
 The following snippet describes a ingress rules for an Amazon Redshift cluster security group:
 
@@ -90,5 +90,5 @@ myClusterSecurityGroupIngressIP:
     CIDRIP: "10.0.0.0/16"
 ```
 
-## See Also<a name="w3ab2c21c10e1005c13"></a>
+## See Also<a name="w4ab1c21c10e1035c13"></a>
 + [AWS::Redshift::ClusterSecurityGroup](aws-resource-redshift-clustersecuritygroup.md)

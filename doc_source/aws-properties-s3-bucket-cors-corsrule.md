@@ -2,7 +2,7 @@
 
 Describes cross\-origin access rules for the [Amazon S3 Bucket CorsConfiguration](aws-properties-s3-bucket-cors.md) property\.
 
-## Syntax<a name="w3ab2c21c14e1698b5"></a>
+## Syntax<a name="w4ab1c21c14e1805b5"></a>
 
 ### JSON<a name="aws-properties-s3-bucket-cors-corsrule-syntax.json"></a>
 
@@ -32,7 +32,7 @@ Describes cross\-origin access rules for the [Amazon S3 Bucket CorsConfiguration
 [MaxAge](#cfn-s3-bucket-cors-corsrule-maxage): Integer
 ```
 
-## Properties<a name="w3ab2c21c14e1698b7"></a>
+## Properties<a name="w4ab1c21c14e1805b7"></a>
 
 `AllowedHeaders`  <a name="cfn-s3-bucket-cors-corsrule-allowedheaders"></a>
 Headers that are specified in the `Access-Control-Request-Headers` header\. These headers are allowed in a preflight OPTIONS request\. In response to any preflight OPTIONS request, Amazon S3 returns any requested headers that are allowed\.  

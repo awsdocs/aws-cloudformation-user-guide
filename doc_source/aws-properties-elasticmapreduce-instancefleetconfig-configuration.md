@@ -1,6 +1,6 @@
 # Amazon EMR InstanceFleetConfig Configuration<a name="aws-properties-elasticmapreduce-instancefleetconfig-configuration"></a>
 
-Use the `Configuration` property to configure fleet instances for Amazon EMR and applications and software bundled with Amazon EMR\. For more information, see [Configuring Applications](http://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html) in the *Amazon EMR Release Guide*\. `Configuration` is a subproperty of the [Amazon EMR InstanceFleetConfig InstanceTypeConfig](aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.md) property\.
+Use the `Configuration` property to configure fleet instances for Amazon EMR and applications and software bundled with Amazon EMR\. For more information, see [Configuring Applications](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html) in the *Amazon EMR Release Guide*\. `Configuration` is a subproperty of the [Amazon EMR InstanceFleetConfig InstanceTypeConfig](aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.md) property\.
 
 **Note**  
 The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\.

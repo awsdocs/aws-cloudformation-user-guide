@@ -1,13 +1,13 @@
 # AWS::ApiGateway::RestApi<a name="aws-resource-apigateway-restapi"></a>
 
-The `AWS::ApiGateway::RestApi` resource contains a collection of Amazon API Gateway resources and methods that can be invoked through HTTPS endpoints\. For more information, see [restapi:create](http://docs.aws.amazon.com//apigateway/api-reference/link-relation/restapi-create/) in the *Amazon API Gateway REST API Reference*\.
+The `AWS::ApiGateway::RestApi` resource contains a collection of Amazon API Gateway resources and methods that can be invoked through HTTPS endpoints\. For more information, see [restapi:create](https://docs.aws.amazon.com//apigateway/api-reference/link-relation/restapi-create/) in the *Amazon API Gateway REST API Reference*\.
 
 **Note**  
 On January 1, 2016, the Swagger Specification was donated to the [OpenAPI initiative](https://www.openapis.org/), becoming the foundation of the OpenAPI Specification\.
 
 **Topics**
 + [Syntax](#aws-resource-apigateway-restapi-syntax)
-+ [Properties](#w3ab2c21c10c76c11)
++ [Properties](#w4ab1c21c10c81c11)
 + [Return Values](#aws-resource-apigateway-restapi-returnvalues)
 + [Examples](#aws-resource-apigateway-restapi-examples)
 + [See Also](#aws-resource-apigateway-restapi-seealso)
@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[MinimumCompressionSize](#cfn-apigateway-restapi-minimumcompressionsize)" : Integer,
     "[Name](#cfn-apigateway-restapi-name)" : String,
     "[Parameters](#cfn-apigateway-restapi-parameters)" : { String:String, ... },
-    "[Policy](#cfn-apigateway-restapi-policy)" : JSON object,
+    "[Policy](#cfn-apigateway-restapi-policy)" : JSON object
   }
 }
 ```
@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-restapi-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::RestApi"
+Type: AWS::ApiGateway::RestApi
 Properties:
   [ApiKeySourceType](#cfn-apigateway-restapi-apikeysourcetype): String
   [BinaryMediaTypes](#cfn-apigateway-restapi-binarymediatypes):
@@ -60,7 +60,7 @@ Properties:
   [Policy](#cfn-apigateway-restapi-policy): JSON object
 ```
 
-## Properties<a name="w3ab2c21c10c76c11"></a>
+## Properties<a name="w4ab1c21c10c81c11"></a>
 
 `ApiKeySourceType`  <a name="cfn-apigateway-restapi-apikeysourcetype"></a>
 The source of the API key for metering requests according to a usage plan\. Valid values are:  
@@ -71,7 +71,7 @@ The source of the API key for metering requests according to a usage plan\. Vali
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `BinaryMediaTypes`  <a name="cfn-apigateway-restapi-binarymediatypes"></a>
-The list of binary media types that are supported by the `RestApi` resource, such as `image/png` or `application/octet-stream`\. By default, `RestApi` supports only UTF\-8\-encoded text payloads\. For more information, see [Enable Support for Binary Payloads in API Gateway](http://docs.aws.amazon.com//apigateway/latest/developerguide/api-gateway-payload-encodings.html) in the *API Gateway Developer Guide*\. Duplicates are not allowed\.  
+The list of binary media types that are supported by the `RestApi` resource, such as `image/png` or `application/octet-stream`\. By default, `RestApi` supports only UTF\-8\-encoded text payloads\. For more information, see [Enable Support for Binary Payloads in API Gateway](https://docs.aws.amazon.com//apigateway/latest/developerguide/api-gateway-payload-encodings.html) in the *API Gateway Developer Guide*\. Duplicates are not allowed\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -126,7 +126,7 @@ A name for the API Gateway `RestApi` resource\.
 
 `Parameters`  <a name="cfn-apigateway-restapi-parameters"></a>
 Custom header parameters for the request\.  
-For more information on specifying parameters when importing an API, see [import\-rest\-api](http://docs.aws.amazon.com/cli/latest/reference/apigateway/import-rest-api.html) operation in the *AWS CLI Command Reference*\.  
+For more information on specifying parameters when importing an API, see [import\-rest\-api](https://docs.aws.amazon.com/cli/latest/reference/apigateway/import-rest-api.html) operation in the *AWS CLI Command Reference*\.  
 *Required*: No  
 *Type*: String to String map  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -179,7 +179,7 @@ The following example creates an API Gateway `RestApi` resource based on an Open
 
 ```
 MyRestApi: 
-  Type: "AWS::ApiGateway::RestApi"
+  Type: AWS::ApiGateway::RestApi
   Properties:
     Body:
       OpenAPI specification    
@@ -233,7 +233,7 @@ Parameters:
     Type: String
 Resources:
   MyRestApi:
-    Type: 'AWS::ApiGateway::RestApi'
+    Type: AWS::ApiGateway::RestApi
     Properties:
       EndpointConfiguration:
         Types:
@@ -381,5 +381,5 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-apigateway-restapi-seealso"></a>
-+ [restapi:create](http://docs.aws.amazon.com/apigateway/api-reference/link-relation/restapi-create/) operation in the *Amazon API Gateway REST API Reference*
-+ [import\-rest\-api](http://docs.aws.amazon.com/cli/latest/reference/apigateway/import-rest-api.html) operation in the *AWS CLI Command Reference*
++ [restapi:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/restapi-create/) operation in the *Amazon API Gateway REST API Reference*
++ [import\-rest\-api](https://docs.aws.amazon.com/cli/latest/reference/apigateway/import-rest-api.html) operation in the *AWS CLI Command Reference*

@@ -2,7 +2,7 @@
 
 `Logging` is a property of the [DistributionConfig](aws-properties-cloudfront-distribution-distributionconfig.md) property that enables Amazon CloudFront to deliver access logs for each distribution to an Amazon Simple Storage Service \(S3\) bucket\.
 
-## Syntax<a name="w3ab2c21c14d285b5"></a>
+## Syntax<a name="w4ab1c21c14d313b5"></a>
 
 ### JSON<a name="aws-properties-cloudfront-distribution-logging-syntax.json"></a>
 
@@ -22,10 +22,10 @@
 [Prefix](#cfn-cloudfront-distribution-logging-prefix): String
 ```
 
-## Properties<a name="w3ab2c21c14d285b7"></a>
+## Properties<a name="w4ab1c21c14d313b7"></a>
 
 **Note**  
-For more information about the constraints and valid values of each property, see the [LoggingConfig](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_LoggingConfig.html) data type in the *Amazon CloudFront API Reference*\.
+For more information about the constraints and valid values of each property, see the [LoggingConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_LoggingConfig.html) data type in the *Amazon CloudFront API Reference*\.
 
 `Bucket`  <a name="cfn-cloudfront-distribution-logging-bucket"></a>
 The Amazon S3 bucket address where access logs are stored, for example, `mybucket.s3.amazonaws.com`\.  

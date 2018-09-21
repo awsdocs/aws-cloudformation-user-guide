@@ -1,6 +1,6 @@
 # AWS::ServiceCatalog::PortfolioShare<a name="aws-resource-servicecatalog-portfolioshare"></a>
 
-Shares the specified portfolio for AWS Service Catalog with the specified account\. For more information, see [CreatePortfolioShare](http://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreatePortfolioShare.html) in the *AWS Service Catalog Developer Guide*\.
+Shares the specified portfolio for AWS Service Catalog with the specified account\. For more information, see [CreatePortfolioShare](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreatePortfolioShare.html) in the *AWS Service Catalog Developer Guide*\.
 
 **Topics**
 + [Syntax](#aws-resource-servicecatalog-portfolioshare-syntax)
@@ -37,13 +37,13 @@ Properties:
 ## Properties<a name="aws-resource-servicecatalog-portfolioshare-properties"></a>
 
 `AccountId`  <a name="cfn-servicecatalog-portfolioshare-accountid"></a>
-The language code\.  
+The AWS account ID\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `AcceptLanguage`  <a name="cfn-servicecatalog-portfolioshare-acceptlanguage"></a>
-The AWS account ID\.  
+The language code\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

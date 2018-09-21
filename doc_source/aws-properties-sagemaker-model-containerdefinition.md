@@ -13,8 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ContainerHostname](#cfn-sagemaker-model-containerdefinition-containerhostname)" : String,
-  "[Environment](#cfn-sagemaker-model-containerdefinition-environment)" : String,
-  "[ModelDataUrl](#cfn-sagemaker-model-containerdefinition-modeldataurl)" : JSON,
+  "[Environment](#cfn-sagemaker-model-containerdefinition-environment)" : JSON,
+  "[ModelDataUrl](#cfn-sagemaker-model-containerdefinition-modeldataurl)" : String,
   "[Image](#cfn-sagemaker-model-containerdefinition-image)" : String
 }
 ```
@@ -23,8 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 [ContainerHostname](#cfn-sagemaker-model-containerdefinition-containerhostname): String
-[Environment](#cfn-sagemaker-model-containerdefinition-environment): String
-[ModelDataUrl](#cfn-sagemaker-model-containerdefinition-modeldataurl): JSON
+[Environment](#cfn-sagemaker-model-containerdefinition-environment): JSON
+[ModelDataUrl](#cfn-sagemaker-model-containerdefinition-modeldataurl): String
 [Image](#cfn-sagemaker-model-containerdefinition-image): String
 ```
 
@@ -49,7 +49,7 @@ The S3 path where the model artifacts, which result from model training, are sto
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `Image`  <a name="cfn-sagemaker-model-containerdefinition-image"></a>
-The Amazon EC2 Container Registry \(Amazon ECR\) path where inference code is stored\. If you are using your own custom algorithm instead of an algorithm provided by Amazon SageMaker, the inference code must meet Amazon SageMaker requirements\. For more information, see [Using Your Own Algorithms with Amazon SageMaker](http://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html)  
+The Amazon EC2 Container Registry \(Amazon ECR\) path where inference code is stored\. If you are using your own custom algorithm instead of an algorithm provided by Amazon SageMaker, the inference code must meet Amazon SageMaker requirements\. For more information, see [Using Your Own Algorithms with Amazon SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html)  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 

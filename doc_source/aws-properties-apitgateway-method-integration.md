@@ -2,7 +2,7 @@
 
 `Integration` is a property of the [AWS::ApiGateway::Method](aws-resource-apigateway-method.md) resource that specifies information about the target backend that an Amazon API Gateway \(API Gateway\) method calls\.
 
-## Syntax<a name="w3ab2c21c14c25b7"></a>
+## Syntax<a name="w4ab1c21c14c41b5"></a>
 
 ### JSON<a name="aws-properties-apitgateway-method-integration-syntax.json"></a>
 
@@ -10,6 +10,8 @@
 {
   "[CacheKeyParameters](#cfn-apigateway-method-integration-cachekeyparameters)" : [ String, ... ],
   "[CacheNamespace](#cfn-apigateway-method-integration-cachenamespace)" : String,
+  "[ConnectionId](#cfn-apigateway-method-integration-connectionid)" : String,
+  "[ConnectionType](#cfn-apigateway-method-integration-connectiontype)" : String,
   "[ContentHandling](#cfn-apigateway-method-integration-contenthandling)" : String,
   "[Credentials](#cfn-apigateway-method-integration-credentials)" : String,
   "[IntegrationHttpMethod](#cfn-apigateway-method-integration-integrationhttpmethod)" : String,
@@ -17,6 +19,7 @@
   "[PassthroughBehavior](#cfn-apigateway-method-integration-passthroughbehavior)" : String,
   "[RequestParameters](#cfn-apigateway-method-integration-requestparameters)" : { String:String, ... },
   "[RequestTemplates](#cfn-apigateway-method-integration-requesttemplates)" : { String:String, ... },
+  "[TimeoutInMillis](#cfn-apigateway-method-integration-timeoutinmillis)" : Integer,
   "[Type](#cfn-apigateway-method-integration-type)" : String,
   "[Uri](#cfn-apigateway-method-integration-uri)" : String
 }
@@ -28,6 +31,8 @@
 [CacheKeyParameters](#cfn-apigateway-method-integration-cachekeyparameters):
   - String
 [CacheNamespace](#cfn-apigateway-method-integration-cachenamespace): String
+[ConnectionId](#cfn-apigateway-method-integration-connectionid): String
+[ConnectionType](#cfn-apigateway-method-integration-connectiontype): String
 [ContentHandling](#cfn-apigateway-method-integration-contenthandling): String
 
 [Credentials](#cfn-apigateway-method-integration-credentials): String
@@ -40,10 +45,11 @@
 [RequestTemplates](#cfn-apigateway-method-integration-requesttemplates):
   String: String
 [Type](#cfn-apigateway-method-integration-type): String
+[TimeoutInMillis](#cfn-apigateway-method-integration-timeoutinmillis): Integer
 [Uri](#cfn-apigateway-method-integration-uri): String
 ```
 
-## Properties<a name="w3ab2c21c14c25b9"></a>
+## Properties<a name="w4ab1c21c14c41b7"></a>
 
 `CacheKeyParameters`  <a name="cfn-apigateway-method-integration-cachekeyparameters"></a>
 A list of request parameters whose values API Gateway caches\.  
@@ -64,9 +70,21 @@ If this property isn't defined, the request payload is passed through from the m
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
+`ConnectionId`  <a name="cfn-apigateway-method-integration-connectionid"></a>
+The ID of the VpcLink used for the integration when `connectionType=VPC_LINK` and undefined, otherwise\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`ConnectionType`  <a name="cfn-apigateway-method-integration-connectiontype"></a>
+The type of the network connection to the integration endpoint\. The valid value is `INTERNET` for connections through the public routable internet or `VPC_LINK ` for private connections between API Gateway and a network load balancer in a VPC\. The default value is `INTERNET`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
 `Credentials`  <a name="cfn-apigateway-method-integration-credentials"></a>
 The credentials that are required for the integration\. To specify an AWS Identity and Access Management \(IAM\) role that API Gateway assumes, specify the role's Amazon Resource Name \(ARN\)\. To require that the caller's identity be passed through from the request, specify `arn:aws:iam::*:user/*`\.  
-To use resource\-based permissions on the AWS Lambda \(Lambda\) function, don't specify this property\. Use the [AWS::Lambda::Permission](aws-resource-lambda-permission.md) resource to permit API Gateway to call the function\. For more information, see [Allow Amazon API Gateway to Invoke a Lambda Function](http://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html#access-control-resource-based-example-apigateway-invoke-function) in the *AWS Lambda Developer Guide*\.  
+To use resource\-based permissions on the AWS Lambda \(Lambda\) function, don't specify this property\. Use the [AWS::Lambda::Permission](aws-resource-lambda-permission.md) resource to permit API Gateway to call the function\. For more information, see [Allow Amazon API Gateway to Invoke a Lambda Function](https://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html#access-control-resource-based-example-apigateway-invoke-function) in the *AWS Lambda Developer Guide*\.  
 *Required*: No  
 *Type*: String
 
@@ -82,7 +100,7 @@ The response that API Gateway provides after a method's backend completes proces
 
 `PassthroughBehavior`  <a name="cfn-apigateway-method-integration-passthroughbehavior"></a>
 Indicates when API Gateway passes requests to the targeted backend\. This behavior depends on the request's `Content-Type` header and whether you defined a mapping template for it\.  
-For more information and valid values, see the [http://docs.aws.amazon.com/apigateway/api-reference/link-relation/integration-put/#passthroughBehavior](http://docs.aws.amazon.com/apigateway/api-reference/link-relation/integration-put/#passthroughBehavior) field in the *API Gateway API Reference*\.  
+For more information and valid values, see the [https://docs.aws.amazon.com/apigateway/api-reference/link-relation/integration-put/#passthroughBehavior](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/integration-put/#passthroughBehavior) field in the *API Gateway API Reference*\.  
 *Required*: No  
 *Type*: String
 
@@ -99,12 +117,18 @@ A map of Apache Velocity templates that are applied on the request payload\. The
 ```
 "application/json": "{\n    \"statusCode\": \"200\"\n}"
 ```
-For more information about templates, see [API Gateway API Request and Response Payload\-Mapping Template Reference](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html) in the *API Gateway Developer Guide*\.  
+For more information about templates, see [API Gateway API Request and Response Payload\-Mapping Template Reference](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html) in the *API Gateway Developer Guide*\.  
 *Required*: No  
 *Type*: Mapping of key\-value pairs
 
+`TimeoutInMillis`  <a name="cfn-apigateway-method-integration-timeoutinmillis"></a>
+Custom timeout between 50 and 29,000 milliseconds\. The default value is 29,000 milliseconds or 29 seconds\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
 `Type`  <a name="cfn-apigateway-method-integration-type"></a>
-The type of backend that your method is running, such as `HTTP` or `MOCK`\. For all of the valid values, see the [http://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#type](http://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#type) property for the `Integration` resource in the *Amazon API Gateway REST API Reference*\.  
+The type of backend that your method is running, such as `HTTP` or `MOCK`\. For all of the valid values, see the [https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#type) property for the `Integration` resource in the *Amazon API Gateway REST API Reference*\.  
 *Required*: Yes  
 *Type*: String
 
@@ -112,6 +136,6 @@ The type of backend that your method is running, such as `HTTP` or `MOCK`\. For 
 The Uniform Resource Identifier \(URI\) for the integration\.  
 If you specify `HTTP` for the `Type` property, specify the API endpoint URL\.  
 If you specify `MOCK` for the `Type` property, don't specify this property\.  
-If you specify `AWS` for the `Type` property, specify an AWS service that follows this form: `arn:aws:apigateway:region:subdomain.service|service:path|action/service_api`\. For example, a Lambda function URI follows this form: `arn:aws:apigateway:region:lambda:path/path`\. The path is usually in the form `/2015-03-31/functions/LambdaFunctionARN/invocations`\. For more information, see the `uri` property of the [Integration](http://docs.aws.amazon.com/apigateway/api-reference/resource/integration/) resource in the *Amazon API Gateway REST API Reference*\.  
+If you specify `AWS` for the `Type` property, specify an AWS service that follows this form: `arn:aws:apigateway:region:subdomain.service|service:path|action/service_api`\. For example, a Lambda function URI follows this form: `arn:aws:apigateway:region:lambda:path/path`\. The path is usually in the form `/2015-03-31/functions/LambdaFunctionARN/invocations`\. For more information, see the `uri` property of the [Integration](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/) resource in the *Amazon API Gateway REST API Reference*\.  
 *Required*: Conditional\. If you specified `HTTP` or `AWS` for the `Type` property, you must specify this property\.  
 *Type*: String

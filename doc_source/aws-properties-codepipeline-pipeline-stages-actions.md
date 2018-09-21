@@ -2,7 +2,7 @@
 
 `Actions` is a property of the [AWS CodePipeline Pipeline Stages](aws-properties-codepipeline-pipeline-stages.md) property that specifies an action for an AWS CodePipeline stage\.
 
-## Syntax<a name="w3ab2c21c14d464b5"></a>
+## Syntax<a name="w4ab1c21c14d514b5"></a>
 
 ### JSON<a name="aws-properties-codepipeline-pipeline-stages-actions-syntax.json"></a>
 
@@ -34,7 +34,7 @@
 [RunOrder](#cfn-codepipeline-pipeline-stages-actions-runorder): Integer
 ```
 
-## Properties<a name="w3ab2c21c14d464b7"></a>
+## Properties<a name="w4ab1c21c14d514b7"></a>
 
 `ActionTypeId`  <a name="cfn-codepipeline-pipeline-stages-actions-actiontypeid"></a>
 Specifies the action type and the provider of the action\.  
@@ -42,7 +42,7 @@ Specifies the action type and the provider of the action\.
 *Type*: [AWS CodePipeline Pipeline Stages Actions ActionTypeId](aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.md)
 
 `Configuration`  <a name="cfn-codepipeline-pipeline-stages-actions-configuration"></a>
-The action's configuration\. These are key\-value pairs that specify input values for an action\. For more information, see [ Action Structure Requirements in AWS CodePipeline](http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements) in the *AWS CodePipeline User Guide*\.  
+The action's configuration\. These are key\-value pairs that specify input values for an action\. For more information, see [ Action Structure Requirements in AWS CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements) in the *AWS CodePipeline User Guide*\.  
 *Required*: No  
 *Type*: JSON object
 

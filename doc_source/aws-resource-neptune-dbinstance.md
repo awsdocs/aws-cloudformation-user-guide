@@ -1,6 +1,6 @@
 # AWS::Neptune::DBInstance<a name="aws-resource-neptune-dbinstance"></a>
 
-The `AWS::Neptune::DBInstance` type creates an Neptune DB instance\. 
+The `AWS::Neptune::DBInstance` type creates an Amazon Neptune DB instance\. 
 
 **Important**  
 If a DB instance is deleted or replaced during an update, AWS CloudFormation deletes all automated snapshots\. However, it retains manual DB snapshots\. During an update that requires replacement, you can apply a stack policy to prevent DB instances from being replaced\. For more information, see [Prevent Updates to Stack Resources](protect-stack-resources.md)\.
@@ -67,7 +67,7 @@ Properties:
 Indicates that minor engine upgrades are applied automatically to the DB instance during the maintenance window\. The default value is `true`\.  
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. 
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruption](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. 
 
 `AvailabilityZone`  <a name="cfn-neptune-dbinstance-availabilityzone"></a>
 The name of the Availability Zone where the DB instance is located\. You can't set the `AvailabilityZone` parameter if the `MultiAZ` parameter is set to `true`\.  
@@ -100,27 +100,28 @@ If you specify a name, you cannot perform updates that require replacement of th
 The name of an existing DB parameter group or a reference to an [AWS::Neptune::DBParameterGroup](aws-resource-neptune-dbparametergroup.md) resource created in the template\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. If any of the data members of the referenced parameter group are changed during an update, the DB instance might need to be restarted, which causes some interruption\. If the parameter group contains static parameters, whether they were changed or not, an update triggers a reboot\.
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruption](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. If any of the data members of the referenced parameter group are changed during an update, the DB instance might need to be restarted, which causes some interruption\. If the parameter group contains static parameters, whether they were changed or not, an update triggers a reboot\.
 
 `DBSnapshotIdentifier`  <a name="cfn-neptune-dbinstance-dbsnapshotidentifier"></a>
-The name or Amazon Resource Name \(ARN\) of the DB snapshot that's used to restore the DB instance\. If you're restoring from a shared manual DB snapshot, you must specify the ARN of the snapshot\.  
-By specifying this property, you can create a DB instance from the specified DB snapshot\. If the `DBSnapshotIdentifier` property is an empty string or the `AWS::Neptune::DBInstance` declaration has no `DBSnapshotIdentifier` property, AWS CloudFormation creates a new database\. If the property contains a value \(other than an empty string\), AWS CloudFormation creates a database from the specified snapshot\. If a snapshot with the specified name doesn't exist, AWS CloudFormation can't create the database and it rolls back the stack\.  
+This parameter is not supported\.  
+`AWS::Neptune::DBInstance` does not support restoring from snapshots\.  
+`AWS::Neptune::DBCluster` supports restoring from snapshots\. For more information, see [AWS::Neptune::DBCluster](aws-resource-neptune-dbcluster.md)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `DBSubnetGroupName`  <a name="cfn-neptune-dbinstance-dbsubnetgroupname"></a>
-A DB subnet group to associate with the DB instance\. If you update this value, the new subnet group must be a subnet group in a new VPC\.  
+A DB subnet group to associate with the DB instance\. If you update this value, the new subnet group must be a subnet group in a new virtual private cloud \(VPC\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `PreferredMaintenanceWindow`  <a name="cfn-neptune-dbinstance-preferredmaintenancewindow"></a>
-The weekly time range \(in UTC\) during which system maintenance can occur\. For valid values, see the `PreferredMaintenanceWindow` parameter for the [CreateDBInstance](docs.aws.amazon.com/neptune/latest/userguide/API_CreateDBInstance.html) action in the **\.  
+The weekly time range \(in UTC\) during which system maintenance can occur\. For valid values, see the `PreferredMaintenanceWindow` parameter for the [CreateDBInstance](https://docs.aws.amazon.com/neptune/latest/userguide/API_CreateDBInstance.html) action in the *Amazon Neptune User Guide*\.  
 This property applies when AWS CloudFormation initially creates the DB instance\. If you use AWS CloudFormation to update the DB instance, those updates are applied immediately\.
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. For more information, see [ModifyDBInstance](docs.aws.amazon.com/neptune/latest/userguide/API_ModifyDBInstance.html) in the **\.
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruption](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. For more information, see [ModifyDBInstance](https://docs.aws.amazon.com/neptune/latest/userguide/API_ModifyDBInstance.html) in the *Amazon Neptune User Guide*\.
 
 `StorageEncrypted`  <a name="cfn-neptune-dbinstance-storageencrypted"></a>
 Indicates whether the DB instance is encrypted\.  
@@ -137,9 +138,9 @@ An arbitrary set of tags \(key–value pairs\) for this DB instance\.
 
 ## Updating and Deleting AWS::Neptune::DBInstance Resources<a name="updating-and-deleting-dbinstance-resources"></a>
 
-### Updating DB Instances<a name="w3ab2c21c10d897c13b2"></a>
+### Updating DB Instances<a name="updating-and-deleting-dbinstance-resources-update"></a>
 
-When properties labeled "*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)" are updated, AWS CloudFormation first creates a replacement DB instance, then changes references from other dependent resources to point to the replacement DB instance, and finally deletes the old DB instance\.
+When properties labeled "*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)" are updated, AWS CloudFormation first creates a replacement DB instance, changes references from other dependent resources to point to the replacement DB instance, and finally deletes the old DB instance\.
 
 **Important**  
 We highly recommend that you take a snapshot of the database before updating the stack\. If you don't, you lose the data when AWS CloudFormation replaces your DB instance\. To preserve your data, perform the following procedure:  
@@ -148,7 +149,7 @@ Create a snapshot of the DB instance\.
 If you want to restore your instance using a DB snapshot, modify the updated template with your DB instance changes and add the `DBSnapshotIdentifier` property with the ID of the DB snapshot that you want to use\.
 Update the stack\.
 
-### Deleting DB Instances<a name="w3ab2c21c10d897c13b4"></a>
+### Deleting DB Instances<a name="updating-and-deleting-dbinstance-resources-delete"></a>
 
 You can set a deletion policy for your DB instance to control how AWS CloudFormation handles the instance when the stack is deleted\. For Neptune DB instances, you can choose to *retain* the instance, to *delete* the instance, or to *create a snapshot* of the instance\. The default AWS CloudFormation behavior depends on the `DBClusterIdentifier` property:
 + For `AWS::Neptune::DBInstance` resources that don't specify the `DBClusterIdentifier` property, AWS CloudFormation saves a snapshot of the DB instance\.
@@ -170,7 +171,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 + **Endpoint**
 
   The connection endpoint for the database\. For example: `mystack-mydb-1apw1j4phylrk.cg034hpkmmjt.``us-east-2``.rds.amazonaws.com`\.
-+ **Endpoint**
++ **Port**
 
   The port number on which the database accepts connections\. For example: `8182`\.
 

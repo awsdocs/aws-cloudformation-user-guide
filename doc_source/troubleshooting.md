@@ -40,7 +40,7 @@ When you come across the following errors with your AWS CloudFormation stack, yo
 To resolve this situation, try the following:
 + Some resources must be empty before they can be deleted\. For example, you must delete all objects in an Amazon S3 bucket or remove all instances in an Amazon EC2 security group before you can delete the bucket or security group\.
 + Ensure that you have the necessary IAM permissions to delete the resources in the stack\. In addition to AWS CloudFormation permissions, you must be allowed to use the underlying services, such as Amazon S3 or Amazon EC2\.
-+ When stacks are in the `DELETE_FAILED` state because AWS CloudFormation couldn't delete a resource, rerun the deletion with the [http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeleteStack.html](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeleteStack.html) parameter and specify the resource that AWS CloudFormation can't delete\. AWS CloudFormation deletes the stack without deleting the retained resource\. Retaining resources is useful when you can't delete a resource, such as an S3 bucket that contains objects that you want to keep, but you still want to delete the stack\.
++ When stacks are in the `DELETE_FAILED` state because AWS CloudFormation couldn't delete a resource, rerun the deletion with the [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeleteStack.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeleteStack.html) parameter and specify the resource that AWS CloudFormation can't delete\. AWS CloudFormation deletes the stack without deleting the retained resource\. Retaining resources is useful when you can't delete a resource, such as an S3 bucket that contains objects that you want to keep, but you still want to delete the stack\.
 
   After you delete the stack, you can manually delete retained resources by using their associated AWS service\.
 + You cannot delete stacks that have termination protection enabled\. If you attempt to delete a stack with termination protection enabled, the deletion fails and the stack\-\-including its status\-\-remains unchanged\. Disable termination protection on the stack, then perform the delete operation again\. 
@@ -74,11 +74,11 @@ For resource property names and values, update your template to use valid names 
 
 ### Limit Exceeded<a name="troubleshooting-errors-limit-exceeded"></a>
 
-Verify that you didn't reach a resource limit\. For example, the default number Amazon EC2 instances that you can launch is 20\. If try to create more Amazon EC2 instances than your account limit, the instance creation fails and you receive the error `Status=start_failed`\. To view the default AWS limits by service, see [AWS Service Limits](http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.
+Verify that you didn't reach a resource limit\. For example, the default number Amazon EC2 instances that you can launch is 20\. If try to create more Amazon EC2 instances than your account limit, the instance creation fails and you receive the error `Status=start_failed`\. To view the default AWS limits by service, see [AWS Service Limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.
 
 For AWS CloudFormation limits and tweaking strategies, see [AWS CloudFormation Limits](cloudformation-limits.md)\.
 
-Also, during an update, if a resource is replaced, AWS CloudFormation creates new resource before it deletes the old one\. This replacement might put your account over the resource limit, which would cause your update to fail\. You can delete excess resources or request a [limit increase](http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html)\.
+Also, during an update, if a resource is replaced, AWS CloudFormation creates new resource before it deletes the old one\. This replacement might put your account over the resource limit, which would cause your update to fail\. You can delete excess resources or request a [limit increase](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html)\.
 
 ### Nested Stacks are Stuck in `UPDATE_COMPLETE_CLEANUP_IN_PROGRESS`, `UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS`, or `UPDATE_ROLLBACK_IN_PROGRESS`<a name="troubleshooting-errors-nested-stacks-are-stuck"></a>
 
@@ -122,7 +122,7 @@ A dependent resource cannot return to its original state, causing the rollback t
 Depending on the cause of the failure, you can manually fix the error and continue the rollback\. By continuing the rollback, you can return your stack to a working state \(the `UPDATE_ROLLBACK_COMPLETE` state\), and then try to update the stack again\. The following list describes solutions to common errors that cause update rollback failures:
 +   
 Failed to receive the required number of signals  
-Use the [signal\-resource](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/signal-resource.html) command to manually send the required number of successful signals to the resource that is waiting for them, and then continue rolling back the update\. For example, during an update rollback, instances in an Auto Scaling group might fail to signal success within the specified timeout duration\. Manually send success signals to the Auto Scaling group\. When you continue the update rollback, AWS CloudFormation sees your signals and proceeds with the rollback\.
+Use the [signal\-resource](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/signal-resource.html) command to manually send the required number of successful signals to the resource that is waiting for them, and then continue rolling back the update\. For example, during an update rollback, instances in an Auto Scaling group might fail to signal success within the specified timeout duration\. Manually send success signals to the Auto Scaling group\. When you continue the update rollback, AWS CloudFormation sees your signals and proceeds with the rollback\.
 +   
 Changes to a resource were made outside of AWS CloudFormation  
 Manually sync resources so that they match the original stack's template, and then continue rolling back the update\. For example, if you manually deleted a resource that AWS CloudFormation is attempting to roll back to, you must manually create that resource with the same name and properties it had in the original stack\.
@@ -134,14 +134,14 @@ Invalid security token
 AWS CloudFormation requires a new set of credentials\. No change is required\. Continue rolling back the update, which refreshes the credentials\.
 +   
 Limitation error  
-Delete resources that you don't need or request a [limit increase](http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html), and then continue rolling back the update\. For example, if your account limit for the number of EC2 instances is 20 and the update rollback exceeds that limit, it will fail\.
+Delete resources that you don't need or request a [limit increase](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html), and then continue rolling back the update\. For example, if your account limit for the number of EC2 instances is 20 and the update rollback exceeds that limit, it will fail\.
 +   
 Resource did not stabilize  
 A resource did not respond because the operation might have exceeded the AWS CloudFormation timeout period or an AWS service might have been interrupted\. No change is required\. After the resource operation is complete or the AWS service is back in operation, continue rolling back the update\.
 
 To continue rolling back an update, you can use the AWS CloudFormation console or AWS command line interface \(CLI\)\. For more information, see [Continue Rolling Back an Update](using-cfn-updating-stacks-continueupdaterollback.md)\.
 
-If none of these solutions work, you can skip the resources that AWS CloudFormation can't successfully roll back\. For more information, see the `ResourcesToSkip` parameter for the [ContinueUpdateRollback](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ContinueUpdateRollback.html) action in the *AWS CloudFormation API Reference*\. AWS CloudFormation sets the status of the specified resources to `UPDATE_COMPLETE` and continues to roll back the stack\. After the rollback is complete, the state of the skipped resources will be inconsistent with the state of the resources in the stack template\. Before you perform another stack update, you must modify the resources or update the stack to be consistent with each other\. If you don't, subsequent stack updates might fail and make your stack unrecoverable\.
+If none of these solutions work, you can skip the resources that AWS CloudFormation can't successfully roll back\. For more information, see the `ResourcesToSkip` parameter for the [ContinueUpdateRollback](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ContinueUpdateRollback.html) action in the *AWS CloudFormation API Reference*\. AWS CloudFormation sets the status of the specified resources to `UPDATE_COMPLETE` and continues to roll back the stack\. After the rollback is complete, the state of the skipped resources will be inconsistent with the state of the resources in the stack template\. Before you perform another stack update, you must modify the resources or update the stack to be consistent with each other\. If you don't, subsequent stack updates might fail and make your stack unrecoverable\.
 
 ### Wait Condition Didn't Receive the Required Number of Signals from an Amazon EC2 Instance<a name="troubleshooting-errors-wait-condition-didnt-receive-the-required-number-of-signals"></a>
 
@@ -154,7 +154,7 @@ To resolve this situation, try the following:
   curl -I https://aws.amazon.com
   ```
 
-  For information about configuring a NAT device, see [NAT](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-nat.html) in the *Amazon VPC User Guide*\.
+  For information about configuring a NAT device, see [NAT](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat.html) in the *Amazon VPC User Guide*\.
 
 ## Contacting Support<a name="contacting-support"></a>
 

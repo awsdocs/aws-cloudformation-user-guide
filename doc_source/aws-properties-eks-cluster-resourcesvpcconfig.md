@@ -1,6 +1,6 @@
 # EKS Cluster ResourcesVpcConfig<a name="aws-properties-eks-cluster-resourcesvpcconfig"></a>
 
-<a name="aws-properties-eks-cluster-resourcesvpcconfig-description"></a>The `ResourcesVpcConfig` property type specifies the VPC subnets and security groups used by the Amazon EKS cluster control plane\. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes\. For more information, see [Cluster VPC Considerations](http://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](http://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the *Amazon EKS User Guide*\.
+<a name="aws-properties-eks-cluster-resourcesvpcconfig-description"></a>The `ResourcesVpcConfig` property type specifies the VPC subnets and security groups used by the Amazon EKS cluster control plane\. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes\. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the *Amazon EKS User Guide*\.
 
 <a name="aws-properties-eks-cluster-resourcesvpcconfig-inheritance"></a> `ResourcesVpcConfig` is a property of the [AWS::EKS::Cluster](aws-resource-eks-cluster.md) resource type\.
 
@@ -20,9 +20,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-eks-cluster-resourcesvpcconfig-syntax.yaml"></a>
 
 ```
-[SecurityGroupIds](#cfn-eks-cluster-resourcesvpcconfig-securitygroupids)
+[SecurityGroupIds](#cfn-eks-cluster-resourcesvpcconfig-securitygroupids):
   - String
-[SubnetIds](#cfn-eks-cluster-resourcesvpcconfig-subnetids)
+[SubnetIds](#cfn-eks-cluster-resourcesvpcconfig-subnetids):
   - String
 ```
 
@@ -41,5 +41,5 @@ Specify at least 2 subnets for your Amazon EKS worker nodes\. Amazon EKS creates
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-eks-cluster-resourcesvpcconfig-seealso"></a>
-+ [Clusters](http://docs.aws.amazon.com/eks/latest/userguide/clusters.html) in the *Amazon EKS User Guide*\.
-+ [CreateCluster](http://docs.aws.amazon.com/eks/latest/APIReference/API_CreateCluster.html) in the *Amazon EKS API Reference*\.
++ [Clusters](https://docs.aws.amazon.com/eks/latest/userguide/clusters.html) in the *Amazon EKS User Guide*\.
++ [CreateCluster](https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateCluster.html) in the *Amazon EKS API Reference*\.

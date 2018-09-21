@@ -1,6 +1,6 @@
 # Amazon S3 Bucket AccelerateConfiguration<a name="aws-properties-s3-bucket-accelerateconfiguration"></a>
 
-<a name="aws-properties-s3-bucket-accelerateconfiguration-description"></a>The `AccelerateConfiguration` property type configures the transfer acceleration state for an Amazon S3 bucket\. For more information, see [Amazon S3 Transfer Acceleration](http://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html) in the *Amazon Simple Storage Service Developer Guide*\.
+<a name="aws-properties-s3-bucket-accelerateconfiguration-description"></a>The `AccelerateConfiguration` property type configures the transfer acceleration state for an Amazon S3 bucket\. For more information, see [Amazon S3 Transfer Acceleration](https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 <a name="aws-properties-s3-bucket-accelerateconfiguration-inheritance"></a> `AccelerateConfiguration` is a property of the [AWS::S3::Bucket](aws-properties-s3-bucket.md) resource\.
 
@@ -69,7 +69,7 @@ Parameters:
     Type: String
 Resources:
   MyBucket:
-    Type: 'AWS::S3::Bucket'
+    Type: AWS::S3::Bucket
     Properties:
       AccelerateConfiguration:
         AccelerationStatus: !Ref AccelerateStatus

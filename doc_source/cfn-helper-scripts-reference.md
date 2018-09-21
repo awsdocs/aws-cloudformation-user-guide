@@ -39,8 +39,8 @@ If you choose to specify an option, we recommend that you specify only one of th
 + `--access-key` together with `--secret-key`
 
 If you do specify an option, keep in mind which permissions the various helper scripts require: 
-+ `cfn-signal` requires [ `cloudformation:SignalResource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SignalResource.html)
-+ All other helper scripts require [ `cloudformation:DescribeStackResource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeStackResources.html)
++ `cfn-signal` requires [ `cloudformation:SignalResource`](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SignalResource.html)
++ All other helper scripts require [ `cloudformation:DescribeStackResource`](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeStackResources.html)
 
 For more information on using AWS CloudFormation\-specific actions and condition context keys in IAM policies, see [Controlling Access with AWS Identity and Access Management](using-iam-template.md)\.
 

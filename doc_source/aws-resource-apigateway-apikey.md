@@ -4,7 +4,7 @@ The `AWS::ApiGateway::ApiKey` resource creates a unique key that you can distrib
 
 **Topics**
 + [Syntax](#aws-resource-apigateway-apikey-syntax)
-+ [Properties](#w3ab2c21c10c17b9)
++ [Properties](#w4ab1c21c10c25b9)
 + [Return Value](#aws-resource-apigateway-apikey-returnvalues)
 + [Examples](#aws-resource-apigateway-apikey-examples)
 + [See Also](#aws-resource-apigateway-apikey-seealso)
@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-apikey-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::ApiKey"
+Type: AWS::ApiGateway::ApiKey
 Properties: 
   [CustomerId](#cfn-apigateway-apikey-customerid): String
   [Description](#cfn-apigateway-apikey-description): String
@@ -44,7 +44,7 @@ Properties:
     - ...
 ```
 
-## Properties<a name="w3ab2c21c10c17b9"></a>
+## Properties<a name="w4ab1c21c10c25b9"></a>
 
 `CustomerId`  <a name="cfn-apigateway-apikey-customerid"></a>
 An AWS Marketplace customer identifier to use when integrating with the AWS SaaS Marketplace\.  
@@ -119,7 +119,7 @@ The following example creates an API key and associates it with the `Test` stage
 
 ```
 ApiKey: 
-  Type: "AWS::ApiGateway::ApiKey"
+  Type: AWS::ApiGateway::ApiKey
   DependsOn: 
     - "TestAPIDeployment"
     - "Test"
@@ -191,4 +191,4 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-apigateway-apikey-seealso"></a>
-+ [ apikey:create](http://docs.aws.amazon.com/apigateway/api-reference/link-relation/apikey-create/) operation in the *Amazon API Gateway REST API Reference*
++ [ apikey:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/apikey-create/) operation in the *Amazon API Gateway REST API Reference*

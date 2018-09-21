@@ -1,6 +1,6 @@
 # AWS::SageMaker::Endpoint<a name="aws-resource-sagemaker-endpoint"></a>
 
-Use the `AWS::SageMaker::Endpoint` resource to create an endpoint using the specified configuration in the request\. Amazon SageMaker uses the endpoint to provision resources and deploy models\. You create the endpoint configuration with the [AWS::SageMaker::EndpointConfig](aws-resource-sagemaker-endpointconfig.md) resource\. For more information, see [Deploying a Model on Amazon SageMaker Hosting Services](http://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works-hosting.html) in the *SageMaker Developer Guide*\. 
+Use the `AWS::SageMaker::Endpoint` resource to create an endpoint using the specified configuration in the request\. Amazon SageMaker uses the endpoint to provision resources and deploy models\. You create the endpoint configuration with the [AWS::SageMaker::EndpointConfig](aws-resource-sagemaker-endpointconfig.md) resource\. For more information, see [Deploying a Model on Amazon SageMaker Hosting Services](https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works-hosting.html) in the *SageMaker Developer Guide*\. 
 
 **Topics**
 + [Syntax](#aws-resource-sagemaker-endpoint-syntax)
@@ -188,7 +188,7 @@ The following example creates an endpoint configuration from a trained model, an
       "Value": { "Fn::GetAtt" : [ "Endpoint", "EndpointName" ] }
     }
     
-  },
+  }
   
 }
 ```
@@ -261,9 +261,9 @@ Resources:
                 Effect: "Allow"
                 Action: "*"
                 Resource: "*"
-  Outputs:
-    EndpointId:
-      Value: !Ref Endpoint
-    EndpointName:
-      Value: !GetAtt Endpoint.EndpointName
+Outputs:
+  EndpointId:
+    Value: !Ref Endpoint
+  EndpointName:
+    Value: !GetAtt Endpoint.EndpointName
 ```

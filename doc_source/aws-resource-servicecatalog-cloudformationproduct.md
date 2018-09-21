@@ -1,6 +1,6 @@
 # AWS::ServiceCatalog::CloudFormationProduct<a name="aws-resource-servicecatalog-cloudformationproduct"></a>
 
-Creates the specified product for AWS Service Catalog\. For more information, see [CreateProduct](http://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateProduct.html) in the *AWS Service Catalog Developer Guide*\.
+Creates the specified product for AWS Service Catalog\. For more information, see [CreateProduct](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateProduct.html) in the *AWS Service Catalog Developer Guide*\.
 
 **Topics**
 + [Syntax](#aws-resource-servicecatalog-cloudformationproduct-syntax)

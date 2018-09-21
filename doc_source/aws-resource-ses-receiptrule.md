@@ -1,10 +1,11 @@
 # AWS::SES::ReceiptRule<a name="aws-resource-ses-receiptrule"></a>
 
-The `AWS::SES::ReceiptRule` resource specifies which actions Amazon SES should take when it receives mail on behalf of one or more email addresses or domains that you own\. For more information, see [Creating Receipt Rules for Amazon SES Email Receiving](url-ses-dev;receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*\.
+The `AWS::SES::ReceiptRule` resource specifies which actions Amazon SES should take when it receives mail on behalf of one or more email addresses or domains that you own\. For more information, see [Creating Receipt Rules for Amazon SES Email Receiving](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*\.
 
 **Topics**
 + [Syntax](#aws-resource-ses-receiptrule-syntax)
 + [Properties](#aws-resource-ses-receiptrule-properties)
++ [Return Values](#aws-resource-ses-receiptrule-returnvalues)
 + [Example](#aws-resource-ses-receiptrule-examples)
 + [See Also](#aws-resource-ses-receiptrule-seealso)
 
@@ -54,6 +55,14 @@ The name of the rule set that the receipt rule will be added to\.
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+
+## Return Values<a name="aws-resource-ses-receiptrule-returnvalues"></a>
+
+### Ref<a name="aws-resource-ses-receiptrule-ref"></a>
+
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
+
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="aws-resource-ses-receiptrule-examples"></a>
 
@@ -157,7 +166,7 @@ Parameters:
 
 Resources:
   ReceiptRule1:
-    Type: "AWS::SES::ReceiptRule"
+    Type: AWS::SES::ReceiptRule
     Properties:
       RuleSetName: !Ref RuleSetName
       Rule:
@@ -171,7 +180,7 @@ Resources:
               HeaderValue: !Ref HeaderValue
 
   ReceiptRule2:
-    Type: "AWS::SES::ReceiptRule"
+    Type: AWS::SES::ReceiptRule
     Properties:
       RuleSetName: !Ref RuleSetName
       After: !Ref ReceiptRule1
@@ -180,6 +189,6 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-ses-receiptrule-seealso"></a>
-+ [Creating Receipt Rules for Amazon SES Email Receiving](url-ses-dev;receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*
-+ [CreateReceiptRule](url-ses-api;API_CreateReceiptRule.html) in the *Amazon Simple Email Service API Reference*
-+ [ReceiptRule](url-ses-api;API_ReceiptRule.html) in the *Amazon Simple Email Service API Reference*
++ [Creating Receipt Rules for Amazon SES Email Receiving](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*
++ [CreateReceiptRule](https://docs.aws.amazon.com/ses/latest/APIReference/API_CreateReceiptRule.html) in the *Amazon Simple Email Service API Reference*
++ [ReceiptRule](https://docs.aws.amazon.com/ses/latest/APIReference/API_ReceiptRule.html) in the *Amazon Simple Email Service API Reference*

@@ -2,7 +2,7 @@
 
 `SimpleScalingPolicyConfiguration` specifies an automatic scaling configuration that describes how the policy adds or removes instances, the cooldown period, and the number of EC2 instances that are added when the CloudWatch metric alarm condition is met\. `SimpleScalingPolicyConfiguration` is a subproperty of the [Amazon EMR InstanceGroupConfig ScalingAction](aws-properties-elasticmapreduce-instancegroupconfig-scalingaction.md) property type\.
 
-## Syntax<a name="w3ab2c21c14e1197b5"></a>
+## Syntax<a name="w4ab1c21c14e1292b5"></a>
 
 ### JSON<a name="aws-properties-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-syntax.json"></a>
 
@@ -22,10 +22,10 @@
   [ScalingAdjustment](#cfn-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-scalingadjustment): String
 ```
 
-## Properties<a name="w3ab2c21c14e1197b7"></a>
+## Properties<a name="w4ab1c21c14e1292b7"></a>
 
 **Note**  
-For more information about each property, including constraints and valid values, see [SimpleScalingPolicyConfiguration](http://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_SimpleScalingPolicyConfiguration.html) in the *Amazon EMR API Reference*\.
+For more information about each property, including constraints and valid values, see [SimpleScalingPolicyConfiguration](https://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_SimpleScalingPolicyConfiguration.html) in the *Amazon EMR API Reference*\.
 
 `AdjustmentType`  <a name="cfn-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-adjustmenttype"></a>
 The way in which EC2 instances are added \(if `ScalingAdjustment` is a positive number\) or terminated \(if `ScalingAdjustment` is a negative number\) when the scaling activity is triggered\. `CHANGE_IN_CAPACITY` is the default value\.  

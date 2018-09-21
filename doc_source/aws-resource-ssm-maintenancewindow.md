@@ -1,6 +1,6 @@
 # AWS::SSM::MaintenanceWindow<a name="aws-resource-ssm-maintenancewindow"></a>
 
-The `AWS::SSM::MaintenanceWindow` resource represents general information about a Maintenance Window for AWS Systems Manager\. Maintenance Windows let you define a schedule for when to perform potentially disruptive actions on your instances—such as patching an operating system \(OS\), updating drivers, or installing software\. Each Maintenance Window has a schedule, a duration, a set of registered targets, and a set of registered tasks\. For more information, see [ Systems Manager Maintenance Windows](http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-maintenance.html) in the *AWS Systems Manager User Guide* and [ CreateMaintenanceWindow](http://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateMaintenanceWindow.html) in the *AWS Systems Manager API Reference*\.
+The `AWS::SSM::MaintenanceWindow` resource represents general information about a Maintenance Window for AWS Systems Manager\. Maintenance Windows let you define a schedule for when to perform potentially disruptive actions on your instances—such as patching an operating system \(OS\), updating drivers, or installing software\. Each Maintenance Window has a schedule, a duration, a set of registered targets, and a set of registered tasks\. For more information, see [ Systems Manager Maintenance Windows](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-maintenance.html) in the *AWS Systems Manager User Guide* and [ CreateMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateMaintenanceWindow.html) in the *AWS Systems Manager API Reference*\.
 
 ## Syntax<a name="aws-resource-ssm-maintenancewindow-syntax"></a>
 
@@ -75,13 +75,13 @@ The name of the Maintenance Window\.
 
 ## Return Values<a name="aws-resource-ssm-maintenancewindow-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10e1154b9b3"></a>
+### Ref<a name="w4ab1c21c10e1183b9b3"></a>
 
-When you pass the logical ID of an `AWS::SSM::MaintenanceWindow` resource to the intrinsic `Ref` function, the function returns the physical ID of the resource, such as `mw-abcde1234567890yz`\. 
+When you pass the logical ID of an `AWS::SSM::MaintenanceWindow` resource to the intrinsic `Ref` function, the function returns the maintenance window ID, such as `mw-abcde1234567890yz`\. 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
 ## See Also<a name="aws-resource-ssm-maintenancewindow-seealso"></a>
 + [AWS::SSM::MaintenanceWindowTarget](aws-resource-ssm-maintenancewindowtarget.md)
 + [AWS::SSM::MaintenanceWindowTask](aws-resource-ssm-maintenancewindowtask.md)
-+ [ CreateMaintenanceWindow](http://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateMaintenanceWindow.html) in the *AWS Systems Manager API Reference*
++ [ CreateMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateMaintenanceWindow.html) in the *AWS Systems Manager API Reference*

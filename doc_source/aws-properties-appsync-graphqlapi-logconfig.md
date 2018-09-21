@@ -39,4 +39,4 @@ The desired level of logging\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-appsync-graphqlapi-logconfig-seealso"></a>
-+ [ LogConfig](http://docs.aws.amazon.com/appsync/latest/APIReference/API_LogConfig.html) operation in the *AWS AppSync API Reference*
++ [ LogConfig](https://docs.aws.amazon.com/appsync/latest/APIReference/API_LogConfig.html) operation in the *AWS AppSync API Reference*

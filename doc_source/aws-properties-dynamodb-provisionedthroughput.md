@@ -2,9 +2,9 @@
 
 Describes a set of provisioned throughput values for an [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md) resource\. DynamoDB uses these capacity units to allocate sufficient resources to provide the requested throughput\.
 
-For a complete discussion of DynamoDB provisioned throughput values, see [Specifying Read and Write Requirements](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#ProvisionedThroughput) in the *DynamoDB Developer Guide*\.
+For a complete discussion of DynamoDB provisioned throughput values, see [Specifying Read and Write Requirements](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#ProvisionedThroughput) in the *DynamoDB Developer Guide*\.
 
-## Syntax<a name="w3ab2c21c14d627b7"></a>
+## Syntax<a name="w4ab1c21c14d689b7"></a>
 
 ### JSON<a name="aws-properties-dynamodb-provisionedthroughput-syntax.json"></a>
 
@@ -22,7 +22,7 @@ For a complete discussion of DynamoDB provisioned throughput values, see [Specif
 [WriteCapacityUnits](#cfn-dynamodb-provisionedthroughput-writecapacityunits): Number
 ```
 
-## Parameters<a name="w3ab2c21c14d627b9"></a>
+## Parameters<a name="w4ab1c21c14d689b9"></a>
 
 `ReadCapacityUnits`  <a name="cfn-dynamodb-provisionedthroughput-readcapacityunits"></a>
 Sets the desired minimum number of consistent reads of items \(up to 1KB in size\) per second for the specified table before Amazon DynamoDB balances the load\.  

@@ -6,10 +6,10 @@ For more information about IAM roles, see [Working with Roles](http://docs.aws.a
 
 **Topics**
 + [Syntax](#aws-resource-iam-role-syntax)
-+ [Properties](#w3ab2c21c10d768c11)
-+ [Return Values](#w3ab2c21c10d768c13)
++ [Properties](#w4ab1c21c10d784c11)
++ [Return Values](#w4ab1c21c10d784c13)
 + [Template Examples](#cfn-iam-role-templateexamples)
-+ [See Also](#w3ab2c21c10d768c17)
++ [See Also](#w4ab1c21c10d784c17)
 
 ## Syntax<a name="aws-resource-iam-role-syntax"></a>
 
@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-iam-role-syntax.yaml"></a>
 
 ```
-Type: "AWS::IAM::Role"
+Type: AWS::IAM::Role
 Properties: 
   [AssumeRolePolicyDocument](#cfn-iam-role-assumerolepolicydocument):
     JSON object
@@ -47,10 +47,10 @@ Properties:
   [RoleName](#cfn-iam-role-rolename): String
 ```
 
-## Properties<a name="w3ab2c21c10d768c11"></a>
+## Properties<a name="w4ab1c21c10d784c11"></a>
 
 `AssumeRolePolicyDocument`  <a name="cfn-iam-role-assumerolepolicydocument"></a>
-The trust policy that is associated with this role\. You can associate only one assume role policy with a role\. For an example of an assume role policy, see [Template Examples](#cfn-iam-role-templateexamples)\. For more information about the elements that you can use in an IAM policy, see [IAM Policy Elements Reference](http://docs.aws.amazon.com//IAM/latest/UserGuide/reference_policies_elements.html) in the *IAM User Guide*\.  
+The trust policy that is associated with this role\. You can associate only one assume role policy with a role\. For an example of an assume role policy, see [Template Examples](#cfn-iam-role-templateexamples)\. For more information about the elements that you can use in an IAM policy, see [IAM Policy Elements Reference](https://docs.aws.amazon.com//IAM/latest/UserGuide/reference_policies_elements.html) in the *IAM User Guide*\.  
 *Required*: Yes  
 *Type*: A JSON policy document  
 AWS Identity and Access Management \(IAM\) requires that policies be in JSON format\. However, for templates formatted in YAML, you can create an IAM policy in either JSON or YAML format\. AWS CloudFormation always converts a policy to JSON format before submitting it to IAM\.
@@ -83,7 +83,7 @@ If an external policy \(such as `AWS::IAM::Policy` or `AWS::IAM::ManagedPolicy`\
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `RoleName`  <a name="cfn-iam-role-rolename"></a>
-A name for the IAM role\. For valid values, see the `RoleName` parameter for the [http://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html](http://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html) action in the *IAM API Reference*\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the group name\.  
+A name for the IAM role\. For valid values, see the `RoleName` parameter for the [https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html) action in the *IAM API Reference*\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the group name\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 If you specify a name, you must specify the `CAPABILITY_NAMED_IAM` value to acknowledge your template's capabilities\. For more information, see [Acknowledging IAM Resources in AWS CloudFormation Templates](using-iam-template.md#using-iam-capabilities)\.  
 Naming an IAM resource can cause an unrecoverable error if you reuse the same template in multiple regions\. To prevent this, we recommend using `Fn::Join` and `AWS::Region` to create a region\-specific name, as in the following example: `{"Fn::Join": ["", [{"Ref": "AWS::Region"}, {"Ref": "MyResourceName"}]]}`\.
@@ -95,9 +95,9 @@ Naming an IAM resource can cause an unrecoverable error if you reuse the same te
 
 For general information about IAM policies and policy documents, see [How to Write a Policy](http://docs.aws.amazon.com/IAM/latest/UserGuide/AccessPolicyLanguage_HowToWritePolicies.html) in *IAM User Guide*\.
 
-## Return Values<a name="w3ab2c21c10d768c13"></a>
+## Return Values<a name="w4ab1c21c10d784c13"></a>
 
-### Ref<a name="w3ab2c21c10d768c13b2"></a>
+### Ref<a name="w4ab1c21c10d784c13b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -109,7 +109,7 @@ For the IAM::Role with the logical ID "RootRole", `Ref` will return the resource
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d768c13b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d784c13b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -123,13 +123,13 @@ This will return a value such as `“arn:aws:iam::1234567890:role/MyRole-AJJHDSK
 
 `RoleId`  
 Returns the stable and unique string identifying the role\. For example, `AIDAJQABLZS4A3QDU576Q`\.  
-For more information about IDs, see [IAM Identifiers](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM User Guide*\.
+For more information about IDs, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM User Guide*\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
 ## Template Examples<a name="cfn-iam-role-templateexamples"></a>
 
-### IAM Role with Embedded Policy and Instance Profiles<a name="w3ab2c21c10d768c15b4"></a>
+### IAM Role with Embedded Policy and Instance Profiles<a name="w4ab1c21c10d784c15b4"></a>
 
 This example shows an embedded Policy in the IAM::Role\. The policy is specified inline in the IAM::Role Policies property\.
 
@@ -217,7 +217,7 @@ Resources:
           Ref: "RootRole"
 ```
 
-### IAM Role with External Policy and Instance Profiles<a name="w3ab2c21c10d768c15b8"></a>
+### IAM Role with External Policy and Instance Profiles<a name="w4ab1c21c10d784c15b8"></a>
 
 In this example, the Policy and InstanceProfile resources are specified externally to the IAM Role\. They refer to the role by specifying its name, "RootRole", in their respective Roles properties\.
 
@@ -315,6 +315,6 @@ Resources:
           Ref: "RootRole"
 ```
 
-## See Also<a name="w3ab2c21c10d768c17"></a>
+## See Also<a name="w4ab1c21c10d784c17"></a>
 + [AWS Identity and Access Management Template Snippets](quickref-iam.md)
 + [AWS::IAM::InstanceProfile](aws-resource-iam-instanceprofile.md)

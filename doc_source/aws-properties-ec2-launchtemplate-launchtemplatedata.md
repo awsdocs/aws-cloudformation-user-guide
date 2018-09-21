@@ -105,7 +105,7 @@ The IAM instance profile\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ImageId`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-imageid"></a>
-The ID of the AMI\. For more information, see [DescribeImages](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImages.html) in the *Amazon EC2 API Reference*\.  
+The ID of the AMI\. For more information, see [DescribeImages](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImages.html) in the *Amazon EC2 API Reference*\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
@@ -124,20 +124,20 @@ The market \(purchasing\) option for the instances\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `InstanceType`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancetype"></a>
-The instance type\. For a list of valid values, see [RequestLaunchTemplateData](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestLaunchTemplateData.html) in the *Amazon EC2 API Reference*\.  
+The instance type\. For a list of valid values, see [RequestLaunchTemplateData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestLaunchTemplateData.html) in the *Amazon EC2 API Reference*\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `KernelId`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-kernelid"></a>
 The ID of the kernel\.  
-We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more information, see [User Provided Kernels](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedKernels.html) in the *Amazon EC2 User Guide for Linux Instances*\.
+We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more information, see [User Provided Kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedKernels.html) in the *Amazon EC2 User Guide for Linux Instances*\.
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `KeyName`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-keyname"></a>
-The name of the key pair\. For information on creating a key pair, see [CreateKeyPair](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateKeyPair.html) or [ImportKeyPair](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportKeyPair.html) in the *Amazon EC2 API Reference*\.  
+The name of the key pair\. For information on creating a key pair, see [CreateKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateKeyPair.html) or [ImportKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportKeyPair.html) in the *Amazon EC2 API Reference*\.  
 If you do not specify a key pair, you can't connect to the instance unless you choose an AMI that is configured to allow users another way to log in\.
  *Required*: No  
  *Type*: String  
@@ -163,7 +163,7 @@ The placement for the instance\.
 
 `RamDiskId`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-ramdiskid"></a>
 The ID of the RAM disk\.  
-We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more information, see [User Provided Kernels](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedKernels.html) in the *Amazon EC2 User Guide for Linux Instances*\.
+We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more information, see [User Provided Kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedKernels.html) in the *Amazon EC2 User Guide for Linux Instances*\.
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
@@ -175,7 +175,7 @@ We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more i
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `SecurityGroupIds`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-securitygroupids"></a>
-One or more security group IDs\. You cannot specify both a security group ID and security name in the same request\. For information on creating a security group, see [CreateSecurityGroup](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSecurityGroup.html) in the *Amazon EC2 API Reference*\.   
+One or more security group IDs\. You cannot specify both a security group ID and security name in the same request\. For information on creating a security group, see [CreateSecurityGroup](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSecurityGroup.html) in the *Amazon EC2 API Reference*\.   
  *Required*: No  
  *Type*: List of String values  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
@@ -187,10 +187,10 @@ The tags to apply to the resources during launch\. You can tag instances and vol
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `UserData`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-userdata"></a>
-The Base64\-encoded user data to make available to the instance\. For more information, see [Running Commands on Your Linux Instance at Launch](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) in the *Amazon EC2 User Guide for Linux Instances* and [Adding User Data](http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data) in the *Amazon EC2 User Guide for Windows Instances*\.  
+The Base64\-encoded user data to make available to the instance\. For more information, see [Running Commands on Your Linux Instance at Launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) in the *Amazon EC2 User Guide for Linux Instances* and [Adding User Data](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data) in the *Amazon EC2 User Guide for Windows Instances*\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-seealso"></a>
-+ [RequestLaunchTemplateData](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestLaunchTemplateData.html) in the *Amazon EC2 API Reference*
++ [RequestLaunchTemplateData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestLaunchTemplateData.html) in the *Amazon EC2 API Reference*

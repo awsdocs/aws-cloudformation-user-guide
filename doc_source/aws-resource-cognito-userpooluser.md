@@ -4,8 +4,8 @@ The `AWS::Cognito::UserPoolUser` resource creates an Amazon Cognito user pool us
 
 **Topics**
 + [Syntax](#aws-resource-cognito-userpooluser-syntax)
-+ [Properties](#w3ab2c21c10d291b9)
-+ [Return Value](#w3ab2c21c10d291c11)
++ [Properties](#w4ab1c21c10d303b9)
++ [Return Value](#w4ab1c21c10d303c11)
 
 ## Syntax<a name="aws-resource-cognito-userpooluser-syntax"></a>
 
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cognito-userpooluser-syntax.yaml"></a>
 
 ```
-Type: "AWS::Cognito::UserPoolUser"
+Type: AWS::Cognito::UserPoolUser
 Properties:
   [DesiredDeliveryMediums](#cfn-cognito-userpooluser-desireddeliverymediums): 
     - String
@@ -45,7 +45,7 @@ Properties:
     - AttributeType
 ```
 
-## Properties<a name="w3ab2c21c10d291b9"></a>
+## Properties<a name="w4ab1c21c10d303b9"></a>
 
 `DesiredDeliveryMediums`  <a name="cfn-cognito-userpooluser-desireddeliverymediums"></a>
 Specifies how the welcome message will be sent\. For email, specify `EMAIL`\. To use a phone number, specify `SMS`\. You can specify more than one value\. The default value is `SMS`\.   
@@ -93,9 +93,9 @@ To configure custom validation, you must create a Pre Sign\-up Lambda trigger fo
 *Type*: List of [Amazon Cognito UserPoolUser AttributeType](aws-properties-cognito-userpooluser-attributetype.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w3ab2c21c10d291c11"></a>
+## Return Value<a name="w4ab1c21c10d303c11"></a>
 
-### Ref<a name="w3ab2c21c10d291c11b2"></a>
+### Ref<a name="w4ab1c21c10d303c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the name of the user\. For example, `admin`\.
 

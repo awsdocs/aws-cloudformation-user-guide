@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-alarmconfiguration-properties"></a>
 
-For more information about each property, including constraints and valid values, see [AlarmConfiguration](http://docs.aws.amazon.com//codedeploy/latest/APIReference/API_AlarmConfiguration.html) in the *AWS CodeDeploy API Reference*\.
+For more information about each property, including constraints and valid values, see [AlarmConfiguration](https://docs.aws.amazon.com//codedeploy/latest/APIReference/API_AlarmConfiguration.html) in the *AWS CodeDeploy API Reference*\.
 
 `Alarms`  <a name="cfn-codedeploy-deploymentgroup-alarmconfiguration-alarms"></a>
 The list of alarms configured for the deployment group\. Duplicates are not allowed\.  

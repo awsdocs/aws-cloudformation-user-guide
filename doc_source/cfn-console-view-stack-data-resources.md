@@ -1,6 +1,6 @@
 # Viewing AWS CloudFormation Stack Data and Resources on the AWS Management Console<a name="cfn-console-view-stack-data-resources"></a>
 
-## Viewing Stack Information<a name="w3ab2c15c13c17b3"></a>
+## Viewing Stack Information<a name="w4ab1c15c13c17b3"></a>
 
 After you've created an AWS CloudFormation stack, you can use the AWS Management Console to view its data and resources\. You can view the following stack information:
 
@@ -20,7 +20,7 @@ For stacks that contain transforms, choose **View original template** to view th
 
 **Parameters**  
 Displays the stack's parameters and their values\.  
-For stacks that contain `SSM` parameters, the **Resolved Value** column displays the values that are used in the stack definition for the `SSM` parameters\. For more information, see [`SSM` Parameter Types](parameters-section-structure.md#aws-ssm-parameter-types)\.
+For stacks that contain `SSM` parameters, the **Resolved Value** column displays the values that are used in the stack definition for the `SSM` parameters\. For more information, see [SSM Parameter Types](parameters-section-structure.md#aws-ssm-parameter-types)\.
 
 **Tags**  
 Displays any tags that are associated with the stack\.
@@ -37,11 +37,11 @@ Describes the stack resources that are protected against stack updates\. For you
    For example, click **Outputs** to view the outputs that are associated with your stack\.  
 ![\[The Outputs tab in the detail pane.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stack-detail-pane.png)
 
-## Stack Status Codes<a name="w3ab2c15c13c17b5"></a>
+## Stack Status Codes<a name="w4ab1c15c13c17b5"></a>
 
 The following table describes stack status codes:
 
-### <a name="w3ab2c15c13c17b5b4"></a>
+### <a name="w4ab1c15c13c17b5b4"></a>
 
 
 | Stack Status | Description | 

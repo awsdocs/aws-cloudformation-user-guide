@@ -2,7 +2,7 @@
 
 The `RoutingRules` property is an embedded property of the [Amazon S3 Website Configuration Property](aws-properties-s3-websiteconfiguration.md) property\. This property describes the redirect behavior and when a redirect is applied\.
 
-## Syntax<a name="w3ab2c21c14e1814b5"></a>
+## Syntax<a name="w4ab1c21c14e1921b5"></a>
 
 ### JSON<a name="aws-properties-s3-websiteconfiguration-routingrules-syntax.json"></a>
 
@@ -22,7 +22,7 @@ The `RoutingRules` property is an embedded property of the [Amazon S3 Website Co
   Routing rule condition
 ```
 
-## Properties<a name="w3ab2c21c14e1814b7"></a>
+## Properties<a name="w4ab1c21c14e1921b7"></a>
 
 `RedirectRule`  <a name="cfn-s3-websiteconfiguration-routingrules-redirectrule"></a>
 Redirect requests to another host, to another page, or with another protocol\.  

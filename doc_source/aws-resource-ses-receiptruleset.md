@@ -1,6 +1,6 @@
 # AWS::SES::ReceiptRuleSet<a name="aws-resource-ses-receiptruleset"></a>
 
-The `AWS::SES::ReceiptRuleSet` resource specifies an empty rule set for Amazon SES\. For more information, see [CreateReceiptRuleSet](url-ses-api;API_CreateReceiptRuleSet.html) in the *Amazon Simple Email Service API Reference*\. 
+The `AWS::SES::ReceiptRuleSet` resource specifies an empty rule set for Amazon SES\. For more information, see [CreateReceiptRuleSet](https://docs.aws.amazon.com/ses/latest/APIReference/API_CreateReceiptRuleSet.html) in the *Amazon Simple Email Service API Reference*\. 
 
 **Topics**
 + [Syntax](#aws-resource-ses-receiptruleset-syntax)
@@ -45,15 +45,9 @@ The name of the rule set to create\. The name must:
 
 ## Return Values<a name="aws-resource-ses-receiptruleset-returnvalues"></a>
 
-### Ref
+### Ref<a name="aws-resource-ses-receiptruleset-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
-
-```
-{ "Ref": "ExampleRuleSet" }
-```
-
-For the SES::ReceiptRuleSet with the logical ID "ExampleRuleSet", `Ref` will return the resource name\.
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
@@ -95,11 +89,11 @@ Parameters:
     Type: String
 Resources:
   ReceiptRuleSet:
-    Type: 'AWS::SES::ReceiptRuleSet'
+    Type: AWS::SES::ReceiptRuleSet
     Properties:
       RuleSetName: !Ref ReceiptRuleSetName
 ```
 
 ## See Also<a name="aws-resource-ses-receiptruleset-seealso"></a>
-+ [Creating Receipt Rules for Amazon SES Email Receiving](url-ses-dev;receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*
-+ [CreateReceiptRuleSet](url-ses-api;API_CreateReceiptRuleSet.html) in the *Amazon Simple Email Service API Reference*
++ [Creating Receipt Rules for Amazon SES Email Receiving](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*
++ [CreateReceiptRuleSet](https://docs.aws.amazon.com/ses/latest/APIReference/API_CreateReceiptRuleSet.html) in the *Amazon Simple Email Service API Reference*

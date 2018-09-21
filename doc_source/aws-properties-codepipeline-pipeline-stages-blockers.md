@@ -2,7 +2,7 @@
 
 `Blockers` is a property of the [AWS CodePipeline Pipeline Stages](aws-properties-codepipeline-pipeline-stages.md) property that specifies an AWS CodePipeline gate declaration\.
 
-## Syntax<a name="w3ab2c21c14d480b5"></a>
+## Syntax<a name="w4ab1c21c14d530b5"></a>
 
 ### JSON<a name="aws-properties-codepipeline-pipeline-stages-blockers-syntax.json"></a>
 
@@ -20,7 +20,7 @@
 [Type](#cfn-codepipeline-pipeline-stages-blockers-type): String
 ```
 
-## Properties<a name="w3ab2c21c14d480b7"></a>
+## Properties<a name="w4ab1c21c14d530b7"></a>
 
 `Name`  <a name="cfn-codepipeline-pipeline-stages-blockers-name"></a>
 The name of the gate declaration\.  
@@ -28,6 +28,6 @@ The name of the gate declaration\.
 *Type*: String
 
 `Type`  <a name="cfn-codepipeline-pipeline-stages-blockers-type"></a>
-The type of gate declaration\. For valid values, see [BlockerDeclaration](http://docs.aws.amazon.com/codepipeline/latest/APIReference/API_BlockerDeclaration.html) in the *AWS CodePipeline API Reference*\.  
+The type of gate declaration\. For valid values, see [BlockerDeclaration](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_BlockerDeclaration.html) in the *AWS CodePipeline API Reference*\.  
 *Required*: Yes  
 *Type*: String

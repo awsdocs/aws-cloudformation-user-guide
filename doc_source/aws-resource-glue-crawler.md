@@ -1,6 +1,6 @@
 # AWS::Glue::Crawler<a name="aws-resource-glue-crawler"></a>
 
-The `AWS::Glue::Crawler` resource specifies an AWS Glue crawler\. For more information, see [Cataloging Tables with a Crawler](http://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) and [Crawler Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-crawling.html#aws-glue-api-crawler-crawling-Crawler) in the *AWS Glue Developer Guide*\. 
+The `AWS::Glue::Crawler` resource specifies an AWS Glue crawler\. For more information, see [Cataloging Tables with a Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) and [Crawler Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-crawling.html#aws-glue-api-crawler-crawling-Crawler) in the *AWS Glue Developer Guide*\. 
 
 **Topics**
 + [Syntax](#aws-resource-glue-crawler-syntax)
@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
     "[Role](#cfn-glue-crawler-role)" : String,
     "[Classifiers](#cfn-glue-crawler-classifiers)" : [ String, ... ],
+    "[Configuration](#cfn-glue-crawler-configuration)" : String,
     "[Description](#cfn-glue-crawler-description)" : String,
     "[SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy)" : [*SchemaChangePolicy*](aws-properties-glue-crawler-schemachangepolicy.md),
     "[Schedule](#cfn-glue-crawler-schedule)" : [*Schedule*](aws-properties-glue-crawler-schedule.md),
@@ -34,11 +35,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-glue-crawler-syntax.yaml"></a>
 
 ```
-Type: "AWS::Glue::Crawler"
+Type: AWS::Glue::Crawler
 Properties:
   [Role](#cfn-glue-crawler-role): String
   [Classifiers](#cfn-glue-crawler-classifiers): 
     - String
+  [Configuration](#cfn-glue-crawler-configuration): String
   [Description](#cfn-glue-crawler-description): String
   [SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy): 
     [*SchemaChangePolicy*](aws-properties-glue-crawler-schemachangepolicy.md)
@@ -63,6 +65,12 @@ The Amazon Resource Name \(ARN\) of an IAM role that's used to access customer r
 A list of UTF\-8 strings that specify the custom classifiers that are associated with the crawler\.  
  *Required*: No  
  *Type*: List of String values  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+
+`Configuration`  <a name="cfn-glue-crawler-configuration"></a>
+Crawler configuration information\. This versioned JSON string allows users to specify aspects of a crawler's behavior\. For more information, see [Configuring a Crawler](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html)\.\.  
+ *Required*: No  
+ *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Description`  <a name="cfn-glue-crawler-description"></a>
@@ -109,7 +117,7 @@ The name of the crawler\. Must match the single\-line string pattern: `[\u0020-\
 
 ## Return Values<a name="aws-resource-glue-crawler-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d704c10b3"></a>
+### Ref<a name="w4ab1c21c10d721c10b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
@@ -309,4 +317,25 @@ Resources:
         DeleteBehavior: "LOG"
       Schedule:
         ScheduleExpression: "cron(0/10 * ? * MON-FRI *)"
+```
+
+### Crawler Configuration<a name="aws-resource-glue-crawler-example2"></a>
+
+The following example specifies the crawler configuration that controls a crawler's behavior\.
+
+```
+{
+"Type" : "AWS::Glue::Crawler",
+"Properties" : {
+"Role" : "role1",
+"Classifiers" : [ ],
+"Description" : "example classifier",
+"SchemaChangePolicy" : "",
+"Schedule" : Schedule,
+"DatabaseName" : "test",
+"Targets" : [],
+"TablePrefix" : "test-",
+"Name" : "my-crawler",
+"Configuration" : "{\"Version\":1.0,\"CrawlerOutput\":{\"Partitions\":{\"AddOrUpdateBehavior\":\"InheritFromTable\"},\"Tables\":{\"AddOrUpdateBehavior\":\"MergeNewColumns\"}}}"
+}
 ```

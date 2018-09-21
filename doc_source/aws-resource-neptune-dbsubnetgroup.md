@@ -1,6 +1,6 @@
 # AWS::Neptune::DBSubnetGroup<a name="aws-resource-neptune-dbsubnetgroup"></a>
 
-The AWS::Neptune::DBSubnetGroup type creates a Neptune DB subnet group\. Subnet groups must contain at least two subnets in two different Availability Zones in the same region\.
+The `AWS::Neptune::DBSubnetGroup` type creates an Amazon Neptune DB subnet group\. Subnet groups must contain at least two subnets in two different Availability Zones in the same AWS Region\.
 
 **Topics**
 + [Syntax](#aws-resource-neptune-dbsubnetgroup-syntax)
@@ -43,26 +43,26 @@ Properties:
 ## Properties<a name="aws-resource-neptune-dbsubnetgroup-prop"></a>
 
 `DBSubnetGroupDescription`  <a name="cfn-neptune-dbsubnetgroup-dbsubnetgroupdescription"></a>
-The description for the DB Subnet Group\.  
+The description for the DB subnet group\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `DBSubnetGroupName`  <a name="cfn-neptune-dbsubnetgroup-dbsubnetgroupname"></a>
-The name for the DB Subnet Group\. This value is stored as a lowercase string\.  
-Constraints: Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens\. Must not be default\.   
+The name for the DB subnet group\. This value is stored as a lowercase string\.  
+*Constraints*: Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens\. Must not be default\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `SubnetIds`  <a name="cfn-neptune-dbsubnetgroup-subnetids"></a>
-The EC2 Subnet IDs for the DB Subnet Group\.  
+The Amazon EC2 subnet IDs for the DB subnet group\.  
 *Required*: Yes  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Tags`  <a name="cfn-neptune-dbsubnetgroup-tags"></a>
-The tags that you want to attach to the RDS database subnet group\.  
+The tags that you want to attach to the Amazon RDS database subnet group\.  
 *Required*: No  
 *Type*: A list of [resource tags](aws-properties-resource-tags.md) in key\-value format\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

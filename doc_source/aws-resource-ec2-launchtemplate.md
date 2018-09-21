@@ -1,6 +1,6 @@
 # AWS::EC2::LaunchTemplate<a name="aws-resource-ec2-launchtemplate"></a>
 
-The `AWS::EC2::LaunchTemplate` resource creates a launch template for an Amazon EC2 instance\. A launch template contains the parameters to launch an instance\. For more information, see [CreateLaunchTemplate](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html) in the *Amazon EC2 API Reference*\. 
+The `AWS::EC2::LaunchTemplate` resource creates a launch template for an Amazon EC2 instance\. A launch template contains the parameters to launch an instance\. For more information, see [CreateLaunchTemplate](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html) in the *Amazon EC2 API Reference*\. 
 
 **Topics**
 + [Syntax](#aws-resource-ec2-launchtemplate-syntax)
@@ -64,5 +64,11 @@ The default version of a launch template cannot be specified in AWS CloudFormati
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
 
+### Ref<a name="aws-resource-ec2-launchtemplate-ref"></a>
+
+When you pass the logical ID of an `AWS::EC2::LaunchTemplate` resource to the intrinsic `Ref` function, `Ref` returns the ID of the launch template, such as `lt-01238c059e3466abc`\.
+
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+
 ## See Also<a name="aws-resource-ec2-launchtemplate-seealso"></a>
-+ [CreateLaunchTemplate](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html) in the *Amazon EC2 API Reference*
++ [CreateLaunchTemplate](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html) in the *Amazon EC2 API Reference*

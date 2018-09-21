@@ -9,8 +9,8 @@ Only the AWS CloudFormation console uses the `AWS::CloudFormation::Interface` me
 
 **Topics**
 + [Syntax](#aws-resource-cloudformation-interface-syntax)
-+ [Properties](#w3ab2c21c10d195c13)
-+ [Example](#w3ab2c21c10d195c15)
++ [Properties](#w4ab1c21c10d200c13)
++ [Example](#w4ab1c21c10d200c15)
 
 ## Syntax<a name="aws-resource-cloudformation-interface-syntax"></a>
 
@@ -38,7 +38,7 @@ Metadata:
       ParameterLabel
 ```
 
-## Properties<a name="w3ab2c21c10d195c13"></a>
+## Properties<a name="w4ab1c21c10d200c13"></a>
 
 `ParameterGroups`  <a name="cfn-cloudformation-interface-parametergroups"></a>
 A list of parameter group types, where you specify group names, the parameters in each group, and the order in which the parameters are shown\.  
@@ -52,7 +52,7 @@ A mapping of parameters and their friendly names that the AWS CloudFormation con
 *Type*: [AWS CloudFormation Interface ParameterLabel](aws-properties-cloudformation-interface-parameterlabel.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Example<a name="w3ab2c21c10d195c15"></a>
+## Example<a name="w4ab1c21c10d200c15"></a>
 
 The following example defines two parameter groups: `Network Configuration` and `Amazon EC2 Configuration`\. The `Network Configuration` group includes the `VPCID`, `SubnetId`, and `SecurityGroupID` parameters, which are defined in the `Parameters` section of the template \(not shown\)\. The order in which the console shows these parameters is defined by the order in which the parameters are listed, starting with the `VPCID` parameter\. The example similarly groups and orders the `Amazon EC2 Configuration` parameters\.
 
@@ -104,7 +104,7 @@ Metadata:
         default: "Which VPC should this be deployed to?"
 ```
 
-### Parameter Groups in the Console<a name="w3ab2c21c10d195c15c10"></a>
+### Parameter Groups in the Console<a name="w4ab1c21c10d200c15c10"></a>
 
 Using the metadata key from this example, the following figure shows how the console displays parameter groups when a stack is created or updated: **Parameter groups in the console** 
 

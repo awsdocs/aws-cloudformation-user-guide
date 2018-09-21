@@ -8,7 +8,7 @@ This type supports updates\. For more information about updating this resource, 
 + [Syntax](#aws-resource-cw-alarm-syntax)
 + [Properties](#aws-properties-cw-alarm-prop)
 + [Return Values](#aws-properties-cw-alarm-ref)
-+ [Examples](#w3ab2c21c10d233c15)
++ [Examples](#w4ab1c21c10d242c15)
 
 ## Syntax<a name="aws-resource-cw-alarm-syntax"></a>
 
@@ -45,7 +45,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cw-alarm-syntax.yaml"></a>
 
 ```
-Type: "AWS::CloudWatch::Alarm"
+Type: AWS::CloudWatch::Alarm
 Properties:
   [ActionsEnabled](#cfn-cloudwatch-alarms-actionsenabled): Boolean
   [AlarmActions](#cfn-cloudwatch-alarms-alarmactions):
@@ -80,7 +80,7 @@ Indicates whether actions should be executed during changes to the CloudWatch al
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `AlarmActions`  <a name="cfn-cloudwatch-alarms-alarmactions"></a>
-The list of actions to execute when this alarm transitions into an ALARM state from any other state\. Specify each action as an Amazon Resource Name \(ARN\)\. For more information about creating alarms and the actions that you can specify, see [PutMetricAlarm](http://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricAlarm.html) in the *Amazon CloudWatch API Reference* and [Creating Amazon CloudWatch Alarms](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/AlarmThatSendsEmail.html) in the *Amazon CloudWatch User Guide*\.  
+The list of actions to execute when this alarm transitions into an ALARM state from any other state\. Specify each action as an Amazon Resource Name \(ARN\)\. For more information about creating alarms and the actions that you can specify, see [PutMetricAlarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricAlarm.html) in the *Amazon CloudWatch API Reference* and [Creating Amazon CloudWatch Alarms](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/AlarmThatSendsEmail.html) in the *Amazon CloudWatch User Guide*\.  
 For Auto Scaling scaling polices, you can specify only one policy\. If you associate more than one policy, Amazon CloudWatch executes only the first scaling policy\.
 *Required*: No  
 *Type*: List of String values  
@@ -131,13 +131,13 @@ The percentile statistic for the metric\. Specify a value between p0\.0 and p100
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `InsufficientDataActions`  <a name="cfn-cloudwatch-alarms-insufficientdataactions"></a>
-The list of actions to execute when this alarm transitions into an INSUFFICIENT\_DATA state\. Specify each action as an Amazon Resource Number \(ARN\)\. Currently, the only actions supported are publishing to an Amazon SNS topic or an Auto Scaling policy\.  
+The list of actions to execute when this alarm transitions into an INSUFFICIENT\_DATA state\. Specify each action as an Amazon Resource Number \(ARN\)\. Currently, the only supported actions are publishing to an Amazon SNS topic and publishing to an Auto Scaling policy\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `MetricName`  <a name="cfn-cloudwatch-alarms-metricname"></a>
-The name of the metric associated with the alarm\. For more information about the metrics that you can specify, see [Amazon CloudWatch Namespaces, Dimensions, and Metrics Reference](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html) in the *Amazon CloudWatch User Guide*\.  
+The name of the metric associated with the alarm\. For more information about the metrics that you can specify, see [Amazon CloudWatch Namespaces, Dimensions, and Metrics Reference](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html) in the *Amazon CloudWatch User Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -182,14 +182,14 @@ Sets how this alarm is to handle missing data points\. If `TreatMissingData` is 
 
 `Unit`  <a name="cfn-cloudwatch-alarms-unit"></a>
 The unit for the metric that is associated with the alarm\.  
-You can specify the following values: Seconds, Microseconds, Milliseconds, Bytes, Kilobytes, Megabytes, Gigabytes , Terabytes, Bits, Kilobits, Megabits, Gigabits, Terabits,\| Percent , Count,Bytes/Second , Kilobytes/Second, Megabytes/Second, Gigabytes/Second, Terabytes/Second , Bits/Second, Kilobits/Second , Megabits/Second , Gigabits/Second , Terabits/Second, Count/Second , or None\.  
+You can specify the following values: Seconds, Microseconds, Milliseconds, Bytes, Kilobytes, Megabytes, Gigabytes, Terabytes, Bits, Kilobits, Megabits, Gigabits, Terabits, Percent, Count, Bytes/Second, Kilobytes/Second, Megabytes/Second, Gigabytes/Second, Terabytes/Second, Bits/Second, Kilobits/Second, Megabits/Second, Gigabits/Second, Terabits/Second, Count/Second, or None\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Values<a name="aws-properties-cw-alarm-ref"></a>
 
-### Ref<a name="w3ab2c21c10d233c13b2"></a>
+### Ref<a name="w4ab1c21c10d242c13b2"></a>
 
 When you specify an `AWS::CloudWatch::Alarm` type as an argument to the `Ref` function, AWS CloudFormation returns the value of the `AlarmName`\.
 
@@ -204,6 +204,6 @@ The Amazon Resource Name \(ARN\) of the CloudWatch alarm, such as `arn:aws:cloud
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w3ab2c21c10d233c15"></a>
+## Examples<a name="w4ab1c21c10d242c15"></a>
 
 For examples, see [Amazon CloudWatch Template Snippets](quickref-cloudwatch.md)\.

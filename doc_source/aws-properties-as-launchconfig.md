@@ -8,10 +8,10 @@ If you want to update existing instances when you update the `LaunchConfiguratio
 
 **Topics**
 + [Syntax](#aws-resource-autoscaling-launchconfig-syntax)
-+ [Properties](#w3ab2c21c10d135c11)
++ [Properties](#w4ab1c21c10d140c11)
 + [Return Value](#aws-properties-as-launchconfig-ref)
-+ [Template Examples](#w3ab2c21c10d135c15)
-+ [See Also](#w3ab2c21c10d135c17)
++ [Template Examples](#w4ab1c21c10d140c15)
++ [See Also](#w4ab1c21c10d140c17)
 
 ## Syntax<a name="aws-resource-autoscaling-launchconfig-syntax"></a>
 
@@ -48,7 +48,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-autoscaling-launchconfig-syntax.yaml"></a>
 
 ```
-Type: "AWS::AutoScaling::LaunchConfiguration"
+Type: AWS::AutoScaling::LaunchConfiguration
 Properties:
   [AssociatePublicIpAddress](#cf-as-launchconfig-associatepubip): Boolean
   [BlockDeviceMappings](#cfn-as-launchconfig-blockdevicemappings):
@@ -73,7 +73,7 @@ Properties:
   [UserData](#cfn-as-launchconfig-userdata): String
 ```
 
-## Properties<a name="w3ab2c21c10d135c11"></a>
+## Properties<a name="w4ab1c21c10d140c11"></a>
 
 `AssociatePublicIpAddress`  <a name="cf-as-launchconfig-associatepubip"></a>
 For Amazon EC2 instances in a VPC, indicates whether instances in the Auto Scaling group receive public IP addresses\. If you specify `true`, each instance in the Auto Scaling receives a unique public IP address\.  
@@ -89,7 +89,7 @@ Specifies how block devices are exposed to the instance\. You can specify virtua
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ClassicLinkVPCId`  <a name="cfn-as-launchconfig-classiclinkvpcid"></a>
-The ID of a ClassicLink\-enabled VPC to link your EC2\-Classic instances to\. You can specify this property only for EC2\-Classic instances\. For more information, see [ClassicLink](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+The ID of a ClassicLink\-enabled VPC to link your EC2\-Classic instances to\. You can specify this property only for EC2\-Classic instances\. For more information, see [ClassicLink](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -102,7 +102,7 @@ The IDs of one or more security groups for the VPC that you specified in the `Cl
 
 `EbsOptimized`  <a name="cfn-as-launchconfig-ebsoptimized"></a>
 Specifies whether the launch configuration is optimized for EBS I/O\. This optimization provides dedicated throughput to Amazon EBS and an optimized configuration stack to provide optimal EBS I/O performance\.  
-Additional fees are incurred when using EBS\-optimized instances\. For more information about fees and supported instance types, see [EBS\-Optimized Instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+Additional fees are incurred when using EBS\-optimized instances\. For more information about fees and supported instance types, see [EBS\-Optimized Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
 *Required*: No If this property is not specified, "false" is used\.  
 *Type*: Boolean  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -128,7 +128,7 @@ When you use an instance to create a launch configuration, all properties are de
 
 `InstanceMonitoring`  <a name="cfn-as-launchconfig-instancemonitoring"></a>
 Indicates whether detailed instance monitoring is enabled for the Auto Scaling group\. By default, this property is set to `true` \(enabled\)\.  
-When detailed monitoring is enabled, Amazon CloudWatch \(CloudWatch\) generates metrics every minute and your account is charged a fee\. When you disable detailed monitoring, CloudWatch generates metrics every 5 minutes\. For more information, see [Monitor Your Auto Scaling Groups and Instances Using Amazon CloudWatch](http://docs.aws.amazon.com/autoscaling/latest/userguide/as-instance-monitoring.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
+When detailed monitoring is enabled, Amazon CloudWatch \(CloudWatch\) generates metrics every minute and your account is charged a fee\. When you disable detailed monitoring, CloudWatch generates metrics every 5 minutes\. For more information, see [Monitor Your Auto Scaling Groups and Instances Using Amazon CloudWatch](https://docs.aws.amazon.com/autoscaling/latest/userguide/as-instance-monitoring.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -160,7 +160,7 @@ Pattern: \[\\u0020\-\\uD7FF\\uE000\-\\uFFFD\\uD800\\uDC00\-\\uDBFF\\uDFFF\\r\\n\
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `PlacementTenancy`  <a name="cfn-as-launchconfig-placementtenancy"></a>
-The tenancy of the instance\. An instance with a tenancy of `dedicated` runs on single\-tenant hardware and can only be launched in a VPC\. You must set the value of this parameter to `dedicated` if want to launch dedicated instances in a shared tenancy VPC \(a VPC with the instance placement tenancy attribute set to default\)\. For more information, see [CreateLaunchConfiguration](http://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CreateLaunchConfiguration.html) in the *Amazon EC2 Auto Scaling API Reference*\.  
+The tenancy of the instance\. An instance with a tenancy of `dedicated` runs on single\-tenant hardware and can only be launched in a VPC\. You must set the value of this parameter to `dedicated` if want to launch dedicated instances in a shared tenancy VPC \(a VPC with the instance placement tenancy attribute set to default\)\. For more information, see [CreateLaunchConfiguration](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CreateLaunchConfiguration.html) in the *Amazon EC2 Auto Scaling API Reference*\.  
 If you specify this property, you must specify at least one subnet in the VPCZoneIdentifier property of the [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md) resource\.  
 *Required*: No  
 *Type*: String  
@@ -181,7 +181,7 @@ A list that contains the EC2 security groups to assign to the instances in the A
 `SpotPrice`  <a name="cfn-as-launchconfig-spotprice"></a>
 The spot price for this Auto Scaling group\. If a spot price is set, then the Auto Scaling group will launch when the current spot price is less than the amount specified in the template\.  
 When you have specified a spot price for an auto scaling group, the group will only launch when the spot price has been met, regardless of the setting in the Auto Scaling group's `DesiredCapacity`\.  
-For more information about configuring a spot price for an Auto Scaling group, see [Launching Spot Instances in your Auto Scaling Group](http://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
+For more information about configuring a spot price for an Auto Scaling group, see [Launching Spot Instances in your Auto Scaling Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)  
@@ -205,9 +205,9 @@ For the resource with the logical ID `LaunchConfig`, `Ref` will return the Auto 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Template Examples<a name="w3ab2c21c10d135c15"></a>
+## Template Examples<a name="w4ab1c21c10d140c15"></a>
 
-### LaunchConfig with block device<a name="w3ab2c21c10d135c15b2"></a>
+### LaunchConfig with block device<a name="w4ab1c21c10d140c15b2"></a>
 
 This example shows a launch configuration that describes two Amazon Elastic Block Store mappings\.
 
@@ -250,7 +250,7 @@ This example shows a launch configuration that describes two Amazon Elastic Bloc
 
 ```
 LaunchConfig: 
-  Type: "AWS::AutoScaling::LaunchConfiguration"
+  Type: AWS::AutoScaling::LaunchConfiguration
   Properties: 
     KeyName: 
       Ref: "KeyName"
@@ -281,7 +281,7 @@ LaunchConfig:
           DeleteOnTermination: "true"
 ```
 
-### LaunchConfig with Spot Price in Autoscaling Group<a name="w3ab2c21c10d135c15b4"></a>
+### LaunchConfig with Spot Price in Autoscaling Group<a name="w4ab1c21c10d140c15b4"></a>
 
 This example shows a launch configuration that features a spot price in the AutoScaling group\. This launch configuration will only be active if the current spot price is less than the amount in the template specification \(0\.05\)\.
 
@@ -314,7 +314,7 @@ This example shows a launch configuration that features a spot price in the Auto
 
 ```
 LaunchConfig: 
-  Type: "AWS::AutoScaling::LaunchConfiguration"
+  Type: AWS::AutoScaling::LaunchConfiguration
   Properties: 
     KeyName: 
       Ref: "KeyName"
@@ -333,7 +333,7 @@ LaunchConfig:
       Ref: "InstanceType"
 ```
 
-### LaunchConfig with IAM Instance Profile<a name="w3ab2c21c10d135c15b6"></a>
+### LaunchConfig with IAM Instance Profile<a name="w4ab1c21c10d140c15b6"></a>
 
 Here's a launch configuration using the [IamInstanceProfile](#cfn-as-launchconfig-iaminstanceprofile) property\.
 
@@ -366,7 +366,7 @@ Only the `AWS::AutoScaling::LaunchConfiguration` specification is shown\. For th
 
 ```
 myLCOne: 
-  Type: "AWS::AutoScaling::LaunchConfiguration"
+  Type: AWS::AutoScaling::LaunchConfiguration
   Properties: 
     ImageId: 
       Fn::FindInMap: 
@@ -384,12 +384,12 @@ myLCOne:
 
 ### EBS\-optimized volume with specified PIOPS<a name="example-ebs-optimized-piops-autoscaling"></a>
 
-You can create an AWS CloudFormation stack with auto scaled instances that contain EBS\-optimized volumes with a specified PIOPS\. This can increase the performance of your EBS\-backed instances as explained in [Increasing EBS Performance](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSPerformance.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+You can create an AWS CloudFormation stack with auto scaled instances that contain EBS\-optimized volumes with a specified PIOPS\. This can increase the performance of your EBS\-backed instances as explained in [Increasing EBS Performance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSPerformance.html) in the *Amazon Elastic Compute Cloud User Guide*\.
 
 When you create a launch configuration such as this one, be sure to set the `InstanceType` to at least `m1.large` and set `EbsOptimized` to `true`\. Your launched instances will contain optimized EBS root volumes with the PIOPS that you selected when creating the AMI\.
 
 **Warning**  
-Additional fees are incurred when using EBS\-optimized instances\. For more information, see [ EBS\-Optimized Instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#EBSOptimized) in the *Amazon Elastic Compute Cloud User Guide*\.
+Additional fees are incurred when using EBS\-optimized instances\. For more information, see [ EBS\-Optimized Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#EBSOptimized) in the *Amazon Elastic Compute Cloud User Guide*\.
 
 Because you cannot override PIOPS settings in an auto scaling launch configuration, the AMI in your launch configuration must have been configured with a block device mapping that specifies the desired PIOPS\. You can do this by creating your own EC2 AMI with the following characteristics:
 + An instance type of `m1.large` or greater\. This is required for EBS optimization\.
@@ -418,7 +418,7 @@ Use this AMI in your Auto Scaling launch configuration\. For example, an EBS\-op
 
 ```
 LaunchConfig: 
-  Type: "AWS::AutoScaling::LaunchConfiguration"
+  Type: AWS::AutoScaling::LaunchConfiguration
   Properties: 
     KeyName: 
       Ref: "KeyName"
@@ -432,7 +432,7 @@ LaunchConfig:
     EbsOptimized: "true"
 ```
 
-## See Also<a name="w3ab2c21c10d135c17"></a>
-+ [Creating Your Own AMIs](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami.html) in the *Amazon Elastic Compute Cloud User Guide*\.
-+ [Block Device Mapping](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+## See Also<a name="w4ab1c21c10d140c17"></a>
++ [Creating Your Own AMIs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami.html) in the *Amazon Elastic Compute Cloud User Guide*\.
++ [Block Device Mapping](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html) in the *Amazon Elastic Compute Cloud User Guide*\.
 + To view more LaunchConfiguration snippets, see [Auto Scaling Launch Configuration Resource](quickref-autoscaling.md#scenario-as-launch-config)\.

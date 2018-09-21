@@ -4,7 +4,7 @@ The `Action` property type specifies the default actions that the Elastic Load B
 
 The `DefaultActions` property of the [AWS::ElasticLoadBalancingV2::Listener](aws-resource-elasticloadbalancingv2-listener.md) resource contains a list of `Action` property types\.
 
-## Syntax<a name="w3ab2c21c14e1008b7"></a>
+## Syntax<a name="w4ab1c21c14e1100b7"></a>
 
 ### JSON<a name="aws-properties-elasticloadbalancingv2-listener-defaultactions-syntax.json"></a>
 
@@ -22,7 +22,7 @@ The `DefaultActions` property of the [AWS::ElasticLoadBalancingV2::Listener](aws
 [Type](#cfn-elasticloadbalancingv2-listener-defaultactions-type): String
 ```
 
-## Properties<a name="w3ab2c21c14e1008b9"></a>
+## Properties<a name="w4ab1c21c14e1100b9"></a>
 
 `TargetGroupArn`  <a name="cfn-elasticloadbalancingv2-listener-defaultactions-targetgrouparn"></a>
 The Amazon Resource Name \(ARN\) of the target group to which Elastic Load Balancing routes the traffic\.  
@@ -30,6 +30,7 @@ The Amazon Resource Name \(ARN\) of the target group to which Elastic Load Balan
 *Type*: String
 
 `Type`  <a name="cfn-elasticloadbalancingv2-listener-defaultactions-type"></a>
-The type of action\. For valid values, see the `Type` contents for the [Action](http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_Action.html) data type in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
+The type of action\.  
+*Valid values*: `forward`  
 *Required*: Yes  
 *Type*: String

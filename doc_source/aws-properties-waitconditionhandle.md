@@ -29,10 +29,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cloudformation-waitconditionhandle-syntax.yaml"></a>
 
 ```
-Type: "AWS::CloudFormation::WaitConditionHandle"
+Type: AWS::CloudFormation::WaitConditionHandle
 Properties:
 ```
 
-## Related Resources<a name="w3ab2c21c10d210c13"></a>
+## Related Resources<a name="w4ab1c21c10d219c13"></a>
 
 For information about how to use wait conditions, see [Creating Wait Conditions in a Template](using-cfn-waitcondition.md)\.

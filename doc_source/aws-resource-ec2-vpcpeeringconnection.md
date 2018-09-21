@@ -1,15 +1,15 @@
 # AWS::EC2::VPCPeeringConnection<a name="aws-resource-ec2-vpcpeeringconnection"></a>
 
-A VPC peering connection enables a network connection between two virtual private clouds \(VPCs\) so that you can route traffic between them using a private IP address\. For more information about VPC peering and its limitations, see [VPC Peering Overview](http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide/vpc-peering-overview.html) in the *Amazon VPC Peering Guide*\. 
+A VPC peering connection enables a network connection between two virtual private clouds \(VPCs\) so that you can route traffic between them using a private IP address\. For more information about VPC peering and its limitations, see [VPC Peering Overview](https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-overview.html) in the *Amazon VPC Peering Guide*\. 
 
 **Note**  
 You can create a peering connection with another AWS account\. For a detailed walkthrough, see [Walkthrough: Peer with an Amazon VPC in Another AWS Account](peer-with-vpc-in-another-account.md)\.
 
 **Topics**
 + [Syntax](#aws-resource-ec2-vpcpeeringconnection-syntax)
-+ [Properties](#w3ab2c21c10d531c10)
-+ [Return Values](#w3ab2c21c10d531c12)
-+ [Examples](#w3ab2c21c10d531c14)
++ [Properties](#w4ab1c21c10d550c10)
++ [Return Values](#w4ab1c21c10d550c12)
++ [Examples](#w4ab1c21c10d550c14)
 
 ## Syntax<a name="aws-resource-ec2-vpcpeeringconnection-syntax"></a>
 
@@ -25,6 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Tags](#cfn-ec2-vpcpeeringconnection-tags)" : [ Resource Tag, ... ],
       "[VpcId](#cfn-ec2-vpcpeeringconnection-vpcid)" : String,
       "[PeerOwnerId](#cfn-ec2-vpcpeeringconnection-peerownerid)" : String,
+      "[PeerRegion](#cfn-ec2-vpcpeeringconnection-peerregion)" : String,
       "[PeerRoleArn](#cfn-ec2-vpcpeeringconnection-peerrolearn)" :  String
    }
 }
@@ -33,17 +34,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-vpcpeeringconnection-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::VPCPeeringConnection"
+Type: AWS::EC2::VPCPeeringConnection
 Properties: 
   [PeerVpcId](#cfn-ec2-vpcpeeringconnection-peervpcid): String
   [Tags](#cfn-ec2-vpcpeeringconnection-tags):
     - Resource Tag
   [VpcId](#cfn-ec2-vpcpeeringconnection-vpcid): String
   [PeerOwnerId](#cfn-ec2-vpcpeeringconnection-peerownerid): String
+  [PeerRegion](#cfn-ec2-vpcpeeringconnection-peerregion): String
   [PeerRoleArn](#cfn-ec2-vpcpeeringconnection-peerrolearn):  String
 ```
 
-## Properties<a name="w3ab2c21c10d531c10"></a>
+## Properties<a name="w4ab1c21c10d550c10"></a>
 
 `PeerVpcId`  <a name="cfn-ec2-vpcpeeringconnection-peervpcid"></a>
 The ID of the VPC with which you are creating the peering connection\.  
@@ -69,21 +71,27 @@ The AWS account ID of the owner of the VPC that you want to peer with\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
+`PeerRegion`  <a name="cfn-ec2-vpcpeeringconnection-peerregion"></a>
+The region code for the accepter VPC, if the accepter VPC is located in a region other than the region in which you make the request\. The default is the region in which you make the request\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+
 `PeerRoleArn`  <a name="cfn-ec2-vpcpeeringconnection-peerrolearn"></a>
 The Amazon Resource Name \(ARN\) of the VPC peer role for the peering connection in another AWS account\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w3ab2c21c10d531c12"></a>
+## Return Values<a name="w4ab1c21c10d550c12"></a>
 
-### Ref<a name="w3ab2c21c10d531c12b2"></a>
+### Ref<a name="w4ab1c21c10d550c12b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w3ab2c21c10d531c14"></a>
+## Examples<a name="w4ab1c21c10d550c14"></a>
 
 The following example template creates two VPCs to demonstrate how to configure a peering connection\. For a VPC peering connection, you must create a VPC peering route for each VPC route table, as shown in the example by `PeeringRoute1` and `PeeringRoute2`\. If you launch the template, you can connect to the `myInstance` instance using SSH, and then ping the `myPrivateInstance` instance although both instances are in separate VPCs\.
 
@@ -158,28 +166,28 @@ The following example template creates two VPCs to demonstrate how to configure 
     "Mappings": {
         "AWSRegionToAMI": {
             "us-east-1": {
-                "64": "ami-fb8e9292"
+                "64": "ami-0ff8a91507f77f867"
             },
             "us-west-2": {
-                "64": "ami-043a5034"
+                "64": "ami-a0cfeed8"
             },
             "us-west-1": {
-                "64": "ami-7aba833f"
+                "64": "ami-0bdb828fd58c52235"
             },
             "eu-west-1": {
-                "64": "ami-2918e35e"
+                "64": "ami-047bb4163c506cd98"
             },
             "ap-southeast-1": {
-                "64": "ami-b40d5ee6"
+                "64": "ami-08569b978cc4dfa10"
             },
             "ap-southeast-2": {
-                "64": "ami-3b4bd301"
+                "64": "ami-09b42976632b27e9b"
             },
             "ap-northeast-1": {
-                "64": "ami-c9562fc8"
+                "64": "ami-06cd52961ce9f0d85"
             },
             "sa-east-1": {
-                "64": "ami-215dff3c"
+                "64": "ami-07b14488da8ea02a0"
             }
         }
     },
@@ -426,21 +434,21 @@ Parameters:
 Mappings:
   AWSRegionToAMI:
     us-east-1:
-      '64': ami-fb8e9292
+      '64': ami-0ff8a91507f77f867
     us-west-2:
-      '64': ami-043a5034
+      '64': ami-a0cfeed8
     us-west-1:
-      '64': ami-7aba833f
+      '64': ami-0bdb828fd58c52235
     eu-west-1:
-      '64': ami-2918e35e
+      '64': ami-047bb4163c506cd98
     ap-southeast-1:
-      '64': ami-b40d5ee6
+      '64': ami-08569b978cc4dfa10
     ap-southeast-2:
-      '64': ami-3b4bd301
+      '64': ami-09b42976632b27e9b
     ap-northeast-1:
-      '64': ami-c9562fc8
+      '64': ami-06cd52961ce9f0d85
     sa-east-1:
-      '64': ami-215dff3c
+      '64': ami-07b14488da8ea02a0
 Resources:
   myPrivateVPC:
     Type: AWS::EC2::VPC

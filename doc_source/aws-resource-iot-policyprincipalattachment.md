@@ -2,9 +2,9 @@
 
 Use the `AWS::IoT::PolicyPrincipalAttachment` resource to attach an AWS IoT policy to a principal \(an X\.509 certificate or other credential\)\.
 
-For information about working with AWS IoT policies and principals, see [Authorization](http://docs.aws.amazon.com/iot/latest/developerguide/authorization.html) in the *AWS IoT Developer Guide*\.
+For information about working with AWS IoT policies and principals, see [Authorization](https://docs.aws.amazon.com/iot/latest/developerguide/authorization.html) in the *AWS IoT Developer Guide*\.
 
-## Syntax<a name="w3ab2c21c10d800b7"></a>
+## Syntax<a name="w4ab1c21c10d820b7"></a>
 
 ### JSON<a name="aws-resource-iot-policyprincipalattachment-syntax.json"></a>
 
@@ -21,13 +21,13 @@ For information about working with AWS IoT policies and principals, see [Authori
 ### YAML<a name="aws-resource-iot-policyprincipalattachment-syntax.yaml"></a>
 
 ```
-Type: "AWS::IoT::PolicyPrincipalAttachment"
+Type: AWS::IoT::PolicyPrincipalAttachment
   Properties:
     [PolicyName](#cfn-iot-policyprincipalattachment-policyname): String
     [Principal](#cfn-iot-policyprincipalattachment-principal): String
 ```
 
-## Properties<a name="w3ab2c21c10d800b9"></a>
+## Properties<a name="w4ab1c21c10d820b9"></a>
 
 `PolicyName`  <a name="cfn-iot-policyprincipalattachment-policyname"></a>
 The name of the policy\.  
@@ -41,7 +41,7 @@ The principal, which can be a certificate ARN \(as returned from the `CreateCert
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Example<a name="w3ab2c21c10d800c11"></a>
+## Example<a name="w4ab1c21c10d820c11"></a>
 
 The following example attaches a policy to a principal\.
 
@@ -75,7 +75,7 @@ The following example attaches a policy to a principal\.
 AWSTemplateFormatVersion: "2010-09-09"
 Resources: 
   MyPolicyPrincipalAttachment: 
-    Type: "AWS::IoT::PolicyPrincipalAttachment"
+    Type: AWS::IoT::PolicyPrincipalAttachment
     Properties: 
       PolicyName: 
         Ref: "NameParameter"

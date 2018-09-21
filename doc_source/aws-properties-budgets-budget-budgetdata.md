@@ -1,6 +1,6 @@
 # AWS Billing and Cost Management Budget BudgetData<a name="aws-properties-budgets-budget-budgetdata"></a>
 
-<a name="aws-properties-budgets-budget-budgetdata-description"></a>The `BudgetData` property type specifies all of the parameters that CloudFormation uses to create the budget\. These parameters include the time period that the budget covers, the amount that the budget is for, the name of the budget, what costs, usage, or RI utilization the Billing and Cost Management budget is for, and whether the budget tracks what you have spent or what you are forecast to spend\.
+<a name="aws-properties-budgets-budget-budgetdata-description"></a>The `BudgetData` property type specifies all of the parameters that AWS CloudFormation uses to create the budget\. These parameters include the time period that the budget covers, the amount that the budget is for, the name of the budget, what costs, usage, or RI utilization the Billing and Cost Management budget is for, and whether the budget tracks what you have spent or what you are forecast to spend\.
 
 <a name="aws-properties-budgets-budget-budgetdata-inheritance"></a> `BudgetData` is a property of the [AWS::Budgets::Budget](aws-resource-budgets-budget.md) resource\.
 
@@ -84,4 +84,4 @@ Valid values are `USAGE`, `COST`, `RI_UTILIZATION`, and `RI_COVERAGE`\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## See Also<a name="aws-properties-budgets-budget-budgetdata-seealso"></a>
-+ [Budget](http://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_Budget.html) in the [AWS Billing and Cost Management API Reference](http://docs.aws.amazon.com/aws-cost-management/latest/APIReference/Welcome.html)\. 
++ [Budget](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_Budget.html) in the [AWS Billing and Cost Management API Reference](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/Welcome.html)\. 

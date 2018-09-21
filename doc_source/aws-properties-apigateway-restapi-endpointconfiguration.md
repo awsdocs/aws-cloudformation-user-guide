@@ -29,9 +29,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 A list of endpoint types of an API or its custom domain name\. Valid values include:  
 + `EDGE`: For an edge\-optimized API and its custom domain name\.
 + `REGIONAL`: For a regional API and its custom domain name\.
++ `PRIVATE` : For a private API and its custom domain name\.
  *Required*: No  
  *Type*: List of String values  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-apigateway-restapi-endpointconfiguration-seealso"></a>
-+ [endpointConfiguration](http://docs.aws.amazon.com/apigateway/api-reference/link-relation/restapi-create/#endpointConfiguration) in the *API Gateway API Reference*
++ [endpointConfiguration](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/restapi-create/#endpointConfiguration) in the *API Gateway API Reference*

@@ -2,7 +2,7 @@
 
 Use the `OptionConfigurations` property to configure an option and its settings for an [AWS::RDS::OptionGroup](aws-resource-rds-optiongroup.md) resource\.
 
-## Syntax<a name="w3ab2c21c14e1630b5"></a>
+## Syntax<a name="w4ab1c21c14e1737b5"></a>
 
 ### JSON<a name="aws-properties-rds-optiongroup-optionconfigurations-syntax.json"></a>
 
@@ -31,7 +31,7 @@ Use the `OptionConfigurations` property to configure an option and its settings 
   - String
 ```
 
-## Properties<a name="w3ab2c21c14e1630b7"></a>
+## Properties<a name="w4ab1c21c14e1737b7"></a>
 
 `DBSecurityGroupMemberships`  <a name="cfn-rds-optiongroup-optionconfigurations-dbsecuritygroupmemberships"></a>
 A list of database security group names for this option\. If the option requires access to a port, the security groups must allow access to that port\. If you specify this property, don't specify the `VPCSecurityGroupMemberships` property\.  
@@ -39,7 +39,7 @@ A list of database security group names for this option\. If the option requires
 *Type*: List of String values
 
 `OptionName`  <a name="cfn-rds-optiongroup-optionconfigurations-optionname"></a>
-The name of the option\. For more information about options, see [Working with Option Groups](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithOptionGroups.html) in the *Amazon Relational Database Service User Guide*\.  
+The name of the option\. For more information about options, see [Working with Option Groups](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithOptionGroups.html) in the *Amazon Relational Database Service User Guide*\.  
 *Required*: Yes  
 *Type*: String
 
@@ -74,7 +74,7 @@ The following example template uses `OptionName` and `OptionVersion` parameters 
 ```
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description":"APEX has a dependency on XMLDB, so, there must be at least one XMLDB when there is a APEX",
+  "Description":"APEX has a dependency on XMLDB, so, there must be at least one XMLDB when there is an APEX",
   "Parameters" : {
     "OptionName" : {
       "Type" : "String"
@@ -111,7 +111,7 @@ The following example template uses `OptionName` and `OptionVersion` parameters 
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
   APEX has a dependency on XMLDB, so, there must be at least one XMLDB when
-  there is a APEX
+  there is an APEX
 Parameters:
   OptionName:
     Type: String
@@ -119,7 +119,7 @@ Parameters:
     Type: String
 Resources:
   myOptionGroup:
-    Type: 'AWS::RDS::OptionGroup'
+    Type: AWS::RDS::OptionGroup
     Properties:
       EngineName: oracle-ee
       MajorEngineVersion: '11.2'
@@ -131,5 +131,5 @@ Resources:
 ```
 
 ## See Also<a name="aws-properties-rds-optiongroup-optionconfiguration-seealso"></a>
-+ [OptionConfiguration](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_OptionConfiguration.html) data type in the *Amazon RDS API Reference*
-+ [Working with Option Groups](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithOptionGroups.html) in the *Amazon RDS User Guide*
++ [OptionConfiguration](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_OptionConfiguration.html) data type in the *Amazon RDS API Reference*
++ [Working with Option Groups](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithOptionGroups.html) in the *Amazon RDS User Guide*

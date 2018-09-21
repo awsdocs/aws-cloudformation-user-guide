@@ -1,12 +1,12 @@
 # AWS::IAM::ManagedPolicy<a name="aws-resource-iam-managedpolicy"></a>
 
-`AWS::IAM::ManagedPolicy` creates an AWS Identity and Access Management \(IAM\) managed policy for your AWS account, which you can use to apply permissions to IAM users, groups, and roles\. For more information about managed policies, see [Managed Policies and Inline Policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/policies_managed-vs-inline.html) in the *IAM User Guide* guide\.
+`AWS::IAM::ManagedPolicy` creates an AWS Identity and Access Management \(IAM\) managed policy for your AWS account, which you can use to apply permissions to IAM users, groups, and roles\. For more information about managed policies, see [Managed Policies and Inline Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/policies_managed-vs-inline.html) in the *IAM User Guide* guide\.
 
 **Topics**
 + [Syntax](#aws-resource-iam-managedpolicy-syntax)
-+ [Properties](#w3ab2c21c10d759b9)
-+ [Return Values](#w3ab2c21c10d759c11)
-+ [Example](#w3ab2c21c10d759c13)
++ [Properties](#w4ab1c21c10d775b9)
++ [Return Values](#w4ab1c21c10d775c11)
++ [Example](#w4ab1c21c10d775c13)
 
 ## Syntax<a name="aws-resource-iam-managedpolicy-syntax"></a>
 
@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-iam-managedpolicy-syntax.yaml"></a>
 
 ```
-Type: "AWS::IAM::ManagedPolicy"
+Type: AWS::IAM::ManagedPolicy
 Properties: 
   [Description](#cfn-iam-managedpolicy-description): String
   [Groups](#cfn-iam-managedpolicy-groups):
@@ -46,7 +46,7 @@ Properties:
   [ManagedPolicyName](#cfn-iam-managedpolicy-managedpolicyname): String
 ```
 
-## Properties<a name="w3ab2c21c10d759b9"></a>
+## Properties<a name="w4ab1c21c10d775b9"></a>
 
 `Description`  <a name="cfn-iam-managedpolicy-description"></a>
 A description of the IAM policy\. For example, describe the permissions that are defined in the policy\.  
@@ -61,13 +61,13 @@ The names of IAM groups to attach to this policy\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Path`  <a name="cfn-iam-managedpolicy-path"></a>
-The path for the IAM policy\. By default, the path is `/`\. For more information, see [IAM Identifiers](http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the *IAM User Guide*\.  
+The path for the IAM policy\. By default, the path is `/`\. For more information, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the *IAM User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `PolicyDocument`  <a name="cfn-iam-managedpolicy-policydocument"></a>
-Policies that define the permissions for this managed policy\. For more information about policy syntax, see [IAM Policy Elements Reference](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html) in *IAM User Guide*\.  
+Policies that define the permissions for this managed policy\. For more information about policy syntax, see [IAM Policy Elements Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html) in *IAM User Guide*\.  
 *Required*: Yes  
 *Type*: JSON object  
 AWS Identity and Access Management \(IAM\) requires that policies be in JSON format\. However, for templates formatted in YAML, you can create an IAM policy in either JSON or YAML format\. AWS CloudFormation always converts a policy to JSON format before submitting it to IAM\.
@@ -94,9 +94,9 @@ If you specify a name, you cannot perform updates that require replacement of th
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w3ab2c21c10d759c11"></a>
+## Return Values<a name="w4ab1c21c10d775c11"></a>
 
-### Ref<a name="w3ab2c21c10d759c11b2"></a>
+### Ref<a name="w4ab1c21c10d775c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN\.
 
@@ -108,7 +108,7 @@ In the following sample, the `Ref` function returns the ARN of the `CreateTestDB
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10d759c13"></a>
+## Example<a name="w4ab1c21c10d775c13"></a>
 
 The following example creates a managed policy and associates it with the `TestDBGroup` group\. The managed policy grants users permission to create t2\.micro database instances\. The database must use the MySQL database engine and the instance name must include the prefix `test`\.
 
@@ -148,7 +148,7 @@ The following example creates a managed policy and associates it with the `TestD
 
 ```
 CreateTestDBPolicy: 
-  Type: "AWS::IAM::ManagedPolicy"
+  Type: AWS::IAM::ManagedPolicy
   Properties: 
     Description: "Policy for creating a test database"
     Path: "/"

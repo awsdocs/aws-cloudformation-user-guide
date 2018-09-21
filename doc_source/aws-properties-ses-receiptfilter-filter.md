@@ -43,4 +43,4 @@ The name of the IP address filter\. The name must:
 
 ## See Also<a name="aws-properties-ses-receiptfilter-filter-seealso"></a>
 + [Creating IP Address Filters for Amazon SES Email Receiving](url-ses-dev;receiving-email-ip-filters.html) in the *Amazon Simple Email Service Developer Guide*
-+ [ReceiptFilter](http://docs.aws.amazon.com/ses/latest/APIReference/API_ReceiptFilter.html) in the *Amazon Simple Email Service API Reference*
++ [ReceiptFilter](https://docs.aws.amazon.com/ses/latest/APIReference/API_ReceiptFilter.html) in the *Amazon Simple Email Service API Reference*

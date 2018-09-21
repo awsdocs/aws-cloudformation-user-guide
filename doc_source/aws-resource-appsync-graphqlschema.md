@@ -1,6 +1,6 @@
 # AWS::AppSync::GraphQLSchema<a name="aws-resource-appsync-graphqlschema"></a>
 
-The `AWS::AppSync::GraphQLSchema` resource is used for your AWS AppSync GraphQL schema which controls the data model for your API\. Schema files are text written in Schema Definition Language \(SDL\) format\. You can find information on schema authoring at [http://docs.aws.amazon.com/appsync/latest/devguide/designing-a-graphql-api.html](http://docs.aws.amazon.com/appsync/latest/devguide/designing-a-graphql-api.html)\. 
+The `AWS::AppSync::GraphQLSchema` resource is used for your AWS AppSync GraphQL schema which controls the data model for your API\. Schema files are text written in Schema Definition Language \(SDL\) format\. You can find information on schema authoring at [https://docs.aws.amazon.com/appsync/latest/devguide/designing-a-graphql-api.html](https://docs.aws.amazon.com/appsync/latest/devguide/designing-a-graphql-api.html)\. 
 
 **Topics**
 + [Syntax](#aws-resource-appsync-graphqlschema-syntax)
@@ -108,7 +108,7 @@ Parameters:
     Type: String
 Resources:
   Schema:
-    Type: "AWS::AppSync::GraphQLSchema"
+    Type: AWS::AppSync::GraphQLSchema
     Properties:
       ApiId:
 	Ref: graphQlApiId
@@ -117,4 +117,4 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-appsync-graphqlschema-seealso"></a>
-+ [ StartSchemaCreation](http://docs.aws.amazon.com/appsync/latest/APIReference/API_StartSchemaCreation.html) operation in the *AWS AppSync API Reference*
++ [ StartSchemaCreation](https://docs.aws.amazon.com/appsync/latest/APIReference/API_StartSchemaCreation.html) operation in the *AWS AppSync API Reference*

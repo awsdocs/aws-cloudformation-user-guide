@@ -1,8 +1,8 @@
 # Amazon EC2 Auto Scaling ScalingPolicy StepAdjustments<a name="aws-properties-autoscaling-scalingpolicy-stepadjustments"></a>
 
-`StepAdjustments` is a property of the [AWS::AutoScaling::ScalingPolicy](aws-properties-as-policy.md) resource that describes a scaling adjustment based on the difference between the value of the aggregated CloudWatch metric and the breach threshold that you've defined for the alarm\. For more information, see [StepAdjustment](http://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_StepAdjustment.html) in the *Amazon EC2 Auto Scaling API Reference*\.
+`StepAdjustments` is a property of the [AWS::AutoScaling::ScalingPolicy](aws-properties-as-policy.md) resource that describes a scaling adjustment based on the difference between the value of the aggregated CloudWatch metric and the breach threshold that you've defined for the alarm\. For more information, see [StepAdjustment](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_StepAdjustment.html) in the *Amazon EC2 Auto Scaling API Reference*\.
 
-## Syntax<a name="w3ab2c21c14d125b5"></a>
+## Syntax<a name="w4ab1c21c14d149b5"></a>
 
 ### JSON<a name="aws-properties-autoscaling-scalingpolicy-stepadjustments-syntax.json"></a>
 
@@ -22,7 +22,9 @@
 [ScalingAdjustment](#cfn-autoscaling-scalingpolicy-stepadjustment-scalingadjustment): Integer
 ```
 
-## Properties<a name="w3ab2c21c14d125b7"></a>
+## Properties<a name="w4ab1c21c14d149b7"></a>
+
+For more information, such as valid values, constraints, and examples of how to specify each property, see [StepAdjustment](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_StepAdjustment.html) in the *Amazon EC2 Auto Scaling API Reference*\.
 
 `MetricIntervalLowerBound`  <a name="cfn-autoscaling-scalingpolicy-stepadjustment-metricintervallowerbound"></a>
 The lower bound of the breach size\. The lower bound is the difference between the breach threshold and the aggregated CloudWatch metric value\. If the metric value is within the lower and upper bounds, Auto Scaling triggers this step adjustment\.  

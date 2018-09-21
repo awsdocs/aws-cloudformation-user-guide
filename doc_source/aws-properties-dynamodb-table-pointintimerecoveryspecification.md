@@ -31,4 +31,4 @@ Indicates whether point in time recovery is enabled \(true\) or disabled \(false
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-dynamodb-table-pointintimerecoveryspecification-seealso"></a>
-+ [PointInTimeRecoverySpecification](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PointInTimeRecoverySpecification.html) in the *Amazon DynamoDB API Reference*
++ [PointInTimeRecoverySpecification](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PointInTimeRecoverySpecification.html) in the *Amazon DynamoDB API Reference*

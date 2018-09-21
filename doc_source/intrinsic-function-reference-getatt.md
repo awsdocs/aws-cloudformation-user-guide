@@ -2,7 +2,7 @@
 
 The `Fn::GetAtt` intrinsic function returns the value of an attribute from a resource in the template\.
 
-## Declaration<a name="w3ab2c21c28c31b5"></a>
+## Declaration<a name="getatt-declaration"></a>
 
 ### JSON<a name="intrinsic-function-reference-getatt-syntax.json"></a>
 
@@ -24,7 +24,7 @@ Syntax for the short form:
 !GetAtt logicalNameOfResource.attributeName
 ```
 
-## Parameters<a name="w3ab2c21c28c31b7"></a>
+## Parameters<a name="getatt-parameters"></a>
 
 `logicalNameOfResource`  
 The logical name \(also called *logical ID*\) of the resource that contains the attribute that you want\.
@@ -38,23 +38,23 @@ The attribute value\.
 
 ## Examples<a name="intrinsic-function-reference-getatt-examples"></a>
 
-### <a name="intrinsic-function-reference-getatt-example"></a>
+### Return a String<a name="intrinsic-function-reference-getatt-example"></a>
 
 This example snippet returns a string containing the DNS name of the load balancer with the logical name `myELB`\.
 
 #### JSON<a name="intrinsic-function-reference-getatt-example.json"></a>
 
 ```
-"Fn::GetAtt" : [ "myELB" , "DNSName" ]
+1. "Fn::GetAtt" : [ "myELB" , "DNSName" ]
 ```
 
 #### YAML<a name="intrinsic-function-reference-getatt-example.yaml"></a>
 
 ```
-!GetAtt myELB.DNSName
+1. !GetAtt myELB.DNSName
 ```
 
-#### <a name="intrinsic-function-reference-getatt-example2"></a>
+#### Return Multiple Strings<a name="intrinsic-function-reference-getatt-example2"></a>
 
 The following example template returns the `SourceSecurityGroup.OwnerAlias` and `SourceSecurityGroup.GroupName` of the load balancer with the logical name `myELB`\.
 
@@ -116,7 +116,7 @@ The following example template returns the `SourceSecurityGroup.OwnerAlias` and 
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   myELB:
-    Type: 'AWS::ElasticLoadBalancing::LoadBalancer'
+    Type: AWS::ElasticLoadBalancing::LoadBalancer
     Properties:
       AvailabilityZones:
         - eu-west-1a
@@ -125,7 +125,7 @@ Resources:
           InstancePort: '80'
           Protocol: HTTP
   myELBIngressGroup:
-    Type: 'AWS::EC2::SecurityGroup'
+    Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: ELB ingress group
       SecurityGroupIngress:
@@ -136,7 +136,7 @@ Resources:
           SourceSecurityGroupName: !GetAtt myELB.SourceSecurityGroup.GroupName
 ```
 
-## Supported Functions<a name="w3ab2c21c28c31c13"></a>
+## Supported Functions<a name="getatt-supported-functions"></a>
 
 For the `Fn::GetAtt` logical resource name, you cannot use functions\. You must specify a string that is a resource's logical ID\.
 
@@ -149,6 +149,11 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 
 | Resource TypeName | Attribute | Description | 
 | --- | --- | --- | 
+| [AWS::AmazonMQ::Broker](aws-resource-amazonmq-broker.md) | Arn | The Amazon Resource Name \(ARN\) of the Amazon MQ broker\. Example: arn:aws:mq:us\-east\-2:123456789012:broker:MyBroker:b\-1234a5b6\-78cd\-901e\-2fgh\-3i45j6k178l9 | 
+| [AWS::AmazonMQ::Broker](aws-resource-amazonmq-broker.md) | ConfigurationId | The unique ID that Amazon MQ generates for the configuration\.Example: c\-1234a5b6\-78cd\-901e\-2fgh\-3i45j6k178l9 | 
+| [AWS::AmazonMQ::Broker](aws-resource-amazonmq-broker.md) | ConfigurationRevision | The revision number of the Amazon MQ configuration\.Example: 1 | 
+| [AWS::AmazonMQ::Configuration](aws-resource-amazonmq-configuration.md) | Arn | The Amazon Resource Name \(ARN\) of the Amazon MQ configuration\.Example: arn:aws:mq:us\-east\-2:123456789012:configuration:MyConfigurationDevelopment:c\-1234a5b6\-78cd\-901e\-2fgh\-3i45j6k178l9 | 
+| [AWS::AmazonMQ::Configuration](aws-resource-amazonmq-configuration.md) | Revision | The revision number of the Amazon MQ configuration\.Example: 1 | 
 |  [AWS::ApiGateway::DomainName](aws-resource-apigateway-domainname.md)  |  `DistributionDomainName`  |  The Amazon CloudFront distribution domain name that is mapped to the custom domain name\. Example: `d111111abcdef8.cloudfront.net`  | 
 |  [AWS::ApiGateway::RestApi](aws-resource-apigateway-restapi.md)  |  `RootResourceId`  |  The root resource ID for a `RestApi` resource\. Example: `a0bc123d4e`  | 
 |  [AWS::Cloud9::EnvironmentEC2](aws-resource-cloud9-environmentec2.md)  |  `Arn`  |  The Amazon Resource Name \(ARN\) of the AWS Cloud9 development environment\. Example: `arn:aws:cloud9:us-east-2:123456789012:environment:2bc3642873c342e485f7e0c561234567`  | 
@@ -164,6 +169,8 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 |  [AWS::CodeCommit::Repository](aws-resource-codecommit-repository.md)  |  `CloneUrlHttp`  |  Example: `https://codecommit.``us-east-2``.amazonaws.com/v1/repos/MyDemoRepo`  | 
 |  [AWS::CodeCommit::Repository](aws-resource-codecommit-repository.md)  |  `CloneUrlSsh`  |  Example: `ssh://git-codecommit.``us-east-2``.amazonaws.com/v1/repos//v1/repos/MyDemoRepo`  | 
 |  [AWS::CodeCommit::Repository](aws-resource-codecommit-repository.md)  |  `Name`  |  Example: `MyDemoRepo`  | 
+|  [AWS::CodePipeline::Pipeline](aws-resource-codepipeline-pipeline.md)  |  `Version`  |  The pipeline version\. Example: `1`   | 
+|  [AWS::CodePipeline::Webhook](aws-resource-codepipeline-webhook.md)  |  `Url`  |  Example: `https://eu-central-1.webhooks.aws/trigger123456`   | 
 |  [AWS::Config::ConfigRule](aws-resource-config-configrule.md)  |  `Arn`  |  Example: `arn:aws:config:``us-east-2``:123456789012:config-rule/config-rule-a1bzhi`  | 
 |  [AWS::Config::ConfigRule](aws-resource-config-configrule.md)  |  `ConfigRuleId`  |  Example: `config-rule-a1bzhi`  | 
 |  [AWS::Config::ConfigRule](aws-resource-config-configrule.md)  |  `Compliance.Type`  |  Example: `COMPLIANT`  | 
@@ -192,6 +199,7 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 |  [AWS::EC2::VPC](aws-resource-ec2-vpc.md)  |  `DefaultNetworkAcl`  |  The default network ACL ID that is associated with the VPC, which AWS creates when you create a VPC\. Example: `acl-814dafe3`  | 
 |  [AWS::EC2::VPC](aws-resource-ec2-vpc.md)  |  `DefaultSecurityGroup`  |  The default security group ID that is associated with the VPC, which AWS creates when you create a VPC\. Example: `sg-b178e0d3`  | 
 |  [AWS::EC2::VPC](aws-resource-ec2-vpc.md)  |  `Ipv6CidrBlocks`  |  A list of IPv6 CIDR blocks that are associated with the VPC\. Example: `[ 2001:db8:1234:1a00::/56 ]`  | 
+|  [AWS::ECR::Repository](aws-resource-ecr-repository.md)  |  `Arn`  |  Example: `arn:aws:ecr:us-east-2:123456789012:repository/test-repository`  | 
 |  [AWS::ECS::Cluster](aws-resource-ecs-cluster.md)  |  `Arn`  |  Example: `arn:aws:ecs:us-east-2:123456789012:cluster/MyECSCluster`  | 
 |  [AWS::ECS::Service](aws-resource-ecs-service.md)  |  `Name`  |  The name of an Amazon Elastic Container Service service\. Example: `sample-webapp`  | 
 |  [AWS::EKS::Cluster](aws-resource-eks-cluster.md)  |  `Arn`  |  The ARN of the cluster\. Example: `arn:aws:eks:us-east-2:123456789012:cluster/MyECSCluster`  | 
@@ -235,6 +243,13 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 |  [AWS::IoT::Certificate](aws-resource-iot-certificate.md)  | Arn | Example: arn:aws:iot:ap\-southeast\-2:123456789012:cert/a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2 | 
 |  [AWS::IoT::Policy](aws-resource-iot-policy.md)  |  `Arn`  |  Example: `arn:aws:iot:us-east-2:123456789012:policy/MyIoTPolicy`  | 
 |  [AWS::IoT::TopicRule](aws-resource-iot-topicrule.md)  |  `Arn`  |  Example: `arn:aws:iot:us-east-2:123456789012:rule/MyIoTRule`  | 
+|  [AWS::IoT1Click::Device](aws-resource-iot1click-device.md)  |  `Arn`  |  The ARN of the AWS IoT 1\-Click compatible device\. Example: `arn:aws:iot1click:us-west-2:123456789012:devices/G030PX0312744DWM`  | 
+|  [AWS::IoT1Click::Device](aws-resource-iot1click-device.md)  |  `DeviceId`  |  The user specified device ID\. Example: `G030PX0312744DWM`  | 
+|  [AWS::IoT1Click::Device](aws-resource-iot1click-device.md)  |  `Enabled`  |  A Boolean value indicating if the device is enabled \(`true`\) or disabled \(`false`\)\. Example: `true`  | 
+|  [AWS::IoT1Click::Placement](aws-resource-iot1click-placement.md)  |  `PlacementName`  |  The placement name associated with a project\. Example: `region27`  | 
+|  [AWS::IoT1Click::Placement](aws-resource-iot1click-placement.md)  |  `ProjectName`  |  The name of the project for a given placement\. Example: `seattle-region`  | 
+|  [AWS::IoT1Click::Project](aws-resource-iot1click-project.md)  |  `ProjectName`  |  The name of the project\. Example: `seattle-region`  | 
+|  [AWS::IoT1Click::Project](aws-resource-iot1click-project.md)  |  `Arn`  |  The ARN of the project\. Example: `arn:aws:iot1click:us-east-1:123456789012:projects/seattle-region`  | 
 |  [AWS::Kinesis::Stream](aws-resource-kinesis-stream.md)  |  `Arn`  |  Example: `arn:aws:kinesis:``us-east-2``:123456789012:stream/stream-name`  | 
 |  [AWS::KinesisFirehose::DeliveryStream](aws-resource-kinesisfirehose-deliverystream.md)  |  `Arn`  |  Example: `arn:aws:firehose:``us-east-2``:123456789012:deliverystream/delivery-stream-name`  | 
 |  [AWS::KMS::Key](aws-resource-kms-key.md)  |  `Arn`  |  Example: `arn:aws:kms:us-west-2:123456789012:key/12a34567-8c90-1defg-af84-0bf06c1747f3`  | 
@@ -260,7 +275,7 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 |  [AWS::S3::Bucket](aws-properties-s3-bucket.md)  |  `DomainName`  |  The DNS name of the specified bucket\. Example: `mystack-mybucket-kdwwxmddtr2g.s3.amazonaws.com`  | 
 |  [AWS::S3::Bucket](aws-properties-s3-bucket.md)  |  `DualStackDomainName`  |  The IPv6 DNS name of the specified bucket\. Example: `mystack-mybucket-kdwwxmddtr2g.s3.dualstack.``us-east-2``.amazonaws.com/`  | 
 |  [AWS::S3::Bucket](aws-properties-s3-bucket.md)  |  `WebsiteURL`  |  The Amazon S3 website endpoint for the specified bucket\. Example: `http://mystack-mybucket-kdwwxmddtr2g.s3-website-``us-east-2``.amazonaws.com/`  | 
-|  [AWS::Serverless::Function](transform-aws-serverless.md)  |  No attribute\.  |  The ARN of an `AWS::Serverless::Function` resource\.  | 
+|  [AWS::Serverless::Function](transform-aws-serverless.md)  |  `Arn`  |  The ARN of an `AWS::Serverless::Function` resource\.  | 
 |  [AWS::ServiceDiscovery::PrivateDnsNamespace](aws-resource-servicediscovery-privatednsnamespace.md)  |  `Id`  |  Example: `ns-t2kl4fs6xexample`  | 
 |  [AWS::ServiceDiscovery::PrivateDnsNamespace](aws-resource-servicediscovery-privatednsnamespace.md)  |  `Arn`  |  Example: `arn:aws:servicediscovery:us-west-2:1234567890:namespace/ns-t2kl4fs6xexample`  | 
 |  [AWS::ServiceDiscovery::PublicDnsNamespace](aws-resource-servicediscovery-publicdnsnamespace.md)  |  `Id`  |  Example: `ns-d6wz3hq6kexample`  | 

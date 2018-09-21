@@ -1,6 +1,6 @@
 # AWS::GuardDuty::Member<a name="aws-resource-guardduty-member"></a>
 
-You can use the `AWS::GuardDuty::Member` resource to add an AWS account as a GuardDuty member account to the current GuardDuty master account\. If the value of the Status property is not provided or set to CREATED, a member account is only created\. If the value of the Status property is set to INVITED, a member account is created and invited\. `AWS::GuardDuty::Member` resource has to be created with the Status property set to INVITED before the `AWS::GuardDuty::Master` resource can be created in a GuardDuty member account\.
+You can use the `AWS::GuardDuty::Member` resource to add an AWS account as a GuardDuty member account to the current GuardDuty master account\. If the value of the `Status` property is not provided or is set to `Created`, a member account is only created\. If the value of the `Status` property is set to `Invited`, a member account is created and invited\. `AWS::GuardDuty::Member` resource has to be created with the `Status` property set to `Invited` before the `AWS::GuardDuty::Master` resource can be created in a GuardDuty member account\.
 
 **Topics**
 + [Syntax](#aws-resource-guardduty-member-syntax)
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-guardduty-member-syntax.yaml"></a>
 
 ```
-Type: "AWS::GuardDuty::Member"
+Type: AWS::GuardDuty::Member
 Properties:
   [Status](#cfn-guardduty-member-status): String
   [MemberId](#cfn-guardduty-member-memberid): String
@@ -44,7 +44,7 @@ Properties:
 ## Properties<a name="aws-resource-guardduty-member-properties"></a>
 
 `Status`  <a name="cfn-guardduty-member-status"></a>
-You can use this property to update the status of the relationship between the member account and its master account\. Valid values are CREATED \| INVITED \| DISABLED \| ENABLED \| REMOVED \| RESIGNED\. If the value for this property is not provided or set to CREATED, a member account is only created\. If the value of this property is set to INVITED, a member account is created and invited\.   
+You can use this property to update the status of the relationship between the member account and its master account\. Valid values are Created \| Invited \| Disabled \| Enabled \| Removed \| Resigned\. If the value for this property is not provided or set to Created, a member account is only created\. If the value of this property is set to Invited, a member account is created and invited\.   
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
@@ -113,7 +113,7 @@ The following example shows how to declare an AWS::GuardDuty::Member resource to
 
 ```
 GDmaster:
-  Type: "AWS::GuardDuty::Member"
+  Type: AWS::GuardDuty::Member
   Properties:
     Status: "Invited"    
     MemberId: "012345678901"

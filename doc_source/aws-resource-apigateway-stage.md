@@ -4,8 +4,8 @@ The `AWS::ApiGateway::Stage` resource creates a stage for an Amazon API Gateway 
 
 **Topics**
 + [Syntax](#aws-resource-apigateway-stage-syntax)
-+ [Properties](#w3ab2c21c10c80b9)
-+ [Return Value](#w3ab2c21c10c80c11)
++ [Properties](#w4ab1c21c10c85b9)
++ [Return Value](#w4ab1c21c10c85c11)
 + [Example](#aws-resource-apigateway-stage-examples)
 
 ## Syntax<a name="aws-resource-apigateway-stage-syntax"></a>
@@ -18,8 +18,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::Stage",
   "Properties" : {
+    "[AccessLogSetting](#cfn-apigateway-stage-accesslogsetting)" : [AccessLogSetting](aws-properties-apigateway-stage-accesslogsetting.md),
     "[CacheClusterEnabled](#cfn-apigateway-stage-cacheclusterenabled)" : Boolean,
     "[CacheClusterSize](#cfn-apigateway-stage-cacheclustersize)" : String,
+    "[CanarySetting](#cfn-apigateway-stage-canarysetting)" : [CanarySetting](aws-properties-apigateway-stage-canarysetting.md),
     "[ClientCertificateId](#cfn-apigateway-stage-clientcertificateid)" : String,
     "[DeploymentId](#cfn-apigateway-stage-deploymentid)" : String,
     "[Description](#cfn-apigateway-stage-description)" : String,
@@ -35,10 +37,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-stage-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::Stage"
+Type: AWS::ApiGateway::Stage
 Properties:
+  [AccessLogSetting](#cfn-apigateway-stage-accesslogsetting): [AccessLogSetting](aws-properties-apigateway-stage-accesslogsetting.md)
   [CacheClusterEnabled](#cfn-apigateway-stage-cacheclusterenabled): Boolean
   [CacheClusterSize](#cfn-apigateway-stage-cacheclustersize): String
+  [CanarySetting](#cfn-apigateway-stage-canarysetting): [CanarySetting](aws-properties-apigateway-stage-canarysetting.md)
   [ClientCertificateId](#cfn-apigateway-stage-clientcertificateid): String
   [DeploymentId](#cfn-apigateway-stage-deploymentid): String
   [Description](#cfn-apigateway-stage-description): String
@@ -51,7 +55,13 @@ Properties:
     String: String
 ```
 
-## Properties<a name="w3ab2c21c10c80b9"></a>
+## Properties<a name="w4ab1c21c10c85b9"></a>
+
+`AccessLogSetting`  <a name="cfn-apigateway-stage-accesslogsetting"></a>
+Specifies settings for logging access in this stage\.  
+*Required*: No  
+*Type*: [API Gateway Stage AccessLogSetting](aws-properties-apigateway-stage-accesslogsetting.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `CacheClusterEnabled`  <a name="cfn-apigateway-stage-cacheclusterenabled"></a>
 Indicates whether cache clustering is enabled for the stage\.  
@@ -63,6 +73,12 @@ Indicates whether cache clustering is enabled for the stage\.
 The stage's cache cluster size\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`CanarySetting`  <a name="cfn-apigateway-stage-canarysetting"></a>
+Specifies settings for the canary deployment in this stage\.  
+*Required*: No  
+*Type*: [API Gateway Stage CanarySetting](aws-properties-apigateway-stage-canarysetting.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ClientCertificateId`  <a name="cfn-apigateway-stage-clientcertificateid"></a>
@@ -112,9 +128,9 @@ A map \(string\-to\-string map\) that defines the stage variables, where the var
 *Type*: Mapping of key\-value pairs  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10c80c11"></a>
+## Return Value<a name="w4ab1c21c10c85c11"></a>
 
-### Ref<a name="w3ab2c21c10c80c11b2"></a>
+### Ref<a name="w4ab1c21c10c85c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the name of the stage, such as `MyTestStage`\.
 
@@ -182,7 +198,7 @@ The following example creates a stage for the `TestDeployment` deployment\. The 
 ```
 Resources:
   Prod:
-    Type: 'AWS::ApiGateway::Stage'
+    Type: AWS::ApiGateway::Stage
     Properties:
       StageName: Prod
       Description: Prod Stage

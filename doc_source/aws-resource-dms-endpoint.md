@@ -7,7 +7,7 @@ The `AWS::DMS::Endpoint` resource creates an AWS DMS endpoint\.
 + [Properties](#aws-resource-dms-endpoint-properties)
 + [Return Value](#aws-resource-dms-endpoint-examples-returnvalues)
 + [Example](#aws-resource-dms-endpoint-examples)
-+ [See Also](#w3ab2c21c10d352c15)
++ [See Also](#w4ab1c21c10d364c15)
 
 ## Syntax<a name="aws-resource-dms-endpoint-syntax"></a>
 
@@ -42,7 +42,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-dms-endpoint-syntax.yaml"></a>
 
 ```
-Type: "AWS::DMS::Endpoint"
+Type: AWS::DMS::Endpoint
 Properties:
   [CertificateArn](#cfn-dms-endpoint-certificatearn): String
   [DatabaseName](#cfn-dms-endpoint-databasename): String
@@ -99,7 +99,7 @@ The type of endpoint\. Valid values are `source` and `target`\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `EngineName`  <a name="cfn-dms-endpoint-enginename"></a>
-The type of engine for the endpoint\. Valid values depend on the `EndPointType` and include `MYSQL`, `ORACLE`, `POSTGRES`, `MARIADB`, `AURORA`, `AURORA-POSTGRES`, `REDSHIFT`, `S3`, `SYBASE`, `DYNAMODB`, `MONGODB`, and `SQLSERVER`\.  
+The type of engine for the endpoint\. Valid values depend on the `EndPointType` and include `mysql`, `oracle`, `postgres`, `mariadb`, `aurora`, `aurora-postgresql`, `redshift`, `s3`, `db2`, `azuredb`, `sybase`, `dynamodb`, `mongodb`, and `sqlserver`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -123,7 +123,7 @@ Settings in JSON format for the source MongoDB endpoint\. For more information a
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Password`  <a name="cfn-dms-endpoint-password"></a>
-The password to be used to login to the endpoint database\. Do not use this parameter directly\. Use `Password` as an input parameter with `noEcho` as shown in the [Parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html)\. For best practices information, see [Do Not Embed Credentials in Your Templates](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds)\.  
+The password to be used to login to the endpoint database\. Do not use this parameter directly\. Use `Password` as an input parameter with `noEcho` as shown in the [Parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html)\. For best practices information, see [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -167,7 +167,7 @@ The user name to be used to login to the endpoint database\.
 
 ## Return Value<a name="aws-resource-dms-endpoint-examples-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d352c11b3"></a>
+### Ref<a name="w4ab1c21c10d364c11b3"></a>
 
 When you pass the logical ID of an `AWS::DMS::Endpoint` resource to the intrinsic `Ref` function, the function returns the ARN of the endpoint\.
 
@@ -206,7 +206,7 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: "Endpoint test"
 Resources:
   BasicEndpoint:
-    Type: "AWS::DMS::Endpoint"
+    Type: AWS::DMS::Endpoint
     Properties:
       EngineName: "mysql"
       EndpointType: "target"
@@ -220,6 +220,6 @@ Resources:
           Value: "new"
 ```
 
-## See Also<a name="w3ab2c21c10d352c15"></a>
-+ [CreateEndpoint](http://docs.aws.amazon.com/dms/latest/APIReference/API_CreateEndpoint.html) in the *AWS Database Migration Service API Reference*\.
+## See Also<a name="w4ab1c21c10d364c15"></a>
++ [CreateEndpoint](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateEndpoint.html) in the *AWS Database Migration Service API Reference*\.
 + [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)

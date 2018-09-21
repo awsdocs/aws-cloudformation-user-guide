@@ -5,12 +5,12 @@ Creates a custom parameter group for DB instances\.
 This type can be declared in a template and referenced in the `DBParameterGroupName` parameter of [AWS::Neptune::DBInstance](aws-resource-neptune-dbinstance.md)\.
 
 **Note**  
-Applying a ParameterGroup to a DBInstance may require the instance to reboot, resulting in a database outage for the duration of the reboot\.
+Applying a parameter group to a DB instance might require the instance to reboot, resulting in a database outage for the duration of the reboot\.
 
 **Topics**
 + [Syntax](#aws-resource-neptune-dbparametergroup-syntax)
-+ [Properties](#w3ab2c21c10d902c13)
-+ [Return Values](#w3ab2c21c10d902c15)
++ [Properties](#aws-resource-neptune-dbparametergroup-properties)
++ [Return Values](#aws-resource-neptune-dbparametergroup-return-value)
 
 ## Syntax<a name="aws-resource-neptune-dbparametergroup-syntax"></a>
 
@@ -45,7 +45,7 @@ Properties:
   [Name](#cfn-neptune-dbparametergroup-name) : String
 ```
 
-## Properties<a name="w3ab2c21c10d902c13"></a>
+## Properties<a name="aws-resource-neptune-dbparametergroup-properties"></a>
 
 `Description`  <a name="cfn-neptune-dbparametergroup-description"></a>
 A friendly description of the DB parameter group\. For example, `"My Parameter Group"`\.  
@@ -65,7 +65,7 @@ The parameters to set for this DB parameter group\.
    "Key3" : "Value3"
 }
 ```
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. Changes to dynamic parameters are applied immediately\. During an update, if you have static parameters \(whether they were changed or not\), triggers AWS CloudFormation to reboot the associated DB instance without failover\.
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruption](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. Changes to dynamic parameters are applied immediately\. During an update, if you have static parameters \(whether they were changed or not\), it triggers AWS CloudFormation to reboot the associated DB instance without failover\.
 
 `Family`  <a name="cfn-neptune-dbparametergroup-family"></a>
 Must be `neptune1`\.  
@@ -85,9 +85,9 @@ A friendly name for the cluster\.
 *Type:* String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w3ab2c21c10d902c15"></a>
+## Return Values<a name="aws-resource-neptune-dbparametergroup-return-value"></a>
 
-### Ref<a name="w3ab2c21c10d902c15b2"></a>
+### Ref<a name="aws-resource-neptune-dbparametergroup-return-value.ref"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -95,6 +95,6 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 { "Ref": "MyDBParameterGroup" }
 ```
 
-For the RDS::DBParameterGroup with the logical ID "MyDBParameterGroup", `Ref` will return the resource name\.
+For the `RDS::DBParameterGroup` with the logical ID "`MyDBParameterGroup`," `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.

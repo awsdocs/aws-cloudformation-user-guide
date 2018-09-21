@@ -1,11 +1,11 @@
 # AWS::Cognito::UserPool<a name="aws-resource-cognito-userpool"></a>
 
-The `AWS::Cognito::UserPool` resource creates an Amazon Cognito user pool\. For more information on working with Amazon Cognito user pools, see [Amazon Cognito User Pools](http://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html) and [CreateUserPool](http://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)\.
+The `AWS::Cognito::UserPool` resource creates an Amazon Cognito user pool\. For more information on working with Amazon Cognito user pools, see [Amazon Cognito User Pools](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html) and [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)\.
 
 **Topics**
 + [Syntax](#aws-resource-cognito-userpool-syntax)
-+ [Properties](#w3ab2c21c10d279b9)
-+ [Return Value](#w3ab2c21c10d279c11)
++ [Properties](#w4ab1c21c10d291b9)
++ [Return Value](#w4ab1c21c10d291c11)
 
 ## Syntax<a name="aws-resource-cognito-userpool-syntax"></a>
 
@@ -19,7 +19,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
     "[AdminCreateUserConfig](#cfn-cognito-userpool-admincreateuserconfig)" : AdminCreateUserConfig,
     "[AliasAttributes](#cfn-cognito-userpool-aliasattributes)" : [ String ],
-    "[UsernameAttributes](#cfn-cognito-userpool-usernameattributes)": [ String ],
     "[AutoVerifiedAttributes](#cfn-cognito-userpool-autoverifiedattributes)" : [ String ],
     "[DeviceConfiguration](#cfn-cognito-userpool-deviceconfiguration)" : DeviceConfiguration,
     "[EmailConfiguration](#cfn-cognito-userpool-emailconfiguration)" : EmailConfiguration,
@@ -28,11 +27,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[LambdaConfig](#cfn-cognito-userpool-lambdaconfig)" : LambdaConfig,
     "[MfaConfiguration](#cfn-cognito-userpool-mfaconfiguration)" : String,
     "[Policies](#cfn-cognito-userpool-policies)" : Policies,
-    "[UserPoolName](#cfn-cognito-userpool-poolname)" : String,
     "[Schema](#cfn-cognito-userpool-schema)" : [ [*SchemaAttribute*](aws-properties-cognito-userpool-schemaattribute.md) ],
     "[SmsAuthenticationMessage](#cfn-cognito-userpool-smsauthenticationmessage)" : String,
     "[SmsConfiguration](#cfn-cognito-userpool-smsconfiguration)" : SmsConfiguration,
     "[SmsVerificationMessage](#cfn-cognito-userpool-smsverificationmessage)" : String,
+    "[UsernameAttributes](#cfn-cognito-userpool-usernameattributes)" : [ String ],
+    "[UserPoolName](#cfn-cognito-userpool-poolname)" : String,
     "[UserPoolTags](#cfn-cognito-userpool-userpooltags)" : { String:String, ... }
   }
 }
@@ -41,13 +41,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cognito-userpool-syntax.yaml"></a>
 
 ```
-Type: "AWS::Cognito::UserPool"
+Type: AWS::Cognito::UserPool
 Properties:
   [AdminCreateUserConfig](#cfn-cognito-userpool-admincreateuserconfig): 
     AdminCreateUserConfig
   [AliasAttributes](#cfn-cognito-userpool-aliasattributes): 
-    - String
-  [UsernameAttributes](#cfn-cognito-userpool-usernameattributes):
     - String
   [AutoVerifiedAttributes](#cfn-cognito-userpool-autoverifiedattributes): 
     - String
@@ -62,18 +60,20 @@ Properties:
   [MfaConfiguration](#cfn-cognito-userpool-mfaconfiguration): String
   [Policies](#cfn-cognito-userpool-policies): 
     Policies
-  [UserPoolName](#cfn-cognito-userpool-poolname): String
   [Schema](#cfn-cognito-userpool-schema): 
     - [*SchemaAttribute*](aws-properties-cognito-userpool-schemaattribute.md)
   [SmsAuthenticationMessage](#cfn-cognito-userpool-smsauthenticationmessage): String
   [SmsConfiguration](#cfn-cognito-userpool-smsconfiguration): 
     SmsConfiguration
   [SmsVerificationMessage](#cfn-cognito-userpool-smsverificationmessage): String
+  [UsernameAttributes](#cfn-cognito-userpool-usernameattributes): 
+    - String
+  [UserPoolName](#cfn-cognito-userpool-poolname): String
   [UserPoolTags](#cfn-cognito-userpool-userpooltags): 
     String: String
 ```
 
-## Properties<a name="w3ab2c21c10d279b9"></a>
+## Properties<a name="w4ab1c21c10d291b9"></a>
 
 `AdminCreateUserConfig`  <a name="cfn-cognito-userpool-admincreateuserconfig"></a>
 The type of configuration for creating a new user profile\.  
@@ -82,19 +82,13 @@ The type of configuration for creating a new user profile\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `AliasAttributes`  <a name="cfn-cognito-userpool-aliasattributes"></a>
-Attributes supported as an alias for this user pool\. Possible values: `phone_number`, `email`, and/or `preferred_username`\.   
+Attributes supported as an alias for this user pool\. Possible values: `phone_number`, `email`, or `preferred_username`\.   
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-`UsernameAttributes`  <a name="cfn-cognito-userpool-usernamesattributes"></a>
-The attributes a user can use as their username to sign up and sign in\. Possible values: `phone_number`, and/or `email`\.
-*Required: *No
-*Type*: List of String values
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
-
 `AutoVerifiedAttributes`  <a name="cfn-cognito-userpool-autoverifiedattributes"></a>
-The attributes to be auto\-verified\. Possible values: `email` and/or `phone_number`\.   
+The attributes to be auto\-verified\. Possible values: `email` or `phone_number`\.   
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -144,12 +138,6 @@ The policies associated with the Amazon Cognito user pool\.
 *Type*: [Amazon Cognito UserPool Policies](aws-properties-cognito-userpool-policies.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`UserPoolName`  <a name="cfn-cognito-userpool-poolname"></a>
-A string used to name the user pool\.  
-*Required*: Yes  
-*Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
-
 `Schema`  <a name="cfn-cognito-userpool-schema"></a>
 A list of schema attributes for the new user pool\. These attributes can be standard or custom attributes\.  
 *Required*: No  
@@ -174,21 +162,33 @@ A string representing the SMS verification message\. Must contain `{####}` in th
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
+`UsernameAttributes`  <a name="cfn-cognito-userpool-usernameattributes"></a>
+Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up\. Possible values: `phone_number` or `email`\.  
+*Required*: No  
+*Type*: List of String values  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+
+`UserPoolName`  <a name="cfn-cognito-userpool-poolname"></a>
+A string used to name the user pool\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+
 `UserPoolTags`  <a name="cfn-cognito-userpool-userpooltags"></a>
-The cost allocation tags for the user pool\. For more information, see [Adding Cost Allocation Tags to Your User Pool](http://docs.aws.amazon.com//cognito/latest/developerguide/cognito-user-pools-cost-allocation-tagging.html) in the *Amazon Cognito Developer Guide*\.  
+The cost allocation tags for the user pool\. For more information, see [Adding Cost Allocation Tags to Your User Pool](https://docs.aws.amazon.com//cognito/latest/developerguide/cognito-user-pools-cost-allocation-tagging.html) in the *Amazon Cognito Developer Guide*\.  
 *Required*: No  
 *Type*: String to String map  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10d279c11"></a>
+## Return Value<a name="w4ab1c21c10d291c11"></a>
 
-### Ref<a name="w3ab2c21c10d279c11b3"></a>
+### Ref<a name="w4ab1c21c10d291c11b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns a generated ID, such as `us-east-2_zgaEXAMPLE`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d279c11b5"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d291c11b5"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 

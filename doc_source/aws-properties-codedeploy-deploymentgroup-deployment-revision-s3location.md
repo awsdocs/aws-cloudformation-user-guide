@@ -2,7 +2,7 @@
 
 `S3Location` is a property of the [AWS CodeDeploy DeploymentGroup Deployment Revision](aws-properties-codedeploy-deploymentgroup-deployment-revision.md) property that specifies the location of an application revision that is stored in Amazon Simple Storage Service \(Amazon S3\)\.
 
-## Syntax<a name="w3ab2c21c14d419b5"></a>
+## Syntax<a name="w4ab1c21c14d453b5"></a>
 
 ### JSON<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location-syntax.json"></a>
 
@@ -26,7 +26,7 @@
 [Version](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-value): String
 ```
 
-## Properties<a name="w3ab2c21c14d419b7"></a>
+## Properties<a name="w4ab1c21c14d453b7"></a>
 
 `Bucket`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-bucket"></a>
 The name of the S3 bucket where the application revision is stored\.  
@@ -34,7 +34,7 @@ The name of the S3 bucket where the application revision is stored\.
 *Type*: String
 
 `BundleType`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-bundletype"></a>
-The file type of the application revision, such as `tar`, `tgz`, or `zip`\. For valid values, see [S3Location](http://docs.aws.amazon.com/codedeploy/latest/APIReference/API_S3Location.html) in the *AWS CodeDeploy API Reference*\.  
+The file type of the application revision, such as `tar`, `tgz`, or `zip`\. For valid values, see [S3Location](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_S3Location.html) in the *AWS CodeDeploy API Reference*\.  
 *Required*: Yes  
 *Type*: String
 

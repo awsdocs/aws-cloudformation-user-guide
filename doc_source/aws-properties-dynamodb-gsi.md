@@ -2,7 +2,7 @@
 
 Describes global secondary indexes for the [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md) resource\.
 
-## Syntax<a name="w3ab2c21c14d604b5"></a>
+## Syntax<a name="w4ab1c21c14d666b5"></a>
 
 ### JSON<a name="aws-properties-dynamodb-gsi-syntax.json"></a>
 
@@ -27,7 +27,7 @@ Describes global secondary indexes for the [AWS::DynamoDB::Table](aws-resource-d
   ProvisionedThroughput
 ```
 
-## Properties<a name="w3ab2c21c14d604b7"></a>
+## Properties<a name="w4ab1c21c14d666b7"></a>
 
 `IndexName`  <a name="cfn-dynamodb-gsi-indexname"></a>
 The name of the global secondary index\. The index name can be 3 – 255 characters long and must satisfy the regular expression pattern `[a-zA-Z0-9_.-]+`\.  

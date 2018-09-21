@@ -13,7 +13,7 @@ At the bottom of this topic, there is a table that lists the values returned for
 **Tip**  
 You can also use `Ref` to add values to Output messages\.
 
-## Declaration<a name="w3ab2c21c28c68c15"></a>
+## Declaration<a name="ref-declaration"></a>
 
 ### JSON<a name="intrinsic-function-reference-ref-syntax.json"></a>
 
@@ -35,16 +35,16 @@ Syntax for the short form:
 !Ref logicalName
 ```
 
-## Parameters<a name="w3ab2c21c28c68c17"></a>
+## Parameters<a name="ref-parameters"></a>
 
 logicalName  
 The logical name of the resource or parameter you want to dereference\.
 
-## Return Value<a name="w3ab2c21c28c68c19"></a>
+## Return Value<a name="ref-return-value"></a>
 
 The physical ID of the resource or the value of the parameter\.
 
-## Example<a name="w3ab2c21c28c68c21"></a>
+## Example<a name="ref-example"></a>
 
 The following resource declaration for an Elastic IP address needs the instance ID of an EC2 instance and uses the `Ref` function to specify the instance ID of the MyEC2Instance resource:
 
@@ -68,17 +68,19 @@ MyEIP:
     InstanceId: !Ref MyEC2Instance
 ```
 
-## Supported Functions<a name="w3ab2c21c28c68c23"></a>
+## Supported Functions<a name="ref-supported-functions"></a>
 
 You cannot use any functions in the `Ref` function\. You must specify a string that is a resource logical ID\.
 
-## Resource Return Examples<a name="w3ab2c21c28c68c25"></a>
+## Resource Return Examples<a name="ref-resource-return-examples"></a>
 
 This section lists sample values returned by `Ref` for particular AWS CloudFormation resources\. For more information about `Ref` return values for a particular resource or property, refer to the documentation for that resource or property\.
 
 
 | Resource Type | Reference Value | Example Return Value | 
 | --- | --- | --- | 
+| [AWS::AmazonMQ::Broker](aws-resource-amazonmq-broker.md) | Amazon MQ broker ID | b\-1234a5b6\-78cd\-901e\-2fgh\-3i45j6k178l9 | 
+| [AWS::AmazonMQ::Configuration](aws-resource-amazonmq-configuration.md) | Amazon MQ configuration ID | c\-1234a5b6\-78cd\-901e\-2fgh\-3i45j6k178l9 | 
 |  [AWS::ApiGateway::Account](aws-resource-apigateway-account.md)  |  API Gateway account resource ID  |  `mysta-accou-01234b567890example`  | 
 |  [AWS::ApiGateway::ApiKey](aws-resource-apigateway-apikey.md)  |  API key  |  `m2m1k7sybf`  | 
 |  [AWS::ApiGateway::Authorizer](aws-resource-apigateway-authorizer.md)  |  Authorizer resource ID  |  `abcde1`  | 
@@ -116,6 +118,7 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 | [AWS::CodeDeploy::DeploymentGroup](aws-resource-codedeploy-deploymentgroup.md) |  Deployment group name  |  `mydeploymentgroup-a123d0d1`  | 
 | [AWS::CodePipeline::CustomActionType](aws-resource-codepipeline-customactiontype.md) |  Custom action name  |  `mysta-MyCus-A1BCDEFGHIJ2`  | 
 | [AWS::CodePipeline::Pipeline](aws-resource-codepipeline-pipeline.md) |  Pipeline name  |  `mysta-MyPipeline-A1BCDEFGHIJ2`  | 
+| [AWS::CodePipeline::Webhook](aws-resource-codepipeline-webhook.md) |  Webhook name  |  `MyFirstPipeline-SourceAction1-Webhook-utb9LrOl24Kk`  | 
 | [AWS::Config::ConfigRule](aws-resource-config-configrule.md) |  Configuration rule name  |  `mystack-MyConfigRule-12ABCFPXHV4OV`  | 
 | [AWS::Config::ConfigurationRecorder](aws-resource-config-configurationrecorder.md) |  Configuration recorder name  |  `default`  | 
 | [AWS::Config::DeliveryChannel](aws-resource-config-deliverychannel.md) |  Delivery channel name  |  `default`  | 
@@ -128,7 +131,7 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::EC2::EIPAssociation](aws-properties-ec2-eip-association.md)  |  Name  |  `mystack-myeipa-1NU3IL8LJ313N`  | 
 |  [AWS::EC2::FlowLog](aws-resource-ec2-flowlog.md)  |  Flow log ID  |  `fl-1a23b456`  | 
 |  [AWS::EC2::Host](aws-resource-ec2-host.md)  |  Host ID  |  `h-0ab123c45d67ef89`  | 
-|  [AWS::EC2::Instance](aws-properties-ec2-instance.md)  |  Instance ID  |  `i-636be302`  | 
+|  [AWS::EC2::Instance](aws-properties-ec2-instance.md)  |  Instance ID  |  `i-1234567890abcdef0`  | 
 |  [AWS::EC2::NatGateway](aws-resource-ec2-natgateway.md)  |  NAT gateway ID  |  `nat-0a12bc456789de0fg`  | 
 |  [AWS::EC2::NetworkInterfacePermission](aws-resource-ec2-networkinterfacepermission.md)  |  Network interface permission ID  |  `eni-perm-055663b682ea24b48`  | 
 |  [AWS::EC2::PlacementGroup](aws-resource-ec2-placementgroup.md)  |  Placement group name  |  `mystack-myplacementgroup-CU6107MRVLR7`  | 
@@ -184,11 +187,15 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::IAM::AccessKey](aws-properties-iam-accesskey.md)  |  AccessKeyId  |  `AKIAIOSFODNN7EXAMPLE`  | 
 |  [AWS::IAM::Group](aws-properties-iam-group.md)  |  Group name  |  `mystack-mygroup-1DZETITOWEKVO`  | 
 |  [AWS::IAM::ManagedPolicy](aws-resource-iam-managedpolicy.md)  |  Policy ARN  |  `arn:aws:iam::123456789012:policy/teststack-CreateTestDBPolicy-16M23YE3CS700`  | 
+|  [AWS::IAM::Role](aws-resource-iam-role.md)  |  Name  |  `MyRole`  | 
 |  [AWS::IAM::User](aws-properties-iam-user.md)  |  User name  |  `mystack-myuser-1CCXAFG2H2U4D`  | 
 | [AWS::IoT::Certificate](aws-resource-iot-certificate.md) | Certificate ID | a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2 | 
 | [AWS::IoT::Policy](aws-resource-iot-policy.md) | Policy name | MyPolicyName | 
 | [AWS::IoT::Thing](aws-resource-iot-thing.md) | Thing name | MyStack\-MyThing\-AB1CDEFGHIJK | 
 | [AWS::IoT::TopicRule](aws-resource-iot-topicrule.md) | Topic rule name | MyStackMyTopicRule12ABC3D456EFG | 
+| [AWS::IoT1Click::Placement](aws-resource-iot1click-placement.md) | The placement name \(associated with a project\)\. | region3 | 
+| [AWS::IoT1Click::Project](aws-resource-iot1click-project.md) | The project ARN\. | arn:aws:iot1click:us\-west\-2:0123456789012:projects/seattle\-region | 
+| [AWS::IoT1Click::Device](aws-resource-iot1click-device.md) | The device ARN\. | arn:aws:iot1click:us\-west\-2:123456789012:devices/G030PX0312744DWM | 
 |  [AWS::Kinesis::Stream](aws-resource-kinesis-stream.md)  |  Name  |  `mystack-mystream-1NAOH4L1RIQ7I`  | 
 |  [AWS::KinesisFirehose::DeliveryStream](aws-resource-kinesisfirehose-deliverystream.md)  |  Delivery stream name  |  `mystack-deliverystream-1ABCD2EF3GHIJ`  | 
 |  [AWS::KMS::Alias](aws-resource-kms-alias.md)  |  Alias name  |  `alias/myAlias`  | 
@@ -219,6 +226,8 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::Route53::HealthCheck](aws-resource-route53-healthcheck.md)  |  Amazon Route 53 health check ID  |  `e0a123b4-4dba-4650-935e-example`  | 
 |  [AWS::Route53::HostedZone](aws-resource-route53-hostedzone.md)  | Hosted zone ID |  `Z23ABC4XYZL05B`  | 
 |  [AWS::S3::Bucket](aws-properties-s3-bucket.md)  |  Name  |  `mystack-mys3bucket-1hbsmonr9mytq`  | 
+|  [AWS::SES::ReciptRule](aws-resource-ses-receiptrule.md)  |  Name  |  `my-receipt-rule`  | 
+|  [AWS::SES::ReciptRuleSet](aws-resource-ses-receiptruleset.md)  |  Name  |  `my-receipt-rule-set`  | 
 |  [AWS::SDB::Domain](aws-properties-simpledb.md)  |  Name  |  `mystack-mysdbdomain-IVNAOZTDFVXL`  | 
 |  [AWS::SNS::Topic](aws-properties-sns-topic.md)  |  Topic ARN  |  `arn:aws:sns:``us-east-2``:123456789012:mystack-mytopic-NZJ5JSMVGFIE`  | 
 |  [AWS::SQS::Queue](aws-properties-sqs-queues.md)  |  Queue URL  |  `https://sqs.``us-east-2``.amazonaws.com/803981987763/aa4-MyQueue-Z5NOSZO2PZE9`  | 

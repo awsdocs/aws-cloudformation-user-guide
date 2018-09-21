@@ -14,11 +14,11 @@ For more information about exporting and importing output values, see [Exporting
 1. From the list of exported output values, choose the value\. The `Imports` section of the detail page lists all of the stacks that are importing the value\.
 
 **To list stacks that import an exported output value \(CLI\)**
-+ Run the [aws cloudformation list\-imports](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-imports.html) command, providing the name of the exported output value\.
++ Run the [aws cloudformation list\-imports](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-imports.html) command, providing the name of the exported output value\.
 
   AWS CloudFormation returns a list of stacks that are importing the value\.
 
 **To list stacks that import an exported output value \(API\)**
-+ Run the [http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ListImports.html](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ListImports.html) API, providing the name of the exported output value\.
++ Run the [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ListImports.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ListImports.html) API, providing the name of the exported output value\.
 
   AWS CloudFormation returns a list of stacks that are importing the value\.

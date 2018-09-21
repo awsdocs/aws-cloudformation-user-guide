@@ -7,7 +7,7 @@ AWS CloudFormation uses these attributes to provision the keys for the table\. T
 
 The `AttributeDefinition` property of the [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md) resource contains a list of `AttributeDefinition` property types\.
 
-## Syntax<a name="w3ab2c21c14d599b9"></a>
+## Syntax<a name="w4ab1c21c14d661b9"></a>
 
 ### JSON<a name="aws-properties-dynamodb-attributedef-syntax.json"></a>
 
@@ -25,7 +25,7 @@ The `AttributeDefinition` property of the [AWS::DynamoDB::Table](aws-resource-dy
 [AttributeType](#cfn-dynamodb-attributedef-attributename-attributetype): String
 ```
 
-## Properties<a name="w3ab2c21c14d599c11"></a>
+## Properties<a name="w4ab1c21c14d661c11"></a>
 
 `AttributeName`  <a name="cfn-dynamodb-attributedef-attributename"></a>
 The name of an attribute\. Attribute names can be 1 – 255 characters long and have no character restrictions\.  

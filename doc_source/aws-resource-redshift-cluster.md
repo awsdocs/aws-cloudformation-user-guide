@@ -1,13 +1,13 @@
 # AWS::Redshift::Cluster<a name="aws-resource-redshift-cluster"></a>
 
-Use the `AWS::Redshift::Cluster` resource to create an Amazon Redshift cluster\. A *cluster* is a fully managed data warehouse that consists of a set of compute nodes\. For more information about default and valid values, see [CreateCluster](http://docs.aws.amazon.com/redshift/latest/APIReference/API_CreateCluster.html) in the *Amazon Redshift API Reference*\.
+Use the `AWS::Redshift::Cluster` resource to create an Amazon Redshift cluster\. A *cluster* is a fully managed data warehouse that consists of a set of compute nodes\. For more information about default and valid values, see [CreateCluster](https://docs.aws.amazon.com/redshift/latest/APIReference/API_CreateCluster.html) in the *Amazon Redshift API Reference*\.
 
 **Topics**
 + [Syntax](#aws-resource-redshift-cluster-syntax)
-+ [Properties](#w3ab2c21c10d989b9)
-+ [Return Values](#w3ab2c21c10d989c11)
-+ [Example](#w3ab2c21c10d989c13)
-+ [More Info](#w3ab2c21c10d989c15)
++ [Properties](#w4ab1c21c10e1019b9)
++ [Return Values](#w4ab1c21c10e1019c11)
++ [Example](#w4ab1c21c10e1019c13)
++ [More Info](#w4ab1c21c10e1019c15)
 
 ## Syntax<a name="aws-resource-redshift-cluster-syntax"></a>
 
@@ -93,9 +93,9 @@ Properties:
     - String
 ```
 
-## Properties<a name="w3ab2c21c10d989b9"></a>
+## Properties<a name="w4ab1c21c10e1019b9"></a>
 
-For more information about each property, including constraints and valid values, see [CreateCluster](http://docs.aws.amazon.com//redshift/latest/APIReference/API_CreateCluster.html) in the *Amazon Redshift API Reference*\.
+For more information about each property, including constraints and valid values, see [CreateCluster](https://docs.aws.amazon.com//redshift/latest/APIReference/API_CreateCluster.html) in the *Amazon Redshift API Reference*\.
 
 `AllowVersionUpgrade`  <a name="cfn-redshift-cluster-allowversionupgrade"></a>
 When a new version of Amazon Redshift is released, tells whether upgrades can be applied to the engine that is running on the cluster\. The upgrades are applied during the maintenance window\. The default value is `true`\.  
@@ -251,7 +251,7 @@ Indicates whether the cluster can be accessed from a public network\.
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 `SnapshotClusterIdentifier`  <a name="cfn-redshift-cluster-snapshotclusteridentifier"></a>
-The name of the cluster that the source snapshot was created from\. For more information about restoring from a snapshot, see the [RestoreFromClusterSnapshot](http://docs.aws.amazon.com/redshift/latest/APIReference/API_RestoreFromClusterSnapshot.html) action in the *Amazon Redshift API Reference*\.  
+The name of the cluster that the source snapshot was created from\. For more information about restoring from a snapshot, see the [RestoreFromClusterSnapshot](https://docs.aws.amazon.com/redshift/latest/APIReference/API_RestoreFromClusterSnapshot.html) action in the *Amazon Redshift API Reference*\.  
 *Required*: No  
 *Required*: Conditional\. This property is required if your IAM policy includes a restriction on the cluster name and the resource element specifies anything other than the wildcard character \(`*`\) for the cluster name\.  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -274,9 +274,9 @@ A list of VPC security groups that are associated with this cluster\.
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10d989c11"></a>
+## Return Values<a name="w4ab1c21c10e1019c11"></a>
 
-### Ref<a name="w3ab2c21c10d989c11b2"></a>
+### Ref<a name="w4ab1c21c10e1019c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -288,7 +288,7 @@ For the Amazon Redshift cluster `myCluster`, `Ref` returns the name of the clust
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d989c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10e1019c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -298,7 +298,7 @@ The connection endpoint for the Amazon Redshift cluster\. For example: `examplec
 `Endpoint.Port`  
 The port number on which the Amazon Redshift cluster accepts connections\. For example: `5439`\.
 
-## Example<a name="w3ab2c21c10d989c13"></a>
+## Example<a name="w4ab1c21c10e1019c13"></a>
 
 The following example describes a single\-node Amazon Redshift cluster\. The master user password is referenced from an input parameter that is in the same template\.
 
@@ -340,6 +340,6 @@ myCluster:
         Value: bar
 ```
 
-## More Info<a name="w3ab2c21c10d989c15"></a>
+## More Info<a name="w4ab1c21c10e1019c15"></a>
 
 For a complete example template, see [Amazon Redshift Template Snippets](quickref-redshift.md)\.

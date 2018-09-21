@@ -39,4 +39,4 @@ The endpoint\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-appsync-datasource-elasticsearchconfig-seealso"></a>
-+ [ ElasticsearchDataSourceConfig](http://docs.aws.amazon.com/appsync/latest/APIReference/API_ElasticsearchDataSourceConfig.html) operation in the *AWS AppSync API Reference*
++ [ ElasticsearchDataSourceConfig](https://docs.aws.amazon.com/appsync/latest/APIReference/API_ElasticsearchDataSourceConfig.html) operation in the *AWS AppSync API Reference*

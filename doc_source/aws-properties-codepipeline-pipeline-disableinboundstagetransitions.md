@@ -2,7 +2,7 @@
 
 `DisableInboundStageTransitions` is a property of the [AWS::CodePipeline::Pipeline](aws-resource-codepipeline-pipeline.md) resource that specifies which AWS CodePipeline stage to disable transitions to\.
 
-## Syntax<a name="w3ab2c21c14d456b5"></a>
+## Syntax<a name="w4ab1c21c14d506b5"></a>
 
 ### JSON<a name="aws-properties-codepipeline-pipeline-disableinboundstagetransitions-syntax.json"></a>
 
@@ -20,7 +20,7 @@
 [StageName](#cfn-codepipeline-pipeline-disableinboundstagetransitions-stagename): String
 ```
 
-## Properties<a name="w3ab2c21c14d456b7"></a>
+## Properties<a name="w4ab1c21c14d506b7"></a>
 
 `Reason`  <a name="cfn-codepipeline-pipeline-disableinboundstagetransitions-reason"></a>
 An explanation of why the transition between two stages of a pipeline was disabled\.  

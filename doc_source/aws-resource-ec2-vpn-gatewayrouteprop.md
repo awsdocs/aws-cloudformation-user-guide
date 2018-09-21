@@ -7,10 +7,10 @@ If you reference a VPN gateway that is in the same template as your VPN gateway 
 
 **Topics**
 + [Syntax](#aws-resource-ec2-vpngatewayroutepropagation-syntax)
-+ [Properties](#w3ab2c21c10d551c11)
-+ [Return Value](#w3ab2c21c10d551c13)
-+ [Example](#w3ab2c21c10d551c15)
-+ [See Also](#w3ab2c21c10d551c17)
++ [Properties](#w4ab1c21c10d570c11)
++ [Return Value](#w4ab1c21c10d570c13)
++ [Example](#w4ab1c21c10d570c15)
++ [See Also](#w4ab1c21c10d570c17)
 
 ## Syntax<a name="aws-resource-ec2-vpngatewayroutepropagation-syntax"></a>
 
@@ -31,14 +31,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-vpngatewayroutepropagation-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::VPNGatewayRoutePropagation"
+Type: AWS::EC2::VPNGatewayRoutePropagation
 Properties: 
   [RouteTableIds](#cfn-ec2-vpngatewayrouteprop-routetableids):
     - String
   [VpnGatewayId](#cfn-ec2-vpngatewayrouteprop-vpngatewayid): String
 ```
 
-## Properties<a name="w3ab2c21c10d551c11"></a>
+## Properties<a name="w4ab1c21c10d570c11"></a>
 
 `RouteTableIds`  <a name="cfn-ec2-vpngatewayrouteprop-routetableids"></a>
 A list of routing table IDs that are associated with a VPC\. The routing tables must be associated with the same VPC that the virtual private gateway is attached to\.  
@@ -52,7 +52,7 @@ The ID of the virtual private gateway that is attached to a VPC\. The virtual pr
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10d551c13"></a>
+## Return Value<a name="w4ab1c21c10d570c13"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -64,7 +64,7 @@ For the VPN gateway with the logical ID `myVPNGatewayRouteProp`, `Ref` will retu
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10d551c15"></a>
+## Example<a name="w4ab1c21c10d570c15"></a>
 
 ### JSON<a name="aws-resource-ec2-vpngatewayroutepropagation-example.json"></a>
 
@@ -82,7 +82,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ```
 myVPNGatewayRouteProp: 
-  Type: "AWS::EC2::VPNGatewayRoutePropagation"
+  Type: AWS::EC2::VPNGatewayRoutePropagation
   Properties:
     RouteTableIds: 
       - !Ref PrivateRouteTable
@@ -90,5 +90,5 @@ myVPNGatewayRouteProp:
       !Ref VPNGateway
 ```
 
-## See Also<a name="w3ab2c21c10d551c17"></a>
-+ [EnableVgwRoutePropagation](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-EnableVgwRoutePropagation.html) in the *Amazon EC2 API Reference*\.
+## See Also<a name="w4ab1c21c10d570c17"></a>
++ [EnableVgwRoutePropagation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-EnableVgwRoutePropagation.html) in the *Amazon EC2 API Reference*\.

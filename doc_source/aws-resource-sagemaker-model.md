@@ -1,6 +1,6 @@
 # AWS::SageMaker::Model<a name="aws-resource-sagemaker-model"></a>
 
-The `AWS::SageMaker::Model` resource to create a model to host at an Amazon SageMaker endpoint\. For more information, see [Deploying a Model on Amazon SageMaker Hosting Services](http://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works-hosting.html) in the *Amazon SageMaker Developer Guide*\. 
+The `AWS::SageMaker::Model` resource to create a model to host at an Amazon SageMaker endpoint\. For more information, see [Deploying a Model on Amazon SageMaker Hosting Services](https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works-hosting.html) in the *Amazon SageMaker Developer Guide*\. 
 
 **Topics**
 + [Syntax](#aws-resource-sagemaker-model-syntax)
@@ -43,7 +43,7 @@ Properties:
 ## Properties<a name="aws-resource-sagemaker-model-properties"></a>
 
 `ExecutionRoleArn`  <a name="cfn-sagemaker-model-executionrolearn"></a>
-The Amazon Resource Name \(ARN\) of the IAM role that Amazon SageMaker can assume to access model artifacts and docker image for deployment on ML compute instances\. Deploying on ML compute instances is part of model hosting\. For more information, see [Amazon SageMaker Roles](http://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html)\.  
+The Amazon Resource Name \(ARN\) of the IAM role that Amazon SageMaker can assume to access model artifacts and docker image for deployment on ML compute instances\. Deploying on ML compute instances is part of model hosting\. For more information, see [Amazon SageMaker Roles](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html)\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
@@ -61,7 +61,7 @@ The name of the model\.
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `VpcConfig`  <a name="cfn-sagemaker-model-vpcconfig"></a>
-A VpcConfig object that specifies the VPC that you want your model to connect to\. Control access to and from your model container by configuring the VPC\. For more information, see [Protect Models by Using an Amazon Virtual Private Cloud](http://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html)\.  
+A VpcConfig object that specifies the VPC that you want your model to connect to\. Control access to and from your model container by configuring the VPC\. For more information, see [Protect Models by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html)\.  
  *Required*: No  
  *Type*: [Amazon SageMaker Model VpcConfig](aws-properties-sagemaker-model-vpcconfig.md)  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
@@ -204,7 +204,7 @@ The following example creates an endpoint configuration from a trained model, an
       "Value": { "Fn::GetAtt" : [ "Endpoint", "EndpointName" ] }
     }
     
-  },
+  }
   
 }
 ```
@@ -277,9 +277,9 @@ Resources:
                 Effect: "Allow"
                 Action: "*"
                 Resource: "*"
-  Outputs:
-    EndpointId:
-      Value: !Ref Endpoint
-    EndpointName:
-      Value: !GetAtt Endpoint.EndpointName
+Outputs:
+  EndpointId:
+    Value: !Ref Endpoint
+  EndpointName:
+    Value: !GetAtt Endpoint.EndpointName
 ```

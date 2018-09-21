@@ -51,7 +51,7 @@ The namespace of the metric\.
 
 `Statistic`  <a name="cfn-applicationautoscaling-scalingpolicy-customizedmetricspecification-statistic"></a>
 The statistic of the metric\.  
-For valid values, see [CustomizedMetricSpecification](http://docs.aws.amazon.com/autoscaling/application/APIReference/API_CustomizedMetricSpecification.html) in the *Application Auto Scaling API Reference*\.  
+For valid values, see [CustomizedMetricSpecification](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_CustomizedMetricSpecification.html) in the *Application Auto Scaling API Reference*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

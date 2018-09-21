@@ -1,8 +1,8 @@
 # Kinesis StreamEncryption<a name="aws-properties-kinesis-stream-streamencryption"></a>
 
-The `StreamEncryption` property is part of the [AWS::Kinesis::Stream](aws-resource-kinesis-stream.md) resource that enables or updates server\-side encryption using an AWS KMS key for a specified stream\. For more information, see [StartStreamEncryption](http://docs.aws.amazon.com/kinesis/latest/APIReference/API_StartStreamEncryption.html) in the *Amazon Kinesis Data Streams API Reference*\.
+The `StreamEncryption` property is part of the [AWS::Kinesis::Stream](aws-resource-kinesis-stream.md) resource that enables or updates server\-side encryption using an AWS KMS key for a specified stream\. For more information, see [StartStreamEncryption](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_StartStreamEncryption.html) in the *Amazon Kinesis Data Streams API Reference*\.
 
-## Syntax<a name="w3ab2c21c14e1393b5"></a>
+## Syntax<a name="w4ab1c21c14e1496b5"></a>
 
 ### JSON<a name="aws-properties-kinesis-stream-streamencryption.json"></a>
 
@@ -20,7 +20,7 @@ The `StreamEncryption` property is part of the [AWS::Kinesis::Stream](aws-resour
 [KeyId](#cfn-kinesis-stream-streamencryption-keyid): String
 ```
 
-## Properties<a name="w3ab2c21c14e1393b7"></a>
+## Properties<a name="w4ab1c21c14e1496b7"></a>
 
 `EncryptionType`  <a name="cfn-kinesis-stream-streamencryption-encryptiontype"></a>
 The encryption type to use\. The only valid value is `KMS`\.  

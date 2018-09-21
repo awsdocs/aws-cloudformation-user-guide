@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-events-rule-runcommandtarget-properties"></a>
 
-For more information, including constraints, see [RunCommandTarget](http://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_RunCommandTarget.html) in the *Amazon CloudWatch Events API Reference*\.
+For more information, including constraints, see [RunCommandTarget](https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_RunCommandTarget.html) in the *Amazon CloudWatch Events API Reference*\.
 
 `Key`  <a name="cfn-events-rule-runcommandtarget-key"></a>
 The key, either `tag: tag-key` or `InstanceIds`\.  

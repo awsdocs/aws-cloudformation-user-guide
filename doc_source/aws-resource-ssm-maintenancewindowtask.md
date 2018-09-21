@@ -1,6 +1,6 @@
 # AWS::SSM::MaintenanceWindowTask<a name="aws-resource-ssm-maintenancewindowtask"></a>
 
-The `AWS::SSM::MaintenanceWindowTask` resource defines information about a task for a Maintenance Window for AWS Systems Manager\. For more information, see [ RegisterTaskWithMaintenanceWindow](http://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterTaskWithMaintenanceWindow.html) in the *AWS Systems Manager API Reference*\.
+The `AWS::SSM::MaintenanceWindowTask` resource defines information about a task for a Maintenance Window for AWS Systems Manager\. For more information, see [ RegisterTaskWithMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterTaskWithMaintenanceWindow.html) in the *AWS Systems Manager API Reference*\.
 
 ## Syntax<a name="aws-resource-ssm-maintenancewindowtask-syntax"></a>
 
@@ -142,13 +142,13 @@ Information about an Amazon S3 bucket to write task\-level logs to\.
 
 ## Return Values<a name="aws-resource-ssm-maintenancewindowtask-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10e1162b9b3"></a>
+### Ref<a name="w4ab1c21c10e1189b9b3"></a>
 
-When you pass the logical ID of an `AWS::SSM::MaintenanceWindowTask` resource to the intrinsic `Ref` function, the function returns the physical ID of the resource, such as `12a345b6-bbb7-4bb6-90b0-8c9577a2d2b9`\. 
+When you pass the logical ID of an `AWS::SSM::MaintenanceWindowTask` resource to the intrinsic `Ref` function, the function returns the maintenance window task ID, such as `12a345b6-bbb7-4bb6-90b0-8c9577a2d2b9`\. 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
 ## See Also<a name="aws-resource-ssm-maintenancewindowtask-seealso"></a>
 + [AWS::SSM::MaintenanceWindow](aws-resource-ssm-maintenancewindow.md)
 + [AWS::SSM::MaintenanceWindowTarget](aws-resource-ssm-maintenancewindowtarget.md)
-+ [ RegisterTaskWithMaintenanceWindow](http://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterTaskWithMaintenanceWindow.html) in the *AWS Systems Manager API Reference*
++ [ RegisterTaskWithMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterTaskWithMaintenanceWindow.html) in the *AWS Systems Manager API Reference*

@@ -42,12 +42,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[DomainIAMRoleName](#cfn-rds-dbinstance-domainIAMRoleName)" : String,
     "[Engine](#cfn-rds-dbinstance-engine)" : String,
     "[EngineVersion](#cfn-rds-dbinstance-engineversion)" : String,
-    "[Iops](#cfn-rds-dbinstance-iops)" : Number,
+    "[Iops](#cfn-rds-dbinstance-iops)" : Integer,
     "[KmsKeyId](#cfn-rds-dbinstance-kmskeyid)" : String,
     "[LicenseModel](#cfn-rds-dbinstance-licensemodel)" : String,
     "[MasterUsername](#cfn-rds-dbinstance-masterusername)" : String,
     "[MasterUserPassword](#cfn-rds-dbinstance-masteruserpassword)" : String,
-    "[MonitoringInterval](#cfn-rds-dbinstance-monitoringinterval)" : Number,
+    "[MonitoringInterval](#cfn-rds-dbinstance-monitoringinterval)" : Integer,
     "[MonitoringRoleArn](#cfn-rds-dbinstance-monitoringrolearn)" : String,
     "[MultiAZ](#cfn-rds-dbinstance-multiaz)" : Boolean,
     "[OptionGroupName](#cfn-rds-dbinstance-optiongroupname)" : String,
@@ -69,7 +69,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-rds-dbinstance-syntax.yaml"></a>
 
 ```
-Type: "AWS::RDS::DBInstance"
+Type: AWS::RDS::DBInstance
 Properties:
   [AllocatedStorage](#cfn-rds-dbinstance-allocatedstorage): String
   [AllowMajorVersionUpgrade](#cfn-rds-dbinstance-allowmajorversionupgrade): Boolean
@@ -91,12 +91,12 @@ Properties:
   [DomainIAMRoleName](#cfn-rds-dbinstance-domainIAMRoleName): String
   [Engine](#cfn-rds-dbinstance-engine): String
   [EngineVersion](#cfn-rds-dbinstance-engineversion): String
-  [Iops](#cfn-rds-dbinstance-iops): Number
+  [Iops](#cfn-rds-dbinstance-iops): Integer
   [KmsKeyId](#cfn-rds-dbinstance-kmskeyid): String
   [LicenseModel](#cfn-rds-dbinstance-licensemodel): String
   [MasterUsername](#cfn-rds-dbinstance-masterusername): String
   [MasterUserPassword](#cfn-rds-dbinstance-masteruserpassword): String
-  [MonitoringInterval](#cfn-rds-dbinstance-monitoringinterval): Number
+  [MonitoringInterval](#cfn-rds-dbinstance-monitoringinterval): Integer
   [MonitoringRoleArn](#cfn-rds-dbinstance-monitoringrolearn): String
   [MultiAZ](#cfn-rds-dbinstance-multiaz): Boolean
   [OptionGroupName](#cfn-rds-dbinstance-optiongroupname): String
@@ -125,7 +125,7 @@ If any value is set in the `Iops` parameter, `AllocatedStorage` must be at least
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `AllowMajorVersionUpgrade`  <a name="cfn-rds-dbinstance-allowmajorversionupgrade"></a>
-If you update the `EngineVersion` property to a version that's different from the DB instance's current major version, set this property to `true`\. For more information, see [ModifyDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html) in the *Amazon RDS API Reference*\.  
+If you update the `EngineVersion` property to a version that's different from the DB instance's current major version, set this property to `true`\. For more information, see [ModifyDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html) in the *Amazon RDS API Reference*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -134,7 +134,7 @@ If you update the `EngineVersion` property to a version that's different from th
 Indicates that minor engine upgrades are applied automatically to the DB instance during the maintenance window\. The default value is `true`\.  
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. For more information, see [ModifyDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html) in the *Amazon RDS API Reference*\.
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. For more information, see [ModifyDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html) in the *Amazon RDS API Reference*\.
 
 `AvailabilityZone`  <a name="cfn-rds-dbinstance-availabilityzone"></a>
 The name of the Availability Zone where the DB instance is located\. You can't set the `AvailabilityZone` parameter if the `MultiAZ` parameter is set to `true`\.  
@@ -147,10 +147,10 @@ The number of days during which automatic DB snapshots are retained\.
 If this DB instance is deleted or replaced during an update, AWS CloudFormation deletes all automated snapshots\. However, it retains manual DB snapshots\.
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. For more information, see [ModifyDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html) in the *Amazon RDS API Reference*\.
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. For more information, see [ModifyDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html) in the *Amazon RDS API Reference*\.
 
 `CharacterSetName`  <a name="cfn-rds-dbinstance-charactersetname"></a>
-For supported engines, specifies the character set to associate with the DB instance\. For more information, see [Appendix: Oracle Character Sets Supported in Amazon RDS](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html) in the *Amazon RDS User Guide*\.  
+For supported engines, specifies the character set to associate with the DB instance\. For more information, see [Appendix: Oracle Character Sets Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html) in the *Amazon RDS User Guide*\.  
 If you specify the `DBSnapshotIdentifier` or `SourceDBInstanceIdentifier` property, don't specify this property\. The value is inherited from the snapshot or source DB instance\.  
 *Required*: No  
 *Type*: String  
@@ -200,7 +200,7 @@ The name of an existing DB parameter group or a reference to an [AWS::RDS::DBPar
 `DBSecurityGroups`  <a name="cfn-rds-dbinstance-dbsecuritygroups"></a>
 A list of the DB security groups to assign to the DB instance\. The list can include both the name of existing DB security groups or references to [AWS::RDS::DBSecurityGroup](aws-properties-rds-security-group.md) resources created in the template\.  
 If you set `DBSecurityGroups`, you must not set [VPCSecurityGroups](#cfn-rds-dbinstance-vpcsecuritygroups), and vice versa\. Also, note that the `EC2VpcId` property exists only for backwards compatibility with older regions and is no longer recommended for providing security information to an RDS DB instance\. Instead, use `VPCSecurityGroups`\.  
-If you specify this property, AWS CloudFormation sends only the following properties \(if specified\) to Amazon RDS:   
+If you specify this property, AWS CloudFormation sends only the following properties \(if specified\) to Amazon RDS *during create operations*:   
 + `AllocatedStorage`
 + `AutoMinorVersionUpgrade`
 + `AvailabilityZone`
@@ -216,6 +216,22 @@ If you specify this property, AWS CloudFormation sends only the following proper
 + `Iops`
 + `LicenseModel`
 + `MasterUsername`
++ `MasterUserPassword`
++ `MultiAZ`
++ `OptionGroupName`
++ `PreferredBackupWindow`
++ `PreferredMaintenanceWindow`
+If you specify this property, AWS CloudFormation sends only the following properties \(if specified\) to Amazon RDS *during updates*:   
++ `AllocatedStorage`
++ `AutoMinorVersionUpgrade`
++ `AllowMajorVersionUpgrade`
++ `BackupRetentionPeriod`
++ `DBInstanceClass`
++ `DBParameterGroupName`
++ `DBSecurityGroups`
++ `DBInstanceIdentifier`
++ `EngineVersion`
++ `Iops`
 + `MasterUserPassword`
 + `MultiAZ`
 + `OptionGroupName`
@@ -244,7 +260,7 @@ For more information about using Amazon RDS in a VPC, see [Using Amazon RDS with
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Domain`  <a name="cfn-rds-dbinstance-domain"></a>
-For an Amazon RDS DB instance that's running Microsoft SQL Server, the Active Directory directory ID to create the instance in\. Amazon RDS uses Windows Authentication to authenticate users that connect to the DB instance\. For more information, see [Using Windows Authentication with an Amazon RDS DB Instance Running Microsoft SQL Server](http://docs.aws.amazon.com/AmazonRDS/latest/DeveloperGuide/USER_SQLServerWinAuth.html) in the *Amazon RDS User Guide*\.  
+For an Amazon RDS DB instance that's running Microsoft SQL Server, the Active Directory directory ID to create the instance in\. Amazon RDS uses Windows Authentication to authenticate users that connect to the DB instance\. For more information, see [Using Windows Authentication with an Amazon RDS DB Instance Running Microsoft SQL Server](https://docs.aws.amazon.com/AmazonRDS/latest/DeveloperGuide/USER_SQLServerWinAuth.html) in the *Amazon RDS User Guide*\.  
 If you specify this property, you must specify a SQL Server engine for the `Engine` property\.  
 *Required*: No  
 *Type*: String  
@@ -260,39 +276,40 @@ The name of an IAM role that Amazon RDS uses when calling the AWS Directory Serv
 The database engine that the DB instance uses\. This property is optional when you specify the `DBSnapshotIdentifier` property to create DB instances\.  
 For valid values, see the `Engine` parameter of the [CreateDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) action in the *Amazon RDS API Reference*\.  
 If you specify `aurora` as the database engine, you must also specify the `DBClusterIdentifier` property\.  
-If you've specified `oracle-se` or `oracle-se1` as the database engine, you can update the database engine to `oracle-se2` without the database instance being replaced\. For information on the deprecation of support for Oracle version 12\.1\.0\.1, see [Deprecation of Oracle 12\.1\.0\.1](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Oracle.html#Oracle.Concepts.Deprecate.12101) in the *Amazon Relational Database Service User Guide*\.
+If you've specified `oracle-se` or `oracle-se1` as the database engine, you can update the database engine to `oracle-se2` without the database instance being replaced\. For information on the deprecation of support for Oracle version 12\.1\.0\.1, see [Deprecation of Oracle 12\.1\.0\.1](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Oracle.html#Oracle.Concepts.Deprecate.12101) in the *Amazon Relational Database Service User Guide*\.
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `EngineVersion`  <a name="cfn-rds-dbinstance-engineversion"></a>
 The version number of the database engine that the DB instance uses\.  
+To prevent automatic upgrades, be sure to specify the full version number \(for example, 5\.6\.13\)\. If the default version for the database engine changes and you specify only the major version \(for example, 5\.6\), your DB instance will be upgraded to use the latest default version\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 `Iops`  <a name="cfn-rds-dbinstance-iops"></a>
 The number of I/O operations per second \(IOPS\) that the database provisions\. The value must be equal to or greater than `1000`\.  
-If you specify this property, you must follow the range of allowed ratios of your requested IOPS rate to the amount of storage that you allocate \(IOPS to allocated storage\)\. For example, you can provision an Oracle database instance with `1000` IOPS and `200` GB of storage \(a ratio of 5:1\), or specify 2000 IOPS with 200 GB of storage \(a ratio of 10:1\)\. For more information, see [Amazon RDS Provisioned IOPS Storage to Improve Performance](http://docs.aws.amazon.com/AmazonRDS/latest/DeveloperGuide/CHAP_Storage.html#USER_PIOPS) in the *Amazon RDS User Guide*\.  
+If you specify this property, you must follow the range of allowed ratios of your requested IOPS rate to the amount of storage that you allocate \(IOPS to allocated storage\)\. For example, you can provision an Oracle database instance with `1000` IOPS and `200` GB of storage \(a ratio of 5:1\), or specify 2000 IOPS with 200 GB of storage \(a ratio of 10:1\)\. For more information, see [Amazon RDS Provisioned IOPS Storage to Improve Performance](https://docs.aws.amazon.com/AmazonRDS/latest/DeveloperGuide/CHAP_Storage.html#USER_PIOPS) in the *Amazon RDS User Guide*\.  
 *Required*: Conditional\. If you specify `io1` for the `StorageType` property, you must specify this property\.  
-*Type*: Number  
+*Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-rds-dbinstance-kmskeyid"></a>
 The ARN of the AWS Key Management Service \(AWS KMS\) master key that's used to encrypt the DB instance, such as `arn:aws:kms:us-east-1:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef`\. If you enable the `StorageEncrypted` property but don't specify this property, AWS CloudFormation uses the default master key\. If you specify this property, you must set the `StorageEncrypted` property to `true`\.  
 If you specify the `SourceDBInstanceIdentifier` property, the value is inherited from the source DB instance if the read replica is created in the same region\. If you specify this property when you create a read replica from an unencrypted DB instance, the read replica is encrypted\.  
 If you create an encrypted read replica in a different AWS Region, then you must specify a KMS key for the destination AWS Region\. KMS encryption keys are specific to the region that they're created in, and you can't use encryption keys from one region in another region\.  
-If you specify `DBSecurityGroups`, AWS CloudFormation ignores this property\. To specify both a security group and this property, you must use a VPC security group\. For more information about Amazon RDS and VPC, see [Using Amazon RDS with Amazon VPC](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html) in the *Amazon RDS User Guide*\.  
+If you specify `DBSecurityGroups`, AWS CloudFormation ignores this property\. To specify both a security group and this property, you must use a VPC security group\. For more information about Amazon RDS and VPC, see [Using Amazon RDS with Amazon VPC](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html) in the *Amazon RDS User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `LicenseModel`  <a name="cfn-rds-dbinstance-licensemodel"></a>
 The license model of the DB instance\.  
-If `DBSecurityGroups` is specified, updating the license model requires replacement of the underlying EC2 host. This will incur some interruptions to database availability\.
+If you've specified `DBSecurityGroups` and then you update the license model, AWS CloudFormation replaces the underlying EC2 host\. This will incur some interruptions to database availability\.
 *Required*: No  
 *Type*: String  
-*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 `MasterUsername`  <a name="cfn-rds-dbinstance-masterusername"></a>
 The master user name for the DB instance\.  
@@ -310,13 +327,13 @@ If you specify the `SourceDBInstanceIdentifier` or `DBSnapshotIdentifier` proper
 
 `MonitoringInterval`  <a name="cfn-rds-dbinstance-monitoringinterval"></a>
 The interval, in seconds, between points when Amazon RDS collects enhanced monitoring metrics for the DB instance\. To disable metrics collection, specify `0`\.  
-For default and valid values, see the `MonitoringInterval` parameter for the [CreateDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) action in the *Amazon RDS API Reference*\.  
+For default and valid values, see the `MonitoringInterval` parameter for the [CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) action in the *Amazon RDS API Reference*\.  
 *Required*: Conditional\. If you specify the `MonitoringRoleArn` property, specify a value other than `0` for `MonitoringInterval`\.  
-*Type*: Number  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. For more information, see [ModifyDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html) in the *Amazon RDS API Reference*\.
+*Type*: Integer  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. For more information, see [ModifyDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html) in the *Amazon RDS API Reference*\.
 
 `MonitoringRoleArn`  <a name="cfn-rds-dbinstance-monitoringrolearn"></a>
-The ARN of the AWS Identity and Access Management \(IAM\) role that permits Amazon RDS to send enhanced monitoring metrics to Amazon CloudWatch, for example, `arn:aws:iam::123456789012:role/emaccess`\. For information on creating a monitoring role, see [To create an IAM role for Amazon RDS Enhanced Monitoring](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html#USER_Monitoring.OS.IAMRole) in the *Amazon RDS User Guide*\.  
+The ARN of the AWS Identity and Access Management \(IAM\) role that permits Amazon RDS to send enhanced monitoring metrics to Amazon CloudWatch, for example, `arn:aws:iam::123456789012:role/emaccess`\. For information on creating a monitoring role, see [To create an IAM role for Amazon RDS Enhanced Monitoring](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html#USER_Monitoring.OS.IAMRole) in the *Amazon RDS User Guide*\.  
 *Required*: Conditional\. If you specify a value other than `0` for the `MonitoringInterval` property, specify a value for `MonitoringRoleArn`\.  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -340,35 +357,35 @@ The port for the instance\.
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `PreferredBackupWindow`  <a name="cfn-rds-dbinstance-preferredbackupwindow"></a>
-The daily time range during which automated backups are performed if automated backups are enabled, as determined by the `BackupRetentionPeriod` property\. For valid values, see the `PreferredBackupWindow` parameter for the [CreateDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) action in the *Amazon RDS API Reference*\.  
+The daily time range during which automated backups are performed if automated backups are enabled, as determined by the `BackupRetentionPeriod` property\. For valid values, see the `PreferredBackupWindow` parameter for the [CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) action in the *Amazon RDS API Reference*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `PreferredMaintenanceWindow`  <a name="cfn-rds-dbinstance-preferredmaintenancewindow"></a>
-The weekly time range \(in UTC\) during which system maintenance can occur\. For valid values, see the `PreferredMaintenanceWindow` parameter for the [CreateDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) action in the *Amazon RDS API Reference*\.  
+The weekly time range \(in UTC\) during which system maintenance can occur\. For valid values, see the `PreferredMaintenanceWindow` parameter for the [CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) action in the *Amazon RDS API Reference*\.  
 This property applies when AWS CloudFormation initially creates the DB instance\. If you use AWS CloudFormation to update the DB instance, those updates are applied immediately\.
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. For more information, see [ModifyDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html) in the *Amazon RDS API Reference*\.
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. For more information, see [ModifyDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html) in the *Amazon RDS API Reference*\.
 
 `PubliclyAccessible`  <a name="cfn-rds-dbinstance-publiclyaccessible"></a>
 Indicates whether the DB instance is an internet\-facing instance\. If you specify `true`, AWS CloudFormation creates an instance with a publicly resolvable DNS name, which resolves to a public IP address\. If you specify `false`, AWS CloudFormation creates an internal instance with a DNS name that resolves to a private IP address\.   
 The default behavior value depends on your VPC setup and the database subnet group\. For more information, see the `PubliclyAccessible` parameter in [CreateDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) in the *Amazon RDS API Reference*\.  
 If this resource has a public IP address and is also in a VPC that is defined in the same template, you must use the `DependsOn` attribute to declare a dependency on the VPC\-gateway attachment\. For more information, see [DependsOn Attribute](aws-attribute-dependson.md)\.  
-If you specify `DBSecurityGroups`, AWS CloudFormation ignores this property\. To specify a security group and this property, you must use a VPC security group\. For more information about Amazon RDS and VPC, see [Using Amazon RDS with Amazon VPC](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html) in the *Amazon RDS User Guide*\.
+If you specify `DBSecurityGroups`, AWS CloudFormation ignores this property\. To specify a security group and this property, you must use a VPC security group\. For more information about Amazon RDS and VPC, see [Using Amazon RDS with Amazon VPC](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html) in the *Amazon RDS User Guide*\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `SourceDBInstanceIdentifier`  <a name="cfn-rds-dbinstance-sourcedbinstanceidentifier"></a>
-If you want to create a read replica DB instance, specify the ID of the source DB instance\. Each DB instance can have a limited number of read replicas\. For more information, see [Working with Read Replicas](http://docs.aws.amazon.com/AmazonRDS/latest/DeveloperGuide/USER_ReadRepl.html) in the *Amazon Relational Database Service Developer Guide*\.  
+If you want to create a read replica DB instance, specify the ID of the source DB instance\. Each DB instance can have a limited number of read replicas\. For more information, see [Working with Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/DeveloperGuide/USER_ReadRepl.html) in the *Amazon Relational Database Service Developer Guide*\.  
 The `SourceDBInstanceIdentifier` property determines whether a DB instance is a read replica\. If you remove the `SourceDBInstanceIdentifier` property from your template and then update your stack, AWS CloudFormation deletes the read replica and creates a new DB instance \(not a read replica\)\.  
 + If you specify a source DB instance that uses VPC security groups, we recommend that you specify the `VPCSecurityGroups` property\. If you don't specify the property, the read replica inherits the value of the `VPCSecurityGroups` property from the source DB when you create the replica\. However, if you update the stack, AWS CloudFormation reverts the replica's `VPCSecurityGroups` property to the default value because it's not defined in the stack's template\. This change might cause unexpected issues\.
 + Read replicas don't support deletion policies\. AWS CloudFormation ignores any deletion policy that's associated with a read replica\.
 + If you specify `SourceDBInstanceIdentifier`, don't set the `MultiAZ` property to `true`, and don't specify the `DBSnapshotIdentifier` property\. You can't deploy read replicas in multiple Availability Zones, and you can't create a read replica from a snapshot\.
 + Don't set the `BackupRetentionPeriod`, `DBName`, `MasterUsername`, `MasterUserPassword`, and `PreferredBackupWindow` properties\. The database attributes are inherited from the source DB instance, and backups are disabled for read replicas\.
-+ If the source DB instance is in a different region than the read replica, specify an ARN for a valid DB instance\. For more information, see [Constructing a Amazon RDS Amazon Resource Name \(ARN\)](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN) in the *Amazon RDS User Guide*\.
++ If the source DB instance is in a different region than the read replica, specify an ARN for a valid DB instance\. For more information, see [Constructing a Amazon RDS Amazon Resource Name \(ARN\)](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN) in the *Amazon RDS User Guide*\.
 + For DB instances in Amazon Aurora clusters, don't specify this property\. Amazon RDS automatically assigns writer and reader DB instances\.
 *Required*: No  
 *Type*: String  
@@ -420,7 +437,7 @@ You can migrate a DB instance in your stack from an RDS DB security group to a V
 
 ## Updating and Deleting AWS::RDS::DBInstance Resources<a name="updating-and-deleting-dbinstance-resources"></a>
 
-### Updating DB Instances<a name="w3ab2c21c10d956c13b2"></a>
+### Updating DB Instances<a name="w4ab1c21c10d987c13b2"></a>
 
 When properties labeled "*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)" are updated, AWS CloudFormation first creates a replacement DB instance, then changes references from other dependent resources to point to the replacement DB instance, and finally deletes the old DB instance\.
 
@@ -431,9 +448,9 @@ Create a snapshot of the DB instance\. For more information about creating DB sn
 If you want to restore your instance using a DB snapshot, modify the updated template with your DB instance changes and add the `DBSnapshotIdentifier` property with the ID of the DB snapshot that you want to use\.
 Update the stack\.
 
-For more information about updating other properties of this resource, see [ModifyDBInstance](http://docs.aws.amazon.com//AmazonRDS/latest/APIReference/API_ModifyDBInstance.html)\. For more information about updating stacks, see [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)\.
+For more information about updating other properties of this resource, see [ModifyDBInstance](https://docs.aws.amazon.com//AmazonRDS/latest/APIReference/API_ModifyDBInstance.html)\. For more information about updating stacks, see [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)\.
 
-### Deleting DB Instances<a name="w3ab2c21c10d956c13b4"></a>
+### Deleting DB Instances<a name="w4ab1c21c10d987c13b4"></a>
 
 You can set a deletion policy for your DB instance to control how AWS CloudFormation handles the instance when the stack is deleted\. For Amazon RDS DB instances, you can choose to *retain* the instance, to *delete* the instance, or to *create a snapshot* of the instance\. The default AWS CloudFormation behavior depends on the `DBClusterIdentifier` property:
 + For `AWS::RDS::DBInstance` resources that don't specify the `DBClusterIdentifier` property, AWS CloudFormation saves a snapshot of the DB instance\.
@@ -477,7 +494,7 @@ This example shows how to set the MySQL version that has a `[DeletionPolicy Attr
       "AllocatedStorage" : { "Ref" : "DBAllocatedStorage" },
       "DBInstanceClass" : { "Ref" : "DBInstanceClass" },
       "Engine" : "MySQL",
-      "EngineVersion" : "5.5",
+      "EngineVersion" : "5.6.13",
       "MasterUsername" : { "Ref" : "DBUser" },
       "MasterUserPassword" : { "Ref" : "DBPassword" },
       "Tags" : [ { "Key" : "Name", "Value" : "My SQL Database" } ]
@@ -490,7 +507,7 @@ This example shows how to set the MySQL version that has a `[DeletionPolicy Attr
 
 ```
 MyDB: 
-  Type: "AWS::RDS::DBInstance"
+  Type: AWS::RDS::DBInstance
   Properties: 
     DBName: 
       Ref: "DBName"
@@ -499,7 +516,7 @@ MyDB:
     DBInstanceClass: 
       Ref: "DBInstanceClass"
     Engine: "MySQL"
-    EngineVersion: "5.5"
+    EngineVersion: "5.6.13"
     MasterUsername: 
       Ref: "DBUser"
     MasterUserPassword: 
@@ -524,7 +541,7 @@ This example sets a provisioned IOPS value in the [Iops](#cfn-rds-dbinstance-iop
       "AllocatedStorage" : "100",
       "DBInstanceClass" : "db.m1.small",
       "Engine" : "MySQL",
-      "EngineVersion" : "5.5",
+      "EngineVersion" : "5.6.13",
       "Iops" : "1000",
       "MasterUsername" : { "Ref" : "DBUser" },
       "MasterUserPassword" : { "Ref" : "DBPassword" }
@@ -536,12 +553,12 @@ This example sets a provisioned IOPS value in the [Iops](#cfn-rds-dbinstance-iop
 
 ```
 MyDB: 
-  Type: "AWS::RDS::DBInstance"
+  Type: AWS::RDS::DBInstance
   Properties: 
     AllocatedStorage: "100"
     DBInstanceClass: "db.m1.small"
     Engine: "MySQL"
-    EngineVersion: "5.5"
+    EngineVersion: "5.6.13"
     Iops: "1000"
     MasterUsername: 
       Ref: "DBUser"
@@ -625,7 +642,7 @@ Parameters:
     Type: String
 Resources:
   MyKey:
-    Type: 'AWS::KMS::Key'
+    Type: AWS::KMS::Key
     Properties:
       KeyPolicy:
         Version: 2012-10-17
@@ -642,7 +659,7 @@ Resources:
             Action: 'kms:*'
             Resource: '*'
   MyDBSmall:
-    Type: 'AWS::RDS::DBInstance'
+    Type: AWS::RDS::DBInstance
     Properties:
       DBInstanceClass: !Ref DBInstanceType
       SourceDBInstanceIdentifier: !Ref SourceDBInstanceIdentifier

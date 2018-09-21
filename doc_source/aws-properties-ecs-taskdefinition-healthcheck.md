@@ -67,4 +67,4 @@ The time period in seconds to wait for a health check to succeed before it is co
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## See Also<a name="aws-properties-ecs-taskdefinition-healthcheck-seealso"></a>
-+ [HealthCheck](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html) in the *Amazon Elastic Container Service API Reference*
++ [HealthCheck](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html) in the *Amazon Elastic Container Service API Reference*

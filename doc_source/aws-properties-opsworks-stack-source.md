@@ -2,9 +2,9 @@
 
 Describes the information required to retrieve a cookbook or app from a repository for the [AWS::OpsWorks::Stack](aws-resource-opsworks-stack.md) or [AWS::OpsWorks::App](aws-resource-opsworks-app.md) resource types\.
 
-For more information and valid values, see [Source](http://docs.aws.amazon.com/opsworks/latest/APIReference/API_Source.html) in the *AWS OpsWorks Stacks API Reference*\.
+For more information and valid values, see [Source](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_Source.html) in the *AWS OpsWorks Stacks API Reference*\.
 
-## Syntax<a name="w3ab2c21c14e1589b7"></a>
+## Syntax<a name="w4ab1c21c14e1692b7"></a>
 
 ### JSON<a name="aws-properties-opsworks-stack-source-syntax.json"></a>
 
@@ -30,7 +30,7 @@ For more information and valid values, see [Source](http://docs.aws.amazon.com/o
 [Username](#cfn-opsworks-custcookbooksource-username): String
 ```
 
-## Properties<a name="w3ab2c21c14e1589b9"></a>
+## Properties<a name="w4ab1c21c14e1692b9"></a>
 
 `Password`  <a name="cfn-opsworks-custcookbooksource-pw"></a>
 This parameter depends on the repository type\. For Amazon S3 bundles, set `Password` to the appropriate IAM secret access key\. For HTTP bundles, Git repositories, and Subversion repositories, set `Password` to the appropriate password\.  
@@ -43,7 +43,7 @@ The application's version\. With AWS OpsWorks, you can deploy new versions of an
 *Type*: String
 
 `SshKey`  <a name="cfn-opsworks-custcookbooksource-sshkey"></a>
-The repository's SSH key\. For more information, see [Using Git Repository SSH Keys](http://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-deploykeys.html) in the *AWS OpsWorks User Guide*\.  
+The repository's SSH key\. For more information, see [Using Git Repository SSH Keys](https://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-deploykeys.html) in the *AWS OpsWorks User Guide*\.  
 To pass in an SSH key as a parameter, see the following example:  
 
 ```

@@ -1,6 +1,6 @@
 # AWS::ApiGateway::GatewayResponse<a name="aws-resource-apigateway-gatewayresponse"></a>
 
-The `AWS::ApiGateway::GatewayResponse` resource creates a custom response for your API Gateway API\. For more information, see [API Gateway Responses ](http://docs.aws.amazon.com/apigateway/latest/developerguide/customize-gateway-responses.html#api-gateway-gatewayResponse-definition) in the *API Gateway Developer Guide*\.
+The `AWS::ApiGateway::GatewayResponse` resource creates a custom response for your API Gateway API\. For more information, see [API Gateway Responses ](https://docs.aws.amazon.com/apigateway/latest/developerguide/customize-gateway-responses.html#api-gateway-gatewayResponse-definition) in the *API Gateway Developer Guide*\.
 
 **Topics**
 + [Syntax](#aws-resource-apigateway-gatewayresponse-syntax)
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-gatewayresponse-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::GatewayResponse"
+Type: AWS::ApiGateway::GatewayResponse
 Properties:
   [ResponseParameters](#cfn-apigateway-gatewayresponse-responseparameters): 
     String: String
@@ -55,7 +55,7 @@ The response templates for the response\. Duplicates not allowed\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ResponseType`  <a name="cfn-apigateway-gatewayresponse-responsetype"></a>
-The response type\. For valid values, see [GatewayResponse](http://docs.aws.amazon.com/apigateway/api-reference/resource/gateway-response/) in the *API Gateway API Reference*\.  
+The response type\. For valid values, see [GatewayResponse](https://docs.aws.amazon.com/apigateway/api-reference/resource/gateway-response/) in the *API Gateway API Reference*\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
@@ -114,11 +114,11 @@ The following example returns a 404 status code for resource not found instead o
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   RestApi:
-    Type: 'AWS::ApiGateway::RestApi'
+    Type: AWS::ApiGateway::RestApi
     Properties:
       Name: myRestApi
   GatewayResponse:
-    Type: 'AWS::ApiGateway::GatewayResponse'
+    Type: AWS::ApiGateway::GatewayResponse
     Properties:
       ResponseParameters:
         gatewayresponse.header.Access-Control-Allow-Origin: "'*'"

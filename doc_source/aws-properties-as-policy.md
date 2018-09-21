@@ -1,16 +1,16 @@
 # AWS::AutoScaling::ScalingPolicy<a name="aws-properties-as-policy"></a>
 
-Adds a scaling policy to an Auto Scaling group\. A scaling policy specifies whether to scale the Auto Scaling group up or down, and by how much\. For more information, see [Dynamic Scaling](http://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html) in the *Amazon EC2 Auto Scaling User Guide*\.
+Adds a scaling policy to an Auto Scaling group\. A scaling policy specifies whether to scale the Auto Scaling group up or down, and by how much\. For more information, see [Dynamic Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
 You can use a scaling policy together with a CloudWatch alarm\. A CloudWatch alarm can automatically initiate actions on your behalf, based on parameters you specify\. A scaling policy is one type of action that an alarm can initiate\. For a snippet showing how to create an Auto Scaling policy that is triggered by a CloudWatch alarm, see [Auto Scaling Policy Triggered by CloudWatch Alarm](quickref-autoscaling.md#scenario-as-policy)\. Note that you can only associate one scaling policy with an alarm\.
 
-This type supports updates\. For more information about updating this resource, see [PutScalingPolicy](http://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutScalingPolicy.html) in the *Amazon EC2 Auto Scaling API Reference*\.
+This type supports updates\. For more information about updating this resource, see [PutScalingPolicy](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutScalingPolicy.html) in the *Amazon EC2 Auto Scaling API Reference*\.
 
 **Topics**
 + [Syntax](#aws-resource-autoscaling-scalingpolicy-syntax)
-+ [Properties](#w3ab2c21c10d144c13)
-+ [Return Value](#w3ab2c21c10d144c15)
-+ [Examples](#w3ab2c21c10d144c17)
++ [Properties](#w4ab1c21c10d149c13)
++ [Return Value](#w4ab1c21c10d149c15)
++ [Examples](#w4ab1c21c10d149c17)
 
 ## Syntax<a name="aws-resource-autoscaling-scalingpolicy-syntax"></a>
 
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MinAdjustmentMagnitude](#cfn-as-scalingpolicy-minadjustmentmagnitude)" : Integer,
       "[PolicyType](#cfn-as-scalingpolicy-policytype)" : String,
       "[ScalingAdjustment](#cfn-as-scalingpolicy-scalingadjustment)" : Integer,
-      "[StepAdjustments](#cfn-as-scalingpolicy-stepadjustments)" : [ [*StepAdjustments*](aws-properties-autoscaling-scalingpolicy-stepadjustments.md), ... ]
+      "[StepAdjustments](#cfn-as-scalingpolicy-stepadjustments)" : [ [*StepAdjustments*](aws-properties-autoscaling-scalingpolicy-stepadjustments.md), ... ],
       "[TargetTrackingConfiguration](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration)" : [*TargetTrackingConfiguration*](aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.md)
    }
 }
@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-autoscaling-scalingpolicy-syntax.yaml"></a>
 
 ```
-Type: "AWS::AutoScaling::ScalingPolicy"
+Type: AWS::AutoScaling::ScalingPolicy
 Properties:
   [AdjustmentType](#cfn-as-scalingpolicy-adjustmenttype): String
   [AutoScalingGroupName](#cfn-as-scalingpolicy-autoscalinggroupname): String
@@ -55,7 +55,7 @@ Properties:
     [*TargetTrackingConfiguration*](aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.md)
 ```
 
-## Properties<a name="w3ab2c21c10d144c13"></a>
+## Properties<a name="w4ab1c21c10d149c13"></a>
 
 `AdjustmentType`  <a name="cfn-as-scalingpolicy-adjustmenttype"></a>
 Specifies whether the `ScalingAdjustment` is an absolute number or a percentage of the current capacity\. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`\.  
@@ -97,7 +97,7 @@ For the `PercentChangeInCapacity` adjustment type, the minimum number of instanc
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `PolicyType`  <a name="cfn-as-scalingpolicy-policytype"></a>
-An Auto Scaling policy type\. You can specify `SimpleScaling`, `StepScaling`, or `TargetTrackingScaling`\. By default, AWS CloudFormation specifies `SimpleScaling`\. For more information, see [Dynamic Scaling](http://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
+An Auto Scaling policy type\. You can specify `SimpleScaling`, `StepScaling`, or `TargetTrackingScaling`\. By default, AWS CloudFormation specifies `SimpleScaling`\. For more information, see [Dynamic Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -120,15 +120,15 @@ Configures a target tracking scaling policy\.
 *Type*: [Amazon EC2 Auto Scaling ScalingPolicy TargetTrackingConfiguration](aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10d144c15"></a>
+## Return Value<a name="w4ab1c21c10d149c15"></a>
 
 When you specify an `AWS::AutoScaling::ScalingPolicy` type as an argument to the `Ref` function, AWS CloudFormation returns the policy Amazon Resource Name \(ARN\), such as `arn:aws:autoscaling:``us-east-2``:123456789012:scalingPolicy:ab12c4d5-a1b2-a1b2-a1b2-ab12c4d56789:autoScalingGroupName/myStack-AutoScalingGroup-AB12C4D5E6:policyName/myStack-myScalingPolicy-AB12C4D5E6`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w3ab2c21c10d144c17"></a>
+## Examples<a name="w4ab1c21c10d149c17"></a>
 
-### Simple policy type<a name="w3ab2c21c10d144c17b3"></a>
+### Simple policy type<a name="w4ab1c21c10d149c17b3"></a>
 
 The following example is a simple scaling policy that increases the number instances by one when it is triggered\.
 
@@ -151,7 +151,7 @@ The following example is a simple scaling policy that increases the number insta
 
 ```
 SimpleScaling: 
-  Type: "AWS::AutoScaling::ScalingPolicy"
+  Type: AWS::AutoScaling::ScalingPolicy
   Properties: 
     AdjustmentType: "ChangeInCapacity"
     PolicyType: "SimpleScaling"
@@ -161,7 +161,7 @@ SimpleScaling:
     ScalingAdjustment: 1
 ```
 
-### Step policy type<a name="w3ab2c21c10d144c17b5"></a>
+### Step policy type<a name="w4ab1c21c10d149c17b5"></a>
 
 The following example is a step scaling policy that increases the number instances by one or two, depending on the size of the alarm breach\. For a breach that is less than 50 units than the threshold value, the policy increases the number of instances by one\. For a breach that is 50 units or more higher than the threshold, the policy increases the number of instances by two\.
 
@@ -195,7 +195,7 @@ The following example is a step scaling policy that increases the number instanc
 
 ```
 StepScaling: 
-  Type: "AWS::AutoScaling::ScalingPolicy"
+  Type: AWS::AutoScaling::ScalingPolicy
   Properties: 
     AdjustmentType: "ChangeInCapacity"
     AutoScalingGroupName: 
@@ -295,12 +295,12 @@ Parameters:
     Type: String
 Resources:
   LC:
-    Type: 'AWS::AutoScaling::LaunchConfiguration'
+    Type: AWS::AutoScaling::LaunchConfiguration
     Properties:
       ImageId: !Ref AMI
       InstanceType: t2.large
   POL:
-    Type: 'AWS::AutoScaling::ScalingPolicy'
+    Type: AWS::AutoScaling::ScalingPolicy
     Properties:
       AutoScalingGroupName: !Ref ASG
       PolicyType: TargetTrackingScaling
@@ -309,7 +309,7 @@ Resources:
           PredefinedMetricType: ASGAverageCPUUtilization
         TargetValue: !Ref PolicyTargetValue
   ASG:
-    Type: 'AWS::AutoScaling::AutoScalingGroup'
+    Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
       MaxSize: '1'
       AvailabilityZones: !Ref AZs

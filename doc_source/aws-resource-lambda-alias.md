@@ -1,11 +1,11 @@
 # AWS::Lambda::Alias<a name="aws-resource-lambda-alias"></a>
 
-The `AWS::Lambda::Alias` resource creates an alias that points to the version of an AWS Lambda \(Lambda\) function that you specify\. Use aliases when you want to control which version of your function other services or applications invoke\. Those services or applications can use your function's alias so that they don't need to be updated whenever you release a new version of your function\. For more information, see [Introduction to AWS Lambda Aliases](http://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html) in the *AWS Lambda Developer Guide*\.
+The `AWS::Lambda::Alias` resource creates an alias that points to the version of an AWS Lambda \(Lambda\) function that you specify\. Use aliases when you want to control which version of your function other services or applications invoke\. Those services or applications can use your function's alias so that they don't need to be updated whenever you release a new version of your function\. For more information, see [Introduction to AWS Lambda Aliases](https://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html) in the *AWS Lambda Developer Guide*\.
 
 **Topics**
 + [Syntax](#aws-resource-lambda-alias-syntax)
-+ [Properties](#w3ab2c21c10d851b9)
-+ [Return Value](#w3ab2c21c10d851c11)
++ [Properties](#w4ab1c21c10d883b9)
++ [Return Value](#w4ab1c21c10d883c11)
 + [Examples](#aws-resource-lambda-alias-examples)
 
 ## Syntax<a name="aws-resource-lambda-alias-syntax"></a>
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-lambda-alias-syntax.yaml"></a>
 
 ```
-Type: "AWS::Lambda::Alias"
+Type: AWS::Lambda::Alias
 Properties:     
   [Description](#cfn-lambda-alias-description): String         
   [FunctionName](#cfn-lambda-alias-functionname): String
@@ -40,7 +40,7 @@ Properties:
     AliasRoutingConfiguration
 ```
 
-## Properties<a name="w3ab2c21c10d851b9"></a>
+## Properties<a name="w4ab1c21c10d883b9"></a>
 
 `Description`  <a name="cfn-lambda-alias-description"></a>
 Information about the alias, such as its purpose or the Lambda function that is associated with it\.  
@@ -67,14 +67,14 @@ A name for the alias\.
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `RoutingConfig`  <a name="cfn-lambda-alias-routingconfig"></a>
-Use this parameter to point your alias to two different function versions, allowing you to dictate what percentage of traffic will invoke each version\. For more information, see [Routing Traffic to Different Function Versions Using Aliases](http://docs.aws.amazon.com/lambda/latest/dg/lambda-traffic-shifting-using-aliases.html) in the *AWS Lambda Developer Guide*\.  
+Use this parameter to point your alias to two different function versions, allowing you to dictate what percentage of traffic will invoke each version\. For more information, see [Routing Traffic to Different Function Versions Using Aliases](https://docs.aws.amazon.com/lambda/latest/dg/lambda-traffic-shifting-using-aliases.html) in the *AWS Lambda Developer Guide*\.  
  *Required*: No  
  *Type*: [AWS Lambda Alias AliasRoutingConfiguration](aws-properties-lambda-alias-aliasroutingconfiguration.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-## Return Value<a name="w3ab2c21c10d851c11"></a>
+## Return Value<a name="w4ab1c21c10d883c11"></a>
 
-### Ref<a name="w3ab2c21c10d851c11b2"></a>
+### Ref<a name="w4ab1c21c10d883c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN of the Lambda alias\.
 
@@ -103,7 +103,7 @@ The following example creates an alias named `TestingForMyApp`\. The alias point
 
 ```
 AliasForMyApp: 
-  Type: "AWS::Lambda::Alias"
+  Type: AWS::Lambda::Alias
   Properties: 
     FunctionName: 
       Ref: "MyFunction"
@@ -158,7 +158,7 @@ The following example defines an update policy for an alias\.
 
 ```
 Alias:
-  Type: 'AWS::Lambda::Alias'
+  Type: AWS::Lambda::Alias
   Properties:
     FunctionName: !Ref LambdaFunction
     FunctionVersion: !GetAtt FunctionVersionTwo.Version

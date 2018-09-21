@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [Version](#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-version): String
 ```
 
-## Properties<a name="w3ab2c21c14d104b7"></a>
+## Properties<a name="w4ab1c21c14d128b7"></a>
 
 `LaunchTemplateId`  <a name="cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplateid"></a>
 The ID of the launch template\. You must specify either a template ID or a template name\.   

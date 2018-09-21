@@ -53,4 +53,4 @@ Valid values include: `emailHeader`, `linkTag`, and `messageTag`\.
 
 ## See Also<a name="aws-properties-ses-configurationseteventdestination-dimensionconfiguration-seealso"></a>
 + [Using Amazon SES Configuration Sets](url-ses-dev;using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*
-+ [CloudWatchDimensionConfiguration](http://docs.aws.amazon.com/ses/latest/APIReference/API_CloudWatchDimensionConfiguration.html) in the *Amazon Simple Email Service API Reference*
++ [CloudWatchDimensionConfiguration](https://docs.aws.amazon.com/ses/latest/APIReference/API_CloudWatchDimensionConfiguration.html) in the *Amazon Simple Email Service API Reference*

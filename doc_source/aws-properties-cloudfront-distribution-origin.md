@@ -2,7 +2,7 @@
 
 `Origin` is a property of the [DistributionConfig](aws-properties-cloudfront-distribution-distributionconfig.md) property that describes an Amazon CloudFront distribution origin\.
 
-## Syntax<a name="w3ab2c21c14d290b5"></a>
+## Syntax<a name="w4ab1c21c14d318b5"></a>
 
 ### JSON<a name="aws-properties-cloudfront-distribution-origin-syntax.json"></a>
 
@@ -31,10 +31,10 @@
   S3 Origin
 ```
 
-## Properties<a name="w3ab2c21c14d290b7"></a>
+## Properties<a name="w4ab1c21c14d318b7"></a>
 
 **Note**  
-For more information about the constraints and valid values of each property, see the [Origin](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Origin.html) data type in the *Amazon CloudFront API Reference*\.
+For more information about the constraints and valid values of each property, see the [Origin](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Origin.html) data type in the *Amazon CloudFront API Reference*\.
 
 `CustomOriginConfig`  <a name="cfn-cloudfront-distribution-origin-customorigin"></a>
 Origin information to specify a custom origin\.  

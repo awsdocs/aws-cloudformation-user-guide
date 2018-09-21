@@ -4,9 +4,9 @@ The `AWS::ElasticLoadBalancingV2::Listener` resource creates a listener for an E
 
 **Topics**
 + [Syntax](#aws-resource-elasticloadbalancingv2-listener-syntax)
-+ [Properties](#w3ab2c21c10d636b9)
-+ [Return Value](#w3ab2c21c10d636c11)
-+ [Example](#w3ab2c21c10d636c13)
++ [Properties](#w4ab1c21c10d655b9)
++ [Return Value](#w4ab1c21c10d655c11)
++ [Example](#w4ab1c21c10d655c13)
 
 ## Syntax<a name="aws-resource-elasticloadbalancingv2-listener-syntax"></a>
 
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticloadbalancingv2-listener-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElasticLoadBalancingV2::Listener"
+Type: AWS::ElasticLoadBalancingV2::Listener
 Properties: 
   [Certificates](#cfn-elasticloadbalancingv2-listener-certificates):
     - [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates.md)
@@ -43,7 +43,7 @@ Properties:
   [SslPolicy](#cfn-elasticloadbalancingv2-listener-sslpolicy): String
 ```
 
-## Properties<a name="w3ab2c21c10d636b9"></a>
+## Properties<a name="w4ab1c21c10d655b9"></a>
 
 `Certificates`  <a name="cfn-elasticloadbalancingv2-listener-certificates"></a>
 The SSL server certificate for the listener\. With a certificate, you can encrypt traffic between the load balancer and the clients that initiate HTTPS sessions, and traffic between the load balancer and your targets\.  
@@ -66,14 +66,14 @@ The Amazon Resource Name \(ARN\) of the load balancer to associate with the list
 
 `Port`  <a name="cfn-elasticloadbalancingv2-listener-port"></a>
 The port on which the listener listens for requests\.  
-For valid values, see the `Port` parameter for the [CreateListener](http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateListener.html) action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
+For valid values, see the `Port` parameter for the [CreateListener](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateListener.html) action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Protocol`  <a name="cfn-elasticloadbalancingv2-listener-protocol"></a>
 The protocol that clients must use to send requests to the listener\.  
-For valid values, see the `Protocol` parameter for the [CreateListener](http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateListener.html) action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
+For valid values, see the `Protocol` parameter for the [CreateListener](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateListener.html) action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -84,15 +84,15 @@ The security policy that defines the ciphers and protocols that the load balance
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10d636c11"></a>
+## Return Value<a name="w4ab1c21c10d655c11"></a>
 
-### Ref<a name="w3ab2c21c10d636c11b2"></a>
+### Ref<a name="w4ab1c21c10d655c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the listener's ARN, such as `arn:aws:elasticloadbalancing:us-west-2:123456789012:listener/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10d636c13"></a>
+## Example<a name="w4ab1c21c10d655c13"></a>
 
 The following example creates a listener for the `myLoadBalancer` resource\. The listener's default action is to forward requests to the `myTargetGroup` target group\.
 

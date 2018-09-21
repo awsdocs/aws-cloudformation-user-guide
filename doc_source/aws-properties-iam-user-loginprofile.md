@@ -2,7 +2,7 @@
 
 `LoginProfile` is a property of the [AWS::IAM::User](aws-properties-iam-user.md) resource that creates a login profile for users so that they can access the AWS Management Console\.
 
-## Syntax<a name="w3ab2c21c14e1312b5"></a>
+## Syntax<a name="w4ab1c21c14e1411b5"></a>
 
 ### JSON<a name="aws-properties-iam-user-loginprofile-syntax.json"></a>
 
@@ -20,7 +20,7 @@
 [PasswordResetRequired](#cfn-iam-user-loginprofile-passwordresetrequired): Boolean
 ```
 
-## Properties<a name="w3ab2c21c14e1312b7"></a>
+## Properties<a name="w4ab1c21c14e1411b7"></a>
 
 `Password`  <a name="cfn-iam-user-loginprofile-password"></a>
 The password for the user\.  

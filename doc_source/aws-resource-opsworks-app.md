@@ -4,10 +4,10 @@ Defines an AWS OpsWorks app for an AWS OpsWorks stack\. The app specifies the co
 
 **Topics**
 + [Syntax](#aws-resource-opsworks-app-syntax)
-+ [Properties](#w3ab2c21c10d911b9)
-+ [Return Values](#w3ab2c21c10d911c11)
-+ [Template Snippet](#w3ab2c21c10d911c13)
-+ [More Info](#w3ab2c21c10d911c15)
++ [Properties](#w4ab1c21c10d942b9)
++ [Return Values](#w4ab1c21c10d942c11)
++ [Template Snippet](#w4ab1c21c10d942c13)
++ [More Info](#w4ab1c21c10d942c15)
 
 ## Syntax<a name="aws-resource-opsworks-app-syntax"></a>
 
@@ -60,7 +60,7 @@ Properties:
   [Type](#cfn-opsworks-app-type): String
 ```
 
-## Properties<a name="w3ab2c21c10d911b9"></a>
+## Properties<a name="w4ab1c21c10d942b9"></a>
 
 `AppSource`  <a name="cfn-opsworks-app-appsource"></a>
 The information required to retrieve an app from a repository\.  
@@ -129,14 +129,14 @@ The ID of the AWS OpsWorks stack to associate this app with\.
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Type`  <a name="cfn-opsworks-app-type"></a>
-The app type\. Each supported type is associated with a particular layer\. For more information, see [CreateApp](http://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateApp.html) in the *AWS OpsWorks Stacks API Reference*\.  
+The app type\. Each supported type is associated with a particular layer\. For more information, see [CreateApp](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateApp.html) in the *AWS OpsWorks Stacks API Reference*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10d911c11"></a>
+## Return Values<a name="w4ab1c21c10d942c11"></a>
 
-### Ref<a name="w3ab2c21c10d911c11b2"></a>
+### Ref<a name="w4ab1c21c10d942c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -148,7 +148,7 @@ For the AWS OpsWorks stack `myApp`, `Ref` returns the ID of the AWS OpsWorks app
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Template Snippet<a name="w3ab2c21c10d911c13"></a>
+## Template Snippet<a name="w4ab1c21c10d942c13"></a>
 
 The following snippet creates an AWS OpsWorks app that uses a PHP application in a Git repository:
 
@@ -186,7 +186,7 @@ myApp:
       Revision: "version1"
 ```
 
-## More Info<a name="w3ab2c21c10d911c15"></a>
+## More Info<a name="w4ab1c21c10d942c15"></a>
 + [AWS::OpsWorks::Stack](aws-resource-opsworks-stack.md)
 + [AWS::OpsWorks::Layer](aws-resource-opsworks-layer.md)
 + [AWS::OpsWorks::Instance](aws-resource-opsworks-instance.md)

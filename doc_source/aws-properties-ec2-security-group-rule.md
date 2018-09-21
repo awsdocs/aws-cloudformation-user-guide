@@ -2,7 +2,7 @@
 
 The EC2 Security Group Rule is an embedded property of the [AWS::EC2::SecurityGroup](aws-properties-ec2-security-group.md) type\.
 
-## Syntax SecurityGroupIngress<a name="w3ab2c21c14d765b5"></a>
+## Syntax SecurityGroupIngress<a name="w4ab1c21c14d827b5"></a>
 
 ### JSON<a name="aws-properties-ec2-securitygroup-rule-securitygroupingress-syntax.json"></a>
 
@@ -34,7 +34,7 @@ The EC2 Security Group Rule is an embedded property of the [AWS::EC2::SecurityGr
 [ToPort](#cfn-ec2-security-group-rule-toport): Integer
 ```
 
-## Syntax SecurityGroupEgress<a name="w3ab2c21c14d765b7"></a>
+## Syntax SecurityGroupEgress<a name="w4ab1c21c14d827b7"></a>
 
 ### JSON<a name="aws-properties-ec2-securitygroup-rule-securitygroupegress-syntax.json"></a>
 
@@ -64,7 +64,7 @@ The EC2 Security Group Rule is an embedded property of the [AWS::EC2::SecurityGr
 [ToPort](#cfn-ec2-security-group-rule-toport): Integer
 ```
 
-## Properties<a name="w3ab2c21c14d765b9"></a>
+## Properties<a name="w4ab1c21c14d827b9"></a>
 
 `CidrIp`  <a name="cfn-ec2-security-group-rule-cidrip"></a>
 Specifies an IPv4 CIDR range\.  
@@ -81,7 +81,7 @@ Description of the security group rule\.
 *Type*: String
 
 `DestinationPrefixListId` \(SecurityGroupEgress only\)  <a name="cfn-ec2-security-group-rule-destinationprefixlistid"></a>
-The AWS service prefix of an Amazon VPC endpoint\. For more information, see [VPC Endpoints](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpoints.html) in the *Amazon VPC User Guide*\.  
+The AWS service prefix of an Amazon VPC endpoint\. For more information, see [VPC Endpoints](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html) in the *Amazon VPC User Guide*\.  
 *Required*: Conditional\. You must specify only one of the following properties: `CidrIp`, `CidrIpv6`, `DestinationPrefixListId`, `DestinationSecurityGroupId`, or `SourceSecurityGroupId`\.  
 *Type*: String
 
@@ -120,9 +120,9 @@ The end of port range for the TCP and UDP protocols, or an ICMP code\. An ICMP c
 *Required*: No  
 *Type*: Integer
 
-## Examples<a name="w3ab2c21c14d765c11"></a>
+## Examples<a name="w4ab1c21c14d827c11"></a>
 
-### Security Group with CidrIp<a name="w3ab2c21c14d765c11b2"></a>
+### Security Group with CidrIp<a name="w4ab1c21c14d827c11b2"></a>
 
 #### JSON<a name="aws-properties-ec2-securitygroup-rule-securitygroupingress-example.json"></a>
 
@@ -145,7 +145,7 @@ The end of port range for the TCP and UDP protocols, or an ICMP code\. An ICMP c
 
 ```
 InstanceSecurityGroup: 
-  Type: "AWS::EC2::SecurityGroup"
+  Type: AWS::EC2::SecurityGroup
   Properties: 
     GroupDescription: "Enable SSH access via port 22"
     SecurityGroupIngress: 
@@ -156,7 +156,7 @@ InstanceSecurityGroup:
         CidrIp: "0.0.0.0/0"
 ```
 
-### Security Group with Security Group Id<a name="w3ab2c21c14d765c11b4"></a>
+### Security Group with Security Group Id<a name="w4ab1c21c14d827c11b4"></a>
 
 #### JSON<a name="aws-properties-ec2-securitygroup-rule-securitygroupingress-example2.json"></a>
 
@@ -180,7 +180,7 @@ InstanceSecurityGroup:
 
 ```
 InstanceSecurityGroup: 
-  Type: "AWS::EC2::SecurityGroup"
+  Type: AWS::EC2::SecurityGroup
   Properties: 
     GroupDescription: "Enable HTTP access on the configured port"
     VpcId: 
@@ -196,7 +196,7 @@ InstanceSecurityGroup:
           Ref: "LoadBalancerSecurityGroup"
 ```
 
-### Security Group with Multiple Ingress Rules<a name="w3ab2c21c14d765c11b6"></a>
+### Security Group with Multiple Ingress Rules<a name="w4ab1c21c14d827c11b6"></a>
 
 This snippet grants SSH access with CidrIp, and HTTP access with `SourceSecurityGroupName`\. `Fn::GetAtt` is used to derive the values for `SourceSecurityGroupName` and `SourceSecurityGroupOwnerId` from the elastic load balancer\.
 
@@ -246,7 +246,7 @@ This snippet grants SSH access with CidrIp, and HTTP access with `SourceSecurity
 
 ```
 ElasticLoadBalancer: 
-  Type: "AWS::ElasticLoadBalancing::LoadBalancer"
+  Type: AWS::ElasticLoadBalancing::LoadBalancer
   Properties: 
     AvailabilityZones: 
       Fn::GetAZs: ""
@@ -270,7 +270,7 @@ ElasticLoadBalancer:
       Interval: "30"
       Timeout: "5"
 InstanceSecurityGroup: 
-  Type: "AWS::EC2::SecurityGroup"
+  Type: AWS::EC2::SecurityGroup
   Properties: 
     GroupDescription: "Allow SSH access from all IP addresses and HTTP from the load balancer only"
     SecurityGroupIngress: 
@@ -295,5 +295,5 @@ InstanceSecurityGroup:
             - "SourceSecurityGroup.GroupName"
 ```
 
-## See Also<a name="w3ab2c21c14d765c13"></a>
+## See Also<a name="w4ab1c21c14d827c13"></a>
 + [Amazon EC2 Security Groups](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html) in the *Amazon EC2 User Guide*

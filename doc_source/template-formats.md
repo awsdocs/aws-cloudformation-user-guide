@@ -16,8 +16,8 @@ Resources:
   MyEC2Instance: #An inline comment
     Type: "AWS::EC2::Instance"
     Properties: 
-      ImageId: "ami-2f726546" #Another comment -- This is a Linux AMI
-      InstanceType: t1.micro
+      ImageId: "ami-0ff8a91507f77f867" #Another comment -- This is a Linux AMI
+      InstanceType: t2.micro
       KeyName: testkey
       BlockDeviceMappings:
         -

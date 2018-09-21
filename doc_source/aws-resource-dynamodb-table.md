@@ -1,6 +1,6 @@
 # AWS::DynamoDB::Table<a name="aws-resource-dynamodb-table"></a>
 
-The `AWS::DynamoDB::Table` resource creates a DynamoDB table\. For more information, see [CreateTable](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_CreateTable.html) in the *Amazon DynamoDB API Reference*\.
+The `AWS::DynamoDB::Table` resource creates a DynamoDB table\. For more information, see [CreateTable](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_CreateTable.html) in the *Amazon DynamoDB API Reference*\.
 
 You should be aware of the following behaviors when working with DynamoDB tables:
 + AWS CloudFormation typically creates DynamoDB tables in parallel\. However, if your template includes multiple DynamoDB tables with indexes, you must declare dependencies so that the tables are created sequentially\. Amazon DynamoDB limits the number of tables with secondary indexes that are in the creating state\. If you create multiple tables with indexes at the same time, DynamoDB returns an error and the stack operation fails\. For an example, see [DynamoDB Table with a DependsOn Attribute](#cfn-dynamodb-table-examples-dependson)\.
@@ -14,8 +14,8 @@ You should be aware of the following behaviors when working with DynamoDB tables
 
 **Topics**
 + [Syntax](#aws-resource-dynamodb-table-syntax)
-+ [Properties](#w3ab2c21c10d373c13)
-+ [Return Values](#w3ab2c21c10d373c15)
++ [Properties](#w4ab1c21c10d385c13)
++ [Return Values](#w4ab1c21c10d385c15)
 + [Examples](#cfn-dynamodb-table-examples)
 
 ## Syntax<a name="aws-resource-dynamodb-table-syntax"></a>
@@ -46,7 +46,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-dynamodb-table-syntax.yaml"></a>
 
 ```
-Type: "AWS::DynamoDB::Table"
+Type: AWS::DynamoDB::Table
 Properties:
   [AttributeDefinitions](#cfn-dynamodb-table-attributedef):
     - AttributeDefinition
@@ -71,7 +71,7 @@ Properties:
     [TimeToLiveSpecification](aws-properties-dynamodb-table-timetolivespecification.md)
 ```
 
-## Properties<a name="w3ab2c21c10d373c13"></a>
+## Properties<a name="w4ab1c21c10d385c13"></a>
 
 `AttributeDefinitions`  <a name="cfn-dynamodb-table-attributedef"></a>
 A list of attributes that describe the key schema for the table and indexes\. Duplicates are allowed\.  
@@ -81,7 +81,7 @@ A list of attributes that describe the key schema for the table and indexes\. Du
 
 `GlobalSecondaryIndexes`  <a name="cfn-dynamodb-table-gsi"></a>
 Global secondary indexes to be created on the table\. You can create up to 5 global secondary indexes\.  
-If you update a table to include a new global secondary index, AWS CloudFormation initiates the index creation and then proceeds with the stack update\. AWS CloudFormation doesn't wait for the index to complete creation because the backfilling phase can take a long time, depending on the size of the table\. You can't use the index or update the table until the index's status is `ACTIVE`\. You can track its status by using the DynamoDB [http://docs.aws.amazon.com/cli/latest/reference/dynamodb/describe-table.html](http://docs.aws.amazon.com/cli/latest/reference/dynamodb/describe-table.html) command\.  
+If you update a table to include a new global secondary index, AWS CloudFormation initiates the index creation and then proceeds with the stack update\. AWS CloudFormation doesn't wait for the index to complete creation because the backfilling phase can take a long time, depending on the size of the table\. You can't use the index or update the table until the index's status is `ACTIVE`\. You can track its status by using the DynamoDB [https://docs.aws.amazon.com/cli/latest/reference/dynamodb/describe-table.html](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/describe-table.html) command\.  
 If you add or delete an index during an update, we recommend that you don't update any other resources\. If your stack fails to update and is rolled back while adding a new index, you must manually delete the index\.
 *Required*: No  
 *Type*: List of [DynamoDB Table GlobalSecondaryIndex](aws-properties-dynamodb-gsi.md)  
@@ -117,7 +117,7 @@ Throughput for the specified table, which consists of values for `ReadCapacityUn
 Specifies the settings to enable server\-side encryption\.  
 *Required*: No  
 *Type*: [DynamoDB SSESpecification](aws-properties-dynamodb-table-ssespecification.md)  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 `StreamSpecification`  <a name="cfn-dynamodb-table-streamspecification"></a>
 The settings for the DynamoDB table stream, which capture changes to items stored in the table\.  
@@ -145,11 +145,11 @@ Specifies the Time to Live \(TTL\) settings for the table\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 **Note**  
-For detailed information about the limits in DynamoDB, see [Limits in Amazon DynamoDB](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in the *Amazon DynamoDB Developer Guide*\.
+For detailed information about the limits in DynamoDB, see [Limits in Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in the *Amazon DynamoDB Developer Guide*\.
 
-## Return Values<a name="w3ab2c21c10d373c15"></a>
+## Return Values<a name="w4ab1c21c10d385c15"></a>
 
-### Ref<a name="w3ab2c21c10d373c15b2"></a>
+### Ref<a name="w4ab1c21c10d385c15b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -161,7 +161,7 @@ For the resource with the logical ID `myDynamoDBTable`, `Ref` will return the Dy
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d373c15b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d385c15b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -297,7 +297,7 @@ For querying the sales of an album, the local secondary index uses the same hash
 AWSTemplateFormatVersion: "2010-09-09"
 Resources: 
   myDynamoDBTable: 
-    Type: "AWS::DynamoDB::Table"
+    Type: AWS::DynamoDB::Table
     Properties: 
       AttributeDefinitions: 
         - 
@@ -446,7 +446,7 @@ The following sample assumes that the `myFirstDDBTable` table is declared in the
 
 ```
 mySecondDDBTable: 
-  Type: "AWS::DynamoDB::Table"
+  Type: AWS::DynamoDB::Table
   DependsOn: "myFirstDDBTable"
   Properties: 
     AttributeDefinitions: 
@@ -641,7 +641,7 @@ This example sets up Application Auto Scaling for a `AWS::DynamoDB::Table` resou
 ```
 Resources:
   DDBTable:
-    Type: "AWS::DynamoDB::Table"
+    Type: AWS::DynamoDB::Table
     Properties:
       AttributeDefinitions:
         -
@@ -676,7 +676,7 @@ Resources:
         ReadCapacityUnits: 5
         WriteCapacityUnits: 5
   WriteCapacityScalableTarget:
-    Type: "AWS::ApplicationAutoScaling::ScalableTarget"
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
     Properties:
       MaxCapacity: 15
       MinCapacity: 5
@@ -688,7 +688,7 @@ Resources:
       ScalableDimension: dynamodb:table:WriteCapacityUnits
       ServiceNamespace: dynamodb
   ScalingRole:
-    Type: "AWS::IAM::Role"
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
@@ -719,7 +719,7 @@ Resources:
                   - "cloudwatch:DeleteAlarms"
                 Resource: "*"
   WriteScalingPolicy:
-    Type: "AWS::ApplicationAutoScaling::ScalingPolicy"
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
     Properties:
       PolicyName: WriteAutoScalingPolicy
       PolicyType: TargetTrackingScaling

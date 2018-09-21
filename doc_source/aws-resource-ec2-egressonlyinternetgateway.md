@@ -5,9 +5,9 @@ The `AWS::EC2::EgressOnlyInternetGateway` resource creates an egress\-only Inter
 **Topics**
 + [Syntax](#aws-resource-ec2-egressonlyinternetgateway-syntax)
 + [Properties](#aws-resource-ec2-egressonlyinternetgateway-properties)
-+ [Return Values](#w3ab2c21c10d387c11)
++ [Return Values](#w4ab1c21c10d399c11)
 + [Example](#aws-resource-ec2-egressonlyinternetgateway-examples)
-+ [More Info](#w3ab2c21c10d387c15)
++ [More Info](#w4ab1c21c10d399c15)
 
 ## Syntax<a name="aws-resource-ec2-egressonlyinternetgateway-syntax"></a>
 
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-egressonlyinternetgateway-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::EgressOnlyInternetGateway"
+Type: AWS::EC2::EgressOnlyInternetGateway
 Properties: 
   [VpcId](#cfn-ec2-egressonlyinternetgateway-vpcid): String
 ```
@@ -40,9 +40,9 @@ The ID of the VPC for which to create the egress\-only Internet gateway\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w3ab2c21c10d387c11"></a>
+## Return Values<a name="w4ab1c21c10d399c11"></a>
 
-### Ref<a name="w3ab2c21c10d387c11b2"></a>
+### Ref<a name="w4ab1c21c10d399c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ID of the egress\-only Internet gateway \(the physical resource ID\)\.
 
@@ -74,10 +74,10 @@ The following example creates an egress\-only Internet gateway for the specified
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   myEgressOnlyInternetGateway:
-    Type: "AWS::EC2::EgressOnlyInternetGateway"
+    Type: AWS::EC2::EgressOnlyInternetGateway
     Properties:
       VpcId: vpc-1a2b3c4d
 ```
 
-## More Info<a name="w3ab2c21c10d387c15"></a>
-+ [CreateEgressOnlyInternetGateway](http://docs.aws.amazon.com//AWSEC2/latest/APIReference/API_CreateEgressOnlyInternetGateway.html) in the *Amazon EC2 API Reference*\.
+## More Info<a name="w4ab1c21c10d399c15"></a>
++ [CreateEgressOnlyInternetGateway](https://docs.aws.amazon.com//AWSEC2/latest/APIReference/API_CreateEgressOnlyInternetGateway.html) in the *Amazon EC2 API Reference*\.

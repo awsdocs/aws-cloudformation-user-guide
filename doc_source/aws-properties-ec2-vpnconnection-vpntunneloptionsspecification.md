@@ -48,4 +48,4 @@ The range of inside IP addresses for the tunnel\. Any specified CIDR blocks must
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## See Also<a name="aws-properties-ec2-vpnconnection-vpntunneloptionsspecification-seealso"></a>
-+  [VpnTunnelOptionsSpecification](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnTunnelOptionsSpecification.html) in the *Amazon EC2 API Reference*
++  [VpnTunnelOptionsSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnTunnelOptionsSpecification.html) in the *Amazon EC2 API Reference*

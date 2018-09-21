@@ -1,6 +1,6 @@
 # Amazon SageMaker Model VpcConfig<a name="aws-properties-sagemaker-model-vpcconfig"></a>
 
-<a name="aws-properties-sagemaker-model-vpcconfig-description"></a>The `VpcConfig` property type specifies a VPC that your hosted models have access to\. Control access to and from your training and model containers by configuring the VPC\. For more information, see [Protect Models by Using an Amazon Virtual Private Cloud](http://docs.aws.amazon.com//sagemaker/latest/dg/host-vpc.html)\.
+<a name="aws-properties-sagemaker-model-vpcconfig-description"></a>The `VpcConfig` property type specifies a VPC that your hosted models have access to\. Control access to and from your training and model containers by configuring the VPC\. For more information, see [Protect Models by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com//sagemaker/latest/dg/host-vpc.html)\.
 
 <a name="aws-properties-sagemaker-model-vpcconfig-inheritance"></a> `VpcConfig` is a property of the [AWS::SageMaker::Model](aws-resource-sagemaker-model.md) resource\.
 

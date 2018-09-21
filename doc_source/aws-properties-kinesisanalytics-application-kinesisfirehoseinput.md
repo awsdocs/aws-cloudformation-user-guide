@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisanalytics-application-kinesisfirehoseinput-properties"></a>
 
 `ResourceARN`  <a name="cfn-kinesisanalytics-application-kinesisfirehoseinput-resourcearn"></a>
-The Amazon Resource Name \(ARN\) of the input Kinesis Firehose delivery stream\.  
+The Amazon Resource Name \(ARN\) of the input Kinesis Data Firehose delivery stream\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

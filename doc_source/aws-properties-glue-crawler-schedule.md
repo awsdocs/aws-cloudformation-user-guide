@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-glue-crawler-schedule-properties"></a>
 
-For more information, see [Schedule Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-crawling.html#aws-glue-api-crawler-crawling-Schedule) in the *AWS Glue Developer Guide*\.
+For more information, see [Schedule Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-crawling.html#aws-glue-api-crawler-crawling-Schedule) in the *AWS Glue Developer Guide*\.
 
 `ScheduleExpression`  <a name="cfn-glue-crawler-schedule-scheduleexpression"></a>
 A `cron` expression that you can use as an Amazon CloudWatch Events event to schedule something\. For example, to run something every day at 12:15 UTC, you would specify: `cron(15 12 * * ? *)`\.  

@@ -111,4 +111,4 @@ Specifies whether a budget includes refunds\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-budgets-budget-costtypes-seealso"></a>
-+ [CostTypes](http://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_CostTypes.html) in the [AWS Billing and Cost Management API Reference](http://docs.aws.amazon.com/aws-cost-management/latest/APIReference/Welcome.html)\. 
++ [CostTypes](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_CostTypes.html) in the [AWS Billing and Cost Management API Reference](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/Welcome.html)\. 

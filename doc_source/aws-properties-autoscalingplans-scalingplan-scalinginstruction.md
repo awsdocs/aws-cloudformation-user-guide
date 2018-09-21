@@ -48,19 +48,19 @@ The minimum value to scale to in response to a scale out event\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ResourceId`  <a name="cfn-autoscalingplans-scalingplan-scalinginstruction-resourceid"></a>
-The ID of the resource\. For examples, see [ScalingInstruction](http://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html) in the *AWS Auto Scaling API Reference*\.  
+The ID of the resource\. For examples, see [ScalingInstruction](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html) in the *AWS Auto Scaling API Reference*\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ScalableDimension`  <a name="cfn-autoscalingplans-scalingplan-scalinginstruction-scalabledimension"></a>
-The scalable dimension associated with the resource\. For a list of values, see [ScalingInstruction](http://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html) in the *AWS Auto Scaling API Reference*\.  
+The scalable dimension associated with the resource\. For a list of values, see [ScalingInstruction](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html) in the *AWS Auto Scaling API Reference*\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ServiceNamespace`  <a name="cfn-autoscalingplans-scalingplan-scalinginstruction-servicenamespace"></a>
-The namespace of the AWS service\. For a list of values, see [ScalingInstruction](http://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html) in the *AWS Auto Scaling API Reference*\.  
+The namespace of the AWS service\. For a list of values, see [ScalingInstruction](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html) in the *AWS Auto Scaling API Reference*\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

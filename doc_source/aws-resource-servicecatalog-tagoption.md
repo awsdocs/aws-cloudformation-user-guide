@@ -1,6 +1,6 @@
 # AWS::ServiceCatalog::TagOption<a name="aws-resource-servicecatalog-tagoption"></a>
 
-A TagOption is a key\-value pair managed by AWS Service Catalog that serves as a template for creating an AWS tag\. For more information, see [AWS Service Catalog TagOptionLibrary](http://docs.aws.amazon.com/servicecatalog/latest/adminguide/tagoptions.html) in the *AWS Service Catalog Administrator Guide*\.
+A TagOption is a key\-value pair managed by AWS Service Catalog that serves as a template for creating an AWS tag\. For more information, see [AWS Service Catalog TagOptionLibrary](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/tagoptions.html) in the *AWS Service Catalog Administrator Guide*\.
 
 **Topics**
 + [Syntax](#aws-resource-servicecatalog-tagoption-syntax)

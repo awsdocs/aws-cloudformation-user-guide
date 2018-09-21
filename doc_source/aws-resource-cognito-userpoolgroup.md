@@ -4,8 +4,8 @@ The `AWS::Cognito::UserPoolGroup` resource creates a user group in an Amazon Cog
 
 **Topics**
 + [Syntax](#aws-resource-cognito-userpoolgroup-syntax)
-+ [Properties](#w3ab2c21c10d287b9)
-+ [Return Value](#w3ab2c21c10d287c11)
++ [Properties](#w4ab1c21c10d299b9)
++ [Return Value](#w4ab1c21c10d299c11)
 
 ## Syntax<a name="aws-resource-cognito-userpoolgroup-syntax"></a>
 
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cognito-userpoolgroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::Cognito::UserPoolGroup"
+Type: AWS::Cognito::UserPoolGroup
 Properties:
   [Description](#cfn-cognito-userpoolgroup-description): String
   [GroupName](#cfn-cognito-userpoolgroup-groupname): String
@@ -38,7 +38,7 @@ Properties:
   [UserPoolId](#cfn-cognito-userpoolgroup-userpoolid): String
 ```
 
-## Properties<a name="w3ab2c21c10d287b9"></a>
+## Properties<a name="w4ab1c21c10d299b9"></a>
 
 `Description`  <a name="cfn-cognito-userpoolgroup-description"></a>
 A description of the user group\.  
@@ -73,9 +73,9 @@ The user pool ID\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w3ab2c21c10d287c11"></a>
+## Return Value<a name="w4ab1c21c10d299c11"></a>
 
-### Ref<a name="w3ab2c21c10d287c11b2"></a>
+### Ref<a name="w4ab1c21c10d299c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the name of the user pool group\. For example, `Admins`\.
 

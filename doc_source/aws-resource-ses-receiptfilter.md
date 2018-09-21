@@ -1,6 +1,6 @@
 # AWS::SES::ReceiptFilter<a name="aws-resource-ses-receiptfilter"></a>
 
-The `AWS::SES::ReceiptFilter` resource whether to accept or reject mail originating from an IP address or range of IP addresses for Amazon SES\. For more information, see [Creating IP Address Filters for Amazon SES Email Receiving](url-ses-dev;receiving-email-ip-filters.html) in the *Amazon Simple Email Service Developer Guide*\. 
+The `AWS::SES::ReceiptFilter` resource whether to accept or reject mail originating from an IP address or range of IP addresses for Amazon SES\. For more information, see [Creating IP Address Filters for Amazon SES Email Receiving](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-ip-filters.html) in the *Amazon Simple Email Service Developer Guide*\. 
 
 **Topics**
 + [Syntax](#aws-resource-ses-receiptfilter-syntax)
@@ -97,7 +97,7 @@ Parameters:
     Type: String
 Resources:
   ReceiptFilter:
-    Type: 'AWS::SES::ReceiptFilter'
+    Type: AWS::SES::ReceiptFilter
     Properties:
       Filter:
         Name: !Ref FilterName
@@ -107,5 +107,5 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-ses-receiptfilter-seealso"></a>
-+ [Creating IP Address Filters for Amazon SES Email Receiving](url-ses-dev;receiving-email-ip-filters.html) in the *Amazon Simple Email Service Developer Guide*
-+ [ReceiptFilter](http://docs.aws.amazon.com/ses/latest/APIReference/API_ReceiptFilter.html) in the *Amazon Simple Email Service API Reference*
++ [Creating IP Address Filters for Amazon SES Email Receiving](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-ip-filters.html) in the *Amazon Simple Email Service Developer Guide*
++ [ReceiptFilter](https://docs.aws.amazon.com/ses/latest/APIReference/API_ReceiptFilter.html) in the *Amazon Simple Email Service API Reference*

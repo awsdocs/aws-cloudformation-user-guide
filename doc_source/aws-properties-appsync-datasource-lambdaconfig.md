@@ -31,4 +31,4 @@ The ARN for the Lambda function\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-appsync-datasource-lambdaconfig-seealso"></a>
-+ [ LambdaDataSourceConfig](http://docs.aws.amazon.com/appsync/latest/APIReference/API_LambdaDataSourceConfig.html) operation in the *AWS AppSync API Reference*
++ [ LambdaDataSourceConfig](https://docs.aws.amazon.com/appsync/latest/APIReference/API_LambdaDataSourceConfig.html) operation in the *AWS AppSync API Reference*

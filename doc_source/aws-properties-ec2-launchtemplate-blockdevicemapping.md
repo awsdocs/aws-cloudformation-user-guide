@@ -39,7 +39,7 @@ The device name \(for example, /dev/sdh or xvdh\)\.
 `Ebs`  <a name="cfn-ec2-launchtemplate-blockdevicemapping-ebs"></a>
 Parameters used to automatically set up EBS volumes when the instance is launched\.  
  *Required*: No  
- *Type*: xxx  
+ *Type*: [Amazon EC2 LaunchTemplate Ebs](aws-properties-ec2-launchtemplate-ebs.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `NoDevice`  <a name="cfn-ec2-launchtemplate-blockdevicemapping-nodevice"></a>
@@ -55,4 +55,4 @@ The virtual device name \(ephemeralN\)\. Instance store volumes are numbered sta
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ec2-launchtemplate-blockdevicemapping-seealso"></a>
-+ [LaunchTemplateBlockDeviceMappingRequest](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateBlockDeviceMappingRequest.html) in the *Amazon EC2 API Reference*
++ [LaunchTemplateBlockDeviceMappingRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateBlockDeviceMappingRequest.html) in the *Amazon EC2 API Reference*

@@ -1,8 +1,8 @@
-# Amazon Kinesis Firehose DeliveryStream CloudWatchLoggingOptions<a name="aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions"></a>
+# Amazon Kinesis Data Firehose DeliveryStream CloudWatchLoggingOptions<a name="aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions"></a>
 
-The `CloudWatchLoggingOptions` property type specifies Amazon CloudWatch Logs \(CloudWatch Logs\) logging options that Amazon Kinesis Firehose \(Kinesis Firehose\) uses for the delivery stream\.
+The `CloudWatchLoggingOptions` property type specifies Amazon CloudWatch Logs \(CloudWatch Logs\) logging options that Amazon Kinesis Data Firehose \(Kinesis Data Firehose\) uses for the delivery stream\.
 
-`CloudWatchLoggingOptions` is a property of the [Amazon Kinesis Firehose DeliveryStream ElasticsearchDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.md), [Amazon Kinesis Firehose DeliveryStream ExtendedS3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.md), [Amazon Kinesis Firehose DeliveryStream RedshiftDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.md), [Amazon Kinesis Data Firehose DeliveryStream SplunkDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.md), and [Amazon Kinesis Firehose DeliveryStream S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md) property types\.
+`CloudWatchLoggingOptions` is a property of the [Amazon Kinesis Data Firehose DeliveryStream ElasticsearchDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.md), [Amazon Kinesis Data Firehose DeliveryStream ExtendedS3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.md), [Amazon Kinesis Data Firehose DeliveryStream RedshiftDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.md), [Amazon Kinesis Data Firehose DeliveryStream SplunkDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.md), and [Amazon Kinesis Data Firehose DeliveryStream S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md) property types\.
 
 ## Syntax<a name="aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions-syntax"></a>
 
@@ -32,11 +32,11 @@ Indicates whether CloudWatch Logs logging is enabled\.
 *Type*: Boolean
 
 `LogGroupName`  <a name="cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-loggroupname"></a>
-The name of the CloudWatch Logs log group that contains the log stream that Kinesis Firehose will use\.  
+The name of the CloudWatch Logs log group that contains the log stream that Kinesis Data Firehose will use\.  
 *Required*: Conditional\. If you enable logging, you must specify this property\.  
 *Type*: String
 
 `LogStreamName`  <a name="cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-logstreamname"></a>
-The name of the CloudWatch Logs log stream that Kinesis Firehose uses to send logs about data delivery\.  
+The name of the CloudWatch Logs log stream that Kinesis Data Firehose uses to send logs about data delivery\.  
 *Required*: Conditional\. If you enable logging, you must specify this property\.  
 *Type*: String

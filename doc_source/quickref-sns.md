@@ -5,24 +5,24 @@ This example shows an Amazon SNS topic resource\. It requires a valid email addr
 ## JSON<a name="quickref-sns-example-1.json"></a>
 
 ```
-"MySNSTopic" : {
-    "Type" : "AWS::SNS::Topic",
-    "Properties" : {
-        "Subscription" : [ {
-            "Endpoint" : "add valid email address",
-            "Protocol" : "email"
-        } ]
-    }
-}
+1. "MySNSTopic" : {
+2.     "Type" : "AWS::SNS::Topic",
+3.     "Properties" : {
+4.         "Subscription" : [ {
+5.             "Endpoint" : "add valid email address",
+6.             "Protocol" : "email"
+7.         } ]
+8.     }
+9. }
 ```
 
 ## YAML<a name="quickref-sns-example-1.yaml"></a>
 
 ```
-MySNSTopic:
-  Type: AWS::SNS::Topic
-  Properties:
-    Subscription:
-    - Endpoint: "add valid email address"
-      Protocol: email
+1. MySNSTopic:
+2.   Type: AWS::SNS::Topic
+3.   Properties:
+4.     Subscription:
+5.     - Endpoint: "add valid email address"
+6.       Protocol: email
 ```

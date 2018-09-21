@@ -39,4 +39,4 @@ The unit of measurement used for the budget forecast, actual spend, or budget th
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-budgets-budget-spend-seealso"></a>
-+ [Spend](http://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_Spend.html) in the [AWS Billing and Cost Management API Reference](http://docs.aws.amazon.com/aws-cost-management/latest/APIReference/Welcome.html)\. 
++ [Spend](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_Spend.html) in the [AWS Billing and Cost Management API Reference](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/Welcome.html)\. 

@@ -2,7 +2,7 @@
 
 `Rules` is a property of the [AWS::WAFRegional::WebACL](aws-resource-wafregional-webacl.md) resource that specifies the rule to associate with an AWS WAF Regional web access control list \(ACL\) and the rule's settings\.
 
-## Syntax<a name="w3ab2c21c14e2085b5"></a>
+## Syntax<a name="w4ab1c21c14e2193b5"></a>
 
 ### JSON<a name="aws-properties-wafregional-webacl-rules-syntax.json"></a>
 
@@ -22,7 +22,7 @@
 [RuleId](#cfn-wafregional-webacl-rules-ruleid): String
 ```
 
-## Properties<a name="w3ab2c21c14e2085b7"></a>
+## Properties<a name="w4ab1c21c14e2193b7"></a>
 
 `Action`  <a name="cfn-wafregional-webacl-rules-action"></a>
 The action that Amazon CloudFront \(CloudFront\) or AWS WAF takes when a web request matches all conditions in the rule, such as allow, block, or count the request\.  

@@ -2,7 +2,7 @@
 
 `CustomErrorResponse` is a property of the [CloudFront Distribution DistributionConfig](aws-properties-cloudfront-distribution-distributionconfig.md) resource that defines custom error messages for certain HTTP status codes\.
 
-## Syntax<a name="w3ab2c21c14d252b5"></a>
+## Syntax<a name="w4ab1c21c14d280b5"></a>
 
 ### JSON<a name="aws-properties-cloudfront-distribution-customerrorresponse-syntax.json"></a>
 
@@ -24,10 +24,10 @@
 [ResponsePagePath](#cfn-cloudfront-distribution-customerrorresponse-responsepagepath): String
 ```
 
-## Properties<a name="w3ab2c21c14d252b7"></a>
+## Properties<a name="w4ab1c21c14d280b7"></a>
 
 **Note**  
-For more information about the constraints and valid values of each property, see the [CustomErrorResponse](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CustomErrorResponse.html) data type in the *Amazon CloudFront API Reference*\.
+For more information about the constraints and valid values of each property, see the [CustomErrorResponse](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CustomErrorResponse.html) data type in the *Amazon CloudFront API Reference*\.
 
 `ErrorCachingMinTTL`  <a name="cfn-cloudfront-distribution-customerrorresponse-errorcachingminttl"></a>
 The minimum amount of time, in seconds, that Amazon CloudFront caches the HTTP status code that you specified in the `ErrorCode` property\. The default value is `300`\.  

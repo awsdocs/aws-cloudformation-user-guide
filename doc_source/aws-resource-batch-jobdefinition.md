@@ -1,6 +1,6 @@
 # AWS::Batch::JobDefinition<a name="aws-resource-batch-jobdefinition"></a>
 
-The `AWS::Batch::JobDefinition` resource specifies the parameters for an AWS Batch job definition\. For more information, see [Job Definitions](http://docs.aws.amazon.com/batch/latest/userguide/job_definitions.html) in the *AWS Batch User Guide*\. 
+The `AWS::Batch::JobDefinition` resource specifies the parameters for an AWS Batch job definition\. For more information, see [Job Definitions](https://docs.aws.amazon.com/batch/latest/userguide/job_definitions.html) in the *AWS Batch User Guide*\. 
 
 **Topics**
 + [Syntax](#aws-resource-batch-jobdefinition-syntax)
@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[Type](#cfn-batch-jobdefinition-type)" : String,
     "[Parameters](#cfn-batch-jobdefinition-parameters)" : Json object,
     "[ContainerProperties](#cfn-batch-jobdefinition-containerproperties)" : [*ContainerProperties*](aws-properties-batch-jobdefinition-containerproperties.md),
+    "[Timeout](#cfn-batch-jobdefinition-timeout)" : [*Timeout*](aws-properties-batch-jobdefinition-timeout.md),
     "[JobDefinitionName](#cfn-batch-jobdefinition-jobdefinitionname)" : String,
     "[RetryStrategy](#cfn-batch-jobdefinition-retrystrategy)" : [*RetryStrategy*](aws-properties-batch-jobdefinition-retrystrategy.md)
   }
@@ -30,12 +31,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-batch-jobdefinition-syntax.yaml"></a>
 
 ```
-Type: "AWS::Batch::JobDefinition"
+Type: AWS::Batch::JobDefinition
 Properties:
   [Type](#cfn-batch-jobdefinition-type): String
   [Parameters](#cfn-batch-jobdefinition-parameters): Json object
   [ContainerProperties](#cfn-batch-jobdefinition-containerproperties): 
     [*ContainerProperties*](aws-properties-batch-jobdefinition-containerproperties.md)
+  [Timeout](#cfn-batch-jobdefinition-timeout): 
+    [*Timeout*](aws-properties-batch-jobdefinition-timeout.md)
   [JobDefinitionName](#cfn-batch-jobdefinition-jobdefinitionname): String
   [RetryStrategy](#cfn-batch-jobdefinition-retrystrategy): 
     [*RetryStrategy*](aws-properties-batch-jobdefinition-retrystrategy.md)
@@ -45,37 +48,43 @@ Properties:
 
 `Type`  <a name="cfn-batch-jobdefinition-type"></a>
 The type of job definition\.  
- *Required*: yes  
+ *Required*: Yes  
 *Type*: String  
  *Update requires*: No Interruption 
 
 `Parameters`  <a name="cfn-batch-jobdefinition-parameters"></a>
-Default parameters or parameter substitution placeholders that are set in the job definition\. Parameters are specified as a key\-value pair mapping\.  
- *Required*: yes  
+Default parameters or parameter substitution placeholders that are set in the job definition\. Parameters are specified as a key\-value pair mapping\. For more information about specifying parameters, see [Job Definition Parameters](https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html) in the *AWS Batch User Guide*\.  
+ *Required*: Yes  
 *Type*: JSON object  
  *Update requires*: No Interruption 
 
 `JobDefinitionName`  <a name="cfn-batch-jobdefinition-jobdefinitionname"></a>
 The name of the job definition\.  
- *Required*: no  
+ *Required*: No  
 *Type*: String  
  *Update requires*: Replacement 
 
 `ContainerProperties`  <a name="cfn-batch-jobdefinition-containerproperties"></a>
 An object with various properties specific to container\-based jobs\.  
- *Required*: yes  
+ *Required*: Yes  
  *Type*: [AWS Batch JobDefinition ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md)  
+ *Update requires*: No Interruption 
+
+`Timeout`  <a name="cfn-batch-jobdefinition-timeout"></a>
+Specifies a job timeout configuration\.  
+ *Required*: No  
+ *Type*: [AWS Batch JobDefinition Timeout](aws-properties-batch-jobdefinition-timeout.md)  
  *Update requires*: No Interruption 
 
 `RetryStrategy`  <a name="cfn-batch-jobdefinition-retrystrategy"></a>
 The retry strategy to use for failed jobs that are submitted with this job definition\.  
- *Required*: no  
+ *Required*: No  
  *Type*: [AWS Batch JobDefinition RetryStrategy](aws-properties-batch-jobdefinition-retrystrategy.md)  
  *Update requires*: No Interruption 
 
 ## Return Values<a name="aws-resource-batch-jobdefinition-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d160c10b2"></a>
+### Ref<a name="w4ab1c21c10d165c10b2"></a>
 
 When you pass the logical ID of an `AWS::Batch::JobDefinition` resource to the intrinsic `Ref` function, the function returns the job definition ARN, such as `arn:aws:batch:us-east-1:111122223333:job-definition/test-gpu:2`\. 
 
@@ -85,7 +94,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ### Test nvidia\-smi<a name="aws-resource-batch-jobdefinition-example1"></a>
 
-The following example tests the nvidia\-smi command on a GPU instance to verify that the GPU is working inside the container\. For more information, see [Test GPU Functionality](http://docs.aws.amazon.com/batch/latest/userguide/example-job-definitions.html#example-test-gpu) in the *AWS Batch User Guide*\.
+The following example tests the nvidia\-smi command on a GPU instance to verify that the GPU is working inside the container\. For more information, see [Test GPU Functionality](https://docs.aws.amazon.com/batch/latest/userguide/example-job-definitions.html#example-test-gpu) in the *AWS Batch User Guide*\.
 
 #### JSON<a name="aws-resource-batch-jobdefinition-example1.json"></a>
 
@@ -131,7 +140,7 @@ The following example tests the nvidia\-smi command on a GPU instance to verify 
 
 ```
 JobDefinition:
-  Type: 'AWS::Batch::JobDefinition'
+  Type: AWS::Batch::JobDefinition
   Properties:
     Type: container
     JobDefinitionName: nvidia-smi

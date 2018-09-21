@@ -9,7 +9,7 @@ If this resource has a public IP address and is also in a VPC that is defined in
 + [Syntax](#aws-resource-elasticloadbalancing-loadbalancer-syntax)
 + [Properties](#aws-properties-ec2-elb-prop)
 + [Return Values](#aws-properties-ec2-elb-ref)
-+ [Examples](#w3ab2c21c10d632c15)
++ [Examples](#w4ab1c21c10d651c15)
 
 ## Syntax<a name="aws-resource-elasticloadbalancing-loadbalancer-syntax"></a>
 
@@ -44,7 +44,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticloadbalancing-loadbalancer-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElasticLoadBalancing::LoadBalancer"
+Type: AWS::ElasticLoadBalancing::LoadBalancer
 Properties:
   [AccessLoggingPolicy](#cfn-ec2-elb-accessloggingpolicy):
     AccessLoggingPolicy
@@ -142,7 +142,7 @@ If you update the property values for a listener specified by the `Listeners` pr
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `LoadBalancerName`  <a name="cfn-ec2-elb-elbname"></a>
-A name for the load balancer\. For valid values, see the `LoadBalancerName` parameter for the [http://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateLoadBalancer.html](http://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateLoadBalancer.html) action in the *Elastic Load Balancing API Reference version 2012\-06\-01*\.  
+A name for the load balancer\. For valid values, see the `LoadBalancerName` parameter for the [https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateLoadBalancer.html](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateLoadBalancer.html) action in the *Elastic Load Balancing API Reference version 2012\-06\-01*\.  
 If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the load balancer\. The name must be unique within your set of load balancers\. For more information, see [Name Type](aws-properties-name.md)\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Required*: No  
@@ -150,7 +150,7 @@ If you specify a name, you cannot perform updates that require replacement of th
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Policies`  <a name="cfn-ec2-elb-policies"></a>
-A list of elastic load balancing policies to apply to this elastic load balancer\. Specify only back\-end server policies\. For more information, see [DescribeLoadBalancerPolicyTypes](http://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_DescribeLoadBalancerPolicyTypes.html) in the *Elastic Load Balancing API Reference version 2012\-06\-01*\.  
+A list of elastic load balancing policies to apply to this elastic load balancer\. Specify only back\-end server policies\. For more information, see [DescribeLoadBalancerPolicyTypes](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_DescribeLoadBalancerPolicyTypes.html) in the *Elastic Load Balancing API Reference version 2012\-06\-01*\.  
 *Required*: No  
 *Type*: A list of [ElasticLoadBalancing policy](aws-properties-ec2-elb-policy.md) objects\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -172,7 +172,7 @@ A list of subnet IDs in your virtual private cloud \(VPC\) to attach to your loa
 For more information about using Elastic Load Balancing in a VPC, see [How Do I Use Elastic Load Balancing in Amazon VPC](http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/UserScenariosForVPC.html) in the *Elastic Load Balancing Developer Guide*\.  
 *Required*: No  
 *Type*: List of String values  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) if you did not have an subnet specified and you are adding one or if you are removing all subnets\. Otherwise, update requires [no interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\. To update the load balancer to another subnet that is in the same Availability Zone, you must do two updates\. You must first update the load balancer to use a subnet in different Availability Zone\. After the update is complete, update the load balancer to use the new subnet that is in the original Availability Zone\.
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) if you did not have a subnet specified and you are adding one or if you are removing all subnets\. Otherwise, update requires [no interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\. To update the load balancer to another subnet that is in the same Availability Zone, you must do two updates\. You must first update the load balancer to use a subnet in different Availability Zone\. After the update is complete, update the load balancer to use the new subnet that is in the original Availability Zone\.
 
 `Tags`  <a name="cfn-ec2-elb-tags"></a>
 An arbitrary set of tags \(key\-value pairs\) for this load balancer\.  
@@ -182,13 +182,13 @@ An arbitrary set of tags \(key\-value pairs\) for this load balancer\.
 
 ## Return Values<a name="aws-properties-ec2-elb-ref"></a>
 
-### Ref<a name="w3ab2c21c10d632c13b2"></a>
+### Ref<a name="w4ab1c21c10d651c13b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example, `mystack-myelb-1WQN7BJGDB5YQ`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d632c13b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d651c13b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -215,9 +215,9 @@ Example: `amazon-elb-sg`
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w3ab2c21c10d632c15"></a>
+## Examples<a name="w4ab1c21c10d651c15"></a>
 
-### A load balancer with a health check and access logs<a name="w3ab2c21c10d632c15b2"></a>
+### A load balancer with a health check and access logs<a name="w4ab1c21c10d651c15b2"></a>
 
 #### JSON<a name="aws-resource-elasticloadbalancing-loadbalancer-example1.json"></a>
 
@@ -290,7 +290,7 @@ ElasticLoadBalancer:
     DependsOn: S3LoggingBucketPolicy
 ```
 
-### A load balancer with access logging enabled<a name="w3ab2c21c10d632c15b4"></a>
+### A load balancer with access logging enabled<a name="w4ab1c21c10d651c15b4"></a>
 
 The following sample snippet creates an Amazon S3 bucket with a bucket policy that allows the load balancer to store information in the `Logs/AWSLogs/AWS account number/` folder\. The load balancer also includes an explicit dependency on the bucket policy, which is required before the load balancer can write to the bucket\.
 
@@ -415,7 +415,7 @@ ElasticLoadBalancer:
   DependsOn: S3LoggingBucketPolicy
 ```
 
-### A load balancer with a connection draining policy<a name="w3ab2c21c10d632c15b6"></a>
+### A load balancer with a connection draining policy<a name="w4ab1c21c10d651c15b6"></a>
 
 The following snippet enables a connection draining policy that ends connections to a deregistered or unhealthy instance after 60 seconds\.
 
@@ -473,7 +473,7 @@ ElasticLoadBalancer:
       Timeout: '60'
 ```
 
-### A load balancer with multiple policies<a name="w3ab2c21c10d632c15b8"></a>
+### A load balancer with multiple policies<a name="w4ab1c21c10d651c15b8"></a>
 
 The following snippet creates a load balancer with listeners on port 80 and 443\. The snippet applies a proxy on port 80 and a back\-end server authentication policy on port 443\.
 
@@ -620,6 +620,6 @@ ElasticLoadBalancer:
       - '80'
 ```
 
-### Additional Examples<a name="w3ab2c21c10d632c15c10"></a>
+### Additional Examples<a name="w4ab1c21c10d651c15c10"></a>
 
 You can view additional examples from the AWS CloudFormation sample template collection: [Sample Templates](cfn-sample-templates.md)\.

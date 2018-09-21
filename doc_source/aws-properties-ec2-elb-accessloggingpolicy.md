@@ -2,7 +2,7 @@
 
 The `AccessLoggingPolicy` property describes where and how access logs are stored for the [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md) resource\.
 
-## Syntax<a name="w3ab2c21c14d966b5"></a>
+## Syntax<a name="w4ab1c21c14e1058b5"></a>
 
 ### JSON<a name="aws-properties-ec2-elb-accessloggingpolicy-syntax.json"></a>
 
@@ -24,7 +24,7 @@ The `AccessLoggingPolicy` property describes where and how access logs are store
 [S3BucketPrefix](#cfn-elb-accessloggingpolicy-s3bucketprefix): String
 ```
 
-## Properties<a name="w3ab2c21c14d966b7"></a>
+## Properties<a name="w4ab1c21c14e1058b7"></a>
 
 `EmitInterval`  <a name="cfn-elb-accessloggingpolicy-emitinterval"></a>
 The interval for publishing access logs in minutes\. You can specify an interval of either 5 minutes or 60 minutes\.  

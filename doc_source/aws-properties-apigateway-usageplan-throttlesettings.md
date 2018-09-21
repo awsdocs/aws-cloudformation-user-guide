@@ -23,11 +23,11 @@
 ## Properties<a name="aws-properties-apigateway-usageplan-throttlesettings-properties"></a>
 
 `BurstLimit`  <a name="cfn-apigateway-usageplan-throttlesettings-burstlimit"></a>
-The maximum API request rate limit over a time ranging from one to a few seconds\. The maximum API request rate limit depends on whether the underlying token bucket is at its full capacity\. For more information about request throttling, see [Manage API Request Throttling](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
+The maximum API request rate limit over a time ranging from one to a few seconds\. The maximum API request rate limit depends on whether the underlying token bucket is at its full capacity\. For more information about request throttling, see [Manage API Request Throttling](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
 *Required*: No  
 *Type*: Integer
 
 `RateLimit`  <a name="cfn-apigateway-usageplan-throttlesettings-ratelimit"></a>
-The API request steady\-state rate limit \(average requests per second over an extended period of time\)\. For more information about request throttling, see [Manage API Request Throttling](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
+The API request steady\-state rate limit \(average requests per second over an extended period of time\)\. For more information about request throttling, see [Manage API Request Throttling](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
 *Required*: No  
 *Type*: Number

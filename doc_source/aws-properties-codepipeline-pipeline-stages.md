@@ -2,7 +2,7 @@
 
 `Stages` is a property of the [AWS::CodePipeline::Pipeline](aws-resource-codepipeline-pipeline.md) resource that specifies a sequence of tasks for AWS CodePipeline to complete on an artifact\.
 
-## Syntax<a name="w3ab2c21c14d460b5"></a>
+## Syntax<a name="w4ab1c21c14d510b5"></a>
 
 ### JSON<a name="aws-properties-codepipeline-pipeline-stages-syntax.json"></a>
 
@@ -24,7 +24,7 @@
 [Name](#cfn-codepipeline-pipeline-stages-name): String
 ```
 
-## Properties<a name="w3ab2c21c14d460b7"></a>
+## Properties<a name="w4ab1c21c14d510b7"></a>
 
 `Actions`  <a name="cfn-codepipeline-pipeline-stages-actions"></a>
 The actions to include in this stage\.  

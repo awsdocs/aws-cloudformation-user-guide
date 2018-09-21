@@ -2,7 +2,7 @@
 
 `Predicates` is a property of the [AWS::WAF::Rule](aws-resource-waf-rule.md) resource that specifies the `ByteMatchSet`, `IPSet`, `SizeConstraintSet`, `SqlInjectionMatchSet`, or `XssMatchSet` objects to include in an AWS WAF rule\. If you add more than one predicate to a rule, an incoming request must match all of the specifications in the predicates to be allowed or blocked\.
 
-## Syntax<a name="w3ab2c21c14e2003b5"></a>
+## Syntax<a name="w4ab1c21c14e2111b5"></a>
 
 ### JSON<a name="aws-properties-waf-rule-predicates-syntax.json"></a>
 
@@ -22,7 +22,7 @@
 [Type](#cfn-waf-rule-predicates-type): String
 ```
 
-## Properties<a name="w3ab2c21c14e2003b7"></a>
+## Properties<a name="w4ab1c21c14e2111b7"></a>
 
 `DataId`  <a name="cfn-waf-rule-predicates-dataid"></a>
 The unique identifier of a predicate, such as the ID of a `ByteMatchSet` or `IPSet`\.  
@@ -37,6 +37,6 @@ Specify `true` if you want AWS WAF to allow, block, or count requests based on t
 *Type*: Boolean
 
 `Type`  <a name="cfn-waf-rule-predicates-type"></a>
-The type of predicate in a rule, such as an `IPSet` \(`IPMatch`\)\. For valid values, see the `Type` contents of the [Predicate](http://docs.aws.amazon.com/waf/latest/APIReference/API_Predicate.html) data type in the *AWS WAF API Reference*\.  
+The type of predicate in a rule, such as an `IPSet` \(`IPMatch`\)\. For valid values, see the `Type` contents of the [Predicate](https://docs.aws.amazon.com/waf/latest/APIReference/API_Predicate.html) data type in the *AWS WAF API Reference*\.  
 *Required*: Yes  
 *Type*: String

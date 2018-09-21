@@ -7,8 +7,8 @@ Applying a parameter group to a DB cluster might require instances to reboot, re
 
 **Topics**
 + [Syntax](#aws-resource-neptune-dbclusterparametergroup-syntax)
-+ [Properties](#w3ab2c21c10d892c11)
-+ [Return Values](#w3ab2c21c10d892c13)
++ [Properties](#aws-resource-neptune-dbclusterparametergroup-properties)
++ [Return Values](#aws-resource-neptune-dbclusterparametergroup-return-value)
 
 ## Syntax<a name="aws-resource-neptune-dbclusterparametergroup-syntax"></a>
 
@@ -42,7 +42,7 @@ Properties:
   [Name](#cfn-neptune-dbclusterparametergroup-name) : String
 ```
 
-## Properties<a name="w3ab2c21c10d892c11"></a>
+## Properties<a name="aws-resource-neptune-dbclusterparametergroup-properties"></a>
 
 `Description`  <a name="cfn-neptune-dbclusterparametergroup-description"></a>
 A friendly description for this DB cluster parameter group\.  
@@ -63,7 +63,7 @@ Changes to dynamic parameters are applied immediately\. Changes to static parame
    "Key3" : "Value3"
 }
 ```
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt), depending on the parameters that you update\.
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruption](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt), depending on the parameters that you update\.
 
 `Family`  <a name="cfn-neptune-dbclusterparametergroup-family"></a>
 Must be `neptune1`\.  
@@ -83,9 +83,9 @@ A friendly name for the cluster\.
 *Type:* String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w3ab2c21c10d892c13"></a>
+## Return Values<a name="aws-resource-neptune-dbclusterparametergroup-return-value"></a>
 
-### Ref<a name="w3ab2c21c10d892c13b2"></a>
+### Ref<a name="aws-resource-neptune-dbclusterparametergroup-return-value-ref"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 

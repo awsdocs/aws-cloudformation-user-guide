@@ -4,10 +4,10 @@ The `AWS::EC2::Route` resource creates a new route in a route table within a VPC
 
 **Topics**
 + [Syntax](#aws-resource-ec2-route-syntax)
-+ [Properties](#w3ab2c21c10d454b9)
-+ [Return Values](#w3ab2c21c10d454c11)
-+ [Examples](#w3ab2c21c10d454c13)
-+ [More Info](#w3ab2c21c10d454c15)
++ [Properties](#w4ab1c21c10d465b9)
++ [Return Values](#w4ab1c21c10d465c11)
++ [Examples](#w4ab1c21c10d465c13)
++ [More Info](#w4ab1c21c10d465c15)
 
 ## Syntax<a name="aws-resource-ec2-route-syntax"></a>
 
@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-route-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::Route"
+Type: AWS::EC2::Route
 Properties: 
   [DestinationCidrBlock](#cfn-ec2-route-destinationcidrblock): String
   [DestinationIpv6CidrBlock](#cfn-ec2-route-destinationipv6cidrblock): String
@@ -48,7 +48,7 @@ Properties:
   [VpcPeeringConnectionId](#cfn-ec2-route-vpcpeeringconnectionid): String
 ```
 
-## Properties<a name="w3ab2c21c10d454b9"></a>
+## Properties<a name="w4ab1c21c10d465b9"></a>
 
 `DestinationCidrBlock`  <a name="cfn-ec2-route-destinationcidrblock"></a>
 The IPv4 CIDR address block used for the destination match\. For example, `0.0.0.0/0`\. Routing decisions are based on the most specific match\.  
@@ -64,7 +64,7 @@ The IPv6 CIDR address block used for the destination match\. For example, `::/0`
 
 `EgressOnlyInternetGatewayId`  <a name="cfn-ec2-route-egressonlyinternetgatewayid"></a>
 The ID of an egress\-only internet gateway that is attached to your VPC \(over IPv6 only\)\.  
-*Required*: Conditional\. You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\. For an example that uses this property, see [Amazon EC2 Route with Egress\-Only Internet Gateway](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2.html#quickref-ec2-route-egressonlyinternetgateway)\.  
+*Required*: Conditional\. You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\. For an example that uses this property, see [Amazon EC2 Route with Egress\-Only Internet Gateway](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2.html#quickref-ec2-route-egressonlyinternetgateway)\.  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
@@ -105,15 +105,15 @@ The ID of a VPC peering connection\.
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10d454c11"></a>
+## Return Values<a name="w4ab1c21c10d465c11"></a>
 
-### Ref<a name="w3ab2c21c10d454c11b2"></a>
+### Ref<a name="w4ab1c21c10d465c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w3ab2c21c10d454c13"></a>
+## Examples<a name="w4ab1c21c10d465c13"></a>
 
 The following example creates a route that is added to a gateway\.
 
@@ -152,7 +152,7 @@ Resources:
         Ref: myInternetGateway
 ```
 
-## More Info<a name="w3ab2c21c10d454c15"></a>
+## More Info<a name="w4ab1c21c10d465c15"></a>
 + [AWS::EC2::RouteTable](aws-resource-ec2-route-table.md)
 + [CreateRoute](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateRoute.html) in the *Amazon EC2 API Reference*
 + [Route Tables](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html) in the *Amazon VPC User Guide*

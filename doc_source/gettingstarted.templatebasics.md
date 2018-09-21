@@ -720,7 +720,7 @@ We just walked through the basic parts of a template and how to use them\. You l
 + Using parameters to enable users to specify values at stack creation time and using constraints to validate parameter input
 + Using mappings to determine conditional values
 + Using the Fn::Join function to construct values based on parameters, resource attributes, and other strings
-+ Using output values based to capture information about the stack's resources\.
++ Using output values to capture information about the stack's resources\.
 
 We didn't cover two top level objects in a template: AWSTemplateFormatVersion and Description\. AWSTemplateFormatVersion is simply the version of the template format—if you don't specify it, AWS CloudFormation will use the latest version\. The Description is any valid JSON or YAML string\. This description appears in the Specify Parameters page of the Create Stack wizard\. For more information, see [Format Version](format-version-structure.md) and [Description](template-description-structure.md)\.
 

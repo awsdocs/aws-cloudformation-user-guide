@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification-properties"></a>
 
 `PredefinedScalingMetricType`  <a name="cfn-autoscalingplans-scalingplan-predefinedscalingmetricspecification-predefinedscalingmetrictype"></a>
-The metric type\. For more information, see [PredefinedScalingMetricSpecification](http://docs.aws.amazon.com/autoscaling/plans/APIReference/API_.html) in the *AWS Auto Scaling API Reference*\.  
+The metric type\. For more information, see [PredefinedScalingMetricSpecification](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_.html) in the *AWS Auto Scaling API Reference*\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

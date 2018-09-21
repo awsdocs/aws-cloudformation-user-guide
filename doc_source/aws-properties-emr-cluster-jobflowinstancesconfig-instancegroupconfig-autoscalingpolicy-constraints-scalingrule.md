@@ -2,7 +2,7 @@
 
 The `ScalingRule` property type represents a scale\-in or scale\-out rule that defines scaling activity, including the CloudWatch metric alarm that triggers activity, how Amazon EC2 instances are added or removed, and the periodicity of adjustments\. The `Rules` subproperty of the [Amazon EMR Cluster JobFlowInstancesConfig](aws-properties-emr-cluster-jobflowinstancesconfig.md) property contains a list of one or more `ScalingRule` property types\.
 
-## Syntax<a name="w3ab2c21c14e1121b5"></a>
+## Syntax<a name="w4ab1c21c14e1212b5"></a>
 
 ### JSON<a name="aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig-autoscalingpolicy-constraints-scalingrule-syntax.json"></a>
 
@@ -24,7 +24,7 @@ The `ScalingRule` property type represents a scale\-in or scale\-out rule that d
   [Trigger](#cfn-emr-cluster-jobflowinstancesconfig-instancegroupconfig-autoscalingpolicy-constraints-scalingrule-trigger): ScalingTrigger
 ```
 
-## Properties<a name="w3ab2c21c14e1121b7"></a>
+## Properties<a name="w4ab1c21c14e1212b7"></a>
 
 `Action`  <a name="cfn-emr-cluster-jobflowinstancesconfig-instancegroupconfig-autoscalingpolicy-constraints-scalingrule-action"></a>
 The conditions that trigger an automatic scaling activity\.  

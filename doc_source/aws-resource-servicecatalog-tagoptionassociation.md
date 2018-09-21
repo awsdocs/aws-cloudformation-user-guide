@@ -1,6 +1,6 @@
 # AWS::ServiceCatalog::TagOptionAssociation<a name="aws-resource-servicecatalog-tagoptionassociation"></a>
 
-Associates the specified TagOption with the specified AWS Service Catalog resource\. For more information, see [AWS Service Catalog TagOptionLibrary](http://docs.aws.amazon.com/servicecatalog/latest/adminguide/tagoptions.html) in the *AWS Service Catalog Administrator Guide*\.
+Associates the specified TagOption with the specified AWS Service Catalog resource\. For more information, see [AWS Service Catalog TagOptionLibrary](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/tagoptions.html) in the *AWS Service Catalog Administrator Guide*\.
 
 **Topics**
 + [Syntax](#aws-resource-servicecatalog-tagoptionassociation-syntax)

@@ -1,6 +1,6 @@
 # AWS CodeDeploy DeploymentGroup AutoRollbackConfiguration<a name="aws-properties-codedeploy-deploymentgroup-autorollbackconfiguration"></a>
 
-The `AutoRollbackConfiguration` property type configures automatic rollback for an AWS CodeDeploy deployment group when a deployment doesn't complete successfully\. For more information, see [Automatic Rollbacks](http://docs.aws.amazon.com/codedeploy/latest/userguide/deployments-rollback-and-redeploy.html#deployments-rollback-and-redeploy-automatic-rollbacks) in the *AWS CodeDeploy User Guide*\.
+The `AutoRollbackConfiguration` property type configures automatic rollback for an AWS CodeDeploy deployment group when a deployment doesn't complete successfully\. For more information, see [Automatic Rollbacks](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments-rollback-and-redeploy.html#deployments-rollback-and-redeploy-automatic-rollbacks) in the *AWS CodeDeploy User Guide*\.
 
  `AutoRollbackConfiguration` is a property of the [AWS::CodeDeploy::DeploymentGroup](aws-resource-codedeploy-deploymentgroup.md) resource\. 
 

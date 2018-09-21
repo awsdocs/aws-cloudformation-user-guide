@@ -2,17 +2,19 @@
 
 `StageDescription` is a property of the [AWS::ApiGateway::Deployment](aws-resource-apigateway-deployment.md) resource that configures an Amazon API Gateway \(API Gateway\) deployment stage\.
 
-## Syntax<a name="w3ab2c21c14c15b5"></a>
+## Syntax<a name="w4ab1c21c14c31b5"></a>
 
 ### JSON<a name="aws-properties-apigateway-deployment-stagedescription-syntax.json"></a>
 
 ```
 {
+  "[AccessLogSetting](#cfn-apigateway-deployment-stagedescription-accesslogsetting)" : [AccessLogSetting](aws-properties-apigateway-deployment-accesslogsetting.md),
   "[CacheClusterEnabled](#cfn-apigateway-deployment-stagedescription-cacheclusterenabled)" : Boolean,
   "[CacheClusterSize](#cfn-apigateway-deployment-stagedescription-cacheclustersize)" : String,
   "[CacheDataEncrypted](#cfn-apigateway-deployment-stagedescription-cachedataencrypted)" : Boolean,
   "[CacheTtlInSeconds](#cfn-apigateway-deployment-stagedescription-cachettlinseconds)" : Integer,
   "[CachingEnabled](#cfn-apigateway-deployment-stagedescription-cachingenabled)" : Boolean,
+  "[CanarySetting](#cfn-apigateway-deployment-stagedescription-canarysetting)" : [CanarySetting](aws-properties-apigateway-deployment-canarysetting.md),
   "[ClientCertificateId](#cfn-apigateway-deployment-stagedescription-clientcertificateid)" : String,
   "[DataTraceEnabled](#cfn-apigateway-deployment-stagedescription-datatraceenabled)" : Boolean,
   "[Description](#cfn-apigateway-deployment-stagedescription-description)" : String,
@@ -29,11 +31,13 @@
 ### YAML<a name="aws-properties-apigateway-deployment-stagedescription-syntax.yaml"></a>
 
 ```
+[AccessLogSetting](#cfn-apigateway-deployment-stagedescription-accesslogsetting): [AccessLogSetting](aws-properties-apigateway-deployment-accesslogsetting.md)
 [CacheClusterEnabled](#cfn-apigateway-deployment-stagedescription-cacheclusterenabled): Boolean
 [CacheClusterSize](#cfn-apigateway-deployment-stagedescription-cacheclustersize): String
 [CacheDataEncrypted](#cfn-apigateway-deployment-stagedescription-cachedataencrypted): Boolean
 [CacheTtlInSeconds](#cfn-apigateway-deployment-stagedescription-cachettlinseconds): Integer
 [CachingEnabled](#cfn-apigateway-deployment-stagedescription-cachingenabled): Boolean
+[CanarySetting](#cfn-apigateway-deployment-stagedescription-canarysetting): [CanarySetting](aws-properties-apigateway-deployment-canarysetting.md)
 [ClientCertificateId](#cfn-apigateway-deployment-stagedescription-clientcertificateid): String
 [DataTraceEnabled](#cfn-apigateway-deployment-stagedescription-datatraceenabled): Boolean
 [Description](#cfn-apigateway-deployment-stagedescription-description): String
@@ -47,7 +51,13 @@
   String: String
 ```
 
-## Properties<a name="w3ab2c21c14c15b7"></a>
+## Properties<a name="w4ab1c21c14c31b7"></a>
+
+`AccessLogSetting`  <a name="cfn-apigateway-deployment-stagedescription-accesslogsetting"></a>
+Specifies settings for logging access in this stage\.  
+*Required*: No  
+*Type*: [API Gateway Deployment AccessLogSetting](aws-properties-apigateway-deployment-accesslogsetting.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `CacheClusterEnabled`  <a name="cfn-apigateway-deployment-stagedescription-cacheclusterenabled"></a>
 Indicates whether cache clustering is enabled for the stage\.  
@@ -70,9 +80,15 @@ The time\-to\-live \(TTL\) period, in seconds, that specifies how long API Gatew
 *Type*: Integer
 
 `CachingEnabled`  <a name="cfn-apigateway-deployment-stagedescription-cachingenabled"></a>
-Indicates whether responses are cached and returned for requests\. You must enable a cache cluster on the stage to cache responses\. For more information, see [Enable API Gateway Caching in a Stage to Enhance API Performance](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-caching.html) in the *API Gateway Developer Guide*\.  
+Indicates whether responses are cached and returned for requests\. You must enable a cache cluster on the stage to cache responses\. For more information, see [Enable API Gateway Caching in a Stage to Enhance API Performance](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-caching.html) in the *API Gateway Developer Guide*\.  
 *Required*: No  
 *Type*: Boolean
+
+`CanarySetting`  <a name="cfn-apigateway-deployment-stagedescription-canarysetting"></a>
+Specifies settings for the canary deployment in this stage\.  
+*Required*: No  
+*Type*: [API Gateway Deployment CanarySetting](aws-properties-apigateway-deployment-canarysetting.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ClientCertificateId`  <a name="cfn-apigateway-deployment-stagedescription-clientcertificateid"></a>
 The identifier of the client certificate that API Gateway uses to call your integration endpoints in the stage\.  
@@ -95,7 +111,7 @@ The version identifier of the API documentation snapshot\.
 *Type*: String
 
 `LoggingLevel`  <a name="cfn-apigateway-deployment-stagedescription-logginglevel"></a>
-The logging level for this method\. For valid values, see the `loggingLevel` property of the [Stage](http://docs.aws.amazon.com/apigateway/api-reference/resource/stage/#loggingLevel) resource in the *Amazon API Gateway API Reference*\.  
+The logging level for this method\. For valid values, see the `loggingLevel` property of the [Stage](https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/#loggingLevel) resource in the *Amazon API Gateway API Reference*\.  
 *Required*: No  
 *Type*: String
 
@@ -110,12 +126,12 @@ Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage
 *Type*: Boolean
 
 `ThrottlingBurstLimit`  <a name="cfn-apigateway-deployment-stagedescription-throttlingburstlimit"></a>
-The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account\. For more information, see [Manage API Request Throttling](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
+The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account\. For more information, see [Manage API Request Throttling](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
 *Required*: No  
 *Type*: Integer
 
 `ThrottlingRateLimit`  <a name="cfn-apigateway-deployment-stagedescription-throttlingratelimit"></a>
-The number of steady\-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account\. For more information, see [Manage API Request Throttling](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
+The number of steady\-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account\. For more information, see [Manage API Request Throttling](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
 *Required*: No  
 *Type*: Number
 

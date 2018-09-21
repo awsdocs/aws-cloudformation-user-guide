@@ -4,8 +4,8 @@ The `AWS::ApiGateway::Deployment` resource deploys an Amazon API Gateway \(API G
 
 **Topics**
 + [Syntax](#aws-resource-apigateway-deployment-syntax)
-+ [Properties](#w3ab2c21c10c35b9)
-+ [Return Value](#w3ab2c21c10c35c11)
++ [Properties](#w4ab1c21c10c42b9)
++ [Return Value](#w4ab1c21c10c42c11)
 + [Examples](#aws-resource-apigateway-deployment-examples)
 
 ## Syntax<a name="aws-resource-apigateway-deployment-syntax"></a>
@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::Deployment",
   "Properties" : {
+    "[DeploymentCanarySettings](#cfn-apigateway-deployment-deploymentcanarysettings)" : [DeploymentCanarySettings](aws-properties-apigateway-deployment-deploymentcanarysettings.md),
     "[Description](#cfn-apigateway-deployment-description)" : String,
     "[RestApiId](#cfn-apigateway-deployment-restapiid)" : String,
     "[StageDescription](#cfn-apigateway-deployment-stagedescription)" : [StageDescription](aws-properties-apigateway-deployment-stagedescription.md),
@@ -29,15 +30,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-deployment-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::Deployment"
+Type: AWS::ApiGateway::Deployment
 Properties:
+  [DeploymentCanarySettings](#cfn-apigateway-deployment-deploymentcanarysettings): [DeploymentCanarySettings](aws-properties-apigateway-deployment-deploymentcanarysettings.md)
   [Description](#cfn-apigateway-deployment-description): String
   [RestApiId](#cfn-apigateway-deployment-restapiid): String
   [StageDescription](#cfn-apigateway-deployment-stagedescription): [StageDescription](aws-properties-apigateway-deployment-stagedescription.md)
   [StageName](#cfn-apigateway-deployment-stagename): String
 ```
 
-## Properties<a name="w3ab2c21c10c35b9"></a>
+## Properties<a name="w4ab1c21c10c42b9"></a>
+
+`DeploymentCanarySettings`  <a name="cfn-apigateway-deployment-deploymentcanarysettings"></a>
+Specifies settings for the canary deployment\.  
+*Required*: No  
+*Type*: [API Gateway Deployment DeploymentCanarySettings](aws-properties-apigateway-deployment-deploymentcanarysettings.md)  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Description`  <a name="cfn-apigateway-deployment-description"></a>
 A description of the purpose of the API Gateway deployment\.  
@@ -63,9 +71,9 @@ A name for the stage that API Gateway creates with this deployment\. Use only al
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10c35c11"></a>
+## Return Value<a name="w4ab1c21c10c42c11"></a>
 
-### Ref<a name="w3ab2c21c10c35c11b2"></a>
+### Ref<a name="w4ab1c21c10c42c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the deployment ID, such as `123abc`\.
 
@@ -75,7 +83,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 The following sections provide examples for declaring API Gateway deployments\.
 
-### Deployment with an Empty Embedded Stage<a name="w3ab2c21c10c35c13b4"></a>
+### Deployment with an Empty Embedded Stage<a name="w4ab1c21c10c42c13b4"></a>
 
 The following example deploys the `MyApi` API to a stage named `DummyStage`\.
 
@@ -96,7 +104,7 @@ The following example deploys the `MyApi` API to a stage named `DummyStage`\.
 
 ```
 Deployment: 
-  Type: "AWS::ApiGateway::Deployment"
+  Type: AWS::ApiGateway::Deployment
   Properties: 
     RestApiId: 
       Ref: "MyApi"
@@ -104,7 +112,7 @@ Deployment:
     StageName: "DummyStage"
 ```
 
-### `AWS::ApiGateway::Method` Dependency<a name="w3ab2c21c10c35c13b6"></a>
+### `AWS::ApiGateway::Method` Dependency<a name="w4ab1c21c10c42c13b6"></a>
 
 If you create a `AWS::ApiGateway::RestApi` resource and its methods \(using `AWS::ApiGateway::Method`\) in the same template as your deployment, the deployment must depend on the `RestApi`'s methods\. To create a dependency, add a `DependsOn` attribute to the deployment\. If you don't, AWS CloudFormation creates the deployment right after it creates the `RestApi` resource that doesn't contain any methods, and AWS CloudFormation encounters the following error: `The REST API doesn't contain any methods`\.
 
@@ -127,7 +135,7 @@ If you create a `AWS::ApiGateway::RestApi` resource and its methods \(using `AWS
 ```
 Deployment: 
   DependsOn: "MyMethod"
-  Type: "AWS::ApiGateway::Deployment"
+  Type: AWS::ApiGateway::Deployment
   Properties: 
     RestApiId: 
       Ref: "MyApi"

@@ -4,8 +4,8 @@ The `AWS::SSM::Association` resource associates an SSM document in AWS Systems M
 
 **Topics**
 + [Syntax](#aws-resource-ssm-association-syntax)
-+ [Properties](#w3ab2c21c10e1148b9)
-+ [Example](#w3ab2c21c10e1148c11)
++ [Properties](#w4ab1c21c10e1177b9)
++ [Example](#w4ab1c21c10e1177c11)
 
 ## Syntax<a name="aws-resource-ssm-association-syntax"></a>
 
@@ -47,7 +47,7 @@ Properties:
     - [*Targets*](aws-properties-ssm-association-targets.md)
 ```
 
-## Properties<a name="w3ab2c21c10e1148b9"></a>
+## Properties<a name="w4ab1c21c10e1177b9"></a>
 
 `AssociationName`  <a name="cfn-ssm-association-associationname"></a>
 The name of the association\.  
@@ -86,7 +86,7 @@ Parameter values that the SSM document uses at runtime\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ScheduleExpression`  <a name="cfn-ssm-association-scheduleexpression"></a>
-A Cron expression that specifies when the association is applied to the target\. For more on working with Cron expressions, see [Working with Cron and Rate Expressions for Systems Manager](http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-cron.html)\.  
+A Cron expression that specifies when the association is applied to the target\. For more on working with Cron expressions, see [Working with Cron and Rate Expressions for Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-cron.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -97,9 +97,9 @@ The targets that the SSM document sends commands to\.
 *Type*: List of [AWS Systems Manager Association Targets](aws-properties-ssm-association-targets.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Example<a name="w3ab2c21c10e1148c11"></a>
+## Example<a name="w4ab1c21c10e1177c11"></a>
 
-### <a name="w3ab2c21c10e1148c11b3"></a>
+### <a name="w4ab1c21c10e1177c11b3"></a>
 
 The following example associates an SSM document with a specific instance\. The ID of the instance is specified by the `myInstanceId` parameter\.
 

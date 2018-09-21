@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-glue-job-jobcommand-properties"></a>
 
-For more information, see [JobCommand Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-job.html#aws-glue-api-jobs-job-JobCommand) in the *AWS Glue Developer Guide*\.
+For more information, see [JobCommand Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-job.html#aws-glue-api-jobs-job-JobCommand) in the *AWS Glue Developer Guide*\.
 
 `ScriptLocation`  <a name="cfn-glue-job-jobcommand-scriptlocation"></a>
 The location of a script that executes a job\.  

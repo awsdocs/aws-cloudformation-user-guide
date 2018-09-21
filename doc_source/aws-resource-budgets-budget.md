@@ -1,6 +1,6 @@
 # AWS::Budgets::Budget<a name="aws-resource-budgets-budget"></a>
 
-The `AWS::Budgets::Budget` resource creates, replaces, or deletes budgets for Billing and Cost Management\. For more information, see [Managing Your Costs with Budgets](http://docs.aws.amazon.com/http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html) in the [http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/)\. 
+The `AWS::Budgets::Budget` resource creates, replaces, or deletes budgets for Billing and Cost Management\. For more information, see [Managing Your Costs with Budgets](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html) in the [https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/)\. 
 
 **Topics**
 + [Syntax](#aws-resource-budgets-budget-syntax)
@@ -180,4 +180,4 @@ The following example creates a budget for 100 USD amount of costs, with notific
 ```
 
 ## See Also<a name="aws-resource-budgets-budget-seealso"></a>
-+ [CreateBudget](http://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_CreateBudget.html) in the [AWS Billing and Cost Management API Reference](http://docs.aws.amazon.com/aws-cost-management/latest/APIReference/Welcome.html)\. 
++ [CreateBudget](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_CreateBudget.html) in the [AWS Billing and Cost Management API Reference](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/Welcome.html)\. 

@@ -44,7 +44,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-glue-table-tableinput-properties"></a>
 
-For more information, see [TableInput Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-TableInput) in the *AWS Glue Developer Guide*\.
+For more information, see [TableInput Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-TableInput) in the *AWS Glue Developer Guide*\.
 
 `Owner`  <a name="cfn-glue-table-tableinput-owner"></a>
 The owner of the table\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  

@@ -6,7 +6,7 @@ The `AWS::IAM::User` type creates a user\.
 + [Syntax](#aws-resource-iam-user-syntax)
 + [Properties](#aws-properties-iam-user-prop)
 + [Return Values](#aws-properties-iam-user-ref)
-+ [Template Examples](#w3ab2c21c10d772c13)
++ [Template Examples](#w4ab1c21c10d792c13)
 
 ## Syntax<a name="aws-resource-iam-user-syntax"></a>
 
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-iam-user-syntax.yaml"></a>
 
 ```
-Type: "AWS::IAM::User"
+Type: AWS::IAM::User
 Properties: 
   [Groups](#cfn-iam-user-groups):
     - String
@@ -79,7 +79,7 @@ If you specify multiple polices, specify unique values for the policy name\. If 
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `UserName`  <a name="cfn-iam-user-username"></a>
-A name for the IAM user\. For valid values, see the `UserName` parameter for the [http://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateUser.html](http://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateUser.html) action in the *IAM API Reference*\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the user name\.  
+A name for the IAM user\. For valid values, see the `UserName` parameter for the [https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateUser.html](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateUser.html) action in the *IAM API Reference*\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the user name\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 If you specify a name, you must specify the `CAPABILITY_NAMED_IAM` value to acknowledge your template's capabilities\. For more information, see [Acknowledging IAM Resources in AWS CloudFormation Templates](using-iam-template.md#using-iam-capabilities)\.   
 Naming an IAM resource can cause an unrecoverable error if you reuse the same template in multiple regions\. To prevent this, we recommend using `Fn::Join` and `AWS::Region` to create a region\-specific name, as in the following example: `{"Fn::Join": ["", [{"Ref": "AWS::Region"}, {"Ref": "MyResourceName"}]]}`\.
@@ -89,13 +89,13 @@ Naming an IAM resource can cause an unrecoverable error if you reuse the same te
 
 ## Return Values<a name="aws-properties-iam-user-ref"></a>
 
-### Ref<a name="w3ab2c21c10d772c11b2"></a>
+### Ref<a name="w4ab1c21c10d792c11b2"></a>
 
 Specifying this resource ID to the intrinsic Ref function will return the `UserName`\. For example: `mystack-myuser-1CCXAFG2H2U4D`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d772c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d792c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -104,6 +104,6 @@ Returns the Amazon Resource Name \(ARN\) for the specified AWS::IAM::User resour
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Template Examples<a name="w3ab2c21c10d772c13"></a>
+## Template Examples<a name="w4ab1c21c10d792c13"></a>
 
 To view AWS::IAM::User snippets, see: [Declaring an IAM User Resource](quickref-iam.md#scenario-iam-user)\.

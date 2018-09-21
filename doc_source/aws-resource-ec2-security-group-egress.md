@@ -1,15 +1,15 @@
 # AWS::EC2::SecurityGroupEgress<a name="aws-resource-ec2-security-group-egress"></a>
 
-The `AWS::EC2::SecurityGroupEgress` resource adds an egress rule to an Amazon VPC security group\.
+The `AWS::EC2::SecurityGroupEgress` resource adds an egress rule to an Amazon VPC security group\. When you use the `AWS::EC2::SecurityGroupEgress` resource, the default rule is removed from the security group\.
 
 **Important**  
-Use `AWS::EC2::SecurityGroupIngress` and `AWS::EC2::SecurityGroupEgress` only when necessary, typically to allow security groups to reference each other in ingress and egress rules\. Otherwise, use the embedded ingress and egress rules of [AWS::EC2::SecurityGroup](aws-properties-ec2-security-group.md)\. For more information, see [Amazon EC2 Security Groups](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html)\.
+Use `AWS::EC2::SecurityGroupIngress` and `AWS::EC2::SecurityGroupEgress` only when necessary, typically to allow security groups to reference each other in ingress and egress rules\. Otherwise, use the embedded ingress and egress rules of [AWS::EC2::SecurityGroup](aws-properties-ec2-security-group.md)\. For more information, see [Amazon EC2 Security Groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html)\.
 
 **Topics**
 + [Syntax](#aws-resource-ec2-securitygroupegress-syntax)
-+ [Properties](#w3ab2c21c10d470c11)
-+ [Return Values](#w3ab2c21c10d470c13)
-+ [VPC Security Groups Example](#w3ab2c21c10d470c15)
++ [Properties](#w4ab1c21c10d481c11)
++ [Return Values](#w4ab1c21c10d481c13)
++ [VPC Security Groups Example](#w4ab1c21c10d481c15)
 
 ## Syntax<a name="aws-resource-ec2-securitygroupegress-syntax"></a>
 
@@ -37,7 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-securitygroupegress-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::SecurityGroupEgress"
+Type: AWS::EC2::SecurityGroupEgress
 Properties:
   [CidrIp](#cfn-ec2-securitygroupegress-cidrip): String
   [CidrIpv6](#cfn-ec2-securitygroupegress-cidripv6): String
@@ -50,7 +50,7 @@ Properties:
   [ToPort](#cfn-ec2-securitygroupegress-toport): Integer
 ```
 
-## Properties<a name="w3ab2c21c10d470c11"></a>
+## Properties<a name="w4ab1c21c10d481c11"></a>
 
 For more information about adding egress rules to VPC security groups, go to [AuthorizeSecurityGroupEgress](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-AuthorizeSecurityGroupEgress.html) in the *Amazon EC2 API Reference*\.
 
@@ -76,7 +76,7 @@ Description of the egress rule\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `DestinationPrefixListId`  <a name="cfn-ec2-securitygroupegress-destinationprefixlistid"></a>
-The AWS service prefix of an Amazon VPC endpoint\. For more information, see [VPC Endpoints](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpoints.html) in the *Amazon VPC User Guide*\.  
+The AWS service prefix of an Amazon VPC endpoint\. For more information, see [VPC Endpoints](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html) in the *Amazon VPC User Guide*\.  
 *Required*: Conditional\. You must specify a destination security group \(`DestinationPrefixListId` or `DestinationSecurityGroupId`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -111,15 +111,15 @@ End of port range for the TCP and UDP protocols, or an ICMP code\. If you specif
 *Type*: Integer  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w3ab2c21c10d470c13"></a>
+## Return Values<a name="w4ab1c21c10d481c13"></a>
 
-### Ref<a name="w3ab2c21c10d470c13b2"></a>
+### Ref<a name="w4ab1c21c10d481c13b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## VPC Security Groups Example<a name="w3ab2c21c10d470c15"></a>
+## VPC Security Groups Example<a name="w4ab1c21c10d481c15"></a>
 
 In some cases, you might have an originating \(source\) security group to which you want to add an outbound rule that allows traffic to a destination \(target\) security group\. The target security group also needs an inbound rule that allows traffic from the source security group\. Note that you cannot use the `Ref` function to specify the outbound and inbound rules for each security group\. Doing so creates a circular dependency; you cannot have two resources that depend on each other\. Instead, use the egress and ingress resources to declare these outbound and inbound rules, as shown in the following template snippet\.
 
@@ -132,14 +132,14 @@ In some cases, you might have an originating \(source\) security group to which 
     "SourceSG": {
       "Type": "AWS::EC2::SecurityGroup",
       "Properties": {
-        "VpcId" : "vpc-e063f789",
+        "VpcId" : "vpc-1a2b3c4d",
         "GroupDescription": "Sample source security group"
       }
     },
     "TargetSG": {
       "Type": "AWS::EC2::SecurityGroup",
       "Properties": {
-        "VpcId" : "vpc-e063f789",
+        "VpcId" : "vpc-1a2b3c4d",
         "GroupDescription": "Sample target security group"
       }
     },
@@ -147,8 +147,8 @@ In some cases, you might have an originating \(source\) security group to which 
       "Type": "AWS::EC2::SecurityGroupEgress",
       "Properties":{
         "IpProtocol": "tcp",
-        "FromPort": "0",
-        "ToPort": "65535",
+        "FromPort": 0,
+        "ToPort": 65535,
         "DestinationSecurityGroupId": {
           "Fn::GetAtt": [
             "TargetSG",
@@ -167,8 +167,8 @@ In some cases, you might have an originating \(source\) security group to which 
       "Type": "AWS::EC2::SecurityGroupIngress",
       "Properties":{
         "IpProtocol": "tcp",
-        "FromPort": "0",
-        "ToPort": "65535",
+        "FromPort": 0,
+        "ToPort": 65535,
         "SourceSecurityGroupId": {
           "Fn::GetAtt": [
             "SourceSG",
@@ -195,19 +195,19 @@ Resources:
   SourceSG:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      VpcId: vpc-e063f789
+      VpcId: vpc-1a2b3c4d
       GroupDescription: Sample source security group
   TargetSG:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      VpcId: vpc-e063f789
+      VpcId: vpc-1a2b3c4d
       GroupDescription: Sample target security group
   OutboundRule:
     Type: AWS::EC2::SecurityGroupEgress
     Properties:
       IpProtocol: tcp
-      FromPort: '0'
-      ToPort: '65535'
+      FromPort: 0
+      ToPort: 65535
       DestinationSecurityGroupId:
         Fn::GetAtt:
         - TargetSG
@@ -220,8 +220,8 @@ Resources:
     Type: AWS::EC2::SecurityGroupIngress
     Properties:
       IpProtocol: tcp
-      FromPort: '0'
-      ToPort: '65535'
+      FromPort: 0
+      ToPort: 65535
       SourceSecurityGroupId:
         Fn::GetAtt:
         - SourceSG

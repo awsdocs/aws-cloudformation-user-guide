@@ -1,6 +1,6 @@
 # AWS::Glue::Trigger<a name="aws-resource-glue-trigger"></a>
 
-The `AWS::Glue::Trigger` resource specifies triggers that run AWS Glue jobs\. For more information, see [Triggering Jobs in AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/trigger-job.html) and [Trigger Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-Trigger) in the *AWS Glue Developer Guide*\. 
+The `AWS::Glue::Trigger` resource specifies triggers that run AWS Glue jobs\. For more information, see [Triggering Jobs in AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/trigger-job.html) and [Trigger Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-Trigger) in the *AWS Glue Developer Guide*\. 
 
 **Topics**
 + [Syntax](#aws-resource-glue-trigger-syntax)
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-glue-trigger-syntax.yaml"></a>
 
 ```
-Type: "AWS::Glue::Trigger"
+Type: AWS::Glue::Trigger
 Properties:
   [Type](#cfn-glue-trigger-type): String
   [Description](#cfn-glue-trigger-description): String
@@ -83,7 +83,7 @@ The predicate of the job trigger, which determines when the trigger fires\.
 
 ## Return Values<a name="aws-resource-glue-trigger-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d722c10b3"></a>
+### Ref<a name="w4ab1c21c10d738c10b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
@@ -122,7 +122,7 @@ The following example creates an on\-demand trigger that triggers one job\.
 ```
 Resources:
   OnDemandJobTrigger:
-    Type: 'AWS::Glue::Trigger'
+    Type: AWS::Glue::Trigger
     Properties:
       Type: ON_DEMAND
       Description: DESCRIPTION_ON_DEMAND
@@ -169,7 +169,7 @@ The following example creates a scheduled trigger that runs every two hours and 
 ```
 Resources:
   ScheduledJobTrigger:
-    Type: 'AWS::Glue::Trigger'
+    Type: AWS::Glue::Trigger
     Properties:
       Type: SCHEDULED
       Description: DESCRIPTION_SCHEDULED
@@ -242,7 +242,7 @@ The following example creates a conditional trigger that starts a job based on t
           "ScriptLocation": "s3://testdata-bucket/s3-target/create-delete-job-xtf-ETL-s3-json-to-csv.py"
         },
         "DefaultArguments": {
-          "--continuation-option": "continuation-enabled"
+          "--job-bookmark-option": "job-bookmark-enable"
         },
         "MaxRetries": 0
       }
@@ -320,7 +320,7 @@ Resources:
         Name: "glueetl"
         ScriptLocation: "s3://testdata-bucket/s3-target/create-delete-job-xtf-ETL-s3-json-to-csv.py"
       DefaultArguments:
-        "--continuation-option": "continuation-enabled"
+        "--job-bookmark-option": "job-bookmark-enable"
       MaxRetries: 0
   MyJobTrigger:
     Type: AWS::Glue::Trigger

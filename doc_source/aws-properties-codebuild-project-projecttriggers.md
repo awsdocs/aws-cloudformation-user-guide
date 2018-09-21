@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [Webhook](#cfn-codebuild-project-projecttriggers-webhook): Boolean
 ```
 
-## Properties<a name="w3ab2c21c14d375b7"></a>
+## Properties<a name="w4ab1c21c14d409b7"></a>
 
 `Webhook`  <a name="cfn-codebuild-project-projecttriggers-webhook"></a>
 Specifies whether or not to begin automatically rebuilding the source code every time a code change is pushed to the repository\.  

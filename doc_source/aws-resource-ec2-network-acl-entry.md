@@ -4,10 +4,10 @@ Creates an entry \(i\.e\., a rule\) in a network ACL with a rule number you spec
 
 **Topics**
 + [Syntax](#aws-resource-ec2-networkaclentry-syntax)
-+ [Properties](#w3ab2c21c10d433b9)
-+ [Return Values](#w3ab2c21c10d433c11)
-+ [Example](#w3ab2c21c10d433c13)
-+ [See Also](#w3ab2c21c10d433c15)
++ [Properties](#w4ab1c21c10d444b9)
++ [Return Values](#w4ab1c21c10d444c11)
++ [Example](#w4ab1c21c10d444c13)
++ [See Also](#w4ab1c21c10d444c15)
 
 ## Syntax<a name="aws-resource-ec2-networkaclentry-syntax"></a>
 
@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-networkaclentry-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::NetworkAclEntry"
+Type: AWS::EC2::NetworkAclEntry
 Properties: 
   [CidrBlock](#cfn-ec2-networkaclentry-cidrblock): String
   [Egress](#cfn-ec2-networkaclentry-egress): Boolean
@@ -50,7 +50,7 @@ Properties:
   [RuleNumber](#cfn-ec2-networkaclentry-rulenumber) : Integer
 ```
 
-## Properties<a name="w3ab2c21c10d433b9"></a>
+## Properties<a name="w4ab1c21c10d444b9"></a>
 
 `CidrBlock`  <a name="cfn-ec2-networkaclentry-cidrblock"></a>
 The IPv4 CIDR range to allow or deny, in CIDR notation \(e\.g\., 172\.16\.0\.0/24\)\.  
@@ -102,20 +102,20 @@ Whether to allow or deny traffic that matches the rule; valid values are "allow"
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `RuleNumber`  <a name="cfn-ec2-networkaclentry-rulenumber"></a>
-Rule number to assign to the entry, such as `100`\. ACL entries are processed in ascending order by rule number\. Entries can't use the same rule number unless one is an egress rule and the other is an ingress rule\. For valid values, see the [CreateNetworkAclEntry](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkAclEntry.html) action in the *Amazon EC2 API Reference*\.  
+Rule number to assign to the entry, such as `100`\. ACL entries are processed in ascending order by rule number\. Entries can't use the same rule number unless one is an egress rule and the other is an ingress rule\. For valid values, see the [CreateNetworkAclEntry](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkAclEntry.html) action in the *Amazon EC2 API Reference*\.  
 *Required*: Yes  
 *Type*: Number  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)\.
 
-## Return Values<a name="w3ab2c21c10d433c11"></a>
+## Return Values<a name="w4ab1c21c10d444c11"></a>
 
-### Ref<a name="w3ab2c21c10d433c11b2"></a>
+### Ref<a name="w4ab1c21c10d444c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10d433c13"></a>
+## Example<a name="w4ab1c21c10d444c13"></a>
 
 ### JSON<a name="aws-resource-ec2-networkaclentry-example-1.json"></a>
 
@@ -163,6 +163,6 @@ Resources:
         To: '53'
 ```
 
-## See Also<a name="w3ab2c21c10d433c15"></a>
+## See Also<a name="w4ab1c21c10d444c15"></a>
 + [NetworkAclEntry](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateNetworkAclEntry.html) in the *Amazon EC2 API Reference*
 + [Network ACLs](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html) in the *Amazon Virtual Private Cloud User Guide*\.

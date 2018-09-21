@@ -4,7 +4,7 @@ The `AWS::SNS::TopicPolicy` resource associates Amazon SNS topics with a policy\
 
 **Topics**
 + [Syntax](#aws-resource-sns-policy-syntax)
-+ [Properties](#w3ab2c21c10e1133b9)
++ [Properties](#w4ab1c21c10e1163b9)
 
 ## Syntax<a name="aws-resource-sns-policy-syntax"></a>
 
@@ -26,14 +26,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-sns-policy-syntax.yaml"></a>
 
 ```
-Type: "AWS::SNS::TopicPolicy"
+Type: AWS::SNS::TopicPolicy
 Properties:
   [PolicyDocument](#cfn-sns-topicpolicy-policydocument): PolicyDocument
   [Topics](#cfn-sns-topicpolicy-topics):
     - List of SNS topic ARNs
 ```
 
-## Properties<a name="w3ab2c21c10e1133b9"></a>
+## Properties<a name="w4ab1c21c10e1163b9"></a>
 
 `PolicyDocument`  <a name="cfn-sns-topicpolicy-policydocument"></a>
 A policy document that contains permissions to add to the specified SNS topics\.  

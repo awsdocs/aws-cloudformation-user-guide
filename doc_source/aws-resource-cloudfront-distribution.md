@@ -1,6 +1,6 @@
 # AWS::CloudFront::Distribution<a name="aws-resource-cloudfront-distribution"></a>
 
-Creates an Amazon CloudFront web distribution\. For general information about CloudFront distributions, see the [Introduction to Amazon CloudFront](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html) in the *Amazon CloudFront Developer Guide*\. For specific information about creating CloudFront web distributions, see [CreateDistribution](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateDistribution.html) in the *Amazon CloudFront API Reference*\.
+Creates an Amazon CloudFront web distribution\. For general information about CloudFront distributions, see the [Introduction to Amazon CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html) in the *Amazon CloudFront Developer Guide*\. For specific information about creating CloudFront web distributions, see [CreateDistribution](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateDistribution.html) in the *Amazon CloudFront API Reference*\.
 
 **Topics**
 + [Syntax](#aws-resource-cloudfront-distribution-syntax)
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cloudfront-distribution-syntax.yaml"></a>
 
 ```
-Type: "AWS::CloudFront::Distribution"
+Type: AWS::CloudFront::Distribution
 Properties:
   [DistributionConfig](#cfn-cloudfront-distribution-distributionconfig): 
     [*DistributionConfig*](aws-properties-cloudfront-distribution-distributionconfig.md)
@@ -47,19 +47,19 @@ The distribution's configuration information\.
 `Tags`  <a name="cfn-cloudfront-distribution-tags"></a>
 An arbitrary set of tags \(key–value pairs\) to associate with a CloudFront distribution\.  
  *Required*: No  
- *Type*: List of [](aws-properties-cloudfront-streamingdistribution-tag.md)  
+ *Type*: List of [CloudFront StreamingDistribution Tag](aws-properties-cloudfront-streamingdistribution-tag.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)   
 Duplicates not allowed\.
 
 ## Return Values<a name="aws-resource-cloudfront-distribution-ref"></a>
 
-### Ref<a name="w3ab2c21c10d215c11b2"></a>
+### Ref<a name="w4ab1c21c10d224c11b2"></a>
 
 *Returns*: The CloudFront distribution ID\. For example: `E27LVI50CSW06W`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d215c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d224c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -130,7 +130,7 @@ The following example specifies a distribution and assigns it a single tag\.
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   cloudfrontdistribution:
-    Type: 'AWS::CloudFront::Distribution'
+    Type: AWS::CloudFront::Distribution
     Properties:
       DistributionConfig:
         CacheBehaviors:
@@ -152,4 +152,4 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-cloudfront-distribution-seealso"></a>
-+ [CreateDistribution](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateDistribution.html) in the *Amazon CloudFront API Reference*
++ [CreateDistribution](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateDistribution.html) in the *Amazon CloudFront API Reference*

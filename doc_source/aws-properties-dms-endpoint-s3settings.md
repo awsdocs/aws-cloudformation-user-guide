@@ -2,7 +2,7 @@
 
 Use the `S3Settings` property to specify settings for an Amazon S3 endpoint for a [AWS::DMS::Endpoint](aws-resource-dms-endpoint.md) resource\.
 
-## Syntax<a name="w3ab2c21c14d586b5"></a>
+## Syntax<a name="w4ab1c21c14d644b5"></a>
 
 ### JSON<a name="aws-properties-dms-endpoint-s3settings-syntax.json"></a>
 
@@ -30,9 +30,9 @@ Use the `S3Settings` property to specify settings for an Amazon S3 endpoint for 
 [ServiceAccessRoleArn](#cfn-dms-endpoint-s3settings-serviceaccessrolearn): String
 ```
 
-## Properties<a name="w3ab2c21c14d586b7"></a>
+## Properties<a name="w4ab1c21c14d644b7"></a>
 
-For more information about option settings, see [Using Amazon S3 as a Target for AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html) in the *AWS Database Migration Service User Guide*
+For more information about option settings, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html) in the *AWS Database Migration Service User Guide*
 
 `BucketFolder`  <a name="cfn-dms-endpoint-s3settings-bucketfolder"></a>
 An optional parameter to set a folder name in the S3 bucket\. If provided, tables are created in the path <bucketFolder>/<schema\_name>/<table\_name>/\. If this parameter is not specified, then the path used is <schema\_name>/<table\_name>/\.   

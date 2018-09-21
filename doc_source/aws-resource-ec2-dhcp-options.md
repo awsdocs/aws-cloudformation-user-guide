@@ -6,11 +6,11 @@ For more information, see [CreateDhcpOptions](http://docs.aws.amazon.com/AWSEC2/
 
 **Topics**
 + [Syntax](#aws-resource-ec2-dhcpoptions-syntax)
-+ [Properties](#w3ab2c21c10d383c11)
++ [Properties](#w4ab1c21c10d395c11)
 + [Conditional Properties](#dhcp-options-conditional-note)
-+ [Return Values](#w3ab2c21c10d383c15)
-+ [Example](#w3ab2c21c10d383c17)
-+ [See Also](#w3ab2c21c10d383c19)
++ [Return Values](#w4ab1c21c10d395c15)
++ [Example](#w4ab1c21c10d395c17)
++ [See Also](#w4ab1c21c10d395c19)
 
 ## Syntax<a name="aws-resource-ec2-dhcpoptions-syntax"></a>
 
@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-dhcpoptions-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::DHCPOptions"
+Type: AWS::EC2::DHCPOptions
 Properties:
   [DomainName](#cfn-ec2-dhcpoptions-domainname): String
   [DomainNameServers](#cfn-ec2-dhcpoptions-domainnameservers):
@@ -49,7 +49,7 @@ Properties:
     -Resource Tag
 ```
 
-## Properties<a name="w3ab2c21c10d383c11"></a>
+## Properties<a name="w4ab1c21c10d395c11"></a>
 
 `DomainName`  <a name="cfn-ec2-dhcpoptions-domainname"></a>
 A domain name of your choice\.  
@@ -111,15 +111,15 @@ After this condition has been fulfilled, the rest of these properties are option
 
 If you specify `NetbiosNameServers`, then `NetbiosNodeType` is required\.
 
-## Return Values<a name="w3ab2c21c10d383c15"></a>
+## Return Values<a name="w4ab1c21c10d395c15"></a>
 
-### Ref<a name="w3ab2c21c10d383c15b2"></a>
+### Ref<a name="w4ab1c21c10d395c15b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10d383c17"></a>
+## Example<a name="w4ab1c21c10d395c17"></a>
 
 ### JSON<a name="aws-resource-ec2-dhcpoptions-example.json"></a>
 
@@ -148,7 +148,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 AWSTemplateFormatVersion: "2010-09-09"
 Resources: 
   myDhcpOptions: 
-    Type: "AWS::EC2::DHCPOptions"
+    Type: AWS::EC2::DHCPOptions
     Properties: 
       DomainName: example.com
       DomainNameServers: 
@@ -164,7 +164,7 @@ Resources:
           Value: bar
 ```
 
-## See Also<a name="w3ab2c21c10d383c19"></a>
+## See Also<a name="w4ab1c21c10d395c19"></a>
 + [CreateDhcpOptions](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateDhcpOptions.html) in the *Amazon EC2 API Reference*
 + [Using Tags](http://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/Using_Tags.html) in the *Amazon Elastic Compute Cloud User Guide*\.
 + [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt) \- *DHCP Options and BOOTP Vendor Extensions*, Network Working Group, 1997

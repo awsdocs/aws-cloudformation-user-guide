@@ -1,12 +1,12 @@
 # AWS::WAF::SizeConstraintSet<a name="aws-resource-waf-sizeconstraintset"></a>
 
-The `AWS::WAF::SizeConstraintSet` resource specifies a size constraint that AWS WAF uses to check the size of a web request and which parts of the request to check\. For more information, see [CreateSizeConstraintSet](http://docs.aws.amazon.com/waf/latest/APIReference/API_CreateSizeConstraintSet.html) in the *AWS WAF API Reference*\.
+The `AWS::WAF::SizeConstraintSet` resource specifies a size constraint that AWS WAF uses to check the size of a web request and which parts of the request to check\. For more information, see [CreateSizeConstraintSet](https://docs.aws.amazon.com/waf/latest/APIReference/API_CreateSizeConstraintSet.html) in the *AWS WAF API Reference*\.
 
 **Topics**
 + [Syntax](#aws-resource-waf-sizeconstraintset-syntax)
-+ [Properties](#w3ab2c21c10e1197b9)
-+ [Return Value](#w3ab2c21c10e1197c11)
-+ [Examples](#w3ab2c21c10e1197c13)
++ [Properties](#w4ab1c21c10e1224b9)
++ [Return Value](#w4ab1c21c10e1224c11)
++ [Examples](#w4ab1c21c10e1224c13)
 
 ## Syntax<a name="aws-resource-waf-sizeconstraintset-syntax"></a>
 
@@ -34,7 +34,7 @@ Properties:
     - SizeConstraint
 ```
 
-## Properties<a name="w3ab2c21c10e1197b9"></a>
+## Properties<a name="w4ab1c21c10e1224b9"></a>
 
 `Name`  <a name="cfn-waf-sizeconstraintset-name"></a>
 A friendly name or description for the `SizeConstraintSet`\.  
@@ -48,19 +48,19 @@ The size constraint and the part of the web request to check\.
 *Type*: List of [AWS WAF SizeConstraintSet SizeConstraint](aws-properties-waf-sizeconstraintset-sizeconstraint.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10e1197c11"></a>
+## Return Value<a name="w4ab1c21c10e1224c11"></a>
 
-### Ref<a name="w3ab2c21c10e1197c11b2"></a>
+### Ref<a name="w4ab1c21c10e1224c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource physical ID, such as `1234a1a-a1b1-12a1-abcd-a123b123456`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w3ab2c21c10e1197c13"></a>
+## Examples<a name="w4ab1c21c10e1224c13"></a>
 
 The following examples show you how to define a size constraint, add it to a rule, and add the rule to a web access control list \(ACL\)\.
 
-### Define a Size Constraint<a name="w3ab2c21c10e1197c13b4"></a>
+### Define a Size Constraint<a name="w4ab1c21c10e1224c13b4"></a>
 
 The following example checks that the body of an HTTP request equals `4096` bytes\.
 
@@ -101,7 +101,7 @@ The following example checks that the body of an HTTP request equals `4096` byte
           TextTransformation: "NONE"
 ```
 
-### Associate a `SizeConstraintSet` with a Web ACL Rule<a name="w3ab2c21c10e1197c13b6"></a>
+### Associate a `SizeConstraintSet` with a Web ACL Rule<a name="w4ab1c21c10e1224c13b6"></a>
 
 The following example associates the `MySizeConstraint` object with a web ACL rule\.
 
@@ -140,7 +140,7 @@ SizeConstraintRule:
         Type: "SizeConstraint"
 ```
 
-### Create a Web ACL<a name="w3ab2c21c10e1197c13b8"></a>
+### Create a Web ACL<a name="w4ab1c21c10e1224c13b8"></a>
 
 The following example associates the `SizeConstraintRule` rule with a web ACL\. The web ACL blocks all requests except for requests with a body size equal to `4096` bytes\.
 

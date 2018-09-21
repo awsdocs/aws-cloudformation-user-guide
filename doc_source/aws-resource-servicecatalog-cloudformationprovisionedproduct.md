@@ -1,6 +1,6 @@
 # AWS::ServiceCatalog::CloudFormationProvisionedProduct<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct"></a>
 
-Provisions the specified product for AWS Service Catalog\. For more information, see [ProvisionProduct](http://docs.aws.amazon.com/servicecatalog/latest/dg/API_ProvisionProduct.html) in the *AWS Service Catalog Developer Guide*\. 
+Provisions the specified product for AWS Service Catalog\. For more information, see [ProvisionProduct](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ProvisionProduct.html) in the *AWS Service Catalog Developer Guide*\. 
 
 **Topics**
 + [Syntax](#aws-resource-servicecatalog-cloudformationprovisionedproduct-syntax)
@@ -90,13 +90,13 @@ A user\-friendly name for the provisioned product\. This name must be unique for
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `ProvisioningArtifactId`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactid"></a>
-The identifier of the provisioning artifact\. A provisioning artifact is also known as a product version\. You must specify either the ID or the name of the provisioning artifact, but not both\.  
+The identifier of the provisioning artifact \(also known as a version\) for the product\. You must specify either the ID or the name of the provisioning artifact, but not both\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ProvisioningArtifactName`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactname"></a>
-The name of the provisioning artifact\. A provisioning artifact is also known as a product version\. This name must be unique for the product\. You must specify either the name or the ID of the provisioning artifact, but not both\.  
+The name of the provisioning artifact \(also known as a version\) for the product\. This name must be unique for the product\. You must specify either the name or the ID of the provisioning artifact, but not both\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
@@ -110,50 +110,7 @@ Parameters specified by the administrator that are required for provisioning the
 `Tags`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-tags"></a>
 One or more tags\.  
  *Required*: No  
- *Type*: List of [ AWS CloudFormation Resource Tags TypeAWS CloudFormation Resource Tags  Applies user\-defined tags to supported resource types by using the Resource Tags property type\.   You can use the AWS CloudFormation Resource Tags property to apply tags to resources, which can help you identify and categorize those resources\. You can tag only resources for which AWS CloudFormation supports tagging\. For information about which resources you can tag with AWS CloudFormation, see the individual resources in [AWS Resource Types Reference](aws-template-resource-type-ref.md)\.  Tagging implementations might vary by resource\. For example, AWS::AutoScaling::AutoScalingGroup provides an additional, required `PropagateAtLaunch` property as part of its tagging scheme\.  In addition to any tags you define, AWS CloudFormation automatically creates the following stack\-level tags with the prefix `aws:`:   `aws:cloudformation:logical-id`   `aws:cloudformation:stack-id`   `aws:cloudformation:stack-name`   All stack\-level tags, including automatically created tags, are propagated to resources that AWS CloudFormation supports\. Currently, tags are not propagated to Amazon EBS volumes that are created from block device mappings\. Syntax JSON 
-
-```
-{
-  "[Key](#cfn-resource-tags-key)" : String,
-  "[Value](#cfn-resource-tags-value)" : String
-}
-```  YAML 
-
-```
-[Key](#cfn-resource-tags-key): String
-[Value](#cfn-resource-tags-value): String
-```   Properties  
-
-`Key`  <a name="cfn-resource-tags-key"></a>
-The key name of the tag\. You can specify a value that is 1 to 127 Unicode characters in length and cannot be prefixed with `aws:`\. You can use any of the following characters: the set of Unicode letters, digits, whitespace, `_`, `.`, `/`, `=`, `+`, and `-`\.  
-*Required*: Yes  
-*Type*: String 
-
-`Value`  <a name="cfn-resource-tags-value"></a>
-The value for the tag\. You can specify a value that is 1 to 255 Unicode characters in length and cannot be prefixed with `aws:`\. You can use any of the following characters: the set of Unicode letters, digits, whitespace, `_`, `.`, `/`, `=`, `+`, and `-`\.  
-*Required*: Yes  
-*Type*: String    Example  This example shows a `Tags` property\. You specify this property within the `Properties` section of a resource that supports it\. When the resource is created, it is tagged with the tags you declare\. JSON 
-
-```
-"Tags" : [
-      {
-        "Key" : "keyname1",
-        "Value" : "value1"
-      },
-      {
-        "Key" : "keyname2",
-        "Value" : "value2"
-      }
-    ]
-```  YAML 
-
-```
-Tags: 
-  - Key: "keyname1"
-    Value: "value1"
-  - Key: "keyname2"
-    Value: "value2"
-```   See Also   [Setting Stack Options](cfn-console-add-tags.md)   [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)    ](aws-properties-resource-tags.md) property types  
+ *Type*: List of [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md) property types  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## Return Values<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct-returnvalues"></a>

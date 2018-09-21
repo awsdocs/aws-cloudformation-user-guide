@@ -1,6 +1,6 @@
 # AWS::SageMaker::NotebookInstanceLifecycleConfig<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig"></a>
 
-The `AWS::SageMaker::NotebookInstanceLifecycleConfig` resource specifies shell scripts that run when you create and/or start a notebook instance\. For more information, see [Customize a Notebook Instance](http://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html) in the *Amazon SageMaker Developer Guide*\. 
+The `AWS::SageMaker::NotebookInstanceLifecycleConfig` resource specifies shell scripts that run when you create and/or start a notebook instance\. For more information, see [Customize a Notebook Instance](https://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html) in the *Amazon SageMaker Developer Guide*\. 
 
 **Topics**
 + [Syntax](#aws-resource-sagemaker-notebookinstancelifecycleconfig-syntax)

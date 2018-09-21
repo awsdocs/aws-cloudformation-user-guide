@@ -4,7 +4,7 @@ The `AWS::ApiGateway::BasePathMapping` resource creates a base path that clients
 
 **Topics**
 + [Syntax](#aws-resource-apigateway-basepathmapping-syntax)
-+ [Properties](#w3ab2c21c10c27b9)
++ [Properties](#w4ab1c21c10c34b9)
 
 ## Syntax<a name="aws-resource-apigateway-basepathmapping-syntax"></a>
 
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-basepathmapping-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::BasePathMapping"
+Type: AWS::ApiGateway::BasePathMapping
 Properties:
   [BasePath](#cfn-apigateway-basepathmapping-basepath): String
   [DomainName](#cfn-apigateway-basepathmapping-domainname): String
@@ -35,7 +35,7 @@ Properties:
   [Stage](#cfn-apigateway-basepathmapping-stage): String
 ```
 
-## Properties<a name="w3ab2c21c10c27b9"></a>
+## Properties<a name="w4ab1c21c10c34b9"></a>
 
 `BasePath`  <a name="cfn-apigateway-basepathmapping-basepath"></a>
 The base path name that callers of the API must provide in the URL after the domain name\. If you specify this property, it can't be an empty string\.  

@@ -32,4 +32,4 @@ Valid Range: Minimum value of 0\. Maximum value of 7200\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-kinesisfirehose-deliverystream-splunkretryoptions-seealso"></a>
-+ [SplunkRetryOptions](http://docs.aws.amazon.com/firehose/latest/APIReference/API_SplunkRetryOptions.html) in the *Amazon Kinesis Data Firehose API Reference*
++ [SplunkRetryOptions](https://docs.aws.amazon.com/firehose/latest/APIReference/API_SplunkRetryOptions.html) in the *Amazon Kinesis Data Firehose API Reference*

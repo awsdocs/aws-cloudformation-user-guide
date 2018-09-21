@@ -1,6 +1,6 @@
 # AWS::CloudFront::StreamingDistribution<a name="aws-resource-cloudfront-streamingdistribution"></a>
 
-The `AWS::CloudFront::StreamingDistribution` resource specifies an RMTP distribution for Amazon CloudFront\. An RTMP distribution is similar to a web distribution, but an RTMP distribution streams media files using the Adobe Real\-Time Messaging Protocol \(RTMP\) instead of serving files using HTTP\. For more information, see [CreateStreamingDistribution](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateStreamingDistribution.html) in the *Amazon CloudFront API Reference*\. 
+The `AWS::CloudFront::StreamingDistribution` resource specifies an RMTP distribution for Amazon CloudFront\. An RTMP distribution is similar to a web distribution, but an RTMP distribution streams media files using the Adobe Real\-Time Messaging Protocol \(RTMP\) instead of serving files using HTTP\. For more information, see [CreateStreamingDistribution](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateStreamingDistribution.html) in the *Amazon CloudFront API Reference*\. 
 
 **Topics**
 + [Syntax](#aws-resource-cloudfront-streamingdistribution-syntax)
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cloudfront-streamingdistribution-syntax.yaml"></a>
 
 ```
-Type: "AWS::CloudFront::StreamingDistribution"
+Type: AWS::CloudFront::StreamingDistribution
 Properties:
   [StreamingDistributionConfig](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig): StreamingDistributionConfig
   [Tags](#cfn-cloudfront-streamingdistribution-tags): 
@@ -52,13 +52,13 @@ Duplicates not allowed\.
 
 ## Return Values<a name="aws-resource-cloudfront-streamingdistribution-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d223c12b3"></a>
+### Ref<a name="w4ab1c21c10d232c12b3"></a>
 
 When you pass the logical ID of an `AWS::CloudFront::StreamingDistribution` resource to the intrinsic `Ref` function, the function returns the streaming distribution ID, such as `E1E7FEN9T35R9W`\. 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
-### Fn::GetAtt<a name="w3ab2c21c10d223c12b5"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d232c12b5"></a>
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
@@ -123,7 +123,7 @@ The following example specifies a streaming distribution and assigns it a single
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   streamingdistribution:
-    Type: 'AWS::CloudFront::StreamingDistribution'
+    Type: AWS::CloudFront::StreamingDistribution
     Properties:
       StreamingDistributionConfig:
         Aliases:
@@ -148,4 +148,4 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-cloudfront-streamingdistribution-seealso"></a>
-+ [CreateStreamingDistribution](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateStreamingDistribution.html) in the *Amazon CloudFront API Reference*
++ [CreateStreamingDistribution](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateStreamingDistribution.html) in the *Amazon CloudFront API Reference*

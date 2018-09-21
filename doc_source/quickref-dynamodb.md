@@ -2,7 +2,7 @@
 
 **Topics**
 + [Application Auto Scaling with an Amazon DynamoDB Table](#quickref-dynamodb-application-autoscaling)
-+ [See Also](#w3ab2c17c24c35b7)
++ [See Also](#w4ab1c17c23c35b7)
 
 ## Application Auto Scaling with an Amazon DynamoDB Table<a name="quickref-dynamodb-application-autoscaling"></a>
 
@@ -155,7 +155,7 @@ This example sets up Application Auto Scaling for a `AWS::DynamoDB::Table` resou
 ```
 Resources:
   DDBTable:
-    Type: "AWS::DynamoDB::Table"
+    Type: AWS::DynamoDB::Table
     Properties:
       AttributeDefinitions:
         -
@@ -190,7 +190,7 @@ Resources:
         ReadCapacityUnits: 5
         WriteCapacityUnits: 5
   WriteCapacityScalableTarget:
-    Type: "AWS::ApplicationAutoScaling::ScalableTarget"
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
     Properties:
       MaxCapacity: 15
       MinCapacity: 5
@@ -202,7 +202,7 @@ Resources:
       ScalableDimension: dynamodb:table:WriteCapacityUnits
       ServiceNamespace: dynamodb
   ScalingRole:
-    Type: "AWS::IAM::Role"
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
@@ -233,7 +233,7 @@ Resources:
                   - "cloudwatch:DeleteAlarms"
                 Resource: "*"
   WriteScalingPolicy:
-    Type: "AWS::ApplicationAutoScaling::ScalingPolicy"
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
     Properties:
       PolicyName: WriteAutoScalingPolicy
       PolicyType: TargetTrackingScaling
@@ -246,6 +246,6 @@ Resources:
           PredefinedMetricType: DynamoDBWriteCapacityUtilization
 ```
 
-## See Also<a name="w3ab2c17c24c35b7"></a>
+## See Also<a name="w4ab1c17c23c35b7"></a>
 
 For more information about DynamoDB resources, see [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md)\.

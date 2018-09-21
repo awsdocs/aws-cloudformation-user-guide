@@ -1,8 +1,8 @@
 # Amazon S3 Bucket Rule<a name="aws-properties-s3-bucket-lifecycleconfig-rule"></a>
 
-The `Rule` property type describes lifecycle rules\. The `Rules` subproperty of the [Amazon S3 Bucket LifecycleConfiguration](aws-properties-s3-bucket-lifecycleconfig.md) property contains a list of `Rule` property types\. For more information, see [PUT Bucket lifecycle](http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTlifecycle.html) in the *Amazon Simple Storage Service \(Amazon S3\) API Reference*\.
+The `Rule` property type describes lifecycle rules\. The `Rules` subproperty of the [Amazon S3 Bucket LifecycleConfiguration](aws-properties-s3-bucket-lifecycleconfig.md) property contains a list of `Rule` property types\. For more information, see [PUT Bucket lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTlifecycle.html) in the *Amazon Simple Storage Service \(Amazon S3\) API Reference*\.
 
-## Syntax<a name="w3ab2c21c14e1762b5"></a>
+## Syntax<a name="w4ab1c21c14e1869b5"></a>
 
 ### JSON<a name="aws-properties-s3-bucket-lifecycleconfig-rule-syntax.json"></a>
 
@@ -46,7 +46,7 @@ The `Rule` property type describes lifecycle rules\. The `Rules` subproperty of 
   - Transition
 ```
 
-## Properties<a name="w3ab2c21c14e1762b7"></a>
+## Properties<a name="w4ab1c21c14e1869b7"></a>
 
 `AbortIncompleteMultipartUpload`  <a name="cfn-s3-bucket-rule-abortincompletemultipartupload"></a>
 Specifies a lifecycle rule that aborts incomplete multipart uploads to an Amazon S3 bucket\.  

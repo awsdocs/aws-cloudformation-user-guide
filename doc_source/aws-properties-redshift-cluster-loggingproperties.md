@@ -22,7 +22,7 @@ Use the `LoggingProperties` property of the [AWS::Redshift::Cluster](aws-resourc
 
 ## Properties<a name="aws-properties-redshift-cluster-loggingproperties-properties"></a>
 
-For more information and property constraints, see [EnableLogging](http://docs.aws.amazon.com/redshift/latest/APIReference/API_EnableLogging.html) in the *Amazon Redshift API Reference*\.
+For more information and property constraints, see [EnableLogging](https://docs.aws.amazon.com/redshift/latest/APIReference/API_EnableLogging.html) in the *Amazon Redshift API Reference*\.
 
 `BucketName`  <a name="cfn-redshift-cluster-loggingproperties-bucketname"></a>
 The name of an existing S3 bucket where the log files are to be stored\.  

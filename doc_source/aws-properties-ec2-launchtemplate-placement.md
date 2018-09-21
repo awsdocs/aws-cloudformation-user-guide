@@ -64,4 +64,4 @@ Valid values include `default`, `dedicated`, and `host`\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ec2-launchtemplate-placement-seealso"></a>
-+ [LaunchTemplatePlacementRequest](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplatePlacementRequest.html) in the *Amazon EC2 API Reference*
++ [LaunchTemplatePlacementRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplatePlacementRequest.html) in the *Amazon EC2 API Reference*

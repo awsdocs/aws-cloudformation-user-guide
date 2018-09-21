@@ -53,4 +53,4 @@ Minimum length of 1\. Maximum length of 255\. Versions must fit the following pa
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ec2-instance-launchtemplatespecification-seealso"></a>
-+ [LaunchTemplateSpecification](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateSpecification.html) in the *Amazon EC2 API Reference*
++ [LaunchTemplateSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateSpecification.html) in the *Amazon EC2 API Reference*

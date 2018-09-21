@@ -56,6 +56,6 @@ You cannot update conditions by themselves\. You can update conditions only when
 
 ## Get and Update a Template for a Stack \(CLI\)<a name="using-cfn-updating-stacks-get-stack.CLI"></a>
 
-1. To get the template for the stack you want to update, use the command [http://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template.html](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template.html)\.
+1. To get the template for the stack you want to update, use the command [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template.html)\.
 
 1. Copy the template, paste it into a text file, modify it, and save it\. Copy *only* the template\. The command encloses the template in quotation marks, but do not copy the quotation marks surrounding the template\. The template itself starts with an open brace and ends with the final close brace\. Specify changes to the stack's resources in this file\.

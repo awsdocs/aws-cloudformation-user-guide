@@ -1,6 +1,6 @@
 # AWS::ServiceCatalog::AcceptedPortfolioShare<a name="aws-resource-servicecatalog-acceptedportfolioshare"></a>
 
-Accepts an offer to share the specified portfolio for AWS Service Catalog\. For more information, see [AcceptPortfolioShare](http://docs.aws.amazon.com/servicecatalog/latest/dg/API_AcceptPortfolioShare.html) in the *AWS Service Catalog Developer Guide*\.
+Accepts an offer to share the specified portfolio for AWS Service Catalog\. For more information, see [AcceptPortfolioShare](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_AcceptPortfolioShare.html) in the *AWS Service Catalog Developer Guide*\.
 
 **Topics**
 + [Syntax](#aws-resource-servicecatalog-acceptedportfolioshare-syntax)

@@ -28,7 +28,7 @@ If you execute a change set on a stack that has a stack policy associated with i
    AWS CloudFormation immediately starts updating the stack\. You can monitor the progress of the update by viewing the [**Events**](cfn-console-view-stack-data-resources.md) tab\.
 
 **To execute a change set \(AWS CLI\)**
-+ Run the [aws cloudformation execute\-change\-set](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/execute-change-set.html) command\.
++ Run the [aws cloudformation execute\-change\-set](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/execute-change-set.html) command\.
 
   Specify the change set ID of the change set that you want to execute, as shown in the following example:
 

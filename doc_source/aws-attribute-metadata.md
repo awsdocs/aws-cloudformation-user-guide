@@ -5,34 +5,37 @@ The Metadata attribute enables you to associate structured data with a resource\
 **Note**  
 AWS CloudFormation does not validate the syntax within the Metadata attribute\.
 
-You can retrieve this data using the AWS command [http://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-resource.html](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-resource.html) or the [DescribeStackResource action](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeStackResource.html)\.
+You can retrieve this data using the AWS command [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-resource.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-resource.html) or the [DescribeStackResource action](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeStackResource.html)\.
 
-## Example<a name="w3ab2c21c23c19b9"></a>
+## Example<a name="w4ab1c21c23c19b9"></a>
 
 The following template contains an Amazon S3 bucket resource with a Metadata attribute\.
 
 ### JSON<a name="aws-attribute-metadata-example.json"></a>
 
 ```
-{
-   "AWSTemplateFormatVersion" : "2010-09-09",
-   "Resources" : {
-      "MyS3Bucket" : {
-         "Type" : "AWS::S3::Bucket",
-         "Metadata" : { "Object1" : "Location1",  "Object2" : "Location2" }
-      }
-   }
-}
+ 1. {
+ 2.    "AWSTemplateFormatVersion" : "2010-09-09",
+ 3.    "Resources" : {
+ 4.       "MyS3Bucket" : {
+ 5.          "Type" : "AWS::S3::Bucket",
+ 6.          "Metadata" : { 
+ 7.             "Object1" : "Location1",  
+ 8.             "Object2" : "Location2" 
+ 9.          }
+10.       }
+11.    }
+12. }
 ```
 
 ### YAML<a name="aws-attribute-metadata-example.yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09'
-Resources:
-  MyS3Bucket:
-    Type: AWS::S3::Bucket
-    Metadata:
-      Object1: Location1
-      Object2: Location2
+1. AWSTemplateFormatVersion: '2010-09-09'
+2. Resources:
+3.   MyS3Bucket:
+4.     Type: AWS::S3::Bucket
+5.     Metadata:
+6.       Object1: Location1
+7.       Object2: Location2
 ```

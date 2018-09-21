@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-guardduty-detector-syntax.yaml"></a>
 
 ```
-Type: "AWS::GuardDuty::Detector"
+Type: AWS::GuardDuty::Detector
 Properties:
   [Enable](#cfn-guardduty-detector-enable): Boolean
 ```
@@ -68,7 +68,7 @@ The following example shows how to declare an `AWS::GuardDuty::Detector` resourc
 
 ```
 mydetector:
-  Type: "AWS::GuardDuty::Detector"
+  Type: AWS::GuardDuty::Detector
   Properties:
     Enable: true
 ```

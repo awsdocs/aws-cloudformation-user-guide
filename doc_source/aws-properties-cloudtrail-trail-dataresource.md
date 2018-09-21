@@ -1,6 +1,6 @@
 # AWS CloudTrail Trail DataResource<a name="aws-properties-cloudtrail-trail-dataresource"></a>
 
-The `DataResource` property type specifies Amazon S3 objects for event selectors in a CloudTrail trail\. Data events are object\-level API operations that access Amazon S3 objects, such as `GetObject`, `DeleteObject`, and `PutObject`\. You can specify up to 250 Amazon S3 buckets and object prefixes for a trail\. For more information, see [DataResource](http://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_DataResource.html) in the *AWS CloudTrail API Reference*\.
+The `DataResource` property type specifies Amazon S3 objects for event selectors in a CloudTrail trail\. Data events are object\-level API operations that access Amazon S3 objects, such as `GetObject`, `DeleteObject`, and `PutObject`\. You can specify up to 250 Amazon S3 buckets and object prefixes for a trail\. For more information, see [DataResource](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_DataResource.html) in the *AWS CloudTrail API Reference*\.
 
  `DataResource` is a property of the [CloudTrail Trail EventSelector](aws-properties-cloudtrail-trail-eventselector.md) property type\. 
 
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudtrail-trail-dataresource-properties"></a>
 
 `Type`  <a name="cfn-cloudtrail-trail-dataresource-type"></a>
-The resource type to log data events for\. You can specify only the following value: `AWS::S3::Object`\.  
+The resource type to log data events for\. You can specify the following values: `AWS::S3::Object` or `AWS::Lambda::Function`\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

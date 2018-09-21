@@ -1,6 +1,6 @@
 # AWS::ServiceCatalog::LaunchNotificationConstraint<a name="aws-resource-servicecatalog-launchnotificationconstraint"></a>
 
-Creates a notification constraint for AWS Service Catalog\. For more information, see [CreateConstraint](http://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateConstraint.html) in the *AWS Service Catalog Developer Guide*\.
+Creates a notification constraint for AWS Service Catalog\. For more information, see [CreateConstraint](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateConstraint.html) in the *AWS Service Catalog Developer Guide*\.
 
 **Topics**
 + [Syntax](#aws-resource-servicecatalog-launchnotificationconstraint-syntax)

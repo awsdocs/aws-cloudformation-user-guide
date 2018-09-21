@@ -511,7 +511,7 @@ Resources:
       S3BucketName: !Ref ConfigBucket
 
   S3BucketPublicReadRule:
-    Type: "AWS::Config::ConfigRule"
+    Type: AWS::Config::ConfigRule
     DependsOn:
       - ConfigRecorder
     Properties:

@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-glue-job-executionproperty-properties"></a>
 
-For more information, see [ExecutionProperty Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-job.html#aws-glue-api-jobs-job-ExecutionProperty) in the *AWS Glue Developer Guide*\.
+For more information, see [ExecutionProperty Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-job.html#aws-glue-api-jobs-job-ExecutionProperty) in the *AWS Glue Developer Guide*\.
 
 `MaxConcurrentRuns`  <a name="cfn-glue-job-executionproperty-maxconcurrentruns"></a>
 The maximum number of concurrent runs that are allowed for the job\.  

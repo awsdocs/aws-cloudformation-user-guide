@@ -2,7 +2,7 @@
 
 `ParameterObjects` is a property of the [AWS::DataPipeline::Pipeline](aws-resource-datapipeline-pipeline.md) resource that describes parameters that are used in a pipeline definition\.
 
-## Syntax<a name="w3ab2c21c14d554b5"></a>
+## Syntax<a name="w4ab1c21c14d612b5"></a>
 
 ### JSON<a name="aws-properties-datapipeline-pipeline-parameterobjects-syntax.json"></a>
 
@@ -21,7 +21,7 @@
 [Id](#cfn-datapipeline-pipeline-parameterobjects-id): String
 ```
 
-## Properties<a name="w3ab2c21c14d554b7"></a>
+## Properties<a name="w4ab1c21c14d612b7"></a>
 
 `Attributes`  <a name="cfn-datapipeline-pipeline-parameterobjects-attributes"></a>
 Key\-value pairs that define the attributes of the parameter object\.  

@@ -5,9 +5,9 @@ The AWS::ElastiCache::ParameterGroup type creates a new cache parameter group\. 
 **Topics**
 + [Syntax](#aws-resource-elasticache-parametergroup-syntax)
 + [Properties](#aws-properties-elasticache-parameter-group-prop)
-+ [Return Values](#w3ab2c21c10d589c11)
-+ [Example](#w3ab2c21c10d589c13)
-+ [See Also](#w3ab2c21c10d589c15)
++ [Return Values](#w4ab1c21c10d608c11)
++ [Example](#w4ab1c21c10d608c13)
++ [See Also](#w4ab1c21c10d608c15)
 
 ## Syntax<a name="aws-resource-elasticache-parametergroup-syntax"></a>
 
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticache-parametergroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElastiCache::ParameterGroup"
+Type: AWS::ElastiCache::ParameterGroup
 Properties: 
   CacheParameterGroupFamily: String
   Description: String
@@ -65,7 +65,7 @@ A comma\-delimited list of parameter name/value pairs\. For more information, go
 *Type*: Mapping of key\-value pairs  
 *Update requires*: Updates are not supported\.
 
-## Return Values<a name="w3ab2c21c10d589c11"></a>
+## Return Values<a name="w4ab1c21c10d608c11"></a>
 
 ### Ref<a name="aws-properties-elasticache-parameter-group-ref"></a>
 
@@ -73,7 +73,7 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w3ab2c21c10d589c13"></a>
+## Example<a name="w4ab1c21c10d608c13"></a>
 
 ### JSON<a name="aws-resource-elasticache-parametergroup-example.json"></a>
 
@@ -95,7 +95,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ```
 MyParameterGroup: 
-  Type: "AWS::ElastiCache::ParameterGroup"
+  Type: AWS::ElastiCache::ParameterGroup
   Properties: 
     Description: "MyNewParameterGroup"
     CacheParameterGroupFamily: "memcached1.4"
@@ -104,7 +104,7 @@ MyParameterGroup:
       chunk_size_growth_factor: "1.02"
 ```
 
-## See Also<a name="w3ab2c21c10d589c15"></a>
+## See Also<a name="w4ab1c21c10d608c15"></a>
 + [CreateCacheParameterGroup](http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheParameterGroup.html) in the *Amazon ElastiCache API Reference Guide*
 + [ModifyCacheParameterGroup](http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheParameterGroup.html) in the *Amazon ElastiCache API Reference Guide*
 + [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)

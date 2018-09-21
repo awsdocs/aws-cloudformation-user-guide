@@ -35,6 +35,6 @@ The name of the database\.
 *Type*: String
 
 `Type`  <a name="cfn-opsworks-app-datasource-type"></a>
-The type of the data source, such as `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`\. For valid values, see the [DataSource](http://docs.aws.amazon.com/opsworks/latest/APIReference/API_DataSource.html) type in the *AWS OpsWorks Stacks API Reference*\.  
+The type of the data source, such as `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`\. For valid values, see the [DataSource](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_DataSource.html) type in the *AWS OpsWorks Stacks API Reference*\.  
 *Required*: No  
 *Type*: String

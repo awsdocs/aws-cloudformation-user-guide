@@ -2,7 +2,7 @@
 
 <a name="aws-properties-ses-receiptrule-lambdaaction-description"></a>The `LambdaAction` property type includes an action in an Amazon SES receipt rule that calls an AWS Lambda function and, optionally, publishes a notification to Amazon SNS\.
 
-To enable Amazon SES to call your AWS Lambda function or to publish to an Amazon SNS topic of another account, Amazon SES must have permission to access those resources\. For information about giving permissions, see [Giving Permissions to Amazon SES for Email Receiving](url-ses-dev;receiving-email-permissions.html) in the *Amazon Simple Email Service Developer Guide*\. For information about using AWS Lambda actions in receipt rules, see [Lambda Action](url-ses-dev;receiving-email-action-lambda.html) in the *Amazon Simple Email Service Developer Guide*\.
+To enable Amazon SES to call your AWS Lambda function or to publish to an Amazon SNS topic of another account, Amazon SES must have permission to access those resources\. For information about giving permissions, see [Giving Permissions to Amazon SES for Email Receiving](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-permissions.html) in the *Amazon Simple Email Service Developer Guide*\. For information about using AWS Lambda actions in receipt rules, see [Lambda Action](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-action-lambda.html) in the *Amazon Simple Email Service Developer Guide*\.
 
 <a name="aws-properties-ses-receiptrule-lambdaaction-inheritance"></a> `LambdaAction` is a property of the [Amazon Simple Email Service ReceiptRule Action](aws-properties-ses-receiptrule-action.md) property type\.
 
@@ -37,7 +37,7 @@ The Amazon Resource Name \(ARN\) of the AWS Lambda function\. An example of an A
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `InvocationType`  <a name="cfn-ses-receiptrule-lambdaaction-invocationtype"></a>
-The invocation type of the AWS Lambda function\. An invocation type of `RequestResponse` means that the execution of the function will immediately result in a response, and a value of `Event` means that the function will be invoked asynchronously\. The default value is `Event`\. For information about AWS Lambda invocation types, see [Creating Receipt Rules for Amazon SES Email Receiving](url-lam-dev;API_Invoke.html) in the *AWS Lambda Developer Guide*\.  
+The invocation type of the AWS Lambda function\. An invocation type of `RequestResponse` means that the execution of the function will immediately result in a response, and a value of `Event` means that the function will be invoked asynchronously\. The default value is `Event`\. For information about AWS Lambda invocation types, see [Invoke](https://docs.aws.amazon.com/lambda/latest/dg/API_Invoke.html) in the *AWS Lambda Developer Guide*\.  
 Valid values include `Event` and `RequestResponse`\.  
 There is a 30\-second timeout on `RequestResponse` invocations\. You should use `Event` invocation in most cases\. Use `RequestResponse` only when you want to make a mail flow decision, such as whether to stop the receipt rule or the receipt rule set\. 
  *Required*: No  
@@ -51,7 +51,7 @@ The Amazon Resource Name \(ARN\) of the Amazon SNS topic to notify when the Lamb
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ses-receiptrule-lambdaaction-seealso"></a>
-+ [Creating Receipt Rules for Amazon SES Email Receiving](url-ses-dev;receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*
-+ [Giving Permissions to Amazon SES for Email Receiving](url-ses-dev;receiving-email-permissions.html) in the *Amazon Simple Email Service Developer Guide*
-+ [Lambda Action](url-ses-dev;receiving-email-action-lambda.html) in the *Amazon Simple Email Service Developer Guide*
-+ [LambdaAction](url-ses-api;API_LambdaAction.html) in the *Amazon Simple Email Service API Reference*
++ [Creating Receipt Rules for Amazon SES Email Receiving](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*
++ [Giving Permissions to Amazon SES for Email Receiving](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-permissions.html) in the *Amazon Simple Email Service Developer Guide*
++ [Lambda Action](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-action-lambda.html) in the *Amazon Simple Email Service Developer Guide*
++ [LambdaAction](https://docs.aws.amazon.com/ses/latest/APIReference/API_LambdaAction.html) in the *Amazon Simple Email Service API Reference*

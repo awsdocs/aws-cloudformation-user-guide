@@ -1,8 +1,8 @@
 # Route 53 HealthCheck HealthCheckConfig<a name="aws-properties-route53-healthcheck-healthcheckconfig"></a>
 
-The `HealthCheckConfig` property is part of the [AWS::Route53::HealthCheck](aws-resource-route53-healthcheck.md) resource that describes a health check that Amazon Route 53 uses before responding to a DNS query\. For more information, see [HealthCheckConfig](http://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html) in the *Amazon Route 53 API Reference*
+The `HealthCheckConfig` property is part of the [AWS::Route53::HealthCheck](aws-resource-route53-healthcheck.md) resource that describes a health check that Amazon Route 53 uses before responding to a DNS query\. For more information, see [HealthCheckConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html) in the *Amazon Route 53 API Reference*
 
-## Syntax<a name="w3ab2c21c14e1651b5"></a>
+## Syntax<a name="w4ab1c21c14e1758b5"></a>
 
 ### JSON<a name="aws-properties-route53-healthcheck-healthcheckconfig-syntax.json"></a>
 
@@ -50,7 +50,7 @@ The `HealthCheckConfig` property is part of the [AWS::Route53::HealthCheck](aws-
 [Type](#cfn-route53-healthcheck-healthcheckconfig-type): String
 ```
 
-## Properties<a name="w3ab2c21c14e1651b7"></a>
+## Properties<a name="w4ab1c21c14e1758b7"></a>
 
 `AlarmIdentifier`  <a name="cfn-route53-healthcheck-healthcheckconfig-alarmidentifier"></a>
 Identifies the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy\.  
@@ -68,7 +68,7 @@ Specifies whether you want Route 53 to send the value of `FullyQualifiedDomainN
 *Type*: Boolean
 
 `FailureThreshold`  <a name="cfn-route53-healthcheck-healthcheckconfig-failurethreshold"></a>
-The number of consecutive health checks that an endpoint must pass or fail for Route 53 to change the current status of the endpoint from unhealthy to healthy or healthy to unhealthy\. For more information, see [How Amazon Route 53 Determines Whether an Endpoint Is Healthy](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html) in the *Amazon Route 53 Developer Guide*\.   
+The number of consecutive health checks that an endpoint must pass or fail for Route 53 to change the current status of the endpoint from unhealthy to healthy or healthy to unhealthy\. For more information, see [How Amazon Route 53 Determines Whether an Endpoint Is Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html) in the *Amazon Route 53 Developer Guide*\.   
 *Required*: No  
 *Type*: Integer
 
@@ -110,13 +110,13 @@ The port on the endpoint on which you want Route 53 to perform health checks\.
 
 `Regions`  <a name="cfn-route53-healthcheck-healthcheckconfig-regions"></a>
 The regions from which you want Amazon Route 53 health checkers to check the specified endpoint\.  
-Duplicates are not allowed\. For valid values and more information, see [HealthCheckConfig](http://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html) in the *Amazon Route 53 API Reference*\.  
+Duplicates are not allowed\. For valid values and more information, see [HealthCheckConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html) in the *Amazon Route 53 API Reference*\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `RequestInterval`  <a name="cfn-route53-healthcheck-healthcheckconfig-requestinterval"></a>
-The number of seconds between the time that Route 53 gets a response from your endpoint and the time that it sends the next health check request\. Each Route 53 health checker makes requests at this interval\. For valid values, see the [RequestInterval element](http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetHealthCheck.html) in the *Amazon Route 53 API Reference*\.  
+The number of seconds between the time that Route 53 gets a response from your endpoint and the time that it sends the next health check request\. Each Route 53 health checker makes requests at this interval\. For valid values, see the [RequestInterval element](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetHealthCheck.html) in the *Amazon Route 53 API Reference*\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -132,7 +132,7 @@ If the value of the `Type` property is `HTTP_STR_MATCH` or `HTTPS_STR_MATCH`, th
 *Type*: String
 
 `Type`  <a name="cfn-route53-healthcheck-healthcheckconfig-type"></a>
-The type of health check that you want to create\. This indicates how Route 53 determines whether an endpoint is healthy\. You can specify `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED`, or `CLOUDWATCH_METRIC`\. For information about the different types, see the [http://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHealthCheck.html](https://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html#Route53-Type-HealthCheckConfig-Type) element in the *Amazon Route 53 API Reference*\.  
+The type of health check that you want to create\. This indicates how Route 53 determines whether an endpoint is healthy\. You can specify `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CLOUDWATCH_METRIC`, or `CALCULATED`\. For information about the different types, see the [https://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html#Route53-Type-HealthCheckConfig-Type](https://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html#Route53-Type-HealthCheckConfig-Type) element in the *Amazon Route 53 API Reference*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

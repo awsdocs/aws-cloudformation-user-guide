@@ -7,9 +7,9 @@ AWS CloudFormation does not automatically create tags \(key–value pairs\) for 
 
 **Topics**
 + [Syntax](#aws-resource-elasticloadbalancingv2-loadbalancer-syntax)
-+ [Properties](#w3ab2c21c10d648c10)
-+ [Return Values](#w3ab2c21c10d648c12)
-+ [Examples](#w3ab2c21c10d648c14)
++ [Properties](#w4ab1c21c10d667c10)
++ [Return Values](#w4ab1c21c10d667c12)
++ [Examples](#w4ab1c21c10d667c14)
 
 ## Syntax<a name="aws-resource-elasticloadbalancingv2-loadbalancer-syntax"></a>
 
@@ -37,7 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticloadbalancingv2-loadbalancer-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElasticLoadBalancingV2::LoadBalancer"
+Type: AWS::ElasticLoadBalancingV2::LoadBalancer
 Properties:
   [IpAddressType](#cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype): String
   [LoadBalancerAttributes](#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes):
@@ -55,12 +55,12 @@ Properties:
   [Type](#cfn-elasticloadbalancingv2-loadbalancer-type): String
 ```
 
-## Properties<a name="w3ab2c21c10d648c10"></a>
+## Properties<a name="w4ab1c21c10d667c10"></a>
 
-For more information and valid parameter values, see the see the `[CreateLoadBalancer](http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateLoadBalancer.html)` action in the [Elastic Load Balancing API Reference version 2015\-12\-01](http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/)\.
+For more information and valid parameter values, see the `[CreateLoadBalancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateLoadBalancer.html)` action in the [Elastic Load Balancing API Reference version 2015\-12\-01](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/)\.
 
 `IpAddressType`  <a name="cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype"></a>
-\[Application Load Balancers\] The type of IP addresses that are used by the load balancer's subnets, such as `ipv4` \(for IPv4 addresses\) or `dualstack` \(for IPv4 and IPv6 addresses\)\. For valid values, see the `IpAddressType` parameter for the `[CreateLoadBalancer](http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateLoadBalancer.html)` action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\. The default value is `ipv4`\.  
+\[Application Load Balancers\] The type of IP addresses that are used by the load balancer's subnets, such as `ipv4` \(for IPv4 addresses\) or `dualstack` \(for IPv4 and IPv6 addresses\)\. For valid values, see the `IpAddressType` parameter for the `[CreateLoadBalancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateLoadBalancer.html)` action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\. The default value is `ipv4`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)  
@@ -120,9 +120,9 @@ Specifies the type of load balancer to create\. Valid values are `application` a
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w3ab2c21c10d648c12"></a>
+## Return Values<a name="w4ab1c21c10d667c12"></a>
 
-### Ref<a name="w3ab2c21c10d648c12b2"></a>
+### Ref<a name="w4ab1c21c10d667c12b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN of the load balancer, for example:
 
@@ -132,7 +132,7 @@ arn:aws:elasticloadbalancing:us-west-2:123456789012:loadbalancer/app/my-internal
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d648c12b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d667c12b4"></a>
 
 `Fn::GetAtt` returns a value for the following attributes\.
 
@@ -153,7 +153,7 @@ The IDs of the security groups for the load balancer, for example `sg-123456a`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w3ab2c21c10d648c14"></a>
+## Examples<a name="w4ab1c21c10d667c14"></a>
 
 ### Load balancer with idle timeout period specified<a name="aws-resource-elasticloadbalancingv2-loadbalancer-example1"></a>
 
@@ -290,7 +290,7 @@ Parameters:
     Type: String
 Resources:
   loadBalancer:
-    Type: 'AWS::ElasticLoadBalancingV2::LoadBalancer'
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
     Properties:
       SubnetMappings:
         - AllocationId: !GetAtt 
@@ -304,11 +304,11 @@ Resources:
       Type: !Ref ELBType
       IpAddressType: !Ref ELBIpAddressType
   FirstEIP:
-    Type: 'AWS::EC2::EIP'
+    Type: AWS::EC2::EIP
     Properties:
       Domain: vpc
   SecondEIP:
-    Type: 'AWS::EC2::EIP'
+    Type: AWS::EC2::EIP
     Properties:
       Domain: vpc
 ```

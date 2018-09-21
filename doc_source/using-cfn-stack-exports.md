@@ -13,7 +13,7 @@ A nested stack is a stack that you create within another stack by using the [`AW
 
 If you want to isolate information sharing to within a nested stack group, we suggest that you use nested stacks\. To share information with other stacks \(not just within the group of nested stacks\), export values\. For example, you can create a single stack with a subnet and then export its ID\. Other stacks can use that subnet by importing its ID; each stack doesn't need to create its own subnet\. Note that as long as stacks are importing the subnet ID, you can't change or delete it\.
 
-## Listing Exported Output Values<a name="w3ab2c15c19c11"></a>
+## Listing Exported Output Values<a name="w4ab1c15c19c11"></a>
 
 To see the values that you can import, list all of the exported output values by using the AWS CloudFormation console, AWS CLI, or AWS CloudFormation API\. AWS CloudFormation shows the names and values of the exported outputs for the current region and the stack from which the outputs are exported\. To reference an exported output value in a stack's template, use the export name and the [`Fn::ImportValue`](intrinsic-function-reference-importvalue.md) function\.
 
@@ -22,7 +22,7 @@ To see the values that you can import, list all of the exported output values by
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-cfn-exports.png)
 
 **To list exported output values \(AWS CLI\)**
-+ Run the [aws cloudformation list\-exports](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html) command\.
++ Run the [aws cloudformation list\-exports](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html) command\.
 
 **To list exported output values \(API\)**
-+ Run the [http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ListExports.html](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ListExports.html) API\.
++ Run the [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ListExports.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ListExports.html) API\.

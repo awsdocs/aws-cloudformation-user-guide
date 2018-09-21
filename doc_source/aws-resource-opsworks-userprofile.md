@@ -38,7 +38,7 @@ Properties:
 ## Properties<a name="aws-resource-opsworks-userprofile-properties"></a>
 
 `AllowSelfManagement`  <a name="cfn-opsworks-userprofile-allowselfmanagement"></a>
-Indicates whether users can use the AWS OpsWorks **My Settings** page to specify their own SSH public key\. For more information, see [Setting an IAM User's Public SSH Key](http://docs.aws.amazon.com/opsworks/latest/userguide/security-settingsshkey.html) in the *AWS OpsWorks User Guide*\.  
+Indicates whether users can use the AWS OpsWorks **My Settings** page to specify their own SSH public key\. For more information, see [Setting an IAM User's Public SSH Key](https://docs.aws.amazon.com/opsworks/latest/userguide/security-settingsshkey.html) in the *AWS OpsWorks User Guide*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -63,13 +63,13 @@ The user's SSH user name\.
 
 ## Return Value<a name="aws-resource-opsworks-userprofile-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d939c11b2"></a>
+### Ref<a name="w4ab1c21c10d970c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the IAM user ARN, such as `arn:aws:iam::123456789012:user/opsworksuser`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d939c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d970c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 + `SshUsername`

@@ -49,7 +49,7 @@ Indicates whether the EBS volume is encrypted\. Encrypted volumes can only be at
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Iops`  <a name="cfn-ec2-launchtemplate-ebs-iops"></a>
-The number of I/O operations per second \(IOPS\) that the volume supports\. For io1, this represents the number of IOPS that are provisioned for the volume\. For gp2, this represents the baseline performance of the volume and the rate at which the volume accumulates I/O credits for bursting\. For more information about General Purpose SSD baseline performance, I/O credits, and bursting, see [Amazon EBS Volume Types](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+The number of I/O operations per second \(IOPS\) that the volume supports\. For io1, this represents the number of IOPS that are provisioned for the volume\. For gp2, this represents the baseline performance of the volume and the rate at which the volume accumulates I/O credits for bursting\. For more information about General Purpose SSD baseline performance, I/O credits, and bursting, see [Amazon EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
 Condition: This parameter is required for requests to create io1 volumes; it is not used in requests to create gp2, st1, sc1, or standard volumes\.  
  *Required*: No  
  *Type*: Integer  
@@ -82,4 +82,4 @@ Valid values include: `standard`, `io1`, `gp2`, `sc1`, and `st1`\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ec2-launchtemplate-ebs-seealso"></a>
-+ [LaunchTemplateEbsBlockDeviceRequest](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateEbsBlockDeviceRequest.html) in the *Amazon EC2 API Reference*
++ [LaunchTemplateEbsBlockDeviceRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateEbsBlockDeviceRequest.html) in the *Amazon EC2 API Reference*

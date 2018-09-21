@@ -1,6 +1,6 @@
 # AWS Lambda Template<a name="quickref-lambda"></a>
 
-## <a name="w3ab2c17c24c65b3"></a>
+## <a name="w4ab1c17c23c65b3"></a>
 
 The following template uses an AWS Lambda \(Lambda\) function and custom resource to append a new security group to a list of existing security groups\. This function is useful when you want to build a list of security groups dynamically, so that your list includes both new and existing security groups\. For example, you can pass a list of existing security groups as a parameter value, append the new value to the list, and then associate all your values with an EC2 instance\. For more information about the Lambda function resource type, see [AWS::Lambda::Function](aws-resource-lambda-function.md)\.
 
@@ -28,20 +28,22 @@ In the example, when AWS CloudFormation creates the `AllSecurityGroups` custom r
   "Mappings": {
     "AWSInstanceType2Arch" : {
       "t2.micro"    : { "Arch" : "HVM64"  },
-      "m1.small"    : { "Arch" : "PV64"   }
+      "m1.small"    : { "Arch" : "HVM64"   }
     },
+    
     "AWSRegionArch2AMI" : {
-      "us-east-1"        : {"PV64" : "ami-1ccae774", "HVM64" : "ami-1ecae776"},
-      "us-west-2"        : {"PV64" : "ami-ff527ecf", "HVM64" : "ami-e7527ed7"},
-      "us-west-1"        : {"PV64" : "ami-d514f291", "HVM64" : "ami-d114f295"},
-      "eu-west-1"        : {"PV64" : "ami-bf0897c8", "HVM64" : "ami-a10897d6"},
-      "eu-central-1"     : {"PV64" : "ami-ac221fb1", "HVM64" : "ami-a8221fb5"},
-      "ap-northeast-1"   : {"PV64" : "ami-27f90e27", "HVM64" : "ami-cbf90ecb"},
-      "ap-southeast-1"   : {"PV64" : "ami-acd9e8fe", "HVM64" : "ami-68d8e93a"},
-      "ap-southeast-2"   : {"PV64" : "ami-ff9cecc5", "HVM64" : "ami-fd9cecc7"},
-      "sa-east-1"        : {"PV64" : "ami-bb2890a6", "HVM64" : "ami-b52890a8"},
-      "cn-north-1"       : {"PV64" : "ami-fa39abc3", "HVM64" : "ami-f239abcb"}
+      "us-east-1"        : {"HVM64" : "ami-0ff8a91507f77f867", "HVMG2" : "ami-0a584ac55a7631c0c"},
+      "us-west-2"        : {"HVM64" : "ami-a0cfeed8", "HVMG2" : "ami-0e09505bc235aa82d"},
+      "us-west-1"        : {"HVM64" : "ami-0bdb828fd58c52235", "HVMG2" : "ami-066ee5fd4a9ef77f1"},
+      "eu-west-1"        : {"HVM64" : "ami-047bb4163c506cd98", "HVMG2" : "ami-0a7c483d527806435"},
+      "eu-central-1"     : {"HVM64" : "ami-0233214e13e500f77", "HVMG2" : "ami-06223d46a6d0661c7"},
+      "ap-northeast-1"   : {"HVM64" : "ami-06cd52961ce9f0d85", "HVMG2" : "ami-053cdd503598e4a9d"},
+      "ap-southeast-1"   : {"HVM64" : "ami-08569b978cc4dfa10", "HVMG2" : "ami-0be9df32ae9f92309"},
+      "ap-southeast-2"   : {"HVM64" : "ami-09b42976632b27e9b", "HVMG2" : "ami-0a9ce9fecc3d1daf8"},
+      "sa-east-1"        : {"HVM64" : "ami-07b14488da8ea02a0", "HVMG2" : "NOT_SUPPORTED"},
+      "cn-north-1"       : {"HVM64" : "ami-0a4eaf6c4454eda75", "HVMG2" : "NOT_SUPPORTED"}
     }
+    
   },
   "Resources" : {
     "SecurityGroup" : {
@@ -148,38 +150,39 @@ Mappings:
     t2.micro:
       Arch: HVM64
     m1.small:
-      Arch: PV64
+      Arch: HVM64
+      
   AWSRegionArch2AMI:
     us-east-1:
-      PV64: ami-1ccae774
-      HVM64: ami-1ecae776
+      HVM64: ami-0ff8a91507f77f867
+      HVMG2: ami-0a584ac55a7631c0c
     us-west-2:
-      PV64: ami-ff527ecf
-      HVM64: ami-e7527ed7
+      HVM64: ami-a0cfeed8
+      HVMG2: ami-0e09505bc235aa82d
     us-west-1:
-      PV64: ami-d514f291
-      HVM64: ami-d114f295
+      HVM64: ami-0bdb828fd58c52235
+      HVMG2: ami-066ee5fd4a9ef77f1
     eu-west-1:
-      PV64: ami-bf0897c8
-      HVM64: ami-a10897d6
+      HVM64: ami-047bb4163c506cd98
+      HVMG2: ami-0a7c483d527806435
     eu-central-1:
-      PV64: ami-ac221fb1
-      HVM64: ami-a8221fb5
+      HVM64: ami-0233214e13e500f77
+      HVMG2: ami-06223d46a6d0661c7
     ap-northeast-1:
-      PV64: ami-27f90e27
-      HVM64: ami-cbf90ecb
+      HVM64: ami-06cd52961ce9f0d85
+      HVMG2: ami-053cdd503598e4a9d
     ap-southeast-1:
-      PV64: ami-acd9e8fe
-      HVM64: ami-68d8e93a
+      HVM64: ami-08569b978cc4dfa10
+      HVMG2: ami-0be9df32ae9f92309
     ap-southeast-2:
-      PV64: ami-ff9cecc5
-      HVM64: ami-fd9cecc7
+      HVM64: ami-09b42976632b27e9b
+      HVMG2: ami-0a9ce9fecc3d1daf8
     sa-east-1:
-      PV64: ami-bb2890a6
-      HVM64: ami-b52890a8
+      HVM64: ami-07b14488da8ea02a0
+      HVMG2: NOT_SUPPORTED
     cn-north-1:
-      PV64: ami-fa39abc3
-      HVM64: ami-f239abcb
+      HVM64: ami-0a4eaf6c4454eda75
+      HVMG2: NOT_SUPPORTED
 Resources:
   SecurityGroup:
     Type: AWS::EC2::SecurityGroup

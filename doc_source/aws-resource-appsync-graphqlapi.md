@@ -1,6 +1,6 @@
 # AWS::AppSync::GraphQLApi<a name="aws-resource-appsync-graphqlapi"></a>
 
-The `AWS::AppSync::GraphQLApi` resource will create a new AWS AppSync GraphQL API\. This is the top level construct for your application\. For more information see [http://docs.aws.amazon.com/appsync/latest/devguide/quickstart.html](http://docs.aws.amazon.com/appsync/latest/devguide/quickstart.html)\. 
+The `AWS::AppSync::GraphQLApi` resource will create a new AWS AppSync GraphQL API\. This is the top level construct for your application\. For more information see [https://docs.aws.amazon.com/appsync/latest/devguide/quickstart.html](https://docs.aws.amazon.com/appsync/latest/devguide/quickstart.html)\. 
 
 **Topics**
 + [Syntax](#aws-resource-appsync-graphqlapi-syntax)
@@ -61,7 +61,7 @@ Friendly name for your GraphQL API in AWS AppSync\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `AuthenticationType`  <a name="cfn-appsync-graphqlapi-authenticationtype"></a>
-Security configuration for your GraphQL API\. For allowed values \(such as API\_KEY, AWS\_IAM, or AMAZON\_COGNITO\_USER\_POOLS, OPENID\_CONNECT\), see [Security](http://docs.aws.amazon.com/appsync/latest/devguide/security.html) in the *AWS AppSync Developer Guide*\.  
+Security configuration for your GraphQL API\. For allowed values \(such as API\_KEY, AWS\_IAM, or AMAZON\_COGNITO\_USER\_POOLS, OPENID\_CONNECT\), see [Security](https://docs.aws.amazon.com/appsync/latest/devguide/security.html) in the *AWS AppSync Developer Guide*\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
@@ -158,7 +158,7 @@ Parameters:
     Type: String
 Resources:
   GraphQLApi:
-    Type: "AWS::AppSync::GraphQLApi"
+    Type: AWS::AppSync::GraphQLApi
     Properties:
       Name:
 	Ref: graphQlApiName
@@ -173,4 +173,4 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-appsync-graphqlapi-seealso"></a>
-+ [ CreateGraphqlApi](http://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateGraphqlApi.html) operation in the *AWS AppSync API Reference*
++ [ CreateGraphqlApi](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateGraphqlApi.html) operation in the *AWS AppSync API Reference*

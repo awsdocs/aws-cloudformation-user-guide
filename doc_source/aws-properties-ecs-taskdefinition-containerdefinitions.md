@@ -34,6 +34,7 @@ The `ContainerDefinitions` property of the [AWS::ECS::TaskDefinition](aws-resour
   "[PortMappings](#cfn-ecs-taskdefinition-containerdefinition-portmappings)" : [ [*PortMapping*](aws-properties-ecs-taskdefinition-containerdefinitions-portmappings.md), ... ],
   "[Privileged](#cfn-ecs-taskdefinition-containerdefinition-privileged)" : Boolean,
   "[ReadonlyRootFilesystem](#cfn-ecs-taskdefinition-containerdefinition-readonlyrootfilesystem)" : Boolean,
+  "[RepositoryCredentials](#cfn-ecs-taskdefinition-containerdefinition-repositorycredentials)" : [*RepositoryCredentials*](aws-properties-ecs-taskdefinition-repositorycredentials.md),
   "[Ulimits](#cfn-ecs-taskdefinition-containerdefinition-ulimits)" : [ [*Ulimit*](aws-properties-ecs-taskdefinition-containerdefinitions-ulimit.md), ... ],
   "[User](#cfn-ecs-taskdefinition-containerdefinition-user)" : String,
   "[VolumesFrom](#cfn-ecs-taskdefinition-containerdefinition-volumesfrom)" : [ [*VolumeFrom*](aws-properties-ecs-taskdefinition-containerdefinitions-volumesfrom.md), ... ],
@@ -82,6 +83,8 @@ The `ContainerDefinitions` property of the [AWS::ECS::TaskDefinition](aws-resour
   - [*PortMapping*](aws-properties-ecs-taskdefinition-containerdefinitions-portmappings.md)
 [Privileged](#cfn-ecs-taskdefinition-containerdefinition-privileged): Boolean
 [ReadonlyRootFilesystem](#cfn-ecs-taskdefinition-containerdefinition-readonlyrootfilesystem): Boolean
+[RepositoryCredentials](#cfn-ecs-taskdefinition-containerdefinition-repositorycredentials):
+  [*RepositoryCredentials*](aws-properties-ecs-taskdefinition-repositorycredentials.md)            
 [Ulimits](#cfn-ecs-taskdefinition-containerdefinition-ulimits):
   - [*Ulimit*](aws-properties-ecs-taskdefinition-containerdefinitions-ulimit.md)
 [User](#cfn-ecs-taskdefinition-containerdefinition-user): String
@@ -92,7 +95,7 @@ The `ContainerDefinitions` property of the [AWS::ECS::TaskDefinition](aws-resour
 
 ## Properties<a name="aws-properties-ecs-taskdefinition-containerdefinitions-properties"></a>
 
-For more information about each property, see [Task Definition Parameters](http://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html) in the *Amazon Elastic Container Service Developer Guide*\.
+For more information about each property, see [Task Definition Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html) in the *Amazon Elastic Container Service Developer Guide*\.
 
 `Command`  <a name="cfn-ecs-taskdefinition-containerdefinition-command"></a>
 The `CMD` value to pass to the container\. For more information about the Docker `CMD` parameter, see [https://docs\.docker\.com/engine/reference/builder/\#cmd](https://docs.docker.com/engine/reference/builder/#cmd)\.  
@@ -100,7 +103,7 @@ The `CMD` value to pass to the container\. For more information about the Docker
 *Type*: List of String values
 
 `Cpu`  <a name="cfn-ecs-taskdefinition-containerdefinition-cpu"></a>
-The minimum number of CPU units to reserve for the container\. Containers share unallocated CPU units with other containers on the instance by using the same ratio as their allocated CPU units\. For more information, see the `cpu` content for the [ContainerDefinition](http://docs.aws.amazon.com/AmazonECS/latest/APIReference//API_ContainerDefinition.html) data type in the *Amazon Elastic Container Service API Reference*\.  
+The minimum number of CPU units to reserve for the container\. Containers share unallocated CPU units with other containers on the instance by using the same ratio as their allocated CPU units\. For more information, see the `cpu` content for the [ContainerDefinition](https://docs.aws.amazon.com/AmazonECS/latest/APIReference//API_ContainerDefinition.html) data type in the *Amazon Elastic Container Service API Reference*\.  
 *Required*: No  
 *Type*: Integer
 
@@ -125,7 +128,7 @@ A key\-value map of labels for the container\.
 *Type*: Key\-value pairs, with the name of the label as the key and the label value as the value\.
 
 `DockerSecurityOptions`  <a name="cfn-ecs-taskdefinition-containerdefinition-dockersecurityoptions"></a>
-A list of custom labels for SELinux and AppArmor multi\-level security systems\. For more information, see the `dockerSecurityOptions` content for the [ContainerDefinition](http://docs.aws.amazon.com/AmazonECS/latest/APIReference//API_ContainerDefinition.html) data type in the *Amazon Elastic Container Service API Reference*\.  
+A list of custom labels for SELinux and AppArmor multi\-level security systems\. For more information, see the `dockerSecurityOptions` content for the [ContainerDefinition](https://docs.aws.amazon.com/AmazonECS/latest/APIReference//API_ContainerDefinition.html) data type in the *Amazon Elastic Container Service API Reference*\.  
 *Required*: No  
 *Type*: List of String values
 
@@ -153,7 +156,7 @@ A list of hostnames and IP address mappings to append to the `/etc/hosts` file o
 `HealthCheck`  <a name="cfn-ecs-taskdefinition-containerdefinition-healthcheck"></a>
 A container health check\. Health check parameters that are specified in a container definition override any Docker health checks that exist in the container image \(such as those specified in a parent image or from the image's Dockerfile\)\.  
 *Required*: No  
-*Type*: [Amazon ECS TaskDefinition HealthCheckAmazon SageMaker Endpoint TagAmazon SageMaker EndpointConfig ProductionVariantAmazon SageMaker NotebookInstanceLifecycleConfig NotebookInstanceLifecycleHook](aws-properties-ecs-taskdefinition-healthcheck.md)
+*Type*: [Amazon ECS TaskDefinition HealthCheck](aws-properties-ecs-taskdefinition-healthcheck.md)
 
 `Hostname`  <a name="cfn-ecs-taskdefinition-containerdefinition-hostname"></a>
 The name that Docker uses for the container hostname\.  
@@ -176,17 +179,17 @@ The Linux\-specific options that are applied to the container\.
  *Type*: [Amazon ECS TaskDefinition LinuxParameters](aws-properties-ecs-taskdefinition-linuxparameters.md)
 
 `LogConfiguration`  <a name="cfn-ecs-taskdefinition-containerdefinition-logconfiguration"></a>
-Configures a custom log driver for the container\. For more information, see the `logConfiguration` content for the [ContainerDefinition](http://docs.aws.amazon.com/AmazonECS/latest/APIReference//API_ContainerDefinition.html) data type in the *Amazon Elastic Container Service API Reference*\.  
+Configures a custom log driver for the container\. For more information, see the `logConfiguration` content for the [ContainerDefinition](https://docs.aws.amazon.com/AmazonECS/latest/APIReference//API_ContainerDefinition.html) data type in the *Amazon Elastic Container Service API Reference*\.  
 *Required*: No  
 *Type*: [Amazon ECS TaskDefinition LogConfiguration](aws-properties-ecs-taskdefinition-containerdefinitions-logconfiguration.md)
 
 `Memory`  <a name="cfn-ecs-taskdefinition-containerdefinition-memory"></a>
-The maximum number of MiB of memory that the container is allowed to use\. If your container attempts to exceed the allocated memory, the container is terminated\.  
+The hard limit \(in MiB\) of memory to present to the container\. If your container attempts to exceed the allocated memory, the container is terminated\.  
 *Required*: Conditional\. You must specify one or both of the `Memory` or `MemoryReservation` properties\. If you specify both, the value for the `Memory` property must be greater than the value of the `MemoryReservation` property\.  
 *Type*: Integer
 
 `MemoryReservation`  <a name="cfn-ecs-taskdefinition-containerdefinition-memoryreservation"></a>
-The number of MiB of memory to reserve for the container\. When system memory is under contention, Docker attempts to keep the container memory within the limit\. If the container requires more memory, it can consume up to the value specified by the `Memory` property or all of the available memory on the container instance—whichever comes first\. This is called a soft limit\.  
+The soft limit \(in MiB\) of memory to reserve for the container\. When system memory is under contention, Docker attempts to keep the container memory within the limit\. If the container requires more memory, it can consume up to the value specified by the `Memory` property or all of the available memory on the container instance—whichever comes first\.  
 *Required*: Conditional\. You must specify one or both of the `Memory` or `MemoryReservation` properties\. If you specify both, the value for the `Memory` property must be greater than the value of the `MemoryReservation` property\.  
 *Type*: Integer
 
@@ -215,6 +218,11 @@ Indicates whether the container's root file system is mounted as read only\.
 *Required*: No  
 *Type*: Boolean
 
+`RepositoryCredentials`  <a name="cfn-ecs-taskdefinition-containerdefinition-repositorycredentials"></a>
+The repository credentials for private registry authentication\.  
+*Required*: No  
+*Type*: [Amazon ECS TaskDefinition RepositoryCredentials](aws-properties-ecs-taskdefinition-repositorycredentials.md)
+
 `Ulimits`  <a name="cfn-ecs-taskdefinition-containerdefinition-ulimits"></a>
 A list of ulimits to set in the container\. The ulimits set constraints on how many resources a container can consume so that it doesn't deplete all available resources on the host\.  
 *Required*: No  
@@ -236,4 +244,4 @@ The working directory in the container to run commands in\.
 *Type*: String
 
 ## See Also<a name="aws-properties-ecs-taskdefinition-containerdefinitions-seealso"></a>
-+ [Task Definition Parameters](http://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html) in the *Amazon Elastic Container Service Developer Guide*
++ [Task Definition Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html) in the *Amazon Elastic Container Service Developer Guide*

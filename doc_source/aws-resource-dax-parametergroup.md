@@ -2,7 +2,7 @@
 
 Use the AWS CloudFormation `AWS::DAX::ParameterGroup` resource to create a parameter group for use with Amazon DynamoDB\.
 
-For more information, see [http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_dax_ParameterGroup.html](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_dax_ParameterGroup.html) in the *Amazon DynamoDB Developer Guide*\.
+For more information, see [https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_dax_ParameterGroup.html](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_dax_ParameterGroup.html) in the *Amazon DynamoDB Developer Guide*\.
 
 ## Syntax<a name="aws-resource-dax-parametergroup-syntax"></a>
 
@@ -22,7 +22,7 @@ For more information, see [http://docs.aws.amazon.com/amazondynamodb/latest/APIR
 ### YAML<a name="aws-resource-dax-parametergroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::DAX::ParameterGroup"
+Type: AWS::DAX::ParameterGroup
 Properties:
       [ParameterGroupName](#cfn-dax-parametergroup-name): String
       [Description](#cfn-dax-parametergroup-description): String
@@ -51,7 +51,7 @@ A map of DAX parameter names and values\.
 
 ## Return Values<a name="aws-resource-dax-parametergroup-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d331c11b2"></a>
+### Ref<a name="w4ab1c21c10d343c11b2"></a>
 
 When you provide the logical ID of this resource to the `Ref` intrinsic function, `Ref` returns the ARN of the created parameter group\. For example:
 
@@ -66,24 +66,6 @@ my-dax-parameter-group
 ```
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
-
-### Fn::GetAtt<a name="w3ab2c21c10d331c11b4"></a>
-
-`Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
-
-`ParameterGroupName`  
-Returns the name of the parameter group\. For example:  
-
-```
-{ "Fn::GetAtt": ["MyDAXParameterGroup", "ParameterGroupName"] }
-```
-Returns a value similar to the following:  
-
-```
-mydaxparametergroup
-```
-
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
 ## Example<a name="aws-resource-dax-parametergroup-examples"></a>
 
@@ -100,7 +82,7 @@ The following example creates a DAX parameter group\.
       "Type": "AWS::DAX::ParameterGroup",
       "Properties": {
         "ParameterGroupName": "MyDAXParameterGroup",
-        "ParameterGroupDescription": "Description for my DAX parameter group",
+        "Description": "Description for my DAX parameter group",
         "ParameterNameValues": {
           "query-ttl-millis": "75000",
           "record-ttl-millis": "88000"
@@ -110,7 +92,9 @@ The following example creates a DAX parameter group\.
   },
   "Outputs": {
     "ParameterGroup": {
-      "Value": "daxParamGroup"
+      "Value": {
+        "Ref": "daxParamGroup"
+      }
     }
   }
 }
@@ -126,7 +110,7 @@ Resources:
     Type: AWS::DAX::ParameterGroup
     Properties:
       ParameterGroupName: "MyDAXParameterGroup" 
-      ParameterGroupDescription: "Description for my DAX parameter group" 
+      Description: "Description for my DAX parameter group" 
       ParameterNameValues:
          "query-ttl-millis" : "75000"
          "record-ttl-millis" : "88000"

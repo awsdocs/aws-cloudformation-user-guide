@@ -31,4 +31,4 @@ The credit option for CPU usage of a T2 instance\. Valid values include `standar
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ec2-launchtemplate-creditspecification-seealso"></a>
-+ [CreditSpecificationRequest](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreditSpecificationRequest.html) in the *Amazon EC2 API Reference*
++ [CreditSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreditSpecificationRequest.html) in the *Amazon EC2 API Reference*

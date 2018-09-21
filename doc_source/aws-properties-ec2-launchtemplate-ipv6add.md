@@ -31,4 +31,4 @@ The IPv6 address\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ec2-launchtemplate-ipv6add-seealso"></a>
-+ [InstanceIpv6AddressRequest](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_InstanceIpv6AddressRequest.html) in the *Amazon EC2 API Reference*
++ [InstanceIpv6AddressRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_InstanceIpv6AddressRequest.html) in the *Amazon EC2 API Reference*

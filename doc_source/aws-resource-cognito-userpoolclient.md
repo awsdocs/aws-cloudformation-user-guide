@@ -4,8 +4,8 @@ The `AWS::Cognito::UserPoolClient` resource creates an Amazon Cognito user pool 
 
 **Topics**
 + [Syntax](#aws-resource-cognito-userpoolclient-syntax)
-+ [Properties](#w3ab2c21c10d283b9)
-+ [Return Value](#w3ab2c21c10d283c11)
++ [Properties](#w4ab1c21c10d295b9)
++ [Return Value](#w4ab1c21c10d295c11)
 
 ## Syntax<a name="aws-resource-cognito-userpoolclient-syntax"></a>
 
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-cognito-userpoolclient-syntax.yaml"></a>
 
 ```
-Type: "AWS::Cognito::UserPoolClient"
+Type: AWS::Cognito::UserPoolClient
 Properties:
     [ClientName](#cfn-cognito-userpoolclient-clientname): String
     [ExplicitAuthFlows](#cfn-cognito-userpoolclient-explicitauthflows): 
@@ -45,7 +45,7 @@ Properties:
       - String
 ```
 
-## Properties<a name="w3ab2c21c10d283b9"></a>
+## Properties<a name="w4ab1c21c10d295b9"></a>
 
 `ClientName`  <a name="cfn-cognito-userpoolclient-clientname"></a>
 The client name for the user pool client that you want to create\.  
@@ -56,7 +56,7 @@ MinLength: 1
 MaxLength: 128
 
 `ExplicitAuthFlows`  <a name="cfn-cognito-userpoolclient-explicitauthflows"></a>
-The explicit authentication flows, which can be one of the following: `ADMIN_NO_SRP_AUTH` or `CUSTOM_AUTH_FLOW_ONLY`\.  
+The explicit authentication flows, which can be one of the following: `ADMIN_NO_SRP_AUTH`, `CUSTOM_AUTH_FLOW_ONLY`, or `USER_PASSWORD_AUTH`\.  
 *Required*: No  
 *Type*: List of Strings  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -91,22 +91,10 @@ The write attributes\.
 *Type*: List of Strings  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10d283c11"></a>
+## Return Value<a name="w4ab1c21c10d295c11"></a>
 
-### Ref<a name="w3ab2c21c10d283c11b2"></a>
+### Ref<a name="w4ab1c21c10d295c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the Amazon Cognito user pool client ID, such as `1h57kf5cpq17m0eml12EXAMPLE`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
-
-### Fn::GetAtt<a name="w3ab2c21c10d283c11b4"></a>
-
-`Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
-
-`ClientSecret`  
-The client secret, as a `String`\.
-
-`Name`  
-The name of the user pool client, as a `String`\.
-
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.

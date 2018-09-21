@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-events-rule-ecsparameters-properties"></a>
 
-For more information, including constraints and valid values, see [EcsParameters](http://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_EcsParameters.html) in the *Amazon CloudWatch Events API Reference*\.
+For more information, including constraints and valid values, see [EcsParameters](https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_EcsParameters.html) in the *Amazon CloudWatch Events API Reference*\.
 
 `TaskCount`  <a name="cfn-events-rule-ecsparameters-taskcount"></a>
 The number of tasks to create based on the task definition\. The default is `1`\.  

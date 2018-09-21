@@ -2,7 +2,7 @@
 
 Describes the lifecycle configuration for objects in an [ AWS::S3::Bucket](aws-properties-s3-bucket.md) resource\.
 
-## Syntax<a name="w3ab2c21c14e1726b5"></a>
+## Syntax<a name="w4ab1c21c14e1833b5"></a>
 
 ### JSON<a name="aws-properties-s3-bucket-lifecycleconfig-syntax.json"></a>
 
@@ -19,7 +19,7 @@ Describes the lifecycle configuration for objects in an [ AWS::S3::Bucket](aws-p
   - Lifecycle Rule
 ```
 
-## Properties<a name="w3ab2c21c14e1726b7"></a>
+## Properties<a name="w4ab1c21c14e1833b7"></a>
 
 `Rules`  <a name="cfn-s3-bucket-lifecycleconfig-rules"></a>
 A lifecycle rule for individual objects in an S3 bucket\.  

@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-glue-crawler-s3target-properties"></a>
 
-For more information, see [S3Target Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-crawling.html#aws-glue-api-crawler-crawling-S3Target) in the *AWS Glue Developer Guide*\.
+For more information, see [S3Target Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-crawling.html#aws-glue-api-crawler-crawling-S3Target) in the *AWS Glue Developer Guide*\.
 
 `Path`  <a name="cfn-glue-crawler-s3target-path"></a>
 The path to the Amazon S3 target\.  

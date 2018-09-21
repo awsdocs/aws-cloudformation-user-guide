@@ -9,7 +9,7 @@ If an Elastic IP address is attached to your instance, AWS CloudFormation reatta
 + [Properties](#aws-properties-ec2-instance-prop)
 + [Return Values](#aws-properties-ec2-instance-returnvalues)
 + [Examples](#aws-properties-ec2-instance-examples)
-+ [See Also](#w3ab2c21c10d409c17)
++ [See Also](#w4ab1c21c10d421c17)
 
 ## Syntax<a name="aws-resource-ec2-instance-syntax"></a>
 
@@ -60,7 +60,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-instance-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::Instance"
+Type: AWS::EC2::Instance
 Properties: 
   [Affinity](#cfn-ec2-instance-affinity): String
   [AvailabilityZone](#cfn-ec2-instance-availabilityzone): String
@@ -120,7 +120,7 @@ For more information about AWS regions and Availability Zones, see [Regions and 
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `BlockDeviceMappings`  <a name="cfn-ec2-instance-blockdevicemappings"></a>
-Defines a set of Amazon Elastic Block Store block device mappings, ephemeral instance store block device mappings, or both\. For more information, see [Amazon Elastic Block Store](http://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/AmazonEBS.html) or [Amazon EC2 Instance Store](http://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/InstanceStorage.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+Defines a set of Amazon Elastic Block Store block device mappings, ephemeral instance store block device mappings, or both\. For more information, see [Amazon Elastic Block Store](https://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/AmazonEBS.html) or [Amazon EC2 Instance Store](https://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/InstanceStorage.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
 *Required*: No  
 *Type*: A list of [Amazon EC2 Block Device Mapping Property](aws-properties-ec2-blockdev-mapping.md)\.  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)\. If you change only the `DeleteOnTermination` property for one or more block devices, update requires [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
@@ -147,7 +147,7 @@ For more information about the instance types that can be launched as Amazon EBS
 + *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) for instance store\-backed instances
 
 `ElasticGpuSpecifications`  <a name="cfn-ec2-instance-elasticgpuspecifications"></a>
-Specifies the Elastic GPUs\. An Elastic GPU is a GPU resource that you can attach to your instance to accelerate the graphics performance of your applications\. For more information, see [Amazon EC2 Elastic GPUs](http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-gpus.html) in the *Amazon EC2 User Guide for Windows Instances*\. Duplicates are not allowed\.  
+Specifies the Elastic GPUs\. An Elastic GPU is a GPU resource that you can attach to your instance to accelerate the graphics performance of your applications\. For more information, see [Amazon EC2 Elastic GPUs](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-gpus.html) in the *Amazon EC2 User Guide for Windows Instances*\. Duplicates are not allowed\.  
 *Required*: No  
 *Type:* List of [Amazon EC2 Instance ElasticGpuSpecification](aws-properties-ec2-instance-elasticgpuspecification.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -172,13 +172,13 @@ Provides the unique ID of the Amazon Machine Image \(AMI\) that was assigned dur
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `InstanceInitiatedShutdownBehavior`  <a name="cfn-ec2-instance-instanceinitiatedshutdownbehavior"></a>
-Indicates whether an instance stops or terminates when you shut down the instance from the instance's operating system shutdown command\. You can specify `stop` or `terminate`\. For more information, see the [RunInstances](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-RunInstances.html) command in the *Amazon EC2 API Reference*\.  
+Indicates whether an instance stops or terminates when you shut down the instance from the instance's operating system shutdown command\. You can specify `stop` or `terminate`\. For more information, see the [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-RunInstances.html) command in the *Amazon EC2 API Reference*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `InstanceType`  <a name="cfn-ec2-instance-instancetype"></a>
-The instance type, such as `t2.micro`\. The default type is `"m3.medium"`\. For a list of instance types, see [Instance Families and Types](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html)\.  
+The instance type, such as `t2.micro`\. The default type is `m1.small`\. For a list of instance types, see [Instance Families and Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*:  
@@ -187,14 +187,14 @@ The instance type, such as `t2.micro`\. The default type is `"m3.medium"`\. For 
 
 `Ipv6AddressCount`  <a name="cfn-ec2-instance-ipv6addresscount"></a>
 The number of IPv6 addresses to associate with the instance's primary network interface\. Amazon EC2 automatically selects the IPv6 addresses from the subnet range\. To specify specific IPv6 addresses, use the `Ipv6Addresses` property and don't specify this property\.  
-For restrictions on which instance types support IPv6 addresses, see the [RunInstances](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-RunInstances.html) action in the *Amazon EC2 API Reference*\.  
+For restrictions on which instance types support IPv6 addresses, see the [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-RunInstances.html) action in the *Amazon EC2 API Reference*\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Ipv6Addresses`  <a name="cfn-ec2-instance-ipv6addresses"></a>
 One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the instance's primary network interface\. To specify a number of IPv6 addresses, use the `Ipv6AddressCount` property and don't specify this property\.  
-For information about restrictions on which instance types support IPv6 addresses, see the [RunInstances](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-RunInstances.html) action in the *Amazon EC2 API Reference*\.  
+For information about restrictions on which instance types support IPv6 addresses, see the [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-RunInstances.html) action in the *Amazon EC2 API Reference*\.  
 *Required*: No  
 *Type*: List of [EC2 NetworkInterface Ipv6Addresses](aws-properties-ec2-networkinterface-ipv6addresses.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -277,7 +277,7 @@ A value of `"true"` means that source/destination checking is enabled, and a val
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `SsmAssociations`  <a name="cfn-ec2-instance-ssmassociations"></a>
-The SSM [document](aws-resource-ssm-document.md) and parameter values in AWS Systems Manager to associate with this instance\. To use this property, you must specify an IAM instance profile role for the instance\. For more information, see [Create an Instance Profile for Systems Manager](http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-configuring-access-role.html) in the *AWS Systems Manager User Guide*\.  
+The SSM [document](aws-resource-ssm-document.md) and parameter values in AWS Systems Manager to associate with this instance\. To use this property, you must specify an IAM instance profile role for the instance\. For more information, see [Create an Instance Profile for Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-configuring-access-role.html) in the *AWS Systems Manager User Guide*\.  
 You can currently associate only one document with an instance\.
 *Required*: No  
 *Type*: List of [Amazon EC2 Instance SsmAssociations](aws-properties-ec2-instance-ssmassociations.md)\.  
@@ -332,11 +332,11 @@ Reserved\.
 
 ### Ref<a name="aws-properties-ec2-instance-ref"></a>
 
-When you pass the logical ID of an AWS::EC2::Instance object to the intrinsic `Ref` function, the object's InstanceId is returned\. For example: `i-636be3023efb7fe52`\.
+When you pass the logical ID of an AWS::EC2::Instance object to the intrinsic `Ref` function, the object's InstanceId is returned\. For example: `i-1234567890abcdef0`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d409c13b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d421c13b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -360,7 +360,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
 
 ## Examples<a name="aws-properties-ec2-instance-examples"></a>
 
-### EC2 Instance with an EBS Block Device Mapping<a name="w3ab2c21c10d409c15b2"></a>
+### EC2 Instance with an EBS Block Device Mapping<a name="w4ab1c21c10d421c15b2"></a>
 
 #### JSON<a name="aws-properties-ec2-instance-examples-json1"></a>
 
@@ -402,7 +402,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
   Description: "Ec2 block device mapping"
   Resources: 
     MyEC2Instance: 
-      Type: "AWS::EC2::Instance"
+      Type: AWS::EC2::Instance
       Properties: 
         ImageId: "ami-79fd7eee"
         KeyName: "testkey"
@@ -417,7 +417,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
             NoDevice: {}
 ```
 
-### Automatically Assign a Public IP Address<a name="w3ab2c21c10d409c15b4"></a>
+### Automatically Assign a Public IP Address<a name="w4ab1c21c10d421c15b4"></a>
 
 You can associate a public IP address with a network interface only if it has a device index of `0` and if it is a new network interface \(not an existing one\)\.
 
@@ -443,7 +443,7 @@ You can associate a public IP address with a network interface only if it has a 
 
 ```
   Ec2Instance: 
-    Type: "AWS::EC2::Instance"
+    Type: AWS::EC2::Instance
     Properties: 
       ImageId: 
         Fn::FindInMap: 
@@ -461,7 +461,7 @@ You can associate a public IP address with a network interface only if it has a 
             Ref: "PublicSubnet"
 ```
 
-### Other Examples<a name="w3ab2c21c10d409c15b6"></a>
+### Other Examples<a name="w4ab1c21c10d421c15b6"></a>
 
 You can download templates that show how to use `AWS::EC2::Instance` to create a virtual private cloud \(VPC\):
 + [Single instance in a single subnet](https://s3.amazonaws.com/cloudformation-templates-us-east-1/vpc_single_instance_in_subnet.template)
@@ -471,6 +471,6 @@ For more information about an `AWS::EC2::Instance` that has an IAM instance prof
 
 For more information about Amazon EC2 template examples, see: [Amazon EC2 Template Snippets](quickref-ec2.md)\.
 
-## See Also<a name="w3ab2c21c10d409c17"></a>
+## See Also<a name="w4ab1c21c10d421c17"></a>
 + [RunInstances](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-RunInstances.html) in the *Amazon Elastic Compute Cloud API Reference*
 + [EBS\-Optimized Instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#EBSOptimized) in the *Amazon Elastic Compute Cloud User Guide*

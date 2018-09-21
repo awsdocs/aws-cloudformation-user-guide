@@ -37,7 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-elasticbeanstalk-environment-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElasticBeanstalk::Environment"
+Type: AWS::ElasticBeanstalk::Environment
 Properties:
   [ApplicationName](#cfn-beanstalk-environment-applicationname): String
   [CNAMEPrefix](#cfn-beanstalk-environment-cnameprefix): String
@@ -57,7 +57,7 @@ Properties:
 
 ## Properties<a name="aws-properties-beanstalk-environment-prop"></a>
 
-For more information, see [ CreateEnvironment](http://docs.aws.amazon.com/elasticbeanstalk/latest/api/API_CreateEnvironment.html) in the *AWS Elastic Beanstalk API Reference*\.
+For more information, see [ CreateEnvironment](https://docs.aws.amazon.com/elasticbeanstalk/latest/api/API_CreateEnvironment.html) in the *AWS Elastic Beanstalk API Reference*\.
 
 `ApplicationName`  <a name="cfn-beanstalk-environment-applicationname"></a>
 The name of the application that is associated with this environment\.  
@@ -91,7 +91,7 @@ Key\-value pairs defining configuration options for this environment, such as th
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 `PlatformArn`  <a name="cfn-beanstalk-environment-platformarn"></a>
-The Amazon Resource Name \(ARN\) of the custom platform to use with the environment\. For more information, see [ Custom Platforms](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/custom-platforms.html) in the *AWS Elastic Beanstalk Developer Guide*\.  
+The Amazon Resource Name \(ARN\) of the custom platform to use with the environment\. For more information, see [ Custom Platforms](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/custom-platforms.html) in the *AWS Elastic Beanstalk Developer Guide*\.  
 If you specify `PlatformArn`, then don't specify `SolutionStackName`\.
  *Required*: No  
  *Type*: String  
@@ -99,7 +99,7 @@ If you specify `PlatformArn`, then don't specify `SolutionStackName`\.
 *Example*: `"PlatformArn": "arn:aws:elasticbeanstalk:us-east-1::platform/PHP 5.4 running on 64bit Amazon Linux/2.4.4"`
 
 `SolutionStackName`  <a name="cfn-beanstalk-environment-solutionstackname"></a>
-The name of an Elastic Beanstalk solution stack that this configuration will use\. For more information, see [Supported Platforms](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html) in the *AWS Elastic Beanstalk Developer Guide*\.  
+The name of an Elastic Beanstalk solution stack that this configuration will use\. For more information, see [Supported Platforms](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html) in the *AWS Elastic Beanstalk Developer Guide*\.  
 If you specify `SolutionStackName`, then don't specify `PlatformArn` or `TemplateName`\.
 *Required*: No  
 *Type*: String  
@@ -132,22 +132,22 @@ The version to associate with the environment\.
 
 ## Return Values<a name="aws-properties-beanstalk-environment-ref"></a>
 
-### Ref<a name="w3ab2c21c10d627c11b2"></a>
+### Ref<a name="w4ab1c21c10d646c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d627c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d646c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 `EndpointURL`  
-The returned value depends on the type of the environment. When `EnvironmentType` is *LoadBalanced* this attribute will contain the URL to the load balancer for this environment\. For environments with `EnvironmentType` set to *SingleInstance* this attribute will return the public IP address of the instance\. Note that this attribute does *not* return the Environment URL, and that there is currently no way to retrieve this value\.
-
-Examples:  
-+ `awseb-myst-myen-132MQC4KRLAMD-1371280482.``us-east-2``.elb.amazonaws.com`
-+ `82.12.110.21`
+For load\-balanced, autoscaling environments, the URL to the load balancer\. For single\-instance environments, the IP address of the instance\.  
+Example load balancer URL:  
+`awseb-myst-myen-132MQC4KRLAMD-1371280482.``us-east-2``.elb.amazonaws.com`  
+Example instance IP address:  
+`192.0.2.0`
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
@@ -173,7 +173,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
 #### YAML<a name="aws-resource-elasticbeanstalk-environment-example1.yaml"></a>
 
 ```
-Type: "AWS::ElasticBeanstalk::Environment"
+Type: AWS::ElasticBeanstalk::Environment
 Properties: 
   ApplicationName: 
     Ref: sampleApplication
@@ -208,7 +208,7 @@ Properties:
 #### YAML<a name="aws-resource-elasticbeanstalk-environment-example2.yaml"></a>
 
 ```
-Type: "AWS::ElasticBeanstalk::Environment"
+Type: AWS::ElasticBeanstalk::Environment
 Properties: 
   ApplicationName: 
     Ref: sampleApplication
@@ -571,7 +571,7 @@ Resources:
             S3Key: python-sample-20150402.zip
           VersionLabel: Initial Version
       Description: AWS Elastic Beanstalk Python Sample Application
-    Type: 'AWS::ElasticBeanstalk::Application'
+    Type: AWS::ElasticBeanstalk::Application
   Environment:
     Properties:
       ApplicationName: !Ref Application
@@ -586,9 +586,9 @@ Resources:
         - Namespace: 'aws:elasticbeanstalk:environment'
           OptionName: ServiceRole
           Value: !Ref ServiceRole
-    Type: 'AWS::ElasticBeanstalk::Environment'
+    Type: AWS::ElasticBeanstalk::Environment
   ServiceRole:
-    Type: 'AWS::IAM::Role'
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Version: 2012-10-17
@@ -625,13 +625,13 @@ Resources:
                   - '*'
       Path: /
   InstanceProfile:
-    Type: 'AWS::IAM::InstanceProfile'
+    Type: AWS::IAM::InstanceProfile
     Properties:
       Path: /
       Roles:
         - !Ref InstanceProfileRole
   InstanceProfileRole:
-    Type: 'AWS::IAM::Role'
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Version: 2012-10-17

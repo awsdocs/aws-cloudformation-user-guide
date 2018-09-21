@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-inspector-resourcegroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::Inspector::ResourceGroup"
+Type: AWS::Inspector::ResourceGroup
 Properties:
   [ResourceGroupTags](#cfn-inspector-resourcegroup-resourcegrouptags): 
     - Resource Tag
@@ -61,15 +61,15 @@ The following example shows how to declare an AWS::Inspector::ResourceGroup reso
 
 ```
 "myresourcegroup": {
-    "Type": "AWS: : Inspector: : ResourceGroup",
-        "Properties": {
-            "ResourceGroupTags": [
-                {
-                    "Key": "Name",
-                    "Value": "example"
-                }
-            ]
-        }
+  "Type": "AWS::Inspector::ResourceGroup",
+  "Properties": {
+    "ResourceGroupTags": [
+      {
+        "Key": "Name",
+        "Value": "example"
+      }
+    ]
+  }
 }
 ```
 
@@ -79,8 +79,7 @@ The following example shows how to declare an AWS::Inspector::ResourceGroup reso
 myresourcegroup: 
   Type: "AWS::Inspector::ResourceGroup"
   Properties: 
-    ResourceGroupTags : 
-      -
-        Key: "Name"
-        Value": "example"
+    ResourceGroupTags: 
+      - Key: "Name"
+        Value: "example"
 ```
