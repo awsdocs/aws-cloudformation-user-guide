@@ -77,13 +77,13 @@ The behavior when a Spot Instance is interrupted\.
 
 `LaunchSpecifications`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications"></a>
 The launch specifications for the Spot fleet request\.  
-*Required*: Yes  
+*Required*: Conditional\. You must specify one of the following: `LaunchSpecifications` or `LaunchTemplateConfigs`\.  
 *Type*: List of [Amazon Elastic Compute Cloud SpotFleet LaunchSpecifications](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `LaunchTemplateConfigs`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs"></a>
 Describes a launch template and overrides\.  
-*Required*: No  
+*Required*: Conditional\. You must specify one of the following: `LaunchSpecifications` or `LaunchTemplateConfigs`\.  
 *Type*: List of [Amazon EC2 SpotFleet LaunchTemplateConfig](aws-properties-ec2-spotfleet-launchtemplateconfig.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
