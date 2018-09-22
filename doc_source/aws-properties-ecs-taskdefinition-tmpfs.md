@@ -36,7 +36,7 @@ The absolute file path where the tmpfs volume is to be mounted\.
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `MountOptions`  <a name="cfn-ecs-taskdefinition-tmpfs-mountoptions"></a>
-The list of tmpfs volume mount options\. For a complete list of valid values, see [Tmpfs](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_Tmpfs.html.html) in the *Amazon Elastic Container Service API Reference*\.  
+The list of tmpfs volume mount options\. For a complete list of valid values, see [Tmpfs](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_Tmpfs.html) in the *Amazon Elastic Container Service API Reference*\.  
 Duplicate values are not allowed\.  
  *Required*: No  
  *Type*: List of String values  
@@ -49,4 +49,4 @@ The size \(in MiB\) of the tmpfs volume\.
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## See Also<a name="aws-properties-ecs-taskdefinition-tmpfs-seealso"></a>
-+ [Tmpfs](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_Tmpfs.html.html) in the *Amazon Elastic Container Service API Reference*
++ [Tmpfs](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_Tmpfs.html) in the *Amazon Elastic Container Service API Reference*
