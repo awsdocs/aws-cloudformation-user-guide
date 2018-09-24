@@ -25,7 +25,7 @@
 
 `LaunchTemplateSpecification`  <a name="cfn-ec2-spotfleet-launchtemplateconfig-launchtemplatespecification"></a>
 The launch template\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [Amazon EC2 SpotFleet FleetLaunchTemplateSpecification](aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
