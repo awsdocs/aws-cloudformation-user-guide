@@ -97,7 +97,7 @@ Specifies the maximum number of instances that AWS CloudFormation updates\.
 *Required*: No
 
 `MinInstancesInService`  <a name="cfn-attributes-updatepolicy-rollingupdate-mininstancesinservice"></a>
-Specifies the minimum number of instances that must be in service within the Auto Scaling group while AWS CloudFormation updates old instances\.  
+Specifies the minimum number of instances that must be in service within the Auto Scaling group while AWS CloudFormation updates old instances\. Must be less than the Auto Scaling group's Max size.
 *Default*: `0`  
 *Type*: Integer  
 *Required*: No
