@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AutoPause](#cfn-rds-dbcluster-scalingconfiguration-autopause)" : Boolean,
   "[MaxCapacity](#cfn-rds-dbcluster-scalingconfiguration-maxcapacity)" : Integer,
   "[MinCapacity](#cfn-rds-dbcluster-scalingconfiguration-mincapacity)" : Integer,
-  "[SecondsBeforeAutoPause](#cfn-rds-dbcluster-scalingconfiguration-secondsbeforeautopause)" : Integer
+  "[SecondsUntilAutoPause](#cfn-rds-dbcluster-scalingconfiguration-secondsuntilautopause)" : Integer
 }
 ```
 
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [AutoPause](#cfn-rds-dbcluster-scalingconfiguration-autopause): Boolean
 [MaxCapacity](#cfn-rds-dbcluster-scalingconfiguration-maxcapacity): Integer
 [MinCapacity](#cfn-rds-dbcluster-scalingconfiguration-mincapacity): Integer
-[SecondsBeforeAutoPause](#cfn-rds-dbcluster-scalingconfiguration-secondsbeforeautopause): Integer
+[SecondsUntilAutoPause](#cfn-rds-dbcluster-scalingconfiguration-secondsuntilautopause): Integer
 ```
 
 ## Properties<a name="aws-properties-rds-dbcluster-scalingconfiguration-properties"></a>
@@ -53,7 +53,7 @@ The maximum capacity must be greater than or equal to the minimum capacity\.
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`SecondsBeforeAutoPause`  <a name="cfn-rds-dbcluster-scalingconfiguration-secondsbeforeautopause"></a>
+`SecondsUntilAutoPause`  <a name="cfn-rds-dbcluster-scalingconfiguration-secondsuntilautopause"></a>
 The time, in seconds, before an Aurora DB cluster in `serverless` mode is paused\.  
 *Required*: No  
 *Type*: Integer  
