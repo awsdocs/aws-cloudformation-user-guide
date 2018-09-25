@@ -62,7 +62,7 @@ The migration type\.
 `Valid Values`: `full-load`, `cdc`, `full-load-and-cdc`  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [This parameter cannot be updated on an existing task.](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.Modifying.html)
 
 `ReplicationInstanceArn`  <a name="cfn-dms-replicationtask-replicationinstancearn"></a>
 The Amazon Resource Name \(ARN\) of the replication instance\.  
