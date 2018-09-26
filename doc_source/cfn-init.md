@@ -16,6 +16,9 @@ For information about the template metadata, see [AWS::CloudFormation::Init](aws
 **Note**  
 cfn\-init does not require credentials, so you do not need to use the `--access-key`, `--secret-key`, `--role`, or `--credential-file` options\. However, if no credentials are specified, AWS CloudFormation checks for stack membership and limits the scope of the call to the stack that the instance belongs to\.
 
+**Note**
+When using cfn\-init to retrieve files from an S3 bucket with Server-Side Encryption (SSE) enabled in the us-east-1 region, the endpoint must be s3-external-1.amazonaws.com\. 
+
 ## Syntax<a name="cfn-init-Syntax"></a>
 
 ```
