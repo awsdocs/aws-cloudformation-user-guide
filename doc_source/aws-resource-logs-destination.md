@@ -40,7 +40,7 @@ Properties:
 ## Properties<a name="w4ab1c21c10d899b9"></a>
 
 `DestinationName`  <a name="cfn-logs-destination-destinationname"></a>
-The name of the CloudWatch Logs destination\.  
+The name of the CloudWatch Logs destination\. The name is required because you will have to refer to the destination name explicitly in the `DestinationPolicy`\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -108,6 +108,13 @@ DestinationWithName:
     DestinationName: "TestDestination"
     RoleArn: "arn:aws:iam::123456789012:role/LogKinesisRole"
     TargetArn: "arn:aws:kinesis:us-east-1:123456789012:stream/TestStream"
-    DestinationPolicy: >
-      {"Version" : "2012-10-17","Statement" : [{"Effect" : "Allow", "Principal" : {"AWS" : "arn:aws:iam::234567890123:user/logger"},"Action" : "logs:PutSubscriptionFilter", "Resource" : "arn:aws:logs:us-east-1:123456789012:destination:TestDestination"}]}
+    DestinationPolicy:
+      Version: "2012-10-17"
+      Statement:
+        - Effect: Allow
+          Principal:
+            AWS:
+              arn:aws:iam::234567890123:user/logger
+          Action: logs:PutSubscriptionFilter
+          Resource: arn:aws:logs:us-east-1:123456789012:destination:TestDestination
 ```
