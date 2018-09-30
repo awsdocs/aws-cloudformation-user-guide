@@ -144,7 +144,7 @@ When you rename a resource, you rename its logical ID, which is the name that is
 
    The `WebServerInstance` resource depends on the public route to route traffic to the Internet\. Without the public route, the instance cannot send a signal \(using the cfn\-signal helper script\) to notify AWS CloudFormation when the instance configuration and application deployments are complete\.
 
-1. Drag a connection from the `PublicRouteTable` resource to the `PublicSubnet` resource to associate the route table and subnet\.
+1. Create another dependency from the `PublicRouteTable` resource to the `PublicSubnet` resource to associate the route table and subnet\.
 
    Now the public subnet will use the public route table to direct traffic\.
 
