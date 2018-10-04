@@ -86,10 +86,10 @@ The maximum number of targets that you can run this task for, in parallel\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Targets`  <a name="cfn-ssm-maintenancewindowtask-targets"></a>
-The targets, either instances, tags, or a window target id\.  
+The targets, either instances, tags, or window target id's\.  
 + Specify instances using `Key=instanceids,Values=instanceid1,instanceid2`\.
 + Specify tags using `Key=tag name,Values=tag value`\.
-+ Specify window target id's using `Key=WindowTargetIds,Values=windowtargetid1,windowstargetid2`
++ Specify window target id's using `Key=WindowTargetIds,Values=windowtargetid1,windowtargetid2`
  *Required*: Yes  
  *Type*: List of [Systems Manager MaintenanceWindowTask Target](aws-properties-ssm-maintenancewindowtask-target.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
