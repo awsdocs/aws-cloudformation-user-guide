@@ -23,7 +23,7 @@ The `ReplicationRule` property type specifies which Amazon Simple Storage Servic
   [*ReplicationDestination*](aws-properties-s3-bucket-replicationconfiguration-rules-destination.md)
 [Id](#cfn-s3-bucket-replicationconfiguration-rules-id): String
 [Prefix](#cfn-s3-bucket-replicationconfiguration-rules-prefix): String
-[SourceSelectionCriteria](#cfn-s3-bucket-replicationrule-sourceselectioncriteria): [*SourceSelectionCriteria*](aws-properties-s3-bucket-sourceselectioncriteria.md);
+[SourceSelectionCriteria](#cfn-s3-bucket-replicationrule-sourceselectioncriteria): [*SourceSelectionCriteria*](aws-properties-s3-bucket-sourceselectioncriteria.md)
 [Status](#cfn-s3-bucket-replicationconfiguration-rules-status): String
 ```
 
