@@ -25,7 +25,7 @@
 ## Properties<a name="w4ab1c21c14e2193b7"></a>
 
 `Action`  <a name="cfn-wafregional-webacl-rules-action"></a>
-The action that Amazon CloudFront \(CloudFront\) or AWS WAF takes when a web request matches all conditions in the rule, such as allow, block, or count the request\.  
+The action that AWS WAF takes when a web request matches all conditions in the rule, such as allow, block, or count the request\.  
 *Required*: Yes  
 *Type*: [AWS WAF Regional WebACL Action](aws-properties-wafregional-webacl-action.md)
 
