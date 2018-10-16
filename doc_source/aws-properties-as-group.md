@@ -153,7 +153,7 @@ The lifecycle hooks for the group, which specify actions to perform when Auto Sc
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `LoadBalancerNames`  <a name="cfn-as-group-loadbalancernames"></a>
-A list of Classic load balancers associated with this Auto Scaling group\. To specify Application load balancers, use `TargetGroupARNs`\.  
+A list of Classic load balancers associated with this Auto Scaling group\. To specify Application load balancers or Network Load Balancers, use `TargetGroupARNs`\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
