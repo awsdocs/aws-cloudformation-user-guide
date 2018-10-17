@@ -25,7 +25,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 [EncryptionDisabled](#cfn-codebuild-project-artifacts-encryption-disabled): Boolean
-[Name](#cfn-codebuild-project-artifacts-name): String
 [Location](#cfn-codebuild-project-artifacts-location): String
 [Name](#cfn-codebuild-project-artifacts-name): String
 [NamespaceType](#cfn-codebuild-project-artifacts-namespacetype): String
