@@ -48,7 +48,7 @@ Properties:
 
 `Type`  <a name="cfn-batch-jobdefinition-type"></a>
 The type of job definition\.  
- *Required*: Yes  
+ *Required*: No  
 *Type*: String  
  *Update requires*: No Interruption 
 
