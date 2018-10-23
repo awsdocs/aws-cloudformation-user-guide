@@ -52,7 +52,7 @@
 ## Properties<a name="w4ab1c21c14c41b7"></a>
 
 `CacheKeyParameters`  <a name="cfn-apigateway-method-integration-cachekeyparameters"></a>
-A list of request parameters whose values API Gateway caches\.  
+A list of request parameters whose values API Gateway caches\. To be valid, any request parameters used here must also be present in the method's configured `RequestParameters` property\.
 *Required*: No  
 *Type*: List of String values
 
