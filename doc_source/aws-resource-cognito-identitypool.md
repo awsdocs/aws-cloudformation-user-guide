@@ -138,5 +138,4 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 `Name`  
 The name of the Amazon Cognito identity pool, returned as a string\.
-
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
