@@ -66,6 +66,7 @@ The name of your Amazon Cognito identity pool\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)  
 MinLength: 1  
 MaxLength: 128
+Pattern: [\w ]+
 
 `AllowUnauthenticatedIdentities`  <a name="cfn-cognito-identitypool-allowunauthenticatedidentities"></a>
 Specifies whether the identity pool supports unauthenticated logins\.  
