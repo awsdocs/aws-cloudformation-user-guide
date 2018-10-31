@@ -94,7 +94,8 @@ For valid and default values, see the `HealthCheckProtocol` parameter for the [C
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `HealthCheckTimeoutSeconds`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthchecktimeoutseconds"></a>
-The number of seconds to wait for a response before considering that a health check has failed\.  
+The number of seconds to wait for a response before considering that a health check has failed\.
+Note that if using `TCP` for the `Protocol` this must be set to 10.
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -107,6 +108,7 @@ The number of consecutive successful health checks that are required before an u
 
 `Matcher`  <a name="cfn-elasticloadbalancingv2-targetgroup-matcher"></a>
 The HTTP codes that a healthy target uses when responding to a health check\. If you specify TCP for the `Protocol` property, you must specify the range 200\-399 for the `Matcher` property\.  
+Note that this cannot be specified if using `TCP` for the `Protocol`.
 For more information about specifying this property, see [Matcher](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_Matcher.html) in the Elastic Load Balancing API Reference version 2015\-12\-01\.   
 *Required*: No  
 *Type*: [Elastic Load Balancing TargetGroup Matcher](aws-properties-elasticloadbalancingv2-targetgroup-matcher.md)  
