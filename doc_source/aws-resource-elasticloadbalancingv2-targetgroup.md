@@ -75,6 +75,7 @@ For valid and default values when using the TCP protocol for the load balancer s
 
 `HealthCheckPath`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthcheckpath"></a>
 The ping path destination where Elastic Load Balancing sends health check requests\.  
+For valid and default values, see the `HealthCheckPath` parameter for the [CreateTargetGroup](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateTargetGroup.html) action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
