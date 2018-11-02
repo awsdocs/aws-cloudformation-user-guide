@@ -106,8 +106,8 @@ The ID of the hosted zone\.
 
 `HostedZoneName`  <a name="cfn-route53-recordset-hostedzonename"></a>
 The name of the domain for the hosted zone where you want to add the record set\.  
-When you create a stack using an `AWS::Route53::RecordSet` that specifies `HostedZoneName`, AWS CloudFormation attempts to find a hosted zone whose name matches the `HostedZoneName`\. If AWS CloudFormation cannot find a hosted zone with a matching domain name, or if there is more than one hosted zone with the specified domain name, AWS CloudFormation will not create the stack\.  
-If you have multiple hosted zones with the same domain name, you must explicitly specify the hosted zone using `HostedZoneId`\.  
+When you create a stack using an `AWS::Route53::RecordSet` that specifies `HostedZoneName`, AWS CloudFormation attempts to find a hosted zone whose name matches the `HostedZoneName`\. The `HostedZoneName` should end with a period.\ If AWS CloudFormation cannot find a hosted zone with a matching domain name, or if there is more than one hosted zone with the specified domain name, AWS CloudFormation will not create the stack\.  
+If you have multiple hosted zones with the same domain name, you must explicitly specify the hosted zone using `HostedZoneId`\.
 *Required*: Conditional\. You must specify either the `HostedZoneName` or `HostedZoneId`, but you cannot specify both\. If this record set is part of a record set group, do not specify this property\.  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
