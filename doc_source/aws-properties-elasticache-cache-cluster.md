@@ -210,7 +210,7 @@ An arbitrary set of tags \(key–value pairs\) for this cache cluster\.
 
 `VpcSecurityGroupIds`  <a name="cfn-elasticache-cachecluster-vpcsecuritygroupids"></a>
 A list of VPC security group IDs\. If your cache cluster isn't in a VPC, specify the `CacheSecurityGroupNames` property instead\.  
-You must use the `AWS::EC2::SecurityGroup` resource instead of the `AWS::ElastiCache::SecurityGroup` resource in order to specify an ElastiCache security group that is in a VPC\. In addition, if you use the [default VPC](https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html) for your AWS account, you must use the `Fn::GetAtt` function and the `GroupId` attribute to retrieve security group IDs \(instead of the `Ref` function\)\. To see a sample template, see the Template Snippet section\.
+If you are using a Security Group resource created by CloudFormation, you must use the `AWS::EC2::SecurityGroup` resource instead of the `AWS::ElastiCache::SecurityGroup` resource in order to specify an ElastiCache security group that is in a VPC\. In addition, if you use the [default VPC](https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html) for your AWS account, you must use the `Fn::GetAtt` function and the `GroupId` attribute to retrieve security group IDs \(instead of the `Ref` function\)\. To see a sample template, see the Template Snippet section\.
 *Required*: Conditional: If your cache cluster is in a VPC, you must specify this property\.  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
