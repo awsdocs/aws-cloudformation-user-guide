@@ -5,6 +5,8 @@ The `AWS::CertificateManager::Certificate` resource requests an AWS Certificate 
 **Important**  
 When you use the `AWS::CertificateManager::Certificate` resource in an AWS CloudFormation stack, the stack will remain in the `CREATE_IN_PROGRESS` state and any further stack operations will be delayed until you validate the certificate request, either by acting upon the instructions in the certificate validation email, or by adding a CNAME record to your DNS configuration\.
 
+If the certificate request is not validated within XXX hours, the stack will time out and be rolled back, deleting the pending certificate.
+
 **Topics**
 + [Syntax](#aws-resource-certificatemanager-certificate-syntax)
 + [Properties](#aws-resource-certificatemanager-certificate-properties)
