@@ -59,6 +59,19 @@ Specifying the exact version is required\. You cannot currently specify that AWS
 
 The following example uses an `ssm` dynamic reference to set the access control for an S3 bucket to a parameter value stored in Systems Manager Parameter Store\. As specified, CloudFormation will use version 2 of the `S3AccessControl` parameter for stack and change set operations\.
 
+**Example JSON Syntax**  
+
+```
+  "MyS3Bucket": {
+    "Type": "AWS::S3::Bucket",
+    "Properties": {
+      "AccessControl": "{{resolve:ssm:S3AccessControl:2}}""
+    }
+  }
+```
+
+**Example YAML Syntax**  
+
 ```
   MyS3Bucket:
     Type: 'AWS::S3::Bucket'
@@ -105,6 +118,22 @@ Specifying the exact version is required\. You cannot currently specify that AWS
 #### Example<a name="dynamic-references-ssm-secure-example"></a>
 
 The following example uses an `ssm-secure` dynamic reference to set the password for an IAM user to a secure string stored in Systems Manager Parameter Store\. As specified, CloudFormation will use version 10 of the `IAMUserPassword` parameter for stack and change set operations\.
+
+**Example JSON Syntax**  
+
+```
+  "MyIAMUser": {
+    "Type": "AWS::IAM::User",
+    "Properties": {
+      "UserName": "MyUserName",
+      "LoginProfile": {
+        "Password": "{{resolve:ssm-secure:IAMUserPassword:10}}"
+      }
+    }
+  }
+```
+
+**Example YAML Syntax**  
 
 ```
   MyIAMUser:
