@@ -63,7 +63,7 @@ Properties:
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `RouteTableIds`  <a name="cfn-ec2-vpcendpoint-routetableids"></a>
-One or more route table IDs that are used by the VPC to reach the endpoint\.  
+\[Gateway endpoint\] One or more route table IDs that are used by the VPC to reach the endpoint\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
