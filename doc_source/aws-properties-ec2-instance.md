@@ -124,7 +124,7 @@ Defines a set of Amazon Elastic Block Store block device mappings, ephemeral ins
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)\. If you change only the `DeleteOnTermination` property for one or more block devices, update requires [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
 `CreditSpecification`  <a name="cfn-ec2-instance-creditspecification"></a>
-Specifies the credit option for CPU usage of a T2 instance\.  
+Specifies the credit option for CPU usage of a T2 or T3 instance\.  
 *Required: *No  
 *Type*: [Amazon EC2 Instance CreditSpecification](aws-properties-ec2-instance-creditspecification.md)\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
