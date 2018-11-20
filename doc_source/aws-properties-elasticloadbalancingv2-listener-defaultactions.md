@@ -25,12 +25,12 @@ The `DefaultActions` property of the [AWS::ElasticLoadBalancingV2::Listener](aws
 ## Properties<a name="w4ab1c21c14e1100b9"></a>
 
 `TargetGroupArn`  <a name="cfn-elasticloadbalancingv2-listener-defaultactions-targetgrouparn"></a>
-The Amazon Resource Name \(ARN\) of the target group to which Elastic Load Balancing routes the traffic\.  
-*Required*: Yes  
+The Amazon Resource Name \(ARN\) of the target group to which Elastic Load Balancing routes the traffic\.
+*Required*: Yes
 *Type*: String
 
 `Type`  <a name="cfn-elasticloadbalancingv2-listener-defaultactions-type"></a>
-The type of action\.  
-*Valid values*: `forward`  
-*Required*: Yes  
+The type of action\.
+*Valid values*: `forward`, `redirect`
+*Required*: Yes
 *Type*: String
