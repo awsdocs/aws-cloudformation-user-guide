@@ -8,12 +8,13 @@ If you're unfamiliar with JSON or YAML, you can use AWS CloudFormation Designer 
 
 For details about the supported resources, type names, intrinsic functions, and pseudo parameters you can use in your templates, see [Template Reference](template-reference.md)\.
 
-
+**Topics**
 + [AWS CloudFormation Template Formats](template-formats.md)
 + [Template Anatomy](template-anatomy.md)
 + [What Is AWS CloudFormation Designer?](working-with-templates-cfn-designer.md)
 + [Walkthroughs](CHAP_Using.md)
 + [Template Snippets](CHAP_TemplateQuickRef.md)
 + [Custom Resources](template-custom-resources.md)
++ [Using AWS CloudFormation Macros to Perform Custom Processing on Templates](template-macros.md)
 + [Using Regular Expressions in AWS CloudFormation Templates](cfn-regexes.md)
 + [Using CloudFormer to Create AWS CloudFormation Templates from Existing AWS Resources](cfn-using-cloudformer.md)

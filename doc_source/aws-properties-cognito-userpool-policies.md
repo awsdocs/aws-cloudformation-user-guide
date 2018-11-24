@@ -23,4 +23,4 @@
 `PasswordPolicy`  <a name="cfn-cognito-userpool-policies-passwordpolicy"></a>
 Specifies information about the user pool password policy\.  
 *Type*: [Amazon Cognito UserPool PasswordPolicy](aws-properties-cognito-userpool-passwordpolicy.md)  
-*Required: *No
+*Required*: No

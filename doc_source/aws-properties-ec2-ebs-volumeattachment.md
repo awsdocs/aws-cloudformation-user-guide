@@ -7,11 +7,11 @@ Before this resource can be deleted \(and therefore the volume detached\), you m
 If an Amazon EBS volume is the root device of an instance, it cannot be detached while the instance is in the "running" state\. To detach the root volume, stop the instance first\.  
 If the root volume is detached from an instance with an AWS Marketplace product code, then the AWS Marketplace product codes from that volume are no longer associated with the instance\.
 
-
+**Topics**
 + [Syntax](#aws-resource-ec2-volumeattachment-syntax)
-+ [Properties](#w3ab2c21c10d465c11)
-+ [Example](#w3ab2c21c10d465c13)
-+ [See Also](#w3ab2c21c10d465c15)
++ [Properties](#w4ab1c21c10d517c11)
++ [Example](#w4ab1c21c10d517c13)
++ [See Also](#w4ab1c21c10d517c15)
 
 ## Syntax<a name="aws-resource-ec2-volumeattachment-syntax"></a>
 
@@ -40,7 +40,7 @@ Properties:
   [VolumeId](#cfn-ec2-ebs-volumeattachment-volumeid): String
 ```
 
-## Properties<a name="w3ab2c21c10d465c11"></a>
+## Properties<a name="w4ab1c21c10d517c11"></a>
 
 `Device`  <a name="cfn-ec2-ebs-volumeattachment-device"></a>
 How the device is exposed to the instance \(e\.g\., /dev/sdh, or xvdh\)\.  
@@ -60,7 +60,7 @@ The ID of the Amazon EBS volume\. The volume and instance must be within the sam
 *Type*: String  
 *Update requires*: Updates are not supported\.
 
-## Example<a name="w3ab2c21c10d465c13"></a>
+## Example<a name="w4ab1c21c10d517c13"></a>
 
 This example attaches an EC2 EBS volume to the EC2 instance with the logical name "Ec2Instance"\.
 
@@ -87,14 +87,9 @@ This example attaches an EC2 EBS volume to the EC2 instance with the logical nam
 }
 ```
 
-## See Also<a name="w3ab2c21c10d465c15"></a>
-
+## See Also<a name="w4ab1c21c10d517c15"></a>
 + [Amazon Elastic Block Store \(Amazon EBS\)](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html) in the *Amazon Elastic Compute Cloud User Guide*\.
-
 + [Attaching a Volume to an Instance](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html) in the *Amazon Elastic Compute Cloud User Guide*
-
 + [Detaching an Amazon EBS Volume from an Instance](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) in the *Amazon Elastic Compute Cloud User Guide*
-
 + [AttachVolume](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-AttachVolume.html) in the *Amazon Elastic Compute Cloud API Reference*
-
 + [DetachVolume](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-DetachVolume.html) in the *Amazon Elastic Compute Cloud API Reference*

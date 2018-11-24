@@ -42,7 +42,7 @@ If you want to use a custom name, specify a name property for that resource in y
 
 ```
 myDynamoDBTable: 
-  Type: "AWS::DynamoDB::Table"
+  Type: AWS::DynamoDB::Table
   Properties: 
     KeySchema: 
       HashKeyElement: 
@@ -57,62 +57,36 @@ myDynamoDBTable:
     TableName: "SampleTable"
 ```
 
-## Supported Resources<a name="w3ab2c21c14e1365c13"></a>
+## Supported Resources<a name="w4ab1c21c14e1644c13"></a>
 
 The following resource types support custom names:
-
 + [AWS::ApiGateway::ApiKey](aws-resource-apigateway-apikey.md)
-
 + [AWS::ApiGateway::Model](aws-resource-apigateway-model.md)
-
 + [AWS::CloudWatch::Alarm](aws-properties-cw-alarm.md)
-
 + [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md)
-
 + [AWS::ElasticBeanstalk::Application](aws-properties-beanstalk.md)
-
 + [AWS::ElasticBeanstalk::Environment](aws-properties-beanstalk-environment.md)
-
 + [AWS::CodeDeploy::Application](aws-resource-codedeploy-application.md)
-
 + [AWS::CodeDeploy::DeploymentConfig](aws-resource-codedeploy-deploymentconfig.md)
-
 + [AWS::CodeDeploy::DeploymentGroup](aws-resource-codedeploy-deploymentgroup.md)
-
 + [AWS::Config::ConfigRule](aws-resource-config-configrule.md)
-
 + [AWS::Config::DeliveryChannel](aws-resource-config-deliverychannel.md)
-
 + [AWS::Config::ConfigurationRecorder](aws-resource-config-configurationrecorder.md)
-
 + [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md)
-
++ [AWS::ElasticLoadBalancingV2::LoadBalancer](aws-resource-elasticloadbalancingv2-loadbalancer.md)
++ [AWS::ElasticLoadBalancingV2::TargetGroup](aws-resource-elasticloadbalancingv2-targetgroup.md)
 + [AWS::EC2::SecurityGroup](aws-properties-ec2-security-group.md)
-
 + [AWS::ElastiCache::CacheCluster](aws-properties-elasticache-cache-cluster.md)
-
 + [AWS::ECR::Repository](aws-resource-ecr-repository.md)
-
 + [AWS::ECS::Cluster](aws-resource-ecs-cluster.md)
-
 + [AWS::Elasticsearch::Domain](aws-resource-elasticsearch-domain.md)
-
 + [AWS::Events::Rule](aws-resource-events-rule.md)
-
 + [AWS::IAM::Group](aws-properties-iam-group.md)
-
 + [AWS::IAM::ManagedPolicy](aws-resource-iam-managedpolicy.md)
-
 + [AWS::IAM::Role](aws-resource-iam-role.md)
-
 + [AWS::IAM::User](aws-properties-iam-user.md)
-
 + [AWS::Lambda::Function](aws-resource-lambda-function.md)
-
 + [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)
-
 + [AWS::S3::Bucket](aws-properties-s3-bucket.md)
-
 + [AWS::SNS::Topic](aws-properties-sns-topic.md)
-
 + [AWS::SQS::Queue](aws-properties-sqs-queues.md)

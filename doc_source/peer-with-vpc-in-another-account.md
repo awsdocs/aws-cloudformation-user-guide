@@ -4,7 +4,7 @@ You can peer with a virtual private cloud \(VPC\) in another AWS account by usin
 
 To establish a VPC peering connection, you need to authorize two separate AWS accounts within a single AWS CloudFormation stack\.
 
-For more information about VPC peering and its limitations, see [VPC Peering Overview](http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide/vpc-peering-overview.html) in the *Amazon VPC Peering Guide*\.
+For more information about VPC peering and its limitations, see [VPC Peering Overview](https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-overview.html) in the *Amazon VPC Peering Guide*\.
 
 ## Prerequisites<a name="peer-with-vpc-in-another-account-prerequisites"></a>
 

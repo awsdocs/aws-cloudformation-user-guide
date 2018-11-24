@@ -30,19 +30,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-spotprovisioningspecification-properties"></a>
 
 `BlockDurationMinutes`  <a name="cfn-elasticmapreduce-cluster-spotprovisioningspecification-blockdurationminutes"></a>
-The defined duration for Spot instances \(also known as Spot blocks\) in minutes\. For more information, see [SpotProvisioningSpecification](http://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_SpotProvisioningSpecification.html) in the *Amazon EMR API Reference*\.  
-*Required: *No  
+The defined duration for Spot instances \(also known as Spot blocks\) in minutes\. For more information, see [SpotProvisioningSpecification](https://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_SpotProvisioningSpecification.html) in the *Amazon EMR API Reference*\.  
+*Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `TimeoutAction`  <a name="cfn-elasticmapreduce-cluster-spotprovisioningspecification-timeoutaction"></a>
-The action to take when TargetSpotCapacity has not been fulfilled when the TimeoutDurationMinutes has expired\. For more information, see [SpotProvisioningSpecification](http://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_SpotProvisioningSpecification.html) in the *Amazon EMR API Reference*\.  
-*Required: *Yes  
+The action to take when TargetSpotCapacity has not been fulfilled when the TimeoutDurationMinutes has expired\. For more information, see [SpotProvisioningSpecification](https://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_SpotProvisioningSpecification.html) in the *Amazon EMR API Reference*\.  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `TimeoutDurationMinutes`  <a name="cfn-elasticmapreduce-cluster-spotprovisioningspecification-timeoutdurationminutes"></a>
-The spot provisioning timeout period in minutes\. For more information, see [SpotProvisioningSpecification](http://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_SpotProvisioningSpecification.html) in the *Amazon EMR API Reference*\.  
-*Required: *Yes  
+The spot provisioning timeout period in minutes\. For more information, see [SpotProvisioningSpecification](https://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_SpotProvisioningSpecification.html) in the *Amazon EMR API Reference*\.  
+*Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

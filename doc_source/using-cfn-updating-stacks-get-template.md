@@ -7,7 +7,7 @@ If you want to modify just the parameters or settings of a stack \(like a stack'
 **Note**  
 If your template includes an unsupported change, AWS CloudFormation returns a message saying that the change is not permitted\. This message might occur asynchronously, however, because resources are created and updated by AWS CloudFormation in a non\-deterministic order by default\.
 
-
+**Topics**
 + [Update a Stack's Template \(Console\)](#using-cfn-updating-stacks-get-stack.CON)
 + [Get and Update a Template for a Stack \(CLI\)](#using-cfn-updating-stacks-get-stack.CLI)
 
@@ -23,35 +23,25 @@ If your template includes an unsupported change, AWS CloudFormation returns a me
    You can use the AWS CloudFormation Designer drag\-and\-drop interface or the integrated JSON and YAML editor to modify the template\. For more information about using AWS CloudFormation Designer, see [What Is AWS CloudFormation Designer?](working-with-templates-cfn-designer.md)\.
 
    Modify only the resources that you want to update\. Use the *same values* as the current stack configuration for resources and properties that you aren't updating\. You can modify the template by completing any of the following actions:
-
    + Add new resources, or remove existing resources\.
 
      For most resources, changing the logical name of a resource is equivalent to deleting that resource and replacing it with a new one\. Any other resources that depend on the renamed resource also need to be updated and might cause them to be replaced\. Other resources require you to update a property \(not just the logical name\) in order to trigger an update\.
-
    + Add, modify, or delete properties of existing resources\.
 
      Consult the [AWS Resource Types Reference](aws-template-resource-type-ref.md) for information about the effects of updating particular resource properties\. For each property, the effects of an update will be one of the following:
-
      + *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
-
      + *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
-
      + *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
-
    + Add, modify, or delete attributes for resources \(`Metadata`, `DependsOn`, `CreationPolicy`, `UpdatePolicy`, and `DeletionPolicy`\)\.
 **Important**  
 You cannot update the `CreationPolicy`, `DeletionPolicy`\. or `UpdatePolicy` attribute by itself\. You can update them only when you include changes that add, modify, or delete resources\. For example, you can add or modify a metadata attribute of a resource\.
-
    + Add, modify, or delete parameter declarations\. However, you cannot add, modify, or delete a parameter that is used by a resource that does not support updates\.
-
    + Add, modify, or delete mapping declarations\.
 **Important**  
 If the values in a mapping are not being used by your stack, you can't update the mapping by itself\. You need to include changes that add, modify, or delete resources\. For example, you can add or modify a metadata attribute of a resource\. If you update a mapping value that your stack is using, you don't need to make any other changes to trigger an update\.
-
    + Add, modify, or delete condition declarations\.
 **Important**  
 You cannot update conditions by themselves\. You can update conditions only when you include changes that add, modify, or delete resources\. For example, you can add or modify a metadata attribute of a resource\.
-
    + Add, modify, or delete output value declarations\.
 
    Some resources or properties may have constraints on property values or changes to those values\. For example, changes to the `AllocatedStorage` property of an [ AWS::RDS::DBInstance](aws-properties-rds-database-instance.md) resource must be greater than the current setting\. If the value specified for the update does not meet those constraints, the update for that resource fails\. For the specific constraints on `AllocatedStorage` changes, see [ ModifyDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html)\.
@@ -66,6 +56,6 @@ You cannot update conditions by themselves\. You can update conditions only when
 
 ## Get and Update a Template for a Stack \(CLI\)<a name="using-cfn-updating-stacks-get-stack.CLI"></a>
 
-1. To get the template for the stack you want to update, use the command [http://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template.html](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template.html)\.
+1. To get the template for the stack you want to update, use the command [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template.html)\.
 
 1. Copy the template, paste it into a text file, modify it, and save it\. Copy *only* the template\. The command encloses the template in quotation marks, but do not copy the quotation marks surrounding the template\. The template itself starts with an open brace and ends with the final close brace\. Specify changes to the stack's resources in this file\.

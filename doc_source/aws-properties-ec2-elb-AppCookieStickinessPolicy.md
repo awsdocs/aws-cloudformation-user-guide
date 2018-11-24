@@ -2,7 +2,7 @@
 
 The AppCookieStickinessPolicy type is an embedded property of the [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md) type\.
 
-## Syntax<a name="w3ab2c21c14d808b5"></a>
+## Syntax<a name="w4ab1c21c14e1062b5"></a>
 
 ### JSON<a name="aws-properties-ec2-elb-AppCookieStickinessPolicy-syntax.json"></a>
 
@@ -20,7 +20,7 @@ The AppCookieStickinessPolicy type is an embedded property of the [AWS::ElasticL
 [PolicyName](#cfn-elb-appcookiestickinesspolicy-policyname): String
 ```
 
-## Properties<a name="w3ab2c21c14d808b7"></a>
+## Properties<a name="w4ab1c21c14e1062b7"></a>
 
 `CookieName`  <a name="cfn-elb-appcookiestickinesspolicy-cookiename"></a>
 Name of the application cookie used for stickiness\.  
@@ -33,8 +33,6 @@ To associate this policy with a listener, include the policy name in the listene
 *Required*: Yes  
 *Type*: String
 
-## See Also<a name="w3ab2c21c14d808b9"></a>
-
+## See Also<a name="w4ab1c21c14e1062b9"></a>
 + Sample template snippets in the Examples section of [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md)\.
-
 + [CreateAppCookieStickinessPolicy](http://docs.aws.amazon.com/ElasticLoadBalancing/latest/APIReference/API_CreateAppCookieStickinessPolicy.html)in the *Elastic Load Balancing API Reference version 2012\-06\-01*

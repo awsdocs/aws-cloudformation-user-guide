@@ -4,9 +4,9 @@ With AWS Identity and Access Management \(IAM\), you can create IAM users to con
 
 In addition to AWS CloudFormation actions, you can manage what AWS services and resources are available to each user\. That way, you can control which resources users can access when they use AWS CloudFormation\. For example, you can specify which users can create Amazon EC2 instances, terminate database instances, or update VPCs\. Those same permissions are applied anytime they use AWS CloudFormation to do those actions\.
 
-For more information about all the services that you can control access to, see [AWS Services that Support IAM](http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_SpecificProducts.html) in *IAM User Guide*\.
+For more information about all the services that you can control access to, see [AWS Services that Support IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_SpecificProducts.html) in *IAM User Guide*\.
 
-
+**Topics**
 + [AWS CloudFormation Actions](#using-iam-template-actions)
 + [AWS CloudFormation Resources](#resource-level-permissions)
 + [AWS CloudFormation Conditions](#using-iam-template-conditions)
@@ -65,9 +65,9 @@ In addition to AWS CloudFormation actions, IAM users who create or delete stacks
 }
 ```
 
-For a list of all AWS CloudFormation actions that you can allow or deny, see the [http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/)\.
+For a list of all AWS CloudFormation actions that you can allow or deny, see the [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/)\.
 
-### AWS CloudFormation Console\-Specific Actions<a name="w3ab2b7c14c11c16"></a>
+### AWS CloudFormation Console\-Specific Actions<a name="w4ab1b7c14c11c16"></a>
 
 IAM users who use the AWS CloudFormation console require additional permissions that are not required for using the AWS Command Line Interface or AWS CloudFormation APIs\. Compared to the CLI and API, the console provides additional features that require additional permissions, such as template uploads to Amazon S3 buckets and drop\-down lists for [AWS\-specific parameter types](parameters-section-structure.md#aws-specific-parameter-types)\.
 
@@ -137,7 +137,7 @@ To allow `AWS::Serverless` transforms to create a change set, the policy should 
 
 ## AWS CloudFormation Conditions<a name="using-iam-template-conditions"></a>
 
-In an IAM policy, you can optionally specify conditions that control when a policy is in effect\. For example, you can define a policy that allows IAM users to create a stack only when they specify a certain template URL\. You can define AWS CloudFormation\-specific conditions and AWS\-wide conditions, such as `DateLessThan`, which specifies when a policy stops taking effect\. For more information and a list of AWS\-wide conditions, see Condition in [IAM Policy Elements Reference](http://docs.aws.amazon.com/IAM/latest/UserGuide/AccessPolicyLanguage_ElementDescriptions.html#Condition) in *IAM User Guide*\.
+In an IAM policy, you can optionally specify conditions that control when a policy is in effect\. For example, you can define a policy that allows IAM users to create a stack only when they specify a certain template URL\. You can define AWS CloudFormation\-specific conditions and AWS\-wide conditions, such as `DateLessThan`, which specifies when a policy stops taking effect\. For more information and a list of AWS\-wide conditions, see Condition in [IAM Policy Elements Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/AccessPolicyLanguage_ElementDescriptions.html#Condition) in *IAM User Guide*\.
 
 **Note**  
 Do not use the `aws:SourceIp` AWS\-wide condition\. AWS CloudFormation provisions resources by using its own IP address, not the IP address of the originating request\. For example, when you create a stack, AWS CloudFormation makes requests from its IP address to launch an EC2 instance or to create an S3 bucket, not from the IP address from the `CreateStack` call or the `aws cloudformation create-stack` command\.
@@ -148,7 +148,7 @@ The following list describes the AWS CloudFormation\-specific conditions\. These
 An AWS CloudFormation change set name that you want to associate with a policy\. Use this condition to control which change sets IAM users can execute or delete\.
 
 `cloudformation:ResourceTypes`  
-The template resource types, such as `AWS::EC2::Instance`, that you want to associate with a policy\. Use this condition to control which resource types IAM users can work with when they create or update a stack\. This condition is checked against the resource types that users declare in the `ResourceTypes` parameter, which is currently supported only for CLI and API requests\. When using this parameter, users must specify all the resource types that are in their template\. For more information about the `ResourceTypes` parameter, see the [CreateStack](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html) action in the *AWS CloudFormation API Reference*\.  
+The template resource types, such as `AWS::EC2::Instance`, that you want to associate with a policy\. Use this condition to control which resource types IAM users can work with when they create or update a stack\. This condition is checked against the resource types that users declare in the `ResourceTypes` parameter, which is currently supported only for CLI and API requests\. When using this parameter, users must specify all the resource types that are in their template\. For more information about the `ResourceTypes` parameter, see the [CreateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html) action in the *AWS CloudFormation API Reference*\.  
 The following list describes how to define resource types\. For a list of resource types, see [AWS Resource Types Reference](aws-template-resource-type-ref.md)\.    
 `AWS::*`  
 Specify all AWS resources\.  
@@ -172,7 +172,7 @@ To ensure that IAM users can only create or update stacks with the stack policie
 An Amazon S3 template URL that you want to associate with a policy\. Use this condition to control which templates IAM users can use when they create or update stacks\.  
 To ensure that IAM users can only create or update stacks with the templates that you uploaded, set the S3 bucket to `read only` for those users\.
 
-### Examples<a name="w3ab2b7c14c15c10"></a>
+### Examples<a name="w4ab1b7c14c15c10"></a>
 
 The following example policy allows users to use only the `https://s3.amazonaws.com/testbucket/test.template` template URL to create or update a stack\.
 
@@ -263,11 +263,8 @@ The following example policy is similar to the preceding example\. The policy al
 Before you can create a stack, AWS CloudFormation validates your template\. During validation, AWS CloudFormation checks your template for IAM resources that it might create\. IAM resources, such as an IAM user with full access, can access and modify any resource in your AWS account\. Therefore, we recommend that you review the permissions associated with each IAM resource before proceeding so that you don't unintentionally create resources with escalated permissions\. To ensure that you've done so, you must acknowledge that the template contains those resources, giving AWS CloudFormation the specified capabilities before it creates the stack\.
 
 You can acknowledge the capabilities of AWS CloudFormation templates by using the AWS CloudFormation console, AWS Command Line Interface \(CLI\), or API:
-
 + In the AWS CloudFormation console, on the **Review** page of the Create Stack or Update Stack wizards, choose **I acknowledge that this template may create IAM resources**\.
-
-+ In the CLI, when you use the [http://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html) and [http://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html) commands, specify the `CAPABILITY_IAM` or `CAPABILITY_NAMED_IAM` value for the `--capabilities` parameter\. If your template includes IAM resources, you can specify either capability\. If your template includes custom names for IAM resources, you must specify `CAPABILITY_NAMED_IAM`\.
-
++ In the CLI, when you use the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html) and [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html) commands, specify the `CAPABILITY_IAM` or `CAPABILITY_NAMED_IAM` value for the `--capabilities` parameter\. If your template includes IAM resources, you can specify either capability\. If your template includes custom names for IAM resources, you must specify `CAPABILITY_NAMED_IAM`\.
 + In the API, when you use the [CreateStack](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html) and [UpdateStack](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStack.html) actions, specify `Capabilities.member.1=CAPABILITY_IAM` or `Capabilities.member.1=CAPABILITY_NAMED_IAM`\. If your template includes IAM resources, you can specify either capability\. If your template includes custom names for IAM resources, you must specify `CAPABILITY_NAMED_IAM`\.
 
 **Important**  
@@ -280,7 +277,7 @@ If you have an application that runs on an Amazon EC2 instance and needs to make
 For a template snippet that shows how to launch an instance with a role, see [IAM Role Template Examples](quickref-iam.md#scenarios-iamroles)\.
 
 **Note**  
-Applications on instances that use temporary security credentials can call any AWS CloudFormation actions\. However, because AWS CloudFormation interacts with many other AWS services, you must verify that all the services that you want to use support temporary security credentials\. For more information, see [AWS Services that Support AWS STS](http://docs.aws.amazon.com/STS/latest/UsingSTS/UsingTokens.html)\.
+Applications on instances that use temporary security credentials can call any AWS CloudFormation actions\. However, because AWS CloudFormation interacts with many other AWS services, you must verify that all the services that you want to use support temporary security credentials\. For more information, see [AWS Services that Support AWS STS](https://docs.aws.amazon.com/STS/latest/UsingSTS/UsingTokens.html)\.
 
 ## Grant Temporary Access \(Federated Access\)<a name="using-iam-template-grant-access"></a>
 
@@ -290,15 +287,13 @@ A federated identity is a distinct identity that you can use across multiple sys
 
 You can also grant federated users access to the AWS Management Console\. After users authenticate with your on\-premises identity system, you can programmatically construct a temporary URL that gives direct access to the AWS Management Console\. When users use the temporary URL, they won't need to sign in to AWS because they have already been authenticated \(single sign\-on\)\. Also, because the URL is constructed from the users' temporary security credentials, the permissions that are available with those credentials determine what permissions users have in the AWS Management Console\.
 
-You can use several different AWS STS APIs to generate temporary security credentials\. For more information about which API to use, see [Ways to Get Temporary Security Credentials](http://docs.aws.amazon.com/STS/latest/UsingSTS/Welcome.html#AccessingSTS) in *Using Temporary Security Credentials*\.
+You can use several different AWS STS APIs to generate temporary security credentials\. For more information about which API to use, see [Ways to Get Temporary Security Credentials](https://docs.aws.amazon.com/STS/latest/UsingSTS/Welcome.html#AccessingSTS) in *Using Temporary Security Credentials*\.
 
 **Important**  
 You cannot work with IAM when you use temporary security credentials that were generated from the `GetFederationToken` API\. Instead, if you need to work with IAM, use temporary security credentials from a role\.
 
-AWS CloudFormation interacts with many other AWS services\. When you use temporary security credentials with AWS CloudFormation, verify that all the services that you want to use support temporary security credentials\. For more information, see [AWS Services that Support AWS STS](http://docs.aws.amazon.com/STS/latest/UsingSTS/UsingTokens.html)\.
+AWS CloudFormation interacts with many other AWS services\. When you use temporary security credentials with AWS CloudFormation, verify that all the services that you want to use support temporary security credentials\. For more information, see [AWS Services that Support AWS STS](https://docs.aws.amazon.com/STS/latest/UsingSTS/UsingTokens.html)\.
 
 For more information, see the following related resources in *Using Temporary Security Credentials*:
-
-+ [Scenarios for Granting Temporary Access](http://docs.aws.amazon.com/STS/latest/UsingSTS/STSUseCases.html)
-
-+ [Giving Federated Users Direct Access to the AWS Management Console](http://docs.aws.amazon.com/STS/latest/UsingSTS/STSMgmtConsole.html)
++ [Scenarios for Granting Temporary Access](https://docs.aws.amazon.com/STS/latest/UsingSTS/STSUseCases.html)
++ [Giving Federated Users Direct Access to the AWS Management Console](https://docs.aws.amazon.com/STS/latest/UsingSTS/STSMgmtConsole.html)

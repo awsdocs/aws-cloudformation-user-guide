@@ -4,11 +4,11 @@ The AWS::IAM::AccessKey resource type generates a secret access key and assigns 
 
 This type supports updates\. For more information about updating stacks, see [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)\.
 
-
+**Topics**
 + [Syntax](#aws-resource-iam-accesskey-syntax)
 + [Properties](#aws-properties-iam-accesskey-prop)
 + [Return Values](#aws-properties-iam-accesskey-ref)
-+ [Template Examples](#w3ab2c21c10d698c15)
++ [Template Examples](#w4ab1c21c10d761c15)
 
 ## Syntax<a name="aws-resource-iam-accesskey-syntax"></a>
 
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-iam-accesskey-syntax.yaml"></a>
 
 ```
-Type: "AWS::IAM::AccessKey"
+Type: AWS::IAM::AccessKey
 Properties: 
   [Serial](#cfn-iam-accesskey-serial): Integer
   [Status](#cfn-iam-accesskey-status): String
@@ -60,13 +60,13 @@ The name of the user that the new key will belong to\.
 
 ## Return Values<a name="aws-properties-iam-accesskey-ref"></a>
 
-### Ref<a name="w3ab2c21c10d698c13b2"></a>
+### Ref<a name="w4ab1c21c10d761c13b2"></a>
 
 Specifying this resource ID to the intrinsic `Ref` function will return the `AccessKeyId`\. For example: `AKIAIOSFODNN7EXAMPLE`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d698c13b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d761c13b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -75,6 +75,6 @@ Returns the secret access key for the specified `AWS::IAM::AccessKey` resource\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Template Examples<a name="w3ab2c21c10d698c15"></a>
+## Template Examples<a name="w4ab1c21c10d761c15"></a>
 
 To view AWS::IAM::AccessKey snippets, see [Declaring an IAM Access Key Resource](quickref-iam.md#scenario-iam-accesskey)\.

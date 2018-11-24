@@ -14,7 +14,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Capabilities](#cfn-ecs-taskdefinition-linuxparameters-capabilities)" : [*KernelCapabilities*](aws-properties-ecs-taskdefinition-kernelcapabilities.md),
   "[Devices](#cfn-ecs-taskdefinition-linuxparameters-devices)" : [ [*Device*](aws-properties-ecs-taskdefinition-device.md), ... ],
-  "[InitProcessEnabled](#cfn-ecs-taskdefinition-linuxparameters-initprocessenabled)" : Boolean
+  "[InitProcessEnabled](#cfn-ecs-taskdefinition-linuxparameters-initprocessenabled)" : Boolean,
+  "[SharedMemorySize](#cfn-ecs-taskdefinition-linuxparameters-sharedmemorysize)" : Integer,
+  "[Tmpfs](#cfn-ecs-taskdefinition-linuxparameters-tmpfs)" : [ [*Tmpfs*](aws-properties-ecs-taskdefinition-tmpfs.md), ... ]
 }
 ```
 
@@ -26,6 +28,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [Devices](#cfn-ecs-taskdefinition-linuxparameters-devices): 
   - [*Device*](aws-properties-ecs-taskdefinition-device.md)
 [InitProcessEnabled](#cfn-ecs-taskdefinition-linuxparameters-initprocessenabled): Boolean
+[SharedMemorySize](#cfn-ecs-taskdefinition-linuxparameters-sharedmemorysize): String
+[Tmpfs](#cfn-ecs-taskdefinition-linuxparameters-tmpfs): 
+  - [*Tmpfs*](aws-properties-ecs-taskdefinition-tmpfs.md)
 ```
 
 ## Properties<a name="aws-properties-ecs-taskdefinition-linuxparameters-properties"></a>
@@ -49,6 +54,19 @@ This property requires at least version 1\.25 of the *Docker Remote API* on your
  *Type*: Boolean  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-## See Also<a name="aws-properties-ecs-taskdefinition-linuxparameters-seealso"></a>
+`SharedMemorySize`  <a name="cfn-ecs-taskdefinition-linuxparameters-sharedmemorysize"></a>
+The value for the size \(in MiB\) of the `/dev/shm` volume\. This parameter maps to the `--shm-size` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
+If you are using tasks that use the Fargate launch type, `SharedMemorySize` is not supported\.
+ *Required*: No  
+ *Type*: Integer  
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-+ [LinuxParameters](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_LinuxParameters.html) in the *Amazon Elastic Container Service API Reference*
+`Tmpfs`  <a name="cfn-ecs-taskdefinition-linuxparameters-tmpfs"></a>
+The container path, mount options, and size \(in MiB\) of the tmpfs mount\. This parameter maps to the `--tmpfs` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
+If you are using tasks that use the Fargate launch type, `Tmpfs` is not supported\.
+ *Required*: No  
+ *Type*: List of [Amazon ECS TaskDefinition Tmpfs](aws-properties-ecs-taskdefinition-tmpfs.md) property types  
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+
+## See Also<a name="aws-properties-ecs-taskdefinition-linuxparameters-seealso"></a>
++ [LinuxParameters](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_LinuxParameters.html) in the *Amazon Elastic Container Service API Reference*

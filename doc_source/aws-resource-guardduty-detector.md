@@ -2,7 +2,7 @@
 
 The `AWS::GuardDuty::Detector` resource creates a single Amazon GuardDuty detector\. A detector is an object that represents the GuardDuty service\. You must create a detector for GuardDuty to become operational\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-guardduty-detector-syntax)
 + [Properties](#aws-resource-guardduty-detector-properties)
 + [Return Values](#aws-resource-guardduty-detector-returnvalues)
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-guardduty-detector-syntax.yaml"></a>
 
 ```
-Type: "AWS::GuardDuty::Detector"
+Type: AWS::GuardDuty::Detector
 Properties:
   [Enable](#cfn-guardduty-detector-enable): Boolean
 ```
@@ -68,7 +68,7 @@ The following example shows how to declare an `AWS::GuardDuty::Detector` resourc
 
 ```
 mydetector:
-  Type: "AWS::GuardDuty::Detector"
+  Type: AWS::GuardDuty::Detector
   Properties:
     Enable: true
 ```

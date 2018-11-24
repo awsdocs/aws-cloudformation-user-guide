@@ -1,13 +1,13 @@
 # AWS::SES::ConfigurationSetEventDestination<a name="aws-resource-ses-configurationseteventdestination"></a>
 
-The `AWS::SES::ConfigurationSetEventDestination` resource specifies a configuration set event destination for Amazon SES\. For more information, see [CreateConfigurationSetEventDestination](http://docs.aws.amazon.com/ses/latest/APIReference/API_CreateConfigurationSetEventDestination.html) in the *Amazon Simple Email Service API Reference*\. 
+The `AWS::SES::ConfigurationSetEventDestination` resource specifies a configuration set event destination for Amazon SES\. For more information, see [CreateConfigurationSetEventDestination](https://docs.aws.amazon.com/ses/latest/APIReference/API_CreateConfigurationSetEventDestination.html) in the *Amazon Simple Email Service API Reference*\. 
 
 **Note**  
-When you create or update an event destination, you must provide one, and only one, destination\. The destination can be Amazon CloudWatch or Amazon Kinesis Firehose\.
+When you create or update an event destination, you must provide one, and only one, destination\. The destination can be Amazon CloudWatch or Amazon Kinesis Data Firehose\.
 
-An event destination is the AWS service to which Amazon SES publishes the email sending events associated with a configuration set\. For information, see [Using Amazon SES Configuration Sets](url-ses-dev;using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*\.
+An event destination is the AWS service to which Amazon SES publishes the email sending events associated with a configuration set\. For information, see [Using Amazon SES Configuration Sets](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-ses-configurationseteventdestination-syntax)
 + [Properties](#aws-resource-ses-configurationseteventdestination-properties)
 + [Example](#aws-resource-ses-configurationseteventdestination-examples)
@@ -192,12 +192,12 @@ Parameters:
 
 Resources:
   ConfigSet:
-    Type: 'AWS::SES::ConfigurationSet'
+    Type: AWS::SES::ConfigurationSet
     Properties:
       Name: !Ref ConfigSetName
 
   CWEventDestination:
-    Type: 'AWS::SES::ConfigurationSetEventDestination'
+    Type: AWS::SES::ConfigurationSetEventDestination
     Properties:
       ConfigurationSetName: !Ref ConfigSet
       EventDestination:
@@ -218,7 +218,5 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-ses-configurationseteventdestination-seealso"></a>
-
-+ [Using Amazon SES Configuration Sets](url-ses-dev;using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*
-
-+ [CreateConfigurationSetEventDestination](http://docs.aws.amazon.com/ses/latest/APIReference/API_CreateConfigurationSetEventDestination.html) in the *Amazon Simple Email Service API Reference*
++ [Using Amazon SES Configuration Sets](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*
++ [CreateConfigurationSetEventDestination](https://docs.aws.amazon.com/ses/latest/APIReference/API_CreateConfigurationSetEventDestination.html) in the *Amazon Simple Email Service API Reference*

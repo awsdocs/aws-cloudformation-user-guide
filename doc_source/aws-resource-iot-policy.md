@@ -2,7 +2,7 @@
 
 Use the `AWS::IoT::Policy` resource to declare an AWS IoT policy\.
 
-For information about working with AWS IoT policies, see [Authorization](http://docs.aws.amazon.com/iot/latest/developerguide/authorization.html) in the *AWS IoT Developer Guide*\.
+For information about working with AWS IoT policies, see [Authorization](https://docs.aws.amazon.com/iot/latest/developerguide/authorization.html) in the *AWS IoT Developer Guide*\.
 
 ## Syntax<a name="aws-resource-iot-policy-syntax"></a>
 
@@ -21,7 +21,7 @@ For information about working with AWS IoT policies, see [Authorization](http://
 ### YAML<a name="aws-resource-iot-policy-syntax.yaml"></a>
 
 ```
-Type: "AWS::IoT::Policy"
+Type: AWS::IoT::Policy
 Properties:
   [PolicyDocument](#cfn-iot-policy-policydocument): JSON object
   [PolicyName](#cfn-iot-policy-policyname): String
@@ -31,13 +31,13 @@ Properties:
 
 `PolicyDocument`  <a name="cfn-iot-policy-policydocument"></a>
 The JSON document that describes the policy\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: JSON object  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `PolicyName`  <a name="cfn-iot-policy-policyname"></a>
 The name \(the physical ID\) of the AWS IoT policy\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
@@ -107,7 +107,7 @@ The following example declares an AWS IoT policy\.
 AWSTemplateFormatVersion: "2010-09-09"
 Resources: 
   MyPolicy: 
-    Type: "AWS::IoT::Policy"
+    Type: AWS::IoT::Policy
     Properties: 
       PolicyName: 
         Ref: "NameParameter"

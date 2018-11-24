@@ -32,7 +32,5 @@ A list of dimensions upon which to categorize your emails when you publish email
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ses-configurationseteventdestination-cloudwatchdestination-seealso"></a>
-
 + [Using Amazon SES Configuration Sets](url-ses-dev;using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*
-
-+ [CloudWatchDestination](http://docs.aws.amazon.com/ses/latest/APIReference/API_CloudWatchDestination.html) in the *Amazon Simple Email Service API Reference*
++ [CloudWatchDestination](https://docs.aws.amazon.com/ses/latest/APIReference/API_CloudWatchDestination.html) in the *Amazon Simple Email Service API Reference*

@@ -2,7 +2,7 @@
 
 Use the `AWS::StepFunctions::StateMachine` resource to create an AWS Step Functions state machine\.
 
-For information about creating state machines, see [Tutorial: A Lambda State Machine](http://docs.aws.amazon.com/step-functions/latest/dg/hello-lambda.html) in the *AWS Step Functions Developer Guide* and `[CreateStateMachine](http://docs.aws.amazon.com/step-functions/latest/apireference/API_CreateStateMachine.html)` in the *AWS Step Functions API Reference*\.
+For information about creating state machines, see [Tutorial: A Lambda State Machine](https://docs.aws.amazon.com/step-functions/latest/dg/hello-lambda.html) in the *AWS Step Functions Developer Guide* and `[CreateStateMachine](https://docs.aws.amazon.com/step-functions/latest/apireference/API_CreateStateMachine.html)` in the *AWS Step Functions API Reference*\.
 
 ## Syntax<a name="aws-resource-stepfunctions-statemachine-syntax"></a>
 
@@ -32,20 +32,20 @@ Properties:
 ## Properties<a name="aws-resource-stepfunctions-statemachine-properties"></a>
 
 `StateMachineName`  <a name="cfn-stepfunctions-statemachine-definitionname"></a>
-The name of the state machine\. If you do not specify a name one will be generated that is similar to `MyStateMachine-1234abcdefgh`\. For more information on creating a valid name see [Request Parameters](http://docs.aws.amazon.com/step-functions/latest/apireference/API_CreateStateMachine.html#API_CreateStateMachine_RequestSyntax) in the *AWS Step Functions API Reference*\.  
-*Required: *No  
+The name of the state machine\. If you do not specify a name one will be generated that is similar to `MyStateMachine-1234abcdefgh`\. For more information on creating a valid name see [Request Parameters](https://docs.aws.amazon.com/step-functions/latest/apireference/API_CreateStateMachine.html#API_CreateStateMachine_RequestSyntax) in the *AWS Step Functions API Reference*\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `DefinitionString`  <a name="cfn-stepfunctions-statemachine-definitionstring"></a>
-The Amazon States Language definition of the state machine\. For more information, see [Amazon States Language](http://docs.aws.amazon.com/step-functions/latest/dg/concepts-awl.html) in the *AWS Step Functions Developer Guide*\.  
-*Required: *Yes  
+The Amazon States Language definition of the state machine\. For more information, see [Amazon States Language](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-awl.html) in the *AWS Step Functions Developer Guide*\.  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-stepfunctions-statemachine-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role to use for this state machine\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 

@@ -2,7 +2,7 @@
 
 The `AWS::EC2::VPCCidrBlock` resource associates a single Amazon\-provided IPv6 CIDR block or a single user\-specified IPv4 CIDR block with a Virtual Private Cloud \(VPC\)\.
 
-
+**Topics**
 + [Syntax](#aws-resource-ec2-vpccidrblock-syntax)
 + [Properties](#aws-resource-ec2-vpccidrblock-properties)
 + [Examples](#aws-resource-ec2-vpccidrblock-examples)
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-vpccidrblock-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::VPCCidrBlock"
+Type: AWS::EC2::VPCCidrBlock
 Properties: 
   [AmazonProvidedIpv6CidrBlock](#cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock): Boolean
   [CidrBlock](#cfn-ec2-vpccidrblock-cidrblock): String
@@ -38,19 +38,19 @@ Properties:
 
 `AmazonProvidedIpv6CidrBlock`  <a name="cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock"></a>
 Whether to request an Amazon\-provided IPv6 CIDR block with a /56 prefix length for the VPC\. You can't specify the range of IPv6 addresses or the size of the CIDR block\.  
-*Required: *No  
+*Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `CidrBlock`  <a name="cfn-ec2-vpccidrblock-cidrblock"></a>
 An IPv4 CIDR block to associate with the VPC\.   
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `VpcId`  <a name="cfn-ec2-vpccidrblock-vpcid"></a>
 The ID of the VPC to associate the Amazon\-provided IPv6 CIDR block with\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
@@ -78,7 +78,7 @@ The following snippet associates an Amazon\-provided IPv6 CIDR block \(with a pr
 
 ```
 Ipv6VPCCidrBlock:
-  Type: "AWS::EC2::VPCCidrBlock"
+  Type: AWS::EC2::VPCCidrBlock
   Properties:
     AmazonProvidedIpv6CidrBlock: true
     VpcId: !Ref TestVPCIpv6
@@ -167,16 +167,16 @@ The following example associates an IPv4 CIDR block and an Amazon\-provided IPv6
 ```
 Resources:
   VPC:
-    Type: "AWS::EC2::VPC"
+    Type: AWS::EC2::VPC
     Properties:
       CidrBlock: 10.0.0.0/24
   VpcCidrBlock:
-    Type: "AWS::EC2::VPCCidrBlock"
+    Type: AWS::EC2::VPCCidrBlock
     Properties:
       VpcId: !Ref VPC
       CidrBlock: 192.0.0.0/24
   VpcCidrBlockIpv6:
-    Type: "AWS::EC2::VPCCidrBlock"
+    Type: AWS::EC2::VPCCidrBlock
     Properties:
       VpcId: !Ref VPC
       AmazonProvidedIpv6CidrBlock: true

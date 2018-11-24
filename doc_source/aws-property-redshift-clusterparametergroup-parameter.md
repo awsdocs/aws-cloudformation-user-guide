@@ -2,7 +2,7 @@
 
 Describes parameters for the [AWS::Redshift::ClusterParameterGroup](aws-resource-redshift-clusterparametergroup.md) resource type\.
 
-## Syntax<a name="w3ab2c21c14e1441b5"></a>
+## Syntax<a name="w4ab1c21c14e1720b5"></a>
 
 ### JSON<a name="aws-properties-redshift-clusterparametergroup-parameter-syntax.json"></a>
 
@@ -20,14 +20,14 @@ Describes parameters for the [AWS::Redshift::ClusterParameterGroup](aws-resource
 [ParameterValue](#cfn-redshift-clusterparametergroup-parameter-parametervalue): String
 ```
 
-## Properties<a name="w3ab2c21c14e1441b7"></a>
+## Properties<a name="w4ab1c21c14e1720b7"></a>
 
 `ParameterName`  <a name="cfn-redshift-clusterparametergroup-parameter-parametername"></a>
 The name of the parameter\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String
 
 `ParameterValue`  <a name="cfn-redshift-clusterparametergroup-parameter-parametervalue"></a>
 The value of the parameter\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String

@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-glue-table-order-properties"></a>
 
-For more information, see [Order Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-Order) in the *AWS Glue Developer Guide*\.
+For more information, see [Order Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-Order) in the *AWS Glue Developer Guide*\.
 
 `Column`  <a name="cfn-glue-table-order-column"></a>
 The name of the column\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
@@ -41,5 +41,4 @@ Indicates whether the column is sorted in ascending order \(`1`\) or descending 
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-glue-table-order-seealso"></a>
-
-+ [Order Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-Order) in the *AWS Glue Developer Guide*
++ [Order Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-Order) in the *AWS Glue Developer Guide*

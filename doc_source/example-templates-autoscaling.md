@@ -5,7 +5,7 @@ This template creates a sample web site that uses Auto Scaling and Elastic Load 
 This template creates one or more Amazon EC2 instances\. You will be billed for the AWS resources used if you create a stack from this template\.
 
 **Note**  
-The template assumes that your account supports the EC2\-VPC platform\. In other words, you have a default VPC that allows instances to access the Internet\. If you don't have a default VPC, you can create one\. For more information, see [Amazon EC2 and Amazon Virtual Private Cloud](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-vpc.html) in the *Amazon EC2 User Guide for Linux Instances*\.
+The template assumes that your account supports the EC2\-VPC platform\. In other words, you have a default VPC that allows instances to access the Internet\. If you don't have a default VPC, you can create one\. For more information, see [Amazon EC2 and Amazon Virtual Private Cloud](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-vpc.html) in the *Amazon EC2 User Guide for Linux Instances*\.
 
 You can get the latest version of this sample template at [https://s3\.amazonaws\.com/cloudformation\-templates\-us\-east\-1/AutoScalingMultiAZWithNotifications\.template](https://s3.amazonaws.com/cloudformation-templates-us-east-1/AutoScalingMultiAZWithNotifications.template)\.
 
@@ -22,8 +22,62 @@ You can get the latest version of this sample template at [https://s3\.amazonaws
       "Description" : "WebServer EC2 instance type",
       "Type" : "String",
       "Default" : "t2.small",
-      "AllowedValues" : [ "t1.micro", "t2.nano", "t2.micro", "t2.small", "t2.medium", "t2.large", "m1.small", "m1.medium", "m1.large", "m1.xlarge", "m2.xlarge", "m2.2xlarge", "m2.4xlarge", "m3.medium", "m3.large", "m3.xlarge", "m3.2xlarge", "m4.large", "m4.xlarge", "m4.2xlarge", "m4.4xlarge", "m4.10xlarge", "c1.medium", "c1.xlarge", "c3.large", "c3.xlarge", "c3.2xlarge", "c3.4xlarge", "c3.8xlarge", "c4.large", "c4.xlarge", "c4.2xlarge", "c4.4xlarge", "c4.8xlarge", "g2.2xlarge", "g2.8xlarge", "r3.large", "r3.xlarge", "r3.2xlarge", "r3.4xlarge", "r3.8xlarge", "i2.xlarge", "i2.2xlarge", "i2.4xlarge", "i2.8xlarge", "d2.xlarge", "d2.2xlarge", "d2.4xlarge", "d2.8xlarge", "hi1.4xlarge", "hs1.8xlarge", "cr1.8xlarge", "cc2.8xlarge", "cg1.4xlarge"]
-,
+      "AllowedValues" : [ 
+        "t1.micro", 
+        "t2.nano", 
+        "t2.micro", 
+        "t2.small", 
+        "t2.medium", 
+        "t2.large", 
+        "m1.small", 
+        "m1.medium", 
+        "m1.large", 
+        "m1.xlarge", 
+        "m2.xlarge", 
+        "m2.2xlarge", 
+        "m2.4xlarge", 
+        "m3.medium", 
+        "m3.large", 
+        "m3.xlarge", 
+        "m3.2xlarge", 
+        "m4.large", 
+        "m4.xlarge", 
+        "m4.2xlarge", 
+        "m4.4xlarge", 
+        "m4.10xlarge", 
+        "c1.medium", 
+        "c1.xlarge", 
+        "c3.large", 
+        "c3.xlarge", 
+        "c3.2xlarge", 
+        "c3.4xlarge", 
+        "c3.8xlarge", 
+        "c4.large", 
+        "c4.xlarge", 
+        "c4.2xlarge", 
+        "c4.4xlarge", 
+        "c4.8xlarge", 
+        "g2.2xlarge", 
+        "g2.8xlarge", 
+        "r3.large", 
+        "r3.xlarge", 
+        "r3.2xlarge", 
+        "r3.4xlarge", 
+        "r3.8xlarge", 
+        "i2.xlarge", 
+        "i2.2xlarge", 
+        "i2.4xlarge", 
+        "i2.8xlarge", 
+        "d2.xlarge", 
+        "d2.2xlarge", 
+        "d2.4xlarge", 
+        "d2.8xlarge", 
+        "hi1.4xlarge", 
+        "hs1.8xlarge", 
+        "cr1.8xlarge", 
+        "cc2.8xlarge", 
+        "cg1.4xlarge"
+      ],
       "ConstraintDescription" : "must be a valid EC2 instance type."
     },
 
@@ -52,38 +106,20 @@ You can get the latest version of this sample template at [https://s3\.amazonaws
   },
 
   "Mappings" : {
-    "Region2Examples" : {
-      "us-east-1"      : { "Examples" : "https://s3.amazonaws.com/cloudformation-examples-us-east-1" },
-      "us-west-2"      : { "Examples" : "https://s3-us-west-2.amazonaws.com/cloudformation-examples-us-west-2" },
-      "us-west-1"      : { "Examples" : "https://s3-us-west-1.amazonaws.com/cloudformation-examples-us-west-1" },
-      "eu-west-1"      : { "Examples" : "https://s3-eu-west-1.amazonaws.com/cloudformation-examples-eu-west-1" },
-      "eu-west-2"      : { "Examples" : "https://s3-eu-west-2.amazonaws.com/cloudformation-examples-eu-west-2" },
-      "eu-central-1"   : { "Examples" : "https://s3-eu-central-1.amazonaws.com/cloudformation-examples-eu-central-1" },
-      "ap-southeast-1" : { "Examples" : "https://s3-ap-southeast-1.amazonaws.com/cloudformation-examples-ap-southeast-1" },
-      "ap-northeast-1" : { "Examples" : "https://s3-ap-northeast-1.amazonaws.com/cloudformation-examples-ap-northeast-1" },
-      "ap-northeast-2" : { "Examples" : "https://s3-ap-northeast-2.amazonaws.com/cloudformation-examples-ap-northeast-2" },
-      "ap-southeast-2" : { "Examples" : "https://s3-ap-southeast-2.amazonaws.com/cloudformation-examples-ap-southeast-2" },
-      "ap-south-1"     : { "Examples" : "https://s3-ap-south-1.amazonaws.com/cloudformation-examples-ap-south-1" },
-      "us-east-2"      : { "Examples" : "https://s3-us-east-2.amazonaws.com/cloudformation-examples-us-east-2" },
-      "ca-central-1"   : { "Examples" : "https://s3-ca-central-1.amazonaws.com/cloudformation-examples-ca-central-1" },
-      "sa-east-1"      : { "Examples" : "https://s3-sa-east-1.amazonaws.com/cloudformation-examples-sa-east-1" },
-      "cn-north-1"     : { "Examples" : "https://s3.cn-north-1.amazonaws.com.cn/cloudformation-examples-cn-north-1" }
-    }
-,
     "AWSInstanceType2Arch" : {
-      "t1.micro"    : { "Arch" : "PV64"   },
+      "t1.micro"    : { "Arch" : "HVM64"  },
       "t2.nano"     : { "Arch" : "HVM64"  },
       "t2.micro"    : { "Arch" : "HVM64"  },
       "t2.small"    : { "Arch" : "HVM64"  },
       "t2.medium"   : { "Arch" : "HVM64"  },
       "t2.large"    : { "Arch" : "HVM64"  },
-      "m1.small"    : { "Arch" : "PV64"   },
-      "m1.medium"   : { "Arch" : "PV64"   },
-      "m1.large"    : { "Arch" : "PV64"   },
-      "m1.xlarge"   : { "Arch" : "PV64"   },
-      "m2.xlarge"   : { "Arch" : "PV64"   },
-      "m2.2xlarge"  : { "Arch" : "PV64"   },
-      "m2.4xlarge"  : { "Arch" : "PV64"   },
+      "m1.small"    : { "Arch" : "HVM64"  },
+      "m1.medium"   : { "Arch" : "HVM64"  },
+      "m1.large"    : { "Arch" : "HVM64"  },
+      "m1.xlarge"   : { "Arch" : "HVM64"  },
+      "m2.xlarge"   : { "Arch" : "HVM64"  },
+      "m2.2xlarge"  : { "Arch" : "HVM64"  },
+      "m2.4xlarge"  : { "Arch" : "HVM64"  },
       "m3.medium"   : { "Arch" : "HVM64"  },
       "m3.large"    : { "Arch" : "HVM64"  },
       "m3.xlarge"   : { "Arch" : "HVM64"  },
@@ -93,8 +129,8 @@ You can get the latest version of this sample template at [https://s3\.amazonaws
       "m4.2xlarge"  : { "Arch" : "HVM64"  },
       "m4.4xlarge"  : { "Arch" : "HVM64"  },
       "m4.10xlarge" : { "Arch" : "HVM64"  },
-      "c1.medium"   : { "Arch" : "PV64"   },
-      "c1.xlarge"   : { "Arch" : "PV64"   },
+      "c1.medium"   : { "Arch" : "HVM64"  },
+      "c1.xlarge"   : { "Arch" : "HVM64"  },
       "c3.large"    : { "Arch" : "HVM64"  },
       "c3.xlarge"   : { "Arch" : "HVM64"  },
       "c3.2xlarge"  : { "Arch" : "HVM64"  },
@@ -127,19 +163,19 @@ You can get the latest version of this sample template at [https://s3\.amazonaws
     },
 
     "AWSInstanceType2NATArch" : {
-      "t1.micro"    : { "Arch" : "NATPV64"   },
+      "t1.micro"    : { "Arch" : "NATHVM64"  },
       "t2.nano"     : { "Arch" : "NATHVM64"  },
       "t2.micro"    : { "Arch" : "NATHVM64"  },
       "t2.small"    : { "Arch" : "NATHVM64"  },
       "t2.medium"   : { "Arch" : "NATHVM64"  },
       "t2.large"    : { "Arch" : "NATHVM64"  },
-      "m1.small"    : { "Arch" : "NATPV64"   },
-      "m1.medium"   : { "Arch" : "NATPV64"   },
-      "m1.large"    : { "Arch" : "NATPV64"   },
-      "m1.xlarge"   : { "Arch" : "NATPV64"   },
-      "m2.xlarge"   : { "Arch" : "NATPV64"   },
-      "m2.2xlarge"  : { "Arch" : "NATPV64"   },
-      "m2.4xlarge"  : { "Arch" : "NATPV64"   },
+      "m1.small"    : { "Arch" : "NATHVM64"  },
+      "m1.medium"   : { "Arch" : "NATHVM64"  },
+      "m1.large"    : { "Arch" : "NATHVM64"  },
+      "m1.xlarge"   : { "Arch" : "NATHVM64"  },
+      "m2.xlarge"   : { "Arch" : "NATHVM64"  },
+      "m2.2xlarge"  : { "Arch" : "NATHVM64"  },
+      "m2.4xlarge"  : { "Arch" : "NATHVM64"  },
       "m3.medium"   : { "Arch" : "NATHVM64"  },
       "m3.large"    : { "Arch" : "NATHVM64"  },
       "m3.xlarge"   : { "Arch" : "NATHVM64"  },
@@ -149,8 +185,8 @@ You can get the latest version of this sample template at [https://s3\.amazonaws
       "m4.2xlarge"  : { "Arch" : "NATHVM64"  },
       "m4.4xlarge"  : { "Arch" : "NATHVM64"  },
       "m4.10xlarge" : { "Arch" : "NATHVM64"  },
-      "c1.medium"   : { "Arch" : "NATPV64"   },
-      "c1.xlarge"   : { "Arch" : "NATPV64"   },
+      "c1.medium"   : { "Arch" : "NATHVM64"  },
+      "c1.xlarge"   : { "Arch" : "NATHVM64"  },
       "c3.large"    : { "Arch" : "NATHVM64"  },
       "c3.xlarge"   : { "Arch" : "NATHVM64"  },
       "c3.2xlarge"  : { "Arch" : "NATHVM64"  },
@@ -183,25 +219,28 @@ You can get the latest version of this sample template at [https://s3\.amazonaws
     }
 ,
     "AWSRegionArch2AMI" : {
-      "us-east-1"        : {"PV64" : "ami-2a69aa47", "HVM64" : "ami-6869aa05", "HVMG2" : "ami-a41a3fb3"},
-      "us-west-2"        : {"PV64" : "ami-7f77b31f", "HVM64" : "ami-7172b611", "HVMG2" : "ami-caf253aa"},
-      "us-west-1"        : {"PV64" : "ami-a2490dc2", "HVM64" : "ami-31490d51", "HVMG2" : "ami-00347e60"},
-      "eu-west-1"        : {"PV64" : "ami-4cdd453f", "HVM64" : "ami-f9dd458a", "HVMG2" : "ami-e2f7bd91"},
-      "eu-west-2"        : {"PV64" : "NOT_SUPPORTED", "HVM64" : "ami-886369ec", "HVMG2" : "NOT_SUPPORTED"},
-      "eu-central-1"     : {"PV64" : "ami-6527cf0a", "HVM64" : "ami-ea26ce85", "HVMG2" : "ami-d2ff04bd"},
-      "ap-northeast-1"   : {"PV64" : "ami-3e42b65f", "HVM64" : "ami-374db956", "HVMG2" : "ami-4c78d52d"},
-      "ap-northeast-2"   : {"PV64" : "NOT_SUPPORTED", "HVM64" : "ami-2b408b45", "HVMG2" : "NOT_SUPPORTED"},
-      "ap-southeast-1"   : {"PV64" : "ami-df9e4cbc", "HVM64" : "ami-a59b49c6", "HVMG2" : "ami-f3f95990"},
-      "ap-southeast-2"   : {"PV64" : "ami-63351d00", "HVM64" : "ami-dc361ebf", "HVMG2" : "ami-3a122e59"},
-      "ap-south-1"       : {"PV64" : "NOT_SUPPORTED", "HVM64" : "ami-ffbdd790", "HVMG2" : "ami-21a7d34e"},
-      "us-east-2"        : {"PV64" : "NOT_SUPPORTED", "HVM64" : "ami-f6035893", "HVMG2" : "NOT_SUPPORTED"},
-      "ca-central-1"     : {"PV64" : "NOT_SUPPORTED", "HVM64" : "ami-730ebd17", "HVMG2" : "NOT_SUPPORTED"},
-      "sa-east-1"        : {"PV64" : "ami-1ad34676", "HVM64" : "ami-6dd04501", "HVMG2" : "NOT_SUPPORTED"},
-      "cn-north-1"       : {"PV64" : "ami-77559f1a", "HVM64" : "ami-8e6aa0e3", "HVMG2" : "NOT_SUPPORTED"}
+      "us-east-1"        : {"HVM64" : "ami-0ff8a91507f77f867", "HVMG2" : "ami-0a584ac55a7631c0c"},
+      "us-west-2"        : {"HVM64" : "ami-a0cfeed8", "HVMG2" : "ami-0e09505bc235aa82d"},
+      "us-west-1"        : {"HVM64" : "ami-0bdb828fd58c52235", "HVMG2" : "ami-066ee5fd4a9ef77f1"},
+      "eu-west-1"        : {"HVM64" : "ami-047bb4163c506cd98", "HVMG2" : "ami-0a7c483d527806435"},
+      "eu-west-2"        : {"HVM64" : "ami-f976839e", "HVMG2" : "NOT_SUPPORTED"},
+      "eu-west-3"        : {"HVM64" : "ami-0ebc281c20e89ba4b", "HVMG2" : "NOT_SUPPORTED"},
+      "eu-central-1"     : {"HVM64" : "ami-0233214e13e500f77", "HVMG2" : "ami-06223d46a6d0661c7"},
+      "ap-northeast-1"   : {"HVM64" : "ami-06cd52961ce9f0d85", "HVMG2" : "ami-053cdd503598e4a9d"},
+      "ap-northeast-2"   : {"HVM64" : "ami-0a10b2721688ce9d2", "HVMG2" : "NOT_SUPPORTED"},
+      "ap-northeast-3"   : {"HVM64" : "ami-0d98120a9fb693f07", "HVMG2" : "NOT_SUPPORTED"},
+      "ap-southeast-1"   : {"HVM64" : "ami-08569b978cc4dfa10", "HVMG2" : "ami-0be9df32ae9f92309"},
+      "ap-southeast-2"   : {"HVM64" : "ami-09b42976632b27e9b", "HVMG2" : "ami-0a9ce9fecc3d1daf8"},
+      "ap-south-1"       : {"HVM64" : "ami-0912f71e06545ad88", "HVMG2" : "ami-097b15e89dbdcfcf4"},
+      "us-east-2"        : {"HVM64" : "ami-0b59bfac6be064b78", "HVMG2" : "NOT_SUPPORTED"},
+      "ca-central-1"     : {"HVM64" : "ami-0b18956f", "HVMG2" : "NOT_SUPPORTED"},
+      "sa-east-1"        : {"HVM64" : "ami-07b14488da8ea02a0", "HVMG2" : "NOT_SUPPORTED"},
+      "cn-north-1"       : {"HVM64" : "ami-0a4eaf6c4454eda75", "HVMG2" : "NOT_SUPPORTED"},
+      "cn-northwest-1"   : {"HVM64" : "ami-6b6a7d09", "HVMG2" : "NOT_SUPPORTED"}
     }
 
   },
-
+ 
   "Resources" : {
     "NotificationTopic": {
       "Type": "AWS::SNS::Topic",
@@ -440,21 +479,14 @@ The example template contains an Auto Scaling group with a LoadBalancer, a secur
 The template has three input parameters: InstanceType is the type of EC2 instance to use for the Auto Scaling group and has a default of m1\.small; WebServerPort is the TCP port for the web server and has a default of 8888; KeyName is the name of an EC2 key pair to be used for the Auto Scaling group\. KeyName must be specified at stack creation \(parameters with no default value must be specified at stack creation\)\.
 
 The [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md) resource WebServerGroup declares the following Auto Scaling group configuration:
-
 + *AvailabilityZones* specifies the availability zones where the auto scaling group's EC2 instances will be created\. The [Fn::GetAZs](intrinsic-function-reference-getavailabilityzones.md) function call `{ "Fn::GetAZs" : "" }` specifies all availability zones for the region in which the stack is created\.
-
 + *MinSize* and *MaxSize* set the minimum and maximum number of EC2 instances in the Auto Scaling group\.
-
 + *LoadBalancerNames* lists the LoadBalancers used to route traffic to the Auto Scaling group\. The LoadBalancer for this group is the ElasticLoadBalancer resource\.
 
 The [AWS::AutoScaling::LaunchConfiguration](aws-properties-as-launchconfig.md) resource LaunchConfig declares the following configurations to use for the EC2 instances in the WebServerGroup Auto Scaling group:
-
 + *KeyName* takes the value of the KeyName input parameter as the EC2 key pair to use\.
-
 + *UserData* is the Base64 encoded value of the WebServerPort parameter, which is passed to an application \.
-
-+ *SecurityGroups* is a list of EC2 security groups that contain the firewall ingress rules for EC2 instances in the Auto Scaling group\. In this example, there is only one security group and it is declared as a [AWS::EC2::SecurityGroup](aws-properties-ec2-security-group.md) resource: InstanceSecurityGroup\. This security group contains two ingress rules: 1\) a TCP ingress rule that allows access from all IP addresses \("CidrIp" : "0\.0\.0\.0/0"\) for port 22 \(for SSH access\) and 2\) a TCP ingress rule that allows access from the ElasticLoadBalancer resource for the WebServerPort port by specifying the LoadBalancer's source security group\. The [GetAtt](intrinsic-function-reference-getatt.md) function is used to get the SourceSecurityGroup\.OwnerAlias and SourceSecurityGroup\.GroupName properties from the ElasticLoadBalancer resource\. For more information about the Elastic Load Balancing security groups, see [Manage Security Groups in Amazon EC2\-Classic](http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/using-elb-security-groups.html) or [Manage Security Groups in Amazon VPC](http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/USVPC_ApplySG.html)\.
-
++ *SecurityGroups* is a list of EC2 security groups that contain the firewall ingress rules for EC2 instances in the Auto Scaling group\. In this example, there is only one security group and it is declared as a [AWS::EC2::SecurityGroup](aws-properties-ec2-security-group.md) resource: InstanceSecurityGroup\. This security group contains two ingress rules: 1\) a TCP ingress rule that allows access from all IP addresses \("CidrIp" : "0\.0\.0\.0/0"\) for port 22 \(for SSH access\) and 2\) a TCP ingress rule that allows access from the ElasticLoadBalancer resource for the WebServerPort port by specifying the LoadBalancer's source security group\. The [GetAtt](intrinsic-function-reference-getatt.md) function is used to get the SourceSecurityGroup\.OwnerAlias and SourceSecurityGroup\.GroupName properties from the ElasticLoadBalancer resource\. For more information about the Elastic Load Balancing security groups, see [Manage Security Groups in Amazon EC2\-Classic](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/using-elb-security-groups.html) or [Manage Security Groups in Amazon VPC](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/USVPC_ApplySG.html)\.
 + *ImageId* is the evaluated value of a set of nested maps\. We added the maps so that the template contained the logic for choosing the right image ID\. That logic is based on the instance type that was specified with the InstanceType parameter \(AWSInstanceType2Arch maps the instance type to an architecture 32 or 64\) and the region where the stack is created \(AWSRegionArch2AMI maps the region and architecture to a image ID\):
 
   ```
@@ -482,11 +514,8 @@ The [AWS::AutoScaling::LaunchConfiguration](aws-properties-as-launchconfig.md) r
   In the AWSRegionArch2AMI mapping, the value 32 for the key us\-east\-1 maps to ami\-6411e20d\. This means that ImageId would be ami\-6411e20d\.
 
 The [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md) resource ElasticLoadBalancer declares the following LoadBalancer configuration:
-
 + *AvailabilityZones* is a list of availability zones where the LoadBalancer will distribute traffic\. In this example, the Fn::GetAZs function call `{ "Fn::GetAZs" : "" }` specifies all availability zones for the region in which the stack is created\.
-
 + *Listeners* is a list of load balancing routing configurations that specify the port that the LoadBalancer accepts requests, the port on the registered EC2 instances where the LoadBalancer forwards requests, and the protocol used to route requests\.
-
 + *HealthCheck* is the configuration that Elastic Load Balancing uses to check the health of the EC2 instances that the LoadBalancer routes traffic to\. In this example, the HealthCheck targets the root address of the EC2 instances using the port specified by WebServerPort over the HTTP protocol\. If the WebServerPort is 8888, the `{ "Fn::Join" : [ "", ["HTTP:", { "Ref" : "WebServerPort" }, "/"]]}` function call is evaluated as the string `HTTP:8888/`\. It also specifies that the EC2 instances have an interval of 30 seconds between health checks \(Interval\)\. The Timeout is defined as the length of time Elastic Load Balancing waits for a response from the health check target \(5 seconds in this example\)\. After the Timeout period lapses, Elastic Load Balancing marks that EC2 instance's health check as unhealthy\. When an EC2 instance fails 5 consecutive health checks \(UnhealthyThreshold\), Elastic Load Balancing stops routing traffic to that EC2 instance until that instance has 3 consecutive healthy health checks at which point Elastic Load Balancing considers the EC2 instance healthy and begins routing traffic to that instance again\.
 
 The [AWS::AutoScaling::ScalingPolicy](aws-properties-as-policy.md) resource WebServerScaleUpPolicy is an Auto Scaling policy that scales up the Auto Scaling group WebServerGroup\. The `AdjustmentType` property is set to ChangeInCapacity\. This means that the `ScalingAdjustment` represents the number of instances to add \(if `ScalingAdjustment` is positive, instances are added; if negative, instances are deleted\)\. In this example, `ScalingAdjustment` is 1; therefore, the policy increments the number of EC2 instances in the group by 1 when the policy is executed\. The Cooldown property specifies that Auto Scaling waits 60 seconds before starting any other policy or trigger related actions\.

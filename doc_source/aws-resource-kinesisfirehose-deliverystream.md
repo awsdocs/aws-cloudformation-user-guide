@@ -1,8 +1,8 @@
 # AWS::KinesisFirehose::DeliveryStream<a name="aws-resource-kinesisfirehose-deliverystream"></a>
 
-The `AWS::KinesisFirehose::DeliveryStream` resource creates an Amazon Kinesis Firehose \(Kinesis Firehose\) delivery stream that delivers real\-time streaming data to an Amazon Simple Storage Service \(Amazon S3\), Amazon Redshift, or Amazon Elasticsearch Service \(Amazon ES\) destination\. For more information, see [Creating an Amazon Kinesis Firehose Delivery Stream](http://docs.aws.amazon.com/firehose/latest/dev/basic-create.html) in the *Amazon Kinesis Firehose Developer Guide*\.
+The `AWS::KinesisFirehose::DeliveryStream` resource creates an Amazon Kinesis Data Firehose \(Kinesis Data Firehose\) delivery stream that delivers real\-time streaming data to an Amazon Simple Storage Service \(Amazon S3\), Amazon Redshift, or Amazon Elasticsearch Service \(Amazon ES\) destination\. For more information, see [Creating an Amazon Kinesis Data Firehose Delivery Stream](https://docs.aws.amazon.com/firehose/latest/dev/basic-create.html) in the *Amazon Kinesis Data Firehose Developer Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-kinesisfirehose-deliverystream-syntax)
 + [Properties](#aws-resource-kinesisfirehose-deliverystream-properties)
 + [Return Values](#aws-resource-kinesisfirehose-deliverystream-returnvalues)
@@ -25,7 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[ExtendedS3DestinationConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration)" : [*ExtendedS3DestinationConfiguration*](aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.md),
     "[KinesisStreamSourceConfiguration](#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration)" : [*KinesisStreamSourceConfiguration*](aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.md),
     "[RedshiftDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration)" : [*RedshiftDestinationConfiguration*](aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.md),
-    "[S3DestinationConfiguration](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration)" : [*S3DestinationConfiguration*](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)
+    "[S3DestinationConfiguration](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration)" : [*S3DestinationConfiguration*](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md),
+    "[SplunkDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration)" : [*SplunkDestinationConfiguration*](aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.md)
   }
 }
 ```
@@ -33,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-kinesisfirehose-deliverystream-syntax.yaml"></a>
 
 ```
-Type: "AWS::KinesisFirehose::DeliveryStream"
+Type: AWS::KinesisFirehose::DeliveryStream
 Properties: 
   [DeliveryStreamName](#cfn-kinesisfirehose-deliverystream-deliverystreamname): String
   [DeliveryStreamType](#cfn-kinesisfirehose-deliverystream-deliverystreamtype): String
@@ -47,55 +48,61 @@ Properties:
     [*RedshiftDestinationConfiguration*](aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.md)
   [S3DestinationConfiguration](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration):
     [*S3DestinationConfiguration*](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)
+  [SplunkDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration):
+    [*SplunkDestinationConfiguration*](aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.md)
 ```
 
 ## Properties<a name="aws-resource-kinesisfirehose-deliverystream-properties"></a>
 
 `DeliveryStreamName`  <a name="cfn-kinesisfirehose-deliverystream-deliverystreamname"></a>
 A name for the delivery stream\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `DeliveryStreamType`  <a name="cfn-kinesisfirehose-deliverystream-deliverystreamtype"></a>
 The delivery stream type\. This property can be one of the following values:  
-
 + `DirectPut`: Provider applications access the delivery stream directly\.
-
 + `KinesisStreamAsSource`: The delivery stream uses a Kinesis stream as a source\.
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ElasticsearchDestinationConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration"></a>
 An Amazon ES destination for the delivery stream\.  
-*Required: *Conditional\. You must specify only one destination configuration\.  
-*Type*: [Kinesis Firehose DeliveryStream ElasticsearchDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.md)  
+*Required*: Conditional\. You must specify only one destination configuration\.  
+*Type*: [Kinesis Data Firehose DeliveryStream ElasticsearchDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\. If you change the delivery stream destination from an Amazon ES destination to an Amazon S3 or Amazon Redshift destination, update requires [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\.
 
 `ExtendedS3DestinationConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration"></a>
 An Amazon S3 destination for the delivery stream\.  
-*Required: *Conditional\. You must specify only one destination configuration\.  
- *Type*: [Kinesis Firehose DeliveryStream ExtendedS3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.md)  
+*Required*: Conditional\. You must specify only one destination configuration\.  
+ *Type*: [Kinesis Data Firehose DeliveryStream ExtendedS3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\. If you change the delivery stream destination from an Amazon Redshift destination to an Amazon ES destination, update requires [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\.
 
 `KinesisStreamSourceConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration"></a>
 When a Kinesis stream is used as the source for the delivery stream, a [Kinesis Data Firehose DeliveryStream KinesisStreamSourceConfiguration](aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.md) containing the Kinesis stream ARN and the role ARN for the source stream\.  
-*Required: *No  
+*Required*: No  
 *Type*: [Kinesis Data Firehose DeliveryStream KinesisStreamSourceConfiguration](aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `RedshiftDestinationConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration"></a>
 An Amazon Redshift destination for the delivery stream\.  
-*Required: *Conditional\. You must specify only one destination configuration\.  
-*Type*: [Kinesis Firehose DeliveryStream RedshiftDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.md)  
+*Required*: Conditional\. You must specify only one destination configuration\.  
+*Type*: [Kinesis Data Firehose DeliveryStream RedshiftDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\. If you change the delivery stream destination from an Amazon Redshift destination to an Amazon ES destination, update requires [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\.
 
 `S3DestinationConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-s3destinationconfiguration"></a>
 An Amazon S3 destination for the delivery stream\.  
-*Required: *Conditional\. You must specify only one destination configuration\.  
-*Type*: [Kinesis Firehose DeliveryStream S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)  
+*Required*: Conditional\. You must specify only one destination configuration\.  
+*Type*: [Kinesis Data Firehose DeliveryStream S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\. If you change the delivery stream destination from an Amazon S3 destination to an Amazon ES destination, update requires [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\.
+
+`SplunkDestinationConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration"></a>
+The configuration of a destination in Splunk for the delivery stream\.  
+*Required*: No  
+*Type*: [Kinesis Data Firehose DeliveryStream SplunkDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-kinesisfirehose-deliverystream-returnvalues"></a>
 
@@ -118,7 +125,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
 
 ### <a name="aws-resource-kinesisfirehose-deliverystream-example1"></a>
 
-The following example creates a Kinesis Firehose delivery stream that delivers data to an Amazon ES destination\. Kinesis Firehose backs up all data sent to the destination in an Amazon S3 bucket\.
+The following example creates a Kinesis Data Firehose delivery stream that delivers data to an Amazon ES destination\. Kinesis Data Firehose backs up all data sent to the destination in an Amazon S3 bucket\.
 
 #### JSON<a name="aws-resource-kinesisfirehose-deliverystream-example.json"></a>
 
@@ -169,7 +176,7 @@ The following example creates a Kinesis Firehose delivery stream that delivers d
 
 ```
 ElasticSearchDeliveryStream: 
-  Type: "AWS::KinesisFirehose::DeliveryStream"
+  Type: AWS::KinesisFirehose::DeliveryStream
   Properties: 
     ElasticsearchDestinationConfiguration: 
       BufferingHints: 
@@ -320,7 +327,7 @@ Resources:
   deliverystream:
     DependsOn:
       - deliveryPolicy
-    Type: 'AWS::KinesisFirehose::DeliveryStream'
+    Type: AWS::KinesisFirehose::DeliveryStream
     Properties:
       ExtendedS3DestinationConfiguration:
         BucketARN: !Join 
@@ -341,12 +348,12 @@ Resources:
                   ParameterValue: !GetAtt myLambda.Arn 
               Type: Lambda 
   s3bucket:
-    Type: 'AWS::S3::Bucket'
+    Type: AWS::S3::Bucket
     Properties:
       VersioningConfiguration:
         Status: Enabled
   deliveryRole:
-    Type: 'AWS::IAM::Role'
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Version: 2012-10-17
@@ -360,7 +367,7 @@ Resources:
               StringEquals:
                 'sts:ExternalId': !Ref 'AWS::AccountId'
   deliveryPolicy:
-    Type: 'AWS::IAM::Policy'
+    Type: AWS::IAM::Policy
     Properties:
       PolicyName: firehose_delivery_policy
       PolicyDocument:
@@ -435,9 +442,9 @@ The following example uses the `KinesisStreamSourceConfiguration` property to sp
                     },
                     "BufferingHints": {
                         "IntervalInSeconds": 60,
-                        "SizeInMBs": 50,
-                        "CompressionFormat": "UNCOMPRESSED"
+                        "SizeInMBs": 50
                     },
+                    "CompressionFormat": "UNCOMPRESSED",
                     "Prefix": "firehose/",
                     "RoleARN": {
                         "Ref": "deliveryRoleArn"
@@ -477,11 +484,10 @@ Resources :
                 BufferingHints: 
                     IntervalInSeconds: 60
                     SizeInMBs: 50
-                    CompressionFormat: UNCOMPRESSED
+                CompressionFormat: UNCOMPRESSED
                 Prefix: firehose/
                 RoleARN: !Ref deliveryRoleArn
 ```
 
 ## See Also<a name="aws-resource-kinesisfirehose-deliverystream-seealso"></a>
-
-+ [ CreateDeliveryStream](http://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html) in the *Amazon Kinesis Firehose API Reference*
++ [ CreateDeliveryStream](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html) in the *Amazon Kinesis Data Firehose API Reference*

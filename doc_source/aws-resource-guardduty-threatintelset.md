@@ -2,7 +2,7 @@
 
 The `AWS::GuardDuty::ThreatIntelSet` resource creates a ThreatIntelSet\. A ThreatIntelSet consists of known malicious IP addresses\. GuardDuty generates findings based on ThreatIntelSets\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-guardduty-threatintelset-syntax)
 + [Properties](#aws-resource-guardduty-threatintelset-properties)
 + [Return Values](#aws-resource-guardduty-threatintelset-returnvalues)
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-guardduty-threatintelset-syntax.yaml"></a>
 
 ```
-Type: "AWS::GuardDuty::ThreatIntelSet"
+Type: AWS::GuardDuty::ThreatIntelSet
 Properties:
   [Activate](#cfn-guardduty-threatintelset-activate): Boolean
   [DetectorId](#cfn-guardduty-threatintelset-detectorid): String
@@ -104,7 +104,7 @@ The following example shows how to declare an AWS::GuardDuty::ThreatIntelSet res
 
 ```
 mythreatintelset:
-  Type: "AWS::GuardDuty::ThreatIntelSet"
+  Type: AWS::GuardDuty::ThreatIntelSet
   Properties:
     Activate: true
     DetectorId: "12abc34d567e8f4912ab3d45e67891f2"

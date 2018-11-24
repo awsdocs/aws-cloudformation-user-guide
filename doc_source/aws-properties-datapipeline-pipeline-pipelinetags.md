@@ -2,7 +2,7 @@
 
 `PipelineTags` is a property of the [AWS::DataPipeline::Pipeline](aws-resource-datapipeline-pipeline.md) resource that defines arbitrary key\-value pairs for a pipeline\.
 
-## Syntax<a name="w3ab2c21c14d495b5"></a>
+## Syntax<a name="w4ab1c21c14d632b5"></a>
 
 ### JSON<a name="aws-properties-datapipeline-pipeline-pipelinetags-syntax.json"></a>
 
@@ -20,14 +20,14 @@
 [Value](#cfn-datapipeline-pipeline-pipelinetags-value): String
 ```
 
-## Properties<a name="w3ab2c21c14d495b7"></a>
+## Properties<a name="w4ab1c21c14d632b7"></a>
 
 `Key`  <a name="cfn-datapipeline-pipeline-pipelinetags-key"></a>
 The key name of a tag\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String
 
 `Value`  <a name="cfn-datapipeline-pipeline-pipelinetags-value"></a>
 The value to associate with the key name\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String

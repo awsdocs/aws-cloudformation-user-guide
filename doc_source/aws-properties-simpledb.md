@@ -23,15 +23,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-sdb-domain-syntax.yaml"></a>
 
 ```
-Type: "AWS::SDB::Domain"
+Type: AWS::SDB::Domain
 Properties: 
   [Description](#cfn-sdb-domain-description): String
 ```
 
-## Properties<a name="w3ab2c21c10d971b9"></a>
+## Properties<a name="w4ab1c21c10e1090b9"></a>
 
 `Description`  <a name="cfn-sdb-domain-description"></a>
 Information about the Amazon SimpleDB domain\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: Updates are not supported\.

@@ -1,8 +1,8 @@
 # AWS::Batch::ComputeEnvironment<a name="aws-resource-batch-computeenvironment"></a>
 
-The `AWS::Batch::ComputeEnvironment` resource to define your AWS Batch compute environment\. For more information, see [Compute Environments](http://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\. 
+The `AWS::Batch::ComputeEnvironment` resource to define your AWS Batch compute environment\. For more information, see [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-batch-computeenvironment-syntax)
 + [Properties](#aws-resource-batch-computeenvironment-properties)
 + [Return Values](#aws-resource-batch-computeenvironment-returnvalues)
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-batch-computeenvironment-syntax.yaml"></a>
 
 ```
-Type: "AWS::Batch::ComputeEnvironment"
+Type: AWS::Batch::ComputeEnvironment
 Properties:
   [Type](#cfn-batch-computeenvironment-type): String
   [ServiceRole](#cfn-batch-computeenvironment-servicerole): String
@@ -44,33 +44,33 @@ Properties:
 
 `Type`  <a name="cfn-batch-computeenvironment-type"></a>
 The type of the compute environment\.  
- *Required*: yes  
+*Required*: Yes  
 *Type*: String  
- *Update requires*: Replacement 
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ServiceRole`  <a name="cfn-batch-computeenvironment-servicerole"></a>
 The service role associated with the compute environment that allows AWS Batch to make calls to AWS API operations on your behalf\.  
- *Required*: yes  
+*Required*: Yes  
 *Type*: String  
- *Update requires*: No Interruption 
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ComputeEnvironmentName`  <a name="cfn-batch-computeenvironment-computeenvironmentname"></a>
 The name of the compute environment\.  
- *Required*: no  
+*Required*: No  
 *Type*: String  
- *Update requires*: Replacement 
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ComputeResources`  <a name="cfn-batch-computeenvironment-computeresources"></a>
 The compute resources defined for the compute environment\.  
- *Required*: yes  
+*Required*: Yes  
  *Type*: [AWS Batch ComputeEnvironment ComputeResources](aws-properties-batch-computeenvironment-computeresources.md)  
- *Update requires*: No Interruption 
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `State`  <a name="cfn-batch-computeenvironment-state"></a>
 The state of the compute environment\. The valid values are `ENABLED` or `DISABLED`\. An `ENABLED` state indicates that you can register instances with the compute environment and that the associated instances can accept jobs\.  
- *Required*: no  
+*Required*: No  
 *Type*: String  
- *Update requires*: No Interruption 
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-batch-computeenvironment-returnvalues"></a>
 

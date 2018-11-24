@@ -1,6 +1,6 @@
 # Learn Template Basics<a name="gettingstarted.templatebasics"></a>
 
-
+**Topics**
 + [What is an AWS CloudFormation Template?](#gettingstarted.templatebasics.what)
 + [Resources: Hello Bucket\!](#gettingstarted.templatebasics.simple)
 + [Resource Properties and Using Resources Together](#gettingstarted.templatebasics.multiple)
@@ -715,29 +715,20 @@ In the Get Started tutorial, we used this link to conveniently go to the install
 ## Next Steps<a name="gettingstarted.templatebasics.learnmore"></a>
 
 We just walked through the basic parts of a template and how to use them\. You learned the following about templates:
-
 + Declaring resources and their properties
-
 + Referencing other resources with the Ref function and resource attributes using the Fn::GetAtt function
-
 + Using parameters to enable users to specify values at stack creation time and using constraints to validate parameter input
-
 + Using mappings to determine conditional values
-
 + Using the Fn::Join function to construct values based on parameters, resource attributes, and other strings
-
-+ Using output values based to capture information about the stack's resources\.
++ Using output values to capture information about the stack's resources\.
 
 We didn't cover two top level objects in a template: AWSTemplateFormatVersion and Description\. AWSTemplateFormatVersion is simply the version of the template format—if you don't specify it, AWS CloudFormation will use the latest version\. The Description is any valid JSON or YAML string\. This description appears in the Specify Parameters page of the Create Stack wizard\. For more information, see [Format Version](format-version-structure.md) and [Description](template-description-structure.md)\.
 
 Of course, there are more advanced template and stack features\. Here is a list of a few important ones that you'll want to learn more about:
 
 *Optional attributes* that can be used with any resource:
-
 + [DependsOn attribute](aws-attribute-dependson.md) enables you to specify that one resource must be created after another\.
-
 + [DeletionPolicy attribute](aws-attribute-deletionpolicy.md) enables you to specify how AWS CloudFormation should handle the deletion of a resource\.
-
 + [Metadata](aws-attribute-metadata.md) attribute enables you to specify structured data with a resource\.
 
 [*AWS::CloudFormation::Stack*](aws-properties-stack.md) enables you to nest another stack as a resource within your template\.

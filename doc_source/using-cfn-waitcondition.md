@@ -5,9 +5,7 @@ For Amazon EC2 and Auto Scaling resources, we recommend that you use a CreationP
 For more information, see [CreationPolicy](aws-attribute-creationpolicy.md) or [Deploying Applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
 
 Using the [AWS::CloudFormation::WaitCondition](aws-properties-waitcondition.md) resource and [CreationPolicy](aws-attribute-creationpolicy.md) attribute, you can do the following:
-
 + Coordinate stack resource creation with other configuration actions that are external to the stack creation
-
 + Track the status of a configuration process
 
 For example, you can start the creation of another resource after an application configuration is partially complete, or you can send signals during an installation and configuration process to track its progress\.
@@ -15,24 +13,17 @@ For example, you can start the creation of another resource after an application
 ## Using a Wait Condition Handle<a name="using-cfn-waitconditionhandle"></a>
 
 **Note**  
-If you use the [VPC endpoint](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpoints.html) feature, resources in the VPC that respond to wait conditions must have access to AWS CloudFormation\-specific Amazon Simple Storage Service \(Amazon S3\) buckets\. Resources must send wait condition responses to a pre\-signed Amazon S3 URL\. If they can't send responses to Amazon S3, AWS CloudFormation won't receive a response and the stack operation fails\. For more information, see [AWS CloudFormation and VPC Endpoints](cfn-vpce-bucketnames.md) and [Example Bucket Policies for VPC Endpoints for Amazon S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies-vpc-endpoint.html)\.
+If you use the [VPC endpoint](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html) feature, resources in the VPC that respond to wait conditions must have access to AWS CloudFormation\-specific Amazon Simple Storage Service \(Amazon S3\) buckets\. Resources must send wait condition responses to a pre\-signed Amazon S3 URL\. If they can't send responses to Amazon S3, AWS CloudFormation won't receive a response and the stack operation fails\. For more information, see [Setting Up VPC Endpoints for AWS CloudFormation](cfn-vpce-bucketnames.md) and [Example Bucket Policies for VPC Endpoints for Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies-vpc-endpoint.html)\.
 
 You can use the wait condition and wait condition handle to make AWS CloudFormation pause the creation of a stack and wait for a signal before it continues to create the stack\. For example, you might want to download and configure applications on an Amazon EC2 instance before considering the creation of that Amazon EC2 instance complete\.
 
 The following list provides a summary of how a wait condition with a wait condition handle works:
-
 + AWS CloudFormation creates a wait condition just like any other resource\. When AWS CloudFormation creates a wait condition, it reports the wait condition’s status as CREATE\_IN\_PROGRESS and waits until it receives the requisite number of success signals or the wait condition’s timeout period has expired\. If AWS CloudFormation receives the requisite number of success signals before the time out period expires, it continues creating the stack; otherwise, it sets the wait condition’s status to CREATE\_FAILED and rolls the stack back\.
-
 + The `Timeout` property determines how long AWS CloudFormation waits for the requisite number of success signals\. `Timeout` is a minimum\-bound property, meaning the timeout occurs no sooner than the time you specify, but can occur shortly thereafter\. The maximum time that you can specify is 43200 seconds \(12 hours \)\.
-
 + Typically, you want a wait condition to begin immediately after the creation of a specific resource, such as an Amazon EC2 instance, RDS DB instance, or Auto Scaling group\. You do this by adding the [DependsOn attribute](aws-attribute-dependson.md) to a wait condition\. When you add a DependsOn attribute to a wait condition, you specify that the wait condition is created only after the creation of a particular resource has completed\. When the wait condition is created, AWS CloudFormation begins the timeout period and waits for success signals\.
-
 + You can also use the DependsOn attribute on other resources\. For example, you may want an RDS DB instance to be created and a database configured on that DB instance first before creating the EC2 instances that use that database\. In this case, you create a wait condition that has a DependsOn attribute that specifies the DB instance, and you create EC2 instance resources that have DependsOn attributes that specify the wait condition\. This would ensure that the EC2 instances would only be created directly after the DB instance and the wait condition were completed\.
-
 + AWS CloudFormation must receive a specified number of success signals for a wait condition before setting that wait condition’s status to CREATE\_COMPLETE continuing the creation of the stack\. The wait condition’s Count property specifies the number of success signals\. If none is set, the default is 1\.
-
 + A wait condition requires a wait condition handle to set up a presigned URL that is used as the signaling mechanism\. The presigned URL enables you to send a signal without having to supply your AWS credentials\. You use that presigned URL to signal success or failure, which is encapsulated in a JSON statement\. For the format of that JSON statement, see the [Wait Condition Signal JSON Format](#using-cfn-waitcondition-signaljson)\.
-
 + If a wait condition receives the requisite number of success signals \(as defined in the Count property\) before the timeout period expires, AWS CloudFormation marks the wait condition as CREATE\_COMPLETE and continues creating the stack\. Otherwise, AWS CloudFormation fails the wait condition and rolls the stack back \(for example, if the timeout period expires without requisite success signals or if a failure signal is received\)\.
 
 **To use a wait condition in a stack:**
@@ -129,9 +120,7 @@ When you signal a wait condition, you must use the following JSON format:
 Where:
 
 *StatusValue* must be one of the following values:
-
 + *SUCCESS* indicates a success signal\.
-
 + *FAILURE* indicates a failure signal and triggers a failed wait condition and a stack rollback\.
 
 *UniqueId* identifies the signal to AWS CloudFormation\. If the Count property of the wait condition is greater than 1, the UniqueId value must be unique across all signals sent for a particular wait condition; otherwise, AWS CloudFormation will consider the signal a retransmission of the previously sent signal with the same UniqueId, and it will ignore the signal\.

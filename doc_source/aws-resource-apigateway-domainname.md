@@ -2,9 +2,9 @@
 
 <a name="aws-resource-apigateway-domainname.desc"></a>The `AWS::ApiGateway::DomainName` resource specifies a custom domain name for your API in Amazon API Gateway \(API Gateway\)\.
 
-You can use a custom domain name to provide a URL that's more intuitive and easier to recall\. For more information about using custom domain names, see [Use Custom Domain Name as API Gateway API Host Name](http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html) in the *API Gateway Developer Guide*\.
+You can use a custom domain name to provide a URL that's more intuitive and easier to recall\. For more information about using custom domain names, see [Use Custom Domain Name as API Gateway API Host Name](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html) in the *API Gateway Developer Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-apigateway-domainname-syntax)
 + [Properties](#aws-resource-apigateway-domainname-properties)
 + [Return Values](#aws-resource-apigateway-domainname-returnvalues)
@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-domainname-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::DomainName"
+Type: AWS::ApiGateway::DomainName
 Properties: 
   [CertificateArn](#cfn-apigateway-domainname-certificatearn): String
   [DomainName](#cfn-apigateway-domainname-domainname): String
@@ -44,14 +44,14 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-domainname-properties"></a>
 
 `CertificateArn`  <a name="cfn-apigateway-domainname-certificatearn"></a>
-The reference to an AWS\-managed certificate for use by the edge\-optimized endpoint for this domain name\. AWS Certificate Manager is the only supported source\. For requirements and additional information about setting up certificates, see [Get Certificates Ready in AWS Certificate Manager](http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html#how-to-custom-domains-prerequisites) in the *API Gateway Developer Guide*\.  
+The reference to an AWS\-managed certificate for use by the edge\-optimized endpoint for this domain name\. AWS Certificate Manager is the only supported source\. For requirements and additional information about setting up certificates, see [Get Certificates Ready in AWS Certificate Manager](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html#how-to-custom-domains-prerequisites) in the *API Gateway Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `DomainName`  <a name="cfn-apigateway-domainname-domainname"></a>
 The custom domain name for your API in Amazon API Gateway\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
@@ -69,19 +69,29 @@ The reference to an AWS\-managed certificate for use by the regional endpoint fo
 
 ## Return Values<a name="aws-resource-apigateway-domainname-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10c49c13b2"></a>
+### Ref<a name="w4ab1c21c10c56c13b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the domain name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10c49c13b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10c56c13b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. This section lists the available attribute and a sample return value\.
 
 `DistributionDomainName`  
-The Amazon CloudFront distribution domain name that's mapped to the custom domain name\.  
+The Amazon CloudFront distribution domain name that's mapped to the custom domain name\. This is only applicable for endpoints whose type is `EDGE`\.  
 Example: `d111111abcdef8.cloudfront.net`
+
+`DistributionHostedZoneId`  
+The region\-agnostic Amazon Route 53 Hosted Zone ID of the edge\-optimized endpoint\. The valid value is `Z2FDTNDATAQYW2` for all the regions\.  
+Example: `Z2FDTNDATAQYW2`
+
+`RegionalDomainName`  
+The domain name associated with the regional endpoint for this custom domain name\. You set up this association by adding a DNS record that points the custom domain name to this regional domain name\. 
+
+`RegionalHostedZoneId`  
+The region\-specific Amazon Route 53 Hosted Zone ID of the regional endpoint\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
@@ -271,7 +281,9 @@ The following example creates a custom domain name that specifies a regional cer
           "Ref": "certificateArn"
         }
       }
-    },
+    }
+  },
+  "Outputs": {  
     "DomainName": {
       "Value": {
         "Ref": "myDomainName"
@@ -293,6 +305,90 @@ Parameters:
     Type: String
 Resources:
   myDomainName:
+    Type: AWS::ApiGateway::DomainName
+    Properties:
+      CertificateArn: !Ref certificateArn
+      DomainName: !Ref cfnDomainName
+      EndpointConfiguration:
+        Types:
+          - !Ref type
+      RegionalCertificateArn: !Ref certificateArn
+Outputs:  
+  DomainName:
+    Value: !Ref myDomainName
+```
+
+### Create Domain Names and Zone IDs as Outputs<a name="aws-resource-apigateway-domainname-example4"></a>
+
+The following example defines the distribution and regional domain names, as well as the distribution and regional hosted zone IDs, as outputs from the stack\.
+
+#### JSON<a name="aws-resource-apigateway-domainname-example3.json"></a>
+
+```
+    "Resources": {
+        "myDomainName": {
+            "Type": "AWS::ApiGateway::DomainName",
+            "Properties": {
+                "CertificateArn": {
+                    "Ref": "certificateArn"
+                },
+                "DomainName": {
+                    "Ref": "cfnDomainName"
+                },
+                "EndpointConfiguration": {
+                    "Types": [
+                        {
+                            "Ref": "type"
+                        }
+                    ]
+                },
+                "RegionalCertificateArn": {
+                    "Ref": "certificateArn"
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "DistributionDomainName": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "myDomainName",
+                    "DistributionDomainName"
+                ]
+            }
+        },
+        "DistributionHostedZoneId": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "myDomainName",
+                    "DistributionHostedZoneId"
+                ]
+            }
+        },
+        "RegionalDomainName": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "myDomainName",
+                    "RegionalDomainName"
+                ]
+            }
+        },
+        "RegionalHostedZoneId": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "myDomainName",
+                    "RegionalHostedZoneId"
+                ]
+            }
+        }
+    }
+```
+
+#### YAML<a name="aws-resource-apigateway-domainname-example3.yaml"></a>
+
+```
+Resources:
+  myDomainName:
     Type: 'AWS::ApiGateway::DomainName'
     Properties:
       CertificateArn: !Ref certificateArn
@@ -301,10 +397,24 @@ Resources:
         Types:
           - !Ref type
       RegionalCertificateArn: !Ref certificateArn
-  DomainName:
-    Value: !Ref myDomainName
+Outputs:
+  DistributionDomainName:
+    Value: !GetAtt 
+      - myDomainName
+      - DistributionDomainName
+  DistributionHostedZoneId:
+    Value: !GetAtt 
+      - myDomainName
+      - DistributionHostedZoneId
+  RegionalDomainName:
+    Value: !GetAtt 
+      - myDomainName
+      - RegionalDomainName
+  RegionalHostedZoneId:
+    Value: !GetAtt 
+      - myDomainName
+      - RegionalHostedZoneId
 ```
 
 ## See Also<a name="aws-resource-apigateway-domainname-seealso"></a>
-
-+ [domainname:create](http://docs.aws.amazon.com/apigateway/api-reference/link-relation/domainname-create/) operation in the *Amazon API Gateway REST API Reference*
++ [domainname:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/domainname-create/) operation in the *Amazon API Gateway REST API Reference*

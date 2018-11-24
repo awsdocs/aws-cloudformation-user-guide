@@ -1,6 +1,6 @@
 # Amazon EC2 Auto Scaling AutoScalingGroup LifecycleHookSpecification<a name="aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification"></a>
 
-<a name="aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification-description"></a>The `LifecycleHookSpecification` property type defines lifecycle hooks for an Auto Scaling group, which specify actions to perform when Auto Scaling launches or terminates instances\. For more information, see [ Auto Scaling Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html) in the *Auto Scaling User Guide*\.
+<a name="aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification-description"></a>The `LifecycleHookSpecification` property type defines lifecycle hooks for an Auto Scaling group, which specify actions to perform when Auto Scaling launches or terminates instances\. For more information, see [ Amazon EC2 Auto Scaling Lifecycle Hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
 <a name="aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification-inheritance"></a> The `LifecycleHookSpecificationList` property of the [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md) resource contains a list of `LifecycleHookSpecification` property types\.
 
@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification-properties"></a>
 
-For more information about each property, including constraints, see [PutLifecycleHook](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_PutLifecycleHook.html) in the *Auto Scaling API Reference*\.
+For more information about each property, including constraints, see [PutLifecycleHook](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutLifecycleHook.html) in the *Amazon EC2 Auto Scaling API Reference*\.
 
 `DefaultResult`  <a name="cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-defaultresult"></a>
 The action that the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs\.  
@@ -52,19 +52,19 @@ The maximum time, in seconds, that can elapse before the lifecycle hook times ou
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `LifecycleHookName`  <a name="cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecyclehookname"></a>
-The name of the lifecycle hook\. For constraints, see [ PutLifecycleHook](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_PutLifecycleHook.html) in the *Auto Scaling API Reference*\.  
+The name of the lifecycle hook\. For constraints, see [ PutLifecycleHook](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutLifecycleHook.html) in the *Amazon EC2 Auto Scaling API Reference*\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `LifecycleTransition`  <a name="cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecycletransition"></a>
-The state of the EC2 instance to attach the lifecycle hook to\. For a list of lifecycle hook types, see [ DescribeLifecycleHookTypes](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_DescribeLifecycleHookTypes.html) in the *Auto Scaling API Reference*\.  
+The state of the EC2 instance to attach the lifecycle hook to\. For a list of lifecycle hook types, see [ DescribeLifecycleHookTypes](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_DescribeLifecycleHookTypes.html) in the *Amazon EC2 Auto Scaling API Reference*\.  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `NotificationMetadata`  <a name="cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationmetadata"></a>
-Additional information to include when Auto Scaling sends a message to the notification target\. For constraints, see [ PutLifecycleHook](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_PutLifecycleHook.html) in the *Auto Scaling API Reference*\.  
+Additional information to include when Auto Scaling sends a message to the notification target\. For constraints, see [ PutLifecycleHook](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutLifecycleHook.html) in the *Amazon EC2 Auto Scaling API Reference*\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
@@ -155,7 +155,5 @@ Resources:
 ```
 
 ## See Also<a name="aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification-seealso"></a>
-
-+ [ Auto Scaling Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html) in the *Auto Scaling User Guide*
-
-+ [ PutLifecycleHook](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_PutLifecycleHook.html) in the *Auto Scaling API Reference*
++ [ Amazon EC2 Auto Scaling Lifecycle Hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html) in the *Amazon EC2 Auto Scaling User Guide*
++ [ PutLifecycleHook](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutLifecycleHook.html) in the *Amazon EC2 Auto Scaling API Reference*

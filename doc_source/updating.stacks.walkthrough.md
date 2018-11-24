@@ -152,40 +152,104 @@ To complete the stack, the template creates an Amazon EC2 security group\.
     "InstanceType" : {
       "Description" : "WebServer EC2 instance type",
       "Type" : "String",
-      "Default" : "m1.small",
-      "AllowedValues" : [ "t1.micro", "t2.micro", "t2.small", "t2.medium", "m1.small", "m1.medium", "m1.large", "m1.xlarge", "m2.xlarge",
-"m2.2xlarge", "m2.4xlarge", "m3.medium", "m3.large", "m3.xlarge", "m3.2xlarge", "c1.medium", "c1.xlarge", "c3.large", "c3.xlarge", "c3.2xlarge",
-"c3.4xlarge", "c3.8xlarge", "g2.2xlarge", "r3.large", "r3.xlarge", "r3.2xlarge", "r3.4xlarge", "r3.8xlarge", "i2.xlarge", "i2.2xlarge", "i2.4xlarge",
-"i2.8xlarge", "hi1.4xlarge", "hs1.8xlarge", "cr1.8xlarge", "cc2.8xlarge", "cg1.4xlarge"],
+      "Default" : "t2.small",
+      "AllowedValues" : [ 
+        "t1.micro", 
+        "t2.nano", 
+        "t2.micro", 
+        "t2.small", 
+        "t2.medium", 
+        "t2.large", 
+        "m1.small", 
+        "m1.medium", 
+        "m1.large", 
+        "m1.xlarge", 
+        "m2.xlarge", 
+        "m2.2xlarge", 
+        "m2.4xlarge", 
+        "m3.medium", 
+        "m3.large", 
+        "m3.xlarge", 
+        "m3.2xlarge", 
+        "m4.large", 
+        "m4.xlarge", 
+        "m4.2xlarge", 
+        "m4.4xlarge", 
+        "m4.10xlarge", 
+        "c1.medium", 
+        "c1.xlarge", 
+        "c3.large", 
+        "c3.xlarge", 
+        "c3.2xlarge", 
+        "c3.4xlarge", 
+        "c3.8xlarge", 
+        "c4.large", 
+        "c4.xlarge", 
+        "c4.2xlarge", 
+        "c4.4xlarge", 
+        "c4.8xlarge", 
+        "g2.2xlarge", 
+        "g2.8xlarge", 
+        "r3.large", 
+        "r3.xlarge", 
+        "r3.2xlarge", 
+        "r3.4xlarge", 
+        "r3.8xlarge", 
+        "i2.xlarge", 
+        "i2.2xlarge", 
+        "i2.4xlarge", 
+        "i2.8xlarge", 
+        "d2.xlarge", 
+        "d2.2xlarge", 
+        "d2.4xlarge", 
+        "d2.8xlarge", 
+        "hi1.4xlarge", 
+        "hs1.8xlarge", 
+        "cr1.8xlarge", 
+        "cc2.8xlarge", 
+        "cg1.4xlarge"
+      ],
       "ConstraintDescription" : "must be a valid EC2 instance type."
-    }
-  },
-  
+    },
+    
   "Mappings" : {
     "AWSInstanceType2Arch" : {
-      "t1.micro"    : { "Arch" : "PV64"   },
+      "t1.micro"    : { "Arch" : "HVM64"  },
+      "t2.nano"     : { "Arch" : "HVM64"  },
       "t2.micro"    : { "Arch" : "HVM64"  },
       "t2.small"    : { "Arch" : "HVM64"  },
       "t2.medium"   : { "Arch" : "HVM64"  },
-      "m1.small"    : { "Arch" : "PV64"   },
-      "m1.medium"   : { "Arch" : "PV64"   },
-      "m1.large"    : { "Arch" : "PV64"   },
-      "m1.xlarge"   : { "Arch" : "PV64"   },
-      "m2.xlarge"   : { "Arch" : "PV64"   },
-      "m2.2xlarge"  : { "Arch" : "PV64"   },
-      "m2.4xlarge"  : { "Arch" : "PV64"   },
+      "t2.large"    : { "Arch" : "HVM64"  },
+      "m1.small"    : { "Arch" : "HVM64"  },
+      "m1.medium"   : { "Arch" : "HVM64"  },
+      "m1.large"    : { "Arch" : "HVM64"  },
+      "m1.xlarge"   : { "Arch" : "HVM64"  },
+      "m2.xlarge"   : { "Arch" : "HVM64"  },
+      "m2.2xlarge"  : { "Arch" : "HVM64"  },
+      "m2.4xlarge"  : { "Arch" : "HVM64"  },
       "m3.medium"   : { "Arch" : "HVM64"  },
       "m3.large"    : { "Arch" : "HVM64"  },
       "m3.xlarge"   : { "Arch" : "HVM64"  },
       "m3.2xlarge"  : { "Arch" : "HVM64"  },
-      "c1.medium"   : { "Arch" : "PV64"   },
-      "c1.xlarge"   : { "Arch" : "PV64"   },
+      "m4.large"    : { "Arch" : "HVM64"  },
+      "m4.xlarge"   : { "Arch" : "HVM64"  },
+      "m4.2xlarge"  : { "Arch" : "HVM64"  },
+      "m4.4xlarge"  : { "Arch" : "HVM64"  },
+      "m4.10xlarge" : { "Arch" : "HVM64"  },
+      "c1.medium"   : { "Arch" : "HVM64"  },
+      "c1.xlarge"   : { "Arch" : "HVM64"  },
       "c3.large"    : { "Arch" : "HVM64"  },
       "c3.xlarge"   : { "Arch" : "HVM64"  },
       "c3.2xlarge"  : { "Arch" : "HVM64"  },
       "c3.4xlarge"  : { "Arch" : "HVM64"  },
       "c3.8xlarge"  : { "Arch" : "HVM64"  },
+      "c4.large"    : { "Arch" : "HVM64"  },
+      "c4.xlarge"   : { "Arch" : "HVM64"  },
+      "c4.2xlarge"  : { "Arch" : "HVM64"  },
+      "c4.4xlarge"  : { "Arch" : "HVM64"  },
+      "c4.8xlarge"  : { "Arch" : "HVM64"  },
       "g2.2xlarge"  : { "Arch" : "HVMG2"  },
+      "g2.8xlarge"  : { "Arch" : "HVMG2"  },
       "r3.large"    : { "Arch" : "HVM64"  },
       "r3.xlarge"   : { "Arch" : "HVM64"  },
       "r3.2xlarge"  : { "Arch" : "HVM64"  },
@@ -195,23 +259,34 @@ To complete the stack, the template creates an Amazon EC2 security group\.
       "i2.2xlarge"  : { "Arch" : "HVM64"  },
       "i2.4xlarge"  : { "Arch" : "HVM64"  },
       "i2.8xlarge"  : { "Arch" : "HVM64"  },
+      "d2.xlarge"   : { "Arch" : "HVM64"  },
+      "d2.2xlarge"  : { "Arch" : "HVM64"  },
+      "d2.4xlarge"  : { "Arch" : "HVM64"  },
+      "d2.8xlarge"  : { "Arch" : "HVM64"  },
       "hi1.4xlarge" : { "Arch" : "HVM64"  },
       "hs1.8xlarge" : { "Arch" : "HVM64"  },
       "cr1.8xlarge" : { "Arch" : "HVM64"  },
       "cc2.8xlarge" : { "Arch" : "HVM64"  }
     },
-
     "AWSRegionArch2AMI" : {
-      "us-east-1"      : { "PV64" : "ami-50842d38", "HVM64" : "ami-08842d60", "HVMG2" : "ami-3a329952"  },
-      "us-west-2"      : { "PV64" : "ami-af86c69f", "HVM64" : "ami-8786c6b7", "HVMG2" : "ami-47296a77"  },
-      "us-west-1"      : { "PV64" : "ami-c7a8a182", "HVM64" : "ami-cfa8a18a", "HVMG2" : "ami-331b1376"  },
-      "eu-west-1"      : { "PV64" : "ami-aa8f28dd", "HVM64" : "ami-748e2903", "HVMG2" : "ami-00913777"  },
-      "ap-southeast-1" : { "PV64" : "ami-20e1c572", "HVM64" : "ami-d6e1c584", "HVMG2" : "ami-fabe9aa8"  },
-      "ap-northeast-1" : { "PV64" : "ami-21072820", "HVM64" : "ami-35072834", "HVMG2" : "ami-5dd1ff5c"  },
-      "ap-southeast-2" : { "PV64" : "ami-8b4724b1", "HVM64" : "ami-fd4724c7", "HVMG2" : "ami-e98ae9d3"  },
-      "sa-east-1"      : { "PV64" : "ami-9d6cc680", "HVM64" : "ami-956cc688", "HVMG2" : "NOT_SUPPORTED" },
-      "cn-north-1"     : { "PV64" : "ami-a857c591", "HVM64" : "ami-ac57c595", "HVMG2" : "NOT_SUPPORTED" },
-      "eu-central-1"   : { "PV64" : "ami-a03503bd", "HVM64" : "ami-b43503a9", "HVMG2" : "ami-b03503ad"  }
+      "us-east-1"        : {"HVM64" : "ami-0ff8a91507f77f867", "HVMG2" : "ami-0a584ac55a7631c0c"},
+      "us-west-2"        : {"HVM64" : "ami-a0cfeed8", "HVMG2" : "ami-0e09505bc235aa82d"},
+      "us-west-1"        : {"HVM64" : "ami-0bdb828fd58c52235", "HVMG2" : "ami-066ee5fd4a9ef77f1"},
+      "eu-west-1"        : {"HVM64" : "ami-047bb4163c506cd98", "HVMG2" : "ami-0a7c483d527806435"},
+      "eu-west-2"        : {"HVM64" : "ami-f976839e", "HVMG2" : "NOT_SUPPORTED"},
+      "eu-west-3"        : {"HVM64" : "ami-0ebc281c20e89ba4b", "HVMG2" : "NOT_SUPPORTED"},
+      "eu-central-1"     : {"HVM64" : "ami-0233214e13e500f77", "HVMG2" : "ami-06223d46a6d0661c7"},
+      "ap-northeast-1"   : {"HVM64" : "ami-06cd52961ce9f0d85", "HVMG2" : "ami-053cdd503598e4a9d"},
+      "ap-northeast-2"   : {"HVM64" : "ami-0a10b2721688ce9d2", "HVMG2" : "NOT_SUPPORTED"},
+      "ap-northeast-3"   : {"HVM64" : "ami-0d98120a9fb693f07", "HVMG2" : "NOT_SUPPORTED"},
+      "ap-southeast-1"   : {"HVM64" : "ami-08569b978cc4dfa10", "HVMG2" : "ami-0be9df32ae9f92309"},
+      "ap-southeast-2"   : {"HVM64" : "ami-09b42976632b27e9b", "HVMG2" : "ami-0a9ce9fecc3d1daf8"},
+      "ap-south-1"       : {"HVM64" : "ami-0912f71e06545ad88", "HVMG2" : "ami-097b15e89dbdcfcf4"},
+      "us-east-2"        : {"HVM64" : "ami-0b59bfac6be064b78", "HVMG2" : "NOT_SUPPORTED"},
+      "ca-central-1"     : {"HVM64" : "ami-0b18956f", "HVMG2" : "NOT_SUPPORTED"},
+      "sa-east-1"        : {"HVM64" : "ami-07b14488da8ea02a0", "HVMG2" : "NOT_SUPPORTED"},
+      "cn-north-1"       : {"HVM64" : "ami-0a4eaf6c4454eda75", "HVMG2" : "NOT_SUPPORTED"},
+      "cn-northwest-1"   : {"HVM64" : "ami-6b6a7d09", "HVMG2" : "NOT_SUPPORTED"}
     }
   },
     
@@ -479,9 +554,7 @@ You can optionally specify a version string for a package\. If you change the ve
 ### Updating Auto Scaling Groups<a name="updating.autoscaling"></a>
 
 If you are using Auto Scaling groups in your template, as opposed to Amazon EC2 instance resources, updating the application will work in exactly the same way; however, AWS CloudFormation does not provide any synchronization or serialization across the Amazon EC2 instances in an Auto Scaling group\. The cfn\-hup daemon on each host will run independently and update the application on its own schedule\. When you use cfn\-hup to update the on\-instance configuration, each instance will run the cfn\-hup hooks on its own schedule; there is no coordination between the instances in the stack\. You should consider the following:
-
 + If the cfn\-hup changes run on all Amazon EC2 instances in the Auto Scaling group at the same time, your service might be unavailable during the update\.
-
 + If the cfn\-hup changes run at different times, old and new versions of the software may be running at the same\.
 
 To avoid these issues, consider forcing a rolling update on your instances in the Auto Scaling group\. For more information, see [UpdatePolicy](aws-attribute-updatepolicy.md)\.
@@ -495,31 +568,44 @@ With AWS CloudFormation, you can change the properties of an existing resource i
 The stack we have built so far uses a t1\.micro Amazon EC2 instance\. Let's suppose that your newly created website is getting more traffic than a t1\.micro instance can handle, and now you want to move to an m1\.small Amazon EC2 instance type\. If the architecture of the instance type changes, the instance will be created with a different AMI\. If you check out the mappings in the template, you will see that both the t1\.micro and m1\.small are the same architectures and use the same Amazon Linux AMIs\.
 
 ```
-"Mappings" : {
+  "Mappings" : {
     "AWSInstanceType2Arch" : {
-      "t1.micro"    : { "Arch" : "PV64"   },
+      "t1.micro"    : { "Arch" : "HVM64"  },
+      "t2.nano"     : { "Arch" : "HVM64"  },
       "t2.micro"    : { "Arch" : "HVM64"  },
       "t2.small"    : { "Arch" : "HVM64"  },
       "t2.medium"   : { "Arch" : "HVM64"  },
-      "m1.small"    : { "Arch" : "PV64"   },
-      "m1.medium"   : { "Arch" : "PV64"   },
-      "m1.large"    : { "Arch" : "PV64"   },
-      "m1.xlarge"   : { "Arch" : "PV64"   },
-      "m2.xlarge"   : { "Arch" : "PV64"   },
-      "m2.2xlarge"  : { "Arch" : "PV64"   },
-      "m2.4xlarge"  : { "Arch" : "PV64"   },
+      "t2.large"    : { "Arch" : "HVM64"  },
+      "m1.small"    : { "Arch" : "HVM64"  },
+      "m1.medium"   : { "Arch" : "HVM64"  },
+      "m1.large"    : { "Arch" : "HVM64"  },
+      "m1.xlarge"   : { "Arch" : "HVM64"  },
+      "m2.xlarge"   : { "Arch" : "HVM64"  },
+      "m2.2xlarge"  : { "Arch" : "HVM64"  },
+      "m2.4xlarge"  : { "Arch" : "HVM64"  },
       "m3.medium"   : { "Arch" : "HVM64"  },
       "m3.large"    : { "Arch" : "HVM64"  },
       "m3.xlarge"   : { "Arch" : "HVM64"  },
       "m3.2xlarge"  : { "Arch" : "HVM64"  },
-      "c1.medium"   : { "Arch" : "PV64"   },
-      "c1.xlarge"   : { "Arch" : "PV64"   },
+      "m4.large"    : { "Arch" : "HVM64"  },
+      "m4.xlarge"   : { "Arch" : "HVM64"  },
+      "m4.2xlarge"  : { "Arch" : "HVM64"  },
+      "m4.4xlarge"  : { "Arch" : "HVM64"  },
+      "m4.10xlarge" : { "Arch" : "HVM64"  },
+      "c1.medium"   : { "Arch" : "HVM64"  },
+      "c1.xlarge"   : { "Arch" : "HVM64"  },
       "c3.large"    : { "Arch" : "HVM64"  },
       "c3.xlarge"   : { "Arch" : "HVM64"  },
       "c3.2xlarge"  : { "Arch" : "HVM64"  },
       "c3.4xlarge"  : { "Arch" : "HVM64"  },
       "c3.8xlarge"  : { "Arch" : "HVM64"  },
+      "c4.large"    : { "Arch" : "HVM64"  },
+      "c4.xlarge"   : { "Arch" : "HVM64"  },
+      "c4.2xlarge"  : { "Arch" : "HVM64"  },
+      "c4.4xlarge"  : { "Arch" : "HVM64"  },
+      "c4.8xlarge"  : { "Arch" : "HVM64"  },
       "g2.2xlarge"  : { "Arch" : "HVMG2"  },
+      "g2.8xlarge"  : { "Arch" : "HVMG2"  },
       "r3.large"    : { "Arch" : "HVM64"  },
       "r3.xlarge"   : { "Arch" : "HVM64"  },
       "r3.2xlarge"  : { "Arch" : "HVM64"  },
@@ -529,25 +615,35 @@ The stack we have built so far uses a t1\.micro Amazon EC2 instance\. Let's supp
       "i2.2xlarge"  : { "Arch" : "HVM64"  },
       "i2.4xlarge"  : { "Arch" : "HVM64"  },
       "i2.8xlarge"  : { "Arch" : "HVM64"  },
+      "d2.xlarge"   : { "Arch" : "HVM64"  },
+      "d2.2xlarge"  : { "Arch" : "HVM64"  },
+      "d2.4xlarge"  : { "Arch" : "HVM64"  },
+      "d2.8xlarge"  : { "Arch" : "HVM64"  },
       "hi1.4xlarge" : { "Arch" : "HVM64"  },
       "hs1.8xlarge" : { "Arch" : "HVM64"  },
       "cr1.8xlarge" : { "Arch" : "HVM64"  },
       "cc2.8xlarge" : { "Arch" : "HVM64"  }
     },
-
     "AWSRegionArch2AMI" : {
-      "us-east-1"      : { "PV64" : "ami-50842d38", "HVM64" : "ami-08842d60", "HVMG2" : "ami-3a329952"  },
-      "us-west-2"      : { "PV64" : "ami-af86c69f", "HVM64" : "ami-8786c6b7", "HVMG2" : "ami-47296a77"  },
-      "us-west-1"      : { "PV64" : "ami-c7a8a182", "HVM64" : "ami-cfa8a18a", "HVMG2" : "ami-331b1376"  },
-      "eu-west-1"      : { "PV64" : "ami-aa8f28dd", "HVM64" : "ami-748e2903", "HVMG2" : "ami-00913777"  },
-      "ap-southeast-1" : { "PV64" : "ami-20e1c572", "HVM64" : "ami-d6e1c584", "HVMG2" : "ami-fabe9aa8"  },
-      "ap-northeast-1" : { "PV64" : "ami-21072820", "HVM64" : "ami-35072834", "HVMG2" : "ami-5dd1ff5c"  },
-      "ap-southeast-2" : { "PV64" : "ami-8b4724b1", "HVM64" : "ami-fd4724c7", "HVMG2" : "ami-e98ae9d3"  },
-      "sa-east-1"      : { "PV64" : "ami-9d6cc680", "HVM64" : "ami-956cc688", "HVMG2" : "NOT_SUPPORTED" },
-      "cn-north-1"     : { "PV64" : "ami-a857c591", "HVM64" : "ami-ac57c595", "HVMG2" : "NOT_SUPPORTED" },
-      "eu-central-1"   : { "PV64" : "ami-a03503bd", "HVM64" : "ami-b43503a9", "HVMG2" : "ami-b03503ad"  }
+      "us-east-1"        : {"HVM64" : "ami-0ff8a91507f77f867", "HVMG2" : "ami-0a584ac55a7631c0c"},
+      "us-west-2"        : {"HVM64" : "ami-a0cfeed8", "HVMG2" : "ami-0e09505bc235aa82d"},
+      "us-west-1"        : {"HVM64" : "ami-0bdb828fd58c52235", "HVMG2" : "ami-066ee5fd4a9ef77f1"},
+      "eu-west-1"        : {"HVM64" : "ami-047bb4163c506cd98", "HVMG2" : "ami-0a7c483d527806435"},
+      "eu-west-2"        : {"HVM64" : "ami-f976839e", "HVMG2" : "NOT_SUPPORTED"},
+      "eu-west-3"        : {"HVM64" : "ami-0ebc281c20e89ba4b", "HVMG2" : "NOT_SUPPORTED"},
+      "eu-central-1"     : {"HVM64" : "ami-0233214e13e500f77", "HVMG2" : "ami-06223d46a6d0661c7"},
+      "ap-northeast-1"   : {"HVM64" : "ami-06cd52961ce9f0d85", "HVMG2" : "ami-053cdd503598e4a9d"},
+      "ap-northeast-2"   : {"HVM64" : "ami-0a10b2721688ce9d2", "HVMG2" : "NOT_SUPPORTED"},
+      "ap-northeast-3"   : {"HVM64" : "ami-0d98120a9fb693f07", "HVMG2" : "NOT_SUPPORTED"},
+      "ap-southeast-1"   : {"HVM64" : "ami-08569b978cc4dfa10", "HVMG2" : "ami-0be9df32ae9f92309"},
+      "ap-southeast-2"   : {"HVM64" : "ami-09b42976632b27e9b", "HVMG2" : "ami-0a9ce9fecc3d1daf8"},
+      "ap-south-1"       : {"HVM64" : "ami-0912f71e06545ad88", "HVMG2" : "ami-097b15e89dbdcfcf4"},
+      "us-east-2"        : {"HVM64" : "ami-0b59bfac6be064b78", "HVMG2" : "NOT_SUPPORTED"},
+      "ca-central-1"     : {"HVM64" : "ami-0b18956f", "HVMG2" : "NOT_SUPPORTED"},
+      "sa-east-1"        : {"HVM64" : "ami-07b14488da8ea02a0", "HVMG2" : "NOT_SUPPORTED"},
+      "cn-north-1"       : {"HVM64" : "ami-0a4eaf6c4454eda75", "HVMG2" : "NOT_SUPPORTED"},
+      "cn-northwest-1"   : {"HVM64" : "ami-6b6a7d09", "HVMG2" : "NOT_SUPPORTED"}
     }
-  }
 ```
 
 Let's use the template that we modified in the previous section to change the instance type\. Because InstanceType was an input parameter to the template, we don't need to modify the template; we can simply change the value of the parameter in the Stack Update wizard, on the Specify Parameters page\.
@@ -562,7 +658,7 @@ Let's use the template that we modified in the previous section to change the in
 
    The Specify Details page appears with the parameters that were used to create the initial stack are pre\-populated in the **Specify Parameters** section\.
 
-1. Change the value of the **InstanceType** text box from `t1.micro` to `t2.small`\. Then, click **Next**\.
+1. Change the value of the **InstanceType** text box from `t1.micro` to `m1.small`\. Then, click **Next**\.
 
 1. On the **Options** screen, click **Next**\.
 
@@ -592,7 +688,7 @@ If you have application code written into the AMI that you want to update, you c
 
 1. Update your template to incorporate the new AMI IDs\.
 
-1. Update the stack, either from the AWS Management Console as explained in [Update the Application](#update.application) or by using the AWS command [http://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html)\.
+1. Update the stack, either from the AWS Management Console as explained in [Update the Application](#update.application) or by using the AWS command [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html)\.
 
 When you update the stack, AWS CloudFormation detects that the AMI ID has changed, and then it triggers a stack update in the same way as we triggered the one above\.
 
@@ -661,7 +757,7 @@ So far, we've looked at changing existing properties of a resource in a template
        },
    ```
 
-1. Update the stack, either from the AWS Management Console as explained in [Update the Application](#update.application) or by using the AWS command [http://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html)\.
+1. Update the stack, either from the AWS Management Console as explained in [Update the Application](#update.application) or by using the AWS command [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html)\.
 
 ## Change the Stack's Resources<a name="update.walkthrough.change.resources"></a>
 
@@ -787,7 +883,7 @@ This will create a simple, single instance PHP application using an Elastic IP a
    }
    ```
 
-For reference, the follow sample shows the complete template\. If you use this template to update the stack, you will convert your simple, single instance application into a highly available, multi\-AZ, auto\-scaled and load balanced application\. Only the resources that need to be updated will be altered, so had there been any data stores for this application, the data would have remained intact\. Now, you can use AWS CloudFormation to grow or enhance your stacks as your requirements change\.
+For reference, the following sample shows the complete template\. If you use this template to update the stack, you will convert your simple, single instance application into a highly available, multi\-AZ, auto\-scaled and load balanced application\. Only the resources that need to be updated will be altered, so had there been any data stores for this application, the data would have remained intact\. Now, you can use AWS CloudFormation to grow or enhance your stacks as your requirements change\.
 
 ```
 {
@@ -816,40 +912,105 @@ For reference, the follow sample shows the complete template\. If you use this t
     "InstanceType" : {
       "Description" : "WebServer EC2 instance type",
       "Type" : "String",
-      "Default" : "m1.small",
-      "AllowedValues" : [ "t1.micro", "t2.micro", "t2.small", "t2.medium", "m1.small", "m1.medium", "m1.large", "m1.xlarge", "m2.xlarge",
-"m2.2xlarge", "m2.4xlarge", "m3.medium", "m3.large", "m3.xlarge", "m3.2xlarge", "c1.medium", "c1.xlarge", "c3.large", "c3.xlarge", "c3.2xlarge",
-"c3.4xlarge", "c3.8xlarge", "g2.2xlarge", "r3.large", "r3.xlarge", "r3.2xlarge", "r3.4xlarge", "r3.8xlarge", "i2.xlarge", "i2.2xlarge", "i2.4xlarge",
-"i2.8xlarge", "hi1.4xlarge", "hs1.8xlarge", "cr1.8xlarge", "cc2.8xlarge", "cg1.4xlarge"],
+      "Default" : "t2.small",
+      "AllowedValues" : [ 
+        "t1.micro", 
+        "t2.nano", 
+        "t2.micro", 
+        "t2.small", 
+        "t2.medium", 
+        "t2.large", 
+        "m1.small", 
+        "m1.medium", 
+        "m1.large", 
+        "m1.xlarge", 
+        "m2.xlarge", 
+        "m2.2xlarge", 
+        "m2.4xlarge", 
+        "m3.medium", 
+        "m3.large", 
+        "m3.xlarge", 
+        "m3.2xlarge", 
+        "m4.large", 
+        "m4.xlarge", 
+        "m4.2xlarge", 
+        "m4.4xlarge", 
+        "m4.10xlarge", 
+        "c1.medium", 
+        "c1.xlarge", 
+        "c3.large", 
+        "c3.xlarge", 
+        "c3.2xlarge", 
+        "c3.4xlarge", 
+        "c3.8xlarge", 
+        "c4.large", 
+        "c4.xlarge", 
+        "c4.2xlarge", 
+        "c4.4xlarge", 
+        "c4.8xlarge", 
+        "g2.2xlarge", 
+        "g2.8xlarge", 
+        "r3.large", 
+        "r3.xlarge", 
+        "r3.2xlarge", 
+        "r3.4xlarge", 
+        "r3.8xlarge", 
+        "i2.xlarge", 
+        "i2.2xlarge", 
+        "i2.4xlarge", 
+        "i2.8xlarge", 
+        "d2.xlarge", 
+        "d2.2xlarge", 
+        "d2.4xlarge", 
+        "d2.8xlarge", 
+        "hi1.4xlarge", 
+        "hs1.8xlarge", 
+        "cr1.8xlarge", 
+        "cc2.8xlarge", 
+        "cg1.4xlarge"
+      ],
       "ConstraintDescription" : "must be a valid EC2 instance type."
     }
   },
   
   "Mappings" : {
     "AWSInstanceType2Arch" : {
-      "t1.micro"    : { "Arch" : "PV64"   },
+      "t1.micro"    : { "Arch" : "HVM64"  },
+      "t2.nano"     : { "Arch" : "HVM64"  },
       "t2.micro"    : { "Arch" : "HVM64"  },
       "t2.small"    : { "Arch" : "HVM64"  },
       "t2.medium"   : { "Arch" : "HVM64"  },
-      "m1.small"    : { "Arch" : "PV64"   },
-      "m1.medium"   : { "Arch" : "PV64"   },
-      "m1.large"    : { "Arch" : "PV64"   },
-      "m1.xlarge"   : { "Arch" : "PV64"   },
-      "m2.xlarge"   : { "Arch" : "PV64"   },
-      "m2.2xlarge"  : { "Arch" : "PV64"   },
-      "m2.4xlarge"  : { "Arch" : "PV64"   },
+      "t2.large"    : { "Arch" : "HVM64"  },
+      "m1.small"    : { "Arch" : "HVM64"  },
+      "m1.medium"   : { "Arch" : "HVM64"  },
+      "m1.large"    : { "Arch" : "HVM64"  },
+      "m1.xlarge"   : { "Arch" : "HVM64"  },
+      "m2.xlarge"   : { "Arch" : "HVM64"  },
+      "m2.2xlarge"  : { "Arch" : "HVM64"  },
+      "m2.4xlarge"  : { "Arch" : "HVM64"  },
       "m3.medium"   : { "Arch" : "HVM64"  },
       "m3.large"    : { "Arch" : "HVM64"  },
       "m3.xlarge"   : { "Arch" : "HVM64"  },
       "m3.2xlarge"  : { "Arch" : "HVM64"  },
-      "c1.medium"   : { "Arch" : "PV64"   },
-      "c1.xlarge"   : { "Arch" : "PV64"   },
+      "m4.large"    : { "Arch" : "HVM64"  },
+      "m4.xlarge"   : { "Arch" : "HVM64"  },
+      "m4.2xlarge"  : { "Arch" : "HVM64"  },
+      "m4.4xlarge"  : { "Arch" : "HVM64"  },
+      "m4.10xlarge" : { "Arch" : "HVM64"  },
+      "c1.medium"   : { "Arch" : "HVM64"  },
+      "c1.xlarge"   : { "Arch" : "HVM64"  },
       "c3.large"    : { "Arch" : "HVM64"  },
       "c3.xlarge"   : { "Arch" : "HVM64"  },
       "c3.2xlarge"  : { "Arch" : "HVM64"  },
       "c3.4xlarge"  : { "Arch" : "HVM64"  },
       "c3.8xlarge"  : { "Arch" : "HVM64"  },
+      "c4.large"    : { "Arch" : "HVM64"  },
+      "c4.xlarge"   : { "Arch" : "HVM64"  },
+      "c4.2xlarge"  : { "Arch" : "HVM64"  },
+      "c4.4xlarge"  : { "Arch" : "HVM64"  },
+      "c4.8xlarge"  : { "Arch" : "HVM64"  },
       "g2.2xlarge"  : { "Arch" : "HVMG2"  },
+      "g2.8xlarge"  : { "Arch" : "HVMG2"  },
       "r3.large"    : { "Arch" : "HVM64"  },
       "r3.xlarge"   : { "Arch" : "HVM64"  },
       "r3.2xlarge"  : { "Arch" : "HVM64"  },
@@ -859,23 +1020,34 @@ For reference, the follow sample shows the complete template\. If you use this t
       "i2.2xlarge"  : { "Arch" : "HVM64"  },
       "i2.4xlarge"  : { "Arch" : "HVM64"  },
       "i2.8xlarge"  : { "Arch" : "HVM64"  },
+      "d2.xlarge"   : { "Arch" : "HVM64"  },
+      "d2.2xlarge"  : { "Arch" : "HVM64"  },
+      "d2.4xlarge"  : { "Arch" : "HVM64"  },
+      "d2.8xlarge"  : { "Arch" : "HVM64"  },
       "hi1.4xlarge" : { "Arch" : "HVM64"  },
       "hs1.8xlarge" : { "Arch" : "HVM64"  },
       "cr1.8xlarge" : { "Arch" : "HVM64"  },
       "cc2.8xlarge" : { "Arch" : "HVM64"  }
     },
-
     "AWSRegionArch2AMI" : {
-      "us-east-1"      : { "PV64" : "ami-50842d38", "HVM64" : "ami-08842d60", "HVMG2" : "ami-3a329952"  },
-      "us-west-2"      : { "PV64" : "ami-af86c69f", "HVM64" : "ami-8786c6b7", "HVMG2" : "ami-47296a77"  },
-      "us-west-1"      : { "PV64" : "ami-c7a8a182", "HVM64" : "ami-cfa8a18a", "HVMG2" : "ami-331b1376"  },
-      "eu-west-1"      : { "PV64" : "ami-aa8f28dd", "HVM64" : "ami-748e2903", "HVMG2" : "ami-00913777"  },
-      "ap-southeast-1" : { "PV64" : "ami-20e1c572", "HVM64" : "ami-d6e1c584", "HVMG2" : "ami-fabe9aa8"  },
-      "ap-northeast-1" : { "PV64" : "ami-21072820", "HVM64" : "ami-35072834", "HVMG2" : "ami-5dd1ff5c"  },
-      "ap-southeast-2" : { "PV64" : "ami-8b4724b1", "HVM64" : "ami-fd4724c7", "HVMG2" : "ami-e98ae9d3"  },
-      "sa-east-1"      : { "PV64" : "ami-9d6cc680", "HVM64" : "ami-956cc688", "HVMG2" : "NOT_SUPPORTED" },
-      "cn-north-1"     : { "PV64" : "ami-a857c591", "HVM64" : "ami-ac57c595", "HVMG2" : "NOT_SUPPORTED" },
-      "eu-central-1"   : { "PV64" : "ami-a03503bd", "HVM64" : "ami-b43503a9", "HVMG2" : "ami-b03503ad"  }
+      "us-east-1"        : {"HVM64" : "ami-0ff8a91507f77f867", "HVMG2" : "ami-0a584ac55a7631c0c"},
+      "us-west-2"        : {"HVM64" : "ami-a0cfeed8", "HVMG2" : "ami-0e09505bc235aa82d"},
+      "us-west-1"        : {"HVM64" : "ami-0bdb828fd58c52235", "HVMG2" : "ami-066ee5fd4a9ef77f1"},
+      "eu-west-1"        : {"HVM64" : "ami-047bb4163c506cd98", "HVMG2" : "ami-0a7c483d527806435"},
+      "eu-west-2"        : {"HVM64" : "ami-f976839e", "HVMG2" : "NOT_SUPPORTED"},
+      "eu-west-3"        : {"HVM64" : "ami-0ebc281c20e89ba4b", "HVMG2" : "NOT_SUPPORTED"},
+      "eu-central-1"     : {"HVM64" : "ami-0233214e13e500f77", "HVMG2" : "ami-06223d46a6d0661c7"},
+      "ap-northeast-1"   : {"HVM64" : "ami-06cd52961ce9f0d85", "HVMG2" : "ami-053cdd503598e4a9d"},
+      "ap-northeast-2"   : {"HVM64" : "ami-0a10b2721688ce9d2", "HVMG2" : "NOT_SUPPORTED"},
+      "ap-northeast-3"   : {"HVM64" : "ami-0d98120a9fb693f07", "HVMG2" : "NOT_SUPPORTED"},
+      "ap-southeast-1"   : {"HVM64" : "ami-08569b978cc4dfa10", "HVMG2" : "ami-0be9df32ae9f92309"},
+      "ap-southeast-2"   : {"HVM64" : "ami-09b42976632b27e9b", "HVMG2" : "ami-0a9ce9fecc3d1daf8"},
+      "ap-south-1"       : {"HVM64" : "ami-0912f71e06545ad88", "HVMG2" : "ami-097b15e89dbdcfcf4"},
+      "us-east-2"        : {"HVM64" : "ami-0b59bfac6be064b78", "HVMG2" : "NOT_SUPPORTED"},
+      "ca-central-1"     : {"HVM64" : "ami-0b18956f", "HVMG2" : "NOT_SUPPORTED"},
+      "sa-east-1"        : {"HVM64" : "ami-07b14488da8ea02a0", "HVMG2" : "NOT_SUPPORTED"},
+      "cn-north-1"       : {"HVM64" : "ami-0a4eaf6c4454eda75", "HVMG2" : "NOT_SUPPORTED"},
+      "cn-northwest-1"   : {"HVM64" : "ami-6b6a7d09", "HVMG2" : "NOT_SUPPORTED"}
     }
   },
     
@@ -1053,11 +1225,8 @@ Different properties have different impacts on the resources in the stack\. You 
 ## Related Resources<a name="update.walkthrough.related"></a>
 
 For more information about using AWS CloudFormation to start applications and on integrating with other configuration and deployment services such as Puppet and Opscode Chef, see the following whitepapers:
-
 +  [ Bootstrapping Applications via AWS CloudFormation](https://s3.amazonaws.com/cloudformation-examples/BoostrappingApplicationsWithAWSCloudFormation.pdf) 
-
 +  [ Integrating AWS CloudFormation with Opscode Chef](https://s3.amazonaws.com/cloudformation-examples/IntegratingAWSCloudFormationWithOpscodeChef.pdf) 
-
 +  [ Integrating AWS CloudFormation with Puppet](https://s3.amazonaws.com/cloudformation-examples/IntegratingAWSCloudFormationWithPuppet.pdf) 
 
 The template used throughout this section is a "Hello, World" PHP application\. The template library also has an Amazon ElastiCache sample template that shows how to integrate a PHP application with ElasticCache using cfn\-hup and cfn\-init to respond to changes in the Amazon ElastiCache Cache Cluster configuration, all of which can be performed by Update Stack\.

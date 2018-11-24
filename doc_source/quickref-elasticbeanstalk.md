@@ -25,7 +25,7 @@ The following sample template deploys a sample PHP web application that is store
         "Description": "AWS ElasticBeanstalk Sample Application Version",
         "SourceBundle": {
           "S3Bucket": { "Fn::Join": [ "-", [ "elasticbeanstalk-samples", { "Ref": "AWS::Region" } ] ] },
-          "S3Key": "php-sample.zip"
+          "S3Key": "php-newsample-app.zip"
         }
       }
     },
@@ -84,7 +84,7 @@ Resources:
       Description: AWS ElasticBeanstalk Sample Application Version
       SourceBundle:
         S3Bucket: !Sub "elasticbeanstalk-samples-${AWS::Region}"
-        S3Key: php-sample.zip
+        S3Key: php-newsample-app.zip
   sampleConfigurationTemplate:
     Type: AWS::ElasticBeanstalk::ConfigurationTemplate
     Properties:

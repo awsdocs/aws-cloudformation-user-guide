@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-apigateway-documentationpart-location-properties"></a>
 
 **Note**  
-For more information about each property, including constraints and valid values, see [ DocumentationPart](http://docs.aws.amazon.com/apigateway/api-reference/resource/documentation-part/#location) in the *Amazon API Gateway REST API Reference*\.
+For more information about each property, including constraints and valid values, see [ DocumentationPart](https://docs.aws.amazon.com/apigateway/api-reference/resource/documentation-part/#location) in the *Amazon API Gateway REST API Reference*\.
 
 `Method`  <a name="cfn-apigateway-documentationpart-location-method"></a>
 The HTTP verb of a method\.  

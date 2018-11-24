@@ -1,12 +1,12 @@
 # AWS::RDS::OptionGroup<a name="aws-resource-rds-optiongroup"></a>
 
-Use the `AWS::RDS::OptionGroup` resource to create an option group that can make managing data and databases easier\. For more information about option groups, see [Working with Option Groups](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithOptionGroups.html) in the *Amazon Relational Database Service User Guide*\.
+Use the `AWS::RDS::OptionGroup` resource to create an option group that can make managing data and databases easier\. For more information about option groups, see [Working with Option Groups](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithOptionGroups.html) in the *Amazon Relational Database Service User Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-rds-optiongroup-syntax)
-+ [Properties](#w3ab2c21c10d915b9)
-+ [Return Values](#w3ab2c21c10d915c11)
-+ [Examples](#w3ab2c21c10d915c13)
++ [Properties](#w4ab1c21c10e1014b9)
++ [Return Values](#w4ab1c21c10e1014c11)
++ [Examples](#w4ab1c21c10e1014c13)
 
 ## Syntax<a name="aws-resource-rds-optiongroup-syntax"></a>
 
@@ -41,41 +41,41 @@ Properties:
     - Resource Tag
 ```
 
-## Properties<a name="w3ab2c21c10d915b9"></a>
+## Properties<a name="w4ab1c21c10e1014b9"></a>
 
 `EngineName`  <a name="cfn-rds-optiongroup-enginename"></a>
 The name of the database engine that this option group is associated with\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `MajorEngineVersion`  <a name="cfn-rds-optiongroup-majorengineversion"></a>
 The major version number of the database engine that this option group is associated with\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `OptionGroupDescription`  <a name="cfn-rds-optiongroup-optiongroupdescription"></a>
 A description of the option group\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `OptionConfigurations`  <a name="cfn-rds-optiongroup-optionconfigurations"></a>
 The configurations for this option group\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: List of [Amazon RDS OptionGroup OptionConfiguration](aws-properties-rds-optiongroup-optionconfigurations.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Tags`  <a name="cfn-rds-optiongroup-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this option group\.  
-*Required: *No  
+*Required*: No  
 *Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10d915c11"></a>
+## Return Values<a name="w4ab1c21c10e1014c11"></a>
 
-### Ref<a name="w3ab2c21c10d915c11b2"></a>
+### Ref<a name="w4ab1c21c10e1014c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -87,9 +87,9 @@ For the `myOptionGroup` resource, `Ref` returns the name of the option group\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w3ab2c21c10d915c13"></a>
+## Examples<a name="w4ab1c21c10e1014c13"></a>
 
-### Multiple Option Configurations<a name="w3ab2c21c10d915c13b2"></a>
+### Multiple Option Configurations<a name="w4ab1c21c10e1014c13b2"></a>
 
 The following snippet creates an option group with two option configurations \(`OEM` and `APEX`\):
 
@@ -135,7 +135,7 @@ OracleOptionGroup:
         OptionName: "APEX"
 ```
 
-### Multiple Settings<a name="w3ab2c21c10d915c13b4"></a>
+### Multiple Settings<a name="w4ab1c21c10e1014c13b4"></a>
 
 The following snippet creates an option group that specifies two option settings for the `MEMCACHED` option:
 

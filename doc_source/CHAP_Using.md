@@ -4,7 +4,7 @@
 
 The following walkthroughs show how to create sample AWS CloudFormation templates using AWS CloudFormation Designer and plain text\.
 
-
+**Topics**
 + [Walkthrough: Use AWS CloudFormation Designer to Create a Basic Web Server](working-with-templates-cfn-designer-walkthrough-createbasicwebserver.md)
 + [Walkthrough: Use AWS CloudFormation Designer to Modify a Stack's Template](working-with-templates-cfn-designer-walkthrough-updatebasicwebserver.md)
 + [Walkthrough: Peer with an Amazon VPC in Another AWS Account](peer-with-vpc-in-another-account.md)

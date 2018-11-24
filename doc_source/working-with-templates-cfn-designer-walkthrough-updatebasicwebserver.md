@@ -69,39 +69,28 @@ These resources do not follow the container model, so AWS CloudFormation Designe
    This security group will control the inbound and outbound traffic of the load balancer\.
 
 1. Rename the resources to make them easier to identify:
-
    + Rename **AutoScalingGroup** to `WebServerFleet`
-
    + Rename **LaunchConfiguration** to `WebServerLaunchConfig`
-
    + Rename **LoadBalancer** to `PublicElasticLoadBalancer`
-
    + Rename **SecurityGroup** to `PublicLoadBalancerSecurityGroup`
 
 1. Create associations for the resources that you added\.
 
    1. Associate the load balancer and Auto Scaling group resources with the public subnet:
-
       + From the `PublicElasticLoadBalancer` resource, drag the `AWS::EC2::Subnet (Property: Subnets)` connection to the `PublicSubnet` resource\.
-
       + From the `WebServerFleet` resource, drag the `AWS::EC2::Subnet (Property: VPCZoneIdentifier)` connection to the `PublicSubnet` resource\.
 
    1. Associate the load balancer with its security group:
-
       + From the `PublicElasticLoadBalancer` resource, drag the `AWS::EC2::SecurityGroup (Property: SecurityGroups)` connection to the `PublicLoadBalancerSecurityGroup` resource\.
 
    1. Associate the Auto Scaling group with the load balancer and launch configuration:
-
       + From the `WebServerFleet` resource, drag the `AWS::ElasticLoadBalancing::LoadBalancer (Property: LoadBalancerNames)` connection to the `PublicElasticLoadBalancer` resource\.
-
       + From the `WebServerFleet` resource, drag the `AWS::ElasticLoadBalancing::LaunchConfiguration (Property: LaunchConfigurationName)` connection to the `WebServerLaunchConfig` resource\.
 
    1. Associate the launch configuration with the security group:
-
       + From the `WebServerLaunchConfig` resource, drag the `AWS::EC2::SecurityGroup (Property: SecurityGroups)` connection to the `WebServerSecurityGroup` resource\.
 
    1. Define a dependency for the Auto Scaling group to the public route:
-
       + From the `WebServerFleet` resource, drag the `DependsOn` connection to the `PublicRoute` resource\.
 
       This dependency means that AWS CloudFormation won't create the `WebServerFleet` resource until the public route is complete\. Otherwise, if the public route isn't available when the web server instances are starting up, they won't be able to send signals \(using the cfn\-signal helper script\) to notify AWS CloudFormation when their configurations and application deployments are complete\.

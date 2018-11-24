@@ -1,12 +1,12 @@
 # AWS::Logs::Destination<a name="aws-resource-logs-destination"></a>
 
-The `AWS::Logs::Destination` resource creates an Amazon CloudWatch Logs \(CloudWatch Logs\) destination, which enables you to specify a physical resource \(such as an Kinesis stream\) that subscribes to CloudWatch Logs log events from another AWS account\. For more information, see [Cross\-Account Log Data Sharing with Subscriptions](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CrossAccountSubscriptions.html) in the *Amazon CloudWatch User Guide*\.
+The `AWS::Logs::Destination` resource creates an Amazon CloudWatch Logs \(CloudWatch Logs\) destination, which enables you to specify a physical resource \(such as an Kinesis stream\) that subscribes to CloudWatch Logs log events from another AWS account\. For more information, see [Cross\-Account Log Data Sharing with Subscriptions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CrossAccountSubscriptions.html) in the *Amazon CloudWatch User Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-logs-destination-syntax)
-+ [Properties](#w3ab2c21c10d821b9)
-+ [Return Values](#w3ab2c21c10d821c11)
-+ [Example](#w3ab2c21c10d821c13)
++ [Properties](#w4ab1c21c10d899b9)
++ [Return Values](#w4ab1c21c10d899c11)
++ [Example](#w4ab1c21c10d899c13)
 
 ## Syntax<a name="aws-resource-logs-destination-syntax"></a>
 
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-logs-destination-syntax.yaml"></a>
 
 ```
-Type: "AWS::Logs::Destination"
+Type: AWS::Logs::Destination
 Properties: 
   [DestinationName](#cfn-logs-destination-destinationname): String
   [DestinationPolicy](#cfn-logs-destination-destinationpolicy): String
@@ -37,35 +37,35 @@ Properties:
   [TargetArn](#cfn-logs-destination-targetarn): String
 ```
 
-## Properties<a name="w3ab2c21c10d821b9"></a>
+## Properties<a name="w4ab1c21c10d899b9"></a>
 
 `DestinationName`  <a name="cfn-logs-destination-destinationname"></a>
 The name of the CloudWatch Logs destination\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `DestinationPolicy`  <a name="cfn-logs-destination-destinationpolicy"></a>
 An AWS Identity and Access Management \(IAM\) policy that specifies who can write to your destination\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-logs-destination-rolearn"></a>
 The Amazon Resource Name \(ARN\) of an IAM role that permits CloudWatch Logs to send data to the specified AWS resource \(`TargetArn`\)\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `TargetArn`  <a name="cfn-logs-destination-targetarn"></a>
 The ARN of the AWS resource that receives log events\. Currently, you can specify only an Kinesis stream\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10d821c11"></a>
+## Return Values<a name="w4ab1c21c10d899c11"></a>
 
-### Ref<a name="w3ab2c21c10d821c11b2"></a>
+### Ref<a name="w4ab1c21c10d899c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name, such as `TestDestination`\.
 
@@ -80,7 +80,7 @@ The ARN of the CloudWatch Logs destination, such as `arn:aws:logs:us-east-2:1234
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Example<a name="w3ab2c21c10d821c13"></a>
+## Example<a name="w4ab1c21c10d899c13"></a>
 
 In the following example, the target stream \(`TestStream`\) can receive log events from the `logger` IAM user that is in the `234567890123` AWS account\. The user can call only the `PutSubscriptionFilter` action against the `TestDestination` destination\.
 
@@ -103,7 +103,7 @@ In the following example, the target stream \(`TestStream`\) can receive log eve
 
 ```
 DestinationWithName: 
-  Type: "AWS::Logs::Destination"
+  Type: AWS::Logs::Destination
   Properties: 
     DestinationName: "TestDestination"
     RoleArn: "arn:aws:iam::123456789012:role/LogKinesisRole"

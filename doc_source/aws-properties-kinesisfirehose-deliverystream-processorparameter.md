@@ -1,8 +1,8 @@
-# Amazon Kinesis Firehose DeliveryStream ProcessorParameter<a name="aws-properties-kinesisfirehose-deliverystream-processorparameter"></a>
+# Amazon Kinesis Data Firehose DeliveryStream ProcessorParameter<a name="aws-properties-kinesisfirehose-deliverystream-processorparameter"></a>
 
-The `ProcessorParameter` property specifies a processor parameter in a data processor for an Amazon Kinesis Firehose delivery stream\.
+The `ProcessorParameter` property specifies a processor parameter in a data processor for an Amazon Kinesis Data Firehose delivery stream\.
 
-`ProcessorParameter` is a property of the [Amazon Kinesis Firehose DeliveryStream Processor](aws-properties-kinesisfirehose-deliverystream-processor.md) property type\.
+`ProcessorParameter` is a property of the [Amazon Kinesis Data Firehose DeliveryStream Processor](aws-properties-kinesisfirehose-deliverystream-processor.md) property type\.
 
 ## Syntax<a name="aws-properties-kinesisfirehose-deliverystream-processorparameter-syntax"></a>
 
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-processorparameter-properties"></a>
 
-For more information about each property, including constraints and valid values, see [ProcessorParameter](http://docs.aws.amazon.com/firehose/latest/APIReference/API_ProcessorParameter.html) in the *Amazon Kinesis Firehose API Reference*\.
+For more information about each property, including constraints and valid values, see [ProcessorParameter](https://docs.aws.amazon.com/firehose/latest/APIReference/API_ProcessorParameter.html) in the *Amazon Kinesis Data Firehose API Reference*\.
 
 `ParameterName`  <a name="cfn-kinesisfirehose-deliverystream-processorparameter-parametername"></a>
 The name of the parameter\.  

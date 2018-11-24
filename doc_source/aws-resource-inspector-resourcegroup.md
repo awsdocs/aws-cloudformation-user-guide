@@ -2,7 +2,7 @@
 
 The `AWS::Inspector::ResourceGroup` resource is used to create Amazon Inspector resource groups\. A resource group defines a set of tags that, when queried, identify the AWS resources that make up the assessment target\.
 
-
+**Topics**
 + [Syntax](#aws-resource-inspector-resourcegroup-syntax)
 + [Properties](#aws-resource-inspector-resourcegroup-properties)
 + [Return Values](#aws-resource-inspector-resourcegroup-returnvalues)
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-inspector-resourcegroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::Inspector::ResourceGroup"
+Type: AWS::Inspector::ResourceGroup
 Properties:
   [ResourceGroupTags](#cfn-inspector-resourcegroup-resourcegrouptags): 
     - Resource Tag
@@ -61,15 +61,15 @@ The following example shows how to declare an AWS::Inspector::ResourceGroup reso
 
 ```
 "myresourcegroup": {
-    "Type": "AWS: : Inspector: : ResourceGroup",
-        "Properties": {
-            "ResourceGroupTags": [
-                {
-                    "key": "Name",
-                    "value": "example"
-                }
-            ]
-        }
+  "Type": "AWS::Inspector::ResourceGroup",
+  "Properties": {
+    "ResourceGroupTags": [
+      {
+        "Key": "Name",
+        "Value": "example"
+      }
+    ]
+  }
 }
 ```
 
@@ -79,8 +79,7 @@ The following example shows how to declare an AWS::Inspector::ResourceGroup reso
 myresourcegroup: 
   Type: "AWS::Inspector::ResourceGroup"
   Properties: 
-    ResourceGroupTags : 
-	  -
-        Key: "Name"
-        Value": "example"
+    ResourceGroupTags: 
+      - Key: "Name"
+        Value: "example"
 ```

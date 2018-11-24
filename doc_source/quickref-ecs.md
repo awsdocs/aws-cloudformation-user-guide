@@ -2,10 +2,10 @@
 
 Amazon Elastic Container Service \(Amazon ECS\) is a container management service that makes it easy to run, stop, and manage Docker containers on a cluster of Amazon Elastic Compute Cloud \(Amazon EC2\) instances\.
 
-The following example template deploys a web application in an Amazon ECS container with autoscaling and an application load balancer\. For more information, see [Getting Started with Amazon ECS](http://docs.aws.amazon.com/AmazonECS/latest/developerguide//ECS_GetStarted.html) in the *Amazon Elastic Container Service Developer Guide*\.
+The following example template deploys a web application in an Amazon ECS container with autoscaling and an application load balancer\. For more information, see [Getting Started with Amazon ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide//ECS_GetStarted.html) in the *Amazon Elastic Container Service Developer Guide*\.
 
 **Important**  
-For the latest AMI IDs, see [Amazon ECS\-optimized AMI](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in the *Amazon Elastic Container Service Developer Guide*\.
+For the latest AMI IDs, see [Amazon ECS\-optimized AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in the *Amazon Elastic Container Service Developer Guide*\.
 
 ## JSON<a name="quickref-ecs-example-1.json"></a>
 

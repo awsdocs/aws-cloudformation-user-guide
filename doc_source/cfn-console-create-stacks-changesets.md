@@ -12,21 +12,16 @@ To create a change set for a new stack, submit the configuration that you want t
 ![\[The Create Change Set for New Stack option in the Create Stack menu.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cfn-console-create-changeset-for-new-stack.png)
 
 1. On the **Select Template** page, specify the location of your template\.
-
    + For a template stored locally, choose **Upload a template to Amazon S3**\. **Choose File** to navigate to the file, choose the file, and then choose **Next**\.
-
    + For a template stored in an Amazon S3 bucket, choose **Specify an Amazon S3 URL**\. Type or paste the URL for the template, and then choose **Next**\.
 
      If your template is stored in a versioning\-enabled bucket, you can specify a specific version, for example: `https://s3.amazonaws.com/templates/myTemplate.template?versionId=123ab1cdeKdOW5IH4GAcYbEngcpTJTDW`
 
-     For more information, see [Managing Objects in a Versioning\-Enabled Bucket](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/managing-objects-versioned-bucket.html) in the *Amazon Simple Storage Service Console User Guide*\.
+     For more information, see [Managing Objects in a Versioning\-Enabled Bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/managing-objects-versioned-bucket.html) in the *Amazon Simple Storage Service Console User Guide*\.
 
 1. On the **Specify Details** page, configure the following items:
-
    + Type the **Stack name**\.
-
    + \(Optional\) To identify your change set, type its **Name** and **Description**\.
-
    + If your template contains parameters, type the parameter values in the **Parameters** section\.
 
    When you finish, choose **Next**\.

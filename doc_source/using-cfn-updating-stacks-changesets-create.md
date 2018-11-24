@@ -12,12 +12,10 @@ To modify a template, for example to add a new resource to your stack, modify a 
 ![\[The Create Change Set For Current Stack option in the Actions menu.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-changeset-create.png)
 
 1. If you modified the stack template, specify the location of the updated template\. If not, select **Use current template**\.
-
    + For a template stored locally on your computer, select **Upload a template to Amazon S3**\. Choose **Choose File** to navigate to the file and select it, and then click **Next**\.
-
    + For a template stored in an Amazon S3 bucket, select **Specify an Amazon S3 URL**\. Enter or paste the URL for the template, and then click **Next**\.
 
-     If you have a template in a versioning\-enabled bucket, you can specify a specific version of the template, such as `https://s3.amazonaws.com/templates/myTemplate.template?versionId=123ab1cdeKdOW5IH4GAcYbEngcpTJTDW`\. For more information, see [Managing Objects in a Versioning\-Enabled Bucket](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/managing-objects-versioned-bucket.html) in the *Amazon Simple Storage Service Console User Guide*\.
+     If you have a template in a versioning\-enabled bucket, you can specify a specific version of the template, such as `https://s3.amazonaws.com/templates/myTemplate.template?versionId=123ab1cdeKdOW5IH4GAcYbEngcpTJTDW`\. For more information, see [Managing Objects in a Versioning\-Enabled Bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/managing-objects-versioned-bucket.html) in the *Amazon Simple Storage Service Console User Guide*\.
 
 1. On the **Specify Details** page, type information about the change set and, if necessary, modify the parameter values that you want to change, and then choose **Next**\.
 
@@ -39,8 +37,7 @@ To modify a template, for example to add a new resource to your stack, modify a 
    If AWS CloudFormation fails to create the change set \(reports `FAILED` status\), fix the error displayed in the **Status** field, and recreate the change set\.
 
 **To create a change set \(AWS CLI\)**
-
-+ Run the [aws cloudformation create\-change\-set](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-change-set.html) command\.
++ Run the [aws cloudformation create\-change\-set](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-change-set.html) command\.
 
   You submit your changes as command options\. You can specify new parameter values, a modified template, or both\. For example, the following command creates a change set named `SampleChangeSet` for the `SampleStack` stack\. The change set uses the current stack's template, but with a different value for the `Purpose` parameter:
 

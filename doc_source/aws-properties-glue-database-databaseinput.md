@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-glue-database-databaseinput-properties"></a>
 
-For more information, see [DatabaseInput Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-databases.html#aws-glue-api-catalog-databases-DatabaseInput) in the *AWS Glue Developer Guide*\.
+For more information, see [DatabaseInput Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-databases.html#aws-glue-api-catalog-databases-DatabaseInput) in the *AWS Glue Developer Guide*\.
 
 `LocationUri`  <a name="cfn-glue-database-databaseinput-locationuri"></a>
 The location of the database \(for example, an HDFS path\)\. It must match the URI address multi\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  

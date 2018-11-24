@@ -5,19 +5,13 @@ This topic describes how to bootstrap a Windows stack and troubleshoot stack cre
 ## Example of Bootstrapping a Windows Stack<a name="cfn-windows-bootstrapping-example"></a>
 
 For the purposes of illustration, we'll examine the AWS CloudFormation single\-instance Sharepoint server template, which can be viewed, in its entirety, at the following URL:
-
 +  [ https://s3\.amazonaws\.com/cloudformation\-templates\-us\-east\-1/Windows\_Single\_Server\_SharePoint\_Foundation\.template ](https://s3.amazonaws.com/cloudformation-templates-us-east-1/Windows_Single_Server_SharePoint_Foundation.template) 
 
 This example demonstrates how to:
-
 + Create an IAM User and Security Group for access to the instance
-
 + Configure initialization files: `cfn-credentials`, `cfn-hup.conf`, and `cfn-auto-reloader.conf`
-
 + Download and install a package such as Sharepoint Foundation 2010 on the server instance\.
-
 + Use a WaitCondition to ensure resources are ready 
-
 + Retrieve an IP for the instance with Amazon Elastic IP \(EIP\)\.
 
 The AWS CloudFormation helper script `cfn-init` is used to perform each of these actions, based on information in the [AWS::CloudFormation::Init](aws-resource-init.md) resource in the Windows Single Server Sharepoint Foundation template\.
@@ -60,9 +54,7 @@ After this, the **files** section of AWS::CloudFormation::Init is declared:
 ```
 
 Three files are created here and placed in the `C:\cfn` directory on the server instance\. They are:
-
 + `cfn-hup.conf`, the configuration file for cfn\-hup\.
-
 + `cfn-auto-reloader.conf`, the configuration file for the hook used by cfn\-hup to initiate an update \(calling cfn\-init\) when the metadata in AWS::CloudFormation::Init changes\.
 
 There is also a file that is downloaded to the server: `SharePointFoundation.exe`\. This file is used to install SharePoint on the server instance\.
@@ -141,9 +133,9 @@ If all goes well, an Elastic IP is used to provide access to the SharePoint inst
  }
 ```
 
-Once stack creation is complete, the IP address supplied by EIP will be displayed in the **Outputs** tab of the AWS CloudFormation console\. However, before you can access the instance you will need to retrieve the auto\-generated temporary Administrator password for the instance\. For more information, see [Connecting to Your Windows Instance Using RDP](http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/connecting_to_windows_instance.html) in the *Amazon EC2 User Guide for Windows Instances*\.
+Once stack creation is complete, the IP address supplied by EIP will be displayed in the **Outputs** tab of the AWS CloudFormation console\. However, before you can access the instance you will need to retrieve the auto\-generated temporary Administrator password for the instance\. For more information, see [Connecting to Your Windows Instance Using RDP](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/connecting_to_windows_instance.html) in the *Amazon EC2 User Guide for Windows Instances*\.
 
-## How to Manage Windows Services<a name="w3ab2c15c25c15c11"></a>
+## How to Manage Windows Services<a name="w4ab1c15c25c15c11"></a>
 
 You manage Windows services in the same way as Linux services, except that you use a `windows` key instead of `sysvinit`\. The following example starts the `cfn-hup` service, sets it to Automatic, and restarts the service if cfn\-init modifies the `c:\cfn\cfn-hup.conf` or `c:\cfn\hooks.d\cfn-auto-reloader.conf` configuration files\. 
 
@@ -168,7 +160,5 @@ If your stack fails during creation, the default behavior is to Rollback on fail
 To turn this behavior off, click **Show Advanced Options** when creating your stack with the AWS CloudFormation console, and click the **No** selector next to **Rollback on failure**\. This will allow you to log into your instance and view the logfiles to pinpoint issues encountered when running your startup scripts\.
 
 Important logs to look at are:
-
 + The EC2 configuration log at `C:\Program Files\Amazon\Ec2ConfigService\Logs\Ec2ConfigLog.txt`
-
 + The cfn\-init log at ` C:\cfn\log\cfn-init.log`

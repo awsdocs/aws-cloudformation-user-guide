@@ -2,7 +2,7 @@
 
 `FileSystemTags` is a property of the [AWS::EFS::FileSystem](aws-resource-efs-filesystem.md) resource that associates key\-value pairs with a file system\. You can use any of the following Unicode characters for keys and values: letters, digits, whitespace, \_, \., /, =, \+, and \-\.
 
-## Syntax<a name="w3ab2c21c14d760b5"></a>
+## Syntax<a name="w4ab1c21c14e1010b5"></a>
 
 ### JSON<a name="aws-properties-efs-filesystem-filesystemtags-syntax.json"></a>
 
@@ -20,14 +20,14 @@
 [Value](#cfn-efs-filesystem-filesystemtags-value): String
 ```
 
-## Properties<a name="w3ab2c21c14d760b7"></a>
+## Properties<a name="w4ab1c21c14e1010b7"></a>
 
 `Key`  <a name="cfn-efs-filesystem-filesystemtags-key"></a>
 The key name of the tag\. You can specify a value that is from 1 to 128 Unicode characters in length, but you cannot use the prefix `aws:`\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `Value`  <a name="cfn-efs-filesystem-filesystemtags-value"></a>
 The value of the tag key\. You can specify a value that is from 0 to 128 Unicode characters in length\.  
-*Required: *No  
+*Required*: No  
 *Type*: String

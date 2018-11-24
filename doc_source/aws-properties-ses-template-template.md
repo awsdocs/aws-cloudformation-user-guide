@@ -55,9 +55,6 @@ The name of the template\. You will refer to this name when you send email using
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## See Also<a name="aws-properties-ses-template-template-seealso"></a>
-
-+ [Template](http://docs.aws.amazon.com/ses/latest/APIReference/API_Template.html) in the *Amazon Simple Email Service API Reference*
-
-+ [SendTemplatedEmail](http://docs.aws.amazon.com/ses/latest/APIReference/API_SendTemplatedEmail.html) in the *Amazon Simple Email Service API Reference*
-
-+ [SendBulkTemplatedEmail](http://docs.aws.amazon.com/ses/latest/APIReference/API_SendBulkTemplatedEmail.html) in the *Amazon Simple Email Service API Reference*
++ [Template](https://docs.aws.amazon.com/ses/latest/APIReference/API_Template.html) in the *Amazon Simple Email Service API Reference*
++ [SendTemplatedEmail](https://docs.aws.amazon.com/ses/latest/APIReference/API_SendTemplatedEmail.html) in the *Amazon Simple Email Service API Reference*
++ [SendBulkTemplatedEmail](https://docs.aws.amazon.com/ses/latest/APIReference/API_SendBulkTemplatedEmail.html) in the *Amazon Simple Email Service API Reference*

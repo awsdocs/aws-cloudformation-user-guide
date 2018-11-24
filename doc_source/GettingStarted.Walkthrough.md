@@ -10,7 +10,6 @@ First, you'll need a template that specifies the resources that you want in your
 AWS CloudFormation is free, but the AWS resources that AWS CloudFormation creates are live \(and not running in a sandbox\)\. You will incur the standard usage fees for these resources until you terminate them in the last task in this tutorial\. The total charges will be minimal\. For information about how you might minimize any charges, go to [http://aws\.amazon\.com/free/](http://aws.amazon.com/free/)\.
 
 **To view the template**
-
 + You can view the [JSON](https://s3-us-west-2.amazonaws.com/cloudformation-templates-us-west-2/WordPress_Single_Instance.template) or [YAML](https://s3-us-west-2.amazonaws.com/cloudformation-templates-us-west-2/WordPress_Single_Instance.yaml) WordPress sample template\. You don't need to download it because you will use the template URL later in this guide\. For more information about the template formats, see [AWS CloudFormation Template Formats](template-formats.md)\.
 
 A template is a JSON or YAML text file that contains the configuration information about the AWS resources you want to create in the stack\. For this walkthrough, the sample template includes six top\-level sections: `AWSTemplateFormatVersion`, `Description`, `Parameters`, `Mappings`, `Resources`, and `Outputs`; however, only the `Resources` section is required\.
@@ -275,7 +274,7 @@ Make sure you have a valid Amazon EC2 key pair and record the key pair name befo
 To see your key pairs, open the Amazon EC2 console, then click **Key Pairs** in the navigation pane\. 
 
 **Note**  
-If you don't have an Amazon EC2 key pair, you must create the key pair in the same region where you are creating the stack\. For information about creating a key pair, see [Getting an SSH Key Pair](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) in the *Amazon EC2 User Guide for Linux Instances*\.
+If you don't have an Amazon EC2 key pair, you must create the key pair in the same region where you are creating the stack\. For information about creating a key pair, see [Getting an SSH Key Pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) in the *Amazon EC2 User Guide for Linux Instances*\.
 
 Now that you have a valid key pair, let's use the WordPress template to create a stack\.
 
@@ -303,7 +302,7 @@ On the **Specify Parameters** page, you'll recognize the parameters from the Par
 
 1. Click **Next**\.
 
-1. In this scenario, we won't add any tags\. Click **Next**\. Tags, which are key\-value pairs, can help you identify your stacks\. For more information, see [ Adding Tags to Your AWS CloudFormation Stack](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide//cfn-console-add-tags.html)\. 
+1. In this scenario, we won't add any tags\. Click **Next**\. Tags, which are key\-value pairs, can help you identify your stacks\. For more information, see [ Adding Tags to Your AWS CloudFormation Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide//cfn-console-add-tags.html)\. 
 
 1. Review the information for the stack\. When you're satisfied with the settings, click **Create**\.
 

@@ -1,6 +1,6 @@
 # Amazon CloudWatch Template Snippets<a name="quickref-cloudwatch"></a>
 
-
+**Topics**
 + [Billing Alarm](#cloudwatch-sample-billing-alarm)
 + [CPU Utilization Alarm](#cloudwatch-sample-cpu-utilization-alarm)
 + [Recover an Amazon Elastic Compute Cloud Instance](#cloudwatch-sample-recover-instance)
@@ -9,7 +9,7 @@
 
 ## Billing Alarm<a name="cloudwatch-sample-billing-alarm"></a>
 
-In the following sample, Amazon CloudWatch sends an email notification when charges to your AWS account exceed the alarm threshold\. To receive usage notifications, enable [billing alerts](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/monitor-charges.html)\.
+In the following sample, Amazon CloudWatch sends an email notification when charges to your AWS account exceed the alarm threshold\. To receive usage notifications, enable [billing alerts](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/monitor-charges.html)\.
 
 ### JSON<a name="quickref-cloudwatch-example-1.json"></a>
 
@@ -48,8 +48,11 @@ In the following sample, Amazon CloudWatch sends an email notification when char
 SpendingAlarm:
   Type: AWS::CloudWatch::Alarm
   Properties:
-    AlarmDescription: !Sub >
-      "Alarm if AWS spending is over $${AlarmThreshold}"
+    AlarmDescription: 
+      'Fn::Join':
+        - ''
+        - - Alarm if AWS spending is over $
+          - Ref: AlarmThreshold
     Namespace: AWS/Billing
     MetricName: EstimatedCharges
     Dimensions:
@@ -118,7 +121,7 @@ The following sample snippet creates an alarm that sends a notification when the
 
 ## Recover an Amazon Elastic Compute Cloud Instance<a name="cloudwatch-sample-recover-instance"></a>
 
-The following CloudWatch alarm recovers an EC2 instance when it has status check failures for 15 consecutive minutes\. For more information about alarm actions, see [Create Alarms That Stop, Terminate, or Recover an Instance](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/UsingAlarmActions.html) in the *Amazon CloudWatch User Guide*\.
+The following CloudWatch alarm recovers an EC2 instance when it has status check failures for 15 consecutive minutes\. For more information about alarm actions, see [Create Alarms That Stop, Terminate, or Recover an Instance](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/UsingAlarmActions.html) in the *Amazon CloudWatch User Guide*\.
 
 ### JSON<a name="quickref-cloudwatch-example-3.json"></a>
 
@@ -172,8 +175,7 @@ Resources:
       EvaluationPeriods: '15'
       ComparisonOperator: GreaterThanThreshold
       Threshold: '0'
-      AlarmActions: !Sub >
-        "arn:aws:automate:${AWS::Region}:ec2:recover"
+      AlarmActions: [ !Sub "arn:aws:automate:${AWS::Region}:ec2:recover" ]
       Dimensions:
       - Name: InstanceId
         Value:

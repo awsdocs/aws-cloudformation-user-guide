@@ -1,18 +1,15 @@
-# Auto Scaling AutoScalingGroup TagProperty<a name="aws-properties-as-tags"></a>
+# Amazon EC2 Auto Scaling AutoScalingGroup TagProperty<a name="aws-properties-as-tags"></a>
 
 The `TagProperty` property type adds tags to all associated instances in an Auto Scaling group\.
 
-The `Tags` property of the [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md) resource contains a list of `TagProperty` property types\. For more information about Auto Scaling tags, see [Tagging Auto Scaling Groups and Amazon EC2 Instances](http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/ASTagging.html) in the *Amazon EC2 Auto Scaling User Guide*\.
+The `Tags` property of the [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md) resource contains a list of `TagProperty` property types\. For more information about Auto Scaling tags, see [Tagging Auto Scaling Groups and Instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-tagging.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
 AWS CloudFormation adds the following tags to all Auto Scaling groups and associated instances:
-
 + aws:cloudformation:stack\-name
-
 + aws:cloudformation:stack\-id
-
 + aws:cloudformation:logical\-id
 
-## Syntax<a name="w3ab2c21c14c87c11"></a>
+## Syntax<a name="w4ab1c21c14d136c11"></a>
 
 ### JSON<a name="aws-properties-as-tags-syntax.json"></a>
 
@@ -32,7 +29,7 @@ AWS CloudFormation adds the following tags to all Auto Scaling groups and associ
 [PropagateAtLaunch](#cfn-as-tags-PropagateAtLaunch): Boolean
 ```
 
-## Properties<a name="w3ab2c21c14c87c13"></a>
+## Properties<a name="w4ab1c21c14d136c13"></a>
 
 `Key`  <a name="cfn-as-tags-Key"></a>
 The key name of the tag\.  
@@ -59,22 +56,33 @@ The following example template snippet creates two Auto Scaling tags\. The first
  1. "WebServerGroup" : {
  2.    "Type" : "AWS::AutoScaling::AutoScalingGroup",
  3.    "Properties" : {
- 4.       "AvailabilityZones" : { "Fn::GetAZs" : "" },
- 5.       "LaunchConfigurationName" : { "Ref" : "LaunchConfig" },
- 6.       "MinSize" : "1",
- 7.       "MaxSize" : "2",
- 8.       "LoadBalancerNames" : [ { "Ref" : "ElasticLoadBalancer" } ],
- 9.       "Tags" : [ {
-10.          "Key" : "MyTag1",
-11.          "Value" : "Hello World 1",
-12.          "PropagateAtLaunch" : "true"
-13.       }, {
-14.          "Key" : "MyTag2",
-15.          "Value" : "Hello World 2",
-16.          "PropagateAtLaunch" : "false"
-17.       } ]
-18.    }
-19. }
+ 4.       "AvailabilityZones" : { 
+ 5.          "Fn::GetAZs" : "" 
+ 6.       },
+ 7.       "LaunchConfigurationName" : { 
+ 8.          "Ref" : "LaunchConfig" 
+ 9.       },
+10.       "MinSize" : "1",
+11.       "MaxSize" : "2",
+12.       "LoadBalancerNames" : [ 
+13.          { 
+14.             "Ref" : "ElasticLoadBalancer" 
+15.          } 
+16.       ],
+17.       "Tags" : [ 
+18.          {
+19.             "Key" : "MyTag1",
+20.             "Value" : "Hello World 1",
+21.             "PropagateAtLaunch" : "true"
+22.          }, 
+23.          {
+24.             "Key" : "MyTag2",
+25.             "Value" : "Hello World 2",
+26.             "PropagateAtLaunch" : "false"
+27.          } 
+28.       ]
+29.    }
+30. }
 ```
 
 ### YAML<a name="aws-properties-as-tags-example.yaml"></a>

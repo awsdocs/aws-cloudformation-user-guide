@@ -1,12 +1,12 @@
 # AWS CloudFormation Configuration Properties Reference<a name="continuous-delivery-codepipeline-action-reference"></a>
 
-When you build an AWS CodePipeline pipeline, you add a `Deploy` action to the pipeline with AWS CloudFormation as a provider\. You then must specify which AWS CloudFormation action the pipeline invokes and the action's settings\. This topic describes the AWS CloudFormation configuration properties\. To specify properties, you can use the AWS CodePipeline console, or you can create a [JSON object](http://docs.aws.amazon.com/codepipeline/latest/userguide/how-to-create-pipelines.html#how-to-create-pipeline-cli) to use for the AWS CLI, AWS CodePipeline API, or AWS CloudFormation templates\.
+When you build an AWS CodePipeline pipeline, you add a `Deploy` action to the pipeline with AWS CloudFormation as a provider\. You then must specify which AWS CloudFormation action the pipeline invokes and the action's settings\. This topic describes the AWS CloudFormation configuration properties\. To specify properties, you can use the AWS CodePipeline console, or you can create a [JSON object](https://docs.aws.amazon.com/codepipeline/latest/userguide/how-to-create-pipelines.html#how-to-create-pipeline-cli) to use for the AWS CLI, AWS CodePipeline API, or AWS CloudFormation templates\.
 
+**Topics**
++ [Configuration Properties \(Console\)](#w4ab1c13c13b7)
++ [Configuration Properties \(JSON Object\)](#w4ab1c13c13b9)
 
-+ [Configuration Properties \(Console\)](#w3ab2c13c13b7)
-+ [Configuration Properties \(JSON Object\)](#w3ab2c13c13b9)
-
-## Configuration Properties \(Console\)<a name="w3ab2c13c13b7"></a>
+## Configuration Properties \(Console\)<a name="w4ab1c13c13b7"></a>
 
 The AWS CodePipeline [console](https://console.aws.amazon.com/codepipeline/) shows the configuration properties and indicates the properties that are required based on the `Action mode` that you choose\.
 
@@ -15,15 +15,10 @@ When you create a new pipeline, you can specify only the **Create or update a st
 
 **Action mode**  
 The AWS CloudFormation action that AWS CodePipeline invokes when processing the associated stage\. Choose one of the following action modes:  
-
 + **Create or replace a change set** creates the change set if it doesn't exist based on the stack name and template that you submit\. If the change set exists, AWS CloudFormation deletes it, and then creates a new one\.
-
 + **Create or update a stack** creates the stack if the specified stack doesn't exist\. If the stack exists, AWS CloudFormation updates the stack\. Use this action to update existing stacks\. AWS CodePipeline won't replace the stack\.
-
 + **Delete a stack** deletes a stack\. If you specify a stack that doesn't exist, the action completes successfully without deleting a stack\.
-
 + **Execute a change set** executes a change set\.
-
 + **Replace a failed stack** creates the stack if the specified stack doesn't exist\. If the stack exists and is in a failed state \(reported as `ROLLBACK_COMPLETE`, `ROLLBACK_FAILED`, `CREATE_FAILED`, `DELETE_FAILED`, or `UPDATE_ROLLBACK_FAILED`\), AWS CloudFormation deletes the stack and then creates a new stack\. If the stack isn't in a failed state, AWS CloudFormation updates it\. Use this action to automatically replace failed stacks without recovering or troubleshooting them\. You would typically choose this mode for testing\.
 
 **Stack name**  
@@ -46,7 +41,7 @@ If you have IAM resources in your stack template, you must specify this property
 The name of the IAM service role that AWS CloudFormation assumes when it operates on resources in the specified stack\.
 
 **Output file name**  
-In the **Advanced** section, you can specify an output file name, such as `CreateStackOutput.json`, that AWS CodePipeline adds to the [output artifact](http://docs.aws.amazon.com/codepipeline/latest/userguide/concepts.html) after performing the specified action\.  
+In the **Advanced** section, you can specify an output file name, such as `CreateStackOutput.json`, that AWS CodePipeline adds to the [output artifact](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts.html) after performing the specified action\.  
 If you don't specify a name, AWS CodePipeline doesn't generate an output artifact\.
 
 **Parameter overrides**  
@@ -61,21 +56,16 @@ The following example defines a value for the `ParameterName` parameter by using
 }
 ```
 
-## Configuration Properties \(JSON Object\)<a name="w3ab2c13c13b9"></a>
+## Configuration Properties \(JSON Object\)<a name="w4ab1c13c13b9"></a>
 
-When you specify `CloudFormation` as a provider for a stage action, define the following properties within the `Configuration` property\. Use the [JSON object](http://docs.aws.amazon.com/codepipeline/latest/userguide/how-to-create-pipelines.html#how-to-create-pipeline-cli) for the AWS CLI, AWS CodePipeline API, or AWS CloudFormation templates\. For examples, see [Walkthrough: Building a Pipeline for Test and Production Stacks](continuous-delivery-codepipeline-basic-walkthrough.md)
+When you specify `CloudFormation` as a provider for a stage action, define the following properties within the `Configuration` property\. Use the [JSON object](https://docs.aws.amazon.com/codepipeline/latest/userguide/how-to-create-pipelines.html#how-to-create-pipeline-cli) for the AWS CLI, AWS CodePipeline API, or AWS CloudFormation templates\. For examples, see [Walkthrough: Building a Pipeline for Test and Production Stacks](continuous-delivery-codepipeline-basic-walkthrough.md)
 
 `ActionMode`  
 The AWS CloudFormation action that AWS CodePipeline invokes when processing the associated stage\. Specify only one of the following action modes:  
-
 + `CHANGE_SET_EXECUTE` executes a change set\.
-
 + `CHANGE_SET_REPLACE` creates the change set if it doesn't exist based on the stack name and template that you submit\. If the change set exists, AWS CloudFormation deletes it, and then creates a new one\.
-
 + `CREATE_UPDATE` creates the stack if the specified stack doesn't exist\. If the stack exists, AWS CloudFormation updates the stack\. Use this action to update existing stacks\. AWS CodePipeline won't replace the stack\.
-
 + `DELETE_ONLY` deletes a stack\. If you specify a stack that doesn't exist, the action completes successfully without deleting a stack\.
-
 + `REPLACE_ON_FAILURE` creates a stack if the specified stack doesn't exist\. If the stack exists and is in a failed state \(reported as `ROLLBACK_COMPLETE`, `ROLLBACK_FAILED`, `CREATE_FAILED`, `DELETE_FAILED`, or `UPDATE_ROLLBACK_FAILED`\), AWS CloudFormation deletes the stack and then creates a new stack\. If the stack isn't in a failed state, AWS CloudFormation updates it\. Use this action to automatically replace failed stacks without recovering or troubleshooting them\. You would typically choose this mode for testing\.
 This property is required\.
 
@@ -88,7 +78,7 @@ The name of an existing change set or a new change set that you want to create f
 This property is required for the following action modes: `CHANGE_SET_REPLACE` and `CHANGE_SET_EXECUTE`\. For all other action modes, this property is ignored\.
 
 `OutputFileName`  
-A name for the output file, such as `CreateStackOutput.json`\. AWS CodePipeline adds the file to the [output artifact](http://docs.aws.amazon.com/codepipeline/latest/userguide/concepts.html) after performing the specified action\.  
+A name for the output file, such as `CreateStackOutput.json`\. AWS CodePipeline adds the file to the [output artifact](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts.html) after performing the specified action\.  
 This property is optional\. If you don't specify a name, AWS CodePipeline doesn't generate an output artifact\.
 
 `ParameterOverrides`  

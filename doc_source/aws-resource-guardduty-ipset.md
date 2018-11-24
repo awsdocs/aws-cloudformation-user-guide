@@ -2,7 +2,7 @@
 
 The `AWS::GuardDuty::IPSet` resource creates an Amazon GuardDuty IP set\. An IP set is a list of trusted IP addresses that have been whitelisted for secure communication with your AWS environment\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-guardduty-ipset-syntax)
 + [Properties](#aws-resource-guardduty-ipset-properties)
 + [Return Values](#aws-resource-guardduty-ipset-returnvalues)
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-guardduty-ipset-syntax.yaml"></a>
 
 ```
-Type: "AWS::GuardDuty::IPSet"
+Type: AWS::GuardDuty::IPSet
 Properties:
   [Activate](#cfn-guardduty-ipset-activate): Boolean
   [DetectorId](#cfn-guardduty-ipset-detectorid): String
@@ -104,7 +104,7 @@ The following example shows how to declare an AWS::GuardDuty::IPSet resource to 
 
 ```
 myipset:
-  Type: "AWS::GuardDuty::IPSet"
+  Type: AWS::GuardDuty::IPSet
   Properties:
     Activate: true
     DetectorId: "12abc34d567e8f4912ab3d45e67891f2"

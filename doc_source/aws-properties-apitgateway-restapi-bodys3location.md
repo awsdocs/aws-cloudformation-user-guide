@@ -5,7 +5,7 @@
 **Note**  
 On January 1, 2016, the Swagger Specification was donated to the [OpenAPI initiative](https://www.openapis.org/), becoming the foundation of the OpenAPI Specification\.
 
-## Syntax<a name="w3ab2c21c14c32b7"></a>
+## Syntax<a name="w4ab1c21c14c49b7"></a>
 
 ### JSON<a name="aws-properties-apitgateway-restapi-bodys3location-syntax.json"></a>
 
@@ -27,24 +27,24 @@ On January 1, 2016, the Swagger Specification was donated to the [OpenAPI initia
 [Version](#cfn-apigateway-restapi-s3location-version): String
 ```
 
-## Properties<a name="w3ab2c21c14c32b9"></a>
+## Properties<a name="w4ab1c21c14c49b9"></a>
 
 `Bucket`  <a name="cfn-apigateway-restapi-s3location-bucket"></a>
 The name of the S3 bucket where the OpenAPI file is stored\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `ETag`  <a name="cfn-apigateway-restapi-s3location-etag"></a>
 The Amazon S3 ETag \(a file checksum\) of the OpenAPI file\. If you don't specify a value, API Gateway skips ETag validation of your OpenAPI file\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `Key`  <a name="cfn-apigateway-restapi-s3location-key"></a>
 The file name of the OpenAPI file \(Amazon S3 object name\)\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `Version`  <a name="cfn-apigateway-restapi-s3location-version"></a>
 For versioning\-enabled buckets, a specific version of the OpenAPI file\.  
-*Required: *No  
+*Required*: No  
 *Type*: String

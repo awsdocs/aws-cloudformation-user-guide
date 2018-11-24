@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-glue-crawler-jdbctarget-properties"></a>
 
-For more information, see [JdbcTarget Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-crawling.html#aws-glue-api-crawler-crawling-JdbcTarget) in the *AWS Glue Developer Guide*\.
+For more information, see [JdbcTarget Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-crawling.html#aws-glue-api-crawler-crawling-JdbcTarget) in the *AWS Glue Developer Guide*\.
 
 `ConnectionName`  <a name="cfn-glue-crawler-jdbctarget-connectionname"></a>
 The name of the connection to use for the JDBC target\.  

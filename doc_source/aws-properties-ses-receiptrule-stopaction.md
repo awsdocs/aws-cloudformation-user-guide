@@ -40,7 +40,5 @@ The Amazon Resource Name \(ARN\) of the Amazon SNS topic to notify when the stop
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ses-receiptrule-stopaction-seealso"></a>
-
 + [Creating Receipt Rules for Amazon SES Email Receiving](url-ses-dev;receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*
-
 + [StopAction](url-ses-api;API_StopAction.html) in the *Amazon Simple Email Service API Reference*

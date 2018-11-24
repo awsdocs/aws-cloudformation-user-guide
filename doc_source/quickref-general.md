@@ -2,7 +2,7 @@
 
 The following examples show different AWS CloudFormation template features that aren't specific to an AWS service\.
 
-
+**Topics**
 + [Base64 Encoded UserData Property](#scenario-userdata-base64)
 + [Base64 Encoded UserData Property with AccessKey and SecretKey](#scenario-userdata-base64-with-keys)
 + [Parameters Section with One Literal String Parameter](#scenario-one-string-parameter)

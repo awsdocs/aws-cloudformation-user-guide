@@ -3,7 +3,7 @@
 CloudFormer is a template creation beta tool that creates an AWS CloudFormation template from existing AWS resources in your account\. You select any supported AWS resources that are running in your account, and CloudFormer creates a template in an Amazon S3 bucket\.
 
 **Note**  
-Use CloudFormer to produce templates that you can use as a starting point\. Not all AWS resources or resource properties are supported\. \.
+Use CloudFormer to produce templates that you can use as a starting point\. Not all AWS resources or resource properties are supported\. 
 
 The following list outlines the basic procedure for using CloudFormer:
 
@@ -75,11 +75,8 @@ After you create a CloudFormer stack, it is added to the collection of stacks in
 ## Step 3: Use CloudFormer to Create a Template<a name="cfn-using-cloudformer-create-template"></a>
 
 Before you start using CloudFormer to create a template, first ensure that your account has all the AWS resources that you want to include in your template\. This walkthrough assumes that your account has: 
-
 + An Amazon EC2 instance \(`AWS::EC2::Instance`\)\. 
-
 + An Amazon EC2 security group \(`AWS::EC2::SecurityGroup`\)\. You should associate the security group with the instance\. 
-
 + An Elastic IP Address \(`AWS::EC2::EIP`\)\. You should associate the address with the instance\. 
 
 **To use CloudFormer to create a template from your AWS resources**
@@ -125,15 +122,12 @@ You can manually include additional security groups—including Amazon EC2 secur
 1. The **Operational Resources** page allows you to include Auto Scaling policies and CloudWatch alarms\. This walkthrough uses neither, so just click **Continue**\. 
 
 1.  The **Summary** page serves several purposes: 
-
    + It allows you to review the resources you've added to your template\.
 
      To modify your resources, click **Back** to return to the appropriate pages and modify your selections as needed\. 
-
    + It allows you to change the auto\-generated logical names that were assigned to your resources\.
 
      To modify a logical name, click **Modify** and enter the name in the **Logical Name** field\.
-
    +  It allows you to specify outputs that provide necessary information, such as your site's IP address or URL\. 
 
      To modify an output, click **Modify** and select the appropriate output from the list\.  
@@ -149,9 +143,7 @@ In addition to the resources that you explicitly specified, the template include
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cloudformer-template.png)
 
    **Save Template** gives you two options:
-
    + **Launch Stack** saves the template to the specified Amazon S3 bucket and also launches the stack immediately\.
-
    + **Create Template** simply saves the template to the specified Amazon S3 bucket\.
 
      You can launch the stack later just like you would with any other template, for example, by using the AWS CloudFormation console\.

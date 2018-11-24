@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Logical`  <a name="cfn-glue-trigger-predicate-logical"></a>
 The logical operator for the predicate\.  
 *Valid values*: `AND`  
- *Required*: No  
+ *Required*: Optional field if only one condition is listed\. If multiple conditions are listed, then this field is required\.  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
@@ -41,5 +41,4 @@ The conditions that determine when the trigger fires\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-glue-trigger-predicate-seealso"></a>
-
-+ [ Predicate Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-Predicate) in the *AWS Glue Developer Guide*
++ [ Predicate Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-Predicate) in the *AWS Glue Developer Guide*

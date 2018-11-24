@@ -2,7 +2,7 @@
 
 `PipelineObjects` is a property of the [AWS::DataPipeline::Pipeline](aws-resource-datapipeline-pipeline.md) resource that describes a data pipeline object\.
 
-## Syntax<a name="w3ab2c21c14d487b5"></a>
+## Syntax<a name="w4ab1c21c14d624b5"></a>
 
 ### JSON<a name="aws-properties-datapipeline-pipeline-pipelineobjects-syntax.json"></a>
 
@@ -23,21 +23,21 @@
 [Name](#cfn-datapipeline-pipeline-pipelineobjects-name): String
 ```
 
-## Properties<a name="w3ab2c21c14d487b7"></a>
+## Properties<a name="w4ab1c21c14d624b7"></a>
 
 `Fields`  <a name="cfn-datapipeline-pipeline-pipelineobjects-fields"></a>
 Key\-value pairs that define the properties of the object\. Duplicates allowed\. You can use the same key multiple times within a field to define array attributes\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: List of [AWS Data Pipeline Pipeline Field](aws-properties-datapipeline-pipeline-pipelineobjects-fields.md)
 
 `Id`  <a name="cfn-datapipeline-pipeline-pipelineobjects-id"></a>
 Identifier of the object\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String
 
 `Name`  <a name="cfn-datapipeline-pipeline-pipelineobjects-name"></a>
 Name of the object\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String
 
 ## Examples<a name="aws-properties-datapipeline-pipeline-pipelineobjects-examples"></a>

@@ -1,6 +1,6 @@
-# Amazon Kinesis Firehose DeliveryStream ExtendedS3DestinationConfiguration<a name="aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration"></a>
+# Amazon Kinesis Data Firehose DeliveryStream ExtendedS3DestinationConfiguration<a name="aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration"></a>
 
-The `ExtendedS3DestinationConfiguration` property type configures an Amazon S3 destination for an Amazon Kinesis Firehose delivery stream\. `ExtendedS3DestinationConfiguration` is a property of the [AWS::KinesisFirehose::DeliveryStream](aws-resource-kinesisfirehose-deliverystream.md) resource\.
+The `ExtendedS3DestinationConfiguration` property type configures an Amazon S3 destination for an Amazon Kinesis Data Firehose delivery stream\. `ExtendedS3DestinationConfiguration` is a property of the [AWS::KinesisFirehose::DeliveryStream](aws-resource-kinesisfirehose-deliverystream.md) resource\.
 
 ## Syntax<a name="aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-syntax"></a>
 
@@ -46,7 +46,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-properties"></a>
 
 `BucketARN`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-bucketarn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon S3 bucket\. For constraints, see [ExtendedS3DestinationConfiguration](http://docs.aws.amazon.com/firehose/latest/APIReference/API_ExtendedS3DestinationConfiguration.html) in the *Amazon Kinesis Firehose API Reference*\.  
+The Amazon Resource Name \(ARN\) of the Amazon S3 bucket\. For constraints, see [ExtendedS3DestinationConfiguration](https://docs.aws.amazon.com/firehose/latest/APIReference/API_ExtendedS3DestinationConfiguration.html) in the *Amazon Kinesis Data Firehose API Reference*\.  
  *Required*: Yes  
 *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
@@ -54,41 +54,41 @@ The Amazon Resource Name \(ARN\) of the Amazon S3 bucket\. For constraints, see 
 `BufferingHints`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-bufferinghints"></a>
 The buffering option\.  
  *Required*: Yes  
- *Type*: [Kinesis Firehose DeliveryStream BufferingHints](aws-properties-kinesisfirehose-deliverystream-bufferinghints.md)  
+ *Type*: [Kinesis Data Firehose DeliveryStream BufferingHints](aws-properties-kinesisfirehose-deliverystream-bufferinghints.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `CloudWatchLoggingOptions`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-cloudwatchloggingoptions"></a>
-The CloudWatch logging options for the Kinesis Firehose delivery stream\.  
+The CloudWatch logging options for the Kinesis Data Firehose delivery stream\.  
  *Required*: No  
- *Type*: [Kinesis Firehose DeliveryStream CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md)  
+ *Type*: [Kinesis Data Firehose DeliveryStream CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `CompressionFormat`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-compressionformat"></a>
-The compression format for the Kinesis Firehose delivery stream\. The default value is `UNCOMPRESSED`\. For valid values, see [ExtendedS3DestinationConfiguration](http://docs.aws.amazon.com/firehose/latest/APIReference/API_ExtendedS3DestinationConfiguration.html) in the *Amazon Kinesis Firehose API Reference*\.  
+The compression format for the Kinesis Data Firehose delivery stream\. The default value is `UNCOMPRESSED`\. For valid values, see [ExtendedS3DestinationConfiguration](https://docs.aws.amazon.com/firehose/latest/APIReference/API_ExtendedS3DestinationConfiguration.html) in the *Amazon Kinesis Data Firehose API Reference*\.  
  *Required*: Yes  
 *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `EncryptionConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-encryptionconfiguration"></a>
-The encryption configuration for the Kinesis Firehose delivery stream\. The default value is `NoEncryption`\.  
+The encryption configuration for the Kinesis Data Firehose delivery stream\. The default value is `NoEncryption`\.  
  *Required*: No  
- *Type*: [Kinesis Firehose DeliveryStream EncryptionConfiguration](aws-properties-kinesisfirehose-deliverystream-encryptionconfiguration.md)  
+ *Type*: [Kinesis Data Firehose DeliveryStream EncryptionConfiguration](aws-properties-kinesisfirehose-deliverystream-encryptionconfiguration.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Prefix`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-prefix"></a>
-The `YYYY/MM/DD/HH` time format prefix is automatically used for delivered Amazon S3 files\. For more information, see [ExtendedS3DestinationConfiguration](http://docs.aws.amazon.com/firehose/latest/APIReference/API_ExtendedS3DestinationConfiguration.html) in the *Amazon Kinesis Firehose API Reference*\.  
+The `YYYY/MM/DD/HH` time format prefix is automatically used for delivered Amazon S3 files\. For more information, see [ExtendedS3DestinationConfiguration](https://docs.aws.amazon.com/firehose/latest/APIReference/API_ExtendedS3DestinationConfiguration.html) in the *Amazon Kinesis Data Firehose API Reference*\.  
  *Required*: Yes  
 *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ProcessingConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-processingconfiguration"></a>
-The data processing configuration for the Kinesis Firehose delivery stream\.  
+The data processing configuration for the Kinesis Data Firehose delivery stream\.  
  *Required*: No  
- *Type*: [Kinesis Firehose DeliveryStream ProcessingConfiguration](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md)  
+ *Type*: [Kinesis Data Firehose DeliveryStream ProcessingConfiguration](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `RoleARN`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-rolearn"></a>
-The ARN of the AWS credentials\. For constraints, see [ExtendedS3DestinationConfiguration](http://docs.aws.amazon.com/firehose/latest/APIReference/API_ExtendedS3DestinationConfiguration.html) in the *Amazon Kinesis Firehose API Reference*\.  
+The ARN of the AWS credentials\. For constraints, see [ExtendedS3DestinationConfiguration](https://docs.aws.amazon.com/firehose/latest/APIReference/API_ExtendedS3DestinationConfiguration.html) in the *Amazon Kinesis Data Firehose API Reference*\.  
  *Required*: Yes  
 *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
@@ -96,11 +96,11 @@ The ARN of the AWS credentials\. For constraints, see [ExtendedS3DestinationConf
 `S3BackupConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-s3backupconfiguration"></a>
 The configuration for backup in Amazon S3\.  
  *Required*: No  
- *Type*: [Kinesis Firehose DeliveryStream S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)  
+ *Type*: [Kinesis Data Firehose DeliveryStream S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `S3BackupMode`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-s3backupmode"></a>
-The Amazon S3 backup mode\. For valid values, see [ExtendedS3DestinationConfiguration](http://docs.aws.amazon.com/firehose/latest/APIReference/API_ExtendedS3DestinationConfiguration.html) in the *Amazon Kinesis Firehose API Reference*\.  
+The Amazon S3 backup mode\. For valid values, see [ExtendedS3DestinationConfiguration](https://docs.aws.amazon.com/firehose/latest/APIReference/API_ExtendedS3DestinationConfiguration.html) in the *Amazon Kinesis Data Firehose API Reference*\.  
  *Required*: No  
 *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

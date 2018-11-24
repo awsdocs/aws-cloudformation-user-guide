@@ -51,7 +51,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-glue-table-storagedescriptor-properties"></a>
 
-For more information, see [StorageDescriptor Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) in the *AWS Glue Developer Guide*\.
+For more information, see [StorageDescriptor Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) in the *AWS Glue Developer Guide*\.
 
 `StoredAsSubDirectories`  <a name="cfn-glue-table-storagedescriptor-storedassubdirectories"></a>
 Indicates whether the table data is stored in subdirectories\.  
@@ -126,5 +126,4 @@ The physical location of the table\. By default, this takes the form of the ware
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-glue-table-storagedescriptor-seealso"></a>
-
-+ [StorageDescriptor Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) in the *AWS Glue Developer Guide*
++ [StorageDescriptor Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) in the *AWS Glue Developer Guide*

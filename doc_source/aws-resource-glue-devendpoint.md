@@ -1,8 +1,8 @@
 # AWS::Glue::DevEndpoint<a name="aws-resource-glue-devendpoint"></a>
 
-The `AWS::Glue::DevEndpoint` resource specifies a development endpoint where a developer can remotely debug ETL scripts for AWS Glue\. For more information, see [DevEndpoint Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-dev-endpoint.html#aws-glue-api-jobs-dev-endpoint-DevEndpoint) in the *AWS Glue Developer Guide*\. 
+The `AWS::Glue::DevEndpoint` resource specifies a development endpoint where a developer can remotely debug ETL scripts for AWS Glue\. For more information, see [DevEndpoint Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-dev-endpoint.html#aws-glue-api-jobs-dev-endpoint-DevEndpoint) in the *AWS Glue Developer Guide*\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-glue-devendpoint-syntax)
 + [Properties](#aws-resource-glue-devendpoint-properties)
 + [See Also](#aws-resource-glue-devendpoint-seealso)
@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-glue-devendpoint-syntax.yaml"></a>
 
 ```
-Type: "AWS::Glue::DevEndpoint"
+Type: AWS::Glue::DevEndpoint
 Properties:
   [EndpointName](#cfn-glue-devendpoint-endpointname): String
   [ExtraJarsS3Path](#cfn-glue-devendpoint-extrajarss3path): String
@@ -98,5 +98,4 @@ The subnet ID for the endpoint\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-resource-glue-devendpoint-seealso"></a>
-
-+ [DevEndpoint Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-dev-endpoint.html#aws-glue-api-jobs-dev-endpoint-DevEndpoint) in the *AWS Glue Developer Guide* 
++ [DevEndpoint Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-dev-endpoint.html#aws-glue-api-jobs-dev-endpoint-DevEndpoint) in the *AWS Glue Developer Guide* 

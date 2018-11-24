@@ -1,8 +1,8 @@
 # AWS::ApiGateway::DocumentationPart<a name="aws-resource-apigateway-documentationpart"></a>
 
-The `AWS::ApiGateway::DocumentationPart` resource creates a documentation part for an Amazon API Gateway API entity\. For more information, see [ Representation of API Documentation in API Gateway](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api-content-representation.html) in the *API Gateway Developer Guide*\.
+The `AWS::ApiGateway::DocumentationPart` resource creates a documentation part for an Amazon API Gateway API entity\. For more information, see [ Representation of API Documentation in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api-content-representation.html) in the *API Gateway Developer Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-apigateway-documentationpart-syntax)
 + [Properties](#aws-resource-apigateway-documentationpart-properties)
 + [Return Value](#aws-resource-apigateway-documentationpart-returnvalues)
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-documentationpart-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::DocumentationPart"
+Type: AWS::ApiGateway::DocumentationPart
 Properties:
   [Location](#cfn-apigateway-documentationpart-location): 
     [*Location*](aws-properties-apigateway-documentationpart-location.md)
@@ -39,7 +39,7 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-documentationpart-properties"></a>
 
 **Note**  
-For more information about each property, including constraints and valid values, see [ DocumentationPart](http://docs.aws.amazon.com/apigateway/api-reference/resource/documentation-part) in the *Amazon API Gateway REST API Reference*\.
+For more information about each property, including constraints and valid values, see [ DocumentationPart](https://docs.aws.amazon.com/apigateway/api-reference/resource/documentation-part) in the *Amazon API Gateway REST API Reference*\.
 
 `Location`  <a name="cfn-apigateway-documentationpart-location"></a>
 The location of the API entity that the documentation applies to\.  
@@ -69,7 +69,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ## Example<a name="aws-resource-apigateway-documentationpart-examples"></a>
 
-### <a name="w3ab2c21c10c40c13b3"></a>
+### <a name="w4ab1c21c10c47c13b3"></a>
 
 The following example associates a documentation part for an API entity with a documentation version\.
 
@@ -154,18 +154,18 @@ Parameters:
     Type: String
 Resources:
   RestApi:
-    Type: 'AWS::ApiGateway::RestApi'
+    Type: AWS::ApiGateway::RestApi
     Properties:
       Name: !Ref apiName
   DocumentationPart:
-    Type: 'AWS::ApiGateway::DocumentationPart'
+    Type: AWS::ApiGateway::DocumentationPart
     Properties:
       Location:
         Type: !Ref type
       RestApiId: !Ref RestApi
       Property: !Ref property
   DocumentationVersion:
-    Type: 'AWS::ApiGateway::DocumentationVersion'
+    Type: AWS::ApiGateway::DocumentationVersion
     Properties:
       Description: !Ref description
       DocumentationVersion: !Ref version

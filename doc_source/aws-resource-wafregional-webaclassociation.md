@@ -1,11 +1,11 @@
 # AWS::WAFRegional::WebACLAssociation<a name="aws-resource-wafregional-webaclassociation"></a>
 
-The `AWS::WAFRegional::WebACLAssociation` resource associates an AWS WAF Regional web access control group \(ACL\) with a resource\. For more information, see [AssociateWebACL](http://docs.aws.amazon.com/waf/latest/APIReference/API_regional_AssociateWebACL.html) in the *AWS WAF Regional API Reference*\.
+The `AWS::WAFRegional::WebACLAssociation` resource associates an AWS WAF Regional web access control group \(ACL\) with a resource\. For more information, see [AssociateWebACL](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_AssociateWebACL.html) in the *AWS WAF Regional API Reference*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-wafregional-webaclassociation-syntax)
-+ [Properties](#w3ab2c21c10e1119b9)
-+ [Example](#w3ab2c21c10e1119c11)
++ [Properties](#w4ab1c21c10e1264b9)
++ [Example](#w4ab1c21c10e1264c11)
 
 ## Syntax<a name="aws-resource-wafregional-webaclassociation-syntax"></a>
 
@@ -32,26 +32,26 @@ Properties:
   [WebACLId](#cfn-wafregional-webaclassociation-webaclid): String
 ```
 
-## Properties<a name="w3ab2c21c10e1119b9"></a>
+## Properties<a name="w4ab1c21c10e1264b9"></a>
 
 **Note**  
-For more information about constraints and values for each property, see [AssociateWebACL](http://docs.aws.amazon.com/waf/latest/APIReference/API_regional_AssociateWebACL.html) in the *AWS WAF Regional API Reference*\.
+For more information about constraints and values for each property, see [AssociateWebACL](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_AssociateWebACL.html) in the *AWS WAF Regional API Reference*\.
 
 `ResourceArn`  <a name="cfn-wafregional-webaclassociation-resourcearn"></a>
 The Amazon Resource Name \(ARN\) of the resource to protect with the web ACL\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `WebACLId`  <a name="cfn-wafregional-webaclassociation-webaclid"></a>
 A unique identifier \(ID\) for the web ACL\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Example<a name="w3ab2c21c10e1119c11"></a>
+## Example<a name="w4ab1c21c10e1264c11"></a>
 
-### <a name="w3ab2c21c10e1119c11b2"></a>
+### <a name="w4ab1c21c10e1264c11b2"></a>
 
 The following example associates an Application load balancer resource with a web ACL\.
 

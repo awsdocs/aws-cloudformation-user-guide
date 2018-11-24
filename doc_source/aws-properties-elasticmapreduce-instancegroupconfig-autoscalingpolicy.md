@@ -1,8 +1,8 @@
 # Amazon EMR InstanceGroupConfig AutoScalingPolicy<a name="aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy"></a>
 
-`AutoScalingPolicy` is a property of the [AWS::EMR::InstanceGroupConfig](aws-resource-emr-instancegroupconfig.md) resource that specifies the constraints and rules for an Auto Scaling group policy\. For more information, see [PutAutoScalingPolicy](http://docs.aws.amazon.com//ElasticMapReduce/latest/API/API_PutAutoScalingPolicy.html) in the Amazon EMR API Reference\.
+`AutoScalingPolicy` is a property of the [AWS::EMR::InstanceGroupConfig](aws-resource-emr-instancegroupconfig.md) resource that specifies the constraints and rules for an Auto Scaling group policy\. For more information, see [PutAutoScalingPolicy](https://docs.aws.amazon.com//ElasticMapReduce/latest/API/API_PutAutoScalingPolicy.html) in the Amazon EMR API Reference\.
 
-## Syntax<a name="w3ab2c21c14e1014b5"></a>
+## Syntax<a name="w4ab1c21c14e1275b5"></a>
 
 ### JSON<a name="aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy-syntax.json"></a>
 
@@ -22,25 +22,25 @@
   - ScalingRule
 ```
 
-## Properties<a name="w3ab2c21c14e1014b7"></a>
+## Properties<a name="w4ab1c21c14e1275b7"></a>
 
 `Constraints`  <a name="cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-constraints"></a>
 The upper and lower Amazon EC2 instance limits for an automatic scaling policy\. Automatic scaling activity doesn't cause an instance group to grow above or below these limits\.   
-*Required: *Yes  
+*Required*: Yes  
 *Type*: [Amazon EMR InstanceGroupConfig ScalingConstraints](aws-properties-elasticmapreduce-instancegroupconfig-scalingconstraints.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Rules`  <a name="cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-rules"></a>
 The scale\-in and scale\-out rules that compose the automatic scaling policy\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: List of [Amazon EMR InstanceGroupConfig ScalingRule](aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Example<a name="w3ab2c21c14e1014b9"></a>
+## Example<a name="w4ab1c21c14e1275b9"></a>
 
 The following example defines an `AutoScalingPolicy` for an `InstanceGroupConfig` resource\.
 
-### JSON<a name="w3ab2c21c14e1014b9b4"></a>
+### JSON<a name="w4ab1c21c14e1275b9b4"></a>
 
 ```
 "MyInstanceGroupConfig": {
@@ -130,7 +130,7 @@ The following example defines an `AutoScalingPolicy` for an `InstanceGroupConfig
 }
 ```
 
-### YAML<a name="w3ab2c21c14e1014b9b6"></a>
+### YAML<a name="w4ab1c21c14e1275b9b6"></a>
 
 ```
 MyInstanceGroupConfig:

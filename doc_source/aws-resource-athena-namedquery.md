@@ -1,8 +1,8 @@
 # AWS::Athena::NamedQuery<a name="aws-resource-athena-namedquery"></a>
 
-The `AWS::Athena::NamedQuery` resource creates an Amazon Athena query\. For more information, see [CreateNamedQuery](http://docs.aws.amazon.com/athena/latest/APIReference/API_CreateNamedQuery.html) in the *Amazon Athena Documentation*\.
+The `AWS::Athena::NamedQuery` resource creates an Amazon Athena query\. For more information, see [CreateNamedQuery](https://docs.aws.amazon.com/athena/latest/APIReference/API_CreateNamedQuery.html) in the *Amazon Athena Documentation*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-athena-namedquery-syntax)
 + [Properties](#aws-resource-athena-namedquery-properties)
 + [Return Values](#aws-resource-athena-namedquery-returnvalues)
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-athena-namedquery-syntax.yaml"></a>
 
 ```
-Type: "AWS::Athena::NamedQuery"
+Type: AWS::Athena::NamedQuery
 Properties:
   [Description](#cfn-athena-namedquery-description): String
   [QueryString](#cfn-athena-namedquery-querystring): String
@@ -39,7 +39,7 @@ Properties:
 
 ## Properties<a name="aws-resource-athena-namedquery-properties"></a>
 
-For constraints, see [NamedQuery](http://docs.aws.amazon.com/athena/latest/APIReference/API_NamedQuery.html) in the *Amazon Athena API Reference*\.
+For constraints, see [NamedQuery](https://docs.aws.amazon.com/athena/latest/APIReference/API_NamedQuery.html) in the *Amazon Athena API Reference*\.
 
 `Description`  <a name="cfn-athena-namedquery-description"></a>
 A brief description of the query\.  
@@ -51,7 +51,7 @@ A brief description of the query\.
 The SQL query statements that comprise the query\.  
  *Required*: Yes  
  *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `Database`  <a name="cfn-athena-namedquery-database"></a>
 The database to which the query belongs\.  
@@ -67,7 +67,7 @@ The plain\-language name of the query\.
 
 ## Return Values<a name="aws-resource-athena-namedquery-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d106c11b3"></a>
+### Ref<a name="w4ab1c21c10d131c11b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 

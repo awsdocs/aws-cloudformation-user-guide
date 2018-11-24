@@ -22,14 +22,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [StageName](#cfn-apigateway-apikey-stagekey-stagename): String
 ```
 
-## Properties<a name="w3ab2c21c14c12b7"></a>
+## Properties<a name="w4ab1c21c14c23b7"></a>
 
 `RestApiId`  <a name="cfn-apigateway-apikey-stagekey-restapiid"></a>
 The ID of a `RestApi` resource that includes the stage with which you want to associate the API key\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `StageName`  <a name="cfn-apigateway-apikey-stagekey-stagename"></a>
 The name of the stage with which to associate the API key\. The stage must be included in the `RestApi` resource that you specified in the `RestApiId` property\.  
-*Required: *No  
+*Required*: No  
 *Type*: String

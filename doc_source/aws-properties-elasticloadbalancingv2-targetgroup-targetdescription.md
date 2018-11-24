@@ -2,7 +2,7 @@
 
 `TargetDescription` is a property of the [AWS::ElasticLoadBalancingV2::TargetGroup](aws-resource-elasticloadbalancingv2-targetgroup.md) resource that specifies a target to add to an Elastic Load Balancing target group\.
 
-## Syntax<a name="w3ab2c21c14d870b5"></a>
+## Syntax<a name="w4ab1c21c14e1124b5"></a>
 
 ### JSON<a name="aws-properties-elasticloadbalancingv2-targetgroup-targetdescription-syntax.json"></a>
 
@@ -22,19 +22,19 @@
 [Port](#cfn-elasticloadbalancingv2-targetgroup-targetdescription-port): Integer
 ```
 
-## Properties<a name="w3ab2c21c14d870b7"></a>
+## Properties<a name="w4ab1c21c14e1124b7"></a>
 
 `AvailabilityZone`  <a name="cfn-elasticloadbalancingv2-targetgroup-targetdescription-availabilityzone"></a>
-The Availability Zone where the IP address is to be registered\. For more information, see [TargetDescription](http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_TargetDescription.html) in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
-*Required: *No  
+The Availability Zone where the IP address is to be registered\. For more information, see [TargetDescription](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_TargetDescription.html) in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
+*Required*: No  
 *Type*: String
 
 `Id`  <a name="cfn-elasticloadbalancingv2-targetgroup-targetdescription-id"></a>
 The ID of the target, such as an EC2 instance ID\. If the target type of the target group is `instance`, specify an instance ID\. If the target type is `ip`, specify an IP address\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String
 
 `Port`  <a name="cfn-elasticloadbalancingv2-targetgroup-targetdescription-port"></a>
 The port number on which the target is listening for traffic\.  
-*Required: *No  
+*Required*: No  
 *Type*: Integer

@@ -1,12 +1,13 @@
 # AWS::SES::ConfigurationSet<a name="aws-resource-ses-configurationset"></a>
 
-The `AWS::SES::ConfigurationSet` resource let syou create groups of rules that you can apply to the emails you send using Amazon SES\. For more information about using configuration sets, see [Using Amazon SES Configuration Sets](url-ses-dev;using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*\.
+The `AWS::SES::ConfigurationSet` resource lets you create groups of rules that you can apply to the emails you send using Amazon SES\. For more information about using configuration sets, see [Using Amazon SES Configuration Sets](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*\.
 
 Configuration sets 
 
-
+**Topics**
 + [Syntax](#aws-resource-ses-configurationset-syntax)
 + [Properties](#aws-resource-ses-configurationset-properties)
++ [Return Values](#aws-resource-ses-configurationset-returnvalues)
 + [Example](#aws-resource-ses-configurationset-examples)
 + [See Also](#aws-resource-ses-configurationset-seealso)
 
@@ -37,13 +38,19 @@ Properties:
 
 `Name`  <a name="cfn-ses-configurationset-name"></a>
 The name of the configuration set\. The name must meet the following requirements:  
-
 + Contain only letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), or dashes \(\-\)\.
-
 + Contain 64 characters or fewer\.
  *Required*: No  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+
+## Return Values<a name="aws-resource-ses-configurationset-returnvalues"></a>
+
+### Ref<a name="aws-resource-ses-configurationset-ref"></a>
+
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
+
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## Example<a name="aws-resource-ses-configurationset-examples"></a>
 
@@ -83,13 +90,11 @@ Parameters:
     Type: String
 Resources:
   ConfigSet:
-    Type: "AWS::SES::ConfigurationSet"
+    Type: AWS::SES::ConfigurationSet
     Properties:
       Name: !Ref ConfigSetName
 ```
 
 ## See Also<a name="aws-resource-ses-configurationset-seealso"></a>
-
-+ [Using Amazon SES Configuration Sets](url-ses-dev;using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*
-
-+ [ConfigurationSet](url-ses-api;API_ConfigurationSet.html) in the *Amazon Simple Email Service API Reference*
++ [Using Amazon SES Configuration Sets](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*
++ [ConfigurationSet](https://docs.aws.amazon.com/ses/latest/APIReference/API_ConfigurationSet.html) in the *Amazon Simple Email Service API Reference*

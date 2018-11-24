@@ -1,11 +1,11 @@
 # Auto Scaling Template Snippets<a name="quickref-autoscaling"></a>
 
-
+**Topics**
 + [Auto Scaling Launch Configuration Resource](#scenario-as-launch-config)
 + [Auto Scaling Group Resource](#scenario-as-group)
 + [Auto Scaling Policy Triggered by CloudWatch Alarm](#scenario-as-policy)
 + [Auto Scaling Group with Notifications](#scenario-as-notification)
-+ [Auto Scaling with an UpdatePolicy](#w3ab2c17c24c15c13)
++ [Auto Scaling with an UpdatePolicy](#w4ab1c17c23c15c13)
 
 ## Auto Scaling Launch Configuration Resource<a name="scenario-as-launch-config"></a>
 
@@ -17,7 +17,7 @@ This example shows an Auto Scaling AWS::AutoScaling::LaunchConfiguration resourc
  1. "SimpleConfig" : {
  2.    "Type" : "AWS::AutoScaling::LaunchConfiguration",
  3.    "Properties" : {
- 4.       "ImageId" : "ami-6411e20d",
+ 4.       "ImageId" : "ami-0ff8a91507f77f867",
  5.       "SecurityGroups" : [ { "Ref" : "myEC2SecurityGroup" }, "myExistingEC2SecurityGroup" ],
  6.       "InstanceType" : "m1.small",
  7.       "BlockDeviceMappings" : [ {
@@ -37,7 +37,7 @@ This example shows an Auto Scaling AWS::AutoScaling::LaunchConfiguration resourc
  1. SimpleConfig:
  2.   Type: AWS::AutoScaling::LaunchConfiguration
  3.   Properties:
- 4.     ImageId: ami-6411e20d
+ 4.     ImageId: ami-0ff8a91507f77f867
  5.     SecurityGroups:
  6.     - Ref: myEC2SecurityGroup
  7.     - myExistingEC2SecurityGroup
@@ -207,7 +207,7 @@ This example shows an [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-gro
 18.       - autoscaling:EC2_INSTANCE_TERMINATE_ERROR
 ```
 
-## Auto Scaling with an UpdatePolicy<a name="w3ab2c17c24c15c13"></a>
+## Auto Scaling with an UpdatePolicy<a name="w4ab1c17c23c15c13"></a>
 
 This example shows how to use an [UpdatePolicy](aws-attribute-updatepolicy.md) with an auto\-scaling group\.
 

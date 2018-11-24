@@ -6,7 +6,7 @@ If you specify a file, the command directly uploads it to the S3 bucket\. After 
 
 If you specify a folder, the command creates a \.zip file for the folder, and then uploads the \.zip file\. If you don’t specify a path, the command creates a \.zip file for the working directory, and uploads it\. You can specify an absolute or relative path, where the relative path is relative to your template’s location\.
 
-You can use local artifacts only for resource properties that the `package` command supports\. For more information about this command and a list of the supported resource properties, see the `aws cloudformation package` command in the [AWS CLI Command Reference](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html)\.
+You can use local artifacts only for resource properties that the `package` command supports\. For more information about this command and a list of the supported resource properties, see the `aws cloudformation package` command in the [AWS CLI Command Reference](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html)\.
 
 The following template specifies the local artifact for a Lambda function's source code\. The source code is stored in the user's `/home/user/code/lambdafunction` folder\.
 

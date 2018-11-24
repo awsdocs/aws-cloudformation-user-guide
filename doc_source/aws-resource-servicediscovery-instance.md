@@ -1,8 +1,8 @@
 # AWS::ServiceDiscovery::Instance<a name="aws-resource-servicediscovery-instance"></a>
 
-The `AWS::ServiceDiscovery::Instance` resource specifies information about an instance that Amazon Route 53 creates\. For more information, see [Instance](http://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Instance.html) in the *Amazon Route 53 API Reference*\.
+The `AWS::ServiceDiscovery::Instance` resource specifies information about an instance that Amazon Route 53 creates\. For more information, see [Instance](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Instance.html) in the *Amazon Route 53 API Reference*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-servicediscovery-instance-syntax)
 + [Properties](#aws-resource-servicediscovery-instance-properties)
 + [Return Values](#aws-resource-servicediscovery-instance-returnvalues)
@@ -39,11 +39,8 @@ Properties:
 
 `InstanceAttributes`  <a name="cfn-servicediscovery-instance-instanceattributes"></a>
 A string map that contains attribute keys and values\. Supported attribute keys include the following:  
-
-+ `AWS_INSTANCE_PORT`: The port on the endpoint that you want Route 53 to perform health checks on\. This value is also used for the port value in an SRV record if the service that you specify includes an SRV record\. You can also specify a default port that is applied to all instances in the `Service` configuration\. For more information, see [CreateService](http://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_CreateService.html) in the *Amazon Route 53 API Reference*\.
-
++ `AWS_INSTANCE_PORT`: The port on the endpoint that you want Route 53 to perform health checks on\. This value is also used for the port value in an SRV record if the service that you specify includes an SRV record\. You can also specify a default port that is applied to all instances in the `Service` configuration\. For more information, see [CreateService](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_CreateService.html) in the *Amazon Route 53 API Reference*\.
 + `AWS_INSTANCE_IPV4`: If the service that you specify contains a resource record set template for an A record, the IPv4 address that you want Route 53 to use for the value of the A record\.
-
 + `AWS_INSTANCE_IPV6`: If the service that you specify contains a resource record set template for an AAAA record, the IPv6 address that you want Route 53 to use for the value of the AAAA record\.
 *Required*: Yes  
 *Type*: JSON object  
@@ -51,9 +48,7 @@ A string map that contains attribute keys and values\. Supported attribute keys 
 
 `InstanceId`  <a name="cfn-servicediscovery-instance-instanceid"></a>
 An identifier that you want to associate with the instance\. Note the following:  
-
 + You can use this value to update an existing instance\.
-
 + To associate a new instance, you must specify a value that is unique among instances that you associate by using the same service\.
 *Required*: Yes  
 *Type*: String  
@@ -74,9 +69,6 @@ When you pass the logical ID of an `AWS::ServiceDiscovery::Instance` resource to
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## See Also<a name="aws-resource-servicediscovery-instance-seealso"></a>
-
-+ [Using Autonaming for Service Discovery](http://docs.aws.amazon.com/Route53/latest/APIReference/overview-service-discovery.html) in the *Amazon Route 53 API Reference*
-
-+ [RegisterInstance](http://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_RegisterInstance.html) in the *Amazon Route 53 API Reference*
-
-+ [CreateService](http://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_CreateService.html) in the *Amazon Route 53 API Reference*
++ [Using Autonaming for Service Discovery](https://docs.aws.amazon.com/Route53/latest/APIReference/overview-service-discovery.html) in the *Amazon Route 53 API Reference*
++ [RegisterInstance](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_RegisterInstance.html) in the *Amazon Route 53 API Reference*
++ [CreateService](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_CreateService.html) in the *Amazon Route 53 API Reference*

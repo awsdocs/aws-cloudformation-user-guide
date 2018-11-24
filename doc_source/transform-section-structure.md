@@ -1,67 +1,36 @@
 # Transform<a name="transform-section-structure"></a>
 
-The optional `Transform` section specifies one or more transforms that AWS CloudFormation uses to process your template\. The `Transform` section builds on the simple, declarative language of AWS CloudFormation with a powerful macro system\.
+The optional `Transform` section specifies one or more macros that AWS CloudFormation uses to process your template\. The `Transform` section builds on the simple, declarative language of AWS CloudFormation with a powerful macro system\. 
 
-AWS CloudFormation transforms help simplify template authoring by condensing the expression of AWS infrastructure as code and enabling reuse of template components\. For example, you can condense a multiple\-line resource declaration into a single line in your template\.
+You can declare one or more macros within a template\. AWS CloudFormation executes macros in the order that they are specified\. When you create a change set, AWS CloudFormation generates a change set that includes the processed template content\. You can then review the changes and execute the change set\. For more information, see [Using AWS CloudFormation Macros to Perform Custom Processing on Templates](template-macros.md)\.
 
-AWS CloudFormation supports `AWS::Serverless` and `AWS::Include` transform types:
+AWS CloudFormation also supports the `AWS::Serverless` and `AWS::Include` transforms, which are macros hosted by AWS CloudFormation\. AWS CloudFormation treats these transforms the same as any macros you create in terms of execution order and scope\.
++ The `AWS::Serverless` transform specifies the version of the AWS Serverless Application Model \(AWS SAM\) to use\. This model defines the AWS SAM syntax that you can use and how AWS CloudFormation processes it\. For more information about serverless applications and AWS SAM, see [Deploying Lambda\-based Applications](https://docs.aws.amazon.com/lambda/latest/dg/deploying-lambda-apps.html) in the *AWS Lambda Developer Guide*\.
++ The `AWS::Include` transform works with template snippets that are stored separately from the main AWS CloudFormation template\. You can insert these snippets into your main template when [Creating a Change Set](using-cfn-updating-stacks-changesets-create.md) or [Updating Stacks Using Change Sets](using-cfn-updating-stacks-changesets.md)\.
 
-+ An `AWS::Serverless` transform specifies the version of the AWS Serverless Application Model \(AWS SAM\) to use\. This model defines the AWS SAM syntax that you can use and how AWS CloudFormation processes it\. When you create a change set, AWS CloudFormation resolves all `Transform` functions\. For more information about serverless applications and AWS SAM, see [Deploying Lambda\-based Applications](http://docs.aws.amazon.com/lambda/latest/dg/deploying-lambda-apps.html) in the *AWS Lambda Developer Guide*\.
+To declare multiple macros, use a list format and specify one or more macros\.
 
-+ An `AWS::Include` transform works with template snippets that are stored separately from the main AWS CloudFormation template\. You can insert these snippets into your main template when [Creating a Change Set](using-cfn-updating-stacks-changesets-create.md) or [Updating Stacks Using Change Sets](using-cfn-updating-stacks-changesets.md)\.
-
-You can declare a single transform or multiple transforms within a template\. AWS CloudFormation executes transformations in the order that they are specified\.
-
-To declare multiple transforms, use a list format and specify one or more `AWS::Include` transforms and \(optionally\) an `AWS::Serverless` transform\. The following example declares two `AWS::Include` transforms\.
-
-## JSON<a name="transform-section-example.json"></a>
+For example, in the template sample below, AWS CloudFormation evaluates `MyMacro` and then `AWS::Serverless`, both of which can process the contents of the entire template because of their inclusion in the `Transform` section\.
 
 ```
-{
-  "Resources": {
-    "MyBucket": {
-      "Type": "AWS::S3::Bucket",
-      "Properties": {
-        "Fn::Transform": [
-          {
-            "Name": "AWS::Include",
-            "Parameters": {
-              "Location": "s3://bucket/myBucketName.json"
-            }
-          },
-          {
-            "Name": "AWS::Include",
-            "Parameters": {
-              "Location": "s3://bucket/myBucketAcl.json"
-            }
-          }
-        ]
-      }
-    }
-  }
-}
+// Start of processable content for MyMacro and AWS::Serverless
+AWSTemplateFormatVersion: 2010-09-09 
+ Transform: [MyMacro, AWS::Serverless]
+ Resources:
+    WaitCondition:
+      Type: AWS::CloudFormation::WaitCondition
+    MyBucket:
+      Type: 'AWS::S3::Bucket'  
+      Properties:
+        BucketName: MyBucket 
+        Tags: [{"key":"value"}] 
+        CorsConfiguration:[]   
+    MyEc2Instance:
+      Type: 'AWS::EC2::Instance' Properties:
+        ImageID: "ami-123"
+// End of processable content for MyMacro and AWS::Serverless
 ```
 
-## YAML<a name="transform-section-example.yaml"></a>
-
-```
-Resources:
-  MyBucket:
-    Type: 'AWS::S3::Bucket'
-    Properties:
-        'Fn::Transform':
-            - Name: 'AWS::Include'
-              Parameters:
-                Location: s3://bucket/myBucketName.yaml
-            - Name: 'AWS::Include'
-              Parameters:
-                Location: s3://bucket/myBucketAcl.yaml
-```
-
-For more information and example transforms, see the following topics:
-
-
-+ [JSON](#transform-section-example.json)
-+ [YAML](#transform-section-example.yaml)
+**Topics**
 + [AWS::Serverless Transform](transform-aws-serverless.md)
 + [AWS::Include Transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md)

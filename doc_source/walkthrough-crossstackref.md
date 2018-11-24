@@ -4,7 +4,7 @@ To export resources from one AWS CloudFormation stack to another, create a cross
 
 For example, you might have a network stack with a VPC, a security group, and a subnet for public web applications, and a separate public web application stack\. To ensure that the web applications use the security group and subnet from the network stack, you create a cross\-stack reference that allows the web application stack to reference resource outputs from the network stack\. With a cross\-stack reference, owners of the web application stacks don't need to create or maintain networking rules or assets\.
 
-To create a cross\-stack reference, use the `Export` output field to flag the value of a resource output for export\. Then, use the `Fn::ImportValue` intrinsic function to import the value\. For more information, see [Outputs](outputs-section-structure.md) and [Fn::ImportValue](intrinsic-function-reference-importvalue.md)\.
+To create a cross\-stack reference, use the `Export` output field to flag the value of a resource output for export\. Then, use the `Fn::ImportValue` intrinsic function to import the value\. For more information, see [Outputs](outputs-section-structure.md) and [`Fn::ImportValue`](intrinsic-function-reference-importvalue.md)\.
 
 Prerequisites
 

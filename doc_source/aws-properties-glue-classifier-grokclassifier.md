@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-glue-classifier-grokclassifier-properties"></a>
 
-For more information, see [GrokClassifier Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-classifiers.html#aws-glue-api-crawler-classifiers-GrokClassifier) in the *AWS Glue Developer Guide*\.
+For more information, see [GrokClassifier Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-classifiers.html#aws-glue-api-crawler-classifiers-GrokClassifier) in the *AWS Glue Developer Guide*\.
 
 `CustomPatterns`  <a name="cfn-glue-classifier-grokclassifier-custompatterns"></a>
 Custom grok patterns that are used by this classifier\. It must match the URI address multi\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  

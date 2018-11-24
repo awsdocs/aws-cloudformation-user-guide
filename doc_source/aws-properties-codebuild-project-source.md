@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[GitCloneDepth](#cfn-codebuild-project-source-gitclonedepth)" : Integer,
   "[InsecureSsl](#cfn-codebuild-project-source-insecuressl)" : Boolean,
   "[Location](#cfn-codebuild-project-source-location)" : String,
+  "[ReportBuildStatus](#cfn-codebuild-project-source-reportbuildstatus)" : Boolean,
   "[Type](#cfn-codebuild-project-source-type)" : String
 }
 ```
@@ -28,10 +29,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [GitCloneDepth](#cfn-codebuild-project-source-gitclonedepth): Integer
 [InsecureSsl](#cfn-codebuild-project-source-insecuressl): Boolean
 [Location](#cfn-codebuild-project-source-location): String
+[ReportBuildStatus](#cfn-codebuild-project-source-reportbuildstatus): Boolean
 [Type](#cfn-codebuild-project-source-type): String
 ```
 
-## Properties<a name="w3ab2c21c14d300b7"></a>
+## Properties<a name="w4ab1c21c14d403b7"></a>
 
 `Auth`  <a name="cfn-codebuild-project-source-auth"></a>
 Information about the authorization settings for AWS CodeBuild to access the source code to be built\.  
@@ -41,26 +43,31 @@ Your code shouldn't get or set this information directly unless the project's so
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `BuildSpec`  <a name="cfn-codebuild-project-source-buildspec"></a>
-The build specification for the project\. If this value is not provided, then the source code must contain a build spec file named `buildspec.yml` at the root level\. If this value is provided, it can be either a single string containing the entire build specification, or the path to an alternate build spec file relative to the value of the built\-in environment variable `CODEBUILD_SRC_DIR`\. The alternate build spec file can have a name other than `buildspec.yml`, for example `myspec.yml` or `build_spec_qa.yml` or similar\. For more information, see the [http://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec-ref-example](http://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec-ref-example) in the *AWS CodeBuild User Guide*\.  
-*Required: *No  
+The build specification for the project\. If this value is not provided, then the source code must contain a build spec file named `buildspec.yml` at the root level\. If this value is provided, it can be either a single string containing the entire build specification, or the path to an alternate build spec file relative to the value of the built\-in environment variable `CODEBUILD_SRC_DIR`\. The alternate build spec file can have a name other than `buildspec.yml`, for example `myspec.yml` or `build_spec_qa.yml` or similar\. For more information, see the [https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec-ref-example](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec-ref-example) in the *AWS CodeBuild User Guide*\.  
+*Required*: No  
 *Type*: String
 
 `GitCloneDepth`  <a name="cfn-codebuild-project-source-gitclonedepth"></a>
 The depth of history to download\. Minimum value is 0\. If this value is 0, greater than 25, or not provided, then the full history is downloaded with each build project\. If your source type is Amazon S3, this value is not supported\.  
-*Required: *No  
+*Required*: No  
 *Type*: Integer
 
 `InsecureSsl`  <a name="cfn-codebuild-project-source-insecuressl"></a>
 This is used with GitHub Enterprise only\. Set to `true` to ignore SSL warnings while connecting to your GitHub Enterprise project repository\. The default value is `false`\. `InsecureSsl` should be used for testing purposes only\. It should not be used in a production environment\.  
-*Required: *No  
+*Required*: No  
 *Type*: Boolean
 
 `Location`  <a name="cfn-codebuild-project-source-location"></a>
-The location of the source code in the specified repository type\. For more information, see the [http://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli](http://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli) field in the *AWS CodeBuild User Guide*\.  
-*Required: *Conditional\. If you specify `CODEPIPELINE` for the `Type` property, don't specify this property\. For all of the other types, you must specify this property\.  
+The location of the source code in the specified repository type\. For more information, see the [https://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli](https://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli) field in the *AWS CodeBuild User Guide*\.  
+*Required*: Conditional\. If you specify `CODEPIPELINE` for the `Type` property, don't specify this property\. For all of the other types, you must specify this property\.  
 *Type*: String
 
+`ReportBuildStatus`  <a name="cfn-codebuild-project-source-reportbuildstatus"></a>
+This specifies whether to send your source provider the status of a build's start and completion\. If you set this with a source provider other than GitHub, an invalidInputException is thrown\.  
+*Required*: No  
+*Type*: Boolean
+
 `Type`  <a name="cfn-codebuild-project-source-type"></a>
-The type of repository that contains your source code\. For valid values, see the [http://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli](http://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli) field in the *AWS CodeBuild User Guide*\.  
-*Required: *Yes  
+The type of repository that contains your source code\. For valid values, see the [https://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli](https://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli) field in the *AWS CodeBuild User Guide*\.  
+*Required*: Yes  
 *Type*: String

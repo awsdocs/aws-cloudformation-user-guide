@@ -1,6 +1,6 @@
 # AWS::SSM::PatchBaseline<a name="aws-resource-ssm-patchbaseline"></a>
 
-The `AWS::SSM::PatchBaseline` resource defines the basic information for an Amazon EC2 Systems Manager patch baseline\. A patch baseline defines which patches are approved for installation on your instances\. For more information, see [ CreatePatchBaseline](http://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreatePatchBaseline.html) in the *Amazon EC2 Systems Manager API Reference*\.
+The `AWS::SSM::PatchBaseline` resource defines the basic information for an AWS Systems Manager patch baseline\. A patch baseline defines which patches are approved for installation on your instances\. For more information, see [ CreatePatchBaseline](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreatePatchBaseline.html) in the *AWS Systems Manager API Reference*\.
 
 ## Syntax<a name="aws-resource-ssm-patchbaseline-syntax"></a>
 
@@ -49,7 +49,7 @@ Properties:
 ## Properties<a name="aws-resource-ssm-patchbaseline-properties"></a>
 
 `OperatingSystem`  <a name="cfn-ssm-patchbaseline-operatingsystem"></a>
-Defines the operating system that the patch baseline applies to\. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `UBUNTU`, and `REDHAT_ENTERPRISE_LINUX`\. The default value is `WINDOWS`\.  
+Defines the operating system that the patch baseline applies to\. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `UBUNTU`, `REDHAT_ENTERPRISE_LINUX`, `SUSE`, and `CENTOS`\. The default value is `WINDOWS`\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
@@ -81,13 +81,13 @@ The compliance level for approved patches\. This means that if an approved patch
 `ApprovalRules`  <a name="cfn-ssm-patchbaseline-approvalrules"></a>
 A set of rules that are used to include patches in the baseline\.  
  *Required*: No  
- *Type*: [SSM PatchBaseline RuleGroup](aws-properties-ssm-patchbaseline-rulegroup.md)  
+ *Type*: [Systems Manager PatchBaseline RuleGroup](aws-properties-ssm-patchbaseline-rulegroup.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `GlobalFilters`  <a name="cfn-ssm-patchbaseline-globalfilters"></a>
 A set of global filters that are used to exclude patches from the baseline\.  
  *Required*: No  
- *Type*: [SSM PatchBaseline PatchFilterGroup](aws-properties-ssm-patchbaseline-patchfiltergroup.md)  
+ *Type*: [Systems Manager PatchBaseline PatchFilterGroup](aws-properties-ssm-patchbaseline-patchfiltergroup.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Name`  <a name="cfn-ssm-patchbaseline-name"></a>
@@ -104,7 +104,7 @@ A list of explicitly rejected patches for the baseline\.
 
 ## Return Values<a name="aws-resource-ssm-patchbaseline-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10e1052b9b3"></a>
+### Ref<a name="w4ab1c21c10e1195b9b3"></a>
 
 When you pass the logical ID of an `AWS::SSM::PatchBaseline` resource to the intrinsic `Ref` function, the function returns the physical ID of the resource, such as `pb-abcde1234567890yz`\. 
 
@@ -114,5 +114,4 @@ The ID of the default patch baseline provided by AWS is an ARN—for example `ar
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
 ## See Also<a name="aws-resource-ssm-patchbaseline-seealso"></a>
-
-+ [ CreatePatchBaseline](http://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreatePatchBaseline.html) in the *Amazon EC2 Systems Manager API Reference*
++ [ CreatePatchBaseline](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreatePatchBaseline.html) in the *AWS Systems Manager API Reference*

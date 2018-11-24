@@ -1,8 +1,8 @@
 # AWS::ApiGateway::DocumentationVersion<a name="aws-resource-apigateway-documentationversion"></a>
 
-The `AWS::ApiGateway::DocumentationVersion` resource creates a snapshot of the documentation for an Amazon API Gateway API entity\. For more information, see [Representation of API Documentation in API Gateway](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api-content-representation.html) in the *API Gateway Developer Guide*\.
+The `AWS::ApiGateway::DocumentationVersion` resource creates a snapshot of the documentation for an Amazon API Gateway API entity\. For more information, see [Representation of API Documentation in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api-content-representation.html) in the *API Gateway Developer Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-apigateway-documentationversion-syntax)
 + [Properties](#aws-resource-apigateway-documentationversion-properties)
 + [Example](#aws-resource-apigateway-documentationversion-examples)
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-documentationversion-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::DocumentationVersion"
+Type: AWS::ApiGateway::DocumentationVersion
 Properties:
   [Description](#cfn-apigateway-documentationversion-description): String
   [DocumentationVersion](#cfn-apigateway-documentationversion-documentationversion): String
@@ -37,7 +37,7 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-documentationversion-properties"></a>
 
 **Note**  
-For more information about each property, see [ DocumentationVersion](http://docs.aws.amazon.com/apigateway/api-reference/resource/documentation-version) in the *Amazon API Gateway REST API Reference*\.
+For more information about each property, see [ DocumentationVersion](https://docs.aws.amazon.com/apigateway/api-reference/resource/documentation-version) in the *Amazon API Gateway REST API Reference*\.
 
 `Description`  <a name="cfn-apigateway-documentationversion-description"></a>
 The description of the API documentation snapshot\.  
@@ -59,7 +59,7 @@ The identifier of the targeted API entity\.
 
 ## Example<a name="aws-resource-apigateway-documentationversion-examples"></a>
 
-### <a name="w3ab2c21c10c44c11b3"></a>
+### <a name="w4ab1c21c10c51c11b3"></a>
 
 The following example associates a documentation version with an API stage\.
 
@@ -197,27 +197,27 @@ Parameters:
     Type: String
 Resources:
   Deployment:
-    Type: 'AWS::ApiGateway::Deployment'
+    Type: AWS::ApiGateway::Deployment
     Properties:
       RestApiId: !Ref RestApi
     DependsOn:
       - Method
   DocumentationPart:
-    Type: 'AWS::ApiGateway::DocumentationPart'
+    Type: AWS::ApiGateway::DocumentationPart
     Properties:
       Location:
         Type: !Ref type
       RestApiId: !Ref RestApi
       Property: !Ref property
   DocumentationVersion:
-    Type: 'AWS::ApiGateway::DocumentationVersion'
+    Type: AWS::ApiGateway::DocumentationVersion
     Properties:
       Description: !Ref description
       DocumentationVersion: !Ref version
       RestApiId: !Ref RestApi
     DependsOn: DocumentationPart
   Method:
-    Type: 'AWS::ApiGateway::Method'
+    Type: AWS::ApiGateway::Method
     Properties:
       AuthorizationType: NONE
       HttpMethod: POST
@@ -228,11 +228,11 @@ Resources:
       Integration:
         Type: MOCK
   RestApi:
-    Type: 'AWS::ApiGateway::RestApi'
+    Type: AWS::ApiGateway::RestApi
     Properties:
       Name: !Ref apiName
   Stage:
-    Type: 'AWS::ApiGateway::Stage'
+    Type: AWS::ApiGateway::Stage
     Properties:
       DeploymentId: !Ref Deployment
       DocumentationVersion: !Ref version

@@ -1,26 +1,22 @@
 # AWS::ApplicationAutoScaling::ScalableTarget<a name="aws-resource-applicationautoscaling-scalabletarget"></a>
 
-The `AWS::ApplicationAutoScaling::ScalableTarget` resource specifies a resource that Application Auto Scaling can scale up or down\. For more information, see the [RegisterScalableTarget](http://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html) action in the *Application Auto Scaling API Reference*\.
+The `AWS::ApplicationAutoScaling::ScalableTarget` resource specifies a resource that Application Auto Scaling can scale up or down\. For more information, see the [RegisterScalableTarget](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html) action in the *Application Auto Scaling API Reference*\.
 
 Updates to `AWS::DynamoDB::Table` resources that are associated with `AWS::ApplicationAutoScaling::ScalableTarget` resources will always result in an update failure and then an update rollback failure\. The following `ScalableDimension` attributes cause this problem when associated with the table:
-
 + dynamodb:table:ReadCapacityUnits
-
 + dynamodb:table:WriteCapacityUnits
-
 + dynamodb:index:ReadCapacityUnits
-
 + dynamodb:index:WriteCapacityUnits
 
 As a workaround, please deregister scalable targets before performing updates to `AWS::DynamoDB::Table` resources\.
 
-
-+ [Syntax](#w3ab2c21c10c97c13)
-+ [Properties](#w3ab2c21c10c97c15)
+**Topics**
++ [Syntax](#w4ab1c21c10d102c13)
++ [Properties](#w4ab1c21c10d102c15)
 + [Return Value](#aws-resource-applicationautoscaling-scalabletarget-returnvalues)
 + [Examples](#aws-resource-applicationautoscaling-scalabletarget-examples)
 
-## Syntax<a name="w3ab2c21c10c97c13"></a>
+## Syntax<a name="w4ab1c21c10d102c13"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
@@ -44,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-applicationautoscaling-scalabletarget-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApplicationAutoScaling::ScalableTarget"
+Type: AWS::ApplicationAutoScaling::ScalableTarget
 Properties:
   [MaxCapacity](#cfn-applicationautoscaling-scalabletarget-maxcapacity): Integer
   [MinCapacity](#cfn-applicationautoscaling-scalabletarget-mincapacity): Integer
@@ -56,35 +52,35 @@ Properties:
   [ServiceNamespace](#cfn-applicationautoscaling-scalabletarget-servicenamespace): String
 ```
 
-## Properties<a name="w3ab2c21c10c97c15"></a>
+## Properties<a name="w4ab1c21c10d102c15"></a>
 
 `MaxCapacity`  <a name="cfn-applicationautoscaling-scalabletarget-maxcapacity"></a>
 The maximum value that Application Auto Scaling can use to scale a target during a scaling activity\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `MinCapacity`  <a name="cfn-applicationautoscaling-scalabletarget-mincapacity"></a>
 The minimum value that Application Auto Scaling can use to scale a target during a scaling activity\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ResourceId`  <a name="cfn-applicationautoscaling-scalabletarget-resourceid"></a>
-The resource identifier to associate with this scalable target\. This string consists of the resource type and unique identifier\. For more information, see the `ResourceId` parameter for the [RegisterScalableTarget](http://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html) action in the *Application Auto Scaling API Reference*, or see the [`ScalableTarget` examples](#aws-resource-applicationautoscaling-scalabletarget-examples)\.  
-*Required: *Yes  
+The resource identifier to associate with this scalable target\. This string consists of the resource type and unique identifier\. For more information, see the `ResourceId` parameter for the [RegisterScalableTarget](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html) action in the *Application Auto Scaling API Reference*, or see the [`ScalableTarget` examples](#aws-resource-applicationautoscaling-scalabletarget-examples)\.  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `RoleARN`  <a name="cfn-applicationautoscaling-scalabletarget-rolearn"></a>
 The Amazon Resource Name \(ARN\) of an AWS Identity and Access Management \(IAM\) role that allows Application Auto Scaling to modify your scalable target\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ScalableDimension`  <a name="cfn-applicationautoscaling-scalabletarget-scalabledimension"></a>
-The scalable dimension that's associated with the scalable target\. Specify the service namespace, resource type, and scaling property—for example, `ecs:service:DesiredCount` for the desired task count of an Amazon Elastic Container Service service\. For valid values, see the `ScalableDimension` content for the [ScalingPolicy](http://docs.aws.amazon.com/autoscaling/application/APIReference/API_ScalingPolicy.html) data type in the *Application Auto Scaling API Reference*\.  
-*Required: *Yes  
+The scalable dimension that's associated with the scalable target\. Specify the service namespace, resource type, and scaling property—for example, `ecs:service:DesiredCount` for the desired task count of an Amazon Elastic Container Service service\. For valid values, see the `ScalableDimension` content for the [ScalingPolicy](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_ScalingPolicy.html) data type in the *Application Auto Scaling API Reference*\.  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
@@ -95,14 +91,14 @@ The scheduled actions for the scalable target\. Duplicates aren't allowed\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ServiceNamespace`  <a name="cfn-applicationautoscaling-scalabletarget-servicenamespace"></a>
-The AWS service namespace of the scalable target\. For a list of service namespaces, see [AWS Service Namespaces](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *AWS General Reference*\.  
-*Required: *Yes  
+The namespace of the AWS service that provides the resource or `custom-resource` for a resource provided by your own application or service\. For valid AWS service namespace values, see the [RegisterScalableTarget](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html) action in the *Application Auto Scaling API Reference*\.   
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Value<a name="aws-resource-applicationautoscaling-scalabletarget-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10c97c17b2"></a>
+### Ref<a name="w4ab1c21c10d102c17b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the AWS CloudFormation\-generated ID of the resource, such as `service/ecsStack-MyECSCluster-AB12CDE3F4GH/ecsStack-MyECSService-AB12CDE3F4GH|ecs:service:DesiredCount|ecs`\.
 
@@ -112,7 +108,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ## Examples<a name="aws-resource-applicationautoscaling-scalabletarget-examples"></a>
 
-### Number of Tasks<a name="w3ab2c21c10c97c19b2"></a>
+### Number of Tasks<a name="w4ab1c21c10d102c19b2"></a>
 
 The following example creates a scalable target for an Amazon Elastic Container Service service\. Application Auto Scaling scales the number of tasks at a minimum of 1 task and a maximum of 2\.
 
@@ -146,7 +142,7 @@ scalableTarget:
     ServiceNamespace: ecs
 ```
 
-### Using `Fn::Join` and `Ref` to Construct the `ResourceId`<a name="w3ab2c21c10c97c19b4"></a>
+### Using `Fn::Join` and `Ref` to Construct the `ResourceId`<a name="w4ab1c21c10d102c19b4"></a>
 
 The following example uses the `Fn::Join` and `Ref` intrinsic functions to construct the `ResourceId` property of the scaling target\.
 
@@ -185,7 +181,7 @@ The following example uses the `Fn::Join` and `Ref` intrinsic functions to const
 
 ```
 SpotFleetScalingTarget:
-  Type: 'AWS::ApplicationAutoScaling::ScalableTarget'
+  Type: AWS::ApplicationAutoScaling::ScalableTarget
   Properties:
     MaxCapacity: 2
     MinCapacity: 1
@@ -351,7 +347,7 @@ This example sets up Application Auto Scaling for an `AWS::DynamoDB::Table` reso
 ```
 Resources:
   DDBTable:
-    Type: "AWS::DynamoDB::Table"
+    Type: AWS::DynamoDB::Table
     Properties:
       AttributeDefinitions:
         -
@@ -386,7 +382,7 @@ Resources:
         ReadCapacityUnits: 5
         WriteCapacityUnits: 5
   WriteCapacityScalableTarget:
-    Type: "AWS::ApplicationAutoScaling::ScalableTarget"
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
     Properties:
       MaxCapacity: 15
       MinCapacity: 5
@@ -398,7 +394,7 @@ Resources:
       ScalableDimension: dynamodb:table:WriteCapacityUnits
       ServiceNamespace: dynamodb
   ScalingRole:
-    Type: "AWS::IAM::Role"
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
@@ -429,7 +425,7 @@ Resources:
                   - "cloudwatch:DeleteAlarms"
                 Resource: "*"
   WriteScalingPolicy:
-    Type: "AWS::ApplicationAutoScaling::ScalingPolicy"
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
     Properties:
       PolicyName: WriteAutoScalingPolicy
       PolicyType: TargetTrackingScaling
@@ -659,7 +655,7 @@ Parameters:
     Default: '80'
 Resources:
   scalableTarget:
-    Type: 'AWS::ApplicationAutoScaling::ScalableTarget'
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
     Properties:
       ResourceId: !Join 
         - /
@@ -682,7 +678,7 @@ Resources:
           StartTime: '2018-11-28T22:14:41.951Z'
           Schedule: cron(0 0 12 ? * MON *)
   scalingRole:
-    Type: 'AWS::IAM::Role'
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Version: 2012-10-17
@@ -703,9 +699,9 @@ Resources:
                 Action: '*'
                 Resource: '*'
   cluster:
-    Type: 'AWS::ECS::Cluster'
+    Type: AWS::ECS::Cluster
   taskdefinition:
-    Type: 'AWS::ECS::TaskDefinition'
+    Type: AWS::ECS::TaskDefinition
     Properties:
       ContainerDefinitions:
         - Name: !Ref AppName
@@ -742,7 +738,7 @@ Resources:
             SourcePath: /var/lib/docker/vfs/dir/
           Name: my-vol
   service:
-    Type: 'AWS::ECS::Service'
+    Type: AWS::ECS::Service
     Properties:
       Cluster: !Ref cluster
       DesiredCount: 0

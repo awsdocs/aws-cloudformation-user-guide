@@ -42,7 +42,7 @@ The `Parameters` type contains a set of value pairs that represent the parameter
 12.     Description: "Name of an existing EC2 KeyPair to enable SSH access to the web server"
 ```
 
-## Nested Stack<a name="w3ab2c21c14d152c11"></a>
+## Nested Stack<a name="w4ab1c21c14d251c11"></a>
 
 You could use the following template to embed a stack \(myStackWithParams\) using the EC2ChooseAMI\.template and use the Parameters property in the AWS::CloudFormation::Stack resource to specify an InstanceType and KeyName:
 
@@ -55,7 +55,7 @@ You could use the following template to embed a stack \(myStackWithParams\) usin
  4.       "myStackWithParams" : {
  5.          "Type" : "AWS::CloudFormation::Stack",
  6.          "Properties" : {
- 7.             "TemplateURL" : "https://s3.amazonaws.com/cloudformation-templates-us-east-1/EC2ChooseAMI.template",
+ 7.             "TemplateURL" : "https://s3.amazonaws.com/cloudformation-templates-us-east-2/EC2ChooseAMI.template",
  8.             "Parameters" : {
  9.                "InstanceType" : "t1.micro",
 10.                "KeyName" : "mykey"
@@ -72,9 +72,9 @@ You could use the following template to embed a stack \(myStackWithParams\) usin
 1. AWSTemplateFormatVersion: "2010-09-09"
 2. Resources: 
 3.   myStackWithParams: 
-4.     Type: "AWS::CloudFormation::Stack"
+4.     Type: AWS::CloudFormation::Stack
 5.     Properties: 
-6.       TemplateURL: "https://s3.amazonaws.com/cloudformation-templates-us-east-1/EC2ChooseAMI.template"
+6.       TemplateURL: "https://s3.amazonaws.com/cloudformation-templates-us-east-2/EC2ChooseAMI.template"
 7.       Parameters: 
 8.         InstanceType: "t1.micro"
 9.         KeyName: "mykey"

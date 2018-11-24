@@ -1,6 +1,6 @@
 # Amazon CloudFront StreamingDistribution TrustedSigners<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners"></a>
 
-<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners-description"></a>The `TrustedSigners` property type specifies the AWS accounts, if any, that you want to allow to create signed URLs for private content for an Amazon CloudFront distribution\. For more information, see [TrustedSigners](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_TrustedSigners.html) in the *Amazon CloudFront API Reference*\.
+<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners-description"></a>The `TrustedSigners` property type specifies the AWS accounts, if any, that you want to allow to create signed URLs for private content for an Amazon CloudFront distribution\. For more information, see [TrustedSigners](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_TrustedSigners.html) in the *Amazon CloudFront API Reference*\.
 
 <a name="aws-properties-cloudfront-streamingdistribution-trustedsigners-inheritance"></a> `TrustedSigners` is a property of the [CloudFront StreamingDistribution StreamingDistributionConfig](aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.md) property type\. 
 
@@ -40,5 +40,4 @@ Specifies whether you want to require viewers to use signed URLs to access the f
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners-seealso"></a>
-
-+ [TrustedSigners](http://docs.aws.amazon.com/cloudfront/latest/APIReference/API_TrustedSigners.html) in the *Amazon CloudFront API Reference*
++ [TrustedSigners](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_TrustedSigners.html) in the *Amazon CloudFront API Reference*

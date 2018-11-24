@@ -2,7 +2,7 @@
 
 ## EC2 Block Device Mapping Examples<a name="scenario-ec2-bdm"></a>
 
-### EC2 Instance with Block Device Mapping<a name="w3ab2c17c24c39b3b2"></a>
+### EC2 Instance with Block Device Mapping<a name="w4ab1c17c23c39b3b2"></a>
 
 #### JSON<a name="quickref-ec2-example-1.json"></a>
 
@@ -50,7 +50,7 @@ EC2Instance:
             VolumeSize: 100
 ```
 
-### EC2 Instance with Ephemeral Drives<a name="w3ab2c17c24c39b3b4"></a>
+### EC2 Instance with Ephemeral Drives<a name="w4ab1c17c23c39b3b4"></a>
 
 #### JSON<a name="quickref-ec2-example-2.json"></a>
 
@@ -167,7 +167,7 @@ This example shows how to assign an existing VPC Elastic IP address to an Amazon
 
 ## Elastic Network Interface \(ENI\) Template Snippets<a name="cfn-template-snippets-eni"></a>
 
-### VPC\_EC2\_Instance\_With\_ENI<a name="w3ab2c17c24c39c13b3"></a>
+### VPC\_EC2\_Instance\_With\_ENI<a name="w4ab1c17c23c39c13b3"></a>
 
 Sample template showing how to create an instance with two elastic network interface \(ENI\)\. The sample assumes you have already created a VPC\. 
 
@@ -357,7 +357,7 @@ This snippet shows a simple AWS::EC2::Instance resource\.
 2.  "Type" : "AWS::EC2::Instance",
 3.  "Properties" : {
 4.      "AvailabilityZone" : "us-east-1a",
-5.      "ImageId" : "ami-20b65349"
+5.      "ImageId" : "ami-0ff8a91507f77f867"
 6.  }
 7. }
 ```
@@ -369,7 +369,7 @@ This snippet shows a simple AWS::EC2::Instance resource\.
 2.   Type: AWS::EC2::Instance
 3.   Properties:
 4.     AvailabilityZone: us-east-1a
-5.     ImageId: ami-20b65349
+5.     ImageId: ami-0ff8a91507f77f867
 ```
 
 ## Amazon EC2 Instance with Volume, Tag, and UserData Properties<a name="scenario-ec2-instance-with-vol-and-tags"></a>
@@ -398,7 +398,7 @@ This snippet shows an AWS::EC2::Instance resource with one Amazon EC2 volume, on
 17.       },
 18.      "InstanceType" : "m1.small",
 19.      "AvailabilityZone" : "us-east-1a",
-20.      "ImageId" : "ami-1e817677",
+20.      "ImageId" : "ami-0ff8a91507f77f867",
 21.      "Volumes" : [
 22.         { "VolumeId" : {
 23.              "Ref" : "logical name of AWS::EC2::Volume resource"
@@ -429,7 +429,7 @@ This snippet shows an AWS::EC2::Instance resource with one Amazon EC2 volume, on
 10.         TOPIC=${ logical name of an AWS::SNS::Topic resource }
 11.     InstanceType: m1.small
 12.     AvailabilityZone: us-east-1a
-13.     ImageId: ami-1e817677
+13.     ImageId: ami-0ff8a91507f77f867
 14.     Volumes:
 15.       -
 16.         VolumeId: !Ref logical name of AWS::EC2::Volume resource
@@ -460,7 +460,7 @@ This snippet shows an AWS::EC2::Instance resource with an Amazon SimpleDB domain
 11.          }
 12.       },
 13.      "AvailabilityZone" : "us-east-1a",
-14.      "ImageId" : "ami-20b65349"
+14.      "ImageId" : "ami-0ff8a91507f77f867"
 15.  }
 16. }
 ```
@@ -475,7 +475,7 @@ This snippet shows an AWS::EC2::Instance resource with an Amazon SimpleDB domain
 5.       Fn::Base64: !Sub |
 6.         Domain=${ logical name of an AWS::SDB::Domain resource }
 7.     AvailabilityZone: us-east-1a
-8.     ImageId: ami-20b65349
+8.     ImageId: ami-0ff8a91507f77f867
 ```
 
 ## Amazon EC2 Security Group Resource with Two CIDR Range Ingress Rules<a name="scenario-ec2-security-group-two-ports"></a>
@@ -635,7 +635,7 @@ This template shows an AWS::EC2::SecurityGroup resource that contains a security
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   myELB:
-    Type: 'AWS::ElasticLoadBalancing::LoadBalancer'
+    Type: AWS::ElasticLoadBalancing::LoadBalancer
     Properties:
       AvailabilityZones:
         - eu-west-1a
@@ -644,7 +644,7 @@ Resources:
           InstancePort: '80'
           Protocol: HTTP
   myELBIngressGroup:
-    Type: 'AWS::EC2::SecurityGroup'
+    Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: ELB ingress group
       SecurityGroupIngress:
@@ -770,7 +770,7 @@ This snippet shows the following resources: an Amazon EC2 instance using an Amaz
  3.    "Type" : "AWS::EC2::Instance",
  4.    "Properties" : {
  5.      "SecurityGroups" : [ { "Ref" : "InstanceSecurityGroup" } ],
- 6.      "ImageId" : "ami-76f0061f"
+ 6.      "ImageId" : "ami-0ff8a91507f77f867"
  7.    }
  8.  },
  9. 
@@ -791,7 +791,7 @@ This snippet shows the following resources: an Amazon EC2 instance using an Amaz
 24.    "Type" : "AWS::EC2::Volume",
 25.    "Properties" : {
 26.      "Size" : "100",
-27.      "AvailabilityZone" : { "Fn::GetAtt" : [ "Ec2Instance", "AvailabilityZone" ]},
+27.      "AvailabilityZone" : { "Fn::GetAtt" : [ "Ec2Instance", "AvailabilityZone" ]}
 28.    }
 29.  },
 30. 
@@ -815,7 +815,7 @@ This snippet shows the following resources: an Amazon EC2 instance using an Amaz
  4.     Properties:
  5.       SecurityGroups:
  6.       - !Ref InstanceSecurityGroup
- 7.       ImageId: ami-76f0061f
+ 7.       ImageId: ami-0ff8a91507f77f867
  8.   InstanceSecurityGroup:
  9.     Type: AWS::EC2::SecurityGroup
 10.     Properties:

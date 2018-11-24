@@ -16,8 +16,8 @@ Resources:
   MyEC2Instance: #An inline comment
     Type: "AWS::EC2::Instance"
     Properties: 
-      ImageId: "ami-2f726546" #Another comment -- This is a Linux AMI
-      InstanceType: t1.micro
+      ImageId: "ami-0ff8a91507f77f867" #Another comment -- This is a Linux AMI
+      InstanceType: t2.micro
       KeyName: testkey
       BlockDeviceMappings:
         -
@@ -38,10 +38,7 @@ AWS CloudFormation follows the ECMA\-404 JSON standard\. For more information ab
 
 YAML  
 AWS CloudFormation supports the YAML Version 1\.1 specification with a few exceptions\. AWS CloudFormation doesn't support the following features:  
-
 + The `binary`, `omap`, `pairs`, `set`, and `timestamp` tags
-
 + Aliases
-
 + Hash merges
 For more information about YAML, see [http://www\.yaml\.org](http://www.yaml.org)\.

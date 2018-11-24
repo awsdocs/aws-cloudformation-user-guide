@@ -2,7 +2,7 @@
 
 This section contains AWS Identity and Access Management template snippets\.
 
-
+**Topics**
 + [Declaring an IAM User Resource](#scenario-iam-user)
 + [Declaring an IAM Access Key Resource](#scenario-iam-accesskey)
 + [Declaring an IAM Group Resource](#scenario-iam-group)
@@ -176,7 +176,7 @@ You can also pass the AWS access key and secret key to an EC2 instance or Auto S
  2.    "Type" : "AWS::EC2::Instance",
  3.    "Properties" : {
  4.       "AvailabilityZone" : "us-east-1a",
- 5.       "ImageId" : "ami-20b65349",
+ 5.       "ImageId" : "ami-0ff8a91507f77f867",
  6.       "UserData" : {
  7.          "Fn::Base64" : {
  8.             "Fn::Join" : [
@@ -207,7 +207,7 @@ You can also pass the AWS access key and secret key to an EC2 instance or Auto S
 2.   Type: AWS::EC2::Instance
 3.   Properties:
 4.     AvailabilityZone: "us-east-1a"
-5.     ImageId: ami-20b65349
+5.     ImageId: ami-0ff8a91507f77f867
 6.     UserData:
 7.       Fn::Base64: !Sub "ACCESS_KEY=${myaccesskey}&SECRET_KEY=${myaccesskey.SecretAccessKey}
 ```
@@ -302,7 +302,7 @@ The `[AWS::IAM::UserToGroupAddition](aws-properties-iam-addusertogroup.md)` reso
 This snippet shows how to create a policy and apply it to multiple groups using an `[AWS::IAM::Policy](aws-resource-iam-policy.md)` resource named `mypolicy`\. The `mypolicy` resource contains a `PolicyDocument` property that allows `GetObject`, `PutObject`, and `PutObjectAcl` actions on the objects in the S3 bucket represented by the ARN `arn:aws:s3:::myAWSBucket`\. The `mypolicy` resource applies the policy to an existing group named `myexistinggroup1` and a group `mygroup` that is declared in the template as an `[AWS::IAM::Group](aws-properties-iam-group.md)` resource\. This example shows how to apply a policy to a group using the `Groups` property; however, you can alternatively use the `Users` property to add a policy document to a list of users\.
 
 **Important**  
-The Amazon SNS policy actions that are [declared in the `AWS::IAM::Policy` resource](#scenario-iam-policy) differ from the Amazon SNS topic policy actions that are [declared in the `AWS::SNS::TopicPolicy` resource](#scenario-sns-policy)\. For example, the policy actions `sns:Unsubscribe` and `sns:SetSubscriptionAttributes` are valid for the `AWS::IAM::Policy` resource, but are invalid for the `AWS::SNS::TopicPolicy` resource\. For more information about valid Amazon SNS policy actions that you can use with the `AWS::IAM::Policy` resource, see [Special Information for Amazon SNS Policies](http://docs.aws.amazon.com/sns/latest/dg/AccessPolicyLanguage_SpecialInfo.html) in the *Amazon Simple Notification Service Developer Guide*\. 
+The Amazon SNS policy actions that are [declared in the `AWS::IAM::Policy` resource](#scenario-iam-policy) differ from the Amazon SNS topic policy actions that are [declared in the `AWS::SNS::TopicPolicy` resource](#scenario-sns-policy)\. For example, the policy actions `sns:Unsubscribe` and `sns:SetSubscriptionAttributes` are valid for the `AWS::IAM::Policy` resource, but are invalid for the `AWS::SNS::TopicPolicy` resource\. For more information about valid Amazon SNS policy actions that you can use with the `AWS::IAM::Policy` resource, see [Special Information for Amazon SNS Policies](https://docs.aws.amazon.com/sns/latest/dg/AccessPolicyLanguage_SpecialInfo.html) in the *Amazon Simple Notification Service Developer Guide*\. 
 
 ### JSON<a name="quickref-iam-example-7.json"></a>
 
@@ -401,7 +401,7 @@ This snippet shows how to create a policy and apply it to an Amazon S3 bucket us
 This snippet shows how to create a policy and apply it to an Amazon SNS topic using the `[AWS::SNS::TopicPolicy](aws-properties-sns-policy.md)` resource\. The `mysnspolicy` resource contains a `PolicyDocument` property that allows the `[AWS::IAM::User](aws-properties-iam-user.md)` resource `myuser` to perform the `Publish` action on an `[AWS::SNS::Topic](aws-properties-sns-topic.md)` resource `mytopic`\. In the snippet, the `[Fn::GetAtt](intrinsic-function-reference-getatt.md)` function gets the ARN for the `myuser` resource and the `[Ref](intrinsic-function-reference-ref.md)` function gets the ARN for the `mytopic` resource\.
 
 **Important**  
-The Amazon SNS policy actions that are [declared in the `AWS::IAM::Policy` resource](#scenario-iam-policy) differ from the Amazon SNS topic policy actions that are [declared in the `AWS::SNS::TopicPolicy` resource](#scenario-sns-policy)\. For example, the policy actions `sns:Unsubscribe` and `sns:SetSubscriptionAttributes` are valid for the `AWS::IAM::Policy` resource, but are invalid for the `AWS::SNS::TopicPolicy` resource\. For more information about valid Amazon SNS policy actions that you can use with the `AWS::IAM::Policy` resource, see [Special Information for Amazon SNS Policies](http://docs.aws.amazon.com/sns/latest/dg/AccessPolicyLanguage_SpecialInfo.html) in the *Amazon Simple Notification Service Developer Guide*\. 
+The Amazon SNS policy actions that are [declared in the `AWS::IAM::Policy` resource](#scenario-iam-policy) differ from the Amazon SNS topic policy actions that are [declared in the `AWS::SNS::TopicPolicy` resource](#scenario-sns-policy)\. For example, the policy actions `sns:Unsubscribe` and `sns:SetSubscriptionAttributes` are valid for the `AWS::IAM::Policy` resource, but are invalid for the `AWS::SNS::TopicPolicy` resource\. For more information about valid Amazon SNS policy actions that you can use with the `AWS::IAM::Policy` resource, see [Special Information for Amazon SNS Policies](https://docs.aws.amazon.com/sns/latest/dg/AccessPolicyLanguage_SpecialInfo.html) in the *Amazon Simple Notification Service Developer Guide*\. 
 
 ### JSON<a name="quickref-iam-example-9.json"></a>
 
@@ -520,7 +520,7 @@ In this example, the instance profile is referenced by the `IamInstanceProfile` 
          "Type": "AWS::EC2::Instance",
          "Version": "2009-05-15",
          "Properties": {
-            "ImageId": "ami-205fba49",
+            "ImageId": "ami-0ff8a91507f77f867",
             "InstanceType": "m1.small",
             "Monitoring": "true",
             "DisableApiTermination": "false",
@@ -580,7 +580,7 @@ Resources:
     Type: AWS::EC2::Instance
     Version: '2009-05-15'
     Properties:
-      ImageId: ami-205fba49
+      ImageId: ami-0ff8a91507f77f867
       InstanceType: m1.small
       Monitoring: 'true'
       DisableApiTermination: 'false'
@@ -633,7 +633,7 @@ In this example, the instance profile is referenced by the `IamInstanceProfile` 
          "Type": "AWS::AutoScaling::LaunchConfiguration",
          "Version": "2009-05-15",
          "Properties": {
-            "ImageId": "ami-205fba49",
+            "ImageId": "ami-0ff8a91507f77f867",
             "InstanceType": "m1.small",
             "InstanceMonitoring": "true",
             "IamInstanceProfile": { "Ref": "RootInstanceProfile" }
@@ -702,7 +702,7 @@ Resources:
     Type: AWS::AutoScaling::LaunchConfiguration
     Version: '2009-05-15'
     Properties:
-      ImageId: ami-205fba49
+      ImageId: ami-0ff8a91507f77f867
       InstanceType: m1.small
       InstanceMonitoring: 'true'
       IamInstanceProfile:

@@ -24,9 +24,9 @@ Metadata:
     Description: "Information about the databases"
 ```
 
-## Metadata Keys<a name="w3ab2c17c15c15c11"></a>
+## Metadata Keys<a name="metadata-section-structure-keys"></a>
 
-Some AWS CloudFormation features retrieve settings or configuration information that you define from the `Metadata` section\. You define this information in the following AWS CloudFormation\-specific metadata keys:
+Some AWS CloudFormation features retrieve settings or configuration information that you define in the `Metadata` section\. You define this information in the following AWS CloudFormation\-specific metadata keys:
 
 `AWS::CloudFormation::Init`  
 Defines configuration tasks for the cfn\-init helper script\. This script is useful for configuring and installing applications on EC2 instances\. For more information, see [AWS::CloudFormation::Init](aws-resource-init.md)\.

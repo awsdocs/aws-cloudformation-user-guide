@@ -5,7 +5,7 @@ Custom resources enable you to write custom provisioning logic in templates that
 Use the [`AWS::CloudFormation::CustomResource`](aws-resource-cfn-customresource.md) or [`Custom::String`](aws-resource-cfn-customresource.md#aws-cfn-resource-type-name) resource type to define custom resources in your templates\. Custom resources require one property: the service token, which specifies where AWS CloudFormation sends requests to, such as an Amazon SNS topic\.
 
 **Note**  
-If you use the [VPC endpoint](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpoints.html) feature, custom resources in the VPC must have access to AWS CloudFormation\-specific S3 buckets\. Custom resources must send responses to a pre\-signed Amazon S3 URL\. If they can't send responses to Amazon S3, AWS CloudFormation won't receive a response and the stack operation fails\. For more information, see [AWS CloudFormation and VPC Endpoints](cfn-vpce-bucketnames.md)\.
+If you use the [VPC endpoint](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html) feature, custom resources in the VPC must have access to AWS CloudFormation\-specific S3 buckets\. Custom resources must send responses to a pre\-signed Amazon S3 URL\. If they can't send responses to Amazon S3, AWS CloudFormation won't receive a response and the stack operation fails\. For more information, see [Setting Up VPC Endpoints for AWS CloudFormation](cfn-vpce-bucketnames.md)\.
 
 ## How Custom Resources Work<a name="how-custom-resources-work"></a>
 
@@ -36,7 +36,7 @@ During a stack operation, sends a request to a service token that is specified i
    {
       "RequestType" : "Create",
       "ResponseURL" : "http://pre-signed-S3-url-for-response",
-      "StackId" : "arn:aws:cloudformation:us-west-2:EXAMPLE/stack-name/guid",
+      "StackId" : "arn:aws:cloudformation:us-west-2:123456789012:stack/stack-name/guid",
       "RequestId" : "unique id for this create request",
       "ResourceType" : "Custom::TestResource",
       "LogicalResourceId" : "MyTestResource",
@@ -49,7 +49,7 @@ During a stack operation, sends a request to a service token that is specified i
 **Note**  
 In this example, `ResourceProperties` allows AWS CloudFormation to create a custom payload to send to the Lambda function\.
 
-1. The custom resource provider processes the AWS CloudFormation request and returns a response of `SUCCESS` or `FAILED` to the pre\-signed URL\. The custom resource provider provides the response in a JSON\-formatted file and uploads it to the pre\-signed S3 URL\. For more information, see [Uploading Objects Using Pre\-Signed URLs](http://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html) in the *Amazon Simple Storage Service Developer Guide*\.
+1. The custom resource provider processes the AWS CloudFormation request and returns a response of `SUCCESS` or `FAILED` to the pre\-signed URL\. The custom resource provider provides the response in a JSON\-formatted file and uploads it to the pre\-signed S3 URL\. For more information, see [Uploading Objects Using Pre\-Signed URLs](https://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
    In the response, the custom resource provider can also include name\-value pairs that the template developer can access\. For example, the response can include output data if the request succeeded or an error message if the request failed\. For more information about responses, see [Custom Resource Response Objects](crpg-ref-responses.md)\.
 **Important**  
@@ -63,7 +63,7 @@ If the name\-value pairs contain sensitive information, you should use the `NoEc
    {
       "Status" : "SUCCESS",
       "PhysicalResourceId" : "TestResource1",
-      "StackId" : "arn:aws:cloudformation:us-west-2:EXAMPLE:stack/stack-name/guid",
+      "StackId" : "arn:aws:cloudformation:us-west-2:123456789012:stack/stack-name/guid",
       "RequestId" : "unique id for this create request",
       "LogicalResourceId" : "MyTestResource",
       "Data" : {
@@ -73,4 +73,4 @@ If the name\-value pairs contain sensitive information, you should use the `NoEc
    }
    ```
 
-1. After getting a `SUCCESS` response, AWS CloudFormation proceeds with the stack operation\. If a `FAILED` or no response is returned, the operation fails\. Any output data from the custom resource is stored in the pre\-signed URL location\. The template developer can retrieve that data by using the [`Fn::GetAtt`](intrinsic-function-reference-getatt.md) function\.
+1. After getting a `SUCCESS` response, AWS CloudFormation proceeds with the stack operation\. If a `FAILED` response or no response is returned, the operation fails\. Any output data from the custom resource is stored in the pre\-signed URL location\. The template developer can retrieve that data by using the [`Fn::GetAtt`](intrinsic-function-reference-getatt.md) function\.

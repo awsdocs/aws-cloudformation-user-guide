@@ -1,6 +1,6 @@
 # Creating a Stack<a name="using-cfn-cli-creating-stack"></a>
 
-To create a stack you run the `[aws cloudformation create\-stack](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html)` command\. You must provide the stack name, the location of a valid template, and any input parameters\.
+To create a stack you run the `[aws cloudformation create\-stack](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html)` command\. You must provide the stack name, the location of a valid template, and any input parameters\.
 
 Parameters are separated with a space and the key names are case sensitive\. If you mistype a parameter key name when you run `aws cloudformation create-stack`, AWS CloudFormation doesn't create the stack and reports that the template doesn't contain that parameter\.
 

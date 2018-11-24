@@ -1,6 +1,6 @@
 # Amazon S3 Bucket MetricsConfiguration<a name="aws-properties-s3-bucket-metricsconfiguration"></a>
 
-<a name="aws-properties-s3-bucket-metricsconfiguration-description"></a>The `MetricsConfiguration` property type specifies a metrics configuration for the CloudWatch request metrics \(specified by the metrics configuration ID\) from an Amazon S3 bucket\. If you're updating an existing metrics configuration, note that this is a full replacement of the existing metrics configuration\. If you don't include the elements you want to keep, they are erased\. For more information, see [ PUT Bucket metrics](http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTMetricConfiguration.html) in the *Amazon Simple Storage Service \(Amazon S3\) API Reference*\.
+<a name="aws-properties-s3-bucket-metricsconfiguration-description"></a>The `MetricsConfiguration` property type specifies a metrics configuration for the CloudWatch request metrics \(specified by the metrics configuration ID\) from an Amazon S3 bucket\. If you're updating an existing metrics configuration, note that this is a full replacement of the existing metrics configuration\. If you don't include the elements you want to keep, they are erased\. For more information, see [ PUT Bucket metrics](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTMetricConfiguration.html) in the *Amazon Simple Storage Service \(Amazon S3\) API Reference*\.
 
 <a name="aws-properties-s3-bucket-metricsconfiguration-inheritance"></a> `MetricsConfiguration` is a property of the [AWS::S3::Bucket](aws-properties-s3-bucket.md) resource\. 
 
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-s3-bucket-metricsconfiguration-properties"></a>
 
-For more information and valid values, see [PUT Bucket metrics](http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTMetricConfiguration.html) in the *Amazon Simple Storage Service \(Amazon S3\) API Reference*\.
+For more information and valid values, see [PUT Bucket metrics](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTMetricConfiguration.html) in the *Amazon Simple Storage Service \(Amazon S3\) API Reference*\.
 
 `Id`  <a name="cfn-s3-bucket-metricsconfiguration-id"></a>
 The ID used to identify the metrics configuration\.  

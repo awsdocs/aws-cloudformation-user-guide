@@ -1,12 +1,12 @@
 # AWS::SSM::Document<a name="aws-resource-ssm-document"></a>
 
-The `AWS::SSM::Document` resource creates an Amazon EC2 Systems Manager \(SSM\) document that describes an instance configuration, which you can use to set up and run commands on your instances\.
+The `AWS::SSM::Document` resource creates an SSM document in AWS Systems Manager that describes an instance configuration, which you can use to set up and run commands on your instances\.
 
-
+**Topics**
 + [Syntax](#aws-resource-ssm-document-syntax)
-+ [Properties](#w3ab2c21c10e1035b9)
-+ [Return Value](#w3ab2c21c10e1035c11)
-+ [Examples](#w3ab2c21c10e1035c13)
++ [Properties](#w4ab1c21c10e1180b9)
++ [Return Value](#w4ab1c21c10e1180c11)
++ [Examples](#w4ab1c21c10e1180c13)
 
 ## Syntax<a name="aws-resource-ssm-document-syntax"></a>
 
@@ -36,40 +36,40 @@ Properties:
     - Resource Tag
 ```
 
-## Properties<a name="w3ab2c21c10e1035b9"></a>
+## Properties<a name="w4ab1c21c10e1180b9"></a>
 
 `Content`  <a name="cfn-ssm-document-content"></a>
-A JSON object that describes an instance configuration\. For more information, see [Creating SSM Documents](http://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/create-ssm-doc.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
-The `Content` property is a non\-stringified property\. For more information about automation actions, see [Systems Manager Automation Actions](http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ami-actions.html) in the *Amazon EC2 Systems Manager User Guide*\.
-*Required: *Yes  
+A JSON object that describes an instance configuration\. For more information, see [Creating Systems Manager Documents](https://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/create-ssm-doc.html) in the *AWS Systems Manager User Guide*\.  
+The `Content` property is a non\-stringified property\. For more information about automation actions, see [Systems Manager Automation Document Reference](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ami-actions.html) in the *AWS Systems Manager User Guide*\.
+*Required*: Yes  
 *Type*: JSON object  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `DocumentType`  <a name="cfn-ssm-document-documenttype"></a>
-The type of document to create that relates to the purpose of your document, such as running commands, bootstrapping software, or automating tasks\. For valid values, see the [CreateDocument](http://docs.aws.amazon.com/ssm/latest/APIReference/API_CreateDocument.html) action in the *Amazon EC2 Systems Manager API Reference*\.  
-*Required: *No  
+The type of document to create that relates to the purpose of your document, such as running commands, bootstrapping software, or automating tasks\. For valid values, see the [CreateDocument](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateDocument.html) action in the *AWS Systems Manager API Reference*\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Tags`  <a name="cfn-ssm-document-tags"></a>
 AWS CloudFormation resource tags to apply to the document, which can help you identify and categorize these resources\.   
-*Required: *No  
+*Required*: No  
 *Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10e1035c11"></a>
+## Return Value<a name="w4ab1c21c10e1180c11"></a>
 
-### Ref<a name="w3ab2c21c10e1035c11b2"></a>
+### Ref<a name="w4ab1c21c10e1180c11b3"></a>
 
-When you pass the logical ID of an `AWS::SSM::Document` resource to the intrinsic `Ref` function, the function returns the SSM document name, such as `ssm-myinstanceconfig-ABCNPH3XCAO6`\.
+When you pass the logical ID of an `AWS::SSM::Document` resource to the intrinsic `Ref` function, the function returns the Systems Manager document name, such as `ssm-myinstanceconfig-ABCNPH3XCAO6`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w3ab2c21c10e1035c13"></a>
+## Examples<a name="w4ab1c21c10e1180c13"></a>
 
-### <a name="w3ab2c21c10e1035c13b2"></a>
+### <a name="w4ab1c21c10e1180c13b3"></a>
 
-The following SSM document joins instances to a directory in AWS Directory Service\. The three runtime configuration parameters specify which directory the instance joins\. You specify these parameter values when you associate the document with an instance\.
+The following Systems Manager document joins instances to a directory in AWS Directory Service\. The three runtime configuration parameters specify which directory the instance joins\. You specify these parameter values when you associate the document with an instance\.
 
 #### JSON<a name="aws-resource-ssm-document-example.json"></a>
 
@@ -140,7 +140,7 @@ document:
             dnsIpAddresses: "{{ dnsIpAddresses }}"
 ```
 
-### <a name="w3ab2c21c10e1035c13b4"></a>
+### <a name="w4ab1c21c10e1180c13b5"></a>
 
 The following example shows how to associate the SSM document with an instance\. The `DocumentName` property specifies the SSM document and the `AssociationParameters` property specifies values for the runtime configuration parameters\.
 

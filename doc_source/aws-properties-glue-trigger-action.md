@@ -39,5 +39,4 @@ UTF\-8 string–to–UTF\-8 string key\-value pairs that specify the arguments f
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-glue-trigger-action-seealso"></a>
-
-+ [ Action Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-Action) in the *AWS Glue Developer Guide*
++ [ Action Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-Action) in the *AWS Glue Developer Guide*

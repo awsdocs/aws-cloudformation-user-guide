@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-glue-crawler-schemachangepolicy-properties"></a>
 
-For more information, see [SchemaChangePolicy Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-crawling.html#aws-glue-api-crawler-crawling-SchemaChangePolicy) in the *AWS Glue Developer Guide*\.
+For more information, see [SchemaChangePolicy Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-crawling.html#aws-glue-api-crawler-crawling-SchemaChangePolicy) in the *AWS Glue Developer Guide*\.
 
 `UpdateBehavior`  <a name="cfn-glue-crawler-schemachangepolicy-updatebehavior"></a>
 The update behavior\. Valid values are `LOG` or `UPDATE_IN_DATABASE`\.  

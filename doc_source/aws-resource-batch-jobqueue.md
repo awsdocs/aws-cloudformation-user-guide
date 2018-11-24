@@ -1,8 +1,8 @@
 # AWS::Batch::JobQueue<a name="aws-resource-batch-jobqueue"></a>
 
-The `AWS::Batch::JobQueue` resource defines your AWS Batch job queue\. For more information, see [Job Queues](http://docs.aws.amazon.com/batch/latest/userguide/job_queues.html) in the *AWS Batch User Guide*\. 
+The `AWS::Batch::JobQueue` resource defines your AWS Batch job queue\. For more information, see [Job Queues](https://docs.aws.amazon.com/batch/latest/userguide/job_queues.html) in the *AWS Batch User Guide*\. 
 
-
+**Topics**
 + [Syntax](#aws-resource-batch-jobqueue-syntax)
 + [Properties](#aws-resource-batch-jobqueue-properties)
 + [Return Values](#aws-resource-batch-jobqueue-returnvalues)
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-batch-jobqueue-syntax.yaml"></a>
 
 ```
-Type: "AWS::Batch::JobQueue"
+Type: AWS::Batch::JobQueue
 Properties:
   [ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder): 
     - [*ComputeEnvironmentOrder*](aws-properties-batch-jobqueue-computeenvironmentorder.md) 
@@ -66,7 +66,7 @@ The name of the job queue\.
 
 ## Return Values<a name="aws-resource-batch-jobqueue-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10d140c10b2"></a>
+### Ref<a name="w4ab1c21c10d169c10b2"></a>
 
 When you pass the logical ID of an `AWS::Batch::JobQueue` resource to the intrinsic `Ref` function, the function returns the job queue ARN, such as `arn:aws:batch:us-east-1:111122223333:job-queue/HighPriority`\. 
 

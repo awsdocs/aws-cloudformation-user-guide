@@ -30,9 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `DefaultDimensionValue`  <a name="cfn-ses-configurationseteventdestination-dimensionconfiguration-defaultdimensionvalue"></a>
 The default value of the dimension that is published to Amazon CloudWatch if you do not provide the value of the dimension when you send an email\. The default value can:  
-
 + Contain ASCII letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), or dashes \(\-\)\.
-
 + Contain up to 256 characters\.
  *Required*: Yes  
  *Type*: String  
@@ -40,9 +38,7 @@ The default value of the dimension that is published to Amazon CloudWatch if you
 
 `DimensionName`  <a name="cfn-ses-configurationseteventdestination-dimensionconfiguration-dimensionname"></a>
 The name of an Amazon CloudWatch dimension associated with an email sending metric\. The name can:  
-
 + Contain ASCII letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), or dashes \(\-\)\.
-
 + Contain up to 256 characters\.
  *Required*: Yes  
  *Type*: String  
@@ -56,7 +52,5 @@ Valid values include: `emailHeader`, `linkTag`, and `messageTag`\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ses-configurationseteventdestination-dimensionconfiguration-seealso"></a>
-
 + [Using Amazon SES Configuration Sets](url-ses-dev;using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*
-
-+ [CloudWatchDimensionConfiguration](http://docs.aws.amazon.com/ses/latest/APIReference/API_CloudWatchDimensionConfiguration.html) in the *Amazon Simple Email Service API Reference*
++ [CloudWatchDimensionConfiguration](https://docs.aws.amazon.com/ses/latest/APIReference/API_CloudWatchDimensionConfiguration.html) in the *Amazon Simple Email Service API Reference*

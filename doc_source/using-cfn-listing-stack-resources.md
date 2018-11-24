@@ -1,6 +1,6 @@
 # Listing Resources<a name="using-cfn-listing-stack-resources"></a>
 
-Immediately after you run the `[aws cloudformation create\-stack](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html)` command, you can list its resources using the [http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-stack-resources.html](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-stack-resources.html) command\. This command lists a summary of each resource in the stack that you specify with the `--stack-name` parameter\. The report includes a summary of the stack, including the creation or deletion status\.
+Immediately after you run the `[aws cloudformation create\-stack](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html)` command, you can list its resources using the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-stack-resources.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-stack-resources.html) command\. This command lists a summary of each resource in the stack that you specify with the `--stack-name` parameter\. The report includes a summary of the stack, including the creation or deletion status\.
 
 The following example shows the resources for the `myteststack` stack:
 

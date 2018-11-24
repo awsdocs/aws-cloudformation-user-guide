@@ -27,22 +27,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-triggerconfig-properties"></a>
 
-For more information about each property, including constraints and valid values, see [TriggerConfig](http://docs.aws.amazon.com/codedeploy/latest/APIReference/API_TriggerConfig.html) in the *AWS CodeDeploy API Reference*\.
+For more information about each property, including constraints and valid values, see [TriggerConfig](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_TriggerConfig.html) in the *AWS CodeDeploy API Reference*\.
 
 `TriggerEvents`  <a name="cfn-codedeploy-deploymentgroup-triggerconfig-triggerevents"></a>
 The event type or types that trigger notifications\.  
-*Required: *No  
+*Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `TriggerName`  <a name="cfn-codedeploy-deploymentgroup-triggerconfig-triggername"></a>
 The name of the notification trigger\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `TriggerTargetArn`  <a name="cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service topic through which notifications about deployment or instance events are sent\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

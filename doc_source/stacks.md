@@ -4,12 +4,12 @@ A stack is a collection of AWS resources that you can manage as a single unit\. 
 
 AWS CloudFormation ensures all stack resources are created or deleted as appropriate\. Because AWS CloudFormation treats the stack resources as a single unit, they must all be created or deleted successfully for the stack to be created or deleted\. If a resource cannot be created, AWS CloudFormation rolls the stack back and automatically deletes any resources that were created\. If a resource cannot be deleted, any remaining resources are retained until the stack can be successfully deleted\.
 
-You can work with stacks by using the AWS CloudFormation [console](https://console.aws.amazon.com/cloudformation/), [API](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/), or [AWS CLI](http://docs.aws.amazon.com/cli/latest/reference/cloudformation)\.
+You can work with stacks by using the AWS CloudFormation [console](https://console.aws.amazon.com/cloudformation/), [API](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/), or [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/cloudformation)\.
 
 **Note**  
 You are charged for the stack resources for the time they were operating \(even if you deleted the stack right away\)\.
 
-
+**Topics**
 + [Using the AWS CloudFormation Console](cfn-using-console.md)
 + [Using the AWS Command Line Interface](cfn-using-cli.md)
 + [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)

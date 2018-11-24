@@ -21,7 +21,7 @@ After you create a change set, you can view the proposed changes before executin
 
 **To view a change set \(AWS CLI\)**
 
-1. To get the ID of the change set, run the [aws cloudformation list\-change\-sets](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-change-sets.html) command\.
+1. To get the ID of the change set, run the [aws cloudformation list\-change\-sets](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-change-sets.html) command\.
 
    Specify the stack ID of the stack that has the change set that you want to view, as shown in the following example:
 
@@ -62,7 +62,7 @@ After you create a change set, you can view the proposed changes before executin
    }
    ```
 
-1. Run the [aws cloudformation describe\-change\-set](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-change-set.html) command, specifying the ID of the change set that you want to view\. For example:
+1. Run the [aws cloudformation describe\-change\-set](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-change-set.html) command, specifying the ID of the change set that you want to view\. For example:
 
    ```
    aws cloudformation describe-change-set --change-set-name arn:aws:cloudformation:us-east-1:123456789012:changeSet/SampleChangeSet/1a2345b6-0000-00a0-a123-00abc0abc000
@@ -122,6 +122,6 @@ After you create a change set, you can view the proposed changes before executin
    }
    ```
 
-   The `Changes` key lists changes to resources\. If you were to execute this change set, AWS CloudFormation would update the tags of the `i-1abc23d4` EC2 instance\. For a description of each field, see the [Change](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Change.html) data type in the *AWS CloudFormation API Reference*\.
+   The `Changes` key lists changes to resources\. If you were to execute this change set, AWS CloudFormation would update the tags of the `i-1abc23d4` EC2 instance\. For a description of each field, see the [Change](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Change.html) data type in the *AWS CloudFormation API Reference*\.
 
    For additional examples of change sets, see [Example Change Sets](using-cfn-updating-stacks-changesets-samples.md)\.

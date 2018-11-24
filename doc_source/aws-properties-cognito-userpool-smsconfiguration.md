@@ -26,9 +26,9 @@
 The external ID used in IAM role trust relationships\.  
 For more information about using external IDs, see [How to Use an External ID When Granting Access to Your AWS Resources to a Third Party](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html) in the *AWS Identity and Access Management User Guide*\.  
 *Type*: String  
-*Required: *No
+*Required*: No
 
 `SnsCallerArn`  <a name="cfn-cognito-userpool-smsconfiguration-snscallerarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service \(SNS\) caller\.  
 *Type*: String  
-*Required: *Yes
+*Required*: Yes

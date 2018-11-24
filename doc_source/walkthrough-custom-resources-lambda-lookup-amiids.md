@@ -4,7 +4,7 @@ AWS CloudFormation templates that declare an Amazon Elastic Compute Cloud \(Amaz
 
 Normally, you might map AMI IDs to specific instance types and regions\. To update the IDs, you manually change them in each of your templates\. By using custom resources and AWS Lambda \(Lambda\), you can create a function that gets the IDs of the latest AMIs for the region and instance type that you're using so that you don't have to maintain mappings\.
 
-This walkthrough shows you how to create a custom resource and associate a Lambda function with it to look up AMI IDs\. Note that the walkthrough assumes that you understand how to use custom resources and Lambda\. For more information, see [Custom Resources](template-custom-resources.md) or the [AWS Lambda Developer Guide](http://docs.aws.amazon.com/lambda/latest/dg/)\.
+This walkthrough shows you how to create a custom resource and associate a Lambda function with it to look up AMI IDs\. Note that the walkthrough assumes that you understand how to use custom resources and Lambda\. For more information, see [Custom Resources](template-custom-resources.md) or the [AWS Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/)\.
 
 Walkthrough Overview
 
@@ -51,11 +51,11 @@ The function takes an instance's architecture and region as inputs from an AWS C
 
 1. Choose or create a bucket that's located in the same region in which you'll create your AWS CloudFormation stack\. Record the bucket name\.
 
-   You'll save the sample package in this bucket\. For more information about creating a bucket, see [Creating a Bucket](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/CreatingaBucket.html) in the *Amazon Simple Storage Service Console User Guide*\.
+   You'll save the sample package in this bucket\. For more information about creating a bucket, see [Creating a Bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/CreatingaBucket.html) in the *Amazon Simple Storage Service Console User Guide*\.
 
 1. Upload the sample package to the bucket that you chose or created\.
 
-   For more information about uploading objects, see [Uploading Objects](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/UploadingObjectsintoAmazonS3.html) in the *Amazon Simple Storage Service Console User Guide*\.
+   For more information about uploading objects, see [Uploading Objects](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/UploadingObjectsintoAmazonS3.html) in the *Amazon Simple Storage Service Console User Guide*\.
 
 With the package in Amazon S3, you can now specify its location in the Lambda resource declaration of the AWS CloudFormation template\. The next step demonstrates how you declare the function and invoke it by using a custom resource\. You'll also see how to use the results of the function to specify the AMI ID of an EC2 instance\.
 
@@ -306,7 +306,7 @@ If stack creation succeeds, all resources in the stack, such as the Lambda funct
 
 To see which AMI ID AWS CloudFormation used to create the EC2 instance, view the stack outputs\.
 
-If the Lambda function returns an error, view the function's logs in the Amazon CloudWatch Logs [console](https://console.aws.amazon.com/cloudwatch/home#logs:)\. The name of the log stream is the physical ID of the custom resource, which you can find by viewing the stack's resources\. For more information, see [Viewing Log Data](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/ViewingLogData.html) in the *Amazon CloudWatch User Guide*\.
+If the Lambda function returns an error, view the function's logs in the Amazon CloudWatch Logs [console](https://console.aws.amazon.com/cloudwatch/home#logs:)\. The name of the log stream is the physical ID of the custom resource, which you can find by viewing the stack's resources\. For more information, see [Viewing Log Data](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/ViewingLogData.html) in the *Amazon CloudWatch User Guide*\.
 
 ## Step 3: Clean Up Resources<a name="walkthrough-custom-resources-lambda-lookup-amiids-createfunction-cleanup"></a>
 
@@ -324,6 +324,5 @@ All the resources that you created are deleted\.
 
 Now that you understand how to create and use Lambda functions with AWS CloudFormation, you can use the sample template and code from this walkthrough to build other stacks and functions\.
 
-## Related Information<a name="w3ab2c17c26c14b7c29"></a>
-
+## Related Information<a name="w4ab1c17c25c14b7c29"></a>
 + [AWS CloudFormation Custom Resource Reference](crpg-ref.md)

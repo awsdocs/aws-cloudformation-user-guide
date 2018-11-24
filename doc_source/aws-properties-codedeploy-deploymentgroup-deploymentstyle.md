@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 [DeploymentOption](#cfn-codedeploy-deploymentgroup-deploymentstyle-deploymentoption): String
-  [DeploymentType](#cfn-codedeploy-deploymentgroup-deploymentstyle-deploymenttype): String
+[DeploymentType](#cfn-codedeploy-deploymentgroup-deploymentstyle-deploymenttype): String
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-deploymentstyle-properties"></a>
@@ -35,15 +35,14 @@ Indicates whether to route deployment traffic behind a load balancer\.
 
 `DeploymentType`  <a name="cfn-codedeploy-deploymentgroup-deploymentstyle-deploymenttype"></a>
 Indicates whether to run an in\-place or blue/green deployment\.  
-AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only\. For more information about deploying on a AWS Lambda compute platform, see [ Deployments on an AWS Lambda Compute Platform](http://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-steps.html#deployment-steps-lambda) in the *AWS CodeDeploy User Guide*\.  
+AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only\. For more information about deploying on a AWS Lambda compute platform, see [ Deployments on an AWS Lambda Compute Platform](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-steps.html#deployment-steps-lambda) in the *AWS CodeDeploy User Guide*\.  
  *Required*: No  
  *Type*: String  
  *Valid values*: `IN_PLACE` or `BLUE_GREEN`  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-codedeploy-deploymentgroup-deploymentstyle-seealso"></a>
-
-+ [ DeploymentStyle](http://docs.aws.amazon.com/codedeploy/latest/APIReference/API_DeploymentStyle.html) in the *AWS CodeDeploy API Reference*
++ [ DeploymentStyle](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_DeploymentStyle.html) in the *AWS CodeDeploy API Reference*
 
 ## Example<a name="aws-properties-codedeploy-deploymentgroup-deploymentstyle-examples"></a>
 
@@ -88,5 +87,4 @@ CodeDeployDeploymentGroup:
 ```
 
 ## See Also<a name="aws-properties-codedeploy-deploymentgroup-deploymentstyle-seealso"></a>
-
-+ [ DeploymentStyle](http://docs.aws.amazon.com/codedeploy/latest/APIReference/API_DeploymentStyle.html) in the *AWS CodeDeploy API Reference*
++ [ DeploymentStyle](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_DeploymentStyle.html) in the *AWS CodeDeploy API Reference*

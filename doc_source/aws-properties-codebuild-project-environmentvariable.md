@@ -26,23 +26,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [Value](#cfn-codebuild-project-environmentvariable-value): String
 ```
 
-## Properties<a name="w3ab2c21c14d296b9"></a>
+## Properties<a name="w4ab1c21c14d397b9"></a>
 
 `Name`  <a name="cfn-codebuild-project-environmentvariable-name"></a>
 The name of an environment variable\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String
 
 `Type`  <a name="cfn-codebuild-project-environmentvariable-type"></a>
 The type of environment variable\. Valid values are:  
-
 + `PARAMETER_STORE`: An environment variable stored in Systems Manager Parameter Store\.
-
 + `PLAINTEXT`: An environment variable in plaintext format\.
 *Required: *No  
 *Type*: String
 
 `Value`  <a name="cfn-codebuild-project-environmentvariable-value"></a>
 The value of the environment variable\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String

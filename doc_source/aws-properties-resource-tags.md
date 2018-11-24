@@ -6,16 +6,13 @@ You can use the AWS CloudFormation Resource Tags property to apply tags to resou
 Tagging implementations might vary by resource\. For example, AWS::AutoScaling::AutoScalingGroup provides an additional, required `PropagateAtLaunch` property as part of its tagging scheme\.
 
 In addition to any tags you define, AWS CloudFormation automatically creates the following stack\-level tags with the prefix `aws:`:
-
 + `aws:cloudformation:logical-id`
-
 + `aws:cloudformation:stack-id`
-
 + `aws:cloudformation:stack-name`
 
 All stack\-level tags, including automatically created tags, are propagated to resources that AWS CloudFormation supports\. Currently, tags are not propagated to Amazon EBS volumes that are created from block device mappings\.
 
-## Syntax<a name="w3ab2c21c14e1450c13"></a>
+## Syntax<a name="w4ab1c21c14e1729c13"></a>
 
 ### JSON<a name="aws-properties-resource-tags-syntax.json"></a>
 
@@ -33,7 +30,7 @@ All stack\-level tags, including automatically created tags, are propagated to r
 [Value](#cfn-resource-tags-value): String
 ```
 
-## Properties<a name="w3ab2c21c14e1450c15"></a>
+## Properties<a name="w4ab1c21c14e1729c15"></a>
 
 `Key`  <a name="cfn-resource-tags-key"></a>
 The key name of the tag\. You can specify a value that is 1 to 127 Unicode characters in length and cannot be prefixed with `aws:`\. You can use any of the following characters: the set of Unicode letters, digits, whitespace, `_`, `.`, `/`, `=`, `+`, and `-`\.  
@@ -53,15 +50,15 @@ This example shows a `Tags` property\. You specify this property within the `Pro
 
 ```
  1. "Tags" : [
- 2.       {
- 3.         "Key" : "keyname1",
- 4.         "Value" : "value1"
- 5.       },
- 6.       {
- 7.         "Key" : "keyname2",
- 8.         "Value" : "value2"
- 9.       }
-10.     ]
+ 2.    {
+ 3.       "Key" : "keyname1",
+ 4.       "Value" : "value1"
+ 5.    },
+ 6.    {
+ 7.       "Key" : "keyname2",
+ 8.       "Value" : "value2"
+ 9.    }
+10. ]
 ```
 
 ### YAML<a name="aws-properties-resource-tags-example.yaml"></a>
@@ -76,8 +73,6 @@ This example shows a `Tags` property\. You specify this property within the `Pro
 7.     Value: "value2"
 ```
 
-## See Also<a name="w3ab2c21c14e1450c19"></a>
-
+## See Also<a name="w4ab1c21c14e1729c19"></a>
 + [Setting Stack Options](cfn-console-add-tags.md)
-
 + [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)

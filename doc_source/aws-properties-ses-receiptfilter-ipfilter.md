@@ -40,7 +40,5 @@ A single IP address or a range of IP addresses that you want to block or allow, 
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ses-receiptfilter-ipfilter-seealso"></a>
-
 + [Using Amazon SES Configuration Sets](url-ses-dev;using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*
-
-+ [ReceiptIpFilter](http://docs.aws.amazon.com/ses/latest/APIReference/API_ReceiptIpFilter.html) in the *Amazon Simple Email Service API Reference*
++ [ReceiptIpFilter](https://docs.aws.amazon.com/ses/latest/APIReference/API_ReceiptIpFilter.html) in the *Amazon Simple Email Service API Reference*

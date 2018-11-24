@@ -156,14 +156,14 @@ If you didn't make changes to the custom resource, AWS CloudFormation won't send
       "StackId" : "arn:aws:cloudformation:us-west-2:123456789012:stack/stack-name/guid",
       "RequestId" : "uniqueid for this update request",
       "LogicalResourceId" : "MySeleniumTester",
-      "ResourceType" : "Custom::SeleniumTester"  
+      "ResourceType" : "Custom::SeleniumTester",  
       "PhysicalResourceId" : "Tester1",
       "ResourceProperties" : {
          "seleniumTester" : "SeleniumTest()",
          "endpoints" : [ "http://mysite.com", "http://myecommercesite.com/", "http://search.mysite.com",
             "http://mynewsite.com" ],
          "frequencyOfTestsPerHour" : [ "3", "2", "4", "3" ]
-      }
+      },
       "OldResourceProperties" : {
          "seleniumTester" : "SeleniumTest()",
          "endpoints" : [ "http://mysite.com", "http://myecommercesite.com/", "http://search.mysite.com" ],
@@ -238,10 +238,7 @@ For detailed information about the request and response objects involved in `Upd
 
 For detailed information about the request and response objects involved in `Delete` requests, see [Delete](crpg-ref-requesttypes-delete.md) in the [Custom Resource Reference](crpg-ref.md)\.
 
-### See Also<a name="w3ab2c17c26c12b5c12"></a>
-
+### See Also<a name="w4ab1c17c25c12b5c12"></a>
 + [AWS CloudFormation Custom Resource Reference](crpg-ref.md)
-
 + [AWS::CloudFormation::CustomResource](aws-resource-cfn-customresource.md)
-
 + [Fn::GetAtt](intrinsic-function-reference-getatt.md)

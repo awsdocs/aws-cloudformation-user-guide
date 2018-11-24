@@ -2,7 +2,7 @@
 
 The ElasticLoadBalancing policy type is an embedded property of the [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md) resource\. You associate policies with a [listener](aws-properties-ec2-elb-listener.md) by referencing a policy's name in the listener's `PolicyNames` property\.
 
-## Syntax<a name="w3ab2c21c14d834b5"></a>
+## Syntax<a name="w4ab1c21c14e1088b5"></a>
 
 ### JSON<a name="aws-properties-ec2-elb-policy-syntax.json"></a>
 
@@ -31,34 +31,34 @@ The ElasticLoadBalancing policy type is an embedded property of the [AWS::Elasti
 [PolicyType](#cfn-ec2-elb-policy-policytype): String
 ```
 
-## Properties<a name="w3ab2c21c14d834b7"></a>
+## Properties<a name="w4ab1c21c14e1088b7"></a>
 
 `Attributes`  <a name="cfn-ec2-elb-policy-attributes"></a>
 A list of arbitrary attributes for this policy\. If you don't need to specify any policy attributes, specify an empty list \(`[]`\)\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: List of JSON name\-value pairs\.
 
 `InstancePorts`  <a name="cfn-ec2-elb-policy-instanceports"></a>
 A list of instance ports for the policy\. These are the ports associated with the back\-end server\.  
-*Required: *No  
+*Required*: No  
 *Type*: List of String values
 
 `LoadBalancerPorts`  <a name="cfn-ec2-elb-policy-loadbalancerports"></a>
 A list of external load balancer ports for the policy\.  
-*Required*: Only for some policies\. For more information, see the *[Elastic Load Balancing Developer Guide](http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/Welcome.html)*\.  
+*Required*: Only for some policies\. For more information, see the *[Elastic Load Balancing Developer Guide](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/Welcome.html)*\.  
 *Type*: List of String values
 
 `PolicyName`  <a name="cfn-ec2-elb-policy-policyname"></a>
 A name for this policy that is unique to the load balancer\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String
 
 `PolicyType`  <a name="cfn-ec2-elb-policy-policytype"></a>
 The name of the policy type for this policy\. This must be one of the types reported by the Elastic Load Balancing [DescribeLoadBalancerPolicyTypes](http://docs.aws.amazon.com/ElasticLoadBalancing/latest/APIReference/API_DescribeLoadBalancerPolicyTypes.html) action\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String
 
-## Examples<a name="w3ab2c21c14d834b9"></a>
+## Examples<a name="w4ab1c21c14e1088b9"></a>
 
 This example shows a snippet of the policies section of an elastic load balancer listener\.
 
@@ -113,7 +113,7 @@ This example shows a snippet of the policies section of an elastic load balancer
 }]
 ```
 
-In the following snippet, the load balancer uses a predefined security policy\. These predefined policies are provided by Elastic Load Balancing\. For more information, see [SSL Security Policies](http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/elb-security-policy-options.html) in the *Elastic Load Balancing User Guide*\.
+In the following snippet, the load balancer uses a predefined security policy\. These predefined policies are provided by Elastic Load Balancing\. For more information, see [SSL Security Policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-security-policy-table.html) in the *User Guide for Classic Load Balancers*\.
 
 ```
 "Policies" : [{
@@ -126,10 +126,7 @@ In the following snippet, the load balancer uses a predefined security policy\. 
 }]
 ```
 
-## See Also<a name="w3ab2c21c14d834c11"></a>
-
+## See Also<a name="w4ab1c21c14e1088c11"></a>
 + [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md)
-
 + [ElasticLoadBalancing AppCookieStickinessPolicy Type](aws-properties-ec2-elb-AppCookieStickinessPolicy.md)
-
 + [ElasticLoadBalancing LBCookieStickinessPolicy Type](aws-properties-ec2-elb-LBCookieStickinessPolicy.md)

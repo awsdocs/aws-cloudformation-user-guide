@@ -2,7 +2,7 @@
 
 The Amazon Elastic Block Store block device type is an embedded property of the [Amazon EC2 Block Device Mapping Property](aws-properties-ec2-blockdev-mapping.md) property\.
 
-## Syntax<a name="w3ab2c21c14d566b5"></a>
+## Syntax<a name="w4ab1c21c14d711b5"></a>
 
 ### JSON<a name="aws-properties-ec2-blockdev-template-syntax.json"></a>
 
@@ -28,40 +28,40 @@ The Amazon Elastic Block Store block device type is an embedded property of the 
 [VolumeType](#cfn-ec2-blockdev-template-volumetype): String
 ```
 
-## Properties<a name="w3ab2c21c14d566b7"></a>
+## Properties<a name="w4ab1c21c14d711b7"></a>
 
 `DeleteOnTermination`  <a name="cfn-ec2-blockdev-template-deleteontermination"></a>
 Determines whether to delete the volume on instance termination\. The default value is `true`\.  
-*Required: *No  
+*Required*: No  
 *Type*: Boolean
 
 `Encrypted`  <a name="cfn-ec2-blockdev-template-encrypted"></a>
-Indicates whether the volume is encrypted\. Encrypted Amazon EBS volumes can only be attached to instance types that support Amazon EBS encryption\. Volumes that are created from encrypted snapshots are automatically encrypted\. You cannot create an encrypted volume from an unencrypted snapshot or vice versa\. If your AMI uses encrypted volumes, you can only launch the AMI on supported instance types\. For more information, see [Amazon EBS encryption](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
-*Required: *No  
+Indicates whether the volume is encrypted\. Encrypted Amazon EBS volumes can only be attached to instance types that support Amazon EBS encryption\. Volumes that are created from encrypted snapshots are automatically encrypted\. You cannot create an encrypted volume from an unencrypted snapshot or vice versa\. If your AMI uses encrypted volumes, you can only launch the AMI on supported instance types\. For more information, see [Amazon EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+*Required*: No  
 *Type*: Boolean
 
 `Iops`  <a name="cfn-ec2-blockdev-template-iops"></a>
 The number of I/O operations per second \(IOPS\) that the volume supports\. This can be an integer from 100 – 20000\.  
-*Required: *Conditional Required when the [volume type](#cfn-ec2-blockdev-template-volumetype) is `io1`; not used with other volume types\.  
+*Required*: Conditional Required when the [volume type](#cfn-ec2-blockdev-template-volumetype) is `io1`; not used with other volume types\.  
 *Type*: Number
 
 `SnapshotId`  <a name="cfn-ec2-blockdev-template-snapshotid"></a>
 The snapshot ID of the volume to use to create a block device\.  
-*Required: *Conditional If you specify both `SnapshotId` and `VolumeSize`, `VolumeSize` must be equal or greater than the size of the snapshot\.  
+*Required*: Conditional If you specify both `SnapshotId` and `VolumeSize`, `VolumeSize` must be equal or greater than the size of the snapshot\.  
 *Type*: String
 
 `VolumeSize`  <a name="cfn-ec2-blockdev-template-volumesize"></a>
-The volume size, in gibibytes \(GiB\)\. For valid values, see the `Size` parameter for the [CreateVolume](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVolume.html) action in the *Amazon EC2 API Reference*\.  
-*Required: *Conditional If you specify both `SnapshotId` and `VolumeSize`, `VolumeSize` must be equal or greater than the size of the snapshot\.  
+The volume size, in gibibytes \(GiB\)\. For valid values, see the `Size` parameter for the [CreateVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVolume.html) action in the *Amazon EC2 API Reference*\.  
+*Required*: Conditional If you specify both `SnapshotId` and `VolumeSize`, `VolumeSize` must be equal or greater than the size of the snapshot\.  
 *Type*: String  
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 `VolumeType`  <a name="cfn-ec2-blockdev-template-volumetype"></a>
-The volume type\. If you set the type to `io1`, you must also set the `Iops` property\. For valid values, see the `VolumeType` parameter for the [CreateVolume](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVolume.html) action in the *Amazon EC2 API Reference*\.  
-*Required: *No  
+The volume type\. If you set the type to `io1`, you must also set the `Iops` property\. For valid values, see the `VolumeType` parameter for the [CreateVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVolume.html) action in the *Amazon EC2 API Reference*\.  
+*Required*: No  
 *Type*: String
 
-## Example<a name="w3ab2c21c14d566b9"></a>
+## Example<a name="w4ab1c21c14d711b9"></a>
 
 ```
 {
@@ -76,6 +76,5 @@ The volume type\. If you set the type to `io1`, you must also set the `Iops` pro
 }
 ```
 
-## See Also<a name="w3ab2c21c14d566c11"></a>
-
+## See Also<a name="w4ab1c21c14d711c11"></a>
 + [CreateVolume](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVolume.html) in the *Amazon Elastic Compute Cloud API Reference*

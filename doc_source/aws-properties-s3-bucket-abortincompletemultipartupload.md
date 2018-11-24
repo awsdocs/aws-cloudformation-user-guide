@@ -1,6 +1,6 @@
 # Amazon S3 Bucket AbortIncompleteMultipartUpload<a name="aws-properties-s3-bucket-abortincompletemultipartupload"></a>
 
-The `AbortIncompleteMultipartUpload` property type creates a lifecycle rule that aborts incomplete multipart uploads to an Amazon S3 bucket\. When Amazon S3 aborts a multipart upload, it deletes all parts associated with the multipart upload\. For more information, see [ Aborting Incomplete Multipart Uploads Using a Bucket Lifecycle Policy](http://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config) in the *Amazon Simple Storage Service Developer Guide*\.
+The `AbortIncompleteMultipartUpload` property type creates a lifecycle rule that aborts incomplete multipart uploads to an Amazon S3 bucket\. When Amazon S3 aborts a multipart upload, it deletes all parts associated with the multipart upload\. For more information, see [ Aborting Incomplete Multipart Uploads Using a Bucket Lifecycle Policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config) in the *Amazon Simple Storage Service Developer Guide*\.
 
  `AbortIncompleteMultipartUpload` is a property of the [Amazon S3 Bucket Rule](aws-properties-s3-bucket-lifecycleconfig-rule.md) property type\.
 

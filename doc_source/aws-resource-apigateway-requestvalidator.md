@@ -1,10 +1,10 @@
 # AWS::ApiGateway::RequestValidator<a name="aws-resource-apigateway-requestvalidator"></a>
 
-The `AWS::ApiGateway::RequestValidator` resource sets up basic validation rules for incoming requests to your API Gateway API\. For more information, see [ Enable Basic Request Validation for an API in API Gateway](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html) in the *API Gateway Developer Guide*\.
+The `AWS::ApiGateway::RequestValidator` resource sets up basic validation rules for incoming requests to your API Gateway API\. For more information, see [ Enable Basic Request Validation for an API in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html) in the *API Gateway Developer Guide*\.
 
-
+**Topics**
 + [Syntax](#aws-resource-apigateway-requestvalidator-syntax)
-+ [Properties](#w3ab2c21c10c68b9)
++ [Properties](#w4ab1c21c10c73b9)
 + [Return Value](#aws-resource-apigateway-requestvalidator-returnvalues)
 + [Example](#aws-resource-apigateway-requestvalidator-examples)
 
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-apigateway-requestvalidator-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::RequestValidator"
+Type: AWS::ApiGateway::RequestValidator
 Properties:
   [Name](#cfn-apigateway-requestvalidator-name): String
   [RestApiId](#cfn-apigateway-requestvalidator-restapiid): String
@@ -37,32 +37,32 @@ Properties:
   [ValidateRequestParameters](#cfn-apigateway-requestvalidator-validaterequestparameters): Boolean
 ```
 
-## Properties<a name="w3ab2c21c10c68b9"></a>
+## Properties<a name="w4ab1c21c10c73b9"></a>
 
 **Note**  
-For more information about each property, see [ RequestValidator](http://docs.aws.amazon.com/apigateway/api-reference/resource/request-validator) in the *Amazon API Gateway REST API Reference*\.
+For more information about each property, see [ RequestValidator](https://docs.aws.amazon.com/apigateway/api-reference/resource/request-validator) in the *Amazon API Gateway REST API Reference*\.
 
 `Name`  <a name="cfn-apigateway-requestvalidator-name"></a>
 The name of this request validator\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `RestApiId`  <a name="cfn-apigateway-requestvalidator-restapiid"></a>
 The identifier of the targeted API entity\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ValidateRequestBody`  <a name="cfn-apigateway-requestvalidator-validaterequestbody"></a>
 Indicates whether to validate the request body according to the configured schema for the targeted API and method\.  
-*Required: *No  
+*Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ValidateRequestParameters`  <a name="cfn-apigateway-requestvalidator-validaterequestparameters"></a>
 Indicates whether to validate request parameters\.  
-*Required: *No  
+*Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
@@ -76,7 +76,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ## Example<a name="aws-resource-apigateway-requestvalidator-examples"></a>
 
-### <a name="w3ab2c21c10c68c13b3"></a>
+### <a name="w4ab1c21c10c73c13b3"></a>
 
 The following example creates an API Gateway API with an associated request validator, based on the supplied parameters\.
 
@@ -142,11 +142,11 @@ Parameters:
     Type: String
 Resources:
   RestApi:
-    Type: 'AWS::ApiGateway::RestApi'
+    Type: AWS::ApiGateway::RestApi
     Properties:
       Name: !Ref apiName
   RequestValidator:
-    Type: 'AWS::ApiGateway::RequestValidator'
+    Type: AWS::ApiGateway::RequestValidator
     Properties:
       Name: !Ref validatorName
       RestApiId: !Ref RestApi

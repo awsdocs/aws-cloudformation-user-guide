@@ -1,6 +1,6 @@
 # AWS::SSM::MaintenanceWindowTask<a name="aws-resource-ssm-maintenancewindowtask"></a>
 
-The `AWS::SSM::MaintenanceWindowTask` resource defines information about a task for a Maintenance Window for Amazon EC2 Systems Manager\. For more information, see [ RegisterTaskWithMaintenanceWindow](http://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterTaskWithMaintenanceWindow.html) in the *Amazon EC2 Systems Manager API Reference*\.
+The `AWS::SSM::MaintenanceWindowTask` resource defines information about a task for a Maintenance Window for AWS Systems Manager\. For more information, see [ RegisterTaskWithMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterTaskWithMaintenanceWindow.html) in the *AWS Systems Manager API Reference*\.
 
 ## Syntax<a name="aws-resource-ssm-maintenancewindowtask-syntax"></a>
 
@@ -87,12 +87,10 @@ The maximum number of targets that you can run this task for, in parallel\.
 
 `Targets`  <a name="cfn-ssm-maintenancewindowtask-targets"></a>
 The targets, either instances or tags\.  
-
 + Specify instances using `Key=instanceids,Values=instanceid1,instanceid2`\.
-
 + Specify tags using `Key=tag name,Values=tag value`\.
  *Required*: Yes  
- *Type*: List of [SSM MaintenanceWindowTask Target](aws-properties-ssm-maintenancewindowtask-target.md)  
+ *Type*: List of [Systems Manager MaintenanceWindowTask Target](aws-properties-ssm-maintenancewindowtask-target.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Name`  <a name="cfn-ssm-maintenancewindowtask-name"></a>
@@ -113,7 +111,7 @@ For `STEP_FUNCTION` tasks, `TaskArn` is the state machine ARN\.
 `TaskInvocationParameters`  <a name="cfn-ssm-maintenancewindowtask-taskinvocationparameters"></a>
 The parameters for task execution\.  
  *Required*: No  
- *Type*: [SSM MaintenanceWindowTask TaskInvocationParameters](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md)  
+ *Type*: [Systems Manager MaintenanceWindowTask TaskInvocationParameters](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `WindowId`  <a name="cfn-ssm-maintenancewindowtask-windowid"></a>
@@ -124,6 +122,7 @@ The ID of the Maintenance Window where the task is registered\.
 
 `TaskParameters`  <a name="cfn-ssm-maintenancewindowtask-taskparameters"></a>
 The parameters to pass to the task when it's executed\.  
+`TaskParameters` has been deprecated\. To specify parameters to pass to a task when it runs, instead use the `Parameters` option in the `TaskInvocationParameters` structure\. For information about how Systems Manager handles these options for the supported Maintenance Window task types, see [AWS Systems Manager MaintenanceWindowTask TaskInvocationParameters](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md)\.
  *Required*: No  
  *Type*: JSON object  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
@@ -136,22 +135,20 @@ The type of task\. Valid values: `RUN_COMMAND`, `AUTOMATION`, `LAMBDA`, `STEP_FU
 
 `LoggingInfo`  <a name="cfn-ssm-maintenancewindowtask-logginginfo"></a>
 Information about an Amazon S3 bucket to write task\-level logs to\.  
+`LoggingInfo` has been deprecated\. To specify an S3 bucket to contain logs, instead use the `OutputS3BucketName` and `OutputS3KeyPrefix` options in the `TaskInvocationParameters` structure\. For information about how Systems Manager handles these options for the supported Maintenance Window task types, see [AWS Systems Manager MaintenanceWindowTask TaskInvocationParameters](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md)\.
  *Required*: No  
- *Type*: [SSM MaintenanceWindowTask LoggingInfo](aws-properties-ssm-maintenancewindowtask-logginginfo.md)  
+ *Type*: [Systems Manager MaintenanceWindowTask LoggingInfo](aws-properties-ssm-maintenancewindowtask-logginginfo.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-ssm-maintenancewindowtask-returnvalues"></a>
 
-### Ref<a name="w3ab2c21c10e1046b9b3"></a>
+### Ref<a name="w4ab1c21c10e1189b9b3"></a>
 
-When you pass the logical ID of an `AWS::SSM::MaintenanceWindowTask` resource to the intrinsic `Ref` function, the function returns the physical ID of the resource, such as `12a345b6-bbb7-4bb6-90b0-8c9577a2d2b9`\. 
+When you pass the logical ID of an `AWS::SSM::MaintenanceWindowTask` resource to the intrinsic `Ref` function, the function returns the maintenance window task ID, such as `12a345b6-bbb7-4bb6-90b0-8c9577a2d2b9`\. 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
 ## See Also<a name="aws-resource-ssm-maintenancewindowtask-seealso"></a>
-
 + [AWS::SSM::MaintenanceWindow](aws-resource-ssm-maintenancewindow.md)
-
 + [AWS::SSM::MaintenanceWindowTarget](aws-resource-ssm-maintenancewindowtarget.md)
-
-+ [ RegisterTaskWithMaintenanceWindow](http://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterTaskWithMaintenanceWindow.html) in the *Amazon EC2 Systems Manager API Reference*
++ [ RegisterTaskWithMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterTaskWithMaintenanceWindow.html) in the *AWS Systems Manager API Reference*

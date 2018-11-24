@@ -2,7 +2,9 @@
 
 `Ec2TagFilters` is a property of the [AWS::CodeDeploy::DeploymentGroup](aws-resource-codedeploy-deploymentgroup.md) resource that specifies which EC2 instances to associate with the deployment group\.
 
-## Syntax<a name="w3ab2c21c14d352b5"></a>
+For information on using tags and tag groups to help manage your Amazon EC2 instances and on\-premises instances, see [Tagging Instances for Deployment Groups in AWS CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-tagging.html) in the *AWS CodeDeploy User Guide*\.
+
+## Syntax<a name="w4ab1c21c14d457b7"></a>
 
 ### JSON<a name="aws-properties-codedeploy-deploymentgroup-ec2tagfilters-syntax.json"></a>
 
@@ -22,19 +24,19 @@
 [Value](#cfn-properties-codedeploy-deploymentgroup-ec2tagfilters-value): String
 ```
 
-## Properties<a name="w3ab2c21c14d352b7"></a>
+## Properties<a name="w4ab1c21c14d457b9"></a>
 
 `Key`  <a name="cfn-properties-codedeploy-deploymentgroup-ec2tagfilters-key"></a>
 Filter instances with this key\.  
-*Required: *No  
+*Required*: No  
 *Type*: String
 
 `Type`  <a name="cfn-properties-codedeploy-deploymentgroup-ec2tagfilters-type"></a>
-The filter type\. For example, you can filter instances by the key, tag value, or both\. For valid values, see [EC2TagFilter](http://docs.aws.amazon.com/codedeploy/latest/APIReference/API_EC2TagFilter.html) in the *AWS CodeDeploy API Reference*\.  
-*Required: *Yes  
+The filter type\. For example, you can filter instances by the key, tag value, or both\. For valid values, see [EC2TagFilter](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_EC2TagFilter.html) in the *AWS CodeDeploy API Reference*\.  
+*Required*: Yes  
 *Type*: String
 
 `Value`  <a name="cfn-properties-codedeploy-deploymentgroup-ec2tagfilters-value"></a>
 Filter instances with this tag value\.  
-*Required: *No  
+*Required*: No  
 *Type*: String

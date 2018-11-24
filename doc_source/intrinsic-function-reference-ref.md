@@ -1,9 +1,7 @@
 # `Ref`<a name="intrinsic-function-reference-ref"></a>
 
 The intrinsic function `Ref` returns the value of the specified *parameter* or *resource*\.
-
 + When you specify a parameter's logical name, it returns the value of the parameter\.
-
 + When you specify a resource's logical name, it returns a value that you can typically use to refer to that resource, such as a [physical ID](resources-section-structure.md)\.
 
 When you are declaring a resource in a template and you need to specify another template resource by name, you can use the `Ref` to refer to that other resource\. In general, `Ref` returns the name of the resource\. For example, a reference to an [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md) returns the name of that Auto Scaling group resource\.
@@ -15,7 +13,7 @@ At the bottom of this topic, there is a table that lists the values returned for
 **Tip**  
 You can also use `Ref` to add values to Output messages\.
 
-## Declaration<a name="w3ab2c21c28c69c15"></a>
+## Declaration<a name="ref-declaration"></a>
 
 ### JSON<a name="intrinsic-function-reference-ref-syntax.json"></a>
 
@@ -37,16 +35,16 @@ Syntax for the short form:
 !Ref logicalName
 ```
 
-## Parameters<a name="w3ab2c21c28c69c17"></a>
+## Parameters<a name="ref-parameters"></a>
 
 logicalName  
 The logical name of the resource or parameter you want to dereference\.
 
-## Return Value<a name="w3ab2c21c28c69c19"></a>
+## Return Value<a name="ref-return-value"></a>
 
 The physical ID of the resource or the value of the parameter\.
 
-## Example<a name="w3ab2c21c28c69c21"></a>
+## Example<a name="ref-example"></a>
 
 The following resource declaration for an Elastic IP address needs the instance ID of an EC2 instance and uses the `Ref` function to specify the instance ID of the MyEC2Instance resource:
 
@@ -70,17 +68,19 @@ MyEIP:
     InstanceId: !Ref MyEC2Instance
 ```
 
-## Supported Functions<a name="w3ab2c21c28c69c23"></a>
+## Supported Functions<a name="ref-supported-functions"></a>
 
 You cannot use any functions in the `Ref` function\. You must specify a string that is a resource logical ID\.
 
-## Resource Return Examples<a name="w3ab2c21c28c69c25"></a>
+## Resource Return Examples<a name="ref-resource-return-examples"></a>
 
 This section lists sample values returned by `Ref` for particular AWS CloudFormation resources\. For more information about `Ref` return values for a particular resource or property, refer to the documentation for that resource or property\.
 
 
 | Resource Type | Reference Value | Example Return Value | 
 | --- | --- | --- | 
+| [AWS::AmazonMQ::Broker](aws-resource-amazonmq-broker.md) | Amazon MQ broker ID | b\-1234a5b6\-78cd\-901e\-2fgh\-3i45j6k178l9 | 
+| [AWS::AmazonMQ::Configuration](aws-resource-amazonmq-configuration.md) | Amazon MQ configuration ID | c\-1234a5b6\-78cd\-901e\-2fgh\-3i45j6k178l9 | 
 |  [AWS::ApiGateway::Account](aws-resource-apigateway-account.md)  |  API Gateway account resource ID  |  `mysta-accou-01234b567890example`  | 
 |  [AWS::ApiGateway::ApiKey](aws-resource-apigateway-apikey.md)  |  API key  |  `m2m1k7sybf`  | 
 |  [AWS::ApiGateway::Authorizer](aws-resource-apigateway-authorizer.md)  |  Authorizer resource ID  |  `abcde1`  | 
@@ -92,7 +92,7 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::ApiGateway::Resource](aws-resource-apigateway-resource.md)  |  API Gateway resource ID  |  `abc123`  | 
 |  [AWS::ApiGateway::RestApi](aws-resource-apigateway-restapi.md)  |  Rest API resource ID  |  `a1bcdef2gh`  | 
 |  [AWS::ApiGateway::Stage](aws-resource-apigateway-stage.md)   |  Stage name  |  `MyTestStage`  | 
-| [AWS::ApplicationAutoScaling::ScalableTarget](aws-resource-applicationautoscaling-scalabletarget.md) |  Scalable Target ID  |  `service/ecsStack-MyECSCluster-AB12CDE3F4GH/ecsStack-MyECSService-AB12CDE3F4GH|ecs:service:DesiredCount|ecs`  | 
+| [AWS::ApplicationAutoScaling::ScalableTarget](aws-resource-applicationautoscaling-scalabletarget.md) |  Scalable Target ID  |  `service/ecsStack-MyECSCluster-AB12CDE3F4GH/ecsStack-MyECSService-AB12CDE3F4GH\|ecs:service:DesiredCount\|ecs`  | 
 | [AWS::ApplicationAutoScaling::ScalingPolicy](aws-resource-applicationautoscaling-scalingpolicy.md) |  Application Auto Scaling policy Amazon Resource Name \(ARN\)  | arn:aws:autoscaling:us\-east\-1:123456789012:scalingPolicy:12ab3c4d\-56789\-0ef1\-2345\-6ghi7jk8lm90:resource/ecs/service/ecsStack\-MyECSCluster\-AB12CDE3F4GH/ecsStack\-MyECSService\-AB12CDE3F4GH:policyName/MyStepPolicy | 
 |  [AWS::Athena::NamedQuery](aws-resource-athena-namedquery.md)  |  Named query name  |  `abc123`  | 
 |  [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md)  |  Name  |  `mystack-myasgroup-NT5EUXTNTXXD`  | 
@@ -108,7 +108,7 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::CloudFormation::Stack](aws-properties-stack.md)  |  Stack ID  |  `arn:aws:cloudformation:``us-east-2``:803981987763:stack/mystack-mynestedstack-sggfrhxhum7w/f449b250-b969-11e0-a185-5081d0136786`  | 
 |  [AWS::CloudFormation::WaitCondition](aws-properties-waitcondition.md)  |  Name  |  `arn:aws:cloudformation:``us-east-2``:803981987763:stack/mystack/c325e210-bdf2-11e0-9638-50690880c386/mywaithandle`  | 
 |  [AWS::CloudFormation::WaitConditionHandle](aws-properties-waitconditionhandle.md)  |  Wait Condition Signal URL  |  `https://cloudformation-waitcondition-``us-east-2``.s3.amazonaws.com/arn%3Aaws%3Acloudformation%3A``us-east-2``%3A803981987763%3Astack%2Fwaittest%2F054a33d0-bdee-11e0-8816-5081c490a786%2FmyWaitHandle?Expires=1312475488&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&Signature=tUsrW3WvWVT46K69zMmgbEkwVGo%3D`  | 
-|  [AWS::CloudFront::Distribution](aws-properties-cloudfront-distribution.md)  |  Distribution ID  |  `E27LVI50CSW06W`  | 
+|  [AWS::CloudFront::Distribution](aws-resource-cloudfront-distribution.md)  |  Distribution ID  |  `E27LVI50CSW06W`  | 
 |  [AWS::CloudTrail::Trail](aws-resource-cloudtrail-trail.md)  |  Trail name  |  `awscloudtrail-example`  | 
 |  [AWS::CloudWatch::Alarm](aws-properties-cw-alarm.md)  |  Name  |  `mystack-myalarm-3AOHFRGOXR5T`  | 
 |  [AWS::CodeBuild::Project](aws-resource-codebuild-project.md)  |  Project name  |  `myProjectName`  | 
@@ -118,6 +118,7 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 | [AWS::CodeDeploy::DeploymentGroup](aws-resource-codedeploy-deploymentgroup.md) |  Deployment group name  |  `mydeploymentgroup-a123d0d1`  | 
 | [AWS::CodePipeline::CustomActionType](aws-resource-codepipeline-customactiontype.md) |  Custom action name  |  `mysta-MyCus-A1BCDEFGHIJ2`  | 
 | [AWS::CodePipeline::Pipeline](aws-resource-codepipeline-pipeline.md) |  Pipeline name  |  `mysta-MyPipeline-A1BCDEFGHIJ2`  | 
+| [AWS::CodePipeline::Webhook](aws-resource-codepipeline-webhook.md) |  Webhook name  |  `MyFirstPipeline-SourceAction1-Webhook-utb9LrOl24Kk`  | 
 | [AWS::Config::ConfigRule](aws-resource-config-configrule.md) |  Configuration rule name  |  `mystack-MyConfigRule-12ABCFPXHV4OV`  | 
 | [AWS::Config::ConfigurationRecorder](aws-resource-config-configurationrecorder.md) |  Configuration recorder name  |  `default`  | 
 | [AWS::Config::DeliveryChannel](aws-resource-config-deliverychannel.md) |  Delivery channel name  |  `default`  | 
@@ -130,7 +131,7 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::EC2::EIPAssociation](aws-properties-ec2-eip-association.md)  |  Name  |  `mystack-myeipa-1NU3IL8LJ313N`  | 
 |  [AWS::EC2::FlowLog](aws-resource-ec2-flowlog.md)  |  Flow log ID  |  `fl-1a23b456`  | 
 |  [AWS::EC2::Host](aws-resource-ec2-host.md)  |  Host ID  |  `h-0ab123c45d67ef89`  | 
-|  [AWS::EC2::Instance](aws-properties-ec2-instance.md)  |  Instance ID  |  `i-636be302`  | 
+|  [AWS::EC2::Instance](aws-properties-ec2-instance.md)  |  Instance ID  |  `i-1234567890abcdef0`  | 
 |  [AWS::EC2::NatGateway](aws-resource-ec2-natgateway.md)  |  NAT gateway ID  |  `nat-0a12bc456789de0fg`  | 
 |  [AWS::EC2::NetworkInterfacePermission](aws-resource-ec2-networkinterfacepermission.md)  |  Network interface permission ID  |  `eni-perm-055663b682ea24b48`  | 
 |  [AWS::EC2::PlacementGroup](aws-resource-ec2-placementgroup.md)  |  Placement group name  |  `mystack-myplacementgroup-CU6107MRVLR7`  | 
@@ -150,6 +151,7 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::ECS::TaskDefinition](aws-resource-ecs-taskdefinition.md)  |  Task definition ARN  |  `arn:aws:ecs:us-west-2:123456789012:task-definition/TaskDefinitionFamily:1`  | 
 |  [AWS::EFS::FileSystem](aws-resource-efs-filesystem.md)  |  File system ID  |  `fs-47a2c22e`  | 
 |  [AWS::EFS::MountTarget](aws-resource-efs-mounttarget.md)  |  Mount target ID  |  `fsmt-55a4413c`  | 
+|  [AWS::EKS::Cluster](aws-resource-eks-cluster.md)  |  Name  |  `EKSCluster-NT5EUXTNTXXD`  | 
 |  [AWS::ElastiCache::ReplicationGroup](aws-resource-elasticache-replicationgroup.md)  |  Name  |  `abc12xmy3d1w3hv6`  | 
 |  [AWS::ElastiCache::SubnetGroup](aws-properties-elasticache-subnetgroup.md)  |  Name  |  `myCachesubnetgroup`  | 
 |  [AWS::ElasticLoadBalancingV2::Listener](aws-resource-elasticloadbalancingv2-listener.md)  |  Listener's Amazon Resource Name \(ARN\)  |  `arn:aws:elasticloadbalancing:us-west-2:123456789012:listener/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2`  | 
@@ -185,11 +187,15 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::IAM::AccessKey](aws-properties-iam-accesskey.md)  |  AccessKeyId  |  `AKIAIOSFODNN7EXAMPLE`  | 
 |  [AWS::IAM::Group](aws-properties-iam-group.md)  |  Group name  |  `mystack-mygroup-1DZETITOWEKVO`  | 
 |  [AWS::IAM::ManagedPolicy](aws-resource-iam-managedpolicy.md)  |  Policy ARN  |  `arn:aws:iam::123456789012:policy/teststack-CreateTestDBPolicy-16M23YE3CS700`  | 
+|  [AWS::IAM::Role](aws-resource-iam-role.md)  |  Name  |  `MyRole`  | 
 |  [AWS::IAM::User](aws-properties-iam-user.md)  |  User name  |  `mystack-myuser-1CCXAFG2H2U4D`  | 
 | [AWS::IoT::Certificate](aws-resource-iot-certificate.md) | Certificate ID | a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2 | 
 | [AWS::IoT::Policy](aws-resource-iot-policy.md) | Policy name | MyPolicyName | 
 | [AWS::IoT::Thing](aws-resource-iot-thing.md) | Thing name | MyStack\-MyThing\-AB1CDEFGHIJK | 
 | [AWS::IoT::TopicRule](aws-resource-iot-topicrule.md) | Topic rule name | MyStackMyTopicRule12ABC3D456EFG | 
+| [AWS::IoT1Click::Placement](aws-resource-iot1click-placement.md) | The placement name \(associated with a project\)\. | region3 | 
+| [AWS::IoT1Click::Project](aws-resource-iot1click-project.md) | The project ARN\. | arn:aws:iot1click:us\-west\-2:0123456789012:projects/seattle\-region | 
+| [AWS::IoT1Click::Device](aws-resource-iot1click-device.md) | The device ARN\. | arn:aws:iot1click:us\-west\-2:123456789012:devices/G030PX0312744DWM | 
 |  [AWS::Kinesis::Stream](aws-resource-kinesis-stream.md)  |  Name  |  `mystack-mystream-1NAOH4L1RIQ7I`  | 
 |  [AWS::KinesisFirehose::DeliveryStream](aws-resource-kinesisfirehose-deliverystream.md)  |  Delivery stream name  |  `mystack-deliverystream-1ABCD2EF3GHIJ`  | 
 |  [AWS::KMS::Alias](aws-resource-kms-alias.md)  |  Alias name  |  `alias/myAlias`  | 
@@ -220,6 +226,8 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::Route53::HealthCheck](aws-resource-route53-healthcheck.md)  |  Amazon Route 53 health check ID  |  `e0a123b4-4dba-4650-935e-example`  | 
 |  [AWS::Route53::HostedZone](aws-resource-route53-hostedzone.md)  | Hosted zone ID |  `Z23ABC4XYZL05B`  | 
 |  [AWS::S3::Bucket](aws-properties-s3-bucket.md)  |  Name  |  `mystack-mys3bucket-1hbsmonr9mytq`  | 
+|  [AWS::SES::ReciptRule](aws-resource-ses-receiptrule.md)  |  Name  |  `my-receipt-rule`  | 
+|  [AWS::SES::ReciptRuleSet](aws-resource-ses-receiptruleset.md)  |  Name  |  `my-receipt-rule-set`  | 
 |  [AWS::SDB::Domain](aws-properties-simpledb.md)  |  Name  |  `mystack-mysdbdomain-IVNAOZTDFVXL`  | 
 |  [AWS::SNS::Topic](aws-properties-sns-topic.md)  |  Topic ARN  |  `arn:aws:sns:``us-east-2``:123456789012:mystack-mytopic-NZJ5JSMVGFIE`  | 
 |  [AWS::SQS::Queue](aws-properties-sqs-queues.md)  |  Queue URL  |  `https://sqs.``us-east-2``.amazonaws.com/803981987763/aa4-MyQueue-Z5NOSZO2PZE9`  | 
@@ -248,6 +256,7 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::AccountId  |  `123456789012`  | 
 |  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::NotificationARNs  |  `[arn:aws:sns:us-east-1:123456789012:MyTopic]`  | 
 |  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::NoValue  |  Does not return a value\.  | 
+|  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::Partition  |  `aws`  | 
 |  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::Region  |  `us-east-2`  | 
 |  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::StackId  |  `arn:aws:cloudformation:us-east-1:123456789012:stack/MyStack/1c2fa620-982a-11e3-aff7-50e2416294e0`  | 
 |  [Pseudo Parameter](pseudo-parameter-reference.md)  |  AWS::StackName  |  `MyStack`  | 

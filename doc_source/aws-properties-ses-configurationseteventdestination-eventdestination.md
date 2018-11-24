@@ -3,9 +3,9 @@
 <a name="aws-properties-ses-configurationseteventdestination-eventdestination-description"></a>For an Amazon SES configuration set event destination, the `EventDestination` property type specifies information about the event destination that the specified email sending events will be published to\.
 
 **Note**  
-When you create or update an event destination, you must provide one, and only one, destination\. The destination can be Amazon CloudWatch or Amazon Kinesis Firehose\.
+When you create or update an event destination, you must provide one, and only one, destination\. The destination can be Amazon CloudWatch or Amazon Kinesis Data Firehose\.
 
-Event destinations are associated with configuration sets, which enable you to publish email sending events to Amazon CloudWatch or Amazon Kinesis Firehose\. For information, see [Using Amazon SES Configuration Sets](url-ses-dev;using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*\.
+Event destinations are associated with configuration sets, which enable you to publish email sending events to Amazon CloudWatch or Amazon Kinesis Data Firehose\. For information, see [Using Amazon SES Configuration Sets](url-ses-dev;using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*\.
 
 <a name="aws-properties-ses-configurationseteventdestination-eventdestination-inheritance"></a> `EventDestination` is a property of the [AWS::SES::ConfigurationSetEventDestination](aws-resource-ses-configurationseteventdestination.md) resource\.
 
@@ -51,30 +51,26 @@ Sets whether Amazon SES publishes events to this destination when you send an em
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `KinesisFirehoseDestination`  <a name="cfn-ses-configurationseteventdestination-eventdestination-kinesisfirehosedestination"></a>
-Contains the delivery stream ARN and the IAM role ARN associated with an Kinesis Firehose event destination\.  
+Contains the delivery stream ARN and the IAM role ARN associated with an Kinesis Data Firehose event destination\.  
  *Required*: No  
  *Type*: [Amazon SES ConfigurationSetEventDestination KinesisFirehoseDestination](aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `MatchingEventTypes`  <a name="cfn-ses-configurationseteventdestination-eventdestination-matchingeventtypes"></a>
 The type of email sending events to publish to the event destination\.  
-For a list of valid values, see [EventDestination](http://docs.aws.amazon.com/ses/latest/APIReference/API_EventDestination.html) in the *Amazon Simple Email Service API Reference*\.  
+For a list of valid values, see [EventDestination](https://docs.aws.amazon.com/ses/latest/APIReference/API_EventDestination.html) in the *Amazon Simple Email Service API Reference*\.  
  *Required*: Yes  
  *Type*: List of String values  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Name`  <a name="cfn-ses-configurationseteventdestination-eventdestination-name"></a>
 The name of the event destination\. The name can:  
-
 + Contain ASCII letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), or dashes \(\-\)\.
-
 + Contain up to 64 characters\.
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ses-configurationseteventdestination-eventdestination-seealso"></a>
-
 + [Using Amazon SES Configuration Sets](url-ses-dev;using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*
-
-+ [EventDestination](http://docs.aws.amazon.com/ses/latest/APIReference/API_EventDestination.html) in the *Amazon Simple Email Service API Reference*
++ [EventDestination](https://docs.aws.amazon.com/ses/latest/APIReference/API_EventDestination.html) in the *Amazon Simple Email Service API Reference*

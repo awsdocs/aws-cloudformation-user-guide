@@ -2,7 +2,7 @@
 
 `Environment` is a property of the [Amazon Elastic Container Service TaskDefinition ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md) property that specifies environment variables for a container\.
 
-## Syntax<a name="w3ab2c21c14d721b5"></a>
+## Syntax<a name="w4ab1c21c14d964b5"></a>
 
 ### JSON<a name="aws-properties-ecs-taskdefinition-containerdefinitions-environment-syntax.json"></a>
 
@@ -20,16 +20,16 @@
 [Value](#cfn-ecs-taskdefinition-containerdefinition-environment-value): String
 ```
 
-## Properties<a name="w3ab2c21c14d721b7"></a>
+## Properties<a name="w4ab1c21c14d964b7"></a>
 
-For more information about each property, see [Task Definition Parameters](http://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html) in the *Amazon Elastic Container Service Developer Guide*\.
+For more information about each property, see [Task Definition Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html) in the *Amazon Elastic Container Service Developer Guide*\.
 
 `Name`  <a name="cfn-ecs-taskdefinition-containerdefinition-environment-name"></a>
 The name of the environment variable\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String
 
 `Value`  <a name="cfn-ecs-taskdefinition-containerdefinition-environment-value"></a>
 The value of the environment variable\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String

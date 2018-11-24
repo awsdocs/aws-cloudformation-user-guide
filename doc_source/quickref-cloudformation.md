@@ -1,10 +1,10 @@
 # AWS CloudFormation Template Snippets<a name="quickref-cloudformation"></a>
 
+**Topics**
++ [Nested Stacks](#w4ab1c17c23c19b5)
++ [Wait Condition](#w4ab1c17c23c19b7)
 
-+ [Nested Stacks](#w3ab2c17c24c19b5)
-+ [Wait Condition](#w3ab2c17c24c19b7)
-
-## Nested Stacks<a name="w3ab2c17c24c19b5"></a>
+## Nested Stacks<a name="w4ab1c17c23c19b5"></a>
 
 ### Nesting a Stack in a Template<a name="scenario-stack"></a>
 
@@ -69,7 +69,7 @@ For more information, see [AWS::CloudFormation::Stack](aws-properties-stack.md)\
  6. 	       "Properties" : {
  7. 	           "TemplateURL" : "https://s3.amazonaws.com/cloudformation-templates-us-east-1/EC2ChooseAMI.template",
  8. 	           "Parameters" : {
- 9. 	               "InstanceType" : "t1.micro",
+ 9. 	               "InstanceType" : "t2.micro",
 10. 	               "KeyName" : "mykey"
 11. 	           }
 12.    	       }
@@ -88,20 +88,20 @@ For more information, see [AWS::CloudFormation::Stack](aws-properties-stack.md)\
 5.     Properties:
 6.       TemplateURL: https://s3.amazonaws.com/cloudformation-templates-us-east-1/EC2ChooseAMI.template
 7.       Parameters:
-8.         InstanceType: t1.micro
+8.         InstanceType: t2.micro
 9.         KeyName: mykey
 ```
 
-## Wait Condition<a name="w3ab2c17c24c19b7"></a>
+## Wait Condition<a name="w4ab1c17c23c19b7"></a>
 
 ### Using a Wait Condition with an Amazon EC2 Instance<a name="scenario-waitcondition"></a>
 
 **Important**  
 For Amazon EC2 and Auto Scaling resources, we recommend that you use a CreationPolicy attribute instead of wait conditions\. Add a CreationPolicy attribute to those resources, and use the cfn\-signal helper script to signal when an instance creation process has completed successfully\.
 
-If you can't use a creation policy, you view the following example template, which declares an Amazon EC2 instance with a wait condition\. The wait condition myWaitCondition uses myWaitConditionHandle for signaling, uses the [DependsOn attribute](aws-attribute-dependson.md) to specify that the wait condition will trigger after the Amazon EC2 instance resource has been created, and uses the Timeout property to specify a duration of 4500 seconds for the wait condition\. In addition, the presigned URL that signals the wait condition is passed to the Amazon EC2 instance with the UserData property of the Ec2Instance resource, thus enabling an application or script running on that Amazon EC2 instance to retrieve the pre\-signed URL and employ it to signal a success or failure to the wait condition\. Note that you need to create the application or script that signals the wait condition\. The output value ApplicationData contains the data passed back from the wait condition signal\.
+If you can't use a creation policy, you view the following example template, which declares an Amazon EC2 instance with a wait condition\. The wait condition myWaitCondition uses myWaitConditionHandle for signaling, uses the [DependsOn attribute](aws-attribute-dependson.md) to specify that the wait condition will trigger after the Amazon EC2 instance resource has been created, and uses the Timeout property to specify a duration of 4500 seconds for the wait condition\. In addition, the presigned URL that signals the wait condition is passed to the Amazon EC2 instance with the UserData property of the Ec2Instance resource, thus enabling an application or script running on that Amazon EC2 instance to retrieve the pre\-signed URL and employ it to signal a success or failure to the wait condition\. Note that you need to use cfn\-signal or create the application or script that signals the wait condition\. The output value ApplicationData contains the data passed back from the wait condition signal\.
 
-For more information, see [Creating Wait Conditions in a Template](using-cfn-waitcondition.md), [AWS::CloudFormation::WaitCondition](aws-properties-waitcondition.md), and [AWS::CloudFormation::WaitConditionHandle](aws-properties-waitconditionhandle.md)\.
+For more information, see [Creating Wait Conditions in a Template](using-cfn-waitcondition.md), [AWS::CloudFormation::WaitCondition](aws-properties-waitcondition.md), [AWS::CloudFormation::WaitConditionHandle](aws-properties-waitconditionhandle.md), and [cfn\-signal](cfn-signal.md)\.
 
 #### JSON<a name="quickref-cloudformation-example-3.json"></a>
 
@@ -111,19 +111,19 @@ For more information, see [Creating Wait Conditions in a Template](using-cfn-wai
  3.     "Mappings" : {
  4.         "RegionMap" : {
  5.             "us-east-1" : {
- 6.                 "AMI" : "ami-76f0061f"
+ 6.                 "AMI" : "ami-0ff8a91507f77f867"
  7.             },
  8.             "us-west-1" : {
- 9.                 "AMI" : "ami-655a0a20"
+ 9.                 "AMI" : "ami-0bdb828fd58c52235"
 10.             },
 11.             "eu-west-1" : {
-12.                 "AMI" : "ami-7fd4e10b"
+12.                 "AMI" : "ami-047bb4163c506cd98"
 13.             },
 14.             "ap-northeast-1" : {
-15.                 "AMI" : "ami-8e08a38f"
+15.                 "AMI" : "ami-06cd52961ce9f0d85"
 16.             },
 17.             "ap-southeast-1" : {
-18.                 "AMI" : "ami-72621c20"
+18.                 "AMI" : "ami-08569b978cc4dfa10"
 19.             }
 20.         }
 21.     },
@@ -165,15 +165,15 @@ For more information, see [Creating Wait Conditions in a Template](using-cfn-wai
  2. Mappings:
  3.   RegionMap:
  4.     us-east-1:
- 5.       AMI: ami-76f0061f
+ 5.       AMI: ami-0ff8a91507f77f867
  6.     us-west-1:
- 7.       AMI: ami-655a0a20
+ 7.       AMI: ami-0bdb828fd58c52235
  8.     eu-west-1:
- 9.       AMI: ami-7fd4e10b
+ 9.       AMI: ami-047bb4163c506cd98
 10.     ap-northeast-1:
-11.       AMI: ami-8e08a38f
+11.       AMI: ami-06cd52961ce9f0d85
 12.     ap-southeast-1:
-13.       AMI: ami-72621c20
+13.       AMI: ami-08569b978cc4dfa10
 14. Resources:
 15.   Ec2Instance:
 16.     Type: AWS::EC2::Instance
@@ -200,7 +200,46 @@ For more information, see [Creating Wait Conditions in a Template](using-cfn-wai
 37.     Description: The data passed back as part of signalling the WaitCondition.
 ```
 
-### Using Curl to signal a Wait Condition<a name="scenario-waitcondition-curl"></a>
+### Using the cfn\-signal Helper Script to Signal a Wait Condition<a name="scenario-waitcondition-cfn-signal"></a>
+
+This example shows a cfn\-signal command line that signals success to a wait condition\. You need to define the command line in the `UserData` property of the EC2 instance\.
+
+#### JSON<a name="w4ab1c17c23c19b7b4b4"></a>
+
+```
+"UserData": {
+  "Fn::Base64": {
+    "Fn::Join": [
+      "", 
+      [
+         "#!/bin/bash -xe\n",
+         "/opt/aws/bin/cfn-signal --exit-code 0 '", 
+         {
+           "Ref": "myWaitHandle"
+         },
+         "'\n"
+      ]   
+    ]
+  }
+}
+```
+
+#### YAML<a name="w4ab1c17c23c19b7b4b6"></a>
+
+```
+UserData:
+  'Fn::Base64':
+    'Fn::Join':
+      - ''
+      - - |
+          #!/bin/bash -xe
+        - /opt/aws/bin/cfn-signal --exit-code 0 '
+        - Ref: myWaitHandle
+        - |
+          '
+```
+
+### Using Curl to Signal a Wait Condition<a name="scenario-waitcondition-curl"></a>
 
 This example shows a Curl command line that signals success to a wait condition\.
 

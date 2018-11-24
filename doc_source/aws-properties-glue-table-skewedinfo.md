@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-glue-table-skewedinfo-properties"></a>
 
-For more information, see [SkewedInfo Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-SkewedInfo) in the *AWS Glue Developer Guide*\.
+For more information, see [SkewedInfo Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-SkewedInfo) in the *AWS Glue Developer Guide*\.
 
 `SkewedColumnNames`  <a name="cfn-glue-table-skewedinfo-skewedcolumnnames"></a>
 A list of UTF\-8 strings that specify the names of columns that contain skewed values\.  
@@ -51,5 +51,4 @@ UTF\-8 string–to–UTF\-8 string key\-value pairs that map skewed values to th
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-glue-table-skewedinfo-seealso"></a>
-
-+ [SkewedInfo Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-SkewedInfo) in the *AWS Glue Developer Guide*
++ [SkewedInfo Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-SkewedInfo) in the *AWS Glue Developer Guide*

@@ -2,12 +2,12 @@
 
 Creates a subnet in an existing VPC\.
 
-
+**Topics**
 + [Syntax](#aws-resource-ec2-subnet-syntax)
 + [Properties](#aws-resource-ec2-subnet-properties)
 + [Return Values](#aws-resource-ec2-subnet-returnvalues)
 + [Example](#aws-resource-ec2-subnet-examples)
-+ [More Info](#w3ab2c21c10d443c15)
++ [More Info](#w4ab1c21c10d495c15)
 
 ## Syntax<a name="aws-resource-ec2-subnet-syntax"></a>
 
@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-ec2-subnet-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::Subnet"
+Type: AWS::EC2::Subnet
 Properties:
   [AssignIpv6AddressOnCreation](#cfn-ec2-subnet-assignipv6addressoncreation): Boolean
   [AvailabilityZone](#cfn-ec2-subnet-availabilityzone): String
@@ -47,12 +47,12 @@ Properties:
 
 ## Properties<a name="aws-resource-ec2-subnet-properties"></a>
 
-`AssignIpv6AddressOnCreation`  
-Indicates whether a network interface created in this subnet receives an IPv6 address\. By default, the value is `false`\.  
-*Required*: No   
+`AssignIpv6AddressOnCreation`  <a name="cfn-ec2-subnet-assignipv6addressoncreation"></a>
+Indicates whether a network interface created in this subnet receives an IPv6 address\. The default value is `false`\.  
+*Required*: Conditional\. If you specify a `true` or `false` value for `AssignIpv6AddressOnCreation`, `Ipv6CidrBlock` must also be specified\.  
 *Type*: Boolean  
- *Update requires*: No interruption   
-If `AssignIpv6AddressOnCreation` is specified. `MapPublicIpOnLaunch` cannot be specified\.
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)  
+If `AssignIpv6AddressOnCreation` is specified, `MapPublicIpOnLaunch` cannot be specified\.
 
 `AvailabilityZone`  <a name="cfn-ec2-subnet-availabilityzone"></a>
 The availability zone in which you want the subnet\. Default: AWS selects a zone for you \(recommended\)\.  
@@ -70,7 +70,7 @@ If you update this property, you must also update the `AvailabilityZone` propert
 
 `Ipv6CidrBlock`  <a name="cfn-ec2-subnet-ipv6cidrblock"></a>
 The IPv6 network range for the subnet, in CIDR notation\. The subnet size must use a `/64` prefix length\.  
-*Required*: Conditional\. If `AssignIpv6AddressOnCreation` is `true`, `Ipv6CidrBlock` must be specified\.   
+*Required*: Conditional\. If you specify a `true` or `false` value for `AssignIpv6AddressOnCreation`, `Ipv6CidrBlock` must be specified\.  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
@@ -79,11 +79,11 @@ Indicates whether instances that are launched in this subnet receive a public IP
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)  
-If `MapPublicIpOnLaunch` is specified. `AssignIpv6AddressOnCreation` cannot be specified\.
+If `MapPublicIpOnLaunch` is specified\. `AssignIpv6AddressOnCreation` cannot be specified\.
 
 `Tags`  <a name="cfn-ec2-subnet-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this subnet\.  
-*Required: *No  
+*Required*: No  
 *Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
@@ -167,8 +167,6 @@ Resources:
         Value: bar
 ```
 
-## More Info<a name="w3ab2c21c10d443c15"></a>
-
+## More Info<a name="w4ab1c21c10d495c15"></a>
 + [CreateSubnet](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateSubnet.html) in the *Amazon EC2 API Reference*
-
 + [Using Tags](http://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/Using_Tags.html) in the *Amazon Elastic Compute Cloud User Guide*

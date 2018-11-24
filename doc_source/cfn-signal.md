@@ -9,7 +9,7 @@ You use the cfn\-signal script in conjunction with a [CreationPolicy](aws-attrib
 **Note**  
 cfn\-signal does not require credentials, so you do not need to use the `--access-key`, `--secret-key`, `--role`, or `--credential-file` options\. However, if no credentials are specified, AWS CloudFormation checks for stack membership and limits the scope of the call to the stack that the instance belongs to\.
 
-## Syntax for Resource Signaling \(Recommended\)<a name="w3ab2c21c38c29b5"></a>
+## Syntax for Resource Signaling \(Recommended\)<a name="w4ab1c21c38c31b5"></a>
 
 If you want to signal AWS CloudFormation resources, use the following syntax\.
 
@@ -68,7 +68,7 @@ The options that you can use depend on whether you're signaling a creation polic
 
 ## Example<a name="cfn-signal-Examples"></a>
 
-### Amazon Linux Example<a name="w3ab2c21c38c29c11b2"></a>
+### Amazon Linux Example<a name="w4ab1c21c38c31c11b2"></a>
 
 A common usage pattern is to use cfn\-init and cfn\-signal together\. The cfn\-signal call uses the return status of the call to cfn\-init \(using the $? shell construct\)\. If the application fails to install, the instance will fail to create and the stack will rollback\. For Windows stacks, see [Bootstrapping AWS CloudFormation Windows Stacks](cfn-windows-stacks-bootstrapping.md)\.
 
@@ -150,7 +150,7 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: Simple EC2 instance
 Resources:
   MyInstance:
-    Type: 'AWS::EC2::Instance'
+    Type: AWS::EC2::Instance
     Metadata:
       'AWS::CloudFormation::Init':
         config:
@@ -193,10 +193,8 @@ Resources:
         Timeout: PT5M
 ```
 
-#### Examples<a name="w3ab2c21c38c29c11b2b8"></a>
+#### Examples<a name="w4ab1c21c38c31c11b2b8"></a>
 
 Several AWS CloudFormation sample templates use cfn\-signal, including the following templates\.
-
 +  [LAMP: Single EC2 Instance with local MySQL database](https://s3.amazonaws.com/cloudformation-templates-us-east-1/LAMP_Single_Instance.template) 
-
 +  [WordPress: Single EC2 Instance with local MySQL database](https://s3.amazonaws.com/cloudformation-templates-us-east-1/WordPress_Single_Instance.template) 
