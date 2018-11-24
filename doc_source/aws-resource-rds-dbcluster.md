@@ -71,7 +71,7 @@ Properties:
   [PreferredBackupWindow](#cfn-rds-dbcluster-preferredbackupwindow): String
   [PreferredMaintenanceWindow](#cfn-rds-dbcluster-preferredmaintenancewindow): String
   [ReplicationSourceIdentifier](#cfn-rds-dbcluster-replicationsourceidentifier): String
-  [ScalingConfiguration](#cfn-rds-dbcluster-scalingconfiguration)" : [*ScalingConfiguration*](aws-properties-rds-dbcluster-scalingconfiguration.md)
+  [ScalingConfiguration](#cfn-rds-dbcluster-scalingconfiguration): [*ScalingConfiguration*](aws-properties-rds-dbcluster-scalingconfiguration.md)
   [SnapshotIdentifier](#cfn-rds-dbcluster-snapshotidentifier): String
   [StorageEncrypted](#cfn-rds-dbcluster-storageencrypted): Boolean
   [Tags](#cfn-rds-dbcluster-tags):
