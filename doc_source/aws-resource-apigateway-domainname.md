@@ -50,7 +50,7 @@ The reference to an AWS\-managed certificate for use by the edge\-optimized endp
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `DomainName`  <a name="cfn-apigateway-domainname-domainname"></a>
-The custom domain name for your API in Amazon API Gateway\.  
+The custom domain name for your API in Amazon API Gateway\.The domain must be lower case\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
