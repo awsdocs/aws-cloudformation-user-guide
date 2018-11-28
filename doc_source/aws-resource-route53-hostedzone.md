@@ -79,13 +79,7 @@ If this property was specified previously and you're modifying values, updates r
 
 ### Ref<a name="w4ab1c21c10e1049c11b2"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
-
-```
-{ "Ref": "myHostedZone" }
-```
-
-`Ref` returns the hosted zone ID, such as `Z23ABC4XYZL05B`\.
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the hosted zone ID, such as `Z23ABC4XYZL05B`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
