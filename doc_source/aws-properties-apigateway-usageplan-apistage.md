@@ -40,5 +40,5 @@ The name of an API Gateway stage to associate with the usage plan\.
 Map containing method\-level throttling information for API stage in a usage plan\.  
 Duplicates are not allowed\.  
 *Required*: No  
-*Type*: Map of sting\-to\-[Amazon API Gateway UsagePlan ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)  
+*Type*: Map of string\-to\-[Amazon API Gateway UsagePlan ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
