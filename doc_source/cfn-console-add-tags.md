@@ -26,7 +26,7 @@ Specifies whether the stack should be rolled back if stack creation fails\. Typi
 Defines the resources that you want to protect from unintentional updates during a stack update\. By default, all resources can be updated during a stack update\. For more information, see [Prevent Updates to Stack Resources](protect-stack-resources.md)\.
 
 **Enable termination protection**  
-Prevents a stack from being accidently deleted\. If a user attempts to delete a stack with termination protection enabled, the deletion fails and the stack\-\-including its status\-\-remains unchanged\. For more information, see [Protecting a Stack From Being Deleted](using-cfn-protect-stacks.md)\.
+Prevents a stack from being accidentally deleted\. If a user attempts to delete a stack with termination protection enabled, the deletion fails and the stack\-\-including its status\-\-remains unchanged\. For more information, see [Protecting a Stack From Being Deleted](using-cfn-protect-stacks.md)\.
 
 **To set stack options**
 

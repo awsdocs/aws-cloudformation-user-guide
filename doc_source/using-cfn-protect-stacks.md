@@ -1,6 +1,6 @@
 # Protecting a Stack From Being Deleted<a name="using-cfn-protect-stacks"></a>
 
-You can prevent a stack from being accidently deleted by enabling termination protection on the stack\. If a user attempts to delete a stack with termination protection enabled, the deletion fails and the stack\-\-including its status\-\-remains unchanged\. You can enable termination protection on a stack when you create it\. Termination protection on stacks is disabled by default\. You can set termination protection on a stack with any status except **DELETE\_IN\_PROGRESS** or **DELETE\_COMPLETE**\.
+You can prevent a stack from being accidentally deleted by enabling termination protection on the stack\. If a user attempts to delete a stack with termination protection enabled, the deletion fails and the stack\-\-including its status\-\-remains unchanged\. You can enable termination protection on a stack when you create it\. Termination protection on stacks is disabled by default\. You can set termination protection on a stack with any status except **DELETE\_IN\_PROGRESS** or **DELETE\_COMPLETE**\.
 
 Enabling or disabling termination protection on a stack sets it for any nested stacks belonging to that stack as well\. You cannot enable or disable termination protection directly on a nested stack\. If a user attempts to directly delete a nested stack belonging with a stack that has termination protection enabled, the operation fails and the nested stack remains unchanged\.
 

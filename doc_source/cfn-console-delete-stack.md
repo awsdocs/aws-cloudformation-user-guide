@@ -15,4 +15,4 @@ After stack deletion has begun, you cannot abort it\. The stack proceeds to the 
 
    If the delete failed, the stack will be in the **DELETE\_FAILED** state\. For solutions, see the [Delete Stack Fails](troubleshooting.md#troubleshooting-errors-delete-stack-fails) troubleshooting topic\.
 
-For information on protecting stacks from being accidently deleted see [Protecting a Stack From Being Deleted](using-cfn-protect-stacks.md)\.
+For information on protecting stacks from being accidentally deleted see [Protecting a Stack From Being Deleted](using-cfn-protect-stacks.md)\.
