@@ -30,6 +30,6 @@ For valid values, see the `Field` contents for the [RuleCondition](https://docs.
 *Type*: String
 
 `Values`  <a name="cfn-elasticloadbalancingv2-listenerrule-conditions-values"></a>
-The value for the field that you specified in the `Field` property\.  
+The values for the field that you specified in the `Field` property\. For the number of values required for the `Field` you have selected, please refer to the [RuleCondition](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_RuleCondition.html) data type in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
 *Required*: No  
 *Type*: List of String values
