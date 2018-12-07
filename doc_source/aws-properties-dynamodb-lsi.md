@@ -27,7 +27,7 @@ Describes local secondary indexes for the [AWS::DynamoDB::Table](aws-resource-dy
 ## Properties<a name="w4ab1c21c14d676b7"></a>
 
 `IndexName`  <a name="cfn-dynamodb-lsi-indexname"></a>
-The name of the local secondary index\. The index name can be 3 – 255 characters long and have no character restrictions\.  
+The name of the local secondary index\. The index name can be 3 – 255 characters long and must satisfy the regular expression pattern `[a-zA-Z0-9_.-]+`\.  
 *Required*: Yes  
 *Type*: String
 
