@@ -81,7 +81,7 @@ The authorizer's Uniform Resource Identifier \(URI\)\. If you specify `TOKEN` fo
 `IdentitySource`  <a name="cfn-apigateway-authorizer-identitysource"></a>
 The source of the identity in an incoming request\.   
 If you specify `TOKEN` or `COGNITO_USER_POOLS` for the `Type` property, specify a header mapping expression using the form `method.request.header.name`, where *name* is the name of a custom authorization header that clients submit as part of their requests\.   
-If you specify `REQUEST` for the `Type` property, specify a comma\-separated string of one or more mapping expressions of the specified request parameter using the form `method.request.parameter.name`\. For supported parameter types, see [Configure Lambda Authorizer Using the API Gateway Console](https://docs.aws.amazon.com/apigateway/latest/developerguide/configure-api-gateway-lambda-authorization-with-console.html) in the *API Gateway Developer Guide*\.  
+If you specify `REQUEST` for the `Type` property, specify a comma\-separated string of one or more mapping expressions of the specified request parameter using the form `method.request.parameter.name`\. For supported parameter types, see [Configure Lambda Authorizer Using the API Gateway Console](https://docs.aws.amazon.com/apigateway/latest/developerguide/configure-api-gateway-lambda-authorization-with-console.html) in the *API Gateway Developer Guide*\. The expression may also have the form `context.identity.name` where *name* is one of the provided context variables. 
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -111,11 +111,20 @@ The ID of the `RestApi` resource that API Gateway creates the authorizer in\.
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Type`  <a name="cfn-apigateway-authorizer-type"></a>
+<<<<<<< HEAD
 The type of authorizer\. Valid values include:   
 + `TOKEN`: A custom authorizer that uses a Lambda function\.
 + `COGNITO_USER_POOLS`: An authorizer that uses Amazon Cognito user pools\.
 + `REQUEST`: An authorizer that uses a Lambda function using incoming request parameters\.
 *Required*: Yes  
+=======
+The type of authorizer:  
+
++ For a custom authorizer that uses a Lambda function, use `TOKEN` or `REQUEST` to specify the Lambda Event Payload\.
+
++ For an authorizer that uses Amazon Cognito user pools, use `COGNITO_USER_POOLS`\.
+*Required: *Yes  
+>>>>>>> Added some information on Type: REQUEST
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
