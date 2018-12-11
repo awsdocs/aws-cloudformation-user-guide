@@ -11,6 +11,7 @@ If a DB instance is deleted or replaced during an update, AWS CloudFormation del
 + [Updating and Deleting AWS::RDS::DBInstance Resources](#updating-and-deleting-dbinstance-resources)
 + [Return Values](#aws-properties-rds-database-instance-returnvalues)
 + [Examples](#aws-properties-rds-database-instance-examples)
++ [Amazon RDS DBInstance ProcessorFeature](aws-properties-rds-dbinstance-processorfeature.md)
 
 ## Syntax<a name="aws-resource-rds-dbinstance-syntax"></a>
 
@@ -38,8 +39,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[DBSecurityGroups](#cfn-rds-dbinstance-dbsecuritygroups)" : [ String, ... ],
     "[DBSnapshotIdentifier](#cfn-rds-dbinstance-dbsnapshotidentifier)" : String,
     "[DBSubnetGroupName](#cfn-rds-dbinstance-dbsubnetgroupname)" : String,
+    "[DeleteAutomatedBackups](#cfn-rds-dbinstance-deleteautomatedbackups)" : Boolean,
+    "[DeletionProtection](#cfn-rds-dbinstance-deletionprotection)" : Boolean,
     "[Domain](#cfn-rds-dbinstance-domain)" : String,
     "[DomainIAMRoleName](#cfn-rds-dbinstance-domainIAMRoleName)" : String,
+    "[EnableCloudwatchLogsExports](#cfn-rds-dbinstance-enablecloudwatchlogsexports)" : [ String, ... ],
+    "[EnableIAMDatabaseAuthentication](#cfn-rds-dbinstance-enableiamdatabaseauthentication)" : Boolean,
+    "[EnablePerformanceInsights](#cfn-rds-dbinstance-enableperformanceinsights)" : Boolean,
     "[Engine](#cfn-rds-dbinstance-engine)" : String,
     "[EngineVersion](#cfn-rds-dbinstance-engineversion)" : String,
     "[Iops](#cfn-rds-dbinstance-iops)" : Integer,
@@ -51,15 +57,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[MonitoringRoleArn](#cfn-rds-dbinstance-monitoringrolearn)" : String,
     "[MultiAZ](#cfn-rds-dbinstance-multiaz)" : Boolean,
     "[OptionGroupName](#cfn-rds-dbinstance-optiongroupname)" : String,
+    "[PerformanceInsightsKMSKeyId](#cfn-rds-dbinstance-performanceinsightskmskeyid)" : String,
+    "[PerformanceInsightsRetentionPeriod](#cfn-rds-dbinstance-performanceinsightsretentionperiod)" : Integer,
     "[Port](#cfn-rds-dbinstance-port)" : String,
     "[PreferredBackupWindow](#cfn-rds-dbinstance-preferredbackupwindow)" : String,
     "[PreferredMaintenanceWindow](#cfn-rds-dbinstance-preferredmaintenancewindow)" : String,
+    "[ProcessorFeatures](#cfn-rds-dbinstance-processorfeatures)" : [ [*ProcessorFeature*](aws-properties-rds-dbinstance-processorfeature.md), ... ],
+    "[PromotionTier](#cfn-rds-dbinstance-promotiontier)" : Integer,
     "[PubliclyAccessible](#cfn-rds-dbinstance-publiclyaccessible)" : Boolean,
     "[SourceDBInstanceIdentifier](#cfn-rds-dbinstance-sourcedbinstanceidentifier)" : String,
     "[SourceRegion](#cfn-rds-dbinstance-sourceregion)" : String,
     "[StorageEncrypted](#cfn-rds-dbinstance-storageencrypted)" : Boolean,
     "[StorageType](#cfn-rds-dbinstance-storagetype)" : String,
-    "[Tags](#cfn-rds-dbinstance-tags)" : [ Resource Tag, ... ],
+    "[Tags](#cfn-rds-dbinstance-tags)" : [ [*Resource Tag*](aws-properties-resource-tags.md), ... ],
     "[Timezone](#cfn-rds-dbinstance-timezone)" : String,
     "[VPCSecurityGroups](#cfn-rds-dbinstance-vpcsecuritygroups)" : [ String, ... ]
   }
@@ -87,8 +97,14 @@ Properties:
     - String
   [DBSnapshotIdentifier](#cfn-rds-dbinstance-dbsnapshotidentifier): String
   [DBSubnetGroupName](#cfn-rds-dbinstance-dbsubnetgroupname): String
+  [DeleteAutomatedBackups](#cfn-rds-dbinstance-deleteautomatedbackups): Boolean
+  [DeletionProtection](#cfn-rds-dbinstance-deletionprotection): Boolean
   [Domain](#cfn-rds-dbinstance-domain): String
   [DomainIAMRoleName](#cfn-rds-dbinstance-domainIAMRoleName): String
+  [EnableCloudwatchLogsExports](#cfn-rds-dbinstance-enablecloudwatchlogsexports):
+    - String
+  [EnableIAMDatabaseAuthentication](#cfn-rds-dbinstance-enableiamdatabaseauthentication): Boolean
+  [EnablePerformanceInsights](#cfn-rds-dbinstance-enableperformanceinsights): Boolean
   [Engine](#cfn-rds-dbinstance-engine): String
   [EngineVersion](#cfn-rds-dbinstance-engineversion): String
   [Iops](#cfn-rds-dbinstance-iops): Integer
@@ -100,16 +116,21 @@ Properties:
   [MonitoringRoleArn](#cfn-rds-dbinstance-monitoringrolearn): String
   [MultiAZ](#cfn-rds-dbinstance-multiaz): Boolean
   [OptionGroupName](#cfn-rds-dbinstance-optiongroupname): String
+  [PerformanceInsightsKMSKeyId](#cfn-rds-dbinstance-performanceinsightskmskeyid): String
+  [PerformanceInsightsRetentionPeriod](#cfn-rds-dbinstance-performanceinsightsretentionperiod): Integer
   [Port](#cfn-rds-dbinstance-port): String
   [PreferredBackupWindow](#cfn-rds-dbinstance-preferredbackupwindow): String
   [PreferredMaintenanceWindow](#cfn-rds-dbinstance-preferredmaintenancewindow): String
+  [ProcessorFeatures](#cfn-rds-dbinstance-processorfeatures):
+    - [*ProcessorFeature*](aws-properties-rds-dbinstance-processorfeature.md)
+  [PromotionTier](#cfn-rds-dbinstance-promotiontier): Integer
   [PubliclyAccessible](#cfn-rds-dbinstance-publiclyaccessible): Boolean
   [SourceDBInstanceIdentifier](#cfn-rds-dbinstance-sourcedbinstanceidentifier): String
   [SourceRegion](#cfn-rds-dbinstance-sourceregion): String
   [StorageEncrypted](#cfn-rds-dbinstance-storageencrypted): Boolean
   [StorageType](#cfn-rds-dbinstance-storagetype): String
   [Tags](#cfn-rds-dbinstance-tags):
-    Resource Tag
+    - [*Resource Tag*](aws-properties-resource-tags.md)
   [Timezone](#cfn-rds-dbinstance-timezone): String
   [VPCSecurityGroups](#cfn-rds-dbinstance-vpcsecuritygroups):
     - String
@@ -259,6 +280,19 @@ For more information about using Amazon RDS in a VPC, see [Using Amazon RDS with
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
+`DeleteAutomatedBackups`  <a name="cfn-rds-dbinstance-deleteautomatedbackups"></a>
+Indicates whether automated backups should be deleted \(`true`\) or retained \(`false`\) when you delete a DB instance\. The default is `true`\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`DeletionProtection`  <a name="cfn-rds-dbinstance-deletionprotection"></a>
+Indicates whether the DB instance should have deletion protection enabled\. The database can't be deleted when this value is set to `true`\. If you want to delete a stack with a protected instance, update this value to `false` before you delete the stack\.  
+For more information, see [Deleting a DB Instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html)\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
 `Domain`  <a name="cfn-rds-dbinstance-domain"></a>
 For an Amazon RDS DB instance that's running Microsoft SQL Server, the Active Directory directory ID to create the instance in\. Amazon RDS uses Windows Authentication to authenticate users that connect to the DB instance\. For more information, see [Using Windows Authentication with an Amazon RDS DB Instance Running Microsoft SQL Server](https://docs.aws.amazon.com/AmazonRDS/latest/DeveloperGuide/USER_SQLServerWinAuth.html) in the *Amazon RDS User Guide*\.  
 If you specify this property, you must specify a SQL Server engine for the `Engine` property\.  
@@ -270,6 +304,32 @@ If you specify this property, you must specify a SQL Server engine for the `Engi
 The name of an IAM role that Amazon RDS uses when calling the AWS Directory Service APIs\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`EnableCloudwatchLogsExports`  <a name="cfn-rds-dbinstance-enablecloudwatchlogsexports"></a>
+The list of log types that need to be enabled for exporting to CloudWatch Logs\. The values in the list depend on the DB engine being used\. Log types that are excluded or removed from this list during updates are disabled\. For more information, see [Publishing Database Logs to Amazon CloudWatch Logs ](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch) in the *Amazon Relational Database Service User Guide*\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`EnableIAMDatabaseAuthentication`  <a name="cfn-rds-dbinstance-enableiamdatabaseauthentication"></a>
+If set to `true`, enables mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts\.  
+You can enable IAM database authentication for the following database engines:  
+**Amazon Aurora**  
+Not applicable\. Mapping IAM accounts to database accounts is managed by the DB cluster\. For more information, see [CreateDBCluster](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCluster.html)\.  
+**MySQL**  
++ For MySQL 5\.6, minor version 5\.6\.34 or higher
++ For MySQL 5\.7, minor version 5\.7\.16 or higher
+*Default*: `false`  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`EnablePerformanceInsights`  <a name="cfn-rds-dbinstance-enableperformanceinsights"></a>
+If set to `true`, enables Performance Insights for the DB instance\.  
+For more information, see [Using Amazon Performance Insights](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html) in the *Amazon Relational Database Service User Guide*\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Engine`  <a name="cfn-rds-dbinstance-engine"></a>
@@ -350,6 +410,19 @@ The option group that this DB instance is associated with\.
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
+`PerformanceInsightsKMSKeyId`  <a name="cfn-rds-dbinstance-performanceinsightskmskeyid"></a>
+The AWS KMS key identifier for encryption of Performance Insights data\. The AWS KMS key ID is the Amazon Resource Name \(ARN\), AWS KMS key identifier, or the AWS KMS key alias for the AWS KMS encryption key\.   
+If `EnablePerformanceInsights` is set to `false`, don't specify this property\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. When you set `EnablePerformanceInsights` to `true`, the first time you specify `PerformanceInsightsKMSKeyId` requires [no interruption](using-cfn-updating-stacks-update-behaviors.md#update-replacement)\. If you update the value for `PerformanceInsightsKMSKeyId` with Performance Insights enabled, [replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) occurs\.
+
+`PerformanceInsightsRetentionPeriod`  <a name="cfn-rds-dbinstance-performanceinsightsretentionperiod"></a>
+The amount of time, in days, to retain Performance Insights data\. Valid values are `7` or `731` \(2 years\)\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
 `Port`  <a name="cfn-rds-dbinstance-port"></a>
 The port for the instance\.  
 *Required*: No  
@@ -368,6 +441,18 @@ This property applies when AWS CloudFormation initially creates the DB instance\
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. For more information, see [ModifyDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html) in the *Amazon RDS API Reference*\.
+
+`ProcessorFeatures`  <a name="cfn-rds-dbinstance-processorfeatures"></a>
+The number of CPU cores and the number of threads per core for the DB instance class of the DB instance\.  
+*Required*: No  
+*Type*: List of [ProcessorFeature](aws-properties-rds-dbinstance-processorfeature.md) property types  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`PromotionTier`  <a name="cfn-rds-dbinstance-promotiontier"></a>
+A value that specifies the order in which an Aurora Replica is promoted to the primary instance after a failure of the existing primary instance\. For more information, see [Fault Tolerance for an Aurora DB Cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.FaultTolerance) in the *Amazon Aurora User Guide*\.   
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `PubliclyAccessible`  <a name="cfn-rds-dbinstance-publiclyaccessible"></a>
 Indicates whether the DB instance is an internet\-facing instance\. If you specify `true`, AWS CloudFormation creates an instance with a publicly resolvable DNS name, which resolves to a public IP address\. If you specify `false`, AWS CloudFormation creates an internal instance with a DNS name that resolves to a private IP address\.   
@@ -414,7 +499,7 @@ For the default and valid values, see the `StorageType` parameter of the [Create
 `Tags`  <a name="cfn-rds-dbinstance-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this DB instance\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: List of [Resource Tag](aws-properties-resource-tags.md) property types  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Timezone`  <a name="cfn-rds-dbinstance-timezone"></a>
@@ -437,7 +522,7 @@ You can migrate a DB instance in your stack from an RDS DB security group to a V
 
 ## Updating and Deleting AWS::RDS::DBInstance Resources<a name="updating-and-deleting-dbinstance-resources"></a>
 
-### Updating DB Instances<a name="w4ab1c21c10d987c13b2"></a>
+### Updating DB Instances<a name="w4ab1c21c10d171c22c13b2"></a>
 
 When properties labeled "*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)" are updated, AWS CloudFormation first creates a replacement DB instance, then changes references from other dependent resources to point to the replacement DB instance, and finally deletes the old DB instance\.
 
@@ -450,7 +535,7 @@ Update the stack\.
 
 For more information about updating other properties of this resource, see [ModifyDBInstance](https://docs.aws.amazon.com//AmazonRDS/latest/APIReference/API_ModifyDBInstance.html)\. For more information about updating stacks, see [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)\.
 
-### Deleting DB Instances<a name="w4ab1c21c10d987c13b4"></a>
+### Deleting DB Instances<a name="w4ab1c21c10d171c22c13b4"></a>
 
 You can set a deletion policy for your DB instance to control how AWS CloudFormation handles the instance when the stack is deleted\. For Amazon RDS DB instances, you can choose to *retain* the instance, to *delete* the instance, or to *create a snapshot* of the instance\. The default AWS CloudFormation behavior depends on the `DBClusterIdentifier` property:
 + For `AWS::RDS::DBInstance` resources that don't specify the `DBClusterIdentifier` property, AWS CloudFormation saves a snapshot of the DB instance\.

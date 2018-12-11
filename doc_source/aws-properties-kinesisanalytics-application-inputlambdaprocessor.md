@@ -2,7 +2,7 @@
 
 The `InputLambdaProcessor` property type specifies the Amazon Resource Name \(ARN\) of a Lambda function for preprocessing records in a stream before the SQL code for an Amazon Kinesis Data Analytics application executes\. 
 
- `InputLambdaProcessor` is a property of the [Kinesis Data Analytics Application Input](aws-properties-kinesisanalytics-application-input.md) property type\. 
+ `InputLambdaProcessor` is a property of the [Input](aws-properties-kinesisanalytics-application-input.md) property type\. 
 
 ## Syntax<a name="aws-properties-kinesisanalytics-application-inputlambdaprocessor-syntax"></a>
 

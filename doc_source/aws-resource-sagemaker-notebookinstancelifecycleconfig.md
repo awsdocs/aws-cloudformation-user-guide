@@ -2,12 +2,6 @@
 
 The `AWS::SageMaker::NotebookInstanceLifecycleConfig` resource specifies shell scripts that run when you create and/or start a notebook instance\. For more information, see [Customize a Notebook Instance](https://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html) in the *Amazon SageMaker Developer Guide*\. 
 
-**Topics**
-+ [Syntax](#aws-resource-sagemaker-notebookinstancelifecycleconfig-syntax)
-+ [Properties](#aws-resource-sagemaker-notebookinstancelifecycleconfig-properties)
-+ [Return Values](#aws-resource-sagemaker-notebookinstancelifecycleconfig-returnvalues)
-+ [Examples](#aws-resource-sagemaker-notebookinstancelifecycleconfig-examples)
-
 ## Syntax<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

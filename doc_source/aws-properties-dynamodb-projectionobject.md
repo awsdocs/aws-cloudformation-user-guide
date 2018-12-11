@@ -2,9 +2,9 @@
 
 Attributes that are copied \(projected\) from the source table into the index\. These attributes are additions to the primary key attributes and index key attributes, which are automatically projected\.
 
-Projection is a property of the [DynamoDB Table GlobalSecondaryIndex](aws-properties-dynamodb-gsi.md) and [DynamoDB Table LocalSecondaryIndex](aws-properties-dynamodb-lsi.md) property types\.
+Projection is a property of the [GlobalSecondaryIndex](aws-properties-dynamodb-gsi.md) and [LocalSecondaryIndex](aws-properties-dynamodb-lsi.md) property types\.
 
-## Syntax<a name="w4ab1c21c14d685b7"></a>
+## Syntax<a name="w4ab1c21c10c99c14c46b7"></a>
 
 ### JSON<a name="aws-properties-dynamodb-projectionobject-syntax.json"></a>
 
@@ -23,7 +23,7 @@ Projection is a property of the [DynamoDB Table GlobalSecondaryIndex](aws-proper
 [ProjectionType](#cfn-dynamodb-projectionobj-projtype): String
 ```
 
-## Properties<a name="w4ab1c21c14d685b9"></a>
+## Properties<a name="w4ab1c21c10c99c14c46b9"></a>
 
 For more information about each property, including constraints, see [ Projection](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_Projection.html) in the *Amazon DynamoDB API Reference*\.
 

@@ -2,12 +2,6 @@
 
 The `AWS::ECR::Repository` resource creates an Amazon Elastic Container Registry \(Amazon ECR\) repository, where users can push and pull Docker images\. For more information, see [Amazon ECR Repositories](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html) in the *Amazon Elastic Container Registry User Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-ecr-repository-syntax)
-+ [Properties](#aws-resource-ecr-repository-properties)
-+ [Return Values](#aws-resource-ecr-repository-returnvalues)
-+ [Examples](#aws-resource-ecr-repository-examples)
-
 ## Syntax<a name="aws-resource-ecr-repository-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -41,7 +35,7 @@ Properties:
 `LifecyclePolicy`  <a name="cfn-ecr-repository-lifecyclepolicy"></a>
 A lifecycle policy for the repository\.  
 *Required*: No  
-*Type*: [Amazon ECR Repository LifecyclePolicy](aws-properties-ecr-repository-lifecyclepolicy.md)  
+*Type*: [LifecyclePolicy](aws-properties-ecr-repository-lifecyclepolicy.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `RepositoryName`  <a name="cfn-ecr-repository-repositoryname"></a>

@@ -7,7 +7,7 @@ Creates a subnet in an existing VPC\.
 + [Properties](#aws-resource-ec2-subnet-properties)
 + [Return Values](#aws-resource-ec2-subnet-returnvalues)
 + [Example](#aws-resource-ec2-subnet-examples)
-+ [More Info](#w4ab1c21c10d495c15)
++ [More Info](#w4ab1c21c10d102d123c15)
 
 ## Syntax<a name="aws-resource-ec2-subnet-syntax"></a>
 
@@ -84,7 +84,7 @@ If `MapPublicIpOnLaunch` is specified\. `AssignIpv6AddressOnCreation` cannot be 
 `Tags`  <a name="cfn-ec2-subnet-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this subnet\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `VpcId`  <a name="cfn-awsec2subnet-prop-vpcid"></a>
@@ -167,6 +167,6 @@ Resources:
         Value: bar
 ```
 
-## More Info<a name="w4ab1c21c10d495c15"></a>
+## More Info<a name="w4ab1c21c10d102d123c15"></a>
 + [CreateSubnet](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateSubnet.html) in the *Amazon EC2 API Reference*
 + [Using Tags](http://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/Using_Tags.html) in the *Amazon Elastic Compute Cloud User Guide*

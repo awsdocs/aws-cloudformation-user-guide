@@ -2,7 +2,7 @@
 
 <a name="aws-properties-events-rule-runcommandtarget-description"></a>The `RunCommandTarget` property type specifies information about the Amazon EC2 instances that the Run Command is sent to\. A `RunCommandTarget` block can include only one key, but the key can specify multiple values\.
 
-<a name="aws-properties-events-rule-runcommandtarget-inheritance"></a> The `RunCommandTargets` property of the [CloudWatch Events Rule RunCommandParameters](aws-properties-events-rule-runcommandparameters.md) property type contains a list of `RunCommandTarget` property types\. 
+<a name="aws-properties-events-rule-runcommandtarget-inheritance"></a> The `RunCommandTargets` property of the [RunCommandParameters](aws-properties-events-rule-runcommandparameters.md) property type contains a list of `RunCommandTarget` property types\. 
 
 ## Syntax<a name="aws-properties-events-rule-runcommandtarget-syntax"></a>
 

@@ -1,8 +1,8 @@
-# ElasticLoadBalancing Policy Type<a name="aws-properties-ec2-elb-policy"></a>
+# ElasticLoadBalancing Policy<a name="aws-properties-ec2-elb-policy"></a>
 
 The ElasticLoadBalancing policy type is an embedded property of the [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md) resource\. You associate policies with a [listener](aws-properties-ec2-elb-listener.md) by referencing a policy's name in the listener's `PolicyNames` property\.
 
-## Syntax<a name="w4ab1c21c14e1088b5"></a>
+## Syntax<a name="w4ab1c21c10d126c14c47b5"></a>
 
 ### JSON<a name="aws-properties-ec2-elb-policy-syntax.json"></a>
 
@@ -31,7 +31,7 @@ The ElasticLoadBalancing policy type is an embedded property of the [AWS::Elasti
 [PolicyType](#cfn-ec2-elb-policy-policytype): String
 ```
 
-## Properties<a name="w4ab1c21c14e1088b7"></a>
+## Properties<a name="w4ab1c21c10d126c14c47b7"></a>
 
 `Attributes`  <a name="cfn-ec2-elb-policy-attributes"></a>
 A list of arbitrary attributes for this policy\. If you don't need to specify any policy attributes, specify an empty list \(`[]`\)\.  
@@ -58,7 +58,7 @@ The name of the policy type for this policy\. This must be one of the types repo
 *Required*: Yes  
 *Type*: String
 
-## Examples<a name="w4ab1c21c14e1088b9"></a>
+## Examples<a name="w4ab1c21c10d126c14c47b9"></a>
 
 This example shows a snippet of the policies section of an elastic load balancer listener\.
 
@@ -126,7 +126,7 @@ In the following snippet, the load balancer uses a predefined security policy\. 
 }]
 ```
 
-## See Also<a name="w4ab1c21c14e1088c11"></a>
+## See Also<a name="w4ab1c21c10d126c14c47c11"></a>
 + [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md)
-+ [ElasticLoadBalancing AppCookieStickinessPolicy Type](aws-properties-ec2-elb-AppCookieStickinessPolicy.md)
-+ [ElasticLoadBalancing LBCookieStickinessPolicy Type](aws-properties-ec2-elb-LBCookieStickinessPolicy.md)
++ [ElasticLoadBalancing AppCookieStickinessPolicy](aws-properties-ec2-elb-AppCookieStickinessPolicy.md)
++ [ElasticLoadBalancing LBCookieStickinessPolicy](aws-properties-ec2-elb-LBCookieStickinessPolicy.md)

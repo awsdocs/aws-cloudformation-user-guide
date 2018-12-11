@@ -39,43 +39,43 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `AddHeaderAction`  <a name="cfn-ses-receiptrule-action-addheaderaction"></a>
 Adds a header to the received email\.  
  *Required*: No  
- *Type*: [Amazon SES ReceiptRule AddHeaderAction](aws-properties-ses-receiptrule-addheaderaction.md)  
+ *Type*: [AddHeaderAction](aws-properties-ses-receiptrule-addheaderaction.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `BounceAction`  <a name="cfn-ses-receiptrule-action-bounceaction"></a>
 Rejects the received email by returning a bounce response to the sender and, optionally, publishes a notification to Amazon SNS\.  
  *Required*: No  
- *Type*: [Amazon SES ReceiptRule BounceAction](aws-properties-ses-receiptrule-bounceaction.md)  
+ *Type*: [BounceAction](aws-properties-ses-receiptrule-bounceaction.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `LambdaAction`  <a name="cfn-ses-receiptrule-action-lambdaaction"></a>
 Calls an AWS Lambda function, and optionally, publishes a notification to Amazon SNS\.  
  *Required*: No  
- *Type*: [Amazon SES ReceiptRule LambdaAction](aws-properties-ses-receiptrule-lambdaaction.md)  
+ *Type*: [LambdaAction](aws-properties-ses-receiptrule-lambdaaction.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `S3Action`  <a name="cfn-ses-receiptrule-action-s3action"></a>
 Saves the received message to an Amazon S3 bucket and, optionally, publishes a notification to Amazon SNS\.  
  *Required*: No  
- *Type*: [Amazon SES ReceiptRule S3Action](aws-properties-ses-receiptrule-s3action.md)  
+ *Type*: [S3Action](aws-properties-ses-receiptrule-s3action.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `SNSAction`  <a name="cfn-ses-receiptrule-action-snsaction"></a>
 Publishes the email content within a notification to Amazon SNS\.  
  *Required*: No  
- *Type*: [Amazon SES ReceiptRule SNSAction](aws-properties-ses-receiptrule-snsaction.md)  
+ *Type*: [SNSAction](aws-properties-ses-receiptrule-snsaction.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `StopAction`  <a name="cfn-ses-receiptrule-action-stopaction"></a>
 Terminates the evaluation of the receipt rule set and optionally publishes a notification to Amazon SNS\.  
  *Required*: No  
- *Type*: [Amazon SES ReceiptRule StopAction](aws-properties-ses-receiptrule-stopaction.md)  
+ *Type*: [StopAction](aws-properties-ses-receiptrule-stopaction.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `WorkmailAction`  <a name="cfn-ses-receiptrule-action-workmailaction"></a>
 Calls Amazon WorkMail and, optionally, publishes a notification to Amazon SNS\.  
  *Required*: No  
- *Type*: [Amazon SES ReceiptRule WorkmailAction](aws-properties-ses-receiptrule-workmailaction.md)  
+ *Type*: [WorkmailAction](aws-properties-ses-receiptrule-workmailaction.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ses-receiptrule-action-seealso"></a>

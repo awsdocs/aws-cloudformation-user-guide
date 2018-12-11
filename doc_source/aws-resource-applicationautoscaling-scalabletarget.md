@@ -1,6 +1,6 @@
 # AWS::ApplicationAutoScaling::ScalableTarget<a name="aws-resource-applicationautoscaling-scalabletarget"></a>
 
-The `AWS::ApplicationAutoScaling::ScalableTarget` resource specifies a resource that Application Auto Scaling can scale up or down\. For more information, see the [RegisterScalableTarget](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html) action in the *Application Auto Scaling API Reference*\.
+The `AWS::ApplicationAutoScaling::ScalableTarget` resource specifies a resource that Application Auto Scaling can scale\. For more information, see the [RegisterScalableTarget](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html) action in the *Application Auto Scaling API Reference*\.
 
 Updates to `AWS::DynamoDB::Table` resources that are associated with `AWS::ApplicationAutoScaling::ScalableTarget` resources will always result in an update failure and then an update rollback failure\. The following `ScalableDimension` attributes cause this problem when associated with the table:
 + dynamodb:table:ReadCapacityUnits
@@ -10,13 +10,7 @@ Updates to `AWS::DynamoDB::Table` resources that are associated with `AWS::Appli
 
 As a workaround, please deregister scalable targets before performing updates to `AWS::DynamoDB::Table` resources\.
 
-**Topics**
-+ [Syntax](#w4ab1c21c10d102c13)
-+ [Properties](#w4ab1c21c10d102c15)
-+ [Return Value](#aws-resource-applicationautoscaling-scalabletarget-returnvalues)
-+ [Examples](#aws-resource-applicationautoscaling-scalabletarget-examples)
-
-## Syntax<a name="w4ab1c21c10d102c13"></a>
+## Syntax<a name="w4ab1c21c10c23c13c13"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
@@ -52,7 +46,7 @@ Properties:
   [ServiceNamespace](#cfn-applicationautoscaling-scalabletarget-servicenamespace): String
 ```
 
-## Properties<a name="w4ab1c21c10d102c15"></a>
+## Properties<a name="w4ab1c21c10c23c13c15"></a>
 
 `MaxCapacity`  <a name="cfn-applicationautoscaling-scalabletarget-maxcapacity"></a>
 The maximum value that Application Auto Scaling can use to scale a target during a scaling activity\.  
@@ -87,7 +81,7 @@ The scalable dimension that's associated with the scalable target\. Specify the 
 `ScheduledActions`  <a name="cfn-applicationautoscaling-scalabletarget-scheduledactions"></a>
 The scheduled actions for the scalable target\. Duplicates aren't allowed\.  
  *Required*: No  
- *Type*: List of [Application Auto Scaling ScalableTarget ScheduledAction](aws-properties-applicationautoscaling-scalabletarget-scheduledaction.md) property types  
+ *Type*: List of [ScheduledAction](aws-properties-applicationautoscaling-scalabletarget-scheduledaction.md) property types  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ServiceNamespace`  <a name="cfn-applicationautoscaling-scalabletarget-servicenamespace"></a>
@@ -98,7 +92,7 @@ The namespace of the AWS service that provides the resource or `custom-resource`
 
 ## Return Value<a name="aws-resource-applicationautoscaling-scalabletarget-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10d102c17b2"></a>
+### Ref<a name="w4ab1c21c10c23c13c17b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the AWS CloudFormation\-generated ID of the resource, such as `service/ecsStack-MyECSCluster-AB12CDE3F4GH/ecsStack-MyECSService-AB12CDE3F4GH|ecs:service:DesiredCount|ecs`\.
 
@@ -108,7 +102,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ## Examples<a name="aws-resource-applicationautoscaling-scalabletarget-examples"></a>
 
-### Number of Tasks<a name="w4ab1c21c10d102c19b2"></a>
+### Number of Tasks<a name="w4ab1c21c10c23c13c19b2"></a>
 
 The following example creates a scalable target for an Amazon Elastic Container Service service\. Application Auto Scaling scales the number of tasks at a minimum of 1 task and a maximum of 2\.
 
@@ -142,7 +136,7 @@ scalableTarget:
     ServiceNamespace: ecs
 ```
 
-### Using `Fn::Join` and `Ref` to Construct the `ResourceId`<a name="w4ab1c21c10d102c19b4"></a>
+### Using `Fn::Join` and `Ref` to Construct the `ResourceId`<a name="w4ab1c21c10c23c13c19b4"></a>
 
 The following example uses the `Fn::Join` and `Ref` intrinsic functions to construct the `ResourceId` property of the scaling target\.
 

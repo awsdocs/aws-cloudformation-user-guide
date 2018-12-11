@@ -36,5 +36,5 @@ The ARN of an IAM service role that Elastic Beanstalk has permission to assume\.
 `VersionLifecycleConfig`  <a name="cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-versionlifecycleconfig"></a>
 Defines lifecycle settings for application versions\.  
  *Required*: No  
- *Type*: [Elastic Beanstalk Application ApplicationVersionLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.md)  
+ *Type*: [ApplicationVersionLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

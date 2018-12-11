@@ -16,15 +16,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[MaxvCpus](#cfn-batch-computeenvironment-computeresources-maxvcpus)" : Integer,
   "[BidPercentage](#cfn-batch-computeenvironment-computeresources-bidpercentage)" : Integer,
   "[SecurityGroupIds](#cfn-batch-computeenvironment-computeresources-securitygroupids)" : [ String, ... ],
-  "[Subnets](#cfn-batch-computeenvironment-computeresources-subnets)" :  [ String, ... ],
+  "[Subnets](#cfn-batch-computeenvironment-computeresources-subnets)" : [ String, ... ],
   "[Type](#cfn-batch-computeenvironment-computeresources-type)" : String,
   "[MinvCpus](#cfn-batch-computeenvironment-computeresources-minvcpus)" : Integer,
+  "[LaunchTemplate](#cfn-batch-computeenvironment-computeresources-launchtemplate)" : [*LaunchTemplateSpecification*](aws-properties-batch-computeenvironment-launchtemplatespecification.md),
   "[ImageId](#cfn-batch-computeenvironment-computeresources-imageid)" : String,
   "[InstanceRole](#cfn-batch-computeenvironment-computeresources-instancerole)" : String,
   "[InstanceTypes](#cfn-batch-computeenvironment-computeresources-instancetypes)" : [ String, ... ],
   "[Ec2KeyPair](#cfn-batch-computeenvironment-computeresources-ec2keypair)" : String,
-  "[Tags](#cfn-batch-computeenvironment-computeresources-tags)" : JSON object,
-  "[DesiredvCpus](#cfn-batch-computeenvironment-computeresources-desiredvcpus)" : Integer
+  "[PlacementGroup](#cfn-batch-computeenvironment-computeresources-placementgroup)" : String,
+  "[Tags](#cfn-batch-computeenvironment-computeresources-tags)" : Json,
+  "[DesiredvCpus](#cfn-batch-computeenvironment-computeresources-desiredvcpus)" : Integer,
 }
 ```
 
@@ -40,12 +42,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   - String
 [Type](#cfn-batch-computeenvironment-computeresources-type): String
 [MinvCpus](#cfn-batch-computeenvironment-computeresources-minvcpus): Integer
+[LaunchTemplate](#cfn-batch-computeenvironment-computeresources-launchtemplate): 
+  [*LaunchTemplateSpecification*](aws-properties-batch-computeenvironment-launchtemplatespecification.md)
 [ImageId](#cfn-batch-computeenvironment-computeresources-imageid): String
 [InstanceRole](#cfn-batch-computeenvironment-computeresources-instancerole): String
 [InstanceTypes](#cfn-batch-computeenvironment-computeresources-instancetypes): 
   - String
 [Ec2KeyPair](#cfn-batch-computeenvironment-computeresources-ec2keypair): String
-[Tags](#cfn-batch-computeenvironment-computeresources-tags): JSON object
+[PlacementGroup](#cfn-batch-computeenvironment-computeresources-placementgroup): String
+[Tags](#cfn-batch-computeenvironment-computeresources-tags): Json
 [DesiredvCpus](#cfn-batch-computeenvironment-computeresources-desiredvcpus): Integer
 ```
 
@@ -95,6 +100,12 @@ The minimum number of EC2 vCPUs that an environment should maintain\.
 *Type*: Integer  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
+`LaunchTemplate`  <a name="cfn-batch-computeenvironment-computeresources-launchtemplate"></a>
+The launch template to use for your compute resources\. Any other compute resource parameters that you specify in a [CreateComputeEnvironment](https://docs.aws.amazon.com/batch/latest/APIReference/API_CreateComputeEnvironment.html) API operation override the same parameters in the launch template\. You must specify either the launch template ID or launch template name in the request, but not both\. For more information, see [Launch Template Support](https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html) in the *AWS Batch User Guide*\.  
+ *Required*: No  
+ *Type*: [LaunchTemplateSpecification](aws-properties-batch-computeenvironment-launchtemplatespecification.md)  
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+
 `ImageId`  <a name="cfn-batch-computeenvironment-computeresources-imageid"></a>
 The Amazon Machine Image \(AMI\) ID used for instances launched in the compute environment\.  
  *Required*: No  
@@ -117,6 +128,12 @@ The instances types that may launched\.
 The EC2 key pair that is used for instances launched in the compute environment\.  
  *Required*: No  
 *Type*: String  
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+
+`PlacementGroup`  <a name="cfn-batch-computeenvironment-computeresources-placementgroup"></a>
+The Amazon EC2 placement group to associate with your compute resources\. If you intend to submit multi\-node parallel jobs to your compute environment, you should consider creating a cluster placement group and associate it with your compute resources\. This keeps your multi\-node parallel job on a logical grouping of instances within a single Availability Zone with high network flow potential\. For more information, see [Placement Groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+ *Required*: No  
+ *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `Tags`  <a name="cfn-batch-computeenvironment-computeresources-tags"></a>

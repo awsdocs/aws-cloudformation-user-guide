@@ -18,7 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::GuardDuty::Detector",
   "Properties" : {
-    "[Enable](#cfn-guardduty-detector-enable)" : Boolean
+    "[Enable](#cfn-guardduty-detector-enable)" : Boolean,
+    "[FindingPublishingFrequency](#cfn-guardduty-detector-findingpublishingfrequency) : String
   }
 }
 ```
@@ -29,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::GuardDuty::Detector
 Properties:
   [Enable](#cfn-guardduty-detector-enable): Boolean
+  [FindingPublishingFrequency](#cfn-guardduty-detector-findingpublishingfrequency): String
 ```
 
 ## Properties<a name="aws-resource-guardduty-detector-properties"></a>
@@ -37,6 +39,12 @@ Properties:
 A Boolean value that specifies whether the detector is to be enabled\.  
  *Required*: Yes  
  *Type*: Boolean  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+
+`FindingPublishingFrequency`  <a name="cfn-guardduty-detector-findingpublishingfrequency"></a>
+Specifies the frequency of notifications sent about the subsequent finding occurrences\. Valid values include only the following: FIFTEEN\_MINUTES, ONE\_HOUR, SIX\_HOURS\.  
+ *Required*: No  
+ *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-guardduty-detector-returnvalues"></a>
@@ -59,7 +67,8 @@ The following example shows how to declare an `AWS::GuardDuty::Detector` resourc
 "mydetector": {
   "Type": "AWS::GuardDuty::Detector",
   "Properties": {
-    "Enable": true
+    "Enable": true,
+    "FindingPublishingFrequency": "FIFTEEN_MINUTES"
   }
 }
 ```
@@ -71,4 +80,5 @@ mydetector:
   Type: AWS::GuardDuty::Detector
   Properties:
     Enable: true
+    FindingPublishingFrequency: FIFTEEN_MINUTES
 ```

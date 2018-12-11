@@ -37,7 +37,7 @@ For a list of valid values, see [LaunchTemplateTagSpecificationRequest](https://
 `Tags`  <a name="cfn-ec2-launchtemplate-tagspecification-tags"></a>
 The tags to apply to the resource\.  
  *Required*: No  
- *Type*: List of [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+ *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ec2-launchtemplate-tagspecification-seealso"></a>

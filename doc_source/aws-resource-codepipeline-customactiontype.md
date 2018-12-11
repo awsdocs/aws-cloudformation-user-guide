@@ -2,12 +2,6 @@
 
 The `AWS::CodePipeline::CustomActionType` resource creates a custom action for activities that aren't included in the AWS CodePipeline default actions, such as running an internally developed build process or a test suite\. You can use these custom actions in the stage of a [pipeline](aws-resource-codepipeline-pipeline.md)\. For more information, see [Create and Add a Custom Action in AWS CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/how-to-create-custom-action.html) in the *AWS CodePipeline User Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-codepipeline-customactiontype-syntax)
-+ [Properties](#w4ab1c21c10d271b9)
-+ [Return Value](#w4ab1c21c10d271c11)
-+ [Example](#w4ab1c21c10d271c13)
-
 ## Syntax<a name="aws-resource-codepipeline-customactiontype-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -47,7 +41,7 @@ Properties:
   [Version](#cfn-codepipeline-customactiontype-version): String
 ```
 
-## Properties<a name="w4ab1c21c10d271b9"></a>
+## Properties<a name="w4ab1c21c10c75c13b9"></a>
 
 `Category`  <a name="cfn-codepipeline-customactiontype-category"></a>
 The category of the custom action, such as a source action or a build action\. For valid values, see [CreateCustomActionType](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_CreateCustomActionType.html) in the *AWS CodePipeline API Reference*\.  
@@ -91,15 +85,15 @@ The version number of this custom action\. For length constraints, see the `vers
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w4ab1c21c10d271c11"></a>
+## Return Value<a name="w4ab1c21c10c75c13c11"></a>
 
-### Ref<a name="w4ab1c21c10d271c11b2"></a>
+### Ref<a name="w4ab1c21c10c75c13c11b2"></a>
 
 When you pass the logical ID of an `AWS::CodePipeline::CustomActionType` resource to the intrinsic `Ref` function, the function returns the custom action name, such as `custo-MyCus-A1BCDEFGHIJ2`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d271c13"></a>
+## Example<a name="w4ab1c21c10c75c13c13"></a>
 
 The following example is a custom build action that requires users to specify one property: a project name\.
 

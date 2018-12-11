@@ -2,7 +2,7 @@
 
 <a name="aws-properties-elasticbeanstalk-application-maxagerule-description"></a>The `MaxAgeRule` property type specifies a lifecycle rule that deletes application versions after the specified number of days for an AWS Elastic Beanstalk application\.
 
-<a name="aws-properties-elasticbeanstalk-application-maxagerule-inheritance"></a> `MaxAgeRule` is a property of the [Elastic Beanstalk Application ApplicationVersionLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.md) property type\. 
+<a name="aws-properties-elasticbeanstalk-application-maxagerule-inheritance"></a> `MaxAgeRule` is a property of the [ApplicationVersionLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.md) property type\. 
 
 ## Syntax<a name="aws-properties-elasticbeanstalk-application-maxagerule-syntax"></a>
 

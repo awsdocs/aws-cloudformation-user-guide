@@ -2,7 +2,7 @@
 
 The `RecordColumn` property type specifies the mapping of each data element in the streaming source to the corresponding column in the in\-application stream\. 
 
- `RecordColumn` is a property of the [Kinesis Data Analytics ApplicationReferenceDataSource ReferenceSchema](aws-properties-kinesisanalytics-applicationreferencedatasource-referenceschema.md) resource\. 
+ `RecordColumn` is a property of the [ReferenceSchema](aws-properties-kinesisanalytics-applicationreferencedatasource-referenceschema.md) resource\. 
 
 ## Syntax<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-recordcolumn-syntax"></a>
 

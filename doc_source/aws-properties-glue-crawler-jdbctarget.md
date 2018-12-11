@@ -2,7 +2,7 @@
 
 <a name="aws-properties-glue-crawler-jdbctarget-description"></a>The `JdbcTarget` property type specifies a JDBC target for an AWS Glue crawl\.
 
-<a name="aws-properties-glue-crawler-jdbctarget-inheritance"></a> The `JdbcTargets` property of the [AWS Glue Crawler Targets](aws-properties-glue-crawler-targets.md) property type contains a list of `JdbcTarget` property types\.
+<a name="aws-properties-glue-crawler-jdbctarget-inheritance"></a> The `JdbcTargets` property of the [Targets](aws-properties-glue-crawler-targets.md) property type contains a list of `JdbcTarget` property types\.
 
 ## Syntax<a name="aws-properties-glue-crawler-jdbctarget-syntax"></a>
 

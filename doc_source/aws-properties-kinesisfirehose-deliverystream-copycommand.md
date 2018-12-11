@@ -4,7 +4,7 @@ The `CopyCommand` property type configures the Amazon Redshift `COPY` command th
 
 `CopyCommand` is a property of the [Amazon Kinesis Data Firehose DeliveryStream RedshiftDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.md) property type\.
 
-## Syntax<a name="w4ab1c21c14e1581b7"></a>
+## Syntax<a name="w4ab1c21c10d156c30c21b7"></a>
 
 ### JSON<a name="aws-properties-kinesisfirehose-deliverystream-copycommand-syntax.json"></a>
 
@@ -24,7 +24,7 @@ The `CopyCommand` property type configures the Amazon Redshift `COPY` command th
 [DataTableName](#cfn-kinesisfirehose-deliverystream-copycommand-datatablename): String
 ```
 
-## Properties<a name="w4ab1c21c14e1581b9"></a>
+## Properties<a name="w4ab1c21c10d156c30c21b9"></a>
 
 `CopyOptions`  <a name="cfn-kinesisfirehose-deliverystream-copycommand-copyoptions"></a>
 Parameters to use with the Amazon Redshift `COPY` command\. For examples, see the `CopyOptions` content for the [CopyCommand](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CopyCommand.html) data type in the *Amazon Kinesis Data Firehose API Reference*\.  

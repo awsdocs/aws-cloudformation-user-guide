@@ -1,6 +1,6 @@
 # Application Auto Scaling ScalingPolicy CustomizedMetricSpecification<a name="aws-properties-applicationautoscaling-scalingpolicy-customizedmetricspecification"></a>
 
-The `CustomizedMetricSpecification` property configures a customized metric for a target tracking policy in Application Auto Scaling\. `CustomizedMetricSpecification` is a subproperty of the [Application Auto Scaling ScalingPolicy TargetTrackingScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.md) property\.
+The `CustomizedMetricSpecification` property configures a customized metric \(an Amazon CloudWatch metric of your choosing\) for a target tracking policy to use with Application Auto Scaling\. `CustomizedMetricSpecification` is a subproperty of the [Application Auto Scaling ScalingPolicy TargetTrackingScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.md) property\.
 
 ## Syntax<a name="aws-properties-applicationautoscaling-scalingpolicy-customizedmetricspecification-syntax"></a>
 
@@ -61,3 +61,7 @@ The unit of the metric\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+## See Also<a name="aws-properties-applicationautoscaling-scalingpolicy-customizedmetricspecification-seealso"></a>
++ [CustomizedMetricSpecification](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_CustomizedMetricSpecification.html) in the *Application Auto Scaling API Reference*
++ [Amazon CloudWatch Concepts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html) in the *Amazon CloudWatch User Guide*

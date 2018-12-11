@@ -5,7 +5,7 @@ Use the`JobFlowInstancesConfig`, which is a property of the [AWS::EMR::Cluster](
 **Note**  
 When creating your cluster using `EmrManagedMasterSecurityGroup` and `EmrManagedSlaveSecurityGroup`, to avoid a `delete_failed` exception, use security groups created outside of the AWS CloudFormation stack or retain them on deletion\.
 
-## Syntax<a name="w4ab1c21c14e1189b7"></a>
+## Syntax<a name="w4ab1c21c10d132c13c58b7"></a>
 
 ### JSON<a name="aws-properties-emr-cluster-jobflowinstancesconfig-syntax.json"></a>
 
@@ -20,6 +20,7 @@ When creating your cluster using `EmrManagedMasterSecurityGroup` and `EmrManaged
   "[EmrManagedMasterSecurityGroup](#cfn-emr-cluster-jobflowinstancesconfig-emrmanagedmastersecuritygroup)" : String,
   "[EmrManagedSlaveSecurityGroup](#cfn-emr-cluster-jobflowinstancesconfig-emrmanagedslavesecuritygroup)" : String,
   "[HadoopVersion](#cfn-emr-cluster-jobflowinstancesconfig-hadoopversion)" : String,
+  "[KeepJobFlowAliveWhenNoSteps](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-keepjobflowalivewhennosteps)" : Boolean,
   "[MasterInstanceFleet](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancefleet)" : InstanceFleetConfig,
   "[MasterInstanceGroup](#cfn-emr-cluster-jobflowinstancesconfig-masterinstancegroup)" : InstanceGroupConfig,
   "[Placement](#cfn-emr-cluster-jobflowinstancesconfig-placement)" : Placement,
@@ -44,6 +45,7 @@ When creating your cluster using `EmrManagedMasterSecurityGroup` and `EmrManaged
 [EmrManagedMasterSecurityGroup](#cfn-emr-cluster-jobflowinstancesconfig-emrmanagedmastersecuritygroup): String
 [EmrManagedSlaveSecurityGroup](#cfn-emr-cluster-jobflowinstancesconfig-emrmanagedslavesecuritygroup): String
 [HadoopVersion](#cfn-emr-cluster-jobflowinstancesconfig-hadoopversion): String
+[KeepJobFlowAliveWhenNoSteps](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-keepjobflowalivewhennosteps): Boolean
 [MasterInstanceFleet](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancefleet):
   InstanceFleetConfig
 [MasterInstanceGroup](#cfn-emr-cluster-jobflowinstancesconfig-masterinstancegroup):
@@ -54,7 +56,7 @@ When creating your cluster using `EmrManagedMasterSecurityGroup` and `EmrManaged
 [TerminationProtected](#cfn-emr-cluster-jobflowinstancesconfig-terminationprotected): Boolean
 ```
 
-## Properties<a name="w4ab1c21c14e1189b9"></a>
+## Properties<a name="w4ab1c21c10d132c13c58b9"></a>
 
 `AdditionalMasterSecurityGroups`  <a name="cfn-emr-cluster-jobflowinstancesconfig-additionalmastersecuritygroups"></a>
 A list of additional EC2 security group IDs to assign to the master instance \(master node\) in your Amazon EMR cluster\. Use this property to supplement the rules specified by the Amazon EMR managed master security group\.  
@@ -109,6 +111,12 @@ The ID of an EC2 security group \(managed by Amazon EMR\) that is assigned to th
 The Hadoop version for the job flow\. For valid values, see the [HadoopVersion](https://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_JobFlowInstancesConfig.html) parameter in the *Amazon EMR API Reference*\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+
+`KeepJobFlowAliveWhenNoSteps`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-keepjobflowalivewhennosteps"></a>
+Specifies whether the cluster should remain available after completing all steps\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `MasterInstanceFleet`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancefleet"></a>

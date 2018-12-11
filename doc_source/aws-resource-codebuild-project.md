@@ -2,13 +2,6 @@
 
 The `AWS::CodeBuild::Project` resource configures how AWS CodeBuild builds your source code\. For example, it tells AWS CodeBuild where to get the source code and which build environment to use\.
 
-**Topics**
-+ [Syntax](#aws-resource-codebuild-project-syntax)
-+ [Properties](#aws-resource-codebuild-project-properties)
-+ [Return Values](#aws-resource-codebuild-project-returnvalues)
-+ [Examples](#aws-resource-codebuild-project-examples)
-+ [See Also](#aws-resource-codebuild-project-seealso)
-
 ## Syntax<a name="aws-resource-codebuild-project-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -25,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[Description](#cfn-codebuild-project-description)" : String,
     "[EncryptionKey](#cfn-codebuild-project-encryptionkey)" : String,
     "[Environment](#cfn-codebuild-project-environment)" : [*Environment*](aws-properties-codebuild-project-environment.md),
-    "[Name](#cfn-codebuild-project-name)" : String,
     "[LogsConfig](#cfn-codebuild-project-logsconfig)" : [*LogsConfig*](aws-properties-codebuild-project-logsconfig.md),
+    "[Name](#cfn-codebuild-project-name)" : String,
     "[SecondaryArtifacts](#cfn-codebuild-project-secondary-artifacts)" : [[* Artifacts, \.\.\. *](aws-properties-codebuild-project-artifacts.md)],
     "[SecondarySources](#cfn-codebuild-project-secondary-sources)" : [[* Source, \.\.\. *](aws-properties-codebuild-project-source.md)],
     "[ServiceRole](#cfn-codebuild-project-servicerole)" : String,
@@ -83,7 +76,7 @@ Including build badges with your project is currently not supported if the sourc
 `Cache`  <a name="cfn-codebuild-project-cache"></a>
 Settings that AWS CodeBuild uses to store and reuse build dependencies\.  
  *Required*: No  
- *Type*: [AWS CodeBuild Project ProjectCache](aws-properties-codebuild-project-projectcache.md)  
+ *Type*: [ProjectCache](aws-properties-codebuild-project-projectcache.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Description`  <a name="cfn-codebuild-project-description"></a>
@@ -143,7 +136,7 @@ The source code settings for the project, such as the source code's repository t
 `Tags`  <a name="cfn-codebuild-project-tags"></a>
 An arbitrary set of tags \(key\-value pairs\) for the AWS CodeBuild project\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `TimeoutInMinutes`  <a name="cfn-codebuild-project-timeoutinminutes"></a>
@@ -161,7 +154,7 @@ For an existing AWS CodeBuild build project that has its source code stored in a
 `VpcConfig`  <a name="cfn-codebuild-project-vpcconfig"></a>
 Settings that enable AWS CodeBuild to access resources in an Amazon VPC\. For more information, see [Use AWS CodeBuild with Amazon Virtual Private Cloud](https://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html) in the *AWS CodeBuild User Guide*\.  
  *Required*: No  
- *Type*: [AWS CodeBuild Project VpcConfig](aws-properties-codebuild-project-vpcconfig.md)  
+ *Type*: [VpcConfig](aws-properties-codebuild-project-vpcconfig.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-codebuild-project-returnvalues"></a>

@@ -2,12 +2,6 @@
 
 The `AWS::Config::ConfigRule` resource uses an AWS Lambda \(Lambda\) function that evaluates configuration items to assess whether your AWS resources comply with your specified configurations\. This function can run when AWS Config detects a configuration change or delivers a configuration snapshot\. The resources this function evaluates must be in the recording group\. For more information, see [Evaluating AWS Resource Configurations with AWS Config](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html) in the *AWS Config Developer Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-config-configrule-syntax)
-+ [Properties](#w4ab1c21c10d316b9)
-+ [Return Values](#w4ab1c21c10d316c11)
-+ [Examples](#w4ab1c21c10d316c13)
-
 ## Syntax<a name="aws-resource-config-configrule-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -44,7 +38,7 @@ Properties:
     Source
 ```
 
-## Properties<a name="w4ab1c21c10d316b9"></a>
+## Properties<a name="w4ab1c21c10c81c17b9"></a>
 
 `ConfigRuleName`  <a name="cfn-config-configrule-configrulename"></a>
 A name for the AWS Config rule\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the rule name\. For more information, see [Name Type](aws-properties-name.md)\.  
@@ -83,15 +77,15 @@ Specifies the rule owner, the rule identifier, and the events that cause the fun
 *Type*: [AWS Config ConfigRule Source](aws-properties-config-configrule-source.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d316c11"></a>
+## Return Values<a name="w4ab1c21c10c81c17c11"></a>
 
-### Ref<a name="w4ab1c21c10d316c11b2"></a>
+### Ref<a name="w4ab1c21c10c81c17c11b2"></a>
 
 When you pass the logical ID of an `AWS::Config::ConfigRule` resource to the intrinsic `Ref` function, the function returns the rule name, such as `mystack-MyConfigRule-12ABCFPXHV4OV`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d316c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10c81c17c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -106,9 +100,9 @@ The compliance status of an AWS Config rule, such as `COMPLIANT` or `NON_COMPLIA
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w4ab1c21c10d316c13"></a>
+## Examples<a name="w4ab1c21c10c81c17c13"></a>
 
-### <a name="w4ab1c21c10d316c13b2"></a>
+### <a name="w4ab1c21c10c81c17c13b2"></a>
 
 The following example uses an AWS managed rule that checks whether EC2 volumes resource types have a `CostCenter` tag\.
 
@@ -146,7 +140,7 @@ ConfigRuleForVolumeTags:
       SourceIdentifier: "REQUIRED_TAGS"
 ```
 
-### Rule Using Lambda Function<a name="w4ab1c21c10d316c13b4"></a>
+### Rule Using Lambda Function<a name="w4ab1c21c10c81c17c13b4"></a>
 
 The following example creates a custom configuration rule that uses a Lambda function\. The function checks whether an EC2 volume has the `AutoEnableIO` property set to true\. Note that the configuration rule has a dependency on the Lambda policy so that the rule calls the function only after it's permitted to do so\.
 

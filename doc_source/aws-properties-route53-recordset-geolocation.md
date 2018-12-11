@@ -2,7 +2,7 @@
 
 The `GeoLocation` property is part of the [AWS::Route53::RecordSet](aws-properties-route53-recordset.md) resource that describes how Route 53 responds to DNS queries based on the geographic location of the query\. This property is not compatible with the `Region` property\.
 
-## Syntax<a name="w4ab1c21c14e1754b5"></a>
+## Syntax<a name="w4ab1c21c10d177c22c21b5"></a>
 
 ### JSON<a name="aws-properties-route53-recordset-geolocation-syntax.json"></a>
 
@@ -22,7 +22,7 @@ The `GeoLocation` property is part of the [AWS::Route53::RecordSet](aws-properti
 [SubdivisionCode](#cfn-route53-recordset-geolocation-subdivisioncode): String
 ```
 
-## Properties<a name="w4ab1c21c14e1754b7"></a>
+## Properties<a name="w4ab1c21c10d177c22c21b7"></a>
 
 `ContinentCode`  <a name="cfn-route53-recordset-geolocation-continentcode"></a>
 All DNS queries from the continent that you specified are routed to this resource record set\. If you specify this property, omit the `CountryCode` and `SubdivisionCode` properties\.  

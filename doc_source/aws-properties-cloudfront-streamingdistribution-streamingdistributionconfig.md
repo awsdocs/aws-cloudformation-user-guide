@@ -63,7 +63,7 @@ Whether the streaming distribution is enabled to accept user requests for conten
 `Logging`  <a name="cfn-cloudfront-streamingdistribution-streamingdistributionconfig-logging"></a>
 Whether access logs are written for the streaming distribution\.  
  *Required*: No  
- *Type*: [CloudFront StreamingDistribution Logging](aws-properties-cloudfront-streamingdistribution-logging.md)  
+ *Type*: [Logging](aws-properties-cloudfront-streamingdistribution-logging.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `PriceClass`  <a name="cfn-cloudfront-streamingdistribution-streamingdistributionconfig-priceclass"></a>
@@ -76,13 +76,13 @@ Valid values include `PriceClass_100`, `PriceClass_200`, and `PriceClass_All`\.
 `S3Origin`  <a name="cfn-cloudfront-streamingdistribution-streamingdistributionconfig-s3origin"></a>
 Information about the Amazon S3 bucket from which you want CloudFront to get your media files for distribution\.  
  *Required*: Yes  
- *Type*: [CloudFront StreamingDistribution S3Origin](aws-properties-cloudfront-streamingdistribution-s3origin.md)  
+ *Type*: [S3Origin](aws-properties-cloudfront-streamingdistribution-s3origin.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `TrustedSigners`  <a name="cfn-cloudfront-streamingdistribution-streamingdistributionconfig-trustedsigners"></a>
 Specifies any AWS accounts that you want to permit to create signed URLs for private content\. If you want the distribution to use signed URLs, include this element; if you want the distribution to use public URLs, remove this property\. For more information, see [Serving Private Content through CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the *Amazon CloudFront Developer Guide*\.  
  *Required*: Yes  
- *Type*: [CloudFront StreamingDistribution TrustedSigners](aws-properties-cloudfront-streamingdistribution-trustedsigners.md)  
+ *Type*: [TrustedSigners](aws-properties-cloudfront-streamingdistribution-trustedsigners.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig-seealso"></a>

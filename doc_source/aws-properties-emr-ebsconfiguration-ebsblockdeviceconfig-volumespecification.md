@@ -2,7 +2,7 @@
 
 `VolumeSpecification` is a property of the [Amazon EMR EbsConfiguration](aws-properties-emr-ebsconfiguration.md) property that configures the Amazon Elastic Block Store \(Amazon EBS\) volumes that Amazon EMR \(Amazon EMR\) associates with your instances\.
 
-## Syntax<a name="w4ab1c21c14e1248b5"></a>
+## Syntax<a name="w4ab1c21c10d132c22c46b5"></a>
 
 ### JSON<a name="aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-syntax.json"></a>
 
@@ -22,7 +22,7 @@
 [VolumeType](#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-volumetype): String
 ```
 
-## Properties<a name="w4ab1c21c14e1248b7"></a>
+## Properties<a name="w4ab1c21c10d132c22c46b7"></a>
 
 `Iops`  <a name="cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-iops"></a>
 The number of I/O operations per second \(IOPS\) that the volume supports\. For more information, see [Iops](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html) for the `EbsBlockDevice` action in the *Amazon EC2 API Reference*\.  

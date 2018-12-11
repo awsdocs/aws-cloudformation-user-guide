@@ -2,7 +2,7 @@
 
 `LaunchSpecifications` is a property of the [Amazon EC2 SpotFleet SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md) property that defines the launch specifications for the Spot fleet request\.
 
-## Syntax<a name="w4ab1c21c14d835b5"></a>
+## Syntax<a name="w4ab1c21c10d102d118c17b5"></a>
 
 ### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-syntax.json"></a>
 
@@ -56,7 +56,7 @@
 [WeightedCapacity](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-weightedcapacity): Number
 ```
 
-## Properties<a name="w4ab1c21c14d835b7"></a>
+## Properties<a name="w4ab1c21c10d102d118c17b7"></a>
 
 `BlockDeviceMappings`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings"></a>
 Defines the block devices that are mapped to the Spot instances\.  
@@ -131,7 +131,7 @@ The ID of the subnet in which to launch the instances\.
 `TagSpecifications`  <a name="cfn-ec2-spotfleet-spotfleetlaunchspecification-tagspecifications"></a>
 The tags to apply during creation\.  
 *Required*: No  
-*Type*: List of [Amazon EC2 SpotFleet SpotFleetTagSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications.md)
+*Type*: List of [SpotFleetTagSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications.md)
 
 `UserData`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-userdata"></a>
 Base64\-encoded MIME user data that instances use when starting up\.  

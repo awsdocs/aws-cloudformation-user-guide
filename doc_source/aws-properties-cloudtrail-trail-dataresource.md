@@ -2,7 +2,7 @@
 
 The `DataResource` property type specifies Amazon S3 objects for event selectors in a CloudTrail trail\. Data events are object\-level API operations that access Amazon S3 objects, such as `GetObject`, `DeleteObject`, and `PutObject`\. You can specify up to 250 Amazon S3 buckets and object prefixes for a trail\. For more information, see [DataResource](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_DataResource.html) in the *AWS CloudTrail API Reference*\.
 
- `DataResource` is a property of the [CloudTrail Trail EventSelector](aws-properties-cloudtrail-trail-eventselector.md) property type\. 
+ `DataResource` is a property of the [EventSelector](aws-properties-cloudtrail-trail-eventselector.md) property type\. 
 
 ## Syntax<a name="aws-properties-cloudtrail-trail-dataresource-syntax"></a>
 

@@ -149,7 +149,7 @@ An AWS CloudFormation change set name that you want to associate with a policy\.
 
 `cloudformation:ResourceTypes`  
 The template resource types, such as `AWS::EC2::Instance`, that you want to associate with a policy\. Use this condition to control which resource types IAM users can work with when they create or update a stack\. This condition is checked against the resource types that users declare in the `ResourceTypes` parameter, which is currently supported only for CLI and API requests\. When using this parameter, users must specify all the resource types that are in their template\. For more information about the `ResourceTypes` parameter, see the [CreateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html) action in the *AWS CloudFormation API Reference*\.  
-The following list describes how to define resource types\. For a list of resource types, see [AWS Resource Types Reference](aws-template-resource-type-ref.md)\.    
+The following list describes how to define resource types\. For a list of resource types, see [AWS Resource and Property Types Reference](aws-template-resource-type-ref.md)\.    
 `AWS::*`  
 Specify all AWS resources\.  
 `AWS::service_name::*`  

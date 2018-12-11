@@ -2,12 +2,6 @@
 
 The `AWS::SSM::MaintenanceWindowTarget` resource registers a target with a Maintenance Window for AWS Systems Manager\. For more information, see [ RegisterTargetWithMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterTargetWithMaintenanceWindow.html) in the *AWS Systems Manager API Reference*\.
 
-**Topics**
-+ [Syntax](#aws-resource-ssm-maintenancewindowtarget-syntax)
-+ [Properties](#aws-resource-ssm-maintenancewindowtarget-properties)
-+ [Return Values](#aws-resource-ssm-maintenancewindowtarget-returnvalues)
-+ [See Also](#aws-resource-ssm-maintenancewindowtarget-seealso)
-
 ## Syntax<a name="aws-resource-ssm-maintenancewindowtarget-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -71,10 +65,13 @@ The type of target that's being registered with the Maintenance Window\.
 
 `Targets`  <a name="cfn-ssm-maintenancewindowtarget-targets"></a>
 The targets, either instances or tags\.  
-+ Specify instances by using `Key=instanceids,Values=instanceid1,instanceid2`\.
-+ Specify tags by using `Key=tag name,Values=tag value`\.
+Specify instances using the following format:  
+ `Key=InstanceIds,Values=instance-id-1,instance-id-2`  
+Specify tags using either of the following formats:  
+ `Key=tag:tag-key,Values=tag-value-1,tag-value-2`  
+`Key=tag-key,Values=tag-key-1,tag-key-2`  
  *Required*: Yes  
- *Type*: List of [Systems Manager MaintenanceWindowTarget Targets](aws-properties-ssm-maintenancewindowtarget-targets.md)  
+ *Type*: List of [Targets](aws-properties-ssm-maintenancewindowtarget-targets.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Name`  <a name="cfn-ssm-maintenancewindowtarget-name"></a>
@@ -85,7 +82,7 @@ An optional name for the target\.
 
 ## Return Values<a name="aws-resource-ssm-maintenancewindowtarget-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10e1186c11b3"></a>
+### Ref<a name="w4ab1c21c10d207c22b9b3"></a>
 
 When you pass the logical ID of an `AWS::SSM::MaintenanceWindowTarget` resource to the intrinsic `Ref` function, the function returns the maintenance window target ID, such as `12a345b6-bbb7-4bb6-90b0-8c9577a2d2b9`\. 
 

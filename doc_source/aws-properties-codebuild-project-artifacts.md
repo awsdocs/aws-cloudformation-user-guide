@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[ArtifactIdentifier](#cfn-codebuild-project-artifacts-artifactidentifier)" : String,
   "[EncryptionDisabled](#cfn-codebuild-project-artifacts-encryption-disabled)" : Boolean,
   "[Location](#cfn-codebuild-project-artifacts-location)" : String,
   "[Name](#cfn-codebuild-project-artifacts-name)" : String,
@@ -24,6 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-artifacts-syntax.yaml"></a>
 
 ```
+[ArtifactIdentifier](#cfn-codebuild-project-artifacts-artifactidentifier): String
 [EncryptionDisabled](#cfn-codebuild-project-artifacts-encryption-disabled): Boolean
 [Location](#cfn-codebuild-project-artifacts-location): String
 [Name](#cfn-codebuild-project-artifacts-name): String
@@ -34,7 +36,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [Type](#cfn-codebuild-project-artifacts-type): String
 ```
 
-## Properties<a name="w4ab1c21c14d391b7"></a>
+## Properties<a name="w4ab1c21c10c66c13c19b7"></a>
+
+`ArtifactIdentifier`  <a name="cfn-codebuild-project-artifacts-artifactidentifier"></a>
+ An identifier for this artifact\.   
+*Required*: No  
+*Type*: String
 
 `EncryptionDisabled`  <a name="cfn-codebuild-project-artifacts-encryption-disabled"></a>
  If set to true, then the build output artifacts are not encrypted\. This option is only valid if your artifacts type is Amazon S3\. If this is set with another artifacts type, an invalidInputException will be thrown\.   

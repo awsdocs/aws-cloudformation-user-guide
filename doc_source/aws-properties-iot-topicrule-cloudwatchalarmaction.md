@@ -2,7 +2,7 @@
 
 `CloudwatchAlarm` is a property of the `Actions` property that describes an action that updates a CloudWatch alarm\.
 
-## Syntax<a name="w4ab1c21c14e1425b5"></a>
+## Syntax<a name="w4ab1c21c10d150c39c23b5"></a>
 
 ### JSON<a name="aws-properties-iot-topicrule-cloudwatchalarmaction-syntax.json"></a>
 
@@ -24,7 +24,7 @@
 [StateValue](#cfn-iot-topicrule-cloudwatchalarmaction-statevalue): String
 ```
 
-## Properties<a name="w4ab1c21c14e1425b7"></a>
+## Properties<a name="w4ab1c21c10d150c39c23b7"></a>
 
 `AlarmName`  <a name="cfn-iot-topicrule-cloudwatchalarmaction-alarmname"></a>
 The CloudWatch alarm name\.  

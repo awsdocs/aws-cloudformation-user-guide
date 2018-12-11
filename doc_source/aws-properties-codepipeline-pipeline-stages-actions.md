@@ -2,7 +2,7 @@
 
 `Actions` is a property of the [AWS CodePipeline Pipeline Stages](aws-properties-codepipeline-pipeline-stages.md) property that specifies an action for an AWS CodePipeline stage\.
 
-## Syntax<a name="w4ab1c21c14d514b5"></a>
+## Syntax<a name="w4ab1c21c10c75c17c17b5"></a>
 
 ### JSON<a name="aws-properties-codepipeline-pipeline-stages-actions-syntax.json"></a>
 
@@ -13,6 +13,7 @@
   "[InputArtifacts](#cfn-codepipeline-pipeline-stages-actions-inputartifacts)" : [ InputArtifacts, ... ],
   "[Name](#cfn-codepipeline-pipeline-stages-actions-name)" : String,
   "[OutputArtifacts](#cfn-codepipeline-pipeline-stages-actions-outputartifacts)" : [ OutputArtifacts, ... ],
+  "[Region](#cfn-codepipeline-pipeline-stages-actions-region)" : String,
   "[RoleArn](#cfn-codepipeline-pipeline-stages-actions-rolearn)" : String,
   "[RunOrder](#cfn-codepipeline-pipeline-stages-actions-runorder)" : Integer
 }
@@ -30,11 +31,12 @@
 [Name](#cfn-codepipeline-pipeline-stages-actions-name): String
 [OutputArtifacts](#cfn-codepipeline-pipeline-stages-actions-outputartifacts):
   - OutputArtifacts
+[Region](#cfn-codepipeline-pipeline-stages-actions-region): String
 [RoleArn](#cfn-codepipeline-pipeline-stages-actions-rolearn): String
 [RunOrder](#cfn-codepipeline-pipeline-stages-actions-runorder): Integer
 ```
 
-## Properties<a name="w4ab1c21c14d514b7"></a>
+## Properties<a name="w4ab1c21c10c75c17c17b7"></a>
 
 `ActionTypeId`  <a name="cfn-codepipeline-pipeline-stages-actions-actiontypeid"></a>
 Specifies the action type and the provider of the action\.  
@@ -60,6 +62,11 @@ The action name\.
 The artifact name or ID that is a result of the action, such as a test or build artifact\.  
 *Required*: No  
 *Type*: List of [AWS CodePipeline Pipeline Stages Actions OutputArtifacts](aws-properties-codepipeline-pipeline-stages-actions-outputartifacts.md)
+
+`Region`  <a name="cfn-codepipeline-pipeline-stages-actions-region"></a>
+Specifies the action’s AWS Region, such as `us-east-1`\.  
+*Required*: No  
+*Type*: String
 
 `RoleArn`  <a name="cfn-codepipeline-pipeline-stages-actions-rolearn"></a>
 The Amazon Resource Name \(ARN\) of a service role that the action uses\. The pipeline's role assumes this role\.  

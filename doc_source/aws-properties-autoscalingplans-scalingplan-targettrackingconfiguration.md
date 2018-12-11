@@ -1,6 +1,6 @@
 # AWS Auto Scaling ScalingPlan TargetTrackingConfiguration<a name="aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration"></a>
 
-<a name="aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration-description"></a>The `TargetTrackingConfiguration` property type specifies a target tracking policy for an AWS Auto Scaling scaling plan\.
+<a name="aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration-description"></a>The `TargetTrackingConfiguration` property type specifies a target tracking configuration to use with AWS Auto Scaling\.
 
 <a name="aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration-inheritance"></a> `TargetTrackingConfiguration` is a property of the [AWS Auto Scaling ScalingPlan ScalingInstruction](aws-properties-autoscalingplans-scalingplan-scalinginstruction.md) property type\.
 
@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `CustomizedScalingMetricSpecification`  <a name="cfn-autoscalingplans-scalingplan-targettrackingconfiguration-customizedscalingmetricspecification"></a>
 A customized metric\.  
  *Required*: No  
- *Type*: [AWS Auto Scaling ScalingPlan CustomizedScalingMetricSpecification](aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.md)  
+ *Type*: [CustomizedScalingMetricSpecification](aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `DisableScaleIn`  <a name="cfn-autoscalingplans-scalingplan-targettrackingconfiguration-disablescalein"></a>
@@ -57,7 +57,7 @@ The estimated time, in seconds, until a newly launched instance can contribute t
 `PredefinedScalingMetricSpecification`  <a name="cfn-autoscalingplans-scalingplan-targettrackingconfiguration-predefinedscalingmetricspecification"></a>
 A predefined metric\.  
  *Required*: No  
- *Type*: [AWS Auto Scaling ScalingPlan PredefinedScalingMetricSpecification](aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification.md)  
+ *Type*: [PredefinedScalingMetricSpecification](aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ScaleInCooldown`  <a name="cfn-autoscalingplans-scalingplan-targettrackingconfiguration-scaleincooldown"></a>
@@ -77,3 +77,6 @@ The target value for the metric\. The range is 8\.515920e\-109 to 1\.174271e\+10
  *Required*: Yes  
  *Type*: Double  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+
+## See Also<a name="aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration-seealso"></a>
++ [TargetTrackingConfiguration](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_TargetTrackingConfiguration.html) in the *AWS Auto Scaling API Reference*

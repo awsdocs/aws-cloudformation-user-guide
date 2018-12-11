@@ -4,9 +4,9 @@ The `AWS::ApiGateway::Authorizer` resource creates an authorization layer that A
 
 **Topics**
 + [Syntax](#aws-resource-apigateway-authorizer-syntax)
-+ [Properties](#w4ab1c21c10c30b9)
-+ [Return Value](#w4ab1c21c10c30c11)
-+ [Examples](#w4ab1c21c10c30c13)
++ [Properties](#w4ab1c21c10c20c22b9)
++ [Return Value](#w4ab1c21c10c20c22c11)
++ [Examples](#w4ab1c21c10c20c22c13)
 
 ## Syntax<a name="aws-resource-apigateway-authorizer-syntax"></a>
 
@@ -50,7 +50,7 @@ Properties:
   [Type](#cfn-apigateway-authorizer-type): String
 ```
 
-## Properties<a name="w4ab1c21c10c30b9"></a>
+## Properties<a name="w4ab1c21c10c20c22b9"></a>
 
 For more information, including valid values, constraints, and examples of specifying each property, see [Authorizer](https://docs.aws.amazon.com/apigateway/api-reference/resource/authorizer) in the *API Gateway API Reference*\.
 
@@ -81,7 +81,7 @@ The authorizer's Uniform Resource Identifier \(URI\)\. If you specify `TOKEN` fo
 `IdentitySource`  <a name="cfn-apigateway-authorizer-identitysource"></a>
 The source of the identity in an incoming request\.   
 If you specify `TOKEN` or `COGNITO_USER_POOLS` for the `Type` property, specify a header mapping expression using the form `method.request.header.name`, where *name* is the name of a custom authorization header that clients submit as part of their requests\.   
-If you specify `REQUEST` for the `Type` property, specify a comma\-separated string of one or more mapping expressions of the specified request parameter using the form `method.request.parameter.name`\. For supported parameter types, see [Configure Lambda Authorizer Using the API Gateway Console](https://docs.aws.amazon.com/apigateway/latest/developerguide/configure-api-gateway-lambda-authorization-with-console.html) in the *API Gateway Developer Guide*\. The expression may also have the form `context.identity.name` where *name* is one of the provided context variables. 
+If you specify `REQUEST` for the `Type` property, specify a comma\-separated string of one or more mapping expressions of the specified request parameter using the form `method.request.parameter.name`\. For supported parameter types, see [Configure Lambda Authorizer Using the API Gateway Console](https://docs.aws.amazon.com/apigateway/latest/developerguide/configure-api-gateway-lambda-authorization-with-console.html) in the *API Gateway Developer Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -111,32 +111,23 @@ The ID of the `RestApi` resource that API Gateway creates the authorizer in\.
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Type`  <a name="cfn-apigateway-authorizer-type"></a>
-<<<<<<< HEAD
 The type of authorizer\. Valid values include:   
 + `TOKEN`: A custom authorizer that uses a Lambda function\.
 + `COGNITO_USER_POOLS`: An authorizer that uses Amazon Cognito user pools\.
 + `REQUEST`: An authorizer that uses a Lambda function using incoming request parameters\.
 *Required*: Yes  
-=======
-The type of authorizer:  
-
-+ For a custom authorizer that uses a Lambda function, use `TOKEN` or `REQUEST` to specify the Lambda Event Payload\.
-
-+ For an authorizer that uses Amazon Cognito user pools, use `COGNITO_USER_POOLS`\.
-*Required: *Yes  
->>>>>>> Added some information on Type: REQUEST
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10c30c11"></a>
+## Return Value<a name="w4ab1c21c10c20c22c11"></a>
 
-### Ref<a name="w4ab1c21c10c30c11b2"></a>
+### Ref<a name="w4ab1c21c10c20c22c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the authorizer's ID, such as `abcde1`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w4ab1c21c10c30c13"></a>
+## Examples<a name="w4ab1c21c10c20c22c13"></a>
 
 The following examples create a custom authorizer that is an AWS Lambda function\.
 

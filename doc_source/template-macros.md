@@ -130,7 +130,7 @@ When creating macro definitions, keep the following in mind:
 + The `Fn::ImportValue` intrinsic function isn't currently supported in macros\.
 + Intrinsic functions included in the template are evaluated after any macros\. Therefore, the processed template content your macro returns can include calls to intrinsic functions, and they are evaluated as usual\.
 + AWS CloudFormation macros are not supported in stack sets\.
-+ AWS CloudFormation macros are not supported in nested stacks\.
++ Change sets do not currently support nested stacks\. If you want to create or update a stack using a stack template that contains macros *and* nested stacks, you must create or update the stack directly\. To do this, use the [CreateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html.html) or [UpdateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStack.html.html) action and specify the `CAPABILITY_AUTO_EXPAND` capability\.
 
 **To create a AWS CloudFormation macro definition**
 

@@ -28,5 +28,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `PatchRules`  <a name="cfn-ssm-patchbaseline-rulegroup-patchrules"></a>
 The rules that make up the rule group\.  
  *Required*: No  
- *Type*: List of [Systems Manager PatchBaseline Rule](aws-properties-ssm-patchbaseline-rule.md)  
+ *Type*: List of [Rule](aws-properties-ssm-patchbaseline-rule.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

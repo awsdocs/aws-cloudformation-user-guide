@@ -1,6 +1,6 @@
 # AWS Auto Scaling ScalingPlan MetricDimension<a name="aws-properties-autoscalingplans-scalingplan-metricdimension"></a>
 
-<a name="aws-properties-autoscalingplans-scalingplan-metricdimension-description"></a>The `MetricDimension` property type specifies a dimension for a customized metric for an AWS Auto Scaling scaling plan\.
+<a name="aws-properties-autoscalingplans-scalingplan-metricdimension-description"></a>The `MetricDimension` property type specifies a dimension for a customized metric to use with AWS Auto Scaling\.
 
 <a name="aws-properties-autoscalingplans-scalingplan-metricdimension-inheritance"></a> `MetricDimension` is a property of the [AWS Auto Scaling ScalingPlan CustomizedScalingMetricSpecification](aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.md) property type\.
 

@@ -2,7 +2,7 @@
 
 The `Rule` property type describes lifecycle rules\. The `Rules` subproperty of the [Amazon S3 Bucket LifecycleConfiguration](aws-properties-s3-bucket-lifecycleconfig.md) property contains a list of `Rule` property types\. For more information, see [PUT Bucket lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTlifecycle.html) in the *Amazon Simple Storage Service \(Amazon S3\) API Reference*\.
 
-## Syntax<a name="w4ab1c21c14e1869b5"></a>
+## Syntax<a name="w4ab1c21c10d180c13d134b5"></a>
 
 ### JSON<a name="aws-properties-s3-bucket-lifecycleconfig-rule-syntax.json"></a>
 
@@ -46,7 +46,7 @@ The `Rule` property type describes lifecycle rules\. The `Rules` subproperty of 
   - Transition
 ```
 
-## Properties<a name="w4ab1c21c14e1869b7"></a>
+## Properties<a name="w4ab1c21c10d180c13d134b7"></a>
 
 `AbortIncompleteMultipartUpload`  <a name="cfn-s3-bucket-rule-abortincompletemultipartupload"></a>
 Specifies a lifecycle rule that aborts incomplete multipart uploads to an Amazon S3 bucket\.  
@@ -54,12 +54,12 @@ Specifies a lifecycle rule that aborts incomplete multipart uploads to an Amazon
 *Type*: [Amazon S3 Bucket AbortIncompleteMultipartUpload](aws-properties-s3-bucket-abortincompletemultipartupload.md)
 
 `ExpirationDate`  <a name="cfn-s3-bucket-lifecycleconfig-rule-expirationdate"></a>
-Indicates when objects are deleted from Amazon S3 and Amazon Glacier\. The date value must be in ISO 8601 format\. The time is always midnight UTC\. If you specify an expiration and transition time, you must use the same time unit for both properties \(either in days or by date\)\. The expiration time must also be later than the transition time\.  
+Indicates when objects are deleted from Amazon S3 and Glacier\. The date value must be in ISO 8601 format\. The time is always midnight UTC\. If you specify an expiration and transition time, you must use the same time unit for both properties \(either in days or by date\)\. The expiration time must also be later than the transition time\.  
 *Required*: Conditional\. You must specify at least one of the following properties: `AbortIncompleteMultipartUpload`, `ExpirationDate`, `ExpirationInDays`, `NoncurrentVersionExpirationInDays`, `NoncurrentVersionTransition`, `NoncurrentVersionTransitions`, `Transition`, or `Transitions`\.  
 *Type*: String
 
 `ExpirationInDays`  <a name="cfn-s3-bucket-lifecycleconfig-rule-expirationindays"></a>
-Indicates the number of days after creation when objects are deleted from Amazon S3 and Amazon Glacier\. If you specify an expiration and transition time, you must use the same time unit for both properties \(either in days or by date\)\. The expiration time must also be later than the transition time\.  
+Indicates the number of days after creation when objects are deleted from Amazon S3 and Glacier\. If you specify an expiration and transition time, you must use the same time unit for both properties \(either in days or by date\)\. The expiration time must also be later than the transition time\.  
 *Required*: Conditional\. You must specify at least one of the following properties: `AbortIncompleteMultipartUpload`, `ExpirationDate`, `ExpirationInDays`, `NoncurrentVersionExpirationInDays`, `NoncurrentVersionTransition`, `NoncurrentVersionTransitions`, `Transition`, or `Transitions`\.  
 *Type*: Integer
 
@@ -96,7 +96,7 @@ Specify either `Enabled` or `Disabled`\. If you specify `Enabled`, Amazon S3 exe
 `TagFilters`  <a name="cfn-s3-bucket-rule-tagfilters"></a>
 Tags to use to identify a subset of objects to which the lifecycle rule applies\.  
  *Required*: No  
- *Type*: List of [Amazon S3 Bucket TagFilter](aws-properties-s3-bucket-tagfilter.md)  
+ *Type*: List of [TagFilter](aws-properties-s3-bucket-tagfilter.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Transition` \(deprecated\)  <a name="cfn-s3-bucket-lifecycleconfig-rule-transition"></a>

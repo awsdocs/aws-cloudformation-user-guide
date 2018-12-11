@@ -4,13 +4,6 @@ The `AWS::SQS::Queue` resource creates an Amazon Simple Queue Service \(Amazon S
 
 For more information about creating FIFO \(first\-in\-first\-out\) queues, see the tutorial [Create a queue using AWS CloudFormation](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-create-queue.html#create-queue-cloudformation) in the *Amazon Simple Queue Service Developer Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-sqs-queues-syntax)
-+ [Properties](#aws-properties-sqs-queues-prop)
-+ [Return Values](#aws-properties-sqs-queues-ref)
-+ [Examples](#w4ab1c21c10e1168c15)
-+ [See Also](#w4ab1c21c10e1168c17)
-
 ## Syntax<a name="aws-resource-sqs-queues-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -139,13 +132,13 @@ For more information about Amazon SQS queue visibility timeouts, see [Visibility
 
 ## Return Values<a name="aws-properties-sqs-queues-ref"></a>
 
-### Ref<a name="w4ab1c21c10e1168c13b2"></a>
+### Ref<a name="w4ab1c21c10d201c14c11b2"></a>
 
 The `AWS::SQS::Queue` type returns the queue URL\. For example: `https://sqs.``us-east-2``.amazonaws.com/123456789012/aa4-MyQueue-Z5NOSZO2PZE9`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10e1168c13b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d201c14c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -156,9 +149,9 @@ Returns the Amazon Resource Name \(ARN\) of the queue\. For example: `arn:aws:sq
 Returns the queue name\. For example:  
 `mystack-myqueue-1VF9BKQH5BJVI`
 
-## Examples<a name="w4ab1c21c10e1168c15"></a>
+## Examples<a name="w4ab1c21c10d201c14c13"></a>
 
-### SQS Queue with Cloudwatch Alarms<a name="w4ab1c21c10e1168c15b2"></a>
+### SQS Queue with Cloudwatch Alarms<a name="w4ab1c21c10d201c14c13b2"></a>
 
 #### JSON<a name="aws-resource-sqs-queues-example1.json"></a>
 
@@ -299,7 +292,7 @@ Outputs:
         - "QueueName"
 ```
 
-### SQS Queue with a Dead Letter Queue<a name="w4ab1c21c10e1168c15b4"></a>
+### SQS Queue with a Dead Letter Queue<a name="w4ab1c21c10d201c14c13b4"></a>
 
 The following sample creates a source queue and a dead letter queue\. Because the source queue specifies the dead letter queue in its redrive policy, the source queue is dependent on the creation of the dead letter queue\.
 
@@ -384,6 +377,6 @@ Outputs:
         - "Arn"
 ```
 
-## See Also<a name="w4ab1c21c10e1168c17"></a>
+## See Also<a name="w4ab1c21c10d201c14c15"></a>
 + [CreateQueue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_CreateQueue.html) in the *Amazon Simple Queue Service API Reference*
 + [What is Amazon Simple Queue Service?](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/Welcome.html) in the *Amazon Simple Queue Service Developer Guide*

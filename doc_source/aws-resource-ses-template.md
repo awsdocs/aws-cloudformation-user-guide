@@ -2,12 +2,6 @@
 
 The `AWS::SES::Template` resource specifies the content of an email \(composed of a subject line, an HTML part, and a text\-only part\) for Amazon SES\. For more information, see [Template](https://docs.aws.amazon.com/ses/latest/APIReference/API_Template.html) in the *Amazon Simple Email Service API Reference*\. 
 
-**Topics**
-+ [Syntax](#aws-resource-ses-template-syntax)
-+ [Properties](#aws-resource-ses-template-properties)
-+ [Example](#aws-resource-ses-template-examples)
-+ [See Also](#aws-resource-ses-template-seealso)
-
 ## Syntax<a name="aws-resource-ses-template-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -36,7 +30,7 @@ Properties:
 `Template`  <a name="cfn-ses-template-template"></a>
 The content of the email, composed of a subject line, an HTML part, and a text\-only part\.  
  *Required*: No  
- *Type*: [Amazon SES Template Template](aws-properties-ses-template-template.md)  
+ *Type*: [Template](aws-properties-ses-template-template.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Example<a name="aws-resource-ses-template-examples"></a>

@@ -1,12 +1,12 @@
 # AWS::AutoScaling::LifecycleHook<a name="aws-resource-as-lifecyclehook"></a>
 
-Controls the state of an instance in an Auto Scaling group after it is launched or terminated\. When you use a lifecycle hook, the Auto Scaling group either pauses the instance after it is launched \(before it is put into service\) or pauses the instance as it is terminated \(before it is fully terminated\)\. For more information, see [Amazon EC2 Auto Scaling Lifecycle Hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html) in the *Amazon EC2 Auto Scaling User Guide*\.
+Controls the state of an instance in an Amazon EC2 Auto Scaling group after it is launched or terminated\. When you use a lifecycle hook, the Auto Scaling group either pauses the instance after it is launched \(before it is put into service\) or pauses the instance as it is terminated \(before it is fully terminated\)\. For more information, see [Amazon EC2 Auto Scaling Lifecycle Hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
 **Topics**
 + [Syntax](#aws-resource-autoscaling-lifecyclehook-syntax)
-+ [Properties](#w4ab1c21c10d144b9)
-+ [Return Value](#w4ab1c21c10d144c11)
-+ [Example](#w4ab1c21c10d144c13)
++ [Properties](#w4ab1c21c10c36c22b9)
++ [Return Value](#w4ab1c21c10c36c22c11)
++ [Example](#w4ab1c21c10c36c22c13)
 + [See Also](#aws-resource-autoscaling-lifecyclehook-seealso)
 
 ## Syntax<a name="aws-resource-autoscaling-lifecyclehook-syntax"></a>
@@ -46,7 +46,7 @@ Properties:
   [RoleARN](#cfn-as-lifecyclehook-rolearn): String
 ```
 
-## Properties<a name="w4ab1c21c10d144b9"></a>
+## Properties<a name="w4ab1c21c10c36c22b9"></a>
 
 For information about valid and default values, see [LifecycleHook](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_LifecycleHook.html) in the *Amazon EC2 Auto Scaling API Reference*\.
 
@@ -63,7 +63,7 @@ The action the Auto Scaling group takes when the lifecycle hook timeout elapses 
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `HeartbeatTimeout`  <a name="cfn-as-lifecyclehook-heartbeattimeout"></a>
-The amount of time \(in seconds\) that can elapse before the lifecycle hook times out\. When the lifecycle hook times out, Auto Scaling performs the action that you specified in the DefaultResult property\.  
+The amount of time \(in seconds\) that can elapse before the lifecycle hook times out\. When the lifecycle hook times out, Amazon EC2 Auto Scaling performs the action that you specified in the DefaultResult property\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -81,13 +81,13 @@ The state of the Amazon EC2 instance to which you want to attach the lifecycle h
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `NotificationMetadata`  <a name="cfn-as-lifecyclehook-notificationmetadata"></a>
-Additional information that you want to include when Auto Scaling sends a message to the notification target\.  
+Additional information that you want to include when Amazon EC2 Auto Scaling sends a message to the notification target\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `NotificationTargetARN`  <a name="cfn-as-lifecyclehook-notificationtargetarn"></a>
-The Amazon resource name \(ARN\) of the notification target that Auto Scaling uses to notify you when an instance is in the transition state for the lifecycle hook\. You can specify an Amazon SQS queue or an Amazon SNS topic\. The notification message includes the following information: lifecycle action token, user account ID, Auto Scaling group name, lifecycle hook name, instance ID, lifecycle transition, and notification metadata\.  
+The Amazon resource name \(ARN\) of the notification target that Amazon EC2 Auto Scaling uses to notify you when an instance is in the transition state for the lifecycle hook\. You can specify an Amazon SQS queue or an Amazon SNS topic\. The notification message includes the following information: lifecycle action token, user account ID, Auto Scaling group name, lifecycle hook name, instance ID, lifecycle transition, and notification metadata\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -98,7 +98,7 @@ The ARN of the IAM role that allows the Auto Scaling group to publish to the spe
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10d144c11"></a>
+## Return Value<a name="w4ab1c21c10c36c22c11"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -110,9 +110,9 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d144c13"></a>
+## Example<a name="w4ab1c21c10c36c22c13"></a>
 
-In the following template snippet, the Auto Scaling pauses instances before completely terminating them\. While in the pending state, you can, for example, connect to the instance and download logs or any other data before the instance is terminated\.
+In the following template snippet, the Amazon EC2 Auto Scaling pauses instances before completely terminating them\. While in the pending state, you can, for example, connect to the instance and download logs or any other data before the instance is terminated\.
 
 ### JSON<a name="aws-resource-autoscaling-lifecyclehook-example.json"></a>
 

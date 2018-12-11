@@ -2,7 +2,7 @@
 
 In AWS CloudFormation, use the `CSVMappingParameters` property to specify additional mapping information when the record format uses delimiters, such as CSV\. 
 
- `CSVMappingParameters` is a property of the [Kinesis Data Analytics ApplicationReferenceDataSource MappingParameters](aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.md) resource\. 
+ `CSVMappingParameters` is a property of the [MappingParameters](aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.md) resource\. 
 
 ## Syntax<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-syntax"></a>
 

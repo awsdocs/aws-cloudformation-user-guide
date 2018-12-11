@@ -2,12 +2,6 @@
 
 The `AWS::GameLift::Fleet` resource creates an Amazon GameLift \(GameLift\) fleet to host game servers\. A fleet is a set of EC2 instances, each of which is a host in the fleet\. For more information, see the [CreateFleet](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateFleet.html) action in the *Amazon GameLift API Reference*\.
 
-**Topics**
-+ [Syntax](#aws-resource-gamelift-fleet-syntax)
-+ [Properties](#w4ab1c21c10d712b9)
-+ [Return Value](#w4ab1c21c10d712c11)
-+ [Example](#w4ab1c21c10d712c13)
-
 ## Syntax<a name="aws-resource-gamelift-fleet-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -53,7 +47,7 @@ Properties:
   [ServerLaunchPath](#cfn-gamelift-fleet-serverlaunchpath): String
 ```
 
-## Properties<a name="w4ab1c21c10d712b9"></a>
+## Properties<a name="w4ab1c21c10d135c21b7"></a>
 
 `BuildId`  <a name="cfn-gamelift-fleet-buildid"></a>
 The unique identifier for the build that you want to use with this fleet\.  
@@ -121,15 +115,15 @@ The location of your game server that GameLift launches\. You must escape the sl
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w4ab1c21c10d712c11"></a>
+## Return Value<a name="w4ab1c21c10d135c21b9"></a>
 
-### Ref<a name="w4ab1c21c10d712c11b2"></a>
+### Ref<a name="w4ab1c21c10d135c21b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the fleet ID, such as `myfleet-a01234b56-7890-1de2-f345-g67h8i901j2k`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d712c13"></a>
+## Example<a name="w4ab1c21c10d135c21c11"></a>
 
 The following example creates a GameLift fleet named `MyGameFleet` with two inbound permissions\. The fleet uses a `Ref` intrinsic function to specify a build, which can be declared elsewhere in the same template\. For the log path and server launch path, the example uses the escape character \(`\`\) to escape the slashes \(`\`\)\.
 

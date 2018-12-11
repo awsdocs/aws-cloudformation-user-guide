@@ -1,8 +1,8 @@
-# Amazon EC2 Auto Scaling Block Device Mapping Property Type<a name="aws-properties-as-launchconfig-blockdev-mapping"></a>
+# Amazon EC2 Auto Scaling LaunchConfiguration BlockDeviceMapping<a name="aws-properties-as-launchconfig-blockdev-mapping"></a>
 
-The `AutoScaling Block Device Mapping` type is an embedded property of the [AWS::AutoScaling::LaunchConfiguration](aws-properties-as-launchconfig.md) type\.
+The Amazon EC2 Auto Scaling `BlockDeviceMapping` type is an embedded property of the [AWS::AutoScaling::LaunchConfiguration](aws-properties-as-launchconfig.md) type\.
 
-## Syntax<a name="w4ab1c21c14d120b5"></a>
+## Syntax<a name="w4ab1c21c10c36c18c19b5"></a>
 
 ### JSON<a name="aws-properties-as-launchconfig-blockdev-mapping-syntax.json"></a>
 
@@ -25,7 +25,7 @@ The `AutoScaling Block Device Mapping` type is an embedded property of the [AWS:
 [VirtualName](#cfn-as-launchconfig-blockdev-mapping-virtualname): String
 ```
 
-## Properties<a name="w4ab1c21c14d120b7"></a>
+## Properties<a name="w4ab1c21c10c36c18c19b7"></a>
 
 **Note**  
  For more information about the constraints and valid values of each property, see [Ebs](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_Ebs.html) in the *Amazon EC2 Auto Scaling API Reference*\. 
@@ -38,10 +38,10 @@ The name of the device within Amazon EC2\.
 `Ebs`  <a name="cfn-as-launchconfig-blockdev-mapping-ebs"></a>
 The Amazon Elastic Block Store volume information\.  
 *Required*: Conditional You can specify either `VirtualName` or `Ebs`, but not both\.  
-*Type*: [Amazon EC2 Auto Scaling EBS Block Device](aws-properties-as-launchconfig-blockdev-template.md)\.
+*Type*: [Amazon EC2 Auto Scaling LaunchConfig BlockDevice](aws-properties-as-launchconfig-blockdev-template.md)\.
 
 `NoDevice`  <a name="cfn-as-launchconfig-blockdev-mapping-nodevice"></a>
-Suppresses the device mapping\. If `NoDevice` is set to true for the root device, the instance might fail the Amazon EC2 health check\. Auto Scaling launches a replacement instance if the instance fails the health check\.  
+Suppresses the device mapping\. If `NoDevice` is set to true for the root device, the instance might fail the Amazon EC2 health check\. Amazon EC2 Auto Scaling launches a replacement instance if the instance fails the health check\.  
 *Required*: No  
 *Type*: Boolean
 

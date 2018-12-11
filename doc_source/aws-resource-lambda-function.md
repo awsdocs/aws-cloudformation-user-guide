@@ -2,13 +2,6 @@
 
 The `AWS::Lambda::Function` resource creates an AWS Lambda \(Lambda\) function that can run code in response to events\. For more information, see `[CreateFunction](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html)` in the *AWS Lambda Developer Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-lambda-function-syntax)
-+ [Properties](#w4ab1c21c10d887b9)
-+ [Return Values](#w4ab1c21c10d887c11)
-+ [Example](#w4ab1c21c10d887c13)
-+ [Related Resources](#w4ab1c21c10d887c15)
-
 ## Syntax<a name="aws-resource-lambda-function-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -26,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[FunctionName](#cfn-lambda-function-functionname)" : String,
     "[Handler](#cfn-lambda-function-handler)" : String,
     "[KmsKeyArn](#cfn-lambda-function-kmskeyarn)" : String,
+    "[Layers](#cfn-lambda-function-layers)" : [ String, ... ],
     "[MemorySize](#cfn-lambda-function-memorysize)" : Integer,
     "[ReservedConcurrentExecutions](#cfn-lambda-function-reservedconcurrentexecutions)" : Integer,
     "[Role](#cfn-lambda-function-role)" : String,
@@ -53,6 +47,8 @@ Properties:
   [FunctionName](#cfn-lambda-function-functionname): String
   [Handler](#cfn-lambda-function-handler): String
   [KmsKeyArn](#cfn-lambda-function-kmskeyarn): String
+  [Layers](#cfn-lambda-function-layers): 
+    - String
   [MemorySize](#cfn-lambda-function-memorysize): Integer
   [ReservedConcurrentExecutions](#cfn-lambda-function-reservedconcurrentexecutions): Integer
   [Role](#cfn-lambda-function-role): String
@@ -66,7 +62,9 @@ Properties:
     Resource Tag
 ```
 
-## Properties<a name="w4ab1c21c10d887b9"></a>
+## Properties<a name="w4ab1c21c10d162c21b7"></a>
+
+For more information about each property, including defaults, valid values, and constraints, see [CreateFunction](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html) in the *AWS Lambda Developer Guide*\.
 
 `Code`  <a name="cfn-lambda-function-code"></a>
 The source code of your Lambda function\. You can point to a file in an Amazon Simple Storage Service \(Amazon S3\) bucket or specify your source code as inline text\.  
@@ -110,6 +108,12 @@ If you specify your source code as inline text by specifying the `ZipFile` prope
 The Amazon Resource Name \(ARN\) of an AWS Key Management Service \(AWS KMS\) key that Lambda uses to encrypt and decrypt environment variable values\.  
 *Type*: String  
 *Required*: No  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`Layers`  <a name="cfn-lambda-function-layers"></a>
+A list of Amazon Resource Names \(ARNs\) for the function layers to add to the function's execution environment\. You can configure your Lambda function to pull in additional code during intitialization in the form of layers\. Layers are packages of libraries or other dependencies that can be used by multiple functions\.   
+*Required*: No  
+*Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `MemorySize`  <a name="cfn-lambda-function-memorysize"></a>
@@ -160,12 +164,12 @@ When you specify this property, AWS CloudFormation might not be able to delete t
 `Tags`  <a name="cfn-lambda-function-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this Lambda function\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d887c11"></a>
+## Return Values<a name="w4ab1c21c10d162c21b9"></a>
 
-### Ref<a name="w4ab1c21c10d887c11b2"></a>
+### Ref<a name="w4ab1c21c10d162c21b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
@@ -177,7 +181,7 @@ In the following sample, the `Ref` function returns the name of the `AMILookUp` 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d887c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d162c21b9b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -186,7 +190,7 @@ The ARN of the Lambda function, such as `arn:aws:lambda:us-west-2:123456789012:M
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Example<a name="w4ab1c21c10d887c13"></a>
+## Example<a name="w4ab1c21c10d162c21c11"></a>
 
 The following example uses a packaged file in an S3 bucket to create a Lambda function\.
 
@@ -231,7 +235,7 @@ AMIIDLookup:
       Mode: "Active"
 ```
 
-## Related Resources<a name="w4ab1c21c10d887c15"></a>
+## Related Resources<a name="w4ab1c21c10d162c21c13"></a>
 
 For more information about how you can use a Lambda function with AWS CloudFormation custom resources, see [AWS Lambda\-backed Custom Resources](template-custom-resources-lambda.md)\.
 

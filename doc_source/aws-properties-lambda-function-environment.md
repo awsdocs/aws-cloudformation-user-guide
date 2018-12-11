@@ -2,7 +2,7 @@
 
 `Environment` is a property of the [AWS::Lambda::Function](aws-resource-lambda-function.md) resource that specifies key\-value pairs that the AWS Lambda \(Lambda\) function can access so that you can apply configuration changes, such as test and production environment configurations, without changing the function code\.
 
-## Syntax<a name="w4ab1c21c14e1627b5"></a>
+## Syntax<a name="w4ab1c21c10d162c21c21b5"></a>
 
 ### JSON<a name="aws-properties-lambda-function-environment-syntax.json"></a>
 
@@ -19,7 +19,7 @@
   String: String
 ```
 
-## Properties<a name="w4ab1c21c14e1627b7"></a>
+## Properties<a name="w4ab1c21c10d162c21c21b7"></a>
 
 `Variables`  <a name="cfn-lambda-function-environment-variables"></a>
 A map of key\-value pairs that the Lambda function can access\.  

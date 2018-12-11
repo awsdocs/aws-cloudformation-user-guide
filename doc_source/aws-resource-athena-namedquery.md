@@ -67,7 +67,7 @@ The plain\-language name of the query\.
 
 ## Return Values<a name="aws-resource-athena-namedquery-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10d131c11b3"></a>
+### Ref<a name="w4ab1c21c10c33c13c11b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 

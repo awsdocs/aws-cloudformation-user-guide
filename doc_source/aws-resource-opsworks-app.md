@@ -2,13 +2,6 @@
 
 Defines an AWS OpsWorks app for an AWS OpsWorks stack\. The app specifies the code that you want to run on an application server\.
 
-**Topics**
-+ [Syntax](#aws-resource-opsworks-app-syntax)
-+ [Properties](#w4ab1c21c10d942b9)
-+ [Return Values](#w4ab1c21c10d942c11)
-+ [Template Snippet](#w4ab1c21c10d942c13)
-+ [More Info](#w4ab1c21c10d942c15)
-
 ## Syntax<a name="aws-resource-opsworks-app-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -60,7 +53,7 @@ Properties:
   [Type](#cfn-opsworks-app-type): String
 ```
 
-## Properties<a name="w4ab1c21c10d942b9"></a>
+## Properties<a name="w4ab1c21c10d168c14b7"></a>
 
 `AppSource`  <a name="cfn-opsworks-app-appsource"></a>
 The information required to retrieve an app from a repository\.  
@@ -134,9 +127,9 @@ The app type\. Each supported type is associated with a particular layer\. For m
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d942c11"></a>
+## Return Values<a name="w4ab1c21c10d168c14b9"></a>
 
-### Ref<a name="w4ab1c21c10d942c11b2"></a>
+### Ref<a name="w4ab1c21c10d168c14b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -148,7 +141,7 @@ For the AWS OpsWorks stack `myApp`, `Ref` returns the ID of the AWS OpsWorks app
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Template Snippet<a name="w4ab1c21c10d942c13"></a>
+## Template Snippet<a name="w4ab1c21c10d168c14c11"></a>
 
 The following snippet creates an AWS OpsWorks app that uses a PHP application in a Git repository:
 
@@ -186,7 +179,7 @@ myApp:
       Revision: "version1"
 ```
 
-## More Info<a name="w4ab1c21c10d942c15"></a>
+## More Info<a name="w4ab1c21c10d168c14c13"></a>
 + [AWS::OpsWorks::Stack](aws-resource-opsworks-stack.md)
 + [AWS::OpsWorks::Layer](aws-resource-opsworks-layer.md)
 + [AWS::OpsWorks::Instance](aws-resource-opsworks-instance.md)

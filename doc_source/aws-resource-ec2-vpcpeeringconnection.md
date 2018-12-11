@@ -7,9 +7,9 @@ You can create a peering connection with another AWS account\. For a detailed wa
 
 **Topics**
 + [Syntax](#aws-resource-ec2-vpcpeeringconnection-syntax)
-+ [Properties](#w4ab1c21c10d550c10)
-+ [Return Values](#w4ab1c21c10d550c12)
-+ [Examples](#w4ab1c21c10d550c14)
++ [Properties](#w4ab1c21c10d102d202c10)
++ [Return Values](#w4ab1c21c10d102d202c12)
++ [Examples](#w4ab1c21c10d102d202c14)
 
 ## Syntax<a name="aws-resource-ec2-vpcpeeringconnection-syntax"></a>
 
@@ -45,7 +45,7 @@ Properties:
   [PeerRoleArn](#cfn-ec2-vpcpeeringconnection-peerrolearn):  String
 ```
 
-## Properties<a name="w4ab1c21c10d550c10"></a>
+## Properties<a name="w4ab1c21c10d102d202c10"></a>
 
 `PeerVpcId`  <a name="cfn-ec2-vpcpeeringconnection-peervpcid"></a>
 The ID of the VPC with which you are creating the peering connection\.  
@@ -56,7 +56,7 @@ The ID of the VPC with which you are creating the peering connection\.
 `Tags`  <a name="cfn-ec2-vpcpeeringconnection-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this resource\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
 `VpcId`  <a name="cfn-ec2-vpcpeeringconnection-vpcid"></a>
@@ -83,15 +83,15 @@ The Amazon Resource Name \(ARN\) of the VPC peer role for the peering connection
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d550c12"></a>
+## Return Values<a name="w4ab1c21c10d102d202c12"></a>
 
-### Ref<a name="w4ab1c21c10d550c12b2"></a>
+### Ref<a name="w4ab1c21c10d102d202c12b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w4ab1c21c10d550c14"></a>
+## Examples<a name="w4ab1c21c10d102d202c14"></a>
 
 The following example template creates two VPCs to demonstrate how to configure a peering connection\. For a VPC peering connection, you must create a VPC peering route for each VPC route table, as shown in the example by `PeeringRoute1` and `PeeringRoute2`\. If you launch the template, you can connect to the `myInstance` instance using SSH, and then ping the `myPrivateInstance` instance although both instances are in separate VPCs\.
 

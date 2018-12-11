@@ -2,13 +2,6 @@
 
 The `AWS::EKS::Cluster` resource creates an Amazon EKS cluster control plane\. The Amazon EKS cluster control plane consists of control plane instances that run the Kubernetes software, like `etcd` and the Kubernetes API server\. The control plane runs in an account managed by AWS, and the Kubernetes API is exposed via the Amazon EKS endpoint associated with your cluster\. For more information, see [Clusters](https://docs.aws.amazon.com/eks/latest/userguide/clusters.html) in the *Amazon EKS User Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-eks-cluster-syntax)
-+ [Properties](#aws-resource-eks-cluster-properties)
-+ [Return Values](#aws-resource-eks-cluster-returnvalues)
-+ [Examples](#aws-resource-eks-cluster-examples)
-+ [See Also](#aws-resource-eks-cluster-seealso)
-
 ## Syntax<a name="aws-resource-eks-cluster-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

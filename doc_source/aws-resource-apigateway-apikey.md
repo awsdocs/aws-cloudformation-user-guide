@@ -2,13 +2,6 @@
 
 The `AWS::ApiGateway::ApiKey` resource creates a unique key that you can distribute to clients who are executing Amazon API Gateway \(API Gateway\) `Method` resources that require an API key\. To specify which API key clients must use, map the API key with the `RestApi` and `Stage` resources that include the methods that require a key\.
 
-**Topics**
-+ [Syntax](#aws-resource-apigateway-apikey-syntax)
-+ [Properties](#w4ab1c21c10c25b9)
-+ [Return Value](#aws-resource-apigateway-apikey-returnvalues)
-+ [Examples](#aws-resource-apigateway-apikey-examples)
-+ [See Also](#aws-resource-apigateway-apikey-seealso)
-
 ## Syntax<a name="aws-resource-apigateway-apikey-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -44,7 +37,7 @@ Properties:
     - ...
 ```
 
-## Properties<a name="w4ab1c21c10c25b9"></a>
+## Properties<a name="w4ab1c21c10c20c17b9"></a>
 
 `CustomerId`  <a name="cfn-apigateway-apikey-customerid"></a>
 An AWS Marketplace customer identifier to use when integrating with the AWS SaaS Marketplace\.  

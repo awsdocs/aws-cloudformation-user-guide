@@ -2,7 +2,7 @@
 
 `XssMatchTuple` is a property of the [AWS::WAF::XssMatchSet](aws-resource-waf-xssmatchset.md) resource that specifies the part of a web request that you want AWS WAF to inspect for cross\-site scripting attacks\.
 
-## Syntax<a name="w4ab1c21c14e2131b5"></a>
+## Syntax<a name="w4ab1c21c10d210c37c20b5"></a>
 
 ### JSON<a name="aws-properties-waf-xssmatchset-xssmatchtuple-syntax.json"></a>
 
@@ -21,7 +21,7 @@
 [TextTransformation](#cfn-waf-xssmatchset-xssmatchtuple-texttransformation): String
 ```
 
-## Properties<a name="w4ab1c21c14e2131b7"></a>
+## Properties<a name="w4ab1c21c10d210c37c20b7"></a>
 
 `FieldToMatch`  <a name="cfn-waf-xssmatchset-xssmatchtuple-fieldtomatch"></a>
 The part of a web request that you want AWS WAF to search, such as a specific header or a query string\.  

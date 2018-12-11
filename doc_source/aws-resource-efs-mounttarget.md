@@ -9,10 +9,10 @@ EC2 instances and the mount target that they connect to must be in a VPC with DN
 
 **Topics**
 + [Syntax](#aws-resource-efs-mounttarget-syntax)
-+ [Properties](#w4ab1c21c10d594c13)
-+ [Return Values](#w4ab1c21c10d594c15)
-+ [Template Example](#w4ab1c21c10d594c17)
-+ [Additional Resources](#w4ab1c21c10d594c19)
++ [Properties](#w4ab1c21c10d111c17c13)
++ [Return Values](#w4ab1c21c10d111c17c15)
++ [Template Example](#w4ab1c21c10d111c17c17)
++ [Additional Resources](#w4ab1c21c10d111c17c19)
 
 ## Syntax<a name="aws-resource-efs-mounttarget-syntax"></a>
 
@@ -44,7 +44,7 @@ Properties:
   [SubnetId](#cfn-efs-mounttarget-subnetid): String
 ```
 
-## Properties<a name="w4ab1c21c10d594c13"></a>
+## Properties<a name="w4ab1c21c10d111c17c13"></a>
 
 `FileSystemId`  <a name="cfn-efs-mounttarget-filesystemid"></a>
 The ID of the file system for which you want to create the mount target\.  
@@ -74,15 +74,15 @@ For each file system, you can create only one mount target per Availability Zone
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)  
 Before updating this property, stop EC2 instances that are using this mount target and then restart them after the update is complete\. That way the instances can unmount the file system before the mount target is replaced\. If you don't stop and restart them, instances or applications that are using those mounts might be disrupted when the mount target is deleted \(uncommitted writes might be lost\)\.
 
-## Return Values<a name="w4ab1c21c10d594c15"></a>
+## Return Values<a name="w4ab1c21c10d111c17c15"></a>
 
-### Ref<a name="w4ab1c21c10d594c15b2"></a>
+### Ref<a name="w4ab1c21c10d111c17c15b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource ID, such as `fsmt-55a4413c`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Template Example<a name="w4ab1c21c10d594c17"></a>
+## Template Example<a name="w4ab1c21c10d111c17c17"></a>
 
 The following example declares a mount target that is associated with a file system, subnet, and security group, which are all declared in the same template\. EC2 instances that are in the same AZ as the mount target can use the mount target to connect to the associated file system\. For information about mounting file systems on EC2 instances, see [Mounting File Systems](https://docs.aws.amazon.com/efs/latest/ug/mounting-fs.html) in the *Amazon Elastic File System User Guide*\.
 
@@ -114,6 +114,6 @@ MountTarget:
         Ref: "MountTargetSecurityGroup"
 ```
 
-## Additional Resources<a name="w4ab1c21c10d594c19"></a>
+## Additional Resources<a name="w4ab1c21c10d111c17c19"></a>
 
 For a complete sample template, see [Amazon Elastic File System Sample Template](quickref-efs.md)\.

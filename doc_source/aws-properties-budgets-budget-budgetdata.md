@@ -40,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The total amount of cost, usage, or RI utilization that you want to track with your budget\.   
 The BudgetLimit is required for cost or usage budgets, but optional for RI utilization budgets\. RI utilization budgets default to the only valid value for RI utilization budgets, which is `100`\.   
  *Required*: No  
- *Type*: [Billing and Cost Management Budget Spend](aws-properties-budgets-budget-spend.md)  
+ *Type*: [Spend](aws-properties-budgets-budget-spend.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `TimePeriod`  <a name="cfn-budgets-budget-budgetdata-timeperiod"></a>
@@ -48,7 +48,7 @@ The period of time covered by a budget\. Has a start date and an end date\. The 
 If you create your budget and don't specify a start date, AWS defaults to the start of your chosen time period \(i\.e\. DAILY, MONTHLY, QUARTERLY, ANNUALLY\)\. For example, if you create your budget on January 24th 2018, choose `DAILY`, and don't set a start date, AWS sets your start date to `01/24/18 00:00 UTC`\. If you choose `MONTHLY`, AWS sets your start date to `01/01/18 00:00 UTC`\. If you don't specify an end date, AWS sets your end date to `06/15/87 00:00 UTC`\.  
 After the end date, AWS deletes the budget and all associated notifications and subscribers\.  
  *Required*: No  
- *Type*: [Billing and Cost Management Budget TimePeriod](aws-properties-budgets-budget-timeperiod.md)  
+ *Type*: [TimePeriod](aws-properties-budgets-budget-timeperiod.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `TimeUnit`  <a name="cfn-budgets-budget-budgetdata-timeunit"></a>
@@ -73,7 +73,7 @@ The name of a budget\. Unique within accounts\. `:` and `\` characters are not a
 `CostTypes`  <a name="cfn-budgets-budget-budgetdata-costtypes"></a>
 The types of costs included in this budget, such as credits, subscriptions, or taxes\.  
  *Required*: No  
- *Type*: [Billing and Cost Management Budget CostTypes](aws-properties-budgets-budget-costtypes.md)  
+ *Type*: [CostTypes](aws-properties-budgets-budget-costtypes.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `BudgetType`  <a name="cfn-budgets-budget-budgetdata-budgettype"></a>

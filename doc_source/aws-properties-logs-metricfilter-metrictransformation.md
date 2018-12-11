@@ -2,7 +2,7 @@
 
 `MetricTransformation` is a property of the [AWS::Logs::MetricFilter](aws-resource-logs-metricfilter.md) resource that describes how to transform log streams into a CloudWatch metric\.
 
-## Syntax<a name="w4ab1c21c14d387b5"></a>
+## Syntax<a name="w4ab1c21c10c63c51c17b5"></a>
 
 ### JSON<a name="aws-properties-logs-metricfilter-metrictransformation-syntax.json"></a>
 
@@ -24,7 +24,7 @@
 [MetricValue](#cfn-cwl-metricfilter-metrictransformation-metricvalue): String
 ```
 
-## Properties<a name="w4ab1c21c14d387b7"></a>
+## Properties<a name="w4ab1c21c10c63c51c17b7"></a>
 
 **Note**  
 For more information about constraints and values for each property, see [MetricTransformation](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_MetricTransformation.html) in the *Amazon CloudWatch Logs API Reference*\.
@@ -49,8 +49,8 @@ The value that is published to the CloudWatch metric\. For example, if you're co
 *Required*: Yes  
 *Type*: String
 
-## Examples<a name="w4ab1c21c14d387b9"></a>
+## Examples<a name="w4ab1c21c10c63c51c17b9"></a>
 
-### <a name="w4ab1c21c14d387b9b2"></a>
+### <a name="w4ab1c21c10c63c51c17b9b2"></a>
 
 For samples of the `MetricTransformation` property, see [AWS::Logs::MetricFilter](aws-resource-logs-metricfilter.md) or [Amazon CloudWatch Logs Template Snippets](quickref-cloudwatchlogs.md)\.

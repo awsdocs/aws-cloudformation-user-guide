@@ -2,12 +2,6 @@
 
 The `AWS::Glue::Trigger` resource specifies triggers that run AWS Glue jobs\. For more information, see [Triggering Jobs in AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/trigger-job.html) and [Trigger Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-Trigger) in the *AWS Glue Developer Guide*\. 
 
-**Topics**
-+ [Syntax](#aws-resource-glue-trigger-syntax)
-+ [Properties](#aws-resource-glue-trigger-properties)
-+ [Return Values](#aws-resource-glue-trigger-returnvalues)
-+ [Examples](#aws-resource-glue-trigger-examples)
-
 ## Syntax<a name="aws-resource-glue-trigger-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -60,7 +54,7 @@ The description of the job trigger\.
 `Actions`  <a name="cfn-glue-trigger-actions"></a>
 The actions that the job trigger initiates when it fires\.  
  *Required*: Yes  
- *Type*: List of [AWS Glue Trigger Action](aws-properties-glue-trigger-action.md)  
+ *Type*: List of [Action](aws-properties-glue-trigger-action.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Schedule`  <a name="cfn-glue-trigger-schedule"></a>
@@ -78,12 +72,12 @@ The name of the job trigger\.
 `Predicate`  <a name="cfn-glue-trigger-predicate"></a>
 The predicate of the job trigger, which determines when the trigger fires\.  
  *Required*: No  
- *Type*: [AWS Glue Trigger Predicate](aws-properties-glue-trigger-predicate.md)  
+ *Type*: [Predicate](aws-properties-glue-trigger-predicate.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-glue-trigger-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10d738c10b3"></a>
+### Ref<a name="w4ab1c21c10d138c35b9b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 

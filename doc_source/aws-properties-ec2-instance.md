@@ -4,13 +4,6 @@ The `AWS::EC2::Instance` resource creates an EC2 instance\.
 
 If an Elastic IP address is attached to your instance, AWS CloudFormation reattaches the Elastic IP address after it updates the instance\. For more information about updating stacks, see [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)\.
 
-**Topics**
-+ [Syntax](#aws-resource-ec2-instance-syntax)
-+ [Properties](#aws-properties-ec2-instance-prop)
-+ [Return Values](#aws-properties-ec2-instance-returnvalues)
-+ [Examples](#aws-properties-ec2-instance-examples)
-+ [See Also](#w4ab1c21c10d421c17)
-
 ## Syntax<a name="aws-resource-ec2-instance-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -28,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DisableApiTermination](#cfn-ec2-instance-disableapitermination)" : Boolean,
       "[EbsOptimized](#cfn-ec2-instance-ebsoptimized)" : Boolean,
       "[ElasticGpuSpecifications](#cfn-ec2-instance-elasticgpuspecifications)" : [ ElasticGpuSpecification, ... ],
+      "[ElasticInferenceAccelerators](#cfn-ec2-instance-elasticInferenceaccelerators)" : [ [ElasticInferenceAccelerator](aws-properties-ec2-instance-elasticInferenceaccelerator.md), ... ],
       "[HostId](#cfn-ec2-instance-hostid)" : String,
       "[IamInstanceProfile](#cfn-ec2-instance-iaminstanceprofile)" : String,
       "[ImageId](#cfn-ec2-instance-imageid)" : String,
@@ -37,7 +31,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Ipv6Addresses](#cfn-ec2-instance-ipv6addresses)" : [ IPv6 Address Type, ... ],
       "[KernelId](#cfn-ec2-instance-kernelid)" : String,
       "[KeyName](#cfn-ec2-instance-keyname)" : String,
-      "[LaunchTemplate](#cfn-ec2-instance-launchtemplate)" : [Amazon EC2 Instance LaunchTemplateSpecification](aws-properties-ec2-instance-launchtemplatespecification.md),
+      "[LaunchTemplate](#cfn-ec2-instance-launchtemplate)" : [LaunchTemplateSpecification](aws-properties-ec2-instance-launchtemplatespecification.md),
+      "[LicenseSpecifications](#cfn-ec2-instance-licensespecifications)" : [ [LicenseSpecification](aws-properties-ec2-instance-licensespecification.md), ... ],
       "[Monitoring](#cfn-ec2-instance-monitoring)" : Boolean,
       "[NetworkInterfaces](#cfn-ec2-instance-networkinterfaces)" : [ EC2 Network Interface, ... ],
       "[PlacementGroupName](#cfn-ec2-instance-placementgroupname)" : String,
@@ -70,6 +65,8 @@ Properties:
   [DisableApiTermination](#cfn-ec2-instance-disableapitermination): Boolean
   [EbsOptimized](#cfn-ec2-instance-ebsoptimized): Boolean
   [ElasticGpuSpecifications](#cfn-ec2-instance-elasticgpuspecifications): [ ElasticGpuSpecification, ... ]
+  [ElasticInferenceAccelerators](#cfn-ec2-instance-elasticInferenceaccelerators): 
+    - [ElasticInferenceAccelerator](aws-properties-ec2-instance-elasticInferenceaccelerator.md)
   [HostId](#cfn-ec2-instance-hostid): String
   [IamInstanceProfile](#cfn-ec2-instance-iaminstanceprofile): String
   [ImageId](#cfn-ec2-instance-imageid): String
@@ -80,7 +77,9 @@ Properties:
     - IPv6 Address Type
   [KernelId](#cfn-ec2-instance-kernelid): String
   [KeyName](#cfn-ec2-instance-keyname): String
-  [LaunchTemplate](#cfn-ec2-instance-launchtemplate): [Amazon EC2 Instance LaunchTemplateSpecification](aws-properties-ec2-instance-launchtemplatespecification.md)
+  [LaunchTemplate](#cfn-ec2-instance-launchtemplate): [LaunchTemplateSpecification](aws-properties-ec2-instance-launchtemplatespecification.md)
+  [LicenseSpecifications](#cfn-ec2-instance-licensespecifications): 
+    - [LicenseSpecification](aws-properties-ec2-instance-licensespecification.md)
   [Monitoring](#cfn-ec2-instance-monitoring): Boolean
   [NetworkInterfaces](#cfn-ec2-instance-networkinterfaces): 
     - EC2 Network Interface
@@ -122,11 +121,11 @@ For more information about AWS regions and Availability Zones, see [Regions and 
 `BlockDeviceMappings`  <a name="cfn-ec2-instance-blockdevicemappings"></a>
 Defines a set of Amazon Elastic Block Store block device mappings, ephemeral instance store block device mappings, or both\. For more information, see [Amazon Elastic Block Store](https://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/AmazonEBS.html) or [Amazon EC2 Instance Store](https://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/InstanceStorage.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
 *Required*: No  
-*Type*: A list of [Amazon EC2 Block Device Mapping Property](aws-properties-ec2-blockdev-mapping.md)\.  
+*Type*: A list of [Amazon EC2 BlockDeviceMapping](aws-properties-ec2-blockdev-mapping.md)\.  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)\. If you change only the `DeleteOnTermination` property for one or more block devices, update requires [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
 `CreditSpecification`  <a name="cfn-ec2-instance-creditspecification"></a>
-Specifies the credit option for CPU usage of a T2 or T3 instance\.  
+Specifies the credit option for CPU usage of a T2 instance\.  
 *Required*: No  
 *Type*: [Amazon EC2 Instance CreditSpecification](aws-properties-ec2-instance-creditspecification.md)\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -150,6 +149,12 @@ For more information about the instance types that can be launched as Amazon EBS
 Specifies the Elastic GPUs\. An Elastic GPU is a GPU resource that you can attach to your instance to accelerate the graphics performance of your applications\. For more information, see [Amazon EC2 Elastic GPUs](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-gpus.html) in the *Amazon EC2 User Guide for Windows Instances*\. Duplicates are not allowed\.  
 *Required*: No  
 *Type:* List of [Amazon EC2 Instance ElasticGpuSpecification](aws-properties-ec2-instance-elasticgpuspecification.md)  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+
+`ElasticInferenceAccelerators`  <a name="cfn-ec2-instance-elasticInferenceaccelerators"></a>
+Specify a list of elastic inference accelerators for an instance\. Elastic Inference \(EI\) accelerators are a resource you can attach to your Amazon EC2 instances to accelerate your Deep Learning \(DL\) inference workloads\.  
+*Required*: No  
+*Type:* List of [ElasticInferenceAccelerator](aws-properties-ec2-instance-elasticInferenceaccelerator.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `HostId`  <a name="cfn-ec2-instance-hostid"></a>
@@ -219,6 +224,12 @@ The launch template to use\.
 *Type*: [Amazon EC2 Instance LaunchTemplateSpecification](aws-properties-ec2-instance-launchtemplatespecification.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
+`LicenseSpecifications`  <a name="cfn-ec2-instance-licensespecifications"></a>
+Associate a list of license configurations with the instance\.  
+*Required*: No  
+*Type:* List of [LicenseSpecification](aws-properties-ec2-instance-licensespecification.md)  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+
 `Monitoring`  <a name="cfn-ec2-instance-monitoring"></a>
 Specifies whether detailed monitoring is enabled for the instance\.  
 *Required*: No  
@@ -230,7 +241,7 @@ A list of embedded objects that describes the network interfaces to associate wi
 If you use this property to point to a network interface, you must terminate the original interface before attaching a new one to allow the update of the instance to succeed\.  
 If this resource has a public IP address and is also in a VPC that is defined in the same template, you must use the `DependsOn` attribute to declare a dependency on the VPC\-gateway attachment\. For more information, see [DependsOn Attribute](aws-attribute-dependson.md)\.
 *Required*: No  
-*Type*: A list of [EC2 NetworkInterface Embedded Property Type](aws-properties-ec2-network-iface-embedded.md)  
+*Type*: A list of [EC2 NetworkInterface](aws-properties-ec2-network-iface-embedded.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `PlacementGroupName`  <a name="cfn-ec2-instance-placementgroupname"></a>
@@ -292,7 +303,7 @@ If you're using Amazon VPC, this property specifies the ID of the subnet that yo
 `Tags`  <a name="cfn-ec2-instance-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this instance\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
 `Tenancy`  <a name="cfn-ec2-instance-tenancy"></a>
@@ -336,7 +347,7 @@ When you pass the logical ID of an AWS::EC2::Instance object to the intrinsic `R
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d421c13b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d102c49c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -360,7 +371,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
 
 ## Examples<a name="aws-properties-ec2-instance-examples"></a>
 
-### EC2 Instance with an EBS Block Device Mapping<a name="w4ab1c21c10d421c15b2"></a>
+### EC2 Instance with an EBS Block Device Mapping<a name="w4ab1c21c10d102c49c13b2"></a>
 
 #### JSON<a name="aws-properties-ec2-instance-examples-json1"></a>
 
@@ -417,7 +428,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
             NoDevice: {}
 ```
 
-### Automatically Assign a Public IP Address<a name="w4ab1c21c10d421c15b4"></a>
+### Automatically Assign a Public IP Address<a name="w4ab1c21c10d102c49c13b4"></a>
 
 You can associate a public IP address with a network interface only if it has a device index of `0` and if it is a new network interface \(not an existing one\)\.
 
@@ -461,7 +472,7 @@ You can associate a public IP address with a network interface only if it has a 
             Ref: "PublicSubnet"
 ```
 
-### Other Examples<a name="w4ab1c21c10d421c15b6"></a>
+### Other Examples<a name="w4ab1c21c10d102c49c13b6"></a>
 
 You can download templates that show how to use `AWS::EC2::Instance` to create a virtual private cloud \(VPC\):
 + [Single instance in a single subnet](https://s3.amazonaws.com/cloudformation-templates-us-east-1/vpc_single_instance_in_subnet.template)
@@ -471,6 +482,6 @@ For more information about an `AWS::EC2::Instance` that has an IAM instance prof
 
 For more information about Amazon EC2 template examples, see: [Amazon EC2 Template Snippets](quickref-ec2.md)\.
 
-## See Also<a name="w4ab1c21c10d421c17"></a>
+## See Also<a name="w4ab1c21c10d102c49c15"></a>
 + [RunInstances](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-RunInstances.html) in the *Amazon Elastic Compute Cloud API Reference*
 + [EBS\-Optimized Instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#EBSOptimized) in the *Amazon Elastic Compute Cloud User Guide*

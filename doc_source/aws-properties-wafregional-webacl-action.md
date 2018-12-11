@@ -2,7 +2,7 @@
 
 `Action` is a property of the [AWS::WAFRegional::WebACL](aws-resource-wafregional-webacl.md) resource and the [AWS WAF Regional WebACL Rules](aws-properties-wafregional-webacl-rules.md) property that specifies the action AWS WAF takes when a web request matches or doesn't match all rule conditions\.
 
-## Syntax<a name="w4ab1c21c14e2189b5"></a>
+## Syntax<a name="w4ab1c21c10d213c33c15b5"></a>
 
 ### JSON<a name="aws-properties-wafregional-webacl-action-syntax.json"></a>
 
@@ -18,7 +18,7 @@
 [Type](#cfn-wafregional-webacl-action-type): String
 ```
 
-## Properties<a name="w4ab1c21c14e2189b7"></a>
+## Properties<a name="w4ab1c21c10d213c33c15b7"></a>
 
 `Type`  <a name="cfn-wafregional-webacl-action-type"></a>
 For actions that are associated with a rule, the action that AWS WAF takes when a web request matches all conditions in a rule\.  

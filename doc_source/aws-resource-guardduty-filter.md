@@ -2,12 +2,6 @@
 
 You can use the `AWS::GuardDuty::Filter` resource to create a GuardDuty filter using the specified finding criteria\. 
 
-**Topics**
-+ [Syntax](#aws-resource-guardduty-filter-syntax)
-+ [Properties](#aws-resource-guardduty-filter-properties)
-+ [Return Values](#aws-resource-guardduty-filter-returnvalues)
-+ [Examples](#aws-resource-guardduty-filter-examples)
-
 ## Syntax<a name="aws-resource-guardduty-filter-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -64,7 +58,7 @@ The ID of the detector that specifies the GuardDuty service whose findings you w
 `FindingCriteria`  <a name="cfn-guardduty-filter-findingcriteria"></a>
 Represents the criteria to be used in the filter for querying findings\.  
  *Required*: Yes  
- *Type*: [GuardDuty Filter FindingCriteria](aws-properties-guardduty-filter-findingcriteria.md)  
+ *Type*: [FindingCriteria](aws-properties-guardduty-filter-findingcriteria.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Rank`  <a name="cfn-guardduty-filter-rank"></a>

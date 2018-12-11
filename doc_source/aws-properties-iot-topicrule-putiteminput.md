@@ -2,7 +2,7 @@
 
 <a name="aws-properties-iot-topicrule-putiteminput-description"></a>The `PutItemInput` property type specifies the database table for an AWS IoT topic rule\.
 
-<a name="aws-properties-iot-topicrule-putiteminput-inheritance"></a> `PutItemInput` is a property of the [AWS IoT TopicRule DynamoDBv2Action](aws-properties-iot-topicrule-dynamodbv2action.md) property type\. 
+<a name="aws-properties-iot-topicrule-putiteminput-inheritance"></a> `PutItemInput` is a property of the [DynamoDBv2Action](aws-properties-iot-topicrule-dynamodbv2action.md) property type\. 
 
 ## Syntax<a name="aws-properties-iot-topicrule-putiteminput-syntax"></a>
 

@@ -2,7 +2,7 @@
 
 <a name="aws-properties-ecs-taskdefinition-kernelcapabilities-description"></a>The `KernelCapabilities` property type specifies the Linux capabilities to add or drop from the default Docker configuration in an Amazon Elastic Container Service \(Amazon ECS\) container\. For more information, see [ KernelCapabilities](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html) in the *Amazon Elastic Container Service API Reference*\.
 
-<a name="aws-properties-ecs-taskdefinition-kernelcapabilities-inheritance"></a> `KernelCapabilities` is a property of the [Amazon ECS TaskDefinition LinuxParameters](aws-properties-ecs-taskdefinition-linuxparameters.md) property type\.
+<a name="aws-properties-ecs-taskdefinition-kernelcapabilities-inheritance"></a> `KernelCapabilities` is a property of the [LinuxParameters](aws-properties-ecs-taskdefinition-linuxparameters.md) property type\.
 
 ## Syntax<a name="aws-properties-ecs-taskdefinition-kernelcapabilities-syntax"></a>
 

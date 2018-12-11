@@ -2,7 +2,7 @@
 
 <a name="aws-properties-apigateway-deployment-canarysetting-description"></a>The `CanarySetting` property type specifies settings for the canary deployment in this stage\.
 
-<a name="aws-properties-apigateway-deployment-canarysetting-inheritance"></a> `CanarySetting` is a property of the [API Gateway Deployment StageDescription](aws-properties-apigateway-deployment-stagedescription.md) property type\.
+<a name="aws-properties-apigateway-deployment-canarysetting-inheritance"></a> `CanarySetting` is a property of the [StageDescription](aws-properties-apigateway-deployment-stagedescription.md) property type\.
 
 ## Syntax<a name="aws-properties-apigateway-deployment-canarysetting-syntax"></a>
 

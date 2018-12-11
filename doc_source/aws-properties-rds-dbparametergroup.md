@@ -9,9 +9,9 @@ Applying a ParameterGroup to a DBInstance may require the instance to reboot, re
 
 **Topics**
 + [Syntax](#aws-resource-rds-dbparametergroup-syntax)
-+ [Properties](#w4ab1c21c10d992c13)
-+ [Return Values](#w4ab1c21c10d992c15)
-+ [Example](#w4ab1c21c10d992c17)
++ [Properties](#w4ab1c21c10d171c27c13)
++ [Return Values](#w4ab1c21c10d171c27c15)
++ [Example](#w4ab1c21c10d171c27c17)
 
 ## Syntax<a name="aws-resource-rds-dbparametergroup-syntax"></a>
 
@@ -44,7 +44,7 @@ Properties:
     - Resource Tag
 ```
 
-## Properties<a name="w4ab1c21c10d992c13"></a>
+## Properties<a name="w4ab1c21c10d171c27c13"></a>
 
 `Description`  <a name="cfn-rds-dbparametergroup-description"></a>
 A friendly description of the RDS parameter group\. For example, `"My Parameter Group"`\.  
@@ -78,9 +78,9 @@ The tags that you want to attach to the RDS parameter group\.
 *Type*: A list of [resource tags](aws-properties-resource-tags.md)\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d992c15"></a>
+## Return Values<a name="w4ab1c21c10d171c27c15"></a>
 
-### Ref<a name="w4ab1c21c10d992c15b2"></a>
+### Ref<a name="w4ab1c21c10d171c27c15b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -92,7 +92,7 @@ For the RDS::DBParameterGroup with the logical ID "MyDBParameterGroup", `Ref` wi
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d992c17"></a>
+## Example<a name="w4ab1c21c10d171c27c17"></a>
 
 The following snippet creates a parameter group for an Aurora DB cluster that applies the `IGNORE_SPACE` SQL mode\.
 

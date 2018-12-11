@@ -2,7 +2,7 @@
 
 `SqlInjectionMatchTuples` is a property of the [AWS::WAFRegional::SqlInjectionMatchSet](aws-resource-wafregional-sqlinjectionmatchset.md) resource that specifies the parts of web requests that AWS WAF inspects for SQL code\.
 
-## Syntax<a name="w4ab1c21c14e2172b5"></a>
+## Syntax<a name="w4ab1c21c10d213c29c19b5"></a>
 
 ### JSON<a name="aws-properties-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuples-syntax.json"></a>
 
@@ -21,7 +21,7 @@
 [TextTransformation](#cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuples-texttransformation): String
 ```
 
-## Properties<a name="w4ab1c21c14e2172b7"></a>
+## Properties<a name="w4ab1c21c10d213c29c19b7"></a>
 
 `FieldToMatch`  <a name="cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuples-fieldtomatch"></a>
 The part of a web request that you want AWS WAF to search, such as a specific header or a query string\.  

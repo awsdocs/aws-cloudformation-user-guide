@@ -6,7 +6,7 @@ AWS::SQS::QueuePolicy Snippet: [Declaring an Amazon SQS Policy](quickref-iam.md#
 
 **Topics**
 + [Syntax](#aws-resource-sqs-queuepolicy-syntax)
-+ [Properties](#w4ab1c21c10e1173c11)
++ [Properties](#w4ab1c21c10d201c19c11)
 
 ## Syntax<a name="aws-resource-sqs-queuepolicy-syntax"></a>
 
@@ -34,7 +34,7 @@ Properties:
     - String
 ```
 
-## Properties<a name="w4ab1c21c10e1173c11"></a>
+## Properties<a name="w4ab1c21c10d201c19c11"></a>
 
 `PolicyDocument`  <a name="cfn-sqs-queuepolicy-policydoc"></a>
 A policy document that contains the permissions for the specified Amazon SQS queues\. For more information about Amazon SQS policies, see [Creating Custom Policies Using the Access Policy Language](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-creating-custom-policies.html) in the *Amazon Simple Queue Service Developer Guide*\.  

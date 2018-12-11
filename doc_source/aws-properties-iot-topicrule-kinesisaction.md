@@ -2,7 +2,7 @@
 
 `Kinesis` is a property of the `Actions` property that describes an action that writes data to an Kinesis stream\.
 
-## Syntax<a name="w4ab1c21c14e1454b5"></a>
+## Syntax<a name="w4ab1c21c10d150c39c56b5"></a>
 
 ### JSON<a name="aws-properties-iot-topicrule-kinesisaction-syntax.json"></a>
 
@@ -22,7 +22,7 @@
 [StreamName](#cfn-iot-topicrule-kinesisaction-streamname): String
 ```
 
-## Properties<a name="w4ab1c21c14e1454b7"></a>
+## Properties<a name="w4ab1c21c10d150c39c56b7"></a>
 
 `PartitionKey`  <a name="cfn-iot-topicrule-kinesisaction-partitionkey"></a>
 The partition key \(the grouping of data by shard within an Kinesis stream\)\.  

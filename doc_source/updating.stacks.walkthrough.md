@@ -210,7 +210,8 @@ To complete the stack, the template creates an Amazon EC2 security group\.
         "cg1.4xlarge"
       ],
       "ConstraintDescription" : "must be a valid EC2 instance type."
-    },
+    }
+  },
     
   "Mappings" : {
     "AWSInstanceType2Arch" : {
@@ -268,6 +269,7 @@ To complete the stack, the template creates an Amazon EC2 security group\.
       "cr1.8xlarge" : { "Arch" : "HVM64"  },
       "cc2.8xlarge" : { "Arch" : "HVM64"  }
     },
+
     "AWSRegionArch2AMI" : {
       "us-east-1"        : {"HVM64" : "ami-0ff8a91507f77f867", "HVMG2" : "ami-0a584ac55a7631c0c"},
       "us-west-2"        : {"HVM64" : "ami-a0cfeed8", "HVMG2" : "ami-0e09505bc235aa82d"},
@@ -557,7 +559,7 @@ If you are using Auto Scaling groups in your template, as opposed to Amazon EC2 
 + If the cfn\-hup changes run on all Amazon EC2 instances in the Auto Scaling group at the same time, your service might be unavailable during the update\.
 + If the cfn\-hup changes run at different times, old and new versions of the software may be running at the same\.
 
-To avoid these issues, consider forcing a rolling update on your instances in the Auto Scaling group\. For more information, see [UpdatePolicy](aws-attribute-updatepolicy.md)\.
+To avoid these issues, consider forcing a rolling update on your instances in the Auto Scaling group\. For more information, see [UpdatePolicy Attribute](aws-attribute-updatepolicy.md)\.
 
 ## Changing Resource Properties<a name="update.walkthrough.changing.resource.properties"></a>
 
@@ -696,7 +698,7 @@ When you update the stack, AWS CloudFormation detects that the AMI ID has change
 
 If you are using Auto Scaling groups rather than Amazon EC2 instances, the process of updating the running instances is a little different\. With Auto Scaling resources, the configuration of the Amazon EC2 instances, such as the instance type or the AMI ID is encapsulated in the Auto Scaling launch configuration\. You can make changes to the launch configuration in the same way as we made changes to the Amazon EC2 instance resources in the previous sections\. However, changing the launch configuration does not impact any of the running Amazon EC2 instances in the Auto Scaling group\. An updated launch configuration applies only to new instances that are created after the update\.
 
-If you want to propagate the change to your launch configuration across all the instances in your Auto Scaling group, you can use an update attribute\. For more information, see [UpdatePolicy](aws-attribute-updatepolicy.md)\.
+If you want to propagate the change to your launch configuration across all the instances in your Auto Scaling group, you can use an update attribute\. For more information, see [UpdatePolicy Attribute](aws-attribute-updatepolicy.md)\.
 
 ## Adding Resource Properties<a name="update.walkthrough.adding.properties"></a>
 

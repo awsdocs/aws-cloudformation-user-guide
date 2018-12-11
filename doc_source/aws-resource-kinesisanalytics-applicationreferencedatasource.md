@@ -2,11 +2,6 @@
 
 Use the AWS CloudFormation `AWS::KinesisAnalytics::ApplicationReferenceDataSource` resource to add a reference data source to an existing Amazon Kinesis Data Analytics application\. For more information, see `[AddApplicationReferenceDataSource](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_AddApplicationReferenceDataSource.html)` in the *Amazon Kinesis Data Analytics Developer Guide*\. 
 
-**Topics**
-+ [Syntax](#aws-resource-kinesisanalytics-applicationreferencedatasource-syntax)
-+ [Properties](#aws-resource-kinesisanalytics-applicationreferencedatasource-properties)
-+ [Examples](#aws-resource-kinesisanalytics-applicationreferencedatasource-examples)
-
 ## Syntax<a name="aws-resource-kinesisanalytics-applicationreferencedatasource-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -44,7 +39,7 @@ The name of an existing application\.
 `ReferenceDataSource`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource"></a>
 The reference data source, which is an object in your Amazon Simple Storage Service \(Amazon S3\) bucket\.   
  *Required*: Yes  
- *Type*: [Kinesis Data Analytics ApplicationReferenceDataSource ReferenceDataSource](aws-properties-kinesisanalytics-applicationreferencedatasource-referencedatasource.md)  
+ *Type*: [ReferenceDataSource](aws-properties-kinesisanalytics-applicationreferencedatasource-referencedatasource.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Examples<a name="aws-resource-kinesisanalytics-applicationreferencedatasource-examples"></a>

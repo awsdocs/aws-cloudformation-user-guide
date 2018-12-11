@@ -2,7 +2,7 @@
 
 <a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction-description"></a>The `ScalableTargetAction` property type specifies the minimum and maximum capacity of a scheduled action for an Application Auto Scaling scalable target\.
 
-<a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction-inheritance"></a> `ScalableTargetAction` is a property of the [Application Auto Scaling ScalableTarget ScheduledAction](aws-properties-applicationautoscaling-scalabletarget-scheduledaction.md) property type\.
+<a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction-inheritance"></a> `ScalableTargetAction` is a property of the [ScheduledAction](aws-properties-applicationautoscaling-scalabletarget-scheduledaction.md) property type\.
 
 ## Syntax<a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction-syntax"></a>
 

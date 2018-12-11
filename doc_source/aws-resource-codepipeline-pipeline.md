@@ -2,12 +2,6 @@
 
 The `AWS::CodePipeline::Pipeline` resource creates an AWS CodePipeline pipeline that describes how software changes go through a release process\. For more information, see [What Is AWS CodePipeline?](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html) in the *AWS CodePipeline User Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-codepipeline-pipeline-syntax)
-+ [Properties](#w4ab1c21c10d275b9)
-+ [Return Value](#w4ab1c21c10d275c11)
-+ [Example](#w4ab1c21c10d275c13)
-
 ## Syntax<a name="aws-resource-codepipeline-pipeline-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -18,12 +12,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodePipeline::Pipeline",
   "Properties" : {
-    "[ArtifactStore](#cfn-codepipeline-pipeline-artifactstore)" : ArtifactStore,
-    "[DisableInboundStageTransitions](#cfn-codepipeline-pipeline-disableinboundstagetransitions)" : [ DisableInboundStageTransitions, ... ],
+    "[ArtifactStore](#cfn-codepipeline-pipeline-artifactstore)" : [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md),
+    "[ArtifactStores](#cfn-codepipeline-pipeline-artifactstores)" : [ [ArtifactStoreMap](aws-properties-codepipeline-pipeline-artifactstoremap.md), ... ],
+    "[DisableInboundStageTransitions](#cfn-codepipeline-pipeline-disableinboundstagetransitions)" : [ [DisableInboundStageTransitions](aws-properties-codepipeline-pipeline-disableinboundstagetransitions.md), ... ],
     "[Name](#cfn-codepipeline-pipeline-name)" : String,
     "[RestartExecutionOnUpdate](#cfn-codepipeline-pipeline-restartexecutiononupdate)" : Boolean,
     "[RoleArn](#cfn-codepipeline-pipeline-rolearn)" : String,
-    "[Stages](#cfn-codepipeline-pipeline-stages)" : [ Stages, ... ]
+    "[Stages](#cfn-codepipeline-pipeline-stages)" : [ [Stages](aws-properties-codepipeline-pipeline-stages.md), ... ]
   }
 }
 ```
@@ -34,28 +29,36 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CodePipeline::Pipeline
 Properties:
   [ArtifactStore](#cfn-codepipeline-pipeline-artifactstore):
-    ArtifactStore
+    [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md)
+  [ArtifactStores](#cfn-codepipeline-pipeline-artifactstores):
+    - [ArtifactStoreMap](aws-properties-codepipeline-pipeline-artifactstoremap.md)
   [DisableInboundStageTransitions](#cfn-codepipeline-pipeline-disableinboundstagetransitions):
-    - DisableInboundStageTransitions
+    - [DisableInboundStageTransitions](aws-properties-codepipeline-pipeline-disableinboundstagetransitions.md)
   [Name](#cfn-codepipeline-pipeline-name): String
   [RestartExecutionOnUpdate](#cfn-codepipeline-pipeline-restartexecutiononupdate): Boolean
   [RoleArn](#cfn-codepipeline-pipeline-rolearn): String
   [Stages](#cfn-codepipeline-pipeline-stages):
-    - Stages
+    - [Stages](aws-properties-codepipeline-pipeline-stages.md)
 ```
 
-## Properties<a name="w4ab1c21c10d275b9"></a>
+## Properties<a name="w4ab1c21c10c75c17b9"></a>
 
 `ArtifactStore`  <a name="cfn-codepipeline-pipeline-artifactstore"></a>
-The Amazon Simple Storage Service \(Amazon S3\) location where AWS CodePipeline stores pipeline artifacts\. For more information, see [Create an Amazon S3 Bucket for Your Application](https://docs.aws.amazon.com/codepipeline/latest/userguide/getting-started-w.html) in the *AWS CodePipeline User Guide*\.  
-*Required*: Yes  
-*Type*: [AWS CodePipeline Pipeline ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md)  
+The Amazon Simple Storage Service \(Amazon S3\) location where AWS CodePipeline stores pipeline artifacts\. You can only use either `ArtifactStore` or `ArtifactStores`, not both\. For more information, see [Create an Amazon S3 Bucket for Your Application](https://docs.aws.amazon.com/codepipeline/latest/userguide/getting-started-w.html) in the *AWS CodePipeline User Guide*\.  
+*Required*: No  
+*Type*: [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`ArtifactStores`  <a name="cfn-codepipeline-pipeline-artifactstores"></a>
+Specifies a list of `ArtifactStoreMap` mappings\. There must be an artifact store for the pipeline region and for each cross\-region action within the pipeline\. You can only use either `ArtifactStore` or `ArtifactStores`, not both\.  
+*Required*: No  
+*Type*: List of [ArtifactStoreMap](aws-properties-codepipeline-pipeline-artifactstoremap.md) property types  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `DisableInboundStageTransitions`  <a name="cfn-codepipeline-pipeline-disableinboundstagetransitions"></a>
 Prevents artifacts in a pipeline from transitioning to the stage that you specified\. This enables you to manually control transitions\.  
 *Required*: No  
-*Type*: List of [AWS CodePipeline Pipeline DisableInboundStageTransitions](aws-properties-codepipeline-pipeline-disableinboundstagetransitions.md)  
+*Type*: List of [DisableInboundStageTransitions](aws-properties-codepipeline-pipeline-disableinboundstagetransitions.md) property types  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Name`  <a name="cfn-codepipeline-pipeline-name"></a>
@@ -79,12 +82,12 @@ A service role Amazon Resource Name \(ARN\) that grants AWS CodePipeline permiss
 `Stages`  <a name="cfn-codepipeline-pipeline-stages"></a>
 Defines the AWS CodePipeline pipeline stages\.  
 *Required*: Yes  
-*Type*: [AWS CodePipeline Pipeline Stages](aws-properties-codepipeline-pipeline-stages.md)  
+*Type*: List of [Stages](aws-properties-codepipeline-pipeline-stages.md) property types  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10d275c11"></a>
+## Return Value<a name="w4ab1c21c10c75c17c11"></a>
 
-### Ref<a name="w4ab1c21c10d275c11b2"></a>
+### Ref<a name="w4ab1c21c10c75c17c11b2"></a>
 
 When you pass the logical ID of an `AWS::CodePipeline::Pipeline` resource to the intrinsic `Ref` function, the function returns the pipeline name, such as `mysta-MyPipeline-A1BCDEFGHIJ2`\.
 
@@ -100,7 +103,7 @@ A new pipeline is always assigned a version number of 1\. This number increments
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
 
-## Example<a name="w4ab1c21c10d275c13"></a>
+## Example<a name="w4ab1c21c10c75c17c13"></a>
 
 The following example creates a pipeline with a source, beta, and release stage\. For the source stage, AWS CodePipeline detects changes to the application that is stored in the S3 bucket and pulls them into the pipeline\. The beta stage deploys those changes to EC2 instances by using AWS CodeDeploy\. For the release stage, inbound transitions are disabled, which enables you to control when the changes are ready to be deployed to release\.
 

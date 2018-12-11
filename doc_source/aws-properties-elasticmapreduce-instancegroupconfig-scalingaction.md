@@ -2,7 +2,7 @@
 
 The `ScalingAction` property type specifies the scaling actions for an Auto Scaling group policy\. `ScalingAction` is the property type for the `Action` subproperty of the [Amazon EMR InstanceGroupConfig ScalingRule](aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.md) property type\.
 
-## Syntax<a name="w4ab1c21c14e1282b5"></a>
+## Syntax<a name="w4ab1c21c10d132c22c32b5"></a>
 
 ### JSON<a name="aws-properties-elasticmapreduce-instancegroupconfig-scalingaction-syntax.json"></a>
 
@@ -20,7 +20,7 @@ The `ScalingAction` property type specifies the scaling actions for an Auto Scal
   [SimpleScalingPolicyConfiguration](#cfn-elasticmapreduce-instancegroupconfig-scalingaction-simplescalingpolicyconfiguration): SimpleScalingPolicyConfiguration
 ```
 
-## Properties<a name="w4ab1c21c14e1282b7"></a>
+## Properties<a name="w4ab1c21c10d132c22c32b7"></a>
 
 `Market`  <a name="cfn-elasticmapreduce-instancegroupconfig-scalingaction-market"></a>
 Not available for instance groups\. Instance groups use the market type specified for the group\.  

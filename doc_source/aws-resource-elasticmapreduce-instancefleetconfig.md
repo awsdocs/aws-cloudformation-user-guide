@@ -5,10 +5,6 @@ Use the `AWS::EMR::InstanceFleetConfig` resource to configure a Spot Instance fl
 **Note**  
 The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\.
 
-**Topics**
-+ [Syntax](#aws-resource-elasticmapreduce-instancefleetconfig-syntax)
-+ [Properties](#w4ab1c21c10d683c11)
-
 ## Syntax<a name="aws-resource-elasticmapreduce-instancefleetconfig-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -46,7 +42,7 @@ Properties:
   [TargetSpotCapacity](#cfn-elasticmapreduce-instancefleetconfig-targetspotcapacity): Integer
 ```
 
-## Properties<a name="w4ab1c21c10d683c11"></a>
+## Properties<a name="w4ab1c21c10d132c17b9"></a>
 
 For more information about each property, including constraints and valid values, see [InstanceFleetConfig](https://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_InstanceFleetConfig.html) in the *Amazon EMR API Reference*\.
 

@@ -2,11 +2,6 @@
 
 The `AWS::Glue::Database` resource specifies a logical grouping of tables in AWS Glue\. For more information, see [Defining a Database in Your Data Catalog](https://docs.aws.amazon.com/glue/latest/dg/define-database.html) and [Database Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-databases.html#aws-glue-api-catalog-databases-Database) in the *AWS Glue Developer Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-glue-database-syntax)
-+ [Properties](#aws-resource-glue-database-properties)
-+ [Return Values](#aws-resource-glue-database-returnvalues)
-
 ## Syntax<a name="aws-resource-glue-database-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -38,7 +33,7 @@ Properties:
 `DatabaseInput`  <a name="cfn-glue-database-databaseinput"></a>
 The metadata of the database\.  
  *Required*: Yes  
- *Type*: [AWS Glue Database DatabaseInput](aws-properties-glue-database-databaseinput.md)  
+ *Type*: [DatabaseInput](aws-properties-glue-database-databaseinput.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `CatalogId`  <a name="cfn-glue-database-catalogid"></a>
@@ -50,7 +45,7 @@ To specify the account ID, you can use the `Ref` intrinsic function with the `AW
 
 ## Return Values<a name="aws-resource-glue-database-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10d723c11b3"></a>
+### Ref<a name="w4ab1c21c10d138c20b9b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the `DatabaseInput` name\.
 

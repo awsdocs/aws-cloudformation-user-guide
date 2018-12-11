@@ -40,7 +40,7 @@ UTF\-8 string–to–UTF\-8 string key\-value pairs that specify the parameters 
 `StorageDescriptor`  <a name="cfn-glue-partition-partitioninput-storagedescriptor"></a>
 Information about the physical storage of the partition\.  
  *Required*: No  
- *Type*: [AWS Glue Partition StorageDescriptor](aws-properties-glue-partition-storagedescriptor.md)  
+ *Type*: [StorageDescriptor](aws-properties-glue-partition-storagedescriptor.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Values`  <a name="cfn-glue-partition-partitioninput-values"></a>

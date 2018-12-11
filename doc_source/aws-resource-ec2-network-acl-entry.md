@@ -2,13 +2,6 @@
 
 Creates an entry \(i\.e\., a rule\) in a network ACL with a rule number you specify\. Each network ACL has a set of numbered ingress rules and a separate set of numbered egress rules\.
 
-**Topics**
-+ [Syntax](#aws-resource-ec2-networkaclentry-syntax)
-+ [Properties](#w4ab1c21c10d444b9)
-+ [Return Values](#w4ab1c21c10d444c11)
-+ [Example](#w4ab1c21c10d444c13)
-+ [See Also](#w4ab1c21c10d444c15)
-
 ## Syntax<a name="aws-resource-ec2-networkaclentry-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -50,7 +43,7 @@ Properties:
   [RuleNumber](#cfn-ec2-networkaclentry-rulenumber) : Integer
 ```
 
-## Properties<a name="w4ab1c21c10d444b9"></a>
+## Properties<a name="w4ab1c21c10d102c72b7"></a>
 
 `CidrBlock`  <a name="cfn-ec2-networkaclentry-cidrblock"></a>
 The IPv4 CIDR range to allow or deny, in CIDR notation \(e\.g\., 172\.16\.0\.0/24\)\.  
@@ -107,15 +100,15 @@ Rule number to assign to the entry, such as `100`\. ACL entries are processed in
 *Type*: Number  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)\.
 
-## Return Values<a name="w4ab1c21c10d444c11"></a>
+## Return Values<a name="w4ab1c21c10d102c72b9"></a>
 
-### Ref<a name="w4ab1c21c10d444c11b2"></a>
+### Ref<a name="w4ab1c21c10d102c72b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d444c13"></a>
+## Example<a name="w4ab1c21c10d102c72c11"></a>
 
 ### JSON<a name="aws-resource-ec2-networkaclentry-example-1.json"></a>
 
@@ -163,6 +156,6 @@ Resources:
         To: '53'
 ```
 
-## See Also<a name="w4ab1c21c10d444c15"></a>
+## See Also<a name="w4ab1c21c10d102c72c13"></a>
 + [NetworkAclEntry](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateNetworkAclEntry.html) in the *Amazon EC2 API Reference*
 + [Network ACLs](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html) in the *Amazon Virtual Private Cloud User Guide*\.

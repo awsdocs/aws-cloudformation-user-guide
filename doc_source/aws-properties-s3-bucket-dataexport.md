@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Destination`  <a name="cfn-s3-bucket-dataexport-destination"></a>
 Information about where to publish the analytics results\.  
  *Required*: Yes  
- *Type*: [Amazon S3 Bucket Destination](aws-properties-s3-bucket-destination.md)  
+ *Type*: [Destination](aws-properties-s3-bucket-destination.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `OutputSchemaVersion`  <a name="cfn-s3-bucket-dataexport-outputschemaversion"></a>

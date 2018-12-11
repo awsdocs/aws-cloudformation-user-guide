@@ -70,7 +70,7 @@ The rules packages that are specified for this assessment template\.
 `UserAttributesForFindings`  <a name="cfn-inspector-assessmenttemplate-userattributesforfindings"></a>
 The user\-defined attributes that are assigned to every generated finding from the assessment run that uses this assessment template\.   
  *Required*: No  
- *Type*: List of [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+ *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## Return Values<a name="aws-resource-inspector-assessmenttemplate-returnvalues"></a>

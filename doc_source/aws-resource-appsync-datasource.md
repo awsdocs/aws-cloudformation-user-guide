@@ -2,13 +2,6 @@
 
 The `AWS::AppSync::DataSource` resource creates data sources for resolvers in AWS AppSync to connect to, such as Amazon DynamoDB, AWS Lambda, and Amazon Elasticserach Service\. Resolvers use these data sources to fetch data when clients make GraphQL calls\. 
 
-**Topics**
-+ [Syntax](#aws-resource-appsync-datasource-syntax)
-+ [Properties](#aws-resource-appsync-datasource-properties)
-+ [Return Values](#aws-resource-appsync-datasource-returnvalues)
-+ [Examples](#aws-resource-appsync-datasource-examples)
-+ [See Also](#aws-resource-appsync-datasource-seealso)
-
 ## Syntax<a name="aws-resource-appsync-datasource-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -27,7 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[Name](#cfn-appsync-datasource-name)" : String,
     "[DynamoDBConfig](#cfn-appsync-datasource-dynamodbconfig)" : [*DynamoDBConfig*](aws-properties-appsync-datasource-dynamodbconfig.md),
     "[ElasticsearchConfig](#cfn-appsync-datasource-elasticsearchconfig)" : [*ElasticsearchConfig*](aws-properties-appsync-datasource-elasticsearchconfig.md),
-    "[HttpConfig](#cfn-appsync-datasource-httpconfig)" : [*HttpConfig*](aws-properties-appsync-datasource-httpconfig.md)
+    "[HttpConfig](#cfn-appsync-datasource-httpconfig)" : [*HttpConfig*](aws-properties-appsync-datasource-httpconfig.md),
+    "[RelationalDatabaseConfig](#cfn-appsync-datasource-relationaldatabaseconfig)" : [*RelationalDatabaseConfig*](aws-properties-appsync-datasource-relationaldatabaseconfig.md)
   }
 }
 ```
@@ -46,6 +40,7 @@ Properties:
   [DynamoDBConfig](#cfn-appsync-datasource-dynamodbconfig): [*DynamoDBConfig*](aws-properties-appsync-datasource-dynamodbconfig.md)
   [ElasticsearchConfig](#cfn-appsync-datasource-elasticsearchconfig): [*ElasticsearchConfig*](aws-properties-appsync-datasource-elasticsearchconfig.md)
   [HttpConfig](#cfn-appsync-datasource-httpconfig): [*HttpConfig*](aws-properties-appsync-datasource-httpconfig.md)
+  [RelationalDatabaseConfig](#cfn-appsync-datasource-relationaldatabaseconfig): [*RelationalDatabaseConfig*](aws-properties-appsync-datasource-relationaldatabaseconfig.md)
 ```
 
 ## Properties<a name="aws-resource-appsync-datasource-properties"></a>
@@ -72,7 +67,7 @@ The Amazon Resource Name \(ARN\) of the IAM role which the data source will use 
 `LambdaConfig`  <a name="cfn-appsync-datasource-lambdaconfig"></a>
 A valid ARN of a Lambda function in your account\.  
  *Required*: No  
- *Type*: [AWS AppSync DataSource LambdaConfig](aws-properties-appsync-datasource-lambdaconfig.md)  
+ *Type*: [LambdaConfig](aws-properties-appsync-datasource-lambdaconfig.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ApiId`  <a name="cfn-appsync-datasource-apiid"></a>
@@ -90,19 +85,25 @@ Friendly name for you to identify your AppSync data source after creation\.
 `DynamoDBConfig`  <a name="cfn-appsync-datasource-dynamodbconfig"></a>
 AwsRegion and TableName for an Amazon DynamoDB table in your account\.  
  *Required*: No  
- *Type*: [AWS AppSync DataSource DynamoDBConfig](aws-properties-appsync-datasource-dynamodbconfig.md)  
+ *Type*: [DynamoDBConfig](aws-properties-appsync-datasource-dynamodbconfig.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ElasticsearchConfig`  <a name="cfn-appsync-datasource-elasticsearchconfig"></a>
 AwsRegion and Endpoints for an Amazon Elasticsearch Service domain in your account\.  
  *Required*: No  
- *Type*: [AWS AppSync DataSource ElasticsearchConfig](aws-properties-appsync-datasource-elasticsearchconfig.md)  
+ *Type*: [ElasticsearchConfig](aws-properties-appsync-datasource-elasticsearchconfig.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `HttpConfig`  <a name="cfn-appsync-datasource-httpconfig"></a>
 Endpoints for an HTTP DataSource\.  
  *Required*: No  
- *Type*: [AWS AppSync DataSource HttpConfig](aws-properties-appsync-datasource-httpconfig.md)  
+ *Type*: [HttpConfig](aws-properties-appsync-datasource-httpconfig.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+
+`RelationalDatabaseConfig`  <a name="cfn-appsync-datasource-relationaldatabaseconfig"></a>
+Relational Database configuration of the relational database data source\.  
+ *Required*: No  
+ *Type*: [RelationalDatabaseConfig](aws-properties-appsync-datasource-relationaldatabaseconfig.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-appsync-datasource-returnvalues"></a>

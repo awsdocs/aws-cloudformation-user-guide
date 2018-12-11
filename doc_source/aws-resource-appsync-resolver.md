@@ -8,6 +8,7 @@ The `AWS::AppSync::Resolver` resource defines the logical GraphQL resolver that 
 + [Return Values](#aws-resource-appsync-resolver-returnvalues)
 + [Examples](#aws-resource-appsync-resolver-examples)
 + [See Also](#aws-resource-appsync-resolver-seealso)
++ [AWS AppSync Resolver PipelineConfig](aws-properties-appsync-resolver-pipelineconfig.md)
 
 ## Syntax<a name="aws-resource-appsync-resolver-syntax"></a>
 
@@ -26,7 +27,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[ResponseMappingTemplate](#cfn-appsync-resolver-responsemappingtemplate)" : String,
     "[RequestMappingTemplateS3Location](#cfn-appsync-resolver-requestmappingtemplates3location)" : String,
     "[ApiId](#cfn-appsync-resolver-apiid)" : String,
-    "[FieldName](#cfn-appsync-resolver-fieldname)" : String
+    "[FieldName](#cfn-appsync-resolver-fieldname)" : String,
+    "[Kind](#cfn-appsync-resolver-kind)" : String, 
+    "[PipelineConfig](#cfn-appsync-resolver-pipelineconfig)" : [*PipelineConfig*](aws-properties-appsync-resolver-pipelineconfig.md)
   }
 }
 ```
@@ -44,6 +47,8 @@ Properties:
   [RequestMappingTemplateS3Location](#cfn-appsync-resolver-requestmappingtemplates3location): String
   [ApiId](#cfn-appsync-resolver-apiid): String
   [FieldName](#cfn-appsync-resolver-fieldname): String
+  [Kind](#cfn-appsync-resolver-kind): String
+  [PipelineConfig](#cfn-appsync-resolver-pipelineconfig): [*PipelineConfig*](aws-properties-appsync-resolver-pipelineconfig.md)
 ```
 
 ## Properties<a name="aws-resource-appsync-resolver-properties"></a>
@@ -95,6 +100,19 @@ The GraphQL field on a type that will invoke the resolver\.
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+
+`Kind`  <a name="cfn-appsync-resolver-kind"></a>
+The kind of the resolver\.  
+Valid values: `UNIT` \| `PIPELINE`\.  
+ *Required*: No  
+ *Type*: String  
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+
+`PipelineConfig`  <a name="cfn-appsync-resolver-pipelineconfig"></a>
+Functions linked with the pipeline resolver\.  
+ *Required*: No  
+ *Type*: [PipelineConfig](aws-properties-appsync-resolver-pipelineconfig.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-appsync-resolver-returnvalues"></a>
 

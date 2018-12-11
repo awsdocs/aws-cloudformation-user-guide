@@ -4,10 +4,10 @@ Creates a new route table within a VPC\. After you create a new route table, you
 
 **Topics**
 + [Syntax](#aws-resource-ec2-routetable-syntax)
-+ [Properties](#w4ab1c21c10d471b9)
-+ [Return Values](#w4ab1c21c10d471c11)
-+ [Examples](#w4ab1c21c10d471c13)
-+ [See Also](#w4ab1c21c10d471c15)
++ [Properties](#w4ab1c21c10d102c99b9)
++ [Return Values](#w4ab1c21c10d102c99c11)
++ [Examples](#w4ab1c21c10d102c99c13)
++ [See Also](#w4ab1c21c10d102c99c15)
 
 ## Syntax<a name="aws-resource-ec2-routetable-syntax"></a>
 
@@ -35,7 +35,7 @@ Properties:
     - Resource Tag
 ```
 
-## Properties<a name="w4ab1c21c10d471b9"></a>
+## Properties<a name="w4ab1c21c10d102c99b9"></a>
 
 `VpcId`  <a name="cfn-ec2-routetable-vpcid"></a>
 The ID of the VPC where the route table will be created\.  
@@ -47,18 +47,18 @@ Example: vpc\-11ad4878
 `Tags`  <a name="cfn-ec2-routetable-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this route table\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
-## Return Values<a name="w4ab1c21c10d471c11"></a>
+## Return Values<a name="w4ab1c21c10d102c99c11"></a>
 
-### Ref<a name="w4ab1c21c10d471c11b2"></a>
+### Ref<a name="w4ab1c21c10d102c99c11b2"></a>
 
 When you specify an `AWS::EC2::RouteTable` type as an argument to the `Ref` function, AWS CloudFormation returns the route table ID, such as `rtb-12a34567`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w4ab1c21c10d471c13"></a>
+## Examples<a name="w4ab1c21c10d102c99c13"></a>
 
 The following example snippet uses the VPC ID from a VPC named *myVPC* that was declared elsewhere in the same template\.
 
@@ -94,7 +94,7 @@ Resources:
         Value: bar
 ```
 
-## See Also<a name="w4ab1c21c10d471c15"></a>
+## See Also<a name="w4ab1c21c10d102c99c15"></a>
 + [AWS::EC2::Route](aws-resource-ec2-route.md)
 + [CreateRouteTable](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateRouteTable.html) in the *Amazon EC2 API Reference*
 + [Route Tables](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html) in the *Amazon VPC User Guide*

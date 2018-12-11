@@ -2,7 +2,7 @@
 
 `LaunchTemplateConfig` is a property of the [Amazon EC2 SpotFleet SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md) property that describes a launch template and overrides\.
 
-## Syntax<a name="w4ab1c21c14d864b5"></a>
+## Syntax<a name="w4ab1c21c10d102d118c46b5"></a>
 
 ### JSON<a name="aws-properties-ec2-spotfleet-launchtemplateconfig-syntax.json"></a>
 
@@ -21,16 +21,16 @@
   - [*LaunchTemplateOverrides*](aws-properties-ec2-spotfleet-launchtemplateoverrides.md)
 ```
 
-## Properties<a name="w4ab1c21c14d864b7"></a>
+## Properties<a name="w4ab1c21c10d102d118c46b7"></a>
 
 `LaunchTemplateSpecification`  <a name="cfn-ec2-spotfleet-launchtemplateconfig-launchtemplatespecification"></a>
 The launch template\.  
 *Required*: Yes  
-*Type*: [Amazon EC2 SpotFleet FleetLaunchTemplateSpecification](aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.md)  
+*Type*: [FleetLaunchTemplateSpecification](aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Overrides`  <a name="cfn-ec2-spotfleet-launchtemplateconfig-overrides"></a>
 Any parameters that you specify override the same parameters in the launch template\.  
 *Required*: No  
-*Type*: List of [Amazon EC2 SpotFleet LaunchTemplateOverrides](aws-properties-ec2-spotfleet-launchtemplateoverrides.md)  
+*Type*: List of [LaunchTemplateOverrides](aws-properties-ec2-spotfleet-launchtemplateoverrides.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

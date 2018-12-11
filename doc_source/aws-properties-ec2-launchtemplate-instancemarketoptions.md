@@ -36,7 +36,7 @@ Valid values include: `spot`
 `SpotOptions`  <a name="cfn-ec2-launchtemplate-instancemarketoptions-spotoptions"></a>
 The options for Spot Instances\.  
  *Required*: No  
- *Type*: [Amazon EC2 LaunchTemplate SpotOptions](aws-properties-ec2-launchtemplate-spotoptions.md)  
+ *Type*: [SpotOptions](aws-properties-ec2-launchtemplate-spotoptions.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-ec2-launchtemplate-instancemarketoptions-seealso"></a>

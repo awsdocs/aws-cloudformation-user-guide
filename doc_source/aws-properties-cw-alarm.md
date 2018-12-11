@@ -4,12 +4,6 @@ The `AWS::CloudWatch::Alarm` type creates a CloudWatch alarm\.
 
 This type supports updates\. For more information about updating this resource, see [PutMetricAlarm](http://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricAlarm.html)\. For more information about updating stacks, see [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)\.
 
-**Topics**
-+ [Syntax](#aws-resource-cw-alarm-syntax)
-+ [Properties](#aws-properties-cw-alarm-prop)
-+ [Return Values](#aws-properties-cw-alarm-ref)
-+ [Examples](#w4ab1c21c10d242c15)
-
 ## Syntax<a name="aws-resource-cw-alarm-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -25,12 +19,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AlarmDescription](#cfn-cloudwatch-alarms-alarmdescription)" : String,
       "[AlarmName](#cfn-cloudwatch-alarms-alarmname)" : String,
       "[ComparisonOperator](#cfn-cloudwatch-alarms-comparisonoperator)" : String,
+      "[DatapointsToAlarm](#cfn-cloudwatch-alarm-datapointstoalarm)" : Integer,
       "[Dimensions](#cfn-cloudwatch-alarms-dimensions)" : [ Dimension, ... ],
       "[EvaluateLowSampleCountPercentile](#cfn-cloudwatch-alarms-evaluatelowsamplecountpercentile)" : String,
       "[EvaluationPeriods](#cfn-cloudwatch-alarms-evaluationperiods)" : Integer,
       "[ExtendedStatistic](#cfn-cloudwatch-alarms-extendedstatistic)" : String,
       "[InsufficientDataActions](#cfn-cloudwatch-alarms-insufficientdataactions)" : [ String, ... ],
       "[MetricName](#cfn-cloudwatch-alarms-metricname)" : String,
+      "[Metrics](#cfn-cloudwatch-alarm-metrics)" : [ [MetricDataQuery](aws-properties-cloudwatch-alarm-metricdataquery.md), ... ]
       "[Namespace](#cfn-cloudwatch-alarms-namespace)" : String,
       "[OKActions](#cfn-cloudwatch-alarms-okactions)" : [ String, ... ],
       "[Period](#cfn-cloudwatch-alarms-period)" : Integer,
@@ -53,6 +49,7 @@ Properties:
   [AlarmDescription](#cfn-cloudwatch-alarms-alarmdescription): String
   [AlarmName](#cfn-cloudwatch-alarms-alarmname): String
   [ComparisonOperator](#cfn-cloudwatch-alarms-comparisonoperator): String
+  [DatapointsToAlarm](#cfn-cloudwatch-alarm-datapointstoalarm): Integer
   [Dimensions](#cfn-cloudwatch-alarms-dimensions):
     - Dimension
   [EvaluateLowSampleCountPercentile](#cfn-cloudwatch-alarms-evaluatelowsamplecountpercentile): String
@@ -61,6 +58,8 @@ Properties:
   [InsufficientDataActions](#cfn-cloudwatch-alarms-insufficientdataactions):
     - String
   [MetricName](#cfn-cloudwatch-alarms-metricname): String
+  [Metrics](#cfn-cloudwatch-alarm-metrics):  
+    - [MetricDataQuery](aws-properties-cloudwatch-alarm-metricdataquery.md)
   [Namespace](#cfn-cloudwatch-alarms-namespace): String
   [OKActions](#cfn-cloudwatch-alarms-okactions):
     - String
@@ -106,6 +105,12 @@ You can specify the following values: `GreaterThanOrEqualToThreshold` , `Greater
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
+`DatapointsToAlarm`  <a name="cfn-cloudwatch-alarm-datapointstoalarm"></a>
+The number of datapoints that must be breaching to trigger the alarm\. This is used only if you are setting an "M out of N" alarm\. In that case, this value is the M\. For more information, see [Evaluating an Alarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarm-evaluation) in the *Amazon CloudWatch User Guide*\.   
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
 `Dimensions`  <a name="cfn-cloudwatch-alarms-dimensions"></a>
 The dimensions of the metric for the alarm\.  
 *Required*: No  
@@ -138,13 +143,19 @@ The list of actions to execute when this alarm transitions into an INSUFFICIENT\
 
 `MetricName`  <a name="cfn-cloudwatch-alarms-metricname"></a>
 The name of the metric associated with the alarm\. For more information about the metrics that you can specify, see [Amazon CloudWatch Namespaces, Dimensions, and Metrics Reference](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html) in the *Amazon CloudWatch User Guide*\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`Metrics`  <a name="cfn-cloudwatch-alarm-metrics"></a>
+Specifies the metric data to return\.  
+*Required*: No  
+*Type*: List of [MetricDataQuery](aws-properties-cloudwatch-alarm-metricdataquery.md) property types  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Namespace`  <a name="cfn-cloudwatch-alarms-namespace"></a>
 The namespace of the metric that is associated with the alarm\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
@@ -156,7 +167,7 @@ The list of actions to execute when this alarm transitions into an OK state\. Sp
 
 `Period`  <a name="cfn-cloudwatch-alarms-period"></a>
 The time over which the specified statistic is applied\. Specify time in seconds, in multiples of 60\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
@@ -189,7 +200,7 @@ You can specify the following values: Seconds, Microseconds, Milliseconds, Bytes
 
 ## Return Values<a name="aws-properties-cw-alarm-ref"></a>
 
-### Ref<a name="w4ab1c21c10d242c13b2"></a>
+### Ref<a name="w4ab1c21c10c63c22c13b2"></a>
 
 When you specify an `AWS::CloudWatch::Alarm` type as an argument to the `Ref` function, AWS CloudFormation returns the value of the `AlarmName`\.
 
@@ -204,6 +215,6 @@ The Amazon Resource Name \(ARN\) of the CloudWatch alarm, such as `arn:aws:cloud
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w4ab1c21c10d242c15"></a>
+## Examples<a name="w4ab1c21c10c63c22c15"></a>
 
 For examples, see [Amazon CloudWatch Template Snippets](quickref-cloudwatch.md)\.

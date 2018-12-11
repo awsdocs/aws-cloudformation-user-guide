@@ -1,13 +1,14 @@
-# AWS OpsWorks VolumeConfiguration Type<a name="aws-properties-opsworks-layer-volumeconfig"></a>
+# AWS OpsWorks VolumeConfiguration<a name="aws-properties-opsworks-layer-volumeconfig"></a>
 
 Describes the Amazon EBS volumes for the [AWS::OpsWorks::Layer](aws-resource-opsworks-layer.md) resource type\.
 
-## Syntax<a name="w4ab1c21c14e1716b5"></a>
+## Syntax<a name="w4ab1c21c10d168c29c37b5"></a>
 
 ### JSON<a name="aws-properties-opsworks-layer-volumeconfig-syntax.json"></a>
 
 ```
 {
+  "[Encrypted](#cfn-opsworks-layer-volumeconfiguration-encrypted)" : Boolean,
   "[Iops](#cfn-opsworks-layer-volconfig-iops)" : Integer,
   "[MountPoint](#cfn-opsworks-layer-volconfig-mountpoint)" : String,
   "[NumberOfDisks](#cfn-opsworks-layer-volconfig-numberofdisks)" : Integer,
@@ -20,6 +21,7 @@ Describes the Amazon EBS volumes for the [AWS::OpsWorks::Layer](aws-resource-ops
 ### YAML<a name="aws-properties-opsworks-layer-volumeconfig-syntax.yaml"></a>
 
 ```
+[Encrypted](#cfn-opsworks-layer-volumeconfiguration-encrypted): Boolean
 [Iops](#cfn-opsworks-layer-volconfig-iops): Integer
 [MountPoint](#cfn-opsworks-layer-volconfig-mountpoint): String
 [NumberOfDisks](#cfn-opsworks-layer-volconfig-numberofdisks): Integer
@@ -28,7 +30,12 @@ Describes the Amazon EBS volumes for the [AWS::OpsWorks::Layer](aws-resource-ops
 [VolumeType](#cfn-opsworks-layer-volconfig-volumetype): String
 ```
 
-## Properties<a name="w4ab1c21c14e1716b7"></a>
+## Properties<a name="w4ab1c21c10d168c29c37b7"></a>
+
+`Encrypted`  <a name="cfn-opsworks-layer-volumeconfiguration-encrypted"></a>
+Specifies whether an Amazon EBS volume is encrypted\.   
+*Required*: No  
+*Type*: Boolean
 
 `Iops`  <a name="cfn-opsworks-layer-volconfig-iops"></a>
 The number of I/O operations per second \(IOPS\) to provision for the volume\.  

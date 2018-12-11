@@ -2,13 +2,6 @@
 
 The `AWS::Budgets::Budget` resource creates, replaces, or deletes budgets for Billing and Cost Management\. For more information, see [Managing Your Costs with Budgets](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html) in the [https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/)\. 
 
-**Topics**
-+ [Syntax](#aws-resource-budgets-budget-syntax)
-+ [Properties](#aws-resource-budgets-budget-properties)
-+ [Return Values](#aws-resource-budgets-budget-returnvalues)
-+ [Examples](#aws-resource-budgets-budget-examples)
-+ [See Also](#aws-resource-budgets-budget-seealso)
-
 ## Syntax<a name="aws-resource-budgets-budget-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -40,13 +33,13 @@ Properties:
 `NotificationsWithSubscribers`  <a name="cfn-budgets-budget-notificationswithsubscribers"></a>
 The notification that you want associated with the budget\. A budget can have up to five notifications, and each notification can have one SNS subscriber and up to ten email subscribers\.  
  *Required*: No  
- *Type*: List of [Billing and Cost Management Budget NotificationWithSubscribers](aws-properties-budgets-budget-notificationwithsubscribers.md) property types  
+ *Type*: List of [NotificationWithSubscribers](aws-properties-budgets-budget-notificationwithsubscribers.md) property types  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Budget`  <a name="cfn-budgets-budget-budget"></a>
 The budget for tracking your service usage, costs, and RI utilization\. Single accounts and master and member accounts in an organization can, by default, create budgets\.   
  *Required*: Yes  
- *Type*: [Billing and Cost Management Budget BudgetData](aws-properties-budgets-budget-budgetdata.md)  
+ *Type*: [BudgetData](aws-properties-budgets-budget-budgetdata.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-budgets-budget-returnvalues"></a>

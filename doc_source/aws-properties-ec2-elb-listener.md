@@ -1,8 +1,8 @@
-# ElasticLoadBalancing Listener Property Type<a name="aws-properties-ec2-elb-listener"></a>
+# ElasticLoadBalancing Listener<a name="aws-properties-ec2-elb-listener"></a>
 
 The `Listener` property is an embedded property of the `[AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md)` type\.
 
-## Syntax<a name="w4ab1c21c14e1084b5"></a>
+## Syntax<a name="w4ab1c21c10d126c14c43b5"></a>
 
 ### JSON<a name="aws-properties-ec2-elb-listener-syntax.json"></a>
 
@@ -29,7 +29,7 @@ The `Listener` property is an embedded property of the `[AWS::ElasticLoadBalanci
 [SSLCertificateId](#cfn-ec2-elb-listener-sslcertificateid): String
 ```
 
-## Properties<a name="w4ab1c21c14e1084b7"></a>
+## Properties<a name="w4ab1c21c10d126c14c43b7"></a>
 
 `InstancePort`  <a name="cfn-ec2-elb-listener-instanceport"></a>
 Specifies the TCP port on which the instance server listens\. You can't modify this property during the life of the load balancer\.  

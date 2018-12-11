@@ -33,13 +33,13 @@ Properties:
 `ApplicationSource`  <a name="cfn-autoscalingplans-scalingplan-applicationsource"></a>
 A CloudFormation stack or a set of tags\. You can create one scaling plan per application source\.  
  *Required*: Yes  
- *Type*: [AWS Auto Scaling ScalingPlan ApplicationSource](aws-properties-autoscalingplans-scalingplan-applicationsource.md)  
+ *Type*: [ApplicationSource](aws-properties-autoscalingplans-scalingplan-applicationsource.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ScalingInstructions`  <a name="cfn-autoscalingplans-scalingplan-scalinginstructions"></a>
 The scaling instructions\.  
  *Required*: Yes  
- *Type*: List of [AWS Auto Scaling ScalingPlan ScalingInstruction](aws-properties-autoscalingplans-scalingplan-scalinginstruction.md) property types  
+ *Type*: List of [ScalingInstruction](aws-properties-autoscalingplans-scalingplan-scalinginstruction.md) property types  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-autoscalingplans-scalingplan-returnvalues"></a>

@@ -4,7 +4,7 @@ The `Target` property type specifies a target, such as AWS Lambda \(Lambda\) fun
 
 The `Targets` property of the [AWS::Events::Rule](aws-resource-events-rule.md) resource contains a list of one or more `Target` property types\.
 
-## Syntax<a name="w4ab1c21c14d382b7"></a>
+## Syntax<a name="w4ab1c21c10c63c31c30b7"></a>
 
 ### JSON<a name="aws-properties-events-rule-target-syntax.json"></a>
 
@@ -40,7 +40,7 @@ The `Targets` property of the [AWS::Events::Rule](aws-resource-events-rule.md) r
   [*RunCommandParameters*](aws-properties-events-rule-runcommandparameters.md)
 ```
 
-## Properties<a name="w4ab1c21c14d382b9"></a>
+## Properties<a name="w4ab1c21c10c63c31c30b9"></a>
 
 **Note**  
 For more information about each property, including constraints and valid values, see [Amazon CloudWatch Events Rule Target](https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_Target.html) in the *Amazon CloudWatch Events API Reference*\.
@@ -53,7 +53,7 @@ The Amazon Resource Name \(ARN\) of the target\.
 `EcsParameters`  <a name="cfn-events-rule-target-ecsparameters"></a>
 The Amazon ECS task definition and task count to use, if the event target is an Amazon ECS task\.  
  *Required*: No  
- *Type*: [CloudWatch Events Rule EcsParameters](aws-properties-events-rule-ecsparameters.md)
+ *Type*: [EcsParameters](aws-properties-events-rule-ecsparameters.md)
 
 `Id`  <a name="cfn-events-rule-target-id"></a>
 A unique, user\-defined identifier for the target\. Acceptable values include alphanumeric characters, periods \(`.`\), hyphens \(`-`\), and underscores \(`_`\)\.  
@@ -73,12 +73,12 @@ When you don't want to pass the entire matched event, the JSONPath that describe
 `InputTransformer`  <a name="cfn-events-rule-target-inputtransformer"></a>
 Settings that provide custom input to a target based on certain event data\. You can extract one or more key\-value pairs from the event, and then use that data to send customized input to the target\.  
  *Required*: No  
- *Type*: [CloudWatch Events Rule InputTransformer](aws-properties-events-rule-inputtransformer.md)
+ *Type*: [InputTransformer](aws-properties-events-rule-inputtransformer.md)
 
 `KinesisParameters`  <a name="cfn-events-rule-target-kinesisparameters"></a>
 Settings that control shard assignment, when the target is a Kinesis stream\. If you don't include this parameter, `eventId` is used as the partition key\.  
  *Required*: No  
- *Type*: [CloudWatch Events Rule KinesisParameters](aws-properties-events-rule-kinesisparameters.md)
+ *Type*: [KinesisParameters](aws-properties-events-rule-kinesisparameters.md)
 
 `RoleArn`  <a name="cfn-events-rule-target-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) role to use for this target when the rule is triggered\. If one rule triggers multiple targets, you can use a different IAM role for each target\.  
@@ -89,7 +89,7 @@ CloudWatch Events needs appropriate permissions to make API calls against the re
 `RunCommandParameters`  <a name="cfn-events-rule-target-runcommandparameters"></a>
 Parameters used when the rule invokes the AWS Systems Manager Run Command\.  
  *Required*: No  
- *Type*: [CloudWatch Events Rule RunCommandParameters](aws-properties-events-rule-runcommandparameters.md)
+ *Type*: [RunCommandParameters](aws-properties-events-rule-runcommandparameters.md)
 
 ## Examples<a name="aws-properties-events-rule-target-examples"></a>
 

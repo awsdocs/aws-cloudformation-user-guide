@@ -4,7 +4,7 @@ The AWS::ElastiCache::SecurityGroupIngress type authorizes ingress to a cache se
 
 **Topics**
 + [Syntax](#aws-resource-elasticache-securitygroupingress-syntax)
-+ [Properties](#w4ab1c21c10d622b9)
++ [Properties](#w4ab1c21c10d117c33b9)
 
 ## Syntax<a name="aws-resource-elasticache-securitygroupingress-syntax"></a>
 
@@ -34,7 +34,7 @@ Properties:
   [EC2SecurityGroupOwnerId](#cfn-elasticache-securitygroupingress-ec2securitygroupownerid): String
 ```
 
-## Properties<a name="w4ab1c21c10d622b9"></a>
+## Properties<a name="w4ab1c21c10d117c33b9"></a>
 
 `CacheSecurityGroupName`  <a name="cfn-elasticache-securitygroupingress-cachesecuritygroupname"></a>
 The name of the Cache Security Group to authorize\.  

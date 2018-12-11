@@ -7,7 +7,7 @@ Use `AWS::EC2::SecurityGroupIngress` and `AWS::EC2::SecurityGroupEgress` only wh
 
 **Topics**
 + [Syntax](#aws-resource-ec2-securitygroupingress-syntax)
-+ [Properties](#w4ab1c21c10d486c11)
++ [Properties](#w4ab1c21c10d102d114c11)
 + [Examples](#aws-properties-ec2-security-group-ingress-examples)
 
 ## Syntax<a name="aws-resource-ec2-securitygroupingress-syntax"></a>
@@ -27,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[GroupId](#cfn-ec2-security-group-ingress-groupid)" : String,
     "[GroupName](#cfn-ec2-security-group-ingress-groupname)" : String,
     "[IpProtocol](#cfn-ec2-security-group-ingress-ipprotocol)" : String,
+    "[SourcePrefixListId](#cfn-ec2-security-group-ingress-sourceprefixlistid)" : String,
     "[SourceSecurityGroupName](#cfn-ec2-security-group-ingress-sourcesecuritygroupname)" : String,
     "[SourceSecurityGroupId](#cfn-ec2-security-group-ingress-sourcesecuritygroupid)" : String,
     "[SourceSecurityGroupOwnerId](#cfn-ec2-security-group-ingress-sourcesecuritygroupownerid)" : String,
@@ -47,13 +48,14 @@ Properties:
   [GroupId](#cfn-ec2-security-group-ingress-groupid): String
   [GroupName](#cfn-ec2-security-group-ingress-groupname): String
   [IpProtocol](#cfn-ec2-security-group-ingress-ipprotocol): String
+  [SourcePrefixListId](#cfn-ec2-security-group-ingress-sourceprefixlistid): String
   [SourceSecurityGroupName](#cfn-ec2-security-group-ingress-sourcesecuritygroupname): String
   [SourceSecurityGroupId](#cfn-ec2-security-group-ingress-sourcesecuritygroupid): String
   [SourceSecurityGroupOwnerId](#cfn-ec2-security-group-ingress-sourcesecuritygroupownerid): String
   [ToPort](#cfn-ec2-security-group-ingress-toport): Integer
 ```
 
-## Properties<a name="w4ab1c21c10d486c11"></a>
+## Properties<a name="w4ab1c21c10d102d114c11"></a>
 
 For more information about adding ingress rules to Amazon EC2 or VPC security groups, see [AuthorizeSecurityGroupIngress](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-AuthorizeSecurityGroupIngress.html) in the *Amazon EC2 API Reference*\.
 
@@ -103,16 +105,22 @@ IP protocol name or number\. For valid values, see the IpProtocol parameter in [
 *Required*: Yes  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
+`SourcePrefixListId`  <a name="cfn-ec2-security-group-ingress-sourceprefixlistid"></a>
+The AWS service prefix of an Amazon VPC endpoint\. For more information, see [VPC Endpoints](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html) in the *Amazon VPC User Guide*\.  
+*Type*: String  
+*Required*: Conditional\. You must specify a source security group \(`SourcePrefixListId`, `SourceSecurityGroupId`, or `SourceSecurityGroupName`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+
 `SourceSecurityGroupId`  <a name="cfn-ec2-security-group-ingress-sourcesecuritygroupid"></a>
 Specifies the ID of the source security group or uses the `Ref` intrinsic function to refer to the logical ID of a security group defined in the same template\.  
 *Type*: String  
-*Required*: Conditional\. You must specify a source security group \(`SourceSecurityGroupName` or `SourceSecurityGroupId`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
+*Required*: Conditional\. You must specify a source security group \(`SourcePrefixListId`, `SourceSecurityGroupId`, or `SourceSecurityGroupName`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `SourceSecurityGroupName`  <a name="cfn-ec2-security-group-ingress-sourcesecuritygroupname"></a>
 Specifies the name of the Amazon EC2 security group \(non\-VPC security group\) to allow access or use the `Ref` intrinsic function to refer to the logical ID of a security group defined in the same template\. For instances in a VPC, specify the `SourceSecurityGroupId` property\.  
 *Type*: String  
-*Required*: Conditional\. You must specify a source security group \(`SourceSecurityGroupName` or `SourceSecurityGroupId`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
+*Required*: Conditional\. You must specify a source security group \(`SourcePrefixListId`, `SourceSecurityGroupId`, or `SourceSecurityGroupName`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `SourceSecurityGroupOwnerId`  <a name="cfn-ec2-security-group-ingress-sourcesecuritygroupownerid"></a>
@@ -129,7 +137,7 @@ End of port range for the TCP and UDP protocols, or an ICMP code\. If you specif
 
 ## Examples<a name="aws-properties-ec2-security-group-ingress-examples"></a>
 
-### EC2 Security Group and Ingress Rule<a name="w4ab1c21c10d486c13b2"></a>
+### EC2 Security Group and Ingress Rule<a name="w4ab1c21c10d102d114c13b2"></a>
 
 To create an Amazon EC2 \(non\-VPC\) security group and an ingress rule, use the `SourceSecurityGroupName` property in the ingress rule\.
 
@@ -197,7 +205,7 @@ Resources:
       SourceSecurityGroupId: !Ref SGBase
 ```
 
-### VPC Security Groups with Egress and Ingress Rules<a name="w4ab1c21c10d486c13b4"></a>
+### VPC Security Groups with Egress and Ingress Rules<a name="w4ab1c21c10d102d114c13b4"></a>
 
 In some cases, you might have an originating \(source\) security group to which you want to add an outbound rule that allows traffic to a destination \(target\) security group\. The target security group also needs an inbound rule that allows traffic from the source security group\. Note that you cannot use the `Ref` function to specify the outbound and inbound rules for each security group\. Doing so creates a circular dependency; you cannot have two resources that depend on each other\. Instead, use the egress and ingress resources to declare these outbound and inbound rules, as shown in the following template snippet\.
 
@@ -310,7 +318,7 @@ Resources:
         - GroupId
 ```
 
-### Allow Traffic from a Security Group in a Peered VPC<a name="w4ab1c21c10d486c13b6"></a>
+### Allow Traffic from a Security Group in a Peered VPC<a name="w4ab1c21c10d102d114c13b6"></a>
 
 Like the previous example, the following example allows one\-way traffic from an originating \(source\) security group to a destination \(target\) security group\. However, in this example the security groups are in peered VPCs across AWS accounts\. You might want to allow cross\-account traffic if, for example, you create a security scanning resource in one AWS account that you'll use to run diagnostics in another account\. This example adds an ingress rule to a target VPC security group that allows incoming traffic from a source security group in a different AWS account\. Note that the source security group also needs an egress rule that allows outgoing traffic to the target security group\. Because the source security group is in a different account, the following example doesn't use the Ref function to reference the source security group ID but instead directly specifies the security group ID `sg-12345678`\. 
 
@@ -368,7 +376,7 @@ Resources:
       SourceSecurityGroupOwnerId: '123456789012'
 ```
 
-### Allow Ping Requests<a name="w4ab1c21c10d486c13b8"></a>
+### Allow Ping Requests<a name="w4ab1c21c10d102d114c13b8"></a>
 
 To allow ping requests, add the ICMP protocol type and specify `8` \(echo request\) for the ICMP type and either `0` or `-1` \(all\) for the ICMP code\.
 

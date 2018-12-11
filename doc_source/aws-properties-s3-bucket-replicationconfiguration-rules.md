@@ -2,7 +2,7 @@
 
 The `ReplicationRule` property type specifies which Amazon Simple Storage Service \(Amazon S3\) objects to replicate and where to store them\. The `Rules` subproperty of the [Amazon S3 Bucket ReplicationConfiguration](aws-properties-s3-bucket-replicationconfiguration.md) property contains a list of `ReplicationRule` property types\.
 
-## Syntax<a name="w4ab1c21c14e1865b5"></a>
+## Syntax<a name="w4ab1c21c10d180c13d122b5"></a>
 
 ### JSON<a name="aws-properties-s3-bucket-replicationconfiguration-rules-syntax.json"></a>
 
@@ -27,7 +27,7 @@ The `ReplicationRule` property type specifies which Amazon Simple Storage Servic
 [Status](#cfn-s3-bucket-replicationconfiguration-rules-status): String
 ```
 
-## Properties<a name="w4ab1c21c14e1865b7"></a>
+## Properties<a name="w4ab1c21c10d180c13d122b7"></a>
 
 `Destination`  <a name="cfn-s3-bucket-replicationconfiguration-rules-destination"></a>
 Defines the destination where Amazon S3 stores replicated objects\.  

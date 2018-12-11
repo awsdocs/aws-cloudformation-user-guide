@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `IpFilter`  <a name="cfn-ses-receiptfilter-filter-ipfilter"></a>
 The IP addresses to block or allow, and whether to block or allow incoming mail from them\.  
  *Required*: Yes  
- *Type*: [Amazon SES ReceiptFilter IpFilter](aws-properties-ses-receiptfilter-ipfilter.md)  
+ *Type*: [IpFilter](aws-properties-ses-receiptfilter-ipfilter.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Name`  <a name="cfn-ses-receiptfilter-filter-name"></a>

@@ -2,13 +2,6 @@
 
 Creates an AWS OpsWorks layer\. A layer defines, for example, which packages and applications are installed and how they are configured\.
 
-**Topics**
-+ [Syntax](#aws-resource-opsworks-layer-syntax)
-+ [Properties](#w4ab1c21c10d957b9)
-+ [Return Values](#w4ab1c21c10d957c11)
-+ [Template Examples](#w4ab1c21c10d957c13)
-+ [See Also](#w4ab1c21c10d957c15)
-
 ## Syntax<a name="aws-resource-opsworks-layer-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -75,7 +68,7 @@ Properties:
     - VolumeConfiguration
 ```
 
-## Properties<a name="w4ab1c21c10d957b9"></a>
+## Properties<a name="w4ab1c21c10d168c29b7"></a>
 
 `Attributes`  <a name="cfn-opsworks-layer-attributes"></a>
 One or more user\-defined key\-value pairs to be added to the stack attributes bag\.  
@@ -171,7 +164,7 @@ The ID of the AWS OpsWorks stack that this layer will be associated with\.
 `Tags`  <a name="cfn-opsworks-layer-tags"></a>
 Specifies an arbitrary set of tags \(key–value pairs\) to associate with this AWS OpsWorks layer\. Use tags to manage your resources\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Type`  <a name="cfn-opsworks-layer-type"></a>
@@ -184,12 +177,12 @@ If you update a property that requires the layer to be replaced, you must specif
 `VolumeConfigurations`  <a name="cfn-opsworks-layer-volconfig"></a>
 Describes the Amazon EBS volumes for this layer\.  
 *Required*: No  
-*Type*: A list of [AWS OpsWorks VolumeConfiguration Type](aws-properties-opsworks-layer-volumeconfig.md)  
+*Type*: A list of [AWS OpsWorks VolumeConfiguration](aws-properties-opsworks-layer-volumeconfig.md)  
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
-## Return Values<a name="w4ab1c21c10d957c11"></a>
+## Return Values<a name="w4ab1c21c10d168c29b9"></a>
 
-### Ref<a name="w4ab1c21c10d957c11b2"></a>
+### Ref<a name="w4ab1c21c10d168c29b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -201,9 +194,9 @@ For the AWS OpsWorks layer `myLayer`, `Ref` returns the AWS OpsWorks layer ID\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Template Examples<a name="w4ab1c21c10d957c13"></a>
+## Template Examples<a name="w4ab1c21c10d168c29c11"></a>
 
-### AWS OpsWorks PHP Layer<a name="w4ab1c21c10d957c13b2"></a>
+### AWS OpsWorks PHP Layer<a name="w4ab1c21c10d168c29c11b2"></a>
 
 The following snippet creates an AWS OpsWorks PHP layer that is associated with the `myStack` AWS OpsWorks stack\. The layer is dependent on the `myApp` AWS OpsWorks application\.
 
@@ -242,7 +235,7 @@ myLayer:
     Name: "MyPHPApp"
 ```
 
-### Load\-based Auto Scaling Layer<a name="w4ab1c21c10d957c13b4"></a>
+### Load\-based Auto Scaling Layer<a name="w4ab1c21c10d168c29c11b4"></a>
 
 The following snippet creates a load\-based automatic scaling AWS OpsWorks PHP layer that is associated with the `myStack` AWS OpsWorks stack\.
 
@@ -563,7 +556,7 @@ Parameters:
     Type: String
 ```
 
-## See Also<a name="w4ab1c21c10d957c15"></a>
+## See Also<a name="w4ab1c21c10d168c29c13"></a>
 + [AWS::OpsWorks::Stack](aws-resource-opsworks-stack.md)
 + [AWS::OpsWorks::App](aws-resource-opsworks-app.md)
 + [AWS::OpsWorks::Instance](aws-resource-opsworks-instance.md)

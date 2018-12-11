@@ -2,7 +2,7 @@
 
 `Source` is a property of the [AWS::Config::ConfigRule](aws-resource-config-configrule.md) resource that specifies the rule owner, the rule identifier, and the events that trigger an AWS Config evaluation of your AWS resources\.
 
-## Syntax<a name="w4ab1c21c14d588b5"></a>
+## Syntax<a name="w4ab1c21c10c81c17c21b5"></a>
 
 ### JSON<a name="aws-properties-config-configrule-source-syntax.json"></a>
 
@@ -23,7 +23,7 @@
 [SourceIdentifier](#cfn-config-configrule-source-sourceidentifier): String
 ```
 
-## Properties<a name="w4ab1c21c14d588b7"></a>
+## Properties<a name="w4ab1c21c10c81c17c21b7"></a>
 
 `Owner`  <a name="cfn-config-configrule-source-owner"></a>
 Indicates who owns and manages the AWS Config rule\. For valid values, see the [Source](https://docs.aws.amazon.com/config/latest/APIReference/API_Source.html) data type in the *AWS Config API Reference*\.  

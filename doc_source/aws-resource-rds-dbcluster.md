@@ -7,12 +7,6 @@ Currently, you can create this resource only in regions in which Amazon Aurora i
 
 The default DeletionPolicy for `AWS::RDS::DBCluster` resources is `Snapshot`\. For more information about how AWS CloudFormation deletes resources, see [DeletionPolicy Attribute](aws-attribute-deletionpolicy.md)\.
 
-**Topics**
-+ [Syntax](#aws-resource-rds-dbcluster-syntax)
-+ [Properties](#w4ab1c21c10d978c15)
-+ [Return Values](#aws-resource-rds-dbcluster-ref)
-+ [Example](#w4ab1c21c10d978c19)
-
 ## Syntax<a name="aws-resource-rds-dbcluster-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -25,11 +19,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" :
   {
     "[AvailabilityZones](#cfn-rds-dbcluster-availabilityzones)" : [ String, ... ],
+    "[BacktrackWindow](#cfn-rds-dbcluster-backtrackwindow)" : Integer,
     "[BackupRetentionPeriod](#cfn-rds-dbcluster-backuprententionperiod)" : Integer,
     "[DatabaseName](#cfn-rds-dbcluster-databasename)" : String,   
     "[DBClusterIdentifier](#cfn-rds-dbcluster-dbclusteridentifier)" : String,
     "[DBClusterParameterGroupName](#cfn-rds-dbcluster-dbclusterparametergroupname)" : String,
     "[DBSubnetGroupName](#cfn-rds-dbcluster-dbsubnetgroupname)" : String,
+    "[DeletionProtection](#cfn-rds-dbcluster-deletionprotection)" : Boolean,
+    "[EnableCloudwatchLogsExports](#cfn-rds-dbcluster-enablecloudwatchlogsexports)" : [ String, ... ],
+    "[EnableIAMDatabaseAuthentication](#cfn-rds-dbcluster-enableiamdatabaseauthentication)" : Boolean,
     "[Engine](#cfn-rds-dbcluster-engine)" : String,
     "[EngineMode](#cfn-rds-dbcluster-enginemode)" : String,
     "[EngineVersion](#cfn-rds-dbcluster-engineversion)" : String,
@@ -56,11 +54,16 @@ Type: "AWS::RDS::DBCluster"
 Properties:
   [AvailabilityZones](#cfn-rds-dbcluster-availabilityzones):
     - String
+  [BacktrackWindow](#cfn-rds-dbcluster-backtrackwindow): Integer
   [BackupRetentionPeriod](#cfn-rds-dbcluster-backuprententionperiod): Integer
   [DatabaseName](#cfn-rds-dbcluster-databasename): String
   [DBClusterIdentifier](#cfn-rds-dbcluster-dbclusteridentifier): String
   [DBClusterParameterGroupName](#cfn-rds-dbcluster-dbclusterparametergroupname): String
   [DBSubnetGroupName](#cfn-rds-dbcluster-dbsubnetgroupname): String
+  [DeletionProtection](#cfn-rds-dbcluster-deletionprotection): Boolean
+  [EnableCloudwatchLogsExports](#cfn-rds-dbcluster-enablecloudwatchlogsexports):
+    - String
+  [EnableIAMDatabaseAuthentication](#cfn-rds-dbcluster-enableiamdatabaseauthentication): Boolean
   [Engine](#cfn-rds-dbcluster-engine): String
   [EngineMode](#cfn-rds-dbcluster-enginemode): String
   [EngineVersion](#cfn-rds-dbcluster-engineversion): String
@@ -71,7 +74,8 @@ Properties:
   [PreferredBackupWindow](#cfn-rds-dbcluster-preferredbackupwindow): String
   [PreferredMaintenanceWindow](#cfn-rds-dbcluster-preferredmaintenancewindow): String
   [ReplicationSourceIdentifier](#cfn-rds-dbcluster-replicationsourceidentifier): String
-  [ScalingConfiguration](#cfn-rds-dbcluster-scalingconfiguration): [*ScalingConfiguration*](aws-properties-rds-dbcluster-scalingconfiguration.md)
+  [ScalingConfiguration](#cfn-rds-dbcluster-scalingconfiguration): 
+    [*ScalingConfiguration*](aws-properties-rds-dbcluster-scalingconfiguration.md)
   [SnapshotIdentifier](#cfn-rds-dbcluster-snapshotidentifier): String
   [StorageEncrypted](#cfn-rds-dbcluster-storageencrypted): Boolean
   [Tags](#cfn-rds-dbcluster-tags):
@@ -80,13 +84,19 @@ Properties:
     - String
 ```
 
-## Properties<a name="w4ab1c21c10d978c15"></a>
+## Properties<a name="w4ab1c21c10d171c13c13"></a>
 
 `AvailabilityZones`  <a name="cfn-rds-dbcluster-availabilityzones"></a>
 A list of Availability Zones \(AZs\) in which DB instances in the cluster can be created\.  
 *Required*: No  
-*Type*: String  
+*Type*: List of String values  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+
+`BacktrackWindow`  <a name="cfn-rds-dbcluster-backtrackwindow"></a>
+The target backtrack window, in seconds\. To disable backtracking, specify `0`\. If specified, this property must be set to a number from 0 to 259,200 \(72 hours\)\.  
+*Required*: No  
+*Type*: Long  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `BackupRetentionPeriod`  <a name="cfn-rds-dbcluster-backuprententionperiod"></a>
 The number of days for which automatic backups are retained\. For more information, see [CreateDBCluster](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCluster.html) in the *Amazon RDS API Reference*\.  
@@ -123,6 +133,25 @@ A DB subnet group that you want to associate with this DB cluster\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+
+`DeletionProtection`  <a name="cfn-rds-dbcluster-deletionprotection"></a>
+Indicates whether the DB cluster should have deletion protection enabled\. The database can't be deleted when this value is set to `true`\. If you want to delete a stack with a protected cluster, update this value to `false` before you delete the stack\.  
+For more information, see [Deleting a DB Instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html)\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`EnableCloudwatchLogsExports`  <a name="cfn-rds-dbcluster-enablecloudwatchlogsexports"></a>
+The list of log types that need to be enabled for exporting to CloudWatch Logs\. The values in the list depend on the DB engine being used\. Log types that are excluded or removed from this list during updates are disabled\. For more information, see [Publishing Database Logs to Amazon CloudWatch Logs](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch) in the *Amazon Aurora User Guide*\.   
+*Required*: No  
+*Type*: List of String values  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`EnableIAMDatabaseAuthentication`  <a name="cfn-rds-dbcluster-enableiamdatabaseauthentication"></a>
+If set to `true`, enables mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Engine`  <a name="cfn-rds-dbcluster-engine"></a>
 The name of the database engine that you want to use for this DB cluster\.  
@@ -170,7 +199,7 @@ The port number on which the DB instances in the cluster can accept connections\
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `PreferredBackupWindow`  <a name="cfn-rds-dbcluster-preferredbackupwindow"></a>
-if automated backups are enabled \(see the `BackupRetentionPeriod` property\), the daily time range in UTC during which you want to create automated backups\.  
+If automated backups are enabled \(see the `BackupRetentionPeriod` property\), the daily time range in UTC during which you want to create automated backups\.  
 For valid values, see the `PreferredBackupWindow` parameter of the [CreateDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) action in the *Amazon RDS API Reference*\.  
 *Required*: No  
 *Type*: String  
@@ -192,7 +221,7 @@ The Amazon Resource Name \(ARN\) of the source Amazon RDS DB instance or DB clus
 `ScalingConfiguration`  <a name="cfn-rds-dbcluster-scalingconfiguration"></a>
 For DB clusters in `serverless` DB engine mode, the scaling properties of the DB cluster\.  
 *Required*: No  
-*Type*: [Amazon RDS DBCluster ScalingConfiguration](aws-properties-rds-dbcluster-scalingconfiguration.md)  
+*Type*: [ScalingConfiguration](aws-properties-rds-dbcluster-scalingconfiguration.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `SnapshotIdentifier`  <a name="cfn-rds-dbcluster-snapshotidentifier"></a>
@@ -211,7 +240,7 @@ If you specify the `SnapshotIdentifier` property, do not specify this property\.
 `Tags`  <a name="cfn-rds-dbcluster-tags"></a>
 The tags that you want to attach to this DB cluster\.  
 *Required*: No  
-*Type*: A list of [resource tags](aws-properties-resource-tags.md)  
+*Type*: List of [Resource Tag](aws-properties-resource-tags.md) property types  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `VpcSecurityGroupIds`  <a name="cfn-rds-dbcluster-vpcsecuritygroupids"></a>
@@ -222,13 +251,13 @@ A list of VPC security groups to associate with this DB cluster\.
 
 ## Return Values<a name="aws-resource-rds-dbcluster-ref"></a>
 
-### Ref<a name="w4ab1c21c10d978c17b2"></a>
+### Ref<a name="w4ab1c21c10d171c13c15b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d978c17b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d171c13c15b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -243,7 +272,7 @@ The reader endpoint for the DB cluster\. For example: `mystack-mydbcluster-ro-1a
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Example<a name="w4ab1c21c10d978c19"></a>
+## Example<a name="w4ab1c21c10d171c13c17"></a>
 
 The following snippet creates an Amazon Aurora DB cluster and adds two DB instances to it\. Because Amazon RDS automatically assigns a writer and reader DB instances in the cluster, use the cluster endpoint to read and write data, not the individual DB instance endpoints\.
 

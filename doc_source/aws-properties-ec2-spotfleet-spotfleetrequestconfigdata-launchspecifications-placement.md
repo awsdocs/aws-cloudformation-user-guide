@@ -2,7 +2,7 @@
 
 `Placement` is a property of the [Amazon Elastic Compute Cloud SpotFleet LaunchSpecifications](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md) property that defines the placement group for the Spot instances\.
 
-## Syntax<a name="w4ab1c21c14d888b5"></a>
+## Syntax<a name="w4ab1c21c10d102d118c66b5"></a>
 
 ### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement-syntax.json"></a>
 
@@ -22,7 +22,7 @@
 [Tenancy](#cfn-ec2-spotfleet-spotplacement-tenancy): String
 ```
 
-## Properties<a name="w4ab1c21c14d888b7"></a>
+## Properties<a name="w4ab1c21c10d102d118c66b7"></a>
 
 For more information, including defaults, valid values, and constraints, see [SpotPlacement](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotPlacement.html) in the *Amazon EC2 API Reference*
 

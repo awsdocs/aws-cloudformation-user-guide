@@ -50,12 +50,12 @@ The `ElasticsearchDestinationConfiguration` property type specifies an Amazon El
 `BufferingHints`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-bufferinghints"></a>
 Configures how Kinesis Data Firehose buffers incoming data while delivering it to the Amazon ES domain\.  
 *Required*: Yes  
-*Type*: [Kinesis Data Firehose DeliveryStream ElasticsearchBufferingHints](aws-properties-kinesisfirehose-deliverystream-elasticsearchbufferinghints.md)
+*Type*: [ElasticsearchBufferingHints](aws-properties-kinesisfirehose-deliverystream-elasticsearchbufferinghints.md)
 
 `CloudWatchLoggingOptions`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-cloudwatchloggingoptions"></a>
 The Amazon CloudWatch Logs logging options for the delivery stream\.  
 *Required*: No  
-*Type*: [Kinesis Data Firehose DeliveryStream CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md)
+*Type*: [CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md)
 
 `DomainARN`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-domainarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon ES domain that Kinesis Data Firehose delivers data to\.  
@@ -75,12 +75,12 @@ The frequency of Elasticsearch index rotation\. If you enable index rotation, Ki
 `ProcessingConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-processingconfiguration"></a>
 The data processing configuration for the Kinesis Data Firehose delivery stream\.  
  *Required*: No  
- *Type*: [Kinesis Data Firehose DeliveryStream ProcessingConfiguration](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md)
+ *Type*: [ProcessingConfiguration](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md)
 
 `RetryOptions`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-retryoptions"></a>
 The retry behavior when Kinesis Data Firehose is unable to deliver data to Amazon ES\.  
  *Required*: Yes  
-*Type*: [Kinesis Data Firehose DeliveryStream ElasticsearchRetryOptions](aws-properties-kinesisfirehose-deliverystream-elasticsearchretryoptions.md)
+*Type*: [ElasticsearchRetryOptions](aws-properties-kinesisfirehose-deliverystream-elasticsearchretryoptions.md)
 
 `RoleARN`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-rolearn"></a>
 The ARN of the AWS Identity and Access Management \(IAM\) role that grants Kinesis Data Firehose access to your Amazon S3 bucket, AWS KMS \(if you enable data encryption\), and Amazon CloudWatch Logs \(if you enable logging\)\.  
@@ -96,7 +96,7 @@ The condition under which Kinesis Data Firehose delivers data to Amazon Simple S
 `S3Configuration`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-s3configuration"></a>
 The S3 bucket where Kinesis Data Firehose backs up incoming data\.  
  *Required*: Yes  
-*Type*: [Kinesis Data Firehose DeliveryStream S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)
+*Type*: [S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)
 
 `TypeName`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-typename"></a>
 The Elasticsearch type name that Amazon ES adds to documents when indexing data\.  

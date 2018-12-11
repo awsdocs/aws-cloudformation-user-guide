@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `MappingParameters`  <a name="cfn-kinesisanalytics-application-recordformat-mappingparameters"></a>
 When configuring application input at the time of creating or updating an application, provides additional mapping information specific to the record format \(such as JSON, CSV, or record fields delimited by some delimiter\) on the streaming source\.   
  *Required*: No  
- *Type*: [Kinesis Data Analytics Application MappingParameters](aws-properties-kinesisanalytics-application-mappingparameters.md)  
+ *Type*: [MappingParameters](aws-properties-kinesisanalytics-application-mappingparameters.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `RecordFormatType`  <a name="cfn-kinesisanalytics-application-recordformat-recordformattype"></a>

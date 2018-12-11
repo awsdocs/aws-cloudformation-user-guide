@@ -12,12 +12,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SSM::MaintenanceWindow",
   "Properties" : {
+    "[Name](#cfn-ssm-maintenancewindow-name)" : String,
     "[Description](#cfn-ssm-maintenancewindow-description)" : String,
     "[AllowUnassociatedTargets](#cfn-ssm-maintenancewindow-allowunassociatedtargets)" : Boolean,
-    "[Cutoff](#cfn-ssm-maintenancewindow-cutoff)" : Integer,
     "[Schedule](#cfn-ssm-maintenancewindow-schedule)" : String,
     "[Duration](#cfn-ssm-maintenancewindow-duration)" : Integer,
-    "[Name](#cfn-ssm-maintenancewindow-name)" : String
+    "[Cutoff](#cfn-ssm-maintenancewindow-cutoff)" : Integer,
+    "[StartDate](#cfn-ssm-maintenancewindow-startdate)" : String,,
+    "[EndDate](#cfn-ssm-maintenancewindow-enddate)" : String,,
+    "[ScheduleTimezone](#cfn-ssm-maintenancewindow-scheduletimezone)" : String
   }
 }
 ```
@@ -27,15 +30,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::SSM::MaintenanceWindow"
 Properties:
+  [Name](#cfn-ssm-maintenancewindow-name): String
   [Description](#cfn-ssm-maintenancewindow-description): String
   [AllowUnassociatedTargets](#cfn-ssm-maintenancewindow-allowunassociatedtargets): Boolean
-  [Cutoff](#cfn-ssm-maintenancewindow-cutoff): Integer
   [Schedule](#cfn-ssm-maintenancewindow-schedule): String
   [Duration](#cfn-ssm-maintenancewindow-duration): Integer
-  [Name](#cfn-ssm-maintenancewindow-name): String
+  [Cutoff](#cfn-ssm-maintenancewindow-cutoff): Integer
+  [StartDate](#cfn-ssm-maintenancewindow-startdate): String
+  [EndDate](#cfn-ssm-maintenancewindow-enddate): String
+  [ScheduleTimezone](#cfn-ssm-maintenancewindow-scheduletimezone): String
 ```
 
 ## Properties<a name="aws-resource-ssm-maintenancewindow-properties"></a>
+
+`Name`  <a name="cfn-ssm-maintenancewindow-name"></a>
+The name of the Maintenance Window\.  
+ *Required*: Yes  
+ *Type*: String  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Description`  <a name="cfn-ssm-maintenancewindow-description"></a>
 A description of the Maintenance Window\.  
@@ -47,12 +59,6 @@ A description of the Maintenance Window\.
 Enables a Maintenance Window task to execute on managed instances, even if you haven't registered those instances as targets\. If this is enabled, then you must specify the unregistered instances \(by instance ID\) when you register a task with the Maintenance Window\.  
  *Required*: Yes  
  *Type*: Boolean  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
-`Cutoff`  <a name="cfn-ssm-maintenancewindow-cutoff"></a>
-The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution\.  
- *Required*: Yes  
- *Type*: Integer  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Schedule`  <a name="cfn-ssm-maintenancewindow-schedule"></a>
@@ -67,15 +73,33 @@ The duration of the Maintenance Window in hours\.
  *Type*: Integer  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`Name`  <a name="cfn-ssm-maintenancewindow-name"></a>
-The name of the Maintenance Window\.  
+`Cutoff`  <a name="cfn-ssm-maintenancewindow-cutoff"></a>
+The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution\.  
  *Required*: Yes  
+ *Type*: Integer  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+
+`StartDate`  <a name="cfn-ssm-maintenancewindow-startdate"></a>
+The date and time, in ISO\-8601 Extended format, for when you want the Maintenance Window to become active\. StartDate allows you to delay activation of the Maintenance Window until the specified future date\.   
+ *Required*: No  
+ *Type*: String  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+
+`EndDate`  <a name="cfn-ssm-maintenancewindow-enddate"></a>
+The date and time, in ISO\-8601 Extended format, for when you want the Maintenance Window to become inactive\. EndDate allows you to set a date and time in the future when the Maintenance Window will no longer run\.   
+ *Required*: No  
+ *Type*: String  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+
+`ScheduleTimezone`  <a name="cfn-ssm-maintenancewindow-scheduletimezone"></a>
+The time zone that the scheduled Maintenance Window executions are based on, in Internet Assigned Numbers Authority \(IANA\) format\. For example: "America/Los\_Angeles", "etc/UTC", or "Asia/Seoul"\. For more information, see the [Time Zone Database](https://www.iana.org/time-zones) on the IANA website\.  
+ *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-ssm-maintenancewindow-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10e1183b9b3"></a>
+### Ref<a name="w4ab1c21c10d207c19b9b3"></a>
 
 When you pass the logical ID of an `AWS::SSM::MaintenanceWindow` resource to the intrinsic `Ref` function, the function returns the maintenance window ID, such as `mw-abcde1234567890yz`\. 
 

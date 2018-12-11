@@ -33,11 +33,11 @@ For more information, see [CrawlerTargets Structure](https://docs.aws.amazon.com
 `S3Targets`  <a name="cfn-glue-crawler-targets-s3targets"></a>
 The Amazon S3 crawler targets\.  
  *Required*: No  
- *Type*: List of [AWS Glue Crawler S3Target](aws-properties-glue-crawler-s3target.md)  
+ *Type*: List of [S3Target](aws-properties-glue-crawler-s3target.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `JdbcTargets`  <a name="cfn-glue-crawler-targets-jdbctargets"></a>
 The JDBC crawler targets\.  
  *Required*: No  
- *Type*: List of [AWS Glue Crawler JdbcTarget](aws-properties-glue-crawler-jdbctarget.md)  
+ *Type*: List of [JdbcTarget](aws-properties-glue-crawler-jdbctarget.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

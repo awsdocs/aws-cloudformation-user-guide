@@ -1,12 +1,6 @@
 # AWS::ApplicationAutoScaling::ScalingPolicy<a name="aws-resource-applicationautoscaling-scalingpolicy"></a>
 
-The `AWS::ApplicationAutoScaling::ScalingPolicy` resource defines an Application Auto Scaling scaling policy that Application Auto Scaling uses to adjust your application resources\.
-
-**Topics**
-+ [Syntax](#aws-resource-applicationautoscaling-scalingpolicy-syntax)
-+ [Properties](#w4ab1c21c10d107b9)
-+ [Return Value](#w4ab1c21c10d107c11)
-+ [Examples](#w4ab1c21c10d107c13)
+The `AWS::ApplicationAutoScaling::ScalingPolicy` resource defines a scaling policy that Application Auto Scaling uses to adjust your application resources\.
 
 ## Syntax<a name="aws-resource-applicationautoscaling-scalingpolicy-syntax"></a>
 
@@ -47,7 +41,7 @@ Properties:
     [*TargetTrackingScalingPolicyConfiguration*](aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.md)
 ```
 
-## Properties<a name="w4ab1c21c10d107b9"></a>
+## Properties<a name="w4ab1c21c10c23c17b9"></a>
 
 `PolicyName`  <a name="cfn-applicationautoscaling-scalingpolicy-policyname"></a>
 A name for the scaling policy\.  
@@ -99,15 +93,15 @@ This parameter is required if you are creating a new policy and the policy type 
 *Type*: [Application Auto Scaling ScalingPolicy TargetTrackingScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10d107c11"></a>
+## Return Value<a name="w4ab1c21c10c23c17c11"></a>
 
-### Ref<a name="w4ab1c21c10d107c11b2"></a>
+### Ref<a name="w4ab1c21c10c23c17c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the Application Auto Scaling scaling policy Amazon Resource Name \(ARN\), such as `arn:aws:autoscaling:``us-east-2``:123456789012:scalingPolicy:12ab3c4d-56789-0ef1-2345-6ghi7jk8lm90:resource/ecs/service/ecsStack-MyECSCluster-AB12CDE3F4GH/ecsStack-MyECSService-AB12CDE3F4GH:policyName/MyStepPolicy`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w4ab1c21c10d107c13"></a>
+## Examples<a name="w4ab1c21c10c23c17c13"></a>
 
 ### Application Auto Scaling Scaling Policy with a Step Policy Configuration<a name="aws-resource-applicationautoscaling-scalingpolicy-example"></a>
 

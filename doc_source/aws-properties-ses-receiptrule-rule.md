@@ -43,7 +43,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Actions`  <a name="cfn-ses-receiptrule-rule-actions"></a>
 An ordered list of actions to perform on messages that match at least one of the recipient email addresses or domains specified in the receipt rule\.  
  *Required*: No  
- *Type*: List of [Amazon SES ReceiptRule Action](aws-properties-ses-receiptrule-action.md)  
+ *Type*: List of [Action](aws-properties-ses-receiptrule-action.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Enabled`  <a name="cfn-ses-receiptrule-rule-enabled"></a>

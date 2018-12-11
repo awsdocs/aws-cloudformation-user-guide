@@ -4,9 +4,9 @@ The `AWS::SSM::Document` resource creates an SSM document in AWS Systems Manager
 
 **Topics**
 + [Syntax](#aws-resource-ssm-document-syntax)
-+ [Properties](#w4ab1c21c10e1180b9)
-+ [Return Value](#w4ab1c21c10e1180c11)
-+ [Examples](#w4ab1c21c10e1180c13)
++ [Properties](#w4ab1c21c10d207c16b9)
++ [Return Value](#w4ab1c21c10d207c16c11)
++ [Examples](#w4ab1c21c10d207c16c13)
 
 ## Syntax<a name="aws-resource-ssm-document-syntax"></a>
 
@@ -36,7 +36,7 @@ Properties:
     - Resource Tag
 ```
 
-## Properties<a name="w4ab1c21c10e1180b9"></a>
+## Properties<a name="w4ab1c21c10d207c16b9"></a>
 
 `Content`  <a name="cfn-ssm-document-content"></a>
 A JSON object that describes an instance configuration\. For more information, see [Creating Systems Manager Documents](https://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/create-ssm-doc.html) in the *AWS Systems Manager User Guide*\.  
@@ -54,20 +54,20 @@ The type of document to create that relates to the purpose of your document, suc
 `Tags`  <a name="cfn-ssm-document-tags"></a>
 AWS CloudFormation resource tags to apply to the document, which can help you identify and categorize these resources\.   
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10e1180c11"></a>
+## Return Value<a name="w4ab1c21c10d207c16c11"></a>
 
-### Ref<a name="w4ab1c21c10e1180c11b3"></a>
+### Ref<a name="w4ab1c21c10d207c16c11b3"></a>
 
 When you pass the logical ID of an `AWS::SSM::Document` resource to the intrinsic `Ref` function, the function returns the Systems Manager document name, such as `ssm-myinstanceconfig-ABCNPH3XCAO6`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w4ab1c21c10e1180c13"></a>
+## Examples<a name="w4ab1c21c10d207c16c13"></a>
 
-### <a name="w4ab1c21c10e1180c13b3"></a>
+### <a name="w4ab1c21c10d207c16c13b3"></a>
 
 The following Systems Manager document joins instances to a directory in AWS Directory Service\. The three runtime configuration parameters specify which directory the instance joins\. You specify these parameter values when you associate the document with an instance\.
 
@@ -140,7 +140,7 @@ document:
             dnsIpAddresses: "{{ dnsIpAddresses }}"
 ```
 
-### <a name="w4ab1c21c10e1180c13b5"></a>
+### <a name="w4ab1c21c10d207c16c13b5"></a>
 
 The following example shows how to associate the SSM document with an instance\. The `DocumentName` property specifies the SSM document and the `AssociationParameters` property specifies values for the runtime configuration parameters\.
 

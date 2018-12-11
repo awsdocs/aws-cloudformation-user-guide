@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[LifecycleConfigName](#cfn-sagemaker-notebookinstance-lifecycleconfigname)" : String,
     "[SecurityGroupIds](#cfn-sagemaker-notebookinstance-securitygroupids)" : [ String, ... ],
     "[RoleArn](#cfn-sagemaker-notebookinstance-rolearn)" : String,
-    "[Tags](#cfn-sagemaker-notebookinstance-tags)" : [ [*Tag*](aws-properties-sagemaker-notebookinstance-tag.md), ... ]
+    "[Tags](#cfn-sagemaker-notebookinstance-tags)" : [ [*Tag*](aws-properties-resource-tags.md), ... ]
   }
 }
 ```
@@ -46,7 +46,7 @@ Properties:
     - String
   [RoleArn](#cfn-sagemaker-notebookinstance-rolearn): String
   [Tags](#cfn-sagemaker-notebookinstance-tags): 
-    - [*Tag*](aws-properties-sagemaker-notebookinstance-tag.md)
+    - [*Tag*](aws-properties-resource-tags.md)
 ```
 
 ## Properties<a name="aws-resource-sagemaker-notebookinstance-properties"></a>
@@ -102,7 +102,7 @@ When you send any requests to AWS resources from the notebook instance, Amazon S
 `Tags`  <a name="cfn-sagemaker-notebookinstance-tags"></a>
 A list of tags to associate with the notebook instance\.  
  *Required*: No  
- *Type*: List of [Amazon SageMaker NotebookInstance Tag](aws-properties-sagemaker-notebookinstance-tag.md)  
+ *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-sagemaker-notebookinstance-returnvalues"></a>

@@ -2,12 +2,6 @@
 
 The `AWS::Glue::Crawler` resource specifies an AWS Glue crawler\. For more information, see [Cataloging Tables with a Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) and [Crawler Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-crawling.html#aws-glue-api-crawler-crawling-Crawler) in the *AWS Glue Developer Guide*\. 
 
-**Topics**
-+ [Syntax](#aws-resource-glue-crawler-syntax)
-+ [Properties](#aws-resource-glue-crawler-properties)
-+ [Return Values](#aws-resource-glue-crawler-returnvalues)
-+ [Examples](#aws-resource-glue-crawler-examples)
-
 ## Syntax<a name="aws-resource-glue-crawler-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -82,13 +76,13 @@ A description of the crawler and where it should be used\. It must match the URI
 `SchemaChangePolicy`  <a name="cfn-glue-crawler-schemachangepolicy"></a>
 The policy that specifies update and delete behaviors for the crawler\.  
  *Required*: No  
- *Type*: [AWS Glue Crawler SchemaChangePolicy](aws-properties-glue-crawler-schemachangepolicy.md)  
+ *Type*: [SchemaChangePolicy](aws-properties-glue-crawler-schemachangepolicy.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Schedule`  <a name="cfn-glue-crawler-schedule"></a>
 The schedule for the crawler\.  
  *Required*: No  
- *Type*: [AWS Glue Crawler Schedule](aws-properties-glue-crawler-schedule.md)  
+ *Type*: [Schedule](aws-properties-glue-crawler-schedule.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `DatabaseName`  <a name="cfn-glue-crawler-databasename"></a>
@@ -100,7 +94,7 @@ The name of the database where the crawler's output is stored\.
 `Targets`  <a name="cfn-glue-crawler-targets"></a>
 The crawler targets\.  
  *Required*: Yes  
- *Type*: [AWS Glue Crawler Targets](aws-properties-glue-crawler-targets.md)  
+ *Type*: [Targets](aws-properties-glue-crawler-targets.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `TablePrefix`  <a name="cfn-glue-crawler-tableprefix"></a>
@@ -117,7 +111,7 @@ The name of the crawler\. Must match the single\-line string pattern: `[\u0020-\
 
 ## Return Values<a name="aws-resource-glue-crawler-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10d721c10b3"></a>
+### Ref<a name="w4ab1c21c10d138c18b9b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 

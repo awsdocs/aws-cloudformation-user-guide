@@ -1,4 +1,4 @@
-# Route 53 ServiceDiscovery Service HealthCheckCustomConfig<a name="aws-properties-servicediscovery-service-healthcheckcustomconfig"></a>
+# AWS Cloud Map ServiceDiscovery Service HealthCheckCustomConfig<a name="aws-properties-servicediscovery-service-healthcheckcustomconfig"></a>
 
 <a name="aws-properties-servicediscovery-service-healthcheckcustomconfig-description"></a>The `HealthCheckCustomConfig` property type specifies information about an optional custom health check\.
 
@@ -33,4 +33,4 @@ Minimum value of 1\. Maximum value of 10\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-servicediscovery-service-healthcheckcustomconfig-seealso"></a>
-+ [HealthCheckCustomConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_HealthCheckCustomConfig.html) in the *Amazon Route 53 API Reference*
++ [HealthCheckCustomConfig](https://docs.aws.amazon.com/cloud-map/latest/api/API_HealthCheckCustomConfig.html) in the *AWS Cloud Map API Reference*

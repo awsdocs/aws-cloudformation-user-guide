@@ -70,7 +70,7 @@ When you work with an AWS CloudFormation stack, you not only need permissions to
 
 When you create or update an AWS CloudFormation stack, your stack can fail due to invalid input parameters, unsupported resource property names, or unsupported resource property values\. For input parameters, verify that the resource exists\. For example, when you specify an Amazon EC2 key pair or VPC ID, the resource must exist in your account and in the region in which you are creating or updating your stack\. You can use AWS\-specific [parameter types](parameters-section-structure.md#parameters-section-structure-syntax) to ensure that you use valid values\.
 
-For resource property names and values, update your template to use valid names and values\. For a list of all the resources and their property names, see [AWS Resource Types Reference](aws-template-resource-type-ref.md)\.
+For resource property names and values, update your template to use valid names and values\. For a list of all the resources and their property names, see [AWS Resource and Property Types Reference](aws-template-resource-type-ref.md)\.
 
 ### Limit Exceeded<a name="troubleshooting-errors-limit-exceeded"></a>
 

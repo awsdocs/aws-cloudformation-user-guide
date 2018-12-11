@@ -6,7 +6,7 @@ The `AWS::ECS::Cluster` resource creates an Amazon Elastic Container Service \(A
 + [Syntax](#aws-resource-ecs-cluster-syntax)
 + [Properties](#aws-resource-servicename-cluster-properties)
 + [Return Values](#aws-resource-ecs-cluster-returnvalues)
-+ [Example](#w4ab1c21c10d578c13)
++ [Example](#w4ab1c21c10d108c13c13)
 
 ## Syntax<a name="aws-resource-ecs-cluster-syntax"></a>
 
@@ -63,7 +63,7 @@ The Amazon Resource Name \(ARN\) of the Amazon ECS cluster, such as `arn:aws:ecs
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Example<a name="w4ab1c21c10d578c13"></a>
+## Example<a name="w4ab1c21c10d108c13c13"></a>
 
 The following sample declares an Amazon ECS cluster:
 

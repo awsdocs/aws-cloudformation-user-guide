@@ -4,9 +4,9 @@ The `AWS::ApiGateway::Resource` resource creates a resource in an Amazon API Gat
 
 **Topics**
 + [Syntax](#aws-resource-apigateway-resource-syntax)
-+ [Properties](#w4ab1c21c10c77b9)
-+ [Return Value](#w4ab1c21c10c77c11)
-+ [Example](#w4ab1c21c10c77c13)
++ [Properties](#w4ab1c21c10c20c69b9)
++ [Return Value](#w4ab1c21c10c20c69c11)
++ [Example](#w4ab1c21c10c20c69c13)
 
 ## Syntax<a name="aws-resource-apigateway-resource-syntax"></a>
 
@@ -35,7 +35,7 @@ Properties:
   [RestApiId](#cfn-apigateway-resource-resapiid): String
 ```
 
-## Properties<a name="w4ab1c21c10c77b9"></a>
+## Properties<a name="w4ab1c21c10c20c69b9"></a>
 
 `ParentId`  <a name="cfn-apigateway-resource-parentid"></a>
 If you want to create a child resource, the ID of the parent resource\. For resources without a parent, specify the RestApi root resource ID, such as `{ "Fn::GetAtt": ["MyRestApi", "RootResourceId"] }`\.  
@@ -55,15 +55,15 @@ The ID of the `RestApi` resource in which you want to create this resource\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w4ab1c21c10c77c11"></a>
+## Return Value<a name="w4ab1c21c10c20c69c11"></a>
 
-### Ref<a name="w4ab1c21c10c77c11b2"></a>
+### Ref<a name="w4ab1c21c10c20c69c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource ID, such as `abc123`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10c77c13"></a>
+## Example<a name="w4ab1c21c10c20c69c13"></a>
 
 The following example creates a `stack` resource for the `MyApi` API\.
 

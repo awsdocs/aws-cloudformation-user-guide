@@ -2,7 +2,7 @@
 
 `StageDescription` is a property of the [AWS::ApiGateway::Deployment](aws-resource-apigateway-deployment.md) resource that configures an Amazon API Gateway \(API Gateway\) deployment stage\.
 
-## Syntax<a name="w4ab1c21c14c31b5"></a>
+## Syntax<a name="w4ab1c21c10c20c34c23b5"></a>
 
 ### JSON<a name="aws-properties-apigateway-deployment-stagedescription-syntax.json"></a>
 
@@ -22,8 +22,10 @@
   "[LoggingLevel](#cfn-apigateway-deployment-stagedescription-logginglevel)" : String,
   "[MethodSettings](#cfn-apigateway-deployment-stagedescription-methodsettings)" : [ [*MethodSetting*](aws-properties-apigateway-deployment-stagedescription-methodsetting.md), ... ],
   "[MetricsEnabled](#cfn-apigateway-deployment-stagedescription-metricsenabled)" : Boolean,
+  "[Tags](#cfn-apigateway-deployment-tags)" : [ [Resource Tag](aws-properties-resource-tags.md), ... ],
   "[ThrottlingBurstLimit](#cfn-apigateway-deployment-stagedescription-throttlingburstlimit)" : Integer,
   "[ThrottlingRateLimit](#cfn-apigateway-deployment-stagedescription-throttlingratelimit)" : Number,
+  "[TracingEnabled](#cfn-apigateway-deployment-stagedescription-tracingenabled)" : Boolean,
   "[Variables](#cfn-apigateway-deployment-stagedescription-variables)" : { String:String, ... }
 }
 ```
@@ -45,18 +47,21 @@
 [MethodSettings](#cfn-apigateway-deployment-stagedescription-methodsettings):
   - [*MethodSetting*](aws-properties-apigateway-deployment-stagedescription-methodsetting.md)
 [MetricsEnabled](#cfn-apigateway-deployment-stagedescription-metricsenabled): Boolean
+[Tags](#cfn-apigateway-deployment-tags): 
+  - [Resource Tag](aws-properties-resource-tags.md)
 [ThrottlingBurstLimit](#cfn-apigateway-deployment-stagedescription-throttlingburstlimit): Integer
 [ThrottlingRateLimit](#cfn-apigateway-deployment-stagedescription-throttlingratelimit): Number
+[TracingEnabled](#cfn-apigateway-deployment-stagedescription-tracingenabled): Boolean
 [Variables](#cfn-apigateway-deployment-stagedescription-variables):
   String: String
 ```
 
-## Properties<a name="w4ab1c21c14c31b7"></a>
+## Properties<a name="w4ab1c21c10c20c34c23b7"></a>
 
 `AccessLogSetting`  <a name="cfn-apigateway-deployment-stagedescription-accesslogsetting"></a>
 Specifies settings for logging access in this stage\.  
 *Required*: No  
-*Type*: [API Gateway Deployment AccessLogSetting](aws-properties-apigateway-deployment-accesslogsetting.md)  
+*Type*: [AccessLogSetting](aws-properties-apigateway-deployment-accesslogsetting.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `CacheClusterEnabled`  <a name="cfn-apigateway-deployment-stagedescription-cacheclusterenabled"></a>
@@ -87,7 +92,7 @@ Indicates whether responses are cached and returned for requests\. You must enab
 `CanarySetting`  <a name="cfn-apigateway-deployment-stagedescription-canarysetting"></a>
 Specifies settings for the canary deployment in this stage\.  
 *Required*: No  
-*Type*: [API Gateway Deployment CanarySetting](aws-properties-apigateway-deployment-canarysetting.md)  
+*Type*: [CanarySetting](aws-properties-apigateway-deployment-canarysetting.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ClientCertificateId`  <a name="cfn-apigateway-deployment-stagedescription-clientcertificateid"></a>
@@ -118,12 +123,18 @@ The logging level for this method\. For valid values, see the `loggingLevel` pro
 `MethodSettings`  <a name="cfn-apigateway-deployment-stagedescription-methodsettings"></a>
 Configures settings for all of the stage's methods\.  
 *Required*: No  
-*Type*: List of [API Gateway Deployment MethodSetting](aws-properties-apigateway-deployment-stagedescription-methodsetting.md)
+*Type*: List of [MethodSetting](aws-properties-apigateway-deployment-stagedescription-methodsetting.md)
 
 `MetricsEnabled`  <a name="cfn-apigateway-deployment-stagedescription-metricsenabled"></a>
 Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage\.  
 *Required*: No  
 *Type*: Boolean
+
+`Tags`  <a name="cfn-apigateway-deployment-tags"></a>
+An array of arbitrary tags \(key\-value pairs\) to associate with the stage\.  
+*Required*: No  
+*Type*: List of [Resource Tag](aws-properties-resource-tags.md) property types  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ThrottlingBurstLimit`  <a name="cfn-apigateway-deployment-stagedescription-throttlingburstlimit"></a>
 The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account\. For more information, see [Manage API Request Throttling](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
@@ -134,6 +145,13 @@ The number of burst requests per second that API Gateway permits across all APIs
 The number of steady\-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account\. For more information, see [Manage API Request Throttling](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
 *Required*: No  
 *Type*: Number
+
+`TracingEnabled`  <a name="cfn-apigateway-deployment-stagedescription-tracingenabled"></a>
+Specifies whether active tracing with X\-ray is enabled for this stage\.  
+For more information, see [Trace API Gateway API Execution with AWS X\-Ray](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-xray.html) in the *API Gateway Developer Guide*\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Variables`  <a name="cfn-apigateway-deployment-stagedescription-variables"></a>
 A map that defines the stage variables\. Variable names must consist of alphanumeric characters, and the values must match the following regular expression: `[A-Za-z0-9-._~:/?#&amp;=,]+`\.  

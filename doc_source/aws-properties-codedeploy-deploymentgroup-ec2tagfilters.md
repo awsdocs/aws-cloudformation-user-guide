@@ -4,7 +4,7 @@
 
 For information on using tags and tag groups to help manage your Amazon EC2 instances and on\-premises instances, see [Tagging Instances for Deployment Groups in AWS CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-tagging.html) in the *AWS CodeDeploy User Guide*\.
 
-## Syntax<a name="w4ab1c21c14d457b7"></a>
+## Syntax<a name="w4ab1c21c10c72c21c33b7"></a>
 
 ### JSON<a name="aws-properties-codedeploy-deploymentgroup-ec2tagfilters-syntax.json"></a>
 
@@ -24,7 +24,7 @@ For information on using tags and tag groups to help manage your Amazon EC2 inst
 [Value](#cfn-properties-codedeploy-deploymentgroup-ec2tagfilters-value): String
 ```
 
-## Properties<a name="w4ab1c21c14d457b9"></a>
+## Properties<a name="w4ab1c21c10c72c21c33b9"></a>
 
 `Key`  <a name="cfn-properties-codedeploy-deploymentgroup-ec2tagfilters-key"></a>
 Filter instances with this key\.  

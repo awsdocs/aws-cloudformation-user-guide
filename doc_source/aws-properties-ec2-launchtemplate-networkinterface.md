@@ -88,7 +88,7 @@ The number of IPv6 addresses to assign to a network interface\. Amazon EC2 autom
 `Ipv6Addresses`  <a name="cfn-ec2-launchtemplate-networkinterface-ipv6addresses"></a>
 One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet\. You can't use this option if you're specifying a number of IPv6 addresses\.  
  *Required*: No  
- *Type*: List of [Amazon EC2 LaunchTemplate Ipv6Add](aws-properties-ec2-launchtemplate-ipv6add.md)  
+ *Type*: List of [Ipv6Add](aws-properties-ec2-launchtemplate-ipv6add.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `NetworkInterfaceId`  <a name="cfn-ec2-launchtemplate-networkinterface-networkinterfaceid"></a>
@@ -106,7 +106,7 @@ The primary private IPv4 address of the network interface\.
 `PrivateIpAddresses`  <a name="cfn-ec2-launchtemplate-networkinterface-privateipaddresses"></a>
 One or more private IPv4 addresses\.  
  *Required*: No  
- *Type*: List of [Amazon EC2 LaunchTemplate PrivateIpAdd](aws-properties-ec2-launchtemplate-privateipadd.md)  
+ *Type*: List of [PrivateIpAdd](aws-properties-ec2-launchtemplate-privateipadd.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `SecondaryPrivateIpAddressCount`  <a name="cfn-ec2-launchtemplate-networkinterface-secondaryprivateipaddresscount"></a>

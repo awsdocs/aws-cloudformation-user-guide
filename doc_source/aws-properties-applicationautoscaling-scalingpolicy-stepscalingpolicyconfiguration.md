@@ -1,8 +1,8 @@
 # Application Auto Scaling ScalingPolicy StepScalingPolicyConfiguration<a name="aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration"></a>
 
-`StepScalingPolicyConfiguration` is a property of the [AWS::ApplicationAutoScaling::ScalingPolicy](aws-resource-applicationautoscaling-scalingpolicy.md) resource that configures when Application Auto Scaling scales resources up or down, and by how much\.
+`StepScalingPolicyConfiguration` is a property of the [AWS::ApplicationAutoScaling::ScalingPolicy](aws-resource-applicationautoscaling-scalingpolicy.md) resource that specifies a step scaling policy to use with Application Auto Scaling\.
 
-## Syntax<a name="w4ab1c21c14c79b5"></a>
+## Syntax<a name="w4ab1c21c10c23c17c23b5"></a>
 
 ### JSON<a name="aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-syntax.json"></a>
 
@@ -27,7 +27,7 @@
   StepAdjustment
 ```
 
-## Properties<a name="w4ab1c21c14c79b7"></a>
+## Properties<a name="w4ab1c21c10c23c17c23b7"></a>
 
 `AdjustmentType`  <a name="cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-adjustmenttype"></a>
 Specifies whether the `ScalingAdjustment` value in the `StepAdjustment` property is an absolute number or a percentage of the current capacity\. For valid values, see the `AdjustmentType` content for the [StepScalingPolicyConfiguration](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_StepScalingPolicyConfiguration.html) data type in the *Application Auto Scaling API Reference*\.  

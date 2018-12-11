@@ -1,6 +1,6 @@
 # AWS::AutoScaling::ScheduledAction<a name="aws-resource-as-scheduledaction"></a>
 
-Creates a scheduled scaling action for an Auto Scaling group, changing the number of servers available for your application in response to predictable load changes\.
+Creates a scheduled scaling action for an Amazon EC2 Auto Scaling group, changing the number of servers available for your application in response to predictable load changes\.
 
 **Important**  
 If you have rolling updates enabled, you must suspend scheduled actions before you can update the Auto Scaling group\. You can suspend processes by using the [UpdatePolicy attribute](aws-attribute-updatepolicy.md) for the `AWS::AutoScaling::AutoScalingGroup` resource \(recommended\), the AWS CLI, or the Amazon EC2 Auto Scaling API\. For more information about suspending scheduled actions, see [Suspending and Resuming Scaling Processes](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html) in the *Amazon EC2 Auto Scaling User Guide*\.
@@ -8,9 +8,9 @@ When you update a stack with an Auto Scaling group and scheduled action, AWS Clo
 
 **Topics**
 + [Syntax](#aws-resource-autoscaling-scheduledaction-syntax)
-+ [Properties](#w4ab1c21c10d153c11)
-+ [Return Value](#w4ab1c21c10d153c13)
-+ [Auto Scaling Scheduled Action Snippet](#w4ab1c21c10d153c15)
++ [Properties](#w4ab1c21c10c36c30c11)
++ [Return Value](#w4ab1c21c10c36c30c13)
++ [Auto Scaling Scheduled Action Snippet](#w4ab1c21c10c36c30c15)
 
 ## Syntax<a name="aws-resource-autoscaling-scheduledaction-syntax"></a>
 
@@ -47,7 +47,7 @@ Properties:
   [StartTime](#cfn-as-scheduledaction-starttime): Time stamp
 ```
 
-## Properties<a name="w4ab1c21c10d153c11"></a>
+## Properties<a name="w4ab1c21c10c36c30c11"></a>
 
 `AutoScalingGroupName`  <a name="cfn-as-scheduledaction-asgname"></a>
 The name or ARN of the Auto Scaling group\.  
@@ -92,7 +92,7 @@ The time in UTC for this schedule to start\. For example, `2010-06-01T00:00:00Z`
 *Type*: Time stamp  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10d153c13"></a>
+## Return Value<a name="w4ab1c21c10c36c30c13"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -106,7 +106,7 @@ For a scheduled Auto Scaling action with the logical ID `MyScheduledAction`, `Re
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Auto Scaling Scheduled Action Snippet<a name="w4ab1c21c10d153c15"></a>
+## Auto Scaling Scheduled Action Snippet<a name="w4ab1c21c10c36c30c15"></a>
 
 The following template snippet includes two scheduled actions that scale the number of instances in an Auto Scaling group\. The `ScheduledActionUp` action starts at 7 AM every day and sets the Auto Scaling group to a minimum of five Amazon EC2 instances with a maximum of 10\. The `ScheduledActionDown` action starts at 7 PM every day and sets the Auto Scaling group to a minimum and maximum of one Amazon EC2 instance\.
 

@@ -2,7 +2,7 @@
 
 Use the `OptionSettings` property to specify settings for an option in the [`OptionConfigurations`](aws-properties-rds-optiongroup-optionconfigurations.md) property\.
 
-## Syntax<a name="w4ab1c21c14e1741b5"></a>
+## Syntax<a name="w4ab1c21c10d171c49c19b5"></a>
 
 ### JSON<a name="aws-properties-rds-optiongroup-optionconfigurations-optionsettings-syntax.json"></a>
 
@@ -20,7 +20,7 @@ Use the `OptionSettings` property to specify settings for an option in the [`Opt
 [Value](#cfn-rds-optiongroup-optionconfigurations-optionsettings-value): String
 ```
 
-## Properties<a name="w4ab1c21c14e1741b7"></a>
+## Properties<a name="w4ab1c21c10d171c49c19b7"></a>
 
 `Name`  <a name="cfn-rds-optiongroup-optionconfigurations-optionsettings-name"></a>
 The name of the option setting that you want to specify\.  

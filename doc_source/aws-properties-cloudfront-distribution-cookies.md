@@ -2,7 +2,7 @@
 
 `Cookies` is a property of the [CloudFront Distribution ForwardedValues](aws-properties-cloudfront-distribution-forwardedvalues.md) property that describes which cookies are forwarded to the Amazon CloudFront origin\.
 
-## Syntax<a name="w4ab1c21c14d276b5"></a>
+## Syntax<a name="w4ab1c21c10c54c14c24b5"></a>
 
 ### JSON<a name="aws-properties-cloudfront-distribution-cookies-syntax.json"></a>
 
@@ -21,7 +21,7 @@
   - String
 ```
 
-## Properties<a name="w4ab1c21c14d276b7"></a>
+## Properties<a name="w4ab1c21c10c54c14c24b7"></a>
 
 **Note**  
 For more information about the constraints and valid values of each property, see the [CookiePreference](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CookiePreference.html) data type in the *Amazon CloudFront API Reference*\.

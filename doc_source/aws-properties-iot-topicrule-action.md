@@ -2,7 +2,7 @@
 
 `Action` is a property of the `TopicRulePayload` property that describes an action associated with an AWS IoT rule\. For more information, see [Rules for AWS IoT](https://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html)\.
 
-## Syntax<a name="w4ab1c21c14e1420b5"></a>
+## Syntax<a name="w4ab1c21c10d150c39c18b5"></a>
 
 ### JSON<a name="aws-properties-iot-topicrule-action-syntax.json"></a>
 
@@ -14,12 +14,14 @@
   "[DynamoDBv2](#cfn-iot-topicrule-action-dynamodbv2)": DynamoDBv2 Action,
   "[Elasticsearch](#cfn-iot-topicrule-action-elasticsearch)": Elasticsearch Action,
   "[Firehose](#cfn-iot-topicrule-action-firehose)": Firehose Action,
+  "[IotAnalytics](#cfn-iot-topicrule-action-iotanalytics)": IoTAnalyticsAction,
   "[Kinesis](#cfn-iot-topicrule-action-kinesis)": Kinesis Action,
   "[Lambda](#cfn-iot-topicrule-action-lambda)": Lambda Action,
   "[Republish](#cfn-iot-topicrule-action-republish)": Republish Action,
   "[S3](#cfn-iot-topicrule-action-s3)": S3 Action,
   "[Sns](#cfn-iot-topicrule-action-sns)": Sns Action,
-  "[Sqs](#cfn-iot-topicrule-action-sqs)": Sqs Action
+  "[Sqs](#cfn-iot-topicrule-action-sqs)": Sqs Action,
+  "[StepFunctions](#cfn-iot-topicrule-action-stepfunctions)": StepFunctionsAction
 }
 ```
 
@@ -38,6 +40,8 @@
   Elasticsearch Action
 [Firehose](#cfn-iot-topicrule-action-firehose):
   Firehose Action
+[IotAnalytics](#cfn-iot-topicrule-action-iotanalytics):
+  IoTAnalyticsAction
 [Kinesis](#cfn-iot-topicrule-action-kinesis):
   Kinesis Action
 [Lambda](#cfn-iot-topicrule-action-lambda):
@@ -50,9 +54,11 @@
   Sns Action
 [Sqs](#cfn-iot-topicrule-action-sqs):
   Sqs Action
+[StepFunctions](#cfn-iot-topicrule-action-stepfunctions):
+  StepFunctionsAction
 ```
 
-## Properties<a name="w4ab1c21c14e1420b7"></a>
+## Properties<a name="w4ab1c21c10d150c39c18b7"></a>
 
 `CloudwatchAlarm`  <a name="cfn-iot-topicrule-action-cloudwatchalarm"></a>
 Changes the state of a CloudWatch alarm\.  
@@ -84,6 +90,11 @@ Writes data to a Kinesis Data Firehose stream\.
 *Required*: No  
 *Type*: [AWS IoT TopicRule FirehoseAction](aws-properties-iot-topicrule-firehoseaction.md)
 
+`IotAnalytics`  <a name="cfn-iot-topicrule-action-iotanalytics"></a>
+Sends message data to an AWS IoT Analytics channel\.  
+*Required*: No  
+*Type*: [AWS IoT TopicRule IotAnalyticsAction](aws-properties-iot-topicrule-iotanalyticsaction.md)
+
 `Kinesis`  <a name="cfn-iot-topicrule-action-kinesis"></a>
 Writes data to an Kinesis stream\.  
 *Required*: No  
@@ -113,3 +124,8 @@ Publishes data to an SNS topic\.
 Publishes data to an SQS queue\.  
 *Required*: No  
 *Type*: [AWS IoT TopicRule SqsAction](aws-properties-iot-topicrule-sqsaction.md)
+
+`StepFunctions`  <a name="cfn-iot-topicrule-action-stepfunctions"></a>
+Starts execution of a Step Functions state machine\.  
+*Required*: No  
+*Type*: [AWS IoT TopicRule StepFunctionsAction](aws-properties-iot-topicrule-stepfunctionsaction.md)

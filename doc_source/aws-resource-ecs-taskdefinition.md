@@ -2,13 +2,6 @@
 
 The `AWS::ECS::TaskDefinition` resource describes the container and volume definitions of an Amazon Elastic Container Service \(Amazon ECS\) task\. You can specify which Docker images to use, the required resources, and other configurations related to launching the task definition through an Amazon ECS service or task\.
 
-**Topics**
-+ [Syntax](#aws-resource-ecs-taskdefinition-syntax)
-+ [Properties](#aws-resource-ecs-taskdefinition-properties)
-+ [Return Value](#aws-resource-ecs-taskdefinition-returnvalues)
-+ [Examples](#aws-resource-ecs-taskdefinition-examples)
-+ [See Also](#aws-resource-ecs-taskdefinition-seealso)
-
 ## Syntax<a name="aws-resource-ecs-taskdefinition-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

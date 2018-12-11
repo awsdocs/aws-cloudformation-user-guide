@@ -2,11 +2,6 @@
 
 Provisions the specified product for AWS Service Catalog\. For more information, see [ProvisionProduct](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ProvisionProduct.html) in the *AWS Service Catalog Developer Guide*\. 
 
-**Topics**
-+ [Syntax](#aws-resource-servicecatalog-cloudformationprovisionedproduct-syntax)
-+ [Properties](#aws-resource-servicecatalog-cloudformationprovisionedproduct-properties)
-+ [Return Values](#aws-resource-servicecatalog-cloudformationprovisionedproduct-returnvalues)
-
 ## Syntax<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -104,13 +99,13 @@ The name of the provisioning artifact \(also known as a version\) for the produc
 `ProvisioningParameters`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameters"></a>
 Parameters specified by the administrator that are required for provisioning the product\.  
  *Required*: No  
- *Type*: List of [AWS Service Catalog CloudFormationProvisionedProduct ProvisioningParameter](aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter.md) property types  
+ *Type*: List of [ProvisioningParameter](aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter.md) property types  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Tags`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-tags"></a>
 One or more tags\.  
  *Required*: No  
- *Type*: List of [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md) property types  
+ *Type*: List of [Resource Tag](aws-properties-resource-tags.md) property types  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## Return Values<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct-returnvalues"></a>

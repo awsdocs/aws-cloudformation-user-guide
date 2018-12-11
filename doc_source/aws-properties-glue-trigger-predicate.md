@@ -37,7 +37,7 @@ The logical operator for the predicate\.
 `Conditions`  <a name="cfn-glue-trigger-predicate-conditions"></a>
 The conditions that determine when the trigger fires\.  
  *Required*: No  
- *Type*: List of [AWS Glue Trigger Condition](aws-properties-glue-trigger-condition.md)  
+ *Type*: List of [Condition](aws-properties-glue-trigger-condition.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-glue-trigger-predicate-seealso"></a>

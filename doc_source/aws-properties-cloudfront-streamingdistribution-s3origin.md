@@ -2,7 +2,7 @@
 
 <a name="aws-properties-cloudfront-streamingdistribution-s3origin-description"></a>The `S3Origin` property type specifies information about the Amazon S3 bucket from which you want Amazon CloudFront to get your media files for distribution\. For more information, see [S3Origin](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_S3Origin.html) in the *Amazon CloudFront API Reference*\.
 
-<a name="aws-properties-cloudfront-streamingdistribution-s3origin-inheritance"></a> `S3Origin` is a property of the [CloudFront StreamingDistribution StreamingDistributionConfig](aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.md) property type\. 
+<a name="aws-properties-cloudfront-streamingdistribution-s3origin-inheritance"></a> `S3Origin` is a property of the [StreamingDistributionConfig](aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.md) property type\. 
 
 ## Syntax<a name="aws-properties-cloudfront-streamingdistribution-s3origin-syntax"></a>
 

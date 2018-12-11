@@ -111,16 +111,18 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 `CreationTimestamp`  
-*Returns*: The date and time the VPC endpoint was created\. For example: `2018-09-13T04:46:12.271Z`
+*Returns*: The date and time the VPC endpoint was created\. For example: `Fri Sep 28 23:34:36 UTC 2018`
 
 `DnsEntries`  
-*Returns*: \(Interface endpoint\) A list of the DNS entries for the endpoint\. Each entry is a combination of the hosted zone ID and the DNS name\. In the first entry in the list below, for example, `Z1C12344VYDITB0` is the hosted zone ID and `ec2.us-east-1.amazonaws.com` is the DNS name\. Note that if you update the `PrivateDnsEnabled` or `SubnetIds` properties, the order of DNS entries in this list may change as well\.  
-For example:   
-`[ "Z1C12344VYDITB0:ec2.us-east-1.amazonaws.com", "Z1HUB23UULQXV:vpce-01abc23456de78f9g-12abccd3.ec2.us-east-1.vpce.amazonaws.com"]`
+*Returns*: \(Interface endpoint\) The DNS entries for the endpoint\. Each entry is a combination of the hosted zone ID and the DNS name\. The entries are ordered as follows: regional public DNS, zonal public DNS, private DNS, and wildcard DNS\. This order is not enforced for AWS Marketplace services\.  
+The following is an example\. In the first entry, the hosted zone ID is Z1HUB23UULQXV and the DNS name is vpce\-01abc23456de78f9g\-12abccd3\.ec2\.us\-east\-1\.vpce\.amazonaws\.com\.  
+\["Z1HUB23UULQXV:vpce\-01abc23456de78f9g\-12abccd3\.ec2\.us\-east\-1\.vpce\.amazonaws\.com", "Z1HUB23UULQXV:vpce\-01abc23456de78f9g\-12abccd3\-us\-east\-1a\.ec2\.us\-east\-1\.vpce\.amazonaws\.com", "Z1C12344VYDITB0:ec2\.us\-east\-1\.amazonaws\.com"\]  
+If you update the `PrivateDnsEnabled` or `SubnetIds` properties, the DNS entries in the list will change\.
 
 `NetworkInterfaceIds`  
-*Returns*: \(Interface endpoint\) A list of one or more network interfaces for the endpoint\. For example:   
-`[ "eni-12345ab6789c10d1e", "eni-012345678ab9c10d1" ]`
+*Returns*: \(Interface endpoint\) One or more network interfaces for the endpoint\. For example:  
+`["eni-12345ab6789c10d1e", "eni-012345678ab9c10d1"]`  
+If you update the `PrivateDnsEnabled` or `SubnetIds` properties, the items in this list might change\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 

@@ -53,7 +53,7 @@ If you use this template to create a stack, AWS CloudFormation will create an Am
 
  Depending on the resource type, some properties are required, such as the ImageId property for an [AWS::EC2::Instance](aws-properties-ec2-instance.md) resource, and others are optional\. Some properties have default values, such as the AccessControl property of the AWS::S3::Bucket resource, so specifying a value for those properties is optional\. Other properties are not required but may add functionality that you want, such as the WebsiteConfiguration property of the AWS::S3::Bucket resource\. Specifying a value for such properties is entirely optional and based on your needs\. In the example above, because the AWS::S3::Bucket resource has only optional properties and we didn't need any of the optional features, we could accept the defaults and omit the Properties attribute\. 
 
- To view the properties for each resource type, see the topics in [Resource Property Types Reference](aws-product-property-reference.md)\.
+ To view the properties for each resource type, see the topics in [AWS Resource and Property Types Reference](aws-template-resource-type-ref.md)\.
 
 ## Resource Properties and Using Resources Together<a name="gettingstarted.templatebasics.multiple"></a>
 

@@ -2,7 +2,7 @@
 
 `DistributionConfig` is a property of the [AWS::CloudFront::Distribution](aws-resource-cloudfront-distribution.md) property that describes which Amazon CloudFront origin servers to get your files from when users request the files through your website or application\.
 
-## Syntax<a name="w4ab1c21c14d295b5"></a>
+## Syntax<a name="w4ab1c21c10c54c14c43b5"></a>
 
 ### JSON<a name="aws-properties-cloudfront-distribution-distributionconfig-syntax.json"></a>
 
@@ -54,7 +54,7 @@
 [WebACLId](#cfn-cloudfront-distribution-distributionconfig-webaclid): String
 ```
 
-## Properties<a name="w4ab1c21c14d295b7"></a>
+## Properties<a name="w4ab1c21c10c54c14c43b7"></a>
 
 `Aliases`  <a name="cfn-cloudfront-distribution-distributionconfig-aliases"></a>
 CNAMEs \(alternate domain names\), if any, for the distribution\.  

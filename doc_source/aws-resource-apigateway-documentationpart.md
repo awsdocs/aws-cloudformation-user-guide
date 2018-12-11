@@ -2,12 +2,6 @@
 
 The `AWS::ApiGateway::DocumentationPart` resource creates a documentation part for an Amazon API Gateway API entity\. For more information, see [ Representation of API Documentation in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api-content-representation.html) in the *API Gateway Developer Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-apigateway-documentationpart-syntax)
-+ [Properties](#aws-resource-apigateway-documentationpart-properties)
-+ [Return Value](#aws-resource-apigateway-documentationpart-returnvalues)
-+ [Example](#aws-resource-apigateway-documentationpart-examples)
-
 ## Syntax<a name="aws-resource-apigateway-documentationpart-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -69,7 +63,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ## Example<a name="aws-resource-apigateway-documentationpart-examples"></a>
 
-### <a name="w4ab1c21c10c47c13b3"></a>
+### <a name="w4ab1c21c10c20c39c13b3"></a>
 
 The following example associates a documentation part for an API entity with a documentation version\.
 

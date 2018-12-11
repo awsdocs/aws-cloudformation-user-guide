@@ -4,13 +4,6 @@ The `AWS::SES::ConfigurationSet` resource lets you create groups of rules that y
 
 Configuration sets 
 
-**Topics**
-+ [Syntax](#aws-resource-ses-configurationset-syntax)
-+ [Properties](#aws-resource-ses-configurationset-properties)
-+ [Return Values](#aws-resource-ses-configurationset-returnvalues)
-+ [Example](#aws-resource-ses-configurationset-examples)
-+ [See Also](#aws-resource-ses-configurationset-seealso)
-
 ## Syntax<a name="aws-resource-ses-configurationset-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

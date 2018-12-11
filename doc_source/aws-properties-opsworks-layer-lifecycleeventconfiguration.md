@@ -2,7 +2,7 @@
 
 `LifeCycleConfiguration` is property of the [AWS::OpsWorks::Layer](aws-resource-opsworks-layer.md) resource that specifies the lifecycle event configuration for the layer\.
 
-## Syntax<a name="w4ab1c21c14e1664b5"></a>
+## Syntax<a name="w4ab1c21c10d168c29c21b5"></a>
 
 ### JSON<a name="aws-properties-opsworks-layer-lifecycleeventconfiguration-syntax.json"></a>
 
@@ -19,7 +19,7 @@
   ShutdownEventConfiguration
 ```
 
-## Properties<a name="w4ab1c21c14e1664b7"></a>
+## Properties<a name="w4ab1c21c10d168c29c21b7"></a>
 
 `ShutdownEventConfiguration`  <a name="cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration"></a>
 Specifies the shutdown event configuration for a layer\.  

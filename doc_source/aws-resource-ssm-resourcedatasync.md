@@ -90,7 +90,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ## Examples<a name="aws-resource-ssm-resourcedatasync-examples"></a>
 
-### AWS Systems Manager Resource Data Sync<a name="w4ab1c21c10e1198c17b3"></a>
+### AWS Systems Manager Resource Data Sync<a name="w4ab1c21c10d207c33c17b3"></a>
 
 The following examples send Inventory data collected from all of your managed instances in the US East \(Ohio\) Region \(us\-east\-2\) to a single Amazon S3 bucket\. Resource Data Sync then automatically updates the centralized data when new Inventory data is collected\.
 

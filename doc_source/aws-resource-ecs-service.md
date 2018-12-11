@@ -2,13 +2,6 @@
 
 The `AWS::ECS::Service` resource creates an Amazon Elastic Container Service \(Amazon ECS\) service that runs and maintains the requested number of tasks and associated load balancers\.
 
-**Topics**
-+ [Syntax](#aws-resource-ecs-service-syntax)
-+ [Properties](#aws-resource-ecs-service-properties)
-+ [Return Values](#aws-resource-ecs-service-return-values)
-+ [Examples](#aws-resource-ecs-service-examples)
-+ [More Info](#aws-resource-ecs-service-seealso)
-
 ## Syntax<a name="aws-resource-ecs-service-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -112,7 +105,7 @@ A list of load balancer objects to associate with the cluster\. If you specify t
 `NetworkConfiguration`  <a name="cfn-ecs-service-networkconfiguration"></a>
 The network configuration for the service\. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes\. For more information, see [Task Networking](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/developerguidetask-networking.html) in the *Amazon Elastic Container Service Developer Guide*\.  
  *Required*: No  
- *Type*: [Amazon ECS Service NetworkConfiguration](aws-properties-ecs-service-networkconfiguration.md)  
+ *Type*: [NetworkConfiguration](aws-properties-ecs-service-networkconfiguration.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `PlacementConstraints`  <a name="cfn-ecs-service-placementconstraints"></a>
@@ -160,7 +153,7 @@ The name of your service\. The name is limited to 255 letters \(uppercase and lo
 `ServiceRegistries`  <a name="cfn-ecs-service-serviceregistries"></a>
 Details of the service registry\.  
 *Required*: No  
-*Type*: [Amazon ECS Service ServiceRegistry](aws-properties-ecs-service-serviceregistry.md)  
+*Type*: [ServiceRegistry](aws-properties-ecs-service-serviceregistry.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `TaskDefinition`  <a name="cfn-ecs-service-taskdefinition"></a>
@@ -171,7 +164,7 @@ The ARN of the task definition \(including the revision number\) that you want t
 
 ## Return Values<a name="aws-resource-ecs-service-return-values"></a>
 
-### Ref<a name="w4ab1c21c10d582c11b2"></a>
+### Ref<a name="w4ab1c21c10d108c17b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN\.
 
@@ -183,7 +176,7 @@ In the following sample, the `Ref` function returns the ARN of the `MyECSService
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d582c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d108c17b9b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -194,7 +187,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
 
 ## Examples<a name="aws-resource-ecs-service-examples"></a>
 
-### Define a Basic Amazon ECS Service<a name="w4ab1c21c10d582c13b2"></a>
+### Define a Basic Amazon ECS Service<a name="w4ab1c21c10d108c17c11b2"></a>
 
 The following examples define an Amazon ECS service that uses a cluster and task definition that are declared elsewhere in the same template\.
 
@@ -225,12 +218,12 @@ WebApp:
       Ref: "taskdefinition"
 ```
 
-### Associate an Application Load Balancer with a Service<a name="w4ab1c21c10d582c13b4"></a>
+### Associate an Application Load Balancer with a Service<a name="w4ab1c21c10d108c17c11b4"></a>
 
 The following example associates an Application Load Balancer with an Amazon ECS service by referencing an `AWS::ElasticLoadBalancingV2::TargetGroup` resource\. 
 
 **Note**  
-The Amazon ECS service requires an explicit dependency on the Application load balancer listener rule and the Application load balancer listener\. This prevents the service from starting before the listener is ready\.
+The Amazon ECS service requires an explicit dependency on the Application Load Balancer listener rule and the Application Load Balancer listener\. This prevents the service from starting before the listener is ready\.
 
 #### JSON<a name="aws-resource-ecs-service-example-2.json"></a>
 
@@ -274,7 +267,7 @@ service:
       Ref: ECSCluster
 ```
 
-### Define a Service with a Health Check Grace Period<a name="w4ab1c21c10d582c13b6"></a>
+### Define a Service with a Health Check Grace Period<a name="w4ab1c21c10d108c17c11b6"></a>
 
 The following example defines a service with a parameter that enables users to specify how many seconds that the Amazon ECS service scheduler should ignore unhealthy Elastic Load Balancing target health checks after a task has first started\.
 

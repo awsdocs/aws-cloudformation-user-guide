@@ -37,7 +37,7 @@ Properties:
 `ResourceGroupTags`  <a name="cfn-inspector-resourcegroup-resourcegrouptags"></a>
 The tags \(key and value pairs\) of the resource group\.  
  *Required*: Yes  
- *Type*: List of [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+ *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## Return Values<a name="aws-resource-inspector-resourcegroup-returnvalues"></a>

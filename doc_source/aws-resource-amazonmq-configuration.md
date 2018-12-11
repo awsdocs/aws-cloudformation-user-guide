@@ -64,7 +64,7 @@ Currently, Amazon MQ supports only `ACTIVEMQ`\.
 
 `EngineVersion`  <a name="cfn-amazonmq-configuration-engineversion"></a>
 The version of the broker engine\.  
-Currently, Amazon MQ supports only `5.15.0`\.
+For a list of supported engine versions, see: [Broker Engine](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html)\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 

@@ -2,7 +2,7 @@
 
 `EbsBlockDeviceConfigs` is a property of the [Amazon EMR EbsConfiguration](aws-properties-emr-ebsconfiguration.md) property that defines the settings for the Amazon Elastic Block Store \(Amazon EBS\) volumes that Amazon EMR \(Amazon EMR\) associates with your instances\.
 
-## Syntax<a name="w4ab1c21c14e1244b5"></a>
+## Syntax<a name="w4ab1c21c10d132c22c28b5"></a>
 
 ### JSON<a name="aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-syntax.json"></a>
 
@@ -21,7 +21,7 @@
 [VolumesPerInstance](#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumesperinstance): Integer
 ```
 
-## Properties<a name="w4ab1c21c14e1244b7"></a>
+## Properties<a name="w4ab1c21c10d132c22c28b7"></a>
 
 `VolumeSpecification`  <a name="cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification"></a>
 The settings for the Amazon EBS volumes\.  

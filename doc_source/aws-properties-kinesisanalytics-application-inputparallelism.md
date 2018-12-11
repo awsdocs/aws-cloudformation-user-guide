@@ -2,7 +2,7 @@
 
 The `InputParallelism` property type specifies the number of in\-application streams to create for a given streaming source in an Amazon Kinesis Data Analytics application\.
 
- `InputParallelism` is a property of the [Kinesis Data Analytics Application Input](aws-properties-kinesisanalytics-application-input.md) property type\. 
+ `InputParallelism` is a property of the [Input](aws-properties-kinesisanalytics-application-input.md) property type\. 
 
 ## Syntax<a name="aws-properties-kinesisanalytics-application-inputparallelism-syntax"></a>
 

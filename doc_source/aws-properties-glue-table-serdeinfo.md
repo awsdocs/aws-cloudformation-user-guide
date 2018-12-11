@@ -2,7 +2,7 @@
 
 <a name="aws-properties-glue-table-serdeinfo-description"></a>The `SerdeInfo` property type specifies information about a serialization/deserialization program \(SerDe\), which serves as an extractor and loader for an AWS Glue table\.
 
-<a name="aws-properties-glue-table-serdeinfo-inheritance"></a> `SerdeInfo` is a property of the [AWS Glue Table StorageDescriptor](aws-properties-glue-table-storagedescriptor.md) property type\.
+<a name="aws-properties-glue-table-serdeinfo-inheritance"></a> `SerdeInfo` is a property of the [StorageDescriptor](aws-properties-glue-table-storagedescriptor.md) property type\.
 
 ## Syntax<a name="aws-properties-glue-table-serdeinfo-syntax"></a>
 

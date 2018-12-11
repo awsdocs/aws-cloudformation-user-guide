@@ -133,7 +133,7 @@ If you specify the `DBClusterIdentifier`, `DBSnapshotIdentifier`, or `SourceDBIn
 `Tags`  <a name="cfn-neptune-dbinstance-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this DB instance\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Updating and Deleting AWS::Neptune::DBInstance Resources<a name="updating-and-deleting-dbinstance-resources"></a>

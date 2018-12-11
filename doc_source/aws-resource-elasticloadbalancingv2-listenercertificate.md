@@ -2,11 +2,6 @@
 
 The `AWS::ElasticLoadBalancingV2::ListenerCertificate` resource specifies certificates for an Elastic Load Balancing secure listener\. For more information, see [Getting Started](http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/load-balancer-getting-started.html) in the *Elastic Load Balancing User Guide*\. 
 
-**Topics**
-+ [Syntax](#aws-resource-elasticloadbalancingv2-listenercertificate-syntax)
-+ [Properties](#aws-resource-elasticloadbalancingv2-listenercertificate-properties)
-+ [Example](#aws-resource-elasticloadbalancingv2-listenercertificate-examples)
-
 ## Syntax<a name="aws-resource-elasticloadbalancingv2-listenercertificate-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -38,7 +33,7 @@ Properties:
 `Certificates`  <a name="cfn-elasticloadbalancingv2-listenercertificate-certificates"></a>
 Certificates specified for the listener\. Duplicates not allowed\.  
  *Required*: Yes  
- *Type*: List of [Elastic Load Balancing ListenerCertificate Certificate](aws-properties-elasticloadbalancingv2-listenercertificate-certificate.md)  
+ *Type*: List of [Certificate](aws-properties-elasticloadbalancingv2-listenercertificate-certificate.md)  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `ListenerArn`  <a name="cfn-elasticloadbalancingv2-listenercertificate-listenerarn"></a>

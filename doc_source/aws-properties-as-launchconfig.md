@@ -1,17 +1,10 @@
 # AWS::AutoScaling::LaunchConfiguration<a name="aws-properties-as-launchconfig"></a>
 
-Creates an Auto Scaling launch configuration that can be used by an Auto Scaling group to configure Auto Scaling instances\.
+Creates an Amazon EC2 Auto Scaling launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances\.
 
 **Important**  
-When you update a property of the `LaunchConfiguration` resource, AWS CloudFormation deletes that resource and creates a new launch configuration with the updated properties and a new name\. This update action does not deploy any change across the running Amazon EC2 instances in the auto scaling group\. In other words, an update simply replaces the `LaunchConfiguration` so that when the auto scaling group launches new instances, they will get the updated configuration, but existing instances continue to run with the configuration that they were originally launched with\. This works the same way as if you made similar changes manually to an auto scaling group\.  
-If you want to update existing instances when you update the `LaunchConfiguration` resource, you must specify an update policy attribute for the `AWS::AutoScaling::AutoScalingGroup` resource\. For more information, see [UpdatePolicy](aws-attribute-updatepolicy.md)\.
-
-**Topics**
-+ [Syntax](#aws-resource-autoscaling-launchconfig-syntax)
-+ [Properties](#w4ab1c21c10d140c11)
-+ [Return Value](#aws-properties-as-launchconfig-ref)
-+ [Template Examples](#w4ab1c21c10d140c15)
-+ [See Also](#w4ab1c21c10d140c17)
+When you update a property of the `LaunchConfiguration` resource, AWS CloudFormation deletes that resource and creates a new launch configuration with the updated properties and a new name\. This update action does not deploy any change across the running Amazon EC2 instances in the Auto Scaling group\. In other words, an update simply replaces the `LaunchConfiguration` so that when the Auto Scaling group launches new instances, they will get the updated configuration, but existing instances continue to run with the configuration that they were originally launched with\. This works the same way as if you made similar changes manually to an Auto Scaling group\.  
+If you want to update existing instances when you update the `LaunchConfiguration` resource, you must specify an update policy attribute for the `AWS::AutoScaling::AutoScalingGroup` resource\. For more information, see [UpdatePolicy Attribute](aws-attribute-updatepolicy.md)\.
 
 ## Syntax<a name="aws-resource-autoscaling-launchconfig-syntax"></a>
 
@@ -73,10 +66,10 @@ Properties:
   [UserData](#cfn-as-launchconfig-userdata): String
 ```
 
-## Properties<a name="w4ab1c21c10d140c11"></a>
+## Properties<a name="w4ab1c21c10c36c18c11"></a>
 
 `AssociatePublicIpAddress`  <a name="cf-as-launchconfig-associatepubip"></a>
-For Amazon EC2 instances in a VPC, indicates whether instances in the Auto Scaling group receive public IP addresses\. If you specify `true`, each instance in the Auto Scaling receives a unique public IP address\.  
+For Amazon EC2 instances in a VPC, indicates whether instances in the Auto Scaling group receive public IP addresses\. If you specify `true`, each instance in the Auto Scaling group receives a unique public IP address\.  
 If this resource has a public IP address and is also in a VPC that is defined in the same template, you must use the `DependsOn` attribute to declare a dependency on the VPC\-gateway attachment\. For more information, see [DependsOn Attribute](aws-attribute-dependson.md)\.
 *Required*: No  
 *Type*: Boolean  
@@ -128,7 +121,7 @@ When you use an instance to create a launch configuration, all properties are de
 
 `InstanceMonitoring`  <a name="cfn-as-launchconfig-instancemonitoring"></a>
 Indicates whether detailed instance monitoring is enabled for the Auto Scaling group\. By default, this property is set to `true` \(enabled\)\.  
-When detailed monitoring is enabled, Amazon CloudWatch \(CloudWatch\) generates metrics every minute and your account is charged a fee\. When you disable detailed monitoring, CloudWatch generates metrics every 5 minutes\. For more information, see [Monitor Your Auto Scaling Groups and Instances Using Amazon CloudWatch](https://docs.aws.amazon.com/autoscaling/latest/userguide/as-instance-monitoring.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
+When detailed monitoring is enabled, Amazon CloudWatch generates metrics every minute and your account is charged a fee\. When you disable detailed monitoring, CloudWatch generates metrics every 5 minutes\. For more information, see [Monitor Your Auto Scaling Groups and Instances Using Amazon CloudWatch](https://docs.aws.amazon.com/autoscaling/latest/userguide/as-instance-monitoring.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -180,7 +173,7 @@ A list that contains the EC2 security groups to assign to the instances in the A
 
 `SpotPrice`  <a name="cfn-as-launchconfig-spotprice"></a>
 The spot price for this Auto Scaling group\. If a spot price is set, then the Auto Scaling group will launch when the current spot price is less than the amount specified in the template\.  
-When you have specified a spot price for an auto scaling group, the group will only launch when the spot price has been met, regardless of the setting in the Auto Scaling group's `DesiredCapacity`\.  
+When you have specified a spot price for an Auto Scaling group, the group will only launch when the spot price has been met, regardless of the setting in the Auto Scaling group's `DesiredCapacity`\.  
 For more information about configuring a spot price for an Auto Scaling group, see [Launching Spot Instances in your Auto Scaling Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: String  
@@ -205,9 +198,9 @@ For the resource with the logical ID `LaunchConfig`, `Ref` will return the Auto 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Template Examples<a name="w4ab1c21c10d140c15"></a>
+## Template Examples<a name="w4ab1c21c10c36c18c15"></a>
 
-### LaunchConfig with block device<a name="w4ab1c21c10d140c15b2"></a>
+### Launch Configuration with Block Device<a name="w4ab1c21c10c36c18c15b3"></a>
 
 This example shows a launch configuration that describes two Amazon Elastic Block Store mappings\.
 
@@ -281,9 +274,9 @@ LaunchConfig:
           DeleteOnTermination: "true"
 ```
 
-### LaunchConfig with Spot Price in Autoscaling Group<a name="w4ab1c21c10d140c15b4"></a>
+### Launch Configuration with Spot Price<a name="w4ab1c21c10c36c18c15b5"></a>
 
-This example shows a launch configuration that features a spot price in the AutoScaling group\. This launch configuration will only be active if the current spot price is less than the amount in the template specification \(0\.05\)\.
+This example shows a launch configuration that features a spot price in the Auto Scaling group\. This launch configuration will only be active if the current spot price is less than the amount in the template specification \(0\.05\)\.
 
 #### JSON<a name="aws-resource-autoscaling-launchconfig-example2.json"></a>
 
@@ -333,7 +326,7 @@ LaunchConfig:
       Ref: "InstanceType"
 ```
 
-### LaunchConfig with IAM Instance Profile<a name="w4ab1c21c10d140c15b6"></a>
+### Launch Configuration with IAM Instance Profile<a name="w4ab1c21c10c36c18c15b7"></a>
 
 Here's a launch configuration using the [IamInstanceProfile](#cfn-as-launchconfig-iaminstanceprofile) property\.
 
@@ -382,7 +375,7 @@ myLCOne:
       Ref: "RootInstanceProfile"
 ```
 
-### EBS\-optimized volume with specified PIOPS<a name="example-ebs-optimized-piops-autoscaling"></a>
+### EBS\-Optimized Volume with Specified PIOPS<a name="example-ebs-optimized-piops-autoscaling"></a>
 
 You can create an AWS CloudFormation stack with auto scaled instances that contain EBS\-optimized volumes with a specified PIOPS\. This can increase the performance of your EBS\-backed instances as explained in [Increasing EBS Performance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSPerformance.html) in the *Amazon Elastic Compute Cloud User Guide*\.
 
@@ -391,7 +384,7 @@ When you create a launch configuration such as this one, be sure to set the `Ins
 **Warning**  
 Additional fees are incurred when using EBS\-optimized instances\. For more information, see [ EBS\-Optimized Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#EBSOptimized) in the *Amazon Elastic Compute Cloud User Guide*\.
 
-Because you cannot override PIOPS settings in an auto scaling launch configuration, the AMI in your launch configuration must have been configured with a block device mapping that specifies the desired PIOPS\. You can do this by creating your own EC2 AMI with the following characteristics:
+Because you cannot override PIOPS settings in an Auto Scaling launch configuration, the AMI in your launch configuration must have been configured with a block device mapping that specifies the desired PIOPS\. You can do this by creating your own EC2 AMI with the following characteristics:
 + An instance type of `m1.large` or greater\. This is required for EBS optimization\.
 + An EBS\-backed AMI with a volume type of "io1" and the number of IOPS you want for the Auto Scaling\-launched instances\.
 + The size of the EBS volume must accommodate the IOPS you need\. There is a 10 : 1 ratio between IOPS and Gibibytes \(GiB\) of storage, so for 100 PIOPS, you need at least 10 GiB storage on the root volume\.
@@ -432,7 +425,7 @@ LaunchConfig:
     EbsOptimized: "true"
 ```
 
-## See Also<a name="w4ab1c21c10d140c17"></a>
+## See Also<a name="w4ab1c21c10c36c18c17"></a>
 + [Creating Your Own AMIs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami.html) in the *Amazon Elastic Compute Cloud User Guide*\.
 + [Block Device Mapping](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html) in the *Amazon Elastic Compute Cloud User Guide*\.
 + To view more LaunchConfiguration snippets, see [Auto Scaling Launch Configuration Resource](quickref-autoscaling.md#scenario-as-launch-config)\.

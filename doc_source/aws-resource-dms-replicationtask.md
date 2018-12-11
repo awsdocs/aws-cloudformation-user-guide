@@ -5,9 +5,9 @@ The `AWS::DMS::ReplicationTask` resource creates an AWS DMS replication task\.
 **Topics**
 + [Syntax](#aws-resource-dms-replicationtask-syntax)
 + [Properties](#aws-resource-dms-replicationtask-prop)
-+ [Return Value](#w4ab1c21c10d380c11)
++ [Return Value](#w4ab1c21c10c96c33c11)
 + [Example](#aws-resource-dms-replicationtask-example)
-+ [See Also](#w4ab1c21c10d380c15)
++ [See Also](#w4ab1c21c10c96c33c15)
 
 ## Syntax<a name="aws-resource-dms-replicationtask-syntax"></a>
 
@@ -62,7 +62,7 @@ The migration type\.
 `Valid Values`: `full-load`, `cdc`, `full-load-and-cdc`  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [This parameter cannot be updated on an existing task.](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.Modifying.html)
+*Update requires*: Updates are not supported\.
 
 `ReplicationInstanceArn`  <a name="cfn-dms-replicationtask-replicationinstancearn"></a>
 The Amazon Resource Name \(ARN\) of the replication instance\.  
@@ -106,9 +106,9 @@ The ARN string that uniquely identifies the endpoint\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w4ab1c21c10d380c11"></a>
+## Return Value<a name="w4ab1c21c10c96c33c11"></a>
 
-### Ref<a name="w4ab1c21c10d380c11b2"></a>
+### Ref<a name="w4ab1c21c10c96c33c11b2"></a>
 
 When you pass the logical ID of an `AWS::DMS::ReplicationTask` resource to the intrinsic `Ref` function, the function returns the replication task ARN\.
 
@@ -164,6 +164,6 @@ Resources:
       }"
 ```
 
-## See Also<a name="w4ab1c21c10d380c15"></a>
+## See Also<a name="w4ab1c21c10c96c33c15"></a>
 + [CreateReplicationTask](http://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationTask.html) in the *AWS Database Migration Service API Reference*\.
 + [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)

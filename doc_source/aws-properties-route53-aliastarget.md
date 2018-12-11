@@ -1,10 +1,10 @@
-# Route 53 AliasTarget Property<a name="aws-properties-route53-aliastarget"></a>
+# Amazon Route 53 AliasTarget Property<a name="aws-properties-route53-aliastarget"></a>
 
 `AliasTarget` is a property of the [ AWS::Route53::RecordSet](aws-properties-route53-recordset.md) resource\.
 
 For more information about alias resource record sets, see [Creating Alias Resource Record Sets](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingAliasRRSets.html) in the *Amazon Route 53 Developer Guide*\.
 
-## Syntax<a name="w4ab1c21c14e1750b7"></a>
+## Syntax<a name="w4ab1c21c10d177c22c17b7"></a>
 
 ### JSON<a name="aws-properties-route53-aliastarget-syntax.json"></a>
 
@@ -24,7 +24,7 @@ For more information about alias resource record sets, see [Creating Alias Resou
 [HostedZoneId](#cfn-route53-aliastarget-hostedzoneid): String
 ```
 
-## Properties<a name="w4ab1c21c14e1750b9"></a>
+## Properties<a name="w4ab1c21c10d177c22c17b9"></a>
 
 `DNSName`  <a name="cfn-route53-aliastarget-dnshostname"></a>
 The DNS name of the load balancer, the domain name of the CloudFront distribution, the website endpoint of the Amazon S3 bucket, or another record set in the same hosted zone that is the target of the alias\.  

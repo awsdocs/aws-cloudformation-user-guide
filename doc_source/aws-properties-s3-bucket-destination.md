@@ -2,7 +2,7 @@
 
 <a name="aws-properties-s3-bucket-destination-description"></a>The `Destination` property type specifies information about where to publish analysis or configuration results for an Amazon S3 bucket\.
 
-<a name="aws-properties-s3-bucket-destination-inheritance"></a> `Destination` is a property of the [Amazon S3 Bucket DataExport](aws-properties-s3-bucket-dataexport.md) and [Amazon S3 Bucket InventoryConfiguration](aws-properties-s3-bucket-inventoryconfiguration.md) property types\. 
+<a name="aws-properties-s3-bucket-destination-inheritance"></a> `Destination` is a property of the [DataExport](aws-properties-s3-bucket-dataexport.md) and [InventoryConfiguration](aws-properties-s3-bucket-inventoryconfiguration.md) property types\. 
 
 ## Syntax<a name="aws-properties-s3-bucket-destination-syntax"></a>
 

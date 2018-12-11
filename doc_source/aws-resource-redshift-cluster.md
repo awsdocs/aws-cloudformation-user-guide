@@ -2,13 +2,6 @@
 
 Use the `AWS::Redshift::Cluster` resource to create an Amazon Redshift cluster\. A *cluster* is a fully managed data warehouse that consists of a set of compute nodes\. For more information about default and valid values, see [CreateCluster](https://docs.aws.amazon.com/redshift/latest/APIReference/API_CreateCluster.html) in the *Amazon Redshift API Reference*\.
 
-**Topics**
-+ [Syntax](#aws-resource-redshift-cluster-syntax)
-+ [Properties](#w4ab1c21c10e1019b9)
-+ [Return Values](#w4ab1c21c10e1019c11)
-+ [Example](#w4ab1c21c10e1019c13)
-+ [More Info](#w4ab1c21c10e1019c15)
-
 ## Syntax<a name="aws-resource-redshift-cluster-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -93,7 +86,7 @@ Properties:
     - String
 ```
 
-## Properties<a name="w4ab1c21c10e1019b9"></a>
+## Properties<a name="w4ab1c21c10d174c14b7"></a>
 
 For more information about each property, including constraints and valid values, see [CreateCluster](https://docs.aws.amazon.com//redshift/latest/APIReference/API_CreateCluster.html) in the *Amazon Redshift API Reference*\.
 
@@ -265,7 +258,7 @@ The name of the snapshot from which to create a new cluster\.
 `Tags`  <a name="cfn-redshift-cluster-tags"></a>
 Specifies an arbitrary set of tags \(key–value pairs\) to associate with this cluster\. Use tags to manage your resources\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `VpcSecurityGroupIds`  <a name="cfn-redshift-cluster-vpcsecuritygroupids"></a>
@@ -274,9 +267,9 @@ A list of VPC security groups that are associated with this cluster\.
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10e1019c11"></a>
+## Return Values<a name="w4ab1c21c10d174c14b9"></a>
 
-### Ref<a name="w4ab1c21c10e1019c11b2"></a>
+### Ref<a name="w4ab1c21c10d174c14b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -288,7 +281,7 @@ For the Amazon Redshift cluster `myCluster`, `Ref` returns the name of the clust
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10e1019c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d174c14b9b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -298,7 +291,7 @@ The connection endpoint for the Amazon Redshift cluster\. For example: `examplec
 `Endpoint.Port`  
 The port number on which the Amazon Redshift cluster accepts connections\. For example: `5439`\.
 
-## Example<a name="w4ab1c21c10e1019c13"></a>
+## Example<a name="w4ab1c21c10d174c14c11"></a>
 
 The following example describes a single\-node Amazon Redshift cluster\. The master user password is referenced from an input parameter that is in the same template\.
 
@@ -340,6 +333,6 @@ myCluster:
         Value: bar
 ```
 
-## More Info<a name="w4ab1c21c10e1019c15"></a>
+## More Info<a name="w4ab1c21c10d174c14c13"></a>
 
 For a complete example template, see [Amazon Redshift Template Snippets](quickref-redshift.md)\.

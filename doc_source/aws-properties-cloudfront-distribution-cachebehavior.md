@@ -2,7 +2,7 @@
 
 `CacheBehavior` is a property of the [DistributionConfig](aws-properties-cloudfront-distribution-distributionconfig.md) property that describes the Amazon CloudFront \(CloudFront\) cache behavior when the requested URL matches a pattern\.
 
-## Syntax<a name="w4ab1c21c14d272b5"></a>
+## Syntax<a name="w4ab1c21c10c54c14c20b5"></a>
 
 ### JSON<a name="aws-properties-cloudfront-distribution-cachebehavior-syntax.json"></a>
 
@@ -49,7 +49,7 @@
 [ViewerProtocolPolicy](#cfn-cloudfront-distribution-cachebehavior-viewerprotocolpolicy): String
 ```
 
-## Properties<a name="w4ab1c21c14d272b7"></a>
+## Properties<a name="w4ab1c21c10c54c14c20b7"></a>
 
 **Note**  
 For more information about the constraints and valid values of each property, see the [CacheBehavior](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CacheBehavior.html) data type in the *Amazon CloudFront API Reference*\.
@@ -88,7 +88,7 @@ Specifies how CloudFront handles query strings or cookies\.
 `LambdaFunctionAssociations`  <a name="cfn-cloudfront-distribution-cachebehavior-lambdafunctionassociations"></a>
 Lambda function associations for the Amazon CloudFront distribution\.  
  *Required*: No  
- *Type*: List of [CloudFront Distribution LambdaFunctionAssociation](aws-properties-cloudfront-distribution-lambdafunctionassociation.md)  
+ *Type*: List of [LambdaFunctionAssociation](aws-properties-cloudfront-distribution-lambdafunctionassociation.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `MaxTTL`  <a name="cfn-cloudfront-distribution-cachebehavior-maxttl"></a>

@@ -1,6 +1,6 @@
 # Amazon EC2 Auto Scaling ScalingPolicy TargetTrackingConfiguration<a name="aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration"></a>
 
-The `TargetTrackingConfiguration` property configures a target tracking scaling policy\. `TargetTrackingConfiguration` is a property of the [AWS::AutoScaling::ScalingPolicy](aws-properties-as-policy.md) resource\. For more information, see [PutScalingPolicy](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutScalingPolicy.html) in the *Amazon EC2 Auto Scaling API Reference*\.
+The `TargetTrackingConfiguration` property configures a target tracking scaling policy to use with Amazon EC2 Auto Scaling\. `TargetTrackingConfiguration` is a property of the [AWS::AutoScaling::ScalingPolicy](aws-properties-as-policy.md) resource\. For more information, see [PutScalingPolicy](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutScalingPolicy.html) in the *Amazon EC2 Auto Scaling API Reference*\.
 
 ## Syntax<a name="aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration-syntax"></a>
 

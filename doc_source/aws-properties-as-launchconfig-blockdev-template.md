@@ -1,8 +1,8 @@
-# Amazon EC2 Auto Scaling EBS Block Device Property Type<a name="aws-properties-as-launchconfig-blockdev-template"></a>
+# Amazon EC2 Auto Scaling LaunchConfig BlockDevice<a name="aws-properties-as-launchconfig-blockdev-template"></a>
 
-The AutoScaling EBS Block Device type is an embedded property of the [Amazon EC2 Auto Scaling Block Device Mapping](aws-properties-as-launchconfig-blockdev-mapping.md) type\.
+The Amazon EC2 Auto Scaling EBS `BlockDevice` type is an embedded property of the [Amazon EC2 Auto Scaling LaunchConfiguration BlockDeviceMapping](aws-properties-as-launchconfig-blockdev-mapping.md) type\.
 
-## Syntax<a name="w4ab1c21c14d122b5"></a>
+## Syntax<a name="w4ab1c21c10c36c18c21b5"></a>
 
 ### JSON<a name="aws-properties-as-launchconfig-blockdev-template-syntax.json"></a>
 
@@ -28,10 +28,10 @@ The AutoScaling EBS Block Device type is an embedded property of the [Amazon EC2
 [VolumeType](#cfn-as-launchconfig-blockdev-template-volumetype): String
 ```
 
-## Properties<a name="w4ab1c21c14d122b7"></a>
+## Properties<a name="w4ab1c21c10c36c18c21b7"></a>
 
 `DeleteOnTermination`  <a name="cfn-as-launchconfig-blockdev-template-deleteonterm"></a>
-Indicates whether to delete the volume when the instance is terminated\. By default, Auto Scaling uses `true`\.  
+Indicates whether to delete the volume when the instance is terminated\. By default, Amazon EC2 Auto Scaling uses `true`\.  
 *Required*: No  
 *Type*: Boolean
 
@@ -57,10 +57,10 @@ The volume size, in Gibibytes \(GiB\)\. This can be a number from 1 – 1024\. I
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 `VolumeType`  <a name="cfn-as-launchconfig-blockdev-template-volumetype"></a>
-The volume type\. By default, Auto Scaling uses the `standard` volume type\. For more information, see [Ebs](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_Ebs.html) in the *Amazon EC2 Auto Scaling API Reference*\.  
+The volume type\. By default, Amazon EC2 Auto Scaling uses the `standard` volume type\. For more information, see [Ebs](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_Ebs.html) in the *Amazon EC2 Auto Scaling API Reference*\.  
 *Required*: No  
 *Type*: String
 
-## Examples<a name="w4ab1c21c14d122b9"></a>
+## Examples<a name="w4ab1c21c10c36c18c21b9"></a>
 
-For AutoScaling EBS Block Device snippets, see [Auto Scaling Launch Configuration Resource](quickref-autoscaling.md#scenario-as-launch-config)\.
+For Amazon EC2 Auto Scaling EBS Block Device snippets, see [Auto Scaling Launch Configuration Resource](quickref-autoscaling.md#scenario-as-launch-config)\.

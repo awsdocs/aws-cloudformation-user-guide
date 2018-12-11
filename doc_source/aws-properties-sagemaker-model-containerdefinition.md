@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ContainerHostname](#cfn-sagemaker-model-containerdefinition-containerhostname)" : String,
-  "[Environment](#cfn-sagemaker-model-containerdefinition-environment)" : JSON,
+  "[Environment](#cfn-sagemaker-model-containerdefinition-environment)" : JSON object,
   "[ModelDataUrl](#cfn-sagemaker-model-containerdefinition-modeldataurl)" : String,
   "[Image](#cfn-sagemaker-model-containerdefinition-image)" : String
 }
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 [ContainerHostname](#cfn-sagemaker-model-containerdefinition-containerhostname): String
-[Environment](#cfn-sagemaker-model-containerdefinition-environment): JSON
+[Environment](#cfn-sagemaker-model-containerdefinition-environment): JSON object
 [ModelDataUrl](#cfn-sagemaker-model-containerdefinition-modeldataurl): String
 [Image](#cfn-sagemaker-model-containerdefinition-image): String
 ```
@@ -39,7 +39,7 @@ The DNS host name for the container after Amazon SageMaker deploys it\.
 `Environment`  <a name="cfn-sagemaker-model-containerdefinition-environment"></a>
 The environment variables to set in the Docker container\. Each key and value in the `Environment` string to string map can have length of up to 1024\. We support up to 16 entries in the map\.   
  *Required*: No  
- *Type*: JSON  
+ *Type*: JSON object  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `ModelDataUrl`  <a name="cfn-sagemaker-model-containerdefinition-modeldataurl"></a>

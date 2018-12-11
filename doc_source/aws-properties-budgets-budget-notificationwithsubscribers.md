@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Subscribers`  <a name="cfn-budgets-budget-notificationwithsubscribers-subscribers"></a>
 A list of subscribers who are subscribed to this notification\.  
  *Required*: Yes  
- *Type*: List of [Billing and Cost Management Budget Subscriber](aws-properties-budgets-budget-subscriber.md)  
+ *Type*: List of [Subscriber](aws-properties-budgets-budget-subscriber.md)  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Notification`  <a name="cfn-budgets-budget-notificationwithsubscribers-notification"></a>
@@ -42,7 +42,7 @@ For example, if you have a budget for 200 dollars and you want to be notified wh
 + A `notificationType` of `ACTUAL`
 + A `comparisonOperator` of `GREATER_THAN`
  *Required*: Yes  
- *Type*: [Billing and Cost Management Budget Notification](aws-properties-budgets-budget-notification.md)  
+ *Type*: [Notification](aws-properties-budgets-budget-notification.md)  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## See Also<a name="aws-properties-budgets-budget-notificationwithsubscribers-seealso"></a>

@@ -2,11 +2,6 @@
 
 The `AWS::Cognito::IdentityPoolRoleAttachment` resource manages the role configuration for an Amazon Cognito identity pool\.
 
-**Topics**
-+ [Syntax](#aws-resource-cognito-identitypoolroleattachment-syntax)
-+ [Properties](#w4ab1c21c10d287b9)
-+ [Return Value](#w4ab1c21c10d287c11)
-
 ## Syntax<a name="aws-resource-cognito-identitypoolroleattachment-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -36,7 +31,7 @@ Properties:
     String:String
 ```
 
-## Properties<a name="w4ab1c21c10d287b9"></a>
+## Properties<a name="w4ab1c21c10c78c17b9"></a>
 
 `IdentityPoolId`  <a name="cfn-cognito-identitypoolroleattachment-identitypoolid"></a>
 An identity pool ID in the format `REGION:GUID`\.  
@@ -56,9 +51,9 @@ The map of roles associated with this pool\. For a given role, the key will be e
 *Type:* String to string map  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10d287c11"></a>
+## Return Value<a name="w4ab1c21c10c78c17c11"></a>
 
-### Ref<a name="w4ab1c21c10d287c11b2"></a>
+### Ref<a name="w4ab1c21c10c78c17c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns a generated ID, such as `IdentityPoolRoleAttachment-EXAMPLEwnOR3n`\.
 

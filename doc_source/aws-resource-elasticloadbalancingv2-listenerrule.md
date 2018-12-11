@@ -2,12 +2,6 @@
 
 The `AWS::ElasticLoadBalancingV2::ListenerRule` resource defines which requests an Elastic Load Balancing listener takes action on and the action that it takes\. For more information, see [Getting Started](http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/load-balancer-getting-started.html) in the *Elastic Load Balancing User Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-elasticloadbalancingv2-listenerrule-syntax)
-+ [Properties](#w4ab1c21c10d663b9)
-+ [Return Value](#w4ab1c21c10d663c11)
-+ [Example](#w4ab1c21c10d663c13)
-
 ## Syntax<a name="aws-resource-elasticloadbalancingv2-listenerrule-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -39,7 +33,7 @@ Properties:
   [Priority](#cfn-elasticloadbalancingv2-listenerrule-priority): Integer
 ```
 
-## Properties<a name="w4ab1c21c10d663b9"></a>
+## Properties<a name="w4ab1c21c10d129c21b7"></a>
 
 `Actions`  <a name="cfn-elasticloadbalancingv2-listenerrule-actions"></a>
 The action that the listener takes when a request meets the specified condition\.  
@@ -67,15 +61,15 @@ For valid values, see the `Priority` parameter for the [CreateRule](https://docs
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10d663c11"></a>
+## Return Value<a name="w4ab1c21c10d129c21b9"></a>
 
-### Ref<a name="w4ab1c21c10d663c11b2"></a>
+### Ref<a name="w4ab1c21c10d129c21b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the rule's ARN, such as `arn:aws:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d663c13"></a>
+## Example<a name="w4ab1c21c10d129c21c11"></a>
 
 The following example creates a rule that forwards requests to the `TargetGroup` target group if the request URL contains the `/img/*` pattern\.
 

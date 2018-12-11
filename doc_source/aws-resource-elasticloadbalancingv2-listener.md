@@ -2,12 +2,6 @@
 
 The `AWS::ElasticLoadBalancingV2::Listener` resource creates a listener for an Elastic Load Balancing Application or Network load balancer\. The listener checks for connection requests and forwards them to one or more target groups\. For more information, see [Getting Started](http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/load-balancer-getting-started.html) in the *Elastic Load Balancing User Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-elasticloadbalancingv2-listener-syntax)
-+ [Properties](#w4ab1c21c10d655b9)
-+ [Return Value](#w4ab1c21c10d655c11)
-+ [Example](#w4ab1c21c10d655c13)
-
 ## Syntax<a name="aws-resource-elasticloadbalancingv2-listener-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -43,7 +37,7 @@ Properties:
   [SslPolicy](#cfn-elasticloadbalancingv2-listener-sslpolicy): String
 ```
 
-## Properties<a name="w4ab1c21c10d655b9"></a>
+## Properties<a name="w4ab1c21c10d129c13b7"></a>
 
 `Certificates`  <a name="cfn-elasticloadbalancingv2-listener-certificates"></a>
 The SSL server certificate for the listener\. With a certificate, you can encrypt traffic between the load balancer and the clients that initiate HTTPS sessions, and traffic between the load balancer and your targets\.  
@@ -84,15 +78,15 @@ The security policy that defines the ciphers and protocols that the load balance
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10d655c11"></a>
+## Return Value<a name="w4ab1c21c10d129c13b9"></a>
 
-### Ref<a name="w4ab1c21c10d655c11b2"></a>
+### Ref<a name="w4ab1c21c10d129c13b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the listener's ARN, such as `arn:aws:elasticloadbalancing:us-west-2:123456789012:listener/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d655c13"></a>
+## Example<a name="w4ab1c21c10d129c13c11"></a>
 
 The following example creates a listener for the `myLoadBalancer` resource\. The listener's default action is to forward requests to the `myTargetGroup` target group\.
 

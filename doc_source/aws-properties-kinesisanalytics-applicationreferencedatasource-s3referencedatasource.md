@@ -2,7 +2,7 @@
 
 The `S3ReferenceDataSource` property type specifies the Amazon S3 bucket and object that contains the reference data for Amazon Kinesis Data Analytics\.
 
- `S3ReferenceDataSource` is a property of the [Kinesis Data Analytics ApplicationReferenceDataSource ReferenceDataSource](aws-properties-kinesisanalytics-applicationreferencedatasource-referencedatasource.md) parameter\. 
+ `S3ReferenceDataSource` is a property of the [ReferenceDataSource](aws-properties-kinesisanalytics-applicationreferencedatasource-referencedatasource.md) parameter\. 
 
 ## Syntax<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-syntax"></a>
 

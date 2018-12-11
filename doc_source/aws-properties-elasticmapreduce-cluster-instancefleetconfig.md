@@ -5,7 +5,7 @@ The `InstanceFleetConfig` property type specifies a Spot instance fleet configur
 **Note**  
 The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\.
 
-## Syntax<a name="w4ab1c21c14e1172b7"></a>
+## Syntax<a name="w4ab1c21c10d132c13c41b7"></a>
 
 ### JSON<a name="aws-properties-elasticmapreduce-cluster-instancefleetconfig-syntax.json"></a>
 
@@ -31,7 +31,7 @@ The instance fleet configuration is available only in Amazon EMR versions 4\.8\.
 [TargetSpotCapacity](#cfn-elasticmapreduce-cluster-instancefleetconfig-targetspotcapacity): Integer
 ```
 
-## Properties<a name="w4ab1c21c14e1172b9"></a>
+## Properties<a name="w4ab1c21c10d132c13c41b9"></a>
 
 `InstanceTypeConfigs`  <a name="cfn-elasticmapreduce-cluster-instancefleetconfig-instancetypeconfigs"></a>
 The instance type configurations that define the EC2 instances in the instance fleet\. Duplicates not allowed\.  

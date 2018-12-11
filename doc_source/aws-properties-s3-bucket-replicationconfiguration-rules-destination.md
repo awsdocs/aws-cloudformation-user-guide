@@ -2,7 +2,7 @@
 
 `Destination` is a property of the [Amazon S3 Bucket ReplicationRule](aws-properties-s3-bucket-replicationconfiguration-rules.md) property that specifies which Amazon Simple Storage Service \(Amazon S3\) bucket to store replicated objects and their storage class\.
 
-## Syntax<a name="w4ab1c21c14e1861b5"></a>
+## Syntax<a name="w4ab1c21c10d180c13d118b5"></a>
 
 ### JSON<a name="aws-properties-s3-bucket-replicationconfiguration-rules-destination-syntax.json"></a>
 
@@ -26,7 +26,7 @@
 [StorageClass](#cfn-s3-bucket-replicationconfiguration-rules-destination-storageclass): String
 ```
 
-## Properties<a name="w4ab1c21c14e1861b7"></a>
+## Properties<a name="w4ab1c21c10d180c13d118b7"></a>
 
 `AccessControlTranslation`  <a name="cfn-s3-bucket-replicationdestination-accesscontroltranslation"></a>
 Specify this only in a cross\-account scenario \(where source and destination bucket owners are not the same\), and you want to change replica ownership to the AWS account that owns the destination bucket\. If this is not specified in the replication configuration, the replicas are owned by same AWS account that owns the source object\.  

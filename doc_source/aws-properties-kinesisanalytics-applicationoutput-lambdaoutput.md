@@ -2,7 +2,7 @@
 
 The `LambdaOutput` property type specifies a Lambda function as the destination when you are configuring application output\.
 
- `LambdaOutput` is a property of the [Kinesis Data Analytics ApplicationOutput Output](aws-properties-kinesisanalytics-applicationoutput-output.md) property type\.
+ `LambdaOutput` is a property of the [Output](aws-properties-kinesisanalytics-applicationoutput-output.md) property type\.
 
 ## Syntax<a name="aws-properties-kinesisanalytics-applicationoutput-lambdaoutput-syntax"></a>
 

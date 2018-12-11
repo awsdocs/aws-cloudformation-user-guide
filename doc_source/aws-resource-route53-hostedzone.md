@@ -2,12 +2,6 @@
 
 The `AWS::Route53::HostedZone` resource creates a hosted zone, which can contain a collection of record sets for a domain\. You cannot create a hosted zone for a top\-level domain \(TLD\)\. For more information, see [POST CreateHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html) or [POST CreateHostedZone \(Private\)](https://docs.aws.amazon.com/Route53/latest/APIReference/API-create-hosted-zone-private.html) in the *Amazon Route 53 API Reference*\.
 
-**Topics**
-+ [Syntax](#aws-resource-route53-hostedzone-syntax)
-+ [Properties](#w4ab1c21c10e1049b9)
-+ [Return Values](#w4ab1c21c10e1049c11)
-+ [Example](#w4ab1c21c10e1049c13)
-
 ## Syntax<a name="aws-resource-route53-hostedzone-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -43,7 +37,7 @@ Properties:
     - [*HostedZoneVPCs*](aws-resource-route53-hostedzone-hostedzonevpcs.md)
 ```
 
-## Properties<a name="w4ab1c21c10e1049b9"></a>
+## Properties<a name="w4ab1c21c10d177c18b7"></a>
 
 `HostedZoneConfig`  <a name="cfn-route53-hostedzone-hostedzoneconfig"></a>
 A complex type that contains an optional comment about your hosted zone\.  
@@ -75,15 +69,15 @@ One or more VPCs that you want to associate with this hosted zone\. When you spe
 *Type*: List of [Route 53 HostedZoneVPCs](aws-resource-route53-hostedzone-hostedzonevpcs.md)  
 If this property was specified previously and you're modifying values, updates require [no interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\. If this property wasn't specified and you add values, updates require [replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)\. Also, if this property was specified and you remove all values, updates require [replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)\.
 
-## Return Values<a name="w4ab1c21c10e1049c11"></a>
+## Return Values<a name="w4ab1c21c10d177c18b9"></a>
 
-### Ref<a name="w4ab1c21c10e1049c11b2"></a>
+### Ref<a name="w4ab1c21c10d177c18b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the hosted zone ID, such as `Z23ABC4XYZL05B`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10e1049c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d177c18b9b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -93,7 +87,7 @@ This attribute is not supported for private hosted zones\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
 
-## Example<a name="w4ab1c21c10e1049c13"></a>
+## Example<a name="w4ab1c21c10d177c18c11"></a>
 
 The following template snippet creates a private hosted zone for the `example.com` domain\.
 

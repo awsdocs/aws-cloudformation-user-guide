@@ -2,7 +2,7 @@
 
 <a name="aws-properties-apigateway-deployment-accesslogsetting-description"></a>The `AccessLogSetting` property type specifies settings for logging access in this stage\.
 
-<a name="aws-properties-apigateway-deployment-accesslogsetting-inheritance"></a> `AccessLogSetting` is a property of the [API Gateway Deployment StageDescription](aws-properties-apigateway-deployment-stagedescription.md) property type\.
+<a name="aws-properties-apigateway-deployment-accesslogsetting-inheritance"></a> `AccessLogSetting` is a property of the [StageDescription](aws-properties-apigateway-deployment-stagedescription.md) property type\.
 
 ## Syntax<a name="aws-properties-apigateway-deployment-accesslogsetting-syntax"></a>
 

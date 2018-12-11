@@ -2,7 +2,7 @@
 
 <a name="aws-properties-glue-trigger-condition-description"></a>The `Condition` property type specifies a condition for an AWS Glue job trigger predicate\.
 
-<a name="aws-properties-glue-trigger-condition-inheritance"></a> The `Conditions` property of the [AWS Glue Trigger Predicate](aws-properties-glue-trigger-predicate.md) property type contains a list of `Condition` property types\.
+<a name="aws-properties-glue-trigger-condition-inheritance"></a> The `Conditions` property of the [Predicate](aws-properties-glue-trigger-predicate.md) property type contains a list of `Condition` property types\.
 
 ## Syntax<a name="aws-properties-glue-trigger-condition-syntax"></a>
 

@@ -2,7 +2,7 @@
 
 <a name="aws-properties-ssm-patchbaseline-patchfilter-description"></a>The `PatchFilter` property type defines a patch filter for an AWS Systems Manager patch baseline\.
 
-<a name="aws-properties-ssm-patchbaseline-patchfilter-inheritance"></a> The `PatchFilters` property of the [Systems Manager PatchBaseline PatchFilterGroup](aws-properties-ssm-patchbaseline-patchfiltergroup.md) property type contains a list of `PatchFilter` property types\. 
+<a name="aws-properties-ssm-patchbaseline-patchfilter-inheritance"></a> The `PatchFilters` property of the [PatchFilterGroup](aws-properties-ssm-patchbaseline-patchfiltergroup.md) property type contains a list of `PatchFilter` property types\. 
 
 ## Syntax<a name="aws-properties-ssm-patchbaseline-patchfilter-syntax"></a>
 

@@ -2,7 +2,7 @@
 
 <a name="aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination-description"></a>The `KinesisFirehoseDestination` property type specifies the delivery stream ARN and the IAM role ARN associated with an Kinesis Data Firehose event destination for an Amazon SES configuration set\.
 
-<a name="aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination-inheritance"></a> `KinesisFirehoseDestination` is a property of the [Amazon SES ConfigurationSetEventDestination EventDestination](aws-properties-ses-configurationseteventdestination-eventdestination.md) property type\.
+<a name="aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination-inheritance"></a> `KinesisFirehoseDestination` is a property of the [EventDestination](aws-properties-ses-configurationseteventdestination-eventdestination.md) property type\.
 
 ## Syntax<a name="aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination-syntax"></a>
 

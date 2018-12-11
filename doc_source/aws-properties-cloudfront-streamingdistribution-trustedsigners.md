@@ -2,7 +2,7 @@
 
 <a name="aws-properties-cloudfront-streamingdistribution-trustedsigners-description"></a>The `TrustedSigners` property type specifies the AWS accounts, if any, that you want to allow to create signed URLs for private content for an Amazon CloudFront distribution\. For more information, see [TrustedSigners](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_TrustedSigners.html) in the *Amazon CloudFront API Reference*\.
 
-<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners-inheritance"></a> `TrustedSigners` is a property of the [CloudFront StreamingDistribution StreamingDistributionConfig](aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.md) property type\. 
+<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners-inheritance"></a> `TrustedSigners` is a property of the [StreamingDistributionConfig](aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.md) property type\. 
 
 ## Syntax<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners-syntax"></a>
 

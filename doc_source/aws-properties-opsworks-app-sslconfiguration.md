@@ -2,7 +2,7 @@
 
 Describes an SSL configuration for the [AWS::OpsWorks::App](aws-resource-opsworks-app.md) resource type\.
 
-## Syntax<a name="w4ab1c21c14e1696b5"></a>
+## Syntax<a name="w4ab1c21c10d168c14c25b5"></a>
 
 ### JSON<a name="aws-properties-opsworks-app-sslconfiguration-syntax.json"></a>
 
@@ -22,7 +22,7 @@ Describes an SSL configuration for the [AWS::OpsWorks::App](aws-resource-opswork
 [PrivateKey](#cfn-opsworks-app-sslconfig-privatekey): String
 ```
 
-## Properties<a name="w4ab1c21c14e1696b7"></a>
+## Properties<a name="w4ab1c21c10d168c14c25b7"></a>
 
 `Certificate`  <a name="cfn-opsworks-app-sslconfig-certificate"></a>
 The contents of the certificate's `domain.crt` file\.  

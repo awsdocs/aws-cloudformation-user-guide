@@ -38,13 +38,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Capabilities`  <a name="cfn-ecs-taskdefinition-linuxparameters-capabilities"></a>
 The Linux capabilities for the container that are added to or dropped from the default configuration provided by Docker\.  
  *Required*: No  
- *Type*: [Amazon ECS TaskDefinition KernelCapabilities](aws-properties-ecs-taskdefinition-kernelcapabilities.md)  
+ *Type*: [KernelCapabilities](aws-properties-ecs-taskdefinition-kernelcapabilities.md)  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `Devices`  <a name="cfn-ecs-taskdefinition-linuxparameters-devices"></a>
 Any host devices to expose to the container\. This maps to `Devices` in the [ Create a container](https://docs.docker.com/engine/reference/api/docker_remote_api_v1.27/#create-a-container) section of the *Docker Remote API* and the `--device` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
  *Required*: No  
- *Type*: List of [Amazon ECS TaskDefinition Device](aws-properties-ecs-taskdefinition-device.md) property types  
+ *Type*: List of [Device](aws-properties-ecs-taskdefinition-device.md) property types  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `InitProcessEnabled`  <a name="cfn-ecs-taskdefinition-linuxparameters-initprocessenabled"></a>
@@ -65,7 +65,7 @@ If you are using tasks that use the Fargate launch type, `SharedMemorySize` is n
 The container path, mount options, and size \(in MiB\) of the tmpfs mount\. This parameter maps to the `--tmpfs` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
 If you are using tasks that use the Fargate launch type, `Tmpfs` is not supported\.
  *Required*: No  
- *Type*: List of [Amazon ECS TaskDefinition Tmpfs](aws-properties-ecs-taskdefinition-tmpfs.md) property types  
+ *Type*: List of [Tmpfs](aws-properties-ecs-taskdefinition-tmpfs.md) property types  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## See Also<a name="aws-properties-ecs-taskdefinition-linuxparameters-seealso"></a>

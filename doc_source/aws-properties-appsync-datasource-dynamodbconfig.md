@@ -41,7 +41,7 @@ The AWS region\.
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `UseCallerCredentials`  <a name="cfn-appsync-datasource-dynamodbconfig-usecallercredentials"></a>
-Set to TRUE to use Amazon Cognito credentials with this data source\.  
+Set to TRUE to use AWS IAM with this data source\.  
  *Required*: No  
  *Type*: Boolean  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

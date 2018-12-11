@@ -4,18 +4,287 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [The CAPABILITY\_AUTO\_EXPAND capability is now available\.](#ReleaseHistory) | Use the `CAPABILITY_AUTO_EXPAND` capability to create or update a stack directly from a stack template that contains macros, without first reviewing the resulting changes in a change set first\.For more information, see [CreateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html) or [UpdateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStack.html) in *AWS CloudFormation API Reference*\. | December 7, 2018 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::CodeBuild::Project\. 
+
+ [AWS::CodeBuild::Project](aws-resource-codebuild-project.md)   
++ In the [AWS CodeBuild Project Environment](aws-properties-codebuild-project-environment.md) property type, you can use the `Certificate` property to specify a certificate to use with your build project\. 
++ In the [AWS CodeBuild Project Artifacts](aws-properties-codebuild-project-artifacts.md) property type, you can use the `ArtifactIdentifier` property to identify the project artifact\. 
++ In the [AWS CodeBuild Project Source](aws-properties-codebuild-project-source.md) property type, you can use the `SourceIdentifier` property to identify the project source\.   | December 6, 2018 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::Lambda::Function 
+
+ [AWS::Lambda::Function](aws-resource-lambda-function.md)   
+Use the `Layers` property to specify a list of Amazon Resource Names \(ARNs\) for the function layers to add to the function's execution environment\.   | November 29, 2018 | 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::Lambda::LayerVersion, AWS::Lambda::LayerVersionPermission\. 
+
+ [AWS::Lambda::LayerVersion](aws-resource-lambda-layerversion.md)   
+Use the AWS CloudFormation `AWS::Lambda::LayerVersion` resource to create a layer version in AWS Lambda\. 
+
+ [AWS::Lambda::LayerVersionPermission](aws-resource-lambda-layerversionpermission.md)   
+Use the AWS CloudFormation `AWS::Lambda::LayerVersionPermission` resource to give other accounts permission to use a layer version in AWS Lambda\.  | November 29, 2018 | 
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::DynamoDB::Table, AWS::EC2::Instance, and AWS::ServiceDiscovery::Service\. 
+
+ [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md)   
+Use the `BillingMode` property to specify how you are charged for read and write throughput and how you manage capacity\.  
+The `ProvisionedThroughput` property is now conditional\.  
+In the [GlobalSecondaryIndex](aws-properties-dynamodb-gsi.md) property type, the `ProvisionedThroughput` property is now conditional\. 
+
+ [AWS::EC2::Instance](aws-properties-ec2-instance.md)   
+Use the `ElasticInferenceAccelerators` property to specify a list of elastic inference accelerators for an instance\.  
+Use the `LicenseSpecifications` property to associate a list of license configuration with an instance\. 
+
+ [AWS::ServiceDiscovery::Service](aws-resource-servicediscovery-service.md)   
+Use the `NamespaceId` property to specify the ID of the namespace that you want to use to create the service\.  
+In the [DnsConfig](aws-properties-servicediscovery-service-dnsconfig.md) property type, use the `RoutingPolicy` property to specify the routing policy that you want to apply to all DNS records that AWS Cloud Map creates when you register an instance and specify this service\.  | November 28, 2018 | 
+| [New resource](#ReleaseHistory) | The following resource was added: AWS::ServiceDiscovery::HttpNamespace\. 
+
+ [AWS::ServiceDiscovery::HttpNamespace](aws-resource-servicediscovery-httpnamespace.md)   
+Use the `HttpNamespace` resource to create an HTTP namespace for Cloud Map\.  | November 28, 2018 | 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::EC2::TransitGateway, AWS::EC2::TransitGatewayAttachment, AWS::EC2::TransitGatewayRoute, AWS::EC2::TransitGatewayRouteTable, AWS::EC2::TransitGatewayRouteTableAssociation, and AWS::EC2::TransitGatewayRouteTablePropagation\. 
+
+ [AWS::EC2::TransitGateway](aws-resource-ec2-transitgateway.md)   
+Use the `AWS::EC2::TransitGateway` resource to create a transit gateway\. 
+
+ [AWS::EC2::TransitGatewayAttachment](aws-resource-ec2-transitgatewayattachment.md)   
+Use the `AWS::EC2::TransitGatewayAttachment` resource to create an attachment between a VPC and a transit gateway\. 
+
+ [AWS::EC2::TransitGatewayRouteTable](aws-resource-ec2-transitgatewayroute.md)   
+Use the `AWS::EC2::TransitGatewayRouteTable` resource to create a static route for a transit gateway route table\. 
+
+ [AWS::EC2::TransitGatewayRouteTable](aws-resource-ec2-transitgatewayroutetable.md)   
+Use the `AWS::EC2::TransitGatewayRouteTable` resource to create a route table for a transit gateway\. 
+
+ [AWS::EC2::TransitGatewayRouteTableAssociation](aws-resource-ec2-transitgatewayroutetableassociation.md)   
+Use the `AWS::EC2::TransitGatewayRouteTableAssociation` resource to associate an attachment with a transit gateway route table\. 
+
+ [AWS::EC2::TransitGatewayRouteTablePropagation](aws-resource-ec2-transitgatewayroutetablepropagation.md)   
+Use the `AWS::EC2::TransitGatewayRouteTablePropagation` resource to enable an attachment to propagate routes\.  | November 26, 2018 | 
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::AppSync::DataSource, AWS::AppSync::Resolver, AWS::AutoScalingPlans::ScalingPlan, AWS::Batch::JobDefinition, AWS::Batch::ComputeEnvironment, AWS::CloudWatch::Alarm, AWS::IoT1Click::Placement, and AWS::IoT1Click::Project\. 
+
+ [AWS::AppSync::DataSource](aws-resource-appsync-datasource.md)   
+Use the `RelationalDatabaseConfig` property type to specify RelationalDatabaseConfig for an AWS AppSync data source\.  
+In the `HttpConfig` property type, use the `AuthorizationConfig` property to specify the authorization type and configurations for an AWS AppSync http data source\. 
+
+ [AWS::AppSync::Resolver](aws-resource-appsync-resolver.md)   
+Use the `PipelineConfig` property type to specify PipelineConfig for an AWS AppSync data source to connect with functions\. 
+
+ [AWS::AutoScalingPlans::ScalingPlan](aws-resource-autoscalingplans-scalingplan.md)   
+Use the `ScalingInstruction` property type to configure predictive scaling as part of the scaling configuration for an Amazon EC2 Auto Scaling group in an AWS Auto Scaling scaling plan\.   
+Use the `PredefinedLoadMetricSpecification` property type to specify a predefined load metric for predictive scaling to use with AWS Auto Scaling\.  
+Use the `CustomizedLoadMetricSpecification` property type to specify a customized load metric for predictive scaling to use with AWS Auto Scaling\. 
+
+ [AWS::Batch::JobDefinition](aws-resource-batch-jobdefinition.md)   
+The `AWS::Batch::JobDefinition` resource was updated to support AWS Batch multi\-node parallel jobs\. 
+
+ [AWS::Batch::ComputeEnvironment](aws-resource-batch-computeenvironment.md)   
+The `AWS::Batch::ComputeEnvironment` resource was updated to support Amazon EC2 launch templates and placement groups\. 
+
+ [AWS::CloudWatch::Alarm](aws-properties-cw-alarm.md)   
+Use the `Metrics` property to specify the metric data to return\.  
+The `MetricName`, `Namespace`, and `Period` properties are now optional\. 
+
+ [AWS::IoT1Click::Placement](aws-resource-iot1click-placement.md)   
+The `PlacementName` property is now optional\. 
+
+ [AWS::IoT1Click::Project](aws-resource-iot1click-project.md)   
+The `ProjectName` property is now optional\.  | November 20, 2018 | 
+| [New resources](#ReleaseHistory) | The following resources were added: Alexa::ASK::Skill, AWS::AppSync::FunctionConfiguration, AWS::EC2::EC2Fleet, AWS::Kinesis::StreamConsumer, AWS::Route53Resolver:ResolverEndpoint, and AWS::Route53Resolver::ResolverRule\. 
+
+ [Alexa::ASK::Skill](aws-resource-ask-skill.md)   
+Use the `Alexa::ASK::Skill` resource to create an Alexa skill\. 
+
+ [AWS::AppSync::FunctionConfiguration](aws-resource-appsync-functionconfiguration.md)   
+Use the `AWS::AppSync::FunctionConfiguration` resource to describe the functions defined with appsync datasource in AWS AppSync\. 
+
+ [AWS::EC2::EC2Fleet](aws-resource-ec2-ec2fleet.md)   
+Use the `AWS::EC2::EC2Fleet` resource to launch an EC2 Fleet that can include multiple launch specifications that vary by instance type, AMI, Availability Zone, or subnet\. 
+
+ [AWS::Kinesis::StreamConsumer](aws-resource-kinesis-streamconsumer.md)   
+Use the `AWS::Kinesis::StreamConsumer` resource to to register a consumer with a Kinesis data stream\. 
+
+ [AWS::Route53Resolver::ResolverEndpoint](aws-resource-route53resolver-resolverendpoint.md)   
+Use the `AWS::Route53Resolver::ResolverEndpoint` resource to specify settings for inbound or outbound endpoints for Amazon Route 53\. 
+
+ [AWS::Route53Resolver::ResolverRule](aws-resource-route53resolver-resolverrule.md)   
+Use the `AWS::Route53Resolver::ResolverRule` resource to specify detailed information about a resolver rule, which specifies how to route DNS queries out of a VPC for Amazon Route 53\.  | November 20, 2018 | 
+| [Updated resources ](#ReleaseHistory) | The following resources were updated: AWS::ApiGateway::Deployment, AWS::ApiGateway::Stage, AWS::AutoScaling::AutoScalingGroup, AWS::EC2::EIP, AWS::ElasticLoadBalancingV2::Listener, AWS::EMR::Cluster, AWS::OpsWorks::Layer, AWS::RDS::DBCluster, AWS::RDS::DBInstance, AWS::S3::Bucket, and AWS::SNS::Topic\. 
+
+ [AWS::ApiGateway::Deployment](aws-resource-apigateway-deployment.md)   
+In the [StageDescription](aws-properties-apigateway-deployment-stagedescription.md) property type, use the `Tags` property to specify the AWS CloudFormation resource tags to associate with the stage\. 
+
+ [AWS::ApiGateway::Stage](aws-resource-apigateway-stage.md)   
+Use the `Tags` property to specify the AWS CloudFormation resource tags to associate with the stage\. 
+
+ [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md)   
+Use the `MixedInstancesPolicy` property to provision a combination of On\-Demand Instances and Spot Instances across multiple instance types\. When you create your Auto Scaling group, you can specify a launch configuration or template as a parameter for the top\-level object, or you can specify a mixed instances policy, but not both at the same time\. 
+
+ [AWS::EC2::EIP](aws-properties-ec2-eip.md)   
+Use the `PublicIpv4Pool` property to specify the ID of an address pool that you own to let Amazon EC2 select an address from the address pool\. 
+
+ [AWS::ElasticLoadBalancingV2::Listener](aws-resource-elasticloadbalancingv2-listener.md)   
+In the [Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md) property type:  
++ Use the `AuthenticateCognitoConfig` property to specify request parameters to use when integrating with Amazon Cognito to authenticate users\.
++ Use the `AuthenticateOidcConfig` property to request parameters when using an identity provider \(IdP\) that is compliant with OpenID Connect \(OIDC\) to authenticate users\.
++ Use the `FixedResponseConfig` property to specify information about an action that returns a custom HTTP response\.
++ Use the `RedirectConfig` property to specify information about a redirect action\. 
+
+ [AWS::ElasticLoadBalancingV2::ListenerRule](aws-resource-elasticloadbalancingv2-listenerrule.md)   
+In the [Actions](aws-properties-elasticloadbalancingv2-listenerrule-actions.md) property type:  
++ Use the `AuthenticateCognitoConfig` property to specify request parameters to use when integrating with Amazon Cognito to authenticate users\.
++ Use the `AuthenticateOidcConfig` property to request parameters when using an identity provider \(IdP\) that is compliant with OpenID Connect \(OIDC\) to authenticate users\.
++ Use the `FixedResponseConfig` property to specify information about an action that returns a custom HTTP response\.
++ Use the `RedirectConfig` property to specify information about a redirect action\. 
+
+ [AWS::EMR::Cluster](aws-resource-emr-cluster.md)   
+Use the [Amazon EMR Cluster HadoopJarStepConfig](aws-properties-elasticmapreduce-cluster-hadoopjarstepconfig.md) property type to specify a job flow step consisting of a JAR file whose main function will be executed\.  
+Use the [Amazon EMR Cluster StepConfig](aws-properties-elasticmapreduce-cluster-stepconfig.md) property type to specify a cluster \(job flow\) step\.  
+Use the [Amazon EMR Cluster KeyValue](aws-properties-elasticmapreduce-cluster-keyvalue.md) property type to specify a key value pair\.  
+In the [Amazon EMR Cluster JobFlowInstancesConfig](aws-properties-emr-cluster-jobflowinstancesconfig.md) property type, use `KeepJobFlowAliveWhenNoSteps` property to specify whether the cluster should remain available after completing all steps\. 
+
+ [AWS OpsWorks VolumeConfiguration](aws-properties-opsworks-layer-volumeconfig.md)   
+In the [VolumeConfiguration](aws-properties-opsworks-layer-volumeconfig.md) property type, use the `Encrypted` property to specify whether an Amazon EBS volume is encrypted\.  
+
+ [AWS::RDS::DBCluster](aws-resource-rds-dbcluster.md)   
+Use the `DeletionProtection` property to indicate whether the DB cluster should have deletion protection enabled\. The database can't be deleted when this value is set to `true`\. If you want to delete a stack with a protected cluster, update this value to `false` before you delete the stack\. 
+
+ [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)   
+Use the `DeleteAutomatedBackups` property to indicate whether automated backups should be deleted \(`true`\) or retained \(`false`\) when you delete a DB instance\. The default is `true`\.  
+Use the `DeletionProtection` property to indicate whether the DB instance should have deletion protection enabled\. The database can't be deleted when this value is set to `true`\. If you want to delete a stack with a protected instance, update this value to `false` before you delete the stack\. 
+
+ [AWS::S3::Bucket](aws-properties-s3-bucket.md)   
+Use the `PublicAccessBlockConfiguration` property to specify the public access configuration for an Amazon S3 bucket\.  
+
+ [AWS::SNS::Topic](aws-properties-sns-topic.md)   
+Use the `KmsMasterKeyId` property to specify an AWS KMS key identifier\. This can be a key ID, key ARN, or key alias\.  | November 19, 2018 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::CodePipeline::Pipeline\. 
+
+ [AWS::CodePipeline::Pipeline](aws-resource-codepipeline-pipeline.md)   
+Use the `ArtifactStores` property to specify a list of `ArtifactStoreMap` mappings\. There must be an artifact store for the pipeline region and for each cross\-region action within the pipeline\. You can only use either `ArtifactStore` or `ArtifactStores`, not both\.  
+In the [Actions](aws-properties-codepipeline-pipeline-stages-actions.md) property type, use the `Region` property to specify the action’s AWS Region, such as `us-east-1`\.  | November 13, 2018 | 
+| [Stack drift detection added](#ReleaseHistory) | Drift detection enables you to detect whether a stack's actual configuration differs, or has *drifted*, from its expected template configuration as defined within AWS CloudFormation\. You can have AWS CloudFormation detect drift on an entire stack, or individual stack resources\.For more information, see [Detecting Unmanaged Configuration Changes to Stacks and Resources](using-cfn-stack-drift.md)\. | November 13, 2018 | 
+| [Updated resources](#ReleaseHistory) | The following resources have been updated: AWS::ApiGateway::Deployment, AWS::ApiGateway::Stage, AWS::CloudWatch::Alarm, AWS::EC2::SecurityGroupIngress, AWS::IAM::Role, AWS::IAM::User, AWS::IoT::TopicRule, AWS::KMS::Key, AWS::RDS::DBCluster, AWS::RDS::DBInstance, AWS::Route53::RecordSet, AWS::S3::Bucket, and AWS::Workspaces::Workspace\. 
+
+ [AWS::ApiGateway::Deployment](aws-resource-apigateway-deployment.md)   
+In the [StageDescription](aws-properties-apigateway-deployment-stagedescription.md) property type, use the `TracingEnabled` property to specify whether active tracing with X\-ray is enabled for this stage\. 
+
+ [AWS::ApiGateway::Stage](aws-resource-apigateway-stage.md)   
+Use the `TracingEnabled` property to specify whether active tracing with X\-ray is enabled for this stage\. 
+
+ [AWS::CloudWatch::Alarm](aws-properties-cw-alarm.md)   
+Use the `DatapointsToAlarm` property to specify the number of datapoints that must be breaching to trigger the alarm\. This is used only if you are setting an "M out of N" alarm\. In that case, this value is the M\. 
+
+ [AWS::EC2::SecurityGroupIngress](aws-properties-ec2-security-group-ingress.md)   
+Use the `SourcePrefixListId` property to specify the AWS service prefix of an Amazon VPC endpoint\. 
+
+ [AWS::IAM::Role](aws-resource-iam-role.md)   
+Use the `PermissionsBoundary` property to specify the policy that is used to set the permissions boundary for the role\. 
+
+ [AWS::IAM::User](aws-properties-iam-user.md)   
+Use the `PermissionsBoundary` property to specify the policy that is used to set the permissions boundary for the user\. 
+
+ [AWS::IoT::TopicRule](aws-resource-iot-topicrule.md)   
+In the [TopicRulePayload](aws-properties-iot-topicrule-topicrulepayload.md) property type, use the `ErrorActions` property to specify the action to take when an error occurs\.  
+In the [Action](aws-properties-iot-topicrule-action.md) property type:  
++ Use the `IoTAnalytics` property to send message data to an AWS IoT Analytics channel\.
++ Use the `StepFunctionsAction` property to start execution of a Step Functions state machine\. 
+
+ [AWS::KMS::Key](aws-resource-kms-key.md)   
+Use the `PendingWindowInDays` property to specify the waiting period, specified in number of days, after which AWS KMS deletes the customer master key \(CMK\)\. 
+
+ [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)   
+Use the `EnableCloudwatchLogExports` property to specify the list of log types that need to be enabled for exporting to CloudWatch Logs\.  
+Use the `EnableIAMDatabaseAuthentication` property to enable mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts\.  
+Use the `EnablePerformanceInsights` property to enable Performance Insights for the DB instance\.  
+Use the `PerformanceInsightsKMSKeyId` property to specify the AWS KMS key identifier for encryption of Performance Insights data\. The AWS KMS key ID is the Amazon Resource Name \(ARN\), AWS KMS key identifier, or the AWS KMS key alias for the AWS KMS encryption key\.  
+Use the `PerformanceInsightsRetentionPeriod` property to specify the amount of time, in days, to retain Performance Insights data\.  
+Use the `ProcessorFeatures` property to specify the number of CPU cores and the number of threads per core for the DB instance class of the DB instance\.  
+Use the `PromotionTier` property to specify the order in which an Aurora Replica is promoted to the primary instance after a failure of the existing primary instance\. 
+
+ [AWS::RDS::DBCluster](aws-resource-rds-dbcluster.md)   
+Use the `EnableCloudwatchLogExports` property to specify the list of log types that need to be enabled for exporting to CloudWatch Logs\.  
+Use the `EnableIAMDatabaseAuthentication` property to enable mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts\.  
+Use the `BacktrackWindow` property to specify the target backtrack window, in seconds\. To disable backtracking, specify 0\. If specified, this property must be set to a number from 0 to 259,200 \(72 hours\)\. 
+
+ [AWS::Route53::RecordSet](aws-properties-route53-recordset.md)   
+Use the `MultiValueAnswer` property to route traffic approximately randomly to multiple resources, such as web servers\. Create one multivalue answer record for each resource and specify true for `MultiValueAnswer`\. 
+
+ [AWS::S3::Bucket](aws-properties-s3-bucket.md)   
+Use the `RegionalDomainName` attribute with the Fn::GetAtt function to return the regional domain name of the specified bucket\. 
+
+ [AWS::WorkSpaces::Workspace](aws-resource-workspaces-workspace.md)   
+Use the `Tags` property to specify the tags \(key\-value pairs\) that you want to attach to the WorkSpace\.  
+Use the `WorkspaceProperties` property to specify information about a WorkSpace\.  | November 9, 2018 | 
+| [The secretsmanager dynamic reference is now available\.](#ReleaseHistory) | Use the `secretsmanager` dynamic reference to retrieve entire secrets or secret values that are stored in AWS Secrets Manager for use in your templates\. *Secrets* can be database credentials, passwords, third\-party API keys, and even arbitrary text\. Using the `secretsmanager` dynamic reference guarantees that neither Secrets Manager nor CloudFormation logs or persists any resolved secret value\. For more information, see [Using Dynamic References to Specify Template Values](dynamic-references.md)\. | November 9, 2018 | 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::DLM::LifecyclePolicy, AWS::SecretsManager::ResourcePolicy, AWS::SecretsManager::RotationSchedule, AWS::SecretsManager::Secret, and AWS::SecretsManager::SecretTargetAttachment\. 
+
+ [AWS::DLM::LifecyclePolicy](aws-resource-dlm-lifecyclepolicy.md)   
+The `AWS::DLM::LifecyclePolicy` resource creates a lifecycle policy for Amazon Data Lifecycle Manager\. 
+
+ [AWS::SecretsManager::ResourcePolicy](aws-resource-secretsmanager-resourcepolicy.md)   
+Use the `AWS::SecretsManager::ResourcePolicy` resource to define a resource\-based policy and attach it to a secret that's stored in Secrets Manager\. 
+
+ [AWS::SecretsManager::RotationSchedule](aws-resource-secretsmanager-rotationschedule.md)   
+Use the `AWS::SecretsManager::RotationSchedule` resource to configure rotation for a secret\. 
+
+ [AWS::SecretsManager::Secret](aws-resource-secretsmanager-secret.md)   
+Use the `AWS::SecretsManager::Secret` resource to create a secret and stores it in Secrets Manager\.  
+
+ [AWS::SecretsManager::SecretTargetAttachment](aws-resource-secretsmanager-secrettargetattachment.md)   
+Use the `AWS::SecretsManager::SecretTargetAttachment` resource to complete the final link between a Secrets Manager secret and its associated database\.  | November 9, 2018 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::SSM:MaintenanceWindow\. 
+
+ [AWS::SSM::MaintenanceWindow](aws-resource-ssm-maintenancewindow.md)   
+Use the `StartDate` and `StartDate` property types to specify when you want the Maintenance Window to become active or inactive\. Use the `ScheduleTimezone` property type to specify the time zone to base scheduled Maintenance Window executions on, in Internet Assigned Numbers Authority \(IANA\) format\.  | November 1, 2018 | 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::AppStream::DirectoryConfig, AWS::AppStream::Fleet, AWS::AppStream::ImageBuilder, AWS::AppStream::Stack, AWS::AppStream::StackFleetAssociation, AWS::AppStream::StackUserAssociation, AWS::AppStream::User\. 
+
+ [AWS::AppStream::DirectoryConfig](aws-resource-appstream-directoryconfig.md)   
+Use the `AWS::AppStream::DirectoryConfig` resource to describe the configuration information required to join Amazon AppStream 2\.0 fleets and image builders to Microsoft Active Directory domains\. 
+
+ [AWS::AppStream::Fleet](aws-resource-appstream-fleet.md)   
+Use the `AWS::AppStream::Fleet` resource to create a fleet for Amazon AppStream 2\.0\. A fleet consists of streaming instances that run a specified image\. 
+
+ [AWS::AppStream::ImageBuilder](aws-resource-appstream-imagebuilder.md)   
+Use the `AWS::AppStream::ImageBuilder` resource to create an image builder for Amazon AppStream 2\.0\. 
+
+ [AWS::AppStream::Stack](aws-resource-appstream-stack.md)   
+Use the `AWS::AppStream::Stack` resource to create a stack to start streaming applications to Amazon AppStream 2\.0 users\. 
+
+ [AWS::AppStream::StackFleetAssociation](aws-resource-appstream-stackfleetassociation.md)   
+Use the `AWS::AppStream::StackFleetAssociation` resource to associate a fleet with a stack for Amazon AppStream 2\.0\. 
+
+ [AWS::AppStream::StackUserAssociation](aws-resource-appstream-stackuserassociation.md)   
+Use the `AWS::AppStream::StackUserAssociation` resource to associate the specified stacks with the specified users for Amazon AppStream 2\.0\. Users in a user pool cannot be assigned to stacks with fleets that are joined to an Active Directory domain\. 
+
+ [AWS::AppStream::User](aws-resource-appstream-user.md)   
+Use the `AWS::AppStream::User` resource to create a new user in the user pool for Amazon AppStream 2\.0\.   | October 25, 2018 | 
+| [Updated resource ](#ReleaseHistory) | Updated the following resources: AWS::AmazonMQ::Broker, AWS::GuardDuty::Detector, and AWS::SSM::PatchBaseline\. 
+
+[AWS::AmazonMQ::Broker](aws-resource-amazonmq-broker.md)   
+Amazon MQ now supports engine versions 5\.15\.6 and 5\.15\.0\. Property changes include:  
++ The `EngineVersion` property now requires some interruptions upon update\. 
++ The `AutoMinorVersionUpgrade` property now requires no interruption upon update\.  
+
+ [AWS::GuardDuty::Detector](aws-resource-guardduty-detector.md)   
+Use the `FindingPublishingFrequency` property to specify the frequency of notifications sent about the subsequent finding occurrences\. 
+
+ [AWS::SSM::PatchBaseline](aws-resource-ssm-patchbaseline.md)   
+Use the `PatchSource` property type to provide information about the patches to use to update target instances\.  | October 18, 2018 | 
+| [New resource](#ReleaseHistory) | Added the AWS::Events::EventBusPolicy resource\. 
+
+ [AWS::Events::EventBusPolicy](aws-resource-events-eventbuspolicy.md)   
+Use the `AWS::Events::EventBusPolicy` resource to grant permission to other AWS accounts that send events to your account\.  | October 18, 2018 | 
 | [UseOnlineResharding update policy now available\.](#ReleaseHistory) | To modify a replication group's shards by adding or removing shards, rather than replacing the entire `AWS::ElastiCache::ReplicationGroup` resource, use the `UseOnlineResharding` update policy\. For more information, see [UseOnlineResharding Policy](aws-attribute-updatepolicy.md#cfn-attributes-updatepolicy-useonlineresharding)\. | September 20, 2018 | 
 | [Updated resources ](#ReleaseHistory) | The following resources have been updated: AWS::ApiGateway::Deployment, AWS::ApiGateway::Method, AWS::ApiGateway::Stage, AWS::ApiGateway::UsagePlan, AWS::CodeBuild::Project, AWS::CodeDeploy::DeploymentGroup, AWS::EC2::FlowLog, AWS::EC2::SpotFleet, AWS::EC2::VPCEndpoint, AWS::ECS::Service, AWS::ECS::TaskDefinition, and AWS::RDS::DBCluster\. 
 
  [AWS::ApiGateway::Deployment](aws-resource-apigateway-deployment.md)   
 Use the `DeploymentCanarySettings` property to specify settings for the canary deployment\.  
-In the [API Gateway Deployment StageDescription](aws-properties-apigateway-deployment-stagedescription.md) property type:   
+In the [StageDescription](aws-properties-apigateway-deployment-stagedescription.md) property type:   
 + Use the `AccessLogSetting` property to specify settings for logging access in this stage\.
 + Use the `CanarySetting` property to specify settings for the canary deployment in this stage\. 
 
  [AWS::ApiGateway::Method](aws-resource-apigateway-method.md)   
 Use the `AuthorizationScopes` property to specify a list of authorization scopes configured on the method\.  
-In the [API Gateway Method Integration](aws-properties-apitgateway-method-integration.md):   
+In the [Integration](aws-properties-apitgateway-method-integration.md):   
 + Use the `ConnectionId` property to specify the ID of the VpcLink used for the integration when `connectionType=VPC_LINK`\.
 + Use the `ConnectionType` property to specify the type of the network connection to the integration endpoint\. 
 + Use the `TimeoutInMillis` property to specify a custom timeout between 50 and 29,000 milliseconds\. 
@@ -25,7 +294,7 @@ Use the `AccessLogSetting` property to specify settings for logging access in th
 Use the `CanarySetting` property to specify settings for the canary deployment in this stage\. 
 
  [AWS::ApiGateway::UsagePlan](aws-resource-apigateway-usageplan.md)   
-In the [](aws-properties-apigateway-usageplan-apistage.md) property type, use the `Throttle` property to specify a map containing method\-level throttling information for API stage in a usage plan\. 
+In the [Amazon API Gateway UsagePlan ApiStage](aws-properties-apigateway-usageplan-apistage.md) property type, use the `Throttle` property to specify a map containing method\-level throttling information for API stage in a usage plan\. 
 
  [AWS::CodeBuild::Project](aws-resource-codebuild-project.md)   
 Use the `LogsConfig` property specify logs for a project\. Logs can be CloudWatch Logs, uploaded to a specified S3 bucket, or both\.  
@@ -56,20 +325,20 @@ Use the following attributes with the `Fn::GetAtt` function to return attribute 
  [AWS::ECS::Service](aws-resource-ecs-service.md)   
 The `ServiceRegistries` property now requires replacement upon update\.  
 Use the `SchedulingStrategy` property to specify the scheduling strategy to use for the service\.   
-In the [Amazon ECS Service ServiceRegistry](aws-properties-ecs-service-serviceregistry.md) property type:   
+In the [ServiceRegistry](aws-properties-ecs-service-serviceregistry.md) property type:   
 + Use the `ContainerName` property to specify the container name value, already specified in the task definition, to be used for your service discovery service\. 
 + Use the `ContainerPort` property to specify the port value, already specified in the task definition, to be used for your service discovery service\. 
 
  [AWS::ECS::TaskDefinition](aws-resource-ecs-taskdefinition.md)   
-In the [Amazon ECS TaskDefinition LinuxParameters](aws-properties-ecs-taskdefinition-linuxparameters.md) property type:   
+In the [LinuxParameters](aws-properties-ecs-taskdefinition-linuxparameters.md) property type:   
 + Use the `Tmpfs` property to specify the container path, mount options, and size of the tmpfs mount\.
 + Use the `SharedMemorySize` property to specify the size \(in MiB\) of the `/dev/shm` volume\. 
-In the [Amazon ECS TaskDefinition Volumes](aws-properties-ecs-taskdefinition-volumes.md) property type, use the `DockerVolumeConfiguration` property to specify the configuration of a Docker volume\.  
-In the [Amazon ECS TaskDefinition ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md) property type, use the `RepositoryCredentials` property to specify the repository credentials for private registry authentication\. 
+In the [Volumes](aws-properties-ecs-taskdefinition-volumes.md) property type, use the `DockerVolumeConfiguration` property to specify the configuration of a Docker volume\.  
+In the [ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md) property type, use the `RepositoryCredentials` property to specify the repository credentials for private registry authentication\. 
 
  [AWS::ElastiCache::ReplicationGroup](aws-resource-elasticache-replicationgroup.md)   
 The `NodeGroupConfiguration` and `NumNodeGroups` properties are now conditional for some update operations\.  
-In the [ElastiCache ReplicationGroup NodeGroupConfiguration](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md) property type, use the `NodeGroupId` property to specify either the ElastiCache for Redis supplied 4\-digit id or a user supplied id for the node group these configuration values apply to\. 
+In the [NodeGroupConfiguration](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md) property type, use the `NodeGroupId` property to specify either the ElastiCache for Redis supplied 4\-digit id or a user supplied id for the node group these configuration values apply to\. 
 
  [AWS::RDS::DBCluster](aws-resource-rds-dbcluster.md)   
 Use the `EngineMode` property to specify the DB engine mode of the DB cluster\.  
@@ -105,7 +374,7 @@ Use the `Configuration` property to specify crawler configuration information\. 
 Use the `JsonClassifier` property to specify AWS Glue classifier for JSON\.  
 Use the `XMLClassifier` property to specify AWS Glue classifier for XML content\.  | August 23, 2018 | 
 | [AWS CloudFormation now supports VPC endpoints powered by PrivateLink\.](#ReleaseHistory) | You can use a VPC endpoint to create a private connection between your VPC and AWS CloudFormation without requiring access over the Internet, through a NAT instance, a VPN connection, or AWS Direct Connect\. For more information, see [Setting Up VPC Endpoints for AWS CloudFormation](cfn-vpce-bucketnames.md)\. | August 22, 2018 | 
-| [Dynamic references support secure strings](#ReleaseHistory) | Use new dynamic references to specify values that are stored and managed in other services, including Systems Manager Parameter Store SecureString type parameters, in your stack templates\.For more information, see [Using Dynamic References to Specify Template ValuesSpecifying Dynamic References in Stack Templates](dynamic-references.md)\. | August 16, 2018 | 
+| [Dynamic references support secure strings](#ReleaseHistory) | Use new dynamic references to specify values that are stored and managed in other services, including Systems Manager Parameter Store SecureString type parameters, in your stack templates\.For more information, see [Using Dynamic References to Specify Template Values](dynamic-references.md)\. | August 16, 2018 | 
 | [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::ApiGateway::DomainName, AWS::CertificateManager::Certificate, AWS::EC2::VPCPeeringConnection, AWS::EFS::FileSystem, AWS::EMR::Cluster, AWS::RDS::DBClusterParameterGroup, AWS::SNS::Subscription, and AWS::SQS::Queue\. 
 
  [AWS::ApiGateway::DomainName](aws-resource-apigateway-domainname.md)   
@@ -204,7 +473,7 @@ Use the `AWS::AmazonMQ::Broker` resource to create a broker, add configuration c
 
  [AWS::AmazonMQ::Configuration](aws-resource-amazonmq-configuration.md)   
 Use the `AWS::AmazonMQ::Configuration` resource to create a configuration, update the specified configuration, or return information about the specified configuration\.   | June 14, 2018 | 
-| [New resource](#ReleaseHistory) | The following resource was released: : AWS::SSM::ResourceDataSync\. 
+| [New resource](#ReleaseHistory) | The following resource was released: AWS::SSM::ResourceDataSync\. 
 
  [AWS::SSM::ResourceDataSync](aws-resource-ssm-resourcedatasync.md)   
 Use the `AWS::SSM::ResourceDataSync` resource to create or delete a Resource Data Sync for Systems Manager Inventory\. You can use Resource Data Sync to send Inventory data collected from all of your Systems Manager managed instances to a single Amazon S3 bucket\.  | June 11, 2018 | 
@@ -384,7 +653,7 @@ The following table describes important changes in each release of the AWS Cloud
 | Updated resources | November 29, 2017 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  | 2010\-05\-15 | 
 |  New resources  |  November 28, 2017  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 |  Updated resources  |  November 28, 2017  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
-|  New `CodeDeployLambdaAliasUpdate` update policy  |  November 28, 2017  |  Use the `CodeDeployLambdaAliasUpdate` update policy to perform an AWS CodeDeploy deployment when the version changes on an `AWS::Lambda::Alias` resource\. For more information, see [UpdatePolicy](aws-attribute-updatepolicy.md)\.  |  2010\-05\-15  | 
+|  New `CodeDeployLambdaAliasUpdate` update policy  |  November 28, 2017  |  Use the `CodeDeployLambdaAliasUpdate` update policy to perform an AWS CodeDeploy deployment when the version changes on an `AWS::Lambda::Alias` resource\. For more information, see [UpdatePolicy Attribute](aws-attribute-updatepolicy.md)\.  |  2010\-05\-15  | 
 |  New `SSM` parameter types  |  November 21, 2017  |  Use `SSM` parameter types to use existing parameters from Systems Manager Parameter Store\. **Note**: AWS CloudFormation doesn't currently support the `SecureString` type\. For more information, see [SSM Parameter Types](parameters-section-structure.md#aws-ssm-parameter-types)\.  |  2010\-05\-15  | 
 |  New `ResolvedValue` field for `Parameter` data type  |  November 21, 2017  |  The `ResolvedValue` field returns the value that's used in the stack definition for an `SSM` parameter\. For more information, see the [ Parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html) data type in the *AWS CloudFormation API Reference*\.  |  2010\-05\-15  | 
 |  Updated resources  |  November 20, 2017  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
@@ -399,7 +668,7 @@ The following table describes important changes in each release of the AWS Cloud
 |  New resource  |  October 10, 2017  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 |  New resource  |  September 27, 2017  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 | Updated resources | September 27, 2017 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  | 2010\-05\-15 | 
-| Termination protection added for stacks\. | September 26, 2017 | Enabling termination protection on a stack prevents it from being accidentally deleted\. A user cannot delete a stack with termination protection enabled\. For more information, see [Protecting a Stack From Being Deleted](using-cfn-protect-stacks.md)\. | 2010\-05\-15 |
+| Termination protection added for stacks\. | September 26, 2017 | Enabling termination protection on a stack prevents it from being accidentally deleted\. A user cannot delete a stack with termination protection enabled\. For more information, see [Protecting a Stack From Being Deleted](using-cfn-protect-stacks.md)\. | 2010\-05\-15 | 
 |  Changed default `umask` value from version 1\.4\-22 onwards  |  September 14, 2017  |  The default `umask` parameter value for the cfn\-hup\.conf configuration file is now `022`\. For more information, see [cfn\-hup](cfn-hup.md)\.  |   | 
 | Updated resources | September 7, 2017 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  | 2010\-05\-15 | 
 |  Rollback triggers added to the AWS CloudFormation API  |  August 31, 2017  |  Rollback triggers enable you to have AWS CloudFormation monitor the state of your application during stack creation and updating, and to roll back that operation if the application breaches the threshold of any of the alarms you've specified\. For more information, see [ RollbackConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RollbackConfiguration.html) in the *AWS CloudFormation API Reference*\.  |  2010\-05\-15  | 
@@ -460,13 +729,13 @@ The following table describes important changes in each release of the AWS Cloud
 |  New intrinsic function  |  September 19, 2016  |  Use the `Fn::Sub` function to substitute variables in an input string with values that you specify\. For more information, see [`Fn::Sub`](intrinsic-function-reference-sub.md)\.  |  2010\-05\-15  | 
 |  New resources  |  September 19, 2016  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  | 
 |  Updated resources  |  September 19, 2016  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
-|  New resources  |  August 11, 2016  |  Use the following Elastic Load Balancing Application load balancer resources to distribute incoming application traffic to multiple targets, such as EC2 instances, in multiple Availability Zones: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
+|  New resources  |  August 11, 2016  |  Use the following Elastic Load Balancing Application Load Balancer resources to distribute incoming application traffic to multiple targets, such as EC2 instances, in multiple Availability Zones: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 |  Updated resource  |  August 11, 2016  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 |  New resources  |  August 09, 2016  |  AWS CloudFormation added the following resources: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 |  Updated resources  |  August 09, 2016  |  AWS CloudFormation updated the following resources: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 | New resources |  July 20, 2016  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 |  Updated resources  |  July 20, 2016  |  AWS CloudFormation updated the following resources: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
-|  Auto Scaling group UpdatePolicy  |  June 9, 2016  |  For the `UpdatePolicy` attribute, use the `AutoScalingReplacingUpdate` property to specify whether an Auto Scaling group and the instances it contains are replaced when you update the Auto Scaling group\. During a replacement, AWS CloudFormation retains the old Auto Scaling group until it creates the new one successfully so that AWS CloudFormation can roll back to the old Auto Scaling group if the update fails\. For more information, see [UpdatePolicy](aws-attribute-updatepolicy.md)\.  |  2010\-05\-15  | 
+|  Auto Scaling group UpdatePolicy  |  June 9, 2016  |  For the `UpdatePolicy` attribute, use the `AutoScalingReplacingUpdate` property to specify whether an Auto Scaling group and the instances it contains are replaced when you update the Auto Scaling group\. During a replacement, AWS CloudFormation retains the old Auto Scaling group until it creates the new one successfully so that AWS CloudFormation can roll back to the old Auto Scaling group if the update fails\. For more information, see [UpdatePolicy Attribute](aws-attribute-updatepolicy.md)\.  |  2010\-05\-15  | 
 |  New resource  |  June 9, 2016  |  AWS CloudFormation added the following resources: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 |  Updated resources  |  June 9, 2016  |  AWS CloudFormation updated the following resources: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 |  New resource  |  April 25, 2016  |  Use the [AWS::EC2::Host](aws-resource-ec2-host.md) resource to allocate a fully dedicated physical server for launching EC2 instances\.  |  2010\-05\-15  | 
@@ -508,7 +777,7 @@ The following table describes important changes in each release of the AWS Cloud
 |  Amazon RDS update  |  December 24, 2014  |  AWS CloudFormation added two new properties for RDS DB instances\. You can associate an option group with a DB instance and specify the DB instance storage type\. For more information, see [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)\.  |  2010\-05\-15  | 
 |  Elastic Load Balancing update  |  December 24, 2014  |  You can use the `ConnectionSettings` property to specify how long connections can remain idle\. For more information, see [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md)\.  |  2010\-05\-15  | 
 |  Route 53 update  |  November 6, 2014  |  You can now provision and manage Route 53 [hosted zones](aws-resource-route53-hostedzone.md), [health checks](aws-resource-route53-healthcheck.md), [failover record sets](aws-properties-route53-recordset.md), and [geolocation record sets](aws-properties-route53-recordset-geolocation.md)\.  |  2010\-05\-15  | 
-|  Auto Scaling rolling update enhancement  |  November 6, 2014  |  During an update, you can use the `WaitOnResourceSignals` flag to instruct AWS CloudFormation to wait for instances to signal success\. That way, AWS CloudFormation won't update the next batch of instances until the current batch is ready\. For more information, see [UpdatePolicy](aws-attribute-updatepolicy.md)\.  |  2010\-05\-15  | 
+|  Auto Scaling rolling update enhancement  |  November 6, 2014  |  During an update, you can use the `WaitOnResourceSignals` flag to instruct AWS CloudFormation to wait for instances to signal success\. That way, AWS CloudFormation won't update the next batch of instances until the current batch is ready\. For more information, see [UpdatePolicy Attribute](aws-attribute-updatepolicy.md)\.  |  2010\-05\-15  | 
 |  New VPC Fn:GetAtt attributes  |  November 6, 2014  |  Given a VPC ID, you can retrieve the default security group and network ACL for that VPC\. For more information, see [`Fn::GetAtt`](intrinsic-function-reference-getatt.md)\.  |  2010\-05\-15  | 
 |  New AWS\-specific parameter types  |  November 6, 2014  |  You can specify AWS\-specific parameter types in your AWS CloudFormation templates\. In the AWS CloudFormation console, these parameter types provide a drop\-down list of valid values\. With the API or CLI, AWS CloudFormation can quickly validate values for these parameter types before creating or updating a stack\. For more information, see [Parameters](parameters-section-structure.md)\.  |  2010\-05\-15  | 
 |  CreationPolicy attribute  |  November 6, 2014  |  With the CreationPolicy attribute, you can instruct AWS CloudFormation to wait until applications are ready on EC2 instances before proceeding with stack creation\. You can use a creation policy instead of a wait condition and wait condition handle\. For more information, see [CreationPolicy](aws-attribute-creationpolicy.md)\.  |  2010\-05\-15  | 
@@ -517,7 +786,7 @@ The following table describes important changes in each release of the AWS Cloud
 |  Elastic Load Balancing tagging support  |  September 29, 2014  |  AWS CloudFormation tags Elastic Load Balancing load balancers with stack\-level tags\. You can also add your own tags to a load balancer\. See [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md)\.  |  2010\-05\-15  | 
 |  Amazon Simple Notification Service topic policy update  |  September 29, 2014  |  You can now update Amazon SNS topic policies\. For more information, see [AWS::SNS::TopicPolicy](aws-properties-sns-policy.md)\.  |  2010\-05\-15  | 
 |  RDS DB instance update  |  September 5, 2014  |  You can specify whether a DB instance is Internet\-facing by using the `PubliclyAccessible` property in the [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md) resource\.  |  2010\-05\-15  | 
-|  UpdatePolicy attribute update  |  September 05, 2014  |  You can specify an update policy for an Auto Scaling group that has an associated scheduled action\. For more information, see [UpdatePolicy](aws-attribute-updatepolicy.md)\.  |  2010\-05\-15  | 
+|  UpdatePolicy attribute update  |  September 05, 2014  |  You can specify an update policy for an Auto Scaling group that has an associated scheduled action\. For more information, see [UpdatePolicy Attribute](aws-attribute-updatepolicy.md)\.  |  2010\-05\-15  | 
 |  Amazon CloudWatch support  |  July 10, 2014  |  You can use AWS CloudFormation to provision and manage Amazon CloudWatch Logs \(CloudWatch Logs\) log groups and metric filters\. For more information, see [AWS::Logs::LogGroup](aws-resource-logs-loggroup.md) or [AWS::Logs::MetricFilter](aws-resource-logs-metricfilter.md)\.  |  2010\-05\-15  | 
 |  Amazon CloudFront distribution configuration update  |  June 17, 2014  |  You can specify additional CloudFront distribution configuration properties: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html) For more information, see [AWS::CloudFront::Distribution](aws-resource-cloudfront-distribution.md)\.  |  2010\-05\-15  | 
 |  EC2 instance update  |  June 17, 2014  |  You can specify whether an instance stops or terminates when you invoke the instance's operating system shutdown command\. For more information, see [AWS::EC2::Instance](aws-properties-ec2-instance.md)\.  |  2010\-05\-15  | 
@@ -544,7 +813,7 @@ The following table describes important changes in each release of the AWS Cloud
 |  Amazon SQS update  |  January 2, 2014  |  You can update SQS queues and specify additional properties\. For more information, see [AWS::SQS::Queue](aws-properties-sqs-queues.md)\.  |  2010\-05\-15  | 
 |  Limit increases  |  January 2, 2014  |  You can specify up to 60 parameters and 60 outputs in your AWS CloudFormation templates\.  |  2010\-05\-15  | 
 |  New console  |  December 19, 2013  |  The new [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation/) adds features like auto\-refreshing stack events and alphabetical ordering of stack parameters\.  |  2010\-05\-15  | 
-|  Cross\-zone load balancing  |  December 19, 2013  |  With cross\-zone load balancing, you can route traffic to back\-end instances across all Availability Zones \(AZs\)\. For more information, see [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md)\.  |  2010\-05\-15  |
+|  Cross\-zone load balancing  |  December 19, 2013  |  With cross\-zone load balancing, you can route traffic to back\-end instances across all Availability Zones \(AZs\)\. For more information, see [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md)\.  |  2010\-05\-15  | 
 |  AWS Elastic Beanstalk environment tiers  |  December 19, 2013  |  You can specify whether AWS Elastic Beanstalk provisions resources to support a web server or to handle background processing tasks\. For more information, see [AWS::ElasticBeanstalk::Environment](aws-properties-beanstalk-environment.md)\.  |  2010\-05\-15  | 
 |  Resource names  |  December 19, 2013  |  You can assign names \(physical IDs\) to the following resources: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html) For more information, see [Name Type](aws-properties-name.md)\.  |  2010\-05\-15  | 
 |  VPN support  |  November 22, 2013  |  You can enable a virtual private gateway \(VGW\) to propagate routes to the routing tables of a VPC\. For more information, see [AWS::EC2::VPNGatewayRoutePropagation](aws-resource-ec2-vpn-gatewayrouteprop.md)\.  |  2010\-05\-15  | 
@@ -561,7 +830,7 @@ The following table describes important changes in each release of the AWS Cloud
 |  Redis and VPC security groups support for Amazon ElastiCache  |  September 3, 2013  |  You can now specify Redis as the cache engine for an Amazon ElastiCache \(ElastiCache\) cluster\. You can also now assign VPC security groups to ElastiCache clusters\. For more information, see [AWS::ElastiCache::CacheCluster](aws-properties-elasticache-cache-cluster.md)\.  |  2010\-05\-15  | 
 |  Parallel stack creation, update and deletion, and nested stack updates   |  August 12, 2013  |  AWS CloudFormation now creates, updates, and deletes resources in parallel, improving the operations' performance\. If you update a top\-level template, AWS CloudFormation automatically updates nested stacks that have changed\. For more information, see [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)\.  |  2010\-05\-15  | 
 |  VPC security groups can now be set in RDS DB instances  |  February 28, 2013  |  You can now assign VPC security groups to an RDS DB instance with AWS CloudFormation\. For more information, see the [VPCSecurityGroups](aws-properties-rds-database-instance.md#cfn-rds-dbinstance-vpcsecuritygroups) property in [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)\.  |  2010\-05\-15  | 
-|  Rolling deployments for Amazon EC2 Auto Scaling groups  |  February 20, 2013  |  AWS CloudFormation now supports update policies on Amazon EC2 Auto Scaling groups, which describe how instances in the Amazon EC2 Auto Scaling group are replaced or modified when the Amazon EC2 Auto Scaling group adds or removes instances\. You can modify these settings at stack creation or during a stack update\. For more information and an example, see [UpdatePolicy](aws-attribute-updatepolicy.md)\.  |  2010\-05\-15  | 
+|  Rolling deployments for Amazon EC2 Auto Scaling groups  |  February 20, 2013  |  AWS CloudFormation now supports update policies on Amazon EC2 Auto Scaling groups, which describe how instances in the Amazon EC2 Auto Scaling group are replaced or modified when the Amazon EC2 Auto Scaling group adds or removes instances\. You can modify these settings at stack creation or during a stack update\. For more information and an example, see [UpdatePolicy Attribute](aws-attribute-updatepolicy.md)\.  |  2010\-05\-15  | 
 |  Cancel and rollback action for stack updates  |  February 20, 2013  |  AWS CloudFormation supports the ability to cancel a stack update\. The stack must be in the UPDATE\_IN\_PROGRESS state when the update request is made\. More information is available in the following topics: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 |  EBS\-optimized instances for Amazon EC2 Auto Scaling groups  |  February 20, 2013  |  You can now provision EBS\-optimized instances in Amazon EC2 Auto Scaling groups for dedicated throughput to Amazon Elastic Block Store \(Amazon EBS\) in autoscaled instances\. The implementation is similar to that of the previously released support for optimized Amazon EBS EC2 instances\. For more information, see the new `EbsOptimized` property in [AWS::AutoScaling::LaunchConfiguration](aws-properties-as-launchconfig.md)\.  |  2010\-05\-15  | 
 |  New documentation  |  December 21, 2012  |  [AWS::EC2::Instance](aws-properties-ec2-instance.md) now provides a `BlockDeviceMappings` property to allow you to set block device mappings for your EC2 instance\. With this change, two new types have been added: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 

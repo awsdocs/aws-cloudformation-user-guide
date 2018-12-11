@@ -2,7 +2,7 @@
 
 Provides additional mapping information when JSON is the record format on the streaming source\.
 
- `JSONMappingParameters` is a property of the [Kinesis Data Analytics ApplicationReferenceDataSource MappingParameters](aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.md) parameter\. 
+ `JSONMappingParameters` is a property of the [MappingParameters](aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.md) parameter\. 
 
 ## Syntax<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-jsonmappingparameters-syntax"></a>
 

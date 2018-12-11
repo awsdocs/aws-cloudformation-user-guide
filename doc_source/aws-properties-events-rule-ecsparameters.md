@@ -2,7 +2,7 @@
 
 <a name="aws-properties-events-rule-ecsparameters-description"></a>The `EcsParameters` property type specifies information about an Amazon Elastic Container Service \(Amazon ECS\) task target\.
 
-<a name="aws-properties-events-rule-ecsparameters-inheritance"></a> `EcsParameters` is a property of the [CloudWatch Events Rule Target](aws-properties-events-rule-target.md) property type\. 
+<a name="aws-properties-events-rule-ecsparameters-inheritance"></a> `EcsParameters` is a property of the [Target](aws-properties-events-rule-target.md) property type\. 
 
 ## Syntax<a name="aws-properties-events-rule-ecsparameters-syntax"></a>
 

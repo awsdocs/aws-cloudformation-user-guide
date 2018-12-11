@@ -2,7 +2,7 @@
 
 The `KinesisStreamsInput` property type specifies an Amazon Kinesis stream as the streaming source for an Amazon Kinesis Data Analytics application\. 
 
- `KinesisStreamsInput` is a property of the [Kinesis Data Analytics Application Input](aws-properties-kinesisanalytics-application-input.md) property type\. 
+ `KinesisStreamsInput` is a property of the [Input](aws-properties-kinesisanalytics-application-input.md) property type\. 
 
 ## Syntax<a name="aws-properties-kinesisanalytics-application-kinesisstreamsinput-syntax"></a>
 

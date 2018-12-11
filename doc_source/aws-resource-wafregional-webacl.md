@@ -2,12 +2,6 @@
 
 The `AWS::WAFRegional::WebACL` resource creates an AWS WAF Regional web access control group \(ACL\) containing the rules that identify the Amazon CloudFront \(CloudFront\) web requests that you want to allow, block, or count\. For more information, see [CreateWebACL](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_CreateWebACL.html) in the *AWS WAF Regional API Reference*\.
 
-**Topics**
-+ [Syntax](#aws-resource-wafregional-webacl-syntax)
-+ [Properties](#w4ab1c21c10e1260b9)
-+ [Return Values](#w4ab1c21c10e1260c11)
-+ [Examples](#w4ab1c21c10e1260c13)
-
 ## Syntax<a name="aws-resource-wafregional-webacl-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -39,7 +33,7 @@ Properties:
     - Rule
 ```
 
-## Properties<a name="w4ab1c21c10e1260b9"></a>
+## Properties<a name="w4ab1c21c10d213c33b7"></a>
 
 `DefaultAction`  <a name="cfn-wafregional-webacl-defaultaction"></a>
 The action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL\.  
@@ -65,17 +59,17 @@ The rules to associate with the web ACL and the settings for each rule\.
 *Type*: List of [AWS WAF Regional WebACL Rules](aws-properties-wafregional-webacl-rules.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10e1260c11"></a>
+## Return Values<a name="w4ab1c21c10d213c33b9"></a>
 
-### Ref<a name="w4ab1c21c10e1260c11b2"></a>
+### Ref<a name="w4ab1c21c10d213c33b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name, such as `1234a1a-a1b1-12a1-abcd-a123b123456`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w4ab1c21c10e1260c13"></a>
+## Examples<a name="w4ab1c21c10d213c33c11"></a>
 
-### Create a Web ACL<a name="w4ab1c21c10e1260c13b2"></a>
+### Create a Web ACL<a name="w4ab1c21c10d213c33c11b2"></a>
 
 The following example defines a web ACL that allows, by default, any web request\. However, if the request matches any rule, AWS WAF blocks the request\. AWS WAF evaluates each rule in priority order, starting with the lowest value\.
 
@@ -148,7 +142,7 @@ MyWebACL:
           Ref: "SqlInjRule"
 ```
 
-### Associate a Web ACL with a CloudFront Distribution<a name="w4ab1c21c10e1260c13b4"></a>
+### Associate a Web ACL with a CloudFront Distribution<a name="w4ab1c21c10d213c33c11b4"></a>
 
 The follow example associates the `MyWebACL` web ACL with a CloudFront distribution\. The web ACL restricts which requests can access content served by CloudFront\.
 

@@ -2,12 +2,6 @@
 
 The `AWS::IAM::User` type creates a user\.
 
-**Topics**
-+ [Syntax](#aws-resource-iam-user-syntax)
-+ [Properties](#aws-properties-iam-user-prop)
-+ [Return Values](#aws-properties-iam-user-ref)
-+ [Template Examples](#w4ab1c21c10d792c13)
-
 ## Syntax<a name="aws-resource-iam-user-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -22,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[LoginProfile](#cfn-iam-user-loginprofile)": LoginProfile Type,
     "[ManagedPolicyArns](#cfn-iam-user-managepolicyarns)": [ String, ... ],
     "[Path](#cfn-iam-user-path)": String,
+    "[PermissionsBoundary](#cfn-iam-user-permissionsboundary)": String,   
     "[Policies](#cfn-iam-user-policies)": [ Policies, ... ],
     "[UserName](#cfn-iam-user-username)": String
   }
@@ -40,6 +35,7 @@ Properties:
   [ManagedPolicyArns](#cfn-iam-user-managepolicyarns):
     - String
   [Path](#cfn-iam-user-path): String
+  [PermissionsBoundary](#cfn-iam-user-permissionsboundary): String
   [Policies](#cfn-iam-user-policies):
     - Policies
   [UserName](#cfn-iam-user-username): String
@@ -71,6 +67,12 @@ The path for the user name\. For more information about paths, see [IAM Identifi
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
+`PermissionsBoundary`  <a name="cfn-iam-user-permissionsboundary"></a>
+The ARN of the policy that is used to set the permissions boundary for the user\. Minimum length of 20\. Maximum length of 2048\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
 `Policies`  <a name="cfn-iam-user-policies"></a>
 The policies to associate with this user\. For information about policies, see [Overview of IAM Policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/index.html?PoliciesOverview.html) in the *IAM User Guide*\.  
 If you specify multiple polices, specify unique values for the policy name\. If you don't, updates to the IAM user will fail\.
@@ -89,13 +91,13 @@ Naming an IAM resource can cause an unrecoverable error if you reuse the same te
 
 ## Return Values<a name="aws-properties-iam-user-ref"></a>
 
-### Ref<a name="w4ab1c21c10d792c11b2"></a>
+### Ref<a name="w4ab1c21c10d144c45b9b2"></a>
 
 Specifying this resource ID to the intrinsic Ref function will return the `UserName`\. For example: `mystack-myuser-1CCXAFG2H2U4D`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d792c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d144c45b9b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -104,6 +106,6 @@ Returns the Amazon Resource Name \(ARN\) for the specified AWS::IAM::User resour
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Template Examples<a name="w4ab1c21c10d792c13"></a>
+## Template Examples<a name="w4ab1c21c10d144c45c11"></a>
 
 To view AWS::IAM::User snippets, see: [Declaring an IAM User Resource](quickref-iam.md#scenario-iam-user)\.

@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
     "[EndpointName](#cfn-sagemaker-endpoint-endpointname)" : String,
     "[EndpointConfigName](#cfn-sagemaker-endpoint-endpointconfigname)" : String,
-    "[Tags](#cfn-sagemaker-endpoint-tags)" : [ [*Tag*](aws-properties-sagemaker-endpoint-tag.md), ... ]
+    "[Tags](#cfn-sagemaker-endpoint-tags)" : [ [*Tag*](aws-properties-resource-tags.md), ... ]
   }
 }
 ```
@@ -33,7 +33,7 @@ Properties:
   [EndpointName](#cfn-sagemaker-endpoint-endpointname): String
   [EndpointConfigName](#cfn-sagemaker-endpoint-endpointconfigname): String
   [Tags](#cfn-sagemaker-endpoint-tags): 
-    - [*Tag*](aws-properties-sagemaker-endpoint-tag.md)
+    - [*Tag*](aws-properties-resource-tags.md)
 ```
 
 ## Properties<a name="aws-resource-sagemaker-endpoint-properties"></a>
@@ -51,9 +51,9 @@ The name of the [AWS::SageMaker::EndpointConfig](aws-resource-sagemaker-endpoint
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Tags`  <a name="cfn-sagemaker-endpoint-tags"></a>
-An array of key\-value pairs\. For more information, see [Using Cost Allocation Tags](awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what) in the *AWS Billing and Cost Management User Guide*\.  
+An array of key\-value pairs\. For more information, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.  
  *Required*: Yes  
- *Type*: List of [Amazon SageMaker Endpoint Tag](aws-properties-sagemaker-endpoint-tag.md)  
+ *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-sagemaker-endpoint-returnvalues"></a>

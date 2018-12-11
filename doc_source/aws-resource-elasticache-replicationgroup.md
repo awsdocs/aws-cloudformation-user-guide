@@ -2,13 +2,6 @@
 
 The `AWS::ElastiCache::ReplicationGroup` resource creates an Amazon ElastiCache Redis replication group\. A *replication group* is a collection of cache clusters, where one of the clusters is a primary read\-write cluster and the others are read\-only replicas\. 
 
-**Topics**
-+ [Syntax](#aws-resource-elasticache-replicationgroup-syntax)
-+ [Properties](#aws-resource-elasticache-replicationgroup-properties)
-+ [Return Values](#aws-resource-elasticache-replicationgroup-returnvalues)
-+ [Examples](#aws-resource-elasticache-replicationgroup-examples)
-+ [See Also](#aws-resource-elasticache-replicationgroup-seealso)
-
 ## Syntax<a name="aws-resource-elasticache-replicationgroup-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -322,7 +315,7 @@ The time range \(in UTC\) when ElastiCache takes a daily snapshot of the node gr
 `Tags`  <a name="cfn-elasticache-replicationgroup-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this replication group\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `TransitEncryptionEnabled`  <a name="cfn-elasticache-replicationgroup-transitencryptionenabled"></a>

@@ -2,7 +2,7 @@
 
 The `DestinationSchema` property describes the data format when records are written to the destination\.
 
- `DestinationSchema` is a property of the [Kinesis Data Analytics ApplicationOutput Output](aws-properties-kinesisanalytics-applicationoutput-output.md) property type\.
+ `DestinationSchema` is a property of the [Output](aws-properties-kinesisanalytics-applicationoutput-output.md) property type\.
 
 ## Syntax<a name="aws-properties-kinesisanalytics-applicationoutput-destinationschema-syntax"></a>
 

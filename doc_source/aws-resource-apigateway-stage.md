@@ -2,12 +2,6 @@
 
 The `AWS::ApiGateway::Stage` resource creates a stage for an Amazon API Gateway \(API Gateway\) deployment\.
 
-**Topics**
-+ [Syntax](#aws-resource-apigateway-stage-syntax)
-+ [Properties](#w4ab1c21c10c85b9)
-+ [Return Value](#w4ab1c21c10c85c11)
-+ [Example](#aws-resource-apigateway-stage-examples)
-
 ## Syntax<a name="aws-resource-apigateway-stage-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -29,6 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[MethodSettings](#cfn-apigateway-stage-methodsettings)" : [ [*MethodSetting*](aws-properties-apigateway-stage-methodsetting.md), ... ],
     "[RestApiId](#cfn-apigateway-stage-restapiid)" : String,
     "[StageName](#cfn-apigateway-stage-stagename)" : String,
+    "[Tags](#cfn-apigateway-stage-tags)" : [ [Resource Tag](aws-properties-resource-tags.md), ... ],
+    "[TracingEnabled](#cfn-apigateway-stage-tracingenabled)" : Boolean,
     "[Variables](#cfn-apigateway-stage-variables)" : { String:String, ... }
   }
 }
@@ -51,16 +47,19 @@ Properties:
     - [*MethodSetting*](aws-properties-apigateway-stage-methodsetting.md)
   [RestApiId](#cfn-apigateway-stage-restapiid): String
   [StageName](#cfn-apigateway-stage-stagename): String
+  [Tags](#cfn-apigateway-stage-tags): 
+    - [Resource Tag](aws-properties-resource-tags.md)
+  [TracingEnabled](#cfn-apigateway-stage-tracingenabled): Boolean
   [Variables](#cfn-apigateway-stage-variables):
     String: String
 ```
 
-## Properties<a name="w4ab1c21c10c85b9"></a>
+## Properties<a name="w4ab1c21c10c20c77b9"></a>
 
 `AccessLogSetting`  <a name="cfn-apigateway-stage-accesslogsetting"></a>
 Specifies settings for logging access in this stage\.  
 *Required*: No  
-*Type*: [API Gateway Stage AccessLogSetting](aws-properties-apigateway-stage-accesslogsetting.md)  
+*Type*: [AccessLogSetting](aws-properties-apigateway-stage-accesslogsetting.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `CacheClusterEnabled`  <a name="cfn-apigateway-stage-cacheclusterenabled"></a>
@@ -78,7 +77,7 @@ The stage's cache cluster size\.
 `CanarySetting`  <a name="cfn-apigateway-stage-canarysetting"></a>
 Specifies settings for the canary deployment in this stage\.  
 *Required*: No  
-*Type*: [API Gateway Stage CanarySetting](aws-properties-apigateway-stage-canarysetting.md)  
+*Type*: [CanarySetting](aws-properties-apigateway-stage-canarysetting.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ClientCertificateId`  <a name="cfn-apigateway-stage-clientcertificateid"></a>
@@ -107,7 +106,7 @@ The version identifier of the API documentation snapshot\.
 `MethodSettings`  <a name="cfn-apigateway-stage-methodsettings"></a>
 Settings for all methods in the stage\.  
 *Required*: No  
-*Type*: List of [API Gateway Stage MethodSetting](aws-properties-apigateway-stage-methodsetting.md)  
+*Type*: List of [MethodSetting](aws-properties-apigateway-stage-methodsetting.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `RestApiId`  <a name="cfn-apigateway-stage-restapiid"></a>
@@ -122,15 +121,28 @@ The name of the stage, which API Gateway uses as the first path segment in the i
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
+`Tags`  <a name="cfn-apigateway-stage-tags"></a>
+An array of arbitrary tags \(key\-value pairs\) to associate with the stage\.  
+*Required*: No  
+*Type*: List of [Resource Tag](aws-properties-resource-tags.md) property types  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`TracingEnabled`  <a name="cfn-apigateway-stage-tracingenabled"></a>
+Specifies whether active tracing with X\-ray is enabled for this stage\.  
+For more information, see [Trace API Gateway API Execution with AWS X\-Ray](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-xray.html) in the *API Gateway Developer Guide*\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
 `Variables`  <a name="cfn-apigateway-stage-variables"></a>
 A map \(string\-to\-string map\) that defines the stage variables, where the variable name is the key and the variable value is the value\. Variable names are limited to alphanumeric characters\. Values must match the following regular expression: `[A-Za-z0-9-._~:/?#&amp;=,]+`\.  
 *Required*: No  
 *Type*: Mapping of key\-value pairs  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10c85c11"></a>
+## Return Value<a name="w4ab1c21c10c20c77c11"></a>
 
-### Ref<a name="w4ab1c21c10c85c11b2"></a>
+### Ref<a name="w4ab1c21c10c20c77c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the name of the stage, such as `MyTestStage`\.
 

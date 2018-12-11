@@ -2,7 +2,7 @@
 
 <a name="aws-properties-glue-partition-serdeinfo-description"></a>The `SerdeInfo` property type specifies information about a serialization/deserialization program \(SerDe\), which serves as an extractor and loader for an AWS Glue partition\.
 
-<a name="aws-properties-glue-partition-serdeinfo-inheritance"></a> `SerdeInfo` is a property of the [AWS Glue Partition StorageDescriptor](aws-properties-glue-partition-storagedescriptor.md) property type\.
+<a name="aws-properties-glue-partition-serdeinfo-inheritance"></a> `SerdeInfo` is a property of the [StorageDescriptor](aws-properties-glue-partition-storagedescriptor.md) property type\.
 
 ## Syntax<a name="aws-properties-glue-partition-serdeinfo-syntax"></a>
 

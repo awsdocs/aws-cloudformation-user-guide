@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [Value](#cfn-codebuild-project-environmentvariable-value): String
 ```
 
-## Properties<a name="w4ab1c21c14d397b9"></a>
+## Properties<a name="w4ab1c21c10c66c13c25b9"></a>
 
 `Name`  <a name="cfn-codebuild-project-environmentvariable-name"></a>
 The name of an environment variable\.  

@@ -4,9 +4,9 @@ The `AWS::Logs::Destination` resource creates an Amazon CloudWatch Logs \(CloudW
 
 **Topics**
 + [Syntax](#aws-resource-logs-destination-syntax)
-+ [Properties](#w4ab1c21c10d899b9)
-+ [Return Values](#w4ab1c21c10d899c11)
-+ [Example](#w4ab1c21c10d899c13)
++ [Properties](#w4ab1c21c10c63c39b9)
++ [Return Values](#w4ab1c21c10c63c39c11)
++ [Example](#w4ab1c21c10c63c39c13)
 
 ## Syntax<a name="aws-resource-logs-destination-syntax"></a>
 
@@ -37,10 +37,10 @@ Properties:
   [TargetArn](#cfn-logs-destination-targetarn): String
 ```
 
-## Properties<a name="w4ab1c21c10d899b9"></a>
+## Properties<a name="w4ab1c21c10c63c39b9"></a>
 
 `DestinationName`  <a name="cfn-logs-destination-destinationname"></a>
-The name of the CloudWatch Logs destination\. The name is required because you will have to refer to the destination name explicitly in the `DestinationPolicy`\.
+The name of the CloudWatch Logs destination that you will reference in the `DestinationPolicy` property\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -63,9 +63,9 @@ The ARN of the AWS resource that receives log events\. Currently, you can specif
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d899c11"></a>
+## Return Values<a name="w4ab1c21c10c63c39c11"></a>
 
-### Ref<a name="w4ab1c21c10d899c11b2"></a>
+### Ref<a name="w4ab1c21c10c63c39c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name, such as `TestDestination`\.
 
@@ -80,7 +80,7 @@ The ARN of the CloudWatch Logs destination, such as `arn:aws:logs:us-east-2:1234
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Example<a name="w4ab1c21c10d899c13"></a>
+## Example<a name="w4ab1c21c10c63c39c13"></a>
 
 In the following example, the target stream \(`TestStream`\) can receive log events from the `logger` IAM user that is in the `234567890123` AWS account\. The user can call only the `PutSubscriptionFilter` action against the `TestDestination` destination\.
 

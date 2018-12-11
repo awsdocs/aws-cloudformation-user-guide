@@ -2,7 +2,7 @@
 
 `VpcSettings` is a property of the [AWS::DirectoryService::MicrosoftAD](aws-resource-directoryservice-microsoftad.md) resource that specifies the VPC settings for a Microsoft directory server\.
 
-## Syntax<a name="w4ab1c21c14d648b5"></a>
+## Syntax<a name="w4ab1c21c10c90c13c17b5"></a>
 
 ### JSON<a name="aws-properties-directoryservice-microsoftad-vpcsettings-syntax.json"></a>
 
@@ -21,7 +21,7 @@
 [VpcId](#cfn-directoryservice-microsoftad-vpcsettings-vpcid): String
 ```
 
-## Properties<a name="w4ab1c21c14d648b7"></a>
+## Properties<a name="w4ab1c21c10c90c13c17b7"></a>
 
 `SubnetIds`  <a name="cfn-directoryservice-microsoftad-vpcsettings-subnetids"></a>
 A list of two subnet IDs for the directory servers\. Each subnet must be in different Availability Zones \(AZs\)\. AWS Directory Service creates a directory server and a DNS server in each subnet\.  

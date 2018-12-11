@@ -43,7 +43,7 @@ The `RedshiftDestinationConfiguration` property type specifies an Amazon Redshif
 `CloudWatchLoggingOptions`  <a name="cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-cloudwatchloggingoptions"></a>
 The Amazon CloudWatch Logs logging options for the delivery stream\.  
 *Required*: No  
-*Type*: [Kinesis Data Firehose DeliveryStream CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md)
+*Type*: [CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md)
 
 `ClusterJDBCURL`  <a name="cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-clusterjdbcurl"></a>
 The connection string that Kinesis Data Firehose uses to connect to the Amazon Redshift cluster\.  
@@ -53,7 +53,7 @@ The connection string that Kinesis Data Firehose uses to connect to the Amazon R
 `CopyCommand`  <a name="cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-copycommand"></a>
 Configures the Amazon Redshift `COPY` command that Kinesis Data Firehose uses to load data into the cluster from the Amazon S3 bucket\.  
 *Required*: Yes  
-*Type*: [Kinesis Data Firehose DeliveryStream CopyCommand](aws-properties-kinesisfirehose-deliverystream-copycommand.md)
+*Type*: [CopyCommand](aws-properties-kinesisfirehose-deliverystream-copycommand.md)
 
 `Password`  <a name="cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-password"></a>
 The password for the Amazon Redshift user that you specified in the `Username` property\.  
@@ -63,7 +63,7 @@ The password for the Amazon Redshift user that you specified in the `Username` p
 `ProcessingConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-processingconfiguration"></a>
 The data processing configuration for the Kinesis Data Firehose delivery stream\.  
  *Required*: No  
- *Type*: [Kinesis Data Firehose DeliveryStream ProcessingConfiguration](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md)
+ *Type*: [ProcessingConfiguration](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md)
 
 `RoleARN`  <a name="cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-rolearn"></a>
 The ARN of the AWS Identity and Access Management \(IAM\) role that grants Kinesis Data Firehose access to your Amazon S3 bucket and AWS KMS \(if you enable data encryption\)\.  
@@ -74,7 +74,7 @@ For more information, see [Grant Kinesis Data Firehose Access to an Amazon Redsh
 `S3Configuration`  <a name="cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-s3configuration"></a>
 The S3 bucket where Kinesis Data Firehose first delivers data\. After the data is in the bucket, Kinesis Data Firehose uses the `COPY` command to load the data into the Amazon Redshift cluster\. For the Amazon S3 bucket's compression format, don't specify `SNAPPY` or `ZIP` because the Amazon Redshift `COPY` command doesn't support them\.  
 *Required*: Yes  
-*Type*: [Kinesis Data Firehose DeliveryStream S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)
+*Type*: [S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)
 
 `Username`  <a name="cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-username"></a>
 The Amazon Redshift user that has permission to access the Amazon Redshift cluster\. This user must have `INSERT` privileges for copying data from the Amazon S3 bucket to the cluster\.  

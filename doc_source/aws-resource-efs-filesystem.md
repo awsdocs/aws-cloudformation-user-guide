@@ -2,13 +2,6 @@
 
 The `AWS::EFS::FileSystem` resource creates a new, empty file system in Amazon Elastic File System \(Amazon EFS\)\. You must create a mount target \([AWS::EFS::MountTarget](aws-resource-efs-mounttarget.md)\) to mount your Amazon EFS file system on an Amazon Elastic Compute Cloud \(Amazon EC2\) instance\. For more information, see the [CreateFileSystem](https://docs.aws.amazon.com/efs/latest/ug/API_CreateFileSystem.html) API in the *Amazon Elastic File System User Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-efs-filesystem-syntax)
-+ [Properties](#aws-resource-efs-filesystem-properties)
-+ [Return Value](#aws-resource-efs-filesystem-return-values)
-+ [Example](#aws-resource-efs-filesystem-examples)
-+ [Additional Resources](#aws-resource-efs-filesystem-see-also)
-
 ## Syntax<a name="aws-resource-efs-filesystem-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

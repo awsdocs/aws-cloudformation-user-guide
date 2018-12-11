@@ -2,13 +2,6 @@
 
 The `AWS::DMS::Endpoint` resource creates an AWS DMS endpoint\.
 
-**Topics**
-+ [Syntax](#aws-resource-dms-endpoint-syntax)
-+ [Properties](#aws-resource-dms-endpoint-properties)
-+ [Return Value](#aws-resource-dms-endpoint-examples-returnvalues)
-+ [Example](#aws-resource-dms-endpoint-examples)
-+ [See Also](#w4ab1c21c10d364c15)
-
 ## Syntax<a name="aws-resource-dms-endpoint-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -161,13 +154,13 @@ The tags that you want to attach to the DMS endpoint\.
 
 `Username`  <a name="cfn-dms-endpoint-username"></a>
 The user name to be used to login to the endpoint database\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Value<a name="aws-resource-dms-endpoint-examples-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10d364c11b3"></a>
+### Ref<a name="w4ab1c21c10c96c17c11b3"></a>
 
 When you pass the logical ID of an `AWS::DMS::Endpoint` resource to the intrinsic `Ref` function, the function returns the ARN of the endpoint\.
 
@@ -220,6 +213,6 @@ Resources:
           Value: "new"
 ```
 
-## See Also<a name="w4ab1c21c10d364c15"></a>
+## See Also<a name="w4ab1c21c10c96c17c15"></a>
 + [CreateEndpoint](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateEndpoint.html) in the *AWS Database Migration Service API Reference*\.
 + [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)

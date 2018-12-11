@@ -12,15 +12,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SSM::PatchBaseline",
   "Properties" : {
-    "[OperatingSystem](#cfn-ssm-patchbaseline-operatingsystem)" : String,
-    "[ApprovedPatches](#cfn-ssm-patchbaseline-approvedpatches)" : [ String, ... ],
-    "[PatchGroups](#cfn-ssm-patchbaseline-patchgroups)" : [ String, ... ],
-    "[Description](#cfn-ssm-patchbaseline-description)" : String,
-    "[ApprovedPatchesComplianceLevel](#cfn-ssm-patchbaseline-approvedpatchescompliancelevel)" : String,
-    "[ApprovalRules](#cfn-ssm-patchbaseline-approvalrules)" : [*RuleGroup*](aws-properties-ssm-patchbaseline-rulegroup.md),
-    "[GlobalFilters](#cfn-ssm-patchbaseline-globalfilters)" : [*PatchFilterGroup*](aws-properties-ssm-patchbaseline-patchfiltergroup.md),
     "[Name](#cfn-ssm-patchbaseline-name)" : String,
-    "[RejectedPatches](#cfn-ssm-patchbaseline-rejectedpatches)" : [ String, ... ]
+    "[OperatingSystem](#cfn-ssm-patchbaseline-operatingsystem)" : String,
+    "[Description](#cfn-ssm-patchbaseline-description)" : String,
+    "[PatchGroups](#cfn-ssm-patchbaseline-patchgroups)" : [ String, ... ],
+    "[ApprovalRules](#cfn-ssm-patchbaseline-approvalrules)" : [*RuleGroup*](aws-properties-ssm-patchbaseline-rulegroup.md),
+    "[ApprovedPatches](#cfn-ssm-patchbaseline-approvedpatches)" : [ String, ... ],
+    "[ApprovedPatchesComplianceLevel](#cfn-ssm-patchbaseline-approvedpatchescompliancelevel)" : String,
+    "[ApprovedPatchesEnableNonSecurity](#cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity)" : Boolean,
+    "[RejectedPatches](#cfn-ssm-patchbaseline-rejectedpatches)" : [ String, ... ],
+    "[RejectedPatchesAction](#cfn-ssm-patchbaseline-rejectedpatchesaction)" : [ String ],
+    "[GlobalFilters](#cfn-ssm-patchbaseline-globalfilters)" : [*PatchFilterGroup*](aws-properties-ssm-patchbaseline-patchfiltergroup.md),
+    "[Sources](#cfn-ssm-patchbaseline-patchsource)" : [*PatchSource*](aws-properties-ssm-patchbaseline-patchsource.md)    
   }
 }
 ```
@@ -30,81 +33,105 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::SSM::PatchBaseline"
 Properties:
+  [Name](#cfn-ssm-patchbaseline-name): String
   [OperatingSystem](#cfn-ssm-patchbaseline-operatingsystem): String
-  [ApprovedPatches](#cfn-ssm-patchbaseline-approvedpatches): 
-    - String
+  [Description](#cfn-ssm-patchbaseline-description): String
   [PatchGroups](#cfn-ssm-patchbaseline-patchgroups): 
     - String
-  [Description](#cfn-ssm-patchbaseline-description): String
-  [ApprovedPatchesComplianceLevel](#cfn-ssm-patchbaseline-approvedpatchescompliancelevel): String
   [ApprovalRules](#cfn-ssm-patchbaseline-approvalrules):
-    [*RuleGroup*](aws-properties-ssm-patchbaseline-rulegroup.md)
-  [GlobalFilters](#cfn-ssm-patchbaseline-globalfilters):
-    [*PatchFilterGroup*](aws-properties-ssm-patchbaseline-patchfiltergroup.md)
-  [Name](#cfn-ssm-patchbaseline-name): String
+    [*RuleGroup*](aws-properties-ssm-patchbaseline-rulegroup.md)        
+  [ApprovedPatches](#cfn-ssm-patchbaseline-approvedpatches): 
+    - String 
+  [ApprovedPatchesComplianceLevel](#cfn-ssm-patchbaseline-approvedpatchescompliancelevel): String
+  [ApprovedPatchesEnableNonSecurity](#cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity) : Boolean
   [RejectedPatches](#cfn-ssm-patchbaseline-rejectedpatches): 
     - String
+  [RejectedPatchesAction](#cfn-ssm-patchbaseline-rejectedpatchesaction) : 
+    - String
+  [GlobalFilters](#cfn-ssm-patchbaseline-globalfilters):
+    [*PatchFilterGroup*](aws-properties-ssm-patchbaseline-patchfiltergroup.md)
+  [Sources](#cfn-ssm-patchbaseline-patchsource) : [*PatchSource*](aws-properties-ssm-patchbaseline-patchsource.md)
 ```
 
 ## Properties<a name="aws-resource-ssm-patchbaseline-properties"></a>
 
+`Name`  <a name="cfn-ssm-patchbaseline-name"></a>
+The name of the patch baseline\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
 `OperatingSystem`  <a name="cfn-ssm-patchbaseline-operatingsystem"></a>
 Defines the operating system that the patch baseline applies to\. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `UBUNTU`, `REDHAT_ENTERPRISE_LINUX`, `SUSE`, and `CENTOS`\. The default value is `WINDOWS`\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
-
-`ApprovedPatches`  <a name="cfn-ssm-patchbaseline-approvedpatches"></a>
-A list of explicitly approved patches for the baseline\.  
- *Required*: No  
- *Type*: List of String values  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
-`PatchGroups`  <a name="cfn-ssm-patchbaseline-patchgroups"></a>
-The names of the patch groups to register with the patch baseline\.  
- *Required*: No  
- *Type*: List of String values  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Description`  <a name="cfn-ssm-patchbaseline-description"></a>
 A description of the patch baseline\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`ApprovedPatchesComplianceLevel`  <a name="cfn-ssm-patchbaseline-approvedpatchescompliancelevel"></a>
-The compliance level for approved patches\. This means that if an approved patch is reported as missing, this is the severity of the compliance violation\. Valid compliance severity levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, and `UNSPECIFIED`\. The default value is `UNSPECIFIED`\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+`PatchGroups`  <a name="cfn-ssm-patchbaseline-patchgroups"></a>
+The names of the patch groups to register with the patch baseline\.  
+*Required*: No  
+*Type*: List of String values  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ApprovalRules`  <a name="cfn-ssm-patchbaseline-approvalrules"></a>
 A set of rules that are used to include patches in the baseline\.  
- *Required*: No  
- *Type*: [Systems Manager PatchBaseline RuleGroup](aws-properties-ssm-patchbaseline-rulegroup.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+ *Type*: [RuleGroup](aws-properties-ssm-patchbaseline-rulegroup.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`GlobalFilters`  <a name="cfn-ssm-patchbaseline-globalfilters"></a>
-A set of global filters that are used to exclude patches from the baseline\.  
- *Required*: No  
- *Type*: [Systems Manager PatchBaseline PatchFilterGroup](aws-properties-ssm-patchbaseline-patchfiltergroup.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+`ApprovedPatches`  <a name="cfn-ssm-patchbaseline-approvedpatches"></a>
+A list of explicitly approved patches for the baseline\.  
+*Required*: No  
+*Type*: List of String values  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-`Name`  <a name="cfn-ssm-patchbaseline-name"></a>
-The name of the patch baseline\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+`ApprovedPatchesComplianceLevel`  <a name="cfn-ssm-patchbaseline-approvedpatchescompliancelevel"></a>
+The compliance level for approved patches\. This means that if an approved patch is reported as missing, this is the severity of the compliance violation\. Valid compliance severity levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, and `UNSPECIFIED`\. The default value is `UNSPECIFIED`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+ApprovedPatchesEnableNonSecurity  <a name="cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity"></a>
+Indicates whether the list of approved patches includes non\-security updates that should be applied to the instances\. The default value is 'false'\. Applies to Linux instances only\.   
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `RejectedPatches`  <a name="cfn-ssm-patchbaseline-rejectedpatches"></a>
 A list of explicitly rejected patches for the baseline\.  
- *Required*: No  
- *Type*: List of String values  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: List of String values  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+RejectedPatchesAction  <a name="cfn-ssm-patchbaseline-rejectedpatchesaction"></a>
+The action for Patch Manager to take on patches included in the RejectedPackages list\.  
++ **ALLOW\_AS\_DEPENDENCY**: A package in the Rejected patches list is installed only if it is a dependency of another package\. It is considered compliant with the patch baseline, and its status is reported as *InstalledOther*\. This is the default action if no option is specified\.
++ **BLOCK**: Packages in the RejectedPatches list, and packages that include them as dependencies, are not installed under any circumstances\. If a package was installed before it was added to the Rejected patches list, it is considered non\-compliant with the patch baseline, and its status is reported as *InstalledRejected*\.
+*Required*: No  
+*Type*: List of String values  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`GlobalFilters`  <a name="cfn-ssm-patchbaseline-globalfilters"></a>
+A set of global filters that are used to exclude patches from the baseline\.  
+*Required*: No  
+ *Type*: [PatchFilterGroup](aws-properties-ssm-patchbaseline-patchfiltergroup.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+Sources  <a name="cfn-ssm-patchbaseline-patchsource"></a>
+Information about the patches to use to update the instances, including target operating systems and source repositories\. Applies to Linux instances only\.   
+*Required*: No  
+ *Type*: Array of [PatchSource](aws-properties-ssm-patchbaseline-patchsource.md) objects  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-ssm-patchbaseline-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10e1195b9b3"></a>
+### Ref<a name="w4ab1c21c10d207c31b9b3"></a>
 
 When you pass the logical ID of an `AWS::SSM::PatchBaseline` resource to the intrinsic `Ref` function, the function returns the physical ID of the resource, such as `pb-abcde1234567890yz`\. 
 

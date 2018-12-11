@@ -7,7 +7,7 @@ The `AWS::CodeDeploy::Application` resource creates an AWS CodeDeploy applicatio
 + [Properties](#aws-resource-codedeploy-application-properties)
 + [Return Value](#aws-resource-codedeploy-application-returnvalues)
 + [Examples](#aws-resource-codedeploy-application-examples)
-+ [Related Resources](#w4ab1c21c10d259c15)
++ [Related Resources](#w4ab1c21c10c72c13c15)
 
 ## Syntax<a name="aws-resource-codedeploy-application-syntax"></a>
 
@@ -50,7 +50,7 @@ The compute platform that AWS CodeDeploy deploys the application to\. For valid 
 
 ## Return Value<a name="aws-resource-codedeploy-application-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10d259c11b2"></a>
+### Ref<a name="w4ab1c21c10c72c13c11b2"></a>
 
 When you pass the logical ID of an `AWS::CodeDeploy::Application` resource to the intrinsic `Ref` function, the function returns the application name, such as `myapplication-a123d0d1`\.
 
@@ -102,6 +102,6 @@ CodeDeployApplication:
     ComputePlatform: Server
 ```
 
-## Related Resources<a name="w4ab1c21c10d259c15"></a>
+## Related Resources<a name="w4ab1c21c10c72c13c15"></a>
 
 For configuring your deployment and specifying your application revisions, see [AWS::CodeDeploy::DeploymentConfig](aws-resource-codedeploy-deploymentconfig.md) and [AWS::CodeDeploy::DeploymentGroup](aws-resource-codedeploy-deploymentgroup.md)\.

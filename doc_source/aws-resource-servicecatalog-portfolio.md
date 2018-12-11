@@ -68,7 +68,7 @@ The name of the portfolio provider\.
 `Tags`  <a name="cfn-servicecatalog-portfolio-tags"></a>
 One or more tags\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-servicecatalog-portfolio-returnvalues"></a>

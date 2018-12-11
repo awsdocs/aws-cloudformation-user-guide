@@ -37,12 +37,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Information about the Elastic Load Balancing load balancer to use in the deployment\.  
 Conditional: You must specify either `ElbInfoList` or `TargetGroupInfoList`, but not both\.  
  *Required*: No  
- *Type*: List of [AWS CodeDeploy DeploymentGroup ELBInfo](aws-properties-codedeploy-deploymentgroup-elbinfo.md)  
+ *Type*: List of [ELBInfo](aws-properties-codedeploy-deploymentgroup-elbinfo.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `TargetGroupInfoList`  <a name="cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist"></a>
 information about the target groups to use in the deployment\. Instances are registered as targets in a target group, and traffic is routed to the target group\.   
 Conditional: You must specify either `ElbInfoList` or `TargetGroupInfoList`, but not both\.  
  *Required*: No  
- *Type*: List of [AWS CodeDeploy DeploymentGroup TargetGroupInfo](aws-properties-codedeploy-deploymentgroup-targetgroupinfo.md)  
+ *Type*: List of [TargetGroupInfo](aws-properties-codedeploy-deploymentgroup-targetgroupinfo.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

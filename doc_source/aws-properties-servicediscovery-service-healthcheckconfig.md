@@ -1,6 +1,6 @@
-# Amazon Route 53 ServiceDiscovery HealthCheckConfig<a name="aws-properties-servicediscovery-service-healthcheckconfig"></a>
+# AWS Cloud Map ServiceDiscovery HealthCheckConfig<a name="aws-properties-servicediscovery-service-healthcheckconfig"></a>
 
-<a name="aws-properties-servicediscovery-service-healthcheckconfig-description"></a>The `HealthCheckConfig` property type specifies settings for an optional Amazon Route 53 health check\. If you specify settings for a health check, Route 53 associates the health check with all the resource record sets that you specify in `DnsConfig`\.
+<a name="aws-properties-servicediscovery-service-healthcheckconfig-description"></a>The `HealthCheckConfig` property type specifies settings for an optional Amazon Route 53 health check\. If you specify settings for a health check, AWS Cloud Map associates the health check with all the records that you specify in `DnsConfig`\.
 
 <a name="aws-properties-servicediscovery-service-healthcheckconfig-inheritance"></a>`HealthCheckConfig` is a property of the [AWS::ServiceDiscovery::Service](aws-resource-servicediscovery-service.md) resource\.
 
@@ -41,11 +41,10 @@ The path that you want Route 53 to request when performing health checks\. The 
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `FailureThreshold`  <a name="cfn-servicediscovery-service-healthcheckconfig-failurethreshold"></a>
-The number of consecutive health checks that an endpoint must pass or fail for Route 53 to change the current status of the endpoint from unhealthy to healthy or vice versa\. For more information, see [How Route 53 Determines Whether an Endpoint Is Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html) in the *Amazon Route 53 Developer Guide*  
+The number of consecutive health checks that an endpoint must pass or fail for Route 53 to change the current status of the endpoint from unhealthy to healthy or vice versa\. For more information, see [How Route 53 Determines Whether a Health Check Is Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html) in the *Amazon Route 53 Developer Guide*  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## See Also<a name="aws-properties-servicediscovery-service-healthcheckconfig-seealso"></a>
-+ [Using Autonaming for Service Discovery](https://docs.aws.amazon.com/Route53/latest/APIReference/overview-service-discovery.html) in the *Amazon Route 53 API Reference*
-+ [CreateService](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_CreateService.html) in the *Amazon Route 53 API Reference*
++ [CreateService](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateService.html) in the *AWS Cloud Map API Reference*

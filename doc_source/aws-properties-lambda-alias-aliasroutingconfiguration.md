@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `AdditionalVersionWeights`  <a name="cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights"></a>
 The percentage of traffic that will invoke the updated function version\.  
  *Required*: Yes  
- *Type*: List of [AWS Lambda Alias VersionWeight](aws-properties-lambda-alias-versionweight.md)  
+ *Type*: List of [VersionWeight](aws-properties-lambda-alias-versionweight.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-lambda-alias-aliasroutingconfiguration-seealso"></a>

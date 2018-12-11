@@ -2,7 +2,7 @@
 
 `RecordingGroup` is property of the [AWS::Config::ConfigurationRecorder](aws-resource-config-configurationrecorder.md) resource that defines which AWS resource types to include in a recording group\.
 
-## Syntax<a name="w4ab1c21c14d604b5"></a>
+## Syntax<a name="w4ab1c21c10c81c25c21b5"></a>
 
 ### JSON<a name="aws-properties-config-configurationrecorder-recordinggroup-syntax.json"></a>
 
@@ -23,7 +23,7 @@
   - String
 ```
 
-## Properties<a name="w4ab1c21c14d604b7"></a>
+## Properties<a name="w4ab1c21c10c81c25c21b7"></a>
 
 `AllSupported`  <a name="cfn-config-configurationrecorder-recordinggroup-allsupported"></a>
 Indicates whether to record all supported resource types\. If you specify this property, do not specify the `ResourceTypes` property\.  

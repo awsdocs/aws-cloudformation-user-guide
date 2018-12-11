@@ -4,10 +4,10 @@ Creates a new network ACL in a VPC\.
 
 **Topics**
 + [Syntax](#aws-resource-ec2-networkacl-syntax)
-+ [Properties](#w4ab1c21c10d439b9)
-+ [Return Values](#w4ab1c21c10d439c11)
-+ [Example](#w4ab1c21c10d439c13)
-+ [See Also](#w4ab1c21c10d439c15)
++ [Properties](#w4ab1c21c10d102c67b9)
++ [Return Values](#w4ab1c21c10d102c67c11)
++ [Example](#w4ab1c21c10d102c67c13)
++ [See Also](#w4ab1c21c10d102c67c15)
 
 ## Syntax<a name="aws-resource-ec2-networkacl-syntax"></a>
 
@@ -35,12 +35,12 @@ Properties:
   [VpcId](#cfn-ec2-networkacl-vpcid): String
 ```
 
-## Properties<a name="w4ab1c21c10d439b9"></a>
+## Properties<a name="w4ab1c21c10d102c67b9"></a>
 
 `Tags`  <a name="cfn-ec2-networkacl-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this ACL\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
 `VpcId`  <a name="cfn-ec2-networkacl-vpcid"></a>
@@ -49,15 +49,15 @@ The ID of the VPC where the network ACL will be created\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d439c11"></a>
+## Return Values<a name="w4ab1c21c10d102c67c11"></a>
 
-### Ref<a name="w4ab1c21c10d439c11b2"></a>
+### Ref<a name="w4ab1c21c10d102c67c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d439c13"></a>
+## Example<a name="w4ab1c21c10d102c67c13"></a>
 
 ### JSON<a name="aws-resource-ec2-networkacl-syntax-example-1.json"></a>
 
@@ -91,6 +91,6 @@ Resources:
         Value: bar
 ```
 
-## See Also<a name="w4ab1c21c10d439c15"></a>
+## See Also<a name="w4ab1c21c10d102c67c15"></a>
 + [CreateNetworkAcl](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateNetworkAcl.html) in the *Amazon EC2 API Reference*
 + [Network ACLs](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html) in the *Amazon Virtual Private Cloud User Guide*\.

@@ -8,6 +8,9 @@ The `AWS::AppSync::GraphQLSchema` resource is used for your AWS AppSync GraphQL 
 + [Return Values](#aws-resource-appsync-graphqlschema-returnvalues)
 + [Examples](#aws-resource-appsync-graphqlschema-examples)
 + [See Also](#aws-resource-appsync-graphqlschema-seealso)
++ [AWS AppSync GraphQLApi LogConfig](aws-properties-appsync-graphqlapi-logconfig.md)
++ [AWS AppSync GraphQLApi OpenId Connect Config](aws-properties-appsync-graphqlapi-openidconnectconfig.md)
++ [AWS AppSync GraphQLApi UserPoolConfig](aws-properties-appsync-graphqlapi-userpoolconfig.md)
 
 ## Syntax<a name="aws-resource-appsync-graphqlschema-syntax"></a>
 

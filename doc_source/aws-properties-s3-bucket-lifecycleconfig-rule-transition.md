@@ -2,7 +2,7 @@
 
 Describes when an object transitions to a specified storage class for the [Amazon S3 Bucket Rule](aws-properties-s3-bucket-lifecycleconfig-rule.md) property\.
 
-## Syntax<a name="w4ab1c21c14e1903b5"></a>
+## Syntax<a name="w4ab1c21c10d180c13d170b5"></a>
 
 ### JSON<a name="aws-properties-s3-bucket-lifecycleconfig-rule-transition-syntax.json"></a>
 
@@ -22,7 +22,7 @@ Describes when an object transitions to a specified storage class for the [Amazo
 [TransitionInDays](#cfn-s3-bucket-lifecycleconfig-rule-transition-transitionindays): Integer
 ```
 
-## Properties<a name="w4ab1c21c14e1903b7"></a>
+## Properties<a name="w4ab1c21c10d180c13d170b7"></a>
 
 `StorageClass`  <a name="cfn-s3-bucket-lifecycleconfig-rule-transition-storageclass"></a>
 The storage class to which you want the object to transition, such as `GLACIER`\. For valid values, see the `StorageClass` request element of the [PUT Bucket lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTlifecycle.html) action in the *Amazon Simple Storage Service API Reference*\.  

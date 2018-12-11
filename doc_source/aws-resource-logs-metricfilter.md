@@ -2,12 +2,6 @@
 
 The `AWS::Logs::MetricFilter` resource creates a metric filter that describes how Amazon CloudWatch Logs extracts information from logs that you specify and transforms it into Amazon CloudWatch metrics\. If you have multiple metric filters that are associated with a log group, all the filters are applied to the log streams in that group\.
 
-**Topics**
-+ [Syntax](#aws-resource-logs-metricfilter-syntax)
-+ [Properties](#w4ab1c21c10d911b9)
-+ [Examples](#w4ab1c21c10d911c11)
-+ [Additional Information](#w4ab1c21c10d911c13)
-
 ## Syntax<a name="aws-resource-logs-metricfilter-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -36,7 +30,7 @@ Properties:
     MetricTransformations
 ```
 
-## Properties<a name="w4ab1c21c10d911b9"></a>
+## Properties<a name="w4ab1c21c10c63c51b9"></a>
 
 **Note**  
 For more information about constraints and values for each property, see [PutMetricFilter](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutMetricFilter.html) in the *Amazon CloudWatch Logs API Reference*\.
@@ -60,9 +54,9 @@ Describes how to transform data from a log into a CloudWatch metric\.
 Currently, you can specify only one metric transformation for each metric filter\. If you want to specify multiple metric transformations, you must specify multiple metric filters\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Examples<a name="w4ab1c21c10d911c11"></a>
+## Examples<a name="w4ab1c21c10c63c51c11"></a>
 
-### <a name="w4ab1c21c10d911c11b2"></a>
+### <a name="w4ab1c21c10c63c51c11b2"></a>
 
 The following example sends a value of `1` to the `404Count` metric whenever the status code field includes a `404` value\.
 
@@ -101,6 +95,6 @@ The following example sends a value of `1` to the `404Count` metric whenever the
         MetricName: "404Count"
 ```
 
-## Additional Information<a name="w4ab1c21c10d911c13"></a>
+## Additional Information<a name="w4ab1c21c10c63c51c13"></a>
 
 For an additional sample template, see [Amazon CloudWatch Logs Template Snippets](quickref-cloudwatchlogs.md)\.

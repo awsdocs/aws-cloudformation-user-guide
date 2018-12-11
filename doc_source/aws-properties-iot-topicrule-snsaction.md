@@ -2,7 +2,7 @@
 
 `Sns` is a property of the `Actions` property that describes an action that publishes data to an SNS topic\.
 
-## Syntax<a name="w4ab1c21c14e1478b5"></a>
+## Syntax<a name="w4ab1c21c10d150c39c80b5"></a>
 
 ### JSON<a name="aws-properties-iot-topicrule-snsaction-syntax.json"></a>
 
@@ -22,7 +22,7 @@
 [TargetArn](#cfn-iot-topicrule-snsaction-targetarn): String
 ```
 
-## Properties<a name="w4ab1c21c14e1478b7"></a>
+## Properties<a name="w4ab1c21c10d150c39c80b7"></a>
 
 `MessageFormat`  <a name="cfn-iot-topicrule-snsaction-messageformat"></a>
 The format of the published message\. Amazon SNS uses this setting to determine whether it should parse the payload and extract the platform\-specific bits from the payload\.  

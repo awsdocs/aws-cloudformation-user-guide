@@ -59,7 +59,7 @@ A list of UTF\-8 strings that specify the criteria that you can use in selecting
 `PhysicalConnectionRequirements`  <a name="cfn-glue-connection-connectioninput-physicalconnectionrequirements"></a>
 A map of physical connection requirements that are needed to make the connection, such as VPC and SecurityGroup\.  
  *Required*: Yes  
- *Type*: [AWS Glue Connection PhysicalConnectionRequirements](aws-properties-glue-connection-physicalconnectionrequirements.md)  
+ *Type*: [PhysicalConnectionRequirements](aws-properties-glue-connection-physicalconnectionrequirements.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ConnectionProperties`  <a name="cfn-glue-connection-connectioninput-connectionproperties"></a>

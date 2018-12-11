@@ -2,12 +2,6 @@
 
 The `AWS::EC2::LaunchTemplate` resource creates a launch template for an Amazon EC2 instance\. A launch template contains the parameters to launch an instance\. For more information, see [CreateLaunchTemplate](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html) in the *Amazon EC2 API Reference*\. 
 
-**Topics**
-+ [Syntax](#aws-resource-ec2-launchtemplate-syntax)
-+ [Properties](#aws-resource-ec2-launchtemplate-properties)
-+ [Return Values](#aws-resource-ec2-launchtemplate-returnvalues)
-+ [See Also](#aws-resource-ec2-launchtemplate-seealso)
-
 ## Syntax<a name="aws-resource-ec2-launchtemplate-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -46,7 +40,7 @@ Pattern: \[a\-zA\-Z0\-9\\\(\\\)\\\.\-/\_\]\+
 `LaunchTemplateData`  <a name="cfn-ec2-launchtemplate-launchtemplatedata"></a>
 The information for the launch template\.  
  *Required*: No  
- *Type*: [Amazon EC2 LaunchTemplate LaunchTemplateData](aws-properties-ec2-launchtemplate-launchtemplatedata.md)  
+ *Type*: [LaunchTemplateData](aws-properties-ec2-launchtemplate-launchtemplatedata.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-ec2-launchtemplate-returnvalues"></a>

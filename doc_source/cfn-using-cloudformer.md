@@ -1,9 +1,11 @@
-# Using CloudFormer to Create AWS CloudFormation Templates from Existing AWS Resources<a name="cfn-using-cloudformer"></a>
+# Using CloudFormer \(Beta\) to Create AWS CloudFormation Templates from Existing AWS Resources<a name="cfn-using-cloudformer"></a>
 
 CloudFormer is a template creation beta tool that creates an AWS CloudFormation template from existing AWS resources in your account\. You select any supported AWS resources that are running in your account, and CloudFormer creates a template in an Amazon S3 bucket\.
 
-**Note**  
 Use CloudFormer to produce templates that you can use as a starting point\. Not all AWS resources or resource properties are supported\. 
+
+**Important**  
+CloudFormer is currently in beta\. We recommend against utilizing it in critical or production environments\.
 
 The following list outlines the basic procedure for using CloudFormer:
 

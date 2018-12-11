@@ -4,12 +4,6 @@ The `AWS::Route53::RecordSet` type can be used as a standalone resource or as an
 
 For more information about constraints and values for each property, see [POST CreateHostedZone](http://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html) for hosted zones and [POST ChangeResourceRecordSet](http://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) for resource record sets\.
 
-**Topics**
-+ [Syntax](#aws-resource-route53-recordset-syntax)
-+ [Properties](#w4ab1c21c10e1053c11)
-+ [Return Value](#w4ab1c21c10e1053c13)
-+ [Example](#w4ab1c21c10e1053c15)
-
 ## Syntax<a name="aws-resource-route53-recordset-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -27,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[HealthCheckId](#cfn-route53-recordset-healthcheckid)" : String,
     "[HostedZoneId](#cfn-route53-recordset-hostedzoneid)" : String,
     "[HostedZoneName](#cfn-route53-recordset-hostedzonename)" : String,
+    "[MultiValueAnswer](#cfn-route53-recordset-multivalueanswer)" : Boolean,
     "[Name](#cfn-route53-recordset-name)" : String,
     "[Region](#cfn-route53-recordset-region)" : String,
     "[ResourceRecords](#cfn-route53-recordset-resourcerecords)" : [ String ],
@@ -52,6 +47,7 @@ Properties:
   [HealthCheckId](#cfn-route53-recordset-healthcheckid): String
   [HostedZoneId](#cfn-route53-recordset-hostedzoneid): String
   [HostedZoneName](#cfn-route53-recordset-hostedzonename): String
+  [MultiValueAnswer](#cfn-route53-recordset-multivalueanswer): Boolean
   [Name](#cfn-route53-recordset-name): String
   [Region](#cfn-route53-recordset-region): String
   [ResourceRecords](#cfn-route53-recordset-resourcerecords):
@@ -62,7 +58,7 @@ Properties:
   [Weight](#cfn-route53-recordset-weight): Integer
 ```
 
-## Properties<a name="w4ab1c21c10e1053c11"></a>
+## Properties<a name="w4ab1c21c10d177c22b9"></a>
 
 `AliasTarget`  <a name="cfn-route53-recordset-aliastarget"></a>
 *Alias resource record sets only:* Information about the domain to which you are redirecting traffic\.  
@@ -111,6 +107,20 @@ If you have multiple hosted zones with the same domain name, you must explicitly
 *Required*: Conditional\. You must specify either the `HostedZoneName` or `HostedZoneId`, but you cannot specify both\. If this record set is part of a record set group, do not specify this property\.  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+
+`MultiValueAnswer`  <a name="cfn-route53-recordset-multivalueanswer"></a>
+*Multivalue answer resource record sets only*: To route traffic approximately randomly to multiple resources, such as web servers, create one multivalue answer record for each resource and specify `true` for `MultiValueAnswer`\.  
+Note the following:  
++ If you associate a health check with a multivalue answer resource record set, Route 53 responds to DNS queries with the corresponding IP address only when the health check is healthy\. 
++ If you don't associate a health check with a multivalue answer record, Route 53 always considers the record to be healthy\. 
++ Amazon Route 53 responds to DNS queries with up to eight healthy records; if you have eight or fewer healthy records, Route 53 responds to all DNS queries with all the healthy records\. 
++ If you have more than eight healthy records, Route 53 responds to different DNS resolvers with different combinations of healthy records\. 
++ When all records are unhealthy, Route 53 responds to DNS queries with up to eight unhealthy records\.
++ If a resource becomes unavailable after a resolver caches a response, client software typically tries another of the IP addresses in the response\. 
+You can't create multivalue answer alias records\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Name`  <a name="cfn-route53-recordset-name"></a>
 The name of the domain\. You must specify a fully qualified domain name that ends with a period as the last label indication\. If you omit the final period, Route 53 adds it\.  
@@ -163,15 +173,15 @@ For more information about weighted resource record sets, see [Setting Up Weight
 *Type*: Number\. Weight expects integer values\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10e1053c13"></a>
+## Return Value<a name="w4ab1c21c10d177c22c11"></a>
 
 When you specify an `AWS::Route53::RecordSet` type as an argument to the `Ref` function, AWS CloudFormation returns the value of the domain name of the record set\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10e1053c15"></a>
+## Example<a name="w4ab1c21c10d177c22c13"></a>
 
-### Mapping a Route 53 A record to the public IP of an Amazon EC2 instance<a name="w4ab1c21c10e1053c15b2"></a>
+### Mapping a Route 53 A record to the public IP of an Amazon EC2 instance<a name="w4ab1c21c10d177c22c13b2"></a>
 
 #### JSON<a name="aws-resource-route53-recordset-example.json"></a>
 
@@ -227,6 +237,6 @@ Resources:
       - !GetAtt Ec2Instance.PublicIp
 ```
 
-### Additional Information<a name="w4ab1c21c10e1053c15b4"></a>
+### Additional Information<a name="w4ab1c21c10d177c22c13b4"></a>
 
 For additional `AWS::Route53::RecordSet` snippets, see [Route 53 Template Snippets](quickref-route53.md) \.

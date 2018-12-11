@@ -2,12 +2,6 @@
 
 The `AWS::SES::ReceiptFilter` resource whether to accept or reject mail originating from an IP address or range of IP addresses for Amazon SES\. For more information, see [Creating IP Address Filters for Amazon SES Email Receiving](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-ip-filters.html) in the *Amazon Simple Email Service Developer Guide*\. 
 
-**Topics**
-+ [Syntax](#aws-resource-ses-receiptfilter-syntax)
-+ [Properties](#aws-resource-ses-receiptfilter-properties)
-+ [Example](#aws-resource-ses-receiptfilter-examples)
-+ [See Also](#aws-resource-ses-receiptfilter-seealso)
-
 ## Syntax<a name="aws-resource-ses-receiptfilter-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -36,7 +30,7 @@ Properties:
 `Filter`  <a name="cfn-ses-receiptfilter-filter"></a>
 The IP addresses to block or allow, and whether to block or allow incoming mail from them\.  
  *Required*: Yes  
- *Type*: [Amazon SES ReceiptFilter Filter](aws-properties-ses-receiptfilter-filter.md)  
+ *Type*: [Filter](aws-properties-ses-receiptfilter-filter.md)  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## Example<a name="aws-resource-ses-receiptfilter-examples"></a>

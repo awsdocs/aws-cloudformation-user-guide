@@ -2,13 +2,6 @@
 
 Creates or updates an AWS Elastic Beanstalk environment\.
 
-**Topics**
-+ [Syntax](#aws-resource-elasticbeanstalk-environment-syntax)
-+ [Properties](#aws-properties-beanstalk-environment-prop)
-+ [Return Values](#aws-properties-beanstalk-environment-ref)
-+ [Examples](#aws-resource-elasticbeanstalk-environment-examples)
-+ [See Also](#aws-resource-elasticbeanstalk-environment-seealso)
-
 ## Syntax<a name="aws-resource-elasticbeanstalk-environment-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -87,7 +80,7 @@ If you specify a name, you cannot perform updates that require replacement of th
 `OptionSettings`  <a name="cfn-beanstalk-environment-optionsettings"></a>
 Key\-value pairs defining configuration options for this environment, such as the instance type\. These options override the values that are defined in the solution stack or the [configuration template](aws-resource-beanstalk-configurationtemplate.md)\. If you remove any options during a stack update, the removed options revert to default values\.  
 *Required*: Yes\. The `IamInstanceProfile` and `ServiceRole` options are required\.  
-*Type*: List of [Elastic Beanstalk Environment OptionSetting](aws-properties-beanstalk-option-settings.md)  
+*Type*: List of [OptionSetting](aws-properties-beanstalk-option-settings.md)  
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 `PlatformArn`  <a name="cfn-beanstalk-environment-platformarn"></a>
@@ -108,7 +101,7 @@ If you specify `SolutionStackName`, then don't specify `PlatformArn` or `Templat
 `Tags`  <a name="cfn-beanstalk-environment-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this environment\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: You can update tags only if you update another property that requires that the environment be replaced, such as the `ApplicationName` property\.
 
 `TemplateName`  <a name="cfn-beanstalk-environment-templatename"></a>
@@ -121,8 +114,8 @@ If you specify `TemplateName`, then don't specify `SolutionStackName`\.
 `Tier`  <a name="cfn-beanstalk-environment-tier"></a>
 Specifies the tier to use in creating this environment\. The environment tier that you choose determines whether Elastic Beanstalk provisions resources to support a web application that handles HTTP\(S\) requests or a web application that handles background\-processing tasks\.  
 *Required*: No  
-*Type*: [Elastic Beanstalk Environment Tier Property Type](aws-properties-beanstalk-environment-tier.md)  
-*Update requires*: See [Elastic Beanstalk Environment Tier Property Type](aws-properties-beanstalk-environment-tier.md)
+*Type*: [Elastic Beanstalk Environment EnvironmentTier](aws-properties-beanstalk-environment-tier.md)  
+*Update requires*: See [Elastic Beanstalk Environment EnvironmentTier](aws-properties-beanstalk-environment-tier.md)
 
 `VersionLabel`  <a name="cfn-beanstalk-environment-versionlabel"></a>
 The version to associate with the environment\.  
@@ -132,13 +125,13 @@ The version to associate with the environment\.
 
 ## Return Values<a name="aws-properties-beanstalk-environment-ref"></a>
 
-### Ref<a name="w4ab1c21c10d646c11b2"></a>
+### Ref<a name="w4ab1c21c10d123c26c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d646c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d123c26c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 

@@ -2,7 +2,7 @@
 
 <a name="aws-properties-glue-partition-storagedescriptor-description"></a>The `StorageDescriptor` property type describes the physical storage of AWS Glue partition data\.
 
-<a name="aws-properties-glue-partition-storagedescriptor-inheritance"></a> `StorageDescriptor` is a property of the [AWS Glue Partition PartitionInput](aws-properties-glue-partition-partitioninput.md) property type\.
+<a name="aws-properties-glue-partition-storagedescriptor-inheritance"></a> `StorageDescriptor` is a property of the [PartitionInput](aws-properties-glue-partition-partitioninput.md) property type\.
 
 ## Syntax<a name="aws-properties-glue-partition-storagedescriptor-syntax"></a>
 
@@ -73,7 +73,7 @@ A list of UTF\-8 strings that specify reducer grouping columns, clustering colum
 `SkewedInfo`  <a name="cfn-glue-partition-storagedescriptor-skewedinfo"></a>
 Information about values that appear very frequently in a column \(skewed values\)\.  
  *Required*: No  
- *Type*: [AWS Glue Partition SkewedInfo](aws-properties-glue-partition-skewedinfo.md)  
+ *Type*: [SkewedInfo](aws-properties-glue-partition-skewedinfo.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `InputFormat`  <a name="cfn-glue-partition-storagedescriptor-inputformat"></a>
@@ -97,19 +97,19 @@ The output format: `SequenceFileOutputFormat` \(binary\), `IgnoreKeyTextOutputFo
 `Columns`  <a name="cfn-glue-partition-storagedescriptor-columns"></a>
 The columns in the partition\.  
  *Required*: No  
- *Type*: List of [AWS Glue Partition Column](aws-properties-glue-partition-column.md)  
+ *Type*: List of [Column](aws-properties-glue-partition-column.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `SerdeInfo`  <a name="cfn-glue-partition-storagedescriptor-serdeinfo"></a>
 Information about a serialization/deserialization program \(SerDe\), which serves as an extractor and loader\.  
  *Required*: No  
- *Type*: [AWS Glue Partition SerdeInfo](aws-properties-glue-partition-serdeinfo.md)  
+ *Type*: [SerdeInfo](aws-properties-glue-partition-serdeinfo.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `SortColumns`  <a name="cfn-glue-partition-storagedescriptor-sortcolumns"></a>
 The sort order of each bucket in the partition\.  
  *Required*: No  
- *Type*: List of [AWS Glue Partition Order](aws-properties-glue-partition-order.md)  
+ *Type*: List of [Order](aws-properties-glue-partition-order.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Compressed`  <a name="cfn-glue-partition-storagedescriptor-compressed"></a>

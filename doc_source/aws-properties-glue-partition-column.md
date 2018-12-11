@@ -2,7 +2,7 @@
 
 <a name="aws-properties-glue-partition-column-description"></a>The `Column` property type specifies a column for an AWS Glue partition\.
 
-<a name="aws-properties-glue-partition-column-inheritance"></a> The `Columns` property of the [AWS Glue Partition StorageDescriptor](aws-properties-glue-partition-storagedescriptor.md) property type contains a list of `Column` property types\.
+<a name="aws-properties-glue-partition-column-inheritance"></a> The `Columns` property of the [StorageDescriptor](aws-properties-glue-partition-storagedescriptor.md) property type contains a list of `Column` property types\.
 
 ## Syntax<a name="aws-properties-glue-partition-column-syntax"></a>
 

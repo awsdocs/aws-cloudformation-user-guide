@@ -2,7 +2,7 @@
 
 <a name="aws-properties-glue-crawler-s3target-description"></a>The `S3Target` property type specifies an Amazon S3 target for an AWS Glue crawl\.
 
-<a name="aws-properties-glue-crawler-s3target-inheritance"></a> The `S3Targets` property of the [AWS Glue Crawler Targets](aws-properties-glue-crawler-targets.md) property type contains a list of `S3Target` property types\.
+<a name="aws-properties-glue-crawler-s3target-inheritance"></a> The `S3Targets` property of the [Targets](aws-properties-glue-crawler-targets.md) property type contains a list of `S3Target` property types\.
 
 ## Syntax<a name="aws-properties-glue-crawler-s3target-syntax"></a>
 

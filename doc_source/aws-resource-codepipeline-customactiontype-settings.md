@@ -2,7 +2,7 @@
 
 `Settings` is a property of the [AWS::CodePipeline::CustomActionType](aws-resource-codepipeline-customactiontype.md) resource that provides URLs that users can access to view information about the AWS CodePipeline custom action\.
 
-## Syntax<a name="w4ab1c21c14d494b5"></a>
+## Syntax<a name="w4ab1c21c10c75c13c25b5"></a>
 
 ### JSON<a name="aws-properties-codepipeline-customactiontype-settings-syntax.json"></a>
 
@@ -24,7 +24,7 @@
 [ThirdPartyConfigurationUrl](#cfn-codepipeline-customactiontype-settings-thirdpartyconfigurationurl): String
 ```
 
-## Properties<a name="w4ab1c21c14d494b7"></a>
+## Properties<a name="w4ab1c21c10c75c13c25b7"></a>
 
 `EntityUrlTemplate`  <a name="cfn-codepipeline-customactiontype-settings-entityurltemplate"></a>
 The URL that is returned to the AWS CodePipeline console that links to the resources of the external system, such as the configuration page for an AWS CodeDeploy deployment group\.  

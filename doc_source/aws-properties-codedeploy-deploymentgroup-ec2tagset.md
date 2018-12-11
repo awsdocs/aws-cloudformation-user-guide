@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 A list containing other lists of EC2 instance tag groups\. In order for an instance to be included in the deployment group, it must be identified by all the tag groups in the list\.  
 Duplicates are not allowed\.  
  *Required*: No  
- *Type*: List of [AWS CodeDeploy DeploymentGroup EC2TagSetListObject](aws-properties-codedeploy-deploymentgroup-ec2tagsetlistobject.md)  
+ *Type*: List of [EC2TagSetListObject](aws-properties-codedeploy-deploymentgroup-ec2tagsetlistobject.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-codedeploy-deploymentgroup-ec2tagset-seealso"></a>

@@ -6,8 +6,8 @@ To create an ElastiCache cluster in a VPC, use the [AWS::EC2::SecurityGroup](aws
 
 **Topics**
 + [Syntax](#aws-resource-elasticache-securitygroup-syntax)
-+ [Properties](#w4ab1c21c10d617c11)
-+ [Return Values](#w4ab1c21c10d617c13)
++ [Properties](#w4ab1c21c10d117c28c11)
++ [Return Values](#w4ab1c21c10d117c28c13)
 
 ## Syntax<a name="aws-resource-elasticache-securitygroup-syntax"></a>
 
@@ -33,7 +33,7 @@ Properties:
   [Description](#cfn-elasticache-securitygroup-description): String
 ```
 
-## Properties<a name="w4ab1c21c10d617c11"></a>
+## Properties<a name="w4ab1c21c10d117c28c11"></a>
 
 `Description`  <a name="cfn-elasticache-securitygroup-description"></a>
 A description for the cache security group\.  
@@ -41,9 +41,9 @@ A description for the cache security group\.
 *Required*: No  
 *Update requires*: Updates are not supported\.
 
-## Return Values<a name="w4ab1c21c10d617c13"></a>
+## Return Values<a name="w4ab1c21c10d117c28c13"></a>
 
-### Ref<a name="w4ab1c21c10d617c13b2"></a>
+### Ref<a name="w4ab1c21c10d117c28c13b2"></a>
 
 When you specify the `AWS::ElastiCache::SecurityGroup` resource as an argument to the `Ref` function, AWS CloudFormation returns the `CacheSecurityGroupName` property of the cache security group\.
 

@@ -2,7 +2,7 @@
 
 `Integration` is a property of the [AWS::ApiGateway::Method](aws-resource-apigateway-method.md) resource that specifies information about the target backend that an Amazon API Gateway \(API Gateway\) method calls\.
 
-## Syntax<a name="w4ab1c21c14c41b5"></a>
+## Syntax<a name="w4ab1c21c10c20c56c17b5"></a>
 
 ### JSON<a name="aws-properties-apitgateway-method-integration-syntax.json"></a>
 
@@ -49,10 +49,10 @@
 [Uri](#cfn-apigateway-method-integration-uri): String
 ```
 
-## Properties<a name="w4ab1c21c14c41b7"></a>
+## Properties<a name="w4ab1c21c10c20c56c17b7"></a>
 
 `CacheKeyParameters`  <a name="cfn-apigateway-method-integration-cachekeyparameters"></a>
-A list of request parameters whose values API Gateway caches\. To be valid, any request parameters used here must also be present in the method's configured `RequestParameters` property\.
+A list of request parameters whose values API Gateway caches\. These parameters must also be specified in [RequestParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html#cfn-apigateway-method-requestparameters) to be supported in `CacheKeyParameters`\.  
 *Required*: No  
 *Type*: List of String values
 

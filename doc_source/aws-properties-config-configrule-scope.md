@@ -2,7 +2,7 @@
 
 `Scope` is a property of the [AWS::Config::ConfigRule](aws-resource-config-configrule.md) resource that specifies which AWS resources will trigger AWS Config to run an evaluation when their configurations change\. The scope can include one or more resource types, a tag key and value, or one resource type and one resource ID\. You cannot specify a tag\-key value and a resource ID or type\.
 
-## Syntax<a name="w4ab1c21c14d584b5"></a>
+## Syntax<a name="w4ab1c21c10c81c17c17b5"></a>
 
 ### JSON<a name="aws-properties-config-configrule-scope-syntax.json"></a>
 
@@ -25,7 +25,7 @@
 [TagValue](#cfn-config-configrule-scope-tagvalue): String
 ```
 
-## Properties<a name="w4ab1c21c14d584b7"></a>
+## Properties<a name="w4ab1c21c10c81c17c17b7"></a>
 
 `ComplianceResourceId`  <a name="cfn-config-configrule-scope-complianceresourceid"></a>
 The ID of an AWS resource that you want AWS Config to evaluate against a rule\. If you specify an ID, you must also specify a resource type for the `ComplianceResourceTypes` property\.   

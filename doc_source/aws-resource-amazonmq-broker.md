@@ -4,12 +4,6 @@ A *broker* is a message broker environment running on Amazon MQ\. It is the basi
 
 The `AWS::AmazonMQ::Broker` resource lets you create Amazon MQ brokers, add configuration changes or modify users for the specified broker, return information about the specified broker, and delete the specified broker\. For more information, see [Amazon MQ Basic Elements](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-basic-elements.html) in the *Amazon MQ Developer Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-amazonmq-broker-syntax)
-+ [Properties](#aws-resource-amazonmq-broker-properties)
-+ [Return Values](#aws-resource-amazonmq-broker-returnvalues)
-+ [Examples](#aws-resource-amazonmq-broker-examples)
-
 ## Syntax<a name="aws-resource-amazonmq-broker-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -66,7 +60,7 @@ Properties:
 Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions\. The automatic upgrades occur during the maintenance window of the broker or after a manual broker reboot\.  
 *Required*: Yes  
 *Type*: Boolean  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `BrokerName`  <a name="cfn-amazonmq-broker-brokername"></a>
 The name of the broker\. This value must be unique in your AWS account, 1\-50 characters long, must contain only letters, numbers, dashes, and underscores, and must not contain whitespaces, brackets, wildcard characters, or special characters\.  
@@ -77,14 +71,14 @@ The name of the broker\. This value must be unique in your AWS account, 1\-50 ch
 `Users`  <a name="cfn-amazonmq-broker-users"></a>
 The list of all ActiveMQ usernames for the specified broker\.  
 *Required*: Yes  
-*Type*: List of [Amazon MQ Broker User](aws-properties-amazonmq-broker-user.md) property types  
+*Type*: List of [User](aws-properties-amazonmq-broker-user.md) property types  
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 `Configuration`  <a name="cfn-amazonmq-broker-configuration"></a>
 The broker configuration\. If no configuration exists for a broker, Amazon MQ creates a default configuration\.  
 You can use AWS CloudFormation to modify—but not delete—an Amazon MQ configuration\.
 *Required*: No  
-*Type*: [Amazon MQ Broker ConfigurationId](aws-properties-amazonmq-broker-configurationid.md)  
+*Type*: [ConfigurationId](aws-properties-amazonmq-broker-configurationid.md)  
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 `DeploymentMode`  <a name="cfn-amazonmq-broker-deploymentmode"></a>
@@ -102,10 +96,10 @@ Currently, Amazon MQ supports only `ACTIVEMQ`\.
 
 `EngineVersion`  <a name="cfn-amazonmq-broker-engineversion"></a>
 The version of the broker engine\.  
-Currently, Amazon MQ supports only `5.15.0`\.
+For a list of supported engine versions, see: [Broker Engine](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html)\.
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 `HostInstanceType`  <a name="cfn-amazonmq-broker-hostinstancetype"></a>
 The broker's instance type\. For more information, see [Instance Types](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker.html#broker-instance-types) in the *Amazon MQ Developer Guide*\.  
@@ -116,13 +110,13 @@ The broker's instance type\. For more information, see [Instance Types](https://
 `Logs`  <a name="cfn-amazonmq-broker-logs"></a>
 The Amazon CloudWatch Logs configuration for the broker\.  
 *Required*: No  
-*Type*: [Amazon MQ Broker LogsConfiguration](aws-properties-amazonmq-broker-logsconfiguration.md)  
+*Type*: [LogsConfiguration](aws-properties-amazonmq-broker-logsconfiguration.md)  
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
 `MaintenanceWindowStartTime`  <a name="cfn-amazonmq-broker-maintenancewindowstarttime"></a>
 The parameters that determine the `WeeklyStartTime`\.  
 *Required*: No  
-*Type*: [Amazon MQ Broker MaintenanceWindow](aws-properties-amazonmq-broker-maintenancewindow.md)  
+*Type*: [MaintenanceWindow](aws-properties-amazonmq-broker-maintenancewindow.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `PubliclyAccessible`  <a name="cfn-amazonmq-broker-publiclyaccessible"></a>

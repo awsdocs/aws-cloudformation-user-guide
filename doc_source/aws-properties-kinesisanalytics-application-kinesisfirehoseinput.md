@@ -2,7 +2,7 @@
 
 The `KinesisFirehoseInput` property type identifies an Amazon Kinesis Data Firehose delivery stream as the streaming source for an Amazon Kinesis Data Analytics application\.
 
- `KinesisFirehoseInput` is a property of the [Kinesis Data Analytics Application Input](aws-properties-kinesisanalytics-application-input.md) property type\. 
+ `KinesisFirehoseInput` is a property of the [Input](aws-properties-kinesisanalytics-application-input.md) property type\. 
 
 ## Syntax<a name="aws-properties-kinesisanalytics-application-kinesisfirehoseinput-syntax"></a>
 

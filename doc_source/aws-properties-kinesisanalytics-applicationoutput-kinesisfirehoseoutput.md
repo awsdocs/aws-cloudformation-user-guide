@@ -2,7 +2,7 @@
 
 The `KinesisFirehoseOutput` property type specifies an Amazon Kinesis Data Firehose delivery stream as the destination when you are configuring application output\.
 
- `KinesisFirehoseOutput` is a property of the [Kinesis Data Analytics ApplicationOutput Output](aws-properties-kinesisanalytics-applicationoutput-output.md) property type\.
+ `KinesisFirehoseOutput` is a property of the [Output](aws-properties-kinesisanalytics-applicationoutput-output.md) property type\.
 
 ## Syntax<a name="aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-syntax"></a>
 

@@ -46,5 +46,5 @@ The prefix that an object must have to be included in the metrics results\.
 `TagFilters`  <a name="cfn-s3-bucket-metricsconfiguration-tagfilters"></a>
 Specifies a list of tag filters to use as a metrics configuration filter\. The metrics configuration includes only objects that meet the filter's criteria\.   
  *Required*: No  
- *Type*: List of [Amazon S3 Bucket TagFilter](aws-properties-s3-bucket-tagfilter.md)  
+ *Type*: List of [TagFilter](aws-properties-s3-bucket-tagfilter.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

@@ -2,12 +2,6 @@
 
 Use the `AWS::Route53::HealthCheck` resource to check the health of your resources before Amazon Route 53 responds to a DNS query\. For more information, see [How Health Checks Work in Simple Amazon Route 53 Configurations](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-simple-configs.html) in the *Amazon Route 53 Developer Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-route53-healthcheck-syntax)
-+ [Properties](#w4ab1c21c10e1044b9)
-+ [Return Value](#w4ab1c21c10e1044c11)
-+ [Example](#w4ab1c21c10e1044c13)
-
 ## Syntax<a name="aws-resource-route53-healthcheck-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -35,7 +29,7 @@ Properties:
     - HealthCheckTags
 ```
 
-## Properties<a name="w4ab1c21c10e1044b9"></a>
+## Properties<a name="w4ab1c21c10d177c13b7"></a>
 
 `HealthCheckConfig`  <a name="cfn-route53-healthcheck-healthcheckconfig"></a>
 An Amazon Route 53 health check\.  
@@ -49,15 +43,15 @@ An arbitrary set of tags \(key–value pairs\) for this health check\.
 *Type*: A list of [Amazon Route 53 HealthCheck HealthCheckTags](aws-properties-route53-healthcheck-healthchecktags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10e1044c11"></a>
+## Return Value<a name="w4ab1c21c10d177c13b9"></a>
 
-### Ref<a name="w4ab1c21c10e1044c11b2"></a>
+### Ref<a name="w4ab1c21c10d177c13b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the health check ID, such as `e0a123b4-4dba-4650-935e-example`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10e1044c13"></a>
+## Example<a name="w4ab1c21c10d177c13c11"></a>
 
 The following example creates an Amazon Route 53 health check that sends request to the specified endpoint\.
 

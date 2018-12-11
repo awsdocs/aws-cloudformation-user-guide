@@ -140,7 +140,7 @@ The `ENTRYPOINT` value to pass to the container\. For more information about the
 `Environment`  <a name="cfn-ecs-taskdefinition-containerdefinition-environment"></a>
 The environment variables to pass to the container\.  
 *Required*: No  
-*Type*: List of [Amazon ECS TaskDefinition KeyValuePair](aws-properties-ecs-taskdefinition-containerdefinitions-environment.md) property types
+*Type*: List of [KeyValuePair](aws-properties-ecs-taskdefinition-containerdefinitions-environment.md) property types
 
 `Essential`  <a name="cfn-ecs-taskdefinition-containerdefinition-essential"></a>
 Indicates whether the task stops if this container fails\. If you specify **true** and the container fails, all other containers in the task stop\. If you specify **false** and the container fails, none of the other containers in the task is affected\. This value is **true** by default\.  
@@ -151,12 +151,12 @@ You must have at least one essential container in a task\.
 `ExtraHosts`  <a name="cfn-ecs-taskdefinition-containerdefinition-extrahosts"></a>
 A list of hostnames and IP address mappings to append to the `/etc/hosts` file on the container\.  
 *Required*: No  
-*Type*: List of [Amazon ECS TaskDefinition HostEntry](aws-properties-ecs-taskdefinition-containerdefinitions-hostentry.md) property types
+*Type*: List of [HostEntry](aws-properties-ecs-taskdefinition-containerdefinitions-hostentry.md) property types
 
 `HealthCheck`  <a name="cfn-ecs-taskdefinition-containerdefinition-healthcheck"></a>
 A container health check\. Health check parameters that are specified in a container definition override any Docker health checks that exist in the container image \(such as those specified in a parent image or from the image's Dockerfile\)\.  
 *Required*: No  
-*Type*: [Amazon ECS TaskDefinition HealthCheck](aws-properties-ecs-taskdefinition-healthcheck.md)
+*Type*: [HealthCheck](aws-properties-ecs-taskdefinition-healthcheck.md)
 
 `Hostname`  <a name="cfn-ecs-taskdefinition-containerdefinition-hostname"></a>
 The name that Docker uses for the container hostname\.  
@@ -176,12 +176,12 @@ The name of another container to connect to\. With links, containers can communi
 `LinuxParameters`  <a name="cfn-ecs-taskdefinition-containerdefinition-linuxparameters"></a>
 The Linux\-specific options that are applied to the container\.  
  *Required*: No  
- *Type*: [Amazon ECS TaskDefinition LinuxParameters](aws-properties-ecs-taskdefinition-linuxparameters.md)
+ *Type*: [LinuxParameters](aws-properties-ecs-taskdefinition-linuxparameters.md)
 
 `LogConfiguration`  <a name="cfn-ecs-taskdefinition-containerdefinition-logconfiguration"></a>
 Configures a custom log driver for the container\. For more information, see the `logConfiguration` content for the [ContainerDefinition](https://docs.aws.amazon.com/AmazonECS/latest/APIReference//API_ContainerDefinition.html) data type in the *Amazon Elastic Container Service API Reference*\.  
 *Required*: No  
-*Type*: [Amazon ECS TaskDefinition LogConfiguration](aws-properties-ecs-taskdefinition-containerdefinitions-logconfiguration.md)
+*Type*: [LogConfiguration](aws-properties-ecs-taskdefinition-containerdefinitions-logconfiguration.md)
 
 `Memory`  <a name="cfn-ecs-taskdefinition-containerdefinition-memory"></a>
 The hard limit \(in MiB\) of memory to present to the container\. If your container attempts to exceed the allocated memory, the container is terminated\.  
@@ -196,7 +196,7 @@ The soft limit \(in MiB\) of memory to reserve for the container\. When system m
 `MountPoints`  <a name="cfn-ecs-taskdefinition-containerdefinition-mountpoints"></a>
 The mount points for data volumes in the container\.  
 *Required*: No  
-*Type*: List of [Amazon ECS TaskDefinition MountPoint](aws-properties-ecs-taskdefinition-containerdefinitions-mountpoints.md) property types
+*Type*: List of [MountPoint](aws-properties-ecs-taskdefinition-containerdefinitions-mountpoints.md) property types
 
 `Name`  <a name="cfn-ecs-taskdefinition-containerdefinition-name"></a>
 A name for the container\.  
@@ -206,7 +206,7 @@ A name for the container\.
 `PortMappings`  <a name="cfn-ecs-taskdefinition-containerdefinition-portmappings"></a>
 A mapping of the container port to a host port\. Port mappings enable containers to access ports on the host container instance to send or receive traffic\.  
 *Required*: No  
-*Type*: List of [Amazon ECS TaskDefinition ContainerDefinitions PortMapping](aws-properties-ecs-taskdefinition-containerdefinitions-portmappings.md) property types
+*Type*: List of [PortMapping](aws-properties-ecs-taskdefinition-containerdefinitions-portmappings.md) property types
 
 `Privileged`  <a name="cfn-ecs-taskdefinition-containerdefinition-privileged"></a>
 Indicates whether the container is given full access to the host container instance\.  
@@ -221,12 +221,12 @@ Indicates whether the container's root file system is mounted as read only\.
 `RepositoryCredentials`  <a name="cfn-ecs-taskdefinition-containerdefinition-repositorycredentials"></a>
 The repository credentials for private registry authentication\.  
 *Required*: No  
-*Type*: [Amazon ECS TaskDefinition RepositoryCredentials](aws-properties-ecs-taskdefinition-repositorycredentials.md)
+*Type*: [RepositoryCredentials](aws-properties-ecs-taskdefinition-repositorycredentials.md)
 
 `Ulimits`  <a name="cfn-ecs-taskdefinition-containerdefinition-ulimits"></a>
 A list of ulimits to set in the container\. The ulimits set constraints on how many resources a container can consume so that it doesn't deplete all available resources on the host\.  
 *Required*: No  
-*Type*: List of [Amazon ECS TaskDefinition Ulimit](aws-properties-ecs-taskdefinition-containerdefinitions-ulimit.md) property types
+*Type*: List of [Ulimit](aws-properties-ecs-taskdefinition-containerdefinitions-ulimit.md) property types
 
 `User`  <a name="cfn-ecs-taskdefinition-containerdefinition-user"></a>
 The user name to use inside the container\.  
@@ -236,7 +236,7 @@ The user name to use inside the container\.
 `VolumesFrom`  <a name="cfn-ecs-taskdefinition-containerdefinition-volumesfrom"></a>
 The data volumes to mount from another container\.  
 *Required*: No  
-*Type*: List of [Amazon ECS TaskDefinition VolumeFrom](aws-properties-ecs-taskdefinition-containerdefinitions-volumesfrom.md) property types
+*Type*: List of [VolumeFrom](aws-properties-ecs-taskdefinition-containerdefinitions-volumesfrom.md) property types
 
 `WorkingDirectory`  <a name="cfn-ecs-taskdefinition-containerdefinition-workingdirectory"></a>
 The working directory in the container to run commands in\.  

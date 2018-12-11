@@ -47,7 +47,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `CloudWatchLoggingOptions`  <a name="cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-cloudwatchloggingoptions"></a>
 The CloudWatch logging options for your delivery stream\.  
  *Required*: No  
- *Type*: [Kinesis Data Firehose DeliveryStream CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md)  
+ *Type*: [CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `HECAcknowledgmentTimeoutInSeconds`  <a name="cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecacknowledgmenttimeoutinseconds"></a>
@@ -78,13 +78,13 @@ A GUID that you obtain from your Splunk cluster when you create a new HEC endpoi
 `ProcessingConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-processingconfiguration"></a>
 The data processing configuration\.  
  *Required*: No  
- *Type*: [Kinesis Data Firehose DeliveryStream ProcessingConfiguration](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md)  
+ *Type*: [ProcessingConfiguration](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `RetryOptions`  <a name="cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-retryoptions"></a>
 The retry behavior in case Kinesis Data Firehose is unable to deliver data to Splunk, or if it doesn't receive an acknowledgment of receipt from Splunk\.  
  *Required*: No  
- *Type*: [Kinesis Data Firehose DeliveryStream SplunkRetryOptions](aws-properties-kinesisfirehose-deliverystream-splunkretryoptions.md)  
+ *Type*: [SplunkRetryOptions](aws-properties-kinesisfirehose-deliverystream-splunkretryoptions.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `S3BackupMode`  <a name="cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-s3backupmode"></a>
@@ -97,7 +97,7 @@ Valid values include `FailedEventsOnly` and `AllEvents`\.
 `S3Configuration`  <a name="cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-s3configuration"></a>
 The configuration for the backup Amazon S3 location\.  
  *Required*: Yes  
- *Type*: [Kinesis Data Firehose DeliveryStream S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)  
+ *Type*: [S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## See Also<a name="aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration-seealso"></a>

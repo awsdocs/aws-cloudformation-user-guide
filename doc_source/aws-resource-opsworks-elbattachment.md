@@ -4,9 +4,9 @@ Attaches an Elastic Load Balancing load balancer to an AWS OpsWorks layer that y
 
 **Topics**
 + [Syntax](#aws-resource-opsworks-elbattachment-syntax)
-+ [Properties](#w4ab1c21c10d947b9)
-+ [Template Snippet](#w4ab1c21c10d947c11)
-+ [See Also](#w4ab1c21c10d947c13)
++ [Properties](#w4ab1c21c10d168c19b9)
++ [Template Snippet](#w4ab1c21c10d168c19c11)
++ [See Also](#w4ab1c21c10d168c19c13)
 
 ## Syntax<a name="aws-resource-opsworks-elbattachment-syntax"></a>
 
@@ -33,7 +33,7 @@ Properties:
   [LayerId](#cfn-opsworks-elbattachment-layerid): String
 ```
 
-## Properties<a name="w4ab1c21c10d947b9"></a>
+## Properties<a name="w4ab1c21c10d168c19b9"></a>
 
 `ElasticLoadBalancerName`  <a name="cfn-opsworks-elbattachment-elbname"></a>
 Elastic Load Balancing load balancer name\.  
@@ -47,7 +47,7 @@ The AWS OpsWorks layer ID that the Elastic Load Balancing load balancer will be 
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Template Snippet<a name="w4ab1c21c10d947c11"></a>
+## Template Snippet<a name="w4ab1c21c10d168c19c11"></a>
 
 The following snippet specifies a load balancer attachment to an AWS OpsWorks layer, both of which would be described elsewhere in the same template:
 
@@ -75,5 +75,5 @@ ELBAttachment:
       Ref: "Layer"
 ```
 
-## See Also<a name="w4ab1c21c10d947c13"></a>
+## See Also<a name="w4ab1c21c10d168c19c13"></a>
 + [AWS::OpsWorks::Layer](aws-resource-opsworks-layer.md)

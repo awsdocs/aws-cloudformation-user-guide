@@ -4,10 +4,10 @@ Creates an Amazon Redshift security group\. You use security groups to control a
 
 **Topics**
 + [Syntax](#aws-resource-redshift-clustersecuritygroup-syntax)
-+ [Properties](#w4ab1c21c10e1030b9)
-+ [Return Values](#w4ab1c21c10e1030c11)
-+ [Example](#w4ab1c21c10e1030c13)
-+ [See Also](#w4ab1c21c10e1030c15)
++ [Properties](#w4ab1c21c10d174c25b9)
++ [Return Values](#w4ab1c21c10d174c25c11)
++ [Example](#w4ab1c21c10d174c25c13)
++ [See Also](#w4ab1c21c10d174c25c15)
 
 ## Syntax<a name="aws-resource-redshift-clustersecuritygroup-syntax"></a>
 
@@ -35,7 +35,7 @@ Properties:
     - Resource Tag
 ```
 
-## Properties<a name="w4ab1c21c10e1030b9"></a>
+## Properties<a name="w4ab1c21c10d174c25b9"></a>
 
 `Description`  <a name="cfn-redshift-clustersecuritygroup-description"></a>
 A description of the security group\.  
@@ -46,12 +46,12 @@ A description of the security group\.
 `Tags`  <a name="cfn-redshift-clustersecuritygroup-tags"></a>
 Specifies an arbitrary set of tags \(key–value pairs\) to associate with this security group\. Use tags to manage your resources\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10e1030c11"></a>
+## Return Values<a name="w4ab1c21c10d174c25c11"></a>
 
-### Ref<a name="w4ab1c21c10e1030c11b2"></a>
+### Ref<a name="w4ab1c21c10d174c25c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -63,7 +63,7 @@ For the Amazon Redshift cluster security group `myClusterSecurityGroup`, `Ref` r
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10e1030c13"></a>
+## Example<a name="w4ab1c21c10d174c25c13"></a>
 
 The following example creates an Amazon Redshift cluster security group that you can associate cluster security group ingress rules with:
 
@@ -96,5 +96,5 @@ myClusterSecurityGroup:
         Value: bar
 ```
 
-## See Also<a name="w4ab1c21c10e1030c15"></a>
+## See Also<a name="w4ab1c21c10d174c25c15"></a>
 + [AWS::Redshift::ClusterSecurityGroupIngress](aws-resource-redshift-clustersecuritygroupingress.md)

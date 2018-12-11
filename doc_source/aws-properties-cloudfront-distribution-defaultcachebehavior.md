@@ -2,7 +2,7 @@
 
 `DefaultCacheBehavior` is a property of the [DistributionConfig](aws-properties-cloudfront-distribution-distributionconfig.md) property that describes the default cache behavior for an Amazon CloudFront distribution\.
 
-## Syntax<a name="w4ab1c21c14d290b5"></a>
+## Syntax<a name="w4ab1c21c10c54c14c38b5"></a>
 
 ### JSON<a name="aws-properties-cloudfront-distribution-defaultcachebehavior-syntax.json"></a>
 
@@ -47,7 +47,7 @@
 [ViewerProtocolPolicy](#cfn-cloudfront-distribution-defaultcachebehavior-viewerprotocolpolicy) : String
 ```
 
-## Properties<a name="w4ab1c21c14d290b7"></a>
+## Properties<a name="w4ab1c21c10c54c14c38b7"></a>
 
 **Note**  
 For more information about the constraints and valid values of each property, see the [DefaultCacheBehavior](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_DefaultCacheBehavior.html) data type in the *Amazon CloudFront API Reference*\.
@@ -86,7 +86,7 @@ Specifies how CloudFront handles query strings or cookies\.
 `LambdaFunctionAssociations`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-lambdafunctionassociations"></a>
 Lambda function associations for the Amazon CloudFront distribution\.  
  *Required*: No  
- *Type*: List of [CloudFront Distribution LambdaFunctionAssociation](aws-properties-cloudfront-distribution-lambdafunctionassociation.md)  
+ *Type*: List of [LambdaFunctionAssociation](aws-properties-cloudfront-distribution-lambdafunctionassociation.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `MaxTTL`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-maxttl"></a>

@@ -1,8 +1,8 @@
 # AWS Systems Manager Association S3OutputLocation<a name="aws-properties-ssm-association-s3outputlocation"></a>
 
-`S3OutputLocation` is a property of the [Systems Manager Association InstanceAssociationOutputLocation](aws-properties-ssm-association-instanceassociationoutputlocation.md) property that specifies an Amazon S3 bucket where you want to store the results of this request\.
+`S3OutputLocation` is a property of the [InstanceAssociationOutputLocation](aws-properties-ssm-association-instanceassociationoutputlocation.md) property that specifies an Amazon S3 bucket where you want to store the results of this request\.
 
-## Syntax<a name="w4ab1c21c14e2040b5"></a>
+## Syntax<a name="w4ab1c21c10d207c13c18b5"></a>
 
 ### JSON<a name="aws-properties-ssm-association-s3outputlocation-syntax.json"></a>
 
@@ -20,7 +20,7 @@
 [OutputS3KeyPrefix](#cfn-ssm-association-s3outputlocation-outputs3keyprefix): String
 ```
 
-## Properties<a name="w4ab1c21c14e2040b7"></a>
+## Properties<a name="w4ab1c21c10d207c13c18b7"></a>
 
 `OutputS3BucketName`  <a name="cfn-ssm-association-s3outputlocation-outputs3bucketname"></a>
 The name of the Amazon S3 bucket\.  

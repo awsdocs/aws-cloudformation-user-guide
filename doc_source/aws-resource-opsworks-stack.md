@@ -2,13 +2,6 @@
 
 Creates an AWS OpsWorks stack\. An AWS OpsWorks stack represents a set of instances that you want to manage collectively, typically because they have a common purpose such as serving PHP applications\.
 
-**Topics**
-+ [Syntax](#aws-resource-opsworks-stack-syntax)
-+ [Properties](#w4ab1c21c10d966b9)
-+ [Return Values](#w4ab1c21c10d966c11)
-+ [Template Examples](#w4ab1c21c10d966c13)
-+ [Additional Information](#w4ab1c21c10d966c15)
-
 ## Syntax<a name="aws-resource-opsworks-stack-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -88,7 +81,7 @@ Properties:
   [VpcId](#cfn-opsworks-stack-vpcid): String
 ```
 
-## Properties<a name="w4ab1c21c10d966b9"></a>
+## Properties<a name="w4ab1c21c10d168c38b7"></a>
 
 `AgentVersion`  <a name="cfn-opsworks-stack-agentversion"></a>
 The AWS OpsWorks agent version that you want to use\. The agent communicates with the service and handles tasks such as initiating Chef runs in response to lifecycle events\. For valid values, see the [AgentVersion](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateStack.html#opsworks-CreateStack-request-AgentVersion) parameter for the `CreateStack` action in the *AWS OpsWorks Stacks API Reference*\.  
@@ -224,7 +217,7 @@ If you're cloning an AWS OpsWorks stack, the stack ID of the source AWS OpsWorks
 `Tags`  <a name="cfn-opsworks-stack-tags"></a>
 Specifies an arbitrary set of tags \(key–value pairs\) to associate with this AWS OpsWorks stack\. Use tags to manage your resources\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `UseCustomCookbooks`  <a name="cfn-opsworks-stack-usecustcookbooks"></a>
@@ -245,9 +238,9 @@ The ID of the VPC that the stack is to be launched into, which must be in the sp
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d966c11"></a>
+## Return Values<a name="w4ab1c21c10d168c38b9"></a>
 
-### Ref<a name="w4ab1c21c10d966c11b2"></a>
+### Ref<a name="w4ab1c21c10d168c38b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -259,7 +252,7 @@ For the AWS OpsWorks stack `myStack`, `Ref` returns the AWS OpsWorks stack ID\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Template Examples<a name="w4ab1c21c10d966c13"></a>
+## Template Examples<a name="w4ab1c21c10d168c38c11"></a>
 
 The following snippet creates an AWS OpsWorks stack that uses the default service role and Amazon EC2 role, which are created after you use AWS OpsWorks for the first time:
 
@@ -552,7 +545,7 @@ Parameters:
     Type: String
 ```
 
-## Additional Information<a name="w4ab1c21c10d966c15"></a>
+## Additional Information<a name="w4ab1c21c10d168c38c13"></a>
 + For a complete sample AWS OpsWorks template, see [AWS OpsWorks Template Snippets](quickref-opsworks.md)\.
 + [AWS::OpsWorks::Layer](aws-resource-opsworks-layer.md)
 + [AWS::OpsWorks::App](aws-resource-opsworks-app.md)

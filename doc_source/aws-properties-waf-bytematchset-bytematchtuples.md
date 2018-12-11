@@ -2,7 +2,7 @@
 
 `ByteMatchTuples` is a property of the [AWS::WAF::ByteMatchSet](aws-resource-waf-bytematchset.md) resource that specifies settings for an AWS WAF `ByteMatchSet` resource, such as the bytes \(typically a string that corresponds with ASCII characters\) that you want AWS WAF to search for in web requests\.
 
-## Syntax<a name="w4ab1c21c14e2099b5"></a>
+## Syntax<a name="w4ab1c21c10d210c13c15b5"></a>
 
 ### JSON<a name="aws-properties-waf-bytematchset-bytematchtuples-syntax.json"></a>
 
@@ -27,7 +27,7 @@
 [TextTransformation](#cfn-waf-bytematchset-bytematchtuples-texttransformation): String
 ```
 
-## Properties<a name="w4ab1c21c14e2099b7"></a>
+## Properties<a name="w4ab1c21c10d210c13c15b7"></a>
 
 `FieldToMatch`  <a name="cfn-waf-bytematchset-bytematchtuples-fieldtomatch"></a>
 The part of a web request that you want AWS WAF to search, such as a specific header or a query string\.  

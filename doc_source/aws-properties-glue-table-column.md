@@ -2,7 +2,7 @@
 
 <a name="aws-properties-glue-table-column-description"></a>The `Column` property type specifies a column for an AWS Glue table\.
 
-<a name="aws-properties-glue-table-column-inheritance"></a> The `PartitionKeys` property of the [AWS Glue Table TableInput](aws-properties-glue-table-tableinput.md) property type and the `Columns` property of the [AWS Glue Table StorageDescriptor](aws-properties-glue-table-storagedescriptor.md) property type contain a list of `Column` property types\.
+<a name="aws-properties-glue-table-column-inheritance"></a> The `PartitionKeys` property of the [TableInput](aws-properties-glue-table-tableinput.md) property type and the `Columns` property of the [StorageDescriptor](aws-properties-glue-table-storagedescriptor.md) property type contain a list of `Column` property types\.
 
 ## Syntax<a name="aws-properties-glue-table-column-syntax"></a>
 

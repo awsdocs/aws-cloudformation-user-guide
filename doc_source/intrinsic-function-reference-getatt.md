@@ -156,6 +156,7 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 | [AWS::AmazonMQ::Configuration](aws-resource-amazonmq-configuration.md) | Revision | The revision number of the Amazon MQ configuration\.Example: 1 | 
 |  [AWS::ApiGateway::DomainName](aws-resource-apigateway-domainname.md)  |  `DistributionDomainName`  |  The Amazon CloudFront distribution domain name that is mapped to the custom domain name\. Example: `d111111abcdef8.cloudfront.net`  | 
 |  [AWS::ApiGateway::RestApi](aws-resource-apigateway-restapi.md)  |  `RootResourceId`  |  The root resource ID for a `RestApi` resource\. Example: `a0bc123d4e`  | 
+|  [AWS::AppStream::ImageBuilder](aws-resource-appstream-imagebuilder.md)  |  `StreamingUrl`  |  The URL to start an Amazon AppStream 2\.0 image builder streaming session  | 
 |  [AWS::Cloud9::EnvironmentEC2](aws-resource-cloud9-environmentec2.md)  |  `Arn`  |  The Amazon Resource Name \(ARN\) of the AWS Cloud9 development environment\. Example: `arn:aws:cloud9:us-east-2:123456789012:environment:2bc3642873c342e485f7e0c561234567`  | 
 |  [AWS::Cloud9::EnvironmentEC2](aws-resource-cloud9-environmentec2.md)  |  `Name`  |  The name of the AWS Cloud9 development environment\. Example: `my-demo-environment`  | 
 |  [AWS::CloudFormation::WaitCondition](aws-properties-waitcondition.md)  |  `Data`  |  A JSON\-format string containing the `UniqueId` and `Data` values from the wait condition signal\(s\) for the specified wait condition\. For more information about wait condition signals, see [Wait Condition Signal JSON Format](using-cfn-waitcondition.md#using-cfn-waitcondition-signaljson)\. Example of a wait condition with two signals: <pre>{"Signal1":"Step 1 complete.","Signal2":"Step 2 complete."}</pre>  | 
@@ -178,6 +179,7 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 |  [AWS::DAX::Cluster](aws-resource-dax-cluster.md)  |  `ClusterDiscoveryEndpoint`  |  Example: `mydaxcluster.0h3d6x.clustercfg.dax.use1.cache.amazonaws.com:8111`  | 
 |  [AWS::DirectoryService::MicrosoftAD](aws-resource-directoryservice-microsoftad.md) and [AWS::DirectoryService::SimpleAD](aws-resource-directoryservice-simplead.md)  |  `Alias`  |  The alias for a directory\. Examples: `d-12373a053a` or `alias4-mydirectory-12345abcgmzsk` \(if you have the `CreateAlias` property set to true\)  | 
 |  [AWS::DirectoryService::MicrosoftAD](aws-resource-directoryservice-microsoftad.md) and [AWS::DirectoryService::SimpleAD](aws-resource-directoryservice-simplead.md)  |  `DnsIpAddresses`  |  The IP addresses of the DNS servers for the directory\. Example: `[ "192.0.2.1", "192.0.2.2" ]`  | 
+|  [AWS::DLM::LifecyclePolicy](aws-resource-dlm-lifecyclepolicy.md)  |  `Arn`  |  Example: `arn:aws:dlm:us-west-2:012345678912:policy/policy-0123456789abcdef`  | 
 |  [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md)  |  `Arn`  |  Example: `arn:aws:dynamodb:us-east-2:123456789012:table/myDynamoDBTable`  | 
 |  [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md)  |  `StreamArn`  |  The Amazon Resource Name \(ARN\) of the DynamoDB table stream\. To use this attribute, you must specify the DynamoDB table `StreamSpecification` property\. Example: `arn:aws:dynamodb:us-east-2:123456789012:table/testddbstack-myDynamoDBTable-012A1SL7SMP5Q/stream/2015-11-30T20:10:00.000`  | 
 |  [AWS::EC2::EIP](aws-properties-ec2-eip.md)  |  `AllocationId`  |  The ID that AWS assigns to represent the allocation of the address for use with Amazon VPC\. It is returned only for VPC Elastic IP addresses\. Example: `eipalloc-5723d13e`  | 
@@ -251,6 +253,11 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 |  [AWS::IoT1Click::Project](aws-resource-iot1click-project.md)  |  `ProjectName`  |  The name of the project\. Example: `seattle-region`  | 
 |  [AWS::IoT1Click::Project](aws-resource-iot1click-project.md)  |  `Arn`  |  The ARN of the project\. Example: `arn:aws:iot1click:us-east-1:123456789012:projects/seattle-region`  | 
 |  [AWS::Kinesis::Stream](aws-resource-kinesis-stream.md)  |  `Arn`  |  Example: `arn:aws:kinesis:``us-east-2``:123456789012:stream/stream-name`  | 
+|  [AWS::Kinesis::StreamConsumer](aws-resource-kinesis-streamconsumer.md)  |  `ConsumerARN`  |  Example: `arn:aws:kinesis:us-east-1:123456789012:stream/stream-name/consumer/consumer-name:1234567890`  | 
+|  [AWS::Kinesis::StreamConsumer](aws-resource-kinesis-streamconsumer.md)  |  `ConsumerCreationTimestamp`  |  Example: `2018-10-31T17:35:57.650Z`  | 
+|  [AWS::Kinesis::StreamConsumer](aws-resource-kinesis-streamconsumer.md)  |  `ConsumerName`  |  Example: `example-consumer-name`  | 
+|  [AWS::Kinesis::StreamConsumer](aws-resource-kinesis-streamconsumer.md)  |  `ConsumerStatus`  |  Example: `CREATING`  | 
+|  [AWS::Kinesis::StreamConsumer](aws-resource-kinesis-streamconsumer.md)  |  `StreamARN`  |  Example: `arn:aws:kinesis:us-east-2:123456789012:stream/stream-name`  | 
 |  [AWS::KinesisFirehose::DeliveryStream](aws-resource-kinesisfirehose-deliverystream.md)  |  `Arn`  |  Example: `arn:aws:firehose:``us-east-2``:123456789012:deliverystream/delivery-stream-name`  | 
 |  [AWS::KMS::Key](aws-resource-kms-key.md)  |  `Arn`  |  Example: `arn:aws:kms:us-west-2:123456789012:key/12a34567-8c90-1defg-af84-0bf06c1747f3`  | 
 |  [AWS::Lambda::Function](aws-resource-lambda-function.md)  |  `Arn`  |  Example: `arn:aws:lambda:us-west-2:123456789012:MyStack-AMILookUp-NT5EUXTNTXXD`  | 
@@ -271,17 +278,30 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 |  [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)  |  `Endpoint.Address`  |  The connection endpoint for the database\. Example: `mystack-mydb-1apw1j4phylrk.cg034hpkmmjt.``us-east-2``.rds.amazonaws.com`  | 
 |  [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)  |  `Endpoint.Port`  |  The port number on which the database accepts connections\. Example: `3306`  | 
 |  [AWS::Route53::HostedZone](aws-resource-route53-hostedzone.md)  |  `NameServers`  |  The set of name servers for the specific hosted zone\. Example: `ns1.example.com` This attribute is not supported for private hosted zones\.  | 
+|  [AWS::Route53Resolver::ResolverEndpoint](aws-resource-route53resolver-resolverendpoint.md)  |  `Arn`  |  The ARN for the inbound or outbound endpoint\. Example: `arn:aws:route53resolver:us-east-2:123456789012:resolver-endpoint/rslvr-out-fdc049932dexample`  | 
+|  [AWS::Route53Resolver::ResolverEndpoint](aws-resource-route53resolver-resolverendpoint.md)  |  `Direction`  |  Whether this is an inbound or outbound endpoint\. Example: `INBOUND`  | 
+|  [AWS::Route53Resolver::ResolverEndpoint](aws-resource-route53resolver-resolverendpoint.md)  |  `HostedVPCId`  |  The ID of the VPC that you want to create the resolver endpoint in\. Example: `vpc-0dd415a0edexample`  | 
+|  [AWS::Route53Resolver::ResolverEndpoint](aws-resource-route53resolver-resolverendpoint.md)  |  `IpAddressCount`  |  The number of IP addresses that the resolver endpoint can use for DNS queries\. Example: `2`  | 
+|  [AWS::Route53Resolver::ResolverEndpoint](aws-resource-route53resolver-resolverendpoint.md)  |  `Name`  |  The name for the inbound or outbound endpoint\. Example: `MyInboundEndpoint`  | 
+|  [AWS::Route53Resolver::ResolverEndpoint](aws-resource-route53resolver-resolverendpoint.md)  |  `ResolverEndpointId`  |  The ID that Resolver assigned to the endpoint when you created it\. Example: `rslvr-out-fdc049932dexample`  | 
+|  [AWS::Route53Resolver::ResolverRule](aws-resource-route53resolver-resolverrule.md)  |  `Arn`  |  The ARN for the rule\. Example: `arn:aws:route53resolver:us-east-2:123456789012:resolver-rule/rslvr-rr-5328a0899aexample`  | 
+|  [AWS::Route53Resolver::ResolverRule](aws-resource-route53resolver-resolverrule.md)  |  `DomainName`  |  The domain name for outbound DNS queries that you want to forward to DNS resolvers in your network\. Example: `example.com`  | 
+|  [AWS::Route53Resolver::ResolverRule](aws-resource-route53resolver-resolverrule.md)  |  `ResolverEndpointId`  |  The ID of the endpoint that the rule is associated with\. Example: `rslvr-out-fdc049932dexample`  | 
+|  [AWS::Route53Resolver::ResolverRule](aws-resource-route53resolver-resolverrule.md)  |  `ResolverRuleId`  |  The ID that Resolver assigned to the rule when you created it\. Example: `rslvr-rr-5328a0899aexample`  | 
+|  [AWS::Route53Resolver::ResolverRule](aws-resource-route53resolver-resolverrule.md)  |  `TargetIps`  |  The IPv4 IP addresses that you want Resolver to forward DNS queries to\. Example: `192.0.2.44`  | 
 |  [AWS::S3::Bucket](aws-properties-s3-bucket.md)  |  `Arn`  |  Example: `arn:aws:s3:::mybucket`  | 
 |  [AWS::S3::Bucket](aws-properties-s3-bucket.md)  |  `DomainName`  |  The DNS name of the specified bucket\. Example: `mystack-mybucket-kdwwxmddtr2g.s3.amazonaws.com`  | 
 |  [AWS::S3::Bucket](aws-properties-s3-bucket.md)  |  `DualStackDomainName`  |  The IPv6 DNS name of the specified bucket\. Example: `mystack-mybucket-kdwwxmddtr2g.s3.dualstack.``us-east-2``.amazonaws.com/`  | 
 |  [AWS::S3::Bucket](aws-properties-s3-bucket.md)  |  `WebsiteURL`  |  The Amazon S3 website endpoint for the specified bucket\. Example: `http://mystack-mybucket-kdwwxmddtr2g.s3-website-``us-east-2``.amazonaws.com/`  | 
 |  [AWS::Serverless::Function](transform-aws-serverless.md)  |  `Arn`  |  The ARN of an `AWS::Serverless::Function` resource\.  | 
-|  [AWS::ServiceDiscovery::PrivateDnsNamespace](aws-resource-servicediscovery-privatednsnamespace.md)  |  `Id`  |  Example: `ns-t2kl4fs6xexample`  | 
+|  [AWS::ServiceDiscovery::HttpNamespace](aws-resource-servicediscovery-httpnamespace.md)  |  `Arn`  |  Example: `arn:aws:servicediscovery:us-west-2:1234567890:namespace/ns-d6wz3hq6kexample`  | 
+|  [AWS::ServiceDiscovery::HttpNamespace](aws-resource-servicediscovery-httpnamespace.md)  |  `Id`  |  Example: `ns-d6wz3hq6kexample`  | 
 |  [AWS::ServiceDiscovery::PrivateDnsNamespace](aws-resource-servicediscovery-privatednsnamespace.md)  |  `Arn`  |  Example: `arn:aws:servicediscovery:us-west-2:1234567890:namespace/ns-t2kl4fs6xexample`  | 
-|  [AWS::ServiceDiscovery::PublicDnsNamespace](aws-resource-servicediscovery-publicdnsnamespace.md)  |  `Id`  |  Example: `ns-d6wz3hq6kexample`  | 
+|  [AWS::ServiceDiscovery::PrivateDnsNamespace](aws-resource-servicediscovery-privatednsnamespace.md)  |  `Id`  |  Example: `ns-t2kl4fs6xexample`  | 
 |  [AWS::ServiceDiscovery::PublicDnsNamespace](aws-resource-servicediscovery-publicdnsnamespace.md)  |  `Arn`  |  Example: `arn:aws:servicediscovery:us-west-2:1234567890:namespace/ns-d6wz3hq6kexample`  | 
-|  [AWS::ServiceDiscovery::Service](aws-resource-servicediscovery-service.md)  |  `Id`  |  Example: `srv-7dfj3r6cyexample`  | 
+|  [AWS::ServiceDiscovery::PublicDnsNamespace](aws-resource-servicediscovery-publicdnsnamespace.md)  |  `Id`  |  Example: `ns-d6wz3hq6kexample`  | 
 |  [AWS::ServiceDiscovery::Service](aws-resource-servicediscovery-service.md)  |  `Arn`  |  Example: `arn:aws:servicediscovery:us-west-2:1234567890:service/srv-7dfj3r6cyexample`  | 
+|  [AWS::ServiceDiscovery::Service](aws-resource-servicediscovery-service.md)  |  `Id`  |  Example: `srv-7dfj3r6cyexample`  | 
 |  [AWS::ServiceDiscovery::Service](aws-resource-servicediscovery-service.md)  |  `Name`  |  Example: `example`  | 
 | [AWS::SNS::Topic](aws-properties-sns-topic.md) | TopicName |  The name of an Amazon SNS topic\. Example: `my-sns-topic`  | 
 | [AWS::StepFunctions::Activity](aws-resource-stepfunctions-activity.md) | Name | The name of the AWS Step Functions activity\. | 

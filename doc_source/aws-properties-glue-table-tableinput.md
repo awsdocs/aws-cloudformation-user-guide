@@ -85,13 +85,13 @@ The expanded text of the view, if the table is a view\. Otherwise it's `null`\.
 `StorageDescriptor`  <a name="cfn-glue-table-tableinput-storagedescriptor"></a>
 Information about the physical storage of the table\.  
  *Required*: No  
- *Type*: [AWS Glue Table StorageDescriptor](aws-properties-glue-table-storagedescriptor.md)  
+ *Type*: [StorageDescriptor](aws-properties-glue-table-storagedescriptor.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `PartitionKeys`  <a name="cfn-glue-table-tableinput-partitionkeys"></a>
 The columns in the table\.  
  *Required*: No  
- *Type*: List of [AWS Glue Table Column](aws-properties-glue-table-column.md)  
+ *Type*: List of [Column](aws-properties-glue-table-column.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Retention`  <a name="cfn-glue-table-tableinput-retention"></a>

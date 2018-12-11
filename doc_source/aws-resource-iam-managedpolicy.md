@@ -4,9 +4,9 @@
 
 **Topics**
 + [Syntax](#aws-resource-iam-managedpolicy-syntax)
-+ [Properties](#w4ab1c21c10d775b9)
-+ [Return Values](#w4ab1c21c10d775c11)
-+ [Example](#w4ab1c21c10d775c13)
++ [Properties](#w4ab1c21c10d144c28b9)
++ [Return Values](#w4ab1c21c10d144c28c11)
++ [Example](#w4ab1c21c10d144c28c13)
 
 ## Syntax<a name="aws-resource-iam-managedpolicy-syntax"></a>
 
@@ -46,7 +46,7 @@ Properties:
   [ManagedPolicyName](#cfn-iam-managedpolicy-managedpolicyname): String
 ```
 
-## Properties<a name="w4ab1c21c10d775b9"></a>
+## Properties<a name="w4ab1c21c10d144c28b9"></a>
 
 `Description`  <a name="cfn-iam-managedpolicy-description"></a>
 A description of the IAM policy\. For example, describe the permissions that are defined in the policy\.  
@@ -94,9 +94,9 @@ If you specify a name, you cannot perform updates that require replacement of th
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d775c11"></a>
+## Return Values<a name="w4ab1c21c10d144c28c11"></a>
 
-### Ref<a name="w4ab1c21c10d775c11b2"></a>
+### Ref<a name="w4ab1c21c10d144c28c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN\.
 
@@ -108,7 +108,7 @@ In the following sample, the `Ref` function returns the ARN of the `CreateTestDB
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d775c13"></a>
+## Example<a name="w4ab1c21c10d144c28c13"></a>
 
 The following example creates a managed policy and associates it with the `TestDBGroup` group\. The managed policy grants users permission to create t2\.micro database instances\. The database must use the MySQL database engine and the instance name must include the prefix `test`\.
 

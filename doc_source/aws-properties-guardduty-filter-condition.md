@@ -1,8 +1,8 @@
-# GuardDuty Filter Condition<a name="aws-properties-guardduty-filter-condition"></a>
+# Amazon GuardDuty Filter Condition<a name="aws-properties-guardduty-filter-condition"></a>
 
 <a name="aws-properties-guardduty-filter-condition-description"></a>The `Condition` property type specifies the condition to be applied to a single field when filtering through GuardDuty findings\. 
 
-<a name="aws-properties-guardduty-filter-condition-inheritance"></a> `Condition` is a property of the [GuardDuty Filter FindingCriteria](aws-properties-guardduty-filter-findingcriteria.md) property type\.
+<a name="aws-properties-guardduty-filter-condition-inheritance"></a> `Condition` is a property of the [FindingCriteria](aws-properties-guardduty-filter-findingcriteria.md) property type\.
 
 ## Syntax<a name="aws-properties-guardduty-filter-condition-syntax"></a>
 

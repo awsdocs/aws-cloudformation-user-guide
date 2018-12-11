@@ -2,11 +2,6 @@
 
 The `AWS::Cloud9::EnvironmentEC2` resource creates an Amazon EC2 development environment in AWS Cloud9\. For more information, see [Creating an Environment](https://docs.aws.amazon.com/cloud9/latest/user-guide/create-environment.html) in the *AWS Cloud9 User Guide*\. 
 
-**Topics**
-+ [Syntax](#aws-resource-cloud9-environmentec2-syntax)
-+ [Properties](#aws-resource-cloud9-environmentec2-properties)
-+ [Return Values](#aws-resource-cloud9-environmentec2-returnvalues)
-
 ## Syntax<a name="aws-resource-cloud9-environmentec2-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -48,7 +43,7 @@ Properties:
 `Repositories`  <a name="cfn-cloud9-environmentec2-repositories"></a>
 Any AWS CodeCommit source code repositories to be cloned into the development environment\.  
  *Required*: No  
- *Type*: List of [AWS Cloud9 EnvironmentEC2 Repository](aws-properties-cloud9-environmentec2-repository.md)  
+ *Type*: List of [Repository](aws-properties-cloud9-environmentec2-repository.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `OwnerArn`  <a name="cfn-cloud9-environmentec2-ownerarn"></a>

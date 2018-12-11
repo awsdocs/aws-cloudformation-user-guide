@@ -5,12 +5,6 @@ The `AWS::ElasticLoadBalancingV2::LoadBalancer` resource creates an Elastic Load
 **Note**  
 AWS CloudFormation does not automatically create tags \(key–value pairs\) for an Elastic Load Balancing load balancer\. You must use the [Tags](#cfn-elasticloadbalancingv2-loadbalancer-tags) property to create tags to associate with the load balancer\.
 
-**Topics**
-+ [Syntax](#aws-resource-elasticloadbalancingv2-loadbalancer-syntax)
-+ [Properties](#w4ab1c21c10d667c10)
-+ [Return Values](#w4ab1c21c10d667c12)
-+ [Examples](#w4ab1c21c10d667c14)
-
 ## Syntax<a name="aws-resource-elasticloadbalancingv2-loadbalancer-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -55,7 +49,7 @@ Properties:
   [Type](#cfn-elasticloadbalancingv2-loadbalancer-type): String
 ```
 
-## Properties<a name="w4ab1c21c10d667c10"></a>
+## Properties<a name="w4ab1c21c10d129c25b8"></a>
 
 For more information and valid parameter values, see the `[CreateLoadBalancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateLoadBalancer.html)` action in the [Elastic Load Balancing API Reference version 2015\-12\-01](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/)\.
 
@@ -95,8 +89,8 @@ The nodes of an internal load balancer have only private IP addresses\. The DNS 
 
 `SubnetMappings`  <a name="cfn-elasticloadbalancingv2-loadbalancer-subnetmappings"></a>
 The subnets to attach to the load balancer, specified as a list of `SubnetMapping` property types\. You can specify only one subnet per Availability Zone\. You must specify either subnets or subnet mappings\.  
-\[Application Load Balancers\] The load balancer is allocated one static IP address per subnet\. You cannot specify your own Elastic IP addresses\.  
-\[Network Load Balancers\] You can specify one Elastic IP address per subnet\.  
+\[Application Load Balancers\] You must specify subnets from at least two Availability Zones\. You cannot specify your own Elastic IP addresses\.  
+\[Network Load Balancers\] You can specify subnets from one or more Availability Zones\. You can specify one Elastic IP address per subnet\.  
 *Required*: No  
 *Type*: List of [Elastic Load Balancing LoadBalancer SubnetMapping](aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -111,7 +105,7 @@ The subnets to attach to the load balancer, specified as a list of subnet IDs\. 
 `Tags`  <a name="cfn-elasticloadbalancingv2-loadbalancer-tags"></a>
 Specifies an arbitrary set of tags \(key–value pairs\) to associate with this load balancer\. Use tags to manage your resources\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Type`  <a name="cfn-elasticloadbalancingv2-loadbalancer-type"></a>
@@ -120,9 +114,9 @@ Specifies the type of load balancer to create\. Valid values are `application` a
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d667c12"></a>
+## Return Values<a name="w4ab1c21c10d129c25c10"></a>
 
-### Ref<a name="w4ab1c21c10d667c12b2"></a>
+### Ref<a name="w4ab1c21c10d129c25c10b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN of the load balancer, for example:
 
@@ -132,7 +126,7 @@ arn:aws:elasticloadbalancing:us-west-2:123456789012:loadbalancer/app/my-internal
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d667c12b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d129c25c10b4"></a>
 
 `Fn::GetAtt` returns a value for the following attributes\.
 
@@ -153,7 +147,7 @@ The IDs of the security groups for the load balancer, for example `sg-123456a`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w4ab1c21c10d667c14"></a>
+## Examples<a name="w4ab1c21c10d129c25c12"></a>
 
 ### Load balancer with idle timeout period specified<a name="aws-resource-elasticloadbalancingv2-loadbalancer-example1"></a>
 

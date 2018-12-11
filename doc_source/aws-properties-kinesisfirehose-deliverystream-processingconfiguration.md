@@ -2,7 +2,7 @@
 
 The `ProcessingConfiguration` property configures data processing for an Amazon Kinesis Data Firehose delivery stream\.
 
-`ProcessingConfiguration` is a property of the [Kinesis Data Firehose DeliveryStream ElasticsearchDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.md), [Kinesis Data Firehose DeliveryStream ExtendedS3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.md), [Kinesis Data Firehose DeliveryStream RedshiftDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.md), and [Kinesis Data Firehose DeliveryStream SplunkDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.md) property types\. 
+`ProcessingConfiguration` is a property of the [ElasticsearchDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.md), [ExtendedS3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.md), [RedshiftDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.md), and [SplunkDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.md) property types\. 
 
 ## Syntax<a name="aws-properties-kinesisfirehose-deliverystream-processingconfiguration-syntax"></a>
 
@@ -36,5 +36,5 @@ Indicates whether data processing is enabled \(`true`\) or disabled \(`false`\)\
 `Processors`  <a name="cfn-kinesisfirehose-deliverystream-processingconfiguration-processors"></a>
 The data processors\.  
  *Required*: Yes  
- *Type*: List of [Kinesis Data Firehose DeliveryStream Processor](aws-properties-kinesisfirehose-deliverystream-processor.md)  
+ *Type*: List of [Processor](aws-properties-kinesisfirehose-deliverystream-processor.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

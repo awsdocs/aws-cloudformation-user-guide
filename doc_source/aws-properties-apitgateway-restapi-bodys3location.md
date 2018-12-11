@@ -5,7 +5,7 @@
 **Note**  
 On January 1, 2016, the Swagger Specification was donated to the [OpenAPI initiative](https://www.openapis.org/), becoming the foundation of the OpenAPI Specification\.
 
-## Syntax<a name="w4ab1c21c14c49b7"></a>
+## Syntax<a name="w4ab1c21c10c20c73c21b7"></a>
 
 ### JSON<a name="aws-properties-apitgateway-restapi-bodys3location-syntax.json"></a>
 
@@ -27,7 +27,7 @@ On January 1, 2016, the Swagger Specification was donated to the [OpenAPI initia
 [Version](#cfn-apigateway-restapi-s3location-version): String
 ```
 
-## Properties<a name="w4ab1c21c14c49b9"></a>
+## Properties<a name="w4ab1c21c10c20c73c21b9"></a>
 
 `Bucket`  <a name="cfn-apigateway-restapi-s3location-bucket"></a>
 The name of the S3 bucket where the OpenAPI file is stored\.  

@@ -4,9 +4,9 @@ The `AWS::Logs::LogStream` resource creates an Amazon CloudWatch Logs log stream
 
 **Topics**
 + [Syntax](#aws-resource-logs-logstream-syntax)
-+ [Properties](#w4ab1c21c10d907b9)
-+ [Return Values](#w4ab1c21c10d907c11)
-+ [Example](#w4ab1c21c10d907c13)
++ [Properties](#w4ab1c21c10c63c47b9)
++ [Return Values](#w4ab1c21c10c63c47c11)
++ [Example](#w4ab1c21c10c63c47c13)
 
 ## Syntax<a name="aws-resource-logs-logstream-syntax"></a>
 
@@ -33,7 +33,7 @@ Properties:
   [LogStreamName](#cfn-logs-logstream-logstreamname): String
 ```
 
-## Properties<a name="w4ab1c21c10d907b9"></a>
+## Properties<a name="w4ab1c21c10c63c47b9"></a>
 
 `LogGroupName`  <a name="cfn-logs-logstream-loggroupname"></a>
 The name of the log group where the log stream is created\.  
@@ -47,17 +47,17 @@ The name of the log stream to create\. The name must be unique within the log gr
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d907c11"></a>
+## Return Values<a name="w4ab1c21c10c63c47c11"></a>
 
-### Ref<a name="w4ab1c21c10d907c11b2"></a>
+### Ref<a name="w4ab1c21c10c63c47c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name, such as `MyAppLogStream`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d907c13"></a>
+## Example<a name="w4ab1c21c10c63c47c13"></a>
 
-### <a name="w4ab1c21c10d907c13b2"></a>
+### <a name="w4ab1c21c10c63c47c13b2"></a>
 
 The following example creates a CloudWatch Logs log stream named `MyAppLogStream` in the `exampleLogGroup` log group\.
 

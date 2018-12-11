@@ -47,7 +47,7 @@ User specified attribute\(s\) in the form of key/value pairs\.
 
 `PlacementName`  <a name="cfn-iot1click-placement-placementname"></a>
 The name of this placement\.  
- *Required*: Yes  
+ *Required*: No  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 

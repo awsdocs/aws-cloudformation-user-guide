@@ -2,7 +2,7 @@
 
 Describes global secondary indexes for the [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md) resource\.
 
-## Syntax<a name="w4ab1c21c14d666b5"></a>
+## Syntax<a name="w4ab1c21c10c99c14c27b5"></a>
 
 ### JSON<a name="aws-properties-dynamodb-gsi-syntax.json"></a>
 
@@ -27,7 +27,7 @@ Describes global secondary indexes for the [AWS::DynamoDB::Table](aws-resource-d
   ProvisionedThroughput
 ```
 
-## Properties<a name="w4ab1c21c14d666b7"></a>
+## Properties<a name="w4ab1c21c10c99c14c27b7"></a>
 
 `IndexName`  <a name="cfn-dynamodb-gsi-indexname"></a>
 The name of the global secondary index\. The index name can be 3 – 255 characters long and must satisfy the regular expression pattern `[a-zA-Z0-9_.-]+`\.  
@@ -37,14 +37,14 @@ The name of the global secondary index\. The index name can be 3 – 255 charact
 `KeySchema`  <a name="cfn-dynamodb-gsi-keyschema"></a>
 The complete index key schema for the global secondary index, which consists of one or more pairs of attribute names and key types\.  
 *Required*: Yes  
-*Type*: List of [DynamoDB Table KeySchema](aws-properties-dynamodb-keyschema.md)
+*Type*: List of [KeySchema](aws-properties-dynamodb-keyschema.md)
 
 `Projection`  <a name="cfn-dynamodb-gsi-projection"></a>
 Attributes that are copied \(projected\) from the source table into the index\. These attributes are in addition to the primary key attributes and index key attributes, which are automatically projected\.  
 *Required*: Yes  
-*Type*: [DynamoDB Table Projection](aws-properties-dynamodb-projectionobject.md)
+*Type*: [Projection](aws-properties-dynamodb-projectionobject.md)
 
 `ProvisionedThroughput`  <a name="cfn-dynamodb-gsi-provisionthroughput"></a>
 The provisioned throughput settings for the index\.  
-*Required*: Yes  
-*Type*: [DynamoDB Table ProvisionedThroughput](aws-properties-dynamodb-provisionedthroughput.md)
+*Required*: Conditional\. If you set `BillingMode` as `PROVISIONED`, you must specify this property\. If you set `BillingMode` as `PAY_PER_REQUEST`, you cannot specify this property\.  
+*Type*: [ProvisionedThroughput](aws-properties-dynamodb-provisionedthroughput.md)

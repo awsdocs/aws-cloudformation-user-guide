@@ -2,7 +2,7 @@
 
 `AutoScalingPolicy` is a subproperty of the [Amazon EMR Cluster InstanceGroupConfig](aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.md) property type that specifies the constraints and rules for an Auto Scaling group policy\. For more information, see [PutAutoScalingPolicy](https://docs.aws.amazon.com//ElasticMapReduce/latest/API/API_PutAutoScalingPolicy.html) in the Amazon EMR API Reference\.
 
-## Syntax<a name="w4ab1c21c14e1154b5"></a>
+## Syntax<a name="w4ab1c21c10d132c13c19b5"></a>
 
 ### JSON<a name="aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig-autoscalingpolicy-syntax.json"></a>
 
@@ -22,7 +22,7 @@
   - ScalingRule
 ```
 
-## Properties<a name="w4ab1c21c14e1154b7"></a>
+## Properties<a name="w4ab1c21c10d132c13c19b7"></a>
 
 `Constraints`  <a name="cfn-emr-cluster-jobflowinstancesconfig-instancegroupconfig-autoscalingpolicy-constraints"></a>
 The upper and lower Amazon EC2 instance limits for an automatic scaling policy\. Automatic scaling activity will not cause an instance group to grow above or below these limits\.   

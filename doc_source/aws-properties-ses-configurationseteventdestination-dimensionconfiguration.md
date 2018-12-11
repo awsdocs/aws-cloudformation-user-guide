@@ -2,7 +2,7 @@
 
 <a name="aws-properties-ses-configurationseteventdestination-dimensionconfiguration-description"></a>The `DimensionConfiguration` property type specifies the dimension configuration to use when you publish email sending events to Amazon CloudWatch using Amazon SES\.
 
-<a name="aws-properties-ses-configurationseteventdestination-dimensionconfiguration-inheritance"></a> `DimensionConfiguration` is a property of the [Amazon SES ConfigurationSetEventDestination CloudWatchDestination](aws-properties-ses-configurationseteventdestination-cloudwatchdestination.md) property type\.
+<a name="aws-properties-ses-configurationseteventdestination-dimensionconfiguration-inheritance"></a> `DimensionConfiguration` is a property of the [CloudWatchDestination](aws-properties-ses-configurationseteventdestination-cloudwatchdestination.md) property type\.
 
 ## Syntax<a name="aws-properties-ses-configurationseteventdestination-dimensionconfiguration-syntax"></a>
 

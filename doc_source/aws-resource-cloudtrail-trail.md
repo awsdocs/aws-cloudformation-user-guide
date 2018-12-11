@@ -2,12 +2,6 @@
 
 Use the `AWS::CloudTrail::Trail` resource to create a trail and specify where logs are published\. An AWS CloudTrail \(CloudTrail\) trail can capture AWS API calls made by your AWS account and publish the logs to an Amazon S3 bucket\. For more information, see [What is AWS CloudTrail?](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html) in the *AWS CloudTrail User Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-cloudtrail-trail-syntax)
-+ [Properties](#w4ab1c21c10d236b9)
-+ [Return Values](#w4ab1c21c10d236c11)
-+ [Example](#aws-resource-cloudtrail-trail-examples)
-
 ## Syntax<a name="aws-resource-cloudtrail-trail-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -57,7 +51,7 @@ Properties:
   [TrailName](#cfn-cloudtrail-trail-trailname): String
 ```
 
-## Properties<a name="w4ab1c21c10d236b9"></a>
+## Properties<a name="w4ab1c21c10c60c13b9"></a>
 
 For more information and property constraints, see [CreateTrail](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/ API_CreateTrail.html) in the *AWS CloudTrail API Reference*\.
 
@@ -82,7 +76,7 @@ Indicates whether CloudTrail validates the integrity of log files\. By default, 
 `EventSelectors`  <a name="cfn-cloudtrail-trail-eventselectors"></a>
 Configures logging for management and data events\.  
 *Required*: No  
-*Type*: List of [CloudTrail Trail EventSelector](aws-properties-cloudtrail-trail-eventselector.md)  
+*Type*: List of [EventSelector](aws-properties-cloudtrail-trail-eventselector.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `IncludeGlobalServiceEvents`  <a name="cfn-cloudtrail-trail-includeglobalserviceevents"></a>
@@ -130,7 +124,7 @@ The name of an Amazon SNS topic that is notified when new log files are publishe
 `Tags`  <a name="cfn-cloudtrail-trail-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this trail\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
 `TrailName`  <a name="cfn-cloudtrail-trail-trailname"></a>
@@ -139,9 +133,9 @@ The name of the trail\. For constraint information, see [CreateTrail](https://do
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d236c11"></a>
+## Return Values<a name="w4ab1c21c10c60c13c11"></a>
 
-### Ref<a name="w4ab1c21c10d236c11b2"></a>
+### Ref<a name="w4ab1c21c10c60c13c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 

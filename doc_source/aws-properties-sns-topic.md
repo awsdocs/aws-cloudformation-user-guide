@@ -2,13 +2,6 @@
 
 The `AWS::SNS::Topic` type creates an Amazon Simple Notification Service \(Amazon SNS\) topic\.
 
-**Topics**
-+ [Syntax](#aws-resource-sns-topic-syntax)
-+ [Properties](#w4ab1c21c10e1158b9)
-+ [Return Values](#w4ab1c21c10e1158c11)
-+ [Examples](#w4ab1c21c10e1158c13)
-+ [See Also](#w4ab1c21c10e1158c15)
-
 ## Syntax<a name="aws-resource-sns-topic-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -20,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SNS::Topic",
   "Properties" : {
     "[DisplayName](#cfn-sns-topic-displayname)" : String,
+    "[KmsMasterKeyId](#cfn-sns-topic-kmsmasterkeyid)" : String,
     "[Subscription](#cfn-sns-topic-subscription)" : [ SNS Subscription, ... ],
     "[TopicName](#cfn-sns-topic-name)" : String
   }
@@ -32,15 +26,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::SNS::Topic
 Properties: 
   [DisplayName](#cfn-sns-topic-displayname): String
+  [KmsMasterKeyId](#cfn-sns-topic-kmsmasterkeyid): String
   [Subscription](#cfn-sns-topic-subscription):
     - SNS Subscription
   [TopicName](#cfn-sns-topic-name): String
 ```
 
-## Properties<a name="w4ab1c21c10e1158b9"></a>
+## Properties<a name="w4ab1c21c10d198c17b7"></a>
 
 `DisplayName`  <a name="cfn-sns-topic-displayname"></a>
 A developer\-defined string that can be used to identify this SNS topic\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`KmsMasterKeyId`  <a name="cfn-sns-topic-kmsmasterkeyid"></a>
+An AWS KMS key identifier\. This can be a key ID, key ARN, or key alias\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -58,15 +59,15 @@ If you specify a name, you cannot perform updates that require replacement of th
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10e1158c11"></a>
+## Return Values<a name="w4ab1c21c10d198c17b9"></a>
 
-### Ref<a name="w4ab1c21c10e1158c11b2"></a>
+### Ref<a name="w4ab1c21c10d198c17b9b2"></a>
 
 For the `AWS::SNS::Topic` resource, the `Ref` intrinsic function returns the topic ARN, for example: `arn:aws:sns:us-east-1:123456789012:mystack-mytopic-NZJ5JSMVGFIE`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10e1158c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d198c17b9b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -75,7 +76,7 @@ Returns the name for an Amazon SNS topic\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w4ab1c21c10e1158c13"></a>
+## Examples<a name="w4ab1c21c10d198c17c11"></a>
 
 An example of an SNS topic subscribed to by two SQS queues:
 
@@ -116,5 +117,5 @@ MySNSTopic:
     TopicName: "SampleTopic"
 ```
 
-## See Also<a name="w4ab1c21c10e1158c15"></a>
+## See Also<a name="w4ab1c21c10d198c17c13"></a>
 + [Using an AWS CloudFormation Template to Create a Topic that Sends Messages to Amazon SQS Queues](http://docs.aws.amazon.com/sns/latest/dg/SendMessageToSQS.cloudformation.html) in the *Amazon Simple Notification Service Developer Guide*

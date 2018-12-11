@@ -39,11 +39,11 @@ The name of the in\-application table to create\.
 `S3ReferenceDataSource`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource-s3referencedatasource"></a>
 Identifies the Amazon S3 bucket and object that contains the reference data\. Also identifies the IAM role that Amazon Kinesis Data Analytics can assume to read this object on your behalf\.   
  *Required*: No  
- *Type*: [Kinesis Data Analytics ApplicationReferenceDataSource S3ReferenceDataSource](aws-properties-kinesisanalytics-applicationreferencedatasource-s3referencedatasource.md)  
+ *Type*: [S3ReferenceDataSource](aws-properties-kinesisanalytics-applicationreferencedatasource-s3referencedatasource.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ReferenceSchema`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource-referenceschema"></a>
 Describes the format of the data in the streaming source, and how each data element maps to corresponding columns that are created in the in\-application stream\.   
  *Required*: Yes  
- *Type*: [Kinesis Data Analytics ApplicationReferenceDataSource ReferenceSchema](aws-properties-kinesisanalytics-applicationreferencedatasource-referenceschema.md)  
+ *Type*: [ReferenceSchema](aws-properties-kinesisanalytics-applicationreferencedatasource-referenceschema.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

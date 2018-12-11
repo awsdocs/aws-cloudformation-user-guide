@@ -2,12 +2,6 @@
 
 The `AWS::Batch::ComputeEnvironment` resource to define your AWS Batch compute environment\. For more information, see [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\. 
 
-**Topics**
-+ [Syntax](#aws-resource-batch-computeenvironment-syntax)
-+ [Properties](#aws-resource-batch-computeenvironment-properties)
-+ [Return Values](#aws-resource-batch-computeenvironment-returnvalues)
-+ [Examples](#aws-resource-batch-computeenvironment-examples)
-
 ## Syntax<a name="aws-resource-batch-computeenvironment-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

@@ -2,7 +2,7 @@
 
 When configuring application input at the time of creating or updating an application, provides additional mapping information specific to the record format \(such as JSON, CSV, or record fields delimited by some delimiter\) on the streaming source\. 
 
- `MappingParameters` is a property of the [Kinesis Data Analytics ApplicationReferenceDataSource RecordFormat](aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat.md) parameter\. 
+ `MappingParameters` is a property of the [RecordFormat](aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat.md) parameter\. 
 
 ## Syntax<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters-syntax"></a>
 
@@ -31,11 +31,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `CSVMappingParameters`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-csvmappingparameters"></a>
 Provides additional mapping information when the record format uses delimiters \(for example, CSV\)\.   
  *Required*: No  
- *Type*: [Kinesis Data Analytics ApplicationReferenceDataSource CSVMappingParameters](aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters.md)  
+ *Type*: [CSVMappingParameters](aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `JSONMappingParameters`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-jsonmappingparameters"></a>
 Provides additional mapping information when JSON is the record format on the streaming source\.  
  *Required*: No  
- *Type*: [Kinesis Data Analytics ApplicationReferenceDataSource JSONMappingParameters](aws-properties-kinesisanalytics-applicationreferencedatasource-jsonmappingparameters.md)  
+ *Type*: [JSONMappingParameters](aws-properties-kinesisanalytics-applicationreferencedatasource-jsonmappingparameters.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

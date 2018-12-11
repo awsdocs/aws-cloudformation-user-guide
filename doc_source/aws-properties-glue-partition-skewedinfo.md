@@ -2,7 +2,7 @@
 
 <a name="aws-properties-glue-partition-skewedinfo-description"></a>The `SkewedInfo` property type specifies skewed values \(values that occur with very high frequency\) in an AWS Glue partition\.
 
-<a name="aws-properties-glue-partition-skewedinfo-inheritance"></a> `SkewedInfo` is a property of the [AWS Glue Partition StorageDescriptor](aws-properties-glue-partition-storagedescriptor.md) property type\.
+<a name="aws-properties-glue-partition-skewedinfo-inheritance"></a> `SkewedInfo` is a property of the [StorageDescriptor](aws-properties-glue-partition-storagedescriptor.md) property type\.
 
 ## Syntax<a name="aws-properties-glue-partition-skewedinfo-syntax"></a>
 

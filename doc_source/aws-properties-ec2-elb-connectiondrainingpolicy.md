@@ -4,7 +4,7 @@ The `ConnectionDrainingPolicy` property describes how deregistered or unhealthy 
 
 For more information about connection draining and default values, see [Enable or Disable Connection Draining for Your Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/config-conn-drain.html) in the *Elastic Load Balancing User Guide*\.
 
-## Syntax<a name="w4ab1c21c14e1066b7"></a>
+## Syntax<a name="w4ab1c21c10d126c14c25b7"></a>
 
 ### JSON<a name="aws-properties-ec2-elb-connectiondrainingpolicy-syntax.json"></a>
 
@@ -22,7 +22,7 @@ For more information about connection draining and default values, see [Enable o
 [Timeout](#cfn-elb-connectiondrainingpolicy-timeout): Integer
 ```
 
-## Properties<a name="w4ab1c21c14e1066b9"></a>
+## Properties<a name="w4ab1c21c10d126c14c25b9"></a>
 
 `Enabled`  <a name="cfn-elb-connectiondrainingpolicy-enabled"></a>
 Whether or not connection draining is enabled for the load balancer\.  

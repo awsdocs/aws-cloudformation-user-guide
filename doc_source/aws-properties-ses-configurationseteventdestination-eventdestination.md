@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `CloudWatchDestination`  <a name="cfn-ses-configurationseteventdestination-eventdestination-cloudwatchdestination"></a>
 The names, default values, and sources of the dimensions associated with an CloudWatch event destination\.  
  *Required*: No  
- *Type*: [Amazon SES ConfigurationSetEventDestination CloudWatchDestination](aws-properties-ses-configurationseteventdestination-cloudwatchdestination.md)  
+ *Type*: [CloudWatchDestination](aws-properties-ses-configurationseteventdestination-cloudwatchdestination.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Enabled`  <a name="cfn-ses-configurationseteventdestination-eventdestination-enabled"></a>
@@ -53,7 +53,7 @@ Sets whether Amazon SES publishes events to this destination when you send an em
 `KinesisFirehoseDestination`  <a name="cfn-ses-configurationseteventdestination-eventdestination-kinesisfirehosedestination"></a>
 Contains the delivery stream ARN and the IAM role ARN associated with an Kinesis Data Firehose event destination\.  
  *Required*: No  
- *Type*: [Amazon SES ConfigurationSetEventDestination KinesisFirehoseDestination](aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.md)  
+ *Type*: [KinesisFirehoseDestination](aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `MatchingEventTypes`  <a name="cfn-ses-configurationseteventdestination-eventdestination-matchingeventtypes"></a>

@@ -2,12 +2,6 @@
 
 The `AWS::EMR::Cluster` resource creates an Amazon EMR cluster\. This cluster is a collection of EC2 instances that you can run big data frameworks on to process and analyze vast amounts of data\. For more information, see [Plan an Amazon EMR Cluster](https://docs.aws.amazon.com//ElasticMapReduce/latest/ManagementGuide/emr-plan.html) in the *Amazon EMR Management Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-emr-cluster-syntax)
-+ [Properties](#w4ab1c21c10d679b9)
-+ [Return Values](#aws-resource-emr-cluster-returnvalues)
-+ [Examples](#aws-resource-emr-cluster-examples)
-
 ## Syntax<a name="aws-resource-emr-cluster-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -34,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[ScaleDownBehavior](#cfn-emr-cluster-scaledownbehavior)" : String,
     "[SecurityConfiguration](#cfn-emr-cluster-securityconfiguration)" : String,
     "[ServiceRole](#cfn-emr-cluster-servicerole)" : String,
+    "[Steps](#cfn-elasticmapreduce-cluster-steps)" [ [StepConfig](aws-properties-elasticmapreduce-cluster-stepconfig.md), ... ],
     "[Tags](#cfn-emr-cluster-tags)" : [ Resource Tag, ... ],
     "[VisibleToAllUsers](#cfn-emr-cluster-visibletoallusers)" : Boolean
   }
@@ -66,12 +61,14 @@ Properties:
   [ScaleDownBehavior](#cfn-emr-cluster-scaledownbehavior): String
   [SecurityConfiguration](#cfn-emr-cluster-securityconfiguration): String
   [ServiceRole](#cfn-emr-cluster-servicerole): String
+  [Steps](#cfn-elasticmapreduce-cluster-steps):
+    - [StepConfig](aws-properties-elasticmapreduce-cluster-stepconfig.md)
   [Tags](#cfn-emr-cluster-tags):
     - Resource Tag
   [VisibleToAllUsers](#cfn-emr-cluster-visibletoallusers): Boolean
 ```
 
-## Properties<a name="w4ab1c21c10d679b9"></a>
+## Properties<a name="w4ab1c21c10d132c13b7"></a>
 
 **Note**  
 For more information about the constraints and valid values of each property, see the [ Cluster](https://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_Cluster.html) data type in the *Amazon EMR API Reference*\.
@@ -175,10 +172,16 @@ The IAM role that Amazon EMR assumes to access AWS resources on your behalf\. Fo
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
+`Steps`  <a name="cfn-elasticmapreduce-cluster-steps"></a>
+The cluster \(job flow\) steps\.  
+*Required*: No  
+*Type*: List of [Amazon EMR Cluster StepConfig](aws-properties-elasticmapreduce-cluster-stepconfig.md) property types  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+
 `Tags`  <a name="cfn-emr-cluster-tags"></a>
 An arbitrary set of tags \(key–value pairs\) to help you identify the Amazon EMR cluster\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `VisibleToAllUsers`  <a name="cfn-emr-cluster-visibletoallusers"></a>

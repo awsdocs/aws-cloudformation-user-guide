@@ -4,7 +4,7 @@ The `TargetGroupInfo` property type specifies information about a target group i
 
 If you specify the `TargetGroupInfo` property, the `DeploymentStyle.DeploymentOption` property must be set to `WITH_TRAFFIC_CONTROL` for AWS CodeDeploy to route your traffic using the specified target groups\.
 
- `TargetGroupInfo` is a property of the [AWS CodeDeploy DeploymentGroup LoadBalancerInfo](aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.md) property type\. 
+ `TargetGroupInfo` is a property of the [LoadBalancerInfo](aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.md) property type\. 
 
 ## Syntax<a name="aws-properties-codedeploy-deploymentgroup-targetgroupinfo-syntax"></a>
 

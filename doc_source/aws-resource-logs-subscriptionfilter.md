@@ -4,9 +4,9 @@ The `AWS::Logs::SubscriptionFilter` resource creates an Amazon CloudWatch Logs \
 
 **Topics**
 + [Syntax](#aws-resource-logs-subscriptionfilter-syntax)
-+ [Properties](#w4ab1c21c10d915b9)
-+ [Return Values](#w4ab1c21c10d915c11)
-+ [Example](#w4ab1c21c10d915c13)
++ [Properties](#w4ab1c21c10c63c55b9)
++ [Return Values](#w4ab1c21c10c63c55c11)
++ [Example](#w4ab1c21c10c63c55c13)
 
 ## Syntax<a name="aws-resource-logs-subscriptionfilter-syntax"></a>
 
@@ -37,7 +37,7 @@ Properties:
   [RoleArn](#cfn-cwl-subscriptionfilter-rolearn): String
 ```
 
-## Properties<a name="w4ab1c21c10d915b9"></a>
+## Properties<a name="w4ab1c21c10c63c55b9"></a>
 
 `DestinationArn`  <a name="cfn-cwl-subscriptionfilter-destinationarn"></a>
 The Amazon Resource Name \(ARN\) of the Kinesis stream, Kinesis Data Firehose delivery stream, or Lambda function that you want to use as the subscription feed destination\.  
@@ -63,15 +63,15 @@ An IAM role that grants CloudWatch Logs permission to put data into the specifie
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d915c11"></a>
+## Return Values<a name="w4ab1c21c10c63c55c11"></a>
 
-### Ref<a name="w4ab1c21c10d915c11b2"></a>
+### Ref<a name="w4ab1c21c10c63c55c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d915c13"></a>
+## Example<a name="w4ab1c21c10c63c55c13"></a>
 
 The following example sends log events that are associated with the `Root` user to an Kinesis stream\.
 

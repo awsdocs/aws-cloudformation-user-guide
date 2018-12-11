@@ -71,13 +71,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `BlockDeviceMappings`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-blockdevicemappings"></a>
 The block device mapping\.  
  *Required*: No  
- *Type*: List of [Amazon EC2 LaunchTemplate BlockDeviceMapping](aws-properties-ec2-launchtemplate-blockdevicemapping.md)  
+ *Type*: List of [BlockDeviceMapping](aws-properties-ec2-launchtemplate-blockdevicemapping.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `CreditSpecification`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-creditspecification"></a>
 The credit option for CPU usage of the instance\. Valid for T2 instances only\.  
  *Required*: No  
- *Type*: [Amazon EC2 LaunchTemplate CreditSpecification](aws-properties-ec2-launchtemplate-creditspecification.md)  
+ *Type*: [CreditSpecification](aws-properties-ec2-launchtemplate-creditspecification.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `DisableApiTermination`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-disableapitermination"></a>
@@ -95,13 +95,13 @@ Indicates whether the instance is optimized for Amazon EBS I/O\. This optimizati
 `ElasticGpuSpecifications`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-elasticgpuspecifications"></a>
 An elastic GPU to associate with the instance\.  
  *Required*: No  
- *Type*: List of [Amazon EC2 LaunchTemplate ElasticGpuSpecification](aws-properties-ec2-launchtemplate-elasticgpuspecification.md)  
+ *Type*: List of [ElasticGpuSpecification](aws-properties-ec2-launchtemplate-elasticgpuspecification.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `IamInstanceProfile`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile"></a>
 The IAM instance profile\.  
  *Required*: No  
- *Type*: [Amazon EC2 LaunchTemplate IamInstanceProfile](aws-properties-ec2-launchtemplate-iaminstanceprofile.md)  
+ *Type*: [IamInstanceProfile](aws-properties-ec2-launchtemplate-iaminstanceprofile.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ImageId`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-imageid"></a>
@@ -120,7 +120,7 @@ Valid values include `stop` and `terminate`\. The default is `stop`\.
 `InstanceMarketOptions`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions"></a>
 The market \(purchasing\) option for the instances\.  
  *Required*: No  
- *Type*: [Amazon EC2 LaunchTemplate InstanceMarketOptions](aws-properties-ec2-launchtemplate-instancemarketoptions.md)  
+ *Type*: [InstanceMarketOptions](aws-properties-ec2-launchtemplate-instancemarketoptions.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `InstanceType`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancetype"></a>
@@ -146,19 +146,19 @@ If you do not specify a key pair, you can't connect to the instance unless you c
 `Monitoring`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-monitoring"></a>
 The monitoring for the instance\.  
  *Required*: No  
- *Type*: [Amazon EC2 LaunchTemplate Monitoring](aws-properties-ec2-launchtemplate-monitoring.md)  
+ *Type*: [Monitoring](aws-properties-ec2-launchtemplate-monitoring.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `NetworkInterfaces`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-networkinterfaces"></a>
 One or more network interfaces\.  
  *Required*: No  
- *Type*: List of [Amazon EC2 LaunchTemplate NetworkInterface](aws-properties-ec2-launchtemplate-networkinterface.md)  
+ *Type*: List of [NetworkInterface](aws-properties-ec2-launchtemplate-networkinterface.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Placement`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-placement"></a>
 The placement for the instance\.  
  *Required*: No  
- *Type*: [Amazon EC2 LaunchTemplate Placement](aws-properties-ec2-launchtemplate-placement.md)  
+ *Type*: [Placement](aws-properties-ec2-launchtemplate-placement.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `RamDiskId`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-ramdiskid"></a>
@@ -183,7 +183,7 @@ One or more security group IDs\. You cannot specify both a security group ID and
 `TagSpecifications`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-tagspecifications"></a>
 The tags to apply to the resources during launch\. You can tag instances and volumes\. The specified tags are applied to all instances or volumes that are created during launch\.  
  *Required*: No  
- *Type*: List of [Amazon EC2 LaunchTemplate TagSpecification](aws-properties-ec2-launchtemplate-tagspecification.md)  
+ *Type*: List of [TagSpecification](aws-properties-ec2-launchtemplate-tagspecification.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `UserData`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-userdata"></a>

@@ -2,7 +2,7 @@
 
 `CloudwatchMetric` is a property of the `Actions` property that describes an action that captures a CloudWatch metric\.
 
-## Syntax<a name="w4ab1c21c14e1430b5"></a>
+## Syntax<a name="w4ab1c21c10d150c39c28b5"></a>
 
 ### JSON<a name="aws-properties-iot-topicrule-cloudwatchmetricaction-syntax.json"></a>
 
@@ -28,7 +28,7 @@
 [RoleArn](#cfn-iot-topicrule-cloudwatchmetricaction-rolearn): String
 ```
 
-## Properties<a name="w4ab1c21c14e1430b7"></a>
+## Properties<a name="w4ab1c21c10d150c39c28b7"></a>
 
 `MetricName`  <a name="cfn-iot-topicrule-cloudwatchmetricaction-metricname"></a>
 The name of the CloudWatch metric\.  

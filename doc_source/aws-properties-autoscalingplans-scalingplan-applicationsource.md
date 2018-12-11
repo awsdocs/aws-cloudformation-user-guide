@@ -1,6 +1,6 @@
 # AWS Auto Scaling ScalingPlan ApplicationSource<a name="aws-properties-autoscalingplans-scalingplan-applicationsource"></a>
 
-<a name="aws-properties-autoscalingplans-scalingplan-applicationsource-description"></a>The `ApplicationSource` property type specifies the application source for an AWS Auto Scaling scaling plan\. You can create one scaling plan per application source\.
+<a name="aws-properties-autoscalingplans-scalingplan-applicationsource-description"></a>The `ApplicationSource` property type specifies the application source to use with AWS Auto Scaling\. You can create one scaling plan per application source\.
 
 <a name="aws-properties-autoscalingplans-scalingplan-applicationsource-inheritance"></a> `ApplicationSource` is a property of the [AWS::AutoScalingPlans::ScalingPlan](aws-resource-autoscalingplans-scalingplan.md) resource\.
 
@@ -36,5 +36,5 @@ The Amazon Resource Name \(ARN\) of a CloudFormation stack\.
 `TagFilters`  <a name="cfn-autoscalingplans-scalingplan-applicationsource-tagfilters"></a>
 A set of tags \(up to 50\)\.  
  *Required*: No  
- *Type*: List of [AWS Auto Scaling ScalingPlan TagFilter](aws-properties-autoscalingplans-scalingplan-tagfilter.md)  
+ *Type*: List of [TagFilter](aws-properties-autoscalingplans-scalingplan-tagfilter.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

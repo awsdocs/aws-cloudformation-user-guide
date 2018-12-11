@@ -2,13 +2,6 @@
 
 The `AWS::ApiGateway::Method` resource creates Amazon API Gateway \(API Gateway\) methods that define the parameters and body that clients must send in their requests\.
 
-**Topics**
-+ [Syntax](#aws-resource-apigateway-method-syntax)
-+ [Properties](#w4ab1c21c10c64b9)
-+ [Return Value](#w4ab1c21c10c64c11)
-+ [Examples](#aws-resource-apigateway-method-examples)
-+ [See Also](#aws-resource-apigateway-method-seealso)
-
 ## Syntax<a name="aws-resource-apigateway-method-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -61,7 +54,7 @@ Properties:
   [RestApiId](#cfn-apigateway-method-restapiid): String
 ```
 
-## Properties<a name="w4ab1c21c10c64b9"></a>
+## Properties<a name="w4ab1c21c10c20c56b9"></a>
 
 `ApiKeyRequired`  <a name="cfn-apigateway-method-apikeyrequired"></a>
 Indicates whether the method requires clients to submit a valid API key\.  
@@ -142,9 +135,9 @@ The ID of the [RestApi](aws-resource-apigateway-restapi.md) resource in which AP
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10c64c11"></a>
+## Return Value<a name="w4ab1c21c10c20c56c11"></a>
 
-### Ref<a name="w4ab1c21c10c64c11b2"></a>
+### Ref<a name="w4ab1c21c10c20c56c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the method ID, such as `mysta-metho-01234b567890example`\.
 
@@ -152,7 +145,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ## Examples<a name="aws-resource-apigateway-method-examples"></a>
 
-### Mock Method<a name="w4ab1c21c10c64c13b2"></a>
+### Mock Method<a name="w4ab1c21c10c20c56c13b2"></a>
 
 The following example creates a mock GET method for the `MyApi` API\.
 
@@ -189,7 +182,7 @@ MockMethod:
       Type: "MOCK"
 ```
 
-### Lambda Proxy<a name="w4ab1c21c10c64c13b4"></a>
+### Lambda Proxy<a name="w4ab1c21c10c20c56c13b4"></a>
 
 The following example creates a proxy resource to enable clients to call a Lambda function with a single integration setup on a catch\-all `ANY` method\. The `Uri` property specifies the Lambda function\. For more information about Lambda proxy integration and a sample Lambda function, see [Create an API with Lambda Proxy Integration through a Proxy Resource](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-create-api-as-simple-proxy-for-lambda.html) in the *API Gateway Developer Guide*\.
 

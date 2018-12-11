@@ -2,12 +2,6 @@
 
 The `AWS::Elasticsearch::Domain` resource creates an Amazon Elasticsearch Service \(Amazon ES\) domain that encapsulates the Amazon ES engine instances\. For more information, see [CreateElasticsearchDomain](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-configuration-api.html#es-configuration-api-actions-createelasticsearchdomain) in the *Amazon Elasticsearch Service Developer Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-elasticsearch-domain-syntax)
-+ [Properties](#aws-resource-elasticsearch-domain-properties)
-+ [Return Values](#aws-resource-elasticsearch-domain-return-values)
-+ [Examples](#aws-resource-elasticsearch-domain-examples)
-
 ## Syntax<a name="aws-resource-elasticsearch-domain-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -87,13 +81,13 @@ If you specify a name, you cannot perform updates that require replacement of th
 `EBSOptions`  <a name="cfn-elasticsearch-domain-ebsoptions"></a>
 The configurations of Amazon Elastic Block Store \(Amazon EBS\) volumes that are attached to data nodes in the Amazon ES domain\. For more information, see [Configuring EBS\-based Storage](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs) in the *Amazon Elasticsearch Service Developer Guide*\.  
 *Required*: No  
-*Type*: [Amazon ES Domain EBSOptions](aws-properties-elasticsearch-domain-ebsoptions.md)  
+*Type*: [EBSOptions](aws-properties-elasticsearch-domain-ebsoptions.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ElasticsearchClusterConfig`  <a name="cfn-elasticsearch-domain-elasticsearchclusterconfig"></a>
 The cluster configuration for the Amazon ES domain\. You can specify options such as the instance type and the number of instances\. For more information, see [Configuring Amazon ES Domains](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains-configure-cluster-cli) in the *Amazon Elasticsearch Service Developer Guide*\.  
 *Required*: No  
-*Type*: [Amazon ES Domain ElasticsearchClusterConfig](aws-properties-elasticsearch-domain-elasticsearchclusterconfig.md)  
+*Type*: [ElasticsearchClusterConfig](aws-properties-elasticsearch-domain-elasticsearchclusterconfig.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ElasticsearchVersion`  <a name="cfn-elasticsearch-domain-elasticsearchversion"></a>
@@ -105,25 +99,25 @@ The version of Elasticsearch to use, such as `2.3`\. For information about the v
 `EncryptionAtRestOptions`  <a name="cfn-elasticsearch-domain-encryptionatrestoptions"></a>
 Whether the domain should encrypt data at rest, and if so, the AWS Key Management Service \(KMS\) key to use\. Can only be used to create a new domain, not update an existing one\.  
  *Required*: No  
- *Type*: [Amazon ES Domain EncryptionAtRestOptions](aws-properties-elasticsearch-domain-encryptionatrestoptions.md)  
+ *Type*: [EncryptionAtRestOptions](aws-properties-elasticsearch-domain-encryptionatrestoptions.md)  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `SnapshotOptions`  <a name="cfn-elasticsearch-domain-snapshotoptions"></a>
 The automated snapshot configuration for the Amazon ES domain indices\.  
 *Required*: No  
-*Type*: [Amazon ES Domain SnapshotOptions](aws-properties-elasticsearch-domain-snapshotoptions.md)  
+*Type*: [SnapshotOptions](aws-properties-elasticsearch-domain-snapshotoptions.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Tags`  <a name="cfn-elasticsearch-domain-tags"></a>
 An arbitrary set of tags \(key–value pairs\) to associate with the Amazon ES domain\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `VPCOptions`  <a name="cfn-elasticsearch-domain-vpcoptions"></a>
 The virtual private cloud \(VPC\) configuration for the Amazon ES domain\. For more information, see [VPC Support for Amazon Elasticsearch Service Domains](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html) in the *Amazon Elasticsearch Service Developer Guide*\.  
  *Required*: No  
- *Type*: [Amazon ES Domain VPCOptions](aws-properties-elasticsearch-domain-vpcoptions.md)  
+ *Type*: [VPCOptions](aws-properties-elasticsearch-domain-vpcoptions.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-elasticsearch-domain-return-values"></a>

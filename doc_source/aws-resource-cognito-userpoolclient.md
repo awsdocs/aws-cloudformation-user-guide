@@ -4,8 +4,8 @@ The `AWS::Cognito::UserPoolClient` resource creates an Amazon Cognito user pool 
 
 **Topics**
 + [Syntax](#aws-resource-cognito-userpoolclient-syntax)
-+ [Properties](#w4ab1c21c10d295b9)
-+ [Return Value](#w4ab1c21c10d295c11)
++ [Properties](#w4ab1c21c10c78c25b9)
++ [Return Value](#w4ab1c21c10c78c25c11)
 
 ## Syntax<a name="aws-resource-cognito-userpoolclient-syntax"></a>
 
@@ -45,7 +45,7 @@ Properties:
       - String
 ```
 
-## Properties<a name="w4ab1c21c10d295b9"></a>
+## Properties<a name="w4ab1c21c10c78c25b9"></a>
 
 `ClientName`  <a name="cfn-cognito-userpoolclient-clientname"></a>
 The client name for the user pool client that you want to create\.  
@@ -91,9 +91,9 @@ The write attributes\.
 *Type*: List of Strings  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10d295c11"></a>
+## Return Value<a name="w4ab1c21c10c78c25c11"></a>
 
-### Ref<a name="w4ab1c21c10d295c11b2"></a>
+### Ref<a name="w4ab1c21c10c78c25c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the Amazon Cognito user pool client ID, such as `1h57kf5cpq17m0eml12EXAMPLE`\.
 

@@ -209,7 +209,7 @@ This example shows an [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-gro
 
 ## Auto Scaling with an UpdatePolicy<a name="w4ab1c17c23c15c13"></a>
 
-This example shows how to use an [UpdatePolicy](aws-attribute-updatepolicy.md) with an auto\-scaling group\.
+This example shows how to use an [UpdatePolicy Attribute](aws-attribute-updatepolicy.md) with an auto\-scaling group\.
 
 ### JSON<a name="quickref-autoscaling-example-5.json"></a>
 

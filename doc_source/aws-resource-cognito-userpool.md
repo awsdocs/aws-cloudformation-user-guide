@@ -2,11 +2,6 @@
 
 The `AWS::Cognito::UserPool` resource creates an Amazon Cognito user pool\. For more information on working with Amazon Cognito user pools, see [Amazon Cognito User Pools](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html) and [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)\.
 
-**Topics**
-+ [Syntax](#aws-resource-cognito-userpool-syntax)
-+ [Properties](#w4ab1c21c10d291b9)
-+ [Return Value](#w4ab1c21c10d291c11)
-
 ## Syntax<a name="aws-resource-cognito-userpool-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -73,7 +68,7 @@ Properties:
     String: String
 ```
 
-## Properties<a name="w4ab1c21c10d291b9"></a>
+## Properties<a name="w4ab1c21c10c78c21b9"></a>
 
 `AdminCreateUserConfig`  <a name="cfn-cognito-userpool-admincreateuserconfig"></a>
 The type of configuration for creating a new user profile\.  
@@ -180,15 +175,15 @@ The cost allocation tags for the user pool\. For more information, see [Adding C
 *Type*: String to String map  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10d291c11"></a>
+## Return Value<a name="w4ab1c21c10c78c21c11"></a>
 
-### Ref<a name="w4ab1c21c10d291c11b3"></a>
+### Ref<a name="w4ab1c21c10c78c21c11b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns a generated ID, such as `us-east-2_zgaEXAMPLE`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d291c11b5"></a>
+### Fn::GetAtt<a name="w4ab1c21c10c78c21c11b5"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 

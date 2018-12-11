@@ -2,13 +2,6 @@
 
 Creates an Amazon CloudFront web distribution\. For general information about CloudFront distributions, see the [Introduction to Amazon CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html) in the *Amazon CloudFront Developer Guide*\. For specific information about creating CloudFront web distributions, see [CreateDistribution](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateDistribution.html) in the *Amazon CloudFront API Reference*\.
 
-**Topics**
-+ [Syntax](#aws-resource-cloudfront-distribution-syntax)
-+ [Properties](#aws-resource-cloudfront-distribution-prop)
-+ [Return Values](#aws-resource-cloudfront-distribution-ref)
-+ [Example](#aws-resource-cloudfront-distribution-examples)
-+ [See Also](#aws-resource-cloudfront-distribution-seealso)
-
 ## Syntax<a name="aws-resource-cloudfront-distribution-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -20,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
    "Type" : "AWS::CloudFront::Distribution",
    "Properties" : {
       "[DistributionConfig](#cfn-cloudfront-distribution-distributionconfig)" : [*DistributionConfig*](aws-properties-cloudfront-distribution-distributionconfig.md),
-      "[Tags](#cfn-cloudfront-distribution-tags)" : [ [*Tag*](aws-properties-cloudfront-streamingdistribution-tag.md), ... ]
+      "[Tags](#cfn-cloudfront-distribution-tags)" : [ [*Tag*](aws-properties-resource-tags.md), ... ]
    }
 }
 ```
@@ -33,7 +26,7 @@ Properties:
   [DistributionConfig](#cfn-cloudfront-distribution-distributionconfig): 
     [*DistributionConfig*](aws-properties-cloudfront-distribution-distributionconfig.md)
   [Tags](#cfn-cloudfront-distribution-tags): 
-    - [*Tag*](aws-properties-cloudfront-streamingdistribution-tag.md)
+    - [*Tag*](aws-properties-resource-tags.md)
 ```
 
 ## Properties<a name="aws-resource-cloudfront-distribution-prop"></a>
@@ -47,19 +40,19 @@ The distribution's configuration information\.
 `Tags`  <a name="cfn-cloudfront-distribution-tags"></a>
 An arbitrary set of tags \(key–value pairs\) to associate with a CloudFront distribution\.  
  *Required*: No  
- *Type*: List of [CloudFront StreamingDistribution Tag](aws-properties-cloudfront-streamingdistribution-tag.md)  
+ *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)   
 Duplicates not allowed\.
 
 ## Return Values<a name="aws-resource-cloudfront-distribution-ref"></a>
 
-### Ref<a name="w4ab1c21c10d224c11b2"></a>
+### Ref<a name="w4ab1c21c10c54c14c11b2"></a>
 
 *Returns*: The CloudFront distribution ID\. For example: `E27LVI50CSW06W`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d224c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10c54c14c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 

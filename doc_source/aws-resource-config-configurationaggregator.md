@@ -2,12 +2,6 @@
 
 The `AWS::Config::ConfigurationAggregator` resource is an AWS Config resource type that collects AWS Config data from multiple accounts and regions\. Use an aggregator to view the resource configuration and compliance data recorded in AWS Config for multiple accounts and regions\. 
 
-**Topics**
-+ [Syntax](#aws-resource-config-configurationaggregator-syntax)
-+ [Properties](#aws-resource-config-configurationaggregator-properties)
-+ [Return Values](#aws-resource-config-configurationaggregator-returnvalues)
-+ [Examples](#aws-resource-config-configurationaggregator-examples)
-
 ## Syntax<a name="aws-resource-config-configurationaggregator-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -42,13 +36,13 @@ Properties:
 `AccountAggregationSources`  <a name="cfn-config-configurationaggregator-accountaggregationsources"></a>
 A collection of accounts and regions\.  
  *Required*: No  
- *Type*: List of [AWS Config ConfigurationAggregator AccountAggregationSource](aws-properties-config-configurationaggregator-accountaggregationsource.md) property types  
+ *Type*: List of [AccountAggregationSource](aws-properties-config-configurationaggregator-accountaggregationsource.md) property types  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `OrganizationAggregationSource`  <a name="cfn-config-configurationaggregator-organizationaggregationsource"></a>
 A collection of regions and IAM role to retrieve AWS Organizations details\.  
  *Required*: No  
- *Type*: [AWS Config ConfigurationAggregator OrganizationAggregationSource](aws-properties-config-configurationaggregator-organizationaggregationsource.md)   
+ *Type*: [OrganizationAggregationSource](aws-properties-config-configurationaggregator-organizationaggregationsource.md)   
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ConfigurationAggregatorName`  <a name="cfn-config-configurationaggregator-configurationaggregatorname"></a>

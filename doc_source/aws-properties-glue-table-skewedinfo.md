@@ -2,7 +2,7 @@
 
 <a name="aws-properties-glue-table-skewedinfo-description"></a>The `SkewedInfo` property type specifies skewed values \(values that occur with very high frequency\) in an AWS Glue table\.
 
-<a name="aws-properties-glue-table-skewedinfo-inheritance"></a> `SkewedInfo` is a property of the [AWS Glue Table StorageDescriptor](aws-properties-glue-table-storagedescriptor.md) property type\.
+<a name="aws-properties-glue-table-skewedinfo-inheritance"></a> `SkewedInfo` is a property of the [StorageDescriptor](aws-properties-glue-table-storagedescriptor.md) property type\.
 
 ## Syntax<a name="aws-properties-glue-table-skewedinfo-syntax"></a>
 

@@ -55,7 +55,7 @@ One or more SQL statements that read input data, transform it, and generate outp
 `Inputs`  <a name="cfn-kinesisanalytics-application-inputs"></a>
 Use this parameter to configure the application input\.  
  *Required*: Yes  
- *Type*: List of [Kinesis Data Analytics Application Input](aws-properties-kinesisanalytics-application-input.md)  
+ *Type*: List of [Input](aws-properties-kinesisanalytics-application-input.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Example<a name="aws-resource-kinesisanalytics-application-examples"></a>

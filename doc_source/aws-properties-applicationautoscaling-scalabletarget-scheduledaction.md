@@ -42,7 +42,7 @@ The date and time that the action is scheduled to end\.
 `ScalableTargetAction`  <a name="cfn-applicationautoscaling-scalabletarget-scheduledaction-scalabletargetaction"></a>
 The new minimum and maximum capacity\. You can set both values or just one\. During the scheduled time, if the current capacity is below the minimum capacity, Application Auto Scaling scales out to the minimum capacity\. If the current capacity is above the maximum capacity, Application Auto Scaling scales in to the maximum capacity\.  
  *Required*: No  
- *Type*: [Application Auto Scaling ScalableTarget ScalableTargetAction](aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction.md)  
+ *Type*: [ScalableTargetAction](aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Schedule`  <a name="cfn-applicationautoscaling-scalabletarget-scheduledaction-schedule"></a>
@@ -55,7 +55,7 @@ The schedule for this action\. The following formats are supported:
   For rate expressions, `value` is a positive integer, and `unit` is `minute`, `minutes`, `hour`, `hours`, `day`, or `days`\.
 + Cron expressions \- `cron(fields)`
 
-  For more information about cron expressions, see [ Cron](https://en.wikipedia.org/wiki/Cron)\.
+  For more information about cron expressions, see [Cron Expressions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions) in the *Amazon CloudWatch Events User Guide*\.
 For constraints, see the [ ScheduledAction](https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_ScheduledAction.html) data type in the *Application Auto Scaling API Reference*\.  
  *Required*: Yes  
  *Type*: String  

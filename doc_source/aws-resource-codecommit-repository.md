@@ -2,12 +2,6 @@
 
 The `AWS::CodeCommit::Repository` resource creates an AWS CodeCommit repository that is hosted by Amazon Web Services\. For more information, see [Create an AWS CodeCommit Repository](https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-create-repository.html) in the *AWS CodeCommit User Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-codecommit-repository-syntax)
-+ [Properties](#w4ab1c21c10d255b9)
-+ [Return Values](#w4ab1c21c10d255c11)
-+ [Example](#w4ab1c21c10d255c13)
-
 ## Syntax<a name="aws-resource-codecommit-repository-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -36,7 +30,7 @@ Properties:
   - [Trigger](aws-properties-codecommit-repository-triggers.md)
 ```
 
-## Properties<a name="w4ab1c21c10d255b9"></a>
+## Properties<a name="w4ab1c21c10c69c13b9"></a>
 
 `RepositoryDescription`  <a name="cfn-codecommit-repository-repositorydescription"></a>
 A description about the AWS CodeCommit repository\. For constraints, see the [CreateRepository](https://docs.aws.amazon.com/codecommit/latest/APIReference/API_CreateRepository.html) action in the *AWS CodeCommit API Reference*\.  
@@ -56,15 +50,15 @@ Defines the actions to take in response to events that occur in the repository\.
 *Type*: List of [AWS CodeCommit Repository Trigger](aws-properties-codecommit-repository-triggers.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d255c11"></a>
+## Return Values<a name="w4ab1c21c10c69c13c11"></a>
 
-### Ref<a name="w4ab1c21c10d255c11b2"></a>
+### Ref<a name="w4ab1c21c10c69c13c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the repository ID, such as `12a345b6-bbb7-4bb6-90b0-8c9577a2d2b9`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d255c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10c69c13c11b4"></a>
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
@@ -82,7 +76,7 @@ The name of the repository, such `MyDemoRepo`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Example<a name="w4ab1c21c10d255c13"></a>
+## Example<a name="w4ab1c21c10c69c13c13"></a>
 
 The following example creates an AWS CodeCommit repository with a trigger for all events in the `Master` branch\.
 

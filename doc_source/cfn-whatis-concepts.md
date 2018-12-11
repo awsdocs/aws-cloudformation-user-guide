@@ -133,7 +133,7 @@ The previous templates are centered around a single Amazon EC2 instance; however
 
 For more information about template creation and capabilities, see [Template Anatomy](template-anatomy.md)\.
 
-For more information about declaring specific resources, see [AWS Resource Types Reference](aws-template-resource-type-ref.md)\.
+For more information about declaring specific resources, see [AWS Resource and Property Types Reference](aws-template-resource-type-ref.md)\.
 
 To start designing your own templates with AWS CloudFormation Designer, go to [https://console\.aws\.amazon\.com/cloudformation/designer](https://console.aws.amazon.com/cloudformation/designer)\.
 

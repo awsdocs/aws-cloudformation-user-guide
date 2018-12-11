@@ -2,12 +2,6 @@
 
 The `AWS::SageMaker::EndpointConfig` resource creates a configuration for an Amazon SageMaker endpoint\. For more information, see [CreateEndpointConfig](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html) in the *SageMaker Developer Guide*\. 
 
-**Topics**
-+ [Syntax](#aws-resource-sagemaker-endpointconfig-syntax)
-+ [Properties](#aws-resource-sagemaker-endpointconfig-properties)
-+ [Return Values](#aws-resource-sagemaker-endpointconfig-returnvalues)
-+ [Examples](#aws-resource-sagemaker-endpointconfig-examples)
-
 ## Syntax<a name="aws-resource-sagemaker-endpointconfig-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -21,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[ProductionVariants](#cfn-sagemaker-endpointconfig-productionvariants)" : [ [*ProductionVariants*](aws-properties-sagemaker-endpointconfig-productionvariant.md), ... ]
     "[EndpointConfigName](#cfn-sagemaker-endpointconfig-endpointconfigname)" : String,
     "[KmsKeyId](#cfn-sagemaker-endpointconfig-kmskeyid)" : String,
-    "[Tags](#cfn-sagemaker-endpointconfig-tags)" : [ [*Tag*](aws-properties-sagemaker-endpointconfig-tag.md), ... ]
+    "[Tags](#cfn-sagemaker-endpointconfig-tags)" : [ [*Tag*](aws-properties-resource-tags.md), ... ]
   }
 }
 ```
@@ -36,7 +30,7 @@ Properties:
   [EndpointConfigName](#cfn-sagemaker-endpointconfig-endpointconfigname): String
   [KmsKeyId](#cfn-sagemaker-endpointconfig-kmskeyid): String
   [Tags](#cfn-sagemaker-endpointconfig-tags): 
-    - [*Tag*](aws-properties-sagemaker-endpointconfig-tag.md)
+    - [*Tag*](aws-properties-resource-tags.md)
 ```
 
 ## Properties<a name="aws-resource-sagemaker-endpointconfig-properties"></a>
@@ -62,7 +56,7 @@ If you provide a AWS KMS key ID, Amazon SageMaker uses it to encrypt data at res
 `Tags`  <a name="cfn-sagemaker-endpointconfig-tags"></a>
 An array of key\-value pairs\. For more information, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.  
  *Required*: Yes  
- *Type*: List of [Amazon SageMaker EndpointConfig Tag](aws-properties-sagemaker-endpointconfig-tag.md)  
+ *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-sagemaker-endpointconfig-returnvalues"></a>

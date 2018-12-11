@@ -2,12 +2,6 @@
 
 The `AWS::CodePipeline::Webhook` resource creates and registers your webhook\. After the webhook is created and registered, it triggers your pipeline to start every time an external event occurs\. For more information, see [Configure Your GitHub Pipelines to Use Webhooks for Change Detection](https://docs.aws.amazon.com/codepipeline/latest/userguide/pipelines-webhooks-migration.html) in the *AWS CodePipeline User Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-codepipeline-webhook-syntax)
-+ [Properties](#aws-resource-codepipeline-webhook-properties)
-+ [Return Values](#aws-resource-codepipeline-webhook-returnvalues)
-+ [Example](#aws-resource-codepipeline-webhook-example1)
-
 ## Syntax<a name="aws-resource-codepipeline-webhook-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -58,13 +52,13 @@ The type of authentication scheme that allows the trigger request to be accepted
 `AuthenticationConfiguration`  <a name="cfn-codepipeline-webhook-authenticationconfiguration"></a>
 Properties that configure the authentication applied to incoming webhook trigger requests\. For more information, see [Webhook Definition](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_WebhookDefinition.html) in the *AWS CodePipeline API Reference*\.  
  *Required*: Yes  
- *Type*: [AWS CodePipeline Webhook WebhookAuthConfiguration](aws-properties-codepipeline-webhook-webhookauthconfiguration.md)  
+ *Type*: [WebhookAuthConfiguration](aws-properties-codepipeline-webhook-webhookauthconfiguration.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Filters`  <a name="cfn-codepipeline-webhook-filters"></a>
 A list of rules applied to the body/payload sent in the POST request to a webhook URL\. All defined rules must pass for the request to be accepted and the pipeline started\.  
  *Required*: Yes  
- *Type*: List of [AWS CodePipeline Webhook WebhookFilterRule](aws-properties-codepipeline-webhook-webhookfilterrule.md) property types  
+ *Type*: List of [WebhookFilterRule](aws-properties-codepipeline-webhook-webhookfilterrule.md) property types  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Name`  <a name="cfn-codepipeline-webhook-name"></a>

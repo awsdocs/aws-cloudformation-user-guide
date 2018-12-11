@@ -7,12 +7,6 @@ When you create or update an event destination, you must provide one, and only o
 
 An event destination is the AWS service to which Amazon SES publishes the email sending events associated with a configuration set\. For information, see [Using Amazon SES Configuration Sets](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-ses-configurationseteventdestination-syntax)
-+ [Properties](#aws-resource-ses-configurationseteventdestination-properties)
-+ [Example](#aws-resource-ses-configurationseteventdestination-examples)
-+ [See Also](#aws-resource-ses-configurationseteventdestination-seealso)
-
 ## Syntax<a name="aws-resource-ses-configurationseteventdestination-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -49,7 +43,7 @@ The name of the configuration set that the event destination should be associate
 `EventDestination`  <a name="cfn-ses-configurationseteventdestination-eventdestination"></a>
 The AWS service that email sending event information will be published to\.  
  *Required*: Yes  
- *Type*: [Amazon SES ConfigurationSetEventDestination EventDestination](aws-properties-ses-configurationseteventdestination-eventdestination.md)  
+ *Type*: [EventDestination](aws-properties-ses-configurationseteventdestination-eventdestination.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Example<a name="aws-resource-ses-configurationseteventdestination-examples"></a>

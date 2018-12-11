@@ -4,7 +4,7 @@ Use the `AWS::Include` transform, which is a macro hosted by AWS CloudFormation,
 
 For example, you might have a Lambda function that you want to reuse in one or more AWS CloudFormation templates\. 
 
-Unlike custom macros, the `AWS::Include` transform doesn't require special permissions to use it because it is hosted by AWS CloudFormation\. It can be used by templates in any account within AWS CloudFormation\. Also, there is no charge incurred when using this tranform\. AWS CloudFormation treats the `AWS::Include` transform the same as any other macro in terms of evaluation order and scope\. For more information about macros, see [Using AWS CloudFormation Macros to Perform Custom Processing on Templates](template-macros.md)\.
+Unlike custom macros, the `AWS::Include` transform doesn't require special permissions to use it because it is hosted by AWS CloudFormation\. It can be used by templates in any account within AWS CloudFormation\. Also, there is no charge incurred when using this transform\. AWS CloudFormation treats the `AWS::Include` transform the same as any other macro in terms of evaluation order and scope\. For more information about macros, see [Using AWS CloudFormation Macros to Perform Custom Processing on Templates](template-macros.md)\.
 
 ## Usage<a name="aws-include-transform-usage"></a>
 

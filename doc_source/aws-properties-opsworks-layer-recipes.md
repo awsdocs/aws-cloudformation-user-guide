@@ -2,7 +2,7 @@
 
 Describes custom event recipes for the [AWS::OpsWorks::Layer](aws-resource-opsworks-layer.md) resource type that AWS OpsWorks runs after the standard event recipes\. For more information, see [AWS OpsWorks Lifecycle Events](https://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook-events.html) in the *AWS OpsWorks User Guide*\.
 
-## Syntax<a name="w4ab1c21c14e1688b5"></a>
+## Syntax<a name="w4ab1c21c10d168c29c29b5"></a>
 
 ### JSON<a name="aws-properties-opsworks-layer-recipes-syntax.json"></a>
 
@@ -31,7 +31,7 @@ Describes custom event recipes for the [AWS::OpsWorks::Layer](aws-resource-opswo
   - String
 ```
 
-## Properties<a name="w4ab1c21c14e1688b7"></a>
+## Properties<a name="w4ab1c21c10d168c29c29b7"></a>
 
 `Configure`  <a name="cfn-opsworks-layer-customrecipes-configure"></a>
 Custom recipe names to be run following a Configure event\. The event occurs on all of the stack's instances when an instance enters or leaves the online state\.  

@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[InsecureSsl](#cfn-codebuild-project-source-insecuressl)" : Boolean,
   "[Location](#cfn-codebuild-project-source-location)" : String,
   "[ReportBuildStatus](#cfn-codebuild-project-source-reportbuildstatus)" : Boolean,
+  "[SourceIdentifier](#cfn-codebuild-project-source-sourceidentifier)" : String,
   "[Type](#cfn-codebuild-project-source-type)" : String
 }
 ```
@@ -23,23 +24,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-source-syntax.yaml"></a>
 
 ```
-[Auth](#cfn-codebuild-project-source-auth): 
-  [*SourceAuth*](aws-properties-codebuild-project-sourceauth.md)
+[Auth](#cfn-codebuild-project-source-auth):[*SourceAuth*](aws-properties-codebuild-project-sourceauth.md)
 [BuildSpec](#cfn-codebuild-project-source-buildspec): String
 [GitCloneDepth](#cfn-codebuild-project-source-gitclonedepth): Integer
 [InsecureSsl](#cfn-codebuild-project-source-insecuressl): Boolean
 [Location](#cfn-codebuild-project-source-location): String
 [ReportBuildStatus](#cfn-codebuild-project-source-reportbuildstatus): Boolean
+[SourceIdentifier](#cfn-codebuild-project-source-sourceidentifier): String
 [Type](#cfn-codebuild-project-source-type): String
 ```
 
-## Properties<a name="w4ab1c21c14d403b7"></a>
+## Properties<a name="w4ab1c21c10c66c13c33b7"></a>
 
 `Auth`  <a name="cfn-codebuild-project-source-auth"></a>
 Information about the authorization settings for AWS CodeBuild to access the source code to be built\.  
 Your code shouldn't get or set this information directly unless the project's source type is `GITHUB`\.
  *Required*: No  
- *Type*: [AWS CodeBuild Project SourceAuth](aws-properties-codebuild-project-sourceauth.md)  
+ *Type*: [SourceAuth](aws-properties-codebuild-project-sourceauth.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `BuildSpec`  <a name="cfn-codebuild-project-source-buildspec"></a>
@@ -66,6 +67,11 @@ The location of the source code in the specified repository type\. For more info
 This specifies whether to send your source provider the status of a build's start and completion\. If you set this with a source provider other than GitHub, an invalidInputException is thrown\.  
 *Required*: No  
 *Type*: Boolean
+
+`SourceIdentifier`  <a name="cfn-codebuild-project-source-sourceidentifier"></a>
+An identifier for this project source\.  
+*Required*: No  
+*Type*: String
 
 `Type`  <a name="cfn-codebuild-project-source-type"></a>
 The type of repository that contains your source code\. For valid values, see the [https://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli](https://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli) field in the *AWS CodeBuild User Guide*\.  

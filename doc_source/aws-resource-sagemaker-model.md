@@ -2,12 +2,6 @@
 
 The `AWS::SageMaker::Model` resource to create a model to host at an Amazon SageMaker endpoint\. For more information, see [Deploying a Model on Amazon SageMaker Hosting Services](https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works-hosting.html) in the *Amazon SageMaker Developer Guide*\. 
 
-**Topics**
-+ [Syntax](#aws-resource-sagemaker-model-syntax)
-+ [Properties](#aws-resource-sagemaker-model-properties)
-+ [Return Values](#aws-resource-sagemaker-model-returnvalues)
-+ [Examples](#aws-resource-sagemaker-model-examples)
-
 ## Syntax<a name="aws-resource-sagemaker-model-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -19,10 +13,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SageMaker::Model",
   "Properties" : {
     "[ExecutionRoleArn](#cfn-sagemaker-model-executionrolearn)" : String,
-    "[PrimaryContainer](#cfn-sagemaker-model-primarycontainer)" : [*Tag*](aws-properties-sagemaker-model-containerdefinition.md),
+    "[PrimaryContainer](#cfn-sagemaker-model-primarycontainer)" : [*ContainerDefinition*](aws-properties-sagemaker-model-containerdefinition.md),
     "[ModelName](#cfn-sagemaker-model-modelname)" : String,
-    "[VpcConfig](#cfn-sagemaker-model-vpcconfig)" : [*Tag*](aws-properties-sagemaker-notebookinstance-tag.md),
-    "[Tags](#cfn-sagemaker-model-tags)" : [ [*Tag*](aws-properties-sagemaker-model-tag.md), ... ]
+    "[VpcConfig](#cfn-sagemaker-model-vpcconfig)" : [*VpcConfig*](aws-properties-sagemaker-model-vpcconfig.md),
+    "[Tags](#cfn-sagemaker-model-tags)" : [ [*Tag*](aws-properties-resource-tags.md), ... ]
   }
 }
 ```
@@ -33,11 +27,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: "AWS::SageMaker::Model"
 Properties:
   [ExecutionRoleArn](#cfn-sagemaker-model-executionrolearn): String
-  [PrimaryContainer](#cfn-sagemaker-model-primarycontainer): [*Tag*](aws-properties-sagemaker-model-containerdefinition.md)
+  [PrimaryContainer](#cfn-sagemaker-model-primarycontainer): [*ContainerDefinition*](aws-properties-sagemaker-model-containerdefinition.md)
   [ModelName](#cfn-sagemaker-model-modelname): String
-  [VpcConfig](#cfn-sagemaker-model-vpcconfig): [*Tag*](aws-properties-sagemaker-notebookinstance-tag.md)
+  [VpcConfig](#cfn-sagemaker-model-vpcconfig): [*VpcConfig*](aws-properties-sagemaker-model-vpcconfig.md)
   [Tags](#cfn-sagemaker-model-tags): 
-    - [*Tag*](aws-properties-sagemaker-model-tag.md)
+    - [*Tag*](aws-properties-resource-tags.md)
 ```
 
 ## Properties<a name="aws-resource-sagemaker-model-properties"></a>
@@ -67,9 +61,9 @@ A VpcConfig object that specifies the VPC that you want your model to connect to
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `Tags`  <a name="cfn-sagemaker-model-tags"></a>
-An array of key\-value pairs\. For more information, see [Using Cost Allocation Tags](awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what) in the *AWS Billing and Cost Management User Guide*\.  
+An array of key\-value pairs\. For more information, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.  
  *Required*: No  
- *Type*: List of [Amazon SageMaker Model Tag](aws-properties-sagemaker-model-tag.md)  
+ *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-sagemaker-model-returnvalues"></a>

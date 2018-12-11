@@ -4,9 +4,9 @@ The `AWS::EC2::FlowLog` resource creates an Amazon Elastic Compute Cloud \(Amazo
 
 **Topics**
 + [Syntax](#aws-resource-ec2-flowlog-syntax)
-+ [Properties](#w4ab1c21c10d412b9)
-+ [Return Value](#w4ab1c21c10d412c11)
-+ [Example](#w4ab1c21c10d412c13)
++ [Properties](#w4ab1c21c10d102c40b9)
++ [Return Value](#w4ab1c21c10d102c40c11)
++ [Example](#w4ab1c21c10d102c40c13)
 
 ## Syntax<a name="aws-resource-ec2-flowlog-syntax"></a>
 
@@ -43,7 +43,7 @@ Properties:
   [TrafficType](#cfn-ec2-flowlog-traffictype) : String
 ```
 
-## Properties<a name="w4ab1c21c10d412b9"></a>
+## Properties<a name="w4ab1c21c10d102c40b9"></a>
 
 `DeliverLogsPermissionArn`  <a name="cfn-ec2-flowlog-deliverlogspermissionarn"></a>
 The Amazon Resource Name \(ARN\) of an AWS Identity and Access Management \(IAM\) role that permits Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account\.  
@@ -53,9 +53,9 @@ If you specify `LogDestinationType` as `s3`, do not specify `DeliverLogsPermissi
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `LogDestination`  <a name="cfn-ec2-flowlog-logdestination"></a>
-Specifies the destination to which the flow log data is to be published\. Flow log data can be published to an CloudWatch Logs log group or an Amazon S3 bucket\. The value specified for this parameter depends on the value specified for LogDestinationType\.  
-+ If LogDestinationType is not specified or `cloud-watch-logs`, specify the Amazon Resource Name \(ARN\) of the CloudWatch Logs log group\.
-+ If LogDestinationType is `s3`, specify the ARN of the Amazon S3 bucket\. You can also specify a subfolder in the bucket\. To specify a subfolder in the bucket, use the following ARN format: `bucket_ARN/subfolder_name/`\. For example, to specify a subfolder named my\-logs in a bucket named my\-bucket , use the following ARN: `arn:aws:s3:::my-bucket/my-logs/`\.
+Specifies the destination to which the flow log data is to be published\. Flow log data can be published to a CloudWatch Logs log group or an Amazon S3 bucket\. The value specified for this parameter depends on the value specified for `LogDestinationType`\.  
++ If `LogDestinationType` is not specified or `cloud-watch-logs`, specify the Amazon Resource Name \(ARN\) of the CloudWatch Logs log group\.
++ If `LogDestinationType` is `s3`, specify the ARN of the Amazon S3 bucket\. You can also specify a subfolder in the bucket\. To specify a subfolder in the bucket, use the following ARN format: `bucket_ARN/subfolder_name/`\. For example, to specify a subfolder named my\-logs in a bucket named my\-bucket , use the following ARN: `arn:aws:s3:::my-bucket/my-logs/`\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -92,15 +92,15 @@ The type of traffic to log\. You can log traffic that the resource accepts or re
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w4ab1c21c10d412c11"></a>
+## Return Value<a name="w4ab1c21c10d102c40c11"></a>
 
-### Ref<a name="w4ab1c21c10d412c11b2"></a>
+### Ref<a name="w4ab1c21c10d102c40c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the flow log ID, such as `fl-1a23b456`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d412c13"></a>
+## Example<a name="w4ab1c21c10d102c40c13"></a>
 
 The following example creates a flow log for the VPC called `MyVPC` and logs all traffic types\. Amazon EC2 publishes the logs to the `FlowLogsGroup` log group\.
 

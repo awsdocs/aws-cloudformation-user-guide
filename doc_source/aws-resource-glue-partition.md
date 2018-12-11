@@ -2,11 +2,6 @@
 
 The `AWS::Glue::Partition` resource creates an AWS Glue partition, which represents a slice of table data\. For more information, see [CreatePartition Action](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-CreatePartition) and [Partition Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-Partition) in the *AWS Glue Developer Guide*\. 
 
-**Topics**
-+ [Syntax](#aws-resource-glue-partition-syntax)
-+ [Properties](#aws-resource-glue-partition-properties)
-+ [See Also](#aws-resource-glue-partition-seealso)
-
 ## Syntax<a name="aws-resource-glue-partition-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -61,7 +56,7 @@ To specify the account ID, you can use the `Ref` intrinsic function with the `AW
 `PartitionInput`  <a name="cfn-glue-partition-partitioninput"></a>
 The metadata of the partition\.  
  *Required*: Yes  
- *Type*: [AWS Glue Partition PartitionInput](aws-properties-glue-partition-partitioninput.md)  
+ *Type*: [PartitionInput](aws-properties-glue-partition-partitioninput.md)  
  *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt) 
 
 ## See Also<a name="aws-resource-glue-partition-seealso"></a>

@@ -2,11 +2,6 @@
 
 The `AWS::Glue::Table` resource specifies tabular data in the AWS Glue data catalog\. For more information, see [Defining Tables in the AWS Glue Data Catalog](https://docs.aws.amazon.com/glue/latest/dg/tables-described.html) and [Table Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-Table) in the *AWS Glue Developer Guide*\. 
 
-**Topics**
-+ [Syntax](#aws-resource-glue-table-syntax)
-+ [Properties](#aws-resource-glue-table-properties)
-+ [Return Values](#aws-resource-glue-table-returnvalues)
-
 ## Syntax<a name="aws-resource-glue-table-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -40,7 +35,7 @@ Properties:
 `TableInput`  <a name="cfn-glue-table-tableinput"></a>
 The metadata of the table\.  
  *Required*: Yes  
- *Type*: [AWS Glue Table TableInput](aws-properties-glue-table-tableinput.md)  
+ *Type*: [TableInput](aws-properties-glue-table-tableinput.md)  
  *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt) 
 
 `DatabaseName`  <a name="cfn-glue-table-databasename"></a>
@@ -58,7 +53,7 @@ To specify the account ID, you can use the `Ref` intrinsic function with the `AW
 
 ## Return Values<a name="aws-resource-glue-table-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10d735c10b3"></a>
+### Ref<a name="w4ab1c21c10d138c32b9b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the `TableInput` name\.
 

@@ -2,7 +2,7 @@
 
 The `KinesisStreamsOutput` property type specifies an Amazon Kinesis stream as the destination when you are configuring application output\.
 
- `KinesisStreamsOutput` is a property of the [Kinesis Data Analytics ApplicationOutput Output](aws-properties-kinesisanalytics-applicationoutput-output.md) property type\.
+ `KinesisStreamsOutput` is a property of the [Output](aws-properties-kinesisanalytics-applicationoutput-output.md) property type\.
 
 ## Syntax<a name="aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput-syntax"></a>
 

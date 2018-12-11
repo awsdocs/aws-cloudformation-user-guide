@@ -2,13 +2,6 @@
 
 The `AWS::SES::ReceiptRule` resource specifies which actions Amazon SES should take when it receives mail on behalf of one or more email addresses or domains that you own\. For more information, see [Creating Receipt Rules for Amazon SES Email Receiving](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-ses-receiptrule-syntax)
-+ [Properties](#aws-resource-ses-receiptrule-properties)
-+ [Return Values](#aws-resource-ses-receiptrule-returnvalues)
-+ [Example](#aws-resource-ses-receiptrule-examples)
-+ [See Also](#aws-resource-ses-receiptrule-seealso)
-
 ## Syntax<a name="aws-resource-ses-receiptrule-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -47,7 +40,7 @@ The name of an existing rule after which the new rule will be placed\. If this p
 `Rule`  <a name="cfn-ses-receiptrule-rule"></a>
 The specified rule's name, actions, recipients, domains, enabled status, scan status, and TLS policy\.  
  *Required*: Yes  
- *Type*: [Amazon SES ReceiptRule Rule](aws-properties-ses-receiptrule-rule.md)  
+ *Type*: [Rule](aws-properties-ses-receiptrule-rule.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `RuleSetName`  <a name="cfn-ses-receiptrule-rulesetname"></a>

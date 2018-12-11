@@ -2,7 +2,7 @@
 
 The `QueryLoggingConfig` property is part of the [AWS::Route53::HostedZone](aws-resource-route53-hostedzone.md) resource that specifies a configuration for DNS query logging\. After you create a query logging configuration, Amazon Route 53 begins to publish log data to an Amazon CloudWatch Logs log group\. For more information, see [CreateQueryLoggingConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateQueryLoggingConfig.html) in the *Amazon Route 53 API Reference*\.
 
-## Syntax<a name="w4ab1c21c14e1776b5"></a>
+## Syntax<a name="w4ab1c21c10d177c18c27b5"></a>
 
 ### JSON<a name="aws-properties-route53-hostedzone-queryloggingconfig-syntax.json"></a>
 
@@ -18,7 +18,7 @@ The `QueryLoggingConfig` property is part of the [AWS::Route53::HostedZone](aws-
 [CloudWatchLogsLogGroupArn](#cfn-route53-hostedzone-queryloggingconfig-cloudwatchlogsloggrouparn): String
 ```
 
-## Properties<a name="w4ab1c21c14e1776b7"></a>
+## Properties<a name="w4ab1c21c10d177c18c27b7"></a>
 
 `CloudWatchLogsLogGroupArn`  <a name="cfn-route53-hostedzone-queryloggingconfig-cloudwatchlogsloggrouparn"></a>
 The Amazon Resource Name \(ARN\) for the log group that you want Amazon Route 53 to send query logs to\. This is the format of the ARN:  

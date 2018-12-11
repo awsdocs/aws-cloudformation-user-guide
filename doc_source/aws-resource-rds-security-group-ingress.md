@@ -9,8 +9,8 @@ For details about the settings for DB security group ingress, see [AuthorizeDBSe
 **Topics**
 + [Syntax](#aws-resource-rds-dbsecuritygroupingress-syntax)
 + [Properties](#cfn-rds-securitygroup-ingress-properties)
-+ [Return Values](#w4ab1c21c10e1002c15)
-+ [See Also](#w4ab1c21c10e1002c17)
++ [Return Values](#w4ab1c21c10d171c37c15)
++ [See Also](#w4ab1c21c10d171c37c17)
 
 ## Syntax<a name="aws-resource-rds-dbsecuritygroupingress-syntax"></a>
 
@@ -77,13 +77,13 @@ For VPC DB security groups, use EC2SecurityGroupId\. For EC2 security groups, us
 *Required*: No  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10e1002c15"></a>
+## Return Values<a name="w4ab1c21c10d171c37c15"></a>
 
-### Ref<a name="w4ab1c21c10e1002c15b2"></a>
+### Ref<a name="w4ab1c21c10d171c37c15b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## See Also<a name="w4ab1c21c10e1002c17"></a>
+## See Also<a name="w4ab1c21c10d171c37c17"></a>
 + [AuthorizeDBSecurityGroupIngress](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_AuthorizeDBSecurityGroupIngress.html) in the *Amazon Relational Database Service API Reference*

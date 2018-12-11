@@ -2,7 +2,7 @@
 
 `ConfigurationProperties` is a property of the [AWS::CodePipeline::CustomActionType](aws-resource-codepipeline-customactiontype.md) resource that defines a configuration for an AWS CodePipeline custom action\.
 
-## Syntax<a name="w4ab1c21c14d490b5"></a>
+## Syntax<a name="w4ab1c21c10c75c13c21b5"></a>
 
 ### JSON<a name="aws-properties-codepipeline-customactiontype-configurationproperties-syntax.json"></a>
 
@@ -30,7 +30,7 @@
 [Type](#cfn-codepipeline-customactiontype-configurationproperties-type): String
 ```
 
-## Properties<a name="w4ab1c21c14d490b7"></a>
+## Properties<a name="w4ab1c21c10c75c13c21b7"></a>
 
 `Description`  <a name="cfn-codepipeline-customactiontype-configurationproperties-description"></a>
 A description of this configuration property that will be displayed to users\.  

@@ -2,7 +2,7 @@
 
 <a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-description"></a>The `MaintenanceWindowLambdaParameters` property type specifies the parameters for a `LAMBDA` task type for a Maintenance Window task in AWS Systems Manager\.
 
-<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-inheritance"></a> `MaintenanceWindowLambdaParameters` is a property of the [Systems Manager MaintenanceWindowTask TaskInvocationParameters](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md) property type\.
+<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-inheritance"></a> `MaintenanceWindowLambdaParameters` is a property of the [TaskInvocationParameters](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md) property type\.
 
 ## Syntax<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-syntax"></a>
 

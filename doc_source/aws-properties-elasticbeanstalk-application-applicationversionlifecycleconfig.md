@@ -4,7 +4,7 @@
 
 When Elastic Beanstalk deletes an application version from its database, you can no longer deploy that version to an environment\. The source bundle remains in S3 unless you configure the rule to delete it\.
 
-<a name="aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig-inheritance"></a> `ApplicationVersionLifecycleConfig` is a property of the [Elastic Beanstalk Application ApplicationResourceLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.md) property type\. 
+<a name="aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig-inheritance"></a> `ApplicationVersionLifecycleConfig` is a property of the [ApplicationResourceLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.md) property type\. 
 
 ## Syntax<a name="aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig-syntax"></a>
 
@@ -31,11 +31,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `MaxAgeRule`  <a name="cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxagerule"></a>
 Specifies a max age rule to restrict the length of time that application versions are retained for an application\.  
  *Required*: No  
- *Type*: [Elastic Beanstalk Application MaxAgeRule](aws-properties-elasticbeanstalk-application-maxagerule.md)  
+ *Type*: [MaxAgeRule](aws-properties-elasticbeanstalk-application-maxagerule.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `MaxCountRule`  <a name="cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxcountrule"></a>
 Specifies a max count rule to restrict the number of application versions that are retained for an application\.  
  *Required*: No  
- *Type*: [Elastic Beanstalk Application MaxCountRule](aws-properties-elasticbeanstalk-application-maxcountrule.md)  
+ *Type*: [MaxCountRule](aws-properties-elasticbeanstalk-application-maxcountrule.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

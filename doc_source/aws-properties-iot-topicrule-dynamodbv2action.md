@@ -27,12 +27,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-iot-topicrule-dynamodbv2action-properties"></a>
 
-For more information, see [DynamoDBv2 Action](https://docs.aws.amazon.com/iot/latest/developerguide/dynamodb-v2-rule.html) in the *AWS IoT Developer Guide\.*\.
+For more information, see [DynamoDBv2 Action](https://docs.aws.amazon.com/iot/latest/developerguide/iot-rule-actions.html) in the *AWS IoT Developer Guide*\.
 
 `PutItem`  <a name="cfn-iot-topicrule-dynamodbv2action-putitem"></a>
 Specifies the database table to which to write the item for an AWS IoT topic rule\.  
  *Required*: No  
- *Type*: [AWS IoT TopicRule PutItemInput](aws-properties-iot-topicrule-putiteminput.md)  
+ *Type*: [PutItemInput](aws-properties-iot-topicrule-putiteminput.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `RoleArn`  <a name="cfn-iot-topicrule-dynamodbv2action-rolearn"></a>
@@ -40,3 +40,6 @@ The IAM role that allows access to the DynamoDB table\. At a minimum, the role m
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+
+## See Also<a name="aws-properties-iot-topicrule-dynamodbv2action-seealso"></a>
++ [DynamoDBv2Action](https://docs.aws.amazon.com/iot/latest/apireference/API_DynamoDBv2Action.html) in the *AWS IoT API Reference*

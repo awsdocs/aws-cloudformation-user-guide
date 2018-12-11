@@ -2,7 +2,7 @@
 
 Use the `OptionConfigurations` property to configure an option and its settings for an [AWS::RDS::OptionGroup](aws-resource-rds-optiongroup.md) resource\.
 
-## Syntax<a name="w4ab1c21c14e1737b5"></a>
+## Syntax<a name="w4ab1c21c10d171c49c15b5"></a>
 
 ### JSON<a name="aws-properties-rds-optiongroup-optionconfigurations-syntax.json"></a>
 
@@ -31,7 +31,7 @@ Use the `OptionConfigurations` property to configure an option and its settings 
   - String
 ```
 
-## Properties<a name="w4ab1c21c14e1737b7"></a>
+## Properties<a name="w4ab1c21c10d171c49c15b7"></a>
 
 `DBSecurityGroupMemberships`  <a name="cfn-rds-optiongroup-optionconfigurations-dbsecuritygroupmemberships"></a>
 A list of database security group names for this option\. If the option requires access to a port, the security groups must allow access to that port\. If you specify this property, don't specify the `VPCSecurityGroupMemberships` property\.  
@@ -46,7 +46,7 @@ The name of the option\. For more information about options, see [Working with O
 `OptionSettings`  <a name="cfn-rds-optiongroup-optionconfigurations-optionsettings"></a>
 The settings for this option\.  
 *Required*: No  
-*Type*: List of [Amazon RDS OptionGroup OptionSetting](aws-properties-rds-optiongroup-optionconfigurations-optionsettings.md)
+*Type*: List of [OptionSetting](aws-properties-rds-optiongroup-optionconfigurations-optionsettings.md)
 
 `OptionVersion`  <a name="cfn-rds-optiongroup-optionconfiguration-optionversion"></a>
 The version for the option\.  

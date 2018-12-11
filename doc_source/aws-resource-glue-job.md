@@ -2,12 +2,6 @@
 
 The `AWS::Glue::Job` resource specifies an AWS Glue job in the data catalog\. For more information, see [Adding Jobs in AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/add-job.html) and [Job Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-job.html#aws-glue-api-jobs-job-Job) in the *AWS Glue Developer Guide*\. 
 
-**Topics**
-+ [Syntax](#aws-resource-glue-job-syntax)
-+ [Properties](#aws-resource-glue-job-properties)
-+ [Return Values](#aws-resource-glue-job-returnvalues)
-+ [Examples](#aws-resource-glue-job-examples)
-
 ## Syntax<a name="aws-resource-glue-job-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -70,7 +64,7 @@ You can specify arguments here that your own job\-execution script consumes, as 
 `Connections`  <a name="cfn-glue-job-connections"></a>
 The connections that are used by the job\.  
  *Required*: No  
- *Type*: [AWS Glue Job ConnectionsList](aws-properties-glue-job-connectionslist.md)  
+ *Type*: [ConnectionsList](aws-properties-glue-job-connectionslist.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `MaxRetries`  <a name="cfn-glue-job-maxretries"></a>
@@ -94,7 +88,7 @@ The location of the logs for the job\.
 `Command`  <a name="cfn-glue-job-command"></a>
 The code that executes a job\.  
  *Required*: Yes  
- *Type*: [AWS Glue Job JobCommand](aws-properties-glue-job-jobcommand.md)  
+ *Type*: [JobCommand](aws-properties-glue-job-jobcommand.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `AllocatedCapacity`  <a name="cfn-glue-job-allocatedcapacity"></a>
@@ -106,7 +100,7 @@ The number of capacity units that are allocated to this job\.
 `ExecutionProperty`  <a name="cfn-glue-job-executionproperty"></a>
 The execution property of the job, which specifies the maximum number of concurrent runs that are allowed for the job\.  
  *Required*: No  
- *Type*: [AWS Glue Job ExecutionProperty](aws-properties-glue-job-executionproperty.md)  
+ *Type*: [ExecutionProperty](aws-properties-glue-job-executionproperty.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Name`  <a name="cfn-glue-job-name"></a>
@@ -117,7 +111,7 @@ The name of the job\. It must match the single\-line string pattern: `[\u0020-\u
 
 ## Return Values<a name="aws-resource-glue-job-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10d729c10b3"></a>
+### Ref<a name="w4ab1c21c10d138c26b9b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 

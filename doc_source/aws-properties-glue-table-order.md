@@ -2,7 +2,7 @@
 
 <a name="aws-properties-glue-table-order-description"></a>The `Order` property type specifies the sort order of a column in an AWS Glue table\.
 
-<a name="aws-properties-glue-table-order-inheritance"></a> The `SortColumns` property of the [AWS Glue Table StorageDescriptor](aws-properties-glue-table-storagedescriptor.md) property type contains a list of `Order` property types\.
+<a name="aws-properties-glue-table-order-inheritance"></a> The `SortColumns` property of the [StorageDescriptor](aws-properties-glue-table-storagedescriptor.md) property type contains a list of `Order` property types\.
 
 ## Syntax<a name="aws-properties-glue-table-order-syntax"></a>
 

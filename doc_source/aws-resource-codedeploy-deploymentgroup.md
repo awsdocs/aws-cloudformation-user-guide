@@ -2,12 +2,6 @@
 
 The `AWS::CodeDeploy::DeploymentGroup` resource creates an AWS CodeDeploy deployment group that specifies which instances your application revisions are deployed to, along with other deployment options\. For more information, see [CreateDeploymentGroup](https://docs.aws.amazon.com//codedeploy/latest/APIReference/API_CreateDeploymentGroup.html) in the *AWS CodeDeploy API Reference*\.
 
-**Topics**
-+ [Syntax](#aws-resource-codedeploy-deploymentgroup-syntax)
-+ [Properties](#w4ab1c21c10d267b9)
-+ [Return Value](#w4ab1c21c10d267c11)
-+ [Examples](#w4ab1c21c10d267c13)
-
 ## Syntax<a name="aws-resource-codedeploy-deploymentgroup-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -68,7 +62,7 @@ Properties:
     - [*TriggerConfig*](aws-properties-codedeploy-deploymentgroup-triggerconfig.md)
 ```
 
-## Properties<a name="w4ab1c21c10d267b9"></a>
+## Properties<a name="w4ab1c21c10c72c21b9"></a>
 
 `AlarmConfiguration`  <a name="cfn-codedeploy-deploymentgroup-alarmconfiguration"></a>
 Information about the Amazon CloudWatch alarms that are associated with the deployment group\.  
@@ -85,7 +79,7 @@ The name of an existing AWS CodeDeploy application to associate this deployment 
 `AutoRollbackConfiguration`  <a name="cfn-codedeploy-deploymentgroup-autorollbackconfiguration"></a>
 Information about the automatic rollback configuration that is associated with the deployment group\. If you specify this property, don't specify the `Deployment` property\.  
  *Required*: No  
- *Type*: [AWS CodeDeploy DeploymentGroup AutoRollbackConfiguration](aws-properties-codedeploy-deploymentgroup-autorollbackconfiguration.md)  
+ *Type*: [AutoRollbackConfiguration](aws-properties-codedeploy-deploymentgroup-autorollbackconfiguration.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `AutoScalingGroups`  <a name="cfn-codedeploy-deploymentgroup-autoscalinggroups"></a>
@@ -118,7 +112,7 @@ Attributes that determine the type of deployment to run and whether to route dep
 If you specify this property with a blue/green deployment type, don't specify the `AutoScalingGroups`, `LoadBalancerInfo`, or `Deployment` properties\.  
 For blue/green deployments, AWS CloudFormation supports deployments on AWS Lambda compute platforms only\.
  *Required*: No  
- *Type*: [AWS CodeDeploy DeploymentGroup DeploymentStyle](aws-properties-codedeploy-deploymentgroup-deploymentstyle.md)  
+ *Type*: [DeploymentStyle](aws-properties-codedeploy-deploymentgroup-deploymentstyle.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Ec2TagFilters`  <a name="cfn-codedeploy-deploymentgroup-ec2tagfilters"></a>
@@ -132,13 +126,13 @@ You can specify `EC2TagFilters` or `Ec2TagSet`, but not both\.
 Specifies information about groups of tags applied to EC2 instances\. The deployment group will include only EC2 instances identified by all the tag groups\.  
 You can specify `EC2TagFilters` or `Ec2TagSet`, but not both\.  
 *Required*: No  
-*Type*: [AWS CodeDeploy DeploymentGroup EC2TagSet](aws-properties-codedeploy-deploymentgroup-ec2tagset.md)  
+*Type*: [EC2TagSet](aws-properties-codedeploy-deploymentgroup-ec2tagset.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `LoadBalancerInfo`  <a name="cfn-codedeploy-deploymentgroup-loadbalancerinfo"></a>
 Information about the load balancer used in the deployment\. For more information, see [ Integrating AWS CodeDeploy with Elastic Load Balancing](https://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-aws-elastic-load-balancing.html) in the *AWS CodeDeploy User Guide*\.  
  *Required*: No  
- *Type*: [AWS CodeDeploy DeploymentGroup LoadBalancerInfo](aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.md)  
+ *Type*: [LoadBalancerInfo](aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `OnPremisesInstanceTagFilters`  <a name="cfn-codedeploy-deploymentgroup-onpremisesinstancetagfilters"></a>
@@ -168,17 +162,17 @@ Information about the notification triggers for the deployment group\. Duplicate
 *Type*: List of [AWS CodeDeploy DeploymentGroup TriggerConfig](aws-properties-codedeploy-deploymentgroup-triggerconfig.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10d267c11"></a>
+## Return Value<a name="w4ab1c21c10c72c21c11"></a>
 
-### Ref<a name="w4ab1c21c10d267c11b2"></a>
+### Ref<a name="w4ab1c21c10c72c21c11b2"></a>
 
 When you pass the logical ID of an `AWS::CodeDeploy::DeploymentGroup` resource to the intrinsic `Ref` function, the function returns the deployment group name, such as `mydeploymentgroup-a123d0d1`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w4ab1c21c10d267c13"></a>
+## Examples<a name="w4ab1c21c10c72c21c13"></a>
 
-### Revision in GitHub<a name="w4ab1c21c10d267c13b2"></a>
+### Revision in GitHub<a name="w4ab1c21c10c72c21c13b2"></a>
 
 The following example creates a deployment group that is associated with Auto Scaling groups and uses an application revision that is stored in a GitHub repository\. You specify the repository information as input parameters\.
 
@@ -235,7 +229,7 @@ DeploymentGroup:
       Fn::GetAtt: [ RoleArn, Arn ]
 ```
 
-### Associate EC2 Instances<a name="w4ab1c21c10d267c13b4"></a>
+### Associate EC2 Instances<a name="w4ab1c21c10c72c21c13b4"></a>
 
 The following example creates a deployment group that uses instance tags to associate EC2 instances with the deployment group\. The deployment group uses an application revision that is stored in an S3 bucket\.
 
@@ -309,7 +303,7 @@ DeploymentGroup:
       Fn::GetAtt: [ RoleArn, Arn ]
 ```
 
-### Alarm and Trigger<a name="w4ab1c21c10d267c13b6"></a>
+### Alarm and Trigger<a name="w4ab1c21c10c72c21c13b6"></a>
 
 The following example configures a billing alarm and a notification trigger for the deployment group\.
 
@@ -508,7 +502,7 @@ Resources:
           TriggerTargetArn: !Ref mySNSTopic
 ```
 
-### Automatic Rollback Configuration<a name="w4ab1c21c10d267c13b8"></a>
+### Automatic Rollback Configuration<a name="w4ab1c21c10c72c21c13b8"></a>
 
 The following example configures automatic rollback for the deployment group\.
 
@@ -706,7 +700,7 @@ Resources:
           TriggerTargetArn: !Ref mySNSTopic
 ```
 
-### Load Balancer<a name="w4ab1c21c10d267c13c10"></a>
+### Load Balancer<a name="w4ab1c21c10c72c21c13c10"></a>
 
 The following example configures an Elastic Load Balancing load balancer for the deployment group\.
 
@@ -948,7 +942,7 @@ Outputs:
     Value: !Ref myELB
 ```
 
-### Target Group Info<a name="w4ab1c21c10d267c13c12"></a>
+### Target Group Info<a name="w4ab1c21c10c72c21c13c12"></a>
 
 The following example specifies the target group to use in a deployment\. Instances are registered as targets in a target group, and traffic is routed to the target group\.
 

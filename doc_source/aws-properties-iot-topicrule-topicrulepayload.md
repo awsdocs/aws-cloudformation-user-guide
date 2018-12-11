@@ -2,7 +2,7 @@
 
 `TopicRulePayload` is a property of the `[AWS::IoT::TopicRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html)` resource that describes the payload of an AWS IoT rule\.
 
-## Syntax<a name="w4ab1c21c14e1492b5"></a>
+## Syntax<a name="w4ab1c21c10d150c39c94b5"></a>
 
 ### JSON<a name="aws-properties-iot-topicrule-topicrulepayload-syntax.json"></a>
 
@@ -11,6 +11,7 @@
   "[Actions](#cfn-iot-topicrule-topicrulepayload-actions)": [ Action, ... ],
   "[AwsIotSqlVersion](#cfn-iot-topicrule-topicrulepayload-awsiotsqslversion)": String,
   "[Description](#cfn-iot-topicrule-topicrulepayload-description)": String,
+  "[ErrorAction](#cfn-iot-topicrule-topicrulepayload-erroraction)": Action,
   "[RuleDisabled](#cfn-iot-topicrule-topicrulepayload-ruledisabled)": Boolean,
   "[Sql](#cfn-iot-topicrule-topicrulepayload-sql)": String
 }
@@ -21,13 +22,16 @@
 ```
 [Actions](#cfn-iot-topicrule-topicrulepayload-actions):
   - Action
+  - ...
 [AwsIotSqlVersion](#cfn-iot-topicrule-topicrulepayload-awsiotsqslversion): String
 [Description](#cfn-iot-topicrule-topicrulepayload-description): String
+[ErrorAction](#cfn-iot-topicrule-topicrulepayload-erroraction):
+  Action
 [RuleDisabled](#cfn-iot-topicrule-topicrulepayload-ruledisabled): Boolean
 [Sql](#cfn-iot-topicrule-topicrulepayload-sql): String
 ```
 
-## Properties<a name="w4ab1c21c14e1492b7"></a>
+## Properties<a name="w4ab1c21c10d150c39c94b7"></a>
 
 `Actions`  <a name="cfn-iot-topicrule-topicrulepayload-actions"></a>
 The actions associated with the rule\.  
@@ -45,6 +49,12 @@ The version of the SQL rules engine to use when evaluating the rule\.
 The description of the rule\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`ErrorAction`  <a name="cfn-iot-topicrule-topicrulepayload-erroraction"></a>
+The action to take when an error occurs\.  
+*Required*: No  
+*Type*: [`Action`](aws-properties-iot-topicrule-action.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `RuleDisabled`  <a name="cfn-iot-topicrule-topicrulepayload-ruledisabled"></a>

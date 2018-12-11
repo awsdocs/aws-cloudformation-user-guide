@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[Certificate](#cfn-codebuild-project-environment-certificate)" : String,
   "[ComputeType](#cfn-codebuild-project-environment-computetype)" : String,
   "[EnvironmentVariables](#cfn-codebuild-project-environment-environmentvariables)" : [ [EnvironmentVariable](aws-properties-codebuild-project-environmentvariable.md) ],
   "[Image](#cfn-codebuild-project-environment-image)" : String,
@@ -21,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-environment-syntax.yaml"></a>
 
 ```
+[Certificate](#cfn-codebuild-project-environment-certificate): String
 [ComputeType](#cfn-codebuild-project-environment-computetype): String
 [EnvironmentVariables](#cfn-codebuild-project-environment-environmentvariables):
   - [EnvironmentVariable](aws-properties-codebuild-project-environmentvariable.md)
@@ -29,7 +31,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [Type](#cfn-codebuild-project-environment-type): String
 ```
 
-## Properties<a name="w4ab1c21c14d395b7"></a>
+## Properties<a name="w4ab1c21c10c66c13c23b7"></a>
+
+`Certificate`  <a name="cfn-codebuild-project-environment-certificate"></a>
+The certificate to use with the build project\.  
+*Required*: No  
+*Type*: String
 
 `ComputeType`  <a name="cfn-codebuild-project-environment-computetype"></a>
 The type of compute environment, such as `BUILD_GENERAL1_SMALL`\. The compute type determines the number of CPU cores and memory the build environment uses\. For valid values, see the [https://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli](https://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli) field in the *AWS CodeBuild User Guide*\.  

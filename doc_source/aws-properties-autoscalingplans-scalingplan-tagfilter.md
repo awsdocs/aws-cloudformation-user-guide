@@ -1,6 +1,6 @@
 # AWS Auto Scaling ScalingPlan TagFilter<a name="aws-properties-autoscalingplans-scalingplan-tagfilter"></a>
 
-<a name="aws-properties-autoscalingplans-scalingplan-tagfilter-description"></a>The `TagFilter` property type specifies a tag for an application source for an AWS Auto Scaling scaling plan\.
+<a name="aws-properties-autoscalingplans-scalingplan-tagfilter-description"></a>The `TagFilter` property type specifies a tag for an application source to use with AWS Auto Scaling\.
 
 <a name="aws-properties-autoscalingplans-scalingplan-tagfilter-inheritance"></a> `TagFilter` is a property of the [AWS Auto Scaling ScalingPlan ApplicationSource](aws-properties-autoscalingplans-scalingplan-applicationsource.md) property type\.
 

@@ -2,7 +2,7 @@
 
 The `CSVMappingParameters` property type specifies additional mapping information when the record format uses delimiters, such as CSV\. 
 
- `CSVMappingParameters` is a property of the [Kinesis Data Analytics Application MappingParameters](aws-properties-kinesisanalytics-application-mappingparameters.md) property type\. 
+ `CSVMappingParameters` is a property of the [MappingParameters](aws-properties-kinesisanalytics-application-mappingparameters.md) property type\. 
 
 ## Syntax<a name="aws-properties-kinesisanalytics-application-csvmappingparameters-syntax"></a>
 

@@ -28,7 +28,7 @@ Properties:
   [Description](#cfn-sdb-domain-description): String
 ```
 
-## Properties<a name="w4ab1c21c10e1090b9"></a>
+## Properties<a name="w4ab1c21c10d195c13b9"></a>
 
 `Description`  <a name="cfn-sdb-domain-description"></a>
 Information about the Amazon SimpleDB domain\.  

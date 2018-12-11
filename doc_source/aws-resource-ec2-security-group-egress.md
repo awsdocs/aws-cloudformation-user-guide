@@ -7,9 +7,9 @@ Use `AWS::EC2::SecurityGroupIngress` and `AWS::EC2::SecurityGroupEgress` only wh
 
 **Topics**
 + [Syntax](#aws-resource-ec2-securitygroupegress-syntax)
-+ [Properties](#w4ab1c21c10d481c11)
-+ [Return Values](#w4ab1c21c10d481c13)
-+ [VPC Security Groups Example](#w4ab1c21c10d481c15)
++ [Properties](#w4ab1c21c10d102d109c11)
++ [Return Values](#w4ab1c21c10d102d109c13)
++ [VPC Security Groups Example](#w4ab1c21c10d102d109c15)
 
 ## Syntax<a name="aws-resource-ec2-securitygroupegress-syntax"></a>
 
@@ -50,7 +50,7 @@ Properties:
   [ToPort](#cfn-ec2-securitygroupegress-toport): Integer
 ```
 
-## Properties<a name="w4ab1c21c10d481c11"></a>
+## Properties<a name="w4ab1c21c10d102d109c11"></a>
 
 For more information about adding egress rules to VPC security groups, go to [AuthorizeSecurityGroupEgress](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-AuthorizeSecurityGroupEgress.html) in the *Amazon EC2 API Reference*\.
 
@@ -111,15 +111,15 @@ End of port range for the TCP and UDP protocols, or an ICMP code\. If you specif
 *Type*: Integer  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d481c13"></a>
+## Return Values<a name="w4ab1c21c10d102d109c13"></a>
 
-### Ref<a name="w4ab1c21c10d481c13b2"></a>
+### Ref<a name="w4ab1c21c10d102d109c13b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## VPC Security Groups Example<a name="w4ab1c21c10d481c15"></a>
+## VPC Security Groups Example<a name="w4ab1c21c10d102d109c15"></a>
 
 In some cases, you might have an originating \(source\) security group to which you want to add an outbound rule that allows traffic to a destination \(target\) security group\. The target security group also needs an inbound rule that allows traffic from the source security group\. Note that you cannot use the `Ref` function to specify the outbound and inbound rules for each security group\. Doing so creates a circular dependency; you cannot have two resources that depend on each other\. Instead, use the egress and ingress resources to declare these outbound and inbound rules, as shown in the following template snippet\.
 

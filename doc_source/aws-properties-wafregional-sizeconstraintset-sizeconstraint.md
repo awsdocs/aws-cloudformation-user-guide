@@ -2,7 +2,7 @@
 
 `SizeConstraint` is a property of the [AWS::WAFRegional::SizeConstraintSet](aws-resource-wafregional-sizeconstraintset.md) resource that specifies a size constraint and which part of a web request that you want AWS WAF to constrain\.
 
-## Syntax<a name="w4ab1c21c14e2164b5"></a>
+## Syntax<a name="w4ab1c21c10d213c25c19b5"></a>
 
 ### JSON<a name="aws-properties-wafregional-sizeconstraintset-sizeconstraint-syntax.json"></a>
 
@@ -25,7 +25,7 @@
 [TextTransformation](#cfn-wafregional-sizeconstraintset-sizeconstraint-texttransformation): String
 ```
 
-## Properties<a name="w4ab1c21c14e2164b7"></a>
+## Properties<a name="w4ab1c21c10d213c25c19b7"></a>
 
 `ComparisonOperator`  <a name="cfn-wafregional-sizeconstraintset-sizeconstraint-comparisonoperator"></a>
 The type of comparison that you want AWS WAF to perform\. AWS WAF uses this value in combination with the `Size` and `FieldToMatch` property values to check if the size constraint is a match\. For more information and valid values, see the `ComparisonOperator` content for the [SizeConstraint](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_SizeConstraint.html) data type in the *AWS WAF Regional API Reference*\.  

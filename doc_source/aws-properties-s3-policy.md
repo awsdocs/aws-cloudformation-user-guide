@@ -6,8 +6,8 @@ AWS::S3::BucketPolicy Snippet: [Declaring an Amazon S3 Bucket Policy](quickref-i
 
 **Topics**
 + [Syntax](#aws-resource-s3-bucketpolicy-syntax)
-+ [Properties](#w4ab1c21c10e1066c11)
-+ [Examples](#w4ab1c21c10e1066c13)
++ [Properties](#w4ab1c21c10d180c17c11)
++ [Examples](#w4ab1c21c10d180c17c13)
 
 ## Syntax<a name="aws-resource-s3-bucketpolicy-syntax"></a>
 
@@ -34,7 +34,7 @@ Properties:
   [PolicyDocument](#cfn-s3-bucketpolicy-policydocument): JSON
 ```
 
-## Properties<a name="w4ab1c21c10e1066c11"></a>
+## Properties<a name="w4ab1c21c10d180c17c11"></a>
 
 `Bucket`  <a name="cfn-s3-bucketpolicy-bucket"></a>
 The name of the Amazon S3 bucket to which the policy applies\.  
@@ -48,9 +48,9 @@ A policy document containing permissions to add to the specified bucket\. For mo
 *Type*: JSON object  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Examples<a name="w4ab1c21c10e1066c13"></a>
+## Examples<a name="w4ab1c21c10d180c17c13"></a>
 
-### Bucket policy that allows GET requests from specific referers<a name="w4ab1c21c10e1066c13b2"></a>
+### Bucket policy that allows GET requests from specific referers<a name="w4ab1c21c10d180c17c13b2"></a>
 
 The following sample is a bucket policy that is attached to the `myExampleBucket` bucket and allows GET requests that originate from `www.example.com` and `example.com`:
 

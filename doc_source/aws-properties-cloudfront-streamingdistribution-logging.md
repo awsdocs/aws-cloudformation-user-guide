@@ -2,7 +2,7 @@
 
 <a name="aws-properties-cloudfront-streamingdistribution-logging-description"></a>The `Logging` property type to control whether access logs are written for a Amazon CloudFront streaming distribution\.
 
-<a name="aws-properties-cloudfront-streamingdistribution-logging-inheritance"></a> `Logging` is a property of the [CloudFront StreamingDistribution StreamingDistributionConfig](aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.md) property type\. 
+<a name="aws-properties-cloudfront-streamingdistribution-logging-inheritance"></a> `Logging` is a property of the [StreamingDistributionConfig](aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.md) property type\. 
 
 ## Syntax<a name="aws-properties-cloudfront-streamingdistribution-logging-syntax"></a>
 

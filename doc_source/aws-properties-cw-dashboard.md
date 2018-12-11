@@ -8,7 +8,7 @@ This resource supports updates\. For more information about updating this resour
 + [Syntax](#aws-resource-cw-dashboard-syntax)
 + [Properties](#aws-properties-cw-dashboard-prop)
 + [Return Values](#aws-properties-cw-dashboard-ref)
-+ [Examples](#w4ab1c21c10d247c15)
++ [Examples](#w4ab1c21c10c63c27c15)
 
 ## Syntax<a name="aws-resource-cw-dashboard-syntax"></a>
 
@@ -51,12 +51,12 @@ A JSON string that defines the widgets contained in the dashboard and their loca
 
 ## Return Values<a name="aws-properties-cw-dashboard-ref"></a>
 
-### Ref<a name="w4ab1c21c10d247c13b2"></a>
+### Ref<a name="w4ab1c21c10c63c27c13b2"></a>
 
 When you specify an `AWS::CloudWatch::Dashboard` resource as an argument to the `Ref` function, AWS CloudFormation returns the value of the `Name`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w4ab1c21c10d247c15"></a>
+## Examples<a name="w4ab1c21c10c63c27c15"></a>
 
 For examples, see [Amazon CloudWatch Template Snippets](quickref-cloudwatch.md)\.

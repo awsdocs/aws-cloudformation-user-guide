@@ -2,7 +2,7 @@
 
 Use the `MongoDbSettings` property to specify settings for a MongoDB endpoint for a [AWS::DMS::Endpoint](aws-resource-dms-endpoint.md) resource\.
 
-## Syntax<a name="w4ab1c21c14d640b5"></a>
+## Syntax<a name="w4ab1c21c10c96c17c23b5"></a>
 
 ### JSON<a name="aws-properties-dms-endpoint-mongodbsettings-syntax.json"></a>
 
@@ -38,7 +38,7 @@ Use the `MongoDbSettings` property to specify settings for a MongoDB endpoint fo
 [Username](#cfn-dms-endpoint-mongodbsettings-username): String
 ```
 
-## Properties<a name="w4ab1c21c14d640b7"></a>
+## Properties<a name="w4ab1c21c10c96c17c23b7"></a>
 
 For more information about option settings, see [Using a MongoDB Database as a Source for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html) in the *AWS Database Migration Service User Guide*
 

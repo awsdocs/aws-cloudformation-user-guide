@@ -4,7 +4,7 @@ The `ELBInfo` property type specifies information about the Elastic Load Balanci
 
 If you specify the `ELBInfo` property, the `DeploymentStyle.DeploymentOption` property must be set to `WITH_TRAFFIC_CONTROL` for AWS CodeDeploy to route your traffic using the specified load balancers\.
 
- `ELBInfo` is a property of the [AWS CodeDeploy DeploymentGroup LoadBalancerInfo](aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.md) property type\. 
+ `ELBInfo` is a property of the [LoadBalancerInfo](aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.md) property type\. 
 
 ## Syntax<a name="aws-properties-codedeploy-deploymentgroup-elbinfo-syntax"></a>
 

@@ -2,13 +2,6 @@
 
 The `AWS::AppSync::GraphQLApi` resource will create a new AWS AppSync GraphQL API\. This is the top level construct for your application\. For more information see [https://docs.aws.amazon.com/appsync/latest/devguide/quickstart.html](https://docs.aws.amazon.com/appsync/latest/devguide/quickstart.html)\. 
 
-**Topics**
-+ [Syntax](#aws-resource-appsync-graphqlapi-syntax)
-+ [Properties](#aws-resource-appsync-graphqlapi-properties)
-+ [Return Values](#aws-resource-appsync-graphqlapi-returnvalues)
-+ [Examples](#aws-resource-appsync-graphqlapi-examples)
-+ [See Also](#aws-resource-appsync-graphqlapi-seealso)
-
 ## Syntax<a name="aws-resource-appsync-graphqlapi-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -45,13 +38,13 @@ Properties:
 `UserPoolConfig`  <a name="cfn-appsync-graphqlapi-userpoolconfig"></a>
 Optional authorization configuration for using Amazon Cognito User Pools with your GraphQL endpoint\.  
  *Required*: No  
- *Type*: [AWS AppSync GraphQLApi UserPoolConfig](aws-properties-appsync-graphqlapi-userpoolconfig.md)  
+ *Type*: [UserPoolConfig](aws-properties-appsync-graphqlapi-userpoolconfig.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `OpenIDConnectConfig`  <a name="cfn-appsync-graphqlapi-openidconnectconfig"></a>
 Optional authorization configuration for using an OpenId Connect compliant service with your GraphQL endpoint\.  
  *Required*: No  
- *Type*: [AWS AppSync GraphQLApi OpenId Connect Config](aws-properties-appsync-graphqlapi-openidconnectconfig.md)  
+ *Type*: [OpenId Connect Config](aws-properties-appsync-graphqlapi-openidconnectconfig.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Name`  <a name="cfn-appsync-graphqlapi-name"></a>
@@ -69,7 +62,7 @@ Security configuration for your GraphQL API\. For allowed values \(such as API\_
 `LogConfig`  <a name="cfn-appsync-graphqlapi-logconfig"></a>
 Logging configuration when writing GraphQL operations and tracing to Amazon Cloudwatch\.  
  *Required*: No  
- *Type*: [AWS AppSync GraphQLApi LogConfig](aws-properties-appsync-graphqlapi-logconfig.md)  
+ *Type*: [LogConfig](aws-properties-appsync-graphqlapi-logconfig.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-appsync-graphqlapi-returnvalues"></a>

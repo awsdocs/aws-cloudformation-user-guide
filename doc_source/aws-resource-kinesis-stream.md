@@ -2,12 +2,6 @@
 
 Creates an Kinesis stream that captures and transports data records that are emitted from data sources\. For information about creating streams, see [CreateStream](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_CreateStream.html) in the *Amazon Kinesis API Reference*\.
 
-**Topics**
-+ [Syntax](#aws-resource-kinesis-stream-syntax)
-+ [Properties](#w4ab1c21c10d852b9)
-+ [Return Values](#w4ab1c21c10d852c11)
-+ [Example](#aws-resource-kinesis-stream-examples)
-
 ## Syntax<a name="aws-resource-kinesis-stream-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -40,7 +34,7 @@ Properties:
     - Resource Tag
 ```
 
-## Properties<a name="w4ab1c21c10d852b9"></a>
+## Properties<a name="w4ab1c21c10d156c22b7"></a>
 
 **Note**  
  For more information about constraints and values for each property, see [CreateStream](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_CreateStream.html) in the *Amazon Kinesis API Reference* and [Amazon Kinesis Data Streams Limits](https://docs.aws.amazon.com/kinesis/latest/dev/service-sizes-and-limits.html) in the *Amazon Kinesis Developer Guide*\. 
@@ -73,18 +67,18 @@ Enables or updates server\-side encryption using an AWS KMS key for a specified 
 `Tags`  <a name="cfn-kinesis-stream-tags"></a>
 An arbitrary set of tags \(key–value pairs\) to associate with the Kinesis stream\. For information about constraints for this property, see [Tag Restrictions](https://docs.aws.amazon.com/kinesis/latest/dev/tagging.html#tagging-restrictions) in the *Amazon Kinesis Developer Guide*\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d852c11"></a>
+## Return Values<a name="w4ab1c21c10d156c22b9"></a>
 
-### Ref<a name="w4ab1c21c10d852c11b2"></a>
+### Ref<a name="w4ab1c21c10d156c22b9b2"></a>
 
  When you specify an AWS::Kinesis::Stream resource as an argument to the `Ref` function, AWS CloudFormation returns the stream name \(physical ID\)\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d852c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d156c22b9b4"></a>
 
 `Fn::GetAtt` returns a value for the `Arn` attribute\.
 

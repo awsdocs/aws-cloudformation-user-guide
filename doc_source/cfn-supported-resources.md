@@ -16,7 +16,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 + [Management Tools](#w4ab1c27c15c27)
 + [Mobile Services](#cfn-supported-resources-mobile-services)
 + [Networking](#cfn-supported-resources-networking)
-+ [Security and Identity](#cfn-supported-resources-security-and-identity)
++ [Security, Identity, and Compliance](#cfn-supported-resources-security-and-identity)
 + [Storage and Content Delivery](#cfn-supported-resources-storage-and-content-delivery)
 + [Additional Software and Services](#w4ab1c27c15c37)
 
@@ -49,8 +49,9 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::Glue::Partition](aws-resource-glue-partition.md)  
 [AWS::Glue::Table](aws-resource-glue-table.md)
 
-**Amazon Kinesis** \(Updated in November 2017\)  
+**Amazon Kinesis** \(Updated in November 2018\)  
 [AWS::Kinesis::Stream](aws-resource-kinesis-stream.md)  
+[AWS::Kinesis::StreamConsumer](aws-resource-kinesis-streamconsumer.md)  
 [AWS::KinesisFirehose::DeliveryStream](aws-resource-kinesisfirehose-deliverystream.md)  
 [AWS::KinesisAnalytics::Application](aws-resource-kinesisanalytics-application.md)  
 [AWS::KinesisAnalytics::ApplicationOutput](aws-resource-kinesisanalytics-applicationoutput.md)  
@@ -62,7 +63,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::AmazonMQ::Broker](aws-resource-amazonmq-broker.md)  
 [AWS::AmazonMQ::Configuration](aws-resource-amazonmq-configuration.md)
 
-**Amazon API Gateway \(API Gateway\)** \(Updated in February 2018\)  
+**Amazon API Gateway \(API Gateway\)** \(Updated in November 2018\)  
 [AWS::ApiGateway::Account](aws-resource-apigateway-account.md)  
 [AWS::ApiGateway::ApiKey](aws-resource-apigateway-apikey.md)  
 [AWS::ApiGateway::Authorizer](aws-resource-apigateway-authorizer.md)  
@@ -97,19 +98,25 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::ApplicationAutoScaling::ScalableTarget](aws-resource-applicationautoscaling-scalabletarget.md)  
 [AWS::ApplicationAutoScaling::ScalingPolicy](aws-resource-applicationautoscaling-scalingpolicy.md)
 
-**Amazon EC2 Auto Scaling** \(Updated in November 2017\)  
+**Amazon EC2 Auto Scaling** \(Updated in November 2018\)  
 [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md)  
 [AWS::AutoScaling::LaunchConfiguration](aws-properties-as-launchconfig.md)  
 [AWS::AutoScaling::LifecycleHook](aws-resource-as-lifecyclehook.md)  
 [AWS::AutoScaling::ScalingPolicy](aws-properties-as-policy.md)  
 [AWS::AutoScaling::ScheduledAction](aws-resource-as-scheduledaction.md)
 
-**Amazon Elastic Compute Cloud \(Amazon EC2\)** \(Updated September 2018\)  
+**Amazon Elastic Compute Cloud \(Amazon EC2\)** \(Updated November 2018\)  
 [AWS::EC2::Host](aws-resource-ec2-host.md)  
 [AWS::EC2::Instance](aws-properties-ec2-instance.md)  
 [AWS::EC2::LaunchTemplate](aws-resource-ec2-launchtemplate.md)  
 [AWS::EC2::PlacementGroup](aws-resource-ec2-placementgroup.md)  
 [AWS::EC2::SpotFleet](aws-resource-ec2-spotfleet.md)  
+[AWS::EC2::TransitGateway](aws-resource-ec2-transitgateway.md)  
+[AWS::EC2::TransitGatewayAttachment](aws-resource-ec2-transitgatewayattachment.md)  
+[AWS::EC2::TransitGatewayRoute](aws-resource-ec2-transitgatewayroute.md)  
+[AWS::EC2::TransitGatewayRouteTable](aws-resource-ec2-transitgatewayroutetable.md)  
+[AWS::EC2::TransitGatewayRouteTableAssociation](aws-resource-ec2-transitgatewayroutetableassociation.md)  
+[AWS::EC2::TransitGatewayRouteTablePropagation](aws-resource-ec2-transitgatewayroutetablepropagation.md)  
 [AWS::EC2::VPCPeeringConnection](aws-resource-ec2-vpcpeeringconnection.md)  
 [AWS::EC2::VPCEndpointServicePermissions](aws-resource-ec2-vpcendpointservicepermissions.md)
 
@@ -153,10 +160,12 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::ElasticLoadBalancingV2::LoadBalancer](aws-resource-elasticloadbalancingv2-loadbalancer.md)  
 [AWS::ElasticLoadBalancingV2::TargetGroup](aws-resource-elasticloadbalancingv2-targetgroup.md)
 
-**AWS Lambda \(Lambda\)** \(Updated in November 2017\)  
+**AWS Lambda \(Lambda\)** \(Updated in November 2018\)  
 [AWS::Lambda::Alias](aws-resource-lambda-alias.md)  
 [AWS::Lambda::EventSourceMapping](aws-resource-lambda-eventsourcemapping.md)  
 [AWS::Lambda::Function](aws-resource-lambda-function.md)  
+[AWS::Lambda::LayerVersion](aws-resource-lambda-layerversion.md)  
+[AWS::Lambda::LayerVersionPermission](aws-resource-lambda-layerversionpermission.md)  
 [AWS::Lambda::Permission](aws-resource-lambda-permission.md)  
 [AWS::Lambda::Version](aws-resource-lambda-version.md)
 
@@ -195,7 +204,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::Neptune::DBParameterGroup](aws-resource-neptune-dbparametergroup.md)  
 [AWS::Neptune::DBSubnetGroup](aws-resource-neptune-dbsubnetgroup.md)
 
-**Amazon Relational Database Service \(Amazon RDS\)** \(Updated in October 2017\)  
+**Amazon Relational Database Service \(Amazon RDS\)** \(Updated in November 2018\)  
 [AWS::RDS::DBCluster](aws-resource-rds-dbcluster.md)  
 [AWS::RDS::DBClusterParameterGroup](aws-resource-rds-dbclusterparametergroup.md)  
 [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)  
@@ -240,12 +249,21 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::CodeDeploy::DeploymentConfig](aws-resource-codedeploy-deploymentconfig.md)  
 [AWS::CodeDeploy::DeploymentGroup](aws-resource-codedeploy-deploymentgroup.md)
 
-**AWS CodePipeline** \(Updated in May 2018\)  
+**AWS CodePipeline** \(Updated in November 2018\)  
 [AWS::CodePipeline::CustomActionType](aws-resource-codepipeline-customactiontype.md)  
 [AWS::CodePipeline::Pipeline](aws-resource-codepipeline-pipeline.md)  
 [AWS::CodePipeline::Webhook](aws-resource-codepipeline-webhook.md)
 
 ## Enterprise Applications<a name="cfn-supported-resources-enterprise-applications"></a>
+
+Amazon **AppStream 2\.0** \(Added in October 2018\)  
+ [AWS::AppStream::DirectoryConfig](aws-resource-appstream-directoryconfig.md)   
+ [AWS::AppStream::Fleet](aws-resource-appstream-fleet.md)   
+ [AWS::AppStream::ImageBuilder](aws-resource-appstream-imagebuilder.md)   
+ [AWS::AppStream::Stack](aws-resource-appstream-stack.md)   
+ [AWS::AppStream::StackFleetAssociation](aws-resource-appstream-stackfleetassociation.md)   
+ [AWS::AppStream::StackUserAssociation](aws-resource-appstream-stackuserassociation.md)   
+ [AWS::AppStream::User](aws-resource-appstream-user.md) 
 
 **Amazon WorkSpaces** \(Updated in December 2015\)  
 [AWS::WorkSpaces::Workspace](aws-resource-workspaces-workspace.md)
@@ -259,7 +277,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 
 ## Internet of Things<a name="cfn-supported-resources-internet-of-things"></a>
 
-**AWS IoT** \(Updated in Septmeber 2018\)  
+**AWS IoT** \(Updated in October 2018\)  
 [AWS::IoT::Certificate](aws-resource-iot-certificate.md)  
 [AWS::IoT::Policy](aws-resource-iot-policy.md)  
 [AWS::IoT::PolicyPrincipalAttachment](aws-resource-iot-policyprincipalattachment.md)  
@@ -296,9 +314,10 @@ AWS CloudFormation supports the following AWS services and features through the 
 **AWS CloudTrail \(CloudTrail\)** \(Updated in August 2017\)  
 [AWS::CloudTrail::Trail](aws-resource-cloudtrail-trail.md)
 
-**Amazon CloudWatch \(CloudWatch\)** \(Updated in September 2017\)  
+**Amazon CloudWatch \(CloudWatch\)** \(Updated in November 2018\)  
 [AWS::CloudWatch::Alarm](aws-properties-cw-alarm.md)  
 [AWS::CloudWatch::Dashboard](aws-properties-cw-dashboard.md)  
+[AWS::Events::EventBusPolicy](aws-resource-events-eventbuspolicy.md)  
 [AWS::Events::Rule](aws-resource-events-rule.md)  
 [AWS::Logs::Destination](aws-resource-logs-destination.md)  
 [AWS::Logs::LogGroup](aws-resource-logs-loggroup.md)  
@@ -312,6 +331,9 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::Config::ConfigurationAggregator](aws-resource-config-configurationaggregator.md)  
 [AWS::Config::ConfigurationRecorder](aws-resource-config-configurationrecorder.md)  
 [AWS::Config::DeliveryChannel](aws-resource-config-deliverychannel.md)
+
+**Amazon Data Lifecycle Manager** \(Added in November 2018\)  
+[AWS::DLM::LifecyclePolicy](aws-resource-dlm-lifecyclepolicy.md)
 
 **AWS OpsWorks** \(Updated in November 2017\)  
 [AWS::OpsWorks::App](aws-resource-opsworks-app.md)  
@@ -364,28 +386,32 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::Cognito::UserPoolUser](aws-resource-cognito-userpooluser.md)  
 [AWS::Cognito::UserPoolUserToGroupAttachment](aws-resource-cognito-userpoolusertogroupattachment.md)
 
-**Amazon Simple Notification Service \(Amazon SNS\)** \(Updated in November 2016\)  
+**Amazon Simple Notification Service \(Amazon SNS\)** \(Updated in November 2018\)  
 [AWS::SNS::Subscription](aws-resource-sns-subscription.md)  
 [AWS::SNS::Topic](aws-properties-sns-topic.md)  
 [AWS::SNS::TopicPolicy](aws-properties-sns-policy.md)
 
 ## Networking<a name="cfn-supported-resources-networking"></a>
 
-**Amazon Route 53** \(Updated in March 2017\)  
+**Amazon Route 53** \(Updated in November 2018\)  
 [AWS::Route53::HealthCheck](aws-resource-route53-healthcheck.md)  
 [AWS::Route53::HostedZone](aws-resource-route53-hostedzone.md)  
 [AWS::Route53::RecordSet](aws-properties-route53-recordset.md)  
-[AWS::Route53::RecordSetGroup](aws-properties-route53-recordsetgroup.md)
+[AWS::Route53::RecordSetGroup](aws-properties-route53-recordsetgroup.md)  
+[AWS::Route53Resolver::ResolverEndpoint](aws-resource-route53resolver-resolverendpoint.md)  
+[AWS::Route53Resolver::ResolverRule](aws-resource-route53resolver-resolverrule.md)
 
-**Service Discovery** \(Added in December 2017\)  
+**AWS Cloud Map** \(Updated in November 2018\)  
+[AWS::ServiceDiscovery::HttpNamespace](aws-resource-servicediscovery-httpnamespace.md)  
 [AWS::ServiceDiscovery::Instance](aws-resource-servicediscovery-instance.md)  
 [AWS::ServiceDiscovery::PrivateDnsNamespace](aws-resource-servicediscovery-privatednsnamespace.md)  
 [AWS::ServiceDiscovery::PublicDnsNamespace](aws-resource-servicediscovery-publicdnsnamespace.md)  
 [AWS::ServiceDiscovery::Service](aws-resource-servicediscovery-service.md)
 
-**Amazon Virtual Private Cloud \(Amazon VPC\)** \(Updated in November 2017\)  
+**Amazon Virtual Private Cloud \(Amazon VPC\)** \(Updated in November 2018\)  
 [AWS::EC2::CustomerGateway](aws-resource-ec2-customer-gateway.md)  
 [AWS::EC2::DHCPOptions](aws-resource-ec2-dhcp-options.md)  
+[AWS::EC2::EC2Fleet](aws-resource-ec2-ec2fleet.md)  
 [AWS::EC2::EgressOnlyInternetGateway](aws-resource-ec2-egressonlyinternetgateway.md)  
 [AWS::EC2::EIP](aws-properties-ec2-eip.md)  
 [AWS::EC2::EIPAssociation](aws-properties-ec2-eip-association.md)  
@@ -417,7 +443,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::EC2::VPNGateway](aws-resource-ec2-vpn-gateway.md)  
 [AWS::EC2::VPNGatewayRoutePropagation](aws-resource-ec2-vpn-gatewayrouteprop.md)
 
-## Security and Identity<a name="cfn-supported-resources-security-and-identity"></a>
+## Security, Identity, and Compliance<a name="cfn-supported-resources-security-and-identity"></a>
 
 **AWS Certificate Manager \(ACM\)** \(Added in August 2016\)  
 [AWS::CertificateManager::Certificate](aws-resource-certificatemanager-certificate.md)
@@ -439,7 +465,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::GuardDuty::Member](aws-resource-guardduty-member.md)  
 [AWS::GuardDuty::ThreatIntelSet](aws-resource-guardduty-threatintelset.md)
 
-**AWS Identity and Access Management \(IAM\)** \(Updated in April 2017\)  
+**AWS Identity and Access Management \(IAM\)** \(Updated in October 2018\)  
 [AWS::IAM::AccessKey](aws-properties-iam-accesskey.md)  
 [AWS::IAM::Group](aws-properties-iam-group.md)  
 [AWS::IAM::InstanceProfile](aws-resource-iam-instanceprofile.md)  
@@ -452,6 +478,12 @@ AWS CloudFormation supports the following AWS services and features through the 
 **AWS Key Management Service \(AWS KMS\)** \(Updated in October 2017\)  
 [AWS::KMS::Alias](aws-resource-kms-alias.md)  
 [AWS::KMS::Key](aws-resource-kms-key.md)
+
+**AWS Secrets Manager \(Secrets Manager\)** \(Added in October 2018\)  
+[AWS::SecretsManager::ResourcePolicy](aws-resource-secretsmanager-resourcepolicy.md)  
+[AWS::SecretsManager::RotationSchedule](aws-resource-secretsmanager-rotationschedule.md)  
+[AWS::SecretsManager::Secret](aws-resource-secretsmanager-secret.md)  
+[AWS::SecretsManager::SecretTargetAttachment](aws-resource-secretsmanager-secrettargetattachment.md)
 
 **AWS WAF** \(Updated in May 2017\)  
 [AWS::WAF::ByteMatchSet](aws-resource-waf-bytematchset.md)  
@@ -485,7 +517,7 @@ AWS CloudFormation supports the following AWS services and features through the 
 [AWS::EFS::FileSystem](aws-resource-efs-filesystem.md)  
 [AWS::EFS::MountTarget](aws-resource-efs-mounttarget.md)
 
-**Amazon Simple Storage Service \(Amazon S3\)** \(Updated in November 2017\)  
+**Amazon Simple Storage Service \(Amazon S3\)** \(Updated in October 2018\)  
 [AWS::S3::Bucket](aws-properties-s3-bucket.md)  
 [AWS::S3::BucketPolicy](aws-properties-s3-policy.md)
 

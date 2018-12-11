@@ -2,7 +2,7 @@
 
 Describes the automatic time\-based scaling configuration for an [AWS::OpsWorks::Instance](aws-resource-opsworks-instance.md) resource type\. For more information, see [SetTimeBasedAutoScaling](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_SetTimeBasedAutoScaling.html) in the *AWS OpsWorks Stacks API Reference*\.
 
-## Syntax<a name="w4ab1c21c14e1712b5"></a>
+## Syntax<a name="w4ab1c21c10d168c24c25b5"></a>
 
 ### JSON<a name="aws-properties-opsworks-instance-timebasedautoscaling-syntax.json"></a>
 
@@ -37,7 +37,7 @@ Describes the automatic time\-based scaling configuration for an [AWS::OpsWorks:
   Integer: String
 ```
 
-## Properties<a name="w4ab1c21c14e1712b7"></a>
+## Properties<a name="w4ab1c21c10d168c24c25b7"></a>
 
 For each day of the week, the schedule consists of a set of key–value pairs, where the key is the time period \(a UTC hour\) of `0` – `23` and the value indicates whether the instance should be online \(`on`\) or offline \(`off`\) for the specified period\.
 

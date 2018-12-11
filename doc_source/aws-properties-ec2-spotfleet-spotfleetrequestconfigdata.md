@@ -2,7 +2,7 @@
 
 `SpotFleetRequestConfigData` is a property of the [AWS::EC2::SpotFleet](aws-resource-ec2-spotfleet.md) resource that defines the configuration of a Spot fleet request\.
 
-## Syntax<a name="w4ab1c21c14d831b5"></a>
+## Syntax<a name="w4ab1c21c10d102d118c78b5"></a>
 
 ### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-syntax.json"></a>
 
@@ -47,7 +47,7 @@
 [ValidUntil](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-validuntil): String
 ```
 
-## Properties<a name="w4ab1c21c14d831b7"></a>
+## Properties<a name="w4ab1c21c10d102d118c78b7"></a>
 
 For more information, including property defaults, valid values, and constraints, see [SpotFleetRequestConfigData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotFleetRequestConfigData.html) in the *Amazon EC2 API Reference*\.
 
@@ -77,20 +77,20 @@ The behavior when a Spot Instance is interrupted\.
 
 `LaunchSpecifications`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications"></a>
 The launch specifications for the Spot fleet request\.  
-*Required*: Conditional\. You must specify one of the following: `LaunchSpecifications` or `LaunchTemplateConfigs`\.  
+*Required*: Conditional\. You must specify either `LaunchSpecifications` or `LaunchTemplateConfigs`\.  
 *Type*: List of [Amazon Elastic Compute Cloud SpotFleet LaunchSpecifications](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `LaunchTemplateConfigs`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs"></a>
 Describes a launch template and overrides\.  
-*Required*: Conditional\. You must specify one of the following: `LaunchSpecifications` or `LaunchTemplateConfigs`\.  
-*Type*: List of [Amazon EC2 SpotFleet LaunchTemplateConfig](aws-properties-ec2-spotfleet-launchtemplateconfig.md)  
+*Required*: Conditional\. You must specify either `LaunchSpecifications` or `LaunchTemplateConfigs`\.  
+*Type*: List of [LaunchTemplateConfig](aws-properties-ec2-spotfleet-launchtemplateconfig.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `LoadBalancersConfig`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-loadbalancersconfig"></a>
 One or more Classic Load Balancers and target groups to attach to the Spot Fleet request\. Spot Fleet registers the running Spot Instances with the specified Classic Load Balancers and target groups\.  
 *Required*: No  
-*Type*: [Amazon EC2 SpotFleet LoadBalancersConfig](aws-properties-ec2-spotfleet-loadbalancersconfig.md)  
+*Type*: [LoadBalancersConfig](aws-properties-ec2-spotfleet-loadbalancersconfig.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ReplaceUnhealthyInstances`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-replaceunhealthyinstances"></a>

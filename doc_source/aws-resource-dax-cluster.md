@@ -4,7 +4,7 @@ Use the `AWS::DAX::Cluster` resource to create a DAX cluster for use with Amazon
 
 For information about creating a DAX cluster, see [Creating a DAX Cluster](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.create-cluster.html) in the *Amazon DynamoDB Developer Guide* and [https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_dax_CreateCluster.html](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_dax_CreateCluster.html) in the *Amazon DynamoDB Developer Guide*\.
 
-## Syntax<a name="w4ab1c21c10d338b7"></a>
+## Syntax<a name="w4ab1c21c10c87c14b7"></a>
 
 ### JSON<a name="aws-resource-dax-cluster-syntax.json"></a>
 
@@ -128,7 +128,7 @@ If this parameter is not specified, DAX assigns the default VPC security group t
 `SSESpecification`  <a name="cfn-dax-cluster-ssespecification"></a>
 Whether server\-side encryption is enabled or not\.  
 *Required*: No  
-*Type*: [DAX Cluster SSESpecification](aws-properties-daxservice-cluster-ssespecification.md)   
+*Type*: [SSESpecification](aws-properties-daxservice-cluster-ssespecification.md)   
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `SubnetGroupName`  <a name="cfn-dax-cluster-subnet-group-name"></a>

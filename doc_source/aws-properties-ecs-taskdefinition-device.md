@@ -2,7 +2,7 @@
 
 <a name="aws-properties-ecs-taskdefinition-device-description"></a>The `Device` property type specifies a device on a host container instance\.
 
-<a name="aws-properties-ecs-taskdefinition-device-inheritance"></a> The `Devices` property of the [Amazon ECS TaskDefinition LinuxParameters](aws-properties-ecs-taskdefinition-linuxparameters.md) contains a list of `Device` property types\.
+<a name="aws-properties-ecs-taskdefinition-device-inheritance"></a> The `Devices` property of the [LinuxParameters](aws-properties-ecs-taskdefinition-linuxparameters.md) contains a list of `Device` property types\.
 
 ## Syntax<a name="aws-properties-ecs-taskdefinition-device-syntax"></a>
 

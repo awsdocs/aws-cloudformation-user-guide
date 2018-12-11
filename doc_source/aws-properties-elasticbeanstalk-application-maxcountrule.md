@@ -2,7 +2,7 @@
 
 <a name="aws-properties-elasticbeanstalk-application-maxcountrule-description"></a>The `MaxCountRule` property type specifies a lifecycle rule that deletes the oldest application version when the maximum count is exceeded for an AWS Elastic Beanstalk application\.
 
-<a name="aws-properties-elasticbeanstalk-application-maxcountrule-inheritance"></a> `MaxCountRule` is a property of the [Elastic Beanstalk Application ApplicationVersionLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.md) property type\. 
+<a name="aws-properties-elasticbeanstalk-application-maxcountrule-inheritance"></a> `MaxCountRule` is a property of the [ApplicationVersionLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.md) property type\. 
 
 ## Syntax<a name="aws-properties-elasticbeanstalk-application-maxcountrule-syntax"></a>
 

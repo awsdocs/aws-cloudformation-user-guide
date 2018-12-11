@@ -6,11 +6,11 @@ For more information, see [CreateDhcpOptions](http://docs.aws.amazon.com/AWSEC2/
 
 **Topics**
 + [Syntax](#aws-resource-ec2-dhcpoptions-syntax)
-+ [Properties](#w4ab1c21c10d395c11)
++ [Properties](#w4ab1c21c10d102c19c11)
 + [Conditional Properties](#dhcp-options-conditional-note)
-+ [Return Values](#w4ab1c21c10d395c15)
-+ [Example](#w4ab1c21c10d395c17)
-+ [See Also](#w4ab1c21c10d395c19)
++ [Return Values](#w4ab1c21c10d102c19c15)
++ [Example](#w4ab1c21c10d102c19c17)
++ [See Also](#w4ab1c21c10d102c19c19)
 
 ## Syntax<a name="aws-resource-ec2-dhcpoptions-syntax"></a>
 
@@ -49,7 +49,7 @@ Properties:
     -Resource Tag
 ```
 
-## Properties<a name="w4ab1c21c10d395c11"></a>
+## Properties<a name="w4ab1c21c10d102c19c11"></a>
 
 `DomainName`  <a name="cfn-ec2-dhcpoptions-domainname"></a>
 A domain name of your choice\.  
@@ -97,7 +97,7 @@ The IP address \(IPv4\) of a Network Time Protocol \(NTP\) server\. You can spec
 `Tags`  <a name="cfn-ec2-dhcpoptions-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this resource\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
 ## Conditional Properties<a name="dhcp-options-conditional-note"></a>
@@ -111,15 +111,15 @@ After this condition has been fulfilled, the rest of these properties are option
 
 If you specify `NetbiosNameServers`, then `NetbiosNodeType` is required\.
 
-## Return Values<a name="w4ab1c21c10d395c15"></a>
+## Return Values<a name="w4ab1c21c10d102c19c15"></a>
 
-### Ref<a name="w4ab1c21c10d395c15b2"></a>
+### Ref<a name="w4ab1c21c10d102c19c15b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d395c17"></a>
+## Example<a name="w4ab1c21c10d102c19c17"></a>
 
 ### JSON<a name="aws-resource-ec2-dhcpoptions-example.json"></a>
 
@@ -164,7 +164,7 @@ Resources:
           Value: bar
 ```
 
-## See Also<a name="w4ab1c21c10d395c19"></a>
+## See Also<a name="w4ab1c21c10d102c19c19"></a>
 + [CreateDhcpOptions](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateDhcpOptions.html) in the *Amazon EC2 API Reference*
 + [Using Tags](http://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/Using_Tags.html) in the *Amazon Elastic Compute Cloud User Guide*\.
 + [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt) \- *DHCP Options and BOOTP Vendor Extensions*, Network Working Group, 1997

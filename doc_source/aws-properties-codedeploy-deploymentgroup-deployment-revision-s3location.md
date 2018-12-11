@@ -1,8 +1,8 @@
 # AWS CodeDeploy DeploymentGroup Deployment Revision S3Location<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location"></a>
 
-`S3Location` is a property of the [AWS CodeDeploy DeploymentGroup Deployment Revision](aws-properties-codedeploy-deploymentgroup-deployment-revision.md) property that specifies the location of an application revision that is stored in Amazon Simple Storage Service \(Amazon S3\)\.
+`S3Location` is a property of the [AWS CodeDeploy DeploymentGroup Revision](aws-properties-codedeploy-deploymentgroup-deployment-revision.md) property that specifies the location of an application revision that is stored in Amazon Simple Storage Service \(Amazon S3\)\.
 
-## Syntax<a name="w4ab1c21c14d453b5"></a>
+## Syntax<a name="w4ab1c21c10c72c21c65b5"></a>
 
 ### JSON<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location-syntax.json"></a>
 
@@ -26,7 +26,7 @@
 [Version](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-value): String
 ```
 
-## Properties<a name="w4ab1c21c14d453b7"></a>
+## Properties<a name="w4ab1c21c10c72c21c65b7"></a>
 
 `Bucket`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-bucket"></a>
 The name of the S3 bucket where the application revision is stored\.  

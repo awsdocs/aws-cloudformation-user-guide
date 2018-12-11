@@ -4,10 +4,10 @@ Provides information to AWS about your VPN customer gateway device\.
 
 **Topics**
 + [Syntax](#aws-resource-ec2-customergateway-syntax)
-+ [Properties](#w4ab1c21c10d390b9)
-+ [Return Value](#w4ab1c21c10d390c11)
-+ [Example](#w4ab1c21c10d390c13)
-+ [See Also](#w4ab1c21c10d390c15)
++ [Properties](#w4ab1c21c10d102c14b9)
++ [Return Value](#w4ab1c21c10d102c14c11)
++ [Example](#w4ab1c21c10d102c14c13)
++ [See Also](#w4ab1c21c10d102c14c15)
 
 ## Syntax<a name="aws-resource-ec2-customergateway-syntax"></a>
 
@@ -39,7 +39,7 @@ Properties:
   [Type](#cfn-ec2-customergateway-type): String
 ```
 
-## Properties<a name="w4ab1c21c10d390b9"></a>
+## Properties<a name="w4ab1c21c10d102c14b9"></a>
 
 `BgpAsn`  <a name="cfn-ec2-customergateway-bgpasn"></a>
 The customer gateway's Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\)\.  
@@ -56,7 +56,7 @@ The internet\-routable IP address for the customer gateway's outside interface\.
 `Tags`  <a name="cfn-ec2-customergateway-tags"></a>
 The tags that you want to attach to the resource\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)\.  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
 `Type`  <a name="cfn-ec2-customergateway-type"></a>
@@ -66,7 +66,7 @@ The type of VPN connection that this customer gateway supports\.
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)  
 *Example*: `ipsec.1`
 
-## Return Value<a name="w4ab1c21c10d390c11"></a>
+## Return Value<a name="w4ab1c21c10d102c14c11"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -78,7 +78,7 @@ For the resource with the logical ID "MyResource", `Ref` will return the AWS res
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d390c13"></a>
+## Example<a name="w4ab1c21c10d102c14c13"></a>
 
 ### JSON<a name="aws-resource-ec2-customergateway-example.json"></a>
 
@@ -111,5 +111,5 @@ Resources:
       IpAddress: 1.1.1.1
 ```
 
-## See Also<a name="w4ab1c21c10d390c15"></a>
+## See Also<a name="w4ab1c21c10d102c14c15"></a>
 + [CreateCustomerGateway](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateCustomerGateway.html) in the *Amazon EC2 API Reference*\.

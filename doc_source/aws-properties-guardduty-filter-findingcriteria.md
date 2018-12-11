@@ -1,4 +1,4 @@
-# GuardDuty Filter FindingCriteria<a name="aws-properties-guardduty-filter-findingcriteria"></a>
+# Amazon GuardDuty Filter FindingCriteria<a name="aws-properties-guardduty-filter-findingcriteria"></a>
 
 <a name="aws-properties-guardduty-filter-findingcriteria-description"></a>The `FindingCriteria` property type specifies the attributes to be used in the filter and the conditions to be applied to the selected attributes for filtering through your GuardDuty findings\.
 
@@ -35,5 +35,5 @@ Specifies the finding attributes \(for example, region, type, severity, etc\.\) 
 `ItemType`  <a name="cfn-guardduty-filter-findingcriteria-itemtype"></a>
 Specifies the condition to be applied to a single field when filtering through findings\.  
  *Required*: No  
- *Type*: [GuardDuty Filter Condition](aws-properties-guardduty-filter-condition.md)  
+ *Type*: [Condition](aws-properties-guardduty-filter-condition.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

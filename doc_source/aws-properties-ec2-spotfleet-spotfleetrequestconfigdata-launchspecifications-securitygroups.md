@@ -2,7 +2,7 @@
 
 `SecurityGroups` is a property of the [Amazon Elastic Compute Cloud SpotFleet LaunchSpecifications](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md) property that specifies a security group to associate with the instances\.
 
-## Syntax<a name="w4ab1c21c14d892b5"></a>
+## Syntax<a name="w4ab1c21c10d102d118c74b5"></a>
 
 ### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups-syntax.json"></a>
 
@@ -18,7 +18,7 @@
 [GroupId](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups-groupid): String
 ```
 
-## Properties<a name="w4ab1c21c14d892b7"></a>
+## Properties<a name="w4ab1c21c10d102d118c74b7"></a>
 
 `GroupId`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups-groupid"></a>
 The ID of a security group\.  

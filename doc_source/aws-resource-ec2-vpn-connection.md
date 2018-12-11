@@ -4,13 +4,6 @@ Creates a new VPN connection between an existing virtual private gateway and a V
 
 For more information, see [CreateVpnConnection](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVpnConnection.html) in the *Amazon EC2 API Reference*\.
 
-**Topics**
-+ [Syntax](#aws-resource-ec2-vpnconnection-syntax)
-+ [Properties](#w4ab1c21c10d556c11)
-+ [Return Value](#w4ab1c21c10d556c13)
-+ [Template Example](#w4ab1c21c10d556c15)
-+ [See Also](#aws-resource-ec2-vpnconnection-seealso)
-
 ## Syntax<a name="aws-resource-ec2-vpnconnection-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -48,7 +41,7 @@ Properties:
     - [*VpnTunnelOptionsSpecification*](aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.md)
 ```
 
-## Properties<a name="w4ab1c21c10d556c11"></a>
+## Properties<a name="w4ab1c21c10d102d208b9"></a>
 
 `Type`  <a name="cfn-ec2-vpnconnection-type"></a>
 The type of VPN connection this virtual private gateway supports\.  
@@ -72,7 +65,7 @@ Indicates whether the VPN connection requires static routes\.
 `Tags`  <a name="cfn-ec2-vpnconnection-tags"></a>
 The tags that you want to attach to the resource\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)\.  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `VpnGatewayId`  <a name="cfn-ec2-vpnconnection-vpngatewayid"></a>
@@ -84,10 +77,10 @@ The ID of the virtual private gateway\. This can either be an embedded JSON obje
 `VpnTunnelOptionsSpecifications`  <a name="cfn-ec2-vpnconnection-vpntunneloptionsspecifications"></a>
 The tunnel options for the VPN connection\. Duplicates not allowed\.  
  *Required*: No  
- *Type*: List of [EC2 VPNConnection VpnTunnelOptionsSpecification](aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.md)  
+ *Type*: List of [VpnTunnelOptionsSpecification](aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.md)  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-## Return Value<a name="w4ab1c21c10d556c13"></a>
+## Return Value<a name="w4ab1c21c10d102d208c11"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -99,7 +92,7 @@ For the VPNConnection with the logical ID "MyVPNConnection", `Ref` will return t
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Template Example<a name="w4ab1c21c10d556c15"></a>
+## Template Example<a name="w4ab1c21c10d102d208c13"></a>
 
 ### JSON<a name="aws-resource-ec2-vpnconnection-example.json"></a>
 

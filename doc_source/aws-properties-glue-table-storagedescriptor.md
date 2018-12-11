@@ -2,7 +2,7 @@
 
 <a name="aws-properties-glue-table-storagedescriptor-description"></a>The `StorageDescriptor` property type describes the physical storage of AWS Glue table data\.
 
-<a name="aws-properties-glue-table-storagedescriptor-inheritance"></a> `StorageDescriptor` is a property of the [AWS Glue Table TableInput](aws-properties-glue-table-tableinput.md) property type\.
+<a name="aws-properties-glue-table-storagedescriptor-inheritance"></a> `StorageDescriptor` is a property of the [TableInput](aws-properties-glue-table-tableinput.md) property type\.
 
 ## Syntax<a name="aws-properties-glue-table-storagedescriptor-syntax"></a>
 
@@ -74,7 +74,7 @@ A list of UTF\-8 strings that specify reducer grouping columns, clustering colum
 `SkewedInfo`  <a name="cfn-glue-table-storagedescriptor-skewedinfo"></a>
 Information about values that appear very frequently in a column \(skewed values\)\.  
  *Required*: No  
- *Type*: [AWS Glue Table SkewedInfo](aws-properties-glue-table-skewedinfo.md)  
+ *Type*: [SkewedInfo](aws-properties-glue-table-skewedinfo.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `InputFormat`  <a name="cfn-glue-table-storagedescriptor-inputformat"></a>
@@ -98,19 +98,19 @@ The output format: `SequenceFileOutputFormat` \(binary\), `IgnoreKeyTextOutputFo
 `Columns`  <a name="cfn-glue-table-storagedescriptor-columns"></a>
 The columns in the table\.  
  *Required*: No  
- *Type*: List of [AWS Glue Table Column](aws-properties-glue-table-column.md)  
+ *Type*: List of [Column](aws-properties-glue-table-column.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `SerdeInfo`  <a name="cfn-glue-table-storagedescriptor-serdeinfo"></a>
 Information about a serialization/deserialization program \(SerDe\), which serves as an extractor and loader\.  
  *Required*: No  
- *Type*: [AWS Glue Table SerdeInfo](aws-properties-glue-table-serdeinfo.md)  
+ *Type*: [SerdeInfo](aws-properties-glue-table-serdeinfo.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `SortColumns`  <a name="cfn-glue-table-storagedescriptor-sortcolumns"></a>
 The sort order of each bucket in the table\.  
  *Required*: No  
- *Type*: List of [AWS Glue Table Order](aws-properties-glue-table-order.md)  
+ *Type*: List of [Order](aws-properties-glue-table-order.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Compressed`  <a name="cfn-glue-table-storagedescriptor-compressed"></a>

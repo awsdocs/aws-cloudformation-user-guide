@@ -45,7 +45,7 @@ The Amazon Resource Name \(ARN\) of the Amazon S3 bucket to send data to\.
 `BufferingHints`  <a name="cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-bufferinghints"></a>
 Configures how Kinesis Data Firehose buffers incoming data while delivering it to the Amazon S3 bucket\.  
 *Required*: Yes  
-*Type*: [Kinesis Data Firehose DeliveryStream BufferingHints](aws-properties-kinesisfirehose-deliverystream-bufferinghints.md)
+*Type*: [BufferingHints](aws-properties-kinesisfirehose-deliverystream-bufferinghints.md)
 
 `CloudWatchLoggingOptions`  <a name="cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-cloudwatchloggingoptions"></a>
 The Amazon CloudWatch Logs logging options for the delivery stream\.  

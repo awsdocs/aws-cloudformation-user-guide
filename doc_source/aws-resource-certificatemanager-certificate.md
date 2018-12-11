@@ -5,12 +5,6 @@ The `AWS::CertificateManager::Certificate` resource requests an AWS Certificate 
 **Important**  
 When you use the `AWS::CertificateManager::Certificate` resource in an AWS CloudFormation stack, the stack will remain in the `CREATE_IN_PROGRESS` state and any further stack operations will be delayed until you validate the certificate request, either by acting upon the instructions in the certificate validation email, or by adding a CNAME record to your DNS configuration\.
 
-**Topics**
-+ [Syntax](#aws-resource-certificatemanager-certificate-syntax)
-+ [Properties](#aws-resource-certificatemanager-certificate-properties)
-+ [Return Value](#aws-resource-certificatemanager-certificate-return-values)
-+ [Example](#aws-resource-certificatemanager-certificate-examples)
-
 ## Syntax<a name="aws-resource-certificatemanager-certificate-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -69,7 +63,7 @@ FQDNs to be included in the Subject Alternative Name extension of the ACM certif
 `Tags`  <a name="cfn-certificatemanager-certificate-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this ACM certificate\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
 `ValidationMethod`  <a name="cfn-certificatemanager-certificate-validationmethod"></a>

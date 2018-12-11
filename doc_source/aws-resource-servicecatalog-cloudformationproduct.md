@@ -2,11 +2,6 @@
 
 Creates the specified product for AWS Service Catalog\. For more information, see [CreateProduct](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateProduct.html) in the *AWS Service Catalog Developer Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-servicecatalog-cloudformationproduct-syntax)
-+ [Properties](#aws-resource-servicecatalog-cloudformationproduct-properties)
-+ [Return Values](#aws-resource-servicecatalog-cloudformationproduct-returnvalues)
-
 ## Syntax<a name="aws-resource-servicecatalog-cloudformationproduct-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -85,7 +80,7 @@ The owner of the product\.
 `ProvisioningArtifactParameters`  <a name="cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters"></a>
 The configuration of the provisioning artifact \(also known as a version\) for a product\.  
 *Required*: Yes  
-*Type*: List of [AWS Service Catalog CloudFormationProduct ProvisioningArtifactProperties](aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.md) property types  
+*Type*: List of [ProvisioningArtifactProperties](aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.md) property types  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `SupportDescription`  <a name="cfn-servicecatalog-cloudformationproduct-supportdescription"></a>

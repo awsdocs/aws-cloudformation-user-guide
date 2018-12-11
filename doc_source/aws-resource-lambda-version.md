@@ -4,9 +4,9 @@ The `AWS::Lambda::Version` resource publishes a specified version of an AWS Lamb
 
 **Topics**
 + [Syntax](#aws-resource-lambda-version-syntax)
-+ [Properties](#w4ab1c21c10d895b9)
-+ [Return Values](#w4ab1c21c10d895c11)
-+ [Example](#w4ab1c21c10d895c13)
++ [Properties](#w4ab1c21c10d162c37b9)
++ [Return Values](#w4ab1c21c10d162c37c11)
++ [Example](#w4ab1c21c10d162c37c13)
 
 ## Syntax<a name="aws-resource-lambda-version-syntax"></a>
 
@@ -35,7 +35,7 @@ Properties:
   [FunctionName](#cfn-lambda-version-functionname) : String
 ```
 
-## Properties<a name="w4ab1c21c10d895b9"></a>
+## Properties<a name="w4ab1c21c10d162c37b9"></a>
 
 `CodeSha256`  <a name="cfn-lambda-version-codesha256"></a>
 The SHA\-256 hash of the deployment package that you want to publish\. This value must match the SHA\-256 hash of the `$LATEST` version of the function\. Specify this property to validate that you are publishing the correct package\.   
@@ -55,15 +55,15 @@ The Lambda function for which you want to publish a version\. You can specify th
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d895c11"></a>
+## Return Values<a name="w4ab1c21c10d162c37c11"></a>
 
-### Ref<a name="w4ab1c21c10d895c11b2"></a>
+### Ref<a name="w4ab1c21c10d162c37c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN of the Lambda version, such as `arn:aws:lambda:us-west-2:123456789012:function:helloworld:1`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d895c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d162c37c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of the specified resource type\.
 
@@ -72,7 +72,7 @@ The published version of a Lambda version, such as `1`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Example<a name="w4ab1c21c10d895c13"></a>
+## Example<a name="w4ab1c21c10d162c37c13"></a>
 
 The following example publishes a new version of the `MyFunction` Lambda function\.
 

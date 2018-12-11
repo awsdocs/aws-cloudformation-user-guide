@@ -2,7 +2,7 @@
 
 The intrinsic function `Fn::FindInMap` returns the value corresponding to keys in a two\-level map that is declared in the `Mappings` section\.
 
-## Declaration<a name="w4ab1c21c28c26b5"></a>
+## Declaration<a name="w4ab1c21c24c26b5"></a>
 
 ### JSON<a name="intrinsic-function-reference-findinmap-syntax.json"></a>
 
@@ -27,7 +27,7 @@ Syntax for the short form:
 **Note**  
 You can't nest two instances of two functions in short form\.
 
-## Parameters<a name="w4ab1c21c28c26b7"></a>
+## Parameters<a name="w4ab1c21c24c26b7"></a>
 
 MapName  
 The logical name of a mapping declared in the Mappings section that contains the keys and values\.
@@ -38,11 +38,11 @@ The top\-level key name\. Its value is a list of key\-value pairs\.
 SecondLevelKey  
 The second\-level key name, which is set to one of the keys from the list assigned to `TopLevelKey`\.
 
-## Return Value:<a name="w4ab1c21c28c26b9"></a>
+## Return Value:<a name="w4ab1c21c24c26b9"></a>
 
 The value that is assigned to `SecondLevelKey`\. 
 
-## Example<a name="w4ab1c21c28c26c11"></a>
+## Example<a name="w4ab1c21c24c26c11"></a>
 
 The following example shows how to use `Fn::FindInMap` for a template with a `Mappings` section that contains a single map, `RegionMap`, that associates AMIs with AWS regions\. 
 + The map has 5 top\-level keys that correspond to various AWS regions\.
@@ -131,7 +131,7 @@ Resources:
       InstanceType: m1.small
 ```
 
-## Supported Functions<a name="w4ab1c21c28c26c13"></a>
+## Supported Functions<a name="w4ab1c21c24c26c13"></a>
 
 You can use the following functions in a `Fn::FindInMap` function:
 + `Fn::FindInMap`

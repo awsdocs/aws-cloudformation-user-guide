@@ -1,6 +1,6 @@
 # Amazon EC2 Auto Scaling ScalingPolicy PredefinedMetricSpecification<a name="aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification"></a>
 
-The `PredefinedMetricSpecification` property configures a predefined metric for a target tracking policy in Amazon EC2 Auto Scaling\. `PredefinedMetricSpecification` is a subproperty of the [Amazon EC2 Auto Scaling ScalingPolicy TargetTrackingConfiguration](aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.md) property\.
+The `PredefinedMetricSpecification` property configures a predefined metric for a target tracking policy to use with Amazon EC2 Auto Scaling\. `PredefinedMetricSpecification` is a subproperty of the [Amazon EC2 Auto Scaling ScalingPolicy TargetTrackingConfiguration](aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.md) property\.
 
 ## Syntax<a name="aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification-syntax"></a>
 

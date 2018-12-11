@@ -1,8 +1,8 @@
-# Elastic Beanstalk Environment Tier Property Type<a name="aws-properties-beanstalk-environment-tier"></a>
+# Elastic Beanstalk Environment EnvironmentTier<a name="aws-properties-beanstalk-environment-tier"></a>
 
 Describes the environment tier for an [AWS::ElasticBeanstalk::Environment](aws-properties-beanstalk-environment.md) resource\. For more information, see [Environment Tiers](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features-managing-env-tiers.html) in the *AWS Elastic Beanstalk Developer Guide*\.
 
-## Syntax<a name="w4ab1c21c14e1042b5"></a>
+## Syntax<a name="w4ab1c21c10d123c26c19b5"></a>
 
 ### JSON<a name="aws-properties-beanstalk-environment-tier-syntax.json"></a>
 
@@ -22,7 +22,7 @@ Describes the environment tier for an [AWS::ElasticBeanstalk::Environment](aws-p
 [Version](#cfn-beanstalk-env-tier-version): String
 ```
 
-## Members<a name="w4ab1c21c14e1042b7"></a>
+## Members<a name="w4ab1c21c10d123c26c19b7"></a>
 
 `Name`  <a name="cfn-beanstalk-env-tier-name"></a>
 The name of the environment tier\. You can specify `WebServer` or `Worker`\.  

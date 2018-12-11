@@ -1,6 +1,6 @@
 # AWS Auto Scaling ScalingPlan PredefinedScalingMetricSpecification<a name="aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification"></a>
 
-<a name="aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification-description"></a>The `PredefinedScalingMetricSpecification` property type specifies a predefined metric for a target tracking policy for an AWS Auto Scaling scaling plan\.
+<a name="aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification-description"></a>The `PredefinedScalingMetricSpecification` property type specifies a predefined metric for a target tracking policy to use with AWS Auto Scaling\.
 
 <a name="aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification-inheritance"></a> `PredefinedScalingMetricSpecification` is a property of the [AWS Auto Scaling ScalingPlan TargetTrackingConfiguration](aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.md) property type\.
 

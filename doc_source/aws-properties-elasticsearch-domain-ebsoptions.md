@@ -2,7 +2,7 @@
 
 `EBSOptions` is a property of the [AWS::Elasticsearch::Domain](aws-resource-elasticsearch-domain.md) resource that configures the Amazon Elastic Block Store \(Amazon EBS\) volumes that are attached to data nodes in the Amazon Elasticsearch Service \(Amazon ES\) domain\.
 
-## Syntax<a name="w4ab1c21c14e1132b5"></a>
+## Syntax<a name="w4ab1c21c10d120c13c15b5"></a>
 
 ### JSON<a name="aws-properties-elasticsearch-domain-ebsoptions-syntax.json"></a>
 
@@ -24,7 +24,7 @@
 [VolumeType](#cfn-elasticsearch-domain-ebsoptions-volumetype): String
 ```
 
-## Properties<a name="w4ab1c21c14e1132b7"></a>
+## Properties<a name="w4ab1c21c10d120c13c15b7"></a>
 
 `EBSEnabled`  <a name="cfn-elasticsearch-domain-ebsoptions-ebsenabled"></a>
 Specifies whether Amazon EBS volumes are attached to data nodes in the Amazon ES domain\.  

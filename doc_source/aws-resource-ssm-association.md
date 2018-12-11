@@ -2,11 +2,6 @@
 
 The `AWS::SSM::Association` resource associates an SSM document in AWS Systems Manager with EC2 instances that contain a configuration agent to process the document\.
 
-**Topics**
-+ [Syntax](#aws-resource-ssm-association-syntax)
-+ [Properties](#w4ab1c21c10e1177b9)
-+ [Example](#w4ab1c21c10e1177c11)
-
 ## Syntax<a name="aws-resource-ssm-association-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -47,7 +42,7 @@ Properties:
     - [*Targets*](aws-properties-ssm-association-targets.md)
 ```
 
-## Properties<a name="w4ab1c21c10e1177b9"></a>
+## Properties<a name="w4ab1c21c10d207c13b7"></a>
 
 `AssociationName`  <a name="cfn-ssm-association-associationname"></a>
 The name of the association\.  
@@ -76,7 +71,7 @@ The name of the SSM document\.
 `OutputLocation`  <a name="cfn-ssm-association-outputlocation"></a>
 An Amazon S3 bucket where you want to store the results of this request\.  
 *Required*: No  
-*Type*: [Systems Manager Association InstanceAssociationOutputLocation](aws-properties-ssm-association-instanceassociationoutputlocation.md)  
+*Type*: [InstanceAssociationOutputLocation](aws-properties-ssm-association-instanceassociationoutputlocation.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Parameters`  <a name="cfn-ssm-association-parameters"></a>
@@ -97,9 +92,9 @@ The targets that the SSM document sends commands to\.
 *Type*: List of [AWS Systems Manager Association Targets](aws-properties-ssm-association-targets.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Example<a name="w4ab1c21c10e1177c11"></a>
+## Example<a name="w4ab1c21c10d207c13b9"></a>
 
-### <a name="w4ab1c21c10e1177c11b3"></a>
+### <a name="w4ab1c21c10d207c13b9b3"></a>
 
 The following example associates an SSM document with a specific instance\. The ID of the instance is specified by the `myInstanceId` parameter\.
 

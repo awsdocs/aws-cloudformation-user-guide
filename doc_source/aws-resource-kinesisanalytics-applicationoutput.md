@@ -2,11 +2,6 @@
 
 The `AWS::KinesisAnalytics::ApplicationOutput` resource adds an external destination to your Amazon Kinesis Data Analytics application\. For more information, see [AddApplicationOutput](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_AddApplicationOutput.html) in the *Amazon Kinesis Data Analytics Developer Guide*\. 
 
-**Topics**
-+ [Syntax](#aws-resource-kinesisanalytics-applicationoutput-syntax)
-+ [Properties](#aws-resource-kinesisanalytics-applicationoutput-properties)
-+ [Examples](#aws-resource-kinesisanalytics-applicationoutput-examples)
-
 ## Syntax<a name="aws-resource-kinesisanalytics-applicationoutput-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -44,7 +39,7 @@ The name of the application to which you want to add the output configuration\.
 `Output`  <a name="cfn-kinesisanalytics-applicationoutput-output"></a>
 An array of objects, each describing one output configuration\.   
  *Required*: Yes  
- *Type*: [Kinesis Data Analytics ApplicationOutput Output](aws-properties-kinesisanalytics-applicationoutput-output.md)  
+ *Type*: [Output](aws-properties-kinesisanalytics-applicationoutput-output.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Examples<a name="aws-resource-kinesisanalytics-applicationoutput-examples"></a>

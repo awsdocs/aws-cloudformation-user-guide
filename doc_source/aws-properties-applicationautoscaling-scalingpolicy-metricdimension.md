@@ -1,6 +1,6 @@
 # Application Auto Scaling ScalingPolicy MetricDimension<a name="aws-properties-applicationautoscaling-scalingpolicy-metricdimension"></a>
 
-Use the `MetricDimension` property to specify the dimension of a metric for a target tracking policy in Application Auto Scaling\. The `Dimensions` subproperty of the [Application Auto Scaling ScalingPolicy CustomizedMetricSpecification](aws-properties-applicationautoscaling-scalingpolicy-customizedmetricspecification.md) property contains a list of `MetricDimension` property types\.
+Use the `MetricDimension` property to specify the dimension of a metric for a target tracking policy to use with Application Auto Scaling\. The `Dimensions` subproperty of the [Application Auto Scaling ScalingPolicy CustomizedMetricSpecification](aws-properties-applicationautoscaling-scalingpolicy-customizedmetricspecification.md) property contains a list of `MetricDimension` property types\.
 
 ## Syntax<a name="aws-properties-applicationautoscaling-scalingpolicy-metricdimension-syntax"></a>
 

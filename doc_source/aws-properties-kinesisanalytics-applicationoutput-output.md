@@ -39,25 +39,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `DestinationSchema`  <a name="cfn-kinesisanalytics-applicationoutput-output-destinationschema"></a>
 The data format when records are written to the destination\.  
  *Required*: Yes  
- *Type*: [Kinesis Data Analytics ApplicationOutput DestinationSchema](aws-properties-kinesisanalytics-applicationoutput-destinationschema.md)  
+ *Type*: [DestinationSchema](aws-properties-kinesisanalytics-applicationoutput-destinationschema.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `KinesisFirehoseOutput`  <a name="cfn-kinesisanalytics-applicationoutput-output-kinesisfirehoseoutput"></a>
 Identifies an Amazon Kinesis Data Firehose delivery stream as the destination\.  
  *Required*: Conditional\.   
- *Type*: [Kinesis Data Analytics ApplicationOutput KinesisFirehoseOutput](aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.md)  
+ *Type*: [KinesisFirehoseOutput](aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `KinesisStreamsOutput`  <a name="cfn-kinesisanalytics-applicationoutput-output-kinesisstreamsoutput"></a>
 Identifies an Amazon Kinesis stream as the destination\.   
  *Required*: Conditional\.   
- *Type*: [Kinesis Data Analytics ApplicationOutput KinesisStreamsOutput](aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput.md)  
+ *Type*: [KinesisStreamsOutput](aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `LambdaOutput`  <a name="cfn-kinesisanalytics-applicationoutput-output-lambdaoutput"></a>
 Identifies a Lambda function as the destination\.   
  *Required*: Conditional\.   
- *Type*: [Kinesis Data Analytics ApplicationOutput LambdaOutput](aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.md)  
+ *Type*: [LambdaOutput](aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Name`  <a name="cfn-kinesisanalytics-applicationoutput-output-name"></a>

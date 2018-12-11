@@ -2,12 +2,6 @@
 
 The `AWS::WAF::IPSet` resource creates an AWS WAF `IPSet` that specifies which web requests to permit or block based on the IP addresses from which the requests originate\. For more information, see [CreateIPSet](https://docs.aws.amazon.com/waf/latest/APIReference/API_CreateIPSet.html) in the *AWS WAF API Reference*\.
 
-**Topics**
-+ [Syntax](#aws-resource-waf-ipset-syntax)
-+ [Properties](#w4ab1c21c10e1216b9)
-+ [Return Values](#w4ab1c21c10e1216c11)
-+ [Examples](#w4ab1c21c10e1216c13)
-
 ## Syntax<a name="aws-resource-waf-ipset-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -34,14 +28,10 @@ Properties:
   [Name](#cfn-waf-ipset-name): String
 ```
 
-## Properties<a name="w4ab1c21c10e1216b9"></a>
+## Properties<a name="w4ab1c21c10d210c17b7"></a>
 
 `IPSetDescriptors`  <a name="cfn-waf-ipset-ipsetdescriptors"></a>
-The IP address type and IP address range \(in CIDR notation\) from which web requests originate\. If you associate the `IPSet` with a [web ACL](aws-resource-waf-webacl.md) that is associated with a Amazon CloudFront \(CloudFront\) distribution, this descriptor is the value of one of the following fields in the CloudFront access logs:    
-`c-ip`  
-If the viewer did not use an HTTP proxy or a load balancer to send the request  
-`x-forwarded-for`  
-If the viewer did use an HTTP proxy or a load balancer to send the request
+The IP address type and IP address range \(in CIDR notation\) from which web requests originate\. If you associate the `IPSet` with a [web ACL](aws-resource-waf-webacl.md) that is associated with an Amazon CloudFront \(CloudFront\) distribution and the viewer did not use an HTTP proxy or a load balancer to send the request, this descriptor is the value of the c\-ip field in the CloudFront access logs\.  
 *Required*: No  
 *Type*: List of [AWS WAF IPSet IPSetDescriptors](aws-properties-waf-ipset-ipsetdescriptors.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -52,17 +42,17 @@ A friendly name or description of the `IPSet`\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10e1216c11"></a>
+## Return Values<a name="w4ab1c21c10d210c17b9"></a>
 
-### Ref<a name="w4ab1c21c10e1216c11b2"></a>
+### Ref<a name="w4ab1c21c10d210c17b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource physical ID, such as `1234a1a-a1b1-12a1-abcd-a123b123456`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w4ab1c21c10e1216c13"></a>
+## Examples<a name="w4ab1c21c10d210c17c11"></a>
 
-### Define IP Addresses<a name="w4ab1c21c10e1216c13b2"></a>
+### Define IP Addresses<a name="w4ab1c21c10d210c17c11b2"></a>
 
 The following example defines a set of IP addresses for a web access control list \(ACL\) rule\.
 
@@ -103,7 +93,7 @@ MyIPSetBlacklist:
         Value: "192.0.7.0/24"
 ```
 
-### Associate an IPSet with a Web ACL Rule<a name="w4ab1c21c10e1216c13b4"></a>
+### Associate an IPSet with a Web ACL Rule<a name="w4ab1c21c10d210c17c11b4"></a>
 
 The following example associates the `MyIPSetBlacklist` IP Set with a web ACL rule\.
 
@@ -142,7 +132,7 @@ MyIPSetRule:
         Type: "IPMatch"
 ```
 
-### Create a Web ACL<a name="w4ab1c21c10e1216c13b6"></a>
+### Create a Web ACL<a name="w4ab1c21c10d210c17c11b6"></a>
 
 The following example associates the `MyIPSetRule` rule with a web ACL\. The web ACL allows requests that originate from all IP addresses except for addresses that are defined in the `MyIPSetRule`\.
 

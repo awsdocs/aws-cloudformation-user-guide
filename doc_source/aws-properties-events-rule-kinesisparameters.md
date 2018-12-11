@@ -2,7 +2,7 @@
 
 <a name="aws-properties-events-rule-kinesisparameters-description"></a>The `KinesisParameters` property type specifies settings that control shard assignment for a Kinesis stream target\.
 
-<a name="aws-properties-events-rule-kinesisparameters-inheritance"></a> `KinesisParameters` is a property of the [CloudWatch Events Rule Target](aws-properties-events-rule-target.md) property type\. 
+<a name="aws-properties-events-rule-kinesisparameters-inheritance"></a> `KinesisParameters` is a property of the [Target](aws-properties-events-rule-target.md) property type\. 
 
 ## Syntax<a name="aws-properties-events-rule-kinesisparameters-syntax"></a>
 

@@ -2,7 +2,7 @@
 
 `BlockDeviceMappings` is a property of the [Amazon Elastic Compute Cloud SpotFleet LaunchSpecifications](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md) property that defines the block devices that are mapped to an instance\.
 
-## Syntax<a name="w4ab1c21c14d840b5"></a>
+## Syntax<a name="w4ab1c21c10d102d118c22b5"></a>
 
 ### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-syntax.json"></a>
 
@@ -25,7 +25,7 @@
 [VirtualName](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-virtualname): String
 ```
 
-## Properties<a name="w4ab1c21c14d840b7"></a>
+## Properties<a name="w4ab1c21c10d102d118c22b7"></a>
 
 `DeviceName`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-devicename"></a>
 The name of the device within the EC2 instance, such as `/dev/dsh` or `xvdh`\.  

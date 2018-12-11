@@ -2,7 +2,7 @@
 
 <a name="aws-properties-ssm-maintenancewindowtask-notificationconfig-description"></a>The `NotificationConfig` property type specifies configurations for sending notifications for a Maintenance Window task in AWS Systems Manager\.
 
-<a name="aws-properties-ssm-maintenancewindowtask-notificationconfig-inheritance"></a> `NotificationConfig` is a property of the [Systems Manager MaintenanceWindowTask MaintenanceWindowRunCommandParameters](aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.md) property type\.
+<a name="aws-properties-ssm-maintenancewindowtask-notificationconfig-inheritance"></a> `NotificationConfig` is a property of the [MaintenanceWindowRunCommandParameters](aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.md) property type\.
 
 ## Syntax<a name="aws-properties-ssm-maintenancewindowtask-notificationconfig-syntax"></a>
 

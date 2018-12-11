@@ -41,12 +41,12 @@ An optional description for the project\.
 `PlacementTemplate`  <a name="cfn-iot1click-project-placementtemplate"></a>
 The template defining the placement to be created\. A placement template defines placement default attributes and device templates\. You cannot add or remove device templates after the project has been created\. However, you can update `callbackOverrides` for the device templates using the `UpdateProject` API\.  
  *Required*: Yes  
- *Type*: [AWS IoT 1\-Click Project PlacementTemplate](aws-properties-iot1click-project-placementtemplate.md)  
+ *Type*: [PlacementTemplate](aws-properties-iot1click-project-placementtemplate.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ProjectName`  <a name="cfn-iot1click-project-projectname"></a>
 The name of the project to create\.  
- *Required*: Yes  
+ *Required*: No  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 

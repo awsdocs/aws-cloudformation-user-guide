@@ -2,7 +2,7 @@
 
 The `RecordColumn` property type specifies the mapping of each data element in the streaming source to the corresponding column in the in\-application stream in an Amazon Kinesis Data Analytics application\.
 
- `RecordColumn` is a property of the [Kinesis Data Analytics Application InputSchema](aws-properties-kinesisanalytics-application-inputschema.md) property type\. 
+ `RecordColumn` is a property of the [InputSchema](aws-properties-kinesisanalytics-application-inputschema.md) property type\. 
 
 ## Syntax<a name="aws-properties-kinesisanalytics-application-recordcolumn-syntax"></a>
 

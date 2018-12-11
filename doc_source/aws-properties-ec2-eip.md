@@ -4,9 +4,9 @@ The AWS::EC2::EIP resource allocates an Elastic IP \(EIP\) address and can, opti
 
 **Topics**
 + [Syntax](#aws-resource-ec2-eip-syntax)
-+ [Properties](#w4ab1c21c10d403b9)
++ [Properties](#w4ab1c21c10d102c31b9)
 + [Return Values](#aws-resource-ec2-eip-ref)
-+ [Examples](#w4ab1c21c10d403c13)
++ [Examples](#w4ab1c21c10d102c31c13)
 
 ## Syntax<a name="aws-resource-ec2-eip-syntax"></a>
 
@@ -18,8 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
    "Type" : "AWS::EC2::EIP",
    "Properties" : {
+      "[Domain](#cfn-ec2-eip-domain)" : String,
       "[InstanceId](#cfn-ec2-eip-instanceid)" : String,
-      "[Domain](#cfn-ec2-eip-domain)" : String
+      "[PublicIpv4Pool](#cfn-ec2-eip-publicipv4pool)" : String
    }
 }
 ```
@@ -29,17 +30,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::EC2::EIP
 Properties:
-  [InstanceId](#cfn-ec2-eip-instanceid): String
   [Domain](#cfn-ec2-eip-domain): String
+  [InstanceId](#cfn-ec2-eip-instanceid): String
+  [PublicIpv4Pool](#cfn-ec2-eip-publicipv4pool): String
 ```
 
-## Properties<a name="w4ab1c21c10d403b9"></a>
-
-`InstanceId`  <a name="cfn-ec2-eip-instanceid"></a>
-The Instance ID of the Amazon EC2 instance that you want to associate with this Elastic IP address\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+## Properties<a name="w4ab1c21c10d102c31b9"></a>
 
 `Domain`  <a name="cfn-ec2-eip-domain"></a>
 Set to `vpc` to allocate the address to your Virtual Private Cloud \(VPC\)\. No other values are supported\.  
@@ -49,15 +45,27 @@ For more information, see [AllocateAddress](http://docs.aws.amazon.com/AWSEC2/la
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
+`InstanceId`  <a name="cfn-ec2-eip-instanceid"></a>
+The Instance ID of the Amazon EC2 instance that you want to associate with this Elastic IP address\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`PublicIpv4Pool`  <a name="cfn-ec2-eip-publicipv4pool"></a>
+Specifies the ID of an address pool that you own to let Amazon EC2 select an address from the address pool\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
 ## Return Values<a name="aws-resource-ec2-eip-ref"></a>
 
-### Ref<a name="w4ab1c21c10d403c11b2"></a>
+### Ref<a name="w4ab1c21c10d102c31c11b2"></a>
 
 When you specify the logical ID of an AWS::EC2::EIP object as an argument to the `Ref` function, AWS CloudFormation returns the value of the instance's `PublicIp`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d403c11b4"></a>
+### Fn::GetAtt<a name="w4ab1c21c10d102c31c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -66,6 +74,6 @@ The ID that AWS assigns to represent the allocation of the address for use with 
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w4ab1c21c10d403c13"></a>
+## Examples<a name="w4ab1c21c10d102c31c13"></a>
 
 To view AWS::EC2::EIP snippets, see [Assigning an Amazon EC2 Elastic IP Using AWS::EC2::EIP Snippet](quickref-ec2.md#scenario-ec2-eip)\.

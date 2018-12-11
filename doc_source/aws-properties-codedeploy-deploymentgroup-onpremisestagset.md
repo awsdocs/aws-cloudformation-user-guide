@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 A list containing other lists of on\-premises instance tag groups\. In order for an instance to be included in the deployment group, it must be identified by all the tag groups in the list\.  
 Duplicates are not allowed\.  
  *Required*: No  
- *Type*: List of [AWS CodeDeploy DeploymentGroup OnPremisesTagSetListObject](aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject.md)   
+ *Type*: List of [OnPremisesTagSetListObject](aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject.md)   
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## See Also<a name="aws-properties-codedeploy-deploymentgroup-onpremisestagset-seealso"></a>
