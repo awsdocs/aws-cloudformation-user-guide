@@ -72,7 +72,7 @@ The Amazon Resource Name \(ARN\) of the target group to which Elastic Load Balan
 
 `Type`  <a name="cfn-elasticloadbalancingv2-listener-defaultactions-type"></a>
 The type of action\.  
-*Valid values*: `forward`  
+*Valid values*: `forward`, `redirect`, `fixed-response`, `authenticate-oidc`, `authenticate-cognito`  
 *Required*: Yes  
 *Type*: String
 
