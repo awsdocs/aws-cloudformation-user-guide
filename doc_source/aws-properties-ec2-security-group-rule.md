@@ -92,12 +92,12 @@ Specifies the GroupId of the destination Amazon VPC security group\.
 
 `FromPort`  <a name="cfn-ec2-security-group-rule-fromport"></a>
 The start of port range for the TCP and UDP protocols, or an ICMP type number\. An ICMP type number of \-1 indicates a wildcard \(i\.e\., any ICMP type number\)\.  
-*Required*: Yes
+*Required*: Conditional\. Required for TCP, UDP, or ICMP
 *Type*: Integer
 
 `IpProtocol`  <a name="cfn-ec2-security-group-rule-ipprotocol"></a>
 An IP protocol name or number\. For valid values, go to the IpProtocol parameter in [AuthorizeSecurityGroupIngress](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-AuthorizeSecurityGroupIngress.html)  
-*Required*: Yes  
+*Required*: Conditional\. Required for TCP, UDP, or ICMP  
 *Type*: String
 
 `SourceSecurityGroupId` \(SecurityGroupIngress only\)  <a name="cfn-ec2-security-group-rule-sourcesecuritygroupid"></a>
