@@ -92,7 +92,7 @@ Specifies the GroupId of the destination Amazon VPC security group\.
 
 `FromPort`  <a name="cfn-ec2-security-group-rule-fromport"></a>
 The start of port range for the TCP and UDP protocols, or an ICMP type number\. An ICMP type number of \-1 indicates a wildcard \(i\.e\., any ICMP type number\)\.  
-*Required*: No  
+*Required*: No for ICMP, Yes for TCP or UDP  
 *Type*: Integer
 
 `IpProtocol`  <a name="cfn-ec2-security-group-rule-ipprotocol"></a>
@@ -117,7 +117,7 @@ Specifies the AWS Account ID of the owner of the Amazon EC2 Security Group that 
 
 `ToPort`  <a name="cfn-ec2-security-group-rule-toport"></a>
 The end of port range for the TCP and UDP protocols, or an ICMP code\. An ICMP code of \-1 indicates a wildcard \(i\.e\., any ICMP code\)\.  
-*Required*: No  
+*Required*: No for ICMP, Yes for TCP or UDP
 *Type*: Integer
 
 ## Examples<a name="w4ab1c21c10d102d104c21c11"></a>
