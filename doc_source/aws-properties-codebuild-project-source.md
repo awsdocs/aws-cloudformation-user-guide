@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-source-syntax.yaml"></a>
 
 ```
-[Auth](#cfn-codebuild-project-source-auth):[*SourceAuth*](aws-properties-codebuild-project-sourceauth.md)
+[Auth](#cfn-codebuild-project-source-auth): [*SourceAuth*](aws-properties-codebuild-project-sourceauth.md)
 [BuildSpec](#cfn-codebuild-project-source-buildspec): String
 [GitCloneDepth](#cfn-codebuild-project-source-gitclonedepth): Integer
 [InsecureSsl](#cfn-codebuild-project-source-insecuressl): Boolean
