@@ -206,7 +206,7 @@ The following example uses a packaged file in an S3 bucket to create a Lambda fu
       "S3Bucket": "lambda-functions",
       "S3Key": "amilookup.zip"
     },
-    "Runtime": "nodejs4.3",
+    "Runtime": "nodejs6.10",
     "Timeout": 25,
     "TracingConfig": {
       "Mode": "Active"
