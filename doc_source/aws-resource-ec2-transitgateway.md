@@ -115,7 +115,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
         "myTransitGateway": {
             "Type": "AWS::EC2::TransitGateway",
             "Properties": {
-                "AmazonSideAsn": 6500,
+                "AmazonSideAsn": 65000,
                 "Description": "TGW Route Integration Test",
                 "AutoAcceptSharedAttachments": "disable",
                 "DefaultRouteTableAssociation": "enable",
@@ -142,7 +142,7 @@ Resources:
   myTransitGateway:
     Type: "AWS::EC2::TransitGateway"
     Properties:
-      AmazonSideAsn: 6500
+      AmazonSideAsn: 65000
       Description: "TGW Route Integration Test"
       AutoAcceptSharedAttachments: "disable"
       DefaultRouteTableAssociation: "enable"
