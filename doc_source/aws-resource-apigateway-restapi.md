@@ -64,7 +64,7 @@ The source of the API key for metering requests according to a usage plan\. Vali
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `BinaryMediaTypes`  <a name="cfn-apigateway-restapi-binarymediatypes"></a>
-The list of binary media types that are supported by the `RestApi` resource, such as `image/png` or `application/octet-stream`\. By default, `RestApi` supports only UTF\-8\-encoded text payloads\. For more information, see [Enable Support for Binary Payloads in API Gateway](https://docs.aws.amazon.com//apigateway/latest/developerguide/api-gateway-payload-encodings.html) in the *API Gateway Developer Guide*\. Duplicates are not allowed\.  
+The list of binary media types that are supported by the `RestApi` resource, such as `image/png` or `application/octet-stream`\. By default, `RestApi` supports only UTF\-8\-encoded text payloads\. For more information, see [Enable Support for Binary Payloads in API Gateway](https://docs.aws.amazon.com//apigateway/latest/developerguide/api-gateway-payload-encodings.html) in the *API Gateway Developer Guide*\. Duplicates are not allowed\.  Slashes must be escaped with `~1`\.  For example, `image/png` would be `image~1png` in the BinaryMediaTypes list.  For more information, see [Enable Binary Support Using API Gateway REST API](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-payload-encodings-configure-with-control-service-api.html)\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -314,10 +314,12 @@ The following example creates an API Gateway `RestApi` resource with ApiKeySourc
             "Type": "String"
         },
         "binaryMediaType2": {
-            "Type": "String"
+            "Type": "String",
+            "Default": "image~1gif"
         },
         "minimumCompressionSize": {
-            "Type": "String"
+            "Type": "String",
+            "Default": "image~1png"
         }
     },
     "Resources": {
@@ -357,8 +359,10 @@ Parameters:
         Type: String
     binaryMediaType1:
         Type: String
+        Default: "image~1gif"
     binaryMediaType2:
         Type: String
+        Default: "image~1png"
     minimumCompressionSize:
         Type: String
 Resources:
