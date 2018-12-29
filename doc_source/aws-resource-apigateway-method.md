@@ -64,7 +64,7 @@ Indicates whether the method requires clients to submit a valid API key\.
 
 `AuthorizationType`  <a name="cfn-apigateway-method-authorizationtype"></a>
 The method's authorization type\. For valid values, see [Method](https://docs.aws.amazon.com/apigateway/api-reference/resource/method/) in the *API Gateway API Reference*\.  
-If you specify the `AuthorizerId` property, specify `CUSTOM` for this property\.
+If you specify the `AuthorizerId` property, specify `CUSTOM` or `COGNITO_USER_POOLS` for this property\.
 *Required*: Yes\.   
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -76,7 +76,7 @@ A list of authorization scopes configured on the method\. The scopes are used wi
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `AuthorizerId`  <a name="cfn-apigateway-method-authorizerid"></a>
-The identifier of the [authorizer](aws-resource-apigateway-authorizer.md) to use on this method\. If you specify this property, specify `CUSTOM` for the `AuthorizationType` property\.  
+The identifier of the [authorizer](aws-resource-apigateway-authorizer.md) to use on this method\. If you specify this property, specify `CUSTOM` or `COGNITO_USER_POOLS` for the `AuthorizationType` property\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
