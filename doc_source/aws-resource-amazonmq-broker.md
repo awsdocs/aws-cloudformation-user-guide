@@ -26,7 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[MaintenanceWindowStartTime](#cfn-amazonmq-broker-maintenancewindowstarttime)" : [MaintenanceWindow](aws-properties-amazonmq-broker-maintenancewindow.md),
     "[PubliclyAccessible](#cfn-amazonmq-broker-publiclyaccessible)" : Boolean,
     "[SecurityGroups](#cfn-amazonmq-broker-securitygroups)" : [ String, ... ],
-    "[SubnetIds](#cfn-amazonmq-broker-subnetids)" : [ String, ... ]
+    "[SubnetIds](#cfn-amazonmq-broker-subnetids)" : [ String, ... ],
+    "[Tags](#cfn-amazonmq-broker-tags)" : [ Resource Tag, ... ]
   }
 }
 ```
@@ -52,6 +53,8 @@ Properties:
     - String
   [SubnetIds](#cfn-amazonmq-broker-subnetids): 
     - String
+  [Tags](#cfn-amazonmq-broker-tags): 
+    - Resource Tag  
 ```
 
 ## Properties<a name="aws-resource-amazonmq-broker-properties"></a>
@@ -136,6 +139,12 @@ The list of groups \(2 maximum\) that define which subnets and IP ranges the bro
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+
+`Tags`  <a name="cfn-amazonmq-broker-tags"></a>
+An arbitrary set of tags \(key–value pairs\) for this broker\.  
+*Required*: No  
+*Type*: [Resource Tag](aws-properties-resource-tags.md)  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
 ## Return Values<a name="aws-resource-amazonmq-broker-returnvalues"></a>
 
