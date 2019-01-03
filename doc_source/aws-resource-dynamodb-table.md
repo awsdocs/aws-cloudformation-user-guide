@@ -86,7 +86,7 @@ If not specified, the default is `PROVISIONED`\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `GlobalSecondaryIndexes`  <a name="cfn-dynamodb-table-gsi"></a>
-Global secondary indexes to be created on the table\. You can create up to 5 global secondary indexes\.  
+Global secondary indexes to be created on the table\. You can create up to 20 global secondary indexes\.
 If you update a table to include a new global secondary index, AWS CloudFormation initiates the index creation and then proceeds with the stack update\. AWS CloudFormation doesn't wait for the index to complete creation because the backfilling phase can take a long time, depending on the size of the table\. You can't use the index or update the table until the index's status is `ACTIVE`\. You can track its status by using the DynamoDB [https://docs.aws.amazon.com/cli/latest/reference/dynamodb/describe-table.html](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/describe-table.html) command\.  
 If you add or delete an index during an update, we recommend that you don't update any other resources\. If your stack fails to update and is rolled back while adding a new index, you must manually delete the index\.
 *Required*: No  
