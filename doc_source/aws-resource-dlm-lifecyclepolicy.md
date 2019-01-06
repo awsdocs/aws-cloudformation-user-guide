@@ -42,7 +42,7 @@ The description of the lifecycle policy\.
 
 `ExecutionRoleArn`  <a name="cfn-dlm-lifecyclepolicy-executionrolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role used to run the operations specified by the lifecycle policy\.   
- *Required*: No  
+ *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
@@ -54,7 +54,7 @@ The configuration of the lifecycle policy\.
 
 `State`  <a name="cfn-dlm-lifecyclepolicy-state"></a>
 The activation state of the lifecycle policy\.   
- *Required*: No  
+ *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
