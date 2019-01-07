@@ -111,13 +111,13 @@ The network configuration for the service\. This parameter is required for task 
 `PlacementConstraints`  <a name="cfn-ecs-service-placementconstraints"></a>
 The placement constraints for the tasks in the service\.  
 *Required*: No  
-*Type*: [Amazon Elastic Container Service Service PlacementConstraint](aws-properties-ecs-service-placementconstraints-placementconstraint.md)  
+*Type*: List of [Amazon Elastic Container Service Service PlacementConstraint](aws-properties-ecs-service-placementconstraints-placementconstraint.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `PlacementStrategies`  <a name="cfn-ecs-service-placementstrategies"></a>
 The placement strategies that determine how tasks for the service are placed\.  
 *Required*: No  
-*Type*: [Amazon Elastic Container Service Service PlacementStrategies](aws-properties-ecs-service-placementstrategies-placementstrategy.md)  
+*Type*: List of [Amazon Elastic Container Service Service PlacementStrategies](aws-properties-ecs-service-placementstrategies-placementstrategy.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `PlatformVersion`  <a name="cfn-ecs-service-platformversion"></a>
@@ -153,7 +153,7 @@ The name of your service\. The name is limited to 255 letters \(uppercase and lo
 `ServiceRegistries`  <a name="cfn-ecs-service-serviceregistries"></a>
 Details of the service registry\.  
 *Required*: No  
-*Type*: [ServiceRegistry](aws-properties-ecs-service-serviceregistry.md)  
+*Type*: List of [ServiceRegistry](aws-properties-ecs-service-serviceregistry.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `TaskDefinition`  <a name="cfn-ecs-service-taskdefinition"></a>
