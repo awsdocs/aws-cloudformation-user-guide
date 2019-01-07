@@ -21,8 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[TargetCapacitySpecification](#cfn-ec2-ec2fleet-targetcapacityspecification)" : [*TargetCapacitySpecificationRequest*](aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.md),
     "[TerminateInstancesWithExpiration](#cfn-ec2-ec2fleet-terminateinstanceswithexpiration)" : Boolean,
     "[Type](#cfn-ec2-ec2fleet-type)" : String,
-    "[ValidFrom](#cfn-ec2-ec2fleet-validfrom)" : Integer,
-    "[ValidUntil](#cfn-ec2-ec2fleet-validuntil)" : Integer
+    "[ValidFrom](#cfn-ec2-ec2fleet-validfrom)" : String,
+    "[ValidUntil](#cfn-ec2-ec2fleet-validuntil)" : String
   }
 }
 ```
@@ -43,8 +43,8 @@ Properties:
   [TargetCapacitySpecification](#cfn-ec2-ec2fleet-targetcapacityspecification): [*TargetCapacitySpecificationRequest*](aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.md)
   [TerminateInstancesWithExpiration](#cfn-ec2-ec2fleet-terminateinstanceswithexpiration): Boolean
   [Type](#cfn-ec2-ec2fleet-type): String
-  [ValidFrom](#cfn-ec2-ec2fleet-validfrom): Integer
-  [ValidUntil](#cfn-ec2-ec2fleet-validuntil): Integer
+  [ValidFrom](#cfn-ec2-ec2fleet-validfrom): String
+  [ValidUntil](#cfn-ec2-ec2fleet-validuntil): String
 ```
 
 ## Properties<a name="aws-resource-ec2-ec2fleet-properties"></a>
@@ -106,13 +106,13 @@ request *Required*: No
 `ValidFrom`  <a name="cfn-ec2-ec2fleet-validfrom"></a>
 The start date and time of the request, in UTC format \(for example, *YYYY\-MM\-DD*T*HH:MM:SSZ*\)\. The default is to start fulfilling the request immediately\.  
  *Required*: No  
- *Type*: Integer  
+ *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `ValidUntil`  <a name="cfn-ec2-ec2fleet-validuntil"></a>
 The end date and time of the request, in UTC format \(for example, *YYYY\-MM\-DD*T*HH:MM:SSZ*\)\. At this point, no new EC2 Fleet requests are placed or able to fulfill the request\. The default end date is 7 days from the current date\.  
  *Required*: No  
- *Type*: Integer  
+ *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 ## Return Values<a name="aws-resource-ec2-ec2fleet-returnvalues"></a>
