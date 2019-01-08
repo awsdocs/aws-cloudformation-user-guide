@@ -37,7 +37,7 @@ The calls that AWS CloudFormation makes are all declared by your template\. For 
          InstanceType: t1.micro
    ```
 
-1. Save the template locally or in an S3 bucket\. If you created a template, save it with any file extension like `.json`, `.yaml`, or `.txt`\.
+1. Save the template locally or in an S3 bucket\. If you created a template, save it with any file extension like `.json`, `.yaml`, `.template`, or `.txt`\.
 
 1. Create an AWS CloudFormation stack by specifying the location of your template file , such as a path on your local computer or an Amazon S3 URL\. If the template contains parameters, you can specify input values when you create the stack\. Parameters enable you to pass in values to your template so that you can customize your resources each time you create a stack\.
 
