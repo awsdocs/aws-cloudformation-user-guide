@@ -88,7 +88,7 @@ To create the Lambda function, you declare the `AWS::Lambda::Function` resource,
       "S3Key": { "Ref": "S3Key" }
     },
     "Handler": { "Fn::Join" : [ "", [{ "Ref": "ModuleName" },".handler"] ] },
-    "Runtime": "nodejs4.3",
+    "Runtime": "nodejs6.10",
     "Timeout": "30",
     "Role": { "Fn::GetAtt" : ["LambdaExecutionRole", "Arn"] }
   }
