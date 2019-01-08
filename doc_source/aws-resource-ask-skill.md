@@ -103,19 +103,19 @@ The following example retrieves the skill package from an S3 bucket and provides
 MySkill:
   Type: "Alexa::ASK::Skill"   
   Properties:
-   SkillPackage:
-    S3Bucket: "my-skill-packages"
-    S3Key: "skillpackage.zip"
-    S3BucketRole: !GetAtt S3BucketReadRole.Arn
-    Overrides:
-      Manifest:
-        apis:
-          custom:
-            endpoint:
-              uri: !GetAtt SkillFunction.Arn
-  AuthenticationConfiguration:
-    ClientId: "amzn1.application-oa2-client.1234"
-    ClientSecret: "1234"
-    RefreshToken: "Atzr|1234"
-  VendorId: "1234"
+    SkillPackage:
+      S3Bucket: "my-skill-packages"
+      S3Key: "skillpackage.zip"
+      S3BucketRole: !GetAtt S3BucketReadRole.Arn
+      Overrides:
+        Manifest:
+          apis:
+            custom:
+              endpoint:
+                uri: !GetAtt SkillFunction.Arn
+    AuthenticationConfiguration:
+      ClientId: "amzn1.application-oa2-client.1234"
+      ClientSecret: "1234"
+      RefreshToken: "Atzr|1234"
+    VendorId: "1234"
 ```
