@@ -182,7 +182,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
 
 ## Examples<a name="cfn-dynamodb-table-examples"></a>
 
-### DynamoDB Table with Local and Secondary Indexes<a name="cfn-dynamodb-table-example1"></a>
+### DynamoDB Table with Local and Global Secondary Indexes<a name="cfn-dynamodb-table-example1"></a>
 
 The following sample creates an DynamoDB table with `Album`, `Artist`, `Sales`, `NumberOfSongs` as attributes\. The primary key includes the `Album` attribute as the hash key and `Artist` attribute as the range key\. The table also includes two global and one secondary index\. For querying the number of sales for a given artist, the global secondary index uses the `Sales` attribute as the hash key and the `Artist` attribute as the range key\.
 
