@@ -343,7 +343,7 @@ If you've specified `oracle-se` or `oracle-se1` as the database engine, you can 
 
 `EngineVersion`  <a name="cfn-rds-dbinstance-engineversion"></a>
 The version number of the database engine that the DB instance uses\.  
-To prevent automatic upgrades, be sure to specify the full version number \(for example, 5\.6\.13\)\. If the default version for the database engine changes and you specify only the major version \(for example, 5\.6\), your DB instance will be upgraded to use the latest default version\.
+To prevent automatic upgrades, be sure to specify the full version number \(for example, 5\.6\.13\)\. If the default version for the database engine changes and you specify only the major version \(for example, 5\.6\), your DB instance will be upgraded to use the new default version\. Please note that the default version is not always the latest version available and may be a few minor versions behind\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
