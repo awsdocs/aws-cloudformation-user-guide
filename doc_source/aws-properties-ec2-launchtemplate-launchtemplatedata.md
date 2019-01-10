@@ -170,6 +170,7 @@ We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more i
 
 `SecurityGroups`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-securitygroups"></a>
 \[EC2\-Classic, default VPC\] One or more security group names\. For a nondefault VPC, you must use SecurityGroupIds instead\. You cannot specify both a security group ID and security name in the same request\. 
+
 If you specify a network interface, you must configure the security group as part of the network interface, and not in the Security Groups section of the template.
  *Required*: No  
  *Type*: List of String values  
@@ -177,6 +178,7 @@ If you specify a network interface, you must configure the security group as par
 
 `SecurityGroupIds`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-securitygroupids"></a>
 One or more security group IDs\. You cannot specify both a security group ID and security name in the same request\. For information on creating a security group, see [CreateSecurityGroup]
+
 If you specify a network interface, you must configure the security group as part of the network interface, and not in the Security Groups section of the template.
 (https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSecurityGroup.html) in the *Amazon EC2 API Reference*\.   
  *Required*: No  
