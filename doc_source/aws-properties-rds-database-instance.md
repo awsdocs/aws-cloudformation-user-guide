@@ -314,12 +314,17 @@ The list of log types that need to be enabled for exporting to CloudWatch Logs\.
 
 `EnableIAMDatabaseAuthentication`  <a name="cfn-rds-dbinstance-enableiamdatabaseauthentication"></a>
 If set to `true`, enables mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts\.  
-You can enable IAM database authentication for the following database engines:  
+You can enable IAM database authentication for the following database engines:   For more information, see [IAM Database Authentication for MySQL and PostgreSQL](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html) in the *Amazon Relational Database Service UserGuide*\.
 **Amazon Aurora**  
 Not applicable\. Mapping IAM accounts to database accounts is managed by the DB cluster\. For more information, see [CreateDBCluster](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCluster.html)\.  
+**PostgreSQL**
++ For PostgreSQL 9\.5\.14 or higher
++ For PostgreSQL 9\.6\.9 or higher
++ For PostgreSQL 10\.4 or higher\
 **MySQL**  
 + For MySQL 5\.6, minor version 5\.6\.34 or higher
 + For MySQL 5\.7, minor version 5\.7\.16 or higher
+  **Note**: IAM database authentication is not supported for MySQL 5.5 or MySQL 8.0.
 *Default*: `false`  
 *Required*: No  
 *Type*: Boolean  
