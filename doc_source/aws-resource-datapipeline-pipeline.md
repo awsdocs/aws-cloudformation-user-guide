@@ -264,7 +264,7 @@ The following data pipeline backs up data from an Amazon DynamoDB \(DynamoDB\) t
           },
           {
             "Key": "type",
-            "StringValue": "Default"
+            "StringValue": "Schedule"
           },
           {
             "Key": "period",
@@ -459,7 +459,7 @@ DynamoDBInputS3OutputHive:
             StringValue: "FIRST_ACTIVATION_DATE_TIME"
           - 
             Key: "type"
-            StringValue: "Default"
+            StringValue: "Schedule"
           - 
             Key: "period"
             StringValue: "1 Day"
