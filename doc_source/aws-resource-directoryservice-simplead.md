@@ -68,6 +68,7 @@ The fully qualified name for the directory, such as `corp.example.com`\.
 
 `Password`  <a name="cfn-directoryservice-simplead-password"></a>
 The password for the directory administrator\. AWS Directory Service creates a directory administrator account with the user name `Administrator` and this password\.  
+If you need to change the password for the administrative user without replacing the directory you can use the [ResetUserPassword](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_ResetUserPassword.html) API call to change it\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

@@ -66,6 +66,7 @@ The fully qualified name for the Microsoft Active Directory in AWS, such as `cor
 
 `Password`  <a name="cfn-directoryservice-microsoftad-password"></a>
 The password for the default administrative user, `Admin`\.  
+If you need to change the password for the administrative user without replacing the directory you can use the [ResetUserPassword](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_ResetUserPassword.html) API call to change it\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
