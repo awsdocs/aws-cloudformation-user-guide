@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[Handler](#cfn-lambda-function-handler)" : String,
     "[KmsKeyArn](#cfn-lambda-function-kmskeyarn)" : String,
     "[Layers](#cfn-lambda-function-layers)" : [ String, ... ],
-    "[MemorySize](#cfn-lambda-function-memorysize)" : Integer,
+    "[MemorySize](#cfn-lambda-function-memorysize)" : String,
     "[ReservedConcurrentExecutions](#cfn-lambda-function-reservedconcurrentexecutions)" : Integer,
     "[Role](#cfn-lambda-function-role)" : String,
     "[Runtime](#cfn-lambda-function-runtime)" : String,
@@ -49,7 +49,7 @@ Properties:
   [KmsKeyArn](#cfn-lambda-function-kmskeyarn): String
   [Layers](#cfn-lambda-function-layers): 
     - String
-  [MemorySize](#cfn-lambda-function-memorysize): Integer
+  [MemorySize](#cfn-lambda-function-memorysize): String
   [ReservedConcurrentExecutions](#cfn-lambda-function-reservedconcurrentexecutions): Integer
   [Role](#cfn-lambda-function-role): String
   [Runtime](#cfn-lambda-function-runtime): String
