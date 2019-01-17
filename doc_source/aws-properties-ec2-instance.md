@@ -362,10 +362,10 @@ The private DNS name of the specified instance\. For example: `ip-10-24-34-0.ec2
 The public DNS name of the specified instance\. For example: `ec2-107-20-50-45.compute-1.amazonaws.com`\.
 
 `PrivateIp`  
-The private IP address of the specified instance\. For example: `10.24.34.0`\.
+The private IP address of the specified instance\. For example: `192.0.2.0`\.
 
 `PublicIp`  
-The public IP address of the specified instance\. For example: `192.0.2.0`\.
+The public IP address of the specified instance\. For example: `10.24.34.0`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
