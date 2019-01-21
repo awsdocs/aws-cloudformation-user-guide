@@ -137,7 +137,7 @@ The Amazon EC2 placement group to associate with your compute resources\. If you
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `Tags`  <a name="cfn-batch-computeenvironment-computeresources-tags"></a>
-Key\-value pair tags to be applied to instances that are launched in the compute environment\. For AWS Batch, these take the form of `"String1": "String2"`, where `String1` is the tag key and `String2` is the tag value—for example, `{ "Name": "AWS Batch Instance - C4OnDemand" }`\.  
+Key\-value pair tags to be applied to instances that are launched in the compute environment\. For AWS Batch, these take the form of `"String1": "String2"`, where `String1` is the tag key and `String2` is the tag value—for example, `{ "Name": "AWS Batch Instance - C4OnDemand" }`\. Note: these tags are not propagated from the enclosing stack, thus they need to be specified here explicitly.   
  *Required*: No  
 *Type*: JSON object  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
