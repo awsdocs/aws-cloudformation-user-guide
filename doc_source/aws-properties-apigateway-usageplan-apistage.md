@@ -10,7 +10,7 @@
 {
   "[ApiId](#cfn-apigateway-usageplan-apistage-apiid)" : String,
   "[Stage](#cfn-apigateway-usageplan-apistage-stage)" : String,
-  "[Throttle](#cfn-apigateway-usageplan-apistage-throttle)" : { String: [ [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md), ...  ] }
+  "[Throttle](#cfn-apigateway-usageplan-apistage-throttle)" : { String: [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md), ... }
 }
 ```
 
@@ -19,9 +19,7 @@
 ```
 [ApiId](#cfn-apigateway-usageplan-apistage-apiid): String
 [Stage](#cfn-apigateway-usageplan-apistage-stage): String
-[Throttle](#cfn-apigateway-usageplan-apistage-throttle): 
-  String:
-    - [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)
+[Throttle](#cfn-apigateway-usageplan-apistage-throttle): { String: [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md), ... }
 ```
 
 ## Properties<a name="aws-properties-apigateway-usageplan-apistage-properties"></a>
