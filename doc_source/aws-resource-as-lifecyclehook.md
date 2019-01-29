@@ -57,7 +57,7 @@ The name of the Auto Scaling group for the lifecycle hook\.
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `DefaultResult`  <a name="cfn-as-lifecyclehook-defaultresult"></a>
-The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs\. Valid values are `CONTINUE` \(default\) and `ABANDON`\.  
+The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs\. Valid values are `CONTINUE` and `ABANDON` \(default\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
