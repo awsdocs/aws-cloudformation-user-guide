@@ -44,7 +44,7 @@ Duplicate values are not allowed\.
 
 `Size`  <a name="cfn-ecs-taskdefinition-tmpfs-size"></a>
 The size \(in MiB\) of the tmpfs volume\.  
- *Required*: No  
+ *Required*: Yes  
  *Type*: Integer  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
