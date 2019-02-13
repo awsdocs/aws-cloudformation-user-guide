@@ -28,7 +28,7 @@ Properties:
   [AuthenticationType](#cfn-appstream-stackuserassociation-authenticationtype): String
   [SendEmailNotification](#cfn-appstream-stackuserassociation-sendemailnotification): Boolean
   [StackName](#cfn-appstream-stackuserassociation-stackname): String
-  [Username](#cfn-appstream-stackuserassociation-username): String
+  [UserName](#cfn-appstream-stackuserassociation-username): String
 ```
 
 ## Properties<a name="aws-resource-appstream-stackuserassociation-properties"></a>
@@ -51,7 +51,7 @@ The name of the stack\.
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`Username`  <a name="cfn-appstream-stackuserassociation-username"></a>
+`UserName`  <a name="cfn-appstream-stackuserassociation-username"></a>
 The email address of the user\.  
  *Required*: Yes  
  *Type*: String  
