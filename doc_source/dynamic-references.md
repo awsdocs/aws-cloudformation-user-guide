@@ -69,7 +69,7 @@ The following example uses an `ssm` dynamic reference to set the access control 
   "MyS3Bucket": {
     "Type": "AWS::S3::Bucket",
     "Properties": {
-      "AccessControl": "{{resolve:ssm:S3AccessControl:2}}""
+      "AccessControl": "{{resolve:ssm:S3AccessControl:2}}"
     }
   }
 ```
