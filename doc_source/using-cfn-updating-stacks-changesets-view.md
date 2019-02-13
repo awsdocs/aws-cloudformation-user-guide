@@ -9,7 +9,7 @@ After you create a change set, you can view the proposed changes before executin
 1. In the stack detail pane, choose **Change Sets** to view a list of the stack's change sets\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-changeset-tab.png)
 
-1. Choose the change set that you want view\.
+1. Choose the change set that you want to view\.
 
    The AWS CloudFormation console directs you to the change set's detail page, where you can see the time the change set was created, its status, the input used to generate the change set, and a summary of changes\.
 
