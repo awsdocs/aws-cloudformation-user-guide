@@ -175,7 +175,6 @@ The version number of the database engine that you want to use\.
 
 `KmsKeyId`  <a name="cfn-rds-dbcluster-kmskeyid"></a>
 The Amazon Resource Name \(ARN\) of the AWS Key Management Service master key that is used to encrypt the database instances in the DB cluster, such as `arn:aws:kms:us-east-1:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef`\. If you enable the `StorageEncrypted` property but don't specify this property, the default master key is used\. If you specify this property, you must set the `StorageEncrypted` property to `true`\.  
-If you specify the `SnapshotIdentifier`, do not specify this property\. The value is inherited from the snapshot DB cluster\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)\.
@@ -232,7 +231,6 @@ The identifier for the DB cluster snapshot from which you want to restore\.
 
 `StorageEncrypted`  <a name="cfn-rds-dbcluster-storageencrypted"></a>
 Indicates whether the DB instances in the cluster are encrypted\.  
-If you specify the `SnapshotIdentifier` property, do not specify this property\. The value is inherited from the snapshot DB cluster\.  
 *Required*: Conditional\. If you specify the `KmsKeyId` property, you must enable encryption\.  
 *Type*: Boolean  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)\.
