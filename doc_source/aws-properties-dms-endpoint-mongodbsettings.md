@@ -10,6 +10,7 @@ Use the `MongoDbSettings` property to specify settings for a MongoDB endpoint fo
 {
   "[AuthMechanism](#cfn-dms-endpoint-mongodbsettings-authmechanism)" : String,
   "[AuthSource](#cfn-dms-endpoint-mongodbsettings-authsource)" : String,
+  "[AuthType](#cfn-dms-endpoint-mongodbsettings-authtype)" : String,
   "[DatabaseName](#cfn-dms-endpoint-mongodbsettings-databasename)" : String,
   "[DocsToInvestigate](#cfn-dms-endpoint-mongodbsettings-docstoinvestigate)" : String,
   "[ExtractDocId](#cfn-dms-endpoint-mongodbsettings-extractdocid)" : String,
@@ -27,6 +28,7 @@ Use the `MongoDbSettings` property to specify settings for a MongoDB endpoint fo
 ```
 [AuthMechanism](#cfn-dms-endpoint-mongodbsettings-authmechanism): String
 [AuthSource](#cfn-dms-endpoint-mongodbsettings-authsource): String
+[AuthType](#cfn-dms-endpoint-mongodbsettings-authtype): String
 [DatabaseName](#cfn-dms-endpoint-mongodbsettings-databasename): String
 [DocsToInvestigate](#cfn-dms-endpoint-mongodbsettings-docstoinvestigate): String
 [ExtractDocId](#cfn-dms-endpoint-mongodbsettings-extractdocid): String
@@ -50,6 +52,12 @@ For MongoDB version 2\.x, use MONGODB\_CR\. For MongoDB version 3\.x, use SCRAM\
 *Type*: String
 
 `AuthSource`  <a name="cfn-dms-endpoint-mongodbsettings-authsource"></a>
+ The MongoDB database name\. This attribute is not used when `authType=No`\.   
+The default is admin\.   
+*Required*: No  
+*Type*: String
+
+`AuthType`  <a name="cfn-dms-endpoint-mongodbsettings-authtype"></a>
  The authentication type you use to access the MongoDB source endpoint\.   
 Valid values: NO, PASSWORD   
 When NO is selected, user name and password parameters are not used and can be empty\.   
