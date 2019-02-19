@@ -80,7 +80,7 @@ For non\-primitive types, valid values for the property\. The valid types are a 
 A list is a comma\-separated list of values\. A map is a set of key\-value pairs, where the keys are always strings\. The value type for lists and maps are indicated by the `ItemType` or `PrimitiveItemType` field\.
 
 `UpdateType`  
-During a stack update, the update behavior when you add, remove, or modify the property\. AWS CloudFormation replaces the resource when you change `Immutable` properties\. AWS CloudFormation doesn't replace the resource when you change `mutable` properties\. Conditional updates can be mutable or immutable, depending on, for example, which other properties you updated\. For more information, see the relevant [resource type](aws-template-resource-type-ref.md) documentation\.
+During a stack update, the update behavior when you add, remove, or modify the property\. AWS CloudFormation replaces the resource when you change `Immutable` properties\. AWS CloudFormation doesn't replace the resource when you change `Mutable` properties\. `Conditional` updates can be mutable or immutable, depending on, for example, which other properties you updated\. For more information, see the relevant [resource type](aws-template-resource-type-ref.md) documentation\.
 
 ## Resource Specification<a name="cfn-resource-specification-format-resourcetype"></a>
 
