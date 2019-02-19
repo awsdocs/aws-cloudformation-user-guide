@@ -71,7 +71,7 @@ The ID of an egress\-only internet gateway that is attached to your VPC \(over I
 `GatewayId`  <a name="cfn-ec2-route-gatewayid"></a>
 The ID of an internet gateway or virtual private gateway that is attached to your VPC\. For example: `igw-eaad4883`\.  
 For route entries that specify a gateway, you must specify a dependency on the gateway attachment resource\. For more information, see [DependsOn Attribute](aws-attribute-dependson.md)\.  
-*Required*: Conditional\. You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\.  
+*Required*: Conditional\. You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, `VpcPeeringConnectionId` or the ID of the Transit Gateway\.  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
