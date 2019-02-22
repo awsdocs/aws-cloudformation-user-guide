@@ -189,7 +189,7 @@ The master user name for the DB instance\.
 The password for the master database user\.  
 *Required*: Conditional\. You must specify this property unless you specify the `SnapshotIdentifier` property\. In that case, do not specify this property\.  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt). The password is updated in the upcoming maintenance window.
 
 `Port`  <a name="cfn-rds-dbcluster-port"></a>
 The port number on which the DB instances in the cluster can accept connections\. If this argument is omitted, `3306` is used\.  
