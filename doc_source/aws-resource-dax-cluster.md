@@ -32,7 +32,7 @@ For information about creating a DAX cluster, see [Creating a DAX Cluster](https
 ### YAML<a name="aws-resource-dax-cluster-syntax.yaml"></a>
 
 ```
-Type: AWS::DAX::Cluster
+Type: "AWS::DAX::Cluster"
 Properties:
   [AvailabilityZones](#cfn-dax-cluster-availability-zones): [ String, ... ]
   [ClusterName](#cfn-dax-cluster-cluster-name): String
@@ -44,7 +44,7 @@ Properties:
   [PreferredMaintenanceWindow](#cfn-dax-cluster-preferred-maintenance-window): String
   [ReplicationFactor](#cfn-dax-cluster-replication-factor): Integer
   [SecurityGroupIds](#cfn-dax-cluster-security-group-ids): [ String, ... ]
-  [SSESpecification](#cfn-dax-cluster-ssespecification): 
+  [SSESpecification](#cfn-dax-cluster-ssespecification):
     [*SSESpecification*](aws-properties-daxservice-cluster-ssespecification.md)
   [SubnetGroupName](#cfn-dax-cluster-subnet-group-name): String
   [Tags](#cfn-dax-cluster-tags): { String:String, ... }
@@ -98,13 +98,13 @@ The parameter group to be associated with the DAX cluster\.
 
 `PreferredMaintenanceWindow`  <a name="cfn-dax-cluster-preferred-maintenance-window"></a>
 Specifies the weekly time range during which maintenance on the DAX cluster is performed\. It is specified as a range in the format `ddd:hh24:mi-ddd:hh24:mi` \(24H Clock UTC\)\. The minimum maintenance window is a 60 minute period\. Valid values for `ddd` are:  
-+  `sun` 
-+  `mon` 
-+  `tue` 
-+  `wed` 
-+  `thu` 
-+  `fri` 
-+  `sat` 
++  `sun`
++  `mon`
++  `tue`
++  `wed`
++  `thu`
++  `fri`
++  `sat`
 Example: `sun:05:00-sun:09:00`  
 If you don't specify a preferred maintenance window when you create or modify a cache cluster, DAX assigns a 60\-minute maintenance window on a randomly selected day of the week\.
 *Required*: No  
