@@ -8,14 +8,14 @@
 
 ```
 {
-  "[AwsvpcConfiguration](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration)" : [*AwsVpcConfiguration*](aws-properties-ecs-service-awsvpcconfiguration.md)
+  "[AwsvpcConfiguration](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration)" : [*AwsvpcConfiguration*](aws-properties-ecs-service-awsvpcconfiguration.md)
 }
 ```
 
 ### YAML<a name="aws-properties-ecs-service-networkconfiguration-syntax.yaml"></a>
 
 ```
-[AwsvpcConfiguration](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration): [*AwsVpcConfiguration*](aws-properties-ecs-service-awsvpcconfiguration.md)
+[AwsvpcConfiguration](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration): [*AwsvpcConfiguration*](aws-properties-ecs-service-awsvpcconfiguration.md)
 ```
 
 ## Properties<a name="w4ab1c21c10d108c17c29b7"></a>
@@ -23,5 +23,5 @@
 `AwsvpcConfiguration`  <a name="cfn-ecs-service-networkconfiguration-awsvpcconfiguration"></a>
  The VPC subnets and security groups associated with a task\.  
 *Required*: No  
-*Type*: [Amazon Elastic Container Service Service AwsVpcConfiguration](aws-properties-ecs-service-awsvpcconfiguration.md)  
+*Type*: [Amazon Elastic Container Service Service AwsvpcConfiguration](aws-properties-ecs-service-awsvpcconfiguration.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
