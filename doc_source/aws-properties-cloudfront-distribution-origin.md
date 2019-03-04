@@ -13,7 +13,7 @@
   "[Id](#cfn-cloudfront-distribution-origin-id)" : String,
   "[OriginCustomHeaders](#cfn-cloudfront-distribution-origin-origincustomheaders)" : [ OriginCustomHeader, ... ]
   "[OriginPath](#cfn-cloudfront-distribution-origin-originpath)" : String,
-  "[S3OriginConfig](#cfn-cloudfront-distribution-origin-s3origin)" : S3 Origin
+  "[S3OriginConfig](#cfn-cloudfront-distribution-origin-s3originconfig)" : S3 Origin
 }
 ```
 
@@ -27,7 +27,7 @@
 [OriginCustomHeaders](#cfn-cloudfront-distribution-origin-origincustomheaders):
   - OriginCustomHeader
 [OriginPath](#cfn-cloudfront-distribution-origin-originpath): String
-[S3OriginConfig](#cfn-cloudfront-distribution-origin-s3origin):
+[S3OriginConfig](#cfn-cloudfront-distribution-origin-s3originconfig):
   S3 Origin
 ```
 
@@ -61,7 +61,7 @@ The path that CloudFront uses to request content from an S3 bucket or custom ori
 *Required*: No  
 *Type*: String
 
-`S3OriginConfig`  <a name="cfn-cloudfront-distribution-origin-s3origin"></a>
+`S3OriginConfig`  <a name="cfn-cloudfront-distribution-origin-s3originconfig"></a>
 Origin information to specify an S3 origin\.  
 *Required*: Conditional\. You cannot use `S3OriginConfig` and `CustomOriginConfig` in the same `Origin`, but you *must* specify one or the other\.  
-*Type*: [S3Origin](aws-properties-cloudfront-distribution-s3originconfig.md) type
+*Type*: [S3OriginConfig](aws-properties-cloudfront-distribution-s3originconfig.md) type
