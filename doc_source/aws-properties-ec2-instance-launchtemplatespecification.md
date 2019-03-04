@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-instance-launchtemplatespecification-properties"></a>
 
 `LaunchTemplateId`  <a name="cfn-ec2-instance-launchtemplatespecification-launchtemplateid"></a>
-The ID of the launch template\. You must specify either a template ID or a template name\.   
+The ID of the launch template\. You must specify a template ID\.   
 Minimum length of 1\. Maximum length of 255\. IDs must fit the following pattern:   
 `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
  *Required*: No  
@@ -37,7 +37,7 @@ Minimum length of 1\. Maximum length of 255\. IDs must fit the following pattern
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `LaunchTemplateName`  <a name="cfn-ec2-instance-launchtemplatespecification-launchtemplatename"></a>
-The name of the launch template\. You must specify either a template name or a template ID\.  
+The name of the launch template\. You must specify a template name\.  
 Minimum length of 3\. Maximum length of 128\. Names must fit the following pattern:   
 `[a-zA-Z0-9\(\)\.-/_]+ `  
  *Required*: No  
