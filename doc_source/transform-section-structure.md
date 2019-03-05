@@ -15,7 +15,7 @@ For example, in the template sample below, AWS CloudFormation evaluates `MyMacro
 ```
 // Start of processable content for MyMacro and AWS::Serverless
 AWSTemplateFormatVersion: 2010-09-09 
- Transform: [MyMacro, AWS::Serverless]
+ Transform: [MyMacro, 'AWS::Serverless']
  Resources:
     WaitCondition:
       Type: AWS::CloudFormation::WaitCondition
