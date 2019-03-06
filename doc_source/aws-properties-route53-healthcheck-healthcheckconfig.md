@@ -32,7 +32,7 @@ The `HealthCheckConfig` property is part of the [AWS::Route53::HealthCheck](aws-
 ```
 [AlarmIdentifier](#cfn-route53-healthcheck-healthcheckconfig-alarmidentifier):  AlarmIdentifier
 [ChildHealthChecks](#cfn-route53-healthcheck-healthcheckconfig-childhealthchecks): 
-   - String
+  - String
 [EnableSNI](#cfn-route53-healthcheck-healthcheckconfig-enablesni): Boolean
 [FailureThreshold](#cfn-route53-healthcheck-healthcheckconfig-failurethreshold): Integer
 [FullyQualifiedDomainName](#cfn-route53-healthcheck-healthcheckconfig-fullyqualifieddomainname): String
@@ -43,7 +43,7 @@ The `HealthCheckConfig` property is part of the [AWS::Route53::HealthCheck](aws-
 [MeasureLatency](#cfn-route53-healthcheck-healthcheckconfig-measurelatency): Boolean
 [Port](#cfn-route53-healthcheck-healthcheckconfig-port): Integer
 [Regions](#cfn-route53-healthcheck-healthcheckconfig-regions): 
-   - String
+  - String
 [RequestInterval](#cfn-route53-healthcheck-healthcheckconfig-requestinterval): Integer
 [ResourcePath](#cfn-route53-healthcheck-healthcheckconfig-resourcepath): String
 [SearchString](#cfn-route53-healthcheck-healthcheckconfig-searchstring): String

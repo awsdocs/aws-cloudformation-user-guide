@@ -19,9 +19,9 @@
 ```
 [AssignPublicIp](#cfn-ecs-service-awsvpcconfiguration-assignpublicip): String
 [SecurityGroups](#cfn-ecs-service-awsvpcconfiguration-securitygroups): 
-   - String
+  - String
 [Subnets](#cfn-ecs-service-awsvpcconfiguration-subnets): 
-   - String
+  - String
 ```
 
 ## Properties<a name="w13ab1c21c10d117c17c17b7"></a>

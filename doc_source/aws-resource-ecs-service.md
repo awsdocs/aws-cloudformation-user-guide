@@ -47,15 +47,15 @@ Properties:
   [NetworkConfiguration](#cfn-ecs-service-networkconfiguration): 
     [*NetworkConfiguration*](aws-properties-ecs-service-networkconfiguration.md)
   [PlacementConstraints](#cfn-ecs-service-placementconstraints): 
-   - PlacementConstraints, ...
+    - PlacementConstraints, ...
   [PlacementStrategies](#cfn-ecs-service-placementstrategies): 
-   - PlacementStrategies, ...
+    - PlacementStrategies, ...
   [PlatformVersion](#cfn-ecs-service-platformversion): String
   [Role](#cfn-ecs-service-role): String 
   [SchedulingStrategy](#cfn-ecs-service-schedulingstrategy): String
   [ServiceName](#cfn-ecs-service-servicename): String
   [ServiceRegistries](#cfn-ecs-service-serviceregistries): 
-   - [*ServiceRegistry*](aws-properties-ecs-service-serviceregistry.md)
+    - [*ServiceRegistry*](aws-properties-ecs-service-serviceregistry.md)
   [TaskDefinition](#cfn-ecs-service-taskdefinition): String
 ```
 

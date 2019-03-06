@@ -39,14 +39,14 @@ Properties:
   [BidPrice](#cfn-emr-instancegroupconfig-bidprice): String
   [Configurations](#cfn-emr-instancegroupconfig-configurations):
     - Configuration
-  [EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration)" :
+  [EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration) :
     EBSConfiguration
-  [InstanceCount](#cfn-emr-instancegroupconfig-instancecount)" : Integer
-  [InstanceRole](#cfn-emr-instancegroupconfig-instancerole)" : String
-  [InstanceType](#cfn-emr-instancegroupconfig-instancetype)" : String
-  [JobFlowId](#cfn-emr-instancegroupconfig-jobflowid)": String
-  [Market](#cfn-emr-instancegroupconfig-market)" : String
-  [Name](#cfn-emr-instancegroupconfig-name)" : String
+  [InstanceCount](#cfn-emr-instancegroupconfig-instancecount) : Integer
+  [InstanceRole](#cfn-emr-instancegroupconfig-instancerole) : String
+  [InstanceType](#cfn-emr-instancegroupconfig-instancetype) : String
+  [JobFlowId](#cfn-emr-instancegroupconfig-jobflowid): String
+  [Market](#cfn-emr-instancegroupconfig-market) : String
+  [Name](#cfn-emr-instancegroupconfig-name) : String
 ```
 
 ## Properties<a name="w13ab1c21c10d141c22b9"></a>
