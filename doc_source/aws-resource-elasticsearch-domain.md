@@ -43,7 +43,7 @@ Properties:
   [ElasticsearchVersion](#cfn-elasticsearch-domain-elasticsearchversion): String
   [EncryptionAtRestOptions](#cfn-elasticsearch-domain-encryptionatrestoptions): 
     [*EncryptionAtRestOptions*](aws-properties-elasticsearch-domain-encryptionatrestoptions.md)
- [NodeToNodeEncryptionOptions](#cfn-elasticsearch-domain-nodetonodeencryptionoptions):
+  [NodeToNodeEncryptionOptions](#cfn-elasticsearch-domain-nodetonodeencryptionoptions):
     [*NodeToNodeEncryptionOptions*](aws-properties-elasticsearch-domain-nodetonodeencryptionoptions.md)
   [SnapshotOptions](#cfn-elasticsearch-domain-snapshotoptions):
     [*SnapshotOptions*](aws-properties-elasticsearch-domain-snapshotoptions.md)

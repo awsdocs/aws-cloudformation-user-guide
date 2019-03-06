@@ -22,9 +22,9 @@ For information about working with AWS IoT policies and principals, see [Authori
 
 ```
 Type: AWS::IoT::PolicyPrincipalAttachment
-  Properties:
-    [PolicyName](#cfn-iot-policyprincipalattachment-policyname): String
-    [Principal](#cfn-iot-policyprincipalattachment-principal): String
+Properties:
+  [PolicyName](#cfn-iot-policyprincipalattachment-policyname): String
+  [Principal](#cfn-iot-policyprincipalattachment-principal): String
 ```
 
 ## Properties<a name="w13ab1c21c10d162c24b9"></a>

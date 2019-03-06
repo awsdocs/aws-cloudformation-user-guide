@@ -17,9 +17,9 @@
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-simplescalingpolicyconfiguration-syntax.yaml"></a>
 
 ```
-   [AdjustmentType](#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-adjustmenttype): String
-   [CoolDown](#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-cooldown): Integer
-   [ScalingAdjustment](#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-scalingadjustment): String
+  [AdjustmentType](#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-adjustmenttype): String
+  [CoolDown](#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-cooldown): Integer
+  [ScalingAdjustment](#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-scalingadjustment): String
 ```
 
 ## Properties<a name="w13ab1c21c10d141c13d104b7"></a>

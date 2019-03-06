@@ -16,7 +16,7 @@ The `ServerSideEncryptionRule` property is part of the [AWS::S3::Bucket](aws-pro
 
 ```
 [ServerSideEncryptionByDefault](#cfn-s3-bucket-serversideencryptionrule-serversideencryptionbydefault): 
- [*ServerSideEncryptionByDefault*](aws-properties-s3-bucket-serversideencryptionbydefault.md)
+[*ServerSideEncryptionByDefault*](aws-properties-s3-bucket-serversideencryptionbydefault.md)
 ```
 
 ## Properties<a name="w13ab1c21c10d204c13d146b7"></a>

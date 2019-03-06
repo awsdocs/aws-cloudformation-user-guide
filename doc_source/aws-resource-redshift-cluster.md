@@ -69,7 +69,7 @@ Properties:
     - String
   [KmsKeyId](#cfn-redshift-cluster-kmskeyid): String
   [LoggingProperties](#cfn-redshift-cluster-loggingproperties): 
-     [LoggingProperties](aws-properties-redshift-cluster-loggingproperties.md)
+    [LoggingProperties](aws-properties-redshift-cluster-loggingproperties.md)
   [MasterUsername](#cfn-redshift-cluster-masterusername): String
   [MasterUserPassword](#cfn-redshift-cluster-masteruserpassword): String
   [NodeType](#cfn-redshift-cluster-nodetype): String

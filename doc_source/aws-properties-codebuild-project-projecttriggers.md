@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 [Webhook](#cfn-codebuild-project-projecttriggers-webhook): Boolean
 [FilterGroups](#cfn-codebuild-project-projecttriggers-filtergroups): 
- - -[* WebhookFilter*](aws-properties-codebuild-project-webhookfilter.md)
+  - -[* WebhookFilter*](aws-properties-codebuild-project-webhookfilter.md)
 ```
 
 ## Properties<a name="w13ab1c21c10c72c13c33b7"></a>

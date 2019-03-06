@@ -22,9 +22,9 @@ For information about working with X\.509 certificates, see [Authentication in A
 
 ```
 Type: AWS::IoT::Certificate
-  Properties:
-    [CertificateSigningRequest](#cfn-iot-certificate-certificatesigningrequest): String
-    [Status](#cfn-iot-certificate-status): String
+Properties:
+  [CertificateSigningRequest](#cfn-iot-certificate-certificatesigningrequest): String
+  [Status](#cfn-iot-certificate-status): String
 ```
 
 ## Properties<a name="w13ab1c21c10d162c14b9"></a>

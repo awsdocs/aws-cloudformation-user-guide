@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 [Location](#cfn-codebuild-project-projectcache-location): String
 [Modes](#cfn-codebuild-project-projectcache-modes): 
- - String
+  - String
 [Type](#cfn-codebuild-project-projectcache-type): String
 ```
 
