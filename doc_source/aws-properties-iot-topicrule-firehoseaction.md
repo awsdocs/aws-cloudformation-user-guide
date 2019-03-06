@@ -2,7 +2,7 @@
 
 `Firehose` is a property of the [AWS IoT TopicRule Action](aws-properties-iot-topicrule-action.md) property that describes an action that writes data to a Kinesis Data Firehose stream\.
 
-## Syntax<a name="w4ab1c21c10d150c39c47b5"></a>
+## Syntax<a name="w13ab1c21c10d162c39c47b5"></a>
 
 ### JSON<a name="aws-properties-iot-topicrule-firehoseaction-syntax.json"></a>
 
@@ -22,7 +22,7 @@
 [Separator](#cfn-iot-topicrule-firehoseaction-separator): String
 ```
 
-## Properties<a name="w4ab1c21c10d150c39c47b7"></a>
+## Properties<a name="w13ab1c21c10d162c39c47b7"></a>
 
 `DeliveryStreamName`  <a name="cfn-iot-topicrule-firehoseaction-deliverystreamname"></a>
 The delivery stream name\.  

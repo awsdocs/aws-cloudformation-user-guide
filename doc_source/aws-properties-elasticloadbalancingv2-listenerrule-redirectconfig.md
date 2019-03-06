@@ -1,8 +1,8 @@
-# Elastic Load Balancing Listener RedirectConfig<a name="aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig"></a>
+# Elastic Load Balancing V2 RedirectConfig<a name="aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig"></a>
 
 <a name="aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig-description"></a>The `RedirectConfig` property type specifies information about a redirect action\.
 
-<a name="aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig-inheritance"></a> `RedirectConfig` is a property of the [Elastic Load Balancing ListenerRule Actions](aws-properties-elasticloadbalancingv2-listenerrule-actions.md) property type\.
+<a name="aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig-inheritance"></a> `RedirectConfig` is a property of the [Elastic Load Balancing V2 Actions](aws-properties-elasticloadbalancingv2-listenerrule-actions.md) property type\.
 
 ## Syntax<a name="aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig-syntax"></a>
 

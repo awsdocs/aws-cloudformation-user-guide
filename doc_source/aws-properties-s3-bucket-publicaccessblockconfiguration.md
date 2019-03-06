@@ -1,4 +1,4 @@
-# Amazon Simple Storage Service Bucket PublicAccessBlockConfiguration<a name="aws-properties-s3-bucket-publicaccessblockconfiguration"></a>
+# Amazon S3 Bucket PublicAccessBlockConfiguration<a name="aws-properties-s3-bucket-publicaccessblockconfiguration"></a>
 
 <a name="aws-properties-s3-bucket-publicaccessblockconfiguration-description"></a>The `PublicAccessBlockConfiguration` property type specifies the public access configuration for an Amazon S3 bucket\.
 

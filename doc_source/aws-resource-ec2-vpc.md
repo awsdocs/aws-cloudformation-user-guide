@@ -4,10 +4,10 @@ Creates a Virtual Private Cloud \(VPC\) with the CIDR block that you specify\. T
 
 **Topics**
 + [Syntax](#aws-resource-ec2-vpc-syntax)
-+ [Properties](#w4ab1c21c10d102d174b9)
-+ [Return Values](#w4ab1c21c10d102d174c11)
-+ [Example](#w4ab1c21c10d102d174c13)
-+ [More Info](#w4ab1c21c10d102d174c15)
++ [Properties](#w13ab1c21c10d111d174b9)
++ [Return Values](#w13ab1c21c10d111d174c11)
++ [Example](#w13ab1c21c10d111d174c13)
++ [More Info](#w13ab1c21c10d111d174c15)
 
 ## Syntax<a name="aws-resource-ec2-vpc-syntax"></a>
 
@@ -41,7 +41,7 @@ Properties:
     - Resource Tag
 ```
 
-## Properties<a name="w4ab1c21c10d102d174b9"></a>
+## Properties<a name="w13ab1c21c10d111d174b9"></a>
 
 `CidrBlock`  <a name="cfn-aws-ec2-vpc-cidrblock"></a>
 The CIDR block you want the VPC to cover\. For example: `"10.0.0.0/16"`\.  
@@ -77,15 +77,15 @@ An arbitrary set of tags \(key–value pairs\) for this VPC\. To name a VPC reso
 *Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
-## Return Values<a name="w4ab1c21c10d102d174c11"></a>
+## Return Values<a name="w13ab1c21c10d111d174c11"></a>
 
-### Ref<a name="w4ab1c21c10d102d174c11b2"></a>
+### Ref<a name="w13ab1c21c10d111d174c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource ID, such as `vpc-18ac277d`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d102d174c11b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d111d174c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -106,7 +106,7 @@ A list of IPv6 CIDR blocks that are associated with the VPC, such as `[ 2001:db8
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Example<a name="w4ab1c21c10d102d174c13"></a>
+## Example<a name="w13ab1c21c10d111d174c13"></a>
 
 ### JSON<a name="aws-resource-ec2-vpc-example-1.json"></a>
 
@@ -145,5 +145,5 @@ Resources:
         Value: bar
 ```
 
-## More Info<a name="w4ab1c21c10d102d174c15"></a>
+## More Info<a name="w13ab1c21c10d111d174c15"></a>
 + [CreateVpc](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVpc.html) in the *Amazon EC2 API Reference*\.

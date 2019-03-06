@@ -2,7 +2,7 @@
 
 `TopicRulePayload` is a property of the `[AWS::IoT::TopicRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html)` resource that describes the payload of an AWS IoT rule\.
 
-## Syntax<a name="w4ab1c21c10d150c39c94b5"></a>
+## Syntax<a name="w13ab1c21c10d162c39c94b5"></a>
 
 ### JSON<a name="aws-properties-iot-topicrule-topicrulepayload-syntax.json"></a>
 
@@ -31,7 +31,7 @@
 [Sql](#cfn-iot-topicrule-topicrulepayload-sql): String
 ```
 
-## Properties<a name="w4ab1c21c10d150c39c94b7"></a>
+## Properties<a name="w13ab1c21c10d162c39c94b7"></a>
 
 `Actions`  <a name="cfn-iot-topicrule-topicrulepayload-actions"></a>
 The actions associated with the rule\.  

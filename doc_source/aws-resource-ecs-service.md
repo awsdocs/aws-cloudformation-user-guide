@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[PlatformVersion](#cfn-ecs-service-platformversion)" : String,
     "[SchedulingStrategy](#cfn-ecs-service-schedulingstrategy)" : String,
     "[ServiceName](#cfn-ecs-service-servicename)" : String,
-    "[ServiceRegistries](#cfn-ecs-service-serviceregistries)" : [ [*ServiceRegistry*](aws-properties-ecs-service-serviceregistry.md), ... ,
+    "[ServiceRegistries](#cfn-ecs-service-serviceregistries)" : [ [*ServiceRegistry*](aws-properties-ecs-service-serviceregistry.md), ... ],
     "[TaskDefinition](#cfn-ecs-service-taskdefinition)" : String
   }
 }
@@ -75,7 +75,7 @@ The name or Amazon Resource Name \(ARN\) of the cluster that you want to run you
 `DeploymentConfiguration`  <a name="cfn-ecs-service-deploymentconfiguration"></a>
 Configures how many tasks run during a deployment\.  
 *Required*: No  
-*Type*: [Amazon Elastic Container Service Service DeploymentConfiguration](aws-properties-ecs-service-deploymentconfiguration.md)  
+*Type*: [DeploymentConfiguration](aws-properties-ecs-service-deploymentconfiguration.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `DesiredCount`  <a name="cfn-ecs-service-desiredcount"></a>
@@ -99,7 +99,7 @@ The launch type on which to run your service\. If one is not specified, `EC2` wi
 `LoadBalancers`  <a name="cfn-ecs-service-loadbalancers"></a>
 A list of load balancer objects to associate with the cluster\. If you specify the `Role` property, `LoadBalancers` must be specified as well\. For information about the number of load balancers that you can specify per service, see [Service Load Balancing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: Conditional  
-*Type*: List of [Amazon Elastic Container Service Service LoadBalancers](aws-properties-ecs-service-loadbalancers.md)  
+*Type*: List of [LoadBalancers](aws-properties-ecs-service-loadbalancers.md) property types  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `NetworkConfiguration`  <a name="cfn-ecs-service-networkconfiguration"></a>
@@ -111,13 +111,13 @@ The network configuration for the service\. This parameter is required for task 
 `PlacementConstraints`  <a name="cfn-ecs-service-placementconstraints"></a>
 The placement constraints for the tasks in the service\.  
 *Required*: No  
-*Type*: List of [Amazon Elastic Container Service Service PlacementConstraint](aws-properties-ecs-service-placementconstraints-placementconstraint.md)  
+*Type*: List of [PlacementConstraint](aws-properties-ecs-service-placementconstraints-placementconstraint.md) property types  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `PlacementStrategies`  <a name="cfn-ecs-service-placementstrategies"></a>
 The placement strategies that determine how tasks for the service are placed\.  
 *Required*: No  
-*Type*: List of [Amazon Elastic Container Service Service PlacementStrategies](aws-properties-ecs-service-placementstrategies-placementstrategy.md)  
+*Type*: List of [PlacementStrategies](aws-properties-ecs-service-placementstrategies-placementstrategy.md) property types  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `PlatformVersion`  <a name="cfn-ecs-service-platformversion"></a>
@@ -153,7 +153,7 @@ The name of your service\. The name is limited to 255 letters \(uppercase and lo
 `ServiceRegistries`  <a name="cfn-ecs-service-serviceregistries"></a>
 Details of the service registry\.  
 *Required*: No  
-*Type*: List of [ServiceRegistry](aws-properties-ecs-service-serviceregistry.md)  
+*Type*: List of [ServiceRegistry](aws-properties-ecs-service-serviceregistry.md) property types  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `TaskDefinition`  <a name="cfn-ecs-service-taskdefinition"></a>
@@ -164,7 +164,7 @@ The ARN of the task definition \(including the revision number\) that you want t
 
 ## Return Values<a name="aws-resource-ecs-service-return-values"></a>
 
-### Ref<a name="w4ab1c21c10d108c17b9b2"></a>
+### Ref<a name="w13ab1c21c10d117c17b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN\.
 
@@ -176,7 +176,7 @@ In the following sample, the `Ref` function returns the ARN of the `MyECSService
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d108c17b9b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d117c17b9b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -187,7 +187,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
 
 ## Examples<a name="aws-resource-ecs-service-examples"></a>
 
-### Define a Basic Amazon ECS Service<a name="w4ab1c21c10d108c17c11b2"></a>
+### Define a Basic Amazon ECS Service<a name="w13ab1c21c10d117c17c11b2"></a>
 
 The following examples define an Amazon ECS service that uses a cluster and task definition that are declared elsewhere in the same template\.
 
@@ -218,7 +218,7 @@ WebApp:
       Ref: "taskdefinition"
 ```
 
-### Associate an Application Load Balancer with a Service<a name="w4ab1c21c10d108c17c11b4"></a>
+### Associate an Application Load Balancer with a Service<a name="w13ab1c21c10d117c17c11b4"></a>
 
 The following example associates an Application Load Balancer with an Amazon ECS service by referencing an `AWS::ElasticLoadBalancingV2::TargetGroup` resource\. 
 
@@ -267,7 +267,7 @@ service:
       Ref: ECSCluster
 ```
 
-### Define a Service with a Health Check Grace Period<a name="w4ab1c21c10d108c17c11b6"></a>
+### Define a Service with a Health Check Grace Period<a name="w13ab1c21c10d117c17c11b6"></a>
 
 The following example defines a service with a parameter that enables users to specify how many seconds that the Amazon ECS service scheduler should ignore unhealthy Elastic Load Balancing target health checks after a task has first started\.
 

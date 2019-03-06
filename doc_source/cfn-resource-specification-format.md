@@ -3,12 +3,12 @@
 AWS CloudFormation creates a specification for each [resource type](aws-template-resource-type-ref.md), such as `AWS::S3::Bucket` or `AWS::EC2::Instance`\. The following sections describe the format and each field within the specification\.
 
 **Topics**
-+ [Specification Sections](#w4ab1c21c14c21b7)
++ [Specification Sections](#w13ab1c21c14c21b7)
 + [Property Specification](#cfn-resource-specification-format-propertytypes)
 + [Resource Specification](#cfn-resource-specification-format-resourcetype)
-+ [Example Resource Specification](#w4ab1c21c14c21c13)
++ [Example Resource Specification](#w13ab1c21c14c21c13)
 
-## Specification Sections<a name="w4ab1c21c14c21b7"></a>
+## Specification Sections<a name="w13ab1c21c14c21b7"></a>
 
 The formal definition for each resource type is organized into three main sections: `PropertyTypes`, `ResourceSpecificationVersion`, and `ResourceTypes`, as shown in the following example:
 
@@ -80,7 +80,7 @@ For non\-primitive types, valid values for the property\. The valid types are a 
 A list is a comma\-separated list of values\. A map is a set of key\-value pairs, where the keys are always strings\. The value type for lists and maps are indicated by the `ItemType` or `PrimitiveItemType` field\.
 
 `UpdateType`  
-During a stack update, the update behavior when you add, remove, or modify the property\. AWS CloudFormation replaces the resource when you change `Immutable` properties\. AWS CloudFormation doesn't replace the resource when you change `Mutable` properties\. `Conditional` updates can be mutable or immutable, depending on, for example, which other properties you updated\. For more information, see the relevant [resource type](aws-template-resource-type-ref.md) documentation\.
+During a stack update, the update behavior when you add, remove, or modify the property\. AWS CloudFormation replaces the resource when you change immutable properties\. AWS CloudFormation doesn't replace the resource when you change mutable properties\. Conditional updates can be mutable or immutable, depending on, for example, which other properties you updated\. For more information, see the relevant [resource type](aws-template-resource-type-ref.md) documentation\.
 
 ## Resource Specification<a name="cfn-resource-specification-format-resourcetype"></a>
 
@@ -122,7 +122,7 @@ A link to the *AWS CloudFormation User Guide* for information about the resource
 `Properties`  
 A list of property specifications for the resource\. For details, see [Property Specification](#cfn-resource-specification-format-propertytypes)\.
 
-## Example Resource Specification<a name="w4ab1c21c14c21c13"></a>
+## Example Resource Specification<a name="w13ab1c21c14c21c13"></a>
 
 The following examples highlight and explain parts of the [`AWS::Elasticsearch::Domain`](aws-resource-elasticsearch-domain.md) resource specification\.
 

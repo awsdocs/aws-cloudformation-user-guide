@@ -60,7 +60,7 @@ The name of the job queue\.
 
 ## Return Values<a name="aws-resource-batch-jobqueue-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10c39c21c11b2"></a>
+### Ref<a name="w13ab1c21c10c45c21c11b2"></a>
 
 When you pass the logical ID of an `AWS::Batch::JobQueue` resource to the intrinsic `Ref` function, the function returns the job queue ARN, such as `arn:aws:batch:us-east-1:111122223333:job-queue/HighPriority`\. 
 

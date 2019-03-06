@@ -2,7 +2,7 @@
 
 `Origin` is a property of the [DistributionConfig](aws-properties-cloudfront-distribution-distributionconfig.md) property that describes an Amazon CloudFront distribution origin\.
 
-## Syntax<a name="w4ab1c21c10c54c14c66b5"></a>
+## Syntax<a name="w13ab1c21c10c60c14c66b5"></a>
 
 ### JSON<a name="aws-properties-cloudfront-distribution-origin-syntax.json"></a>
 
@@ -13,7 +13,7 @@
   "[Id](#cfn-cloudfront-distribution-origin-id)" : String,
   "[OriginCustomHeaders](#cfn-cloudfront-distribution-origin-origincustomheaders)" : [ OriginCustomHeader, ... ]
   "[OriginPath](#cfn-cloudfront-distribution-origin-originpath)" : String,
-  "[S3OriginConfig](#cfn-cloudfront-distribution-origin-s3originconfig)" : S3 Origin
+  "[S3OriginConfig](#cfn-cloudfront-distribution-origin-s3origin)" : S3OriginConfig
 }
 ```
 
@@ -27,11 +27,11 @@
 [OriginCustomHeaders](#cfn-cloudfront-distribution-origin-origincustomheaders):
   - OriginCustomHeader
 [OriginPath](#cfn-cloudfront-distribution-origin-originpath): String
-[S3OriginConfig](#cfn-cloudfront-distribution-origin-s3originconfig):
-  S3 Origin
+[S3OriginConfig](#cfn-cloudfront-distribution-origin-s3origin):
+  S3OriginConfig
 ```
 
-## Properties<a name="w4ab1c21c10c54c14c66b7"></a>
+## Properties<a name="w13ab1c21c10c60c14c66b7"></a>
 
 **Note**  
 For more information about the constraints and valid values of each property, see the [Origin](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Origin.html) data type in the *Amazon CloudFront API Reference*\.
@@ -61,7 +61,7 @@ The path that CloudFront uses to request content from an S3 bucket or custom ori
 *Required*: No  
 *Type*: String
 
-`S3OriginConfig`  <a name="cfn-cloudfront-distribution-origin-s3originconfig"></a>
+`S3OriginConfig`  <a name="cfn-cloudfront-distribution-origin-s3origin"></a>
 Origin information to specify an S3 origin\.  
 *Required*: Conditional\. You cannot use `S3OriginConfig` and `CustomOriginConfig` in the same `Origin`, but you *must* specify one or the other\.  
 *Type*: [S3OriginConfig](aws-properties-cloudfront-distribution-s3originconfig.md) type

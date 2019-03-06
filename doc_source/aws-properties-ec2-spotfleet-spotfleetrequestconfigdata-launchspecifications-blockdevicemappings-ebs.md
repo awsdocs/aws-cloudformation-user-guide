@@ -2,7 +2,7 @@
 
 `Ebs` is a property of the [Amazon Elastic Compute Cloud SpotFleet BlockDeviceMappings](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.md) property that defines a block device for an Amazon Elastic Block Store \(Amazon EBS\) volume\.
 
-## Syntax<a name="w4ab1c21c10d102d118c34b5"></a>
+## Syntax<a name="w13ab1c21c10d111d118c33b5"></a>
 
 ### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs-syntax.json"></a>
 
@@ -28,7 +28,7 @@
 [VolumeType](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs-volumetype): String
 ```
 
-## Properties<a name="w4ab1c21c10d102d118c34b7"></a>
+## Properties<a name="w13ab1c21c10d111d118c33b7"></a>
 
 `DeleteOnTermination`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs-deleteontermination"></a>
 Indicates whether to delete the volume when the instance is terminated\.  

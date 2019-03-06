@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[Environment](#cfn-codebuild-project-environment)" : [*Environment*](aws-properties-codebuild-project-environment.md),
     "[LogsConfig](#cfn-codebuild-project-logsconfig)" : [*LogsConfig*](aws-properties-codebuild-project-logsconfig.md),
     "[Name](#cfn-codebuild-project-name)" : String,
+    "[QueuedTimeoutInMinutes](#cfn-codebuild-project-queuedtimeoutinminutes)" : Integer,
     "[SecondaryArtifacts](#cfn-codebuild-project-secondary-artifacts)" : [[* Artifacts, \.\.\. *](aws-properties-codebuild-project-artifacts.md)],
     "[SecondarySources](#cfn-codebuild-project-secondary-sources)" : [[* Source, \.\.\. *](aws-properties-codebuild-project-source.md)],
     "[ServiceRole](#cfn-codebuild-project-servicerole)" : String,
@@ -44,7 +45,8 @@ Properties:
   [EncryptionKey](#cfn-codebuild-project-encryptionkey): String
   [Environment](#cfn-codebuild-project-environment): [*Environment*](aws-properties-codebuild-project-environment.md)
   [LogsConfig](#cfn-codebuild-project-logsconfig): [*LogsConfig*](aws-properties-codebuild-project-logsconfig.md)        
-  [Name](#cfn-codebuild-project-name): String
+  [Name](#cfn-codebuild-project-name): String  
+  [QueuedTimeoutInMinutes](#cfn-codebuild-project-queuedtimeoutinminutes): Integer
   [SecondaryArtifacts](#cfn-codebuild-project-secondary-artifacts): 
     - [*Artifacts*](aws-properties-codebuild-project-artifacts.md)
   [SecondarySources](#cfn-codebuild-project-secondary-sources):
@@ -68,7 +70,7 @@ The output settings for artifacts that the project generates during a build\.
 
 `BadgeEnabled`  <a name="cfn-codebuild-project-badgeenabled"></a>
 Indicates whether AWS CodeBuild generates a publicly accessible URL for your project's build badge\. For more information, see [Build Badges Sample](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-build-badges.html) in the *AWS CodeBuild User Guide*\.  
-Including build badges with your project is currently not supported if the source type is AWS CodePipeline\. If you specify `CODEPIPELINE` for the `Source` property, don't specify the `BadgeEnabled` property\. 
+Including build badges with your project is currently not supported if the source type is CodePipeline\. If you specify `CODEPIPELINE` for the `Source` property, don't specify the `BadgeEnabled` property\. 
  *Required*: No  
  *Type*: Boolean  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
@@ -105,9 +107,15 @@ Information about logs for this build project\.
 
 `Name`  <a name="cfn-codebuild-project-name"></a>
 A name for the project\. The name must be unique across all of the projects in your AWS account\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+
+`QueuedTimeoutInMinutes`  <a name="cfn-codebuild-project-queuedtimeoutinminutes"></a>
+The number of minutes a build is allowed to be queued before it times out\.  
+ *Required*: No  
+ *Type*: Integer  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `SecondaryArtifacts`  <a name="cfn-codebuild-project-secondary-artifacts"></a>
 An array of artifacts objects\. Each artifacts object specifies output settings that the project generates during a build\.  

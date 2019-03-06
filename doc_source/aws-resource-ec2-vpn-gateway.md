@@ -4,10 +4,10 @@ Creates a virtual private gateway\. A virtual private gateway is the VPC\-side e
 
 **Topics**
 + [Syntax](#aws-resource-ec2-vpcgateway-syntax)
-+ [Properties](#w4ab1c21c10d102d217b9)
-+ [Return Value](#w4ab1c21c10d102d217c11)
-+ [Example](#w4ab1c21c10d102d217c13)
-+ [See Also](#w4ab1c21c10d102d217c15)
++ [Properties](#w13ab1c21c10d111d217b9)
++ [Return Value](#w13ab1c21c10d111d217c11)
++ [Example](#w13ab1c21c10d111d217c13)
++ [See Also](#w13ab1c21c10d111d217c15)
 
 ## Syntax<a name="aws-resource-ec2-vpcgateway-syntax"></a>
 
@@ -37,7 +37,7 @@ Properties:
     Resource Tag
 ```
 
-## Properties<a name="w4ab1c21c10d102d217b9"></a>
+## Properties<a name="w13ab1c21c10d111d217b9"></a>
 
 `AmazonSideAsn`  <a name="cfn-ec2-vpngateway-amazonsideasn"></a>
 The private Autonomous System Number \(ASN\) for the Amazon side of a BGP session\.  
@@ -57,7 +57,7 @@ An arbitrary set of tags \(key–value pairs\) for this resource\.
 *Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
-## Return Value<a name="w4ab1c21c10d102d217c11"></a>
+## Return Value<a name="w13ab1c21c10d111d217c11"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -69,7 +69,7 @@ For the VPN gateway with the logical ID "MyVPNGateway", `Ref` will return the ga
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d102d217c13"></a>
+## Example<a name="w13ab1c21c10d111d217c13"></a>
 
 ### JSON<a name="aws-resource-ec2-vpcgateway-example.json"></a>
 
@@ -103,5 +103,5 @@ Resources:
           Value: Test
 ```
 
-## See Also<a name="w4ab1c21c10d102d217c15"></a>
+## See Also<a name="w13ab1c21c10d111d217c15"></a>
 + [CreateVpnGateway](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVpnGateway.html) in the *Amazon EC2 API Reference*\.

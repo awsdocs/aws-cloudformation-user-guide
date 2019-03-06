@@ -2,7 +2,7 @@
 
 `DomainValidationOption` is a property of the [AWS::CertificateManager::Certificate](aws-resource-certificatemanager-certificate.md) resource that specifies the AWS Certificate Manager \(ACM\) Certificate domain that registrars use to send validation emails\.
 
-## Syntax<a name="w4ab1c21c10c45c13c19b5"></a>
+## Syntax<a name="w13ab1c21c10c51c13c19b5"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [ValidationDomain](#cfn-certificatemanager-certificate-domainvalidationoptions-validationdomain): String
 ```
 
-## Properties<a name="w4ab1c21c10c45c13c19b7"></a>
+## Properties<a name="w13ab1c21c10c51c13c19b7"></a>
 
 `DomainName`  <a name="cfn-certificatemanager-certificate-domainvalidationoptions-domainname"></a>
 Fully Qualified Domain Name \(FQDN\) of the Certificate that you are requesting\.  

@@ -125,13 +125,13 @@ The version to associate with the environment\.
 
 ## Return Values<a name="aws-properties-beanstalk-environment-ref"></a>
 
-### Ref<a name="w4ab1c21c10d123c26c11b2"></a>
+### Ref<a name="w13ab1c21c10d132c26c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d123c26c11b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d132c26c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 

@@ -2,7 +2,7 @@
 
 The `SourceBundle` property is an embedded property of the [AWS::ElasticBeanstalk::ApplicationVersion](aws-properties-beanstalk-version.md) resource\.
 
-## Syntax<a name="w4ab1c21c10d123c18c19b5"></a>
+## Syntax<a name="w13ab1c21c10d132c18c19b5"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [S3Key](#cfn-beanstalk-sourcebundle-s3key): String
 ```
 
-## Members<a name="w4ab1c21c10d123c18c19b7"></a>
+## Members<a name="w13ab1c21c10d132c18c19b7"></a>
 
 `S3Bucket`  <a name="cfn-beanstalk-sourcebundle-s3bucket"></a>
 The Amazon S3 bucket where the data is located\.  

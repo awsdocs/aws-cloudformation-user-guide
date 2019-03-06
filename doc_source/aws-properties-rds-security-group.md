@@ -39,7 +39,7 @@ Properties:
     - Resource Tag
 ```
 
-## Properties<a name="w4ab1c21c10d171c32c11"></a>
+## Properties<a name="w13ab1c21c10d192c32c11"></a>
 
 `EC2VpcId`  <a name="cfn-rds-dbsecuritygroup-ec2vpcid"></a>
 The Id of the VPC\. Indicates which VPC this DB Security Group should belong to\.  
@@ -66,12 +66,12 @@ The tags that you want to attach to the Amazon RDS DB security group\.
 *Type*: A list of [resource tags](aws-properties-resource-tags.md)\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Template Examples<a name="w4ab1c21c10d171c32c13"></a>
+## Template Examples<a name="w13ab1c21c10d192c32c13"></a>
 
 **Tip**  
 For more RDS template examples, see [Amazon RDS Template Snippets](quickref-rds.md)\.
 
-### Single VPC security group<a name="w4ab1c21c10d171c32c13b4"></a>
+### Single VPC security group<a name="w13ab1c21c10d192c32c13b4"></a>
 
 This template snippet creates/updates a single VPC security group, referred to by EC2SecurityGroupName\.
 
@@ -105,7 +105,7 @@ DBSecurityGroup:
     GroupDescription: "Frontend Access"
 ```
 
-### Multiple VPC security groups<a name="w4ab1c21c10d171c32c13b6"></a>
+### Multiple VPC security groups<a name="w13ab1c21c10d192c32c13b6"></a>
 
 This template snippet creates/updates multiple VPC security groups\.
 

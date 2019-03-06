@@ -1,13 +1,6 @@
 # AWS::AutoScaling::LifecycleHook<a name="aws-resource-as-lifecyclehook"></a>
 
-Controls the state of an instance in an Amazon EC2 Auto Scaling group after it is launched or terminated\. When you use a lifecycle hook, the Auto Scaling group either pauses the instance after it is launched \(before it is put into service\) or pauses the instance as it is terminated \(before it is fully terminated\)\. For more information, see [Amazon EC2 Auto Scaling Lifecycle Hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html) in the *Amazon EC2 Auto Scaling User Guide*\.
-
-**Topics**
-+ [Syntax](#aws-resource-autoscaling-lifecyclehook-syntax)
-+ [Properties](#w4ab1c21c10c36c22b9)
-+ [Return Value](#w4ab1c21c10c36c22c11)
-+ [Example](#w4ab1c21c10c36c22c13)
-+ [See Also](#aws-resource-autoscaling-lifecyclehook-seealso)
+Defines lifecycle hooks for an Amazon EC2 Auto Scaling group, which specify actions to perform when Amazon EC2 Auto Scaling launches or terminates instances\. When you use a lifecycle hook, the Auto Scaling group pauses the instance either after it is launched \(before it is put into service\) or as it is terminated \(before it is fully terminated\)\. For more information, see [Amazon EC2 Auto Scaling Lifecycle Hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
 ## Syntax<a name="aws-resource-autoscaling-lifecyclehook-syntax"></a>
 
@@ -46,9 +39,9 @@ Properties:
   [RoleARN](#cfn-as-lifecyclehook-rolearn): String
 ```
 
-## Properties<a name="w4ab1c21c10c36c22b9"></a>
+## Properties<a name="w13ab1c21c10c42c22b7"></a>
 
-For information about valid and default values, see [LifecycleHook](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_LifecycleHook.html) in the *Amazon EC2 Auto Scaling API Reference*\.
+For information about valid and default values, see [PutLifecycleHook](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutLifecycleHook.html) in the *Amazon EC2 Auto Scaling API Reference*\.
 
 `AutoScalingGroupName`  <a name="cfn-as-lifecyclehook-autoscalinggroupname"></a>
 The name of the Auto Scaling group for the lifecycle hook\.  
@@ -75,7 +68,7 @@ The name of the lifecycle hook\. Length Constraints: Minimum length of 1\. Maxim
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `LifecycleTransition`  <a name="cfn-as-lifecyclehook-lifecycletransition"></a>
-The state of the Amazon EC2 instance to which you want to attach the lifecycle hook\. For valid values, see the `LifecycleTransition` content for the [LifecycleHook](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_LifecycleHook.html) data type in the *Amazon EC2 Auto Scaling API Reference*\.  
+The state of the Amazon EC2 instance to which you want to attach the lifecycle hook\. For valid values, see the `LifecycleTransition` details for the [PutLifecycleHook](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutLifecycleHook.html) action in the *Amazon EC2 Auto Scaling API Reference*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -98,7 +91,7 @@ The ARN of the IAM role that allows the Auto Scaling group to publish to the spe
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10c36c22c11"></a>
+## Return Value<a name="w13ab1c21c10c42c22b9"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -110,7 +103,7 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10c36c22c13"></a>
+## Example<a name="w13ab1c21c10c42c22c11"></a>
 
 In the following template snippet, the Amazon EC2 Auto Scaling pauses instances before completely terminating them\. While in the pending state, you can, for example, connect to the instance and download logs or any other data before the instance is terminated\.
 
@@ -146,5 +139,5 @@ myLifecycleHook:
 ```
 
 ## See Also<a name="aws-resource-autoscaling-lifecyclehook-seealso"></a>
-+  [LifecycleHook](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_LifecycleHook.html) in the *Amazon EC2 Auto Scaling API Reference* \(for valid values and default values\) 
-+  [Lifecycle Hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html) in the *Amazon EC2 Auto Scaling User Guide* 
++  [PutLifecycleHook](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutLifecycleHook.html) in the *Amazon EC2 Auto Scaling API Reference* \(for valid values and default values\) 
++  [Amazon EC2 Auto Scaling Lifecycle Hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html) in the *Amazon EC2 Auto Scaling User Guide* 

@@ -2,7 +2,7 @@
 
 `PortMappings` is a property of the [Amazon Elastic Container Service TaskDefinition ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md) property that maps a container port to a host port\.
 
-## Syntax<a name="w4ab1c21c10d108c21c61b5"></a>
+## Syntax<a name="w13ab1c21c10d117c21c61b5"></a>
 
 ### JSON<a name="aws-properties-ecs-taskdefinition-containerdefinitions-portmappings-syntax.json"></a>
 
@@ -22,7 +22,7 @@
 [Protocol](#cfn-ecs-taskdefinition-containerdefinition-portmappings-protocol): String
 ```
 
-## Properties<a name="w4ab1c21c10d108c21c61b7"></a>
+## Properties<a name="w13ab1c21c10d117c21c61b7"></a>
 
 For more information about each property, see [Task Definition Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html) in the *Amazon Elastic Container Service Developer Guide*\.
 

@@ -1,8 +1,8 @@
-# Amazon Simple Storage Service Bucket LambdaConfiguration<a name="aws-properties-s3-bucket-notificationconfig-lambdaconfig"></a>
+# Amazon S3 Bucket LambdaConfiguration<a name="aws-properties-s3-bucket-notificationconfig-lambdaconfig"></a>
 
-`LambdaConfigurations` is a property of the [Amazon S3 Bucket NotificationConfiguration](aws-properties-s3-bucket-notificationconfig.md) property that describes the AWS Lambda \(Lambda\) functions to invoke and the events for which to invoke them\.
+`LambdaConfigurations` is a property of the [NotificationConfiguration](aws-properties-s3-bucket-notificationconfig.md) property that describes the AWS Lambda \(Lambda\) functions to invoke and the events for which to invoke them\.
 
-## Syntax<a name="w4ab1c21c10d180c13c70b5"></a>
+## Syntax<a name="w13ab1c21c10d204c13c70b5"></a>
 
 ### JSON<a name="aws-properties-s3-bucket-notificationconfig-lambdaconfig-syntax.json"></a>
 
@@ -23,7 +23,7 @@
 [Function](#cfn-s3-bucket-notificationconfig-lambdaconfig-function): String
 ```
 
-## Properties<a name="w4ab1c21c10d180c13c70b7"></a>
+## Properties<a name="w13ab1c21c10d204c13c70b7"></a>
 
 `Event`  <a name="cfn-s3-bucket-notificationconfig-lambdaconfig-event"></a>
 The S3 bucket event for which to invoke the Lambda function\. For more information, see [Supported Event Types](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon Simple Storage Service Developer Guide*\.  
@@ -33,14 +33,14 @@ The S3 bucket event for which to invoke the Lambda function\. For more informati
 `Filter`  <a name="cfn-s3-bucket-notificationconfig-lambdaconfig-filter"></a>
 The filtering rules that determine which objects invoke the Lambda function\. For example, you can create a filter so that only image files with a `.jpg` extension invoke the function when they are added to the S3 bucket\.  
 *Required*: No  
-*Type*: [Amazon S3 Bucket NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md)
+*Type*: [NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md)
 
 `Function`  <a name="cfn-s3-bucket-notificationconfig-lambdaconfig-function"></a>
 The Amazon Resource Name \(ARN\) of the Lambda function that Amazon S3 invokes when the specified event type occurs\.  
 *Required*: Yes  
 *Type*: String
 
-## Example<a name="w4ab1c21c10d180c13c70b9"></a>
+## Example<a name="w13ab1c21c10d204c13c70b9"></a>
 
 The following example creates a `NotificationConfiguration` for Lambda using an S3 bucket named `EncryptionServiceBucket`\.
 

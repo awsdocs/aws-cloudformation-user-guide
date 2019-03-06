@@ -2,7 +2,7 @@
 
 `Action` is a property of the `TopicRulePayload` property that describes an action associated with an AWS IoT rule\. For more information, see [Rules for AWS IoT](https://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html)\.
 
-## Syntax<a name="w4ab1c21c10d150c39c18b5"></a>
+## Syntax<a name="w13ab1c21c10d162c39c18b5"></a>
 
 ### JSON<a name="aws-properties-iot-topicrule-action-syntax.json"></a>
 
@@ -58,7 +58,7 @@
   StepFunctionsAction
 ```
 
-## Properties<a name="w4ab1c21c10d150c39c18b7"></a>
+## Properties<a name="w13ab1c21c10d162c39c18b7"></a>
 
 `CloudwatchAlarm`  <a name="cfn-iot-topicrule-action-cloudwatchalarm"></a>
 Changes the state of a CloudWatch alarm\.  

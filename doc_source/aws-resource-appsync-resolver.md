@@ -67,7 +67,7 @@ The GraphQL type that will invoke this resolver\.
 
 `DataSourceName`  <a name="cfn-appsync-resolver-datasourcename"></a>
 The AWS AppSync data source that this resolver will run against in order to return data to the caller\.  
- *Required*: Yes  
+ *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 

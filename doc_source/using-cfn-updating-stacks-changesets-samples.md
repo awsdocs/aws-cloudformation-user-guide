@@ -49,7 +49,7 @@ We generated each of the following change sets from a stack with the following [
 
 ## Directly Editing a Template<a name="using-cfn-updating-stacks-changesets-samples-directly-editing-a-template"></a>
 
-When you directly modify resources in the stack's template to generate a change set, AWS CloudFormation classifies the change as a direct modification, as opposed to changes trigged by an updated parameter value\. The following change set, which added a new tag to the `i-1abc23d4` instance, is an example of a direct modification\. All other input values, such as the parameter values and capabilities, are unchanged, so we'll focus on the `Changes` structure\.
+When you directly modify resources in the stack's template to generate a change set, AWS CloudFormation classifies the change as a direct modification, as opposed to changes triggered by an updated parameter value\. The following change set, which added a new tag to the `i-1abc23d4` instance, is an example of a direct modification\. All other input values, such as the parameter values and capabilities, are unchanged, so we'll focus on the `Changes` structure\.
 
 ```
 {

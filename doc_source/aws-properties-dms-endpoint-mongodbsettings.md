@@ -2,7 +2,7 @@
 
 Use the `MongoDbSettings` property to specify settings for a MongoDB endpoint for a [AWS::DMS::Endpoint](aws-resource-dms-endpoint.md) resource\.
 
-## Syntax<a name="w4ab1c21c10c96c17c23b5"></a>
+## Syntax<a name="w13ab1c21c10d102c17c23b5"></a>
 
 ### JSON<a name="aws-properties-dms-endpoint-mongodbsettings-syntax.json"></a>
 
@@ -40,27 +40,26 @@ Use the `MongoDbSettings` property to specify settings for a MongoDB endpoint fo
 [Username](#cfn-dms-endpoint-mongodbsettings-username): String
 ```
 
-## Properties<a name="w4ab1c21c10c96c17c23b7"></a>
+## Properties<a name="w13ab1c21c10d102c17c23b7"></a>
 
 For more information about option settings, see [Using a MongoDB Database as a Source for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html) in the *AWS Database Migration Service User Guide*
 
 `AuthMechanism`  <a name="cfn-dms-endpoint-mongodbsettings-authmechanism"></a>
- The authentication mechanism you use to access the MongoDB source endpoint\.   
+The authentication mechanism you use to access the MongoDB source endpoint\.   
 Valid values: DEFAULT, MONGODB\_CR, SCRAM\_SHA\_1   
 For MongoDB version 2\.x, use MONGODB\_CR\. For MongoDB version 3\.x, use SCRAM\_SHA\_1\. This attribute is not used when `authType=No`\.   
 *Required*: No  
 *Type*: String
 
 `AuthSource`  <a name="cfn-dms-endpoint-mongodbsettings-authsource"></a>
- The MongoDB database name\. This attribute is not used when `authType=No`\.   
-The default is admin\.   
+The MongoDB database name\. This attribute is not used when you specify `NO` for `AuthType`\. The default is admin\.  
 *Required*: No  
 *Type*: String
 
 `AuthType`  <a name="cfn-dms-endpoint-mongodbsettings-authtype"></a>
- The authentication type you use to access the MongoDB source endpoint\.   
-Valid values: NO, PASSWORD   
-When NO is selected, user name and password parameters are not used and can be empty\.   
+The authentication type you use to access the MongoDB source endpoint\.  
+When `NO` is specified, user name and password parameters are not used and can be empty\.  
+*Valid values*: `NO`, `PASSWORD`  
 *Required*: No  
 *Type*: String
 
@@ -70,13 +69,13 @@ The database name on the MongoDB source endpoint\.
 *Type*: String
 
 `DocsToInvestigate`  <a name="cfn-dms-endpoint-mongodbsettings-docstoinvestigate"></a>
- Indicates the number of documents to preview to determine the document organization\. Use this attribute when `NestingLevel` is set to ONE\.  
+Indicates the number of documents to preview to determine the document organization\. Use this attribute when `NestingLevel` is set to ONE\.  
 Must be a positive value greater than 0\. Default value is 1000\.  
 *Required*: No  
 *Type*: String
 
 `ExtractDocId`  <a name="cfn-dms-endpoint-mongodbsettings-extractdocid"></a>
- Specifies the document ID\. Use this attribute when `NestingLevel` is set to NONE\. Default value is false\.   
+Specifies the document ID\. Use this attribute when `NestingLevel` is set to NONE\. Default value is false\.   
 *Required*: No  
 *Type*: String
 
@@ -86,14 +85,14 @@ The ID of the KMS key to be used\.
 *Type*: String
 
 `NestingLevel`  <a name="cfn-dms-endpoint-mongodbsettings-nestinglevel"></a>
- Specifies either document or table mode\.   
+Specifies either document or table mode\.   
 Valid values: NONE, ONE  
 Default value is NONE\. Specify NONE to use document mode\. Specify ONE to use table mode\.   
 *Required*: No  
 *Type*: String
 
 `Password`  <a name="cfn-dms-endpoint-mongodbsettings-password"></a>
- The password for the user account you use to access the MongoDB source endpoint\.  
+The password for the user account you use to access the MongoDB source endpoint\.  
 *Required*: No  
 *Type*: String
 

@@ -2,7 +2,7 @@
 
 `Policies` is a property of the [AWS::IAM::Role](aws-resource-iam-role.md), [AWS::IAM::Group](aws-properties-iam-group.md), and [AWS::IAM::User](aws-properties-iam-user.md) resources\. The `Policies` property describes what actions are allowed on what resources\. For more information about IAM policies, see [Overview of Policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/PoliciesOverview.html) and [AWS IAM Policy Reference](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html) in the *IAM User Guide*\.
 
-## Syntax<a name="w4ab1c21c10d144c32c15b5"></a>
+## Syntax<a name="w13ab1c21c10d156c32c15b5"></a>
 
 ### JSON<a name="aws-properties-iam-policy-syntax.json"></a>
 
@@ -20,7 +20,7 @@
 [PolicyName](#cfn-iam-policies-policyname): String
 ```
 
-## Properties<a name="w4ab1c21c10d144c32c15b7"></a>
+## Properties<a name="w13ab1c21c10d156c32c15b7"></a>
 
 `PolicyDocument`  <a name="cfn-iam-policies-policydocument"></a>
 A policy document that describes what actions are allowed on which resources\.  

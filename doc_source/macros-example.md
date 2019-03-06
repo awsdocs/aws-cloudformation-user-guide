@@ -1,6 +1,6 @@
 # Macro Example: Creating and Using a Macro<a name="macros-example"></a>
 
-The following example walks through the processs of using macros, from defining the macro in a template, to creating a Lamdba function for the macro, and then to using the macro in a template\.
+The following example walks through the process of using macros, from defining the macro in a template, to creating a Lamdba function for the macro, and then to using the macro in a template\.
 
 In this example, we create a simple macro that inserts the specified string in place of the specified target content in the processed template\. And then we'll use it to insert a blank `WaitHandleCondition` in the specified location in the processed template\. 
 

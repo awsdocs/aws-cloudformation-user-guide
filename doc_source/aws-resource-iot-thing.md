@@ -4,7 +4,7 @@ Use the `AWS::IoT::Thing` resource to declare an AWS IoT thing\.
 
 For information about working with things, see [How AWS IoT Works](https://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html) and [Device Registry for AWS IoT](https://docs.aws.amazon.com/iot/latest/developerguide/thing-registry.html) in the *AWS IoT Developer Guide*\.
 
-## Syntax<a name="w4ab1c21c10d150c29b7"></a>
+## Syntax<a name="w13ab1c21c10d162c29b7"></a>
 
 ### JSON<a name="aws-resource-iot-thing-syntax.json"></a>
 
@@ -28,7 +28,7 @@ Properties:
   [ThingName](#cfn-iot-thing-thingname): String
 ```
 
-## Properties<a name="w4ab1c21c10d150c29b9"></a>
+## Properties<a name="w13ab1c21c10d162c29b9"></a>
 
 `AttributePayload`  <a name="cfn-iot-thing-attributepayload"></a>
 The attribute payload\.  
@@ -42,9 +42,9 @@ The name \(the physical ID\) of the AWS IoT thing\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w4ab1c21c10d150c29c11"></a>
+## Return Value<a name="w13ab1c21c10d162c29c11"></a>
 
-### Ref<a name="w4ab1c21c10d150c29c11b2"></a>
+### Ref<a name="w13ab1c21c10d162c29c11b2"></a>
 
 When you provide the logical ID of this resource to the `Ref` intrinsic function, `Ref` returns the thing name\. For example:
 
@@ -60,7 +60,7 @@ MyStack-MyThing-AB1CDEFGHIJK
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d150c29c13"></a>
+## Example<a name="w13ab1c21c10d162c29c13"></a>
 
 The following example declares a thing and the values of its attributes\.
 

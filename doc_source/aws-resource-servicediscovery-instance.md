@@ -6,6 +6,7 @@ The `AWS::ServiceDiscovery::Instance` resource specifies information about a ser
 + [Syntax](#aws-resource-servicediscovery-instance-syntax)
 + [Properties](#aws-resource-servicediscovery-instance-properties)
 + [Return Values](#aws-resource-servicediscovery-instance-returnvalues)
++ [Example](#aws-resource-servicediscovery-instance-examples)
 + [See Also](#aws-resource-servicediscovery-instance-seealso)
 
 ## Syntax<a name="aws-resource-servicediscovery-instance-syntax"></a>
@@ -18,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ServiceDiscovery::Instance",
   "Properties" : {
-    "[InstanceAttributes](#cfn-servicediscovery-instance-instanceattributes)" : JSON object,
+    "[InstanceAttributes](#cfn-servicediscovery-instance-instanceattributes)" : String map,
     "[InstanceId](#cfn-servicediscovery-instance-instanceid)" : String,
     "[ServiceId](#cfn-servicediscovery-instance-serviceid)" : String
   }
@@ -30,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::ServiceDiscovery::Instance"
 Properties:
-  [InstanceAttributes](#cfn-servicediscovery-instance-instanceattributes): JSON object
+  [InstanceAttributes](#cfn-servicediscovery-instance-instanceattributes): String map
   [InstanceId](#cfn-servicediscovery-instance-instanceid): String
   [ServiceId](#cfn-servicediscovery-instance-serviceid): String
 ```
@@ -45,7 +46,7 @@ A string map that contains attribute keys and values\. Supported attribute keys 
 + `AWS_INSTANCE_IPV4`: If the service that you specify contains a template for an A record, the IPv4 address that you want AWS Cloud Map to use for the value of the A record\.
 + `AWS_INSTANCE_IPV6`: If the service that you specify contains a template for an AAAA record, the IPv6 address that you want AWS Cloud Map to use for the value of the AAAA record\.
 *Required*: Yes  
-*Type*: JSON object  
+*Type*: String map  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `InstanceId`  <a name="cfn-servicediscovery-instance-instanceid"></a>
@@ -69,6 +70,38 @@ The ID of the service that you want to use for settings when you register an ins
 When you pass the logical ID of an `AWS::ServiceDiscovery::Instance` resource to the intrinsic `Ref` function, the function returns the value of `Id` for the instance\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+
+## Example<a name="aws-resource-servicediscovery-instance-examples"></a>
+
+The following example provides IPv4 and IPV6 IP addresses for the instance that has an ID of `i-abcd1234`\. The instance was registered using the service that has an ID of `srv-e4anhexample0004`\.
+
+### JSON<a name="aws-resource-servicediscovery-instance-example1.json"></a>
+
+```
+{
+    "Type": "AWS::ServiceDiscovery::Instance",
+    "Properties": {
+        "InstanceAttributes": {
+            "AWS_INSTANCE_IPV4": "192.0.2.44",
+            "AWS_INSTANCE_IPV6": "2001:0db8:85a3:0000:0000:abcd:0001:2345"
+        },
+        "InstanceId": "i-abcd1234",
+        "ServiceId": "srv-e4anhexample0004"
+    }
+}
+```
+
+### YAML<a name="aws-resource-servicediscovery-instance-example1.yaml"></a>
+
+```
+Type: AWS::ServiceDiscovery::Instance
+Properties:
+  InstanceAttributes:
+    AWS_INSTANCE_IPV4: 192.0.2.44
+    AWS_INSTANCE_IPV6: 2001:0db8:85a3:0000:0000:abcd:0001:2345
+  InstanceId: i-abcd1234
+  ServiceId: srv-e4anhexample0004
+```
 
 ## See Also<a name="aws-resource-servicediscovery-instance-seealso"></a>
 + [RegisterInstance](https://docs.aws.amazon.com/cloud-map/latest/api/API_RegisterInstance.html) in the *AWS Cloud Map API Reference*

@@ -2,7 +2,7 @@
 
 `Elasticsearch` is a property of the `Actions` property that describes an action that writes data to an Elasticsearch domain\.
 
-## Syntax<a name="w4ab1c21c10d150c39c42b5"></a>
+## Syntax<a name="w13ab1c21c10d162c39c42b5"></a>
 
 ### JSON<a name="aws-properties-iot-topicrule-elasticsearchaction-syntax.json"></a>
 
@@ -26,7 +26,7 @@
 [Type](#cfn-iot-topicrule-elasticsearchaction-type)": String
 ```
 
-## Properties<a name="w4ab1c21c10d150c39c42b7"></a>
+## Properties<a name="w13ab1c21c10d162c39c42b7"></a>
 
 `Endpoint`  <a name="cfn-iot-topicrule-elasticsearchaction-endpoint"></a>
 The endpoint of your Elasticsearch domain\.  

@@ -4,7 +4,7 @@ Describes the information required to retrieve a cookbook or app from a reposito
 
 For more information and valid values, see [Source](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_Source.html) in the *AWS OpsWorks Stacks API Reference*\.
 
-## Syntax<a name="w4ab1c21c10d168c38c33b7"></a>
+## Syntax<a name="w13ab1c21c10d183c38c33b7"></a>
 
 ### JSON<a name="aws-properties-opsworks-stack-source-syntax.json"></a>
 
@@ -30,7 +30,7 @@ For more information and valid values, see [Source](https://docs.aws.amazon.com/
 [Username](#cfn-opsworks-custcookbooksource-username): String
 ```
 
-## Properties<a name="w4ab1c21c10d168c38c33b9"></a>
+## Properties<a name="w13ab1c21c10d183c38c33b9"></a>
 
 `Password`  <a name="cfn-opsworks-custcookbooksource-pw"></a>
 This parameter depends on the repository type\. For Amazon S3 bundles, set `Password` to the appropriate IAM secret access key\. For HTTP bundles, Git repositories, and Subversion repositories, set `Password` to the appropriate password\.  

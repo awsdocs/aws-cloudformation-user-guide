@@ -70,6 +70,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[StorageEncrypted](#cfn-rds-dbinstance-storageencrypted)" : Boolean,
     "[StorageType](#cfn-rds-dbinstance-storagetype)" : String,
     "[Tags](#cfn-rds-dbinstance-tags)" : [ [*Resource Tag*](aws-properties-resource-tags.md), ... ],
+    "[UseDefaultProcessorFeatures](#cfn-rds-dbinstance-usedefaultprocessorfeatures)" : Boolean,
     "[Timezone](#cfn-rds-dbinstance-timezone)" : String,
     "[VPCSecurityGroups](#cfn-rds-dbinstance-vpcsecuritygroups)" : [ String, ... ]
   }
@@ -132,6 +133,7 @@ Properties:
   [Tags](#cfn-rds-dbinstance-tags):
     - [*Resource Tag*](aws-properties-resource-tags.md)
   [Timezone](#cfn-rds-dbinstance-timezone): String
+  [UseDefaultProcessorFeatures](#cfn-rds-dbinstance-usedefaultprocessorfeatures): Boolean
   [VPCSecurityGroups](#cfn-rds-dbinstance-vpcsecuritygroups):
     - String
 ```
@@ -313,18 +315,15 @@ The list of log types that need to be enabled for exporting to CloudWatch Logs\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `EnableIAMDatabaseAuthentication`  <a name="cfn-rds-dbinstance-enableiamdatabaseauthentication"></a>
-If set to `true`, enables mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts\.  
-You can enable IAM database authentication for the following database engines:   For more information, see [IAM Database Authentication for MySQL and PostgreSQL](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html) in the *Amazon Relational Database Service UserGuide*\.
+If set to `true`, enables mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts\. For more information, see [IAM Database Authentication for MySQL and PostgreSQL](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html#UsingWithRDS.IAMDBAuth.Availability) in the Amazon RDS User Guide  
+You can enable IAM database authentication for the following database engines:  
 **Amazon Aurora**  
 Not applicable\. Mapping IAM accounts to database accounts is managed by the DB cluster\. For more information, see [CreateDBCluster](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCluster.html)\.  
-**PostgreSQL**
-+ For PostgreSQL 9\.5\.14 or higher
-+ For PostgreSQL 9\.6\.9 or higher
-+ For PostgreSQL 10\.4 or higher\
 **MySQL**  
 + For MySQL 5\.6, minor version 5\.6\.34 or higher
 + For MySQL 5\.7, minor version 5\.7\.16 or higher
-  **Note**: IAM database authentication is not supported for MySQL 5.5 or MySQL 8.0.
+**PostgreSQL**  
++ Versions 10\.6 or higher, 9\.6\.11 or higher, and 9\.5\.15 or higher
 *Default*: `false`  
 *Required*: No  
 *Type*: Boolean  
@@ -348,7 +347,7 @@ If you've specified `oracle-se` or `oracle-se1` as the database engine, you can 
 
 `EngineVersion`  <a name="cfn-rds-dbinstance-engineversion"></a>
 The version number of the database engine that the DB instance uses\.  
-To prevent automatic upgrades, be sure to specify the full version number \(for example, 5\.6\.13\)\. If the default version for the database engine changes and you specify only the major version \(for example, 5\.6\), your DB instance will be upgraded to use the new default version\. Please note that the default version is not always the latest version available and may be a few minor versions behind\.
+To prevent automatic upgrades, be sure to specify the full version number \(for example, 5\.6\.13\)\. If the default version for the database engine changes and you specify only the major version \(for example, 5\.6\), your DB instance will be upgraded to use the new default version\. Note that the default version is not necessarily the latest supported version\. 
 *Required*: No  
 *Type*: String  
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
@@ -451,7 +450,7 @@ This property applies when AWS CloudFormation initially creates the DB instance\
 The number of CPU cores and the number of threads per core for the DB instance class of the DB instance\.  
 *Required*: No  
 *Type*: List of [ProcessorFeature](aws-properties-rds-dbinstance-processorfeature.md) property types  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. Updating this property results in a reboot of the database, and will incur a small down time\.
 
 `PromotionTier`  <a name="cfn-rds-dbinstance-promotiontier"></a>
 A value that specifies the order in which an Aurora Replica is promoted to the primary instance after a failure of the existing primary instance\. For more information, see [Fault Tolerance for an Aurora DB Cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.FaultTolerance) in the *Amazon Aurora User Guide*\.   
@@ -513,6 +512,12 @@ The time zone of the DB instance, which you can specify to match the time zone o
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
+`UseDefaultProcessorFeatures`  <a name="cfn-rds-dbinstance-usedefaultprocessorfeatures"></a>
+Specifies that the DB instance class of the DB instance uses its default processor features\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. Updating this property results in a reboot of the database, and will incur a small down time\.
+
 `VPCSecurityGroups`  <a name="cfn-rds-dbinstance-vpcsecuritygroups"></a>
 A list of the VPC security group IDs to assign to the DB instance\. The list can include both the physical IDs of existing VPC security groups and references to [AWS::EC2::SecurityGroup](aws-properties-ec2-security-group.md) resources created in the template\.  
 If you set `VPCSecurityGroups`, you must not set [DBSecurityGroups](#cfn-rds-dbinstance-dbsecuritygroups), and vice versa\.  
@@ -527,7 +532,7 @@ You can migrate a DB instance in your stack from an RDS DB security group to a V
 
 ## Updating and Deleting AWS::RDS::DBInstance Resources<a name="updating-and-deleting-dbinstance-resources"></a>
 
-### Updating DB Instances<a name="w4ab1c21c10d171c22c13b2"></a>
+### Updating DB Instances<a name="w13ab1c21c10d192c22c13b2"></a>
 
 When properties labeled "*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)" are updated, AWS CloudFormation first creates a replacement DB instance, then changes references from other dependent resources to point to the replacement DB instance, and finally deletes the old DB instance\.
 
@@ -540,7 +545,7 @@ Update the stack\.
 
 For more information about updating other properties of this resource, see [ModifyDBInstance](https://docs.aws.amazon.com//AmazonRDS/latest/APIReference/API_ModifyDBInstance.html)\. For more information about updating stacks, see [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)\.
 
-### Deleting DB Instances<a name="w4ab1c21c10d171c22c13b4"></a>
+### Deleting DB Instances<a name="w13ab1c21c10d192c22c13b4"></a>
 
 You can set a deletion policy for your DB instance to control how AWS CloudFormation handles the instance when the stack is deleted\. For Amazon RDS DB instances, you can choose to *retain* the instance, to *delete* the instance, or to *create a snapshot* of the instance\. The default AWS CloudFormation behavior depends on the `DBClusterIdentifier` property:
 + For `AWS::RDS::DBInstance` resources that don't specify the `DBClusterIdentifier` property, AWS CloudFormation saves a snapshot of the DB instance\.

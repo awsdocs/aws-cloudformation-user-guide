@@ -40,7 +40,7 @@ Resources:
     DeletionPolicy: Retain
 ```
 
-## DeletionPolicy Options<a name="w4ab1c21c19c11c21"></a>
+## DeletionPolicy Options<a name="aws-attribute-deletionpolicy-options"></a>
 
 Delete  
 AWS CloudFormation deletes the resource and all its content if applicable during stack deletion\. You can add this deletion policy to any resource type\. By default, if you don't specify a DeletionPolicy, AWS CloudFormation deletes your resources\. However, be aware of the following considerations:  
@@ -56,10 +56,11 @@ For update operations, the following considerations apply:
 
 Snapshot  
 For resources that support snapshots, AWS CloudFormation creates a snapshot for the resource before deleting it\. Note that when AWS CloudFormation completes the stack deletion, the stack will be in the `Delete_Complete` state; however, the snapshots that are created with this policy continue to exist and continue to incur applicable charges until you delete those snapshots\.  
-The following resources support snapshots:  
-+ `AWS::EC2::Volume`
-+ `AWS::ElastiCache::CacheCluster`
-+ `AWS::ElastiCache::ReplicationGroup`
-+ `AWS::RDS::DBInstance`
-+ `AWS::RDS::DBCluster`
-+ `AWS::Redshift::Cluster`
+Resources that support snapshots include:  
++ `[AWS::EC2::Volume](aws-properties-ec2-ebs-volume.md)`
++ `[AWS::ElastiCache::CacheCluster](aws-properties-elasticache-cache-cluster.md)`
++ `[AWS::ElastiCache::ReplicationGroup](aws-resource-elasticache-replicationgroup.md)`
++ `[AWS::Neptune::DBCluster](aws-resource-neptune-dbcluster.md)`
++ `[AWS::RDS::DBCluster](aws-resource-rds-dbcluster.md)`
++ `[AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)`
++ `[AWS::Redshift::Cluster](aws-resource-redshift-cluster.md)`

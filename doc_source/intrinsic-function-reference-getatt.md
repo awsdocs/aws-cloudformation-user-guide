@@ -91,15 +91,13 @@ The following example template returns the `SourceSecurityGroup.OwnerAlias` and 
                         "SourceSecurityGroupOwnerId": {
                             "Fn::GetAtt": [
                                 "myELB",
-                                "SourceSecurityGroup",
-                                "OwnerAlias"
+                                "SourceSecurityGroup.OwnerAlias"
                             ]
                         },
                         "SourceSecurityGroupName": {
                             "Fn::GetAtt": [
                                 "myELB",
-                                "SourceSecurityGroup",
-                                "GroupName"
+                                "SourceSecurityGroup.GroupName"
                             ]
                         }
                     }
@@ -162,6 +160,7 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 |  [AWS::CloudFormation::WaitCondition](aws-properties-waitcondition.md)  |  `Data`  |  A JSON\-format string containing the `UniqueId` and `Data` values from the wait condition signal\(s\) for the specified wait condition\. For more information about wait condition signals, see [Wait Condition Signal JSON Format](using-cfn-waitcondition.md#using-cfn-waitcondition-signaljson)\. Example of a wait condition with two signals: <pre>{"Signal1":"Step 1 complete.","Signal2":"Step 2 complete."}</pre>  | 
 |  [AWS::CloudFormation::Stack](aws-properties-stack.md)  |  `Outputs.NestedStackOutputName`  |  The output value from the nested stack that you specified, where *NestedStackOutputName* is the name of the output value\.  | 
 |  [AWS::CloudFront::Distribution](aws-resource-cloudfront-distribution.md)  |  `DomainName`  |  Example: `d2fadu0nynjpfn.cloudfront.net`  | 
+|  [AWS::CloudFront::CloudFrontOriginAccessIdentity](aws-resource-cloudfront-cloudfrontoriginaccessidentity.md)  |  `S3CanonicalUserId`  |  Example: `b970b42360b81c8ddbd79d2f5df0069ba9033c8a79655752abe380cd6d63ba8bcf23384d568fcf89fc49700b5e11a0fd`  | 
 |  [AWS::CloudTrail::Trail](aws-resource-cloudtrail-trail.md)  |  `Arn`  |  Example: `arn:aws:cloudtrail:us-east-2:123456789012:trail/myCloudTrail`  | 
 |  [AWS::CloudTrail::Trail](aws-resource-cloudtrail-trail.md)  |  `SnsTopicArn`  |  The Amazon Resource Name \(ARN\) of the Amazon SNS topic that is associated with the CloudTrail trail\. Example: `arn:aws:sns:us-east-2:123456789012:mySNSTopic`  | 
 |  [AWS::CloudWatch::Alarm](aws-properties-cw-alarm.md)  |  `Arn`  |  Example: `arn:aws:cloudwatch:us-east-2:123456789012:alarm:myCloudWatchAlarm-CPUAlarm-UXMMZK36R55Z`  | 
@@ -180,6 +179,12 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 |  [AWS::DirectoryService::MicrosoftAD](aws-resource-directoryservice-microsoftad.md) and [AWS::DirectoryService::SimpleAD](aws-resource-directoryservice-simplead.md)  |  `Alias`  |  The alias for a directory\. Examples: `d-12373a053a` or `alias4-mydirectory-12345abcgmzsk` \(if you have the `CreateAlias` property set to true\)  | 
 |  [AWS::DirectoryService::MicrosoftAD](aws-resource-directoryservice-microsoftad.md) and [AWS::DirectoryService::SimpleAD](aws-resource-directoryservice-simplead.md)  |  `DnsIpAddresses`  |  The IP addresses of the DNS servers for the directory\. Example: `[ "192.0.2.1", "192.0.2.2" ]`  | 
 |  [AWS::DLM::LifecyclePolicy](aws-resource-dlm-lifecyclepolicy.md)  |  `Arn`  |  Example: `arn:aws:dlm:us-west-2:012345678912:policy/policy-0123456789abcdef`  | 
+|  [AWS::DocDB::DBCluster](aws-resource-docdb-dbcluster.md)  |  `ClusterResourceId`  |  The resource id for the DB cluster\. The cluster ID uniquely identifies the cluster and is used in things like IAM authentication policies\. Example: `cluster-ABCD1234EFGH5678IJKL90MNOP`  | 
+|  [AWS::DocDB::DBCluster](aws-resource-docdb-dbcluster.md)  |  `Endpoint`  |  The connection endpoint for the DB cluster\. Example: `sample-cluster.cluster-abcdefghijkl.us-east-1.rds.amazonaws.com`  | 
+|  [AWS::DocDB::DBCluster](aws-resource-docdb-dbcluster.md)  |  `Port`  |  The port number on which the DB cluster accepts connections\. Example: `27017`  | 
+|  [AWS::DocDB::DBCluster](aws-resource-docdb-dbcluster.md)  |  `ReadEndpoint`  |  The read\-only connection endpoint for the cluster\. Example: `"sample-cluster.cluster-ro-abcdefghijkl.us-east-1.rds.amazonaws.com`  | 
+|  [AWS::DocDB::DBInstance](aws-resource-docdb-dbinstance.md)  |  `Endpoint`  |  The connection endpoint for the DB instance\. Example: `sample-instance.abcdefghijkl.us-east-1.rds.amazonaws.com`  | 
+|  [AWS::DocDB::DBInstance](aws-resource-docdb-dbinstance.md)  |  `Port`  |  The port number on which the DB cluster accepts connections\. Example: `27017`  | 
 |  [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md)  |  `Arn`  |  Example: `arn:aws:dynamodb:us-east-2:123456789012:table/myDynamoDBTable`  | 
 |  [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md)  |  `StreamArn`  |  The Amazon Resource Name \(ARN\) of the DynamoDB table stream\. To use this attribute, you must specify the DynamoDB table `StreamSpecification` property\. Example: `arn:aws:dynamodb:us-east-2:123456789012:table/testddbstack-myDynamoDBTable-012A1SL7SMP5Q/stream/2015-11-30T20:10:00.000`  | 
 |  [AWS::EC2::EIP](aws-properties-ec2-eip.md)  |  `AllocationId`  |  The ID that AWS assigns to represent the allocation of the address for use with Amazon VPC\. It is returned only for VPC Elastic IP addresses\. Example: `eipalloc-5723d13e`  | 
@@ -191,6 +196,7 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 |  [AWS::EC2::NetworkInterface](aws-resource-ec2-network-interface.md)  |  `PrimaryPrivateIpAddress`  |  The primary private IP address of the network interface that you specified\. Example: `10.0.0.192`  | 
 |  [AWS::EC2::NetworkInterface](aws-resource-ec2-network-interface.md)  |  `SecondaryPrivateIpAddresses`  |  The secondary private IP addresses of the network interface that you specified\. Example: `["10.0.0.161", "10.0.0.162", "10.0.0.163"]`  | 
 |  [AWS::EC2::SecurityGroup](aws-properties-ec2-security-group.md)  |  `GroupId`  |  The group ID of the specified security group\. Example: `sg-94b3a1f6`  | 
+|  [AWS::EC2::SecurityGroup](aws-properties-ec2-security-group.md)  |  `VpcId`  |  The ID of the VPC\. Example: `vpc-3325caf2`  | 
 |  [AWS::EC2::Subnet](aws-resource-ec2-subnet.md)  |  `AvailabilityZone`  |  The Availability Zone of the subnet\. Example: `us-east-1a`  | 
 |  [AWS::EC2::Subnet](aws-resource-ec2-subnet.md)  |  `Ipv6CidrBlocks`  |  A list of IPv6 CIDR blocks that are associated with the subnet\. Example: `[ 2001:db8:1234:1a00::/64 ]`  | 
 |  [AWS::EC2::Subnet](aws-resource-ec2-subnet.md)  |  `NetworkAclAssociationId`  |  The ID of the network ACL that is associated with the subnet's VPC\. Example: `acl-5fb85d36`  | 
@@ -270,6 +276,9 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 |  [AWS::OpsWorks::Instance](aws-resource-opsworks-instance.md)  |  `PublicDnsName`  |  The public DNS name of an AWS OpsWorks instance\.  | 
 |  [AWS::OpsWorks::Instance](aws-resource-opsworks-instance.md)  |  `PublicIp`  |  The public IP address of an AWS OpsWorks instance\.  To use this attribute, the AWS OpsWorks instance must be in an AWS OpsWorks layer that auto\-assigns public IP addresses\.  Example: `192.0.2.0`  | 
 |  [AWS::OpsWorks::UserProfile](aws-resource-opsworks-userprofile.md)  |  `SshUserName`  |  The SSH user name of an AWS OpsWorks instance\.  | 
+|  [AWS::OpsWorksCM::Server](aws-resource-opsworkscm-server.md)  |  `Arn`  |  Example: `arn:aws:OpsWorksCM:us-east-1:123456789012:server/server-a1bzhi`  | 
+|  [AWS::OpsWorksCM::Server](aws-resource-opsworkscm-server.md)  |  `Endpoint`  |  Example: `myserver-asdfghjkl.us-east-1.opsworks.io`  | 
+|  [AWS::RAM::ResourceShare](aws-resource-ram-resourceshare.md)  |  `Arn`  |  The Amazon Resource Name \(ARN\) of the resource share\. Example: `arn:aws:ram:us-east-1:123456789012:resource-share/12345678-1234-1234-1234-12345678`  | 
 |  [AWS::Redshift::Cluster](aws-resource-redshift-cluster.md)  |  `Endpoint.Address`  |  The connection endpoint for the cluster\. Example: `examplecluster.cg034hpkmmjt.``us-east-2``.redshift.amazonaws.com`  | 
 |  [AWS::Redshift::Cluster](aws-resource-redshift-cluster.md)  |  `Endpoint.Port`  |  The connection port for the cluster\. Example: `5439`  | 
 | [AWS::RDS::DBCluster](aws-resource-rds-dbcluster.md) |  `Endpoint.Address`  |  The connection endpoint for the DB cluster\. Example: `mystack-mydbcluster-1apw1j4phylrk.cg034hpkmmjt.``us-east-2``.rds.amazonaws.com`  | 
@@ -277,6 +286,11 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 |  [AWS::RDS::DBCluster](aws-resource-rds-dbcluster.md)  |  `ReadEndpoint.Address`  |  The reader endpoint for the DB cluster\. Example: `mystack-mydbcluster-ro-1apw1j4phylrk.cg034hpkmmjt.``us-east-2``.rds.amazonaws.com`  | 
 |  [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)  |  `Endpoint.Address`  |  The connection endpoint for the database\. Example: `mystack-mydb-1apw1j4phylrk.cg034hpkmmjt.``us-east-2``.rds.amazonaws.com`  | 
 |  [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)  |  `Endpoint.Port`  |  The port number on which the database accepts connections\. Example: `3306`  | 
+|  [AWS::RoboMaker::Fleet](aws-resource-robomaker-fleet.md)  |  `Arn`  |  xxx Example: `xxx`  | 
+|  [AWS::RoboMaker::RobotApplication](aws-resource-robomaker-robotapplication.md)  |  `Arn`  |  xxx Example: `xxx`  | 
+|  [AWS::RoboMaker::RobotApplication](aws-resource-robomaker-robotapplication.md)  |  `CurrentRevisionId`  |  xxx Example: `xxx`  | 
+|  [AWS::RoboMaker::SimulationApplication](aws-resource-robomaker-simulationapplication.md)  |  `Arn`  |  xxx Example: `xxx`  | 
+|  [AWS::RoboMaker::SimulationApplication](aws-resource-robomaker-simulationapplication.md)  |  `CurrentRevisionId`  |  xxx Example: `xxx`  | 
 |  [AWS::Route53::HostedZone](aws-resource-route53-hostedzone.md)  |  `NameServers`  |  The set of name servers for the specific hosted zone\. Example: `ns1.example.com` This attribute is not supported for private hosted zones\.  | 
 |  [AWS::Route53Resolver::ResolverEndpoint](aws-resource-route53resolver-resolverendpoint.md)  |  `Arn`  |  The ARN for the inbound or outbound endpoint\. Example: `arn:aws:route53resolver:us-east-2:123456789012:resolver-endpoint/rslvr-out-fdc049932dexample`  | 
 |  [AWS::Route53Resolver::ResolverEndpoint](aws-resource-route53resolver-resolverendpoint.md)  |  `Direction`  |  Whether this is an inbound or outbound endpoint\. Example: `INBOUND`  | 
@@ -289,6 +303,10 @@ You can retrieve the following attributes using `Fn::GetAtt`\.
 |  [AWS::Route53Resolver::ResolverRule](aws-resource-route53resolver-resolverrule.md)  |  `ResolverEndpointId`  |  The ID of the endpoint that the rule is associated with\. Example: `rslvr-out-fdc049932dexample`  | 
 |  [AWS::Route53Resolver::ResolverRule](aws-resource-route53resolver-resolverrule.md)  |  `ResolverRuleId`  |  The ID that Resolver assigned to the rule when you created it\. Example: `rslvr-rr-5328a0899aexample`  | 
 |  [AWS::Route53Resolver::ResolverRule](aws-resource-route53resolver-resolverrule.md)  |  `TargetIps`  |  The IPv4 IP addresses that you want Resolver to forward DNS queries to\. Example: `192.0.2.44`  | 
+|  [AWS::Route53Resolver::ResolverRuleAssociation](aws-resource-route53resolver-resolverruleassociation.md)  |  `Name`  |  The name of an association between a resolver rule and a VPC\.  Example: `test.example.com in beta VPC`  | 
+|  [AWS::Route53Resolver::ResolverRuleAssociation](aws-resource-route53resolver-resolverruleassociation.md)  |  `ResolverRuleAssociationId`  |  The ID of the resolver rule association that you want to get information about\. Example: `rslvr-rrassoc-97242eaf88example`  | 
+|  [AWS::Route53Resolver::ResolverRuleAssociation](aws-resource-route53resolver-resolverruleassociation.md)  |  `ResolverRuleId`  |  The ID of the resolver rule that you associated with the VPC that is specified by `VPCId`\. Example: `rslvr-rr-5328a0899example`  | 
+|  [AWS::Route53Resolver::ResolverRuleAssociation](aws-resource-route53resolver-resolverruleassociation.md)  |  `VPCId`  |  The ID of the VPC that you associated the resolver rule with\. Example: `vpc-03cf94c75cexample`  | 
 |  [AWS::S3::Bucket](aws-properties-s3-bucket.md)  |  `Arn`  |  Example: `arn:aws:s3:::mybucket`  | 
 |  [AWS::S3::Bucket](aws-properties-s3-bucket.md)  |  `DomainName`  |  The DNS name of the specified bucket\. Example: `mystack-mybucket-kdwwxmddtr2g.s3.amazonaws.com`  | 
 |  [AWS::S3::Bucket](aws-properties-s3-bucket.md)  |  `DualStackDomainName`  |  The IPv6 DNS name of the specified bucket\. Example: `mystack-mybucket-kdwwxmddtr2g.s3.dualstack.``us-east-2``.amazonaws.com/`  | 

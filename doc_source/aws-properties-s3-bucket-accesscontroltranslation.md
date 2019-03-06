@@ -2,7 +2,7 @@
 
 <a name="aws-properties-s3-bucket-accesscontroltranslation-description"></a>The `AccessControlTranslation` property type specifies replica ownership of the AWS account that owns the destination bucket\.
 
-<a name="aws-properties-s3-bucket-accesscontroltranslation-inheritance"></a> `AccessControlTranslation` is a property of the [Amazon S3 Bucket ReplicationDestination](aws-properties-s3-bucket-replicationconfiguration-rules-destination.md) property type\.
+<a name="aws-properties-s3-bucket-accesscontroltranslation-inheritance"></a> `AccessControlTranslation` is a property of the [ReplicationDestination](aws-properties-s3-bucket-replicationconfiguration-rules-destination.md) property type\.
 
 ## Syntax<a name="aws-properties-s3-bucket-accesscontroltranslation-syntax"></a>
 

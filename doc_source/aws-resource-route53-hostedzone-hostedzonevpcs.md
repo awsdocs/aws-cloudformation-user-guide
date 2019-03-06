@@ -2,7 +2,7 @@
 
 The `HostedZoneVPCs` property is part of the [AWS::Route53::HostedZone](aws-resource-route53-hostedzone.md) resource that specifies the VPCs to associate with the hosted zone\.
 
-## Syntax<a name="w4ab1c21c10d177c18c23b5"></a>
+## Syntax<a name="w13ab1c21c10d201c18c23b5"></a>
 
 ### JSON<a name="aws-properties-route53-hostedzone-hostedzonevpcs-syntax.json"></a>
 
@@ -20,7 +20,7 @@ The `HostedZoneVPCs` property is part of the [AWS::Route53::HostedZone](aws-reso
 [VPCRegion](#cfn-route53-hostedzone-hostedzonevpcs-vpcregion): String
 ```
 
-## Properties<a name="w4ab1c21c10d177c18c23b7"></a>
+## Properties<a name="w13ab1c21c10d201c18c23b7"></a>
 
 `VPCId`  <a name="cfn-route53-hostedzone-hostedzonevpcs-vpcid"></a>
 The ID of the Amazon VPC that you want to associate with the hosted zone\.  

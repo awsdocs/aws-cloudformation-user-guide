@@ -4,9 +4,9 @@ The `AWS::ApiGateway::Authorizer` resource creates an authorization layer that A
 
 **Topics**
 + [Syntax](#aws-resource-apigateway-authorizer-syntax)
-+ [Properties](#w4ab1c21c10c20c22b9)
-+ [Return Value](#w4ab1c21c10c20c22c11)
-+ [Examples](#w4ab1c21c10c20c22c13)
++ [Properties](#w13ab1c21c10c20c21b9)
++ [Return Value](#w13ab1c21c10c20c21c11)
++ [Examples](#w13ab1c21c10c20c21c13)
 
 ## Syntax<a name="aws-resource-apigateway-authorizer-syntax"></a>
 
@@ -50,7 +50,7 @@ Properties:
   [Type](#cfn-apigateway-authorizer-type): String
 ```
 
-## Properties<a name="w4ab1c21c10c20c22b9"></a>
+## Properties<a name="w13ab1c21c10c20c21b9"></a>
 
 For more information, including valid values, constraints, and examples of specifying each property, see [Authorizer](https://docs.aws.amazon.com/apigateway/api-reference/resource/authorizer) in the *API Gateway API Reference*\.
 
@@ -119,15 +119,15 @@ The type of authorizer\. Valid values include:
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10c20c22c11"></a>
+## Return Value<a name="w13ab1c21c10c20c21c11"></a>
 
-### Ref<a name="w4ab1c21c10c20c22c11b2"></a>
+### Ref<a name="w13ab1c21c10c20c21c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the authorizer's ID, such as `abcde1`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w4ab1c21c10c20c22c13"></a>
+## Examples<a name="w13ab1c21c10c20c21c13"></a>
 
 The following examples create a custom authorizer that is an AWS Lambda function\.
 

@@ -1,8 +1,8 @@
 # CloudFront Distribution S3OriginConfig<a name="aws-properties-cloudfront-distribution-s3originconfig"></a>
 
-`S3OriginConfig` is a property of the [Origin](aws-properties-cloudfront-distribution-origin.md) property that describes the Amazon Simple Storage Service \(S3\) origin to associate with an Amazon CloudFront origin\.
+`S3OriginConfig` is a subproperty of the [Origin](aws-properties-cloudfront-distribution-origin.md) property that describes the Amazon Simple Storage Service \(S3\) origin to associate with an Amazon CloudFront origin\.
 
-## Syntax<a name="w4ab1c21c10c54c14c79b5"></a>
+## Syntax<a name="w13ab1c21c10c60c14c79b5"></a>
 
 ### JSON<a name="aws-properties-cloudfront-distribution-s3originconfig-syntax.json"></a>
 
@@ -18,7 +18,7 @@
 [OriginAccessIdentity](#cfn-cloudfront-distribution-s3originconfig-originaccessidentity): String
 ```
 
-## Properties<a name="w4ab1c21c10c54c14c79b7"></a>
+## Properties<a name="w13ab1c21c10c60c14c79b7"></a>
 
 **Note**  
 For more information about the constraints and valid values of each property, see the [S3OriginConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_S3OriginConfig.html) data type in the *Amazon CloudFront API Reference*\.

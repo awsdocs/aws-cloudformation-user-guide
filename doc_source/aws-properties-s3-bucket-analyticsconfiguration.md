@@ -48,12 +48,12 @@ The prefix that an object must have to be included in the analytics results\.
 `StorageClassAnalysis`  <a name="cfn-s3-bucket-analyticsconfiguration-storageclassanalysis"></a>
 Contains data related to access patterns to be collected and made available to analyze the tradeoffs between different storage classes\.  
  *Required*: Yes  
- *Type*: [Amazon S3 Bucket StorageClassAnalysis](aws-properties-s3-bucket-storageclassanalysis.md)  
+ *Type*: [StorageClassAnalysis](aws-properties-s3-bucket-storageclassanalysis.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `TagFilters`  <a name="cfn-s3-bucket-analyticsconfiguration-tagfilters"></a>
 The tags to use when evaluating an analytics filter\.  
 The analytics only includes objects that meet the filter's criteria\. If no filter is speciified, all of the contents of the bucket are included in the analysis\.  
  *Required*: No  
- *Type*: List of [Amazon S3 Bucket TagFilter](aws-properties-s3-bucket-tagfilter.md)  
+ *Type*: List of [TagFilter](aws-properties-s3-bucket-tagfilter.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

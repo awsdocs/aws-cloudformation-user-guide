@@ -2,7 +2,7 @@
 
 Describes the scaling thresholds for the [AWS OpsWorks LoadBasedAutoScaling Type](aws-properties-opsworks-layer-loadbasedautoscaling.md) property\. For more information, see [AutoScalingThresholds](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_AutoScalingThresholds.html) in the *AWS OpsWorks Stacks API Reference*\.
 
-## Syntax<a name="w4ab1c21c10d168c29c17b5"></a>
+## Syntax<a name="w13ab1c21c10d183c29c17b5"></a>
 
 ### JSON<a name="aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-syntax.json"></a>
 
@@ -28,7 +28,7 @@ Describes the scaling thresholds for the [AWS OpsWorks LoadBasedAutoScaling Type
 [ThresholdsWaitTime](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-thresholdwaittime): Integer
 ```
 
-## Properties<a name="w4ab1c21c10d168c29c17b7"></a>
+## Properties<a name="w13ab1c21c10d183c29c17b7"></a>
 
 `CpuThreshold`  <a name="cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-cputhreshold"></a>
 The percentage of CPU utilization that triggers the starting or stopping of instances \(scaling\)\.  

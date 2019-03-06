@@ -47,7 +47,7 @@ Properties:
     - Resource Tag
 ```
 
-## Properties<a name="w4ab1c21c10d102c77b7"></a>
+## Properties<a name="w13ab1c21c10d111c77b7"></a>
 
 `Description`  <a name="cfn-awsec2networkinterface-description"></a>
 The description of this network interface\.  
@@ -112,15 +112,15 @@ An arbitrary set of tags \(key–value pairs\) for this network interface\.
 *Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
-## Return Values<a name="w4ab1c21c10d102c77b9"></a>
+## Return Values<a name="w13ab1c21c10d111c77b9"></a>
 
-### Ref<a name="w4ab1c21c10d102c77b9b2"></a>
+### Ref<a name="w13ab1c21c10d111c77b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d102c77b9b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d111c77b9b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -137,7 +137,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
 **Tip**  
 For more NetworkInterface template examples, see [Elastic Network Interface \(ENI\) Template Snippets](quickref-ec2.md#cfn-template-snippets-eni)\.
 
-### Simple Standalone ENI<a name="w4ab1c21c10d102c77c11b4"></a>
+### Simple Standalone ENI<a name="w13ab1c21c10d111c77c11b4"></a>
 
 This is a simple standalone Elastic Network Interface \(ENI\), using all of the available properties\.
 
@@ -183,7 +183,7 @@ Resources:
       PrivateIpAddress: 10.0.0.16
 ```
 
-### ENI on an EC2 instance<a name="w4ab1c21c10d102c77c11b6"></a>
+### ENI on an EC2 instance<a name="w13ab1c21c10d111c77c11b6"></a>
 
 This is an example of an ENI on an EC2 instance\. In this example, one ENI is added to the instance\. If you want to add more than one ENI, you can specify a list for the `NetworkInterface` property\. However, you can specify multiple ENIs only if all the ENIs have just private IP addresses \(no associated public IP address\)\. If you have an ENI with a public IP address, specify it and then use the `AWS::EC2::NetworkInterfaceAttachment` resource to add additional ENIs\.
 
@@ -234,5 +234,5 @@ Ec2Instance:
         Ref: WebServerPort
 ```
 
-## More Info<a name="w4ab1c21c10d102c77c13"></a>
+## More Info<a name="w13ab1c21c10d111c77c13"></a>
 + [NetworkInterface](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_NetworkInterface.html) in the *Amazon Elastic Compute Cloud API Reference*

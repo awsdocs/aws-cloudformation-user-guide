@@ -2,7 +2,7 @@
 
 `MountPoints` is a property of the [Amazon Elastic Container Service TaskDefinition ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md) property that specifies the mount points for data volumes in a container\.
 
-## Syntax<a name="w4ab1c21c10d108c21c57b5"></a>
+## Syntax<a name="w13ab1c21c10d117c21c57b5"></a>
 
 ### JSON<a name="aws-properties-ecs-taskdefinition-containerdefinitions-mountpoints-syntax.json"></a>
 
@@ -22,7 +22,7 @@
 [ReadOnly](#cfn-ecs-taskdefinition-containerdefinition-mountpoints-readonly): Boolean
 ```
 
-## Properties<a name="w4ab1c21c10d108c21c57b7"></a>
+## Properties<a name="w13ab1c21c10d117c21c57b7"></a>
 
 For more information about each property, see [Task Definition Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html) in the *Amazon Elastic Container Service Developer Guide*\.
 

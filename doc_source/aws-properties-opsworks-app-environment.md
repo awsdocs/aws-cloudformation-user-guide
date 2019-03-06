@@ -2,7 +2,7 @@
 
 `Environment` is a property of the [AWS::OpsWorks::App](aws-resource-opsworks-app.md) resource that specifies the environment variable to associate with the AWS OpsWorks app\.
 
-## Syntax<a name="w4ab1c21c10d168c14c21b5"></a>
+## Syntax<a name="w13ab1c21c10d183c14c21b5"></a>
 
 ### JSON<a name="aws-properties-opsworks-app-environment-syntax.json"></a>
 
@@ -22,7 +22,7 @@
 [Value](#cfn-opsworks-app-environment-value): String
 ```
 
-## Properties<a name="w4ab1c21c10d168c14c21b7"></a>
+## Properties<a name="w13ab1c21c10d183c14c21b7"></a>
 
 `Key`  <a name="cfn-opsworks-app-environment-key"></a>
 The name of the environment variable, which can consist of up to 64 characters\. You can use upper and lowercase letters, numbers, and underscores \(\_\), but the name must start with a letter or underscore\.  

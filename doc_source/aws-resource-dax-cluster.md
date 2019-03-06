@@ -4,7 +4,7 @@ Use the `AWS::DAX::Cluster` resource to create a DAX cluster for use with Amazon
 
 For information about creating a DAX cluster, see [Creating a DAX Cluster](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.create-cluster.html) in the *Amazon DynamoDB Developer Guide* and [https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_dax_CreateCluster.html](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_dax_CreateCluster.html) in the *Amazon DynamoDB Developer Guide*\.
 
-## Syntax<a name="w4ab1c21c10c87c14b7"></a>
+## Syntax<a name="w13ab1c21c10c93c14b7"></a>
 
 ### JSON<a name="aws-resource-dax-cluster-syntax.json"></a>
 
@@ -34,20 +34,20 @@ For information about creating a DAX cluster, see [Creating a DAX Cluster](https
 ```
 Type: AWS::DAX::Cluster
 Properties:
-      [AvailabilityZones](#cfn-dax-cluster-availability-zones): [ String, ... ]
-      [ClusterName](#cfn-dax-cluster-cluster-name): String
-      [Description](#cfn-dax-cluster-description): String
-      [IAMRoleARN](#cfn-dax-cluster-iam-role-arn): String
-      [NodeType](#cfn-dax-cluster-node-type): String
-      [NotificationTopicARN](#cfn-dax-cluster-notification-topic-arn): String
-      [ParameterGroupName](#cfn-dax-cluster-parameter-group-name): String
-      [PreferredMaintenanceWindow](#cfn-dax-cluster-preferred-maintenance-window): String
-      [ReplicationFactor](#cfn-dax-cluster-replication-factor): Integer
-      [SecurityGroupIds](#cfn-dax-cluster-security-group-ids): [ String, ... ]
-      [SSESpecification](#cfn-dax-cluster-ssespecification): 
-        [*SSESpecification*](aws-properties-daxservice-cluster-ssespecification.md)
-      [SubnetGroupName](#cfn-dax-cluster-subnet-group-name): String
-      [Tags](#cfn-dax-cluster-tags): { String:String, ... }
+  [AvailabilityZones](#cfn-dax-cluster-availability-zones): [ String, ... ]
+  [ClusterName](#cfn-dax-cluster-cluster-name): String
+  [Description](#cfn-dax-cluster-description): String
+  [IAMRoleARN](#cfn-dax-cluster-iam-role-arn): String
+  [NodeType](#cfn-dax-cluster-node-type): String
+  [NotificationTopicARN](#cfn-dax-cluster-notification-topic-arn): String
+  [ParameterGroupName](#cfn-dax-cluster-parameter-group-name): String
+  [PreferredMaintenanceWindow](#cfn-dax-cluster-preferred-maintenance-window): String
+  [ReplicationFactor](#cfn-dax-cluster-replication-factor): Integer
+  [SecurityGroupIds](#cfn-dax-cluster-security-group-ids): [ String, ... ]
+  [SSESpecification](#cfn-dax-cluster-ssespecification): 
+    [*SSESpecification*](aws-properties-daxservice-cluster-ssespecification.md)
+  [SubnetGroupName](#cfn-dax-cluster-subnet-group-name): String
+  [Tags](#cfn-dax-cluster-tags): { String:String, ... }
 ```
 
 ## Properties<a name="aws-resource-dax-cluster-properties"></a>
@@ -134,7 +134,7 @@ Whether server\-side encryption is enabled or not\.
 `SubnetGroupName`  <a name="cfn-dax-cluster-subnet-group-name"></a>
 The name of the subnet group to be used for the replication group\.  
 DAX clusters can only run in an Amazon VPC environment\. All of the subnets that you specify in a subnet group must exist in the same VPC\.
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: Updates are not supported\.
 

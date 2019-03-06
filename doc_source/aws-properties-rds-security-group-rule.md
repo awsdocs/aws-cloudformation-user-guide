@@ -2,7 +2,7 @@
 
 The Amazon RDS security group rule is an embedded property of the [AWS::RDS::DBSecurityGroup](aws-properties-rds-security-group.md) type\.
 
-## Syntax<a name="w4ab1c21c10d171c32c18b5"></a>
+## Syntax<a name="w13ab1c21c10d192c32c18b5"></a>
 
 ### JSON<a name="aws-properties-rds-security-group-rule-syntax.json"></a>
 

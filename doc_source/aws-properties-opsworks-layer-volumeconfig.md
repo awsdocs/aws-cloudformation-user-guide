@@ -2,7 +2,7 @@
 
 Describes the Amazon EBS volumes for the [AWS::OpsWorks::Layer](aws-resource-opsworks-layer.md) resource type\.
 
-## Syntax<a name="w4ab1c21c10d168c29c37b5"></a>
+## Syntax<a name="w13ab1c21c10d183c29c37b5"></a>
 
 ### JSON<a name="aws-properties-opsworks-layer-volumeconfig-syntax.json"></a>
 
@@ -30,7 +30,7 @@ Describes the Amazon EBS volumes for the [AWS::OpsWorks::Layer](aws-resource-ops
 [VolumeType](#cfn-opsworks-layer-volconfig-volumetype): String
 ```
 
-## Properties<a name="w4ab1c21c10d168c29c37b7"></a>
+## Properties<a name="w13ab1c21c10d183c29c37b7"></a>
 
 `Encrypted`  <a name="cfn-opsworks-layer-volumeconfiguration-encrypted"></a>
 Specifies whether an Amazon EBS volume is encrypted\.   

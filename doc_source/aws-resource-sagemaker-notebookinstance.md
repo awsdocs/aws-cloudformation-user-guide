@@ -1,12 +1,6 @@
 # AWS::SageMaker::NotebookInstance<a name="aws-resource-sagemaker-notebookinstance"></a>
 
-The `AWS::SageMaker::NotebookInstance` resource Creates an Amazon SageMaker notebook instance\. A notebook instance is a machine learning \(ML\) compute instance running on a Jupyter notebook\. For more information, see [Using Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi.html) in the *Amazon SageMaker Developer Guide*\. 
-
-**Topics**
-+ [Syntax](#aws-resource-sagemaker-notebookinstance-syntax)
-+ [Properties](#aws-resource-sagemaker-notebookinstance-properties)
-+ [Return Values](#aws-resource-sagemaker-notebookinstance-returnvalues)
-+ [Examples](#aws-resource-sagemaker-notebookinstance-examples)
+The `AWS::SageMaker::NotebookInstance` resource creates an Amazon SageMaker notebook instance\. A notebook instance is a machine learning \(ML\) compute instance running on a Jupyter notebook\. For more information, see [Using Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi.html) in the *Amazon SageMaker Developer Guide*\. 
 
 ## Syntax<a name="aws-resource-sagemaker-notebookinstance-syntax"></a>
 
@@ -18,15 +12,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::NotebookInstance",
   "Properties" : {
-    "[KmsKeyId](#cfn-sagemaker-notebookinstance-kmskeyid)" : String,
     "[DirectInternetAccess](#cfn-sagemaker-notebookinstance-directinternetaccess)" : String,
-    "[SubnetId](#cfn-sagemaker-notebookinstance-subnetid)" : String,
-    "[NotebookInstanceName](#cfn-sagemaker-notebookinstance-notebookinstancename)" : String,
     "[InstanceType](#cfn-sagemaker-notebookinstance-instancetype)" : String,
+    "[KmsKeyId](#cfn-sagemaker-notebookinstance-kmskeyid)" : String,
     "[LifecycleConfigName](#cfn-sagemaker-notebookinstance-lifecycleconfigname)" : String,
-    "[SecurityGroupIds](#cfn-sagemaker-notebookinstance-securitygroupids)" : [ String, ... ],
+    "[NotebookInstanceName](#cfn-sagemaker-notebookinstance-notebookinstancename)" : String,
     "[RoleArn](#cfn-sagemaker-notebookinstance-rolearn)" : String,
-    "[Tags](#cfn-sagemaker-notebookinstance-tags)" : [ [*Tag*](aws-properties-resource-tags.md), ... ]
+    "[SecurityGroupIds](#cfn-sagemaker-notebookinstance-securitygroupids)" : [ String, ... ],
+    "[SubnetId](#cfn-sagemaker-notebookinstance-subnetid)" : String,
+    "[Tags](#cfn-sagemaker-notebookinstance-tags)" : [ [*Tag*](aws-properties-resource-tags.md), ... ],
+    "[VolumeSizeInGB](#cfn-sagemaker-notebookinstance-volumesizeingb)" : Integer
   }
 }
 ```
@@ -36,41 +31,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: "AWS::SageMaker::NotebookInstance"
 Properties:
-  [KmsKeyId](#cfn-sagemaker-notebookinstance-kmskeyid): String
   [DirectInternetAccess](#cfn-sagemaker-notebookinstance-directinternetaccess): String
-  [SubnetId](#cfn-sagemaker-notebookinstance-subnetid): String
-  [NotebookInstanceName](#cfn-sagemaker-notebookinstance-notebookinstancename): String
   [InstanceType](#cfn-sagemaker-notebookinstance-instancetype): String
+  [KmsKeyId](#cfn-sagemaker-notebookinstance-kmskeyid): String
   [LifecycleConfigName](#cfn-sagemaker-notebookinstance-lifecycleconfigname): String
+  [NotebookInstanceName](#cfn-sagemaker-notebookinstance-notebookinstancename): String
+  [RoleArn](#cfn-sagemaker-notebookinstance-rolearn): String
   [SecurityGroupIds](#cfn-sagemaker-notebookinstance-securitygroupids): 
     - String
-  [RoleArn](#cfn-sagemaker-notebookinstance-rolearn): String
+  [SubnetId](#cfn-sagemaker-notebookinstance-subnetid): String
   [Tags](#cfn-sagemaker-notebookinstance-tags): 
-    - [*Tag*](aws-properties-resource-tags.md)
+    - [*Tag*](aws-properties-resource-tags.md) 
+  [VolumeSizeInGB](#cfn-sagemaker-notebookinstance-volumesizeingb): Integer
 ```
 
 ## Properties<a name="aws-resource-sagemaker-notebookinstance-properties"></a>
 
-`KmsKeyId`  <a name="cfn-sagemaker-notebookinstance-kmskeyid"></a>
-If you provide a AWS KMS key ID, Amazon SageMaker uses it to encrypt data at rest on the ML storage volume that is attached to your notebook instance\.   
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
-
 `DirectInternetAccess`  <a name="cfn-sagemaker-notebookinstance-directinternetaccess"></a>
 Sets whether Amazon SageMaker provides internet access to the notebook instance\. If you set this to Disabled this notebook instance will be able to access resources only in your VPC, and will not be able to connect to Amazon SageMaker training and endpoint services unless your configure a NAT Gateway in your VPC\. For more information, see [Notebook Instances Are Enabled with Internet Access by Default](sagemaker/latest/dg/appendix-additional-considerations.html#appendix-notebook-and-internet-access)\. You can set the value of this parameter to Disabled only if you set a value for the SubnetId parameter\.   
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
-
-`SubnetId`  <a name="cfn-sagemaker-notebookinstance-subnetid"></a>
-The ID of the subnet in a VPC to which you would like to have a connectivity from your ML compute instance\.   
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
-
-`NotebookInstanceName`  <a name="cfn-sagemaker-notebookinstance-notebookinstancename"></a>
-The name of the notebook instance\.  
  *Required*: No  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
@@ -81,16 +59,22 @@ The type of ML compute instance to launch for the notebook instance\.
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-`LifecycleConfigName`  <a name="cfn-sagemaker-notebookinstance-lifecycleconfigname"></a>
-The name of a lifecycle configuration to associate with the notebook instance\. For information about lifestyle configurations, see [Customize a Notebook Instance](https://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html) in the *Amazon SageMaker Developer Guide*\.  
+`KmsKeyId`  <a name="cfn-sagemaker-notebookinstance-kmskeyid"></a>
+If you provide a AWS KMS key ID, Amazon SageMaker uses it to encrypt data at rest on the ML storage volume that is attached to your notebook instance\.   
  *Required*: No  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-`SecurityGroupIds`  <a name="cfn-sagemaker-notebookinstance-securitygroupids"></a>
-The VPC security group IDs, in the form sg\-xxxxxxxx\. The security groups must be for the same VPC as specified in the subnet\.  
+`LifecycleConfigName`  <a name="cfn-sagemaker-notebookinstance-lifecycleconfigname"></a>
+The name of a lifecycle configuration to associate with the notebook instance\. For information about lifestyle configurations, see [Customize a Notebook Instance](https://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html) in the *Amazon SageMaker Developer Guide*\.  
  *Required*: No  
- *Type*: List of Strings  
+ *Type*: String  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+
+`NotebookInstanceName`  <a name="cfn-sagemaker-notebookinstance-notebookinstancename"></a>
+The name of the notebook instance\.  
+ *Required*: No  
+ *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `RoleArn`  <a name="cfn-sagemaker-notebookinstance-rolearn"></a>
@@ -99,10 +83,28 @@ When you send any requests to AWS resources from the notebook instance, Amazon S
  *Type*:   
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
+`SecurityGroupIds`  <a name="cfn-sagemaker-notebookinstance-securitygroupids"></a>
+The VPC security group IDs, in the form sg\-xxxxxxxx\. The security groups must be for the same VPC as specified in the subnet\.  
+ *Required*: No  
+ *Type*: List of Strings  
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+
+`SubnetId`  <a name="cfn-sagemaker-notebookinstance-subnetid"></a>
+The ID of the subnet in a VPC to which you would like to have a connectivity from your ML compute instance\.   
+ *Required*: No  
+ *Type*: String  
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+
 `Tags`  <a name="cfn-sagemaker-notebookinstance-tags"></a>
 A list of tags to associate with the notebook instance\.  
  *Required*: No  
  *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+
+`VolumeSizeInGB`  <a name="cfn-sagemaker-notebookinstance-volumesizeingb"></a>
+The size in GB of the persisted machine learning storage volume that is provisioned and attached to the Amazon SageMaker notebook instance\.  
+ *Required*: No  
+ *Type*: Integer  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-sagemaker-notebookinstance-returnvalues"></a>

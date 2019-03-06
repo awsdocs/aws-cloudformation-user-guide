@@ -4,8 +4,8 @@ The `AWS::Lambda::Permission` resource associates a policy statement with a spec
 
 **Topics**
 + [Syntax](#aws-resource-lambda-permission-syntax)
-+ [Properties](#w4ab1c21c10d162c33b9)
-+ [Example](#w4ab1c21c10d162c33c11)
++ [Properties](#w13ab1c21c10d177c33b9)
++ [Example](#w13ab1c21c10d177c33c11)
 
 ## Syntax<a name="aws-resource-lambda-permission-syntax"></a>
 
@@ -40,7 +40,7 @@ Properties:
   [SourceArn](#cfn-lambda-permission-sourcearn): String
 ```
 
-## Properties<a name="w4ab1c21c10d162c33b9"></a>
+## Properties<a name="w13ab1c21c10d177c33b9"></a>
 
 For more information and current valid values, see [AddPermission](https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html) in the *AWS Lambda Developer Guide*\.
 
@@ -82,7 +82,7 @@ This property is not supported by all event sources\. For more information, see 
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Example<a name="w4ab1c21c10d162c33c11"></a>
+## Example<a name="w13ab1c21c10d177c33c11"></a>
 
 The following example grants an S3 bucket permission to invoke a Lambda function\.
 

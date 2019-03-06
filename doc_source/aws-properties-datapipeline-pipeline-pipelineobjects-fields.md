@@ -2,7 +2,7 @@
 
 Key\-value pairs that describe the properties of a [data pipeline object](aws-properties-datapipeline-pipeline-pipelineobjects.md)\.
 
-## Syntax<a name="w4ab1c21c10c84c14c21b5"></a>
+## Syntax<a name="w13ab1c21c10c90c14c19b5"></a>
 
 ### JSON<a name="aws-properties-datapipeline-pipeline-pipelineobjects-fields-syntax.json"></a>
 
@@ -22,7 +22,7 @@ Key\-value pairs that describe the properties of a [data pipeline object](aws-pr
 [StringValue](#cfn-datapipeline-pipeline-pipelineobjects-fields-stringvalue): String
 ```
 
-## Properties<a name="w4ab1c21c10c84c14c21b7"></a>
+## Properties<a name="w13ab1c21c10c90c14c19b7"></a>
 
 `Key`  <a name="cfn-datapipeline-pipeline-pipelineobjects-fields-key"></a>
 Specifies the name of a field for a particular object\. To view fields for a data pipeline object, see [Pipeline Object Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html) in the *AWS Data Pipeline Developer Guide*\.  

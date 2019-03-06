@@ -2,7 +2,7 @@
 
 The Amazon EC2 Auto Scaling `BlockDeviceMapping` type is an embedded property of the [AWS::AutoScaling::LaunchConfiguration](aws-properties-as-launchconfig.md) type\.
 
-## Syntax<a name="w4ab1c21c10c36c18c19b5"></a>
+## Syntax<a name="w13ab1c21c10c42c18c19b5"></a>
 
 ### JSON<a name="aws-properties-as-launchconfig-blockdev-mapping-syntax.json"></a>
 
@@ -25,7 +25,7 @@ The Amazon EC2 Auto Scaling `BlockDeviceMapping` type is an embedded property of
 [VirtualName](#cfn-as-launchconfig-blockdev-mapping-virtualname): String
 ```
 
-## Properties<a name="w4ab1c21c10c36c18c19b7"></a>
+## Properties<a name="w13ab1c21c10c42c18c19b7"></a>
 
 **Note**  
  For more information about the constraints and valid values of each property, see [Ebs](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_Ebs.html) in the *Amazon EC2 Auto Scaling API Reference*\. 

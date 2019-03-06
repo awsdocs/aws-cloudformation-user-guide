@@ -2,7 +2,7 @@
 
 `S3Key` is a property of the [Amazon S3 Bucket NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md) property that specifies the key names of Amazon Simple Storage Service \(Amazon S3\) objects for which to send notifications\.
 
-## Syntax<a name="w4ab1c21c10d180c13d138b5"></a>
+## Syntax<a name="w13ab1c21c10d204c13d138b5"></a>
 
 ### JSON<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-syntax.json"></a>
 
@@ -19,9 +19,9 @@
   - Rule
 ```
 
-## Properties<a name="w4ab1c21c10d180c13d138b7"></a>
+## Properties<a name="w13ab1c21c10d204c13d138b7"></a>
 
 `Rules`  <a name="cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules"></a>
 The object key name to filter on and whether to filter on the suffix or prefix of the key name\.  
 *Required*: Yes  
-*Type*: List of [Amazon S3 Bucket FilterRule](aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules.md)
+*Type*: List of [FilterRule](aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules.md)

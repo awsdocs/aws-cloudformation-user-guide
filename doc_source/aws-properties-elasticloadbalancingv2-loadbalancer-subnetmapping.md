@@ -1,10 +1,10 @@
-# Elastic Load Balancing LoadBalancer SubnetMapping<a name="aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping"></a>
+# Elastic Load Balancing V2 SubnetMapping<a name="aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping"></a>
 
-<a name="aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping-description"></a>The `SubnetMapping` property type specifies the ID of a subnet to attach to an Elastic Load Balancing Application or Network Load Balancer\.
+<a name="aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping-description"></a>The `SubnetMapping` property type specifies the ID of a subnet to attach to an Application Load Balancer or a Network Load Balancer\.
 
 <a name="aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping-inheritance"></a> `SubnetMappings` is a property of the [AWS::ElasticLoadBalancingV2::LoadBalancer](aws-resource-elasticloadbalancingv2-loadbalancer.md) resource\. 
 
-## Syntax<a name="w4ab1c21c10d129c25c20b7"></a>
+## Syntax<a name="w13ab1c21c10d138c27c20b7"></a>
 
 ### JSON<a name="aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping-syntax.json"></a>
 
@@ -22,7 +22,7 @@
 [AllocationId](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid): String
 ```
 
-## Properties<a name="w4ab1c21c10d129c25c20b9"></a>
+## Properties<a name="w13ab1c21c10d138c27c20b9"></a>
 
 `SubnetId`  <a name="cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid"></a>
 The ID of the subnet\.  

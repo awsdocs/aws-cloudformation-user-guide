@@ -1,6 +1,6 @@
 # AWS Lambda Template<a name="quickref-lambda"></a>
 
-## <a name="w4ab1c17c23c65b3"></a>
+## <a name="w13ab1c17c23c65b3"></a>
 
 The following template uses an AWS Lambda \(Lambda\) function and custom resource to append a new security group to a list of existing security groups\. This function is useful when you want to build a list of security groups dynamically, so that your list includes both new and existing security groups\. For example, you can pass a list of existing security groups as a parameter value, append the new value to the list, and then associate all your values with an EC2 instance\. For more information about the Lambda function resource type, see [AWS::Lambda::Function](aws-resource-lambda-function.md)\.
 
@@ -88,7 +88,7 @@ In the example, when AWS CloudFormation creates the `AllSecurityGroups` custom r
             "};"
           ]]}
         },
-        "Runtime": "nodejs4.3"
+        "Runtime": "nodejs8.10"
       }
     },
     "MyEC2Instance" : {
@@ -221,7 +221,7 @@ Resources:
              responseData.Value.push(event.ResourceProperties.AppendedItem);
              response.send(event, context, response.SUCCESS, responseData);
           };
-      Runtime: nodejs4.3
+      Runtime: nodejs8.10
   MyEC2Instance:
     Type: AWS::EC2::Instance
     Properties:

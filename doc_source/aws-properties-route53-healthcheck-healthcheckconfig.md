@@ -2,7 +2,7 @@
 
 The `HealthCheckConfig` property is part of the [AWS::Route53::HealthCheck](aws-resource-route53-healthcheck.md) resource that describes a health check that Amazon Route 53 uses before responding to a DNS query\. For more information, see [HealthCheckConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html) in the *Amazon Route 53 API Reference*
 
-## Syntax<a name="w4ab1c21c10d177c13c17b5"></a>
+## Syntax<a name="w13ab1c21c10d201c13c17b5"></a>
 
 ### JSON<a name="aws-properties-route53-healthcheck-healthcheckconfig-syntax.json"></a>
 
@@ -50,7 +50,7 @@ The `HealthCheckConfig` property is part of the [AWS::Route53::HealthCheck](aws-
 [Type](#cfn-route53-healthcheck-healthcheckconfig-type): String
 ```
 
-## Properties<a name="w4ab1c21c10d177c13c17b7"></a>
+## Properties<a name="w13ab1c21c10d201c13c17b7"></a>
 
 `AlarmIdentifier`  <a name="cfn-route53-healthcheck-healthcheckconfig-alarmidentifier"></a>
 Identifies the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy\.  

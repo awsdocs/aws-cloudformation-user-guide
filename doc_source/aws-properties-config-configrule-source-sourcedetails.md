@@ -2,7 +2,7 @@
 
 `SourceDetails` is a property of the [AWS Config ConfigRule Source](aws-properties-config-configrule-source.md) property that specifies the source and type of event that triggers AWS Config to evaluate your AWS resources\.
 
-## Syntax<a name="w4ab1c21c10c81c17c25b5"></a>
+## Syntax<a name="w13ab1c21c10c87c17c25b5"></a>
 
 ### JSON<a name="aws-properties-config-configrule-source-sourcedetails-syntax.json"></a>
 
@@ -22,7 +22,7 @@
 [MessageType](#cfn-config-configrule-source-sourcedetail-messagetype): String
 ```
 
-## Properties<a name="w4ab1c21c10c81c17c25b7"></a>
+## Properties<a name="w13ab1c21c10c87c17c25b7"></a>
 
 `EventSource`  <a name="cfn-config-configrule-source-sourcedetail-eventsource"></a>
 The source, such as an AWS service, that generate events, triggering AWS Config to evaluate your AWS resources\.  

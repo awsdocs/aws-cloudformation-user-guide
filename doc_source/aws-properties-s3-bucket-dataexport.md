@@ -2,7 +2,7 @@
 
 <a name="aws-properties-s3-bucket-dataexport-description"></a>The `DataExport` property type specifies how data related to the storage class analysis should be exported for an Amazon S3 bucket\.
 
-<a name="aws-properties-s3-bucket-dataexport-inheritance"></a> `DataExport` is a property of the [Amazon S3 Bucket StorageClassAnalysis](aws-properties-s3-bucket-storageclassanalysis.md) property type\. 
+<a name="aws-properties-s3-bucket-dataexport-inheritance"></a> `DataExport` is a property of the [StorageClassAnalysis](aws-properties-s3-bucket-storageclassanalysis.md) property type\. 
 
 ## Syntax<a name="aws-properties-s3-bucket-dataexport-syntax"></a>
 

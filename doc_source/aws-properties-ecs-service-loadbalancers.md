@@ -2,7 +2,7 @@
 
 `LoadBalancers` is a property of the [AWS::ECS::Service](aws-resource-ecs-service.md) resource that specifies the load balancer to associate with an Amazon Elastic Container Service \(Amazon ECS\) service\.
 
-## Syntax<a name="w4ab1c21c10d108c17c25b5"></a>
+## Syntax<a name="w13ab1c21c10d117c17c25b5"></a>
 
 ### JSON<a name="aws-properties-ecs-service-loadbalancers-syntax.json"></a>
 
@@ -24,7 +24,7 @@
 [TargetGroupArn](#cfn-ecs-service-loadbalancers-targetgrouparn): String
 ```
 
-## Properties<a name="w4ab1c21c10d108c17c25b7"></a>
+## Properties<a name="w13ab1c21c10d117c17c25b7"></a>
 
 `ContainerName`  <a name="cfn-ecs-service-loadbalancers-containername"></a>
 The name of a container to use with the load balancer\.  

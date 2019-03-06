@@ -347,7 +347,7 @@ When you pass the logical ID of an AWS::EC2::Instance object to the intrinsic `R
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d102c49c11b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d111c49c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -371,7 +371,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
 
 ## Examples<a name="aws-properties-ec2-instance-examples"></a>
 
-### EC2 Instance with an EBS Block Device Mapping<a name="w4ab1c21c10d102c49c13b2"></a>
+### EC2 Instance with an EBS Block Device Mapping<a name="w13ab1c21c10d111c49c13b2"></a>
 
 #### JSON<a name="aws-properties-ec2-instance-examples-json1"></a>
 
@@ -428,7 +428,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
             NoDevice: {}
 ```
 
-### Automatically Assign a Public IP Address<a name="w4ab1c21c10d102c49c13b4"></a>
+### Automatically Assign a Public IP Address<a name="w13ab1c21c10d111c49c13b4"></a>
 
 You can associate a public IP address with a network interface only if it has a device index of `0` and if it is a new network interface \(not an existing one\)\.
 
@@ -472,7 +472,7 @@ You can associate a public IP address with a network interface only if it has a 
             Ref: "PublicSubnet"
 ```
 
-### Other Examples<a name="w4ab1c21c10d102c49c13b6"></a>
+### Other Examples<a name="w13ab1c21c10d111c49c13b6"></a>
 
 You can download templates that show how to use `AWS::EC2::Instance` to create a virtual private cloud \(VPC\):
 + [Single instance in a single subnet](https://s3.amazonaws.com/cloudformation-templates-us-east-1/vpc_single_instance_in_subnet.template)
@@ -482,6 +482,6 @@ For more information about an `AWS::EC2::Instance` that has an IAM instance prof
 
 For more information about Amazon EC2 template examples, see: [Amazon EC2 Template Snippets](quickref-ec2.md)\.
 
-## See Also<a name="w4ab1c21c10d102c49c15"></a>
+## See Also<a name="w13ab1c21c10d111c49c15"></a>
 + [RunInstances](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-RunInstances.html) in the *Amazon Elastic Compute Cloud API Reference*
 + [EBS\-Optimized Instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#EBSOptimized) in the *Amazon Elastic Compute Cloud User Guide*

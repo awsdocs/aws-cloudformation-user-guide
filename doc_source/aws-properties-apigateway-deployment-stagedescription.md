@@ -2,7 +2,7 @@
 
 `StageDescription` is a property of the [AWS::ApiGateway::Deployment](aws-resource-apigateway-deployment.md) resource that configures an Amazon API Gateway \(API Gateway\) deployment stage\.
 
-## Syntax<a name="w4ab1c21c10c20c34c23b5"></a>
+## Syntax<a name="w13ab1c21c10c20c33c23b5"></a>
 
 ### JSON<a name="aws-properties-apigateway-deployment-stagedescription-syntax.json"></a>
 
@@ -56,7 +56,7 @@
   String: String
 ```
 
-## Properties<a name="w4ab1c21c10c20c34c23b7"></a>
+## Properties<a name="w13ab1c21c10c20c33c23b7"></a>
 
 `AccessLogSetting`  <a name="cfn-apigateway-deployment-stagedescription-accesslogsetting"></a>
 Specifies settings for logging access in this stage\.  

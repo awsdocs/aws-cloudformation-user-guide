@@ -2,7 +2,7 @@
 
 The `HealthCheckTags` property describes key\-value pairs that are associated with an [AWS::Route53::HealthCheck](aws-resource-route53-healthcheck.md) resource\.
 
-## Syntax<a name="w4ab1c21c10d177c13c21b5"></a>
+## Syntax<a name="w13ab1c21c10d201c13c21b5"></a>
 
 ### JSON<a name="aws-properties-route53-healthcheck-healthchecktags-syntax.json"></a>
 
@@ -20,7 +20,7 @@ The `HealthCheckTags` property describes key\-value pairs that are associated wi
 [Value](#cfn-route53-healthchecktags-value): String
 ```
 
-## Properties<a name="w4ab1c21c10d177c13c21b7"></a>
+## Properties<a name="w13ab1c21c10d201c13c21b7"></a>
 
 `Key`  <a name="cfn-route53-healthchecktags-key"></a>
 The key name of the tag\.  

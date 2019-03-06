@@ -62,13 +62,13 @@ The reference to an AWS\-managed certificate for use by the regional endpoint fo
 
 ## Return Values<a name="aws-resource-apigateway-domainname-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10c20c48c13b2"></a>
+### Ref<a name="w13ab1c21c10c20c47c13b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the domain name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10c20c48c13b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10c20c47c13b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. This section lists the available attribute and a sample return value\.
 

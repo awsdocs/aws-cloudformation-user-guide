@@ -1,13 +1,13 @@
 # AWS::CodeDeploy::Application<a name="aws-resource-codedeploy-application"></a>
 
-The `AWS::CodeDeploy::Application` resource creates an AWS CodeDeploy application\. In AWS CodeDeploy, an application is a name that functions as a container to ensure that the correct combination of revision, deployment configuration, and deployment group are referenced during a deployment\. You can use the `AWS::CodeDeploy::DeploymentGroup` resource to associate the application with an AWS CodeDeploy deployment group\. For more information, see [AWS CodeDeploy Deployments](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-steps.html) in the *AWS CodeDeploy User Guide*\.
+The `AWS::CodeDeploy::Application` resource creates an CodeDeploy application\. In CodeDeploy, an application is a name that functions as a container to ensure that the correct combination of revision, deployment configuration, and deployment group are referenced during a deployment\. You can use the `AWS::CodeDeploy::DeploymentGroup` resource to associate the application with an CodeDeploy deployment group\. For more information, see [CodeDeploy Deployments](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-steps.html) in the *AWS CodeDeploy User Guide*\.
 
 **Topics**
 + [Syntax](#aws-resource-codedeploy-application-syntax)
 + [Properties](#aws-resource-codedeploy-application-properties)
 + [Return Value](#aws-resource-codedeploy-application-returnvalues)
 + [Examples](#aws-resource-codedeploy-application-examples)
-+ [Related Resources](#w4ab1c21c10c72c13c15)
++ [Related Resources](#w13ab1c21c10c78c13c15)
 
 ## Syntax<a name="aws-resource-codedeploy-application-syntax"></a>
 
@@ -43,14 +43,14 @@ A name for the application\. If you don't specify a name, AWS CloudFormation gen
 *Update requires*: Updates are not supported\.
 
 `ComputePlatform`  <a name="cfn-codedeploy-application-computeplatform"></a>
-The compute platform that AWS CodeDeploy deploys the application to\. For valid values see [CreateApplication](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_CreateApplication.html#CodeDeploy-CreateApplication-request-computePlatform) in the *AWS CodeDeploy API Reference*\.  
+The compute platform that CodeDeploy deploys the application to\. For valid values see [CreateApplication](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_CreateApplication.html#CodeDeploy-CreateApplication-request-computePlatform) in the *CodeDeploy API Reference*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Value<a name="aws-resource-codedeploy-application-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10c72c13c11b2"></a>
+### Ref<a name="w13ab1c21c10c78c13c11b2"></a>
 
 When you pass the logical ID of an `AWS::CodeDeploy::Application` resource to the intrinsic `Ref` function, the function returns the application name, such as `myapplication-a123d0d1`\.
 
@@ -58,7 +58,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ## Examples<a name="aws-resource-codedeploy-application-examples"></a>
 
-The following example creates an AWS CodeDeploy application with a `Lambda` compute platform\.
+The following example creates an CodeDeploy application with a `Lambda` compute platform\.
 
 ### JSON<a name="aws-resource-codedeploy-application-example.json"></a>
 
@@ -80,7 +80,7 @@ CodeDeployApplication:
     ComputePlatform: Lambda
 ```
 
-The following example creates an AWS CodeDeploy application with a `Server` compute platform\.
+The following example creates an CodeDeploy application with a `Server` compute platform\.
 
 ### JSON<a name="aws-resource-codedeploy-application-example-server.json"></a>
 
@@ -102,6 +102,6 @@ CodeDeployApplication:
     ComputePlatform: Server
 ```
 
-## Related Resources<a name="w4ab1c21c10c72c13c15"></a>
+## Related Resources<a name="w13ab1c21c10c78c13c15"></a>
 
 For configuring your deployment and specifying your application revisions, see [AWS::CodeDeploy::DeploymentConfig](aws-resource-codedeploy-deploymentconfig.md) and [AWS::CodeDeploy::DeploymentGroup](aws-resource-codedeploy-deploymentgroup.md)\.

@@ -1,8 +1,8 @@
-# Elastic Load Balancing Listener AuthenticateOidcConfig<a name="aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig"></a>
+# Elastic Load Balancing V2 AuthenticateOidcConfig<a name="aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig"></a>
 
 <a name="aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-description"></a>The `AuthenticateOidcConfig` property type specifies request parameters when using an identity provider \(IdP\) that is compliant with OpenID Connect \(OIDC\) to authenticate users\.
 
-<a name="aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-inheritance"></a> `AuthenticateOidcConfig` is a property of the [Elastic Load Balancing ListenerRule Actions](aws-properties-elasticloadbalancingv2-listenerrule-actions.md) property type\.
+<a name="aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-inheritance"></a> `AuthenticateOidcConfig` is a property of the [Elastic Load Balancing V2 Actions](aws-properties-elasticloadbalancingv2-listenerrule-actions.md) property type\.
 
 ## Syntax<a name="aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-syntax"></a>
 

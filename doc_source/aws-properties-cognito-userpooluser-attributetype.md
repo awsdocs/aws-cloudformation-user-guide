@@ -31,3 +31,6 @@ The name of the attribute\.
 The value of the attribute\.  
 *Type*: String  
 *Required*: No
+
+## See Also<a name="aws-properties-cognito-userpooluser-attributetype-seealso"></a>
++ [AttributeType](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AttributeType.html) in the *Amazon Cognito User Pools API Reference*

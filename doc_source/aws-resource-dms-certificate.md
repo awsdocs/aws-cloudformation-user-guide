@@ -7,7 +7,7 @@ The `AWS::DMS::Certificate` resource creates an SSL certificate that encrypts co
 + [Properties](#aws-resource-dms-certificate-properties)
 + [Return Value](#aws-resource-dms-certificate-properties-returnvalues)
 + [Example](#aws-resource-dms-certificate-examples)
-+ [See Also](#w4ab1c21c10c96c13c15)
++ [See Also](#w13ab1c21c10d102c13c15)
 
 ## Syntax<a name="aws-resource-dms-certificate-syntax"></a>
 
@@ -58,7 +58,7 @@ The location of the imported Oracle Wallet certificate for use with SSL\.
 
 ## Return Value<a name="aws-resource-dms-certificate-properties-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10c96c13c11b3"></a>
+### Ref<a name="w13ab1c21c10d102c13c11b3"></a>
 
 When you pass the certificate of an `AWS::DMS::Certificate` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the certificate\.
 
@@ -98,6 +98,6 @@ Resources:
          -----END CERTIFICATE-----
 ```
 
-## See Also<a name="w4ab1c21c10c96c13c15"></a>
+## See Also<a name="w13ab1c21c10d102c13c15"></a>
 + [ImportCertificate](http://docs.aws.amazon.com/dms/latest/APIReference/API_ImportCertificate.html) in the *AWS Database Migration Service API Reference*\.
 + [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)

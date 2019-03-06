@@ -77,7 +77,7 @@ The predicate of the job trigger, which determines when the trigger fires\.
 
 ## Return Values<a name="aws-resource-glue-trigger-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10d138c35b9b3"></a>
+### Ref<a name="w13ab1c21c10d150c35b9b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 

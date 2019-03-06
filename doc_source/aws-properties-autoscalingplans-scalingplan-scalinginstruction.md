@@ -109,6 +109,7 @@ The range is 1\-100\.
 The predictive scaling mode\. The default value is `ForecastAndScale`\. Otherwise, AWS Auto Scaling forecasts capacity but does not create any scheduled scaling actions based on the capacity forecast\.   
  *Required*: No  
  *Type*: String  
+ *Valid values: *`ForecastAndScale` \| `ForecastOnly`   
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ResourceId`  <a name="cfn-autoscalingplans-scalingplan-scalinginstruction-resourceid"></a>

@@ -8,3 +8,4 @@ This section details the attributes that you can add to a resource to control ad
 + [DependsOn Attribute](aws-attribute-dependson.md)
 + [Metadata Attribute](aws-attribute-metadata.md)
 + [UpdatePolicy Attribute](aws-attribute-updatepolicy.md)
++ [UpdateReplacePolicy Attribute](aws-attribute-updatereplacepolicy.md)

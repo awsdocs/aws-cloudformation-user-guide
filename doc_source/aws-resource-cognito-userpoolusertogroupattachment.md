@@ -4,8 +4,8 @@ The `AWS::Cognito::UserPoolUserToGroupAttachment` resource attaches a user to an
 
 **Topics**
 + [Syntax](#aws-resource-cognito-userpoolusertogroupattachment-syntax)
-+ [Properties](#w4ab1c21c10c78c38b9)
-+ [Return Value](#w4ab1c21c10c78c38c11)
++ [Properties](#w13ab1c21c10c84c38b9)
++ [Return Value](#w13ab1c21c10c84c38c11)
 
 ## Syntax<a name="aws-resource-cognito-userpoolusertogroupattachment-syntax"></a>
 
@@ -34,7 +34,7 @@ Properties:
   [UserPoolId](#cfn-cognito-userpoolusertogroupattachment-userpoolid): String
 ```
 
-## Properties<a name="w4ab1c21c10c78c38b9"></a>
+## Properties<a name="w13ab1c21c10c84c38b9"></a>
 
 `GroupName`  <a name="cfn-cognito-userpoolusertogroupattachment-groupname"></a>
 The name of the group\.  
@@ -54,9 +54,9 @@ The ID of the user pool\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w4ab1c21c10c78c38c11"></a>
+## Return Value<a name="w13ab1c21c10c84c38c11"></a>
 
-### Ref<a name="w4ab1c21c10c78c38c11b2"></a>
+### Ref<a name="w13ab1c21c10c84c38c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns a generated ID, such as `UserToGroupAttachment-YejJvzrEXAMPLE`\.
 

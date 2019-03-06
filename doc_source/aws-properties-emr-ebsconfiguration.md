@@ -2,7 +2,7 @@
 
 `EbsConfiguration` is a property of the [Amazon EMR Cluster InstanceGroupConfig](aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.md) property and the [AWS::EMR::InstanceGroupConfig](aws-resource-emr-instancegroupconfig.md) resource that defines Amazon Elastic Block Store \(Amazon EBS\) storage volumes to attach to your Amazon EMR \(Amazon EMR\) instances\.
 
-## Syntax<a name="w4ab1c21c10d132c22c24b5"></a>
+## Syntax<a name="w13ab1c21c10d141c22c24b5"></a>
 
 ### JSON<a name="aws-properties-emr-ebsconfiguration-syntax.json"></a>
 
@@ -21,7 +21,7 @@
 [EbsOptimized](#cfn-emr-ebsconfiguration-ebsoptimized): Boolean
 ```
 
-## Properties<a name="w4ab1c21c10d132c22c24b7"></a>
+## Properties<a name="w13ab1c21c10d141c22c24b7"></a>
 
 `EbsBlockDeviceConfigs`  <a name="cfn-emr-ebsconfiguration-ebsblockdeviceconfigs"></a>
 Configures the block storage devices that are associated with your EMR instances\.  

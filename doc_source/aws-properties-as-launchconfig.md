@@ -66,7 +66,7 @@ Properties:
   [UserData](#cfn-as-launchconfig-userdata): String
 ```
 
-## Properties<a name="w4ab1c21c10c36c18c11"></a>
+## Properties<a name="w13ab1c21c10c42c18c11"></a>
 
 `AssociatePublicIpAddress`  <a name="cf-as-launchconfig-associatepubip"></a>
 For Amazon EC2 instances in a VPC, indicates whether instances in the Auto Scaling group receive public IP addresses\. If you specify `true`, each instance in the Auto Scaling group receives a unique public IP address\.  
@@ -198,9 +198,9 @@ For the resource with the logical ID `LaunchConfig`, `Ref` will return the Auto 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Template Examples<a name="w4ab1c21c10c36c18c15"></a>
+## Template Examples<a name="w13ab1c21c10c42c18c15"></a>
 
-### Launch Configuration with Block Device<a name="w4ab1c21c10c36c18c15b3"></a>
+### Launch Configuration with Block Device<a name="w13ab1c21c10c42c18c15b3"></a>
 
 This example shows a launch configuration that describes two Amazon Elastic Block Store mappings\.
 
@@ -274,7 +274,7 @@ LaunchConfig:
           DeleteOnTermination: "true"
 ```
 
-### Launch Configuration with Spot Price<a name="w4ab1c21c10c36c18c15b5"></a>
+### Launch Configuration with Spot Price<a name="w13ab1c21c10c42c18c15b5"></a>
 
 This example shows a launch configuration that features a spot price in the Auto Scaling group\. This launch configuration will only be active if the current spot price is less than the amount in the template specification \(0\.05\)\.
 
@@ -326,7 +326,7 @@ LaunchConfig:
       Ref: "InstanceType"
 ```
 
-### Launch Configuration with IAM Instance Profile<a name="w4ab1c21c10c36c18c15b7"></a>
+### Launch Configuration with IAM Instance Profile<a name="w13ab1c21c10c42c18c15b7"></a>
 
 Here's a launch configuration using the [IamInstanceProfile](#cfn-as-launchconfig-iaminstanceprofile) property\.
 
@@ -425,7 +425,7 @@ LaunchConfig:
     EbsOptimized: "true"
 ```
 
-## See Also<a name="w4ab1c21c10c36c18c17"></a>
+## See Also<a name="w13ab1c21c10c42c18c17"></a>
 + [Creating Your Own AMIs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami.html) in the *Amazon Elastic Compute Cloud User Guide*\.
 + [Block Device Mapping](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html) in the *Amazon Elastic Compute Cloud User Guide*\.
 + To view more LaunchConfiguration snippets, see [Auto Scaling Launch Configuration Resource](quickref-autoscaling.md#scenario-as-launch-config)\.

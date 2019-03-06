@@ -2,18 +2,6 @@
 
 Creates a data pipeline that you can use to automate the movement and transformation of data\. In each pipeline, you define pipeline objects, such as activities, schedules, data nodes, and resources\. For information about pipeline objects and components that you can use, see [Pipeline Object Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html) in the *AWS Data Pipeline Developer Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-datapipeline-pipeline-syntax)
-+ [Properties](#w4ab1c21c10c84c14b9)
-+ [Return Values](#w4ab1c21c10c84c14c11)
-+ [Example](#w4ab1c21c10c84c14c13)
-+ [AWS Data Pipeline Parameter Objects Attributes](aws-properties-datapipeline-pipeline-parameterobjects-attributes.md)
-+ [AWS Data Pipeline Pipeline Field](aws-properties-datapipeline-pipeline-pipelineobjects-fields.md)
-+ [AWS Data Pipeline Pipeline ParameterObjects](aws-properties-datapipeline-pipeline-parameterobjects.md)
-+ [AWS Data Pipeline Pipeline ParameterValues](aws-properties-datapipeline-pipeline-parametervalues.md)
-+ [AWS Data Pipeline PipelineObject](aws-properties-datapipeline-pipeline-pipelineobjects.md)
-+ [AWS Data Pipeline Pipeline PipelineTags](aws-properties-datapipeline-pipeline-pipelinetags.md)
-
 ## Syntax<a name="aws-resource-datapipeline-pipeline-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -53,7 +41,7 @@ Properties:
     - Pipeline tag
 ```
 
-## Properties<a name="w4ab1c21c10c84c14b9"></a>
+## Properties<a name="w13ab1c21c10c90c14b7"></a>
 
 `Activate`  <a name="cfn-datapipeline-pipeline-activate"></a>
 Indicates whether to validate and start the pipeline or stop an active pipeline\. By default, the value is set to `true`\.  
@@ -97,15 +85,15 @@ A list of arbitrary tags \(key\-value pairs\) to associate with the pipeline, wh
 *Type*: [AWS Data Pipeline Pipeline PipelineTags](aws-properties-datapipeline-pipeline-pipelinetags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10c84c14c11"></a>
+## Return Values<a name="w13ab1c21c10c90c14b9"></a>
 
-### Ref<a name="w4ab1c21c10c84c14c11b2"></a>
+### Ref<a name="w13ab1c21c10c90c14b9b2"></a>
 
  When you specify an `AWS::DataPipeline::Pipeline` resource as an argument to the `Ref` function, AWS CloudFormation returns the pipeline ID\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10c84c14c13"></a>
+## Example<a name="w13ab1c21c10c90c14c11"></a>
 
 The following data pipeline backs up data from an Amazon DynamoDB \(DynamoDB\) table to an Amazon Simple Storage Service \(Amazon S3\) bucket\. The pipeline uses the `HiveCopyActivity` activity to copy the data, and runs it once a day\. The [roles](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-iam-roles.html) for the pipeline and the pipeline resource are declared elsewhere in the same template\.
 

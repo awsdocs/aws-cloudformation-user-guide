@@ -6,8 +6,8 @@ The AWS::ElastiCache::CacheCluster type creates an Amazon ElastiCache cache clus
 + [Syntax](#aws-resource-elasticache-cachecluster-syntax)
 + [Properties](#aws-properties-elasticache-cache-cluster-prop)
 + [Return Values](#aws-properties-elasticache-cache-cluster-ref)
-+ [Template Snippets](#w4ab1c21c10d117c14c13)
-+ [See Also](#w4ab1c21c10d117c14c15)
++ [Template Snippets](#w13ab1c21c10d126c14c13)
++ [See Also](#w13ab1c21c10d126c14c15)
 
 ## Syntax<a name="aws-resource-elasticache-cachecluster-syntax"></a>
 
@@ -217,13 +217,13 @@ To specify an ElastiCache security group that is in a VPC and that was created u
 
 ## Return Values<a name="aws-properties-elasticache-cache-cluster-ref"></a>
 
-### Ref<a name="w4ab1c21c10d117c14c11b2"></a>
+### Ref<a name="w13ab1c21c10d126c14c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d117c14c11b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d126c14c11b4"></a>
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
@@ -241,9 +241,9 @@ The port number of the configuration endpoint for the Redis cache cluster\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Template Snippets<a name="w4ab1c21c10d117c14c13"></a>
+## Template Snippets<a name="w13ab1c21c10d126c14c13"></a>
 
-### Cluster in a Default VPC<a name="w4ab1c21c10d117c14c13b2"></a>
+### Cluster in a Default VPC<a name="w13ab1c21c10d126c14c13b2"></a>
 
 The following snippet describes an ElastiCache cluster in a security group that is in a [default VPC](https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html)\. Usually, a security group in a VPC requires the VPC ID to be specified\. In this case, no VPC ID is needed because the security group uses the default VPC\. If you want to specify a VPC for the security group, specify its `VpcId` property\.
 
@@ -306,7 +306,7 @@ ElasticacheCluster:
           - "GroupId"
 ```
 
-### Memcached Nodes in Multiple Availability Zones<a name="w4ab1c21c10d117c14c13b4"></a>
+### Memcached Nodes in Multiple Availability Zones<a name="w13ab1c21c10d126c14c13b4"></a>
 
 The following example launches a cache cluster with three nodes, where two nodes are created in us\-west\-2a and one is created in us\-west\-2b\.
 
@@ -341,6 +341,6 @@ myCacheCluster:
       - "us-west-2b"
 ```
 
-## See Also<a name="w4ab1c21c10d117c14c15"></a>
+## See Also<a name="w13ab1c21c10d126c14c15"></a>
 + [CreateCacheCluster](http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheCluster.html) in the *Amazon ElastiCache API Reference Guide*
 + [ModifyCacheCluster](http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html) in the *Amazon ElastiCache API Reference Guide*

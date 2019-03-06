@@ -1,4 +1,4 @@
-# AWS CodePipeline Webhook WebhookFilterRule<a name="aws-properties-codepipeline-webhook-webhookfilterrule"></a>
+# CodePipeline Webhook WebhookFilterRule<a name="aws-properties-codepipeline-webhook-webhookfilterrule"></a>
 
 <a name="aws-properties-codepipeline-webhook-webhookfilterrule-description"></a>The `WebhookFilterRule` property type specifies events that will trigger a webhook\. For more information, see [Webhook Definition](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_WebhookDefinition.html) in the *AWS CodePipeline API Reference*\.
 

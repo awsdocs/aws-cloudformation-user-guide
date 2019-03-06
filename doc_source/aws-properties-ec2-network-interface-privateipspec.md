@@ -2,7 +2,7 @@
 
 The `PrivateIpAddressSpecification` type is an embedded property of the [AWS::EC2::NetworkInterface](aws-resource-ec2-network-interface.md) type\.
 
-## Syntax<a name="w4ab1c21c10d102c77c21b5"></a>
+## Syntax<a name="w13ab1c21c10d111c77c21b5"></a>
 
 ### JSON<a name="aws-properties-ec2-network-interface-privateipspec-syntax.json"></a>
 
@@ -20,7 +20,7 @@ The `PrivateIpAddressSpecification` type is an embedded property of the [AWS::EC
 [Primary](#cfn-ec2-networkinterface-privateipspecification-primary): Boolean
 ```
 
-## Properties<a name="w4ab1c21c10d102c77c21b7"></a>
+## Properties<a name="w13ab1c21c10d111c77c21b7"></a>
 
 `PrivateIpAddress`  <a name="cfn-ec2-networkinterface-privateipspecification-privateipaddress"></a>
 The private IP address of the network interface\.  

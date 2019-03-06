@@ -1,8 +1,8 @@
-# AWS CodeDeploy DeploymentGroup Deployment Revision GitHubLocation<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-githublocation"></a>
+# CodeDeploy DeploymentGroup Deployment Revision GitHubLocation<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-githublocation"></a>
 
-`GitHubLocation` is a property of the [AWS CodeDeploy DeploymentGroup Revision](aws-properties-codedeploy-deploymentgroup-deployment-revision.md) property that specifies the location of an application revision that is stored in GitHub\.
+`GitHubLocation` is a property of the [CodeDeploy DeploymentGroup Revision](aws-properties-codedeploy-deploymentgroup-deployment-revision.md) property that specifies the location of an application revision that is stored in GitHub\.
 
-## Syntax<a name="w4ab1c21c10c72c21c47b5"></a>
+## Syntax<a name="w13ab1c21c10c78c21c47b5"></a>
 
 ### JSON<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-githublocation-syntax.json"></a>
 
@@ -20,7 +20,7 @@
 [Repository](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation-repository): String
 ```
 
-## Properties<a name="w4ab1c21c10c72c21c47b7"></a>
+## Properties<a name="w13ab1c21c10c78c21c47b7"></a>
 
 `CommitId`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation-commitid"></a>
 The SHA1 commit ID of the GitHub commit to use as your application revision\.  

@@ -1,8 +1,8 @@
-# AWS CodeDeploy DeploymentGroup OnPremisesTagSetListObject<a name="aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject"></a>
+# CodeDeploy DeploymentGroup OnPremisesTagSetListObject<a name="aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject"></a>
 
 <a name="aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject-description"></a>The `OnPremisesTagSetListObject` property type specifies lists of on\-premises instance tag groups\. In order for an instance to be included in the deployment group, it must be identified by all the tag groups in the list\.
 
-<a name="aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject-inheritance"></a> `OnPremisesTagSetListObject` is a property of the [AWS CodeDeploy DeploymentGroup OnPremisesTagSet](aws-properties-codedeploy-deploymentgroup-onpremisestagset.md) property type\.
+<a name="aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject-inheritance"></a> `OnPremisesTagSetListObject` is a property of the [CodeDeploy DeploymentGroup OnPremisesTagSet](aws-properties-codedeploy-deploymentgroup-onpremisestagset.md) property type\.
 
 ## Syntax<a name="aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject-syntax"></a>
 
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Lists of on\-premises instance tag groups\.  
 Duplicates are not allowed\.  
 *Required*: No  
- *Type*: List of [AWS CodeDeploy DeploymentGroup TagFilters](aws-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters.md)   
+ *Type*: List of [CodeDeploy DeploymentGroup TagFilters](aws-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters.md)   
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## See Also<a name="aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject-seealso"></a>

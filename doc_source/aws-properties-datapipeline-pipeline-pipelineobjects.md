@@ -2,7 +2,7 @@
 
 `PipelineObjects` is a property of the [AWS::DataPipeline::Pipeline](aws-resource-datapipeline-pipeline.md) resource that describes a data pipeline object\.
 
-## Syntax<a name="w4ab1c21c10c84c14c33b5"></a>
+## Syntax<a name="w13ab1c21c10c90c14c31b5"></a>
 
 ### JSON<a name="aws-properties-datapipeline-pipeline-pipelineobjects-syntax.json"></a>
 
@@ -23,7 +23,7 @@
 [Name](#cfn-datapipeline-pipeline-pipelineobjects-name): String
 ```
 
-## Properties<a name="w4ab1c21c10c84c14c33b7"></a>
+## Properties<a name="w13ab1c21c10c90c14c31b7"></a>
 
 `Fields`  <a name="cfn-datapipeline-pipeline-pipelineobjects-fields"></a>
 Key\-value pairs that define the properties of the object\. Duplicates allowed\. You can use the same key multiple times within a field to define array attributes\.  

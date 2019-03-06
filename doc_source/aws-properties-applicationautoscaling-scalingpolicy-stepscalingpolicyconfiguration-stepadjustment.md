@@ -2,7 +2,7 @@
 
 `StepAdjustment` is a property of the [Application Auto Scaling ScalingPolicy StepScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration.md) property that configures a scaling adjustment based on the difference between the value of the aggregated Amazon CloudWatch metric and the breach threshold that you've defined for the alarm \(the size of the breach\)\. For more information, see [Step Adjustments](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html#as-scaling-steps) in the *Application Auto Scaling User Guide*\.
 
-## Syntax<a name="w4ab1c21c10c23c17c21b5"></a>
+## Syntax<a name="w13ab1c21c10c26c17c21b5"></a>
 
 ### JSON<a name="aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment-syntax.json"></a>
 
@@ -22,7 +22,7 @@
 [ScalingAdjustment](#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment-scalingadjustment): Integer
 ```
 
-## Properties<a name="w4ab1c21c10c23c17c21b7"></a>
+## Properties<a name="w13ab1c21c10c26c17c21b7"></a>
 
 `MetricIntervalLowerBound`  <a name="cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment-metricintervallowerbound"></a>
 The lower bound of the breach size\. The lower bound is the difference between the breach threshold and the aggregated CloudWatch metric value\. If the metric value is within the lower and upper bounds, Application Auto Scaling triggers this step adjustment\.  

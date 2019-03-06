@@ -2,7 +2,7 @@
 
 `Republish` is a property of the `Actions` property that describes an action that publishes data to an MQ Telemetry Transport \(MQTT\) topic different from the one currently specified\.
 
-## Syntax<a name="w4ab1c21c10d150c39c70b5"></a>
+## Syntax<a name="w13ab1c21c10d162c39c70b5"></a>
 
 ### JSON<a name="aws-properties-iot-topicrule-republishaction-syntax.json"></a>
 
@@ -20,7 +20,7 @@
 [Topic](#cfn-iot-topicrule-republishaction-topic): String
 ```
 
-## Properties<a name="w4ab1c21c10d150c39c70b7"></a>
+## Properties<a name="w13ab1c21c10d162c39c70b7"></a>
 
 `RoleArn`  <a name="cfn-iot-topicrule-republishaction-rolearn"></a>
 The ARN of the IAM role that grants publishing access\.  

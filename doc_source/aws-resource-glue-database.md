@@ -45,7 +45,7 @@ To specify the account ID, you can use the `Ref` intrinsic function with the `AW
 
 ## Return Values<a name="aws-resource-glue-database-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10d138c20b9b3"></a>
+### Ref<a name="w13ab1c21c10d150c20b9b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the `DatabaseInput` name\.
 

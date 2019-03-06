@@ -4,7 +4,7 @@ The `ConfigurationOptionSetting` property type specifies an option for an AWS El
 
 The `OptionSettings` property of the [AWS::ElasticBeanstalk::ConfigurationTemplate](aws-resource-beanstalk-configurationtemplate.md) resource contains a list of `ConfigurationOptionSetting` property types\.
 
-## Syntax<a name="w4ab1c21c10d123c22c19b7"></a>
+## Syntax<a name="w13ab1c21c10d132c22c19b7"></a>
 
 ### JSON<a name="aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting-syntax.json"></a>
 
@@ -26,7 +26,7 @@ The `OptionSettings` property of the [AWS::ElasticBeanstalk::ConfigurationTempla
 [Value](#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-value): String
 ```
 
-## Properties<a name="w4ab1c21c10d123c22c19b9"></a>
+## Properties<a name="w13ab1c21c10d132c22c19b9"></a>
 
 `Namespace`  <a name="cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-namespace"></a>
 A unique namespace that identifies the option's associated AWS resource\. For a list of namespaces that you can use, see [Configuration Options](https://docs.aws.amazon.com//elasticbeanstalk/latest/dg/command-options.html) in the *AWS Elastic Beanstalk Developer Guide*\.  
@@ -48,6 +48,6 @@ The current value for the configuration option\.
 *Required*: No  
 *Type*: String
 
-## See Also<a name="w4ab1c21c10d123c22c19c11"></a>
+## See Also<a name="w13ab1c21c10d132c22c19c11"></a>
 + [ConfigurationOptionSetting](http://docs.aws.amazon.com/elasticbeanstalk/latest/api/API_ConfigurationOptionSetting.html) in the *AWS Elastic Beanstalk Developer Guide*
 + [Configuration Options](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html) in the *AWS Elastic Beanstalk Developer Guide*

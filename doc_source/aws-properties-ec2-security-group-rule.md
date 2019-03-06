@@ -2,7 +2,7 @@
 
 The EC2 Security Group Rule is an embedded property of the [AWS::EC2::SecurityGroup](aws-properties-ec2-security-group.md) type\.
 
-## Syntax SecurityGroupIngress<a name="w4ab1c21c10d102d104c21b5"></a>
+## Syntax SecurityGroupIngress<a name="w13ab1c21c10d111d104c21b5"></a>
 
 ### JSON<a name="aws-properties-ec2-securitygroup-rule-securitygroupingress-syntax.json"></a>
 
@@ -34,7 +34,7 @@ The EC2 Security Group Rule is an embedded property of the [AWS::EC2::SecurityGr
 [ToPort](#cfn-ec2-security-group-rule-toport): Integer
 ```
 
-## Syntax SecurityGroupEgress<a name="w4ab1c21c10d102d104c21b7"></a>
+## Syntax SecurityGroupEgress<a name="w13ab1c21c10d111d104c21b7"></a>
 
 ### JSON<a name="aws-properties-ec2-securitygroup-rule-securitygroupegress-syntax.json"></a>
 
@@ -64,7 +64,7 @@ The EC2 Security Group Rule is an embedded property of the [AWS::EC2::SecurityGr
 [ToPort](#cfn-ec2-security-group-rule-toport): Integer
 ```
 
-## Properties<a name="w4ab1c21c10d102d104c21b9"></a>
+## Properties<a name="w13ab1c21c10d111d104c21b9"></a>
 
 `CidrIp`  <a name="cfn-ec2-security-group-rule-cidrip"></a>
 Specifies an IPv4 CIDR range\.  
@@ -120,9 +120,9 @@ The end of port range for the TCP and UDP protocols, or an ICMP code\. An ICMP c
 *Required*: No  
 *Type*: Integer
 
-## Examples<a name="w4ab1c21c10d102d104c21c11"></a>
+## Examples<a name="w13ab1c21c10d111d104c21c11"></a>
 
-### Security Group with CidrIp<a name="w4ab1c21c10d102d104c21c11b2"></a>
+### Security Group with CidrIp<a name="w13ab1c21c10d111d104c21c11b2"></a>
 
 #### JSON<a name="aws-properties-ec2-securitygroup-rule-securitygroupingress-example.json"></a>
 
@@ -156,7 +156,7 @@ InstanceSecurityGroup:
         CidrIp: "0.0.0.0/0"
 ```
 
-### Security Group with Security Group Id<a name="w4ab1c21c10d102d104c21c11b4"></a>
+### Security Group with Security Group Id<a name="w13ab1c21c10d111d104c21c11b4"></a>
 
 #### JSON<a name="aws-properties-ec2-securitygroup-rule-securitygroupingress-example2.json"></a>
 
@@ -196,7 +196,7 @@ InstanceSecurityGroup:
           Ref: "LoadBalancerSecurityGroup"
 ```
 
-### Security Group with Multiple Ingress Rules<a name="w4ab1c21c10d102d104c21c11b6"></a>
+### Security Group with Multiple Ingress Rules<a name="w13ab1c21c10d111d104c21c11b6"></a>
 
 This snippet grants SSH access with CidrIp, and HTTP access with `SourceSecurityGroupName`\. `Fn::GetAtt` is used to derive the values for `SourceSecurityGroupName` and `SourceSecurityGroupOwnerId` from the elastic load balancer\.
 
@@ -295,5 +295,5 @@ InstanceSecurityGroup:
             - "SourceSecurityGroup.GroupName"
 ```
 
-## See Also<a name="w4ab1c21c10d102d104c21c13"></a>
+## See Also<a name="w13ab1c21c10d111d104c21c13"></a>
 + [Amazon EC2 Security Groups](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html) in the *Amazon EC2 User Guide*

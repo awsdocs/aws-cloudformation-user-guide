@@ -49,7 +49,7 @@ Properties:
   [Name](#cfn-emr-instancegroupconfig-name)" : String
 ```
 
-## Properties<a name="w4ab1c21c10d132c22b9"></a>
+## Properties<a name="w13ab1c21c10d141c22b9"></a>
 
 **Note**  
 For more information about the constraints and valid values of each property, see the [InstanceGroupConfig](https://docs.aws.amazon.com//ElasticMapReduce/latest/API/API_InstanceGroupConfig.html) in the Amazon EMR API Reference\.
@@ -115,15 +115,15 @@ A name for the instance group\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d132c22c11"></a>
+## Return Values<a name="w13ab1c21c10d141c22c11"></a>
 
-### Ref<a name="w4ab1c21c10d132c22c11b2"></a>
+### Ref<a name="w13ab1c21c10d141c22c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the instance group ID, such as `ig-ABC12DEF3456`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d132c22c13"></a>
+## Example<a name="w13ab1c21c10d141c22c13"></a>
 
 The following example adds a task instance group to the `TestCluster` cluster\. The instance group contains two m3\.xlarge instances\.
 

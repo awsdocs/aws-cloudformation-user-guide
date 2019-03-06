@@ -39,7 +39,7 @@ Properties:
     [*SourceConfiguration*](aws-properties-beanstalk-configurationtemplate-sourceconfiguration.md)
 ```
 
-## Properties<a name="w4ab1c21c10d123c22b9"></a>
+## Properties<a name="w13ab1c21c10d132c22b9"></a>
 
 For more information, see [ CreateConfigurationTemplate](https://docs.aws.amazon.com/elasticbeanstalk/latest/api/API_CreateConfigurationTemplate.html) in the *AWS Elastic Beanstalk API Reference*\.
 
@@ -88,15 +88,15 @@ You must specify this property if you don't specify the `EnvironmentId` or `Solu
 *Required*: Conditional  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d123c22c11"></a>
+## Return Values<a name="w13ab1c21c10d132c22c11"></a>
 
-### Ref<a name="w4ab1c21c10d123c22c11b2"></a>
+### Ref<a name="w13ab1c21c10d132c22c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d123c22c13"></a>
+## Example<a name="w13ab1c21c10d132c22c13"></a>
 
 This example of an ElasticBeanstalk `ConfigurationTemplate` is found in the AWS CloudFormation sample template [ElasticBeanstalkSample\.template](https://s3.amazonaws.com/cloudformation-templates-us-east-1/ElasticBeanstalkSample.template), which also provides an example of its use within an `AWS::ElasticBeanstalk::Application`\.
 
@@ -147,7 +147,7 @@ myConfigTemplate:
           Ref: "KeyName"
 ```
 
-## See Also<a name="w4ab1c21c10d123c22c15"></a>
+## See Also<a name="w13ab1c21c10d132c22c15"></a>
 + [AWS::ElasticBeanstalk::Application](aws-properties-beanstalk.md)
 + [Option Values](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html) in the *AWS Elastic Beanstalk Developer Guide*
 + For a complete Elastic Beanstalk sample template, see [Elastic Beanstalk Template Snippets](quickref-elasticbeanstalk.md)\.

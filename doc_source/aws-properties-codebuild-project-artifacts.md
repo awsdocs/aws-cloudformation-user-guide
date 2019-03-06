@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [Type](#cfn-codebuild-project-artifacts-type): String
 ```
 
-## Properties<a name="w4ab1c21c10c66c13c19b7"></a>
+## Properties<a name="w13ab1c21c10c72c13c19b7"></a>
 
 `ArtifactIdentifier`  <a name="cfn-codebuild-project-artifacts-artifactidentifier"></a>
  An identifier for this artifact\.   

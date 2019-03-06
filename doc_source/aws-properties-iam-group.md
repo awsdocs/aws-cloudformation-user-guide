@@ -8,7 +8,7 @@ This type supports updates\. For more information about updating stacks, see [AW
 + [Syntax](#aws-resource-iam-group-syntax)
 + [Properties](#aws-properties-iam-group-prop)
 + [Return Values](#aws-properties-iam-group-ref)
-+ [Template Examples](#w4ab1c21c10d144c18c15)
++ [Template Examples](#w13ab1c21c10d156c18c15)
 
 ## Syntax<a name="aws-resource-iam-group-syntax"></a>
 
@@ -71,13 +71,13 @@ The policies to associate with this group\. For information about policies, see 
 
 ## Return Values<a name="aws-properties-iam-group-ref"></a>
 
-### Ref<a name="w4ab1c21c10d144c18c13b2"></a>
+### Ref<a name="w13ab1c21c10d156c18c13b2"></a>
 
 Specifying this resource ID to the intrinsic `Ref` function will return the `GroupName`\. For example: `mystack-mygroup-1DZETITOWEKVO`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d144c18c13b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d156c18c13b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -86,6 +86,6 @@ Returns the Amazon Resource Name \(ARN\) for the `AWS::IAM::Group` resource\. Fo
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Template Examples<a name="w4ab1c21c10d144c18c15"></a>
+## Template Examples<a name="w13ab1c21c10d156c18c15"></a>
 
 To view AWS::IAM::Group snippets, see [Declaring an IAM Group Resource](quickref-iam.md#scenario-iam-group)

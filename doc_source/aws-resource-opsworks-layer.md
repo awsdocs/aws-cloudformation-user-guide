@@ -68,7 +68,7 @@ Properties:
     - VolumeConfiguration
 ```
 
-## Properties<a name="w4ab1c21c10d168c29b7"></a>
+## Properties<a name="w13ab1c21c10d183c29b7"></a>
 
 `Attributes`  <a name="cfn-opsworks-layer-attributes"></a>
 One or more user\-defined key\-value pairs to be added to the stack attributes bag\.  
@@ -180,9 +180,9 @@ Describes the Amazon EBS volumes for this layer\.
 *Type*: A list of [AWS OpsWorks VolumeConfiguration](aws-properties-opsworks-layer-volumeconfig.md)  
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
-## Return Values<a name="w4ab1c21c10d168c29b9"></a>
+## Return Values<a name="w13ab1c21c10d183c29b9"></a>
 
-### Ref<a name="w4ab1c21c10d168c29b9b2"></a>
+### Ref<a name="w13ab1c21c10d183c29b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -194,9 +194,9 @@ For the AWS OpsWorks layer `myLayer`, `Ref` returns the AWS OpsWorks layer ID\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Template Examples<a name="w4ab1c21c10d168c29c11"></a>
+## Template Examples<a name="w13ab1c21c10d183c29c11"></a>
 
-### AWS OpsWorks PHP Layer<a name="w4ab1c21c10d168c29c11b2"></a>
+### AWS OpsWorks PHP Layer<a name="w13ab1c21c10d183c29c11b2"></a>
 
 The following snippet creates an AWS OpsWorks PHP layer that is associated with the `myStack` AWS OpsWorks stack\. The layer is dependent on the `myApp` AWS OpsWorks application\.
 
@@ -235,7 +235,7 @@ myLayer:
     Name: "MyPHPApp"
 ```
 
-### Load\-based Auto Scaling Layer<a name="w4ab1c21c10d168c29c11b4"></a>
+### Load\-based Auto Scaling Layer<a name="w13ab1c21c10d183c29c11b4"></a>
 
 The following snippet creates a load\-based automatic scaling AWS OpsWorks PHP layer that is associated with the `myStack` AWS OpsWorks stack\.
 
@@ -556,7 +556,7 @@ Parameters:
     Type: String
 ```
 
-## See Also<a name="w4ab1c21c10d168c29c13"></a>
+## See Also<a name="w13ab1c21c10d183c29c13"></a>
 + [AWS::OpsWorks::Stack](aws-resource-opsworks-stack.md)
 + [AWS::OpsWorks::App](aws-resource-opsworks-app.md)
 + [AWS::OpsWorks::Instance](aws-resource-opsworks-instance.md)

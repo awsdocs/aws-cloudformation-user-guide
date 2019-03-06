@@ -1,6 +1,6 @@
 # AWS::ElasticLoadBalancingV2::LoadBalancer<a name="aws-resource-elasticloadbalancingv2-loadbalancer"></a>
 
-The `AWS::ElasticLoadBalancingV2::LoadBalancer` resource creates an Elastic Load Balancing Application or Network Load Balancer\. For more information, see [Getting Started](http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/load-balancer-getting-started.html) in the *Elastic Load Balancing User Guide*\.
+Creates an Application Load Balancer or a Network Load Balancer\. For more information, see [Getting Started](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/load-balancer-getting-started.html) in the *Elastic Load Balancing User Guide*\.
 
 **Note**  
 AWS CloudFormation does not automatically create tags \(key–value pairs\) for an Elastic Load Balancing load balancer\. You must use the [Tags](#cfn-elasticloadbalancingv2-loadbalancer-tags) property to create tags to associate with the load balancer\.
@@ -49,7 +49,7 @@ Properties:
   [Type](#cfn-elasticloadbalancingv2-loadbalancer-type): String
 ```
 
-## Properties<a name="w4ab1c21c10d129c25b8"></a>
+## Properties<a name="w13ab1c21c10d138c27b8"></a>
 
 For more information and valid parameter values, see the `[CreateLoadBalancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateLoadBalancer.html)` action in the [Elastic Load Balancing API Reference version 2015\-12\-01](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/)\.
 
@@ -61,13 +61,13 @@ For more information and valid parameter values, see the `[CreateLoadBalancer](h
 If `Scheme` is `internal`, then `IpAddressType` must be `ipv4`\.
 
 `LoadBalancerAttributes`  <a name="cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes"></a>
-Specifies the load balancer configuration\.  
+The load balancer configuration\.  
 *Required*: No  
-*Type*: A list of [Elastic Load Balancing LoadBalancer LoadBalancerAttributes](aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes.md)  
+*Type*: A list of [Elastic Load Balancing V2 LoadBalancerAttributes](aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Name`  <a name="cfn-elasticloadbalancingv2-loadbalancer-name"></a>
-Specifies a name for the load balancer\. This name must be unique within your AWS account and can have a maximum of 32 alphanumeric characters and hyphens\. A name can't begin or end with a hyphen\.  
+A name for the load balancer\. This name must be unique within your AWS account and can have a maximum of 32 alphanumeric characters and hyphens\. A name can't begin or end with a hyphen\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Required*: No  
 *Type*: String  
@@ -82,7 +82,7 @@ The nodes of an internal load balancer have only private IP addresses\. The DNS 
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `SecurityGroups`  <a name="cfn-elasticloadbalancingv2-loadbalancer-securitygroups"></a>
-\[Application Load Balancers\] Specifies a list of the IDs of the security groups to assign to the load balancer\.  
+\[Application Load Balancers\] The IDs of the security groups to assign to the load balancer\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -92,7 +92,7 @@ The subnets to attach to the load balancer, specified as a list of `SubnetMappin
 \[Application Load Balancers\] You must specify subnets from at least two Availability Zones\. You cannot specify your own Elastic IP addresses\.  
 \[Network Load Balancers\] You can specify subnets from one or more Availability Zones\. You can specify one Elastic IP address per subnet\.  
 *Required*: No  
-*Type*: List of [Elastic Load Balancing LoadBalancer SubnetMapping](aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.md)  
+*Type*: List of [Elastic Load Balancing V2 SubnetMapping](aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Subnets`  <a name="cfn-elasticloadbalancingv2-loadbalancer-subnets"></a>
@@ -103,20 +103,20 @@ The subnets to attach to the load balancer, specified as a list of subnet IDs\. 
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Tags`  <a name="cfn-elasticloadbalancingv2-loadbalancer-tags"></a>
-Specifies an arbitrary set of tags \(key–value pairs\) to associate with this load balancer\. Use tags to manage your resources\.  
+The tags \(key–value pairs\) to associate with this load balancer\. Use tags to manage your resources\.  
 *Required*: No  
 *Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Type`  <a name="cfn-elasticloadbalancingv2-loadbalancer-type"></a>
-Specifies the type of load balancer to create\. Valid values are `application` and `network`\.The default is `application`\.  
+The type of load balancer to create\. Valid values are `application` and `network`\. The default is `application`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d129c25c10"></a>
+## Return Values<a name="w13ab1c21c10d138c27c10"></a>
 
-### Ref<a name="w4ab1c21c10d129c25c10b2"></a>
+### Ref<a name="w13ab1c21c10d138c27c10b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN of the load balancer, for example:
 
@@ -126,7 +126,7 @@ arn:aws:elasticloadbalancing:us-west-2:123456789012:loadbalancer/app/my-internal
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d129c25c10b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d138c27c10b4"></a>
 
 `Fn::GetAtt` returns a value for the following attributes\.
 
@@ -147,7 +147,7 @@ The IDs of the security groups for the load balancer, for example `sg-123456a`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w4ab1c21c10d129c25c12"></a>
+## Examples<a name="w13ab1c21c10d138c27c12"></a>
 
 ### Load balancer with idle timeout period specified<a name="aws-resource-elasticloadbalancingv2-loadbalancer-example1"></a>
 

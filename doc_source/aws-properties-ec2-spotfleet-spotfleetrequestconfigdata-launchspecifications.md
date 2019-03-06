@@ -2,7 +2,7 @@
 
 `LaunchSpecifications` is a property of the [Amazon EC2 SpotFleet SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md) property that defines the launch specifications for the Spot fleet request\.
 
-## Syntax<a name="w4ab1c21c10d102d118c17b5"></a>
+## Syntax<a name="w13ab1c21c10d111d118c17b5"></a>
 
 ### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-syntax.json"></a>
 
@@ -22,7 +22,7 @@
   "[SecurityGroups](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups)" : [ SecurityGroup, ... ],
   "[SpotPrice](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-spotprice)" : String,
   "[SubnetId](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-subnetid)" : String,
-  "[TagSpecifications](#cfn-ec2-spotfleet-spotfleetlaunchspecification-tagspecifications)" : SpotFleetTagSpecification,     
+  "[TagSpecifications](#cfn-ec2-spotfleet-spotfleetlaunchspecification-tagspecifications)" : [ SpotFleetTagSpecification, ... ],     
   "[UserData](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-userdata)" : String,
   "[WeightedCapacity](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-weightedcapacity)" : Number
 }
@@ -56,7 +56,7 @@
 [WeightedCapacity](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-weightedcapacity): Number
 ```
 
-## Properties<a name="w4ab1c21c10d102d118c17b7"></a>
+## Properties<a name="w13ab1c21c10d111d118c17b7"></a>
 
 `BlockDeviceMappings`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings"></a>
 Defines the block devices that are mapped to the Spot instances\.  

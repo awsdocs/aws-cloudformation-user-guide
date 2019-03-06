@@ -4,7 +4,7 @@ The `Target` property type specifies a target, such as AWS Lambda \(Lambda\) fun
 
 The `Targets` property of the [AWS::Events::Rule](aws-resource-events-rule.md) resource contains a list of one or more `Target` property types\.
 
-## Syntax<a name="w4ab1c21c10c63c31c30b7"></a>
+## Syntax<a name="w13ab1c21c10c69c31c32b7"></a>
 
 ### JSON<a name="aws-properties-events-rule-target-syntax.json"></a>
 
@@ -19,6 +19,7 @@ The `Targets` property of the [AWS::Events::Rule](aws-resource-events-rule.md) r
   "[KinesisParameters](#cfn-events-rule-target-kinesisparameters)" : [*KinesisParameters*](aws-properties-events-rule-kinesisparameters.md),
   "[RoleArn](#cfn-events-rule-target-rolearn)" : String,
   "[RunCommandParameters](#cfn-events-rule-target-runcommandparameters)" : [*RunCommandParameters*](aws-properties-events-rule-runcommandparameters.md)
+  "[SqsParameters](#cfn-events-rule-target-sqsparameters)" : [*SqsParameters*](aws-properties-events-rule-sqsparameters.md)
 }
 ```
 
@@ -38,9 +39,11 @@ The `Targets` property of the [AWS::Events::Rule](aws-resource-events-rule.md) r
 [RoleArn](#cfn-events-rule-target-rolearn): String
 [RunCommandParameters](#cfn-events-rule-target-runcommandparameters):
   [*RunCommandParameters*](aws-properties-events-rule-runcommandparameters.md)
+[SqsParameters](#cfn-events-rule-target-sqsparameters):
+  [*SqsParameters*](aws-properties-events-rule-sqsparameters.md)
 ```
 
-## Properties<a name="w4ab1c21c10c63c31c30b9"></a>
+## Properties<a name="w13ab1c21c10c69c31c32b9"></a>
 
 **Note**  
 For more information about each property, including constraints and valid values, see [Amazon CloudWatch Events Rule Target](https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_Target.html) in the *Amazon CloudWatch Events API Reference*\.
@@ -90,6 +93,12 @@ CloudWatch Events needs appropriate permissions to make API calls against the re
 Parameters used when the rule invokes the AWS Systems Manager Run Command\.  
  *Required*: No  
  *Type*: [RunCommandParameters](aws-properties-events-rule-runcommandparameters.md)
+
+`SqsParameters`  <a name="cfn-events-rule-target-sqsparameters"></a>
+Specifies the message group ID to use when the target is a FIFO queue\.  
+If you specify an Amazon SQS FIFO queue as a target, the queue must have content\-based deduplication enabled\.  
+ *Required*: No  
+ *Type*: [SqsParameters](aws-properties-events-rule-sqsparameters.md)
 
 ## Examples<a name="aws-properties-events-rule-target-examples"></a>
 

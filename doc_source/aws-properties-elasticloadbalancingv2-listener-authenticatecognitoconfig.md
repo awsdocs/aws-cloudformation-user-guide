@@ -1,8 +1,8 @@
-# Elastic Load Balancing Listener AuthenticateCognitoConfig<a name="aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig"></a>
+# Elastic Load Balancing V2 AuthenticateCognitoConfig<a name="aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig"></a>
 
 <a name="aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig-description"></a>The `AuthenticateCognitoConfig` property type specifies request parameters to use when integrating with Amazon Cognito to authenticate users\.
 
-<a name="aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig-inheritance"></a> `AuthenticateCognitoConfig` is a property of the [Elastic Load Balancing Listener Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md) property type\.
+<a name="aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig-inheritance"></a> `AuthenticateCognitoConfig` is a property of the [Elastic Load Balancing V2 Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md) property type\.
 
 ## Syntax<a name="aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig-syntax"></a>
 

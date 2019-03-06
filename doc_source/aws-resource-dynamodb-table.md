@@ -4,13 +4,6 @@ The `AWS::DynamoDB::Table` resource creates a DynamoDB table\. For more informat
 
 You should be aware of the following behaviors when working with DynamoDB tables:
 + AWS CloudFormation typically creates DynamoDB tables in parallel\. However, if your template includes multiple DynamoDB tables with indexes, you must declare dependencies so that the tables are created sequentially\. Amazon DynamoDB limits the number of tables with secondary indexes that are in the creating state\. If you create multiple tables with indexes at the same time, DynamoDB returns an error and the stack operation fails\. For an example, see [DynamoDB Table with a DependsOn Attribute](#cfn-dynamodb-table-examples-dependson)\.
-+ Updates to `AWS::DynamoDB::Table` resources that are associated with `AWS::ApplicationAutoScaling::ScalableTarget` resources will always result in an update failure and then an update rollback failure\. The following `ScalableDimension` attributes cause this problem when associated with the table:
-  + dynamodb:table:ReadCapacityUnits
-  + dynamodb:table:WriteCapacityUnits
-  + dynamodb:index:ReadCapacityUnits
-  + dynamodb:index:WriteCapacityUnits
-
-  As a workaround, please deregister scalable targets before performing updates to `AWS::DynamoDB::Table` resources\.
 
 ## Syntax<a name="aws-resource-dynamodb-table-syntax"></a>
 
@@ -67,7 +60,7 @@ Properties:
     [TimeToLiveSpecification](aws-properties-dynamodb-table-timetolivespecification.md)
 ```
 
-## Properties<a name="w4ab1c21c10c99c14c13"></a>
+## Properties<a name="w13ab1c21c10d108c14c13"></a>
 
 `AttributeDefinitions`  <a name="cfn-dynamodb-table-attributedef"></a>
 A list of attributes that describe the key schema for the table and indexes\. Duplicates are allowed\.  
@@ -86,7 +79,7 @@ If not specified, the default is `PROVISIONED`\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `GlobalSecondaryIndexes`  <a name="cfn-dynamodb-table-gsi"></a>
-Global secondary indexes to be created on the table\. You can create up to 20 global secondary indexes\.
+Global secondary indexes to be created on the table\. You can create up to 20 global secondary indexes\.  
 If you update a table to include a new global secondary index, AWS CloudFormation initiates the index creation and then proceeds with the stack update\. AWS CloudFormation doesn't wait for the index to complete creation because the backfilling phase can take a long time, depending on the size of the table\. You can't use the index or update the table until the index's status is `ACTIVE`\. You can track its status by using the DynamoDB [https://docs.aws.amazon.com/cli/latest/reference/dynamodb/describe-table.html](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/describe-table.html) command\.  
 If you add or delete an index during an update, we recommend that you don't update any other resources\. If your stack fails to update and is rolled back while adding a new index, you must manually delete the index\.
 *Required*: No  
@@ -153,9 +146,9 @@ Specifies the Time to Live \(TTL\) settings for the table\.
 **Note**  
 For detailed information about the limits in DynamoDB, see [Limits in Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in the *Amazon DynamoDB Developer Guide*\.
 
-## Return Values<a name="w4ab1c21c10c99c14c15"></a>
+## Return Values<a name="w13ab1c21c10d108c14c15"></a>
 
-### Ref<a name="w4ab1c21c10c99c14c15b2"></a>
+### Ref<a name="w13ab1c21c10d108c14c15b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -167,7 +160,7 @@ For the resource with the logical ID `myDynamoDBTable`, `Ref` will return the Dy
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10c99c14c15b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d108c14c15b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -184,7 +177,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
 
 ### DynamoDB Table with Local and Global Secondary Indexes<a name="cfn-dynamodb-table-example1"></a>
 
-The following sample creates an DynamoDB table with `Album`, `Artist`, `Sales`, `NumberOfSongs` as attributes\. The primary key includes the `Album` attribute as the hash key and `Artist` attribute as the range key\. The table also includes two global and one secondary index\. For querying the number of sales for a given artist, the global secondary index uses the `Sales` attribute as the hash key and the `Artist` attribute as the range key\.
+The following sample creates an DynamoDB table with `Album`, `Artist`, `Sales`, `NumberOfSongs` as attributes\. The primary key includes the `Album` attribute as the hash key and `Artist` attribute as the range key\. The table also includes two global and one local secondary index\. For querying the number of sales for a given artist, the global secondary index uses the `Sales` attribute as the hash key and the `Artist` attribute as the range key\.
 
 For querying the sales based on the number of songs, the global secondary index uses the `NumberOfSongs` attribute as the hash key and the `Sales` attribute as the range key\.
 

@@ -2,7 +2,7 @@
 
 The `ElasticGpuSpecification` property is part of the [AWS::EC2::Instance](aws-properties-ec2-instance.md) resource that specifies the type of Elastic GPU\. An Elastic GPU is a GPU resource that you can attach to your Amazon EC2 instance to accelerate the graphics performance of your applications\. For more information, see [Amazon EC2 Elastic GPUs](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-gpus.html) in the *Amazon EC2 User Guide for Windows Instances*\.
 
-## Syntax<a name="w4ab1c21c10d102c49c36b5"></a>
+## Syntax<a name="w13ab1c21c10d111c49c36b5"></a>
 
 ### JSON<a name="aws-properties-ec2-instance-elasticgpuspecification.json"></a>
 
@@ -18,7 +18,7 @@ The `ElasticGpuSpecification` property is part of the [AWS::EC2::Instance](aws-p
 [Type](#cfn-ec2-instance-elasticgpuspecification-type): String
 ```
 
-## Properties<a name="w4ab1c21c10d102c49c36b7"></a>
+## Properties<a name="w13ab1c21c10d111c49c36b7"></a>
 
 `Type`  <a name="cfn-ec2-instance-elasticgpuspecification-type"></a>
 The type of Elastic GPU\.  

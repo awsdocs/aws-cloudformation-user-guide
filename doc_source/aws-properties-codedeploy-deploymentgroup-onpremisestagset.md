@@ -1,4 +1,4 @@
-# AWS CodeDeploy DeploymentGroup OnPremisesTagSet<a name="aws-properties-codedeploy-deploymentgroup-onpremisestagset"></a>
+# CodeDeploy DeploymentGroup OnPremisesTagSet<a name="aws-properties-codedeploy-deploymentgroup-onpremisestagset"></a>
 
 <a name="aws-properties-codedeploy-deploymentgroup-onpremisestagset-description"></a>The `OnPremisesTagSet` property type specifies a list containing other lists of on\-premises instance tag groups\. In order for an instance to be included in the deployment group, it must be identified by all the tag groups in the list\.
 

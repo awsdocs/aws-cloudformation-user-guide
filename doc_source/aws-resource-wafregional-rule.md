@@ -32,7 +32,7 @@ Properties:
     - Predicate
 ```
 
-## Properties<a name="w4ab1c21c10d213c21b9"></a>
+## Properties<a name="w13ab1c21c10d237c21b9"></a>
 
 `MetricName`  <a name="cfn-wafregional-rule-metricname"></a>
 A friendly name or description for the metrics of the rule\. For valid values, see the `MetricName` parameter for the [https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_CreateRule.html](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_CreateRule.html) action in the *AWS WAF Regional API Reference*\.  
@@ -52,17 +52,17 @@ The `ByteMatchSet`, `IPSet`, `SizeConstraintSet`, `SqlInjectionMatchSet`, or `Xs
 *Type*: List of [AWS WAF Regional Rule Predicates](aws-properties-wafregional-rule-predicates.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10d213c21c11"></a>
+## Return Value<a name="w13ab1c21c10d237c21c11"></a>
 
-### Ref<a name="w4ab1c21c10d213c21c11b2"></a>
+### Ref<a name="w13ab1c21c10d237c21c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource physical ID, such as `1234a1a-a1b1-12a1-abcd-a123b123456`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d213c21c13"></a>
+## Example<a name="w13ab1c21c10d237c21c13"></a>
 
-### Associate an IPSet with a Web ACL Rule<a name="w4ab1c21c10d213c21c13b2"></a>
+### Associate an IPSet with a Web ACL Rule<a name="w13ab1c21c10d237c21c13b2"></a>
 
 The following example associates the `MyIPSetBlacklist` `IPSet` object with a web ACL rule\.
 

@@ -30,7 +30,7 @@ For more information, see [JobCommand Structure](https://docs.aws.amazon.com/glu
 
 `ScriptLocation`  <a name="cfn-glue-job-jobcommand-scriptlocation"></a>
 The location of a script that executes a job\.  
- *Required*: No  
+ *Required*: Yes  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 

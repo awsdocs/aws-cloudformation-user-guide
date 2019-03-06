@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[AuthenticationType](#cfn-appstream-stackuserassociation-authenticationtype)" : String,
     "[SendEmailNotification](#cfn-appstream-stackuserassociation-sendemailnotification)" : Boolean,
     "[StackName](#cfn-appstream-stackuserassociation-stackname)" : String,
-    "[Username](#cfn-appstream-stackuserassociation-username)" : String
+    "[UserName](#cfn-appstream-stackuserassociation-username)" : String
   }
 }
 ```

@@ -17,7 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[Enabled](#cfn-apigateway-apikey-enabled)" : Boolean,
     "[GenerateDistinctId](#cfn-apigateway-apikey-generatedistinctid)" : Boolean,
     "[Name](#cfn-apigateway-apikey-name)" : String,
-    "[StageKeys](#cfn-apigateway-apikey-stagekeys)" : [ [StageKey](aws-properties-apitgateway-apikey-stagekey.md), ... ]
+    "[StageKeys](#cfn-apigateway-apikey-stagekeys)" : [ [StageKey](aws-properties-apitgateway-apikey-stagekey.md), ... ],
+    "[Value](#cfn-apigateway-apikey-value)" : String
   }
 }
 ```
@@ -35,9 +36,10 @@ Properties:
   [StageKeys](#cfn-apigateway-apikey-stagekeys):
     - [StageKey](aws-properties-apitgateway-apikey-stagekey.md)
     - ...
+  [Value](#cfn-apigateway-apikey-value): String
 ```
 
-## Properties<a name="w4ab1c21c10c20c17b9"></a>
+## Properties<a name="w13ab1c21c10c20c17b9"></a>
 
 `CustomerId`  <a name="cfn-apigateway-apikey-customerid"></a>
 An AWS Marketplace customer identifier to use when integrating with the AWS SaaS Marketplace\.  
@@ -75,6 +77,12 @@ A list of stages to associate with this API key\.
 *Required*: No  
 *Type*: List of [Amazon API Gateway ApiKey StageKey](aws-properties-apitgateway-apikey-stagekey.md) property types  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`Value`  <a name="cfn-apigateway-apikey-value"></a>
+The value of the API key\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Value<a name="aws-resource-apigateway-apikey-returnvalues"></a>
 

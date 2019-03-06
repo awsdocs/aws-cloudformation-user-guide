@@ -83,8 +83,8 @@ The retry behavior when Kinesis Data Firehose is unable to deliver data to Amazo
 *Type*: [ElasticsearchRetryOptions](aws-properties-kinesisfirehose-deliverystream-elasticsearchretryoptions.md)
 
 `RoleARN`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-rolearn"></a>
-The ARN of the AWS Identity and Access Management \(IAM\) role that grants Kinesis Data Firehose access to your Amazon S3 bucket, AWS KMS \(if you enable data encryption\), and Amazon CloudWatch Logs \(if you enable logging\)\.  
-For more information, see [Grant Kinesis Data Firehose Access to an Amazon Elasticsearch Service Destination ](https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-es) in the *Amazon Kinesis Data Firehose Developer Guide*\.  
+The Amazon Resource Name \(ARN\) of the IAM role to be assumed by Kinesis Data Firehose for calling the Amazon ES Configuration API and for indexing documents\.  
+For more information, see [Grant Kinesis Data Firehose Access to an Amazon S3 Destination](https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-s3) in the Amazon Kinesis Data Firehose Developer Guide and [Amazon Resource Names \(ARNs\) and AWS Service Namespaces](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the Amazon Web Services General Reference\.  
 *Required*: Yes  
 *Type*: String
 

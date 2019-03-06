@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-     "[RelationalDatasourceType](#cfn-appsync-datasource-relationaldatabaseconfig-relationaldatasourcetype)" : String,
+     "[RelationalDatabaseSourceType](#cfn-appsync-datasource-relationaldatabaseconfig-relationaldatasourcetype)" : String,
      "[RdsHttpEndpointConfig](#cfn-appsync-datasource-relationaldatabaseconfig-rdshttpendpointconfig)" : [*RdsHttpEndpointConfig*](aws-properties-appsync-datasource-relationaldatabaseconfig-rdshttpendpointconfig.md)
 }
 ```
@@ -20,13 +20,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appsync-datasource-relationaldatabaseconfig-syntax.yaml"></a>
 
 ```
-  [RelationalDatasourceType](#cfn-appsync-datasource-relationaldatabaseconfig-relationaldatasourcetype): String
+  [RelationalDatabaseSourceType](#cfn-appsync-datasource-relationaldatabaseconfig-relationaldatasourcetype): String
   [RdsHttpEndpointConfig](#cfn-appsync-datasource-relationaldatabaseconfig-rdshttpendpointconfig): [*RdsHttpEndpointConfig*](aws-properties-appsync-datasource-relationaldatabaseconfig-rdshttpendpointconfig.md)
 ```
 
 ## Properties<a name="aws-properties-appsync-datasource-relationaldatabaseconfig-properties"></a>
 
-`RelationalDatasourceType`  <a name="cfn-appsync-datasource-relationaldatabaseconfig-relationaldatasourcetype"></a>
+`RelationalDatabaseSourceType`  <a name="cfn-appsync-datasource-relationaldatabaseconfig-relationaldatasourcetype"></a>
 The type of the relational datasource\.  
  *Required*: No  
  *Type*: String  

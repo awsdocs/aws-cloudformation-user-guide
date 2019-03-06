@@ -62,7 +62,7 @@ Properties:
     - [*MetricsConfiguration*](aws-properties-s3-bucket-metricsconfiguration.md)
   [NotificationConfiguration](#cfn-s3-bucket-notification):
     NotificationConfiguration
- [PublicAccessBlockConfiguration](#cfn-s3-bucket-publicaccessblockconfiguration): 
+  [PublicAccessBlockConfiguration](#cfn-s3-bucket-publicaccessblockconfiguration): 
     [PublicAccessBlockConfiguration](aws-properties-s3-bucket-publicaccessblockconfiguration.md)
   [ReplicationConfiguration](#cfn-s3-bucket-replicationconfiguration):
     ReplicationConfiguration
@@ -98,7 +98,7 @@ The configuration and any analyses for the analytics filter of an Amazon S3 buck
 `BucketEncryption`  <a name="cfn-s3-bucket-bucketencryption"></a>
 Specifies default encryption for a bucket using server\-side encryption with either Amazon S3\-managed keys \(SSE\-S3\) or AWS KMS\-managed keys \(SSE\-KMS\)\.  
 *Required*: No  
-*Type*: [Amazon S3 Bucket BucketEncryption](aws-properties-s3-bucket-bucketencryption.md)  
+*Type*: [BucketEncryption](aws-properties-s3-bucket-bucketencryption.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `BucketName`  <a name="cfn-s3-bucket-name"></a>
@@ -111,7 +111,7 @@ If you specify a name, you cannot perform updates that require replacement of th
 `CorsConfiguration`  <a name="cfn-s3-bucket-crossoriginconfig"></a>
 Rules that define cross\-origin resource sharing of objects in this bucket\. For more information, see [Enabling Cross\-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) in the *Amazon Simple Storage Service Developer Guide*\.  
 *Required*: No  
-*Type*: [Amazon S3 Bucket CorsConfiguration](aws-properties-s3-bucket-cors.md)  
+*Type*: [CorsConfiguration](aws-properties-s3-bucket-cors.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `InventoryConfigurations`  <a name="cfn-s3-bucket-inventoryconfigurations"></a>
@@ -123,13 +123,13 @@ The inventory configuration for an Amazon S3 bucket\. Duplicates not allowed\.
 `LifecycleConfiguration`  <a name="cfn-s3-bucket-lifecycleconfig"></a>
 Rules that define how Amazon S3 manages objects during their lifetime\. For more information, see [Object Lifecycle Management](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) in the *Amazon Simple Storage Service Developer Guide*\.  
 *Required*: No  
-*Type*: [Amazon S3 Bucket LifecycleConfiguration](aws-properties-s3-bucket-lifecycleconfig.md)  
+*Type*: [LifecycleConfiguration](aws-properties-s3-bucket-lifecycleconfig.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `LoggingConfiguration`  <a name="cfn-s3-bucket-loggingconfig"></a>
 Settings that define where logs are stored\.  
 *Required*: No  
-*Type*: [Amazon S3 Bucket LoggingConfiguration](aws-properties-s3-bucket-loggingconfig.md)  
+*Type*: [LoggingConfiguration](aws-properties-s3-bucket-loggingconfig.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `MetricsConfigurations`  <a name="cfn-s3-bucket-metricsconfigurations"></a>
@@ -142,7 +142,7 @@ Duplicates not allowed\.
 `NotificationConfiguration`  <a name="cfn-s3-bucket-notification"></a>
 Configuration that defines how Amazon S3 handles bucket notifications\.  
 *Required*: No  
-*Type*: [Amazon S3 Bucket NotificationConfiguration](aws-properties-s3-bucket-notificationconfig.md)  
+*Type*: [NotificationConfiguration](aws-properties-s3-bucket-notificationconfig.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `PublicAccessBlockConfiguration`  <a name="cfn-s3-bucket-publicaccessblockconfiguration"></a>
@@ -155,7 +155,7 @@ Configuration that defines how Amazon S3 handles public access\.
 Configuration for replicating objects in an S3 bucket\. To enable replication, you must also enable versioning by using the `VersioningConfiguration` property\.  
 Amazon S3 can store replicated objects in only one destination \(S3 bucket\)\. The destination bucket must already exist and be in a different AWS Region than your source bucket\.  
 *Required*: No  
-*Type*: [Amazon S3 Bucket ReplicationConfiguration](aws-properties-s3-bucket-replicationconfiguration.md)  
+*Type*: [ReplicationConfiguration](aws-properties-s3-bucket-replicationconfiguration.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Tags`  <a name="cfn-s3-bucket-tags"></a>
@@ -168,18 +168,18 @@ We recommend limiting the number of tags to seven\. Applying more than seven tag
 `VersioningConfiguration`  <a name="cfn-s3-bucket-versioning"></a>
 Enables multiple variants of all objects in this bucket\. You might enable versioning to prevent objects from being deleted or overwritten by mistake or to archive objects so that you can retrieve previous versions of them\.  
 *Required*: No  
-*Type*: [Amazon S3 Bucket VersioningConfiguration](aws-properties-s3-bucket-versioningconfig.md)  
+*Type*: [VersioningConfiguration](aws-properties-s3-bucket-versioningconfig.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `WebsiteConfiguration`  <a name="cfn-s3-bucket-websiteconfiguration"></a>
 Information used to configure the bucket as a static website\. For more information, see [Hosting Websites on Amazon S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html)\.  
 *Required*: No  
-*Type*: [Website Configuration Type](aws-properties-s3-websiteconfiguration.md)  
+*Type*: [WebsiteConfiguration](aws-properties-s3-websiteconfiguration.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 ## Return Values<a name="aws-properties-bucket-ref"></a>
 
-### Ref<a name="w4ab1c21c10d180c13c13b2"></a>
+### Ref<a name="w13ab1c21c10d204c13c13b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
@@ -187,7 +187,7 @@ Example: `mystack-mybucket-kdwwxmddtr2g`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d180c13c13b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d204c13c13b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -217,11 +217,11 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
 
 ## Examples<a name="aws-resource-s3-bucket-examples"></a>
 
-### Associate a Replication Configuration IAM Role with an S3 Bucket<a name="w4ab1c21c10d180c13c15b2"></a>
+### Associate a Replication Configuration IAM Role with an S3 Bucket<a name="w13ab1c21c10d204c13c15b2"></a>
 
 The following example creates an S3 bucket and grants it permission to write to a replication bucket by using an AWS Identity and Access Management \(IAM\) role\. To avoid a circular dependency, the role's policy is declared as a separate resource\. The bucket depends on the `WorkItemBucketBackupRole` role\. If the policy is included in the role, the role also depends on the bucket\.
 
-#### JSON<a name="w4ab1c21c10d180c13c15b2b4"></a>
+#### JSON<a name="w13ab1c21c10d204c13c15b2b4"></a>
 
 ```
 "RecordServiceS3Bucket": {
@@ -335,7 +335,7 @@ The following example creates an S3 bucket and grants it permission to write to 
 }
 ```
 
-#### YAML<a name="w4ab1c21c10d180c13c15b2b6"></a>
+#### YAML<a name="w13ab1c21c10d204c13c15b2b6"></a>
 
 ```
 RecordServiceS3Bucket:
@@ -385,7 +385,7 @@ BucketBackupPolicy:
     Roles: [!Ref 'WorkItemBucketBackupRole']
 ```
 
-### Configure a Static Website with a Routing Rule<a name="w4ab1c21c10d180c13c15b4"></a>
+### Configure a Static Website with a Routing Rule<a name="w13ab1c21c10d204c13c15b4"></a>
 
 In this example, `AWS::S3::Bucket's Fn::GetAtt` values are used to provide outputs\. If an HTTP 404 error occurs, the routing rule redirects requests to an EC2 instance and inserts the object key prefix `report-404/` in the redirect\. For example, if you request a page called `ExamplePage.html` and it results in an HTTP 404 error, the request is routed to a page called `report-404/ExamplePage.html` on the specified instance\. For all other HTTP error codes, `error.html` is returned\. 
 
@@ -399,7 +399,7 @@ This example also specifies a metrics configuration called `EntireBucket` that e
       "Type" : "AWS::S3::Bucket",
       "Properties" : {
          "AccessControl" : "PublicRead",
-         "BucketName" : "PublicBucket",
+         "BucketName" : "public-bucket",
          "MetricsConfigurations": [
             {
                "Id": "EntireBucket"
@@ -448,7 +448,7 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       AccessControl: PublicRead
-      BucketName: PublicBucket
+      BucketName: public-bucket
       MetricsConfigurations: 
         - Id: EntireBucket
       WebsiteConfiguration:
@@ -471,7 +471,7 @@ Outputs:
     Description: Name of S3 bucket to hold website content
 ```
 
-### Enable Cross\-Origin Resource Sharing<a name="w4ab1c21c10d180c13c15b6"></a>
+### Enable Cross\-Origin Resource Sharing<a name="w13ab1c21c10d204c13c15b6"></a>
 
 The following example template shows an S3 bucket with two cross\-origin resource sharing rules\.
 
@@ -567,7 +567,7 @@ Outputs:
     Description: Name of the sample Amazon S3 bucket with CORS enabled.
 ```
 
-### Manage the Lifecycle for Amazon S3 Objects<a name="w4ab1c21c10d180c13c15b8"></a>
+### Manage the Lifecycle for Amazon S3 Objects<a name="w13ab1c21c10d204c13c15b8"></a>
 
 The following example template shows an S3 bucket with a lifecycle configuration rule\. The rule applies to all objects with the `glacier` key prefix\. The objects are transitioned to Glacier after one day, and deleted after one year\.
 
@@ -635,7 +635,7 @@ Outputs:
     Description: Name of the sample Amazon S3 bucket with a lifecycle configuration.
 ```
 
-### Log Access Requests for a Specific S3 Bucket<a name="w4ab1c21c10d180c13c15c10"></a>
+### Log Access Requests for a Specific S3 Bucket<a name="w13ab1c21c10d204c13c15c10"></a>
 
 The following example template creates two S3 buckets\. The `LoggingBucket` bucket store the logs from the `S3Bucket` bucket\. To receive logs from the `S3Bucket` bucket, the logging bucket requires log delivery write permissions\.
 
@@ -695,7 +695,7 @@ Outputs:
     Description: Name of the sample Amazon S3 bucket with a logging configuration.
 ```
 
-### Receive S3 Bucket Notifications to an SNS Topic<a name="w4ab1c21c10d180c13c15c12"></a>
+### Receive S3 Bucket Notifications to an SNS Topic<a name="w13ab1c21c10d204c13c15c12"></a>
 
 The following example template shows an S3 bucket with a notification configuration that sends an event to the specified SNS topic when Amazon S3 has lost all replicas of an object\.
 
@@ -750,7 +750,7 @@ Outputs:
     Description: Name of the sample Amazon S3 bucket with a notification configuration.
 ```
 
-### Replicate Objects and Store Them in Another S3 Bucket<a name="w4ab1c21c10d180c13c15c14"></a>
+### Replicate Objects and Store Them in Another S3 Bucket<a name="w13ab1c21c10d204c13c15c14"></a>
 
 The following example includes two replication rules\. Amazon S3 replicates objects with the `MyPrefix` or `MyOtherPrefix` prefixes and stores them in the `my-replication-bucket` bucket, which must be in a different AWS Region than the `S3Bucket` bucket\.
 
@@ -968,7 +968,7 @@ Resources:
     DeletionPolicy: Delete
 ```
 
-## More Info<a name="w4ab1c21c10d180c13c17"></a>
+## More Info<a name="w13ab1c21c10d204c13c17"></a>
 + For more examples, see [Amazon S3 Template Snippets](quickref-s3.md)\.
 + [DeletionPolicy Attribute](aws-attribute-deletionpolicy.md)
 + [Access Control List \(ACL\) Overview](http://docs.aws.amazon.com/AmazonS3/latest/dev/CannedACL.html) in the *Amazon Simple Storage Service Developer Guide*

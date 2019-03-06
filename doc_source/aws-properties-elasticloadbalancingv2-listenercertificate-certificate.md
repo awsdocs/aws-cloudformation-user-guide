@@ -1,4 +1,4 @@
-# Elastic Load Balancing ListenerCertificate Certificate<a name="aws-properties-elasticloadbalancingv2-listenercertificate-certificate"></a>
+# Elastic Load Balancing V2 Certificate<a name="aws-properties-elasticloadbalancingv2-listenercertificate-certificate"></a>
 
 <a name="aws-properties-elasticloadbalancingv2-listenercertificate-certificate-description"></a>The `Certificate` property type specifies a certificate for an Elastic Load Balancing listener certificate\.
 

@@ -30,7 +30,7 @@ Properties:
     MetricTransformations
 ```
 
-## Properties<a name="w4ab1c21c10c63c51b9"></a>
+## Properties<a name="w13ab1c21c10c69c51b9"></a>
 
 **Note**  
 For more information about constraints and values for each property, see [PutMetricFilter](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutMetricFilter.html) in the *Amazon CloudWatch Logs API Reference*\.
@@ -54,9 +54,9 @@ Describes how to transform data from a log into a CloudWatch metric\.
 Currently, you can specify only one metric transformation for each metric filter\. If you want to specify multiple metric transformations, you must specify multiple metric filters\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Examples<a name="w4ab1c21c10c63c51c11"></a>
+## Examples<a name="w13ab1c21c10c69c51c11"></a>
 
-### <a name="w4ab1c21c10c63c51c11b2"></a>
+### <a name="w13ab1c21c10c69c51c11b2"></a>
 
 The following example sends a value of `1` to the `404Count` metric whenever the status code field includes a `404` value\.
 
@@ -95,6 +95,6 @@ The following example sends a value of `1` to the `404Count` metric whenever the
         MetricName: "404Count"
 ```
 
-## Additional Information<a name="w4ab1c21c10c63c51c13"></a>
+## Additional Information<a name="w13ab1c21c10c69c51c13"></a>
 
 For an additional sample template, see [Amazon CloudWatch Logs Template Snippets](quickref-cloudwatchlogs.md)\.

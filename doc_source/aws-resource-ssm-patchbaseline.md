@@ -131,7 +131,7 @@ Information about the patches to use to update the instances, including target o
 
 ## Return Values<a name="aws-resource-ssm-patchbaseline-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10d207c31b9b3"></a>
+### Ref<a name="w13ab1c21c10d231c31b9b3"></a>
 
 When you pass the logical ID of an `AWS::SSM::PatchBaseline` resource to the intrinsic `Ref` function, the function returns the physical ID of the resource, such as `pb-abcde1234567890yz`\. 
 

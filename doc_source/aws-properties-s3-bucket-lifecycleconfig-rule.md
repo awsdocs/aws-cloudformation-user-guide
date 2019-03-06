@@ -1,8 +1,8 @@
 # Amazon S3 Bucket Rule<a name="aws-properties-s3-bucket-lifecycleconfig-rule"></a>
 
-The `Rule` property type describes lifecycle rules\. The `Rules` subproperty of the [Amazon S3 Bucket LifecycleConfiguration](aws-properties-s3-bucket-lifecycleconfig.md) property contains a list of `Rule` property types\. For more information, see [PUT Bucket lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTlifecycle.html) in the *Amazon Simple Storage Service \(Amazon S3\) API Reference*\.
+The `Rule` property type describes lifecycle rules\. The `Rules` subproperty of the [LifecycleConfiguration](aws-properties-s3-bucket-lifecycleconfig.md) property contains a list of `Rule` property types\. For more information, see [PUT Bucket lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTlifecycle.html) in the *Amazon Simple Storage Service \(Amazon S3\) API Reference*\.
 
-## Syntax<a name="w4ab1c21c10d180c13d134b5"></a>
+## Syntax<a name="w13ab1c21c10d204c13d134b5"></a>
 
 ### JSON<a name="aws-properties-s3-bucket-lifecycleconfig-rule-syntax.json"></a>
 
@@ -46,12 +46,12 @@ The `Rule` property type describes lifecycle rules\. The `Rules` subproperty of 
   - Transition
 ```
 
-## Properties<a name="w4ab1c21c10d180c13d134b7"></a>
+## Properties<a name="w13ab1c21c10d204c13d134b7"></a>
 
 `AbortIncompleteMultipartUpload`  <a name="cfn-s3-bucket-rule-abortincompletemultipartupload"></a>
 Specifies a lifecycle rule that aborts incomplete multipart uploads to an Amazon S3 bucket\.  
 *Required*: Conditional\. You must specify at least one of the following properties: `AbortIncompleteMultipartUpload`, `ExpirationDate`, `ExpirationInDays`, `NoncurrentVersionExpirationInDays`, `NoncurrentVersionTransition`, `NoncurrentVersionTransitions`, `Transition`, or `Transitions`\.  
-*Type*: [Amazon S3 Bucket AbortIncompleteMultipartUpload](aws-properties-s3-bucket-abortincompletemultipartupload.md)
+*Type*: [AbortIncompleteMultipartUpload](aws-properties-s3-bucket-abortincompletemultipartupload.md)
 
 `ExpirationDate`  <a name="cfn-s3-bucket-lifecycleconfig-rule-expirationdate"></a>
 Indicates when objects are deleted from Amazon S3 and Glacier\. The date value must be in ISO 8601 format\. The time is always midnight UTC\. If you specify an expiration and transition time, you must use the same time unit for both properties \(either in days or by date\)\. The expiration time must also be later than the transition time\.  
@@ -76,12 +76,12 @@ For buckets with versioning enabled \(or suspended\), specifies the time, in day
 `NoncurrentVersionTransition` \(deprecated\)  <a name="cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition"></a>
 For buckets with versioning enabled \(or suspended\), specifies when non\-current objects transition to a specified storage class\. If you specify a transition and expiration time, the expiration time must be later than the transition time\. If you specify this property, don't specify the `NoncurrentVersionTransitions` property\.  
 *Required*: Conditional\. You must specify at least one of the following properties: `AbortIncompleteMultipartUpload`, `ExpirationDate`, `ExpirationInDays`, `NoncurrentVersionExpirationInDays`, `NoncurrentVersionTransition`, `NoncurrentVersionTransitions`, `Transition`, or `Transitions`\.  
-*Type*: [Amazon S3 Bucket NoncurrentVersionTransition](aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.md)
+*Type*: [NoncurrentVersionTransition](aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.md)
 
 `NoncurrentVersionTransitions`  <a name="cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransitions"></a>
 For buckets with versioning enabled \(or suspended\), one or more transition rules that specify when non\-current objects transition to a specified storage class\. If you specify a transition and expiration time, the expiration time must be later than the transition time\. If you specify this property, don't specify the `NoncurrentVersionTransition` property\.  
 *Required*: Conditional\. You must specify at least one of the following properties: `AbortIncompleteMultipartUpload`, `ExpirationDate`, `ExpirationInDays`, `NoncurrentVersionExpirationInDays`, `NoncurrentVersionTransition`, `NoncurrentVersionTransitions`, `Transition`, or `Transitions`\.  
-*Type*: List of [Amazon S3 Bucket NoncurrentVersionTransition](aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.md)
+*Type*: List of [NoncurrentVersionTransition](aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.md)
 
 `Prefix`  <a name="cfn-s3-bucket-lifecycleconfig-rule-prefix"></a>
 Object key prefix that identifies one or more objects to which this rule applies\.  
@@ -102,9 +102,9 @@ Tags to use to identify a subset of objects to which the lifecycle rule applies\
 `Transition` \(deprecated\)  <a name="cfn-s3-bucket-lifecycleconfig-rule-transition"></a>
 Specifies when an object transitions to a specified storage class\. If you specify an expiration and transition time, you must use the same time unit for both properties \(either in days or by date\)\. The expiration time must also be later than the transition time\. If you specify this property, don't specify the `Transitions` property\.  
 *Required*: Conditional\. You must specify at least one of the following properties: `AbortIncompleteMultipartUpload`, `ExpirationDate`, `ExpirationInDays`, `NoncurrentVersionExpirationInDays`, `NoncurrentVersionTransition`, `NoncurrentVersionTransitions`, `Transition`, or `Transitions`\.  
-*Type*: [Amazon S3 Bucket Transition](aws-properties-s3-bucket-lifecycleconfig-rule-transition.md)
+*Type*: [Transition](aws-properties-s3-bucket-lifecycleconfig-rule-transition.md)
 
 `Transitions`  <a name="cfn-s3-bucket-lifecycleconfig-rule-transitions"></a>
 One or more transition rules that specify when an object transitions to a specified storage class\. If you specify an expiration and transition time, you must use the same time unit for both properties \(either in days or by date\)\. The expiration time must also be later than the transition time\. If you specify this property, don't specify the `Transition` property\.  
 *Required*: Conditional\. You must specify at least one of the following properties: `AbortIncompleteMultipartUpload`, `ExpirationDate`, `ExpirationInDays`, `NoncurrentVersionExpirationInDays`, `NoncurrentVersionTransition`, `NoncurrentVersionTransitions`, `Transition`, or `Transitions`\.  
-*Type*: List of [Amazon S3 Bucket Transition](aws-properties-s3-bucket-lifecycleconfig-rule-transition.md)
+*Type*: List of [Transition](aws-properties-s3-bucket-lifecycleconfig-rule-transition.md)

@@ -34,7 +34,7 @@ Properties:
     AliasRoutingConfiguration
 ```
 
-## Properties<a name="w4ab1c21c10d162c17b7"></a>
+## Properties<a name="w13ab1c21c10d177c17b7"></a>
 
 `Description`  <a name="cfn-lambda-alias-description"></a>
 Information about the alias, such as its purpose or the Lambda function that is associated with it\.  
@@ -66,9 +66,9 @@ Use this parameter to point your alias to two different function versions, allow
  *Type*: [AliasRoutingConfiguration](aws-properties-lambda-alias-aliasroutingconfiguration.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
-## Return Value<a name="w4ab1c21c10d162c17b9"></a>
+## Return Value<a name="w13ab1c21c10d177c17b9"></a>
 
-### Ref<a name="w4ab1c21c10d162c17b9b2"></a>
+### Ref<a name="w13ab1c21c10d177c17b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN of the Lambda alias\.
 

@@ -39,6 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[PreferredMaintenanceWindow](#cfn-rds-dbcluster-preferredmaintenancewindow)" : String,
     "[ReplicationSourceIdentifier](#cfn-rds-dbcluster-replicationsourceidentifier)" : String,
     "[ScalingConfiguration](#cfn-rds-dbcluster-scalingconfiguration)" : [*ScalingConfiguration*](aws-properties-rds-dbcluster-scalingconfiguration.md),
+    "[SourceRegion](#cfn-rds-dbcluster-sourceregion)" : String,
     "[SnapshotIdentifier](#cfn-rds-dbcluster-snapshotidentifier)" : String,
     "[StorageEncrypted](#cfn-rds-dbcluster-storageencrypted)" : Boolean,
     "[Tags](#cfn-rds-dbcluster-tags)" : [ [*Resource Tag*](aws-properties-resource-tags.md), ... ],
@@ -76,6 +77,7 @@ Properties:
   [ReplicationSourceIdentifier](#cfn-rds-dbcluster-replicationsourceidentifier): String
   [ScalingConfiguration](#cfn-rds-dbcluster-scalingconfiguration): 
     [*ScalingConfiguration*](aws-properties-rds-dbcluster-scalingconfiguration.md)
+  [SourceRegion](#cfn-rds-dbcluster-sourceregion): String
   [SnapshotIdentifier](#cfn-rds-dbcluster-snapshotidentifier): String
   [StorageEncrypted](#cfn-rds-dbcluster-storageencrypted): Boolean
   [Tags](#cfn-rds-dbcluster-tags):
@@ -84,7 +86,7 @@ Properties:
     - String
 ```
 
-## Properties<a name="w4ab1c21c10d171c13c13"></a>
+## Properties<a name="w13ab1c21c10d192c13c13"></a>
 
 `AvailabilityZones`  <a name="cfn-rds-dbcluster-availabilityzones"></a>
 A list of Availability Zones \(AZs\) in which DB instances in the cluster can be created\.  
@@ -223,6 +225,12 @@ For DB clusters in `serverless` DB engine mode, the scaling properties of the DB
 *Type*: [ScalingConfiguration](aws-properties-rds-dbcluster-scalingconfiguration.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
+`SourceRegion`  <a name="cfn-rds-dbcluster-sourceregion"></a>
+The AWS Region which contains the source DB cluster when replicating a DB cluster\. For example, `us-east-1`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+
 `SnapshotIdentifier`  <a name="cfn-rds-dbcluster-snapshotidentifier"></a>
 The identifier for the DB cluster snapshot from which you want to restore\.  
 *Required*: No  
@@ -249,13 +257,13 @@ A list of VPC security groups to associate with this DB cluster\.
 
 ## Return Values<a name="aws-resource-rds-dbcluster-ref"></a>
 
-### Ref<a name="w4ab1c21c10d171c13c15b2"></a>
+### Ref<a name="w13ab1c21c10d192c13c15b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d171c13c15b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d192c13c15b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -270,7 +278,7 @@ The reader endpoint for the DB cluster\. For example: `mystack-mydbcluster-ro-1a
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Example<a name="w4ab1c21c10d171c13c17"></a>
+## Example<a name="w13ab1c21c10d192c13c17"></a>
 
 The following snippet creates an Amazon Aurora DB cluster and adds two DB instances to it\. Because Amazon RDS automatically assigns a writer and reader DB instances in the cluster, use the cluster endpoint to read and write data, not the individual DB instance endpoints\.
 

@@ -4,7 +4,7 @@ The `AWS::SNS::TopicPolicy` resource associates Amazon SNS topics with a policy\
 
 **Topics**
 + [Syntax](#aws-resource-sns-policy-syntax)
-+ [Properties](#w4ab1c21c10d198c22b9)
++ [Properties](#w13ab1c21c10d222c22b9)
 
 ## Syntax<a name="aws-resource-sns-policy-syntax"></a>
 
@@ -33,7 +33,7 @@ Properties:
     - List of SNS topic ARNs
 ```
 
-## Properties<a name="w4ab1c21c10d198c22b9"></a>
+## Properties<a name="w13ab1c21c10d222c22b9"></a>
 
 `PolicyDocument`  <a name="cfn-sns-topicpolicy-policydocument"></a>
 A policy document that contains permissions to add to the specified SNS topics\.  

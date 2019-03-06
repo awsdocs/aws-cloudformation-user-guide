@@ -1,8 +1,8 @@
-# Elastic Load Balancing Listener AuthenticateOidcConfig<a name="aws-properties-elasticloadbalancingv2-listener-authenticateoidcconfig"></a>
+# Elastic Load Balancing V2 AuthenticateOidcConfig<a name="aws-properties-elasticloadbalancingv2-listener-authenticateoidcconfig"></a>
 
 <a name="aws-properties-elasticloadbalancingv2-listener-authenticateoidcconfig-description"></a>The `AuthenticateOidcConfig` property type specifies request parameters when using an identity provider \(IdP\) that is compliant with OpenID Connect \(OIDC\) to authenticate users\.
 
-<a name="aws-properties-elasticloadbalancingv2-listener-authenticateoidcconfig-inheritance"></a> `AuthenticateOidcConfig` is a property of the [Elastic Load Balancing Listener Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md) property type\.
+<a name="aws-properties-elasticloadbalancingv2-listener-authenticateoidcconfig-inheritance"></a> `AuthenticateOidcConfig` is a property of the [Elastic Load Balancing V2 Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md) property type\.
 
 ## Syntax<a name="aws-properties-elasticloadbalancingv2-listener-authenticateoidcconfig-syntax"></a>
 
@@ -98,8 +98,8 @@ The name of the cookie used to maintain session information\. The default is `AW
 
 `SessionTimeout`  <a name="cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-sessiontimeout"></a>
 The maximum duration of the authentication session, in seconds\. The default is 604800 seconds \(7 days\)\.  
- *Required*: Number  
- *Type*: String  
+ *Required*: No  
+ *Type*: Number  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `TokenEndpoint`  <a name="cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-tokenendpoint"></a>

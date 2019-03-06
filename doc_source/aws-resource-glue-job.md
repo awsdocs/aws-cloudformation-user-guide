@@ -111,7 +111,7 @@ The name of the job\. It must match the single\-line string pattern: `[\u0020-\u
 
 ## Return Values<a name="aws-resource-glue-job-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10d138c26b9b3"></a>
+### Ref<a name="w13ab1c21c10d150c26b9b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 

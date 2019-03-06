@@ -66,7 +66,7 @@ The name of the job definition\.
 
 `ContainerProperties`  <a name="cfn-batch-jobdefinition-containerproperties"></a>
 An object with various properties specific to container\-based jobs\.  
- *Required*: Yes  
+ *Required*: No  
  *Type*: [AWS Batch JobDefinition ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md)  
  *Update requires*: No Interruption 
 
@@ -84,7 +84,7 @@ The retry strategy to use for failed jobs that are submitted with this job defin
 
 ## Return Values<a name="aws-resource-batch-jobdefinition-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10c39c17c11b3"></a>
+### Ref<a name="w13ab1c21c10c45c17c11b3"></a>
 
 When you pass the logical ID of an `AWS::Batch::JobDefinition` resource to the intrinsic `Ref` function, the function returns the job definition ARN, such as `arn:aws:batch:us-east-1:111122223333:job-definition/test-gpu:2`\. 
 

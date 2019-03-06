@@ -1,6 +1,6 @@
 # AWS::ElasticLoadBalancingV2::TargetGroup<a name="aws-resource-elasticloadbalancingv2-targetgroup"></a>
 
-The `AWS::ElasticLoadBalancingV2::TargetGroup` resource creates an Elastic Load Balancing target group that routes requests to one or more registered targets, such as EC2 instances\. For more information, see [Getting Started](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/load-balancer-getting-started.html) in the *Elastic Load Balancing User Guide*\.
+The `AWS::ElasticLoadBalancingV2::TargetGroup` resource creates a target group that routes requests to one or more registered targets\. For more information, see [Target Groups for Your Application Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html) in the *User Guide for Application Load Balancers* or [Target Groups for Your Network Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html) in the *User Guide for Network Load Balancers*\.
 
 ## Syntax<a name="aws-resource-elasticloadbalancingv2-targetgroup-syntax"></a>
 
@@ -58,11 +58,11 @@ Properties:
   [VpcId](#cfn-elasticloadbalancingv2-targetgroup-vpcid): String
 ```
 
-## Properties<a name="w4ab1c21c10d129c29b7"></a>
+## Properties<a name="w13ab1c21c10d138c31b7"></a>
 
 `HealthCheckIntervalSeconds`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthcheckintervalseconds"></a>
 The approximate number of seconds between health checks for an individual target\.  
-For valid and default values, see the `HealthCheckIntervalSeconds` parameter for the [CreateTargetGroup](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateTargetGroup.html) action in the **\.  
+For valid and default values, see the `HealthCheckIntervalSeconds` parameter for the [CreateTargetGroup](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateTargetGroup.html) action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -81,7 +81,7 @@ For valid and default values, see the `HealthCheckPort` parameter for the [Creat
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `HealthCheckProtocol`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthcheckprotocol"></a>
-The protocol that the load balancer uses when performing health checks on the targets, such as `HTTP` or `HTTPS`\.  
+The protocol that the load balancer uses when performing health checks on the targets\.  
 For valid and default values, see the `HealthCheckProtocol` parameter for the [CreateTargetGroup](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateTargetGroup.html) action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
 *Required*: No  
 *Type*: String  
@@ -103,7 +103,7 @@ The number of consecutive successful health checks that are required before an u
 \[HTTP/HTTPS health checks\] The HTTP codes that a healthy target uses when responding to a health check\.  
 For more information about specifying this property, see [Matcher](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_Matcher.html) in the Elastic Load Balancing API Reference version 2015\-12\-01\.   
 *Required*: No  
-*Type*: [Elastic Load Balancing TargetGroup Matcher](aws-properties-elasticloadbalancingv2-targetgroup-matcher.md)  
+*Type*: [Elastic Load Balancing V2 Matcher](aws-properties-elasticloadbalancingv2-targetgroup-matcher.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Name`  <a name="cfn-elasticloadbalancingv2-targetgroup-name"></a>
@@ -135,20 +135,21 @@ An arbitrary set of tags \(key–value pairs\) for the target group\. Use tags t
 `TargetGroupAttributes`  <a name="cfn-elasticloadbalancingv2-targetgroup-targetattributes"></a>
 Target group configurations\.  
 *Required*: No  
-*Type*: List of [Elastic Load Balancing TargetGroup TargetGroupAttributes](aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattributes.md)  
+*Type*: List of [Elastic Load Balancing V2 TargetGroupAttributes](aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattributes.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Targets`  <a name="cfn-elasticloadbalancingv2-targetgroup-targets"></a>
 The targets to add to this target group\.  
 *Required*: No  
-*Type*: List of [Elastic Load Balancing TargetGroup TargetDescription](aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.md)  
+*Type*: List of [Elastic Load Balancing V2 TargetDescription](aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `TargetType`  <a name="cfn-elasticloadbalancingv2-targetgroup-targettype"></a>
-The registration type of the targets in this target group\. Valid values are `instance` and `ip`\. The default is `instance`\.  
+The type of targets that you must specify when registering targets with this target group\.  
+For valid and default values, see the `TargetType` parameter for the [CreateTargetGroup](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateTargetGroup.html) action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `UnhealthyThresholdCount`  <a name="cfn-elasticloadbalancingv2-targetgroup-unhealthythresholdcount"></a>
 The number of consecutive failed health checks that are required before a target is considered unhealthy\.  
@@ -157,20 +158,20 @@ The number of consecutive failed health checks that are required before a target
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `VpcId`  <a name="cfn-elasticloadbalancingv2-targetgroup-vpcid"></a>
-The ID of the VPC in which your targets are located\.  
+The ID of the VPC\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d129c29b9"></a>
+## Return Values<a name="w13ab1c21c10d138c31b9"></a>
 
-### Ref<a name="w4ab1c21c10d129c29b9b2"></a>
+### Ref<a name="w13ab1c21c10d138c31b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the target group's Amazon Resource Name \(ARN\), such as `arn:aws:elasticloadbalancing:us-west-2:123456789012:targetgroup/my-targets/73e2d6bc24d8a067`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d129c29b9b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d138c31b9b4"></a>
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
@@ -185,9 +186,9 @@ The name of the target group, such as `my-target-group`\. This is the value of t
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w4ab1c21c10d129c29c11"></a>
+## Examples<a name="w13ab1c21c10d138c31c11"></a>
 
-### Create a Target Group with EC2 Instances as Targets<a name="w4ab1c21c10d129c29c11b2"></a>
+### Create a Target Group with EC2 Instances as Targets<a name="w13ab1c21c10d138c31c11b2"></a>
 
 The following examples creates a target group that includes the `Instance1` and `Instance2` EC2 instances as targets\. The instances must respond with a `200` status code to pass health check requests\.
 
@@ -260,7 +261,7 @@ TargetGroup:
       Value: value2
 ```
 
-### Relate an Elastic Load Balancing Load Balancer to an Elastic Load Balancing Target Group<a name="w4ab1c21c10d129c29c11b4"></a>
+### Relate an Elastic Load Balancing Load Balancer to an Elastic Load Balancing Target Group<a name="w13ab1c21c10d138c31c11b4"></a>
 
 The following example creates an Elastic Load Balancing listener, associates it with a target group and a load balancer, and sets a target group attribute\.
 

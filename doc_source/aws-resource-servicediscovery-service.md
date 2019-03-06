@@ -48,7 +48,7 @@ A description for the service\.
 
 `DnsConfig`  <a name="cfn-servicediscovery-service-dnsconfig"></a>
 An optional complex type that contains information about the DNS records that you want AWS Cloud Map to create when you register an instance\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [DnsConfig](aws-properties-servicediscovery-service-dnsconfig.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
@@ -64,7 +64,7 @@ Specifies information about an optional custom health check\.
 If you specify a health check configuration, you can specify either `HealthCheckCustomConfig` or `HealthCheckConfig` but not both\.  
 *Required*: No  
 *Type*: [HealthCheckCustomConfig](aws-properties-servicediscovery-service-healthcheckcustomconfig.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Name`  <a name="cfn-servicediscovery-service-name"></a>
 The name that you want to assign to the service\.  

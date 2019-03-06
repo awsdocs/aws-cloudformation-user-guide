@@ -1,6 +1,6 @@
-# AWS CodeDeploy DeploymentGroup TriggerConfig<a name="aws-properties-codedeploy-deploymentgroup-triggerconfig"></a>
+# CodeDeploy DeploymentGroup TriggerConfig<a name="aws-properties-codedeploy-deploymentgroup-triggerconfig"></a>
 
-The `TriggerConfig` property type specifies a notification trigger for an AWS CodeDeploy deployment group\. The `TriggerConfigurations` property of the [AWS::CodeDeploy::DeploymentGroup](aws-resource-codedeploy-deploymentgroup.md) resource contains a list of `TriggerConfig` property types\.
+The `TriggerConfig` property type specifies a notification trigger for an CodeDeploy deployment group\. The `TriggerConfigurations` property of the [AWS::CodeDeploy::DeploymentGroup](aws-resource-codedeploy-deploymentgroup.md) resource contains a list of `TriggerConfig` property types\.
 
 ## Syntax<a name="aws-properties-codedeploy-deploymentgroup-triggerconfig-syntax"></a>
 

@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
     "[ExecutionRoleArn](#cfn-sagemaker-model-executionrolearn)" : String,
     "[PrimaryContainer](#cfn-sagemaker-model-primarycontainer)" : [*ContainerDefinition*](aws-properties-sagemaker-model-containerdefinition.md),
+    "[Containers](#cfn-sagemaker-model-containers)" : [ [*ContainerDefinition*](aws-properties-sagemaker-model-containerdefinition.md),...],
     "[ModelName](#cfn-sagemaker-model-modelname)" : String,
     "[VpcConfig](#cfn-sagemaker-model-vpcconfig)" : [*VpcConfig*](aws-properties-sagemaker-model-vpcconfig.md),
     "[Tags](#cfn-sagemaker-model-tags)" : [ [*Tag*](aws-properties-resource-tags.md), ... ]
@@ -28,6 +29,7 @@ Type: "AWS::SageMaker::Model"
 Properties:
   [ExecutionRoleArn](#cfn-sagemaker-model-executionrolearn): String
   [PrimaryContainer](#cfn-sagemaker-model-primarycontainer): [*ContainerDefinition*](aws-properties-sagemaker-model-containerdefinition.md)
+  [Containers](#cfn-sagemaker-model-containers): - [*ContainerDefinition*](aws-properties-sagemaker-model-containerdefinition.md)
   [ModelName](#cfn-sagemaker-model-modelname): String
   [VpcConfig](#cfn-sagemaker-model-vpcconfig): [*VpcConfig*](aws-properties-sagemaker-model-vpcconfig.md)
   [Tags](#cfn-sagemaker-model-tags): 
@@ -46,6 +48,12 @@ The Amazon Resource Name \(ARN\) of the IAM role that Amazon SageMaker can assum
 The location of the primary docker image containing inference code, associated artifacts, and custom environment map that the inference code uses when the model is deployed into production\.   
  *Required*: Yes  
  *Type*: [Amazon SageMaker Model ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)  
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+
+`Containers`  <a name="cfn-sagemaker-model-containers"></a>
+Specifies the containers in the inference pipeline\.  
+ *Required*: No  
+ *Type*: List of [Amazon SageMaker Model ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `ModelName`  <a name="cfn-sagemaker-model-modelname"></a>

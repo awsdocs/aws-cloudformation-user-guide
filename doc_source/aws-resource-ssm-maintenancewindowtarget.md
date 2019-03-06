@@ -82,7 +82,7 @@ An optional name for the target\.
 
 ## Return Values<a name="aws-resource-ssm-maintenancewindowtarget-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10d207c22b9b3"></a>
+### Ref<a name="w13ab1c21c10d231c22b9b3"></a>
 
 When you pass the logical ID of an `AWS::SSM::MaintenanceWindowTarget` resource to the intrinsic `Ref` function, the function returns the maintenance window target ID, such as `12a345b6-bbb7-4bb6-90b0-8c9577a2d2b9`\. 
 

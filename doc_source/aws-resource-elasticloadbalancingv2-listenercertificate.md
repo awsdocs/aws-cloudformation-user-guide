@@ -1,6 +1,6 @@
 # AWS::ElasticLoadBalancingV2::ListenerCertificate<a name="aws-resource-elasticloadbalancingv2-listenercertificate"></a>
 
-The `AWS::ElasticLoadBalancingV2::ListenerCertificate` resource specifies certificates for an Elastic Load Balancing secure listener\. For more information, see [Getting Started](http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/load-balancer-getting-started.html) in the *Elastic Load Balancing User Guide*\. 
+The `AWS::ElasticLoadBalancingV2::ListenerCertificate` resource adds certificates to an HTTPS listener\. For more information, see [SSL Certificates](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#https-listener-certificates) in the *User Guide for Application Load Balancers*\.
 
 ## Syntax<a name="aws-resource-elasticloadbalancingv2-listenercertificate-syntax"></a>
 
@@ -31,7 +31,7 @@ Properties:
 ## Properties<a name="aws-resource-elasticloadbalancingv2-listenercertificate-properties"></a>
 
 `Certificates`  <a name="cfn-elasticloadbalancingv2-listenercertificate-certificates"></a>
-Certificates specified for the listener\. Duplicates not allowed\.  
+The certificates to add\. Duplicates not allowed\.  
  *Required*: Yes  
  *Type*: List of [Certificate](aws-properties-elasticloadbalancingv2-listenercertificate-certificate.md)  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 

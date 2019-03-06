@@ -10,7 +10,7 @@
 {
   "[ApiId](#cfn-apigateway-usageplan-apistage-apiid)" : String,
   "[Stage](#cfn-apigateway-usageplan-apistage-stage)" : String,
-  "[Throttle](#cfn-apigateway-usageplan-apistage-throttle)" : { String: [ [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md), ...  ] }
+  "[Throttle](#cfn-apigateway-usageplan-apistage-throttle)" : { String: [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md) }
 }
 ```
 
@@ -20,8 +20,7 @@
 [ApiId](#cfn-apigateway-usageplan-apistage-apiid): String
 [Stage](#cfn-apigateway-usageplan-apistage-stage): String
 [Throttle](#cfn-apigateway-usageplan-apistage-throttle): 
-  String:
-    - [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)
+  String: [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)
 ```
 
 ## Properties<a name="aws-properties-apigateway-usageplan-apistage-properties"></a>
@@ -40,5 +39,5 @@ The name of an API Gateway stage to associate with the usage plan\.
 Map containing method\-level throttling information for API stage in a usage plan\.  
 Duplicates are not allowed\.  
 *Required*: No  
-*Type*: Map of string\-to\-[Amazon API Gateway UsagePlan ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)  
+*Type*: Map of string\-to\-[ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

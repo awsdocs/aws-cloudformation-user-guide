@@ -1,8 +1,8 @@
-# Amazon S3 Website Configuration Routing Rules Routing Rule Condition Property<a name="aws-properties-s3-websiteconfiguration-routingrules-routingrulecondition"></a>
+# Amazon S3 Bucket RoutingRuleCondition<a name="aws-properties-s3-websiteconfiguration-routingrules-routingrulecondition"></a>
 
-The `RoutingRuleCondition` property is an embedded property of the [Amazon S3 Website Configuration Routing Rules Property](aws-properties-s3-websiteconfiguration-routingrules.md) that describes a condition that must be met for a redirect to apply\.
+The `RoutingRuleCondition` property is an embedded property of the [RoutingRules](aws-properties-s3-websiteconfiguration-routingrules.md) that describes a condition that must be met for a redirect to apply\.
 
-## Syntax<a name="w4ab1c21c10d180c13d126b5"></a>
+## Syntax<a name="w13ab1c21c10d204c13d126b5"></a>
 
 ### JSON<a name="aws-properties-s3-websiteconfiguration-routingrules-routingrulecondition-syntax.json"></a>
 
@@ -20,7 +20,7 @@ The `RoutingRuleCondition` property is an embedded property of the [Amazon S3 We
 [KeyPrefixEquals](#cfn-s3-websiteconfiguration-routingrules-routingrulecondition-keyprefixequals): String
 ```
 
-## Properties<a name="w4ab1c21c10d180c13d126b7"></a>
+## Properties<a name="w13ab1c21c10d204c13d126b7"></a>
 
 `HttpErrorCodeReturnedEquals`  <a name="cfn-s3-websiteconfiguration-routingrules-routingrulecondition-httperrorcodereturnedequals"></a>
 Applies this redirect if the error code equals this value in the event of an error\.  

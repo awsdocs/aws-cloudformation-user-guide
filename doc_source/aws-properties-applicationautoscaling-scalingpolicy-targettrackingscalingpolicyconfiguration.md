@@ -37,7 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 For more information about each property, including constraints and valid values, see [TargetTrackingScalingPolicyConfiguration](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_TargetTrackingScalingPolicyConfiguration.html) in the *Application Auto Scaling API Reference*\.
 
 `CustomizedMetricSpecification`  <a name="cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration-customizedmetricspecification"></a>
-This property is reserved for future use\.  
+A customized metric\.  
 *Required*: No  
 *Type*: [Application Auto Scaling ScalingPolicy CustomizedMetricSpecification](aws-properties-applicationautoscaling-scalingpolicy-customizedmetricspecification.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

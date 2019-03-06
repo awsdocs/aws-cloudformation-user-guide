@@ -58,7 +58,7 @@ Properties:
   [Weight](#cfn-route53-recordset-weight): Integer
 ```
 
-## Properties<a name="w4ab1c21c10d177c22b9"></a>
+## Properties<a name="w13ab1c21c10d201c22b9"></a>
 
 `AliasTarget`  <a name="cfn-route53-recordset-aliastarget"></a>
 *Alias resource record sets only:* Information about the domain to which you are redirecting traffic\.  
@@ -173,15 +173,15 @@ For more information about weighted resource record sets, see [Setting Up Weight
 *Type*: Number\. Weight expects integer values\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10d177c22c11"></a>
+## Return Value<a name="w13ab1c21c10d201c22c11"></a>
 
 When you specify an `AWS::Route53::RecordSet` type as an argument to the `Ref` function, AWS CloudFormation returns the value of the domain name of the record set\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d177c22c13"></a>
+## Example<a name="w13ab1c21c10d201c22c13"></a>
 
-### Mapping a Route 53 A record to the public IP of an Amazon EC2 instance<a name="w4ab1c21c10d177c22c13b2"></a>
+### Mapping a Route 53 A record to the public IP of an Amazon EC2 instance<a name="w13ab1c21c10d201c22c13b2"></a>
 
 #### JSON<a name="aws-resource-route53-recordset-example.json"></a>
 
@@ -237,6 +237,6 @@ Resources:
       - !GetAtt Ec2Instance.PublicIp
 ```
 
-### Additional Information<a name="w4ab1c21c10d177c22c13b4"></a>
+### Additional Information<a name="w13ab1c21c10d201c22c13b4"></a>
 
 For additional `AWS::Route53::RecordSet` snippets, see [Route 53 Template Snippets](quickref-route53.md) \.

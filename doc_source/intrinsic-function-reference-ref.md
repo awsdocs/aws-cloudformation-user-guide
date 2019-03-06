@@ -82,6 +82,7 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 | [Alexa::ASK::Skill](aws-resource-ask-skill.md) | Alexa skill ID | amzn1\.ask\.skill\.a3103cee\-c48c\-40a0\-a2c9\-251141888863 | 
 | [AWS::AmazonMQ::Broker](aws-resource-amazonmq-broker.md) | Amazon MQ broker ID | b\-1234a5b6\-78cd\-901e\-2fgh\-3i45j6k178l9 | 
 | [AWS::AmazonMQ::Configuration](aws-resource-amazonmq-configuration.md) | Amazon MQ configuration ID | c\-1234a5b6\-78cd\-901e\-2fgh\-3i45j6k178l9 | 
+| [AWS::AmazonMQ::ConfigurationAssociation](aws-resource-amazonmq-configurationassociation.md) | Amazon MQ configurationassociation ID | c\-1234a5b6\-78cd\-901e\-2fgh\-3i45j6k178l9 | 
 |  [AWS::ApiGateway::Account](aws-resource-apigateway-account.md)  |  API Gateway account resource ID  |  `mysta-accou-01234b567890example`  | 
 |  [AWS::ApiGateway::ApiKey](aws-resource-apigateway-apikey.md)  |  API key  |  `m2m1k7sybf`  | 
 |  [AWS::ApiGateway::Authorizer](aws-resource-apigateway-authorizer.md)  |  Authorizer resource ID  |  `abcde1`  | 
@@ -93,6 +94,15 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::ApiGateway::Resource](aws-resource-apigateway-resource.md)  |  API Gateway resource ID  |  `abc123`  | 
 |  [AWS::ApiGateway::RestApi](aws-resource-apigateway-restapi.md)  |  Rest API resource ID  |  `a1bcdef2gh`  | 
 |  [AWS::ApiGateway::Stage](aws-resource-apigateway-stage.md)   |  Stage name  |  `MyTestStage`  | 
+|  [AWS::ApiGatewayV2::Api](aws-resource-apigatewayv2-api.md)  |  API resource ID  |  `a1bcdef2gh`  | 
+|  [AWS::ApiGatewayV2::Authorizer](aws-resource-apigatewayv2-authorizer.md)  |  Authorizer resource ID  |  `abc123`  | 
+|  [AWS::ApiGatewayV2::Deployment](aws-resource-apigatewayv2-deployment.md)  |  Deployment resource ID  |  `abc123`  | 
+|  [AWS::ApiGatewayV2::Integration](aws-resource-apigatewayv2-integration.md)  |  Integration resource ID  |  `abcd123`  | 
+|  [AWS::ApiGatewayV2::IntegrationResponse](aws-resource-apigatewayv2-integrationresponse.md)  |  Integration response resource ID  |  `abcd123`  | 
+|  [AWS::ApiGatewayV2::Model](aws-resource-apigatewayv2-model.md)  |  Model resource ID  |  `abc123`  | 
+|  [AWS::ApiGatewayV2::Route](aws-resource-apigatewayv2-route.md)  |  Route resource ID  |  `abcd123`  | 
+|  [AWS::ApiGatewayV2::RouteResponse](aws-resource-apigatewayv2-routeresponse.md)  |  Route response resource ID  |  `abc123`  | 
+|  [AWS::ApiGatewayV2::Stage](aws-resource-apigatewayv2-stage.md)  |  Stage name  |  `MyTestStage`  | 
 | [AWS::ApplicationAutoScaling::ScalableTarget](aws-resource-applicationautoscaling-scalabletarget.md) |  Scalable Target ID  |  `service/ecsStack-MyECSCluster-AB12CDE3F4GH/ecsStack-MyECSService-AB12CDE3F4GH\|ecs:service:DesiredCount\|ecs`  | 
 | [AWS::ApplicationAutoScaling::ScalingPolicy](aws-resource-applicationautoscaling-scalingpolicy.md) |  Application Auto Scaling policy Amazon Resource Name \(ARN\)  | arn:aws:autoscaling:us\-east\-1:123456789012:scalingPolicy:12ab3c4d\-56789\-0ef1\-2345\-6ghi7jk8lm90:resource/ecs/service/ecsStack\-MyECSCluster\-AB12CDE3F4GH/ecsStack\-MyECSService\-AB12CDE3F4GH:policyName/MyStepPolicy | 
 |  [AWS::Athena::NamedQuery](aws-resource-athena-namedquery.md)  |  Named query name  |  `abc123`  | 
@@ -128,6 +138,10 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 | [AWS::DirectoryService::MicrosoftAD](aws-resource-directoryservice-microsoftad.md) |  Microsoft directory ID  |  `d-12345ab592`  | 
 | [AWS::DirectoryService::SimpleAD](aws-resource-directoryservice-simplead.md) |  Directory ID  |  `d-12345ab592`  | 
 | [AWS::DLM::LifecyclePolicy](aws-resource-dlm-lifecyclepolicy.md) | Policy ID |  `policy-0123456789abcdef0`  | 
+| [AWS::DocDB::DBCluster](aws-resource-docdb-dbcluster.md) |  DB cluster name  |  `sample-cluster`  | 
+| [AWS::DocDB::DBClusterParameterGroup](aws-resource-docdb-dbclusterparametergroup.md) |  DB cluster parameter group name  |  `default.docdb3.6`  | 
+| [AWS::DocDB::DBInstance](aws-resource-docdb-dbinstance.md) |  DB instance name  |  `sample-instance`  | 
+| [AWS::DocDB::DBSubnetGroup](aws-resource-docdb-dbsubnetgroup.md) |  DB subnet group name  |  `default`  | 
 | [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md) |  Table Name  |  `MyDDBTable`  | 
 |  [AWS::EC2::EC2Fleet](aws-resource-ec2-ec2fleet.md)  |  Fleet ID  |  `fleet-12a34b55-67cd-8ef9-ba9b-9208dEXAMPLE`  | 
 |  [AWS::EC2::EIP](aws-properties-ec2-eip.md)  |  Elastic IP Address  |  `192.0.2.0`  | 
@@ -173,6 +187,7 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md)  |  Name  |  `mystack-myelb-1WQN7BJGDB5YQ`  | 
 |  [AWS::Events::EventBusPolicy](aws-resource-events-eventbuspolicy.md)  |  Event bus policy ID  |  `EventBusPolicy-1aBCdeFGh2J3`  | 
 |  [AWS::Events::Rule](aws-resource-events-rule.md)  |  Event rule ID  |  `mystack-ScheduledRule-ABCDEFGHIJK`  | 
+|  [AWS::FSx::FileSystem](aws-resource-fsx-filesystem.md)  |  xxx  |  `xxx`  | 
 |  [AWS::GameLift::Alias](aws-resource-gamelift-alias.md)  |  Alias ID  |  `myalias-a01234b56-7890-1de2-f345-g67h8i901j2k`  | 
 |  [AWS::GameLift::Build](aws-resource-gamelift-build.md)  |  Build ID  |  `mybuild-a01234b56-7890-1de2-f345-g67h8i901j2k`  | 
 |  [AWS::GameLift::Fleet](aws-resource-gamelift-fleet.md)  |  Fleet ID  |  `myfleet-a01234b56-7890-1de2-f345-g67h8i901j2k`  | 
@@ -197,9 +212,9 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 | [AWS::IoT::Policy](aws-resource-iot-policy.md) | Policy name | MyPolicyName | 
 | [AWS::IoT::Thing](aws-resource-iot-thing.md) | Thing name | MyStack\-MyThing\-AB1CDEFGHIJK | 
 | [AWS::IoT::TopicRule](aws-resource-iot-topicrule.md) | Topic rule name | MyStackMyTopicRule12ABC3D456EFG | 
-| [AWS::IoT1Click::Placement](aws-resource-iot1click-placement.md) | The placement name \(associated with a project\)\. | region3 | 
-| [AWS::IoT1Click::Project](aws-resource-iot1click-project.md) | The project ARN\. | arn:aws:iot1click:us\-west\-2:0123456789012:projects/seattle\-region | 
-| [AWS::IoT1Click::Device](aws-resource-iot1click-device.md) | The device ARN\. | arn:aws:iot1click:us\-west\-2:123456789012:devices/G030PX0312744DWM | 
+| [AWS::IoT1Click::Placement](aws-resource-iot1click-placement.md) | The placement name \(associated with a project\) | region3 | 
+| [AWS::IoT1Click::Project](aws-resource-iot1click-project.md) | The project ARN | arn:aws:iot1click:us\-west\-2:0123456789012:projects/seattle\-region | 
+| [AWS::IoT1Click::Device](aws-resource-iot1click-device.md) | The device ARN | arn:aws:iot1click:us\-west\-2:123456789012:devices/G030PX0312744DWM | 
 |  [AWS::Kinesis::Stream](aws-resource-kinesis-stream.md)  |  Name  |  `mystack-mystream-1NAOH4L1RIQ7I`  | 
 |  [AWS::Kinesis::StreamConsumer](aws-resource-kinesis-streamconsumer.md)  |  Consumer ARN  |  `arn:aws:kinesis:region:account-id:stream/stream-name/consumer/consumer-name:consumer-creation-timestamp`  | 
 |  [AWS::KinesisFirehose::DeliveryStream](aws-resource-kinesisfirehose-deliverystream.md)  |  Delivery stream name  |  `mystack-deliverystream-1ABCD2EF3GHIJ`  | 
@@ -208,8 +223,8 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::Lambda::Alias](aws-resource-lambda-alias.md)  |  Amazon Resource Name of the AWS Lambda alias  | arn:aws:lambda:us\-west\-2:123456789012:function:helloworld:BETA | 
 |  [AWS::Lambda::EventSourceMapping](aws-resource-lambda-eventsourcemapping.md)  |  Name  |  `MyStack-lambdaeventsourcemapping-CU6107MRVLR7`  | 
 |  [AWS::Lambda::Function](aws-resource-lambda-function.md)  |  Name  |  `MyStack-AMILookUp-NT5EUXTNTXXD`  | 
-|  [AWS::Lambda::LayerVersion](aws-resource-lambda-layerversion.md)  |  Layer version ARN\.  |  `arn:aws:lambda:us-west-2:123456789012:layer:my-layer:1`  | 
-|  [AWS::Lambda::LayerVersionPermission](aws-resource-lambda-layerversionpermission.md)  |  Layer version ARN with statement ID\.  |  `arn:aws:lambda:us-west-2:123456789012:layer:my-layer:1#engineering-org`  | 
+|  [AWS::Lambda::LayerVersion](aws-resource-lambda-layerversion.md)  |  Layer version ARN  |  `arn:aws:lambda:us-west-2:123456789012:layer:my-layer:1`  | 
+|  [AWS::Lambda::LayerVersionPermission](aws-resource-lambda-layerversionpermission.md)  |  Layer version ARN with statement ID  |  `arn:aws:lambda:us-west-2:123456789012:layer:my-layer:1#engineering-org`  | 
 |  [AWS::Lambda::Version](aws-resource-lambda-version.md)  |  Amazon Resource Name of the AWS Lambda version  | arn:aws:lambda:us\-west\-2:123456789012:function:helloworld:1 | 
 |  [AWS::Logs::Destination](aws-resource-logs-destination.md)  |  Destination name  |  `TestDestination`  | 
 |  [AWS::Logs::LogGroup](aws-resource-logs-loggroup.md)  |  Name  |  `mystack-myLogGroup-1341JS4M96031`  | 
@@ -220,6 +235,8 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::OpsWorks::Stack](aws-resource-opsworks-stack.md)  |  AWS OpsWorks Stack ID  |  `5c9f04e8-370e-4bd3-ae09-a4bbcc2998bb`  | 
 |  [AWS::OpsWorks::UserProfile](aws-resource-opsworks-userprofile.md)  |  IAM user Amazon Resource Name  |  `arn:aws:iam::123456789012:user/opsworksuser`  | 
 |  [AWS::OpsWorks::Volume](aws-resource-opsworks-volume.md)  |  AWS OpsWorks Volume ID  |  `1ab23cd4-92ff-4501-b37c-example`  | 
+|  [AWS::OpsWorksCM::Server](aws-resource-opsworkscm-server.md)  |  AWS OpsWorks CM server Amazon Resource Name  |  `arn:aws:OpsWorksCM:us-east-1:123456789012:server/server-a1bzhi`  | 
+|  [AWS::RAM::ResourceShare](aws-resource-ram-resourceshare.md)  |  Resource share ARN  |  `arn:aws:ram:us-east-1:123456789012:resource-share/12345678-1234-1234-1234-12345678`  | 
 |  [AWS::RDS::DBCluster](aws-resource-rds-dbcluster.md)  |  Cluster name  |  `test-rdscluster-pdedtss0mfqr`  | 
 |  [AWS::RDS::DBClusterParameterGroup](aws-resource-rds-dbclusterparametergroup.md)  |  Parameter group name  |  `test-dbparamgroup-4l8qqx46vjby`  | 
 |  [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)  |  Name  |  `mystack-mydb-ea5ugmfvuaxg`  | 
@@ -230,10 +247,17 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::Redshift::ClusterParameterGroup](aws-resource-redshift-clusterparametergroup.md)  |  Name  |  `mysta-mypar-1AJYM1FL3WQBW`  | 
 |  [AWS::Redshift::ClusterSecurityGroup](aws-resource-redshift-clustersecuritygroup.md)  |  Name  |  `mystack-myredshiftclustersecuritygroup-bjy2afmhy3ee`  | 
 |  [AWS::Redshift::ClusterSubnetGroup](aws-resource-redshift-clustersubnetgroup.md)  |  Name  |  `mystack-myredshiftclustersubnetgroup-aq6rsdq8rp71`  | 
+|  [AWS::RoboMaker::Fleet](aws-resource-robomaker-fleet.md)  |  xxx  |  `xxx`  | 
+|  [AWS::RoboMaker::Robot](aws-resource-robomaker-robot.md)  |  xxx  |  `xxx`  | 
+|  [AWS::RoboMaker::RobotApplication](aws-resource-robomaker-robotapplication.md)  |  xxx  |  `xxx`  | 
+|  [AWS::RoboMaker::RobotApplicationVersion](aws-resource-robomaker-robotapplicationversion.md)  |  xxx  |  `xxx`  | 
+|  [AWS::RoboMaker::SimulationApplication](aws-resource-robomaker-simulationapplication.md)  |  xxx  |  `xxx`  | 
+|  [AWS::RoboMaker::SimulationApplicationVersion](aws-resource-robomaker-simulationapplicationversion.md)  |  xxx  |  `xxx`  | 
 |  [AWS::Route53::HealthCheck](aws-resource-route53-healthcheck.md)  |  Amazon Route 53 health check ID  |  `e0a123b4-4dba-4650-935e-example`  | 
 |  [AWS::Route53::HostedZone](aws-resource-route53-hostedzone.md)  | Hosted zone ID |  `Z23ABC4XYZL05B`  | 
 |  [AWS::Route53Resolver::ResolverEndpoint](aws-resource-route53resolver-resolverendpoint.md)  | Endpoint ID |  `rslvr-out-fdc049932dexample`  | 
 |  [AWS::Route53Resolver::ResolverRule](aws-resource-route53resolver-resolverrule.md)  | Rule ID |  `rslvr-rr-5328a0899aexample`  | 
+|  [AWS::Route53Resolver::ResolverRuleAssociation](aws-resource-route53resolver-resolverruleassociation.md)  | Resolver rule association ID |  `rslvr-rrassoc-97242eaf88example`  | 
 |  [AWS::S3::Bucket](aws-properties-s3-bucket.md)  |  Name  |  `mystack-mys3bucket-1hbsmonr9mytq`  | 
 | [AWS::SecretsManager::Secret](aws-resource-secretsmanager-secret.md) | Secret ARN | arn:aws:secretsmanager:us\-east\-2:123456789012:secret:MyPath/MySecretName\-a1b2c3 | 
 |  [AWS::ServiceDiscovery::HttpNamespace](aws-resource-servicediscovery-httpnamespace.md)  |  Id  |  `ns-d6wz3hq6kexample`  | 

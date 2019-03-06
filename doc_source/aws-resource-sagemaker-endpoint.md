@@ -52,7 +52,7 @@ The name of the [AWS::SageMaker::EndpointConfig](aws-resource-sagemaker-endpoint
 
 `Tags`  <a name="cfn-sagemaker-endpoint-tags"></a>
 An array of key\-value pairs\. For more information, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.  
- *Required*: Yes  
+ *Required*: No  
  *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 

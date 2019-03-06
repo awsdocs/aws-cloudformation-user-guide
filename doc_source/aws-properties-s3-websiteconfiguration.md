@@ -1,8 +1,8 @@
 # Amazon S3 Website Configuration Property<a name="aws-properties-s3-websiteconfiguration"></a>
 
-`WebsiteConfiguration` is an embedded property of the [ AWS::S3::Bucket](aws-properties-s3-bucket.md) resource\.
+`WebsiteConfiguration` is a property of the [ AWS::S3::Bucket](aws-properties-s3-bucket.md) resource\.
 
-## Syntax<a name="w4ab1c21c10d180c13d178b5"></a>
+## Syntax<a name="w13ab1c21c10d204c13d178b5"></a>
 
 ### JSON<a name="aws-properties-s3-websiteconfiguration-syntax.json"></a>
 
@@ -26,7 +26,7 @@
   - Routing rule
 ```
 
-## Properties<a name="w4ab1c21c10d180c13d178b7"></a>
+## Properties<a name="w13ab1c21c10d204c13d178b7"></a>
 
 `ErrorDocument`  <a name="cfn-s3-websiteconfiguration-errordocument"></a>
 The name of the error document for the website\.  
@@ -42,14 +42,14 @@ The name of the index document for the website\.
 The redirect behavior for every request to this bucket's website endpoint\.  
 If you specify this property, you cannot specify any other property\.
 *Required*: No  
-*Type*: [Amazon S3 Website Configuration Redirect All Requests To Property](aws-properties-s3-websiteconfiguration-redirectallrequeststo.md)
+*Type*: [RedirectAllRequestsTo](aws-properties-s3-websiteconfiguration-redirectallrequeststo.md)
 
 `RoutingRules`  <a name="cfn-s3-websiteconfiguration-routingrules"></a>
 Rules that define when a redirect is applied and the redirect behavior\.  
 *Required*: No  
-*Type*: List of [Amazon S3 Website Configuration Routing Rules Property](aws-properties-s3-websiteconfiguration-routingrules.md)
+*Type*: List of [RoutingRules](aws-properties-s3-websiteconfiguration-routingrules.md)
 
-## Example<a name="w4ab1c21c10d180c13d178b9"></a>
+## Example<a name="w13ab1c21c10d204c13d178b9"></a>
 
 ```
 "S3Bucket" : {
@@ -64,6 +64,6 @@ Rules that define when a redirect is applied and the redirect behavior\.
 }
 ```
 
-## See Also<a name="w4ab1c21c10d180c13d178c11"></a>
+## See Also<a name="w13ab1c21c10d204c13d178c11"></a>
 + [Custom Error Document Support](http://docs.aws.amazon.com/AmazonS3/latest/dev/CustomErrorDocSupport.html) in the *Amazon Simple Storage Service Developer Guide*
 + [Index Document Support](http://docs.aws.amazon.com/AmazonS3/latest/dev/IndexDocumentSupport.html) in the *Amazon Simple Storage Service Developer Guide*

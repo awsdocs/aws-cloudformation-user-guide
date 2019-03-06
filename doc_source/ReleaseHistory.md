@@ -4,6 +4,184 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::SageMaker::NotebookInstance\. 
+
+ [AWS::SageMaker::NotebookInstance](aws-resource-sagemaker-notebookinstance.md)   
+Use the `VolumeSizeInGB` property to specify the size in GB of the persisted machine learning storage volume that is provisioned and attached to the Amazon SageMaker notebook instance\.  | February 28, 2019 | 
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::ApiGateway::ApiKey, AWS::CodeBuild::Project, AWS::Elasticsearch::Domain, AWS::RDS::DBCluster, and AWS::RDS::DBInstance\. 
+
+ [AWS::ApiGateway::ApiKey](aws-resource-apigateway-apikey.md)   
+Use the `Value` property to specify the value of the API key\. 
+
+ [AWS::CodeBuild::Project](aws-resource-codebuild-project.md)   
+In the [ProjectCache](aws-properties-codebuild-project-projectcache.md) property type, you can use the `Modes` property to specify the type cache an AWS CodeBuild project uses\.  
+
+ [AWS::Elasticsearch::Domain](aws-resource-elasticsearch-domain.md)   
+Use the `NodeToNodeEncryptionOptions` property to specify whether node\-to\-node encryption is enabled\. 
+
+ [AWS::RDS::DBCluster](aws-resource-rds-dbcluster.md)   
+Use the `SourceRegion` property to specify the AWS Region which contains the source DB cluster when replicating a DB cluster\.  
+
+ [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)   
+Use the `UseDefaultProcessorFeatures` property to specify that the DB instance class of the DB instance uses its default processor features\.  | February 21, 2019 | 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::RAM::ResourceShare, AWS::RoboMaker::Fleet, AWS::RoboMaker::Robot, AWS::RoboMaker::RobotApplication, AWS::RoboMaker::RobotApplicationVersion, AWS::RoboMaker::SimulationApplication, and AWS::RoboMaker::SimulationApplicationVersion\. 
+
+ [AWS::RAM::ResourceShare](aws-resource-ram-resourceshare.md)   
+Use the `AWS::RAM::ResourceShare` resource to create, update, and delete an Amazon ResourceShare\. 
+
+ [AWS::RoboMaker::Fleet](aws-resource-robomaker-fleet.md)   
+Use the `AWS::RoboMaker::Fleet` resource to to create an AWS RoboMaker fleet\. 
+
+ [AWS::RoboMaker::Robot](aws-resource-robomaker-robot.md)   
+Use the `AWS::RoboMaker::Robot` resource to create an AWS RoboMaker robot\. 
+
+ [AWS::RoboMaker::RobotApplication](aws-resource-robomaker-robotapplication.md)   
+Use the `AWS::RoboMaker::RobotApplication` resource to create an AWS RoboMaker robot application\. 
+
+ [AWS::RoboMaker::RobotApplicationVersion](aws-resource-robomaker-robotapplicationversion.md)   
+Use the `AWS::RoboMaker::RobotApplicationVersion` resource to create a version of an AWS RoboMaker robot application\. 
+
+ [AWS::RoboMaker::SimulationApplication](aws-resource-robomaker-simulationapplication.md)   
+Use the `AWS::RoboMaker::SimulationApplication` resource to create an AWS RoboMaker simulation application\. 
+
+ [AWS::RoboMaker::SimulationApplicationVersion](aws-resource-robomaker-simulationapplicationversion.md)   
+Use the `AWS::RoboMaker::SimulationApplicationVersion` resource to create a version of an AWS RoboMaker simulation application\.  | February 21, 2019 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::CodeBuild::Project\. 
+
+ [AWS::CodeBuild::Project](aws-resource-codebuild-project.md)   
+In the [ProjectTriggers](aws-properties-codebuild-project-projecttriggers.md) property type, you can use the `WebhookFilters` property to specify the webhook events that trigger a new AWS CodeBuild build\.   | February 15, 2019 | 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::FSx::FileSystem, AWS::KinesisAnalyticsv2::Application, AWS::KinesisAnalyticsv2::ApplicationCloudWatchLoggingOption, AWS::KinesisAnalyticsv2::ApplicationOutput, and AWS::KinesisAnalyticsv2::ApplicationReferenceDataSource\. 
+
+ [AWS::FSx::FileSystem](aws-resource-fsx-filesystem.md)   
+Use the `AWS::FSx::FileSystem` resource to create a new Amazon FSx for Lustre or Amazon FSx for Windows File Server file system\. 
+
+ [AWS::KinesisAnalyticsV2::Application](aws-resource-kinesisanalyticsv2-application.md)   
+Use the AWS CloudFormation `AWS::KinesisAnalyticsV2::Application` resource to create an Amazon Kinesis Data Analytics application\. 
+
+ [AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption](aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption.md)   
+Use the AWS CloudFormation `AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption` resource to add an Amazon CloudWatch log stream to monitor application configuration errors\. 
+
+ [AWS::KinesisAnalyticsV2::ApplicationOutput](aws-resource-kinesisanalyticsv2-applicationoutput.md)   
+Use the AWS CloudFormation `AWS::KinesisAnalyticsV2::ApplicationOutput` resource to describe a SQL\-based Amazon Kinesis Data Analytics application's output configuration\. 
+
+ [AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource](aws-resource-kinesisanalyticsv2-applicationreferencedatasource.md)   
+Use the AWS CloudFormation `AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource` resource to describe a reference data source for a SQL\-based Amazon Kinesis Data Analytics application\.  | February 15, 2019 | 
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::OpsWorksCM::Server, AWS::ServiceDiscovery::Instance, and AWS::ServiceDiscovery::Service\. 
+
+ [AWS::OpsWorksCM::Server](aws-resource-opsworkscm-server.md)   
+`EngineAttributes` were updated to include additional attributes that you can use to create an AWS OpsWorks for Puppet Enterprise master server\. 
+
+ [AWS::ServiceDiscovery::Instance](aws-resource-servicediscovery-instance.md)   
+The `InstanceAttributes` property now takes a `String map` value\. 
+
+ [AWS::ServiceDiscovery::Service](aws-resource-servicediscovery-service.md)   
+The `DNSConfig` property is no longer required\.  
+An update to the `HealthCheckCustomConfig` property now requires replacement\.  | February 8, 2019 | 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::ApiGatewayV2::Api,  AWS::ApiGatewayV2::Authorizer, AWS::ApiGatewayV2::Deployment,  AWS::ApiGatewayV2::Integration, AWS::ApiGatewayV2::IntegrationResponse, AWS::ApiGatewayV2::Model, AWS::ApiGatewayV2::Route, AWS::ApiGatewayV2::RouteResponse, and AWS::ApiGatewayV2::Stage\. 
+
+[AWS::ApiGatewayV2::Api](aws-resource-apigatewayv2-api.md)  
+Use the `AWS::ApiGatewayV2::Api` resource to manage an API Gateway WebSocket API\.  
+
+[AWS::ApiGatewayV2::Authorizer](aws-resource-apigatewayv2-authorizer.md)  
+Use the `AWS::ApiGatewayV2::Authorizer` resource to represent an API Gateway authorizer function\. 
+
+[AWS::ApiGatewayV2::Deployment](aws-resource-apigatewayv2-deployment.md)  
+Use the `AWS::ApiGatewayV2::Deployment` resource to create an API Gateway WebSocket API deployment\.  
+
+[AWS::ApiGatewayV2::Integration](aws-resource-apigatewayv2-integration.md)  
+Use the `AWS::ApiGatewayV2::Integration` resource to specify information about the target backend that an API Gateway route calls\. 
+
+[AWS::ApiGatewayV2::IntegrationResponse](aws-resource-apigatewayv2-integrationresponse.md)  
+Use the `AWS::ApiGatewayV2::IntegrationResponse` resource to specify the response that API Gateway sends after a route's backend finishes processing a WebSocket message\. 
+
+[AWS::ApiGatewayV2::Model](aws-resource-apigatewayv2-model.md)  
+Use the `AWS::ApiGatewayV2::Model` resource to define the structure of a route request or response payload for an API Gateway WebSocket API\. 
+
+[AWS::ApiGatewayV2::Route](aws-resource-apigatewayv2-route.md)  
+Use the `AWS::ApiGatewayV2::Route` resource to specify information that is expected to be present in a WebSocket message payload\. 
+
+[AWS::ApiGatewayV2::RouteResponse](aws-resource-apigatewayv2-routeresponse.md)  
+Use the `AWS::ApiGatewayV2::RouteResponse` resource to define the responses that can be sent to the client that sends a message to an API Gateway WebSocket API\. 
+
+[AWS::ApiGatewayV2::Stage](aws-resource-apigatewayv2-stage.md)  
+Use the `AWS::ApiGatewayV2::Stage` resource to create a stage for an API Gateway WebSocket API deployment\.  | February 8, 2019 | 
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::CodeBuild::Project and AWS::ElasticLoadBalancingV2::Listener\. 
+
+ [AWS::CodeBuild::Project](aws-resource-codebuild-project.md)   
+In the [Environment](aws-properties-codebuild-project-environment.md) property type, you can use the `ImagePullCredentialsType` property to specify the type of credentials AWS CodeBuild uses to pull images in your build\.   
+In the [Environment](aws-properties-codebuild-project-environment.md) property type, you can use the `RegistryCredential` property to provide information about credentials that provide access to a private Docker registry\.  
+
+ [AWS::ElasticLoadBalancingV2::Listener](aws-resource-elasticloadbalancingv2-listener.md)   
+Create TLS listeners for your Network Load Balancers\.  | January 24, 2019 | 
+| [New resource](#ReleaseHistory) | The following resource was added: AWS::OpsWorksCM::Server\. 
+
+ [AWS::OpsWorksCM::Server](aws-resource-opsworkscm-server.md)   
+Use the `AWS::OpsWorksCM::Server` resource to create an AWS OpsWorks for Chef Automate or AWS OpsWorks for Puppet Enterprise server\.  | January 24, 2019 | 
+| [UpdateReplacePolicy attribute added](#ReleaseHistory) | Use the UpdateReplacePolicy attribute to retain or \(in some cases\) backup the existing physical instance of a resource when it is replaced during a stack update operation\. For more information, see [UpdateReplacePolicy Attribute](aws-attribute-updatereplacepolicy.md)\. | January 23, 2019 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::Inspector::AssessmentTarget 
+
+ [AWS::Inspector::AssessmentTarget](aws-resource-inspector-assessmenttarget.md)   
+The `ResourceGroupArn` property is no longer required\. If unspecified, all Amazon EC2 instances in your AWS account in the current region will be included in the assessment target\.  | January 17, 2019 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::ServiceCatalog::CloudFormationProvisionedProduct\. 
+
+ [AWS::ServiceCatalog::CloudFormationProvisionedProduct](aws-resource-servicecatalog-cloudformationprovisionedproduct.md)   
+The `ProductId` property now requires no interruption upon update\.  
+The `ProductName` property now requires no interruption upon update\.  
+Each time a stack is created or updated, if `ProductName` is provided it will successfully resolve to `ProductId` as long as only one product exists in the account/region with that `ProductName`\.  | January 10, 2019 | 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::DocDB::DBCluster, AWS::DocDB::DBClusterParameterGroup, AWS::DocDB::DBInstance, and AWS::DocDB::DBSubnetGroup\. 
+
+[AWS::DocDB::DBCluster](aws-resource-docdb-dbcluster.md)  
+Use the `AWS::DocDB::DBCluster` resource to manage an Amazon DocumentDB cluster\. 
+
+[AWS::DocDB::DBClusterParameterGroup](aws-resource-docdb-dbclusterparametergroup.md)  
+Use the `AWS::DocDB::DBClusterParameterGroup` resource to manage an Amazon DocumentDB cluster parameter group\. 
+
+[AWS::DocDB::DBInstance](aws-resource-docdb-dbinstance.md)  
+Use the `AWS::DocDB::DBInstance` resource to manage an Amazon DocumentDB instance\. 
+
+[AWS::DocDB::DBSubnetGroup](aws-resource-docdb-dbsubnetgroup.md)  
+Use the `AWS::DocDB::DBSubnetGroup` resource to describe an Amazon DocumentDB subnet group\.  | January 10, 2019 | 
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::AmazonMQ::Broker, AWS::AmazonMQ::Configuration, and AWS::SageMaker::Model\. 
+
+ [AWS::AmazonMQ::Broker](aws-resource-amazonmq-broker.md)   
+Use the `Tags` property to specify an array of key\-value pairs for cost allocation tagging\. 
+
+ [AWS::AmazonMQ::Configuration](aws-resource-amazonmq-configuration.md)   
+Use the `Tags` property to specify an array of key\-value pairs for cost allocation tagging\. 
+
+ [AWS::SageMaker::Model](aws-resource-sagemaker-model.md)   
+Use the `Containers` property to specify the list of containers in the inference pipeline\.  | January 3, 2019 | 
+| [New resource](#ReleaseHistory) | The following resource was added: AWS::Route53Resolver::ResolverRuleAssociation\. 
+
+ [AWS::Route53Resolver::ResolverRuleAssociation](aws-resource-route53resolver-resolverruleassociation.md)   
+Use the `AWS::Route53Resolver::ResolverRuleAssociation` resource to associate an Amazon Route 53 Resolver rule and a VPC that you created using Amazon Virtual Private Cloud \(Amazon VPC\)\.  | January 3, 2019 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::AmazonMQ::Broker\. 
+
+ [AWS::AmazonMQ::Broker](aws-resource-amazonmq-broker.md)   
+The following attributes are now available using the `Fn::Getatt` intrinsic function:  
++ `IpAddresses`
++ `MqttEndpoints`
++ `OpenWireEndpoints`
++ `AmqpEndpoints`
++ `StompEndpoints`
++ `WssEndpoints`  | December 13, 2018 | 
+| [Stack instance operation limit](#ReleaseHistory) | For StackSets, you can have a maximum of 1500 stack instance operations running in a given region at the same time, per administrator account\.For more information, see [Limitations of StackSets](stacksets-limitations.md)\. | December 13, 2018 | 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::AmazonMQ::ConfigurationAssociation, AWS::IoTAnalytics::Channel, AWS::IoTAnalytics::Dataset, AWS::IoTAnalytics::Datastore, and AWS::IoTAnalytics::Pipeline\. 
+
+[AWS::AmazonMQ::ConfigurationAssociation](aws-resource-amazonmq-configurationassociation.md)  
+Use the `AWS::AmazonMQ::ConfigurationAssociation` resource to associate a configuration with a broker, or return information about the specified configuration association\. 
+
+ [AWS::IoTAnalytics::Channel](aws-resource-iotanalytics-channel.md)   
+Use the `AWS::IoTAnalytics::Channel` resource to create a channel\. A channel collects data from an MQTT topic and archives the raw, unprocessed messages before publishing the data to a pipeline\. 
+
+ [AWS::IoTAnalytics::Dataset](aws-resource-iotanalytics-dataset.md)   
+Use the `AWS::IoTAnalytics::Dataset` resource to create a data set\. A data set retrieves data from a data store and allows you to explore and analyze your data using machine learning tools\. 
+
+ [AWS::IoTAnalytics::Datastore](aws-resource-iotanalytics-datastore.md)   
+Use the `AWS::IoTAnalytics::Datastore` resource to create a data store\. A data store holds messages from a channel which have been processed through a pipeline\. 
+
+ [AWS::IoTAnalytics::Pipeline](aws-resource-iotanalytics-pipeline.md)   
+Use the `AWS::IoTAnalytics::Pipeline` resource to create a pipeline\. A pipeline consumes messages from one or more channels and allows you to process the messages before storing them in a data store\.  | December 13, 2018 | 
 | [The CAPABILITY\_AUTO\_EXPAND capability is now available\.](#ReleaseHistory) | Use the `CAPABILITY_AUTO_EXPAND` capability to create or update a stack directly from a stack template that contains macros, without first reviewing the resulting changes in a change set first\.For more information, see [CreateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html) or [UpdateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStack.html) in *AWS CloudFormation API Reference*\. | December 7, 2018 | 
 | [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::CodeBuild::Project\. 
 
@@ -48,8 +226,8 @@ Use the `AWS::EC2::TransitGateway` resource to create a transit gateway\.
  [AWS::EC2::TransitGatewayAttachment](aws-resource-ec2-transitgatewayattachment.md)   
 Use the `AWS::EC2::TransitGatewayAttachment` resource to create an attachment between a VPC and a transit gateway\. 
 
- [AWS::EC2::TransitGatewayRouteTable](aws-resource-ec2-transitgatewayroute.md)   
-Use the `AWS::EC2::TransitGatewayRouteTable` resource to create a static route for a transit gateway route table\. 
+ [AWS::EC2::TransitGatewayRoute](aws-resource-ec2-transitgatewayroute.md)   
+Use the `AWS::EC2::TransitGatewayRoute` resource to create a static route for a transit gateway route table\. 
 
  [AWS::EC2::TransitGatewayRouteTable](aws-resource-ec2-transitgatewayroutetable.md)   
 Use the `AWS::EC2::TransitGatewayRouteTable` resource to create a route table for a transit gateway\. 
@@ -59,35 +237,6 @@ Use the `AWS::EC2::TransitGatewayRouteTableAssociation` resource to associate an
 
  [AWS::EC2::TransitGatewayRouteTablePropagation](aws-resource-ec2-transitgatewayroutetablepropagation.md)   
 Use the `AWS::EC2::TransitGatewayRouteTablePropagation` resource to enable an attachment to propagate routes\.  | November 26, 2018 | 
-| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::AppSync::DataSource, AWS::AppSync::Resolver, AWS::AutoScalingPlans::ScalingPlan, AWS::Batch::JobDefinition, AWS::Batch::ComputeEnvironment, AWS::CloudWatch::Alarm, AWS::IoT1Click::Placement, and AWS::IoT1Click::Project\. 
-
- [AWS::AppSync::DataSource](aws-resource-appsync-datasource.md)   
-Use the `RelationalDatabaseConfig` property type to specify RelationalDatabaseConfig for an AWS AppSync data source\.  
-In the `HttpConfig` property type, use the `AuthorizationConfig` property to specify the authorization type and configurations for an AWS AppSync http data source\. 
-
- [AWS::AppSync::Resolver](aws-resource-appsync-resolver.md)   
-Use the `PipelineConfig` property type to specify PipelineConfig for an AWS AppSync data source to connect with functions\. 
-
- [AWS::AutoScalingPlans::ScalingPlan](aws-resource-autoscalingplans-scalingplan.md)   
-Use the `ScalingInstruction` property type to configure predictive scaling as part of the scaling configuration for an Amazon EC2 Auto Scaling group in an AWS Auto Scaling scaling plan\.   
-Use the `PredefinedLoadMetricSpecification` property type to specify a predefined load metric for predictive scaling to use with AWS Auto Scaling\.  
-Use the `CustomizedLoadMetricSpecification` property type to specify a customized load metric for predictive scaling to use with AWS Auto Scaling\. 
-
- [AWS::Batch::JobDefinition](aws-resource-batch-jobdefinition.md)   
-The `AWS::Batch::JobDefinition` resource was updated to support AWS Batch multi\-node parallel jobs\. 
-
- [AWS::Batch::ComputeEnvironment](aws-resource-batch-computeenvironment.md)   
-The `AWS::Batch::ComputeEnvironment` resource was updated to support Amazon EC2 launch templates and placement groups\. 
-
- [AWS::CloudWatch::Alarm](aws-properties-cw-alarm.md)   
-Use the `Metrics` property to specify the metric data to return\.  
-The `MetricName`, `Namespace`, and `Period` properties are now optional\. 
-
- [AWS::IoT1Click::Placement](aws-resource-iot1click-placement.md)   
-The `PlacementName` property is now optional\. 
-
- [AWS::IoT1Click::Project](aws-resource-iot1click-project.md)   
-The `ProjectName` property is now optional\.  | November 20, 2018 | 
 | [New resources](#ReleaseHistory) | The following resources were added: Alexa::ASK::Skill, AWS::AppSync::FunctionConfiguration, AWS::EC2::EC2Fleet, AWS::Kinesis::StreamConsumer, AWS::Route53Resolver:ResolverEndpoint, and AWS::Route53Resolver::ResolverRule\. 
 
  [Alexa::ASK::Skill](aws-resource-ask-skill.md)   
@@ -192,7 +341,7 @@ In the [Action](aws-properties-iot-topicrule-action.md) property type:
 Use the `PendingWindowInDays` property to specify the waiting period, specified in number of days, after which AWS KMS deletes the customer master key \(CMK\)\. 
 
  [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)   
-Use the `EnableCloudwatchLogExports` property to specify the list of log types that need to be enabled for exporting to CloudWatch Logs\.  
+Use the `EnableCloudwatchLogsExports` property to specify the list of log types that need to be enabled for exporting to CloudWatch Logs\.  
 Use the `EnableIAMDatabaseAuthentication` property to enable mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts\.  
 Use the `EnablePerformanceInsights` property to enable Performance Insights for the DB instance\.  
 Use the `PerformanceInsightsKMSKeyId` property to specify the AWS KMS key identifier for encryption of Performance Insights data\. The AWS KMS key ID is the Amazon Resource Name \(ARN\), AWS KMS key identifier, or the AWS KMS key alias for the AWS KMS encryption key\.  
@@ -201,7 +350,7 @@ Use the `ProcessorFeatures` property to specify the number of CPU cores and the 
 Use the `PromotionTier` property to specify the order in which an Aurora Replica is promoted to the primary instance after a failure of the existing primary instance\. 
 
  [AWS::RDS::DBCluster](aws-resource-rds-dbcluster.md)   
-Use the `EnableCloudwatchLogExports` property to specify the list of log types that need to be enabled for exporting to CloudWatch Logs\.  
+Use the `EnableCloudwatchLogsExports` property to specify the list of log types that need to be enabled for exporting to CloudWatch Logs\.  
 Use the `EnableIAMDatabaseAuthentication` property to enable mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts\.  
 Use the `BacktrackWindow` property to specify the target backtrack window, in seconds\. To disable backtracking, specify 0\. If specified, this property must be set to a number from 0 to 259,200 \(72 hours\)\. 
 
@@ -235,6 +384,35 @@ Use the `AWS::SecretsManager::SecretTargetAttachment` resource to complete the f
 
  [AWS::SSM::MaintenanceWindow](aws-resource-ssm-maintenancewindow.md)   
 Use the `StartDate` and `StartDate` property types to specify when you want the Maintenance Window to become active or inactive\. Use the `ScheduleTimezone` property type to specify the time zone to base scheduled Maintenance Window executions on, in Internet Assigned Numbers Authority \(IANA\) format\.  | November 1, 2018 | 
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::AppSync::DataSource, AWS::AppSync::Resolver, AWS::AutoScalingPlans::ScalingPlan, AWS::Batch::JobDefinition, AWS::Batch::ComputeEnvironment, AWS::CloudWatch::Alarm, AWS::IoT1Click::Placement, and AWS::IoT1Click::Project\. 
+
+ [AWS::AppSync::DataSource](aws-resource-appsync-datasource.md)   
+Use the `RelationalDatabaseConfig` property type to specify RelationalDatabaseConfig for an AWS AppSync data source\.  
+In the `HttpConfig` property type, use the `AuthorizationConfig` property to specify the authorization type and configurations for an AWS AppSync http data source\. 
+
+ [AWS::AppSync::Resolver](aws-resource-appsync-resolver.md)   
+Use the `PipelineConfig` property type to specify PipelineConfig for an AWS AppSync data source to connect with functions\. 
+
+ [AWS::AutoScalingPlans::ScalingPlan](aws-resource-autoscalingplans-scalingplan.md)   
+Use the `ScalingInstruction` property type to configure predictive scaling as part of the scaling configuration for an Amazon EC2 Auto Scaling group in an AWS Auto Scaling scaling plan\.   
+Use the `PredefinedLoadMetricSpecification` property type to specify a predefined load metric for predictive scaling to use with AWS Auto Scaling\.  
+Use the `CustomizedLoadMetricSpecification` property type to specify a customized load metric for predictive scaling to use with AWS Auto Scaling\. 
+
+ [AWS::Batch::JobDefinition](aws-resource-batch-jobdefinition.md)   
+The `AWS::Batch::JobDefinition` resource was updated to support AWS Batch multi\-node parallel jobs\. 
+
+ [AWS::Batch::ComputeEnvironment](aws-resource-batch-computeenvironment.md)   
+The `AWS::Batch::ComputeEnvironment` resource was updated to support Amazon EC2 launch templates and placement groups\. 
+
+ [AWS::CloudWatch::Alarm](aws-properties-cw-alarm.md)   
+Use the `Metrics` property to specify the metric data to return\.  
+The `MetricName`, `Namespace`, and `Period` properties are now optional\. 
+
+ [AWS::IoT1Click::Placement](aws-resource-iot1click-placement.md)   
+The `PlacementName` property is now optional\. 
+
+ [AWS::IoT1Click::Project](aws-resource-iot1click-project.md)   
+The `ProjectName` property is now optional\.  | October 25, 2018 | 
 | [New resources](#ReleaseHistory) | The following resources were added: AWS::AppStream::DirectoryConfig, AWS::AppStream::Fleet, AWS::AppStream::ImageBuilder, AWS::AppStream::Stack, AWS::AppStream::StackFleetAssociation, AWS::AppStream::StackUserAssociation, AWS::AppStream::User\. 
 
  [AWS::AppStream::DirectoryConfig](aws-resource-appstream-directoryconfig.md)   
@@ -653,7 +831,7 @@ The following table describes important changes in each release of the AWS Cloud
 | Updated resources | November 29, 2017 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  | 2010\-05\-15 | 
 |  New resources  |  November 28, 2017  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 |  Updated resources  |  November 28, 2017  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
-|  New `CodeDeployLambdaAliasUpdate` update policy  |  November 28, 2017  |  Use the `CodeDeployLambdaAliasUpdate` update policy to perform an AWS CodeDeploy deployment when the version changes on an `AWS::Lambda::Alias` resource\. For more information, see [UpdatePolicy Attribute](aws-attribute-updatepolicy.md)\.  |  2010\-05\-15  | 
+|  New `CodeDeployLambdaAliasUpdate` update policy  |  November 28, 2017  |  Use the `CodeDeployLambdaAliasUpdate` update policy to perform an CodeDeploy deployment when the version changes on an `AWS::Lambda::Alias` resource\. For more information, see [UpdatePolicy Attribute](aws-attribute-updatepolicy.md)\.  |  2010\-05\-15  | 
 |  New `SSM` parameter types  |  November 21, 2017  |  Use `SSM` parameter types to use existing parameters from Systems Manager Parameter Store\. **Note**: AWS CloudFormation doesn't currently support the `SecureString` type\. For more information, see [SSM Parameter Types](parameters-section-structure.md#aws-ssm-parameter-types)\.  |  2010\-05\-15  | 
 |  New `ResolvedValue` field for `Parameter` data type  |  November 21, 2017  |  The `ResolvedValue` field returns the value that's used in the stack definition for an `SSM` parameter\. For more information, see the [ Parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html) data type in the *AWS CloudFormation API Reference*\.  |  2010\-05\-15  | 
 |  Updated resources  |  November 20, 2017  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
@@ -679,7 +857,7 @@ The following table describes important changes in each release of the AWS Cloud
 | New resources for DAX support | August 22, 2017 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  | 2010\-05\-15 | 
 |  New resources  |  August 18, 2017  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 |  Updated resources  |  August 18, 2017  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html) Added the `Arn` attribute to the `Fn::GetAtt` intrinsic function for the following resources: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
-|  Support for stack tags in AWS CodePipeline artifacts  |  August 18, 2017  |  You can now specify tags for stacks in template configuration files for use as artifacts for AWS CodePipeline pipelines\. Specified tags are applied to stacks created using the template configuration file\. For more information, see [AWS CloudFormation Artifacts](continuous-delivery-codepipeline-cfn-artifacts.md)\.  |  2010\-05\-15  | 
+|  Support for stack tags in CodePipeline artifacts  |  August 18, 2017  |  You can now specify tags for stacks in template configuration files for use as artifacts for CodePipeline pipelines\. Specified tags are applied to stacks created using the template configuration file\. For more information, see [AWS CloudFormation Artifacts](continuous-delivery-codepipeline-cfn-artifacts.md)\.  |  2010\-05\-15  | 
 |  Create encrypted file systems  |  August 14, 2017  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 |  New resources for AWS Batch support  |  August 8, 2017  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 |  New resources for Amazon Kinesis Data Analytics support  |  July 28, 2017  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
@@ -716,7 +894,7 @@ The following table describes important changes in each release of the AWS Cloud
 |  New CLI commands  |  November 17, 2016  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 |  Updated resource  |  November 03, 2016  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 |  List stack exports  |  November 03, 2016  |  Use the AWS CloudFormation console, API, or AWS CLI to see a list of all the exported output values for a region\. For more information, see [Exporting Stack Output Values](using-cfn-stack-exports.md)\.  |  2010\-05\-15  | 
-|  Continuous delivery with stacks  |  November 03, 2016  |  Use AWS CodePipeline to build continuous delivery workflows with AWS CloudFormation stacks\. For more information, see [Continuous Delivery with AWS CodePipeline](continuous-delivery-codepipeline.md)\.  |  2010\-05\-15  | 
+|  Continuous delivery with stacks  |  November 03, 2016  |  Use AWS CodePipeline to build continuous delivery workflows with AWS CloudFormation stacks\. For more information, see [Continuous Delivery with CodePipeline](continuous-delivery-codepipeline.md)\.  |  2010\-05\-15  | 
 |  Skip resources during rollback  |  November 03, 2016  |  If you have a stack in the `UPDATE_ROLLBACK_FAILED` state, use the `ResourcesToSkip` parameter for the `ContinueUpdateRollback` action to skip resources that AWS CloudFormation can't rollback\. For more information, see the Troubleshooting section in [Update Rollback Failed](troubleshooting.md#troubleshooting-errors-update-rollback-failed)\.  |  2010\-05\-15  | 
 |  Change sets enhancement  |  November 03, 2016  |  You can [create a new stack using a change set](cfn-console-create-stacks-changesets.md)\.  |  2010\-05\-15  | 
 |  Updated resource  |  October 12, 2016  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
