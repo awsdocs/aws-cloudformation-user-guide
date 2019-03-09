@@ -88,7 +88,7 @@ For valid and default values, see the `HealthCheckProtocol` parameter for the [C
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `HealthCheckTimeoutSeconds`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthchecktimeoutseconds"></a>
-The number of seconds to wait for a response before considering that a health check has failed\. For Application Load Balancers, the range is 2–60 seconds and the default is 5 seconds\. For Network Load Balancers, this value is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks\.  
+The number of seconds to wait for a response before considering that a health check has failed\.  For HTTP and HTTPS Target Group protocols, the range is 2–120 seconds and the default is 5 seconds\.  For TCP and TLS Target Group protocols, the only accepted value is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -152,7 +152,7 @@ For valid and default values, see the `TargetType` parameter for the [CreateTarg
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `UnhealthyThresholdCount`  <a name="cfn-elasticloadbalancingv2-targetgroup-unhealthythresholdcount"></a>
-The number of consecutive failed health checks that are required before a target is considered unhealthy\.  
+The number of consecutive failed health checks that are required before a target is considered unhealthy\.  For HTTP and HTTPS Target Group protocols the range is 2-10 and the default is 2\.  For TCP and TLS Target Group protocols, this value must be the same as the healthy threshold count\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
