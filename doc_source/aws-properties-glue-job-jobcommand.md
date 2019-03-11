@@ -38,5 +38,5 @@ The location of a script that executes a job\.
 The name of the job command\.  
  *Required*: Yes  
  *Type*: String  
- *Valid values*: `glueetl`  
+ *Valid values*: `glueetl`, `pythonshell`  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
