@@ -198,8 +198,8 @@ This example uses an [AWS::Route53::RecordSetGroup](aws-properties-route53-recor
 16.     - Name: example.com.
 17.       Type: A
 18.       AliasTarget:
-19.         HostedZoneId: !GetAtt myELB.CanonicalHostedZoneNameID
-20.         DNSName: !GetAtt myELB.DNSName
+19.         HostedZoneId: !GetAtt 'myELB.CanonicalHostedZoneNameID'
+20.         DNSName: !GetAtt 'myELB.DNSName'
 ```
 
 ## Alias Resource Record Set for a CloudFront Distribution<a name="w13ab1c17c23c81c11"></a>
