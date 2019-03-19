@@ -43,7 +43,7 @@ The maximum hourly price you're willing to pay for the Spot Instances\.
 
 `SpotInstanceType`  <a name="cfn-ec2-launchtemplate-spotoptions-spotinstancetype"></a>
 The Spot Instance request type\.  
-Valid values include: `one-time` and `persistent`\.  
+Valid values include: `one-time` and `persistent`\.  Can only be `one-time` when used with an AutoScale Group.
  *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
