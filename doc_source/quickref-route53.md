@@ -142,7 +142,7 @@ This example uses an [AWS::Route53::RecordSetGroup](aws-properties-route53-recor
 
 ## Using RecordSetGroup to Set Up an Alias Resource Record Set<a name="scenario-recordsetgroup-zoneapex"></a>
 
-This example uses an [AWS::Route53::RecordSetGroup](aws-properties-route53-recordsetgroup.md) to set up an alias resource record set for the "example\.com\." hosted zone\. The `RecordSets` property contains the A record for the zone apex "example\.com\." The [AliasTarget](aws-properties-route53-aliastarget.md) property specifies the hosted zone ID and DNS name for the myELB LoadBalancer by using the [GetAtt](intrinsic-function-reference-getatt.md) intrinsic function to retrieve the CanonicalHostedZoneNameID and DNSName properties of myELB resource\. For more information about alias resource record sets, see [Creating Alias Resource Record Sets](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingAliasRRSets.html) in the *Route 53 Developer Guide*\.
+This example uses an [AWS::Route53::RecordSetGroup](aws-properties-route53-recordsetgroup.md) to set up an alias resource record set for the "example\.com\." hosted zone for both a [V1 LoadBalancer](cfn-reference-elasticloadbalancing.md) and a [V2 LoadBalancer](cfn-reference-elasticloadbalancingv2.md)\. The `RecordSets` property contains the A record for the zone apex "example\.com\." The [AliasTarget](aws-properties-route53-aliastarget.md) property specifies the hosted zone ID and DNS name for the myELB LoadBalancer by using the [GetAtt](intrinsic-function-reference-getatt.md) intrinsic function to retrieve the CanonicalHostedZoneNameID (V1 LoadBalancer) / CanonicalHostedZoneID (V2 LoadBalancer) and DNSName properties of myELB resource\. For more information about alias resource record sets, see [Creating Alias Resource Record Sets](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingAliasRRSets.html) in the *Route 53 Developer Guide*\.
 
 ### JSON<a name="quickref-route53-example-4.json"></a>
 
@@ -200,6 +200,56 @@ This example uses an [AWS::Route53::RecordSetGroup](aws-properties-route53-recor
 18.       AliasTarget:
 19.         HostedZoneId: !GetAtt myELB.CanonicalHostedZoneNameID
 20.         DNSName: !GetAtt myELB.DNSName
+```
+
+### JSON<a name="quickref-route53-example-6.json"></a>
+
+```
+ 1.       "myELB" : {
+ 2.         "Type" : "AWS::ElasticLoadBalancingV2::LoadBalancer",
+ 3.         "Properties" : {
+ 4.             "Subnets" : [ {"Ref": "SubnetAZ1"}, {"Ref" : "SubnetAZ2"}],
+10.         }
+11.       },
+12.       "myDNS" : {
+13.         "Type" : "AWS::Route53::RecordSetGroup",
+14.         "Properties" : {
+15.           "HostedZoneName" : "example.com.",
+16.           "Comment" : "Zone apex alias targeted to myELB LoadBalancer.",
+17.           "RecordSets" : [
+18.             {
+19.               "Name" : "example.com.",
+20.               "Type" : "A",
+21.               "AliasTarget" : {
+22.                   "HostedZoneId" : { "Fn::GetAtt" : ["myELB", "CanonicalHostedZoneID"] },
+23.                   "DNSName" : { "Fn::GetAtt" : ["myELB","DNSName"] }
+24.               }
+25.             }
+26.           ]
+27.         }
+28.     }
+```
+
+### YAML<a name="quickref-route53-example-6.yaml"></a>
+
+```
+ 1. myELB:
+ 2.   Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+ 3.   Properties:
+ 4.     Subnets:
+ 5.     - Ref: SubnetAZ1
+ 6.     - Ref: SubnetAZ2
+ 7. myDNS:
+ 8.   Type: AWS::Route53::RecordSetGroup
+ 9.   Properties:
+10.     HostedZoneName: example.com.
+11.     Comment: Zone apex alias targeted to myELB LoadBalancer.
+12.     RecordSets:
+13.     - Name: example.com.
+14.       Type: A
+15.       AliasTarget:
+16.         HostedZoneId: !GetAtt myELB.CanonicalHostedZoneID
+27.         DNSName: !GetAtt myELB.DNSName
 ```
 
 ## Alias Resource Record Set for a CloudFront Distribution<a name="w13ab1c17c23c81c11"></a>
