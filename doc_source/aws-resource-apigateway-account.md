@@ -84,25 +84,25 @@ The following example creates an IAM role that API Gateway can assume to push lo
 ### YAML<a name="aws-resource-apigateway-account-examples.yaml"></a>
 
 ```
-CloudWatchRole: 
+CloudWatchRole:
  Type: AWS::IAM::Role
- Properties: 
-  AssumeRolePolicyDocument: 
-   Version: "2012-10-17"
-   Statement: 
+ Properties:
+  AssumeRolePolicyDocument:
+    Version: "2012-10-17"
+    Statement:
     - Effect: Allow
-      Principal: 
-       Service: 
+      Principal:
+       Service:
         - "apigateway.amazonaws.com"
       Action: "sts:AssumeRole"
   Path: "/"
-  ManagedPolicyArns: 
-   - "arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+  ManagedPolicyArns:
+  - "arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
 Account: 
  Type: AWS::ApiGateway::Account
  Properties: 
   CloudWatchRoleArn: 
-   "Fn::GetAtt": 
+    "Fn::GetAtt": 
     - CloudWatchRole
     - Arn
 ```
