@@ -1,6 +1,6 @@
 # AWS::AutoScaling::ScalingPolicy<a name="aws-properties-as-policy"></a>
 
-Adds a scaling policy to an Amazon EC2 Auto Scaling group\. A scaling policy specifies whether to scale the Auto Scaling group up or down, and by how much\. For more information, see [Dynamic Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html) in the *Amazon EC2 Auto Scaling User Guide*\.
+Adds a scaling policy to an Amazon EC2 Auto Scaling group\. A scaling policy specifies whether to scale the Auto Scaling group out or in, and by how much\. For more information, see [Dynamic Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
 You can use a scaling policy together with a CloudWatch alarm\. A CloudWatch alarm can automatically initiate actions on your behalf, based on parameters you specify\. A scaling policy is one type of action that an alarm can initiate\. For a snippet showing how to create an Auto Scaling policy that is triggered by a CloudWatch alarm, see [Auto Scaling Policy Triggered by CloudWatch Alarm](quickref-autoscaling.md#scenario-as-policy)\. Note that you can only associate one scaling policy with an alarm\.
 
