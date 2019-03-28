@@ -75,7 +75,6 @@ The following example creates a NAT gateway and a route that associates the NAT 
 
 ```
 "NAT" : {
-  "DependsOn" : "VPCGatewayAttach",
   "Type" : "AWS::EC2::NatGateway",
   "Properties" : {
     "AllocationId" : { "Fn::GetAtt" : ["EIP", "AllocationId"]},
@@ -84,6 +83,7 @@ The following example creates a NAT gateway and a route that associates the NAT 
   }
 },
 "EIP" : {
+  "DependsOn" : "VPCGatewayAttach",
   "Type" : "AWS::EC2::EIP",
   "Properties" : {
     "Domain" : "vpc"
@@ -103,7 +103,6 @@ The following example creates a NAT gateway and a route that associates the NAT 
 
 ```
 NAT:
-  DependsOn: VPCGatewayAttach
   Type: AWS::EC2::NatGateway
   Properties:
     AllocationId:
@@ -116,6 +115,7 @@ NAT:
       - Key: foo
         Value: bar
 EIP:
+  DependsOn: VPCGatewayAttach
   Type: AWS::EC2::EIP
   Properties:
     Domain: vpc
