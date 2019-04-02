@@ -61,7 +61,7 @@ The description of this network interface\.
 *Type*: String
 
 `DeviceIndex`  <a name="aws-properties-ec2-network-iface-embedded-deviceindex"></a>
-The network interface's position in the attachment order\.  
+The network interface's position in the attachment order starting from 0\. 
 *Required*: Yes  
 *Type*: String
 
