@@ -53,8 +53,8 @@ If you specify `LogDestinationType` as `s3`, do not specify `DeliverLogsPermissi
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `LogDestination`  <a name="cfn-ec2-flowlog-logdestination"></a>
-Specifies the destination to which the flow log data is to be published\. Flow log data can be published to a CloudWatch Logs log group or an Amazon S3 bucket\. The value specified for this parameter depends on the value specified for `LogDestinationType`\.  
-+ If `LogDestinationType` is not specified or `cloud-watch-logs`, specify the Amazon Resource Name \(ARN\) of the CloudWatch Logs log group\.
+Specifies the destination to which the flow log data is to be published\. Valid only if `LogDestinationType` is `s3`.
++ If `LogDestinationType` is not specified or `cloud-watch-logs`, use `LogGroupName` instead of this property.
 + If `LogDestinationType` is `s3`, specify the ARN of the Amazon S3 bucket\. You can also specify a subfolder in the bucket\. To specify a subfolder in the bucket, use the following ARN format: `bucket_ARN/subfolder_name/`\. For example, to specify a subfolder named my\-logs in a bucket named my\-bucket , use the following ARN: `arn:aws:s3:::my-bucket/my-logs/`\.
 *Required*: No  
 *Type*: String  
@@ -62,7 +62,8 @@ Specifies the destination to which the flow log data is to be published\. Flow l
 
 `LogDestinationType`  <a name="cfn-ec2-flowlog-logdestinationtype"></a>
 Specifies the type of destination to which the flow log data is to be published\. Flow log data can be published to CloudWatch Logs or Amazon S3\. To publish flow log data to CloudWatch Logs, specify `cloud-watch-logs`\. To publish flow log data to Amazon S3, specify `s3`\.  
-If you specify `LogDestinationType` as `s3`, do not specify `DeliverLogsPermissionArn` or `LogGroupName`\.  
+If you specify `LogDestinationType` as `s3`, do not specify `DeliverLogsPermissionArn` or `LogGroupName`\.
+If you specify `LogDestinationType` as `cloud-watch-logs`, do not specify `LogDestination`\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
