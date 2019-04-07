@@ -273,9 +273,7 @@ The following example creates a project that caches build dependencies in Amazon
     "CodeBuildProject": {
       "Type": "AWS::CodeBuild::Project",
       "Properties": {
-        "ServiceRole": {
-          "Ref": "CodeBuildRole"
-        },
+        "ServiceRole": { "Fn::GetAtt": [ "ServiceRole", "Arn" ] },
         "Artifacts": {
           "Type": "CODEPIPELINE"
         },
@@ -416,7 +414,7 @@ Resources:
   CodeBuildProject:
     Type: AWS::CodeBuild::Project
     Properties:
-      ServiceRole: !Ref CodeBuildRole
+      ServiceRole: !GetAtt ServiceRole.Arn
       Artifacts:
         Type: CODEPIPELINE
       Environment:
