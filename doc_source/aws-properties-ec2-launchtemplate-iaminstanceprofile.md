@@ -28,13 +28,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Arn`  <a name="cfn-ec2-launchtemplate-iaminstanceprofile-arn"></a>
 The Amazon Resource Name \(ARN\) of the instance profile\.  
- *Required*: No  
+ *Required*: One of `Arn` or `Name` is required.
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Name`  <a name="cfn-ec2-launchtemplate-iaminstanceprofile-name"></a>
 The name of the instance profile\.  
- *Required*: No  
+ *Required*: One of `Arn` or `Name` is required.
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
