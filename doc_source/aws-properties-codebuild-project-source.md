@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [Type](#cfn-codebuild-project-source-type): String
 ```
 
-## Properties<a name="w4ab1c21c10c66c13c33b7"></a>
+## Properties<a name="w13ab1c21c10c72c13c35b7"></a>
 
 `Auth`  <a name="cfn-codebuild-project-source-auth"></a>
 Information about the authorization settings for AWS CodeBuild to access the source code to be built\.  

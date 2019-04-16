@@ -5,9 +5,9 @@ The `AWS::DMS::ReplicationTask` resource creates an AWS DMS replication task\.
 **Topics**
 + [Syntax](#aws-resource-dms-replicationtask-syntax)
 + [Properties](#aws-resource-dms-replicationtask-prop)
-+ [Return Value](#w4ab1c21c10c96c33c11)
++ [Return Value](#w13ab1c21c10d102c33c11)
 + [Example](#aws-resource-dms-replicationtask-example)
-+ [See Also](#w4ab1c21c10c96c33c15)
++ [See Also](#w13ab1c21c10d102c33c15)
 
 ## Syntax<a name="aws-resource-dms-replicationtask-syntax"></a>
 
@@ -71,7 +71,11 @@ The Amazon Resource Name \(ARN\) of the replication instance\.
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ReplicationTaskIdentifier`  <a name="cfn-dms-replicationtask-replicationtaskidentifier"></a>
-The ARN string that uniquely identifies the endpoint\.  
+The replication task identifier\.  
+Constraints:  
++ Must contain from 1 to 255 alphanumeric characters or hyphens\. 
++ First character must be a letter\. 
++ Cannot end with a hyphen or contain two consecutive hyphens\. 
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -106,9 +110,9 @@ The ARN string that uniquely identifies the endpoint\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w4ab1c21c10c96c33c11"></a>
+## Return Value<a name="w13ab1c21c10d102c33c11"></a>
 
-### Ref<a name="w4ab1c21c10c96c33c11b2"></a>
+### Ref<a name="w13ab1c21c10d102c33c11b2"></a>
 
 When you pass the logical ID of an `AWS::DMS::ReplicationTask` resource to the intrinsic `Ref` function, the function returns the replication task ARN\.
 
@@ -164,6 +168,6 @@ Resources:
       }"
 ```
 
-## See Also<a name="w4ab1c21c10c96c33c15"></a>
+## See Also<a name="w13ab1c21c10d102c33c15"></a>
 + [CreateReplicationTask](http://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationTask.html) in the *AWS Database Migration Service API Reference*\.
 + [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)

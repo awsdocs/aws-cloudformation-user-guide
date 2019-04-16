@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[AdditionalInfo](#cfn-emr-cluster-additionalinfo)" : JSON object,
     "[Applications](#cfn-emr-cluster-applications)" : [ Applications, ... ],
     "[AutoScalingRole](#cfn-emr-cluster-autoscalingrole)" : String,
-    "[BootstrapActions](#cfn-emr-cluster-bootstrapactions)" [ Bootstrap Actions, ... ],
+    "[BootstrapActions](#cfn-emr-cluster-bootstrapactions)" : [ Bootstrap Actions, ... ],
     "[Configurations](#cfn-emr-cluster-configurations)" : [ Configurations, ... ],
     "[CustomAmiId](#cfn-elasticmapreduce-cluster-customamiid)" : String,
     "[EbsRootVolumeSize](#cfn-elasticmapreduce-cluster-ebsrootvolumesize)" : Integer,
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[ScaleDownBehavior](#cfn-emr-cluster-scaledownbehavior)" : String,
     "[SecurityConfiguration](#cfn-emr-cluster-securityconfiguration)" : String,
     "[ServiceRole](#cfn-emr-cluster-servicerole)" : String,
-    "[Steps](#cfn-elasticmapreduce-cluster-steps)" [ [StepConfig](aws-properties-elasticmapreduce-cluster-stepconfig.md), ... ],
+    "[Steps](#cfn-elasticmapreduce-cluster-steps)" : [ [StepConfig](aws-properties-elasticmapreduce-cluster-stepconfig.md), ... ],
     "[Tags](#cfn-emr-cluster-tags)" : [ Resource Tag, ... ],
     "[VisibleToAllUsers](#cfn-emr-cluster-visibletoallusers)" : Boolean
   }
@@ -53,7 +53,7 @@ Properties:
   [Instances](#cfn-emr-cluster-instances):
     JobFlowInstancesConfig
   [JobFlowRole](#cfn-emr-cluster-jobflowrole): String
-  [KerberosAttributes](#cfn-elasticmapreduce-cluster-kerberosattributes)" : 
+  [KerberosAttributes](#cfn-elasticmapreduce-cluster-kerberosattributes) : 
     [Amazon EMR Cluster KerberosAttributes](aws-properties-elasticmapreduce-cluster-kerberosattributes.md)
   [LogUri](#cfn-emr-cluster-loguri): String
   [Name](#cfn-emr-cluster-name): String
@@ -68,7 +68,7 @@ Properties:
   [VisibleToAllUsers](#cfn-emr-cluster-visibletoallusers): Boolean
 ```
 
-## Properties<a name="w4ab1c21c10d132c13b7"></a>
+## Properties<a name="w13ab1c21c10d141c13b7"></a>
 
 **Note**  
 For more information about the constraints and valid values of each property, see the [ Cluster](https://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_Cluster.html) data type in the *Amazon EMR API Reference*\.

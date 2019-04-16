@@ -1,8 +1,8 @@
-# Elastic Load Balancing Listener FixedResponseConfig<a name="aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig"></a>
+# Elastic Load Balancing V2 FixedResponseConfig<a name="aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig"></a>
 
 <a name="aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig-description"></a>The `FixedResponseConfig` property type specifies information about an action that returns a custom HTTP response\.
 
-<a name="aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig-inheritance"></a> `FixedResponseConfig` is a property of the [Elastic Load Balancing Listener Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md) property type\.
+<a name="aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig-inheritance"></a> `FixedResponseConfig` is a property of the [Elastic Load Balancing V2 Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md) property type\.
 
 ## Syntax<a name="aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig-syntax"></a>
 

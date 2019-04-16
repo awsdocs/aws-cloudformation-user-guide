@@ -2,7 +2,7 @@
 
 Describes the stack configuration manager for the [AWS::OpsWorks::Stack](aws-resource-opsworks-stack.md) resource type\. For more information, see [StackConfigurationManager](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_StackConfigurationManager.html) in the *AWS OpsWorks Stacks API Reference*\.
 
-## Syntax<a name="w4ab1c21c10d168c38c29b5"></a>
+## Syntax<a name="w13ab1c21c10d183c38c29b5"></a>
 
 ### JSON<a name="aws-properties-opsworks-stack-stackconfigmanager-syntax.json"></a>
 
@@ -20,7 +20,7 @@ Describes the stack configuration manager for the [AWS::OpsWorks::Stack](aws-res
 [Version](#cfn-opsworks-configmanager-version): String
 ```
 
-## Properties<a name="w4ab1c21c10d168c38c29b7"></a>
+## Properties<a name="w13ab1c21c10d183c38c29b7"></a>
 
 `Name`  <a name="cfn-opsworks-configmanager-name"></a>
 The name of the configuration manager\.  

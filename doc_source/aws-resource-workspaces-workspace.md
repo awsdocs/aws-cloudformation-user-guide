@@ -4,9 +4,9 @@ The `AWS::WorkSpaces::Workspace` resource creates an Amazon WorkSpaces workspace
 
 **Topics**
 + [Syntax](#aws-resource-workspaces-workspace-syntax)
-+ [Properties](#w4ab1c21c10d216c13b9)
-+ [Return Values](#w4ab1c21c10d216c13c11)
-+ [Example](#w4ab1c21c10d216c13c13)
++ [Properties](#w13ab1c21c10d240c13b9)
++ [Return Values](#w13ab1c21c10d240c13c11)
++ [Example](#w13ab1c21c10d240c13c13)
 + [Amazon WorkSpaces Workspace WorkspaceProperties](aws-properties-workspaces-workspace-workspaceproperties.md)
 
 ## Syntax<a name="aws-resource-workspaces-workspace-syntax"></a>
@@ -44,10 +44,11 @@ Properties:
   [UserName](#cfn-workspaces-workspace-username): String
   [UserVolumeEncryptionEnabled](#cfn-workspaces-workspace-uservolumeencryptionenabled): Boolean
   [VolumeEncryptionKey](#cfn-workspaces-workspace-volumeencryptionkey): String
-  [WorkspaceProperties](#cfn-workspaces-workspace-workspaceproperties)" : [*WorkspaceProperties*](aws-properties-workspaces-workspace-workspaceproperties.md)
+  [WorkspaceProperties](#cfn-workspaces-workspace-workspaceproperties): 
+    [*WorkspaceProperties*](aws-properties-workspaces-workspace-workspaceproperties.md)
 ```
 
-## Properties<a name="w4ab1c21c10d216c13b9"></a>
+## Properties<a name="w13ab1c21c10d240c13b9"></a>
 
 `BundleId`  <a name="cfn-workspaces-workspace-bundleid"></a>
 The identifier of the bundle from which you want to create the workspace\. A bundle specifies the details of the workspace, such as the installed applications and the size of CPU, memory, and storage\. Use the [DescribeWorkspaceBundles](https://docs.aws.amazon.com/workspaces/latest/devguide/API_DescribeWorkspaceBundles.html) action to list the bundles that AWS offers\.  
@@ -97,17 +98,17 @@ The WorkSpace properties\.
 *Type*: [Amazon WorkSpaces Workspace WorkspaceProperties](aws-properties-workspaces-workspace-workspaceproperties.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d216c13c11"></a>
+## Return Values<a name="w13ab1c21c10d240c13c11"></a>
 
-### Ref<a name="w4ab1c21c10d216c13c11b2"></a>
+### Ref<a name="w13ab1c21c10d240c13c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d216c13c13"></a>
+## Example<a name="w13ab1c21c10d240c13c13"></a>
 
-### <a name="w4ab1c21c10d216c13c13b2"></a>
+### <a name="w13ab1c21c10d240c13c13b2"></a>
 
 The following example creates a workspace for user `test`\. The bundle and directory IDs are specified as parameters in the same template\.
 

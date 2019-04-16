@@ -2,7 +2,7 @@
 
 `S3` is a property of the `Actions` property that describes an action that writes data to an S3 bucket\.
 
-## Syntax<a name="w4ab1c21c10d150c39c75b5"></a>
+## Syntax<a name="w13ab1c21c10d162c39c75b5"></a>
 
 ### JSON<a name="aws-properties-iot-topicrule-s3action-syntax.json"></a>
 
@@ -22,7 +22,7 @@
 [RoleArn](#cfn-iot-topicrule-s3action-rolearn): String
 ```
 
-## Properties<a name="w4ab1c21c10d150c39c75b7"></a>
+## Properties<a name="w13ab1c21c10d162c39c75b7"></a>
 
 `BucketName`  <a name="cfn-iot-topicrule-s3action-bucketname"></a>
 The name of the S3 bucket\.  

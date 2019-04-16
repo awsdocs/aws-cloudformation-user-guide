@@ -46,13 +46,13 @@ Duplicates not allowed\.
 
 ## Return Values<a name="aws-resource-cloudfront-distribution-ref"></a>
 
-### Ref<a name="w4ab1c21c10c54c14c11b2"></a>
+### Ref<a name="w13ab1c21c10c60c14c11b2"></a>
 
 *Returns*: The CloudFront distribution ID\. For example: `E27LVI50CSW06W`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10c54c14c11b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10c60c14c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 

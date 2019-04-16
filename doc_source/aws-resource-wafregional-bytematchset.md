@@ -28,7 +28,7 @@ Properties:
   [Name](#cfn-wafregional-bytematchset-name): String
 ```
 
-## Properties<a name="w4ab1c21c10d213c13b7"></a>
+## Properties<a name="w13ab1c21c10d237c13b7"></a>
 
 `ByteMatchTuples`  <a name="cfn-wafregional-bytematchset-bytematchtuples"></a>
 Settings for the `ByteMatchSet`, such as the bytes \(typically a string that corresponds with ASCII characters\) that you want AWS WAF to search for in web requests\.  
@@ -42,17 +42,17 @@ A friendly name or description of the `ByteMatchSet`\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d213c13b9"></a>
+## Return Values<a name="w13ab1c21c10d237c13b9"></a>
 
-### Ref<a name="w4ab1c21c10d213c13b9b2"></a>
+### Ref<a name="w13ab1c21c10d237c13b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource physical ID, such as `1234a1a-a1b1-12a1-abcd-a123b123456`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w4ab1c21c10d213c13c11"></a>
+## Examples<a name="w13ab1c21c10d237c13c11"></a>
 
-### HTTP Referers<a name="w4ab1c21c10d213c13c11b2"></a>
+### HTTP Referers<a name="w13ab1c21c10d237c13c11b2"></a>
 
 The following example defines a set of HTTP referers to match\.
 
@@ -111,7 +111,7 @@ BadReferers:
         PositionalConstraint: "CONTAINS"
 ```
 
-### Associate a ByteMatchSet with a Web ACL Rule<a name="w4ab1c21c10d213c13c11b4"></a>
+### Associate a ByteMatchSet with a Web ACL Rule<a name="w13ab1c21c10d237c13c11b4"></a>
 
 The following example associates the `BadReferers` byte match set with a web access control list \(ACL\) rule\.
 
@@ -150,7 +150,7 @@ BadReferersRule:
         Type: "ByteMatch"
 ```
 
-### Create a Web ACL<a name="w4ab1c21c10d213c13c11b6"></a>
+### Create a Web ACL<a name="w13ab1c21c10d237c13c11b6"></a>
 
 The following example associates the `BadReferersRule` rule with a web ACL\. The web ACL allows all requests except for ones with referers that match the `BadReferersRule` rule\.
 

@@ -4,7 +4,7 @@ The `MethodSetting` property type configures settings for all methods in an Amaz
 
 The `MethodSettings` property of the [AWS::ApiGateway::Stage](aws-resource-apigateway-stage.md) resource contains a list of `MethodSetting` property types\.
 
-## Syntax<a name="w4ab1c21c10c20c77c19b7"></a>
+## Syntax<a name="w13ab1c21c10c20c76c19b7"></a>
 
 ### JSON<a name="aws-properties-apigateway-stage-methodsetting-syntax.json"></a>
 
@@ -38,7 +38,7 @@ The `MethodSettings` property of the [AWS::ApiGateway::Stage](aws-resource-apiga
 [ThrottlingRateLimit](#cfn-apigateway-stage-methodsetting-throttlingratelimit): Number
 ```
 
-## Properties<a name="w4ab1c21c10c20c77c19b9"></a>
+## Properties<a name="w13ab1c21c10c20c76c19b9"></a>
 
 `CacheDataEncrypted`  <a name="cfn-apigateway-stage-methodsetting-cachedataencrypted"></a>
 Indicates whether the cached responses are encrypted\.  

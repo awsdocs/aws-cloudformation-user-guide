@@ -7,7 +7,7 @@ Use `AWS::EC2::SecurityGroupIngress` and `AWS::EC2::SecurityGroupEgress` only wh
 
 **Topics**
 + [Syntax](#aws-resource-ec2-securitygroupingress-syntax)
-+ [Properties](#w4ab1c21c10d102d114c11)
++ [Properties](#w13ab1c21c10d111d114c11)
 + [Examples](#aws-properties-ec2-security-group-ingress-examples)
 
 ## Syntax<a name="aws-resource-ec2-securitygroupingress-syntax"></a>
@@ -55,7 +55,7 @@ Properties:
   [ToPort](#cfn-ec2-security-group-ingress-toport): Integer
 ```
 
-## Properties<a name="w4ab1c21c10d102d114c11"></a>
+## Properties<a name="w13ab1c21c10d111d114c11"></a>
 
 For more information about adding ingress rules to Amazon EC2 or VPC security groups, see [AuthorizeSecurityGroupIngress](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-AuthorizeSecurityGroupIngress.html) in the *Amazon EC2 API Reference*\.
 
@@ -126,7 +126,7 @@ Specifies the name of the Amazon EC2 security group \(non\-VPC security group\) 
 `SourceSecurityGroupOwnerId`  <a name="cfn-ec2-security-group-ingress-sourcesecuritygroupownerid"></a>
 Specifies the AWS Account ID of the owner of the Amazon EC2 security group specified in the `SourceSecurityGroupName` property\.  
 *Type*: String  
-*Required*: Conditional\. If you specify `SourceSecurityGroupName` and that security group is owned by a different account than the account creating the stack, you must specify the `SourceSecurityGroupOwnerId`; otherwise, this property is optional\.  
+*Required*: Conditional\. If you specify `SourceSecurityGroupName` or `SourceSecurityGroupId` and that security group is owned by a different account than the account creating the stack, you must specify the `SourceSecurityGroupOwnerId`; otherwise, this property is optional\.  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `ToPort`  <a name="cfn-ec2-security-group-ingress-toport"></a>
@@ -137,7 +137,7 @@ End of port range for the TCP and UDP protocols, or an ICMP code\. If you specif
 
 ## Examples<a name="aws-properties-ec2-security-group-ingress-examples"></a>
 
-### EC2 Security Group and Ingress Rule<a name="w4ab1c21c10d102d114c13b2"></a>
+### EC2 Security Group and Ingress Rule<a name="w13ab1c21c10d111d114c13b2"></a>
 
 To create an Amazon EC2 \(non\-VPC\) security group and an ingress rule, use the `SourceSecurityGroupName` property in the ingress rule\.
 
@@ -205,7 +205,7 @@ Resources:
       SourceSecurityGroupId: !Ref SGBase
 ```
 
-### VPC Security Groups with Egress and Ingress Rules<a name="w4ab1c21c10d102d114c13b4"></a>
+### VPC Security Groups with Egress and Ingress Rules<a name="w13ab1c21c10d111d114c13b4"></a>
 
 In some cases, you might have an originating \(source\) security group to which you want to add an outbound rule that allows traffic to a destination \(target\) security group\. The target security group also needs an inbound rule that allows traffic from the source security group\. Note that you cannot use the `Ref` function to specify the outbound and inbound rules for each security group\. Doing so creates a circular dependency; you cannot have two resources that depend on each other\. Instead, use the egress and ingress resources to declare these outbound and inbound rules, as shown in the following template snippet\.
 
@@ -318,7 +318,7 @@ Resources:
         - GroupId
 ```
 
-### Allow Traffic from a Security Group in a Peered VPC<a name="w4ab1c21c10d102d114c13b6"></a>
+### Allow Traffic from a Security Group in a Peered VPC<a name="w13ab1c21c10d111d114c13b6"></a>
 
 Like the previous example, the following example allows one\-way traffic from an originating \(source\) security group to a destination \(target\) security group\. However, in this example the security groups are in peered VPCs across AWS accounts\. You might want to allow cross\-account traffic if, for example, you create a security scanning resource in one AWS account that you'll use to run diagnostics in another account\. This example adds an ingress rule to a target VPC security group that allows incoming traffic from a source security group in a different AWS account\. Note that the source security group also needs an egress rule that allows outgoing traffic to the target security group\. Because the source security group is in a different account, the following example doesn't use the Ref function to reference the source security group ID but instead directly specifies the security group ID `sg-12345678`\. 
 
@@ -376,7 +376,7 @@ Resources:
       SourceSecurityGroupOwnerId: '123456789012'
 ```
 
-### Allow Ping Requests<a name="w4ab1c21c10d102d114c13b8"></a>
+### Allow Ping Requests<a name="w13ab1c21c10d111d114c13b8"></a>
 
 To allow ping requests, add the ICMP protocol type and specify `8` \(echo request\) for the ICMP type and either `0` or `-1` \(all\) for the ICMP code\.
 

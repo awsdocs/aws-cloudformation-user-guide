@@ -2,7 +2,7 @@
 
 `StreamSpecification` is a property of the [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md) resource that defines the settings of a DynamoDB table's stream\.
 
-## Syntax<a name="w4ab1c21c10c99c14c58b5"></a>
+## Syntax<a name="w13ab1c21c10d108c14c58b5"></a>
 
 ### JSON<a name="aws-properties-dynamodb-streamspecification-syntax.json"></a>
 
@@ -18,7 +18,7 @@
 [StreamViewType](#cfn-dynamodb-streamspecification-streamviewtype): String
 ```
 
-## Parameters<a name="w4ab1c21c10c99c14c58b7"></a>
+## Parameters<a name="w13ab1c21c10d108c14c58b7"></a>
 
 `StreamViewType`  <a name="cfn-dynamodb-streamspecification-streamviewtype"></a>
 Determines the information that the stream captures when an item in the table is modified\. For valid values, see [StreamSpecification](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_StreamSpecification.html) in the *Amazon DynamoDB API Reference*\.  

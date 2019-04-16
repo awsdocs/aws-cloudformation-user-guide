@@ -1,8 +1,8 @@
-# Amazon S3 Website Configuration Routing Rules Redirect Rule Property<a name="aws-properties-s3-websiteconfiguration-routingrules-redirectrule"></a>
+# Amazon S3 Bucket RedirectRule<a name="aws-properties-s3-websiteconfiguration-routingrules-redirectrule"></a>
 
-The `RedirectRule` property is an embedded property of the [Amazon S3 Website Configuration Routing Rules Property](aws-properties-s3-websiteconfiguration-routingrules.md) that describes how requests are redirected\. In the event of an error, you can specify a different error code to return\.
+The `RedirectRule` property is an embedded property of the [Amazon S3 Bucket RoutingRules](aws-properties-s3-websiteconfiguration-routingrules.md) that describes how requests are redirected\. In the event of an error, you can specify a different error code to return\.
 
-## Syntax<a name="w4ab1c21c10d180c13d110b5"></a>
+## Syntax<a name="w13ab1c21c10d204c13d110b5"></a>
 
 ### JSON<a name="aws-properties-s3-websiteconfiguration-routingrules-redirectrule-syntax.json"></a>
 
@@ -26,7 +26,7 @@ The `RedirectRule` property is an embedded property of the [Amazon S3 Website Co
 [ReplaceKeyWith](#cfn-s3-websiteconfiguration-redirectrule-replacekeywith): String
 ```
 
-## Properties<a name="w4ab1c21c10d180c13d110b7"></a>
+## Properties<a name="w13ab1c21c10d204c13d110b7"></a>
 
 `HostName`  <a name="cfn-s3-websiteconfiguration-redirectrule-hostname"></a>
 Name of the host where requests are redirected\.  

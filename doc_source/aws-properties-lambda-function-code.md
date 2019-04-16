@@ -1,11 +1,11 @@
 # AWS Lambda Function Code<a name="aws-properties-lambda-function-code"></a>
 
-`Code` is a property of the [AWS::Lambda::Function](aws-resource-lambda-function.md) resource that enables you to specify the source code of an AWS Lambda function\. Your source code can be located in either the template or a file in an Amazon Simple Storage Service \(Amazon S3\) bucket\. For `nodejs4.3`, `nodejs6.10`, `python2.7`, and `python3.6` runtime environments only, you can provide source code as inline text in your template\.
+`Code` is a property of the [AWS::Lambda::Function](aws-resource-lambda-function.md) resource that specifies the code for a Lambda function\. For all runtimes, you can specify the location of a deployment package in Amazon S3\. For Node\.js and Python functions, you can also specify the function code inline in the template\.
 
 **Note**  
-To update a Lambda function whose source code is in an Amazon S3 bucket, you must trigger an update by updating the `S3Bucket`, `S3Key`, or `S3ObjectVersion` property\. Updating the source code alone doesn't update the function\.
+Changes to a deployment package in Amazon S3 are not detected automatically\. To update the function code, change the object key, or use object versioning and change the version number in the template\.
 
-## Syntax<a name="w4ab1c21c10d162c21c25b7"></a>
+## Syntax<a name="w13ab1c21c10d177c21c17b7"></a>
 
 ### JSON<a name="aws-properties-lambda-function-code-syntax.json"></a>
 
@@ -27,29 +27,29 @@ To update a Lambda function whose source code is in an Amazon S3 bucket, you mus
 [ZipFile](#cfn-lambda-function-code-zipfile): String
 ```
 
-## Properties<a name="w4ab1c21c10d162c21c25b9"></a>
+## Properties<a name="w13ab1c21c10d177c21c17b9"></a>
 
 `S3Bucket`  <a name="cfn-lambda-function-code-s3bucket"></a>
-The name of the Amazon S3 bucket where the `.zip` file that contains your deployment package is stored\. This bucket must reside in the same AWS Region that you're creating the Lambda function in\. You can specify a bucket from another AWS account as long as the Lambda function and the bucket are in the same region\.  
+An Amazon S3 bucket in the same region as your function\. The bucket can be in a different AWS account\.  
 The `cfn-response` module isn't available for source code that's stored in Amazon S3 buckets\. To send responses, write your own functions\.
-*Required*: Conditional Specify both the `S3Bucket` and `S3Key` properties, or specify the `ZipFile` property\.  
+*Required*: Conditional\. Specify both the `S3Bucket` and `S3Key` properties, or specify the `ZipFile` property\.  
 *Type*: String
 
 `S3Key`  <a name="cfn-lambda-function-code-s3key"></a>
-The location and name of the `.zip` file that contains your source code\. If you specify this property, you must also specify the `S3Bucket` property\.  
-*Required*: Conditional You must specify both the `S3Bucket` and `S3Key` properties, or specify the `ZipFile` property\.  
+The Amazon S3 key of the deployment package\.  
+*Required*: Conditional\. You must specify both the `S3Bucket` and `S3Key` properties, or specify the `ZipFile` property\.  
 *Type*: String
 
 `S3ObjectVersion`  <a name="cfn-lambda-function-code-s3objectversion"></a>
-If you have S3 versioning enabled, the version ID of the`.zip` file that contains your source code\. You can specify this property only if you specify the `S3Bucket` and `S3Key` properties\.  
+For versioned objects, the version of the deployment package object to use\.  
 *Required*: No  
 *Type*: String
 
 `ZipFile`  <a name="cfn-lambda-function-code-zipfile"></a>
-For `nodejs4.3`, `nodejs6.10`, `python2.7`, and `python3.6` runtime environments, the source code of your Lambda function\. You can't use this property with other runtime environments\.  
-You can specify up to 4096 characters\. You must precede certain special characters in your source code \(such as quotation marks \(`"`\), newlines \(`\n`\), and tabs \(`\t`\)\) with a backslash \(`\`\)\. For a list of special characters, see [http://json\.org/](http://json.org/)\.  
+\(Node\.js and Python\) The source code of your Lambda function\. If you include your function source inline with this parameter, AWS CloudFormation places it in a file named `index` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/deployment-package-v2.html)\. For the `Handler` property, the first part of the handler identifier must be `index`\. For example, `index.handler`\.  
+Your source code can contain up to 4096 characters\. For JSON, you must escape quotes and special characters such as newline \(`\n`\) with a backslash\.  
 If you specify a function that interacts with an AWS CloudFormation custom resource, you don't have to write your own functions to send responses to the custom resource that invoked the function\. AWS CloudFormation provides a response module that simplifies sending responses\. For more information, see [`cfn-response` Module](#cfn-lambda-function-code-cfnresponsemodule)\.  
-*Required*: Conditional You must specify both the `S3Bucket` and `S3Key` properties, or specify the `ZipFile` property\.  
+*Required*: Conditional\. You must specify both the `S3Bucket` and `S3Key` properties, or specify the `ZipFile` property\.  
 *Type*: String
 
 ## `cfn-response` Module<a name="cfn-lambda-function-code-cfnresponsemodule"></a>
@@ -61,15 +61,15 @@ After executing the `send` method, the Lambda function terminates, so anything y
 **Note**  
 The `cfn-response` module is available only when you use the `ZipFile` property to write your source code\. It isn't available for source code that's stored in Amazon S3 buckets\. For code in buckets, you must write your own functions to send responses\.
 
-### Loading the `cfn-response` Module<a name="w4ab1c21c10d162c21c25c11b8"></a>
+### Loading the `cfn-response` Module<a name="w13ab1c21c10d177c21c17c11b9"></a>
 
-For the `nodejs4.3` or `nodejs6.10` runtime environment, use the `require()` function to load the `cfn-response` module\. For example, the following code example creates a `cfn-response` object with the name `response`:
+For Node\.js functions, use the `require()` function to load the `cfn-response` module\. For example, the following code example creates a `cfn-response` object with the name `response`:
 
 ```
 var response = require('cfn-response');
 ```
 
-For `python2.7` or `python3.6` environments, use the `import` statement to load the `cfnresponse` module, as shown in the following example:
+For Python, use the `import` statement to load the `cfnresponse` module, as shown in the following example:
 
 **Note**  
 Use this exact import statement\. If you use other variants of the import statement, AWS CloudFormation doesn't include the response module\.
@@ -78,7 +78,7 @@ Use this exact import statement\. If you use other variants of the import statem
 import cfnresponse
 ```
 
-### `send` Method Parameters<a name="w4ab1c21c10d162c21c25c11c10"></a>
+### `send` Method Parameters<a name="w13ab1c21c10d177c21c17c11c11"></a>
 
 You can use the following parameters with the `send` method\.
 
@@ -100,9 +100,9 @@ Optional\. The unique identifier of the custom resource that invoked the functio
 `noEcho`  
 Optional\. Indicates whether to mask the output of the custom resource when it's retrieved by using the `Fn::GetAtt` function\. If set to `true`, all returned values are masked with asterisks \(\*\*\*\*\*\)\. By default, this value is `false`\.
 
-### Examples<a name="w4ab1c21c10d162c21c25c11c12"></a>
+### Examples<a name="w13ab1c21c10d177c21c17c11c13"></a>
 
-#### Node\.js<a name="w4ab1c21c10d162c21c25c11c12b2"></a>
+#### Node\.js<a name="w13ab1c21c10d177c21c17c11c13b3"></a>
 
 In the following Node\.js example, the inline Lambda function takes an input value and multiplies it by 5\. Inline functions are especially useful for smaller functions because they allow you to specify the source code directly in the template, instead of creating a package and uploading it to an Amazon S3 bucket\. The function uses the `cfn-response` `send` method to send the result back to the custom resource that invoked it\.
 
@@ -131,9 +131,9 @@ ZipFile: >
   };
 ```
 
-#### Python<a name="w4ab1c21c10d162c21c25c11c12b4"></a>
+#### Python<a name="w13ab1c21c10d177c21c17c11c13b5"></a>
 
-As in the preceding example, in the following Python example \(the example works in both version 2\.7 and 3\.6\), the inline Lambda function takes an integer value and multiplies it by 5\.
+In the following Python example, the inline Lambda function takes an integer value and multiplies it by 5\.
 
 ##### JSON<a name="cfn-lambda-function-code-zipfile-examplepython.json"></a>
 
@@ -162,9 +162,9 @@ ZipFile: |
     cfnresponse.send(event, context, cfnresponse.SUCCESS, responseData, "CustomResourcePhysicalID")
 ```
 
-### Module Source Code<a name="w4ab1c21c10d162c21c25c11c14"></a>
+### Module Source Code<a name="w13ab1c21c10d177c21c17c11c15"></a>
 
-The following is the response module source code for the `nodejs4.3` or `nodejs6.10` runtime environment\. Review it to understand what the module does and for help with implementing your own response functions\.
+The following is the response module source code for the Node\.js functions\. Review it to understand what the module does and for help with implementing your own response functions\.
 
 ```
 /* Copyright 2015 Amazon Web Services, Inc. or its affiliates. All Rights Reserved.
@@ -223,7 +223,7 @@ exports.send = function(event, context, responseStatus, responseData, physicalRe
 }
 ```
 
-The following is the response module source code for the `python3.6` environment: 
+The following is the response module source code for Python 3 functions: 
 
 ```
 #  Copyright 2016 Amazon Web Services, Inc. or its affiliates. All Rights Reserved.
@@ -272,7 +272,7 @@ def send(event, context, responseStatus, responseData, physicalResourceId=None, 
         print("send(..) failed executing requests.put(..): " + str(e))
 ```
 
-The following is the response module source code for the `python2.7` environment:
+The following is the response module source code for Python 2 functions:
 
 ```
 #  Copyright 2016 Amazon Web Services, Inc. or its affiliates. All Rights Reserved.

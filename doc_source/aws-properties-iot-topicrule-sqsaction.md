@@ -2,7 +2,7 @@
 
 `Sqs` is a property of the `Actions` property that describes an action that publishes data to an SQS queue\.
 
-## Syntax<a name="w4ab1c21c10d150c39c85b5"></a>
+## Syntax<a name="w13ab1c21c10d162c39c85b5"></a>
 
 ### JSON<a name="aws-properties-iot-topicrule-sqsaction-syntax.json"></a>
 
@@ -22,7 +22,7 @@
 [UseBase64](#cfn-iot-topicrule-sqsaction-usebase64): Boolean
 ```
 
-## Properties<a name="w4ab1c21c10d150c39c85b7"></a>
+## Properties<a name="w13ab1c21c10d162c39c85b7"></a>
 
 `QueueUrl`  <a name="cfn-iot-topicrule-sqsaction-queueurl"></a>
 The URL of the Amazon Simple Queue Service \(Amazon SQS\) queue\.  

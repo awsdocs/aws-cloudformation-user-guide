@@ -1,4 +1,4 @@
-# AWS CodePipeline Webhook WebhookAuthConfiguration<a name="aws-properties-codepipeline-webhook-webhookauthconfiguration"></a>
+# CodePipeline Webhook WebhookAuthConfiguration<a name="aws-properties-codepipeline-webhook-webhookauthconfiguration"></a>
 
 <a name="aws-properties-codepipeline-webhook-webhookauthconfiguration-description"></a>The `WebhookAuthConfiguration` property type configures the authentication applied to incoming webhook trigger requests\. For more information, see [Webhook Definition](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_WebhookDefinition.html) in the *AWS CodePipeline API Reference*\.
 

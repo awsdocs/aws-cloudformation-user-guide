@@ -37,7 +37,7 @@ Properties:
   [RoleARN](#cfn-config-configurationrecorder-rolearn): String
 ```
 
-## Properties<a name="w4ab1c21c10c81c25c13"></a>
+## Properties<a name="w13ab1c21c10c87c25c13"></a>
 
 `Name`  <a name="cfn-config-configurationrecorder-name"></a>
 A name for the configuration recorder\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the configuration recorder name\. For more information, see [Name Type](aws-properties-name.md)\.  
@@ -58,15 +58,15 @@ The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10c81c25c15"></a>
+## Return Values<a name="w13ab1c21c10c87c25c15"></a>
 
-### Ref<a name="w4ab1c21c10c81c25c15b2"></a>
+### Ref<a name="w13ab1c21c10c87c25c15b2"></a>
 
 When you pass the logical ID of an `AWS::Config::ConfigurationRecorder` resource to the intrinsic `Ref` function, the function returns the configuration recorder name, such as `default`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10c81c25c17"></a>
+## Example<a name="w13ab1c21c10c87c25c17"></a>
 
 The following example creates a configuration recorder for EC2 volumes\.
 

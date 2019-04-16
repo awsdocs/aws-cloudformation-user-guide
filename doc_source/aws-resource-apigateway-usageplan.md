@@ -68,7 +68,7 @@ A name for this usage plan\.
 
 ## Return Value<a name="aws-resource-apigateway-usageplan-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10c20c81c11b2"></a>
+### Ref<a name="w13ab1c21c10c20c80c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the usage plan ID, such as `MyUsagePlan`\.
 

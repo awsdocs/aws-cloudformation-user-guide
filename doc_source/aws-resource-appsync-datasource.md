@@ -1,6 +1,6 @@
 # AWS::AppSync::DataSource<a name="aws-resource-appsync-datasource"></a>
 
-The `AWS::AppSync::DataSource` resource creates data sources for resolvers in AWS AppSync to connect to, such as Amazon DynamoDB, AWS Lambda, and Amazon Elasticserach Service\. Resolvers use these data sources to fetch data when clients make GraphQL calls\. 
+The `AWS::AppSync::DataSource` resource creates data sources for resolvers in AWS AppSync to connect to, such as Amazon DynamoDB, AWS Lambda, and Amazon Elasticsearch Service\. Resolvers use these data sources to fetch data when clients make GraphQL calls\. 
 
 ## Syntax<a name="aws-resource-appsync-datasource-syntax"></a>
 

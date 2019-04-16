@@ -9,7 +9,7 @@ AWS CloudFormation adds the following tags to all Auto Scaling groups and associ
 + aws:cloudformation:stack\-id
 + aws:cloudformation:logical\-id
 
-## Syntax<a name="w4ab1c21c10c36c13c55c11"></a>
+## Syntax<a name="w13ab1c21c10c42c13c55c11"></a>
 
 ### JSON<a name="aws-properties-as-tags-syntax.json"></a>
 
@@ -29,7 +29,7 @@ AWS CloudFormation adds the following tags to all Auto Scaling groups and associ
 [PropagateAtLaunch](#cfn-as-tags-PropagateAtLaunch): Boolean
 ```
 
-## Properties<a name="w4ab1c21c10c36c13c55c13"></a>
+## Properties<a name="w13ab1c21c10c42c13c55c13"></a>
 
 `Key`  <a name="cfn-as-tags-Key"></a>
 The key name of the tag\.  

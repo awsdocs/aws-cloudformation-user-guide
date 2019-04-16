@@ -69,7 +69,7 @@ Properties:
     - String
   [KmsKeyId](#cfn-redshift-cluster-kmskeyid): String
   [LoggingProperties](#cfn-redshift-cluster-loggingproperties): 
-     [LoggingProperties](aws-properties-redshift-cluster-loggingproperties.md)
+    [LoggingProperties](aws-properties-redshift-cluster-loggingproperties.md)
   [MasterUsername](#cfn-redshift-cluster-masterusername): String
   [MasterUserPassword](#cfn-redshift-cluster-masteruserpassword): String
   [NodeType](#cfn-redshift-cluster-nodetype): String
@@ -86,7 +86,7 @@ Properties:
     - String
 ```
 
-## Properties<a name="w4ab1c21c10d174c14b7"></a>
+## Properties<a name="w13ab1c21c10d195c14b7"></a>
 
 For more information about each property, including constraints and valid values, see [CreateCluster](https://docs.aws.amazon.com//redshift/latest/APIReference/API_CreateCluster.html) in the *Amazon Redshift API Reference*\.
 
@@ -267,9 +267,9 @@ A list of VPC security groups that are associated with this cluster\.
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d174c14b9"></a>
+## Return Values<a name="w13ab1c21c10d195c14b9"></a>
 
-### Ref<a name="w4ab1c21c10d174c14b9b2"></a>
+### Ref<a name="w13ab1c21c10d195c14b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -281,7 +281,7 @@ For the Amazon Redshift cluster `myCluster`, `Ref` returns the name of the clust
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d174c14b9b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d195c14b9b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -291,7 +291,7 @@ The connection endpoint for the Amazon Redshift cluster\. For example: `examplec
 `Endpoint.Port`  
 The port number on which the Amazon Redshift cluster accepts connections\. For example: `5439`\.
 
-## Example<a name="w4ab1c21c10d174c14c11"></a>
+## Example<a name="w13ab1c21c10d195c14c11"></a>
 
 The following example describes a single\-node Amazon Redshift cluster\. The master user password is referenced from an input parameter that is in the same template\.
 
@@ -333,6 +333,6 @@ myCluster:
         Value: bar
 ```
 
-## More Info<a name="w4ab1c21c10d174c14c13"></a>
+## More Info<a name="w13ab1c21c10d195c14c13"></a>
 
 For a complete example template, see [Amazon Redshift Template Snippets](quickref-redshift.md)\.

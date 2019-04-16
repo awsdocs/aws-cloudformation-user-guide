@@ -2,7 +2,7 @@
 
 `CustomErrorResponse` is a property of the [CloudFront Distribution DistributionConfig](aws-properties-cloudfront-distribution-distributionconfig.md) resource that defines custom error messages for certain HTTP status codes\.
 
-## Syntax<a name="w4ab1c21c10c54c14c28b5"></a>
+## Syntax<a name="w13ab1c21c10c60c14c28b5"></a>
 
 ### JSON<a name="aws-properties-cloudfront-distribution-customerrorresponse-syntax.json"></a>
 
@@ -24,7 +24,7 @@
 [ResponsePagePath](#cfn-cloudfront-distribution-customerrorresponse-responsepagepath): String
 ```
 
-## Properties<a name="w4ab1c21c10c54c14c28b7"></a>
+## Properties<a name="w13ab1c21c10c60c14c28b7"></a>
 
 **Note**  
 For more information about the constraints and valid values of each property, see the [CustomErrorResponse](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CustomErrorResponse.html) data type in the *Amazon CloudFront API Reference*\.

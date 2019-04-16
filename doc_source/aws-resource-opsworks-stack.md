@@ -81,7 +81,7 @@ Properties:
   [VpcId](#cfn-opsworks-stack-vpcid): String
 ```
 
-## Properties<a name="w4ab1c21c10d168c38b7"></a>
+## Properties<a name="w13ab1c21c10d183c38b7"></a>
 
 `AgentVersion`  <a name="cfn-opsworks-stack-agentversion"></a>
 The AWS OpsWorks agent version that you want to use\. The agent communicates with the service and handles tasks such as initiating Chef runs in response to lifecycle events\. For valid values, see the [AgentVersion](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateStack.html#opsworks-CreateStack-request-AgentVersion) parameter for the `CreateStack` action in the *AWS OpsWorks Stacks API Reference*\.  
@@ -238,9 +238,9 @@ The ID of the VPC that the stack is to be launched into, which must be in the sp
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d168c38b9"></a>
+## Return Values<a name="w13ab1c21c10d183c38b9"></a>
 
-### Ref<a name="w4ab1c21c10d168c38b9b2"></a>
+### Ref<a name="w13ab1c21c10d183c38b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -252,7 +252,7 @@ For the AWS OpsWorks stack `myStack`, `Ref` returns the AWS OpsWorks stack ID\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Template Examples<a name="w4ab1c21c10d168c38c11"></a>
+## Template Examples<a name="w13ab1c21c10d183c38c11"></a>
 
 The following snippet creates an AWS OpsWorks stack that uses the default service role and Amazon EC2 role, which are created after you use AWS OpsWorks for the first time:
 
@@ -545,7 +545,7 @@ Parameters:
     Type: String
 ```
 
-## Additional Information<a name="w4ab1c21c10d168c38c13"></a>
+## Additional Information<a name="w13ab1c21c10d183c38c13"></a>
 + For a complete sample AWS OpsWorks template, see [AWS OpsWorks Template Snippets](quickref-opsworks.md)\.
 + [AWS::OpsWorks::Layer](aws-resource-opsworks-layer.md)
 + [AWS::OpsWorks::App](aws-resource-opsworks-app.md)

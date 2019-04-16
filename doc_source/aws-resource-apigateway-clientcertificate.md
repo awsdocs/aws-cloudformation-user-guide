@@ -4,9 +4,9 @@ The `AWS::ApiGateway::ClientCertificate` resource creates a client certificate t
 
 **Topics**
 + [Syntax](#aws-resource-apigateway-clientcertificate-syntax)
-+ [Properties](#w4ab1c21c10c20c30b9)
-+ [Return Value](#w4ab1c21c10c20c30c11)
-+ [Example](#w4ab1c21c10c20c30c13)
++ [Properties](#w13ab1c21c10c20c29b9)
++ [Return Value](#w13ab1c21c10c20c29c11)
++ [Example](#w13ab1c21c10c20c29c13)
 
 ## Syntax<a name="aws-resource-apigateway-clientcertificate-syntax"></a>
 
@@ -31,7 +31,7 @@ Properties:
   [Description](#cfn-apigateway-clientcertificate-description): String
 ```
 
-## Properties<a name="w4ab1c21c10c20c30b9"></a>
+## Properties<a name="w13ab1c21c10c20c29b9"></a>
 
 `Description`  <a name="cfn-apigateway-clientcertificate-description"></a>
 A description of the client certificate\.  
@@ -39,15 +39,15 @@ A description of the client certificate\.
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10c20c30c11"></a>
+## Return Value<a name="w13ab1c21c10c20c29c11"></a>
 
-### Ref<a name="w4ab1c21c10c20c30c11b2"></a>
+### Ref<a name="w13ab1c21c10c20c29c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the client certificate name, such as `abc123`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10c20c30c13"></a>
+## Example<a name="w13ab1c21c10c20c29c13"></a>
 
 The following example creates a client certificate that you can use with an API Gateway deployment and stage\.
 

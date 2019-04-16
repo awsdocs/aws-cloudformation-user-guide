@@ -2,7 +2,7 @@
 
 The `HostedZoneConfig` property is part of the [AWS::Route53::HostedZone](aws-resource-route53-hostedzone.md) resource that can contain a comment about the hosted zone\.
 
-## Syntax<a name="w4ab1c21c10d177c18c15b5"></a>
+## Syntax<a name="w13ab1c21c10d201c18c15b5"></a>
 
 ### JSON<a name="aws-properties-route53-hostedzone-hostedzoneconfig-syntax.json"></a>
 
@@ -18,7 +18,7 @@ The `HostedZoneConfig` property is part of the [AWS::Route53::HostedZone](aws-re
 [Comment](#cfn-route53-hostedzone-hostedzoneconfig-comment): String
 ```
 
-## Properties<a name="w4ab1c21c10d177c18c15b7"></a>
+## Properties<a name="w13ab1c21c10d201c18c15b7"></a>
 
 `Comment`  <a name="cfn-route53-hostedzone-hostedzoneconfig-comment"></a>
 Any comments that you want to include about the hosted zone\.  

@@ -54,7 +54,7 @@ A classifier for XML content\.
 
 ## Return Values<a name="aws-resource-glue-classifier-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10d138c13b9b3"></a>
+### Ref<a name="w13ab1c21c10d150c13b9b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 

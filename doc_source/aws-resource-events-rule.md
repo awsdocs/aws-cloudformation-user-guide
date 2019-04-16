@@ -36,7 +36,7 @@ Properties:
     - [Target](aws-properties-events-rule-target.md)
 ```
 
-## Properties<a name="w4ab1c21c10c63c31b9"></a>
+## Properties<a name="w13ab1c21c10c69c31b9"></a>
 
 `Description`  <a name="cfn-events-rule-description"></a>
 A description of the rule's purpose\.  
@@ -76,15 +76,15 @@ Creating rules with built\-in targets is supported only in the AWS Management Co
 *Type*: List of [Amazon CloudWatch Events Rule Target](aws-properties-events-rule-target.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10c63c31c11"></a>
+## Return Value<a name="w13ab1c21c10c69c31c11"></a>
 
-### Ref<a name="w4ab1c21c10c63c31c11b2"></a>
+### Ref<a name="w13ab1c21c10c69c31c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the event rule ID, such as `mystack-ScheduledRule-ABCDEFGHIJK`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10c63c31c11b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10c69c31c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -93,9 +93,9 @@ The event rule Amazon Resource Name \(ARN\), such as `arn:aws:events:``us-east-2
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w4ab1c21c10c63c31c13"></a>
+## Examples<a name="w13ab1c21c10c69c31c13"></a>
 
-### Regularly Invoke Lambda Function<a name="w4ab1c21c10c63c31c13b2"></a>
+### Regularly Invoke Lambda Function<a name="w13ab1c21c10c69c31c13b2"></a>
 
 The following example creates a rule that invokes the specified Lambda function every 10 minutes\. The `PermissionForEventsToInvokeLambda` resource grants CloudWatch Events permission to invoke the associated function\.
 
@@ -154,7 +154,7 @@ PermissionForEventsToInvokeLambda:
         - "Arn"
 ```
 
-### Invoke Lambda Function in Response to an Event<a name="w4ab1c21c10c63c31c13b4"></a>
+### Invoke Lambda Function in Response to an Event<a name="w13ab1c21c10c69c31c13b4"></a>
 
 The following example creates a rule that invokes the specified Lambda function when any EC2 instance's state changes to `stopping`\.
 
@@ -232,7 +232,7 @@ PermissionForEventsToInvokeLambda:
         - "Arn"
 ```
 
-### Notify a Topic in Response to a Log Entry<a name="w4ab1c21c10c63c31c13b6"></a>
+### Notify a Topic in Response to a Log Entry<a name="w13ab1c21c10c69c31c13b6"></a>
 
 The following example creates a rule that notifies an Amazon Simple Notification Service topic if an AWS CloudTrail log entry contains a call by the `Root` user\. The `EventTopicPolicy` resource grants Amazon CloudWatch Events permission to notify the associated Amazon SNS topic\.
 

@@ -2,7 +2,7 @@
 
 `SimpleScalingPolicyConfiguration` is a subproperty of the [Amazon EMR Cluster ScalingAction](aws-properties-elasticmapreduce-cluster-scalingaction.md) property\. It specifies an automatic scaling configuration that describes how the policy adds or removes instances, the cooldown period, and the number of Amazon EC2 instances that will be added each time the CloudWatch metric alarm condition is satisfied\.
 
-## Syntax<a name="w4ab1c21c10d132c13d104b5"></a>
+## Syntax<a name="w13ab1c21c10d141c13d104b5"></a>
 
 ### JSON<a name="aws-properties-elasticmapreduce-cluster-simplescalingpolicyconfiguration-syntax.json"></a>
 
@@ -17,12 +17,12 @@
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-simplescalingpolicyconfiguration-syntax.yaml"></a>
 
 ```
-   [AdjustmentType](#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-adjustmenttype): String
-   [CoolDown](#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-cooldown): Integer
-   [ScalingAdjustment](#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-scalingadjustment): String
+  [AdjustmentType](#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-adjustmenttype): String
+  [CoolDown](#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-cooldown): Integer
+  [ScalingAdjustment](#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-scalingadjustment): String
 ```
 
-## Properties<a name="w4ab1c21c10d132c13d104b7"></a>
+## Properties<a name="w13ab1c21c10d141c13d104b7"></a>
 
 **Note**  
 For more information about the constraints and valid values of each property, see the [SimpleScalingPolicyConfiguration](https://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_SimpleScalingPolicyConfiguration.html) data type in the *Amazon EMR API Reference*\.

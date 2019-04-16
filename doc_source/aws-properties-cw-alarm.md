@@ -200,7 +200,7 @@ You can specify the following values: Seconds, Microseconds, Milliseconds, Bytes
 
 ## Return Values<a name="aws-properties-cw-alarm-ref"></a>
 
-### Ref<a name="w4ab1c21c10c63c22c13b2"></a>
+### Ref<a name="w13ab1c21c10c69c22c13b2"></a>
 
 When you specify an `AWS::CloudWatch::Alarm` type as an argument to the `Ref` function, AWS CloudFormation returns the value of the `AlarmName`\.
 
@@ -215,6 +215,6 @@ The Amazon Resource Name \(ARN\) of the CloudWatch alarm, such as `arn:aws:cloud
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w4ab1c21c10c63c22c15"></a>
+## Examples<a name="w13ab1c21c10c69c22c15"></a>
 
 For examples, see [Amazon CloudWatch Template Snippets](quickref-cloudwatch.md)\.

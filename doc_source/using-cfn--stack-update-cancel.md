@@ -5,10 +5,10 @@ After a stack update has begun, you can cancel the stack update if the stack is 
 If you cancel a stack update, the stack is rolled back to the stack configuration that existed prior to initiating the stack update\.
 
 **Topics**
-+ [To cancel a stack update by using the console](#w4ab1c15c17c27b9)
-+ [To cancel a stack update by using the command line](#w4ab1c15c17c27c11)
++ [To cancel a stack update by using the console](#w13ab1c15c17c27b9)
++ [To cancel a stack update by using the command line](#w13ab1c15c17c27c11)
 
-## To cancel a stack update by using the console<a name="w4ab1c15c17c27b9"></a>
+## To cancel a stack update by using the console<a name="w13ab1c15c17c27b9"></a>
 
 1. From the list of stacks in the AWS CloudFormation console, select the stack that is currently being updated \(its state must be `UPDATE_IN_PROGRESS`\) \.
 
@@ -19,5 +19,5 @@ If you cancel a stack update, the stack is rolled back to the stack configuratio
 
 The stack proceeds to the **UPDATE\_ROLLBACK\_IN\_PROGRESS** state\. After the update cancellation is complete, the stack is set to **UPDATE\_ROLLBACK\_COMPLETE**\.
 
-## To cancel a stack update by using the command line<a name="w4ab1c15c17c27c11"></a>
+## To cancel a stack update by using the command line<a name="w13ab1c15c17c27c11"></a>
 + Use the command [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/cancel-update-stack.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/cancel-update-stack.html) to cancel an update\.

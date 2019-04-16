@@ -36,7 +36,7 @@ Properties:
     - String
 ```
 
-## Properties<a name="w4ab1c21c10d144c32b7"></a>
+## Properties<a name="w13ab1c21c10d156c32b7"></a>
 
 `Groups`  <a name="cfn-iam-policy-groups"></a>
 The names of groups to which you want to add the policy\.  
@@ -70,17 +70,17 @@ The names of users for whom you want to add the policy\.
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d144c32b9"></a>
+## Return Values<a name="w13ab1c21c10d156c32b9"></a>
 
-### Ref<a name="w4ab1c21c10d144c32b9b2"></a>
+### Ref<a name="w13ab1c21c10d156c32b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w4ab1c21c10d144c32c11"></a>
+## Examples<a name="w13ab1c21c10d156c32c11"></a>
 
-### IAM Policy with policy group<a name="w4ab1c21c10d144c32c11b2"></a>
+### IAM Policy with policy group<a name="w13ab1c21c10d156c32c11b2"></a>
 
 #### JSON<a name="aws-resource-iam-policy-example1.json"></a>
 
@@ -127,7 +127,7 @@ Properties:
       Ref: "CFNUserGroup"
 ```
 
-### IAM Policy with specified role<a name="w4ab1c21c10d144c32c11b4"></a>
+### IAM Policy with specified role<a name="w13ab1c21c10d156c32c11b4"></a>
 
 #### JSON<a name="aws-resource-iam-policy-example2.json"></a>
 

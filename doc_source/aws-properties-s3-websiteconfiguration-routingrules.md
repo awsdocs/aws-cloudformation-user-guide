@@ -1,8 +1,8 @@
-# Amazon S3 Website Configuration Routing Rules Property<a name="aws-properties-s3-websiteconfiguration-routingrules"></a>
+# Amazon S3 Bucket RoutingRules<a name="aws-properties-s3-websiteconfiguration-routingrules"></a>
 
-The `RoutingRules` property is an embedded property of the [Amazon S3 Website Configuration Property](aws-properties-s3-websiteconfiguration.md) property\. This property describes the redirect behavior and when a redirect is applied\.
+The `RoutingRules` property is an embedded property of the [WebsiteConfiguration](aws-properties-s3-websiteconfiguration.md) property\. This property describes the redirect behavior and when a redirect is applied\.
 
-## Syntax<a name="w4ab1c21c10d180c13d130b5"></a>
+## Syntax<a name="w13ab1c21c10d204c13d130b5"></a>
 
 ### JSON<a name="aws-properties-s3-websiteconfiguration-routingrules-syntax.json"></a>
 
@@ -22,14 +22,14 @@ The `RoutingRules` property is an embedded property of the [Amazon S3 Website Co
   Routing rule condition
 ```
 
-## Properties<a name="w4ab1c21c10d180c13d130b7"></a>
+## Properties<a name="w13ab1c21c10d204c13d130b7"></a>
 
 `RedirectRule`  <a name="cfn-s3-websiteconfiguration-routingrules-redirectrule"></a>
 Redirect requests to another host, to another page, or with another protocol\.  
 *Required*: Yes  
-*Type*: [Amazon S3 Website Configuration Routing Rules Redirect Rule Property](aws-properties-s3-websiteconfiguration-routingrules-redirectrule.md)
+*Type*: [RedirectRule](aws-properties-s3-websiteconfiguration-routingrules-redirectrule.md)
 
 `RoutingRuleCondition`  <a name="cfn-s3-websiteconfiguration-routingrules-routingrulecondition"></a>
 Rules that define when a redirect is applied\.  
 *Required*: No  
-*Type*: [Amazon S3 Website Configuration Routing Rules Routing Rule Condition Property](aws-properties-s3-websiteconfiguration-routingrules-routingrulecondition.md)
+*Type*: [RoutingRuleCondition](aws-properties-s3-websiteconfiguration-routingrules-routingrulecondition.md)

@@ -4,9 +4,9 @@ The `AWS::Route53::RecordSetGroup` resource creates record sets for a hosted zon
 
 **Topics**
 + [Syntax](#aws-resource-route53-recordsetgroup-syntax)
-+ [Properties](#w4ab1c21c10d177c27b9)
-+ [Return Value](#w4ab1c21c10d177c27c11)
-+ [Examples](#w4ab1c21c10d177c27c13)
++ [Properties](#w13ab1c21c10d201c27b9)
++ [Return Value](#w13ab1c21c10d201c27c11)
++ [Examples](#w13ab1c21c10d201c27c13)
 
 ## Syntax<a name="aws-resource-route53-recordsetgroup-syntax"></a>
 
@@ -38,7 +38,7 @@ Properties:
     - RecordSet1
 ```
 
-## Properties<a name="w4ab1c21c10d177c27b9"></a>
+## Properties<a name="w13ab1c21c10d201c27b9"></a>
 
 `Comment`  <a name="cfn-route53-recordsetgroup-comment"></a>
 Any comments you want to include about the change batch\.  
@@ -87,7 +87,7 @@ List of resource record sets to add\. The maximum number of records is 1,000\.
 ```
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10d177c27c11"></a>
+## Return Value<a name="w13ab1c21c10d201c27c11"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -99,6 +99,6 @@ For the resource with the logical ID "MyRecordSetGroup", `Ref` will return the A
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w4ab1c21c10d177c27c13"></a>
+## Examples<a name="w13ab1c21c10d201c27c13"></a>
 
 For AWS::Route53::RecordSetGroup snippets, see [Route 53 Template Snippets](quickref-route53.md)\.

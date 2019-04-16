@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[PubliclyAccessible](#cfn-amazonmq-broker-publiclyaccessible)" : Boolean,
     "[SecurityGroups](#cfn-amazonmq-broker-securitygroups)" : [ String, ... ],
     "[SubnetIds](#cfn-amazonmq-broker-subnetids)" : [ String, ... ],
-    "[Tags](#cfn-amazonmq-broker-tags)" : [ Resource Tag, ... ]
+    "[Tags](#cfn-amazonmq-broker-tags)" : [ Resource Tag, ... ] 
   }
 }
 ```
@@ -53,8 +53,8 @@ Properties:
     - String
   [SubnetIds](#cfn-amazonmq-broker-subnetids): 
     - String
-  [Tags](#cfn-amazonmq-broker-tags): 
-    - Resource Tag  
+  [Tags](#cfn-amazonmq-broker-tags):
+    - Resource Tag
 ```
 
 ## Properties<a name="aws-resource-amazonmq-broker-properties"></a>
@@ -141,10 +141,10 @@ The list of groups \(2 maximum\) that define which subnets and IP ranges the bro
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Tags`  <a name="cfn-amazonmq-broker-tags"></a>
-An arbitrary set of tags \(key–value pairs\) for this broker\.  
-*Required*: No  
-*Type*: [Resource Tag](aws-properties-resource-tags.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
+An array of key\-value pairs\. For more information, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.  
+ *Required*: No  
+ *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-amazonmq-broker-returnvalues"></a>
 
@@ -181,6 +181,48 @@ The revision number of the configuration\.
 
 ```
 1
+```
+
+`IpAddresses`  
+The IP addresses of each broker instance as a list of strings\.  
+
+```
+['198.51.100.2', '203.0.113.9']
+```
+
+`MqttEndpoints`  
+The MQTT endpoints of each broker instance as a list of strings\.  
+
+```
+mqtt+ssl://b-4aada85d-a80c-4be0-9d30-e344a01b921e-1.mq.eu-central-amazonaws.com:8883
+```
+
+`OpenWireEndpoints`  
+The OpenWire endpoints of each broker instance as a list of strings\.  
+
+```
+ssl://b-4aada85d-a80c-4be0-9d30-e344a01b921e-1.mq.eu-central-amazonaws.com:61617
+```
+
+`AmqpEndpoints`  
+The AMQP endpoints of each broker instance as a list of strings\.  
+
+```
+amqp+ssl://b-4aada85d-a80c-4be0-9d30-e344a01b921e-1.mq.eu-central-amazonaws.com:5671
+```
+
+`StompEndpoints`  
+The STOMP endpoints of each broker instance as a list of strings\.  
+
+```
+stomp+ssl://b-4aada85d-a80c-4be0-9d30-e344a01b921e-1.mq.eu-central-amazonaws.com:61614
+```
+
+`WssEndpoints`  
+The WSS endpoints of each broker instance as a list of strings\.  
+
+```
+wss://b-4aada85d-a80c-4be0-9d30-e344a01b921e-1.mq.eu-central-amazonaws.com:61619
 ```
 
 For more information about using `Fn::GetAtt`, see `[Fn::GetAtt](intrinsic-function-reference-getatt.md)`\.

@@ -4,9 +4,9 @@ The `AWS::KMS::Key` resource creates a customer master key \(CMK\) in AWS Key Ma
 
 **Topics**
 + [Syntax](#aws-resource-kms-key-syntax)
-+ [Properties](#w4ab1c21c10d159c17b9)
-+ [Return Values](#w4ab1c21c10d159c17c11)
-+ [Examples](#w4ab1c21c10d159c17c13)
++ [Properties](#w13ab1c21c10d174c17b9)
++ [Return Values](#w13ab1c21c10d174c17c11)
++ [Examples](#w13ab1c21c10d174c17c13)
 
 ## Syntax<a name="aws-resource-kms-key-syntax"></a>
 
@@ -44,7 +44,7 @@ Properties:
     - Resource Tag
 ```
 
-## Properties<a name="w4ab1c21c10d159c17b9"></a>
+## Properties<a name="w13ab1c21c10d174c17b9"></a>
 
 `Description`  <a name="cfn-kms-key-description"></a>
 A description of the key\. Use a description that helps your users decide whether the key is appropriate for a particular task\.  
@@ -90,15 +90,15 @@ Specifies an arbitrary set of tags \(key–value pairs\) to associate with this 
 *Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d159c17c11"></a>
+## Return Values<a name="w13ab1c21c10d174c17c11"></a>
 
-### Ref<a name="w4ab1c21c10d159c17c11b2"></a>
+### Ref<a name="w13ab1c21c10d174c17c11b2"></a>
 
 When you provide the logical ID of this resource to the `Ref` intrinsic function, it returns the key ID, such as `123ab456-a4c2-44cb-95fd-b781f32fbb37`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d159c17c11b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d174c17c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -107,9 +107,9 @@ The ARN of the AWS KMS key, such as `arn:aws:kms:us-west-2:123456789012:key/12a3
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w4ab1c21c10d159c17c13"></a>
+## Examples<a name="w13ab1c21c10d174c17c13"></a>
 
-### <a name="w4ab1c21c10d159c17c13b2"></a>
+### <a name="w13ab1c21c10d174c17c13b2"></a>
 
 The following example creates a custom CMK, which permits the IAM user `Alice` to administer the key and allows `Bob` to use the key for encrypting and decrypting data\.
 

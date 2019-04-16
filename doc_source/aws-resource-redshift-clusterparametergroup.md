@@ -33,7 +33,7 @@ Properties:
     - Resource Tag
 ```
 
-## Properties<a name="w4ab1c21c10d174c20b7"></a>
+## Properties<a name="w13ab1c21c10d195c20b7"></a>
 
 `Description`  <a name="cfn-redshift-clusterparametergroup-description"></a>
 A description of the parameter group\.  
@@ -59,9 +59,9 @@ Specifies an arbitrary set of tags \(key–value pairs\) to associate with this 
 *Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d174c20b9"></a>
+## Return Values<a name="w13ab1c21c10d195c20b9"></a>
 
-### Ref<a name="w4ab1c21c10d174c20b9b2"></a>
+### Ref<a name="w13ab1c21c10d195c20b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -73,9 +73,9 @@ For the Amazon Redshift cluster parameter group `myClusterParameterGroup`, `Ref`
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w4ab1c21c10d174c20c11"></a>
+## Examples<a name="w13ab1c21c10d195c20c11"></a>
 
-### Single Parameter<a name="w4ab1c21c10d174c20c11b2"></a>
+### Single Parameter<a name="w13ab1c21c10d195c20c11b2"></a>
 
 The following example describes a parameter group with one parameter that is specified:
 
@@ -109,7 +109,7 @@ myClusterParameterGroup:
         ParameterValue: "true"
 ```
 
-### Workload Management Configuration<a name="w4ab1c21c10d174c20c11b4"></a>
+### Workload Management Configuration<a name="w13ab1c21c10d195c20c11b4"></a>
 
 The following example modifies the workload management configuration using the `wlm_json_configuration` parameter\. The parameter value is a JSON object that must be passed as a string enclosed in quotation marks \(`"`\)\.
 

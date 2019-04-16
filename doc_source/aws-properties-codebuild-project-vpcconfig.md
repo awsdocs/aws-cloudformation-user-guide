@@ -32,19 +32,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `SecurityGroupIds`  <a name="cfn-codebuild-project-vpcconfig-securitygroupids"></a>
 The IDs of the security groups in the Amazon VPC\. The maximum count is 5\.  
- *Required*: Yes  
+ *Required*: No  
  *Type*: List of String values  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Subnets`  <a name="cfn-codebuild-project-vpcconfig-subnets"></a>
 The IDs of the subnets in the Amazon VPC\. The maximum count is 16\.  
- *Required*: Yes  
+ *Required*: No  
  *Type*: List of String values  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `VpcId`  <a name="cfn-codebuild-project-vpcconfig-vpcid"></a>
 The ID of the Amazon VPC\.  
- *Required*: Yes  
+ *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 

@@ -4,10 +4,10 @@ The `AWS::EC2::Route` resource creates a new route in a route table within a VPC
 
 **Topics**
 + [Syntax](#aws-resource-ec2-route-syntax)
-+ [Properties](#w4ab1c21c10d102c93b9)
-+ [Return Values](#w4ab1c21c10d102c93c11)
-+ [Examples](#w4ab1c21c10d102c93c13)
-+ [More Info](#w4ab1c21c10d102c93c15)
++ [Properties](#w13ab1c21c10d111c93b9)
++ [Return Values](#w13ab1c21c10d111c93c11)
++ [Examples](#w13ab1c21c10d111c93c13)
++ [More Info](#w13ab1c21c10d111c93c15)
 
 ## Syntax<a name="aws-resource-ec2-route-syntax"></a>
 
@@ -48,7 +48,7 @@ Properties:
   [VpcPeeringConnectionId](#cfn-ec2-route-vpcpeeringconnectionid): String
 ```
 
-## Properties<a name="w4ab1c21c10d102c93b9"></a>
+## Properties<a name="w13ab1c21c10d111c93b9"></a>
 
 `DestinationCidrBlock`  <a name="cfn-ec2-route-destinationcidrblock"></a>
 The IPv4 CIDR address block used for the destination match\. For example, `0.0.0.0/0`\. Routing decisions are based on the most specific match\.  
@@ -105,15 +105,15 @@ The ID of a VPC peering connection\.
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d102c93c11"></a>
+## Return Values<a name="w13ab1c21c10d111c93c11"></a>
 
-### Ref<a name="w4ab1c21c10d102c93c11b2"></a>
+### Ref<a name="w13ab1c21c10d111c93c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w4ab1c21c10d102c93c13"></a>
+## Examples<a name="w13ab1c21c10d111c93c13"></a>
 
 The following example creates a route that is added to a gateway\.
 
@@ -152,7 +152,7 @@ Resources:
         Ref: myInternetGateway
 ```
 
-## More Info<a name="w4ab1c21c10d102c93c15"></a>
+## More Info<a name="w13ab1c21c10d111c93c15"></a>
 + [AWS::EC2::RouteTable](aws-resource-ec2-route-table.md)
 + [CreateRoute](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateRoute.html) in the *Amazon EC2 API Reference*
 + [Route Tables](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html) in the *Amazon VPC User Guide*

@@ -41,7 +41,7 @@ CloudFormer is itself an AWS CloudFormation stack, so the first step is to creat
 
 1. In the **Parameters** section, type a password and user name that you'll use to log in to CloudFormer, and then click **Next**\.
 **Important**  
-You can't use special characters for the password \(such as `; & ! " £ $ % ^ ( ) / \`\) or leave the password blank\.
+You can't leave the password blank, and you can't use special characters in the password \(such as `; & ! " £ $ % ^ ( ) / \`\)\.
 
 1. Click **Next**\.
 

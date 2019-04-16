@@ -2,7 +2,7 @@
 
 `Monitoring` is a property of the [Amazon Elastic Compute Cloud SpotFleet LaunchSpecifications](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md) property that enables instance monitoring\.
 
-## Syntax<a name="w4ab1c21c10d102d118c58b5"></a>
+## Syntax<a name="w13ab1c21c10d111d118c57b5"></a>
 
 ### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring-syntax.json"></a>
 
@@ -18,7 +18,7 @@
 [Enabled](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring-enabled): Boolean
 ```
 
-## Properties<a name="w4ab1c21c10d102d118c58b7"></a>
+## Properties<a name="w13ab1c21c10d111d118c57b7"></a>
 
 `Enabled`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring-enabled"></a>
 Indicates whether monitoring is enabled for the instances\.  

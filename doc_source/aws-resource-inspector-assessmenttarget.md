@@ -42,8 +42,8 @@ The name of the Amazon Inspector assessment target\.
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `ResourceGroupArn`  <a name="cfn-inspector-assessmenttarget-resourcegrouparn"></a>
-The ARN that specifies the resource group that is associated with the assessment target\.   
- *Required*: Yes  
+The ARN that specifies the resource group that is associated with the assessment target\. If unspecified, all Amazon EC2 instances in your AWS account in the current region will be included in the assessment target\.  
+ *Required*: No  
  *Type*: String  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 

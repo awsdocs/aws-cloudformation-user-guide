@@ -24,7 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[Description](#cfn-amazonmq-configuration-description)" : String,
     "[EngineType](#cfn-amazonmq-configuration-enginetype)" : String,
     "[EngineVersion](#cfn-amazonmq-configuration-engineversion)" : String,
-    "[Name](#cfn-amazonmq-configuration-name)" : String
+    "[Name](#cfn-amazonmq-configuration-name)" : String,
+    "[Tags](#cfn-amazonmq-configuration-tags)" : [ Resource Tag, ... ]       
   }
 }
 ```
@@ -39,6 +40,8 @@ Properties:
   [EngineType](#cfn-amazonmq-configuration-enginetype): String
   [EngineVersion](#cfn-amazonmq-configuration-engineversion): String
   [Name](#cfn-amazonmq-configuration-name): String
+  [Tags](#cfn-amazonmq-configuration-tags):
+    - Resource Tag
 ```
 
 ## Properties<a name="aws-resource-amazonmq-configuration-properties"></a>
@@ -74,6 +77,12 @@ The name of the configuration\. This value can contain only alphanumeric charact
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+
+`Tags`  <a name="cfn-amazonmq-configuration-tags"></a>
+An array of key\-value pairs\. For more information, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.  
+ *Required*: No  
+ *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-amazonmq-configuration-returnvalues"></a>
 

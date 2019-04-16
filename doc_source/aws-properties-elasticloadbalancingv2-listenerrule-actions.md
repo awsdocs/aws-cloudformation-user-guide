@@ -1,8 +1,8 @@
-# Elastic Load Balancing ListenerRule Actions<a name="aws-properties-elasticloadbalancingv2-listenerrule-actions"></a>
+# Elastic Load Balancing V2 Actions<a name="aws-properties-elasticloadbalancingv2-listenerrule-actions"></a>
 
 `Actions` is a property of the [AWS::ElasticLoadBalancingV2::ListenerRule](aws-resource-elasticloadbalancingv2-listenerrule.md) resource that specifies the actions an Elastic Load Balancing listener takes when an incoming request meets a listener rule's condition\.
 
-## Syntax<a name="w4ab1c21c10d129c21c15b5"></a>
+## Syntax<a name="w13ab1c21c10d138c23c15b5"></a>
 
 ### JSON<a name="aws-properties-elasticloadbalancingv2-listenerrule-actions-syntax.json"></a>
 
@@ -30,7 +30,7 @@
 [Type](#cfn-elasticloadbalancingv2-listenerrule-actions-type): String
 ```
 
-## Properties<a name="w4ab1c21c10d129c21c15b7"></a>
+## Properties<a name="w13ab1c21c10d138c23c15b7"></a>
 
 `AuthenticateCognitoConfig`  <a name="cfn-elasticloadbalancingv2-listenerrule-action-authenticatecognitoconfig"></a>
 \[HTTPS listener\] Information for using Amazon Cognito to authenticate users\. Specify only when Type is `authenticate-cognito`\.  
@@ -64,8 +64,8 @@ Valid Range: Minimum value of 1\. Maximum value of 50000\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `TargetGroupArn`  <a name="cfn-elasticloadbalancingv2-listenerrule-actions-targetgrouparn"></a>
-The Amazon Resource Name \(ARN\) of the target group to which Elastic Load Balancing routes the traffic\.  
-*Required*: Yes  
+The Amazon Resource Name \(ARN\) of the target group to which Elastic Load Balancing routes the traffic\. Specify only when `Type` is `forward`\.  
+*Required*: No  
 *Type*: String
 
 `Type`  <a name="cfn-elasticloadbalancingv2-listenerrule-actions-type"></a>

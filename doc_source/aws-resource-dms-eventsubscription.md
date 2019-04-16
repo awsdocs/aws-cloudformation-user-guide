@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[SnsTopicArn](#cfn-dms-eventsubscription-snstopicarn)" : String,
     "[SourceIds](#cfn-dms-eventsubscription-sourceids)" : [ String, ... ],
     "[SourceType](#cfn-dms-eventsubscription-sourcetype)" : String,
-    "[SubscriptionName](#cfn-dms-eventsubscription-subscriptionname)" : [ String, ... ],
+    "[SubscriptionName](#cfn-dms-eventsubscription-subscriptionname)" : String,
     "[Tags](#cfn-dms-eventsubscription-tags)" : [ Resource Tag, ... ]
   }
 }
@@ -41,8 +41,7 @@ Properties:
   [SourceIds](#cfn-dms-eventsubscription-sourceids):
     - String
   [SourceType](#cfn-dms-eventsubscription-sourcetype): String
-  [SubscriptionName](#cfn-dms-eventsubscription-subscriptionname): 
-    - String
+  [SubscriptionName](#cfn-dms-eventsubscription-subscriptionname): String
   [Tags](#cfn-dms-eventsubscription-tags): 
     - Resource Tag
 ```
@@ -84,7 +83,7 @@ The type of source for which AWS DMS provides notification events\. For example,
 The subscription name\.  
 If you don't specify a value, we create a random value\.   
 *Required*: No  
-*Type*: List of String values  
+*Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Tags`  <a name="cfn-dms-eventsubscription-tags"></a>

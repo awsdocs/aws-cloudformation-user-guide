@@ -1,8 +1,8 @@
-# AWS CodeDeploy DeploymentGroup Deployment Revision S3Location<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location"></a>
+# CodeDeploy DeploymentGroup Deployment Revision S3Location<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location"></a>
 
-`S3Location` is a property of the [AWS CodeDeploy DeploymentGroup Revision](aws-properties-codedeploy-deploymentgroup-deployment-revision.md) property that specifies the location of an application revision that is stored in Amazon Simple Storage Service \(Amazon S3\)\.
+`S3Location` is a property of the [CodeDeploy DeploymentGroup Revision](aws-properties-codedeploy-deploymentgroup-deployment-revision.md) property that specifies the location of an application revision that is stored in Amazon Simple Storage Service \(Amazon S3\)\.
 
-## Syntax<a name="w4ab1c21c10c72c21c65b5"></a>
+## Syntax<a name="w13ab1c21c10c78c21c65b5"></a>
 
 ### JSON<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location-syntax.json"></a>
 
@@ -26,7 +26,7 @@
 [Version](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-value): String
 ```
 
-## Properties<a name="w4ab1c21c10c72c21c65b7"></a>
+## Properties<a name="w13ab1c21c10c78c21c65b7"></a>
 
 `Bucket`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-bucket"></a>
 The name of the S3 bucket where the application revision is stored\.  
@@ -39,7 +39,7 @@ The file type of the application revision, such as `tar`, `tgz`, or `zip`\. For 
 *Type*: String
 
 `ETag`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-etag"></a>
-The Amazon S3 ETag \(a file checksum\) of the application revision\. If you don't specify a value, AWS CodeDeploy skips the ETag validation of your application revision\.  
+The Amazon S3 ETag \(a file checksum\) of the application revision\. If you don't specify a value, CodeDeploy skips the ETag validation of your application revision\.  
 *Required*: No  
 *Type*: String
 

@@ -12,7 +12,7 @@ Even as you manage your resources through CloudFormation, users can change those
 
 ## What Is Drift?<a name="what-is-drift"></a>
 
-Drift detection enables you to detect whether a stack's actual configuration differs, or has *drifted*, from its expected configuration\. Use AWS CloudFormation to detect drift on an entire stack, or on individual resources within the stack\. A resource is considered to have drifted if any if its actual property values differ from the expected property values\. This includes if the property or resource has been deleted\. A stack is considered to have drifted if one or more of its resources have drifted\. 
+Drift detection enables you to detect whether a stack's actual configuration differs, or has *drifted*, from its expected configuration\. Use AWS CloudFormation to detect drift on an entire stack, or on individual resources within the stack\. A resource is considered to have drifted if any of its actual property values differ from the expected property values\. This includes if the property or resource has been deleted\. A stack is considered to have drifted if one or more of its resources have drifted\. 
 
 In order to determine whether a resource has drifted, CloudFormation determines the expected resource property values, as defined in the stack template and any values specified as template parameters\. CloudFormation then compares those expected values with the actual values of those resource properties as they currently exist in the stack\. A resource is considered to have drifted if one or more of its properties have been deleted, or had their value changed\. 
 

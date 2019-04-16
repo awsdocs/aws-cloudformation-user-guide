@@ -15,3 +15,4 @@ AWS::Route53::data-type-name
 + [AWS::Route53::RecordSetGroup](aws-properties-route53-recordsetgroup.md)
 + [AWS::Route53Resolver::ResolverEndpoint](aws-resource-route53resolver-resolverendpoint.md)
 + [AWS::Route53Resolver::ResolverRule](aws-resource-route53resolver-resolverrule.md)
++ [AWS::Route53Resolver::ResolverRuleAssociation](aws-resource-route53resolver-resolverruleassociation.md)

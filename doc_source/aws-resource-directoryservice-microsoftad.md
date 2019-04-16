@@ -38,7 +38,7 @@ Properties:
     VpcSettings
 ```
 
-## Properties<a name="w4ab1c21c10c90c13b9"></a>
+## Properties<a name="w13ab1c21c10c96c13b9"></a>
 
 `CreateAlias`  <a name="cfn-directoryservice-microsoftad-createalias"></a>
 A unique alias to assign to the Microsoft Active Directory in AWS\. AWS Directory Service uses the alias to construct the access URL for the directory, such as `http://alias.awsapps.com`\. By default, AWS CloudFormation does not create an alias\.  
@@ -82,9 +82,9 @@ Specifies the VPC settings of the Microsoft Active Directory server in AWS\.
 *Type*: [AWS Directory Service MicrosoftAD VpcSettings](aws-properties-directoryservice-microsoftad-vpcsettings.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10c90c13c11"></a>
+## Return Values<a name="w13ab1c21c10c96c13c11"></a>
 
-### Ref<a name="w4ab1c21c10c90c13c11b2"></a>
+### Ref<a name="w13ab1c21c10c96c13c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource ID\.
 
@@ -96,7 +96,7 @@ In the following sample, the `Ref` function returns the ID of the `myDirectory` 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10c90c13c11b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10c96c13c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -108,7 +108,7 @@ The IP addresses of the DNS servers for the directory, such as `[ "192.0.2.1", "
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Example<a name="w4ab1c21c10c90c13c13"></a>
+## Example<a name="w13ab1c21c10c96c13c13"></a>
 
 The following example creates a Microsoft Active Directory in AWS, where the directory DNS name is `corp.example.com`:
 

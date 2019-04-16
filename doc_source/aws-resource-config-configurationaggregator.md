@@ -26,7 +26,7 @@ Type: "AWS::Config::ConfigurationAggregator"
 Properties:
   [AccountAggregationSources](#cfn-config-configurationaggregator-accountaggregationsources): 
     - [*AccountAggregationSource*](aws-properties-config-configurationaggregator-accountaggregationsource.md)
- [OrganizationAggregationSource](#cfn-config-configurationaggregator-organizationaggregationsource): 
+  [OrganizationAggregationSource](#cfn-config-configurationaggregator-organizationaggregationsource): 
     [*OrganizationAggregationSource*](aws-properties-config-configurationaggregator-organizationaggregationsource.md)
   [ConfigurationAggregatorName](#cfn-config-configurationaggregator-configurationaggregatorname): String
 ```

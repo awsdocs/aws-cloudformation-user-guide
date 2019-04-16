@@ -1,8 +1,8 @@
-# AWS CodeDeploy DeploymentGroup Deployment<a name="aws-properties-codedeploy-deploymentgroup-deployment"></a>
+# CodeDeploy DeploymentGroup Deployment<a name="aws-properties-codedeploy-deploymentgroup-deployment"></a>
 
-`Deployment` is a property of the [AWS::CodeDeploy::DeploymentGroup](aws-resource-codedeploy-deploymentgroup.md) resource that specifies an AWS CodeDeploy application revision to be deployed to instances in the deployment group\. If you specify an application revision, your target revision will be deployed as soon as the provisioning process is complete\.
+`Deployment` is a property of the [AWS::CodeDeploy::DeploymentGroup](aws-resource-codedeploy-deploymentgroup.md) resource that specifies an CodeDeploy application revision to be deployed to instances in the deployment group\. If you specify an application revision, your target revision will be deployed as soon as the provisioning process is complete\.
 
-## Syntax<a name="w4ab1c21c10c72c21c27b5"></a>
+## Syntax<a name="w13ab1c21c10c78c21c27b5"></a>
 
 ### JSON<a name="aws-properties-codedeploy-deploymentgroup-deployment-syntax.json"></a>
 
@@ -23,7 +23,7 @@
   Revision
 ```
 
-## Properties<a name="w4ab1c21c10c72c21c27b7"></a>
+## Properties<a name="w13ab1c21c10c78c21c27b7"></a>
 
 `Description`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-description"></a>
 A description about this deployment\.  
@@ -31,11 +31,11 @@ A description about this deployment\.
 *Type*: String
 
 `IgnoreApplicationStopFailures`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-ignoreapplicationstopfailures"></a>
-Whether to continue the deployment if the `ApplicationStop` deployment lifecycle event fails\. If you want AWS CodeDeploy to continue the deployment lifecycle even if the `ApplicationStop` event fails on an instance, specify `true`\. The deployment continues to the `BeforeInstall` deployment lifecycle event\. If you want AWS CodeDeploy to stop deployment on the instance if the `ApplicationStop` event fails, specify `false` or do not specify a value\.  
+Whether to continue the deployment if the `ApplicationStop` deployment lifecycle event fails\. If you want CodeDeploy to continue the deployment lifecycle even if the `ApplicationStop` event fails on an instance, specify `true`\. The deployment continues to the `BeforeInstall` deployment lifecycle event\. If you want CodeDeploy to stop deployment on the instance if the `ApplicationStop` event fails, specify `false` or do not specify a value\.  
 *Required*: No  
 *Type*: Boolean
 
 `Revision`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision"></a>
 The location of the application revision to deploy\.  
 *Required*: Yes  
-*Type*: [AWS CodeDeploy DeploymentGroup Revision](aws-properties-codedeploy-deploymentgroup-deployment-revision.md)
+*Type*: [CodeDeploy DeploymentGroup Revision](aws-properties-codedeploy-deploymentgroup-deployment-revision.md)

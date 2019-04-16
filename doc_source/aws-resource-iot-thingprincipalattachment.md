@@ -4,7 +4,7 @@ Use the `AWS::IoT::ThingPrincipalAttachment` resource to attach a principal \(an
 
 For information about working with AWS IoT things and principals, see [Authorization](https://docs.aws.amazon.com/iot/latest/developerguide/authorization.html) in the *AWS IoT Developer Guide*\.
 
-## Syntax<a name="w4ab1c21c10d150c34b7"></a>
+## Syntax<a name="w13ab1c21c10d162c34b7"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
@@ -29,7 +29,7 @@ Properties:
   [ThingName](#cfn-iot-thingprincipalattachment-thingname): String
 ```
 
-## Properties<a name="w4ab1c21c10d150c34b9"></a>
+## Properties<a name="w13ab1c21c10d162c34b9"></a>
 
 `Principal`  <a name="cfn-iot-thingprincipalattachment-principal"></a>
 The principal, which can be a certificate ARN \(as returned from the `CreateCertificate` operation\) or an Amazon Cognito ID\.  
@@ -43,7 +43,7 @@ The name of the AWS IoT thing\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Example<a name="w4ab1c21c10d150c34c11"></a>
+## Example<a name="w13ab1c21c10d162c34c11"></a>
 
 The following example attaches a principal to a thing\.
 

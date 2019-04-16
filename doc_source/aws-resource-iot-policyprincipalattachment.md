@@ -4,7 +4,7 @@ Use the `AWS::IoT::PolicyPrincipalAttachment` resource to attach an AWS IoT poli
 
 For information about working with AWS IoT policies and principals, see [Authorization](https://docs.aws.amazon.com/iot/latest/developerguide/authorization.html) in the *AWS IoT Developer Guide*\.
 
-## Syntax<a name="w4ab1c21c10d150c24b7"></a>
+## Syntax<a name="w13ab1c21c10d162c24b7"></a>
 
 ### JSON<a name="aws-resource-iot-policyprincipalattachment-syntax.json"></a>
 
@@ -22,12 +22,12 @@ For information about working with AWS IoT policies and principals, see [Authori
 
 ```
 Type: AWS::IoT::PolicyPrincipalAttachment
-  Properties:
-    [PolicyName](#cfn-iot-policyprincipalattachment-policyname): String
-    [Principal](#cfn-iot-policyprincipalattachment-principal): String
+Properties:
+  [PolicyName](#cfn-iot-policyprincipalattachment-policyname): String
+  [Principal](#cfn-iot-policyprincipalattachment-principal): String
 ```
 
-## Properties<a name="w4ab1c21c10d150c24b9"></a>
+## Properties<a name="w13ab1c21c10d162c24b9"></a>
 
 `PolicyName`  <a name="cfn-iot-policyprincipalattachment-policyname"></a>
 The name of the policy\.  
@@ -41,7 +41,7 @@ The principal, which can be a certificate ARN \(as returned from the `CreateCert
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Example<a name="w4ab1c21c10d150c24c11"></a>
+## Example<a name="w13ab1c21c10d162c24c11"></a>
 
 The following example attaches a policy to a principal\.
 

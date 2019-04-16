@@ -29,5 +29,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `SseKmsEncryptedObjects`  <a name="cfn-s3-bucket-sourceselectioncriteria-ssekmsencryptedobjects"></a>
 Contains the status of whether Amazon S3 replicates objects created with server\-side encryption using an AWS KMS\-managed key\.  
  *Required*: Yes  
- *Type*: [Amazon S3 Bucket SseKmsEncryptedObjects](aws-properties-s3-bucket-ssekmsencryptedobjects.md)  
+ *Type*: [SseKmsEncryptedObjects](aws-properties-s3-bucket-ssekmsencryptedobjects.md)  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

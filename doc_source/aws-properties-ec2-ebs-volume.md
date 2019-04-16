@@ -24,10 +24,10 @@ Amazon EBS does not support modifying a Magnetic volume\. For more information, 
 
 **Topics**
 + [Syntax](#aws-resource-ec2-volume-syntax)
-+ [Properties](#w4ab1c21c10d102d165c25)
-+ [Return Values](#w4ab1c21c10d102d165c27)
-+ [Examples](#w4ab1c21c10d102d165c29)
-+ [More Info](#w4ab1c21c10d102d165c31)
++ [Properties](#w13ab1c21c10d111d165c25)
++ [Return Values](#w13ab1c21c10d111d165c27)
++ [Examples](#w13ab1c21c10d111d165c29)
++ [More Info](#w13ab1c21c10d111d165c31)
 
 ## Syntax<a name="aws-resource-ec2-volume-syntax"></a>
 
@@ -69,7 +69,7 @@ Properties:
   [VolumeType](#cfn-ec2-ebs-volume-volumetype): String
 ```
 
-## Properties<a name="w4ab1c21c10d102d165c25"></a>
+## Properties<a name="w13ab1c21c10d111d165c25"></a>
 
 `AutoEnableIO`  <a name="cfn-ec2-ebs-volume-autoenableio"></a>
 Indicates whether the volume is auto\-enabled for I/O operations\. By default, Amazon EBS disables I/O to the volume from attached EC2 instances when it determines that a volume's data is potentially inconsistent\. If the consistency of the volume is not a concern, and you prefer that the volume be made available immediately if it's impaired, you can configure the volume to automatically enable I/O\. For more information, see [Working with the AutoEnableIO Volume Attribute](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volume-status.html#volumeIO) in the *Amazon EC2 User Guide for Linux Instances*\.  
@@ -126,15 +126,15 @@ The volume type\. If you set the type to `io1`, you must also set the `Iops` pro
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d102d165c27"></a>
+## Return Values<a name="w13ab1c21c10d111d165c27"></a>
 
-### Ref<a name="w4ab1c21c10d102d165c27b2"></a>
+### Ref<a name="w13ab1c21c10d111d165c27b2"></a>
 
 When you specify an `AWS::EC2::Volume` type as an argument to the `Ref` function, AWS CloudFormation returns the volume's physical ID\. For example: `vol-5cb85026`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w4ab1c21c10d102d165c29"></a>
+## Examples<a name="w13ab1c21c10d111d165c29"></a>
 
 **Example Encrypted Amazon EBS Volume with DeletionPolicy to Make a Snapshot on Delete**  
 
@@ -168,6 +168,6 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 }
 ```
 
-## More Info<a name="w4ab1c21c10d102d165c31"></a>
+## More Info<a name="w13ab1c21c10d111d165c31"></a>
 + [CreateVolume](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVolume.html) in the *Amazon Elastic Compute Cloud API Reference*
 + [DeletionPolicy Attribute](aws-attribute-deletionpolicy.md)

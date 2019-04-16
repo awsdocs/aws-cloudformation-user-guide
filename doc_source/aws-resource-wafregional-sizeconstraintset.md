@@ -28,7 +28,7 @@ Properties:
     - SizeConstraint
 ```
 
-## Properties<a name="w4ab1c21c10d213c25b7"></a>
+## Properties<a name="w13ab1c21c10d237c25b7"></a>
 
 `Name`  <a name="cfn-wafregional-sizeconstraintset-name"></a>
 A friendly name or description for the `SizeConstraintSet`\.  
@@ -42,19 +42,19 @@ The size constraint and the part of the web request to check\.
 *Type*: List of [AWS WAF Regional SizeConstraintSet SizeConstraint](aws-properties-wafregional-sizeconstraintset-sizeconstraint.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10d213c25b9"></a>
+## Return Value<a name="w13ab1c21c10d237c25b9"></a>
 
-### Ref<a name="w4ab1c21c10d213c25b9b2"></a>
+### Ref<a name="w13ab1c21c10d237c25b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource physical ID, such as `1234a1a-a1b1-12a1-abcd-a123b123456`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w4ab1c21c10d213c25c11"></a>
+## Examples<a name="w13ab1c21c10d237c25c11"></a>
 
 The following examples show you how to define a size constraint, add it to a rule, and add the rule to a web access control list \(ACL\)\.
 
-### Define a Size Constraint<a name="w4ab1c21c10d213c25c11b4"></a>
+### Define a Size Constraint<a name="w13ab1c21c10d237c25c11b4"></a>
 
 The following example checks that the body of an HTTP request equals `4096` bytes\.
 
@@ -95,7 +95,7 @@ The following example checks that the body of an HTTP request equals `4096` byte
           TextTransformation: "NONE"
 ```
 
-### Associate a `SizeConstraintSet` with a Web ACL Rule<a name="w4ab1c21c10d213c25c11b6"></a>
+### Associate a `SizeConstraintSet` with a Web ACL Rule<a name="w13ab1c21c10d237c25c11b6"></a>
 
 The following example associates the `MySizeConstraint` object with a web ACL rule\.
 
@@ -134,7 +134,7 @@ SizeConstraintRule:
         Type: "SizeConstraint"
 ```
 
-### Create a Web ACL<a name="w4ab1c21c10d213c25c11b8"></a>
+### Create a Web ACL<a name="w13ab1c21c10d237c25c11b8"></a>
 
 The following example associates the `SizeConstraintRule` rule with a web ACL\. The web ACL blocks all requests except for requests with a body size equal to `4096` bytes\.
 

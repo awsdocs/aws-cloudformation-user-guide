@@ -2,7 +2,7 @@
 
 `OriginCustomHeader` is a property of the [Amazon CloudFront Origin](aws-properties-cloudfront-distribution-origin.md) property that specifies the custom headers CloudFront includes when it forwards requests to your origin\.
 
-## Syntax<a name="w4ab1c21c10c54c14c70b5"></a>
+## Syntax<a name="w13ab1c21c10c60c14c70b5"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [HeaderValue](#cfn-cloudfront-distribution-origincustomheader-headervalue): String
 ```
 
-## Properties<a name="w4ab1c21c10c54c14c70b7"></a>
+## Properties<a name="w13ab1c21c10c60c14c70b7"></a>
 
 `HeaderName`  <a name="cfn-cloudfront-distribution-origincustomheader-headername"></a>
 The name of a header that CloudFront forwards to your origin\. For more information, see [Forwarding Custom Headers to Your Origin \(Web Distributions Only\)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/forward-custom-headers.html) in the *Amazon CloudFront Developer Guide*\.  

@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [Products](#cfn-ssm-patchbaseline-patchsource-products): String: String
 ```
 
-## Properties<a name="w4ab1c21c10d207c31c27b9"></a>
+## Properties<a name="w13ab1c21c10d231c31c27b9"></a>
 
 `Configuration`  <a name="cfn-ssm-patchbaseline-patchsource-configuration"></a>
 The value of the yum repo configuration\.  

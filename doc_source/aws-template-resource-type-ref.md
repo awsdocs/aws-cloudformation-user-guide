@@ -1,22 +1,24 @@
 # AWS Resource and Property Types Reference<a name="aws-template-resource-type-ref"></a>
 
-This section contains reference information for all AWS resources and property types that are supported by AWS CloudFormation\.
+This section contains reference information for all AWS resource and property types that are supported by AWS CloudFormation\.
 
 Resource type identifiers always take the following form:
 
 ```
-AWS::aws-product-name::data-type-name
+service-provider::service-name::data-type-name
 ```
 
 **Topics**
 + [Alexa](cfn-reference-alexa.md)
 + [Amazon MQ](cfn-reference-amazonmq.md)
 + [API Gateway](cfn-reference-apigateway.md)
++ [API Gateway V2](cfn-reference-apigatewayv2.md)
 + [Application Auto Scaling](cfn-reference-application-autoscaling.md)
 + [AppStream 2\.0](cfn-reference-appstream.md)
 + [AppSync](cfn-reference-appsync.md)
 + [Athena](cfn-reference-athena.md)
-+ [Auto Scaling](cfn-reference-autoscaling.md)
++ [AWS Auto Scaling](cfn-reference-autoscaling.md)
++ [Amazon EC2 Auto Scaling](cfn-reference-ec2-autoscaling.md)
 + [AWS Batch](cfn-reference-batch.md)
 + [Budgets](cfn-reference-budgets.md)
 + [Certificate Manager](cfn-reference-certificatemanager.md)
@@ -37,6 +39,7 @@ AWS::aws-product-name::data-type-name
 + [Directory Service](cfn-reference-directoryservice.md)
 + [Data Lifecycle Manager](cfn-reference-dlm.md)
 + [DMS](cfn-reference-dms.md)
++ [DocumentDB](cfn-reference-docdb.md)
 + [DynamoDB](cfn-reference-dynamodb.md)
 + [EC2](cfn-reference-ec2.md)
 + [ECR](cfn-reference-ecr.md)
@@ -46,9 +49,10 @@ AWS::aws-product-name::data-type-name
 + [ElastiCache](cfn-reference-elasticache.md)
 + [Elasticsearch](cfn-reference-elasticsearch.md)
 + [Elastic Beanstalk](cfn-reference-elasticbeanstalk.md)
-+ [Elastic Load Balancing](cfn-reference-elasticloadbalancing.md)
++ [Elastic Load Balancing V1](cfn-reference-elasticloadbalancing.md)
 + [Elastic Load Balancing V2](cfn-reference-elasticloadbalancingv2.md)
 + [EMR](cfn-reference-emr.md)
++ [FSx](cfn-reference-fsx.md)
 + [Amazon GameLift](cfn-reference-gamelift.md)
 + [Glue](cfn-reference-glue.md)
 + [GuardDuty](cfn-reference-guardduty.md)
@@ -56,13 +60,17 @@ AWS::aws-product-name::data-type-name
 + [Amazon Inspector](cfn-reference-inspector.md)
 + [AWS IoT](cfn-reference-iot.md)
 + [AWS IoT 1\-Click](cfn-reference-iot1click.md)
++ [AWS IoT Analytics](cfn-reference-iotanalytics.md)
 + [Kinesis](cfn-reference-kinesis.md)
 + [KMS](cfn-reference-kms.md)
 + [Lambda](cfn-reference-lambda.md)
 + [Neptune](cfn-reference-neptune.md)
 + [OpsWorks](cfn-reference-opsworks.md)
++ [OpsWorks\-CM](cfn-reference-opsworks-cm.md)
++ [AWS Resource Access Manager](cfn-reference-ram.md)
 + [RDS](cfn-reference-rds.md)
 + [Amazon Redshift](cfn-reference-redshift.md)
++ [RoboMaker](cfn-reference-robomaker.md)
 + [Route 53](cfn-reference-route53.md)
 + [S3](cfn-reference-s3.md)
 + [SageMaker](cfn-reference-sagemaker.md)

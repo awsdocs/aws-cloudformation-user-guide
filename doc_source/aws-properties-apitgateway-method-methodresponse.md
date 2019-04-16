@@ -2,7 +2,7 @@
 
 `MethodResponse` is a property of the [AWS::ApiGateway::Method](aws-resource-apigateway-method.md) resource that defines the responses that can be sent to the client who calls an Amazon API Gateway \(API Gateway\) method\.
 
-## Syntax<a name="w4ab1c21c10c20c56c22b5"></a>
+## Syntax<a name="w13ab1c21c10c20c55c22b5"></a>
 
 ### JSON<a name="aws-properties-apitgateway-method-methodresponse-syntax.json"></a>
 
@@ -24,7 +24,7 @@
 [StatusCode](#cfn-apigateway-method-methodresponse-statuscode): String
 ```
 
-## Properties<a name="w4ab1c21c10c20c56c22b7"></a>
+## Properties<a name="w13ab1c21c10c20c55c22b7"></a>
 
 `ResponseModels`  <a name="cfn-apigateway-method-methodresponse-responsemodels"></a>
 The resources used for the response's content type\. Specify response models as key\-value pairs \(string\-to\-string maps\), with a content type as the key and a [`Model`](aws-resource-apigateway-model.md) resource name as the value\.  

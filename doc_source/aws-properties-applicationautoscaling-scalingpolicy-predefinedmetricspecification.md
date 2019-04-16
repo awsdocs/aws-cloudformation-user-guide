@@ -33,7 +33,11 @@ The metric type\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ResourceLabel`  <a name="cfn-applicationautoscaling-scalingpolicy-predefinedmetricspecification-resourcelabel"></a>
-This property is reserved for future use\.  
+Identifies the resource associated with the metric type\. You can't specify a resource label unless the metric type is `ALBRequestCountPerTarget` and there is a target group attached to the Spot fleet request or ECS service\.  
+The format is app/<load\-balancer\-name>/<load\-balancer\-id>/targetgroup/<target\-group\-name>/<target\-group\-id>, where:  
++ app/<load\-balancer\-name>/<load\-balancer\-id> is the final portion of the load balancer ARN
++ targetgroup/<target\-group\-name>/<target\-group\-id> is the final portion of the target group ARN\.
 *Required*: No  
 *Type*: String  
+*Length constraints*: Minimum length of 1\. Maximum length of 1023\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

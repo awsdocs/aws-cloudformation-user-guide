@@ -149,7 +149,7 @@ The lifecycle hooks for the group, which specify actions to perform when Amazon 
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `LoadBalancerNames`  <a name="cfn-as-group-loadbalancernames"></a>
-A list of Classic load balancers associated with this Auto Scaling group\. To specify Application Load Balancers, use `TargetGroupARNs`\.  
+A list of Classic Load Balancers associated with this Auto Scaling group\. To specify Application Load Balancers or Network Load Balancers, use `TargetGroupARNs` instead\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -238,11 +238,11 @@ In the following sample, the `Ref` function returns the name of the `MyASGroup` 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w4ab1c21c10c36c13c15"></a>
+## Examples<a name="w13ab1c21c10c42c13c15"></a>
 
 To view more examples, see [Auto Scaling Template Snippets](quickref-autoscaling.md)\.
 
-### Auto Scaling Group with an Elastic Load Balancing Load Balancer, Launch Configuration, and Metric Collection<a name="w4ab1c21c10c36c13c15b5"></a>
+### Auto Scaling Group with an Elastic Load Balancing Load Balancer, Launch Configuration, and Metric Collection<a name="w13ab1c21c10c42c13c15b5"></a>
 
 #### JSON<a name="aws-resource-autoscaling-autoscalinggroup-example1.json"></a>
 
@@ -290,7 +290,7 @@ WebServerGroup:
           - "GroupMaxSize"
 ```
 
-### Batch Update Instances in an Auto Scaling Group<a name="w4ab1c21c10c36c13c15b7"></a>
+### Batch Update Instances in an Auto Scaling Group<a name="w13ab1c21c10c42c13c15b7"></a>
 
 The following example shows how to configure updates by including an [UpdatePolicy Attribute](aws-attribute-updatepolicy.md) attribute\. The attribute contains an `AutoScalingRollingUpdate` embedded object with three attributes that specify the update policy settings\.
 
@@ -313,7 +313,7 @@ The following example shows how to configure updates by including an [UpdatePoli
 }
 ```
 
-### Auto Scaling Group Wait on Signals From New Instances<a name="w4ab1c21c10c36c13c15b9"></a>
+### Auto Scaling Group Wait on Signals From New Instances<a name="w13ab1c21c10c42c13c15b9"></a>
 
 In the following example, the Auto Scaling group waits for new Amazon EC2 instances to signal the group before Amazon EC2 Auto Scaling proceeds to update the next batch of instances\. In the [UpdatePolicy Attribute](aws-attribute-updatepolicy.md) attribute, the `WaitOnResourceSignals` flag is set to `true`\. You can use the [cfn\-signal](cfn-signal.md) helper script on each instance to signal the Auto Scaling group\.
 
@@ -360,7 +360,7 @@ ASG1:
     MinSize: "1"
 ```
 
-## See Also<a name="w4ab1c21c10c36c13c17"></a>
+## See Also<a name="w13ab1c21c10c42c13c17"></a>
 + [UpdatePolicy Attribute](aws-attribute-updatepolicy.md)
 + [UpdateAutoScalingGroup](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_UpdateAutoScalingGroup.html) in the *Amazon EC2 Auto Scaling API Reference*
 + [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)

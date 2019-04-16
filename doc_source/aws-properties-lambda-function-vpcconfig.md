@@ -2,7 +2,7 @@
 
 `VpcConfig` is a property of the [AWS::Lambda::Function](aws-resource-lambda-function.md) resource that enables your AWS Lambda \(Lambda\) function to access resources in a VPC\. For more information, see [Configuring a Lambda Function to Access Resources in an Amazon VPC](https://docs.aws.amazon.com/lambda/latest/dg/vpc.html) in the *AWS Lambda Developer Guide*\.
 
-## Syntax<a name="w4ab1c21c10d162c21c34b5"></a>
+## Syntax<a name="w13ab1c21c10d177c21c33b5"></a>
 
 ### JSON<a name="aws-properties-lambda-function-vpcconfig-syntax.json"></a>
 
@@ -22,7 +22,7 @@
   - String
 ```
 
-## Properties<a name="w4ab1c21c10d162c21c34b7"></a>
+## Properties<a name="w13ab1c21c10d177c21c33b7"></a>
 
 `SecurityGroupIds`  <a name="cfn-lambda-function-vpcconfig-securitygroupids"></a>
 A list of one or more security groups IDs in the VPC that includes the resources to which your Lambda function requires access\.  

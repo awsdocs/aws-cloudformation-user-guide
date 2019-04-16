@@ -2,7 +2,7 @@
 
 `HostEntry` is a property of the [Amazon Elastic Container Service TaskDefinition ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md) property that specifies the hostnames and IP address entries to add to the Amazon Elastic Container Service \(Amazon ECS\) container's `/etc/hosts` file\.
 
-## Syntax<a name="w4ab1c21c10d108c21c36b5"></a>
+## Syntax<a name="w13ab1c21c10d117c21c36b5"></a>
 
 ### JSON<a name="aws-properties-ecs-taskdefinition-containerdefinitions-hostentry-syntax.json"></a>
 
@@ -20,7 +20,7 @@
 [IpAddress](#cfn-ecs-taskdefinition-containerdefinition-hostentry-ipaddress): String
 ```
 
-## Properties<a name="w4ab1c21c10d108c21c36b7"></a>
+## Properties<a name="w13ab1c21c10d117c21c36b7"></a>
 
 `Hostname`  <a name="cfn-ecs-taskdefinition-containerdefinition-hostentry-hostname"></a>
 The hostname to use in the `/etc/hosts` file\.  

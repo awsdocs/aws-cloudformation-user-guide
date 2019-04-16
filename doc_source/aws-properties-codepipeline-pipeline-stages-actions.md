@@ -1,8 +1,8 @@
-# AWS CodePipeline Pipeline Stages Actions<a name="aws-properties-codepipeline-pipeline-stages-actions"></a>
+# CodePipeline Pipeline Stages Actions<a name="aws-properties-codepipeline-pipeline-stages-actions"></a>
 
-`Actions` is a property of the [AWS CodePipeline Pipeline Stages](aws-properties-codepipeline-pipeline-stages.md) property that specifies an action for an AWS CodePipeline stage\.
+`Actions` is a property of the [CodePipeline Pipeline Stages](aws-properties-codepipeline-pipeline-stages.md) property that specifies an action for an CodePipeline stage\.
 
-## Syntax<a name="w4ab1c21c10c75c17c17b5"></a>
+## Syntax<a name="w13ab1c21c10c81c17c17b5"></a>
 
 ### JSON<a name="aws-properties-codepipeline-pipeline-stages-actions-syntax.json"></a>
 
@@ -36,22 +36,22 @@
 [RunOrder](#cfn-codepipeline-pipeline-stages-actions-runorder): Integer
 ```
 
-## Properties<a name="w4ab1c21c10c75c17c17b7"></a>
+## Properties<a name="w13ab1c21c10c81c17c17b7"></a>
 
 `ActionTypeId`  <a name="cfn-codepipeline-pipeline-stages-actions-actiontypeid"></a>
 Specifies the action type and the provider of the action\.  
 *Required*: Yes  
-*Type*: [AWS CodePipeline Pipeline Stages Actions ActionTypeId](aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.md)
+*Type*: [CodePipeline Pipeline Stages Actions ActionTypeId](aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.md)
 
 `Configuration`  <a name="cfn-codepipeline-pipeline-stages-actions-configuration"></a>
-The action's configuration\. These are key\-value pairs that specify input values for an action\. For more information, see [ Action Structure Requirements in AWS CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements) in the *AWS CodePipeline User Guide*\.  
+The action's configuration\. These are key\-value pairs that specify input values for an action\. For more information, see [ Action Structure Requirements in CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements) in the *CodePipeline User Guide*\.  
 *Required*: No  
 *Type*: JSON object
 
 `InputArtifacts`  <a name="cfn-codepipeline-pipeline-stages-actions-inputartifacts"></a>
 The name or ID of the artifact that the action consumes, such as a test or build artifact\.  
 *Required*: No  
-*Type*: List of [AWS CodePipeline Pipeline Stages Actions InputArtifacts](aws-properties-codepipeline-pipeline-stages-actions-inputartifacts.md)
+*Type*: List of [CodePipeline Pipeline Stages Actions InputArtifacts](aws-properties-codepipeline-pipeline-stages-actions-inputartifacts.md)
 
 `Name`  <a name="cfn-codepipeline-pipeline-stages-actions-name"></a>
 The action name\.  
@@ -61,7 +61,7 @@ The action name\.
 `OutputArtifacts`  <a name="cfn-codepipeline-pipeline-stages-actions-outputartifacts"></a>
 The artifact name or ID that is a result of the action, such as a test or build artifact\.  
 *Required*: No  
-*Type*: List of [AWS CodePipeline Pipeline Stages Actions OutputArtifacts](aws-properties-codepipeline-pipeline-stages-actions-outputartifacts.md)
+*Type*: List of [CodePipeline Pipeline Stages Actions OutputArtifacts](aws-properties-codepipeline-pipeline-stages-actions-outputartifacts.md)
 
 `Region`  <a name="cfn-codepipeline-pipeline-stages-actions-region"></a>
 Specifies the action’s AWS Region, such as `us-east-1`\.  
@@ -74,6 +74,6 @@ The Amazon Resource Name \(ARN\) of a service role that the action uses\. The pi
 *Type*: String
 
 `RunOrder`  <a name="cfn-codepipeline-pipeline-stages-actions-runorder"></a>
-The order in which AWS CodePipeline runs this action\.  
+The order in which CodePipeline runs this action\.  
 *Required*: No  
 *Type*: Integer

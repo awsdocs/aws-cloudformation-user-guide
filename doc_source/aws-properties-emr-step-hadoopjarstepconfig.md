@@ -2,7 +2,7 @@
 
 `HadoopJarStepConfig` is a property of the [AWS::EMR::Step](aws-resource-emr-step.md) resource that specifies a JAR file and runtime settings that Amazon EMR \(Amazon EMR\) executes\.
 
-## Syntax<a name="w4ab1c21c10d132c30c17b5"></a>
+## Syntax<a name="w13ab1c21c10d141c30c17b5"></a>
 
 ### JSON<a name="aws-properties-emr-step-hadoopjarstepconfig-syntax.json"></a>
 
@@ -26,7 +26,7 @@
   - KeyValue
 ```
 
-## Properties<a name="w4ab1c21c10d132c30c17b7"></a>
+## Properties<a name="w13ab1c21c10d141c30c17b7"></a>
 
 `Args`  <a name="cfn-emr-step-hadoopjarstepconfig-args"></a>
 A list of command line arguments passed to the JAR file's main function when the function is executed\.  

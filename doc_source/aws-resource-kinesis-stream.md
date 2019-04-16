@@ -34,7 +34,7 @@ Properties:
     - Resource Tag
 ```
 
-## Properties<a name="w4ab1c21c10d156c22b7"></a>
+## Properties<a name="w13ab1c21c10d171c26b7"></a>
 
 **Note**  
  For more information about constraints and values for each property, see [CreateStream](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_CreateStream.html) in the *Amazon Kinesis API Reference* and [Amazon Kinesis Data Streams Limits](https://docs.aws.amazon.com/kinesis/latest/dev/service-sizes-and-limits.html) in the *Amazon Kinesis Developer Guide*\. 
@@ -70,15 +70,15 @@ An arbitrary set of tags \(key–value pairs\) to associate with the Kinesis str
 *Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d156c22b9"></a>
+## Return Values<a name="w13ab1c21c10d171c26b9"></a>
 
-### Ref<a name="w4ab1c21c10d156c22b9b2"></a>
+### Ref<a name="w13ab1c21c10d171c26b9b2"></a>
 
  When you specify an AWS::Kinesis::Stream resource as an argument to the `Ref` function, AWS CloudFormation returns the stream name \(physical ID\)\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d156c22b9b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d171c26b9b4"></a>
 
 `Fn::GetAtt` returns a value for the `Arn` attribute\.
 

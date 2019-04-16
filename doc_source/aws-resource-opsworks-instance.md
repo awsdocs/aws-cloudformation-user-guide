@@ -70,7 +70,7 @@ Properties:
   - String
 ```
 
-## Properties<a name="w4ab1c21c10d168c24b7"></a>
+## Properties<a name="w13ab1c21c10d183c24b7"></a>
 
 `AgentVersion`  <a name="cfn-opsworks-instance-agentversion"></a>
 The version of the AWS OpsWorks agent that AWS OpsWorks installs on each instance\. AWS OpsWorks sends commands to the agent to performs tasks on your instances, such as starting Chef runs\. For valid values, see the `AgentVersion` parameter for the [CreateInstance](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateInstance.html) action in the *AWS OpsWorks Stacks API Reference*\.  
@@ -200,9 +200,9 @@ A list of AWS OpsWorks volume IDs to associate with the instance\. For more info
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d168c24b9"></a>
+## Return Values<a name="w13ab1c21c10d183c24b9"></a>
 
-### Ref<a name="w4ab1c21c10d168c24b9b2"></a>
+### Ref<a name="w13ab1c21c10d183c24b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -214,7 +214,7 @@ For the AWS OpsWorks instance `myInstance1`, `Ref` returns the AWS OpsWorks inst
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d168c24b9b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d183c24b9b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 + `AvailabilityZone`
@@ -237,9 +237,9 @@ Use this attribute only when the AWS OpsWorks instance is in an AWS OpsWorks lay
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w4ab1c21c10d168c24c11"></a>
+## Examples<a name="w13ab1c21c10d183c24c11"></a>
 
-### Create Basic AWS OpsWorks Instances<a name="w4ab1c21c10d168c24c11b2"></a>
+### Create Basic AWS OpsWorks Instances<a name="w13ab1c21c10d183c24c11b2"></a>
 
 The following example creates two AWS OpsWorks instances that are associated with the `myStack` AWS OpsWorks stack and the `myLayer` AWS OpsWorks layer:
 
@@ -288,7 +288,7 @@ myInstance2:
     InstanceType: "m1.small"
 ```
 
-### Define a Time\-based Auto Scaling Instance<a name="w4ab1c21c10d168c24c11b4"></a>
+### Define a Time\-based Auto Scaling Instance<a name="w13ab1c21c10d183c24c11b4"></a>
 
 In the following example, the `DBInstance` instance is online for four hours from UTC 1200\-1600 on Friday, Saturday, and Sunday\. The instance is offline for all other times and days\.
 
@@ -341,7 +341,7 @@ DBInstance:
         15: "on"
 ```
 
-## More Info<a name="w4ab1c21c10d168c24c13"></a>
+## More Info<a name="w13ab1c21c10d183c24c13"></a>
 + [AWS::OpsWorks::Stack](aws-resource-opsworks-stack.md)
 + [AWS::OpsWorks::Layer](aws-resource-opsworks-layer.md)
 + [AWS::OpsWorks::App](aws-resource-opsworks-app.md)

@@ -2,7 +2,7 @@
 
 `SpotFleetTagSpecification` is a property of the [Amazon Elastic Compute Cloud SpotFleet LaunchSpecifications](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md) property that specifies the tags for a Spot fleet resource\.
 
-## Syntax<a name="w4ab1c21c10d102d118c82b5"></a>
+## Syntax<a name="w13ab1c21c10d111d118c81b5"></a>
 
 ### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications-syntax.json"></a>
 
@@ -21,7 +21,7 @@
     - Resource Tag
 ```
 
-## Properties<a name="w4ab1c21c10d102d118c82b7"></a>
+## Properties<a name="w13ab1c21c10d111d118c81b7"></a>
 
 `ResourceType`  <a name="cfn-ec2-spotfleet-spotfleettagspecification-resourcetype"></a>
 The type of resource\.   

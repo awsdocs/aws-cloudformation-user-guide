@@ -1,6 +1,6 @@
-# AWS CodeDeploy DeploymentGroup AlarmConfiguration<a name="aws-properties-codedeploy-deploymentgroup-alarmconfiguration"></a>
+# CodeDeploy DeploymentGroup AlarmConfiguration<a name="aws-properties-codedeploy-deploymentgroup-alarmconfiguration"></a>
 
-The `AlarmConfiguration` property type configures CloudWatch alarms for an AWS CodeDeploy deployment group\. `AlarmConfiguration` is a property of the [AWS::CodeDeploy::DeploymentGroup](aws-resource-codedeploy-deploymentgroup.md) resource\.
+The `AlarmConfiguration` property type configures CloudWatch alarms for an CodeDeploy deployment group\. `AlarmConfiguration` is a property of the [AWS::CodeDeploy::DeploymentGroup](aws-resource-codedeploy-deploymentgroup.md) resource\.
 
 ## Syntax<a name="aws-properties-codedeploy-deploymentgroup-alarmconfiguration-syntax"></a>
 
@@ -32,7 +32,7 @@ For more information about each property, including constraints and valid values
 `Alarms`  <a name="cfn-codedeploy-deploymentgroup-alarmconfiguration-alarms"></a>
 The list of alarms configured for the deployment group\. Duplicates are not allowed\.  
 *Required*: No  
-*Type*: List of [AWS CodeDeploy DeploymentGroup Alarm](aws-properties-codedeploy-deploymentgroup-alarm.md)  
+*Type*: List of [CodeDeploy DeploymentGroup Alarm](aws-properties-codedeploy-deploymentgroup-alarm.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Enabled`  <a name="cfn-codedeploy-deploymentgroup-alarmconfiguration-enabled"></a>

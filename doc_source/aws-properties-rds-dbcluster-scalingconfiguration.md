@@ -48,7 +48,7 @@ The maximum capacity must be greater than or equal to the minimum capacity\.
 `MinCapacity`  <a name="cfn-rds-dbcluster-scalingconfiguration-mincapacity"></a>
 The minimum capacity for an Aurora DB cluster in serverless DB engine mode\.  
 Valid capacity values are 2, 4, 8, 16, 32, 64, 128, and 256\.  
-The maximum capacity must be greater than or equal to the minimum capacity\.  
+The minimum capacity must be less than or equal to the maximum capacity\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)

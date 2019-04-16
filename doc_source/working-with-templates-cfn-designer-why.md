@@ -2,7 +2,7 @@
 
 AWS CloudFormation Designer \(Designer\) provides the following benefits: it allows you to see graphic representations of the resources in your template, it simplifies template authoring, and it simplifies template editing\.
 
-## Visualize Template Resources<a name="w4ab1c17c17c11b5"></a>
+## Visualize Template Resources<a name="w13ab1c17c17c11b5"></a>
 
 Parsing JSON\- or YAML\-formatted text files to see the resources that are in your template and their relationships can be difficult\. In Designer, you can see a graphic representation of the resources that are included in a template and how they relate to each other\.
 
@@ -54,7 +54,7 @@ Metadata:
 ...
 ```
 
-## Simplify Template Authoring<a name="w4ab1c17c17c11b7"></a>
+## Simplify Template Authoring<a name="w13ab1c17c17c11b7"></a>
 
 When you author template resources in a text editor, you must manually edit JSON or YAML, which can be tedious and error\-prone\. By using Designer, you spend less time manually coding your templates and more time designing your AWS infrastructure\. In Designer, you drag and drop new resources to add them to your template, and you drag connections between resources to establish relationships\. Designer automatically modifies the JSON or YAML\.
 
@@ -62,6 +62,6 @@ When you create templates, Designer enforces some basic relationships between re
 
 You can also validate a template directly in Designer\. It provides the same level of validation as the `[ValidateTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/)` API call, which checks that the JSON or YAML syntax is valid, that all referenced parameters are declared, and that there are no circular dependencies\.
 
-## Simplify Editing with the integrated JSON and YAML editor<a name="w4ab1c17c17c11b9"></a>
+## Simplify Editing with the integrated JSON and YAML editor<a name="w13ab1c17c17c11b9"></a>
 
 With the integrated editor, you can make all of your template modifications in the AWS CloudFormation console\. You don't need to use a separate text editor to modify and save your templates\. The integrated editor also provides an auto\-complete feature that lists all property names for a resource, so you don't need to look them up or memorize them\. In addition, you can use the integrated editor to convert JSON templates to YAML and vice versa\.

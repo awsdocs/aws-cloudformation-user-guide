@@ -70,7 +70,7 @@ Indicates that minor engine upgrades are applied automatically to the DB instanc
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruption](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)\. 
 
 `AvailabilityZone`  <a name="cfn-neptune-dbinstance-availabilityzone"></a>
-The name of the Availability Zone where the DB instance is located\. You can't set the `AvailabilityZone` parameter if the `MultiAZ` parameter is set to `true`\.  
+The name of the Availability Zone where the DB instance is located\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

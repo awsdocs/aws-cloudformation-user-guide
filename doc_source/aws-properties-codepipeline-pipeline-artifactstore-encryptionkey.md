@@ -1,8 +1,8 @@
-# AWS CodePipeline Pipeline ArtifactStore EncryptionKey<a name="aws-properties-codepipeline-pipeline-artifactstore-encryptionkey"></a>
+# CodePipeline Pipeline ArtifactStore EncryptionKey<a name="aws-properties-codepipeline-pipeline-artifactstore-encryptionkey"></a>
 
-`EncryptionKey` is a property of the [AWS CodePipeline Pipeline ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md) property that specifies which key AWS CodePipeline uses to encrypt data in the artifact store, such as an AWS Key Management Service \(AWS KMS\) key\.
+`EncryptionKey` is a property of the [CodePipeline Pipeline ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md) property that specifies which key CodePipeline uses to encrypt data in the artifact store, such as an AWS Key Management Service \(AWS KMS\) key\.
 
-## Syntax<a name="w4ab1c21c10c75c17c41b5"></a>
+## Syntax<a name="w13ab1c21c10c81c17c41b5"></a>
 
 ### JSON<a name="aws-properties-codepipeline-pipeline-artifactstore-encryptionkey-syntax.json"></a>
 
@@ -20,7 +20,7 @@
 [Type](#cfn-codepipeline-pipeline-artifactstore-encryptionkey-type): String
 ```
 
-## Properties<a name="w4ab1c21c10c75c17c41b7"></a>
+## Properties<a name="w13ab1c21c10c81c17c41b7"></a>
 
 `Id`  <a name="cfn-codepipeline-pipeline-artifactstore-encryptionkey-id"></a>
 The ID of the key\. For an AWS KMS key, specify the key ID or key Amazon Resource Number \(ARN\)\.  

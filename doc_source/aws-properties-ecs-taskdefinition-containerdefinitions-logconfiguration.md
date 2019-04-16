@@ -2,7 +2,7 @@
 
 `LogConfiguration` is a property of the [Amazon Elastic Container Service TaskDefinition ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md) property that configures a custom log driver for an Amazon Elastic Container Service \(Amazon ECS\) container\.
 
-## Syntax<a name="w4ab1c21c10d108c21c53b5"></a>
+## Syntax<a name="w13ab1c21c10d117c21c53b5"></a>
 
 ### JSON<a name="aws-properties-ecs-taskdefinition-containerdefinitions-logconfiguration-syntax.json"></a>
 
@@ -21,7 +21,7 @@
   String: String
 ```
 
-## Properties<a name="w4ab1c21c10d108c21c53b7"></a>
+## Properties<a name="w13ab1c21c10d117c21c53b7"></a>
 
 `LogDriver`  <a name="cfn-ecs-taskdefinition-containerdefinition-logconfiguration-logdriver"></a>
 The log driver to use for the container\. This parameter requires that your container instance uses Docker Remote API Version 1\.18 or greater\. For more information, see the `logDriver` content for the [LogConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_LogConfiguration.html) data type in the *Amazon Elastic Container Service API Reference*\.  

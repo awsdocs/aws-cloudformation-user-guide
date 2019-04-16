@@ -93,7 +93,7 @@ The following example grants permission to one AWS account with an account ID of
 
 ```
 SampleEventBusPolicy: 
-    Type: AWS::Events::EventBusPolicy,
+    Type: AWS::Events::EventBusPolicy
     Properties: 
         Action: "events:PutEvents"
         Principal: "111122223333"
@@ -126,14 +126,14 @@ The following example grants permission to all AWS accounts in the organization 
 
 ```
 SampleEventBusPolicy: 
-    Type: AWS::Events::EventBusPolicy,
+    Type: AWS::Events::EventBusPolicy
     Properties: 
         Action: "events:PutEvents"
         Principal: "*"
         StatementId: "MyStatement"
         Condition: 
-            Type: "StringEquals",
-            Key: "aws:PrincipalOrgID",
+            Type: "StringEquals"
+            Key: "aws:PrincipalOrgID"
             Value: "o-1234567890"
 ```
 

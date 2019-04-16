@@ -4,7 +4,7 @@ The `SSESpecification` property is part of the [AWS::DynamoDB::Table](aws-resour
 
 If you do not specify the `SSESpecification` property type, Amazon DynamoDB will create an unencrypted table, the same as if you had specified the `SSESpecification` property type with its `SSEEnabled` property set to `false`\. As a best practice, for consistency only specify the `SSESpecification` property type \(with its `SSEEnabled` property set to `true`\) if you want DynamoDB to create an encrypted table\. 
 
-## Syntax<a name="w4ab1c21c10c99c14c54b7"></a>
+## Syntax<a name="w13ab1c21c10d108c14c54b7"></a>
 
 ### JSON<a name="aws-properties-dynamodb-table-ssespecification.json"></a>
 
@@ -20,7 +20,7 @@ If you do not specify the `SSESpecification` property type, Amazon DynamoDB will
 [SSEEnabled](#cfn-dynamodb-table-ssespecification-sseenabled): Boolean
 ```
 
-## Properties<a name="w4ab1c21c10c99c14c54b9"></a>
+## Properties<a name="w13ab1c21c10d108c14c54b9"></a>
 
 `SSEEnabled`  <a name="cfn-dynamodb-table-ssespecification-sseenabled"></a>
 Whether server\-side encryption is enabled or not\.  

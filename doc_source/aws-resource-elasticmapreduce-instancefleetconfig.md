@@ -42,7 +42,7 @@ Properties:
   [TargetSpotCapacity](#cfn-elasticmapreduce-instancefleetconfig-targetspotcapacity): Integer
 ```
 
-## Properties<a name="w4ab1c21c10d132c17b9"></a>
+## Properties<a name="w13ab1c21c10d141c17b9"></a>
 
 For more information about each property, including constraints and valid values, see [InstanceFleetConfig](https://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_InstanceFleetConfig.html) in the *Amazon EMR API Reference*\.
 

@@ -51,7 +51,7 @@ Properties:
   [TrailName](#cfn-cloudtrail-trail-trailname): String
 ```
 
-## Properties<a name="w4ab1c21c10c60c13b9"></a>
+## Properties<a name="w13ab1c21c10c66c13b9"></a>
 
 For more information and property constraints, see [CreateTrail](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/ API_CreateTrail.html) in the *AWS CloudTrail API Reference*\.
 
@@ -133,9 +133,9 @@ The name of the trail\. For constraint information, see [CreateTrail](https://do
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10c60c13c11"></a>
+## Return Values<a name="w13ab1c21c10c66c13c11"></a>
 
-### Ref<a name="w4ab1c21c10c60c13c11b2"></a>
+### Ref<a name="w13ab1c21c10c66c13c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 

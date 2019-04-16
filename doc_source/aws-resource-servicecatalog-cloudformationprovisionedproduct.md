@@ -70,13 +70,14 @@ The path identifier of the product\.
 The product identifier\. You must specify either the ID or the name of the product, but not both\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ProductName`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-productname"></a>
 The product name\. This name must be unique for the user\. You must specify either the name or the ID of the product, but not both\.  
+Each time a stack is created or updated, if `ProductName` is provided it will successfully resolve to `ProductId` as long as only one product exists in the account/region with that `ProductName`\.  
  *Required*: No  
  *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `ProvisionedProductName`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-provisionedproductname"></a>
 A user\-friendly name for the provisioned product\. This name must be unique for the AWS account and cannot be updated after the product is provisioned\.  

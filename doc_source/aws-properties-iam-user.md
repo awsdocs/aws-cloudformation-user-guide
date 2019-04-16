@@ -91,13 +91,13 @@ Naming an IAM resource can cause an unrecoverable error if you reuse the same te
 
 ## Return Values<a name="aws-properties-iam-user-ref"></a>
 
-### Ref<a name="w4ab1c21c10d144c45b9b2"></a>
+### Ref<a name="w13ab1c21c10d156c45b9b2"></a>
 
 Specifying this resource ID to the intrinsic Ref function will return the `UserName`\. For example: `mystack-myuser-1CCXAFG2H2U4D`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d144c45b9b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d156c45b9b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -106,6 +106,6 @@ Returns the Amazon Resource Name \(ARN\) for the specified AWS::IAM::User resour
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Template Examples<a name="w4ab1c21c10d144c45c11"></a>
+## Template Examples<a name="w13ab1c21c10d156c45c11"></a>
 
 To view AWS::IAM::User snippets, see: [Declaring an IAM User Resource](quickref-iam.md#scenario-iam-user)\.

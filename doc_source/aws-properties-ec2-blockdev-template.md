@@ -2,7 +2,7 @@
 
 The Amazon Elastic Block Store block device type is an embedded property of the [Amazon EC2 BlockDeviceMapping](aws-properties-ec2-blockdev-mapping.md) property\.
 
-## Syntax<a name="w4ab1c21c10d102c49c28b5"></a>
+## Syntax<a name="w13ab1c21c10d111c49c28b5"></a>
 
 ### JSON<a name="aws-properties-ec2-blockdev-template-syntax.json"></a>
 
@@ -28,7 +28,7 @@ The Amazon Elastic Block Store block device type is an embedded property of the 
 [VolumeType](#cfn-ec2-blockdev-template-volumetype): String
 ```
 
-## Properties<a name="w4ab1c21c10d102c49c28b7"></a>
+## Properties<a name="w13ab1c21c10d111c49c28b7"></a>
 
 `DeleteOnTermination`  <a name="cfn-ec2-blockdev-template-deleteontermination"></a>
 Determines whether to delete the volume on instance termination\. The default value is `true`\.  
@@ -61,7 +61,7 @@ The volume type\. If you set the type to `io1`, you must also set the `Iops` pro
 *Required*: No  
 *Type*: String
 
-## Example<a name="w4ab1c21c10d102c49c28b9"></a>
+## Example<a name="w13ab1c21c10d111c49c28b9"></a>
 
 ```
 {
@@ -76,5 +76,5 @@ The volume type\. If you set the type to `io1`, you must also set the `Iops` pro
 }
 ```
 
-## See Also<a name="w4ab1c21c10d102c49c28c11"></a>
+## See Also<a name="w13ab1c21c10d111c49c28c11"></a>
 + [CreateVolume](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVolume.html) in the *Amazon Elastic Compute Cloud API Reference*

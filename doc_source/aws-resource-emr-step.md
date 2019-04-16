@@ -35,7 +35,7 @@ Properties:
   [Name](#cfn-emr-step-name): String
 ```
 
-## Properties<a name="w4ab1c21c10d132c30b9"></a>
+## Properties<a name="w13ab1c21c10d141c30b9"></a>
 
 `ActionOnFailure`  <a name="cfn-emr-step-actiononfailure"></a>
 The action to take if the job flow step fails\. Currently, AWS CloudFormation supports `CONTINUE` and `CANCEL_AND_WAIT`\.  
@@ -65,15 +65,15 @@ A name for the job flow step\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d132c30c11"></a>
+## Return Values<a name="w13ab1c21c10d141c30c11"></a>
 
-### Ref<a name="w4ab1c21c10d132c30c11b2"></a>
+### Ref<a name="w13ab1c21c10d141c30c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the step ID, such as `s-1A2BC3D4EFG56`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d132c30c13"></a>
+## Example<a name="w13ab1c21c10d141c30c13"></a>
 
 The following example creates a step that submits work to the `TestCluster` cluster\. The step runs the `pi` program in the `hadoop-mapreduce-examples-2.6.0.jar` file with 5 maps and 10 samples, specified in the `Args` property\.
 

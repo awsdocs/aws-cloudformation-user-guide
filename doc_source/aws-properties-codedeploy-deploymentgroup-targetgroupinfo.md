@@ -2,7 +2,7 @@
 
 The `TargetGroupInfo` property type specifies information about a target group in Elastic Load Balancing to use in a deployment\. Instances are registered as targets in a target group, and traffic is routed to the target group\. For more information, see [ TargetGroupInfo](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_TargetGroupInfo.html) in the *AWS CodeDeploy API Reference*
 
-If you specify the `TargetGroupInfo` property, the `DeploymentStyle.DeploymentOption` property must be set to `WITH_TRAFFIC_CONTROL` for AWS CodeDeploy to route your traffic using the specified target groups\.
+If you specify the `TargetGroupInfo` property, the `DeploymentStyle.DeploymentOption` property must be set to `WITH_TRAFFIC_CONTROL` for CodeDeploy to route your traffic using the specified target groups\.
 
  `TargetGroupInfo` is a property of the [LoadBalancerInfo](aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.md) property type\. 
 
@@ -38,7 +38,7 @@ This value can't exceed 32 characters, so you should use the `Name` property of 
 
 ### <a name="aws-properties-codedeploy-deploymentgroup-targetgroupinfo-example1"></a>
 
-The following snippet gets the name of the target group, which AWS CodeDeploy uses to register and deregister instances from the target group during deployments\.
+The following snippet gets the name of the target group, which CodeDeploy uses to register and deregister instances from the target group during deployments\.
 
 #### JSON<a name="aws-properties-codedeploy-deploymentgroup-targetgroupinfo-example1.json"></a>
 

@@ -1,6 +1,6 @@
 # AWS::ElasticLoadBalancingV2::Listener<a name="aws-resource-elasticloadbalancingv2-listener"></a>
 
-The `AWS::ElasticLoadBalancingV2::Listener` resource creates a listener for an Elastic Load Balancing Application or Network load balancer\. The listener checks for connection requests and forwards them to one or more target groups\. For more information, see [Getting Started](http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/load-balancer-getting-started.html) in the *Elastic Load Balancing User Guide*\.
+The `AWS::ElasticLoadBalancingV2::Listener` resource creates a listener for an Application Load Balancer or a Network Load Balancer\. The listener checks for connection requests and forwards them to one or more target groups\. For more information, see [Listeners for Your Application Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html) in the *User Guide for Application Load Balancers* or [Listeners for Your Network Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-listeners.html) in the *User Guide for Network Load Balancers*\.
 
 ## Syntax<a name="aws-resource-elasticloadbalancingv2-listener-syntax"></a>
 
@@ -37,23 +37,22 @@ Properties:
   [SslPolicy](#cfn-elasticloadbalancingv2-listener-sslpolicy): String
 ```
 
-## Properties<a name="w4ab1c21c10d129c13b7"></a>
+## Properties<a name="w13ab1c21c10d138c15b7"></a>
 
 `Certificates`  <a name="cfn-elasticloadbalancingv2-listener-certificates"></a>
-The SSL server certificate for the listener\. With a certificate, you can encrypt traffic between the load balancer and the clients that initiate HTTPS sessions, and traffic between the load balancer and your targets\.  
-This property represents the default certificate for the listener\. You can specify only one certificate for the `AWS::ElasticLoadBalancingV2::Listener` resource\.  
-*Required*: Conditional\. If you specify `HTTPS` for the `Protocol` property, specify a certificate\.  
-*Type*: List of [Elastic Load Balancing Listener Certificate](aws-properties-elasticloadbalancingv2-listener-certificates.md)  
+\[HTTPS and TLS listeners\] The default SSL server certificate for the listener\.  
+*Required*: Conditional\. If you specify `HTTPS` or `TLS` for the `Protocol` property, you must specify exactly one certificate\.  
+*Type*: List of [Elastic Load Balancing V2 Certificate](aws-properties-elasticloadbalancingv2-listener-certificates.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `DefaultActions`  <a name="cfn-elasticloadbalancingv2-listener-defaultactions"></a>
-The default actions that the listener takes when handling incoming requests\.  
+The actions for the default rule for the listener\.  
 *Required*: Yes  
-*Type*: List of [Elastic Load Balancing Listener Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md)  
+*Type*: List of [Elastic Load Balancing V2 Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `LoadBalancerArn`  <a name="cfn-elasticloadbalancingv2-listener-loadbalancerarn"></a>
-The Amazon Resource Name \(ARN\) of the load balancer to associate with the listener\.  
+The Amazon Resource Name \(ARN\) of the load balancer\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -73,20 +72,20 @@ For valid values, see the `Protocol` parameter for the [CreateListener](https://
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `SslPolicy`  <a name="cfn-elasticloadbalancingv2-listener-sslpolicy"></a>
-The security policy that defines the ciphers and protocols that the load balancer supports\.  
+\[HTTPS and TLS listeners\] The security policy that defines the ciphers and protocols that the listener supports\. The default is the current predefined security policy\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10d129c13b9"></a>
+## Return Value<a name="w13ab1c21c10d138c15b9"></a>
 
-### Ref<a name="w4ab1c21c10d129c13b9b2"></a>
+### Ref<a name="w13ab1c21c10d138c15b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the listener's ARN, such as `arn:aws:elasticloadbalancing:us-west-2:123456789012:listener/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d129c13c11"></a>
+## Example<a name="w13ab1c21c10d138c15c11"></a>
 
 The following example creates a listener for the `myLoadBalancer` resource\. The listener's default action is to forward requests to the `myTargetGroup` target group\.
 

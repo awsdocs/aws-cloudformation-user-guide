@@ -1,6 +1,6 @@
 # AWS::ElasticLoadBalancing::LoadBalancer<a name="aws-properties-ec2-elb"></a>
 
-The AWS::ElasticLoadBalancing::LoadBalancer type creates a LoadBalancer\.
+Creates a Classic Load Balancer\.
 
 **Note**  
 If this resource has a public IP address and is also in a VPC that is defined in the same template, you must use the `DependsOn` attribute to declare a dependency on the VPC\-gateway attachment\. For more information, see [DependsOn Attribute](aws-attribute-dependson.md)\.
@@ -76,7 +76,7 @@ Properties:
 `AccessLoggingPolicy`  <a name="cfn-ec2-elb-accessloggingpolicy"></a>
 Captures detailed information for all requests made to your load balancer, such as the time a request was received, client’s IP address, latencies, request path, and server responses\.  
 *Required*: No  
-*Type*: [Elastic Load Balancing AccessLoggingPolicy](aws-properties-ec2-elb-accessloggingpolicy.md)  
+*Type*: [Elastic Load Balancing V1 AccessLoggingPolicy](aws-properties-ec2-elb-accessloggingpolicy.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `AppCookieStickinessPolicy`  <a name="cfn-ec2-elb-appcookiestickinesspolicy"></a>
@@ -95,13 +95,13 @@ For load balancers that are in a VPC, specify the `Subnets` property\.
 `ConnectionDrainingPolicy`  <a name="cfn-ec2-elb-connectiondrainingpolicy"></a>
 Whether deregistered or unhealthy instances can complete all in\-flight requests\.  
 *Required*: No  
-*Type*: [Elastic Load Balancing ConnectionDrainingPolicy](aws-properties-ec2-elb-connectiondrainingpolicy.md)  
+*Type*: [Elastic Load Balancing V1 ConnectionDrainingPolicy](aws-properties-ec2-elb-connectiondrainingpolicy.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ConnectionSettings`  <a name="cfn-ec2-elb-connectionsettings"></a>
 Specifies how long front\-end and back\-end connections of your load balancer can remain idle\.  
 *Required*: No  
-*Type*: [Elastic Load Balancing ConnectionSettings](aws-properties-ec2-elb-connectionsettings.md)  
+*Type*: [Elastic Load Balancing V1 ConnectionSettings](aws-properties-ec2-elb-connectionsettings.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `CrossZone`  <a name="cfn-ec2-elb-crosszone"></a>
@@ -113,11 +113,11 @@ Whether cross\-zone load balancing is enabled for the load balancer\. With cross
 `HealthCheck`  <a name="cfn-ec2-elb-healthcheck"></a>
 Application health check for the instances\.  
 *Required*: No  
-*Type*: [ElasticLoadBalancing LoadBalancer HealthCheck](aws-properties-ec2-elb-health-check.md)\.  
+*Type*: [Elastic Load Balancing V1 HealthCheck](aws-properties-ec2-elb-health-check.md)\.  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) if you did not have a health check specified and you are adding one or if you are removing a health check\. Otherwise, update requires [no interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
 `Instances`  <a name="cfn-ec2-elb-instances"></a>
-A list of EC2 instance IDs for the load balancer\.  
+The IDs of the EC2 instances for the load balancer\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -132,7 +132,7 @@ Generates a stickiness policy with sticky session lifetimes controlled by the li
 One or more listeners for this load balancer\. Each listener must be registered for a specific port, and you cannot have more than one listener for a given port\.  
 If you update the property values for a listener specified by the `Listeners` property, AWS CloudFormation will delete the existing listener and create a new one with the updated properties\. During the time that AWS CloudFormation is performing this action, clients will not be able to connect to the load balancer\.
 *Required*: Yes  
-*Type*: A list of [ElasticLoadBalancing Listener](aws-properties-ec2-elb-listener.md) objects\.  
+*Type*: A list of [Elastic Load Balancing V1 Listener](aws-properties-ec2-elb-listener.md) objects\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `LoadBalancerName`  <a name="cfn-ec2-elb-elbname"></a>
@@ -144,7 +144,7 @@ If you specify a name, you cannot perform updates that require replacement of th
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Policies`  <a name="cfn-ec2-elb-policies"></a>
-A list of elastic load balancing policies to apply to this elastic load balancer\. Specify only back\-end server policies\. For more information, see [DescribeLoadBalancerPolicyTypes](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_DescribeLoadBalancerPolicyTypes.html) in the *Elastic Load Balancing API Reference version 2012\-06\-01*\.  
+The policies to apply to this elastic load balancer\. Specify only back\-end server policies\. For more information, see [DescribeLoadBalancerPolicyTypes](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_DescribeLoadBalancerPolicyTypes.html) in the *Elastic Load Balancing API Reference version 2012\-06\-01*\.  
 *Required*: No  
 *Type*: A list of [ElasticLoadBalancing policy](aws-properties-ec2-elb-policy.md) objects\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
@@ -158,12 +158,12 @@ If you specify `internal`, you must specify subnets to associate with the load b
 
 `SecurityGroups`  <a name="cfn-ec2-elb-securitygroups"></a>
 *Required*: No  
-*Type*: A list of security groups assigned to your load balancer within your virtual private cloud \(VPC\)\.  
+*Type*: The security groups assigned to your load balancer within your virtual private cloud \(VPC\)\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Subnets`  <a name="cfn-ec2-elb-subnets"></a>
-A list of subnet IDs in your virtual private cloud \(VPC\) to attach to your load balancer\. Do not specify multiple subnets that are in the same Availability Zone\. You can specify the `AvailabilityZones` or `Subnets` property, but not both\.  
-For more information about using Elastic Load Balancing in a VPC, see [How Do I Use Elastic Load Balancing in Amazon VPC](http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/UserScenariosForVPC.html) in the *Elastic Load Balancing Developer Guide*\.  
+The subnet IDs in your virtual private cloud \(VPC\) to attach to your load balancer\. Do not specify multiple subnets that are in the same Availability Zone\. You can specify the `AvailabilityZones` or `Subnets` property, but not both\.  
+For more information, see [Add or Remove Subnets for your Classic Load Balancer in a VPC](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/.html) in the *User Guide for Classic Load Balancers*\.  
 *Required*: No  
 *Type*: List of String values  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) if you did not have a subnet specified and you are adding one or if you are removing all subnets\. Otherwise, update requires [no interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\. To update the load balancer to another subnet that is in the same Availability Zone, you must do two updates\. You must first update the load balancer to use a subnet in different Availability Zone\. After the update is complete, update the load balancer to use the new subnet that is in the original Availability Zone\.
@@ -176,13 +176,13 @@ An arbitrary set of tags \(key\-value pairs\) for this load balancer\.
 
 ## Return Values<a name="aws-properties-ec2-elb-ref"></a>
 
-### Ref<a name="w4ab1c21c10d126c14c11b2"></a>
+### Ref<a name="w13ab1c21c10d135c16c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example, `mystack-myelb-1WQN7BJGDB5YQ`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d126c14c11b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d135c16c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -209,9 +209,9 @@ Example: `amazon-elb-sg`
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w4ab1c21c10d126c14c13"></a>
+## Examples<a name="w13ab1c21c10d135c16c13"></a>
 
-### A load balancer with a health check and access logs<a name="w4ab1c21c10d126c14c13b2"></a>
+### A load balancer with a health check and access logs<a name="w13ab1c21c10d135c16c13b2"></a>
 
 #### JSON<a name="aws-resource-elasticloadbalancing-loadbalancer-example1.json"></a>
 
@@ -284,7 +284,7 @@ ElasticLoadBalancer:
     DependsOn: S3LoggingBucketPolicy
 ```
 
-### A load balancer with access logging enabled<a name="w4ab1c21c10d126c14c13b4"></a>
+### A load balancer with access logging enabled<a name="w13ab1c21c10d135c16c13b4"></a>
 
 The following sample snippet creates an Amazon S3 bucket with a bucket policy that allows the load balancer to store information in the `Logs/AWSLogs/AWS account number/` folder\. The load balancer also includes an explicit dependency on the bucket policy, which is required before the load balancer can write to the bucket\.
 
@@ -409,7 +409,7 @@ ElasticLoadBalancer:
   DependsOn: S3LoggingBucketPolicy
 ```
 
-### A load balancer with a connection draining policy<a name="w4ab1c21c10d126c14c13b6"></a>
+### A load balancer with a connection draining policy<a name="w13ab1c21c10d135c16c13b6"></a>
 
 The following snippet enables a connection draining policy that ends connections to a deregistered or unhealthy instance after 60 seconds\.
 
@@ -467,7 +467,7 @@ ElasticLoadBalancer:
       Timeout: '60'
 ```
 
-### A load balancer with multiple policies<a name="w4ab1c21c10d126c14c13b8"></a>
+### A load balancer with multiple policies<a name="w13ab1c21c10d135c16c13b8"></a>
 
 The following snippet creates a load balancer with listeners on port 80 and 443\. The snippet applies a proxy on port 80 and a back\-end server authentication policy on port 443\.
 
@@ -614,6 +614,6 @@ ElasticLoadBalancer:
       - '80'
 ```
 
-### Additional Examples<a name="w4ab1c21c10d126c14c13c10"></a>
+### Additional Examples<a name="w13ab1c21c10d135c16c13c10"></a>
 
 You can view additional examples from the AWS CloudFormation sample template collection: [Sample Templates](cfn-sample-templates.md)\.

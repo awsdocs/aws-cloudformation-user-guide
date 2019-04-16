@@ -421,7 +421,7 @@ Mappings are a set of keys that are associated with a set of name\-value pairs\.
          "cn-north-1"       : {"HVM64" : "ami-0a4eaf6c4454eda75", "HVMG2" : "NOT_SUPPORTED"},
          "cn-northwest-1"   : {"HVM64" : "ami-6b6a7d09", "HVMG2" : "NOT_SUPPORTED"}
        }
-     },
+     }
    }
    ```
 

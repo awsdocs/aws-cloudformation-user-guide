@@ -2,7 +2,7 @@
 
 `ShutdownEventConfiguration` is a property of the [AWS OpsWorks Layer LifeCycleConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration.md) property that specifies the shutdown event configuration for a lifecycle event\.
 
-## Syntax<a name="w4ab1c21c10d168c29c33b5"></a>
+## Syntax<a name="w13ab1c21c10d183c29c33b5"></a>
 
 ### JSON<a name="aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration-syntax.json"></a>
 
@@ -20,7 +20,7 @@
 [ExecutionTimeout](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-executiontimeout): Integer
 ```
 
-## Properties<a name="w4ab1c21c10d168c29c33b7"></a>
+## Properties<a name="w13ab1c21c10d183c29c33b7"></a>
 
 `DelayUntilElbConnectionsDrained`  <a name="cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-delayuntilelbconnectionsdrained"></a>
 Indicates whether to wait for connections to drain from the Elastic Load Balancing load balancers\.  

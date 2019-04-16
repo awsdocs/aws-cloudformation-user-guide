@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[ElasticsearchClusterConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig)" : [*ElasticsearchClusterConfig*](aws-properties-elasticsearch-domain-elasticsearchclusterconfig.md),
     "[ElasticsearchVersion](#cfn-elasticsearch-domain-elasticsearchversion)" : String,
     "[EncryptionAtRestOptions](#cfn-elasticsearch-domain-encryptionatrestoptions)" : [*EncryptionAtRestOptions*](aws-properties-elasticsearch-domain-encryptionatrestoptions.md),
+    "[NodeToNodeEncryptionOptions](#cfn-elasticsearch-domain-nodetonodeencryptionoptions)" : [*NodeToNodeEncryptionOptions*](aws-properties-elasticsearch-domain-nodetonodeencryptionoptions.md),
     "[SnapshotOptions](#cfn-elasticsearch-domain-snapshotoptions)" : [*SnapshotOptions*](aws-properties-elasticsearch-domain-snapshotoptions.md),
     "[Tags](#cfn-elasticsearch-domain-tags)" : [ Resource Tag, ... ],
     "[VPCOptions](#cfn-elasticsearch-domain-vpcoptions)" : [*VPCOptions*](aws-properties-elasticsearch-domain-vpcoptions.md)
@@ -42,6 +43,8 @@ Properties:
   [ElasticsearchVersion](#cfn-elasticsearch-domain-elasticsearchversion): String
   [EncryptionAtRestOptions](#cfn-elasticsearch-domain-encryptionatrestoptions): 
     [*EncryptionAtRestOptions*](aws-properties-elasticsearch-domain-encryptionatrestoptions.md)
+  [NodeToNodeEncryptionOptions](#cfn-elasticsearch-domain-nodetonodeencryptionoptions):
+    [*NodeToNodeEncryptionOptions*](aws-properties-elasticsearch-domain-nodetonodeencryptionoptions.md)
   [SnapshotOptions](#cfn-elasticsearch-domain-snapshotoptions):
     [*SnapshotOptions*](aws-properties-elasticsearch-domain-snapshotoptions.md)
   [Tags](#cfn-elasticsearch-domain-tags):
@@ -91,7 +94,8 @@ The cluster configuration for the Amazon ES domain\. You can specify options suc
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ElasticsearchVersion`  <a name="cfn-elasticsearch-domain-elasticsearchversion"></a>
-The version of Elasticsearch to use, such as `2.3`\. For information about the versions that Amazon ES supports, see the `Elasticsearch-Version` parameter for the [CreateElasticsearchDomain](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-configuration-api.html#es-configuration-api-actions-createelasticsearchdomain) action in the *Amazon Elasticsearch Service Developer Guide*\.  
+The version of Elasticsearch to use, such as `2.3`\. If not specified, `1.5` is used as the default\.   
+For information about the versions that Amazon ES supports, see the `Elasticsearch-Version` parameter for the [CreateElasticsearchDomain](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-configuration-api.html#es-configuration-api-actions-createelasticsearchdomain) action in the *Amazon Elasticsearch Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -101,6 +105,12 @@ Whether the domain should encrypt data at rest, and if so, the AWS Key Managemen
  *Required*: No  
  *Type*: [EncryptionAtRestOptions](aws-properties-elasticsearch-domain-encryptionatrestoptions.md)  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+
+`NodeToNodeEncryptionOptions`  <a name="cfn-elasticsearch-domain-nodetonodeencryptionoptions"></a>
+Specifies whether node\-to\-node encryption is enabled\.  
+*Required*: No  
+*Type*: [NodeToNodeEncryptionOptions](aws-properties-elasticsearch-domain-nodetonodeencryptionoptions.md)  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `SnapshotOptions`  <a name="cfn-elasticsearch-domain-snapshotoptions"></a>
 The automated snapshot configuration for the Amazon ES domain indices\.  

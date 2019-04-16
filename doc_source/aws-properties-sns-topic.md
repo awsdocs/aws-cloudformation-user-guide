@@ -32,7 +32,7 @@ Properties:
   [TopicName](#cfn-sns-topic-name): String
 ```
 
-## Properties<a name="w4ab1c21c10d198c17b7"></a>
+## Properties<a name="w13ab1c21c10d222c17b7"></a>
 
 `DisplayName`  <a name="cfn-sns-topic-displayname"></a>
 A developer\-defined string that can be used to identify this SNS topic\.  
@@ -59,15 +59,15 @@ If you specify a name, you cannot perform updates that require replacement of th
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d198c17b9"></a>
+## Return Values<a name="w13ab1c21c10d222c17b9"></a>
 
-### Ref<a name="w4ab1c21c10d198c17b9b2"></a>
+### Ref<a name="w13ab1c21c10d222c17b9b2"></a>
 
 For the `AWS::SNS::Topic` resource, the `Ref` intrinsic function returns the topic ARN, for example: `arn:aws:sns:us-east-1:123456789012:mystack-mytopic-NZJ5JSMVGFIE`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d198c17b9b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d222c17b9b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -76,7 +76,7 @@ Returns the name for an Amazon SNS topic\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w4ab1c21c10d198c17c11"></a>
+## Examples<a name="w13ab1c21c10d222c17c11"></a>
 
 An example of an SNS topic subscribed to by two SQS queues:
 
@@ -117,5 +117,5 @@ MySNSTopic:
     TopicName: "SampleTopic"
 ```
 
-## See Also<a name="w4ab1c21c10d198c17c13"></a>
+## See Also<a name="w13ab1c21c10d222c17c13"></a>
 + [Using an AWS CloudFormation Template to Create a Topic that Sends Messages to Amazon SQS Queues](http://docs.aws.amazon.com/sns/latest/dg/SendMessageToSQS.cloudformation.html) in the *Amazon Simple Notification Service Developer Guide*

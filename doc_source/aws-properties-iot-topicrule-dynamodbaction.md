@@ -8,7 +8,7 @@ The `HashKeyValue` and `RangeKeyValue` fields use the `${sql-expression}` substi
 + The `"HashKeyValue" : "${topic(3)}` field uses the third level of the topic\.
 + The `"RangeKeyValue" : "${timestamp()}` field uses the timestamp\.
 
-## Syntax<a name="w4ab1c21c10d150c39c33c10"></a>
+## Syntax<a name="w13ab1c21c10d162c39c33c10"></a>
 
 ### JSON<a name="aws-properties-iot-topicrule-dynamodbaction-syntax.json"></a>
 
@@ -40,7 +40,7 @@ The `HashKeyValue` and `RangeKeyValue` fields use the `${sql-expression}` substi
 [TableName](#cfn-iot-topicrule-dynamodbaction-tablename): String
 ```
 
-## Properties<a name="w4ab1c21c10d150c39c33c12"></a>
+## Properties<a name="w13ab1c21c10d162c39c33c12"></a>
 
 For more information and valid values, see [DynamoDB Action](https://docs.aws.amazon.com/iot/latest/developerguide/dynamodb-rule.html) in the *AWS IoT Developer Guide*\.
 

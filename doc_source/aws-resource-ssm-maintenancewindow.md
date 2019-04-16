@@ -99,7 +99,7 @@ The time zone that the scheduled Maintenance Window executions are based on, in 
 
 ## Return Values<a name="aws-resource-ssm-maintenancewindow-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10d207c19b9b3"></a>
+### Ref<a name="w13ab1c21c10d231c19b9b3"></a>
 
 When you pass the logical ID of an `AWS::SSM::MaintenanceWindow` resource to the intrinsic `Ref` function, the function returns the maintenance window ID, such as `mw-abcde1234567890yz`\. 
 

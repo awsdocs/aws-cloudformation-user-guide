@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[ApprovedPatchesComplianceLevel](#cfn-ssm-patchbaseline-approvedpatchescompliancelevel)" : String,
     "[ApprovedPatchesEnableNonSecurity](#cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity)" : Boolean,
     "[RejectedPatches](#cfn-ssm-patchbaseline-rejectedpatches)" : [ String, ... ],
-    "[RejectedPatchesAction](#cfn-ssm-patchbaseline-rejectedpatchesaction)" : [ String ],
+    "[RejectedPatchesAction](#cfn-ssm-patchbaseline-rejectedpatchesaction)" : String,
     "[GlobalFilters](#cfn-ssm-patchbaseline-globalfilters)" : [*PatchFilterGroup*](aws-properties-ssm-patchbaseline-patchfiltergroup.md),
     "[Sources](#cfn-ssm-patchbaseline-patchsource)" : [*PatchSource*](aws-properties-ssm-patchbaseline-patchsource.md)    
   }
@@ -36,21 +36,20 @@ Properties:
   [Name](#cfn-ssm-patchbaseline-name): String
   [OperatingSystem](#cfn-ssm-patchbaseline-operatingsystem): String
   [Description](#cfn-ssm-patchbaseline-description): String
-  [PatchGroups](#cfn-ssm-patchbaseline-patchgroups): 
+  [PatchGroups](#cfn-ssm-patchbaseline-patchgroups):
     - String
   [ApprovalRules](#cfn-ssm-patchbaseline-approvalrules):
     [*RuleGroup*](aws-properties-ssm-patchbaseline-rulegroup.md)        
-  [ApprovedPatches](#cfn-ssm-patchbaseline-approvedpatches): 
-    - String 
+  [ApprovedPatches](#cfn-ssm-patchbaseline-approvedpatches):
+    - String
   [ApprovedPatchesComplianceLevel](#cfn-ssm-patchbaseline-approvedpatchescompliancelevel): String
-  [ApprovedPatchesEnableNonSecurity](#cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity) : Boolean
-  [RejectedPatches](#cfn-ssm-patchbaseline-rejectedpatches): 
+  [ApprovedPatchesEnableNonSecurity](#cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity): Boolean
+  [RejectedPatches](#cfn-ssm-patchbaseline-rejectedpatches):
     - String
-  [RejectedPatchesAction](#cfn-ssm-patchbaseline-rejectedpatchesaction) : 
-    - String
+  [RejectedPatchesAction](#cfn-ssm-patchbaseline-rejectedpatchesaction): String
   [GlobalFilters](#cfn-ssm-patchbaseline-globalfilters):
     [*PatchFilterGroup*](aws-properties-ssm-patchbaseline-patchfiltergroup.md)
-  [Sources](#cfn-ssm-patchbaseline-patchsource) : [*PatchSource*](aws-properties-ssm-patchbaseline-patchsource.md)
+  [Sources](#cfn-ssm-patchbaseline-patchsource): [*PatchSource*](aws-properties-ssm-patchbaseline-patchsource.md)
 ```
 
 ## Properties<a name="aws-resource-ssm-patchbaseline-properties"></a>
@@ -114,7 +113,7 @@ The action for Patch Manager to take on patches included in the RejectedPackages
 + **ALLOW\_AS\_DEPENDENCY**: A package in the Rejected patches list is installed only if it is a dependency of another package\. It is considered compliant with the patch baseline, and its status is reported as *InstalledOther*\. This is the default action if no option is specified\.
 + **BLOCK**: Packages in the RejectedPatches list, and packages that include them as dependencies, are not installed under any circumstances\. If a package was installed before it was added to the Rejected patches list, it is considered non\-compliant with the patch baseline, and its status is reported as *InstalledRejected*\.
 *Required*: No  
-*Type*: List of String values  
+*Type*: String
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `GlobalFilters`  <a name="cfn-ssm-patchbaseline-globalfilters"></a>
@@ -131,14 +130,14 @@ Information about the patches to use to update the instances, including target o
 
 ## Return Values<a name="aws-resource-ssm-patchbaseline-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10d207c31b9b3"></a>
+### Ref<a name="w13ab1c21c10d231c31b9b3"></a>
 
-When you pass the logical ID of an `AWS::SSM::PatchBaseline` resource to the intrinsic `Ref` function, the function returns the physical ID of the resource, such as `pb-abcde1234567890yz`\. 
+When you pass the logical ID of an `AWS::SSM::PatchBaseline` resource to the intrinsic `Ref` function, the function returns the physical ID of the resource, such as `pb-abcde1234567890yz`\.
 
 **Note**  
 The ID of the default patch baseline provided by AWS is an ARN—for example `arn:aws:ssm:us-west-2:123456789012:patchbaseline/abcde1234567890yz`\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
 ## See Also<a name="aws-resource-ssm-patchbaseline-seealso"></a>
 + [ CreatePatchBaseline](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreatePatchBaseline.html) in the *AWS Systems Manager API Reference*

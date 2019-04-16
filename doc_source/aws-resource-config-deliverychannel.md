@@ -46,7 +46,7 @@ Properties:
   [SnsTopicARN](#cfn-config-deliverychannel-snstopicarn): String
 ```
 
-## Properties<a name="w4ab1c21c10c81c29c19"></a>
+## Properties<a name="w13ab1c21c10c87c29c19"></a>
 
 `ConfigSnapshotDeliveryProperties`  <a name="cfn-config-deliverychannel-configsnapshotdeliveryproperties"></a>
 Provides options for how AWS Config delivers configuration snapshots to the S3 bucket in your delivery channel\.  
@@ -78,15 +78,15 @@ The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service \(Ama
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10c81c29c21"></a>
+## Return Values<a name="w13ab1c21c10c87c29c21"></a>
 
-### Ref<a name="w4ab1c21c10c81c29c21b2"></a>
+### Ref<a name="w13ab1c21c10c87c29c21b2"></a>
 
 When you pass the logical ID of an `AWS::Config::DeliveryChannel` resource to the intrinsic `Ref` function, the function returns the delivery channel name, such as `default`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10c81c29c23"></a>
+## Example<a name="w13ab1c21c10c87c29c23"></a>
 
 The following example creates a delivery channel that sends notifications to the specified Amazon SNS topic\. The delivery channel also sends configuration changes and snapshots to the specified S3 bucket\.
 

@@ -2,7 +2,7 @@
 
 `StepAdjustments` is a property of the [AWS::AutoScaling::ScalingPolicy](aws-properties-as-policy.md) resource that describes a scaling adjustment based on the difference between the value of the aggregated Amazon CloudWatch metric and the breach threshold that you've defined for the alarm\. For more information, see [StepAdjustment](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_StepAdjustment.html) in the *Amazon EC2 Auto Scaling API Reference*\.
 
-## Syntax<a name="w4ab1c21c10c36c26c28b5"></a>
+## Syntax<a name="w13ab1c21c10c42c26c28b5"></a>
 
 ### JSON<a name="aws-properties-autoscaling-scalingpolicy-stepadjustments-syntax.json"></a>
 
@@ -22,7 +22,7 @@
 [ScalingAdjustment](#cfn-autoscaling-scalingpolicy-stepadjustment-scalingadjustment): Integer
 ```
 
-## Properties<a name="w4ab1c21c10c36c26c28b7"></a>
+## Properties<a name="w13ab1c21c10c42c26c28b7"></a>
 
 For more information, such as valid values, constraints, and examples of how to specify each property, see [StepAdjustment](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_StepAdjustment.html) in the *Amazon EC2 Auto Scaling API Reference*\.
 

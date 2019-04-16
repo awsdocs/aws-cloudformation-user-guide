@@ -42,7 +42,7 @@ Properties:
     - [*Targets*](aws-properties-ssm-association-targets.md)
 ```
 
-## Properties<a name="w4ab1c21c10d207c13b7"></a>
+## Properties<a name="w13ab1c21c10d231c13b7"></a>
 
 `AssociationName`  <a name="cfn-ssm-association-associationname"></a>
 The name of the association\.  
@@ -92,9 +92,9 @@ The targets that the SSM document sends commands to\.
 *Type*: List of [AWS Systems Manager Association Targets](aws-properties-ssm-association-targets.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Example<a name="w4ab1c21c10d207c13b9"></a>
+## Example<a name="w13ab1c21c10d231c13b9"></a>
 
-### <a name="w4ab1c21c10d207c13b9b3"></a>
+### <a name="w13ab1c21c10d231c13b9b3"></a>
 
 The following example associates an SSM document with a specific instance\. The ID of the instance is specified by the `myInstanceId` parameter\.
 

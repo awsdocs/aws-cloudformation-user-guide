@@ -49,7 +49,7 @@ The ID of the key for which you are creating the alias\. Specify the key's globa
 
 ## Return Value<a name="aws-resource-kms-alias-returnvalues"></a>
 
-### Ref<a name="w4ab1c21c10d159c13c11b2"></a>
+### Ref<a name="w13ab1c21c10d174c13c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the alias name, such as `alias/myKeyAlias`\.
 

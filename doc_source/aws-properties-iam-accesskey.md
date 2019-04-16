@@ -8,7 +8,7 @@ This type supports updates\. For more information about updating stacks, see [AW
 + [Syntax](#aws-resource-iam-accesskey-syntax)
 + [Properties](#aws-properties-iam-accesskey-prop)
 + [Return Values](#aws-properties-iam-accesskey-ref)
-+ [Template Examples](#w4ab1c21c10d144c14c15)
++ [Template Examples](#w13ab1c21c10d156c14c15)
 
 ## Syntax<a name="aws-resource-iam-accesskey-syntax"></a>
 
@@ -60,13 +60,13 @@ The name of the user that the new key will belong to\.
 
 ## Return Values<a name="aws-properties-iam-accesskey-ref"></a>
 
-### Ref<a name="w4ab1c21c10d144c14c13b2"></a>
+### Ref<a name="w13ab1c21c10d156c14c13b2"></a>
 
 Specifying this resource ID to the intrinsic `Ref` function will return the `AccessKeyId`\. For example: `AKIAIOSFODNN7EXAMPLE`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d144c14c13b4"></a>
+### Fn::GetAtt<a name="w13ab1c21c10d156c14c13b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -75,6 +75,6 @@ Returns the secret access key for the specified `AWS::IAM::AccessKey` resource\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Template Examples<a name="w4ab1c21c10d144c14c15"></a>
+## Template Examples<a name="w13ab1c21c10d156c14c15"></a>
 
 To view AWS::IAM::AccessKey snippets, see [Declaring an IAM Access Key Resource](quickref-iam.md#scenario-iam-accesskey)\.

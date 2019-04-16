@@ -58,7 +58,7 @@ A human\-readable label for this metric or expression\. This is especially usefu
 The metric to be returned, along with statistics, period, and units\. Use this parameter only if this structure is performing a data retrieval and not performing a math expression on the returned data\.  
 Within one MetricDataQuery structure, you must specify either `Expression` or `MetricStat`, but not both\.  
 *Required*: No  
-*Type*: [](aws-properties-cloudwatch-alarm-metricstat.md)  
+*Type*: [MetricStat](aws-properties-cloudwatch-alarm-metricstat.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ReturnData`  <a name="cfn-cloudwatch-alarm-metricdataquery-returndata"></a>

@@ -69,7 +69,7 @@ The following example uses an `ssm` dynamic reference to set the access control 
   "MyS3Bucket": {
     "Type": "AWS::S3::Bucket",
     "Properties": {
-      "AccessControl": "{{resolve:ssm:S3AccessControl:2}}""
+      "AccessControl": "{{resolve:ssm:S3AccessControl:2}}"
     }
   }
 ```
@@ -100,7 +100,7 @@ Use the `ssm-secure` dynamic reference pattern to specify AWS Systems Manager Se
 
 A *secure string parameter* is any sensitive data that needs to be stored and referenced in a secure manner\. That is, data that you don't want users to alter or reference in clear text, such as passwords or license keys\. For more information on secure strings, see [Use Secure String Parameters](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-about.html#sysman-paramstore-securestring) in the *AWS Systems Manager User Guide*\.
 
-Secure string parameters values are not stored in CloudFormation, nor are they returned as part of in any API call results\. 
+Secure string parameters values are not stored in CloudFormation, nor are they returned in any API call results\. 
 
 ### Reference Pattern<a name="dynamic-references-ssm-secure-pattern"></a>
 
@@ -190,7 +190,7 @@ Use the `secretsmanager` dynamic reference to retrieve entire secrets or secret 
 To specify a secret stored in Secrets Manager, you must have access to call `[GetSecretValue](https://docs.aws.amazon.com/secretsmanager/latest/apireference/GetSecretValue.html)` for the specified secret\. 
 
 **Important**  
-The `secretsmanager` dynamic reference can be used in all resource properties\. Using the `secretsmanager` dynamic reference guarantees that neither Secrets Manager or CloudFormation logs or persists any resolved secret value\. However, the secret value may show up in the service whose resource it is being used in\. You should review your usage to avoid leaking secret data\.
+The `secretsmanager` dynamic reference can be used in all resource properties\. Using the `secretsmanager` dynamic reference guarantees that neither Secrets Manager nor CloudFormation logs or persists any resolved secret value\. However, the secret value may show up in the service whose resource it is being used in\. You should review your usage to avoid leaking secret data\.
 
 Dynamic references for secure values, such as `secretsmanager`, are not currently supported in [custom resources](template-custom-resources.md)\.
 

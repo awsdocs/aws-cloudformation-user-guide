@@ -92,7 +92,7 @@ Objects that provide additional information about the template\.
 Values to pass to your template at runtime \(when you create or update a stack\)\. You can refer to parameters from the `Resources` and `Outputs` sections of the template\.
 
 **[Mappings \(optional\)](mappings-section-structure.md)**  
-A mapping of keys and associated values that you can use to specify conditional parameter values, similar to a lookup table\. You can match a key to a corresponding value by using the [Fn::FindInMap](intrinsic-function-reference-findinmap.md) intrinsic function in the `Resources` and `Outputs` section\.
+A mapping of keys and associated values that you can use to specify conditional parameter values, similar to a lookup table\. You can match a key to a corresponding value by using the [Fn::FindInMap](intrinsic-function-reference-findinmap.md) intrinsic function in the `Resources` and `Outputs` sections\.
 
 **[Conditions \(optional\)](conditions-section-structure.md)**  
 Conditions that control whether certain resources are created or whether certain resource properties are assigned a value during stack creation or update\. For example, you could conditionally create a resource that depends on whether the stack is for a production or test environment\.

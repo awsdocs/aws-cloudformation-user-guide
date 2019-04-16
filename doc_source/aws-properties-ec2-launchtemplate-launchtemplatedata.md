@@ -169,7 +169,7 @@ We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more i
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `SecurityGroups`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-securitygroups"></a>
-\[EC2\-Classic, default VPC\] One or more security group names\. For a nondefault VPC, you must use SecurityGroupIds instead\. You cannot specify both a security group ID and security name in the same request\.  
+\[EC2\-Classic, default VPC\] One or more security group names\. For a nondefault VPC, you must use the `SecurityGroupIds` property instead\. You cannot specify both a security group ID and security name in the same request\.  
  *Required*: No  
  *Type*: List of String values  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

@@ -1,4 +1,4 @@
-# AWS CodeDeploy DeploymentGroup EC2TagSet<a name="aws-properties-codedeploy-deploymentgroup-ec2tagset"></a>
+# CodeDeploy DeploymentGroup EC2TagSet<a name="aws-properties-codedeploy-deploymentgroup-ec2tagset"></a>
 
 <a name="aws-properties-codedeploy-deploymentgroup-ec2tagset-description"></a>The `EC2TagSet` property type specifies information about groups of tags applied to EC2 instances\. The deployment group will include only EC2 instances identified by all the tag groups\. Cannot be used in the same template as EC2TagFilters\.
 

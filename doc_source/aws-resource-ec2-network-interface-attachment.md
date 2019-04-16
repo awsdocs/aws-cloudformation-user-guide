@@ -4,9 +4,9 @@ Attaches an elastic network interface \(ENI\) to an Amazon EC2 instance\. You ca
 
 **Topics**
 + [Syntax](#aws-resource-ec2-networkinterfaceattachment-syntax)
-+ [Properties](#w4ab1c21c10d102c82b9)
-+ [Return Values](#w4ab1c21c10d102c82c11)
-+ [Example](#w4ab1c21c10d102c82c13)
++ [Properties](#w13ab1c21c10d111c82b9)
++ [Return Values](#w13ab1c21c10d111c82c11)
++ [Example](#w13ab1c21c10d111c82c13)
 
 ## Syntax<a name="aws-resource-ec2-networkinterfaceattachment-syntax"></a>
 
@@ -37,7 +37,7 @@ Properties:
   [NetworkInterfaceId](#cfn-ec2-network-interface-attachment-networkinterfaceid): String
 ```
 
-## Properties<a name="w4ab1c21c10d102c82b9"></a>
+## Properties<a name="w13ab1c21c10d111c82b9"></a>
 
 `DeleteOnTermination`  <a name="cfn-ec2-network-interface-attachment-deleteonterm"></a>
 Whether to delete the network interface when the instance terminates\. By default, this value is set to `True`\.  
@@ -63,15 +63,15 @@ The ID of the ENI that you want to attach\.
 *Type*: String\.  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d102c82c11"></a>
+## Return Values<a name="w13ab1c21c10d111c82c11"></a>
 
-### Ref<a name="w4ab1c21c10d102c82c11b2"></a>
+### Ref<a name="w13ab1c21c10d111c82c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w4ab1c21c10d102c82c13"></a>
+## Example<a name="w13ab1c21c10d111c82c13"></a>
 
 Attaching `MyNetworkInterface` to `MyInstance`
 

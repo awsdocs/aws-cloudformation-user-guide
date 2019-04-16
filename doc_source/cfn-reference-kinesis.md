@@ -20,6 +20,12 @@ For Kinesis Data Analytics:
 AWS::KinesisAnalytics::data-type-name
 ```
 
+For Kinesis Data Analytics version 2:
+
+```
+AWS::KinesisAnalyticsV2::data-type-name
+```
+
 **Topics**
 + [AWS::Kinesis::Stream](aws-resource-kinesis-stream.md)
 + [AWS::Kinesis::StreamConsumer](aws-resource-kinesis-streamconsumer.md)
@@ -27,3 +33,7 @@ AWS::KinesisAnalytics::data-type-name
 + [AWS::KinesisAnalytics::Application](aws-resource-kinesisanalytics-application.md)
 + [AWS::KinesisAnalytics::ApplicationOutput](aws-resource-kinesisanalytics-applicationoutput.md)
 + [AWS::KinesisAnalytics::ApplicationReferenceDataSource](aws-resource-kinesisanalytics-applicationreferencedatasource.md)
++ [AWS::KinesisAnalyticsV2::Application](aws-resource-kinesisanalyticsv2-application.md)
++ [AWS::KinesisAnalyticsV2::ApplicationOutput](aws-resource-kinesisanalyticsv2-applicationoutput.md)
++ [AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource](aws-resource-kinesisanalyticsv2-applicationreferencedatasource.md)
++ [AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption](aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption.md)
