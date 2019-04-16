@@ -31,7 +31,7 @@ The hard limit for the ulimit type\.
 
 `Name`  <a name="cfn-ecs-taskdefinition-containerdefinition-ulimit-name"></a>
 The type of ulimit\. For valid values, see the `name` content for the [Ulimit](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_Ulimit.html) data type in the *Amazon Elastic Container Service API Reference*\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String
 
 `SoftLimit`  <a name="cfn-ecs-taskdefinition-containerdefinition-ulimit-softlimit"></a>
