@@ -451,7 +451,7 @@ Amazon's trademarks and trade dress may not be used in
             + [CodeDeploy DeploymentGroup Deployment](aws-properties-codedeploy-deploymentgroup-deployment.md)
             + [AWS CodeDeploy DeploymentGroup DeploymentStyle](aws-properties-codedeploy-deploymentgroup-deploymentstyle.md)
             + [CodeDeploy DeploymentGroup Ec2TagFilters](aws-properties-codedeploy-deploymentgroup-ec2tagfilters.md)
-            + [CodeDeploy DeploymentGroup EC2TagSet](aws-properties-codedeploy-deploymentgroup-ec2tagset.md)
+            + [CodeDeploy DeploymentGroup Ec2TagSet](aws-properties-codedeploy-deploymentgroup-ec2tagset.md)
             + [CodeDeploy DeploymentGroup EC2TagSetListObject](aws-properties-codedeploy-deploymentgroup-ec2tagsetlistobject.md)
             + [AWS CodeDeploy DeploymentGroup ELBInfo](aws-properties-codedeploy-deploymentgroup-elbinfo.md)
             + [CodeDeploy DeploymentGroup Deployment Revision GitHubLocation](aws-properties-codedeploy-deploymentgroup-deployment-revision-githublocation.md)
