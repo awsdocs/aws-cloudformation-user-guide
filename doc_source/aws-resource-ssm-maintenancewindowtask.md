@@ -87,7 +87,7 @@ The maximum number of targets that you can run this task for, in parallel\.
 
 `Targets`  <a name="cfn-ssm-maintenancewindowtask-targets"></a>
 The targets, either instances or tags\.  
-+ Specify instances using `Key=instanceids,Values=instanceid1,instanceid2`\.
++ Specify instances using `Key=InstanceIds,Values=instanceid1,instanceid2`\.
 + Specify tags using `Key=tag name,Values=tag value`\.
  *Required*: Yes  
  *Type*: List of [Target](aws-properties-ssm-maintenancewindowtask-target.md)  
