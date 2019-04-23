@@ -93,7 +93,7 @@ The amount \(in MiB\) of memory used by the task\. If using the EC2 launch type,
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `NetworkMode`  <a name="cfn-ecs-taskdefinition-networkmode"></a>
-The Docker networking mode to use for the containers in the task, such as `none`, `bridge`, or `host`\. For information about network modes, see [https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_RegisterTaskDefinition.html](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_RegisterTaskDefinition.html) in the [Task Definition Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html) topic in the *Amazon Elastic Container Service Developer Guide*\.  
+The Docker networking mode to use for the containers in the task, such as `none`, `bridge`, `host` or `awsvpc`\. For information about network modes, see [https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_RegisterTaskDefinition.html](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_RegisterTaskDefinition.html) in the [Task Definition Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html) topic in the *Amazon Elastic Container Service Developer Guide*\.  
 For Fargate launch types, you can specify `awsvpc` only\. The `none`, `bridge`, or `host` option won't work for Fargate launch types\.  
 *Required*: No  
 *Type*: String  
