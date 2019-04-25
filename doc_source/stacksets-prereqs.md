@@ -15,11 +15,14 @@ Because stack sets perform stack operations across multiple accounts, before you
 
 1. Create the necessary IAM service roles in your administrator and target accounts to define the permissions you want\.
 **Important**  
-The role in your administrator account must be named **AWSCloudFormationStackSetAdministrationRole**\. The role in each of your target accounts must be named **AWSCloudFormationStackSetExecutionRole**\.
-
-**Topics**
+The role in your administrator account must be named **AWSCloudFormationStackSetAdministrationRole**\. The role in each of your target accounts must be named **AWSCloudFormationStackSetExecutionRole**\. 
 + [Set Up Basic Permissions for Stack Sets Operations](#stacksets-prereqs-accountsetup)
+
+OR 
+
+You can also use **Custom Roles** for Administrator account and for Target Accounts.
 + [Set Up Advanced Permissions Options for Stack Set Operations](#stacksets-prereqs-advanced-perms)
+
 
 ## Set Up Basic Permissions for Stack Sets Operations<a name="stacksets-prereqs-accountsetup"></a>
 
