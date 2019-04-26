@@ -46,5 +46,5 @@ Attributes that are copied \(projected\) from the source table into the index\. 
 
 `ProvisionedThroughput`  <a name="cfn-dynamodb-gsi-provisionthroughput"></a>
 The provisioned throughput settings for the index\.  
-*Required*: Conditional\. If you set `BillingMode` as `PROVISIONED`, you must specify this property\. If you set `BillingMode` as `PAY_PER_REQUEST`, you cannot specify this property\.  
+*Required*: Conditional\. If you set `BillingMode` as `PROVISIONED` on the base table, you must specify this property\. If you set `BillingMode` as `PAY_PER_REQUEST`, you cannot specify this property\.  
 *Type*: [ProvisionedThroughput](aws-properties-dynamodb-provisionedthroughput.md)
