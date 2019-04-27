@@ -1,14 +1,18 @@
-# AWS WAF WebACL ActivatedRule<a name="aws-properties-waf-webacl-rules"></a>
+# AWS::WAF::WebACL ActivatedRule<a name="aws-properties-waf-webacl-rules"></a>
 
-`ActivatedRule` is a property of the [AWS::WAF::WebACL](aws-resource-waf-webacl.md) resource that specifies a rule to associate with an AWS WAF web access control list \(ACL\), and the rule's settings\.
+The `ActivatedRule` object in an `UpdateWebACL` request specifies a `Rule` that you want to insert or delete, the priority of the `Rule` in the `WebACL`, and the action that you want AWS WAF to take when a web request matches the `Rule` \(`ALLOW`, `BLOCK`, or `COUNT`\)\.
+
+To specify whether to insert or delete a `Rule`, use the `Action` parameter in the `WebACLUpdate` data type\.
 
 ## Syntax<a name="aws-properties-waf-webacl-rules-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-waf-webacl-rules-syntax.json"></a>
 
 ```
 {
-  "[Action](#cfn-waf-webacl-rules-action)" : AWS WAF WebACL Action
+  "[Action](#cfn-waf-webacl-rules-action)" : [WafAction](aws-properties-waf-webacl-action.md),
   "[Priority](#cfn-waf-webacl-rules-priority)" : Integer,
   "[RuleId](#cfn-waf-webacl-rules-ruleid)" : String
 }
@@ -17,24 +21,34 @@
 ### YAML<a name="aws-properties-waf-webacl-rules-syntax.yaml"></a>
 
 ```
-[Action](#cfn-waf-webacl-rules-action): AWS WAF WebACL Action
-[Priority](#cfn-waf-webacl-rules-priority): Integer
-[RuleId](#cfn-waf-webacl-rules-ruleid): String
+﻿  [Action](#cfn-waf-webacl-rules-action) : [WafAction](aws-properties-waf-webacl-action.md)
+﻿  [Priority](#cfn-waf-webacl-rules-priority) : Integer
+﻿  [RuleId](#cfn-waf-webacl-rules-ruleid) : String
 ```
 
 ## Properties<a name="aws-properties-waf-webacl-rules-properties"></a>
 
 `Action`  <a name="cfn-waf-webacl-rules-action"></a>
-The action that Amazon CloudFront \(CloudFront\) or AWS WAF takes when a web request matches all conditions in the rule, such as allow, block, or count the request\.  
+Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the `Rule`\. Valid values for `Action` include the following:  
++  `ALLOW`: CloudFront responds with the requested object\.
++  `BLOCK`: CloudFront responds with an HTTP 403 \(Forbidden\) status code\.
++  `COUNT`: AWS WAF increments a counter of requests that match the conditions in the rule and then continues to inspect the web request based on the remaining rules in the web ACL\. 
+ `ActivatedRule|OverrideAction` applies only when updating or adding a `RuleGroup` to a `WebACL`\. In this case, you do not use `ActivatedRule|Action`\. For all other update requests, `ActivatedRule|Action` is used instead of `ActivatedRule|OverrideAction`\.  
 *Required*: No  
-*Type*: [AWS WAF WebACL Action](aws-properties-waf-webacl-action.md)
+*Type*: [WafAction](aws-properties-waf-webacl-action.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Priority`  <a name="cfn-waf-webacl-rules-priority"></a>
-The order in which AWS WAF evaluates the rules in a web ACL\. AWS WAF evaluates rules with a lower value before rules with a higher value\. The value must be a unique integer\. If you have multiple rules in a web ACL, the priority numbers do not need to be consecutive\.  
+Specifies the order in which the `Rules` in a `WebACL` are evaluated\. Rules with a lower value for `Priority` are evaluated before `Rules` with a higher value\. The value must be a unique integer\. If you add multiple `Rules` to a `WebACL`, the values don't need to be consecutive\.  
 *Required*: Yes  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleId`  <a name="cfn-waf-webacl-rules-ruleid"></a>
-The ID of an AWS WAF [rule](aws-resource-waf-rule.md) to associate with a web ACL\.  
+The `RuleId` for a `Rule`\. You use `RuleId` to get more information about a `Rule`, update a `Rule`, insert a `Rule` into a `WebACL` or delete a one from a `WebACL`, or delete a `Rule` from AWS WAF\.  
+ `RuleId` is returned by `CreateRule` and by `ListRules`\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

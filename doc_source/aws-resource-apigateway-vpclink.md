@@ -4,8 +4,8 @@ The `AWS::ApiGateway::VpcLink` resource specifies an API Gateway VPC link for a 
 
 **Topics**
 + [Syntax](#aws-resource-apigateway-vpclink-syntax)
-+ [Properties](#w13ab1c21c10c20c89b9)
-+ [Return Value](#w13ab1c21c10c20c89c11)
++ [Properties](#w2922ab1c21c10c19c89b9)
++ [Return Value](#w2922ab1c21c10c19c89c11)
 + [Example](#aws-resource-apigateway-vpclink-examples)
 + [See Also](#aws-resource-apigateway-vpclink-seealso)
 
@@ -37,7 +37,7 @@ Properties:
     - String
 ```
 
-## Properties<a name="w13ab1c21c10c20c89b9"></a>
+## Properties<a name="w2922ab1c21c10c19c89b9"></a>
 
 `Description`  <a name="cfn-apigateway-vpclink-description"></a>
 The description of the VPC link\.  
@@ -57,9 +57,9 @@ The ARNs of network load balancers of the VPC targeted by the VPC link\. The net
 List of *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w13ab1c21c10c20c89c11"></a>
+## Return Value<a name="w2922ab1c21c10c19c89c11"></a>
 
-### Ref<a name="w13ab1c21c10c20c89c11b2"></a>
+### Ref<a name="w2922ab1c21c10c19c89c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ID of the `VpcLink`\.
 

@@ -4,9 +4,9 @@ The `AWS::EC2::Host` resource allocates a fully dedicated physical server for la
 
 **Topics**
 + [Syntax](#aws-resource-ec2-host-syntax)
-+ [Properties](#w13ab1c21c10d111c44b9)
-+ [Return Value](#w13ab1c21c10d111c44c11)
-+ [Example](#w13ab1c21c10d111c44c13)
++ [Properties](#w2922ab1c21c10c96c48b9)
++ [Return Value](#w2922ab1c21c10c96c48c11)
++ [Example](#w2922ab1c21c10c96c48c13)
 
 ## Syntax<a name="aws-resource-ec2-host-syntax"></a>
 
@@ -35,7 +35,7 @@ Properties:
   [InstanceType](#cfn-ec2-host-instancetype): String
 ```
 
-## Properties<a name="w13ab1c21c10d111c44b9"></a>
+## Properties<a name="w2922ab1c21c10c96c48b9"></a>
 
 `AutoPlacement`  <a name="cfn-ec2-host-autoplacement"></a>
 Indicates if the host accepts EC2 instances with only matching configurations or if instances must also specify the host ID\. Instances that don't specify a host ID can't launch onto a host with `AutoPlacement` set to `off`\. By default, AWS CloudFormation sets this property to `on`\. For more information, see [Understanding Instance Placement and Host Affinity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-instance-placement.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
@@ -55,15 +55,15 @@ The instance type that the dedicated host accepts\. Only instances of this type 
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w13ab1c21c10d111c44c11"></a>
+## Return Value<a name="w2922ab1c21c10c96c48c11"></a>
 
-### Ref<a name="w13ab1c21c10d111c44c11b2"></a>
+### Ref<a name="w2922ab1c21c10c96c48c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the host ID, such as `h-0ab123c45d67ef89`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w13ab1c21c10d111c44c13"></a>
+## Example<a name="w2922ab1c21c10c96c48c13"></a>
 
 The following example allocates a dedicated host for `c3.large` instances in the `us-east-1a` Availability Zone\.
 

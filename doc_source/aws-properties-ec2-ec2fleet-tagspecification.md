@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 [ResourceType](#cfn-ec2-ec2fleet-tagspecification-resourcetype): String
 [Tags](#cfn-ec2-ec2fleet-tagspecification-tags): 
-  - [*Resouce Tag*](aws-properties-resource-tags.md)
+  - [*Resource Tag*](aws-properties-resource-tags.md)
 ```
 
 ## Properties<a name="aws-properties-ec2-ec2fleet-tagspecification-properties"></a>

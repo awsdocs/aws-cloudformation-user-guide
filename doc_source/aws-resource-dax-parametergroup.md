@@ -51,7 +51,7 @@ A map of DAX parameter names and values\.
 
 ## Return Values<a name="aws-resource-dax-parametergroup-returnvalues"></a>
 
-### Ref<a name="w13ab1c21c10c93c19c11b2"></a>
+### Ref<a name="w2922ab1c21c10c81c19c11b2"></a>
 
 When you provide the logical ID of this resource to the `Ref` intrinsic function, `Ref` returns the ARN of the created parameter group\. For example:
 

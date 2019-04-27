@@ -6,10 +6,10 @@ For more information about IAM roles, see [Working with Roles](http://docs.aws.a
 
 **Topics**
 + [Syntax](#aws-resource-iam-role-syntax)
-+ [Properties](#w13ab1c21c10d156c37c11)
-+ [Return Values](#w13ab1c21c10d156c37c13)
++ [Properties](#w2922ab1c21c10d140c37c11)
++ [Return Values](#w2922ab1c21c10d140c37c13)
 + [Template Examples](#cfn-iam-role-templateexamples)
-+ [See Also](#w13ab1c21c10d156c37c17)
++ [See Also](#w2922ab1c21c10d140c37c17)
 
 ## Syntax<a name="aws-resource-iam-role-syntax"></a>
 
@@ -49,7 +49,7 @@ Properties:
   [RoleName](#cfn-iam-role-rolename): String
 ```
 
-## Properties<a name="w13ab1c21c10d156c37c11"></a>
+## Properties<a name="w2922ab1c21c10d140c37c11"></a>
 
 `AssumeRolePolicyDocument`  <a name="cfn-iam-role-assumerolepolicydocument"></a>
 The trust policy that is associated with this role\. You can associate only one assume role policy with a role\. For an example of an assume role policy, see [Template Examples](#cfn-iam-role-templateexamples)\. For more information about the elements that you can use in an IAM policy, see [IAM Policy Elements Reference](https://docs.aws.amazon.com//IAM/latest/UserGuide/reference_policies_elements.html) in the *IAM User Guide*\.  
@@ -103,9 +103,9 @@ Naming an IAM resource can cause an unrecoverable error if you reuse the same te
 
 For general information about IAM policies and policy documents, see [How to Write a Policy](http://docs.aws.amazon.com/IAM/latest/UserGuide/AccessPolicyLanguage_HowToWritePolicies.html) in *IAM User Guide*\.
 
-## Return Values<a name="w13ab1c21c10d156c37c13"></a>
+## Return Values<a name="w2922ab1c21c10d140c37c13"></a>
 
-### Ref<a name="w13ab1c21c10d156c37c13b2"></a>
+### Ref<a name="w2922ab1c21c10d140c37c13b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -117,7 +117,7 @@ For the IAM::Role with the logical ID "RootRole", `Ref` will return the resource
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w13ab1c21c10d156c37c13b4"></a>
+### Fn::GetAtt<a name="w2922ab1c21c10d140c37c13b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -137,7 +137,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
 
 ## Template Examples<a name="cfn-iam-role-templateexamples"></a>
 
-### IAM Role with Embedded Policy and Instance Profiles<a name="w13ab1c21c10d156c37c15b4"></a>
+### IAM Role with Embedded Policy and Instance Profiles<a name="w2922ab1c21c10d140c37c15b4"></a>
 
 This example shows an embedded Policy in the IAM::Role\. The policy is specified inline in the IAM::Role Policies property\.
 
@@ -225,7 +225,7 @@ Resources:
           Ref: "RootRole"
 ```
 
-### IAM Role with External Policy and Instance Profiles<a name="w13ab1c21c10d156c37c15b8"></a>
+### IAM Role with External Policy and Instance Profiles<a name="w2922ab1c21c10d140c37c15b8"></a>
 
 In this example, the Policy and InstanceProfile resources are specified externally to the IAM Role\. They refer to the role by specifying its name, "RootRole", in their respective Roles properties\.
 
@@ -323,6 +323,6 @@ Resources:
           Ref: "RootRole"
 ```
 
-## See Also<a name="w13ab1c21c10d156c37c17"></a>
+## See Also<a name="w2922ab1c21c10d140c37c17"></a>
 + [AWS Identity and Access Management Template Snippets](quickref-iam.md)
 + [AWS::IAM::InstanceProfile](aws-resource-iam-instanceprofile.md)

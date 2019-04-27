@@ -4,9 +4,9 @@ The `AWS::EC2::PlacementGroup` resource is a logical grouping of instances withi
 
 **Topics**
 + [Syntax](#aws-resource-ec2-placementgroup-syntax)
-+ [Properties](#w13ab1c21c10d111c88b9)
-+ [Return Values](#w13ab1c21c10d111c88c11)
-+ [Example](#w13ab1c21c10d111c88c13)
++ [Properties](#w2922ab1c21c10c96c92b9)
++ [Return Values](#w2922ab1c21c10c96c92c11)
++ [Example](#w2922ab1c21c10c96c92c13)
 
 ## Syntax<a name="aws-resource-ec2-placementgroup-syntax"></a>
 
@@ -31,7 +31,7 @@ Properties:
   [Strategy](#cfn-ec2-placementgroup-strategy): String
 ```
 
-## Properties<a name="w13ab1c21c10d111c88b9"></a>
+## Properties<a name="w2922ab1c21c10c96c92b9"></a>
 
 `Strategy`  <a name="cfn-ec2-placementgroup-strategy"></a>
 The placement strategy, which relates to the instance types that can be added to the placement group\. For example, for the `cluster` strategy, you can cluster C4 instance types but not T2 instance types\. For valid values, see [CreatePlacementGroup](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreatePlacementGroup.html) in the *Amazon EC2 API Reference*\. By default, AWS CloudFormation sets the value of this property to `cluster`\.  
@@ -39,17 +39,17 @@ The placement strategy, which relates to the instance types that can be added to
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w13ab1c21c10d111c88c11"></a>
+## Return Values<a name="w2922ab1c21c10c96c92c11"></a>
 
-### Ref<a name="w13ab1c21c10d111c88c11b2"></a>
+### Ref<a name="w2922ab1c21c10c96c92c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w13ab1c21c10d111c88c13"></a>
+## Example<a name="w2922ab1c21c10c96c92c13"></a>
 
-### <a name="w13ab1c21c10d111c88c13b2"></a>
+### <a name="w2922ab1c21c10c96c92c13b2"></a>
 
 The following example creates a placement group with a `cluster` placement strategy\.
 

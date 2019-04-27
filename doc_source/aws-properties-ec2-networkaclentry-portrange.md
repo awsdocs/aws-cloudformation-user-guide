@@ -2,7 +2,7 @@
 
 The `PortRange` property is an embedded property of the [AWS::EC2::NetworkAclEntry](aws-resource-ec2-network-acl-entry.md) type\.
 
-## Syntax<a name="w13ab1c21c10d111c72c23b5"></a>
+## Syntax<a name="w2922ab1c21c10c96c76c23b5"></a>
 
 ### JSON<a name="aws-properties-ec2-networkaclentry-portrange-syntax.json"></a>
 
@@ -20,7 +20,7 @@ The `PortRange` property is an embedded property of the [AWS::EC2::NetworkAclEnt
 [To](#cfn-ec2-networkaclentry-portrange-to): Integer
 ```
 
-## Properties<a name="w13ab1c21c10d111c72c23b7"></a>
+## Properties<a name="w2922ab1c21c10c96c76c23b7"></a>
 
 `From`  <a name="cfn-ec2-networkaclentry-portrange-from"></a>
 The first port in the range\.  

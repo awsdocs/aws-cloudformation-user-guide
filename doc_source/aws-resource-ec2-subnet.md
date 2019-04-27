@@ -7,7 +7,7 @@ Creates a subnet in an existing VPC\.
 + [Properties](#aws-resource-ec2-subnet-properties)
 + [Return Values](#aws-resource-ec2-subnet-returnvalues)
 + [Example](#aws-resource-ec2-subnet-examples)
-+ [More Info](#w13ab1c21c10d111d123c15)
++ [More Info](#w2922ab1c21c10c96d127c15)
 
 ## Syntax<a name="aws-resource-ec2-subnet-syntax"></a>
 
@@ -167,6 +167,6 @@ Resources:
         Value: bar
 ```
 
-## More Info<a name="w13ab1c21c10d111d123c15"></a>
+## More Info<a name="w2922ab1c21c10c96d127c15"></a>
 + [CreateSubnet](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateSubnet.html) in the *Amazon EC2 API Reference*
 + [Using Tags](http://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/Using_Tags.html) in the *Amazon Elastic Compute Cloud User Guide*

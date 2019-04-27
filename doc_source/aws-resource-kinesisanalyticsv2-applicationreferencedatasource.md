@@ -51,7 +51,7 @@ The following example creates an `ApplicationReferenceDataSource` resource\.
 
 ```
 ApplicationReferenceDataSource:
-  Type: AWS::KinesisAnalytics::ApplicationReferenceDataSource
+  Type: AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource
   Properties:
     ApplicationName: !Ref BasicApplication
     ReferenceDataSource:

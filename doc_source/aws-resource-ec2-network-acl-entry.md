@@ -43,7 +43,7 @@ Properties:
   [RuleNumber](#cfn-ec2-networkaclentry-rulenumber) : Integer
 ```
 
-## Properties<a name="w13ab1c21c10d111c72b7"></a>
+## Properties<a name="w2922ab1c21c10c96c76b7"></a>
 
 `CidrBlock`  <a name="cfn-ec2-networkaclentry-cidrblock"></a>
 The IPv4 CIDR range to allow or deny, in CIDR notation \(e\.g\., 172\.16\.0\.0/24\)\.  
@@ -100,15 +100,15 @@ Rule number to assign to the entry, such as `100`\. ACL entries are processed in
 *Type*: Number  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)\.
 
-## Return Values<a name="w13ab1c21c10d111c72b9"></a>
+## Return Values<a name="w2922ab1c21c10c96c76b9"></a>
 
-### Ref<a name="w13ab1c21c10d111c72b9b2"></a>
+### Ref<a name="w2922ab1c21c10c96c76b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w13ab1c21c10d111c72c11"></a>
+## Example<a name="w2922ab1c21c10c96c76c11"></a>
 
 ### JSON<a name="aws-resource-ec2-networkaclentry-example-1.json"></a>
 
@@ -156,6 +156,6 @@ Resources:
         To: '53'
 ```
 
-## See Also<a name="w13ab1c21c10d111c72c13"></a>
+## See Also<a name="w2922ab1c21c10c96c76c13"></a>
 + [NetworkAclEntry](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateNetworkAclEntry.html) in the *Amazon EC2 API Reference*
 + [Network ACLs](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html) in the *Amazon Virtual Private Cloud User Guide*\.

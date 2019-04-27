@@ -4,9 +4,9 @@ Creates a cache subnet group\. For more information about cache subnet groups, g
 
 **Topics**
 + [Syntax](#aws-resource-elasticache-subnetgroup-syntax)
-+ [Properties](#w13ab1c21c10d126c40b9)
-+ [Return Value](#w13ab1c21c10d126c40c11)
-+ [Example](#w13ab1c21c10d126c40c13)
++ [Properties](#w2922ab1c21c10d110c40b9)
++ [Return Value](#w2922ab1c21c10d110c40c11)
++ [Example](#w2922ab1c21c10d110c40c13)
 
 ## Syntax<a name="aws-resource-elasticache-subnetgroup-syntax"></a>
 
@@ -36,7 +36,7 @@ Properties:
     - String
 ```
 
-## Properties<a name="w13ab1c21c10d126c40b9"></a>
+## Properties<a name="w2922ab1c21c10d110c40b9"></a>
 
 `CacheSubnetGroupName`  <a name="cfn-elasticache-subnetgroup-cachesubnetgroupname"></a>
 A name for the cache subnet group\. If you don't specify a name, AWS CloudFormation generates a unique physical ID\. For more information, see [Name Type](aws-properties-name.md)\.  
@@ -57,15 +57,15 @@ The Amazon EC2 subnet IDs for the cache subnet group\.
 *Required*: Yes  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10d126c40c11"></a>
+## Return Value<a name="w2922ab1c21c10d110c40c11"></a>
 
-### Ref<a name="w13ab1c21c10d126c40c11b2"></a>
+### Ref<a name="w2922ab1c21c10d110c40c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w13ab1c21c10d126c40c13"></a>
+## Example<a name="w2922ab1c21c10d110c40c13"></a>
 
 ### JSON<a name="aws-resource-elasticache-subnetgroup-example.json"></a>
 

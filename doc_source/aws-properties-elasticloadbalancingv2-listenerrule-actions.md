@@ -2,7 +2,7 @@
 
 `Actions` is a property of the [AWS::ElasticLoadBalancingV2::ListenerRule](aws-resource-elasticloadbalancingv2-listenerrule.md) resource that specifies the actions an Elastic Load Balancing listener takes when an incoming request meets a listener rule's condition\.
 
-## Syntax<a name="w13ab1c21c10d138c23c15b5"></a>
+## Syntax<a name="w2922ab1c21c10d120c23c15b5"></a>
 
 ### JSON<a name="aws-properties-elasticloadbalancingv2-listenerrule-actions-syntax.json"></a>
 
@@ -30,7 +30,7 @@
 [Type](#cfn-elasticloadbalancingv2-listenerrule-actions-type): String
 ```
 
-## Properties<a name="w13ab1c21c10d138c23c15b7"></a>
+## Properties<a name="w2922ab1c21c10d120c23c15b7"></a>
 
 `AuthenticateCognitoConfig`  <a name="cfn-elasticloadbalancingv2-listenerrule-action-authenticatecognitoconfig"></a>
 \[HTTPS listener\] Information for using Amazon Cognito to authenticate users\. Specify only when Type is `authenticate-cognito`\.  

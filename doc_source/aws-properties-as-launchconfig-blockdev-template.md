@@ -2,7 +2,7 @@
 
 The Amazon EC2 Auto Scaling EBS `BlockDevice` type is an embedded property of the [Amazon EC2 Auto Scaling LaunchConfiguration BlockDeviceMapping](aws-properties-as-launchconfig-blockdev-mapping.md) type\.
 
-## Syntax<a name="w13ab1c21c10c42c18c21b5"></a>
+## Syntax<a name="w2922ab1c21c10c38c18c21b5"></a>
 
 ### JSON<a name="aws-properties-as-launchconfig-blockdev-template-syntax.json"></a>
 
@@ -28,7 +28,7 @@ The Amazon EC2 Auto Scaling EBS `BlockDevice` type is an embedded property of th
 [VolumeType](#cfn-as-launchconfig-blockdev-template-volumetype): String
 ```
 
-## Properties<a name="w13ab1c21c10c42c18c21b7"></a>
+## Properties<a name="w2922ab1c21c10c38c18c21b7"></a>
 
 `DeleteOnTermination`  <a name="cfn-as-launchconfig-blockdev-template-deleteonterm"></a>
 Indicates whether to delete the volume when the instance is terminated\. By default, Amazon EC2 Auto Scaling uses `true`\.  
@@ -61,6 +61,6 @@ The volume type\. By default, Amazon EC2 Auto Scaling uses the `standard` volume
 *Required*: No  
 *Type*: String
 
-## Examples<a name="w13ab1c21c10c42c18c21b9"></a>
+## Examples<a name="w2922ab1c21c10c38c18c21b9"></a>
 
 For Amazon EC2 Auto Scaling EBS Block Device snippets, see [Auto Scaling Launch Configuration Resource](quickref-autoscaling.md#scenario-as-launch-config)\.

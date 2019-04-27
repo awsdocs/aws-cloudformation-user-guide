@@ -2,7 +2,7 @@
 
 `IntegrationResponse` is a property of the [Amazon API Gateway Method Integration](aws-properties-apitgateway-method-integration.md) property type that specifies the response that Amazon API Gateway \(API Gateway\) sends after a method's backend finishes processing a request\.
 
-## Syntax<a name="w13ab1c21c10c20c55c19b5"></a>
+## Syntax<a name="w2922ab1c21c10c19c55c19b5"></a>
 
 ### JSON<a name="aws-properties-apitgateway-method-integration-integrationresponse-syntax.json"></a>
 
@@ -28,7 +28,7 @@
 [StatusCode](#cfn-apigateway-method-integration-integrationresponse-statuscode): String
 ```
 
-## Properties<a name="w13ab1c21c10c20c55c19b7"></a>
+## Properties<a name="w2922ab1c21c10c19c55c19b7"></a>
 
 `ContentHandling`  <a name="cfn-apigateway-method-integrationresponse-contenthandling"></a>
 Specifies how to handle request payload content type conversions\. Valid values are:  

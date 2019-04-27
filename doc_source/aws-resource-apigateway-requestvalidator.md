@@ -4,7 +4,7 @@ The `AWS::ApiGateway::RequestValidator` resource sets up basic validation rules 
 
 **Topics**
 + [Syntax](#aws-resource-apigateway-requestvalidator-syntax)
-+ [Properties](#w13ab1c21c10c20c64b9)
++ [Properties](#w2922ab1c21c10c19c64b9)
 + [Return Value](#aws-resource-apigateway-requestvalidator-returnvalues)
 + [Example](#aws-resource-apigateway-requestvalidator-examples)
 
@@ -37,7 +37,7 @@ Properties:
   [ValidateRequestParameters](#cfn-apigateway-requestvalidator-validaterequestparameters): Boolean
 ```
 
-## Properties<a name="w13ab1c21c10c20c64b9"></a>
+## Properties<a name="w2922ab1c21c10c19c64b9"></a>
 
 **Note**  
 For more information about each property, see [ RequestValidator](https://docs.aws.amazon.com/apigateway/api-reference/resource/request-validator) in the *Amazon API Gateway REST API Reference*\.
@@ -76,7 +76,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ## Example<a name="aws-resource-apigateway-requestvalidator-examples"></a>
 
-### <a name="w13ab1c21c10c20c64c13b3"></a>
+### <a name="w2922ab1c21c10c19c64c13b3"></a>
 
 The following example creates an API Gateway API with an associated request validator, based on the supplied parameters\.
 

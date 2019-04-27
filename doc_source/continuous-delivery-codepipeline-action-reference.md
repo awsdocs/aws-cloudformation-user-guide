@@ -3,10 +3,10 @@
 When you build an CodePipeline pipeline, you add a `Deploy` action to the pipeline with AWS CloudFormation as a provider\. You then must specify which AWS CloudFormation action the pipeline invokes and the action's settings\. This topic describes the AWS CloudFormation configuration properties\. To specify properties, you can use the CodePipeline console, or you can create a [JSON object](https://docs.aws.amazon.com/codepipeline/latest/userguide/how-to-create-pipelines.html#how-to-create-pipeline-cli) to use for the AWS CLI, CodePipeline API, or AWS CloudFormation templates\.
 
 **Topics**
-+ [Configuration Properties \(Console\)](#w13ab1c13c13b7)
-+ [Configuration Properties \(JSON Object\)](#w13ab1c13c13b9)
++ [Configuration Properties \(Console\)](#w2922ab1c13c13b7)
++ [Configuration Properties \(JSON Object\)](#w2922ab1c13c13b9)
 
-## Configuration Properties \(Console\)<a name="w13ab1c13c13b7"></a>
+## Configuration Properties \(Console\)<a name="w2922ab1c13c13b7"></a>
 
 The CodePipeline [console](https://console.aws.amazon.com/codepipeline/) shows the configuration properties and indicates the properties that are required based on the `Action mode` that you choose\.
 
@@ -56,7 +56,7 @@ The following example defines a value for the `ParameterName` parameter by using
 }
 ```
 
-## Configuration Properties \(JSON Object\)<a name="w13ab1c13c13b9"></a>
+## Configuration Properties \(JSON Object\)<a name="w2922ab1c13c13b9"></a>
 
 When you specify `CloudFormation` as a provider for a stage action, define the following properties within the `Configuration` property\. Use the [JSON object](https://docs.aws.amazon.com/codepipeline/latest/userguide/how-to-create-pipelines.html#how-to-create-pipeline-cli) for the AWS CLI, CodePipeline API, or AWS CloudFormation templates\. For examples, see [Walkthrough: Building a Pipeline for Test and Production Stacks](continuous-delivery-codepipeline-basic-walkthrough.md)
 

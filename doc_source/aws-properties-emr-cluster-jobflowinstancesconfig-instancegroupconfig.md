@@ -2,7 +2,7 @@
 
 `InstanceGroupConfig` is a property of the `CoreInstanceGroup` and `MasterInstanceGroup` properties of the [job flow instances configuration](aws-properties-emr-cluster-jobflowinstancesconfig.md)\. The `InstanceGroupConfig` property specifies the settings for instances \(nodes\) in the core and master instance groups of an Amazon EMR cluster\.
 
-## Syntax<a name="w13ab1c21c10d141c13c49b5"></a>
+## Syntax<a name="w2922ab1c21c10d123c13c49b5"></a>
 
 ### JSON<a name="aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig-syntax.json"></a>
 
@@ -35,7 +35,7 @@
 [Name](#cfn-emr-cluster-jobflowinstancesconfig-instancegroupconfig-name): String
 ```
 
-## Properties<a name="w13ab1c21c10d141c13c49b7"></a>
+## Properties<a name="w2922ab1c21c10d123c13c49b7"></a>
 
 `AutoScalingPolicy`  <a name="cfn-emr-cluster-jobflowinstancesconfig-instancegroupconfig-autoscalingpolicy"></a>
 An automatic scaling policy for a core instance group or task instance group in an Amazon EMR cluster\. An automatic scaling policy defines how an instance group dynamically adds and terminates EC2 instances in response to the value of a CloudWatch metric\.  

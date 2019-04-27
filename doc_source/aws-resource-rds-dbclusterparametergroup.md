@@ -7,9 +7,9 @@ Applying a parameter group to a DB cluster might require instances to reboot, re
 
 **Topics**
 + [Syntax](#aws-resource-rds-dbclusterparametergroup-syntax)
-+ [Properties](#w13ab1c21c10d192c17c11)
-+ [Return Values](#w13ab1c21c10d192c17c13)
-+ [Example](#w13ab1c21c10d192c17c15)
++ [Properties](#w2922ab1c21c10d177c17c11)
++ [Return Values](#w2922ab1c21c10d177c17c13)
++ [Example](#w2922ab1c21c10d177c17c15)
 
 ## Syntax<a name="aws-resource-rds-dbclusterparametergroup-syntax"></a>
 
@@ -41,7 +41,7 @@ Properties:
     Resource Tag
 ```
 
-## Properties<a name="w13ab1c21c10d192c17c11"></a>
+## Properties<a name="w2922ab1c21c10d177c17c11"></a>
 
 `Description`  <a name="cfn-rds-dbclusterparametergroup-description"></a>
 A friendly description for this DB cluster parameter group\.  
@@ -76,15 +76,15 @@ The tags that you want to attach to this parameter group\.
 *Type*: A list of [resource tags](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w13ab1c21c10d192c17c13"></a>
+## Return Values<a name="w2922ab1c21c10d177c17c13"></a>
 
-### Ref<a name="w13ab1c21c10d192c17c13b2"></a>
+### Ref<a name="w2922ab1c21c10d177c17c13b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w13ab1c21c10d192c17c15"></a>
+## Example<a name="w2922ab1c21c10d177c17c15"></a>
 
 The following snippet creates a parameter group that sets the character set database to UTF32:
 

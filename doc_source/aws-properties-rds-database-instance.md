@@ -532,7 +532,7 @@ You can migrate a DB instance in your stack from an RDS DB security group to a V
 
 ## Updating and Deleting AWS::RDS::DBInstance Resources<a name="updating-and-deleting-dbinstance-resources"></a>
 
-### Updating DB Instances<a name="w13ab1c21c10d192c22c13b2"></a>
+### Updating DB Instances<a name="w2922ab1c21c10d177c22c13b2"></a>
 
 When properties labeled "*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)" are updated, AWS CloudFormation first creates a replacement DB instance, then changes references from other dependent resources to point to the replacement DB instance, and finally deletes the old DB instance\.
 
@@ -545,7 +545,7 @@ Update the stack\.
 
 For more information about updating other properties of this resource, see [ModifyDBInstance](https://docs.aws.amazon.com//AmazonRDS/latest/APIReference/API_ModifyDBInstance.html)\. For more information about updating stacks, see [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)\.
 
-### Deleting DB Instances<a name="w13ab1c21c10d192c22c13b4"></a>
+### Deleting DB Instances<a name="w2922ab1c21c10d177c22c13b4"></a>
 
 You can set a deletion policy for your DB instance to control how AWS CloudFormation handles the instance when the stack is deleted\. For Amazon RDS DB instances, you can choose to *retain* the instance, to *delete* the instance, or to *create a snapshot* of the instance\. The default AWS CloudFormation behavior depends on the `DBClusterIdentifier` property:
 + For `AWS::RDS::DBInstance` resources that don't specify the `DBClusterIdentifier` property, AWS CloudFormation saves a snapshot of the DB instance\.

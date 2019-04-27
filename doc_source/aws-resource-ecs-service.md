@@ -164,7 +164,7 @@ The ARN of the task definition \(including the revision number\) that you want t
 
 ## Return Values<a name="aws-resource-ecs-service-return-values"></a>
 
-### Ref<a name="w13ab1c21c10d117c17b9b2"></a>
+### Ref<a name="w2922ab1c21c10d102c17b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN\.
 
@@ -176,7 +176,7 @@ In the following sample, the `Ref` function returns the ARN of the `MyECSService
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w13ab1c21c10d117c17b9b4"></a>
+### Fn::GetAtt<a name="w2922ab1c21c10d102c17b9b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -187,7 +187,7 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-functi
 
 ## Examples<a name="aws-resource-ecs-service-examples"></a>
 
-### Define a Basic Amazon ECS Service<a name="w13ab1c21c10d117c17c11b2"></a>
+### Define a Basic Amazon ECS Service<a name="w2922ab1c21c10d102c17c11b2"></a>
 
 The following examples define an Amazon ECS service that uses a cluster and task definition that are declared elsewhere in the same template\.
 
@@ -218,7 +218,7 @@ WebApp:
       Ref: "taskdefinition"
 ```
 
-### Associate an Application Load Balancer with a Service<a name="w13ab1c21c10d117c17c11b4"></a>
+### Associate an Application Load Balancer with a Service<a name="w2922ab1c21c10d102c17c11b4"></a>
 
 The following example associates an Application Load Balancer with an Amazon ECS service by referencing an `AWS::ElasticLoadBalancingV2::TargetGroup` resource\. 
 
@@ -267,7 +267,7 @@ service:
       Ref: ECSCluster
 ```
 
-### Define a Service with a Health Check Grace Period<a name="w13ab1c21c10d117c17c11b6"></a>
+### Define a Service with a Health Check Grace Period<a name="w2922ab1c21c10d102c17c11b6"></a>
 
 The following example defines a service with a parameter that enables users to specify how many seconds that the Amazon ECS service scheduler should ignore unhealthy Elastic Load Balancing target health checks after a task has first started\.
 

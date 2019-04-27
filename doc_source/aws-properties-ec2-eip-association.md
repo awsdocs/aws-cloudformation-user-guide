@@ -7,8 +7,8 @@ For more information EC2\-Classic and EC2\-VPC, see [AssociateAddress](https://d
 **Topics**
 + [Syntax](#aws-resource-ec2-eipassociation-syntax)
 + [Properties](#aws-resource-ec2-eip-association-prop)
-+ [Return Values](#w13ab1c21c10d111c36c13)
-+ [Examples](#w13ab1c21c10d111c36c15)
++ [Return Values](#w2922ab1c21c10c96c40c13)
++ [Examples](#w2922ab1c21c10c96c40c15)
 
 ## Syntax<a name="aws-resource-ec2-eipassociation-syntax"></a>
 
@@ -73,21 +73,21 @@ Instance ID of the Amazon EC2 instance that you want to associate with the Elast
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w13ab1c21c10d111c36c13"></a>
+## Return Values<a name="w2922ab1c21c10c96c40c13"></a>
 
-### Ref<a name="w13ab1c21c10d111c36c13b2"></a>
+### Ref<a name="w2922ab1c21c10c96c40c13b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w13ab1c21c10d111c36c15"></a>
+## Examples<a name="w2922ab1c21c10c96c40c15"></a>
 
 The following example creates an instance with two elastic network interfaces \(ENI\)\. The example assumes that you have an existing VPC\.
 
 For additional examples, see [Assigning an Amazon EC2 Elastic IP Using AWS::EC2::EIP Snippet](quickref-ec2.md#scenario-ec2-eip)\.
 
-### JSON<a name="w13ab1c21c10d111c36c15b6"></a>
+### JSON<a name="w2922ab1c21c10c96c40c15b6"></a>
 
 ```
   "Resources" : {
@@ -172,7 +172,7 @@ For additional examples, see [Assigning an Amazon EC2 Elastic IP Using AWS::EC2:
   }
 ```
 
-### YAML<a name="w13ab1c21c10d111c36c15b8"></a>
+### YAML<a name="w2922ab1c21c10c96c40c15b8"></a>
 
 ```
 Resources:

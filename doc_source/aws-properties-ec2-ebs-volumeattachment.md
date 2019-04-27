@@ -9,9 +9,9 @@ If the root volume is detached from an instance with an AWS Marketplace product 
 
 **Topics**
 + [Syntax](#aws-resource-ec2-volumeattachment-syntax)
-+ [Properties](#w13ab1c21c10d111d169c11)
-+ [Example](#w13ab1c21c10d111d169c13)
-+ [See Also](#w13ab1c21c10d111d169c15)
++ [Properties](#w2922ab1c21c10c96d173c11)
++ [Example](#w2922ab1c21c10c96d173c13)
++ [See Also](#w2922ab1c21c10c96d173c15)
 
 ## Syntax<a name="aws-resource-ec2-volumeattachment-syntax"></a>
 
@@ -40,7 +40,7 @@ Properties:
   [VolumeId](#cfn-ec2-ebs-volumeattachment-volumeid): String
 ```
 
-## Properties<a name="w13ab1c21c10d111d169c11"></a>
+## Properties<a name="w2922ab1c21c10c96d173c11"></a>
 
 `Device`  <a name="cfn-ec2-ebs-volumeattachment-device"></a>
 How the device is exposed to the instance \(e\.g\., /dev/sdh, or xvdh\)\.  
@@ -60,7 +60,7 @@ The ID of the Amazon EBS volume\. The volume and instance must be within the sam
 *Type*: String  
 *Update requires*: Updates are not supported\.
 
-## Example<a name="w13ab1c21c10d111d169c13"></a>
+## Example<a name="w2922ab1c21c10c96d173c13"></a>
 
 This example attaches an EC2 EBS volume to the EC2 instance with the logical name "Ec2Instance"\.
 
@@ -87,7 +87,7 @@ This example attaches an EC2 EBS volume to the EC2 instance with the logical nam
 }
 ```
 
-## See Also<a name="w13ab1c21c10d111d169c15"></a>
+## See Also<a name="w2922ab1c21c10c96d173c15"></a>
 + [Amazon Elastic Block Store \(Amazon EBS\)](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html) in the *Amazon Elastic Compute Cloud User Guide*\.
 + [Attaching a Volume to an Instance](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html) in the *Amazon Elastic Compute Cloud User Guide*
 + [Detaching an Amazon EBS Volume from an Instance](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) in the *Amazon Elastic Compute Cloud User Guide*

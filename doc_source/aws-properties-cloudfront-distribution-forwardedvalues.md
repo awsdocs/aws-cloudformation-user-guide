@@ -2,7 +2,7 @@
 
 `ForwardedValues` is a property of the [DefaultCacheBehavior](aws-properties-cloudfront-distribution-defaultcachebehavior.md) and [CacheBehavior](aws-properties-cloudfront-distribution-cachebehavior.md) properties that indicates whether Amazon CloudFront forwards query strings or cookies\.
 
-## Syntax<a name="w13ab1c21c10c60c14c48b5"></a>
+## Syntax<a name="w2922ab1c21c10c52c14c48b5"></a>
 
 ### JSON<a name="aws-properties-cloudfront-distribution-forwardedvalues-syntax.json"></a>
 
@@ -27,7 +27,7 @@
   - String
 ```
 
-## Properties<a name="w13ab1c21c10c60c14c48b7"></a>
+## Properties<a name="w2922ab1c21c10c52c14c48b7"></a>
 
 **Note**  
 For more information about the constraints and valid values of each property, see the [ForwardedValues](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ForwardedValues.html) data type in the *Amazon CloudFront API Reference*\.

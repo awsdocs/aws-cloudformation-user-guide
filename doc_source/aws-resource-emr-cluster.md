@@ -68,7 +68,7 @@ Properties:
   [VisibleToAllUsers](#cfn-emr-cluster-visibletoallusers): Boolean
 ```
 
-## Properties<a name="w13ab1c21c10d141c13b7"></a>
+## Properties<a name="w2922ab1c21c10d123c13b7"></a>
 
 **Note**  
 For more information about the constraints and valid values of each property, see the [ Cluster](https://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_Cluster.html) data type in the *Amazon EMR API Reference*\.

@@ -31,7 +31,7 @@ Properties:
     String:String
 ```
 
-## Properties<a name="w13ab1c21c10c84c17b9"></a>
+## Properties<a name="w2922ab1c21c10c74c17b9"></a>
 
 `IdentityPoolId`  <a name="cfn-cognito-identitypoolroleattachment-identitypoolid"></a>
 An identity pool ID in the format `REGION:GUID`\.  
@@ -51,9 +51,9 @@ The map of roles associated with this pool\. For a given role, the key will be e
 *Type:* String to string map  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10c84c17c11"></a>
+## Return Value<a name="w2922ab1c21c10c74c17c11"></a>
 
-### Ref<a name="w13ab1c21c10c84c17c11b2"></a>
+### Ref<a name="w2922ab1c21c10c74c17c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns a generated ID, such as `IdentityPoolRoleAttachment-EXAMPLEwnOR3n`\.
 

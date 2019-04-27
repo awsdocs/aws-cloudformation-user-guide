@@ -59,7 +59,7 @@ The identifier of the targeted API entity\.
 
 ## Example<a name="aws-resource-apigateway-documentationversion-examples"></a>
 
-### <a name="w13ab1c21c10c20c42c11b3"></a>
+### <a name="w2922ab1c21c10c19c42c11b3"></a>
 
 The following example associates a documentation version with an API stage\.
 

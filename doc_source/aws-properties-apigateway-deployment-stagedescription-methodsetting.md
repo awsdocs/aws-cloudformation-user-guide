@@ -4,7 +4,7 @@ The `MethodSetting` property type configures settings for all methods in an Amaz
 
 The `MethodSettings` property of the [Amazon API Gateway Deployment StageDescription](aws-properties-apigateway-deployment-stagedescription.md) property type contains a list of `MethodSetting` property types\.
 
-## Syntax<a name="w13ab1c21c10c20c33c21b7"></a>
+## Syntax<a name="w2922ab1c21c10c19c33c21b7"></a>
 
 ### JSON<a name="aws-properties-apigateway-deployment-stagedescription-methodsetting-syntax.json"></a>
 
@@ -38,7 +38,7 @@ The `MethodSettings` property of the [Amazon API Gateway Deployment StageDescrip
 [ThrottlingRateLimit](#cfn-apigateway-deployment-stagedescription-methodsetting-throttlingratelimit): Number
 ```
 
-## Properties<a name="w13ab1c21c10c20c33c21b9"></a>
+## Properties<a name="w2922ab1c21c10c19c33c21b9"></a>
 
 `CacheDataEncrypted`  <a name="cfn-apigateway-deployment-stagedescription-methodsetting-cachedataencrypted"></a>
 Indicates whether the cached responses are encrypted\.  

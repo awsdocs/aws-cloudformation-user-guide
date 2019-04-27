@@ -5,7 +5,7 @@
 **Note**  
 Changes to a deployment package in Amazon S3 are not detected automatically\. To update the function code, change the object key, or use object versioning and change the version number in the template\.
 
-## Syntax<a name="w13ab1c21c10d177c21c17b7"></a>
+## Syntax<a name="w2922ab1c21c10d166c21c17b7"></a>
 
 ### JSON<a name="aws-properties-lambda-function-code-syntax.json"></a>
 
@@ -27,7 +27,7 @@ Changes to a deployment package in Amazon S3 are not detected automatically\. To
 [ZipFile](#cfn-lambda-function-code-zipfile): String
 ```
 
-## Properties<a name="w13ab1c21c10d177c21c17b9"></a>
+## Properties<a name="w2922ab1c21c10d166c21c17b9"></a>
 
 `S3Bucket`  <a name="cfn-lambda-function-code-s3bucket"></a>
 An Amazon S3 bucket in the same region as your function\. The bucket can be in a different AWS account\.  
@@ -61,7 +61,7 @@ After executing the `send` method, the Lambda function terminates, so anything y
 **Note**  
 The `cfn-response` module is available only when you use the `ZipFile` property to write your source code\. It isn't available for source code that's stored in Amazon S3 buckets\. For code in buckets, you must write your own functions to send responses\.
 
-### Loading the `cfn-response` Module<a name="w13ab1c21c10d177c21c17c11b9"></a>
+### Loading the `cfn-response` Module<a name="w2922ab1c21c10d166c21c17c11b9"></a>
 
 For Node\.js functions, use the `require()` function to load the `cfn-response` module\. For example, the following code example creates a `cfn-response` object with the name `response`:
 
@@ -78,7 +78,7 @@ Use this exact import statement\. If you use other variants of the import statem
 import cfnresponse
 ```
 
-### `send` Method Parameters<a name="w13ab1c21c10d177c21c17c11c11"></a>
+### `send` Method Parameters<a name="w2922ab1c21c10d166c21c17c11c11"></a>
 
 You can use the following parameters with the `send` method\.
 
@@ -100,9 +100,9 @@ Optional\. The unique identifier of the custom resource that invoked the functio
 `noEcho`  
 Optional\. Indicates whether to mask the output of the custom resource when it's retrieved by using the `Fn::GetAtt` function\. If set to `true`, all returned values are masked with asterisks \(\*\*\*\*\*\)\. By default, this value is `false`\.
 
-### Examples<a name="w13ab1c21c10d177c21c17c11c13"></a>
+### Examples<a name="w2922ab1c21c10d166c21c17c11c13"></a>
 
-#### Node\.js<a name="w13ab1c21c10d177c21c17c11c13b3"></a>
+#### Node\.js<a name="w2922ab1c21c10d166c21c17c11c13b3"></a>
 
 In the following Node\.js example, the inline Lambda function takes an input value and multiplies it by 5\. Inline functions are especially useful for smaller functions because they allow you to specify the source code directly in the template, instead of creating a package and uploading it to an Amazon S3 bucket\. The function uses the `cfn-response` `send` method to send the result back to the custom resource that invoked it\.
 
@@ -131,7 +131,7 @@ ZipFile: >
   };
 ```
 
-#### Python<a name="w13ab1c21c10d177c21c17c11c13b5"></a>
+#### Python<a name="w2922ab1c21c10d166c21c17c11c13b5"></a>
 
 In the following Python example, the inline Lambda function takes an integer value and multiplies it by 5\.
 
@@ -162,7 +162,7 @@ ZipFile: |
     cfnresponse.send(event, context, cfnresponse.SUCCESS, responseData, "CustomResourcePhysicalID")
 ```
 
-### Module Source Code<a name="w13ab1c21c10d177c21c17c11c15"></a>
+### Module Source Code<a name="w2922ab1c21c10d166c21c17c11c15"></a>
 
 The following is the response module source code for the Node\.js functions\. Review it to understand what the module does and for help with implementing your own response functions\.
 

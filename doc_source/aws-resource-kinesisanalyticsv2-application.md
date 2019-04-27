@@ -77,7 +77,7 @@ The following example creates an `Application` resource\.
 Description: "Sample KinesisAnalytics via CloudFormation"
 Resources:
   BasicApplication:
-    Type: AWS::KinesisAnalytics::Application
+    Type: AWS::KinesisAnalyticsV2::Application
     Properties:
       ApplicationName: "sampleApplication"
       ApplicationDescription: "SampleApp"

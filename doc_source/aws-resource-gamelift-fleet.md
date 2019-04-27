@@ -47,7 +47,7 @@ Properties:
   [ServerLaunchPath](#cfn-gamelift-fleet-serverlaunchpath): String
 ```
 
-## Properties<a name="w13ab1c21c10d147c21b7"></a>
+## Properties<a name="w2922ab1c21c10d129c21b7"></a>
 
 `BuildId`  <a name="cfn-gamelift-fleet-buildid"></a>
 The unique identifier for the build that you want to use with this fleet\.  
@@ -115,15 +115,15 @@ The location of your game server that GameLift launches\. You must escape the sl
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w13ab1c21c10d147c21b9"></a>
+## Return Value<a name="w2922ab1c21c10d129c21b9"></a>
 
-### Ref<a name="w13ab1c21c10d147c21b9b2"></a>
+### Ref<a name="w2922ab1c21c10d129c21b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the fleet ID, such as `myfleet-a01234b56-7890-1de2-f345-g67h8i901j2k`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w13ab1c21c10d147c21c11"></a>
+## Example<a name="w2922ab1c21c10d129c21c11"></a>
 
 The following example creates a GameLift fleet named `MyGameFleet` with two inbound permissions\. The fleet uses a `Ref` intrinsic function to specify a build, which can be declared elsewhere in the same template\. For the log path and server launch path, the example uses the escape character \(`\`\) to escape the slashes \(`\`\)\.
 

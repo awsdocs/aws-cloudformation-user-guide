@@ -35,13 +35,13 @@ The configuration of the CloudFront origin access identity\.
 
 ## Return Values<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-returnvalues"></a>
 
-### Ref<a name="w13ab1c21c10c60c18c12b3"></a>
+### Ref<a name="w2922ab1c21c10c52c18c12b3"></a>
 
 When you pass the logical ID of an `AWS::CloudFront::CloudFrontOriginAccessIdentity` resource to the intrinsic `Ref` function, the function returns the origin access identity, such as `E15MNIMTCFKK4C`\. 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
-### Fn::GetAtt<a name="w13ab1c21c10c60c18c12b5"></a>
+### Fn::GetAtt<a name="w2922ab1c21c10c52c18c12b5"></a>
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 

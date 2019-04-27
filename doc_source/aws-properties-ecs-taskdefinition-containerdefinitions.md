@@ -12,6 +12,7 @@ The `ContainerDefinitions` property of the [AWS::ECS::TaskDefinition](aws-resour
 {
   "[Command](#cfn-ecs-taskdefinition-containerdefinition-command)" : [ String, ... ],
   "[Cpu](#cfn-ecs-taskdefinition-containerdefinition-cpu)" : Integer,
+  "[DependsOn](#cfn-ecs-taskdefinition-containerdefinition-dependson)" : [*ContainerDependency*](aws-properties-ecs-taskdefinition-containerdependency.md),
   "[DisableNetworking](#cfn-ecs-taskdefinition-containerdefinition-disablenetworking)" : Boolean,
   "[DnsSearchDomains](#cfn-ecs-taskdefinition-containerdefinition-dnssearchdomains)" : [ String, ... ],
   "[DnsServers](#cfn-ecs-taskdefinition-containerdefinition-dnsservers)" : [ String, ... ],
@@ -35,6 +36,8 @@ The `ContainerDefinitions` property of the [AWS::ECS::TaskDefinition](aws-resour
   "[Privileged](#cfn-ecs-taskdefinition-containerdefinition-privileged)" : Boolean,
   "[ReadonlyRootFilesystem](#cfn-ecs-taskdefinition-containerdefinition-readonlyrootfilesystem)" : Boolean,
   "[RepositoryCredentials](#cfn-ecs-taskdefinition-containerdefinition-repositorycredentials)" : [*RepositoryCredentials*](aws-properties-ecs-taskdefinition-repositorycredentials.md),
+  "[StartTimeout](#cfn-ecs-taskdefinition-containerdefinition-starttimeout)" : Integer,
+  "[StopTimeout](#cfn-ecs-taskdefinition-containerdefinition-stoptimeout)" : Integer,
   "[Ulimits](#cfn-ecs-taskdefinition-containerdefinition-ulimits)" : [ [*Ulimit*](aws-properties-ecs-taskdefinition-containerdefinitions-ulimit.md), ... ],
   "[User](#cfn-ecs-taskdefinition-containerdefinition-user)" : String,
   "[VolumesFrom](#cfn-ecs-taskdefinition-containerdefinition-volumesfrom)" : [ [*VolumeFrom*](aws-properties-ecs-taskdefinition-containerdefinitions-volumesfrom.md), ... ],
@@ -48,6 +51,8 @@ The `ContainerDefinitions` property of the [AWS::ECS::TaskDefinition](aws-resour
 [Command](#cfn-ecs-taskdefinition-containerdefinition-command):
   - String
 [Cpu](#cfn-ecs-taskdefinition-containerdefinition-cpu): Integer
+[DependsOn](#cfn-ecs-taskdefinition-containerdefinition-dependson):
+  [*ContainerDependency*](aws-properties-ecs-taskdefinition-containerdependency.md)
 [DisableNetworking](#cfn-ecs-taskdefinition-containerdefinition-disablenetworking): Boolean
 [DnsSearchDomains](#cfn-ecs-taskdefinition-containerdefinition-dnssearchdomains):
   - String
@@ -84,7 +89,9 @@ The `ContainerDefinitions` property of the [AWS::ECS::TaskDefinition](aws-resour
 [Privileged](#cfn-ecs-taskdefinition-containerdefinition-privileged): Boolean
 [ReadonlyRootFilesystem](#cfn-ecs-taskdefinition-containerdefinition-readonlyrootfilesystem): Boolean
 [RepositoryCredentials](#cfn-ecs-taskdefinition-containerdefinition-repositorycredentials):
-  [*RepositoryCredentials*](aws-properties-ecs-taskdefinition-repositorycredentials.md)            
+  [*RepositoryCredentials*](aws-properties-ecs-taskdefinition-repositorycredentials.md)   
+[StartTimeout](#cfn-ecs-taskdefinition-containerdefinition-starttimeout): Integer
+[StopTimeout](#cfn-ecs-taskdefinition-containerdefinition-stoptimeout): Integer
 [Ulimits](#cfn-ecs-taskdefinition-containerdefinition-ulimits):
   - [*Ulimit*](aws-properties-ecs-taskdefinition-containerdefinitions-ulimit.md)
 [User](#cfn-ecs-taskdefinition-containerdefinition-user): String
@@ -106,6 +113,14 @@ The `CMD` value to pass to the container\. For more information about the Docker
 The minimum number of CPU units to reserve for the container\. Containers share unallocated CPU units with other containers on the instance by using the same ratio as their allocated CPU units\. For more information, see the `cpu` content for the [ContainerDefinition](https://docs.aws.amazon.com/AmazonECS/latest/APIReference//API_ContainerDefinition.html) data type in the *Amazon Elastic Container Service API Reference*\.  
 *Required*: No  
 *Type*: Integer
+
+`DependsOn`  <a name="cfn-ecs-taskdefinition-containerdefinition-dependson"></a>
+The dependencies defined for container startup and shutdown\. A container can contain multiple dependencies\. When a dependency is defined for container startup, for container shutdown it is reversed\.  
+Duplicates are not allowed\.  
+Your Amazon ECS container instances require at least version 1\.26\.0 of the container agent to enable container dependencies\. However, we recommend using the latest container agent version\. For information about checking your agent version and updating to the latest version, see [Updating the Amazon ECS Container Agent](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html) in the *Amazon Elastic Container Service Developer Guide*\. If you are using an Amazon ECS\-optimized Linux AMI, your instance needs at least version 1\.26\.0\-1 of the ecs\-init package\. If your container instances are launched from version 20190301 or later, then they contain the required versions of the container agent and ecs\-init\. For more information, see [Amazon ECS\-optimized Linux AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+This parameter is available for tasks using the Fargate launch type in the Ohio \(us\-east\-2\) region only and the task or service requires platform version 1\.3\.0 or later\.
+*Required*: No  
+*Type*: List of [Amazon ECS TaskDefinition ContainerDependency](aws-properties-ecs-taskdefinition-containerdependency.md) property types
 
 `DisableNetworking`  <a name="cfn-ecs-taskdefinition-containerdefinition-disablenetworking"></a>
 Indicates whether networking is disabled within the container\.  
@@ -222,6 +237,16 @@ Indicates whether the container's root file system is mounted as read only\.
 The repository credentials for private registry authentication\.  
 *Required*: No  
 *Type*: [RepositoryCredentials](aws-properties-ecs-taskdefinition-repositorycredentials.md)
+
+`StartTimeout`  <a name="cfn-ecs-taskdefinition-containerdefinition-starttimeout"></a>
+Time duration to wait before giving up on resolving dependencies for a container\. For more information, see [startTimeout](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html#ECS-Type-ContainerDefinition-startTimeout) in the *Amazon Elastic Container Service API Reference*\.  
+*Required*: No  
+*Type*: Integer
+
+`StopTimeout`  <a name="cfn-ecs-taskdefinition-containerdefinition-stoptimeout"></a>
+Time duration to wait before the container is forcefully killed if it doesn't exit normally on its own\. For more information, see [stopTimeout](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html#ECS-Type-ContainerDefinition-stopTimeout) in the *Amazon Elastic Container Service API Reference*  
+*Required*: No  
+*Type*: Integer
 
 `Ulimits`  <a name="cfn-ecs-taskdefinition-containerdefinition-ulimits"></a>
 A list of ulimits to set in the container\. The ulimits set constraints on how many resources a container can consume so that it doesn't deplete all available resources on the host\.  

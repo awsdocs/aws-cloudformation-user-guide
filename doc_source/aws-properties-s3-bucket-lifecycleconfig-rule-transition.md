@@ -1,15 +1,17 @@
-# Amazon S3 Bucket Transition<a name="aws-properties-s3-bucket-lifecycleconfig-rule-transition"></a>
+# AWS::S3::Bucket Transition<a name="aws-properties-s3-bucket-lifecycleconfig-rule-transition"></a>
 
-Describes when an object transitions to a specified storage class for the [Rule](aws-properties-s3-bucket-lifecycleconfig-rule.md) property\.
+Specifies when an object transitions to a specified storage class\.
 
-## Syntax<a name="w13ab1c21c10d204c13d170b5"></a>
+## Syntax<a name="aws-properties-s3-bucket-lifecycleconfig-rule-transition-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-s3-bucket-lifecycleconfig-rule-transition-syntax.json"></a>
 
 ```
 {
   "[StorageClass](#cfn-s3-bucket-lifecycleconfig-rule-transition-storageclass)" : String,
-  "[TransitionDate](#cfn-s3-bucket-lifecycleconfig-rule-transition-transitiondate)" : String,
+  "[TransitionDate](#cfn-s3-bucket-lifecycleconfig-rule-transition-transitiondate)" : Timestamp,
   "[TransitionInDays](#cfn-s3-bucket-lifecycleconfig-rule-transition-transitionindays)" : Integer
 }
 ```
@@ -17,24 +19,28 @@ Describes when an object transitions to a specified storage class for the [Rule]
 ### YAML<a name="aws-properties-s3-bucket-lifecycleconfig-rule-transition-syntax.yaml"></a>
 
 ```
-[StorageClass](#cfn-s3-bucket-lifecycleconfig-rule-transition-storageclass): String
-[TransitionDate](#cfn-s3-bucket-lifecycleconfig-rule-transition-transitiondate): String
-[TransitionInDays](#cfn-s3-bucket-lifecycleconfig-rule-transition-transitionindays): Integer
+﻿  [StorageClass](#cfn-s3-bucket-lifecycleconfig-rule-transition-storageclass) : String
+﻿  [TransitionDate](#cfn-s3-bucket-lifecycleconfig-rule-transition-transitiondate) : Timestamp
+﻿  [TransitionInDays](#cfn-s3-bucket-lifecycleconfig-rule-transition-transitionindays) : Integer
 ```
 
-## Properties<a name="w13ab1c21c10d204c13d170b7"></a>
+## Properties<a name="aws-properties-s3-bucket-lifecycleconfig-rule-transition-properties"></a>
 
 `StorageClass`  <a name="cfn-s3-bucket-lifecycleconfig-rule-transition-storageclass"></a>
-The storage class to which you want the object to transition, such as `GLACIER`\. For valid values, see the `StorageClass` request element of the [PUT Bucket lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTlifecycle.html) action in the *Amazon Simple Storage Service API Reference*\.  
+The storage class to which you want the object to transition\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Allowed Values*: `DEEP_ARCHIVE | GLACIER | INTELLIGENT_TIERING | ONEZONE_IA | STANDARD_IA`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TransitionDate`  <a name="cfn-s3-bucket-lifecycleconfig-rule-transition-transitiondate"></a>
 Indicates when objects are transitioned to the specified storage class\. The date value must be in ISO 8601 format\. The time is always midnight UTC\.  
 *Required*: Conditional  
-*Type*: String
+*Type*: Timestamp  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TransitionInDays`  <a name="cfn-s3-bucket-lifecycleconfig-rule-transition-transitionindays"></a>
-Indicates the number of days after creation when objects are transitioned to the specified storage class\.  
+Indicates the number of days after creation when objects are transitioned to the specified storage class\. The value must be a positive integer\.  
 *Required*: Conditional  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

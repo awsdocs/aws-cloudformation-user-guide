@@ -2,7 +2,7 @@
 
 Describes local secondary indexes for the [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md) resource\. Each index is scoped to a given hash key value\. Tables with one or more local secondary indexes are subject to an item collection size limit, where the amount of data within a given item collection cannot exceed 10 GB\.
 
-## Syntax<a name="w13ab1c21c10d108c14c37b5"></a>
+## Syntax<a name="w2922ab1c21c10c93c14c37b5"></a>
 
 ### JSON<a name="aws-properties-dynamodb-lsi-syntax.json"></a>
 
@@ -24,7 +24,7 @@ Describes local secondary indexes for the [AWS::DynamoDB::Table](aws-resource-dy
   Projection
 ```
 
-## Properties<a name="w13ab1c21c10d108c14c37b7"></a>
+## Properties<a name="w2922ab1c21c10c93c14c37b7"></a>
 
 `IndexName`  <a name="cfn-dynamodb-lsi-indexname"></a>
 The name of the local secondary index\.   
@@ -43,6 +43,6 @@ Attributes that are copied \(projected\) from the source table into the index\. 
 *Required*: Yes  
 *Type*: [Projection](aws-properties-dynamodb-projectionobject.md)
 
-## Examples<a name="w13ab1c21c10d108c14c37b9"></a>
+## Examples<a name="w2922ab1c21c10c93c14c37b9"></a>
 
 For an example of a declared local secondary index, see [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md)\.

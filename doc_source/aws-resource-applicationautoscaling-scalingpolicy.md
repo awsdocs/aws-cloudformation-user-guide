@@ -41,7 +41,7 @@ Properties:
     [*TargetTrackingScalingPolicyConfiguration*](aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.md)
 ```
 
-## Properties<a name="w13ab1c21c10c26c17b9"></a>
+## Properties<a name="w2922ab1c21c10c24c17b9"></a>
 
 `PolicyName`  <a name="cfn-applicationautoscaling-scalingpolicy-policyname"></a>
 A name for the scaling policy\.  
@@ -93,15 +93,15 @@ This parameter is required if you are creating a new policy and the policy type 
 *Type*: [Application Auto Scaling ScalingPolicy TargetTrackingScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10c26c17c11"></a>
+## Return Value<a name="w2922ab1c21c10c24c17c11"></a>
 
-### Ref<a name="w13ab1c21c10c26c17c11b2"></a>
+### Ref<a name="w2922ab1c21c10c24c17c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the Application Auto Scaling scaling policy Amazon Resource Name \(ARN\), such as `arn:aws:autoscaling:``us-east-2``:123456789012:scalingPolicy:12ab3c4d-56789-0ef1-2345-6ghi7jk8lm90:resource/ecs/service/ecsStack-MyECSCluster-AB12CDE3F4GH/ecsStack-MyECSService-AB12CDE3F4GH:policyName/MyStepPolicy`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w13ab1c21c10c26c17c13"></a>
+## Examples<a name="w2922ab1c21c10c24c17c13"></a>
 
 ### Application Auto Scaling Scaling Policy with a Step Policy Configuration<a name="aws-resource-applicationautoscaling-scalingpolicy-example"></a>
 

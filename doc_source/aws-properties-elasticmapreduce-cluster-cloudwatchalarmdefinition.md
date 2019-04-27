@@ -2,7 +2,7 @@
 
 `CloudWatchAlarmDefinition` is a subproperty of the [Amazon EMR Cluster ScalingTrigger](aws-properties-elasticmapreduce-cluster-scalingtrigger.md) property, which determines when to trigger an automatic scaling activity\. Scaling activity begins when you satisfy the defined alarm conditions\.
 
-## Syntax<a name="w13ab1c21c10d141c13c29b5"></a>
+## Syntax<a name="w2922ab1c21c10d123c13c29b5"></a>
 
 ### JSON<a name="aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition-syntax.json"></a>
 
@@ -35,7 +35,7 @@
   [Unit](#cfn-elasticmapreduce-cluster-scalingtrigger-cloudwatchalarmdefinition-unit): String
 ```
 
-## Properties<a name="w13ab1c21c10d141c13c29b7"></a>
+## Properties<a name="w2922ab1c21c10d123c13c29b7"></a>
 
 `ComparisonOperator`  <a name="cfn-elasticmapreduce-cluster-scalingtrigger-cloudwatchalarmdefinition-comparisonoperator"></a>
 Determines how the metric specified by `MetricName` is compared to the value specified by `Threshold`\.  

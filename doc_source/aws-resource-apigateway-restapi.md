@@ -53,7 +53,7 @@ Properties:
   [Policy](#cfn-apigateway-restapi-policy): JSON object
 ```
 
-## Properties<a name="w13ab1c21c10c20c72c11"></a>
+## Properties<a name="w2922ab1c21c10c19c72c11"></a>
 
 `ApiKeySourceType`  <a name="cfn-apigateway-restapi-apikeysourcetype"></a>
 The source of the API key for metering requests according to a usage plan\. Valid values are:  

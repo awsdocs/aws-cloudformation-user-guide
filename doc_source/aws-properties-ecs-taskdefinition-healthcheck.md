@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-taskdefinition-healthcheck-syntax.yaml"></a>
 
 ```
-[Command](#cfn-ecs-taskdefinition-healthcheck-command)
+[Command](#cfn-ecs-taskdefinition-healthcheck-command):
   - String
 [Interval](#cfn-ecs-taskdefinition-healthcheck-interval): Integer
 [Retries](#cfn-ecs-taskdefinition-healthcheck-retries): Integer

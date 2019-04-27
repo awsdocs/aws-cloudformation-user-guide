@@ -7,9 +7,9 @@ If you add a default route \(`AWS::EC2::Route` resource\) that points to a NAT g
 
 **Topics**
 + [Syntax](#aws-resource-ec2-natgateway-syntax)
-+ [Properties](#w13ab1c21c10d111c62c11)
-+ [Return Value](#w13ab1c21c10d111c62c13)
-+ [Example](#w13ab1c21c10d111c62c15)
++ [Properties](#w2922ab1c21c10c96c66c11)
++ [Return Value](#w2922ab1c21c10c96c66c13)
++ [Example](#w2922ab1c21c10c96c66c15)
 
 ## Syntax<a name="aws-resource-ec2-natgateway-syntax"></a>
 
@@ -39,7 +39,7 @@ Properties:
     - Resource Tag
 ```
 
-## Properties<a name="w13ab1c21c10d111c62c11"></a>
+## Properties<a name="w2922ab1c21c10c96c66c11"></a>
 
 `AllocationId`  <a name="cfn-ec2-natgateway-allocationid"></a>
 The allocation ID of an Elastic IP address to associate with the NAT gateway\. If the Elastic IP address is associated with another resource, you must first disassociate it\.  
@@ -59,15 +59,15 @@ Specifies an arbitrary set of tags \(key–value pairs\) to associate with this 
 *Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10d111c62c13"></a>
+## Return Value<a name="w2922ab1c21c10c96c66c13"></a>
 
-### Ref<a name="w13ab1c21c10d111c62c13b2"></a>
+### Ref<a name="w2922ab1c21c10c96c66c13b2"></a>
 
 When you pass the logical ID of an `AWS::EC2::NatGateway` resource to the intrinsic `Ref` function, the function returns the ID of the NAT gateway, such as `nat-0a12bc456789de0fg`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w13ab1c21c10d111c62c15"></a>
+## Example<a name="w2922ab1c21c10c96c66c15"></a>
 
 The following example creates a NAT gateway and a route that associates the NAT gateway with a route table\. The route table must be associated with an Internet gateway so that the NAT gateway can connect to the Internet\.
 

@@ -28,7 +28,7 @@ Properties:
   [Name](#cfn-wafregional-ipset-name): String
 ```
 
-## Properties<a name="w13ab1c21c10d237c17b7"></a>
+## Properties<a name="w2922ab1c21c10d221c17b7"></a>
 
 `IPSetDescriptors`  <a name="cfn-wafregional-ipset-ipsetdescriptors"></a>
 The IP address type and IP address range \(in CIDR notation\) from which web requests originate\. If you associate the `IPSet` with a [web ACL](aws-resource-wafregional-webacl.md) that is associated with a Amazon CloudFront \(CloudFront\) distribution, this descriptor is the value of one of the following fields in the CloudFront access logs:    
@@ -46,17 +46,17 @@ A friendly name or description of the `IPSet`\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w13ab1c21c10d237c17b9"></a>
+## Return Values<a name="w2922ab1c21c10d221c17b9"></a>
 
-### Ref<a name="w13ab1c21c10d237c17b9b2"></a>
+### Ref<a name="w2922ab1c21c10d221c17b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource physical ID, such as `1234a1a-a1b1-12a1-abcd-a123b123456`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w13ab1c21c10d237c17c11"></a>
+## Examples<a name="w2922ab1c21c10d221c17c11"></a>
 
-### Define IP Addresses<a name="w13ab1c21c10d237c17c11b2"></a>
+### Define IP Addresses<a name="w2922ab1c21c10d221c17c11b2"></a>
 
 The following example defines a set of IP addresses for a web access control list \(ACL\) rule\.
 
@@ -97,7 +97,7 @@ MyIPSetBlacklist:
         Value: "192.0.7.0/24"
 ```
 
-### Associate an IPSet with a Web ACL Rule<a name="w13ab1c21c10d237c17c11b4"></a>
+### Associate an IPSet with a Web ACL Rule<a name="w2922ab1c21c10d221c17c11b4"></a>
 
 The following example associates the `MyIPSetBlacklist` IP Set with a web ACL rule\.
 
@@ -136,7 +136,7 @@ MyIPSetRule:
         Type: "IPMatch"
 ```
 
-### Create a Web ACL<a name="w13ab1c21c10d237c17c11b6"></a>
+### Create a Web ACL<a name="w2922ab1c21c10d221c17c11b6"></a>
 
 The following example associates the `MyIPSetRule` rule with a web ACL\. The web ACL allows requests that originate from all IP addresses except for addresses that are defined in the `MyIPSetRule`\.
 

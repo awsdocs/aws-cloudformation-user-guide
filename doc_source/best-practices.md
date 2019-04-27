@@ -60,9 +60,9 @@ After you have your stacks and resources set up, you can reuse your templates to
 
 ## Use Nested Stacks to Reuse Common Template Patterns<a name="nested"></a>
 
-As your infrastructure grows, common patterns can emerge in which you declare the same components in each of your templates\. You can separate out these common components and create dedicated templates for them\. That way, you can mix and match different templates but use nested stacks to create a single, unified stack\. Nested stacks are stacks that create other stacks\. To create nested stacks, use the [AWS::CloudFormation::Stack](aws-properties-stack.md) resource in your template to reference other templates\.
+As your infrastructure grows, common patterns can emerge in which you declare the same components in each of your templates\. You can separate out these common components and create dedicated templates for them\. That way, you can mix and match different templates but use nested stacks to create a single, unified stack\. Nested stacks are stacks that create other stacks\. To create nested stacks, use the [AWS::CloudFormation::Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html) resource in your template to reference other templates\.
 
-For example, assume that you have a load balancer configuration that you use for most of your stacks\. Instead of copying and pasting the same configurations into your templates, you can create a dedicated template for the load balancer\. Then, you just use the [AWS::CloudFormation::Stack](aws-properties-stack.md) resource to reference that template from within other templates\. If the load balancer template is updated, any stack that is referencing it will use the updated load balancer \(only after you update the stack\)\. In addition to simplifying updates, this approach lets you use experts to create and maintain components that you might not be necessarily familiar with\. All you need to do is reference their templates\.
+For example, assume that you have a load balancer configuration that you use for most of your stacks\. Instead of copying and pasting the same configurations into your templates, you can create a dedicated template for the load balancer\. Then, you just use the [AWS::CloudFormation::Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html) resource to reference that template from within other templates\. If the load balancer template is updated, any stack that is referencing it will use the updated load balancer \(only after you update the stack\)\. In addition to simplifying updates, this approach lets you use experts to create and maintain components that you might not be necessarily familiar with\. All you need to do is reference their templates\.
 
 ## Do Not Embed Credentials in Your Templates<a name="creds"></a>
 
@@ -82,7 +82,7 @@ With constraints, you can describe allowed input values so that AWS CloudFormati
 
 When you launch stacks, you can install and configure software applications on Amazon EC2 instances by using the cfn\-init helper script and the `AWS::CloudFormation::Init` resource\. By using `AWS::CloudFormation::Init`, you can describe the configurations that you want rather than scripting procedural steps\. You can also update configurations without recreating instances\. And if anything goes wrong with your configuration, AWS CloudFormation generates logs that you can use to investigate issues\.
 
-In your template, specify installation and configuration states in the [`AWS::CloudFormation::Init`](aws-resource-init.md) resource\. For a walkthrough that shows how to use cfn\-init and `AWS::CloudFormation::Init`, see [Deploying Applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
+In your template, specify installation and configuration states in the `AWS::CloudFormation::Init` resource\. For a walkthrough that shows how to use cfn\-init and `AWS::CloudFormation::Init`, see [Deploying Applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
 
 ## Use the Latest Helper Scripts<a name="helper-scripts"></a>
 

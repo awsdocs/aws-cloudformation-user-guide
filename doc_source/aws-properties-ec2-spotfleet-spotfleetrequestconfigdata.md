@@ -2,7 +2,7 @@
 
 `SpotFleetRequestConfigData` is a property of the [AWS::EC2::SpotFleet](aws-resource-ec2-spotfleet.md) resource that defines the configuration of a Spot fleet request\.
 
-## Syntax<a name="w13ab1c21c10d111d118c77b5"></a>
+## Syntax<a name="w2922ab1c21c10c96d122c77b5"></a>
 
 ### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-syntax.json"></a>
 
@@ -47,7 +47,7 @@
 [ValidUntil](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-validuntil): String
 ```
 
-## Properties<a name="w13ab1c21c10d111d118c77b7"></a>
+## Properties<a name="w2922ab1c21c10c96d122c77b7"></a>
 
 For more information, including property defaults, valid values, and constraints, see [SpotFleetRequestConfigData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotFleetRequestConfigData.html) in the *Amazon EC2 API Reference*\.
 

@@ -5,9 +5,9 @@ The `AWS::DMS::ReplicationTask` resource creates an AWS DMS replication task\.
 **Topics**
 + [Syntax](#aws-resource-dms-replicationtask-syntax)
 + [Properties](#aws-resource-dms-replicationtask-prop)
-+ [Return Value](#w13ab1c21c10d102c33c11)
++ [Return Value](#w2922ab1c21c10c88c33c11)
 + [Example](#aws-resource-dms-replicationtask-example)
-+ [See Also](#w13ab1c21c10d102c33c15)
++ [See Also](#w2922ab1c21c10c88c33c15)
 
 ## Syntax<a name="aws-resource-dms-replicationtask-syntax"></a>
 
@@ -110,9 +110,9 @@ The ARN string that uniquely identifies the endpoint\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w13ab1c21c10d102c33c11"></a>
+## Return Value<a name="w2922ab1c21c10c88c33c11"></a>
 
-### Ref<a name="w13ab1c21c10d102c33c11b2"></a>
+### Ref<a name="w2922ab1c21c10c88c33c11b2"></a>
 
 When you pass the logical ID of an `AWS::DMS::ReplicationTask` resource to the intrinsic `Ref` function, the function returns the replication task ARN\.
 
@@ -168,6 +168,6 @@ Resources:
       }"
 ```
 
-## See Also<a name="w13ab1c21c10d102c33c15"></a>
+## See Also<a name="w2922ab1c21c10c88c33c15"></a>
 + [CreateReplicationTask](http://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationTask.html) in the *AWS Database Migration Service API Reference*\.
 + [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)

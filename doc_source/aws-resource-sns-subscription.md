@@ -2,11 +2,6 @@
 
 The `AWS::SNS::Subscription` resource subscribes an endpoint to an Amazon Simple Notification Service \(Amazon SNS\) topic\. The owner of the endpoint must confirm the subscription before Amazon SNS creates the subscription\.
 
-**Topics**
-+ [Syntax](#aws-resource-sns-subscription-syntax)
-+ [Properties](#aws-resource-sns-subscription-properties)
-+ [Example](#aws-resource-sns-subscription-examples)
-
 ## Syntax<a name="aws-resource-sns-subscription-syntax"></a>
 
 ### JSON<a name="aws-resource-sns-subscription-syntax.json"></a>
@@ -73,7 +68,7 @@ The subscription's protocol\. For more information, see the [Subscribe Protocol]
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `Region`  <a name="cfn-sns-subscription-region"></a>
-The region in which the topic resides\.  
+For cross\-region subscriptions, the region in which the topic resides\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)

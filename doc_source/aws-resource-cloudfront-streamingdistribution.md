@@ -45,13 +45,13 @@ Duplicates not allowed\.
 
 ## Return Values<a name="aws-resource-cloudfront-streamingdistribution-returnvalues"></a>
 
-### Ref<a name="w13ab1c21c10c60c22c12b3"></a>
+### Ref<a name="w2922ab1c21c10c52c22c12b3"></a>
 
 When you pass the logical ID of an `AWS::CloudFront::StreamingDistribution` resource to the intrinsic `Ref` function, the function returns the streaming distribution ID, such as `E1E7FEN9T35R9W`\. 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
 
-### Fn::GetAtt<a name="w13ab1c21c10c60c22c12b5"></a>
+### Fn::GetAtt<a name="w2922ab1c21c10c52c22c12b5"></a>
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 

@@ -54,7 +54,7 @@ Properties:
     String: String
 ```
 
-## Properties<a name="w13ab1c21c10c20c76b9"></a>
+## Properties<a name="w2922ab1c21c10c19c76b9"></a>
 
 `AccessLogSetting`  <a name="cfn-apigateway-stage-accesslogsetting"></a>
 Specifies settings for logging access in this stage\.  
@@ -140,9 +140,9 @@ A map \(string\-to\-string map\) that defines the stage variables, where the var
 *Type*: Mapping of key\-value pairs  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10c20c76c11"></a>
+## Return Value<a name="w2922ab1c21c10c19c76c11"></a>
 
-### Ref<a name="w13ab1c21c10c20c76c11b2"></a>
+### Ref<a name="w2922ab1c21c10c19c76c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the name of the stage, such as `MyTestStage`\.
 

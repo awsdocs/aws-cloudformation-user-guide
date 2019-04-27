@@ -49,7 +49,7 @@ Properties:
     [*TargetTrackingConfiguration*](aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.md)
 ```
 
-## Properties<a name="w13ab1c21c10c42c26c13"></a>
+## Properties<a name="w2922ab1c21c10c38c26c13"></a>
 
 `AdjustmentType`  <a name="cfn-as-scalingpolicy-adjustmenttype"></a>
 Specifies whether the `ScalingAdjustment` is an absolute number or a percentage of the current capacity\. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`\.  
@@ -114,15 +114,15 @@ Configures a target tracking scaling policy\.
 *Type*: [Amazon EC2 Auto Scaling ScalingPolicy TargetTrackingConfiguration](aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10c42c26c15"></a>
+## Return Value<a name="w2922ab1c21c10c38c26c15"></a>
 
 When you specify an `AWS::AutoScaling::ScalingPolicy` type as an argument to the `Ref` function, AWS CloudFormation returns the policy Amazon Resource Name \(ARN\), such as `arn:aws:autoscaling:``us-east-2``:123456789012:scalingPolicy:ab12c4d5-a1b2-a1b2-a1b2-ab12c4d56789:autoScalingGroupName/myStack-AutoScalingGroup-AB12C4D5E6:policyName/myStack-myScalingPolicy-AB12C4D5E6`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w13ab1c21c10c42c26c17"></a>
+## Examples<a name="w2922ab1c21c10c38c26c17"></a>
 
-### Simple policy type<a name="w13ab1c21c10c42c26c17b3"></a>
+### Simple policy type<a name="w2922ab1c21c10c38c26c17b3"></a>
 
 The following example is a simple scaling policy that increases the number instances by one when it is triggered\.
 
@@ -155,7 +155,7 @@ SimpleScaling:
     ScalingAdjustment: 1
 ```
 
-### Step policy type<a name="w13ab1c21c10c42c26c17b5"></a>
+### Step policy type<a name="w2922ab1c21c10c38c26c17b5"></a>
 
 The following example is a step scaling policy that increases the number instances by one or two, depending on the size of the alarm breach\. For a breach that is less than 50 units than the threshold value, the policy increases the number of instances by one\. For a breach that is 50 units or more higher than the threshold, the policy increases the number of instances by two\.
 

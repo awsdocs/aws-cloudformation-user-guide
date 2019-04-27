@@ -36,7 +36,7 @@ The location of a script that executes a job\.
 
 `Name`  <a name="cfn-glue-job-jobcommand-name"></a>
 The name of the job command\.  
+Valid values are `glueetl` for an Apache Spark ETL job and `pythonshell` for a Python shell job\.  
  *Required*: Yes  
  *Type*: String  
- *Valid values*: `glueetl`, `pythonshell`  
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 

@@ -57,7 +57,7 @@ The type of permission to grant: `INSTANCE-ATTACH` or `EIP-ASSOCIATE`\.
 
 ## Return Values<a name="aws-resource-ec2-networkinterfacepermission-returnvalues"></a>
 
-### Ref<a name="w13ab1c21c10d111c84c10b3"></a>
+### Ref<a name="w2922ab1c21c10c96c88c10b3"></a>
 
 When you pass the logical ID of an `AWS::EC2::NetworkInterfacePermission` resource to the intrinsic `Ref` function, the function returns the network interface permission ID\. For example, `eni-perm-055663b682ea24b48`\.
 

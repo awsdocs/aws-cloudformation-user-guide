@@ -33,7 +33,7 @@ Properties:
   [Priority](#cfn-elasticloadbalancingv2-listenerrule-priority): Integer
 ```
 
-## Properties<a name="w13ab1c21c10d138c23b7"></a>
+## Properties<a name="w2922ab1c21c10d120c23b7"></a>
 
 `Actions`  <a name="cfn-elasticloadbalancingv2-listenerrule-actions"></a>
 The actions that the listener takes when the specified conditions are met\.  
@@ -61,15 +61,15 @@ For the valid range of values, see the `Priority` parameter for the [CreateRule]
 *Type*: Integer  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10d138c23b9"></a>
+## Return Value<a name="w2922ab1c21c10d120c23b9"></a>
 
-### Ref<a name="w13ab1c21c10d138c23b9b2"></a>
+### Ref<a name="w2922ab1c21c10d120c23b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the rule's ARN, such as `arn:aws:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w13ab1c21c10d138c23c11"></a>
+## Example<a name="w2922ab1c21c10d120c23c11"></a>
 
 The following example creates a rule that forwards requests to the `TargetGroup` target group if the request URL contains the `/img/*` pattern\.
 

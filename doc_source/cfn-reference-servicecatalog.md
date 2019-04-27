@@ -19,5 +19,6 @@ AWS::ServiceCatalog::data-type-name
 + [AWS::ServiceCatalog::PortfolioPrincipalAssociation](aws-resource-servicecatalog-portfolioprincipalassociation.md)
 + [AWS::ServiceCatalog::PortfolioProductAssociation](aws-resource-servicecatalog-portfolioproductassociation.md)
 + [AWS::ServiceCatalog::PortfolioShare](aws-resource-servicecatalog-portfolioshare.md)
++ [AWS::ServiceCatalog::ResourceUpdateConstraint](aws-resource-servicecatalog-resourceupdateconstraint.md)
 + [AWS::ServiceCatalog::TagOption](aws-resource-servicecatalog-tagoption.md)
 + [AWS::ServiceCatalog::TagOptionAssociation](aws-resource-servicecatalog-tagoptionassociation.md)

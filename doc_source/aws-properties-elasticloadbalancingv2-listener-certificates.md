@@ -4,7 +4,7 @@ The `Certificate` property type specifies the default server certificate that El
 
 The `Certificates` property of the [AWS::ElasticLoadBalancingV2::Listener](aws-resource-elasticloadbalancingv2-listener.md) resource contains a list of one `Certificate` property type\.
 
-## Syntax<a name="w13ab1c21c10d138c15c27b7"></a>
+## Syntax<a name="w2922ab1c21c10d120c15c27b7"></a>
 
 ### JSON<a name="aws-properties-elasticloadbalancingv2-listener-certificates-syntax.json"></a>
 
@@ -20,7 +20,7 @@ The `Certificates` property of the [AWS::ElasticLoadBalancingV2::Listener](aws-r
 [CertificateArn](#cfn-elasticloadbalancingv2-listener-certificates-certificatearn): String
 ```
 
-## Properties<a name="w13ab1c21c10d138c15c27b9"></a>
+## Properties<a name="w2922ab1c21c10d120c15c27b9"></a>
 
 `CertificateArn`  <a name="cfn-elasticloadbalancingv2-listener-certificates-certificatearn"></a>
 The Amazon Resource Name \(ARN\) of the certificate\.  

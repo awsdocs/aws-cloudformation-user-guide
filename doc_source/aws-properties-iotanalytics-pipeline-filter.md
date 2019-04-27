@@ -1,8 +1,6 @@
-# AWS IoT Analytics Pipeline Filter<a name="aws-properties-iotanalytics-pipeline-filter"></a>
+# AWS::IoTAnalytics::Pipeline Filter<a name="aws-properties-iotanalytics-pipeline-filter"></a>
 
-<a name="aws-properties-iotanalytics-pipeline-filter-description"></a>The `Filter` property type specifies a filter for a message based on its attributes for an AWS IoT Analytics pipeline\.
-
-<a name="aws-properties-iotanalytics-pipeline-filter-inheritance"></a> `Filter` is a property of the [Activity](aws-properties-iotanalytics-pipeline-activity.md) property type\.
+An activity that filters a message based on its attributes\.
 
 ## Syntax<a name="aws-properties-iotanalytics-pipeline-filter-syntax"></a>
 
@@ -12,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Filter](#cfn-iotanalytics-pipeline-filter-filter)" : String,
+  "[Filter](#cfn-iotanalytics-pipeline-filter-filter)" : [String](#aws-properties-iotanalytics-pipeline-filter),
   "[Name](#cfn-iotanalytics-pipeline-filter-name)" : String,
   "[Next](#cfn-iotanalytics-pipeline-filter-next)" : String
 }
@@ -21,30 +19,33 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-pipeline-filter-syntax.yaml"></a>
 
 ```
-[Filter](#cfn-iotanalytics-pipeline-filter-filter): String
-[Name](#cfn-iotanalytics-pipeline-filter-name): String
-[Next](#cfn-iotanalytics-pipeline-filter-next): String
+﻿  [Filter](#cfn-iotanalytics-pipeline-filter-filter) : [String](#aws-properties-iotanalytics-pipeline-filter)
+﻿  [Name](#cfn-iotanalytics-pipeline-filter-name) : String
+﻿  [Next](#cfn-iotanalytics-pipeline-filter-next) : String
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-pipeline-filter-properties"></a>
 
 `Filter`  <a name="cfn-iotanalytics-pipeline-filter-filter"></a>
-Filters a message based on its attributes\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+An expression that looks like an SQL WHERE clause that must return a Boolean value\.  
+*Required*: No  
+*Type*: [String](#aws-properties-iotanalytics-pipeline-filter)  
+*Minimum*: `1`  
+*Maximum*: `256`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-iotanalytics-pipeline-filter-name"></a>
 The name of the 'filter' activity\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Next`  <a name="cfn-iotanalytics-pipeline-filter-next"></a>
 The next activity in the pipeline\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
-## See Also<a name="aws-properties-iotanalytics-pipeline-filter-seealso"></a>
-+ [ Filter Activity](https://docs.aws.amazon.com/iotanalytics/latest/userguide/pipeline-activities.html#aws-iot-analytics-pipeline-activities-filter) in the *AWS IoT Analytics User Guide*
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

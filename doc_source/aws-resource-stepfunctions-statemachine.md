@@ -14,7 +14,8 @@ For information about creating state machines, see [Tutorial: A Lambda State Mac
    "Properties": {
       "[StateMachineName](#cfn-stepfunctions-statemachine-definitionname)": String,
       "[DefinitionString](#cfn-stepfunctions-statemachine-definitionstring)": String,
-      "[RoleArn](#cfn-stepfunctions-statemachine-rolearn)": String
+      "[RoleArn](#cfn-stepfunctions-statemachine-rolearn)": String,
+      "[Tags](#cfn-stepfunctions-statemachine-tags)" : [ Resource Tag, ... ] 
     }
 }
 ```
@@ -27,6 +28,8 @@ Properties:
   [StateMachineName](#cfn-stepfunctions-statemachine-definitionname): String
   [DefinitionString](#cfn-stepfunctions-statemachine-definitionstring): String
   [RoleArn](#cfn-stepfunctions-statemachine-rolearn): String
+  [Tags](#cfn-stepfunctions-statemachine-tags): 
+    - Resource Tag
 ```
 
 ## Properties<a name="aws-resource-stepfunctions-statemachine-properties"></a>
@@ -48,6 +51,12 @@ The Amazon Resource Name \(ARN\) of the IAM role to use for this state machine\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+
+`Tags`  <a name="cfn-stepfunctions-statemachine-tags"></a>
+An array of key\-value pairs\. For more information, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide* and [Controlling Access Using IAM Tags](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_iam-tags.html)\.  
+ *Required*: No  
+ *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-stepfunctions-statemachine-returnvalues"></a>
 
@@ -143,7 +152,17 @@ The following examples create a Step Functions state machine\.
                       ]
                    ]
                 },
-   	      "RoleArn" : "arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1"
+   	      "RoleArn" : "arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1",
+            "Tags": [
+                    {
+                        "Key": "keyname1",
+                        "Value": "value1"
+                    },
+                    {
+                        "Key": "keyname2",
+                        "Value": "value2"
+                    }
+                ] 
             }
         }
     }
@@ -172,4 +191,11 @@ Resources:
           }
         }
       RoleArn: arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1
+      Tags:
+        -
+          Key: "keyname1"
+          Value: "value1"
+        -
+          Key: "keyname2"
+          Value: "value2"
 ```

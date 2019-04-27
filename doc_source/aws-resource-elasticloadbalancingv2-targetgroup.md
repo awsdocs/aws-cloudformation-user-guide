@@ -10,55 +10,63 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "Type" : "AWS::ElasticLoadBalancingV2::TargetGroup",
-  "Properties" : {
-    "[HealthCheckIntervalSeconds](#cfn-elasticloadbalancingv2-targetgroup-healthcheckintervalseconds)" : Integer,
-    "[HealthCheckPath](#cfn-elasticloadbalancingv2-targetgroup-healthcheckpath)" : String,
-    "[HealthCheckPort](#cfn-elasticloadbalancingv2-targetgroup-healthcheckport)" : String,
-    "[HealthCheckProtocol](#cfn-elasticloadbalancingv2-targetgroup-healthcheckprotocol)" : String,
-    "[HealthCheckTimeoutSeconds](#cfn-elasticloadbalancingv2-targetgroup-healthchecktimeoutseconds)" : Integer,
-    "[HealthyThresholdCount](#cfn-elasticloadbalancingv2-targetgroup-healthythresholdcount)" : Integer,
-    "[Matcher](#cfn-elasticloadbalancingv2-targetgroup-matcher)" : [Matcher](aws-properties-elasticloadbalancingv2-targetgroup-matcher.md),
-    "[Name](#cfn-elasticloadbalancingv2-targetgroup-name)" : String,
-    "[Port](#cfn-elasticloadbalancingv2-targetgroup-port)" : Integer,
-    "[Protocol](#cfn-elasticloadbalancingv2-targetgroup-protocol)" : String,
-    "[Tags](#cfn-elasticloadbalancingv2-targetgroup-tags)" : [ [Resource Tag](aws-properties-resource-tags.md), ... ],
-    "[TargetGroupAttributes](#cfn-elasticloadbalancingv2-targetgroup-targetattributes)" : [ [TargetGroupAttributes](aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattributes.md), ... ],
-    "[Targets](#cfn-elasticloadbalancingv2-targetgroup-targets)" : [ [TargetDescription](aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.md), ... ],
-    "[TargetType](#cfn-elasticloadbalancingv2-targetgroup-targettype)" : String,
-    "[UnhealthyThresholdCount](#cfn-elasticloadbalancingv2-targetgroup-unhealthythresholdcount)" : Integer,
-    "[VpcId](#cfn-elasticloadbalancingv2-targetgroup-vpcid)" : String
-  }
-}
+        "Type" : "AWS::ElasticLoadBalancingV2::TargetGroup",
+        "Properties" : {
+        "[HealthCheckEnabled](#cfn-elasticloadbalancingv2-targetgroup-healthcheckenabled)" : Boolean,
+        "[HealthCheckIntervalSeconds](#cfn-elasticloadbalancingv2-targetgroup-healthcheckintervalseconds)" : Integer,
+        "[HealthCheckPath](#cfn-elasticloadbalancingv2-targetgroup-healthcheckpath)" : String,
+        "[HealthCheckPort](#cfn-elasticloadbalancingv2-targetgroup-healthcheckport)" : String,
+        "[HealthCheckProtocol](#cfn-elasticloadbalancingv2-targetgroup-healthcheckprotocol)" : String,
+        "[HealthCheckTimeoutSeconds](#cfn-elasticloadbalancingv2-targetgroup-healthchecktimeoutseconds)" : Integer,
+        "[HealthyThresholdCount](#cfn-elasticloadbalancingv2-targetgroup-healthythresholdcount)" : Integer,
+        "[Matcher](#cfn-elasticloadbalancingv2-targetgroup-matcher)" : [Matcher](aws-properties-elasticloadbalancingv2-targetgroup-matcher.md),
+        "[Name](#cfn-elasticloadbalancingv2-targetgroup-name)" : String,
+        "[Port](#cfn-elasticloadbalancingv2-targetgroup-port)" : Integer,
+        "[Protocol](#cfn-elasticloadbalancingv2-targetgroup-protocol)" : String,
+        "[Tags](#cfn-elasticloadbalancingv2-targetgroup-tags)" : [ [Resource Tag](aws-properties-resource-tags.md), ... ],
+        "[TargetGroupAttributes](#cfn-elasticloadbalancingv2-targetgroup-targetattributes)" : [ [TargetGroupAttributes](aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattributes.md), ... ],
+        "[Targets](#cfn-elasticloadbalancingv2-targetgroup-targets)" : [ [TargetDescription](aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.md), ... ],
+        "[TargetType](#cfn-elasticloadbalancingv2-targetgroup-targettype)" : String,
+        "[UnhealthyThresholdCount](#cfn-elasticloadbalancingv2-targetgroup-unhealthythresholdcount)" : Integer,
+        "[VpcId](#cfn-elasticloadbalancingv2-targetgroup-vpcid)" : String
+        }
+        }
 ```
 
 ### YAML<a name="aws-resource-elasticloadbalancingv2-targetgroup-syntax.yaml"></a>
 
 ```
 Type: AWS::ElasticLoadBalancingV2::TargetGroup
-Properties:
-  [HealthCheckIntervalSeconds](#cfn-elasticloadbalancingv2-targetgroup-healthcheckintervalseconds): Integer
-  [HealthCheckPath](#cfn-elasticloadbalancingv2-targetgroup-healthcheckpath): String
-  [HealthCheckPort](#cfn-elasticloadbalancingv2-targetgroup-healthcheckport): String
-  [HealthCheckProtocol](#cfn-elasticloadbalancingv2-targetgroup-healthcheckprotocol): String
-  [HealthCheckTimeoutSeconds](#cfn-elasticloadbalancingv2-targetgroup-healthchecktimeoutseconds): Integer
-  [HealthyThresholdCount](#cfn-elasticloadbalancingv2-targetgroup-healthythresholdcount): Integer
-  [Matcher](#cfn-elasticloadbalancingv2-targetgroup-matcher): [Matcher](aws-properties-elasticloadbalancingv2-targetgroup-matcher.md)
-  [Name](#cfn-elasticloadbalancingv2-targetgroup-name): String
-  [Port](#cfn-elasticloadbalancingv2-targetgroup-port): Integer
-  [Protocol](#cfn-elasticloadbalancingv2-targetgroup-protocol): String
-  [Tags](#cfn-elasticloadbalancingv2-targetgroup-tags):
-    - [Resource Tag](aws-properties-resource-tags.md)
-  [TargetGroupAttributes](#cfn-elasticloadbalancingv2-targetgroup-targetattributes):
-    - [TargetGroupAttributes](aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattributes.md)
-  [Targets](#cfn-elasticloadbalancingv2-targetgroup-targets):
-    - [TargetDescription](aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.md)
-  [TargetType](#cfn-elasticloadbalancingv2-targetgroup-targettype): String
-  [UnhealthyThresholdCount](#cfn-elasticloadbalancingv2-targetgroup-unhealthythresholdcount): Integer
-  [VpcId](#cfn-elasticloadbalancingv2-targetgroup-vpcid): String
+        Properties:
+        [HealthCheckEnabled](#cfn-elasticloadbalancingv2-targetgroup-healthcheckenabled): Boolean
+        [HealthCheckIntervalSeconds](#cfn-elasticloadbalancingv2-targetgroup-healthcheckintervalseconds): Integer
+        [HealthCheckPath](#cfn-elasticloadbalancingv2-targetgroup-healthcheckpath): String
+        [HealthCheckPort](#cfn-elasticloadbalancingv2-targetgroup-healthcheckport): String
+        [HealthCheckProtocol](#cfn-elasticloadbalancingv2-targetgroup-healthcheckprotocol): String
+        [HealthCheckTimeoutSeconds](#cfn-elasticloadbalancingv2-targetgroup-healthchecktimeoutseconds): Integer
+        [HealthyThresholdCount](#cfn-elasticloadbalancingv2-targetgroup-healthythresholdcount): Integer
+        [Matcher](#cfn-elasticloadbalancingv2-targetgroup-matcher): [Matcher](aws-properties-elasticloadbalancingv2-targetgroup-matcher.md)
+        [Name](#cfn-elasticloadbalancingv2-targetgroup-name): String
+        [Port](#cfn-elasticloadbalancingv2-targetgroup-port): Integer
+        [Protocol](#cfn-elasticloadbalancingv2-targetgroup-protocol): String
+        [Tags](#cfn-elasticloadbalancingv2-targetgroup-tags):
+        - [Resource Tag](aws-properties-resource-tags.md)
+        [TargetGroupAttributes](#cfn-elasticloadbalancingv2-targetgroup-targetattributes):
+        - [TargetGroupAttributes](aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattributes.md)
+        [Targets](#cfn-elasticloadbalancingv2-targetgroup-targets):
+        - [TargetDescription](aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.md)
+        [TargetType](#cfn-elasticloadbalancingv2-targetgroup-targettype): String
+        [UnhealthyThresholdCount](#cfn-elasticloadbalancingv2-targetgroup-unhealthythresholdcount): Integer
+        [VpcId](#cfn-elasticloadbalancingv2-targetgroup-vpcid): String
 ```
 
-## Properties<a name="w13ab1c21c10d138c31b7"></a>
+## Properties<a name="w2922ab1c21c10d120c31b7"></a>
+
+`HealthCheckEnabled`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthcheckenabled"></a>
+Indicates whether health checks are enabled\. If the target type is `instance` or `ip`, the default is `true`\. If the target type is `lambda`, the default is `false`\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `HealthCheckIntervalSeconds`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthcheckintervalseconds"></a>
 The approximate number of seconds between health checks for an individual target\.  
@@ -116,13 +124,13 @@ The target group name should be shorter than 32 characters because AWS CloudForm
 
 `Port`  <a name="cfn-elasticloadbalancingv2-targetgroup-port"></a>
 The port on which the targets receive traffic\.  
-*Required*: Yes  
+*Required*: Conditional This property is required if target type is `instance` or `ip`\.  
 *Type*: Integer  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 `Protocol`  <a name="cfn-elasticloadbalancingv2-targetgroup-protocol"></a>
 The protocol to use for routing traffic to the targets\.  
-*Required*: Yes  
+*Required*: Conditional This property is required if target type is `instance` or `ip`\.  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
@@ -147,6 +155,8 @@ The targets to add to this target group\.
 `TargetType`  <a name="cfn-elasticloadbalancingv2-targetgroup-targettype"></a>
 The type of targets that you must specify when registering targets with this target group\.  
 For valid and default values, see the `TargetType` parameter for the [CreateTargetGroup](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateTargetGroup.html) action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
+In order to register a lambda function as a target, you must first create a AWS::Lambda::Permission resource that grants the Elastic Load Balancing service principal permission to invoke the lambda function\. It is recommended that you specify a target group ARN in the permission to narrow down the scope of the permission to invoke a lambda function from a specified target group only\. To specify this dependency in your template, add a `DependsOn` attribute to your `AWS::ElasticLoadBalancingV2::TargetGroup` resource\.  
+For more information, see [DependsOn Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)\.
  *Required*: No  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
@@ -159,19 +169,19 @@ The number of consecutive failed health checks that are required before a target
 
 `VpcId`  <a name="cfn-elasticloadbalancingv2-targetgroup-vpcid"></a>
 The ID of the VPC\.  
-*Required*: Yes  
+*Required*: Conditional This property is required if target type is `instance` or `ip`\.  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w13ab1c21c10d138c31b9"></a>
+## Return Values<a name="w2922ab1c21c10d120c31b9"></a>
 
-### Ref<a name="w13ab1c21c10d138c31b9b2"></a>
+### Ref<a name="w2922ab1c21c10d120c31b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the target group's Amazon Resource Name \(ARN\), such as `arn:aws:elasticloadbalancing:us-west-2:123456789012:targetgroup/my-targets/73e2d6bc24d8a067`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w13ab1c21c10d138c31b9b4"></a>
+### Fn::GetAtt<a name="w2922ab1c21c10d120c31b9b4"></a>
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
@@ -186,9 +196,9 @@ The name of the target group, such as `my-target-group`\. This is the value of t
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w13ab1c21c10d138c31c11"></a>
+## Examples<a name="w2922ab1c21c10d120c31c11"></a>
 
-### Create a Target Group with EC2 Instances as Targets<a name="w13ab1c21c10d138c31c11b2"></a>
+### Create a Target Group with EC2 Instances as Targets<a name="w2922ab1c21c10d120c31c11b2"></a>
 
 The following examples creates a target group that includes the `Instance1` and `Instance2` EC2 instances as targets\. The instances must respond with a `200` status code to pass health check requests\.
 
@@ -196,72 +206,72 @@ The following examples creates a target group that includes the `Instance1` and 
 
 ```
 "TargetGroup" : {
-  "Type" : "AWS::ElasticLoadBalancingV2::TargetGroup",
-  "Properties" : {
-    "HealthCheckIntervalSeconds": 30,
-    "HealthCheckProtocol": "HTTPS",
-    "HealthCheckTimeoutSeconds": 10,
-    "HealthyThresholdCount": 4,
-    "Matcher" : {
-      "HttpCode" : "200"
-    },
-    "Name": "MyTargets",
-    "Port": 10,
-    "Protocol": "HTTPS",
-    "TargetGroupAttributes": [{
-      "Key": "deregistration_delay.timeout_seconds",
-      "Value": "20"
-    }],
-    "Targets": [
-      { "Id": {"Ref" : "Instance1"}, "Port": 80 },
-      { "Id": {"Ref" : "Instance2"}, "Port": 80 }
-    ],
-    "UnhealthyThresholdCount": 3,
-    "VpcId": {"Ref" : "VPC"},
-    "Tags" : [
-      { "Key" : "key", "Value" : "value" },
-      { "Key" : "key2", "Value" : "value2" }
-    ]
-  }
-}
+          "Type" : "AWS::ElasticLoadBalancingV2::TargetGroup",
+          "Properties" : {
+          "HealthCheckIntervalSeconds": 30,
+          "HealthCheckProtocol": "HTTPS",
+          "HealthCheckTimeoutSeconds": 10,
+          "HealthyThresholdCount": 4,
+          "Matcher" : {
+          "HttpCode" : "200"
+          },
+          "Name": "MyTargets",
+          "Port": 10,
+          "Protocol": "HTTPS",
+          "TargetGroupAttributes": [{
+          "Key": "deregistration_delay.timeout_seconds",
+          "Value": "20"
+          }],
+          "Targets": [
+          { "Id": {"Ref" : "Instance1"}, "Port": 80 },
+          { "Id": {"Ref" : "Instance2"}, "Port": 80 }
+          ],
+          "UnhealthyThresholdCount": 3,
+          "VpcId": {"Ref" : "VPC"},
+          "Tags" : [
+          { "Key" : "key", "Value" : "value" },
+          { "Key" : "key2", "Value" : "value2" }
+          ]
+          }
+          }
 ```
 
 #### YAML<a name="aws-resource-elasticloadbalancingv2-targetgroup-example.yaml"></a>
 
 ```
 TargetGroup:
-  Type: AWS::ElasticLoadBalancingV2::TargetGroup
-  Properties:
-    HealthCheckIntervalSeconds: 30
-    HealthCheckProtocol: HTTPS
-    HealthCheckTimeoutSeconds: 10
-    HealthyThresholdCount: 4
-    Matcher:
-      HttpCode: '200'
-    Name: MyTargets
-    Port: 10
-    Protocol: HTTPS
-    TargetGroupAttributes:
-    - Key: deregistration_delay.timeout_seconds
-      Value: '20'
-    Targets:
-    - Id:
-        Ref: Instance1
-      Port: 80
-    - Id:
-        Ref: Instance2
-      Port: 80
-    UnhealthyThresholdCount: 3
-    VpcId:
-      Ref: VPC
-    Tags:
-    - Key: key
-      Value: value
-    - Key: key2
-      Value: value2
+          Type: AWS::ElasticLoadBalancingV2::TargetGroup
+          Properties:
+          HealthCheckIntervalSeconds: 30
+          HealthCheckProtocol: HTTPS
+          HealthCheckTimeoutSeconds: 10
+          HealthyThresholdCount: 4
+          Matcher:
+          HttpCode: '200'
+          Name: MyTargets
+          Port: 10
+          Protocol: HTTPS
+          TargetGroupAttributes:
+          - Key: deregistration_delay.timeout_seconds
+          Value: '20'
+          Targets:
+          - Id:
+          Ref: Instance1
+          Port: 80
+          - Id:
+          Ref: Instance2
+          Port: 80
+          UnhealthyThresholdCount: 3
+          VpcId:
+          Ref: VPC
+          Tags:
+          - Key: key
+          Value: value
+          - Key: key2
+          Value: value2
 ```
 
-### Relate an Elastic Load Balancing Load Balancer to an Elastic Load Balancing Target Group<a name="w13ab1c21c10d138c31c11b4"></a>
+### Relate an Elastic Load Balancing Load Balancer to an Elastic Load Balancing Target Group<a name="w2922ab1c21c10d120c31c11b4"></a>
 
 The following example creates an Elastic Load Balancing listener, associates it with a target group and a load balancer, and sets a target group attribute\.
 
@@ -269,82 +279,82 @@ The following example creates an Elastic Load Balancing listener, associates it 
 
 ```
 "ALBListener" : {
-  "Type" : "AWS::ElasticLoadBalancingV2::Listener",
-  "Properties" : {
-    "DefaultActions" : [{
-      "Type" : "forward",
-      "TargetGroupArn" : { "Ref" : "ALBTargetGroup" }
-    }],
-    "LoadBalancerArn" : { "Ref" : "ApplicationLoadBalancer" },
-    "Port" : "80",
-    "Protocol" : "HTTP"
-  }
-},
-"ApplicationLoadBalancer" : {
-  "Type" : "AWS::ElasticLoadBalancingV2::LoadBalancer",
-  "Properties" : {
-    "Scheme" : "internet-facing",
-    "Subnets" : [ {"Ref" : "PublicSubnetAz1"}, {"Ref" : "PublicSubnetAz2"}],
-    "SecurityGroups" : [{"Ref": "ALBSecurityGroup"}]
-  }
-},
-"ALBTargetGroup" : {
-  "Type" : "AWS::ElasticLoadBalancingV2::TargetGroup",
-  "Properties" : {
-    "HealthCheckIntervalSeconds" : 60,
-    "UnhealthyThresholdCount" : 10,
-    "HealthCheckPath" : "/",
-    "Name" : "MyTargetGroup",
-    "Port" : 80,
-    "Protocol" : "HTTP",
-    "VpcId" : { "Ref": "MyVpc" }
-    "TargetGroupAttributes" : [
-      {
-        "Key" : deregistration_delay.timeout_seconds,
-        "Value" : 60
-      }
-    ]
-  }
-}
+          "Type" : "AWS::ElasticLoadBalancingV2::Listener",
+          "Properties" : {
+          "DefaultActions" : [{
+          "Type" : "forward",
+          "TargetGroupArn" : { "Ref" : "ALBTargetGroup" }
+          }],
+          "LoadBalancerArn" : { "Ref" : "ApplicationLoadBalancer" },
+          "Port" : "80",
+          "Protocol" : "HTTP"
+          }
+          },
+          "ApplicationLoadBalancer" : {
+          "Type" : "AWS::ElasticLoadBalancingV2::LoadBalancer",
+          "Properties" : {
+          "Scheme" : "internet-facing",
+          "Subnets" : [ {"Ref" : "PublicSubnetAz1"}, {"Ref" : "PublicSubnetAz2"}],
+          "SecurityGroups" : [{"Ref": "ALBSecurityGroup"}]
+          }
+          },
+          "ALBTargetGroup" : {
+          "Type" : "AWS::ElasticLoadBalancingV2::TargetGroup",
+          "Properties" : {
+          "HealthCheckIntervalSeconds" : 60,
+          "UnhealthyThresholdCount" : 10,
+          "HealthCheckPath" : "/",
+          "Name" : "MyTargetGroup",
+          "Port" : 80,
+          "Protocol" : "HTTP",
+          "VpcId" : { "Ref": "MyVpc" }
+          "TargetGroupAttributes" : [
+          {
+          "Key" : deregistration_delay.timeout_seconds,
+          "Value" : 60
+          }
+          ]
+          }
+          }
 ```
 
 #### YAML<a name="aws-resource-elasticloadbalancingv2-load-balancer-target-group-example.yaml"></a>
 
 ```
 ALBListener:
-  Type: AWS::ElasticLoadBalancingV2::Listener
-  Properties:
-    DefaultActions:
-      - Type: forward
-        TargetGroupArn:
+          Type: AWS::ElasticLoadBalancingV2::Listener
+          Properties:
+          DefaultActions:
+          - Type: forward
+          TargetGroupArn:
           Ref: ALBTargetGroup
-    LoadBalancerArn:
-        Ref: ApplicationLoadBalancer
-    Port: 80
-    Protocol: HTTP
-ApplicationLoadBalancer:
-  Type: AWS::ElasticLoadBalancingV2::LoadBalancer
-  Properties:
-    Scheme: internet-facing
-    Subnets:
-      Ref: PublicSubnetAz1
-      Ref: PublicSubnetAz2
-    SecurityGroups:
-      Ref: ALBSecurityGroup
-ALBTargetGroup:
-  Type: AWS::ElasticLoadBalancingV2::TargetGroup
-  Properties:
-    HealthCheckIntervalSeconds: 60
-    UnhealthyThresholdCount: 10
-    HealthCheckPath: /
-    Name: MyTargetGroup
-    Port: 80
-    Protocol: HTTP
-    VpcId:
-      Ref: MyVpc
-    TargetGroupAttributes:
-      - Key: deregistration_delay.timeout_seconds
-        Value: 60
+          LoadBalancerArn:
+          Ref: ApplicationLoadBalancer
+          Port: 80
+          Protocol: HTTP
+          ApplicationLoadBalancer:
+          Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+          Properties:
+          Scheme: internet-facing
+          Subnets:
+          Ref: PublicSubnetAz1
+          Ref: PublicSubnetAz2
+          SecurityGroups:
+          Ref: ALBSecurityGroup
+          ALBTargetGroup:
+          Type: AWS::ElasticLoadBalancingV2::TargetGroup
+          Properties:
+          HealthCheckIntervalSeconds: 60
+          UnhealthyThresholdCount: 10
+          HealthCheckPath: /
+          Name: MyTargetGroup
+          Port: 80
+          Protocol: HTTP
+          VpcId:
+          Ref: MyVpc
+          TargetGroupAttributes:
+          - Key: deregistration_delay.timeout_seconds
+          Value: 60
 ```
 
 ### Specify the Elastic Load Balancing Target Group type<a name="aws-resource-elasticloadbalancingv2-targetgroup-example3"></a>

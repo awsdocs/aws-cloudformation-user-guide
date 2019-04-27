@@ -2,7 +2,7 @@
 
 `GeoRestriction` is a property of the [CloudFront Distribution Restrictions](aws-properties-cloudfront-distribution-restrictions.md) property that describes the countries in which Amazon CloudFront allows viewers to access your content\.
 
-## Syntax<a name="w13ab1c21c10c60c14c52b5"></a>
+## Syntax<a name="w2922ab1c21c10c52c14c52b5"></a>
 
 ### JSON<a name="aws-properties-cloudfront-distribution-georestriction-syntax.json"></a>
 
@@ -21,7 +21,7 @@
 [RestrictionType](#cfn-cloudfront-distribution-georestriction-restrictiontype): String
 ```
 
-## Properties<a name="w13ab1c21c10c60c14c52b7"></a>
+## Properties<a name="w2922ab1c21c10c52c14c52b7"></a>
 
 **Note**  
 For more information about the constraints and valid values of each property, see the [GeoRestriction](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GeoRestriction.html) data type in the *Amazon CloudFront API Reference*\.

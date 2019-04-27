@@ -2,7 +2,7 @@
 
 `IPSetDescriptors` is a property of the [AWS::WAFRegional::IPSet](aws-resource-wafregional-ipset.md) resource that specifies the IP address type and IP address range \(in CIDR notation\) from which web requests originate\.
 
-## Syntax<a name="w13ab1c21c10d237c17c15b5"></a>
+## Syntax<a name="w2922ab1c21c10d221c17c15b5"></a>
 
 ### JSON<a name="aws-properties-wafregional-ipset-ipsetdescriptors-syntax.json"></a>
 
@@ -20,7 +20,7 @@
 [Value](#cfn-wafregional-ipset-ipsetdescriptors-value): String
 ```
 
-## Properties<a name="w13ab1c21c10d237c17c15b7"></a>
+## Properties<a name="w2922ab1c21c10d221c17c15b7"></a>
 
 `Type`  <a name="cfn-wafregional-ipset-ipsetdescriptors-type"></a>
 The IP address type, such as `IPV4`\. For valid values, see the `Type` contents of the [IPSetDescriptor](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_IPSetDescriptor.html) data type in the *AWS WAF Regional API Reference*\.  

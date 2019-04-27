@@ -39,7 +39,7 @@ Properties:
   [Value](#cfn-apigateway-apikey-value): String
 ```
 
-## Properties<a name="w13ab1c21c10c20c17b9"></a>
+## Properties<a name="w2922ab1c21c10c19c17b9"></a>
 
 `CustomerId`  <a name="cfn-apigateway-apikey-customerid"></a>
 An AWS Marketplace customer identifier to use when integrating with the AWS SaaS Marketplace\.  

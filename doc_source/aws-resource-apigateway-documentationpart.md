@@ -63,7 +63,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ## Example<a name="aws-resource-apigateway-documentationpart-examples"></a>
 
-### <a name="w13ab1c21c10c20c38c13b3"></a>
+### <a name="w2922ab1c21c10c19c38c13b3"></a>
 
 The following example associates a documentation part for an API entity with a documentation version\.
 

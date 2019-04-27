@@ -2,7 +2,7 @@
 
 `Ulimit` is a property of the [Amazon Elastic Container Service TaskDefinition ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md) property that specifies resource limits for an Amazon Elastic Container Service \(Amazon ECS\) container\.
 
-## Syntax<a name="w13ab1c21c10d117c21c77b5"></a>
+## Syntax<a name="w2922ab1c21c10d102c21c85b5"></a>
 
 ### JSON<a name="aws-properties-ecs-taskdefinition-containerdefinitions-ulimit-syntax.json"></a>
 
@@ -22,7 +22,7 @@
 [SoftLimit](#cfn-ecs-taskdefinition-containerdefinition-ulimit-softlimit): Integer
 ```
 
-## Properties<a name="w13ab1c21c10d117c21c77b7"></a>
+## Properties<a name="w2922ab1c21c10d102c21c85b7"></a>
 
 `HardLimit`  <a name="cfn-ecs-taskdefinition-containerdefinition-ulimit-hardlimit"></a>
 The hard limit for the ulimit type\.  
@@ -31,7 +31,7 @@ The hard limit for the ulimit type\.
 
 `Name`  <a name="cfn-ecs-taskdefinition-containerdefinition-ulimit-name"></a>
 The type of ulimit\. For valid values, see the `name` content for the [Ulimit](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_Ulimit.html) data type in the *Amazon Elastic Container Service API Reference*\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String
 
 `SoftLimit`  <a name="cfn-ecs-taskdefinition-containerdefinition-ulimit-softlimit"></a>

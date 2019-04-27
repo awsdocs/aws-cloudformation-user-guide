@@ -39,7 +39,7 @@ Properties:
   [RoleARN](#cfn-as-lifecyclehook-rolearn): String
 ```
 
-## Properties<a name="w13ab1c21c10c42c22b7"></a>
+## Properties<a name="w2922ab1c21c10c38c22b7"></a>
 
 For information about valid and default values, see [PutLifecycleHook](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutLifecycleHook.html) in the *Amazon EC2 Auto Scaling API Reference*\.
 
@@ -91,7 +91,7 @@ The ARN of the IAM role that allows the Auto Scaling group to publish to the spe
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10c42c22b9"></a>
+## Return Value<a name="w2922ab1c21c10c38c22b9"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -103,7 +103,7 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w13ab1c21c10c42c22c11"></a>
+## Example<a name="w2922ab1c21c10c38c22c11"></a>
 
 In the following template snippet, the Amazon EC2 Auto Scaling pauses instances before completely terminating them\. While in the pending state, you can, for example, connect to the instance and download logs or any other data before the instance is terminated\.
 

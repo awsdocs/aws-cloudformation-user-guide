@@ -1,6 +1,6 @@
 # AWS::RoboMaker::Fleet<a name="aws-resource-robomaker-fleet"></a>
 
-The `AWS::RoboMaker::Fleet` resource creates an AWS RoboMaker fleet\. Fleets contain robots and can receive deployments\. For more information, see [API\_CreateFleet](https://docs.aws.amazon.com/robomaker/latest/dg/API_CreateFleet) in the *RoboMaker Developer Guide*\. 
+The `AWS::RoboMaker::Fleet` resource creates an AWS RoboMaker fleet\. Fleets contain robots and can receive deployments\.
 
 ## Syntax<a name="aws-resource-robomaker-fleet-syntax"></a>
 
@@ -12,59 +12,64 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::RoboMaker::Fleet",
   "Properties" : {
-    "[Name](#cfn-robomaker-fleet-name)" : String,
-    "[Tags](#cfn-robomaker-fleet-tags)" : JSON object
-  }
+      "[Name](#cfn-robomaker-fleet-name)" : String,
+      "[Tags](#cfn-robomaker-fleet-tags)" : Json
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-robomaker-fleet-syntax.yaml"></a>
 
 ```
-Type: "AWS::RoboMaker::Fleet"
-Properties:
-  [Name](#cfn-robomaker-fleet-name): String
-  [Tags](#cfn-robomaker-fleet-tags): JSON object
+Type: AWS::RoboMaker::Fleet
+Properties : 
+﻿  [Name](#cfn-robomaker-fleet-name) : String
+﻿  [Tags](#cfn-robomaker-fleet-tags) : Json
 ```
 
 ## Properties<a name="aws-resource-robomaker-fleet-properties"></a>
 
 `Name`  <a name="cfn-robomaker-fleet-name"></a>
 The name of the fleet\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[a-zA-Z0-9_\-]*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-robomaker-fleet-tags"></a>
-An array of key\-value pairs\. For more information, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.  
- *Required*: No  
- *Type*: JSON object  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The list of all tags added to the fleet\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-robomaker-fleet-returnvalues"></a>
+## Return Values<a name="aws-resource-robomaker-fleet-return-values"></a>
 
-### Ref<a name="aws-resource-robomaker-fleet-ref"></a>
+### Ref<a name="aws-resource-robomaker-fleet-return-values-ref"></a>
 
 When you pass the logical ID of an `AWS::RoboMaker::Fleet` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the fleet, such as `arn:aws:robomaker:us-west-2:123456789012:deployment-fleet/MyFleet/1539894765711`\. 
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Fn::GetAtt<a name="aws-resource-robomaker-fleet-getatt"></a>
+### Fn::GetAtt<a name="aws-resource-robomaker-fleet-return-values-fn--getatt"></a>
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
-The Amazon Resource Name \(ARN\) of the fleet, such as `arn:aws:robomaker:us-west-2:123456789012:deployment-fleet/MyFleet/1539894765711`\. 
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
+#### <a name="aws-resource-robomaker-fleet-return-values-fn--getatt-fn--getatt"></a>
 
-## Examples<a name="aws-resource-robomaker-fleet-examples"></a>
+`Arn`  <a name="Arn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the fleet, such as `arn:aws:robomaker:us-west-2:123456789012:deployment-fleet/MyFleet/1539894765711`\.
 
-### Create an AWS RoboMaker Fleet<a name="aws-resource-robomaker-fleet-example1"></a>
+## Examples<a name="aws-resource-robomaker-fleet--examples"></a>
+
+### Specifies an AWS RoboMaker Fleet<a name="aws-resource-robomaker-fleet--examples--Specifies_an_AWS_RoboMaker_Fleet"></a>
 
 The following example creates a fleet\.
 
-#### JSON<a name="aws-resource-robomaker-fleet-example1.json"></a>
+#### JSON<a name="aws-resource-robomaker-fleet--examples--Specifies_an_AWS_RoboMaker_Fleet--json"></a>
 
 ```
 {
@@ -89,7 +94,7 @@ The following example creates a fleet\.
 }
 ```
 
-#### YAML<a name="aws-resource-robomaker-fleet-example1.yaml"></a>
+#### YAML<a name="aws-resource-robomaker-fleet--examples--Specifies_an_AWS_RoboMaker_Fleet--yaml"></a>
 
 ```
 ---

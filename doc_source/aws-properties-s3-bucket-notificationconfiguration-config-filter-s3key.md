@@ -1,27 +1,30 @@
-# Amazon S3 Bucket S3KeyFilter<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key"></a>
+# AWS::S3::Bucket S3KeyFilter<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key"></a>
 
-`S3Key` is a property of the [Amazon S3 Bucket NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md) property that specifies the key names of Amazon Simple Storage Service \(Amazon S3\) objects for which to send notifications\.
+A container for object key name prefix and suffix filtering rules\.
 
-## Syntax<a name="w13ab1c21c10d204c13d138b5"></a>
+## Syntax<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-syntax.json"></a>
 
 ```
 {
-  "[Rules](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules)" : [ Rule, ... ]
+  "[Rules](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules)" : [ [FilterRule](aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules.md), ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-syntax.yaml"></a>
 
 ```
-[Rules](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules):
-  - Rule
+﻿  [Rules](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules) : 
+    - [FilterRule](aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules.md)
 ```
 
-## Properties<a name="w13ab1c21c10d204c13d138b7"></a>
+## Properties<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-properties"></a>
 
 `Rules`  <a name="cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules"></a>
-The object key name to filter on and whether to filter on the suffix or prefix of the key name\.  
+A list of containers for the key value pair that defines the criteria for the filter rule\.  
 *Required*: Yes  
-*Type*: List of [FilterRule](aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules.md)
+*Type*: List of [FilterRule](aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

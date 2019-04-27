@@ -43,7 +43,7 @@ Properties:
   [VpcId](#cfn-ec2-securitygroup-vpcid): String
 ```
 
-## Properties<a name="w13ab1c21c10d111d104c11"></a>
+## Properties<a name="w2922ab1c21c10c96d108c11"></a>
 
 `GroupName`  <a name="cfn-ec2-securitygroup-groupname"></a>
 The name of the security group\. For valid values, see the [GroupName](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSecurityGroup.html) parameter of the `CreateSecurityGroup` action in the *Amazon EC2 API Reference*\.  
@@ -85,15 +85,15 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)  
 For more information about VPC security groups, see [Security Groups](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html) in the *Amazon VPC User Guide*\.
 
-## Return Values<a name="w13ab1c21c10d111d104c13"></a>
+## Return Values<a name="w2922ab1c21c10c96d108c13"></a>
 
-### Ref<a name="w13ab1c21c10d111d104c13b2"></a>
+### Ref<a name="w2922ab1c21c10c96d108c13b2"></a>
 
 When you specify an `AWS::EC2::SecurityGroup` type as an argument to the `Ref` function, AWS CloudFormation returns the security group name or the security group ID \(for EC2\-VPC security groups that are not in a default VPC\)\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w13ab1c21c10d111d104c13b4"></a>
+### Fn::GetAtt<a name="w2922ab1c21c10c96d108c13b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -105,9 +105,9 @@ The ID of the VPC, such as `vpc-3325caf2`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w13ab1c21c10d111d104c15"></a>
+## Examples<a name="w2922ab1c21c10c96d108c15"></a>
 
-### Define Basic Ingress and Egress Rules<a name="w13ab1c21c10d111d104c15b2"></a>
+### Define Basic Ingress and Egress Rules<a name="w2922ab1c21c10c96d108c15b2"></a>
 
 The following example defines a security group with an ingress and egress rule\.
 
@@ -156,7 +156,7 @@ InstanceSecurityGroup:
       CidrIp: 0.0.0.0/0
 ```
 
-### Remove Default Rule<a name="w13ab1c21c10d111d104c15b4"></a>
+### Remove Default Rule<a name="w2922ab1c21c10c96d108c15b4"></a>
 
 When you create a VPC security group, Amazon EC2 creates a default egress rule that allows egress traffic on all ports and IP protocols to any location\. The default rule is removed only when you specify one or more egress rules\. If you want to remove the default rule and limit egress traffic to just the localhost \(`127.0.0.1/32`\), use the following example\.
 
@@ -192,6 +192,6 @@ sgwithoutegress:
       Ref: myVPC
 ```
 
-## More Info<a name="w13ab1c21c10d111d104c17"></a>
+## More Info<a name="w2922ab1c21c10c96d108c17"></a>
 + [Using Security Groups](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html) in the *Amazon EC2 User Guide for Linux Instances*\.
 + [Security Groups](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html) in the *Amazon VPC User Guide*\.

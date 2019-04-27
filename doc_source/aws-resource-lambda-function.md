@@ -62,7 +62,7 @@ Properties:
     Resource Tag
 ```
 
-## Properties<a name="w13ab1c21c10d177c21b7"></a>
+## Properties<a name="w2922ab1c21c10d166c21b7"></a>
 
 For more information about each property, including defaults, valid values, and constraints, see [CreateFunction](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html) in the *AWS Lambda Developer Guide*\.
 
@@ -164,9 +164,9 @@ A list of [tags](https://docs.aws.amazon.com/lambda/latest/dg/tagging.html) to a
 *Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w13ab1c21c10d177c21b9"></a>
+## Return Values<a name="w2922ab1c21c10d166c21b9"></a>
 
-### Ref<a name="w13ab1c21c10d177c21b9b3"></a>
+### Ref<a name="w2922ab1c21c10d166c21b9b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
@@ -178,7 +178,7 @@ In the following sample, the `Ref` function returns the name of the `AMILookUp` 
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w13ab1c21c10d177c21b9b5"></a>
+### Fn::GetAtt<a name="w2922ab1c21c10d166c21b9b5"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
@@ -187,7 +187,7 @@ The ARN of the Lambda function, such as `arn:aws:lambda:us-west-2:123456789012:M
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Example<a name="w13ab1c21c10d177c21c11"></a>
+## Example<a name="w2922ab1c21c10d166c21c11"></a>
 
 The following example uses a packaged file in an S3 bucket to create a Lambda function\.
 
@@ -232,7 +232,7 @@ AMIIDLookup:
       Mode: "Active"
 ```
 
-## Related Resources<a name="w13ab1c21c10d177c21c13"></a>
+## Related Resources<a name="w2922ab1c21c10d166c21c13"></a>
 
 For more information about how you can use a Lambda function with AWS CloudFormation custom resources, see [AWS Lambda\-backed Custom Resources](template-custom-resources-lambda.md)\.
 

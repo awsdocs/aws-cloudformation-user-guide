@@ -104,10 +104,10 @@ Parameters specified by the administrator that are required for provisioning the
  *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 `Tags`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-tags"></a>
-One or more tags\.  
+One or more tags\. Requires the provisioned product to have [`RESOURCE_UPDATE`](aws-resource-servicecatalog-resourceupdateconstraint.md) constraint with `TagUpdatesOnProvisionedProduct` set to `ALLOWED` to allow tag updates\.  
  *Required*: No  
  *Type*: List of [Resource Tag](aws-properties-resource-tags.md) property types  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
 
 ## Return Values<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct-returnvalues"></a>
 

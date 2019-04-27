@@ -40,7 +40,7 @@ Properties:
 
 `Direction`  <a name="cfn-route53resolver-resolverendpoint-direction"></a>
 Indicates whether the resolver endpoint allows inbound or outbound DNS queries\.  
-*Valid values*: `INBOUND` \| `OUTBOUND`  
+*Valid values*:`INBOUND` \| `OUTBOUND`  
  *Required*: Yes  
  *Type*: String  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 

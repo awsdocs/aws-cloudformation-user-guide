@@ -2,7 +2,7 @@
 
 `PlacementConstraint` is a property of the [AWS::ECS::Service](aws-resource-ecs-service.md) resource that specifies the placement constraints for the tasks in the service to associate with an Amazon Elastic Container Service \(Amazon ECS\) service\.
 
-## Syntax<a name="w13ab1c21c10d117c21c69b5"></a>
+## Syntax<a name="w2922ab1c21c10d102c21c77b5"></a>
 
 ### JSON<a name="aws-properties-ecs-taskdefinition-placementconstraints-taskdefinitionplacementconstraint-syntax.json"></a>
 
@@ -20,7 +20,7 @@
 [Expression](#cfn-ecs-service-placementconstraints-placementconstraint-expression): String
 ```
 
-## Properties<a name="w13ab1c21c10d117c21c69b7"></a>
+## Properties<a name="w2922ab1c21c10d102c21c77b7"></a>
 
 `Type`  <a name="cfn-ecs-service-placementconstraints-placementconstraint-type"></a>
 The type of constraint: `distinctInstance` or `memberOf`\.  

@@ -9,6 +9,7 @@ AWS::EC2::data-type-name
 ```
 
 **Topics**
++ [AWS::EC2::CapacityReservation](aws-resource-ec2-capacityreservation.md)
 + [AWS::EC2::CustomerGateway](aws-resource-ec2-customer-gateway.md)
 + [AWS::EC2::DHCPOptions](aws-resource-ec2-dhcp-options.md)
 + [AWS::EC2::EC2Fleet](aws-resource-ec2-ec2fleet.md)

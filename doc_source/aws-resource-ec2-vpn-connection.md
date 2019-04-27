@@ -41,7 +41,7 @@ Properties:
     - [*VpnTunnelOptionsSpecification*](aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.md)
 ```
 
-## Properties<a name="w13ab1c21c10d111d208b9"></a>
+## Properties<a name="w2922ab1c21c10c96d212b9"></a>
 
 `Type`  <a name="cfn-ec2-vpnconnection-type"></a>
 The type of VPN connection this virtual private gateway supports\.  
@@ -80,7 +80,7 @@ The tunnel options for the VPN connection\. Duplicates not allowed\.
  *Type*: List of [VpnTunnelOptionsSpecification](aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.md)  
  *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
-## Return Value<a name="w13ab1c21c10d111d208c11"></a>
+## Return Value<a name="w2922ab1c21c10c96d212c11"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -92,7 +92,7 @@ For the VPNConnection with the logical ID "MyVPNConnection", `Ref` will return t
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Template Example<a name="w13ab1c21c10d111d208c13"></a>
+## Template Example<a name="w2922ab1c21c10c96d212c13"></a>
 
 ### JSON<a name="aws-resource-ec2-vpnconnection-example.json"></a>
 

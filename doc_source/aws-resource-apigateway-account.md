@@ -45,7 +45,7 @@ The Amazon Resource Name \(ARN\) of an IAM role that has write access to CloudWa
 
 ## Return Value<a name="aws-resource-apigateway-account-returnvalues"></a>
 
-### Ref<a name="w13ab1c21c10c20c13c13b2"></a>
+### Ref<a name="w2922ab1c21c10c19c13c13b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ID of the resource, such as `mysta-accou-01234b567890example`\.
 

@@ -40,7 +40,7 @@ Properties:
     - AttributeType
 ```
 
-## Properties<a name="w13ab1c21c10c84c33b9"></a>
+## Properties<a name="w2922ab1c21c10c74c33b9"></a>
 
 `DesiredDeliveryMediums`  <a name="cfn-cognito-userpooluser-desireddeliverymediums"></a>
 Specifies how the welcome message will be sent\. For email, specify `EMAIL`\. To use a phone number, specify `SMS`\. You can specify more than one value\. The default value is `SMS`\.   
@@ -88,9 +88,9 @@ To configure custom validation, you must create a Pre Sign\-up Lambda trigger fo
 *Type*: List of [Amazon Cognito UserPoolUser AttributeType](aws-properties-cognito-userpooluser-attributetype.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w13ab1c21c10c84c33c11"></a>
+## Return Value<a name="w2922ab1c21c10c74c33c11"></a>
 
-### Ref<a name="w13ab1c21c10c84c33c11b2"></a>
+### Ref<a name="w2922ab1c21c10c74c33c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the name of the user\. For example, `admin`\.
 

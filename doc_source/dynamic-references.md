@@ -56,7 +56,7 @@ The name of the parameter in the Systems Manager Parameter Store\. The parameter
 Required\.
 
 **version**  
-An integer that specifies the version of the parameter to use\. You must specify the exact version is required\. You cannot currently specify that AWS CloudFormation use the latest version of a parameter\. For more information, see [Working with Parameter Versions](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-versions.html) in the *AWS Systems Manager User Guide*  
+An integer that specifies the version of the parameter to use\. You must specify the exact version\. You cannot currently specify that AWS CloudFormation use the latest version of a parameter\. For more information, see [Working with Parameter Versions](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-versions.html) in the *AWS Systems Manager User Guide*  
 Required\.
 
 ### Example<a name="dynamic-references-ssm-example"></a>
@@ -117,7 +117,7 @@ The name of the parameter in the Systems Manager Parameter Store\. The parameter
 Required\.
 
 **version**  
-An integer that specifies the version of the parameter to use\. You must specify the exact version is required\. You cannot currently specify that AWS CloudFormation use the latest version of a parameter\. For more information, see [Working with Parameter Versions](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-versions.html) in the *AWS Systems Manager User Guide*  
+An integer that specifies the version of the parameter to use\. You must specify the exact version\. You cannot currently specify that AWS CloudFormation use the latest version of a parameter\. For more information, see [Working with Parameter Versions](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-versions.html) in the *AWS Systems Manager User Guide*  
 Required\.
 
 ### Example<a name="dynamic-references-ssm-secure-example"></a>
@@ -171,17 +171,17 @@ Resources that support the `ssm-secure` dynamic reference pattern currently incl
 
 | Resource | Property Type | Properties | 
 | --- | --- | --- | 
-| [AWS::DirectoryService::MicrosoftAD](aws-resource-directoryservice-microsoftad.md) |  | `Password` | 
-| [AWS::DirectoryService::SimpleAD](aws-resource-directoryservice-simplead.md) |  | `Password` | 
+| [AWS::DirectoryService::MicrosoftAD](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html) |  | `Password` | 
+| [AWS::DirectoryService::SimpleAD](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html) |  | `Password` | 
 | [AWS::ElastiCache::ReplicationGroup](aws-resource-elasticache-replicationgroup.md) |  | `AuthToken` | 
 | [AWS::IAM::User](aws-properties-iam-user.md) | [LoginProfile](aws-properties-iam-user-loginprofile.md) | `Password` | 
-| [AWS::KinesisFirehose::DeliveryStream](aws-resource-kinesisfirehose-deliverystream.md) | [RedshiftDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.md) | `Password` | 
-| [AWS::OpsWorks::App](aws-resource-opsworks-app.md) | [AppSource](aws-properties-opsworks-stack-source.md) | `Password` | 
-| [AWS::OpsWorks::Stack](aws-resource-opsworks-stack.md) | [CustomCookbooksSource](aws-properties-opsworks-stack-source.md) | `Password` | 
-| [AWS::OpsWorks::Stack](aws-resource-opsworks-stack.md) | [RdsDbInstances](aws-properties-opsworks-stack-rdsdbinstance.md) | `DbPassword` | 
+| [AWS::KinesisFirehose::DeliveryStream](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html) | [RedshiftDestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.html) | `Password` | 
+| [AWS::OpsWorks::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html) | [Source](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source-1.html) | `Password` | 
+| [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html) | [CustomCookbooksSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html) | `Password` | 
+| [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html) | [RdsDbInstances](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html) | `DbPassword` | 
 | [AWS::RDS::DBCluster](aws-resource-rds-dbcluster.md) |  | `MasterUserPassword` | 
 | [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md) |  | `MasterUserPassword`  | 
-| [AWS::Redshift::Cluster](aws-resource-redshift-cluster.md) |  | `MasterUserPassword` | 
+| [AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html) |  | `MasterUserPassword` | 
 
 ## Secrets Manager Secrets<a name="dynamic-references-secretsmanager"></a>
 

@@ -30,7 +30,7 @@ Properties:
   [Version](#cfn-gamelift-build-version): String
 ```
 
-## Properties<a name="w13ab1c21c10d147c17b7"></a>
+## Properties<a name="w2922ab1c21c10d129c17b7"></a>
 
 `Name`  <a name="cfn-gamelift-build-name"></a>
 An identifier to associate with this build\. Build names don't need to be unique\.  
@@ -50,15 +50,15 @@ A version to associate with this build\. Version is useful if you want to track 
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10d147c17b9"></a>
+## Return Value<a name="w2922ab1c21c10d129c17b9"></a>
 
-### Ref<a name="w13ab1c21c10d147c17b9b2"></a>
+### Ref<a name="w2922ab1c21c10d129c17b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the build ID, such as `mybuild-a01234b56-7890-1de2-f345-g67h8i901j2k`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w13ab1c21c10d147c17c11"></a>
+## Example<a name="w2922ab1c21c10d129c17c11"></a>
 
 The following example creates a GameLift build named `MyGameServerBuild`\. The build package is located in an S3 bucket, specified by the `S3Bucket` and `S3Key` input parameters\. The example also creates the AWS Identity and Access Management \(IAM\) role that GameLift assumes so that it has permissions to download the build package files\.
 

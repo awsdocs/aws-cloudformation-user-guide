@@ -2,7 +2,7 @@
 
 `Integration` is a property of the [AWS::ApiGateway::Method](aws-resource-apigateway-method.md) resource that specifies information about the target backend that an Amazon API Gateway \(API Gateway\) method calls\.
 
-## Syntax<a name="w13ab1c21c10c20c55c17b5"></a>
+## Syntax<a name="w2922ab1c21c10c19c55c17b5"></a>
 
 ### JSON<a name="aws-properties-apitgateway-method-integration-syntax.json"></a>
 
@@ -34,7 +34,6 @@
 [ConnectionId](#cfn-apigateway-method-integration-connectionid): String
 [ConnectionType](#cfn-apigateway-method-integration-connectiontype): String
 [ContentHandling](#cfn-apigateway-method-integration-contenthandling): String
-
 [Credentials](#cfn-apigateway-method-integration-credentials): String
 [IntegrationHttpMethod](#cfn-apigateway-method-integration-integrationhttpmethod): String
 [IntegrationResponses](#cfn-apigateway-method-integration-integrationresponses):
@@ -49,7 +48,7 @@
 [Uri](#cfn-apigateway-method-integration-uri): String
 ```
 
-## Properties<a name="w13ab1c21c10c20c55c17b7"></a>
+## Properties<a name="w2922ab1c21c10c19c55c17b7"></a>
 
 `CacheKeyParameters`  <a name="cfn-apigateway-method-integration-cachekeyparameters"></a>
 A list of request parameters whose values API Gateway caches\. These parameters must also be specified in [RequestParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html#cfn-apigateway-method-requestparameters) to be supported in `CacheKeyParameters`\.  

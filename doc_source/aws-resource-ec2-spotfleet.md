@@ -26,7 +26,7 @@ Properties:
     SpotFleetRequestConfigData
 ```
 
-## Properties<a name="w13ab1c21c10d111d118b7"></a>
+## Properties<a name="w2922ab1c21c10c96d122b7"></a>
 
 `SpotFleetRequestConfigData`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata"></a>
 The configuration for a Spot fleet request\.  
@@ -34,15 +34,15 @@ The configuration for a Spot fleet request\.
 *Type*: [Amazon EC2 SpotFleet SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md)  
 *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
 
-## Return Values<a name="w13ab1c21c10d111d118b9"></a>
+## Return Values<a name="w2922ab1c21c10c96d122b9"></a>
 
-### Ref<a name="w13ab1c21c10d111d118b9b2"></a>
+### Ref<a name="w2922ab1c21c10c96d122b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w13ab1c21c10d111d118c11"></a>
+## Example<a name="w2922ab1c21c10c96d122c11"></a>
 
 The following example creates a Spot fleet with two launch specifications\. The weighted capacities are the same, so Amazon EC2 launches the same number of instances for each specification\. For more information, see [How Spot Fleet Works](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet.html) in the *Amazon EC2 User Guide for Linux Instances*\.
 
@@ -138,6 +138,6 @@ SpotFleet:
         WeightedCapacity: '8'
 ```
 
-## Related Resources<a name="w13ab1c21c10d111d118c13"></a>
+## Related Resources<a name="w2922ab1c21c10c96d122c13"></a>
 
 To use Application Auto Scaling to scale an Amazon ECS service in response to CloudWatch alarms, use the [AWS::ApplicationAutoScaling::ScalableTarget](aws-resource-applicationautoscaling-scalabletarget.md) and [AWS::ApplicationAutoScaling::ScalingPolicy](aws-resource-applicationautoscaling-scalingpolicy.md) resources\.

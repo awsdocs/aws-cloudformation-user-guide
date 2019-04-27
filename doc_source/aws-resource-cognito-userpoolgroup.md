@@ -4,8 +4,8 @@ The `AWS::Cognito::UserPoolGroup` resource creates a user group in an Amazon Cog
 
 **Topics**
 + [Syntax](#aws-resource-cognito-userpoolgroup-syntax)
-+ [Properties](#w13ab1c21c10c84c29b9)
-+ [Return Value](#w13ab1c21c10c84c29c11)
++ [Properties](#w2922ab1c21c10c74c29b9)
++ [Return Value](#w2922ab1c21c10c74c29c11)
 
 ## Syntax<a name="aws-resource-cognito-userpoolgroup-syntax"></a>
 
@@ -38,7 +38,7 @@ Properties:
   [UserPoolId](#cfn-cognito-userpoolgroup-userpoolid): String
 ```
 
-## Properties<a name="w13ab1c21c10c84c29b9"></a>
+## Properties<a name="w2922ab1c21c10c74c29b9"></a>
 
 `Description`  <a name="cfn-cognito-userpoolgroup-description"></a>
 A description of the user group\.  
@@ -73,9 +73,9 @@ The user pool ID\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Value<a name="w13ab1c21c10c84c29c11"></a>
+## Return Value<a name="w2922ab1c21c10c74c29c11"></a>
 
-### Ref<a name="w13ab1c21c10c84c29c11b2"></a>
+### Ref<a name="w2922ab1c21c10c74c29c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the name of the user pool group\. For example, `Admins`\.
 

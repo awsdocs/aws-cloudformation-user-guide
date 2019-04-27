@@ -2,7 +2,7 @@
 
 `Configurations` is a property of the [AWS::EMR::Cluster](aws-resource-emr-cluster.md) resource that specifies the software configuration of an Amazon EMR \(Amazon EMR\) cluster\. For example configurations, see [Configuring Applications](https://docs.aws.amazon.com//ElasticMapReduce/latest/ReleaseGuide/emr-configure-apps.html) in the *Amazon EMR Release Guide*\.
 
-## Syntax<a name="w13ab1c21c10d141c13c33b5"></a>
+## Syntax<a name="w2922ab1c21c10d123c13c33b5"></a>
 
 ### JSON<a name="aws-properties-emr-cluster-configuration-syntax.json"></a>
 
@@ -24,7 +24,7 @@
   - Configuration
 ```
 
-## Properties<a name="w13ab1c21c10d141c13c33b7"></a>
+## Properties<a name="w2922ab1c21c10d123c13c33b7"></a>
 
 `Classification`  <a name="cfn-emr-cluster-configuration-classification"></a>
 The name of an application\-specific configuration file\. For more information see, [Configuring Applications](https://docs.aws.amazon.com//ElasticMapReduce/latest/ReleaseGuide/emr-configure-apps.html) in the *Amazon EMR Release Guide*\.  

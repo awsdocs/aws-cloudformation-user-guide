@@ -44,7 +44,7 @@ Properties:
 Any AWS CodeCommit source code repositories to be cloned into the development environment\.  
  *Required*: No  
  *Type*: List of [Repository](aws-properties-cloud9-environmentec2-repository.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
 
 `OwnerArn`  <a name="cfn-cloud9-environmentec2-ownerarn"></a>
 The Amazon Resource Name \(ARN\) of the environment owner\. If this value is not specified, the ARN defaults to this environment's creator\.   

@@ -2,7 +2,7 @@
 
 `ViewerCertificate` is a property of the [CloudFront Distribution DistributionConfig](aws-properties-cloudfront-distribution-distributionconfig.md) property that specifies which certificate to use when viewers use HTTPS to request objects\.
 
-## Syntax<a name="w13ab1c21c10c60c14c83b5"></a>
+## Syntax<a name="w2922ab1c21c10c52c14c83b5"></a>
 
 ### JSON<a name="aws-properties-cloudfront-distribution-viewercertificate-syntax.json"></a>
 
@@ -26,7 +26,7 @@
 [SslSupportMethod](#cfn-cloudfront-distribution-viewercertificate-sslsupportmethod): String
 ```
 
-## Properties<a name="w13ab1c21c10c60c14c83b7"></a>
+## Properties<a name="w2922ab1c21c10c52c14c83b7"></a>
 
 `AcmCertificateArn`  <a name="cfn-cloudfront-distribution-viewercertificate-acmcertificatearn"></a>
 If you're using an alternate domain name, the Amazon Resource Name \(ARN\) of an AWS Certificate Manager \(ACM\) certificate\. Use the ACM service to provision and manage your certificates\. For more information, see the [AWS Certificate Manager User Guide](https://docs.aws.amazon.com/acm/latest/userguide/)\.  

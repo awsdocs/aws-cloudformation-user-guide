@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 [Name](#cfn-codecommit-repository-triggers-name): String
 ```
 
-## Properties<a name="w13ab1c21c10c75c13c17b7"></a>
+## Properties<a name="w2922ab1c21c10c67c13c17b7"></a>
 
 `Branches`  <a name="cfn-codecommit-repository-triggers-branches"></a>
 The names of the branches in the CodeCommit repository that contain events that you want to include in the trigger\. If you don't specify at least one branch, the trigger applies to all branches\.  

@@ -2,7 +2,7 @@
 
 The `ScalingTrigger` property type specifies the conditions that trigger an automatic scaling activity\. `ScalingTrigger` is the property type for the `Trigger` subproperty of the [Amazon EMR Cluster ScalingRule](aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig-autoscalingpolicy-constraints-scalingrule.md) property type\.
 
-## Syntax<a name="w13ab1c21c10d141c13c94b5"></a>
+## Syntax<a name="w2922ab1c21c10d123c13c94b5"></a>
 
 ### JSON<a name="aws-properties-elasticmapreduce-cluster-scalingtrigger-syntax.json"></a>
 
@@ -18,7 +18,7 @@ The `ScalingTrigger` property type specifies the conditions that trigger an auto
   [CloudWatchAlarmDefinition](#cfn-elasticmapreduce-cluster-scalingtrigger-cloudwatchalarmdefinition): CloudWatchAlarmDefinition
 ```
 
-## Properties<a name="w13ab1c21c10d141c13c94b7"></a>
+## Properties<a name="w2922ab1c21c10d123c13c94b7"></a>
 
 `CloudWatchAlarmDefinition`  <a name="cfn-elasticmapreduce-cluster-scalingtrigger-cloudwatchalarmdefinition"></a>
 The definition of a CloudWatch metric alarm\. When the defined alarm conditions are met along with other trigger parameters, scaling activity begins\.  

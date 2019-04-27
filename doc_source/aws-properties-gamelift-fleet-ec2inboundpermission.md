@@ -2,7 +2,7 @@
 
 `EC2InboundPermission` is a property of the [AWS::GameLift::Fleet](aws-resource-gamelift-fleet.md) resource that specifies the traffic that is permitted to access your game servers in an Amazon GameLift \(GameLift\) fleet\.
 
-## Syntax<a name="w13ab1c21c10d147c21c15b5"></a>
+## Syntax<a name="w2922ab1c21c10d129c21c15b5"></a>
 
 ### JSON<a name="aws-properties-gamelift-fleet-ec2inboundpermission-syntax.json"></a>
 
@@ -24,7 +24,7 @@
 [ToPort](#cfn-gamelift-fleet-ec2inboundpermissions-toport): Integer
 ```
 
-## Properties<a name="w13ab1c21c10d147c21c15b7"></a>
+## Properties<a name="w2922ab1c21c10d129c21c15b7"></a>
 
 `FromPort`  <a name="cfn-gamelift-fleet-ec2inboundpermissions-fromport"></a>
 The starting value for a range of allowed port numbers\. This value must be lower than the `ToPort` value\.  

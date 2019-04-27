@@ -2,7 +2,7 @@
 
 The `EC2 Network Interface` type is an embedded property of the [AWS::EC2::Instance](aws-properties-ec2-instance.md) type\. It specifies a network interface that is to be attached\.
 
-## Syntax<a name="w13ab1c21c10d111c49c56b5"></a>
+## Syntax<a name="w2922ab1c21c10c96c53c56b5"></a>
 
 ### JSON<a name="aws-properties-ec2-network-iface-embedded-syntax.json"></a>
 
@@ -43,7 +43,7 @@ The `EC2 Network Interface` type is an embedded property of the [AWS::EC2::Insta
 [SubnetId](#aws-properties-ec2-network-iface-embedded-subnetid): String
 ```
 
-## Properties<a name="w13ab1c21c10d111c49c56b7"></a>
+## Properties<a name="w2922ab1c21c10c96c53c56b7"></a>
 
 `AssociatePublicIpAddress`  <a name="aws-properties-ec2-network-iface-embedded-associatepubip"></a>
 Indicates whether the network interface receives a public IP address\. You can associate a public IP address with a network interface only if it has a device index of `eth0` and if it is a new network interface \(not an existing one\)\. In other words, if you specify true, don't specify a network interface ID\. For more information, see [Amazon EC2 Instance IP Addressing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html)\.  

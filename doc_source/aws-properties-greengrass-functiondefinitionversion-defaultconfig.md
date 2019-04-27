@@ -1,0 +1,36 @@
+# AWS IoT Greengrass FunctionDefinitionVersion DefaultConfig<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig"></a>
+
+<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig-description"></a>The default configuration that applies to all Lambda functions in the function definition version\. Individual Lambda functions can override these settings\.
+
+<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig-inheritance"></a> In an AWS CloudFormation template, `DefaultConfig` is a property of the [AWS::Greengrass::FunctionDefinitionVersion](aws-resource-greengrass-functiondefinitionversion.md) resource\.
+
+## Syntax<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+
+### JSON<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig-syntax.json"></a>
+
+```
+{
+  "[Execution](#cfn-greengrass-functiondefinitionversion-defaultconfig-execution)" : [*Execution*](aws-properties-greengrass-functiondefinitionversion-execution.md),
+}
+```
+
+### YAML<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig-syntax.yaml"></a>
+
+```
+[Execution](#cfn-greengrass-functiondefinitionversion-defaultconfig-execution): 
+  [*Execution*](aws-properties-greengrass-functiondefinitionversion-execution.md)
+```
+
+## Properties<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig-properties"></a>
+
+`Execution`  <a name="cfn-greengrass-functiondefinitionversion-defaultconfig-execution"></a>
+Configuration settings for the Lambda execution environment on the AWS IoT Greengrass core\.  
+ *Required*: Yes  
+ *Type*: [Execution](aws-properties-greengrass-functiondefinitionversion-execution.md)  
+ *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+
+## See Also<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig-seealso"></a>
++ [FunctionConfigurationEnvironment](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functionconfigurationenvironment.html) in the *AWS IoT Greengrass API Reference*
++ [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)

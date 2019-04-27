@@ -2,7 +2,7 @@
 
 Use the `S3Settings` property to specify settings for an Amazon S3 endpoint for a [AWS::DMS::Endpoint](aws-resource-dms-endpoint.md) resource\.
 
-## Syntax<a name="w13ab1c21c10d102c17c27b5"></a>
+## Syntax<a name="w2922ab1c21c10c88c17c27b5"></a>
 
 ### JSON<a name="aws-properties-dms-endpoint-s3settings-syntax.json"></a>
 
@@ -30,7 +30,7 @@ Use the `S3Settings` property to specify settings for an Amazon S3 endpoint for 
 [ServiceAccessRoleArn](#cfn-dms-endpoint-s3settings-serviceaccessrolearn): String
 ```
 
-## Properties<a name="w13ab1c21c10d102c17c27b7"></a>
+## Properties<a name="w2922ab1c21c10c88c17c27b7"></a>
 
 For more information about option settings, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html) in the *AWS Database Migration Service User Guide*
 

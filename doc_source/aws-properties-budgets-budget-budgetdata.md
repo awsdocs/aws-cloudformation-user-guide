@@ -1,8 +1,10 @@
-# AWS Billing and Cost Management Budget BudgetData<a name="aws-properties-budgets-budget-budgetdata"></a>
+# AWS::Budgets::Budget BudgetData<a name="aws-properties-budgets-budget-budgetdata"></a>
 
-<a name="aws-properties-budgets-budget-budgetdata-description"></a>The `BudgetData` property type specifies all of the parameters that AWS CloudFormation uses to create the budget\. These parameters include the time period that the budget covers, the amount that the budget is for, the name of the budget, what costs, usage, or RI utilization the Billing and Cost Management budget is for, and whether the budget tracks what you have spent or what you are forecast to spend\.
+Represents the output of the `CreateBudget` operation\. The content consists of the detailed metadata and data file information, and the current status of the `budget` object\.
 
-<a name="aws-properties-budgets-budget-budgetdata-inheritance"></a> `BudgetData` is a property of the [AWS::Budgets::Budget](aws-resource-budgets-budget.md) resource\.
+This is the ARN pattern for a budget: 
+
+ `arn:aws:budgetservice::AccountId:budget/budgetName` 
 
 ## Syntax<a name="aws-properties-budgets-budget-budgetdata-syntax"></a>
 
@@ -12,76 +14,84 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[BudgetLimit](#cfn-budgets-budget-budgetdata-budgetlimit)" : [*Spend*](aws-properties-budgets-budget-spend.md),
-  "[TimePeriod](#cfn-budgets-budget-budgetdata-timeperiod)" : [*TimePeriod*](aws-properties-budgets-budget-timeperiod.md),
-  "[TimeUnit](#cfn-budgets-budget-budgetdata-timeunit)" : String,
-  "[CostFilters](#cfn-budgets-budget-budgetdata-costfilters)" : Json,
+  "[BudgetLimit](#cfn-budgets-budget-budgetdata-budgetlimit)" : [Spend](aws-properties-budgets-budget-spend.md),
   "[BudgetName](#cfn-budgets-budget-budgetdata-budgetname)" : String,
-  "[CostTypes](#cfn-budgets-budget-budgetdata-costtypes)" : [*CostTypes*](aws-properties-budgets-budget-costtypes.md),
-  "[BudgetType](#cfn-budgets-budget-budgetdata-budgettype)" : String
+  "[BudgetType](#cfn-budgets-budget-budgetdata-budgettype)" : String,
+  "[CostFilters](#cfn-budgets-budget-budgetdata-costfilters)" : Json,
+  "[CostTypes](#cfn-budgets-budget-budgetdata-costtypes)" : [CostTypes](aws-properties-budgets-budget-costtypes.md),
+  "[TimePeriod](#cfn-budgets-budget-budgetdata-timeperiod)" : [TimePeriod](aws-properties-budgets-budget-timeperiod.md),
+  "[TimeUnit](#cfn-budgets-budget-budgetdata-timeunit)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-budgets-budget-budgetdata-syntax.yaml"></a>
 
 ```
-[BudgetLimit](#cfn-budgets-budget-budgetdata-budgetlimit): [*Spend*](aws-properties-budgets-budget-spend.md)
-[TimePeriod](#cfn-budgets-budget-budgetdata-timeperiod): [*TimePeriod*](aws-properties-budgets-budget-timeperiod.md)
-[TimeUnit](#cfn-budgets-budget-budgetdata-timeunit): String
-[CostFilters](#cfn-budgets-budget-budgetdata-costfilters): Json
-[BudgetName](#cfn-budgets-budget-budgetdata-budgetname): String
-[CostTypes](#cfn-budgets-budget-budgetdata-costtypes): [*CostTypes*](aws-properties-budgets-budget-costtypes.md)
-[BudgetType](#cfn-budgets-budget-budgetdata-budgettype): String
+﻿  [BudgetLimit](#cfn-budgets-budget-budgetdata-budgetlimit) : [Spend](aws-properties-budgets-budget-spend.md)
+﻿  [BudgetName](#cfn-budgets-budget-budgetdata-budgetname) : String
+﻿  [BudgetType](#cfn-budgets-budget-budgetdata-budgettype) : String
+﻿  [CostFilters](#cfn-budgets-budget-budgetdata-costfilters) : Json
+﻿  [CostTypes](#cfn-budgets-budget-budgetdata-costtypes) : [CostTypes](aws-properties-budgets-budget-costtypes.md)
+﻿  [TimePeriod](#cfn-budgets-budget-budgetdata-timeperiod) : [TimePeriod](aws-properties-budgets-budget-timeperiod.md)
+﻿  [TimeUnit](#cfn-budgets-budget-budgetdata-timeunit) : String
 ```
 
 ## Properties<a name="aws-properties-budgets-budget-budgetdata-properties"></a>
 
 `BudgetLimit`  <a name="cfn-budgets-budget-budgetdata-budgetlimit"></a>
-The total amount of cost, usage, or RI utilization that you want to track with your budget\.   
-The BudgetLimit is required for cost or usage budgets, but optional for RI utilization budgets\. RI utilization budgets default to the only valid value for RI utilization budgets, which is `100`\.   
- *Required*: No  
- *Type*: [Spend](aws-properties-budgets-budget-spend.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
-
-`TimePeriod`  <a name="cfn-budgets-budget-budgetdata-timeperiod"></a>
-The period of time covered by a budget\. Has a start date and an end date\. The start date must come before the end date\. There are no restrictions on the end date\.   
-If you create your budget and don't specify a start date, AWS defaults to the start of your chosen time period \(i\.e\. DAILY, MONTHLY, QUARTERLY, ANNUALLY\)\. For example, if you create your budget on January 24th 2018, choose `DAILY`, and don't set a start date, AWS sets your start date to `01/24/18 00:00 UTC`\. If you choose `MONTHLY`, AWS sets your start date to `01/01/18 00:00 UTC`\. If you don't specify an end date, AWS sets your end date to `06/15/87 00:00 UTC`\.  
-After the end date, AWS deletes the budget and all associated notifications and subscribers\.  
- *Required*: No  
- *Type*: [TimePeriod](aws-properties-budgets-budget-timeperiod.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
-
-`TimeUnit`  <a name="cfn-budgets-budget-budgetdata-timeunit"></a>
-The length of time until a budget resets the actual and forecasted spend to zero\.  
-Valid values are: `DAILY`, `MONTHLY`, `QUARTERLY`, and `ANNUALLY`\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
-
-`CostFilters`  <a name="cfn-budgets-budget-budgetdata-costfilters"></a>
-The cost filters applied to a budget, such as service or region\.  
- *Required*: No  
- *Type*: Json  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+The total amount of cost, usage, RI utilization, or RI coverage that you want to track with your budget\.  
+ `BudgetLimit` is required for cost or usage budgets, but optional for RI utilization or coverage budgets\. RI utilization or coverage budgets default to `100`, which is the only valid value for RI utilization or coverage budgets\.  
+*Required*: No  
+*Type*: [Spend](aws-properties-budgets-budget-spend.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BudgetName`  <a name="cfn-budgets-budget-budgetdata-budgetname"></a>
-The name of a budget\. Unique within accounts\. `:` and `\` characters are not allowed in the `BudgetName`\. If you do not include a `BudgetName` in the template, Billing and Cost Management assigns your budget a randomly generated name\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
-
-`CostTypes`  <a name="cfn-budgets-budget-budgetdata-costtypes"></a>
-The types of costs included in this budget, such as credits, subscriptions, or taxes\.  
- *Required*: No  
- *Type*: [CostTypes](aws-properties-budgets-budget-costtypes.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+The name of a budget\. The value must be unique within an account\. `BudgetName` can't include `:` and `\` characters\. If you don't include value for `BudgetName` in the template, Billing and Cost Management assigns your budget a randomly generated name\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BudgetType`  <a name="cfn-budgets-budget-budgetdata-budgettype"></a>
-Whether this budget tracks monetary costs, usage, or RI utilization\.  
-Valid values are `USAGE`, `COST`, `RI_UTILIZATION`, and `RI_COVERAGE`\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+Whether this budget tracks monetary costs, usage, RI utilization, or RI coverage\.  
+*Required*: Yes  
+*Type*: String  
+*Allowed Values*: `COST | RI_COVERAGE | RI_UTILIZATION | USAGE`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-budgets-budget-budgetdata-seealso"></a>
-+ [Budget](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_Budget.html) in the [AWS Billing and Cost Management API Reference](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/Welcome.html)\. 
+`CostFilters`  <a name="cfn-budgets-budget-budgetdata-costfilters"></a>
+The cost filters, such as service or region, that are applied to a budget\.  
+AWS Budgets supports the following services as a filter for RI budgets:  
++ Amazon Elastic Compute Cloud \- Compute
++ Amazon Redshift
++ Amazon Relational Database Service
++ Amazon ElastiCache
++ Amazon Elasticsearch Service
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CostTypes`  <a name="cfn-budgets-budget-budgetdata-costtypes"></a>
+The types of costs that are included in this `COST` budget\.  
+ `USAGE`, `RI_UTILIZATION`, and `RI_COVERAGE` budgets do not have `CostTypes`\.  
+*Required*: No  
+*Type*: [CostTypes](aws-properties-budgets-budget-costtypes.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TimePeriod`  <a name="cfn-budgets-budget-budgetdata-timeperiod"></a>
+The period of time that is covered by a budget\. The period has a start date and an end date\. The start date must come before the end date\. There are no restrictions on the end date\.   
+The start date for a budget\. If you created your budget and didn't specify a start date, the start date defaults to the start of the chosen time period \(MONTHLY, QUARTERLY, or ANNUALLY\)\. For example, if you create your budget on January 24, 2019, choose `MONTHLY`, and don't set a start date, the start date defaults to `01/01/19 00:00 UTC`\. The defaults are the same for the AWS Billing and Cost Management console and the API\.  
+You can change your start date with the `UpdateBudget` operation\.  
+After the end date, AWS deletes the budget and all associated notifications and subscribers\.  
+*Required*: No  
+*Type*: [TimePeriod](aws-properties-budgets-budget-timeperiod.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TimeUnit`  <a name="cfn-budgets-budget-budgetdata-timeunit"></a>
+The length of time until a budget resets the actual and forecasted spend\. `DAILY` is available only for `RI_UTILIZATION` and `RI_COVERAGE` budgets\.   
+*Required*: Yes  
+*Type*: String  
+*Allowed Values*: `ANNUALLY | DAILY | MONTHLY | QUARTERLY`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See Also<a name="aws-properties-budgets-budget-budgetdata--seealso"></a>
++  [Budget](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_budget.html) in the *AWS Cost Explorer Service Cost Management APIs* 

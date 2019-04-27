@@ -2,7 +2,7 @@
 
 The `Icmp` property is an embedded property of the [AWS::EC2::NetworkAclEntry](aws-resource-ec2-network-acl-entry.md) type\.
 
-## Syntax<a name="w13ab1c21c10d111c72c18b5"></a>
+## Syntax<a name="w2922ab1c21c10c96c76c18b5"></a>
 
 ### JSON<a name="aws-properties-ec2-networkaclentry-icmp-syntax.json"></a>
 
@@ -20,7 +20,7 @@ The `Icmp` property is an embedded property of the [AWS::EC2::NetworkAclEntry](a
 [Type](#cfn-ec2-networkaclentry-icmp-type): Integer
 ```
 
-## Properties<a name="w13ab1c21c10d111c72c18b7"></a>
+## Properties<a name="w2922ab1c21c10c96c76c18b7"></a>
 
 `Code`  <a name="cfn-ec2-networkaclentry-icmp-code"></a>
 The Internet Control Message Protocol \(ICMP\) code\. You can use \-1 to specify all ICMP codes for the given ICMP type\.  

@@ -1,34 +1,38 @@
-# Amazon S3 Bucket ReplicationConfiguration<a name="aws-properties-s3-bucket-replicationconfiguration"></a>
+# AWS::S3::Bucket ReplicationConfiguration<a name="aws-properties-s3-bucket-replicationconfiguration"></a>
 
-`ReplicationConfiguration` is a property of the [AWS::S3::Bucket](aws-properties-s3-bucket.md) resource that specifies replication rules and the AWS Identity and Access Management \(IAM\) role Amazon Simple Storage Service \(Amazon S3\) uses to replicate objects\.
+A container for replication rules\. You can add up to 1,000 rules\. The maximum size of a replication configuration is 2 MB\.
 
-## Syntax<a name="w13ab1c21c10d204c13d114b5"></a>
+## Syntax<a name="aws-properties-s3-bucket-replicationconfiguration-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-s3-bucket-replicationconfiguration-syntax.json"></a>
 
 ```
 {
   "[Role](#cfn-s3-bucket-replicationconfiguration-role)" : String,
-  "[Rules](#cfn-s3-bucket-replicationconfiguration-rules)" : [ Rule, ... ]
+  "[Rules](#cfn-s3-bucket-replicationconfiguration-rules)" : [ [ReplicationRule](aws-properties-s3-bucket-replicationconfiguration-rules.md), ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-s3-bucket-replicationconfiguration-syntax.yaml"></a>
 
 ```
-[Role](#cfn-s3-bucket-replicationconfiguration-role): String
-[Rules](#cfn-s3-bucket-replicationconfiguration-rules):
-  - Rule
+﻿  [Role](#cfn-s3-bucket-replicationconfiguration-role) : String
+﻿  [Rules](#cfn-s3-bucket-replicationconfiguration-rules) : 
+    - [ReplicationRule](aws-properties-s3-bucket-replicationconfiguration-rules.md)
 ```
 
-## Properties<a name="w13ab1c21c10d204c13d114b7"></a>
+## Properties<a name="aws-properties-s3-bucket-replicationconfiguration-properties"></a>
 
 `Role`  <a name="cfn-s3-bucket-replicationconfiguration-role"></a>
-The Amazon Resource Name \(ARN\) of an AWS Identity and Access Management \(IAM\) role that Amazon S3 assumes when replicating objects\. For more information, see [How to Set Up Cross\-Region Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/crr-how-setup.html) in the *Amazon Simple Storage Service Developer Guide*\.  
+The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) role that Amazon S3 assumes when replicating objects\. For more information, see [How to Set Up Cross\-Region Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/crr-how-setup.html) in the *Amazon Simple Storage Service Developer Guide*\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Rules`  <a name="cfn-s3-bucket-replicationconfiguration-rules"></a>
-A replication rule that specifies which objects to replicate and where they are stored\.  
+A container for one or more replication rules\. A replication configuration must have at least one rule and can contain a maximum of 1,000 rules\.   
 *Required*: Yes  
-*Type*: List of [ReplicationRule](aws-properties-s3-bucket-replicationconfiguration-rules.md)
+*Type*: List of [ReplicationRule](aws-properties-s3-bucket-replicationconfiguration-rules.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

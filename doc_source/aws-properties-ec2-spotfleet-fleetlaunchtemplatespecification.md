@@ -2,7 +2,7 @@
 
 `FleetLaunchTemplateSpecification` is a property of the [Amazon EC2 SpotFleet SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md) property that describes a launch template\.
 
-## Syntax<a name="w13ab1c21c10d111d118c37b5"></a>
+## Syntax<a name="w2922ab1c21c10c96d122c37b5"></a>
 
 ### JSON<a name="aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification-syntax.json"></a>
 
@@ -22,7 +22,7 @@
 [Version](#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-version): String
 ```
 
-## Properties<a name="w13ab1c21c10d111d118c37b7"></a>
+## Properties<a name="w2922ab1c21c10c96d122c37b7"></a>
 
 `LaunchTemplateId`  <a name="cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplateid"></a>
 The ID of the launch template\. You must specify either a template ID or a template name\.  

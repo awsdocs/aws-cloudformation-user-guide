@@ -4,7 +4,7 @@ The `AWS::ApiGateway::BasePathMapping` resource creates a base path that clients
 
 **Topics**
 + [Syntax](#aws-resource-apigateway-basepathmapping-syntax)
-+ [Properties](#w13ab1c21c10c20c25b9)
++ [Properties](#w2922ab1c21c10c19c25b9)
 
 ## Syntax<a name="aws-resource-apigateway-basepathmapping-syntax"></a>
 
@@ -35,7 +35,7 @@ Properties:
   [Stage](#cfn-apigateway-basepathmapping-stage): String
 ```
 
-## Properties<a name="w13ab1c21c10c20c25b9"></a>
+## Properties<a name="w2922ab1c21c10c19c25b9"></a>
 
 `BasePath`  <a name="cfn-apigateway-basepathmapping-basepath"></a>
 The base path name that callers of the API must provide in the URL after the domain name\. If you specify this property, it can't be an empty string\.  

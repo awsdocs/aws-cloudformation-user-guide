@@ -50,7 +50,7 @@ The following example demonstrates how to create an `ApplicationOutput` object\.
 #### YAML<a name="aws-resource-kinesisanalyticsv2-applicationoutput-example1.yaml"></a>
 
 ```
-Type: AWS::KinesisAnalytics::ApplicationOutput
+Type: AWS::KinesisAnalyticsV2::ApplicationOutput
 Properties:
   ApplicationName: !Ref BasicApplication
   Output:

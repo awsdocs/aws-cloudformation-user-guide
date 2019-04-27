@@ -2,7 +2,7 @@
 
 The Amazon EC2 block device mapping property is an embedded property of the [AWS::EC2::Instance](aws-properties-ec2-instance.md) resource\. For block device mappings for an Auto Scaling launch configuration, see [Amazon EC2 Auto Scaling LaunchConfiguration BlockDeviceMapping](aws-properties-as-launchconfig-blockdev-mapping.md)\.
 
-## Syntax<a name="w13ab1c21c10d111c49c24b7"></a>
+## Syntax<a name="w2922ab1c21c10c96c53c24b7"></a>
 
 ### JSON<a name="aws-properties-properties-ec2-blockdev-mapping-syntax.json"></a>
 
@@ -24,7 +24,7 @@ The Amazon EC2 block device mapping property is an embedded property of the [AWS
 [VirtualName](#cfn-ec2-blockdev-mapping-virtualname): String
 ```
 
-## Properties<a name="w13ab1c21c10d111c49c24b9"></a>
+## Properties<a name="w2922ab1c21c10c96c53c24b9"></a>
 
 `DeviceName`  <a name="cfn-ec2-blockdev-mapping-devicename"></a>
 The name of the device within Amazon EC2\. For more information, see [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
@@ -45,9 +45,9 @@ The name of the virtual device\. The name must be in the form `ephemeralX ` wher
 *Required*: Conditional You can specify either `VirtualName` or `Ebs`, but not both\.  
 *Type*: String
 
-## Examples<a name="w13ab1c21c10d111c49c24c11"></a>
+## Examples<a name="w2922ab1c21c10c96c53c24c11"></a>
 
-### Block Device Mapping with two EBS Volumes<a name="w13ab1c21c10d111c49c24c11b2"></a>
+### Block Device Mapping with two EBS Volumes<a name="w2922ab1c21c10c96c53c24c11b2"></a>
 
 This example sets the EBS\-backed root device \(/dev/sda1\) size to 50 GiB, and another EBS\-backed device mapped to /dev/sdm that is 100 GiB in size\.
 
@@ -64,7 +64,7 @@ This example sets the EBS\-backed root device \(/dev/sda1\) size to 50 GiB, and 
 ]
 ```
 
-### Block Device Mapping with an Ephemeral Drive<a name="w13ab1c21c10d111c49c24c11b4"></a>
+### Block Device Mapping with an Ephemeral Drive<a name="w2922ab1c21c10c96c53c24c11b4"></a>
 
 This example maps an ephemeral drive to device /dev/sdc\.
 
@@ -77,7 +77,7 @@ This example maps an ephemeral drive to device /dev/sdc\.
 ]
 ```
 
-### Unmapping an AMI\-defined Device<a name="w13ab1c21c10d111c49c24c11b6"></a>
+### Unmapping an AMI\-defined Device<a name="w2922ab1c21c10c96c53c24c11b6"></a>
 
 To unmap a device defined in the AMI, set the `NoDevice` property to an empty map, as shown here:
 
@@ -88,5 +88,5 @@ To unmap a device defined in the AMI, set the `NoDevice` property to an empty ma
 }
 ```
 
-## See Also<a name="w13ab1c21c10d111c49c24c13"></a>
+## See Also<a name="w2922ab1c21c10c96c53c24c13"></a>
 + [Amazon EC2 Instance Store](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) in the *Amazon Elastic Compute Cloud User Guide*

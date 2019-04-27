@@ -21,7 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     "[PlacementConstraints](#cfn-ecs-taskdefinition-placementconstraints)" : [ TaskDefinitionPlacementConstraint, ... ],
     "[RequiresCompatibilities](#cfn-ecs-taskdefinition-requirescompatibilities)" : [ String, ... ],
     "[TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn)" : String,
-    "[ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinition)" : [ Container Definition, ... ]
+    "[ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinition)" : [ Container Definition, ... ],
+    "[ProxyConfiguration](#cfn-ecs-taskdefinition-proxyconfiguration)" : ProxyConfiguration
   }
 }
 ```
@@ -45,6 +46,7 @@ Properties:
   [TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn): String
   [ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinition):
     - Container Definition
+  [ProxyConfiguration](#cfn-ecs-taskdefinition-proxyconfiguration): ProxyConfiguration
 ```
 
 ## Properties<a name="aws-resource-ecs-taskdefinition-properties"></a>
@@ -121,6 +123,14 @@ The Amazon Resource Name \(ARN\) of an AWS Identity and Access Management \(IAM\
 A list of volume definitions in JSON format for the volumes that you can use in your container definitions\.  
 *Required*: No  
 *Type*: List of [Amazon Elastic Container Service TaskDefinition Volumes](aws-properties-ecs-taskdefinition-volumes.md)  
+*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+
+`ProxyConfiguration`  <a name="cfn-ecs-taskdefinition-proxyconfiguration"></a>
+The configuration details for the App Mesh proxy\.  
+For tasks using the EC2 launch type, the container instances require at least version 1\.26\.0 of the container agent and at least version 1\.26\.0\-1 of the ecs\-init package to enable a proxy configuration\. If your container instances are launched from the Amazon ECS\-optimized AMI version 20190301 or later, then they contain the required versions of the container agent and ecs\-init\. For more information, see [Amazon ECS\-optimized Linux AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+This parameter is available for tasks using the Fargate launch type in the Ohio \(us\-east\-2\) region only and the task or service requires platform version 1\.3\.0 or later\.  
+*Required*: No  
+*Type*: [Amazon ECS TaskDefinition ProxyConfiguration](aws-properties-ecs-taskdefinition-proxyconfiguration.md)  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
 ## Return Value<a name="aws-resource-ecs-taskdefinition-returnvalues"></a>

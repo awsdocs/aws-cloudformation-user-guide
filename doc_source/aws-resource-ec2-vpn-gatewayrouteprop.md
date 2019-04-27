@@ -7,10 +7,10 @@ If you reference a VPN gateway that is in the same template as your VPN gateway 
 
 **Topics**
 + [Syntax](#aws-resource-ec2-vpngatewayroutepropagation-syntax)
-+ [Properties](#w13ab1c21c10d111d222c11)
-+ [Return Value](#w13ab1c21c10d111d222c13)
-+ [Example](#w13ab1c21c10d111d222c15)
-+ [See Also](#w13ab1c21c10d111d222c17)
++ [Properties](#w2922ab1c21c10c96d226c11)
++ [Return Value](#w2922ab1c21c10c96d226c13)
++ [Example](#w2922ab1c21c10c96d226c15)
++ [See Also](#w2922ab1c21c10c96d226c17)
 
 ## Syntax<a name="aws-resource-ec2-vpngatewayroutepropagation-syntax"></a>
 
@@ -38,7 +38,7 @@ Properties:
   [VpnGatewayId](#cfn-ec2-vpngatewayrouteprop-vpngatewayid): String
 ```
 
-## Properties<a name="w13ab1c21c10d111d222c11"></a>
+## Properties<a name="w2922ab1c21c10c96d226c11"></a>
 
 `RouteTableIds`  <a name="cfn-ec2-vpngatewayrouteprop-routetableids"></a>
 A list of routing table IDs that are associated with a VPC\. The routing tables must be associated with the same VPC that the virtual private gateway is attached to\.  
@@ -52,7 +52,7 @@ The ID of the virtual private gateway that is attached to a VPC\. The virtual pr
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10d111d222c13"></a>
+## Return Value<a name="w2922ab1c21c10c96d226c13"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -64,7 +64,7 @@ For the VPN gateway with the logical ID `myVPNGatewayRouteProp`, `Ref` will retu
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w13ab1c21c10d111d222c15"></a>
+## Example<a name="w2922ab1c21c10c96d226c15"></a>
 
 ### JSON<a name="aws-resource-ec2-vpngatewayroutepropagation-example.json"></a>
 
@@ -90,5 +90,5 @@ myVPNGatewayRouteProp:
       !Ref VPNGateway
 ```
 
-## See Also<a name="w13ab1c21c10d111d222c17"></a>
+## See Also<a name="w2922ab1c21c10c96d226c17"></a>
 + [EnableVgwRoutePropagation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-EnableVgwRoutePropagation.html) in the *Amazon EC2 API Reference*\.

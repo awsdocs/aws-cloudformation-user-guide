@@ -4,7 +4,7 @@ Use the `AWS::DAX::Cluster` resource to create a DAX cluster for use with Amazon
 
 For information about creating a DAX cluster, see [Creating a DAX Cluster](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.create-cluster.html) in the *Amazon DynamoDB Developer Guide* and [https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_dax_CreateCluster.html](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_dax_CreateCluster.html) in the *Amazon DynamoDB Developer Guide*\.
 
-## Syntax<a name="w13ab1c21c10c93c14b7"></a>
+## Syntax<a name="w2922ab1c21c10c81c14b7"></a>
 
 ### JSON<a name="aws-resource-dax-cluster-syntax.json"></a>
 

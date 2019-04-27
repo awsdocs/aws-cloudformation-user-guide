@@ -50,7 +50,7 @@ Properties:
     String: String
 ```
 
-## Properties<a name="w13ab1c21c10c84c13b9"></a>
+## Properties<a name="w2922ab1c21c10c74c13b9"></a>
 
 For more information about each property, including constraints and valid values, see [CreateIdentityPool](https://docs.aws.amazon.com/cognitoidentity/latest/APIReference/API_CreateIdentityPool.html) in the *Amazon Cognito Federated Identities API Reference*\.
 
@@ -119,15 +119,15 @@ The events to configure\.
 *Type:* String to String map  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10c84c13c11"></a>
+## Return Value<a name="w2922ab1c21c10c74c13c11"></a>
 
-### Ref<a name="w13ab1c21c10c84c13c11b2"></a>
+### Ref<a name="w2922ab1c21c10c74c13c11b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the `IdentityPoolId`, such as `us-east-2:0d01f4d7-1305-4408-b437-12345EXAMPLE`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w13ab1c21c10c84c13c11b4"></a>
+### Fn::GetAtt<a name="w2922ab1c21c10c74c13c11b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 

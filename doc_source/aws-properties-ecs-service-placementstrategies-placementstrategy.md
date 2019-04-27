@@ -2,7 +2,7 @@
 
 The `PlacementStrategies` property describes how tasks for the Amazon Elastic Container Service \(Amazon ECS\) service are placed in an `AWS::ECS::Service` resource\.
 
-## Syntax<a name="w13ab1c21c10d117c17c37b5"></a>
+## Syntax<a name="w2922ab1c21c10d102c17c37b5"></a>
 
 ### JSON<a name="aws-properties-ecs-serviceplacementstrategies-placementstrategy-syntax.json"></a>
 
@@ -20,7 +20,7 @@ The `PlacementStrategies` property describes how tasks for the Amazon Elastic Co
 [Field](#cfn-ecs-serviceplacementstrategies-placementstrategy-field): String
 ```
 
-## Properties<a name="w13ab1c21c10d117c17c37b7"></a>
+## Properties<a name="w2922ab1c21c10d102c17c37b7"></a>
 
 `Type`  <a name="cfn-ecs-serviceplacementstrategies-placementstrategy-type"></a>
 The type of placement strategy\. Can be one of the following values: `random`, `spread`, or `binpack`\.  

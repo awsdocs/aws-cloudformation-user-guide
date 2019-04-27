@@ -37,7 +37,7 @@ Properties:
   [SslPolicy](#cfn-elasticloadbalancingv2-listener-sslpolicy): String
 ```
 
-## Properties<a name="w13ab1c21c10d138c15b7"></a>
+## Properties<a name="w2922ab1c21c10d120c15b7"></a>
 
 `Certificates`  <a name="cfn-elasticloadbalancingv2-listener-certificates"></a>
 \[HTTPS and TLS listeners\] The default SSL server certificate for the listener\.  
@@ -77,15 +77,15 @@ For valid values, see the `Protocol` parameter for the [CreateListener](https://
 *Type*: String  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10d138c15b9"></a>
+## Return Value<a name="w2922ab1c21c10d120c15b9"></a>
 
-### Ref<a name="w13ab1c21c10d138c15b9b2"></a>
+### Ref<a name="w2922ab1c21c10d120c15b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the listener's ARN, such as `arn:aws:elasticloadbalancing:us-west-2:123456789012:listener/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w13ab1c21c10d138c15c11"></a>
+## Example<a name="w2922ab1c21c10d120c15c11"></a>
 
 The following example creates a listener for the `myLoadBalancer` resource\. The listener's default action is to forward requests to the `myTargetGroup` target group\.
 

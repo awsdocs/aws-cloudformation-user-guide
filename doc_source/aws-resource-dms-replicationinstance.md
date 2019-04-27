@@ -5,9 +5,9 @@ The `AWS::DMS::ReplicationInstance` resource creates an AWS DMS replication inst
 **Topics**
 + [Syntax](#aws-resource-dms-replicationinstance-syntax)
 + [Properties](#aws-resource-dms-replicationinstance-prop)
-+ [Return Value](#w13ab1c21c10d102c25c11)
++ [Return Value](#w2922ab1c21c10c88c25c11)
 + [Example](#aws-resource-dms-replicationinstance-example)
-+ [See Also](#w13ab1c21c10d102c25c15)
++ [See Also](#w2922ab1c21c10c88c25c15)
 
 ## Syntax<a name="aws-resource-dms-replicationinstance-syntax"></a>
 
@@ -149,9 +149,9 @@ Specifies the VPC security group to be used with the replication instance\. The 
 *Type*: List of String values  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10d102c25c11"></a>
+## Return Value<a name="w2922ab1c21c10c88c25c11"></a>
 
-### Ref<a name="w13ab1c21c10d102c25c11b2"></a>
+### Ref<a name="w2922ab1c21c10c88c25c11b2"></a>
 
 When you pass the logical ID of an `AWS::DMS::ReplicationInstance` resource to the intrinsic `Ref` function, the function returns the replication instance ARN\.
 
@@ -186,6 +186,6 @@ Resources:
       ReplicationInstanceClass: dms.t2.small
 ```
 
-## See Also<a name="w13ab1c21c10d102c25c15"></a>
+## See Also<a name="w2922ab1c21c10c88c25c15"></a>
 + [CreateReplicationInstance](http://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationInstance.html) in the *AWS Database Migration Service API Reference*\.
 + [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)

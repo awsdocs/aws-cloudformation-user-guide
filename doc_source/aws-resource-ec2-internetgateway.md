@@ -26,7 +26,7 @@ Properties:
     - Resource Tag
 ```
 
-## Properties<a name="w13ab1c21c10d111c54b7"></a>
+## Properties<a name="w2922ab1c21c10c96c58b7"></a>
 
 `Tags`  <a name="cfn-ec2-internetgateway-tags"></a>
 An arbitrary set of tags \(key–value pairs\) for this resource\.  
@@ -34,15 +34,15 @@ An arbitrary set of tags \(key–value pairs\) for this resource\.
 *Type*: [Resource Tag](aws-properties-resource-tags.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w13ab1c21c10d111c54b9"></a>
+## Return Values<a name="w2922ab1c21c10c96c58b9"></a>
 
-### Ref<a name="w13ab1c21c10d111c54b9b2"></a>
+### Ref<a name="w2922ab1c21c10c96c58b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w13ab1c21c10d111c54c11"></a>
+## Example<a name="w2922ab1c21c10c96c58c11"></a>
 
 ### JSON<a name="aws-resource-ec2-internetgateway-example.json"></a>
 
@@ -73,6 +73,6 @@ Resources:
         Value: bar
 ```
 
-## Related Information<a name="w13ab1c21c10d111c54c13"></a>
+## Related Information<a name="w2922ab1c21c10c96c58c13"></a>
 + [CreateInternetGateway](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateInternetGateway.html) in the *Amazon EC2 API Reference*\.
 + Use the [AWS::EC2::VPCGatewayAttachment](aws-resource-ec2-vpc-gateway-attachment.md) resource to associate an Internet gateway with a VPC\.

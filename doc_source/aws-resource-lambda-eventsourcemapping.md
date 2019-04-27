@@ -4,9 +4,9 @@ The `AWS::Lambda::EventSourceMapping` resource creates a mapping between an even
 
 **Topics**
 + [Syntax](#aws-resource-lambda-eventsourcemapping-syntax)
-+ [Properties](#w13ab1c21c10d177c13b9)
-+ [Return Values](#w13ab1c21c10d177c13c11)
-+ [Example](#w13ab1c21c10d177c13c13)
++ [Properties](#w2922ab1c21c10d166c13b9)
++ [Return Values](#w2922ab1c21c10d166c13c11)
++ [Example](#w2922ab1c21c10d166c13c13)
 
 ## Syntax<a name="aws-resource-lambda-eventsourcemapping-syntax"></a>
 
@@ -39,7 +39,7 @@ Properties:
   [StartingPosition](#cfn-lambda-eventsourcemapping-startingposition): String
 ```
 
-## Properties<a name="w13ab1c21c10d177c13b9"></a>
+## Properties<a name="w2922ab1c21c10d166c13b9"></a>
 
 `BatchSize`  <a name="cfn-lambda-eventsourcemapping-batchsize"></a>
 The maximum number of items to retrieve in a single batch\.  
@@ -84,15 +84,15 @@ Valid Values: `TRIM_HORIZON` \| `LATEST` \| `AT_TIMESTAMP`
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w13ab1c21c10d177c13c11"></a>
+## Return Values<a name="w2922ab1c21c10d166c13c11"></a>
 
-### Ref<a name="w13ab1c21c10d177c13c11b3"></a>
+### Ref<a name="w2922ab1c21c10d166c13c11b3"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w13ab1c21c10d177c13c13"></a>
+## Example<a name="w2922ab1c21c10d166c13c13"></a>
 
 The following example associates an Kinesis stream with a Lambda function\.
 

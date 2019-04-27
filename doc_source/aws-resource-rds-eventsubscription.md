@@ -4,9 +4,9 @@ Use the `AWS::RDS::EventSubscription` resource to get notifications for Amazon R
 
 **Topics**
 + [Syntax](#aws-resource-rds-eventsubscription-syntax)
-+ [Properties](#w13ab1c21c10d192c45b9)
-+ [Return Value](#w13ab1c21c10d192c45c11)
-+ [Example](#w13ab1c21c10d192c45c13)
++ [Properties](#w2922ab1c21c10d177c45b9)
++ [Return Value](#w2922ab1c21c10d177c45c11)
++ [Example](#w2922ab1c21c10d177c45c13)
 
 ## Syntax<a name="aws-resource-rds-eventsubscription-syntax"></a>
 
@@ -41,7 +41,7 @@ Properties:
   [SourceType](#cfn-rds-eventsubscription-sourcetype): String
 ```
 
-## Properties<a name="w13ab1c21c10d192c45b9"></a>
+## Properties<a name="w2922ab1c21c10d177c45b9"></a>
 
 `Enabled`  <a name="cfn-rds-eventsubscription-enabled"></a>
 Indicates whether to activate the subscription\. If you don't specify this property, AWS CloudFormation activates the subscription\.  
@@ -74,7 +74,7 @@ The type of source for which Amazon RDS provides notification events\. For examp
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) if you're removing this property after it was previously specified\. All other updates require [no interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
 
-## Return Value<a name="w13ab1c21c10d192c45c11"></a>
+## Return Value<a name="w2922ab1c21c10d177c45c11"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -86,7 +86,7 @@ For the resource with the logical ID `myEventSubscription`, `Ref` returns the Am
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w13ab1c21c10d192c45c13"></a>
+## Example<a name="w2922ab1c21c10d177c45c13"></a>
 
 The following snippet creates an event subscription for an existing database instance `db-instance-1` and a database with the logical ID `myDBInstance`, which is declared elsewhere in the same template\.
 

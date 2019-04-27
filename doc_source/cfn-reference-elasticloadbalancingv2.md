@@ -2,7 +2,7 @@
 
 Elastic Load Balancing supports the following types of load balancers: Application Load Balancers, Network Load Balancers, and Classic Load Balancers\. The Elastic Load Balancing V2 API supports Application Load Balancers and Network Load Balancers\. The Elastic Load Balancing V1 API supports Classic Load Balancers\.
 
-This section contains reference information for all Elastic Load Balancing V2 resources that are supported by AWS CloudFormation\. For Elastic Load Balancing V1 resources, see [Elastic Load Balancing V1 Resource Types Reference](cfn-reference-elasticloadbalancing.md)\.
+This section contains reference information for all Elastic Load Balancing V2 resources that are supported by AWS CloudFormation\. For Elastic Load Balancing V1 resources, see [ElasticLoadBalancing Resource Type Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_ElasticLoadBalancing.html)\.
 
 Resource type identifiers always take the following form:
 

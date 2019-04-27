@@ -2,7 +2,7 @@
 
 `LaunchTemplateConfig` is a property of the [Amazon EC2 SpotFleet SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md) property that describes a launch template and overrides\.
 
-## Syntax<a name="w13ab1c21c10d111d118c45b5"></a>
+## Syntax<a name="w2922ab1c21c10c96d122c45b5"></a>
 
 ### JSON<a name="aws-properties-ec2-spotfleet-launchtemplateconfig-syntax.json"></a>
 
@@ -21,7 +21,7 @@
   - [*LaunchTemplateOverrides*](aws-properties-ec2-spotfleet-launchtemplateoverrides.md)
 ```
 
-## Properties<a name="w13ab1c21c10d111d118c45b7"></a>
+## Properties<a name="w2922ab1c21c10c96d122c45b7"></a>
 
 `LaunchTemplateSpecification`  <a name="cfn-ec2-spotfleet-launchtemplateconfig-launchtemplatespecification"></a>
 The launch template\.  

@@ -2,7 +2,7 @@
 
 `NetworkConfiguration` is a property of the [AWS::ECS::Service](aws-resource-ecs-service.md) resource that specifies the network configuration for an Amazon Elastic Container Service \(Amazon ECS\) task or service\.
 
-## Syntax<a name="w13ab1c21c10d117c17c29b5"></a>
+## Syntax<a name="w2922ab1c21c10d102c17c29b5"></a>
 
 ### JSON<a name="aws-properties-ecs-service-networkconfiguration-syntax.json"></a>
 
@@ -18,7 +18,7 @@
 [AwsvpcConfiguration](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration): [*AwsVpcConfiguration*](aws-properties-ecs-service-awsvpcconfiguration.md)
 ```
 
-## Properties<a name="w13ab1c21c10d117c17c29b7"></a>
+## Properties<a name="w2922ab1c21c10d102c17c29b7"></a>
 
 `AwsvpcConfiguration`  <a name="cfn-ecs-service-networkconfiguration-awsvpcconfiguration"></a>
  The VPC subnets and security groups associated with a task\.  

@@ -49,7 +49,7 @@ Properties:
   [Type](#cfn-elasticloadbalancingv2-loadbalancer-type): String
 ```
 
-## Properties<a name="w13ab1c21c10d138c27b8"></a>
+## Properties<a name="w2922ab1c21c10d120c27b8"></a>
 
 For more information and valid parameter values, see the `[CreateLoadBalancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateLoadBalancer.html)` action in the [Elastic Load Balancing API Reference version 2015\-12\-01](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/)\.
 
@@ -114,9 +114,9 @@ The type of load balancer to create\. Valid values are `application` and `networ
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w13ab1c21c10d138c27c10"></a>
+## Return Values<a name="w2922ab1c21c10d120c27c10"></a>
 
-### Ref<a name="w13ab1c21c10d138c27c10b2"></a>
+### Ref<a name="w2922ab1c21c10d120c27c10b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN of the load balancer, for example:
 
@@ -126,7 +126,7 @@ arn:aws:elasticloadbalancing:us-west-2:123456789012:loadbalancer/app/my-internal
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w13ab1c21c10d138c27c10b4"></a>
+### Fn::GetAtt<a name="w2922ab1c21c10d120c27c10b4"></a>
 
 `Fn::GetAtt` returns a value for the following attributes\.
 
@@ -147,7 +147,7 @@ The IDs of the security groups for the load balancer, for example `sg-123456a`\.
 
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
 
-## Examples<a name="w13ab1c21c10d138c27c12"></a>
+## Examples<a name="w2922ab1c21c10d120c27c12"></a>
 
 ### Load balancer with idle timeout period specified<a name="aws-resource-elasticloadbalancingv2-loadbalancer-example1"></a>
 

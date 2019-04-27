@@ -2,7 +2,7 @@
 
 `ElasticsearchClusterConfig` is a property of the [AWS::Elasticsearch::Domain](aws-resource-elasticsearch-domain.md) resource that configures the cluster of an Amazon Elasticsearch Service \(Amazon ES\) domain\.
 
-## Syntax<a name="w13ab1c21c10d129c13c19b5"></a>
+## Syntax<a name="w2922ab1c21c10d113c13c19b5"></a>
 
 ### JSON<a name="aws-properties-elasticsearch-domain-elasticsearchclusterconfig-syntax.json"></a>
 
@@ -28,7 +28,7 @@
 [ZoneAwarenessEnabled](#cfn-elasticsearch-domain-elasticseachclusterconfig-zoneawarenessenabled): Boolean
 ```
 
-## Properties<a name="w13ab1c21c10d129c13c19b7"></a>
+## Properties<a name="w2922ab1c21c10d113c13c19b7"></a>
 
 `DedicatedMasterCount`  <a name="cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastercount"></a>
 The number of instances to use for the master node\.  

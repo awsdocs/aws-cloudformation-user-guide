@@ -4,7 +4,7 @@ The `Action` property type specifies the default actions that the Elastic Load B
 
 The `DefaultActions` property of the [AWS::ElasticLoadBalancingV2::Listener](aws-resource-elasticloadbalancingv2-listener.md) resource contains a list of `Action` property types\.
 
-## Syntax<a name="w13ab1c21c10d138c15c15b7"></a>
+## Syntax<a name="w2922ab1c21c10d120c15c15b7"></a>
 
 ### JSON<a name="aws-properties-elasticloadbalancingv2-listener-defaultactions-syntax.json"></a>
 
@@ -32,7 +32,7 @@ The `DefaultActions` property of the [AWS::ElasticLoadBalancingV2::Listener](aws
 [Type](#cfn-elasticloadbalancingv2-listener-defaultactions-type): String
 ```
 
-## Properties<a name="w13ab1c21c10d138c15c15b9"></a>
+## Properties<a name="w2922ab1c21c10d120c15c15b9"></a>
 
 `AuthenticateCognitoConfig`  <a name="cfn-elasticloadbalancingv2-listener-action-authenticatecognitoconfig"></a>
 \[HTTPS listener\] Information for using Amazon Cognito to authenticate users\. Specify only when `Type` is `authenticate-cognito`\.  

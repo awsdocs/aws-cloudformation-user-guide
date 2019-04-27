@@ -2,7 +2,7 @@
 
 `NetworkInterfaces` is a property of the [Amazon Elastic Compute Cloud SpotFleet LaunchSpecifications](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md) property that defines the network interface of the instances in a Spot fleet\.
 
-## Syntax<a name="w13ab1c21c10d111d118c61b5"></a>
+## Syntax<a name="w2922ab1c21c10c96d122c61b5"></a>
 
 ### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-syntax.json"></a>
 
@@ -41,7 +41,7 @@
 [SubnetId](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-subnetid): String
 ```
 
-## Properties<a name="w13ab1c21c10d111d118c61b7"></a>
+## Properties<a name="w2922ab1c21c10c96d122c61b7"></a>
 
 `AssociatePublicIpAddress`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-associatepublicipaddress"></a>
 Indicates whether to assign a public IP address to an instance that you launch in a VPC\. You can assign the public IP address can only to a network interface for eth0, and only to a new network interface, not an existing one\.  

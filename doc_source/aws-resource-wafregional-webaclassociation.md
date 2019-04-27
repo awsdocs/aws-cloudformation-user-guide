@@ -4,8 +4,8 @@ The `AWS::WAFRegional::WebACLAssociation` resource associates an AWS WAF Regiona
 
 **Topics**
 + [Syntax](#aws-resource-wafregional-webaclassociation-syntax)
-+ [Properties](#w13ab1c21c10d237c37b9)
-+ [Example](#w13ab1c21c10d237c37c11)
++ [Properties](#w2922ab1c21c10d221c37b9)
++ [Example](#w2922ab1c21c10d221c37c11)
 
 ## Syntax<a name="aws-resource-wafregional-webaclassociation-syntax"></a>
 
@@ -32,7 +32,7 @@ Properties:
   [WebACLId](#cfn-wafregional-webaclassociation-webaclid): String
 ```
 
-## Properties<a name="w13ab1c21c10d237c37b9"></a>
+## Properties<a name="w2922ab1c21c10d221c37b9"></a>
 
 **Note**  
 For more information about constraints and values for each property, see [AssociateWebACL](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_AssociateWebACL.html) in the *AWS WAF Regional API Reference*\.
@@ -49,9 +49,9 @@ A unique identifier \(ID\) for the web ACL\.
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Example<a name="w13ab1c21c10d237c37c11"></a>
+## Example<a name="w2922ab1c21c10d221c37c11"></a>
 
-### <a name="w13ab1c21c10d237c37c11b2"></a>
+### <a name="w2922ab1c21c10d221c37c11b2"></a>
 
 The following example associates an Application Load Balancer resource with a web ACL\.
 

@@ -2,7 +2,7 @@
 
 `SimpleScalingPolicyConfiguration` specifies an automatic scaling configuration that describes how the policy adds or removes instances, the cooldown period, and the number of EC2 instances that are added when the CloudWatch metric alarm condition is met\. `SimpleScalingPolicyConfiguration` is a subproperty of the [Amazon EMR InstanceGroupConfig ScalingAction](aws-properties-elasticmapreduce-instancegroupconfig-scalingaction.md) property type\.
 
-## Syntax<a name="w13ab1c21c10d141c22c42b5"></a>
+## Syntax<a name="w2922ab1c21c10d123c22c42b5"></a>
 
 ### JSON<a name="aws-properties-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-syntax.json"></a>
 
@@ -22,7 +22,7 @@
   [ScalingAdjustment](#cfn-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-scalingadjustment): String
 ```
 
-## Properties<a name="w13ab1c21c10d141c22c42b7"></a>
+## Properties<a name="w2922ab1c21c10d123c22c42b7"></a>
 
 **Note**  
 For more information about each property, including constraints and valid values, see [SimpleScalingPolicyConfiguration](https://docs.aws.amazon.com/ElasticMapReduce/latest/API/API_SimpleScalingPolicyConfiguration.html) in the *Amazon EMR API Reference*\.

@@ -2,7 +2,7 @@
 
 The `AWS::ApplicationAutoScaling::ScalableTarget` resource specifies a resource that Application Auto Scaling can scale\. For more information, see the [RegisterScalableTarget](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html) action in the *Application Auto Scaling API Reference*\.
 
-## Syntax<a name="w13ab1c21c10c26c13b9"></a>
+## Syntax<a name="w2922ab1c21c10c24c13b9"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
@@ -38,7 +38,7 @@ Properties:
   [ServiceNamespace](#cfn-applicationautoscaling-scalabletarget-servicenamespace): String
 ```
 
-## Properties<a name="w13ab1c21c10c26c13c11"></a>
+## Properties<a name="w2922ab1c21c10c24c13c11"></a>
 
 `MaxCapacity`  <a name="cfn-applicationautoscaling-scalabletarget-maxcapacity"></a>
 The maximum value that Application Auto Scaling can use to scale a target during a scaling activity\.  
@@ -84,7 +84,7 @@ The namespace of the AWS service that provides the resource or `custom-resource`
 
 ## Return Value<a name="aws-resource-applicationautoscaling-scalabletarget-returnvalues"></a>
 
-### Ref<a name="w13ab1c21c10c26c13c13b2"></a>
+### Ref<a name="w2922ab1c21c10c24c13c13b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the AWS CloudFormation\-generated ID of the resource, such as `service/ecsStack-MyECSCluster-AB12CDE3F4GH/ecsStack-MyECSService-AB12CDE3F4GH|ecs:service:DesiredCount|ecs`\.
 
@@ -94,7 +94,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 
 ## Examples<a name="aws-resource-applicationautoscaling-scalabletarget-examples"></a>
 
-### Number of Tasks<a name="w13ab1c21c10c26c13c15b2"></a>
+### Number of Tasks<a name="w2922ab1c21c10c24c13c15b2"></a>
 
 The following example creates a scalable target for an Amazon Elastic Container Service service\. Application Auto Scaling scales the number of tasks at a minimum of 1 task and a maximum of 2\.
 
@@ -128,7 +128,7 @@ scalableTarget:
     ServiceNamespace: ecs
 ```
 
-### Using `Fn::Join` and `Ref` to Construct the `ResourceId`<a name="w13ab1c21c10c26c13c15b4"></a>
+### Using `Fn::Join` and `Ref` to Construct the `ResourceId`<a name="w2922ab1c21c10c24c13c15b4"></a>
 
 The following example uses the `Fn::Join` and `Ref` intrinsic functions to construct the `ResourceId` property of the scaling target\.
 

@@ -160,7 +160,7 @@ The user name to be used to login to the endpoint database\.
 
 ## Return Value<a name="aws-resource-dms-endpoint-examples-returnvalues"></a>
 
-### Ref<a name="w13ab1c21c10d102c17c11b3"></a>
+### Ref<a name="w2922ab1c21c10c88c17c11b3"></a>
 
 When you pass the logical ID of an `AWS::DMS::Endpoint` resource to the intrinsic `Ref` function, the function returns the ARN of the endpoint\.
 
@@ -213,6 +213,6 @@ Resources:
           Value: "new"
 ```
 
-## See Also<a name="w13ab1c21c10d102c17c15"></a>
+## See Also<a name="w2922ab1c21c10c88c17c15"></a>
 + [CreateEndpoint](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateEndpoint.html) in the *AWS Database Migration Service API Reference*\.
 + [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)

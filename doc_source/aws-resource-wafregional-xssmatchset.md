@@ -28,7 +28,7 @@ Properties:
     - XssMatchTuple
 ```
 
-## Properties<a name="w13ab1c21c10d237c41b7"></a>
+## Properties<a name="w2922ab1c21c10d221c41b7"></a>
 
 `Name`  <a name="cfn-wafregional-xssmatchset-name"></a>
 A friendly name or description for the `XssMatchSet`\.  
@@ -42,17 +42,17 @@ The parts of web requests that you want to inspect for cross\-site scripting att
 *Type*: List of [AWS WAF Regional XssMatchSet XssMatchTuple](aws-properties-wafregional-xssmatchset-xssmatchtuple.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10d237c41b9"></a>
+## Return Value<a name="w2922ab1c21c10d221c41b9"></a>
 
-### Ref<a name="w13ab1c21c10d237c41b9b2"></a>
+### Ref<a name="w2922ab1c21c10d221c41b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource physical ID, such as `1234a1a-a1b1-12a1-abcd-a123b123456`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w13ab1c21c10d237c41c11"></a>
+## Examples<a name="w2922ab1c21c10d221c41c11"></a>
 
-### Define Which Part of a Request to Check for Cross\-site Scripting<a name="w13ab1c21c10d237c41c11b2"></a>
+### Define Which Part of a Request to Check for Cross\-site Scripting<a name="w2922ab1c21c10d221c41c11b2"></a>
 
 The following example looks for cross\-site scripting in the URI or query string of an HTTP request\.
 
@@ -99,7 +99,7 @@ DetectXSS:
         TextTransformation: "NONE"
 ```
 
-### Associate an XssMatchSet with a Web ACL Rule<a name="w13ab1c21c10d237c41c11b4"></a>
+### Associate an XssMatchSet with a Web ACL Rule<a name="w2922ab1c21c10d221c41c11b4"></a>
 
 The following example associates the `DetectXSS` match set with a web access control list \(ACL\) rule\.
 
@@ -138,7 +138,7 @@ XSSRule:
         Type: "XssMatch"
 ```
 
-### Create a Web ACL<a name="w13ab1c21c10d237c41c11b6"></a>
+### Create a Web ACL<a name="w2922ab1c21c10d221c41c11b6"></a>
 
 The following example associates the `XSSRule` rule with a web ACL\. The web ACL allows all requests except for ones that contain cross\-site scripting in the URI or query string of an HTTP request\.
 

@@ -5,7 +5,7 @@ Use the`JobFlowInstancesConfig`, which is a property of the [AWS::EMR::Cluster](
 **Note**  
 When creating your cluster using `EmrManagedMasterSecurityGroup` and `EmrManagedSlaveSecurityGroup`, to avoid a `delete_failed` exception, use security groups created outside of the AWS CloudFormation stack or retain them on deletion\.
 
-## Syntax<a name="w13ab1c21c10d141c13c58b7"></a>
+## Syntax<a name="w2922ab1c21c10d123c13c58b7"></a>
 
 ### JSON<a name="aws-properties-emr-cluster-jobflowinstancesconfig-syntax.json"></a>
 
@@ -56,7 +56,7 @@ When creating your cluster using `EmrManagedMasterSecurityGroup` and `EmrManaged
 [TerminationProtected](#cfn-emr-cluster-jobflowinstancesconfig-terminationprotected): Boolean
 ```
 
-## Properties<a name="w13ab1c21c10d141c13c58b9"></a>
+## Properties<a name="w2922ab1c21c10d123c13c58b9"></a>
 
 `AdditionalMasterSecurityGroups`  <a name="cfn-emr-cluster-jobflowinstancesconfig-additionalmastersecuritygroups"></a>
 A list of additional EC2 security group IDs to assign to the master instance \(master node\) in your Amazon EMR cluster\. Use this property to supplement the rules specified by the Amazon EMR managed master security group\.  

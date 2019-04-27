@@ -60,7 +60,7 @@ Properties:
     [TimeToLiveSpecification](aws-properties-dynamodb-table-timetolivespecification.md)
 ```
 
-## Properties<a name="w13ab1c21c10d108c14c13"></a>
+## Properties<a name="w2922ab1c21c10c93c14c13"></a>
 
 `AttributeDefinitions`  <a name="cfn-dynamodb-table-attributedef"></a>
 A list of attributes that describe the key schema for the table and indexes\. Duplicates are allowed\.  
@@ -146,9 +146,9 @@ Specifies the Time to Live \(TTL\) settings for the table\.
 **Note**  
 For detailed information about the limits in DynamoDB, see [Limits in Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in the *Amazon DynamoDB Developer Guide*\.
 
-## Return Values<a name="w13ab1c21c10d108c14c15"></a>
+## Return Values<a name="w2922ab1c21c10c93c14c15"></a>
 
-### Ref<a name="w13ab1c21c10d108c14c15b2"></a>
+### Ref<a name="w2922ab1c21c10c93c14c15b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -160,7 +160,7 @@ For the resource with the logical ID `myDynamoDBTable`, `Ref` will return the Dy
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-### Fn::GetAtt<a name="w13ab1c21c10d108c14c15b4"></a>
+### Fn::GetAtt<a name="w2922ab1c21c10c93c14c15b4"></a>
 
 `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 

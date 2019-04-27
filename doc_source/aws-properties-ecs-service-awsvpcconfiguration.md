@@ -2,7 +2,7 @@
 
 `AwsVpcConfiguration` is a property of the [AWS::ECS::Service](aws-resource-ecs-service.md) resource that specifies the subnets and security groups for an Amazon Elastic Container Service \(Amazon ECS\) task or service\.
 
-## Syntax<a name="w13ab1c21c10d117c17c17b5"></a>
+## Syntax<a name="w2922ab1c21c10d102c17c17b5"></a>
 
 ### JSON<a name="aws-properties-ecs-service-awsvpcconfiguration-syntax.json"></a>
 
@@ -24,7 +24,7 @@
   - String
 ```
 
-## Properties<a name="w13ab1c21c10d117c17c17b7"></a>
+## Properties<a name="w2922ab1c21c10d102c17c17b7"></a>
 
 `AssignPublicIp`  <a name="cfn-ecs-service-awsvpcconfiguration-assignpublicip"></a>
 Valid values include `ENABLED` and `DISABLED`\.  

@@ -37,7 +37,7 @@ After you create the basic secret, you can do any of the following:
      ] },
     ```
 
-    For more information about using dynamic references to values in other services' resources, see [Using Dynamic References to Specify Template Values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-refrences.html)\.
+    For more information about using dynamic references to values in other services' resources, see [Using Dynamic References to Specify Template Values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)\.
 **Important**  
 Be careful not to use such resolvable references for sensitive information like the username and password in any location that is logged to avoid accidentally exposing those details\. AWS CloudFormation explicitly prevents logging the `MasterUsername` and `MasterUserPassword` of an Amazon RDS database instance for this reason\.
   + Update the secret to add the connection details of the database or service to the secret value\. To do this, define a [AWS::SecretsManager::SecretTargetAttachment](aws-resource-secretsmanager-secrettargetattachment.md) resource and associate it with both the secret and the database or service\.

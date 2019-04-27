@@ -2,7 +2,7 @@
 
 `LaunchTemplateOverrides` is a property of the [Amazon EC2 SpotFleet SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md) property that describes overrides for a launch template\.
 
-## Syntax<a name="w13ab1c21c10d111d118c49b5"></a>
+## Syntax<a name="w2922ab1c21c10c96d122c49b5"></a>
 
 ### JSON<a name="aws-properties-ec2-spotfleet-launchtemplateoverrides-syntax.json"></a>
 
@@ -26,7 +26,7 @@
 [WeightedCapacity](#cfn-ec2-spotfleet-launchtemplateoverrides-weightedcapacity): Double
 ```
 
-## Properties<a name="w13ab1c21c10d111d118c49b7"></a>
+## Properties<a name="w2922ab1c21c10c96d122c49b7"></a>
 
 `AvailabilityZone`  <a name="cfn-ec2-spotfleet-launchtemplateoverrides-availabilityzone"></a>
 The Availability Zone in which to launch the instances\.  

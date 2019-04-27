@@ -1,6 +1,6 @@
 # AWS::RAM::ResourceShare<a name="aws-resource-ram-resourceshare"></a>
 
-The `AWS::RAM::ResourceShare` resource is used to create, update, and delete an Amazon ResourceShare\. For more information, see [ResourceShare](https://docs.aws.amazon.com/ram/latest/APIReference/API_ResourceShare.html) in the *AWS RAM API Reference*\. 
+Specifies a resource share\.
 
 ## Syntax<a name="aws-resource-ram-resourceshare-syntax"></a>
 
@@ -12,86 +12,108 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::RAM::ResourceShare",
   "Properties" : {
-    "[AllowExternalPrincipals](#cfn-ram-resourceshare-allowexternalprincipals)" : Boolean,
-    "[Name](#cfn-ram-resourceshare-name)" : String,
-    "[Principals](#cfn-ram-resourceshare-principals)" : [ String, ... ],
-    "[ResourceArns](#cfn-ram-resourceshare-resourcearns)" : [ String, ... ],
-    "[Tags](#cfn-ram-resourceshare-tags)" : [ [*Tag*](aws-properties-resource-tags.md), ... ]
-  }
+      "[AllowExternalPrincipals](#cfn-ram-resourceshare-allowexternalprincipals)" : Boolean,
+      "[Name](#cfn-ram-resourceshare-name)" : String,
+      "[Principals](#cfn-ram-resourceshare-principals)" : [ String, ... ],
+      "[ResourceArns](#cfn-ram-resourceshare-resourcearns)" : [ String, ... ],
+      "[Tags](#cfn-ram-resourceshare-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-ram-resourceshare-syntax.yaml"></a>
 
 ```
-Type: "AWS::RAM::ResourceShare"
-Properties:
-  [AllowExternalPrincipals](#cfn-ram-resourceshare-allowexternalprincipals): Boolean
-  [Name](#cfn-ram-resourceshare-name): String
-  [Principals](#cfn-ram-resourceshare-principals): 
+Type: AWS::RAM::ResourceShare
+Properties : 
+﻿  [AllowExternalPrincipals](#cfn-ram-resourceshare-allowexternalprincipals) : Boolean
+﻿  [Name](#cfn-ram-resourceshare-name) : String
+﻿  [Principals](#cfn-ram-resourceshare-principals) : 
     - String
-  [ResourceArns](#cfn-ram-resourceshare-resourcearns): 
+﻿  [ResourceArns](#cfn-ram-resourceshare-resourcearns) : 
     - String
-  [Tags](#cfn-ram-resourceshare-tags): 
-    - [*Tag*](aws-properties-resource-tags.md)
+﻿  [Tags](#cfn-ram-resourceshare-tags) : 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-ram-resourceshare-properties"></a>
 
 `AllowExternalPrincipals`  <a name="cfn-ram-resourceshare-allowexternalprincipals"></a>
-Indicates whether principals outside of your organization are allowed in this ResourceShare\.  
- *Required*: No  
- *Type*: Boolean  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Indicates whether principals outside your AWS organization can be associated with a resource share\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ram-resourceshare-name"></a>
-A descriptive name for the ResourceShare\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The name of the resource share\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Principals`  <a name="cfn-ram-resourceshare-principals"></a>
-A list of account IDs, organizational unit ARNs, and organization ARN to put into the ResourceShare\.  
- *Required*: No  
- *Type*: List of String values  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The principals to associate with the resource share\. The possible values are IDs of AWS accounts, the ARN of an OU or organization from AWS Organizations\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceArns`  <a name="cfn-ram-resourceshare-resourcearns"></a>
-The resource ARNs to put into the ResourceShare\.  
- *Required*: No  
- *Type*: List of String values  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The Amazon Resource Names \(ARN\) of the resources to associate with the resource share\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-ram-resourceshare-tags"></a>
-The tags on this ResourceShare\.  
- *Required*: No  
- *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+One or more tags\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ram-resourceshare-returnvalues"></a>
+## Return Values<a name="aws-resource-ram-resourceshare-return-values"></a>
 
-### Ref<a name="aws-resource-ram-resourceshare-ref"></a>
+### Ref<a name="aws-resource-ram-resourceshare-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::RAM::ResourceShare` resource to the intrinsic `Ref` function, the function returns the ARN of the created Amazon ResourceShare, such as `arn:aws:ram:us-east-1:123456789012:resource-share/12345678-1234-1234-1234-12345678`\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the resource share\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Fn::GetAtt<a name="aws-resource-ram-resourceshare-getatt"></a>
+### Fn::GetAtt<a name="aws-resource-ram-resourceshare-return-values-fn--getatt"></a>
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
-The Amazon Resource Name \(ARN\) of the resource share, such as `arn:aws:ram:us-east-1:123456789012:resource-share/12345678-1234-1234-1234-12345678`\. 
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
+#### <a name="aws-resource-ram-resourceshare-return-values-fn--getatt-fn--getatt"></a>
 
-## Examples<a name="aws-resource-ram-resourceshare-examples"></a>
+`Arn`  <a name="Arn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the resource share\.
 
-### ResourceShare creation example<a name="aws-resource-ram-resourceshare-example1"></a>
+## Examples<a name="aws-resource-ram-resourceshare--examples"></a>
 
-The following example creates a new ResourceShare\.
+### Creating a Resource Share<a name="aws-resource-ram-resourceshare--examples--Creating_a_Resource_Share"></a>
 
-#### JSON<a name="aws-resource-ram-resourceshare-example1.json"></a>
+The following example demonstrates how to create a resource share\.
+
+#### YAML<a name="aws-resource-ram-resourceshare--examples--Creating_a_Resource_Share--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  myresourceshare:
+    Type: "AWS::RAM::ResourceShare"
+    Properties:
+      Name: "My Resource Share"
+      ResourceArns:
+        - "arn:aws:ec2:us-east-1:123456789012:resource-type/12345678-1234-1234-1234-12345678"
+      Principals:
+        - "210987654321"
+      Tags:
+        - Key: "Key1"
+          Value: "Value1"
+        - Key: "Key2"
+          Value: "Value2"
+```
+
+#### JSON<a name="aws-resource-ram-resourceshare--examples--Creating_a_Resource_Share--json"></a>
 
 ```
 {
@@ -123,25 +145,6 @@ The following example creates a new ResourceShare\.
 }
 ```
 
-#### YAML<a name="aws-resource-ram-resourceshare-example1.yaml"></a>
-
-```
-AWSTemplateFormatVersion: 2010-09-09
-Resources:
-  myresourceshare:
-    Type: "AWS::RAM::ResourceShare"
-    Properties:
-      Name: "My Resource Share"
-      ResourceArns:
-        - "arn:aws:ec2:us-east-1:123456789012:resource-type/12345678-1234-1234-1234-12345678"
-      Principals:
-        - "210987654321"
-      Tags:
-        - Key: "Key1"
-          Value: "Value1"
-        - Key: "Key2"
-          Value: "Value2"
-```
-
-## See Also<a name="aws-resource-ram-resourceshare-seealso"></a>
-+  [CreateResourceShare](https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html) in the *AWS RAM API Reference* 
+## See Also<a name="aws-resource-ram-resourceshare--seealso"></a>
++  [CreateResourceShare](https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html) in the *AWS Resource Access Manager API Reference* 
++  [AWS Resource Access Manager User Guide](https://docs.aws.amazon.com/ram/latest/userguide) 

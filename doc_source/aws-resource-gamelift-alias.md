@@ -30,7 +30,7 @@ Properties:
     [RoutingStrategy](aws-properties-gamelift-alias-routingstrategy.md)
 ```
 
-## Properties<a name="w13ab1c21c10d147c13b7"></a>
+## Properties<a name="w2922ab1c21c10d129c13b7"></a>
 
 `Description`  <a name="cfn-gamelift-alias-description"></a>
 Information that helps you identify the purpose of this alias\.  
@@ -50,15 +50,15 @@ A routing configuration that specifies where traffic is directed for this alias,
 *Type*: [Amazon GameLift Alias RoutingStrategy](aws-properties-gamelift-alias-routingstrategy.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10d147c13b9"></a>
+## Return Value<a name="w2922ab1c21c10d129c13b9"></a>
 
-### Ref<a name="w13ab1c21c10d147c13b9b2"></a>
+### Ref<a name="w2922ab1c21c10d129c13b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the alias ID, such as `myalias-a01234b56-7890-1de2-f345-g67h8i901j2k`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w13ab1c21c10d147c13c11"></a>
+## Example<a name="w2922ab1c21c10d129c13c11"></a>
 
 The following example creates a terminal alias named `TerminalAlias` with a generic terminal message\.
 

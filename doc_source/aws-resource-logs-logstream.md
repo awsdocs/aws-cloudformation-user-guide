@@ -1,12 +1,13 @@
 # AWS::Logs::LogStream<a name="aws-resource-logs-logstream"></a>
 
-The `AWS::Logs::LogStream` resource creates an Amazon CloudWatch Logs log stream in a log group\. A log stream represents the sequence of events coming from an application instance or resource that you are monitoring\. For more information, see [Monitoring Log Files](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatchLogs.html) in the *Amazon CloudWatch User Guide*\.
+The `AWS::Logs::LogStream` resource specifies an Amazon CloudWatch Logs log stream in a specific log group\. A log stream represents the sequence of events coming from an application instance or resource that you are monitoring\.
 
-**Topics**
-+ [Syntax](#aws-resource-logs-logstream-syntax)
-+ [Properties](#w13ab1c21c10c69c47b9)
-+ [Return Values](#w13ab1c21c10c69c47c11)
-+ [Example](#w13ab1c21c10c69c47c13)
+There is no limit on the number of log streams that you can create for a log group\.
+
+You must use the following guidelines when naming a log stream:
++ Log stream names must be unique within the log group\.
++ Log stream names can be between 1 and 512 characters long\.
++ The ':' \(colon\) and '\*' \(asterisk\) characters are not allowed\.
 
 ## Syntax<a name="aws-resource-logs-logstream-syntax"></a>
 
@@ -18,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Logs::LogStream",
   "Properties" : {
-    "[LogGroupName](#cfn-logs-logstream-loggroupname)" : String,
-    "[LogStreamName](#cfn-logs-logstream-logstreamname)" : String
-  }
+      "[LogGroupName](#cfn-logs-logstream-loggroupname)" : String,
+      "[LogStreamName](#cfn-logs-logstream-logstreamname)" : String
+    }
 }
 ```
 
@@ -28,40 +29,46 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Logs::LogStream
-Properties: 
-  [LogGroupName](#cfn-logs-logstream-loggroupname): String
-  [LogStreamName](#cfn-logs-logstream-logstreamname): String
+Properties : 
+﻿  [LogGroupName](#cfn-logs-logstream-loggroupname) : String
+﻿  [LogStreamName](#cfn-logs-logstream-logstreamname) : String
 ```
 
-## Properties<a name="w13ab1c21c10c69c47b9"></a>
+## Properties<a name="aws-resource-logs-logstream-properties"></a>
 
 `LogGroupName`  <a name="cfn-logs-logstream-loggroupname"></a>
 The name of the log group where the log stream is created\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `512`  
+*Pattern*: `[\.\-_/#A-Za-z0-9]+`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LogStreamName`  <a name="cfn-logs-logstream-logstreamname"></a>
-The name of the log stream to create\. The name must be unique within the log group\.  
+The name of the log stream\. The name must be unique within the log group\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `512`  
+*Pattern*: `[^:*]*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="w13ab1c21c10c69c47c11"></a>
+## Return Values<a name="aws-resource-logs-logstream-return-values"></a>
 
-### Ref<a name="w13ab1c21c10c69c47c11b2"></a>
+### Ref<a name="aws-resource-logs-logstream-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name, such as `MyAppLogStream`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name, such as ` MyAppLogStream`\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Example<a name="w13ab1c21c10c69c47c13"></a>
+## Examples<a name="aws-resource-logs-logstream--examples"></a>
 
-### <a name="w13ab1c21c10c69c47c13b2"></a>
+### Create a Log Stream<a name="aws-resource-logs-logstream--examples--Create_a_Log_Stream"></a>
 
-The following example creates a CloudWatch Logs log stream named `MyAppLogStream` in the `exampleLogGroup` log group\.
+The following example creates a log stream named `MyAppLogStream` in the `exampleLogGroup` log group\.
 
-#### JSON<a name="aws-resource-logs-logstream-example.json"></a>
+#### JSON<a name="aws-resource-logs-logstream--examples--Create_a_Log_Stream--json"></a>
 
 ```
 "LogStream": {
@@ -73,7 +80,7 @@ The following example creates a CloudWatch Logs log stream named `MyAppLogStream
 }
 ```
 
-#### YAML<a name="aws-resource-logs-logstream-example.yaml"></a>
+#### YAML<a name="aws-resource-logs-logstream--examples--Create_a_Log_Stream--yaml"></a>
 
 ```
 LogStream: 

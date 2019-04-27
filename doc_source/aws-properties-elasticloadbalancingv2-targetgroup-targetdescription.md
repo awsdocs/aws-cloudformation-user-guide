@@ -2,7 +2,7 @@
 
 The `TargetDescription` property of the [AWS::ElasticLoadBalancingV2::TargetGroup](aws-resource-elasticloadbalancingv2-targetgroup.md) resource specifies a target to add to a target group\.
 
-## Syntax<a name="w13ab1c21c10d138c31c19b5"></a>
+## Syntax<a name="w2922ab1c21c10d120c31c19b5"></a>
 
 ### JSON<a name="aws-properties-elasticloadbalancingv2-targetgroup-targetdescription-syntax.json"></a>
 
@@ -22,7 +22,7 @@ The `TargetDescription` property of the [AWS::ElasticLoadBalancingV2::TargetGrou
 [Port](#cfn-elasticloadbalancingv2-targetgroup-targetdescription-port): Integer
 ```
 
-## Properties<a name="w13ab1c21c10d138c31c19b7"></a>
+## Properties<a name="w2922ab1c21c10d120c31c19b7"></a>
 
 `AvailabilityZone`  <a name="cfn-elasticloadbalancingv2-targetgroup-targetdescription-availabilityzone"></a>
 The Availability Zone where the IP address is to be registered\. For more information, see [TargetDescription](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_TargetDescription.html) in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  

@@ -7,9 +7,9 @@ You can create a peering connection with another AWS account\. For a detailed wa
 
 **Topics**
 + [Syntax](#aws-resource-ec2-vpcpeeringconnection-syntax)
-+ [Properties](#w13ab1c21c10d111d202c10)
-+ [Return Values](#w13ab1c21c10d111d202c12)
-+ [Examples](#w13ab1c21c10d111d202c14)
++ [Properties](#w2922ab1c21c10c96d206c10)
++ [Return Values](#w2922ab1c21c10c96d206c12)
++ [Examples](#w2922ab1c21c10c96d206c14)
 
 ## Syntax<a name="aws-resource-ec2-vpcpeeringconnection-syntax"></a>
 
@@ -45,7 +45,7 @@ Properties:
   [PeerRoleArn](#cfn-ec2-vpcpeeringconnection-peerrolearn):  String
 ```
 
-## Properties<a name="w13ab1c21c10d111d202c10"></a>
+## Properties<a name="w2922ab1c21c10c96d206c10"></a>
 
 `PeerVpcId`  <a name="cfn-ec2-vpcpeeringconnection-peervpcid"></a>
 The ID of the VPC with which you are creating the peering connection\.  
@@ -83,15 +83,15 @@ The Amazon Resource Name \(ARN\) of the VPC peer role for the peering connection
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
 
-## Return Values<a name="w13ab1c21c10d111d202c12"></a>
+## Return Values<a name="w2922ab1c21c10c96d206c12"></a>
 
-### Ref<a name="w13ab1c21c10d111d202c12b2"></a>
+### Ref<a name="w2922ab1c21c10c96d206c12b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w13ab1c21c10d111d202c14"></a>
+## Examples<a name="w2922ab1c21c10c96d206c14"></a>
 
 The following example template creates two VPCs to demonstrate how to configure a peering connection\. For a VPC peering connection, you must create a VPC peering route for each VPC route table, as shown in the example by `PeeringRoute1` and `PeeringRoute2`\. If you launch the template, you can connect to the `myInstance` instance using SSH, and then ping the `myPrivateInstance` instance although both instances are in separate VPCs\.
 

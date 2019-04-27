@@ -4,7 +4,7 @@ The `NotificationConfiguration` property type specifies the events that the Amaz
 
 The `NotificationConfigurations` property of the `[AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md)` resource contains a list of `NotificationConfiguration` property types\.
 
-## Syntax<a name="w13ab1c21c10c42c13c50b7"></a>
+## Syntax<a name="w2922ab1c21c10c38c13c50b7"></a>
 
 ### JSON<a name="aws-properties-as-notificationconfigurations-syntax.json"></a>
 
@@ -23,7 +23,7 @@ The `NotificationConfigurations` property of the `[AWS::AutoScaling::AutoScaling
 [TopicARN](#cfn-as-group-notificationconfigurations-topicarn): String
 ```
 
-## Properties<a name="w13ab1c21c10c42c13c50b9"></a>
+## Properties<a name="w2922ab1c21c10c38c13c50b9"></a>
 
 `NotificationTypes`  <a name="cfn-as-group-notificationconfigurations-notificationtypes"></a>
 A list of event types that trigger a notification\. Event types can include any of the following types: `autoscaling:EC2_INSTANCE_LAUNCH`, `autoscaling:EC2_INSTANCE_LAUNCH_ERROR`, `autoscaling:EC2_INSTANCE_TERMINATE`, `autoscaling:EC2_INSTANCE_TERMINATE_ERROR`, and `autoscaling:TEST_NOTIFICATION`\. For more information about event types, see [DescribeAutoScalingNotificationTypes](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_DescribeAutoScalingNotificationTypes.html) in the *Amazon EC2 Auto Scaling API Reference*\.  
@@ -35,6 +35,6 @@ The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service \(SNS
 *Required*: Yes  
 *Type*: String
 
-## Examples<a name="w13ab1c21c10c42c13c50c11"></a>
+## Examples<a name="w2922ab1c21c10c38c13c50c11"></a>
 
 For NotificationConfigurations snippets, see [Auto Scaling Group with Notifications](quickref-autoscaling.md#scenario-as-notification)\.

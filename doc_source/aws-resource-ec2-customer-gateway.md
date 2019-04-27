@@ -4,10 +4,10 @@ Provides information to AWS about your VPN customer gateway device\.
 
 **Topics**
 + [Syntax](#aws-resource-ec2-customergateway-syntax)
-+ [Properties](#w13ab1c21c10d111c14b9)
-+ [Return Value](#w13ab1c21c10d111c14c11)
-+ [Example](#w13ab1c21c10d111c14c13)
-+ [See Also](#w13ab1c21c10d111c14c15)
++ [Properties](#w2922ab1c21c10c96c18b9)
++ [Return Value](#w2922ab1c21c10c96c18c11)
++ [Example](#w2922ab1c21c10c96c18c13)
++ [See Also](#w2922ab1c21c10c96c18c15)
 
 ## Syntax<a name="aws-resource-ec2-customergateway-syntax"></a>
 
@@ -39,7 +39,7 @@ Properties:
   [Type](#cfn-ec2-customergateway-type): String
 ```
 
-## Properties<a name="w13ab1c21c10d111c14b9"></a>
+## Properties<a name="w2922ab1c21c10c96c18b9"></a>
 
 `BgpAsn`  <a name="cfn-ec2-customergateway-bgpasn"></a>
 The customer gateway's Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\)\.  
@@ -66,7 +66,7 @@ The type of VPN connection that this customer gateway supports\.
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)  
 *Example*: `ipsec.1`
 
-## Return Value<a name="w13ab1c21c10d111c14c11"></a>
+## Return Value<a name="w2922ab1c21c10c96c18c11"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -78,7 +78,7 @@ For the resource with the logical ID "MyResource", `Ref` will return the AWS res
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Example<a name="w13ab1c21c10d111c14c13"></a>
+## Example<a name="w2922ab1c21c10c96c18c13"></a>
 
 ### JSON<a name="aws-resource-ec2-customergateway-example.json"></a>
 
@@ -111,5 +111,5 @@ Resources:
       IpAddress: 1.1.1.1
 ```
 
-## See Also<a name="w13ab1c21c10d111c14c15"></a>
+## See Also<a name="w2922ab1c21c10c96c18c15"></a>
 + [CreateCustomerGateway](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateCustomerGateway.html) in the *Amazon EC2 API Reference*\.

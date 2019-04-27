@@ -8,9 +8,9 @@ When you update a stack with an Auto Scaling group and scheduled action, AWS Clo
 
 **Topics**
 + [Syntax](#aws-resource-autoscaling-scheduledaction-syntax)
-+ [Properties](#w13ab1c21c10c42c30c11)
-+ [Return Value](#w13ab1c21c10c42c30c13)
-+ [Auto Scaling Scheduled Action Snippet](#w13ab1c21c10c42c30c15)
++ [Properties](#w2922ab1c21c10c38c30c11)
++ [Return Value](#w2922ab1c21c10c38c30c13)
++ [Auto Scaling Scheduled Action Snippet](#w2922ab1c21c10c38c30c15)
 
 ## Syntax<a name="aws-resource-autoscaling-scheduledaction-syntax"></a>
 
@@ -47,7 +47,7 @@ Properties:
   [StartTime](#cfn-as-scheduledaction-starttime): Time stamp
 ```
 
-## Properties<a name="w13ab1c21c10c42c30c11"></a>
+## Properties<a name="w2922ab1c21c10c38c30c11"></a>
 
 `AutoScalingGroupName`  <a name="cfn-as-scheduledaction-asgname"></a>
 The name or ARN of the Auto Scaling group\.  
@@ -92,7 +92,7 @@ The time in UTC for this schedule to start\. For example, `2010-06-01T00:00:00Z`
 *Type*: Time stamp  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10c42c30c13"></a>
+## Return Value<a name="w2922ab1c21c10c38c30c13"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
 
@@ -106,7 +106,7 @@ For a scheduled Auto Scaling action with the logical ID `MyScheduledAction`, `Re
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Auto Scaling Scheduled Action Snippet<a name="w13ab1c21c10c42c30c15"></a>
+## Auto Scaling Scheduled Action Snippet<a name="w2922ab1c21c10c38c30c15"></a>
 
 The following template snippet includes two scheduled actions that scale the number of instances in an Auto Scaling group\. The `ScheduledActionUp` action starts at 7 AM every day and sets the Auto Scaling group to a minimum of five Amazon EC2 instances with a maximum of 10\. The `ScheduledActionDown` action starts at 7 PM every day and sets the Auto Scaling group to a minimum and maximum of one Amazon EC2 instance\.
 

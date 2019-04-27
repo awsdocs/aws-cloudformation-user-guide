@@ -1,0 +1,43 @@
+# AWS IoT Greengrass ResourceDefinition S3MachineLearningModelResourceData<a name="aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata"></a>
+
+<a name="aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-description"></a>Settings for an Amazon S3 machine learning resource\. For more information, see [Perform Machine Learning Inference](https://docs.aws.amazon.com/greengrass/latest/developerguide/ml-inference.html) in the *AWS IoT Greengrass Developer Guide*\.
+
+<a name="aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-inheritance"></a> In an AWS CloudFormation template, `S3MachineLearningModelResourceData` can be used in the [ResourceDataContainer](aws-properties-greengrass-resourcedefinition-resourcedatacontainer.md) property type\.
+
+## Syntax<a name="aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+
+### JSON<a name="aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-syntax.json"></a>
+
+```
+{
+  "[DestinationPath](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-destinationpath)" : String,
+  "[S3Uri](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-s3uri)" : String
+}
+```
+
+### YAML<a name="aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-syntax.yaml"></a>
+
+```
+[DestinationPath](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-destinationpath): String
+[S3Uri](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-s3uri): String
+```
+
+## Properties<a name="aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-properties"></a>
+
+`DestinationPath`  <a name="cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-destinationpath"></a>
+The absolute local path of the resource in the Lambda environment\.  
+ *Required*: Yes  
+ *Type*: String  
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+
+`S3Uri`  <a name="cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-s3uri"></a>
+The URI of the source model in an S3 bucket\. The model package must be in `tar.gz` or `.zip` format\.  
+ *Required*: Yes  
+ *Type*: String  
+ *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+
+## See Also<a name="aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-seealso"></a>
++ [S3MachineLearningModelResourceData](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-s3machinelearningmodelresourcedata.html) in the *AWS IoT Greengrass API Reference*
++ [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)

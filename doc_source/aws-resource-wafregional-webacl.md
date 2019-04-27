@@ -33,7 +33,7 @@ Properties:
     - Rule
 ```
 
-## Properties<a name="w13ab1c21c10d237c33b7"></a>
+## Properties<a name="w2922ab1c21c10d221c33b7"></a>
 
 `DefaultAction`  <a name="cfn-wafregional-webacl-defaultaction"></a>
 The action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL\.  
@@ -59,17 +59,17 @@ The rules to associate with the web ACL and the settings for each rule\.
 *Type*: List of [AWS WAF Regional WebACL Rules](aws-properties-wafregional-webacl-rules.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Return Values<a name="w13ab1c21c10d237c33b9"></a>
+## Return Values<a name="w2922ab1c21c10d221c33b9"></a>
 
-### Ref<a name="w13ab1c21c10d237c33b9b2"></a>
+### Ref<a name="w2922ab1c21c10d221c33b9b2"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name, such as `1234a1a-a1b1-12a1-abcd-a123b123456`\.
 
 For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
 
-## Examples<a name="w13ab1c21c10d237c33c11"></a>
+## Examples<a name="w2922ab1c21c10d221c33c11"></a>
 
-### Create a Web ACL<a name="w13ab1c21c10d237c33c11b2"></a>
+### Create a Web ACL<a name="w2922ab1c21c10d221c33c11b2"></a>
 
 The following example defines a web ACL that allows, by default, any web request\. However, if the request matches any rule, AWS WAF blocks the request\. AWS WAF evaluates each rule in priority order, starting with the lowest value\.
 

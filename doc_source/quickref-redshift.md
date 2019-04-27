@@ -378,6 +378,6 @@ Outputs:
       Ref: SecurityGroup
 ```
 
-## See Also<a name="w13ab1c17c23c73b7"></a>
+## See Also<a name="w2922ab1c17c23c73b7"></a>
 
-[AWS::Redshift::Cluster](aws-resource-redshift-cluster.md)
+[AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)
