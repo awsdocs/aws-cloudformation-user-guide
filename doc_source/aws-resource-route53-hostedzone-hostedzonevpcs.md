@@ -10,8 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[VPCId](#cfn-route53-hostedzone-hostedzonevpcs-vpcid)" : String,
-  "[VPCRegion](#cfn-route53-hostedzone-hostedzonevpcs-vpcregion)" : String
+  "Type" : "AWS::Route53::HostedZone",
+  "Properties" : {  
+    "[VPCId](#cfn-route53-hostedzone-hostedzonevpcs-vpcid)" : String,
+    "[VPCRegion](#cfn-route53-hostedzone-hostedzonevpcs-vpcregion)" : String
 }
 ```
 
