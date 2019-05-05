@@ -75,7 +75,7 @@ The targets, either instances or tags\.
 Specify instances using the following format:  
  `Key=instanceids,Values=<instanceid1>,<instanceid2>`   
 Tags are specified using the following format:  
- `Key=<tag name>,Values=<tag value>`\.  
+ `Key=tag:<tag name>,Values=<tag value>`\.  
 *Required*: Yes  
 *Type*: [List](aws-properties-ssm-maintenancewindowtarget-targets.md) of [Targets](aws-properties-ssm-maintenancewindowtarget-targets.md)  
 *Maximum*: `5`  
