@@ -93,7 +93,7 @@ For information about the `PendingDeletion` key state, see [How Key State Affect
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
-*Maximum*: `365`  
+*Maximum*: `30`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-kms-key-tags"></a>
