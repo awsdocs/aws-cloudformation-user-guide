@@ -29,15 +29,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 ﻿  [Arn](#cfn-events-rule-target-arn) : String
-﻿  [EcsParameters](#cfn-events-rule-target-ecsparameters) : [EcsParameters](aws-properties-events-rule-ecsparameters.md)
+﻿  [EcsParameters](#cfn-events-rule-target-ecsparameters) : 
+    [EcsParameters](aws-properties-events-rule-ecsparameters.md)
 ﻿  [Id](#cfn-events-rule-target-id) : String
 ﻿  [Input](#cfn-events-rule-target-input) : String
 ﻿  [InputPath](#cfn-events-rule-target-inputpath) : String
-﻿  [InputTransformer](#cfn-events-rule-target-inputtransformer) : [InputTransformer](aws-properties-events-rule-inputtransformer.md)
-﻿  [KinesisParameters](#cfn-events-rule-target-kinesisparameters) : [KinesisParameters](aws-properties-events-rule-kinesisparameters.md)
+﻿  [InputTransformer](#cfn-events-rule-target-inputtransformer) : 
+    [InputTransformer](aws-properties-events-rule-inputtransformer.md)
+﻿  [KinesisParameters](#cfn-events-rule-target-kinesisparameters) : 
+    [KinesisParameters](aws-properties-events-rule-kinesisparameters.md)
 ﻿  [RoleArn](#cfn-events-rule-target-rolearn) : String
-﻿  [RunCommandParameters](#cfn-events-rule-target-runcommandparameters) : [RunCommandParameters](aws-properties-events-rule-runcommandparameters.md)
-﻿  [SqsParameters](#cfn-events-rule-target-sqsparameters) : [SqsParameters](aws-properties-events-rule-sqsparameters.md)
+﻿  [RunCommandParameters](#cfn-events-rule-target-runcommandparameters) : 
+    [RunCommandParameters](aws-properties-events-rule-runcommandparameters.md)
+﻿  [SqsParameters](#cfn-events-rule-target-sqsparameters) : 
+    [SqsParameters](aws-properties-events-rule-sqsparameters.md)
 ```
 
 ## Properties<a name="aws-properties-events-rule-target-properties"></a>

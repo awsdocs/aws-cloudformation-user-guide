@@ -19,7 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 ﻿  [Key](#cfn-datapipeline-pipeline-parameterobjects-attribtues-key) : String
-﻿  [StringValue](#cfn-datapipeline-pipeline-parameterobjects-attribtues-stringvalue) : String
+﻿  [StringValue](#cfn-datapipeline-pipeline-parameterobjects-attribtues-stringvalue) : 
+    String
 ```
 
 ## Properties<a name="aws-properties-datapipeline-pipeline-parameterobjects-attributes-properties"></a>

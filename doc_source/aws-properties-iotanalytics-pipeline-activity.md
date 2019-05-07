@@ -26,16 +26,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-pipeline-activity-syntax.yaml"></a>
 
 ```
-﻿  [AddAttributes](#cfn-iotanalytics-pipeline-activity-addattributes) : [AddAttributes](aws-properties-iotanalytics-pipeline-addattributes.md)
-﻿  [Channel](#cfn-iotanalytics-pipeline-activity-channel) : [Channel](aws-properties-iotanalytics-pipeline-channel.md)
-﻿  [Datastore](#cfn-iotanalytics-pipeline-activity-datastore) : [Datastore](aws-properties-iotanalytics-pipeline-datastore.md)
-﻿  [DeviceRegistryEnrich](#cfn-iotanalytics-pipeline-activity-deviceregistryenrich) : [DeviceRegistryEnrich](aws-properties-iotanalytics-pipeline-deviceregistryenrich.md)
-﻿  [DeviceShadowEnrich](#cfn-iotanalytics-pipeline-activity-deviceshadowenrich) : [DeviceShadowEnrich](aws-properties-iotanalytics-pipeline-deviceshadowenrich.md)
-﻿  [Filter](#cfn-iotanalytics-pipeline-activity-filter) : [Filter](aws-properties-iotanalytics-pipeline-filter.md)
-﻿  [Lambda](#cfn-iotanalytics-pipeline-activity-lambda) : [Lambda](aws-properties-iotanalytics-pipeline-lambda.md)
-﻿  [Math](#cfn-iotanalytics-pipeline-activity-math) : [Math](aws-properties-iotanalytics-pipeline-math.md)
-﻿  [RemoveAttributes](#cfn-iotanalytics-pipeline-activity-removeattributes) : [RemoveAttributes](aws-properties-iotanalytics-pipeline-removeattributes.md)
-﻿  [SelectAttributes](#cfn-iotanalytics-pipeline-activity-selectattributes) : [SelectAttributes](aws-properties-iotanalytics-pipeline-selectattributes.md)
+﻿  [AddAttributes](#cfn-iotanalytics-pipeline-activity-addattributes) : 
+    [AddAttributes](aws-properties-iotanalytics-pipeline-addattributes.md)
+﻿  [Channel](#cfn-iotanalytics-pipeline-activity-channel) : 
+    [Channel](aws-properties-iotanalytics-pipeline-channel.md)
+﻿  [Datastore](#cfn-iotanalytics-pipeline-activity-datastore) : 
+    [Datastore](aws-properties-iotanalytics-pipeline-datastore.md)
+﻿  [DeviceRegistryEnrich](#cfn-iotanalytics-pipeline-activity-deviceregistryenrich) : 
+    [DeviceRegistryEnrich](aws-properties-iotanalytics-pipeline-deviceregistryenrich.md)
+﻿  [DeviceShadowEnrich](#cfn-iotanalytics-pipeline-activity-deviceshadowenrich) : 
+    [DeviceShadowEnrich](aws-properties-iotanalytics-pipeline-deviceshadowenrich.md)
+﻿  [Filter](#cfn-iotanalytics-pipeline-activity-filter) : 
+    [Filter](aws-properties-iotanalytics-pipeline-filter.md)
+﻿  [Lambda](#cfn-iotanalytics-pipeline-activity-lambda) : 
+    [Lambda](aws-properties-iotanalytics-pipeline-lambda.md)
+﻿  [Math](#cfn-iotanalytics-pipeline-activity-math) : 
+    [Math](aws-properties-iotanalytics-pipeline-math.md)
+﻿  [RemoveAttributes](#cfn-iotanalytics-pipeline-activity-removeattributes) : 
+    [RemoveAttributes](aws-properties-iotanalytics-pipeline-removeattributes.md)
+﻿  [SelectAttributes](#cfn-iotanalytics-pipeline-activity-selectattributes) : 
+    [SelectAttributes](aws-properties-iotanalytics-pipeline-selectattributes.md)
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-pipeline-activity-properties"></a>

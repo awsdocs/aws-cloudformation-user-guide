@@ -1,10 +1,10 @@
-# Elastic Load Balancing V2 Conditions<a name="aws-properties-elasticloadbalancingv2-listenerrule-conditions"></a>
+# AWS::ElasticLoadBalancingV2::ListenerRule RuleCondition<a name="aws-properties-elasticloadbalancingv2-listenerrule-conditions"></a>
 
-`Conditions` is a property of the [AWS::ElasticLoadBalancingV2::ListenerRule](aws-resource-elasticloadbalancingv2-listenerrule.md) resource that specifies the conditions when an Elastic Load Balancing listener rule takes effect\.
+Specifies a condition for a listener rule\.
 
-For more information, see [RuleCondition](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_RuleCondition.html) in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.
+## Syntax<a name="aws-properties-elasticloadbalancingv2-listenerrule-conditions-syntax"></a>
 
-## Syntax<a name="w2922ab1c21c10d120c23c27b7"></a>
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-elasticloadbalancingv2-listenerrule-conditions-syntax.json"></a>
 
@@ -18,32 +18,39 @@ For more information, see [RuleCondition](https://docs.aws.amazon.com/elasticloa
 ### YAML<a name="aws-properties-elasticloadbalancingv2-listenerrule-conditions-syntax.yaml"></a>
 
 ```
-[Field](#cfn-elasticloadbalancingv2-listenerrule-conditions-field): String
-[Values](#cfn-elasticloadbalancingv2-listenerrule-conditions-values):
-  - String
+﻿  [Field](#cfn-elasticloadbalancingv2-listenerrule-conditions-field) : String
+﻿  [Values](#cfn-elasticloadbalancingv2-listenerrule-conditions-values) : 
+    - String
 ```
 
-## Properties<a name="w2922ab1c21c10d120c23c27b9"></a>
+## Properties<a name="aws-properties-elasticloadbalancingv2-listenerrule-conditions-properties"></a>
 
 `Field`  <a name="cfn-elasticloadbalancingv2-listenerrule-conditions-field"></a>
-The name of the condition that you want to define, such as `path-pattern` \(which forwards requests based on the URL of the request\)\.  
-*Valid values*: `host-header` \| `path-pattern`  
-*Length constraints*: Maximum length of 64  
+The field in the HTTP request\. The following are the possible values:  
++  `http-header` 
++  `http-request-method` 
++  `host-header` 
++  `path-pattern` 
++  `query-string` 
++  `source-ip` 
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Maximum*: `64`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Values`  <a name="cfn-elasticloadbalancingv2-listenerrule-conditions-values"></a>
-The value for the field that you specified in the `Field` property\.  
-If you specified `host-header` for `Field`, you can specify a single host name \(for example, my\.example\.com\)\. A host name is case insensitive, can be up to 128 characters in length, and can contain any of the following characters\. You can include up to three wildcard characters\.  
+The condition value\. You can use `Values` if the rule contains only `host-header` and `path-pattern` conditions\. Otherwise, you can use `HostHeaderConfig` for `host-header` conditions and `PathPatternConfig` for `path-pattern` conditions\.  
+If `Field` is `host-header`, you can specify a single host name \(for example, my\.example\.com\)\. A host name is case insensitive, can be up to 128 characters in length, and can contain any of the following characters\.  
 + A\-Z, a\-z, 0\-9
 + \- \.
 + \* \(matches 0 or more characters\)
 + ? \(matches exactly 1 character\)
-If you specified `path-pattern` for `Field`, you can specify a single path pattern \(for example, /img/\*\)\. A path pattern is case\-sensitive, can be up to 128 characters in length, and can contain any of the following characters\. You can include up to three wildcard characters\.  
+If `Field` is `path-pattern`, you can specify a single path pattern \(for example, /img/\*\)\. A path pattern is case\-sensitive, can be up to 128 characters in length, and can contain any of the following characters\.  
 + A\-Z, a\-z, 0\-9
 + \_ \- \. $ / \~ " ' @ : \+
 + & \(using &amp;\)
 + \* \(matches 0 or more characters\)
 + ? \(matches exactly 1 character\)
 *Required*: No  
-*Type*: List of String values
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

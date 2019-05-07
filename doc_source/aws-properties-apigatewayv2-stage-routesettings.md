@@ -1,6 +1,6 @@
 # AWS::ApiGatewayV2::Stage RouteSettings<a name="aws-properties-apigatewayv2-stage-routesettings"></a>
 
-Specifies the throttling rate limit\.
+Represents a collection of route settings\.
 
 ## Syntax<a name="aws-properties-apigatewayv2-stage-routesettings-syntax"></a>
 

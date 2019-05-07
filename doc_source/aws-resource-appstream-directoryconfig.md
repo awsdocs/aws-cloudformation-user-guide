@@ -27,7 +27,8 @@ Properties :
 ﻿  [DirectoryName](#cfn-appstream-directoryconfig-directoryname) : String
 ﻿  [OrganizationalUnitDistinguishedNames](#cfn-appstream-directoryconfig-organizationalunitdistinguishednames) : 
     - String
-﻿  [ServiceAccountCredentials](#cfn-appstream-directoryconfig-serviceaccountcredentials) : [ServiceAccountCredentials](aws-properties-appstream-directoryconfig-serviceaccountcredentials.md)
+﻿  [ServiceAccountCredentials](#cfn-appstream-directoryconfig-serviceaccountcredentials) : 
+    [ServiceAccountCredentials](aws-properties-appstream-directoryconfig-serviceaccountcredentials.md)
 ```
 
 ## Properties<a name="aws-resource-appstream-directoryconfig-properties"></a>

@@ -24,7 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codepipeline-pipeline-stages-actions-syntax.yaml"></a>
 
 ```
-﻿  [ActionTypeId](#cfn-codepipeline-pipeline-stages-actions-actiontypeid) : [ActionTypeId](aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.md)
+﻿  [ActionTypeId](#cfn-codepipeline-pipeline-stages-actions-actiontypeid) : 
+    [ActionTypeId](aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.md)
 ﻿  [Configuration](#cfn-codepipeline-pipeline-stages-actions-configuration) : Json
 ﻿  [InputArtifacts](#cfn-codepipeline-pipeline-stages-actions-inputartifacts) : 
     - [InputArtifact](aws-properties-codepipeline-pipeline-stages-actions-inputartifacts.md)

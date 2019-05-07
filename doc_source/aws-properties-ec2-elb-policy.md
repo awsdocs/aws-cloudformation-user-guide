@@ -2,7 +2,7 @@
 
 Specifies policies for your Classic Load Balancer\.
 
-To associate policies with a listener, use the [PolicyNames](https://docs.aws.amazon.com/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames) property for the listener\.
+To associate policies with a listener, use the [PolicyNames](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames) property for the listener\.
 
 ## Syntax<a name="aws-properties-ec2-elb-policy-syntax"></a>
 

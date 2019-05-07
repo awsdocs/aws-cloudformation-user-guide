@@ -30,7 +30,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CodePipeline::Webhook
 Properties : 
 ﻿  [Authentication](#cfn-codepipeline-webhook-authentication) : String
-﻿  [AuthenticationConfiguration](#cfn-codepipeline-webhook-authenticationconfiguration) : [WebhookAuthConfiguration](aws-properties-codepipeline-webhook-webhookauthconfiguration.md)
+﻿  [AuthenticationConfiguration](#cfn-codepipeline-webhook-authenticationconfiguration) : 
+    [WebhookAuthConfiguration](aws-properties-codepipeline-webhook-webhookauthconfiguration.md)
 ﻿  [Filters](#cfn-codepipeline-webhook-filters) : 
     - [WebhookFilterRule](aws-properties-codepipeline-webhook-webhookfilterrule.md)
 ﻿  [Name](#cfn-codepipeline-webhook-name) : String

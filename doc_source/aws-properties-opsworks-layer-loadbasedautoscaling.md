@@ -19,9 +19,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-opsworks-layer-loadbasedautoscaling-syntax.yaml"></a>
 
 ```
-﻿  [DownScaling](#cfn-opsworks-layer-loadbasedautoscaling-downscaling) : [AutoScalingThresholds](aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.md)
+﻿  [DownScaling](#cfn-opsworks-layer-loadbasedautoscaling-downscaling) : 
+    [AutoScalingThresholds](aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.md)
 ﻿  [Enable](#cfn-opsworks-layer-loadbasedautoscaling-enable) : Boolean
-﻿  [UpScaling](#cfn-opsworks-layer-loadbasedautoscaling-upscaling) : [AutoScalingThresholds](aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.md)
+﻿  [UpScaling](#cfn-opsworks-layer-loadbasedautoscaling-upscaling) : 
+    [AutoScalingThresholds](aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.md)
 ```
 
 ## Properties<a name="aws-properties-opsworks-layer-loadbasedautoscaling-properties"></a>

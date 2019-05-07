@@ -285,6 +285,113 @@ Project:
         Value: Value2
 ```
 
+### Create a project with two filter groups\.<a name="aws-resource-codebuild-project--examples--Create_a_project_with_two_filter_groups."></a>
+
+ The following example creates a project with two filter groups\. Together, they trigger a build when one or both evaluate to true: 
++  The first filter group specifies pull requests are created or updated on branches with Git reference names that match the regular expression `^refs/heads/master$` by a GitHub user that does not have account ID `12345`\. 
++  The second filter group specifies push requests are created on files with names that match the regular expression `READ_ME` in branches with Git reference names that match the regular expression `^refs/heads/.*`\. 
+
+ For this example, the name of the service role is `my-example-service-role`\. The name of the source location is `my-example-source-location`\. 
+
+#### YAML<a name="aws-resource-codebuild-project--examples--Create_a_project_with_two_filter_groups.--yaml"></a>
+
+```
+CodeBuildProject:
+  Type: AWS::CodeBuild::Project
+  Properties:
+    Name: MyProject
+    ServiceRole: my-example-service-role
+    Artifacts:
+      Type: NO_ARTIFACTS
+    Environment:
+      Type: LINUX_CONTAINER
+      ComputeType: BUILD_GENERAL1_SMALL
+      Image: aws/codebuild/standard:1.0
+    Source:
+      Type: GITHUB
+      Location: my-example-source-location
+    Triggers:
+      Webhook: true
+      FilterGroups:
+        - - Type: EVENT
+            Pattern: PULL_REQUEST_CREATED,PULL_REQUEST_UPDATED
+          - Type: BASE_REF
+            Pattern: ^refs/heads/master$
+            ExcludeMatchedPattern: false
+          - Type: ACTOR_ACCOUNT_ID
+            Pattern: 12345
+            ExcludeMatchedPattern: true
+        - - Type: EVENT
+            Pattern: PUSH
+          - Type: HEAD_REF
+            Pattern: ^refs/heads/.*
+          - Type: FILE_PATH
+            Pattern: READ_ME
+            ExcludeMatchedPattern: true
+```
+
+#### JSON<a name="aws-resource-codebuild-project--examples--Create_a_project_with_two_filter_groups.--json"></a>
+
+```
+{
+    "CodeBuildProject": {
+        "Type": "AWS::CodeBuild::Project",
+        "Properties": {
+            "Name": "MyProject",
+            "ServiceRole": "my-example-service-role",
+            "Artifacts": {
+                "Type": "NO_ARTIFACTS"
+            },
+            "Environment": {
+                "Type": "LINUX_CONTAINER",
+                "ComputeType": "BUILD_GENERAL1_SMALL",
+                "Image": "aws/codebuild/standard:1.0"
+            },
+            "Source": {
+                "Type": "GITHUB",
+                "Location": "my-example-source-location"
+            },
+            "Triggers": {
+                "Webhook": true,
+                "FilterGroups": [
+                    [
+                        {
+                            "Type": "EVENT",
+                            "Pattern": "PULL_REQUEST_CREATED,PULL_REQUEST_UPDATED"
+                        },
+                        {
+                            "Type": "BASE_REF",
+                            "Pattern": "^refs/heads/master$",
+                            "ExcludeMatchedPattern": false
+                        },
+                        {
+                            "Type": "ACTOR_ACCOUNT_ID",
+                            "Pattern": 12345,
+                            "ExcludeMatchedPattern": true
+                        }
+                    ],
+                    [
+                        {
+                            "Type": "EVENT",
+                            "Pattern": "PUSH"
+                        },
+                        {
+                            "Type": "HEAD_REF",
+                            "Pattern": "^refs/heads/.*"
+                        },
+                        {
+                            "Type": "FILE_PATH",
+                            "Pattern": "READ_ME",
+                            "ExcludeMatchedPattern": true
+                        }
+                    ]
+                ]
+            }
+        }
+    }
+}
+```
+
 ### Create a project using Amazon S3 and Amazon VPC<a name="aws-resource-codebuild-project--examples--Create_a_project_using_Amazon_S3_and_Amazon_VPC"></a>
 
 The following example creates a project that caches build dependencies in Amazon S3 and uses resources in an Amazon VPC\.

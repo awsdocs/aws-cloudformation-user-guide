@@ -19,7 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 ﻿  [Id](#cfn-datapipeline-pipeline-parametervalues-id) : String
-﻿  [StringValue](#cfn-datapipeline-pipeline-parametervalues-stringvalue) : String
+﻿  [StringValue](#cfn-datapipeline-pipeline-parametervalues-stringvalue) : 
+    String
 ```
 
 ## Properties<a name="aws-properties-datapipeline-pipeline-parametervalues-properties"></a>

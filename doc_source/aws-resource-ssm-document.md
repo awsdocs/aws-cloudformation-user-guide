@@ -133,7 +133,7 @@ document:
           properties: 
             directoryId: "{{ directoryId }}"
             directoryName: "{{ directoryName }}"
-dnsIpAddresses: "{{ dnsIpAddresses }}"
+            dnsIpAddresses: "{{ dnsIpAddresses }}"
 ```
 
 ### Associate the Systems Manager document with an instance<a name="aws-resource-ssm-document--examples--Associate_the_Systems_Manager_document_with_an_instance"></a>
@@ -205,7 +205,7 @@ myEC2:
         SubnetId: 
           Ref: "mySubnet"
     KeyName: 
-Ref: "myKeyName"
+      Ref: "myKeyName"
 ```
 
 ## See Also<a name="aws-resource-ssm-document--seealso"></a>

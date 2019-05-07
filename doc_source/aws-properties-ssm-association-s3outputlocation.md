@@ -1,6 +1,6 @@
 # AWS::SSM::Association S3OutputLocation<a name="aws-properties-ssm-association-s3outputlocation"></a>
 
-An Amazon S3 bucket where you want to store the results of this request\.
+`S3OutputLocation` is a property of the [AWS::SSM::Association](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html) resource that specifies an Amazon S3 bucket where you want to store the results of this association request\.
 
 ## Syntax<a name="aws-properties-ssm-association-s3outputlocation-syntax"></a>
 

@@ -37,7 +37,8 @@ Properties :
 ﻿  [AppstreamAgentVersion](#cfn-appstream-imagebuilder-appstreamagentversion) : String
 ﻿  [Description](#cfn-appstream-imagebuilder-description) : String
 ﻿  [DisplayName](#cfn-appstream-imagebuilder-displayname) : String
-﻿  [DomainJoinInfo](#cfn-appstream-imagebuilder-domainjoininfo) : [DomainJoinInfo](aws-properties-appstream-imagebuilder-domainjoininfo.md)
+﻿  [DomainJoinInfo](#cfn-appstream-imagebuilder-domainjoininfo) : 
+    [DomainJoinInfo](aws-properties-appstream-imagebuilder-domainjoininfo.md)
 ﻿  [EnableDefaultInternetAccess](#cfn-appstream-imagebuilder-enabledefaultinternetaccess) : Boolean
 ﻿  [ImageArn](#cfn-appstream-imagebuilder-imagearn) : String
 ﻿  [ImageName](#cfn-appstream-imagebuilder-imagename) : String
@@ -45,7 +46,8 @@ Properties :
 ﻿  [Name](#cfn-appstream-imagebuilder-name) : String
 ﻿  [Tags](#cfn-appstream-imagebuilder-tags) : 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VpcConfig](#cfn-appstream-imagebuilder-vpcconfig) : [VpcConfig](aws-properties-appstream-imagebuilder-vpcconfig.md)
+﻿  [VpcConfig](#cfn-appstream-imagebuilder-vpcconfig) : 
+    [VpcConfig](aws-properties-appstream-imagebuilder-vpcconfig.md)
 ```
 
 ## Properties<a name="aws-resource-appstream-imagebuilder-properties"></a>

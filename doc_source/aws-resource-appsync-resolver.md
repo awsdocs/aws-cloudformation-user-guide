@@ -35,7 +35,8 @@ Properties :
 ﻿  [DataSourceName](#cfn-appsync-resolver-datasourcename) : String
 ﻿  [FieldName](#cfn-appsync-resolver-fieldname) : String
 ﻿  [Kind](#cfn-appsync-resolver-kind) : String
-﻿  [PipelineConfig](#cfn-appsync-resolver-pipelineconfig) : [PipelineConfig](aws-properties-appsync-resolver-pipelineconfig.md)
+﻿  [PipelineConfig](#cfn-appsync-resolver-pipelineconfig) : 
+    [PipelineConfig](aws-properties-appsync-resolver-pipelineconfig.md)
 ﻿  [RequestMappingTemplate](#cfn-appsync-resolver-requestmappingtemplate) : String
 ﻿  [RequestMappingTemplateS3Location](#cfn-appsync-resolver-requestmappingtemplates3location) : String
 ﻿  [ResponseMappingTemplate](#cfn-appsync-resolver-responsemappingtemplate) : String

@@ -36,13 +36,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::SSM::PatchBaseline
 Properties : 
-﻿  [ApprovalRules](#cfn-ssm-patchbaseline-approvalrules) : [RuleGroup](aws-properties-ssm-patchbaseline-rulegroup.md)
+﻿  [ApprovalRules](#cfn-ssm-patchbaseline-approvalrules) : 
+    [RuleGroup](aws-properties-ssm-patchbaseline-rulegroup.md)
 ﻿  [ApprovedPatches](#cfn-ssm-patchbaseline-approvedpatches) : 
     - String
 ﻿  [ApprovedPatchesComplianceLevel](#cfn-ssm-patchbaseline-approvedpatchescompliancelevel) : String
 ﻿  [ApprovedPatchesEnableNonSecurity](#cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity) : Boolean
 ﻿  [Description](#cfn-ssm-patchbaseline-description) : String
-﻿  [GlobalFilters](#cfn-ssm-patchbaseline-globalfilters) : [PatchFilterGroup](aws-properties-ssm-patchbaseline-patchfiltergroup.md)
+﻿  [GlobalFilters](#cfn-ssm-patchbaseline-globalfilters) : 
+    [PatchFilterGroup](aws-properties-ssm-patchbaseline-patchfiltergroup.md)
 ﻿  [Name](#cfn-ssm-patchbaseline-name) : String
 ﻿  [OperatingSystem](#cfn-ssm-patchbaseline-operatingsystem) : String
 ﻿  [PatchGroups](#cfn-ssm-patchbaseline-patchgroups) : 

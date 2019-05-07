@@ -21,10 +21,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-dataset-variable-syntax.yaml"></a>
 
 ```
-﻿  [DatasetContentVersionValue](#cfn-iotanalytics-dataset-variable-datasetcontentversionvalue) : [DatasetContentVersionValue](aws-properties-iotanalytics-dataset-variable-datasetcontentversionvalue.md)
-﻿  [DoubleValue](#cfn-iotanalytics-dataset-variable-doublevalue) : Double
-﻿  [OutputFileUriValue](#cfn-iotanalytics-dataset-variable-outputfileurivalue) : [OutputFileUriValue](aws-properties-iotanalytics-dataset-variable-outputfileurivalue.md)
-﻿  [StringValue](#cfn-iotanalytics-dataset-variable-stringvalue) : String
+﻿  [DatasetContentVersionValue](#cfn-iotanalytics-dataset-variable-datasetcontentversionvalue) : 
+    [DatasetContentVersionValue](aws-properties-iotanalytics-dataset-variable-datasetcontentversionvalue.md)
+﻿  [DoubleValue](#cfn-iotanalytics-dataset-variable-doublevalue) : 
+    Double
+﻿  [OutputFileUriValue](#cfn-iotanalytics-dataset-variable-outputfileurivalue) : 
+    [OutputFileUriValue](aws-properties-iotanalytics-dataset-variable-outputfileurivalue.md)
+﻿  [StringValue](#cfn-iotanalytics-dataset-variable-stringvalue) : 
+    String
 ﻿  [VariableName](#cfn-iotanalytics-dataset-variable-variablename) : String
 ```
 

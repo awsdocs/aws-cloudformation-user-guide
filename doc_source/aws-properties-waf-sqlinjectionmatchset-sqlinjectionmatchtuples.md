@@ -18,7 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-syntax.yaml"></a>
 
 ```
-﻿  [FieldToMatch](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-fieldtomatch) : [FieldToMatch](aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch-1.md)
+﻿  [FieldToMatch](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-fieldtomatch) : 
+    [FieldToMatch](aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch-1.md)
 ﻿  [TextTransformation](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-texttransformation) : String
 ```
 

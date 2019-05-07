@@ -17,7 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-dataset-filter-syntax.yaml"></a>
 
 ```
-﻿  [DeltaTime](#cfn-iotanalytics-dataset-filter-deltatime) : [DeltaTime](aws-properties-iotanalytics-dataset-deltatime.md)
+﻿  [DeltaTime](#cfn-iotanalytics-dataset-filter-deltatime) : 
+    [DeltaTime](aws-properties-iotanalytics-dataset-deltatime.md)
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-dataset-filter-properties"></a>

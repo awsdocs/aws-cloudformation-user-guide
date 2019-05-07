@@ -2,7 +2,7 @@
 
 Specifies a policy for application\-controlled session stickiness for your Classic Load Balancer\.
 
-To associate a policy with a listener, use the [PolicyNames](https://docs.aws.amazon.com/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames) property for the listener\.
+To associate a policy with a listener, use the [PolicyNames](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames) property for the listener\.
 
 ## Syntax<a name="aws-properties-ec2-elb-AppCookieStickinessPolicy-syntax"></a>
 

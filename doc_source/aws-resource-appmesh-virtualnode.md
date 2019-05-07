@@ -35,7 +35,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::AppMesh::VirtualNode
 Properties : 
 ﻿  [MeshName](#cfn-appmesh-virtualnode-meshname) : String
-﻿  [Spec](#cfn-appmesh-virtualnode-spec) : [VirtualNodeSpec](aws-properties-appmesh-virtualnode-virtualnodespec.md)
+﻿  [Spec](#cfn-appmesh-virtualnode-spec) : 
+    [VirtualNodeSpec](aws-properties-appmesh-virtualnode-virtualnodespec.md)
 ﻿  [Tags](#cfn-appmesh-virtualnode-tags) : 
     - [TagRef](aws-properties-appmesh-virtualnode-tagref.md)
 ﻿  [VirtualNodeName](#cfn-appmesh-virtualnode-virtualnodename) : String

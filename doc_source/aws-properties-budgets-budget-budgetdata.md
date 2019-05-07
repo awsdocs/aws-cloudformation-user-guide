@@ -27,12 +27,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-budgets-budget-budgetdata-syntax.yaml"></a>
 
 ```
-﻿  [BudgetLimit](#cfn-budgets-budget-budgetdata-budgetlimit) : [Spend](aws-properties-budgets-budget-spend.md)
+﻿  [BudgetLimit](#cfn-budgets-budget-budgetdata-budgetlimit) : 
+    [Spend](aws-properties-budgets-budget-spend.md)
 ﻿  [BudgetName](#cfn-budgets-budget-budgetdata-budgetname) : String
 ﻿  [BudgetType](#cfn-budgets-budget-budgetdata-budgettype) : String
 ﻿  [CostFilters](#cfn-budgets-budget-budgetdata-costfilters) : Json
-﻿  [CostTypes](#cfn-budgets-budget-budgetdata-costtypes) : [CostTypes](aws-properties-budgets-budget-costtypes.md)
-﻿  [TimePeriod](#cfn-budgets-budget-budgetdata-timeperiod) : [TimePeriod](aws-properties-budgets-budget-timeperiod.md)
+﻿  [CostTypes](#cfn-budgets-budget-budgetdata-costtypes) : 
+    [CostTypes](aws-properties-budgets-budget-costtypes.md)
+﻿  [TimePeriod](#cfn-budgets-budget-budgetdata-timeperiod) : 
+    [TimePeriod](aws-properties-budgets-budget-timeperiod.md)
 ﻿  [TimeUnit](#cfn-budgets-budget-budgetdata-timeunit) : String
 ```
 

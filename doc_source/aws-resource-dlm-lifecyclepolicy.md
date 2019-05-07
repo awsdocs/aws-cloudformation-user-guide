@@ -27,7 +27,8 @@ Type: AWS::DLM::LifecyclePolicy
 Properties : 
 ﻿  [Description](#cfn-dlm-lifecyclepolicy-description) : String
 ﻿  [ExecutionRoleArn](#cfn-dlm-lifecyclepolicy-executionrolearn) : String
-﻿  [PolicyDetails](#cfn-dlm-lifecyclepolicy-policydetails) : [PolicyDetails](aws-properties-dlm-lifecyclepolicy-policydetails.md)
+﻿  [PolicyDetails](#cfn-dlm-lifecyclepolicy-policydetails) : 
+    [PolicyDetails](aws-properties-dlm-lifecyclepolicy-policydetails.md)
 ﻿  [State](#cfn-dlm-lifecyclepolicy-state) : String
 ```
 

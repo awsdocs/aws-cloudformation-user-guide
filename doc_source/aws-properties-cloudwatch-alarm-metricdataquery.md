@@ -26,7 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ﻿  [Expression](#cfn-cloudwatch-alarm-metricdataquery-expression) : String
 ﻿  [Id](#cfn-cloudwatch-alarm-metricdataquery-id) : String
 ﻿  [Label](#cfn-cloudwatch-alarm-metricdataquery-label) : String
-﻿  [MetricStat](#cfn-cloudwatch-alarm-metricdataquery-metricstat) : [MetricStat](aws-properties-cloudwatch-alarm-metricstat.md)
+﻿  [MetricStat](#cfn-cloudwatch-alarm-metricdataquery-metricstat) : 
+    [MetricStat](aws-properties-cloudwatch-alarm-metricstat.md)
 ﻿  [ReturnData](#cfn-cloudwatch-alarm-metricdataquery-returndata) : Boolean
 ```
 

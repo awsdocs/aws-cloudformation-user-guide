@@ -18,8 +18,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-dataset-trigger-syntax.yaml"></a>
 
 ```
-﻿  [Schedule](#cfn-iotanalytics-dataset-trigger-schedule) : [Schedule](aws-properties-iotanalytics-dataset-trigger-schedule.md)
-﻿  [TriggeringDataset](#cfn-iotanalytics-dataset-trigger-triggeringdataset) : [TriggeringDataset](aws-properties-iotanalytics-dataset-triggeringdataset.md)
+﻿  [Schedule](#cfn-iotanalytics-dataset-trigger-schedule) : 
+    [Schedule](aws-properties-iotanalytics-dataset-trigger-schedule.md)
+﻿  [TriggeringDataset](#cfn-iotanalytics-dataset-trigger-triggeringdataset) : 
+    [TriggeringDataset](aws-properties-iotanalytics-dataset-triggeringdataset.md)
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-dataset-trigger-properties"></a>

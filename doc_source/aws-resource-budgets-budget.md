@@ -23,7 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Budgets::Budget
 Properties : 
-﻿  [Budget](#cfn-budgets-budget-budget) : [BudgetData](aws-properties-budgets-budget-budgetdata.md)
+﻿  [Budget](#cfn-budgets-budget-budget) : 
+    [BudgetData](aws-properties-budgets-budget-budgetdata.md)
 ﻿  [NotificationsWithSubscribers](#cfn-budgets-budget-notificationswithsubscribers) : 
     - [NotificationWithSubscribers](aws-properties-budgets-budget-notificationwithsubscribers.md)
 ```

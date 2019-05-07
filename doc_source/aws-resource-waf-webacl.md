@@ -25,7 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::WAF::WebACL
 Properties : 
-﻿  [DefaultAction](#cfn-waf-webacl-defaultaction) : [WafAction](aws-properties-waf-webacl-action.md)
+﻿  [DefaultAction](#cfn-waf-webacl-defaultaction) : 
+    [WafAction](aws-properties-waf-webacl-action.md)
 ﻿  [MetricName](#cfn-waf-webacl-metricname) : String
 ﻿  [Name](#cfn-waf-webacl-name) : String
 ﻿  [Rules](#cfn-waf-webacl-rules) : 

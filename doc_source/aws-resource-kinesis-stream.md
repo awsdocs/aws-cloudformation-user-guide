@@ -29,7 +29,8 @@ Properties :
 ﻿  [Name](#cfn-kinesis-stream-name) : String
 ﻿  [RetentionPeriodHours](#cfn-kinesis-stream-retentionperiodhours) : Integer
 ﻿  [ShardCount](#cfn-kinesis-stream-shardcount) : Integer
-﻿  [StreamEncryption](#cfn-kinesis-stream-streamencryption) : [StreamEncryption](aws-properties-kinesis-stream-streamencryption.md)
+﻿  [StreamEncryption](#cfn-kinesis-stream-streamencryption) : 
+    [StreamEncryption](aws-properties-kinesis-stream-streamencryption.md)
 ﻿  [Tags](#cfn-kinesis-stream-tags) : 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```

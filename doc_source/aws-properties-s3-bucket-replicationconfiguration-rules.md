@@ -21,10 +21,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-replicationconfiguration-rules-syntax.yaml"></a>
 
 ```
-﻿  [Destination](#cfn-s3-bucket-replicationconfiguration-rules-destination) : [ReplicationDestination](aws-properties-s3-bucket-replicationconfiguration-rules-destination.md)
+﻿  [Destination](#cfn-s3-bucket-replicationconfiguration-rules-destination) : 
+    [ReplicationDestination](aws-properties-s3-bucket-replicationconfiguration-rules-destination.md)
 ﻿  [Id](#cfn-s3-bucket-replicationconfiguration-rules-id) : String
 ﻿  [Prefix](#cfn-s3-bucket-replicationconfiguration-rules-prefix) : String
-﻿  [SourceSelectionCriteria](#cfn-s3-bucket-replicationrule-sourceselectioncriteria) : [SourceSelectionCriteria](aws-properties-s3-bucket-sourceselectioncriteria.md)
+﻿  [SourceSelectionCriteria](#cfn-s3-bucket-replicationrule-sourceselectioncriteria) : 
+    [SourceSelectionCriteria](aws-properties-s3-bucket-sourceselectioncriteria.md)
 ﻿  [Status](#cfn-s3-bucket-replicationconfiguration-rules-status) : String
 ```
 

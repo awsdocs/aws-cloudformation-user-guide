@@ -24,8 +24,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - [Backend](aws-properties-appmesh-virtualnode-backend.md)
 ﻿  [Listeners](#cfn-appmesh-virtualnode-virtualnodespec-listeners) : 
     - [Listener](aws-properties-appmesh-virtualnode-listener.md)
-﻿  [Logging](#cfn-appmesh-virtualnode-virtualnodespec-logging) : [Logging](aws-properties-appmesh-virtualnode-logging.md)
-﻿  [ServiceDiscovery](#cfn-appmesh-virtualnode-virtualnodespec-servicediscovery) : [ServiceDiscovery](aws-properties-appmesh-virtualnode-servicediscovery.md)
+﻿  [Logging](#cfn-appmesh-virtualnode-virtualnodespec-logging) : 
+    [Logging](aws-properties-appmesh-virtualnode-logging.md)
+﻿  [ServiceDiscovery](#cfn-appmesh-virtualnode-virtualnodespec-servicediscovery) : 
+    [ServiceDiscovery](aws-properties-appmesh-virtualnode-servicediscovery.md)
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-virtualnodespec-properties"></a>

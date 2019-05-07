@@ -35,7 +35,8 @@ Properties :
     - [ConfigurationOptionSetting](aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting.md)
 ﻿  [PlatformArn](#cfn-elasticbeanstalk-configurationtemplate-platformarn) : String
 ﻿  [SolutionStackName](#cfn-elasticbeanstalk-configurationtemplate-solutionstackname) : String
-﻿  [SourceConfiguration](#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration) : [SourceConfiguration](aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration.md)
+﻿  [SourceConfiguration](#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration) : 
+    [SourceConfiguration](aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration.md)
 ```
 
 ## Properties<a name="aws-resource-elasticbeanstalk-configurationtemplate-properties"></a>

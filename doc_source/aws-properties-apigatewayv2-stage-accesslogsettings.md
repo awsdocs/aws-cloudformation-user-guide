@@ -1,6 +1,6 @@
 # AWS::ApiGatewayV2::Stage AccessLogSettings<a name="aws-properties-apigatewayv2-stage-accesslogsettings"></a>
 
-The ARN of the CloudWatch Logs log group to receive access logs\.
+Settings for logging access in a stage\.
 
 ## Syntax<a name="aws-properties-apigatewayv2-stage-accesslogsettings-syntax"></a>
 

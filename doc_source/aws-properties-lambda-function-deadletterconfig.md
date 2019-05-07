@@ -1,8 +1,10 @@
-# AWS Lambda Function DeadLetterConfig<a name="aws-properties-lambda-function-deadletterconfig"></a>
+# AWS::Lambda::Function DeadLetterConfig<a name="aws-properties-lambda-function-deadletterconfig"></a>
 
-`DeadLetterConfig` is a property of the [AWS::Lambda::Function](aws-resource-lambda-function.md) resource that specifies a Dead Letter Queue \(DLQ\) that AWS Lambda \(Lambda\) sends events to when it can't process them\. For example, you can send unprocessed events to an Amazon Simple Notification Service \(Amazon SNS\) topic, where you can take further action\.
+The [dead letter queue](https://docs.aws.amazon.com/lambda/latest/dg/dlq.html) for failed asynchronous invocations\.
 
-## Syntax<a name="w2922ab1c21c10d166c21c21b5"></a>
+## Syntax<a name="aws-properties-lambda-function-deadletterconfig-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-lambda-function-deadletterconfig-syntax.json"></a>
 
@@ -15,12 +17,14 @@
 ### YAML<a name="aws-properties-lambda-function-deadletterconfig-syntax.yaml"></a>
 
 ```
-[TargetArn](#cfn-lambda-function-deadletterconfig-targetarn): String
+﻿  [TargetArn](#cfn-lambda-function-deadletterconfig-targetarn) : String
 ```
 
-## Properties<a name="w2922ab1c21c10d166c21c21b7"></a>
+## Properties<a name="aws-properties-lambda-function-deadletterconfig-properties"></a>
 
 `TargetArn`  <a name="cfn-lambda-function-deadletterconfig-targetarn"></a>
-The Amazon Resource Name \(ARN\) of a resource where Lambda delivers unprocessed events, such as an Amazon SNS topic or Amazon Simple Queue Service \(Amazon SQS\) queue\. For the Lambda function [execution role](https://docs.aws.amazon.com/lambda/latest/dg/with-s3-example-create-iam-role.html), you must explicitly provide the relevant permissions so that access to your DLQ resource is part of the execution role for your Lambda function\.   
+The Amazon Resource Name \(ARN\) of an Amazon SQS queue or Amazon SNS topic\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Pattern*: `(arn:(aws[a-zA-Z-]*)?:[a-z0-9-.]+:.*)|()`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

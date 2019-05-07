@@ -32,7 +32,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-route53-healthcheck-healthcheckconfig-syntax.yaml"></a>
 
 ```
-﻿  [AlarmIdentifier](#cfn-route53-healthcheck-healthcheckconfig-alarmidentifier) : [AlarmIdentifier](aws-properties-route53-healthcheck-alarmidentifier.md)
+﻿  [AlarmIdentifier](#cfn-route53-healthcheck-healthcheckconfig-alarmidentifier) : 
+    [AlarmIdentifier](aws-properties-route53-healthcheck-alarmidentifier.md)
 ﻿  [ChildHealthChecks](#cfn-route53-healthcheck-healthcheckconfig-childhealthchecks) : 
     - String
 ﻿  [EnableSNI](#cfn-route53-healthcheck-healthcheckconfig-enablesni) : Boolean
@@ -48,7 +49,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - String
 ﻿  [RequestInterval](#cfn-route53-healthcheck-healthcheckconfig-requestinterval) : Integer
 ﻿  [ResourcePath](#cfn-route53-healthcheck-healthcheckconfig-resourcepath) : String
-﻿  [SearchString](#cfn-route53-healthcheck-healthcheckconfig-searchstring) : String
+﻿  [SearchString](#cfn-route53-healthcheck-healthcheckconfig-searchstring) : 
+    String
 ﻿  [Type](#cfn-route53-healthcheck-healthcheckconfig-type) : String
 ```
 

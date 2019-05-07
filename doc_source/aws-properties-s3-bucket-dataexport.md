@@ -18,7 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-dataexport-syntax.yaml"></a>
 
 ```
-﻿  [Destination](#cfn-s3-bucket-dataexport-destination) : [Destination](aws-properties-s3-bucket-destination.md)
+﻿  [Destination](#cfn-s3-bucket-dataexport-destination) : 
+    [Destination](aws-properties-s3-bucket-destination.md)
 ﻿  [OutputSchemaVersion](#cfn-s3-bucket-dataexport-outputschemaversion) : String
 ```
 

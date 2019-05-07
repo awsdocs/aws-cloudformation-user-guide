@@ -1,172 +1,136 @@
 # AWS::EC2::DHCPOptions<a name="aws-resource-ec2-dhcp-options"></a>
 
-Creates a set of DHCP options for your VPC\.
+Specifies a set of DHCP options for your VPC\.
 
-For more information, see [CreateDhcpOptions](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateDhcpOptions.html) in the *Amazon EC2 API Reference*\.
+You must specify at least one of the following properties: `DomainNameServers`, `NetbiosNameServers`, `NtpServers`\. If you specify `NetbiosNameServers`, you must specify `NetbiosNodeType`\.
 
-**Topics**
-+ [Syntax](#aws-resource-ec2-dhcpoptions-syntax)
-+ [Properties](#w2922ab1c21c10c96c23c11)
-+ [Conditional Properties](#dhcp-options-conditional-note)
-+ [Return Values](#w2922ab1c21c10c96c23c15)
-+ [Example](#w2922ab1c21c10c96c23c17)
-+ [See Also](#w2922ab1c21c10c96c23c19)
-
-## Syntax<a name="aws-resource-ec2-dhcpoptions-syntax"></a>
+## Syntax<a name="aws-resource-ec2-dhcp-options-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-resource-ec2-dhcpoptions-syntax.json"></a>
+### JSON<a name="aws-resource-ec2-dhcp-options-syntax.json"></a>
 
 ```
 {
-   "Type" : "AWS::EC2::DHCPOptions",
-   "Properties" : {
+  "Type" : "AWS::EC2::DHCPOptions",
+  "Properties" : {
       "[DomainName](#cfn-ec2-dhcpoptions-domainname)" : String,
       "[DomainNameServers](#cfn-ec2-dhcpoptions-domainnameservers)" : [ String, ... ],
       "[NetbiosNameServers](#cfn-ec2-dhcpoptions-netbiosnameservers)" : [ String, ... ],
-      "[NetbiosNodeType](#cfn-ec2-dhcpoptions-netbiosnodetype)" : Number,
+      "[NetbiosNodeType](#cfn-ec2-dhcpoptions-netbiosnodetype)" : Integer,
       "[NtpServers](#cfn-ec2-dhcpoptions-ntpservers)" : [ String, ... ],
-      "[Tags](#cfn-ec2-dhcpoptions-tags)" : [ Resource Tag, ... ]
-   }
+      "[Tags](#cfn-ec2-dhcpoptions-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
 }
 ```
 
-### YAML<a name="aws-resource-ec2-dhcpoptions-syntax.yaml"></a>
+### YAML<a name="aws-resource-ec2-dhcp-options-syntax.yaml"></a>
 
 ```
 Type: AWS::EC2::DHCPOptions
-Properties:
-  [DomainName](#cfn-ec2-dhcpoptions-domainname): String
-  [DomainNameServers](#cfn-ec2-dhcpoptions-domainnameservers):
+Properties : 
+﻿  [DomainName](#cfn-ec2-dhcpoptions-domainname) : String
+﻿  [DomainNameServers](#cfn-ec2-dhcpoptions-domainnameservers) : 
     - String
-  [NetbiosNameServers](#cfn-ec2-dhcpoptions-netbiosnameservers):
+﻿  [NetbiosNameServers](#cfn-ec2-dhcpoptions-netbiosnameservers) : 
     - String
-  [NetbiosNodeType](#cfn-ec2-dhcpoptions-netbiosnodetype): Number
-  [NtpServers](#cfn-ec2-dhcpoptions-ntpservers):
+﻿  [NetbiosNodeType](#cfn-ec2-dhcpoptions-netbiosnodetype) : Integer
+﻿  [NtpServers](#cfn-ec2-dhcpoptions-ntpservers) : 
     - String
-  [Tags](#cfn-ec2-dhcpoptions-tags):
-    -Resource Tag
+﻿  [Tags](#cfn-ec2-dhcpoptions-tags) : 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
-## Properties<a name="w2922ab1c21c10c96c23c11"></a>
+## Properties<a name="aws-resource-ec2-dhcp-options-properties"></a>
 
 `DomainName`  <a name="cfn-ec2-dhcpoptions-domainname"></a>
-A domain name of your choice\.  
-*Required*: Conditional; see [note](#dhcp-options-conditional-note)\.  
+This value is used to complete unqualified DNS hostnames\. If you're using AmazonProvidedDNS in `us-east-1`, specify `ec2.internal`\. If you're using AmazonProvidedDNS in another Region, specify *region*\.`compute.internal` \(for example, `ap-northeast-1.compute.internal`\)\. Otherwise, specify a domain name \(for example, *MyCompany\.com*\)\.  
+*Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)  
-*Example*: `"example.com"`
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DomainNameServers`  <a name="cfn-ec2-dhcpoptions-domainnameservers"></a>
-The IP \(IPv4\) address of a domain name server\. You can specify up to four addresses\.  
-*Required*: Conditional; see [note](#dhcp-options-conditional-note)\.  
-*Type*: List of String values  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)  
-*Example*: `"DomainNameServers" : [ "10.0.0.1", "10.0.0.2" ]`  
-*Example*: To preserve the order of IP addresses, specify a comma delimited list as a single string: `"DomainNameServers" : [ "10.0.0.1, 10.0.0.2" ]`
+The IPv4 addresses of up to four domain name servers, or AmazonProvidedDNS\. The default DHCP option set specifies `AmazonProvidedDNS`\. If specifying more than one domain name server, specify the IP addresses in a single parameter, separated by commas\. To have your instance to receive a custom DNS hostname as specified in `DomainName`, you must set this to a custom DNS server\.  
+*Required*: Conditional  
+*Type*: List of String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NetbiosNameServers`  <a name="cfn-ec2-dhcpoptions-netbiosnameservers"></a>
-The IP address \(IPv4\) of a NetBIOS name server\. You can specify up to four addresses\.  
-*Required*: Conditional; see [note](#dhcp-options-conditional-note)\.  
-*Type*: List of String values  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)  
-*Example*: `"NetbiosNameServers" : [ "10.0.0.1", "10.0.0.2" ]`  
-*Example*: To preserve the order of IP addresses, specify a comma delimited list as a single string: `"NetbiosNameServers" : [ "10.0.0.1, 10.0.0.2" ]`
+The IPv4 addresses of up to four NetBIOS name servers\.  
+*Required*: Conditional  
+*Type*: List of String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NetbiosNodeType`  <a name="cfn-ec2-dhcpoptions-netbiosnodetype"></a>
-An integer value indicating the NetBIOS node type:  
-+ **1**: Broadcast \("B"\)
-+ **2**: Point\-to\-point \("P"\)
-+ **4**: Mixed mode \("M"\)
-+ **8**: Hybrid \("H"\)
-For more information about these values and about NetBIOS node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt), [RFC 1001](http://tools.ietf.org/rfc/rfc1001.txt), and [RFC 1002](http://tools.ietf.org/rfc/rfc1002.txt)\. We recommend that you use only the value `2` at this time \(broadcast and multicast are not currently supported\)\.  
-*Required*: Required if `NetBiosNameServers` is specified; optional otherwise\.  
-*Type*: List of numbers  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)  
-*Example*: `"NetbiosNodeType" : 2`
+The NetBIOS node type \(1, 2, 4, or 8\)\. We recommend that you specify 2 \(broadcast and multicast are not currently supported\)\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NtpServers`  <a name="cfn-ec2-dhcpoptions-ntpservers"></a>
-The IP address \(IPv4\) of a Network Time Protocol \(NTP\) server\. You can specify up to four addresses\.  
-*Required*: Conditional; see [note](#dhcp-options-conditional-note)\.  
-*Type*: List of String values  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)  
-*Example*: `"NtpServers" : [ "10.0.0.1" ]`  
-*Example*: To preserve the order of IP addresses, specify a comma delimited list as a single string: `"NtpServers" : [ "10.0.0.1, 10.0.0.2" ]`
+The IPv4 addresses of up to four Network Time Protocol \(NTP\) servers\.  
+*Required*: Conditional  
+*Type*: List of String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ec2-dhcpoptions-tags"></a>
-An arbitrary set of tags \(key–value pairs\) for this resource\.  
+Any tags assigned to the DHCP options set\.  
 *Required*: No  
-*Type*: [Resource Tag](aws-properties-resource-tags.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Conditional Properties<a name="dhcp-options-conditional-note"></a>
+## Return Values<a name="aws-resource-ec2-dhcp-options-return-values"></a>
 
-*At least one* of the following properties must be specified:
-+ [DomainNameServers](#cfn-ec2-dhcpoptions-domainnameservers)
-+ [NetbiosNameServers](#cfn-ec2-dhcpoptions-netbiosnameservers)
-+ [NtpServers](#cfn-ec2-dhcpoptions-ntpservers)
+### Ref<a name="aws-resource-ec2-dhcp-options-return-values-ref"></a>
 
-After this condition has been fulfilled, the rest of these properties are optional\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
 
-If you specify `NetbiosNameServers`, then `NetbiosNodeType` is required\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Return Values<a name="w2922ab1c21c10c96c23c15"></a>
+## Examples<a name="aws-resource-ec2-dhcp-options--examples"></a>
 
-### Ref<a name="w2922ab1c21c10c96c23c15b2"></a>
+### <a name="aws-resource-ec2-dhcp-options--examples--"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
+#### YAML<a name="aws-resource-ec2-dhcp-options--examples----yaml"></a>
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+```
+myDhcpOptions: 
+    Type: AWS::EC2::DHCPOptions
+    Properties: 
+        DomainName: example.com
+        DomainNameServers: 
+          - AmazonProvidedDNS
+        NtpServers: 
+          - 10.2.5.1
+        NetbiosNameServers: 
+          - 10.2.5.1
+        NetbiosNodeType: 2
+        Tags: 
+          - 
+            Key: project
+            Value: 123
+```
 
-## Example<a name="w2922ab1c21c10c96c23c17"></a>
+### <a name="aws-resource-ec2-dhcp-options--examples--"></a>
 
-### JSON<a name="aws-resource-ec2-dhcpoptions-example.json"></a>
+#### JSON<a name="aws-resource-ec2-dhcp-options--examples----json"></a>
 
 ```
 {
-   "AWSTemplateFormatVersion" : "2010-09-09",
-   "Resources" : {
-      "myDhcpOptions" : {
-         "Type" : "AWS::EC2::DHCPOptions",
-         "Properties" : {
+    "myDhcpOptions" : {
+        "Type" : "AWS::EC2::DHCPOptions",
+        "Properties" : {
             "DomainName" : "example.com",
             "DomainNameServers" : [ "AmazonProvidedDNS" ],
             "NtpServers" : [ "10.2.5.1" ],
             "NetbiosNameServers" : [ "10.2.5.1" ],
             "NetbiosNodeType" : 2,
-            "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
-         }
-      }
-   }
+            "Tags" : [ { "Key" : "project", "Value" : "123" } ]
+        }
+    }
 }
 ```
 
-### YAML<a name="aws-resource-ec2-dhcpoptions-example.yaml"></a>
-
-```
-AWSTemplateFormatVersion: "2010-09-09"
-Resources: 
-  myDhcpOptions: 
-    Type: AWS::EC2::DHCPOptions
-    Properties: 
-      DomainName: example.com
-      DomainNameServers: 
-        - AmazonProvidedDNS
-      NtpServers: 
-        - 10.2.5.1
-      NetbiosNameServers: 
-        - 10.2.5.1
-      NetbiosNodeType: 2
-      Tags: 
-        - 
-          Key: foo
-          Value: bar
-```
-
-## See Also<a name="w2922ab1c21c10c96c23c19"></a>
-+ [CreateDhcpOptions](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateDhcpOptions.html) in the *Amazon EC2 API Reference*
-+ [Using Tags](http://docs.aws.amazon.com/AWSEC2/latest/DeveloperGuide/Using_Tags.html) in the *Amazon Elastic Compute Cloud User Guide*\.
-+ [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt) \- *DHCP Options and BOOTP Vendor Extensions*, Network Working Group, 1997
-+ [RFC 1001](http://tools.ietf.org/rfc/rfc1001.txt) \- *Protocol Standard for a NetBIOS Service on a TCP/UDP Transport: Concepts and Methods*, Network Working Group, 1987
-+ [RFC 1002](http://tools.ietf.org/rfc/rfc1002.txt) \- *Protocol Standard for a NetBIOS Service on a TCP/UDP Transport: Detailed Specifications*, Network Working Group, 1987
+## See Also<a name="aws-resource-ec2-dhcp-options--seealso"></a>
++  [CreateDhcpOptions](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateDhcpOptions.html) in the *Amazon Elastic Compute Cloud API Reference* 
++ [DHCP Options Sets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html) in the *Amazon Virtual Private Cloud User Guide*

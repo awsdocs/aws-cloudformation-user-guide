@@ -179,6 +179,9 @@ The following example creates an `integration` resource named `MyIntegration` fo
                             "Ref": "AWS::Region"
                         },
                         ":lambda:path/2015-03-31/functions/",
+                        {
+                            "Ref": "MyLambdaFunction"
+                        },
                         "/invocations"
                     ]
                 ]
@@ -207,6 +210,7 @@ MyIntegration:
         - ':apigateway:'
         - !Ref 'AWS::Region'
         - ':lambda:path/2015-03-31/functions/'
+        - !Ref MyLambdaFunction
         - /invocations
     CredentialsArn: MyCredentialsArn
     IntegrationMethod: GET

@@ -1,8 +1,8 @@
-# Amazon EC2 CapacityReservation TagSpecification<a name="aws-properties-ec2-capacityreservation-tagspecification"></a>
+# AWS::EC2::CapacityReservation TagSpecification<a name="aws-properties-ec2-capacityreservation-tagspecification"></a>
 
-<a name="aws-properties-ec2-capacityreservation-tagspecification-description"></a>The `TagSpecification` property type specifies the tags specification for an Amazon EC2 Capacity Reservation\.
+An array of key\-value pairs to apply to this resource\.
 
-<a name="aws-properties-ec2-capacityreservation-tagspecification-inheritance"></a> `TagSpecification` is a property of the [AWS::EC2::CapacityReservation](aws-resource-ec2-capacityreservation.md) resource\.
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.
 
 ## Syntax<a name="aws-properties-ec2-capacityreservation-tagspecification-syntax"></a>
 
@@ -13,31 +13,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ResourceType](#cfn-ec2-capacityreservation-tagspecification-resourcetype)" : String,
-  "[Tags](#cfn-ec2-capacityreservation-tagspecification-tags)" : [ [*Tag*](aws-properties-ec2-capacityreservation-tag.md), ... ]
+  "[Tags](#cfn-ec2-capacityreservation-tagspecification-tags)" : [ [Tag](aws-properties-ec2-capacityreservation-tag.md), ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-ec2-capacityreservation-tagspecification-syntax.yaml"></a>
 
 ```
-[ResourceType](#cfn-ec2-capacityreservation-tagspecification-resourcetype): String
-  [Tags](#cfn-ec2-capacityreservation-tagspecification-tags): 
-    - [*Tag*](aws-properties-ec2-capacityreservation-tag.md)
+﻿  [ResourceType](#cfn-ec2-capacityreservation-tagspecification-resourcetype) : String
+﻿  [Tags](#cfn-ec2-capacityreservation-tagspecification-tags) : 
+    - [Tag](aws-properties-ec2-capacityreservation-tag.md)
 ```
 
 ## Properties<a name="aws-properties-ec2-capacityreservation-tagspecification-properties"></a>
 
 `ResourceType`  <a name="cfn-ec2-capacityreservation-tagspecification-resourcetype"></a>
-The type of resource to tag\. To tag an Amazon EC2 Capacity Reservation, specify `capacity-reservation`\.  
+The type of resource to tag\. Specify `capacity-reservation`\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Allowed Values*: `client-vpn-endpoint | customer-gateway | dedicated-host | dhcp-options | elastic-ip | fleet | fpga-image | host-reservation | image | instance | internet-gateway | launch-template | natgateway | network-acl | network-interface | reserved-instances | route-table | security-group | snapshot | spot-instances-request | subnet | transit-gateway | transit-gateway-attachment | transit-gateway-route-table | volume | vpc | vpc-peering-connection | vpn-connection | vpn-gateway`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-ec2-capacityreservation-tagspecification-tags"></a>
 The tags to apply to the resource\.  
 *Required*: No  
-*Type*: List of [Tag](aws-properties-ec2-capacityreservation-tag.md) property types  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
-
-## See Also<a name="aws-properties-ec2-capacityreservation-tagspecification-seealso"></a>
-+ [TagSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TagSpecification.html) in the *Amazon EC2 API Reference*\.
+*Type*: List of [Tag](aws-properties-ec2-capacityreservation-tag.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

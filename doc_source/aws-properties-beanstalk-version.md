@@ -29,7 +29,8 @@ Type: AWS::ElasticBeanstalk::ApplicationVersion
 Properties : 
 ﻿  [ApplicationName](#cfn-elasticbeanstalk-applicationversion-applicationname) : String
 ﻿  [Description](#cfn-elasticbeanstalk-applicationversion-description) : String
-﻿  [SourceBundle](#cfn-elasticbeanstalk-applicationversion-sourcebundle) : [SourceBundle](aws-properties-beanstalk-sourcebundle.md)
+﻿  [SourceBundle](#cfn-elasticbeanstalk-applicationversion-sourcebundle) : 
+    [SourceBundle](aws-properties-beanstalk-sourcebundle.md)
 ```
 
 ## Properties<a name="aws-properties-beanstalk-version-properties"></a>

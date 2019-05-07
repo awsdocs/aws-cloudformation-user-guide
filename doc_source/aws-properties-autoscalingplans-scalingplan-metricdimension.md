@@ -1,8 +1,6 @@
-# AWS Auto Scaling ScalingPlan MetricDimension<a name="aws-properties-autoscalingplans-scalingplan-metricdimension"></a>
+# AWS::AutoScalingPlans::ScalingPlan MetricDimension<a name="aws-properties-autoscalingplans-scalingplan-metricdimension"></a>
 
-<a name="aws-properties-autoscalingplans-scalingplan-metricdimension-description"></a>The `MetricDimension` property type specifies a dimension for a customized metric to use with AWS Auto Scaling\.
-
-<a name="aws-properties-autoscalingplans-scalingplan-metricdimension-inheritance"></a> `MetricDimension` is a property of the [AWS Auto Scaling ScalingPlan CustomizedScalingMetricSpecification](aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.md) property type\.
+ `MetricDimension` is a subproperty of [CustomizedScalingMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.html) that specifies a dimension for a customized metric to use with AWS Auto Scaling\. Dimensions are arbitrary name/value pairs that can be associated with a CloudWatch metric\. Duplicate dimensions are not allowed\. 
 
 ## Syntax<a name="aws-properties-autoscalingplans-scalingplan-metricdimension-syntax"></a>
 
@@ -12,28 +10,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Value](#cfn-autoscalingplans-scalingplan-metricdimension-value)" : String,
-  "[Name](#cfn-autoscalingplans-scalingplan-metricdimension-name)" : String
+  "[Name](#cfn-autoscalingplans-scalingplan-metricdimension-name)" : String,
+  "[Value](#cfn-autoscalingplans-scalingplan-metricdimension-value)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-autoscalingplans-scalingplan-metricdimension-syntax.yaml"></a>
 
 ```
-[Value](#cfn-autoscalingplans-scalingplan-metricdimension-value): String
-[Name](#cfn-autoscalingplans-scalingplan-metricdimension-name): String
+﻿  [Name](#cfn-autoscalingplans-scalingplan-metricdimension-name) : String
+﻿  [Value](#cfn-autoscalingplans-scalingplan-metricdimension-value) : String
 ```
 
 ## Properties<a name="aws-properties-autoscalingplans-scalingplan-metricdimension-properties"></a>
 
 `Name`  <a name="cfn-autoscalingplans-scalingplan-metricdimension-name"></a>
 The name of the dimension\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-autoscalingplans-scalingplan-metricdimension-value"></a>
 The value of the dimension\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

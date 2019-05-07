@@ -20,7 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appsync-datasource-httpconfig-syntax.yaml"></a>
 
 ```
-﻿  [AuthorizationConfig](#cfn-appsync-datasource-httpconfig-authorizationconfig) : [AuthorizationConfig](aws-properties-appsync-datasource-authorizationconfig.md)
+﻿  [AuthorizationConfig](#cfn-appsync-datasource-httpconfig-authorizationconfig) : 
+    [AuthorizationConfig](aws-properties-appsync-datasource-authorizationconfig.md)
 ﻿  [Endpoint](#cfn-appsync-datasource-httpconfig-endpoint) : String
 ```
 

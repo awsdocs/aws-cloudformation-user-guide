@@ -29,7 +29,8 @@ Properties :
 ﻿  [Actions](#cfn-iotanalytics-dataset-actions) : 
     - [Action](aws-properties-iotanalytics-dataset-action.md)
 ﻿  [DatasetName](#cfn-iotanalytics-dataset-datasetname) : String
-﻿  [RetentionPeriod](#cfn-iotanalytics-dataset-retentionperiod) : [RetentionPeriod](aws-properties-iotanalytics-dataset-retentionperiod.md)
+﻿  [RetentionPeriod](#cfn-iotanalytics-dataset-retentionperiod) : 
+    [RetentionPeriod](aws-properties-iotanalytics-dataset-retentionperiod.md)
 ﻿  [Tags](#cfn-iotanalytics-dataset-tags) : 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ﻿  [Triggers](#cfn-iotanalytics-dataset-triggers) : 

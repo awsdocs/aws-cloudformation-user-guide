@@ -41,15 +41,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ElasticLoadBalancing::LoadBalancer
 Properties : 
-﻿  [AccessLoggingPolicy](#cfn-ec2-elb-accessloggingpolicy) : [AccessLoggingPolicy](aws-properties-ec2-elb-accessloggingpolicy.md)
+﻿  [AccessLoggingPolicy](#cfn-ec2-elb-accessloggingpolicy) : 
+    [AccessLoggingPolicy](aws-properties-ec2-elb-accessloggingpolicy.md)
 ﻿  [AppCookieStickinessPolicy](#cfn-ec2-elb-appcookiestickinesspolicy) : 
     - [AppCookieStickinessPolicy](aws-properties-ec2-elb-AppCookieStickinessPolicy.md)
 ﻿  [AvailabilityZones](#cfn-ec2-elb-availabilityzones) : 
     - String
-﻿  [ConnectionDrainingPolicy](#cfn-ec2-elb-connectiondrainingpolicy) : [ConnectionDrainingPolicy](aws-properties-ec2-elb-connectiondrainingpolicy.md)
-﻿  [ConnectionSettings](#cfn-ec2-elb-connectionsettings) : [ConnectionSettings](aws-properties-ec2-elb-connectionsettings.md)
+﻿  [ConnectionDrainingPolicy](#cfn-ec2-elb-connectiondrainingpolicy) : 
+    [ConnectionDrainingPolicy](aws-properties-ec2-elb-connectiondrainingpolicy.md)
+﻿  [ConnectionSettings](#cfn-ec2-elb-connectionsettings) : 
+    [ConnectionSettings](aws-properties-ec2-elb-connectionsettings.md)
 ﻿  [CrossZone](#cfn-ec2-elb-crosszone) : Boolean
-﻿  [HealthCheck](#cfn-ec2-elb-healthcheck) : [HealthCheck](aws-properties-ec2-elb-health-check.md)
+﻿  [HealthCheck](#cfn-ec2-elb-healthcheck) : 
+    [HealthCheck](aws-properties-ec2-elb-health-check.md)
 ﻿  [Instances](#cfn-ec2-elb-instances) : 
     - String
 ﻿  [LBCookieStickinessPolicy](#cfn-ec2-elb-lbcookiestickinesspolicy) : 

@@ -1,9 +1,11 @@
-# Amazon API Gateway V2<a name="AWS_ApiGatewayV2"></a>
+# Amazon API Gateway V2 Resource Type Reference<a name="AWS_ApiGatewayV2"></a>
 
 **Resource Types**
 + [AWS::ApiGatewayV2::Api](aws-resource-apigatewayv2-api.md)
++ [AWS::ApiGatewayV2::ApiMapping](aws-resource-apigatewayv2-apimapping.md)
 + [AWS::ApiGatewayV2::Authorizer](aws-resource-apigatewayv2-authorizer.md)
 + [AWS::ApiGatewayV2::Deployment](aws-resource-apigatewayv2-deployment.md)
++ [AWS::ApiGatewayV2::DomainName](aws-resource-apigatewayv2-domainname.md)
 + [AWS::ApiGatewayV2::Integration](aws-resource-apigatewayv2-integration.md)
 + [AWS::ApiGatewayV2::IntegrationResponse](aws-resource-apigatewayv2-integrationresponse.md)
 + [AWS::ApiGatewayV2::Model](aws-resource-apigatewayv2-model.md)

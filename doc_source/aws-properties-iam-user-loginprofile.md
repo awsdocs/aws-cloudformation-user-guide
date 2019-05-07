@@ -1,8 +1,10 @@
-# IAM User LoginProfile<a name="aws-properties-iam-user-loginprofile"></a>
+# AWS::IAM::User LoginProfile<a name="aws-properties-iam-user-loginprofile"></a>
 
-`LoginProfile` is a property of the [AWS::IAM::User](aws-properties-iam-user.md) resource that creates a login profile for users so that they can access the AWS Management Console\.
+Contains the user name and password create date for a user\.
 
-## Syntax<a name="w2922ab1c21c10d140c45c15b5"></a>
+## Syntax<a name="aws-properties-iam-user-loginprofile-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-iam-user-loginprofile-syntax.json"></a>
 
@@ -16,18 +18,23 @@
 ### YAML<a name="aws-properties-iam-user-loginprofile-syntax.yaml"></a>
 
 ```
-[Password](#cfn-iam-user-loginprofile-password): String
-[PasswordResetRequired](#cfn-iam-user-loginprofile-passwordresetrequired): Boolean
+﻿  [Password](#cfn-iam-user-loginprofile-password) : String
+﻿  [PasswordResetRequired](#cfn-iam-user-loginprofile-passwordresetrequired) : Boolean
 ```
 
-## Properties<a name="w2922ab1c21c10d140c45c15b7"></a>
+## Properties<a name="aws-properties-iam-user-loginprofile-properties"></a>
 
 `Password`  <a name="cfn-iam-user-loginprofile-password"></a>
-The password for the user\.  
+The user's password\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PasswordResetRequired`  <a name="cfn-iam-user-loginprofile-passwordresetrequired"></a>
-Specifies whether the user is required to set a new password the next time the user logs in to the AWS Management Console\.  
+Specifies whether the user is required to set a new password on next sign\-in\.  
 *Required*: No  
-*Type*: Boolean
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See Also<a name="aws-properties-iam-user-loginprofile--seealso"></a>
++  [LoginProfile](https://docs.aws.amazon.com/IAM/latest/APIReference/API_LoginProfile.html) in the *AWS Identity and Access Management API Reference* 

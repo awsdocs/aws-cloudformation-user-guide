@@ -31,10 +31,12 @@ Properties :
     - [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)
 ﻿  [ExecutionRoleArn](#cfn-sagemaker-model-executionrolearn) : String
 ﻿  [ModelName](#cfn-sagemaker-model-modelname) : String
-﻿  [PrimaryContainer](#cfn-sagemaker-model-primarycontainer) : [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)
+﻿  [PrimaryContainer](#cfn-sagemaker-model-primarycontainer) : 
+    [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)
 ﻿  [Tags](#cfn-sagemaker-model-tags) : 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VpcConfig](#cfn-sagemaker-model-vpcconfig) : [VpcConfig](aws-properties-sagemaker-model-vpcconfig.md)
+﻿  [VpcConfig](#cfn-sagemaker-model-vpcconfig) : 
+    [VpcConfig](aws-properties-sagemaker-model-vpcconfig.md)
 ```
 
 ## Properties<a name="aws-resource-sagemaker-model-properties"></a>

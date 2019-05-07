@@ -1,4 +1,4 @@
-# ElasticBeanstalk Resource Type Reference<a name="AWS_ElasticBeanstalk"></a>
+# AWS Elastic Beanstalk Resource Type Reference<a name="AWS_ElasticBeanstalk"></a>
 
 **Resource Types**
 + [AWS::ElasticBeanstalk::Application](aws-properties-beanstalk.md)

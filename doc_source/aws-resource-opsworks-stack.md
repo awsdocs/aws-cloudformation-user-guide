@@ -51,13 +51,17 @@ Properties :
 ﻿  [AgentVersion](#cfn-opsworks-stack-agentversion) : String
 ﻿  [Attributes](#cfn-opsworks-stack-attributes) : 
     Key : Value
-﻿  [ChefConfiguration](#cfn-opsworks-stack-chefconfiguration) : [ChefConfiguration](aws-properties-opsworks-stack-chefconfiguration.md)
+﻿  [ChefConfiguration](#cfn-opsworks-stack-chefconfiguration) : 
+    [ChefConfiguration](aws-properties-opsworks-stack-chefconfiguration.md)
 ﻿  [CloneAppIds](#cfn-opsworks-stack-cloneappids) : 
     - String
 ﻿  [ClonePermissions](#cfn-opsworks-stack-clonepermissions) : Boolean
-﻿  [ConfigurationManager](#cfn-opsworks-stack-configmanager) : [StackConfigurationManager](aws-properties-opsworks-stack-stackconfigmanager.md)
-﻿  [CustomCookbooksSource](#cfn-opsworks-stack-custcookbooksource) : [Source](aws-properties-opsworks-stack-source.md)
-﻿  [CustomJson](#cfn-opsworks-stack-custjson) : Json
+﻿  [ConfigurationManager](#cfn-opsworks-stack-configmanager) : 
+    [StackConfigurationManager](aws-properties-opsworks-stack-stackconfigmanager.md)
+﻿  [CustomCookbooksSource](#cfn-opsworks-stack-custcookbooksource) : 
+    [Source](aws-properties-opsworks-stack-source.md)
+﻿  [CustomJson](#cfn-opsworks-stack-custjson) : 
+    Json
 ﻿  [DefaultAvailabilityZone](#cfn-opsworks-stack-defaultaz) : String
 ﻿  [DefaultInstanceProfileArn](#cfn-opsworks-stack-defaultinstanceprof) : String
 ﻿  [DefaultOs](#cfn-opsworks-stack-defaultos) : String

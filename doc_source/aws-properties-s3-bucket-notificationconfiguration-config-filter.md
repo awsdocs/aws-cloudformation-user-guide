@@ -17,7 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-syntax.yaml"></a>
 
 ```
-﻿  [S3Key](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key) : [S3KeyFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key.md)
+﻿  [S3Key](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key) : 
+    [S3KeyFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key.md)
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-properties"></a>

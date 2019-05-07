@@ -21,7 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 ﻿  [Key](#cfn-datapipeline-pipeline-pipelineobjects-fields-key) : String
 ﻿  [RefValue](#cfn-datapipeline-pipeline-pipelineobjects-fields-refvalue) : String
-﻿  [StringValue](#cfn-datapipeline-pipeline-pipelineobjects-fields-stringvalue) : String
+﻿  [StringValue](#cfn-datapipeline-pipeline-pipelineobjects-fields-stringvalue) : 
+    String
 ```
 
 ## Properties<a name="aws-properties-datapipeline-pipeline-pipelineobjects-fields-properties"></a>

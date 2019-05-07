@@ -28,7 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::CodePipeline::Pipeline
 Properties : 
-﻿  [ArtifactStore](#cfn-codepipeline-pipeline-artifactstore) : [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md)
+﻿  [ArtifactStore](#cfn-codepipeline-pipeline-artifactstore) : 
+    [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md)
 ﻿  [ArtifactStores](#cfn-codepipeline-pipeline-artifactstores) : 
     - [ArtifactStoreMap](aws-properties-codepipeline-pipeline-artifactstoremap.md)
 ﻿  [DisableInboundStageTransitions](#cfn-codepipeline-pipeline-disableinboundstagetransitions) : 

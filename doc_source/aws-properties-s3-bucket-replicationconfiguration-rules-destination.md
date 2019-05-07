@@ -21,10 +21,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-replicationconfiguration-rules-destination-syntax.yaml"></a>
 
 ```
-﻿  [AccessControlTranslation](#cfn-s3-bucket-replicationdestination-accesscontroltranslation) : [AccessControlTranslation](aws-properties-s3-bucket-accesscontroltranslation.md)
+﻿  [AccessControlTranslation](#cfn-s3-bucket-replicationdestination-accesscontroltranslation) : 
+    [AccessControlTranslation](aws-properties-s3-bucket-accesscontroltranslation.md)
 ﻿  [Account](#cfn-s3-bucket-replicationdestination-account) : String
 ﻿  [Bucket](#cfn-s3-bucket-replicationconfiguration-rules-destination-bucket) : String
-﻿  [EncryptionConfiguration](#cfn-s3-bucket-replicationdestination-encryptionconfiguration) : [EncryptionConfiguration](aws-properties-s3-bucket-encryptionconfiguration.md)
+﻿  [EncryptionConfiguration](#cfn-s3-bucket-replicationdestination-encryptionconfiguration) : 
+    [EncryptionConfiguration](aws-properties-s3-bucket-encryptionconfiguration.md)
 ﻿  [StorageClass](#cfn-s3-bucket-replicationconfiguration-rules-destination-storageclass) : String
 ```
 

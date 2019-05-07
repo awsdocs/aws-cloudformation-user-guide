@@ -50,14 +50,18 @@ Properties :
 ﻿  [AutoAssignElasticIps](#cfn-opsworks-layer-autoassignelasticips) : Boolean
 ﻿  [AutoAssignPublicIps](#cfn-opsworks-layer-autoassignpublicips) : Boolean
 ﻿  [CustomInstanceProfileArn](#cfn-opsworks-layer-custominstanceprofilearn) : String
-﻿  [CustomJson](#cfn-opsworks-layer-customjson) : Json
-﻿  [CustomRecipes](#cfn-opsworks-layer-customrecipes) : [Recipes](aws-properties-opsworks-layer-recipes.md)
+﻿  [CustomJson](#cfn-opsworks-layer-customjson) : 
+    Json
+﻿  [CustomRecipes](#cfn-opsworks-layer-customrecipes) : 
+    [Recipes](aws-properties-opsworks-layer-recipes.md)
 ﻿  [CustomSecurityGroupIds](#cfn-opsworks-layer-customsecuritygroupids) : 
     - String
 ﻿  [EnableAutoHealing](#cfn-opsworks-layer-enableautohealing) : Boolean
 ﻿  [InstallUpdatesOnBoot](#cfn-opsworks-layer-installupdatesonboot) : Boolean
-﻿  [LifecycleEventConfiguration](#cfn-opsworks-layer-lifecycleeventconfiguration) : [LifecycleEventConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration.md)
-﻿  [LoadBasedAutoScaling](#cfn-opsworks-layer-loadbasedautoscaling) : [LoadBasedAutoScaling](aws-properties-opsworks-layer-loadbasedautoscaling.md)
+﻿  [LifecycleEventConfiguration](#cfn-opsworks-layer-lifecycleeventconfiguration) : 
+    [LifecycleEventConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration.md)
+﻿  [LoadBasedAutoScaling](#cfn-opsworks-layer-loadbasedautoscaling) : 
+    [LoadBasedAutoScaling](aws-properties-opsworks-layer-loadbasedautoscaling.md)
 ﻿  [Name](#cfn-opsworks-layer-name) : String
 ﻿  [Packages](#cfn-opsworks-layer-packages) : 
     - String

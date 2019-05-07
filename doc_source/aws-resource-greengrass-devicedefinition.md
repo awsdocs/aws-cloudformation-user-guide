@@ -2,15 +2,11 @@
 
 The `AWS::Greengrass::DeviceDefinition` resource represents a device definition for AWS IoT Greengrass\. Device definitions are used to organize your device definition versions\.
 
-Device definitions can reference multiple device definition versions\.
-
-![\[A device definition hierarchy with associated device definition versions and devices.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/greengrass/gg-device.png)
-
-All device definition versions must be associated with a device definition\. Each device definition version can contain one or more devices\.
+Device definitions can reference multiple device definition versions\. All device definition versions must be associated with a device definition\. Each device definition version can contain one or more devices\.
 
 **Note**  
-When you create a device definition, you can optionally include an initial device definition version\. To associate a device definition version later, create an [AWS::Greengrass::DeviceDefinitionVersion](aws-resource-greengrass-devicedefinitionversion.md) resource and specify the ID of this device definition\.  
-After you create the device definition version that contains the devices you want to deploy, you must add it to your group version\. For more information, see [AWS::Greengrass::Group](aws-resource-greengrass-group.md)\.
+When you create a device definition, you can optionally include an initial device definition version\. To associate a device definition version later, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinitionversion.html) resource and specify the ID of this device definition\.  
+After you create the device definition version that contains the devices you want to deploy, you must add it to your group version\. For more information, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)\.
 
 ## Syntax<a name="aws-resource-greengrass-devicedefinition-syntax"></a>
 
@@ -22,72 +18,74 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::DeviceDefinition",
   "Properties" : {
-    "[InitialVersion](#cfn-greengrass-devicedefinition-initialversion)" : [*DeviceDefinitionVersion*](aws-properties-greengrass-devicedefinition-devicedefinitionversion.md),
-    "[Name](#cfn-greengrass-devicedefinition-name)" : String
-  }
+      "[InitialVersion](#cfn-greengrass-devicedefinition-initialversion)" : [DeviceDefinitionVersion](aws-properties-greengrass-devicedefinition-devicedefinitionversion.md),
+      "[Name](#cfn-greengrass-devicedefinition-name)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-greengrass-devicedefinition-syntax.yaml"></a>
 
 ```
-Type: "AWS::Greengrass::DeviceDefinition"
-Properties:
-  [InitialVersion](#cfn-greengrass-devicedefinition-initialversion):
-    [*DeviceDefinitionVersion*](aws-properties-greengrass-devicedefinition-devicedefinitionversion.md)
-  [Name](#cfn-greengrass-devicedefinition-name): String
+Type: AWS::Greengrass::DeviceDefinition
+Properties : 
+﻿  [InitialVersion](#cfn-greengrass-devicedefinition-initialversion) : 
+    [DeviceDefinitionVersion](aws-properties-greengrass-devicedefinition-devicedefinitionversion.md)
+﻿  [Name](#cfn-greengrass-devicedefinition-name) : String
 ```
 
 ## Properties<a name="aws-resource-greengrass-devicedefinition-properties"></a>
 
 `InitialVersion`  <a name="cfn-greengrass-devicedefinition-initialversion"></a>
-The device definition version to include when the device definition is created\. A device definition version contains a list of [`device`](aws-properties-greengrass-devicedefinition-device.md) property types\.  
-To associate a device definition version after the device definition is created, create an [AWS::Greengrass::DeviceDefinitionVersion](aws-resource-greengrass-devicedefinitionversion.md) resource and specify the ID of this device definition\.
- *Required*: No  
- *Type*: [DeviceDefinitionVersion](aws-properties-greengrass-devicedefinition-devicedefinitionversion.md)  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+The device definition version to include when the device definition is created\. A device definition version contains a list of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-device](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-device) property types\.  
+To associate a device definition version after the device definition is created, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinitionversion.html) resource and specify the ID of this device definition\.
+*Required*: No  
+*Type*: [DeviceDefinitionVersion](aws-properties-greengrass-devicedefinition-devicedefinitionversion.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-greengrass-devicedefinition-name"></a>
 The name of the device definition\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-greengrass-devicedefinition-returnvalues"></a>
+## Return Values<a name="aws-resource-greengrass-devicedefinition-return-values"></a>
 
-### Ref<a name="aws-resource-greengrass-devicedefinition-ref"></a>
+### Ref<a name="aws-resource-greengrass-devicedefinition-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::Greengrass::DeviceDefinition` resource to the intrinsic `Ref` function, the function returns the ID of the device definition, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the device definition, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Fn::GetAtt<a name="aws-resource-greengrass-devicedefinition-getatt"></a>
+### Fn::GetAtt<a name="aws-resource-greengrass-devicedefinition-return-values-fn--getatt"></a>
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`LatestVersionArn`  
-The Amazon Resource Name \(ARN\) of the last `DeviceDefinitionVersion` that was added to the `DeviceDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/devices/1234a5b6-78cd-901e-2fgh-3i45j6k178l9/versions/9876ac30-4bdb-4f9d-95af-b5fdb66be1a2`\. 
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
-`Id`  
+#### <a name="aws-resource-greengrass-devicedefinition-return-values-fn--getatt-fn--getatt"></a>
+
+`Arn`  <a name="Arn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the `DeviceDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/devices/1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
+
+`Id`  <a name="Id-fn::getatt"></a>
 The ID of the `DeviceDefinition`, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
 
-`Arn`  
-The ARN of the `DeviceDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/devices/1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
+`LatestVersionArn`  <a name="LatestVersionArn-fn::getatt"></a>
+The ARN of the last `DeviceDefinitionVersion` that was added to the `DeviceDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/devices/1234a5b6-78cd-901e-2fgh-3i45j6k178l9/versions/9876ac30-4bdb-4f9d-95af-b5fdb66be1a2`\. 
 
-`Name`  
-The name of the `DeviceDefinition`, such as `MyDeviceDefinition`\. 
+`Name`  <a name="Name-fn::getatt"></a>
+The name of the device definition\.
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
+## Examples<a name="aws-resource-greengrass-devicedefinition--examples"></a>
 
-## Examples<a name="aws-resource-greengrass-devicedefinition-examples"></a>
-
-### Device Definition Snippet<a name="aws-resource-greengrass-devicedefinition-example1"></a>
+### Device Definition Snippet<a name="aws-resource-greengrass-devicedefinition--examples--Device_Definition_Snippet"></a>
 
 The following snippet defines a device definition resource with an initial version that contains a device\. This example points to a manually generated device certificate\.
 
-For an example of a complete template, see the [Group](aws-resource-greengrass-group.md#aws-resource-greengrass-group-examples) resource\.
+For an example of a complete template, see the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html) resource\.
 
-#### JSON<a name="aws-resource-greengrass-devicedefinition-example1.json"></a>
+#### JSON<a name="aws-resource-greengrass-devicedefinition--examples--Device_Definition_Snippet--json"></a>
 
 ```
 "TestDeviceDefinition": {
@@ -136,7 +134,7 @@ For an example of a complete template, see the [Group](aws-resource-greengrass-g
 }
 ```
 
-#### YAML<a name="aws-resource-greengrass-devicedefinition-example1.yaml"></a>
+#### YAML<a name="aws-resource-greengrass-devicedefinition--examples--Device_Definition_Snippet--yaml"></a>
 
 ```
 TestDeviceDefinition:
@@ -162,6 +160,6 @@ TestDeviceDefinition:
           SyncShadow: 'true'
 ```
 
-## See Also<a name="aws-resource-greengrass-devicedefinition-seealso"></a>
-+ [CreateDeviceDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createdevicedefinition-post.html) in the *AWS IoT Greengrass API Reference*
-+ [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)
+## See Also<a name="aws-resource-greengrass-devicedefinition--seealso"></a>
++  [CreateDeviceDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createdevicedefinition-post.html) in the * AWS IoT Greengrass API Reference * 
++  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

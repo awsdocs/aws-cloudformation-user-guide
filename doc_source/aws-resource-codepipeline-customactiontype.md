@@ -31,10 +31,13 @@ Properties :
 ﻿  [Category](#cfn-codepipeline-customactiontype-category) : String
 ﻿  [ConfigurationProperties](#cfn-codepipeline-customactiontype-configurationproperties) : 
     - [ConfigurationProperties](aws-properties-codepipeline-customactiontype-configurationproperties.md)
-﻿  [InputArtifactDetails](#cfn-codepipeline-customactiontype-inputartifactdetails) : [ArtifactDetails](aws-properties-codepipeline-customactiontype-artifactdetails.md)
-﻿  [OutputArtifactDetails](#cfn-codepipeline-customactiontype-outputartifactdetails) : [ArtifactDetails](aws-properties-codepipeline-customactiontype-artifactdetails.md)
+﻿  [InputArtifactDetails](#cfn-codepipeline-customactiontype-inputartifactdetails) : 
+    [ArtifactDetails](aws-properties-codepipeline-customactiontype-artifactdetails.md)
+﻿  [OutputArtifactDetails](#cfn-codepipeline-customactiontype-outputartifactdetails) : 
+    [ArtifactDetails](aws-properties-codepipeline-customactiontype-artifactdetails.md)
 ﻿  [Provider](#cfn-codepipeline-customactiontype-provider) : String
-﻿  [Settings](#cfn-codepipeline-customactiontype-settings) : [Settings](aws-properties-codepipeline-customactiontype-settings.md)
+﻿  [Settings](#cfn-codepipeline-customactiontype-settings) : 
+    [Settings](aws-properties-codepipeline-customactiontype-settings.md)
 ﻿  [Version](#cfn-codepipeline-customactiontype-version) : String
 ```
 

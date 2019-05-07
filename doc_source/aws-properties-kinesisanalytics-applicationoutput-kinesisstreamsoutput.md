@@ -1,8 +1,6 @@
-# Amazon Kinesis Data Analytics ApplicationOutput KinesisStreamsOutput<a name="aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput"></a>
+# AWS::KinesisAnalytics::ApplicationOutput KinesisStreamsOutput<a name="aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput"></a>
 
-The `KinesisStreamsOutput` property type specifies an Amazon Kinesis stream as the destination when you are configuring application output\.
-
- `KinesisStreamsOutput` is a property of the [Output](aws-properties-kinesisanalytics-applicationoutput-output.md) property type\.
+When configuring application output, identifies an Amazon Kinesis stream as the destination\. You provide the stream Amazon Resource Name \(ARN\) and also an IAM role ARN that Amazon Kinesis Analytics can use to write to the stream on your behalf\.
 
 ## Syntax<a name="aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput-syntax"></a>
 
@@ -20,20 +18,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput-syntax.yaml"></a>
 
 ```
-  [ResourceARN](#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-resourcearn): String
-  [RoleARN](#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-rolearn): String
+﻿  [ResourceARN](#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-resourcearn) : String
+﻿  [RoleARN](#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-rolearn) : String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput-properties"></a>
 
 `ResourceARN`  <a name="cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-resourcearn"></a>
-The Amazon Resource Name \(ARN\) of the destination Amazon Kinesis stream to write to\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+ARN of the destination Amazon Kinesis stream to write to\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `2048`  
+*Pattern*: `arn:.*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleARN`  <a name="cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-rolearn"></a>
-The ARN of the IAM role that Amazon Kinesis Data Analytics can assume to write to the destination stream on your behalf\.   
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+ARN of the IAM role that Amazon Kinesis Analytics can assume to write to the destination stream on your behalf\. You need to grant the necessary permissions to this role\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `2048`  
+*Pattern*: `arn:aws:iam::\d{12}:role/?[a-zA-Z_0-9+=,.@\-_/]+`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

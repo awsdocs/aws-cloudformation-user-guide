@@ -65,7 +65,8 @@ Properties :
 ﻿  [StackId](#cfn-opsworks-instance-stackid) : String
 ﻿  [SubnetId](#cfn-opsworks-instance-subnetid) : String
 ﻿  [Tenancy](#cfn-opsworks-instance-tenancy) : String
-﻿  [TimeBasedAutoScaling](#cfn-opsworks-instance-timebasedautoscaling) : [TimeBasedAutoScaling](aws-properties-opsworks-instance-timebasedautoscaling.md)
+﻿  [TimeBasedAutoScaling](#cfn-opsworks-instance-timebasedautoscaling) : 
+    [TimeBasedAutoScaling](aws-properties-opsworks-instance-timebasedautoscaling.md)
 ﻿  [VirtualizationType](#cfn-opsworks-instance-virtualizationtype) : String
 ﻿  [Volumes](#cfn-opsworks-instance-volumes) : 
     - String

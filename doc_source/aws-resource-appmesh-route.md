@@ -32,7 +32,8 @@ Type: AWS::AppMesh::Route
 Properties : 
 ﻿  [MeshName](#cfn-appmesh-route-meshname) : String
 ﻿  [RouteName](#cfn-appmesh-route-routename) : String
-﻿  [Spec](#cfn-appmesh-route-spec) : [RouteSpec](aws-properties-appmesh-route-routespec.md)
+﻿  [Spec](#cfn-appmesh-route-spec) : 
+    [RouteSpec](aws-properties-appmesh-route-routespec.md)
 ﻿  [Tags](#cfn-appmesh-route-tags) : 
     - [TagRef](aws-properties-appmesh-route-tagref.md)
 ﻿  [VirtualRouterName](#cfn-appmesh-route-virtualroutername) : String

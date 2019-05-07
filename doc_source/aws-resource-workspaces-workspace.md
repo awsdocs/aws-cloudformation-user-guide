@@ -39,7 +39,8 @@ Properties :
 ﻿  [UserName](#cfn-workspaces-workspace-username) : String
 ﻿  [UserVolumeEncryptionEnabled](#cfn-workspaces-workspace-uservolumeencryptionenabled) : Boolean
 ﻿  [VolumeEncryptionKey](#cfn-workspaces-workspace-volumeencryptionkey) : String
-﻿  [WorkspaceProperties](#cfn-workspaces-workspace-workspaceproperties) : [WorkspaceProperties](aws-properties-workspaces-workspace-workspaceproperties.md)
+﻿  [WorkspaceProperties](#cfn-workspaces-workspace-workspaceproperties) : 
+    [WorkspaceProperties](aws-properties-workspaces-workspace-workspaceproperties.md)
 ```
 
 ## Properties<a name="aws-resource-workspaces-workspace-properties"></a>

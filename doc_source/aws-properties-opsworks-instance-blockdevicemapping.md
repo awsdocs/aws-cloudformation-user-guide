@@ -21,7 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 ﻿  [DeviceName](#cfn-opsworks-instance-blockdevicemapping-devicename) : String
-﻿  [Ebs](#cfn-opsworks-instance-blockdevicemapping-ebs) : [EbsBlockDevice](aws-properties-opsworks-instance-ebsblockdevice.md)
+﻿  [Ebs](#cfn-opsworks-instance-blockdevicemapping-ebs) : 
+    [EbsBlockDevice](aws-properties-opsworks-instance-ebsblockdevice.md)
 ﻿  [NoDevice](#cfn-opsworks-instance-blockdevicemapping-nodevice) : String
 ﻿  [VirtualName](#cfn-opsworks-instance-blockdevicemapping-virtualname) : String
 ```

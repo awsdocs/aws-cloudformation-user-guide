@@ -28,7 +28,8 @@ Properties :
 ﻿  [Database](#cfn-athena-namedquery-database) : String
 ﻿  [Description](#cfn-athena-namedquery-description) : String
 ﻿  [Name](#cfn-athena-namedquery-name) : String
-﻿  [QueryString](#cfn-athena-namedquery-querystring) : String
+﻿  [QueryString](#cfn-athena-namedquery-querystring) : 
+    String
 ```
 
 ## Properties<a name="aws-resource-athena-namedquery-properties"></a>

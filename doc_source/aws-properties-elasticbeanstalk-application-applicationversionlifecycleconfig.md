@@ -22,8 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig-syntax.yaml"></a>
 
 ```
-﻿  [MaxAgeRule](#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxagerule) : [MaxAgeRule](aws-properties-elasticbeanstalk-application-maxagerule.md)
-﻿  [MaxCountRule](#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxcountrule) : [MaxCountRule](aws-properties-elasticbeanstalk-application-maxcountrule.md)
+﻿  [MaxAgeRule](#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxagerule) : 
+    [MaxAgeRule](aws-properties-elasticbeanstalk-application-maxagerule.md)
+﻿  [MaxCountRule](#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxcountrule) : 
+    [MaxCountRule](aws-properties-elasticbeanstalk-application-maxcountrule.md)
 ```
 
 ## Properties<a name="aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig-properties"></a>

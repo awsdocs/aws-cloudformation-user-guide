@@ -17,7 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-storageclassanalysis-syntax.yaml"></a>
 
 ```
-﻿  [DataExport](#cfn-s3-bucket-storageclassanalysis-dataexport) : [DataExport](aws-properties-s3-bucket-dataexport.md)
+﻿  [DataExport](#cfn-s3-bucket-storageclassanalysis-dataexport) : 
+    [DataExport](aws-properties-s3-bucket-dataexport.md)
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-storageclassanalysis-properties"></a>

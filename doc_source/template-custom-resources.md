@@ -24,7 +24,7 @@ During a stack operation, sends a request to a service token that is specified i
 
 1. The template developer defines a custom resource in his or her template, which includes a service token and any input data parameters\. Depending on the custom resource, the input data might be required; however, the service token is always required\.
 
-   The service token specifies where AWS CloudFormation sends requests to, such as to an Amazon SNS topic ARN or to an AWS Lambda function ARN\. For more information, see [AWS::CloudFormation::CustomResource](aws-resource-cfn-customresource.md)\. The service token and the structure of the input data is defined by the custom resource provider\.
+   The service token specifies where AWS CloudFormation sends requests to, such as to an Amazon SNS topic ARN or to an AWS Lambda function ARN\. For more information, see [AWS::CloudFormation::CustomResource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html)\. The service token and the structure of the input data is defined by the custom resource provider\.
 
 1. Whenever anyone uses the template to create, update, or delete a custom resource, AWS CloudFormation sends a request to the specified service token\. The service token must be in the same region in which you are creating the stack\.
 

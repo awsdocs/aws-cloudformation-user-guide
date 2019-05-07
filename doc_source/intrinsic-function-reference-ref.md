@@ -98,8 +98,10 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::ApiGateway::Stage](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html)   |  Stage name  |  `MyTestStage`  | 
 |  [AWS::ApiGateway::VpcLink](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-vpclink.html)  |  VPC link ID  |  `gim7c3`   | 
 |  [AWS::ApiGatewayV2::Api](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html)  |  API resource ID  |  `a1bcdef2gh`  | 
+|  [AWS::ApiGatewayV2::ApiMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apimapping.html)  |  API mapping resource ID  |  `abc123`  | 
 |  [AWS::ApiGatewayV2::Authorizer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html)  |  Authorizer resource ID  |  `abc123`  | 
 |  [AWS::ApiGatewayV2::Deployment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-deployment.html)  |  Deployment resource ID  |  `abc123`  | 
+|  [AWS::ApiGatewayV2::DomainName](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html)  |  Domain name  |  `example.mydomain.com`  | 
 |  [AWS::ApiGatewayV2::Integration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html)  |  Integration resource ID  |  `abcd123`  | 
 |  [AWS::ApiGatewayV2::IntegrationResponse](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integrationresponse.html)  |  Integration response resource ID  |  `abcd123`  | 
 |  [AWS::ApiGatewayV2::Model](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-model.html)  |  Model resource ID  |  `abc123`  | 
@@ -179,7 +181,7 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 | [AWS::DocDB::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbinstance.html) |  DB instance name  |  `sample-instance`  | 
 | [AWS::DocDB::DBSubnetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbsubnetgroup.html) |  DB subnet group name  |  `default`  | 
 | [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html) |  Table Name  |  `MyDDBTable`  | 
-| [AWS::EC2::CapacityReservation](aws-resource-ec2-capacityreservation.md)  |  Capacity Reservation ID  |  `cr-1234ab5cd6789e0f1`  | 
+| [AWS::EC2::CapacityReservation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html)  |  Capacity Reservation ID  |  `cr-1234ab5cd6789e0f1`  | 
 |  [AWS::EC2::CustomerGateway](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html)  |  Name  |   | 
 |  [AWS::EC2::DHCPOptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcp-options.html)  |  Name  |   | 
 |  [AWS::EC2::EC2Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html)  |  Fleet ID  |  `fleet-12a34b55-67cd-8ef9-ba9b-9208dEXAMPLE`  | 

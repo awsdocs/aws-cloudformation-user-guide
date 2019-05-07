@@ -20,7 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codepipeline-pipeline-artifactstoremap-syntax.yaml"></a>
 
 ```
-﻿  [ArtifactStore](#cfn-codepipeline-pipeline-artifactstoremap-artifactstore) : [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md)
+﻿  [ArtifactStore](#cfn-codepipeline-pipeline-artifactstoremap-artifactstore) : 
+    [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md)
 ﻿  [Region](#cfn-codepipeline-pipeline-artifactstoremap-region) : String
 ```
 

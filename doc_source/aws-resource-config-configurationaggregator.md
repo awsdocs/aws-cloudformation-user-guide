@@ -27,7 +27,8 @@ Properties :
 ﻿  [AccountAggregationSources](#cfn-config-configurationaggregator-accountaggregationsources) : 
     - [AccountAggregationSource](aws-properties-config-configurationaggregator-accountaggregationsource.md)
 ﻿  [ConfigurationAggregatorName](#cfn-config-configurationaggregator-configurationaggregatorname) : String
-﻿  [OrganizationAggregationSource](#cfn-config-configurationaggregator-organizationaggregationsource) : [OrganizationAggregationSource](aws-properties-config-configurationaggregator-organizationaggregationsource.md)
+﻿  [OrganizationAggregationSource](#cfn-config-configurationaggregator-organizationaggregationsource) : 
+    [OrganizationAggregationSource](aws-properties-config-configurationaggregator-organizationaggregationsource.md)
 ```
 
 ## Properties<a name="aws-resource-config-configurationaggregator-properties"></a>

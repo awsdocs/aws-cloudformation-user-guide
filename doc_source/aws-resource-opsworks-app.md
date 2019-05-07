@@ -35,7 +35,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::OpsWorks::App
 Properties : 
-﻿  [AppSource](#cfn-opsworks-app-appsource) : [Source](aws-properties-opsworks-stack-source-1.md)
+﻿  [AppSource](#cfn-opsworks-app-appsource) : 
+    [Source](aws-properties-opsworks-stack-source-1.md)
 ﻿  [Attributes](#cfn-opsworks-app-attributes) : 
     Key : Value
 ﻿  [DataSources](#cfn-opsworks-app-datasources) : 
@@ -48,7 +49,8 @@ Properties :
     - [EnvironmentVariable](aws-properties-opsworks-app-environment.md)
 ﻿  [Name](#cfn-opsworks-app-name) : String
 ﻿  [Shortname](#cfn-opsworks-app-shortname) : String
-﻿  [SslConfiguration](#cfn-opsworks-app-sslconfiguration) : [SslConfiguration](aws-properties-opsworks-app-sslconfiguration.md)
+﻿  [SslConfiguration](#cfn-opsworks-app-sslconfiguration) : 
+    [SslConfiguration](aws-properties-opsworks-app-sslconfiguration.md)
 ﻿  [StackId](#cfn-opsworks-app-stackid) : String
 ﻿  [Type](#cfn-opsworks-app-type) : String
 ```

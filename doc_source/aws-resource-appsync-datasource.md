@@ -33,12 +33,17 @@ Type: AWS::AppSync::DataSource
 Properties : 
 ﻿  [ApiId](#cfn-appsync-datasource-apiid) : String
 ﻿  [Description](#cfn-appsync-datasource-description) : String
-﻿  [DynamoDBConfig](#cfn-appsync-datasource-dynamodbconfig) : [DynamoDBConfig](aws-properties-appsync-datasource-dynamodbconfig.md)
-﻿  [ElasticsearchConfig](#cfn-appsync-datasource-elasticsearchconfig) : [ElasticsearchConfig](aws-properties-appsync-datasource-elasticsearchconfig.md)
-﻿  [HttpConfig](#cfn-appsync-datasource-httpconfig) : [HttpConfig](aws-properties-appsync-datasource-httpconfig.md)
-﻿  [LambdaConfig](#cfn-appsync-datasource-lambdaconfig) : [LambdaConfig](aws-properties-appsync-datasource-lambdaconfig.md)
+﻿  [DynamoDBConfig](#cfn-appsync-datasource-dynamodbconfig) : 
+    [DynamoDBConfig](aws-properties-appsync-datasource-dynamodbconfig.md)
+﻿  [ElasticsearchConfig](#cfn-appsync-datasource-elasticsearchconfig) : 
+    [ElasticsearchConfig](aws-properties-appsync-datasource-elasticsearchconfig.md)
+﻿  [HttpConfig](#cfn-appsync-datasource-httpconfig) : 
+    [HttpConfig](aws-properties-appsync-datasource-httpconfig.md)
+﻿  [LambdaConfig](#cfn-appsync-datasource-lambdaconfig) : 
+    [LambdaConfig](aws-properties-appsync-datasource-lambdaconfig.md)
 ﻿  [Name](#cfn-appsync-datasource-name) : String
-﻿  [RelationalDatabaseConfig](#cfn-appsync-datasource-relationaldatabaseconfig) : [RelationalDatabaseConfig](aws-properties-appsync-datasource-relationaldatabaseconfig.md)
+﻿  [RelationalDatabaseConfig](#cfn-appsync-datasource-relationaldatabaseconfig) : 
+    [RelationalDatabaseConfig](aws-properties-appsync-datasource-relationaldatabaseconfig.md)
 ﻿  [ServiceRoleArn](#cfn-appsync-datasource-servicerolearn) : String
 ﻿  [Type](#cfn-appsync-datasource-type) : String
 ```

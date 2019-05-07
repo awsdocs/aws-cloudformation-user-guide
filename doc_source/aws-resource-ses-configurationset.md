@@ -1,8 +1,6 @@
 # AWS::SES::ConfigurationSet<a name="aws-resource-ses-configurationset"></a>
 
-The `AWS::SES::ConfigurationSet` resource lets you create groups of rules that you can apply to the emails you send using Amazon SES\. For more information about using configuration sets, see [Using Amazon SES Configuration Sets](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*\.
-
-Configuration sets 
+Specifies a configuration set\. Configuration sets let you create groups of rules that you can apply to the emails you send using Amazon SES\. For more information about using configuration sets, see [Using Amazon SES Configuration Sets](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/using-configuration-sets.html) in the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/)\.
 
 ## Syntax<a name="aws-resource-ses-configurationset-syntax"></a>
 
@@ -14,42 +12,44 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SES::ConfigurationSet",
   "Properties" : {
-    "[Name](#cfn-ses-configurationset-name)" : String
-  }
+      "[Name](#cfn-ses-configurationset-name)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-ses-configurationset-syntax.yaml"></a>
 
 ```
-Type: "AWS::SES::ConfigurationSet"
-Properties:
-  [Name](#cfn-ses-configurationset-name): String
+Type: AWS::SES::ConfigurationSet
+Properties : 
+﻿  [Name](#cfn-ses-configurationset-name) : String
 ```
 
 ## Properties<a name="aws-resource-ses-configurationset-properties"></a>
 
 `Name`  <a name="cfn-ses-configurationset-name"></a>
-The name of the configuration set\. The name must meet the following requirements:  
-+ Contain only letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), or dashes \(\-\)\.
+The name of the configuration set\. The name must:  
++ Only contain ASCII letters \(a–z, A–Z\), numbers \(0–9\), underscores \(\_\), or dashes \(\-\)\.
 + Contain 64 characters or fewer\.
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ses-configurationset-returnvalues"></a>
+## Return Values<a name="aws-resource-ses-configurationset-return-values"></a>
 
-### Ref<a name="aws-resource-ses-configurationset-ref"></a>
+### Ref<a name="aws-resource-ses-configurationset-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Example<a name="aws-resource-ses-configurationset-examples"></a>
+## Examples<a name="aws-resource-ses-configurationset--examples"></a>
 
-### <a name="aws-resource-ses-configurationset-example1"></a>
+### <a name="aws-resource-ses-configurationset--examples--"></a>
 
-#### JSON<a name="aws-resource-ses-configurationset-example1.json"></a>
+Specifies a configuration set\.
+
+#### JSON<a name="aws-resource-ses-configurationset--examples----json"></a>
 
 ```
 {
@@ -73,7 +73,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 }
 ```
 
-#### YAML<a name="aws-resource-ses-configurationset-example1.yaml"></a>
+#### YAML<a name="aws-resource-ses-configurationset--examples----yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -87,7 +87,3 @@ Resources:
     Properties:
       Name: !Ref ConfigSetName
 ```
-
-## See Also<a name="aws-resource-ses-configurationset-seealso"></a>
-+ [Using Amazon SES Configuration Sets](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*
-+ [ConfigurationSet](https://docs.aws.amazon.com/ses/latest/APIReference/API_ConfigurationSet.html) in the *Amazon Simple Email Service API Reference*

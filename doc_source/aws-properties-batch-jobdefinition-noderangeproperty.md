@@ -18,7 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-batch-jobdefinition-noderangeproperty-syntax.yaml"></a>
 
 ```
-﻿  [Container](#cfn-batch-jobdefinition-noderangeproperty-container) : [ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md)
+﻿  [Container](#cfn-batch-jobdefinition-noderangeproperty-container) : 
+    [ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md)
 ﻿  [TargetNodes](#cfn-batch-jobdefinition-noderangeproperty-targetnodes) : String
 ```
 

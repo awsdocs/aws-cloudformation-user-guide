@@ -34,7 +34,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EKS::Cluster
 Properties : 
 ﻿  [Name](#cfn-eks-cluster-name) : String
-﻿  [ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig) : [ResourcesVpcConfig](aws-properties-eks-cluster-resourcesvpcconfig.md)
+﻿  [ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig) : 
+    [ResourcesVpcConfig](aws-properties-eks-cluster-resourcesvpcconfig.md)
 ﻿  [RoleArn](#cfn-eks-cluster-rolearn) : String
 ﻿  [Version](#cfn-eks-cluster-version) : String
 ```

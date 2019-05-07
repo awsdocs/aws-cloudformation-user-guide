@@ -33,7 +33,8 @@ Properties :
 ﻿  [DocumentVersion](#cfn-ssm-association-documentversion) : String
 ﻿  [InstanceId](#cfn-ssm-association-instanceid) : String
 ﻿  [Name](#cfn-ssm-association-name) : String
-﻿  [OutputLocation](#cfn-ssm-association-outputlocation) : [InstanceAssociationOutputLocation](aws-properties-ssm-association-instanceassociationoutputlocation.md)
+﻿  [OutputLocation](#cfn-ssm-association-outputlocation) : 
+    [InstanceAssociationOutputLocation](aws-properties-ssm-association-instanceassociationoutputlocation.md)
 ﻿  [Parameters](#cfn-ssm-association-parameters) : 
     Key : Value
 ﻿  [ScheduleExpression](#cfn-ssm-association-scheduleexpression) : String
@@ -139,7 +140,7 @@ association:
       Directory: [FakeDirectory]
     Targets:
     - Key: InstanceIds
-Values: [!Ref 'myInstanceId']
+      Values: [!Ref 'myInstanceId']
 ```
 
 ## See Also<a name="aws-resource-ssm-association--seealso"></a>

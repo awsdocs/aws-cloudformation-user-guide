@@ -1,8 +1,6 @@
-# Amazon EC2 CapacityReservation Tag<a name="aws-properties-ec2-capacityreservation-tag"></a>
+# AWS::EC2::CapacityReservation Tag<a name="aws-properties-ec2-capacityreservation-tag"></a>
 
-<a name="aws-properties-ec2-capacityreservation-tag-description"></a>The `Tag` property type specifies the tag key and value pair to assign to a Capacity Reservation\.
-
-<a name="aws-properties-ec2-capacityreservation-tag-inheritance"></a>`Tag` is a property of the [Amazon EC2 CapacityReservation TagSpecification](aws-properties-ec2-capacityreservation-tagspecification.md) property type\.
+Describes a tag\.
 
 ## Syntax<a name="aws-properties-ec2-capacityreservation-tag-syntax"></a>
 
@@ -20,23 +18,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-capacityreservation-tag-syntax.yaml"></a>
 
 ```
-[Key](#cfn-ec2-capacityreservation-tag-key): String
-[Value](#cfn-ec2-capacityreservation-tag-value): String
+﻿  [Key](#cfn-ec2-capacityreservation-tag-key) : String
+﻿  [Value](#cfn-ec2-capacityreservation-tag-value) : String
 ```
 
 ## Properties<a name="aws-properties-ec2-capacityreservation-tag-properties"></a>
 
 `Key`  <a name="cfn-ec2-capacityreservation-tag-key"></a>
-The key name of the tag\. You can specify a value that is 1 to 127 Unicode characters in length and cannot be prefixed with `aws:`\. You can use any of the following characters: the set of Unicode letters, digits, whitespace, `_`, `.`, `/`, `=`, `+`, and `-`\.  
+The key of the tag\.  
+Constraints: Tag keys are case\-sensitive and accept a maximum of 127 Unicode characters\. May not begin with `aws:`\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-ec2-capacityreservation-tag-value"></a>
-The value for the tag\. You can specify a value that is 1 to 255 Unicode characters in length and cannot be prefixed with `aws:`\. You can use any of the following characters: the set of Unicode letters, digits, whitespace, `_`, `.`, `/`, `=`, `+`, and `-`\.  
+The value of the tag\.  
+Constraints: Tag values are case\-sensitive and accept a maximum of 255 Unicode characters\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
-
-## See Also<a name="aws-properties-ec2-capacityreservation-tag-seealso"></a>
-+ [Tagging Your Amazon EC2 Resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html) in the *Amazon Elastic Compute Cloud User Guide*
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

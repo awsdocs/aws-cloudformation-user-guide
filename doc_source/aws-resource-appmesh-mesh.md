@@ -27,7 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::AppMesh::Mesh
 Properties : 
 ﻿  [MeshName](#cfn-appmesh-mesh-meshname) : String
-﻿  [Spec](#cfn-appmesh-mesh-spec) : [MeshSpec](aws-properties-appmesh-mesh-meshspec.md)
+﻿  [Spec](#cfn-appmesh-mesh-spec) : 
+    [MeshSpec](aws-properties-appmesh-mesh-meshspec.md)
 ﻿  [Tags](#cfn-appmesh-mesh-tags) : 
     - [TagRef](aws-properties-appmesh-mesh-tagref.md)
 ```

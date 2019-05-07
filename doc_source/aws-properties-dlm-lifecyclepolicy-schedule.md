@@ -22,9 +22,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 ﻿  [CopyTags](#cfn-dlm-lifecyclepolicy-schedule-copytags) : Boolean
-﻿  [CreateRule](#cfn-dlm-lifecyclepolicy-schedule-createrule) : [CreateRule](aws-properties-dlm-lifecyclepolicy-createrule.md)
+﻿  [CreateRule](#cfn-dlm-lifecyclepolicy-schedule-createrule) : 
+    [CreateRule](aws-properties-dlm-lifecyclepolicy-createrule.md)
 ﻿  [Name](#cfn-dlm-lifecyclepolicy-schedule-name) : String
-﻿  [RetainRule](#cfn-dlm-lifecyclepolicy-schedule-retainrule) : [RetainRule](aws-properties-dlm-lifecyclepolicy-retainrule.md)
+﻿  [RetainRule](#cfn-dlm-lifecyclepolicy-schedule-retainrule) : 
+    [RetainRule](aws-properties-dlm-lifecyclepolicy-retainrule.md)
 ﻿  [TagsToAdd](#cfn-dlm-lifecyclepolicy-schedule-tagstoadd) : 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```

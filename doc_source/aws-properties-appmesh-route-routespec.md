@@ -18,8 +18,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-route-routespec-syntax.yaml"></a>
 
 ```
-﻿  [HttpRoute](#cfn-appmesh-route-routespec-httproute) : [HttpRoute](aws-properties-appmesh-route-httproute.md)
-﻿  [TcpRoute](#cfn-appmesh-route-routespec-tcproute) : [TcpRoute](aws-properties-appmesh-route-tcproute.md)
+﻿  [HttpRoute](#cfn-appmesh-route-routespec-httproute) : 
+    [HttpRoute](aws-properties-appmesh-route-httproute.md)
+﻿  [TcpRoute](#cfn-appmesh-route-routespec-tcproute) : 
+    [TcpRoute](aws-properties-appmesh-route-tcproute.md)
 ```
 
 ## Properties<a name="aws-properties-appmesh-route-routespec-properties"></a>

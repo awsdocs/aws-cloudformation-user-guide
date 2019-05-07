@@ -21,7 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 ﻿  [ServiceRole](#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-servicerole) : String
-﻿  [VersionLifecycleConfig](#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-versionlifecycleconfig) : [ApplicationVersionLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.md)
+﻿  [VersionLifecycleConfig](#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-versionlifecycleconfig) : 
+    [ApplicationVersionLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.md)
 ```
 
 ## Properties<a name="aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig-properties"></a>

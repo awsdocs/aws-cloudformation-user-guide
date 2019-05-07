@@ -21,7 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 ﻿  [Description](#cfn-properties-codedeploy-deploymentgroup-deployment-description) : String
 ﻿  [IgnoreApplicationStopFailures](#cfn-properties-codedeploy-deploymentgroup-deployment-ignoreapplicationstopfailures) : Boolean
-﻿  [Revision](#cfn-properties-codedeploy-deploymentgroup-deployment-revision) : [RevisionLocation](aws-properties-codedeploy-deploymentgroup-deployment-revision.md)
+﻿  [Revision](#cfn-properties-codedeploy-deploymentgroup-deployment-revision) : 
+    [RevisionLocation](aws-properties-codedeploy-deploymentgroup-deployment-revision.md)
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-deployment-properties"></a>

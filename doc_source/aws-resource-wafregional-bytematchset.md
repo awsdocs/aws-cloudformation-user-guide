@@ -1,6 +1,6 @@
 # AWS::WAFRegional::ByteMatchSet<a name="aws-resource-wafregional-bytematchset"></a>
 
-The `AWS::WAFRegional::ByteMatchSet` resource creates an AWS WAF Regional `ByteMatchSet` that identifies a part of a web request that you want to inspect\. For more information, see [CreateByteMatchSet](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_CreateByteMatchSet.html) in the *AWS WAF Regional API Reference*\.
+The `AWS::WAFRegional::ByteMatchSet` resource creates an AWS WAF `ByteMatchSet` that identifies a part of a web request that you want to inspect\.
 
 ## Syntax<a name="aws-resource-wafregional-bytematchset-syntax"></a>
 
@@ -12,51 +12,53 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFRegional::ByteMatchSet",
   "Properties" : {
-    "[ByteMatchTuples](#cfn-wafregional-bytematchset-bytematchtuples)" : [ Byte match tuple, ... ],
-    "[Name](#cfn-wafregional-bytematchset-name)" : String
-  }
+      "[ByteMatchTuples](#cfn-wafregional-bytematchset-bytematchtuples)" : [ [ByteMatchTuple](aws-properties-wafregional-bytematchset-bytematchtuple.md), ... ],
+      "[Name](#cfn-wafregional-bytematchset-name)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-wafregional-bytematchset-syntax.yaml"></a>
 
 ```
-Type: "AWS::WAFRegional::ByteMatchSet"
-Properties: 
-  [ByteMatchTuples](#cfn-wafregional-bytematchset-bytematchtuples):
-    - Byte match tuple
-  [Name](#cfn-wafregional-bytematchset-name): String
+Type: AWS::WAFRegional::ByteMatchSet
+Properties : 
+﻿  [ByteMatchTuples](#cfn-wafregional-bytematchset-bytematchtuples) : 
+    - [ByteMatchTuple](aws-properties-wafregional-bytematchset-bytematchtuple.md)
+﻿  [Name](#cfn-wafregional-bytematchset-name) : String
 ```
 
-## Properties<a name="w2922ab1c21c10d221c13b7"></a>
+## Properties<a name="aws-resource-wafregional-bytematchset-properties"></a>
 
 `ByteMatchTuples`  <a name="cfn-wafregional-bytematchset-bytematchtuples"></a>
-Settings for the `ByteMatchSet`, such as the bytes \(typically a string that corresponds with ASCII characters\) that you want AWS WAF to search for in web requests\.  
+Specifies the bytes \(typically a string that corresponds with ASCII characters\) that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings\.  
 *Required*: No  
-*Type*: List of [AWS WAF Regional ByteMatchSet ByteMatchTuples](aws-properties-wafregional-bytematchset-bytematchtuples.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of [ByteMatchTuple](aws-properties-wafregional-bytematchset-bytematchtuple.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-wafregional-bytematchset-name"></a>
-A friendly name or description of the `ByteMatchSet`\.  
+A friendly name or description of the `ByteMatchSet`\. You can't change `Name` after you create a `ByteMatchSet`\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="w2922ab1c21c10d221c13b9"></a>
+## Return Values<a name="aws-resource-wafregional-bytematchset-return-values"></a>
 
-### Ref<a name="w2922ab1c21c10d221c13b9b2"></a>
+### Ref<a name="aws-resource-wafregional-bytematchset-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource physical ID, such as `1234a1a-a1b1-12a1-abcd-a123b123456`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource physical ID, such as 1234a1a\-a1b1\-12a1\-abcd\-a123b123456\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Examples<a name="w2922ab1c21c10d221c13c11"></a>
+## Examples<a name="aws-resource-wafregional-bytematchset--examples"></a>
 
-### HTTP Referers<a name="w2922ab1c21c10d221c13c11b2"></a>
+### HTTP Referers<a name="aws-resource-wafregional-bytematchset--examples--HTTP_Referers"></a>
 
 The following example defines a set of HTTP referers to match\.
 
-#### JSON<a name="aws-resource-wafregional-bytematchset-example.json"></a>
+#### JSON<a name="aws-resource-wafregional-bytematchset--examples--HTTP_Referers--json"></a>
 
 ```
 "BadReferers": {
@@ -87,7 +89,7 @@ The following example defines a set of HTTP referers to match\.
 }
 ```
 
-#### YAML<a name="aws-resource-wafregional-bytematchset-example.yaml"></a>
+#### YAML<a name="aws-resource-wafregional-bytematchset--examples--HTTP_Referers--yaml"></a>
 
 ```
 BadReferers: 
@@ -108,14 +110,14 @@ BadReferers:
           Data: "referer"
         TargetString: "badrefer2"
         TextTransformation: "NONE"
-        PositionalConstraint: "CONTAINS"
+PositionalConstraint: "CONTAINS"
 ```
 
-### Associate a ByteMatchSet with a Web ACL Rule<a name="w2922ab1c21c10d221c13c11b4"></a>
+### Associate a ByteMatchSet with a Web ACL Rule<a name="aws-resource-wafregional-bytematchset--examples--Associate_a_ByteMatchSet_with_a_Web_ACL_Rule"></a>
 
 The following example associates the `BadReferers` byte match set with a web access control list \(ACL\) rule\.
 
-#### JSON<a name="aws-resource-wafregional-bytematchset-example2.json"></a>
+#### JSON<a name="aws-resource-wafregional-bytematchset--examples--Associate_a_ByteMatchSet_with_a_Web_ACL_Rule--json"></a>
 
 ```
 "BadReferersRule" : {
@@ -134,7 +136,7 @@ The following example associates the `BadReferers` byte match set with a web acc
 }
 ```
 
-#### YAML<a name="aws-resource-wafregional-bytematchset-example2.yaml"></a>
+#### YAML<a name="aws-resource-wafregional-bytematchset--examples--Associate_a_ByteMatchSet_with_a_Web_ACL_Rule--yaml"></a>
 
 ```
 BadReferersRule: 
@@ -147,14 +149,14 @@ BadReferersRule:
         DataId: 
           Ref: "BadReferers"
         Negated: false
-        Type: "ByteMatch"
+Type: "ByteMatch"
 ```
 
-### Create a Web ACL<a name="w2922ab1c21c10d221c13c11b6"></a>
+### Create a Web ACL<a name="aws-resource-wafregional-bytematchset--examples--Create_a_Web_ACL"></a>
 
 The following example associates the `BadReferersRule` rule with a web ACL\. The web ACL allows all requests except for ones with referers that match the `BadReferersRule` rule\.
 
-#### JSON<a name="aws-resource-wafregional-bytematchset-example3.json"></a>
+#### JSON<a name="aws-resource-wafregional-bytematchset--examples--Create_a_Web_ACL--json"></a>
 
 ```
 "MyWebACL": {
@@ -178,7 +180,7 @@ The following example associates the `BadReferersRule` rule with a web ACL\. The
 }
 ```
 
-#### YAML<a name="aws-resource-wafregional-bytematchset-example3.yaml"></a>
+#### YAML<a name="aws-resource-wafregional-bytematchset--examples--Create_a_Web_ACL--yaml"></a>
 
 ```
 MyWebACL: 
@@ -194,5 +196,5 @@ MyWebACL:
           Type: "BLOCK"
         Priority: 1
         RuleId: 
-          Ref: "BadReferersRule"
+Ref: "BadReferersRule"
 ```

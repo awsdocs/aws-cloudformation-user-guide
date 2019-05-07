@@ -26,7 +26,8 @@ Type: AWS::ElasticBeanstalk::Application
 Properties : 
 ﻿  [ApplicationName](#cfn-elasticbeanstalk-application-name) : String
 ﻿  [Description](#cfn-elasticbeanstalk-application-description) : String
-﻿  [ResourceLifecycleConfig](#cfn-elasticbeanstalk-application-resourcelifecycleconfig) : [ApplicationResourceLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.md)
+﻿  [ResourceLifecycleConfig](#cfn-elasticbeanstalk-application-resourcelifecycleconfig) : 
+    [ApplicationResourceLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.md)
 ```
 
 ## Properties<a name="aws-properties-beanstalk-properties"></a>

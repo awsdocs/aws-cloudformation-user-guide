@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AllowedPattern](#cfn-ssm-parameter-allowedpattern)" : String,
       "[Description](#cfn-ssm-parameter-description)" : String,
       "[Name](#cfn-ssm-parameter-name)" : String,
+      "[Tags](#cfn-ssm-parameter-tags)" : Json,
       "[Type](#cfn-ssm-parameter-type)" : String,
       "[Value](#cfn-ssm-parameter-value)" : String
     }
@@ -31,6 +32,7 @@ Properties :
 ﻿  [AllowedPattern](#cfn-ssm-parameter-allowedpattern) : String
 ﻿  [Description](#cfn-ssm-parameter-description) : String
 ﻿  [Name](#cfn-ssm-parameter-name) : String
+﻿  [Tags](#cfn-ssm-parameter-tags) : Json
 ﻿  [Type](#cfn-ssm-parameter-type) : String
 ﻿  [Value](#cfn-ssm-parameter-value) : String
 ```
@@ -60,6 +62,13 @@ The name of the parameter\.
 *Minimum*: `1`  
 *Maximum*: `2048`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-ssm-parameter-tags"></a>
+An array of key\-value pairs to apply to this resource\.  
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-ssm-parameter-type"></a>
 The type of parameter\. Valid values include the following: `String` or `StringList`\.  
@@ -135,7 +144,7 @@ Resources:
       Type: "String"
       Value: "date"
       Description: "SSM Parameter for running date command."
-AllowedPattern: "^[a-zA-Z]{1,10}$"
+      AllowedPattern: "^[a-zA-Z]{1,10}$"
 ```
 
 ### AWS Systems Manager Parameter StringList Example<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_StringList_Example"></a>
@@ -174,5 +183,5 @@ Resources:
       Type: "StringList"
       Value: "date,ls"
       Description: "SSM Parameter of type StringList."
-AllowedPattern: "^[a-zA-Z]{1,10}$"
+      AllowedPattern: "^[a-zA-Z]{1,10}$"
 ```

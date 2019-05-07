@@ -2,23 +2,17 @@
 
 The `AWS::Greengrass::Group` resource represents a group in AWS IoT Greengrass\. In the AWS IoT Greengrass API, groups are used to organize your group versions\.
 
-Groups can reference multiple group versions\.
-
-![\[A group hierarchy with associated group versions.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/greengrass/gg-group.png)
-
-All group versions must be associated with a group\. A group version references a device definition version, subscription definition version, and other version types that contain the components you want to deploy to a Greengrass core device\.
-
-![\[A group version that references other version types.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/greengrass/gg-groupversion.png)
+Groups can reference multiple group versions\. All group versions must be associated with a group\. A group version references a device definition version, subscription definition version, and other version types that contain the components you want to deploy to a Greengrass core device\.
 
 To deploy a group version, the group version must reference a core definition version that contains one core\. Other version types are optionally included, depending on your business need\.
 
 **Note**  
-When you create a group, you can optionally include an initial group version\. To associate a group version later, create a [AWS::Greengrass::GroupVersion](aws-resource-greengrass-groupversion.md) resource and specify the ID of this group\.  
+When you create a group, you can optionally include an initial group version\. To associate a group version later, create a [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html) resource and specify the ID of this group\.  
 To change group components \(such as devices, subscriptions, or functions\), you must create new versions\. This is because versions are immutable\. For example, to add a function, you create a function definition version that contains the new function \(and all other functions that you want to deploy\)\. Then you create a group version that references the new function definition version \(and all other version types that you want to deploy\)\.
 
-**Deploying a Group Version**
+ **Deploying a Group Version** 
 
-After you create the group version in your AWS CloudFormation template, you can deploy it using the [https://docs.aws.amazon.com/greengrass/latest/apireference/createdeployment-post.html](https://docs.aws.amazon.com/greengrass/latest/apireference/createdeployment-post.html) command in the AWS CLI or by choosing **Greengrass** in the AWS IoT console\. To deploy a group version, you must have a Greengrass service role associated with your AWS account\. For more information, see [ AWS CloudFormation Support for AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/latest/developerguide/cloudformation-support.html) in the *AWS IoT Greengrass Developer Guide*\.
+After you create the group version in your AWS CloudFormation template, you can deploy it using the [https://docs.aws.amazon.com/greengrass/latest/apireference/createdeployment-post.html](https://docs.aws.amazon.com/greengrass/latest/apireference/createdeployment-post.html) command in the AWS CLI or from the **Greengrass** node in the AWS IoT console\. To deploy a group version, you must have a Greengrass service role associated with your AWS account\. For more information, see [AWS CloudFormationSupport for AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/latest/developerguide/cloudformation-support.html) in the *AWS IoT Greengrass Developer Guide*\.
 
 ## Syntax<a name="aws-resource-greengrass-group-syntax"></a>
 
@@ -30,89 +24,91 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::Group",
   "Properties" : {
-    "[InitialVersion](#cfn-greengrass-group-initialversion)" : [*GroupVersion*](aws-properties-greengrass-group-groupversion.md),
-    "[RoleArn](#cfn-greengrass-group-rolearn)" : String,
-    "[Name](#cfn-greengrass-group-name)" : String
-  }
+      "[InitialVersion](#cfn-greengrass-group-initialversion)" : [GroupVersion](aws-properties-greengrass-group-groupversion.md),
+      "[Name](#cfn-greengrass-group-name)" : String,
+      "[RoleArn](#cfn-greengrass-group-rolearn)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-greengrass-group-syntax.yaml"></a>
 
 ```
-Type: "AWS::Greengrass::Group"
-Properties:
-  [InitialVersion](#cfn-greengrass-group-initialversion): 
-    [*GroupVersion*](aws-properties-greengrass-group-groupversion.md)
-  [RoleArn](#cfn-greengrass-group-rolearn): String
-  [Name](#cfn-greengrass-group-name): String
+Type: AWS::Greengrass::Group
+Properties : 
+﻿  [InitialVersion](#cfn-greengrass-group-initialversion) : 
+    [GroupVersion](aws-properties-greengrass-group-groupversion.md)
+﻿  [Name](#cfn-greengrass-group-name) : String
+﻿  [RoleArn](#cfn-greengrass-group-rolearn) : String
 ```
 
 ## Properties<a name="aws-resource-greengrass-group-properties"></a>
 
 `InitialVersion`  <a name="cfn-greengrass-group-initialversion"></a>
 The group version to include when the group is created\. A group version references the Amazon Resource Name \(ARN\) of a core definition version, device definition version, subscription definition version, and other version types\.  
-To associate a group version after the group is created, create an [AWS::Greengrass::GroupVersion](aws-resource-greengrass-groupversion.md) resource and specify the ID of this group\.
- *Required*: No  
- *Type*: [GroupVersion](aws-properties-greengrass-group-groupversion.md)  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
-
-`RoleArn`  <a name="cfn-greengrass-group-rolearn"></a>
-The ARN of the IAM role attached to the group\. This role contains the permissions that Lambda functions and connectors use to interact with other AWS services\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+To associate a group version after the group is created, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html) resource and specify the ID of this group\.
+*Required*: No  
+*Type*: [GroupVersion](aws-properties-greengrass-group-groupversion.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-greengrass-group-name"></a>
 The name of the group\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-greengrass-group-returnvalues"></a>
+`RoleArn`  <a name="cfn-greengrass-group-rolearn"></a>
+The Amazon Resource Name \(ARN\) of the IAM role attached to the group\. This role contains the permissions that Lambda functions and connectors use to interact with other AWS services\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-### Ref<a name="aws-resource-greengrass-group-ref"></a>
+## Return Values<a name="aws-resource-greengrass-group-return-values"></a>
 
-When you pass the logical ID of an `AWS::Greengrass::Group` resource to the intrinsic `Ref` function, the function returns the ID of the group, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
+### Ref<a name="aws-resource-greengrass-group-return-values-ref"></a>
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the group, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
 
-### Fn::GetAtt<a name="aws-resource-greengrass-group-getatt"></a>
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
+### Fn::GetAtt<a name="aws-resource-greengrass-group-return-values-fn--getatt"></a>
 
-`RoleAttachedAt`  
-The time \(in milliseconds since the epoch\) when the group role was attached to the `Group`\. 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`LatestVersionArn`  
-The ARN of the last `GroupVersion` that was added to the `Group`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/groups/1234a5b6-78cd-901e-2fgh-3i45j6k178l9/versions/9876ac30-4bdb-4f9d-95af-b5fdb66be1a2`\. 
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
-`Id`  
-The ID of the `Group`, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
+#### <a name="aws-resource-greengrass-group-return-values-fn--getatt-fn--getatt"></a>
 
-`Arn`  
+`Arn`  <a name="Arn-fn::getatt"></a>
 The ARN of the `Group`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/groups/1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
 
-`RoleArn`  
-The ARN of the IAM role that's attached to the `Group`, such as `arn:aws:iam::123456789012:role/role-name`\. 
+`Id`  <a name="Id-fn::getatt"></a>
+The ID of the `Group`, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
 
-`Name`  
+`LatestVersionArn`  <a name="LatestVersionArn-fn::getatt"></a>
+The ARN of the last `GroupVersion` that was added to the `Group`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/groups/1234a5b6-78cd-901e-2fgh-3i45j6k178l9/versions/9876ac30-4bdb-4f9d-95af-b5fdb66be1a2`\. 
+
+`Name`  <a name="Name-fn::getatt"></a>
 The name of the `Group`, such as `MyGroup`\. 
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
+`RoleArn`  <a name="RoleArn-fn::getatt"></a>
+The ARN of the IAM role that's attached to the `Group`, such as `arn:aws:iam::123456789012:role/role-name`\. 
 
-## Examples<a name="aws-resource-greengrass-group-examples"></a>
+`RoleAttachedAt`  <a name="RoleAttachedAt-fn::getatt"></a>
+The time \(in milliseconds since the epoch\) when the group role was attached to the `Group`\. 
 
-### Create a Group<a name="aws-resource-greengrass-group-example1"></a>
+## Examples<a name="aws-resource-greengrass-group--examples"></a>
 
-The template defines a core, device, function, logger, subscription, and two resources, and then references them from the group version\.
+### Create a Group<a name="aws-resource-greengrass-group--examples--Create_a_Group"></a>
+
+The following template defines a core, device, function, logger, subscription, and two resources, and then references them from the group version\.
 
 The template includes parameters that let you specify the certificate ARNs for the core and device and the ARN of the source Lambda function \(which is an AWS Lambda resource\)\. It uses the `Ref` and `GetAtt` intrinsic functions to reference IDs, ARNs, and other attributes that are required to create Greengrass resources\.
 
 **Note**  
-After you create the group version in your AWS CloudFormation template, you can deploy it using the [https://docs.aws.amazon.com/greengrass/latest/apireference/createdeployment-post.html](https://docs.aws.amazon.com/greengrass/latest/apireference/createdeployment-post.html) command in the AWS CLI or by choosing **Greengrass** in the AWS IoT console\. To deploy a group version, you must have a Greengrass service role associated with your AWS account\. For more information, see [ AWS CloudFormation Support for AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/latest/developerguide/cloudformation-support.html) in the *AWS IoT Greengrass Developer Guide*\.
+After you create the group version in your AWS CloudFormation template, you can deploy it using the [https://docs.aws.amazon.com/greengrass/latest/apireference/createdeployment-post.html](https://docs.aws.amazon.com/greengrass/latest/apireference/createdeployment-post.html) command in the AWS CLI or from the group configuration page in the AWS IoT console\. To deploy a group version, you must have a Greengrass service role associated with your AWS account\. For more information, see [ AWS CloudFormation Support for AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/latest/developerguide/cloudformation-support.html) in the *AWS IoT Greengrass Developer Guide*\.
 
-#### JSON<a name="aws-resource-greengrass-group-example1.json"></a>
+#### JSON<a name="aws-resource-greengrass-group--examples--Create_a_Group--json"></a>
 
 ```
 {
@@ -426,7 +422,7 @@ After you create the group version in your AWS CloudFormation template, you can 
 }
 ```
 
-#### YAML<a name="aws-resource-greengrass-group-example1.yaml"></a>
+#### YAML<a name="aws-resource-greengrass-group--examples--Create_a_Group--yaml"></a>
 
 ```
 Description: >-
@@ -598,6 +594,6 @@ Resources:
         ResourceDefinitionVersionArn: !Ref TestResourceDefinitionVersion
 ```
 
-## See Also<a name="aws-resource-greengrass-group-seealso"></a>
-+ [CreateGroup](https://docs.aws.amazon.com/greengrass/latest/apireference/creategroup-post.html) in the *AWS IoT Greengrass API Reference*
-+ [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)
+## See Also<a name="aws-resource-greengrass-group--seealso"></a>
++  [CreateGroup](https://docs.aws.amazon.com/greengrass/latest/apireference/creategroup-post.html) in the * AWS IoT Greengrass API Reference * 
++  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

@@ -35,7 +35,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::SSM::MaintenanceWindowTask
 Properties : 
 ﻿  [Description](#cfn-ssm-maintenancewindowtask-description) : String
-﻿  [LoggingInfo](#cfn-ssm-maintenancewindowtask-logginginfo) : [LoggingInfo](aws-properties-ssm-maintenancewindowtask-logginginfo.md)
+﻿  [LoggingInfo](#cfn-ssm-maintenancewindowtask-logginginfo) : 
+    [LoggingInfo](aws-properties-ssm-maintenancewindowtask-logginginfo.md)
 ﻿  [MaxConcurrency](#cfn-ssm-maintenancewindowtask-maxconcurrency) : String
 ﻿  [MaxErrors](#cfn-ssm-maintenancewindowtask-maxerrors) : String
 ﻿  [Name](#cfn-ssm-maintenancewindowtask-name) : String
@@ -44,7 +45,8 @@ Properties :
 ﻿  [Targets](#cfn-ssm-maintenancewindowtask-targets) : 
     - [Target](aws-properties-ssm-maintenancewindowtask-target.md)
 ﻿  [TaskArn](#cfn-ssm-maintenancewindowtask-taskarn) : String
-﻿  [TaskInvocationParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters) : [TaskInvocationParameters](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md)
+﻿  [TaskInvocationParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters) : 
+    [TaskInvocationParameters](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md)
 ﻿  [TaskParameters](#cfn-ssm-maintenancewindowtask-taskparameters) : Json
 ﻿  [TaskType](#cfn-ssm-maintenancewindowtask-tasktype) : String
 ﻿  [WindowId](#cfn-ssm-maintenancewindowtask-windowid) : String

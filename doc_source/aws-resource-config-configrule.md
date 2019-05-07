@@ -47,8 +47,10 @@ Properties :
 ﻿  [Description](#cfn-config-configrule-description) : String
 ﻿  [InputParameters](#cfn-config-configrule-inputparameters) : Json
 ﻿  [MaximumExecutionFrequency](#cfn-config-configrule-maximumexecutionfrequency) : String
-﻿  [Scope](#cfn-config-configrule-scope) : [Scope](aws-properties-config-configrule-scope.md)
-﻿  [Source](#cfn-config-configrule-source) : [Source](aws-properties-config-configrule-source.md)
+﻿  [Scope](#cfn-config-configrule-scope) : 
+    [Scope](aws-properties-config-configrule-scope.md)
+﻿  [Source](#cfn-config-configrule-source) : 
+    [Source](aws-properties-config-configrule-source.md)
 ```
 
 ## Properties<a name="aws-resource-config-configrule-properties"></a>

@@ -35,11 +35,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::AppStream::Fleet
 Properties : 
-﻿  [ComputeCapacity](#cfn-appstream-fleet-computecapacity) : [ComputeCapacity](aws-properties-appstream-fleet-computecapacity.md)
+﻿  [ComputeCapacity](#cfn-appstream-fleet-computecapacity) : 
+    [ComputeCapacity](aws-properties-appstream-fleet-computecapacity.md)
 ﻿  [Description](#cfn-appstream-fleet-description) : String
 ﻿  [DisconnectTimeoutInSeconds](#cfn-appstream-fleet-disconnecttimeoutinseconds) : Integer
 ﻿  [DisplayName](#cfn-appstream-fleet-displayname) : String
-﻿  [DomainJoinInfo](#cfn-appstream-fleet-domainjoininfo) : [DomainJoinInfo](aws-properties-appstream-fleet-domainjoininfo.md)
+﻿  [DomainJoinInfo](#cfn-appstream-fleet-domainjoininfo) : 
+    [DomainJoinInfo](aws-properties-appstream-fleet-domainjoininfo.md)
 ﻿  [EnableDefaultInternetAccess](#cfn-appstream-fleet-enabledefaultinternetaccess) : Boolean
 ﻿  [FleetType](#cfn-appstream-fleet-fleettype) : String
 ﻿  [ImageArn](#cfn-appstream-fleet-imagearn) : String
@@ -49,7 +51,8 @@ Properties :
 ﻿  [Name](#cfn-appstream-fleet-name) : String
 ﻿  [Tags](#cfn-appstream-fleet-tags) : 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VpcConfig](#cfn-appstream-fleet-vpcconfig) : [VpcConfig](aws-properties-appstream-fleet-vpcconfig.md)
+﻿  [VpcConfig](#cfn-appstream-fleet-vpcconfig) : 
+    [VpcConfig](aws-properties-appstream-fleet-vpcconfig.md)
 ```
 
 ## Properties<a name="aws-resource-appstream-fleet-properties"></a>

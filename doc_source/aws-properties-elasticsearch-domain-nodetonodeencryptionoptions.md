@@ -1,8 +1,6 @@
-# Elasticsearch Domain NodeToNodeEncryptionOptions<a name="aws-properties-elasticsearch-domain-nodetonodeencryptionoptions"></a>
+# AWS::Elasticsearch::Domain NodeToNodeEncryptionOptions<a name="aws-properties-elasticsearch-domain-nodetonodeencryptionoptions"></a>
 
-<a name="aws-properties-elasticsearch-domain-nodetonodeencryptionoptions-description"></a>The `NodeToNodeEncryptionOptions` property type specifies whether node\-to\-node encryption is enabled\.
-
-<a name="aws-properties-elasticsearch-domain-nodetonodeencryptionoptions-inheritance"></a> `NodeToNodeEncryptionOptions` is a property of the [AWS::Elasticsearch::Domain](aws-resource-elasticsearch-domain.md) resource type\.
+Specifies whether node\-to\-node encryption is enabled\.
 
 ## Syntax<a name="aws-properties-elasticsearch-domain-nodetonodeencryptionoptions-syntax"></a>
 
@@ -19,13 +17,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticsearch-domain-nodetonodeencryptionoptions-syntax.yaml"></a>
 
 ```
-[Enabled](#cfn-elasticsearch-domain-nodetonodeencryptionoptions-enabled): Boolean
+﻿  [Enabled](#cfn-elasticsearch-domain-nodetonodeencryptionoptions-enabled) : Boolean
 ```
 
 ## Properties<a name="aws-properties-elasticsearch-domain-nodetonodeencryptionoptions-properties"></a>
 
 `Enabled`  <a name="cfn-elasticsearch-domain-nodetonodeencryptionoptions-enabled"></a>
-Specifies whether node\-to\-node encryption is enabled\.  
+Specifies whether node\-to\-node encryption is enabled, as a Boolean\.  
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

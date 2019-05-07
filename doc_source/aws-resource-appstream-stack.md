@@ -32,7 +32,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::AppStream::Stack
 Properties : 
-﻿  [ApplicationSettings](#cfn-appstream-stack-applicationsettings) : [ApplicationSettings](aws-properties-appstream-stack-applicationsettings.md)
+﻿  [ApplicationSettings](#cfn-appstream-stack-applicationsettings) : 
+    [ApplicationSettings](aws-properties-appstream-stack-applicationsettings.md)
 ﻿  [AttributesToDelete](#cfn-appstream-stack-attributestodelete) : 
     - String
 ﻿  [DeleteStorageConnectors](#cfn-appstream-stack-deletestorageconnectors) : Boolean
