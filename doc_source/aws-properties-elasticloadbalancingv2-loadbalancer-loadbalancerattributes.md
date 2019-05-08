@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes-key) : String
-﻿  [Value](#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes-value) : String
+﻿  [Key](#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes-key): String
+﻿  [Value](#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes-value): String
 ```
 
 ## Properties<a name="aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes-properties"></a>
