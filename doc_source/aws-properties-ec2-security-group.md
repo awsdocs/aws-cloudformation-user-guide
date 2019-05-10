@@ -189,8 +189,8 @@ sgwithoutegress:
     SecurityGroupEgress:
     - CidrIp: 127.0.0.1/32
       IpProtocol: "-1"
-      VpcId:
-         Ref: myVPC
+    VpcId:
+      Ref: myVPC
 ```
 
 ## See Also<a name="aws-properties-ec2-security-group--seealso"></a>
