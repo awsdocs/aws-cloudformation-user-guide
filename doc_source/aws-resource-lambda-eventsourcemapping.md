@@ -78,8 +78,8 @@ The name of the Lambda function\.
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `StartingPosition`  <a name="cfn-lambda-eventsourcemapping-startingposition"></a>
-The position in a stream from which to start reading\. Required for Amazon Kinesis and Amazon DynamoDB Streams sources\. `AT_TIMESTAMP` is only supported for Kinesis streams\.   
-Valid Values: `TRIM_HORIZON` \| `LATEST` \| `AT_TIMESTAMP`  
+The position in a stream from which to start reading\. Required for Amazon Kinesis and Amazon DynamoDB Streams sources\.  
+Valid Values: `TRIM_HORIZON` \| `LATEST`   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
