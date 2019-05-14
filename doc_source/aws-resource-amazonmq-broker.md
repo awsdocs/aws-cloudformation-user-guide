@@ -355,7 +355,7 @@ Resources:
       AutoMinorVersionUpgrade: "false"
       BrokerName: MyComplexBroker
       Configuration: 
-        Id: !GetAtt Configuration1.Id
+        Id: !Ref Configuration1
         Revision: !GetAtt Configuration1.Revision
       DeploymentMode: SINGLE_INSTANCE
       EngineType: ActiveMQ
