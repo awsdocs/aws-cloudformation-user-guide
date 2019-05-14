@@ -72,7 +72,7 @@ Indicates whether health checks are enabled\. If the target type is `lambda`, he
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckIntervalSeconds`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthcheckintervalseconds"></a>
-The approximate amount of time, in seconds, between health checks of an individual target\. For Application Load Balancers, the range is 5–300 seconds\. For Network Load Balancers, the supported values are 10 or 30 seconds\. If the target type is `instance` or `ip`, the default is 30 seconds\. If the target type is `lambda`, the default is 35 seconds\.  
+The approximate amount of time, in seconds, between health checks of an individual target\. For HTTP and HTTPS health checks, the range is 5–300 seconds\. For TCP health checks, the supported values are 10 and 30 seconds\. If the target type is `instance` or `ip`, the default is 30 seconds\. If the target type is `lambda`, the default is 35 seconds\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `5`  
@@ -101,7 +101,7 @@ The protocol the load balancer uses when performing health checks on targets\. F
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckTimeoutSeconds`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthchecktimeoutseconds"></a>
-The number of seconds to wait for a response before considering that a health check has failed\.  For HTTP and HTTPS Target Group protocols, the range is 2–120 seconds and the default is 5 seconds\.  For TCP and TLS Target Group protocols, the only accepted value is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks\.  
+The number of seconds to wait for a response before considering that a health check has failed\. For target groups with a protocol of HTTP or HTTPS, the default is 5 seconds\. For target groups with a protocol of TCP or TLS, this value must be 6 seconds for HTTP health checks and 10 seconds for TCP and HTTPS health checks\. If the target is a Lambda function, the default is 30 seconds.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `2`  
@@ -109,7 +109,7 @@ The number of seconds to wait for a response before considering that a health ch
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthyThresholdCount`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthythresholdcount"></a>
-The number of consecutive health checks successes required before considering an unhealthy target healthy\. For Application Load Balancers, the default is 5\. For Network Load Balancers, the default is 3\.  
+The number of consecutive health checks successes required before considering an unhealthy target healthy\. For target groups with a protocol of HTTP or HTTPS, the default is 5\. For target groups with a protocol of TCP or TLS, the default is 3\. If the target is a Lambda function, the default is 5\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `2`  
@@ -173,7 +173,7 @@ The targets\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UnhealthyThresholdCount`  <a name="cfn-elasticloadbalancingv2-targetgroup-unhealthythresholdcount"></a>
-The number of consecutive failed health checks that are required before a target is considered unhealthy\.  For HTTP and HTTPS Target Group protocols the range is 2-10 and the default is 2\.  For TCP and TLS Target Group protocols, this value must be the same as the healthy threshold count\.  
+The number of consecutive failed health checks that are required before a target is considered unhealthy\. For target groups with a protocol of HTTP or HTTPS, the default is 2\. For target groups with a protocol of TCP or TLS, this value must be the same as the healthy threshold count\. If the target is a Lambda function, the default is 2\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `2`  
