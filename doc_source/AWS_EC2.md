@@ -41,6 +41,7 @@
 + [AWS::EC2::VPCDHCPOptionsAssociation](aws-resource-ec2-vpc-dhcp-options-assoc.md)
 + [AWS::EC2::VPCEndpoint](aws-resource-ec2-vpcendpoint.md)
 + [AWS::EC2::VPCEndpointConnectionNotification](aws-resource-ec2-vpcendpointconnectionnotification.md)
++ [AWS::EC2::VPCEndpointService](aws-resource-ec2-vpcendpointservice.md)
 + [AWS::EC2::VPCEndpointServicePermissions](aws-resource-ec2-vpcendpointservicepermissions.md)
 + [AWS::EC2::VPCGatewayAttachment](aws-resource-ec2-vpc-gateway-attachment.md)
 + [AWS::EC2::VPCPeeringConnection](aws-resource-ec2-vpcpeeringconnection.md)

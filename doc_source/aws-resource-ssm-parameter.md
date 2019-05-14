@@ -2,6 +2,10 @@
 
 The `AWS::SSM::Parameter` resource creates an SSM parameter in AWS Systems Manager Parameter Store\.
 
+**Important**  
+To create an SSM parameter, you must have the AWS Identity and Access Management \(IAM\) permissions `ssm:PutParameter` and `ssm:AddTagsToResource`\. On stack creation, AWS CloudFormation adds the following three tags to the parameter: `aws:cloudformation:stack-name`, `aws:cloudformation:logical-id`, and `aws:cloudformation:stack-id`, in addition to any custom tags you specify\.  
+To add, update, or remove tags during stack update, you must have IAM permissions for both `ssm:AddTagsToResource` and `ssm:RemoveTagsFromResource`\. For more information, see [AWS Systems Manager Permissions Reference](https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-permissions-reference.html) in the *AWS Systems Manager User Guide*\.
+
 For information about valid values for parameters, see [Requirements and Constraints for Parameter Names](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html) in the *AWS Systems Manager User Guide* and [PutParameter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PutParameter.html) in the *AWS Systems Manager API Reference*\.
 
 ## Syntax<a name="aws-resource-ssm-parameter-syntax"></a>
@@ -110,7 +114,7 @@ Returns the value of the parameter\.
 
 ### AWS Systems Manager Parameter String Example<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_String_Example"></a>
 
-The following example snippet creates a Systems Manager parameter with a `String` type\.
+The following example snippet creates a Systems Manager parameter with a `String` type and adds the tag key\-value pair `"Environment":"Dev"`\.
 
 #### JSON<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_String_Example--json"></a>
 
@@ -125,7 +129,10 @@ The following example snippet creates a Systems Manager parameter with a `String
             "Type": "String",
             "Value": "date",
             "Description": "SSM Parameter for running date command.",
-            "AllowedPattern" : "^[a-zA-Z]{1,10}$"
+            "AllowedPattern" : "^[a-zA-Z]{1,10}$",
+            "Tags": {
+               "Environment": "DEV"
+            }
          }
       }
    }
@@ -145,6 +152,8 @@ Resources:
       Value: "date"
       Description: "SSM Parameter for running date command."
       AllowedPattern: "^[a-zA-Z]{1,10}$"
+      Tags:
+        "Environment": "DEV"
 ```
 
 ### AWS Systems Manager Parameter StringList Example<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_StringList_Example"></a>

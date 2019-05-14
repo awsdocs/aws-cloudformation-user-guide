@@ -37,7 +37,7 @@ Properties :
 ## Properties<a name="aws-resource-greengrass-loggerdefinition-properties"></a>
 
 `InitialVersion`  <a name="cfn-greengrass-loggerdefinition-initialversion"></a>
-The logger definition version to include when the logger definition is created\. A logger definition version contains a list of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger) property types\.  
+The logger definition version to include when the logger definition is created\. A logger definition version contains a list of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html) property types\.  
 To associate a logger definition version after the logger definition is created, create an [ `AWS::Greengrass::LoggerDefinitionVersion` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html) resource and specify the ID of this logger definition\.
 *Required*: No  
 *Type*: [LoggerDefinitionVersion](aws-properties-greengrass-loggerdefinition-loggerdefinitionversion.md)  

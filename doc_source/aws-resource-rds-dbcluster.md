@@ -142,7 +142,7 @@ The name of your database\. If you don't provide a name, then Amazon RDS won't c
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DeletionProtection`  <a name="cfn-rds-dbcluster-deletionprotection"></a>
-Indicates whether the DB cluster should have deletion protection enabled\. The database can't be deleted when this value is set to true\. The default is false\.   
+A value that indicates whether the DB cluster has deletion protection enabled\. The database can't be deleted when deletion protection is enabled\. By default, deletion protection is disabled\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -154,8 +154,7 @@ The list of log types that need to be enabled for exporting to CloudWatch Logs\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnableIAMDatabaseAuthentication`  <a name="cfn-rds-dbcluster-enableiamdatabaseauthentication"></a>
-True to enable mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts, and otherwise false\.  
-Default: `false`   
+A value that indicates whether to enable mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts\. By default, mapping is disabled\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

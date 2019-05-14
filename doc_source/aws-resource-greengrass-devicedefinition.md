@@ -37,7 +37,7 @@ Properties :
 ## Properties<a name="aws-resource-greengrass-devicedefinition-properties"></a>
 
 `InitialVersion`  <a name="cfn-greengrass-devicedefinition-initialversion"></a>
-The device definition version to include when the device definition is created\. A device definition version contains a list of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-device](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-device) property types\.  
+The device definition version to include when the device definition is created\. A device definition version contains a list of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-device.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-device.html) property types\.  
 To associate a device definition version after the device definition is created, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinitionversion.html) resource and specify the ID of this device definition\.
 *Required*: No  
 *Type*: [DeviceDefinitionVersion](aws-properties-greengrass-devicedefinition-devicedefinitionversion.md)  

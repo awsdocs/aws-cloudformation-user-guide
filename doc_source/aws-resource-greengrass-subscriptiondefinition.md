@@ -37,7 +37,7 @@ Properties :
 ## Properties<a name="aws-resource-greengrass-subscriptiondefinition-properties"></a>
 
 `InitialVersion`  <a name="cfn-greengrass-subscriptiondefinition-initialversion"></a>
-The subscription definition version to include when the subscription definition is created\. A subscription definition version contains a list of [ `subscription` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-subscriptiondefinition-subscription) property types\.  
+The subscription definition version to include when the subscription definition is created\. A subscription definition version contains a list of [ `subscription` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-subscriptiondefinition-subscription.html) property types\.  
 To associate a subscription definition version after the subscription definition is created, create an [ `AWS::Greengrass::SubscriptionDefinitionVersion` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinitionversion.html) resource and specify the ID of this subscription definition\.
 *Required*: No  
 *Type*: [SubscriptionDefinitionVersion](aws-properties-greengrass-subscriptiondefinition-subscriptiondefinitionversion.md)  

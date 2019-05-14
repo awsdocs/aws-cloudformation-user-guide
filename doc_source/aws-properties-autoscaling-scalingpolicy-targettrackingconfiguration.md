@@ -33,8 +33,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration-properties"></a>
 
 `CustomizedMetricSpecification`  <a name="cfn-autoscaling-scalingpolicy-targettrackingconfiguration-customizedmetricspecification"></a>
-A customized metric\. You can specify either a predefined metric or a customized metric\.  
-*Required*: No  
+A customized metric\. You must specify either a predefined metric or a customized metric\.  
+*Required*: Conditional  
 *Type*: [CustomizedMetricSpecification](aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -45,8 +45,8 @@ Indicates whether scaling in by the target tracking scaling policy is disabled\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PredefinedMetricSpecification`  <a name="cfn-autoscaling-scalingpolicy-targettrackingconfiguration-predefinedmetricspecification"></a>
-A predefined metric\. You can specify either a predefined metric or a customized metric\.  
-*Required*: No  
+A predefined metric\. You must specify either a predefined metric or a customized metric\.  
+*Required*: Conditional  
 *Type*: [PredefinedMetricSpecification](aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

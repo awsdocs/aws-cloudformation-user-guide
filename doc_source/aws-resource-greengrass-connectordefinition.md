@@ -37,7 +37,7 @@ Properties :
 ## Properties<a name="aws-resource-greengrass-connectordefinition-properties"></a>
 
 `InitialVersion`  <a name="cfn-greengrass-connectordefinition-initialversion"></a>
-The connector definition version to include when the connector definition is created\. A connector definition version contains a list of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connector](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connector) property types\.  
+The connector definition version to include when the connector definition is created\. A connector definition version contains a list of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connector.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connector.html) property types\.  
 To associate a connector definition version after the connector definition is created, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html) resource and specify the ID of this connector definition\.
 *Required*: No  
 *Type*: [ConnectorDefinitionVersion](aws-properties-greengrass-connectordefinition-connectordefinitionversion.md)  

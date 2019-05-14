@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Description](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-description)" : String,
+  "[DisableTemplateValidation](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-disabletemplatevalidation)" : Boolean,
   "[Info](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-info)" : Json,
   "[Name](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-name)" : String
 }
@@ -20,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 ﻿  [Description](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-description) : String
+﻿  [DisableTemplateValidation](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-disabletemplatevalidation) : Boolean
 ﻿  [Info](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-info) : Json
 ﻿  [Name](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-name) : String
 ```
@@ -30,6 +32,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The description of the provisioning artifact, including how it differs from the previous provisioning artifact\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DisableTemplateValidation`  <a name="cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-disabletemplatevalidation"></a>
+If set to true, AWS Service Catalog stops validating the specified provisioning artifact even if it is invalid\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Info`  <a name="cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-info"></a>

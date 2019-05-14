@@ -35,7 +35,7 @@ Describes the format of the data in the streaming source, and how each data elem
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3ReferenceDataSource`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource-s3referencedatasource"></a>
-Identifies the S3 bucket and object that contains the reference data\. Also identifies the IAM role Amazon Kinesis Analytics can assume to read this object on your behalf\. An Amazon Kinesis Analytics application loads reference data only once\. If the data changes, you call the operation to trigger reloading of data into your application\.   
+Identifies the S3 bucket and object that contains the reference data\. Also identifies the IAM role Amazon Kinesis Analytics can assume to read this object on your behalf\. An Amazon Kinesis Analytics application loads reference data only once\. If the data changes, you call the `UpdateApplication` operation to trigger reloading of data into your application\.   
 *Required*: No  
 *Type*: [S3ReferenceDataSource](aws-properties-kinesisanalytics-applicationreferencedatasource-s3referencedatasource.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -46,5 +46,4 @@ Name of the in\-application table to create\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `32`  
-*Pattern*: `[a-zA-Z][a-zA-Z0-9_]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

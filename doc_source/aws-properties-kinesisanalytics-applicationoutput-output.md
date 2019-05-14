@@ -66,5 +66,4 @@ Name of the in\-application stream\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `32`  
-*Pattern*: `[a-zA-Z][a-zA-Z0-9_]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

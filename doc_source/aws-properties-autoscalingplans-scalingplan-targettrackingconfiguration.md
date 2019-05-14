@@ -78,3 +78,6 @@ The target value for the metric\. The range is 8\.515920e\-109 to 1\.174271e\+10
 *Required*: Yes  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See Also<a name="aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration--seealso"></a>
++ [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-aws-auto-scaling.html)

@@ -3,10 +3,10 @@
 Specifies an Amazon EC2 Auto Scaling launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances\. 
 
 **Important**  
-When you update a property of the `LaunchConfiguration` resource, AWS CloudFormation deletes that resource and creates a new launch configuration with the updated properties and a new name\. This update action does not deploy any change across the running Amazon EC2 instances in the Auto Scaling group\. In other words, an update simply replaces the `LaunchConfiguration` so that when the Auto Scaling group launches new instances, they will get the updated configuration, but existing instances continue to run with the configuration that they were originally launched with\. This works the same way as if you made similar changes manually to an Auto Scaling group\.   
-If you want to update existing instances when you update the `LaunchConfiguration` resource, you must specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the `AWS::AutoScaling::AutoScalingGroup` resource\. 
+When you update the launch configuration, AWS CloudFormation deletes that resource and creates a new launch configuration with the updated properties and a new name\. This update action does not deploy any change across the running Amazon EC2 instances in the Auto Scaling group\. In other words, after you associate a new launch configuration with an Auto Scaling group, all new instances will get the updated configuration, but existing instances continue to run with the configuration that they were originally launched with\. This works the same way as any other Auto Scaling group that uses a launch configuration\.   
+If you want to update existing instances when you update the `LaunchConfiguration` resource, you must specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the Auto Scaling group\. You can find sample update policies for rolling updates in the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples) section of the `AWS::AutoScaling::AutoScalingGroup` documentation\. 
 
-For more information, see [CreateLaunchConfiguration](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CreateLaunchConfiguration.html) in the *Amazon EC2 Auto Scaling API Reference*\. For more information about Amazon EC2 Auto Scaling, see the [Amazon EC2 Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html)\. 
+For more information, see [CreateLaunchConfiguration](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CreateLaunchConfiguration.html) in the *Amazon EC2 Auto Scaling API Reference* and [Launch Configurations](https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchConfiguration.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
 ## Syntax<a name="aws-properties-as-launchconfig-syntax"></a>
 
@@ -104,9 +104,8 @@ If you specify the `ClassicLinkVPCId` property, you must specify this property\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EbsOptimized`  <a name="cfn-as-launchconfig-ebsoptimized"></a>
-Specifies whether the launch configuration is optimized for EBS I/O \(`true`\) or not \(`false`\)\. This optimization provides dedicated throughput to Amazon EBS and an optimized configuration stack to provide optimal EBS I/O performance\.   
-Additional fees are incurred when using EBS\-optimized instances\. For more information about fees and supported instance types, see [EBS\-Optimized Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) in the *Amazon EC2 User Guide for Linux Instances*\.   
-If this property is not specified, `false` is used\.   
+Specifies whether the launch configuration is optimized for EBS I/O \(`true`\) or not \(`false`\)\. This optimization provides dedicated throughput to Amazon EBS and an optimized configuration stack to provide optimal EBS I/O performance\. Additional fees are incurred when you enable EBS optimization for an instance type that is not EBS\-optimized by default\. For more information, see [EBS\-Optimized Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) in the *Amazon EC2 User Guide for Linux Instances*\.   
+The default value is `false`\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -184,7 +183,7 @@ The name of the launch configuration\. This name must be unique per Region per a
 
 `PlacementTenancy`  <a name="cfn-as-launchconfig-placementtenancy"></a>
 The tenancy of the instance, either `default` or `dedicated`\. An instance with `dedicated` tenancy runs in an isolated, single\-tenant hardware and can only be launched into a VPC\. You must set the value of this property to `dedicated` if want to launch dedicated instances in a shared tenancy VPC \(a VPC with the instance placement tenancy attribute set to default\)\.   
-If you specify this property, you must specify at least one subnet in the `VPCZoneIdentifier` property of [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)\.   
+If you specify this property, you must specify at least one subnet in the `VPCZoneIdentifier` property of the [AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource\.   
 For more information, see [Instance Placement Tenancy](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-vpc-tenancy) in the *Amazon EC2 Auto Scaling User Guide*\.   
 *Required*: No  
 *Type*: String  
@@ -204,7 +203,7 @@ We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more i
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecurityGroups`  <a name="cfn-as-launchconfig-securitygroups"></a>
-A list that contains the EC2 security groups to assign to the instances in the Auto Scaling group\. The list can contain the IDs of existing EC2 security groups or references to [AWS::EC2::SecurityGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html) resources created in the template\.   
+A list that contains the security groups to assign to the instances in the Auto Scaling group\. The list can contain the IDs of existing security groups or references to [SecurityGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html) resources created in the template\.   
 For more information, see [Security Groups for Your VPC](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html) in the *Amazon Virtual Private Cloud User Guide*\.   
 *Required*: No  
 *Type*: List of String  
@@ -412,7 +411,7 @@ myLaunchConfig:
 
 ### Launch Configuration with IAM Instance Profile<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_IAM_Instance_Profile"></a>
 
-This example demonstrates a launch configuration that uses the `IamInstanceProfile` property\. Only the `AWS::AutoScaling::LaunchConfiguration` specification is shown\. For an example of the full template, including the definition of, and further references from the [AWS::IAM::InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html) object referenced here as `RootInstanceProfile`, see [auto\_scaling\_with\_instance\_profile\.template](https://s3.amazonaws.com/cloudformation-templates-us-east-1/auto_scaling_with_instance_profile.template)\.
+This example demonstrates a launch configuration that uses the `IamInstanceProfile` property\. Only the `AWS::AutoScaling::LaunchConfiguration` specification is shown\. For an example of the full template, including the definition of, and further references from the [InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html) object referenced here as `RootInstanceProfile`, see [auto\_scaling\_with\_instance\_profile\.template](https://s3.amazonaws.com/cloudformation-templates-us-east-1/auto_scaling_with_instance_profile.template)\.
 
 #### JSON<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_IAM_Instance_Profile--json"></a>
 
@@ -469,23 +468,23 @@ myLaunchConfig:
       Ref: "RootInstanceProfile"
 ```
 
-### EBS\-Optimized Volume with Specified PIOPS<a name="aws-properties-as-launchconfig--examples--EBS-Optimized_Volume_with_Specified_PIOPS"></a>
+### Launch Configuration with a Provisioned IOPS EBS Volume<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_a_Provisioned_IOPS_EBS_Volume"></a>
 
-You can create an AWS CloudFormation stack with Auto Scaling instances that contain EBS\-optimized volumes with a specified PIOPS\. This can increase the performance of your EBS\-backed instances as explained in [Amazon EBS Volume Performance on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSPerformance.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+This example demonstrates a launch configuration that configures the `EbsOptmized` property to launch instances with a provisioned IOPS EBS\-optimized volume\. This can increase the performance of your EBS\-backed instances\.
 
-When you create a launch configuration such as this one, be sure to set the `InstanceType` to at least `m1.large` and set `EbsOptimized` to `true`\. Your launched instances will contain optimized EBS root volumes with the PIOPS that you selected when creating the AMI\.
+**Note**  
+ For instances that are not EBS–optimized by default, you must enable EBS optimization to achieve the level of performance described in the [Amazon EBS\-Optimized Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) documentation in the *Amazon Elastic Compute Cloud User Guide*\. For current generation instance types, EBS\-optimization is enabled by default at no additional cost\. Enabling EBS optimization for a previous generation instance type that is not EBS\-optimized by default incurs additional fees\.
 
-**Important**  
-Additional fees are incurred when using EBS\-optimized instances\. For more information, see [Amazon EBS\-Optimized Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+When you use a launch configuration such as this one, your `m1.large` instances will contain optimized EBS root volumes with the provisioned IOPS settings that you specified in the AMI\. Because you cannot specify the IOPS settings in a launch configuration, the AMI must be configured with a block device mapping that specifies the desired number of IOPS\. The following are key attributes of this EBS\-optimized instance configuration:
++ An instance type of `m1.large` or greater\. This is required for EBS optimization\. This optimization is only available for certain instance types and sizes\.
++ An EBS\-backed AMI with a volume type of `io1` and the number of IOPS you want to provision for the volume\. 
++ The size of the EBS volume must accommodate the IOPS you need\. There is a 50:1 ratio between IOPS and Gibibytes \(GiB\) of storage\.
 
-Because you cannot override PIOPS settings in a launch configuration, the AMI in your launch configuration must have been configured with a block device mapping that specifies the desired PIOPS\. You can do this by creating your own EC2 AMI with the following characteristics:
-+ An instance type of `m1.large` or greater\. This is required for EBS optimization\.
-+ An EBS\-backed AMI with a volume type of "io1" and the number of IOPS you want for the Auto Scaling\-launched instances\.
-+ The size of the EBS volume must accommodate the IOPS you need\. There is a 10 : 1 ratio between IOPS and Gibibytes \(GiB\) of storage, so for 100 PIOPS, you need at least 10 GiB storage on the root volume\.
+For more information about IOPS performance with provisioned IOPS volumes, see [Provisioned IOPS SSD \(`io1`\) Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html#EBSVolumeTypes_piops) in the *Amazon Elastic Compute Cloud User Guide*\.
 
-Use this AMI in your launch configuration\. For example, an EBS\-optimized AMI with PIOPS that has the AMI ID `ami-7430ba44` would be used in your launch configuration like this:
+For more performance tips, see [Amazon EBS Volume Performance on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSPerformance.html) in the *Amazon Elastic Compute Cloud User Guide*\. 
 
-#### JSON<a name="aws-properties-as-launchconfig--examples--EBS-Optimized_Volume_with_Specified_PIOPS--json"></a>
+#### JSON<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_a_Provisioned_IOPS_EBS_Volume--json"></a>
 
 ```
 {
@@ -513,7 +512,7 @@ Use this AMI in your launch configuration\. For example, an EBS\-optimized AMI w
 }
 ```
 
-#### YAML<a name="aws-properties-as-launchconfig--examples--EBS-Optimized_Volume_with_Specified_PIOPS--yaml"></a>
+#### YAML<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_a_Provisioned_IOPS_EBS_Volume--yaml"></a>
 
 ```
 myLaunchConfig: 

@@ -2,7 +2,7 @@
 
 Defines an Amazon EC2 Auto Scaling group with the specified name and attributes\. 
 
-To configure Amazon EC2 instances launched as part of the group, you can specify a launch template, a launch configuration, or an EC2 instance\. We recommend that you use a launch template to make sure that you can use the latest features of Amazon EC2, such as T2 Unlimited instances\. For more information, see [Creating a Launch Template for an Auto Scaling Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html)\. 
+To configure Amazon EC2 instances launched as part of the group, you can specify a launch template, a launch configuration, or an EC2 instance\. We recommend that you use a launch template to make sure that you can use the latest features of Amazon EC2, such as T2 Unlimited instances\. For more information, see [Creating a Launch Template for an Auto Scaling Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html)\.
 
 **Important**  
 You can add an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) to your Auto Scaling group to perform rolling updates when a change has been made to the group\. You can find sample update policies for rolling updates in the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples) section\.
@@ -97,8 +97,8 @@ The name of the Auto Scaling group\. This name must be unique per Region per acc
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AvailabilityZones`  <a name="cfn-as-group-availabilityzones"></a>
-A list of Availability Zones for the group\. This property is optional if you specify one or more subnets for `VPCZoneIdentifier`\.  
-Note: If your account supports EC2\-Classic and VPC, this property is required to launch instances into EC2\-Classic\.  
+A list of Availability Zones for the group\. You must specify one of the following properties: `VPCZoneIdentifier` or `AvailabilityZones`\.   
+If your account supports EC2\-Classic and VPC, this property is required to launch instances into EC2\-Classic\.  
 *Required*: Conditional  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -112,7 +112,7 @@ Used only when a scaling\-specific cooldown is not specified and not supported f
 
 `DesiredCapacity`  <a name="cfn-as-group-desiredcapacity"></a>
 The number of Amazon EC2 instances that the Auto Scaling group attempts to maintain\. The number must be greater than or equal to the minimum size of the group and less than or equal to the maximum size of the group\. If you do not specify a desired capacity, the default is the minimum size of the group\.  
-If `SpotPrice` is not set in the [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html) for the Auto Scaling group, then Amazon EC2 Auto Scaling will begin to launch instances based on `DesiredCapacity`\. CloudFormation will not mark the Auto Scaling group as successful \(by setting its status to CREATE\_COMPLETE\) until the desired capacity is reached\.   
+If `SpotPrice` is not set in the [LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html) for the Auto Scaling group, then Amazon EC2 Auto Scaling will begin to launch instances based on `DesiredCapacity`\. CloudFormation will not mark the Auto Scaling group as successful \(by setting its status to CREATE\_COMPLETE\) until the desired capacity is reached\.   
 If `SpotPrice` *is* set, then `DesiredCapacity` will not be used as a criteria for success, since instances will only be started when the Spot price has been matched\. After the Spot price has been matched, however, Amazon EC2 Auto Scaling uses `DesiredCapacity` as the target capacity for the group\.   
 *Required*: No  
 *Type*: String  
@@ -146,7 +146,7 @@ You must specify one of the following properties: `InstanceId`, `LaunchConfigura
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LaunchConfigurationName`  <a name="cfn-as-group-launchconfigurationname"></a>
-The name of the [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html) to use to launch instances\.  
+The name of the [LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html) to use to launch instances\.  
 If this resource has a public IP address and is also in a VPC that is defined in the same template, you must use the [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) to declare a dependency on the [VPC\-gateway attachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html)\.  
 You must specify one of the following properties: `InstanceId`, `LaunchConfigurationName`, `LaunchTemplate`, or `MixedInstancesPolicy`\.   
 When you update `LaunchConfigurationName`, existing Amazon EC2 instances continue to run with the configuration that they were originally launched with\. To update existing instances, specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the Auto Scaling group\. 
@@ -158,7 +158,7 @@ When you update `LaunchConfigurationName`, existing Amazon EC2 instances continu
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LaunchTemplate`  <a name="cfn-as-group-launchtemplate"></a>
-The [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html) to use to launch instances\.  
+The [LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html) to use to launch instances\.  
 You must specify one of the following properties: `InstanceId`, `LaunchConfigurationName`, `LaunchTemplate`, or `MixedInstancesPolicy`\.   
 When you update `LaunchTemplate`, existing Amazon EC2 instances continue to run with the configuration that they were originally launched with\. To update existing instances, specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the Auto Scaling group\.
 *Required*: Conditional  
@@ -246,8 +246,8 @@ For more information, see [Controlling Which Auto Scaling Instances Terminate Du
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VPCZoneIdentifier`  <a name="cfn-as-group-vpczoneidentifier"></a>
-A list of subnet IDs for a virtual private cloud \(VPC\)\. If you specify `VPCZoneIdentifier` with `AvailabilityZones`, the subnets that you specify for this property must reside in those Availability Zones\.   
-Note: If your account supports EC2\-Classic and VPC, this property is required to launch instances into a VPC, and the `AvailabilityZones` property is optional\.  
+A list of subnet IDs for a virtual private cloud \(VPC\)\. You must specify one of the following properties: `VPCZoneIdentifier` or `AvailabilityZones`\. If you specify `VPCZoneIdentifier` with `AvailabilityZones`, the subnets that you specify for this property must reside in those Availability Zones\.   
+If your account supports EC2\-Classic and VPC, this property is required to launch instances into a VPC\.   
 When you update `VPCZoneIdentifier`, this retains the same Auto Scaling group and replaces old instances with new ones, according to the specified subnets\. You can specify how AWS CloudFormation handles these updates by using an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html)\.
 *Required*: Conditional  
 *Type*: List of String  
@@ -490,3 +490,4 @@ myASGroup:
 ## See Also<a name="aws-properties-as-group--seealso"></a>
 + [UpdatePolicy Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html)
 + [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)
++ [Suspending and Resuming Scaling Processes](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html) in the *Amazon EC2 Auto Scaling User Guide*

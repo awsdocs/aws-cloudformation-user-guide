@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Name`  <a name="cfn-opsworkscm-server-engineattribute-name"></a>
 The name of the engine attribute\.  
  **Attribute name for Chef Automate servers:**   
-+  `CHEF_PIVOTAL_KEY` 
++  `CHEF_AUTOMATE_ADMIN_PASSWORD` 
  **Attribute names for Puppet Enterprise servers:**   
 +  `PUPPET_ADMIN_PASSWORD` 
 +  `PUPPET_R10K_REMOTE` 
@@ -39,7 +39,7 @@ The name of the engine attribute\.
 `Value`  <a name="cfn-opsworkscm-server-engineattribute-value"></a>
 The value of the engine attribute\.  
  **Attribute value for Chef Automate servers:**   
-+  `CHEF_PIVOTAL_KEY`: A base64\-encoded RSA public key\. The corresponding private key is required to access the Chef API\. You can generate this key by running the following [OpenSSL](https://www.openssl.org/) command on Linux\-based computers\.
++  `CHEF_AUTOMATE_PIVOTAL_KEY`: A base64\-encoded RSA public key\. The corresponding private key is required to access the Chef API\. You can generate this key by running the following [OpenSSL](https://www.openssl.org/) command on Linux\-based computers\.
 
    `openssl genrsa -out pivotal_key_file_name.pem 2048` 
 

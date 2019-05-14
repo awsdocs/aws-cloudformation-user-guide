@@ -1,6 +1,6 @@
 # AWS::SageMaker::Endpoint<a name="aws-resource-sagemaker-endpoint"></a>
 
-Use the `AWS::SageMaker::Endpoint` resource to create an endpoint using the specified configuration in the request\. Amazon SageMaker uses the endpoint to provision resources and deploy models\. You create the endpoint configuration with the [AWS::SageMaker::EndpointConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html) resource\. For more information, see [Deploying a Model on Amazon SageMaker Hosting Services](sagemaker/latest/dg/how-it-works-hosting.html) in the *Amazon SageMaker Developer Guide*\.
+Use the `AWS::SageMaker::Endpoint` resource to create an endpoint using the specified configuration in the request\. Amazon SageMaker uses the endpoint to provision resources and deploy models\. You create the endpoint configuration with the [AWS::SageMaker::EndpointConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html) resource\. For more information, see [Deploy a Model on Amazon SageMaker Hosting Services](https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works-hosting.html) in the *Amazon SageMaker Developer Guide*\.
 
 ## Syntax<a name="aws-resource-sagemaker-endpoint-syntax"></a>
 

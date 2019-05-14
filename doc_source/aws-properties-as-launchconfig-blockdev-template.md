@@ -47,7 +47,7 @@ Specifies whether the volume should be encrypted\. Encrypted EBS volumes must be
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Iops`  <a name="cfn-as-launchconfig-blockdev-template-iops"></a>
-The number of I/O operations per second \(IOPS\) to provision for the volume\. The maximum ratio of IOPS to volume size \(in GiB\) is 50:1\. For more information, see [Amazon EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+The number of I/O operations per second \(IOPS\) to provision for the volume\. The maximum ratio of IOPS to volume size \(in GiB\) is 50:1, so for 5,000 provisioned IOPS, you need at least 100 GiB storage on the volume\. For more information, see [Amazon EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
 If the volume type is `io1`, this property is required\. \(Not used with `standard`, `gp2`, `st1`, or `sc1` volumes\.\)   
 *Required*: Conditional  
 *Type*: Integer  
@@ -67,7 +67,7 @@ You must specify either a `VolumeSize` or a `SnapshotId`\.
 
 `VolumeSize`  <a name="cfn-as-launchconfig-blockdev-template-volumesize"></a>
 The volume size, in Gibibytes \(GiB\)\.   
-This can be a number from 1\-1,024 for `standard`, 4\-16,384 for `io1`, 1\-16,384 for `gp2`, and 500\-16,384 for `st1` and `sc1`\. If you specify a snapshot, the volume size must be equal to or larger than the snapshot size\. If the volume type is EBS optimized, the minimum value is 10\.  For information about specifying EBS\-optimized volumes, see [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html)\.  
+This can be a number from 1\-1,024 for `standard`, 4\-16,384 for `io1`, 1\-16,384 for `gp2`, and 500\-16,384 for `st1` and `sc1`\.   
 If you create a volume from a snapshot and you don't specify a volume size, the default is the snapshot size\.   
 You must specify either a `VolumeSize` or a `SnapshotId`\. If you specify both `SnapshotId` and `VolumeSize`, `VolumeSize` must be equal or greater than the size of the snapshot\.  
 *Required*: Conditional  
@@ -84,3 +84,6 @@ Valid values: `standard` \| `io1` \| `gp2` \| `st1` \| `sc1`
 *Minimum*: `1`  
 *Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See Also<a name="aws-properties-as-launchconfig-blockdev-template--seealso"></a>
++ [Required CMK Key Policy for Use with Encrypted Volumes](https://docs.aws.amazon.com/autoscaling/ec2/userguide/key-policy-requirements-EBS-encryption.html) in the *Amazon EC2 Auto Scaling User Guide*

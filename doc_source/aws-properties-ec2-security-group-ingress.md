@@ -160,22 +160,22 @@ The following template example defines an EC2 security group with an ingress rul
             "FromPort": 22,
             "ToPort": 22
          }
-      ]}
-   },
-   "SGBaseIngress": {
-      "Type": "AWS::EC2::SecurityGroupIngress",
-      "Properties": {
-         "GroupName": {
-            "Ref": "SGBase"
-         },
-         "IpProtocol": "tcp",
-         "FromPort": 80,
-         "ToPort": 80,
-         "SourceSecurityGroupId": {
-            "Ref": "SGBase"
-         }
-      }   
+      ]
    }
+},
+"SGBaseIngress": {
+   "Type": "AWS::EC2::SecurityGroupIngress",
+   "Properties": {
+      "GroupName": {
+         "Ref": "SGBase"
+      },
+      "IpProtocol": "tcp",
+      "FromPort": 80,
+      "ToPort": 80,
+      "SourceSecurityGroupId": {
+         "Ref": "SGBase"
+      }
+   } 
 }
 ```
 
@@ -183,22 +183,22 @@ The following template example defines an EC2 security group with an ingress rul
 
 ```
 SGBase:
-    Type: 'AWS::EC2::SecurityGroup'
-    Properties:
+   Type: 'AWS::EC2::SecurityGroup'
+   Properties:
       GroupDescription: Base Security Group
       SecurityGroupIngress:
          - IpProtocol: tcp
            CidrIp: 0.0.0.0/0
            FromPort: 22
            ToPort: 22
-      GBaseIngress:
-       Type: 'AWS::EC2::SecurityGroupIngress'
-       Properties:
-         GroupName: !Ref SGBase
-         IpProtocol: tcp
-         FromPort: 80
-         ToPort: 80
-         SourceSecurityGroupId: !Ref SGBase
+SGBaseIngress:
+   Type: 'AWS::EC2::SecurityGroupIngress'
+   Properties:
+      GroupName: !Ref SGBase
+      IpProtocol: tcp
+      FromPort: 80
+      ToPort: 80
+      SourceSecurityGroupId: !Ref SGBase
 ```
 
 ### Allow Traffic from a Security Group in a Peered VPC<a name="aws-properties-ec2-security-group-ingress--examples--Allow_Traffic_from_a_Security_Group_in_a_Peered_VPC"></a>
@@ -332,39 +332,39 @@ SourceSG:
     Properties:
       VpcId: vpc-1a2b3c4d
       GroupDescription: Sample source security group
-    TargetSG:
-      Type: AWS::EC2::SecurityGroup
-      Properties:
-        VpcId: vpc-1a2b3c4d
-        GroupDescription: Sample target security group
-    OutboundRule:
-      Type: AWS::EC2::SecurityGroupEgress
-       Properties:
-         IpProtocol: tcp
-         FromPort: 0
-         ToPort: 65535
-         DestinationSecurityGroupId:
-           Fn::GetAtt:
-           - TargetSG
-           - GroupId
-         GroupId:
-           Fn::GetAtt:
-           - SourceSG
-           - GroupId
-         InboundRule:
-           Type: AWS::EC2::SecurityGroupIngress
-           Properties:
-             IpProtocol: tcp
-             FromPort: 0
-             ToPort: 65535
-             SourceSecurityGroupId:
-               Fn::GetAtt:
-               - SourceSG
-               - GroupId
-              GroupId:
-                Fn::GetAtt:
-                - TargetSG
-                - GroupId
+TargetSG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      VpcId: vpc-1a2b3c4d
+      GroupDescription: Sample target security group
+OutboundRule:
+    Type: AWS::EC2::SecurityGroupEgress
+    Properties:
+      IpProtocol: tcp
+      FromPort: 0
+      ToPort: 65535
+      DestinationSecurityGroupId:
+        Fn::GetAtt:
+        - TargetSG
+        - GroupId
+      GroupId:
+        Fn::GetAtt:
+        - SourceSG
+        - GroupId
+InboundRule:
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      IpProtocol: tcp
+      FromPort: 0
+      ToPort: 65535
+      SourceSecurityGroupId:
+        Fn::GetAtt:
+        - SourceSG
+        - GroupId
+      GroupId:
+        Fn::GetAtt:
+        - TargetSG
+        - GroupId
 ```
 
 ### Allow Ping Requests<a name="aws-properties-ec2-security-group-ingress--examples--Allow__Ping_Requests"></a>

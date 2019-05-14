@@ -81,5 +81,5 @@ myresourcegroup:
   Properties: 
     ResourceGroupTags: 
       - Key: "Name"
-Value: "example"
+      Value: "example"
 ```

@@ -37,7 +37,7 @@ Properties :
 ## Properties<a name="aws-resource-greengrass-functiondefinition-properties"></a>
 
 `InitialVersion`  <a name="cfn-greengrass-functiondefinition-initialversion"></a>
-The function definition version to include when the function definition is created\. A function definition version contains a list of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-function](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-function) property types\.  
+The function definition version to include when the function definition is created\. A function definition version contains a list of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-function.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-function.html) property types\.  
 To associate a function definition version after the function definition is created, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html) resource and specify the ID of this function definition\.
 *Required*: No  
 *Type*: [FunctionDefinitionVersion](aws-properties-greengrass-functiondefinition-functiondefinitionversion.md)  

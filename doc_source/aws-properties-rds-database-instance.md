@@ -199,7 +199,7 @@ For supported engines, indicates that the DB Instance should be associated with 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CopyTagsToSnapshot`  <a name="cfn-rds-dbinstance-copytagstosnapshot"></a>
-True to copy all tags from the DB instance to snapshots of the DB instance, and otherwise false\. The default is false\.  
+A value that indicates whether to copy tags from the DB instance to snapshots of the DB instance\. By default, tags are not copied\.  
  **Amazon Aurora**   
 Not applicable\. Copying tags to snapshots is managed by the DB cluster\. Setting this value for an Aurora DB instance has no effect on the DB cluster setting\.  
 *Required*: No  
@@ -303,13 +303,13 @@ For more information about using Amazon RDS in a VPC, see [Using Amazon RDS with
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DeleteAutomatedBackups`  <a name="cfn-rds-dbinstance-deleteautomatedbackups"></a>
-A value that indicates whether to remove automated backups immediately after the DB instance is deleted\. This parameter isn't case\-sensitive\. This parameter defaults to `true`\.  
+A value that indicates whether to remove automated backups immediately after the DB instance is deleted\. This parameter isn't case\-sensitive\. The default is to remove automated backups immediately after the DB instance is deleted\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeletionProtection`  <a name="cfn-rds-dbinstance-deletionprotection"></a>
-Indicates if the DB instance should have deletion protection enabled\. The database can't be deleted when this value is set to true\. The default is false\. For more information, see [ Deleting a DB Instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html)\.   
+A value that indicates whether the DB instance has deletion protection enabled\. The database can't be deleted when deletion protection is enabled\. By default, deletion protection is disabled\. For more information, see [ Deleting a DB Instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html)\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -333,20 +333,19 @@ The list of log types that need to be enabled for exporting to CloudWatch Logs\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnableIAMDatabaseAuthentication`  <a name="cfn-rds-dbinstance-enableiamdatabaseauthentication"></a>
-True to enable mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts, and otherwise false\.   
+A value that indicates whether to enable mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts\. By default, mapping is disabled\.  
 You can enable IAM database authentication for the following database engines:  
  **Amazon Aurora**   
 Not applicable\. Mapping AWS IAM accounts to database accounts is managed by the DB cluster\.  
  **MySQL**   
 + For MySQL 5\.6, minor version 5\.6\.34 or higher
 + For MySQL 5\.7, minor version 5\.7\.16 or higher
-Default: `false`   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnablePerformanceInsights`  <a name="cfn-rds-dbinstance-enableperformanceinsights"></a>
-True to enable Performance Insights for the DB instance, and otherwise false\.   
+A value that indicates whether to enable Performance Insights for the DB instance\.   
 For more information, see [Using Amazon Performance Insights](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html) in the *Amazon Relational Database Service User Guide*\.   
 *Required*: No  
 *Type*: Boolean  
@@ -522,10 +521,9 @@ The ID of the region that contains the source DB instance for the read replica\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageEncrypted`  <a name="cfn-rds-dbinstance-storageencrypted"></a>
-Specifies whether the DB instance is encrypted\.  
+A value that indicates whether the DB instance is encrypted\. By default, it is not encrypted\.  
  **Amazon Aurora**   
 Not applicable\. The encryption for DB instances is managed by the DB cluster\.  
-Default: false  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -548,7 +546,7 @@ The time zone of the DB instance\. The time zone parameter is currently supporte
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UseDefaultProcessorFeatures`  <a name="cfn-rds-dbinstance-usedefaultprocessorfeatures"></a>
-A value that specifies that the DB instance class of the DB instance uses its default processor features\.  
+A value that indicates whether the DB instance class of the DB instance uses its default processor features\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

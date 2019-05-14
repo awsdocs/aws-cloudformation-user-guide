@@ -15,7 +15,7 @@ service-provider::service-name::data-type-name
 + [API Gateway V2](AWS_ApiGatewayV2.md)
 + [Application Auto Scaling](AWS_ApplicationAutoScaling.md)
 + [App Mesh](AWS_AppMesh.md)
-+ [AppStream](AWS_AppStream.md)
++ [AppStream 2\.0](AWS_AppStream.md)
 + [AppSync](AWS_AppSync.md)
 + [Athena](AWS_Athena.md)
 + [AWS Auto Scaling](AWS_AutoScalingPlans.md)

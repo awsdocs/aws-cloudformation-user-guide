@@ -2,7 +2,7 @@
 
 Specifies a target group for an Application Load Balancer or Network Load Balancer\.
 
-Before you register a Lambda function as a target, you must create a `AWS::Lambda::Permission` resource that grants the Elastric Load Balancing service principal permission to invoke the Lambda function\.
+Before you register a Lambda function as a target, you must create a `AWS::Lambda::Permission` resource that grants the Elastic Load Balancing service principal permission to invoke the Lambda function\.
 
 ## Syntax<a name="aws-resource-elasticloadbalancingv2-targetgroup-syntax"></a>
 
@@ -101,7 +101,7 @@ The protocol the load balancer uses when performing health checks on targets\. F
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckTimeoutSeconds`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthchecktimeoutseconds"></a>
-The number of seconds to wait for a response before considering that a health check has failed\. For target groups with a protocol of HTTP or HTTPS, the default is 5 seconds\. For target groups with a protocol of TCP or TLS, this value must be 6 seconds for HTTP health checks and 10 seconds for TCP and HTTPS health checks\. If the target is a Lambda function, the default is 30 seconds.
+The amount of time, in seconds, during which no response from a target means a failed health check\. For target groups with a protocol of HTTP or HTTPS, the default is 5 seconds\. For target groups with a protocol of TCP or TLS, this value must be 6 seconds for HTTP health checks and 10 seconds for TCP and HTTPS health checks\. If the target type is `lambda`, the default is 30 seconds\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `2`  
@@ -109,7 +109,7 @@ The number of seconds to wait for a response before considering that a health ch
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthyThresholdCount`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthythresholdcount"></a>
-The number of consecutive health checks successes required before considering an unhealthy target healthy\. For target groups with a protocol of HTTP or HTTPS, the default is 5\. For target groups with a protocol of TCP or TLS, the default is 3\. If the target is a Lambda function, the default is 5\.
+The number of consecutive health checks successes required before considering an unhealthy target healthy\. For target groups with a protocol of HTTP or HTTPS, the default is 5\. For target groups with a protocol of TCP or TLS, the default is 3\. If the target type is `lambda`, the default is 5\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `2`  
@@ -173,7 +173,7 @@ The targets\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UnhealthyThresholdCount`  <a name="cfn-elasticloadbalancingv2-targetgroup-unhealthythresholdcount"></a>
-The number of consecutive failed health checks that are required before a target is considered unhealthy\. For target groups with a protocol of HTTP or HTTPS, the default is 2\. For target groups with a protocol of TCP or TLS, this value must be the same as the healthy threshold count\. If the target is a Lambda function, the default is 2\.
+The number of consecutive health check failures required before considering a target unhealthy\. For target groups with a protocol of HTTP or HTTPS, the default is 2\. For target groups with a protocol of TCP or TLS, this value must be the same as the healthy threshold count\. If the target type is `lambda`, the default is 2\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `2`  
@@ -293,4 +293,3 @@ Resources:
 +  [CreateTargetGroup](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateTargetGroup.html) in the *Elastic Load Balancing API Reference \(version 2015\-12\-01\)* 
 +  [Target Groups](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html) in the *User Guide for Application Load Balancers* 
 +  [Target Groups](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html) in the *User Guide for Network Load Balancers* 
-

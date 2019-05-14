@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-recordcolumn-properties"></a>
 
 `Mapping`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-recordcolumn-mapping"></a>
-Reference to the data element in the streaming input or the reference data source\. This element is required if the is `JSON`\.  
+Reference to the data element in the streaming input or the reference data source\. This element is required if the [RecordFormatType](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_RecordFormat.html#analytics-Type-RecordFormat-RecordFormatTypel) is `JSON`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -38,7 +38,6 @@ Reference to the data element in the streaming input or the reference data sourc
 Name of the column created in the in\-application input stream or reference table\.  
 *Required*: Yes  
 *Type*: String  
-*Pattern*: `[a-zA-Z_][a-zA-Z0-9_]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SqlType`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-recordcolumn-sqltype"></a>

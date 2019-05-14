@@ -2,6 +2,8 @@
 
 Specifies a lifecycle policy, which is used to automate operations on Amazon EBS resources\.
 
+The properties are required when you add a lifecycle policy and optional when you update a lifecycle policy\.
+
 ## Syntax<a name="aws-resource-dlm-lifecyclepolicy-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -36,7 +38,7 @@ Properties :
 
 `Description`  <a name="cfn-dlm-lifecyclepolicy-description"></a>
 A description of the lifecycle policy\. The characters ^\[0\-9A\-Za\-z \_\-\]\+$ are supported\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `500`  
@@ -44,20 +46,20 @@ A description of the lifecycle policy\. The characters ^\[0\-9A\-Za\-z \_\-\]\+$
 
 `ExecutionRoleArn`  <a name="cfn-dlm-lifecyclepolicy-executionrolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role used to run the operations specified by the lifecycle policy\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyDetails`  <a name="cfn-dlm-lifecyclepolicy-policydetails"></a>
 The configuration details of the lifecycle policy\.  
 Target tags cannot be re\-used across lifecycle policies\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [PolicyDetails](aws-properties-dlm-lifecyclepolicy-policydetails.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `State`  <a name="cfn-dlm-lifecyclepolicy-state"></a>
 The activation state of the lifecycle policy\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Allowed Values*: `DISABLED | ENABLED | ERROR`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

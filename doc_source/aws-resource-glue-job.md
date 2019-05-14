@@ -68,9 +68,9 @@ The connections used for this job\.
 
 `DefaultArguments`  <a name="cfn-glue-job-defaultarguments"></a>
 The default arguments for this job, specified as name\-value pairs\.  
-You can specify arguments here that your own job\-execution script consumes, in addition to arguments that AWS Glue itself consumes\.  
-For information about how to specify and consume your own job arguments, see [Calling AWS Glue APIs in Python](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) in the *AWS Glue Developer Guide*\.  
-For information about the key\-value pairs that AWS Glue consumes to set up your job, see [Special Parameters Used by AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html) in the *AWS Glue Developer Guide*\.  
+You can specify arguments here that your own job\-execution script consumes, as well as arguments that AWS Glue itself consumes\.  
+For information about how to specify and consume your own Job arguments, see the [Calling AWS Glue APIs in Python](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) topic in the developer guide\.  
+For information about the key\-value pairs that AWS Glue consumes to set up your job, see the [Special Parameters Used by AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html) topic in the developer guide\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

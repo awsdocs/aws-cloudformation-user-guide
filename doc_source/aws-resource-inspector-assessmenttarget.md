@@ -84,6 +84,6 @@ The following examples shows how to declare an `AWS::Inspector::AssessmentTarget
 myassessmenttarget: 
   Type: AWS::Inspector::AssessmentTarget
   Properties: 
-    AssessmentTargetName : "MyAssessmentTarget"
-ResourceGroupArn : "arn:aws:inspector:us-west-2:123456789012:resourcegroup/0-AB6DMKnv"
+      AssessmentTargetName : "MyAssessmentTarget"
+      ResourceGroupArn : "arn:aws:inspector:us-west-2:123456789012:resourcegroup/0-AB6DMKnv"
 ```

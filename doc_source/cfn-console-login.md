@@ -12,5 +12,5 @@
 
 If you don't have any AWS CloudFormation stacks running, you are presented with the option to **Create a stack**\. Otherwise, you see a list of your currently\-running stacks\.
 
-## See Also<a name="w4622ab1c15c13b9c11"></a>
+## See Also<a name="w4661ab1c15c13b9c11"></a>
 + [Creating a Stack](cfn-console-create-stack.md)

@@ -2,9 +2,9 @@
 
  `MixedInstancesPolicy` is a property of [AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) that describes a mixed instances policy for an Amazon EC2 Auto Scaling group\. With mixed instances, your Auto Scaling group can provision a combination of On\-Demand Instances and Spot Instances across multiple instance types\. 
 
-For more information, see [Auto Scaling Groups with Multiple Instance Types and Purchase Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html) in the *Amazon EC2 Auto Scaling User Guide*\.
+When you create your Auto Scaling group, you can specify a launch configuration or template as a property for the top\-level object, or you can specify a mixed instances policy, but not both at the same time\. If you specify a mixed instances policy, you must specify a launch template as a property of the policy\.
 
-When you create your Auto Scaling group, you can specify a launch configuration or template as a property for the top\-level object, or you can specify a mixed instances policy, but not both at the same time\. 
+For more information, see [Auto Scaling Groups with Multiple Instance Types and Purchase Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
 ## Syntax<a name="aws-properties-autoscaling-autoscalinggroup-mixedinstancespolicy-syntax"></a>
 

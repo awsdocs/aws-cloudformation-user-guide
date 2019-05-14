@@ -1,4 +1,4 @@
-# AppStream Resource Type Reference<a name="AWS_AppStream"></a>
+# Amazon AppStream 2\.0 Resource Type Reference<a name="AWS_AppStream"></a>
 
 **Resource Types**
 + [AWS::AppStream::DirectoryConfig](aws-resource-appstream-directoryconfig.md)

@@ -132,5 +132,5 @@ myassessmenttemplate:
     UserAttributesForFindings: 
       - 
         Key: Example
-Value: example
+        Value: example
 ```

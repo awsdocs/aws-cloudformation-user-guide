@@ -1,8 +1,13 @@
 # AWS::AutoScalingPlans::ScalingPlan ScalingInstruction<a name="aws-properties-autoscalingplans-scalingplan-scalinginstruction"></a>
 
- `ScalingInstruction` is a property of [ScalingPlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html) that specifies the scaling instruction for a scalable resource in a scaling plan\. 
+ `ScalingInstruction` is a property of [ScalingPlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html) that specifies the scaling instruction for a scalable resource in a scaling plan\. Each scaling instruction applies to one resource\.
 
-For more information, see [ScalingInstruction](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html) in the *AWS Auto Scaling API Reference*\. For more information about AWS Auto Scaling, see the [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-aws-auto-scaling.html)\.
+AWS Auto Scaling creates target tracking scaling policies based on the scaling instructions\. Target tracking scaling policies adjust the capacity of your scalable resource as required to maintain resource utilization at the target value that you specified\. 
+
+AWS Auto Scaling also configures predictive scaling for your Amazon EC2 Auto Scaling groups using a subset of properties, including the load metric, the scaling metric, the target value for the scaling metric, the predictive scaling mode \(forecast and scale or forecast only\), and the desired behavior when the forecast capacity exceeds the maximum capacity of the resource\. With predictive scaling, AWS Auto Scaling generates forecasts with traffic predictions for the two days ahead and schedules scaling actions that proactively add and remove resource capacity to match the forecast\. 
+
+**Important**  
+ We recommend waiting a minimum of 24 hours after creating an Auto Scaling group to configure predictive scaling\. At minimum, there must be 24 hours of historical data to generate a forecast\. For more information, see [Best Practices for AWS Auto Scaling](https://docs.aws.amazon.com/autoscaling/plans/userguide/gs-best-practices.html) in the *AWS Auto Scaling User Guide*\. 
 
 ## Syntax<a name="aws-properties-autoscalingplans-scalingplan-scalinginstruction-syntax"></a>
 
@@ -54,7 +59,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-autoscalingplans-scalingplan-scalinginstruction-properties"></a>
 
 `CustomizedLoadMetricSpecification`  <a name="cfn-autoscalingplans-scalingplan-scalinginstruction-customizedloadmetricspecification"></a>
-The customized load metric to use for predictive scaling\. This parameter or a **PredefinedLoadMetricSpecification** is required when configuring predictive scaling, and cannot be used otherwise\.   
+The customized load metric to use for predictive scaling\. This property or a **PredefinedLoadMetricSpecification** is required when configuring predictive scaling, and cannot be used otherwise\.   
 *Required*: Conditional  
 *Type*: [CustomizedLoadMetricSpecification](aws-properties-autoscalingplans-scalingplan-customizedloadmetricspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -79,7 +84,7 @@ The minimum capacity of the resource\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PredefinedLoadMetricSpecification`  <a name="cfn-autoscalingplans-scalingplan-scalinginstruction-predefinedloadmetricspecification"></a>
-The predefined load metric to use for predictive scaling\. This parameter or a **CustomizedLoadMetricSpecification** is required when configuring predictive scaling, and cannot be used otherwise\.   
+The predefined load metric to use for predictive scaling\. This property or a **CustomizedLoadMetricSpecification** is required when configuring predictive scaling, and cannot be used otherwise\.   
 *Required*: Conditional  
 *Type*: [PredefinedLoadMetricSpecification](aws-properties-autoscalingplans-scalingplan-predefinedloadmetricspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -105,7 +110,7 @@ The range is 1\-100\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PredictiveScalingMode`  <a name="cfn-autoscalingplans-scalingplan-scalinginstruction-predictivescalingmode"></a>
-The predictive scaling mode\. The default value is `ForecastAndScale`\. Otherwise, AWS Auto Scaling forecasts capacity but does not apply any scheduled scaling actions based on the capacity forecast\.   
+The predictive scaling mode\. The default value is `ForecastAndScale`\. Otherwise, AWS Auto Scaling forecasts capacity but does not apply any scheduled scaling actions based on the capacity forecast\.  
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `ForecastAndScale | ForecastOnly`  
@@ -172,4 +177,4 @@ The target tracking configurations \(up to 10\)\. Each of these structures must 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-autoscalingplans-scalingplan-scalinginstruction--seealso"></a>
-+ [Best Practices for AWS Auto Scaling](https://docs.aws.amazon.com/autoscaling/plans/userguide/gs-best-practices.html) in the *AWS Auto Scaling User Guide*\.
++ [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-aws-auto-scaling.html)

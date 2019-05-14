@@ -137,7 +137,7 @@ association:
   Properties:
     Name: !Ref 'document'
     Parameters:
-      Directory: [FakeDirectory]
+      Directory: ["myWorkSpace"]
     Targets:
     - Key: InstanceIds
       Values: [!Ref 'myInstanceId']

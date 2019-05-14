@@ -178,13 +178,22 @@ Note that the snippet uses the `NotificationTargetARN` and `RoleARN` properties 
 
 ```
 {
+  "AWSTemplateFormatVersion":"2018-09-09",
+  "Parameters":{
+    "Subnets":{
+      "Type":"CommaDelimitedList"
+    },
+    "AZs":{
+      "Type":"CommaDelimitedList"
+    }
+  },
   "Resources":{
     "myASGroup":{
       "Type":"AWS::AutoScaling::AutoScalingGroup",
       "Properties":{
         "AvailabilityZones":[
           {
-            "Ref":"AZParameter"
+            "Ref":"AZs"
           }
         ],
         "VPCZoneIdentifier":{
@@ -207,7 +216,18 @@ Note that the snippet uses the `NotificationTargetARN` and `RoleARN` properties 
                 "Arn"
               ]
             },
-            "RoleARN":"arn:aws:iam::123456789012:role/role-name"
+            "RoleArn":{
+              "Fn::Join":[
+                ":",
+                [
+                  "arn:aws:iam:",
+                  {
+                    "Ref":"AWS::AccountId"
+                  },
+                  "role/role-name"
+                ]
+              ]
+            }
           }
         ]
       }
@@ -222,12 +242,18 @@ Note that the snippet uses the `NotificationTargetARN` and `RoleARN` properties 
 #### YAML<a name="aws-resource-as-lifecyclehook--examples--Lifecycle_Hook_for_Instance_Launch--yaml"></a>
 
 ```
+AWSTemplateFormatVersion: 2018-09-09
+Parameters:
+  Subnets:
+    Type: CommaDelimitedList
+  AZs:
+    Type: CommaDelimitedList
 Resources:
   myASGroup:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
       AvailabilityZones:
-        - !Ref AZParameter
+        - !Ref AZs
       VPCZoneIdentifier: !Ref Subnets
       DesiredCapacity: '2'
       MaxSize: '3'
@@ -238,7 +264,11 @@ Resources:
           LifecycleHookName: "myLifecycleHook"
           HeartbeatTimeout: 4800
           NotificationTargetARN: !GetAtt SQS.Arn
-          RoleARN: arn:aws:iam::123456789012:role/role-name
+          RoleARN: !Join 
+            - ':'
+            - - 'arn:aws:iam:'
+              - !Ref 'AWS::AccountId'
+              - role/role-name
   SQS:
     Type: AWS::SQS::Queue
 ```

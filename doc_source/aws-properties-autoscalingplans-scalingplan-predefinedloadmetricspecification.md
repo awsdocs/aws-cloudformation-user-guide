@@ -41,3 +41,6 @@ The format is app/<load\-balancer\-name>/<load\-balancer\-id>/targetgroup/<targe
 *Minimum*: `1`  
 *Maximum*: `1023`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See Also<a name="aws-properties-autoscalingplans-scalingplan-predefinedloadmetricspecification--seealso"></a>
++ [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-aws-auto-scaling.html)

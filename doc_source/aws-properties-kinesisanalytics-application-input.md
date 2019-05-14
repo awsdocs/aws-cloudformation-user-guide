@@ -78,5 +78,4 @@ Name prefix to use when creating an in\-application stream\. Suppose that you sp
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `32`  
-*Pattern*: `[a-zA-Z][a-zA-Z0-9_]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

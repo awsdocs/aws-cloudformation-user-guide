@@ -2,9 +2,9 @@
 
 Specifies a scaling policy for an Amazon EC2 Auto Scaling group\. 
 
-Updates are supported\. For more information about updating this resource, see [PutScalingPolicy](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutScalingPolicy.html) in the *Amazon EC2 Auto Scaling API Reference*\. 
+To update an existing scaling policy, use the existing policy name and set the property to change\. If you leave a property unspecified when updating a scaling policy, the corresponding value remains unchanged\.
 
-If you specify either a step scaling policy or a simple scaling policy, you must create a CloudWatch alarm that monitors a CloudWatch metric for your Auto Scaling group\. Note that you can associate a CloudWatch alarm with only one scaling policy\. 
+If you create either a step scaling policy or a simple scaling policy, you must also create a CloudWatch alarm that monitors a CloudWatch metric for your Auto Scaling group\. Note that you can associate a CloudWatch alarm with only one scaling policy\. 
 
 For more information about using scaling policies to scale your Auto Scaling group automatically, see [Dynamic Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html) in the *Amazon EC2 Auto Scaling User Guide*\. 
 

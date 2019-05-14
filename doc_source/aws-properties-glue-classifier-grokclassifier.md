@@ -35,13 +35,13 @@ An identifier of the data format that the classifier matches, such as Twitter, J
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomPatterns`  <a name="cfn-glue-classifier-grokclassifier-custompatterns"></a>
-Optional custom grok patterns defined by this classifier\. For more information, see custom patterns in [Writing Custom Classifiers](http://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html)\.  
+Optional custom grok patterns defined by this classifier\. For more information, see custom patterns in [Writing Custom Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GrokPattern`  <a name="cfn-glue-classifier-grokclassifier-grokpattern"></a>
-The grok pattern applied to a data store by this classifier\. For more information, see built\-in patterns in [Writing Custom Classifiers](http://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html)\.  
+The grok pattern applied to a data store by this classifier\. For more information, see built\-in patterns in [Writing Custom Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

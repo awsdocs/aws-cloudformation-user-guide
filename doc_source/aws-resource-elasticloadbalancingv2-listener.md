@@ -86,6 +86,60 @@ The protocol for connections from clients to the load balancer\. For Application
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+## Examples<a name="aws-resource-elasticloadbalancingv2-listener--examples"></a>
+
+The following example creates a listener with a default action that redirects HTTP requests on port 80 to HTTPS requests on port 443, retaining the original host name, path, and query string\.
+
+### <a name="aws-resource-elasticloadbalancingv2-listener--examples--"></a>
+
+#### YAML<a name="aws-resource-elasticloadbalancingv2-listener--examples----yaml"></a>
+
+```
+HTTPlistener:
+   Type: "AWS::ElasticLoadBalancingV2::Listener"
+   Properties:
+     DefaultActions:
+       - Type: "redirect"
+         RedirectConfig:
+           Protocol: "HTTPS",
+           Port: "443",
+           Host: "#{host}",
+           Path: "/#{path}",
+           Query: "#{query}",
+           StatusCode: "HTTP_301"
+     LoadBalancerArn: !Ref myLoadBalancer
+     Port: 80
+     Protocol: "HTTP"
+```
+
+#### JSON<a name="aws-resource-elasticloadbalancingv2-listener--examples----json"></a>
+
+```
+"HTTPlistener": {
+    "Type": "AWS::ElasticLoadBalancingV2::Listener",
+    "Properties": {
+        "DefaultActions": [
+            {
+                "Type": "redirect",
+                "RedirectConfig": {
+                    "Protocol": "HTTPS",
+                    "Port": "443",
+                    "Host": "#{host}",
+                    "Path": "/#{path}",
+                    "Query": "#{query}",
+                    "StatusCode": "HTTP_301"
+                }
+            }
+        ],
+        "LoadBalancerArn": {
+            "Ref": "myLoadBalancer"
+        },
+        "Port": 80,
+        "Protocol": "HTTP"
+    }
+}
+```
+
 ## See Also<a name="aws-resource-elasticloadbalancingv2-listener--seealso"></a>
 +  [CreateListener](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateListener.html) in the *Elastic Load Balancing API Reference \(version 2015\-12\-01\)* 
 +  [Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html) in the *User Guide for Application Load Balancers* 

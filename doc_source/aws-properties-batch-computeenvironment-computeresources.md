@@ -127,7 +127,7 @@ The Amazon Resource Name \(ARN\) of the Amazon EC2 Spot Fleet IAM role applied t
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Subnets`  <a name="cfn-batch-computeenvironment-computeresources-subnets"></a>
-The VPC subnets into which the compute resources are launched\.   
+The VPC subnets into which the compute resources are launched\. For more information, see [VPCs and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon VPC User Guide*\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

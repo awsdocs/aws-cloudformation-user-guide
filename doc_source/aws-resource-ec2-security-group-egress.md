@@ -193,12 +193,12 @@ SourceSG:
     Properties:
       VpcId: vpc-1a2b3c4d
       GroupDescription: Sample source security group
-  TargetSG:
+TargetSG:
     Type: AWS::EC2::SecurityGroup
     Properties:
       VpcId: vpc-1a2b3c4d
       GroupDescription: Sample target security group
-  OutboundRule:
+OutboundRule:
     Type: AWS::EC2::SecurityGroupEgress
     Properties:
       IpProtocol: tcp
@@ -208,22 +208,22 @@ SourceSG:
         Fn::GetAtt:
         - TargetSG
         - GroupId
-        GroupId:
-          Fn::GetAtt:
-          - SourceSG
-          - GroupId
-    InboundRule:
-      Type: AWS::EC2::SecurityGroupIngress
-      Properties:
-        IpProtocol: tcp
-        FromPort: 0
-        ToPort: 65535
-        SourceSecurityGroupId:
-          Fn::GetAtt:
-          - SourceSG
-          - GroupId
-        GroupId:
-          Fn::GetAtt:
-          - TargetSG
-          - GroupId
+      GroupId:
+        Fn::GetAtt:
+        - SourceSG
+        - GroupId
+InboundRule:
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      IpProtocol: tcp
+      FromPort: 0
+      ToPort: 65535
+      SourceSecurityGroupId:
+        Fn::GetAtt:
+        - SourceSG
+        - GroupId
+      GroupId:
+        Fn::GetAtt:
+        - TargetSG
+        - GroupId
 ```

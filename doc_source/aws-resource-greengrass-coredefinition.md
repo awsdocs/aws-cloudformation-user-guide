@@ -37,7 +37,7 @@ Properties :
 ## Properties<a name="aws-resource-greengrass-coredefinition-properties"></a>
 
 `InitialVersion`  <a name="cfn-greengrass-coredefinition-initialversion"></a>
-The core definition version to include when the core definition is created\. Currently, a core definition version can contain only one [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-core](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-core)\.  
+The core definition version to include when the core definition is created\. Currently, a core definition version can contain only one [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-core.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-core.html)\.  
 To associate a core definition version after the core definition is created, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html) resource and specify the ID of this core definition\.
 *Required*: No  
 *Type*: [CoreDefinitionVersion](aws-properties-greengrass-coredefinition-coredefinitionversion.md)  

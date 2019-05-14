@@ -46,7 +46,7 @@ The distinguished names of the organizational units for computer accounts\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceAccountCredentials`  <a name="cfn-appstream-directoryconfig-serviceaccountcredentials"></a>
-The credentials for the service account used by the streaming instance to connect to the directory\. Do not use this parameter directly\. Use `ServiceAccountCredentials` as an input parameter with `noEcho` as shown in the [Parameters](AWSCloudFormation/latest/UserGuide/parameters-section-structure.html)\. For best practices information, see [Do Not Embed Credentials in Your Templates](AWSCloudFormation/latest/UserGuide/best-practices.html#creds)   
+The credentials for the service account used by the streaming instance to connect to the directory\. Do not use this parameter directly\. Use `ServiceAccountCredentials` as an input parameter with `noEcho` as shown in the [Parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html)\. For best practices information, see [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds)\.   
 *Required*: Yes  
 *Type*: [ServiceAccountCredentials](aws-properties-appstream-directoryconfig-serviceaccountcredentials.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

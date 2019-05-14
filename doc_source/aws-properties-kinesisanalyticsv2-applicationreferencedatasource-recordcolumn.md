@@ -38,7 +38,6 @@ A reference to the data element in the streaming input or the reference data sou
 The name of the column that is created in the in\-application input stream or reference table\.  
 *Required*: Yes  
 *Type*: String  
-*Pattern*: `[a-zA-Z_][a-zA-Z0-9_]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SqlType`  <a name="cfn-kinesisanalyticsv2-applicationreferencedatasource-recordcolumn-sqltype"></a>

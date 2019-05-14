@@ -46,7 +46,7 @@ Settings for the Lambda execution environment in AWS IoT Greengrass\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ResourceAccessPolicies`  <a name="cfn-greengrass-functiondefinition-environment-resourceaccesspolicies"></a>
-A list of the [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance) in the group that the function can access, with the corresponding read\-only or read\-write permissions\. The maximum is 10 resources\.  
+A list of the [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html) in the group that the function can access, with the corresponding read\-only or read\-write permissions\. The maximum is 10 resources\.  
 This property applies only for Lambda functions that run in a Greengrass container\.
 *Required*: No  
 *Type*: List of [ResourceAccessPolicy](aws-properties-greengrass-functiondefinition-resourceaccesspolicy.md)  

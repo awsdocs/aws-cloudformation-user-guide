@@ -89,7 +89,7 @@ Properties :
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Engine`  <a name="cfn-opsworkscm-server-engine"></a>
- The configuration management engine to use\. Valid values include `Chef` and `Puppet`\.   
+ The configuration management engine to use\. Valid values include `ChefAutomate` and `Puppet`\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -98,8 +98,8 @@ Properties :
 Optional engine attributes on a specified server\.   
 
 **Attributes accepted in a Chef createServer request:**
-+  `CHEF_PIVOTAL_KEY`: A base64\-encoded RSA public key\. The corresponding private key is required to access the Chef API\. When no CHEF\_PIVOTAL\_KEY is set, a private key is generated and returned in the response\. 
-+  `CHEF_DELIVERY_ADMIN_PASSWORD`: The password for the administrative user in the Chef Automate GUI\. The password length is a minimum of eight characters, and a maximum of 32\. The password can contain letters, numbers, and special characters \(\!/@\#$%^&\+=\_\)\. The password must contain at least one lower case letter, one upper case letter, one number, and one special character\. When no CHEF\_DELIVERY\_ADMIN\_PASSWORD is set, one is generated and returned in the response\.
++  `CHEF_AUTOMATE_PIVOTAL_KEY`: A base64\-encoded RSA public key\. The corresponding private key is required to access the Chef API\. When no CHEF\_AUTOMATE\_PIVOTAL\_KEY is set, a private key is generated and returned in the response\. 
++  `CHEF_AUTOMATE_ADMIN_PASSWORD`: The password for the administrative user in the Chef Automate web\-based dashboard\. The password length is a minimum of eight characters, and a maximum of 32\. The password can contain letters, numbers, and special characters \(\!/@\#$%^&\+=\_\)\. The password must contain at least one lower case letter, one upper case letter, one number, and one special character\. When no CHEF\_AUTOMATE\_ADMIN\_PASSWORD is set, one is generated and returned in the response\.
 
 **Attributes accepted in a Puppet createServer request:**
 +  `PUPPET_ADMIN_PASSWORD`: To work with the Puppet Enterprise console, a password must use ASCII characters\.
@@ -129,7 +129,7 @@ The ARN of the instance profile that your Amazon EC2 instances use\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceType`  <a name="cfn-opsworkscm-server-instancetype"></a>
- The Amazon EC2 instance type to use\. For example, `m4.large`\. Recommended instance types include `t2.medium` and greater, `m4.*`, or `c4.xlarge` and greater\.   
+ The Amazon EC2 instance type to use\. For example, `m5.large`\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -235,31 +235,30 @@ The following example creates an AWS OpsWorks for Chef Automate server\.
         "MyChefServer": {
             "Type": "AWS::OpsWorksCM::Server",
             "Properties": {
-                "AssociatePublicIpAddress": true,
                 "BackupRetentionCount": "12",
                 "DisableAutomatedBackup": false,
-                "Engine": "Chef",
-                "EngineVersion": "12",
+                "Engine": "ChefAutomate",
+                "EngineVersion": "2",
                 "EngineAttributes": [
                     {
-                        "Name": "CHEF_PIVOTAL_KEY",
+                        "Name": "CHEF_AUTOMATE_PIVOTAL_KEY",
                         "Value": {
                             "Ref": "PivotalKey"
                         }
                     },
                     {
-                        "Name": "CHEF_DELIVERY_ADMIN_PASSWORD",
+                        "Name": "CHEF_AUTOMATE_ADMIN_PASSWORD",
                         "Value": {
                             "Ref": "Password"
                         }
                     }
                 ],
                 "EngineModel": "Single",
-                "InstanceProfileArn": "arn:aws:iam::123456789012:instance-profile/MyInstanceProfile",
-                "InstanceType": "m4.xlarge",
+                "InstanceProfileArn": "INSTANCE-PROFILE-ARN",
+                "InstanceType": "r5.xlarge",
                 "PreferredBackupWindow": "08:00",
                 "PreferredMaintenanceWindow": "Fri:08:00",
-                "ServiceRoleArn": "arn:aws:iam::123456789012:role/MyServiceRole"
+                "ServiceRoleArn": "SERVICE-ROLE-ARN"
             }
         }
     },
@@ -290,24 +289,23 @@ Resources:
   MyChefServer:
     Type: AWS::OpsWorksCM::Server
     Properties:
-      AssociatePublicIpAddress: True
       BackupRetentionCount: '12'
       DisableAutomatedBackup: False
-      Engine: 'Chef'
-      EngineVersion: '12'
+      Engine: 'ChefAutomate'
+      EngineVersion: '2'
       EngineAttributes:
-          - Name: "CHEF_PIVOTAL_KEY"
+          - Name: "CHEF_AUTOMATE_PIVOTAL_KEY"
             Value:
                 Ref: PivotalKey
-          - Name: "CHEF_DELIVERY_ADMIN_PASSWORD"
+          - Name: "CHEF_AUTOMATE_ADMIN_PASSWORD"
             Value:
                 Ref: Password
       EngineModel: 'Single'
-      InstanceProfileArn: "arn:aws:iam::123456789012:instance-profile/MyInstanceProfile"
-      InstanceType: 'm4.xlarge'
+      InstanceProfileArn: "INSTANCE-PROFILE-ARN"
+      InstanceType: 'r5.xlarge'
       PreferredBackupWindow: '08:00'
       PreferredMaintenanceWindow: 'Fri:08:00'
-      ServiceRoleArn: "arn:aws:iam::123456789012:role/MyServiceRole"
+      ServiceRoleArn: "SERVICE-ROLE-ARN"
 Outputs:
   endpoint:
     Description: OpsWorksCM Server Endpoint
