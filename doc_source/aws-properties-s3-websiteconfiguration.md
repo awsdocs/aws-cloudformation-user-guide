@@ -22,23 +22,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 ﻿  [ErrorDocument](#cfn-s3-websiteconfiguration-errordocument) : String
 ﻿  [IndexDocument](#cfn-s3-websiteconfiguration-indexdocument) : String
-﻿  [RedirectAllRequestsTo](#cfn-s3-websiteconfiguration-redirectallrequeststo) : 
+﻿  [RedirectAllRequestsTo](#cfn-s3-websiteconfiguration-redirectallrequeststo) :
     [RedirectAllRequestsTo](aws-properties-s3-websiteconfiguration-redirectallrequeststo.md)
-﻿  [RoutingRules](#cfn-s3-websiteconfiguration-routingrules) : 
+﻿  [RoutingRules](#cfn-s3-websiteconfiguration-routingrules) :
     - [RoutingRule](aws-properties-s3-websiteconfiguration-routingrules.md)
 ```
 
 ## Properties<a name="aws-properties-s3-websiteconfiguration-properties"></a>
 
 `ErrorDocument`  <a name="cfn-s3-websiteconfiguration-errordocument"></a>
-The name of the error document for the website\.  
+The name of the error document for the website\. Should not be specified if `RedirectAllRequestsTo` is specified\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IndexDocument`  <a name="cfn-s3-websiteconfiguration-indexdocument"></a>
-The name of the index document for the website\.  
-*Required*: No  
+The name of the index document for the website\. Should not be specified if `RedirectAllRequestsTo` is specified\.
+*Required*: Conditional\. If you don't specify the `RedirectAllRequestsTo` property, you must specify this property\.  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -50,7 +50,7 @@ If you specify this property, you can't specify any other property\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoutingRules`  <a name="cfn-s3-websiteconfiguration-routingrules"></a>
-Rules that define when a redirect is applied and the redirect behavior\.  
+Rules that define when a redirect is applied and the redirect behavior\. Should not be specified if `RedirectAllRequestsTo` is specified\.   
 *Required*: No  
 *Type*: List of [RoutingRule](aws-properties-s3-websiteconfiguration-routingrules.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
