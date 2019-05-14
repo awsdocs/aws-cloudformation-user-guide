@@ -1,90 +1,107 @@
-# AWS IoT TopicRule DynamoDBAction<a name="aws-properties-iot-topicrule-dynamodbaction"></a>
+# AWS::IoT::TopicRule DynamoDBAction<a name="aws-properties-iot-topicrule-dynamodbaction"></a>
 
-`DynamoDB` is a property of the `Actions` property that describes an AWS IoT action that writes data to a DynamoDB table\.
+Describes an action to write to a DynamoDB table\.
 
-The `HashKeyField`, `RangeKeyField`, and `TableName` values must match the values you used when you initially created the table\.
+The `tableName`, `hashKeyField`, and `rangeKeyField` values must match the values used when you created the table\.
 
-The `HashKeyValue` and `RangeKeyValue` fields use the `${sql-expression}` substitution template syntax\. You can specify any valid expression in a `WHERE` or `SELECT` clause\. This expression can include JSON properties, comparisons, calculations, and functions, for example:
-+ The `"HashKeyValue" : "${topic(3)}` field uses the third level of the topic\.
-+ The `"RangeKeyValue" : "${timestamp()}` field uses the timestamp\.
+The `hashKeyValue` and `rangeKeyvalue` fields use a substitution template syntax\. These templates provide data at runtime\. The syntax is as follows: $\{*sql\-expression*\}\.
 
-## Syntax<a name="w4ab1c21c10d150c39c33c10"></a>
+You can specify any valid expression in a WHERE or SELECT clause, including JSON properties, comparisons, calculations, and functions\. For example, the following field uses the third level of the topic:
+
+ `"hashKeyValue": "${topic(3)}"` 
+
+The following field uses the timestamp:
+
+ `"rangeKeyValue": "${timestamp()}"` 
+
+For more information, see [DynamoDBv2 Action](https://docs.aws.amazon.com/iot/latest/developerguide/iot-rule-actions.html) in the *AWS IoT Developer Guide*\.
+
+## Syntax<a name="aws-properties-iot-topicrule-dynamodbaction-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-iot-topicrule-dynamodbaction-syntax.json"></a>
 
 ```
 {
-  "[HashKeyField](#cfn-iot-topicrule-dynamodbaction-hashkeyfield)": String,
-  "[HashKeyType](#cfn-iot-topicrule-dynamodbaction-hashkeytype)": String,
-  "[HashKeyValue](#cfn-iot-topicrule-dynamodbaction-hashkeyvalue)": String,
-  "[PayloadField](#cfn-iot-topicrule-dynamodbaction-payloadfield)": String,
-  "[RangeKeyField](#cfn-iot-topicrule-dynamodbaction-rangekeyfield)": String,
-  "[RangeKeyType](#cfn-iot-topicrule-dynamodbaction-rangekeytype)": String,
-  "[RangeKeyValue](#cfn-iot-topicrule-dynamodbaction-rangekeyvalue)": String,
-  "[RoleArn](#cfn-iot-topicrule-dynamodbaction-rolearn)": String,
-  "[TableName](#cfn-iot-topicrule-dynamodbaction-tablename)": String
+  "[HashKeyField](#cfn-iot-topicrule-dynamodbaction-hashkeyfield)" : String,
+  "[HashKeyType](#cfn-iot-topicrule-dynamodbaction-hashkeytype)" : String,
+  "[HashKeyValue](#cfn-iot-topicrule-dynamodbaction-hashkeyvalue)" : String,
+  "[PayloadField](#cfn-iot-topicrule-dynamodbaction-payloadfield)" : String,
+  "[RangeKeyField](#cfn-iot-topicrule-dynamodbaction-rangekeyfield)" : String,
+  "[RangeKeyType](#cfn-iot-topicrule-dynamodbaction-rangekeytype)" : String,
+  "[RangeKeyValue](#cfn-iot-topicrule-dynamodbaction-rangekeyvalue)" : String,
+  "[RoleArn](#cfn-iot-topicrule-dynamodbaction-rolearn)" : String,
+  "[TableName](#cfn-iot-topicrule-dynamodbaction-tablename)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-iot-topicrule-dynamodbaction-syntax.yaml"></a>
 
 ```
-[HashKeyField](#cfn-iot-topicrule-dynamodbaction-hashkeyfield): String
-[HashKeyType](#cfn-iot-topicrule-dynamodbaction-hashkeytype): String
-[HashKeyValue](#cfn-iot-topicrule-dynamodbaction-hashkeyvalue): String
-[PayloadField](#cfn-iot-topicrule-dynamodbaction-payloadfield): String
-[RangeKeyField](#cfn-iot-topicrule-dynamodbaction-rangekeyfield): String
-[RangeKeyType](#cfn-iot-topicrule-dynamodbaction-rangekeytype): String
-[RangeKeyValue](#cfn-iot-topicrule-dynamodbaction-rangekeyvalue): String
-[RoleArn](#cfn-iot-topicrule-dynamodbaction-rolearn): String
-[TableName](#cfn-iot-topicrule-dynamodbaction-tablename): String
+﻿  [HashKeyField](#cfn-iot-topicrule-dynamodbaction-hashkeyfield) : String
+﻿  [HashKeyType](#cfn-iot-topicrule-dynamodbaction-hashkeytype) : String
+﻿  [HashKeyValue](#cfn-iot-topicrule-dynamodbaction-hashkeyvalue) : String
+﻿  [PayloadField](#cfn-iot-topicrule-dynamodbaction-payloadfield) : String
+﻿  [RangeKeyField](#cfn-iot-topicrule-dynamodbaction-rangekeyfield) : String
+﻿  [RangeKeyType](#cfn-iot-topicrule-dynamodbaction-rangekeytype) : String
+﻿  [RangeKeyValue](#cfn-iot-topicrule-dynamodbaction-rangekeyvalue) : String
+﻿  [RoleArn](#cfn-iot-topicrule-dynamodbaction-rolearn) : String
+﻿  [TableName](#cfn-iot-topicrule-dynamodbaction-tablename) : String
 ```
 
-## Properties<a name="w4ab1c21c10d150c39c33c12"></a>
-
-For more information and valid values, see [DynamoDB Action](https://docs.aws.amazon.com/iot/latest/developerguide/dynamodb-rule.html) in the *AWS IoT Developer Guide*\.
+## Properties<a name="aws-properties-iot-topicrule-dynamodbaction-properties"></a>
 
 `HashKeyField`  <a name="cfn-iot-topicrule-dynamodbaction-hashkeyfield"></a>
-The name of the hash key\.  
+The hash key name\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HashKeyType`  <a name="cfn-iot-topicrule-dynamodbaction-hashkeytype"></a>
-The data type of the hash key \(also called the partition key\)\. Valid values are: `"STRING"` or `"NUMBER"`\.  
+The hash key type\. Valid values are "STRING" or "NUMBER"  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HashKeyValue`  <a name="cfn-iot-topicrule-dynamodbaction-hashkeyvalue"></a>
-The value of the hash key\.  
+The hash key value\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PayloadField`  <a name="cfn-iot-topicrule-dynamodbaction-payloadfield"></a>
-The name of the column in the DynamoDB table that contains the result of the query\. You can customize this name\.  
+The action payload\. This name can be customized\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RangeKeyField`  <a name="cfn-iot-topicrule-dynamodbaction-rangekeyfield"></a>
-The name of the range key\.  
+The range key name\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RangeKeyType`  <a name="cfn-iot-topicrule-dynamodbaction-rangekeytype"></a>
-The data type of the range key \(also called the sort key\)\. Valid values are: `"STRING"` or `"NUMBER"`\.  
+The range key type\. Valid values are "STRING" or "NUMBER"  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RangeKeyValue`  <a name="cfn-iot-topicrule-dynamodbaction-rangekeyvalue"></a>
-The value of the range key\.  
+The range key value\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-iot-topicrule-dynamodbaction-rolearn"></a>
 The ARN of the IAM role that grants access to the DynamoDB table\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TableName`  <a name="cfn-iot-topicrule-dynamodbaction-tablename"></a>
 The name of the DynamoDB table\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,12 +1,6 @@
 # AWS::SageMaker::Endpoint<a name="aws-resource-sagemaker-endpoint"></a>
 
-Use the `AWS::SageMaker::Endpoint` resource to create an endpoint using the specified configuration in the request\. Amazon SageMaker uses the endpoint to provision resources and deploy models\. You create the endpoint configuration with the [AWS::SageMaker::EndpointConfig](aws-resource-sagemaker-endpointconfig.md) resource\. For more information, see [Deploying a Model on Amazon SageMaker Hosting Services](https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works-hosting.html) in the *SageMaker Developer Guide*\. 
-
-**Topics**
-+ [Syntax](#aws-resource-sagemaker-endpoint-syntax)
-+ [Properties](#aws-resource-sagemaker-endpoint-properties)
-+ [Return Values](#aws-resource-sagemaker-endpoint-returnvalues)
-+ [Examples](#aws-resource-sagemaker-endpoint-examples)
+Use the `AWS::SageMaker::Endpoint` resource to create an endpoint using the specified configuration in the request\. Amazon SageMaker uses the endpoint to provision resources and deploy models\. You create the endpoint configuration with the [AWS::SageMaker::EndpointConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html) resource\. For more information, see [Deploying a Model on Amazon SageMaker Hosting Services](sagemaker/latest/dg/how-it-works-hosting.html) in the *Amazon SageMaker Developer Guide*\.
 
 ## Syntax<a name="aws-resource-sagemaker-endpoint-syntax"></a>
 
@@ -18,68 +12,78 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::Endpoint",
   "Properties" : {
-    "[EndpointName](#cfn-sagemaker-endpoint-endpointname)" : String,
-    "[EndpointConfigName](#cfn-sagemaker-endpoint-endpointconfigname)" : String,
-    "[Tags](#cfn-sagemaker-endpoint-tags)" : [ [*Tag*](aws-properties-resource-tags.md), ... ]
-  }
+      "[EndpointConfigName](#cfn-sagemaker-endpoint-endpointconfigname)" : String,
+      "[EndpointName](#cfn-sagemaker-endpoint-endpointname)" : String,
+      "[Tags](#cfn-sagemaker-endpoint-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-sagemaker-endpoint-syntax.yaml"></a>
 
 ```
-Type: "AWS::SageMaker::Endpoint"
-Properties:
-  [EndpointName](#cfn-sagemaker-endpoint-endpointname): String
-  [EndpointConfigName](#cfn-sagemaker-endpoint-endpointconfigname): String
-  [Tags](#cfn-sagemaker-endpoint-tags): 
-    - [*Tag*](aws-properties-resource-tags.md)
+Type: AWS::SageMaker::Endpoint
+Properties : 
+﻿  [EndpointConfigName](#cfn-sagemaker-endpoint-endpointconfigname) : String
+﻿  [EndpointName](#cfn-sagemaker-endpoint-endpointname) : String
+﻿  [Tags](#cfn-sagemaker-endpoint-tags) : 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-sagemaker-endpoint-properties"></a>
 
-`EndpointName`  <a name="cfn-sagemaker-endpoint-endpointname"></a>
-The name of the endpoint\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
-
 `EndpointConfigName`  <a name="cfn-sagemaker-endpoint-endpointconfigname"></a>
-The name of the [AWS::SageMaker::EndpointConfig](aws-resource-sagemaker-endpointconfig.md) resource that specifies the configuration for the endpoint\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The name of the [AWS::SageMaker::EndpointConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html) resource that specifies the configuration for the endpoint\. For more information, see [CreateEndpointConfig](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html)\.   
+*Required*: Yes  
+*Type*: String  
+*Maximum*: `63`  
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EndpointName`  <a name="cfn-sagemaker-endpoint-endpointname"></a>
+The name of the endpoint\. The name must be unique within an AWS Region in your AWS account\.  
+*Required*: No  
+*Type*: String  
+*Maximum*: `63`  
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-sagemaker-endpoint-tags"></a>
-An array of key\-value pairs\. For more information, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.  
- *Required*: Yes  
- *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+A list of key\-value pairs to apply to this resource\.  
+For more information, see [Resource Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) and [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what) in the * AWS Billing and Cost Management User Guide*\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-sagemaker-endpoint-returnvalues"></a>
+## Return Values<a name="aws-resource-sagemaker-endpoint-return-values"></a>
 
-### Ref<a name="aws-resource-sagemaker-endpoint-ref"></a>
+### Ref<a name="aws-resource-sagemaker-endpoint-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::SageMaker::Endpoint` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the endpoint, such as `arn:aws:sagemaker:us-west-2:012345678901:endpoint/myendpoint`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the endpoint, such as `arn:aws:sagemaker:us-west-2:012345678901:endpoint/myendpoint`\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Fn::GetAtt<a name="aws-resource-sagemaker-endpoint-getatt"></a>
+### Fn::GetAtt<a name="aws-resource-sagemaker-endpoint-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
-`EndpointName`  
+#### <a name="aws-resource-sagemaker-endpoint-return-values-fn--getatt-fn--getatt"></a>
+
+`EndpointName`  <a name="EndpointName-fn::getatt"></a>
 The name of the endpoint, such as `MyEndpoint`\. 
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
+## Examples<a name="aws-resource-sagemaker-endpoint--examples"></a>
 
-## Examples<a name="aws-resource-sagemaker-endpoint-examples"></a>
-
-### SageMaker Endpoint Example<a name="aws-resource-sagemaker-endpoint-example1"></a>
+### SageMaker Endpoint Example<a name="aws-resource-sagemaker-endpoint--examples--SageMaker_Endpoint_Example"></a>
 
 The following example creates an endpoint configuration from a trained model, and then creates an endpoint\.
 
-#### JSON<a name="aws-resource-sagemaker-endpoint-example1.json"></a>
+#### JSON<a name="aws-resource-sagemaker-endpoint--examples--SageMaker_Endpoint_Example--json"></a>
 
 ```
 {
@@ -193,7 +197,7 @@ The following example creates an endpoint configuration from a trained model, an
 }
 ```
 
-#### YAML<a name="aws-resource-sagemaker-endpoint-example1.yaml"></a>
+#### YAML<a name="aws-resource-sagemaker-endpoint--examples--SageMaker_Endpoint_Example--yaml"></a>
 
 ```
 Description: "Basic Hosting entities test.  We need models to create endpoint configs."

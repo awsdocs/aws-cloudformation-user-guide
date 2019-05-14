@@ -1,115 +1,104 @@
 # AWS::EC2::CustomerGateway<a name="aws-resource-ec2-customer-gateway"></a>
 
-Provides information to AWS about your VPN customer gateway device\.
+Specifies a customer gateway\.
 
-**Topics**
-+ [Syntax](#aws-resource-ec2-customergateway-syntax)
-+ [Properties](#w4ab1c21c10d102c14b9)
-+ [Return Value](#w4ab1c21c10d102c14c11)
-+ [Example](#w4ab1c21c10d102c14c13)
-+ [See Also](#w4ab1c21c10d102c14c15)
-
-## Syntax<a name="aws-resource-ec2-customergateway-syntax"></a>
+## Syntax<a name="aws-resource-ec2-customer-gateway-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-resource-ec2-customergateway-syntax.json"></a>
+### JSON<a name="aws-resource-ec2-customer-gateway-syntax.json"></a>
 
 ```
 {
-   "Type" : "AWS::EC2::CustomerGateway",
-   "Properties" : {
-      "[BgpAsn](#cfn-ec2-customergateway-bgpasn)" : Number,
+  "Type" : "AWS::EC2::CustomerGateway",
+  "Properties" : {
+      "[BgpAsn](#cfn-ec2-customergateway-bgpasn)" : Integer,
       "[IpAddress](#cfn-ec2-customergateway-ipaddress)" : String,
-      "[Tags](#cfn-ec2-customergateway-tags)" :  [ Resource Tag, ... ],
+      "[Tags](#cfn-ec2-customergateway-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Type](#cfn-ec2-customergateway-type)" : String
-   }
+    }
 }
 ```
 
-### YAML<a name="aws-resource-ec2-customergateway-syntax.yaml"></a>
+### YAML<a name="aws-resource-ec2-customer-gateway-syntax.yaml"></a>
 
 ```
 Type: AWS::EC2::CustomerGateway
-Properties:
-  [BgpAsn](#cfn-ec2-customergateway-bgpasn): Number
-  [IpAddress](#cfn-ec2-customergateway-ipaddress): String
-  [Tags](#cfn-ec2-customergateway-tags):
-    Resource Tag
-  [Type](#cfn-ec2-customergateway-type): String
+Properties : 
+﻿  [BgpAsn](#cfn-ec2-customergateway-bgpasn) : Integer
+﻿  [IpAddress](#cfn-ec2-customergateway-ipaddress) : String
+﻿  [Tags](#cfn-ec2-customergateway-tags) : 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+﻿  [Type](#cfn-ec2-customergateway-type) : String
 ```
 
-## Properties<a name="w4ab1c21c10d102c14b9"></a>
+## Properties<a name="aws-resource-ec2-customer-gateway-properties"></a>
 
 `BgpAsn`  <a name="cfn-ec2-customergateway-bgpasn"></a>
-The customer gateway's Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\)\.  
+For devices that support BGP, the customer gateway's BGP ASN\.  
+Default: 65000  
 *Required*: Yes  
-*Type*: Number BgpAsn is always an integer value\.  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Type*: Integer  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IpAddress`  <a name="cfn-ec2-customergateway-ipaddress"></a>
-The internet\-routable IP address for the customer gateway's outside interface\. The address must be static\.  
+The Internet\-routable IP address for the customer gateway's outside interface\. The address must be static\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ec2-customergateway-tags"></a>
-The tags that you want to attach to the resource\.  
+One or more tags for the customer gateway\.  
 *Required*: No  
-*Type*: [Resource Tag](aws-properties-resource-tags.md)\.  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-ec2-customergateway-type"></a>
-The type of VPN connection that this customer gateway supports\.  
+The type of VPN connection that this customer gateway supports \(`ipsec.1`\)\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)  
-*Example*: `ipsec.1`
+*Allowed Values*: `ipsec.1`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Value<a name="w4ab1c21c10d102c14c11"></a>
+## Return Values<a name="aws-resource-ec2-customer-gateway-return-values"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
+### Ref<a name="aws-resource-ec2-customer-gateway-return-values-ref"></a>
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the customer gateway\.
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+## Examples<a name="aws-resource-ec2-customer-gateway--examples"></a>
+
+### <a name="aws-resource-ec2-customer-gateway--examples--"></a>
+
+#### YAML<a name="aws-resource-ec2-customer-gateway--examples----yaml"></a>
 
 ```
-{ "Ref": "MyResource" }
+myCustomerGateway: 
+    Type: AWS::EC2::CustomerGateway
+    Properties: 
+        Type: ipsec.1
+        BgpAsn: 65534
+        IpAddress 12.1.2.3
 ```
 
-For the resource with the logical ID "MyResource", `Ref` will return the AWS resource name\.
+### <a name="aws-resource-ec2-customer-gateway--examples--"></a>
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
-
-## Example<a name="w4ab1c21c10d102c14c13"></a>
-
-### JSON<a name="aws-resource-ec2-customergateway-example.json"></a>
+#### JSON<a name="aws-resource-ec2-customer-gateway--examples----json"></a>
 
 ```
 {
-   "AWSTemplateFormatVersion" : "2010-09-09",
-   "Resources" : {
-      "myCustomerGateway" : {
-         "Type" : "AWS::EC2::CustomerGateway",
-         "Properties" : {
+    "myCustomerGateway" : {
+        "Type" : "AWS::EC2::CustomerGateway",
+        "Properties" : {
             "Type" : "ipsec.1",
-            "BgpAsn" : "64000",
-            "IpAddress" : "1.1.1.1"
-         }
-      }
-   }
+            "BgpAsn" : "65534",
+            "IpAddress" : "12.1.2.3"
+        }
+    }
 }
 ```
 
-### YAML<a name="aws-resource-ec2-customergateway-example.yaml"></a>
-
-```
-AWSTemplateFormatVersion: "2010-09-09"
-Resources: 
-  myCustomerGateway: 
-    Type: AWS::EC2::CustomerGateway
-    Properties: 
-      Type: ipsec.1
-      BgpAsn: 64000
-      IpAddress: 1.1.1.1
-```
-
-## See Also<a name="w4ab1c21c10d102c14c15"></a>
-+ [CreateCustomerGateway](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateCustomerGateway.html) in the *Amazon EC2 API Reference*\.
+## See Also<a name="aws-resource-ec2-customer-gateway--seealso"></a>
++  [CreateCustomerGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateCustomerGateway.html) in the *Amazon Elastic Compute Cloud API Reference* 

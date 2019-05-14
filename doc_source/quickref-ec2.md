@@ -2,7 +2,7 @@
 
 ## EC2 Block Device Mapping Examples<a name="scenario-ec2-bdm"></a>
 
-### EC2 Instance with Block Device Mapping<a name="w4ab1c17c23c39b3b2"></a>
+### EC2 Instance with Block Device Mapping<a name="w4622ab1c17c23c39b3b2"></a>
 
 #### JSON<a name="quickref-ec2-example-1.json"></a>
 
@@ -50,7 +50,7 @@ EC2Instance:
             VolumeSize: 100
 ```
 
-### EC2 Instance with Ephemeral Drives<a name="w4ab1c17c23c39b3b4"></a>
+### EC2 Instance with Ephemeral Drives<a name="w4622ab1c17c23c39b3b4"></a>
 
 #### JSON<a name="quickref-ec2-example-2.json"></a>
 
@@ -91,7 +91,7 @@ EC2Instance:
 
 ## Assigning an Amazon EC2 Elastic IP Using AWS::EC2::EIP Snippet<a name="scenario-ec2-eip"></a>
 
-This example shows how to allocate an Amazon EC2 Elastic IP address and assign it to an Amazon EC2 instance using a [AWS::EC2::EIP resource](aws-properties-ec2-eip.md)\.
+This example shows how to allocate an Amazon EC2 Elastic IP address and assign it to an Amazon EC2 instance using a [AWS::EC2::EIP resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html)\.
 
 ### JSON<a name="quickref-ec2-example-3.json"></a>
 
@@ -115,7 +115,7 @@ This example shows how to allocate an Amazon EC2 Elastic IP address and assign i
 
 ## Assigning an Existing Elastic IP to an Amazon EC2 instance using AWS::EC2::EIPAssociation Snippet<a name="scenario-ec2-eip-association"></a>
 
-This example shows how to assign an existing Amazon EC2 Elastic IP address to an Amazon EC2 instance using an [AWS::EC2::EIPAssociation resource](aws-properties-ec2-eip-association.md)\.
+This example shows how to assign an existing Amazon EC2 Elastic IP address to an Amazon EC2 instance using an [AWS::EC2::EIPAssociation resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html)\.
 
 ### JSON<a name="quickref-ec2-example-4.json"></a>
 
@@ -141,7 +141,7 @@ This example shows how to assign an existing Amazon EC2 Elastic IP address to an
 
 ## Assigning an Existing VPC Elastic IP to an Amazon EC2 instance using AWS::EC2::EIPAssociation Snippet<a name="scenario-ec2-eip-association-vpc"></a>
 
-This example shows how to assign an existing VPC Elastic IP address to an Amazon EC2 instance using an [AWS::EC2::EIPAssociation resource](aws-properties-ec2-eip-association.md)\.
+This example shows how to assign an existing VPC Elastic IP address to an Amazon EC2 instance using an [AWS::EC2::EIPAssociation resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html)\.
 
 ### JSON<a name="quickref-ec2-example-5.json"></a>
 
@@ -167,7 +167,7 @@ This example shows how to assign an existing VPC Elastic IP address to an Amazon
 
 ## Elastic Network Interface \(ENI\) Template Snippets<a name="cfn-template-snippets-eni"></a>
 
-### VPC\_EC2\_Instance\_With\_ENI<a name="w4ab1c17c23c39c13b3"></a>
+### VPC\_EC2\_Instance\_With\_ENI<a name="w4622ab1c17c23c39c13b3"></a>
 
 Sample template showing how to create an instance with two elastic network interface \(ENI\)\. The sample assumes you have already created a VPC\. 
 
@@ -610,15 +610,13 @@ This template shows an AWS::EC2::SecurityGroup resource that contains a security
                         "SourceSecurityGroupOwnerId": {
                             "Fn::GetAtt": [
                                 "myELB",
-                                "SourceSecurityGroup",
-                                "OwnerAlias"
+                                "SourceSecurityGroup.OwnerAlias"
                             ]
                         },
                         "SourceSecurityGroupName": {
                             "Fn::GetAtt": [
                                 "myELB",
-                                "SourceSecurityGroup",
-                                "GroupName"
+                                "SourceSecurityGroup.GroupName"
                             ]
                         }
                     }

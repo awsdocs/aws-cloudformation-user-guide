@@ -1,8 +1,10 @@
-# Amazon Relational Database Service OptionGroup OptionConfiguration<a name="aws-properties-rds-optiongroup-optionconfigurations"></a>
+# AWS::RDS::OptionGroup OptionConfiguration<a name="aws-properties-rds-optiongroup-optionconfigurations"></a>
 
-Use the `OptionConfigurations` property to configure an option and its settings for an [AWS::RDS::OptionGroup](aws-resource-rds-optiongroup.md) resource\.
+The `OptionConfiguration` property type specifies an individual option, and its settings, within an `AWS::RDS::OptionGroup` resource\.
 
-## Syntax<a name="w4ab1c21c10d171c49c15b5"></a>
+## Syntax<a name="aws-properties-rds-optiongroup-optionconfigurations-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-rds-optiongroup-optionconfigurations-syntax.json"></a>
 
@@ -10,7 +12,7 @@ Use the `OptionConfigurations` property to configure an option and its settings 
 {
   "[DBSecurityGroupMemberships](#cfn-rds-optiongroup-optionconfigurations-dbsecuritygroupmemberships)" : [ String, ... ],
   "[OptionName](#cfn-rds-optiongroup-optionconfigurations-optionname)" : String,
-  "[OptionSettings](#cfn-rds-optiongroup-optionconfigurations-optionsettings)" : [ OptionSetting, ... ],
+  "[OptionSettings](#cfn-rds-optiongroup-optionconfigurations-optionsettings)" : [ [OptionSetting](aws-properties-rds-optiongroup-optionconfigurations-optionsettings.md), ... ],
   "[OptionVersion](#cfn-rds-optiongroup-optionconfiguration-optionversion)" : String,
   "[Port](#cfn-rds-optiongroup-optionconfigurations-port)" : Integer,
   "[VpcSecurityGroupMemberships](#cfn-rds-optiongroup-optionconfigurations-vpcsecuritygroupmemberships)" : [ String, ... ]
@@ -20,116 +22,123 @@ Use the `OptionConfigurations` property to configure an option and its settings 
 ### YAML<a name="aws-properties-rds-optiongroup-optionconfigurations-syntax.yaml"></a>
 
 ```
-[DBSecurityGroupMemberships](#cfn-rds-optiongroup-optionconfigurations-dbsecuritygroupmemberships):
-  - String
-[OptionName](#cfn-rds-optiongroup-optionconfigurations-optionname): String
-[OptionSettings](#cfn-rds-optiongroup-optionconfigurations-optionsettings):
-  - OptionSetting
-[OptionVersion](#cfn-rds-optiongroup-optionconfiguration-optionversion): String
-[Port](#cfn-rds-optiongroup-optionconfigurations-port): Integer
-[VpcSecurityGroupMemberships](#cfn-rds-optiongroup-optionconfigurations-vpcsecuritygroupmemberships):
-  - String
+﻿  [DBSecurityGroupMemberships](#cfn-rds-optiongroup-optionconfigurations-dbsecuritygroupmemberships) : 
+    - String
+﻿  [OptionName](#cfn-rds-optiongroup-optionconfigurations-optionname) : String
+﻿  [OptionSettings](#cfn-rds-optiongroup-optionconfigurations-optionsettings) : 
+    - [OptionSetting](aws-properties-rds-optiongroup-optionconfigurations-optionsettings.md)
+﻿  [OptionVersion](#cfn-rds-optiongroup-optionconfiguration-optionversion) : String
+﻿  [Port](#cfn-rds-optiongroup-optionconfigurations-port) : Integer
+﻿  [VpcSecurityGroupMemberships](#cfn-rds-optiongroup-optionconfigurations-vpcsecuritygroupmemberships) : 
+    - String
 ```
 
-## Properties<a name="w4ab1c21c10d171c49c15b7"></a>
+## Properties<a name="aws-properties-rds-optiongroup-optionconfigurations-properties"></a>
 
 `DBSecurityGroupMemberships`  <a name="cfn-rds-optiongroup-optionconfigurations-dbsecuritygroupmemberships"></a>
-A list of database security group names for this option\. If the option requires access to a port, the security groups must allow access to that port\. If you specify this property, don't specify the `VPCSecurityGroupMemberships` property\.  
+A list of DBSecurityGroupMemebrship name strings used for this option\.  
 *Required*: No  
-*Type*: List of String values
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OptionName`  <a name="cfn-rds-optiongroup-optionconfigurations-optionname"></a>
-The name of the option\. For more information about options, see [Working with Option Groups](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithOptionGroups.html) in the *Amazon Relational Database Service User Guide*\.  
+The configuration of options to include in a group\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OptionSettings`  <a name="cfn-rds-optiongroup-optionconfigurations-optionsettings"></a>
-The settings for this option\.  
+The option settings to include in an option group\.  
 *Required*: No  
-*Type*: List of [OptionSetting](aws-properties-rds-optiongroup-optionconfigurations-optionsettings.md)
+*Type*: List of [OptionSetting](aws-properties-rds-optiongroup-optionconfigurations-optionsettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OptionVersion`  <a name="cfn-rds-optiongroup-optionconfiguration-optionversion"></a>
 The version for the option\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Port`  <a name="cfn-rds-optiongroup-optionconfigurations-port"></a>
-The port number that this option uses\.  
+The optional port for the option\.  
 *Required*: No  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcSecurityGroupMemberships`  <a name="cfn-rds-optiongroup-optionconfigurations-vpcsecuritygroupmemberships"></a>
-A list of VPC security group IDs for this option\. If the option requires access to a port, the security groups must allow access to that port\. If you specify this property, don't specify the `DBSecurityGroupMemberships` property\.  
+A list of VpcSecurityGroupMembership name strings used for this option\.  
 *Required*: No  
-*Type*: List of String values
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Examples<a name="aws-properties-rds-optiongroup-optionconfiguration-examples"></a>
+## Examples<a name="aws-properties-rds-optiongroup-optionconfigurations--examples"></a>
 
-### <a name="aws-properties-rds-optiongroup-optionconfiguration-example1"></a>
+### <a name="aws-properties-rds-optiongroup-optionconfigurations--examples--"></a>
 
-The following example template uses `OptionName` and `OptionVersion` parameters when creating an `AWS::RDS::OptionGroup` resource\.
+The following example template uses `OptionName` and `OptionVersion` parameters when creating an `AWS::RDS::OptionGroup` resource\. 
 
-#### JSON<a name="aws-properties-rds-optiongroup-optionconfiguration-example1.json"></a>
+#### JSON<a name="aws-properties-rds-optiongroup-optionconfigurations--examples----json"></a>
 
 ```
 {
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Description":"APEX has a dependency on XMLDB, so, there must be at least one XMLDB when there is an APEX",
-  "Parameters" : {
-    "OptionName" : {
-      "Type" : "String"
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "APEX has a dependency on XMLDB, so, there must be at least one XMLDB when there is an APEX",
+    "Parameters": {
+        "OptionName": {
+            "Type": "String"
+        },
+        "OptionVersion": {
+            "Type": "String"
+        }
     },
-    "OptionVersion" : {
-      "Type" : "String"
+    "Resources": {
+        "myOptionGroup": {
+            "Type": "AWS::RDS::OptionGroup",
+            "Properties": {
+                "EngineName": "oracle-ee",
+                "MajorEngineVersion": "11.2",
+                "OptionGroupDescription": "testing creating optionGroup with APEX version",
+                "OptionConfigurations": [
+                    {
+                        "OptionName": "XMLDB"
+                    },
+                    {
+                        "OptionName": {
+                            "Ref": "OptionName"
+                        },
+                        "OptionVersion": {
+                            "Ref": "OptionVersion"
+                        }
+                    }
+                ]
+            }
+        }
     }
-  },
-  "Resources": {
-    "myOptionGroup": {
-      "Type": "AWS::RDS::OptionGroup",
-      "Properties": {
-        "EngineName": "oracle-ee",
-        "MajorEngineVersion": "11.2",
-        "OptionGroupDescription": "testing creating optionGroup with APEX version",
-        "OptionConfigurations":[
-          {
-            "OptionName": "XMLDB"
-          },
-          {
-            "OptionName": {"Ref" : "OptionName"},
-            "OptionVersion" : {"Ref" : "OptionVersion"}
-          }
-        ]
-      }
-    }
-  }
 }
 ```
 
-#### YAML<a name="aws-properties-rds-optiongroup-optionconfiguration-example1.yaml"></a>
+#### YAML<a name="aws-properties-rds-optiongroup-optionconfigurations--examples----yaml"></a>
 
 ```
+--- 
 AWSTemplateFormatVersion: 2010-09-09
-Description: >-
-  APEX has a dependency on XMLDB, so, there must be at least one XMLDB when
-  there is an APEX
-Parameters:
-  OptionName:
+Description: "APEX has a dependency on XMLDB, so, there must be at least one XMLDB when there is an APEX"
+Parameters: 
+  OptionName: 
     Type: String
-  OptionVersion:
+  OptionVersion: 
     Type: String
-Resources:
-  myOptionGroup:
-    Type: AWS::RDS::OptionGroup
-    Properties:
+Resources: 
+  myOptionGroup: 
+    Properties: 
       EngineName: oracle-ee
-      MajorEngineVersion: '11.2'
-      OptionGroupDescription: testing creating optionGroup with APEX version
-      OptionConfigurations:
-        - OptionName: XMLDB
-        - OptionName: !Ref OptionName
-          OptionVersion: !Ref OptionVersion
+      MajorEngineVersion: "11.2"
+      OptionConfigurations: 
+        - 
+          OptionName: XMLDB
+        - 
+          OptionName: OptionName
+          OptionVersion: OptionVersion
+      OptionGroupDescription: "testing creating optionGroup with APEX version"
+    Type: "AWS::RDS::OptionGroup"
 ```
-
-## See Also<a name="aws-properties-rds-optiongroup-optionconfiguration-seealso"></a>
-+ [OptionConfiguration](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_OptionConfiguration.html) data type in the *Amazon RDS API Reference*
-+ [Working with Option Groups](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithOptionGroups.html) in the *Amazon RDS User Guide*

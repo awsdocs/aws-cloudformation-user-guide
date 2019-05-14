@@ -53,7 +53,7 @@ cfn-init --stack|-s stack.name.or.id \
 
 ## Example<a name="cfn-init-Examples"></a>
 
-### Amazon Linux Example<a name="w4ab1c21c34c29b9b2"></a>
+### Amazon Linux Example<a name="w4622ab1c21c34c29b9b2"></a>
 
 The following snippet shows the `UserData` property of an EC2 instance, which runs the `InstallAndRun` configset that is associated with the `WebServerInstance` resource\.
 

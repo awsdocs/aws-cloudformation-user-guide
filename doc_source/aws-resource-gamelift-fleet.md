@@ -12,18 +12,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::GameLift::Fleet",
   "Properties" : {
-    "[BuildId](#cfn-gamelift-fleet-buildid)" : String,
-    "[Description](#cfn-gamelift-fleet-description)" : String,
-    "[DesiredEC2Instances](#cfn-gamelift-fleet-desiredec2instances)" : Integer,
-    "[EC2InboundPermissions](#cfn-gamelift-fleet-ec2inboundpermissions)" : [ [EC2InboundPermission](aws-properties-gamelift-fleet-ec2inboundpermission.md), ... ],
-    "[EC2InstanceType](#cfn-gamelift-fleet-ec2instancetype)" : String,
-    "[LogPaths](#cfn-gamelift-fleet-logpaths)" : [ String, ... ],
-    "[MaxSize](#cfn-gamelift-fleet-maxsize)" : Integer,
-    "[MinSize](#cfn-gamelift-fleet-minsize)" : Integer,
-    "[Name](#cfn-gamelift-fleet-name)" : String,
-    "[ServerLaunchParameters](#cfn-gamelift-fleet-serverlaunchparameters)" : String,
-    "[ServerLaunchPath](#cfn-gamelift-fleet-serverlaunchpath)" : String
-  }
+      "[BuildId](#cfn-gamelift-fleet-buildid)" : String,
+      "[Description](#cfn-gamelift-fleet-description)" : String,
+      "[DesiredEC2Instances](#cfn-gamelift-fleet-desiredec2instances)" : Integer,
+      "[EC2InboundPermissions](#cfn-gamelift-fleet-ec2inboundpermissions)" : [ [IpPermission](aws-properties-gamelift-fleet-ec2inboundpermission.md), ... ],
+      "[EC2InstanceType](#cfn-gamelift-fleet-ec2instancetype)" : String,
+      "[LogPaths](#cfn-gamelift-fleet-logpaths)" : [ String, ... ],
+      "[MaxSize](#cfn-gamelift-fleet-maxsize)" : Integer,
+      "[MinSize](#cfn-gamelift-fleet-minsize)" : Integer,
+      "[Name](#cfn-gamelift-fleet-name)" : String,
+      "[ServerLaunchParameters](#cfn-gamelift-fleet-serverlaunchparameters)" : String,
+      "[ServerLaunchPath](#cfn-gamelift-fleet-serverlaunchpath)" : String
+    }
 }
 ```
 
@@ -31,103 +31,119 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::GameLift::Fleet
-Properties: 
-  [BuildId](#cfn-gamelift-fleet-buildid): String
-  [Description](#cfn-gamelift-fleet-description): String
-  [DesiredEC2Instances](#cfn-gamelift-fleet-desiredec2instances): Integer
-  [EC2InboundPermissions](#cfn-gamelift-fleet-ec2inboundpermissions):
-    - [EC2InboundPermission](aws-properties-gamelift-fleet-ec2inboundpermission.md)
-  [EC2InstanceType](#cfn-gamelift-fleet-ec2instancetype): String
-  [LogPaths](#cfn-gamelift-fleet-logpaths):
-    [ String, ... ]
-  [MaxSize](#cfn-gamelift-fleet-maxsize): Integer
-  [MinSize](#cfn-gamelift-fleet-minsize): Integer
-  [Name](#cfn-gamelift-fleet-name): String
-  [ServerLaunchParameters](#cfn-gamelift-fleet-serverlaunchparameters): String
-  [ServerLaunchPath](#cfn-gamelift-fleet-serverlaunchpath): String
+Properties : 
+﻿  [BuildId](#cfn-gamelift-fleet-buildid) : String
+﻿  [Description](#cfn-gamelift-fleet-description) : String
+﻿  [DesiredEC2Instances](#cfn-gamelift-fleet-desiredec2instances) : Integer
+﻿  [EC2InboundPermissions](#cfn-gamelift-fleet-ec2inboundpermissions) : 
+    - [IpPermission](aws-properties-gamelift-fleet-ec2inboundpermission.md)
+﻿  [EC2InstanceType](#cfn-gamelift-fleet-ec2instancetype) : String
+﻿  [LogPaths](#cfn-gamelift-fleet-logpaths) : 
+    - String
+﻿  [MaxSize](#cfn-gamelift-fleet-maxsize) : Integer
+﻿  [MinSize](#cfn-gamelift-fleet-minsize) : Integer
+﻿  [Name](#cfn-gamelift-fleet-name) : String
+﻿  [ServerLaunchParameters](#cfn-gamelift-fleet-serverlaunchparameters) : String
+﻿  [ServerLaunchPath](#cfn-gamelift-fleet-serverlaunchpath) : String
 ```
 
-## Properties<a name="w4ab1c21c10d135c21b7"></a>
+## Properties<a name="aws-resource-gamelift-fleet-properties"></a>
 
 `BuildId`  <a name="cfn-gamelift-fleet-buildid"></a>
-The unique identifier for the build that you want to use with this fleet\.  
+Unique identifier for a build to be deployed on the new fleet\. The custom game server build must have been successfully uploaded to Amazon GameLift and be in a `READY` status\. This fleet setting cannot be changed once the fleet is created\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Pattern*: `^build-\S+`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-gamelift-fleet-description"></a>
-Information that helps you identify the purpose of this fleet\.  
+Human\-readable description of a fleet\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Minimum*: `1`  
+*Maximum*: `1024`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DesiredEC2Instances`  <a name="cfn-gamelift-fleet-desiredec2instances"></a>
-The number of EC2 instances that you want in this fleet\.  
+Number of EC2 instances you want this fleet to host\.  
 *Required*: Yes  
 *Type*: Integer  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Minimum*: `0`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EC2InboundPermissions`  <a name="cfn-gamelift-fleet-ec2inboundpermissions"></a>
-The incoming traffic, expressed as IP ranges and port numbers, that is permitted to access the game server\. If you don't specify values, no traffic is permitted to your game servers\.  
+Range of IP addresses and port settings that permit inbound traffic to access game sessions that running on the fleet\. For fleets using a custom game build, this parameter is required before game sessions running on the fleet can accept connections\. For Realtime Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges for use by the Realtime servers\. You can specify multiple permission settings or add more by updating the fleet\.  
 *Required*: No  
-*Type*: List of [Amazon GameLift Fleet EC2InboundPermission](aws-properties-gamelift-fleet-ec2inboundpermission.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of [IpPermission](aws-properties-gamelift-fleet-ec2inboundpermission.md)  
+*Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EC2InstanceType`  <a name="cfn-gamelift-fleet-ec2instancetype"></a>
-The type of EC2 instances that the fleet uses\. EC2 instance types define the CPU, memory, storage, and networking capacity of the fleet's hosts\. For more information about the instance types that are supported by GameLift, see the [EC2InstanceType](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateFleet.html#gamelift-CreateFleet-request-EC2InstanceType) parameter in the *Amazon GameLift API Reference*\.  
+Name of an EC2 instance type that is supported in Amazon GameLift\. A fleet instance type determines the computing resources of each instance in the fleet, including CPU, memory, storage, and networking capacity\. For more information about the instance types that are supported by GameLift, see the [EC2InstanceType](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateFleet.html#gamelift-CreateFleet-request-EC2InstanceType) parameter in the *Amazon GameLift API Reference*\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Allowed Values*: `c3.2xlarge | c3.4xlarge | c3.8xlarge | c3.large | c3.xlarge | c4.2xlarge | c4.4xlarge | c4.8xlarge | c4.large | c4.xlarge | m3.2xlarge | m3.large | m3.medium | m3.xlarge | m4.10xlarge | m4.2xlarge | m4.4xlarge | m4.large | m4.xlarge | r3.2xlarge | r3.4xlarge | r3.8xlarge | r3.large | r3.xlarge | r4.16xlarge | r4.2xlarge | r4.4xlarge | r4.8xlarge | r4.large | r4.xlarge | t2.large | t2.medium | t2.micro | t2.small`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LogPaths`  <a name="cfn-gamelift-fleet-logpaths"></a>
-The path to game\-session log files that are generated by your game server, with the slashes \(`\`\) escaped\. After a game session has been terminated, GameLift captures and stores the logs in an S3 bucket\.  
+This parameter is no longer used\. Instead, to specify where Amazon GameLift should store log files once a server process shuts down, use the Amazon GameLift server API `ProcessReady()` and specify one or more directory paths in `logParameters`\. See more information in the [Server API Reference](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api-ref.html#gamelift-sdk-server-api-ref-dataypes-process)\.   
 *Required*: No  
-*Type*: List of String values  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Type*: List of String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MaxSize`  <a name="cfn-gamelift-fleet-maxsize"></a>
-The maximum number of EC2 instances that you want to allow in this fleet\. By default, AWS CloudFormation, sets this property to `1`\.  
+Maximum value allowed for the fleet's instance count\. Default if not set is 1\.  
 *Required*: No  
 *Type*: Integer  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Minimum*: `0`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinSize`  <a name="cfn-gamelift-fleet-minsize"></a>
-The minimum number of EC2 instances that you want to allow in this fleet\. By default, AWS CloudFormation, sets this property to `0`\.  
+Minimum value allowed for the fleet's instance count\. Default if not set is 0\.  
 *Required*: No  
 *Type*: Integer  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Minimum*: `0`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-gamelift-fleet-name"></a>
-An identifier to associate with this fleet\. Fleet names don't need to be unique\.  
+Descriptive label that is associated with a fleet\. Fleet names do not need to be unique\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Minimum*: `1`  
+*Maximum*: `1024`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServerLaunchParameters`  <a name="cfn-gamelift-fleet-serverlaunchparameters"></a>
 The parameters that are required to launch your game server\. Specify these parameters as a string of command\-line parameters, such as `+sv_port 33435 +start_lobby`\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `1024`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServerLaunchPath`  <a name="cfn-gamelift-fleet-serverlaunchpath"></a>
-The location of your game server that GameLift launches\. You must escape the slashes \(`\`\) and use the following pattern: `C:\\game\\launchpath`\. For example, if your game server files are in the `MyGame` folder, the path should be `C:\\game\\MyGame\\server.exe`\.  
+The location of your game server that GameLift launches\. You must escape the slashes \(\\\) and use the following pattern: `C:\\game\\launchpath`\. For example, if your game server files are in the `MyGame` folder, the path should be `C:\\game\\MyGame\\server.exe`\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `1024`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Value<a name="w4ab1c21c10d135c21b9"></a>
+## Return Values<a name="aws-resource-gamelift-fleet-return-values"></a>
 
-### Ref<a name="w4ab1c21c10d135c21b9b2"></a>
+### Ref<a name="aws-resource-gamelift-fleet-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the fleet ID, such as `myfleet-a01234b56-7890-1de2-f345-g67h8i901j2k`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the fleet ID, such as `myfleet-a01234b56-7890-1de2-f345-g67h8i901j2k`\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Example<a name="w4ab1c21c10d135c21c11"></a>
+## Examples<a name="aws-resource-gamelift-fleet--examples"></a>
+
+### Create GameLift fleet<a name="aws-resource-gamelift-fleet--examples--Create_GameLift_fleet"></a>
 
 The following example creates a GameLift fleet named `MyGameFleet` with two inbound permissions\. The fleet uses a `Ref` intrinsic function to specify a build, which can be declared elsewhere in the same template\. For the log path and server launch path, the example uses the escape character \(`\`\) to escape the slashes \(`\`\)\.
 
-### JSON<a name="aws-resource-gamelift-fleet-example.json"></a>
+#### JSON<a name="aws-resource-gamelift-fleet--examples--Create_GameLift_fleet--json"></a>
 
 ```
 "FleetResource": {
@@ -161,7 +177,7 @@ The following example creates a GameLift fleet named `MyGameFleet` with two inbo
 }
 ```
 
-### YAML<a name="aws-resource-gamelift-fleet-example.yaml"></a>
+#### YAML<a name="aws-resource-gamelift-fleet--examples--Create_GameLift_fleet--yaml"></a>
 
 ```
 FleetResource: 
@@ -189,3 +205,6 @@ FleetResource:
         IpRange: "192.168.0.0/24"
         Protocol: "UDP"
 ```
+
+## See Also<a name="aws-resource-gamelift-fleet--seealso"></a>
++  [CreateFleet](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateFleet.html) in the *Amazon GameLift API Reference* 

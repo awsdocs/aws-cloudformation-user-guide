@@ -1,29 +1,29 @@
-# DynamoDB Table SSESpecification<a name="aws-properties-dynamodb-table-ssespecification"></a>
+# AWS::DynamoDB::Table SSESpecification<a name="aws-properties-dynamodb-table-ssespecification"></a>
 
-The `SSESpecification` property is part of the [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md) resource that specifies the settings to enable server\-side encryption\.
+Represents the settings used to enable server\-side encryption\.
 
-If you do not specify the `SSESpecification` property type, Amazon DynamoDB will create an unencrypted table, the same as if you had specified the `SSESpecification` property type with its `SSEEnabled` property set to `false`\. As a best practice, for consistency only specify the `SSESpecification` property type \(with its `SSEEnabled` property set to `true`\) if you want DynamoDB to create an encrypted table\. 
+## Syntax<a name="aws-properties-dynamodb-table-ssespecification-syntax"></a>
 
-## Syntax<a name="w4ab1c21c10c99c14c54b7"></a>
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-properties-dynamodb-table-ssespecification.json"></a>
+### JSON<a name="aws-properties-dynamodb-table-ssespecification-syntax.json"></a>
 
 ```
 {
-  "[SSEEnabled](#cfn-dynamodb-table-ssespecification-sseenabled)" : Boolean
+  "[SSEEnabled](#cfn-dynamodb-table-ssespecification-sseenabled)" : Boolean
 }
 ```
 
-### YAML<a name="aws-properties-dynamodb-table-ssespecification.yaml"></a>
+### YAML<a name="aws-properties-dynamodb-table-ssespecification-syntax.yaml"></a>
 
 ```
-[SSEEnabled](#cfn-dynamodb-table-ssespecification-sseenabled): Boolean
+﻿  [SSEEnabled](#cfn-dynamodb-table-ssespecification-sseenabled) : Boolean
 ```
 
-## Properties<a name="w4ab1c21c10c99c14c54b9"></a>
+## Properties<a name="aws-properties-dynamodb-table-ssespecification-properties"></a>
 
 `SSEEnabled`  <a name="cfn-dynamodb-table-ssespecification-sseenabled"></a>
-Whether server\-side encryption is enabled or not\.  
+Indicates whether server\-side encryption is enabled \(true\) or disabled \(false\) on the table\. If enabled \(true\), server\-side encryption type is set to `KMS`\. If disabled \(false\) or not specified, server\-side encryption is set to AWS owned CMK\.  
 *Required*: Yes  
 *Type*: Boolean  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,18 +1,20 @@
-# AWS CodePipeline Pipeline Stages Actions<a name="aws-properties-codepipeline-pipeline-stages-actions"></a>
+# AWS::CodePipeline::Pipeline ActionDeclaration<a name="aws-properties-codepipeline-pipeline-stages-actions"></a>
 
-`Actions` is a property of the [AWS CodePipeline Pipeline Stages](aws-properties-codepipeline-pipeline-stages.md) property that specifies an action for an AWS CodePipeline stage\.
+Represents information about an action declaration\.
 
-## Syntax<a name="w4ab1c21c10c75c17c17b5"></a>
+## Syntax<a name="aws-properties-codepipeline-pipeline-stages-actions-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-codepipeline-pipeline-stages-actions-syntax.json"></a>
 
 ```
 {
-  "[ActionTypeId](#cfn-codepipeline-pipeline-stages-actions-actiontypeid)" : ActionTypeID,
-  "[Configuration](#cfn-codepipeline-pipeline-stages-actions-configuration)" : { Key : Value },
-  "[InputArtifacts](#cfn-codepipeline-pipeline-stages-actions-inputartifacts)" : [ InputArtifacts, ... ],
+  "[ActionTypeId](#cfn-codepipeline-pipeline-stages-actions-actiontypeid)" : [ActionTypeId](aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.md),
+  "[Configuration](#cfn-codepipeline-pipeline-stages-actions-configuration)" : Json,
+  "[InputArtifacts](#cfn-codepipeline-pipeline-stages-actions-inputartifacts)" : [ [InputArtifact](aws-properties-codepipeline-pipeline-stages-actions-inputartifacts.md), ... ],
   "[Name](#cfn-codepipeline-pipeline-stages-actions-name)" : String,
-  "[OutputArtifacts](#cfn-codepipeline-pipeline-stages-actions-outputartifacts)" : [ OutputArtifacts, ... ],
+  "[OutputArtifacts](#cfn-codepipeline-pipeline-stages-actions-outputartifacts)" : [ [OutputArtifact](aws-properties-codepipeline-pipeline-stages-actions-outputartifacts.md), ... ],
   "[Region](#cfn-codepipeline-pipeline-stages-actions-region)" : String,
   "[RoleArn](#cfn-codepipeline-pipeline-stages-actions-rolearn)" : String,
   "[RunOrder](#cfn-codepipeline-pipeline-stages-actions-runorder)" : Integer
@@ -22,58 +24,74 @@
 ### YAML<a name="aws-properties-codepipeline-pipeline-stages-actions-syntax.yaml"></a>
 
 ```
-[ActionTypeId](#cfn-codepipeline-pipeline-stages-actions-actiontypeid):
-  ActionTypeID
-[Configuration](#cfn-codepipeline-pipeline-stages-actions-configuration):
-  Key : Value
-[InputArtifacts](#cfn-codepipeline-pipeline-stages-actions-inputartifacts):
-  - InputArtifacts
-[Name](#cfn-codepipeline-pipeline-stages-actions-name): String
-[OutputArtifacts](#cfn-codepipeline-pipeline-stages-actions-outputartifacts):
-  - OutputArtifacts
-[Region](#cfn-codepipeline-pipeline-stages-actions-region): String
-[RoleArn](#cfn-codepipeline-pipeline-stages-actions-rolearn): String
-[RunOrder](#cfn-codepipeline-pipeline-stages-actions-runorder): Integer
+﻿  [ActionTypeId](#cfn-codepipeline-pipeline-stages-actions-actiontypeid) : 
+    [ActionTypeId](aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.md)
+﻿  [Configuration](#cfn-codepipeline-pipeline-stages-actions-configuration) : Json
+﻿  [InputArtifacts](#cfn-codepipeline-pipeline-stages-actions-inputartifacts) : 
+    - [InputArtifact](aws-properties-codepipeline-pipeline-stages-actions-inputartifacts.md)
+﻿  [Name](#cfn-codepipeline-pipeline-stages-actions-name) : String
+﻿  [OutputArtifacts](#cfn-codepipeline-pipeline-stages-actions-outputartifacts) : 
+    - [OutputArtifact](aws-properties-codepipeline-pipeline-stages-actions-outputartifacts.md)
+﻿  [Region](#cfn-codepipeline-pipeline-stages-actions-region) : String
+﻿  [RoleArn](#cfn-codepipeline-pipeline-stages-actions-rolearn) : String
+﻿  [RunOrder](#cfn-codepipeline-pipeline-stages-actions-runorder) : Integer
 ```
 
-## Properties<a name="w4ab1c21c10c75c17c17b7"></a>
+## Properties<a name="aws-properties-codepipeline-pipeline-stages-actions-properties"></a>
 
 `ActionTypeId`  <a name="cfn-codepipeline-pipeline-stages-actions-actiontypeid"></a>
-Specifies the action type and the provider of the action\.  
+The configuration information for the action type\.  
 *Required*: Yes  
-*Type*: [AWS CodePipeline Pipeline Stages Actions ActionTypeId](aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.md)
+*Type*: [ActionTypeId](aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Configuration`  <a name="cfn-codepipeline-pipeline-stages-actions-configuration"></a>
-The action's configuration\. These are key\-value pairs that specify input values for an action\. For more information, see [ Action Structure Requirements in AWS CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements) in the *AWS CodePipeline User Guide*\.  
+The action declaration's configuration\.  
 *Required*: No  
-*Type*: JSON object
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputArtifacts`  <a name="cfn-codepipeline-pipeline-stages-actions-inputartifacts"></a>
-The name or ID of the artifact that the action consumes, such as a test or build artifact\.  
+The name or ID of the artifact consumed by the action, such as a test or build artifact\.  
 *Required*: No  
-*Type*: List of [AWS CodePipeline Pipeline Stages Actions InputArtifacts](aws-properties-codepipeline-pipeline-stages-actions-inputartifacts.md)
+*Type*: List of [InputArtifact](aws-properties-codepipeline-pipeline-stages-actions-inputartifacts.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-codepipeline-pipeline-stages-actions-name"></a>
-The action name\.  
+The action declaration's name\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `100`  
+*Pattern*: `[A-Za-z0-9.@\-_]+`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OutputArtifacts`  <a name="cfn-codepipeline-pipeline-stages-actions-outputartifacts"></a>
-The artifact name or ID that is a result of the action, such as a test or build artifact\.  
+The name or ID of the result of the action declaration, such as a test or build artifact\.  
 *Required*: No  
-*Type*: List of [AWS CodePipeline Pipeline Stages Actions OutputArtifacts](aws-properties-codepipeline-pipeline-stages-actions-outputartifacts.md)
+*Type*: List of [OutputArtifact](aws-properties-codepipeline-pipeline-stages-actions-outputartifacts.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Region`  <a name="cfn-codepipeline-pipeline-stages-actions-region"></a>
-Specifies the action’s AWS Region, such as `us-east-1`\.  
+The action declaration's AWS Region, such as us\-east\-1\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Minimum*: `4`  
+*Maximum*: `30`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-codepipeline-pipeline-stages-actions-rolearn"></a>
-The Amazon Resource Name \(ARN\) of a service role that the action uses\. The pipeline's role assumes this role\.  
+The ARN of the IAM service role that will perform the declared action\. This is assumed through the roleArn for the pipeline\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Maximum*: `1024`  
+*Pattern*: `arn:aws(-[\w]+)*:iam::[0-9]{12}:role/.*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RunOrder`  <a name="cfn-codepipeline-pipeline-stages-actions-runorder"></a>
-The order in which AWS CodePipeline runs this action\.  
+The order in which actions are run\.  
 *Required*: No  
-*Type*: Integer
+*Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `999`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

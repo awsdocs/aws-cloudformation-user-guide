@@ -1,8 +1,10 @@
-# Route 53 Record Set GeoLocation Property<a name="aws-properties-route53-recordset-geolocation"></a>
+# AWS::Route53::RecordSet GeoLocation<a name="aws-properties-route53-recordset-geolocation"></a>
 
-The `GeoLocation` property is part of the [AWS::Route53::RecordSet](aws-properties-route53-recordset.md) resource that describes how Route 53 responds to DNS queries based on the geographic location of the query\. This property is not compatible with the `Region` property\.
+A complex type that contains information about a geographic location\.
 
-## Syntax<a name="w4ab1c21c10d177c22c21b5"></a>
+## Syntax<a name="aws-properties-route53-recordset-geolocation-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-route53-recordset-geolocation-syntax.json"></a>
 
@@ -17,27 +19,38 @@ The `GeoLocation` property is part of the [AWS::Route53::RecordSet](aws-properti
 ### YAML<a name="aws-properties-route53-recordset-geolocation-syntax.yaml"></a>
 
 ```
-[ContinentCode](#cfn-route53-recordset-geolocation-continentcode): String
-[CountryCode](#cfn-route53-recordset-geolocation-countrycode): String
-[SubdivisionCode](#cfn-route53-recordset-geolocation-subdivisioncode): String
+﻿  [ContinentCode](#cfn-route53-recordset-geolocation-continentcode) : String
+﻿  [CountryCode](#cfn-route53-recordset-geolocation-countrycode) : String
+﻿  [SubdivisionCode](#cfn-route53-recordset-geolocation-subdivisioncode) : String
 ```
 
-## Properties<a name="w4ab1c21c10d177c22c21b7"></a>
+## Properties<a name="aws-properties-route53-recordset-geolocation-properties"></a>
 
 `ContinentCode`  <a name="cfn-route53-recordset-geolocation-continentcode"></a>
-All DNS queries from the continent that you specified are routed to this resource record set\. If you specify this property, omit the `CountryCode` and `SubdivisionCode` properties\.  
-For valid values, see [GeoLocation](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GeoLocation.html) in the *Amazon Route 53 API Reference*\.  
+The two\-letter code for the continent\.  
+Valid values: `AF` \| `AN` \| `AS` \| `EU` \| `OC` \| `NA` \| `SA`   
+Constraint: Specifying `ContinentCode` with either `CountryCode` or `SubdivisionCode` returns an `InvalidInput` error\.  
+*Required*: No  
 *Type*: String  
-*Required*: Conditional\. You must specify this or the `CountryCode` property\.
+*Minimum*: `2`  
+*Maximum*: `2`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CountryCode`  <a name="cfn-route53-recordset-geolocation-countrycode"></a>
-All DNS queries from the country that you specified are routed to this resource record set\. If you specify this property, omit the `ContinentCode` property\. To specify the default location, use \* for this property\.  
-For valid values, see [GeoLocation](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GeoLocation.html) in the *Amazon Route 53 API Reference*\.  
+The two\-letter code for the country\.  
+*Required*: No  
 *Type*: String  
-*Required*: Conditional\. You must specify this or the `ContinentCode` property\.
+*Minimum*: `1`  
+*Maximum*: `2`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubdivisionCode`  <a name="cfn-route53-recordset-geolocation-subdivisioncode"></a>
-If you specified `US` for the country code, you can specify a state in the United States\. All DNS queries from the state that you specified are routed to this resource record set\. If you specify this property, you must specify `US` for the `CountryCode` and omit the `ContinentCode` property\.  
-For valid values, see [GeoLocation](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GeoLocation.html) in the *Amazon Route 53 API Reference*\.  
+The code for the subdivision\. Route 53 currently supports only states in the United States\.  
+*Required*: No  
 *Type*: String  
-*Required*: No
+*Minimum*: `1`  
+*Maximum*: `3`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See Also<a name="aws-properties-route53-recordset-geolocation--seealso"></a>
++ [GeoLocation](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GeoLocation.html) in the *Amazon Route 53 API Reference*

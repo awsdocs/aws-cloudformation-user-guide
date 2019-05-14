@@ -1,190 +1,39 @@
-# Amazon EMR InstanceGroupConfig AutoScalingPolicy<a name="aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy"></a>
+# AWS::EMR::InstanceGroupConfig AutoScalingPolicy<a name="aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy"></a>
 
-`AutoScalingPolicy` is a property of the [AWS::EMR::InstanceGroupConfig](aws-resource-emr-instancegroupconfig.md) resource that specifies the constraints and rules for an Auto Scaling group policy\. For more information, see [PutAutoScalingPolicy](https://docs.aws.amazon.com//ElasticMapReduce/latest/API/API_PutAutoScalingPolicy.html) in the Amazon EMR API Reference\.
+`AutoScalingPolicy` defines how an instance group dynamically adds and terminates EC2 instances in response to the value of a CloudWatch metric\. For more information, see [Using Automatic Scaling in Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html) in the *Amazon EMR Management Guide*\.
 
-## Syntax<a name="w4ab1c21c10d132c22c17b5"></a>
+## Syntax<a name="aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy-syntax.json"></a>
 
 ```
 {
-  "[Constraints](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-constraints)" : ScalingConstraints,
-  "[Rules](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-rules)" : [ ScalingRule ]
+  "[Constraints](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-constraints)" : [ScalingConstraints](aws-properties-elasticmapreduce-instancegroupconfig-scalingconstraints.md),
+  "[Rules](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-rules)" : [ [ScalingRule](aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.md), ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy-syntax.yaml"></a>
 
 ```
-[Constraints](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-constraints): 
-  ScalingConstraints
-[Rules](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-rules): 
-  - ScalingRule
+﻿  [Constraints](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-constraints) : 
+    [ScalingConstraints](aws-properties-elasticmapreduce-instancegroupconfig-scalingconstraints.md)
+﻿  [Rules](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-rules) : 
+    - [ScalingRule](aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.md)
 ```
 
-## Properties<a name="w4ab1c21c10d132c22c17b7"></a>
+## Properties<a name="aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy-properties"></a>
 
 `Constraints`  <a name="cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-constraints"></a>
-The upper and lower Amazon EC2 instance limits for an automatic scaling policy\. Automatic scaling activity doesn't cause an instance group to grow above or below these limits\.   
+The upper and lower EC2 instance limits for an automatic scaling policy\. Automatic scaling activity will not cause an instance group to grow above or below these limits\.  
 *Required*: Yes  
-*Type*: [Amazon EMR InstanceGroupConfig ScalingConstraints](aws-properties-elasticmapreduce-instancegroupconfig-scalingconstraints.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: [ScalingConstraints](aws-properties-elasticmapreduce-instancegroupconfig-scalingconstraints.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Rules`  <a name="cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-rules"></a>
-The scale\-in and scale\-out rules that compose the automatic scaling policy\.  
+The scale\-in and scale\-out rules that comprise the automatic scaling policy\.  
 *Required*: Yes  
-*Type*: List of [Amazon EMR InstanceGroupConfig ScalingRule](aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
-
-## Example<a name="w4ab1c21c10d132c22c17b9"></a>
-
-The following example defines an `AutoScalingPolicy` for an `InstanceGroupConfig` resource\.
-
-### JSON<a name="w4ab1c21c10d132c22c17b9b4"></a>
-
-```
-"MyInstanceGroupConfig": {
-  "Type": "AWS::EMR::InstanceGroupConfig",
-  "Properties": {
-    "InstanceCount": 1,
-    "InstanceType": {
-      "Ref": "InstanceType"
-    },
-    "InstanceRole": "TASK",
-    "Market": "ON_DEMAND",
-    "Name": "cfnTask",
-    "JobFlowId": {
-      "Ref": "MyCluster"
-    },
-    "AutoScalingPolicy": {
-      "Constraints": {
-        "MinCapacity": {
-          "Ref": "MinCapacity"
-        },
-        "MaxCapacity": {
-          "Ref": "MaxCapacity"
-        }
-      },
-      "Rules": [
-        {
-          "Name": "Scale-out",
-          "Description": "Scale-out policy",
-          "Action": {
-            "SimpleScalingPolicyConfiguration": {
-              "AdjustmentType": "CHANGE_IN_CAPACITY",
-              "ScalingAdjustment": 1,
-              "CoolDown": 300
-            }
-          },
-          "Trigger": {
-            "CloudWatchAlarmDefinition": {
-              "Dimensions": [
-                {
-                  "Key": "JobFlowId",
-                  "Value": "${emr.clusterId}"
-                }
-              ],
-              "EvaluationPeriods": 1,
-              "Namespace": "AWS/ElasticMapReduce",
-              "Period": 300,
-              "ComparisonOperator": "LESS_THAN",
-              "Statistic": "AVERAGE",
-              "Threshold": 15,
-              "Unit": "PERCENT",
-              "MetricName": "YARNMemoryAvailablePercentage"
-            }
-          }
-        },
-        {
-          "Name": "Scale-in",
-          "Description": "Scale-in policy",
-          "Action": {
-            "SimpleScalingPolicyConfiguration": {
-              "AdjustmentType": "CHANGE_IN_CAPACITY",
-              "ScalingAdjustment": -1,
-              "CoolDown": 300
-            }
-          },
-          "Trigger": {
-            "CloudWatchAlarmDefinition": {
-              "Dimensions": [
-                {
-                  "Key": "JobFlowId",
-                  "Value": "${emr.clusterId}"
-                }
-              ],
-              "EvaluationPeriods": 1,
-              "Namespace": "AWS/ElasticMapReduce",
-              "Period": 300,
-              "ComparisonOperator": "GREATER_THAN",
-              "Statistic": "AVERAGE",
-              "Threshold": 75,
-              "Unit": "PERCENT",
-              "MetricName": "YARNMemoryAvailablePercentage"
-            }
-          }
-        }
-      ]
-    }
-  }
-}
-```
-
-### YAML<a name="w4ab1c21c10d132c22c17b9b6"></a>
-
-```
-MyInstanceGroupConfig:
-  Type: 'AWS::EMR::InstanceGroupConfig'
-  Properties:
-    InstanceCount: 1
-    InstanceType: !Ref InstanceType
-    InstanceRole: TASK
-    Market: ON_DEMAND
-    Name: cfnTask
-    JobFlowId: !Ref MyCluster
-    AutoScalingPolicy:
-      Constraints:
-        MinCapacity: !Ref MinCapacity
-        MaxCapacity: !Ref MaxCapacity
-      Rules:
-        - Name: Scale-out
-          Description: Scale-out policy
-          Action:
-            SimpleScalingPolicyConfiguration:
-              AdjustmentType: CHANGE_IN_CAPACITY
-              ScalingAdjustment: 1
-              CoolDown: 300
-          Trigger:
-            CloudWatchAlarmDefinition:
-              Dimensions:
-                - Key: JobFlowId
-                  Value: '${emr.clusterId}'
-              EvaluationPeriods: 1
-              Namespace: AWS/ElasticMapReduce
-              Period: 300
-              ComparisonOperator: LESS_THAN
-              Statistic: AVERAGE
-              Threshold: 15
-              Unit: PERCENT
-              MetricName: YARNMemoryAvailablePercentage
-        - Name: Scale-in
-          Description: Scale-in policy
-          Action:
-            SimpleScalingPolicyConfiguration:
-              AdjustmentType: CHANGE_IN_CAPACITY
-              ScalingAdjustment: -1
-              CoolDown: 300
-          Trigger:
-            CloudWatchAlarmDefinition:
-              Dimensions:
-                - Key: JobFlowId
-                  Value: '${emr.clusterId}'
-              EvaluationPeriods: 1
-              Namespace: AWS/ElasticMapReduce
-              Period: 300
-              ComparisonOperator: GREATER_THAN
-              Statistic: AVERAGE
-              Threshold: 75
-              Unit: PERCENT
-              MetricName: YARNMemoryAvailablePercentage
-```
+*Type*: List of [ScalingRule](aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

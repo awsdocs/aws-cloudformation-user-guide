@@ -1,50 +1,65 @@
-# Amazon DynamoDB Table GlobalSecondaryIndex<a name="aws-properties-dynamodb-gsi"></a>
+# AWS::DynamoDB::Table GlobalSecondaryIndex<a name="aws-properties-dynamodb-gsi"></a>
 
-Describes global secondary indexes for the [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md) resource\.
+Represents the properties of a global secondary index\.
 
-## Syntax<a name="w4ab1c21c10c99c14c27b5"></a>
+## Syntax<a name="aws-properties-dynamodb-gsi-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-dynamodb-gsi-syntax.json"></a>
 
 ```
 {
   "[IndexName](#cfn-dynamodb-gsi-indexname)" : String,
-  "[KeySchema](#cfn-dynamodb-gsi-keyschema)" : [ KeySchema, ... ],
-  "[Projection](#cfn-dynamodb-gsi-projection)" : { Projection },
-  "[ProvisionedThroughput](#cfn-dynamodb-gsi-provisionthroughput)" : { ProvisionedThroughput }
+  "[KeySchema](#cfn-dynamodb-gsi-keyschema)" : [ [KeySchema](aws-properties-dynamodb-keyschema.md), ... ],
+  "[Projection](#cfn-dynamodb-gsi-projection)" : [Projection](aws-properties-dynamodb-projectionobject.md),
+  "[ProvisionedThroughput](#cfn-dynamodb-gsi-provisionedthroughput)" : [ProvisionedThroughput](aws-properties-dynamodb-provisionedthroughput.md)
 }
 ```
 
 ### YAML<a name="aws-properties-dynamodb-gsi-syntax.yaml"></a>
 
 ```
-[IndexName](#cfn-dynamodb-gsi-indexname): String
-[KeySchema](#cfn-dynamodb-gsi-keyschema):
-  - KeySchema
-[Projection](#cfn-dynamodb-gsi-projection):
-  Projection
-[ProvisionedThroughput](#cfn-dynamodb-gsi-provisionthroughput):
-  ProvisionedThroughput
+﻿  [IndexName](#cfn-dynamodb-gsi-indexname) : String
+﻿  [KeySchema](#cfn-dynamodb-gsi-keyschema) : 
+    - [KeySchema](aws-properties-dynamodb-keyschema.md)
+﻿  [Projection](#cfn-dynamodb-gsi-projection) : 
+    [Projection](aws-properties-dynamodb-projectionobject.md)
+﻿  [ProvisionedThroughput](#cfn-dynamodb-gsi-provisionedthroughput) : 
+    [ProvisionedThroughput](aws-properties-dynamodb-provisionedthroughput.md)
 ```
 
-## Properties<a name="w4ab1c21c10c99c14c27b7"></a>
+## Properties<a name="aws-properties-dynamodb-gsi-properties"></a>
 
 `IndexName`  <a name="cfn-dynamodb-gsi-indexname"></a>
-The name of the global secondary index\. The index name can be 3 – 255 characters long and must satisfy the regular expression pattern `[a-zA-Z0-9_.-]+`\.  
+The name of the global secondary index\. The name must be unique among all other indexes on this table\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Minimum*: `3`  
+*Maximum*: `255`  
+*Pattern*: `[a-zA-Z0-9_.-]+`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeySchema`  <a name="cfn-dynamodb-gsi-keyschema"></a>
-The complete index key schema for the global secondary index, which consists of one or more pairs of attribute names and key types\.  
+The complete key schema for a global secondary index, which consists of one or more pairs of attribute names and key types:  
++  `HASH` \- partition key
++  `RANGE` \- sort key
+The partition key of an item is also known as its *hash attribute*\. The term "hash attribute" derives from DynamoDB' usage of an internal hash function to evenly distribute data items across partitions, based on their partition key values\.  
+The sort key of an item is also known as its *range attribute*\. The term "range attribute" derives from the way DynamoDB stores items with the same partition key physically close together, in sorted order by the sort key value\.
 *Required*: Yes  
-*Type*: List of [KeySchema](aws-properties-dynamodb-keyschema.md)
+*Type*: [List](aws-properties-dynamodb-keyschema.md) of [KeySchema](aws-properties-dynamodb-keyschema.md)  
+*Maximum*: `2`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Projection`  <a name="cfn-dynamodb-gsi-projection"></a>
-Attributes that are copied \(projected\) from the source table into the index\. These attributes are in addition to the primary key attributes and index key attributes, which are automatically projected\.  
+Represents attributes that are copied \(projected\) from the table into the global secondary index\. These are in addition to the primary key attributes and index key attributes, which are automatically projected\.   
 *Required*: Yes  
-*Type*: [Projection](aws-properties-dynamodb-projectionobject.md)
+*Type*: [Projection](aws-properties-dynamodb-projectionobject.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`ProvisionedThroughput`  <a name="cfn-dynamodb-gsi-provisionthroughput"></a>
-The provisioned throughput settings for the index\.  
-*Required*: Conditional\. If you set `BillingMode` as `PROVISIONED`, you must specify this property\. If you set `BillingMode` as `PAY_PER_REQUEST`, you cannot specify this property\.  
-*Type*: [ProvisionedThroughput](aws-properties-dynamodb-provisionedthroughput.md)
+`ProvisionedThroughput`  <a name="cfn-dynamodb-gsi-provisionedthroughput"></a>
+Represents the provisioned throughput settings for the specified global secondary index\.  
+For current minimum and maximum provisioned throughput values, see [Limits](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in the *Amazon DynamoDB Developer Guide*\.  
+*Required*: No  
+*Type*: [ProvisionedThroughput](aws-properties-dynamodb-provisionedthroughput.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

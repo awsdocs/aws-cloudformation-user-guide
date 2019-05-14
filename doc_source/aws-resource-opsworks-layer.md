@@ -1,6 +1,11 @@
 # AWS::OpsWorks::Layer<a name="aws-resource-opsworks-layer"></a>
 
-Creates an AWS OpsWorks layer\. A layer defines, for example, which packages and applications are installed and how they are configured\.
+Creates a layer\. For more information, see [How to Create a Layer](https://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-create.html)\.
+
+**Note**  
+You should use **CreateLayer** for noncustom layer types such as PHP App Server only if the stack does not have an existing layer of that type\. A stack can have at most one instance of each noncustom layer; if you attempt to create a second instance, **CreateLayer** fails\. A stack can have an arbitrary number of custom layers, so you can call **CreateLayer** as many times as you like for that layer type\.
+
+ **Required Permissions**: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions\. For more information on user permissions, see [Managing User Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html)\.
 
 ## Syntax<a name="aws-resource-opsworks-layer-syntax"></a>
 
@@ -10,197 +15,205 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "Type": "AWS::OpsWorks::Layer",
-  "Properties": {
-    "[Attributes](#cfn-opsworks-layer-attributes)" : { String:String },
-    "[AutoAssignElasticIps](#cfn-opsworks-layer-autoassignelasticips)" : Boolean,
-    "[AutoAssignPublicIps](#cfn-opsworks-layer-autoassignpublicips)" : Boolean,
-    "[CustomInstanceProfileArn](#cfn-opsworks-layer-custinstanceprofilearn)" : String,
-    "[CustomJson](#cfn-opsworks-layer-customjson)" : JSON object,
-    "[CustomRecipes](#cfn-opsworks-layer-customrecipes)" : Recipes,
-    "[CustomSecurityGroupIds](#cfn-opsworks-layer-custsecuritygroupnids)" :  [ String, ... ],
-    "[EnableAutoHealing](#cfn-opsworks-layer-enableautohealing)" : Boolean,
-    "[InstallUpdatesOnBoot](#cfn-opsworks-layer-installupdatesonboot)" : Boolean,
-    "[LifecycleEventConfiguration](#cfn-opsworks-layer-lifecycleeventconfiguration)" : LifeCycleEventConfiguration,
-    "[LoadBasedAutoScaling](#cfn-opsworks-layer-loadbasedautoscaling)" : LoadBasedAutoScaling,
-    "[Name](#cfn-opsworks-layer-name)" : String,
-    "[Packages](#cfn-opsworks-layer-packages)" : [ String, ... ],
-    "[Shortname](#cfn-opsworks-layer-shortname)" : String,
-    "[StackId](#cfn-opsworks-layer-stackid)" : String,
-    "[Tags](#cfn-opsworks-layer-tags)" : [ [Tags](aws-properties-resource-tags.md), ... ],
-    "[Type](#cfn-opsworks-layer-type)" : String,
-    "[VolumeConfigurations](#cfn-opsworks-layer-volconfig)" : [ VolumeConfiguration, ... ]
-  }
+  "Type" : "AWS::OpsWorks::Layer",
+  "Properties" : {
+      "[Attributes](#cfn-opsworks-layer-attributes)" : {Key : Value, ...},
+      "[AutoAssignElasticIps](#cfn-opsworks-layer-autoassignelasticips)" : Boolean,
+      "[AutoAssignPublicIps](#cfn-opsworks-layer-autoassignpublicips)" : Boolean,
+      "[CustomInstanceProfileArn](#cfn-opsworks-layer-custominstanceprofilearn)" : String,
+      "[CustomJson](#cfn-opsworks-layer-customjson)" : Json,
+      "[CustomRecipes](#cfn-opsworks-layer-customrecipes)" : [Recipes](aws-properties-opsworks-layer-recipes.md),
+      "[CustomSecurityGroupIds](#cfn-opsworks-layer-customsecuritygroupids)" : [ String, ... ],
+      "[EnableAutoHealing](#cfn-opsworks-layer-enableautohealing)" : Boolean,
+      "[InstallUpdatesOnBoot](#cfn-opsworks-layer-installupdatesonboot)" : Boolean,
+      "[LifecycleEventConfiguration](#cfn-opsworks-layer-lifecycleeventconfiguration)" : [LifecycleEventConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration.md),
+      "[LoadBasedAutoScaling](#cfn-opsworks-layer-loadbasedautoscaling)" : [LoadBasedAutoScaling](aws-properties-opsworks-layer-loadbasedautoscaling.md),
+      "[Name](#cfn-opsworks-layer-name)" : String,
+      "[Packages](#cfn-opsworks-layer-packages)" : [ String, ... ],
+      "[Shortname](#cfn-opsworks-layer-shortname)" : String,
+      "[StackId](#cfn-opsworks-layer-stackid)" : String,
+      "[Tags](#cfn-opsworks-layer-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[Type](#cfn-opsworks-layer-type)" : String,
+      "[UseEbsOptimizedInstances](#cfn-opsworks-layer-useebsoptimizedinstances)" : Boolean,
+      "[VolumeConfigurations](#cfn-opsworks-layer-volumeconfigurations)" : [ [VolumeConfiguration](aws-properties-opsworks-layer-volumeconfiguration.md), ... ]
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-opsworks-layer-syntax.yaml"></a>
 
 ```
-Type: "AWS::OpsWorks::Layer"
-Properties:
-  [Attributes](#cfn-opsworks-layer-attributes):
-    String:String
-  [AutoAssignElasticIps](#cfn-opsworks-layer-autoassignelasticips): Boolean
-  [AutoAssignPublicIps](#cfn-opsworks-layer-autoassignpublicips): Boolean
-  [CustomInstanceProfileArn](#cfn-opsworks-layer-custinstanceprofilearn): String
-  [CustomRecipes](#cfn-opsworks-layer-customrecipes):
-    Recipes
-  [CustomJson](#cfn-opsworks-layer-customjson):
-    JSON object
-  [CustomSecurityGroupIds](#cfn-opsworks-layer-custsecuritygroupnids):
+Type: AWS::OpsWorks::Layer
+Properties : 
+﻿  [Attributes](#cfn-opsworks-layer-attributes) : 
+    Key : Value
+﻿  [AutoAssignElasticIps](#cfn-opsworks-layer-autoassignelasticips) : Boolean
+﻿  [AutoAssignPublicIps](#cfn-opsworks-layer-autoassignpublicips) : Boolean
+﻿  [CustomInstanceProfileArn](#cfn-opsworks-layer-custominstanceprofilearn) : String
+﻿  [CustomJson](#cfn-opsworks-layer-customjson) : 
+    Json
+﻿  [CustomRecipes](#cfn-opsworks-layer-customrecipes) : 
+    [Recipes](aws-properties-opsworks-layer-recipes.md)
+﻿  [CustomSecurityGroupIds](#cfn-opsworks-layer-customsecuritygroupids) : 
     - String
-  [EnableAutoHealing](#cfn-opsworks-layer-enableautohealing): Boolean
-  [InstallUpdatesOnBoot](#cfn-opsworks-layer-installupdatesonboot): Boolean
-  [LifecycleEventConfiguration](#cfn-opsworks-layer-lifecycleeventconfiguration):
-    LifeCycleEventConfiguration
-  [LoadBasedAutoScaling](#cfn-opsworks-layer-loadbasedautoscaling):
-    LoadBasedAutoScaling
-  [Name](#cfn-opsworks-layer-name): String
-  [Packages](#cfn-opsworks-layer-packages):
+﻿  [EnableAutoHealing](#cfn-opsworks-layer-enableautohealing) : Boolean
+﻿  [InstallUpdatesOnBoot](#cfn-opsworks-layer-installupdatesonboot) : Boolean
+﻿  [LifecycleEventConfiguration](#cfn-opsworks-layer-lifecycleeventconfiguration) : 
+    [LifecycleEventConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration.md)
+﻿  [LoadBasedAutoScaling](#cfn-opsworks-layer-loadbasedautoscaling) : 
+    [LoadBasedAutoScaling](aws-properties-opsworks-layer-loadbasedautoscaling.md)
+﻿  [Name](#cfn-opsworks-layer-name) : String
+﻿  [Packages](#cfn-opsworks-layer-packages) : 
     - String
-  [Shortname](#cfn-opsworks-layer-shortname): String
-  [StackId](#cfn-opsworks-layer-stackid): String
-  [Tags](#cfn-opsworks-layer-tags): 
-  - [Tags](aws-properties-resource-tags.md) 
-  [Type](#cfn-opsworks-layer-type): String
-  [VolumeConfigurations](#cfn-opsworks-layer-volconfig):
-    - VolumeConfiguration
+﻿  [Shortname](#cfn-opsworks-layer-shortname) : String
+﻿  [StackId](#cfn-opsworks-layer-stackid) : String
+﻿  [Tags](#cfn-opsworks-layer-tags) : 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+﻿  [Type](#cfn-opsworks-layer-type) : String
+﻿  [UseEbsOptimizedInstances](#cfn-opsworks-layer-useebsoptimizedinstances) : Boolean
+﻿  [VolumeConfigurations](#cfn-opsworks-layer-volumeconfigurations) : 
+    - [VolumeConfiguration](aws-properties-opsworks-layer-volumeconfiguration.md)
 ```
 
-## Properties<a name="w4ab1c21c10d168c29b7"></a>
+## Properties<a name="aws-resource-opsworks-layer-properties"></a>
 
 `Attributes`  <a name="cfn-opsworks-layer-attributes"></a>
-One or more user\-defined key\-value pairs to be added to the stack attributes bag\.  
+One or more user\-defined key\-value pairs to be added to the stack attributes\.  
+To create a cluster layer, set the `EcsClusterArn` attribute to the cluster's ARN\.  
 *Required*: No  
-*Type*: A list of key\-value pairs  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: Map of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutoAssignElasticIps`  <a name="cfn-opsworks-layer-autoassignelasticips"></a>
-Whether to automatically assign an Elastic IP address to Amazon EC2 instances in this layer\.  
+Whether to automatically assign an [Elastic IP address](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) to the layer's instances\. For more information, see [How to Edit a Layer](https://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html)\.  
 *Required*: Yes  
 *Type*: Boolean  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutoAssignPublicIps`  <a name="cfn-opsworks-layer-autoassignpublicips"></a>
-For AWS OpsWorks stacks that are running in a VPC, whether to automatically assign a public IP address to Amazon EC2 instances in this layer\.  
+For stacks that are running in a VPC, whether to automatically assign a public IP address to the layer's instances\. For more information, see [How to Edit a Layer](https://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html)\.  
 *Required*: Yes  
 *Type*: Boolean  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`CustomInstanceProfileArn`  <a name="cfn-opsworks-layer-custinstanceprofilearn"></a>
-The Amazon Resource Name \(ARN\) of an IAM instance profile that is to be used for the Amazon EC2 instances in this layer\.  
+`CustomInstanceProfileArn`  <a name="cfn-opsworks-layer-custominstanceprofilearn"></a>
+The ARN of an IAM profile to be used for the layer's EC2 instances\. For more information about IAM ARNs, see [Using Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html)\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomJson`  <a name="cfn-opsworks-layer-customjson"></a>
-A custom stack configuration and deployment attributes that AWS OpsWorks installs on the layer's instances\. For more information, see the `CustomJson` parameter for the [CreateLayer](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateLayer.html) action in the *AWS OpsWorks Stacks API Reference*\.  
+A JSON\-formatted string containing custom stack configuration and deployment attributes to be installed on the layer's instances\. For more information, see [ Using Custom JSON](https://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook-json-override.html)\. This feature is supported as of version 1\.7\.42 of the AWS CLI\.   
 *Required*: No  
-*Type*: JSON object
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomRecipes`  <a name="cfn-opsworks-layer-customrecipes"></a>
-Custom event recipes for this layer\.  
+A `LayerCustomRecipes` object that specifies the layer custom recipes\.  
 *Required*: No  
-*Type*: [AWS OpsWorks Recipes Type](aws-properties-opsworks-layer-recipes.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: [Recipes](aws-properties-opsworks-layer-recipes.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`CustomSecurityGroupIds`  <a name="cfn-opsworks-layer-custsecuritygroupnids"></a>
-Custom security group IDs for this layer\.  
+`CustomSecurityGroupIds`  <a name="cfn-opsworks-layer-customsecuritygroupids"></a>
+An array containing the layer custom security group IDs\.  
 *Required*: No  
-*Type*: List of String values  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnableAutoHealing`  <a name="cfn-opsworks-layer-enableautohealing"></a>
-Whether to automatically heal Amazon EC2 instances that have become disconnected or timed out\.  
+Whether to disable auto healing for the layer\.  
 *Required*: Yes  
 *Type*: Boolean  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstallUpdatesOnBoot`  <a name="cfn-opsworks-layer-installupdatesonboot"></a>
-Whether to install operating system and package updates when the instance boots\.  
+Whether to install operating system and package updates when the instance boots\. The default value is `true`\. To control when updates are installed, set this value to `false`\. You must then update your instances manually by using [CreateDeployment](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CreateDeployment) to run the `update_dependencies` stack command or by manually running `yum` \(Amazon Linux\) or `apt-get` \(Ubuntu\) on the instances\.   
+To ensure that your instances have the latest security updates, we strongly recommend using the default value of `true`\.
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LifecycleEventConfiguration`  <a name="cfn-opsworks-layer-lifecycleeventconfiguration"></a>
-The lifecycle events for the AWS OpsWorks layer\.  
+A `LifeCycleEventConfiguration` object that you can use to configure the Shutdown event to specify an execution timeout and enable or disable Elastic Load Balancer connection draining\.  
 *Required*: No  
-*Type*: [AWS OpsWorks Layer LifeCycleConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: [LifecycleEventConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoadBasedAutoScaling`  <a name="cfn-opsworks-layer-loadbasedautoscaling"></a>
 The load\-based scaling configuration for the AWS OpsWorks layer\.  
 *Required*: No  
-*Type*: [AWS OpsWorks LoadBasedAutoScaling Type](aws-properties-opsworks-layer-loadbasedautoscaling.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: [LoadBasedAutoScaling](aws-properties-opsworks-layer-loadbasedautoscaling.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-opsworks-layer-name"></a>
-The AWS OpsWorks layer name\.  
+The layer name, which is used by the console\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Packages`  <a name="cfn-opsworks-layer-packages"></a>
-The packages for this layer\.  
+An array of `Package` objects that describes the layer packages\.  
 *Required*: No  
-*Type*: List of String values  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Shortname`  <a name="cfn-opsworks-layer-shortname"></a>
-The layer short name, which is used internally by AWS OpsWorks and by Chef recipes\. The short name is also used as the name for the directory where your app files are installed\.   
-The name can have a maximum of 200 characters, which are limited to the alphanumeric characters, '\-', '\_', and '\.'\.  
-If you update a property that requires the layer to be replaced, you must specify a new short name\. You cannot have multiple layers with the same short name\.
+For custom layers only, use this parameter to specify the layer's short name, which is used internally by AWS OpsWorks Stacks and by Chef recipes\. The short name is also used as the name for the directory where your app files are installed\. It can have a maximum of 200 characters, which are limited to the alphanumeric characters, '\-', '\_', and '\.'\.  
+The built\-in layers' short names are defined by AWS OpsWorks Stacks\. For more information, see the [Layer Reference](https://docs.aws.amazon.com/opsworks/latest/userguide/layers.html)\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StackId`  <a name="cfn-opsworks-layer-stackid"></a>
-The ID of the AWS OpsWorks stack that this layer will be associated with\.  
+The layer stack ID\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-opsworks-layer-tags"></a>
-Specifies an arbitrary set of tags \(key–value pairs\) to associate with this AWS OpsWorks layer\. Use tags to manage your resources\.  
+Specifies one or more sets of tags \(key–value pairs\) to associate with this AWS OpsWorks layer\. Use tags to manage your resources\.  
 *Required*: No  
-*Type*: [Resource Tag](aws-properties-resource-tags.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-opsworks-layer-type"></a>
-The layer type\. A stack cannot have more than one layer of the same type, except for the `custom` type\. You can have any number of `custom` types\. For more information, see [CreateLayer](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateLayer.html) in the *AWS OpsWorks Stacks API Reference*\.  
-If you update a property that requires the layer to be replaced, you must specify a new type unless you have a `custom` type\. You can have any number of `custom` types\.
+The layer type\. A stack cannot have more than one built\-in layer of the same type\. It can have any number of custom layers\. Built\-in layers are not available in Chef 12 stacks\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Allowed Values*: `aws-flow-ruby | custom | db-master | ecs-cluster | java-app | lb | memcached | monitoring-master | nodejs-app | php-app | rails-app | web`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`VolumeConfigurations`  <a name="cfn-opsworks-layer-volconfig"></a>
-Describes the Amazon EBS volumes for this layer\.  
+`UseEbsOptimizedInstances`  <a name="cfn-opsworks-layer-useebsoptimizedinstances"></a>
+Whether to use Amazon EBS\-optimized instances\.  
 *Required*: No  
-*Type*: A list of [AWS OpsWorks VolumeConfiguration](aws-properties-opsworks-layer-volumeconfig.md)  
-*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d168c29b9"></a>
+`VolumeConfigurations`  <a name="cfn-opsworks-layer-volumeconfigurations"></a>
+A `VolumeConfigurations` object that describes the layer's Amazon EBS volumes\.  
+*Required*: No  
+*Type*: List of [VolumeConfiguration](aws-properties-opsworks-layer-volumeconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-### Ref<a name="w4ab1c21c10d168c29b9b2"></a>
+## Return Values<a name="aws-resource-opsworks-layer-return-values"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
+### Ref<a name="aws-resource-opsworks-layer-return-values-ref"></a>
 
-```
-{ "Ref": "myLayer" }
-```
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
 
-For the AWS OpsWorks layer `myLayer`, `Ref` returns the AWS OpsWorks layer ID\.
+ `{ "Ref": "myLayer" }` 
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For the AWS OpsWorks layer *myLayer*, `Ref` returns the AWS OpsWorks layer ID\.
 
-## Template Examples<a name="w4ab1c21c10d168c29c11"></a>
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### AWS OpsWorks PHP Layer<a name="w4ab1c21c10d168c29c11b2"></a>
+## Examples<a name="aws-resource-opsworks-layer--examples"></a>
+
+### AWS OpsWorks PHP Layer<a name="aws-resource-opsworks-layer--examples--AWS_OpsWorks_PHP_Layer"></a>
 
 The following snippet creates an AWS OpsWorks PHP layer that is associated with the `myStack` AWS OpsWorks stack\. The layer is dependent on the `myApp` AWS OpsWorks application\.
 
-#### JSON<a name="aws-resource-opsworks-layer-example1.json"></a>
+#### JSON<a name="aws-resource-opsworks-layer--examples--AWS_OpsWorks_PHP_Layer--json"></a>
 
 ```
 "myLayer": {
@@ -218,7 +231,7 @@ The following snippet creates an AWS OpsWorks PHP layer that is associated with 
 }
 ```
 
-#### YAML<a name="aws-resource-opsworks-layer-example1.yaml"></a>
+#### YAML<a name="aws-resource-opsworks-layer--examples--AWS_OpsWorks_PHP_Layer--yaml"></a>
 
 ```
 myLayer: 
@@ -235,11 +248,11 @@ myLayer:
     Name: "MyPHPApp"
 ```
 
-### Load\-based Auto Scaling Layer<a name="w4ab1c21c10d168c29c11b4"></a>
+### Load\-based Auto Scaling Layer<a name="aws-resource-opsworks-layer--examples--Load-based_Auto_Scaling_Layer"></a>
 
 The following snippet creates a load\-based automatic scaling AWS OpsWorks PHP layer that is associated with the `myStack` AWS OpsWorks stack\.
 
-#### JSON<a name="aws-resource-opsworks-layer-example2.json"></a>
+#### JSON<a name="aws-resource-opsworks-layer--examples--Load-based_Auto_Scaling_Layer--json"></a>
 
 ```
 "myLayer": {
@@ -276,7 +289,7 @@ The following snippet creates a load\-based automatic scaling AWS OpsWorks PHP l
 }
 ```
 
-#### YAML<a name="aws-resource-opsworks-layer-example2.yaml"></a>
+#### YAML<a name="aws-resource-opsworks-layer--examples--Load-based_Auto_Scaling_Layer--yaml"></a>
 
 ```
 myLayer: 
@@ -309,11 +322,11 @@ myLayer:
         LoadThreshold: 0.3
 ```
 
-### Specify tags for layers and stacks<a name="aws-resource-opsworks-layer-example3"></a>
+### Specify tags for layers and stacks<a name="aws-resource-opsworks-layer--examples--Specify_tags_for_layers_and_stacks"></a>
 
 The following complete template example specifies tags for an AWS OpsWorks layer and stack that reference parameter values\.
 
-#### JSON<a name="aws-resource-opsworks-layer-example3.json"></a>
+#### JSON<a name="aws-resource-opsworks-layer--examples--Specify_tags_for_layers_and_stacks--json"></a>
 
 ```
 {
@@ -470,7 +483,7 @@ The following complete template example specifies tags for an AWS OpsWorks layer
 }
 ```
 
-#### YAML<a name="aws-resource-opsworks-layer-example3.yaml"></a>
+#### YAML<a name="aws-resource-opsworks-layer--examples--Specify_tags_for_layers_and_stacks--yaml"></a>
 
 ```
 Resources:
@@ -556,7 +569,6 @@ Parameters:
     Type: String
 ```
 
-## See Also<a name="w4ab1c21c10d168c29c13"></a>
-+ [AWS::OpsWorks::Stack](aws-resource-opsworks-stack.md)
-+ [AWS::OpsWorks::App](aws-resource-opsworks-app.md)
-+ [AWS::OpsWorks::Instance](aws-resource-opsworks-instance.md)
+## See Also<a name="aws-resource-opsworks-layer--seealso"></a>
++  [CreateLayer](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateLayer.html) in the *AWS OpsWorks API Reference*\.
++  [Creating an OpsWorks Layer](https://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-create.html) in the *AWS OpsWorks User Guide*\.

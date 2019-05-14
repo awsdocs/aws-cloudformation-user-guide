@@ -1,12 +1,10 @@
 # AWS::EC2::PlacementGroup<a name="aws-resource-ec2-placementgroup"></a>
 
-The `AWS::EC2::PlacementGroup` resource is a logical grouping of instances within a single Availability Zone \(AZ\) that enables applications to participate in a low\-latency, 10 Gbps network\. You create a placement group first, and then you can launch instances in the placement group\.
+Specifies a placement group in which to launch instances\. The strategy of the placement group determines how the instances are organized within the group\. 
 
-**Topics**
-+ [Syntax](#aws-resource-ec2-placementgroup-syntax)
-+ [Properties](#w4ab1c21c10d102c88b9)
-+ [Return Values](#w4ab1c21c10d102c88c11)
-+ [Example](#w4ab1c21c10d102c88c13)
+A `cluster` placement group is a logical grouping of instances within a single Availability Zone that benefit from low network latency, high network throughput\. A `spread` placement group places instances on distinct hardware\. A `partition` placement group places groups of instances in different partitions, where instances in one partition do not share the same hardware with instances in another partition\.
+
+For more information, see [Placement Groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the *Amazon Elastic Compute Cloud User Guide*\.
 
 ## Syntax<a name="aws-resource-ec2-placementgroup-syntax"></a>
 
@@ -18,8 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::PlacementGroup",
   "Properties" : {
-    "[Strategy](#cfn-ec2-placementgroup-strategy)" : String
-  }
+      "[Strategy](#cfn-ec2-placementgroup-strategy)" : String
+    }
 }
 ```
 
@@ -27,48 +25,49 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::PlacementGroup
-Properties: 
-  [Strategy](#cfn-ec2-placementgroup-strategy): String
+Properties : 
+﻿  [Strategy](#cfn-ec2-placementgroup-strategy) : String
 ```
 
-## Properties<a name="w4ab1c21c10d102c88b9"></a>
+## Properties<a name="aws-resource-ec2-placementgroup-properties"></a>
 
 `Strategy`  <a name="cfn-ec2-placementgroup-strategy"></a>
-The placement strategy, which relates to the instance types that can be added to the placement group\. For example, for the `cluster` strategy, you can cluster C4 instance types but not T2 instance types\. For valid values, see [CreatePlacementGroup](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreatePlacementGroup.html) in the *Amazon EC2 API Reference*\. By default, AWS CloudFormation sets the value of this property to `cluster`\.  
+The placement strategy\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Allowed Values*: `cluster | partition | spread`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d102c88c11"></a>
+## Return Values<a name="aws-resource-ec2-placementgroup-return-values"></a>
 
-### Ref<a name="w4ab1c21c10d102c88c11b2"></a>
+### Ref<a name="aws-resource-ec2-placementgroup-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the placement group\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Example<a name="w4ab1c21c10d102c88c13"></a>
+## Examples<a name="aws-resource-ec2-placementgroup--examples"></a>
 
-### <a name="w4ab1c21c10d102c88c13b2"></a>
+### Create a Placement Group<a name="aws-resource-ec2-placementgroup--examples--Create_a_Placement_Group"></a>
 
-The following example creates a placement group with a `cluster` placement strategy\.
+The following example declares a placement group with a cluster placement strategy\. 
 
-#### JSON<a name="aws-resource-ec2-placementgroup-example-1.json"></a>
+#### JSON<a name="aws-resource-ec2-placementgroup--examples--Create_a_Placement_Group--json"></a>
 
 ```
 "PlacementGroup" : {
-  "Type" : "AWS::EC2::PlacementGroup",
-  "Properties" : {
-    "Strategy" : "cluster"
-  }
+   "Type" : "AWS::EC2::PlacementGroup",
+   "Properties" : {
+            "Strategy" : "cluster"
+   }
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-placementgroup-example-1.yaml"></a>
+#### YAML<a name="aws-resource-ec2-placementgroup--examples--Create_a_Placement_Group--yaml"></a>
 
 ```
 PlacementGroup:
   Type: AWS::EC2::PlacementGroup
-  Properties:
-    Strategy: cluster
+   Properties:
+     Strategy: cluster
 ```

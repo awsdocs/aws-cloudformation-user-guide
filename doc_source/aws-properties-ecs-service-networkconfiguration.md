@@ -1,27 +1,31 @@
-# Amazon Elastic Container Service Service NetworkConfiguration<a name="aws-properties-ecs-service-networkconfiguration"></a>
+# AWS::ECS::Service NetworkConfiguration<a name="aws-properties-ecs-service-networkconfiguration"></a>
 
-`NetworkConfiguration` is a property of the [AWS::ECS::Service](aws-resource-ecs-service.md) resource that specifies the network configuration for an Amazon Elastic Container Service \(Amazon ECS\) task or service\.
+The `NetworkConfiguration` property specifies an object representing the network configuration for a task or service\.
 
-## Syntax<a name="w4ab1c21c10d108c17c29b5"></a>
+## Syntax<a name="aws-properties-ecs-service-networkconfiguration-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-ecs-service-networkconfiguration-syntax.json"></a>
 
 ```
 {
-  "[AwsvpcConfiguration](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration)" : [*AwsVpcConfiguration*](aws-properties-ecs-service-awsvpcconfiguration.md)
+  "[AwsvpcConfiguration](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration)" : [AwsVpcConfiguration](aws-properties-ecs-service-awsvpcconfiguration.md)
 }
 ```
 
 ### YAML<a name="aws-properties-ecs-service-networkconfiguration-syntax.yaml"></a>
 
 ```
-[AwsvpcConfiguration](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration): [*AwsVpcConfiguration*](aws-properties-ecs-service-awsvpcconfiguration.md)
+﻿  [AwsvpcConfiguration](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration) : 
+    [AwsVpcConfiguration](aws-properties-ecs-service-awsvpcconfiguration.md)
 ```
 
-## Properties<a name="w4ab1c21c10d108c17c29b7"></a>
+## Properties<a name="aws-properties-ecs-service-networkconfiguration-properties"></a>
 
 `AwsvpcConfiguration`  <a name="cfn-ecs-service-networkconfiguration-awsvpcconfiguration"></a>
- The VPC subnets and security groups associated with a task\.  
+The VPC subnets and security groups associated with a task\.  
+All specified subnets and security groups must be from the same VPC\.
 *Required*: No  
-*Type*: [Amazon Elastic Container Service Service AwsVpcConfiguration](aws-properties-ecs-service-awsvpcconfiguration.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: [AwsVpcConfiguration](aws-properties-ecs-service-awsvpcconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

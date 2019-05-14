@@ -1,12 +1,6 @@
 # AWS::KMS::Key<a name="aws-resource-kms-key"></a>
 
-The `AWS::KMS::Key` resource creates a customer master key \(CMK\) in AWS Key Management Service \(AWS KMS\)\. Users \(customers\) can use the master key to encrypt their data stored in AWS services that are integrated with AWS KMS or within their applications\. For more information, see [What is the AWS Key Management Service?](https://docs.aws.amazon.com/kms/latest/developerguide/) in the *AWS Key Management Service Developer Guide*\.
-
-**Topics**
-+ [Syntax](#aws-resource-kms-key-syntax)
-+ [Properties](#w4ab1c21c10d159c17b9)
-+ [Return Values](#w4ab1c21c10d159c17c11)
-+ [Examples](#w4ab1c21c10d159c17c13)
+The `AWS::KMS::Key` resource specifies a [customer master key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) \(CMK\) in AWS Key Management Service \(AWS KMS\)\. Authorized users can use the CMK to encrypt and decrypt small amounts of data \(up to 4096 bytes\), but they are more commonly used to generate data keys\. You can also use CMKs to encrypt data stored in AWS services that are [integrated with AWS KMS](https://aws.amazon.com/kms/features/#AWS_Service_Integration) or within their applications\. For more information, see [What is the AWS Key Management Service?](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) in the *AWS Key Management Service Developer Guide*\.
 
 ## Syntax<a name="aws-resource-kms-key-syntax"></a>
 
@@ -18,14 +12,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::KMS::Key",
   "Properties" : {
-    "[Description](#cfn-kms-key-description)" : String,
-    "[Enabled](#cfn-kms-key-enabled)" : Boolean,
-    "[EnableKeyRotation](#cfn-kms-key-enablekeyrotation)" : Boolean,
-    "[KeyPolicy](#cfn-kms-key-keypolicy)" : JSON object,
-    "[KeyUsage](#cfn-kms-key-keyusage)" : String,
-    "[PendingWindowInDays](#cfn-kms-key-pendingwindowindays)" : Integer,
-    "[Tags](#cfn-kms-key-tags)" : [ Resource Tag, ... ]
-  }
+      "[Description](#cfn-kms-key-description)" : String,
+      "[EnableKeyRotation](#cfn-kms-key-enablekeyrotation)" : Boolean,
+      "[Enabled](#cfn-kms-key-enabled)" : Boolean,
+      "[KeyPolicy](#cfn-kms-key-keypolicy)" : Json,
+      "[KeyUsage](#cfn-kms-key-keyusage)" : String,
+      "[PendingWindowInDays](#cfn-kms-key-pendingwindowindays)" : Integer,
+      "[Tags](#cfn-kms-key-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
 }
 ```
 
@@ -33,97 +27,126 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::KMS::Key
-Properties: 
-  [Description](#cfn-kms-key-description): String
-  [Enabled](#cfn-kms-key-enabled): Boolean
-  [EnableKeyRotation](#cfn-kms-key-enablekeyrotation): Boolean
-  [KeyPolicy](#cfn-kms-key-keypolicy): JSON object
-  [KeyUsage](#cfn-kms-key-keyusage): String
-  [PendingWindowInDays](#cfn-kms-key-pendingwindowindays): Integer
-  [Tags](#cfn-kms-key-tags):
-    - Resource Tag
+Properties : 
+﻿  [Description](#cfn-kms-key-description) : String
+﻿  [EnableKeyRotation](#cfn-kms-key-enablekeyrotation) : Boolean
+﻿  [Enabled](#cfn-kms-key-enabled) : Boolean
+﻿  [KeyPolicy](#cfn-kms-key-keypolicy) : Json
+﻿  [KeyUsage](#cfn-kms-key-keyusage) : String
+﻿  [PendingWindowInDays](#cfn-kms-key-pendingwindowindays) : Integer
+﻿  [Tags](#cfn-kms-key-tags) : 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
-## Properties<a name="w4ab1c21c10d159c17b9"></a>
+## Properties<a name="aws-resource-kms-key-properties"></a>
 
 `Description`  <a name="cfn-kms-key-description"></a>
-A description of the key\. Use a description that helps your users decide whether the key is appropriate for a particular task\.  
+A description of the CMK\. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
-
-`Enabled`  <a name="cfn-kms-key-enabled"></a>
-Indicates whether the key is available for use\. AWS CloudFormation sets this value to `true` by default\.  
-*Required*: No  
-*Type*: Boolean  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Minimum*: `0`  
+*Maximum*: `8192`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnableKeyRotation`  <a name="cfn-kms-key-enablekeyrotation"></a>
-Indicates whether AWS KMS rotates the key\. AWS CloudFormation sets this value to `false` by default\.  
+Enables automatic rotation of the key material for the specified customer master key \(CMK\)\. By default, automation key rotation is not enabled\.  
+When you enable automatic rotation, AWS KMS automatically creates new key material for the CMK 365 days after the enable \(or reenable\) date and every 365 days thereafter\. AWS KMS retains all key material until you delete the CMK\.  
+For detailed information about automatic key rotation, see [Rotating Customer Master Keys](https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) in the *AWS Key Management Service Developer Guide*\.  
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Enabled`  <a name="cfn-kms-key-enabled"></a>
+Specifies whether the customer master key \(CMK\) is enabled\. Disabled CMKs cannot be used in cryptographic operations\.  
+When `Enabled` is `true`, the *key state* of the CMK is `Enabled`\. When `Enabled` is `false`, the key state of the CMK is `Disabled`\. The default value is `true`\.  
+The actual key state of the CMK might be affected by actions taken outside of CloudFormation, such as running the [EnableKey](https://docs.aws.amazon.com/kms/latest/APIReference/API_EnableKey.html), [DisableKey](https://docs.aws.amazon.com/kms/latest/APIReference/API_DisableKey.html), or [ScheduleKeyDeletion](https://docs.aws.amazon.com/kms/latest/APIReference/API_ScheduleKeyDeletion.html) operations\.  
+For information about the key states of a CMK, see [How Key State Affects Use of a Customer Master Key](https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html) in the *AWS Key Management Service Developer Guide*\.   
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeyPolicy`  <a name="cfn-kms-key-keypolicy"></a>
-An AWS KMS key policy to attach to the key\. Use a policy to specify who has permission to use the key and which actions they can perform\. For more information, see [Key Policies](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html) in the *AWS Key Management Service Developer Guide*\.  
+The key policy that authorizes use of the CMK\. The key policy must observe the following rules\.  
++ The key policy must allow the caller to make a subsequent [PutKeyPolicy](https://docs.aws.amazon.com/kms/latest/APIReference/API_PutKeyPolicy.html) request on the CMK\. This reduces the risk that the CMK becomes unmanageable\. For more information, refer to the scenario in the [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section of the * *AWS Key Management Service Developer Guide* *\.
++ Each statement in the key policy must contain one or more principals\. The principals in the key policy must exist and be visible to AWS KMS\. When you create a new AWS principal \(for example, an IAM user or role\), you might need to enforce a delay before including the new principal in a key policy because the new principal might not be immediately visible to AWS KMS\. For more information, see [Changes that I make are not always immediately visible](https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_general.html#troubleshoot_general_eventual-consistency) in the *AWS Identity and Access Management User Guide*\.
++ The key policy size limit is 32 kilobytes \(32768 bytes\)\.
+If you are unsure of which policy to use, consider the *default key policy*\. This is the key policy that AWS KMS applies to CMKs that are created by using the CreateKey API with no specified key policy\. It gives the AWS account that owns the key permission to perform all operations on the key\. It also allows you write IAM policies to authorize access to the key\. For details, see [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default) in the *AWS Key Management Service Developer Guide*\.  
 *Required*: Yes  
-*Type*: JSON object  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: Json  
+*Minimum*: `1`  
+*Maximum*: `131072`  
+*Pattern*: `[\u0009\u000A\u000D\u0020-\u00FF]+`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeyUsage`  <a name="cfn-kms-key-keyusage"></a>
-The intended use of the key\. You can use CMKs only for symmetric encryption and decryption\.  
-Valid values: `ENCRYPT_DECRYPT`  
+The cryptographic operations for which you can use the CMK\. The only valid value is `ENCRYPT_DECRYPT`, which means you can use the CMK to encrypt and decrypt data\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Allowed Values*: `ENCRYPT_DECRYPT`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PendingWindowInDays`  <a name="cfn-kms-key-pendingwindowindays"></a>
-The waiting period, specified in number of days\. After the waiting period ends, AWS KMS deletes the customer master key \(CMK\)\.  
-Valid Range: Minimum value of 7\. Maximum value of 30\.  
+Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack\. Enter a value between 7 and 30 days\. The default value is 30 days\.  
+When you remove a customer master key \(CMK\) from a CloudFormation stack, AWS KMS schedules the CMK for deletion and starts the mandatory waiting period\. The `PendingWindowInDays` property determines the length of waiting period\. During the waiting period, the key state of CMK is `Pending Deletion`, which prevents the CMK from being used in cryptographic operations\. When the waiting period expires, AWS KMS permanently deletes the CMK\.  
+ You cannot use a CloudFormation template to cancel deletion of the CMK after you remove it from the stack, regardless of the waiting period\. If you specify a CMK in your template, even one with the same name, CloudFormation creates a new CMK\. To cancel deletion of a CMK, use the AWS KMS console or the [CancelKeyDeletion](https://docs.aws.amazon.com/kms/latest/APIReference/API_CancelKeyDeletion.html) operation\.  
+For information about the `PendingDeletion` key state, see [How Key State Affects Use of a Customer Master Key](https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html) in the *AWS Key Management Service Developer Guide*\. For more information about deleting CMKs, see the [ScheduleKeyDeletion](https://docs.aws.amazon.com/kms/latest/APIReference/API_ScheduleKeyDeletion.html) operation in the *AWS Key Management Service API Reference* and [Deleting Customer Master Keys](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html) in the *AWS Key Management Service Developer Guide*\.   
 *Required*: No  
 *Type*: Integer  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Minimum*: `1`  
+*Maximum*: `365`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-kms-key-tags"></a>
-Specifies an arbitrary set of tags \(key–value pairs\) to associate with this key\. Use tags to manage your resources\.  
+An array of key\-value pairs to apply to this resource\.  
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
-*Type*: [Resource Tag](aws-properties-resource-tags.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d159c17c11"></a>
+## Return Values<a name="aws-resource-kms-key-return-values"></a>
 
-### Ref<a name="w4ab1c21c10d159c17c11b2"></a>
+### Ref<a name="aws-resource-kms-key-return-values-ref"></a>
 
-When you provide the logical ID of this resource to the `Ref` intrinsic function, it returns the key ID, such as `123ab456-a4c2-44cb-95fd-b781f32fbb37`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the key ID, such as `1234abcd-12ab-34cd-56ef-1234567890ab`\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d159c17c11b4"></a>
+### Fn::GetAtt<a name="aws-resource-kms-key-return-values-fn--getatt"></a>
 
-`Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
-The ARN of the AWS KMS key, such as `arn:aws:kms:us-west-2:123456789012:key/12a34567-8c90-1defg-af84-0bf06c1747f3`\.
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
+#### <a name="aws-resource-kms-key-return-values-fn--getatt-fn--getatt"></a>
 
-## Examples<a name="w4ab1c21c10d159c17c13"></a>
+`Arn`  <a name="Arn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the AWS KMS customer master key \(CMK\), such as `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`\.  
+For help with finding the ARN of a CMK, see [Finding the Key ID and ARN](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html#find-cmk-id-arn) in the *AWS Key Management Service Developer Guide*\.
 
-### <a name="w4ab1c21c10d159c17c13b2"></a>
+## Examples<a name="aws-resource-kms-key--examples"></a>
 
-The following example creates a custom CMK, which permits the IAM user `Alice` to administer the key and allows `Bob` to use the key for encrypting and decrypting data\.
+### Create a customer master key<a name="aws-resource-kms-key--examples--Create_a_customer_master_key"></a>
 
-#### JSON<a name="aws-resource-kms-key-example.json"></a>
+The following example creates a customer managed CMK\. The key policy for the CMK allows `Alice` to manage the key and allows `Bob` to view the CMK and use it in cryptographic operations\. It also allows the AWS account \(root\) full access to the key\. This prevents you from losing control of the key if both `Alice` and `Bob` are deleted from the account\.
+
+#### JSON<a name="aws-resource-kms-key--examples--Create_a_customer_master_key--json"></a>
 
 ```
 "myKey" : {
   "Type" : "AWS::KMS::Key",
   "Properties" : {
-    "Description" : "A sample key",
+    "Description" : "An example CMK",
     "KeyPolicy" : {
       "Version": "2012-10-17",
       "Id": "key-default-1",
       "Statement": [
+        {
+          "Sid": "Enable IAM User Permissions",
+          "Effect": "Allow",
+          "Principal": {"AWS": "arn:aws:iam::111122223333:root"},
+          "Action": "kms:*",
+          "Resource": "*"
+        }, 
         {
           "Sid": "Allow administration of the key",
           "Effect": "Allow",
@@ -149,11 +172,12 @@ The following example creates a custom CMK, which permits the IAM user `Alice` t
           "Effect": "Allow",
           "Principal": { "AWS": "arn:aws:iam::123456789012:user/Bob" },
           "Action": [
+            "kms:DescribeKey",
             "kms:Encrypt",
             "kms:Decrypt",
             "kms:ReEncrypt*",
-            "kms:GenerateDataKey*",
-            "kms:DescribeKey"
+            "kms:GenerateDataKey",
+            "kms:GenerateDataKeyWithoutPlaintext"
           ], 
           "Resource": "*"
         }    
@@ -163,18 +187,24 @@ The following example creates a custom CMK, which permits the IAM user `Alice` t
 }
 ```
 
-#### YAML<a name="aws-resource-kms-key-example.yaml"></a>
+#### YAML<a name="aws-resource-kms-key--examples--Create_a_customer_master_key--yaml"></a>
 
 ```
 myKey: 
   Type: AWS::KMS::Key
   Properties: 
-    Description: "A sample key"
+    Description: "An example CMK"
     KeyPolicy: 
       Version: "2012-10-17"
       Id: "key-default-1"
-      Statement: 
-        - 
+      Statement:
+       -
+          Sid: "Enable IAM User Permissions"
+          Effect: "Allow"
+          Principal: AWS: "arn:aws:iam::111122223333:root"
+          Action: "kms:*"
+          Resource: "*"
+       - 
           Sid: "Allow administration of the key"
           Effect: "Allow"
           Principal: 
@@ -199,19 +229,20 @@ myKey:
           Principal: 
             AWS: "arn:aws:iam::123456789012:user/Bob"
           Action: 
+            - "kms:DescribeKey"
             - "kms:Encrypt"
             - "kms:Decrypt"
             - "kms:ReEncrypt*"
-            - "kms:GenerateDataKey*"
-            - "kms:DescribeKey"
+            - "kms:GenerateDataKey"
+            - "kms:GenerateDataKeyWithoutPlaintext"
           Resource: "*"
 ```
 
-### <a name="aws-resource-kms-key-example-tags"></a>
+### Create a CMK with a tag<a name="aws-resource-kms-key--examples--Create_a_CMK_with_a_tag"></a>
 
 The following example creates a custom CMK with a single tag\.
 
-#### JSON<a name="aws-resource-kms-key-example-tags.json"></a>
+#### JSON<a name="aws-resource-kms-key--examples--Create_a_CMK_with_a_tag--json"></a>
 
 ```
 {
@@ -254,7 +285,7 @@ The following example creates a custom CMK with a single tag\.
 }
 ```
 
-#### YAML<a name="aws-resource-kms-key-example-tags.yaml"></a>
+#### YAML<a name="aws-resource-kms-key--examples--Create_a_CMK_with_a_tag--yaml"></a>
 
 ```
 Resources:
@@ -284,3 +315,8 @@ Parameters:
   Value:
     Type: String
 ```
+
+## See Also<a name="aws-resource-kms-key--seealso"></a>
++  [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.
++  [CreateKey](https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html) in the *AWS Key Management Service API Reference*\.
++  [Customer master keys](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) in the *AWS Key Management Service Developer Guide*\.

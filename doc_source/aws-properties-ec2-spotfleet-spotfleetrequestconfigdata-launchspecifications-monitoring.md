@@ -1,26 +1,30 @@
-# Amazon EC2 SpotFleet Monitoring<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring"></a>
+# AWS::EC2::SpotFleet SpotFleetMonitoring<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring"></a>
 
-`Monitoring` is a property of the [Amazon Elastic Compute Cloud SpotFleet LaunchSpecifications](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md) property that enables instance monitoring\.
+Describes whether monitoring is enabled\.
 
-## Syntax<a name="w4ab1c21c10d102d118c58b5"></a>
+## Syntax<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring-syntax.json"></a>
 
 ```
 {
-  "[Enabled](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring-enabled)" : Boolean
+  "[Enabled](#cfn-ec2-spotfleet-spotfleetmonitoring-enabled)" : Boolean
 }
 ```
 
 ### YAML<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring-syntax.yaml"></a>
 
 ```
-[Enabled](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring-enabled): Boolean
+﻿  [Enabled](#cfn-ec2-spotfleet-spotfleetmonitoring-enabled) : Boolean
 ```
 
-## Properties<a name="w4ab1c21c10d102d118c58b7"></a>
+## Properties<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring-properties"></a>
 
-`Enabled`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring-enabled"></a>
-Indicates whether monitoring is enabled for the instances\.  
+`Enabled`  <a name="cfn-ec2-spotfleet-spotfleetmonitoring-enabled"></a>
+Enables monitoring for the instance\.  
+Default: `false`   
 *Required*: No  
-*Type*: Boolean
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

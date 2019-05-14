@@ -1,44 +1,52 @@
-# Elastic Beanstalk Environment EnvironmentTier<a name="aws-properties-beanstalk-environment-tier"></a>
+# AWS::ElasticBeanstalk::Environment Tier<a name="aws-properties-beanstalk-environment-tier"></a>
 
-Describes the environment tier for an [AWS::ElasticBeanstalk::Environment](aws-properties-beanstalk-environment.md) resource\. For more information, see [Environment Tiers](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features-managing-env-tiers.html) in the *AWS Elastic Beanstalk Developer Guide*\.
+Describes the environment tier for an [AWS::ElasticBeanstalk::Environment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html) resource\. For more information, see [Environment Tiers](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features-managing-env-tiers.html) in the *AWS Elastic Beanstalk Developer Guide*\.
 
-## Syntax<a name="w4ab1c21c10d123c26c19b5"></a>
+## Syntax<a name="aws-properties-beanstalk-environment-tier-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-beanstalk-environment-tier-syntax.json"></a>
 
 ```
 {
-   "[Name](#cfn-beanstalk-env-tier-name)" : String,
-   "[Type](#cfn-beanstalk-env-tier-type)" : String,
-   "[Version](#cfn-beanstalk-env-tier-version)" : String
+  "[Name](#cfn-beanstalk-env-tier-name)" : String,
+  "[Type](#cfn-beanstalk-env-tier-type)" : String,
+  "[Version](#cfn-beanstalk-env-tier-version)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-beanstalk-environment-tier-syntax.yaml"></a>
 
 ```
-[Name](#cfn-beanstalk-env-tier-name): String
-[Type](#cfn-beanstalk-env-tier-type): String
-[Version](#cfn-beanstalk-env-tier-version): String
+﻿  [Name](#cfn-beanstalk-env-tier-name) : String
+﻿  [Type](#cfn-beanstalk-env-tier-type) : String
+﻿  [Version](#cfn-beanstalk-env-tier-version) : String
 ```
 
-## Members<a name="w4ab1c21c10d123c26c19b7"></a>
+## Properties<a name="aws-properties-beanstalk-environment-tier-properties"></a>
 
 `Name`  <a name="cfn-beanstalk-env-tier-name"></a>
-The name of the environment tier\. You can specify `WebServer` or `Worker`\.  
+The name of this environment tier\.  
+Valid values:  
++ For *Web server tier* – `WebServer` 
++ For *Worker tier* – `Worker` 
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Type`  <a name="cfn-beanstalk-env-tier-type"></a>
-The type of this environment tier\. You can specify `Standard` for the `WebServer` tier or `SQS/HTTP` for the `Worker` tier\.  
+The type of this environment tier\.  
+Valid values:  
++ For *Web server tier* – `Standard` 
++ For *Worker tier* – `SQS/HTTP` 
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Version`  <a name="cfn-beanstalk-env-tier-version"></a>
-The version of this environment tier\. If you don't specify this member, the latest compatible worker tier version is used\.  
-This member is deprecated\. Any specific version that you specify may become outdated\. We recommend leaving this unspecified\.
+The version of this environment tier\. When you don't set a value to it, Elastic Beanstalk uses the latest compatible worker tier version\.  
+This member is deprecated\. Any specific version that you set may become out of date\. We recommend leaving it unspecified\.
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

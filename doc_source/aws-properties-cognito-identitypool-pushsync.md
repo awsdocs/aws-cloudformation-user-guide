@@ -1,8 +1,10 @@
-# Amazon Cognito IdentityPool PushSync<a name="aws-properties-cognito-identitypool-pushsync"></a>
+# AWS::Cognito::IdentityPool PushSync<a name="aws-properties-cognito-identitypool-pushsync"></a>
 
-`PushSync` is a property of the [AWS::Cognito::IdentityPool](aws-resource-cognito-identitypool.md) resource that defines the configuration options to be applied to an Amazon Cognito identity pool\.
+`PushSync` is a property of the [AWS::Cognito::IdentityPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html) resource that defines the configuration options to be applied to an Amazon Cognito identity pool\.
 
 ## Syntax<a name="aws-properties-cognito-identitypool-pushsync-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-cognito-identitypool-pushsync-syntax.json"></a>
 
@@ -16,19 +18,21 @@
 ### YAML<a name="aws-properties-cognito-identitypool-pushsync-syntax.yaml"></a>
 
 ```
-[ApplicationArns](#cfn-cognito-identitypool-pushsync-applicationarns): 
-  - String
-[RoleArn](#cfn-cognito-identitypool-pushsync-rolearn): String
+﻿  [ApplicationArns](#cfn-cognito-identitypool-pushsync-applicationarns) : 
+    - String
+﻿  [RoleArn](#cfn-cognito-identitypool-pushsync-rolearn) : String
 ```
 
 ## Properties<a name="aws-properties-cognito-identitypool-pushsync-properties"></a>
 
 `ApplicationArns`  <a name="cfn-cognito-identitypool-pushsync-applicationarns"></a>
 List of Amazon SNS platform application ARNs that could be used by clients\.  
-*Type*: List of String values  
-*Required*: No
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-cognito-identitypool-pushsync-rolearn"></a>
 An IAM role configured to allow Amazon Cognito to call SNS on behalf of the developer\.  
+*Required*: No  
 *Type*: String  
-*Required*: No
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,14 +1,16 @@
-# AWS Data Pipeline Pipeline ParameterObjects<a name="aws-properties-datapipeline-pipeline-parameterobjects"></a>
+# AWS::DataPipeline::Pipeline ParameterObject<a name="aws-properties-datapipeline-pipeline-parameterobjects"></a>
 
-`ParameterObjects` is a property of the [AWS::DataPipeline::Pipeline](aws-resource-datapipeline-pipeline.md) resource that describes parameters that are used in a pipeline definition\.
+Contains information about a parameter object\.
 
-## Syntax<a name="w4ab1c21c10c84c14c25b5"></a>
+## Syntax<a name="aws-properties-datapipeline-pipeline-parameterobjects-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-datapipeline-pipeline-parameterobjects-syntax.json"></a>
 
 ```
 {
-  "[Attributes](#cfn-datapipeline-pipeline-parameterobjects-attributes)" : [ Attribute, ... ],
+  "[Attributes](#cfn-datapipeline-pipeline-parameterobjects-attributes)" : [ [ParameterAttribute](aws-properties-datapipeline-pipeline-parameterobjects-attributes.md), ... ],
   "[Id](#cfn-datapipeline-pipeline-parameterobjects-id)" : String
 }
 ```
@@ -16,19 +18,24 @@
 ### YAML<a name="aws-properties-datapipeline-pipeline-parameterobjects-syntax.yaml"></a>
 
 ```
-[Attributes](#cfn-datapipeline-pipeline-parameterobjects-attributes):
-  - Attribute
-[Id](#cfn-datapipeline-pipeline-parameterobjects-id): String
+﻿  [Attributes](#cfn-datapipeline-pipeline-parameterobjects-attributes) : 
+    - [ParameterAttribute](aws-properties-datapipeline-pipeline-parameterobjects-attributes.md)
+﻿  [Id](#cfn-datapipeline-pipeline-parameterobjects-id) : String
 ```
 
-## Properties<a name="w4ab1c21c10c84c14c25b7"></a>
+## Properties<a name="aws-properties-datapipeline-pipeline-parameterobjects-properties"></a>
 
 `Attributes`  <a name="cfn-datapipeline-pipeline-parameterobjects-attributes"></a>
-Key\-value pairs that define the attributes of the parameter object\.  
+The attributes of the parameter object\.  
 *Required*: Yes  
-*Type*: [AWS Data Pipeline Parameter Objects Attributes](aws-properties-datapipeline-pipeline-parameterobjects-attributes.md)
+*Type*: List of [ParameterAttribute](aws-properties-datapipeline-pipeline-parameterobjects-attributes.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-datapipeline-pipeline-parameterobjects-id"></a>
-The identifier of the parameter object\.  
+The ID of the parameter object\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `256`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

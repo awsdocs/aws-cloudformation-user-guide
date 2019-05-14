@@ -1,12 +1,6 @@
 # AWS::RDS::EventSubscription<a name="aws-resource-rds-eventsubscription"></a>
 
-Use the `AWS::RDS::EventSubscription` resource to get notifications for Amazon Relational Database Service events through the Amazon Simple Notification Service\. For more information, see [ Using Amazon RDS Event Notification](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html) in the *Amazon RDS User Guide*\.
-
-**Topics**
-+ [Syntax](#aws-resource-rds-eventsubscription-syntax)
-+ [Properties](#w4ab1c21c10d171c45b9)
-+ [Return Value](#w4ab1c21c10d171c45c11)
-+ [Example](#w4ab1c21c10d171c45c13)
+The `AWS::RDS::EventSubscription` resource allows you to receive notifications for Amazon Relational Database Service events through the Amazon Simple Notification Service \(Amazon SNS\)\. For more information, see [Using Amazon RDS Event Notification](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html) in the *Amazon RDS User Guide*\. 
 
 ## Syntax<a name="aws-resource-rds-eventsubscription-syntax"></a>
 
@@ -18,108 +12,123 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::RDS::EventSubscription",
   "Properties" : {
-    "[Enabled](#cfn-rds-eventsubscription-enabled)" : Boolean,
-    "[EventCategories](#cfn-rds-eventsubscription-eventcategories)" : [ String, ... ],
-    "[SnsTopicArn](#cfn-rds-eventsubscription-snstopicarn)" : String,
-    "[SourceIds](#cfn-rds-eventsubscription-sourceids)" : [ String, ... ],
-    "[SourceType](#cfn-rds-eventsubscription-sourcetype)" : String
-  }
+      "[Enabled](#cfn-rds-eventsubscription-enabled)" : Boolean,
+      "[EventCategories](#cfn-rds-eventsubscription-eventcategories)" : [ String, ... ],
+      "[SnsTopicArn](#cfn-rds-eventsubscription-snstopicarn)" : String,
+      "[SourceIds](#cfn-rds-eventsubscription-sourceids)" : [ String, ... ],
+      "[SourceType](#cfn-rds-eventsubscription-sourcetype)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-rds-eventsubscription-syntax.yaml"></a>
 
 ```
-Type: "AWS::RDS::EventSubscription"
-Properties: 
-  [Enabled](#cfn-rds-eventsubscription-enabled): Boolean
-  [EventCategories](#cfn-rds-eventsubscription-eventcategories):
+Type: AWS::RDS::EventSubscription
+Properties : 
+﻿  [Enabled](#cfn-rds-eventsubscription-enabled) : Boolean
+﻿  [EventCategories](#cfn-rds-eventsubscription-eventcategories) : 
     - String
-  [SnsTopicArn](#cfn-rds-eventsubscription-snstopicarn): String
-  [SourceIds](#cfn-rds-eventsubscription-sourceids):
+﻿  [SnsTopicArn](#cfn-rds-eventsubscription-snstopicarn) : String
+﻿  [SourceIds](#cfn-rds-eventsubscription-sourceids) : 
     - String
-  [SourceType](#cfn-rds-eventsubscription-sourcetype): String
+﻿  [SourceType](#cfn-rds-eventsubscription-sourcetype) : String
 ```
 
-## Properties<a name="w4ab1c21c10d171c45b9"></a>
+## Properties<a name="aws-resource-rds-eventsubscription-properties"></a>
 
 `Enabled`  <a name="cfn-rds-eventsubscription-enabled"></a>
-Indicates whether to activate the subscription\. If you don't specify this property, AWS CloudFormation activates the subscription\.  
+ A Boolean value; set to **true** to activate the subscription, set to **false** to create the subscription but not active it\.   
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventCategories`  <a name="cfn-rds-eventsubscription-eventcategories"></a>
-A list of event categories that you want to subscribe to for a given source type\. If you don't specify this property, you are notified about all event categories\. For more information, see [ Using Amazon RDS Event Notification](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html) in the *Amazon RDS User Guide*\.  
+ A list of event categories for a SourceType that you want to subscribe to\. You can see a list of the categories for a given SourceType in the [Events](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html) topic in the Amazon RDS User Guide or by using the **DescribeEventCategories** action\.   
 *Required*: No  
-*Type*: List of String values  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnsTopicArn`  <a name="cfn-rds-eventsubscription-snstopicarn"></a>
-The Amazon Resource Name \(ARN\) of an Amazon SNS topic that you want to send event notifications to\.  
+The Amazon Resource Name \(ARN\) of the SNS topic created for event notification\. The ARN is created by Amazon SNS when you create a topic and subscribe to it\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceIds`  <a name="cfn-rds-eventsubscription-sourceids"></a>
-A list of identifiers for which Amazon RDS provides notification events\.  
-If you don't specify a value, notifications are provided for all sources\. If you specify multiple values, they must be of the same type\. For example, if you specify a database instance ID, all other values must be database instance IDs\.  
+The list of identifiers of the event sources for which events will be returned\. If not specified, then all sources are included in the response\. An identifier must begin with a letter and must contain only ASCII letters, digits, and hyphens; it cannot end with a hyphen or contain two consecutive hyphens\.  
+Constraints:  
++ If SourceIds are supplied, SourceType must also be provided\.
++ If the source type is a DB instance, then a DBInstanceIdentifier must be supplied\.
++ If the source type is a DB security group, a DBSecurityGroupName must be supplied\.
++ If the source type is a DB parameter group, a DBParameterGroupName must be supplied\.
++ If the source type is a DB Snapshot, a DBSnapshotIdentifier must be supplied\.
 *Required*: No  
-*Type*: List of String values  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceType`  <a name="cfn-rds-eventsubscription-sourcetype"></a>
-The type of source for which Amazon RDS provides notification events\. For example, if you want to be notified of events generated by a database instance, set this parameter to `db-instance`\. If you don't specify a value, notifications are provided for all source types\. For valid values, see the `SourceType` parameter for the [CreateEventSubscription](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateEventSubscription.html) action in the *Amazon RDS API Reference*\.  
-*Required*: Conditional\. If you specify the `SourceIds` or `EventCategories` property, you must specify this property\.  
-*Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) if you're removing this property after it was previously specified\. All other updates require [no interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
+The type of source that will be generating the events\. For example, if you want to be notified of events generated by a DB instance, you would set this parameter to db\-instance\. if this value is not specified, all events are returned\.  
+Valid values: db\-instance \| db\-parameter\-group \| db\-security\-group \| db\-snapshot  
+*Required*: No  
+*Type*: String
 
-## Return Value<a name="w4ab1c21c10d171c45c11"></a>
+## Return Values<a name="aws-resource-rds-eventsubscription-return-values"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
+### Ref<a name="aws-resource-rds-eventsubscription-return-values-ref"></a>
 
-```
-{ "Ref": "myEventSubscription" }
-```
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the RDS event subscription\.
 
-For the resource with the logical ID `myEventSubscription`, `Ref` returns the Amazon RDS event subscription name, such as: `mystack-myEventSubscription-1DDYF1E3B3I`\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+## Examples<a name="aws-resource-rds-eventsubscription--examples"></a>
 
-## Example<a name="w4ab1c21c10d171c45c13"></a>
+### <a name="aws-resource-rds-eventsubscription--examples--"></a>
 
-The following snippet creates an event subscription for an existing database instance `db-instance-1` and a database with the logical ID `myDBInstance`, which is declared elsewhere in the same template\.
+The following example creates an event subscription for an existing database instance `db-instance-1` and a database with the logical ID `myDBInstance`, which is declared elsewhere in the same template\. 
 
-### JSON<a name="aws-resource-rds-eventsubscription-example.json"></a>
+#### JSON<a name="aws-resource-rds-eventsubscription--examples----json"></a>
 
 ```
-"myEventSubscription": {
-  "Type": "AWS::RDS::EventSubscription",
-  "Properties": {
-    "EventCategories": ["configuration change", "failure", "deletion"],
-    "SnsTopicArn": "arn:aws:sns:us-west-2:123456789012:example-topic",
-    "SourceIds": ["db-instance-1", { "Ref" : "myDBInstance" }],
-    "SourceType":"db-instance",
-    "Enabled" : false
-  }
+{
+    "myEventSubscription": {
+        "Type": "AWS::RDS::EventSubscription",
+        "Properties": {
+            "EventCategories": [
+                "configuration change",
+                "failure",
+                "deletion"
+            ],
+            "SnsTopicArn": "arn:aws:sns:us-west-2:123456789012:example-topic",
+            "SourceIds": [
+                "db-instance-1",
+                {
+                    "Ref": "myDBInstance"
+                }
+            ],
+            "SourceType": "db-instance",
+            "Enabled": false
+        }
+    }
 }
 ```
 
-### YAML<a name="aws-resource-rds-eventsubscription-example.yaml"></a>
+#### YAML<a name="aws-resource-rds-eventsubscription--examples----yaml"></a>
 
 ```
+--- 
 myEventSubscription: 
-  Type: "AWS::RDS::EventSubscription"
   Properties: 
+    Enabled: false
     EventCategories: 
       - "configuration change"
-      - "failure"
-      - "deletion"
+      - failure
+      - deletion
     SnsTopicArn: "arn:aws:sns:us-west-2:123456789012:example-topic"
     SourceIds: 
-      - "db-instance-1"
+      - db-instance-1
       - 
-        Ref: "myDBInstance"
-    SourceType: "db-instance"
-    Enabled: false
+        Ref: myDBInstance
+    SourceType: db-instance
+  Type: "AWS::RDS::EventSubscription"
 ```

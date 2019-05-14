@@ -12,10 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::GameLift::Build",
   "Properties" : {
-    "[Name](#cfn-gamelift-build-name)" : String,
-    "[StorageLocation](#cfn-gamelift-build-storagelocation)" : [StorageLocation](aws-properties-gamelift-build-storagelocation.md),
-    "[Version](#cfn-gamelift-build-version)" : String
-  }
+      "[Name](#cfn-gamelift-build-name)" : String,
+      "[StorageLocation](#cfn-gamelift-build-storagelocation)" : [S3Location](aws-properties-gamelift-build-storagelocation.md),
+      "[Version](#cfn-gamelift-build-version)" : String
+    }
 }
 ```
 
@@ -23,46 +23,52 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::GameLift::Build
-Properties: 
-  [Name](#cfn-gamelift-build-name): String
-  [StorageLocation](#cfn-gamelift-build-storagelocation):
-    [StorageLocation](aws-properties-gamelift-build-storagelocation.md)
-  [Version](#cfn-gamelift-build-version): String
+Properties : 
+﻿  [Name](#cfn-gamelift-build-name) : String
+﻿  [StorageLocation](#cfn-gamelift-build-storagelocation) : 
+    [S3Location](aws-properties-gamelift-build-storagelocation.md)
+﻿  [Version](#cfn-gamelift-build-version) : String
 ```
 
-## Properties<a name="w4ab1c21c10d135c17b7"></a>
+## Properties<a name="aws-resource-gamelift-build-properties"></a>
 
 `Name`  <a name="cfn-gamelift-build-name"></a>
-An identifier to associate with this build\. Build names don't need to be unique\.  
+Descriptive label that is associated with a build\. Build names do not need to be unique\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Minimum*: `1`  
+*Maximum*: `1024`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StorageLocation`  <a name="cfn-gamelift-build-storagelocation"></a>
-The Amazon Simple Storage Service \(Amazon S3\) location where your build package files are located\.  
-*Required*: No, but we recommend that you specify a location\. If you don't specify this property, you must manually upload your build package files to GameLift\.  
-*Type*: [Amazon GameLift Build StorageLocation](aws-properties-gamelift-build-storagelocation.md)  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+Information indicating where your game build files are stored\. Use this parameter only when creating a build with files stored in an Amazon S3 bucket that you own\. The storage location must specify an Amazon S3 bucket name and key, as well as a the ARN for a role that you set up to allow Amazon GameLift to access your Amazon S3 bucket\. The S3 bucket must be in the same region that you want to create a new build in\.  
+*Required*: No  
+*Type*: [S3Location](aws-properties-gamelift-build-storagelocation.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Version`  <a name="cfn-gamelift-build-version"></a>
-A version to associate with this build\. Version is useful if you want to track updates to your build package files\. Versions don't need to be unique\.  
+Version that is associated with this build\. Version strings do not need to be unique\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Minimum*: `1`  
+*Maximum*: `1024`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10d135c17b9"></a>
+## Return Values<a name="aws-resource-gamelift-build-return-values"></a>
 
-### Ref<a name="w4ab1c21c10d135c17b9b2"></a>
+### Ref<a name="aws-resource-gamelift-build-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the build ID, such as `mybuild-a01234b56-7890-1de2-f345-g67h8i901j2k`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the build ID, such as `mybuild-a01234b56-7890-1de2-f345-g67h8i901j2k`\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Example<a name="w4ab1c21c10d135c17c11"></a>
+## Examples<a name="aws-resource-gamelift-build--examples"></a>
+
+### Create GameLift build<a name="aws-resource-gamelift-build--examples--Create_GameLift_build"></a>
 
 The following example creates a GameLift build named `MyGameServerBuild`\. The build package is located in an S3 bucket, specified by the `S3Bucket` and `S3Key` input parameters\. The example also creates the AWS Identity and Access Management \(IAM\) role that GameLift assumes so that it has permissions to download the build package files\.
 
-### JSON<a name="aws-resource-gamelift-build-example.json"></a>
+#### JSON<a name="aws-resource-gamelift-build--examples--Create_GameLift_build--json"></a>
 
 ```
 "BuildResource": {
@@ -110,7 +116,7 @@ The following example creates a GameLift build named `MyGameServerBuild`\. The b
 }
 ```
 
-### YAML<a name="aws-resource-gamelift-build-example.yaml"></a>
+#### YAML<a name="aws-resource-gamelift-build--examples--Create_GameLift_build--yaml"></a>
 
 ```
 BuildResource: 
@@ -152,3 +158,6 @@ IAMRole:
               Resource: 
                 - "arn:aws:s3:::mybucket/*"
 ```
+
+## See Also<a name="aws-resource-gamelift-build--seealso"></a>
++  [CreateBuild](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateBuild.html) in the *Amazon GameLift API Reference* 

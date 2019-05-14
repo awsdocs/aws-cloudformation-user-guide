@@ -12,17 +12,22 @@ There are two major steps to processing templates using macros: *creating* the m
 
 To create a macro definition, you need to create the following:
 + An AWS Lambda function to perform the template processing\. This Lambda function accepts either a snippet or an entire template, and any additional parameters that you define\. It returns the processed template snippet or the entire template as a response\.
-+ A resource of type `[AWS::CloudFormation::Macro](aws-resource-cloudformation-macro.md)`, which enables users to call the Lambda function from within AWS CloudFormation templates\. This resource specifies the ARN of the Lambda function to invoke for this macro, and additional optional properties to assist with debugging\. To create this resource within an account, author a stack template that includes a `[AWS::CloudFormation::Macro](aws-resource-cloudformation-macro.md)` resource, and then create a stack from the template\.
++ A resource of type `[AWS::CloudFormation::Macro](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html)`, which enables users to call the Lambda function from within AWS CloudFormation templates\. This resource specifies the ARN of the Lambda function to invoke for this macro, and additional optional properties to assist with debugging\. To create this resource within an account, author a stack template that includes a `[AWS::CloudFormation::Macro](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html)` resource, and then create a stack from the template\.
 
 To use a macro, reference the macro in your template:
 + To process a section, or *snippet*, of a template, reference the macro in a `[`Fn::Transform`](intrinsic-function-reference-transform.md)` function located relative to the template content you want to transform\. When using `Fn::Transform`, you can also pass any specified parameters it requires\.
 + To process an entire template, reference the macro in the [Transform](transform-section-structure.md) section of the template\.
 
-Next, create a new change set\. \(Processing macros can add multiple resources that you might not be aware of\. To ensure that you're aware of all of the changes introduced by macros, AWS CloudFormation requires you to use change sets\.\) AWS CloudFormation passes the specified template content, along with any additional specified parameters, to the Lambda function specified in the macro resource\. The Lambda function returns the processed template content, be it a snippet or an entire template\. 
+Next, you typically create a change set and then execute it\. \(Processing macros can add multiple resources that you might not be aware of\. To ensure that you're aware of all of the changes introduced by macros, we strongly advise that you use change sets\.\) AWS CloudFormation passes the specified template content, along with any additional specified parameters, to the Lambda function specified in the macro resource\. The Lambda function returns the processed template content, be it a snippet or an entire template\. 
 
-After all macros in the template have been called, AWS CloudFormation generates a change set that includes the processed template content\. After you review the change set, run it to apply the changes\. 
+After all macros in the template have been called, AWS CloudFormation generates a change set that includes the processed template content\. After you review the change set, execute it to apply the changes\. 
 
 ![\[Use the Fn::Transform intrinsic function or the Transform section of the template, to pass the template contents and associated parameters to the macro's underlying Lamdba function, which returns the processed template contents.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/template-macro-use.png)
+
+**Note**  
+If you are comfortable creating or updating a stack directly from a processed template, without first reviewing the proposed changes in a change set, you can do so by specifying the `CAPABILITY_AUTO_EXPAND` capability during a `CreateStack` or `UpdateStack` request\. You should only create stacks directly from a stack template that contains macros if you know what processing the macro performs\.   
+In addition, change sets do not currently support nested stacks\. If you want to create a stack from a stack template that contains macros and nested stacks, you must create the stack directly from the template using this capability\.   
+For more information, see [CreateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html) or [UpdateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStack.html) in the *AWS CloudFormation API Reference*\.
 
 ## Creating an AWS CloudFormation Macro Definition<a name="template-macros-author"></a>
 
@@ -110,7 +115,7 @@ The [AWS::Serverless Transform](transform-aws-serverless.md) and [AWS::Include T
 
 ### Debugging AWS CloudFormation Macros<a name="template-macros-debug"></a>
 
-To aid in debugging, you can also specify the `LogGroupName` and `LogRoleArn` properties when creating the [AWS::CloudFormation::Macro](aws-resource-cloudformation-macro.md) resource type for your macro\. These properties enable you to specify the CloudWatch log group to which AWS CloudFormation sends error logging information when invoking the macro's underlying AWS Lambda function, and the role AWS CloudFormation should assume when sending log entries to those logs\.
+To aid in debugging, you can also specify the `LogGroupName` and `LogRoleArn` properties when creating the [AWS::CloudFormation::Macro](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html) resource type for your macro\. These properties enable you to specify the CloudWatch log group to which AWS CloudFormation sends error logging information when invoking the macro's underlying AWS Lambda function, and the role AWS CloudFormation should assume when sending log entries to those logs\.
 
 ### Billing<a name="template-macros-billing"></a>
 
@@ -138,7 +143,7 @@ When creating macro definitions, keep the following in mind:
 
    The Lambda function you build performs the processing of the template contents\. Your function can process any part of a template, up to the entire template\. For information about the event mapping to which your function must adhere, see [AWS CloudFormation Macro Function Interface](#template-macros-lambda-interface)\. For information about additional considerations when creating macros, see [Considerations When Creating AWS CloudFormation Macro Definitions](#template-macros-considerations)\.
 
-1. [Create a template](template-guide.md) containing a [AWS::CloudFormation::Macro](aws-resource-cloudformation-macro.md) resource type\.
+1. [Create a template](template-guide.md) containing a [AWS::CloudFormation::Macro](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html) resource type\.
    + You must specify the `Name` and `FunctionName` properties\. The `FunctionName` property specifies the ARN of the Lambda function to invoke when AWS CloudFormation runs the macro\.
    + To aid in debugging, you can also specify the `LogGroupName` and `LogRoleArn` properties\. 
 
@@ -214,14 +219,18 @@ AWSTemplateFormatVersion: 2010-09-09
 
 ### Change Sets and AWS CloudFormation Macros<a name="template-macros-change-sets"></a>
 
-To create or update a stack using a template that references macros, you must create a [change set](cfn-console-create-stacks-changesets.md) and then execute it\. A change set describes the actions AWS CloudFormation will take based on the processed template\. Processing macros can add multiple resources that you might not be aware of\. To ensure that you're aware of all of the changes introduced by macros, AWS CloudFormation requires you to use change sets\. After you review the change set, run it to apply the changes\.
+To create or update a stack using a template that references macros, you typically create a change set and then execute it\. A change set describes the actions CloudFormation will take based on the processed template\. Processing macros can add multiple resources that you might not be aware of\. To ensure that you're aware of all of the changes introduced by macros, we strongly recommend you use change sets\. After you review the change set, you can execute it to actually apply the changes\.
+
+A macro can add IAM resources to your template\. For these resources, AWS CloudFormation requires you to [acknowledge their capabilities](using-iam-template.md#using-iam-capabilities)\. Because AWS CloudFormation can't know which resources are added before processing your template, you might need to acknowledge IAM capabilities when you create the change set, depending on whether the referenced macros contain IAM resources\. That way, when you run the change set, AWS CloudFormation has the necessary capabilities to create IAM resources\.
 
 **Note**  
-A macro can add IAM resources to your template\. For these resources, AWS CloudFormation requires you to [acknowledge their capabilities](using-iam-template.md#using-iam-capabilities)\. Because AWS CloudFormation can't know which resources are added before processing your template, you might need to acknowledge IAM capabilities when you create the change set, depending on whether the referenced macros contain IAM resources\. That way, when you run the change set, AWS CloudFormation has the necessary capabilities to create IAM resources\.
+If you are comfortable creating or updating a stack directly from a processed template, without first reviewing the proposed changes in a change set, you can do so by specifying the `CAPABILITY_AUTO_EXPAND` capability during a `CreateStack` or `UpdateStack` request\. You should only create stacks directly from a stack template that contains macros if you know what processing the macro performs\.   
+In addition, change sets do not currently support nested stacks\. If you want to create a stack from a stack template that contains macros and nested stacks, you must create the stack directly from the template using this capability\.   
+For more information, see [CreateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html) or [UpdateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStack.html) in the *AWS CloudFormation API Reference*\.
 
 If you use the AWS CLI, you can use the `package` and `deploy` commands to reduce the number of steps for launching stacks from templates that reference macros\. For more information, see [Deploying Lambda\-based Applications](https://docs.aws.amazon.com/lambda/latest/dg/deploying-lambda-apps.html) in the *AWS Lambda Developer Guide*\.
 
-### Original and Processed Templates<a name="template-macros-template-stage"></a>
+### Template Stage and CloudFormation Macros<a name="template-macros-template-stage"></a>
 
 A template's *stage* indicates whether the template is the original user\-submitted template or one in which AWS CloudFormation has processed the macros\.
 + `Original`: The template that the user originally submitted to create or update the stack\. 
@@ -230,6 +239,15 @@ A template's *stage* indicates whether the template is the original user\-submit
 Use the processed template for troubleshooting stack issues\. If a template doesn't reference macros, the original and processed templates are identical\.
 
 You can use the AWS CloudFormation [console](cfn-console-view-stack-data-resources.md) or [AWS CLI](using-cfn-get-template.md) to see the stage of a stack template\.
+
+**Note**  
+The maximum size for a processed stack template is 51,200 bytes when passed directly into a `CreateStack`, `UpdateStack`, or `ValidateTemplate` request, or 460,800 bytes when passed as an S3 object using an Amazon S3 template URL\. However, during processing CloudFormation updates the temporary state of the template as it serially processes the macros contained in the template\. Because of this, the size of the template *during processing* may temporarily exceed the allowed size of a fully\-processed template\. CloudFormation allows some buffer for these in\-process templates\. However, you should design your templates and macros keeping in mind the maximum allowed size for a processed stack template\.  
+If CloudFormation returns a `Transformation data limit exceeded` error while processing your template, your template has exceeded the maximum template size CloudFormation allows during processing\.   
+To resolve this issue, consider doing the following:  
+Restructure your template into multiple templates to avoid exceeding the maximum size for in\-process templates\. For example:  
+Use nested stack templates to encapsulate parts of the template\. For more information, see [Working with Nested Stacks](using-cfn-nested-stacks.md)\.
+Create multiple stacks and use cross\-stack references to exchange information between them\. For more information, see [Walkthrough: Refer to Resource Outputs in Another AWS CloudFormation Stack](walkthrough-crossstackref.md)\.
+Reduce the size of template fragment returned by a given macro\. CloudFormation does not tamper with the contents of fragments returned by macros\.
 
 **To use a AWS CloudFormation Macro in your template**
 **Note**  
@@ -249,7 +267,7 @@ In addition to the [Macro Example: Creating and Using a Macro](macros-example.md
 
 ## See Also<a name="template-macros-seealso"></a>
 
-[AWS::CloudFormation::Macro](aws-resource-cloudformation-macro.md)
+[AWS::CloudFormation::Macro](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html)
 
 [Transform](transform-section-structure.md)
 

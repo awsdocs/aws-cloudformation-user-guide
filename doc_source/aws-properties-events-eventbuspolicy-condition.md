@@ -1,8 +1,8 @@
-# Amazon CloudWatch Events EventBusPolicy Condition<a name="aws-properties-events-eventbuspolicy-condition"></a>
+# AWS::Events::EventBusPolicy Condition<a name="aws-properties-events-eventbuspolicy-condition"></a>
 
-<a name="aws-properties-events-eventbuspolicy-condition-description"></a>The `Condition` property type enables you to grant event bus permissions to all the AWS accounts in an organization\.
+A JSON string which you can use to limit the event bus permissions you are granting to only accounts that fulfill the condition\. Currently, the only supported condition is membership in a certain AWS organization\. The string must contain `Type`, `Key`, and `Value` fields\. The `Value` field specifies the ID of the AWS organization\. Following is an example value for `Condition`:
 
-<a name="aws-properties-events-eventbuspolicy-condition-inheritance"></a> `Condition` is a property of the [AWS::Events::EventBusPolicy](aws-resource-events-eventbuspolicy.md) resource type\.
+ `'{"Type" : "StringEquals", "Key": "aws:PrincipalOrgID", "Value": "o-1234567890"}'` 
 
 ## Syntax<a name="aws-properties-events-eventbuspolicy-condition-syntax"></a>
 
@@ -21,31 +21,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-events-eventbuspolicy-condition-syntax.yaml"></a>
 
 ```
-[Key](#cfn-events-eventbuspolicy-condition-key): String
-[Type](#cfn-events-eventbuspolicy-condition-type): String
-[Value](#cfn-events-eventbuspolicy-condition-value): String
+﻿  [Key](#cfn-events-eventbuspolicy-condition-key) : String
+﻿  [Type](#cfn-events-eventbuspolicy-condition-type) : String
+﻿  [Value](#cfn-events-eventbuspolicy-condition-value) : String
 ```
 
 ## Properties<a name="aws-properties-events-eventbuspolicy-condition-properties"></a>
 
 `Key`  <a name="cfn-events-eventbuspolicy-condition-key"></a>
-Currently, `Key` must be `aws:PrincipalOrgID`  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Specifies the key for the condition\. Currently the only supported key is `aws:PrincipalOrgID`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-events-eventbuspolicy-condition-type"></a>
-Currently, `Type` must be `StringEquals`  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Specifies the type of condition\. Currently the only supported value is `StringEquals`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-events-eventbuspolicy-condition-value"></a>
-Specifies the ID of the AWS organization to which you want to grant permission\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
-## See Also<a name="aws-properties-events-eventbuspolicy-condition-seealso"></a>
-+ [Sending and Receiving Events Between AWS Accounts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEvents-CrossAccountEventDelivery.html) in the *Amazon CloudWatch Events User Guide*
-+ [PutPermission](https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_PutPermission.html) in the *Amazon CloudWatch Events API Reference*
+Specifies the value for the key\. Currently, this must be the ID of the organization\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

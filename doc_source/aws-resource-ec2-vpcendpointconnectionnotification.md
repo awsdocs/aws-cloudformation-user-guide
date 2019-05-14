@@ -1,11 +1,8 @@
 # AWS::EC2::VPCEndpointConnectionNotification<a name="aws-resource-ec2-vpcendpointconnectionnotification"></a>
 
-Creates a connection notification for the specified VPC endpoint or VPC endpoint service\. A connection notification notifies you of specific endpoint events\. You must create an SNS topic to receive notifications\. For more information, see [CreateVpcEndpointConnectionNotification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcEndpointConnectionNotification.html)\.
+Specifies a connection notification for a VPC endpoint or VPC endpoint service\. A connection notification notifies you of specific endpoint events\. You must create an SNS topic to receive notifications\. For more information, see [Create a Topic](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html) in the *Amazon Simple Notification Service Developer Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-ec2-vpcendpointconnectionnotification-syntax)
-+ [Properties](#aws-resource-ec2-vpcendpointconnectionnotification-properties)
-+ [Return Values](#aws-resource-ec2-vpcendpointconnectionnotification-returnvalues)
+You can create a connection notification for interface endpoints only\.
 
 ## Syntax<a name="aws-resource-ec2-vpcendpointconnectionnotification-syntax"></a>
 
@@ -17,56 +14,56 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::VPCEndpointConnectionNotification",
   "Properties" : {
-    "[ConnectionEvents](#cfn-ec2-vpcendpointconnectionnotification-connectionevents)" : [ String, ... ],
-    "[VPCEndpointId](#cfn-ec2-vpcendpointconnectionnotification-vpcendpointid)" : String,
-    "[ServiceId](#cfn-ec2-vpcendpointconnectionnotification-serviceid)" : String,
-    "[ConnectionNotificationArn](#cfn-ec2-vpcendpointconnectionnotification-connectionnotificationarn)" : String
-  }
+      "[ConnectionEvents](#cfn-ec2-vpcendpointconnectionnotification-connectionevents)" : [ String, ... ],
+      "[ConnectionNotificationArn](#cfn-ec2-vpcendpointconnectionnotification-connectionnotificationarn)" : String,
+      "[ServiceId](#cfn-ec2-vpcendpointconnectionnotification-serviceid)" : String,
+      "[VPCEndpointId](#cfn-ec2-vpcendpointconnectionnotification-vpcendpointid)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-ec2-vpcendpointconnectionnotification-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::VPCEndpointConnectionNotification"
-Properties:
-  [ConnectionEvents](#cfn-ec2-vpcendpointconnectionnotification-connectionevents): 
+Type: AWS::EC2::VPCEndpointConnectionNotification
+Properties : 
+﻿  [ConnectionEvents](#cfn-ec2-vpcendpointconnectionnotification-connectionevents) : 
     - String
-  [VPCEndpointId](#cfn-ec2-vpcendpointconnectionnotification-vpcendpointid): String
-  [ServiceId](#cfn-ec2-vpcendpointconnectionnotification-serviceid): String
-  [ConnectionNotificationArn](#cfn-ec2-vpcendpointconnectionnotification-connectionnotificationarn): String
+﻿  [ConnectionNotificationArn](#cfn-ec2-vpcendpointconnectionnotification-connectionnotificationarn) : String
+﻿  [ServiceId](#cfn-ec2-vpcendpointconnectionnotification-serviceid) : String
+﻿  [VPCEndpointId](#cfn-ec2-vpcendpointconnectionnotification-vpcendpointid) : String
 ```
 
 ## Properties<a name="aws-resource-ec2-vpcendpointconnectionnotification-properties"></a>
 
 `ConnectionEvents`  <a name="cfn-ec2-vpcendpointconnectionnotification-connectionevents"></a>
 One or more endpoint events for which to receive notifications\. Valid values are `Accept`, `Connect`, `Delete`, and `Reject`\.  
- *Required*: Yes  
- *Type*: List of String values  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: Yes  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConnectionNotificationArn`  <a name="cfn-ec2-vpcendpointconnectionnotification-connectionnotificationarn"></a>
 The ARN of the SNS topic for the notifications\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceId`  <a name="cfn-ec2-vpcendpointconnectionnotification-serviceid"></a>
 The ID of the endpoint service\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VPCEndpointId`  <a name="cfn-ec2-vpcendpointconnectionnotification-vpcendpointid"></a>
-The ID of the endpoint\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The ID of the endpoint\.   
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-vpcendpointconnectionnotification-returnvalues"></a>
+## Return Values<a name="aws-resource-ec2-vpcendpointconnectionnotification-return-values"></a>
 
-### Ref<a name="aws-resource-ec2-vpcendpointconnectionnotification-ref"></a>
+### Ref<a name="aws-resource-ec2-vpcendpointconnectionnotification-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::EC2::VPCEndpointConnectionNotification` resource to the intrinsic `Ref` function, the function returns the ID of the connection notification\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the VPC endpoint connection\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

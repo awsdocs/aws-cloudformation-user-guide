@@ -56,7 +56,7 @@ The name of the parameter in the Systems Manager Parameter Store\. The parameter
 Required\.
 
 **version**  
-An integer that specifies the version of the parameter to use\. You must specify the exact version is required\. You cannot currently specify that AWS CloudFormation use the latest version of a parameter\. For more information, see [Working with Parameter Versions](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-versions.html) in the *AWS Systems Manager User Guide*  
+An integer that specifies the version of the parameter to use\. You must specify the exact version\. You cannot currently specify that AWS CloudFormation use the latest version of a parameter\. For more information, see [Working with Parameter Versions](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-versions.html) in the *AWS Systems Manager User Guide*  
 Required\.
 
 ### Example<a name="dynamic-references-ssm-example"></a>
@@ -69,7 +69,7 @@ The following example uses an `ssm` dynamic reference to set the access control 
   "MyS3Bucket": {
     "Type": "AWS::S3::Bucket",
     "Properties": {
-      "AccessControl": "{{resolve:ssm:S3AccessControl:2}}""
+      "AccessControl": "{{resolve:ssm:S3AccessControl:2}}"
     }
   }
 ```
@@ -100,7 +100,7 @@ Use the `ssm-secure` dynamic reference pattern to specify AWS Systems Manager Se
 
 A *secure string parameter* is any sensitive data that needs to be stored and referenced in a secure manner\. That is, data that you don't want users to alter or reference in clear text, such as passwords or license keys\. For more information on secure strings, see [Use Secure String Parameters](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-about.html#sysman-paramstore-securestring) in the *AWS Systems Manager User Guide*\.
 
-Secure string parameters values are not stored in CloudFormation, nor are they returned as part of in any API call results\. 
+Secure string parameters values are not stored in CloudFormation, nor are they returned in any API call results\. 
 
 ### Reference Pattern<a name="dynamic-references-ssm-secure-pattern"></a>
 
@@ -117,7 +117,7 @@ The name of the parameter in the Systems Manager Parameter Store\. The parameter
 Required\.
 
 **version**  
-An integer that specifies the version of the parameter to use\. You must specify the exact version is required\. You cannot currently specify that AWS CloudFormation use the latest version of a parameter\. For more information, see [Working with Parameter Versions](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-versions.html) in the *AWS Systems Manager User Guide*  
+An integer that specifies the version of the parameter to use\. You must specify the exact version\. You cannot currently specify that AWS CloudFormation use the latest version of a parameter\. For more information, see [Working with Parameter Versions](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-versions.html) in the *AWS Systems Manager User Guide*  
 Required\.
 
 ### Example<a name="dynamic-references-ssm-secure-example"></a>
@@ -171,17 +171,17 @@ Resources that support the `ssm-secure` dynamic reference pattern currently incl
 
 | Resource | Property Type | Properties | 
 | --- | --- | --- | 
-| [AWS::DirectoryService::MicrosoftAD](aws-resource-directoryservice-microsoftad.md) |  | `Password` | 
-| [AWS::DirectoryService::SimpleAD](aws-resource-directoryservice-simplead.md) |  | `Password` | 
-| [AWS::ElastiCache::ReplicationGroup](aws-resource-elasticache-replicationgroup.md) |  | `AuthToken` | 
-| [AWS::IAM::User](aws-properties-iam-user.md) | [LoginProfile](aws-properties-iam-user-loginprofile.md) | `Password` | 
-| [AWS::KinesisFirehose::DeliveryStream](aws-resource-kinesisfirehose-deliverystream.md) | [RedshiftDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.md) | `Password` | 
-| [AWS::OpsWorks::App](aws-resource-opsworks-app.md) | [AppSource](aws-properties-opsworks-stack-source.md) | `Password` | 
-| [AWS::OpsWorks::Stack](aws-resource-opsworks-stack.md) | [CustomCookbooksSource](aws-properties-opsworks-stack-source.md) | `Password` | 
-| [AWS::OpsWorks::Stack](aws-resource-opsworks-stack.md) | [RdsDbInstances](aws-properties-opsworks-stack-rdsdbinstance.md) | `DbPassword` | 
-| [AWS::RDS::DBCluster](aws-resource-rds-dbcluster.md) |  | `MasterUserPassword` | 
-| [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md) |  | `MasterUserPassword`  | 
-| [AWS::Redshift::Cluster](aws-resource-redshift-cluster.md) |  | `MasterUserPassword` | 
+| [AWS::DirectoryService::MicrosoftAD](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html) |  | `Password` | 
+| [AWS::DirectoryService::SimpleAD](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html) |  | `Password` | 
+| [AWS::ElastiCache::ReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html) |  | `AuthToken` | 
+| [AWS::IAM::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html) | [LoginProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user-loginprofile.html) | `Password` | 
+| [AWS::KinesisFirehose::DeliveryStream](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html) | [RedshiftDestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.html) | `Password` | 
+| [AWS::OpsWorks::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html) | [Source](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source-1.html) | `Password` | 
+| [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html) | [CustomCookbooksSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html) | `Password` | 
+| [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html) | [RdsDbInstances](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html) | `DbPassword` | 
+| [AWS::RDS::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html) |  | `MasterUserPassword` | 
+| [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html) |  | `MasterUserPassword`  | 
+| [AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html) |  | `MasterUserPassword` | 
 
 ## Secrets Manager Secrets<a name="dynamic-references-secretsmanager"></a>
 
@@ -190,7 +190,7 @@ Use the `secretsmanager` dynamic reference to retrieve entire secrets or secret 
 To specify a secret stored in Secrets Manager, you must have access to call `[GetSecretValue](https://docs.aws.amazon.com/secretsmanager/latest/apireference/GetSecretValue.html)` for the specified secret\. 
 
 **Important**  
-The `secretsmanager` dynamic reference can be used in all resource properties\. Using the `secretsmanager` dynamic reference guarantees that neither Secrets Manager or CloudFormation logs or persists any resolved secret value\. However, the secret value may show up in the service whose resource it is being used in\. You should review your usage to avoid leaking secret data\.
+The `secretsmanager` dynamic reference can be used in all resource properties\. Using the `secretsmanager` dynamic reference guarantees that neither Secrets Manager nor CloudFormation logs or persists any resolved secret value\. However, the secret value may show up in the service whose resource it is being used in\. You should review your usage to avoid leaking secret data\.
 
 Dynamic references for secure values, such as `secretsmanager`, are not currently supported in [custom resources](template-custom-resources.md)\.
 

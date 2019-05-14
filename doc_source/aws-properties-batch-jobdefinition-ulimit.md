@@ -1,6 +1,6 @@
-# AWS Batch JobDefinition Ulimit<a name="aws-properties-batch-jobdefinition-ulimit"></a>
+# AWS::Batch::JobDefinition Ulimit<a name="aws-properties-batch-jobdefinition-ulimit"></a>
 
-The `Ulimit` property type specifies the ulimits to use in a job definition\.
+The `ulimit` settings to pass to the container\.
 
 ## Syntax<a name="aws-properties-batch-jobdefinition-ulimit-syntax"></a>
 
@@ -10,36 +10,36 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[SoftLimit](#cfn-batch-jobdefinition-ulimit-softlimit)" : Integer,
   "[HardLimit](#cfn-batch-jobdefinition-ulimit-hardlimit)" : Integer,
-  "[Name](#cfn-batch-jobdefinition-ulimit-name)" : String
+  "[Name](#cfn-batch-jobdefinition-ulimit-name)" : String,
+  "[SoftLimit](#cfn-batch-jobdefinition-ulimit-softlimit)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-batch-jobdefinition-ulimit-syntax.yaml"></a>
 
 ```
-[SoftLimit](#cfn-batch-jobdefinition-ulimit-softlimit): Integer
-[HardLimit](#cfn-batch-jobdefinition-ulimit-hardlimit): Integer
-[Name](#cfn-batch-jobdefinition-ulimit-name): String
+﻿  [HardLimit](#cfn-batch-jobdefinition-ulimit-hardlimit) : Integer
+﻿  [Name](#cfn-batch-jobdefinition-ulimit-name) : String
+﻿  [SoftLimit](#cfn-batch-jobdefinition-ulimit-softlimit) : Integer
 ```
 
 ## Properties<a name="aws-properties-batch-jobdefinition-ulimit-properties"></a>
 
-`SoftLimit`  <a name="cfn-batch-jobdefinition-ulimit-softlimit"></a>
-The soft limit for the `ulimit` type\.  
- *Required*: yes  
-*Type*: Integer  
- *Update requires*: No Interruption 
-
 `HardLimit`  <a name="cfn-batch-jobdefinition-ulimit-hardlimit"></a>
 The hard limit for the `ulimit` type\.  
- *Required*: yes  
+*Required*: Yes  
 *Type*: Integer  
- *Update requires*: No Interruption 
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-batch-jobdefinition-ulimit-name"></a>
 The `type` of the `ulimit`\.  
- *Required*: yes  
+*Required*: Yes  
 *Type*: String  
- *Update requires*: No Interruption 
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SoftLimit`  <a name="cfn-batch-jobdefinition-ulimit-softlimit"></a>
+The soft limit for the `ulimit` type\.  
+*Required*: Yes  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

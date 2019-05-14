@@ -1,33 +1,37 @@
-# EC2 NetworkAclEntry PortRange<a name="aws-properties-ec2-networkaclentry-portrange"></a>
+# AWS::EC2::NetworkAclEntry PortRange<a name="aws-properties-ec2-networkaclentry-portrange"></a>
 
-The `PortRange` property is an embedded property of the [AWS::EC2::NetworkAclEntry](aws-resource-ec2-network-acl-entry.md) type\.
+Describes a range of ports\.
 
-## Syntax<a name="w4ab1c21c10d102c72c23b5"></a>
+## Syntax<a name="aws-properties-ec2-networkaclentry-portrange-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-ec2-networkaclentry-portrange-syntax.json"></a>
 
 ```
 {
-   "[From](#cfn-ec2-networkaclentry-portrange-from)" : Integer,
-   "[To](#cfn-ec2-networkaclentry-portrange-to)" : Integer
+  "[From](#cfn-ec2-networkaclentry-portrange-from)" : Integer,
+  "[To](#cfn-ec2-networkaclentry-portrange-to)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-ec2-networkaclentry-portrange-syntax.yaml"></a>
 
 ```
-[From](#cfn-ec2-networkaclentry-portrange-from): Integer
-[To](#cfn-ec2-networkaclentry-portrange-to): Integer
+﻿  [From](#cfn-ec2-networkaclentry-portrange-from) : Integer
+﻿  [To](#cfn-ec2-networkaclentry-portrange-to) : Integer
 ```
 
-## Properties<a name="w4ab1c21c10d102c72c23b7"></a>
+## Properties<a name="aws-properties-ec2-networkaclentry-portrange-properties"></a>
 
 `From`  <a name="cfn-ec2-networkaclentry-portrange-from"></a>
-The first port in the range\.  
-*Required*: Conditional\. Required if you specify 6 \(TCP\) or 17 \(UDP\) for the protocol parameter\.  
-*Type*: Integer
+The first port in the range\. Required if you specify 6 \(TCP\) or 17 \(UDP\) for the protocol parameter\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `To`  <a name="cfn-ec2-networkaclentry-portrange-to"></a>
-The last port in the range\.  
-*Required*: Conditional\. Required if you specify 6 \(TCP\) or 17 \(UDP\) for the protocol parameter\.  
-*Type*: Integer
+The last port in the range\. Required if you specify 6 \(TCP\) or 17 \(UDP\) for the protocol parameter\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

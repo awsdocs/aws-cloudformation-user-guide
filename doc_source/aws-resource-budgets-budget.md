@@ -1,6 +1,6 @@
 # AWS::Budgets::Budget<a name="aws-resource-budgets-budget"></a>
 
-The `AWS::Budgets::Budget` resource creates, replaces, or deletes budgets for Billing and Cost Management\. For more information, see [Managing Your Costs with Budgets](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html) in the [https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/)\. 
+The `AWS::Budgets::Budget` resource creates, replaces, or deletes budgets for Billing and Cost Management\. For more information, see [Managing Your Costs with Budgets](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html) in the *AWS Billing and Cost Management User Guide*\.
 
 ## Syntax<a name="aws-resource-budgets-budget-syntax"></a>
 
@@ -12,165 +12,167 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Budgets::Budget",
   "Properties" : {
-    "[NotificationsWithSubscribers](#cfn-budgets-budget-notificationswithsubscribers)" : [ [*NotificationWithSubscribers*](aws-properties-budgets-budget-notificationwithsubscribers.md), ... ],
-    "[Budget](#cfn-budgets-budget-budget)" : [*BudgetData*](aws-properties-budgets-budget-budgetdata.md)
-  }
+      "[Budget](#cfn-budgets-budget-budget)" : [BudgetData](aws-properties-budgets-budget-budgetdata.md),
+      "[NotificationsWithSubscribers](#cfn-budgets-budget-notificationswithsubscribers)" : [ [NotificationWithSubscribers](aws-properties-budgets-budget-notificationwithsubscribers.md), ... ]
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-budgets-budget-syntax.yaml"></a>
 
 ```
-Type: "AWS::Budgets::Budget"
-Properties:
-  [NotificationsWithSubscribers](#cfn-budgets-budget-notificationswithsubscribers): 
-    - [*NotificationWithSubscribers*](aws-properties-budgets-budget-notificationwithsubscribers.md)
-  [Budget](#cfn-budgets-budget-budget): [*BudgetData*](aws-properties-budgets-budget-budgetdata.md)
+Type: AWS::Budgets::Budget
+Properties : 
+﻿  [Budget](#cfn-budgets-budget-budget) : 
+    [BudgetData](aws-properties-budgets-budget-budgetdata.md)
+﻿  [NotificationsWithSubscribers](#cfn-budgets-budget-notificationswithsubscribers) : 
+    - [NotificationWithSubscribers](aws-properties-budgets-budget-notificationwithsubscribers.md)
 ```
 
 ## Properties<a name="aws-resource-budgets-budget-properties"></a>
 
-`NotificationsWithSubscribers`  <a name="cfn-budgets-budget-notificationswithsubscribers"></a>
-The notification that you want associated with the budget\. A budget can have up to five notifications, and each notification can have one SNS subscriber and up to ten email subscribers\.  
- *Required*: No  
- *Type*: List of [NotificationWithSubscribers](aws-properties-budgets-budget-notificationwithsubscribers.md) property types  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
-
 `Budget`  <a name="cfn-budgets-budget-budget"></a>
-The budget for tracking your service usage, costs, and RI utilization\. Single accounts and master and member accounts in an organization can, by default, create budgets\.   
- *Required*: Yes  
- *Type*: [BudgetData](aws-properties-budgets-budget-budgetdata.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The budget object that you want to create\.  
+*Required*: Yes  
+*Type*: [BudgetData](aws-properties-budgets-budget-budgetdata.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-budgets-budget-returnvalues"></a>
+`NotificationsWithSubscribers`  <a name="cfn-budgets-budget-notificationswithsubscribers"></a>
+A notification that you want to associate with a budget\. A budget can have up to five notifications, and each notification can have one SNS subscriber and up to 10 email subscribers\. If you include notifications and subscribers in your `CreateBudget` call, AWS creates the notifications and subscribers for you\.  
+*Required*: No  
+*Type*: List of [NotificationWithSubscribers](aws-properties-budgets-budget-notificationwithsubscribers.md)  
+*Maximum*: `5`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-### Ref<a name="aws-resource-budgets-budget-ref"></a>
+## Return Values<a name="aws-resource-budgets-budget-return-values"></a>
 
-When you pass the logical ID of an `AWS::Budgets::Budget` resource to the intrinsic `Ref` function, the function returns the name of the budget created by the template\. 
+### Ref<a name="aws-resource-budgets-budget-return-values-ref"></a>
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the budget that is created by the template\.
 
-## Examples<a name="aws-resource-budgets-budget-examples"></a>
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Budget for 100 USD with two notifications<a name="aws-resource-budgets-budget-example1"></a>
+## Examples<a name="aws-resource-budgets-budget--examples"></a>
+
+### Budget for 100 USD with two notifications<a name="aws-resource-budgets-budget--examples--Budget_for_100_USD_with_two_notifications"></a>
 
 The following example creates a budget for 100 USD amount of costs, with notifications for when you have spent over 80 USD or over 99 USD\. The notifications are sent to the subscribers `email@example.com` and `email2@example.com`\.
 
-#### JSON<a name="aws-resource-budgets-budget-example1.json"></a>
+#### JSON<a name="aws-resource-budgets-budget--examples--Budget_for_100_USD_with_two_notifications--json"></a>
 
 ```
-    {
-        "Description": "Basic Budget test",
-        "Resources": {
-            "Budget": {
-                "Type": "AWS::Budgets::Budget",
-                "Properties": {
-                    "Budget": {
-                        "BudgetLimit": {
-                            "Amount": "100",
-                            "Unit": "USD"
-                        },
-                        "TimeUnit": "MONTHLY",
-                        "TimePeriod": {
-                            "Start": "1225864800",
-                            "End": "1926864800"
-                        },
-                        "BudgetType": "COST",
-                        "CostFilters": {
-                            "AZ": [
-                                "us-east-1",
-                                "us-west-1",
-                                "us-east-2"
-                            ]
-                        }
-                    },
-                    "NotificationsWithSubscribers": [
-                        {
-                            "Notification": {
-                                "NotificationType": "ACTUAL",
-                                "ComparisonOperator": "GREATER_THAN",
-                                "Threshold": 99
-                            },
-                            "Subscribers": [
-                                {
-                                    "SubscriptionType": "EMAIL",
-                                    "Address": "email@example.com"
-                                },
-                                {
-                                    "SubscriptionType": "EMAIL",
-                                    "Address": "email2@example.com"
-                                }
-                            ]
-                        },
-                        {
-                            "Notification": {
-                                "NotificationType": "ACTUAL",
-                                "ComparisonOperator": "GREATER_THAN",
-                                "Threshold": 80
-                            },
-                            "Subscribers": [
-                                {
-                                    "SubscriptionType": "EMAIL",
-                                    "Address": "email@example.com"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            }
+{
+  "Description": "Basic Budget test",
+  "Resources": {
+    "Budget": {
+      "Type": "AWS::Budgets::Budget",
+      "Properties": {
+        "Budget": {
+          "BudgetLimit": {
+            "Amount": "100",
+            "Unit": "USD"
+          },
+          "TimeUnit": "MONTHLY",
+          "TimePeriod": {
+            "Start": "1225864800",
+            "End": "1926864800"
+          },
+          "BudgetType": "COST",
+          "CostFilters": {
+            "AZ": [
+              "us-east-1",
+              "us-west-1",
+              "us-east-2"
+            ]
+          }
         },
-        "Outputs": {
-            "BudgetId": {
-                "Value": "BudgetExample"
-            }
-        }
+        "NotificationsWithSubscribers": [
+          {
+            "Notification": {
+              "NotificationType": "ACTUAL",
+              "ComparisonOperator": "GREATER_THAN",
+              "Threshold": 99
+            },
+            "Subscribers": [
+              {
+                "SubscriptionType": "EMAIL",
+                "Address": "email@example.com"
+              },
+              {
+                "SubscriptionType": "EMAIL",
+                "Address": "email2@example.com"
+              }
+            ]
+          },
+          {
+            "Notification": {
+              "NotificationType": "ACTUAL",
+              "ComparisonOperator": "GREATER_THAN",
+              "Threshold": 80
+            },
+            "Subscribers": [
+              {
+                "SubscriptionType": "EMAIL",
+                "Address": "email@example.com"
+              }
+            ]
+          }
+        ]
+      }
     }
+  },
+  "Outputs": {
+    "BudgetId": {
+      "Value": "BudgetExample"
+    }
+  }
+}
 ```
 
-#### YAML<a name="aws-resource-budgets-budget-example1.yaml"></a>
+#### YAML<a name="aws-resource-budgets-budget--examples--Budget_for_100_USD_with_two_notifications--yaml"></a>
 
 ```
-    ---
-    Description: "Basic Budget test"
-    Resources:
-      BudgetExample:
-        Type: "AWS::Budgets::Budget"
-        Properties:
-          Budget:
-            BudgetLimit:
-              Amount: 100
-              Unit: USD
-            TimeUnit: MONTHLY
-            TimePeriod:
-              Start: 1225864800
-              End: 1926864800
-            BudgetType: COST
-            CostFilters:
-              AZ:
-                - us-east-1
-                - us-west-1
-                - us-east-2
-          NotificationsWithSubscribers:
-            - Notification:
-                NotificationType: ACTUAL
-                ComparisonOperator: GREATER_THAN
-                Threshold: 99
-              Subscribers:
-              - SubscriptionType: EMAIL
-                Address: email@example.com
-              - SubscriptionType: EMAIL
-                Address: email2@example.com
-            - Notification:
-                NotificationType: ACTUAL
-                ComparisonOperator: GREATER_THAN
-                Threshold: 80
-              Subscribers:
-              - SubscriptionType: EMAIL
-                Address: email@example.com
-    Outputs:
-      BudgetId:
-        Value: !Ref BudgetExample
+---
+Description: "Basic Budget test"
+Resources:
+  BudgetExample:
+    Type: "AWS::Budgets::Budget"
+    Properties:
+      Budget:
+        BudgetLimit:
+          Amount: 100
+          Unit: USD
+        TimeUnit: MONTHLY
+        TimePeriod:
+          Start: 1225864800
+          End: 1926864800
+        BudgetType: COST
+        CostFilters:
+          AZ:
+            - us-east-1
+            - us-west-1
+            - us-east-2
+      NotificationsWithSubscribers:
+        - Notification:
+            NotificationType: ACTUAL
+            ComparisonOperator: GREATER_THAN
+            Threshold: 99
+          Subscribers:
+            - SubscriptionType: EMAIL
+              Address: email@example.com
+            - SubscriptionType: EMAIL
+              Address: email2@example.com
+        - Notification:
+            NotificationType: ACTUAL
+            ComparisonOperator: GREATER_THAN
+            Threshold: 80
+          Subscribers:
+          - SubscriptionType: EMAIL
+            Address: email@example.com
+Outputs:
+  BudgetId:
+    Value: !Ref BudgetExample
 ```
 
-## See Also<a name="aws-resource-budgets-budget-seealso"></a>
-+ [CreateBudget](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_CreateBudget.html) in the [AWS Billing and Cost Management API Reference](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/Welcome.html)\. 
+## See Also<a name="aws-resource-budgets-budget--seealso"></a>
++  [CreateBudget](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_CreateBudget.html) in the *AWS Cost Explorer Service Cost Management APIs* 

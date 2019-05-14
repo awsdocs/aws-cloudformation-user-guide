@@ -1,8 +1,10 @@
-# Amazon Elastic Container Service TaskDefinition Ulimit<a name="aws-properties-ecs-taskdefinition-containerdefinitions-ulimit"></a>
+# AWS::ECS::TaskDefinition Ulimit<a name="aws-properties-ecs-taskdefinition-containerdefinitions-ulimit"></a>
 
-`Ulimit` is a property of the [Amazon Elastic Container Service TaskDefinition ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md) property that specifies resource limits for an Amazon Elastic Container Service \(Amazon ECS\) container\.
+The `Ulimit` property specifies the `ulimit` settings to pass to the container\.
 
-## Syntax<a name="w4ab1c21c10d108c21c77b5"></a>
+## Syntax<a name="aws-properties-ecs-taskdefinition-containerdefinitions-ulimit-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-ecs-taskdefinition-containerdefinitions-ulimit-syntax.json"></a>
 
@@ -17,24 +19,28 @@
 ### YAML<a name="aws-properties-ecs-taskdefinition-containerdefinitions-ulimit-syntax.yaml"></a>
 
 ```
-[HardLimit](#cfn-ecs-taskdefinition-containerdefinition-ulimit-hardlimit): Integer
-[Name](#cfn-ecs-taskdefinition-containerdefinition-ulimit-name): String
-[SoftLimit](#cfn-ecs-taskdefinition-containerdefinition-ulimit-softlimit): Integer
+﻿  [HardLimit](#cfn-ecs-taskdefinition-containerdefinition-ulimit-hardlimit) : Integer
+﻿  [Name](#cfn-ecs-taskdefinition-containerdefinition-ulimit-name) : String
+﻿  [SoftLimit](#cfn-ecs-taskdefinition-containerdefinition-ulimit-softlimit) : Integer
 ```
 
-## Properties<a name="w4ab1c21c10d108c21c77b7"></a>
+## Properties<a name="aws-properties-ecs-taskdefinition-containerdefinitions-ulimit-properties"></a>
 
 `HardLimit`  <a name="cfn-ecs-taskdefinition-containerdefinition-ulimit-hardlimit"></a>
 The hard limit for the ulimit type\.  
 *Required*: Yes  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-ecs-taskdefinition-containerdefinition-ulimit-name"></a>
-The type of ulimit\. For valid values, see the `name` content for the [Ulimit](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_Ulimit.html) data type in the *Amazon Elastic Container Service API Reference*\.  
-*Required*: No  
-*Type*: String
+The `type` of the `ulimit`\.  
+*Required*: Yes  
+*Type*: String  
+*Allowed Values*: `core | cpu | data | fsize | locks | memlock | msgqueue | nice | nofile | nproc | rss | rtprio | rttime | sigpending | stack`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SoftLimit`  <a name="cfn-ecs-taskdefinition-containerdefinition-ulimit-softlimit"></a>
 The soft limit for the ulimit type\.  
 *Required*: Yes  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

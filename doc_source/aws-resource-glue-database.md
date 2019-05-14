@@ -12,9 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Glue::Database",
   "Properties" : {
-    "[DatabaseInput](#cfn-glue-database-databaseinput)" : [*DatabaseInput*](aws-properties-glue-database-databaseinput.md),
-    "[CatalogId](#cfn-glue-database-catalogid)" : String
-  }
+      "[CatalogId](#cfn-glue-database-catalogid)" : String,
+      "[DatabaseInput](#cfn-glue-database-databaseinput)" : [DatabaseInput](aws-properties-glue-database-databaseinput.md)
+    }
 }
 ```
 
@@ -22,31 +22,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Glue::Database
-Properties:
-  [DatabaseInput](#cfn-glue-database-databaseinput): 
-    [*DatabaseInput*](aws-properties-glue-database-databaseinput.md)
-  [CatalogId](#cfn-glue-database-catalogid): String
+Properties : 
+﻿  [CatalogId](#cfn-glue-database-catalogid) : String
+﻿  [DatabaseInput](#cfn-glue-database-databaseinput) : 
+    [DatabaseInput](aws-properties-glue-database-databaseinput.md)
 ```
 
 ## Properties<a name="aws-resource-glue-database-properties"></a>
 
-`DatabaseInput`  <a name="cfn-glue-database-databaseinput"></a>
-The metadata of the database\.  
- *Required*: Yes  
- *Type*: [DatabaseInput](aws-properties-glue-database-databaseinput.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
 `CatalogId`  <a name="cfn-glue-database-catalogid"></a>
-The ID of the data catalog to create the catalog object in\. Currently, this should be the AWS account ID\.  
-To specify the account ID, you can use the `Ref` intrinsic function with the `AWS::AccountId` pseudo parameter—for example `!Ref AWS::AccountId`\.
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The AWS account ID for the account in which to create the catalog object\.  
+ To specify the account ID, you can use the `Ref` intrinsic function with the `AWS::AccountId` pseudo parameter\. For example: `!Ref AWS::AccountId` 
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-glue-database-returnvalues"></a>
+`DatabaseInput`  <a name="cfn-glue-database-databaseinput"></a>
+The metadata for the database\.  
+*Required*: Yes  
+*Type*: [DatabaseInput](aws-properties-glue-database-databaseinput.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-### Ref<a name="w4ab1c21c10d138c20b9b3"></a>
+## Return Values<a name="aws-resource-glue-database-return-values"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the `DatabaseInput` name\.
+### Ref<a name="aws-resource-glue-database-return-values-ref"></a>
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the database name\.
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

@@ -1,8 +1,8 @@
-# Amazon Kinesis Data Analytics Application InputSchema<a name="aws-properties-kinesisanalytics-application-inputschema"></a>
+# AWS::KinesisAnalytics::Application InputSchema<a name="aws-properties-kinesisanalytics-application-inputschema"></a>
 
-The `InputSchema` property type describes the format of the data in the streaming source, and how each data element maps to corresponding columns that are created in the in\-application stream in an Amazon Kinesis Data Analytics application\.
+Describes the format of the data in the streaming source, and how each data element maps to corresponding columns in the in\-application stream that is being created\.
 
- `InputSchema` is a property of the [Input](aws-properties-kinesisanalytics-application-input.md) property type\. 
+Also used to describe the format of the reference data source\.
 
 ## Syntax<a name="aws-properties-kinesisanalytics-application-inputschema-syntax"></a>
 
@@ -12,38 +12,40 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[RecordColumns](#cfn-kinesisanalytics-application-inputschema-recordcolumns)" : [ [*RecordColumn*](aws-properties-kinesisanalytics-application-recordcolumn.md), ... ],
+  "[RecordColumns](#cfn-kinesisanalytics-application-inputschema-recordcolumns)" : [ [RecordColumn](aws-properties-kinesisanalytics-application-recordcolumn.md), ... ],
   "[RecordEncoding](#cfn-kinesisanalytics-application-inputschema-recordencoding)" : String,
-  "[RecordFormat](#cfn-kinesisanalytics-application-inputschema-recordformat)" : [*RecordFormat*](aws-properties-kinesisanalytics-application-recordformat.md)
+  "[RecordFormat](#cfn-kinesisanalytics-application-inputschema-recordformat)" : [RecordFormat](aws-properties-kinesisanalytics-application-recordformat.md)
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisanalytics-application-inputschema-syntax.yaml"></a>
 
 ```
-  [RecordColumns](#cfn-kinesisanalytics-application-inputschema-recordcolumns): 
-    - [*RecordColumn*](aws-properties-kinesisanalytics-application-recordcolumn.md)
-  [RecordEncoding](#cfn-kinesisanalytics-application-inputschema-recordencoding): String
-  [RecordFormat](#cfn-kinesisanalytics-application-inputschema-recordformat): 
-    [*RecordFormat*](aws-properties-kinesisanalytics-application-recordformat.md)
+﻿  [RecordColumns](#cfn-kinesisanalytics-application-inputschema-recordcolumns) : 
+    - [RecordColumn](aws-properties-kinesisanalytics-application-recordcolumn.md)
+﻿  [RecordEncoding](#cfn-kinesisanalytics-application-inputschema-recordencoding) : String
+﻿  [RecordFormat](#cfn-kinesisanalytics-application-inputschema-recordformat) : 
+    [RecordFormat](aws-properties-kinesisanalytics-application-recordformat.md)
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-application-inputschema-properties"></a>
 
 `RecordColumns`  <a name="cfn-kinesisanalytics-application-inputschema-recordcolumns"></a>
 A list of `RecordColumn` objects\.  
- *Required*: Yes  
- *Type*: List of [RecordColumn](aws-properties-kinesisanalytics-application-recordcolumn.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: Yes  
+*Type*: List of [RecordColumn](aws-properties-kinesisanalytics-application-recordcolumn.md)  
+*Maximum*: `1000`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RecordEncoding`  <a name="cfn-kinesisanalytics-application-inputschema-recordencoding"></a>
-Specifies the encoding of the records in the streaming source; for example, `UTF-8`\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Specifies the encoding of the records in the streaming source\. For example, UTF\-8\.  
+*Required*: No  
+*Type*: String  
+*Pattern*: `UTF-8`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RecordFormat`  <a name="cfn-kinesisanalytics-application-inputschema-recordformat"></a>
 Specifies the format of the records on the streaming source\.  
- *Required*: Yes  
- *Type*: [RecordFormat](aws-properties-kinesisanalytics-application-recordformat.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: Yes  
+*Type*: [RecordFormat](aws-properties-kinesisanalytics-application-recordformat.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

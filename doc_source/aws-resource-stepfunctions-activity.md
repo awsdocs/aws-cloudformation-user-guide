@@ -1,18 +1,21 @@
 # AWS::StepFunctions::Activity<a name="aws-resource-stepfunctions-activity"></a>
 
-Use the `AWS::StepFunctions::Activity` resource to create an AWS Step Functions activity\.
+An activity is a task that you write in any programming language and host on any machine that has access to AWS Step Functions\. Activities must poll Step Functions using the `GetActivityTask` API action and respond using `SendTask*` API actions\. This function lets Step Functions know the existence of your activity and returns an identifier for use in a state machine and when polling from the activity\.
 
-For information about creating an activity and creating a state machine with an activity, see [Tutorial: An Activity State Machine](https://docs.aws.amazon.com/step-functions/latest/dg/activity-tutorial.html) in the *AWS Step Functions Developer Guide* and `[CreateActivity](https://docs.aws.amazon.com/step-functions/latest/apireference/API_CreateActivity.html)` in the *AWS Step Functions API Reference*\.
+For information about creating an activity, see [Creating an Activity State Machine](https://docs.aws.amazon.com/step-functions/latest/dg/tutorial-creating-activity-state-machine.html) in the *AWS Step Functions Developer Guide* and [CreateActivity](https://docs.aws.amazon.com/step-functions/latest/apireference/API_CreateActivity.html) in the *AWS Step Functions API Reference*\.
 
-## Syntax<a name="w4ab1c21c10d204c14b7"></a>
+## Syntax<a name="aws-resource-stepfunctions-activity-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-resource-stepfunctions-activity-syntax.json"></a>
 
 ```
 {
-   "Type": "AWS::StepFunctions::Activity",
-   "Properties": {
-      "[Name](#cfn-stepfunctions-activity-name)": String
+  "Type" : "AWS::StepFunctions::Activity",
+  "Properties" : {
+      "[Name](#cfn-stepfunctions-activity-name)" : String,
+      "[Tags](#cfn-stepfunctions-activity-tags)" : [ [TagsEntry](aws-properties-stepfunctions-activity-tagsentry.md), ... ]
     }
 }
 ```
@@ -20,60 +23,68 @@ For information about creating an activity and creating a state machine with an 
 ### YAML<a name="aws-resource-stepfunctions-activity-syntax.yaml"></a>
 
 ```
-Type: "AWS::StepFunctions::Activity"
-Properties:
-  [Name](#cfn-stepfunctions-activity-name): String
+Type: AWS::StepFunctions::Activity
+Properties : 
+﻿  [Name](#cfn-stepfunctions-activity-name) : String
+﻿  [Tags](#cfn-stepfunctions-activity-tags) : 
+    - [TagsEntry](aws-properties-stepfunctions-activity-tagsentry.md)
 ```
 
-## Properties<a name="w4ab1c21c10d204c14b9"></a>
+## Properties<a name="aws-resource-stepfunctions-activity-properties"></a>
 
 `Name`  <a name="cfn-stepfunctions-activity-name"></a>
-The name of the activity to create\. This name must be unique for your AWS account and region\.  
+The name of the activity\.  
+A name must *not* contain:  
++ whitespace
++ brackets `< > { } [ ]` 
++ wildcard characters `? *` 
++ special characters `" # % \ ^ | ~ ` $ & , ; : /` 
++ control characters \(`U+0000-001F`, `U+007F-009F`\)
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d204c14c11"></a>
+`Tags`  <a name="cfn-stepfunctions-activity-tags"></a>
+The list of tags to add to a resource\.  
+Tags may only contain unicode letters, digits, whitespace, or these symbols: `_ . : / = + - @`\.  
+*Required*: No  
+*Type*: List of [TagsEntry](aws-properties-stepfunctions-activity-tagsentry.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-### Ref<a name="w4ab1c21c10d204c14c11b2"></a>
+## Return Values<a name="aws-resource-stepfunctions-activity-return-values"></a>
+
+### Ref<a name="aws-resource-stepfunctions-activity-return-values-ref"></a>
 
 When you provide the logical ID of this resource to the `Ref` intrinsic function, `Ref` returns the ARN of the created activity\. For example:
 
-```
-{ "Ref": "MyActivity" }
-```
+ `{ "Ref": "MyActivity" }` 
 
 Returns a value similar to the following:
 
-```
-arn:aws:states:us-east-1:111122223333:activity:myActivity
-```
+ `arn:aws:states:us-east-1:111122223333:activity:myActivity` 
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10d204c14c11b4"></a>
+### Fn::GetAtt<a name="aws-resource-stepfunctions-activity-return-values-fn--getatt"></a>
 
-`Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+ `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Name`  
+#### <a name="aws-resource-stepfunctions-activity-return-values-fn--getatt-fn--getatt"></a>
+
+`Name`  <a name="Name-fn::getatt"></a>
 Returns the name of the activity\. For example:  
-
-```
-{ "Fn::GetAtt": ["MyActivity", "Name"] }
-```
+ `{ "Fn::GetAtt": ["MyActivity", "Name"] }`   
 Returns a value similar to the following:  
+ `myActivity`   
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
-```
-myActivity
-```
+## Examples<a name="aws-resource-stepfunctions-activity--examples"></a>
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
+The following examples create a Step Functions activity\.
 
-## Example<a name="w4ab1c21c10d204c14c13"></a>
+### <a name="aws-resource-stepfunctions-activity--examples--"></a>
 
-The following example creates a Step Functions activity\.
-
-### JSON<a name="aws-resource-stepfunctions-activity-example.json"></a>
+#### JSON<a name="aws-resource-stepfunctions-activity--examples----json"></a>
 
 ```
 {
@@ -83,14 +94,26 @@ The following example creates a Step Functions activity\.
       "MyActivity" : {
          "Type" : "AWS::StepFunctions::Activity",
          "Properties" : {
-            "Name" : "myActivity"
+            "Name" : "myActivity",
+            "Tags": [
+                    {
+                        "Key": "keyname1",
+                        "Value": "value1"
+                    },
+                    {
+                        "Key": "keyname2",
+                        "Value": "value2"
+                    }
+                ]
         }
       }
    }
 }
 ```
 
-### YAML<a name="aws-resource-stepfunctions-activity-example.yaml"></a>
+### <a name="aws-resource-stepfunctions-activity--examples--"></a>
+
+#### YAML<a name="aws-resource-stepfunctions-activity--examples----yaml"></a>
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"
@@ -100,4 +123,11 @@ Resources:
     Type: "AWS::StepFunctions::Activity"
     Properties: 
       Name: myActivity
+      Tags:
+        -
+          Key: "keyname1"
+          Value: "value1"
+        -
+          Key: "keyname2"
+          Value: "value2"
 ```

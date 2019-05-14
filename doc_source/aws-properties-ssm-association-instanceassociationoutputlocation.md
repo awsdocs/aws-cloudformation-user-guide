@@ -1,27 +1,30 @@
-# AWS Systems Manager Association InstanceAssociationOutputLocation<a name="aws-properties-ssm-association-instanceassociationoutputlocation"></a>
+# AWS::SSM::Association InstanceAssociationOutputLocation<a name="aws-properties-ssm-association-instanceassociationoutputlocation"></a>
 
-`InstanceAssociationOutputLocation` is a property of the [AWS::SSM::Association](aws-resource-ssm-association.md) resource that specifies an Amazon S3 bucket where you want to store the results of this association request\.
+ `InstanceAssociationOutputLocation` is a property of the [AWS::SSM::Association](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html) resource that specifies an Amazon S3 bucket where you want to store the results of this association request\.
 
-## Syntax<a name="w4ab1c21c10d207c13c13b5"></a>
+## Syntax<a name="aws-properties-ssm-association-instanceassociationoutputlocation-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-ssm-association-instanceassociationoutputlocation-syntax.json"></a>
 
 ```
 {
-  "[S3Location](#cfn-ssm-association-instanceassociationoutputlocation-s3location)" : [*S3OutputLocation*](aws-properties-ssm-association-s3outputlocation.md)
+  "[S3Location](#cfn-ssm-association-instanceassociationoutputlocation-s3location)" : [S3OutputLocation](aws-properties-ssm-association-s3outputlocation.md)
 }
 ```
 
 ### YAML<a name="aws-properties-ssm-association-instanceassociationoutputlocation-syntax.yaml"></a>
 
 ```
-[S3Location](#cfn-ssm-association-instanceassociationoutputlocation-s3location): [*S3OutputLocation*](aws-properties-ssm-association-s3outputlocation.md)
+﻿  [S3Location](#cfn-ssm-association-instanceassociationoutputlocation-s3location) : 
+    [S3OutputLocation](aws-properties-ssm-association-s3outputlocation.md)
 ```
 
-## Properties<a name="w4ab1c21c10d207c13c13b7"></a>
+## Properties<a name="aws-properties-ssm-association-instanceassociationoutputlocation-properties"></a>
 
 `S3Location`  <a name="cfn-ssm-association-instanceassociationoutputlocation-s3location"></a>
-An Amazon S3 bucket where you want to store the results of this request\.  
+ `S3OutputLocation` is a property of the [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html) property that specifies an Amazon S3 bucket where you want to store the results of this request\.   
 *Required*: No  
 *Type*: [S3OutputLocation](aws-properties-ssm-association-s3outputlocation.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

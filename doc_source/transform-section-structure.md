@@ -26,7 +26,8 @@ AWSTemplateFormatVersion: 2010-09-09
         Tags: [{"key":"value"}] 
         CorsConfiguration:[]   
     MyEc2Instance:
-      Type: 'AWS::EC2::Instance' Properties:
+      Type: 'AWS::EC2::Instance' 
+      Properties:
         ImageID: "ami-123"
 // End of processable content for MyMacro and AWS::Serverless
 ```

@@ -1,13 +1,6 @@
 # AWS::ApiGateway::VpcLink<a name="aws-resource-apigateway-vpclink"></a>
 
-The `AWS::ApiGateway::VpcLink` resource specifies an API Gateway VPC link for a `AWS::ApiGateway::RestApi` to access resources in an Amazon Virtual Private Cloud \(VPC\)\. For more information, see [vpclink:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/vpclink-create/) in the *Amazon API Gateway REST API Reference*
-
-**Topics**
-+ [Syntax](#aws-resource-apigateway-vpclink-syntax)
-+ [Properties](#w4ab1c21c10c20c90b9)
-+ [Return Value](#w4ab1c21c10c20c90c11)
-+ [Example](#aws-resource-apigateway-vpclink-examples)
-+ [See Also](#aws-resource-apigateway-vpclink-seealso)
+The `AWS::ApiGateway::VpcLink` resource creates an API Gateway VPC link for a REST API to access resources in an Amazon Virtual Private Cloud \(VPC\)\. For more information, see [vpclink:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/vpclink-create/) in the `Amazon API Gateway REST API Reference`\.
 
 ## Syntax<a name="aws-resource-apigateway-vpclink-syntax"></a>
 
@@ -19,10 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::VpcLink",
   "Properties" : {
-    "[Description](#cfn-apigateway-vpclink-description)" : String,
-    "[Name](#cfn-apigateway-vpclink-name)" : String,
-    "[TargetArns](#cfn-apigateway-vpclink-targetarns)" : [ String, ... ]
-  }
+      "[Description](#cfn-apigateway-vpclink-description)" : String,
+      "[Name](#cfn-apigateway-vpclink-name)" : String,
+      "[TargetArns](#cfn-apigateway-vpclink-targetarns)" : [ String, ... ]
+    }
 }
 ```
 
@@ -30,46 +23,46 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::VpcLink
-Properties:
-  [Description](#cfn-apigateway-vpclink-description): String
-  [Name](#cfn-apigateway-vpclink-name): String
-  [TargetArns](#cfn-apigateway-vpclink-targetarns):
+Properties : 
+﻿  [Description](#cfn-apigateway-vpclink-description) : String
+﻿  [Name](#cfn-apigateway-vpclink-name) : String
+﻿  [TargetArns](#cfn-apigateway-vpclink-targetarns) : 
     - String
 ```
 
-## Properties<a name="w4ab1c21c10c20c90b9"></a>
+## Properties<a name="aws-resource-apigateway-vpclink-properties"></a>
 
 `Description`  <a name="cfn-apigateway-vpclink-description"></a>
-The description of the VPC link\.  
+A description of the VPC link\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-apigateway-vpclink-name"></a>
-The name used to label and identify the VPC link\.  
+A name for the VPC link\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetArns`  <a name="cfn-apigateway-vpclink-targetarns"></a>
 The ARNs of network load balancers of the VPC targeted by the VPC link\. The network load balancers must be owned by the same AWS account of the API owner\.  
 *Required*: Yes  
-List of *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Type*: List of String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Value<a name="w4ab1c21c10c20c90c11"></a>
+## Return Values<a name="aws-resource-apigateway-vpclink-return-values"></a>
 
-### Ref<a name="w4ab1c21c10c20c90c11b2"></a>
+### Ref<a name="aws-resource-apigateway-vpclink-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ID of the `VpcLink`\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the `VpcLink`\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Example<a name="aws-resource-apigateway-vpclink-examples"></a>
+## Examples<a name="aws-resource-apigateway-vpclink--examples"></a>
 
-### <a name="aws-resource-apigateway-vpclink-example"></a>
+### Create VPC link<a name="aws-resource-apigateway-vpclink--examples--Create_VPC_link"></a>
 
-#### JSON<a name="aws-resource-apigateway-vpclink-example.json"></a>
+#### JSON<a name="aws-resource-apigateway-vpclink--examples--Create_VPC_link--json"></a>
 
 ```
 {
@@ -142,7 +135,7 @@ For more information about using the `Ref` function, see [Ref](intrinsic-functio
 }
 ```
 
-#### YAML<a name="aws-resource-apigateway-vpclink-example.yaml"></a>
+#### YAML<a name="aws-resource-apigateway-vpclink--examples--Create_VPC_link--yaml"></a>
 
 ```
 Parameters:
@@ -182,5 +175,5 @@ Resources:
             InternetGatewayId: !Ref MyInternetGateway
 ```
 
-## See Also<a name="aws-resource-apigateway-vpclink-seealso"></a>
-+  [vpclink:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/vpclink-create/) in the *Amazon API Gateway REST API Reference* 
+## See Also<a name="aws-resource-apigateway-vpclink--seealso"></a>
++ [vpclink:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/vpclink-create/) in the *Amazon API Gateway REST API Reference*

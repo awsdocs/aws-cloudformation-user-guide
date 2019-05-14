@@ -1,8 +1,10 @@
-# Amazon Cognito UserPool DeviceConfiguration<a name="aws-properties-cognito-userpool-deviceconfiguration"></a>
+# AWS::Cognito::UserPool DeviceConfiguration<a name="aws-properties-cognito-userpool-deviceconfiguration"></a>
 
-`DeviceConfiguration` is a property of the [AWS::Cognito::UserPool](aws-resource-cognito-userpool.md) resource that defines the device configuration of an Amazon Cognito User Pool\.
+`DeviceConfiguration` is a property of the [AWS::Cognito::UserPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html) resource that defines the device configuration of an Amazon Cognito User Pool\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-deviceconfiguration-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-cognito-userpool-deviceconfiguration-syntax.json"></a>
 
@@ -16,18 +18,20 @@
 ### YAML<a name="aws-properties-cognito-userpool-deviceconfiguration-syntax.yaml"></a>
 
 ```
-[ChallengeRequiredOnNewDevice](#cfn-cognito-userpool-deviceconfiguration-challengerequiredonnewdevice): Boolean
-[DeviceOnlyRememberedOnUserPrompt](#cfn-cognito-userpool-deviceconfiguration-deviceonlyrememberedonuserprompt): Boolean
+﻿  [ChallengeRequiredOnNewDevice](#cfn-cognito-userpool-deviceconfiguration-challengerequiredonnewdevice) : Boolean
+﻿  [DeviceOnlyRememberedOnUserPrompt](#cfn-cognito-userpool-deviceconfiguration-deviceonlyrememberedonuserprompt) : Boolean
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-deviceconfiguration-properties"></a>
 
 `ChallengeRequiredOnNewDevice`  <a name="cfn-cognito-userpool-deviceconfiguration-challengerequiredonnewdevice"></a>
 Indicates whether a challenge is required on a new device\. Only applicable to a new device\.  
+*Required*: No  
 *Type*: Boolean  
-*Required*: No
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeviceOnlyRememberedOnUserPrompt`  <a name="cfn-cognito-userpool-deviceconfiguration-deviceonlyrememberedonuserprompt"></a>
 If true, a device is only remembered on user prompt\.  
+*Required*: No  
 *Type*: Boolean  
-*Required*: No
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
