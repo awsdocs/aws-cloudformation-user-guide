@@ -241,7 +241,7 @@ Resources:
       AutoScalingGroupName: !Ref myASGroup
       PolicyType: TargetTrackingScaling
       TargetTrackingConfiguration:
-        PredefinedMetricSpecification
+        PredefinedMetricSpecification:
           PredefinedMetricType: ASGAverageCPUUtilization
         TargetValue: !Ref PolicyTargetValue
   myASGroup:
