@@ -2,6 +2,9 @@
 
 The AWS::ElasticBeanstalk::ConfigurationTemplate resource is an AWS Elastic Beanstalk resource type that specifies an Elastic Beanstalk configuration template, associated with a specific Elastic Beanstalk application\. You define application configuration settings in a configuration template\. You can then use the configuration template to deploy different versions of the application with the same configuration settings\.
 
+**Important**
+Elastic Beanstalk Documentation often refers to Configuration Templates as a Saved Configuration. Please be aware of how Configuration Templates / Saved Configurations act with regards to configuration options precedence. For more information, see [Configuration Options](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html) in the *AWS Elastic Beanstalk Developer Guide*.
+
 ## Syntax<a name="aws-resource-elasticbeanstalk-configurationtemplate-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
