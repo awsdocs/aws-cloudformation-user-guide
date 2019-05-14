@@ -21,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codecommit-repository-repositorytrigger-syntax.yaml"></a>
 
 ```
-﻿  [Branches](#cfn-codecommit-repository-repositorytrigger-branches) : 
+﻿  [Branches](#cfn-codecommit-repository-repositorytrigger-branches) :
     - String
 ﻿  [CustomData](#cfn-codecommit-repository-repositorytrigger-customdata) : String
 ﻿  [DestinationArn](#cfn-codecommit-repository-repositorytrigger-destinationarn) : String
-﻿  [Events](#cfn-codecommit-repository-repositorytrigger-events) : 
+﻿  [Events](#cfn-codecommit-repository-repositorytrigger-events) :
     - String
 ﻿  [Name](#cfn-codecommit-repository-repositorytrigger-name) : String
 ```
@@ -54,7 +54,7 @@ The ARN of the resource that is the target for a trigger\. For example, the ARN 
 `Events`  <a name="cfn-codecommit-repository-repositorytrigger-events"></a>
 The repository events that will cause the trigger to run actions in another service, such as sending a notification through Amazon SNS\.   
 The valid value "all" cannot be used with any other values\.
-*Required*: No  
+*Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
