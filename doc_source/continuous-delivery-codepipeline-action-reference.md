@@ -41,7 +41,7 @@ If you have IAM resources in your stack template, you must specify this property
 The name of the IAM service role that AWS CloudFormation assumes when it operates on resources in the specified stack\.
 
 **Output file name**  
-In the **Advanced** section, you can specify an output file name, such as `CreateStackOutput.json`, that CodePipeline adds to the [output artifact](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts.html) after performing the specified action\.  
+In the **Advanced** section, you can specify an output file name, such as `CreateStackOutput.json`, that CodePipeline adds to the [output artifact](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts.html) after performing the specified action\. The output artifact will contain a JSON file with the contents of the Outputs section from the CloudFormation stack.
 If you don't specify a name, CodePipeline doesn't generate an output artifact\.
 
 **Parameter overrides**  
@@ -78,7 +78,7 @@ The name of an existing change set or a new change set that you want to create f
 This property is required for the following action modes: `CHANGE_SET_REPLACE` and `CHANGE_SET_EXECUTE`\. For all other action modes, this property is ignored\.
 
 `OutputFileName`  
-A name for the output file, such as `CreateStackOutput.json`\. CodePipeline adds the file to the [output artifact](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts.html) after performing the specified action\.  
+A name for the output file, such as `CreateStackOutput.json`\. CodePipeline adds the file to the [output artifact](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts.html) after performing the specified action\. The output artifact will contain a JSON file with the contents of the Outputs section from the CloudFormation stack. 
 This property is optional\. If you don't specify a name, CodePipeline doesn't generate an output artifact\.
 
 `ParameterOverrides`  
