@@ -2,14 +2,14 @@
 
 Imagine a release process where you submit an AWS CloudFormation template, which AWS CloudFormation then uses to automatically build a test stack\. After you review the test stack, you can preview how your changes will modify your production stack, and then choose whether to implement them\. To accomplish this workflow, you could use AWS CloudFormation to build your test stack, delete the test stack, create a change set, and then execute the change set\. However, with each action, you need to manually interact with AWS CloudFormation\. In this walkthrough, we'll build an CodePipeline pipeline that automates many of these actions, helping you achieve a continuous delivery workflow with your AWS CloudFormation stacks\.
 
-## Prerequisites<a name="w13ab1c13c11b5"></a>
+## Prerequisites<a name="w4622ab1c13c11b5"></a>
 
 This walkthrough assumes that you have used CodePipeline and AWS CloudFormation, and know how pipelines and AWS CloudFormation templates and stacks work\. For more information about CodePipeline, see the [AWS CodePipeline User Guide](https://docs.aws.amazon.com/codepipeline/latest/userguide/)\. You also need to have an Amazon S3 [bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) in the same AWS region in which you will create your pipeline\.
 
 **Important**  
 The sample Word Press template creates an EC2 instance that requires a connection to the Internet\. Check that you have a default VPC and subnet that allow traffic to the Internet\.
 
-## Walkthrough Overview<a name="w13ab1c13c11b7"></a>
+## Walkthrough Overview<a name="w4622ab1c13c11b7"></a>
 
 This walkthrough builds a pipeline for a sample WordPress site in a stack\. The pipeline is separated into three stages\. Each stage must contain at least one action, which is a task the pipeline performs on your artifacts \(your input\)\. A stage organizes actions in a pipeline\. CodePipeline must complete all actions in a stage before the stage processes new artifacts, for example, if you submitted new input to rerun the pipeline\.
 
@@ -30,7 +30,7 @@ By the end of this walkthrough, you'll have a pipeline that performs the followi
 **Note**  
 AWS CloudFormation is a free service\. However, you are charged for the AWS resources, such as the EC2 instance, that you include in your stack at the current rate for each\. For more information about AWS pricing, see the detail page for each product at [http://aws\.amazon\.com](http://aws.amazon.com)\.
 
-## Step 1: Edit the Artifact and Upload It to an S3 Bucket<a name="w13ab1c13c11b9"></a>
+## Step 1: Edit the Artifact and Upload It to an S3 Bucket<a name="w4622ab1c13c11b9"></a>
 
 Before you build your pipeline, you must set up your source repository and files\. CodePipeline copies these source files into your pipeline's [artifact store](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts.html), and then uses them to perform actions in your pipeline, such as creating an AWS CloudFormation stack\.
 
@@ -71,7 +71,7 @@ After you build your artifact, you'll upload it to an S3 bucket\.
 
 You now have an artifact that CodePipeline can pull in to your pipeline\. In the next step, you'll specify the artifact's location and build the WordPress pipeline\.
 
-## Step 2: Create the Pipeline Stack<a name="w13ab1c13c11c11"></a>
+## Step 2: Create the Pipeline Stack<a name="w4622ab1c13c11c11"></a>
 
 To create the WordPress pipeline, you'll use a sample AWS CloudFormation template\. In addition to building the pipeline, the template sets up AWS Identity and Access Management \(IAM\) service roles for CodePipeline and AWS CloudFormation, an S3 bucket for the CodePipeline artifact store, and an Amazon Simple Notification Service \(Amazon SNS\) topic to which the pipeline sends notifications, such as notifications about reviews\. The sample template makes it easy to provision and configure these resources in a single AWS CloudFormation stack\.
 
@@ -122,7 +122,7 @@ After your stack has been created, CodePipeline starts your new pipeline\. To vi
 
 This section explains the pipeline's three stages, using snippets from the sample WordPress pipeline template\.
 
-#### Stage 1: Source<a name="w13ab1c13c11c11c14b4"></a>
+#### Stage 1: Source<a name="w4622ab1c13c11c11c14b4"></a>
 
 The first stage of the pipeline is a source stage in which you specify the location of your source code\. Every time you push a revision to this location, CodePipeline reruns your pipeline\.
 
@@ -144,7 +144,7 @@ The source code is located in an S3 bucket and is identified by its filename\. Y
         - Name: TemplateSource
 ```
 
-#### Stage 2: TestStage<a name="w13ab1c13c11c11c14b6"></a>
+#### Stage 2: TestStage<a name="w4622ab1c13c11c11c14b6"></a>
 
 In the `TestStage` stage, the pipeline creates the test stack, waits for approval, and then deletes the test stack\.
 
@@ -195,7 +195,7 @@ After you approve this action, CodePipeline moves to the `DeleteTestStack` actio
       RunOrder: '3'
 ```
 
-#### Stage 3: ProdStage<a name="w13ab1c13c11c11c14b8"></a>
+#### Stage 3: ProdStage<a name="w4622ab1c13c11c11c14b8"></a>
 
 The `ProdStage` stage of the pipeline creates a change set against the existing production stack, waits for approval, and then executes the change set\.
 
@@ -248,7 +248,7 @@ After you approve this action, the `ExecuteChangeSet` action executes the change
       RunOrder: '3'
 ```
 
-## Step 3: View the WordPress Stack<a name="w13ab1c13c11c13"></a>
+## Step 3: View the WordPress Stack<a name="w4622ab1c13c11c13"></a>
 
 As CodePipeline runs through the pipeline, it uses AWS CloudFormation to create test and production stacks\. To see the status of these stacks and their output, use the AWS CloudFormation console\.
 
@@ -264,7 +264,7 @@ If the stack is in a failed state, view the status reason to find the stack erro
 
 You've successfully used CodePipeline to build a continuous delivery workflow for a sample WordPress site\. If you submit changes to the S3 bucket, CodePipeline automatically detects a new version, and then reruns your pipeline\. This workflow makes it easier to submit and test changes before making changes to your production site\.
 
-## Step 4: Clean Up Resources<a name="w13ab1c13c11c15"></a>
+## Step 4: Clean Up Resources<a name="w4622ab1c13c11c15"></a>
 
 To make sure that you are not charged for unwanted services, delete your resources\.
 

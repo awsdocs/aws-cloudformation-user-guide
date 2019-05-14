@@ -1,26 +1,29 @@
-# Amazon Elastic Compute Cloud SpotFleet IamInstanceProfile<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile"></a>
+# AWS::EC2::SpotFleet IamInstanceProfileSpecification<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile"></a>
 
-`IamInstanceProfile` is a property of the [Amazon Elastic Compute Cloud SpotFleet LaunchSpecifications](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md) property that specifies the IAM instance profile to associate with the instances\.
+Describes an IAM instance profile\.
 
-## Syntax<a name="w13ab1c21c10d111d118c41b5"></a>
+## Syntax<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile-syntax"></a>
 
-### JSON<a name="aws-properties-aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile-syntax.json"></a>
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+
+### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile-syntax.json"></a>
 
 ```
 {
-  "[Arn](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile-arn)" : String
+  "[Arn](#cfn-ec2-spotfleet-iaminstanceprofilespecification-arn)" : String
 }
 ```
 
-### YAML<a name="aws-properties-aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile-syntax.yaml"></a>
+### YAML<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile-syntax.yaml"></a>
 
 ```
-[Arn](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile-arn): String
+﻿  [Arn](#cfn-ec2-spotfleet-iaminstanceprofilespecification-arn) : String
 ```
 
-## Properties<a name="w13ab1c21c10d111d118c41b7"></a>
+## Properties<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile-properties"></a>
 
-`Arn`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile-arn"></a>
-The Amazon Resource Name \(ARN\) of the instance profile to associate with the instances\. The instance profile contains the IAM role that is associated with the instances\.  
+`Arn`  <a name="cfn-ec2-spotfleet-iaminstanceprofilespecification-arn"></a>
+The Amazon Resource Name \(ARN\) of the instance profile\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

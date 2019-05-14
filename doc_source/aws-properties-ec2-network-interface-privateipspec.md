@@ -1,33 +1,37 @@
-# Amazon EC2 NetworkInterface PrivateIpAddressSpecification<a name="aws-properties-ec2-network-interface-privateipspec"></a>
+# AWS::EC2::NetworkInterface PrivateIpAddressSpecification<a name="aws-properties-ec2-network-interface-privateipspec"></a>
 
-The `PrivateIpAddressSpecification` type is an embedded property of the [AWS::EC2::NetworkInterface](aws-resource-ec2-network-interface.md) type\.
+Describes a secondary private IPv4 address for a network interface\.
 
-## Syntax<a name="w13ab1c21c10d111c77c21b5"></a>
+## Syntax<a name="aws-properties-ec2-network-interface-privateipspec-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-ec2-network-interface-privateipspec-syntax.json"></a>
 
 ```
 {
-  "[PrivateIpAddress](#cfn-ec2-networkinterface-privateipspecification-privateipaddress)" : String,
-  "[Primary](#cfn-ec2-networkinterface-privateipspecification-primary)" : Boolean
+  "[Primary](#cfn-ec2-networkinterface-privateipspecification-primary)" : Boolean,
+  "[PrivateIpAddress](#cfn-ec2-networkinterface-privateipspecification-privateipaddress)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-ec2-network-interface-privateipspec-syntax.yaml"></a>
 
 ```
-[PrivateIpAddress](#cfn-ec2-networkinterface-privateipspecification-privateipaddress): String
-[Primary](#cfn-ec2-networkinterface-privateipspecification-primary): Boolean
+﻿  [Primary](#cfn-ec2-networkinterface-privateipspecification-primary) : Boolean
+﻿  [PrivateIpAddress](#cfn-ec2-networkinterface-privateipspecification-privateipaddress) : String
 ```
 
-## Properties<a name="w13ab1c21c10d111c77c21b7"></a>
-
-`PrivateIpAddress`  <a name="cfn-ec2-networkinterface-privateipspecification-privateipaddress"></a>
-The private IP address of the network interface\.  
-*Required*: Yes  
-*Type*: String
+## Properties<a name="aws-properties-ec2-network-interface-privateipspec-properties"></a>
 
 `Primary`  <a name="cfn-ec2-networkinterface-privateipspecification-primary"></a>
 Sets the private IP address as the primary private address\. You can set only one primary private IP address\. If you don't specify a primary private IP address, Amazon EC2 automatically assigns a primary private IP address\.  
 *Required*: Yes  
-*Type*: Boolean
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PrivateIpAddress`  <a name="cfn-ec2-networkinterface-privateipspecification-privateipaddress"></a>
+The private IP address of the network interface\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

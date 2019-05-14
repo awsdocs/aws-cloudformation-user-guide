@@ -5,11 +5,6 @@ The `AWS::Neptune::DBClusterParameterGroup` resource creates a new Amazon Neptun
 **Note**  
 Applying a parameter group to a DB cluster might require instances to reboot, resulting in a database outage while the instances reboot\.
 
-**Topics**
-+ [Syntax](#aws-resource-neptune-dbclusterparametergroup-syntax)
-+ [Properties](#aws-resource-neptune-dbclusterparametergroup-properties)
-+ [Return Values](#aws-resource-neptune-dbclusterparametergroup-return-value)
-
 ## Syntax<a name="aws-resource-neptune-dbclusterparametergroup-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -20,73 +15,66 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Neptune::DBClusterParameterGroup",
   "Properties" : {
-    "[Description](#cfn-neptune-dbclusterparametergroup-description)" : String,
-    "[Parameters](#cfn-neptune-dbclusterparametergroup-parameters)" : DBParameters,
-    "[Family](#cfn-neptune-dbclusterparametergroup-family)" : String,
-    "[Tags](#cfn-neptune-dbclusterparametergroup-tags)" : [ Resource Tag, ... ],
-    "[Name](#cfn-neptune-dbclusterparametergroup-name)" : String
-  }
+      "[Description](#cfn-neptune-dbclusterparametergroup-description)" : String,
+      "[Family](#cfn-neptune-dbclusterparametergroup-family)" : String,
+      "[Name](#cfn-neptune-dbclusterparametergroup-name)" : String,
+      "[Parameters](#cfn-neptune-dbclusterparametergroup-parameters)" : Json,
+      "[Tags](#cfn-neptune-dbclusterparametergroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-neptune-dbclusterparametergroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::Neptune::DBClusterParameterGroup"
-Properties: 
-  [Description](#cfn-neptune-dbclusterparametergroup-description): String
-  [Parameters](#cfn-neptune-dbclusterparametergroup-parameters): DBParameters
-  [Family](#cfn-neptune-dbclusterparametergroup-family) : String
-  [Tags](#cfn-neptune-dbclusterparametergroup-tags):
-    Resource Tag 
-  [Name](#cfn-neptune-dbclusterparametergroup-name) : String
+Type: AWS::Neptune::DBClusterParameterGroup
+Properties : 
+﻿  [Description](#cfn-neptune-dbclusterparametergroup-description) : String
+﻿  [Family](#cfn-neptune-dbclusterparametergroup-family) : String
+﻿  [Name](#cfn-neptune-dbclusterparametergroup-name) : String
+﻿  [Parameters](#cfn-neptune-dbclusterparametergroup-parameters) : Json
+﻿  [Tags](#cfn-neptune-dbclusterparametergroup-tags) : 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-neptune-dbclusterparametergroup-properties"></a>
 
 `Description`  <a name="cfn-neptune-dbclusterparametergroup-description"></a>
-A friendly description for this DB cluster parameter group\.  
+Provides the customer\-specified description for this DB cluster parameter group\.  
 *Required*: Yes  
-*Type:* String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
-
-`Parameters`  <a name="cfn-neptune-dbclusterparametergroup-parameters"></a>
-The parameters to set for this DB cluster parameter group\.   
-Changes to dynamic parameters are applied immediately\. Changes to static parameters require a reboot without failover to the DB instance that is associated with the parameter group before the change can take effect\.  
-*Required*: Yes  
-*Type:* A JSON object consisting of string key\-value pairs, as shown in the following example:  
-
-```
-"Parameters" : {
-   "Key1" : "Value1",
-   "Key2" : "Value2",
-   "Key3" : "Value3"
-}
-```
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) or [some interruption](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt), depending on the parameters that you update\.
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Family`  <a name="cfn-neptune-dbclusterparametergroup-family"></a>
 Must be `neptune1`\.  
 *Required*: Yes  
-*Type:* String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Name`  <a name="cfn-neptune-dbclusterparametergroup-name"></a>
+Provides the name of the DB cluster parameter group\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Parameters`  <a name="cfn-neptune-dbclusterparametergroup-parameters"></a>
+The parameters to set for this DB cluster parameter group\.  
+The parameters are expressed as a JSON object consisting of key\-value pairs\.  
+If you update the parameters, some interruption may occur depending on which parameters you update\.  
+*Required*: Yes  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-neptune-dbclusterparametergroup-tags"></a>
 The tags that you want to attach to this parameter group\.  
 *Required*: No  
-*Type*: A list of [resource tags](aws-properties-resource-tags.md)  
-*Update requires*: Updates are not supported\.
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`Name`  <a name="cfn-neptune-dbclusterparametergroup-name"></a>
-A friendly name for the cluster\.  
-*Required*: No  
-*Type:* String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+## Return Values<a name="aws-resource-neptune-dbclusterparametergroup-return-values"></a>
 
-## Return Values<a name="aws-resource-neptune-dbclusterparametergroup-return-value"></a>
+### Ref<a name="aws-resource-neptune-dbclusterparametergroup-return-values-ref"></a>
 
-### Ref<a name="aws-resource-neptune-dbclusterparametergroup-return-value-ref"></a>
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
-
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

@@ -3,6 +3,22 @@
 A *broker* is a message broker environment running on Amazon MQ\. It is the basic building block of Amazon MQ\.
 
 The `AWS::AmazonMQ::Broker` resource lets you create Amazon MQ brokers, add configuration changes or modify users for the specified broker, return information about the specified broker, and delete the specified broker\. For more information, see [Amazon MQ Basic Elements](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-basic-elements.html) in the *Amazon MQ Developer Guide*\.
++ `ec2:CreateNetworkInterface`
+
+  This permission is required to allow Amazon MQ to create an elastic network interface \(ENI\) on behalf of your account\.
++ `ec2:CreateNetworkInterfacePermission`
+
+  This permission is required to attach the ENI to the broker instance\.
++ `ec2:DeleteNetworkInterface`
++ `ec2:DeleteNetworkInterfacePermission`
++ `ec2:DetachNetworkInterface`
++ `ec2:DescribeInternetGateways`
++ `ec2:DescribeNetworkInterfaces`
++ `ec2:DescribeNetworkInterfacePermissions`
++ `ec2:DescribeRouteTables`
++ `ec2:DescribeSecurityGroups`
++ `ec2:DescribeSubnets`
++ `ec2:DescribeVpcs`
 
 ## Syntax<a name="aws-resource-amazonmq-broker-syntax"></a>
 
@@ -14,47 +30,50 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AmazonMQ::Broker",
   "Properties" : {
-    "[AutoMinorVersionUpgrade](#cfn-amazonmq-broker-autominorversionupgrade)" : Boolean,
-    "[BrokerName](#cfn-amazonmq-broker-brokername)" : String,  
-    "[Users](#cfn-amazonmq-broker-users)" : [ [User](aws-properties-amazonmq-broker-user.md), ... ],
-    "[Configuration](#cfn-amazonmq-broker-configuration)" : [ConfigurationId](aws-properties-amazonmq-broker-configurationid.md),
-    "[DeploymentMode](#cfn-amazonmq-broker-deploymentmode)" : String,
-    "[EngineType](#cfn-amazonmq-broker-enginetype)" : String,
-    "[EngineVersion](#cfn-amazonmq-broker-engineversion)" : String,
-    "[HostInstanceType](#cfn-amazonmq-broker-hostinstancetype)" : String,
-    "[Logs](#cfn-amazonmq-broker-logs)" : [LogsConfiguration](aws-properties-amazonmq-broker-logsconfiguration.md),
-    "[MaintenanceWindowStartTime](#cfn-amazonmq-broker-maintenancewindowstarttime)" : [MaintenanceWindow](aws-properties-amazonmq-broker-maintenancewindow.md),
-    "[PubliclyAccessible](#cfn-amazonmq-broker-publiclyaccessible)" : Boolean,
-    "[SecurityGroups](#cfn-amazonmq-broker-securitygroups)" : [ String, ... ],
-    "[SubnetIds](#cfn-amazonmq-broker-subnetids)" : [ String, ... ],
-    "[Tags](#cfn-amazonmq-broker-tags)" : [ Resource Tag, ... ] 
-  }
+      "[AutoMinorVersionUpgrade](#cfn-amazonmq-broker-autominorversionupgrade)" : Boolean,
+      "[BrokerName](#cfn-amazonmq-broker-brokername)" : String,
+      "[Configuration](#cfn-amazonmq-broker-configuration)" : [ConfigurationId](aws-properties-amazonmq-broker-configurationid.md),
+      "[DeploymentMode](#cfn-amazonmq-broker-deploymentmode)" : String,
+      "[EngineType](#cfn-amazonmq-broker-enginetype)" : String,
+      "[EngineVersion](#cfn-amazonmq-broker-engineversion)" : String,
+      "[HostInstanceType](#cfn-amazonmq-broker-hostinstancetype)" : String,
+      "[Logs](#cfn-amazonmq-broker-logs)" : [LogList](aws-properties-amazonmq-broker-loglist.md),
+      "[MaintenanceWindowStartTime](#cfn-amazonmq-broker-maintenancewindowstarttime)" : [MaintenanceWindow](aws-properties-amazonmq-broker-maintenancewindow.md),
+      "[PubliclyAccessible](#cfn-amazonmq-broker-publiclyaccessible)" : Boolean,
+      "[SecurityGroups](#cfn-amazonmq-broker-securitygroups)" : [ String, ... ],
+      "[SubnetIds](#cfn-amazonmq-broker-subnetids)" : [ String, ... ],
+      "[Tags](#cfn-amazonmq-broker-tags)" : [ [TagsEntry](aws-properties-amazonmq-broker-tagsentry.md), ... ],
+      "[Users](#cfn-amazonmq-broker-users)" : [ [User](aws-properties-amazonmq-broker-user.md), ... ]
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-amazonmq-broker-syntax.yaml"></a>
 
 ```
-Type: "AWS::AmazonMQ::Broker"
-Properties:
-  [AutoMinorVersionUpgrade](#cfn-amazonmq-broker-autominorversionupgrade): Boolean
-  [BrokerName](#cfn-amazonmq-broker-brokername): String
-  [Users](#cfn-amazonmq-broker-users): 
+Type: AWS::AmazonMQ::Broker
+Properties : 
+﻿  [AutoMinorVersionUpgrade](#cfn-amazonmq-broker-autominorversionupgrade) : Boolean
+﻿  [BrokerName](#cfn-amazonmq-broker-brokername) : String
+﻿  [Configuration](#cfn-amazonmq-broker-configuration) : 
+    [ConfigurationId](aws-properties-amazonmq-broker-configurationid.md)
+﻿  [DeploymentMode](#cfn-amazonmq-broker-deploymentmode) : String
+﻿  [EngineType](#cfn-amazonmq-broker-enginetype) : String
+﻿  [EngineVersion](#cfn-amazonmq-broker-engineversion) : String
+﻿  [HostInstanceType](#cfn-amazonmq-broker-hostinstancetype) : String
+﻿  [Logs](#cfn-amazonmq-broker-logs) : 
+    [LogList](aws-properties-amazonmq-broker-loglist.md)
+﻿  [MaintenanceWindowStartTime](#cfn-amazonmq-broker-maintenancewindowstarttime) : 
+    [MaintenanceWindow](aws-properties-amazonmq-broker-maintenancewindow.md)
+﻿  [PubliclyAccessible](#cfn-amazonmq-broker-publiclyaccessible) : Boolean
+﻿  [SecurityGroups](#cfn-amazonmq-broker-securitygroups) : 
+    - String
+﻿  [SubnetIds](#cfn-amazonmq-broker-subnetids) : 
+    - String
+﻿  [Tags](#cfn-amazonmq-broker-tags) : 
+    - [TagsEntry](aws-properties-amazonmq-broker-tagsentry.md)
+﻿  [Users](#cfn-amazonmq-broker-users) : 
     - [User](aws-properties-amazonmq-broker-user.md)
-  [Configuration](#cfn-amazonmq-broker-configuration): [ConfigurationId](aws-properties-amazonmq-broker-configurationid.md)
-  [DeploymentMode](#cfn-amazonmq-broker-deploymentmode): String
-  [EngineType](#cfn-amazonmq-broker-enginetype): String
-  [EngineVersion](#cfn-amazonmq-broker-engineversion): String
-  [HostInstanceType](#cfn-amazonmq-broker-hostinstancetype): String
-  [Logs](#cfn-amazonmq-broker-logs): [LogsConfiguration](aws-properties-amazonmq-broker-logsconfiguration.md)
-  [MaintenanceWindowStartTime](#cfn-amazonmq-broker-maintenancewindowstarttime): [MaintenanceWindow](aws-properties-amazonmq-broker-maintenancewindow.md)
-  [PubliclyAccessible](#cfn-amazonmq-broker-publiclyaccessible): Boolean              
-  [SecurityGroups](#cfn-amazonmq-broker-securitygroups): 
-    - String
-  [SubnetIds](#cfn-amazonmq-broker-subnetids): 
-    - String
-  [Tags](#cfn-amazonmq-broker-tags):
-    - Resource Tag
 ```
 
 ## Properties<a name="aws-resource-amazonmq-broker-properties"></a>
@@ -63,180 +82,147 @@ Properties:
 Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions\. The automatic upgrades occur during the maintenance window of the broker or after a manual broker reboot\.  
 *Required*: Yes  
 *Type*: Boolean  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BrokerName`  <a name="cfn-amazonmq-broker-brokername"></a>
-The name of the broker\. This value must be unique in your AWS account, 1\-50 characters long, must contain only letters, numbers, dashes, and underscores, and must not contain whitespaces, brackets, wildcard characters, or special characters\.  
+The name of the broker\. This value must be unique in your AWS account, 1\-50 characters long, must contain only letters, numbers, dashes, and underscores, and must not contain white spaces, brackets, wildcard characters, or special characters\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
-
-`Users`  <a name="cfn-amazonmq-broker-users"></a>
-The list of all ActiveMQ usernames for the specified broker\.  
-*Required*: Yes  
-*Type*: List of [User](aws-properties-amazonmq-broker-user.md) property types  
-*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Configuration`  <a name="cfn-amazonmq-broker-configuration"></a>
-The broker configuration\. If no configuration exists for a broker, Amazon MQ creates a default configuration\.  
-You can use AWS CloudFormation to modify—but not delete—an Amazon MQ configuration\.
+A list of information about the configuration\.  
 *Required*: No  
 *Type*: [ConfigurationId](aws-properties-amazonmq-broker-configurationid.md)  
-*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeploymentMode`  <a name="cfn-amazonmq-broker-deploymentmode"></a>
-The deployment mode of the broker\. `SINGLE_INSTANCE` creates a single\-instance broker in a single Availability Zone\. `ACTIVE_STANDBY_MULTI_AZ` creates an active/standby broker for high availability\.   
+The deployment mode of the broker\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineType`  <a name="cfn-amazonmq-broker-enginetype"></a>
-The type of broker engine\.  
-Currently, Amazon MQ supports only `ACTIVEMQ`\.
+The type of broker engine\. Note: Currently, Amazon MQ supports only ACTIVEMQ\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineVersion`  <a name="cfn-amazonmq-broker-engineversion"></a>
-The version of the broker engine\.  
-For a list of supported engine versions, see: [Broker Engine](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html)\.
+The version of the broker engine\. For a list of supported engine versions, see [Engine](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) in the *Amazon MQ Developer Guide*\.   
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HostInstanceType`  <a name="cfn-amazonmq-broker-hostinstancetype"></a>
-The broker's instance type\. For more information, see [Instance Types](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker.html#broker-instance-types) in the *Amazon MQ Developer Guide*\.  
+The broker's instance type\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Logs`  <a name="cfn-amazonmq-broker-logs"></a>
-The Amazon CloudWatch Logs configuration for the broker\.  
+Enables Amazon CloudWatch logging for brokers\.  
 *Required*: No  
-*Type*: [LogsConfiguration](aws-properties-amazonmq-broker-logsconfiguration.md)  
-*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
+*Type*: [LogList](aws-properties-amazonmq-broker-loglist.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaintenanceWindowStartTime`  <a name="cfn-amazonmq-broker-maintenancewindowstarttime"></a>
-The parameters that determine the `WeeklyStartTime`\.  
+The scheduled time period relative to UTC during which Amazon MQ begins to apply pending updates or patches to the broker\.\.  
 *Required*: No  
 *Type*: [MaintenanceWindow](aws-properties-amazonmq-broker-maintenancewindow.md)  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PubliclyAccessible`  <a name="cfn-amazonmq-broker-publiclyaccessible"></a>
 Enables connections from applications outside of the VPC that hosts the broker's subnets\.  
 *Required*: Yes  
 *Type*: Boolean  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecurityGroups`  <a name="cfn-amazonmq-broker-securitygroups"></a>
 The list of rules \(1 minimum, 125 maximum\) that authorize connections to brokers\.  
 *Required*: No  
-*Type*: List of String values  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Type*: List of String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-amazonmq-broker-subnetids"></a>
-The list of groups \(2 maximum\) that define which subnets and IP ranges the broker can use from different Availability Zones\. A `SINGLE_INSTANCE` deployment requires one subnet \(for example, the default subnet\)\. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets\.   
+The list of groups \(2 maximum\) that define which subnets and IP ranges the broker can use from different Availability Zones\. A SINGLE\_INSTANCE deployment requires one subnet \(for example, the default subnet\)\. An ACTIVE\_STANDBY\_MULTI\_AZ deployment requires two subnets\.  
 *Required*: No  
-*Type*: List of String values  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Type*: List of String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-amazonmq-broker-tags"></a>
-An array of key\-value pairs\. For more information, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.  
- *Required*: No  
- *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+An array of key\-value pairs\. For more information, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.   
+*Required*: No  
+*Type*: List of [TagsEntry](aws-properties-amazonmq-broker-tagsentry.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-amazonmq-broker-returnvalues"></a>
+`Users`  <a name="cfn-amazonmq-broker-users"></a>
+The list of ActiveMQ users \(persons or applications\) who can access queues and topics\. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes \(\- \. \_ \~\)\. This value must be 2\-100 characters long\.  
+*Required*: Yes  
+*Type*: List of [User](aws-properties-amazonmq-broker-user.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-### Ref<a name="aws-resource-amazonmq-broker-ref"></a>
+## Return Values<a name="aws-resource-amazonmq-broker-return-values"></a>
 
-When you pass the logical ID of an `AWS::AmazonMQ::Broker` resource to the intrinsic `Ref` function, the function returns the Amazon MQ broker ID\. For example:
+### Ref<a name="aws-resource-amazonmq-broker-return-values-ref"></a>
 
-```
-b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9
-```
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon MQ broker ID\. For example: 
 
-For more information about using the `Ref` function, see `[Ref](intrinsic-function-reference-ref.md)`\.
+ `b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9` 
 
-### Fn::GetAtt<a name="aws-resource-amazonmq-broker-getatt"></a>
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
+### Fn::GetAtt<a name="aws-resource-amazonmq-broker-return-values-fn--getatt"></a>
 
-`Arn`  
-The Amazon Resource Name \(ARN\) of the Amazon MQ broker\.  
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-```
-arn:aws:mq:us-east-2:123456789012:broker:MyBroker:b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9
-```
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
-`ConfigurationId`  
-The unique ID that Amazon MQ generates for the configuration\.  
+#### <a name="aws-resource-amazonmq-broker-return-values-fn--getatt-fn--getatt"></a>
 
-```
-c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9
-```
-
-`ConfigurationRevision`  
-The revision number of the configuration\.  
-
-```
-1
-```
-
-`IpAddresses`  
-The IP addresses of each broker instance as a list of strings\.  
-
-```
-['198.51.100.2', '203.0.113.9']
-```
-
-`MqttEndpoints`  
-The MQTT endpoints of each broker instance as a list of strings\.  
-
-```
-mqtt+ssl://b-4aada85d-a80c-4be0-9d30-e344a01b921e-1.mq.eu-central-amazonaws.com:8883
-```
-
-`OpenWireEndpoints`  
-The OpenWire endpoints of each broker instance as a list of strings\.  
-
-```
-ssl://b-4aada85d-a80c-4be0-9d30-e344a01b921e-1.mq.eu-central-amazonaws.com:61617
-```
-
-`AmqpEndpoints`  
+`AmqpEndpoints`  <a name="AmqpEndpoints-fn::getatt"></a>
 The AMQP endpoints of each broker instance as a list of strings\.  
+ `amqp+ssl://b-4aada85d-a80c-4be0-9d30-e344a01b921e-1.mq.eu-central-amazonaws.com:5671` 
 
-```
-amqp+ssl://b-4aada85d-a80c-4be0-9d30-e344a01b921e-1.mq.eu-central-amazonaws.com:5671
-```
+`Arn`  <a name="Arn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the Amazon MQ broker\.  
+ `arn:aws:mq:us-east-2:123456789012:broker:MyBroker:b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9` 
 
-`StompEndpoints`  
+`ConfigurationId`  <a name="ConfigurationId-fn::getatt"></a>
+The unique ID that Amazon MQ generates for the configuration\.  
+ `c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9` 
+
+`ConfigurationRevision`  <a name="ConfigurationRevision-fn::getatt"></a>
+The revision number of the configuration\.  
+ `1` 
+
+`IpAddresses`  <a name="IpAddresses-fn::getatt"></a>
+The IP addresses of each broker instance as a list of strings\.  
+ `['198.51.100.2', '203.0.113.9']` 
+
+`MqttEndpoints`  <a name="MqttEndpoints-fn::getatt"></a>
+The MQTT endpoints of each broker instance as a list of strings\.  
+ `mqtt+ssl://b-4aada85d-a80c-4be0-9d30-e344a01b921e-1.mq.eu-central-amazonaws.com:8883` 
+
+`OpenWireEndpoints`  <a name="OpenWireEndpoints-fn::getatt"></a>
+The OpenWire endpoints of each broker instance as a list of strings\.  
+ `ssl://b-4aada85d-a80c-4be0-9d30-e344a01b921e-1.mq.eu-central-amazonaws.com:61617` 
+
+`StompEndpoints`  <a name="StompEndpoints-fn::getatt"></a>
 The STOMP endpoints of each broker instance as a list of strings\.  
+ `stomp+ssl://b-4aada85d-a80c-4be0-9d30-e344a01b921e-1.mq.eu-central-amazonaws.com:61614` 
 
-```
-stomp+ssl://b-4aada85d-a80c-4be0-9d30-e344a01b921e-1.mq.eu-central-amazonaws.com:61614
-```
-
-`WssEndpoints`  
+`WssEndpoints`  <a name="WssEndpoints-fn::getatt"></a>
 The WSS endpoints of each broker instance as a list of strings\.  
+ `wss://b-4aada85d-a80c-4be0-9d30-e344a01b921e-1.mq.eu-central-amazonaws.com:61619` 
 
-```
-wss://b-4aada85d-a80c-4be0-9d30-e344a01b921e-1.mq.eu-central-amazonaws.com:61619
-```
+## Examples<a name="aws-resource-amazonmq-broker--examples"></a>
 
-For more information about using `Fn::GetAtt`, see `[Fn::GetAtt](intrinsic-function-reference-getatt.md)`\.
+### Basic Amazon MQ Broker<a name="aws-resource-amazonmq-broker--examples--Basic_Amazon_MQ_Broker"></a>
 
-## Examples<a name="aws-resource-amazonmq-broker-examples"></a>
+The following example creates a basic Amazon MQ broker with one user that belongs to a group\. 
 
-### Basic Amazon MQ Broker<a name="aws-resource-amazonmq-broker-example-simple"></a>
-
-The following example creates a basic Amazon MQ broker with one user that belongs to a group\.
-
-**Note**  
-We don't recommend including plaintext passwords in AWS CloudFormation templates\. To securely retrieve your user credentials, add a `Ref` to your template\. For example, you can create a Lambda function and use it to retrieve encrypted credentials stored in a DynamoDB table\. For more information, see [Using AWS Lambda with Amazon DynamoDB](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html) in the *AWS Lambda Developer Guide*\.
-
-#### JSON<a name="aws-resource-amazonmq-broker-example-simple.json"></a>
+#### JSON<a name="aws-resource-amazonmq-broker--examples--Basic_Amazon_MQ_Broker--json"></a>
 
 ```
 {
@@ -268,7 +254,7 @@ We don't recommend including plaintext passwords in AWS CloudFormation templates
 }
 ```
 
-#### YAML<a name="aws-resource-amazonmq-broker-example-simple.yaml"></a>
+#### YAML<a name="aws-resource-amazonmq-broker--examples--Basic_Amazon_MQ_Broker--yaml"></a>
 
 ```
 --- 
@@ -295,14 +281,11 @@ Resources:
             Ref: "BrokerUsername"
 ```
 
-### Complex Amazon MQ Broker<a name="aws-resource-amazonmq-broker-example-complex"></a>
+### Complex Amazon MQ Broker<a name="aws-resource-amazonmq-broker--examples--Complex_Amazon_MQ_Broker"></a>
 
-The following example creates a complex Amazon MQ broker with two users that don't belong to a group and one user that belongs in a group\.
+The following example creates a complex Amazon MQ broker with two users that don't belong to a group and one user that belongs in a group\. 
 
-**Note**  
-We don't recommend including plaintext passwords in AWS CloudFormation templates\. To securely retrieve your user credentials, add a `Ref` to your template\. For example, you can create a Lambda function and use it to retrieve encrypted credentials stored in a DynamoDB table\. For more information, see [Using AWS Lambda with Amazon DynamoDB](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html) in the *AWS Lambda Developer Guide*\.
-
-#### JSON<a name="aws-resource-amazonmq-broker-example-complex.json"></a>
+#### JSON<a name="aws-resource-amazonmq-broker--examples--Complex_Amazon_MQ_Broker--json"></a>
 
 ```
 {
@@ -360,7 +343,7 @@ We don't recommend including plaintext passwords in AWS CloudFormation templates
 }
 ```
 
-#### YAML<a name="aws-resource-amazonmq-broker-example-complex.yaml"></a>
+#### YAML<a name="aws-resource-amazonmq-broker--examples--Complex_Amazon_MQ_Broker--yaml"></a>
 
 ```
 --- 

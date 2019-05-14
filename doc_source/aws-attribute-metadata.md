@@ -7,7 +7,7 @@ AWS CloudFormation does not validate the syntax within the Metadata attribute\.
 
 You can retrieve this data using the AWS command [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-resource.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-resource.html) or the [DescribeStackResource action](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeStackResource.html)\.
 
-## Example<a name="w13ab1c21c19c19b9"></a>
+## Example<a name="w4622ab1c21c19c19b9"></a>
 
 The following template contains an Amazon S3 bucket resource with a Metadata attribute\.
 

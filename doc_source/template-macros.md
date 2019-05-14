@@ -12,7 +12,7 @@ There are two major steps to processing templates using macros: *creating* the m
 
 To create a macro definition, you need to create the following:
 + An AWS Lambda function to perform the template processing\. This Lambda function accepts either a snippet or an entire template, and any additional parameters that you define\. It returns the processed template snippet or the entire template as a response\.
-+ A resource of type `[AWS::CloudFormation::Macro](aws-resource-cloudformation-macro.md)`, which enables users to call the Lambda function from within AWS CloudFormation templates\. This resource specifies the ARN of the Lambda function to invoke for this macro, and additional optional properties to assist with debugging\. To create this resource within an account, author a stack template that includes a `[AWS::CloudFormation::Macro](aws-resource-cloudformation-macro.md)` resource, and then create a stack from the template\.
++ A resource of type `[AWS::CloudFormation::Macro](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html)`, which enables users to call the Lambda function from within AWS CloudFormation templates\. This resource specifies the ARN of the Lambda function to invoke for this macro, and additional optional properties to assist with debugging\. To create this resource within an account, author a stack template that includes a `[AWS::CloudFormation::Macro](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html)` resource, and then create a stack from the template\.
 
 To use a macro, reference the macro in your template:
 + To process a section, or *snippet*, of a template, reference the macro in a `[`Fn::Transform`](intrinsic-function-reference-transform.md)` function located relative to the template content you want to transform\. When using `Fn::Transform`, you can also pass any specified parameters it requires\.
@@ -115,7 +115,7 @@ The [AWS::Serverless Transform](transform-aws-serverless.md) and [AWS::Include T
 
 ### Debugging AWS CloudFormation Macros<a name="template-macros-debug"></a>
 
-To aid in debugging, you can also specify the `LogGroupName` and `LogRoleArn` properties when creating the [AWS::CloudFormation::Macro](aws-resource-cloudformation-macro.md) resource type for your macro\. These properties enable you to specify the CloudWatch log group to which AWS CloudFormation sends error logging information when invoking the macro's underlying AWS Lambda function, and the role AWS CloudFormation should assume when sending log entries to those logs\.
+To aid in debugging, you can also specify the `LogGroupName` and `LogRoleArn` properties when creating the [AWS::CloudFormation::Macro](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html) resource type for your macro\. These properties enable you to specify the CloudWatch log group to which AWS CloudFormation sends error logging information when invoking the macro's underlying AWS Lambda function, and the role AWS CloudFormation should assume when sending log entries to those logs\.
 
 ### Billing<a name="template-macros-billing"></a>
 
@@ -143,7 +143,7 @@ When creating macro definitions, keep the following in mind:
 
    The Lambda function you build performs the processing of the template contents\. Your function can process any part of a template, up to the entire template\. For information about the event mapping to which your function must adhere, see [AWS CloudFormation Macro Function Interface](#template-macros-lambda-interface)\. For information about additional considerations when creating macros, see [Considerations When Creating AWS CloudFormation Macro Definitions](#template-macros-considerations)\.
 
-1. [Create a template](template-guide.md) containing a [AWS::CloudFormation::Macro](aws-resource-cloudformation-macro.md) resource type\.
+1. [Create a template](template-guide.md) containing a [AWS::CloudFormation::Macro](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html) resource type\.
    + You must specify the `Name` and `FunctionName` properties\. The `FunctionName` property specifies the ARN of the Lambda function to invoke when AWS CloudFormation runs the macro\.
    + To aid in debugging, you can also specify the `LogGroupName` and `LogRoleArn` properties\. 
 
@@ -267,7 +267,7 @@ In addition to the [Macro Example: Creating and Using a Macro](macros-example.md
 
 ## See Also<a name="template-macros-seealso"></a>
 
-[AWS::CloudFormation::Macro](aws-resource-cloudformation-macro.md)
+[AWS::CloudFormation::Macro](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html)
 
 [Transform](transform-section-structure.md)
 

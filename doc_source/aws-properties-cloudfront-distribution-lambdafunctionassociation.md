@@ -1,8 +1,6 @@
-# Amazon CloudFront Distribution LambdaFunctionAssociation<a name="aws-properties-cloudfront-distribution-lambdafunctionassociation"></a>
+# AWS::CloudFront::Distribution LambdaFunctionAssociation<a name="aws-properties-cloudfront-distribution-lambdafunctionassociation"></a>
 
-<a name="aws-properties-cloudfront-distribution-lambdafunctionassociation-description"></a>The `LambdaFunctionAssociation` property type specifies a Lambda function association for an Amazon CloudFront distribution\.
-
-<a name="aws-properties-cloudfront-distribution-lambdafunctionassociation-inheritance"></a> `LambdaFunctionAssociation` is a property of the [CloudFront Distribution CacheBehavior](aws-properties-cloudfront-distribution-cachebehavior.md) and [CloudFront Distribution DefaultCacheBehavior](aws-properties-cloudfront-distribution-defaultcachebehavior.md) property types\. 
+A complex type that contains a Lambda function association\.
 
 ## Syntax<a name="aws-properties-cloudfront-distribution-lambdafunctionassociation-syntax"></a>
 
@@ -20,23 +18,30 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudfront-distribution-lambdafunctionassociation-syntax.yaml"></a>
 
 ```
-[EventType](#cfn-cloudfront-distribution-lambdafunctionassociation-eventtype): String
-[LambdaFunctionARN](#cfn-cloudfront-distribution-lambdafunctionassociation-lambdafunctionarn): String
+﻿  [EventType](#cfn-cloudfront-distribution-lambdafunctionassociation-eventtype) : String
+﻿  [LambdaFunctionARN](#cfn-cloudfront-distribution-lambdafunctionassociation-lambdafunctionarn) : String
 ```
 
 ## Properties<a name="aws-properties-cloudfront-distribution-lambdafunctionassociation-properties"></a>
 
 `EventType`  <a name="cfn-cloudfront-distribution-lambdafunctionassociation-eventtype"></a>
-Specifies the event type that triggers a Lambda function invocation\. For valid values and definitions, see [LambdaFunctionAssociation](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_LambdaFunctionAssociation.html) in the *Amazon CloudFront API Reference*\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Specifies the event type that triggers a Lambda function invocation\. You can specify the following values:  
++  `viewer-request`: The function executes when CloudFront receives a request from a viewer and before it checks to see whether the requested object is in the edge cache\. 
++  `origin-request`: The function executes only when CloudFront forwards a request to your origin\. When the requested object is in the edge cache, the function doesn't execute\.
++  `origin-response`: The function executes after CloudFront receives a response from the origin and before it caches the object in the response\. When the requested object is in the edge cache, the function doesn't execute\.
++  `viewer-response`: The function executes before CloudFront returns the requested object to the viewer\. The function executes regardless of whether the object was already in the edge cache\.
+
+  If the origin returns an HTTP status code other than HTTP 200 \(OK\), the function doesn't execute\.
+*Required*: No  
+*Type*: String  
+*Allowed Values*: `origin-request | origin-response | viewer-request | viewer-response`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LambdaFunctionARN`  <a name="cfn-cloudfront-distribution-lambdafunctionassociation-lambdafunctionarn"></a>
 The ARN of the Lambda function\. You must specify the ARN of a function version; you can't specify a Lambda alias or $LATEST\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-cloudfront-distribution-lambdafunctionassociation-seealso"></a>
-+ [LambdaFunctionAssociation](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_LambdaFunctionAssociation.html) in the *Amazon CloudFront API Reference*
+## See Also<a name="aws-properties-cloudfront-distribution-lambdafunctionassociation--seealso"></a>
++  [LambdaFunctionAssociation](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_LambdaFunctionAssociation.html) in the *Amazon CloudFront API Reference* 

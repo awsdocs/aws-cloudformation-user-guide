@@ -1,8 +1,6 @@
-# AWS Billing and Cost Management Budget NotificationWithSubscribers<a name="aws-properties-budgets-budget-notificationwithsubscribers"></a>
+# AWS::Budgets::Budget NotificationWithSubscribers<a name="aws-properties-budgets-budget-notificationwithsubscribers"></a>
 
-<a name="aws-properties-budgets-budget-notificationwithsubscribers-description"></a>The `NotificationWithSubscribers` property type specifies who to notify when a Billing and Cost Management budget passes or is predicted to pass its threshold\.
-
-<a name="aws-properties-budgets-budget-notificationwithsubscribers-inheritance"></a> `NotificationWithSubscribers` is a property of the [AWS::Budgets::Budget](aws-resource-budgets-budget.md) resource\.
+A notification with subscribers\. A notification can have one SNS subscriber and up to 10 email subscribers, for a total of 11 subscribers\.
 
 ## Syntax<a name="aws-properties-budgets-budget-notificationwithsubscribers-syntax"></a>
 
@@ -12,38 +10,34 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Subscribers](#cfn-budgets-budget-notificationwithsubscribers-subscribers)" : [ [*Subscriber*](aws-properties-budgets-budget-subscriber.md), ... ],
-  "[Notification](#cfn-budgets-budget-notificationwithsubscribers-notification)" : [*Notification*](aws-properties-budgets-budget-notification.md)
+  "[Notification](#cfn-budgets-budget-notificationwithsubscribers-notification)" : [Notification](aws-properties-budgets-budget-notification.md),
+  "[Subscribers](#cfn-budgets-budget-notificationwithsubscribers-subscribers)" : [ [Subscriber](aws-properties-budgets-budget-subscriber.md), ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-budgets-budget-notificationwithsubscribers-syntax.yaml"></a>
 
 ```
-[Subscribers](#cfn-budgets-budget-notificationwithsubscribers-subscribers): 
-  - [*Subscriber*](aws-properties-budgets-budget-subscriber.md)
-[Notification](#cfn-budgets-budget-notificationwithsubscribers-notification): [*Notification*](aws-properties-budgets-budget-notification.md)
+﻿  [Notification](#cfn-budgets-budget-notificationwithsubscribers-notification) : 
+    [Notification](aws-properties-budgets-budget-notification.md)
+﻿  [Subscribers](#cfn-budgets-budget-notificationwithsubscribers-subscribers) : 
+    - [Subscriber](aws-properties-budgets-budget-subscriber.md)
 ```
 
 ## Properties<a name="aws-properties-budgets-budget-notificationwithsubscribers-properties"></a>
 
+`Notification`  <a name="cfn-budgets-budget-notificationwithsubscribers-notification"></a>
+The notification that is associated with a budget\.  
+*Required*: Yes  
+*Type*: [Notification](aws-properties-budgets-budget-notification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Subscribers`  <a name="cfn-budgets-budget-notificationwithsubscribers-subscribers"></a>
 A list of subscribers who are subscribed to this notification\.  
- *Required*: Yes  
- *Type*: List of [Subscriber](aws-properties-budgets-budget-subscriber.md)  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Required*: Yes  
+*Type*: List of [Subscriber](aws-properties-budgets-budget-subscriber.md)  
+*Maximum*: `11`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`Notification`  <a name="cfn-budgets-budget-notificationwithsubscribers-notification"></a>
-A notification associated with a budget\. A budget can have up to five notifications\.   
-Each notification must have at least one subscriber\. A notification can have one SNS subscriber and up to ten email subscribers, for a total of 11 subscribers\.   
-For example, if you have a budget for 200 dollars and you want to be notified when you go over 160 dollars, create a notification with the following parameters:  
-+ A `thresholdType` of `PERCENTAGE`
-+ A `threshold` of `80`
-+ A `notificationType` of `ACTUAL`
-+ A `comparisonOperator` of `GREATER_THAN`
- *Required*: Yes  
- *Type*: [Notification](aws-properties-budgets-budget-notification.md)  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
-
-## See Also<a name="aws-properties-budgets-budget-notificationwithsubscribers-seealso"></a>
-+ [NotificationWithSubscribers](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_NotificationWithSubscribers.html) in the [AWS Billing and Cost Management API Reference](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/Welcome.html)\. 
+## See Also<a name="aws-properties-budgets-budget-notificationwithsubscribers--seealso"></a>
++  [NotificationWithSubscribers](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_NotificationWithSubscribers.html) in the *AWS Cost Explorer Service Cost Management APIs* 

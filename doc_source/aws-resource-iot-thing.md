@@ -4,16 +4,18 @@ Use the `AWS::IoT::Thing` resource to declare an AWS IoT thing\.
 
 For information about working with things, see [How AWS IoT Works](https://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html) and [Device Registry for AWS IoT](https://docs.aws.amazon.com/iot/latest/developerguide/thing-registry.html) in the *AWS IoT Developer Guide*\.
 
-## Syntax<a name="w13ab1c21c10d162c29b7"></a>
+## Syntax<a name="aws-resource-iot-thing-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-resource-iot-thing-syntax.json"></a>
 
 ```
 {
-   "Type": "AWS::IoT::Thing",
-   "Properties": {
-      "[AttributePayload](#cfn-iot-thing-attributepayload)": [*AttributePayload*](aws-properties-iot-thing-attributepayload.md)
-      "[ThingName](#cfn-iot-thing-thingname)": String
+  "Type" : "AWS::IoT::Thing",
+  "Properties" : {
+      "[AttributePayload](#cfn-iot-thing-attributepayload)" : [AttributePayload](aws-properties-iot-thing-attributepayload.md),
+      "[ThingName](#cfn-iot-thing-thingname)" : String
     }
 }
 ```
@@ -22,49 +24,47 @@ For information about working with things, see [How AWS IoT Works](https://docs.
 
 ```
 Type: AWS::IoT::Thing
-Properties:
-  [AttributePayload](#cfn-iot-thing-attributepayload):
-    [*AttributePayload*](aws-properties-iot-thing-attributepayload.md)
-  [ThingName](#cfn-iot-thing-thingname): String
+Properties : 
+﻿  [AttributePayload](#cfn-iot-thing-attributepayload) : 
+    [AttributePayload](aws-properties-iot-thing-attributepayload.md)
+﻿  [ThingName](#cfn-iot-thing-thingname) : String
 ```
 
-## Properties<a name="w13ab1c21c10d162c29b9"></a>
+## Properties<a name="aws-resource-iot-thing-properties"></a>
 
 `AttributePayload`  <a name="cfn-iot-thing-attributepayload"></a>
-The attribute payload\.  
+A string that contains up to three key–value pairs\. Maximum length of 800\. Duplicates not allowed\.  
 *Required*: No  
-*Type*: [AWS IoT Thing AttributePayload](aws-properties-iot-thing-attributepayload.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: [AttributePayload](aws-properties-iot-thing-attributepayload.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThingName`  <a name="cfn-iot-thing-thingname"></a>
-The name \(the physical ID\) of the AWS IoT thing\.  
+The name of the thing to update\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Value<a name="w13ab1c21c10d162c29c11"></a>
+## Return Values<a name="aws-resource-iot-thing-return-values"></a>
 
-### Ref<a name="w13ab1c21c10d162c29c11b2"></a>
+### Ref<a name="aws-resource-iot-thing-return-values-ref"></a>
 
-When you provide the logical ID of this resource to the `Ref` intrinsic function, `Ref` returns the thing name\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the thing name\. For example:
 
-```
-{ "Ref": "MyThing" }
-```
+ `{ "Ref": "MyThing" }` 
 
-For a stack named `MyStack`, a value similar to the following is returned:
+For a stack named MyStack, a value similar to the following is returned:
 
-```
-MyStack-MyThing-AB1CDEFGHIJK
-```
+ `MyStack-MyThing-AB1CDEFGHIJK` 
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Example<a name="w13ab1c21c10d162c29c13"></a>
+## Examples<a name="aws-resource-iot-thing--examples"></a>
+
+### <a name="aws-resource-iot-thing--examples--"></a>
 
 The following example declares a thing and the values of its attributes\.
 
-### JSON<a name="aws-resource-iot-thing-example.json"></a>
+#### JSON<a name="aws-resource-iot-thing--examples----json"></a>
 
 ```
 {
@@ -89,7 +89,7 @@ The following example declares a thing and the values of its attributes\.
                   }
                }
             }
-         }
+         }  
       }
    },
    "Parameters": {
@@ -112,34 +112,34 @@ The following example declares a thing and the values of its attributes\.
 }
 ```
 
-### YAML<a name="aws-resource-iot-thing-example.yaml"></a>
+#### YAML<a name="aws-resource-iot-thing--examples----yaml"></a>
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"
 Resources: 
-  MyThing: 
-    Type: AWS::IoT::Thing
-    Properties: 
-      ThingName: 
-        Ref: "NameParameter"
-      AttributePayload: 
-        Attributes: 
-          myAttributeA: 
-            Ref: "MyAttributeValueA"
-          myAttributeB: 
-            Ref: "MyAttributeValueB"
-          myAttributeC: 
-            Ref: "MyAttributeValueC"
+   MyThing: 
+      Type: AWS::IoT::Thing
+      Properties: 
+         ThingName: 
+            Ref: "NameParameter"
+         AttributePayload: 
+            Attributes: 
+               myAttributeA: 
+                  Ref: "MyAttributeValueA"
+               myAttributeB: 
+                  Ref: "MyAttributeValueB"
+               myAttributeC: 
+                  Ref: "MyAttributeValueC"
 Parameters: 
-  NameParameter: 
-    Type: "String"
-  MyAttributeValueA: 
-    Type: "String"
-    Default: "myStringA123"
-  MyAttributeValueB: 
-    Type: "String"
-    Default: "myStringB123"
-  MyAttributeValueC: 
-    Type: "String"
-    Default: "myStringC123"
+   NameParameter: 
+      Type: "String"
+   MyAttributeValueA: 
+      Type: "String"
+      Default: "myStringA123"
+   MyAttributeValueB: 
+      Type: "String"
+      Default: "myStringB123"
+   MyAttributeValueC: 
+      Type: "String"
+      Default: "myStringC123"
 ```

@@ -1,6 +1,6 @@
 # AWS::Batch::ComputeEnvironment<a name="aws-resource-batch-computeenvironment"></a>
 
-The `AWS::Batch::ComputeEnvironment` resource to define your AWS Batch compute environment\. For more information, see [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\. 
+The `AWS::Batch::ComputeEnvironment` resource defines your AWS Batch compute environment\. For more information, see [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.
 
 ## Syntax<a name="aws-resource-batch-computeenvironment-syntax"></a>
 
@@ -12,12 +12,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Batch::ComputeEnvironment",
   "Properties" : {
-    "[Type](#cfn-batch-computeenvironment-type)" : String,
-    "[ServiceRole](#cfn-batch-computeenvironment-servicerole)" : String,
-    "[ComputeEnvironmentName](#cfn-batch-computeenvironment-computeenvironmentname)" : String,
-    "[ComputeResources](#cfn-batch-computeenvironment-computeresources)" : [*ComputeResources*](aws-properties-batch-computeenvironment-computeresources.md),
-    "[State](#cfn-batch-computeenvironment-state)" : String
-  }
+      "[ComputeEnvironmentName](#cfn-batch-computeenvironment-computeenvironmentname)" : String,
+      "[ComputeResources](#cfn-batch-computeenvironment-computeresources)" : [ComputeResources](aws-properties-batch-computeenvironment-computeresources.md),
+      "[ServiceRole](#cfn-batch-computeenvironment-servicerole)" : String,
+      "[State](#cfn-batch-computeenvironment-state)" : String,
+      "[Type](#cfn-batch-computeenvironment-type)" : String
+    }
 }
 ```
 
@@ -25,62 +25,66 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Batch::ComputeEnvironment
-Properties:
-  [Type](#cfn-batch-computeenvironment-type): String
-  [ServiceRole](#cfn-batch-computeenvironment-servicerole): String
-  [ComputeEnvironmentName](#cfn-batch-computeenvironment-computeenvironmentname): String
-  [ComputeResources](#cfn-batch-computeenvironment-computeresources): 
-    [*ComputeResources*](aws-properties-batch-computeenvironment-computeresources.md)
-  [State](#cfn-batch-computeenvironment-state): String
+Properties : 
+﻿  [ComputeEnvironmentName](#cfn-batch-computeenvironment-computeenvironmentname) : String
+﻿  [ComputeResources](#cfn-batch-computeenvironment-computeresources) : 
+    [ComputeResources](aws-properties-batch-computeenvironment-computeresources.md)
+﻿  [ServiceRole](#cfn-batch-computeenvironment-servicerole) : String
+﻿  [State](#cfn-batch-computeenvironment-state) : String
+﻿  [Type](#cfn-batch-computeenvironment-type) : String
 ```
 
 ## Properties<a name="aws-resource-batch-computeenvironment-properties"></a>
 
-`Type`  <a name="cfn-batch-computeenvironment-type"></a>
-The type of the compute environment\.  
-*Required*: Yes  
-*Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
-
-`ServiceRole`  <a name="cfn-batch-computeenvironment-servicerole"></a>
-The service role associated with the compute environment that allows AWS Batch to make calls to AWS API operations on your behalf\.  
-*Required*: Yes  
-*Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
-
 `ComputeEnvironmentName`  <a name="cfn-batch-computeenvironment-computeenvironmentname"></a>
-The name of the compute environment\.  
+The name for your compute environment\. Up to 128 letters \(uppercase and lowercase\), numbers, hyphens, and underscores are allowed\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ComputeResources`  <a name="cfn-batch-computeenvironment-computeresources"></a>
-The compute resources defined for the compute environment\.  
+The ComputeResources property type specifies details of the compute resources managed by the compute environment\. This parameter is required for managed compute environments\. For more information, see [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.  
+*Required*: No  
+*Type*: [ComputeResources](aws-properties-batch-computeenvironment-computeresources.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ServiceRole`  <a name="cfn-batch-computeenvironment-servicerole"></a>
+The full Amazon Resource Name \(ARN\) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf\.  
+If your specified role has a path other than `/`, then you must either specify the full role ARN \(this is recommended\) or prefix the role name with the path\.  
+Depending on how you created your AWS Batch service role, its ARN may contain the `service-role` path prefix\. When you only specify the name of the service role, AWS Batch assumes that your ARN does not use the `service-role` path prefix\. Because of this, we recommend that you specify the full ARN of your service role when you create compute environments\.
 *Required*: Yes  
- *Type*: [AWS Batch ComputeEnvironment ComputeResources](aws-properties-batch-computeenvironment-computeresources.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `State`  <a name="cfn-batch-computeenvironment-state"></a>
-The state of the compute environment\. The valid values are `ENABLED` or `DISABLED`\. An `ENABLED` state indicates that you can register instances with the compute environment and that the associated instances can accept jobs\.  
+The state of the compute environment\. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Allowed Values*: `DISABLED | ENABLED`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-batch-computeenvironment-returnvalues"></a>
+`Type`  <a name="cfn-batch-computeenvironment-type"></a>
+The type of the compute environment\. For more information, see [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.  
+*Required*: Yes  
+*Type*: String  
+*Allowed Values*: `MANAGED | UNMANAGED`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-### Ref<a name="aws-resource-batch-computeenvironment-ref"></a>
+## Return Values<a name="aws-resource-batch-computeenvironment-return-values"></a>
 
-When you pass the logical ID of an `AWS::Batch::ComputeEnvironment` resource to the intrinsic `Ref` function, the function returns the compute environment ARN, such as `arn:aws:batch:us-east-1:555555555555:compute-environment/M4OnDemand`\. 
+### Ref<a name="aws-resource-batch-computeenvironment-return-values-ref"></a>
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the compute environment ARN, such as `arn:aws:batch:us-east-1:555555555555:compute-environment/M4OnDemand`\.
 
-## Examples<a name="aws-resource-batch-computeenvironment-examples"></a>
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Managed Compute Environment<a name="aws-resource-batch-computeenvironment-example1"></a>
+## Examples<a name="aws-resource-batch-computeenvironment--examples"></a>
+
+### Managed Compute Environment<a name="aws-resource-batch-computeenvironment--examples--Managed_Compute_Environment"></a>
 
 The following example creates a managed compute environment called `C4OnDemand` that uses C4 On\-Demand instances and a custom AMI\.
 
-#### JSON<a name="aws-resource-batch-computeenvironment-example1.json"></a>
+#### JSON<a name="aws-resource-batch-computeenvironment--examples--Managed_Compute_Environment--json"></a>
 
 ```
 {
@@ -112,7 +116,9 @@ The following example creates a managed compute environment called `C4OnDemand` 
           "c4.8xlarge"
         ],
         "Ec2KeyPair": "id_rsa",
-        "Tags": {"Name": "Batch Instance - C4OnDemand"},
+        "Tags": {
+          "Name": "Batch Instance - C4OnDemand"
+        },
         "DesiredvCpus": 48
       },
       "State": "ENABLED"
@@ -121,108 +127,38 @@ The following example creates a managed compute environment called `C4OnDemand` 
 }
 ```
 
-#### YAML<a name="aws-resource-batch-computeenvironment-example1.yaml"></a>
+#### YAML<a name="aws-resource-batch-computeenvironment--examples--Managed_Compute_Environment--yaml"></a>
 
 ```
 ComputeEnvironment:
   Type: AWS::Batch::ComputeEnvironment
   Properties:
-    [Type](#cfn-batch-computeenvironment-type): MANAGED
-    [ServiceRole](#cfn-batch-computeenvironment-servicerole): arn:aws:iam::111122223333:role/service-role/AWSBatchServiceRole
-    [ComputeEnvironmentName](#cfn-batch-computeenvironment-computeenvironmentname): C4OnDemand
-    [ComputeResources](#cfn-batch-computeenvironment-computeresources):
-      [MaxvCpus](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-maxvcpus): 128
-      [SecurityGroupIds](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-securitygroupids):
+    Type: MANAGED
+    ServiceRole: arn:aws:iam::111122223333:role/service-role/AWSBatchServiceRole
+    ComputeEnvironmentName: C4OnDemand
+    ComputeResources:
+      MaxvCpus: 128
+      SecurityGroupIds:
         - sg-abcd1234
-      [Type](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-type): EC2
-      [Subnets](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-subnets):
+      Type: EC2
+      Subnets:
         - subnet-aaaaaaaa
         - subnet-bbbbbbbb
         - subnet-cccccccc
-      [MinvCpus](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-minvcpus): 0
-      [ImageId](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-imageid): ami-a1b2c3d4
-      [InstanceRole](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-instancerole): ecsInstanceRole
-      [InstanceTypes](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-instancetypes):
+      MinvCpus: 0
+      ImageId: ami-a1b2c3d4
+      InstanceRole: ecsInstanceRole
+      InstanceTypes:
         - c4.large
         - c4.xlarge
         - c4.2xlarge
         - c4.4xlarge
         - c4.8xlarge
-      [Ec2KeyPair](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-ec2keypair): id_rsa
-      [Tags](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-tags): {"Name": "Batch Instance - C4OnDemand"}
-      [DesiredvCpus](aws-properties-batch-computeenvironment-computeresources.md#cfn-batch-computeenvironment-computeresources-desiredvcpus): 48
-    [State](#cfn-batch-computeenvironment-state): ENABLED
-```
-
-### <a name="aws-resource-batch-computeenvironment-example2"></a>
-
-The following example creates a compute environment named `my-first-compute-environment` and specifies tags for the compute resources\.
-
-#### JSON<a name="aws-resource-batch-computeenvironment-example2.json"></a>
-
-```
-"MyComputeEnv": {
-  "Type": "AWS::Batch::ComputeEnvironment",
-  "Properties": {
-    "Type": "MANAGED",
-    "ServiceRole": "AWSBatchServiceRole",
-    "ComputeEnvironmentName": "my-first-compute-environment",
-    "ComputeResources": {
-      "MinvCpus": "4",
-      "MaxvCpus": "256",
-      "DesiredvCpus": "4",
-      "SecurityGroupIds": [
-        "sg-a1b2c3d4",
-        "sg-4d3c2ba1"
-      ],
-      "Type": "EC2",
-      "Subnets": [
-        "subnet-12345678",
-        "subnet-87654321"
-      ],
-      "InstanceRole": "batch-instance-profile",
-      "InstanceTypes": [
-        "optimal"
-      ],
-      "Ec2KeyPair": {
-        "Ref": "MyKeyPair"
-      },
-      "Tags": {
-        "Owner": "A",
-        "Project": "B"
-      }
-    },
-    "State": "ENABLED"
-  }
-}
-```
-
-#### YAML<a name="aws-resource-batch-computeenvironment-example2.yaml"></a>
-
-```
-MyComputeEnv:
-  Type: AWS::Batch::ComputeEnvironment
-  Properties:
-    Type: MANAGED
-    ServiceRole: AWSBatchServiceRole
-    ComputeEnvironmentName: my-first-compute-environment
-    ComputeResources:
-      MinvCpus: 4
-      MaxvCpus: 256
-      DesiredvCpus: 4
-      SecurityGroupIds:
-        - sg-a1b2c3d4
-        - sg-4d3c2ba1
-      Type: EC2
-      Subnets:
-        - subnet-12345678
-        - subnet-87654321
-      InstanceRole: batch-instance-profile
-      InstanceTypes:
-        - optimal
-      Ec2KeyPair: !Ref MyKeyPair
-      Tags:
-        Owner: A
-        Project: B
+      Ec2KeyPair: id_rsa
+      Tags: '{"Name": "Batch Instance - C4OnDemand"}'
+      DesiredvCpus: 48
     State: ENABLED
 ```
+
+## See Also<a name="aws-resource-batch-computeenvironment--seealso"></a>
++  [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.

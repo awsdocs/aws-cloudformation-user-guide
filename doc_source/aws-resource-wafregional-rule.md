@@ -1,8 +1,10 @@
 # AWS::WAFRegional::Rule<a name="aws-resource-wafregional-rule"></a>
 
-The `AWS::WAFRegional::Rule` resource creates an AWS WAF Regional rule that specifies a combination of `IPSet`, `ByteMatchSet`, and `SqlInjectionMatchSet` objects that identify the web requests to allow, block, or count\. To implement rules, you must associate them with a [web ACL](aws-resource-wafregional-webacl.md)\.
+A combination of `ByteMatchSet`, `IPSet`, and/or `SqlInjectionMatchSet` objects that identify the web requests that you want to allow, block, or count\. For example, you might create a `Rule` that includes the following predicates:
++ An `IPSet` that causes AWS WAF to search for web requests that originate from the IP address `192.0.2.44` 
++ A `ByteMatchSet` that causes AWS WAF to search for web requests for which the value of the `User-Agent` header is `BadBot`\.
 
-For more information, see [CreateRule](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_CreateRule.html) in the *AWS WAF Regional API Reference*\.
+To match the settings in this `Rule`, a request must originate from `192.0.2.44` AND include a `User-Agent` header for which the value is `BadBot`\.
 
 ## Syntax<a name="aws-resource-wafregional-rule-syntax"></a>
 
@@ -14,59 +16,61 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFRegional::Rule",
   "Properties" : {
-    "[MetricName](#cfn-wafregional-rule-metricname)" : String,
-    "[Name](#cfn-wafregional-rule-name)" : String,
-    "[Predicates](#cfn-wafregional-rule-predicates)" : [ Predicate, ... ]
-  }
+      "[MetricName](#cfn-wafregional-rule-metricname)" : String,
+      "[Name](#cfn-wafregional-rule-name)" : String,
+      "[Predicates](#cfn-wafregional-rule-predicates)" : [ [Predicate](aws-properties-wafregional-rule-predicate.md), ... ]
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-wafregional-rule-syntax.yaml"></a>
 
 ```
-Type: "AWS::WAFRegional::Rule"
-Properties: 
-  [MetricName](#cfn-wafregional-rule-metricname): String
-  [Name](#cfn-wafregional-rule-name): String
-  [Predicates](#cfn-wafregional-rule-predicates):
-    - Predicate
+Type: AWS::WAFRegional::Rule
+Properties : 
+﻿  [MetricName](#cfn-wafregional-rule-metricname) : String
+﻿  [Name](#cfn-wafregional-rule-name) : String
+﻿  [Predicates](#cfn-wafregional-rule-predicates) : 
+    - [Predicate](aws-properties-wafregional-rule-predicate.md)
 ```
 
-## Properties<a name="w13ab1c21c10d237c21b9"></a>
+## Properties<a name="aws-resource-wafregional-rule-properties"></a>
 
 `MetricName`  <a name="cfn-wafregional-rule-metricname"></a>
-A friendly name or description for the metrics of the rule\. For valid values, see the `MetricName` parameter for the [https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_CreateRule.html](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_CreateRule.html) action in the *AWS WAF Regional API Reference*\.  
+A friendly name or description for the metrics for this `Rule`\. The name can contain only alphanumeric characters \(A\-Z, a\-z, 0\-9\); the name can't contain whitespace\. You can't change `MetricName` after you create the `Rule`\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-wafregional-rule-name"></a>
-A friendly name or description of the rule\.  
+The friendly name or description for the `Rule`\. You can't change the name of a `Rule` after you create it\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Predicates`  <a name="cfn-wafregional-rule-predicates"></a>
-The `ByteMatchSet`, `IPSet`, `SizeConstraintSet`, `SqlInjectionMatchSet`, or `XssMatchSet` objects to include in a rule\. If you add more than one predicate to a rule, a request must match all conditions in order to be allowed or blocked\.  
+The `Predicates` object contains one `Predicate` element for each `ByteMatchSet`, `IPSet`, or `SqlInjectionMatchSet` object that you want to include in a `Rule`\.  
 *Required*: No  
-*Type*: List of [AWS WAF Regional Rule Predicates](aws-properties-wafregional-rule-predicates.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of [Predicate](aws-properties-wafregional-rule-predicate.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10d237c21c11"></a>
+## Return Values<a name="aws-resource-wafregional-rule-return-values"></a>
 
-### Ref<a name="w13ab1c21c10d237c21c11b2"></a>
+### Ref<a name="aws-resource-wafregional-rule-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource physical ID, such as `1234a1a-a1b1-12a1-abcd-a123b123456`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource physical ID, such as 1234a1a\-a1b1\-12a1\-abcd\-a123b123456\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Example<a name="w13ab1c21c10d237c21c13"></a>
+## Examples<a name="aws-resource-wafregional-rule--examples"></a>
 
-### Associate an IPSet with a Web ACL Rule<a name="w13ab1c21c10d237c21c13b2"></a>
+### Associate an IPSet with a Web ACL Rule<a name="aws-resource-wafregional-rule--examples--Associate_an_IPSet_with_a_Web_ACL_Rule"></a>
 
 The following example associates the `MyIPSetBlacklist` `IPSet` object with a web ACL rule\.
 
-#### JSON<a name="aws-resource-wafregional-rule-example.json"></a>
+#### JSON<a name="aws-resource-wafregional-rule--examples--Associate_an_IPSet_with_a_Web_ACL_Rule--json"></a>
 
 ```
 "MyIPSetRule" : {
@@ -85,7 +89,7 @@ The following example associates the `MyIPSetBlacklist` `IPSet` object with a we
 }
 ```
 
-#### YAML<a name="aws-resource-wafregional-rule-example.yaml"></a>
+#### YAML<a name="aws-resource-wafregional-rule--examples--Associate_an_IPSet_with_a_Web_ACL_Rule--yaml"></a>
 
 ```
 MyIPSetRule: 
@@ -98,5 +102,5 @@ MyIPSetRule:
         DataId: 
           Ref: "MyIPSetBlacklist"
         Negated: false
-        Type: "IPMatch"
+Type: "IPMatch"
 ```

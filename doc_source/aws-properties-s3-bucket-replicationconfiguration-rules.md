@@ -1,17 +1,19 @@
-# Amazon S3 Bucket ReplicationRule<a name="aws-properties-s3-bucket-replicationconfiguration-rules"></a>
+# AWS::S3::Bucket ReplicationRule<a name="aws-properties-s3-bucket-replicationconfiguration-rules"></a>
 
-The `ReplicationRule` property type specifies which Amazon Simple Storage Service \(Amazon S3\) objects to replicate and where to store them\. The `Rules` sub\-property of the [ReplicationConfiguration](aws-properties-s3-bucket-replicationconfiguration.md) property contains a list of `ReplicationRule` property types\.
+Specifies which Amazon S3 objects to replicate and where to store the replicas\.
 
-## Syntax<a name="w13ab1c21c10d204c13d122b5"></a>
+## Syntax<a name="aws-properties-s3-bucket-replicationconfiguration-rules-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-s3-bucket-replicationconfiguration-rules-syntax.json"></a>
 
 ```
 {
-  "[Destination](#cfn-s3-bucket-replicationconfiguration-rules-destination)" : [*ReplicationDestination*](aws-properties-s3-bucket-replicationconfiguration-rules-destination.md),
+  "[Destination](#cfn-s3-bucket-replicationconfiguration-rules-destination)" : [ReplicationDestination](aws-properties-s3-bucket-replicationconfiguration-rules-destination.md),
   "[Id](#cfn-s3-bucket-replicationconfiguration-rules-id)" : String,
   "[Prefix](#cfn-s3-bucket-replicationconfiguration-rules-prefix)" : String,
-  "[SourceSelectionCriteria](#cfn-s3-bucket-replicationrule-sourceselectioncriteria)" : [*SourceSelectionCriteria*](aws-properties-s3-bucket-sourceselectioncriteria.md),              
+  "[SourceSelectionCriteria](#cfn-s3-bucket-replicationrule-sourceselectioncriteria)" : [SourceSelectionCriteria](aws-properties-s3-bucket-sourceselectioncriteria.md),
   "[Status](#cfn-s3-bucket-replicationconfiguration-rules-status)" : String
 }
 ```
@@ -19,38 +21,44 @@ The `ReplicationRule` property type specifies which Amazon Simple Storage Servic
 ### YAML<a name="aws-properties-s3-bucket-replicationconfiguration-rules-syntax.yaml"></a>
 
 ```
-[Destination](#cfn-s3-bucket-replicationconfiguration-rules-destination): 
-  [*ReplicationDestination*](aws-properties-s3-bucket-replicationconfiguration-rules-destination.md)
-[Id](#cfn-s3-bucket-replicationconfiguration-rules-id): String
-[Prefix](#cfn-s3-bucket-replicationconfiguration-rules-prefix): String
-[SourceSelectionCriteria](#cfn-s3-bucket-replicationrule-sourceselectioncriteria): [*SourceSelectionCriteria*](aws-properties-s3-bucket-sourceselectioncriteria.md)
-[Status](#cfn-s3-bucket-replicationconfiguration-rules-status): String
+﻿  [Destination](#cfn-s3-bucket-replicationconfiguration-rules-destination) : 
+    [ReplicationDestination](aws-properties-s3-bucket-replicationconfiguration-rules-destination.md)
+﻿  [Id](#cfn-s3-bucket-replicationconfiguration-rules-id) : String
+﻿  [Prefix](#cfn-s3-bucket-replicationconfiguration-rules-prefix) : String
+﻿  [SourceSelectionCriteria](#cfn-s3-bucket-replicationrule-sourceselectioncriteria) : 
+    [SourceSelectionCriteria](aws-properties-s3-bucket-sourceselectioncriteria.md)
+﻿  [Status](#cfn-s3-bucket-replicationconfiguration-rules-status) : String
 ```
 
-## Properties<a name="w13ab1c21c10d204c13d122b7"></a>
+## Properties<a name="aws-properties-s3-bucket-replicationconfiguration-rules-properties"></a>
 
 `Destination`  <a name="cfn-s3-bucket-replicationconfiguration-rules-destination"></a>
-Defines the destination where Amazon S3 stores replicated objects\.  
+A container for information about the replication destination\.  
 *Required*: Yes  
-*Type*: [ReplicationDestination](aws-properties-s3-bucket-replicationconfiguration-rules-destination.md)
+*Type*: [ReplicationDestination](aws-properties-s3-bucket-replicationconfiguration-rules-destination.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-s3-bucket-replicationconfiguration-rules-id"></a>
-A unique identifier for the rule\. If you don't specify a value, AWS CloudFormation generates a random ID\.  
+A unique identifier for the rule\. The maximum value is 255 characters\. If you don't specify a value, AWS CloudFormation generates a random ID\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Prefix`  <a name="cfn-s3-bucket-replicationconfiguration-rules-prefix"></a>
-An object prefix\. This rule applies to all Amazon S3 objects with this prefix\. To specify all objects in an S3 bucket, specify an empty string\.  
+An object keyname prefix that identifies the object or objects to which the rule applies\. The maximum prefix length is 1,024 characters\. To include all objects in a bucket, specify an empty string\.   
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceSelectionCriteria`  <a name="cfn-s3-bucket-replicationrule-sourceselectioncriteria"></a>
-Specifies additional filters in identifying source objects that you want to replicate\.  
-Currently, Amazon S3 supports only the filter that you can specify for objects created with server\-side encryption using an AWS KMS\-managed key\. That is, you can choose to enable or disable replication of these objects\.  
+A container that describes additional filters for identifying the source objects that you want to replicate\. You can choose to enable or disable the replication of these objects\. Currently, Amazon S3 supports only the filter that you can specify for objects created with server\-side encryption using an AWS KMS\-Managed Key \(SSE\-KMS\)\.  
 *Required*: No  
-*Type*: [SourceSelectionCriteria](aws-properties-s3-bucket-sourceselectioncriteria.md)
+*Type*: [SourceSelectionCriteria](aws-properties-s3-bucket-sourceselectioncriteria.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Status`  <a name="cfn-s3-bucket-replicationconfiguration-rules-status"></a>
-Whether the rule is enabled\. For valid values, see the `Status` element of the [PUT Bucket replication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html) action in the *Amazon Simple Storage Service API Reference*\.  
+Specifies whether the rule is enabled\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Allowed Values*: `Disabled | Enabled`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

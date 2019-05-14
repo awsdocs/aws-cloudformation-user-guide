@@ -1,8 +1,10 @@
-# AWS Lambda Function TracingConfig<a name="aws-properties-lambda-function-tracingconfig"></a>
+# AWS::Lambda::Function TracingConfig<a name="aws-properties-lambda-function-tracingconfig"></a>
 
-`TracingConfig` is a property of the [AWS::Lambda::Function](aws-resource-lambda-function.md) resource that configures tracing settings for your AWS Lambda \(Lambda\) function\. For more information about tracing Lambda functions, see [Tracing Lambda\-Based Applications with AWS X\-Ray](https://docs.aws.amazon.com/lambda/latest/dg/lambda-x-ray.html#using-x-ray) in the *AWS Lambda Developer Guide*\.
+The function's AWS X\-Ray tracing configuration\.
 
-## Syntax<a name="w13ab1c21c10d177c21c29b5"></a>
+## Syntax<a name="aws-properties-lambda-function-tracingconfig-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-lambda-function-tracingconfig-syntax.json"></a>
 
@@ -15,14 +17,14 @@
 ### YAML<a name="aws-properties-lambda-function-tracingconfig-syntax.yaml"></a>
 
 ```
-[Mode](#cfn-lambda-function-tracingconfig-mode):
-  String
+﻿  [Mode](#cfn-lambda-function-tracingconfig-mode) : String
 ```
 
-## Properties<a name="w13ab1c21c10d177c21c29b7"></a>
+## Properties<a name="aws-properties-lambda-function-tracingconfig-properties"></a>
 
 `Mode`  <a name="cfn-lambda-function-tracingconfig-mode"></a>
-Specifies how Lambda traces a request\. The default mode is `PassThrough`\. For more information, see [https://docs.aws.amazon.com/lambda/latest/dg/API_TracingConfig.html](https://docs.aws.amazon.com/lambda/latest/dg/API_TracingConfig.html) in the *AWS Lambda Developer Guide*\.  
+The tracing mode\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Allowed Values*: `Active | PassThrough`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

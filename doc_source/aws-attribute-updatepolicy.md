@@ -1,6 +1,6 @@
 # UpdatePolicy Attribute<a name="aws-attribute-updatepolicy"></a>
 
-Use the `UpdatePolicy` attribute to specify how AWS CloudFormation handles updates to the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html), or [AWS::ElastiCache::ReplicationGroup](aws-resource-elasticache-replicationgroup.md) resources\.
+Use the `UpdatePolicy` attribute to specify how AWS CloudFormation handles updates to the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html), or [AWS::ElastiCache::ReplicationGroup](https://docs.aws.amazon.com/aws-resource-elasticache-replicationgroup) resources\.
 + For `AWS::AutoScaling::AutoScalingGroup` resources, AWS CloudFormation invokes one of three update policies depending on the type of change you make or whether a scheduled action is associated with the Auto Scaling group\.
   + The `AutoScalingReplacingUpdate` and `AutoScalingRollingUpdate` policies apply *only* when you do one or more of the following:
     + Change the Auto Scaling group's `[AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html)`\.
@@ -107,7 +107,7 @@ Specifies the minimum number of instances that must be in service within the Aut
 Specifies the percentage of instances in an Auto Scaling rolling update that must signal success for an update to succeed\. You can specify a value from `0` to `100`\. AWS CloudFormation rounds to the nearest tenth of a percent\. For example, if you update five instances with a minimum successful percentage of `50`, three instances must signal success\.  
 If an instance doesn't send a signal within the time specified in the `PauseTime` property, AWS CloudFormation assumes that the instance wasn't updated\.  
 If you specify this property, you must also enable the `WaitOnResourceSignals` and `PauseTime` properties\.  
-The `MinSuccessfulInstancesPercent` parameter applies only to instances only for signaling purpose\. To specify the number of instances in your autoscaling group, see the `MinSize`, `MaxSize`, and `DesiredCapacity` properties fo the [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md) resource\.  
+The `MinSuccessfulInstancesPercent` parameter applies only to instances only for signaling purpose\. To specify the number of instances in your autoscaling group, see the `MinSize`, `MaxSize`, and `DesiredCapacity` properties fo the [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource\.  
 *Default*: `100`  
 *Type*: Integer  
 *Required*: No
@@ -225,7 +225,7 @@ For an example that specifies the `UpdatePolicy` attribute for an `AWS::Lambda::
 
 ## UseOnlineResharding Policy<a name="cfn-attributes-updatepolicy-useonlineresharding"></a>
 
-To modify a replication group's shards by adding or removing shards, rather than replacing the entire [AWS::ElastiCache::ReplicationGroup](aws-resource-elasticache-replicationgroup.md) resource, use the `UseOnlineResharding` update policy\.
+To modify a replication group's shards by adding or removing shards, rather than replacing the entire [AWS::ElastiCache::ReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html) resource, use the `UseOnlineResharding` update policy\.
 
 If `UseOnlineResharding` is set to `true`, you can update the `NumNodeGroups` and `NodeGroupConfiguration` properties of the `AWS::ElastiCache::ReplicationGroup` resource, and CloudFormation will update those properties without interruption\. When `UseOnlineResharding` is set to `false`, or not specified, updating the `NumNodeGroups` and `NodeGroupConfiguration` properties results in CloudFormation replacing the entire `AWS::ElastiCache::ReplicationGroup` resource\.
 
@@ -273,7 +273,7 @@ UpdatePolicy:
 
 The following examples show how to add an update policy to an Auto Scaling group and how to maintain availability when updating metadata\.
 
-### Add an UpdatePolicy to an Auto Scaling Group<a name="w13ab1c21c19c23c17b4"></a>
+### Add an UpdatePolicy to an Auto Scaling Group<a name="w4622ab1c21c19c23c17b4"></a>
 
 The following example shows how to add an update policy\. During an update, the Auto Scaling group updates instances in batches of two and keeps a minimum of one instance in service\. Because the `WaitOnResourceSignals` flag is set, the Auto Scaling group waits for new instances that are added to the group\. The new instances must signal the Auto Scaling group before it updates the next batch of instances\.
 
@@ -349,7 +349,7 @@ ScheduledAction:
     StartTime: '2017-06-02T20 : 00 : 00Z'
 ```
 
-### AutoScalingReplacingUpdate Policy<a name="w13ab1c21c19c23c17b6"></a>
+### AutoScalingReplacingUpdate Policy<a name="w4622ab1c21c19c23c17b6"></a>
 
 The following example declares a policy that forces an associated Auto Scaling group to be replaced during an update\. For the update to succeed, a percentage of instances \(specified by the `MinSuccessfulPercentParameter` parameter\) must signal success within the `Timeout` period\.
 
@@ -386,7 +386,7 @@ CreationPolicy:
     MinSuccessfulInstancesPercent: !Ref 'MinSuccessfulPercentParameter'
 ```
 
-### Maintain Availability When Updating the Metadata for the cfn\-init Helper Script<a name="w13ab1c21c19c23c17b8"></a>
+### Maintain Availability When Updating the Metadata for the cfn\-init Helper Script<a name="w4622ab1c21c19c23c17b8"></a>
 
 When you install software applications on your instances, you might use the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html) metadata key and the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html) helper script to bootstrap the instances in your Auto Scaling group\. AWS CloudFormation installs the packages, runs the commands, and performs other bootstrapping actions described in the metadata\.
 
@@ -397,7 +397,7 @@ Forcing a rolling update requires AWS CloudFormation to create a new instance an
 
 To force a rolling update, change the logical ID of the launch configuration resource, and then update the stack and any references pointing to the original logic ID \(such as the associated Auto Scaling group\)\. AWS CloudFormation triggers a rolling update on the Auto Scaling group, replacing all instances\.
 
-### Original Template<a name="w13ab1c21c19c23c17c10"></a>
+### Original Template<a name="w4622ab1c21c19c23c17c10"></a>
 
 ```
 "LaunchConfig": {
@@ -411,7 +411,7 @@ To force a rolling update, change the logical ID of the launch configuration res
 }
 ```
 
-### Updated Logical ID<a name="w13ab1c21c19c23c17c12"></a>
+### Updated Logical ID<a name="w4622ab1c21c19c23c17c12"></a>
 
 ```
 "LaunchConfigUpdateRubygemsPkg": {

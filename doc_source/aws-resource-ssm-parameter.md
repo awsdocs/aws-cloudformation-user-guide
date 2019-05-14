@@ -4,12 +4,6 @@ The `AWS::SSM::Parameter` resource creates an SSM parameter in AWS Systems Manag
 
 For information about valid values for parameters, see [Requirements and Constraints for Parameter Names](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html) in the *AWS Systems Manager User Guide* and [PutParameter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PutParameter.html) in the *AWS Systems Manager API Reference*\.
 
-**Topics**
-+ [Syntax](#aws-resource-ssm-parameter-syntax)
-+ [Properties](#aws-resource-ssm-parameter-properties)
-+ [Return Value](#aws-resource-ssm-parameter-returnvalues)
-+ [Examples](#aws-resource-ssm-parameter-examples)
-
 ## Syntax<a name="aws-resource-ssm-parameter-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -20,88 +14,105 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SSM::Parameter",
   "Properties" : {
-    "[AllowedPattern](#cfn-ssm-parameter-allowedpattern)" : String,
-    "[Description](#cfn-ssm-parameter-description)" : String,
-    "[Name](#cfn-ssm-parameter-name)" : String,
-    "[Type](#cfn-ssm-parameter-type)" : String,
-    "[Value](#cfn-ssm-parameter-value)" : String
-  }
+      "[AllowedPattern](#cfn-ssm-parameter-allowedpattern)" : String,
+      "[Description](#cfn-ssm-parameter-description)" : String,
+      "[Name](#cfn-ssm-parameter-name)" : String,
+      "[Tags](#cfn-ssm-parameter-tags)" : Json,
+      "[Type](#cfn-ssm-parameter-type)" : String,
+      "[Value](#cfn-ssm-parameter-value)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-ssm-parameter-syntax.yaml"></a>
 
 ```
-Type: "AWS::SSM::Parameter"
-Properties: 
-  [AllowedPattern](#cfn-ssm-parameter-allowedpattern): String
-  [Description](#cfn-ssm-parameter-description): String
-  [Name](#cfn-ssm-parameter-name): String
-  [Type](#cfn-ssm-parameter-type): String
-  [Value](#cfn-ssm-parameter-value): String
+Type: AWS::SSM::Parameter
+Properties : 
+﻿  [AllowedPattern](#cfn-ssm-parameter-allowedpattern) : String
+﻿  [Description](#cfn-ssm-parameter-description) : String
+﻿  [Name](#cfn-ssm-parameter-name) : String
+﻿  [Tags](#cfn-ssm-parameter-tags) : Json
+﻿  [Type](#cfn-ssm-parameter-type) : String
+﻿  [Value](#cfn-ssm-parameter-value) : String
 ```
 
 ## Properties<a name="aws-resource-ssm-parameter-properties"></a>
 
 `AllowedPattern`  <a name="cfn-ssm-parameter-allowedpattern"></a>
-A regular expression used to validate the parameter value\. For example, for String types with values restricted to numbers, you can specify the following: `AllowedPattern=^\d+$`  
+A regular expression used to validate the parameter value\. For example, for String types with values restricted to numbers, you can specify the following: `AllowedPattern=^\d+$`   
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Minimum*: `0`  
+*Maximum*: `1024`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-ssm-parameter-description"></a>
-Information about the parameter that you want to add to the system\.  
+Information about the parameter\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Minimum*: `0`  
+*Maximum*: `1024`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ssm-parameter-name"></a>
 The name of the parameter\.  
-For information about valid values for parameter names, see [Requirements and Constraints for Parameter Names](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html) in the *AWS Systems Manager User Guide*\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `2048`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-ssm-parameter-tags"></a>
+An array of key\-value pairs to apply to this resource\.  
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-ssm-parameter-type"></a>
 The type of parameter\. Valid values include the following: `String` or `StringList`\.  
 AWS CloudFormation doesn't support the `SecureString` parameter type\.
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Allowed Values*: `SecureString | String | StringList`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-ssm-parameter-value"></a>
-The parameter value\. Value must not nest another parameter\. Do not use `{{}}` in the value\.  
+The parameter value\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Value<a name="aws-resource-ssm-parameter-returnvalues"></a>
+## Return Values<a name="aws-resource-ssm-parameter-return-values"></a>
 
-### Ref<a name="w13ab1c21c10d231c27c13b3"></a>
+### Ref<a name="aws-resource-ssm-parameter-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::SSM::Parameter` resource to the intrinsic `Ref` function, the function returns the Name of the SSM parameter\. For example, `ssm-myparameter-ABCNPH3XCAO6`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Name of the SSM parameter\. For example, `ssm-myparameter-ABCNPH3XCAO6`\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Fn::GetAtt<a name="w13ab1c21c10d231c27c13b5"></a>
+### Fn::GetAtt<a name="aws-resource-ssm-parameter-return-values-fn--getatt"></a>
 
-`Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Type`  
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-ssm-parameter-return-values-fn--getatt-fn--getatt"></a>
+
+`Type`  <a name="Type-fn::getatt"></a>
 Returns the type of the parameter\. Valid values are `String` or `StringList`\.
 
-`Value`  
+`Value`  <a name="Value-fn::getatt"></a>
 Returns the value of the parameter\.
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
+## Examples<a name="aws-resource-ssm-parameter--examples"></a>
 
-## Examples<a name="aws-resource-ssm-parameter-examples"></a>
+### AWS Systems Manager Parameter String Example<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_String_Example"></a>
 
-### SSM Parameter \(String\) Example<a name="w13ab1c21c10d231c27c15b3"></a>
+The following example snippet creates a Systems Manager parameter with a `String` type\.
 
-The following example snippet creates an SSM parameter in Parameter Store\.
-
-#### JSON<a name="aws-resource-ssm-parameter-example.json"></a>
+#### JSON<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_String_Example--json"></a>
 
 ```
 {
@@ -121,7 +132,7 @@ The following example snippet creates an SSM parameter in Parameter Store\.
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-parameter-example.yaml"></a>
+#### YAML<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_String_Example--yaml"></a>
 
 ```
 Description: "Create SSM Parameter"
@@ -136,11 +147,11 @@ Resources:
       AllowedPattern: "^[a-zA-Z]{1,10}$"
 ```
 
-### SSM Parameter \(StringList\) Example<a name="w13ab1c21c10d231c27c15b5"></a>
+### AWS Systems Manager Parameter StringList Example<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_StringList_Example"></a>
 
-The following example creates an SSM parameter with a `StringList` type\.
+The following example creates a Systems Manager parameter with a `StringList` type\.
 
-#### JSON<a name="aws-resource-ssm-parameter-example2.json"></a>
+#### JSON<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_StringList_Example--json"></a>
 
 ```
 {
@@ -160,7 +171,7 @@ The following example creates an SSM parameter with a `StringList` type\.
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-parameter-example2.yaml"></a>
+#### YAML<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_StringList_Example--yaml"></a>
 
 ```
 Description: "Create SSM Parameter"

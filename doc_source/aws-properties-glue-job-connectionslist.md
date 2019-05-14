@@ -1,8 +1,6 @@
-# AWS Glue Job ConnectionsList<a name="aws-properties-glue-job-connectionslist"></a>
+# AWS::Glue::Job ConnectionsList<a name="aws-properties-glue-job-connectionslist"></a>
 
-<a name="aws-properties-glue-job-connectionslist-description"></a>The `ConnectionsList` property type specifies the connections that are used by an AWS Glue job\.
-
-<a name="aws-properties-glue-job-connectionslist-inheritance"></a> `ConnectionsList` is the property type for the `Connections` property of the [AWS::Glue::Job](aws-resource-glue-job.md) resource\.
+Specifies the connections used by a job\.
 
 ## Syntax<a name="aws-properties-glue-job-connectionslist-syntax"></a>
 
@@ -19,16 +17,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-job-connectionslist-syntax.yaml"></a>
 
 ```
-[Connections](#cfn-glue-job-connectionslist-connections): 
-  - String
+﻿  [Connections](#cfn-glue-job-connectionslist-connections) : 
+    - String
 ```
 
 ## Properties<a name="aws-properties-glue-job-connectionslist-properties"></a>
 
-For more information, see [ConnectionsList Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-job.html#aws-glue-api-jobs-job-ConnectionsList) in the *AWS Glue Developer Guide*\.
-
 `Connections`  <a name="cfn-glue-job-connectionslist-connections"></a>
-A list of UTF\-8 strings that specifies the connections that are used by the job\.  
- *Required*: No  
- *Type*: List of String values  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+A list of connections used by the job\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

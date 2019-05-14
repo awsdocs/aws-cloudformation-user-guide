@@ -1,6 +1,6 @@
 # AWS::RoboMaker::RobotApplicationVersion<a name="aws-resource-robomaker-robotapplicationversion"></a>
 
-The `AWS::RoboMaker::RobotApplicationVersion` resource creates a version of an AWS RoboMaker robot application\. For more information, see [API\_CreateRobotApplicationVersion](https://docs.aws.amazon.com/robomaker/latest/dg/API_CreateRobotApplicationVersion) in the *RoboMaker Developer Guide*\. 
+The `AWS::RoboMaker::RobotApplicationVersion` resource creates an AWS RoboMaker robot version\.
 
 ## Syntax<a name="aws-resource-robomaker-robotapplicationversion-syntax"></a>
 
@@ -12,50 +12,56 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::RoboMaker::RobotApplicationVersion",
   "Properties" : {
-    "[Application](#cfn-robomaker-robotapplicationversion-application)" : String,
-    "[CurrentRevisionId](#cfn-robomaker-robotapplicationversion-currentrevisionid)" : String
-  }
+      "[Application](#cfn-robomaker-robotapplicationversion-application)" : String,
+      "[CurrentRevisionId](#cfn-robomaker-robotapplicationversion-currentrevisionid)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-robomaker-robotapplicationversion-syntax.yaml"></a>
 
 ```
-Type: "AWS::RoboMaker::RobotApplicationVersion"
-Properties:
-  [Application](#cfn-robomaker-robotapplicationversion-application): String
-  [CurrentRevisionId](#cfn-robomaker-robotapplicationversion-currentrevisionid): String
+Type: AWS::RoboMaker::RobotApplicationVersion
+Properties : 
+﻿  [Application](#cfn-robomaker-robotapplicationversion-application) : String
+﻿  [CurrentRevisionId](#cfn-robomaker-robotapplicationversion-currentrevisionid) : String
 ```
 
 ## Properties<a name="aws-resource-robomaker-robotapplicationversion-properties"></a>
 
 `Application`  <a name="cfn-robomaker-robotapplicationversion-application"></a>
-The the Amazon Resource Name \(ARN\) robot application to version\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+The application information for the robot application\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1224`  
+*Pattern*: `arn:.*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CurrentRevisionId`  <a name="cfn-robomaker-robotapplicationversion-currentrevisionid"></a>
-Current revision id\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+The current revision id for the robot application\. If you provide a value and it matches the latest revision ID, a new version will be created\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `40`  
+*Pattern*: `[a-zA-Z0-9_.\-]*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-robomaker-robotapplicationversion-returnvalues"></a>
+## Return Values<a name="aws-resource-robomaker-robotapplicationversion-return-values"></a>
 
-### Ref<a name="aws-resource-robomaker-robotapplicationversion-ref"></a>
+### Ref<a name="aws-resource-robomaker-robotapplicationversion-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::RoboMaker::RobotApplicationVersion` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the robot application, such as `arn:aws:robomaker:us-west-2:123456789012:robot-application/MyRobotApplication/1546541208251`\. 
+When you pass the logical ID of an `AWS::RoboMaker::RobotApplicationVersion` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the robot application version, such as `arn:aws:robomaker:us-west-2:123456789012:robot-application/MyRobotApplication/1546541208251`\. 
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Examples<a name="aws-resource-robomaker-robotapplicationversion-examples"></a>
+## Examples<a name="aws-resource-robomaker-robotapplicationversion--examples"></a>
 
-### Create an AWS RoboMaker Robot Application Version<a name="aws-resource-robomaker-robotapplicationversion-example1"></a>
+### Create an AWS RoboMaker Robot Application Version<a name="aws-resource-robomaker-robotapplicationversion--examples--Create_an_AWS_RoboMaker_Robot_Application_Version"></a>
 
-The following example creates a version of a robot application\.
+The following example creates a robot application\.
 
-#### JSON<a name="aws-resource-robomaker-robotapplicationversion-example1.json"></a>
+#### JSON<a name="aws-resource-robomaker-robotapplicationversion--examples--Create_an_AWS_RoboMaker_Robot_Application_Version--json"></a>
 
 ```
 {
@@ -98,7 +104,7 @@ The following example creates a version of a robot application\.
 }
 ```
 
-#### YAML<a name="aws-resource-robomaker-robotapplicationversion-example1.yaml"></a>
+#### YAML<a name="aws-resource-robomaker-robotapplicationversion--examples--Create_an_AWS_RoboMaker_Robot_Application_Version--yaml"></a>
 
 ```
 ---

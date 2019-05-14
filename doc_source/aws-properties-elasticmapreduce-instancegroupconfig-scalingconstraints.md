@@ -1,8 +1,10 @@
-# Amazon EMR InstanceGroupConfig ScalingConstraints<a name="aws-properties-elasticmapreduce-instancegroupconfig-scalingconstraints"></a>
+# AWS::EMR::InstanceGroupConfig ScalingConstraints<a name="aws-properties-elasticmapreduce-instancegroupconfig-scalingconstraints"></a>
 
-The `ScalingConstraints` property type specifies the upper and lower EC2 instance limits for an automatic scaling policy\. `ScalingConstraints` is the property type for the `Constraints` subproperty of the [Amazon EMR InstanceGroupConfig AutoScalingPolicy](aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy.md) property type\.
+`ScalingConstraints` is a subproperty of the `AutoScalingPolicy` property type\. `ScalingConstraints` defines the upper and lower EC2 instance limits for an automatic scaling policy\. Automatic scaling activities triggered by automatic scaling rules will not cause an instance group to grow above or shrink below these limits\.
 
-## Syntax<a name="w13ab1c21c10d141c22c35b5"></a>
+## Syntax<a name="aws-properties-elasticmapreduce-instancegroupconfig-scalingconstraints-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-elasticmapreduce-instancegroupconfig-scalingconstraints-syntax.json"></a>
 
@@ -16,18 +18,20 @@ The `ScalingConstraints` property type specifies the upper and lower EC2 instanc
 ### YAML<a name="aws-properties-elasticmapreduce-instancegroupconfig-scalingconstraints-syntax.yaml"></a>
 
 ```
-[MaxCapacity](#cfn-elasticmapreduce-instancegroupconfig-scalingconstraints-maxcapacity): Integer
-[MinCapacity](#cfn-elasticmapreduce-instancegroupconfig-scalingconstraints-mincapacity): Integer
+﻿  [MaxCapacity](#cfn-elasticmapreduce-instancegroupconfig-scalingconstraints-maxcapacity) : Integer
+﻿  [MinCapacity](#cfn-elasticmapreduce-instancegroupconfig-scalingconstraints-mincapacity) : Integer
 ```
 
-## Properties<a name="w13ab1c21c10d141c22c35b7"></a>
+## Properties<a name="aws-properties-elasticmapreduce-instancegroupconfig-scalingconstraints-properties"></a>
 
 `MaxCapacity`  <a name="cfn-elasticmapreduce-instancegroupconfig-scalingconstraints-maxcapacity"></a>
-For autoscaling, the maximum number of EC2 instances in an instance group\. Scale\-out activities add instances only up to this boundary\.  
+The upper boundary of EC2 instances in an instance group beyond which scaling activities are not allowed to grow\. Scale\-out activities will not add instances beyond this boundary\.  
 *Required*: Yes  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinCapacity`  <a name="cfn-elasticmapreduce-instancegroupconfig-scalingconstraints-mincapacity"></a>
-For autoscaling, the minimum number of EC2 instances in an instance group\. Scale\-in activities do not terminate instances below this boundary\.  
+The lower boundary of EC2 instances in an instance group below which scaling activities are not allowed to shrink\. Scale\-in activities will not terminate instances below this boundary\.  
 *Required*: Yes  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

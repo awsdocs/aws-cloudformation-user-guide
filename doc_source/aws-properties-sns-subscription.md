@@ -1,8 +1,10 @@
-# Amazon SNS Subscription Property Type<a name="aws-properties-sns-subscription"></a>
+# AWS::SNS::Topic Subscription<a name="aws-properties-sns-subscription"></a>
 
-`Subscription` is an embedded property of the `[AWS::SNS::Topic](aws-properties-sns-topic.md)` resource that describes the subscription endpoints for an Amazon Simple Notification Service \(Amazon SNS\) topic\.
+ `Subscription` is an embedded property that describes the subscription endpoints of an Amazon SNS topic\.
 
-## Syntax<a name="w13ab1c21c10d222c17c17b5"></a>
+## Syntax<a name="aws-properties-sns-subscription-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-sns-subscription-syntax.json"></a>
 
@@ -16,18 +18,20 @@
 ### YAML<a name="aws-properties-sns-subscription-syntax.yaml"></a>
 
 ```
-[Endpoint](#cfn-sns-topic-subscription-endpoint): String
-[Protocol](#cfn-sns-topic-subscription-protocol): String
+﻿  [Endpoint](#cfn-sns-topic-subscription-endpoint) : String
+﻿  [Protocol](#cfn-sns-topic-subscription-protocol) : String
 ```
 
-## Properties<a name="w13ab1c21c10d222c17c17b7"></a>
+## Properties<a name="aws-properties-sns-subscription-properties"></a>
 
 `Endpoint`  <a name="cfn-sns-topic-subscription-endpoint"></a>
-The subscription's endpoint \(format depends on the protocol\)\. For more information, see the [Subscribe Endpoint](https://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html) parameter in the *Amazon Simple Notification Service API Reference*\.  
+The endpoint that receives notifications from the Amazon SNS topic\. The endpoint value depends on the protocol that you specify\. For more information, see the `Endpoint` parameter of the ` [Subscribe](https://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html) ` action in the *Amazon Simple Notification Service API Reference*\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Protocol`  <a name="cfn-sns-topic-subscription-protocol"></a>
-The subscription's protocol\. For more information, see the [Subscribe Protocol](https://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html) parameter in the *Amazon Simple Notification Service API Reference*\.  
+The subscription's protocol\. For more information, see the `Protocol` parameter of the ` [Subscribe](https://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html) ` action in the *Amazon Simple Notification Service API Reference*\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

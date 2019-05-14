@@ -1,27 +1,30 @@
-# Amazon EMR Cluster ScalingTrigger<a name="aws-properties-elasticmapreduce-cluster-scalingtrigger"></a>
+# AWS::EMR::Cluster ScalingTrigger<a name="aws-properties-elasticmapreduce-cluster-scalingtrigger"></a>
 
-The `ScalingTrigger` property type specifies the conditions that trigger an automatic scaling activity\. `ScalingTrigger` is the property type for the `Trigger` subproperty of the [Amazon EMR Cluster ScalingRule](aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig-autoscalingpolicy-constraints-scalingrule.md) property type\.
+`ScalingTrigger` is a subproperty of the `ScalingRule` property type\. `ScalingTrigger` determines the conditions that trigger an automatic scaling activity\.
 
-## Syntax<a name="w13ab1c21c10d141c13c94b5"></a>
+## Syntax<a name="aws-properties-elasticmapreduce-cluster-scalingtrigger-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-elasticmapreduce-cluster-scalingtrigger-syntax.json"></a>
 
 ```
 {
-  "[CloudWatchAlarmDefinition](#cfn-elasticmapreduce-cluster-scalingtrigger-cloudwatchalarmdefinition)" : CloudWatchAlarmDefinition
+  "[CloudWatchAlarmDefinition](#cfn-elasticmapreduce-cluster-scalingtrigger-cloudwatchalarmdefinition)" : [CloudWatchAlarmDefinition](aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.md)
 }
 ```
 
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-scalingtrigger-syntax.yaml"></a>
 
 ```
-  [CloudWatchAlarmDefinition](#cfn-elasticmapreduce-cluster-scalingtrigger-cloudwatchalarmdefinition): CloudWatchAlarmDefinition
+﻿  [CloudWatchAlarmDefinition](#cfn-elasticmapreduce-cluster-scalingtrigger-cloudwatchalarmdefinition) : 
+    [CloudWatchAlarmDefinition](aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.md)
 ```
 
-## Properties<a name="w13ab1c21c10d141c13c94b7"></a>
+## Properties<a name="aws-properties-elasticmapreduce-cluster-scalingtrigger-properties"></a>
 
 `CloudWatchAlarmDefinition`  <a name="cfn-elasticmapreduce-cluster-scalingtrigger-cloudwatchalarmdefinition"></a>
 The definition of a CloudWatch metric alarm\. When the defined alarm conditions are met along with other trigger parameters, scaling activity begins\.  
 *Required*: Yes  
-*Type*: [Amazon EMR Cluster CloudWatchAlarmDefinition](aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: [CloudWatchAlarmDefinition](aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

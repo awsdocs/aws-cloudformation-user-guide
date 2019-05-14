@@ -1,37 +1,39 @@
-# Amazon Elastic Compute Cloud SpotFleet SpotFleetTagSpecification<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications"></a>
+# AWS::EC2::SpotFleet SpotFleetTagSpecification<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications"></a>
 
-`SpotFleetTagSpecification` is a property of the [Amazon Elastic Compute Cloud SpotFleet LaunchSpecifications](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md) property that specifies the tags for a Spot fleet resource\.
+The tags for a Spot Fleet resource\.
 
-## Syntax<a name="w13ab1c21c10d111d118c81b5"></a>
+## Syntax<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications-syntax.json"></a>
 
 ```
 {
   "[ResourceType](#cfn-ec2-spotfleet-spotfleettagspecification-resourcetype)" : String,
-  "[Tags](#cfn-ec2-spotfleet-spotfleettagspecification-tags)" : [ Resource Tag, ... ]
+  "[Tags](#cfn-ec2-spotfleet-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications-syntax.yaml"></a>
 
 ```
-[ResourceType](#cfn-ec2-spotfleet-spotfleettagspecification-resourcetype): String
-[Tags](#cfn-ec2-spotfleet-spotfleettagspecification-tags):
-    - Resource Tag
+﻿  [ResourceType](#cfn-ec2-spotfleet-spotfleettagspecification-resourcetype) : String
+﻿  [Tags](#cfn-ec2-spotfleet-tags) : 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
-## Properties<a name="w13ab1c21c10d111d118c81b7"></a>
+## Properties<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications-properties"></a>
 
 `ResourceType`  <a name="cfn-ec2-spotfleet-spotfleettagspecification-resourcetype"></a>
-The type of resource\.   
-For valid resource types, see [SpotFleetTagSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotFleetTagSpecification.html) operation in the *Amazon EC2 API Reference*  
+The type of resource\. Currently, the only resource type that is supported is `instance`\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Allowed Values*: `client-vpn-endpoint | customer-gateway | dedicated-host | dhcp-options | elastic-ip | fleet | fpga-image | host-reservation | image | instance | internet-gateway | launch-template | natgateway | network-acl | network-interface | reserved-instances | route-table | security-group | snapshot | spot-instances-request | subnet | transit-gateway | transit-gateway-attachment | transit-gateway-route-table | volume | vpc | vpc-peering-connection | vpn-connection | vpn-gateway`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`Tags`  <a name="cfn-ec2-spotfleet-spotfleettagspecification-tags"></a>
-Specifies an arbitrary set of tags \(key–value pairs\) to associate with this spot fleet\. Use tags to manage your resources\.  
+`Tags`  <a name="cfn-ec2-spotfleet-tags"></a>
+The tags\.  
 *Required*: No  
-*Type*: [Resource Tag](aws-properties-resource-tags.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,42 +1,16 @@
-# EC2 Security Group Rule Property Type<a name="aws-properties-ec2-security-group-rule"></a>
+# AWS::EC2::SecurityGroup Egress<a name="aws-properties-ec2-security-group-rule"></a>
 
-The EC2 Security Group Rule is an embedded property of the [AWS::EC2::SecurityGroup](aws-properties-ec2-security-group.md) type\.
+Specifies an outbound rule for a security group\.
 
-## Syntax SecurityGroupIngress<a name="w13ab1c21c10d111d104c21b5"></a>
+You must specify only one of the following properties: `CidrIp`, `CidrIpv6`, `DestinationPrefixListId`, or `DestinationSecurityGroupId`\.
 
-### JSON<a name="aws-properties-ec2-securitygroup-rule-securitygroupingress-syntax.json"></a>
+The EC2 Security Group Rule is an embedded property of the `AWS::EC2::SecurityGroup` type\.
 
-```
-{
-  "[CidrIp](#cfn-ec2-security-group-rule-cidrip)" : String,
-  "[CidrIpv6](#cfn-ec2-security-group-rule-cidripv6)" : String,
-  "[Description](#cfn-ec2-security-group-rule-description)" : String,
-  "[FromPort](#cfn-ec2-security-group-rule-fromport)" : Integer,
-  "[IpProtocol](#cfn-ec2-security-group-rule-ipprotocol)" : String,
-  "[SourceSecurityGroupId](#cfn-ec2-security-group-rule-sourcesecuritygroupid)" : String,
-  "[SourceSecurityGroupName](#cfn-ec2-security-group-rule-sourcesecuritygroupname)" : String,
-  "[SourceSecurityGroupOwnerId](#cfn-ec2-security-group-rule-sourcesecuritygroupownerid)" : String,
-  "[ToPort](#cfn-ec2-security-group-rule-toport)" : Integer
-}
-```
+## Syntax<a name="aws-properties-ec2-security-group-rule-syntax"></a>
 
-### YAML<a name="aws-properties-ec2-securitygroup-rule-securitygroupingress-syntax.yaml"></a>
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-```
-[CidrIp](#cfn-ec2-security-group-rule-cidrip): String
-[CidrIpv6](#cfn-ec2-security-group-rule-cidripv6): String
-[Description](#cfn-ec2-security-group-rule-description): String
-[FromPort](#cfn-ec2-security-group-rule-fromport): Integer
-[IpProtocol](#cfn-ec2-security-group-rule-ipprotocol): String
-[SourceSecurityGroupId](#cfn-ec2-security-group-rule-sourcesecuritygroupid): String
-[SourceSecurityGroupName](#cfn-ec2-security-group-rule-sourcesecuritygroupname): String
-[SourceSecurityGroupOwnerId](#cfn-ec2-security-group-rule-sourcesecuritygroupownerid): String
-[ToPort](#cfn-ec2-security-group-rule-toport): Integer
-```
-
-## Syntax SecurityGroupEgress<a name="w13ab1c21c10d111d104c21b7"></a>
-
-### JSON<a name="aws-properties-ec2-securitygroup-rule-securitygroupegress-syntax.json"></a>
+### JSON<a name="aws-properties-ec2-security-group-rule-syntax.json"></a>
 
 ```
 {
@@ -51,249 +25,68 @@ The EC2 Security Group Rule is an embedded property of the [AWS::EC2::SecurityGr
 }
 ```
 
-### YAML<a name="aws-properties-ec2-securitygroup-rule-securitygroupegress-syntax.yaml"></a>
+### YAML<a name="aws-properties-ec2-security-group-rule-syntax.yaml"></a>
 
 ```
-[CidrIp](#cfn-ec2-security-group-rule-cidrip): String
-[CidrIpv6](#cfn-ec2-security-group-rule-cidripv6): String
-[Description](#cfn-ec2-security-group-rule-description): String
-[DestinationPrefixListId](#cfn-ec2-security-group-rule-destinationprefixlistid): String
-[DestinationSecurityGroupId](#cfn-ec2-security-group-rule-destsecgroupid): String
-[FromPort](#cfn-ec2-security-group-rule-fromport): Integer
-[IpProtocol](#cfn-ec2-security-group-rule-ipprotocol): String
-[ToPort](#cfn-ec2-security-group-rule-toport): Integer
+﻿  [CidrIp](#cfn-ec2-security-group-rule-cidrip) : String
+﻿  [CidrIpv6](#cfn-ec2-security-group-rule-cidripv6) : String
+﻿  [Description](#cfn-ec2-security-group-rule-description) : String
+﻿  [DestinationPrefixListId](#cfn-ec2-security-group-rule-destinationprefixlistid) : String
+﻿  [DestinationSecurityGroupId](#cfn-ec2-security-group-rule-destsecgroupid) : String
+﻿  [FromPort](#cfn-ec2-security-group-rule-fromport) : Integer
+﻿  [IpProtocol](#cfn-ec2-security-group-rule-ipprotocol) : String
+﻿  [ToPort](#cfn-ec2-security-group-rule-toport) : Integer
 ```
 
-## Properties<a name="w13ab1c21c10d111d104c21b9"></a>
+## Properties<a name="aws-properties-ec2-security-group-rule-properties"></a>
 
 `CidrIp`  <a name="cfn-ec2-security-group-rule-cidrip"></a>
-Specifies an IPv4 CIDR range\.  
-*Required*: Conditional\. You must specify only one of the following properties: `CidrIp`, `CidrIpv6`, `DestinationPrefixListId`, `DestinationSecurityGroupId`, or `SourceSecurityGroupId`\.  
-*Type*: String
+The IPv4 address range, in CIDR format\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CidrIpv6`  <a name="cfn-ec2-security-group-rule-cidripv6"></a>
-Specifies an IPv6 CIDR range\.  
-*Required*: Conditional\. You must specify only one of the following properties: `CidrIp`, `CidrIpv6`, `DestinationPrefixListId`, `DestinationSecurityGroupId`, or `SourceSecurityGroupId`\.  
-*Type*: String
+\[EC2\-VPC only\] The IPv6 ranges\.  
+The IPv6 address range, in CIDR format\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-ec2-security-group-rule-description"></a>
-Description of the security group rule\.  
-*Type*: String
+A description for the security group rule\.  
+Constraints: Up to 255 characters in length\. Allowed characters are a\-z, A\-Z, 0\-9, spaces, and \.\_\-:/\(\)\#,@\[\]\+=;\{\}\!$\*  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`DestinationPrefixListId` \(SecurityGroupEgress only\)  <a name="cfn-ec2-security-group-rule-destinationprefixlistid"></a>
-The AWS service prefix of an Amazon VPC endpoint\. For more information, see [VPC Endpoints](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html) in the *Amazon VPC User Guide*\.  
-*Required*: Conditional\. You must specify only one of the following properties: `CidrIp`, `CidrIpv6`, `DestinationPrefixListId`, `DestinationSecurityGroupId`, or `SourceSecurityGroupId`\.  
-*Type*: String
+`DestinationPrefixListId`  <a name="cfn-ec2-security-group-rule-destinationprefixlistid"></a>
+\[EC2\-VPC only\] The prefix list IDs for an AWS service\. This is the AWS service that you want to access through a VPC endpoint from instances associated with the security group\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`DestinationSecurityGroupId` \(SecurityGroupEgress only\)  <a name="cfn-ec2-security-group-rule-destsecgroupid"></a>
-Specifies the GroupId of the destination Amazon VPC security group\.  
-*Required*: Conditional\. You must specify only one of the following properties: `CidrIp`, `CidrIpv6`, `DestinationPrefixListId`, `DestinationSecurityGroupId`, or `SourceSecurityGroupId`\.  
-*Type*: String
+`DestinationSecurityGroupId`  <a name="cfn-ec2-security-group-rule-destsecgroupid"></a>
+The ID of the destination VPC security group\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FromPort`  <a name="cfn-ec2-security-group-rule-fromport"></a>
-The start of port range for the TCP and UDP protocols, or an ICMP type number\. An ICMP type number of \-1 indicates a wildcard \(i\.e\., any ICMP type number\)\.  
+The start of port range for the TCP and UDP protocols, or an ICMP/ICMPv6 type number\. A value of `-1` indicates all ICMP/ICMPv6 types\. If you specify all ICMP/ICMPv6 types, you must specify all codes\.  
 *Required*: No  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IpProtocol`  <a name="cfn-ec2-security-group-rule-ipprotocol"></a>
-An IP protocol name or number\. For valid values, go to the IpProtocol parameter in [AuthorizeSecurityGroupIngress](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-AuthorizeSecurityGroupIngress.html)  
+The IP protocol name \(`tcp`, `udp`, `icmp`, `icmpv6`\) or number \(see [Protocol Numbers](http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)\)\.  
+\[VPC only\] Use `-1` to specify all protocols\. When authorizing security group rules, specifying `-1` or a protocol number other than `tcp`, `udp`, `icmp`, or `icmpv6` allows traffic on all ports, regardless of any port range you specify\. For `tcp`, `udp`, and `icmp`, you must specify a port range\. For `icmpv6`, the port range is optional; if you omit the port range, traffic for all types and codes is allowed\.  
 *Required*: Yes  
-*Type*: String
-
-`SourceSecurityGroupId` \(SecurityGroupIngress only\)  <a name="cfn-ec2-security-group-rule-sourcesecuritygroupid"></a>
-*For VPC security groups only*\. Specifies the ID of the Amazon EC2 Security Group to allow access\. You can use the `Ref` intrinsic function to refer to the logical ID of a security group defined in the same template\.  
-*Required*: Conditional\. You must specify only one of the following properties: `CidrIp`, `CidrIpv6`, `DestinationPrefixListId`, `DestinationSecurityGroupId`, or `SourceSecurityGroupId`\.  
-*Type*: String
-
-`SourceSecurityGroupName` \(SecurityGroupIngress only\)  <a name="cfn-ec2-security-group-rule-sourcesecuritygroupname"></a>
-*For non\-VPC security groups only*\. Specifies the name of the Amazon EC2 Security Group to use for access\. You can use the `Ref` intrinsic function to refer to the logical name of a security group that is defined in the same template\.  
-*Required*: Conditional\. If you specify `CidrIp`, do not specify `SourceSecurityGroupName`\.  
-*Type*: String
-
-`SourceSecurityGroupOwnerId` \(SecurityGroupIngress only\)  <a name="cfn-ec2-security-group-rule-sourcesecuritygroupownerid"></a>
-Specifies the AWS Account ID of the owner of the Amazon EC2 Security Group that is specified in the `SourceSecurityGroupName` property\.  
-*Required*: Conditional\. If you specify `SourceSecurityGroupName` and that security group is owned by a different account than the account creating the stack, you must specify the `SourceSecurityGroupOwnerId`; otherwise, this property is optional\.  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ToPort`  <a name="cfn-ec2-security-group-rule-toport"></a>
-The end of port range for the TCP and UDP protocols, or an ICMP code\. An ICMP code of \-1 indicates a wildcard \(i\.e\., any ICMP code\)\.  
+The end of port range for the TCP and UDP protocols, or an ICMP/ICMPv6 code\. A value of `-1` indicates all ICMP/ICMPv6 codes\. If you specify all ICMP/ICMPv6 types, you must specify all codes\.  
 *Required*: No  
-*Type*: Integer
-
-## Examples<a name="w13ab1c21c10d111d104c21c11"></a>
-
-### Security Group with CidrIp<a name="w13ab1c21c10d111d104c21c11b2"></a>
-
-#### JSON<a name="aws-properties-ec2-securitygroup-rule-securitygroupingress-example.json"></a>
-
-```
-"InstanceSecurityGroup" : {
-   "Type" : "AWS::EC2::SecurityGroup",
-   "Properties" : {
-      "GroupDescription" : "Enable SSH access via port 22",
-      "SecurityGroupIngress" : [ {
-         "IpProtocol" : "tcp",
-         "FromPort" : 22,
-         "ToPort" : 22,
-         "CidrIp" : "0.0.0.0/0"
-      } ]
-   }
-}
-```
-
-#### YAML<a name="aws-properties-ec2-securitygroup-rule-securitygroupingress-example.yaml"></a>
-
-```
-InstanceSecurityGroup: 
-  Type: AWS::EC2::SecurityGroup
-  Properties: 
-    GroupDescription: "Enable SSH access via port 22"
-    SecurityGroupIngress: 
-      - 
-        IpProtocol: "tcp"
-        FromPort: 22
-        ToPort: 22
-        CidrIp: "0.0.0.0/0"
-```
-
-### Security Group with Security Group Id<a name="w13ab1c21c10d111d104c21c11b4"></a>
-
-#### JSON<a name="aws-properties-ec2-securitygroup-rule-securitygroupingress-example2.json"></a>
-
-```
-"InstanceSecurityGroup" : {
-   "Type" : "AWS::EC2::SecurityGroup",
-   "Properties" : {
-      "GroupDescription" : "Enable HTTP access on the configured port",
-      "VpcId" : { "Ref" : "VpcId" },
-      "SecurityGroupIngress" : [ {
-         "IpProtocol" : "tcp",
-         "FromPort" : { "Ref" : "WebServerPort" },
-         "ToPort" : { "Ref" : "WebServerPort" },
-         "SourceSecurityGroupId" : { "Ref" : "LoadBalancerSecurityGroup" }
-      } ]
-   }
-}
-```
-
-#### YAML<a name="aws-properties-ec2-securitygroup-rule-securitygroupingress-example2.yaml"></a>
-
-```
-InstanceSecurityGroup: 
-  Type: AWS::EC2::SecurityGroup
-  Properties: 
-    GroupDescription: "Enable HTTP access on the configured port"
-    VpcId: 
-      Ref: "VpcId"
-    SecurityGroupIngress: 
-      - 
-        IpProtocol: "tcp"
-        FromPort: 
-          Ref: "WebServerPort"
-        ToPort: 
-          Ref: "WebServerPort"
-        SourceSecurityGroupId: 
-          Ref: "LoadBalancerSecurityGroup"
-```
-
-### Security Group with Multiple Ingress Rules<a name="w13ab1c21c10d111d104c21c11b6"></a>
-
-This snippet grants SSH access with CidrIp, and HTTP access with `SourceSecurityGroupName`\. `Fn::GetAtt` is used to derive the values for `SourceSecurityGroupName` and `SourceSecurityGroupOwnerId` from the elastic load balancer\.
-
-#### JSON<a name="aws-properties-ec2-securitygroup-rule-securitygroupingress-example3.json"></a>
-
-```
-"ElasticLoadBalancer" : {
-   "Type" : "AWS::ElasticLoadBalancing::LoadBalancer",
-   "Properties" : {
-      "AvailabilityZones" : { "Fn::GetAZs" : "" },
-      "Listeners" : [ {
-         "LoadBalancerPort" : "80",
-         "InstancePort" : { "Ref" : "WebServerPort" },
-         "Protocol" : "HTTP"
-      } ],
-      "HealthCheck" : {
-         "Target" : { "Fn::Join" : [ "", ["HTTP:", { "Ref" : "WebServerPort" }, "/"]]},
-         "HealthyThreshold" : "3",
-         "UnhealthyThreshold" : "5",
-         "Interval" : "30",
-         "Timeout" : "5"
-      }
-   }
-},
-
-"InstanceSecurityGroup" : {
-   "Type" : "AWS::EC2::SecurityGroup",
-   "Properties" : {
-      "GroupDescription" : "Allow SSH access from all IP addresses and HTTP from the load balancer only",
-      "SecurityGroupIngress" : [ {
-         "IpProtocol" : "tcp",
-         "FromPort" : 22,
-         "ToPort" : 22,
-         "CidrIp" : "0.0.0.0/0"
-      }, {
-         "IpProtocol" : "tcp",
-         "FromPort" : { "Ref" : "WebServerPort" },
-         "ToPort" : { "Ref" : "WebServerPort" },
-         "SourceSecurityGroupOwnerId" : {"Fn::GetAtt" : ["ElasticLoadBalancer", "SourceSecurityGroup.OwnerAlias"]},
-         "SourceSecurityGroupName" : {"Fn::GetAtt" : ["ElasticLoadBalancer", "SourceSecurityGroup.GroupName"]}
-      } ]
-   }
-}
-```
-
-#### YAML<a name="aws-properties-ec2-securitygroup-rule-securitygroupingress-example3.yaml"></a>
-
-```
-ElasticLoadBalancer: 
-  Type: AWS::ElasticLoadBalancing::LoadBalancer
-  Properties: 
-    AvailabilityZones: 
-      Fn::GetAZs: ""
-    Listeners: 
-      - 
-        LoadBalancerPort: "80"
-        InstancePort: 
-          Ref: "WebServerPort"
-        Protocol: "HTTP"
-    HealthCheck: 
-      Target: 
-        Fn::Join: 
-          - ""
-          - 
-            - "HTTP:"
-            - 
-              Ref: "WebServerPort"
-            - "/"
-      HealthyThreshold: "3"
-      UnhealthyThreshold: "5"
-      Interval: "30"
-      Timeout: "5"
-InstanceSecurityGroup: 
-  Type: AWS::EC2::SecurityGroup
-  Properties: 
-    GroupDescription: "Allow SSH access from all IP addresses and HTTP from the load balancer only"
-    SecurityGroupIngress: 
-      - 
-        IpProtocol: "tcp"
-        FromPort: 22
-        ToPort: 22
-        CidrIp: "0.0.0.0/0"
-      - 
-        IpProtocol: "tcp"
-        FromPort: 
-          Ref: "WebServerPort"
-        ToPort: 
-          Ref: "WebServerPort"
-        SourceSecurityGroupOwnerId: 
-          Fn::GetAtt: 
-            - "ElasticLoadBalancer"
-            - "SourceSecurityGroup.OwnerAlias"
-        SourceSecurityGroupName: 
-          Fn::GetAtt: 
-            - "ElasticLoadBalancer"
-            - "SourceSecurityGroup.GroupName"
-```
-
-## See Also<a name="w13ab1c21c10d111d104c21c13"></a>
-+ [Amazon EC2 Security Groups](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html) in the *Amazon EC2 User Guide*
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,8 +1,10 @@
-# Amazon S3 Bucket FilterRule<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules"></a>
+# AWS::S3::Bucket FilterRule<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules"></a>
 
-`Rules` is a property of the [S3KeyFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key.md) property that describes the Amazon Simple Storage Service \(Amazon S3\) object key name to filter on and whether to filter on the suffix or prefix of the key name\.
+Specifies the Amazon S3 object key name to filter on and whether to filter on the suffix or prefix of the key name\.
 
-## Syntax<a name="w13ab1c21c10d204c13c62b5"></a>
+## Syntax<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules-syntax.json"></a>
 
@@ -16,18 +18,21 @@
 ### YAML<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules-syntax.yaml"></a>
 
 ```
-[Name](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules-name): String
-[Value](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules-value): String
+﻿  [Name](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules-name) : String
+﻿  [Value](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules-value) : String
 ```
 
-## Properties<a name="w13ab1c21c10d204c13c62b7"></a>
+## Properties<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules-properties"></a>
 
 `Name`  <a name="cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules-name"></a>
-Whether the filter matches the prefix or suffix of object key names\. For valid values, see the `Name` request element of the [PUT Bucket notification](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTnotification.html) action in the *Amazon Simple Storage Service API Reference*\.  
+The object key name prefix or suffix identifying one or more objects to which the filtering rule applies\. The maximum length is 1,024 characters\. Overlapping prefixes and suffixes are not supported\. For more information, see [Configuring Event Notifications](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon Simple Storage Service Developer Guide*\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Allowed Values*: `prefix | suffix`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules-value"></a>
 The value that the filter searches for in object key names\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

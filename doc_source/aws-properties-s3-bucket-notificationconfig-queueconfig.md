@@ -1,41 +1,46 @@
-# Amazon S3 Bucket QueueConfiguration<a name="aws-properties-s3-bucket-notificationconfig-queueconfig"></a>
+# AWS::S3::Bucket QueueConfiguration<a name="aws-properties-s3-bucket-notificationconfig-queueconfig"></a>
 
-`QueueConfigurations` is a property of the [NotificationConfiguration](aws-properties-s3-bucket-notificationconfig.md) property that describes the S3 bucket events about which you want to send messages to Amazon SQS and the queues to which you want to send them\.
+Specifies the configuration for publishing messages to an Amazon Simple Queue Service \(Amazon SQS\) queue when Amazon S3 detects specified events\.
 
-## Syntax<a name="w13ab1c21c10d204c13d102b5"></a>
+## Syntax<a name="aws-properties-s3-bucket-notificationconfig-queueconfig-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-s3-bucket-notificationconfig-queueconfig-syntax.json"></a>
 
 ```
 {
   "[Event](#cfn-s3-bucket-notificationconfig-queueconfig-event)" : String,
-  "[Filter](#cfn-s3-bucket-notificationconfig-queueconfig-filter)" : Filter,
-  "[Queue](#cfn-s3-bucket-notificationconfig-queueconfig-queue)" : String 
+  "[Filter](#cfn-s3-bucket-notificationconfig-queueconfig-filter)" : [NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md),
+  "[Queue](#cfn-s3-bucket-notificationconfig-queueconfig-queue)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-s3-bucket-notificationconfig-queueconfig-syntax.yaml"></a>
 
 ```
-[Event](#cfn-s3-bucket-notificationconfig-queueconfig-event): String
-[Filter](#cfn-s3-bucket-notificationconfig-queueconfig-filter):
-  Filter
-[Queue](#cfn-s3-bucket-notificationconfig-queueconfig-queue): String
+﻿  [Event](#cfn-s3-bucket-notificationconfig-queueconfig-event) : String
+﻿  [Filter](#cfn-s3-bucket-notificationconfig-queueconfig-filter) : 
+    [NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md)
+﻿  [Queue](#cfn-s3-bucket-notificationconfig-queueconfig-queue) : String
 ```
 
-## Properties<a name="w13ab1c21c10d204c13d102b7"></a>
+## Properties<a name="aws-properties-s3-bucket-notificationconfig-queueconfig-properties"></a>
 
 `Event`  <a name="cfn-s3-bucket-notificationconfig-queueconfig-event"></a>
-The S3 bucket event about which you want to publish messages to Amazon Simple Queue Service \( Amazon SQS\)\. For more information, see [Supported Event Types](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon Simple Storage Service Developer Guide*\.  
+The Amazon S3 bucket event about which you want to publish messages to Amazon SQS\. For more information, see [Supported Event Types](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon Simple Storage Service Developer Guide*\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Filter`  <a name="cfn-s3-bucket-notificationconfig-queueconfig-filter"></a>
-The filtering rules that determine for which objects to send notifications\. For example, you can create a filter so that Amazon Simple Storage Service \(Amazon S3\) sends notifications only when image files with a `.jpg` extension are added to the bucket\.  
+ The filtering rules that determine which objects trigger notifications\. For example, you can create a filter so that Amazon S3 sends notifications only when image files with a `.jpg` extension are added to the bucket\.   
 *Required*: No  
-*Type*: [NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md)
+*Type*: [NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Queue`  <a name="cfn-s3-bucket-notificationconfig-queueconfig-queue"></a>
-The Amazon Resource Name \(ARN\) of the Amazon SQS queue that Amazon S3 publishes messages to when the specified event type occurs\.  
+The Amazon Resource Name \(ARN\) of the Amazon SQS queue to which Amazon S3 publishes a message when it detects events of the specified type\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
