@@ -187,7 +187,7 @@ Default: A random, system\-chosen Availability Zone in the endpoint's region\.
 The number of days for which automated backups are retained\. Setting this parameter to a positive number enables backups\. Setting this parameter to 0 disables automated backups\.  
 Default: 1  
 Constraints:  
-+ Must be a value from 0 to 8
++ Must be a value from 0 to 35
 + Cannot be set to 0 if the DB Instance is a master instance with read replicas
 *Required*: No  
 *Type*: String
