@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-service-placementconstraint-syntax.yaml"></a>
 
 ```
-﻿  [Expression](#cfn-ecs-service-placementconstraint-expression) : String
-﻿  [Type](#cfn-ecs-service-placementconstraint-type) : String
+  [Expression](#cfn-ecs-service-placementconstraint-expression): String
+  [Type](#cfn-ecs-service-placementconstraint-type): String
 ```
 
 ## Properties<a name="aws-properties-ecs-service-placementconstraint-properties"></a>

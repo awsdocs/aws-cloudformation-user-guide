@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apigatewayv2-route-parameterconstraints-syntax.yaml"></a>
 
 ```
-﻿  [Required](#cfn-apigatewayv2-route-parameterconstraints-required) : Boolean
+  [Required](#cfn-apigatewayv2-route-parameterconstraints-required): Boolean
 ```
 
 ## Properties<a name="aws-properties-apigatewayv2-route-parameterconstraints-properties"></a>

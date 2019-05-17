@@ -28,16 +28,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Glue::DevEndpoint
-Properties : 
-﻿  [EndpointName](#cfn-glue-devendpoint-endpointname) : String
-﻿  [ExtraJarsS3Path](#cfn-glue-devendpoint-extrajarss3path) : String
-﻿  [ExtraPythonLibsS3Path](#cfn-glue-devendpoint-extrapythonlibss3path) : String
-﻿  [NumberOfNodes](#cfn-glue-devendpoint-numberofnodes) : Integer
-﻿  [PublicKey](#cfn-glue-devendpoint-publickey) : String
-﻿  [RoleArn](#cfn-glue-devendpoint-rolearn) : String
-﻿  [SecurityGroupIds](#cfn-glue-devendpoint-securitygroupids) : 
+Properties: 
+  [EndpointName](#cfn-glue-devendpoint-endpointname): String
+  [ExtraJarsS3Path](#cfn-glue-devendpoint-extrajarss3path): String
+  [ExtraPythonLibsS3Path](#cfn-glue-devendpoint-extrapythonlibss3path): String
+  [NumberOfNodes](#cfn-glue-devendpoint-numberofnodes): Integer
+  [PublicKey](#cfn-glue-devendpoint-publickey): String
+  [RoleArn](#cfn-glue-devendpoint-rolearn): String
+  [SecurityGroupIds](#cfn-glue-devendpoint-securitygroupids): 
     - String
-﻿  [SubnetId](#cfn-glue-devendpoint-subnetid) : String
+  [SubnetId](#cfn-glue-devendpoint-subnetid): String
 ```
 
 ## Properties<a name="aws-resource-glue-devendpoint-properties"></a>

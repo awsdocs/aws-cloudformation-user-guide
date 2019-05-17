@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-route53resolver-resolverrule-targetaddress-syntax.yaml"></a>
 
 ```
-﻿  [Ip](#cfn-route53resolver-resolverrule-targetaddress-ip) : String
-﻿  [Port](#cfn-route53resolver-resolverrule-targetaddress-port) : String
+  [Ip](#cfn-route53resolver-resolverrule-targetaddress-ip): String
+  [Port](#cfn-route53resolver-resolverrule-targetaddress-port): String
 ```
 
 ## Properties<a name="aws-properties-route53resolver-resolverrule-targetaddress-properties"></a>

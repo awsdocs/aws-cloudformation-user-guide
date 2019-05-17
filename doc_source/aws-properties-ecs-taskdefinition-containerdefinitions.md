@@ -45,52 +45,52 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-taskdefinition-containerdefinitions-syntax.yaml"></a>
 
 ```
-﻿  [Command](#cfn-ecs-taskdefinition-containerdefinition-command) : 
+  [Command](#cfn-ecs-taskdefinition-containerdefinition-command): 
     - String
-﻿  [Cpu](#cfn-ecs-taskdefinition-containerdefinition-cpu) : Integer
-﻿  [DisableNetworking](#cfn-ecs-taskdefinition-containerdefinition-disablenetworking) : Boolean
-﻿  [DnsSearchDomains](#cfn-ecs-taskdefinition-containerdefinition-dnssearchdomains) : 
+  [Cpu](#cfn-ecs-taskdefinition-containerdefinition-cpu): Integer
+  [DisableNetworking](#cfn-ecs-taskdefinition-containerdefinition-disablenetworking): Boolean
+  [DnsSearchDomains](#cfn-ecs-taskdefinition-containerdefinition-dnssearchdomains): 
     - String
-﻿  [DnsServers](#cfn-ecs-taskdefinition-containerdefinition-dnsservers) : 
+  [DnsServers](#cfn-ecs-taskdefinition-containerdefinition-dnsservers): 
     - String
-﻿  [DockerLabels](#cfn-ecs-taskdefinition-containerdefinition-dockerlabels) : 
+  [DockerLabels](#cfn-ecs-taskdefinition-containerdefinition-dockerlabels): 
     Key : Value
-﻿  [DockerSecurityOptions](#cfn-ecs-taskdefinition-containerdefinition-dockersecurityoptions) : 
+  [DockerSecurityOptions](#cfn-ecs-taskdefinition-containerdefinition-dockersecurityoptions): 
     - String
-﻿  [EntryPoint](#cfn-ecs-taskdefinition-containerdefinition-entrypoint) : 
+  [EntryPoint](#cfn-ecs-taskdefinition-containerdefinition-entrypoint): 
     - String
-﻿  [Environment](#cfn-ecs-taskdefinition-containerdefinition-environment) : 
+  [Environment](#cfn-ecs-taskdefinition-containerdefinition-environment): 
     - [KeyValuePair](aws-properties-ecs-taskdefinition-containerdefinitions-environment.md)
-﻿  [Essential](#cfn-ecs-taskdefinition-containerdefinition-essential) : Boolean
-﻿  [ExtraHosts](#cfn-ecs-taskdefinition-containerdefinition-extrahosts) : 
+  [Essential](#cfn-ecs-taskdefinition-containerdefinition-essential): Boolean
+  [ExtraHosts](#cfn-ecs-taskdefinition-containerdefinition-extrahosts): 
     - [HostEntry](aws-properties-ecs-taskdefinition-containerdefinitions-hostentry.md)
-﻿  [HealthCheck](#cfn-ecs-taskdefinition-containerdefinition-healthcheck) : 
+  [HealthCheck](#cfn-ecs-taskdefinition-containerdefinition-healthcheck): 
     [HealthCheck](aws-properties-ecs-taskdefinition-healthcheck.md)
-﻿  [Hostname](#cfn-ecs-taskdefinition-containerdefinition-hostname) : String
-﻿  [Image](#cfn-ecs-taskdefinition-containerdefinition-image) : String
-﻿  [Links](#cfn-ecs-taskdefinition-containerdefinition-links) : 
+  [Hostname](#cfn-ecs-taskdefinition-containerdefinition-hostname): String
+  [Image](#cfn-ecs-taskdefinition-containerdefinition-image): String
+  [Links](#cfn-ecs-taskdefinition-containerdefinition-links): 
     - String
-﻿  [LinuxParameters](#cfn-ecs-taskdefinition-containerdefinition-linuxparameters) : 
+  [LinuxParameters](#cfn-ecs-taskdefinition-containerdefinition-linuxparameters): 
     [LinuxParameters](aws-properties-ecs-taskdefinition-linuxparameters.md)
-﻿  [LogConfiguration](#cfn-ecs-taskdefinition-containerdefinition-logconfiguration) : 
+  [LogConfiguration](#cfn-ecs-taskdefinition-containerdefinition-logconfiguration): 
     [LogConfiguration](aws-properties-ecs-taskdefinition-containerdefinitions-logconfiguration.md)
-﻿  [Memory](#cfn-ecs-taskdefinition-containerdefinition-memory) : Integer
-﻿  [MemoryReservation](#cfn-ecs-taskdefinition-containerdefinition-memoryreservation) : Integer
-﻿  [MountPoints](#cfn-ecs-taskdefinition-containerdefinition-mountpoints) : 
+  [Memory](#cfn-ecs-taskdefinition-containerdefinition-memory): Integer
+  [MemoryReservation](#cfn-ecs-taskdefinition-containerdefinition-memoryreservation): Integer
+  [MountPoints](#cfn-ecs-taskdefinition-containerdefinition-mountpoints): 
     - [MountPoint](aws-properties-ecs-taskdefinition-containerdefinitions-mountpoints.md)
-﻿  [Name](#cfn-ecs-taskdefinition-containerdefinition-name) : String
-﻿  [PortMappings](#cfn-ecs-taskdefinition-containerdefinition-portmappings) : 
+  [Name](#cfn-ecs-taskdefinition-containerdefinition-name): String
+  [PortMappings](#cfn-ecs-taskdefinition-containerdefinition-portmappings): 
     - [PortMapping](aws-properties-ecs-taskdefinition-containerdefinitions-portmappings.md)
-﻿  [Privileged](#cfn-ecs-taskdefinition-containerdefinition-privileged) : Boolean
-﻿  [ReadonlyRootFilesystem](#cfn-ecs-taskdefinition-containerdefinition-readonlyrootfilesystem) : Boolean
-﻿  [RepositoryCredentials](#cfn-ecs-taskdefinition-containerdefinition-repositorycredentials) : 
+  [Privileged](#cfn-ecs-taskdefinition-containerdefinition-privileged): Boolean
+  [ReadonlyRootFilesystem](#cfn-ecs-taskdefinition-containerdefinition-readonlyrootfilesystem): Boolean
+  [RepositoryCredentials](#cfn-ecs-taskdefinition-containerdefinition-repositorycredentials): 
     [RepositoryCredentials](aws-properties-ecs-taskdefinition-repositorycredentials.md)
-﻿  [Ulimits](#cfn-ecs-taskdefinition-containerdefinition-ulimits) : 
+  [Ulimits](#cfn-ecs-taskdefinition-containerdefinition-ulimits): 
     - [Ulimit](aws-properties-ecs-taskdefinition-containerdefinitions-ulimit.md)
-﻿  [User](#cfn-ecs-taskdefinition-containerdefinition-user) : String
-﻿  [VolumesFrom](#cfn-ecs-taskdefinition-containerdefinition-volumesfrom) : 
+  [User](#cfn-ecs-taskdefinition-containerdefinition-user): String
+  [VolumesFrom](#cfn-ecs-taskdefinition-containerdefinition-volumesfrom): 
     - [VolumeFrom](aws-properties-ecs-taskdefinition-containerdefinitions-volumesfrom.md)
-﻿  [WorkingDirectory](#cfn-ecs-taskdefinition-containerdefinition-workingdirectory) : String
+  [WorkingDirectory](#cfn-ecs-taskdefinition-containerdefinition-workingdirectory): String
 ```
 
 ## Properties<a name="aws-properties-ecs-taskdefinition-containerdefinitions-properties"></a>

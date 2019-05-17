@@ -42,14 +42,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Config::ConfigRule
-Properties : 
-﻿  [ConfigRuleName](#cfn-config-configrule-configrulename) : String
-﻿  [Description](#cfn-config-configrule-description) : String
-﻿  [InputParameters](#cfn-config-configrule-inputparameters) : Json
-﻿  [MaximumExecutionFrequency](#cfn-config-configrule-maximumexecutionfrequency) : String
-﻿  [Scope](#cfn-config-configrule-scope) : 
+Properties: 
+  [ConfigRuleName](#cfn-config-configrule-configrulename): String
+  [Description](#cfn-config-configrule-description): String
+  [InputParameters](#cfn-config-configrule-inputparameters): Json
+  [MaximumExecutionFrequency](#cfn-config-configrule-maximumexecutionfrequency): String
+  [Scope](#cfn-config-configrule-scope): 
     [Scope](aws-properties-config-configrule-scope.md)
-﻿  [Source](#cfn-config-configrule-source) : 
+  [Source](#cfn-config-configrule-source): 
     [Source](aws-properties-config-configrule-source.md)
 ```
 

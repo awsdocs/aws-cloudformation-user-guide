@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-pipeline-lambda-syntax.yaml"></a>
 
 ```
-﻿  [BatchSize](#cfn-iotanalytics-pipeline-lambda-batchsize) : Integer
-﻿  [LambdaName](#cfn-iotanalytics-pipeline-lambda-lambdaname) : String
-﻿  [Name](#cfn-iotanalytics-pipeline-lambda-name) : String
-﻿  [Next](#cfn-iotanalytics-pipeline-lambda-next) : String
+  [BatchSize](#cfn-iotanalytics-pipeline-lambda-batchsize): Integer
+  [LambdaName](#cfn-iotanalytics-pipeline-lambda-lambdaname): String
+  [Name](#cfn-iotanalytics-pipeline-lambda-name): String
+  [Next](#cfn-iotanalytics-pipeline-lambda-next): String
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-pipeline-lambda-properties"></a>

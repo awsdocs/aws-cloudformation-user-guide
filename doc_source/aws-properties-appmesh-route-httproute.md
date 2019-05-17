@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-route-httproute-syntax.yaml"></a>
 
 ```
-﻿  [Action](#cfn-appmesh-route-httproute-action) : 
+  [Action](#cfn-appmesh-route-httproute-action): 
     [HttpRouteAction](aws-properties-appmesh-route-httprouteaction.md)
-﻿  [Match](#cfn-appmesh-route-httproute-match) : 
+  [Match](#cfn-appmesh-route-httproute-match): 
     [HttpRouteMatch](aws-properties-appmesh-route-httproutematch.md)
 ```
 

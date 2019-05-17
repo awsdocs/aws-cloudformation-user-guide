@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-dataset-trigger-schedule-syntax.yaml"></a>
 
 ```
-﻿  [ScheduleExpression](#cfn-iotanalytics-dataset-trigger-schedule-scheduleexpression) : String
+  [ScheduleExpression](#cfn-iotanalytics-dataset-trigger-schedule-scheduleexpression): String
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-dataset-trigger-schedule-properties"></a>

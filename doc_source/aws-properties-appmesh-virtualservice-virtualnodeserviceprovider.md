@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-virtualservice-virtualnodeserviceprovider-syntax.yaml"></a>
 
 ```
-﻿  [VirtualNodeName](#cfn-appmesh-virtualservice-virtualnodeserviceprovider-virtualnodename) : String
+  [VirtualNodeName](#cfn-appmesh-virtualservice-virtualnodeserviceprovider-virtualnodename): String
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualservice-virtualnodeserviceprovider-properties"></a>

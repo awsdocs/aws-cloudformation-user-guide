@@ -31,23 +31,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::EC2Fleet
-Properties : 
-﻿  [ExcessCapacityTerminationPolicy](#cfn-ec2-ec2fleet-excesscapacityterminationpolicy) : String
-﻿  [LaunchTemplateConfigs](#cfn-ec2-ec2fleet-launchtemplateconfigs) : 
+Properties: 
+  [ExcessCapacityTerminationPolicy](#cfn-ec2-ec2fleet-excesscapacityterminationpolicy): String
+  [LaunchTemplateConfigs](#cfn-ec2-ec2fleet-launchtemplateconfigs): 
     - [FleetLaunchTemplateConfigRequest](aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.md)
-﻿  [OnDemandOptions](#cfn-ec2-ec2fleet-ondemandoptions) : 
+  [OnDemandOptions](#cfn-ec2-ec2fleet-ondemandoptions): 
     [OnDemandOptionsRequest](aws-properties-ec2-ec2fleet-ondemandoptionsrequest.md)
-﻿  [ReplaceUnhealthyInstances](#cfn-ec2-ec2fleet-replaceunhealthyinstances) : Boolean
-﻿  [SpotOptions](#cfn-ec2-ec2fleet-spotoptions) : 
+  [ReplaceUnhealthyInstances](#cfn-ec2-ec2fleet-replaceunhealthyinstances): Boolean
+  [SpotOptions](#cfn-ec2-ec2fleet-spotoptions): 
     [SpotOptionsRequest](aws-properties-ec2-ec2fleet-spotoptionsrequest.md)
-﻿  [TagSpecifications](#cfn-ec2-ec2fleet-tagspecifications) : 
+  [TagSpecifications](#cfn-ec2-ec2fleet-tagspecifications): 
     - [TagSpecification](aws-properties-ec2-ec2fleet-tagspecification.md)
-﻿  [TargetCapacitySpecification](#cfn-ec2-ec2fleet-targetcapacityspecification) : 
+  [TargetCapacitySpecification](#cfn-ec2-ec2fleet-targetcapacityspecification): 
     [TargetCapacitySpecificationRequest](aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.md)
-﻿  [TerminateInstancesWithExpiration](#cfn-ec2-ec2fleet-terminateinstanceswithexpiration) : Boolean
-﻿  [Type](#cfn-ec2-ec2fleet-type) : String
-﻿  [ValidFrom](#cfn-ec2-ec2fleet-validfrom) : String
-﻿  [ValidUntil](#cfn-ec2-ec2fleet-validuntil) : String
+  [TerminateInstancesWithExpiration](#cfn-ec2-ec2fleet-terminateinstanceswithexpiration): Boolean
+  [Type](#cfn-ec2-ec2fleet-type): String
+  [ValidFrom](#cfn-ec2-ec2fleet-validfrom): String
+  [ValidUntil](#cfn-ec2-ec2fleet-validuntil): String
 ```
 
 ## Properties<a name="aws-resource-ec2-ec2fleet-properties"></a>

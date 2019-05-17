@@ -22,14 +22,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-topicrulepayload-syntax.yaml"></a>
 
 ```
-﻿  [Actions](#cfn-iot-topicrule-topicrulepayload-actions) : 
+  [Actions](#cfn-iot-topicrule-topicrulepayload-actions): 
     - [Action](aws-properties-iot-topicrule-action.md)
-﻿  [AwsIotSqlVersion](#cfn-iot-topicrule-topicrulepayload-awsiotsqlversion) : String
-﻿  [Description](#cfn-iot-topicrule-topicrulepayload-description) : String
-﻿  [ErrorAction](#cfn-iot-topicrule-topicrulepayload-erroraction) : 
+  [AwsIotSqlVersion](#cfn-iot-topicrule-topicrulepayload-awsiotsqlversion): String
+  [Description](#cfn-iot-topicrule-topicrulepayload-description): String
+  [ErrorAction](#cfn-iot-topicrule-topicrulepayload-erroraction): 
     [Action](aws-properties-iot-topicrule-action.md)
-﻿  [RuleDisabled](#cfn-iot-topicrule-topicrulepayload-ruledisabled) : Boolean
-﻿  [Sql](#cfn-iot-topicrule-topicrulepayload-sql) : String
+  [RuleDisabled](#cfn-iot-topicrule-topicrulepayload-ruledisabled): Boolean
+  [Sql](#cfn-iot-topicrule-topicrulepayload-sql): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-topicrulepayload-properties"></a>

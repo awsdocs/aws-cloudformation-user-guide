@@ -24,15 +24,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig-syntax.yaml"></a>
 
 ```
-﻿  [AuthenticationRequestExtraParams](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-authenticationrequestextraparams) : 
+  [AuthenticationRequestExtraParams](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-authenticationrequestextraparams): 
     Key : Value
-﻿  [OnUnauthenticatedRequest](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-onunauthenticatedrequest) : String
-﻿  [Scope](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-scope) : String
-﻿  [SessionCookieName](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessioncookiename) : String
-﻿  [SessionTimeout](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessiontimeout) : Long
-﻿  [UserPoolArn](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolarn) : String
-﻿  [UserPoolClientId](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolclientid) : String
-﻿  [UserPoolDomain](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpooldomain) : String
+  [OnUnauthenticatedRequest](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-onunauthenticatedrequest): String
+  [Scope](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-scope): String
+  [SessionCookieName](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessioncookiename): String
+  [SessionTimeout](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessiontimeout): Long
+  [UserPoolArn](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolarn): String
+  [UserPoolClientId](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolclientid): String
+  [UserPoolDomain](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpooldomain): String
 ```
 
 ## Properties<a name="aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig-properties"></a>

@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-webhookfilter-syntax.yaml"></a>
 
 ```
-﻿  [ExcludeMatchedPattern](#cfn-codebuild-project-webhookfilter-excludematchedpattern) : Boolean
-﻿  [Pattern](#cfn-codebuild-project-webhookfilter-pattern) : String
-﻿  [Type](#cfn-codebuild-project-webhookfilter-type) : String
+  [ExcludeMatchedPattern](#cfn-codebuild-project-webhookfilter-excludematchedpattern): Boolean
+  [Pattern](#cfn-codebuild-project-webhookfilter-pattern): String
+  [Type](#cfn-codebuild-project-webhookfilter-type): String
 ```
 
 ## Properties<a name="aws-properties-codebuild-project-webhookfilter-properties"></a>

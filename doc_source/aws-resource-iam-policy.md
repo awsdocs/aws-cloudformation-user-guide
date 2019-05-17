@@ -31,14 +31,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IAM::Policy
-Properties : 
-﻿  [Groups](#cfn-iam-policy-groups) : 
+Properties: 
+  [Groups](#cfn-iam-policy-groups): 
     - String
-﻿  [PolicyDocument](#cfn-iam-policy-policydocument) : Json
-﻿  [PolicyName](#cfn-iam-policy-policyname) : String
-﻿  [Roles](#cfn-iam-policy-roles) : 
+  [PolicyDocument](#cfn-iam-policy-policydocument): Json
+  [PolicyName](#cfn-iam-policy-policyname): String
+  [Roles](#cfn-iam-policy-roles): 
     - String
-﻿  [Users](#cfn-iam-policy-users) : 
+  [Users](#cfn-iam-policy-users): 
     - String
 ```
 

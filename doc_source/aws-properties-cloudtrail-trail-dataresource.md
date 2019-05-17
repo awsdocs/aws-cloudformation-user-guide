@@ -39,8 +39,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudtrail-trail-dataresource-syntax.yaml"></a>
 
 ```
-﻿  [Type](#cfn-cloudtrail-trail-dataresource-type) : String
-﻿  [Values](#cfn-cloudtrail-trail-dataresource-values) : 
+  [Type](#cfn-cloudtrail-trail-dataresource-type): String
+  [Values](#cfn-cloudtrail-trail-dataresource-values): 
     - String
 ```
 

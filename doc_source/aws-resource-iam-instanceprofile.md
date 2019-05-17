@@ -25,10 +25,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IAM::InstanceProfile
-Properties : 
-﻿  [InstanceProfileName](#cfn-iam-instanceprofile-instanceprofilename) : String
-﻿  [Path](#cfn-iam-instanceprofile-path) : String
-﻿  [Roles](#cfn-iam-instanceprofile-roles) : 
+Properties: 
+  [InstanceProfileName](#cfn-iam-instanceprofile-instanceprofilename): String
+  [Path](#cfn-iam-instanceprofile-path): String
+  [Roles](#cfn-iam-instanceprofile-roles): 
     - String
 ```
 

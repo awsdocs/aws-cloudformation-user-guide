@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Redshift::ClusterSecurityGroup
-Properties : 
-﻿  [Description](#cfn-redshift-clustersecuritygroup-description) : String
-﻿  [Tags](#cfn-redshift-clustersecuritygroup-tags) : 
+Properties: 
+  [Description](#cfn-redshift-clustersecuritygroup-description): String
+  [Tags](#cfn-redshift-clustersecuritygroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

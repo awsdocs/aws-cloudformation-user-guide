@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-propertygroup-syntax.yaml"></a>
 
 ```
-﻿  [PropertyGroupId](#cfn-kinesisanalyticsv2-application-propertygroup-propertygroupid) : String
-﻿  [PropertyMap](#cfn-kinesisanalyticsv2-application-propertygroup-propertymap) : Json
+  [PropertyGroupId](#cfn-kinesisanalyticsv2-application-propertygroup-propertygroupid): String
+  [PropertyMap](#cfn-kinesisanalyticsv2-application-propertygroup-propertymap): Json
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-propertygroup-properties"></a>

@@ -26,10 +26,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-service-loadbalancers-syntax.yaml"></a>
 
 ```
-﻿  [ContainerName](#cfn-ecs-service-loadbalancers-containername) : String
-﻿  [ContainerPort](#cfn-ecs-service-loadbalancers-containerport) : Integer
-﻿  [LoadBalancerName](#cfn-ecs-service-loadbalancers-loadbalancername) : String
-﻿  [TargetGroupArn](#cfn-ecs-service-loadbalancers-targetgrouparn) : String
+  [ContainerName](#cfn-ecs-service-loadbalancers-containername): String
+  [ContainerPort](#cfn-ecs-service-loadbalancers-containerport): Integer
+  [LoadBalancerName](#cfn-ecs-service-loadbalancers-loadbalancername): String
+  [TargetGroupArn](#cfn-ecs-service-loadbalancers-targetgrouparn): String
 ```
 
 ## Properties<a name="aws-properties-ecs-service-loadbalancers-properties"></a>

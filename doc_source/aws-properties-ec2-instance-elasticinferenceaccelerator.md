@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-instance-elasticinferenceaccelerator-syntax.yaml"></a>
 
 ```
-﻿  [Type](#cfn-ec2-instance-elasticinferenceaccelerator-type) : String
+  [Type](#cfn-ec2-instance-elasticinferenceaccelerator-type): String
 ```
 
 ## Properties<a name="aws-properties-ec2-instance-elasticinferenceaccelerator-properties"></a>

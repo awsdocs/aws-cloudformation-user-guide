@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-job-jobcommand-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-glue-job-jobcommand-name) : String
-﻿  [ScriptLocation](#cfn-glue-job-jobcommand-scriptlocation) : String
+  [Name](#cfn-glue-job-jobcommand-name): String
+  [ScriptLocation](#cfn-glue-job-jobcommand-scriptlocation): String
 ```
 
 ## Properties<a name="aws-properties-glue-job-jobcommand-properties"></a>

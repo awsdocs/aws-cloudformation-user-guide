@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::RequestValidator
-Properties : 
-﻿  [Name](#cfn-apigateway-requestvalidator-name) : String
-﻿  [RestApiId](#cfn-apigateway-requestvalidator-restapiid) : String
-﻿  [ValidateRequestBody](#cfn-apigateway-requestvalidator-validaterequestbody) : Boolean
-﻿  [ValidateRequestParameters](#cfn-apigateway-requestvalidator-validaterequestparameters) : Boolean
+Properties: 
+  [Name](#cfn-apigateway-requestvalidator-name): String
+  [RestApiId](#cfn-apigateway-requestvalidator-restapiid): String
+  [ValidateRequestBody](#cfn-apigateway-requestvalidator-validaterequestbody): Boolean
+  [ValidateRequestParameters](#cfn-apigateway-requestvalidator-validaterequestparameters): Boolean
 ```
 
 ## Properties<a name="aws-resource-apigateway-requestvalidator-properties"></a>

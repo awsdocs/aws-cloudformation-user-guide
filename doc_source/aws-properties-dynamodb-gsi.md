@@ -20,12 +20,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dynamodb-gsi-syntax.yaml"></a>
 
 ```
-﻿  [IndexName](#cfn-dynamodb-gsi-indexname) : String
-﻿  [KeySchema](#cfn-dynamodb-gsi-keyschema) : 
+  [IndexName](#cfn-dynamodb-gsi-indexname): String
+  [KeySchema](#cfn-dynamodb-gsi-keyschema): 
     - [KeySchema](aws-properties-dynamodb-keyschema.md)
-﻿  [Projection](#cfn-dynamodb-gsi-projection) : 
+  [Projection](#cfn-dynamodb-gsi-projection): 
     [Projection](aws-properties-dynamodb-projectionobject.md)
-﻿  [ProvisionedThroughput](#cfn-dynamodb-gsi-provisionedthroughput) : 
+  [ProvisionedThroughput](#cfn-dynamodb-gsi-provisionedthroughput): 
     [ProvisionedThroughput](aws-properties-dynamodb-provisionedthroughput.md)
 ```
 

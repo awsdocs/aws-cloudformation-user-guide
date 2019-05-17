@@ -31,20 +31,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::GameLift::Fleet
-Properties : 
-﻿  [BuildId](#cfn-gamelift-fleet-buildid) : String
-﻿  [Description](#cfn-gamelift-fleet-description) : String
-﻿  [DesiredEC2Instances](#cfn-gamelift-fleet-desiredec2instances) : Integer
-﻿  [EC2InboundPermissions](#cfn-gamelift-fleet-ec2inboundpermissions) : 
+Properties: 
+  [BuildId](#cfn-gamelift-fleet-buildid): String
+  [Description](#cfn-gamelift-fleet-description): String
+  [DesiredEC2Instances](#cfn-gamelift-fleet-desiredec2instances): Integer
+  [EC2InboundPermissions](#cfn-gamelift-fleet-ec2inboundpermissions): 
     - [IpPermission](aws-properties-gamelift-fleet-ec2inboundpermission.md)
-﻿  [EC2InstanceType](#cfn-gamelift-fleet-ec2instancetype) : String
-﻿  [LogPaths](#cfn-gamelift-fleet-logpaths) : 
+  [EC2InstanceType](#cfn-gamelift-fleet-ec2instancetype): String
+  [LogPaths](#cfn-gamelift-fleet-logpaths): 
     - String
-﻿  [MaxSize](#cfn-gamelift-fleet-maxsize) : Integer
-﻿  [MinSize](#cfn-gamelift-fleet-minsize) : Integer
-﻿  [Name](#cfn-gamelift-fleet-name) : String
-﻿  [ServerLaunchParameters](#cfn-gamelift-fleet-serverlaunchparameters) : String
-﻿  [ServerLaunchPath](#cfn-gamelift-fleet-serverlaunchpath) : String
+  [MaxSize](#cfn-gamelift-fleet-maxsize): Integer
+  [MinSize](#cfn-gamelift-fleet-minsize): Integer
+  [Name](#cfn-gamelift-fleet-name): String
+  [ServerLaunchParameters](#cfn-gamelift-fleet-serverlaunchparameters): String
+  [ServerLaunchPath](#cfn-gamelift-fleet-serverlaunchpath): String
 ```
 
 ## Properties<a name="aws-resource-gamelift-fleet-properties"></a>

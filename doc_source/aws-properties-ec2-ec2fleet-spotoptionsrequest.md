@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-ec2fleet-spotoptionsrequest-syntax.yaml"></a>
 
 ```
-﻿  [AllocationStrategy](#cfn-ec2-ec2fleet-spotoptionsrequest-allocationstrategy) : String
-﻿  [InstanceInterruptionBehavior](#cfn-ec2-ec2fleet-spotoptionsrequest-instanceinterruptionbehavior) : String
-﻿  [InstancePoolsToUseCount](#cfn-ec2-ec2fleet-spotoptionsrequest-instancepoolstousecount) : Integer
+  [AllocationStrategy](#cfn-ec2-ec2fleet-spotoptionsrequest-allocationstrategy): String
+  [InstanceInterruptionBehavior](#cfn-ec2-ec2fleet-spotoptionsrequest-instanceinterruptionbehavior): String
+  [InstancePoolsToUseCount](#cfn-ec2-ec2fleet-spotoptionsrequest-instancepoolstousecount): Integer
 ```
 
 ## Properties<a name="aws-properties-ec2-ec2fleet-spotoptionsrequest-properties"></a>

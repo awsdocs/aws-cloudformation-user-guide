@@ -24,10 +24,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPNGatewayRoutePropagation
-Properties : 
-﻿  [RouteTableIds](#cfn-ec2-vpngatewayrouteprop-routetableids) : 
+Properties: 
+  [RouteTableIds](#cfn-ec2-vpngatewayrouteprop-routetableids): 
     - String
-﻿  [VpnGatewayId](#cfn-ec2-vpngatewayrouteprop-vpngatewayid) : String
+  [VpnGatewayId](#cfn-ec2-vpngatewayrouteprop-vpngatewayid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-vpn-gatewayrouteprop-properties"></a>

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-taskdefinition-containerdefinitions-hostentry-syntax.yaml"></a>
 
 ```
-﻿  [Hostname](#cfn-ecs-taskdefinition-containerdefinition-hostentry-hostname) : String
-﻿  [IpAddress](#cfn-ecs-taskdefinition-containerdefinition-hostentry-ipaddress) : String
+  [Hostname](#cfn-ecs-taskdefinition-containerdefinition-hostentry-hostname): String
+  [IpAddress](#cfn-ecs-taskdefinition-containerdefinition-hostentry-ipaddress): String
 ```
 
 ## Properties<a name="aws-properties-ecs-taskdefinition-containerdefinitions-hostentry-properties"></a>

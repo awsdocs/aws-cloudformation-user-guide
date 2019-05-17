@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apigateway-stage-accesslogsetting-syntax.yaml"></a>
 
 ```
-﻿  [DestinationArn](#cfn-apigateway-stage-accesslogsetting-destinationarn) : String
-﻿  [Format](#cfn-apigateway-stage-accesslogsetting-format) : String
+  [DestinationArn](#cfn-apigateway-stage-accesslogsetting-destinationarn): String
+  [Format](#cfn-apigateway-stage-accesslogsetting-format): String
 ```
 
 ## Properties<a name="aws-properties-apigateway-stage-accesslogsetting-properties"></a>

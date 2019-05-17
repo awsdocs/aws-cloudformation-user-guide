@@ -22,11 +22,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apigateway-stage-canarysetting-syntax.yaml"></a>
 
 ```
-﻿  [DeploymentId](#cfn-apigateway-stage-canarysetting-deploymentid) : String
-﻿  [PercentTraffic](#cfn-apigateway-stage-canarysetting-percenttraffic) : Double
-﻿  [StageVariableOverrides](#cfn-apigateway-stage-canarysetting-stagevariableoverrides) : 
+  [DeploymentId](#cfn-apigateway-stage-canarysetting-deploymentid): String
+  [PercentTraffic](#cfn-apigateway-stage-canarysetting-percenttraffic): Double
+  [StageVariableOverrides](#cfn-apigateway-stage-canarysetting-stagevariableoverrides): 
     Key : Value
-﻿  [UseStageCache](#cfn-apigateway-stage-canarysetting-usestagecache) : Boolean
+  [UseStageCache](#cfn-apigateway-stage-canarysetting-usestagecache): Boolean
 ```
 
 ## Properties<a name="aws-properties-apigateway-stage-canarysetting-properties"></a>

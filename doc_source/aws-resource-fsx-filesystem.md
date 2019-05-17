@@ -29,20 +29,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::FSx::FileSystem
-Properties : 
-﻿  [BackupId](#cfn-fsx-filesystem-backupid) : String
-﻿  [FileSystemType](#cfn-fsx-filesystem-filesystemtype) : String
-﻿  [KmsKeyId](#cfn-fsx-filesystem-kmskeyid) : String
-﻿  [LustreConfiguration](#cfn-fsx-filesystem-lustreconfiguration) : 
+Properties: 
+  [BackupId](#cfn-fsx-filesystem-backupid): String
+  [FileSystemType](#cfn-fsx-filesystem-filesystemtype): String
+  [KmsKeyId](#cfn-fsx-filesystem-kmskeyid): String
+  [LustreConfiguration](#cfn-fsx-filesystem-lustreconfiguration): 
     [LustreConfiguration](aws-properties-fsx-filesystem-lustreconfiguration.md)
-﻿  [SecurityGroupIds](#cfn-fsx-filesystem-securitygroupids) : 
+  [SecurityGroupIds](#cfn-fsx-filesystem-securitygroupids): 
     - String
-﻿  [StorageCapacity](#cfn-fsx-filesystem-storagecapacity) : Integer
-﻿  [SubnetIds](#cfn-fsx-filesystem-subnetids) : 
+  [StorageCapacity](#cfn-fsx-filesystem-storagecapacity): Integer
+  [SubnetIds](#cfn-fsx-filesystem-subnetids): 
     - String
-﻿  [Tags](#cfn-fsx-filesystem-tags) : 
+  [Tags](#cfn-fsx-filesystem-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [WindowsConfiguration](#cfn-fsx-filesystem-windowsconfiguration) : 
+  [WindowsConfiguration](#cfn-fsx-filesystem-windowsconfiguration): 
     [WindowsConfiguration](aws-properties-fsx-filesystem-windowsconfiguration.md)
 ```
 

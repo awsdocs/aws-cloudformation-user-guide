@@ -19,11 +19,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dlm-lifecyclepolicy-policydetails-syntax.yaml"></a>
 
 ```
-﻿  [ResourceTypes](#cfn-dlm-lifecyclepolicy-policydetails-resourcetypes) : 
+  [ResourceTypes](#cfn-dlm-lifecyclepolicy-policydetails-resourcetypes): 
     - String
-﻿  [Schedules](#cfn-dlm-lifecyclepolicy-policydetails-schedules) : 
+  [Schedules](#cfn-dlm-lifecyclepolicy-policydetails-schedules): 
     - [Schedule](aws-properties-dlm-lifecyclepolicy-schedule.md)
-﻿  [TargetTags](#cfn-dlm-lifecyclepolicy-policydetails-targettags) : 
+  [TargetTags](#cfn-dlm-lifecyclepolicy-policydetails-targettags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

@@ -26,10 +26,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ElastiCache::SecurityGroupIngress
-Properties : 
-﻿  [CacheSecurityGroupName](#cfn-elasticache-securitygroupingress-cachesecuritygroupname) : String
-﻿  [EC2SecurityGroupName](#cfn-elasticache-securitygroupingress-ec2securitygroupname) : String
-﻿  [EC2SecurityGroupOwnerId](#cfn-elasticache-securitygroupingress-ec2securitygroupownerid) : String
+Properties: 
+  [CacheSecurityGroupName](#cfn-elasticache-securitygroupingress-cachesecuritygroupname): String
+  [EC2SecurityGroupName](#cfn-elasticache-securitygroupingress-ec2securitygroupname): String
+  [EC2SecurityGroupOwnerId](#cfn-elasticache-securitygroupingress-ec2securitygroupownerid): String
 ```
 
 ## Properties<a name="aws-properties-elasticache-security-group-ingress-properties"></a>

@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DAX::ParameterGroup
-Properties : 
-﻿  [Description](#cfn-dax-parametergroup-description) : String
-﻿  [ParameterGroupName](#cfn-dax-parametergroup-parametergroupname) : String
-﻿  [ParameterNameValues](#cfn-dax-parametergroup-parameternamevalues) : Json
+Properties: 
+  [Description](#cfn-dax-parametergroup-description): String
+  [ParameterGroupName](#cfn-dax-parametergroup-parametergroupname): String
+  [ParameterNameValues](#cfn-dax-parametergroup-parameternamevalues): Json
 ```
 
 ## Properties<a name="aws-resource-dax-parametergroup-properties"></a>

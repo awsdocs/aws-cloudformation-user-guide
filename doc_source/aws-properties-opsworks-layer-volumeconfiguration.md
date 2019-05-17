@@ -23,13 +23,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-opsworks-layer-volumeconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [Encrypted](#cfn-opsworks-layer-volumeconfiguration-encrypted) : Boolean
-﻿  [Iops](#cfn-opsworks-layer-volconfig-iops) : Integer
-﻿  [MountPoint](#cfn-opsworks-layer-volconfig-mountpoint) : String
-﻿  [NumberOfDisks](#cfn-opsworks-layer-volconfig-numberofdisks) : Integer
-﻿  [RaidLevel](#cfn-opsworks-layer-volconfig-raidlevel) : Integer
-﻿  [Size](#cfn-opsworks-layer-volconfig-size) : Integer
-﻿  [VolumeType](#cfn-opsworks-layer-volconfig-volumetype) : String
+  [Encrypted](#cfn-opsworks-layer-volumeconfiguration-encrypted): Boolean
+  [Iops](#cfn-opsworks-layer-volconfig-iops): Integer
+  [MountPoint](#cfn-opsworks-layer-volconfig-mountpoint): String
+  [NumberOfDisks](#cfn-opsworks-layer-volconfig-numberofdisks): Integer
+  [RaidLevel](#cfn-opsworks-layer-volconfig-raidlevel): Integer
+  [Size](#cfn-opsworks-layer-volconfig-size): Integer
+  [VolumeType](#cfn-opsworks-layer-volconfig-volumetype): String
 ```
 
 ## Properties<a name="aws-properties-opsworks-layer-volumeconfiguration-properties"></a>

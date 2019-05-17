@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dynamodb-streamspecification-syntax.yaml"></a>
 
 ```
-﻿  [StreamViewType](#cfn-dynamodb-streamspecification-streamviewtype) : String
+  [StreamViewType](#cfn-dynamodb-streamspecification-streamviewtype): String
 ```
 
 ## Properties<a name="aws-properties-dynamodb-streamspecification-properties"></a>

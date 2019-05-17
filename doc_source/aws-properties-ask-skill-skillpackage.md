@@ -23,12 +23,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ask-skill-skillpackage-syntax.yaml"></a>
 
 ```
-﻿  [Overrides](#cfn-ask-skill-skillpackage-overrides) : 
+  [Overrides](#cfn-ask-skill-skillpackage-overrides): 
     [Overrides](aws-properties-ask-skill-overrides.md)
-﻿  [S3Bucket](#cfn-ask-skill-skillpackage-s3bucket) : String
-﻿  [S3BucketRole](#cfn-ask-skill-skillpackage-s3bucketrole) : String
-﻿  [S3Key](#cfn-ask-skill-skillpackage-s3key) : String
-﻿  [S3ObjectVersion](#cfn-ask-skill-skillpackage-s3objectversion) : String
+  [S3Bucket](#cfn-ask-skill-skillpackage-s3bucket): String
+  [S3BucketRole](#cfn-ask-skill-skillpackage-s3bucketrole): String
+  [S3Key](#cfn-ask-skill-skillpackage-s3key): String
+  [S3ObjectVersion](#cfn-ask-skill-skillpackage-s3objectversion): String
 ```
 
 ## Properties<a name="aws-properties-ask-skill-skillpackage-properties"></a>

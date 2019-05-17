@@ -27,14 +27,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DocDB::DBInstance
-Properties : 
-﻿  [AutoMinorVersionUpgrade](#cfn-docdb-dbinstance-autominorversionupgrade) : Boolean
-﻿  [AvailabilityZone](#cfn-docdb-dbinstance-availabilityzone) : String
-﻿  [DBClusterIdentifier](#cfn-docdb-dbinstance-dbclusteridentifier) : String
-﻿  [DBInstanceClass](#cfn-docdb-dbinstance-dbinstanceclass) : String
-﻿  [DBInstanceIdentifier](#cfn-docdb-dbinstance-dbinstanceidentifier) : String
-﻿  [PreferredMaintenanceWindow](#cfn-docdb-dbinstance-preferredmaintenancewindow) : String
-﻿  [Tags](#cfn-docdb-dbinstance-tags) : 
+Properties: 
+  [AutoMinorVersionUpgrade](#cfn-docdb-dbinstance-autominorversionupgrade): Boolean
+  [AvailabilityZone](#cfn-docdb-dbinstance-availabilityzone): String
+  [DBClusterIdentifier](#cfn-docdb-dbinstance-dbclusteridentifier): String
+  [DBInstanceClass](#cfn-docdb-dbinstance-dbinstanceclass): String
+  [DBInstanceIdentifier](#cfn-docdb-dbinstance-dbinstanceidentifier): String
+  [PreferredMaintenanceWindow](#cfn-docdb-dbinstance-preferredmaintenancewindow): String
+  [Tags](#cfn-docdb-dbinstance-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

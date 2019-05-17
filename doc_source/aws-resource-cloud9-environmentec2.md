@@ -27,15 +27,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Cloud9::EnvironmentEC2
-Properties : 
-﻿  [AutomaticStopTimeMinutes](#cfn-cloud9-environmentec2-automaticstoptimeminutes) : Integer
-﻿  [Description](#cfn-cloud9-environmentec2-description) : String
-﻿  [InstanceType](#cfn-cloud9-environmentec2-instancetype) : String
-﻿  [Name](#cfn-cloud9-environmentec2-name) : String
-﻿  [OwnerArn](#cfn-cloud9-environmentec2-ownerarn) : String
-﻿  [Repositories](#cfn-cloud9-environmentec2-repositories) : 
+Properties: 
+  [AutomaticStopTimeMinutes](#cfn-cloud9-environmentec2-automaticstoptimeminutes): Integer
+  [Description](#cfn-cloud9-environmentec2-description): String
+  [InstanceType](#cfn-cloud9-environmentec2-instancetype): String
+  [Name](#cfn-cloud9-environmentec2-name): String
+  [OwnerArn](#cfn-cloud9-environmentec2-ownerarn): String
+  [Repositories](#cfn-cloud9-environmentec2-repositories): 
     - [Repository](aws-properties-cloud9-environmentec2-repository.md)
-﻿  [SubnetId](#cfn-cloud9-environmentec2-subnetid) : String
+  [SubnetId](#cfn-cloud9-environmentec2-subnetid): String
 ```
 
 ## Properties<a name="aws-resource-cloud9-environmentec2-properties"></a>

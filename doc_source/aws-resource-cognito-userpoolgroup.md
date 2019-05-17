@@ -25,12 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Cognito::UserPoolGroup
-Properties : 
-﻿  [Description](#cfn-cognito-userpoolgroup-description) : String
-﻿  [GroupName](#cfn-cognito-userpoolgroup-groupname) : String
-﻿  [Precedence](#cfn-cognito-userpoolgroup-precedence) : Double
-﻿  [RoleArn](#cfn-cognito-userpoolgroup-rolearn) : String
-﻿  [UserPoolId](#cfn-cognito-userpoolgroup-userpoolid) : String
+Properties: 
+  [Description](#cfn-cognito-userpoolgroup-description): String
+  [GroupName](#cfn-cognito-userpoolgroup-groupname): String
+  [Precedence](#cfn-cognito-userpoolgroup-precedence): Double
+  [RoleArn](#cfn-cognito-userpoolgroup-rolearn): String
+  [UserPoolId](#cfn-cognito-userpoolgroup-userpoolid): String
 ```
 
 ## Properties<a name="aws-resource-cognito-userpoolgroup-properties"></a>

@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apigateway-restapi-endpointconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [Types](#cfn-apigateway-restapi-endpointconfiguration-types) : 
+  [Types](#cfn-apigateway-restapi-endpointconfiguration-types): 
     - String
 ```
 

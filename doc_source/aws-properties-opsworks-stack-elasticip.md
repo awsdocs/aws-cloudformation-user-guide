@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-opsworks-stack-elasticip-syntax.yaml"></a>
 
 ```
-﻿  [Ip](#cfn-opsworks-stack-elasticip-ip) : String
-﻿  [Name](#cfn-opsworks-stack-elasticip-name) : String
+  [Ip](#cfn-opsworks-stack-elasticip-ip): String
+  [Name](#cfn-opsworks-stack-elasticip-name): String
 ```
 
 ## Properties<a name="aws-properties-opsworks-stack-elasticip-properties"></a>

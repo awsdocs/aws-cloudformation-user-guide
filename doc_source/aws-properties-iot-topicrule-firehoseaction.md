@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-firehoseaction-syntax.yaml"></a>
 
 ```
-﻿  [DeliveryStreamName](#cfn-iot-topicrule-firehoseaction-deliverystreamname) : String
-﻿  [RoleArn](#cfn-iot-topicrule-firehoseaction-rolearn) : String
-﻿  [Separator](#cfn-iot-topicrule-firehoseaction-separator) : String
+  [DeliveryStreamName](#cfn-iot-topicrule-firehoseaction-deliverystreamname): String
+  [RoleArn](#cfn-iot-topicrule-firehoseaction-rolearn): String
+  [Separator](#cfn-iot-topicrule-firehoseaction-separator): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-firehoseaction-properties"></a>

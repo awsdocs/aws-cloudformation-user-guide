@@ -31,19 +31,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::CapacityReservation
-Properties : 
-﻿  [AvailabilityZone](#cfn-ec2-capacityreservation-availabilityzone) : String
-﻿  [EbsOptimized](#cfn-ec2-capacityreservation-ebsoptimized) : Boolean
-﻿  [EndDate](#cfn-ec2-capacityreservation-enddate) : String
-﻿  [EndDateType](#cfn-ec2-capacityreservation-enddatetype) : String
-﻿  [EphemeralStorage](#cfn-ec2-capacityreservation-ephemeralstorage) : Boolean
-﻿  [InstanceCount](#cfn-ec2-capacityreservation-instancecount) : Integer
-﻿  [InstanceMatchCriteria](#cfn-ec2-capacityreservation-instancematchcriteria) : String
-﻿  [InstancePlatform](#cfn-ec2-capacityreservation-instanceplatform) : String
-﻿  [InstanceType](#cfn-ec2-capacityreservation-instancetype) : String
-﻿  [TagSpecifications](#cfn-ec2-capacityreservation-tagspecifications) : 
+Properties: 
+  [AvailabilityZone](#cfn-ec2-capacityreservation-availabilityzone): String
+  [EbsOptimized](#cfn-ec2-capacityreservation-ebsoptimized): Boolean
+  [EndDate](#cfn-ec2-capacityreservation-enddate): String
+  [EndDateType](#cfn-ec2-capacityreservation-enddatetype): String
+  [EphemeralStorage](#cfn-ec2-capacityreservation-ephemeralstorage): Boolean
+  [InstanceCount](#cfn-ec2-capacityreservation-instancecount): Integer
+  [InstanceMatchCriteria](#cfn-ec2-capacityreservation-instancematchcriteria): String
+  [InstancePlatform](#cfn-ec2-capacityreservation-instanceplatform): String
+  [InstanceType](#cfn-ec2-capacityreservation-instancetype): String
+  [TagSpecifications](#cfn-ec2-capacityreservation-tagspecifications): 
     - [TagSpecification](aws-properties-ec2-capacityreservation-tagspecification.md)
-﻿  [Tenancy](#cfn-ec2-capacityreservation-tenancy) : String
+  [Tenancy](#cfn-ec2-capacityreservation-tenancy): String
 ```
 
 ## Properties<a name="aws-resource-ec2-capacityreservation-properties"></a>

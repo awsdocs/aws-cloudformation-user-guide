@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption
-Properties : 
-﻿  [ApplicationName](#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-applicationname) : String
-﻿  [CloudWatchLoggingOption](#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption) : 
+Properties: 
+  [ApplicationName](#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-applicationname): String
+  [CloudWatchLoggingOption](#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption): 
     [CloudWatchLoggingOption](aws-properties-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption.md)
 ```
 

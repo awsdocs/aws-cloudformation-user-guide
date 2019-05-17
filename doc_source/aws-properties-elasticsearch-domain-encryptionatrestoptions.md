@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticsearch-domain-encryptionatrestoptions-syntax.yaml"></a>
 
 ```
-﻿  [Enabled](#cfn-elasticsearch-domain-encryptionatrestoptions-enabled) : Boolean
-﻿  [KmsKeyId](#cfn-elasticsearch-domain-encryptionatrestoptions-kmskeyid) : String
+  [Enabled](#cfn-elasticsearch-domain-encryptionatrestoptions-enabled): Boolean
+  [KmsKeyId](#cfn-elasticsearch-domain-encryptionatrestoptions-kmskeyid): String
 ```
 
 ## Properties<a name="aws-properties-elasticsearch-domain-encryptionatrestoptions-properties"></a>

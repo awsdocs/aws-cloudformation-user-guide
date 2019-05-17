@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-table-serdeinfo-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-glue-table-serdeinfo-name) : String
-﻿  [Parameters](#cfn-glue-table-serdeinfo-parameters) : Json
-﻿  [SerializationLibrary](#cfn-glue-table-serdeinfo-serializationlibrary) : String
+  [Name](#cfn-glue-table-serdeinfo-name): String
+  [Parameters](#cfn-glue-table-serdeinfo-parameters): Json
+  [SerializationLibrary](#cfn-glue-table-serdeinfo-serializationlibrary): String
 ```
 
 ## Properties<a name="aws-properties-glue-table-serdeinfo-properties"></a>

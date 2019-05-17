@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-gamelift-fleet-ec2inboundpermission-syntax.yaml"></a>
 
 ```
-﻿  [FromPort](#cfn-gamelift-fleet-ec2inboundpermissions-fromport) : Integer
-﻿  [IpRange](#cfn-gamelift-fleet-ec2inboundpermissions-iprange) : String
-﻿  [Protocol](#cfn-gamelift-fleet-ec2inboundpermissions-protocol) : String
-﻿  [ToPort](#cfn-gamelift-fleet-ec2inboundpermissions-toport) : Integer
+  [FromPort](#cfn-gamelift-fleet-ec2inboundpermissions-fromport): Integer
+  [IpRange](#cfn-gamelift-fleet-ec2inboundpermissions-iprange): String
+  [Protocol](#cfn-gamelift-fleet-ec2inboundpermissions-protocol): String
+  [ToPort](#cfn-gamelift-fleet-ec2inboundpermissions-toport): Integer
 ```
 
 ## Properties<a name="aws-properties-gamelift-fleet-ec2inboundpermission-properties"></a>

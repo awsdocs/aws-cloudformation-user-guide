@@ -23,12 +23,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-autoscaling-scalingpolicy-customizedmetricspecification-syntax.yaml"></a>
 
 ```
-﻿  [Dimensions](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-dimensions) : 
+  [Dimensions](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-dimensions): 
     - [MetricDimension](aws-properties-autoscaling-scalingpolicy-metricdimension.md)
-﻿  [MetricName](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-metricname) : String
-﻿  [Namespace](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-namespace) : String
-﻿  [Statistic](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-statistic) : String
-﻿  [Unit](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-unit) : String
+  [MetricName](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-metricname): String
+  [Namespace](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-namespace): String
+  [Statistic](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-statistic): String
+  [Unit](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-unit): String
 ```
 
 ## Properties<a name="aws-properties-autoscaling-scalingpolicy-customizedmetricspecification-properties"></a>

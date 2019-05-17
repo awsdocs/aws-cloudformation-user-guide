@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-coredefinition-coredefinitionversion-syntax.yaml"></a>
 
 ```
-﻿  [Cores](#cfn-greengrass-coredefinition-coredefinitionversion-cores) : 
+  [Cores](#cfn-greengrass-coredefinition-coredefinitionversion-cores): 
     - [Core](aws-properties-greengrass-coredefinition-core.md)
 ```
 

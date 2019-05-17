@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Config::AggregationAuthorization
-Properties : 
-﻿  [AuthorizedAccountId](#cfn-config-aggregationauthorization-authorizedaccountid) : String
-﻿  [AuthorizedAwsRegion](#cfn-config-aggregationauthorization-authorizedawsregion) : String
+Properties: 
+  [AuthorizedAccountId](#cfn-config-aggregationauthorization-authorizedaccountid): String
+  [AuthorizedAwsRegion](#cfn-config-aggregationauthorization-authorizedawsregion): String
 ```
 
 ## Properties<a name="aws-resource-config-aggregationauthorization-properties"></a>

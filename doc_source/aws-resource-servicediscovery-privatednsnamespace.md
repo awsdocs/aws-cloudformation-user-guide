@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceDiscovery::PrivateDnsNamespace
-Properties : 
-﻿  [Description](#cfn-servicediscovery-privatednsnamespace-description) : String
-﻿  [Name](#cfn-servicediscovery-privatednsnamespace-name) : String
-﻿  [Vpc](#cfn-servicediscovery-privatednsnamespace-vpc) : String
+Properties: 
+  [Description](#cfn-servicediscovery-privatednsnamespace-description): String
+  [Name](#cfn-servicediscovery-privatednsnamespace-name): String
+  [Vpc](#cfn-servicediscovery-privatednsnamespace-vpc): String
 ```
 
 ## Properties<a name="aws-resource-servicediscovery-privatednsnamespace-properties"></a>

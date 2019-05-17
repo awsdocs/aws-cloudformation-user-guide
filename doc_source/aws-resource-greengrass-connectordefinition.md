@@ -28,10 +28,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Greengrass::ConnectorDefinition
-Properties : 
-﻿  [InitialVersion](#cfn-greengrass-connectordefinition-initialversion) : 
+Properties: 
+  [InitialVersion](#cfn-greengrass-connectordefinition-initialversion): 
     [ConnectorDefinitionVersion](aws-properties-greengrass-connectordefinition-connectordefinitionversion.md)
-﻿  [Name](#cfn-greengrass-connectordefinition-name) : String
+  [Name](#cfn-greengrass-connectordefinition-name): String
 ```
 
 ## Properties<a name="aws-resource-greengrass-connectordefinition-properties"></a>

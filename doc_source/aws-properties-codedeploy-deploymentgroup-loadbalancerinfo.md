@@ -25,9 +25,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-loadbalancerinfo-syntax.yaml"></a>
 
 ```
-﻿  [ElbInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-elbinfolist) : 
+  [ElbInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-elbinfolist): 
     - [ELBInfo](aws-properties-codedeploy-deploymentgroup-elbinfo.md)
-﻿  [TargetGroupInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist) : 
+  [TargetGroupInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist): 
     - [TargetGroupInfo](aws-properties-codedeploy-deploymentgroup-targetgroupinfo.md)
 ```
 

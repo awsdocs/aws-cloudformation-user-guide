@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-syntax.yaml"></a>
 
 ```
-﻿  [ClientContext](#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-clientcontext) : String
-﻿  [Payload](#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-payload) : String
-﻿  [Qualifier](#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-qualifier) : String
+  [ClientContext](#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-clientcontext): String
+  [Payload](#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-payload): String
+  [Qualifier](#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-qualifier): String
 ```
 
 ## Properties<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-properties"></a>

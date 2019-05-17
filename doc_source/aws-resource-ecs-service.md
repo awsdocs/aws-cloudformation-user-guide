@@ -35,28 +35,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ECS::Service
-Properties : 
-﻿  [Cluster](#cfn-ecs-service-cluster) : String
-﻿  [DeploymentConfiguration](#cfn-ecs-service-deploymentconfiguration) : 
+Properties: 
+  [Cluster](#cfn-ecs-service-cluster): String
+  [DeploymentConfiguration](#cfn-ecs-service-deploymentconfiguration): 
     [DeploymentConfiguration](aws-properties-ecs-service-deploymentconfiguration.md)
-﻿  [DesiredCount](#cfn-ecs-service-desiredcount) : Integer
-﻿  [HealthCheckGracePeriodSeconds](#cfn-ecs-service-healthcheckgraceperiodseconds) : Integer
-﻿  [LaunchType](#cfn-ecs-service-launchtype) : String
-﻿  [LoadBalancers](#cfn-ecs-service-loadbalancers) : 
+  [DesiredCount](#cfn-ecs-service-desiredcount): Integer
+  [HealthCheckGracePeriodSeconds](#cfn-ecs-service-healthcheckgraceperiodseconds): Integer
+  [LaunchType](#cfn-ecs-service-launchtype): String
+  [LoadBalancers](#cfn-ecs-service-loadbalancers): 
     - [LoadBalancer](aws-properties-ecs-service-loadbalancers.md)
-﻿  [NetworkConfiguration](#cfn-ecs-service-networkconfiguration) : 
+  [NetworkConfiguration](#cfn-ecs-service-networkconfiguration): 
     [NetworkConfiguration](aws-properties-ecs-service-networkconfiguration.md)
-﻿  [PlacementConstraints](#cfn-ecs-service-placementconstraints) : 
+  [PlacementConstraints](#cfn-ecs-service-placementconstraints): 
     - [PlacementConstraint](aws-properties-ecs-service-placementconstraint.md)
-﻿  [PlacementStrategies](#cfn-ecs-service-placementstrategies) : 
+  [PlacementStrategies](#cfn-ecs-service-placementstrategies): 
     - [PlacementStrategy](aws-properties-ecs-service-placementstrategy.md)
-﻿  [PlatformVersion](#cfn-ecs-service-platformversion) : String
-﻿  [Role](#cfn-ecs-service-role) : String
-﻿  [SchedulingStrategy](#cfn-ecs-service-schedulingstrategy) : String
-﻿  [ServiceName](#cfn-ecs-service-servicename) : String
-﻿  [ServiceRegistries](#cfn-ecs-service-serviceregistries) : 
+  [PlatformVersion](#cfn-ecs-service-platformversion): String
+  [Role](#cfn-ecs-service-role): String
+  [SchedulingStrategy](#cfn-ecs-service-schedulingstrategy): String
+  [ServiceName](#cfn-ecs-service-servicename): String
+  [ServiceRegistries](#cfn-ecs-service-serviceregistries): 
     - [ServiceRegistry](aws-properties-ecs-service-serviceregistry.md)
-﻿  [TaskDefinition](#cfn-ecs-service-taskdefinition) : String
+  [TaskDefinition](#cfn-ecs-service-taskdefinition): String
 ```
 
 ## Properties<a name="aws-resource-ecs-service-properties"></a>

@@ -21,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-kerberosattributes-syntax.yaml"></a>
 
 ```
-﻿  [ADDomainJoinPassword](#cfn-elasticmapreduce-cluster-kerberosattributes-addomainjoinpassword) : String
-﻿  [ADDomainJoinUser](#cfn-elasticmapreduce-cluster-kerberosattributes-addomainjoinuser) : String
-﻿  [CrossRealmTrustPrincipalPassword](#cfn-elasticmapreduce-cluster-kerberosattributes-crossrealmtrustprincipalpassword) : String
-﻿  [KdcAdminPassword](#cfn-elasticmapreduce-cluster-kerberosattributes-kdcadminpassword) : String
-﻿  [Realm](#cfn-elasticmapreduce-cluster-kerberosattributes-realm) : String
+  [ADDomainJoinPassword](#cfn-elasticmapreduce-cluster-kerberosattributes-addomainjoinpassword): String
+  [ADDomainJoinUser](#cfn-elasticmapreduce-cluster-kerberosattributes-addomainjoinuser): String
+  [CrossRealmTrustPrincipalPassword](#cfn-elasticmapreduce-cluster-kerberosattributes-crossrealmtrustprincipalpassword): String
+  [KdcAdminPassword](#cfn-elasticmapreduce-cluster-kerberosattributes-kdcadminpassword): String
+  [Realm](#cfn-elasticmapreduce-cluster-kerberosattributes-realm): String
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-kerberosattributes-properties"></a>

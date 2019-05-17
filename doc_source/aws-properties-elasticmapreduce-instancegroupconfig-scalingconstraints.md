@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-instancegroupconfig-scalingconstraints-syntax.yaml"></a>
 
 ```
-﻿  [MaxCapacity](#cfn-elasticmapreduce-instancegroupconfig-scalingconstraints-maxcapacity) : Integer
-﻿  [MinCapacity](#cfn-elasticmapreduce-instancegroupconfig-scalingconstraints-mincapacity) : Integer
+  [MaxCapacity](#cfn-elasticmapreduce-instancegroupconfig-scalingconstraints-maxcapacity): Integer
+  [MinCapacity](#cfn-elasticmapreduce-instancegroupconfig-scalingconstraints-mincapacity): Integer
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-instancegroupconfig-scalingconstraints-properties"></a>

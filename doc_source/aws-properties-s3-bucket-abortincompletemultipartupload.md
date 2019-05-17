@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-abortincompletemultipartupload-syntax.yaml"></a>
 
 ```
-﻿  [DaysAfterInitiation](#cfn-s3-bucket-abortincompletemultipartupload-daysafterinitiation) : Integer
+  [DaysAfterInitiation](#cfn-s3-bucket-abortincompletemultipartupload-daysafterinitiation): Integer
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-abortincompletemultipartupload-properties"></a>

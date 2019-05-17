@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::Deployment
-Properties : 
-﻿  [DeploymentCanarySettings](#cfn-apigateway-deployment-deploymentcanarysettings) : 
+Properties: 
+  [DeploymentCanarySettings](#cfn-apigateway-deployment-deploymentcanarysettings): 
     [DeploymentCanarySettings](aws-properties-apigateway-deployment-deploymentcanarysettings.md)
-﻿  [Description](#cfn-apigateway-deployment-description) : String
-﻿  [RestApiId](#cfn-apigateway-deployment-restapiid) : String
-﻿  [StageDescription](#cfn-apigateway-deployment-stagedescription) : 
+  [Description](#cfn-apigateway-deployment-description): String
+  [RestApiId](#cfn-apigateway-deployment-restapiid): String
+  [StageDescription](#cfn-apigateway-deployment-stagedescription): 
     [StageDescription](aws-properties-apigateway-deployment-stagedescription.md)
-﻿  [StageName](#cfn-apigateway-deployment-stagename) : String
+  [StageName](#cfn-apigateway-deployment-stagename): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-deployment-properties"></a>

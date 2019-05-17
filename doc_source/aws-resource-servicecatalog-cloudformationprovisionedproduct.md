@@ -34,19 +34,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceCatalog::CloudFormationProvisionedProduct
-Properties : 
-﻿  [AcceptLanguage](#cfn-servicecatalog-cloudformationprovisionedproduct-acceptlanguage) : String
-﻿  [NotificationArns](#cfn-servicecatalog-cloudformationprovisionedproduct-notificationarns) : 
+Properties: 
+  [AcceptLanguage](#cfn-servicecatalog-cloudformationprovisionedproduct-acceptlanguage): String
+  [NotificationArns](#cfn-servicecatalog-cloudformationprovisionedproduct-notificationarns): 
     - String
-﻿  [PathId](#cfn-servicecatalog-cloudformationprovisionedproduct-pathid) : String
-﻿  [ProductId](#cfn-servicecatalog-cloudformationprovisionedproduct-productid) : String
-﻿  [ProductName](#cfn-servicecatalog-cloudformationprovisionedproduct-productname) : String
-﻿  [ProvisionedProductName](#cfn-servicecatalog-cloudformationprovisionedproduct-provisionedproductname) : String
-﻿  [ProvisioningArtifactId](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactid) : String
-﻿  [ProvisioningArtifactName](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactname) : String
-﻿  [ProvisioningParameters](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameters) : 
+  [PathId](#cfn-servicecatalog-cloudformationprovisionedproduct-pathid): String
+  [ProductId](#cfn-servicecatalog-cloudformationprovisionedproduct-productid): String
+  [ProductName](#cfn-servicecatalog-cloudformationprovisionedproduct-productname): String
+  [ProvisionedProductName](#cfn-servicecatalog-cloudformationprovisionedproduct-provisionedproductname): String
+  [ProvisioningArtifactId](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactid): String
+  [ProvisioningArtifactName](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactname): String
+  [ProvisioningParameters](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameters): 
     - [ProvisioningParameter](aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter.md)
-﻿  [Tags](#cfn-servicecatalog-cloudformationprovisionedproduct-tags) : 
+  [Tags](#cfn-servicecatalog-cloudformationprovisionedproduct-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

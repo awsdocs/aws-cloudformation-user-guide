@@ -24,8 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SDB::Domain
-Properties : 
-﻿  [Description](#cfn-sdb-domain-description) : String
+Properties: 
+  [Description](#cfn-sdb-domain-description): String
 ```
 
 ## Properties<a name="aws-properties-simpledb-properties"></a>

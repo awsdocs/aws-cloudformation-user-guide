@@ -23,17 +23,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticloadbalancingv2-listenerrule-actions-syntax.yaml"></a>
 
 ```
-﻿  [AuthenticateCognitoConfig](#cfn-elasticloadbalancingv2-listenerrule-action-authenticatecognitoconfig) : 
+  [AuthenticateCognitoConfig](#cfn-elasticloadbalancingv2-listenerrule-action-authenticatecognitoconfig): 
     [AuthenticateCognitoConfig](aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.md)
-﻿  [AuthenticateOidcConfig](#cfn-elasticloadbalancingv2-listenerrule-action-authenticateoidcconfig) : 
+  [AuthenticateOidcConfig](#cfn-elasticloadbalancingv2-listenerrule-action-authenticateoidcconfig): 
     [AuthenticateOidcConfig](aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.md)
-﻿  [FixedResponseConfig](#cfn-elasticloadbalancingv2-listenerrule-action-fixedresponseconfig) : 
+  [FixedResponseConfig](#cfn-elasticloadbalancingv2-listenerrule-action-fixedresponseconfig): 
     [FixedResponseConfig](aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.md)
-﻿  [Order](#cfn-elasticloadbalancingv2-listenerrule-action-order) : Integer
-﻿  [RedirectConfig](#cfn-elasticloadbalancingv2-listenerrule-action-redirectconfig) : 
+  [Order](#cfn-elasticloadbalancingv2-listenerrule-action-order): Integer
+  [RedirectConfig](#cfn-elasticloadbalancingv2-listenerrule-action-redirectconfig): 
     [RedirectConfig](aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.md)
-﻿  [TargetGroupArn](#cfn-elasticloadbalancingv2-listener-actions-targetgrouparn) : String
-﻿  [Type](#cfn-elasticloadbalancingv2-listener-actions-type) : String
+  [TargetGroupArn](#cfn-elasticloadbalancingv2-listener-actions-targetgrouparn): String
+  [Type](#cfn-elasticloadbalancingv2-listener-actions-type): String
 ```
 
 ## Properties<a name="aws-properties-elasticloadbalancingv2-listenerrule-actions-properties"></a>

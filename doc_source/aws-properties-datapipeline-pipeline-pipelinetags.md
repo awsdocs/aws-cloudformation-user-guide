@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-datapipeline-pipeline-pipelinetags-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-datapipeline-pipeline-pipelinetags-key) : String
-﻿  [Value](#cfn-datapipeline-pipeline-pipelinetags-value) : String
+  [Key](#cfn-datapipeline-pipeline-pipelinetags-key): String
+  [Value](#cfn-datapipeline-pipeline-pipelinetags-value): String
 ```
 
 ## Properties<a name="aws-properties-datapipeline-pipeline-pipelinetags-properties"></a>

@@ -29,10 +29,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SecretsManager::SecretTargetAttachment
-Properties : 
-﻿  [SecretId](#cfn-secretsmanager-secrettargetattachment-secretid) : String
-﻿  [TargetId](#cfn-secretsmanager-secrettargetattachment-targetid) : String
-﻿  [TargetType](#cfn-secretsmanager-secrettargetattachment-targettype) : String
+Properties: 
+  [SecretId](#cfn-secretsmanager-secrettargetattachment-secretid): String
+  [TargetId](#cfn-secretsmanager-secrettargetattachment-targetid): String
+  [TargetType](#cfn-secretsmanager-secrettargetattachment-targettype): String
 ```
 
 ## Properties<a name="aws-resource-secretsmanager-secrettargetattachment-properties"></a>

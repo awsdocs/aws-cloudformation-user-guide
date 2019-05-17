@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ssm-association-target-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-ssm-association-target-key) : String
-﻿  [Values](#cfn-ssm-association-target-values) : 
+  [Key](#cfn-ssm-association-target-key): String
+  [Values](#cfn-ssm-association-target-values): 
     - String
 ```
 

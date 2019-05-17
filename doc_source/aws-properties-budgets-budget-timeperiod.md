@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-budgets-budget-timeperiod-syntax.yaml"></a>
 
 ```
-﻿  [End](#cfn-budgets-budget-timeperiod-end) : String
-﻿  [Start](#cfn-budgets-budget-timeperiod-start) : String
+  [End](#cfn-budgets-budget-timeperiod-end): String
+  [Start](#cfn-budgets-budget-timeperiod-start): String
 ```
 
 ## Properties<a name="aws-properties-budgets-budget-timeperiod-properties"></a>

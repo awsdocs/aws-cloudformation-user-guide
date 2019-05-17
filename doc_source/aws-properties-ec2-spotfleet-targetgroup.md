@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-spotfleet-targetgroup-syntax.yaml"></a>
 
 ```
-﻿  [Arn](#cfn-ec2-spotfleet-targetgroup-arn) : String
+  [Arn](#cfn-ec2-spotfleet-targetgroup-arn): String
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-targetgroup-properties"></a>

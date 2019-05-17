@@ -27,18 +27,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RoboMaker::SimulationApplication
-Properties : 
-﻿  [CurrentRevisionId](#cfn-robomaker-simulationapplication-currentrevisionid) : String
-﻿  [Name](#cfn-robomaker-simulationapplication-name) : String
-﻿  [RenderingEngine](#cfn-robomaker-simulationapplication-renderingengine) : 
+Properties: 
+  [CurrentRevisionId](#cfn-robomaker-simulationapplication-currentrevisionid): String
+  [Name](#cfn-robomaker-simulationapplication-name): String
+  [RenderingEngine](#cfn-robomaker-simulationapplication-renderingengine): 
     [RenderingEngine](aws-properties-robomaker-simulationapplication-renderingengine.md)
-﻿  [RobotSoftwareSuite](#cfn-robomaker-simulationapplication-robotsoftwaresuite) : 
+  [RobotSoftwareSuite](#cfn-robomaker-simulationapplication-robotsoftwaresuite): 
     [RobotSoftwareSuite](aws-properties-robomaker-simulationapplication-robotsoftwaresuite.md)
-﻿  [SimulationSoftwareSuite](#cfn-robomaker-simulationapplication-simulationsoftwaresuite) : 
+  [SimulationSoftwareSuite](#cfn-robomaker-simulationapplication-simulationsoftwaresuite): 
     [SimulationSoftwareSuite](aws-properties-robomaker-simulationapplication-simulationsoftwaresuite.md)
-﻿  [Sources](#cfn-robomaker-simulationapplication-sources) : 
+  [Sources](#cfn-robomaker-simulationapplication-sources): 
     - [SourceConfig](aws-properties-robomaker-simulationapplication-sourceconfig.md)
-﻿  [Tags](#cfn-robomaker-simulationapplication-tags) : Json
+  [Tags](#cfn-robomaker-simulationapplication-tags): Json
 ```
 
 ## Properties<a name="aws-resource-robomaker-simulationapplication-properties"></a>

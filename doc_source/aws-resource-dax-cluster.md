@@ -33,23 +33,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DAX::Cluster
-Properties : 
-﻿  [AvailabilityZones](#cfn-dax-cluster-availabilityzones) : 
+Properties: 
+  [AvailabilityZones](#cfn-dax-cluster-availabilityzones): 
     - String
-﻿  [ClusterName](#cfn-dax-cluster-clustername) : String
-﻿  [Description](#cfn-dax-cluster-description) : String
-﻿  [IAMRoleARN](#cfn-dax-cluster-iamrolearn) : String
-﻿  [NodeType](#cfn-dax-cluster-nodetype) : String
-﻿  [NotificationTopicARN](#cfn-dax-cluster-notificationtopicarn) : String
-﻿  [ParameterGroupName](#cfn-dax-cluster-parametergroupname) : String
-﻿  [PreferredMaintenanceWindow](#cfn-dax-cluster-preferredmaintenancewindow) : String
-﻿  [ReplicationFactor](#cfn-dax-cluster-replicationfactor) : Integer
-﻿  [SSESpecification](#cfn-dax-cluster-ssespecification) : 
+  [ClusterName](#cfn-dax-cluster-clustername): String
+  [Description](#cfn-dax-cluster-description): String
+  [IAMRoleARN](#cfn-dax-cluster-iamrolearn): String
+  [NodeType](#cfn-dax-cluster-nodetype): String
+  [NotificationTopicARN](#cfn-dax-cluster-notificationtopicarn): String
+  [ParameterGroupName](#cfn-dax-cluster-parametergroupname): String
+  [PreferredMaintenanceWindow](#cfn-dax-cluster-preferredmaintenancewindow): String
+  [ReplicationFactor](#cfn-dax-cluster-replicationfactor): Integer
+  [SSESpecification](#cfn-dax-cluster-ssespecification): 
     [SSESpecification](aws-properties-dax-cluster-ssespecification.md)
-﻿  [SecurityGroupIds](#cfn-dax-cluster-securitygroupids) : 
+  [SecurityGroupIds](#cfn-dax-cluster-securitygroupids): 
     - String
-﻿  [SubnetGroupName](#cfn-dax-cluster-subnetgroupname) : String
-﻿  [Tags](#cfn-dax-cluster-tags) : Json
+  [SubnetGroupName](#cfn-dax-cluster-subnetgroupname): String
+  [Tags](#cfn-dax-cluster-tags): Json
 ```
 
 ## Properties<a name="aws-resource-dax-cluster-properties"></a>

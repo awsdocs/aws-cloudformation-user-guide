@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ses-receiptrule-stopaction-syntax.yaml"></a>
 
 ```
-﻿  [Scope](#cfn-ses-receiptrule-stopaction-scope) : String
-﻿  [TopicArn](#cfn-ses-receiptrule-stopaction-topicarn) : String
+  [Scope](#cfn-ses-receiptrule-stopaction-scope): String
+  [TopicArn](#cfn-ses-receiptrule-stopaction-topicarn): String
 ```
 
 ## Properties<a name="aws-properties-ses-receiptrule-stopaction-properties"></a>

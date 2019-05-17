@@ -21,12 +21,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticache-replicationgroup-nodegroupconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [NodeGroupId](#cfn-elasticache-replicationgroup-nodegroupconfiguration-nodegroupid) : String
-﻿  [PrimaryAvailabilityZone](#cfn-elasticache-replicationgroup-nodegroupconfiguration-primaryavailabilityzone) : String
-﻿  [ReplicaAvailabilityZones](#cfn-elasticache-replicationgroup-nodegroupconfiguration-replicaavailabilityzones) : 
+  [NodeGroupId](#cfn-elasticache-replicationgroup-nodegroupconfiguration-nodegroupid): String
+  [PrimaryAvailabilityZone](#cfn-elasticache-replicationgroup-nodegroupconfiguration-primaryavailabilityzone): String
+  [ReplicaAvailabilityZones](#cfn-elasticache-replicationgroup-nodegroupconfiguration-replicaavailabilityzones): 
     - String
-﻿  [ReplicaCount](#cfn-elasticache-replicationgroup-nodegroupconfiguration-replicacount) : Integer
-﻿  [Slots](#cfn-elasticache-replicationgroup-nodegroupconfiguration-slots) : String
+  [ReplicaCount](#cfn-elasticache-replicationgroup-nodegroupconfiguration-replicacount): Integer
+  [Slots](#cfn-elasticache-replicationgroup-nodegroupconfiguration-slots): String
 ```
 
 ## Properties<a name="aws-properties-elasticache-replicationgroup-nodegroupconfiguration-properties"></a>

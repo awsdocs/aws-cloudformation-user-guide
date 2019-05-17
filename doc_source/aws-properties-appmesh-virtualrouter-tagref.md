@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-virtualrouter-tagref-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-appmesh-virtualrouter-tagref-key) : String
-﻿  [Value](#cfn-appmesh-virtualrouter-tagref-value) : String
+  [Key](#cfn-appmesh-virtualrouter-tagref-key): String
+  [Value](#cfn-appmesh-virtualrouter-tagref-value): String
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualrouter-tagref-properties"></a>

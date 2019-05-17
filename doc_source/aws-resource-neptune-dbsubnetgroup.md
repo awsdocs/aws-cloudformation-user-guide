@@ -24,12 +24,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Neptune::DBSubnetGroup
-Properties : 
-﻿  [DBSubnetGroupDescription](#cfn-neptune-dbsubnetgroup-dbsubnetgroupdescription) : String
-﻿  [DBSubnetGroupName](#cfn-neptune-dbsubnetgroup-dbsubnetgroupname) : String
-﻿  [SubnetIds](#cfn-neptune-dbsubnetgroup-subnetids) : 
+Properties: 
+  [DBSubnetGroupDescription](#cfn-neptune-dbsubnetgroup-dbsubnetgroupdescription): String
+  [DBSubnetGroupName](#cfn-neptune-dbsubnetgroup-dbsubnetgroupname): String
+  [SubnetIds](#cfn-neptune-dbsubnetgroup-subnetids): 
     - String
-﻿  [Tags](#cfn-neptune-dbsubnetgroup-tags) : 
+  [Tags](#cfn-neptune-dbsubnetgroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

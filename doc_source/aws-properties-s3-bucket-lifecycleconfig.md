@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-lifecycleconfig-syntax.yaml"></a>
 
 ```
-﻿  [Rules](#cfn-s3-bucket-lifecycleconfig-rules) : 
+  [Rules](#cfn-s3-bucket-lifecycleconfig-rules): 
     - [Rule](aws-properties-s3-bucket-lifecycleconfig-rule.md)
 ```
 

@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-taskdefinition-device-syntax.yaml"></a>
 
 ```
-﻿  [ContainerPath](#cfn-ecs-taskdefinition-device-containerpath) : String
-﻿  [HostPath](#cfn-ecs-taskdefinition-device-hostpath) : String
-﻿  [Permissions](#cfn-ecs-taskdefinition-device-permissions) : 
+  [ContainerPath](#cfn-ecs-taskdefinition-device-containerpath): String
+  [HostPath](#cfn-ecs-taskdefinition-device-hostpath): String
+  [Permissions](#cfn-ecs-taskdefinition-device-permissions): 
     - String
 ```
 

@@ -29,17 +29,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DMS::ReplicationTask
-Properties : 
-﻿  [CdcStartTime](#cfn-dms-replicationtask-cdcstarttime) : Double
-﻿  [MigrationType](#cfn-dms-replicationtask-migrationtype) : String
-﻿  [ReplicationInstanceArn](#cfn-dms-replicationtask-replicationinstancearn) : String
-﻿  [ReplicationTaskIdentifier](#cfn-dms-replicationtask-replicationtaskidentifier) : String
-﻿  [ReplicationTaskSettings](#cfn-dms-replicationtask-replicationtasksettings) : String
-﻿  [SourceEndpointArn](#cfn-dms-replicationtask-sourceendpointarn) : String
-﻿  [TableMappings](#cfn-dms-replicationtask-tablemappings) : String
-﻿  [Tags](#cfn-dms-replicationtask-tags) : 
+Properties: 
+  [CdcStartTime](#cfn-dms-replicationtask-cdcstarttime): Double
+  [MigrationType](#cfn-dms-replicationtask-migrationtype): String
+  [ReplicationInstanceArn](#cfn-dms-replicationtask-replicationinstancearn): String
+  [ReplicationTaskIdentifier](#cfn-dms-replicationtask-replicationtaskidentifier): String
+  [ReplicationTaskSettings](#cfn-dms-replicationtask-replicationtasksettings): String
+  [SourceEndpointArn](#cfn-dms-replicationtask-sourceendpointarn): String
+  [TableMappings](#cfn-dms-replicationtask-tablemappings): String
+  [Tags](#cfn-dms-replicationtask-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [TargetEndpointArn](#cfn-dms-replicationtask-targetendpointarn) : String
+  [TargetEndpointArn](#cfn-dms-replicationtask-targetendpointarn): String
 ```
 
 ## Properties<a name="aws-resource-dms-replicationtask-properties"></a>

@@ -27,12 +27,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Lambda::Alias
-Properties : 
-﻿  [Description](#cfn-lambda-alias-description) : String
-﻿  [FunctionName](#cfn-lambda-alias-functionname) : String
-﻿  [FunctionVersion](#cfn-lambda-alias-functionversion) : String
-﻿  [Name](#cfn-lambda-alias-name) : String
-﻿  [RoutingConfig](#cfn-lambda-alias-routingconfig) : 
+Properties: 
+  [Description](#cfn-lambda-alias-description): String
+  [FunctionName](#cfn-lambda-alias-functionname): String
+  [FunctionVersion](#cfn-lambda-alias-functionversion): String
+  [Name](#cfn-lambda-alias-name): String
+  [RoutingConfig](#cfn-lambda-alias-routingconfig): 
     [AliasRoutingConfiguration](aws-properties-lambda-alias-aliasroutingconfiguration.md)
 ```
 

@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Athena::NamedQuery
-Properties : 
-﻿  [Database](#cfn-athena-namedquery-database) : String
-﻿  [Description](#cfn-athena-namedquery-description) : String
-﻿  [Name](#cfn-athena-namedquery-name) : String
-﻿  [QueryString](#cfn-athena-namedquery-querystring) : 
+Properties: 
+  [Database](#cfn-athena-namedquery-database): String
+  [Description](#cfn-athena-namedquery-description): String
+  [Name](#cfn-athena-namedquery-name): String
+  [QueryString](#cfn-athena-namedquery-querystring): 
     String
 ```
 

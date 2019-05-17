@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPCDHCPOptionsAssociation
-Properties : 
-﻿  [DhcpOptionsId](#cfn-ec2-vpcdhcpoptionsassociation-dhcpoptionsid) : String
-﻿  [VpcId](#cfn-ec2-vpcdhcpoptionsassociation-vpcid) : String
+Properties: 
+  [DhcpOptionsId](#cfn-ec2-vpcdhcpoptionsassociation-dhcpoptionsid): String
+  [VpcId](#cfn-ec2-vpcdhcpoptionsassociation-vpcid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-vpc-dhcp-options-assoc-properties"></a>

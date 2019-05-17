@@ -25,15 +25,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::UsagePlan
-Properties : 
-﻿  [ApiStages](#cfn-apigateway-usageplan-apistages) : 
+Properties: 
+  [ApiStages](#cfn-apigateway-usageplan-apistages): 
     - [ApiStage](aws-properties-apigateway-usageplan-apistage.md)
-﻿  [Description](#cfn-apigateway-usageplan-description) : String
-﻿  [Quota](#cfn-apigateway-usageplan-quota) : 
+  [Description](#cfn-apigateway-usageplan-description): String
+  [Quota](#cfn-apigateway-usageplan-quota): 
     [QuotaSettings](aws-properties-apigateway-usageplan-quotasettings.md)
-﻿  [Throttle](#cfn-apigateway-usageplan-throttle) : 
+  [Throttle](#cfn-apigateway-usageplan-throttle): 
     [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)
-﻿  [UsagePlanName](#cfn-apigateway-usageplan-usageplanname) : String
+  [UsagePlanName](#cfn-apigateway-usageplan-usageplanname): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-usageplan-properties"></a>

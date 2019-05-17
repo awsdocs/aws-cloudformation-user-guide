@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppSync::GraphQLApi
-Properties : 
-﻿  [AuthenticationType](#cfn-appsync-graphqlapi-authenticationtype) : String
-﻿  [LogConfig](#cfn-appsync-graphqlapi-logconfig) : 
+Properties: 
+  [AuthenticationType](#cfn-appsync-graphqlapi-authenticationtype): String
+  [LogConfig](#cfn-appsync-graphqlapi-logconfig): 
     [LogConfig](aws-properties-appsync-graphqlapi-logconfig.md)
-﻿  [Name](#cfn-appsync-graphqlapi-name) : String
-﻿  [OpenIDConnectConfig](#cfn-appsync-graphqlapi-openidconnectconfig) : 
+  [Name](#cfn-appsync-graphqlapi-name): String
+  [OpenIDConnectConfig](#cfn-appsync-graphqlapi-openidconnectconfig): 
     [OpenIDConnectConfig](aws-properties-appsync-graphqlapi-openidconnectconfig.md)
-﻿  [UserPoolConfig](#cfn-appsync-graphqlapi-userpoolconfig) : 
+  [UserPoolConfig](#cfn-appsync-graphqlapi-userpoolconfig): 
     [UserPoolConfig](aws-properties-appsync-graphqlapi-userpoolconfig.md)
 ```
 

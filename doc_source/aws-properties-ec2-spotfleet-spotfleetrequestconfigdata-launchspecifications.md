@@ -33,30 +33,30 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-syntax.yaml"></a>
 
 ```
-﻿  [BlockDeviceMappings](#cfn-ec2-spotfleet-spotfleetlaunchspecification-blockdevicemappings) : 
+  [BlockDeviceMappings](#cfn-ec2-spotfleet-spotfleetlaunchspecification-blockdevicemappings): 
     - [BlockDeviceMapping](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.md)
-﻿  [EbsOptimized](#cfn-ec2-spotfleet-spotfleetlaunchspecification-ebsoptimized) : Boolean
-﻿  [IamInstanceProfile](#cfn-ec2-spotfleet-spotfleetlaunchspecification-iaminstanceprofile) : 
+  [EbsOptimized](#cfn-ec2-spotfleet-spotfleetlaunchspecification-ebsoptimized): Boolean
+  [IamInstanceProfile](#cfn-ec2-spotfleet-spotfleetlaunchspecification-iaminstanceprofile): 
     [IamInstanceProfileSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile.md)
-﻿  [ImageId](#cfn-ec2-spotfleet-spotfleetlaunchspecification-imageid) : String
-﻿  [InstanceType](#cfn-ec2-spotfleet-spotfleetlaunchspecification-instancetype) : String
-﻿  [KernelId](#cfn-ec2-spotfleet-spotfleetlaunchspecification-kernelid) : String
-﻿  [KeyName](#cfn-ec2-spotfleet-spotfleetlaunchspecification-keyname) : String
-﻿  [Monitoring](#cfn-ec2-spotfleet-spotfleetlaunchspecification-monitoring) : 
+  [ImageId](#cfn-ec2-spotfleet-spotfleetlaunchspecification-imageid): String
+  [InstanceType](#cfn-ec2-spotfleet-spotfleetlaunchspecification-instancetype): String
+  [KernelId](#cfn-ec2-spotfleet-spotfleetlaunchspecification-kernelid): String
+  [KeyName](#cfn-ec2-spotfleet-spotfleetlaunchspecification-keyname): String
+  [Monitoring](#cfn-ec2-spotfleet-spotfleetlaunchspecification-monitoring): 
     [SpotFleetMonitoring](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring.md)
-﻿  [NetworkInterfaces](#cfn-ec2-spotfleet-spotfleetlaunchspecification-networkinterfaces) : 
+  [NetworkInterfaces](#cfn-ec2-spotfleet-spotfleetlaunchspecification-networkinterfaces): 
     - [InstanceNetworkInterfaceSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.md)
-﻿  [Placement](#cfn-ec2-spotfleet-spotfleetlaunchspecification-placement) : 
+  [Placement](#cfn-ec2-spotfleet-spotfleetlaunchspecification-placement): 
     [SpotPlacement](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.md)
-﻿  [RamdiskId](#cfn-ec2-spotfleet-spotfleetlaunchspecification-ramdiskid) : String
-﻿  [SecurityGroups](#cfn-ec2-spotfleet-spotfleetlaunchspecification-securitygroups) : 
+  [RamdiskId](#cfn-ec2-spotfleet-spotfleetlaunchspecification-ramdiskid): String
+  [SecurityGroups](#cfn-ec2-spotfleet-spotfleetlaunchspecification-securitygroups): 
     - [GroupIdentifier](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups.md)
-﻿  [SpotPrice](#cfn-ec2-spotfleet-spotfleetlaunchspecification-spotprice) : String
-﻿  [SubnetId](#cfn-ec2-spotfleet-spotfleetlaunchspecification-subnetid) : String
-﻿  [TagSpecifications](#cfn-ec2-spotfleet-spotfleetlaunchspecification-tagspecifications) : 
+  [SpotPrice](#cfn-ec2-spotfleet-spotfleetlaunchspecification-spotprice): String
+  [SubnetId](#cfn-ec2-spotfleet-spotfleetlaunchspecification-subnetid): String
+  [TagSpecifications](#cfn-ec2-spotfleet-spotfleetlaunchspecification-tagspecifications): 
     - [SpotFleetTagSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications.md)
-﻿  [UserData](#cfn-ec2-spotfleet-spotfleetlaunchspecification-userdata) : String
-﻿  [WeightedCapacity](#cfn-ec2-spotfleet-spotfleetlaunchspecification-weightedcapacity) : Double
+  [UserData](#cfn-ec2-spotfleet-spotfleetlaunchspecification-userdata): String
+  [WeightedCapacity](#cfn-ec2-spotfleet-spotfleetlaunchspecification-weightedcapacity): Double
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-properties"></a>

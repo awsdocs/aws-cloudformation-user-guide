@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-dataset-variable-datasetcontentversionvalue-syntax.yaml"></a>
 
 ```
-﻿  [DatasetName](#cfn-iotanalytics-dataset-variable-datasetcontentversionvalue-datasetname) : String
+  [DatasetName](#cfn-iotanalytics-dataset-variable-datasetcontentversionvalue-datasetname): String
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-dataset-variable-datasetcontentversionvalue-properties"></a>

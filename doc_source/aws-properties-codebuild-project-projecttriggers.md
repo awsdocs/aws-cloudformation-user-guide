@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-projecttriggers-syntax.yaml"></a>
 
 ```
-﻿  [FilterGroups](#cfn-codebuild-project-projecttriggers-filtergroups) : 
+  [FilterGroups](#cfn-codebuild-project-projecttriggers-filtergroups): 
     - [FilterGroup](aws-properties-codebuild-project-filtergroup.md)
-﻿  [Webhook](#cfn-codebuild-project-projecttriggers-webhook) : Boolean
+  [Webhook](#cfn-codebuild-project-projecttriggers-webhook): Boolean
 ```
 
 ## Properties<a name="aws-properties-codebuild-project-projecttriggers-properties"></a>

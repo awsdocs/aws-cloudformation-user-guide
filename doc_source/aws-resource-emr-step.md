@@ -24,12 +24,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EMR::Step
-Properties : 
-﻿  [ActionOnFailure](#cfn-elasticmapreduce-step-actiononfailure) : String
-﻿  [HadoopJarStep](#cfn-elasticmapreduce-step-hadoopjarstep) : 
+Properties: 
+  [ActionOnFailure](#cfn-elasticmapreduce-step-actiononfailure): String
+  [HadoopJarStep](#cfn-elasticmapreduce-step-hadoopjarstep): 
     [HadoopJarStepConfig](aws-properties-elasticmapreduce-step-hadoopjarstepconfig.md)
-﻿  [JobFlowId](#cfn-elasticmapreduce-step-jobflowid) : String
-﻿  [Name](#cfn-elasticmapreduce-step-name) : String
+  [JobFlowId](#cfn-elasticmapreduce-step-jobflowid): String
+  [Name](#cfn-elasticmapreduce-step-name): String
 ```
 
 ## Properties<a name="aws-resource-emr-step-properties"></a>

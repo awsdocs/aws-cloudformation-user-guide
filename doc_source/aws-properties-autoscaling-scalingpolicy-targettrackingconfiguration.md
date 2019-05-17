@@ -22,12 +22,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [CustomizedMetricSpecification](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-customizedmetricspecification) : 
+  [CustomizedMetricSpecification](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-customizedmetricspecification): 
     [CustomizedMetricSpecification](aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.md)
-﻿  [DisableScaleIn](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-disablescalein) : Boolean
-﻿  [PredefinedMetricSpecification](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-predefinedmetricspecification) : 
+  [DisableScaleIn](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-disablescalein): Boolean
+  [PredefinedMetricSpecification](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-predefinedmetricspecification): 
     [PredefinedMetricSpecification](aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification.md)
-﻿  [TargetValue](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-targetvalue) : Double
+  [TargetValue](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-targetvalue): Double
 ```
 
 ## Properties<a name="aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration-properties"></a>

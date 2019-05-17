@@ -29,18 +29,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IAM::User
-Properties : 
-﻿  [Groups](#cfn-iam-user-groups) : 
+Properties: 
+  [Groups](#cfn-iam-user-groups): 
     - String
-﻿  [LoginProfile](#cfn-iam-user-loginprofile) : 
+  [LoginProfile](#cfn-iam-user-loginprofile): 
     [LoginProfile](aws-properties-iam-user-loginprofile.md)
-﻿  [ManagedPolicyArns](#cfn-iam-user-managepolicyarns) : 
+  [ManagedPolicyArns](#cfn-iam-user-managepolicyarns): 
     - String
-﻿  [Path](#cfn-iam-user-path) : String
-﻿  [PermissionsBoundary](#cfn-iam-user-permissionsboundary) : String
-﻿  [Policies](#cfn-iam-user-policies) : 
+  [Path](#cfn-iam-user-path): String
+  [PermissionsBoundary](#cfn-iam-user-permissionsboundary): String
+  [Policies](#cfn-iam-user-policies): 
     - [Policy](aws-properties-iam-policy-2.md)
-﻿  [UserName](#cfn-iam-user-username) : String
+  [UserName](#cfn-iam-user-username): String
 ```
 
 ## Properties<a name="aws-properties-iam-user-properties"></a>

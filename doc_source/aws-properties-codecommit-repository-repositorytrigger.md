@@ -21,13 +21,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codecommit-repository-repositorytrigger-syntax.yaml"></a>
 
 ```
-﻿  [Branches](#cfn-codecommit-repository-repositorytrigger-branches) : 
+  [Branches](#cfn-codecommit-repository-repositorytrigger-branches): 
     - String
-﻿  [CustomData](#cfn-codecommit-repository-repositorytrigger-customdata) : String
-﻿  [DestinationArn](#cfn-codecommit-repository-repositorytrigger-destinationarn) : String
-﻿  [Events](#cfn-codecommit-repository-repositorytrigger-events) : 
+  [CustomData](#cfn-codecommit-repository-repositorytrigger-customdata): String
+  [DestinationArn](#cfn-codecommit-repository-repositorytrigger-destinationarn): String
+  [Events](#cfn-codecommit-repository-repositorytrigger-events): 
     - String
-﻿  [Name](#cfn-codecommit-repository-repositorytrigger-name) : String
+  [Name](#cfn-codecommit-repository-repositorytrigger-name): String
 ```
 
 ## Properties<a name="aws-properties-codecommit-repository-repositorytrigger-properties"></a>

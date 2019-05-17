@@ -22,16 +22,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-cors-corsrule-syntax.yaml"></a>
 
 ```
-﻿  [AllowedHeaders](#cfn-s3-bucket-cors-corsrule-allowedheaders) : 
+  [AllowedHeaders](#cfn-s3-bucket-cors-corsrule-allowedheaders): 
     - String
-﻿  [AllowedMethods](#cfn-s3-bucket-cors-corsrule-allowedmethods) : 
+  [AllowedMethods](#cfn-s3-bucket-cors-corsrule-allowedmethods): 
     - String
-﻿  [AllowedOrigins](#cfn-s3-bucket-cors-corsrule-allowedorigins) : 
+  [AllowedOrigins](#cfn-s3-bucket-cors-corsrule-allowedorigins): 
     - String
-﻿  [ExposedHeaders](#cfn-s3-bucket-cors-corsrule-exposedheaders) : 
+  [ExposedHeaders](#cfn-s3-bucket-cors-corsrule-exposedheaders): 
     - String
-﻿  [Id](#cfn-s3-bucket-cors-corsrule-id) : String
-﻿  [MaxAge](#cfn-s3-bucket-cors-corsrule-maxage) : Integer
+  [Id](#cfn-s3-bucket-cors-corsrule-id): String
+  [MaxAge](#cfn-s3-bucket-cors-corsrule-maxage): Integer
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-cors-corsrule-properties"></a>

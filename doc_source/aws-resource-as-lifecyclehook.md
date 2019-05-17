@@ -30,15 +30,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AutoScaling::LifecycleHook
-Properties : 
-﻿  [AutoScalingGroupName](#cfn-as-lifecyclehook-autoscalinggroupname) : String
-﻿  [DefaultResult](#cfn-as-lifecyclehook-defaultresult) : String
-﻿  [HeartbeatTimeout](#cfn-as-lifecyclehook-heartbeattimeout) : Integer
-﻿  [LifecycleHookName](#cfn-autoscaling-lifecyclehook-lifecyclehookname) : String
-﻿  [LifecycleTransition](#cfn-as-lifecyclehook-lifecycletransition) : String
-﻿  [NotificationMetadata](#cfn-as-lifecyclehook-notificationmetadata) : String
-﻿  [NotificationTargetARN](#cfn-as-lifecyclehook-notificationtargetarn) : String
-﻿  [RoleARN](#cfn-as-lifecyclehook-rolearn) : String
+Properties: 
+  [AutoScalingGroupName](#cfn-as-lifecyclehook-autoscalinggroupname): String
+  [DefaultResult](#cfn-as-lifecyclehook-defaultresult): String
+  [HeartbeatTimeout](#cfn-as-lifecyclehook-heartbeattimeout): Integer
+  [LifecycleHookName](#cfn-autoscaling-lifecyclehook-lifecyclehookname): String
+  [LifecycleTransition](#cfn-as-lifecyclehook-lifecycletransition): String
+  [NotificationMetadata](#cfn-as-lifecyclehook-notificationmetadata): String
+  [NotificationTargetARN](#cfn-as-lifecyclehook-notificationtargetarn): String
+  [RoleARN](#cfn-as-lifecyclehook-rolearn): String
 ```
 
 ## Properties<a name="aws-resource-as-lifecyclehook-properties"></a>

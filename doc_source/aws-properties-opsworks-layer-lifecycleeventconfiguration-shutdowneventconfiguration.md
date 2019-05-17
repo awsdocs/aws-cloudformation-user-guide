@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [DelayUntilElbConnectionsDrained](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-delayuntilelbconnectionsdrained) : Boolean
-﻿  [ExecutionTimeout](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-executiontimeout) : Integer
+  [DelayUntilElbConnectionsDrained](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-delayuntilelbconnectionsdrained): Boolean
+  [ExecutionTimeout](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-executiontimeout): Integer
 ```
 
 ## Properties<a name="aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration-properties"></a>

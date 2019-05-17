@@ -19,11 +19,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-taskdefinition-volumes-syntax.yaml"></a>
 
 ```
-﻿  [DockerVolumeConfiguration](#cfn-ecs-taskdefinition-volume-dockervolumeconfiguration) : 
+  [DockerVolumeConfiguration](#cfn-ecs-taskdefinition-volume-dockervolumeconfiguration): 
     [DockerVolumeConfiguration](aws-properties-ecs-taskdefinition-dockervolumeconfiguration.md)
-﻿  [Host](#cfn-ecs-taskdefinition-volumes-host) : 
+  [Host](#cfn-ecs-taskdefinition-volumes-host): 
     [HostVolumeProperties](aws-properties-ecs-taskdefinition-volumes-host.md)
-﻿  [Name](#cfn-ecs-taskdefinition-volumes-name) : String
+  [Name](#cfn-ecs-taskdefinition-volumes-name): String
 ```
 
 ## Properties<a name="aws-properties-ecs-taskdefinition-volumes-properties"></a>

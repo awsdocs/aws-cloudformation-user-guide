@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-serversideencryptionbydefault-syntax.yaml"></a>
 
 ```
-﻿  [KMSMasterKeyID](#cfn-s3-bucket-serversideencryptionbydefault-kmsmasterkeyid) : String
-﻿  [SSEAlgorithm](#cfn-s3-bucket-serversideencryptionbydefault-ssealgorithm) : String
+  [KMSMasterKeyID](#cfn-s3-bucket-serversideencryptionbydefault-kmsmasterkeyid): String
+  [SSEAlgorithm](#cfn-s3-bucket-serversideencryptionbydefault-ssealgorithm): String
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-serversideencryptionbydefault-properties"></a>

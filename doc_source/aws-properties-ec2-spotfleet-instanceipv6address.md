@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-spotfleet-instanceipv6address-syntax.yaml"></a>
 
 ```
-﻿  [Ipv6Address](#cfn-ec2-spotfleet-instanceipv6address-ipv6address) : String
+  [Ipv6Address](#cfn-ec2-spotfleet-instanceipv6address-ipv6address): String
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-instanceipv6address-properties"></a>

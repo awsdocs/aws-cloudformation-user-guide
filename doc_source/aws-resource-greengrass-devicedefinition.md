@@ -28,10 +28,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Greengrass::DeviceDefinition
-Properties : 
-﻿  [InitialVersion](#cfn-greengrass-devicedefinition-initialversion) : 
+Properties: 
+  [InitialVersion](#cfn-greengrass-devicedefinition-initialversion): 
     [DeviceDefinitionVersion](aws-properties-greengrass-devicedefinition-devicedefinitionversion.md)
-﻿  [Name](#cfn-greengrass-devicedefinition-name) : String
+  [Name](#cfn-greengrass-devicedefinition-name): String
 ```
 
 ## Properties<a name="aws-resource-greengrass-devicedefinition-properties"></a>

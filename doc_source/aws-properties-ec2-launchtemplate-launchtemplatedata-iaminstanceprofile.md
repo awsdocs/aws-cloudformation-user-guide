@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile-syntax.yaml"></a>
 
 ```
-﻿  [Arn](#cfn-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile-arn) : String
-﻿  [Name](#cfn-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile-name) : String
+  [Arn](#cfn-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile-arn): String
+  [Name](#cfn-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile-name): String
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile-properties"></a>

@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPNConnectionRoute
-Properties : 
-﻿  [DestinationCidrBlock](#cfn-ec2-vpnconnectionroute-cidrblock) : String
-﻿  [VpnConnectionId](#cfn-ec2-vpnconnectionroute-connectionid) : String
+Properties: 
+  [DestinationCidrBlock](#cfn-ec2-vpnconnectionroute-cidrblock): String
+  [VpnConnectionId](#cfn-ec2-vpnconnectionroute-connectionid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-vpn-connection-route-properties"></a>

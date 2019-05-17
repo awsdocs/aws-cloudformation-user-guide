@@ -27,15 +27,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::ApiKey
-Properties : 
-﻿  [CustomerId](#cfn-apigateway-apikey-customerid) : String
-﻿  [Description](#cfn-apigateway-apikey-description) : String
-﻿  [Enabled](#cfn-apigateway-apikey-enabled) : Boolean
-﻿  [GenerateDistinctId](#cfn-apigateway-apikey-generatedistinctid) : Boolean
-﻿  [Name](#cfn-apigateway-apikey-name) : String
-﻿  [StageKeys](#cfn-apigateway-apikey-stagekeys) : 
+Properties: 
+  [CustomerId](#cfn-apigateway-apikey-customerid): String
+  [Description](#cfn-apigateway-apikey-description): String
+  [Enabled](#cfn-apigateway-apikey-enabled): Boolean
+  [GenerateDistinctId](#cfn-apigateway-apikey-generatedistinctid): Boolean
+  [Name](#cfn-apigateway-apikey-name): String
+  [StageKeys](#cfn-apigateway-apikey-stagekeys): 
     - [StageKey](aws-properties-apigateway-apikey-stagekey.md)
-﻿  [Value](#cfn-apigateway-apikey-value) : String
+  [Value](#cfn-apigateway-apikey-value): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-apikey-properties"></a>

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-republishaction-syntax.yaml"></a>
 
 ```
-﻿  [RoleArn](#cfn-iot-topicrule-republishaction-rolearn) : String
-﻿  [Topic](#cfn-iot-topicrule-republishaction-topic) : String
+  [RoleArn](#cfn-iot-topicrule-republishaction-rolearn): String
+  [Topic](#cfn-iot-topicrule-republishaction-topic): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-republishaction-properties"></a>

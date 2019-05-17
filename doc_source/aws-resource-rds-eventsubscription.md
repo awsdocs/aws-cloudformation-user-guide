@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RDS::EventSubscription
-Properties : 
-﻿  [Enabled](#cfn-rds-eventsubscription-enabled) : Boolean
-﻿  [EventCategories](#cfn-rds-eventsubscription-eventcategories) : 
+Properties: 
+  [Enabled](#cfn-rds-eventsubscription-enabled): Boolean
+  [EventCategories](#cfn-rds-eventsubscription-eventcategories): 
     - String
-﻿  [SnsTopicArn](#cfn-rds-eventsubscription-snstopicarn) : String
-﻿  [SourceIds](#cfn-rds-eventsubscription-sourceids) : 
+  [SnsTopicArn](#cfn-rds-eventsubscription-snstopicarn): String
+  [SourceIds](#cfn-rds-eventsubscription-sourceids): 
     - String
-﻿  [SourceType](#cfn-rds-eventsubscription-sourcetype) : String
+  [SourceType](#cfn-rds-eventsubscription-sourcetype): String
 ```
 
 ## Properties<a name="aws-resource-rds-eventsubscription-properties"></a>

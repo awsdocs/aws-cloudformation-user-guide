@@ -31,15 +31,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::Subnet
-Properties : 
-﻿  [AssignIpv6AddressOnCreation](#cfn-ec2-subnet-assignipv6addressoncreation) : Boolean
-﻿  [AvailabilityZone](#cfn-ec2-subnet-availabilityzone) : String
-﻿  [CidrBlock](#cfn-ec2-subnet-cidrblock) : String
-﻿  [Ipv6CidrBlock](#cfn-ec2-subnet-ipv6cidrblock) : String
-﻿  [MapPublicIpOnLaunch](#cfn-ec2-subnet-mappubliciponlaunch) : Boolean
-﻿  [Tags](#cfn-ec2-subnet-tags) : 
+Properties: 
+  [AssignIpv6AddressOnCreation](#cfn-ec2-subnet-assignipv6addressoncreation): Boolean
+  [AvailabilityZone](#cfn-ec2-subnet-availabilityzone): String
+  [CidrBlock](#cfn-ec2-subnet-cidrblock): String
+  [Ipv6CidrBlock](#cfn-ec2-subnet-ipv6cidrblock): String
+  [MapPublicIpOnLaunch](#cfn-ec2-subnet-mappubliciponlaunch): Boolean
+  [Tags](#cfn-ec2-subnet-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VpcId](#cfn-awsec2subnet-prop-vpcid) : String
+  [VpcId](#cfn-awsec2subnet-prop-vpcid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-subnet-properties"></a>
@@ -154,7 +154,7 @@ The following example uses the VPC ID from a VPC named myVPC that was declared e
       AvailabilityZone: "us-east-1a"
       Tags:
       - Key: foo
-      Value: bar
+        Value: bar
 ```
 
 ## See Also<a name="aws-resource-ec2-subnet--seealso"></a>

@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-config-configrule-source-sourcedetails-syntax.yaml"></a>
 
 ```
-﻿  [EventSource](#cfn-config-configrule-source-sourcedetail-eventsource) : String
-﻿  [MaximumExecutionFrequency](#cfn-config-configrule-sourcedetail-maximumexecutionfrequency) : String
-﻿  [MessageType](#cfn-config-configrule-source-sourcedetail-messagetype) : String
+  [EventSource](#cfn-config-configrule-source-sourcedetail-eventsource): String
+  [MaximumExecutionFrequency](#cfn-config-configrule-sourcedetail-maximumexecutionfrequency): String
+  [MessageType](#cfn-config-configrule-source-sourcedetail-messagetype): String
 ```
 
 ## Properties<a name="aws-properties-config-configrule-source-sourcedetails-properties"></a>

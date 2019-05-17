@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-wafregional-sizeconstraintset-fieldtomatch-syntax.yaml"></a>
 
 ```
-﻿  [Data](#cfn-wafregional-sizeconstraintset-fieldtomatch-data) : String
-﻿  [Type](#cfn-wafregional-sizeconstraintset-fieldtomatch-type) : String
+  [Data](#cfn-wafregional-sizeconstraintset-fieldtomatch-data): String
+  [Type](#cfn-wafregional-sizeconstraintset-fieldtomatch-type): String
 ```
 
 ## Properties<a name="aws-properties-wafregional-sizeconstraintset-fieldtomatch-properties"></a>

@@ -30,11 +30,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Logs::SubscriptionFilter
-Properties : 
-﻿  [DestinationArn](#cfn-cwl-subscriptionfilter-destinationarn) : String
-﻿  [FilterPattern](#cfn-cwl-subscriptionfilter-filterpattern) : String
-﻿  [LogGroupName](#cfn-cwl-subscriptionfilter-loggroupname) : String
-﻿  [RoleArn](#cfn-cwl-subscriptionfilter-rolearn) : String
+Properties: 
+  [DestinationArn](#cfn-cwl-subscriptionfilter-destinationarn): String
+  [FilterPattern](#cfn-cwl-subscriptionfilter-filterpattern): String
+  [LogGroupName](#cfn-cwl-subscriptionfilter-loggroupname): String
+  [RoleArn](#cfn-cwl-subscriptionfilter-rolearn): String
 ```
 
 ## Properties<a name="aws-resource-logs-subscriptionfilter-properties"></a>

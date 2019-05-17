@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-s3contentlocation-syntax.yaml"></a>
 
 ```
-﻿  [BucketARN](#cfn-kinesisanalyticsv2-application-s3contentlocation-bucketarn) : String
-﻿  [FileKey](#cfn-kinesisanalyticsv2-application-s3contentlocation-filekey) : String
-﻿  [ObjectVersion](#cfn-kinesisanalyticsv2-application-s3contentlocation-objectversion) : String
+  [BucketARN](#cfn-kinesisanalyticsv2-application-s3contentlocation-bucketarn): String
+  [FileKey](#cfn-kinesisanalyticsv2-application-s3contentlocation-filekey): String
+  [ObjectVersion](#cfn-kinesisanalyticsv2-application-s3contentlocation-objectversion): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-s3contentlocation-properties"></a>

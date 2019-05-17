@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ses-receiptrule-addheaderaction-syntax.yaml"></a>
 
 ```
-﻿  [HeaderName](#cfn-ses-receiptrule-addheaderaction-headername) : String
-﻿  [HeaderValue](#cfn-ses-receiptrule-addheaderaction-headervalue) : String
+  [HeaderName](#cfn-ses-receiptrule-addheaderaction-headername): String
+  [HeaderValue](#cfn-ses-receiptrule-addheaderaction-headervalue): String
 ```
 
 ## Properties<a name="aws-properties-ses-receiptrule-addheaderaction-properties"></a>

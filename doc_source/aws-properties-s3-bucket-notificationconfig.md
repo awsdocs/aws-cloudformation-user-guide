@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-notificationconfig-syntax.yaml"></a>
 
 ```
-﻿  [LambdaConfigurations](#cfn-s3-bucket-notificationconfig-lambdaconfig) : 
+  [LambdaConfigurations](#cfn-s3-bucket-notificationconfig-lambdaconfig): 
     - [LambdaConfiguration](aws-properties-s3-bucket-notificationconfig-lambdaconfig.md)
-﻿  [QueueConfigurations](#cfn-s3-bucket-notificationconfig-queueconfig) : 
+  [QueueConfigurations](#cfn-s3-bucket-notificationconfig-queueconfig): 
     - [QueueConfiguration](aws-properties-s3-bucket-notificationconfig-queueconfig.md)
-﻿  [TopicConfigurations](#cfn-s3-bucket-notificationconfig-topicconfig) : 
+  [TopicConfigurations](#cfn-s3-bucket-notificationconfig-topicconfig): 
     - [TopicConfiguration](aws-properties-s3-bucket-notificationconfig-topicconfig.md)
 ```
 

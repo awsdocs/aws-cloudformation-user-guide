@@ -23,11 +23,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appsync-datasource-rdshttpendpointconfig-syntax.yaml"></a>
 
 ```
-﻿  [AwsRegion](#cfn-appsync-datasource-rdshttpendpointconfig-awsregion) : String
-﻿  [AwsSecretStoreArn](#cfn-appsync-datasource-rdshttpendpointconfig-awssecretstorearn) : String
-﻿  [DatabaseName](#cfn-appsync-datasource-rdshttpendpointconfig-databasename) : String
-﻿  [DbClusterIdentifier](#cfn-appsync-datasource-rdshttpendpointconfig-dbclusteridentifier) : String
-﻿  [Schema](#cfn-appsync-datasource-rdshttpendpointconfig-schema) : String
+  [AwsRegion](#cfn-appsync-datasource-rdshttpendpointconfig-awsregion): String
+  [AwsSecretStoreArn](#cfn-appsync-datasource-rdshttpendpointconfig-awssecretstorearn): String
+  [DatabaseName](#cfn-appsync-datasource-rdshttpendpointconfig-databasename): String
+  [DbClusterIdentifier](#cfn-appsync-datasource-rdshttpendpointconfig-dbclusteridentifier): String
+  [Schema](#cfn-appsync-datasource-rdshttpendpointconfig-schema): String
 ```
 
 ## Properties<a name="aws-properties-appsync-datasource-rdshttpendpointconfig-properties"></a>

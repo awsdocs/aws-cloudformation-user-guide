@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-redshift-cluster-loggingproperties-syntax.yaml"></a>
 
 ```
-﻿  [BucketName](#cfn-redshift-cluster-loggingproperties-bucketname) : String
-﻿  [S3KeyPrefix](#cfn-redshift-cluster-loggingproperties-s3keyprefix) : String
+  [BucketName](#cfn-redshift-cluster-loggingproperties-bucketname): String
+  [S3KeyPrefix](#cfn-redshift-cluster-loggingproperties-s3keyprefix): String
 ```
 
 ## Properties<a name="aws-properties-redshift-cluster-loggingproperties-properties"></a>

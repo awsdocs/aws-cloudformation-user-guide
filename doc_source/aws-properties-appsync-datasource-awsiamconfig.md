@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appsync-datasource-awsiamconfig-syntax.yaml"></a>
 
 ```
-﻿  [SigningRegion](#cfn-appsync-datasource-awsiamconfig-signingregion) : String
-﻿  [SigningServiceName](#cfn-appsync-datasource-awsiamconfig-signingservicename) : String
+  [SigningRegion](#cfn-appsync-datasource-awsiamconfig-signingregion): String
+  [SigningServiceName](#cfn-appsync-datasource-awsiamconfig-signingservicename): String
 ```
 
 ## Properties<a name="aws-properties-appsync-datasource-awsiamconfig-properties"></a>

@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat-syntax.yaml"></a>
 
 ```
-﻿  [MappingParameters](#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-mappingparameters) : 
+  [MappingParameters](#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-mappingparameters): 
     [MappingParameters](aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.md)
-﻿  [RecordFormatType](#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-recordformattype) : String
+  [RecordFormatType](#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-recordformattype): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat-properties"></a>

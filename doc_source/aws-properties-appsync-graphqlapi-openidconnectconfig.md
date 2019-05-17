@@ -22,10 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appsync-graphqlapi-openidconnectconfig-syntax.yaml"></a>
 
 ```
-﻿  [AuthTTL](#cfn-appsync-graphqlapi-openidconnectconfig-authttl) : Double
-﻿  [ClientId](#cfn-appsync-graphqlapi-openidconnectconfig-clientid) : String
-﻿  [IatTTL](#cfn-appsync-graphqlapi-openidconnectconfig-iatttl) : Double
-﻿  [Issuer](#cfn-appsync-graphqlapi-openidconnectconfig-issuer) : String
+  [AuthTTL](#cfn-appsync-graphqlapi-openidconnectconfig-authttl): Double
+  [ClientId](#cfn-appsync-graphqlapi-openidconnectconfig-clientid): String
+  [IatTTL](#cfn-appsync-graphqlapi-openidconnectconfig-iatttl): Double
+  [Issuer](#cfn-appsync-graphqlapi-openidconnectconfig-issuer): String
 ```
 
 ## Properties<a name="aws-properties-appsync-graphqlapi-openidconnectconfig-properties"></a>

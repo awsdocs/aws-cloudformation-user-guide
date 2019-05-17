@@ -30,16 +30,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EMR::InstanceFleetConfig
-Properties : 
-﻿  [ClusterId](#cfn-elasticmapreduce-instancefleetconfig-clusterid) : String
-﻿  [InstanceFleetType](#cfn-elasticmapreduce-instancefleetconfig-instancefleettype) : String
-﻿  [InstanceTypeConfigs](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfigs) : 
+Properties: 
+  [ClusterId](#cfn-elasticmapreduce-instancefleetconfig-clusterid): String
+  [InstanceFleetType](#cfn-elasticmapreduce-instancefleetconfig-instancefleettype): String
+  [InstanceTypeConfigs](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfigs): 
     - [InstanceTypeConfig](aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.md)
-﻿  [LaunchSpecifications](#cfn-elasticmapreduce-instancefleetconfig-launchspecifications) : 
+  [LaunchSpecifications](#cfn-elasticmapreduce-instancefleetconfig-launchspecifications): 
     [InstanceFleetProvisioningSpecifications](aws-properties-elasticmapreduce-instancefleetconfig-instancefleetprovisioningspecifications.md)
-﻿  [Name](#cfn-elasticmapreduce-instancefleetconfig-name) : String
-﻿  [TargetOnDemandCapacity](#cfn-elasticmapreduce-instancefleetconfig-targetondemandcapacity) : Integer
-﻿  [TargetSpotCapacity](#cfn-elasticmapreduce-instancefleetconfig-targetspotcapacity) : Integer
+  [Name](#cfn-elasticmapreduce-instancefleetconfig-name): String
+  [TargetOnDemandCapacity](#cfn-elasticmapreduce-instancefleetconfig-targetondemandcapacity): Integer
+  [TargetSpotCapacity](#cfn-elasticmapreduce-instancefleetconfig-targetspotcapacity): Integer
 ```
 
 ## Properties<a name="aws-resource-elasticmapreduce-instancefleetconfig-properties"></a>

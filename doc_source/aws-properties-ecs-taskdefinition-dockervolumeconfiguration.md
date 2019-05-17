@@ -21,13 +21,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-taskdefinition-dockervolumeconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [Autoprovision](#cfn-ecs-taskdefinition-dockervolumeconfiguration-autoprovision) : Boolean
-﻿  [Driver](#cfn-ecs-taskdefinition-dockervolumeconfiguration-driver) : String
-﻿  [DriverOpts](#cfn-ecs-taskdefinition-dockervolumeconfiguration-driveropts) : 
+  [Autoprovision](#cfn-ecs-taskdefinition-dockervolumeconfiguration-autoprovision): Boolean
+  [Driver](#cfn-ecs-taskdefinition-dockervolumeconfiguration-driver): String
+  [DriverOpts](#cfn-ecs-taskdefinition-dockervolumeconfiguration-driveropts): 
     Key : Value
-﻿  [Labels](#cfn-ecs-taskdefinition-dockervolumeconfiguration-labels) : 
+  [Labels](#cfn-ecs-taskdefinition-dockervolumeconfiguration-labels): 
     Key : Value
-﻿  [Scope](#cfn-ecs-taskdefinition-dockervolumeconfiguration-scope) : String
+  [Scope](#cfn-ecs-taskdefinition-dockervolumeconfiguration-scope): String
 ```
 
 ## Properties<a name="aws-properties-ecs-taskdefinition-dockervolumeconfiguration-properties"></a>

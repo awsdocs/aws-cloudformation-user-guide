@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-virtualnode-servicediscovery-syntax.yaml"></a>
 
 ```
-﻿  [DNS](#cfn-appmesh-virtualnode-servicediscovery-dns) : 
+  [DNS](#cfn-appmesh-virtualnode-servicediscovery-dns): 
     [DnsServiceDiscovery](aws-properties-appmesh-virtualnode-dnsservicediscovery.md)
 ```
 

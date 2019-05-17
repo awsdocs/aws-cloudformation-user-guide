@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-wafregional-xssmatchset-fieldtomatch-syntax.yaml"></a>
 
 ```
-﻿  [Data](#cfn-wafregional-xssmatchset-fieldtomatch-data) : String
-﻿  [Type](#cfn-wafregional-xssmatchset-fieldtomatch-type) : String
+  [Data](#cfn-wafregional-xssmatchset-fieldtomatch-data): String
+  [Type](#cfn-wafregional-xssmatchset-fieldtomatch-type): String
 ```
 
 ## Properties<a name="aws-properties-wafregional-xssmatchset-fieldtomatch-properties"></a>

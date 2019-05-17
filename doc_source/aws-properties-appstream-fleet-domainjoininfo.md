@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appstream-fleet-domainjoininfo-syntax.yaml"></a>
 
 ```
-﻿  [DirectoryName](#cfn-appstream-fleet-domainjoininfo-directoryname) : String
-﻿  [OrganizationalUnitDistinguishedName](#cfn-appstream-fleet-domainjoininfo-organizationalunitdistinguishedname) : String
+  [DirectoryName](#cfn-appstream-fleet-domainjoininfo-directoryname): String
+  [OrganizationalUnitDistinguishedName](#cfn-appstream-fleet-domainjoininfo-organizationalunitdistinguishedname): String
 ```
 
 ## Properties<a name="aws-properties-appstream-fleet-domainjoininfo-properties"></a>

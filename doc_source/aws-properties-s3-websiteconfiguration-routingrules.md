@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-websiteconfiguration-routingrules-syntax.yaml"></a>
 
 ```
-﻿  [RedirectRule](#cfn-s3-websiteconfiguration-routingrules-redirectrule) : 
+  [RedirectRule](#cfn-s3-websiteconfiguration-routingrules-redirectrule): 
     [RedirectRule](aws-properties-s3-websiteconfiguration-routingrules-redirectrule.md)
-﻿  [RoutingRuleCondition](#cfn-s3-websiteconfiguration-routingrules-routingrulecondition) : 
+  [RoutingRuleCondition](#cfn-s3-websiteconfiguration-routingrules-routingrulecondition): 
     [RoutingRuleCondition](aws-properties-s3-websiteconfiguration-routingrules-routingrulecondition.md)
 ```
 

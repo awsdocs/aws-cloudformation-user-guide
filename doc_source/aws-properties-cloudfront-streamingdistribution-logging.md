@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudfront-streamingdistribution-logging-syntax.yaml"></a>
 
 ```
-﻿  [Bucket](#cfn-cloudfront-streamingdistribution-logging-bucket) : String
-﻿  [Enabled](#cfn-cloudfront-streamingdistribution-logging-enabled) : Boolean
-﻿  [Prefix](#cfn-cloudfront-streamingdistribution-logging-prefix) : String
+  [Bucket](#cfn-cloudfront-streamingdistribution-logging-bucket): String
+  [Enabled](#cfn-cloudfront-streamingdistribution-logging-enabled): Boolean
+  [Prefix](#cfn-cloudfront-streamingdistribution-logging-prefix): String
 ```
 
 ## Properties<a name="aws-properties-cloudfront-streamingdistribution-logging-properties"></a>

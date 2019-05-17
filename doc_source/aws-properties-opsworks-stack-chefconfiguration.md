@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-opsworks-stack-chefconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [BerkshelfVersion](#cfn-opsworks-chefconfiguration-berkshelfversion) : String
-﻿  [ManageBerkshelf](#cfn-opsworks-chefconfiguration-berkshelfversion) : Boolean
+  [BerkshelfVersion](#cfn-opsworks-chefconfiguration-berkshelfversion): String
+  [ManageBerkshelf](#cfn-opsworks-chefconfiguration-berkshelfversion): Boolean
 ```
 
 ## Properties<a name="aws-properties-opsworks-stack-chefconfiguration-properties"></a>

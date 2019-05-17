@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-resourcedefinition-resourcedefinitionversion-syntax.yaml"></a>
 
 ```
-﻿  [Resources](#cfn-greengrass-resourcedefinition-resourcedefinitionversion-resources) : 
+  [Resources](#cfn-greengrass-resourcedefinition-resourcedefinitionversion-resources): 
     - [ResourceInstance](aws-properties-greengrass-resourcedefinition-resourceinstance.md)
 ```
 

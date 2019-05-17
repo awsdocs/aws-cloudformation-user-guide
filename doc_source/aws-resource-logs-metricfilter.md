@@ -25,10 +25,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Logs::MetricFilter
-Properties : 
-﻿  [FilterPattern](#cfn-cwl-metricfilter-filterpattern) : String
-﻿  [LogGroupName](#cfn-cwl-metricfilter-loggroupname) : String
-﻿  [MetricTransformations](#cfn-cwl-metricfilter-metrictransformations) : 
+Properties: 
+  [FilterPattern](#cfn-cwl-metricfilter-filterpattern): String
+  [LogGroupName](#cfn-cwl-metricfilter-loggroupname): String
+  [MetricTransformations](#cfn-cwl-metricfilter-metrictransformations): 
     - [MetricTransformation](aws-properties-logs-metricfilter-metrictransformation.md)
 ```
 

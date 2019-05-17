@@ -22,12 +22,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-syntax.yaml"></a>
 
 ```
-﻿  [CpuThreshold](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-cputhreshold) : Double
-﻿  [IgnoreMetricsTime](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-ignoremetricstime) : Integer
-﻿  [InstanceCount](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-instancecount) : Integer
-﻿  [LoadThreshold](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-loadthreshold) : Double
-﻿  [MemoryThreshold](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-memorythreshold) : Double
-﻿  [ThresholdsWaitTime](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-thresholdwaittime) : Integer
+  [CpuThreshold](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-cputhreshold): Double
+  [IgnoreMetricsTime](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-ignoremetricstime): Integer
+  [InstanceCount](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-instancecount): Integer
+  [LoadThreshold](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-loadthreshold): Double
+  [MemoryThreshold](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-memorythreshold): Double
+  [ThresholdsWaitTime](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-thresholdwaittime): Integer
 ```
 
 ## Properties<a name="aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-properties"></a>

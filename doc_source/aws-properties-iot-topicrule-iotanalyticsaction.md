@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-iotanalyticsaction-syntax.yaml"></a>
 
 ```
-﻿  [ChannelName](#cfn-iot-topicrule-iotanalyticsaction-channelname) : String
-﻿  [RoleArn](#cfn-iot-topicrule-iotanalyticsaction-rolearn) : String
+  [ChannelName](#cfn-iot-topicrule-iotanalyticsaction-channelname): String
+  [RoleArn](#cfn-iot-topicrule-iotanalyticsaction-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-iotanalyticsaction-properties"></a>

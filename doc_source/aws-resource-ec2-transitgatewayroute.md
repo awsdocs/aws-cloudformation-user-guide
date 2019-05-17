@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::TransitGatewayRoute
-Properties : 
-﻿  [Blackhole](#cfn-ec2-transitgatewayroute-blackhole) : Boolean
-﻿  [DestinationCidrBlock](#cfn-ec2-transitgatewayroute-destinationcidrblock) : String
-﻿  [TransitGatewayAttachmentId](#cfn-ec2-transitgatewayroute-transitgatewayattachmentid) : String
-﻿  [TransitGatewayRouteTableId](#cfn-ec2-transitgatewayroute-transitgatewayroutetableid) : String
+Properties: 
+  [Blackhole](#cfn-ec2-transitgatewayroute-blackhole): Boolean
+  [DestinationCidrBlock](#cfn-ec2-transitgatewayroute-destinationcidrblock): String
+  [TransitGatewayAttachmentId](#cfn-ec2-transitgatewayroute-transitgatewayattachmentid): String
+  [TransitGatewayRouteTableId](#cfn-ec2-transitgatewayroute-transitgatewayroutetableid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-transitgatewayroute-properties"></a>

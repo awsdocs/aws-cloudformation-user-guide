@@ -30,21 +30,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-network-iface-embedded-syntax.yaml"></a>
 
 ```
-﻿  [AssociatePublicIpAddress](#aws-properties-ec2-network-iface-embedded-associatepubip) : Boolean
-﻿  [DeleteOnTermination](#aws-properties-ec2-network-iface-embedded-delete) : Boolean
-﻿  [Description](#aws-properties-ec2-network-iface-embedded-description) : String
-﻿  [DeviceIndex](#aws-properties-ec2-network-iface-embedded-deviceindex) : String
-﻿  [GroupSet](#aws-properties-ec2-network-iface-embedded-groupset) : 
+  [AssociatePublicIpAddress](#aws-properties-ec2-network-iface-embedded-associatepubip): Boolean
+  [DeleteOnTermination](#aws-properties-ec2-network-iface-embedded-delete): Boolean
+  [Description](#aws-properties-ec2-network-iface-embedded-description): String
+  [DeviceIndex](#aws-properties-ec2-network-iface-embedded-deviceindex): String
+  [GroupSet](#aws-properties-ec2-network-iface-embedded-groupset): 
     - String
-﻿  [Ipv6AddressCount](#cfn-ec2-instance-networkinterface-ipv6addresscount) : Integer
-﻿  [Ipv6Addresses](#cfn-ec2-instance-networkinterface-ipv6addresses) : 
+  [Ipv6AddressCount](#cfn-ec2-instance-networkinterface-ipv6addresscount): Integer
+  [Ipv6Addresses](#cfn-ec2-instance-networkinterface-ipv6addresses): 
     - [InstanceIpv6Address](aws-properties-ec2-instance-instanceipv6address.md)
-﻿  [NetworkInterfaceId](#aws-properties-ec2-network-iface-embedded-network-iface) : String
-﻿  [PrivateIpAddress](#aws-properties-ec2-network-iface-embedded-privateipaddress) : String
-﻿  [PrivateIpAddresses](#aws-properties-ec2-network-iface-embedded-privateipaddresses) : 
+  [NetworkInterfaceId](#aws-properties-ec2-network-iface-embedded-network-iface): String
+  [PrivateIpAddress](#aws-properties-ec2-network-iface-embedded-privateipaddress): String
+  [PrivateIpAddresses](#aws-properties-ec2-network-iface-embedded-privateipaddresses): 
     - [PrivateIpAddressSpecification](aws-properties-ec2-network-interface-privateipspec-1.md)
-﻿  [SecondaryPrivateIpAddressCount](#aws-properties-ec2-network-iface-embedded-secondprivateip) : Integer
-﻿  [SubnetId](#aws-properties-ec2-network-iface-embedded-subnetid) : String
+  [SecondaryPrivateIpAddressCount](#aws-properties-ec2-network-iface-embedded-secondprivateip): Integer
+  [SubnetId](#aws-properties-ec2-network-iface-embedded-subnetid): String
 ```
 
 ## Properties<a name="aws-properties-ec2-network-iface-embedded-properties"></a>

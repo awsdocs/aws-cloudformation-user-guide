@@ -24,13 +24,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-instancefleetconfig-syntax.yaml"></a>
 
 ```
-﻿  [InstanceTypeConfigs](#cfn-elasticmapreduce-cluster-instancefleetconfig-instancetypeconfigs) : 
+  [InstanceTypeConfigs](#cfn-elasticmapreduce-cluster-instancefleetconfig-instancetypeconfigs): 
     - [InstanceTypeConfig](aws-properties-elasticmapreduce-cluster-instancetypeconfig.md)
-﻿  [LaunchSpecifications](#cfn-elasticmapreduce-cluster-instancefleetconfig-launchspecifications) : 
+  [LaunchSpecifications](#cfn-elasticmapreduce-cluster-instancefleetconfig-launchspecifications): 
     [InstanceFleetProvisioningSpecifications](aws-properties-elasticmapreduce-cluster-instancefleetprovisioningspecifications.md)
-﻿  [Name](#cfn-elasticmapreduce-cluster-instancefleetconfig-name) : String
-﻿  [TargetOnDemandCapacity](#cfn-elasticmapreduce-cluster-instancefleetconfig-targetondemandcapacity) : Integer
-﻿  [TargetSpotCapacity](#cfn-elasticmapreduce-cluster-instancefleetconfig-targetspotcapacity) : Integer
+  [Name](#cfn-elasticmapreduce-cluster-instancefleetconfig-name): String
+  [TargetOnDemandCapacity](#cfn-elasticmapreduce-cluster-instancefleetconfig-targetondemandcapacity): Integer
+  [TargetSpotCapacity](#cfn-elasticmapreduce-cluster-instancefleetconfig-targetspotcapacity): Integer
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-instancefleetconfig-properties"></a>

@@ -23,11 +23,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Config::ConfigurationAggregator
-Properties : 
-﻿  [AccountAggregationSources](#cfn-config-configurationaggregator-accountaggregationsources) : 
+Properties: 
+  [AccountAggregationSources](#cfn-config-configurationaggregator-accountaggregationsources): 
     - [AccountAggregationSource](aws-properties-config-configurationaggregator-accountaggregationsource.md)
-﻿  [ConfigurationAggregatorName](#cfn-config-configurationaggregator-configurationaggregatorname) : String
-﻿  [OrganizationAggregationSource](#cfn-config-configurationaggregator-organizationaggregationsource) : 
+  [ConfigurationAggregatorName](#cfn-config-configurationaggregator-configurationaggregatorname): String
+  [OrganizationAggregationSource](#cfn-config-configurationaggregator-organizationaggregationsource): 
     [OrganizationAggregationSource](aws-properties-config-configurationaggregator-organizationaggregationsource.md)
 ```
 

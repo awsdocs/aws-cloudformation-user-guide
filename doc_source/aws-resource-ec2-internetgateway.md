@@ -21,8 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::InternetGateway
-Properties : 
-﻿  [Tags](#cfn-ec2-internetgateway-tags) : 
+Properties: 
+  [Tags](#cfn-ec2-internetgateway-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

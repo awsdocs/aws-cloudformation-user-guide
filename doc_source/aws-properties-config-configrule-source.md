@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-config-configrule-source-syntax.yaml"></a>
 
 ```
-﻿  [Owner](#cfn-config-configrule-source-owner) : String
-﻿  [SourceDetails](#cfn-config-configrule-source-sourcedetails) : 
+  [Owner](#cfn-config-configrule-source-owner): String
+  [SourceDetails](#cfn-config-configrule-source-sourcedetails): 
     - [SourceDetail](aws-properties-config-configrule-source-sourcedetails.md)
-﻿  [SourceIdentifier](#cfn-config-configrule-source-sourceidentifier) : String
+  [SourceIdentifier](#cfn-config-configrule-source-sourceidentifier): String
 ```
 
 ## Properties<a name="aws-properties-config-configrule-source-properties"></a>

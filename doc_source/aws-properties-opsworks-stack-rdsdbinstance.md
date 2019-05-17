@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-opsworks-stack-rdsdbinstance-syntax.yaml"></a>
 
 ```
-﻿  [DbPassword](#cfn-opsworks-stack-rdsdbinstance-dbpassword) : String
-﻿  [DbUser](#cfn-opsworks-stack-rdsdbinstance-dbuser) : String
-﻿  [RdsDbInstanceArn](#cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn) : String
+  [DbPassword](#cfn-opsworks-stack-rdsdbinstance-dbpassword): String
+  [DbUser](#cfn-opsworks-stack-rdsdbinstance-dbuser): String
+  [RdsDbInstanceArn](#cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn): String
 ```
 
 ## Properties<a name="aws-properties-opsworks-stack-rdsdbinstance-properties"></a>

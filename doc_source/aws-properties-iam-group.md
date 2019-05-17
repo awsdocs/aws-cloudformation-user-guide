@@ -26,12 +26,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IAM::Group
-Properties : 
-﻿  [GroupName](#cfn-iam-group-groupname) : String
-﻿  [ManagedPolicyArns](#cfn-iam-group-managepolicyarns) : 
+Properties: 
+  [GroupName](#cfn-iam-group-groupname): String
+  [ManagedPolicyArns](#cfn-iam-group-managepolicyarns): 
     - String
-﻿  [Path](#cfn-iam-group-path) : String
-﻿  [Policies](#cfn-iam-group-policies) : 
+  [Path](#cfn-iam-group-path): String
+  [Policies](#cfn-iam-group-policies): 
     - [Policy](aws-properties-iam-policy-1.md)
 ```
 

@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Cognito::IdentityPoolRoleAttachment
-Properties : 
-﻿  [IdentityPoolId](#cfn-cognito-identitypoolroleattachment-identitypoolid) : String
-﻿  [RoleMappings](#cfn-cognito-identitypoolroleattachment-rolemappings) : Json
-﻿  [Roles](#cfn-cognito-identitypoolroleattachment-roles) : Json
+Properties: 
+  [IdentityPoolId](#cfn-cognito-identitypoolroleattachment-identitypoolid): String
+  [RoleMappings](#cfn-cognito-identitypoolroleattachment-rolemappings): Json
+  [Roles](#cfn-cognito-identitypoolroleattachment-roles): Json
 ```
 
 ## Properties<a name="aws-resource-cognito-identitypoolroleattachment-properties"></a>

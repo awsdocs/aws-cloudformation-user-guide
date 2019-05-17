@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-kinesisaction-syntax.yaml"></a>
 
 ```
-﻿  [PartitionKey](#cfn-iot-topicrule-kinesisaction-partitionkey) : String
-﻿  [RoleArn](#cfn-iot-topicrule-kinesisaction-rolearn) : String
-﻿  [StreamName](#cfn-iot-topicrule-kinesisaction-streamname) : String
+  [PartitionKey](#cfn-iot-topicrule-kinesisaction-partitionkey): String
+  [RoleArn](#cfn-iot-topicrule-kinesisaction-rolearn): String
+  [StreamName](#cfn-iot-topicrule-kinesisaction-streamname): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-kinesisaction-properties"></a>

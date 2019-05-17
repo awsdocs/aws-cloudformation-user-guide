@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-elb-accessloggingpolicy-syntax.yaml"></a>
 
 ```
-﻿  [EmitInterval](#cfn-elb-accessloggingpolicy-emitinterval) : Integer
-﻿  [Enabled](#cfn-elb-accessloggingpolicy-enabled) : Boolean
-﻿  [S3BucketName](#cfn-elb-accessloggingpolicy-s3bucketname) : String
-﻿  [S3BucketPrefix](#cfn-elb-accessloggingpolicy-s3bucketprefix) : String
+  [EmitInterval](#cfn-elb-accessloggingpolicy-emitinterval): Integer
+  [Enabled](#cfn-elb-accessloggingpolicy-enabled): Boolean
+  [S3BucketName](#cfn-elb-accessloggingpolicy-s3bucketname): String
+  [S3BucketPrefix](#cfn-elb-accessloggingpolicy-s3bucketprefix): String
 ```
 
 ## Properties<a name="aws-properties-ec2-elb-accessloggingpolicy-properties"></a>

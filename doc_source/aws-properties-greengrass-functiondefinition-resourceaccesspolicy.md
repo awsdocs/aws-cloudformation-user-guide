@@ -23,8 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-functiondefinition-resourceaccesspolicy-syntax.yaml"></a>
 
 ```
-﻿  [Permission](#cfn-greengrass-functiondefinition-resourceaccesspolicy-permission) : String
-﻿  [ResourceId](#cfn-greengrass-functiondefinition-resourceaccesspolicy-resourceid) : String
+  [Permission](#cfn-greengrass-functiondefinition-resourceaccesspolicy-permission): String
+  [ResourceId](#cfn-greengrass-functiondefinition-resourceaccesspolicy-resourceid): String
 ```
 
 ## Properties<a name="aws-properties-greengrass-functiondefinition-resourceaccesspolicy-properties"></a>

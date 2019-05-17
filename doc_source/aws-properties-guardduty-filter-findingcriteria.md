@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-guardduty-filter-findingcriteria-syntax.yaml"></a>
 
 ```
-﻿  [Criterion](#cfn-guardduty-filter-findingcriteria-criterion) : Json
-﻿  [ItemType](#cfn-guardduty-filter-findingcriteria-itemtype) : 
+  [Criterion](#cfn-guardduty-filter-findingcriteria-criterion): Json
+  [ItemType](#cfn-guardduty-filter-findingcriteria-itemtype): 
     [Condition](aws-properties-guardduty-filter-condition.md)
 ```
 

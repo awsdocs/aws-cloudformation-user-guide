@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-key) : String
-﻿  [Value](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-value) : String
+  [Key](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-key): String
+  [Value](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-value): String
 ```
 
 ## Properties<a name="aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-properties"></a>

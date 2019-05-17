@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-s3action-syntax.yaml"></a>
 
 ```
-﻿  [BucketName](#cfn-iot-topicrule-s3action-bucketname) : String
-﻿  [Key](#cfn-iot-topicrule-s3action-key) : String
-﻿  [RoleArn](#cfn-iot-topicrule-s3action-rolearn) : String
+  [BucketName](#cfn-iot-topicrule-s3action-bucketname): String
+  [Key](#cfn-iot-topicrule-s3action-key): String
+  [RoleArn](#cfn-iot-topicrule-s3action-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-s3action-properties"></a>

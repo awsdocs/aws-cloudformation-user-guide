@@ -30,21 +30,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-networkinterface-syntax.yaml"></a>
 
 ```
-﻿  [AssociatePublicIpAddress](#cfn-ec2-launchtemplate-networkinterface-associatepublicipaddress) : Boolean
-﻿  [DeleteOnTermination](#cfn-ec2-launchtemplate-networkinterface-deleteontermination) : Boolean
-﻿  [Description](#cfn-ec2-launchtemplate-networkinterface-description) : String
-﻿  [DeviceIndex](#cfn-ec2-launchtemplate-networkinterface-deviceindex) : Integer
-﻿  [Groups](#cfn-ec2-launchtemplate-networkinterface-groups) : 
+  [AssociatePublicIpAddress](#cfn-ec2-launchtemplate-networkinterface-associatepublicipaddress): Boolean
+  [DeleteOnTermination](#cfn-ec2-launchtemplate-networkinterface-deleteontermination): Boolean
+  [Description](#cfn-ec2-launchtemplate-networkinterface-description): String
+  [DeviceIndex](#cfn-ec2-launchtemplate-networkinterface-deviceindex): Integer
+  [Groups](#cfn-ec2-launchtemplate-networkinterface-groups): 
     - String
-﻿  [Ipv6AddressCount](#cfn-ec2-launchtemplate-networkinterface-ipv6addresscount) : Integer
-﻿  [Ipv6Addresses](#cfn-ec2-launchtemplate-networkinterface-ipv6addresses) : 
+  [Ipv6AddressCount](#cfn-ec2-launchtemplate-networkinterface-ipv6addresscount): Integer
+  [Ipv6Addresses](#cfn-ec2-launchtemplate-networkinterface-ipv6addresses): 
     - [Ipv6Add](aws-properties-ec2-launchtemplate-ipv6add.md)
-﻿  [NetworkInterfaceId](#cfn-ec2-launchtemplate-networkinterface-networkinterfaceid) : String
-﻿  [PrivateIpAddress](#cfn-ec2-launchtemplate-networkinterface-privateipaddress) : String
-﻿  [PrivateIpAddresses](#cfn-ec2-launchtemplate-networkinterface-privateipaddresses) : 
+  [NetworkInterfaceId](#cfn-ec2-launchtemplate-networkinterface-networkinterfaceid): String
+  [PrivateIpAddress](#cfn-ec2-launchtemplate-networkinterface-privateipaddress): String
+  [PrivateIpAddresses](#cfn-ec2-launchtemplate-networkinterface-privateipaddresses): 
     - [PrivateIpAdd](aws-properties-ec2-launchtemplate-privateipadd.md)
-﻿  [SecondaryPrivateIpAddressCount](#cfn-ec2-launchtemplate-networkinterface-secondaryprivateipaddresscount) : Integer
-﻿  [SubnetId](#cfn-ec2-launchtemplate-networkinterface-subnetid) : String
+  [SecondaryPrivateIpAddressCount](#cfn-ec2-launchtemplate-networkinterface-secondaryprivateipaddresscount): Integer
+  [SubnetId](#cfn-ec2-launchtemplate-networkinterface-subnetid): String
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-networkinterface-properties"></a>

@@ -22,10 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::WAF::ByteMatchSet
-Properties : 
-﻿  [ByteMatchTuples](#cfn-waf-bytematchset-bytematchtuples) : 
+Properties: 
+  [ByteMatchTuples](#cfn-waf-bytematchset-bytematchtuples): 
     - [ByteMatchTuple](aws-properties-waf-bytematchset-bytematchtuples.md)
-﻿  [Name](#cfn-waf-bytematchset-name) : String
+  [Name](#cfn-waf-bytematchset-name): String
 ```
 
 ## Properties<a name="aws-resource-waf-bytematchset-properties"></a>

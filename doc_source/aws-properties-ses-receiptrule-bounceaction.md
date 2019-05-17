@@ -23,11 +23,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ses-receiptrule-bounceaction-syntax.yaml"></a>
 
 ```
-﻿  [Message](#cfn-ses-receiptrule-bounceaction-message) : String
-﻿  [Sender](#cfn-ses-receiptrule-bounceaction-sender) : String
-﻿  [SmtpReplyCode](#cfn-ses-receiptrule-bounceaction-smtpreplycode) : String
-﻿  [StatusCode](#cfn-ses-receiptrule-bounceaction-statuscode) : String
-﻿  [TopicArn](#cfn-ses-receiptrule-bounceaction-topicarn) : String
+  [Message](#cfn-ses-receiptrule-bounceaction-message): String
+  [Sender](#cfn-ses-receiptrule-bounceaction-sender): String
+  [SmtpReplyCode](#cfn-ses-receiptrule-bounceaction-smtpreplycode): String
+  [StatusCode](#cfn-ses-receiptrule-bounceaction-statuscode): String
+  [TopicArn](#cfn-ses-receiptrule-bounceaction-topicarn): String
 ```
 
 ## Properties<a name="aws-properties-ses-receiptrule-bounceaction-properties"></a>

@@ -26,9 +26,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-as-tags-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-as-tags-Key) : String
-﻿  [PropagateAtLaunch](#cfn-as-tags-PropagateAtLaunch) : Boolean
-﻿  [Value](#cfn-as-tags-Value) : String
+  [Key](#cfn-as-tags-Key): String
+  [PropagateAtLaunch](#cfn-as-tags-PropagateAtLaunch): Boolean
+  [Value](#cfn-as-tags-Value): String
 ```
 
 ## Properties<a name="aws-properties-as-tags-properties"></a>

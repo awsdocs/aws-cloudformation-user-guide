@@ -30,13 +30,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Lambda::Permission
-Properties : 
-﻿  [Action](#cfn-lambda-permission-action) : String
-﻿  [EventSourceToken](#cfn-lambda-permission-eventsourcetoken) : String
-﻿  [FunctionName](#cfn-lambda-permission-functionname) : String
-﻿  [Principal](#cfn-lambda-permission-principal) : String
-﻿  [SourceAccount](#cfn-lambda-permission-sourceaccount) : String
-﻿  [SourceArn](#cfn-lambda-permission-sourcearn) : String
+Properties: 
+  [Action](#cfn-lambda-permission-action): String
+  [EventSourceToken](#cfn-lambda-permission-eventsourcetoken): String
+  [FunctionName](#cfn-lambda-permission-functionname): String
+  [Principal](#cfn-lambda-permission-principal): String
+  [SourceAccount](#cfn-lambda-permission-sourceaccount): String
+  [SourceArn](#cfn-lambda-permission-sourcearn): String
 ```
 
 ## Properties<a name="aws-resource-lambda-permission-properties"></a>

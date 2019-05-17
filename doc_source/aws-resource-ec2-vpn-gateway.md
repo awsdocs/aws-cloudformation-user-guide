@@ -25,11 +25,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPNGateway
-Properties : 
-﻿  [AmazonSideAsn](#cfn-ec2-vpngateway-amazonsideasn) : Long
-﻿  [Tags](#cfn-ec2-vpngateway-tags) : 
+Properties: 
+  [AmazonSideAsn](#cfn-ec2-vpngateway-amazonsideasn): Long
+  [Tags](#cfn-ec2-vpngateway-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [Type](#cfn-ec2-vpngateway-type) : String
+  [Type](#cfn-ec2-vpngateway-type): String
 ```
 
 ## Properties<a name="aws-resource-ec2-vpn-gateway-properties"></a>
@@ -87,9 +87,8 @@ The following example declares a VPN gateway that uses IPSec 1\.
    Properties: 
       Type: ipsec.1
       Tags: 
-         - 
-            Key: Use
-            Value: Test
+      - Key: Use
+        Value: Test
 ```
 
 ## See Also<a name="aws-resource-ec2-vpn-gateway--seealso"></a>

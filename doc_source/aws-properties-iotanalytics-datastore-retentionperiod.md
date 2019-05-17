@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-datastore-retentionperiod-syntax.yaml"></a>
 
 ```
-﻿  [NumberOfDays](#cfn-iotanalytics-datastore-retentionperiod-numberofdays) : Integer
-﻿  [Unlimited](#cfn-iotanalytics-datastore-retentionperiod-unlimited) : Boolean
+  [NumberOfDays](#cfn-iotanalytics-datastore-retentionperiod-numberofdays): Integer
+  [Unlimited](#cfn-iotanalytics-datastore-retentionperiod-unlimited): Boolean
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-datastore-retentionperiod-properties"></a>

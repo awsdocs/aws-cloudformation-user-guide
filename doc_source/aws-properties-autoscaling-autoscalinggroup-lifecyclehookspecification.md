@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification-syntax.yaml"></a>
 
 ```
-﻿  [DefaultResult](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-defaultresult) : String
-﻿  [HeartbeatTimeout](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-heartbeattimeout) : Integer
-﻿  [LifecycleHookName](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecyclehookname) : String
-﻿  [LifecycleTransition](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecycletransition) : String
-﻿  [NotificationMetadata](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationmetadata) : String
-﻿  [NotificationTargetARN](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationtargetarn) : String
-﻿  [RoleARN](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-rolearn) : String
+  [DefaultResult](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-defaultresult): String
+  [HeartbeatTimeout](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-heartbeattimeout): Integer
+  [LifecycleHookName](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecyclehookname): String
+  [LifecycleTransition](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecycletransition): String
+  [NotificationMetadata](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationmetadata): String
+  [NotificationTargetARN](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationtargetarn): String
+  [RoleARN](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification-properties"></a>

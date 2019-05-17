@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CloudFormation::WaitConditionHandle
-Properties :
+Properties:
 ```
 
 ## See Also<a name="aws-properties-waitconditionhandle--seealso"></a>

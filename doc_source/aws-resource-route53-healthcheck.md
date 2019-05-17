@@ -35,10 +35,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Route53::HealthCheck
-Properties : 
-﻿  [HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig) : 
+Properties: 
+  [HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig): 
     [HealthCheckConfig](aws-properties-route53-healthcheck-healthcheckconfig.md)
-﻿  [HealthCheckTags](#cfn-route53-healthcheck-healthchecktags) : 
+  [HealthCheckTags](#cfn-route53-healthcheck-healthchecktags): 
     - [HealthCheckTag](aws-properties-route53-healthcheck-healthchecktag.md)
 ```
 

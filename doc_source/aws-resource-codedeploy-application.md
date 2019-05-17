@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CodeDeploy::Application
-Properties : 
-﻿  [ApplicationName](#cfn-codedeploy-application-applicationname) : String
-﻿  [ComputePlatform](#cfn-codedeploy-application-computeplatform) : String
+Properties: 
+  [ApplicationName](#cfn-codedeploy-application-applicationname): String
+  [ComputePlatform](#cfn-codedeploy-application-computeplatform): String
 ```
 
 ## Properties<a name="aws-resource-codedeploy-application-properties"></a>

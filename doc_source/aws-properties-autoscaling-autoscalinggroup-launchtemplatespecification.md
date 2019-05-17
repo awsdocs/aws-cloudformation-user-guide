@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification-syntax.yaml"></a>
 
 ```
-﻿  [LaunchTemplateId](#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplateid) : String
-﻿  [LaunchTemplateName](#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplatename) : String
-﻿  [Version](#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-version) : String
+  [LaunchTemplateId](#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplateid): String
+  [LaunchTemplateName](#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplatename): String
+  [Version](#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-version): String
 ```
 
 ## Properties<a name="aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification-properties"></a>

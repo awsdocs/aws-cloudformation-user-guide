@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-spotfleet-classicloadbalancer-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-ec2-spotfleet-classicloadbalancer-name) : String
+  [Name](#cfn-ec2-spotfleet-classicloadbalancer-name): String
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-classicloadbalancer-properties"></a>

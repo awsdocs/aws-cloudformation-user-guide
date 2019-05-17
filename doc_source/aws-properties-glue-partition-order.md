@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-partition-order-syntax.yaml"></a>
 
 ```
-﻿  [Column](#cfn-glue-partition-order-column) : [String](aws-properties-glue-partition-column.md)
-﻿  [SortOrder](#cfn-glue-partition-order-sortorder) : Integer
+  [Column](#cfn-glue-partition-order-column): [String](aws-properties-glue-partition-column.md)
+  [SortOrder](#cfn-glue-partition-order-sortorder): Integer
 ```
 
 ## Properties<a name="aws-properties-glue-partition-order-properties"></a>

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticloadbalancingv2-listenerrule-conditions-syntax.yaml"></a>
 
 ```
-﻿  [Field](#cfn-elasticloadbalancingv2-listenerrule-conditions-field) : String
-﻿  [Values](#cfn-elasticloadbalancingv2-listenerrule-conditions-values) : 
+  [Field](#cfn-elasticloadbalancingv2-listenerrule-conditions-field): String
+  [Values](#cfn-elasticloadbalancingv2-listenerrule-conditions-values): 
     - String
 ```
 

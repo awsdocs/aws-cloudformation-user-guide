@@ -24,10 +24,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting-syntax.yaml"></a>
 
 ```
-﻿  [Namespace](#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-namespace) : String
-﻿  [OptionName](#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-optionname) : String
-﻿  [ResourceName](#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-resourcename) : String
-﻿  [Value](#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-value) : String
+  [Namespace](#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-namespace): String
+  [OptionName](#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-optionname): String
+  [ResourceName](#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-resourcename): String
+  [Value](#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-value): String
 ```
 
 ## Properties<a name="aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting-properties"></a>

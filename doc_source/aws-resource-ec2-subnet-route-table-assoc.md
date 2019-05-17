@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::SubnetRouteTableAssociation
-Properties : 
-﻿  [RouteTableId](#cfn-ec2-subnetroutetableassociation-routetableid) : String
-﻿  [SubnetId](#cfn-ec2-subnetroutetableassociation-subnetid) : String
+Properties: 
+  [RouteTableId](#cfn-ec2-subnetroutetableassociation-routetableid): String
+  [SubnetId](#cfn-ec2-subnetroutetableassociation-subnetid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-subnet-route-table-assoc-properties"></a>

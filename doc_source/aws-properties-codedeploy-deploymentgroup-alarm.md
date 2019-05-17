@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-alarm-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-codedeploy-deploymentgroup-alarm-name) : String
+  [Name](#cfn-codedeploy-deploymentgroup-alarm-name): String
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-alarm-properties"></a>

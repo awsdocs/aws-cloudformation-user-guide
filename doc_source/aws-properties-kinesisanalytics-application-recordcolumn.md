@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalytics-application-recordcolumn-syntax.yaml"></a>
 
 ```
-﻿  [Mapping](#cfn-kinesisanalytics-application-recordcolumn-mapping) : String
-﻿  [Name](#cfn-kinesisanalytics-application-recordcolumn-name) : String
-﻿  [SqlType](#cfn-kinesisanalytics-application-recordcolumn-sqltype) : String
+  [Mapping](#cfn-kinesisanalytics-application-recordcolumn-mapping): String
+  [Name](#cfn-kinesisanalytics-application-recordcolumn-name): String
+  [SqlType](#cfn-kinesisanalytics-application-recordcolumn-sqltype): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-application-recordcolumn-properties"></a>

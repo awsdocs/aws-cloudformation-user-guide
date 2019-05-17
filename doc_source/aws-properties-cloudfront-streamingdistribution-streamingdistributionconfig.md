@@ -23,16 +23,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig-syntax.yaml"></a>
 
 ```
-﻿  [Aliases](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-aliases) : 
+  [Aliases](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-aliases): 
     - String
-﻿  [Comment](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-comment) : String
-﻿  [Enabled](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-enabled) : Boolean
-﻿  [Logging](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-logging) : 
+  [Comment](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-comment): String
+  [Enabled](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-enabled): Boolean
+  [Logging](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-logging): 
     [Logging](aws-properties-cloudfront-streamingdistribution-logging.md)
-﻿  [PriceClass](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-priceclass) : String
-﻿  [S3Origin](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-s3origin) : 
+  [PriceClass](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-priceclass): String
+  [S3Origin](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-s3origin): 
     [S3Origin](aws-properties-cloudfront-streamingdistribution-s3origin.md)
-﻿  [TrustedSigners](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-trustedsigners) : 
+  [TrustedSigners](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-trustedsigners): 
     [TrustedSigners](aws-properties-cloudfront-streamingdistribution-trustedsigners.md)
 ```
 

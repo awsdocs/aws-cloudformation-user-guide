@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-bucketencryption-syntax.yaml"></a>
 
 ```
-﻿  [ServerSideEncryptionConfiguration](#cfn-s3-bucket-bucketencryption-serversideencryptionconfiguration) : 
+  [ServerSideEncryptionConfiguration](#cfn-s3-bucket-bucketencryption-serversideencryptionconfiguration): 
     - [ServerSideEncryptionRule](aws-properties-s3-bucket-serversideencryptionrule.md)
 ```
 

@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-eks-cluster-resourcesvpcconfig-syntax.yaml"></a>
 
 ```
-﻿  [SecurityGroupIds](#cfn-eks-cluster-resourcesvpcconfig-securitygroupids) : 
+  [SecurityGroupIds](#cfn-eks-cluster-resourcesvpcconfig-securitygroupids): 
     - String
-﻿  [SubnetIds](#cfn-eks-cluster-resourcesvpcconfig-subnetids) : 
+  [SubnetIds](#cfn-eks-cluster-resourcesvpcconfig-subnetids): 
     - String
 ```
 

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dynamodb-provisionedthroughput-syntax.yaml"></a>
 
 ```
-﻿  [ReadCapacityUnits](#cfn-dynamodb-provisionedthroughput-readcapacityunits) : Long
-﻿  [WriteCapacityUnits](#cfn-dynamodb-provisionedthroughput-writecapacityunits) : Long
+  [ReadCapacityUnits](#cfn-dynamodb-provisionedthroughput-readcapacityunits): Long
+  [WriteCapacityUnits](#cfn-dynamodb-provisionedthroughput-writecapacityunits): Long
 ```
 
 ## Properties<a name="aws-properties-dynamodb-provisionedthroughput-properties"></a>

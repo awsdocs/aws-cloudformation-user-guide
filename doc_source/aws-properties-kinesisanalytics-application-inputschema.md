@@ -21,10 +21,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalytics-application-inputschema-syntax.yaml"></a>
 
 ```
-﻿  [RecordColumns](#cfn-kinesisanalytics-application-inputschema-recordcolumns) : 
+  [RecordColumns](#cfn-kinesisanalytics-application-inputschema-recordcolumns): 
     - [RecordColumn](aws-properties-kinesisanalytics-application-recordcolumn.md)
-﻿  [RecordEncoding](#cfn-kinesisanalytics-application-inputschema-recordencoding) : String
-﻿  [RecordFormat](#cfn-kinesisanalytics-application-inputschema-recordformat) : 
+  [RecordEncoding](#cfn-kinesisanalytics-application-inputschema-recordencoding): String
+  [RecordFormat](#cfn-kinesisanalytics-application-inputschema-recordformat): 
     [RecordFormat](aws-properties-kinesisanalytics-application-recordformat.md)
 ```
 

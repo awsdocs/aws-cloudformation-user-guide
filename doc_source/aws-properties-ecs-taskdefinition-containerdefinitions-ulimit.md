@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-taskdefinition-containerdefinitions-ulimit-syntax.yaml"></a>
 
 ```
-﻿  [HardLimit](#cfn-ecs-taskdefinition-containerdefinition-ulimit-hardlimit) : Integer
-﻿  [Name](#cfn-ecs-taskdefinition-containerdefinition-ulimit-name) : String
-﻿  [SoftLimit](#cfn-ecs-taskdefinition-containerdefinition-ulimit-softlimit) : Integer
+  [HardLimit](#cfn-ecs-taskdefinition-containerdefinition-ulimit-hardlimit): Integer
+  [Name](#cfn-ecs-taskdefinition-containerdefinition-ulimit-name): String
+  [SoftLimit](#cfn-ecs-taskdefinition-containerdefinition-ulimit-softlimit): Integer
 ```
 
 ## Properties<a name="aws-properties-ecs-taskdefinition-containerdefinitions-ulimit-properties"></a>

@@ -36,25 +36,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DocDB::DBCluster
-Properties : 
-﻿  [AvailabilityZones](#cfn-docdb-dbcluster-availabilityzones) : 
+Properties: 
+  [AvailabilityZones](#cfn-docdb-dbcluster-availabilityzones): 
     - String
-﻿  [BackupRetentionPeriod](#cfn-docdb-dbcluster-backupretentionperiod) : Integer
-﻿  [DBClusterIdentifier](#cfn-docdb-dbcluster-dbclusteridentifier) : String
-﻿  [DBClusterParameterGroupName](#cfn-docdb-dbcluster-dbclusterparametergroupname) : String
-﻿  [DBSubnetGroupName](#cfn-docdb-dbcluster-dbsubnetgroupname) : String
-﻿  [EngineVersion](#cfn-docdb-dbcluster-engineversion) : String
-﻿  [KmsKeyId](#cfn-docdb-dbcluster-kmskeyid) : String
-﻿  [MasterUserPassword](#cfn-docdb-dbcluster-masteruserpassword) : String
-﻿  [MasterUsername](#cfn-docdb-dbcluster-masterusername) : String
-﻿  [Port](#cfn-docdb-dbcluster-port) : Integer
-﻿  [PreferredBackupWindow](#cfn-docdb-dbcluster-preferredbackupwindow) : String
-﻿  [PreferredMaintenanceWindow](#cfn-docdb-dbcluster-preferredmaintenancewindow) : String
-﻿  [SnapshotIdentifier](#cfn-docdb-dbcluster-snapshotidentifier) : String
-﻿  [StorageEncrypted](#cfn-docdb-dbcluster-storageencrypted) : Boolean
-﻿  [Tags](#cfn-docdb-dbcluster-tags) : 
+  [BackupRetentionPeriod](#cfn-docdb-dbcluster-backupretentionperiod): Integer
+  [DBClusterIdentifier](#cfn-docdb-dbcluster-dbclusteridentifier): String
+  [DBClusterParameterGroupName](#cfn-docdb-dbcluster-dbclusterparametergroupname): String
+  [DBSubnetGroupName](#cfn-docdb-dbcluster-dbsubnetgroupname): String
+  [EngineVersion](#cfn-docdb-dbcluster-engineversion): String
+  [KmsKeyId](#cfn-docdb-dbcluster-kmskeyid): String
+  [MasterUserPassword](#cfn-docdb-dbcluster-masteruserpassword): String
+  [MasterUsername](#cfn-docdb-dbcluster-masterusername): String
+  [Port](#cfn-docdb-dbcluster-port): Integer
+  [PreferredBackupWindow](#cfn-docdb-dbcluster-preferredbackupwindow): String
+  [PreferredMaintenanceWindow](#cfn-docdb-dbcluster-preferredmaintenancewindow): String
+  [SnapshotIdentifier](#cfn-docdb-dbcluster-snapshotidentifier): String
+  [StorageEncrypted](#cfn-docdb-dbcluster-storageencrypted): Boolean
+  [Tags](#cfn-docdb-dbcluster-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VpcSecurityGroupIds](#cfn-docdb-dbcluster-vpcsecuritygroupids) : 
+  [VpcSecurityGroupIds](#cfn-docdb-dbcluster-vpcsecuritygroupids): 
     - String
 ```
 

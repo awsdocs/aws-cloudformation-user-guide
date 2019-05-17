@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-route53-healthcheck-alarmidentifier-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-route53-healthcheck-alarmidentifier-name) : String
-﻿  [Region](#cfn-route53-healthcheck-alarmidentifier-region) : String
+  [Name](#cfn-route53-healthcheck-alarmidentifier-name): String
+  [Region](#cfn-route53-healthcheck-alarmidentifier-region): String
 ```
 
 ## Properties<a name="aws-properties-route53-healthcheck-alarmidentifier-properties"></a>

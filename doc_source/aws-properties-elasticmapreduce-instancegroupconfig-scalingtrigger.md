@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-instancegroupconfig-scalingtrigger-syntax.yaml"></a>
 
 ```
-﻿  [CloudWatchAlarmDefinition](#cfn-elasticmapreduce-instancegroupconfig-scalingtrigger-cloudwatchalarmdefinition) : 
+  [CloudWatchAlarmDefinition](#cfn-elasticmapreduce-instancegroupconfig-scalingtrigger-cloudwatchalarmdefinition): 
     [CloudWatchAlarmDefinition](aws-properties-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition.md)
 ```
 

@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CloudWatch::Dashboard
-Properties : 
-﻿  [DashboardBody](#cfn-cloudwatch-dashboard-dashboardbody) : String
-﻿  [DashboardName](#cfn-cloudwatch-dashboard-dashboardname) : String
+Properties: 
+  [DashboardBody](#cfn-cloudwatch-dashboard-dashboardbody): String
+  [DashboardName](#cfn-cloudwatch-dashboard-dashboardname): String
 ```
 
 ## Properties<a name="aws-resource-cloudwatch-dashboard-properties"></a>

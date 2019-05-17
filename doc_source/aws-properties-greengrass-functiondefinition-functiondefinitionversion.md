@@ -23,9 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-functiondefinition-functiondefinitionversion-syntax.yaml"></a>
 
 ```
-﻿  [DefaultConfig](#cfn-greengrass-functiondefinition-functiondefinitionversion-defaultconfig) : 
+  [DefaultConfig](#cfn-greengrass-functiondefinition-functiondefinitionversion-defaultconfig): 
     [DefaultConfig](aws-properties-greengrass-functiondefinition-defaultconfig.md)
-﻿  [Functions](#cfn-greengrass-functiondefinition-functiondefinitionversion-functions) : 
+  [Functions](#cfn-greengrass-functiondefinition-functiondefinitionversion-functions): 
     - [Function](aws-properties-greengrass-functiondefinition-function.md)
 ```
 

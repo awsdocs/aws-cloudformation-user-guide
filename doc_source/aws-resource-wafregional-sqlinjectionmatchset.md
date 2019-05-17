@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::WAFRegional::SqlInjectionMatchSet
-Properties : 
-﻿  [Name](#cfn-wafregional-sqlinjectionmatchset-name) : String
-﻿  [SqlInjectionMatchTuples](#cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuples) : 
+Properties: 
+  [Name](#cfn-wafregional-sqlinjectionmatchset-name): String
+  [SqlInjectionMatchTuples](#cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuples): 
     - [SqlInjectionMatchTuple](aws-properties-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuple.md)
 ```
 

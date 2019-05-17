@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-cloudwatchalarmaction-syntax.yaml"></a>
 
 ```
-﻿  [AlarmName](#cfn-iot-topicrule-cloudwatchalarmaction-alarmname) : String
-﻿  [RoleArn](#cfn-iot-topicrule-cloudwatchalarmaction-rolearn) : String
-﻿  [StateReason](#cfn-iot-topicrule-cloudwatchalarmaction-statereason) : String
-﻿  [StateValue](#cfn-iot-topicrule-cloudwatchalarmaction-statevalue) : String
+  [AlarmName](#cfn-iot-topicrule-cloudwatchalarmaction-alarmname): String
+  [RoleArn](#cfn-iot-topicrule-cloudwatchalarmaction-rolearn): String
+  [StateReason](#cfn-iot-topicrule-cloudwatchalarmaction-statereason): String
+  [StateValue](#cfn-iot-topicrule-cloudwatchalarmaction-statevalue): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-cloudwatchalarmaction-properties"></a>

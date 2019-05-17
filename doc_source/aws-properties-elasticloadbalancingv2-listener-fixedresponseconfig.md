@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig-syntax.yaml"></a>
 
 ```
-﻿  [ContentType](#cfn-elasticloadbalancingv2-listener-fixedresponseconfig-contenttype) : String
-﻿  [MessageBody](#cfn-elasticloadbalancingv2-listener-fixedresponseconfig-messagebody) : String
-﻿  [StatusCode](#cfn-elasticloadbalancingv2-listener-fixedresponseconfig-statuscode) : String
+  [ContentType](#cfn-elasticloadbalancingv2-listener-fixedresponseconfig-contenttype): String
+  [MessageBody](#cfn-elasticloadbalancingv2-listener-fixedresponseconfig-messagebody): String
+  [StatusCode](#cfn-elasticloadbalancingv2-listener-fixedresponseconfig-statuscode): String
 ```
 
 ## Properties<a name="aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig-properties"></a>

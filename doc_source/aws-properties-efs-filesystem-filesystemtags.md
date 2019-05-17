@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-efs-filesystem-filesystemtags-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-efs-filesystem-filesystemtags-key) : String
-﻿  [Value](#cfn-efs-filesystem-filesystemtags-value) : String
+  [Key](#cfn-efs-filesystem-filesystemtags-key): String
+  [Value](#cfn-efs-filesystem-filesystemtags-value): String
 ```
 
 ## Properties<a name="aws-properties-efs-filesystem-filesystemtags-properties"></a>

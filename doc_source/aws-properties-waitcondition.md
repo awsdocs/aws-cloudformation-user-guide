@@ -33,10 +33,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CloudFormation::WaitCondition
-Properties : 
-﻿  [Count](#cfn-waitcondition-count) : Integer
-﻿  [Handle](#cfn-waitcondition-handle) : String
-﻿  [Timeout](#cfn-waitcondition-timeout) : String
+Properties: 
+  [Count](#cfn-waitcondition-count): Integer
+  [Handle](#cfn-waitcondition-handle): String
+  [Timeout](#cfn-waitcondition-timeout): String
 ```
 
 ## Properties<a name="aws-properties-waitcondition-properties"></a>

@@ -33,23 +33,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SSM::MaintenanceWindowTask
-Properties : 
-﻿  [Description](#cfn-ssm-maintenancewindowtask-description) : String
-﻿  [LoggingInfo](#cfn-ssm-maintenancewindowtask-logginginfo) : 
+Properties: 
+  [Description](#cfn-ssm-maintenancewindowtask-description): String
+  [LoggingInfo](#cfn-ssm-maintenancewindowtask-logginginfo): 
     [LoggingInfo](aws-properties-ssm-maintenancewindowtask-logginginfo.md)
-﻿  [MaxConcurrency](#cfn-ssm-maintenancewindowtask-maxconcurrency) : String
-﻿  [MaxErrors](#cfn-ssm-maintenancewindowtask-maxerrors) : String
-﻿  [Name](#cfn-ssm-maintenancewindowtask-name) : String
-﻿  [Priority](#cfn-ssm-maintenancewindowtask-priority) : Integer
-﻿  [ServiceRoleArn](#cfn-ssm-maintenancewindowtask-servicerolearn) : String
-﻿  [Targets](#cfn-ssm-maintenancewindowtask-targets) : 
+  [MaxConcurrency](#cfn-ssm-maintenancewindowtask-maxconcurrency): String
+  [MaxErrors](#cfn-ssm-maintenancewindowtask-maxerrors): String
+  [Name](#cfn-ssm-maintenancewindowtask-name): String
+  [Priority](#cfn-ssm-maintenancewindowtask-priority): Integer
+  [ServiceRoleArn](#cfn-ssm-maintenancewindowtask-servicerolearn): String
+  [Targets](#cfn-ssm-maintenancewindowtask-targets): 
     - [Target](aws-properties-ssm-maintenancewindowtask-target.md)
-﻿  [TaskArn](#cfn-ssm-maintenancewindowtask-taskarn) : String
-﻿  [TaskInvocationParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters) : 
+  [TaskArn](#cfn-ssm-maintenancewindowtask-taskarn): String
+  [TaskInvocationParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters): 
     [TaskInvocationParameters](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md)
-﻿  [TaskParameters](#cfn-ssm-maintenancewindowtask-taskparameters) : Json
-﻿  [TaskType](#cfn-ssm-maintenancewindowtask-tasktype) : String
-﻿  [WindowId](#cfn-ssm-maintenancewindowtask-windowid) : String
+  [TaskParameters](#cfn-ssm-maintenancewindowtask-taskparameters): Json
+  [TaskType](#cfn-ssm-maintenancewindowtask-tasktype): String
+  [WindowId](#cfn-ssm-maintenancewindowtask-windowid): String
 ```
 
 ## Properties<a name="aws-resource-ssm-maintenancewindowtask-properties"></a>
@@ -97,7 +97,7 @@ The task name\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Priority`  <a name="cfn-ssm-maintenancewindowtask-priority"></a>
-The priority of the task in the Maintenance Window\. The lower the number, the higher the priority\. Tasks that have the same priority are scheduled in parallel\.  
+The priority of the task in the maintenance window\. The lower the number, the higher the priority\. Tasks that have the same priority are scheduled in parallel\.  
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -110,9 +110,9 @@ The role that's used when the task is executed\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-ssm-maintenancewindowtask-targets"></a>
-The targets, either instances or tags\.  
-+ Specify instances using `Key=instanceids,Values=instanceid1,instanceid2 `\.
-+ Specify tags using `Key=tag name,Values=tag value `\.
+The targets, either instances or window target IDs\.  
++ Specify instances using `Key=InstanceIds,Values=instanceid1,instanceid2 `\.
++ Specify window target IDs using `Key=WindowTargetIds,Values=window-target-id-1,window-target-id-2`\.
 *Required*: Yes  
 *Type*: List of [Target](aws-properties-ssm-maintenancewindowtask-target.md)  
 *Maximum*: `5`  
@@ -150,7 +150,7 @@ The type of task\. Valid values: `RUN_COMMAND`, `AUTOMATION`, `LAMBDA`, `STEP_FU
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WindowId`  <a name="cfn-ssm-maintenancewindowtask-windowid"></a>
-The ID of the Maintenance Window where the task is registered\.  
+The ID of the maintenance window where the task is registered\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `20`  

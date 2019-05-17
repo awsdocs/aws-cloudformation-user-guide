@@ -27,11 +27,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RDS::DBClusterParameterGroup
-Properties : 
-﻿  [Description](#cfn-rds-dbclusterparametergroup-description) : String
-﻿  [Family](#cfn-rds-dbclusterparametergroup-family) : String
-﻿  [Parameters](#cfn-rds-dbclusterparametergroup-parameters) : Json
-﻿  [Tags](#cfn-rds-dbclusterparametergroup-tags) : 
+Properties: 
+  [Description](#cfn-rds-dbclusterparametergroup-description): String
+  [Family](#cfn-rds-dbclusterparametergroup-family): String
+  [Parameters](#cfn-rds-dbclusterparametergroup-parameters): Json
+  [Tags](#cfn-rds-dbclusterparametergroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

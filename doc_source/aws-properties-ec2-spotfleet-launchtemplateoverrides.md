@@ -21,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-spotfleet-launchtemplateoverrides-syntax.yaml"></a>
 
 ```
-﻿  [AvailabilityZone](#cfn-ec2-spotfleet-launchtemplateoverrides-availabilityzone) : String
-﻿  [InstanceType](#cfn-ec2-spotfleet-launchtemplateoverrides-instancetype) : String
-﻿  [SpotPrice](#cfn-ec2-spotfleet-launchtemplateoverrides-spotprice) : String
-﻿  [SubnetId](#cfn-ec2-spotfleet-launchtemplateoverrides-subnetid) : String
-﻿  [WeightedCapacity](#cfn-ec2-spotfleet-launchtemplateoverrides-weightedcapacity) : Double
+  [AvailabilityZone](#cfn-ec2-spotfleet-launchtemplateoverrides-availabilityzone): String
+  [InstanceType](#cfn-ec2-spotfleet-launchtemplateoverrides-instancetype): String
+  [SpotPrice](#cfn-ec2-spotfleet-launchtemplateoverrides-spotprice): String
+  [SubnetId](#cfn-ec2-spotfleet-launchtemplateoverrides-subnetid): String
+  [WeightedCapacity](#cfn-ec2-spotfleet-launchtemplateoverrides-weightedcapacity): Double
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-launchtemplateoverrides-properties"></a>

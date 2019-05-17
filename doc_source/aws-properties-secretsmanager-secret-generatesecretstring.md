@@ -30,17 +30,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-secretsmanager-secret-generatesecretstring-syntax.yaml"></a>
 
 ```
-﻿  [ExcludeCharacters](#cfn-secretsmanager-secret-generatesecretstring-excludecharacters) : String
-﻿  [ExcludeLowercase](#cfn-secretsmanager-secret-generatesecretstring-excludelowercase) : Boolean
-﻿  [ExcludeNumbers](#cfn-secretsmanager-secret-generatesecretstring-excludenumbers) : Boolean
-﻿  [ExcludePunctuation](#cfn-secretsmanager-secret-generatesecretstring-excludepunctuation) : Boolean
-﻿  [ExcludeUppercase](#cfn-secretsmanager-secret-generatesecretstring-excludeuppercase) : Boolean
-﻿  [GenerateStringKey](#cfn-secretsmanager-secret-generatesecretstring-generatestringkey) : 
+  [ExcludeCharacters](#cfn-secretsmanager-secret-generatesecretstring-excludecharacters): String
+  [ExcludeLowercase](#cfn-secretsmanager-secret-generatesecretstring-excludelowercase): Boolean
+  [ExcludeNumbers](#cfn-secretsmanager-secret-generatesecretstring-excludenumbers): Boolean
+  [ExcludePunctuation](#cfn-secretsmanager-secret-generatesecretstring-excludepunctuation): Boolean
+  [ExcludeUppercase](#cfn-secretsmanager-secret-generatesecretstring-excludeuppercase): Boolean
+  [GenerateStringKey](#cfn-secretsmanager-secret-generatesecretstring-generatestringkey): 
     String
-﻿  [IncludeSpace](#cfn-secretsmanager-secret-generatesecretstring-includespace) : Boolean
-﻿  [PasswordLength](#cfn-secretsmanager-secret-generatesecretstring-passwordlength) : Integer
-﻿  [RequireEachIncludedType](#cfn-secretsmanager-secret-generatesecretstring-requireeachincludedtype) : Boolean
-﻿  [SecretStringTemplate](#cfn-secretsmanager-secret-generatesecretstring-secretstringtemplate) : 
+  [IncludeSpace](#cfn-secretsmanager-secret-generatesecretstring-includespace): Boolean
+  [PasswordLength](#cfn-secretsmanager-secret-generatesecretstring-passwordlength): Integer
+  [RequireEachIncludedType](#cfn-secretsmanager-secret-generatesecretstring-requireeachincludedtype): Boolean
+  [SecretStringTemplate](#cfn-secretsmanager-secret-generatesecretstring-secretstringtemplate): 
     String
 ```
 

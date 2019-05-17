@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apigateway-restapi-s3location-syntax.yaml"></a>
 
 ```
-﻿  [Bucket](#cfn-apigateway-restapi-s3location-bucket) : String
-﻿  [ETag](#cfn-apigateway-restapi-s3location-etag) : String
-﻿  [Key](#cfn-apigateway-restapi-s3location-key) : String
-﻿  [Version](#cfn-apigateway-restapi-s3location-version) : String
+  [Bucket](#cfn-apigateway-restapi-s3location-bucket): String
+  [ETag](#cfn-apigateway-restapi-s3location-etag): String
+  [Key](#cfn-apigateway-restapi-s3location-key): String
+  [Version](#cfn-apigateway-restapi-s3location-version): String
 ```
 
 ## Properties<a name="aws-properties-apigateway-restapi-s3location-properties"></a>

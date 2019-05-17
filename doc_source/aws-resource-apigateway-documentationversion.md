@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::DocumentationVersion
-Properties : 
-﻿  [Description](#cfn-apigateway-documentationversion-description) : String
-﻿  [DocumentationVersion](#cfn-apigateway-documentationversion-documentationversion) : String
-﻿  [RestApiId](#cfn-apigateway-documentationversion-restapiid) : String
+Properties: 
+  [Description](#cfn-apigateway-documentationversion-description): String
+  [DocumentationVersion](#cfn-apigateway-documentationversion-documentationversion): String
+  [RestApiId](#cfn-apigateway-documentationversion-restapiid): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-documentationversion-properties"></a>

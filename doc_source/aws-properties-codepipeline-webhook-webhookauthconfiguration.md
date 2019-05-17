@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codepipeline-webhook-webhookauthconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [AllowedIPRange](#cfn-codepipeline-webhook-webhookauthconfiguration-allowediprange) : String
-﻿  [SecretToken](#cfn-codepipeline-webhook-webhookauthconfiguration-secrettoken) : String
+  [AllowedIPRange](#cfn-codepipeline-webhook-webhookauthconfiguration-allowediprange): String
+  [SecretToken](#cfn-codepipeline-webhook-webhookauthconfiguration-secrettoken): String
 ```
 
 ## Properties<a name="aws-properties-codepipeline-webhook-webhookauthconfiguration-properties"></a>

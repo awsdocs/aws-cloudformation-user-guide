@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IoT::Policy
-Properties : 
-﻿  [PolicyDocument](#cfn-iot-policy-policydocument) : Json
-﻿  [PolicyName](#cfn-iot-policy-policyname) : String
+Properties: 
+  [PolicyDocument](#cfn-iot-policy-policydocument): Json
+  [PolicyName](#cfn-iot-policy-policyname): String
 ```
 
 ## Properties<a name="aws-resource-iot-policy-properties"></a>

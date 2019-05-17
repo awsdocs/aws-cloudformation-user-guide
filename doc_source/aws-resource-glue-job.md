@@ -30,20 +30,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Glue::Job
-Properties : 
-﻿  [AllocatedCapacity](#cfn-glue-job-allocatedcapacity) : Double
-﻿  [Command](#cfn-glue-job-command) : 
+Properties: 
+  [AllocatedCapacity](#cfn-glue-job-allocatedcapacity): Double
+  [Command](#cfn-glue-job-command): 
     [JobCommand](aws-properties-glue-job-jobcommand.md)
-﻿  [Connections](#cfn-glue-job-connections) : 
+  [Connections](#cfn-glue-job-connections): 
     [ConnectionsList](aws-properties-glue-job-connectionslist.md)
-﻿  [DefaultArguments](#cfn-glue-job-defaultarguments) : Json
-﻿  [Description](#cfn-glue-job-description) : String
-﻿  [ExecutionProperty](#cfn-glue-job-executionproperty) : 
+  [DefaultArguments](#cfn-glue-job-defaultarguments): Json
+  [Description](#cfn-glue-job-description): String
+  [ExecutionProperty](#cfn-glue-job-executionproperty): 
     [ExecutionProperty](aws-properties-glue-job-executionproperty.md)
-﻿  [LogUri](#cfn-glue-job-loguri) : String
-﻿  [MaxRetries](#cfn-glue-job-maxretries) : Double
-﻿  [Name](#cfn-glue-job-name) : String
-﻿  [Role](#cfn-glue-job-role) : String
+  [LogUri](#cfn-glue-job-loguri): String
+  [MaxRetries](#cfn-glue-job-maxretries): Double
+  [Name](#cfn-glue-job-name): String
+  [Role](#cfn-glue-job-role): String
 ```
 
 ## Properties<a name="aws-resource-glue-job-properties"></a>

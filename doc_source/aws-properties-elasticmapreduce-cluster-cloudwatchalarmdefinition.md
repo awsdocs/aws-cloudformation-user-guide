@@ -25,16 +25,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition-syntax.yaml"></a>
 
 ```
-﻿  [ComparisonOperator](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-comparisonoperator) : String
-﻿  [Dimensions](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-dimensions) : 
+  [ComparisonOperator](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-comparisonoperator): String
+  [Dimensions](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-dimensions): 
     - [MetricDimension](aws-properties-elasticmapreduce-cluster-metricdimension.md)
-﻿  [EvaluationPeriods](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-evaluationperiods) : Integer
-﻿  [MetricName](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-metricname) : String
-﻿  [Namespace](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-namespace) : String
-﻿  [Period](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-period) : Integer
-﻿  [Statistic](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-statistic) : String
-﻿  [Threshold](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-threshold) : Double
-﻿  [Unit](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-unit) : String
+  [EvaluationPeriods](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-evaluationperiods): Integer
+  [MetricName](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-metricname): String
+  [Namespace](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-namespace): String
+  [Period](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-period): Integer
+  [Statistic](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-statistic): String
+  [Threshold](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-threshold): Double
+  [Unit](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-unit): String
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition-properties"></a>

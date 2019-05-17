@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DAX::SubnetGroup
-Properties : 
-﻿  [Description](#cfn-dax-subnetgroup-description) : String
-﻿  [SubnetGroupName](#cfn-dax-subnetgroup-subnetgroupname) : String
-﻿  [SubnetIds](#cfn-dax-subnetgroup-subnetids) : 
+Properties: 
+  [Description](#cfn-dax-subnetgroup-description): String
+  [SubnetGroupName](#cfn-dax-subnetgroup-subnetgroupname): String
+  [SubnetIds](#cfn-dax-subnetgroup-subnetids): 
     - String
 ```
 

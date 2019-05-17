@@ -28,12 +28,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RDS::DBSecurityGroup
-Properties : 
-﻿  [DBSecurityGroupIngress](#cfn-rds-dbsecuritygroup-dbsecuritygroupingress) : 
+Properties: 
+  [DBSecurityGroupIngress](#cfn-rds-dbsecuritygroup-dbsecuritygroupingress): 
     - [Ingress](aws-properties-rds-security-group-rule.md)
-﻿  [EC2VpcId](#cfn-rds-dbsecuritygroup-ec2vpcid) : String
-﻿  [GroupDescription](#cfn-rds-dbsecuritygroup-groupdescription) : String
-﻿  [Tags](#cfn-rds-dbsecuritygroup-tags) : 
+  [EC2VpcId](#cfn-rds-dbsecuritygroup-ec2vpcid): String
+  [GroupDescription](#cfn-rds-dbsecuritygroup-groupdescription): String
+  [Tags](#cfn-rds-dbsecuritygroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

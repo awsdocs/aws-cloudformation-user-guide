@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-scalingaction-syntax.yaml"></a>
 
 ```
-﻿  [Market](#cfn-elasticmapreduce-cluster-scalingaction-market) : String
-﻿  [SimpleScalingPolicyConfiguration](#cfn-elasticmapreduce-cluster-scalingaction-simplescalingpolicyconfiguration) : 
+  [Market](#cfn-elasticmapreduce-cluster-scalingaction-market): String
+  [SimpleScalingPolicyConfiguration](#cfn-elasticmapreduce-cluster-scalingaction-simplescalingpolicyconfiguration): 
     [SimpleScalingPolicyConfiguration](aws-properties-elasticmapreduce-cluster-simplescalingpolicyconfiguration.md)
 ```
 

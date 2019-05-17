@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-robomaker-simulationapplication-sourceconfig-syntax.yaml"></a>
 
 ```
-﻿  [Architecture](#cfn-robomaker-simulationapplication-sourceconfig-architecture) : String
-﻿  [S3Bucket](#cfn-robomaker-simulationapplication-sourceconfig-s3bucket) : String
-﻿  [S3Key](#cfn-robomaker-simulationapplication-sourceconfig-s3key) : String
+  [Architecture](#cfn-robomaker-simulationapplication-sourceconfig-architecture): String
+  [S3Bucket](#cfn-robomaker-simulationapplication-sourceconfig-s3bucket): String
+  [S3Key](#cfn-robomaker-simulationapplication-sourceconfig-s3key): String
 ```
 
 ## Properties<a name="aws-properties-robomaker-simulationapplication-sourceconfig-properties"></a>

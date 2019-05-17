@@ -25,12 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CloudFormation::Macro
-Properties : 
-﻿  [Description](#cfn-cloudformation-macro-description) : String
-﻿  [FunctionName](#cfn-cloudformation-macro-functionname) : String
-﻿  [LogGroupName](#cfn-cloudformation-macro-loggroupname) : String
-﻿  [LogRoleARN](#cfn-cloudformation-macro-logrolearn) : String
-﻿  [Name](#cfn-cloudformation-macro-name) : String
+Properties: 
+  [Description](#cfn-cloudformation-macro-description): String
+  [FunctionName](#cfn-cloudformation-macro-functionname): String
+  [LogGroupName](#cfn-cloudformation-macro-loggroupname): String
+  [LogRoleARN](#cfn-cloudformation-macro-logrolearn): String
+  [Name](#cfn-cloudformation-macro-name): String
 ```
 
 ## Properties<a name="aws-resource-cloudformation-macro-properties"></a>

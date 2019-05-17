@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CodeDeploy::DeploymentConfig
-Properties : 
-﻿  [DeploymentConfigName](#cfn-codedeploy-deploymentconfig-deploymentconfigname) : String
-﻿  [MinimumHealthyHosts](#cfn-codedeploy-deploymentconfig-minimumhealthyhosts) : 
+Properties: 
+  [DeploymentConfigName](#cfn-codedeploy-deploymentconfig-deploymentconfigname): String
+  [MinimumHealthyHosts](#cfn-codedeploy-deploymentconfig-minimumhealthyhosts): 
     [MinimumHealthyHosts](aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.md)
 ```
 

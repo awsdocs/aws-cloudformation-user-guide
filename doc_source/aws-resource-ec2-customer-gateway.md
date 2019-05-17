@@ -24,12 +24,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::CustomerGateway
-Properties : 
-﻿  [BgpAsn](#cfn-ec2-customergateway-bgpasn) : Integer
-﻿  [IpAddress](#cfn-ec2-customergateway-ipaddress) : String
-﻿  [Tags](#cfn-ec2-customergateway-tags) : 
+Properties: 
+  [BgpAsn](#cfn-ec2-customergateway-bgpasn): Integer
+  [IpAddress](#cfn-ec2-customergateway-ipaddress): String
+  [Tags](#cfn-ec2-customergateway-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [Type](#cfn-ec2-customergateway-type) : String
+  [Type](#cfn-ec2-customergateway-type): String
 ```
 
 ## Properties<a name="aws-resource-ec2-customer-gateway-properties"></a>

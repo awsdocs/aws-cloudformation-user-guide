@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-environmentproperties-syntax.yaml"></a>
 
 ```
-﻿  [PropertyGroups](#cfn-kinesisanalyticsv2-application-environmentproperties-propertygroups) : 
+  [PropertyGroups](#cfn-kinesisanalyticsv2-application-environmentproperties-propertygroups): 
     - [PropertyGroup](aws-properties-kinesisanalyticsv2-application-propertygroup.md)
 ```
 

@@ -38,19 +38,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::SecurityGroupIngress
-Properties : 
-﻿  [CidrIp](#cfn-ec2-security-group-ingress-cidrip) : String
-﻿  [CidrIpv6](#cfn-ec2-security-group-ingress-cidripv6) : String
-﻿  [Description](#cfn-ec2-security-group-ingress-description) : String
-﻿  [FromPort](#cfn-ec2-security-group-ingress-fromport) : Integer
-﻿  [GroupId](#cfn-ec2-security-group-ingress-groupid) : String
-﻿  [GroupName](#cfn-ec2-security-group-ingress-groupname) : String
-﻿  [IpProtocol](#cfn-ec2-security-group-ingress-ipprotocol) : String
-﻿  [SourcePrefixListId](#cfn-ec2-securitygroupingress-sourceprefixlistid) : String
-﻿  [SourceSecurityGroupId](#cfn-ec2-security-group-ingress-sourcesecuritygroupid) : String
-﻿  [SourceSecurityGroupName](#cfn-ec2-security-group-ingress-sourcesecuritygroupname) : String
-﻿  [SourceSecurityGroupOwnerId](#cfn-ec2-security-group-ingress-sourcesecuritygroupownerid) : String
-﻿  [ToPort](#cfn-ec2-security-group-ingress-toport) : Integer
+Properties: 
+  [CidrIp](#cfn-ec2-security-group-ingress-cidrip): String
+  [CidrIpv6](#cfn-ec2-security-group-ingress-cidripv6): String
+  [Description](#cfn-ec2-security-group-ingress-description): String
+  [FromPort](#cfn-ec2-security-group-ingress-fromport): Integer
+  [GroupId](#cfn-ec2-security-group-ingress-groupid): String
+  [GroupName](#cfn-ec2-security-group-ingress-groupname): String
+  [IpProtocol](#cfn-ec2-security-group-ingress-ipprotocol): String
+  [SourcePrefixListId](#cfn-ec2-securitygroupingress-sourceprefixlistid): String
+  [SourceSecurityGroupId](#cfn-ec2-security-group-ingress-sourcesecuritygroupid): String
+  [SourceSecurityGroupName](#cfn-ec2-security-group-ingress-sourcesecuritygroupname): String
+  [SourceSecurityGroupOwnerId](#cfn-ec2-security-group-ingress-sourcesecuritygroupownerid): String
+  [ToPort](#cfn-ec2-security-group-ingress-toport): Integer
 ```
 
 ## Properties<a name="aws-properties-ec2-security-group-ingress-properties"></a>

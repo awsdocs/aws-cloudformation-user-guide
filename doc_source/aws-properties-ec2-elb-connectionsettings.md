@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-elb-connectionsettings-syntax.yaml"></a>
 
 ```
-﻿  [IdleTimeout](#cfn-elb-connectionsettings-idletimeout) : Integer
+  [IdleTimeout](#cfn-elb-connectionsettings-idletimeout): Integer
 ```
 
 ## Properties<a name="aws-properties-ec2-elb-connectionsettings-properties"></a>

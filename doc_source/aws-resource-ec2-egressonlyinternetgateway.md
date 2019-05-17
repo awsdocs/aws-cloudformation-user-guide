@@ -21,8 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::EgressOnlyInternetGateway
-Properties : 
-﻿  [VpcId](#cfn-ec2-egressonlyinternetgateway-vpcid) : String
+Properties: 
+  [VpcId](#cfn-ec2-egressonlyinternetgateway-vpcid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-egressonlyinternetgateway-properties"></a>

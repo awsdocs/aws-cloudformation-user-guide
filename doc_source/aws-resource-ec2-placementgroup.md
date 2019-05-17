@@ -25,8 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::PlacementGroup
-Properties : 
-﻿  [Strategy](#cfn-ec2-placementgroup-strategy) : String
+Properties: 
+  [Strategy](#cfn-ec2-placementgroup-strategy): String
 ```
 
 ## Properties<a name="aws-resource-ec2-placementgroup-properties"></a>

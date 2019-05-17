@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-referenceschema-syntax.yaml"></a>
 
 ```
-﻿  [RecordColumns](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordcolumns) : 
+  [RecordColumns](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordcolumns): 
     - [RecordColumn](aws-properties-kinesisanalytics-applicationreferencedatasource-recordcolumn.md)
-﻿  [RecordEncoding](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordencoding) : String
-﻿  [RecordFormat](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordformat) : 
+  [RecordEncoding](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordencoding): String
+  [RecordFormat](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordformat): 
     [RecordFormat](aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat.md)
 ```
 

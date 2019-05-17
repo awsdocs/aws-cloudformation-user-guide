@@ -26,9 +26,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Kinesis::StreamConsumer
-Properties : 
-﻿  [ConsumerName](#cfn-kinesis-streamconsumer-consumername) : String
-﻿  [StreamARN](#cfn-kinesis-streamconsumer-streamarn) : String
+Properties: 
+  [ConsumerName](#cfn-kinesis-streamconsumer-consumername): String
+  [StreamARN](#cfn-kinesis-streamconsumer-streamarn): String
 ```
 
 ## Properties<a name="aws-resource-kinesis-streamconsumer-properties"></a>

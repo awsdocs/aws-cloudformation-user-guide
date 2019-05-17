@@ -24,15 +24,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-syntax.yaml"></a>
 
 ```
-﻿  [AuthenticationRequestExtraParams](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-authenticationrequestextraparams) : 
+  [AuthenticationRequestExtraParams](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-authenticationrequestextraparams): 
     Key : Value
-﻿  [OnUnauthenticatedRequest](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-onunauthenticatedrequest) : String
-﻿  [Scope](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-scope) : String
-﻿  [SessionCookieName](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-sessioncookiename) : String
-﻿  [SessionTimeout](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-sessiontimeout) : Long
-﻿  [UserPoolArn](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpoolarn) : String
-﻿  [UserPoolClientId](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpoolclientid) : String
-﻿  [UserPoolDomain](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpooldomain) : String
+  [OnUnauthenticatedRequest](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-onunauthenticatedrequest): String
+  [Scope](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-scope): String
+  [SessionCookieName](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-sessioncookiename): String
+  [SessionTimeout](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-sessiontimeout): Long
+  [UserPoolArn](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpoolarn): String
+  [UserPoolClientId](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpoolclientid): String
+  [UserPoolDomain](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpooldomain): String
 ```
 
 ## Properties<a name="aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-properties"></a>

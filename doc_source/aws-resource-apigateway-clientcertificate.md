@@ -21,8 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::ClientCertificate
-Properties : 
-﻿  [Description](#cfn-apigateway-clientcertificate-description) : String
+Properties: 
+  [Description](#cfn-apigateway-clientcertificate-description): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-clientcertificate-properties"></a>

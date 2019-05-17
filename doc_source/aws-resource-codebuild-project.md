@@ -37,33 +37,33 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CodeBuild::Project
-Properties : 
-﻿  [Artifacts](#cfn-codebuild-project-artifacts) : 
+Properties: 
+  [Artifacts](#cfn-codebuild-project-artifacts): 
     [Artifacts](aws-properties-codebuild-project-artifacts.md)
-﻿  [BadgeEnabled](#cfn-codebuild-project-badgeenabled) : Boolean
-﻿  [Cache](#cfn-codebuild-project-cache) : 
+  [BadgeEnabled](#cfn-codebuild-project-badgeenabled): Boolean
+  [Cache](#cfn-codebuild-project-cache): 
     [ProjectCache](aws-properties-codebuild-project-projectcache.md)
-﻿  [Description](#cfn-codebuild-project-description) : String
-﻿  [EncryptionKey](#cfn-codebuild-project-encryptionkey) : String
-﻿  [Environment](#cfn-codebuild-project-environment) : 
+  [Description](#cfn-codebuild-project-description): String
+  [EncryptionKey](#cfn-codebuild-project-encryptionkey): String
+  [Environment](#cfn-codebuild-project-environment): 
     [Environment](aws-properties-codebuild-project-environment.md)
-﻿  [LogsConfig](#cfn-codebuild-project-logsconfig) : 
+  [LogsConfig](#cfn-codebuild-project-logsconfig): 
     [LogsConfig](aws-properties-codebuild-project-logsconfig.md)
-﻿  [Name](#cfn-codebuild-project-name) : String
-﻿  [QueuedTimeoutInMinutes](#cfn-codebuild-project-queuedtimeoutinminutes) : Integer
-﻿  [SecondaryArtifacts](#cfn-codebuild-project-secondaryartifacts) : 
+  [Name](#cfn-codebuild-project-name): String
+  [QueuedTimeoutInMinutes](#cfn-codebuild-project-queuedtimeoutinminutes): Integer
+  [SecondaryArtifacts](#cfn-codebuild-project-secondaryartifacts): 
     - [Artifacts](aws-properties-codebuild-project-artifacts.md)
-﻿  [SecondarySources](#cfn-codebuild-project-secondarysources) : 
+  [SecondarySources](#cfn-codebuild-project-secondarysources): 
     - [Source](aws-properties-codebuild-project-source.md)
-﻿  [ServiceRole](#cfn-codebuild-project-servicerole) : String
-﻿  [Source](#cfn-codebuild-project-source) : 
+  [ServiceRole](#cfn-codebuild-project-servicerole): String
+  [Source](#cfn-codebuild-project-source): 
     [Source](aws-properties-codebuild-project-source.md)
-﻿  [Tags](#cfn-codebuild-project-tags) : 
+  [Tags](#cfn-codebuild-project-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [TimeoutInMinutes](#cfn-codebuild-project-timeoutinminutes) : Integer
-﻿  [Triggers](#cfn-codebuild-project-triggers) : 
+  [TimeoutInMinutes](#cfn-codebuild-project-timeoutinminutes): Integer
+  [Triggers](#cfn-codebuild-project-triggers): 
     [ProjectTriggers](aws-properties-codebuild-project-projecttriggers.md)
-﻿  [VpcConfig](#cfn-codebuild-project-vpcconfig) : 
+  [VpcConfig](#cfn-codebuild-project-vpcconfig): 
     [VpcConfig](aws-properties-codebuild-project-vpcconfig.md)
 ```
 

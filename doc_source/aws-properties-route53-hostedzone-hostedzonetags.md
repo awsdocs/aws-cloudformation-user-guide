@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-route53-hostedzone-hostedzonetags-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-route53-hostedzonetags-key) : String
-﻿  [Value](#cfn-route53-hostedzonetags-value) : String
+  [Key](#cfn-route53-hostedzonetags-key): String
+  [Value](#cfn-route53-hostedzonetags-value): String
 ```
 
 ## Properties<a name="aws-properties-route53-hostedzone-hostedzonetags-properties"></a>

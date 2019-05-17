@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-waf-xssmatchset-xssmatchtuple-syntax.yaml"></a>
 
 ```
-﻿  [FieldToMatch](#cfn-waf-xssmatchset-xssmatchtuple-fieldtomatch) : 
+  [FieldToMatch](#cfn-waf-xssmatchset-xssmatchtuple-fieldtomatch): 
     [FieldToMatch](aws-properties-waf-xssmatchset-xssmatchtuple-fieldtomatch.md)
-﻿  [TextTransformation](#cfn-waf-xssmatchset-xssmatchtuple-texttransformation) : String
+  [TextTransformation](#cfn-waf-xssmatchset-xssmatchtuple-texttransformation): String
 ```
 
 ## Properties<a name="aws-properties-waf-xssmatchset-xssmatchtuple-properties"></a>

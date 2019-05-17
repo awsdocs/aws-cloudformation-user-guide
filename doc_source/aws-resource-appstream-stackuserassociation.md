@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppStream::StackUserAssociation
-Properties : 
-﻿  [AuthenticationType](#cfn-appstream-stackuserassociation-authenticationtype) : String
-﻿  [SendEmailNotification](#cfn-appstream-stackuserassociation-sendemailnotification) : Boolean
-﻿  [StackName](#cfn-appstream-stackuserassociation-stackname) : String
-﻿  [UserName](#cfn-appstream-stackuserassociation-username) : String
+Properties: 
+  [AuthenticationType](#cfn-appstream-stackuserassociation-authenticationtype): String
+  [SendEmailNotification](#cfn-appstream-stackuserassociation-sendemailnotification): Boolean
+  [StackName](#cfn-appstream-stackuserassociation-stackname): String
+  [UserName](#cfn-appstream-stackuserassociation-username): String
 ```
 
 ## Properties<a name="aws-resource-appstream-stackuserassociation-properties"></a>

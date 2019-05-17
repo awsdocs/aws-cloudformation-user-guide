@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-service-serviceregistry-syntax.yaml"></a>
 
 ```
-﻿  [ContainerName](#cfn-ecs-service-serviceregistry-containername) : String
-﻿  [ContainerPort](#cfn-ecs-service-serviceregistry-containerport) : Integer
-﻿  [Port](#cfn-ecs-service-serviceregistry-port) : Integer
-﻿  [RegistryArn](#cfn-ecs-service-serviceregistry-registryarn) : String
+  [ContainerName](#cfn-ecs-service-serviceregistry-containername): String
+  [ContainerPort](#cfn-ecs-service-serviceregistry-containerport): Integer
+  [Port](#cfn-ecs-service-serviceregistry-port): Integer
+  [RegistryArn](#cfn-ecs-service-serviceregistry-registryarn): String
 ```
 
 ## Properties<a name="aws-properties-ecs-service-serviceregistry-properties"></a>

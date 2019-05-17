@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-notificationconfig-queueconfig-syntax.yaml"></a>
 
 ```
-﻿  [Event](#cfn-s3-bucket-notificationconfig-queueconfig-event) : String
-﻿  [Filter](#cfn-s3-bucket-notificationconfig-queueconfig-filter) : 
+  [Event](#cfn-s3-bucket-notificationconfig-queueconfig-event): String
+  [Filter](#cfn-s3-bucket-notificationconfig-queueconfig-filter): 
     [NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md)
-﻿  [Queue](#cfn-s3-bucket-notificationconfig-queueconfig-queue) : String
+  [Queue](#cfn-s3-bucket-notificationconfig-queueconfig-queue): String
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-notificationconfig-queueconfig-properties"></a>

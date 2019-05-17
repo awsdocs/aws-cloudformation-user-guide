@@ -25,16 +25,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-syntax.yaml"></a>
 
 ```
-﻿  [ComparisonOperator](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-comparisonoperator) : String
-﻿  [Dimensions](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-dimensions) : 
+  [ComparisonOperator](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-comparisonoperator): String
+  [Dimensions](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-dimensions): 
     - [MetricDimension](aws-properties-elasticmapreduce-instancegroupconfig-metricdimension.md)
-﻿  [EvaluationPeriods](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-evaluationperiods) : Integer
-﻿  [MetricName](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-metricname) : String
-﻿  [Namespace](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-namespace) : String
-﻿  [Period](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-period) : Integer
-﻿  [Statistic](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-statistic) : String
-﻿  [Threshold](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-threshold) : Double
-﻿  [Unit](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-unit) : String
+  [EvaluationPeriods](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-evaluationperiods): Integer
+  [MetricName](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-metricname): String
+  [Namespace](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-namespace): String
+  [Period](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-period): Integer
+  [Statistic](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-statistic): String
+  [Threshold](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-threshold): Double
+  [Unit](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-unit): String
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-properties"></a>

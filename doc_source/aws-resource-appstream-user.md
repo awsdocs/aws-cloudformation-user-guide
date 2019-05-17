@@ -25,12 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppStream::User
-Properties : 
-﻿  [AuthenticationType](#cfn-appstream-user-authenticationtype) : String
-﻿  [FirstName](#cfn-appstream-user-firstname) : String
-﻿  [LastName](#cfn-appstream-user-lastname) : String
-﻿  [MessageAction](#cfn-appstream-user-messageaction) : String
-﻿  [UserName](#cfn-appstream-user-username) : String
+Properties: 
+  [AuthenticationType](#cfn-appstream-user-authenticationtype): String
+  [FirstName](#cfn-appstream-user-firstname): String
+  [LastName](#cfn-appstream-user-lastname): String
+  [MessageAction](#cfn-appstream-user-messageaction): String
+  [UserName](#cfn-appstream-user-username): String
 ```
 
 ## Properties<a name="aws-resource-appstream-user-properties"></a>

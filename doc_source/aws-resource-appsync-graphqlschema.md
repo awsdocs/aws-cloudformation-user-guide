@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppSync::GraphQLSchema
-Properties : 
-﻿  [ApiId](#cfn-appsync-graphqlschema-apiid) : String
-﻿  [Definition](#cfn-appsync-graphqlschema-definition) : String
-﻿  [DefinitionS3Location](#cfn-appsync-graphqlschema-definitions3location) : String
+Properties: 
+  [ApiId](#cfn-appsync-graphqlschema-apiid): String
+  [Definition](#cfn-appsync-graphqlschema-definition): String
+  [DefinitionS3Location](#cfn-appsync-graphqlschema-definitions3location): String
 ```
 
 ## Properties<a name="aws-resource-appsync-graphqlschema-properties"></a>

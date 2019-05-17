@@ -29,17 +29,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-budgets-budget-costtypes-syntax.yaml"></a>
 
 ```
-﻿  [IncludeCredit](#cfn-budgets-budget-costtypes-includecredit) : Boolean
-﻿  [IncludeDiscount](#cfn-budgets-budget-costtypes-includediscount) : Boolean
-﻿  [IncludeOtherSubscription](#cfn-budgets-budget-costtypes-includeothersubscription) : Boolean
-﻿  [IncludeRecurring](#cfn-budgets-budget-costtypes-includerecurring) : Boolean
-﻿  [IncludeRefund](#cfn-budgets-budget-costtypes-includerefund) : Boolean
-﻿  [IncludeSubscription](#cfn-budgets-budget-costtypes-includesubscription) : Boolean
-﻿  [IncludeSupport](#cfn-budgets-budget-costtypes-includesupport) : Boolean
-﻿  [IncludeTax](#cfn-budgets-budget-costtypes-includetax) : Boolean
-﻿  [IncludeUpfront](#cfn-budgets-budget-costtypes-includeupfront) : Boolean
-﻿  [UseAmortized](#cfn-budgets-budget-costtypes-useamortized) : Boolean
-﻿  [UseBlended](#cfn-budgets-budget-costtypes-useblended) : Boolean
+  [IncludeCredit](#cfn-budgets-budget-costtypes-includecredit): Boolean
+  [IncludeDiscount](#cfn-budgets-budget-costtypes-includediscount): Boolean
+  [IncludeOtherSubscription](#cfn-budgets-budget-costtypes-includeothersubscription): Boolean
+  [IncludeRecurring](#cfn-budgets-budget-costtypes-includerecurring): Boolean
+  [IncludeRefund](#cfn-budgets-budget-costtypes-includerefund): Boolean
+  [IncludeSubscription](#cfn-budgets-budget-costtypes-includesubscription): Boolean
+  [IncludeSupport](#cfn-budgets-budget-costtypes-includesupport): Boolean
+  [IncludeTax](#cfn-budgets-budget-costtypes-includetax): Boolean
+  [IncludeUpfront](#cfn-budgets-budget-costtypes-includeupfront): Boolean
+  [UseAmortized](#cfn-budgets-budget-costtypes-useamortized): Boolean
+  [UseBlended](#cfn-budgets-budget-costtypes-useblended): Boolean
 ```
 
 ## Properties<a name="aws-properties-budgets-budget-costtypes-properties"></a>

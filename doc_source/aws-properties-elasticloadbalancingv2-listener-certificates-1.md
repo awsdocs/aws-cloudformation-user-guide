@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticloadbalancingv2-listener-certificates-1-syntax.yaml"></a>
 
 ```
-﻿  [CertificateArn](#cfn-elasticloadbalancingv2-listener-certificates-certificatearn) : String
+  [CertificateArn](#cfn-elasticloadbalancingv2-listener-certificates-certificatearn): String
 ```
 
 ## Properties<a name="aws-properties-elasticloadbalancingv2-listener-certificates-1-properties"></a>

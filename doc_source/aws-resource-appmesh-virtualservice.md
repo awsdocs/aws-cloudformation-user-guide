@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppMesh::VirtualService
-Properties : 
-﻿  [MeshName](#cfn-appmesh-virtualservice-meshname) : String
-﻿  [Spec](#cfn-appmesh-virtualservice-spec) : 
+Properties: 
+  [MeshName](#cfn-appmesh-virtualservice-meshname): String
+  [Spec](#cfn-appmesh-virtualservice-spec): 
     [VirtualServiceSpec](aws-properties-appmesh-virtualservice-virtualservicespec.md)
-﻿  [Tags](#cfn-appmesh-virtualservice-tags) : 
+  [Tags](#cfn-appmesh-virtualservice-tags): 
     - [TagRef](aws-properties-appmesh-virtualservice-tagref.md)
-﻿  [VirtualServiceName](#cfn-appmesh-virtualservice-virtualservicename) : String
+  [VirtualServiceName](#cfn-appmesh-virtualservice-virtualservicename): String
 ```
 
 ## Properties<a name="aws-resource-appmesh-virtualservice-properties"></a>

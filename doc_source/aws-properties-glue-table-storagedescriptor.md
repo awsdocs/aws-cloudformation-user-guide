@@ -28,23 +28,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-table-storagedescriptor-syntax.yaml"></a>
 
 ```
-﻿  [BucketColumns](#cfn-glue-table-storagedescriptor-bucketcolumns) : 
+  [BucketColumns](#cfn-glue-table-storagedescriptor-bucketcolumns): 
     - String
-﻿  [Columns](#cfn-glue-table-storagedescriptor-columns) : 
+  [Columns](#cfn-glue-table-storagedescriptor-columns): 
     - [Column](aws-properties-glue-table-column.md)
-﻿  [Compressed](#cfn-glue-table-storagedescriptor-compressed) : Boolean
-﻿  [InputFormat](#cfn-glue-table-storagedescriptor-inputformat) : String
-﻿  [Location](#cfn-glue-table-storagedescriptor-location) : String
-﻿  [NumberOfBuckets](#cfn-glue-table-storagedescriptor-numberofbuckets) : Integer
-﻿  [OutputFormat](#cfn-glue-table-storagedescriptor-outputformat) : String
-﻿  [Parameters](#cfn-glue-table-storagedescriptor-parameters) : Json
-﻿  [SerdeInfo](#cfn-glue-table-storagedescriptor-serdeinfo) : 
+  [Compressed](#cfn-glue-table-storagedescriptor-compressed): Boolean
+  [InputFormat](#cfn-glue-table-storagedescriptor-inputformat): String
+  [Location](#cfn-glue-table-storagedescriptor-location): String
+  [NumberOfBuckets](#cfn-glue-table-storagedescriptor-numberofbuckets): Integer
+  [OutputFormat](#cfn-glue-table-storagedescriptor-outputformat): String
+  [Parameters](#cfn-glue-table-storagedescriptor-parameters): Json
+  [SerdeInfo](#cfn-glue-table-storagedescriptor-serdeinfo): 
     [SerdeInfo](aws-properties-glue-table-serdeinfo.md)
-﻿  [SkewedInfo](#cfn-glue-table-storagedescriptor-skewedinfo) : 
+  [SkewedInfo](#cfn-glue-table-storagedescriptor-skewedinfo): 
     [SkewedInfo](aws-properties-glue-table-skewedinfo.md)
-﻿  [SortColumns](#cfn-glue-table-storagedescriptor-sortcolumns) : 
+  [SortColumns](#cfn-glue-table-storagedescriptor-sortcolumns): 
     - [Order](aws-properties-glue-table-order.md)
-﻿  [StoredAsSubDirectories](#cfn-glue-table-storagedescriptor-storedassubdirectories) : Boolean
+  [StoredAsSubDirectories](#cfn-glue-table-storagedescriptor-storedassubdirectories): Boolean
 ```
 
 ## Properties<a name="aws-properties-glue-table-storagedescriptor-properties"></a>

@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apigatewayv2-domainname-domainnameconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [CertificateArn](#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatearn) : String
-﻿  [CertificateName](#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatename) : String
-﻿  [EndpointType](#cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype) : String
+  [CertificateArn](#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatearn): String
+  [CertificateName](#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatename): String
+  [EndpointType](#cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype): String
 ```
 
 ## Properties<a name="aws-properties-apigatewayv2-domainname-domainnameconfiguration-properties"></a>

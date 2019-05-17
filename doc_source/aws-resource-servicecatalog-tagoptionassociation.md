@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceCatalog::TagOptionAssociation
-Properties : 
-﻿  [ResourceId](#cfn-servicecatalog-tagoptionassociation-resourceid) : String
-﻿  [TagOptionId](#cfn-servicecatalog-tagoptionassociation-tagoptionid) : String
+Properties: 
+  [ResourceId](#cfn-servicecatalog-tagoptionassociation-resourceid): String
+  [TagOptionId](#cfn-servicecatalog-tagoptionassociation-tagoptionid): String
 ```
 
 ## Properties<a name="aws-resource-servicecatalog-tagoptionassociation-properties"></a>

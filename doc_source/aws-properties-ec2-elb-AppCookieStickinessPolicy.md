@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-elb-AppCookieStickinessPolicy-syntax.yaml"></a>
 
 ```
-﻿  [CookieName](#cfn-elb-appcookiestickinesspolicy-cookiename) : String
-﻿  [PolicyName](#cfn-elb-appcookiestickinesspolicy-policyname) : String
+  [CookieName](#cfn-elb-appcookiestickinesspolicy-cookiename): String
+  [PolicyName](#cfn-elb-appcookiestickinesspolicy-policyname): String
 ```
 
 ## Properties<a name="aws-properties-ec2-elb-AppCookieStickinessPolicy-properties"></a>

@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGatewayV2::ApiMapping
-Properties : 
-﻿  [ApiId](#cfn-apigatewayv2-apimapping-apiid) : String
-﻿  [ApiMappingKey](#cfn-apigatewayv2-apimapping-apimappingkey) : String
-﻿  [DomainName](#cfn-apigatewayv2-apimapping-domainname) : String
-﻿  [Stage](#cfn-apigatewayv2-apimapping-stage) : String
+Properties: 
+  [ApiId](#cfn-apigatewayv2-apimapping-apiid): String
+  [ApiMappingKey](#cfn-apigatewayv2-apimapping-apimappingkey): String
+  [DomainName](#cfn-apigatewayv2-apimapping-domainname): String
+  [Stage](#cfn-apigatewayv2-apimapping-stage): String
 ```
 
 ## Properties<a name="aws-resource-apigatewayv2-apimapping-properties"></a>

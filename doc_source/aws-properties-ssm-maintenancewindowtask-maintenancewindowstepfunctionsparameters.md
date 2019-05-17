@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-syntax.yaml"></a>
 
 ```
-﻿  [Input](#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-input) : String
-﻿  [Name](#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-name) : String
+  [Input](#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-input): String
+  [Name](#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-name): String
 ```
 
 ## Properties<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-properties"></a>

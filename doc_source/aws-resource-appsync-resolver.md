@@ -30,18 +30,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppSync::Resolver
-Properties : 
-﻿  [ApiId](#cfn-appsync-resolver-apiid) : String
-﻿  [DataSourceName](#cfn-appsync-resolver-datasourcename) : String
-﻿  [FieldName](#cfn-appsync-resolver-fieldname) : String
-﻿  [Kind](#cfn-appsync-resolver-kind) : String
-﻿  [PipelineConfig](#cfn-appsync-resolver-pipelineconfig) : 
+Properties: 
+  [ApiId](#cfn-appsync-resolver-apiid): String
+  [DataSourceName](#cfn-appsync-resolver-datasourcename): String
+  [FieldName](#cfn-appsync-resolver-fieldname): String
+  [Kind](#cfn-appsync-resolver-kind): String
+  [PipelineConfig](#cfn-appsync-resolver-pipelineconfig): 
     [PipelineConfig](aws-properties-appsync-resolver-pipelineconfig.md)
-﻿  [RequestMappingTemplate](#cfn-appsync-resolver-requestmappingtemplate) : String
-﻿  [RequestMappingTemplateS3Location](#cfn-appsync-resolver-requestmappingtemplates3location) : String
-﻿  [ResponseMappingTemplate](#cfn-appsync-resolver-responsemappingtemplate) : String
-﻿  [ResponseMappingTemplateS3Location](#cfn-appsync-resolver-responsemappingtemplates3location) : String
-﻿  [TypeName](#cfn-appsync-resolver-typename) : String
+  [RequestMappingTemplate](#cfn-appsync-resolver-requestmappingtemplate): String
+  [RequestMappingTemplateS3Location](#cfn-appsync-resolver-requestmappingtemplates3location): String
+  [ResponseMappingTemplate](#cfn-appsync-resolver-responsemappingtemplate): String
+  [ResponseMappingTemplateS3Location](#cfn-appsync-resolver-responsemappingtemplates3location): String
+  [TypeName](#cfn-appsync-resolver-typename): String
 ```
 
 ## Properties<a name="aws-resource-appsync-resolver-properties"></a>

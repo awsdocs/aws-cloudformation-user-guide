@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-batch-jobdefinition-timeout-syntax.yaml"></a>
 
 ```
-﻿  [AttemptDurationSeconds](#cfn-batch-jobdefinition-timeout-attemptdurationseconds) : Integer
+  [AttemptDurationSeconds](#cfn-batch-jobdefinition-timeout-attemptdurationseconds): Integer
 ```
 
 ## Properties<a name="aws-properties-batch-jobdefinition-timeout-properties"></a>

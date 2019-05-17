@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-taskdefinition-containerdefinitions-mountpoints-syntax.yaml"></a>
 
 ```
-﻿  [ContainerPath](#cfn-ecs-taskdefinition-containerdefinition-mountpoints-containerpath) : String
-﻿  [ReadOnly](#cfn-ecs-taskdefinition-containerdefinition-mountpoints-readonly) : Boolean
-﻿  [SourceVolume](#cfn-ecs-taskdefinition-containerdefinition-mountpoints-sourcevolume) : String
+  [ContainerPath](#cfn-ecs-taskdefinition-containerdefinition-mountpoints-containerpath): String
+  [ReadOnly](#cfn-ecs-taskdefinition-containerdefinition-mountpoints-readonly): Boolean
+  [SourceVolume](#cfn-ecs-taskdefinition-containerdefinition-mountpoints-sourcevolume): String
 ```
 
 ## Properties<a name="aws-properties-ecs-taskdefinition-containerdefinitions-mountpoints-properties"></a>

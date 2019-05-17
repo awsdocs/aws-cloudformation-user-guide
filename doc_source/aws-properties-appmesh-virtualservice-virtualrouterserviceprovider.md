@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-virtualservice-virtualrouterserviceprovider-syntax.yaml"></a>
 
 ```
-﻿  [VirtualRouterName](#cfn-appmesh-virtualservice-virtualrouterserviceprovider-virtualroutername) : String
+  [VirtualRouterName](#cfn-appmesh-virtualservice-virtualrouterserviceprovider-virtualroutername): String
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualservice-virtualrouterserviceprovider-properties"></a>

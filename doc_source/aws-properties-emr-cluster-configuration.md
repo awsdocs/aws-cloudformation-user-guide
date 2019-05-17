@@ -24,10 +24,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-emr-cluster-configuration-syntax.yaml"></a>
 
 ```
-﻿  [Classification](#cfn-emr-cluster-configuration-classification) : String
-﻿  [ConfigurationProperties](#cfn-emr-cluster-configuration-configurationproperties) : 
+  [Classification](#cfn-emr-cluster-configuration-classification): String
+  [ConfigurationProperties](#cfn-emr-cluster-configuration-configurationproperties): 
     Key : Value
-﻿  [Configurations](#cfn-emr-cluster-configuration-configurations) : 
+  [Configurations](#cfn-emr-cluster-configuration-configurations): 
     - [Configuration](#aws-properties-emr-cluster-configuration)
 ```
 

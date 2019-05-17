@@ -51,18 +51,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Neptune::DBInstance
-Properties : 
-﻿  [AllowMajorVersionUpgrade](#cfn-neptune-dbinstance-allowmajorversionupgrade) : Boolean
-﻿  [AutoMinorVersionUpgrade](#cfn-neptune-dbinstance-autominorversionupgrade) : Boolean
-﻿  [AvailabilityZone](#cfn-neptune-dbinstance-availabilityzone) : String
-﻿  [DBClusterIdentifier](#cfn-neptune-dbinstance-dbclusteridentifier) : String
-﻿  [DBInstanceClass](#cfn-neptune-dbinstance-dbinstanceclass) : String
-﻿  [DBInstanceIdentifier](#cfn-neptune-dbinstance-dbinstanceidentifier) : String
-﻿  [DBParameterGroupName](#cfn-neptune-dbinstance-dbparametergroupname) : String
-﻿  [DBSnapshotIdentifier](#cfn-neptune-dbinstance-dbsnapshotidentifier) : String
-﻿  [DBSubnetGroupName](#cfn-neptune-dbinstance-dbsubnetgroupname) : String
-﻿  [PreferredMaintenanceWindow](#cfn-neptune-dbinstance-preferredmaintenancewindow) : String
-﻿  [Tags](#cfn-neptune-dbinstance-tags) : 
+Properties: 
+  [AllowMajorVersionUpgrade](#cfn-neptune-dbinstance-allowmajorversionupgrade): Boolean
+  [AutoMinorVersionUpgrade](#cfn-neptune-dbinstance-autominorversionupgrade): Boolean
+  [AvailabilityZone](#cfn-neptune-dbinstance-availabilityzone): String
+  [DBClusterIdentifier](#cfn-neptune-dbinstance-dbclusteridentifier): String
+  [DBInstanceClass](#cfn-neptune-dbinstance-dbinstanceclass): String
+  [DBInstanceIdentifier](#cfn-neptune-dbinstance-dbinstanceidentifier): String
+  [DBParameterGroupName](#cfn-neptune-dbinstance-dbparametergroupname): String
+  [DBSnapshotIdentifier](#cfn-neptune-dbinstance-dbsnapshotidentifier): String
+  [DBSubnetGroupName](#cfn-neptune-dbinstance-dbsubnetgroupname): String
+  [PreferredMaintenanceWindow](#cfn-neptune-dbinstance-preferredmaintenancewindow): String
+  [Tags](#cfn-neptune-dbinstance-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

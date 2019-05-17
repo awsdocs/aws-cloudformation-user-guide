@@ -20,9 +20,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-dynamodbv2action-syntax.yaml"></a>
 
 ```
-﻿  [PutItem](#cfn-iot-topicrule-dynamodbv2action-putitem) : 
+  [PutItem](#cfn-iot-topicrule-dynamodbv2action-putitem): 
     [PutItemInput](aws-properties-iot-topicrule-putiteminput.md)
-﻿  [RoleArn](#cfn-iot-topicrule-dynamodbv2action-rolearn) : String
+  [RoleArn](#cfn-iot-topicrule-dynamodbv2action-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-dynamodbv2action-properties"></a>

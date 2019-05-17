@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-batch-jobdefinition-ulimit-syntax.yaml"></a>
 
 ```
-﻿  [HardLimit](#cfn-batch-jobdefinition-ulimit-hardlimit) : Integer
-﻿  [Name](#cfn-batch-jobdefinition-ulimit-name) : String
-﻿  [SoftLimit](#cfn-batch-jobdefinition-ulimit-softlimit) : Integer
+  [HardLimit](#cfn-batch-jobdefinition-ulimit-hardlimit): Integer
+  [Name](#cfn-batch-jobdefinition-ulimit-name): String
+  [SoftLimit](#cfn-batch-jobdefinition-ulimit-softlimit): Integer
 ```
 
 ## Properties<a name="aws-properties-batch-jobdefinition-ulimit-properties"></a>

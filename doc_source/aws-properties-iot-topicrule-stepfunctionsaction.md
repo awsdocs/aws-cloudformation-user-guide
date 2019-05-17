@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-stepfunctionsaction-syntax.yaml"></a>
 
 ```
-﻿  [ExecutionNamePrefix](#cfn-iot-topicrule-stepfunctionsaction-executionnameprefix) : String
-﻿  [RoleArn](#cfn-iot-topicrule-stepfunctionsaction-rolearn) : String
-﻿  [StateMachineName](#cfn-iot-topicrule-stepfunctionsaction-statemachinename) : String
+  [ExecutionNamePrefix](#cfn-iot-topicrule-stepfunctionsaction-executionnameprefix): String
+  [RoleArn](#cfn-iot-topicrule-stepfunctionsaction-rolearn): String
+  [StateMachineName](#cfn-iot-topicrule-stepfunctionsaction-statemachinename): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-stepfunctionsaction-properties"></a>

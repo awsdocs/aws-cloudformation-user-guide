@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dynamodb-projectionobject-syntax.yaml"></a>
 
 ```
-﻿  [NonKeyAttributes](#cfn-dynamodb-projectionobj-nonkeyatt) : 
+  [NonKeyAttributes](#cfn-dynamodb-projectionobj-nonkeyatt): 
     - String
-﻿  [ProjectionType](#cfn-dynamodb-projectionobj-projtype) : String
+  [ProjectionType](#cfn-dynamodb-projectionobj-projtype): String
 ```
 
 ## Properties<a name="aws-properties-dynamodb-projectionobject-properties"></a>

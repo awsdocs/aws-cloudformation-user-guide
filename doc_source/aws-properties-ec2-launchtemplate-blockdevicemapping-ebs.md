@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-blockdevicemapping-ebs-syntax.yaml"></a>
 
 ```
-﻿  [DeleteOnTermination](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-deleteontermination) : Boolean
-﻿  [Encrypted](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-encrypted) : Boolean
-﻿  [Iops](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-iops) : Integer
-﻿  [KmsKeyId](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-kmskeyid) : String
-﻿  [SnapshotId](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-snapshotid) : String
-﻿  [VolumeSize](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-volumesize) : Integer
-﻿  [VolumeType](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-volumetype) : String
+  [DeleteOnTermination](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-deleteontermination): Boolean
+  [Encrypted](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-encrypted): Boolean
+  [Iops](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-iops): Integer
+  [KmsKeyId](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-kmskeyid): String
+  [SnapshotId](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-snapshotid): String
+  [VolumeSize](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-volumesize): Integer
+  [VolumeType](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-volumetype): String
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-blockdevicemapping-ebs-properties"></a>

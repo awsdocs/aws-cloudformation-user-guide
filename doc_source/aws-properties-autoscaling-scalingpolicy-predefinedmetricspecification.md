@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification-syntax.yaml"></a>
 
 ```
-﻿  [PredefinedMetricType](#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-predefinedmetrictype) : String
-﻿  [ResourceLabel](#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-resourcelabel) : String
+  [PredefinedMetricType](#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-predefinedmetrictype): String
+  [ResourceLabel](#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-resourcelabel): String
 ```
 
 ## Properties<a name="aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification-properties"></a>

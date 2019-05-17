@@ -27,15 +27,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ElasticBeanstalk::ConfigurationTemplate
-Properties : 
-﻿  [ApplicationName](#cfn-elasticbeanstalk-configurationtemplate-applicationname) : String
-﻿  [Description](#cfn-elasticbeanstalk-configurationtemplate-description) : String
-﻿  [EnvironmentId](#cfn-elasticbeanstalk-configurationtemplate-environmentid) : String
-﻿  [OptionSettings](#cfn-elasticbeanstalk-configurationtemplate-optionsettings) : 
+Properties: 
+  [ApplicationName](#cfn-elasticbeanstalk-configurationtemplate-applicationname): String
+  [Description](#cfn-elasticbeanstalk-configurationtemplate-description): String
+  [EnvironmentId](#cfn-elasticbeanstalk-configurationtemplate-environmentid): String
+  [OptionSettings](#cfn-elasticbeanstalk-configurationtemplate-optionsettings): 
     - [ConfigurationOptionSetting](aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting.md)
-﻿  [PlatformArn](#cfn-elasticbeanstalk-configurationtemplate-platformarn) : String
-﻿  [SolutionStackName](#cfn-elasticbeanstalk-configurationtemplate-solutionstackname) : String
-﻿  [SourceConfiguration](#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration) : 
+  [PlatformArn](#cfn-elasticbeanstalk-configurationtemplate-platformarn): String
+  [SolutionStackName](#cfn-elasticbeanstalk-configurationtemplate-solutionstackname): String
+  [SourceConfiguration](#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration): 
     [SourceConfiguration](aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration.md)
 ```
 

@@ -64,53 +64,53 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::Instance
-Properties : 
-﻿  [AdditionalInfo](#cfn-ec2-instance-additionalinfo) : String
-﻿  [Affinity](#cfn-ec2-instance-affinity) : String
-﻿  [AvailabilityZone](#cfn-ec2-instance-availabilityzone) : String
-﻿  [BlockDeviceMappings](#cfn-ec2-instance-blockdevicemappings) : 
+Properties: 
+  [AdditionalInfo](#cfn-ec2-instance-additionalinfo): String
+  [Affinity](#cfn-ec2-instance-affinity): String
+  [AvailabilityZone](#cfn-ec2-instance-availabilityzone): String
+  [BlockDeviceMappings](#cfn-ec2-instance-blockdevicemappings): 
     - [BlockDeviceMapping](aws-properties-ec2-blockdev-mapping.md)
-﻿  [CreditSpecification](#cfn-ec2-instance-creditspecification) : 
+  [CreditSpecification](#cfn-ec2-instance-creditspecification): 
     [CreditSpecification](aws-properties-ec2-instance-creditspecification.md)
-﻿  [DisableApiTermination](#cfn-ec2-instance-disableapitermination) : Boolean
-﻿  [EbsOptimized](#cfn-ec2-instance-ebsoptimized) : Boolean
-﻿  [ElasticGpuSpecifications](#cfn-ec2-instance-elasticgpuspecifications) : 
+  [DisableApiTermination](#cfn-ec2-instance-disableapitermination): Boolean
+  [EbsOptimized](#cfn-ec2-instance-ebsoptimized): Boolean
+  [ElasticGpuSpecifications](#cfn-ec2-instance-elasticgpuspecifications): 
     - [ElasticGpuSpecification](aws-properties-ec2-instance-elasticgpuspecification.md)
-﻿  [ElasticInferenceAccelerators](#cfn-ec2-instance-elasticinferenceaccelerators) : 
+  [ElasticInferenceAccelerators](#cfn-ec2-instance-elasticinferenceaccelerators): 
     - [ElasticInferenceAccelerator](aws-properties-ec2-instance-elasticinferenceaccelerator.md)
-﻿  [HostId](#cfn-ec2-instance-hostid) : String
-﻿  [IamInstanceProfile](#cfn-ec2-instance-iaminstanceprofile) : String
-﻿  [ImageId](#cfn-ec2-instance-imageid) : String
-﻿  [InstanceInitiatedShutdownBehavior](#cfn-ec2-instance-instanceinitiatedshutdownbehavior) : String
-﻿  [InstanceType](#cfn-ec2-instance-instancetype) : String
-﻿  [Ipv6AddressCount](#cfn-ec2-instance-ipv6addresscount) : Integer
-﻿  [Ipv6Addresses](#cfn-ec2-instance-ipv6addresses) : 
+  [HostId](#cfn-ec2-instance-hostid): String
+  [IamInstanceProfile](#cfn-ec2-instance-iaminstanceprofile): String
+  [ImageId](#cfn-ec2-instance-imageid): String
+  [InstanceInitiatedShutdownBehavior](#cfn-ec2-instance-instanceinitiatedshutdownbehavior): String
+  [InstanceType](#cfn-ec2-instance-instancetype): String
+  [Ipv6AddressCount](#cfn-ec2-instance-ipv6addresscount): Integer
+  [Ipv6Addresses](#cfn-ec2-instance-ipv6addresses): 
     - [InstanceIpv6Address](aws-properties-ec2-instance-instanceipv6address.md)
-﻿  [KernelId](#cfn-ec2-instance-kernelid) : String
-﻿  [KeyName](#cfn-ec2-instance-keyname) : String
-﻿  [LaunchTemplate](#cfn-ec2-instance-launchtemplate) : 
+  [KernelId](#cfn-ec2-instance-kernelid): String
+  [KeyName](#cfn-ec2-instance-keyname): String
+  [LaunchTemplate](#cfn-ec2-instance-launchtemplate): 
     [LaunchTemplateSpecification](aws-properties-ec2-instance-launchtemplatespecification.md)
-﻿  [LicenseSpecifications](#cfn-ec2-instance-licensespecifications) : 
+  [LicenseSpecifications](#cfn-ec2-instance-licensespecifications): 
     - [LicenseSpecification](aws-properties-ec2-instance-licensespecification.md)
-﻿  [Monitoring](#cfn-ec2-instance-monitoring) : Boolean
-﻿  [NetworkInterfaces](#cfn-ec2-instance-networkinterfaces) : 
+  [Monitoring](#cfn-ec2-instance-monitoring): Boolean
+  [NetworkInterfaces](#cfn-ec2-instance-networkinterfaces): 
     - [NetworkInterface](aws-properties-ec2-network-iface-embedded.md)
-﻿  [PlacementGroupName](#cfn-ec2-instance-placementgroupname) : String
-﻿  [PrivateIpAddress](#cfn-ec2-instance-privateipaddress) : String
-﻿  [RamdiskId](#cfn-ec2-instance-ramdiskid) : String
-﻿  [SecurityGroupIds](#cfn-ec2-instance-securitygroupids) : 
+  [PlacementGroupName](#cfn-ec2-instance-placementgroupname): String
+  [PrivateIpAddress](#cfn-ec2-instance-privateipaddress): String
+  [RamdiskId](#cfn-ec2-instance-ramdiskid): String
+  [SecurityGroupIds](#cfn-ec2-instance-securitygroupids): 
     - String
-﻿  [SecurityGroups](#cfn-ec2-instance-securitygroups) : 
+  [SecurityGroups](#cfn-ec2-instance-securitygroups): 
     - String
-﻿  [SourceDestCheck](#cfn-ec2-instance-sourcedestcheck) : Boolean
-﻿  [SsmAssociations](#cfn-ec2-instance-ssmassociations) : 
+  [SourceDestCheck](#cfn-ec2-instance-sourcedestcheck): Boolean
+  [SsmAssociations](#cfn-ec2-instance-ssmassociations): 
     - [SsmAssociation](aws-properties-ec2-instance-ssmassociations.md)
-﻿  [SubnetId](#cfn-ec2-instance-subnetid) : String
-﻿  [Tags](#cfn-ec2-instance-tags) : 
+  [SubnetId](#cfn-ec2-instance-subnetid): String
+  [Tags](#cfn-ec2-instance-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [Tenancy](#cfn-ec2-instance-tenancy) : String
-﻿  [UserData](#cfn-ec2-instance-userdata) : String
-﻿  [Volumes](#cfn-ec2-instance-volumes) : 
+  [Tenancy](#cfn-ec2-instance-tenancy): String
+  [UserData](#cfn-ec2-instance-userdata): String
+  [Volumes](#cfn-ec2-instance-volumes): 
     - [Volume](aws-properties-ec2-mount-point.md)
 ```
 
@@ -146,7 +146,7 @@ Default: `standard` \(T2 instances\) or `unlimited` \(T3 instances\)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DisableApiTermination`  <a name="cfn-ec2-instance-disableapitermination"></a>
-If you set this parameter to `true`, you can't terminate the instance using the Amazon EC2 console, CLI, or API; otherwise, you can\. To change this attribute to `false` after launch, use \. Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate`, you can terminate the instance by running the shutdown command from the instance\.  
+If you set this parameter to `true`, you can't terminate the instance using the Amazon EC2 console, CLI, or API; otherwise, you can\. To change this attribute to `false` after launch, use ModifyInstanceAttribute\. Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate`, you can terminate the instance by running the shutdown command from the instance\.  
 Default: `false`   
 *Required*: No  
 *Type*: Boolean  
@@ -182,7 +182,7 @@ The IAM instance profile\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ImageId`  <a name="cfn-ec2-instance-imageid"></a>
-The ID of the AMI, which you can get by calling \. An AMI ID is required to launch an instance and must be specified here or in a launch template\.  
+The ID of the AMI, which you can get by calling DescribeImages\. An AMI ID is required to launch an instance and must be specified here or in a launch template\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -317,7 +317,7 @@ The tags to apply to the resources during launch\. You can only tag instances an
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tenancy`  <a name="cfn-ec2-instance-tenancy"></a>
-The tenancy of the instance \(if the instance is running in a VPC\)\. An instance with a tenancy of `dedicated` runs on single\-tenant hardware\. The `host` tenancy is not supported for the command\.  
+The tenancy of the instance \(if the instance is running in a VPC\)\. An instance with a tenancy of `dedicated` runs on single\-tenant hardware\. The `host` tenancy is not supported for the ImportInstance command\.  
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `dedicated | default | host`

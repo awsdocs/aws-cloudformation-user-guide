@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IoT::Certificate
-Properties : 
-﻿  [CertificateSigningRequest](#cfn-iot-certificate-certificatesigningrequest) : String
-﻿  [Status](#cfn-iot-certificate-status) : String
+Properties: 
+  [CertificateSigningRequest](#cfn-iot-certificate-certificatesigningrequest): String
+  [Status](#cfn-iot-certificate-status): String
 ```
 
 ## Properties<a name="aws-resource-iot-certificate-properties"></a>

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications-syntax.yaml"></a>
 
 ```
-﻿  [ResourceType](#cfn-ec2-spotfleet-spotfleettagspecification-resourcetype) : String
-﻿  [Tags](#cfn-ec2-spotfleet-tags) : 
+  [ResourceType](#cfn-ec2-spotfleet-spotfleettagspecification-resourcetype): String
+  [Tags](#cfn-ec2-spotfleet-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

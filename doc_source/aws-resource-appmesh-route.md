@@ -29,14 +29,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppMesh::Route
-Properties : 
-﻿  [MeshName](#cfn-appmesh-route-meshname) : String
-﻿  [RouteName](#cfn-appmesh-route-routename) : String
-﻿  [Spec](#cfn-appmesh-route-spec) : 
+Properties: 
+  [MeshName](#cfn-appmesh-route-meshname): String
+  [RouteName](#cfn-appmesh-route-routename): String
+  [Spec](#cfn-appmesh-route-spec): 
     [RouteSpec](aws-properties-appmesh-route-routespec.md)
-﻿  [Tags](#cfn-appmesh-route-tags) : 
+  [Tags](#cfn-appmesh-route-tags): 
     - [TagRef](aws-properties-appmesh-route-tagref.md)
-﻿  [VirtualRouterName](#cfn-appmesh-route-virtualroutername) : String
+  [VirtualRouterName](#cfn-appmesh-route-virtualroutername): String
 ```
 
 ## Properties<a name="aws-resource-appmesh-route-properties"></a>

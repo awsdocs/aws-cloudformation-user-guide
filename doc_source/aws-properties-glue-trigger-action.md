@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-trigger-action-syntax.yaml"></a>
 
 ```
-﻿  [Arguments](#cfn-glue-trigger-action-arguments) : Json
-﻿  [JobName](#cfn-glue-trigger-action-jobname) : String
+  [Arguments](#cfn-glue-trigger-action-arguments): Json
+  [JobName](#cfn-glue-trigger-action-jobname): String
 ```
 
 ## Properties<a name="aws-properties-glue-trigger-action-properties"></a>

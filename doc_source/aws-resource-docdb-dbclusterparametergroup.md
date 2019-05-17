@@ -32,12 +32,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DocDB::DBClusterParameterGroup
-Properties : 
-﻿  [Description](#cfn-docdb-dbclusterparametergroup-description) : String
-﻿  [Family](#cfn-docdb-dbclusterparametergroup-family) : String
-﻿  [Name](#cfn-docdb-dbclusterparametergroup-name) : String
-﻿  [Parameters](#cfn-docdb-dbclusterparametergroup-parameters) : Json
-﻿  [Tags](#cfn-docdb-dbclusterparametergroup-tags) : 
+Properties: 
+  [Description](#cfn-docdb-dbclusterparametergroup-description): String
+  [Family](#cfn-docdb-dbclusterparametergroup-family): String
+  [Name](#cfn-docdb-dbclusterparametergroup-name): String
+  [Parameters](#cfn-docdb-dbclusterparametergroup-parameters): Json
+  [Tags](#cfn-docdb-dbclusterparametergroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apigateway-usageplan-quotasettings-syntax.yaml"></a>
 
 ```
-﻿  [Limit](#cfn-apigateway-usageplan-quotasettings-limit) : Integer
-﻿  [Offset](#cfn-apigateway-usageplan-quotasettings-offset) : Integer
-﻿  [Period](#cfn-apigateway-usageplan-quotasettings-period) : String
+  [Limit](#cfn-apigateway-usageplan-quotasettings-limit): Integer
+  [Offset](#cfn-apigateway-usageplan-quotasettings-offset): Integer
+  [Period](#cfn-apigateway-usageplan-quotasettings-period): String
 ```
 
 ## Properties<a name="aws-properties-apigateway-usageplan-quotasettings-properties"></a>

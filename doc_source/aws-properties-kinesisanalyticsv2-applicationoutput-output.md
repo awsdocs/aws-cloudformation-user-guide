@@ -21,15 +21,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-applicationoutput-output-syntax.yaml"></a>
 
 ```
-﻿  [DestinationSchema](#cfn-kinesisanalyticsv2-applicationoutput-output-destinationschema) : 
+  [DestinationSchema](#cfn-kinesisanalyticsv2-applicationoutput-output-destinationschema): 
     [DestinationSchema](aws-properties-kinesisanalyticsv2-applicationoutput-destinationschema.md)
-﻿  [KinesisFirehoseOutput](#cfn-kinesisanalyticsv2-applicationoutput-output-kinesisfirehoseoutput) : 
+  [KinesisFirehoseOutput](#cfn-kinesisanalyticsv2-applicationoutput-output-kinesisfirehoseoutput): 
     [KinesisFirehoseOutput](aws-properties-kinesisanalyticsv2-applicationoutput-kinesisfirehoseoutput.md)
-﻿  [KinesisStreamsOutput](#cfn-kinesisanalyticsv2-applicationoutput-output-kinesisstreamsoutput) : 
+  [KinesisStreamsOutput](#cfn-kinesisanalyticsv2-applicationoutput-output-kinesisstreamsoutput): 
     [KinesisStreamsOutput](aws-properties-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput.md)
-﻿  [LambdaOutput](#cfn-kinesisanalyticsv2-applicationoutput-output-lambdaoutput) : 
+  [LambdaOutput](#cfn-kinesisanalyticsv2-applicationoutput-output-lambdaoutput): 
     [LambdaOutput](aws-properties-kinesisanalyticsv2-applicationoutput-lambdaoutput.md)
-﻿  [Name](#cfn-kinesisanalyticsv2-applicationoutput-output-name) : String
+  [Name](#cfn-kinesisanalyticsv2-applicationoutput-output-name): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-applicationoutput-output-properties"></a>

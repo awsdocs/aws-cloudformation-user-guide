@@ -24,12 +24,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Batch::JobQueue
-Properties : 
-﻿  [ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder) : 
+Properties: 
+  [ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder): 
     - [ComputeEnvironmentOrder](aws-properties-batch-jobqueue-computeenvironmentorder.md)
-﻿  [JobQueueName](#cfn-batch-jobqueue-jobqueuename) : String
-﻿  [Priority](#cfn-batch-jobqueue-priority) : Integer
-﻿  [State](#cfn-batch-jobqueue-state) : String
+  [JobQueueName](#cfn-batch-jobqueue-jobqueuename): String
+  [Priority](#cfn-batch-jobqueue-priority): Integer
+  [State](#cfn-batch-jobqueue-state): String
 ```
 
 ## Properties<a name="aws-resource-batch-jobqueue-properties"></a>

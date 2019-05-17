@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::OpsWorks::ElasticLoadBalancerAttachment
-Properties : 
-﻿  [ElasticLoadBalancerName](#cfn-opsworks-elbattachment-elbname) : String
-﻿  [LayerId](#cfn-opsworks-elbattachment-layerid) : String
+Properties: 
+  [ElasticLoadBalancerName](#cfn-opsworks-elbattachment-elbname): String
+  [LayerId](#cfn-opsworks-elbattachment-layerid): String
 ```
 
 ## Properties<a name="aws-resource-opsworks-elbattachment-properties"></a>

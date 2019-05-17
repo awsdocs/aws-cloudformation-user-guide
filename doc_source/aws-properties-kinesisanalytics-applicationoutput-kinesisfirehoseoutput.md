@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-syntax.yaml"></a>
 
 ```
-﻿  [ResourceARN](#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-resourcearn) : String
-﻿  [RoleARN](#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-rolearn) : String
+  [ResourceARN](#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-resourcearn): String
+  [RoleARN](#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-properties"></a>

@@ -25,8 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ses-receiptrule-snsaction-syntax.yaml"></a>
 
 ```
-﻿  [Encoding](#cfn-ses-receiptrule-snsaction-encoding) : String
-﻿  [TopicArn](#cfn-ses-receiptrule-snsaction-topicarn) : String
+  [Encoding](#cfn-ses-receiptrule-snsaction-encoding): String
+  [TopicArn](#cfn-ses-receiptrule-snsaction-topicarn): String
 ```
 
 ## Properties<a name="aws-properties-ses-receiptrule-snsaction-properties"></a>

@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RoboMaker::RobotApplicationVersion
-Properties : 
-﻿  [Application](#cfn-robomaker-robotapplicationversion-application) : String
-﻿  [CurrentRevisionId](#cfn-robomaker-robotapplicationversion-currentrevisionid) : String
+Properties: 
+  [Application](#cfn-robomaker-robotapplicationversion-application): String
+  [CurrentRevisionId](#cfn-robomaker-robotapplicationversion-currentrevisionid): String
 ```
 
 ## Properties<a name="aws-resource-robomaker-robotapplicationversion-properties"></a>

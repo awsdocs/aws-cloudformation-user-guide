@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dynamodb-table-pointintimerecoveryspecification-syntax.yaml"></a>
 
 ```
-﻿  [PointInTimeRecoveryEnabled](#cfn-dynamodb-table-pointintimerecoveryspecification-pointintimerecoveryenabled) : Boolean
+  [PointInTimeRecoveryEnabled](#cfn-dynamodb-table-pointintimerecoveryspecification-pointintimerecoveryenabled): Boolean
 ```
 
 ## Properties<a name="aws-properties-dynamodb-table-pointintimerecoveryspecification-properties"></a>

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-route53-healthcheck-healthchecktag-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-route53-healthchecktags-key) : String
-﻿  [Value](#cfn-route53-healthchecktags-value) : String
+  [Key](#cfn-route53-healthchecktags-key): String
+  [Value](#cfn-route53-healthchecktags-value): String
 ```
 
 ## Properties<a name="aws-properties-route53-healthcheck-healthchecktag-properties"></a>

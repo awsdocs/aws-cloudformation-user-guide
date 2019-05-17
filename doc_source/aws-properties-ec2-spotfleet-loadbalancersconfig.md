@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-spotfleet-loadbalancersconfig-syntax.yaml"></a>
 
 ```
-﻿  [ClassicLoadBalancersConfig](#cfn-ec2-spotfleet-loadbalancersconfig-classicloadbalancersconfig) : 
+  [ClassicLoadBalancersConfig](#cfn-ec2-spotfleet-loadbalancersconfig-classicloadbalancersconfig): 
     [ClassicLoadBalancersConfig](aws-properties-ec2-spotfleet-classicloadbalancersconfig.md)
-﻿  [TargetGroupsConfig](#cfn-ec2-spotfleet-loadbalancersconfig-targetgroupsconfig) : 
+  [TargetGroupsConfig](#cfn-ec2-spotfleet-loadbalancersconfig-targetgroupsconfig): 
     [TargetGroupsConfig](aws-properties-ec2-spotfleet-targetgroupsconfig.md)
 ```
 

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-autoscalingplans-scalingplan-tagfilter-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-autoscalingplans-scalingplan-tagfilter-key) : String
-﻿  [Values](#cfn-autoscalingplans-scalingplan-tagfilter-values) : 
+  [Key](#cfn-autoscalingplans-scalingplan-tagfilter-key): String
+  [Values](#cfn-autoscalingplans-scalingplan-tagfilter-values): 
     - String
 ```
 

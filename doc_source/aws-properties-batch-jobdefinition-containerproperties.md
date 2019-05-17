@@ -30,25 +30,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-batch-jobdefinition-containerproperties-syntax.yaml"></a>
 
 ```
-﻿  [Command](#cfn-batch-jobdefinition-containerproperties-command) : 
+  [Command](#cfn-batch-jobdefinition-containerproperties-command): 
     - String
-﻿  [Environment](#cfn-batch-jobdefinition-containerproperties-environment) : 
+  [Environment](#cfn-batch-jobdefinition-containerproperties-environment): 
     - [Environment](aws-properties-batch-jobdefinition-environment.md)
-﻿  [Image](#cfn-batch-jobdefinition-containerproperties-image) : String
-﻿  [InstanceType](#cfn-batch-jobdefinition-containerproperties-instancetype) : String
-﻿  [JobRoleArn](#cfn-batch-jobdefinition-containerproperties-jobrolearn) : String
-﻿  [Memory](#cfn-batch-jobdefinition-containerproperties-memory) : Integer
-﻿  [MountPoints](#cfn-batch-jobdefinition-containerproperties-mountpoints) : 
+  [Image](#cfn-batch-jobdefinition-containerproperties-image): String
+  [InstanceType](#cfn-batch-jobdefinition-containerproperties-instancetype): String
+  [JobRoleArn](#cfn-batch-jobdefinition-containerproperties-jobrolearn): String
+  [Memory](#cfn-batch-jobdefinition-containerproperties-memory): Integer
+  [MountPoints](#cfn-batch-jobdefinition-containerproperties-mountpoints): 
     - [MountPoints](aws-properties-batch-jobdefinition-mountpoints.md)
-﻿  [Privileged](#cfn-batch-jobdefinition-containerproperties-privileged) : Boolean
-﻿  [ReadonlyRootFilesystem](#cfn-batch-jobdefinition-containerproperties-readonlyrootfilesystem) : Boolean
-﻿  [ResourceRequirements](#cfn-batch-jobdefinition-containerproperties-resourcerequirements) : 
+  [Privileged](#cfn-batch-jobdefinition-containerproperties-privileged): Boolean
+  [ReadonlyRootFilesystem](#cfn-batch-jobdefinition-containerproperties-readonlyrootfilesystem): Boolean
+  [ResourceRequirements](#cfn-batch-jobdefinition-containerproperties-resourcerequirements): 
     - [ResourceRequirement](aws-properties-batch-jobdefinition-resourcerequirement.md)
-﻿  [Ulimits](#cfn-batch-jobdefinition-containerproperties-ulimits) : 
+  [Ulimits](#cfn-batch-jobdefinition-containerproperties-ulimits): 
     - [Ulimit](aws-properties-batch-jobdefinition-ulimit.md)
-﻿  [User](#cfn-batch-jobdefinition-containerproperties-user) : String
-﻿  [Vcpus](#cfn-batch-jobdefinition-containerproperties-vcpus) : Integer
-﻿  [Volumes](#cfn-batch-jobdefinition-containerproperties-volumes) : 
+  [User](#cfn-batch-jobdefinition-containerproperties-user): String
+  [Vcpus](#cfn-batch-jobdefinition-containerproperties-vcpus): Integer
+  [Volumes](#cfn-batch-jobdefinition-containerproperties-volumes): 
     - [Volumes](aws-properties-batch-jobdefinition-volumes.md)
 ```
 

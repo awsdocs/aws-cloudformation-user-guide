@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-lambda-layerversion-content-syntax.yaml"></a>
 
 ```
-﻿  [S3Bucket](#cfn-lambda-layerversion-content-s3bucket) : String
-﻿  [S3Key](#cfn-lambda-layerversion-content-s3key) : String
-﻿  [S3ObjectVersion](#cfn-lambda-layerversion-content-s3objectversion) : String
+  [S3Bucket](#cfn-lambda-layerversion-content-s3bucket): String
+  [S3Key](#cfn-lambda-layerversion-content-s3key): String
+  [S3ObjectVersion](#cfn-lambda-layerversion-content-s3objectversion): String
 ```
 
 ## Properties<a name="aws-properties-lambda-layerversion-content-properties"></a>

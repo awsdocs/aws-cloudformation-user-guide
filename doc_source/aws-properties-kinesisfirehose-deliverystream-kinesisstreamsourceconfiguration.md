@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [KinesisStreamARN](#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-kinesisstreamarn) : String
-﻿  [RoleARN](#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-rolearn) : String
+  [KinesisStreamARN](#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-kinesisstreamarn): String
+  [RoleARN](#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-properties"></a>

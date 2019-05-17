@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudfront-distribution-logging-syntax.yaml"></a>
 
 ```
-﻿  [Bucket](#cfn-cloudfront-distribution-logging-bucket) : String
-﻿  [IncludeCookies](#cfn-cloudfront-distribution-logging-includecookies) : Boolean
-﻿  [Prefix](#cfn-cloudfront-distribution-logging-prefix) : String
+  [Bucket](#cfn-cloudfront-distribution-logging-bucket): String
+  [IncludeCookies](#cfn-cloudfront-distribution-logging-includecookies): Boolean
+  [Prefix](#cfn-cloudfront-distribution-logging-prefix): String
 ```
 
 ## Properties<a name="aws-properties-cloudfront-distribution-logging-properties"></a>

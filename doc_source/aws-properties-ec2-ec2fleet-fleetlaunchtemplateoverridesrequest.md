@@ -24,12 +24,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-syntax.yaml"></a>
 
 ```
-﻿  [AvailabilityZone](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-availabilityzone) : String
-﻿  [InstanceType](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-instancetype) : String
-﻿  [MaxPrice](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-maxprice) : String
-﻿  [Priority](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-priority) : Double
-﻿  [SubnetId](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-subnetid) : String
-﻿  [WeightedCapacity](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-weightedcapacity) : Double
+  [AvailabilityZone](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-availabilityzone): String
+  [InstanceType](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-instancetype): String
+  [MaxPrice](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-maxprice): String
+  [Priority](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-priority): Double
+  [SubnetId](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-subnetid): String
+  [WeightedCapacity](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-weightedcapacity): Double
 ```
 
 ## Properties<a name="aws-properties-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-properties"></a>

@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalytics-application-inputparallelism-syntax.yaml"></a>
 
 ```
-﻿  [Count](#cfn-kinesisanalytics-application-inputparallelism-count) : Integer
+  [Count](#cfn-kinesisanalytics-application-inputparallelism-count): Integer
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-application-inputparallelism-properties"></a>

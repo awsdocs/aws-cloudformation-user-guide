@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::WAFRegional::SizeConstraintSet
-Properties : 
-﻿  [Name](#cfn-wafregional-sizeconstraintset-name) : String
-﻿  [SizeConstraints](#cfn-wafregional-sizeconstraintset-sizeconstraints) : 
+Properties: 
+  [Name](#cfn-wafregional-sizeconstraintset-name): String
+  [SizeConstraints](#cfn-wafregional-sizeconstraintset-sizeconstraints): 
     - [SizeConstraint](aws-properties-wafregional-sizeconstraintset-sizeconstraint.md)
 ```
 

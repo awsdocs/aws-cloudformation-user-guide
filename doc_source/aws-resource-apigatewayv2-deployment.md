@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGatewayV2::Deployment
-Properties : 
-﻿  [ApiId](#cfn-apigatewayv2-deployment-apiid) : String
-﻿  [Description](#cfn-apigatewayv2-deployment-description) : String
-﻿  [StageName](#cfn-apigatewayv2-deployment-stagename) : String
+Properties: 
+  [ApiId](#cfn-apigatewayv2-deployment-apiid): String
+  [Description](#cfn-apigatewayv2-deployment-description): String
+  [StageName](#cfn-apigatewayv2-deployment-stagename): String
 ```
 
 ## Properties<a name="aws-resource-apigatewayv2-deployment-properties"></a>

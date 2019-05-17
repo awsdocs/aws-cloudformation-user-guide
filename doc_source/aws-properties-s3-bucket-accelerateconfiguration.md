@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-accelerateconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [AccelerationStatus](#cfn-s3-bucket-accelerateconfiguration-accelerationstatus) : String
+  [AccelerationStatus](#cfn-s3-bucket-accelerateconfiguration-accelerationstatus): String
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-accelerateconfiguration-properties"></a>

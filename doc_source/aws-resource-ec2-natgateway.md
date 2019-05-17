@@ -25,10 +25,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::NatGateway
-Properties : 
-﻿  [AllocationId](#cfn-ec2-natgateway-allocationid) : String
-﻿  [SubnetId](#cfn-ec2-natgateway-subnetid) : String
-﻿  [Tags](#cfn-ec2-natgateway-tags) : 
+Properties: 
+  [AllocationId](#cfn-ec2-natgateway-allocationid): String
+  [SubnetId](#cfn-ec2-natgateway-subnetid): String
+  [Tags](#cfn-ec2-natgateway-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
@@ -107,8 +107,8 @@ NAT:
       SubnetId:
          Ref: Subnet
       Tags:
-         - Key: foo
-           Value: bar
+      - Key: foo
+        Value: bar
 EIP:
    DependsOn: VPCGatewayAttach
    Type: AWS::EC2::EIP

@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters-syntax.yaml"></a>
 
 ```
-﻿  [DocumentVersion](#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion) : String
-﻿  [Parameters](#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters) : Json
+  [DocumentVersion](#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion): String
+  [Parameters](#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters): Json
 ```
 
 ## Properties<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters-properties"></a>

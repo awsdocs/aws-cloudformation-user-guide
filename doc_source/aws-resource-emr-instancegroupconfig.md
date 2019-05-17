@@ -30,20 +30,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EMR::InstanceGroupConfig
-Properties : 
-﻿  [AutoScalingPolicy](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy) : 
+Properties: 
+  [AutoScalingPolicy](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy): 
     [AutoScalingPolicy](aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy.md)
-﻿  [BidPrice](#cfn-emr-instancegroupconfig-bidprice) : String
-﻿  [Configurations](#cfn-emr-instancegroupconfig-configurations) : 
+  [BidPrice](#cfn-emr-instancegroupconfig-bidprice): String
+  [Configurations](#cfn-emr-instancegroupconfig-configurations): 
     - [Configuration](aws-properties-emr-cluster-configuration.md)
-﻿  [EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration) : 
+  [EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration): 
     [EbsConfiguration](aws-properties-emr-ebsconfiguration.md)
-﻿  [InstanceCount](#cfn-emr-instancegroupconfiginstancecount-) : Integer
-﻿  [InstanceRole](#cfn-emr-instancegroupconfig-instancerole) : String
-﻿  [InstanceType](#cfn-emr-instancegroupconfig-instancetype) : String
-﻿  [JobFlowId](#cfn-emr-instancegroupconfig-jobflowid) : String
-﻿  [Market](#cfn-emr-instancegroupconfig-market) : String
-﻿  [Name](#cfn-emr-instancegroupconfig-name) : String
+  [InstanceCount](#cfn-emr-instancegroupconfiginstancecount-): Integer
+  [InstanceRole](#cfn-emr-instancegroupconfig-instancerole): String
+  [InstanceType](#cfn-emr-instancegroupconfig-instancetype): String
+  [JobFlowId](#cfn-emr-instancegroupconfig-jobflowid): String
+  [Market](#cfn-emr-instancegroupconfig-market): String
+  [Name](#cfn-emr-instancegroupconfig-name): String
 ```
 
 ## Properties<a name="aws-resource-emr-instancegroupconfig-properties"></a>

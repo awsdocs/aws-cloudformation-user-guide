@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-instancefleetconfig-volumespecification-syntax.yaml"></a>
 
 ```
-﻿  [Iops](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-iops) : Integer
-﻿  [SizeInGB](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-sizeingb) : Integer
-﻿  [VolumeType](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-volumetype) : String
+  [Iops](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-iops): Integer
+  [SizeInGB](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-sizeingb): Integer
+  [VolumeType](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-volumetype): String
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-instancefleetconfig-volumespecification-properties"></a>

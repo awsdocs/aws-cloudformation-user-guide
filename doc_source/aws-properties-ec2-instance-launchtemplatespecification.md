@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-instance-launchtemplatespecification-syntax.yaml"></a>
 
 ```
-﻿  [LaunchTemplateId](#cfn-ec2-instance-launchtemplatespecification-launchtemplateid) : String
-﻿  [LaunchTemplateName](#cfn-ec2-instance-launchtemplatespecification-launchtemplatename) : String
-﻿  [Version](#cfn-ec2-instance-launchtemplatespecification-version) : String
+  [LaunchTemplateId](#cfn-ec2-instance-launchtemplatespecification-launchtemplateid): String
+  [LaunchTemplateName](#cfn-ec2-instance-launchtemplatespecification-launchtemplatename): String
+  [Version](#cfn-ec2-instance-launchtemplatespecification-version): String
 ```
 
 ## Properties<a name="aws-properties-ec2-instance-launchtemplatespecification-properties"></a>

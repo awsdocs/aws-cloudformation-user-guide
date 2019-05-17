@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-metricsconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [Id](#cfn-s3-bucket-metricsconfiguration-id) : String
-﻿  [Prefix](#cfn-s3-bucket-metricsconfiguration-prefix) : String
-﻿  [TagFilters](#cfn-s3-bucket-metricsconfiguration-tagfilters) : 
+  [Id](#cfn-s3-bucket-metricsconfiguration-id): String
+  [Prefix](#cfn-s3-bucket-metricsconfiguration-prefix): String
+  [TagFilters](#cfn-s3-bucket-metricsconfiguration-tagfilters): 
     - [TagFilter](aws-properties-s3-bucket-tagfilter.md)
 ```
 

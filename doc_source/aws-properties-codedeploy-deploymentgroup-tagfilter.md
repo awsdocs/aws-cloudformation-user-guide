@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-tagfilter-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-codedeploy-deploymentgroup-tagfilter-key) : String
-﻿  [Type](#cfn-codedeploy-deploymentgroup-tagfilter-type) : String
-﻿  [Value](#cfn-codedeploy-deploymentgroup-tagfilter-value) : String
+  [Key](#cfn-codedeploy-deploymentgroup-tagfilter-key): String
+  [Type](#cfn-codedeploy-deploymentgroup-tagfilter-type): String
+  [Value](#cfn-codedeploy-deploymentgroup-tagfilter-value): String
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-tagfilter-properties"></a>

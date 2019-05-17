@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGatewayV2::RouteResponse
-Properties : 
-﻿  [ApiId](#cfn-apigatewayv2-routeresponse-apiid) : String
-﻿  [ModelSelectionExpression](#cfn-apigatewayv2-routeresponse-modelselectionexpression) : String
-﻿  [ResponseModels](#cfn-apigatewayv2-routeresponse-responsemodels) : Json
-﻿  [ResponseParameters](#cfn-apigatewayv2-routeresponse-responseparameters) : Json
-﻿  [RouteId](#cfn-apigatewayv2-routeresponse-routeid) : String
-﻿  [RouteResponseKey](#cfn-apigatewayv2-routeresponse-routeresponsekey) : String
+Properties: 
+  [ApiId](#cfn-apigatewayv2-routeresponse-apiid): String
+  [ModelSelectionExpression](#cfn-apigatewayv2-routeresponse-modelselectionexpression): String
+  [ResponseModels](#cfn-apigatewayv2-routeresponse-responsemodels): Json
+  [ResponseParameters](#cfn-apigatewayv2-routeresponse-responseparameters): Json
+  [RouteId](#cfn-apigatewayv2-routeresponse-routeid): String
+  [RouteResponseKey](#cfn-apigatewayv2-routeresponse-routeresponsekey): String
 ```
 
 ## Properties<a name="aws-resource-apigatewayv2-routeresponse-properties"></a>

@@ -23,11 +23,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::GameLift::Build
-Properties : 
-﻿  [Name](#cfn-gamelift-build-name) : String
-﻿  [StorageLocation](#cfn-gamelift-build-storagelocation) : 
+Properties: 
+  [Name](#cfn-gamelift-build-name): String
+  [StorageLocation](#cfn-gamelift-build-storagelocation): 
     [S3Location](aws-properties-gamelift-build-storagelocation.md)
-﻿  [Version](#cfn-gamelift-build-version) : String
+  [Version](#cfn-gamelift-build-version): String
 ```
 
 ## Properties<a name="aws-resource-gamelift-build-properties"></a>

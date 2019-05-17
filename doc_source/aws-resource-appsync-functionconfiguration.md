@@ -29,16 +29,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppSync::FunctionConfiguration
-Properties : 
-﻿  [ApiId](#cfn-appsync-functionconfiguration-apiid) : String
-﻿  [DataSourceName](#cfn-appsync-functionconfiguration-datasourcename) : String
-﻿  [Description](#cfn-appsync-functionconfiguration-description) : String
-﻿  [FunctionVersion](#cfn-appsync-functionconfiguration-functionversion) : String
-﻿  [Name](#cfn-appsync-functionconfiguration-name) : String
-﻿  [RequestMappingTemplate](#cfn-appsync-functionconfiguration-requestmappingtemplate) : String
-﻿  [RequestMappingTemplateS3Location](#cfn-appsync-functionconfiguration-requestmappingtemplates3location) : String
-﻿  [ResponseMappingTemplate](#cfn-appsync-functionconfiguration-responsemappingtemplate) : String
-﻿  [ResponseMappingTemplateS3Location](#cfn-appsync-functionconfiguration-responsemappingtemplates3location) : String
+Properties: 
+  [ApiId](#cfn-appsync-functionconfiguration-apiid): String
+  [DataSourceName](#cfn-appsync-functionconfiguration-datasourcename): String
+  [Description](#cfn-appsync-functionconfiguration-description): String
+  [FunctionVersion](#cfn-appsync-functionconfiguration-functionversion): String
+  [Name](#cfn-appsync-functionconfiguration-name): String
+  [RequestMappingTemplate](#cfn-appsync-functionconfiguration-requestmappingtemplate): String
+  [RequestMappingTemplateS3Location](#cfn-appsync-functionconfiguration-requestmappingtemplates3location): String
+  [ResponseMappingTemplate](#cfn-appsync-functionconfiguration-responsemappingtemplate): String
+  [ResponseMappingTemplateS3Location](#cfn-appsync-functionconfiguration-responsemappingtemplates3location): String
 ```
 
 ## Properties<a name="aws-resource-appsync-functionconfiguration-properties"></a>

@@ -23,11 +23,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-placement-syntax.yaml"></a>
 
 ```
-﻿  [Affinity](#cfn-ec2-launchtemplate-launchtemplatedata-placement-affinity) : String
-﻿  [AvailabilityZone](#cfn-ec2-launchtemplate-launchtemplatedata-placement-availabilityzone) : String
-﻿  [GroupName](#cfn-ec2-launchtemplate-launchtemplatedata-placement-groupname) : String
-﻿  [HostId](#cfn-ec2-launchtemplate-launchtemplatedata-placement-hostid) : String
-﻿  [Tenancy](#cfn-ec2-launchtemplate-launchtemplatedata-placement-tenancy) : String
+  [Affinity](#cfn-ec2-launchtemplate-launchtemplatedata-placement-affinity): String
+  [AvailabilityZone](#cfn-ec2-launchtemplate-launchtemplatedata-placement-availabilityzone): String
+  [GroupName](#cfn-ec2-launchtemplate-launchtemplatedata-placement-groupname): String
+  [HostId](#cfn-ec2-launchtemplate-launchtemplatedata-placement-hostid): String
+  [Tenancy](#cfn-ec2-launchtemplate-launchtemplatedata-placement-tenancy): String
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-placement-properties"></a>

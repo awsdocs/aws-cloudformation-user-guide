@@ -20,9 +20,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-events-rule-inputtransformer-syntax.yaml"></a>
 
 ```
-﻿  [InputPathsMap](#cfn-events-rule-inputtransformer-inputpathsmap) : 
+  [InputPathsMap](#cfn-events-rule-inputtransformer-inputpathsmap): 
     Key : Value
-﻿  [InputTemplate](#cfn-events-rule-inputtransformer-inputtemplate) : String
+  [InputTemplate](#cfn-events-rule-inputtransformer-inputtemplate): String
 ```
 
 ## Properties<a name="aws-properties-events-rule-inputtransformer-properties"></a>

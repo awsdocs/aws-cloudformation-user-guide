@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-sagemaker-model-vpcconfig-syntax.yaml"></a>
 
 ```
-﻿  [SecurityGroupIds](#cfn-sagemaker-model-vpcconfig-securitygroupids) : 
+  [SecurityGroupIds](#cfn-sagemaker-model-vpcconfig-securitygroupids): 
     - String
-﻿  [Subnets](#cfn-sagemaker-model-vpcconfig-subnets) : 
+  [Subnets](#cfn-sagemaker-model-vpcconfig-subnets): 
     - String
 ```
 

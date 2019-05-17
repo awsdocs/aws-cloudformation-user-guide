@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions-syntax.yaml"></a>
 
 ```
-﻿  [Enabled](#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-enabled) : Boolean
-﻿  [LogGroupName](#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-loggroupname) : String
-﻿  [LogStreamName](#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-logstreamname) : String
+  [Enabled](#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-enabled): Boolean
+  [LogGroupName](#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-loggroupname): String
+  [LogStreamName](#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-logstreamname): String
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions-properties"></a>

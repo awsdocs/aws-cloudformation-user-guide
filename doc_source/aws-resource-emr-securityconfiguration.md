@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EMR::SecurityConfiguration
-Properties : 
-﻿  [Name](#cfn-emr-securityconfiguration-name) : String
-﻿  [SecurityConfiguration](#cfn-emr-securityconfiguration-securityconfiguration) : Json
+Properties: 
+  [Name](#cfn-emr-securityconfiguration-name): String
+  [SecurityConfiguration](#cfn-emr-securityconfiguration-securityconfiguration): Json
 ```
 
 ## Properties<a name="aws-resource-emr-securityconfiguration-properties"></a>

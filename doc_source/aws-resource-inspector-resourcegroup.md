@@ -21,8 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Inspector::ResourceGroup
-Properties : 
-﻿  [ResourceGroupTags](#cfn-inspector-resourcegroup-resourcegrouptags) : 
+Properties: 
+  [ResourceGroupTags](#cfn-inspector-resourcegroup-resourcegrouptags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

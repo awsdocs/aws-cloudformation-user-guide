@@ -28,20 +28,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-events-rule-target-syntax.yaml"></a>
 
 ```
-﻿  [Arn](#cfn-events-rule-target-arn) : String
-﻿  [EcsParameters](#cfn-events-rule-target-ecsparameters) : 
+  [Arn](#cfn-events-rule-target-arn): String
+  [EcsParameters](#cfn-events-rule-target-ecsparameters): 
     [EcsParameters](aws-properties-events-rule-ecsparameters.md)
-﻿  [Id](#cfn-events-rule-target-id) : String
-﻿  [Input](#cfn-events-rule-target-input) : String
-﻿  [InputPath](#cfn-events-rule-target-inputpath) : String
-﻿  [InputTransformer](#cfn-events-rule-target-inputtransformer) : 
+  [Id](#cfn-events-rule-target-id): String
+  [Input](#cfn-events-rule-target-input): String
+  [InputPath](#cfn-events-rule-target-inputpath): String
+  [InputTransformer](#cfn-events-rule-target-inputtransformer): 
     [InputTransformer](aws-properties-events-rule-inputtransformer.md)
-﻿  [KinesisParameters](#cfn-events-rule-target-kinesisparameters) : 
+  [KinesisParameters](#cfn-events-rule-target-kinesisparameters): 
     [KinesisParameters](aws-properties-events-rule-kinesisparameters.md)
-﻿  [RoleArn](#cfn-events-rule-target-rolearn) : String
-﻿  [RunCommandParameters](#cfn-events-rule-target-runcommandparameters) : 
+  [RoleArn](#cfn-events-rule-target-rolearn): String
+  [RunCommandParameters](#cfn-events-rule-target-runcommandparameters): 
     [RunCommandParameters](aws-properties-events-rule-runcommandparameters.md)
-﻿  [SqsParameters](#cfn-events-rule-target-sqsparameters) : 
+  [SqsParameters](#cfn-events-rule-target-sqsparameters): 
     [SqsParameters](aws-properties-events-rule-sqsparameters.md)
 ```
 

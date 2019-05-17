@@ -23,14 +23,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cognito-userpool-schemaattribute-syntax.yaml"></a>
 
 ```
-﻿  [AttributeDataType](#cfn-cognito-userpool-schemaattribute-attributedatatype) : String
-﻿  [DeveloperOnlyAttribute](#cfn-cognito-userpool-schemaattribute-developeronlyattribute) : Boolean
-﻿  [Mutable](#cfn-cognito-userpool-schemaattribute-mutable) : Boolean
-﻿  [Name](#cfn-cognito-userpool-schemaattribute-name) : String
-﻿  [NumberAttributeConstraints](#cfn-cognito-userpool-schemaattribute-numberattributeconstraints) : 
+  [AttributeDataType](#cfn-cognito-userpool-schemaattribute-attributedatatype): String
+  [DeveloperOnlyAttribute](#cfn-cognito-userpool-schemaattribute-developeronlyattribute): Boolean
+  [Mutable](#cfn-cognito-userpool-schemaattribute-mutable): Boolean
+  [Name](#cfn-cognito-userpool-schemaattribute-name): String
+  [NumberAttributeConstraints](#cfn-cognito-userpool-schemaattribute-numberattributeconstraints): 
     [NumberAttributeConstraints](aws-properties-cognito-userpool-numberattributeconstraints.md)
-﻿  [Required](#cfn-cognito-userpool-schemaattribute-required) : Boolean
-﻿  [StringAttributeConstraints](#cfn-cognito-userpool-schemaattribute-stringattributeconstraints) : 
+  [Required](#cfn-cognito-userpool-schemaattribute-required): Boolean
+  [StringAttributeConstraints](#cfn-cognito-userpool-schemaattribute-stringattributeconstraints): 
     [StringAttributeConstraints](aws-properties-cognito-userpool-stringattributeconstraints.md)
 ```
 

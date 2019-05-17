@@ -22,12 +22,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-cloudwatchmetricaction-syntax.yaml"></a>
 
 ```
-﻿  [MetricName](#cfn-iot-topicrule-cloudwatchmetricaction-metricname) : String
-﻿  [MetricNamespace](#cfn-iot-topicrule-cloudwatchmetricaction-metricnamespace) : String
-﻿  [MetricTimestamp](#cfn-iot-topicrule-cloudwatchmetricaction-metrictimestamp) : String
-﻿  [MetricUnit](#cfn-iot-topicrule-cloudwatchmetricaction-metricunit) : String
-﻿  [MetricValue](#cfn-iot-topicrule-cloudwatchmetricaction-metricvalue) : String
-﻿  [RoleArn](#cfn-iot-topicrule-cloudwatchmetricaction-rolearn) : String
+  [MetricName](#cfn-iot-topicrule-cloudwatchmetricaction-metricname): String
+  [MetricNamespace](#cfn-iot-topicrule-cloudwatchmetricaction-metricnamespace): String
+  [MetricTimestamp](#cfn-iot-topicrule-cloudwatchmetricaction-metrictimestamp): String
+  [MetricUnit](#cfn-iot-topicrule-cloudwatchmetricaction-metricunit): String
+  [MetricValue](#cfn-iot-topicrule-cloudwatchmetricaction-metricvalue): String
+  [RoleArn](#cfn-iot-topicrule-cloudwatchmetricaction-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-cloudwatchmetricaction-properties"></a>

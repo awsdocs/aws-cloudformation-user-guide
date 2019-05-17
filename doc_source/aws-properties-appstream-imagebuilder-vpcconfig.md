@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appstream-imagebuilder-vpcconfig-syntax.yaml"></a>
 
 ```
-﻿  [SecurityGroupIds](#cfn-appstream-imagebuilder-vpcconfig-securitygroupids) : 
+  [SecurityGroupIds](#cfn-appstream-imagebuilder-vpcconfig-securitygroupids): 
     - String
-﻿  [SubnetIds](#cfn-appstream-imagebuilder-vpcconfig-subnetids) : 
+  [SubnetIds](#cfn-appstream-imagebuilder-vpcconfig-subnetids): 
     - String
 ```
 

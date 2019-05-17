@@ -28,10 +28,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Greengrass::SubscriptionDefinition
-Properties : 
-﻿  [InitialVersion](#cfn-greengrass-subscriptiondefinition-initialversion) : 
+Properties: 
+  [InitialVersion](#cfn-greengrass-subscriptiondefinition-initialversion): 
     [SubscriptionDefinitionVersion](aws-properties-greengrass-subscriptiondefinition-subscriptiondefinitionversion.md)
-﻿  [Name](#cfn-greengrass-subscriptiondefinition-name) : String
+  [Name](#cfn-greengrass-subscriptiondefinition-name): String
 ```
 
 ## Properties<a name="aws-resource-greengrass-subscriptiondefinition-properties"></a>

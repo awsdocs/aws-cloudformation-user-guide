@@ -21,8 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ECS::Cluster
-Properties : 
-﻿  [ClusterName](#cfn-ecs-cluster-clustername) : String
+Properties: 
+  [ClusterName](#cfn-ecs-cluster-clustername): String
 ```
 
 ## Properties<a name="aws-resource-ecs-cluster-properties"></a>

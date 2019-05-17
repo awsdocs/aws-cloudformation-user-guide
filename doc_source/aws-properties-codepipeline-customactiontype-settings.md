@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codepipeline-customactiontype-settings-syntax.yaml"></a>
 
 ```
-﻿  [EntityUrlTemplate](#cfn-codepipeline-customactiontype-settings-entityurltemplate) : String
-﻿  [ExecutionUrlTemplate](#cfn-codepipeline-customactiontype-settings-executionurltemplate) : String
-﻿  [RevisionUrlTemplate](#cfn-codepipeline-customactiontype-settings-revisionurltemplate) : String
-﻿  [ThirdPartyConfigurationUrl](#cfn-codepipeline-customactiontype-settings-thirdpartyconfigurationurl) : String
+  [EntityUrlTemplate](#cfn-codepipeline-customactiontype-settings-entityurltemplate): String
+  [ExecutionUrlTemplate](#cfn-codepipeline-customactiontype-settings-executionurltemplate): String
+  [RevisionUrlTemplate](#cfn-codepipeline-customactiontype-settings-revisionurltemplate): String
+  [ThirdPartyConfigurationUrl](#cfn-codepipeline-customactiontype-settings-thirdpartyconfigurationurl): String
 ```
 
 ## Properties<a name="aws-properties-codepipeline-customactiontype-settings-properties"></a>

@@ -26,14 +26,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::GuardDuty::Filter
-Properties : 
-﻿  [Action](#cfn-guardduty-filter-action) : String
-﻿  [Description](#cfn-guardduty-filter-description) : String
-﻿  [DetectorId](#cfn-guardduty-filter-detectorid) : String
-﻿  [FindingCriteria](#cfn-guardduty-filter-findingcriteria) : 
+Properties: 
+  [Action](#cfn-guardduty-filter-action): String
+  [Description](#cfn-guardduty-filter-description): String
+  [DetectorId](#cfn-guardduty-filter-detectorid): String
+  [FindingCriteria](#cfn-guardduty-filter-findingcriteria): 
     [FindingCriteria](aws-properties-guardduty-filter-findingcriteria.md)
-﻿  [Name](#cfn-guardduty-filter-name) : String
-﻿  [Rank](#cfn-guardduty-filter-rank) : Integer
+  [Name](#cfn-guardduty-filter-name): String
+  [Rank](#cfn-guardduty-filter-rank): Integer
 ```
 
 ## Properties<a name="aws-resource-guardduty-filter-properties"></a>

@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ssm-maintenancewindowtask-logginginfo-syntax.yaml"></a>
 
 ```
-﻿  [Region](#cfn-ssm-maintenancewindowtask-logginginfo-region) : String
-﻿  [S3Bucket](#cfn-ssm-maintenancewindowtask-logginginfo-s3bucket) : String
-﻿  [S3Prefix](#cfn-ssm-maintenancewindowtask-logginginfo-s3prefix) : String
+  [Region](#cfn-ssm-maintenancewindowtask-logginginfo-region): String
+  [S3Bucket](#cfn-ssm-maintenancewindowtask-logginginfo-s3bucket): String
+  [S3Prefix](#cfn-ssm-maintenancewindowtask-logginginfo-s3prefix): String
 ```
 
 ## Properties<a name="aws-properties-ssm-maintenancewindowtask-logginginfo-properties"></a>

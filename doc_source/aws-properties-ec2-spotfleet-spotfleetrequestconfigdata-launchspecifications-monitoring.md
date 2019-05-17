@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring-syntax.yaml"></a>
 
 ```
-﻿  [Enabled](#cfn-ec2-spotfleet-spotfleetmonitoring-enabled) : Boolean
+  [Enabled](#cfn-ec2-spotfleet-spotfleetmonitoring-enabled): Boolean
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring-properties"></a>

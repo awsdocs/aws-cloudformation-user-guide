@@ -33,8 +33,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::SpotFleet
-Properties : 
-﻿  [SpotFleetRequestConfigData](#cfn-ec2-spotfleet-spotfleetrequestconfigdata) : 
+Properties: 
+  [SpotFleetRequestConfigData](#cfn-ec2-spotfleet-spotfleetrequestconfigdata): 
     [SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md)
 ```
 

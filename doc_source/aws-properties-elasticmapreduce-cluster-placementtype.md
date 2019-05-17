@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-placementtype-syntax.yaml"></a>
 
 ```
-﻿  [AvailabilityZone](#cfn-elasticmapreduce-cluster-placementtype-availabilityzone) : String
+  [AvailabilityZone](#cfn-elasticmapreduce-cluster-placementtype-availabilityzone): String
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-placementtype-properties"></a>

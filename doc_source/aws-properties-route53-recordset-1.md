@@ -31,24 +31,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-route53-recordset-1-syntax.yaml"></a>
 
 ```
-﻿  [AliasTarget](#cfn-route53-recordset-aliastarget) : 
+  [AliasTarget](#cfn-route53-recordset-aliastarget): 
     [AliasTarget](aws-properties-route53-aliastarget.md)
-﻿  [Comment](#cfn-route53-recordset-comment) : String
-﻿  [Failover](#cfn-route53-recordset-failover) : String
-﻿  [GeoLocation](#cfn-route53-recordset-geolocation) : 
+  [Comment](#cfn-route53-recordset-comment): String
+  [Failover](#cfn-route53-recordset-failover): String
+  [GeoLocation](#cfn-route53-recordset-geolocation): 
     [GeoLocation](aws-properties-route53-recordset-geolocation-1.md)
-﻿  [HealthCheckId](#cfn-route53-recordset-healthcheckid) : String
-﻿  [HostedZoneId](#cfn-route53-recordset-hostedzoneid) : String
-﻿  [HostedZoneName](#cfn-route53-recordset-hostedzonename) : String
-﻿  [MultiValueAnswer](#cfn-route53-recordset-multivalueanswer) : Boolean
-﻿  [Name](#cfn-route53-recordset-name) : String
-﻿  [Region](#cfn-route53-recordset-region) : String
-﻿  [ResourceRecords](#cfn-route53-recordset-resourcerecords) : 
+  [HealthCheckId](#cfn-route53-recordset-healthcheckid): String
+  [HostedZoneId](#cfn-route53-recordset-hostedzoneid): String
+  [HostedZoneName](#cfn-route53-recordset-hostedzonename): String
+  [MultiValueAnswer](#cfn-route53-recordset-multivalueanswer): Boolean
+  [Name](#cfn-route53-recordset-name): String
+  [Region](#cfn-route53-recordset-region): String
+  [ResourceRecords](#cfn-route53-recordset-resourcerecords): 
     - String
-﻿  [SetIdentifier](#cfn-route53-recordset-setidentifier) : String
-﻿  [TTL](#cfn-route53-recordset-ttl) : String
-﻿  [Type](#cfn-route53-recordset-type) : String
-﻿  [Weight](#cfn-route53-recordset-weight) : Integer
+  [SetIdentifier](#cfn-route53-recordset-setidentifier): String
+  [TTL](#cfn-route53-recordset-ttl): String
+  [Type](#cfn-route53-recordset-type): String
+  [Weight](#cfn-route53-recordset-weight): Integer
 ```
 
 ## Properties<a name="aws-properties-route53-recordset-1-properties"></a>

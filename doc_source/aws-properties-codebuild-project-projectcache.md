@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-projectcache-syntax.yaml"></a>
 
 ```
-﻿  [Location](#cfn-codebuild-project-projectcache-location) : String
-﻿  [Modes](#cfn-codebuild-project-projectcache-modes) : 
+  [Location](#cfn-codebuild-project-projectcache-location): String
+  [Modes](#cfn-codebuild-project-projectcache-modes): 
     - String
-﻿  [Type](#cfn-codebuild-project-projectcache-type) : String
+  [Type](#cfn-codebuild-project-projectcache-type): String
 ```
 
 ## Properties<a name="aws-properties-codebuild-project-projectcache-properties"></a>

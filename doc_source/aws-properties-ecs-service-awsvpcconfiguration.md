@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-service-awsvpcconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [AssignPublicIp](#cfn-ecs-service-awsvpcconfiguration-assignpublicip) : String
-﻿  [SecurityGroups](#cfn-ecs-service-awsvpcconfiguration-securitygroups) : 
+  [AssignPublicIp](#cfn-ecs-service-awsvpcconfiguration-assignpublicip): String
+  [SecurityGroups](#cfn-ecs-service-awsvpcconfiguration-securitygroups): 
     - String
-﻿  [Subnets](#cfn-ecs-service-awsvpcconfiguration-subnets) : 
+  [Subnets](#cfn-ecs-service-awsvpcconfiguration-subnets): 
     - String
 ```
 

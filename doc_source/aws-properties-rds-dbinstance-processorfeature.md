@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-rds-dbinstance-processorfeature-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-rds-dbinstance-processorfeature-name) : String
-﻿  [Value](#cfn-rds-dbinstance-processorfeature-value) : String
+  [Name](#cfn-rds-dbinstance-processorfeature-name): String
+  [Value](#cfn-rds-dbinstance-processorfeature-value): String
 ```
 
 ## Properties<a name="aws-properties-rds-dbinstance-processorfeature-properties"></a>

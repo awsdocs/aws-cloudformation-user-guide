@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-lambda-alias-aliasroutingconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [AdditionalVersionWeights](#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights) : 
+  [AdditionalVersionWeights](#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights): 
     - [VersionWeight](aws-properties-lambda-alias-versionweight.md)
 ```
 

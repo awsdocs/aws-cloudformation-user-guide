@@ -24,12 +24,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Glue::Partition
-Properties : 
-﻿  [CatalogId](#cfn-glue-partition-catalogid) : String
-﻿  [DatabaseName](#cfn-glue-partition-databasename) : String
-﻿  [PartitionInput](#cfn-glue-partition-partitioninput) : 
+Properties: 
+  [CatalogId](#cfn-glue-partition-catalogid): String
+  [DatabaseName](#cfn-glue-partition-databasename): String
+  [PartitionInput](#cfn-glue-partition-partitioninput): 
     [PartitionInput](aws-properties-glue-partition-partitioninput.md)
-﻿  [TableName](#cfn-glue-partition-tablename) : String
+  [TableName](#cfn-glue-partition-tablename): String
 ```
 
 ## Properties<a name="aws-resource-glue-partition-properties"></a>

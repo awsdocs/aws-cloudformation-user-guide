@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-dataset-variable-outputfileurivalue-syntax.yaml"></a>
 
 ```
-﻿  [FileName](#cfn-iotanalytics-dataset-variable-outputfileurivalue-filename) : String
+  [FileName](#cfn-iotanalytics-dataset-variable-outputfileurivalue-filename): String
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-dataset-variable-outputfileurivalue-properties"></a>

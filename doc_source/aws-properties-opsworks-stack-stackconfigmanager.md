@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-opsworks-stack-stackconfigmanager-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-opsworks-configmanager-name) : String
-﻿  [Version](#cfn-opsworks-configmanager-version) : String
+  [Name](#cfn-opsworks-configmanager-name): String
+  [Version](#cfn-opsworks-configmanager-version): String
 ```
 
 ## Properties<a name="aws-properties-opsworks-stack-stackconfigmanager-properties"></a>

@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-kinesisstreamsinput-syntax.yaml"></a>
 
 ```
-﻿  [ResourceARN](#cfn-kinesisanalyticsv2-application-kinesisstreamsinput-resourcearn) : String
+  [ResourceARN](#cfn-kinesisanalyticsv2-application-kinesisstreamsinput-resourcearn): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-kinesisstreamsinput-properties"></a>

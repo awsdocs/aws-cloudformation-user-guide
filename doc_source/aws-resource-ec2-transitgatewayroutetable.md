@@ -22,10 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::TransitGatewayRouteTable
-Properties : 
-﻿  [Tags](#cfn-ec2-transitgatewayroutetable-tags) : 
+Properties: 
+  [Tags](#cfn-ec2-transitgatewayroutetable-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [TransitGatewayId](#cfn-ec2-transitgatewayroutetable-transitgatewayid) : String
+  [TransitGatewayId](#cfn-ec2-transitgatewayroutetable-transitgatewayid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-transitgatewayroutetable-properties"></a>

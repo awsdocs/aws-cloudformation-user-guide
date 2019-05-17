@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ses-receiptrule-workmailaction-syntax.yaml"></a>
 
 ```
-﻿  [OrganizationArn](#cfn-ses-receiptrule-workmailaction-organizationarn) : String
-﻿  [TopicArn](#cfn-ses-receiptrule-workmailaction-topicarn) : String
+  [OrganizationArn](#cfn-ses-receiptrule-workmailaction-organizationarn): String
+  [TopicArn](#cfn-ses-receiptrule-workmailaction-topicarn): String
 ```
 
 ## Properties<a name="aws-properties-ses-receiptrule-workmailaction-properties"></a>

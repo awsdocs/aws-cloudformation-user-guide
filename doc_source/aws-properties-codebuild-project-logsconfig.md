@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-logsconfig-syntax.yaml"></a>
 
 ```
-﻿  [CloudWatchLogs](#cfn-codebuild-project-logsconfig-cloudwatchlogs) : 
+  [CloudWatchLogs](#cfn-codebuild-project-logsconfig-cloudwatchlogs): 
     [CloudWatchLogsConfig](aws-properties-codebuild-project-cloudwatchlogsconfig.md)
-﻿  [S3Logs](#cfn-codebuild-project-logsconfig-s3logs) : 
+  [S3Logs](#cfn-codebuild-project-logsconfig-s3logs): 
     [S3LogsConfig](aws-properties-codebuild-project-s3logsconfig.md)
 ```
 

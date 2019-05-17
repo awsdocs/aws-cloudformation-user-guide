@@ -27,14 +27,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::KMS::Key
-Properties : 
-﻿  [Description](#cfn-kms-key-description) : String
-﻿  [EnableKeyRotation](#cfn-kms-key-enablekeyrotation) : Boolean
-﻿  [Enabled](#cfn-kms-key-enabled) : Boolean
-﻿  [KeyPolicy](#cfn-kms-key-keypolicy) : Json
-﻿  [KeyUsage](#cfn-kms-key-keyusage) : String
-﻿  [PendingWindowInDays](#cfn-kms-key-pendingwindowindays) : Integer
-﻿  [Tags](#cfn-kms-key-tags) : 
+Properties: 
+  [Description](#cfn-kms-key-description): String
+  [EnableKeyRotation](#cfn-kms-key-enablekeyrotation): Boolean
+  [Enabled](#cfn-kms-key-enabled): Boolean
+  [KeyPolicy](#cfn-kms-key-keypolicy): Json
+  [KeyUsage](#cfn-kms-key-keyusage): String
+  [PendingWindowInDays](#cfn-kms-key-pendingwindowindays): Integer
+  [Tags](#cfn-kms-key-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-networkaclentry-icmp-syntax.yaml"></a>
 
 ```
-﻿  [Code](#cfn-ec2-networkaclentry-icmp-code) : Integer
-﻿  [Type](#cfn-ec2-networkaclentry-icmp-type) : Integer
+  [Code](#cfn-ec2-networkaclentry-icmp-code): Integer
+  [Type](#cfn-ec2-networkaclentry-icmp-type): Integer
 ```
 
 ## Properties<a name="aws-properties-ec2-networkaclentry-icmp-properties"></a>

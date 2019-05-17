@@ -23,15 +23,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [CustomizedScalingMetricSpecification](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-customizedscalingmetricspecification) : 
+  [CustomizedScalingMetricSpecification](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-customizedscalingmetricspecification): 
     [CustomizedScalingMetricSpecification](aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.md)
-﻿  [DisableScaleIn](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-disablescalein) : Boolean
-﻿  [EstimatedInstanceWarmup](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-estimatedinstancewarmup) : Integer
-﻿  [PredefinedScalingMetricSpecification](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-predefinedscalingmetricspecification) : 
+  [DisableScaleIn](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-disablescalein): Boolean
+  [EstimatedInstanceWarmup](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-estimatedinstancewarmup): Integer
+  [PredefinedScalingMetricSpecification](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-predefinedscalingmetricspecification): 
     [PredefinedScalingMetricSpecification](aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification.md)
-﻿  [ScaleInCooldown](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-scaleincooldown) : Integer
-﻿  [ScaleOutCooldown](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-scaleoutcooldown) : Integer
-﻿  [TargetValue](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-targetvalue) : Double
+  [ScaleInCooldown](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-scaleincooldown): Integer
+  [ScaleOutCooldown](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-scaleoutcooldown): Integer
+  [TargetValue](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-targetvalue): Double
 ```
 
 ## Properties<a name="aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration-properties"></a>

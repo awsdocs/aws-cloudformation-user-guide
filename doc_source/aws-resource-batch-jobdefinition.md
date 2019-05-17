@@ -27,18 +27,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Batch::JobDefinition
-Properties : 
-﻿  [ContainerProperties](#cfn-batch-jobdefinition-containerproperties) : 
+Properties: 
+  [ContainerProperties](#cfn-batch-jobdefinition-containerproperties): 
     [ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md)
-﻿  [JobDefinitionName](#cfn-batch-jobdefinition-jobdefinitionname) : String
-﻿  [NodeProperties](#cfn-batch-jobdefinition-nodeproperties) : 
+  [JobDefinitionName](#cfn-batch-jobdefinition-jobdefinitionname): String
+  [NodeProperties](#cfn-batch-jobdefinition-nodeproperties): 
     [NodeProperties](aws-properties-batch-jobdefinition-nodeproperties.md)
-﻿  [Parameters](#cfn-batch-jobdefinition-parameters) : Json
-﻿  [RetryStrategy](#cfn-batch-jobdefinition-retrystrategy) : 
+  [Parameters](#cfn-batch-jobdefinition-parameters): Json
+  [RetryStrategy](#cfn-batch-jobdefinition-retrystrategy): 
     [RetryStrategy](aws-properties-batch-jobdefinition-retrystrategy.md)
-﻿  [Timeout](#cfn-batch-jobdefinition-timeout) : 
+  [Timeout](#cfn-batch-jobdefinition-timeout): 
     [Timeout](aws-properties-batch-jobdefinition-timeout.md)
-﻿  [Type](#cfn-batch-jobdefinition-type) : String
+  [Type](#cfn-batch-jobdefinition-type): String
 ```
 
 ## Properties<a name="aws-resource-batch-jobdefinition-properties"></a>

@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudfront-distribution-restrictions-syntax.yaml"></a>
 
 ```
-﻿  [GeoRestriction](#cfn-cloudfront-distribution-restrictions-georestriction) : 
+  [GeoRestriction](#cfn-cloudfront-distribution-restrictions-georestriction): 
     [GeoRestriction](aws-properties-cloudfront-distribution-georestriction.md)
 ```
 

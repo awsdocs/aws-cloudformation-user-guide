@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::S3::BucketPolicy
-Properties : 
-﻿  [Bucket](#aws-properties-s3-policy-bucket) : String
-﻿  [PolicyDocument](#aws-properties-s3-policy-policydocument) : Json
+Properties: 
+  [Bucket](#aws-properties-s3-policy-bucket): String
+  [PolicyDocument](#aws-properties-s3-policy-policydocument): Json
 ```
 
 ## Properties<a name="aws-properties-s3-policy-properties"></a>

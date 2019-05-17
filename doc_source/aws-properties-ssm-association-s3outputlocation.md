@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ssm-association-s3outputlocation-syntax.yaml"></a>
 
 ```
-﻿  [OutputS3BucketName](#cfn-ssm-association-s3outputlocation-outputs3bucketname) : String
-﻿  [OutputS3KeyPrefix](#cfn-ssm-association-s3outputlocation-outputs3keyprefix) : String
+  [OutputS3BucketName](#cfn-ssm-association-s3outputlocation-outputs3bucketname): String
+  [OutputS3KeyPrefix](#cfn-ssm-association-s3outputlocation-outputs3keyprefix): String
 ```
 
 ## Properties<a name="aws-properties-ssm-association-s3outputlocation-properties"></a>

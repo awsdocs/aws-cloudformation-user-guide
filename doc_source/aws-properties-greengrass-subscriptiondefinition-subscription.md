@@ -22,10 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-subscriptiondefinition-subscription-syntax.yaml"></a>
 
 ```
-﻿  [Id](#cfn-greengrass-subscriptiondefinition-subscription-id) : String
-﻿  [Source](#cfn-greengrass-subscriptiondefinition-subscription-source) : String
-﻿  [Subject](#cfn-greengrass-subscriptiondefinition-subscription-subject) : String
-﻿  [Target](#cfn-greengrass-subscriptiondefinition-subscription-target) : String
+  [Id](#cfn-greengrass-subscriptiondefinition-subscription-id): String
+  [Source](#cfn-greengrass-subscriptiondefinition-subscription-source): String
+  [Subject](#cfn-greengrass-subscriptiondefinition-subscription-subject): String
+  [Target](#cfn-greengrass-subscriptiondefinition-subscription-target): String
 ```
 
 ## Properties<a name="aws-properties-greengrass-subscriptiondefinition-subscription-properties"></a>

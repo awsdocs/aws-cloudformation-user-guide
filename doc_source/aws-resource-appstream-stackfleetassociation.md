@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppStream::StackFleetAssociation
-Properties : 
-﻿  [FleetName](#cfn-appstream-stackfleetassociation-fleetname) : String
-﻿  [StackName](#cfn-appstream-stackfleetassociation-stackname) : String
+Properties: 
+  [FleetName](#cfn-appstream-stackfleetassociation-fleetname): String
+  [StackName](#cfn-appstream-stackfleetassociation-stackname): String
 ```
 
 ## Properties<a name="aws-resource-appstream-stackfleetassociation-properties"></a>

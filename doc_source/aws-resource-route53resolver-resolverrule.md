@@ -26,14 +26,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Route53Resolver::ResolverRule
-Properties : 
-﻿  [DomainName](#cfn-route53resolver-resolverrule-domainname) : String
-﻿  [Name](#cfn-route53resolver-resolverrule-name) : String
-﻿  [ResolverEndpointId](#cfn-route53resolver-resolverrule-resolverendpointid) : String
-﻿  [RuleType](#cfn-route53resolver-resolverrule-ruletype) : String
-﻿  [Tags](#cfn-route53resolver-resolverrule-tags) : 
+Properties: 
+  [DomainName](#cfn-route53resolver-resolverrule-domainname): String
+  [Name](#cfn-route53resolver-resolverrule-name): String
+  [ResolverEndpointId](#cfn-route53resolver-resolverrule-resolverendpointid): String
+  [RuleType](#cfn-route53resolver-resolverrule-ruletype): String
+  [Tags](#cfn-route53resolver-resolverrule-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [TargetIps](#cfn-route53resolver-resolverrule-targetips) : 
+  [TargetIps](#cfn-route53resolver-resolverrule-targetips): 
     - [TargetAddress](aws-properties-route53resolver-resolverrule-targetaddress.md)
 ```
 

@@ -25,12 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceCatalog::Portfolio
-Properties : 
-﻿  [AcceptLanguage](#cfn-servicecatalog-portfolio-acceptlanguage) : String
-﻿  [Description](#cfn-servicecatalog-portfolio-description) : String
-﻿  [DisplayName](#cfn-servicecatalog-portfolio-displayname) : String
-﻿  [ProviderName](#cfn-servicecatalog-portfolio-providername) : String
-﻿  [Tags](#cfn-servicecatalog-portfolio-tags) : 
+Properties: 
+  [AcceptLanguage](#cfn-servicecatalog-portfolio-acceptlanguage): String
+  [Description](#cfn-servicecatalog-portfolio-description): String
+  [DisplayName](#cfn-servicecatalog-portfolio-displayname): String
+  [ProviderName](#cfn-servicecatalog-portfolio-providername): String
+  [Tags](#cfn-servicecatalog-portfolio-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

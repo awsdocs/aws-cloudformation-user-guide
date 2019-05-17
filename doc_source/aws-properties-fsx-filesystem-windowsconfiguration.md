@@ -22,12 +22,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-fsx-filesystem-windowsconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [ActiveDirectoryId](#cfn-fsx-filesystem-windowsconfiguration-activedirectoryid) : String
-﻿  [AutomaticBackupRetentionDays](#cfn-fsx-filesystem-windowsconfiguration-automaticbackupretentiondays) : Integer
-﻿  [CopyTagsToBackups](#cfn-fsx-filesystem-windowsconfiguration-copytagstobackups) : Boolean
-﻿  [DailyAutomaticBackupStartTime](#cfn-fsx-filesystem-windowsconfiguration-dailyautomaticbackupstarttime) : String
-﻿  [ThroughputCapacity](#cfn-fsx-filesystem-windowsconfiguration-throughputcapacity) : Integer
-﻿  [WeeklyMaintenanceStartTime](#cfn-fsx-filesystem-windowsconfiguration-weeklymaintenancestarttime) : String
+  [ActiveDirectoryId](#cfn-fsx-filesystem-windowsconfiguration-activedirectoryid): String
+  [AutomaticBackupRetentionDays](#cfn-fsx-filesystem-windowsconfiguration-automaticbackupretentiondays): Integer
+  [CopyTagsToBackups](#cfn-fsx-filesystem-windowsconfiguration-copytagstobackups): Boolean
+  [DailyAutomaticBackupStartTime](#cfn-fsx-filesystem-windowsconfiguration-dailyautomaticbackupstarttime): String
+  [ThroughputCapacity](#cfn-fsx-filesystem-windowsconfiguration-throughputcapacity): Integer
+  [WeeklyMaintenanceStartTime](#cfn-fsx-filesystem-windowsconfiguration-weeklymaintenancestarttime): String
 ```
 
 ## Properties<a name="aws-properties-fsx-filesystem-windowsconfiguration-properties"></a>

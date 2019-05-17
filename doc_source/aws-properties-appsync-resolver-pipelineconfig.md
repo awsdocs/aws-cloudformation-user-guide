@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appsync-resolver-pipelineconfig-syntax.yaml"></a>
 
 ```
-﻿  [Functions](#cfn-appsync-resolver-pipelineconfig-functions) : 
+  [Functions](#cfn-appsync-resolver-pipelineconfig-functions): 
     - String
 ```
 

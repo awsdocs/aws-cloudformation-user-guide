@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-codecontent-syntax.yaml"></a>
 
 ```
-﻿  [S3ContentLocation](#cfn-kinesisanalyticsv2-application-codecontent-s3contentlocation) : 
+  [S3ContentLocation](#cfn-kinesisanalyticsv2-application-codecontent-s3contentlocation): 
     [S3ContentLocation](aws-properties-kinesisanalyticsv2-application-s3contentlocation.md)
-﻿  [TextContent](#cfn-kinesisanalyticsv2-application-codecontent-textcontent) : String
-﻿  [ZipFileContent](#cfn-kinesisanalyticsv2-application-codecontent-zipfilecontent) : String
+  [TextContent](#cfn-kinesisanalyticsv2-application-codecontent-textcontent): String
+  [ZipFileContent](#cfn-kinesisanalyticsv2-application-codecontent-zipfilecontent): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-codecontent-properties"></a>

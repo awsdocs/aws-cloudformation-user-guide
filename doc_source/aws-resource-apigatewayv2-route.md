@@ -32,20 +32,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGatewayV2::Route
-Properties : 
-﻿  [ApiId](#cfn-apigatewayv2-route-apiid) : String
-﻿  [ApiKeyRequired](#cfn-apigatewayv2-route-apikeyrequired) : Boolean
-﻿  [AuthorizationScopes](#cfn-apigatewayv2-route-authorizationscopes) : 
+Properties: 
+  [ApiId](#cfn-apigatewayv2-route-apiid): String
+  [ApiKeyRequired](#cfn-apigatewayv2-route-apikeyrequired): Boolean
+  [AuthorizationScopes](#cfn-apigatewayv2-route-authorizationscopes): 
     - String
-﻿  [AuthorizationType](#cfn-apigatewayv2-route-authorizationtype) : String
-﻿  [AuthorizerId](#cfn-apigatewayv2-route-authorizerid) : String
-﻿  [ModelSelectionExpression](#cfn-apigatewayv2-route-modelselectionexpression) : String
-﻿  [OperationName](#cfn-apigatewayv2-route-operationname) : String
-﻿  [RequestModels](#cfn-apigatewayv2-route-requestmodels) : Json
-﻿  [RequestParameters](#cfn-apigatewayv2-route-requestparameters) : Json
-﻿  [RouteKey](#cfn-apigatewayv2-route-routekey) : String
-﻿  [RouteResponseSelectionExpression](#cfn-apigatewayv2-route-routeresponseselectionexpression) : String
-﻿  [Target](#cfn-apigatewayv2-route-target) : String
+  [AuthorizationType](#cfn-apigatewayv2-route-authorizationtype): String
+  [AuthorizerId](#cfn-apigatewayv2-route-authorizerid): String
+  [ModelSelectionExpression](#cfn-apigatewayv2-route-modelselectionexpression): String
+  [OperationName](#cfn-apigatewayv2-route-operationname): String
+  [RequestModels](#cfn-apigatewayv2-route-requestmodels): Json
+  [RequestParameters](#cfn-apigatewayv2-route-requestparameters): Json
+  [RouteKey](#cfn-apigatewayv2-route-routekey): String
+  [RouteResponseSelectionExpression](#cfn-apigatewayv2-route-routeresponseselectionexpression): String
+  [Target](#cfn-apigatewayv2-route-target): String
 ```
 
 ## Properties<a name="aws-resource-apigatewayv2-route-properties"></a>

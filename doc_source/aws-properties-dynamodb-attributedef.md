@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dynamodb-attributedef-syntax.yaml"></a>
 
 ```
-﻿  [AttributeName](#cfn-dynamodb-attributedef-attributename) : String
-﻿  [AttributeType](#cfn-dynamodb-attributedef-attributename-attributetype) : String
+  [AttributeName](#cfn-dynamodb-attributedef-attributename): String
+  [AttributeType](#cfn-dynamodb-attributedef-attributename-attributetype): String
 ```
 
 ## Properties<a name="aws-properties-dynamodb-attributedef-properties"></a>

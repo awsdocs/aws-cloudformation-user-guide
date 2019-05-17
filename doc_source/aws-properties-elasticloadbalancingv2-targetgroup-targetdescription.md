@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticloadbalancingv2-targetgroup-targetdescription-syntax.yaml"></a>
 
 ```
-﻿  [AvailabilityZone](#cfn-elasticloadbalancingv2-targetgroup-targetdescription-availabilityzone) : String
-﻿  [Id](#cfn-elasticloadbalancingv2-targetgroup-targetdescription-id) : String
-﻿  [Port](#cfn-elasticloadbalancingv2-targetgroup-targetdescription-port) : Integer
+  [AvailabilityZone](#cfn-elasticloadbalancingv2-targetgroup-targetdescription-availabilityzone): String
+  [Id](#cfn-elasticloadbalancingv2-targetgroup-targetdescription-id): String
+  [Port](#cfn-elasticloadbalancingv2-targetgroup-targetdescription-port): Integer
 ```
 
 ## Properties<a name="aws-properties-elasticloadbalancingv2-targetgroup-targetdescription-properties"></a>

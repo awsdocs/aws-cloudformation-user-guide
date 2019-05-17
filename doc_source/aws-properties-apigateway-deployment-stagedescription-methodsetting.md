@@ -28,16 +28,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apigateway-deployment-stagedescription-methodsetting-syntax.yaml"></a>
 
 ```
-﻿  [CacheDataEncrypted](#cfn-apigateway-deployment-stagedescription-methodsetting-cachedataencrypted) : Boolean
-﻿  [CacheTtlInSeconds](#cfn-apigateway-deployment-stagedescription-methodsetting-cachettlinseconds) : Integer
-﻿  [CachingEnabled](#cfn-apigateway-deployment-stagedescription-methodsetting-cachingenabled) : Boolean
-﻿  [DataTraceEnabled](#cfn-apigateway-deployment-stagedescription-methodsetting-datatraceenabled) : Boolean
-﻿  [HttpMethod](#cfn-apigateway-deployment-stagedescription-methodsetting-httpmethod) : String
-﻿  [LoggingLevel](#cfn-apigateway-deployment-stagedescription-methodsetting-logginglevel) : String
-﻿  [MetricsEnabled](#cfn-apigateway-deployment-stagedescription-methodsetting-metricsenabled) : Boolean
-﻿  [ResourcePath](#cfn-apigateway-deployment-stagedescription-methodsetting-resourcepath) : String
-﻿  [ThrottlingBurstLimit](#cfn-apigateway-deployment-stagedescription-methodsetting-throttlingburstlimit) : Integer
-﻿  [ThrottlingRateLimit](#cfn-apigateway-deployment-stagedescription-methodsetting-throttlingratelimit) : Double
+  [CacheDataEncrypted](#cfn-apigateway-deployment-stagedescription-methodsetting-cachedataencrypted): Boolean
+  [CacheTtlInSeconds](#cfn-apigateway-deployment-stagedescription-methodsetting-cachettlinseconds): Integer
+  [CachingEnabled](#cfn-apigateway-deployment-stagedescription-methodsetting-cachingenabled): Boolean
+  [DataTraceEnabled](#cfn-apigateway-deployment-stagedescription-methodsetting-datatraceenabled): Boolean
+  [HttpMethod](#cfn-apigateway-deployment-stagedescription-methodsetting-httpmethod): String
+  [LoggingLevel](#cfn-apigateway-deployment-stagedescription-methodsetting-logginglevel): String
+  [MetricsEnabled](#cfn-apigateway-deployment-stagedescription-methodsetting-metricsenabled): Boolean
+  [ResourcePath](#cfn-apigateway-deployment-stagedescription-methodsetting-resourcepath): String
+  [ThrottlingBurstLimit](#cfn-apigateway-deployment-stagedescription-methodsetting-throttlingburstlimit): Integer
+  [ThrottlingRateLimit](#cfn-apigateway-deployment-stagedescription-methodsetting-throttlingratelimit): Double
 ```
 
 ## Properties<a name="aws-properties-apigateway-deployment-stagedescription-methodsetting-properties"></a>

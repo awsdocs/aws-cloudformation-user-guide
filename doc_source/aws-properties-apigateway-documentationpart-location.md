@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apigateway-documentationpart-location-syntax.yaml"></a>
 
 ```
-﻿  [Method](#cfn-apigateway-documentationpart-location-method) : String
-﻿  [Name](#cfn-apigateway-documentationpart-location-name) : String
-﻿  [Path](#cfn-apigateway-documentationpart-location-path) : String
-﻿  [StatusCode](#cfn-apigateway-documentationpart-location-statuscode) : String
-﻿  [Type](#cfn-apigateway-documentationpart-location-type) : String
+  [Method](#cfn-apigateway-documentationpart-location-method): String
+  [Name](#cfn-apigateway-documentationpart-location-name): String
+  [Path](#cfn-apigateway-documentationpart-location-path): String
+  [StatusCode](#cfn-apigateway-documentationpart-location-statuscode): String
+  [Type](#cfn-apigateway-documentationpart-location-type): String
 ```
 
 ## Properties<a name="aws-properties-apigateway-documentationpart-location-properties"></a>

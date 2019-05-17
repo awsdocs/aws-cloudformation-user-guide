@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-batch-computeenvironment-launchtemplatespecification-syntax.yaml"></a>
 
 ```
-﻿  [LaunchTemplateId](#cfn-batch-computeenvironment-launchtemplatespecification-launchtemplateid) : String
-﻿  [LaunchTemplateName](#cfn-batch-computeenvironment-launchtemplatespecification-launchtemplatename) : String
-﻿  [Version](#cfn-batch-computeenvironment-launchtemplatespecification-version) : String
+  [LaunchTemplateId](#cfn-batch-computeenvironment-launchtemplatespecification-launchtemplateid): String
+  [LaunchTemplateName](#cfn-batch-computeenvironment-launchtemplatespecification-launchtemplatename): String
+  [Version](#cfn-batch-computeenvironment-launchtemplatespecification-version): String
 ```
 
 ## Properties<a name="aws-properties-batch-computeenvironment-launchtemplatespecification-properties"></a>

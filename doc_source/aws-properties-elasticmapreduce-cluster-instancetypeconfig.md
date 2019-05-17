@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-instancetypeconfig-syntax.yaml"></a>
 
 ```
-﻿  [BidPrice](#cfn-elasticmapreduce-cluster-instancetypeconfig-bidprice) : String
-﻿  [BidPriceAsPercentageOfOnDemandPrice](#cfn-elasticmapreduce-cluster-instancetypeconfig-bidpriceaspercentageofondemandprice) : Double
-﻿  [Configurations](#cfn-elasticmapreduce-cluster-instancetypeconfig-configurations) : 
+  [BidPrice](#cfn-elasticmapreduce-cluster-instancetypeconfig-bidprice): String
+  [BidPriceAsPercentageOfOnDemandPrice](#cfn-elasticmapreduce-cluster-instancetypeconfig-bidpriceaspercentageofondemandprice): Double
+  [Configurations](#cfn-elasticmapreduce-cluster-instancetypeconfig-configurations): 
     - [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md)
-﻿  [EbsConfiguration](#cfn-elasticmapreduce-cluster-instancetypeconfig-ebsconfiguration) : 
+  [EbsConfiguration](#cfn-elasticmapreduce-cluster-instancetypeconfig-ebsconfiguration): 
     [EbsConfiguration](aws-properties-elasticmapreduce-cluster-ebsconfiguration.md)
-﻿  [InstanceType](#cfn-elasticmapreduce-cluster-instancetypeconfig-instancetype) : String
-﻿  [WeightedCapacity](#cfn-elasticmapreduce-cluster-instancetypeconfig-weightedcapacity) : Integer
+  [InstanceType](#cfn-elasticmapreduce-cluster-instancetypeconfig-instancetype): String
+  [WeightedCapacity](#cfn-elasticmapreduce-cluster-instancetypeconfig-weightedcapacity): Integer
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-instancetypeconfig-properties"></a>

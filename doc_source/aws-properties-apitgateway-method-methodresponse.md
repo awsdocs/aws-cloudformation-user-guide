@@ -19,11 +19,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apitgateway-method-methodresponse-syntax.yaml"></a>
 
 ```
-﻿  [ResponseModels](#cfn-apigateway-method-methodresponse-responsemodels) : 
+  [ResponseModels](#cfn-apigateway-method-methodresponse-responsemodels): 
     Key : Value
-﻿  [ResponseParameters](#cfn-apigateway-method-methodresponse-responseparameters) : 
+  [ResponseParameters](#cfn-apigateway-method-methodresponse-responseparameters): 
     Key : Value
-﻿  [StatusCode](#cfn-apigateway-method-methodresponse-statuscode) : String
+  [StatusCode](#cfn-apigateway-method-methodresponse-statuscode): String
 ```
 
 ## Properties<a name="aws-properties-apitgateway-method-methodresponse-properties"></a>

@@ -19,11 +19,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-vpcconfig-syntax.yaml"></a>
 
 ```
-﻿  [SecurityGroupIds](#cfn-codebuild-project-vpcconfig-securitygroupids) : 
+  [SecurityGroupIds](#cfn-codebuild-project-vpcconfig-securitygroupids): 
     - String
-﻿  [Subnets](#cfn-codebuild-project-vpcconfig-subnets) : 
+  [Subnets](#cfn-codebuild-project-vpcconfig-subnets): 
     - String
-﻿  [VpcId](#cfn-codebuild-project-vpcconfig-vpcid) : String
+  [VpcId](#cfn-codebuild-project-vpcconfig-vpcid): String
 ```
 
 ## Properties<a name="aws-properties-codebuild-project-vpcconfig-properties"></a>

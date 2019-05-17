@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-waf-ipset-ipsetdescriptors-syntax.yaml"></a>
 
 ```
-﻿  [Type](#cfn-waf-ipset-ipsetdescriptors-type) : String
-﻿  [Value](#cfn-waf-ipset-ipsetdescriptors-value) : String
+  [Type](#cfn-waf-ipset-ipsetdescriptors-type): String
+  [Value](#cfn-waf-ipset-ipsetdescriptors-value): String
 ```
 
 ## Properties<a name="aws-properties-waf-ipset-ipsetdescriptors-properties"></a>

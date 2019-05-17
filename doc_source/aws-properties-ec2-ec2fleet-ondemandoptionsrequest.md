@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-ec2fleet-ondemandoptionsrequest-syntax.yaml"></a>
 
 ```
-﻿  [AllocationStrategy](#cfn-ec2-ec2fleet-ondemandoptionsrequest-allocationstrategy) : String
+  [AllocationStrategy](#cfn-ec2-ec2fleet-ondemandoptionsrequest-allocationstrategy): String
 ```
 
 ## Properties<a name="aws-properties-ec2-ec2fleet-ondemandoptionsrequest-properties"></a>

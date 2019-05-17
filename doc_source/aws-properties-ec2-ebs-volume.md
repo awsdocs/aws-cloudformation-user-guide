@@ -46,17 +46,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::Volume
-Properties : 
-﻿  [AutoEnableIO](#cfn-ec2-ebs-volume-autoenableio) : Boolean
-﻿  [AvailabilityZone](#cfn-ec2-ebs-volume-availabilityzone) : String
-﻿  [Encrypted](#cfn-ec2-ebs-volume-encrypted) : Boolean
-﻿  [Iops](#cfn-ec2-ebs-volume-iops) : Integer
-﻿  [KmsKeyId](#cfn-ec2-ebs-volume-kmskeyid) : String
-﻿  [Size](#cfn-ec2-ebs-volume-size) : Integer
-﻿  [SnapshotId](#cfn-ec2-ebs-volume-snapshotid) : String
-﻿  [Tags](#cfn-ec2-ebs-volume-tags) : 
+Properties: 
+  [AutoEnableIO](#cfn-ec2-ebs-volume-autoenableio): Boolean
+  [AvailabilityZone](#cfn-ec2-ebs-volume-availabilityzone): String
+  [Encrypted](#cfn-ec2-ebs-volume-encrypted): Boolean
+  [Iops](#cfn-ec2-ebs-volume-iops): Integer
+  [KmsKeyId](#cfn-ec2-ebs-volume-kmskeyid): String
+  [Size](#cfn-ec2-ebs-volume-size): Integer
+  [SnapshotId](#cfn-ec2-ebs-volume-snapshotid): String
+  [Tags](#cfn-ec2-ebs-volume-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VolumeType](#cfn-ec2-ebs-volume-volumetype) : String
+  [VolumeType](#cfn-ec2-ebs-volume-volumetype): String
 ```
 
 ## Properties<a name="aws-properties-ec2-ebs-volume-properties"></a>

@@ -30,16 +30,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-security-group-rule-1-syntax.yaml"></a>
 
 ```
-﻿  [CidrIp](#cfn-ec2-security-group-rule-cidrip) : String
-﻿  [CidrIpv6](#cfn-ec2-security-group-rule-cidripv6) : String
-﻿  [Description](#cfn-ec2-security-group-rule-description) : String
-﻿  [FromPort](#cfn-ec2-security-group-rule-fromport) : Integer
-﻿  [IpProtocol](#cfn-ec2-security-group-rule-ipprotocol) : String
-﻿  [SourcePrefixListId](#cfn-ec2-securitygroup-ingress-sourceprefixlistid) : String
-﻿  [SourceSecurityGroupId](#cfn-ec2-security-group-rule-sourcesecuritygroupid) : String
-﻿  [SourceSecurityGroupName](#cfn-ec2-security-group-rule-sourcesecuritygroupname) : String
-﻿  [SourceSecurityGroupOwnerId](#cfn-ec2-security-group-rule-sourcesecuritygroupownerid) : String
-﻿  [ToPort](#cfn-ec2-security-group-rule-toport) : Integer
+  [CidrIp](#cfn-ec2-security-group-rule-cidrip): String
+  [CidrIpv6](#cfn-ec2-security-group-rule-cidripv6): String
+  [Description](#cfn-ec2-security-group-rule-description): String
+  [FromPort](#cfn-ec2-security-group-rule-fromport): Integer
+  [IpProtocol](#cfn-ec2-security-group-rule-ipprotocol): String
+  [SourcePrefixListId](#cfn-ec2-securitygroup-ingress-sourceprefixlistid): String
+  [SourceSecurityGroupId](#cfn-ec2-security-group-rule-sourcesecuritygroupid): String
+  [SourceSecurityGroupName](#cfn-ec2-security-group-rule-sourcesecuritygroupname): String
+  [SourceSecurityGroupOwnerId](#cfn-ec2-security-group-rule-sourcesecuritygroupownerid): String
+  [ToPort](#cfn-ec2-security-group-rule-toport): Integer
 ```
 
 ## Properties<a name="aws-properties-ec2-security-group-rule-1-properties"></a>

@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-route-httprouteaction-syntax.yaml"></a>
 
 ```
-﻿  [WeightedTargets](#cfn-appmesh-route-httprouteaction-weightedtargets) : 
+  [WeightedTargets](#cfn-appmesh-route-httprouteaction-weightedtargets): 
     - [WeightedTarget](aws-properties-appmesh-route-weightedtarget.md)
 ```
 

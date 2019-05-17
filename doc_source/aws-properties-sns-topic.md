@@ -28,12 +28,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SNS::Topic
-Properties : 
-﻿  [DisplayName](#cfn-sns-topic-displayname) : String
-﻿  [KmsMasterKeyId](#cfn-sns-topic-kmsmasterkeyid) : String
-﻿  [Subscription](#cfn-sns-topic-subscription) : 
+Properties: 
+  [DisplayName](#cfn-sns-topic-displayname): String
+  [KmsMasterKeyId](#cfn-sns-topic-kmsmasterkeyid): String
+  [Subscription](#cfn-sns-topic-subscription): 
     - [Subscription](aws-properties-sns-subscription.md)
-﻿  [TopicName](#cfn-sns-topic-topicname) : String
+  [TopicName](#cfn-sns-topic-topicname): String
 ```
 
 ## Properties<a name="aws-properties-sns-topic-properties"></a>

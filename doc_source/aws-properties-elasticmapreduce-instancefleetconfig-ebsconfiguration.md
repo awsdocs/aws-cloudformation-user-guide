@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-instancefleetconfig-ebsconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [EbsBlockDeviceConfigs](#cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsblockdeviceconfigs) : 
+  [EbsBlockDeviceConfigs](#cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsblockdeviceconfigs): 
     - [EbsBlockDeviceConfig](aws-properties-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig.md)
-﻿  [EbsOptimized](#cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsoptimized) : Boolean
+  [EbsOptimized](#cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsoptimized): Boolean
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-instancefleetconfig-ebsconfiguration-properties"></a>

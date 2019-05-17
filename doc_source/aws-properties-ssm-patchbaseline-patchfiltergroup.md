@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ssm-patchbaseline-patchfiltergroup-syntax.yaml"></a>
 
 ```
-﻿  [PatchFilters](#cfn-ssm-patchbaseline-patchfiltergroup-patchfilters) : 
+  [PatchFilters](#cfn-ssm-patchbaseline-patchfiltergroup-patchfilters): 
     - [PatchFilter](aws-properties-ssm-patchbaseline-patchfilter.md)
 ```
 

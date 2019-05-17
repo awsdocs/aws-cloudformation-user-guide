@@ -31,14 +31,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Events::Rule
-Properties : 
-﻿  [Description](#cfn-events-rule-description) : String
-﻿  [EventPattern](#cfn-events-rule-eventpattern) : Json
-﻿  [Name](#cfn-events-rule-name) : String
-﻿  [RoleArn](#cfn-events-rule-rolearn) : String
-﻿  [ScheduleExpression](#cfn-events-rule-scheduleexpression) : String
-﻿  [State](#cfn-events-rule-state) : String
-﻿  [Targets](#cfn-events-rule-targets) : 
+Properties: 
+  [Description](#cfn-events-rule-description): String
+  [EventPattern](#cfn-events-rule-eventpattern): Json
+  [Name](#cfn-events-rule-name): String
+  [RoleArn](#cfn-events-rule-rolearn): String
+  [ScheduleExpression](#cfn-events-rule-scheduleexpression): String
+  [State](#cfn-events-rule-state): String
+  [Targets](#cfn-events-rule-targets): 
     - [Target](aws-properties-events-rule-target.md)
 ```
 

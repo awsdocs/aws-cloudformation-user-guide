@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-connection-physicalconnectionrequirements-syntax.yaml"></a>
 
 ```
-﻿  [AvailabilityZone](#cfn-glue-connection-physicalconnectionrequirements-availabilityzone) : String
-﻿  [SecurityGroupIdList](#cfn-glue-connection-physicalconnectionrequirements-securitygroupidlist) : 
+  [AvailabilityZone](#cfn-glue-connection-physicalconnectionrequirements-availabilityzone): String
+  [SecurityGroupIdList](#cfn-glue-connection-physicalconnectionrequirements-securitygroupidlist): 
     - String
-﻿  [SubnetId](#cfn-glue-connection-physicalconnectionrequirements-subnetid) : String
+  [SubnetId](#cfn-glue-connection-physicalconnectionrequirements-subnetid): String
 ```
 
 ## Properties<a name="aws-properties-glue-connection-physicalconnectionrequirements-properties"></a>

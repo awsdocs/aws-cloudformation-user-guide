@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-as-launchconfig-blockdev-mapping-syntax.yaml"></a>
 
 ```
-﻿  [DeviceName](#cfn-as-launchconfig-blockdev-mapping-devicename) : String
-﻿  [Ebs](#cfn-as-launchconfig-blockdev-mapping-ebs) : 
+  [DeviceName](#cfn-as-launchconfig-blockdev-mapping-devicename): String
+  [Ebs](#cfn-as-launchconfig-blockdev-mapping-ebs): 
     [BlockDevice](aws-properties-as-launchconfig-blockdev-template.md)
-﻿  [NoDevice](#cfn-as-launchconfig-blockdev-mapping-nodevice) : Boolean
-﻿  [VirtualName](#cfn-as-launchconfig-blockdev-mapping-virtualname) : String
+  [NoDevice](#cfn-as-launchconfig-blockdev-mapping-nodevice): Boolean
+  [VirtualName](#cfn-as-launchconfig-blockdev-mapping-virtualname): String
 ```
 
 ## Properties<a name="aws-properties-as-launchconfig-blockdev-mapping-properties"></a>

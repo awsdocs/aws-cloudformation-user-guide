@@ -19,11 +19,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codepipeline-pipeline-stages-syntax.yaml"></a>
 
 ```
-﻿  [Actions](#cfn-codepipeline-pipeline-stages-actions) : 
+  [Actions](#cfn-codepipeline-pipeline-stages-actions): 
     - [ActionDeclaration](aws-properties-codepipeline-pipeline-stages-actions.md)
-﻿  [Blockers](#cfn-codepipeline-pipeline-stages-blockers) : 
+  [Blockers](#cfn-codepipeline-pipeline-stages-blockers): 
     - [BlockerDeclaration](aws-properties-codepipeline-pipeline-stages-blockers.md)
-﻿  [Name](#cfn-codepipeline-pipeline-stages-name) : String
+  [Name](#cfn-codepipeline-pipeline-stages-name): String
 ```
 
 ## Properties<a name="aws-properties-codepipeline-pipeline-stages-properties"></a>

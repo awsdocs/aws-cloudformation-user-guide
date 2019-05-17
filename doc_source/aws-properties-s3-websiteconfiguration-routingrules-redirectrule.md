@@ -21,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-websiteconfiguration-routingrules-redirectrule-syntax.yaml"></a>
 
 ```
-﻿  [HostName](#cfn-s3-websiteconfiguration-redirectrule-hostname) : String
-﻿  [HttpRedirectCode](#cfn-s3-websiteconfiguration-redirectrule-httpredirectcode) : String
-﻿  [Protocol](#cfn-s3-websiteconfiguration-redirectrule-protocol) : String
-﻿  [ReplaceKeyPrefixWith](#cfn-s3-websiteconfiguration-redirectrule-replacekeyprefixwith) : String
-﻿  [ReplaceKeyWith](#cfn-s3-websiteconfiguration-redirectrule-replacekeywith) : String
+  [HostName](#cfn-s3-websiteconfiguration-redirectrule-hostname): String
+  [HttpRedirectCode](#cfn-s3-websiteconfiguration-redirectrule-httpredirectcode): String
+  [Protocol](#cfn-s3-websiteconfiguration-redirectrule-protocol): String
+  [ReplaceKeyPrefixWith](#cfn-s3-websiteconfiguration-redirectrule-replacekeyprefixwith): String
+  [ReplaceKeyWith](#cfn-s3-websiteconfiguration-redirectrule-replacekeywith): String
 ```
 
 ## Properties<a name="aws-properties-s3-websiteconfiguration-routingrules-redirectrule-properties"></a>

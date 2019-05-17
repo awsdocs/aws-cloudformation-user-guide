@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticloadbalancingv2-targetgroup-matcher-syntax.yaml"></a>
 
 ```
-﻿  [HttpCode](#cfn-elasticloadbalancingv2-targetgroup-matcher-httpcode) : String
+  [HttpCode](#cfn-elasticloadbalancingv2-targetgroup-matcher-httpcode): String
 ```
 
 ## Properties<a name="aws-properties-elasticloadbalancingv2-targetgroup-matcher-properties"></a>

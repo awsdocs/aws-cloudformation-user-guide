@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IoT1Click::Placement
-Properties : 
-﻿  [AssociatedDevices](#cfn-iot1click-placement-associateddevices) : Json
-﻿  [Attributes](#cfn-iot1click-placement-attributes) : Json
-﻿  [PlacementName](#cfn-iot1click-placement-placementname) : String
-﻿  [ProjectName](#cfn-iot1click-placement-projectname) : String
+Properties: 
+  [AssociatedDevices](#cfn-iot1click-placement-associateddevices): Json
+  [Attributes](#cfn-iot1click-placement-attributes): Json
+  [PlacementName](#cfn-iot1click-placement-placementname): String
+  [ProjectName](#cfn-iot1click-placement-projectname): String
 ```
 
 ## Properties<a name="aws-resource-iot1click-placement-properties"></a>

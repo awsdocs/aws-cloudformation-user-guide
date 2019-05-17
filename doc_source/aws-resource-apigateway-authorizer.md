@@ -30,18 +30,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::Authorizer
-Properties : 
-﻿  [AuthType](#cfn-apigateway-authorizer-authtype) : String
-﻿  [AuthorizerCredentials](#cfn-apigateway-authorizer-authorizercredentials) : String
-﻿  [AuthorizerResultTtlInSeconds](#cfn-apigateway-authorizer-authorizerresultttlinseconds) : Integer
-﻿  [AuthorizerUri](#cfn-apigateway-authorizer-authorizeruri) : String
-﻿  [IdentitySource](#cfn-apigateway-authorizer-identitysource) : String
-﻿  [IdentityValidationExpression](#cfn-apigateway-authorizer-identityvalidationexpression) : String
-﻿  [Name](#cfn-apigateway-authorizer-name) : String
-﻿  [ProviderARNs](#cfn-apigateway-authorizer-providerarns) : 
+Properties: 
+  [AuthType](#cfn-apigateway-authorizer-authtype): String
+  [AuthorizerCredentials](#cfn-apigateway-authorizer-authorizercredentials): String
+  [AuthorizerResultTtlInSeconds](#cfn-apigateway-authorizer-authorizerresultttlinseconds): Integer
+  [AuthorizerUri](#cfn-apigateway-authorizer-authorizeruri): String
+  [IdentitySource](#cfn-apigateway-authorizer-identitysource): String
+  [IdentityValidationExpression](#cfn-apigateway-authorizer-identityvalidationexpression): String
+  [Name](#cfn-apigateway-authorizer-name): String
+  [ProviderARNs](#cfn-apigateway-authorizer-providerarns): 
     - String
-﻿  [RestApiId](#cfn-apigateway-authorizer-restapiid) : String
-﻿  [Type](#cfn-apigateway-authorizer-type) : String
+  [RestApiId](#cfn-apigateway-authorizer-restapiid): String
+  [Type](#cfn-apigateway-authorizer-type): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-authorizer-properties"></a>

@@ -25,12 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::GuardDuty::ThreatIntelSet
-Properties : 
-﻿  [Activate](#cfn-guardduty-threatintelset-activate) : Boolean
-﻿  [DetectorId](#cfn-guardduty-threatintelset-detectorid) : String
-﻿  [Format](#cfn-guardduty-threatintelset-format) : String
-﻿  [Location](#cfn-guardduty-threatintelset-location) : String
-﻿  [Name](#cfn-guardduty-threatintelset-name) : String
+Properties: 
+  [Activate](#cfn-guardduty-threatintelset-activate): Boolean
+  [DetectorId](#cfn-guardduty-threatintelset-detectorid): String
+  [Format](#cfn-guardduty-threatintelset-format): String
+  [Location](#cfn-guardduty-threatintelset-location): String
+  [Name](#cfn-guardduty-threatintelset-name): String
 ```
 
 ## Properties<a name="aws-resource-guardduty-threatintelset-properties"></a>

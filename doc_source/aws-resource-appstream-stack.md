@@ -31,22 +31,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppStream::Stack
-Properties : 
-﻿  [ApplicationSettings](#cfn-appstream-stack-applicationsettings) : 
+Properties: 
+  [ApplicationSettings](#cfn-appstream-stack-applicationsettings): 
     [ApplicationSettings](aws-properties-appstream-stack-applicationsettings.md)
-﻿  [AttributesToDelete](#cfn-appstream-stack-attributestodelete) : 
+  [AttributesToDelete](#cfn-appstream-stack-attributestodelete): 
     - String
-﻿  [DeleteStorageConnectors](#cfn-appstream-stack-deletestorageconnectors) : Boolean
-﻿  [Description](#cfn-appstream-stack-description) : String
-﻿  [DisplayName](#cfn-appstream-stack-displayname) : String
-﻿  [FeedbackURL](#cfn-appstream-stack-feedbackurl) : String
-﻿  [Name](#cfn-appstream-stack-name) : String
-﻿  [RedirectURL](#cfn-appstream-stack-redirecturl) : String
-﻿  [StorageConnectors](#cfn-appstream-stack-storageconnectors) : 
+  [DeleteStorageConnectors](#cfn-appstream-stack-deletestorageconnectors): Boolean
+  [Description](#cfn-appstream-stack-description): String
+  [DisplayName](#cfn-appstream-stack-displayname): String
+  [FeedbackURL](#cfn-appstream-stack-feedbackurl): String
+  [Name](#cfn-appstream-stack-name): String
+  [RedirectURL](#cfn-appstream-stack-redirecturl): String
+  [StorageConnectors](#cfn-appstream-stack-storageconnectors): 
     - [StorageConnector](aws-properties-appstream-stack-storageconnector.md)
-﻿  [Tags](#cfn-appstream-stack-tags) : 
+  [Tags](#cfn-appstream-stack-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [UserSettings](#cfn-appstream-stack-usersettings) : 
+  [UserSettings](#cfn-appstream-stack-usersettings): 
     - [UserSetting](aws-properties-appstream-stack-usersetting.md)
 ```
 

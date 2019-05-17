@@ -23,13 +23,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dms-endpoint-s3settings-syntax.yaml"></a>
 
 ```
-﻿  [BucketFolder](#cfn-dms-endpoint-s3settings-bucketfolder) : String
-﻿  [BucketName](#cfn-dms-endpoint-s3settings-bucketname) : String
-﻿  [CompressionType](#cfn-dms-endpoint-s3settings-compressiontype) : String
-﻿  [CsvDelimiter](#cfn-dms-endpoint-s3settings-csvdelimiter) : String
-﻿  [CsvRowDelimiter](#cfn-dms-endpoint-s3settings-csvrowdelimiter) : String
-﻿  [ExternalTableDefinition](#cfn-dms-endpoint-s3settings-externaltabledefinition) : String
-﻿  [ServiceAccessRoleArn](#cfn-dms-endpoint-s3settings-serviceaccessrolearn) : String
+  [BucketFolder](#cfn-dms-endpoint-s3settings-bucketfolder): String
+  [BucketName](#cfn-dms-endpoint-s3settings-bucketname): String
+  [CompressionType](#cfn-dms-endpoint-s3settings-compressiontype): String
+  [CsvDelimiter](#cfn-dms-endpoint-s3settings-csvdelimiter): String
+  [CsvRowDelimiter](#cfn-dms-endpoint-s3settings-csvrowdelimiter): String
+  [ExternalTableDefinition](#cfn-dms-endpoint-s3settings-externaltabledefinition): String
+  [ServiceAccessRoleArn](#cfn-dms-endpoint-s3settings-serviceaccessrolearn): String
 ```
 
 ## Properties<a name="aws-properties-dms-endpoint-s3settings-properties"></a>

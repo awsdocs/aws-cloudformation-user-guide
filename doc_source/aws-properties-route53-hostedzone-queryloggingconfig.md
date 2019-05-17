@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-route53-hostedzone-queryloggingconfig-syntax.yaml"></a>
 
 ```
-﻿  [CloudWatchLogsLogGroupArn](#cfn-route53-hostedzone-queryloggingconfig-cloudwatchlogsloggrouparn) : String
+  [CloudWatchLogsLogGroupArn](#cfn-route53-hostedzone-queryloggingconfig-cloudwatchlogsloggrouparn): String
 ```
 
 ## Properties<a name="aws-properties-route53-hostedzone-queryloggingconfig-properties"></a>

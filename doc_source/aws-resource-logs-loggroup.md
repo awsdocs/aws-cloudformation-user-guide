@@ -31,9 +31,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Logs::LogGroup
-Properties : 
-﻿  [LogGroupName](#cfn-cwl-loggroup-loggroupname) : String
-﻿  [RetentionInDays](#cfn-cwl-loggroup-retentionindays) : Integer
+Properties: 
+  [LogGroupName](#cfn-cwl-loggroup-loggroupname): String
+  [RetentionInDays](#cfn-cwl-loggroup-retentionindays): Integer
 ```
 
 ## Properties<a name="aws-resource-logs-loggroup-properties"></a>

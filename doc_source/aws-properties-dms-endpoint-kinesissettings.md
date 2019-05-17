@@ -17,9 +17,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dms-endpoint-kinesissettings-syntax.yaml"></a>
 
 ```
-﻿  [MessageFormat](#cfn-dms-endpoint-kinesissettings-messageformat) : String
-﻿  [ServiceAccessRoleArn](#cfn-dms-endpoint-kinesissettings-serviceaccessrolearn) : String
-﻿  [StreamArn](#cfn-dms-endpoint-kinesissettings-streamarn) : String
+  [MessageFormat](#cfn-dms-endpoint-kinesissettings-messageformat): String
+  [ServiceAccessRoleArn](#cfn-dms-endpoint-kinesissettings-serviceaccessrolearn): String
+  [StreamArn](#cfn-dms-endpoint-kinesissettings-streamarn): String
 ```
 
 ## Properties<a name="aws-properties-dms-endpoint-kinesissettings-properties"></a>

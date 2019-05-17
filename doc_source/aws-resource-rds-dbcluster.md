@@ -51,37 +51,37 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RDS::DBCluster
-Properties : 
-﻿  [AvailabilityZones](#cfn-rds-dbcluster-availabilityzones) : 
+Properties: 
+  [AvailabilityZones](#cfn-rds-dbcluster-availabilityzones): 
     - String
-﻿  [BacktrackWindow](#cfn-rds-dbcluster-backtrackwindow) : Long
-﻿  [BackupRetentionPeriod](#cfn-rds-dbcluster-backuprententionperiod) : Integer
-﻿  [DBClusterIdentifier](#cfn-rds-dbcluster-dbclusteridentifier) : String
-﻿  [DBClusterParameterGroupName](#cfn-rds-dbcluster-dbclusterparametergroupname) : String
-﻿  [DBSubnetGroupName](#cfn-rds-dbcluster-dbsubnetgroupname) : String
-﻿  [DatabaseName](#cfn-rds-dbcluster-databasename) : String
-﻿  [DeletionProtection](#cfn-rds-dbcluster-deletionprotection) : Boolean
-﻿  [EnableCloudwatchLogsExports](#cfn-rds-dbcluster-enablecloudwatchlogsexports) : 
+  [BacktrackWindow](#cfn-rds-dbcluster-backtrackwindow): Long
+  [BackupRetentionPeriod](#cfn-rds-dbcluster-backuprententionperiod): Integer
+  [DBClusterIdentifier](#cfn-rds-dbcluster-dbclusteridentifier): String
+  [DBClusterParameterGroupName](#cfn-rds-dbcluster-dbclusterparametergroupname): String
+  [DBSubnetGroupName](#cfn-rds-dbcluster-dbsubnetgroupname): String
+  [DatabaseName](#cfn-rds-dbcluster-databasename): String
+  [DeletionProtection](#cfn-rds-dbcluster-deletionprotection): Boolean
+  [EnableCloudwatchLogsExports](#cfn-rds-dbcluster-enablecloudwatchlogsexports): 
     - String
-﻿  [EnableIAMDatabaseAuthentication](#cfn-rds-dbcluster-enableiamdatabaseauthentication) : Boolean
-﻿  [Engine](#cfn-rds-dbcluster-engine) : String
-﻿  [EngineMode](#cfn-rds-dbcluster-enginemode) : String
-﻿  [EngineVersion](#cfn-rds-dbcluster-engineversion) : String
-﻿  [KmsKeyId](#cfn-rds-dbcluster-kmskeyid) : String
-﻿  [MasterUserPassword](#cfn-rds-dbcluster-masteruserpassword) : String
-﻿  [MasterUsername](#cfn-rds-dbcluster-masterusername) : String
-﻿  [Port](#cfn-rds-dbcluster-port) : Integer
-﻿  [PreferredBackupWindow](#cfn-rds-dbcluster-preferredbackupwindow) : String
-﻿  [PreferredMaintenanceWindow](#cfn-rds-dbcluster-preferredmaintenancewindow) : String
-﻿  [ReplicationSourceIdentifier](#cfn-rds-dbcluster-replicationsourceidentifier) : String
-﻿  [ScalingConfiguration](#cfn-rds-dbcluster-scalingconfiguration) : 
+  [EnableIAMDatabaseAuthentication](#cfn-rds-dbcluster-enableiamdatabaseauthentication): Boolean
+  [Engine](#cfn-rds-dbcluster-engine): String
+  [EngineMode](#cfn-rds-dbcluster-enginemode): String
+  [EngineVersion](#cfn-rds-dbcluster-engineversion): String
+  [KmsKeyId](#cfn-rds-dbcluster-kmskeyid): String
+  [MasterUserPassword](#cfn-rds-dbcluster-masteruserpassword): String
+  [MasterUsername](#cfn-rds-dbcluster-masterusername): String
+  [Port](#cfn-rds-dbcluster-port): Integer
+  [PreferredBackupWindow](#cfn-rds-dbcluster-preferredbackupwindow): String
+  [PreferredMaintenanceWindow](#cfn-rds-dbcluster-preferredmaintenancewindow): String
+  [ReplicationSourceIdentifier](#cfn-rds-dbcluster-replicationsourceidentifier): String
+  [ScalingConfiguration](#cfn-rds-dbcluster-scalingconfiguration): 
     [ScalingConfiguration](aws-properties-rds-dbcluster-scalingconfiguration.md)
-﻿  [SnapshotIdentifier](#cfn-rds-dbcluster-snapshotidentifier) : String
-﻿  [SourceRegion](#cfn-rds-dbcluster-sourceregion) : String
-﻿  [StorageEncrypted](#cfn-rds-dbcluster-storageencrypted) : Boolean
-﻿  [Tags](#cfn-rds-dbcluster-tags) : 
+  [SnapshotIdentifier](#cfn-rds-dbcluster-snapshotidentifier): String
+  [SourceRegion](#cfn-rds-dbcluster-sourceregion): String
+  [StorageEncrypted](#cfn-rds-dbcluster-storageencrypted): Boolean
+  [Tags](#cfn-rds-dbcluster-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VpcSecurityGroupIds](#cfn-rds-dbcluster-vpcsecuritygroupids) : 
+  [VpcSecurityGroupIds](#cfn-rds-dbcluster-vpcsecuritygroupids): 
     - String
 ```
 

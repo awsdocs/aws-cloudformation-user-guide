@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPCGatewayAttachment
-Properties : 
-﻿  [InternetGatewayId](#cfn-ec2-vpcgatewayattachment-internetgatewayid) : String
-﻿  [VpcId](#cfn-ec2-vpcgatewayattachment-vpcid) : String
-﻿  [VpnGatewayId](#cfn-ec2-vpcgatewayattachment-vpngatewayid) : String
+Properties: 
+  [InternetGatewayId](#cfn-ec2-vpcgatewayattachment-internetgatewayid): String
+  [VpcId](#cfn-ec2-vpcgatewayattachment-vpcid): String
+  [VpnGatewayId](#cfn-ec2-vpcgatewayattachment-vpngatewayid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-vpc-gateway-attachment-properties"></a>

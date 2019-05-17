@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-s3logsconfig-syntax.yaml"></a>
 
 ```
-﻿  [EncryptionDisabled](#cfn-codebuild-project-s3logsconfig-encryptiondisabled) : Boolean
-﻿  [Location](#cfn-codebuild-project-s3logsconfig-location) : String
-﻿  [Status](#cfn-codebuild-project-s3logsconfig-status) : String
+  [EncryptionDisabled](#cfn-codebuild-project-s3logsconfig-encryptiondisabled): Boolean
+  [Location](#cfn-codebuild-project-s3logsconfig-location): String
+  [Status](#cfn-codebuild-project-s3logsconfig-status): String
 ```
 
 ## Properties<a name="aws-properties-codebuild-project-s3logsconfig-properties"></a>

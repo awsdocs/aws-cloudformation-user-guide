@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-table-skewedinfo-syntax.yaml"></a>
 
 ```
-﻿  [SkewedColumnNames](#cfn-glue-table-skewedinfo-skewedcolumnnames) : 
+  [SkewedColumnNames](#cfn-glue-table-skewedinfo-skewedcolumnnames): 
     - String
-﻿  [SkewedColumnValueLocationMaps](#cfn-glue-table-skewedinfo-skewedcolumnvaluelocationmaps) : Json
-﻿  [SkewedColumnValues](#cfn-glue-table-skewedinfo-skewedcolumnvalues) : 
+  [SkewedColumnValueLocationMaps](#cfn-glue-table-skewedinfo-skewedcolumnvaluelocationmaps): Json
+  [SkewedColumnValues](#cfn-glue-table-skewedinfo-skewedcolumnvalues): 
     - String
 ```
 

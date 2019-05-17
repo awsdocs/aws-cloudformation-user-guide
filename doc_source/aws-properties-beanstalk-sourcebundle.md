@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-beanstalk-sourcebundle-syntax.yaml"></a>
 
 ```
-﻿  [S3Bucket](#cfn-beanstalk-sourcebundle-s3bucket) : String
-﻿  [S3Key](#cfn-beanstalk-sourcebundle-s3key) : String
+  [S3Bucket](#cfn-beanstalk-sourcebundle-s3bucket): String
+  [S3Key](#cfn-beanstalk-sourcebundle-s3key): String
 ```
 
 ## Properties<a name="aws-properties-beanstalk-sourcebundle-properties"></a>

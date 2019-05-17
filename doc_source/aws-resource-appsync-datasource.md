@@ -30,22 +30,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppSync::DataSource
-Properties : 
-﻿  [ApiId](#cfn-appsync-datasource-apiid) : String
-﻿  [Description](#cfn-appsync-datasource-description) : String
-﻿  [DynamoDBConfig](#cfn-appsync-datasource-dynamodbconfig) : 
+Properties: 
+  [ApiId](#cfn-appsync-datasource-apiid): String
+  [Description](#cfn-appsync-datasource-description): String
+  [DynamoDBConfig](#cfn-appsync-datasource-dynamodbconfig): 
     [DynamoDBConfig](aws-properties-appsync-datasource-dynamodbconfig.md)
-﻿  [ElasticsearchConfig](#cfn-appsync-datasource-elasticsearchconfig) : 
+  [ElasticsearchConfig](#cfn-appsync-datasource-elasticsearchconfig): 
     [ElasticsearchConfig](aws-properties-appsync-datasource-elasticsearchconfig.md)
-﻿  [HttpConfig](#cfn-appsync-datasource-httpconfig) : 
+  [HttpConfig](#cfn-appsync-datasource-httpconfig): 
     [HttpConfig](aws-properties-appsync-datasource-httpconfig.md)
-﻿  [LambdaConfig](#cfn-appsync-datasource-lambdaconfig) : 
+  [LambdaConfig](#cfn-appsync-datasource-lambdaconfig): 
     [LambdaConfig](aws-properties-appsync-datasource-lambdaconfig.md)
-﻿  [Name](#cfn-appsync-datasource-name) : String
-﻿  [RelationalDatabaseConfig](#cfn-appsync-datasource-relationaldatabaseconfig) : 
+  [Name](#cfn-appsync-datasource-name): String
+  [RelationalDatabaseConfig](#cfn-appsync-datasource-relationaldatabaseconfig): 
     [RelationalDatabaseConfig](aws-properties-appsync-datasource-relationaldatabaseconfig.md)
-﻿  [ServiceRoleArn](#cfn-appsync-datasource-servicerolearn) : String
-﻿  [Type](#cfn-appsync-datasource-type) : String
+  [ServiceRoleArn](#cfn-appsync-datasource-servicerolearn): String
+  [Type](#cfn-appsync-datasource-type): String
 ```
 
 ## Properties<a name="aws-resource-appsync-datasource-properties"></a>

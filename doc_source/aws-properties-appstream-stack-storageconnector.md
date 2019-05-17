@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appstream-stack-storageconnector-syntax.yaml"></a>
 
 ```
-﻿  [ConnectorType](#cfn-appstream-stack-storageconnector-connectortype) : String
-﻿  [Domains](#cfn-appstream-stack-storageconnector-domains) : 
+  [ConnectorType](#cfn-appstream-stack-storageconnector-connectortype): String
+  [Domains](#cfn-appstream-stack-storageconnector-domains): 
     - String
-﻿  [ResourceIdentifier](#cfn-appstream-stack-storageconnector-resourceidentifier) : String
+  [ResourceIdentifier](#cfn-appstream-stack-storageconnector-resourceidentifier): String
 ```
 
 ## Properties<a name="aws-properties-appstream-stack-storageconnector-properties"></a>

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-metricdimension-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-elasticmapreduce-cluster-metricdimension-key) : String
-﻿  [Value](#cfn-elasticmapreduce-cluster-metricdimension-value) : String
+  [Key](#cfn-elasticmapreduce-cluster-metricdimension-key): String
+  [Value](#cfn-elasticmapreduce-cluster-metricdimension-value): String
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-metricdimension-properties"></a>

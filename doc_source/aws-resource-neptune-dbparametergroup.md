@@ -33,12 +33,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Neptune::DBParameterGroup
-Properties : 
-﻿  [Description](#cfn-neptune-dbparametergroup-description) : String
-﻿  [Family](#cfn-neptune-dbparametergroup-family) : String
-﻿  [Name](#cfn-neptune-dbparametergroup-name) : String
-﻿  [Parameters](#cfn-neptune-dbparametergroup-parameters) : Json
-﻿  [Tags](#cfn-neptune-dbparametergroup-tags) : 
+Properties: 
+  [Description](#cfn-neptune-dbparametergroup-description): String
+  [Family](#cfn-neptune-dbparametergroup-family): String
+  [Name](#cfn-neptune-dbparametergroup-name): String
+  [Parameters](#cfn-neptune-dbparametergroup-parameters): Json
+  [Tags](#cfn-neptune-dbparametergroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

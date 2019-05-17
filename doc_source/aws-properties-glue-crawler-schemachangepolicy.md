@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-crawler-schemachangepolicy-syntax.yaml"></a>
 
 ```
-﻿  [DeleteBehavior](#cfn-glue-crawler-schemachangepolicy-deletebehavior) : String
-﻿  [UpdateBehavior](#cfn-glue-crawler-schemachangepolicy-updatebehavior) : String
+  [DeleteBehavior](#cfn-glue-crawler-schemachangepolicy-deletebehavior): String
+  [UpdateBehavior](#cfn-glue-crawler-schemachangepolicy-updatebehavior): String
 ```
 
 ## Properties<a name="aws-properties-glue-crawler-schemachangepolicy-properties"></a>

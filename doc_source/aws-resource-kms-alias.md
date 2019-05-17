@@ -30,9 +30,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::KMS::Alias
-Properties : 
-﻿  [AliasName](#cfn-kms-alias-aliasname) : String
-﻿  [TargetKeyId](#cfn-kms-alias-targetkeyid) : String
+Properties: 
+  [AliasName](#cfn-kms-alias-aliasname): String
+  [TargetKeyId](#cfn-kms-alias-targetkeyid): String
 ```
 
 ## Properties<a name="aws-resource-kms-alias-properties"></a>

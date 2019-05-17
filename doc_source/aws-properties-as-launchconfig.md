@@ -44,28 +44,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AutoScaling::LaunchConfiguration
-Properties : 
-﻿  [AssociatePublicIpAddress](#cf-as-launchconfig-associatepubip) : Boolean
-﻿  [BlockDeviceMappings](#cfn-as-launchconfig-blockdevicemappings) : 
+Properties: 
+  [AssociatePublicIpAddress](#cf-as-launchconfig-associatepubip): Boolean
+  [BlockDeviceMappings](#cfn-as-launchconfig-blockdevicemappings): 
     - [BlockDeviceMapping](aws-properties-as-launchconfig-blockdev-mapping.md)
-﻿  [ClassicLinkVPCId](#cfn-as-launchconfig-classiclinkvpcid) : String
-﻿  [ClassicLinkVPCSecurityGroups](#cfn-as-launchconfig-classiclinkvpcsecuritygroups) : 
+  [ClassicLinkVPCId](#cfn-as-launchconfig-classiclinkvpcid): String
+  [ClassicLinkVPCSecurityGroups](#cfn-as-launchconfig-classiclinkvpcsecuritygroups): 
     - String
-﻿  [EbsOptimized](#cfn-as-launchconfig-ebsoptimized) : Boolean
-﻿  [IamInstanceProfile](#cfn-as-launchconfig-iaminstanceprofile) : String
-﻿  [ImageId](#cfn-as-launchconfig-imageid) : String
-﻿  [InstanceId](#cfn-as-launchconfig-instanceid) : String
-﻿  [InstanceMonitoring](#cfn-as-launchconfig-instancemonitoring) : Boolean
-﻿  [InstanceType](#cfn-as-launchconfig-instancetype) : String
-﻿  [KernelId](#cfn-as-launchconfig-kernelid) : String
-﻿  [KeyName](#cfn-as-launchconfig-keyname) : String
-﻿  [LaunchConfigurationName](#cfn-autoscaling-launchconfig-launchconfigurationname) : String
-﻿  [PlacementTenancy](#cfn-as-launchconfig-placementtenancy) : String
-﻿  [RamDiskId](#cfn-as-launchconfig-ramdiskid) : String
-﻿  [SecurityGroups](#cfn-as-launchconfig-securitygroups) : 
+  [EbsOptimized](#cfn-as-launchconfig-ebsoptimized): Boolean
+  [IamInstanceProfile](#cfn-as-launchconfig-iaminstanceprofile): String
+  [ImageId](#cfn-as-launchconfig-imageid): String
+  [InstanceId](#cfn-as-launchconfig-instanceid): String
+  [InstanceMonitoring](#cfn-as-launchconfig-instancemonitoring): Boolean
+  [InstanceType](#cfn-as-launchconfig-instancetype): String
+  [KernelId](#cfn-as-launchconfig-kernelid): String
+  [KeyName](#cfn-as-launchconfig-keyname): String
+  [LaunchConfigurationName](#cfn-autoscaling-launchconfig-launchconfigurationname): String
+  [PlacementTenancy](#cfn-as-launchconfig-placementtenancy): String
+  [RamDiskId](#cfn-as-launchconfig-ramdiskid): String
+  [SecurityGroups](#cfn-as-launchconfig-securitygroups): 
     - String
-﻿  [SpotPrice](#cfn-as-launchconfig-spotprice) : String
-﻿  [UserData](#cfn-as-launchconfig-userdata) : String
+  [SpotPrice](#cfn-as-launchconfig-spotprice): String
+  [UserData](#cfn-as-launchconfig-userdata): String
 ```
 
 ## Properties<a name="aws-properties-as-launchconfig-properties"></a>
@@ -74,7 +74,7 @@ Properties :
 Used for groups that launch instances into a virtual private cloud \(VPC\)\. Specifies whether to assign a public IP address to each instance\. If you specify `true`, each instance in the Auto Scaling group receives a unique public IP address\.   
 For more information, see [Launching Auto Scaling Instances in a VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
 Default: If the instance is launched into a default subnet, the default is to assign a public IP address\. If the instance is launched into a nondefault subnet, the default is not to assign a public IP address\.   
-If this resource has a public IP address and is also in a VPC that is defined in the same template, you must use the [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) to declare a dependency on the VPC\-gateway attachment\.
+If this resource has a public IP address and is also in a VPC that is defined in the same template, you must use the [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) to declare a dependency on the [VPC\-gateway attachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html)\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Route53::RecordSetGroup
-Properties : 
-﻿  [Comment](#cfn-route53-recordsetgroup-comment) : String
-﻿  [HostedZoneId](#cfn-route53-recordsetgroup-hostedzoneid) : String
-﻿  [HostedZoneName](#cfn-route53-recordsetgroup-hostedzonename) : String
-﻿  [RecordSets](#cfn-route53-recordsetgroup-recordsets) : 
+Properties: 
+  [Comment](#cfn-route53-recordsetgroup-comment): String
+  [HostedZoneId](#cfn-route53-recordsetgroup-hostedzoneid): String
+  [HostedZoneName](#cfn-route53-recordsetgroup-hostedzonename): String
+  [RecordSets](#cfn-route53-recordsetgroup-recordsets): 
     - [RecordSet](aws-properties-route53-recordset-1.md)
 ```
 

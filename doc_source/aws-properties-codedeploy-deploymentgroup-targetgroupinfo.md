@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-targetgroupinfo-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-codedeploy-deploymentgroup-targetgroupinfo-name) : String
+  [Name](#cfn-codedeploy-deploymentgroup-targetgroupinfo-name): String
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-targetgroupinfo-properties"></a>

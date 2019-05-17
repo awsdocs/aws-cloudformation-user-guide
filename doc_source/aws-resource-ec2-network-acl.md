@@ -22,10 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::NetworkAcl
-Properties : 
-﻿  [Tags](#cfn-ec2-networkacl-tags) : 
+Properties: 
+  [Tags](#cfn-ec2-networkacl-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VpcId](#cfn-ec2-networkacl-vpcid) : String
+  [VpcId](#cfn-ec2-networkacl-vpcid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-network-acl-properties"></a>
@@ -75,7 +75,7 @@ The following example creates a Network ACL in a VPC\.
       Type: AWS::EC2::NetworkAcl
       Properties:
          VpcId:
-            Ref: myVPC
+           Ref: myVPC
          Tags:
          - Key: foo
            Value: bar

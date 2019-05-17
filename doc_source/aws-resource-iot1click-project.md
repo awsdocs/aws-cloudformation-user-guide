@@ -23,11 +23,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IoT1Click::Project
-Properties : 
-﻿  [Description](#cfn-iot1click-project-description) : String
-﻿  [PlacementTemplate](#cfn-iot1click-project-placementtemplate) : 
+Properties: 
+  [Description](#cfn-iot1click-project-description): String
+  [PlacementTemplate](#cfn-iot1click-project-placementtemplate): 
     [PlacementTemplate](aws-properties-iot1click-project-placementtemplate.md)
-﻿  [ProjectName](#cfn-iot1click-project-projectname) : String
+  [ProjectName](#cfn-iot1click-project-projectname): String
 ```
 
 ## Properties<a name="aws-resource-iot1click-project-properties"></a>

@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Glue::Database
-Properties : 
-﻿  [CatalogId](#cfn-glue-database-catalogid) : String
-﻿  [DatabaseInput](#cfn-glue-database-databaseinput) : 
+Properties: 
+  [CatalogId](#cfn-glue-database-catalogid): String
+  [DatabaseInput](#cfn-glue-database-databaseinput): 
     [DatabaseInput](aws-properties-glue-database-databaseinput.md)
 ```
 

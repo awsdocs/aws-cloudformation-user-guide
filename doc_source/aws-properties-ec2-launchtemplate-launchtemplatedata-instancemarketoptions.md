@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-syntax.yaml"></a>
 
 ```
-﻿  [MarketType](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-markettype) : String
-﻿  [SpotOptions](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions) : 
+  [MarketType](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-markettype): String
+  [SpotOptions](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions): 
     [SpotOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions.md)
 ```
 

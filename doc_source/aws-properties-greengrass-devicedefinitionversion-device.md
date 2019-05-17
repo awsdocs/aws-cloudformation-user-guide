@@ -22,10 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-devicedefinitionversion-device-syntax.yaml"></a>
 
 ```
-﻿  [CertificateArn](#cfn-greengrass-devicedefinitionversion-device-certificatearn) : String
-﻿  [Id](#cfn-greengrass-devicedefinitionversion-device-id) : String
-﻿  [SyncShadow](#cfn-greengrass-devicedefinitionversion-device-syncshadow) : Boolean
-﻿  [ThingArn](#cfn-greengrass-devicedefinitionversion-device-thingarn) : String
+  [CertificateArn](#cfn-greengrass-devicedefinitionversion-device-certificatearn): String
+  [Id](#cfn-greengrass-devicedefinitionversion-device-id): String
+  [SyncShadow](#cfn-greengrass-devicedefinitionversion-device-syncshadow): Boolean
+  [ThingArn](#cfn-greengrass-devicedefinitionversion-device-thingarn): String
 ```
 
 ## Properties<a name="aws-properties-greengrass-devicedefinitionversion-device-properties"></a>

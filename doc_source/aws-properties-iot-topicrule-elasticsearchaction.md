@@ -21,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-elasticsearchaction-syntax.yaml"></a>
 
 ```
-﻿  [Endpoint](#cfn-iot-topicrule-elasticsearchaction-endpoint) : String
-﻿  [Id](#cfn-iot-topicrule-elasticsearchaction-id) : String
-﻿  [Index](#cfn-iot-topicrule-elasticsearchaction-index) : String
-﻿  [RoleArn](#cfn-iot-topicrule-elasticsearchaction-rolearn) : String
-﻿  [Type](#cfn-iot-topicrule-elasticsearchaction-type) : String
+  [Endpoint](#cfn-iot-topicrule-elasticsearchaction-endpoint): String
+  [Id](#cfn-iot-topicrule-elasticsearchaction-id): String
+  [Index](#cfn-iot-topicrule-elasticsearchaction-index): String
+  [RoleArn](#cfn-iot-topicrule-elasticsearchaction-rolearn): String
+  [Type](#cfn-iot-topicrule-elasticsearchaction-type): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-elasticsearchaction-properties"></a>

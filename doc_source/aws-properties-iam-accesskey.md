@@ -30,10 +30,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IAM::AccessKey
-Properties : 
-﻿  [Serial](#cfn-iam-accesskey-serial) : Integer
-﻿  [Status](#cfn-iam-accesskey-status) : String
-﻿  [UserName](#cfn-iam-accesskey-username) : String
+Properties: 
+  [Serial](#cfn-iam-accesskey-serial): Integer
+  [Status](#cfn-iam-accesskey-status): String
+  [UserName](#cfn-iam-accesskey-username): String
 ```
 
 ## Properties<a name="aws-properties-iam-accesskey-properties"></a>

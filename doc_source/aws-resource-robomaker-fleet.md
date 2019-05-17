@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RoboMaker::Fleet
-Properties : 
-﻿  [Name](#cfn-robomaker-fleet-name) : String
-﻿  [Tags](#cfn-robomaker-fleet-tags) : Json
+Properties: 
+  [Name](#cfn-robomaker-fleet-name): String
+  [Tags](#cfn-robomaker-fleet-tags): Json
 ```
 
 ## Properties<a name="aws-resource-robomaker-fleet-properties"></a>

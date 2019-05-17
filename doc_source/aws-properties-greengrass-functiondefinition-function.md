@@ -21,10 +21,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-functiondefinition-function-syntax.yaml"></a>
 
 ```
-﻿  [FunctionArn](#cfn-greengrass-functiondefinition-function-functionarn) : String
-﻿  [FunctionConfiguration](#cfn-greengrass-functiondefinition-function-functionconfiguration) : 
+  [FunctionArn](#cfn-greengrass-functiondefinition-function-functionarn): String
+  [FunctionConfiguration](#cfn-greengrass-functiondefinition-function-functionconfiguration): 
     [FunctionConfiguration](aws-properties-greengrass-functiondefinition-functionconfiguration.md)
-﻿  [Id](#cfn-greengrass-functiondefinition-function-id) : String
+  [Id](#cfn-greengrass-functiondefinition-function-id): String
 ```
 
 ## Properties<a name="aws-properties-greengrass-functiondefinition-function-properties"></a>

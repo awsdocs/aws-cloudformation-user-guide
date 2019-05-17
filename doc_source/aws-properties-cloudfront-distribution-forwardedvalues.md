@@ -20,12 +20,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudfront-distribution-forwardedvalues-syntax.yaml"></a>
 
 ```
-﻿  [Cookies](#cfn-cloudfront-distribution-forwardedvalues-cookies) : 
+  [Cookies](#cfn-cloudfront-distribution-forwardedvalues-cookies): 
     [Cookies](aws-properties-cloudfront-distribution-cookies.md)
-﻿  [Headers](#cfn-cloudfront-distribution-forwardedvalues-headers) : 
+  [Headers](#cfn-cloudfront-distribution-forwardedvalues-headers): 
     - String
-﻿  [QueryString](#cfn-cloudfront-distribution-forwardedvalues-querystring) : Boolean
-﻿  [QueryStringCacheKeys](#cfn-cloudfront-distribution-forwardedvalues-querystringcachekeys) : 
+  [QueryString](#cfn-cloudfront-distribution-forwardedvalues-querystring): Boolean
+  [QueryStringCacheKeys](#cfn-cloudfront-distribution-forwardedvalues-querystringcachekeys): 
     - String
 ```
 

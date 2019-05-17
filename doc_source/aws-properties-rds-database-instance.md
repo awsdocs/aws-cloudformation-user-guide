@@ -95,60 +95,60 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RDS::DBInstance
-Properties : 
-﻿  [AllocatedStorage](#cfn-rds-dbinstance-allocatedstorage) : String
-﻿  [AllowMajorVersionUpgrade](#cfn-rds-dbinstance-allowmajorversionupgrade) : Boolean
-﻿  [AutoMinorVersionUpgrade](#cfn-rds-dbinstance-autominorversionupgrade) : Boolean
-﻿  [AvailabilityZone](#cfn-rds-dbinstance-availabilityzone) : String
-﻿  [BackupRetentionPeriod](#cfn-rds-dbinstance-backupretentionperiod) : String
-﻿  [CharacterSetName](#cfn-rds-dbinstance-charactersetname) : String
-﻿  [CopyTagsToSnapshot](#cfn-rds-dbinstance-copytagstosnapshot) : Boolean
-﻿  [DBClusterIdentifier](#cfn-rds-dbinstance-dbclusteridentifier) : String
-﻿  [DBInstanceClass](#cfn-rds-dbinstance-dbinstanceclass) : String
-﻿  [DBInstanceIdentifier](#cfn-rds-dbinstance-dbinstanceidentifier) : String
-﻿  [DBName](#cfn-rds-dbinstance-dbname) : String
-﻿  [DBParameterGroupName](#cfn-rds-dbinstance-dbparametergroupname) : String
-﻿  [DBSecurityGroups](#cfn-rds-dbinstance-dbsecuritygroups) : 
+Properties: 
+  [AllocatedStorage](#cfn-rds-dbinstance-allocatedstorage): String
+  [AllowMajorVersionUpgrade](#cfn-rds-dbinstance-allowmajorversionupgrade): Boolean
+  [AutoMinorVersionUpgrade](#cfn-rds-dbinstance-autominorversionupgrade): Boolean
+  [AvailabilityZone](#cfn-rds-dbinstance-availabilityzone): String
+  [BackupRetentionPeriod](#cfn-rds-dbinstance-backupretentionperiod): String
+  [CharacterSetName](#cfn-rds-dbinstance-charactersetname): String
+  [CopyTagsToSnapshot](#cfn-rds-dbinstance-copytagstosnapshot): Boolean
+  [DBClusterIdentifier](#cfn-rds-dbinstance-dbclusteridentifier): String
+  [DBInstanceClass](#cfn-rds-dbinstance-dbinstanceclass): String
+  [DBInstanceIdentifier](#cfn-rds-dbinstance-dbinstanceidentifier): String
+  [DBName](#cfn-rds-dbinstance-dbname): String
+  [DBParameterGroupName](#cfn-rds-dbinstance-dbparametergroupname): String
+  [DBSecurityGroups](#cfn-rds-dbinstance-dbsecuritygroups): 
     - String
-﻿  [DBSnapshotIdentifier](#cfn-rds-dbinstance-dbsnapshotidentifier) : String
-﻿  [DBSubnetGroupName](#cfn-rds-dbinstance-dbsubnetgroupname) : String
-﻿  [DeleteAutomatedBackups](#cfn-rds-dbinstance-deleteautomatedbackups) : Boolean
-﻿  [DeletionProtection](#cfn-rds-dbinstance-deletionprotection) : Boolean
-﻿  [Domain](#cfn-rds-dbinstance-domain) : String
-﻿  [DomainIAMRoleName](#cfn-rds-dbinstance-domainiamrolename) : String
-﻿  [EnableCloudwatchLogsExports](#cfn-rds-dbinstance-enablecloudwatchlogsexports) : 
+  [DBSnapshotIdentifier](#cfn-rds-dbinstance-dbsnapshotidentifier): String
+  [DBSubnetGroupName](#cfn-rds-dbinstance-dbsubnetgroupname): String
+  [DeleteAutomatedBackups](#cfn-rds-dbinstance-deleteautomatedbackups): Boolean
+  [DeletionProtection](#cfn-rds-dbinstance-deletionprotection): Boolean
+  [Domain](#cfn-rds-dbinstance-domain): String
+  [DomainIAMRoleName](#cfn-rds-dbinstance-domainiamrolename): String
+  [EnableCloudwatchLogsExports](#cfn-rds-dbinstance-enablecloudwatchlogsexports): 
     - String
-﻿  [EnableIAMDatabaseAuthentication](#cfn-rds-dbinstance-enableiamdatabaseauthentication) : Boolean
-﻿  [EnablePerformanceInsights](#cfn-rds-dbinstance-enableperformanceinsights) : Boolean
-﻿  [Engine](#cfn-rds-dbinstance-engine) : String
-﻿  [EngineVersion](#cfn-rds-dbinstance-engineversion) : String
-﻿  [Iops](#cfn-rds-dbinstance-iops) : Integer
-﻿  [KmsKeyId](#cfn-rds-dbinstance-kmskeyid) : String
-﻿  [LicenseModel](#cfn-rds-dbinstance-licensemodel) : String
-﻿  [MasterUserPassword](#cfn-rds-dbinstance-masteruserpassword) : String
-﻿  [MasterUsername](#cfn-rds-dbinstance-masterusername) : String
-﻿  [MonitoringInterval](#cfn-rds-dbinstance-monitoringinterval) : Integer
-﻿  [MonitoringRoleArn](#cfn-rds-dbinstance-monitoringrolearn) : String
-﻿  [MultiAZ](#cfn-rds-dbinstance-multiaz) : Boolean
-﻿  [OptionGroupName](#cfn-rds-dbinstance-optiongroupname) : String
-﻿  [PerformanceInsightsKMSKeyId](#cfn-rds-dbinstance-performanceinsightskmskeyid) : String
-﻿  [PerformanceInsightsRetentionPeriod](#cfn-rds-dbinstance-performanceinsightsretentionperiod) : Integer
-﻿  [Port](#cfn-rds-dbinstance-port) : String
-﻿  [PreferredBackupWindow](#cfn-rds-dbinstance-preferredbackupwindow) : String
-﻿  [PreferredMaintenanceWindow](#cfn-rds-dbinstance-preferredmaintenancewindow) : String
-﻿  [ProcessorFeatures](#cfn-rds-dbinstance-processorfeatures) : 
+  [EnableIAMDatabaseAuthentication](#cfn-rds-dbinstance-enableiamdatabaseauthentication): Boolean
+  [EnablePerformanceInsights](#cfn-rds-dbinstance-enableperformanceinsights): Boolean
+  [Engine](#cfn-rds-dbinstance-engine): String
+  [EngineVersion](#cfn-rds-dbinstance-engineversion): String
+  [Iops](#cfn-rds-dbinstance-iops): Integer
+  [KmsKeyId](#cfn-rds-dbinstance-kmskeyid): String
+  [LicenseModel](#cfn-rds-dbinstance-licensemodel): String
+  [MasterUserPassword](#cfn-rds-dbinstance-masteruserpassword): String
+  [MasterUsername](#cfn-rds-dbinstance-masterusername): String
+  [MonitoringInterval](#cfn-rds-dbinstance-monitoringinterval): Integer
+  [MonitoringRoleArn](#cfn-rds-dbinstance-monitoringrolearn): String
+  [MultiAZ](#cfn-rds-dbinstance-multiaz): Boolean
+  [OptionGroupName](#cfn-rds-dbinstance-optiongroupname): String
+  [PerformanceInsightsKMSKeyId](#cfn-rds-dbinstance-performanceinsightskmskeyid): String
+  [PerformanceInsightsRetentionPeriod](#cfn-rds-dbinstance-performanceinsightsretentionperiod): Integer
+  [Port](#cfn-rds-dbinstance-port): String
+  [PreferredBackupWindow](#cfn-rds-dbinstance-preferredbackupwindow): String
+  [PreferredMaintenanceWindow](#cfn-rds-dbinstance-preferredmaintenancewindow): String
+  [ProcessorFeatures](#cfn-rds-dbinstance-processorfeatures): 
     - [ProcessorFeature](aws-properties-rds-dbinstance-processorfeature.md)
-﻿  [PromotionTier](#cfn-rds-dbinstance-promotiontier) : Integer
-﻿  [PubliclyAccessible](#cfn-rds-dbinstance-publiclyaccessible) : Boolean
-﻿  [SourceDBInstanceIdentifier](#cfn-rds-dbinstance-sourcedbinstanceidentifier) : String
-﻿  [SourceRegion](#cfn-rds-dbinstance-sourceregion) : String
-﻿  [StorageEncrypted](#cfn-rds-dbinstance-storageencrypted) : Boolean
-﻿  [StorageType](#cfn-rds-dbinstance-storagetype) : String
-﻿  [Tags](#cfn-rds-dbinstance-tags) : 
+  [PromotionTier](#cfn-rds-dbinstance-promotiontier): Integer
+  [PubliclyAccessible](#cfn-rds-dbinstance-publiclyaccessible): Boolean
+  [SourceDBInstanceIdentifier](#cfn-rds-dbinstance-sourcedbinstanceidentifier): String
+  [SourceRegion](#cfn-rds-dbinstance-sourceregion): String
+  [StorageEncrypted](#cfn-rds-dbinstance-storageencrypted): Boolean
+  [StorageType](#cfn-rds-dbinstance-storagetype): String
+  [Tags](#cfn-rds-dbinstance-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [Timezone](#cfn-rds-dbinstance-timezone) : String
-﻿  [UseDefaultProcessorFeatures](#cfn-rds-dbinstance-usedefaultprocessorfeatures) : Boolean
-﻿  [VPCSecurityGroups](#cfn-rds-dbinstance-vpcsecuritygroups) : 
+  [Timezone](#cfn-rds-dbinstance-timezone): String
+  [UseDefaultProcessorFeatures](#cfn-rds-dbinstance-usedefaultprocessorfeatures): Boolean
+  [VPCSecurityGroups](#cfn-rds-dbinstance-vpcsecuritygroups): 
     - String
 ```
 

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-taskdefinition-containerdefinitions-logconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [LogDriver](#cfn-ecs-taskdefinition-containerdefinition-logconfiguration-logdriver) : String
-﻿  [Options](#cfn-ecs-taskdefinition-containerdefinition-logconfiguration-options) : 
+  [LogDriver](#cfn-ecs-taskdefinition-containerdefinition-logconfiguration-logdriver): String
+  [Options](#cfn-ecs-taskdefinition-containerdefinition-logconfiguration-options): 
     Key : Value
 ```
 

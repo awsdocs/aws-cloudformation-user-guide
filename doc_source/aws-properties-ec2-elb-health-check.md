@@ -21,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-elb-health-check-syntax.yaml"></a>
 
 ```
-﻿  [HealthyThreshold](#cfn-elb-healthcheck-healthythreshold) : String
-﻿  [Interval](#cfn-elb-healthcheck-interval) : String
-﻿  [Target](#cfn-elb-healthcheck-target) : String
-﻿  [Timeout](#cfn-elb-healthcheck-timeout) : String
-﻿  [UnhealthyThreshold](#cfn-elb-healthcheck-unhealthythreshold) : String
+  [HealthyThreshold](#cfn-elb-healthcheck-healthythreshold): String
+  [Interval](#cfn-elb-healthcheck-interval): String
+  [Target](#cfn-elb-healthcheck-target): String
+  [Timeout](#cfn-elb-healthcheck-timeout): String
+  [UnhealthyThreshold](#cfn-elb-healthcheck-unhealthythreshold): String
 ```
 
 ## Properties<a name="aws-properties-ec2-elb-health-check-properties"></a>

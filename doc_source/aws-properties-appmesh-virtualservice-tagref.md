@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-virtualservice-tagref-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-appmesh-virtualservice-tagref-key) : String
-﻿  [Value](#cfn-appmesh-virtualservice-tagref-value) : String
+  [Key](#cfn-appmesh-virtualservice-tagref-key): String
+  [Value](#cfn-appmesh-virtualservice-tagref-value): String
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualservice-tagref-properties"></a>

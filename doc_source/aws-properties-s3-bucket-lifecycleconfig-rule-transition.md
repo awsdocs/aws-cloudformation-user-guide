@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-lifecycleconfig-rule-transition-syntax.yaml"></a>
 
 ```
-﻿  [StorageClass](#cfn-s3-bucket-lifecycleconfig-rule-transition-storageclass) : String
-﻿  [TransitionDate](#cfn-s3-bucket-lifecycleconfig-rule-transition-transitiondate) : Timestamp
-﻿  [TransitionInDays](#cfn-s3-bucket-lifecycleconfig-rule-transition-transitionindays) : Integer
+  [StorageClass](#cfn-s3-bucket-lifecycleconfig-rule-transition-storageclass): String
+  [TransitionDate](#cfn-s3-bucket-lifecycleconfig-rule-transition-transitiondate): Timestamp
+  [TransitionInDays](#cfn-s3-bucket-lifecycleconfig-rule-transition-transitionindays): Integer
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-lifecycleconfig-rule-transition-properties"></a>

@@ -25,11 +25,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Redshift::ClusterSubnetGroup
-Properties : 
-﻿  [Description](#cfn-redshift-clustersubnetgroup-description) : String
-﻿  [SubnetIds](#cfn-redshift-clustersubnetgroup-subnetids) : 
+Properties: 
+  [Description](#cfn-redshift-clustersubnetgroup-description): String
+  [SubnetIds](#cfn-redshift-clustersubnetgroup-subnetids): 
     - String
-﻿  [Tags](#cfn-redshift-clustersubnetgroup-tags) : 
+  [Tags](#cfn-redshift-clustersubnetgroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

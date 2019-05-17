@@ -26,11 +26,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SecretsManager::RotationSchedule
-Properties : 
-﻿  [RotationLambdaARN](#cfn-secretsmanager-rotationschedule-rotationlambdaarn) : String
-﻿  [RotationRules](#cfn-secretsmanager-rotationschedule-rotationrules) : 
+Properties: 
+  [RotationLambdaARN](#cfn-secretsmanager-rotationschedule-rotationlambdaarn): String
+  [RotationRules](#cfn-secretsmanager-rotationschedule-rotationrules): 
     [RotationRules](aws-properties-secretsmanager-rotationschedule-rotationrules.md)
-﻿  [SecretId](#cfn-secretsmanager-rotationschedule-secretid) : String
+  [SecretId](#cfn-secretsmanager-rotationschedule-secretid): String
 ```
 
 ## Properties<a name="aws-resource-secretsmanager-rotationschedule-properties"></a>

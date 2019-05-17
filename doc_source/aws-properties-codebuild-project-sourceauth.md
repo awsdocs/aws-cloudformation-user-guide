@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-sourceauth-syntax.yaml"></a>
 
 ```
-﻿  [Resource](#cfn-codebuild-project-sourceauth-resource) : String
-﻿  [Type](#cfn-codebuild-project-sourceauth-type) : String
+  [Resource](#cfn-codebuild-project-sourceauth-resource): String
+  [Type](#cfn-codebuild-project-sourceauth-type): String
 ```
 
 ## Properties<a name="aws-properties-codebuild-project-sourceauth-properties"></a>

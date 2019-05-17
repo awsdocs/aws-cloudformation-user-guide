@@ -35,23 +35,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::RestApi
-Properties : 
-﻿  [ApiKeySourceType](#cfn-apigateway-restapi-apikeysourcetype) : String
-﻿  [BinaryMediaTypes](#cfn-apigateway-restapi-binarymediatypes) : 
+Properties: 
+  [ApiKeySourceType](#cfn-apigateway-restapi-apikeysourcetype): String
+  [BinaryMediaTypes](#cfn-apigateway-restapi-binarymediatypes): 
     - String
-﻿  [Body](#cfn-apigateway-restapi-body) : Json
-﻿  [BodyS3Location](#cfn-apigateway-restapi-bodys3location) : 
+  [Body](#cfn-apigateway-restapi-body): Json
+  [BodyS3Location](#cfn-apigateway-restapi-bodys3location): 
     [S3Location](aws-properties-apigateway-restapi-s3location.md)
-﻿  [CloneFrom](#cfn-apigateway-restapi-clonefrom) : String
-﻿  [Description](#cfn-apigateway-restapi-description) : String
-﻿  [EndpointConfiguration](#cfn-apigateway-restapi-endpointconfiguration) : 
+  [CloneFrom](#cfn-apigateway-restapi-clonefrom): String
+  [Description](#cfn-apigateway-restapi-description): String
+  [EndpointConfiguration](#cfn-apigateway-restapi-endpointconfiguration): 
     [EndpointConfiguration](aws-properties-apigateway-restapi-endpointconfiguration.md)
-﻿  [FailOnWarnings](#cfn-apigateway-restapi-failonwarnings) : Boolean
-﻿  [MinimumCompressionSize](#cfn-apigateway-restapi-minimumcompressionsize) : Integer
-﻿  [Name](#cfn-apigateway-restapi-name) : String
-﻿  [Parameters](#cfn-apigateway-restapi-parameters) : 
+  [FailOnWarnings](#cfn-apigateway-restapi-failonwarnings): Boolean
+  [MinimumCompressionSize](#cfn-apigateway-restapi-minimumcompressionsize): Integer
+  [Name](#cfn-apigateway-restapi-name): String
+  [Parameters](#cfn-apigateway-restapi-parameters): 
     Key : Value
-﻿  [Policy](#cfn-apigateway-restapi-policy) : Json
+  [Policy](#cfn-apigateway-restapi-policy): Json
 ```
 
 ## Properties<a name="aws-resource-apigateway-restapi-properties"></a>

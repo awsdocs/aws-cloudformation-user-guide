@@ -32,18 +32,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPCEndpoint
-Properties : 
-﻿  [PolicyDocument](#cfn-ec2-vpcendpoint-policydocument) : Json
-﻿  [PrivateDnsEnabled](#cfn-ec2-vpcendpoint-privatednsenabled) : Boolean
-﻿  [RouteTableIds](#cfn-ec2-vpcendpoint-routetableids) : 
+Properties: 
+  [PolicyDocument](#cfn-ec2-vpcendpoint-policydocument): Json
+  [PrivateDnsEnabled](#cfn-ec2-vpcendpoint-privatednsenabled): Boolean
+  [RouteTableIds](#cfn-ec2-vpcendpoint-routetableids): 
     - String
-﻿  [SecurityGroupIds](#cfn-ec2-vpcendpoint-securitygroupids) : 
+  [SecurityGroupIds](#cfn-ec2-vpcendpoint-securitygroupids): 
     - String
-﻿  [ServiceName](#cfn-ec2-vpcendpoint-servicename) : String
-﻿  [SubnetIds](#cfn-ec2-vpcendpoint-subnetids) : 
+  [ServiceName](#cfn-ec2-vpcendpoint-servicename): String
+  [SubnetIds](#cfn-ec2-vpcendpoint-subnetids): 
     - String
-﻿  [VpcEndpointType](#cfn-ec2-vpcendpoint-vpcendpointtype) : String
-﻿  [VpcId](#cfn-ec2-vpcendpoint-vpcid) : String
+  [VpcEndpointType](#cfn-ec2-vpcendpoint-vpcendpointtype): String
+  [VpcId](#cfn-ec2-vpcendpoint-vpcid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-vpcendpoint-properties"></a>

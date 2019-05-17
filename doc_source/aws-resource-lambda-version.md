@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Lambda::Version
-Properties : 
-﻿  [CodeSha256](#cfn-lambda-version-codesha256) : String
-﻿  [Description](#cfn-lambda-version-description) : String
-﻿  [FunctionName](#cfn-lambda-version-functionname) : String
+Properties: 
+  [CodeSha256](#cfn-lambda-version-codesha256): String
+  [Description](#cfn-lambda-version-description): String
+  [FunctionName](#cfn-lambda-version-functionname): String
 ```
 
 ## Properties<a name="aws-resource-lambda-version-properties"></a>

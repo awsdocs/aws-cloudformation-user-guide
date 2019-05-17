@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudfront-streamingdistribution-s3origin-syntax.yaml"></a>
 
 ```
-﻿  [DomainName](#cfn-cloudfront-streamingdistribution-s3origin-domainname) : String
-﻿  [OriginAccessIdentity](#cfn-cloudfront-streamingdistribution-s3origin-originaccessidentity) : String
+  [DomainName](#cfn-cloudfront-streamingdistribution-s3origin-domainname): String
+  [OriginAccessIdentity](#cfn-cloudfront-streamingdistribution-s3origin-originaccessidentity): String
 ```
 
 ## Properties<a name="aws-properties-cloudfront-streamingdistribution-s3origin-properties"></a>

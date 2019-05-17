@@ -28,23 +28,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-partition-storagedescriptor-syntax.yaml"></a>
 
 ```
-﻿  [BucketColumns](#cfn-glue-partition-storagedescriptor-bucketcolumns) : 
+  [BucketColumns](#cfn-glue-partition-storagedescriptor-bucketcolumns): 
     - String
-﻿  [Columns](#cfn-glue-partition-storagedescriptor-columns) : 
+  [Columns](#cfn-glue-partition-storagedescriptor-columns): 
     - [Column](aws-properties-glue-partition-column.md)
-﻿  [Compressed](#cfn-glue-partition-storagedescriptor-compressed) : Boolean
-﻿  [InputFormat](#cfn-glue-partition-storagedescriptor-inputformat) : String
-﻿  [Location](#cfn-glue-partition-storagedescriptor-location) : String
-﻿  [NumberOfBuckets](#cfn-glue-partition-storagedescriptor-numberofbuckets) : Integer
-﻿  [OutputFormat](#cfn-glue-partition-storagedescriptor-outputformat) : String
-﻿  [Parameters](#cfn-glue-partition-storagedescriptor-parameters) : Json
-﻿  [SerdeInfo](#cfn-glue-partition-storagedescriptor-serdeinfo) : 
+  [Compressed](#cfn-glue-partition-storagedescriptor-compressed): Boolean
+  [InputFormat](#cfn-glue-partition-storagedescriptor-inputformat): String
+  [Location](#cfn-glue-partition-storagedescriptor-location): String
+  [NumberOfBuckets](#cfn-glue-partition-storagedescriptor-numberofbuckets): Integer
+  [OutputFormat](#cfn-glue-partition-storagedescriptor-outputformat): String
+  [Parameters](#cfn-glue-partition-storagedescriptor-parameters): Json
+  [SerdeInfo](#cfn-glue-partition-storagedescriptor-serdeinfo): 
     [SerdeInfo](aws-properties-glue-partition-serdeinfo.md)
-﻿  [SkewedInfo](#cfn-glue-partition-storagedescriptor-skewedinfo) : 
+  [SkewedInfo](#cfn-glue-partition-storagedescriptor-skewedinfo): 
     [SkewedInfo](aws-properties-glue-partition-skewedinfo.md)
-﻿  [SortColumns](#cfn-glue-partition-storagedescriptor-sortcolumns) : 
+  [SortColumns](#cfn-glue-partition-storagedescriptor-sortcolumns): 
     - [Order](aws-properties-glue-partition-order.md)
-﻿  [StoredAsSubDirectories](#cfn-glue-partition-storagedescriptor-storedassubdirectories) : Boolean
+  [StoredAsSubDirectories](#cfn-glue-partition-storagedescriptor-storedassubdirectories): Boolean
 ```
 
 ## Properties<a name="aws-properties-glue-partition-storagedescriptor-properties"></a>

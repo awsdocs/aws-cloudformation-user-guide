@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticbeanstalk-application-maxagerule-syntax.yaml"></a>
 
 ```
-﻿  [DeleteSourceFromS3](#cfn-elasticbeanstalk-application-maxagerule-deletesourcefroms3) : Boolean
-﻿  [Enabled](#cfn-elasticbeanstalk-application-maxagerule-enabled) : Boolean
-﻿  [MaxAgeInDays](#cfn-elasticbeanstalk-application-maxagerule-maxageindays) : Integer
+  [DeleteSourceFromS3](#cfn-elasticbeanstalk-application-maxagerule-deletesourcefroms3): Boolean
+  [Enabled](#cfn-elasticbeanstalk-application-maxagerule-enabled): Boolean
+  [MaxAgeInDays](#cfn-elasticbeanstalk-application-maxagerule-maxageindays): Integer
 ```
 
 ## Properties<a name="aws-properties-elasticbeanstalk-application-maxagerule-properties"></a>

@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-resourcedefinitionversion-resourceinstance-syntax.yaml"></a>
 
 ```
-﻿  [Id](#cfn-greengrass-resourcedefinitionversion-resourceinstance-id) : String
-﻿  [Name](#cfn-greengrass-resourcedefinitionversion-resourceinstance-name) : String
-﻿  [ResourceDataContainer](#cfn-greengrass-resourcedefinitionversion-resourceinstance-resourcedatacontainer) : 
+  [Id](#cfn-greengrass-resourcedefinitionversion-resourceinstance-id): String
+  [Name](#cfn-greengrass-resourcedefinitionversion-resourceinstance-name): String
+  [ResourceDataContainer](#cfn-greengrass-resourcedefinitionversion-resourceinstance-resourcedatacontainer): 
     [ResourceDataContainer](aws-properties-greengrass-resourcedefinitionversion-resourcedatacontainer.md)
 ```
 

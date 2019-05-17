@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codepipeline-pipeline-stages-blockers-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-codepipeline-pipeline-stages-blockers-name) : String
-﻿  [Type](#cfn-codepipeline-pipeline-stages-blockers-type) : String
+  [Name](#cfn-codepipeline-pipeline-stages-blockers-name): String
+  [Type](#cfn-codepipeline-pipeline-stages-blockers-type): String
 ```
 
 ## Properties<a name="aws-properties-codepipeline-pipeline-stages-blockers-properties"></a>

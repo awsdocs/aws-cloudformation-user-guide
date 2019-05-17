@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement-syntax.yaml"></a>
 
 ```
-﻿  [AvailabilityZone](#cfn-ec2-spotfleet-spotplacement-availabilityzone) : String
-﻿  [GroupName](#cfn-ec2-spotfleet-spotplacement-groupname) : String
-﻿  [Tenancy](#cfn-ec2-spotfleet-spotplacement-tenancy) : String
+  [AvailabilityZone](#cfn-ec2-spotfleet-spotplacement-availabilityzone): String
+  [GroupName](#cfn-ec2-spotfleet-spotplacement-groupname): String
+  [Tenancy](#cfn-ec2-spotfleet-spotplacement-tenancy): String
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement-properties"></a>

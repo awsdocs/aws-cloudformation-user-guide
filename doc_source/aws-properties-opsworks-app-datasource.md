@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-opsworks-app-datasource-syntax.yaml"></a>
 
 ```
-﻿  [Arn](#cfn-opsworks-app-datasource-arn) : String
-﻿  [DatabaseName](#cfn-opsworks-app-datasource-databasename) : String
-﻿  [Type](#cfn-opsworks-app-datasource-type) : String
+  [Arn](#cfn-opsworks-app-datasource-arn): String
+  [DatabaseName](#cfn-opsworks-app-datasource-databasename): String
+  [Type](#cfn-opsworks-app-datasource-type): String
 ```
 
 ## Properties<a name="aws-properties-opsworks-app-datasource-properties"></a>

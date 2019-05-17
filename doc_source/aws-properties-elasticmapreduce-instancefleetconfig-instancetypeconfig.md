@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig-syntax.yaml"></a>
 
 ```
-﻿  [BidPrice](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-bidprice) : String
-﻿  [BidPriceAsPercentageOfOnDemandPrice](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-bidpriceaspercentageofondemandprice) : Double
-﻿  [Configurations](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-configurations) : 
+  [BidPrice](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-bidprice): String
+  [BidPriceAsPercentageOfOnDemandPrice](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-bidpriceaspercentageofondemandprice): Double
+  [Configurations](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-configurations): 
     - [Configuration](aws-properties-elasticmapreduce-instancefleetconfig-configuration.md)
-﻿  [EbsConfiguration](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-ebsconfiguration) : 
+  [EbsConfiguration](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-ebsconfiguration): 
     [EbsConfiguration](aws-properties-elasticmapreduce-instancefleetconfig-ebsconfiguration.md)
-﻿  [InstanceType](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-instancetype) : String
-﻿  [WeightedCapacity](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-weightedcapacity) : Integer
+  [InstanceType](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-instancetype): String
+  [WeightedCapacity](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-weightedcapacity): Integer
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig-properties"></a>

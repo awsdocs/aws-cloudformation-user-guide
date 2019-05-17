@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-route-tcproute-syntax.yaml"></a>
 
 ```
-﻿  [Action](#cfn-appmesh-route-tcproute-action) : 
+  [Action](#cfn-appmesh-route-tcproute-action): 
     [TcpRouteAction](aws-properties-appmesh-route-tcprouteaction.md)
 ```
 

@@ -26,15 +26,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-resourcedefinitionversion-resourcedatacontainer-syntax.yaml"></a>
 
 ```
-﻿  [LocalDeviceResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-localdeviceresourcedata) : 
+  [LocalDeviceResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-localdeviceresourcedata): 
     [LocalDeviceResourceData](aws-properties-greengrass-resourcedefinitionversion-localdeviceresourcedata.md)
-﻿  [LocalVolumeResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-localvolumeresourcedata) : 
+  [LocalVolumeResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-localvolumeresourcedata): 
     [LocalVolumeResourceData](aws-properties-greengrass-resourcedefinitionversion-localvolumeresourcedata.md)
-﻿  [S3MachineLearningModelResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-s3machinelearningmodelresourcedata) : 
+  [S3MachineLearningModelResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-s3machinelearningmodelresourcedata): 
     [S3MachineLearningModelResourceData](aws-properties-greengrass-resourcedefinitionversion-s3machinelearningmodelresourcedata.md)
-﻿  [SageMakerMachineLearningModelResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-sagemakermachinelearningmodelresourcedata) : 
+  [SageMakerMachineLearningModelResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-sagemakermachinelearningmodelresourcedata): 
     [SageMakerMachineLearningModelResourceData](aws-properties-greengrass-resourcedefinitionversion-sagemakermachinelearningmodelresourcedata.md)
-﻿  [SecretsManagerSecretResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-secretsmanagersecretresourcedata) : 
+  [SecretsManagerSecretResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-secretsmanagersecretresourcedata): 
     [SecretsManagerSecretResourceData](aws-properties-greengrass-resourcedefinitionversion-secretsmanagersecretresourcedata.md)
 ```
 

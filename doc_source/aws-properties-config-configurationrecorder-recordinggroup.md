@@ -34,9 +34,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-config-configurationrecorder-recordinggroup-syntax.yaml"></a>
 
 ```
-﻿  [AllSupported](#cfn-config-configurationrecorder-recordinggroup-allsupported) : Boolean
-﻿  [IncludeGlobalResourceTypes](#cfn-config-configurationrecorder-recordinggroup-includeglobalresourcetypes) : Boolean
-﻿  [ResourceTypes](#cfn-config-configurationrecorder-recordinggroup-resourcetypes) : 
+  [AllSupported](#cfn-config-configurationrecorder-recordinggroup-allsupported): Boolean
+  [IncludeGlobalResourceTypes](#cfn-config-configurationrecorder-recordinggroup-includeglobalresourcetypes): Boolean
+  [ResourceTypes](#cfn-config-configurationrecorder-recordinggroup-resourcetypes): 
     - String
 ```
 

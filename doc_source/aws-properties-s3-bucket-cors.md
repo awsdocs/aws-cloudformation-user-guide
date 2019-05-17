@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-cors-syntax.yaml"></a>
 
 ```
-﻿  [CorsRules](#cfn-s3-bucket-cors-corsrule) : 
+  [CorsRules](#cfn-s3-bucket-cors-corsrule): 
     - [CorsRule](aws-properties-s3-bucket-cors-corsrule.md)
 ```
 

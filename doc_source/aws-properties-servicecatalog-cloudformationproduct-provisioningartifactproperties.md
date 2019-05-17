@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties-syntax.yaml"></a>
 
 ```
-﻿  [Description](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-description) : String
-﻿  [DisableTemplateValidation](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-disabletemplatevalidation) : Boolean
-﻿  [Info](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-info) : Json
-﻿  [Name](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-name) : String
+  [Description](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-description): String
+  [DisableTemplateValidation](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-disabletemplatevalidation): Boolean
+  [Info](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-info): Json
+  [Name](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-name): String
 ```
 
 ## Properties<a name="aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties-properties"></a>

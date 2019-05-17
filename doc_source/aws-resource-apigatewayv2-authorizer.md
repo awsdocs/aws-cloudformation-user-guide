@@ -28,16 +28,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGatewayV2::Authorizer
-Properties : 
-﻿  [ApiId](#cfn-apigatewayv2-authorizer-apiid) : String
-﻿  [AuthorizerCredentialsArn](#cfn-apigatewayv2-authorizer-authorizercredentialsarn) : String
-﻿  [AuthorizerResultTtlInSeconds](#cfn-apigatewayv2-authorizer-authorizerresultttlinseconds) : Integer
-﻿  [AuthorizerType](#cfn-apigatewayv2-authorizer-authorizertype) : String
-﻿  [AuthorizerUri](#cfn-apigatewayv2-authorizer-authorizeruri) : String
-﻿  [IdentitySource](#cfn-apigatewayv2-authorizer-identitysource) : 
+Properties: 
+  [ApiId](#cfn-apigatewayv2-authorizer-apiid): String
+  [AuthorizerCredentialsArn](#cfn-apigatewayv2-authorizer-authorizercredentialsarn): String
+  [AuthorizerResultTtlInSeconds](#cfn-apigatewayv2-authorizer-authorizerresultttlinseconds): Integer
+  [AuthorizerType](#cfn-apigatewayv2-authorizer-authorizertype): String
+  [AuthorizerUri](#cfn-apigatewayv2-authorizer-authorizeruri): String
+  [IdentitySource](#cfn-apigatewayv2-authorizer-identitysource): 
     - String
-﻿  [IdentityValidationExpression](#cfn-apigatewayv2-authorizer-identityvalidationexpression) : String
-﻿  [Name](#cfn-apigatewayv2-authorizer-name) : String
+  [IdentityValidationExpression](#cfn-apigatewayv2-authorizer-identityvalidationexpression): String
+  [Name](#cfn-apigatewayv2-authorizer-name): String
 ```
 
 ## Properties<a name="aws-resource-apigatewayv2-authorizer-properties"></a>

@@ -24,12 +24,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-blockdev-template-syntax.yaml"></a>
 
 ```
-﻿  [DeleteOnTermination](#cfn-ec2-blockdev-template-deleteontermination) : Boolean
-﻿  [Encrypted](#cfn-ec2-blockdev-template-encrypted) : Boolean
-﻿  [Iops](#cfn-ec2-blockdev-template-iops) : Integer
-﻿  [SnapshotId](#cfn-ec2-blockdev-template-snapshotid) : String
-﻿  [VolumeSize](#cfn-ec2-blockdev-template-volumesize) : Integer
-﻿  [VolumeType](#cfn-ec2-blockdev-template-volumetype) : String
+  [DeleteOnTermination](#cfn-ec2-blockdev-template-deleteontermination): Boolean
+  [Encrypted](#cfn-ec2-blockdev-template-encrypted): Boolean
+  [Iops](#cfn-ec2-blockdev-template-iops): Integer
+  [SnapshotId](#cfn-ec2-blockdev-template-snapshotid): String
+  [VolumeSize](#cfn-ec2-blockdev-template-volumesize): Integer
+  [VolumeType](#cfn-ec2-blockdev-template-volumetype): String
 ```
 
 ## Properties<a name="aws-properties-ec2-blockdev-template-properties"></a>

@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-pipeline-filter-syntax.yaml"></a>
 
 ```
-﻿  [Filter](#cfn-iotanalytics-pipeline-filter-filter) : [String](#aws-properties-iotanalytics-pipeline-filter)
-﻿  [Name](#cfn-iotanalytics-pipeline-filter-name) : String
-﻿  [Next](#cfn-iotanalytics-pipeline-filter-next) : String
+  [Filter](#cfn-iotanalytics-pipeline-filter-filter): [String](#aws-properties-iotanalytics-pipeline-filter)
+  [Name](#cfn-iotanalytics-pipeline-filter-name): String
+  [Next](#cfn-iotanalytics-pipeline-filter-next): String
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-pipeline-filter-properties"></a>

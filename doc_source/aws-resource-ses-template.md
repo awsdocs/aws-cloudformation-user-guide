@@ -23,8 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SES::Template
-Properties : 
-﻿  [Template](#cfn-ses-template-template) : 
+Properties: 
+  [Template](#cfn-ses-template-template): 
     [Template](aws-properties-ses-template-template.md)
 ```
 

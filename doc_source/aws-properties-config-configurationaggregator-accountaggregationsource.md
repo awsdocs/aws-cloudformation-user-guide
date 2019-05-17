@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-config-configurationaggregator-accountaggregationsource-syntax.yaml"></a>
 
 ```
-﻿  [AccountIds](#cfn-config-configurationaggregator-accountaggregationsource-accountids) : 
+  [AccountIds](#cfn-config-configurationaggregator-accountaggregationsource-accountids): 
     - String
-﻿  [AllAwsRegions](#cfn-config-configurationaggregator-accountaggregationsource-allawsregions) : Boolean
-﻿  [AwsRegions](#cfn-config-configurationaggregator-accountaggregationsource-awsregions) : 
+  [AllAwsRegions](#cfn-config-configurationaggregator-accountaggregationsource-allawsregions): Boolean
+  [AwsRegions](#cfn-config-configurationaggregator-accountaggregationsource-awsregions): 
     - String
 ```
 

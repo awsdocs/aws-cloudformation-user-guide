@@ -26,14 +26,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EFS::FileSystem
-Properties : 
-﻿  [Encrypted](#cfn-efs-filesystem-encrypted) : Boolean
-﻿  [FileSystemTags](#cfn-efs-filesystem-filesystemtags) : 
+Properties: 
+  [Encrypted](#cfn-efs-filesystem-encrypted): Boolean
+  [FileSystemTags](#cfn-efs-filesystem-filesystemtags): 
     - [ElasticFileSystemTag](aws-properties-efs-filesystem-filesystemtags.md)
-﻿  [KmsKeyId](#cfn-efs-filesystem-kmskeyid) : String
-﻿  [PerformanceMode](#cfn-efs-filesystem-performancemode) : String
-﻿  [ProvisionedThroughputInMibps](#cfn-elasticfilesystem-filesystem-provisionedthroughputinmibps) : Double
-﻿  [ThroughputMode](#cfn-elasticfilesystem-filesystem-throughputmode) : String
+  [KmsKeyId](#cfn-efs-filesystem-kmskeyid): String
+  [PerformanceMode](#cfn-efs-filesystem-performancemode): String
+  [ProvisionedThroughputInMibps](#cfn-elasticfilesystem-filesystem-provisionedthroughputinmibps): Double
+  [ThroughputMode](#cfn-elasticfilesystem-filesystem-throughputmode): String
 ```
 
 ## Properties<a name="aws-resource-efs-filesystem-properties"></a>

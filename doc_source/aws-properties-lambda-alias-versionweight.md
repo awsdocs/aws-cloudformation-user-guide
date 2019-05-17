@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-lambda-alias-versionweight-syntax.yaml"></a>
 
 ```
-﻿  [FunctionVersion](#cfn-lambda-alias-versionweight-functionversion) : String
-﻿  [FunctionWeight](#cfn-lambda-alias-versionweight-functionweight) : Double
+  [FunctionVersion](#cfn-lambda-alias-versionweight-functionversion): String
+  [FunctionWeight](#cfn-lambda-alias-versionweight-functionweight): Double
 ```
 
 ## Properties<a name="aws-properties-lambda-alias-versionweight-properties"></a>

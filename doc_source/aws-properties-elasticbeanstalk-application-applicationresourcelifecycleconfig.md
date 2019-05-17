@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig-syntax.yaml"></a>
 
 ```
-﻿  [ServiceRole](#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-servicerole) : String
-﻿  [VersionLifecycleConfig](#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-versionlifecycleconfig) : 
+  [ServiceRole](#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-servicerole): String
+  [VersionLifecycleConfig](#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-versionlifecycleconfig): 
     [ApplicationVersionLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.md)
 ```
 

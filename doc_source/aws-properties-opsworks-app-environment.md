@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-opsworks-app-environment-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-opsworks-app-environment-key) : String
-﻿  [Secure](#cfn-opsworks-app-environment-secure) : Boolean
-﻿  [Value](#value) : String
+  [Key](#cfn-opsworks-app-environment-key): String
+  [Secure](#cfn-opsworks-app-environment-secure): Boolean
+  [Value](#value): String
 ```
 
 ## Properties<a name="aws-properties-opsworks-app-environment-properties"></a>

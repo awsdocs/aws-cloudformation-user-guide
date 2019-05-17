@@ -21,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-opsworks-instance-ebsblockdevice-syntax.yaml"></a>
 
 ```
-﻿  [DeleteOnTermination](#cfn-opsworks-instance-ebsblockdevice-deleteontermination) : Boolean
-﻿  [Iops](#cfn-opsworks-instance-ebsblockdevice-iops) : Integer
-﻿  [SnapshotId](#cfn-opsworks-instance-ebsblockdevice-snapshotid) : String
-﻿  [VolumeSize](#cfn-opsworks-instance-ebsblockdevice-volumesize) : Integer
-﻿  [VolumeType](#cfn-opsworks-instance-ebsblockdevice-volumetype) : String
+  [DeleteOnTermination](#cfn-opsworks-instance-ebsblockdevice-deleteontermination): Boolean
+  [Iops](#cfn-opsworks-instance-ebsblockdevice-iops): Integer
+  [SnapshotId](#cfn-opsworks-instance-ebsblockdevice-snapshotid): String
+  [VolumeSize](#cfn-opsworks-instance-ebsblockdevice-volumesize): Integer
+  [VolumeType](#cfn-opsworks-instance-ebsblockdevice-volumetype): String
 ```
 
 ## Properties<a name="aws-properties-opsworks-instance-ebsblockdevice-properties"></a>

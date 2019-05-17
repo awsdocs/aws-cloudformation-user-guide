@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-database-databaseinput-syntax.yaml"></a>
 
 ```
-﻿  [Description](#cfn-glue-database-databaseinput-description) : String
-﻿  [LocationUri](#cfn-glue-database-databaseinput-locationuri) : String
-﻿  [Name](#cfn-glue-database-databaseinput-name) : String
-﻿  [Parameters](#cfn-glue-database-databaseinput-parameters) : Json
+  [Description](#cfn-glue-database-databaseinput-description): String
+  [LocationUri](#cfn-glue-database-databaseinput-locationuri): String
+  [Name](#cfn-glue-database-databaseinput-name): String
+  [Parameters](#cfn-glue-database-databaseinput-parameters): Json
 ```
 
 ## Properties<a name="aws-properties-glue-database-databaseinput-properties"></a>

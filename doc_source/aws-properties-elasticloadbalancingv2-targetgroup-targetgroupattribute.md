@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-elasticloadbalancingv2-targetgroup-targetgroupattribute-key) : String
-﻿  [Value](#cfn-elasticloadbalancingv2-targetgroup-targetgroupattribute-value) : String
+  [Key](#cfn-elasticloadbalancingv2-targetgroup-targetgroupattribute-key): String
+  [Value](#cfn-elasticloadbalancingv2-targetgroup-targetgroupattribute-value): String
 ```
 
 ## Properties<a name="aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute-properties"></a>

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-route-weightedtarget-syntax.yaml"></a>
 
 ```
-﻿  [VirtualNode](#cfn-appmesh-route-weightedtarget-virtualnode) : String
-﻿  [Weight](#cfn-appmesh-route-weightedtarget-weight) : Integer
+  [VirtualNode](#cfn-appmesh-route-weightedtarget-virtualnode): String
+  [Weight](#cfn-appmesh-route-weightedtarget-weight): Integer
 ```
 
 ## Properties<a name="aws-properties-appmesh-route-weightedtarget-properties"></a>

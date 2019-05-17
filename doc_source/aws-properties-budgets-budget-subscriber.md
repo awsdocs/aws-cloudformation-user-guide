@@ -22,8 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-budgets-budget-subscriber-syntax.yaml"></a>
 
 ```
-﻿  [Address](#cfn-budgets-budget-subscriber-address) : String
-﻿  [SubscriptionType](#cfn-budgets-budget-subscriber-subscriptiontype) : String
+  [Address](#cfn-budgets-budget-subscriber-address): String
+  [SubscriptionType](#cfn-budgets-budget-subscriber-subscriptiontype): String
 ```
 
 ## Properties<a name="aws-properties-budgets-budget-subscriber-properties"></a>

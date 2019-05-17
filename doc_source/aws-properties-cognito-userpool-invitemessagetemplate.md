@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cognito-userpool-invitemessagetemplate-syntax.yaml"></a>
 
 ```
-﻿  [EmailMessage](#cfn-cognito-userpool-invitemessagetemplate-emailmessage) : String
-﻿  [EmailSubject](#cfn-cognito-userpool-invitemessagetemplate-emailsubject) : String
-﻿  [SMSMessage](#cfn-cognito-userpool-invitemessagetemplate-smsmessage) : String
+  [EmailMessage](#cfn-cognito-userpool-invitemessagetemplate-emailmessage): String
+  [EmailSubject](#cfn-cognito-userpool-invitemessagetemplate-emailsubject): String
+  [SMSMessage](#cfn-cognito-userpool-invitemessagetemplate-smsmessage): String
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-invitemessagetemplate-properties"></a>

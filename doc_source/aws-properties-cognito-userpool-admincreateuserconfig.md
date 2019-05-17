@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cognito-userpool-admincreateuserconfig-syntax.yaml"></a>
 
 ```
-﻿  [AllowAdminCreateUserOnly](#cfn-cognito-userpool-admincreateuserconfig-allowadmincreateuseronly) : Boolean
-﻿  [InviteMessageTemplate](#cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate) : 
+  [AllowAdminCreateUserOnly](#cfn-cognito-userpool-admincreateuserconfig-allowadmincreateuseronly): Boolean
+  [InviteMessageTemplate](#cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate): 
     [InviteMessageTemplate](aws-properties-cognito-userpool-invitemessagetemplate.md)
-﻿  [UnusedAccountValidityDays](#cfn-cognito-userpool-admincreateuserconfig-unusedaccountvaliditydays) : Double
+  [UnusedAccountValidityDays](#cfn-cognito-userpool-admincreateuserconfig-unusedaccountvaliditydays): Double
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-admincreateuserconfig-properties"></a>

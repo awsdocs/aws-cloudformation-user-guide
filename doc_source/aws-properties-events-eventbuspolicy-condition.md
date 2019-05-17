@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-events-eventbuspolicy-condition-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-events-eventbuspolicy-condition-key) : String
-﻿  [Type](#cfn-events-eventbuspolicy-condition-type) : String
-﻿  [Value](#cfn-events-eventbuspolicy-condition-value) : String
+  [Key](#cfn-events-eventbuspolicy-condition-key): String
+  [Type](#cfn-events-eventbuspolicy-condition-type): String
+  [Value](#cfn-events-eventbuspolicy-condition-value): String
 ```
 
 ## Properties<a name="aws-properties-events-eventbuspolicy-condition-properties"></a>

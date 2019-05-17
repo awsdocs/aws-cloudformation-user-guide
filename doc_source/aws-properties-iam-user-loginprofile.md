@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iam-user-loginprofile-syntax.yaml"></a>
 
 ```
-﻿  [Password](#cfn-iam-user-loginprofile-password) : String
-﻿  [PasswordResetRequired](#cfn-iam-user-loginprofile-passwordresetrequired) : Boolean
+  [Password](#cfn-iam-user-loginprofile-password): String
+  [PasswordResetRequired](#cfn-iam-user-loginprofile-passwordresetrequired): Boolean
 ```
 
 ## Properties<a name="aws-properties-iam-user-loginprofile-properties"></a>

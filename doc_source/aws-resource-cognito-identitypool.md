@@ -30,22 +30,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Cognito::IdentityPool
-Properties : 
-﻿  [AllowUnauthenticatedIdentities](#cfn-cognito-identitypool-allowunauthenticatedidentities) : Boolean
-﻿  [CognitoEvents](#cfn-cognito-identitypool-cognitoevents) : Json
-﻿  [CognitoIdentityProviders](#cfn-cognito-identitypool-cognitoidentityproviders) : 
+Properties: 
+  [AllowUnauthenticatedIdentities](#cfn-cognito-identitypool-allowunauthenticatedidentities): Boolean
+  [CognitoEvents](#cfn-cognito-identitypool-cognitoevents): Json
+  [CognitoIdentityProviders](#cfn-cognito-identitypool-cognitoidentityproviders): 
     - [CognitoIdentityProvider](aws-properties-cognito-identitypool-cognitoidentityprovider.md)
-﻿  [CognitoStreams](#cfn-cognito-identitypool-cognitostreams) : 
+  [CognitoStreams](#cfn-cognito-identitypool-cognitostreams): 
     [CognitoStreams](aws-properties-cognito-identitypool-cognitostreams.md)
-﻿  [DeveloperProviderName](#cfn-cognito-identitypool-developerprovidername) : String
-﻿  [IdentityPoolName](#cfn-cognito-identitypool-identitypoolname) : String
-﻿  [OpenIdConnectProviderARNs](#cfn-cognito-identitypool-openidconnectproviderarns) : 
+  [DeveloperProviderName](#cfn-cognito-identitypool-developerprovidername): String
+  [IdentityPoolName](#cfn-cognito-identitypool-identitypoolname): String
+  [OpenIdConnectProviderARNs](#cfn-cognito-identitypool-openidconnectproviderarns): 
     - String
-﻿  [PushSync](#cfn-cognito-identitypool-pushsync) : 
+  [PushSync](#cfn-cognito-identitypool-pushsync): 
     [PushSync](aws-properties-cognito-identitypool-pushsync.md)
-﻿  [SamlProviderARNs](#cfn-cognito-identitypool-samlproviderarns) : 
+  [SamlProviderARNs](#cfn-cognito-identitypool-samlproviderarns): 
     - String
-﻿  [SupportedLoginProviders](#cfn-cognito-identitypool-supportedloginproviders) : Json
+  [SupportedLoginProviders](#cfn-cognito-identitypool-supportedloginproviders): Json
 ```
 
 ## Properties<a name="aws-resource-cognito-identitypool-properties"></a>

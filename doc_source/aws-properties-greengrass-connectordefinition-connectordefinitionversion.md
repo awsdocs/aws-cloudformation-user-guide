@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-connectordefinition-connectordefinitionversion-syntax.yaml"></a>
 
 ```
-﻿  [Connectors](#cfn-greengrass-connectordefinition-connectordefinitionversion-connectors) : 
+  [Connectors](#cfn-greengrass-connectordefinition-connectordefinitionversion-connectors): 
     - [Connector](aws-properties-greengrass-connectordefinition-connector.md)
 ```
 

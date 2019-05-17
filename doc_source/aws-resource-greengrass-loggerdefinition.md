@@ -28,10 +28,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Greengrass::LoggerDefinition
-Properties : 
-﻿  [InitialVersion](#cfn-greengrass-loggerdefinition-initialversion) : 
+Properties: 
+  [InitialVersion](#cfn-greengrass-loggerdefinition-initialversion): 
     [LoggerDefinitionVersion](aws-properties-greengrass-loggerdefinition-loggerdefinitionversion.md)
-﻿  [Name](#cfn-greengrass-loggerdefinition-name) : String
+  [Name](#cfn-greengrass-loggerdefinition-name): String
 ```
 
 ## Properties<a name="aws-resource-greengrass-loggerdefinition-properties"></a>

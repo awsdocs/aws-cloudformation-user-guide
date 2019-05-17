@@ -46,7 +46,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-servicediscovery-service-healthcheckcustomconfig-syntax.yaml"></a>
 
 ```
-﻿  [FailureThreshold](#cfn-servicediscovery-service-healthcheckcustomconfig-failurethreshold) : Double
+  [FailureThreshold](#cfn-servicediscovery-service-healthcheckcustomconfig-failurethreshold): Double
 ```
 
 ## Properties<a name="aws-properties-servicediscovery-service-healthcheckcustomconfig-properties"></a>

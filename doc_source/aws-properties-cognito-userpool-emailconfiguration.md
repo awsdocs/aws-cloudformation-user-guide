@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cognito-userpool-emailconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [EmailSendingAccount](#cfn-cognito-userpool-emailconfiguration-emailsendingaccount) : String
-﻿  [ReplyToEmailAddress](#cfn-cognito-userpool-emailconfiguration-replytoemailaddress) : String
-﻿  [SourceArn](#cfn-cognito-userpool-emailconfiguration-sourcearn) : String
+  [EmailSendingAccount](#cfn-cognito-userpool-emailconfiguration-emailsendingaccount): String
+  [ReplyToEmailAddress](#cfn-cognito-userpool-emailconfiguration-replytoemailaddress): String
+  [SourceArn](#cfn-cognito-userpool-emailconfiguration-sourcearn): String
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-emailconfiguration-properties"></a>

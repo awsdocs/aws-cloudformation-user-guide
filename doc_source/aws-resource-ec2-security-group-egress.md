@@ -39,16 +39,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::SecurityGroupEgress
-Properties : 
-﻿  [CidrIp](#cfn-ec2-securitygroupegress-cidrip) : String
-﻿  [CidrIpv6](#cfn-ec2-securitygroupegress-cidripv6) : String
-﻿  [Description](#cfn-ec2-securitygroupegress-description) : String
-﻿  [DestinationPrefixListId](#cfn-ec2-securitygroupegress-destinationprefixlistid) : String
-﻿  [DestinationSecurityGroupId](#cfn-ec2-securitygroupegress-destinationsecuritygroupid) : String
-﻿  [FromPort](#cfn-ec2-securitygroupegress-fromport) : Integer
-﻿  [GroupId](#cfn-ec2-securitygroupegress-groupid) : String
-﻿  [IpProtocol](#cfn-ec2-securitygroupegress-ipprotocol) : String
-﻿  [ToPort](#cfn-ec2-securitygroupegress-toport) : Integer
+Properties: 
+  [CidrIp](#cfn-ec2-securitygroupegress-cidrip): String
+  [CidrIpv6](#cfn-ec2-securitygroupegress-cidripv6): String
+  [Description](#cfn-ec2-securitygroupegress-description): String
+  [DestinationPrefixListId](#cfn-ec2-securitygroupegress-destinationprefixlistid): String
+  [DestinationSecurityGroupId](#cfn-ec2-securitygroupegress-destinationsecuritygroupid): String
+  [FromPort](#cfn-ec2-securitygroupegress-fromport): Integer
+  [GroupId](#cfn-ec2-securitygroupegress-groupid): String
+  [IpProtocol](#cfn-ec2-securitygroupegress-ipprotocol): String
+  [ToPort](#cfn-ec2-securitygroupegress-toport): Integer
 ```
 
 ## Properties<a name="aws-resource-ec2-security-group-egress-properties"></a>

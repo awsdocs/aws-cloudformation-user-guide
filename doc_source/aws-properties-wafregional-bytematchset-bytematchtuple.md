@@ -21,14 +21,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-wafregional-bytematchset-bytematchtuple-syntax.yaml"></a>
 
 ```
-﻿  [FieldToMatch](#cfn-wafregional-bytematchset-bytematchtuple-fieldtomatch) : 
+  [FieldToMatch](#cfn-wafregional-bytematchset-bytematchtuple-fieldtomatch): 
     [FieldToMatch](aws-properties-wafregional-bytematchset-fieldtomatch.md)
-﻿  [PositionalConstraint](#cfn-wafregional-bytematchset-bytematchtuple-positionalconstraint) : String
-﻿  [TargetString](#cfn-wafregional-bytematchset-bytematchtuple-targetstring) : 
+  [PositionalConstraint](#cfn-wafregional-bytematchset-bytematchtuple-positionalconstraint): String
+  [TargetString](#cfn-wafregional-bytematchset-bytematchtuple-targetstring): 
     String
-﻿  [TargetStringBase64](#cfn-wafregional-bytematchset-bytematchtuple-targetstringbase64) : 
+  [TargetStringBase64](#cfn-wafregional-bytematchset-bytematchtuple-targetstringbase64): 
     String
-﻿  [TextTransformation](#cfn-wafregional-bytematchset-bytematchtuple-texttransformation) : String
+  [TextTransformation](#cfn-wafregional-bytematchset-bytematchtuple-texttransformation): String
 ```
 
 ## Properties<a name="aws-properties-wafregional-bytematchset-bytematchtuple-properties"></a>

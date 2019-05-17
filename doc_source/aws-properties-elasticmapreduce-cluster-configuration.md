@@ -22,10 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-configuration-syntax.yaml"></a>
 
 ```
-﻿  [Classification](#cfn-elasticmapreduce-cluster-configuration-classification) : String
-﻿  [ConfigurationProperties](#cfn-elasticmapreduce-cluster-configuration-configurationproperties) : 
+  [Classification](#cfn-elasticmapreduce-cluster-configuration-classification): String
+  [ConfigurationProperties](#cfn-elasticmapreduce-cluster-configuration-configurationproperties): 
     Key : Value
-﻿  [Configurations](#cfn-elasticmapreduce-cluster-configuration-configurations) : 
+  [Configurations](#cfn-elasticmapreduce-cluster-configuration-configurations): 
     - [Configuration](#aws-properties-elasticmapreduce-cluster-configuration)
 ```
 

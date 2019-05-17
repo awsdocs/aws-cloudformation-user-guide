@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-githublocation-syntax.yaml"></a>
 
 ```
-﻿  [CommitId](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation-commitid) : String
-﻿  [Repository](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation-repository) : String
+  [CommitId](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation-commitid): String
+  [Repository](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation-repository): String
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-githublocation-properties"></a>

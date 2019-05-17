@@ -35,29 +35,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apigateway-deployment-stagedescription-syntax.yaml"></a>
 
 ```
-﻿  [AccessLogSetting](#cfn-apigateway-deployment-stagedescription-accesslogsetting) : 
+  [AccessLogSetting](#cfn-apigateway-deployment-stagedescription-accesslogsetting): 
     [AccessLogSetting](aws-properties-apigateway-deployment-accesslogsetting.md)
-﻿  [CacheClusterEnabled](#cfn-apigateway-deployment-stagedescription-cacheclusterenabled) : Boolean
-﻿  [CacheClusterSize](#cfn-apigateway-deployment-stagedescription-cacheclustersize) : String
-﻿  [CacheDataEncrypted](#cfn-apigateway-deployment-stagedescription-cachedataencrypted) : Boolean
-﻿  [CacheTtlInSeconds](#cfn-apigateway-deployment-stagedescription-cachettlinseconds) : Integer
-﻿  [CachingEnabled](#cfn-apigateway-deployment-stagedescription-cachingenabled) : Boolean
-﻿  [CanarySetting](#cfn-apigateway-deployment-stagedescription-canarysetting) : 
+  [CacheClusterEnabled](#cfn-apigateway-deployment-stagedescription-cacheclusterenabled): Boolean
+  [CacheClusterSize](#cfn-apigateway-deployment-stagedescription-cacheclustersize): String
+  [CacheDataEncrypted](#cfn-apigateway-deployment-stagedescription-cachedataencrypted): Boolean
+  [CacheTtlInSeconds](#cfn-apigateway-deployment-stagedescription-cachettlinseconds): Integer
+  [CachingEnabled](#cfn-apigateway-deployment-stagedescription-cachingenabled): Boolean
+  [CanarySetting](#cfn-apigateway-deployment-stagedescription-canarysetting): 
     [CanarySetting](aws-properties-apigateway-deployment-canarysetting.md)
-﻿  [ClientCertificateId](#cfn-apigateway-deployment-stagedescription-clientcertificateid) : String
-﻿  [DataTraceEnabled](#cfn-apigateway-deployment-stagedescription-datatraceenabled) : Boolean
-﻿  [Description](#cfn-apigateway-deployment-stagedescription-description) : String
-﻿  [DocumentationVersion](#cfn-apigateway-deployment-stagedescription-documentationversion) : String
-﻿  [LoggingLevel](#cfn-apigateway-deployment-stagedescription-logginglevel) : String
-﻿  [MethodSettings](#cfn-apigateway-deployment-stagedescription-methodsettings) : 
+  [ClientCertificateId](#cfn-apigateway-deployment-stagedescription-clientcertificateid): String
+  [DataTraceEnabled](#cfn-apigateway-deployment-stagedescription-datatraceenabled): Boolean
+  [Description](#cfn-apigateway-deployment-stagedescription-description): String
+  [DocumentationVersion](#cfn-apigateway-deployment-stagedescription-documentationversion): String
+  [LoggingLevel](#cfn-apigateway-deployment-stagedescription-logginglevel): String
+  [MethodSettings](#cfn-apigateway-deployment-stagedescription-methodsettings): 
     - [MethodSetting](aws-properties-apigateway-deployment-stagedescription-methodsetting.md)
-﻿  [MetricsEnabled](#cfn-apigateway-deployment-stagedescription-metricsenabled) : Boolean
-﻿  [Tags](#cfn-apigateway-deployment-tags) : 
+  [MetricsEnabled](#cfn-apigateway-deployment-stagedescription-metricsenabled): Boolean
+  [Tags](#cfn-apigateway-deployment-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [ThrottlingBurstLimit](#cfn-apigateway-deployment-stagedescription-throttlingburstlimit) : Integer
-﻿  [ThrottlingRateLimit](#cfn-apigateway-deployment-stagedescription-throttlingratelimit) : Double
-﻿  [TracingEnabled](#cfn-apigateway-deployment-stagedescription-tracingenabled) : Boolean
-﻿  [Variables](#cfn-apigateway-deployment-stagedescription-variables) : 
+  [ThrottlingBurstLimit](#cfn-apigateway-deployment-stagedescription-throttlingburstlimit): Integer
+  [ThrottlingRateLimit](#cfn-apigateway-deployment-stagedescription-throttlingratelimit): Double
+  [TracingEnabled](#cfn-apigateway-deployment-stagedescription-tracingenabled): Boolean
+  [Variables](#cfn-apigateway-deployment-stagedescription-variables): 
     Key : Value
 ```
 

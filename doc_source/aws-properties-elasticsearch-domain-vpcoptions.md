@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticsearch-domain-vpcoptions-syntax.yaml"></a>
 
 ```
-﻿  [SecurityGroupIds](#cfn-elasticsearch-domain-vpcoptions-securitygroupids) : 
+  [SecurityGroupIds](#cfn-elasticsearch-domain-vpcoptions-securitygroupids): 
     - String
-﻿  [SubnetIds](#cfn-elasticsearch-domain-vpcoptions-subnetids) : 
+  [SubnetIds](#cfn-elasticsearch-domain-vpcoptions-subnetids): 
     - String
 ```
 

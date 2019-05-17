@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-virtualnode-fileaccesslog-syntax.yaml"></a>
 
 ```
-﻿  [Path](#cfn-appmesh-virtualnode-fileaccesslog-path) : String
+  [Path](#cfn-appmesh-virtualnode-fileaccesslog-path): String
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-fileaccesslog-properties"></a>

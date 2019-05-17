@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticsearch-domain-snapshotoptions-syntax.yaml"></a>
 
 ```
-﻿  [AutomatedSnapshotStartHour](#cfn-elasticsearch-domain-snapshotoptions-automatedsnapshotstarthour) : Integer
+  [AutomatedSnapshotStartHour](#cfn-elasticsearch-domain-snapshotoptions-automatedsnapshotstarthour): Integer
 ```
 
 ## Properties<a name="aws-properties-elasticsearch-domain-snapshotoptions-properties"></a>

@@ -26,12 +26,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPCEndpointConnectionNotification
-Properties : 
-﻿  [ConnectionEvents](#cfn-ec2-vpcendpointconnectionnotification-connectionevents) : 
+Properties: 
+  [ConnectionEvents](#cfn-ec2-vpcendpointconnectionnotification-connectionevents): 
     - String
-﻿  [ConnectionNotificationArn](#cfn-ec2-vpcendpointconnectionnotification-connectionnotificationarn) : String
-﻿  [ServiceId](#cfn-ec2-vpcendpointconnectionnotification-serviceid) : String
-﻿  [VPCEndpointId](#cfn-ec2-vpcendpointconnectionnotification-vpcendpointid) : String
+  [ConnectionNotificationArn](#cfn-ec2-vpcendpointconnectionnotification-connectionnotificationarn): String
+  [ServiceId](#cfn-ec2-vpcendpointconnectionnotification-serviceid): String
+  [VPCEndpointId](#cfn-ec2-vpcendpointconnectionnotification-vpcendpointid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-vpcendpointconnectionnotification-properties"></a>

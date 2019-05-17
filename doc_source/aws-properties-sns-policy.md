@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SNS::TopicPolicy
-Properties : 
-﻿  [PolicyDocument](#cfn-sns-topicpolicy-policydocument) : Json
-﻿  [Topics](#cfn-sns-topicpolicy-topics) : 
+Properties: 
+  [PolicyDocument](#cfn-sns-topicpolicy-policydocument): Json
+  [Topics](#cfn-sns-topicpolicy-topics): 
     - String
 ```
 

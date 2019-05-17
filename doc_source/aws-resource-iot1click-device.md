@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IoT1Click::Device
-Properties : 
-﻿  [DeviceId](#cfn-iot1click-device-deviceid) : String
-﻿  [Enabled](#cfn-iot1click-device-enabled) : Boolean
+Properties: 
+  [DeviceId](#cfn-iot1click-device-deviceid): String
+  [Enabled](#cfn-iot1click-device-enabled): Boolean
 ```
 
 ## Properties<a name="aws-resource-iot1click-device-properties"></a>

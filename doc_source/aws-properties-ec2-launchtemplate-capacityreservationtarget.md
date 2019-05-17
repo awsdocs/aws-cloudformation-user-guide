@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-capacityreservationtarget-syntax.yaml"></a>
 
 ```
-﻿  [CapacityReservationId](#cfn-ec2-launchtemplate-capacityreservationtarget-capacityreservationid) : String
+  [CapacityReservationId](#cfn-ec2-launchtemplate-capacityreservationtarget-capacityreservationid): String
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-capacityreservationtarget-properties"></a>

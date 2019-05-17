@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-connectordefinitionversion-connector-syntax.yaml"></a>
 
 ```
-﻿  [ConnectorArn](#cfn-greengrass-connectordefinitionversion-connector-connectorarn) : String
-﻿  [Id](#cfn-greengrass-connectordefinitionversion-connector-id) : String
-﻿  [Parameters](#cfn-greengrass-connectordefinitionversion-connector-parameters) : Json
+  [ConnectorArn](#cfn-greengrass-connectordefinitionversion-connector-connectorarn): String
+  [Id](#cfn-greengrass-connectordefinitionversion-connector-id): String
+  [Parameters](#cfn-greengrass-connectordefinitionversion-connector-parameters): Json
 ```
 
 ## Properties<a name="aws-properties-greengrass-connectordefinitionversion-connector-properties"></a>

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cognito-userpooluser-attributetype-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-cognito-userpooluser-attributetype-name) : String
-﻿  [Value](#cfn-cognito-userpooluser-attributetype-value) : String
+  [Name](#cfn-cognito-userpooluser-attributetype-name): String
+  [Value](#cfn-cognito-userpooluser-attributetype-value): String
 ```
 
 ## Properties<a name="aws-properties-cognito-userpooluser-attributetype-properties"></a>

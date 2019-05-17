@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceCatalog::AcceptedPortfolioShare
-Properties : 
-﻿  [AcceptLanguage](#cfn-servicecatalog-acceptedportfolioshare-acceptlanguage) : String
-﻿  [PortfolioId](#cfn-servicecatalog-acceptedportfolioshare-portfolioid) : String
+Properties: 
+  [AcceptLanguage](#cfn-servicecatalog-acceptedportfolioshare-acceptlanguage): String
+  [PortfolioId](#cfn-servicecatalog-acceptedportfolioshare-portfolioid): String
 ```
 
 ## Properties<a name="aws-resource-servicecatalog-acceptedportfolioshare-properties"></a>

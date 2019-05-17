@@ -25,19 +25,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ses-receiptrule-action-syntax.yaml"></a>
 
 ```
-﻿  [AddHeaderAction](#cfn-ses-receiptrule-action-addheaderaction) : 
+  [AddHeaderAction](#cfn-ses-receiptrule-action-addheaderaction): 
     [AddHeaderAction](aws-properties-ses-receiptrule-addheaderaction.md)
-﻿  [BounceAction](#cfn-ses-receiptrule-action-bounceaction) : 
+  [BounceAction](#cfn-ses-receiptrule-action-bounceaction): 
     [BounceAction](aws-properties-ses-receiptrule-bounceaction.md)
-﻿  [LambdaAction](#cfn-ses-receiptrule-action-lambdaaction) : 
+  [LambdaAction](#cfn-ses-receiptrule-action-lambdaaction): 
     [LambdaAction](aws-properties-ses-receiptrule-lambdaaction.md)
-﻿  [S3Action](#cfn-ses-receiptrule-action-s3action) : 
+  [S3Action](#cfn-ses-receiptrule-action-s3action): 
     [S3Action](aws-properties-ses-receiptrule-s3action.md)
-﻿  [SNSAction](#cfn-ses-receiptrule-action-snsaction) : 
+  [SNSAction](#cfn-ses-receiptrule-action-snsaction): 
     [SNSAction](aws-properties-ses-receiptrule-snsaction.md)
-﻿  [StopAction](#cfn-ses-receiptrule-action-stopaction) : 
+  [StopAction](#cfn-ses-receiptrule-action-stopaction): 
     [StopAction](aws-properties-ses-receiptrule-stopaction.md)
-﻿  [WorkmailAction](#cfn-ses-receiptrule-action-workmailaction) : 
+  [WorkmailAction](#cfn-ses-receiptrule-action-workmailaction): 
     [WorkmailAction](aws-properties-ses-receiptrule-workmailaction.md)
 ```
 

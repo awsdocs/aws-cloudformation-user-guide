@@ -21,12 +21,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-guardduty-filter-condition-syntax.yaml"></a>
 
 ```
-﻿  [Eq](#cfn-guardduty-filter-condition-eq) : 
+  [Eq](#cfn-guardduty-filter-condition-eq): 
     - String
-﻿  [Gte](#cfn-guardduty-filter-condition-gte) : Integer
-﻿  [Lt](#cfn-guardduty-filter-condition-lt) : Integer
-﻿  [Lte](#cfn-guardduty-filter-condition-lte) : Integer
-﻿  [Neq](#cfn-guardduty-filter-condition-neq) : 
+  [Gte](#cfn-guardduty-filter-condition-gte): Integer
+  [Lt](#cfn-guardduty-filter-condition-lt): Integer
+  [Lte](#cfn-guardduty-filter-condition-lte): Integer
+  [Neq](#cfn-guardduty-filter-condition-neq): 
     - String
 ```
 

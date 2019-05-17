@@ -23,12 +23,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-applicationautoscaling-scalabletarget-scheduledaction-syntax.yaml"></a>
 
 ```
-﻿  [EndTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-endtime) : Timestamp
-﻿  [ScalableTargetAction](#cfn-applicationautoscaling-scalabletarget-scheduledaction-scalabletargetaction) : 
+  [EndTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-endtime): Timestamp
+  [ScalableTargetAction](#cfn-applicationautoscaling-scalabletarget-scheduledaction-scalabletargetaction): 
     [ScalableTargetAction](aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction.md)
-﻿  [Schedule](#cfn-applicationautoscaling-scalabletarget-scheduledaction-schedule) : String
-﻿  [ScheduledActionName](#cfn-applicationautoscaling-scalabletarget-scheduledaction-scheduledactionname) : String
-﻿  [StartTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-starttime) : Timestamp
+  [Schedule](#cfn-applicationautoscaling-scalabletarget-scheduledaction-schedule): String
+  [ScheduledActionName](#cfn-applicationautoscaling-scalabletarget-scheduledaction-scheduledactionname): String
+  [StartTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-starttime): Timestamp
 ```
 
 ## Properties<a name="aws-properties-applicationautoscaling-scalabletarget-scheduledaction-properties"></a>

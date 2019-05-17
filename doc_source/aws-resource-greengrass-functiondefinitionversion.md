@@ -27,11 +27,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Greengrass::FunctionDefinitionVersion
-Properties : 
-﻿  [DefaultConfig](#cfn-greengrass-functiondefinitionversion-defaultconfig) : 
+Properties: 
+  [DefaultConfig](#cfn-greengrass-functiondefinitionversion-defaultconfig): 
     [DefaultConfig](aws-properties-greengrass-functiondefinitionversion-defaultconfig.md)
-﻿  [FunctionDefinitionId](#cfn-greengrass-functiondefinitionversion-functiondefinitionid) : String
-﻿  [Functions](#cfn-greengrass-functiondefinitionversion-functions) : 
+  [FunctionDefinitionId](#cfn-greengrass-functiondefinitionversion-functiondefinitionid): String
+  [Functions](#cfn-greengrass-functiondefinitionversion-functions): 
     - [Function](aws-properties-greengrass-functiondefinitionversion-function.md)
 ```
 

@@ -28,17 +28,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SSM::Association
-Properties : 
-﻿  [AssociationName](#cfn-ssm-association-associationname) : String
-﻿  [DocumentVersion](#cfn-ssm-association-documentversion) : String
-﻿  [InstanceId](#cfn-ssm-association-instanceid) : String
-﻿  [Name](#cfn-ssm-association-name) : String
-﻿  [OutputLocation](#cfn-ssm-association-outputlocation) : 
+Properties: 
+  [AssociationName](#cfn-ssm-association-associationname): String
+  [DocumentVersion](#cfn-ssm-association-documentversion): String
+  [InstanceId](#cfn-ssm-association-instanceid): String
+  [Name](#cfn-ssm-association-name): String
+  [OutputLocation](#cfn-ssm-association-outputlocation): 
     [InstanceAssociationOutputLocation](aws-properties-ssm-association-instanceassociationoutputlocation.md)
-﻿  [Parameters](#cfn-ssm-association-parameters) : 
+  [Parameters](#cfn-ssm-association-parameters): 
     Key : Value
-﻿  [ScheduleExpression](#cfn-ssm-association-scheduleexpression) : String
-﻿  [Targets](#cfn-ssm-association-targets) : 
+  [ScheduleExpression](#cfn-ssm-association-scheduleexpression): String
+  [Targets](#cfn-ssm-association-targets): 
     - [Target](aws-properties-ssm-association-target.md)
 ```
 

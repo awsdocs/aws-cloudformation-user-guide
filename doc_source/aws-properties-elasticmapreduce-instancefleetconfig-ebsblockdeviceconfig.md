@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-syntax.yaml"></a>
 
 ```
-﻿  [VolumeSpecification](#cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumespecification) : 
+  [VolumeSpecification](#cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumespecification): 
     [VolumeSpecification](aws-properties-elasticmapreduce-instancefleetconfig-volumespecification.md)
-﻿  [VolumesPerInstance](#cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumesperinstance) : Integer
+  [VolumesPerInstance](#cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumesperinstance): Integer
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-properties"></a>

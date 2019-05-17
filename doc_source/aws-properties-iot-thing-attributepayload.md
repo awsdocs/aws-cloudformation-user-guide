@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-thing-attributepayload-syntax.yaml"></a>
 
 ```
-﻿  [Attributes](#cfn-iot-thing-attributepayload-attributes) : 
+  [Attributes](#cfn-iot-thing-attributepayload-attributes): 
     Key : Value
 ```
 

@@ -20,13 +20,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-virtualnode-virtualnodespec-syntax.yaml"></a>
 
 ```
-﻿  [Backends](#cfn-appmesh-virtualnode-virtualnodespec-backends) : 
+  [Backends](#cfn-appmesh-virtualnode-virtualnodespec-backends): 
     - [Backend](aws-properties-appmesh-virtualnode-backend.md)
-﻿  [Listeners](#cfn-appmesh-virtualnode-virtualnodespec-listeners) : 
+  [Listeners](#cfn-appmesh-virtualnode-virtualnodespec-listeners): 
     - [Listener](aws-properties-appmesh-virtualnode-listener.md)
-﻿  [Logging](#cfn-appmesh-virtualnode-virtualnodespec-logging) : 
+  [Logging](#cfn-appmesh-virtualnode-virtualnodespec-logging): 
     [Logging](aws-properties-appmesh-virtualnode-logging.md)
-﻿  [ServiceDiscovery](#cfn-appmesh-virtualnode-virtualnodespec-servicediscovery) : 
+  [ServiceDiscovery](#cfn-appmesh-virtualnode-virtualnodespec-servicediscovery): 
     [ServiceDiscovery](aws-properties-appmesh-virtualnode-servicediscovery.md)
 ```
 

@@ -33,22 +33,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CloudTrail::Trail
-Properties : 
-﻿  [CloudWatchLogsLogGroupArn](#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn) : String
-﻿  [CloudWatchLogsRoleArn](#cfn-cloudtrail-trail-cloudwatchlogsrolearn) : String
-﻿  [EnableLogFileValidation](#cfn-cloudtrail-trail-enablelogfilevalidation) : Boolean
-﻿  [EventSelectors](#cfn-cloudtrail-trail-eventselectors) : 
+Properties: 
+  [CloudWatchLogsLogGroupArn](#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn): String
+  [CloudWatchLogsRoleArn](#cfn-cloudtrail-trail-cloudwatchlogsrolearn): String
+  [EnableLogFileValidation](#cfn-cloudtrail-trail-enablelogfilevalidation): Boolean
+  [EventSelectors](#cfn-cloudtrail-trail-eventselectors): 
     - [EventSelector](aws-properties-cloudtrail-trail-eventselector.md)
-﻿  [IncludeGlobalServiceEvents](#cfn-cloudtrail-trail-includeglobalserviceevents) : Boolean
-﻿  [IsLogging](#cfn-cloudtrail-trail-islogging) : Boolean
-﻿  [IsMultiRegionTrail](#cfn-cloudtrail-trail-ismultiregiontrail) : Boolean
-﻿  [KMSKeyId](#cfn-cloudtrail-trail-kmskeyid) : String
-﻿  [S3BucketName](#cfn-cloudtrail-trail-s3bucketname) : String
-﻿  [S3KeyPrefix](#cfn-cloudtrail-trail-s3keyprefix) : String
-﻿  [SnsTopicName](#cfn-cloudtrail-trail-snstopicname) : String
-﻿  [Tags](#cfn-cloudtrail-trail-tags) : 
+  [IncludeGlobalServiceEvents](#cfn-cloudtrail-trail-includeglobalserviceevents): Boolean
+  [IsLogging](#cfn-cloudtrail-trail-islogging): Boolean
+  [IsMultiRegionTrail](#cfn-cloudtrail-trail-ismultiregiontrail): Boolean
+  [KMSKeyId](#cfn-cloudtrail-trail-kmskeyid): String
+  [S3BucketName](#cfn-cloudtrail-trail-s3bucketname): String
+  [S3KeyPrefix](#cfn-cloudtrail-trail-s3keyprefix): String
+  [SnsTopicName](#cfn-cloudtrail-trail-snstopicname): String
+  [Tags](#cfn-cloudtrail-trail-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [TrailName](#cfn-cloudtrail-trail-trailname) : String
+  [TrailName](#cfn-cloudtrail-trail-trailname): String
 ```
 
 ## Properties<a name="aws-resource-cloudtrail-trail-properties"></a>

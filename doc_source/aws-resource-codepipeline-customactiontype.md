@@ -27,18 +27,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CodePipeline::CustomActionType
-Properties : 
-﻿  [Category](#cfn-codepipeline-customactiontype-category) : String
-﻿  [ConfigurationProperties](#cfn-codepipeline-customactiontype-configurationproperties) : 
+Properties: 
+  [Category](#cfn-codepipeline-customactiontype-category): String
+  [ConfigurationProperties](#cfn-codepipeline-customactiontype-configurationproperties): 
     - [ConfigurationProperties](aws-properties-codepipeline-customactiontype-configurationproperties.md)
-﻿  [InputArtifactDetails](#cfn-codepipeline-customactiontype-inputartifactdetails) : 
+  [InputArtifactDetails](#cfn-codepipeline-customactiontype-inputartifactdetails): 
     [ArtifactDetails](aws-properties-codepipeline-customactiontype-artifactdetails.md)
-﻿  [OutputArtifactDetails](#cfn-codepipeline-customactiontype-outputartifactdetails) : 
+  [OutputArtifactDetails](#cfn-codepipeline-customactiontype-outputartifactdetails): 
     [ArtifactDetails](aws-properties-codepipeline-customactiontype-artifactdetails.md)
-﻿  [Provider](#cfn-codepipeline-customactiontype-provider) : String
-﻿  [Settings](#cfn-codepipeline-customactiontype-settings) : 
+  [Provider](#cfn-codepipeline-customactiontype-provider): String
+  [Settings](#cfn-codepipeline-customactiontype-settings): 
     [Settings](aws-properties-codepipeline-customactiontype-settings.md)
-﻿  [Version](#cfn-codepipeline-customactiontype-version) : String
+  [Version](#cfn-codepipeline-customactiontype-version): String
 ```
 
 ## Properties<a name="aws-resource-codepipeline-customactiontype-properties"></a>

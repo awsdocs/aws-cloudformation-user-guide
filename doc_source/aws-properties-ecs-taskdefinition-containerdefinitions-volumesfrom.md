@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-taskdefinition-containerdefinitions-volumesfrom-syntax.yaml"></a>
 
 ```
-﻿  [ReadOnly](#cfn-ecs-taskdefinition-containerdefinition-volumesfrom-readonly) : Boolean
-﻿  [SourceContainer](#cfn-ecs-taskdefinition-containerdefinition-volumesfrom-sourcecontainer) : String
+  [ReadOnly](#cfn-ecs-taskdefinition-containerdefinition-volumesfrom-readonly): Boolean
+  [SourceContainer](#cfn-ecs-taskdefinition-containerdefinition-volumesfrom-sourcecontainer): String
 ```
 
 ## Properties<a name="aws-properties-ecs-taskdefinition-containerdefinitions-volumesfrom-properties"></a>

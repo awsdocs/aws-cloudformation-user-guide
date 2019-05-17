@@ -34,22 +34,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DMS::ReplicationInstance
-Properties : 
-﻿  [AllocatedStorage](#cfn-dms-replicationinstance-allocatedstorage) : Integer
-﻿  [AllowMajorVersionUpgrade](#cfn-dms-replicationinstance-allowmajorversionupgrade) : Boolean
-﻿  [AutoMinorVersionUpgrade](#cfn-dms-replicationinstance-autominorversionupgrade) : Boolean
-﻿  [AvailabilityZone](#cfn-dms-replicationinstance-availabilityzone) : String
-﻿  [EngineVersion](#cfn-dms-replicationinstance-engineversion) : String
-﻿  [KmsKeyId](#cfn-dms-replicationinstance-kmskeyid) : String
-﻿  [MultiAZ](#cfn-dms-replicationinstance-multiaz) : Boolean
-﻿  [PreferredMaintenanceWindow](#cfn-dms-replicationinstance-preferredmaintenancewindow) : String
-﻿  [PubliclyAccessible](#cfn-dms-replicationinstance-publiclyaccessible) : Boolean
-﻿  [ReplicationInstanceClass](#cfn-dms-replicationinstance-replicationinstanceclass) : String
-﻿  [ReplicationInstanceIdentifier](#cfn-dms-replicationinstance-replicationinstanceidentifier) : String
-﻿  [ReplicationSubnetGroupIdentifier](#cfn-dms-replicationinstance-replicationsubnetgroupidentifier) : String
-﻿  [Tags](#cfn-dms-replicationinstance-tags) : 
+Properties: 
+  [AllocatedStorage](#cfn-dms-replicationinstance-allocatedstorage): Integer
+  [AllowMajorVersionUpgrade](#cfn-dms-replicationinstance-allowmajorversionupgrade): Boolean
+  [AutoMinorVersionUpgrade](#cfn-dms-replicationinstance-autominorversionupgrade): Boolean
+  [AvailabilityZone](#cfn-dms-replicationinstance-availabilityzone): String
+  [EngineVersion](#cfn-dms-replicationinstance-engineversion): String
+  [KmsKeyId](#cfn-dms-replicationinstance-kmskeyid): String
+  [MultiAZ](#cfn-dms-replicationinstance-multiaz): Boolean
+  [PreferredMaintenanceWindow](#cfn-dms-replicationinstance-preferredmaintenancewindow): String
+  [PubliclyAccessible](#cfn-dms-replicationinstance-publiclyaccessible): Boolean
+  [ReplicationInstanceClass](#cfn-dms-replicationinstance-replicationinstanceclass): String
+  [ReplicationInstanceIdentifier](#cfn-dms-replicationinstance-replicationinstanceidentifier): String
+  [ReplicationSubnetGroupIdentifier](#cfn-dms-replicationinstance-replicationsubnetgroupidentifier): String
+  [Tags](#cfn-dms-replicationinstance-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VpcSecurityGroupIds](#cfn-dms-replicationinstance-vpcsecuritygroupids) : 
+  [VpcSecurityGroupIds](#cfn-dms-replicationinstance-vpcsecuritygroupids): 
     - String
 ```
 

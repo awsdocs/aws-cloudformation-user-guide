@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codepipeline-customactiontype-artifactdetails-syntax.yaml"></a>
 
 ```
-﻿  [MaximumCount](#cfn-codepipeline-customactiontype-artifactdetails-maximumcount) : Integer
-﻿  [MinimumCount](#cfn-codepipeline-customactiontype-artifactdetails-minimumcount) : Integer
+  [MaximumCount](#cfn-codepipeline-customactiontype-artifactdetails-maximumcount): Integer
+  [MinimumCount](#cfn-codepipeline-customactiontype-artifactdetails-minimumcount): Integer
 ```
 
 ## Properties<a name="aws-properties-codepipeline-customactiontype-artifactdetails-properties"></a>

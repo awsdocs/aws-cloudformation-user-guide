@@ -16,7 +16,7 @@ For sources, AWS CloudFormation looks for authentication information in the `uri
 
 **Topics**
 + [Syntax](#aws-resource-cloudformation-authentication-syntax)
-+ [Properties](#w4661ab1c17c15c15c16c19)
++ [Properties](#w4669ab1c17c15c15c16c19)
 + [Examples](#aws-resource-authentication-examples)
 
 ## Syntax<a name="aws-resource-cloudformation-authentication-syntax"></a>
@@ -65,7 +65,7 @@ String:
   [roleName](#cfn-cloudformation-authentication-rolename): String
 ```
 
-## Properties<a name="w4661ab1c17c15c15c16c19"></a>
+## Properties<a name="w4669ab1c17c15c15c16c19"></a>
 
 `accessKeyId`  <a name="cfn-cloudformation-authentication-accesskeyid"></a>
 Specifies the access key ID for S3 authentication\.  
@@ -115,7 +115,7 @@ This role must be contained within the instance profile that is attached to the 
 **Note**  
 Unlike most resources, the `AWS::CloudFormation::Authentication` type defines a list of user\-named blocks, each of which contains authentication properties that use lower camel case naming\.
 
-### EC2 Web Server Authentication<a name="w4661ab1c17c15c15c16c21b4"></a>
+### EC2 Web Server Authentication<a name="w4669ab1c17c15c15c16c21b4"></a>
 
 This template snippet shows how to get a file from a private S3 bucket within an EC2 instance\. The credentials used for authentication are defined in the `AWS::CloudFormation::Authentication` resource, and referenced by the `AWS::CloudFormation::Init` resource in the *files* section\.
 
@@ -206,7 +206,7 @@ Properties:
   EC2 Resource Properties ...
 ```
 
-### Specifying Both Basic and S3 Authentication<a name="w4661ab1c17c15c15c16c21b6"></a>
+### Specifying Both Basic and S3 Authentication<a name="w4669ab1c17c15c15c16c21b6"></a>
 
 The following example template snippet includes both *basic* and *S3* authentication types\.
 
@@ -251,7 +251,7 @@ AWS::CloudFormation::Authentication:
       - "myawsbucket"
 ```
 
-### IAM Roles<a name="w4661ab1c17c15c15c16c21b8"></a>
+### IAM Roles<a name="w4669ab1c17c15c15c16c21b8"></a>
 
 The following example shows how to use IAM roles:
 + `myRole` is an [AWS::IAM::Role](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html) resource\.

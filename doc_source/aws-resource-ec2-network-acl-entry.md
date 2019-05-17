@@ -29,18 +29,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::NetworkAclEntry
-Properties : 
-﻿  [CidrBlock](#cfn-ec2-networkaclentry-cidrblock) : String
-﻿  [Egress](#cfn-ec2-networkaclentry-egress) : Boolean
-﻿  [Icmp](#cfn-ec2-networkaclentry-icmp) : 
+Properties: 
+  [CidrBlock](#cfn-ec2-networkaclentry-cidrblock): String
+  [Egress](#cfn-ec2-networkaclentry-egress): Boolean
+  [Icmp](#cfn-ec2-networkaclentry-icmp): 
     [Icmp](aws-properties-ec2-networkaclentry-icmp.md)
-﻿  [Ipv6CidrBlock](#cfn-ec2-networkaclentry-ipv6cidrblock) : String
-﻿  [NetworkAclId](#cfn-ec2-networkaclentry-networkaclid) : String
-﻿  [PortRange](#cfn-ec2-networkaclentry-portrange) : 
+  [Ipv6CidrBlock](#cfn-ec2-networkaclentry-ipv6cidrblock): String
+  [NetworkAclId](#cfn-ec2-networkaclentry-networkaclid): String
+  [PortRange](#cfn-ec2-networkaclentry-portrange): 
     [PortRange](aws-properties-ec2-networkaclentry-portrange.md)
-﻿  [Protocol](#cfn-ec2-networkaclentry-protocol) : Integer
-﻿  [RuleAction](#cfn-ec2-networkaclentry-ruleaction) : String
-﻿  [RuleNumber](#cfn-ec2-networkaclentry-rulenumber) : Integer
+  [Protocol](#cfn-ec2-networkaclentry-protocol): Integer
+  [RuleAction](#cfn-ec2-networkaclentry-ruleaction): String
+  [RuleNumber](#cfn-ec2-networkaclentry-rulenumber): Integer
 ```
 
 ## Properties<a name="aws-resource-ec2-network-acl-entry-properties"></a>

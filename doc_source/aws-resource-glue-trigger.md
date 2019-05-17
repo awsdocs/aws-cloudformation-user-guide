@@ -26,15 +26,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Glue::Trigger
-Properties : 
-﻿  [Actions](#cfn-glue-trigger-actions) : 
+Properties: 
+  [Actions](#cfn-glue-trigger-actions): 
     - [Action](aws-properties-glue-trigger-action.md)
-﻿  [Description](#cfn-glue-trigger-description) : String
-﻿  [Name](#cfn-glue-trigger-name) : String
-﻿  [Predicate](#cfn-glue-trigger-predicate) : 
+  [Description](#cfn-glue-trigger-description): String
+  [Name](#cfn-glue-trigger-name): String
+  [Predicate](#cfn-glue-trigger-predicate): 
     [Predicate](aws-properties-glue-trigger-predicate.md)
-﻿  [Schedule](#cfn-glue-trigger-schedule) : String
-﻿  [Type](#cfn-glue-trigger-type) : String
+  [Schedule](#cfn-glue-trigger-schedule): String
+  [Type](#cfn-glue-trigger-type): String
 ```
 
 ## Properties<a name="aws-resource-glue-trigger-properties"></a>

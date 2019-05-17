@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts-syntax.yaml"></a>
 
 ```
-﻿  [Type](#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-type) : String
-﻿  [Value](#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-value) : Integer
+  [Type](#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-type): String
+  [Value](#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-value): Integer
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts-properties"></a>

@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dax-cluster-ssespecification-syntax.yaml"></a>
 
 ```
-﻿  [SSEEnabled](#cfn-dax-cluster-ssespecification-sseenabled) : Boolean
+  [SSEEnabled](#cfn-dax-cluster-ssespecification-sseenabled): Boolean
 ```
 
 ## Properties<a name="aws-properties-dax-cluster-ssespecification-properties"></a>

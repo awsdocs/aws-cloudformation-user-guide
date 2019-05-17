@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-crawler-targets-syntax.yaml"></a>
 
 ```
-﻿  [JdbcTargets](#cfn-glue-crawler-targets-jdbctargets) : 
+  [JdbcTargets](#cfn-glue-crawler-targets-jdbctargets): 
     - [JdbcTarget](aws-properties-glue-crawler-jdbctarget.md)
-﻿  [S3Targets](#cfn-glue-crawler-targets-s3targets) : 
+  [S3Targets](#cfn-glue-crawler-targets-s3targets): 
     - [S3Target](aws-properties-glue-crawler-s3target.md)
 ```
 

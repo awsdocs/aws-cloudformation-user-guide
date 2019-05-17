@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::KinesisAnalytics::Application
-Properties : 
-﻿  [ApplicationCode](#cfn-kinesisanalytics-application-applicationcode) : String
-﻿  [ApplicationDescription](#cfn-kinesisanalytics-application-applicationdescription) : String
-﻿  [ApplicationName](#cfn-kinesisanalytics-application-applicationname) : String
-﻿  [Inputs](#cfn-kinesisanalytics-application-inputs) : 
+Properties: 
+  [ApplicationCode](#cfn-kinesisanalytics-application-applicationcode): String
+  [ApplicationDescription](#cfn-kinesisanalytics-application-applicationdescription): String
+  [ApplicationName](#cfn-kinesisanalytics-application-applicationname): String
+  [Inputs](#cfn-kinesisanalytics-application-inputs): 
     - [Input](aws-properties-kinesisanalytics-application-input.md)
 ```
 

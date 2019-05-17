@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-route53-recordset-geolocation-1-syntax.yaml"></a>
 
 ```
-﻿  [ContinentCode](#cfn-route53-recordsetgroup-geolocation-continentcode) : String
-﻿  [CountryCode](#cfn-route53-recordset-geolocation-countrycode) : String
-﻿  [SubdivisionCode](#cfn-route53-recordset-geolocation-subdivisioncode) : String
+  [ContinentCode](#cfn-route53-recordsetgroup-geolocation-continentcode): String
+  [CountryCode](#cfn-route53-recordset-geolocation-countrycode): String
+  [SubdivisionCode](#cfn-route53-recordset-geolocation-subdivisioncode): String
 ```
 
 ## Properties<a name="aws-properties-route53-recordset-geolocation-1-properties"></a>

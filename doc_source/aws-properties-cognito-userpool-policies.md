@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cognito-userpool-policies-syntax.yaml"></a>
 
 ```
-﻿  [PasswordPolicy](#cfn-cognito-userpool-policies-passwordpolicy) : 
+  [PasswordPolicy](#cfn-cognito-userpool-policies-passwordpolicy): 
     [PasswordPolicy](aws-properties-cognito-userpool-passwordpolicy.md)
 ```
 

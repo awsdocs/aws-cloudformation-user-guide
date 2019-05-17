@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appsync-graphqlapi-logconfig-syntax.yaml"></a>
 
 ```
-﻿  [CloudWatchLogsRoleArn](#cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn) : String
-﻿  [FieldLogLevel](#cfn-appsync-graphqlapi-logconfig-fieldloglevel) : String
+  [CloudWatchLogsRoleArn](#cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn): String
+  [FieldLogLevel](#cfn-appsync-graphqlapi-logconfig-fieldloglevel): String
 ```
 
 ## Properties<a name="aws-properties-appsync-graphqlapi-logconfig-properties"></a>

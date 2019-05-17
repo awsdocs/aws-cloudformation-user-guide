@@ -29,14 +29,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cognito-userpool-lambdaconfig-syntax.yaml"></a>
 
 ```
-﻿  [CreateAuthChallenge](#cfn-cognito-userpool-lambdaconfig-createauthchallenge) : String
-﻿  [CustomMessage](#cfn-cognito-userpool-lambdaconfig-custommessage) : String
-﻿  [DefineAuthChallenge](#cfn-cognito-userpool-lambdaconfig-defineauthchallenge) : String
-﻿  [PostAuthentication](#cfn-cognito-userpool-lambdaconfig-postauthentication) : String
-﻿  [PostConfirmation](#cfn-cognito-userpool-lambdaconfig-postconfirmation) : String
-﻿  [PreAuthentication](#cfn-cognito-userpool-lambdaconfig-preauthentication) : String
-﻿  [PreSignUp](#cfn-cognito-userpool-lambdaconfig-presignup) : String
-﻿  [VerifyAuthChallengeResponse](#cfn-cognito-userpool-lambdaconfig-verifyauthchallengeresponse) : String
+  [CreateAuthChallenge](#cfn-cognito-userpool-lambdaconfig-createauthchallenge): String
+  [CustomMessage](#cfn-cognito-userpool-lambdaconfig-custommessage): String
+  [DefineAuthChallenge](#cfn-cognito-userpool-lambdaconfig-defineauthchallenge): String
+  [PostAuthentication](#cfn-cognito-userpool-lambdaconfig-postauthentication): String
+  [PostConfirmation](#cfn-cognito-userpool-lambdaconfig-postconfirmation): String
+  [PreAuthentication](#cfn-cognito-userpool-lambdaconfig-preauthentication): String
+  [PreSignUp](#cfn-cognito-userpool-lambdaconfig-presignup): String
+  [VerifyAuthChallengeResponse](#cfn-cognito-userpool-lambdaconfig-verifyauthchallengeresponse): String
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-lambdaconfig-properties"></a>

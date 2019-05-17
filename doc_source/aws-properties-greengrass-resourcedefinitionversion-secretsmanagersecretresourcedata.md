@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-resourcedefinitionversion-secretsmanagersecretresourcedata-syntax.yaml"></a>
 
 ```
-﻿  [ARN](#cfn-greengrass-resourcedefinitionversion-secretsmanagersecretresourcedata-arn) : String
-﻿  [AdditionalStagingLabelsToDownload](#cfn-greengrass-resourcedefinitionversion-secretsmanagersecretresourcedata-additionalstaginglabelstodownload) : 
+  [ARN](#cfn-greengrass-resourcedefinitionversion-secretsmanagersecretresourcedata-arn): String
+  [AdditionalStagingLabelsToDownload](#cfn-greengrass-resourcedefinitionversion-secretsmanagersecretresourcedata-additionalstaginglabelstodownload): 
     - String
 ```
 

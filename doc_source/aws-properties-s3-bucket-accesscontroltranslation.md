@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-accesscontroltranslation-syntax.yaml"></a>
 
 ```
-﻿  [Owner](#cfn-s3-bucket-accesscontroltranslation-owner) : String
+  [Owner](#cfn-s3-bucket-accesscontroltranslation-owner): String
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-accesscontroltranslation-properties"></a>

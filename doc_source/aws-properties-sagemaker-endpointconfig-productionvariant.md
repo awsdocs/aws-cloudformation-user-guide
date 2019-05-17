@@ -22,12 +22,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-sagemaker-endpointconfig-productionvariant-syntax.yaml"></a>
 
 ```
-﻿  [AcceleratorType](#cfn-sagemaker-endpointconfig-productionvariant-acceleratortype) : String
-﻿  [InitialInstanceCount](#cfn-sagemaker-endpointconfig-productionvariant-initialinstancecount) : Integer
-﻿  [InitialVariantWeight](#cfn-sagemaker-endpointconfig-productionvariant-initialvariantweight) : Double
-﻿  [InstanceType](#cfn-sagemaker-endpointconfig-productionvariant-instancetype) : String
-﻿  [ModelName](#cfn-sagemaker-endpointconfig-productionvariant-modelname) : String
-﻿  [VariantName](#cfn-sagemaker-endpointconfig-productionvariant-variantname) : String
+  [AcceleratorType](#cfn-sagemaker-endpointconfig-productionvariant-acceleratortype): String
+  [InitialInstanceCount](#cfn-sagemaker-endpointconfig-productionvariant-initialinstancecount): Integer
+  [InitialVariantWeight](#cfn-sagemaker-endpointconfig-productionvariant-initialvariantweight): Double
+  [InstanceType](#cfn-sagemaker-endpointconfig-productionvariant-instancetype): String
+  [ModelName](#cfn-sagemaker-endpointconfig-productionvariant-modelname): String
+  [VariantName](#cfn-sagemaker-endpointconfig-productionvariant-variantname): String
 ```
 
 ## Properties<a name="aws-properties-sagemaker-endpointconfig-productionvariant-properties"></a>

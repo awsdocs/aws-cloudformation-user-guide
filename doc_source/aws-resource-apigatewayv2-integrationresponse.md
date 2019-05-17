@@ -27,14 +27,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGatewayV2::IntegrationResponse
-Properties : 
-﻿  [ApiId](#cfn-apigatewayv2-integrationresponse-apiid) : String
-﻿  [ContentHandlingStrategy](#cfn-apigatewayv2-integrationresponse-contenthandlingstrategy) : String
-﻿  [IntegrationId](#cfn-apigatewayv2-integrationresponse-integrationid) : String
-﻿  [IntegrationResponseKey](#cfn-apigatewayv2-integrationresponse-integrationresponsekey) : String
-﻿  [ResponseParameters](#cfn-apigatewayv2-integrationresponse-responseparameters) : Json
-﻿  [ResponseTemplates](#cfn-apigatewayv2-integrationresponse-responsetemplates) : Json
-﻿  [TemplateSelectionExpression](#cfn-apigatewayv2-integrationresponse-templateselectionexpression) : String
+Properties: 
+  [ApiId](#cfn-apigatewayv2-integrationresponse-apiid): String
+  [ContentHandlingStrategy](#cfn-apigatewayv2-integrationresponse-contenthandlingstrategy): String
+  [IntegrationId](#cfn-apigatewayv2-integrationresponse-integrationid): String
+  [IntegrationResponseKey](#cfn-apigatewayv2-integrationresponse-integrationresponsekey): String
+  [ResponseParameters](#cfn-apigatewayv2-integrationresponse-responseparameters): Json
+  [ResponseTemplates](#cfn-apigatewayv2-integrationresponse-responsetemplates): Json
+  [TemplateSelectionExpression](#cfn-apigatewayv2-integrationresponse-templateselectionexpression): String
 ```
 
 ## Properties<a name="aws-resource-apigatewayv2-integrationresponse-properties"></a>

@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-waf-rule-predicates-syntax.yaml"></a>
 
 ```
-﻿  [DataId](#cfn-waf-rule-predicates-dataid) : String
-﻿  [Negated](#cfn-waf-rule-predicates-negated) : Boolean
-﻿  [Type](#cfn-waf-rule-predicates-type) : String
+  [DataId](#cfn-waf-rule-predicates-dataid): String
+  [Negated](#cfn-waf-rule-predicates-negated): Boolean
+  [Type](#cfn-waf-rule-predicates-type): String
 ```
 
 ## Properties<a name="aws-properties-waf-rule-predicates-properties"></a>

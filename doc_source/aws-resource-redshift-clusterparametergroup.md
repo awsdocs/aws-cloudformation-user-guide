@@ -24,12 +24,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Redshift::ClusterParameterGroup
-Properties : 
-﻿  [Description](#cfn-redshift-clusterparametergroup-description) : String
-﻿  [ParameterGroupFamily](#cfn-redshift-clusterparametergroup-parametergroupfamily) : String
-﻿  [Parameters](#cfn-redshift-clusterparametergroup-parameters) : 
+Properties: 
+  [Description](#cfn-redshift-clusterparametergroup-description): String
+  [ParameterGroupFamily](#cfn-redshift-clusterparametergroup-parametergroupfamily): String
+  [Parameters](#cfn-redshift-clusterparametergroup-parameters): 
     - [Parameter](aws-property-redshift-clusterparametergroup-parameter.md)
-﻿  [Tags](#cfn-redshift-clusterparametergroup-tags) : 
+  [Tags](#cfn-redshift-clusterparametergroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

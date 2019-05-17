@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-cpuoptions-syntax.yaml"></a>
 
 ```
-﻿  [CoreCount](#cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions-corecount) : Integer
-﻿  [ThreadsPerCore](#cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions-threadspercore) : Integer
+  [CoreCount](#cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions-corecount): Integer
+  [ThreadsPerCore](#cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions-threadspercore): Integer
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-cpuoptions-properties"></a>

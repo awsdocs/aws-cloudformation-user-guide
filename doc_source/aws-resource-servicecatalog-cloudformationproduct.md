@@ -30,18 +30,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceCatalog::CloudFormationProduct
-Properties : 
-﻿  [AcceptLanguage](#cfn-servicecatalog-cloudformationproduct-acceptlanguage) : String
-﻿  [Description](#cfn-servicecatalog-cloudformationproduct-description) : String
-﻿  [Distributor](#cfn-servicecatalog-cloudformationproduct-distributor) : String
-﻿  [Name](#cfn-servicecatalog-cloudformationproduct-name) : String
-﻿  [Owner](#cfn-servicecatalog-cloudformationproduct-owner) : String
-﻿  [ProvisioningArtifactParameters](#cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters) : 
+Properties: 
+  [AcceptLanguage](#cfn-servicecatalog-cloudformationproduct-acceptlanguage): String
+  [Description](#cfn-servicecatalog-cloudformationproduct-description): String
+  [Distributor](#cfn-servicecatalog-cloudformationproduct-distributor): String
+  [Name](#cfn-servicecatalog-cloudformationproduct-name): String
+  [Owner](#cfn-servicecatalog-cloudformationproduct-owner): String
+  [ProvisioningArtifactParameters](#cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters): 
     - [ProvisioningArtifactProperties](aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.md)
-﻿  [SupportDescription](#cfn-servicecatalog-cloudformationproduct-supportdescription) : String
-﻿  [SupportEmail](#cfn-servicecatalog-cloudformationproduct-supportemail) : String
-﻿  [SupportUrl](#cfn-servicecatalog-cloudformationproduct-supporturl) : String
-﻿  [Tags](#cfn-servicecatalog-cloudformationproduct-tags) : 
+  [SupportDescription](#cfn-servicecatalog-cloudformationproduct-supportdescription): String
+  [SupportEmail](#cfn-servicecatalog-cloudformationproduct-supportemail): String
+  [SupportUrl](#cfn-servicecatalog-cloudformationproduct-supporturl): String
+  [Tags](#cfn-servicecatalog-cloudformationproduct-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

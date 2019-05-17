@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters-syntax.yaml"></a>
 
 ```
-﻿  [CSVMappingParameters](#cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-csvmappingparameters) : 
+  [CSVMappingParameters](#cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-csvmappingparameters): 
     [CSVMappingParameters](aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters.md)
-﻿  [JSONMappingParameters](#cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-jsonmappingparameters) : 
+  [JSONMappingParameters](#cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-jsonmappingparameters): 
     [JSONMappingParameters](aws-properties-kinesisanalytics-applicationreferencedatasource-jsonmappingparameters.md)
 ```
 

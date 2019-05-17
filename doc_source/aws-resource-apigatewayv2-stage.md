@@ -29,18 +29,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGatewayV2::Stage
-Properties : 
-﻿  [AccessLogSettings](#cfn-apigatewayv2-stage-accesslogsettings) : 
+Properties: 
+  [AccessLogSettings](#cfn-apigatewayv2-stage-accesslogsettings): 
     [AccessLogSettings](aws-properties-apigatewayv2-stage-accesslogsettings.md)
-﻿  [ApiId](#cfn-apigatewayv2-stage-apiid) : String
-﻿  [ClientCertificateId](#cfn-apigatewayv2-stage-clientcertificateid) : String
-﻿  [DefaultRouteSettings](#cfn-apigatewayv2-stage-defaultroutesettings) : 
+  [ApiId](#cfn-apigatewayv2-stage-apiid): String
+  [ClientCertificateId](#cfn-apigatewayv2-stage-clientcertificateid): String
+  [DefaultRouteSettings](#cfn-apigatewayv2-stage-defaultroutesettings): 
     [RouteSettings](aws-properties-apigatewayv2-stage-routesettings.md)
-﻿  [DeploymentId](#cfn-apigatewayv2-stage-deploymentid) : String
-﻿  [Description](#cfn-apigatewayv2-stage-description) : String
-﻿  [RouteSettings](#cfn-apigatewayv2-stage-routesettings) : [Json](aws-properties-apigatewayv2-stage-routesettings.md)
-﻿  [StageName](#cfn-apigatewayv2-stage-stagename) : String
-﻿  [StageVariables](#cfn-apigatewayv2-stage-stagevariables) : Json
+  [DeploymentId](#cfn-apigatewayv2-stage-deploymentid): String
+  [Description](#cfn-apigatewayv2-stage-description): String
+  [RouteSettings](#cfn-apigatewayv2-stage-routesettings): [Json](aws-properties-apigatewayv2-stage-routesettings.md)
+  [StageName](#cfn-apigatewayv2-stage-stagename): String
+  [StageVariables](#cfn-apigatewayv2-stage-stagevariables): Json
 ```
 
 ## Properties<a name="aws-resource-apigatewayv2-stage-properties"></a>

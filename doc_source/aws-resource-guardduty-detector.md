@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::GuardDuty::Detector
-Properties : 
-﻿  [Enable](#cfn-guardduty-detector-enable) : Boolean
-﻿  [FindingPublishingFrequency](#cfn-guardduty-detector-findingpublishingfrequency) : String
+Properties: 
+  [Enable](#cfn-guardduty-detector-enable): Boolean
+  [FindingPublishingFrequency](#cfn-guardduty-detector-findingpublishingfrequency): String
 ```
 
 ## Properties<a name="aws-resource-guardduty-detector-properties"></a>

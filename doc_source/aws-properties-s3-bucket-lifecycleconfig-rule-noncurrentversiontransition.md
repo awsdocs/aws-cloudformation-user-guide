@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-syntax.yaml"></a>
 
 ```
-﻿  [StorageClass](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-storageclass) : String
-﻿  [TransitionInDays](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-transitionindays) : Integer
+  [StorageClass](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-storageclass): String
+  [TransitionInDays](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-transitionindays): Integer
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-properties"></a>

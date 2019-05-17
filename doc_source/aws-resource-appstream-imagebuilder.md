@@ -33,20 +33,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppStream::ImageBuilder
-Properties : 
-﻿  [AppstreamAgentVersion](#cfn-appstream-imagebuilder-appstreamagentversion) : String
-﻿  [Description](#cfn-appstream-imagebuilder-description) : String
-﻿  [DisplayName](#cfn-appstream-imagebuilder-displayname) : String
-﻿  [DomainJoinInfo](#cfn-appstream-imagebuilder-domainjoininfo) : 
+Properties: 
+  [AppstreamAgentVersion](#cfn-appstream-imagebuilder-appstreamagentversion): String
+  [Description](#cfn-appstream-imagebuilder-description): String
+  [DisplayName](#cfn-appstream-imagebuilder-displayname): String
+  [DomainJoinInfo](#cfn-appstream-imagebuilder-domainjoininfo): 
     [DomainJoinInfo](aws-properties-appstream-imagebuilder-domainjoininfo.md)
-﻿  [EnableDefaultInternetAccess](#cfn-appstream-imagebuilder-enabledefaultinternetaccess) : Boolean
-﻿  [ImageArn](#cfn-appstream-imagebuilder-imagearn) : String
-﻿  [ImageName](#cfn-appstream-imagebuilder-imagename) : String
-﻿  [InstanceType](#cfn-appstream-imagebuilder-instancetype) : String
-﻿  [Name](#cfn-appstream-imagebuilder-name) : String
-﻿  [Tags](#cfn-appstream-imagebuilder-tags) : 
+  [EnableDefaultInternetAccess](#cfn-appstream-imagebuilder-enabledefaultinternetaccess): Boolean
+  [ImageArn](#cfn-appstream-imagebuilder-imagearn): String
+  [ImageName](#cfn-appstream-imagebuilder-imagename): String
+  [InstanceType](#cfn-appstream-imagebuilder-instancetype): String
+  [Name](#cfn-appstream-imagebuilder-name): String
+  [Tags](#cfn-appstream-imagebuilder-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VpcConfig](#cfn-appstream-imagebuilder-vpcconfig) : 
+  [VpcConfig](#cfn-appstream-imagebuilder-vpcconfig): 
     [VpcConfig](aws-properties-appstream-imagebuilder-vpcconfig.md)
 ```
 

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-amazonmq-broker-loglist-syntax.yaml"></a>
 
 ```
-﻿  [Audit](#cfn-amazonmq-broker-loglist-audit) : Boolean
-﻿  [General](#cfn-amazonmq-broker-loglist-general) : Boolean
+  [Audit](#cfn-amazonmq-broker-loglist-audit): Boolean
+  [General](#cfn-amazonmq-broker-loglist-general): Boolean
 ```
 
 ## Properties<a name="aws-properties-amazonmq-broker-loglist-properties"></a>

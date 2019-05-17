@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-networkaclentry-portrange-syntax.yaml"></a>
 
 ```
-﻿  [From](#cfn-ec2-networkaclentry-portrange-from) : Integer
-﻿  [To](#cfn-ec2-networkaclentry-portrange-to) : Integer
+  [From](#cfn-ec2-networkaclentry-portrange-from): Integer
+  [To](#cfn-ec2-networkaclentry-portrange-to): Integer
 ```
 
 ## Properties<a name="aws-properties-ec2-networkaclentry-portrange-properties"></a>

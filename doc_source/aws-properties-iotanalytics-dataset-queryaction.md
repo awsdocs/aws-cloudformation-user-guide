@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-dataset-queryaction-syntax.yaml"></a>
 
 ```
-﻿  [Filters](#cfn-iotanalytics-dataset-queryaction-filters) : 
+  [Filters](#cfn-iotanalytics-dataset-queryaction-filters): 
     - [Filter](aws-properties-iotanalytics-dataset-filter.md)
-﻿  [SqlQuery](#cfn-iotanalytics-dataset-queryaction-sqlquery) : String
+  [SqlQuery](#cfn-iotanalytics-dataset-queryaction-sqlquery): String
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-dataset-queryaction-properties"></a>

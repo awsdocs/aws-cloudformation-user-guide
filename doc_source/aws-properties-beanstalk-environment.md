@@ -31,21 +31,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ElasticBeanstalk::Environment
-Properties : 
-﻿  [ApplicationName](#cfn-beanstalk-environment-applicationname) : String
-﻿  [CNAMEPrefix](#cfn-beanstalk-environment-cnameprefix) : String
-﻿  [Description](#cfn-beanstalk-environment-description) : String
-﻿  [EnvironmentName](#cfn-beanstalk-environment-name) : String
-﻿  [OptionSettings](#cfn-beanstalk-environment-optionsettings) : 
+Properties: 
+  [ApplicationName](#cfn-beanstalk-environment-applicationname): String
+  [CNAMEPrefix](#cfn-beanstalk-environment-cnameprefix): String
+  [Description](#cfn-beanstalk-environment-description): String
+  [EnvironmentName](#cfn-beanstalk-environment-name): String
+  [OptionSettings](#cfn-beanstalk-environment-optionsettings): 
     - [OptionSetting](aws-properties-beanstalk-option-settings.md)
-﻿  [PlatformArn](#cfn-beanstalk-environment-platformarn) : String
-﻿  [SolutionStackName](#cfn-beanstalk-environment-solutionstackname) : String
-﻿  [Tags](#cfn-elasticbeanstalk-environment-tags) : 
+  [PlatformArn](#cfn-beanstalk-environment-platformarn): String
+  [SolutionStackName](#cfn-beanstalk-environment-solutionstackname): String
+  [Tags](#cfn-elasticbeanstalk-environment-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [TemplateName](#cfn-beanstalk-environment-templatename) : String
-﻿  [Tier](#cfn-beanstalk-environment-tier) : 
+  [TemplateName](#cfn-beanstalk-environment-templatename): String
+  [Tier](#cfn-beanstalk-environment-tier): 
     [Tier](aws-properties-beanstalk-environment-tier.md)
-﻿  [VersionLabel](#cfn-beanstalk-environment-versionlabel) : String
+  [VersionLabel](#cfn-beanstalk-environment-versionlabel): String
 ```
 
 ## Properties<a name="aws-properties-beanstalk-environment-properties"></a>

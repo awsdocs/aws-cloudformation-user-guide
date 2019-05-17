@@ -39,15 +39,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SecretsManager::Secret
-Properties : 
-﻿  [Description](#cfn-secretsmanager-secret-description) : String
-﻿  [GenerateSecretString](#cfn-secretsmanager-secret-generatesecretstring) : 
+Properties: 
+  [Description](#cfn-secretsmanager-secret-description): String
+  [GenerateSecretString](#cfn-secretsmanager-secret-generatesecretstring): 
     [GenerateSecretString](aws-properties-secretsmanager-secret-generatesecretstring.md)
-﻿  [KmsKeyId](#cfn-secretsmanager-secret-kmskeyid) : String
-﻿  [Name](#cfn-secretsmanager-secret-name) : String
-﻿  [SecretString](#cfn-secretsmanager-secret-secretstring) : 
+  [KmsKeyId](#cfn-secretsmanager-secret-kmskeyid): String
+  [Name](#cfn-secretsmanager-secret-name): String
+  [SecretString](#cfn-secretsmanager-secret-secretstring): 
     String
-﻿  [Tags](#cfn-secretsmanager-secret-tags) : 
+  [Tags](#cfn-secretsmanager-secret-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

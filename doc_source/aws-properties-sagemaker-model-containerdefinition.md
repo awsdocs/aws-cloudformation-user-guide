@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-sagemaker-model-containerdefinition-syntax.yaml"></a>
 
 ```
-﻿  [ContainerHostname](#cfn-sagemaker-model-containerdefinition-containerhostname) : String
-﻿  [Environment](#cfn-sagemaker-model-containerdefinition-environment) : Json
-﻿  [Image](#cfn-sagemaker-model-containerdefinition-image) : String
-﻿  [ModelDataUrl](#cfn-sagemaker-model-containerdefinition-modeldataurl) : String
+  [ContainerHostname](#cfn-sagemaker-model-containerdefinition-containerhostname): String
+  [Environment](#cfn-sagemaker-model-containerdefinition-environment): Json
+  [Image](#cfn-sagemaker-model-containerdefinition-image): String
+  [ModelDataUrl](#cfn-sagemaker-model-containerdefinition-modeldataurl): String
 ```
 
 ## Properties<a name="aws-properties-sagemaker-model-containerdefinition-properties"></a>

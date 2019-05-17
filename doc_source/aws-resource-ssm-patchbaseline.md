@@ -35,26 +35,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SSM::PatchBaseline
-Properties : 
-﻿  [ApprovalRules](#cfn-ssm-patchbaseline-approvalrules) : 
+Properties: 
+  [ApprovalRules](#cfn-ssm-patchbaseline-approvalrules): 
     [RuleGroup](aws-properties-ssm-patchbaseline-rulegroup.md)
-﻿  [ApprovedPatches](#cfn-ssm-patchbaseline-approvedpatches) : 
+  [ApprovedPatches](#cfn-ssm-patchbaseline-approvedpatches): 
     - String
-﻿  [ApprovedPatchesComplianceLevel](#cfn-ssm-patchbaseline-approvedpatchescompliancelevel) : String
-﻿  [ApprovedPatchesEnableNonSecurity](#cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity) : Boolean
-﻿  [Description](#cfn-ssm-patchbaseline-description) : String
-﻿  [GlobalFilters](#cfn-ssm-patchbaseline-globalfilters) : 
+  [ApprovedPatchesComplianceLevel](#cfn-ssm-patchbaseline-approvedpatchescompliancelevel): String
+  [ApprovedPatchesEnableNonSecurity](#cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity): Boolean
+  [Description](#cfn-ssm-patchbaseline-description): String
+  [GlobalFilters](#cfn-ssm-patchbaseline-globalfilters): 
     [PatchFilterGroup](aws-properties-ssm-patchbaseline-patchfiltergroup.md)
-﻿  [Name](#cfn-ssm-patchbaseline-name) : String
-﻿  [OperatingSystem](#cfn-ssm-patchbaseline-operatingsystem) : String
-﻿  [PatchGroups](#cfn-ssm-patchbaseline-patchgroups) : 
+  [Name](#cfn-ssm-patchbaseline-name): String
+  [OperatingSystem](#cfn-ssm-patchbaseline-operatingsystem): String
+  [PatchGroups](#cfn-ssm-patchbaseline-patchgroups): 
     - String
-﻿  [RejectedPatches](#cfn-ssm-patchbaseline-rejectedpatches) : 
+  [RejectedPatches](#cfn-ssm-patchbaseline-rejectedpatches): 
     - String
-﻿  [RejectedPatchesAction](#cfn-ssm-patchbaseline-rejectedpatchesaction) : String
-﻿  [Sources](#cfn-ssm-patchbaseline-sources) : 
+  [RejectedPatchesAction](#cfn-ssm-patchbaseline-rejectedpatchesaction): String
+  [Sources](#cfn-ssm-patchbaseline-sources): 
     - [PatchSource](aws-properties-ssm-patchbaseline-patchsource.md)
-﻿  [Tags](#cfn-ssm-patchbaseline-tags) : 
+  [Tags](#cfn-ssm-patchbaseline-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

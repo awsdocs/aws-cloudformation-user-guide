@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::TransitGatewayRouteTablePropagation
-Properties : 
-﻿  [TransitGatewayAttachmentId](#cfn-ec2-transitgatewayroutetablepropagation-transitgatewayattachmentid) : String
-﻿  [TransitGatewayRouteTableId](#cfn-ec2-transitgatewayroutetablepropagation-transitgatewayroutetableid) : String
+Properties: 
+  [TransitGatewayAttachmentId](#cfn-ec2-transitgatewayroutetablepropagation-transitgatewayattachmentid): String
+  [TransitGatewayRouteTableId](#cfn-ec2-transitgatewayroutetablepropagation-transitgatewayroutetableid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-transitgatewayroutetablepropagation-properties"></a>

@@ -24,14 +24,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudfront-distribution-origin-syntax.yaml"></a>
 
 ```
-﻿  [CustomOriginConfig](#cfn-cloudfront-distribution-origin-customoriginconfig) : 
+  [CustomOriginConfig](#cfn-cloudfront-distribution-origin-customoriginconfig): 
     [CustomOriginConfig](aws-properties-cloudfront-distribution-customoriginconfig.md)
-﻿  [DomainName](#cfn-cloudfront-distribution-origin-domainname) : String
-﻿  [Id](#cfn-cloudfront-distribution-origin-id) : String
-﻿  [OriginCustomHeaders](#cfn-cloudfront-distribution-origin-origincustomheaders) : 
+  [DomainName](#cfn-cloudfront-distribution-origin-domainname): String
+  [Id](#cfn-cloudfront-distribution-origin-id): String
+  [OriginCustomHeaders](#cfn-cloudfront-distribution-origin-origincustomheaders): 
     - [OriginCustomHeader](aws-properties-cloudfront-distribution-origincustomheader.md)
-﻿  [OriginPath](#cfn-cloudfront-distribution-origin-originpath) : String
-﻿  [S3OriginConfig](#cfn-cloudfront-distribution-origin-s3originconfig) : 
+  [OriginPath](#cfn-cloudfront-distribution-origin-originpath): String
+  [S3OriginConfig](#cfn-cloudfront-distribution-origin-s3originconfig): 
     [S3OriginConfig](aws-properties-cloudfront-distribution-s3originconfig.md)
 ```
 

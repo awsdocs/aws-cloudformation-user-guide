@@ -25,12 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPC
-Properties : 
-﻿  [CidrBlock](#cfn-aws-ec2-vpc-cidrblock) : String
-﻿  [EnableDnsHostnames](#cfn-aws-ec2-vpc-EnableDnsHostnames) : Boolean
-﻿  [EnableDnsSupport](#cfn-aws-ec2-vpc-EnableDnsSupport) : Boolean
-﻿  [InstanceTenancy](#cfn-aws-ec2-vpc-instancetenancy) : String
-﻿  [Tags](#cfn-aws-ec2-vpc-tags) : 
+Properties: 
+  [CidrBlock](#cfn-aws-ec2-vpc-cidrblock): String
+  [EnableDnsHostnames](#cfn-aws-ec2-vpc-EnableDnsHostnames): Boolean
+  [EnableDnsSupport](#cfn-aws-ec2-vpc-EnableDnsSupport): Boolean
+  [InstanceTenancy](#cfn-aws-ec2-vpc-instancetenancy): String
+  [Tags](#cfn-aws-ec2-vpc-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
@@ -135,7 +135,7 @@ myVPC:
     InstanceTenancy: dedicated
     Tags:
      - Key: foo
-     Value: bar
+       Value: bar
 ```
 
 ## See Also<a name="aws-resource-ec2-vpc--seealso"></a>

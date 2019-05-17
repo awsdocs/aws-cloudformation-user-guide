@@ -27,14 +27,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DirectoryService::MicrosoftAD
-Properties : 
-﻿  [CreateAlias](#cfn-directoryservice-microsoftad-createalias) : Boolean
-﻿  [Edition](#cfn-directoryservice-microsoftad-edition) : String
-﻿  [EnableSso](#cfn-directoryservice-microsoftad-enablesso) : Boolean
-﻿  [Name](#cfn-directoryservice-microsoftad-name) : String
-﻿  [Password](#cfn-directoryservice-microsoftad-password) : String
-﻿  [ShortName](#cfn-directoryservice-microsoftad-shortname) : String
-﻿  [VpcSettings](#cfn-directoryservice-microsoftad-vpcsettings) : 
+Properties: 
+  [CreateAlias](#cfn-directoryservice-microsoftad-createalias): Boolean
+  [Edition](#cfn-directoryservice-microsoftad-edition): String
+  [EnableSso](#cfn-directoryservice-microsoftad-enablesso): Boolean
+  [Name](#cfn-directoryservice-microsoftad-name): String
+  [Password](#cfn-directoryservice-microsoftad-password): String
+  [ShortName](#cfn-directoryservice-microsoftad-shortname): String
+  [VpcSettings](#cfn-directoryservice-microsoftad-vpcsettings): 
     [VpcSettings](aws-properties-directoryservice-microsoftad-vpcsettings.md)
 ```
 

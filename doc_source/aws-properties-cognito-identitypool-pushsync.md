@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cognito-identitypool-pushsync-syntax.yaml"></a>
 
 ```
-﻿  [ApplicationArns](#cfn-cognito-identitypool-pushsync-applicationarns) : 
+  [ApplicationArns](#cfn-cognito-identitypool-pushsync-applicationarns): 
     - String
-﻿  [RoleArn](#cfn-cognito-identitypool-pushsync-rolearn) : String
+  [RoleArn](#cfn-cognito-identitypool-pushsync-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-cognito-identitypool-pushsync-properties"></a>

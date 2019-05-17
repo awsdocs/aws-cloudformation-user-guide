@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-onpremisestagset-syntax.yaml"></a>
 
 ```
-﻿  [OnPremisesTagSetList](#cfn-codedeploy-deploymentgroup-onpremisestagset-onpremisestagsetlist) : 
+  [OnPremisesTagSetList](#cfn-codedeploy-deploymentgroup-onpremisestagset-onpremisestagsetlist): 
     - [OnPremisesTagSetListObject](aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject.md)
 ```
 

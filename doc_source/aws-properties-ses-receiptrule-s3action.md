@@ -27,10 +27,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ses-receiptrule-s3action-syntax.yaml"></a>
 
 ```
-﻿  [BucketName](#cfn-ses-receiptrule-s3action-bucketname) : String
-﻿  [KmsKeyArn](#cfn-ses-receiptrule-s3action-kmskeyarn) : String
-﻿  [ObjectKeyPrefix](#cfn-ses-receiptrule-s3action-objectkeyprefix) : String
-﻿  [TopicArn](#cfn-ses-receiptrule-s3action-topicarn) : String
+  [BucketName](#cfn-ses-receiptrule-s3action-bucketname): String
+  [KmsKeyArn](#cfn-ses-receiptrule-s3action-kmskeyarn): String
+  [ObjectKeyPrefix](#cfn-ses-receiptrule-s3action-objectkeyprefix): String
+  [TopicArn](#cfn-ses-receiptrule-s3action-topicarn): String
 ```
 
 ## Properties<a name="aws-properties-ses-receiptrule-s3action-properties"></a>

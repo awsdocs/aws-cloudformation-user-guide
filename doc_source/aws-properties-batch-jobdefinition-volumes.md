@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-batch-jobdefinition-volumes-syntax.yaml"></a>
 
 ```
-﻿  [Host](#cfn-batch-jobdefinition-volumes-host) : 
+  [Host](#cfn-batch-jobdefinition-volumes-host): 
     [VolumesHost](aws-properties-batch-jobdefinition-volumeshost.md)
-﻿  [Name](#cfn-batch-jobdefinition-volumes-name) : String
+  [Name](#cfn-batch-jobdefinition-volumes-name): String
 ```
 
 ## Properties<a name="aws-properties-batch-jobdefinition-volumes-properties"></a>

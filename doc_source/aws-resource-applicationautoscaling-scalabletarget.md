@@ -29,15 +29,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApplicationAutoScaling::ScalableTarget
-Properties : 
-﻿  [MaxCapacity](#cfn-applicationautoscaling-scalabletarget-maxcapacity) : Integer
-﻿  [MinCapacity](#cfn-applicationautoscaling-scalabletarget-mincapacity) : Integer
-﻿  [ResourceId](#cfn-applicationautoscaling-scalabletarget-resourceid) : String
-﻿  [RoleARN](#cfn-applicationautoscaling-scalabletarget-rolearn) : String
-﻿  [ScalableDimension](#cfn-applicationautoscaling-scalabletarget-scalabledimension) : String
-﻿  [ScheduledActions](#cfn-applicationautoscaling-scalabletarget-scheduledactions) : 
+Properties: 
+  [MaxCapacity](#cfn-applicationautoscaling-scalabletarget-maxcapacity): Integer
+  [MinCapacity](#cfn-applicationautoscaling-scalabletarget-mincapacity): Integer
+  [ResourceId](#cfn-applicationautoscaling-scalabletarget-resourceid): String
+  [RoleARN](#cfn-applicationautoscaling-scalabletarget-rolearn): String
+  [ScalableDimension](#cfn-applicationautoscaling-scalabletarget-scalabledimension): String
+  [ScheduledActions](#cfn-applicationautoscaling-scalabletarget-scheduledactions): 
     - [ScheduledAction](aws-properties-applicationautoscaling-scalabletarget-scheduledaction.md)
-﻿  [ServiceNamespace](#cfn-applicationautoscaling-scalabletarget-servicenamespace) : String
+  [ServiceNamespace](#cfn-applicationautoscaling-scalabletarget-servicenamespace): String
 ```
 
 ## Properties<a name="aws-resource-applicationautoscaling-scalabletarget-properties"></a>

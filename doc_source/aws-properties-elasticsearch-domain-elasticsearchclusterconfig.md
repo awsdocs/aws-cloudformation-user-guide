@@ -22,12 +22,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticsearch-domain-elasticsearchclusterconfig-syntax.yaml"></a>
 
 ```
-﻿  [DedicatedMasterCount](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastercount) : Integer
-﻿  [DedicatedMasterEnabled](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmasterenabled) : Boolean
-﻿  [DedicatedMasterType](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastertype) : String
-﻿  [InstanceCount](#cfn-elasticsearch-domain-elasticseachclusterconfig-instancecount) : Integer
-﻿  [InstanceType](#cfn-elasticsearch-domain-elasticseachclusterconfig-instnacetype) : String
-﻿  [ZoneAwarenessEnabled](#cfn-elasticsearch-domain-elasticseachclusterconfig-zoneawarenessenabled) : Boolean
+  [DedicatedMasterCount](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastercount): Integer
+  [DedicatedMasterEnabled](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmasterenabled): Boolean
+  [DedicatedMasterType](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastertype): String
+  [InstanceCount](#cfn-elasticsearch-domain-elasticseachclusterconfig-instancecount): Integer
+  [InstanceType](#cfn-elasticsearch-domain-elasticseachclusterconfig-instnacetype): String
+  [ZoneAwarenessEnabled](#cfn-elasticsearch-domain-elasticseachclusterconfig-zoneawarenessenabled): Boolean
 ```
 
 ## Properties<a name="aws-properties-elasticsearch-domain-elasticsearchclusterconfig-properties"></a>

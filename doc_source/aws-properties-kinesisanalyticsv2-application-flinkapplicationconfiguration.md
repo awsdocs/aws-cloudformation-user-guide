@@ -19,11 +19,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [CheckpointConfiguration](#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-checkpointconfiguration) : 
+  [CheckpointConfiguration](#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-checkpointconfiguration): 
     [CheckpointConfiguration](aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.md)
-﻿  [MonitoringConfiguration](#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-monitoringconfiguration) : 
+  [MonitoringConfiguration](#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-monitoringconfiguration): 
     [MonitoringConfiguration](aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.md)
-﻿  [ParallelismConfiguration](#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-parallelismconfiguration) : 
+  [ParallelismConfiguration](#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-parallelismconfiguration): 
     [ParallelismConfiguration](aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.md)
 ```
 

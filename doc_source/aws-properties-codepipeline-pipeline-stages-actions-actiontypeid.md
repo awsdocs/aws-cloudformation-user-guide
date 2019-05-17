@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codepipeline-pipeline-stages-actions-actiontypeid-syntax.yaml"></a>
 
 ```
-﻿  [Category](#cfn-codepipeline-pipeline-stages-actions-actiontypeid-category) : String
-﻿  [Owner](#cfn-codepipeline-pipeline-stages-actions-actiontypeid-owner) : String
-﻿  [Provider](#cfn-codepipeline-pipeline-stages-actions-actiontypeid-provider) : String
-﻿  [Version](#cfn-codepipeline-pipeline-stages-actions-actiontypeid-version) : String
+  [Category](#cfn-codepipeline-pipeline-stages-actions-actiontypeid-category): String
+  [Owner](#cfn-codepipeline-pipeline-stages-actions-actiontypeid-owner): String
+  [Provider](#cfn-codepipeline-pipeline-stages-actions-actiontypeid-provider): String
+  [Version](#cfn-codepipeline-pipeline-stages-actions-actiontypeid-version): String
 ```
 
 ## Properties<a name="aws-properties-codepipeline-pipeline-stages-actions-actiontypeid-properties"></a>

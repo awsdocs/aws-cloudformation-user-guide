@@ -28,16 +28,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apitgateway-stage-methodsetting-syntax.yaml"></a>
 
 ```
-﻿  [CacheDataEncrypted](#cfn-apigateway-stage-methodsetting-cachedataencrypted) : Boolean
-﻿  [CacheTtlInSeconds](#cfn-apigateway-stage-methodsetting-cachettlinseconds) : Integer
-﻿  [CachingEnabled](#cfn-apigateway-stage-methodsetting-cachingenabled) : Boolean
-﻿  [DataTraceEnabled](#cfn-apigateway-stage-methodsetting-datatraceenabled) : Boolean
-﻿  [HttpMethod](#cfn-apigateway-stage-methodsetting-httpmethod) : String
-﻿  [LoggingLevel](#cfn-apigateway-stage-methodsetting-logginglevel) : String
-﻿  [MetricsEnabled](#cfn-apigateway-stage-methodsetting-metricsenabled) : Boolean
-﻿  [ResourcePath](#cfn-apigateway-stage-methodsetting-resourcepath) : String
-﻿  [ThrottlingBurstLimit](#cfn-apigateway-stage-methodsetting-throttlingburstlimit) : Integer
-﻿  [ThrottlingRateLimit](#cfn-apigateway-stage-methodsetting-throttlingratelimit) : Double
+  [CacheDataEncrypted](#cfn-apigateway-stage-methodsetting-cachedataencrypted): Boolean
+  [CacheTtlInSeconds](#cfn-apigateway-stage-methodsetting-cachettlinseconds): Integer
+  [CachingEnabled](#cfn-apigateway-stage-methodsetting-cachingenabled): Boolean
+  [DataTraceEnabled](#cfn-apigateway-stage-methodsetting-datatraceenabled): Boolean
+  [HttpMethod](#cfn-apigateway-stage-methodsetting-httpmethod): String
+  [LoggingLevel](#cfn-apigateway-stage-methodsetting-logginglevel): String
+  [MetricsEnabled](#cfn-apigateway-stage-methodsetting-metricsenabled): Boolean
+  [ResourcePath](#cfn-apigateway-stage-methodsetting-resourcepath): String
+  [ThrottlingBurstLimit](#cfn-apigateway-stage-methodsetting-throttlingburstlimit): Integer
+  [ThrottlingRateLimit](#cfn-apigateway-stage-methodsetting-throttlingratelimit): Double
 ```
 
 ## Properties<a name="aws-properties-apitgateway-stage-methodsetting-properties"></a>

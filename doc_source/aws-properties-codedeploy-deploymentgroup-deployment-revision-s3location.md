@@ -21,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location-syntax.yaml"></a>
 
 ```
-﻿  [Bucket](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-bucket) : String
-﻿  [BundleType](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-bundletype) : String
-﻿  [ETag](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-etag) : String
-﻿  [Key](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-key) : String
-﻿  [Version](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-value) : String
+  [Bucket](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-bucket): String
+  [BundleType](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-bundletype): String
+  [ETag](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-etag): String
+  [Key](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-key): String
+  [Version](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-value): String
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location-properties"></a>

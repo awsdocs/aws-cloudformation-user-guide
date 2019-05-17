@@ -22,8 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iam-policy-1-syntax.yaml"></a>
 
 ```
-﻿  [PolicyDocument](#cfn-iam-policies-policydocument) : Json
-﻿  [PolicyName](#cfn-iam-policies-policyname) : String
+  [PolicyDocument](#cfn-iam-policies-policydocument): Json
+  [PolicyName](#cfn-iam-policies-policyname): String
 ```
 
 ## Properties<a name="aws-properties-iam-policy-1-properties"></a>

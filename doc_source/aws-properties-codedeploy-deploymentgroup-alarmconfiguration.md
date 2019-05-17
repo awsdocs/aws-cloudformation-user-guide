@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-alarmconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [Alarms](#cfn-codedeploy-deploymentgroup-alarmconfiguration-alarms) : 
+  [Alarms](#cfn-codedeploy-deploymentgroup-alarmconfiguration-alarms): 
     - [Alarm](aws-properties-codedeploy-deploymentgroup-alarm.md)
-﻿  [Enabled](#cfn-codedeploy-deploymentgroup-alarmconfiguration-enabled) : Boolean
-﻿  [IgnorePollAlarmFailure](#cfn-codedeploy-deploymentgroup-alarmconfiguration-ignorepollalarmfailure) : Boolean
+  [Enabled](#cfn-codedeploy-deploymentgroup-alarmconfiguration-enabled): Boolean
+  [IgnorePollAlarmFailure](#cfn-codedeploy-deploymentgroup-alarmconfiguration-ignorepollalarmfailure): Boolean
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-alarmconfiguration-properties"></a>

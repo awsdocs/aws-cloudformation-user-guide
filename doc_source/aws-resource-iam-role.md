@@ -27,16 +27,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IAM::Role
-Properties : 
-﻿  [AssumeRolePolicyDocument](#cfn-iam-role-assumerolepolicydocument) : Json
-﻿  [ManagedPolicyArns](#cfn-iam-role-managepolicyarns) : 
+Properties: 
+  [AssumeRolePolicyDocument](#cfn-iam-role-assumerolepolicydocument): Json
+  [ManagedPolicyArns](#cfn-iam-role-managepolicyarns): 
     - String
-﻿  [MaxSessionDuration](#cfn-iam-role-maxsessionduration) : Integer
-﻿  [Path](#cfn-iam-role-path) : String
-﻿  [PermissionsBoundary](#cfn-iam-role-permissionsboundary) : String
-﻿  [Policies](#cfn-iam-role-policies) : 
+  [MaxSessionDuration](#cfn-iam-role-maxsessionduration): Integer
+  [Path](#cfn-iam-role-path): String
+  [PermissionsBoundary](#cfn-iam-role-permissionsboundary): String
+  [Policies](#cfn-iam-role-policies): 
     - [Policy](aws-properties-iam-policy.md)
-﻿  [RoleName](#cfn-iam-role-rolename) : String
+  [RoleName](#cfn-iam-role-rolename): String
 ```
 
 ## Properties<a name="aws-resource-iam-role-properties"></a>

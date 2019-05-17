@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [ApplicationName](#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration-applicationname) : String
-﻿  [TemplateName](#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration-templatename) : String
+  [ApplicationName](#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration-applicationname): String
+  [TemplateName](#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration-templatename): String
 ```
 
 ## Properties<a name="aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration-properties"></a>

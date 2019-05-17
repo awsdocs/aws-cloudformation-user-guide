@@ -20,9 +20,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-resourcedefinition-localdeviceresourcedata-syntax.yaml"></a>
 
 ```
-﻿  [GroupOwnerSetting](#cfn-greengrass-resourcedefinition-localdeviceresourcedata-groupownersetting) : 
+  [GroupOwnerSetting](#cfn-greengrass-resourcedefinition-localdeviceresourcedata-groupownersetting): 
     [GroupOwnerSetting](aws-properties-greengrass-resourcedefinition-groupownersetting.md)
-﻿  [SourcePath](#cfn-greengrass-resourcedefinition-localdeviceresourcedata-sourcepath) : String
+  [SourcePath](#cfn-greengrass-resourcedefinition-localdeviceresourcedata-sourcepath): String
 ```
 
 ## Properties<a name="aws-properties-greengrass-resourcedefinition-localdeviceresourcedata-properties"></a>

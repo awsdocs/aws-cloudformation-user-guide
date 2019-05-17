@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-sqsaction-syntax.yaml"></a>
 
 ```
-﻿  [QueueUrl](#cfn-iot-topicrule-sqsaction-queueurl) : String
-﻿  [RoleArn](#cfn-iot-topicrule-sqsaction-rolearn) : String
-﻿  [UseBase64](#cfn-iot-topicrule-sqsaction-usebase64) : Boolean
+  [QueueUrl](#cfn-iot-topicrule-sqsaction-queueurl): String
+  [RoleArn](#cfn-iot-topicrule-sqsaction-rolearn): String
+  [UseBase64](#cfn-iot-topicrule-sqsaction-usebase64): Boolean
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-sqsaction-properties"></a>

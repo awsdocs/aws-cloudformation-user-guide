@@ -25,10 +25,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPCCidrBlock
-Properties : 
-﻿  [AmazonProvidedIpv6CidrBlock](#cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock) : Boolean
-﻿  [CidrBlock](#cfn-ec2-vpccidrblock-cidrblock) : String
-﻿  [VpcId](#cfn-ec2-vpccidrblock-vpcid) : String
+Properties: 
+  [AmazonProvidedIpv6CidrBlock](#cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock): Boolean
+  [CidrBlock](#cfn-ec2-vpccidrblock-cidrblock): String
+  [VpcId](#cfn-ec2-vpccidrblock-vpcid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-vpccidrblock-properties"></a>

@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-gamelift-build-storagelocation-syntax.yaml"></a>
 
 ```
-﻿  [Bucket](#cfn-gamelift-build-storage-bucket) : String
-﻿  [Key](#cfn-gamelift-build-storage-key) : String
-﻿  [RoleArn](#cfn-gamelift-build-storage-rolearn) : String
+  [Bucket](#cfn-gamelift-build-storage-bucket): String
+  [Key](#cfn-gamelift-build-storage-key): String
+  [RoleArn](#cfn-gamelift-build-storage-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-gamelift-build-storagelocation-properties"></a>

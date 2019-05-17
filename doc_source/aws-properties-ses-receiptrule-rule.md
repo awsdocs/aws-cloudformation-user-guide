@@ -26,14 +26,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ses-receiptrule-rule-syntax.yaml"></a>
 
 ```
-﻿  [Actions](#cfn-ses-receiptrule-rule-actions) : 
+  [Actions](#cfn-ses-receiptrule-rule-actions): 
     - [Action](aws-properties-ses-receiptrule-action.md)
-﻿  [Enabled](#cfn-ses-receiptrule-rule-enabled) : Boolean
-﻿  [Name](#cfn-ses-receiptrule-rule-name) : String
-﻿  [Recipients](#cfn-ses-receiptrule-rule-recipients) : 
+  [Enabled](#cfn-ses-receiptrule-rule-enabled): Boolean
+  [Name](#cfn-ses-receiptrule-rule-name): String
+  [Recipients](#cfn-ses-receiptrule-rule-recipients): 
     - String
-﻿  [ScanEnabled](#cfn-ses-receiptrule-rule-scanenabled) : Boolean
-﻿  [TlsPolicy](#cfn-ses-receiptrule-rule-tlspolicy) : String
+  [ScanEnabled](#cfn-ses-receiptrule-rule-scanenabled): Boolean
+  [TlsPolicy](#cfn-ses-receiptrule-rule-tlspolicy): String
 ```
 
 ## Properties<a name="aws-properties-ses-receiptrule-rule-properties"></a>

@@ -27,16 +27,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Cognito::UserPoolClient
-Properties : 
-﻿  [ClientName](#cfn-cognito-userpoolclient-clientname) : String
-﻿  [ExplicitAuthFlows](#cfn-cognito-userpoolclient-explicitauthflows) : 
+Properties: 
+  [ClientName](#cfn-cognito-userpoolclient-clientname): String
+  [ExplicitAuthFlows](#cfn-cognito-userpoolclient-explicitauthflows): 
     - String
-﻿  [GenerateSecret](#cfn-cognito-userpoolclient-generatesecret) : Boolean
-﻿  [ReadAttributes](#cfn-cognito-userpoolclient-readattributes) : 
+  [GenerateSecret](#cfn-cognito-userpoolclient-generatesecret): Boolean
+  [ReadAttributes](#cfn-cognito-userpoolclient-readattributes): 
     - String
-﻿  [RefreshTokenValidity](#cfn-cognito-userpoolclient-refreshtokenvalidity) : Double
-﻿  [UserPoolId](#cfn-cognito-userpoolclient-userpoolid) : String
-﻿  [WriteAttributes](#cfn-cognito-userpoolclient-writeattributes) : 
+  [RefreshTokenValidity](#cfn-cognito-userpoolclient-refreshtokenvalidity): Double
+  [UserPoolId](#cfn-cognito-userpoolclient-userpoolid): String
+  [WriteAttributes](#cfn-cognito-userpoolclient-writeattributes): 
     - String
 ```
 

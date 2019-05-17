@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceCatalog::LaunchNotificationConstraint
-Properties : 
-﻿  [AcceptLanguage](#cfn-servicecatalog-launchnotificationconstraint-acceptlanguage) : String
-﻿  [Description](#cfn-servicecatalog-launchnotificationconstraint-description) : String
-﻿  [NotificationArns](#cfn-servicecatalog-launchnotificationconstraint-notificationarns) : 
+Properties: 
+  [AcceptLanguage](#cfn-servicecatalog-launchnotificationconstraint-acceptlanguage): String
+  [Description](#cfn-servicecatalog-launchnotificationconstraint-description): String
+  [NotificationArns](#cfn-servicecatalog-launchnotificationconstraint-notificationarns): 
     - String
-﻿  [PortfolioId](#cfn-servicecatalog-launchnotificationconstraint-portfolioid) : String
-﻿  [ProductId](#cfn-servicecatalog-launchnotificationconstraint-productid) : String
+  [PortfolioId](#cfn-servicecatalog-launchnotificationconstraint-portfolioid): String
+  [ProductId](#cfn-servicecatalog-launchnotificationconstraint-productid): String
 ```
 
 ## Properties<a name="aws-resource-servicecatalog-launchnotificationconstraint-properties"></a>

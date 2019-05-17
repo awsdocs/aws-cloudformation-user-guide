@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-monitoring-syntax.yaml"></a>
 
 ```
-﻿  [Enabled](#cfn-ec2-launchtemplate-launchtemplatedata-monitoring-enabled) : Boolean
+  [Enabled](#cfn-ec2-launchtemplate-launchtemplatedata-monitoring-enabled): Boolean
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-monitoring-properties"></a>

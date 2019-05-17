@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-batch-jobdefinition-environment-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-batch-jobdefinition-environment-name) : String
-﻿  [Value](#cfn-batch-jobdefinition-environment-value) : String
+  [Name](#cfn-batch-jobdefinition-environment-name): String
+  [Value](#cfn-batch-jobdefinition-environment-value): String
 ```
 
 ## Properties<a name="aws-properties-batch-jobdefinition-environment-properties"></a>

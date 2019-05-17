@@ -24,12 +24,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SageMaker::EndpointConfig
-Properties : 
-﻿  [EndpointConfigName](#cfn-sagemaker-endpointconfig-endpointconfigname) : String
-﻿  [KmsKeyId](#cfn-sagemaker-endpointconfig-kmskeyid) : String
-﻿  [ProductionVariants](#cfn-sagemaker-endpointconfig-productionvariants) : 
+Properties: 
+  [EndpointConfigName](#cfn-sagemaker-endpointconfig-endpointconfigname): String
+  [KmsKeyId](#cfn-sagemaker-endpointconfig-kmskeyid): String
+  [ProductionVariants](#cfn-sagemaker-endpointconfig-productionvariants): 
     - [ProductionVariant](aws-properties-sagemaker-endpointconfig-productionvariant.md)
-﻿  [Tags](#cfn-sagemaker-endpointconfig-tags) : 
+  [Tags](#cfn-sagemaker-endpointconfig-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

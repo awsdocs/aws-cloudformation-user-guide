@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-bootstrapactionconfig-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-elasticmapreduce-cluster-bootstrapactionconfig-name) : String
-﻿  [ScriptBootstrapAction](#cfn-elasticmapreduce-cluster-bootstrapactionconfig-scriptbootstrapaction) : 
+  [Name](#cfn-elasticmapreduce-cluster-bootstrapactionconfig-name): String
+  [ScriptBootstrapAction](#cfn-elasticmapreduce-cluster-bootstrapactionconfig-scriptbootstrapaction): 
     [ScriptBootstrapActionConfig](aws-properties-elasticmapreduce-cluster-scriptbootstrapactionconfig.md)
 ```
 

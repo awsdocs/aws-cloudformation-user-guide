@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::GatewayResponse
-Properties : 
-﻿  [ResponseParameters](#cfn-apigateway-gatewayresponse-responseparameters) : 
+Properties: 
+  [ResponseParameters](#cfn-apigateway-gatewayresponse-responseparameters): 
     Key : Value
-﻿  [ResponseTemplates](#cfn-apigateway-gatewayresponse-responsetemplates) : 
+  [ResponseTemplates](#cfn-apigateway-gatewayresponse-responsetemplates): 
     Key : Value
-﻿  [ResponseType](#cfn-apigateway-gatewayresponse-responsetype) : String
-﻿  [RestApiId](#cfn-apigateway-gatewayresponse-restapiid) : String
-﻿  [StatusCode](#cfn-apigateway-gatewayresponse-statuscode) : String
+  [ResponseType](#cfn-apigateway-gatewayresponse-responsetype): String
+  [RestApiId](#cfn-apigateway-gatewayresponse-restapiid): String
+  [StatusCode](#cfn-apigateway-gatewayresponse-statuscode): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-gatewayresponse-properties"></a>

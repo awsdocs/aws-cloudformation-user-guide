@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-batch-jobdefinition-nodeproperties-syntax.yaml"></a>
 
 ```
-﻿  [MainNode](#cfn-batch-jobdefinition-nodeproperties-mainnode) : Integer
-﻿  [NodeRangeProperties](#cfn-batch-jobdefinition-nodeproperties-noderangeproperties) : 
+  [MainNode](#cfn-batch-jobdefinition-nodeproperties-mainnode): Integer
+  [NodeRangeProperties](#cfn-batch-jobdefinition-nodeproperties-noderangeproperties): 
     - [NodeRangeProperty](aws-properties-batch-jobdefinition-noderangeproperty.md)
-﻿  [NumNodes](#cfn-batch-jobdefinition-nodeproperties-numnodes) : Integer
+  [NumNodes](#cfn-batch-jobdefinition-nodeproperties-numnodes): Integer
 ```
 
 ## Properties<a name="aws-properties-batch-jobdefinition-nodeproperties-properties"></a>

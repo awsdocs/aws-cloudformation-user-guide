@@ -41,47 +41,47 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-syntax.yaml"></a>
 
 ```
-﻿  [BlockDeviceMappings](#cfn-ec2-launchtemplate-launchtemplatedata-blockdevicemappings) : 
+  [BlockDeviceMappings](#cfn-ec2-launchtemplate-launchtemplatedata-blockdevicemappings): 
     - [BlockDeviceMapping](aws-properties-ec2-launchtemplate-blockdevicemapping.md)
-﻿  [CapacityReservationSpecification](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification) : 
+  [CapacityReservationSpecification](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification): 
     [CapacityReservationSpecification](aws-properties-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification.md)
-﻿  [CpuOptions](#cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions) : 
+  [CpuOptions](#cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions): 
     [CpuOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-cpuoptions.md)
-﻿  [CreditSpecification](#cfn-ec2-launchtemplate-launchtemplatedata-creditspecification) : 
+  [CreditSpecification](#cfn-ec2-launchtemplate-launchtemplatedata-creditspecification): 
     [CreditSpecification](aws-properties-ec2-launchtemplate-launchtemplatedata-creditspecification.md)
-﻿  [DisableApiTermination](#cfn-ec2-launchtemplate-launchtemplatedata-disableapitermination) : Boolean
-﻿  [EbsOptimized](#cfn-ec2-launchtemplate-launchtemplatedata-ebsoptimized) : Boolean
-﻿  [ElasticGpuSpecifications](#cfn-ec2-launchtemplate-launchtemplatedata-elasticgpuspecifications) : 
+  [DisableApiTermination](#cfn-ec2-launchtemplate-launchtemplatedata-disableapitermination): Boolean
+  [EbsOptimized](#cfn-ec2-launchtemplate-launchtemplatedata-ebsoptimized): Boolean
+  [ElasticGpuSpecifications](#cfn-ec2-launchtemplate-launchtemplatedata-elasticgpuspecifications): 
     - [ElasticGpuSpecification](aws-properties-ec2-launchtemplate-elasticgpuspecification.md)
-﻿  [ElasticInferenceAccelerators](#cfn-ec2-launchtemplate-launchtemplatedata-elasticinferenceaccelerators) : 
+  [ElasticInferenceAccelerators](#cfn-ec2-launchtemplate-launchtemplatedata-elasticinferenceaccelerators): 
     - [LaunchTemplateElasticInferenceAccelerator](aws-properties-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator.md)
-﻿  [HibernationOptions](#cfn-ec2-launchtemplate-launchtemplatedata-hibernationoptions) : 
+  [HibernationOptions](#cfn-ec2-launchtemplate-launchtemplatedata-hibernationoptions): 
     [HibernationOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-hibernationoptions.md)
-﻿  [IamInstanceProfile](#cfn-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile) : 
+  [IamInstanceProfile](#cfn-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile): 
     [IamInstanceProfile](aws-properties-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile.md)
-﻿  [ImageId](#cfn-ec2-launchtemplate-launchtemplatedata-imageid) : String
-﻿  [InstanceInitiatedShutdownBehavior](#cfn-ec2-launchtemplate-launchtemplatedata-instanceinitiatedshutdownbehavior) : String
-﻿  [InstanceMarketOptions](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions) : 
+  [ImageId](#cfn-ec2-launchtemplate-launchtemplatedata-imageid): String
+  [InstanceInitiatedShutdownBehavior](#cfn-ec2-launchtemplate-launchtemplatedata-instanceinitiatedshutdownbehavior): String
+  [InstanceMarketOptions](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions): 
     [InstanceMarketOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions.md)
-﻿  [InstanceType](#cfn-ec2-launchtemplate-launchtemplatedata-instancetype) : String
-﻿  [KernelId](#cfn-ec2-launchtemplate-launchtemplatedata-kernelid) : String
-﻿  [KeyName](#cfn-ec2-launchtemplate-launchtemplatedata-keyname) : String
-﻿  [LicenseSpecifications](#cfn-ec2-launchtemplate-launchtemplatedata-licensespecifications) : 
+  [InstanceType](#cfn-ec2-launchtemplate-launchtemplatedata-instancetype): String
+  [KernelId](#cfn-ec2-launchtemplate-launchtemplatedata-kernelid): String
+  [KeyName](#cfn-ec2-launchtemplate-launchtemplatedata-keyname): String
+  [LicenseSpecifications](#cfn-ec2-launchtemplate-launchtemplatedata-licensespecifications): 
     - [LicenseSpecification](aws-properties-ec2-launchtemplate-licensespecification.md)
-﻿  [Monitoring](#cfn-ec2-launchtemplate-launchtemplatedata-monitoring) : 
+  [Monitoring](#cfn-ec2-launchtemplate-launchtemplatedata-monitoring): 
     [Monitoring](aws-properties-ec2-launchtemplate-launchtemplatedata-monitoring.md)
-﻿  [NetworkInterfaces](#cfn-ec2-launchtemplate-launchtemplatedata-networkinterfaces) : 
+  [NetworkInterfaces](#cfn-ec2-launchtemplate-launchtemplatedata-networkinterfaces): 
     - [NetworkInterface](aws-properties-ec2-launchtemplate-networkinterface.md)
-﻿  [Placement](#cfn-ec2-launchtemplate-launchtemplatedata-placement) : 
+  [Placement](#cfn-ec2-launchtemplate-launchtemplatedata-placement): 
     [Placement](aws-properties-ec2-launchtemplate-launchtemplatedata-placement.md)
-﻿  [RamDiskId](#cfn-ec2-launchtemplate-launchtemplatedata-ramdiskid) : String
-﻿  [SecurityGroupIds](#cfn-ec2-launchtemplate-launchtemplatedata-securitygroupids) : 
+  [RamDiskId](#cfn-ec2-launchtemplate-launchtemplatedata-ramdiskid): String
+  [SecurityGroupIds](#cfn-ec2-launchtemplate-launchtemplatedata-securitygroupids): 
     - String
-﻿  [SecurityGroups](#cfn-ec2-launchtemplate-launchtemplatedata-securitygroups) : 
+  [SecurityGroups](#cfn-ec2-launchtemplate-launchtemplatedata-securitygroups): 
     - String
-﻿  [TagSpecifications](#cfn-ec2-launchtemplate-launchtemplatedata-tagspecifications) : 
+  [TagSpecifications](#cfn-ec2-launchtemplate-launchtemplatedata-tagspecifications): 
     - [TagSpecification](aws-properties-ec2-launchtemplate-tagspecification.md)
-﻿  [UserData](#cfn-ec2-launchtemplate-launchtemplatedata-userdata) : String
+  [UserData](#cfn-ec2-launchtemplate-launchtemplatedata-userdata): String
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-properties"></a>

@@ -30,16 +30,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::WorkSpaces::Workspace
-Properties : 
-﻿  [BundleId](#cfn-workspaces-workspace-bundleid) : String
-﻿  [DirectoryId](#cfn-workspaces-workspace-directoryid) : String
-﻿  [RootVolumeEncryptionEnabled](#cfn-workspaces-workspace-rootvolumeencryptionenabled) : Boolean
-﻿  [Tags](#cfn-workspaces-workspace-tags) : 
+Properties: 
+  [BundleId](#cfn-workspaces-workspace-bundleid): String
+  [DirectoryId](#cfn-workspaces-workspace-directoryid): String
+  [RootVolumeEncryptionEnabled](#cfn-workspaces-workspace-rootvolumeencryptionenabled): Boolean
+  [Tags](#cfn-workspaces-workspace-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [UserName](#cfn-workspaces-workspace-username) : String
-﻿  [UserVolumeEncryptionEnabled](#cfn-workspaces-workspace-uservolumeencryptionenabled) : Boolean
-﻿  [VolumeEncryptionKey](#cfn-workspaces-workspace-volumeencryptionkey) : String
-﻿  [WorkspaceProperties](#cfn-workspaces-workspace-workspaceproperties) : 
+  [UserName](#cfn-workspaces-workspace-username): String
+  [UserVolumeEncryptionEnabled](#cfn-workspaces-workspace-uservolumeencryptionenabled): Boolean
+  [VolumeEncryptionKey](#cfn-workspaces-workspace-volumeencryptionkey): String
+  [WorkspaceProperties](#cfn-workspaces-workspace-workspaceproperties): 
     [WorkspaceProperties](aws-properties-workspaces-workspace-workspaceproperties.md)
 ```
 

@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-syntax.yaml"></a>
 
 ```
-﻿  [InstanceInterruptionBehavior](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-instanceinterruptionbehavior) : String
-﻿  [MaxPrice](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-maxprice) : String
-﻿  [SpotInstanceType](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-spotinstancetype) : String
+  [InstanceInterruptionBehavior](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-instanceinterruptionbehavior): String
+  [MaxPrice](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-maxprice): String
+  [SpotInstanceType](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-spotinstancetype): String
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-properties"></a>

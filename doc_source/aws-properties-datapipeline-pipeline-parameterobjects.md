@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-datapipeline-pipeline-parameterobjects-syntax.yaml"></a>
 
 ```
-﻿  [Attributes](#cfn-datapipeline-pipeline-parameterobjects-attributes) : 
+  [Attributes](#cfn-datapipeline-pipeline-parameterobjects-attributes): 
     - [ParameterAttribute](aws-properties-datapipeline-pipeline-parameterobjects-attributes.md)
-﻿  [Id](#cfn-datapipeline-pipeline-parameterobjects-id) : String
+  [Id](#cfn-datapipeline-pipeline-parameterobjects-id): String
 ```
 
 ## Properties<a name="aws-properties-datapipeline-pipeline-parameterobjects-properties"></a>

@@ -27,18 +27,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticloadbalancingv2-listener-authenticateoidcconfig-syntax.yaml"></a>
 
 ```
-﻿  [AuthenticationRequestExtraParams](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-authenticationrequestextraparams) : 
+  [AuthenticationRequestExtraParams](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-authenticationrequestextraparams): 
     Key : Value
-﻿  [AuthorizationEndpoint](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-authorizationendpoint) : String
-﻿  [ClientId](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-clientid) : String
-﻿  [ClientSecret](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-clientsecret) : String
-﻿  [Issuer](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-issuer) : String
-﻿  [OnUnauthenticatedRequest](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-onunauthenticatedrequest) : String
-﻿  [Scope](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-scope) : String
-﻿  [SessionCookieName](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-sessioncookiename) : String
-﻿  [SessionTimeout](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-sessiontimeout) : Long
-﻿  [TokenEndpoint](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-tokenendpoint) : String
-﻿  [UserInfoEndpoint](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-userinfoendpoint) : String
+  [AuthorizationEndpoint](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-authorizationendpoint): String
+  [ClientId](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-clientid): String
+  [ClientSecret](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-clientsecret): String
+  [Issuer](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-issuer): String
+  [OnUnauthenticatedRequest](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-onunauthenticatedrequest): String
+  [Scope](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-scope): String
+  [SessionCookieName](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-sessioncookiename): String
+  [SessionTimeout](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-sessiontimeout): Long
+  [TokenEndpoint](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-tokenendpoint): String
+  [UserInfoEndpoint](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-userinfoendpoint): String
 ```
 
 ## Properties<a name="aws-properties-elasticloadbalancingv2-listener-authenticateoidcconfig-properties"></a>

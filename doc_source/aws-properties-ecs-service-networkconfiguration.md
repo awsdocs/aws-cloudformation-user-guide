@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-service-networkconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [AwsvpcConfiguration](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration) : 
+  [AwsvpcConfiguration](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration): 
     [AwsVpcConfiguration](aws-properties-ecs-service-awsvpcconfiguration.md)
 ```
 

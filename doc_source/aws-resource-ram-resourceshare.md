@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RAM::ResourceShare
-Properties : 
-﻿  [AllowExternalPrincipals](#cfn-ram-resourceshare-allowexternalprincipals) : Boolean
-﻿  [Name](#cfn-ram-resourceshare-name) : String
-﻿  [Principals](#cfn-ram-resourceshare-principals) : 
+Properties: 
+  [AllowExternalPrincipals](#cfn-ram-resourceshare-allowexternalprincipals): Boolean
+  [Name](#cfn-ram-resourceshare-name): String
+  [Principals](#cfn-ram-resourceshare-principals): 
     - String
-﻿  [ResourceArns](#cfn-ram-resourceshare-resourcearns) : 
+  [ResourceArns](#cfn-ram-resourceshare-resourcearns): 
     - String
-﻿  [Tags](#cfn-ram-resourceshare-tags) : 
+  [Tags](#cfn-ram-resourceshare-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

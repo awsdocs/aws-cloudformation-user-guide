@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-taskdefinition-repositorycredentials-syntax.yaml"></a>
 
 ```
-﻿  [CredentialsParameter](#cfn-ecs-taskdefinition-repositorycredentials-credentialsparameter) : String
+  [CredentialsParameter](#cfn-ecs-taskdefinition-repositorycredentials-credentialsparameter): String
 ```
 
 ## Properties<a name="aws-properties-ecs-taskdefinition-repositorycredentials-properties"></a>

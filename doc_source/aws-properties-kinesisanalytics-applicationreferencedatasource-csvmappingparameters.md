@@ -22,8 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-syntax.yaml"></a>
 
 ```
-﻿  [RecordColumnDelimiter](#cfn-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-recordcolumndelimiter) : String
-﻿  [RecordRowDelimiter](#cfn-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-recordrowdelimiter) : String
+  [RecordColumnDelimiter](#cfn-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-recordcolumndelimiter): String
+  [RecordRowDelimiter](#cfn-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-recordrowdelimiter): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-properties"></a>

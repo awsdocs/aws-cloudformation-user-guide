@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dynamodb-timetolivespecification-syntax.yaml"></a>
 
 ```
-﻿  [AttributeName](#cfn-dynamodb-timetolivespecification-attributename) : String
-﻿  [Enabled](#cfn-dynamodb-timetolivespecification-enabled) : Boolean
+  [AttributeName](#cfn-dynamodb-timetolivespecification-attributename): String
+  [Enabled](#cfn-dynamodb-timetolivespecification-enabled): Boolean
 ```
 
 ## Properties<a name="aws-properties-dynamodb-timetolivespecification-properties"></a>

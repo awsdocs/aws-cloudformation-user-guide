@@ -21,10 +21,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ssm-maintenancewindowtask-notificationconfig-syntax.yaml"></a>
 
 ```
-﻿  [NotificationArn](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationarn) : String
-﻿  [NotificationEvents](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationevents) : 
+  [NotificationArn](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationarn): String
+  [NotificationEvents](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationevents): 
     - String
-﻿  [NotificationType](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationtype) : String
+  [NotificationType](#cfn-ssm-maintenancewindowtask-notificationconfig-notificationtype): String
 ```
 
 ## Properties<a name="aws-properties-ssm-maintenancewindowtask-notificationconfig-properties"></a>

@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apigateway-usageplan-apistage-syntax.yaml"></a>
 
 ```
-﻿  [ApiId](#cfn-apigateway-usageplan-apistage-apiid) : String
-﻿  [Stage](#cfn-apigateway-usageplan-apistage-stage) : String
-﻿  [Throttle](#cfn-apigateway-usageplan-apistage-throttle) : 
+  [ApiId](#cfn-apigateway-usageplan-apistage-apiid): String
+  [Stage](#cfn-apigateway-usageplan-apistage-stage): String
+  [Throttle](#cfn-apigateway-usageplan-apistage-throttle): 
     Key : Value
 ```
 

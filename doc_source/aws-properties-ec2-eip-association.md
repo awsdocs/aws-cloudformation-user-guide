@@ -31,12 +31,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::EIPAssociation
-Properties : 
-﻿  [AllocationId](#cfn-ec2-eipassociation-allocationid) : String
-﻿  [EIP](#cfn-ec2-eipassociation-eip) : String
-﻿  [InstanceId](#cfn-ec2-eipassociation-instanceid) : String
-﻿  [NetworkInterfaceId](#cfn-ec2-eipassociation-networkinterfaceid) : String
-﻿  [PrivateIpAddress](#cfn-ec2-eipassociation-PrivateIpAddress) : String
+Properties: 
+  [AllocationId](#cfn-ec2-eipassociation-allocationid): String
+  [EIP](#cfn-ec2-eipassociation-eip): String
+  [InstanceId](#cfn-ec2-eipassociation-instanceid): String
+  [NetworkInterfaceId](#cfn-ec2-eipassociation-networkinterfaceid): String
+  [PrivateIpAddress](#cfn-ec2-eipassociation-PrivateIpAddress): String
 ```
 
 ## Properties<a name="aws-properties-ec2-eip-association-properties"></a>
@@ -193,7 +193,7 @@ Resources:
       VpcId: !Ref VpcId
       GroupDescription: Enable SSH access via port 22
      SecurityGroupIngress:
-       - CidrIp: 0.0.0.0/0
+     - CidrIp: 0.0.0.0/0
        FromPort: 22
        IpProtocol: tcp
        ToPort: 22
@@ -228,7 +228,7 @@ Resources:
       SourceDestCheck: true
       Tags:
       - Key: Network
-      Value: Web
+        Value: Web
   Ec2Instance:
     Type: AWS::EC2::Instance
     Properties:

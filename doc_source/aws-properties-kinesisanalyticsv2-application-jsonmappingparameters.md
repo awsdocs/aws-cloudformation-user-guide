@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-jsonmappingparameters-syntax.yaml"></a>
 
 ```
-﻿  [RecordRowPath](#cfn-kinesisanalyticsv2-application-jsonmappingparameters-recordrowpath) : String
+  [RecordRowPath](#cfn-kinesisanalyticsv2-application-jsonmappingparameters-recordrowpath): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-jsonmappingparameters-properties"></a>

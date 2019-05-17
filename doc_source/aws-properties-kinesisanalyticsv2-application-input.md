@@ -22,17 +22,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-input-syntax.yaml"></a>
 
 ```
-﻿  [InputParallelism](#cfn-kinesisanalyticsv2-application-input-inputparallelism) : 
+  [InputParallelism](#cfn-kinesisanalyticsv2-application-input-inputparallelism): 
     [InputParallelism](aws-properties-kinesisanalyticsv2-application-inputparallelism.md)
-﻿  [InputProcessingConfiguration](#cfn-kinesisanalyticsv2-application-input-inputprocessingconfiguration) : 
+  [InputProcessingConfiguration](#cfn-kinesisanalyticsv2-application-input-inputprocessingconfiguration): 
     [InputProcessingConfiguration](aws-properties-kinesisanalyticsv2-application-inputprocessingconfiguration.md)
-﻿  [InputSchema](#cfn-kinesisanalyticsv2-application-input-inputschema) : 
+  [InputSchema](#cfn-kinesisanalyticsv2-application-input-inputschema): 
     [InputSchema](aws-properties-kinesisanalyticsv2-application-inputschema.md)
-﻿  [KinesisFirehoseInput](#cfn-kinesisanalyticsv2-application-input-kinesisfirehoseinput) : 
+  [KinesisFirehoseInput](#cfn-kinesisanalyticsv2-application-input-kinesisfirehoseinput): 
     [KinesisFirehoseInput](aws-properties-kinesisanalyticsv2-application-kinesisfirehoseinput.md)
-﻿  [KinesisStreamsInput](#cfn-kinesisanalyticsv2-application-input-kinesisstreamsinput) : 
+  [KinesisStreamsInput](#cfn-kinesisanalyticsv2-application-input-kinesisstreamsinput): 
     [KinesisStreamsInput](aws-properties-kinesisanalyticsv2-application-kinesisstreamsinput.md)
-﻿  [NamePrefix](#cfn-kinesisanalyticsv2-application-input-nameprefix) : String
+  [NamePrefix](#cfn-kinesisanalyticsv2-application-input-nameprefix): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-input-properties"></a>

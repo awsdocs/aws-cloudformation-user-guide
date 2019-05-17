@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-lambda-function-environment-syntax.yaml"></a>
 
 ```
-﻿  [Variables](#cfn-lambda-function-environment-variables) : 
+  [Variables](#cfn-lambda-function-environment-variables): 
     Key : Value
 ```
 

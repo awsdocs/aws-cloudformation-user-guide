@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-instance-ssmassociations-associationparameters-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-ec2-instance-ssmassociations-associationparameters-key) : String
-﻿  [Value](#cfn-ec2-instance-ssmassociations-associationparameters-value) : 
+  [Key](#cfn-ec2-instance-ssmassociations-associationparameters-key): String
+  [Value](#cfn-ec2-instance-ssmassociations-associationparameters-value): 
     - String
 ```
 

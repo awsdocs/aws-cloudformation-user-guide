@@ -25,15 +25,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IoTAnalytics::Dataset
-Properties : 
-﻿  [Actions](#cfn-iotanalytics-dataset-actions) : 
+Properties: 
+  [Actions](#cfn-iotanalytics-dataset-actions): 
     - [Action](aws-properties-iotanalytics-dataset-action.md)
-﻿  [DatasetName](#cfn-iotanalytics-dataset-datasetname) : String
-﻿  [RetentionPeriod](#cfn-iotanalytics-dataset-retentionperiod) : 
+  [DatasetName](#cfn-iotanalytics-dataset-datasetname): String
+  [RetentionPeriod](#cfn-iotanalytics-dataset-retentionperiod): 
     [RetentionPeriod](aws-properties-iotanalytics-dataset-retentionperiod.md)
-﻿  [Tags](#cfn-iotanalytics-dataset-tags) : 
+  [Tags](#cfn-iotanalytics-dataset-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [Triggers](#cfn-iotanalytics-dataset-triggers) : 
+  [Triggers](#cfn-iotanalytics-dataset-triggers): 
     - [Trigger](aws-properties-iotanalytics-dataset-trigger.md)
 ```
 

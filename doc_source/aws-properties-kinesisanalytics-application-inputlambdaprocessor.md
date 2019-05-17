@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalytics-application-inputlambdaprocessor-syntax.yaml"></a>
 
 ```
-﻿  [ResourceARN](#cfn-kinesisanalytics-application-inputlambdaprocessor-resourcearn) : String
-﻿  [RoleARN](#cfn-kinesisanalytics-application-inputlambdaprocessor-rolearn) : String
+  [ResourceARN](#cfn-kinesisanalytics-application-inputlambdaprocessor-resourcearn): String
+  [RoleARN](#cfn-kinesisanalytics-application-inputlambdaprocessor-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-application-inputlambdaprocessor-properties"></a>

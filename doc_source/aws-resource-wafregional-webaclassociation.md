@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::WAFRegional::WebACLAssociation
-Properties : 
-﻿  [ResourceArn](#cfn-wafregional-webaclassociation-resourcearn) : String
-﻿  [WebACLId](#cfn-wafregional-webaclassociation-webaclid) : String
+Properties: 
+  [ResourceArn](#cfn-wafregional-webaclassociation-resourcearn): String
+  [WebACLId](#cfn-wafregional-webaclassociation-webaclid): String
 ```
 
 ## Properties<a name="aws-resource-wafregional-webaclassociation-properties"></a>

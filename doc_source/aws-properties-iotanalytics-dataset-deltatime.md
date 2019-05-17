@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-dataset-deltatime-syntax.yaml"></a>
 
 ```
-﻿  [OffsetSeconds](#cfn-iotanalytics-dataset-deltatime-offsetseconds) : Integer
-﻿  [TimeExpression](#cfn-iotanalytics-dataset-deltatime-timeexpression) : String
+  [OffsetSeconds](#cfn-iotanalytics-dataset-deltatime-offsetseconds): Integer
+  [TimeExpression](#cfn-iotanalytics-dataset-deltatime-timeexpression): String
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-dataset-deltatime-properties"></a>

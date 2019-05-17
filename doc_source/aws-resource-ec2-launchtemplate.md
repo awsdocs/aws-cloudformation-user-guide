@@ -22,10 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::LaunchTemplate
-Properties : 
-﻿  [LaunchTemplateData](#cfn-ec2-launchtemplate-launchtemplatedata) : 
+Properties: 
+  [LaunchTemplateData](#cfn-ec2-launchtemplate-launchtemplatedata): 
     [LaunchTemplateData](aws-properties-ec2-launchtemplate-launchtemplatedata.md)
-﻿  [LaunchTemplateName](#cfn-ec2-launchtemplate-launchtemplatename) : String
+  [LaunchTemplateName](#cfn-ec2-launchtemplate-launchtemplatename): String
 ```
 
 ## Properties<a name="aws-resource-ec2-launchtemplate-properties"></a>

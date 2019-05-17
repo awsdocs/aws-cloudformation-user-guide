@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codepipeline-pipeline-artifactstore-encryptionkey-syntax.yaml"></a>
 
 ```
-﻿  [Id](#cfn-codepipeline-pipeline-artifactstore-encryptionkey-id) : String
-﻿  [Type](#cfn-codepipeline-pipeline-artifactstore-encryptionkey-type) : String
+  [Id](#cfn-codepipeline-pipeline-artifactstore-encryptionkey-id): String
+  [Type](#cfn-codepipeline-pipeline-artifactstore-encryptionkey-type): String
 ```
 
 ## Properties<a name="aws-properties-codepipeline-pipeline-artifactstore-encryptionkey-properties"></a>

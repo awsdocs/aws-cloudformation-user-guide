@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-route53-hostedzone-hostedzonevpcs-syntax.yaml"></a>
 
 ```
-﻿  [VPCId](#cfn-route53-hostedzone-hostedzonevpcs-vpcid) : String
-﻿  [VPCRegion](#cfn-route53-hostedzone-hostedzonevpcs-vpcregion) : String
+  [VPCId](#cfn-route53-hostedzone-hostedzonevpcs-vpcid): String
+  [VPCRegion](#cfn-route53-hostedzone-hostedzonevpcs-vpcregion): String
 ```
 
 ## Properties<a name="aws-resource-route53-hostedzone-hostedzonevpcs-properties"></a>

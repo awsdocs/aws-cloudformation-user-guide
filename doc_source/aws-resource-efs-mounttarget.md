@@ -24,12 +24,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EFS::MountTarget
-Properties : 
-﻿  [FileSystemId](#cfn-efs-mounttarget-filesystemid) : String
-﻿  [IpAddress](#cfn-efs-mounttarget-ipaddress) : String
-﻿  [SecurityGroups](#cfn-efs-mounttarget-securitygroups) : 
+Properties: 
+  [FileSystemId](#cfn-efs-mounttarget-filesystemid): String
+  [IpAddress](#cfn-efs-mounttarget-ipaddress): String
+  [SecurityGroups](#cfn-efs-mounttarget-securitygroups): 
     - String
-﻿  [SubnetId](#cfn-efs-mounttarget-subnetid) : String
+  [SubnetId](#cfn-efs-mounttarget-subnetid): String
 ```
 
 ## Properties<a name="aws-resource-efs-mounttarget-properties"></a>

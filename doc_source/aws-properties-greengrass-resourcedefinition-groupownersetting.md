@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-resourcedefinition-groupownersetting-syntax.yaml"></a>
 
 ```
-﻿  [AutoAddGroupOwner](#cfn-greengrass-resourcedefinition-groupownersetting-autoaddgroupowner) : Boolean
-﻿  [GroupOwner](#cfn-greengrass-resourcedefinition-groupownersetting-groupowner) : String
+  [AutoAddGroupOwner](#cfn-greengrass-resourcedefinition-groupownersetting-autoaddgroupowner): Boolean
+  [GroupOwner](#cfn-greengrass-resourcedefinition-groupownersetting-groupowner): String
 ```
 
 ## Properties<a name="aws-properties-greengrass-resourcedefinition-groupownersetting-properties"></a>

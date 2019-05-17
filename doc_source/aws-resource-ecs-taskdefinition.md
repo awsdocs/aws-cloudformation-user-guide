@@ -30,20 +30,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ECS::TaskDefinition
-Properties : 
-﻿  [ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinitions) : 
+Properties: 
+  [ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinitions): 
     - [ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md)
-﻿  [Cpu](#cfn-ecs-taskdefinition-cpu) : String
-﻿  [ExecutionRoleArn](#cfn-ecs-taskdefinition-executionrolearn) : String
-﻿  [Family](#cfn-ecs-taskdefinition-family) : String
-﻿  [Memory](#cfn-ecs-taskdefinition-memory) : String
-﻿  [NetworkMode](#cfn-ecs-taskdefinition-networkmode) : String
-﻿  [PlacementConstraints](#cfn-ecs-taskdefinition-placementconstraints) : 
+  [Cpu](#cfn-ecs-taskdefinition-cpu): String
+  [ExecutionRoleArn](#cfn-ecs-taskdefinition-executionrolearn): String
+  [Family](#cfn-ecs-taskdefinition-family): String
+  [Memory](#cfn-ecs-taskdefinition-memory): String
+  [NetworkMode](#cfn-ecs-taskdefinition-networkmode): String
+  [PlacementConstraints](#cfn-ecs-taskdefinition-placementconstraints): 
     - [TaskDefinitionPlacementConstraint](aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.md)
-﻿  [RequiresCompatibilities](#cfn-ecs-taskdefinition-requirescompatibilities) : 
+  [RequiresCompatibilities](#cfn-ecs-taskdefinition-requirescompatibilities): 
     - String
-﻿  [TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn) : String
-﻿  [Volumes](#cfn-ecs-taskdefinition-volumes) : 
+  [TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn): String
+  [Volumes](#cfn-ecs-taskdefinition-volumes): 
     - [Volume](aws-properties-ecs-taskdefinition-volumes.md)
 ```
 

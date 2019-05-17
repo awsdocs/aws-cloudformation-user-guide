@@ -38,31 +38,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DMS::Endpoint
-Properties : 
-﻿  [CertificateArn](#cfn-dms-endpoint-certificatearn) : String
-﻿  [DatabaseName](#cfn-dms-endpoint-databasename) : String
-﻿  [DynamoDbSettings](#cfn-dms-endpoint-dynamodbsettings) : 
+Properties: 
+  [CertificateArn](#cfn-dms-endpoint-certificatearn): String
+  [DatabaseName](#cfn-dms-endpoint-databasename): String
+  [DynamoDbSettings](#cfn-dms-endpoint-dynamodbsettings): 
     [DynamoDbSettings](aws-properties-dms-endpoint-dynamodbsettings.md)
-﻿  [ElasticsearchSettings](#cfn-dms-endpoint-elasticsearchsettings) : 
+  [ElasticsearchSettings](#cfn-dms-endpoint-elasticsearchsettings): 
     [ElasticsearchSettings](aws-properties-dms-endpoint-elasticsearchsettings.md)
-﻿  [EndpointIdentifier](#cfn-dms-endpoint-endpointidentifier) : String
-﻿  [EndpointType](#cfn-dms-endpoint-endpointtype) : String
-﻿  [EngineName](#cfn-dms-endpoint-enginename) : String
-﻿  [ExtraConnectionAttributes](#cfn-dms-endpoint-extraconnectionattributes) : String
-﻿  [KinesisSettings](#cfn-dms-endpoint-kinesissettings) : 
+  [EndpointIdentifier](#cfn-dms-endpoint-endpointidentifier): String
+  [EndpointType](#cfn-dms-endpoint-endpointtype): String
+  [EngineName](#cfn-dms-endpoint-enginename): String
+  [ExtraConnectionAttributes](#cfn-dms-endpoint-extraconnectionattributes): String
+  [KinesisSettings](#cfn-dms-endpoint-kinesissettings): 
     [KinesisSettings](aws-properties-dms-endpoint-kinesissettings.md)
-﻿  [KmsKeyId](#cfn-dms-endpoint-kmskeyid) : String
-﻿  [MongoDbSettings](#cfn-dms-endpoint-mongodbsettings) : 
+  [KmsKeyId](#cfn-dms-endpoint-kmskeyid): String
+  [MongoDbSettings](#cfn-dms-endpoint-mongodbsettings): 
     [MongoDbSettings](aws-properties-dms-endpoint-mongodbsettings.md)
-﻿  [Password](#cfn-dms-endpoint-password) : String
-﻿  [Port](#cfn-dms-endpoint-port) : Integer
-﻿  [S3Settings](#cfn-dms-endpoint-s3settings) : 
+  [Password](#cfn-dms-endpoint-password): String
+  [Port](#cfn-dms-endpoint-port): Integer
+  [S3Settings](#cfn-dms-endpoint-s3settings): 
     [S3Settings](aws-properties-dms-endpoint-s3settings.md)
-﻿  [ServerName](#cfn-dms-endpoint-servername) : String
-﻿  [SslMode](#cfn-dms-endpoint-sslmode) : String
-﻿  [Tags](#cfn-dms-endpoint-tags) : 
+  [ServerName](#cfn-dms-endpoint-servername): String
+  [SslMode](#cfn-dms-endpoint-sslmode): String
+  [Tags](#cfn-dms-endpoint-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [Username](#cfn-dms-endpoint-username) : String
+  [Username](#cfn-dms-endpoint-username): String
 ```
 
 ## Properties<a name="aws-resource-dms-endpoint-properties"></a>

@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification-syntax.yaml"></a>
 
 ```
-﻿  [LaunchTemplateId](#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplateid) : String
-﻿  [LaunchTemplateName](#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplatename) : String
-﻿  [Version](#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-version) : String
+  [LaunchTemplateId](#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplateid): String
+  [LaunchTemplateName](#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplatename): String
+  [Version](#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-version): String
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification-properties"></a>

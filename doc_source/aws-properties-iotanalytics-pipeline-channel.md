@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-pipeline-channel-syntax.yaml"></a>
 
 ```
-﻿  [ChannelName](#cfn-iotanalytics-pipeline-channel-channelname) : String
-﻿  [Name](#cfn-iotanalytics-pipeline-channel-name) : String
-﻿  [Next](#cfn-iotanalytics-pipeline-channel-next) : String
+  [ChannelName](#cfn-iotanalytics-pipeline-channel-channelname): String
+  [Name](#cfn-iotanalytics-pipeline-channel-name): String
+  [Next](#cfn-iotanalytics-pipeline-channel-next): String
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-pipeline-channel-properties"></a>

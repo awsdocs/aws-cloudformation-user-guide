@@ -42,20 +42,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SQS::Queue
-Properties : 
-﻿  [ContentBasedDeduplication](#aws-sqs-queue-contentbaseddeduplication) : Boolean
-﻿  [DelaySeconds](#aws-sqs-queue-delayseconds) : Integer
-﻿  [FifoQueue](#aws-sqs-queue-fifoqueue) : Boolean
-﻿  [KmsDataKeyReusePeriodSeconds](#aws-sqs-queue-kmsdatakeyreuseperiodseconds) : Integer
-﻿  [KmsMasterKeyId](#aws-sqs-queue-kmsmasterkeyid) : String
-﻿  [MaximumMessageSize](#aws-sqs-queue-maxmesgsize) : Integer
-﻿  [MessageRetentionPeriod](#aws-sqs-queue-msgretentionperiod) : Integer
-﻿  [QueueName](#aws-sqs-queue-name) : String
-﻿  [ReceiveMessageWaitTimeSeconds](#aws-sqs-queue-receivemsgwaittime) : Integer
-﻿  [RedrivePolicy](#aws-sqs-queue-redrive) : Json
-﻿  [Tags](#cfn-sqs-queue-tags) : 
+Properties: 
+  [ContentBasedDeduplication](#aws-sqs-queue-contentbaseddeduplication): Boolean
+  [DelaySeconds](#aws-sqs-queue-delayseconds): Integer
+  [FifoQueue](#aws-sqs-queue-fifoqueue): Boolean
+  [KmsDataKeyReusePeriodSeconds](#aws-sqs-queue-kmsdatakeyreuseperiodseconds): Integer
+  [KmsMasterKeyId](#aws-sqs-queue-kmsmasterkeyid): String
+  [MaximumMessageSize](#aws-sqs-queue-maxmesgsize): Integer
+  [MessageRetentionPeriod](#aws-sqs-queue-msgretentionperiod): Integer
+  [QueueName](#aws-sqs-queue-name): String
+  [ReceiveMessageWaitTimeSeconds](#aws-sqs-queue-receivemsgwaittime): Integer
+  [RedrivePolicy](#aws-sqs-queue-redrive): Json
+  [Tags](#cfn-sqs-queue-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VisibilityTimeout](#aws-sqs-queue-visiblitytimeout) : Integer
+  [VisibilityTimeout](#aws-sqs-queue-visiblitytimeout): Integer
 ```
 
 ## Properties<a name="aws-properties-sqs-queues-properties"></a>

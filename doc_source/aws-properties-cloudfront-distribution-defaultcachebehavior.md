@@ -29,24 +29,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudfront-distribution-defaultcachebehavior-syntax.yaml"></a>
 
 ```
-﻿  [AllowedMethods](#cfn-cloudfront-distribution-defaultcachebehavior-allowedmethods) : 
+  [AllowedMethods](#cfn-cloudfront-distribution-defaultcachebehavior-allowedmethods): 
     - String
-﻿  [CachedMethods](#cfn-cloudfront-distribution-defaultcachebehavior-cachedmethods) : 
+  [CachedMethods](#cfn-cloudfront-distribution-defaultcachebehavior-cachedmethods): 
     - String
-﻿  [Compress](#cfn-cloudfront-distribution-defaultcachebehavior-compress) : Boolean
-﻿  [DefaultTTL](#cfn-cloudfront-distribution-defaultcachebehavior-defaultttl) : Double
-﻿  [FieldLevelEncryptionId](#cfn-cloudfront-distribution-defaultcachebehavior-fieldlevelencryptionid) : String
-﻿  [ForwardedValues](#cfn-cloudfront-distribution-defaultcachebehavior-forwardedvalues) : 
+  [Compress](#cfn-cloudfront-distribution-defaultcachebehavior-compress): Boolean
+  [DefaultTTL](#cfn-cloudfront-distribution-defaultcachebehavior-defaultttl): Double
+  [FieldLevelEncryptionId](#cfn-cloudfront-distribution-defaultcachebehavior-fieldlevelencryptionid): String
+  [ForwardedValues](#cfn-cloudfront-distribution-defaultcachebehavior-forwardedvalues): 
     [ForwardedValues](aws-properties-cloudfront-distribution-forwardedvalues.md)
-﻿  [LambdaFunctionAssociations](#cfn-cloudfront-distribution-defaultcachebehavior-lambdafunctionassociations) : 
+  [LambdaFunctionAssociations](#cfn-cloudfront-distribution-defaultcachebehavior-lambdafunctionassociations): 
     - [LambdaFunctionAssociation](aws-properties-cloudfront-distribution-lambdafunctionassociation.md)
-﻿  [MaxTTL](#cfn-cloudfront-distribution-defaultcachebehavior-maxttl) : Double
-﻿  [MinTTL](#cfn-cloudfront-distribution-defaultcachebehavior-minttl) : Double
-﻿  [SmoothStreaming](#cfn-cloudfront-distribution-defaultcachebehavior-smoothstreaming) : Boolean
-﻿  [TargetOriginId](#cfn-cloudfront-distribution-defaultcachebehavior-targetoriginid) : String
-﻿  [TrustedSigners](#cfn-cloudfront-distribution-defaultcachebehavior-trustedsigners) : 
+  [MaxTTL](#cfn-cloudfront-distribution-defaultcachebehavior-maxttl): Double
+  [MinTTL](#cfn-cloudfront-distribution-defaultcachebehavior-minttl): Double
+  [SmoothStreaming](#cfn-cloudfront-distribution-defaultcachebehavior-smoothstreaming): Boolean
+  [TargetOriginId](#cfn-cloudfront-distribution-defaultcachebehavior-targetoriginid): String
+  [TrustedSigners](#cfn-cloudfront-distribution-defaultcachebehavior-trustedsigners): 
     - String
-﻿  [ViewerProtocolPolicy](#cfn-cloudfront-distribution-defaultcachebehavior-viewerprotocolpolicy) : String
+  [ViewerProtocolPolicy](#cfn-cloudfront-distribution-defaultcachebehavior-viewerprotocolpolicy): String
 ```
 
 ## Properties<a name="aws-properties-cloudfront-distribution-defaultcachebehavior-properties"></a>

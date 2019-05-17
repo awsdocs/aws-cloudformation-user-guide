@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-pipeline-selectattributes-syntax.yaml"></a>
 
 ```
-﻿  [Attributes](#cfn-iotanalytics-pipeline-selectattributes-attributes) : 
+  [Attributes](#cfn-iotanalytics-pipeline-selectattributes-attributes): 
     - String
-﻿  [Name](#cfn-iotanalytics-pipeline-selectattributes-name) : String
-﻿  [Next](#cfn-iotanalytics-pipeline-selectattributes-next) : String
+  [Name](#cfn-iotanalytics-pipeline-selectattributes-name): String
+  [Next](#cfn-iotanalytics-pipeline-selectattributes-next): String
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-pipeline-selectattributes-properties"></a>

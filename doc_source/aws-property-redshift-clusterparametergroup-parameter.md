@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-property-redshift-clusterparametergroup-parameter-syntax.yaml"></a>
 
 ```
-﻿  [ParameterName](#cfn-redshift-clusterparametergroup-parameter-parametername) : String
-﻿  [ParameterValue](#cfn-redshift-clusterparametergroup-parameter-parametervalue) : String
+  [ParameterName](#cfn-redshift-clusterparametergroup-parameter-parametername): String
+  [ParameterValue](#cfn-redshift-clusterparametergroup-parameter-parametervalue): String
 ```
 
 ## Properties<a name="aws-property-redshift-clusterparametergroup-parameter-properties"></a>

@@ -22,10 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest-syntax.yaml"></a>
 
 ```
-﻿  [DefaultTargetCapacityType](#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-defaulttargetcapacitytype) : String
-﻿  [OnDemandTargetCapacity](#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-ondemandtargetcapacity) : Integer
-﻿  [SpotTargetCapacity](#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-spottargetcapacity) : Integer
-﻿  [TotalTargetCapacity](#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-totaltargetcapacity) : Integer
+  [DefaultTargetCapacityType](#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-defaulttargetcapacitytype): String
+  [OnDemandTargetCapacity](#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-ondemandtargetcapacity): Integer
+  [SpotTargetCapacity](#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-spottargetcapacity): Integer
+  [TotalTargetCapacity](#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-totaltargetcapacity): Integer
 ```
 
 ## Properties<a name="aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest-properties"></a>

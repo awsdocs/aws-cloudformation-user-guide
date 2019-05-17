@@ -22,10 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-rds-dbcluster-scalingconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [AutoPause](#cfn-rds-dbcluster-scalingconfiguration-autopause) : Boolean
-﻿  [MaxCapacity](#cfn-rds-dbcluster-scalingconfiguration-maxcapacity) : Integer
-﻿  [MinCapacity](#cfn-rds-dbcluster-scalingconfiguration-mincapacity) : Integer
-﻿  [SecondsUntilAutoPause](#cfn-rds-dbcluster-scalingconfiguration-secondsuntilautopause) : Integer
+  [AutoPause](#cfn-rds-dbcluster-scalingconfiguration-autopause): Boolean
+  [MaxCapacity](#cfn-rds-dbcluster-scalingconfiguration-maxcapacity): Integer
+  [MinCapacity](#cfn-rds-dbcluster-scalingconfiguration-mincapacity): Integer
+  [SecondsUntilAutoPause](#cfn-rds-dbcluster-scalingconfiguration-secondsuntilautopause): Integer
 ```
 
 ## Properties<a name="aws-properties-rds-dbcluster-scalingconfiguration-properties"></a>

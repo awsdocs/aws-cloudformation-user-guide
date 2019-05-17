@@ -23,11 +23,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IoTAnalytics::Datastore
-Properties : 
-﻿  [DatastoreName](#cfn-iotanalytics-datastore-datastorename) : String
-﻿  [RetentionPeriod](#cfn-iotanalytics-datastore-retentionperiod) : 
+Properties: 
+  [DatastoreName](#cfn-iotanalytics-datastore-datastorename): String
+  [RetentionPeriod](#cfn-iotanalytics-datastore-retentionperiod): 
     [RetentionPeriod](aws-properties-iotanalytics-datastore-retentionperiod.md)
-﻿  [Tags](#cfn-iotanalytics-datastore-tags) : 
+  [Tags](#cfn-iotanalytics-datastore-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

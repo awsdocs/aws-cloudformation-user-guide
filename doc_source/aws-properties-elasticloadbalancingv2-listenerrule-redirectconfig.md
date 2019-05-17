@@ -33,12 +33,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig-syntax.yaml"></a>
 
 ```
-﻿  [Host](#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-host) : String
-﻿  [Path](#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-path) : String
-﻿  [Port](#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-port) : String
-﻿  [Protocol](#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-protocol) : String
-﻿  [Query](#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-query) : String
-﻿  [StatusCode](#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-statuscode) : String
+  [Host](#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-host): String
+  [Path](#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-path): String
+  [Port](#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-port): String
+  [Protocol](#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-protocol): String
+  [Query](#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-query): String
+  [StatusCode](#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-statuscode): String
 ```
 
 ## Properties<a name="aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig-properties"></a>

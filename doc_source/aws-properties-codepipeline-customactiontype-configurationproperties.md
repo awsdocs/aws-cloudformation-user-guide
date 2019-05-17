@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codepipeline-customactiontype-configurationproperties-syntax.yaml"></a>
 
 ```
-﻿  [Description](#cfn-codepipeline-customactiontype-configurationproperties-description) : String
-﻿  [Key](#cfn-codepipeline-customactiontype-configurationproperties-key) : Boolean
-﻿  [Name](#cfn-codepipeline-customactiontype-configurationproperties-name) : String
-﻿  [Queryable](#cfn-codepipeline-customactiontype-configurationproperties-queryable) : Boolean
-﻿  [Required](#cfn-codepipeline-customactiontype-configurationproperties-required) : Boolean
-﻿  [Secret](#cfn-codepipeline-customactiontype-configurationproperties-secret) : Boolean
-﻿  [Type](#cfn-codepipeline-customactiontype-configurationproperties-type) : String
+  [Description](#cfn-codepipeline-customactiontype-configurationproperties-description): String
+  [Key](#cfn-codepipeline-customactiontype-configurationproperties-key): Boolean
+  [Name](#cfn-codepipeline-customactiontype-configurationproperties-name): String
+  [Queryable](#cfn-codepipeline-customactiontype-configurationproperties-queryable): Boolean
+  [Required](#cfn-codepipeline-customactiontype-configurationproperties-required): Boolean
+  [Secret](#cfn-codepipeline-customactiontype-configurationproperties-secret): Boolean
+  [Type](#cfn-codepipeline-customactiontype-configurationproperties-type): String
 ```
 
 ## Properties<a name="aws-properties-codepipeline-customactiontype-configurationproperties-properties"></a>

@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-autoscalingpolicy-syntax.yaml"></a>
 
 ```
-﻿  [Constraints](#cfn-elasticmapreduce-cluster-autoscalingpolicy-constraints) : 
+  [Constraints](#cfn-elasticmapreduce-cluster-autoscalingpolicy-constraints): 
     [ScalingConstraints](aws-properties-elasticmapreduce-cluster-scalingconstraints.md)
-﻿  [Rules](#cfn-elasticmapreduce-cluster-autoscalingpolicy-rules) : 
+  [Rules](#cfn-elasticmapreduce-cluster-autoscalingpolicy-rules): 
     - [ScalingRule](aws-properties-elasticmapreduce-cluster-scalingrule.md)
 ```
 

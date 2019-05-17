@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [Inputs](#cfn-kinesisanalyticsv2-application-sqlapplicationconfiguration-inputs) : 
+  [Inputs](#cfn-kinesisanalyticsv2-application-sqlapplicationconfiguration-inputs): 
     - [Input](aws-properties-kinesisanalyticsv2-application-input.md)
 ```
 

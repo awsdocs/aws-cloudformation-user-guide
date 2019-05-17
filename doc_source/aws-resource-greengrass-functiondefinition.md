@@ -28,10 +28,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Greengrass::FunctionDefinition
-Properties : 
-﻿  [InitialVersion](#cfn-greengrass-functiondefinition-initialversion) : 
+Properties: 
+  [InitialVersion](#cfn-greengrass-functiondefinition-initialversion): 
     [FunctionDefinitionVersion](aws-properties-greengrass-functiondefinition-functiondefinitionversion.md)
-﻿  [Name](#cfn-greengrass-functiondefinition-name) : String
+  [Name](#cfn-greengrass-functiondefinition-name): String
 ```
 
 ## Properties<a name="aws-resource-greengrass-functiondefinition-properties"></a>

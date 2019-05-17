@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppSync::ApiKey
-Properties : 
-﻿  [ApiId](#cfn-appsync-apikey-apiid) : String
-﻿  [Description](#cfn-appsync-apikey-description) : String
-﻿  [Expires](#cfn-appsync-apikey-expires) : Double
+Properties: 
+  [ApiId](#cfn-appsync-apikey-apiid): String
+  [Description](#cfn-appsync-apikey-description): String
+  [Expires](#cfn-appsync-apikey-expires): Double
 ```
 
 ## Properties<a name="aws-resource-appsync-apikey-properties"></a>

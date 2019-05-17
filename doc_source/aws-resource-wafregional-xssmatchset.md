@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::WAFRegional::XssMatchSet
-Properties : 
-﻿  [Name](#cfn-wafregional-xssmatchset-name) : String
-﻿  [XssMatchTuples](#cfn-wafregional-xssmatchset-xssmatchtuples) : 
+Properties: 
+  [Name](#cfn-wafregional-xssmatchset-name): String
+  [XssMatchTuples](#cfn-wafregional-xssmatchset-xssmatchtuples): 
     - [XssMatchTuple](aws-properties-wafregional-xssmatchset-xssmatchtuple.md)
 ```
 

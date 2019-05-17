@@ -21,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-workspaces-workspace-workspaceproperties-syntax.yaml"></a>
 
 ```
-﻿  [ComputeTypeName](#cfn-workspaces-workspace-workspaceproperties-computetypename) : String
-﻿  [RootVolumeSizeGib](#cfn-workspaces-workspace-workspaceproperties-rootvolumesizegib) : Integer
-﻿  [RunningMode](#cfn-workspaces-workspace-workspaceproperties-runningmode) : String
-﻿  [RunningModeAutoStopTimeoutInMinutes](#cfn-workspaces-workspace-workspaceproperties-runningmodeautostoptimeoutinminutes) : Integer
-﻿  [UserVolumeSizeGib](#cfn-workspaces-workspace-workspaceproperties-uservolumesizegib) : Integer
+  [ComputeTypeName](#cfn-workspaces-workspace-workspaceproperties-computetypename): String
+  [RootVolumeSizeGib](#cfn-workspaces-workspace-workspaceproperties-rootvolumesizegib): Integer
+  [RunningMode](#cfn-workspaces-workspace-workspaceproperties-runningmode): String
+  [RunningModeAutoStopTimeoutInMinutes](#cfn-workspaces-workspace-workspaceproperties-runningmodeautostoptimeoutinminutes): Integer
+  [UserVolumeSizeGib](#cfn-workspaces-workspace-workspaceproperties-uservolumesizegib): Integer
 ```
 
 ## Properties<a name="aws-properties-workspaces-workspace-workspaceproperties-properties"></a>

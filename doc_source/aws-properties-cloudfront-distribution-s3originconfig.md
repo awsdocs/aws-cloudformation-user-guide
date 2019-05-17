@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudfront-distribution-s3originconfig-syntax.yaml"></a>
 
 ```
-﻿  [OriginAccessIdentity](#cfn-cloudfront-distribution-s3originconfig-originaccessidentity) : String
+  [OriginAccessIdentity](#cfn-cloudfront-distribution-s3originconfig-originaccessidentity): String
 ```
 
 ## Properties<a name="aws-properties-cloudfront-distribution-s3originconfig-properties"></a>

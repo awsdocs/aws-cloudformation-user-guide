@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudfront-distribution-origincustomheader-syntax.yaml"></a>
 
 ```
-﻿  [HeaderName](#cfn-cloudfront-distribution-origincustomheader-headername) : String
-﻿  [HeaderValue](#cfn-cloudfront-distribution-origincustomheader-headervalue) : String
+  [HeaderName](#cfn-cloudfront-distribution-origincustomheader-headername): String
+  [HeaderValue](#cfn-cloudfront-distribution-origincustomheader-headervalue): String
 ```
 
 ## Properties<a name="aws-properties-cloudfront-distribution-origincustomheader-properties"></a>

@@ -27,16 +27,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DMS::EventSubscription
-Properties : 
-﻿  [Enabled](#cfn-dms-eventsubscription-enabled) : Boolean
-﻿  [EventCategories](#cfn-dms-eventsubscription-eventcategories) : 
+Properties: 
+  [Enabled](#cfn-dms-eventsubscription-enabled): Boolean
+  [EventCategories](#cfn-dms-eventsubscription-eventcategories): 
     - String
-﻿  [SnsTopicArn](#cfn-dms-eventsubscription-snstopicarn) : String
-﻿  [SourceIds](#cfn-dms-eventsubscription-sourceids) : 
+  [SnsTopicArn](#cfn-dms-eventsubscription-snstopicarn): String
+  [SourceIds](#cfn-dms-eventsubscription-sourceids): 
     - String
-﻿  [SourceType](#cfn-dms-eventsubscription-sourcetype) : String
-﻿  [SubscriptionName](#cfn-dms-eventsubscription-subscriptionname) : String
-﻿  [Tags](#cfn-dms-eventsubscription-tags) : 
+  [SourceType](#cfn-dms-eventsubscription-sourcetype): String
+  [SubscriptionName](#cfn-dms-eventsubscription-subscriptionname): String
+  [Tags](#cfn-dms-eventsubscription-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

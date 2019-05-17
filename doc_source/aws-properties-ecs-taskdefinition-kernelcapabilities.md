@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-taskdefinition-kernelcapabilities-syntax.yaml"></a>
 
 ```
-﻿  [Add](#cfn-ecs-taskdefinition-kernelcapabilities-add) : 
+  [Add](#cfn-ecs-taskdefinition-kernelcapabilities-add): 
     - String
-﻿  [Drop](#cfn-ecs-taskdefinition-kernelcapabilities-drop) : 
+  [Drop](#cfn-ecs-taskdefinition-kernelcapabilities-drop): 
     - String
 ```
 

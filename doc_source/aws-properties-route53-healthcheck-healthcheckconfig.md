@@ -32,26 +32,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-route53-healthcheck-healthcheckconfig-syntax.yaml"></a>
 
 ```
-﻿  [AlarmIdentifier](#cfn-route53-healthcheck-healthcheckconfig-alarmidentifier) : 
+  [AlarmIdentifier](#cfn-route53-healthcheck-healthcheckconfig-alarmidentifier): 
     [AlarmIdentifier](aws-properties-route53-healthcheck-alarmidentifier.md)
-﻿  [ChildHealthChecks](#cfn-route53-healthcheck-healthcheckconfig-childhealthchecks) : 
+  [ChildHealthChecks](#cfn-route53-healthcheck-healthcheckconfig-childhealthchecks): 
     - String
-﻿  [EnableSNI](#cfn-route53-healthcheck-healthcheckconfig-enablesni) : Boolean
-﻿  [FailureThreshold](#cfn-route53-healthcheck-healthcheckconfig-failurethreshold) : Integer
-﻿  [FullyQualifiedDomainName](#cfn-route53-healthcheck-healthcheckconfig-fullyqualifieddomainname) : String
-﻿  [HealthThreshold](#cfn-route53-healthcheck-healthcheckconfig-healththreshold) : Integer
-﻿  [IPAddress](#cfn-route53-healthcheck-healthcheckconfig-ipaddress) : String
-﻿  [InsufficientDataHealthStatus](#cfn-route53-healthcheck-healthcheckconfig-insufficientdatahealthstatus) : String
-﻿  [Inverted](#cfn-route53-healthcheck-healthcheckconfig-inverted) : Boolean
-﻿  [MeasureLatency](#cfn-route53-healthcheck-healthcheckconfig-measurelatency) : Boolean
-﻿  [Port](#cfn-route53-healthcheck-healthcheckconfig-port) : Integer
-﻿  [Regions](#cfn-route53-healthcheck-healthcheckconfig-regions) : 
+  [EnableSNI](#cfn-route53-healthcheck-healthcheckconfig-enablesni): Boolean
+  [FailureThreshold](#cfn-route53-healthcheck-healthcheckconfig-failurethreshold): Integer
+  [FullyQualifiedDomainName](#cfn-route53-healthcheck-healthcheckconfig-fullyqualifieddomainname): String
+  [HealthThreshold](#cfn-route53-healthcheck-healthcheckconfig-healththreshold): Integer
+  [IPAddress](#cfn-route53-healthcheck-healthcheckconfig-ipaddress): String
+  [InsufficientDataHealthStatus](#cfn-route53-healthcheck-healthcheckconfig-insufficientdatahealthstatus): String
+  [Inverted](#cfn-route53-healthcheck-healthcheckconfig-inverted): Boolean
+  [MeasureLatency](#cfn-route53-healthcheck-healthcheckconfig-measurelatency): Boolean
+  [Port](#cfn-route53-healthcheck-healthcheckconfig-port): Integer
+  [Regions](#cfn-route53-healthcheck-healthcheckconfig-regions): 
     - String
-﻿  [RequestInterval](#cfn-route53-healthcheck-healthcheckconfig-requestinterval) : Integer
-﻿  [ResourcePath](#cfn-route53-healthcheck-healthcheckconfig-resourcepath) : String
-﻿  [SearchString](#cfn-route53-healthcheck-healthcheckconfig-searchstring) : 
+  [RequestInterval](#cfn-route53-healthcheck-healthcheckconfig-requestinterval): Integer
+  [ResourcePath](#cfn-route53-healthcheck-healthcheckconfig-resourcepath): String
+  [SearchString](#cfn-route53-healthcheck-healthcheckconfig-searchstring): 
     String
-﻿  [Type](#cfn-route53-healthcheck-healthcheckconfig-type) : String
+  [Type](#cfn-route53-healthcheck-healthcheckconfig-type): String
 ```
 
 ## Properties<a name="aws-properties-route53-healthcheck-healthcheckconfig-properties"></a>

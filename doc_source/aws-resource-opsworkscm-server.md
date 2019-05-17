@@ -37,26 +37,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::OpsWorksCM::Server
-Properties : 
-﻿  [AssociatePublicIpAddress](#cfn-opsworkscm-server-associatepublicipaddress) : Boolean
-﻿  [BackupId](#cfn-opsworkscm-server-backupid) : String
-﻿  [BackupRetentionCount](#cfn-opsworkscm-server-backupretentioncount) : Integer
-﻿  [DisableAutomatedBackup](#cfn-opsworkscm-server-disableautomatedbackup) : Boolean
-﻿  [Engine](#cfn-opsworkscm-server-engine) : String
-﻿  [EngineAttributes](#cfn-opsworkscm-server-engineattributes) : 
+Properties: 
+  [AssociatePublicIpAddress](#cfn-opsworkscm-server-associatepublicipaddress): Boolean
+  [BackupId](#cfn-opsworkscm-server-backupid): String
+  [BackupRetentionCount](#cfn-opsworkscm-server-backupretentioncount): Integer
+  [DisableAutomatedBackup](#cfn-opsworkscm-server-disableautomatedbackup): Boolean
+  [Engine](#cfn-opsworkscm-server-engine): String
+  [EngineAttributes](#cfn-opsworkscm-server-engineattributes): 
     - [EngineAttribute](aws-properties-opsworkscm-server-engineattribute.md)
-﻿  [EngineModel](#cfn-opsworkscm-server-enginemodel) : String
-﻿  [EngineVersion](#cfn-opsworkscm-server-engineversion) : String
-﻿  [InstanceProfileArn](#cfn-opsworkscm-server-instanceprofilearn) : String
-﻿  [InstanceType](#cfn-opsworkscm-server-instancetype) : String
-﻿  [KeyPair](#cfn-opsworkscm-server-keypair) : String
-﻿  [PreferredBackupWindow](#cfn-opsworkscm-server-preferredbackupwindow) : String
-﻿  [PreferredMaintenanceWindow](#cfn-opsworkscm-server-preferredmaintenancewindow) : String
-﻿  [SecurityGroupIds](#cfn-opsworkscm-server-securitygroupids) : 
+  [EngineModel](#cfn-opsworkscm-server-enginemodel): String
+  [EngineVersion](#cfn-opsworkscm-server-engineversion): String
+  [InstanceProfileArn](#cfn-opsworkscm-server-instanceprofilearn): String
+  [InstanceType](#cfn-opsworkscm-server-instancetype): String
+  [KeyPair](#cfn-opsworkscm-server-keypair): String
+  [PreferredBackupWindow](#cfn-opsworkscm-server-preferredbackupwindow): String
+  [PreferredMaintenanceWindow](#cfn-opsworkscm-server-preferredmaintenancewindow): String
+  [SecurityGroupIds](#cfn-opsworkscm-server-securitygroupids): 
     - String
-﻿  [ServerName](#cfn-opsworkscm-server-servername) : String
-﻿  [ServiceRoleArn](#cfn-opsworkscm-server-servicerolearn) : String
-﻿  [SubnetIds](#cfn-opsworkscm-server-subnetids) : 
+  [ServerName](#cfn-opsworkscm-server-servername): String
+  [ServiceRoleArn](#cfn-opsworkscm-server-servicerolearn): String
+  [SubnetIds](#cfn-opsworkscm-server-subnetids): 
     - String
 ```
 

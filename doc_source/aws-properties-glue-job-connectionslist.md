@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-job-connectionslist-syntax.yaml"></a>
 
 ```
-﻿  [Connections](#cfn-glue-job-connectionslist-connections) : 
+  [Connections](#cfn-glue-job-connectionslist-connections): 
     - String
 ```
 

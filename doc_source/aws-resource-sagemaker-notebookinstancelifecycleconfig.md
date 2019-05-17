@@ -23,11 +23,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SageMaker::NotebookInstanceLifecycleConfig
-Properties : 
-﻿  [NotebookInstanceLifecycleConfigName](#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecycleconfigname) : String
-﻿  [OnCreate](#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate) : 
+Properties: 
+  [NotebookInstanceLifecycleConfigName](#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecycleconfigname): String
+  [OnCreate](#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate): 
     - [NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md)
-﻿  [OnStart](#cfn-sagemaker-notebookinstancelifecycleconfig-onstart) : 
+  [OnStart](#cfn-sagemaker-notebookinstancelifecycleconfig-onstart): 
     - [NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md)
 ```
 

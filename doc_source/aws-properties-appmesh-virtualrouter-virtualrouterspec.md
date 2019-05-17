@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-virtualrouter-virtualrouterspec-syntax.yaml"></a>
 
 ```
-﻿  [Listeners](#cfn-appmesh-virtualrouter-virtualrouterspec-listeners) : 
+  [Listeners](#cfn-appmesh-virtualrouter-virtualrouterspec-listeners): 
     - [VirtualRouterListener](aws-properties-appmesh-virtualrouter-virtualrouterlistener.md)
 ```
 

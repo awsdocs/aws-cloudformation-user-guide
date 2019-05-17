@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DMS::Certificate
-Properties : 
-﻿  [CertificateIdentifier](#cfn-dms-certificate-certificateidentifier) : String
-﻿  [CertificatePem](#cfn-dms-certificate-certificatepem) : String
-﻿  [CertificateWallet](#cfn-dms-certificate-certificatewallet) : String
+Properties: 
+  [CertificateIdentifier](#cfn-dms-certificate-certificateidentifier): String
+  [CertificatePem](#cfn-dms-certificate-certificatepem): String
+  [CertificateWallet](#cfn-dms-certificate-certificatewallet): String
 ```
 
 ## Properties<a name="aws-resource-dms-certificate-properties"></a>

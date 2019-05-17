@@ -31,16 +31,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::SecurityGroup
-Properties : 
-﻿  [GroupDescription](#cfn-ec2-securitygroup-groupdescription) : String
-﻿  [GroupName](#cfn-ec2-securitygroup-groupname) : String
-﻿  [SecurityGroupEgress](#cfn-ec2-securitygroup-securitygroupegress) : 
+Properties: 
+  [GroupDescription](#cfn-ec2-securitygroup-groupdescription): String
+  [GroupName](#cfn-ec2-securitygroup-groupname): String
+  [SecurityGroupEgress](#cfn-ec2-securitygroup-securitygroupegress): 
     - [Egress](aws-properties-ec2-security-group-rule.md)
-﻿  [SecurityGroupIngress](#cfn-ec2-securitygroup-securitygroupingress) : 
+  [SecurityGroupIngress](#cfn-ec2-securitygroup-securitygroupingress): 
     - [Ingress](aws-properties-ec2-security-group-rule-1.md)
-﻿  [Tags](#cfn-ec2-securitygroup-tags) : 
+  [Tags](#cfn-ec2-securitygroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VpcId](#cfn-ec2-securitygroup-vpcid) : String
+  [VpcId](#cfn-ec2-securitygroup-vpcid): String
 ```
 
 ## Properties<a name="aws-properties-ec2-security-group-properties"></a>
@@ -151,10 +151,10 @@ InstanceSecurityGroup:
         ToPort: 80
         CidrIp: 0.0.0.0/0
       SecurityGroupEgress:
-        - IpProtocol: tcp
-          FromPort: 80
-          ToPort: 80
-          CidrIp: 0.0.0.0/0
+      - IpProtocol: tcp
+        FromPort: 80
+        ToPort: 80
+        CidrIp: 0.0.0.0/0
 ```
 
 ### Remove Default Rule<a name="aws-properties-ec2-security-group--examples--Remove_Default_Rule"></a>
@@ -189,8 +189,8 @@ sgwithoutegress:
     SecurityGroupEgress:
     - CidrIp: 127.0.0.1/32
       IpProtocol: "-1"
-      VpcId:
-         Ref: myVPC
+    VpcId:
+      Ref: myVPC
 ```
 
 ## See Also<a name="aws-properties-ec2-security-group--seealso"></a>

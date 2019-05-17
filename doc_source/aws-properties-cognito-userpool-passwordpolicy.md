@@ -21,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cognito-userpool-passwordpolicy-syntax.yaml"></a>
 
 ```
-﻿  [MinimumLength](#cfn-cognito-userpool-passwordpolicy-minimumlength) : Integer
-﻿  [RequireLowercase](#cfn-cognito-userpool-passwordpolicy-requirelowercase) : Boolean
-﻿  [RequireNumbers](#cfn-cognito-userpool-passwordpolicy-requirenumbers) : Boolean
-﻿  [RequireSymbols](#cfn-cognito-userpool-passwordpolicy-requiresymbols) : Boolean
-﻿  [RequireUppercase](#cfn-cognito-userpool-passwordpolicy-requireuppercase) : Boolean
+  [MinimumLength](#cfn-cognito-userpool-passwordpolicy-minimumlength): Integer
+  [RequireLowercase](#cfn-cognito-userpool-passwordpolicy-requirelowercase): Boolean
+  [RequireNumbers](#cfn-cognito-userpool-passwordpolicy-requirenumbers): Boolean
+  [RequireSymbols](#cfn-cognito-userpool-passwordpolicy-requiresymbols): Boolean
+  [RequireUppercase](#cfn-cognito-userpool-passwordpolicy-requireuppercase): Boolean
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-passwordpolicy-properties"></a>

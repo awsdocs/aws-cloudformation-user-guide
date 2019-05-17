@@ -24,12 +24,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::StepFunctions::StateMachine
-Properties : 
-﻿  [DefinitionString](#cfn-stepfunctions-statemachine-definitionstring) : 
+Properties: 
+  [DefinitionString](#cfn-stepfunctions-statemachine-definitionstring): 
     String
-﻿  [RoleArn](#cfn-stepfunctions-statemachine-rolearn) : String
-﻿  [StateMachineName](#cfn-stepfunctions-statemachine-statemachinename) : String
-﻿  [Tags](#cfn-stepfunctions-statemachine-tags) : 
+  [RoleArn](#cfn-stepfunctions-statemachine-rolearn): String
+  [StateMachineName](#cfn-stepfunctions-statemachine-statemachinename): String
+  [Tags](#cfn-stepfunctions-statemachine-tags): 
     - [TagsEntry](aws-properties-stepfunctions-statemachine-tagsentry.md)
 ```
 

@@ -36,18 +36,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AutoScaling::ScalingPolicy
-Properties : 
-﻿  [AdjustmentType](#cfn-as-scalingpolicy-adjustmenttype) : String
-﻿  [AutoScalingGroupName](#cfn-as-scalingpolicy-autoscalinggroupname) : String
-﻿  [Cooldown](#cfn-as-scalingpolicy-cooldown) : String
-﻿  [EstimatedInstanceWarmup](#cfn-as-scalingpolicy-estimatedinstancewarmup) : Integer
-﻿  [MetricAggregationType](#cfn-as-scalingpolicy-metricaggregationtype) : String
-﻿  [MinAdjustmentMagnitude](#cfn-as-scalingpolicy-minadjustmentmagnitude) : Integer
-﻿  [PolicyType](#cfn-as-scalingpolicy-policytype) : String
-﻿  [ScalingAdjustment](#cfn-as-scalingpolicy-scalingadjustment) : Integer
-﻿  [StepAdjustments](#cfn-as-scalingpolicy-stepadjustments) : 
+Properties: 
+  [AdjustmentType](#cfn-as-scalingpolicy-adjustmenttype): String
+  [AutoScalingGroupName](#cfn-as-scalingpolicy-autoscalinggroupname): String
+  [Cooldown](#cfn-as-scalingpolicy-cooldown): String
+  [EstimatedInstanceWarmup](#cfn-as-scalingpolicy-estimatedinstancewarmup): Integer
+  [MetricAggregationType](#cfn-as-scalingpolicy-metricaggregationtype): String
+  [MinAdjustmentMagnitude](#cfn-as-scalingpolicy-minadjustmentmagnitude): Integer
+  [PolicyType](#cfn-as-scalingpolicy-policytype): String
+  [ScalingAdjustment](#cfn-as-scalingpolicy-scalingadjustment): Integer
+  [StepAdjustments](#cfn-as-scalingpolicy-stepadjustments): 
     - [StepAdjustment](aws-properties-autoscaling-scalingpolicy-stepadjustments.md)
-﻿  [TargetTrackingConfiguration](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration) : 
+  [TargetTrackingConfiguration](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration): 
     [TargetTrackingConfiguration](aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.md)
 ```
 

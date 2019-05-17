@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apigateway-usageplan-throttlesettings-syntax.yaml"></a>
 
 ```
-﻿  [BurstLimit](#cfn-apigateway-usageplan-throttlesettings-burstlimit) : Integer
-﻿  [RateLimit](#cfn-apigateway-usageplan-throttlesettings-ratelimit) : Double
+  [BurstLimit](#cfn-apigateway-usageplan-throttlesettings-burstlimit): Integer
+  [RateLimit](#cfn-apigateway-usageplan-throttlesettings-ratelimit): Double
 ```
 
 ## Properties<a name="aws-properties-apigateway-usageplan-throttlesettings-properties"></a>

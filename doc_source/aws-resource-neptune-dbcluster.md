@@ -39,23 +39,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Neptune::DBCluster
-Properties : 
-﻿  [AvailabilityZones](#cfn-neptune-dbcluster-availabilityzones) : 
+Properties: 
+  [AvailabilityZones](#cfn-neptune-dbcluster-availabilityzones): 
     - String
-﻿  [BackupRetentionPeriod](#cfn-neptune-dbcluster-backupretentionperiod) : Integer
-﻿  [DBClusterIdentifier](#cfn-neptune-dbcluster-dbclusteridentifier) : String
-﻿  [DBClusterParameterGroupName](#cfn-neptune-dbcluster-dbclusterparametergroupname) : String
-﻿  [DBSubnetGroupName](#cfn-neptune-dbcluster-dbsubnetgroupname) : String
-﻿  [IamAuthEnabled](#cfn-neptune-dbcluster-iamauthenabled) : Boolean
-﻿  [KmsKeyId](#cfn-neptune-dbcluster-kmskeyid) : String
-﻿  [Port](#cfn-neptune-dbcluster-port) : Integer
-﻿  [PreferredBackupWindow](#cfn-neptune-dbcluster-preferredbackupwindow) : String
-﻿  [PreferredMaintenanceWindow](#cfn-neptune-dbcluster-preferredmaintenancewindow) : String
-﻿  [SnapshotIdentifier](#cfn-neptune-dbcluster-snapshotidentifier) : String
-﻿  [StorageEncrypted](#cfn-neptune-dbcluster-storageencrypted) : Boolean
-﻿  [Tags](#cfn-neptune-dbcluster-tags) : 
+  [BackupRetentionPeriod](#cfn-neptune-dbcluster-backupretentionperiod): Integer
+  [DBClusterIdentifier](#cfn-neptune-dbcluster-dbclusteridentifier): String
+  [DBClusterParameterGroupName](#cfn-neptune-dbcluster-dbclusterparametergroupname): String
+  [DBSubnetGroupName](#cfn-neptune-dbcluster-dbsubnetgroupname): String
+  [IamAuthEnabled](#cfn-neptune-dbcluster-iamauthenabled): Boolean
+  [KmsKeyId](#cfn-neptune-dbcluster-kmskeyid): String
+  [Port](#cfn-neptune-dbcluster-port): Integer
+  [PreferredBackupWindow](#cfn-neptune-dbcluster-preferredbackupwindow): String
+  [PreferredMaintenanceWindow](#cfn-neptune-dbcluster-preferredmaintenancewindow): String
+  [SnapshotIdentifier](#cfn-neptune-dbcluster-snapshotidentifier): String
+  [StorageEncrypted](#cfn-neptune-dbcluster-storageencrypted): Boolean
+  [Tags](#cfn-neptune-dbcluster-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VpcSecurityGroupIds](#cfn-neptune-dbcluster-vpcsecuritygroupids) : 
+  [VpcSecurityGroupIds](#cfn-neptune-dbcluster-vpcsecuritygroupids): 
     - String
 ```
 

@@ -24,12 +24,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RDS::DBSubnetGroup
-Properties : 
-﻿  [DBSubnetGroupDescription](#cfn-rds-dbsubnetgroup-dbsubnetgroupdescription) : String
-﻿  [DBSubnetGroupName](#cfn-rds-dbsubnetgroup-dbsubnetgroupname) : String
-﻿  [SubnetIds](#cfn-rds-dbsubnetgroup-subnetids) : 
+Properties: 
+  [DBSubnetGroupDescription](#cfn-rds-dbsubnetgroup-dbsubnetgroupdescription): String
+  [DBSubnetGroupName](#cfn-rds-dbsubnetgroup-dbsubnetgroupname): String
+  [SubnetIds](#cfn-rds-dbsubnetgroup-subnetids): 
     - String
-﻿  [Tags](#cfn-rds-dbsubnetgroup-tags) : 
+  [Tags](#cfn-rds-dbsubnetgroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

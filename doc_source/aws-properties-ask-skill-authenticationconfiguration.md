@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ask-skill-authenticationconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [ClientId](#cfn-ask-skill-authenticationconfiguration-clientid) : String
-﻿  [ClientSecret](#cfn-ask-skill-authenticationconfiguration-clientsecret) : String
-﻿  [RefreshToken](#cfn-ask-skill-authenticationconfiguration-refreshtoken) : String
+  [ClientId](#cfn-ask-skill-authenticationconfiguration-clientid): String
+  [ClientSecret](#cfn-ask-skill-authenticationconfiguration-clientsecret): String
+  [RefreshToken](#cfn-ask-skill-authenticationconfiguration-refreshtoken): String
 ```
 
 ## Properties<a name="aws-properties-ask-skill-authenticationconfiguration-properties"></a>

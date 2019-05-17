@@ -39,28 +39,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ElasticLoadBalancingV2::TargetGroup
-Properties : 
-﻿  [HealthCheckEnabled](#cfn-elasticloadbalancingv2-targetgroup-healthcheckenabled) : Boolean
-﻿  [HealthCheckIntervalSeconds](#cfn-elasticloadbalancingv2-targetgroup-healthcheckintervalseconds) : Integer
-﻿  [HealthCheckPath](#cfn-elasticloadbalancingv2-targetgroup-healthcheckpath) : String
-﻿  [HealthCheckPort](#cfn-elasticloadbalancingv2-targetgroup-healthcheckport) : String
-﻿  [HealthCheckProtocol](#cfn-elasticloadbalancingv2-targetgroup-healthcheckprotocol) : String
-﻿  [HealthCheckTimeoutSeconds](#cfn-elasticloadbalancingv2-targetgroup-healthchecktimeoutseconds) : Integer
-﻿  [HealthyThresholdCount](#cfn-elasticloadbalancingv2-targetgroup-healthythresholdcount) : Integer
-﻿  [Matcher](#cfn-elasticloadbalancingv2-targetgroup-matcher) : 
+Properties: 
+  [HealthCheckEnabled](#cfn-elasticloadbalancingv2-targetgroup-healthcheckenabled): Boolean
+  [HealthCheckIntervalSeconds](#cfn-elasticloadbalancingv2-targetgroup-healthcheckintervalseconds): Integer
+  [HealthCheckPath](#cfn-elasticloadbalancingv2-targetgroup-healthcheckpath): String
+  [HealthCheckPort](#cfn-elasticloadbalancingv2-targetgroup-healthcheckport): String
+  [HealthCheckProtocol](#cfn-elasticloadbalancingv2-targetgroup-healthcheckprotocol): String
+  [HealthCheckTimeoutSeconds](#cfn-elasticloadbalancingv2-targetgroup-healthchecktimeoutseconds): Integer
+  [HealthyThresholdCount](#cfn-elasticloadbalancingv2-targetgroup-healthythresholdcount): Integer
+  [Matcher](#cfn-elasticloadbalancingv2-targetgroup-matcher): 
     [Matcher](aws-properties-elasticloadbalancingv2-targetgroup-matcher.md)
-﻿  [Name](#cfn-elasticloadbalancingv2-targetgroup-name) : String
-﻿  [Port](#cfn-elasticloadbalancingv2-targetgroup-port) : Integer
-﻿  [Protocol](#cfn-elasticloadbalancingv2-targetgroup-protocol) : String
-﻿  [Tags](#cfn-elasticloadbalancingv2-targetgroup-tags) : 
+  [Name](#cfn-elasticloadbalancingv2-targetgroup-name): String
+  [Port](#cfn-elasticloadbalancingv2-targetgroup-port): Integer
+  [Protocol](#cfn-elasticloadbalancingv2-targetgroup-protocol): String
+  [Tags](#cfn-elasticloadbalancingv2-targetgroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [TargetGroupAttributes](#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes) : 
+  [TargetGroupAttributes](#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes): 
     - [TargetGroupAttribute](aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.md)
-﻿  [TargetType](#cfn-elasticloadbalancingv2-targetgroup-targettype) : String
-﻿  [Targets](#cfn-elasticloadbalancingv2-targetgroup-targets) : 
+  [TargetType](#cfn-elasticloadbalancingv2-targetgroup-targettype): String
+  [Targets](#cfn-elasticloadbalancingv2-targetgroup-targets): 
     - [TargetDescription](aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.md)
-﻿  [UnhealthyThresholdCount](#cfn-elasticloadbalancingv2-targetgroup-unhealthythresholdcount) : Integer
-﻿  [VpcId](#cfn-elasticloadbalancingv2-targetgroup-vpcid) : String
+  [UnhealthyThresholdCount](#cfn-elasticloadbalancingv2-targetgroup-unhealthythresholdcount): Integer
+  [VpcId](#cfn-elasticloadbalancingv2-targetgroup-vpcid): String
 ```
 
 ## Properties<a name="aws-resource-elasticloadbalancingv2-targetgroup-properties"></a>

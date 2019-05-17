@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-applicationsnapshotconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [SnapshotsEnabled](#cfn-kinesisanalyticsv2-application-applicationsnapshotconfiguration-snapshotsenabled) : Boolean
+  [SnapshotsEnabled](#cfn-kinesisanalyticsv2-application-applicationsnapshotconfiguration-snapshotsenabled): Boolean
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-applicationsnapshotconfiguration-properties"></a>

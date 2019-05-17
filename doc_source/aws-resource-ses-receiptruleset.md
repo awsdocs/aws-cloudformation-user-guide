@@ -25,8 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SES::ReceiptRuleSet
-Properties : 
-﻿  [RuleSetName](#cfn-ses-receiptruleset-rulesetname) : String
+Properties: 
+  [RuleSetName](#cfn-ses-receiptruleset-rulesetname): String
 ```
 
 ## Properties<a name="aws-resource-ses-receiptruleset-properties"></a>

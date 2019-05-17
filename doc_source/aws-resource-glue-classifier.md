@@ -23,12 +23,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Glue::Classifier
-Properties : 
-﻿  [GrokClassifier](#cfn-glue-classifier-grokclassifier) : 
+Properties: 
+  [GrokClassifier](#cfn-glue-classifier-grokclassifier): 
     [GrokClassifier](aws-properties-glue-classifier-grokclassifier.md)
-﻿  [JsonClassifier](#cfn-glue-classifier-jsonclassifier) : 
+  [JsonClassifier](#cfn-glue-classifier-jsonclassifier): 
     [JsonClassifier](aws-properties-glue-classifier-jsonclassifier.md)
-﻿  [XMLClassifier](#cfn-glue-classifier-xmlclassifier) : 
+  [XMLClassifier](#cfn-glue-classifier-xmlclassifier): 
     [XMLClassifier](aws-properties-glue-classifier-xmlclassifier.md)
 ```
 

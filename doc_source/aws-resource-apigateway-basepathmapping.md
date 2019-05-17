@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::BasePathMapping
-Properties : 
-﻿  [BasePath](#cfn-apigateway-basepathmapping-basepath) : String
-﻿  [DomainName](#cfn-apigateway-basepathmapping-domainname) : String
-﻿  [RestApiId](#cfn-apigateway-basepathmapping-restapiid) : String
-﻿  [Stage](#cfn-apigateway-basepathmapping-stage) : String
+Properties: 
+  [BasePath](#cfn-apigateway-basepathmapping-basepath): String
+  [DomainName](#cfn-apigateway-basepathmapping-domainname): String
+  [RestApiId](#cfn-apigateway-basepathmapping-restapiid): String
+  [Stage](#cfn-apigateway-basepathmapping-stage): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-basepathmapping-properties"></a>

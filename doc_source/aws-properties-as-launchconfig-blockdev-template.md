@@ -24,12 +24,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-as-launchconfig-blockdev-template-syntax.yaml"></a>
 
 ```
-﻿  [DeleteOnTermination](#cfn-as-launchconfig-blockdev-template-deleteonterm) : Boolean
-﻿  [Encrypted](#cfn-as-launchconfig-blockdev-template-encrypted) : Boolean
-﻿  [Iops](#cfn-as-launchconfig-blockdev-template-iops) : Integer
-﻿  [SnapshotId](#cfn-as-launchconfig-blockdev-template-snapshotid) : String
-﻿  [VolumeSize](#cfn-as-launchconfig-blockdev-template-volumesize) : Integer
-﻿  [VolumeType](#cfn-as-launchconfig-blockdev-template-volumetype) : String
+  [DeleteOnTermination](#cfn-as-launchconfig-blockdev-template-deleteonterm): Boolean
+  [Encrypted](#cfn-as-launchconfig-blockdev-template-encrypted): Boolean
+  [Iops](#cfn-as-launchconfig-blockdev-template-iops): Integer
+  [SnapshotId](#cfn-as-launchconfig-blockdev-template-snapshotid): String
+  [VolumeSize](#cfn-as-launchconfig-blockdev-template-volumesize): Integer
+  [VolumeType](#cfn-as-launchconfig-blockdev-template-volumetype): String
 ```
 
 ## Properties<a name="aws-properties-as-launchconfig-blockdev-template-properties"></a>
@@ -41,7 +41,8 @@ Indicates whether to delete the volume when the instance is terminated\. For Ama
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Encrypted`  <a name="cfn-as-launchconfig-blockdev-template-encrypted"></a>
-Specifies whether the volume should be encrypted\. Encrypted EBS volumes must be attached to instances that support Amazon EBS encryption\. Volumes that are created from encrypted snapshots are automatically encrypted\. You cannot create an encrypted volume from an unencrypted snapshot or an unencrypted volume from an encrypted snapshot\. If your AMI uses encrypted volumes, you can only launch it on supported instance types\. For more information, see [Amazon EBS Encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+Specifies whether the EBS volume is encrypted\. Encrypted EBS volumes can only be attached to instances that support Amazon EBS encryption\. For more information, see [Supported Instance Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)\. If your AMI uses encrypted volumes, you can also only launch it on supported instance types\.  
+If you are creating a volume from a snapshot, you cannot specify an encryption value\. This is because only blank volumes can be encrypted on creation\. Volumes that are created from encrypted snapshots are automatically encrypted, and volumes that are created from unencrypted snapshots are automatically unencrypted\. By default, encrypted snapshots use the default CMK \(AWS managed key\), but when you create the snapshot, you can specify a custom CMK\. The ability to encrypt a snapshot during copying also allows you to apply a new CMK to an already\-encrypted snapshot that you own\. Volumes restored from the resulting copy are only accessible using the new CMK\. 
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -86,4 +87,5 @@ Valid values: `standard` \| `io1` \| `gp2` \| `st1` \| `sc1`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-as-launchconfig-blockdev-template--seealso"></a>
++ [Using Encryption with EBS\-Backed AMIs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIEncryption.html) in the *Amazon EC2 User Guide for Linux Instances*
 + [Required CMK Key Policy for Use with Encrypted Volumes](https://docs.aws.amazon.com/autoscaling/ec2/userguide/key-policy-requirements-EBS-encryption.html) in the *Amazon EC2 Auto Scaling User Guide*

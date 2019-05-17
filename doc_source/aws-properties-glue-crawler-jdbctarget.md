@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-crawler-jdbctarget-syntax.yaml"></a>
 
 ```
-﻿  [ConnectionName](#cfn-glue-crawler-jdbctarget-connectionname) : String
-﻿  [Exclusions](#cfn-glue-crawler-jdbctarget-exclusions) : 
+  [ConnectionName](#cfn-glue-crawler-jdbctarget-connectionname): String
+  [Exclusions](#cfn-glue-crawler-jdbctarget-exclusions): 
     - String
-﻿  [Path](#cfn-glue-crawler-jdbctarget-path) : String
+  [Path](#cfn-glue-crawler-jdbctarget-path): String
 ```
 
 ## Properties<a name="aws-properties-glue-crawler-jdbctarget-properties"></a>

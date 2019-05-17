@@ -25,17 +25,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-source-syntax.yaml"></a>
 
 ```
-﻿  [Auth](#cfn-codebuild-project-source-auth) : 
+  [Auth](#cfn-codebuild-project-source-auth): 
     [SourceAuth](aws-properties-codebuild-project-sourceauth.md)
-﻿  [BuildSpec](#cfn-codebuild-project-source-buildspec) : String
-﻿  [GitCloneDepth](#cfn-codebuild-project-source-gitclonedepth) : Integer
-﻿  [GitSubmodulesConfig](#cfn-codebuild-project-source-gitsubmodulesconfig) : 
+  [BuildSpec](#cfn-codebuild-project-source-buildspec): String
+  [GitCloneDepth](#cfn-codebuild-project-source-gitclonedepth): Integer
+  [GitSubmodulesConfig](#cfn-codebuild-project-source-gitsubmodulesconfig): 
     [GitSubmodulesConfig](aws-properties-codebuild-project-gitsubmodulesconfig.md)
-﻿  [InsecureSsl](#cfn-codebuild-project-source-insecuressl) : Boolean
-﻿  [Location](#cfn-codebuild-project-source-location) : String
-﻿  [ReportBuildStatus](#cfn-codebuild-project-source-reportbuildstatus) : Boolean
-﻿  [SourceIdentifier](#cfn-codebuild-project-source-sourceidentifier) : String
-﻿  [Type](#cfn-codebuild-project-source-type) : String
+  [InsecureSsl](#cfn-codebuild-project-source-insecuressl): Boolean
+  [Location](#cfn-codebuild-project-source-location): String
+  [ReportBuildStatus](#cfn-codebuild-project-source-reportbuildstatus): Boolean
+  [SourceIdentifier](#cfn-codebuild-project-source-sourceidentifier): String
+  [Type](#cfn-codebuild-project-source-type): String
 ```
 
 ## Properties<a name="aws-properties-codebuild-project-source-properties"></a>

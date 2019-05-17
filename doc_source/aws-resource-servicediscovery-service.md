@@ -33,16 +33,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceDiscovery::Service
-Properties : 
-﻿  [Description](#cfn-servicediscovery-service-description) : String
-﻿  [DnsConfig](#cfn-servicediscovery-service-dnsconfig) : 
+Properties: 
+  [Description](#cfn-servicediscovery-service-description): String
+  [DnsConfig](#cfn-servicediscovery-service-dnsconfig): 
     [DnsConfig](aws-properties-servicediscovery-service-dnsconfig.md)
-﻿  [HealthCheckConfig](#cfn-servicediscovery-service-healthcheckconfig) : 
+  [HealthCheckConfig](#cfn-servicediscovery-service-healthcheckconfig): 
     [HealthCheckConfig](aws-properties-servicediscovery-service-healthcheckconfig.md)
-﻿  [HealthCheckCustomConfig](#cfn-servicediscovery-service-healthcheckcustomconfig) : 
+  [HealthCheckCustomConfig](#cfn-servicediscovery-service-healthcheckcustomconfig): 
     [HealthCheckCustomConfig](aws-properties-servicediscovery-service-healthcheckcustomconfig.md)
-﻿  [Name](#cfn-servicediscovery-service-name) : String
-﻿  [NamespaceId](#cfn-servicediscovery-service-namespaceid) : String
+  [Name](#cfn-servicediscovery-service-name): String
+  [NamespaceId](#cfn-servicediscovery-service-namespaceid): String
 ```
 
 ## Properties<a name="aws-resource-servicediscovery-service-properties"></a>

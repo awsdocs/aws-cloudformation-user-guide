@@ -26,9 +26,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners-syntax.yaml"></a>
 
 ```
-﻿  [AwsAccountNumbers](#cfn-cloudfront-streamingdistribution-trustedsigners-awsaccountnumbers) : 
+  [AwsAccountNumbers](#cfn-cloudfront-streamingdistribution-trustedsigners-awsaccountnumbers): 
     - String
-﻿  [Enabled](#cfn-cloudfront-streamingdistribution-trustedsigners-enabled) : Boolean
+  [Enabled](#cfn-cloudfront-streamingdistribution-trustedsigners-enabled): Boolean
 ```
 
 ## Properties<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners-properties"></a>

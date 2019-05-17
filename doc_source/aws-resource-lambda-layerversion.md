@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Lambda::LayerVersion
-Properties : 
-﻿  [CompatibleRuntimes](#cfn-lambda-layerversion-compatibleruntimes) : 
+Properties: 
+  [CompatibleRuntimes](#cfn-lambda-layerversion-compatibleruntimes): 
     - String
-﻿  [Content](#cfn-lambda-layerversion-content) : 
+  [Content](#cfn-lambda-layerversion-content): 
     [Content](aws-properties-lambda-layerversion-content.md)
-﻿  [Description](#cfn-lambda-layerversion-description) : String
-﻿  [LayerName](#cfn-lambda-layerversion-layername) : String
-﻿  [LicenseInfo](#cfn-lambda-layerversion-licenseinfo) : String
+  [Description](#cfn-lambda-layerversion-description): String
+  [LayerName](#cfn-lambda-layerversion-layername): String
+  [LicenseInfo](#cfn-lambda-layerversion-licenseinfo): String
 ```
 
 ## Properties<a name="aws-resource-lambda-layerversion-properties"></a>

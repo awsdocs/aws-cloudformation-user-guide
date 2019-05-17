@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-syntax.yaml"></a>
 
 ```
-﻿  [VolumeSpecification](#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification) : 
+  [VolumeSpecification](#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification): 
     [VolumeSpecification](aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification.md)
-﻿  [VolumesPerInstance](#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumesperinstance) : Integer
+  [VolumesPerInstance](#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumesperinstance): Integer
 ```
 
 ## Properties<a name="aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-properties"></a>

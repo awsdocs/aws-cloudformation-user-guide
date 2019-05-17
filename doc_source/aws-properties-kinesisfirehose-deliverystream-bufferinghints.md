@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisfirehose-deliverystream-bufferinghints-syntax.yaml"></a>
 
 ```
-﻿  [IntervalInSeconds](#cfn-kinesisfirehose-deliverystream-bufferinghints-intervalinseconds) : Integer
-﻿  [SizeInMBs](#cfn-kinesisfirehose-deliverystream-bufferinghints-sizeinmbs) : Integer
+  [IntervalInSeconds](#cfn-kinesisfirehose-deliverystream-bufferinghints-intervalinseconds): Integer
+  [SizeInMBs](#cfn-kinesisfirehose-deliverystream-bufferinghints-sizeinmbs): Integer
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-bufferinghints-properties"></a>

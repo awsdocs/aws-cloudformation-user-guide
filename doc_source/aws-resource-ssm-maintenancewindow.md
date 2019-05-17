@@ -32,17 +32,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SSM::MaintenanceWindow
-Properties : 
-﻿  [AllowUnassociatedTargets](#cfn-ssm-maintenancewindow-allowunassociatedtargets) : Boolean
-﻿  [Cutoff](#cfn-ssm-maintenancewindow-cutoff) : Integer
-﻿  [Description](#cfn-ssm-maintenancewindow-description) : String
-﻿  [Duration](#cfn-ssm-maintenancewindow-duration) : Integer
-﻿  [EndDate](#cfn-ssm-maintenancewindow-enddate) : String
-﻿  [Name](#cfn-ssm-maintenancewindow-name) : String
-﻿  [Schedule](#cfn-ssm-maintenancewindow-schedule) : String
-﻿  [ScheduleTimezone](#cfn-ssm-maintenancewindow-scheduletimezone) : String
-﻿  [StartDate](#cfn-ssm-maintenancewindow-startdate) : String
-﻿  [Tags](#cfn-ssm-maintenancewindow-tags) : 
+Properties: 
+  [AllowUnassociatedTargets](#cfn-ssm-maintenancewindow-allowunassociatedtargets): Boolean
+  [Cutoff](#cfn-ssm-maintenancewindow-cutoff): Integer
+  [Description](#cfn-ssm-maintenancewindow-description): String
+  [Duration](#cfn-ssm-maintenancewindow-duration): Integer
+  [EndDate](#cfn-ssm-maintenancewindow-enddate): String
+  [Name](#cfn-ssm-maintenancewindow-name): String
+  [Schedule](#cfn-ssm-maintenancewindow-schedule): String
+  [ScheduleTimezone](#cfn-ssm-maintenancewindow-scheduletimezone): String
+  [StartDate](#cfn-ssm-maintenancewindow-startdate): String
+  [Tags](#cfn-ssm-maintenancewindow-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
@@ -55,7 +55,7 @@ Enables a Maintenance Window task to run on managed instances, even if you have 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Cutoff`  <a name="cfn-ssm-maintenancewindow-cutoff"></a>
-The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution\.  
+The number of hours before the end of the maintenance window that Systems Manager stops scheduling new tasks for execution\.  
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -63,7 +63,7 @@ The number of hours before the end of the Maintenance Window that Systems Manage
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-ssm-maintenancewindow-description"></a>
-A description of the Maintenance Window\.  
+A description of the maintenance window\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -71,7 +71,7 @@ A description of the Maintenance Window\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Duration`  <a name="cfn-ssm-maintenancewindow-duration"></a>
-The duration of the Maintenance Window in hours\.  
+The duration of the maintenance window in hours\.  
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -79,13 +79,13 @@ The duration of the Maintenance Window in hours\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndDate`  <a name="cfn-ssm-maintenancewindow-enddate"></a>
-The date and time, in ISO\-8601 Extended format, for when the Maintenance Window is scheduled to become inactive\.  
+The date and time, in ISO\-8601 Extended format, for when the maintenance window is scheduled to become inactive\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ssm-maintenancewindow-name"></a>
-The name of the Maintenance Window\.  
+The name of the maintenance window\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `3`  
@@ -94,7 +94,7 @@ The name of the Maintenance Window\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Schedule`  <a name="cfn-ssm-maintenancewindow-schedule"></a>
-The schedule of the Maintenance Window in the form of a cron or rate expression\.  
+The schedule of the maintenance window in the form of a cron or rate expression\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -102,7 +102,7 @@ The schedule of the Maintenance Window in the form of a cron or rate expression\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduleTimezone`  <a name="cfn-ssm-maintenancewindow-scheduletimezone"></a>
-The time zone that the scheduled Maintenance Window executions are based on, in Internet Assigned Numbers Authority \(IANA\) format\.  
+The time zone that the scheduled maintenance window executions are based on, in Internet Assigned Numbers Authority \(IANA\) format\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

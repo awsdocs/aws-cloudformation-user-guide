@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-lambda-function-vpcconfig-syntax.yaml"></a>
 
 ```
-﻿  [SecurityGroupIds](#cfn-lambda-function-vpcconfig-securitygroupids) : 
+  [SecurityGroupIds](#cfn-lambda-function-vpcconfig-securitygroupids): 
     - String
-﻿  [SubnetIds](#cfn-lambda-function-vpcconfig-subnetids) : 
+  [SubnetIds](#cfn-lambda-function-vpcconfig-subnetids): 
     - String
 ```
 

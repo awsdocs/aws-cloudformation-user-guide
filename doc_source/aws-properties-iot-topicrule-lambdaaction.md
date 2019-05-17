@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-lambdaaction-syntax.yaml"></a>
 
 ```
-﻿  [FunctionArn](#cfn-iot-topicrule-lambdaaction-functionarn) : String
+  [FunctionArn](#cfn-iot-topicrule-lambdaaction-functionarn): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-lambdaaction-properties"></a>

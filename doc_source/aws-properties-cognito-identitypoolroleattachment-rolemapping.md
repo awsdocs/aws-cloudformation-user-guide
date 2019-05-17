@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cognito-identitypoolroleattachment-rolemapping-syntax.yaml"></a>
 
 ```
-﻿  [AmbiguousRoleResolution](#cfn-cognito-identitypoolroleattachment-rolemapping-ambiguousroleresolution) : String
-﻿  [RulesConfiguration](#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration) : 
+  [AmbiguousRoleResolution](#cfn-cognito-identitypoolroleattachment-rolemapping-ambiguousroleresolution): String
+  [RulesConfiguration](#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration): 
     [RulesConfigurationType](aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.md)
-﻿  [Type](#cfn-cognito-identitypoolroleattachment-rolemapping-type) : String
+  [Type](#cfn-cognito-identitypoolroleattachment-rolemapping-type): String
 ```
 
 ## Properties<a name="aws-properties-cognito-identitypoolroleattachment-rolemapping-properties"></a>

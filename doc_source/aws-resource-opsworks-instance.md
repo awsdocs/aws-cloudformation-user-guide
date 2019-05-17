@@ -43,32 +43,32 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::OpsWorks::Instance
-Properties : 
-﻿  [AgentVersion](#cfn-opsworks-instance-agentversion) : String
-﻿  [AmiId](#cfn-opsworks-instance-amiid) : String
-﻿  [Architecture](#cfn-opsworks-instance-architecture) : String
-﻿  [AutoScalingType](#cfn-opsworks-instance-autoscalingtype) : String
-﻿  [AvailabilityZone](#cfn-opsworks-instance-availabilityzone) : String
-﻿  [BlockDeviceMappings](#cfn-opsworks-instance-blockdevicemappings) : 
+Properties: 
+  [AgentVersion](#cfn-opsworks-instance-agentversion): String
+  [AmiId](#cfn-opsworks-instance-amiid): String
+  [Architecture](#cfn-opsworks-instance-architecture): String
+  [AutoScalingType](#cfn-opsworks-instance-autoscalingtype): String
+  [AvailabilityZone](#cfn-opsworks-instance-availabilityzone): String
+  [BlockDeviceMappings](#cfn-opsworks-instance-blockdevicemappings): 
     - [BlockDeviceMapping](aws-properties-opsworks-instance-blockdevicemapping.md)
-﻿  [EbsOptimized](#cfn-opsworks-instance-ebsoptimized) : Boolean
-﻿  [ElasticIps](#cfn-opsworks-instance-elasticips) : 
+  [EbsOptimized](#cfn-opsworks-instance-ebsoptimized): Boolean
+  [ElasticIps](#cfn-opsworks-instance-elasticips): 
     - String
-﻿  [Hostname](#cfn-opsworks-instance-hostname) : String
-﻿  [InstallUpdatesOnBoot](#cfn-opsworks-instance-installupdatesonboot) : Boolean
-﻿  [InstanceType](#cfn-opsworks-instance-instancetype) : String
-﻿  [LayerIds](#cfn-opsworks-instance-layerids) : 
+  [Hostname](#cfn-opsworks-instance-hostname): String
+  [InstallUpdatesOnBoot](#cfn-opsworks-instance-installupdatesonboot): Boolean
+  [InstanceType](#cfn-opsworks-instance-instancetype): String
+  [LayerIds](#cfn-opsworks-instance-layerids): 
     - String
-﻿  [Os](#cfn-opsworks-instance-os) : String
-﻿  [RootDeviceType](#cfn-opsworks-instance-rootdevicetype) : String
-﻿  [SshKeyName](#cfn-opsworks-instance-sshkeyname) : String
-﻿  [StackId](#cfn-opsworks-instance-stackid) : String
-﻿  [SubnetId](#cfn-opsworks-instance-subnetid) : String
-﻿  [Tenancy](#cfn-opsworks-instance-tenancy) : String
-﻿  [TimeBasedAutoScaling](#cfn-opsworks-instance-timebasedautoscaling) : 
+  [Os](#cfn-opsworks-instance-os): String
+  [RootDeviceType](#cfn-opsworks-instance-rootdevicetype): String
+  [SshKeyName](#cfn-opsworks-instance-sshkeyname): String
+  [StackId](#cfn-opsworks-instance-stackid): String
+  [SubnetId](#cfn-opsworks-instance-subnetid): String
+  [Tenancy](#cfn-opsworks-instance-tenancy): String
+  [TimeBasedAutoScaling](#cfn-opsworks-instance-timebasedautoscaling): 
     [TimeBasedAutoScaling](aws-properties-opsworks-instance-timebasedautoscaling.md)
-﻿  [VirtualizationType](#cfn-opsworks-instance-virtualizationtype) : String
-﻿  [Volumes](#cfn-opsworks-instance-volumes) : 
+  [VirtualizationType](#cfn-opsworks-instance-virtualizationtype): String
+  [Volumes](#cfn-opsworks-instance-volumes): 
     - String
 ```
 

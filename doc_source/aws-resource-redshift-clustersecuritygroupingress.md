@@ -30,11 +30,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Redshift::ClusterSecurityGroupIngress
-Properties : 
-﻿  [CIDRIP](#cfn-redshift-clustersecuritygroupingress-cidrip) : String
-﻿  [ClusterSecurityGroupName](#cfn-redshift-clustersecuritygroupingress-clustersecuritygroupname) : String
-﻿  [EC2SecurityGroupName](#cfn-redshift-clustersecuritygroupingress-ec2securitygroupname) : String
-﻿  [EC2SecurityGroupOwnerId](#cfn-redshift-clustersecuritygroupingress-ec2securitygroupownerid) : String
+Properties: 
+  [CIDRIP](#cfn-redshift-clustersecuritygroupingress-cidrip): String
+  [ClusterSecurityGroupName](#cfn-redshift-clustersecuritygroupingress-clustersecuritygroupname): String
+  [EC2SecurityGroupName](#cfn-redshift-clustersecuritygroupingress-ec2securitygroupname): String
+  [EC2SecurityGroupOwnerId](#cfn-redshift-clustersecuritygroupingress-ec2securitygroupownerid): String
 ```
 
 ## Properties<a name="aws-resource-redshift-clustersecuritygroupingress-properties"></a>

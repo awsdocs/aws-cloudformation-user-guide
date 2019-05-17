@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-amazonmq-configurationassociation-configurationid-syntax.yaml"></a>
 
 ```
-﻿  [Id](#cfn-amazonmq-configurationassociation-configurationid-id) : String
-﻿  [Revision](#cfn-amazonmq-configurationassociation-configurationid-revision) : Integer
+  [Id](#cfn-amazonmq-configurationassociation-configurationid-id): String
+  [Revision](#cfn-amazonmq-configurationassociation-configurationid-revision): Integer
 ```
 
 ## Properties<a name="aws-properties-amazonmq-configurationassociation-configurationid-properties"></a>

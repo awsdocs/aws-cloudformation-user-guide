@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-batch-jobdefinition-mountpoints-syntax.yaml"></a>
 
 ```
-﻿  [ContainerPath](#cfn-batch-jobdefinition-mountpoints-containerpath) : String
-﻿  [ReadOnly](#cfn-batch-jobdefinition-mountpoints-readonly) : Boolean
-﻿  [SourceVolume](#cfn-batch-jobdefinition-mountpoints-sourcevolume) : String
+  [ContainerPath](#cfn-batch-jobdefinition-mountpoints-containerpath): String
+  [ReadOnly](#cfn-batch-jobdefinition-mountpoints-readonly): Boolean
+  [SourceVolume](#cfn-batch-jobdefinition-mountpoints-sourcevolume): String
 ```
 
 ## Properties<a name="aws-properties-batch-jobdefinition-mountpoints-properties"></a>

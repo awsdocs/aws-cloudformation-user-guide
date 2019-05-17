@@ -29,9 +29,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Logs::LogStream
-Properties : 
-﻿  [LogGroupName](#cfn-logs-logstream-loggroupname) : String
-﻿  [LogStreamName](#cfn-logs-logstream-logstreamname) : String
+Properties: 
+  [LogGroupName](#cfn-logs-logstream-loggroupname): String
+  [LogStreamName](#cfn-logs-logstream-logstreamname): String
 ```
 
 ## Properties<a name="aws-resource-logs-logstream-properties"></a>

@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-crawler-schedule-syntax.yaml"></a>
 
 ```
-﻿  [ScheduleExpression](#cfn-glue-crawler-schedule-scheduleexpression) : String
+  [ScheduleExpression](#cfn-glue-crawler-schedule-scheduleexpression): String
 ```
 
 ## Properties<a name="aws-properties-glue-crawler-schedule-properties"></a>

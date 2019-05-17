@@ -20,9 +20,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-syntax.yaml"></a>
 
 ```
-﻿  [LaunchTemplateSpecification](#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-launchtemplatespecification) : 
+  [LaunchTemplateSpecification](#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-launchtemplatespecification): 
     [FleetLaunchTemplateSpecificationRequest](aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest.md)
-﻿  [Overrides](#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-overrides) : 
+  [Overrides](#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-overrides): 
     - [FleetLaunchTemplateOverridesRequest](aws-properties-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest.md)
 ```
 

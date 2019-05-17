@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisfirehose-deliverystream-splunkretryoptions-syntax.yaml"></a>
 
 ```
-﻿  [DurationInSeconds](#cfn-kinesisfirehose-deliverystream-splunkretryoptions-durationinseconds) : Integer
+  [DurationInSeconds](#cfn-kinesisfirehose-deliverystream-splunkretryoptions-durationinseconds): Integer
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-splunkretryoptions-properties"></a>

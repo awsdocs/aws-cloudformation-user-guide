@@ -49,42 +49,42 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ElastiCache::ReplicationGroup
-Properties : 
-﻿  [AtRestEncryptionEnabled](#cfn-elasticache-replicationgroup-atrestencryptionenabled) : Boolean
-﻿  [AuthToken](#cfn-elasticache-replicationgroup-authtoken) : String
-﻿  [AutoMinorVersionUpgrade](#cfn-elasticache-replicationgroup-autominorversionupgrade) : Boolean
-﻿  [AutomaticFailoverEnabled](#cfn-elasticache-replicationgroup-automaticfailoverenabled) : Boolean
-﻿  [CacheNodeType](#cfn-elasticache-replicationgroup-cachenodetype) : String
-﻿  [CacheParameterGroupName](#cfn-elasticache-replicationgroup-cacheparametergroupname) : String
-﻿  [CacheSecurityGroupNames](#cfn-elasticache-replicationgroup-cachesecuritygroupnames) : 
+Properties: 
+  [AtRestEncryptionEnabled](#cfn-elasticache-replicationgroup-atrestencryptionenabled): Boolean
+  [AuthToken](#cfn-elasticache-replicationgroup-authtoken): String
+  [AutoMinorVersionUpgrade](#cfn-elasticache-replicationgroup-autominorversionupgrade): Boolean
+  [AutomaticFailoverEnabled](#cfn-elasticache-replicationgroup-automaticfailoverenabled): Boolean
+  [CacheNodeType](#cfn-elasticache-replicationgroup-cachenodetype): String
+  [CacheParameterGroupName](#cfn-elasticache-replicationgroup-cacheparametergroupname): String
+  [CacheSecurityGroupNames](#cfn-elasticache-replicationgroup-cachesecuritygroupnames): 
     - String
-﻿  [CacheSubnetGroupName](#cfn-elasticache-replicationgroup-cachesubnetgroupname) : String
-﻿  [Engine](#cfn-elasticache-replicationgroup-engine) : String
-﻿  [EngineVersion](#cfn-elasticache-replicationgroup-engineversion) : String
-﻿  [NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration) : 
+  [CacheSubnetGroupName](#cfn-elasticache-replicationgroup-cachesubnetgroupname): String
+  [Engine](#cfn-elasticache-replicationgroup-engine): String
+  [EngineVersion](#cfn-elasticache-replicationgroup-engineversion): String
+  [NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration): 
     - [NodeGroupConfiguration](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md)
-﻿  [NotificationTopicArn](#cfn-elasticache-replicationgroup-notificationtopicarn) : String
-﻿  [NumCacheClusters](#cfn-elasticache-replicationgroup-numcacheclusters) : Integer
-﻿  [NumNodeGroups](#cfn-elasticache-replicationgroup-numnodegroups) : Integer
-﻿  [Port](#cfn-elasticache-replicationgroup-port) : Integer
-﻿  [PreferredCacheClusterAZs](#cfn-elasticache-replicationgroup-preferredcacheclusterazs) : 
+  [NotificationTopicArn](#cfn-elasticache-replicationgroup-notificationtopicarn): String
+  [NumCacheClusters](#cfn-elasticache-replicationgroup-numcacheclusters): Integer
+  [NumNodeGroups](#cfn-elasticache-replicationgroup-numnodegroups): Integer
+  [Port](#cfn-elasticache-replicationgroup-port): Integer
+  [PreferredCacheClusterAZs](#cfn-elasticache-replicationgroup-preferredcacheclusterazs): 
     - String
-﻿  [PreferredMaintenanceWindow](#cfn-elasticache-replicationgroup-preferredmaintenancewindow) : String
-﻿  [PrimaryClusterId](#cfn-elasticache-replicationgroup-primaryclusterid) : String
-﻿  [ReplicasPerNodeGroup](#cfn-elasticache-replicationgroup-replicaspernodegroup) : Integer
-﻿  [ReplicationGroupDescription](#cfn-elasticache-replicationgroup-replicationgroupdescription) : String
-﻿  [ReplicationGroupId](#cfn-elasticache-replicationgroup-replicationgroupid) : String
-﻿  [SecurityGroupIds](#cfn-elasticache-replicationgroup-securitygroupids) : 
+  [PreferredMaintenanceWindow](#cfn-elasticache-replicationgroup-preferredmaintenancewindow): String
+  [PrimaryClusterId](#cfn-elasticache-replicationgroup-primaryclusterid): String
+  [ReplicasPerNodeGroup](#cfn-elasticache-replicationgroup-replicaspernodegroup): Integer
+  [ReplicationGroupDescription](#cfn-elasticache-replicationgroup-replicationgroupdescription): String
+  [ReplicationGroupId](#cfn-elasticache-replicationgroup-replicationgroupid): String
+  [SecurityGroupIds](#cfn-elasticache-replicationgroup-securitygroupids): 
     - String
-﻿  [SnapshotArns](#cfn-elasticache-replicationgroup-snapshotarns) : 
+  [SnapshotArns](#cfn-elasticache-replicationgroup-snapshotarns): 
     - String
-﻿  [SnapshotName](#cfn-elasticache-replicationgroup-snapshotname) : String
-﻿  [SnapshotRetentionLimit](#cfn-elasticache-replicationgroup-snapshotretentionlimit) : Integer
-﻿  [SnapshotWindow](#cfn-elasticache-replicationgroup-snapshotwindow) : String
-﻿  [SnapshottingClusterId](#cfn-elasticache-replicationgroup-snapshottingclusterid) : String
-﻿  [Tags](#cfn-elasticache-replicationgroup-tags) : 
+  [SnapshotName](#cfn-elasticache-replicationgroup-snapshotname): String
+  [SnapshotRetentionLimit](#cfn-elasticache-replicationgroup-snapshotretentionlimit): Integer
+  [SnapshotWindow](#cfn-elasticache-replicationgroup-snapshotwindow): String
+  [SnapshottingClusterId](#cfn-elasticache-replicationgroup-snapshottingclusterid): String
+  [Tags](#cfn-elasticache-replicationgroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [TransitEncryptionEnabled](#cfn-elasticache-replicationgroup-transitencryptionenabled) : Boolean
+  [TransitEncryptionEnabled](#cfn-elasticache-replicationgroup-transitencryptionenabled): Boolean
 ```
 
 ## Properties<a name="aws-resource-elasticache-replicationgroup-properties"></a>

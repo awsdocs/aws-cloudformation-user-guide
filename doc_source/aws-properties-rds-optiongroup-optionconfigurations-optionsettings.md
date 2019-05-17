@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-rds-optiongroup-optionconfigurations-optionsettings-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-rds-optiongroup-optionconfigurations-optionsettings-name) : String
-﻿  [Value](#cfn-rds-optiongroup-optionconfigurations-optionsettings-value) : String
+  [Name](#cfn-rds-optiongroup-optionconfigurations-optionsettings-name): String
+  [Value](#cfn-rds-optiongroup-optionconfigurations-optionsettings-value): String
 ```
 
 ## Properties<a name="aws-properties-rds-optiongroup-optionconfigurations-optionsettings-properties"></a>

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch-syntax.yaml"></a>
 
 ```
-﻿  [Data](#cfn-waf-bytematchset-bytematchtuples-fieldtomatch-data) : String
-﻿  [Type](#cfn-waf-bytematchset-bytematchtuples-fieldtomatch-type) : String
+  [Data](#cfn-waf-bytematchset-bytematchtuples-fieldtomatch-data): String
+  [Type](#cfn-waf-bytematchset-bytematchtuples-fieldtomatch-type): String
 ```
 
 ## Properties<a name="aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch-properties"></a>

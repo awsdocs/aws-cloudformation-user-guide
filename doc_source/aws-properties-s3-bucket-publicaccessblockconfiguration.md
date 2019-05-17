@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-publicaccessblockconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [BlockPublicAcls](#cfn-s3-bucket-publicaccessblockconfiguration-blockpublicacls) : Boolean
-﻿  [BlockPublicPolicy](#cfn-s3-bucket-publicaccessblockconfiguration-blockpublicpolicy) : Boolean
-﻿  [IgnorePublicAcls](#cfn-s3-bucket-publicaccessblockconfiguration-ignorepublicacls) : Boolean
-﻿  [RestrictPublicBuckets](#cfn-s3-bucket-publicaccessblockconfiguration-restrictpublicbuckets) : Boolean
+  [BlockPublicAcls](#cfn-s3-bucket-publicaccessblockconfiguration-blockpublicacls): Boolean
+  [BlockPublicPolicy](#cfn-s3-bucket-publicaccessblockconfiguration-blockpublicpolicy): Boolean
+  [IgnorePublicAcls](#cfn-s3-bucket-publicaccessblockconfiguration-ignorepublicacls): Boolean
+  [RestrictPublicBuckets](#cfn-s3-bucket-publicaccessblockconfiguration-restrictpublicbuckets): Boolean
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-publicaccessblockconfiguration-properties"></a>

@@ -31,25 +31,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Elasticsearch::Domain
-Properties : 
-﻿  [AccessPolicies](#cfn-elasticsearch-domain-accesspolicies) : Json
-﻿  [AdvancedOptions](#cfn-elasticsearch-domain-advancedoptions) : 
+Properties: 
+  [AccessPolicies](#cfn-elasticsearch-domain-accesspolicies): Json
+  [AdvancedOptions](#cfn-elasticsearch-domain-advancedoptions): 
     Key : Value
-﻿  [DomainName](#cfn-elasticsearch-domain-domainname) : String
-﻿  [EBSOptions](#cfn-elasticsearch-domain-ebsoptions) : 
+  [DomainName](#cfn-elasticsearch-domain-domainname): String
+  [EBSOptions](#cfn-elasticsearch-domain-ebsoptions): 
     [EBSOptions](aws-properties-elasticsearch-domain-ebsoptions.md)
-﻿  [ElasticsearchClusterConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig) : 
+  [ElasticsearchClusterConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig): 
     [ElasticsearchClusterConfig](aws-properties-elasticsearch-domain-elasticsearchclusterconfig.md)
-﻿  [ElasticsearchVersion](#cfn-elasticsearch-domain-elasticsearchversion) : String
-﻿  [EncryptionAtRestOptions](#cfn-elasticsearch-domain-encryptionatrestoptions) : 
+  [ElasticsearchVersion](#cfn-elasticsearch-domain-elasticsearchversion): String
+  [EncryptionAtRestOptions](#cfn-elasticsearch-domain-encryptionatrestoptions): 
     [EncryptionAtRestOptions](aws-properties-elasticsearch-domain-encryptionatrestoptions.md)
-﻿  [NodeToNodeEncryptionOptions](#cfn-elasticsearch-domain-nodetonodeencryptionoptions) : 
+  [NodeToNodeEncryptionOptions](#cfn-elasticsearch-domain-nodetonodeencryptionoptions): 
     [NodeToNodeEncryptionOptions](aws-properties-elasticsearch-domain-nodetonodeencryptionoptions.md)
-﻿  [SnapshotOptions](#cfn-elasticsearch-domain-snapshotoptions) : 
+  [SnapshotOptions](#cfn-elasticsearch-domain-snapshotoptions): 
     [SnapshotOptions](aws-properties-elasticsearch-domain-snapshotoptions.md)
-﻿  [Tags](#cfn-elasticsearch-domain-tags) : 
+  [Tags](#cfn-elasticsearch-domain-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VPCOptions](#cfn-elasticsearch-domain-vpcoptions) : 
+  [VPCOptions](#cfn-elasticsearch-domain-vpcoptions): 
     [VPCOptions](aws-properties-elasticsearch-domain-vpcoptions.md)
 ```
 

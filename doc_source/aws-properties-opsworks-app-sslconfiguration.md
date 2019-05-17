@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-opsworks-app-sslconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [Certificate](#cfn-opsworks-app-sslconfig-certificate) : String
-﻿  [Chain](#cfn-opsworks-app-sslconfig-chain) : String
-﻿  [PrivateKey](#cfn-opsworks-app-sslconfig-privatekey) : String
+  [Certificate](#cfn-opsworks-app-sslconfig-certificate): String
+  [Chain](#cfn-opsworks-app-sslconfig-chain): String
+  [PrivateKey](#cfn-opsworks-app-sslconfig-privatekey): String
 ```
 
 ## Properties<a name="aws-properties-opsworks-app-sslconfiguration-properties"></a>

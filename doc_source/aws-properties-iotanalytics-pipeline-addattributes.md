@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-pipeline-addattributes-syntax.yaml"></a>
 
 ```
-﻿  [Attributes](#cfn-iotanalytics-pipeline-addattributes-attributes) : Json
-﻿  [Name](#cfn-iotanalytics-pipeline-addattributes-name) : String
-﻿  [Next](#cfn-iotanalytics-pipeline-addattributes-next) : String
+  [Attributes](#cfn-iotanalytics-pipeline-addattributes-attributes): Json
+  [Name](#cfn-iotanalytics-pipeline-addattributes-name): String
+  [Next](#cfn-iotanalytics-pipeline-addattributes-next): String
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-pipeline-addattributes-properties"></a>

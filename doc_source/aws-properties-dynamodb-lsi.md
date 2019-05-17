@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dynamodb-lsi-syntax.yaml"></a>
 
 ```
-﻿  [IndexName](#cfn-dynamodb-lsi-indexname) : String
-﻿  [KeySchema](#cfn-dynamodb-lsi-keyschema) : 
+  [IndexName](#cfn-dynamodb-lsi-indexname): String
+  [KeySchema](#cfn-dynamodb-lsi-keyschema): 
     - [KeySchema](aws-properties-dynamodb-keyschema.md)
-﻿  [Projection](#cfn-dynamodb-lsi-projection) : 
+  [Projection](#cfn-dynamodb-lsi-projection): 
     [Projection](aws-properties-dynamodb-projectionobject.md)
 ```
 

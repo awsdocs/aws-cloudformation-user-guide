@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-putiteminput-syntax.yaml"></a>
 
 ```
-﻿  [TableName](#cfn-iot-topicrule-putiteminput-tablename) : String
+  [TableName](#cfn-iot-topicrule-putiteminput-tablename): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-putiteminput-properties"></a>

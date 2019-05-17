@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Logs::Destination
-Properties : 
-﻿  [DestinationName](#cfn-logs-destination-destinationname) : String
-﻿  [DestinationPolicy](#cfn-logs-destination-destinationpolicy) : String
-﻿  [RoleArn](#cfn-logs-destination-rolearn) : String
-﻿  [TargetArn](#cfn-logs-destination-targetarn) : String
+Properties: 
+  [DestinationName](#cfn-logs-destination-destinationname): String
+  [DestinationPolicy](#cfn-logs-destination-destinationpolicy): String
+  [RoleArn](#cfn-logs-destination-rolearn): String
+  [TargetArn](#cfn-logs-destination-targetarn): String
 ```
 
 ## Properties<a name="aws-resource-logs-destination-properties"></a>

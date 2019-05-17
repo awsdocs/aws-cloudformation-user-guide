@@ -23,11 +23,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::DocumentationPart
-Properties : 
-﻿  [Location](#cfn-apigateway-documentationpart-location) : 
+Properties: 
+  [Location](#cfn-apigateway-documentationpart-location): 
     [Location](aws-properties-apigateway-documentationpart-location.md)
-﻿  [Properties](#cfn-apigateway-documentationpart-properties) : String
-﻿  [RestApiId](#cfn-apigateway-documentationpart-restapiid) : String
+  [Properties](#cfn-apigateway-documentationpart-properties): String
+  [RestApiId](#cfn-apigateway-documentationpart-restapiid): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-documentationpart-properties"></a>

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-capacityreservation-tag-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-ec2-capacityreservation-tag-key) : String
-﻿  [Value](#cfn-ec2-capacityreservation-tag-value) : String
+  [Key](#cfn-ec2-capacityreservation-tag-key): String
+  [Value](#cfn-ec2-capacityreservation-tag-value): String
 ```
 
 ## Properties<a name="aws-properties-ec2-capacityreservation-tag-properties"></a>

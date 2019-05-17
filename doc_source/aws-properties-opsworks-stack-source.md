@@ -22,12 +22,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-opsworks-stack-source-syntax.yaml"></a>
 
 ```
-﻿  [Password](#cfn-opsworks-custcookbooksource-password) : String
-﻿  [Revision](#cfn-opsworks-custcookbooksource-revision) : String
-﻿  [SshKey](#cfn-opsworks-custcookbooksource-sshkey) : String
-﻿  [Type](#cfn-opsworks-custcookbooksource-type) : String
-﻿  [Url](#cfn-opsworks-custcookbooksource-url) : String
-﻿  [Username](#cfn-opsworks-custcookbooksource-username) : String
+  [Password](#cfn-opsworks-custcookbooksource-password): String
+  [Revision](#cfn-opsworks-custcookbooksource-revision): String
+  [SshKey](#cfn-opsworks-custcookbooksource-sshkey): String
+  [Type](#cfn-opsworks-custcookbooksource-type): String
+  [Url](#cfn-opsworks-custcookbooksource-url): String
+  [Username](#cfn-opsworks-custcookbooksource-username): String
 ```
 
 ## Properties<a name="aws-properties-opsworks-stack-source-properties"></a>

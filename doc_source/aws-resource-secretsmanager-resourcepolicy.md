@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SecretsManager::ResourcePolicy
-Properties : 
-﻿  [ResourcePolicy](#cfn-secretsmanager-resourcepolicy-resourcepolicy) : Json
-﻿  [SecretId](#cfn-secretsmanager-resourcepolicy-secretid) : String
+Properties: 
+  [ResourcePolicy](#cfn-secretsmanager-resourcepolicy-resourcepolicy): Json
+  [SecretId](#cfn-secretsmanager-resourcepolicy-secretid): String
 ```
 
 ## Properties<a name="aws-resource-secretsmanager-resourcepolicy-properties"></a>

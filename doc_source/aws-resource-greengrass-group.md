@@ -35,11 +35,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Greengrass::Group
-Properties : 
-﻿  [InitialVersion](#cfn-greengrass-group-initialversion) : 
+Properties: 
+  [InitialVersion](#cfn-greengrass-group-initialversion): 
     [GroupVersion](aws-properties-greengrass-group-groupversion.md)
-﻿  [Name](#cfn-greengrass-group-name) : String
-﻿  [RoleArn](#cfn-greengrass-group-rolearn) : String
+  [Name](#cfn-greengrass-group-name): String
+  [RoleArn](#cfn-greengrass-group-rolearn): String
 ```
 
 ## Properties<a name="aws-resource-greengrass-group-properties"></a>

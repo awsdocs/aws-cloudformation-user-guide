@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::GuardDuty::Member
-Properties : 
-﻿  [DetectorId](#cfn-guardduty-member-detectorid) : String
-﻿  [DisableEmailNotification](#cfn-guardduty-member-disableemailnotification) : Boolean
-﻿  [Email](#cfn-guardduty-member-email) : String
-﻿  [MemberId](#cfn-guardduty-member-memberid) : String
-﻿  [Message](#cfn-guardduty-member-message) : String
-﻿  [Status](#cfn-guardduty-member-status) : String
+Properties: 
+  [DetectorId](#cfn-guardduty-member-detectorid): String
+  [DisableEmailNotification](#cfn-guardduty-member-disableemailnotification): Boolean
+  [Email](#cfn-guardduty-member-email): String
+  [MemberId](#cfn-guardduty-member-memberid): String
+  [Message](#cfn-guardduty-member-message): String
+  [Status](#cfn-guardduty-member-status): String
 ```
 
 ## Properties<a name="aws-resource-guardduty-member-properties"></a>

@@ -29,12 +29,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RDS::DBParameterGroup
-Properties : 
-﻿  [Description](#cfn-rds-dbparametergroup-description) : String
-﻿  [Family](#cfn-rds-dbparametergroup-family) : String
-﻿  [Parameters](#cfn-rds-dbparametergroup-parameters) : 
+Properties: 
+  [Description](#cfn-rds-dbparametergroup-description): String
+  [Family](#cfn-rds-dbparametergroup-family): String
+  [Parameters](#cfn-rds-dbparametergroup-parameters): 
     Key : Value
-﻿  [Tags](#cfn-rds-dbparametergroup-tags) : 
+  [Tags](#cfn-rds-dbparametergroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

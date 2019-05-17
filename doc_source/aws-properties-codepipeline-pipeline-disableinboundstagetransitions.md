@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codepipeline-pipeline-disableinboundstagetransitions-syntax.yaml"></a>
 
 ```
-﻿  [Reason](#cfn-codepipeline-pipeline-disableinboundstagetransitions-reason) : String
-﻿  [StageName](#cfn-codepipeline-pipeline-disableinboundstagetransitions-stagename) : String
+  [Reason](#cfn-codepipeline-pipeline-disableinboundstagetransitions-reason): String
+  [StageName](#cfn-codepipeline-pipeline-disableinboundstagetransitions-stagename): String
 ```
 
 ## Properties<a name="aws-properties-codepipeline-pipeline-disableinboundstagetransitions-properties"></a>

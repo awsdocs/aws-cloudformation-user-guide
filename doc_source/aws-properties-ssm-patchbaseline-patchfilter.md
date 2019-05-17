@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ssm-patchbaseline-patchfilter-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-ssm-patchbaseline-patchfilter-key) : String
-﻿  [Values](#cfn-ssm-patchbaseline-patchfilter-values) : 
+  [Key](#cfn-ssm-patchbaseline-patchfilter-key): String
+  [Values](#cfn-ssm-patchbaseline-patchfilter-values): 
     - String
 ```
 

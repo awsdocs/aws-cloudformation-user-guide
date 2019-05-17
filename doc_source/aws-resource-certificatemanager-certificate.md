@@ -28,15 +28,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CertificateManager::Certificate
-Properties : 
-﻿  [DomainName](#cfn-certificatemanager-certificate-domainname) : String
-﻿  [DomainValidationOptions](#cfn-certificatemanager-certificate-domainvalidationoptions) : 
+Properties: 
+  [DomainName](#cfn-certificatemanager-certificate-domainname): String
+  [DomainValidationOptions](#cfn-certificatemanager-certificate-domainvalidationoptions): 
     - [DomainValidationOption](aws-properties-certificatemanager-certificate-domainvalidationoption.md)
-﻿  [SubjectAlternativeNames](#cfn-certificatemanager-certificate-subjectalternativenames) : 
+  [SubjectAlternativeNames](#cfn-certificatemanager-certificate-subjectalternativenames): 
     - String
-﻿  [Tags](#cfn-certificatemanager-certificate-tags) : 
+  [Tags](#cfn-certificatemanager-certificate-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [ValidationMethod](#cfn-certificatemanager-certificate-validationmethod) : String
+  [ValidationMethod](#cfn-certificatemanager-certificate-validationmethod): String
 ```
 
 ## Properties<a name="aws-resource-certificatemanager-certificate-properties"></a>

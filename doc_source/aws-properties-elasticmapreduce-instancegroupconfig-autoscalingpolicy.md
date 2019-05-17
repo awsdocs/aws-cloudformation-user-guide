@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy-syntax.yaml"></a>
 
 ```
-﻿  [Constraints](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-constraints) : 
+  [Constraints](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-constraints): 
     [ScalingConstraints](aws-properties-elasticmapreduce-instancegroupconfig-scalingconstraints.md)
-﻿  [Rules](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-rules) : 
+  [Rules](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-rules): 
     - [ScalingRule](aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.md)
 ```
 

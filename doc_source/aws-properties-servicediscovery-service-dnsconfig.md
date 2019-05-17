@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-servicediscovery-service-dnsconfig-syntax.yaml"></a>
 
 ```
-﻿  [DnsRecords](#cfn-servicediscovery-service-dnsconfig-dnsrecords) : 
+  [DnsRecords](#cfn-servicediscovery-service-dnsconfig-dnsrecords): 
     - [DnsRecord](aws-properties-servicediscovery-service-dnsrecord.md)
-﻿  [NamespaceId](#cfn-servicediscovery-service-dnsconfig-namespaceid) : String
-﻿  [RoutingPolicy](#cfn-servicediscovery-service-dnsconfig-routingpolicy) : String
+  [NamespaceId](#cfn-servicediscovery-service-dnsconfig-namespaceid): String
+  [RoutingPolicy](#cfn-servicediscovery-service-dnsconfig-routingpolicy): String
 ```
 
 ## Properties<a name="aws-properties-servicediscovery-service-dnsconfig-properties"></a>

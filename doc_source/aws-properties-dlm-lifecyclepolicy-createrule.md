@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dlm-lifecyclepolicy-createrule-syntax.yaml"></a>
 
 ```
-﻿  [Interval](#cfn-dlm-lifecyclepolicy-createrule-interval) : Integer
-﻿  [IntervalUnit](#cfn-dlm-lifecyclepolicy-createrule-intervalunit) : String
-﻿  [Times](#cfn-dlm-lifecyclepolicy-createrule-times) : 
+  [Interval](#cfn-dlm-lifecyclepolicy-createrule-interval): Integer
+  [IntervalUnit](#cfn-dlm-lifecyclepolicy-createrule-intervalunit): String
+  [Times](#cfn-dlm-lifecyclepolicy-createrule-times): 
     - String
 ```
 

@@ -44,34 +44,34 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::OpsWorks::Layer
-Properties : 
-﻿  [Attributes](#cfn-opsworks-layer-attributes) : 
+Properties: 
+  [Attributes](#cfn-opsworks-layer-attributes): 
     Key : Value
-﻿  [AutoAssignElasticIps](#cfn-opsworks-layer-autoassignelasticips) : Boolean
-﻿  [AutoAssignPublicIps](#cfn-opsworks-layer-autoassignpublicips) : Boolean
-﻿  [CustomInstanceProfileArn](#cfn-opsworks-layer-custominstanceprofilearn) : String
-﻿  [CustomJson](#cfn-opsworks-layer-customjson) : 
+  [AutoAssignElasticIps](#cfn-opsworks-layer-autoassignelasticips): Boolean
+  [AutoAssignPublicIps](#cfn-opsworks-layer-autoassignpublicips): Boolean
+  [CustomInstanceProfileArn](#cfn-opsworks-layer-custominstanceprofilearn): String
+  [CustomJson](#cfn-opsworks-layer-customjson): 
     Json
-﻿  [CustomRecipes](#cfn-opsworks-layer-customrecipes) : 
+  [CustomRecipes](#cfn-opsworks-layer-customrecipes): 
     [Recipes](aws-properties-opsworks-layer-recipes.md)
-﻿  [CustomSecurityGroupIds](#cfn-opsworks-layer-customsecuritygroupids) : 
+  [CustomSecurityGroupIds](#cfn-opsworks-layer-customsecuritygroupids): 
     - String
-﻿  [EnableAutoHealing](#cfn-opsworks-layer-enableautohealing) : Boolean
-﻿  [InstallUpdatesOnBoot](#cfn-opsworks-layer-installupdatesonboot) : Boolean
-﻿  [LifecycleEventConfiguration](#cfn-opsworks-layer-lifecycleeventconfiguration) : 
+  [EnableAutoHealing](#cfn-opsworks-layer-enableautohealing): Boolean
+  [InstallUpdatesOnBoot](#cfn-opsworks-layer-installupdatesonboot): Boolean
+  [LifecycleEventConfiguration](#cfn-opsworks-layer-lifecycleeventconfiguration): 
     [LifecycleEventConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration.md)
-﻿  [LoadBasedAutoScaling](#cfn-opsworks-layer-loadbasedautoscaling) : 
+  [LoadBasedAutoScaling](#cfn-opsworks-layer-loadbasedautoscaling): 
     [LoadBasedAutoScaling](aws-properties-opsworks-layer-loadbasedautoscaling.md)
-﻿  [Name](#cfn-opsworks-layer-name) : String
-﻿  [Packages](#cfn-opsworks-layer-packages) : 
+  [Name](#cfn-opsworks-layer-name): String
+  [Packages](#cfn-opsworks-layer-packages): 
     - String
-﻿  [Shortname](#cfn-opsworks-layer-shortname) : String
-﻿  [StackId](#cfn-opsworks-layer-stackid) : String
-﻿  [Tags](#cfn-opsworks-layer-tags) : 
+  [Shortname](#cfn-opsworks-layer-shortname): String
+  [StackId](#cfn-opsworks-layer-stackid): String
+  [Tags](#cfn-opsworks-layer-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [Type](#cfn-opsworks-layer-type) : String
-﻿  [UseEbsOptimizedInstances](#cfn-opsworks-layer-useebsoptimizedinstances) : Boolean
-﻿  [VolumeConfigurations](#cfn-opsworks-layer-volumeconfigurations) : 
+  [Type](#cfn-opsworks-layer-type): String
+  [UseEbsOptimizedInstances](#cfn-opsworks-layer-useebsoptimizedinstances): Boolean
+  [VolumeConfigurations](#cfn-opsworks-layer-volumeconfigurations): 
     - [VolumeConfiguration](aws-properties-opsworks-layer-volumeconfiguration.md)
 ```
 

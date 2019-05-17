@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-events-rule-runcommandparameters-syntax.yaml"></a>
 
 ```
-﻿  [RunCommandTargets](#cfn-events-rule-runcommandparameters-runcommandtargets) : 
+  [RunCommandTargets](#cfn-events-rule-runcommandparameters-runcommandtargets): 
     - [RunCommandTarget](aws-properties-events-rule-runcommandtarget.md)
 ```
 

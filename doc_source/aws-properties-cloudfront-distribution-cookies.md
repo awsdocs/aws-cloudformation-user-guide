@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudfront-distribution-cookies-syntax.yaml"></a>
 
 ```
-﻿  [Forward](#cfn-cloudfront-distribution-cookies-forward) : String
-﻿  [WhitelistedNames](#cfn-cloudfront-distribution-cookies-whitelistednames) : 
+  [Forward](#cfn-cloudfront-distribution-cookies-forward): String
+  [WhitelistedNames](#cfn-cloudfront-distribution-cookies-whitelistednames): 
     - String
 ```
 

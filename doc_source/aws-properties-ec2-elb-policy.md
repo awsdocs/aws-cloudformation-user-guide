@@ -23,14 +23,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-elb-policy-syntax.yaml"></a>
 
 ```
-﻿  [Attributes](#cfn-ec2-elb-policy-attributes) : 
+  [Attributes](#cfn-ec2-elb-policy-attributes): 
     - Json
-﻿  [InstancePorts](#cfn-ec2-elb-policy-instanceports) : 
+  [InstancePorts](#cfn-ec2-elb-policy-instanceports): 
     - String
-﻿  [LoadBalancerPorts](#cfn-ec2-elb-policy-loadbalancerports) : 
+  [LoadBalancerPorts](#cfn-ec2-elb-policy-loadbalancerports): 
     - String
-﻿  [PolicyName](#cfn-ec2-elb-policy-policyname) : String
-﻿  [PolicyType](#cfn-ec2-elb-policy-policytype) : String
+  [PolicyName](#cfn-ec2-elb-policy-policyname): String
+  [PolicyType](#cfn-ec2-elb-policy-policytype): String
 ```
 
 ## Properties<a name="aws-properties-ec2-elb-policy-properties"></a>

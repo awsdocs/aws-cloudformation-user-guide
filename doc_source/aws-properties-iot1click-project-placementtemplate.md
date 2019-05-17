@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot1click-project-placementtemplate-syntax.yaml"></a>
 
 ```
-﻿  [DefaultAttributes](#cfn-iot1click-project-placementtemplate-defaultattributes) : Json
-﻿  [DeviceTemplates](#cfn-iot1click-project-placementtemplate-devicetemplates) : Json
+  [DefaultAttributes](#cfn-iot1click-project-placementtemplate-defaultattributes): Json
+  [DeviceTemplates](#cfn-iot1click-project-placementtemplate-devicetemplates): Json
 ```
 
 ## Properties<a name="aws-properties-iot1click-project-placementtemplate-properties"></a>

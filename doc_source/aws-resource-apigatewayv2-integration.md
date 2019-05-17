@@ -33,20 +33,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGatewayV2::Integration
-Properties : 
-﻿  [ApiId](#cfn-apigatewayv2-integration-apiid) : String
-﻿  [ConnectionType](#cfn-apigatewayv2-integration-connectiontype) : String
-﻿  [ContentHandlingStrategy](#cfn-apigatewayv2-integration-contenthandlingstrategy) : String
-﻿  [CredentialsArn](#cfn-apigatewayv2-integration-credentialsarn) : String
-﻿  [Description](#cfn-apigatewayv2-integration-description) : String
-﻿  [IntegrationMethod](#cfn-apigatewayv2-integration-integrationmethod) : String
-﻿  [IntegrationType](#cfn-apigatewayv2-integration-integrationtype) : String
-﻿  [IntegrationUri](#cfn-apigatewayv2-integration-integrationuri) : String
-﻿  [PassthroughBehavior](#cfn-apigatewayv2-integration-passthroughbehavior) : String
-﻿  [RequestParameters](#cfn-apigatewayv2-integration-requestparameters) : Json
-﻿  [RequestTemplates](#cfn-apigatewayv2-integration-requesttemplates) : Json
-﻿  [TemplateSelectionExpression](#cfn-apigatewayv2-integration-templateselectionexpression) : String
-﻿  [TimeoutInMillis](#cfn-apigatewayv2-integration-timeoutinmillis) : Integer
+Properties: 
+  [ApiId](#cfn-apigatewayv2-integration-apiid): String
+  [ConnectionType](#cfn-apigatewayv2-integration-connectiontype): String
+  [ContentHandlingStrategy](#cfn-apigatewayv2-integration-contenthandlingstrategy): String
+  [CredentialsArn](#cfn-apigatewayv2-integration-credentialsarn): String
+  [Description](#cfn-apigatewayv2-integration-description): String
+  [IntegrationMethod](#cfn-apigatewayv2-integration-integrationmethod): String
+  [IntegrationType](#cfn-apigatewayv2-integration-integrationtype): String
+  [IntegrationUri](#cfn-apigatewayv2-integration-integrationuri): String
+  [PassthroughBehavior](#cfn-apigatewayv2-integration-passthroughbehavior): String
+  [RequestParameters](#cfn-apigatewayv2-integration-requestparameters): Json
+  [RequestTemplates](#cfn-apigatewayv2-integration-requesttemplates): Json
+  [TemplateSelectionExpression](#cfn-apigatewayv2-integration-templateselectionexpression): String
+  [TimeoutInMillis](#cfn-apigatewayv2-integration-timeoutinmillis): Integer
 ```
 
 ## Properties<a name="aws-resource-apigatewayv2-integration-properties"></a>

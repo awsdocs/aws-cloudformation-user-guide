@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-versioningconfig-syntax.yaml"></a>
 
 ```
-﻿  [Status](#cfn-s3-bucket-versioningconfig-status) : String
+  [Status](#cfn-s3-bucket-versioningconfig-status): String
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-versioningconfig-properties"></a>

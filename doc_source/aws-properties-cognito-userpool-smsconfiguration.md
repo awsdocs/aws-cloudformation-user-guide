@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cognito-userpool-smsconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [ExternalId](#cfn-cognito-userpool-smsconfiguration-externalid) : String
-﻿  [SnsCallerArn](#cfn-cognito-userpool-smsconfiguration-snscallerarn) : String
+  [ExternalId](#cfn-cognito-userpool-smsconfiguration-externalid): String
+  [SnsCallerArn](#cfn-cognito-userpool-smsconfiguration-snscallerarn): String
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-smsconfiguration-properties"></a>

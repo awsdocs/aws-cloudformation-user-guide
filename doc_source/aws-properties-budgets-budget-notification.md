@@ -28,10 +28,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-budgets-budget-notification-syntax.yaml"></a>
 
 ```
-﻿  [ComparisonOperator](#cfn-budgets-budget-notification-comparisonoperator) : String
-﻿  [NotificationType](#cfn-budgets-budget-notification-notificationtype) : String
-﻿  [Threshold](#cfn-budgets-budget-notification-threshold) : Double
-﻿  [ThresholdType](#cfn-budgets-budget-notification-thresholdtype) : String
+  [ComparisonOperator](#cfn-budgets-budget-notification-comparisonoperator): String
+  [NotificationType](#cfn-budgets-budget-notification-notificationtype): String
+  [Threshold](#cfn-budgets-budget-notification-threshold): Double
+  [ThresholdType](#cfn-budgets-budget-notification-thresholdtype): String
 ```
 
 ## Properties<a name="aws-properties-budgets-budget-notification-properties"></a>

@@ -22,8 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dynamodb-keyschema-syntax.yaml"></a>
 
 ```
-﻿  [AttributeName](#aws-properties-dynamodb-keyschema-attributename) : String
-﻿  [KeyType](#aws-properties-dynamodb-keyschema-keytype) : String
+  [AttributeName](#aws-properties-dynamodb-keyschema-attributename): String
+  [KeyType](#aws-properties-dynamodb-keyschema-keytype): String
 ```
 
 ## Properties<a name="aws-properties-dynamodb-keyschema-properties"></a>

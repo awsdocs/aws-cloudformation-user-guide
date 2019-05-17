@@ -20,11 +20,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-amazonmq-broker-user-syntax.yaml"></a>
 
 ```
-﻿  [ConsoleAccess](#cfn-amazonmq-broker-user-consoleaccess) : Boolean
-﻿  [Groups](#cfn-amazonmq-broker-user-groups) : 
+  [ConsoleAccess](#cfn-amazonmq-broker-user-consoleaccess): Boolean
+  [Groups](#cfn-amazonmq-broker-user-groups): 
     - String
-﻿  [Password](#cfn-amazonmq-broker-user-password) : String
-﻿  [Username](#cfn-amazonmq-broker-user-username) : String
+  [Password](#cfn-amazonmq-broker-user-password): String
+  [Username](#cfn-amazonmq-broker-user-username): String
 ```
 
 ## Properties<a name="aws-properties-amazonmq-broker-user-properties"></a>

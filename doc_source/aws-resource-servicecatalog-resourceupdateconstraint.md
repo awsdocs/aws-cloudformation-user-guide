@@ -25,12 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceCatalog::ResourceUpdateConstraint
-Properties : 
-﻿  [AcceptLanguage](#cfn-servicecatalog-resourceupdateconstraint-acceptlanguage) : String
-﻿  [Description](#cfn-servicecatalog-resourceupdateconstraint-description) : String
-﻿  [PortfolioId](#cfn-servicecatalog-resourceupdateconstraint-portfolioid) : String
-﻿  [ProductId](#cfn-servicecatalog-resourceupdateconstraint-productid) : String
-﻿  [TagUpdateOnProvisionedProduct](#cfn-servicecatalog-resourceupdateconstraint-tagupdateonprovisionedproduct) : String
+Properties: 
+  [AcceptLanguage](#cfn-servicecatalog-resourceupdateconstraint-acceptlanguage): String
+  [Description](#cfn-servicecatalog-resourceupdateconstraint-description): String
+  [PortfolioId](#cfn-servicecatalog-resourceupdateconstraint-portfolioid): String
+  [ProductId](#cfn-servicecatalog-resourceupdateconstraint-productid): String
+  [TagUpdateOnProvisionedProduct](#cfn-servicecatalog-resourceupdateconstraint-tagupdateonprovisionedproduct): String
 ```
 
 ## Properties<a name="aws-resource-servicecatalog-resourceupdateconstraint-properties"></a>

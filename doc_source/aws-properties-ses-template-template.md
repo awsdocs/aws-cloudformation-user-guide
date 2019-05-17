@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ses-template-template-syntax.yaml"></a>
 
 ```
-﻿  [HtmlPart](#cfn-ses-template-template-htmlpart) : String
-﻿  [SubjectPart](#cfn-ses-template-template-subjectpart) : String
-﻿  [TemplateName](#cfn-ses-template-template-templatename) : String
-﻿  [TextPart](#cfn-ses-template-template-textpart) : String
+  [HtmlPart](#cfn-ses-template-template-htmlpart): String
+  [SubjectPart](#cfn-ses-template-template-subjectpart): String
+  [TemplateName](#cfn-ses-template-template-templatename): String
+  [TextPart](#cfn-ses-template-template-textpart): String
 ```
 
 ## Properties<a name="aws-properties-ses-template-template-properties"></a>

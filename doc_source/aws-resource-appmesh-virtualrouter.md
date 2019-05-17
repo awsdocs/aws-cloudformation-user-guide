@@ -28,13 +28,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppMesh::VirtualRouter
-Properties : 
-﻿  [MeshName](#cfn-appmesh-virtualrouter-meshname) : String
-﻿  [Spec](#cfn-appmesh-virtualrouter-spec) : 
+Properties: 
+  [MeshName](#cfn-appmesh-virtualrouter-meshname): String
+  [Spec](#cfn-appmesh-virtualrouter-spec): 
     [VirtualRouterSpec](aws-properties-appmesh-virtualrouter-virtualrouterspec.md)
-﻿  [Tags](#cfn-appmesh-virtualrouter-tags) : 
+  [Tags](#cfn-appmesh-virtualrouter-tags): 
     - [TagRef](aws-properties-appmesh-virtualrouter-tagref.md)
-﻿  [VirtualRouterName](#cfn-appmesh-virtualrouter-virtualroutername) : String
+  [VirtualRouterName](#cfn-appmesh-virtualrouter-virtualroutername): String
 ```
 
 ## Properties<a name="aws-resource-appmesh-virtualrouter-properties"></a>

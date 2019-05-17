@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudwatch-alarm-metric-syntax.yaml"></a>
 
 ```
-﻿  [Dimensions](#cfn-cloudwatch-alarm-metric-dimensions) : 
+  [Dimensions](#cfn-cloudwatch-alarm-metric-dimensions): 
     - [Dimension](aws-properties-cw-dimension.md)
-﻿  [MetricName](#cfn-cloudwatch-alarm-metric-metricname) : String
-﻿  [Namespace](#cfn-cloudwatch-alarm-metric-namespace) : String
+  [MetricName](#cfn-cloudwatch-alarm-metric-metricname): String
+  [Namespace](#cfn-cloudwatch-alarm-metric-namespace): String
 ```
 
 ## Properties<a name="aws-properties-cloudwatch-alarm-metric-properties"></a>

@@ -25,12 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RoboMaker::Robot
-Properties : 
-﻿  [Architecture](#cfn-robomaker-robot-architecture) : String
-﻿  [Fleet](#cfn-robomaker-robot-fleet) : String
-﻿  [GreengrassGroupId](#cfn-robomaker-robot-greengrassgroupid) : String
-﻿  [Name](#cfn-robomaker-robot-name) : String
-﻿  [Tags](#cfn-robomaker-robot-tags) : Json
+Properties: 
+  [Architecture](#cfn-robomaker-robot-architecture): String
+  [Fleet](#cfn-robomaker-robot-fleet): String
+  [GreengrassGroupId](#cfn-robomaker-robot-greengrassgroupid): String
+  [Name](#cfn-robomaker-robot-name): String
+  [Tags](#cfn-robomaker-robot-tags): Json
 ```
 
 ## Properties<a name="aws-resource-robomaker-robot-properties"></a>

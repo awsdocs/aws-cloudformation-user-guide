@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-channel-retentionperiod-syntax.yaml"></a>
 
 ```
-﻿  [NumberOfDays](#cfn-iotanalytics-channel-retentionperiod-numberofdays) : Integer
-﻿  [Unlimited](#cfn-iotanalytics-channel-retentionperiod-unlimited) : Boolean
+  [NumberOfDays](#cfn-iotanalytics-channel-retentionperiod-numberofdays): Integer
+  [Unlimited](#cfn-iotanalytics-channel-retentionperiod-unlimited): Boolean
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-channel-retentionperiod-properties"></a>

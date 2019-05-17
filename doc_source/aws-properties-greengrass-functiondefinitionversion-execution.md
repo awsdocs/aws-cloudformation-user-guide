@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-functiondefinitionversion-execution-syntax.yaml"></a>
 
 ```
-﻿  [IsolationMode](#cfn-greengrass-functiondefinitionversion-execution-isolationmode) : String
-﻿  [RunAs](#cfn-greengrass-functiondefinitionversion-execution-runas) : 
+  [IsolationMode](#cfn-greengrass-functiondefinitionversion-execution-isolationmode): String
+  [RunAs](#cfn-greengrass-functiondefinitionversion-execution-runas): 
     [RunAs](aws-properties-greengrass-functiondefinitionversion-runas.md)
 ```
 

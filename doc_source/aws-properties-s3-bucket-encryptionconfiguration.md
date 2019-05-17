@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-encryptionconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [ReplicaKmsKeyID](#cfn-s3-bucket-encryptionconfiguration-replicakmskeyid) : String
+  [ReplicaKmsKeyID](#cfn-s3-bucket-encryptionconfiguration-replicakmskeyid): String
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-encryptionconfiguration-properties"></a>

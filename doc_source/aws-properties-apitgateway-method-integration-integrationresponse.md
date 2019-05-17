@@ -21,13 +21,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apitgateway-method-integration-integrationresponse-syntax.yaml"></a>
 
 ```
-﻿  [ContentHandling](#cfn-apigateway-method-integrationresponse-contenthandling) : String
-﻿  [ResponseParameters](#cfn-apigateway-method-integration-integrationresponse-responseparameters) : 
+  [ContentHandling](#cfn-apigateway-method-integrationresponse-contenthandling): String
+  [ResponseParameters](#cfn-apigateway-method-integration-integrationresponse-responseparameters): 
     Key : Value
-﻿  [ResponseTemplates](#cfn-apigateway-method-integration-integrationresponse-responsetemplates) : 
+  [ResponseTemplates](#cfn-apigateway-method-integration-integrationresponse-responsetemplates): 
     Key : Value
-﻿  [SelectionPattern](#cfn-apigateway-method-integration-integrationresponse-selectionpattern) : String
-﻿  [StatusCode](#cfn-apigateway-method-integration-integrationresponse-statuscode) : String
+  [SelectionPattern](#cfn-apigateway-method-integration-integrationresponse-selectionpattern): String
+  [StatusCode](#cfn-apigateway-method-integration-integrationresponse-statuscode): String
 ```
 
 ## Properties<a name="aws-properties-apitgateway-method-integration-integrationresponse-properties"></a>

@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ask-skill-overrides-syntax.yaml"></a>
 
 ```
-﻿  [Manifest](#cfn-ask-skill-overrides-manifest) : Json
+  [Manifest](#cfn-ask-skill-overrides-manifest): Json
 ```
 
 ## Properties<a name="aws-properties-ask-skill-overrides-properties"></a>

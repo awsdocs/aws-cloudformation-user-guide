@@ -22,10 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-coredefinitionversion-core-syntax.yaml"></a>
 
 ```
-﻿  [CertificateArn](#cfn-greengrass-coredefinitionversion-core-certificatearn) : String
-﻿  [Id](#cfn-greengrass-coredefinitionversion-core-id) : String
-﻿  [SyncShadow](#cfn-greengrass-coredefinitionversion-core-syncshadow) : Boolean
-﻿  [ThingArn](#cfn-greengrass-coredefinitionversion-core-thingarn) : String
+  [CertificateArn](#cfn-greengrass-coredefinitionversion-core-certificatearn): String
+  [Id](#cfn-greengrass-coredefinitionversion-core-id): String
+  [SyncShadow](#cfn-greengrass-coredefinitionversion-core-syncshadow): Boolean
+  [ThingArn](#cfn-greengrass-coredefinitionversion-core-thingarn): String
 ```
 
 ## Properties<a name="aws-properties-greengrass-coredefinitionversion-core-properties"></a>

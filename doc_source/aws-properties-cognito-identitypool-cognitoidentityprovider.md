@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cognito-identitypool-cognitoidentityprovider-syntax.yaml"></a>
 
 ```
-﻿  [ClientId](#cfn-cognito-identitypool-cognitoidentityprovider-clientid) : String
-﻿  [ProviderName](#cfn-cognito-identitypool-cognitoidentityprovider-providername) : String
-﻿  [ServerSideTokenCheck](#cfn-cognito-identitypool-cognitoidentityprovider-serversidetokencheck) : Boolean
+  [ClientId](#cfn-cognito-identitypool-cognitoidentityprovider-clientid): String
+  [ProviderName](#cfn-cognito-identitypool-cognitoidentityprovider-providername): String
+  [ServerSideTokenCheck](#cfn-cognito-identitypool-cognitoidentityprovider-serversidetokencheck): Boolean
 ```
 
 ## Properties<a name="aws-properties-cognito-identitypool-cognitoidentityprovider-properties"></a>

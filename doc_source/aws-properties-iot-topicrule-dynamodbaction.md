@@ -39,15 +39,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-dynamodbaction-syntax.yaml"></a>
 
 ```
-﻿  [HashKeyField](#cfn-iot-topicrule-dynamodbaction-hashkeyfield) : String
-﻿  [HashKeyType](#cfn-iot-topicrule-dynamodbaction-hashkeytype) : String
-﻿  [HashKeyValue](#cfn-iot-topicrule-dynamodbaction-hashkeyvalue) : String
-﻿  [PayloadField](#cfn-iot-topicrule-dynamodbaction-payloadfield) : String
-﻿  [RangeKeyField](#cfn-iot-topicrule-dynamodbaction-rangekeyfield) : String
-﻿  [RangeKeyType](#cfn-iot-topicrule-dynamodbaction-rangekeytype) : String
-﻿  [RangeKeyValue](#cfn-iot-topicrule-dynamodbaction-rangekeyvalue) : String
-﻿  [RoleArn](#cfn-iot-topicrule-dynamodbaction-rolearn) : String
-﻿  [TableName](#cfn-iot-topicrule-dynamodbaction-tablename) : String
+  [HashKeyField](#cfn-iot-topicrule-dynamodbaction-hashkeyfield): String
+  [HashKeyType](#cfn-iot-topicrule-dynamodbaction-hashkeytype): String
+  [HashKeyValue](#cfn-iot-topicrule-dynamodbaction-hashkeyvalue): String
+  [PayloadField](#cfn-iot-topicrule-dynamodbaction-payloadfield): String
+  [RangeKeyField](#cfn-iot-topicrule-dynamodbaction-rangekeyfield): String
+  [RangeKeyType](#cfn-iot-topicrule-dynamodbaction-rangekeytype): String
+  [RangeKeyValue](#cfn-iot-topicrule-dynamodbaction-rangekeyvalue): String
+  [RoleArn](#cfn-iot-topicrule-dynamodbaction-rolearn): String
+  [TableName](#cfn-iot-topicrule-dynamodbaction-tablename): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-dynamodbaction-properties"></a>

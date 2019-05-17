@@ -32,13 +32,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SSM::Parameter
-Properties : 
-﻿  [AllowedPattern](#cfn-ssm-parameter-allowedpattern) : String
-﻿  [Description](#cfn-ssm-parameter-description) : String
-﻿  [Name](#cfn-ssm-parameter-name) : String
-﻿  [Tags](#cfn-ssm-parameter-tags) : Json
-﻿  [Type](#cfn-ssm-parameter-type) : String
-﻿  [Value](#cfn-ssm-parameter-value) : String
+Properties: 
+  [AllowedPattern](#cfn-ssm-parameter-allowedpattern): String
+  [Description](#cfn-ssm-parameter-description): String
+  [Name](#cfn-ssm-parameter-name): String
+  [Tags](#cfn-ssm-parameter-tags): Json
+  [Type](#cfn-ssm-parameter-type): String
+  [Value](#cfn-ssm-parameter-value): String
 ```
 
 ## Properties<a name="aws-resource-ssm-parameter-properties"></a>

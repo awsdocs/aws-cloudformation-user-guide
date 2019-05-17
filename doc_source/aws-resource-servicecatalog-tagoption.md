@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceCatalog::TagOption
-Properties : 
-﻿  [Active](#cfn-servicecatalog-tagoption-active) : Boolean
-﻿  [Key](#cfn-servicecatalog-tagoption-key) : String
-﻿  [Value](#cfn-servicecatalog-tagoption-value) : String
+Properties: 
+  [Active](#cfn-servicecatalog-tagoption-active): Boolean
+  [Key](#cfn-servicecatalog-tagoption-key): String
+  [Value](#cfn-servicecatalog-tagoption-value): String
 ```
 
 ## Properties<a name="aws-resource-servicecatalog-tagoption-properties"></a>

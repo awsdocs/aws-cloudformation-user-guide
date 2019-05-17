@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::VpcLink
-Properties : 
-﻿  [Description](#cfn-apigateway-vpclink-description) : String
-﻿  [Name](#cfn-apigateway-vpclink-name) : String
-﻿  [TargetArns](#cfn-apigateway-vpclink-targetarns) : 
+Properties: 
+  [Description](#cfn-apigateway-vpclink-description): String
+  [Name](#cfn-apigateway-vpclink-name): String
+  [TargetArns](#cfn-apigateway-vpclink-targetarns): 
     - String
 ```
 

@@ -21,13 +21,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-taskdefinition-linuxparameters-syntax.yaml"></a>
 
 ```
-﻿  [Capabilities](#cfn-ecs-taskdefinition-linuxparameters-capabilities) : 
+  [Capabilities](#cfn-ecs-taskdefinition-linuxparameters-capabilities): 
     [KernelCapabilities](aws-properties-ecs-taskdefinition-kernelcapabilities.md)
-﻿  [Devices](#cfn-ecs-taskdefinition-linuxparameters-devices) : 
+  [Devices](#cfn-ecs-taskdefinition-linuxparameters-devices): 
     - [Device](aws-properties-ecs-taskdefinition-device.md)
-﻿  [InitProcessEnabled](#cfn-ecs-taskdefinition-linuxparameters-initprocessenabled) : Boolean
-﻿  [SharedMemorySize](#cfn-ecs-taskdefinition-linuxparameters-sharedmemorysize) : Integer
-﻿  [Tmpfs](#cfn-ecs-taskdefinition-linuxparameters-tmpfs) : 
+  [InitProcessEnabled](#cfn-ecs-taskdefinition-linuxparameters-initprocessenabled): Boolean
+  [SharedMemorySize](#cfn-ecs-taskdefinition-linuxparameters-sharedmemorysize): Integer
+  [Tmpfs](#cfn-ecs-taskdefinition-linuxparameters-tmpfs): 
     - [Tmpfs](aws-properties-ecs-taskdefinition-tmpfs.md)
 ```
 

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-servicediscovery-service-dnsrecord-syntax.yaml"></a>
 
 ```
-﻿  [TTL](#cfn-servicediscovery-service-dnsrecord-ttl) : Double
-﻿  [Type](#cfn-servicediscovery-service-dnsrecord-type) : String
+  [TTL](#cfn-servicediscovery-service-dnsrecord-ttl): Double
+  [Type](#cfn-servicediscovery-service-dnsrecord-type): String
 ```
 
 ## Properties<a name="aws-properties-servicediscovery-service-dnsrecord-properties"></a>

@@ -20,11 +20,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-instancegroupconfig-scalingrule-syntax.yaml"></a>
 
 ```
-﻿  [Action](#cfn-elasticmapreduce-instancegroupconfig-scalingrule-action) : 
+  [Action](#cfn-elasticmapreduce-instancegroupconfig-scalingrule-action): 
     [ScalingAction](aws-properties-elasticmapreduce-instancegroupconfig-scalingaction.md)
-﻿  [Description](#cfn-elasticmapreduce-instancegroupconfig-scalingrule-description) : String
-﻿  [Name](#cfn-elasticmapreduce-instancegroupconfig-scalingrule-name) : String
-﻿  [Trigger](#cfn-elasticmapreduce-instancegroupconfig-scalingrule-trigger) : 
+  [Description](#cfn-elasticmapreduce-instancegroupconfig-scalingrule-description): String
+  [Name](#cfn-elasticmapreduce-instancegroupconfig-scalingrule-name): String
+  [Trigger](#cfn-elasticmapreduce-instancegroupconfig-scalingrule-trigger): 
     [ScalingTrigger](aws-properties-elasticmapreduce-instancegroupconfig-scalingtrigger.md)
 ```
 

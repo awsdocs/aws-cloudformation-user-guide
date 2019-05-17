@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPCEndpointService
-Properties : 
-﻿  [AcceptanceRequired](#cfn-ec2-vpcendpointservice-acceptancerequired) : Boolean
-﻿  [NetworkLoadBalancerArns](#cfn-ec2-vpcendpointservice-networkloadbalancerarns) : 
+Properties: 
+  [AcceptanceRequired](#cfn-ec2-vpcendpointservice-acceptancerequired): Boolean
+  [NetworkLoadBalancerArns](#cfn-ec2-vpcendpointservice-networkloadbalancerarns): 
     - String
 ```
 

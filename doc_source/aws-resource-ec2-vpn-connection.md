@@ -28,14 +28,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPNConnection
-Properties : 
-﻿  [CustomerGatewayId](#cfn-ec2-vpnconnection-customergatewayid) : String
-﻿  [StaticRoutesOnly](#cfn-ec2-vpnconnection-StaticRoutesOnly) : Boolean
-﻿  [Tags](#cfn-ec2-vpnconnection-tags) : 
+Properties: 
+  [CustomerGatewayId](#cfn-ec2-vpnconnection-customergatewayid): String
+  [StaticRoutesOnly](#cfn-ec2-vpnconnection-StaticRoutesOnly): Boolean
+  [Tags](#cfn-ec2-vpnconnection-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [Type](#cfn-ec2-vpnconnection-type) : String
-﻿  [VpnGatewayId](#cfn-ec2-vpnconnection-vpngatewayid) : String
-﻿  [VpnTunnelOptionsSpecifications](#cfn-ec2-vpnconnection-vpntunneloptionsspecifications) : 
+  [Type](#cfn-ec2-vpnconnection-type): String
+  [VpnGatewayId](#cfn-ec2-vpnconnection-vpngatewayid): String
+  [VpnTunnelOptionsSpecifications](#cfn-ec2-vpnconnection-vpntunneloptionsspecifications): 
     - [VpnTunnelOptionsSpecification](aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.md)
 ```
 

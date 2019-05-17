@@ -23,9 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-route53-aliastarget-syntax.yaml"></a>
 
 ```
-﻿  [DNSName](#cfn-route53-aliastarget-dnshostname) : String
-﻿  [EvaluateTargetHealth](#cfn-route53-aliastarget-evaluatetargethealth) : Boolean
-﻿  [HostedZoneId](#cfn-route53-aliastarget-hostedzoneid) : String
+  [DNSName](#cfn-route53-aliastarget-dnshostname): String
+  [EvaluateTargetHealth](#cfn-route53-aliastarget-evaluatetargethealth): Boolean
+  [HostedZoneId](#cfn-route53-aliastarget-hostedzoneid): String
 ```
 
 ## Properties<a name="aws-properties-route53-aliastarget-properties"></a>

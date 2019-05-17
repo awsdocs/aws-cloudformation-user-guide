@@ -31,25 +31,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-batch-computeenvironment-computeresources-syntax.yaml"></a>
 
 ```
-﻿  [BidPercentage](#cfn-batch-computeenvironment-computeresources-bidpercentage) : Integer
-﻿  [DesiredvCpus](#cfn-batch-computeenvironment-computeresources-desiredvcpus) : Integer
-﻿  [Ec2KeyPair](#cfn-batch-computeenvironment-computeresources-ec2keypair) : String
-﻿  [ImageId](#cfn-batch-computeenvironment-computeresources-imageid) : String
-﻿  [InstanceRole](#cfn-batch-computeenvironment-computeresources-instancerole) : String
-﻿  [InstanceTypes](#cfn-batch-computeenvironment-computeresources-instancetypes) : 
+  [BidPercentage](#cfn-batch-computeenvironment-computeresources-bidpercentage): Integer
+  [DesiredvCpus](#cfn-batch-computeenvironment-computeresources-desiredvcpus): Integer
+  [Ec2KeyPair](#cfn-batch-computeenvironment-computeresources-ec2keypair): String
+  [ImageId](#cfn-batch-computeenvironment-computeresources-imageid): String
+  [InstanceRole](#cfn-batch-computeenvironment-computeresources-instancerole): String
+  [InstanceTypes](#cfn-batch-computeenvironment-computeresources-instancetypes): 
     - String
-﻿  [LaunchTemplate](#cfn-batch-computeenvironment-computeresources-launchtemplate) : 
+  [LaunchTemplate](#cfn-batch-computeenvironment-computeresources-launchtemplate): 
     [LaunchTemplateSpecification](aws-properties-batch-computeenvironment-launchtemplatespecification.md)
-﻿  [MaxvCpus](#cfn-batch-computeenvironment-computeresources-maxvcpus) : Integer
-﻿  [MinvCpus](#cfn-batch-computeenvironment-computeresources-minvcpus) : Integer
-﻿  [PlacementGroup](#cfn-batch-computeenvironment-computeresources-placementgroup) : String
-﻿  [SecurityGroupIds](#cfn-batch-computeenvironment-computeresources-securitygroupids) : 
+  [MaxvCpus](#cfn-batch-computeenvironment-computeresources-maxvcpus): Integer
+  [MinvCpus](#cfn-batch-computeenvironment-computeresources-minvcpus): Integer
+  [PlacementGroup](#cfn-batch-computeenvironment-computeresources-placementgroup): String
+  [SecurityGroupIds](#cfn-batch-computeenvironment-computeresources-securitygroupids): 
     - String
-﻿  [SpotIamFleetRole](#cfn-batch-computeenvironment-computeresources-spotiamfleetrole) : String
-﻿  [Subnets](#cfn-batch-computeenvironment-computeresources-subnets) : 
+  [SpotIamFleetRole](#cfn-batch-computeenvironment-computeresources-spotiamfleetrole): String
+  [Subnets](#cfn-batch-computeenvironment-computeresources-subnets): 
     - String
-﻿  [Tags](#cfn-batch-computeenvironment-computeresources-tags) : Json
-﻿  [Type](#cfn-batch-computeenvironment-computeresources-type) : String
+  [Tags](#cfn-batch-computeenvironment-computeresources-tags): Json
+  [Type](#cfn-batch-computeenvironment-computeresources-type): String
 ```
 
 ## Properties<a name="aws-properties-batch-computeenvironment-computeresources-properties"></a>
@@ -91,7 +91,7 @@ The instances types that may be launched\. You can specify instance families to 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LaunchTemplate`  <a name="cfn-batch-computeenvironment-computeresources-launchtemplate"></a>
-The launch template to use for your compute resources\. Any other compute resource parameters that you specify in a API operation override the same parameters in the launch template\. You must specify either the launch template ID or launch template name in the request, but not both\. For more information, see [Launch Template Support](https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html) in the *AWS Batch User Guide*\.  
+The launch template to use for your compute resources\. Any other compute resource parameters that you specify in a CreateComputeEnvironment API operation override the same parameters in the launch template\. You must specify either the launch template ID or launch template name in the request, but not both\. For more information, see [Launch Template Support](https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html) in the *AWS Batch User Guide*\.  
 *Required*: No  
 *Type*: [LaunchTemplateSpecification](aws-properties-batch-computeenvironment-launchtemplatespecification.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

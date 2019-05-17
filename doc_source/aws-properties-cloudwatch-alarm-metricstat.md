@@ -22,11 +22,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudwatch-alarm-metricstat-syntax.yaml"></a>
 
 ```
-﻿  [Metric](#cfn-cloudwatch-alarm-metricstat-metric) : 
+  [Metric](#cfn-cloudwatch-alarm-metricstat-metric): 
     [Metric](aws-properties-cloudwatch-alarm-metric.md)
-﻿  [Period](#cfn-cloudwatch-alarm-metricstat-period) : Integer
-﻿  [Stat](#cfn-cloudwatch-alarm-metricstat-stat) : String
-﻿  [Unit](#cfn-cloudwatch-alarm-metricstat-unit) : String
+  [Period](#cfn-cloudwatch-alarm-metricstat-period): Integer
+  [Stat](#cfn-cloudwatch-alarm-metricstat-stat): String
+  [Unit](#cfn-cloudwatch-alarm-metricstat-unit): String
 ```
 
 ## Properties<a name="aws-properties-cloudwatch-alarm-metricstat-properties"></a>

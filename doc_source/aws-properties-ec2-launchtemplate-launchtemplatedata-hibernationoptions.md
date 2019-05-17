@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-hibernationoptions-syntax.yaml"></a>
 
 ```
-﻿  [Configured](#cfn-ec2-launchtemplate-launchtemplatedata-hibernationoptions-configured) : Boolean
+  [Configured](#cfn-ec2-launchtemplate-launchtemplatedata-hibernationoptions-configured): Boolean
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-hibernationoptions-properties"></a>

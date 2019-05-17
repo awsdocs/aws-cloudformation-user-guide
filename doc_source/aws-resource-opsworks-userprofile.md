@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::OpsWorks::UserProfile
-Properties : 
-﻿  [AllowSelfManagement](#cfn-opsworks-userprofile-allowselfmanagement) : Boolean
-﻿  [IamUserArn](#cfn-opsworks-userprofile-iamuserarn) : String
-﻿  [SshPublicKey](#cfn-opsworks-userprofile-sshpublickey) : String
-﻿  [SshUsername](#cfn-opsworks-userprofile-sshusername) : String
+Properties: 
+  [AllowSelfManagement](#cfn-opsworks-userprofile-allowselfmanagement): Boolean
+  [IamUserArn](#cfn-opsworks-userprofile-iamuserarn): String
+  [SshPublicKey](#cfn-opsworks-userprofile-sshpublickey): String
+  [SshUsername](#cfn-opsworks-userprofile-sshusername): String
 ```
 
 ## Properties<a name="aws-resource-opsworks-userprofile-properties"></a>

@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::SubnetCidrBlock
-Properties : 
-﻿  [Ipv6CidrBlock](#cfn-ec2-subnetcidrblock-ipv6cidrblock) : String
-﻿  [SubnetId](#cfn-ec2-subnetcidrblock-subnetid) : String
+Properties: 
+  [Ipv6CidrBlock](#cfn-ec2-subnetcidrblock-ipv6cidrblock): String
+  [SubnetId](#cfn-ec2-subnetcidrblock-subnetid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-subnetcidrblock-properties"></a>

@@ -29,10 +29,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AutoScalingPlans::ScalingPlan
-Properties : 
-﻿  [ApplicationSource](#cfn-autoscalingplans-scalingplan-applicationsource) : 
+Properties: 
+  [ApplicationSource](#cfn-autoscalingplans-scalingplan-applicationsource): 
     [ApplicationSource](aws-properties-autoscalingplans-scalingplan-applicationsource.md)
-﻿  [ScalingInstructions](#cfn-autoscalingplans-scalingplan-scalinginstructions) : 
+  [ScalingInstructions](#cfn-autoscalingplans-scalingplan-scalinginstructions): 
     - [ScalingInstruction](aws-properties-autoscalingplans-scalingplan-scalinginstruction.md)
 ```
 

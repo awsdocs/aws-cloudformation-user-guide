@@ -23,15 +23,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-inventoryconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [Destination](#cfn-s3-bucket-inventoryconfiguration-destination) : 
+  [Destination](#cfn-s3-bucket-inventoryconfiguration-destination): 
     [Destination](aws-properties-s3-bucket-destination.md)
-﻿  [Enabled](#cfn-s3-bucket-inventoryconfiguration-enabled) : Boolean
-﻿  [Id](#cfn-s3-bucket-inventoryconfiguration-id) : String
-﻿  [IncludedObjectVersions](#cfn-s3-bucket-inventoryconfiguration-includedobjectversions) : String
-﻿  [OptionalFields](#cfn-s3-bucket-inventoryconfiguration-optionalfields) : 
+  [Enabled](#cfn-s3-bucket-inventoryconfiguration-enabled): Boolean
+  [Id](#cfn-s3-bucket-inventoryconfiguration-id): String
+  [IncludedObjectVersions](#cfn-s3-bucket-inventoryconfiguration-includedobjectversions): String
+  [OptionalFields](#cfn-s3-bucket-inventoryconfiguration-optionalfields): 
     - String
-﻿  [Prefix](#cfn-s3-bucket-inventoryconfiguration-prefix) : String
-﻿  [ScheduleFrequency](#cfn-s3-bucket-inventoryconfiguration-schedulefrequency) : String
+  [Prefix](#cfn-s3-bucket-inventoryconfiguration-prefix): String
+  [ScheduleFrequency](#cfn-s3-bucket-inventoryconfiguration-schedulefrequency): String
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-inventoryconfiguration-properties"></a>

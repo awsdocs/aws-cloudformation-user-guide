@@ -52,27 +52,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AmazonMQ::Broker
-Properties : 
-﻿  [AutoMinorVersionUpgrade](#cfn-amazonmq-broker-autominorversionupgrade) : Boolean
-﻿  [BrokerName](#cfn-amazonmq-broker-brokername) : String
-﻿  [Configuration](#cfn-amazonmq-broker-configuration) : 
+Properties: 
+  [AutoMinorVersionUpgrade](#cfn-amazonmq-broker-autominorversionupgrade): Boolean
+  [BrokerName](#cfn-amazonmq-broker-brokername): String
+  [Configuration](#cfn-amazonmq-broker-configuration): 
     [ConfigurationId](aws-properties-amazonmq-broker-configurationid.md)
-﻿  [DeploymentMode](#cfn-amazonmq-broker-deploymentmode) : String
-﻿  [EngineType](#cfn-amazonmq-broker-enginetype) : String
-﻿  [EngineVersion](#cfn-amazonmq-broker-engineversion) : String
-﻿  [HostInstanceType](#cfn-amazonmq-broker-hostinstancetype) : String
-﻿  [Logs](#cfn-amazonmq-broker-logs) : 
+  [DeploymentMode](#cfn-amazonmq-broker-deploymentmode): String
+  [EngineType](#cfn-amazonmq-broker-enginetype): String
+  [EngineVersion](#cfn-amazonmq-broker-engineversion): String
+  [HostInstanceType](#cfn-amazonmq-broker-hostinstancetype): String
+  [Logs](#cfn-amazonmq-broker-logs): 
     [LogList](aws-properties-amazonmq-broker-loglist.md)
-﻿  [MaintenanceWindowStartTime](#cfn-amazonmq-broker-maintenancewindowstarttime) : 
+  [MaintenanceWindowStartTime](#cfn-amazonmq-broker-maintenancewindowstarttime): 
     [MaintenanceWindow](aws-properties-amazonmq-broker-maintenancewindow.md)
-﻿  [PubliclyAccessible](#cfn-amazonmq-broker-publiclyaccessible) : Boolean
-﻿  [SecurityGroups](#cfn-amazonmq-broker-securitygroups) : 
+  [PubliclyAccessible](#cfn-amazonmq-broker-publiclyaccessible): Boolean
+  [SecurityGroups](#cfn-amazonmq-broker-securitygroups): 
     - String
-﻿  [SubnetIds](#cfn-amazonmq-broker-subnetids) : 
+  [SubnetIds](#cfn-amazonmq-broker-subnetids): 
     - String
-﻿  [Tags](#cfn-amazonmq-broker-tags) : 
+  [Tags](#cfn-amazonmq-broker-tags): 
     - [TagsEntry](aws-properties-amazonmq-broker-tagsentry.md)
-﻿  [Users](#cfn-amazonmq-broker-users) : 
+  [Users](#cfn-amazonmq-broker-users): 
     - [User](aws-properties-amazonmq-broker-user.md)
 ```
 

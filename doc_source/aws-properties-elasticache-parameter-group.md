@@ -26,10 +26,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ElastiCache::ParameterGroup
-Properties : 
-﻿  [CacheParameterGroupFamily](#cfn-elasticache-parametergroup-cacheparametergroupfamily) : String
-﻿  [Description](#cfn-elasticache-parametergroup-description) : String
-﻿  [Properties](#cfn-elasticache-parametergroup-properties) : 
+Properties: 
+  [CacheParameterGroupFamily](#cfn-elasticache-parametergroup-cacheparametergroupfamily): String
+  [Description](#cfn-elasticache-parametergroup-description): String
+  [Properties](#cfn-elasticache-parametergroup-properties): 
     Key : Value
 ```
 

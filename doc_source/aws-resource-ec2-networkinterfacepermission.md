@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::NetworkInterfacePermission
-Properties : 
-﻿  [AwsAccountId](#cfn-ec2-networkinterfacepermission-awsaccountid) : String
-﻿  [NetworkInterfaceId](#cfn-ec2-networkinterfacepermission-networkinterfaceid) : String
-﻿  [Permission](#cfn-ec2-networkinterfacepermission-permission) : String
+Properties: 
+  [AwsAccountId](#cfn-ec2-networkinterfacepermission-awsaccountid): String
+  [NetworkInterfaceId](#cfn-ec2-networkinterfacepermission-networkinterfaceid): String
+  [Permission](#cfn-ec2-networkinterfacepermission-permission): String
 ```
 
 ## Properties<a name="aws-resource-ec2-networkinterfacepermission-properties"></a>

@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codepipeline-pipeline-artifactstore-syntax.yaml"></a>
 
 ```
-﻿  [EncryptionKey](#cfn-codepipeline-pipeline-artifactstore-encryptionkey) : 
+  [EncryptionKey](#cfn-codepipeline-pipeline-artifactstore-encryptionkey): 
     [EncryptionKey](aws-properties-codepipeline-pipeline-artifactstore-encryptionkey.md)
-﻿  [Location](#cfn-codepipeline-pipeline-artifactstore-location) : String
-﻿  [Type](#cfn-codepipeline-pipeline-artifactstore-type) : String
+  [Location](#cfn-codepipeline-pipeline-artifactstore-location): String
+  [Type](#cfn-codepipeline-pipeline-artifactstore-type): String
 ```
 
 ## Properties<a name="aws-properties-codepipeline-pipeline-artifactstore-properties"></a>

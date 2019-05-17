@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-environmentvariable-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-codebuild-project-environmentvariable-name) : String
-﻿  [Type](#cfn-codebuild-project-environmentvariable-type) : String
-﻿  [Value](#cfn-codebuild-project-environmentvariable-value) : String
+  [Name](#cfn-codebuild-project-environmentvariable-name): String
+  [Type](#cfn-codebuild-project-environmentvariable-type): String
+  [Value](#cfn-codebuild-project-environmentvariable-value): String
 ```
 
 ## Properties<a name="aws-properties-codebuild-project-environmentvariable-properties"></a>

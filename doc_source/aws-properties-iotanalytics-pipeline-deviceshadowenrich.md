@@ -21,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-pipeline-deviceshadowenrich-syntax.yaml"></a>
 
 ```
-﻿  [Attribute](#cfn-iotanalytics-pipeline-deviceshadowenrich-attribute) : String
-﻿  [Name](#cfn-iotanalytics-pipeline-deviceshadowenrich-name) : String
-﻿  [Next](#cfn-iotanalytics-pipeline-deviceshadowenrich-next) : String
-﻿  [RoleArn](#cfn-iotanalytics-pipeline-deviceshadowenrich-rolearn) : String
-﻿  [ThingName](#cfn-iotanalytics-pipeline-deviceshadowenrich-thingname) : String
+  [Attribute](#cfn-iotanalytics-pipeline-deviceshadowenrich-attribute): String
+  [Name](#cfn-iotanalytics-pipeline-deviceshadowenrich-name): String
+  [Next](#cfn-iotanalytics-pipeline-deviceshadowenrich-next): String
+  [RoleArn](#cfn-iotanalytics-pipeline-deviceshadowenrich-rolearn): String
+  [ThingName](#cfn-iotanalytics-pipeline-deviceshadowenrich-thingname): String
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-pipeline-deviceshadowenrich-properties"></a>

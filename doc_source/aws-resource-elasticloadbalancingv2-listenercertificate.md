@@ -22,10 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ElasticLoadBalancingV2::ListenerCertificate
-Properties : 
-﻿  [Certificates](#cfn-elasticloadbalancingv2-listenercertificate-certificates) : 
+Properties: 
+  [Certificates](#cfn-elasticloadbalancingv2-listenercertificate-certificates): 
     - [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates.md)
-﻿  [ListenerArn](#cfn-elasticloadbalancingv2-listenercertificate-listenerarn) : String
+  [ListenerArn](#cfn-elasticloadbalancingv2-listenercertificate-listenerarn): String
 ```
 
 ## Properties<a name="aws-resource-elasticloadbalancingv2-listenercertificate-properties"></a>

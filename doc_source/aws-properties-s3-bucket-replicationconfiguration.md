@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-replicationconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [Role](#cfn-s3-bucket-replicationconfiguration-role) : String
-﻿  [Rules](#cfn-s3-bucket-replicationconfiguration-rules) : 
+  [Role](#cfn-s3-bucket-replicationconfiguration-role): String
+  [Rules](#cfn-s3-bucket-replicationconfiguration-rules): 
     - [ReplicationRule](aws-properties-s3-bucket-replicationconfiguration-rules.md)
 ```
 

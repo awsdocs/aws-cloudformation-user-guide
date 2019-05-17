@@ -31,29 +31,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudfront-distribution-distributionconfig-syntax.yaml"></a>
 
 ```
-﻿  [Aliases](#cfn-cloudfront-distribution-distributionconfig-aliases) : 
+  [Aliases](#cfn-cloudfront-distribution-distributionconfig-aliases): 
     - String
-﻿  [CacheBehaviors](#cfn-cloudfront-distribution-distributionconfig-cachebehaviors) : 
+  [CacheBehaviors](#cfn-cloudfront-distribution-distributionconfig-cachebehaviors): 
     - [CacheBehavior](aws-properties-cloudfront-distribution-cachebehavior.md)
-﻿  [Comment](#cfn-cloudfront-distribution-distributionconfig-comment) : String
-﻿  [CustomErrorResponses](#cfn-cloudfront-distribution-distributionconfig-customerrorresponses) : 
+  [Comment](#cfn-cloudfront-distribution-distributionconfig-comment): String
+  [CustomErrorResponses](#cfn-cloudfront-distribution-distributionconfig-customerrorresponses): 
     - [CustomErrorResponse](aws-properties-cloudfront-distribution-customerrorresponse.md)
-﻿  [DefaultCacheBehavior](#cfn-cloudfront-distribution-distributionconfig-defaultcachebehavior) : 
+  [DefaultCacheBehavior](#cfn-cloudfront-distribution-distributionconfig-defaultcachebehavior): 
     [DefaultCacheBehavior](aws-properties-cloudfront-distribution-defaultcachebehavior.md)
-﻿  [DefaultRootObject](#cfn-cloudfront-distribution-distributionconfig-defaultrootobject) : String
-﻿  [Enabled](#cfn-cloudfront-distribution-distributionconfig-enabled) : Boolean
-﻿  [HttpVersion](#cfn-cloudfront-distribution-distributionconfig-httpversion) : String
-﻿  [IPV6Enabled](#cfn-cloudfront-distribution-distributionconfig-ipv6enabled) : Boolean
-﻿  [Logging](#cfn-cloudfront-distribution-distributionconfig-logging) : 
+  [DefaultRootObject](#cfn-cloudfront-distribution-distributionconfig-defaultrootobject): String
+  [Enabled](#cfn-cloudfront-distribution-distributionconfig-enabled): Boolean
+  [HttpVersion](#cfn-cloudfront-distribution-distributionconfig-httpversion): String
+  [IPV6Enabled](#cfn-cloudfront-distribution-distributionconfig-ipv6enabled): Boolean
+  [Logging](#cfn-cloudfront-distribution-distributionconfig-logging): 
     [Logging](aws-properties-cloudfront-distribution-logging.md)
-﻿  [Origins](#cfn-cloudfront-distribution-distributionconfig-origins) : 
+  [Origins](#cfn-cloudfront-distribution-distributionconfig-origins): 
     - [Origin](aws-properties-cloudfront-distribution-origin.md)
-﻿  [PriceClass](#cfn-cloudfront-distribution-distributionconfig-priceclass) : String
-﻿  [Restrictions](#cfn-cloudfront-distribution-distributionconfig-restrictions) : 
+  [PriceClass](#cfn-cloudfront-distribution-distributionconfig-priceclass): String
+  [Restrictions](#cfn-cloudfront-distribution-distributionconfig-restrictions): 
     [Restrictions](aws-properties-cloudfront-distribution-restrictions.md)
-﻿  [ViewerCertificate](#cfn-cloudfront-distribution-distributionconfig-viewercertificate) : 
+  [ViewerCertificate](#cfn-cloudfront-distribution-distributionconfig-viewercertificate): 
     [ViewerCertificate](aws-properties-cloudfront-distribution-viewercertificate.md)
-﻿  [WebACLId](#cfn-cloudfront-distribution-distributionconfig-webaclid) : String
+  [WebACLId](#cfn-cloudfront-distribution-distributionconfig-webaclid): String
 ```
 
 ## Properties<a name="aws-properties-cloudfront-distribution-distributionconfig-properties"></a>

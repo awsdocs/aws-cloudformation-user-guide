@@ -25,17 +25,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dms-endpoint-mongodbsettings-syntax.yaml"></a>
 
 ```
-﻿  [AuthMechanism](#cfn-dms-endpoint-mongodbsettings-authmechanism) : String
-﻿  [AuthSource](#cfn-dms-endpoint-mongodbsettings-authsource) : String
-﻿  [AuthType](#cfn-dms-endpoint-mongodbsettings-authtype) : String
-﻿  [DatabaseName](#cfn-dms-endpoint-mongodbsettings-databasename) : String
-﻿  [DocsToInvestigate](#cfn-dms-endpoint-mongodbsettings-docstoinvestigate) : String
-﻿  [ExtractDocId](#cfn-dms-endpoint-mongodbsettings-extractdocid) : String
-﻿  [NestingLevel](#cfn-dms-endpoint-mongodbsettings-nestinglevel) : String
-﻿  [Password](#cfn-dms-endpoint-mongodbsettings-password) : String
-﻿  [Port](#cfn-dms-endpoint-mongodbsettings-port) : Integer
-﻿  [ServerName](#cfn-dms-endpoint-mongodbsettings-servername) : String
-﻿  [Username](#cfn-dms-endpoint-mongodbsettings-username) : String
+  [AuthMechanism](#cfn-dms-endpoint-mongodbsettings-authmechanism): String
+  [AuthSource](#cfn-dms-endpoint-mongodbsettings-authsource): String
+  [AuthType](#cfn-dms-endpoint-mongodbsettings-authtype): String
+  [DatabaseName](#cfn-dms-endpoint-mongodbsettings-databasename): String
+  [DocsToInvestigate](#cfn-dms-endpoint-mongodbsettings-docstoinvestigate): String
+  [ExtractDocId](#cfn-dms-endpoint-mongodbsettings-extractdocid): String
+  [NestingLevel](#cfn-dms-endpoint-mongodbsettings-nestinglevel): String
+  [Password](#cfn-dms-endpoint-mongodbsettings-password): String
+  [Port](#cfn-dms-endpoint-mongodbsettings-port): Integer
+  [ServerName](#cfn-dms-endpoint-mongodbsettings-servername): String
+  [Username](#cfn-dms-endpoint-mongodbsettings-username): String
 ```
 
 ## Properties<a name="aws-properties-dms-endpoint-mongodbsettings-properties"></a>

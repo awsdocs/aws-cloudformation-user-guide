@@ -27,20 +27,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-syntax.yaml"></a>
 
 ```
-﻿  [AssociatePublicIpAddress](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-associatepublicipaddress) : Boolean
-﻿  [DeleteOnTermination](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deleteontermination) : Boolean
-﻿  [Description](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-description) : String
-﻿  [DeviceIndex](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deviceindex) : Integer
-﻿  [Groups](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-groups) : 
+  [AssociatePublicIpAddress](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-associatepublicipaddress): Boolean
+  [DeleteOnTermination](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deleteontermination): Boolean
+  [Description](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-description): String
+  [DeviceIndex](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deviceindex): Integer
+  [Groups](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-groups): 
     - String
-﻿  [Ipv6AddressCount](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresscount) : Integer
-﻿  [Ipv6Addresses](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresses) : 
+  [Ipv6AddressCount](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresscount): Integer
+  [Ipv6Addresses](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresses): 
     - [InstanceIpv6Address](aws-properties-ec2-spotfleet-instanceipv6address.md)
-﻿  [NetworkInterfaceId](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-networkinterfaceid) : String
-﻿  [PrivateIpAddresses](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-privateipaddresses) : 
+  [NetworkInterfaceId](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-networkinterfaceid): String
+  [PrivateIpAddresses](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-privateipaddresses): 
     - [PrivateIpAddressSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.md)
-﻿  [SecondaryPrivateIpAddressCount](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-secondaryprivateipaddresscount) : Integer
-﻿  [SubnetId](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-subnetid) : String
+  [SecondaryPrivateIpAddressCount](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-secondaryprivateipaddresscount): Integer
+  [SubnetId](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-subnetid): String
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-properties"></a>

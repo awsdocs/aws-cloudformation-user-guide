@@ -24,18 +24,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-cloudwatchloggingoptions) : 
+  [CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-cloudwatchloggingoptions): 
     [CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md)
-﻿  [ClusterJDBCURL](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-clusterjdbcurl) : String
-﻿  [CopyCommand](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-copycommand) : 
+  [ClusterJDBCURL](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-clusterjdbcurl): String
+  [CopyCommand](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-copycommand): 
     [CopyCommand](aws-properties-kinesisfirehose-deliverystream-copycommand.md)
-﻿  [Password](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-password) : String
-﻿  [ProcessingConfiguration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-processingconfiguration) : 
+  [Password](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-password): String
+  [ProcessingConfiguration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-processingconfiguration): 
     [ProcessingConfiguration](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md)
-﻿  [RoleARN](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-rolearn) : String
-﻿  [S3Configuration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-s3configuration) : 
+  [RoleARN](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-rolearn): String
+  [S3Configuration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-s3configuration): 
     [S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)
-﻿  [Username](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-username) : String
+  [Username](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-username): String
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-properties"></a>

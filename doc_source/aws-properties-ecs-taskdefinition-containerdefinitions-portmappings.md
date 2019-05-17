@@ -23,9 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-taskdefinition-containerdefinitions-portmappings-syntax.yaml"></a>
 
 ```
-﻿  [ContainerPort](#cfn-ecs-taskdefinition-containerdefinition-portmappings-containerport) : Integer
-﻿  [HostPort](#cfn-ecs-taskdefinition-containerdefinition-portmappings-readonly) : Integer
-﻿  [Protocol](#cfn-ecs-taskdefinition-containerdefinition-portmappings-sourcevolume) : String
+  [ContainerPort](#cfn-ecs-taskdefinition-containerdefinition-portmappings-containerport): Integer
+  [HostPort](#cfn-ecs-taskdefinition-containerdefinition-portmappings-readonly): Integer
+  [Protocol](#cfn-ecs-taskdefinition-containerdefinition-portmappings-sourcevolume): String
 ```
 
 ## Properties<a name="aws-properties-ecs-taskdefinition-containerdefinitions-portmappings-properties"></a>

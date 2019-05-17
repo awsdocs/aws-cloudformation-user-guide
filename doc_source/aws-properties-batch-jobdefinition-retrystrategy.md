@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-batch-jobdefinition-retrystrategy-syntax.yaml"></a>
 
 ```
-﻿  [Attempts](#cfn-batch-jobdefinition-retrystrategy-attempts) : Integer
+  [Attempts](#cfn-batch-jobdefinition-retrystrategy-attempts): Integer
 ```
 
 ## Properties<a name="aws-properties-batch-jobdefinition-retrystrategy-properties"></a>

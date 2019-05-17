@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceDiscovery::HttpNamespace
-Properties : 
-﻿  [Description](#cfn-servicediscovery-httpnamespace-description) : String
-﻿  [Name](#cfn-servicediscovery-httpnamespace-name) : String
+Properties: 
+  [Description](#cfn-servicediscovery-httpnamespace-description): String
+  [Name](#cfn-servicediscovery-httpnamespace-name): String
 ```
 
 ## Properties<a name="aws-resource-servicediscovery-httpnamespace-properties"></a>

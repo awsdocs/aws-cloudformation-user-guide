@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-vpnconnection-vpntunneloptionsspecification-syntax.yaml"></a>
 
 ```
-﻿  [PreSharedKey](#cfn-ec2-vpnconnection-vpntunneloptionsspecification-presharedkey) : String
-﻿  [TunnelInsideCidr](#cfn-ec2-vpnconnection-vpntunneloptionsspecification-tunnelinsidecidr) : String
+  [PreSharedKey](#cfn-ec2-vpnconnection-vpntunneloptionsspecification-presharedkey): String
+  [TunnelInsideCidr](#cfn-ec2-vpnconnection-vpntunneloptionsspecification-tunnelinsidecidr): String
 ```
 
 ## Properties<a name="aws-properties-ec2-vpnconnection-vpntunneloptionsspecification-properties"></a>

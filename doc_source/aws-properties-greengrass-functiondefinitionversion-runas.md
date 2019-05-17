@@ -23,8 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-functiondefinitionversion-runas-syntax.yaml"></a>
 
 ```
-﻿  [Gid](#cfn-greengrass-functiondefinitionversion-runas-gid) : Integer
-﻿  [Uid](#cfn-greengrass-functiondefinitionversion-runas-uid) : Integer
+  [Gid](#cfn-greengrass-functiondefinitionversion-runas-gid): Integer
+  [Uid](#cfn-greengrass-functiondefinitionversion-runas-uid): Integer
 ```
 
 ## Properties<a name="aws-properties-greengrass-functiondefinitionversion-runas-properties"></a>

@@ -23,15 +23,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-opsworks-layer-recipes-syntax.yaml"></a>
 
 ```
-﻿  [Configure](#cfn-opsworks-layer-customrecipes-configure) : 
+  [Configure](#cfn-opsworks-layer-customrecipes-configure): 
     - String
-﻿  [Deploy](#cfn-opsworks-layer-customrecipes-deploy) : 
+  [Deploy](#cfn-opsworks-layer-customrecipes-deploy): 
     - String
-﻿  [Setup](#cfn-opsworks-layer-customrecipes-setup) : 
+  [Setup](#cfn-opsworks-layer-customrecipes-setup): 
     - String
-﻿  [Shutdown](#cfn-opsworks-layer-customrecipes-shutdown) : 
+  [Shutdown](#cfn-opsworks-layer-customrecipes-shutdown): 
     - String
-﻿  [Undeploy](#cfn-opsworks-layer-customrecipes-undeploy) : 
+  [Undeploy](#cfn-opsworks-layer-customrecipes-undeploy): 
     - String
 ```
 

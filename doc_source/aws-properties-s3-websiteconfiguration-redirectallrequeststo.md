@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-websiteconfiguration-redirectallrequeststo-syntax.yaml"></a>
 
 ```
-﻿  [HostName](#cfn-s3-websiteconfiguration-redirectallrequeststo-hostname) : String
-﻿  [Protocol](#cfn-s3-websiteconfiguration-redirectallrequeststo-protocol) : String
+  [HostName](#cfn-s3-websiteconfiguration-redirectallrequeststo-hostname): String
+  [Protocol](#cfn-s3-websiteconfiguration-redirectallrequeststo-protocol): String
 ```
 
 ## Properties<a name="aws-properties-s3-websiteconfiguration-redirectallrequeststo-properties"></a>

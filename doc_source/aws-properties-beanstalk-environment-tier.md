@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-beanstalk-environment-tier-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-beanstalk-env-tier-name) : String
-﻿  [Type](#cfn-beanstalk-env-tier-type) : String
-﻿  [Version](#cfn-beanstalk-env-tier-version) : String
+  [Name](#cfn-beanstalk-env-tier-name): String
+  [Type](#cfn-beanstalk-env-tier-type): String
+  [Version](#cfn-beanstalk-env-tier-version): String
 ```
 
 ## Properties<a name="aws-properties-beanstalk-environment-tier-properties"></a>

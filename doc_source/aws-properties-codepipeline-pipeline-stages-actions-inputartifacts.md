@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codepipeline-pipeline-stages-actions-inputartifacts-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-codepipeline-pipeline-stages-actions-inputartifacts-name) : String
+  [Name](#cfn-codepipeline-pipeline-stages-actions-inputartifacts-name): String
 ```
 
 ## Properties<a name="aws-properties-codepipeline-pipeline-stages-actions-inputartifacts-properties"></a>

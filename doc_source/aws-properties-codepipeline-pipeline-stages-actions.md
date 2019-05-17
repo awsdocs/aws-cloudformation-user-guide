@@ -24,17 +24,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codepipeline-pipeline-stages-actions-syntax.yaml"></a>
 
 ```
-﻿  [ActionTypeId](#cfn-codepipeline-pipeline-stages-actions-actiontypeid) : 
+  [ActionTypeId](#cfn-codepipeline-pipeline-stages-actions-actiontypeid): 
     [ActionTypeId](aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.md)
-﻿  [Configuration](#cfn-codepipeline-pipeline-stages-actions-configuration) : Json
-﻿  [InputArtifacts](#cfn-codepipeline-pipeline-stages-actions-inputartifacts) : 
+  [Configuration](#cfn-codepipeline-pipeline-stages-actions-configuration): Json
+  [InputArtifacts](#cfn-codepipeline-pipeline-stages-actions-inputartifacts): 
     - [InputArtifact](aws-properties-codepipeline-pipeline-stages-actions-inputartifacts.md)
-﻿  [Name](#cfn-codepipeline-pipeline-stages-actions-name) : String
-﻿  [OutputArtifacts](#cfn-codepipeline-pipeline-stages-actions-outputartifacts) : 
+  [Name](#cfn-codepipeline-pipeline-stages-actions-name): String
+  [OutputArtifacts](#cfn-codepipeline-pipeline-stages-actions-outputartifacts): 
     - [OutputArtifact](aws-properties-codepipeline-pipeline-stages-actions-outputartifacts.md)
-﻿  [Region](#cfn-codepipeline-pipeline-stages-actions-region) : String
-﻿  [RoleArn](#cfn-codepipeline-pipeline-stages-actions-rolearn) : String
-﻿  [RunOrder](#cfn-codepipeline-pipeline-stages-actions-runorder) : Integer
+  [Region](#cfn-codepipeline-pipeline-stages-actions-region): String
+  [RoleArn](#cfn-codepipeline-pipeline-stages-actions-rolearn): String
+  [RunOrder](#cfn-codepipeline-pipeline-stages-actions-runorder): Integer
 ```
 
 ## Properties<a name="aws-properties-codepipeline-pipeline-stages-actions-properties"></a>

@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ses-configurationseteventdestination-dimensionconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [DefaultDimensionValue](#cfn-ses-configurationseteventdestination-dimensionconfiguration-defaultdimensionvalue) : String
-﻿  [DimensionName](#cfn-ses-configurationseteventdestination-dimensionconfiguration-dimensionname) : String
-﻿  [DimensionValueSource](#cfn-ses-configurationseteventdestination-dimensionconfiguration-dimensionvaluesource) : String
+  [DefaultDimensionValue](#cfn-ses-configurationseteventdestination-dimensionconfiguration-defaultdimensionvalue): String
+  [DimensionName](#cfn-ses-configurationseteventdestination-dimensionconfiguration-dimensionname): String
+  [DimensionValueSource](#cfn-ses-configurationseteventdestination-dimensionconfiguration-dimensionvaluesource): String
 ```
 
 ## Properties<a name="aws-properties-ses-configurationseteventdestination-dimensionconfiguration-properties"></a>

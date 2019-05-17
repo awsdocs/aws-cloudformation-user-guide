@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Inspector::AssessmentTarget
-Properties : 
-﻿  [AssessmentTargetName](#cfn-inspector-assessmenttarget-assessmenttargetname) : String
-﻿  [ResourceGroupArn](#cfn-inspector-assessmenttarget-resourcegrouparn) : String
+Properties: 
+  [AssessmentTargetName](#cfn-inspector-assessmenttarget-assessmenttargetname): String
+  [ResourceGroupArn](#cfn-inspector-assessmenttarget-resourcegrouparn): String
 ```
 
 ## Properties<a name="aws-resource-inspector-assessmenttarget-properties"></a>

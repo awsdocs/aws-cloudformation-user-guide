@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-tagspecification-syntax.yaml"></a>
 
 ```
-﻿  [ResourceType](#cfn-ec2-launchtemplate-tagspecification-resourcetype) : String
-﻿  [Tags](#cfn-ec2-launchtemplate-tagspecification-tags) : 
+  [ResourceType](#cfn-ec2-launchtemplate-tagspecification-resourcetype): String
+  [Tags](#cfn-ec2-launchtemplate-tagspecification-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

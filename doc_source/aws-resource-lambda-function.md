@@ -36,29 +36,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Lambda::Function
-Properties : 
-﻿  [Code](#cfn-lambda-function-code) : 
+Properties: 
+  [Code](#cfn-lambda-function-code): 
     [Code](aws-properties-lambda-function-code.md)
-﻿  [DeadLetterConfig](#cfn-lambda-function-deadletterconfig) : 
+  [DeadLetterConfig](#cfn-lambda-function-deadletterconfig): 
     [DeadLetterConfig](aws-properties-lambda-function-deadletterconfig.md)
-﻿  [Description](#cfn-lambda-function-description) : String
-﻿  [Environment](#cfn-lambda-function-environment) : 
+  [Description](#cfn-lambda-function-description): String
+  [Environment](#cfn-lambda-function-environment): 
     [Environment](aws-properties-lambda-function-environment.md)
-﻿  [FunctionName](#cfn-lambda-function-functionname) : String
-﻿  [Handler](#cfn-lambda-function-handler) : String
-﻿  [KmsKeyArn](#cfn-lambda-function-kmskeyarn) : String
-﻿  [Layers](#cfn-lambda-function-layers) : 
+  [FunctionName](#cfn-lambda-function-functionname): String
+  [Handler](#cfn-lambda-function-handler): String
+  [KmsKeyArn](#cfn-lambda-function-kmskeyarn): String
+  [Layers](#cfn-lambda-function-layers): 
     - String
-﻿  [MemorySize](#cfn-lambda-function-memorysize) : Integer
-﻿  [ReservedConcurrentExecutions](#cfn-lambda-function-reservedconcurrentexecutions) : Integer
-﻿  [Role](#cfn-lambda-function-role) : String
-﻿  [Runtime](#cfn-lambda-function-runtime) : String
-﻿  [Tags](#cfn-lambda-function-tags) : 
+  [MemorySize](#cfn-lambda-function-memorysize): Integer
+  [ReservedConcurrentExecutions](#cfn-lambda-function-reservedconcurrentexecutions): Integer
+  [Role](#cfn-lambda-function-role): String
+  [Runtime](#cfn-lambda-function-runtime): String
+  [Tags](#cfn-lambda-function-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [Timeout](#cfn-lambda-function-timeout) : Integer
-﻿  [TracingConfig](#cfn-lambda-function-tracingconfig) : 
+  [Timeout](#cfn-lambda-function-timeout): Integer
+  [TracingConfig](#cfn-lambda-function-tracingconfig): 
     [TracingConfig](aws-properties-lambda-function-tracingconfig.md)
-﻿  [VpcConfig](#cfn-lambda-function-vpcconfig) : 
+  [VpcConfig](#cfn-lambda-function-vpcconfig): 
     [VpcConfig](aws-properties-lambda-function-vpcconfig.md)
 ```
 

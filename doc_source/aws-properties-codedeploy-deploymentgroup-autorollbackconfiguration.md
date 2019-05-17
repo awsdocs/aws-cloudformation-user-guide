@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-autorollbackconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [Enabled](#cfn-codedeploy-deploymentgroup-autorollbackconfiguration-enabled) : Boolean
-﻿  [Events](#cfn-codedeploy-deploymentgroup-autorollbackconfiguration-events) : 
+  [Enabled](#cfn-codedeploy-deploymentgroup-autorollbackconfiguration-enabled): Boolean
+  [Events](#cfn-codedeploy-deploymentgroup-autorollbackconfiguration-events): 
     - String
 ```
 

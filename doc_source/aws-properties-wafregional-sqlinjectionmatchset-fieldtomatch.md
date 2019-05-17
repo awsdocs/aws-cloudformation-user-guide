@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-wafregional-sqlinjectionmatchset-fieldtomatch-syntax.yaml"></a>
 
 ```
-﻿  [Data](#cfn-wafregional-sqlinjectionmatchset-fieldtomatch-data) : String
-﻿  [Type](#cfn-wafregional-sqlinjectionmatchset-fieldtomatch-type) : String
+  [Data](#cfn-wafregional-sqlinjectionmatchset-fieldtomatch-data): String
+  [Type](#cfn-wafregional-sqlinjectionmatchset-fieldtomatch-type): String
 ```
 
 ## Properties<a name="aws-properties-wafregional-sqlinjectionmatchset-fieldtomatch-properties"></a>

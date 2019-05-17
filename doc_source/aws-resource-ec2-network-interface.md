@@ -31,21 +31,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::NetworkInterface
-Properties : 
-﻿  [Description](#cfn-awsec2networkinterface-description) : String
-﻿  [GroupSet](#cfn-awsec2networkinterface-groupset) : 
+Properties: 
+  [Description](#cfn-awsec2networkinterface-description): String
+  [GroupSet](#cfn-awsec2networkinterface-groupset): 
     - String
-﻿  [InterfaceType](#cfn-ec2-networkinterface-interfacetype) : String
-﻿  [Ipv6AddressCount](#cfn-ec2-networkinterface-ipv6addresscount) : Integer
-﻿  [Ipv6Addresses](#cfn-ec2-networkinterface-ipv6addresses) : 
+  [InterfaceType](#cfn-ec2-networkinterface-interfacetype): String
+  [Ipv6AddressCount](#cfn-ec2-networkinterface-ipv6addresscount): Integer
+  [Ipv6Addresses](#cfn-ec2-networkinterface-ipv6addresses): 
     [InstanceIpv6Address](aws-properties-ec2-networkinterface-instanceipv6address.md)
-﻿  [PrivateIpAddress](#cfn-awsec2networkinterface-privateipaddress) : String
-﻿  [PrivateIpAddresses](#cfn-awsec2networkinterface-privateipaddresses) : 
+  [PrivateIpAddress](#cfn-awsec2networkinterface-privateipaddress): String
+  [PrivateIpAddresses](#cfn-awsec2networkinterface-privateipaddresses): 
     - [PrivateIpAddressSpecification](aws-properties-ec2-network-interface-privateipspec.md)
-﻿  [SecondaryPrivateIpAddressCount](#cfn-awsec2networkinterface-secondaryprivateipcount) : Integer
-﻿  [SourceDestCheck](#cfn-awsec2networkinterface-sourcedestcheck) : Boolean
-﻿  [SubnetId](#cfn-awsec2networkinterface-subnetid) : String
-﻿  [Tags](#cfn-awsec2networkinterface-tags) : 
+  [SecondaryPrivateIpAddressCount](#cfn-awsec2networkinterface-secondaryprivateipcount): Integer
+  [SourceDestCheck](#cfn-awsec2networkinterface-sourcedestcheck): Boolean
+  [SubnetId](#cfn-awsec2networkinterface-subnetid): String
+  [Tags](#cfn-awsec2networkinterface-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

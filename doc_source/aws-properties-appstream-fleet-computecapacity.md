@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appstream-fleet-computecapacity-syntax.yaml"></a>
 
 ```
-﻿  [DesiredInstances](#cfn-appstream-fleet-computecapacity-desiredinstances) : Integer
+  [DesiredInstances](#cfn-appstream-fleet-computecapacity-desiredinstances): Integer
 ```
 
 ## Properties<a name="aws-properties-appstream-fleet-computecapacity-properties"></a>

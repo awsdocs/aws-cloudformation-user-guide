@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Inspector::AssessmentTemplate
-Properties : 
-﻿  [AssessmentTargetArn](#cfn-inspector-assessmenttemplate-assessmenttargetarn) : String
-﻿  [AssessmentTemplateName](#cfn-inspector-assessmenttemplate-assessmenttemplatename) : String
-﻿  [DurationInSeconds](#cfn-inspector-assessmenttemplate-durationinseconds) : Integer
-﻿  [RulesPackageArns](#cfn-inspector-assessmenttemplate-rulespackagearns) : 
+Properties: 
+  [AssessmentTargetArn](#cfn-inspector-assessmenttemplate-assessmenttargetarn): String
+  [AssessmentTemplateName](#cfn-inspector-assessmenttemplate-assessmenttemplatename): String
+  [DurationInSeconds](#cfn-inspector-assessmenttemplate-durationinseconds): Integer
+  [RulesPackageArns](#cfn-inspector-assessmenttemplate-rulespackagearns): 
     - String
-﻿  [UserAttributesForFindings](#cfn-inspector-assessmenttemplate-userattributesforfindings) : 
+  [UserAttributesForFindings](#cfn-inspector-assessmenttemplate-userattributesforfindings): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

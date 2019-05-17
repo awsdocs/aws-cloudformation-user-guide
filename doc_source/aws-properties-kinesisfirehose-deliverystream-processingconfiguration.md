@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisfirehose-deliverystream-processingconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [Enabled](#cfn-kinesisfirehose-deliverystream-processingconfiguration-enabled) : Boolean
-﻿  [Processors](#cfn-kinesisfirehose-deliverystream-processingconfiguration-processors) : 
+  [Enabled](#cfn-kinesisfirehose-deliverystream-processingconfiguration-enabled): Boolean
+  [Processors](#cfn-kinesisfirehose-deliverystream-processingconfiguration-processors): 
     - [Processor](aws-properties-kinesisfirehose-deliverystream-processor.md)
 ```
 

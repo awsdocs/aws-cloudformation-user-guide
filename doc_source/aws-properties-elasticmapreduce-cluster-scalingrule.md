@@ -20,11 +20,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-scalingrule-syntax.yaml"></a>
 
 ```
-﻿  [Action](#cfn-elasticmapreduce-cluster-scalingrule-action) : 
+  [Action](#cfn-elasticmapreduce-cluster-scalingrule-action): 
     [ScalingAction](aws-properties-elasticmapreduce-cluster-scalingaction.md)
-﻿  [Description](#cfn-elasticmapreduce-cluster-scalingrule-description) : String
-﻿  [Name](#cfn-elasticmapreduce-cluster-scalingrule-name) : String
-﻿  [Trigger](#cfn-elasticmapreduce-cluster-scalingrule-trigger) : 
+  [Description](#cfn-elasticmapreduce-cluster-scalingrule-description): String
+  [Name](#cfn-elasticmapreduce-cluster-scalingrule-name): String
+  [Trigger](#cfn-elasticmapreduce-cluster-scalingrule-trigger): 
     [ScalingTrigger](aws-properties-elasticmapreduce-cluster-scalingtrigger.md)
 ```
 

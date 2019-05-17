@@ -26,9 +26,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Greengrass::DeviceDefinitionVersion
-Properties : 
-﻿  [DeviceDefinitionId](#cfn-greengrass-devicedefinitionversion-devicedefinitionid) : String
-﻿  [Devices](#cfn-greengrass-devicedefinitionversion-devices) : 
+Properties: 
+  [DeviceDefinitionId](#cfn-greengrass-devicedefinitionversion-devicedefinitionid): String
+  [Devices](#cfn-greengrass-devicedefinitionversion-devices): 
     - [Device](aws-properties-greengrass-devicedefinitionversion-device.md)
 ```
 

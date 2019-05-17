@@ -28,12 +28,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Events::EventBusPolicy
-Properties : 
-﻿  [Action](#cfn-events-eventbuspolicy-action) : String
-﻿  [Condition](#cfn-events-eventbuspolicy-condition) : 
+Properties: 
+  [Action](#cfn-events-eventbuspolicy-action): String
+  [Condition](#cfn-events-eventbuspolicy-condition): 
     [Condition](aws-properties-events-eventbuspolicy-condition.md)
-﻿  [Principal](#cfn-events-eventbuspolicy-principal) : String
-﻿  [StatementId](#cfn-events-eventbuspolicy-statementid) : String
+  [Principal](#cfn-events-eventbuspolicy-principal): String
+  [StatementId](#cfn-events-eventbuspolicy-statementid): String
 ```
 
 ## Properties<a name="aws-resource-events-eventbuspolicy-properties"></a>

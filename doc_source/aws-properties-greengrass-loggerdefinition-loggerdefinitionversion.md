@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-loggerdefinition-loggerdefinitionversion-syntax.yaml"></a>
 
 ```
-﻿  [Loggers](#cfn-greengrass-loggerdefinition-loggerdefinitionversion-loggers) : 
+  [Loggers](#cfn-greengrass-loggerdefinition-loggerdefinitionversion-loggers): 
     - [Logger](aws-properties-greengrass-loggerdefinition-logger.md)
 ```
 

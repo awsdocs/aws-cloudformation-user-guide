@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::NetworkInterfaceAttachment
-Properties : 
-﻿  [DeleteOnTermination](#cfn-ec2-network-interface-attachment-deleteonterm) : Boolean
-﻿  [DeviceIndex](#cfn-ec2-network-interface-attachment-deviceindex) : String
-﻿  [InstanceId](#cfn-ec2-network-interface-attachment-instanceid) : String
-﻿  [NetworkInterfaceId](#cfn-ec2-network-interface-attachment-networkinterfaceid) : String
+Properties: 
+  [DeleteOnTermination](#cfn-ec2-network-interface-attachment-deleteonterm): Boolean
+  [DeviceIndex](#cfn-ec2-network-interface-attachment-deviceindex): String
+  [InstanceId](#cfn-ec2-network-interface-attachment-instanceid): String
+  [NetworkInterfaceId](#cfn-ec2-network-interface-attachment-networkinterfaceid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-network-interface-attachment-properties"></a>

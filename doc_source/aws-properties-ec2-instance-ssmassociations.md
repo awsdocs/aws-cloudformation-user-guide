@@ -20,9 +20,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-instance-ssmassociations-syntax.yaml"></a>
 
 ```
-﻿  [AssociationParameters](#cfn-ec2-instance-ssmassociations-associationparameters) : 
+  [AssociationParameters](#cfn-ec2-instance-ssmassociations-associationparameters): 
     - [AssociationParameter](aws-properties-ec2-instance-ssmassociations-associationparameters.md)
-﻿  [DocumentName](#cfn-ec2-instance-ssmassociations-documentname) : String
+  [DocumentName](#cfn-ec2-instance-ssmassociations-documentname): String
 ```
 
 ## Properties<a name="aws-properties-ec2-instance-ssmassociations-properties"></a>

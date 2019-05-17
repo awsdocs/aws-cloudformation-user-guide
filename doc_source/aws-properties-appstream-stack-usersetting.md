@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appstream-stack-usersetting-syntax.yaml"></a>
 
 ```
-﻿  [Action](#cfn-appstream-stack-usersetting-action) : String
-﻿  [Permission](#cfn-appstream-stack-usersetting-permission) : String
+  [Action](#cfn-appstream-stack-usersetting-action): String
+  [Permission](#cfn-appstream-stack-usersetting-permission): String
 ```
 
 ## Properties<a name="aws-properties-appstream-stack-usersetting-properties"></a>

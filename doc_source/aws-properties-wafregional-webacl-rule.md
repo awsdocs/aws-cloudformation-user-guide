@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-wafregional-webacl-rule-syntax.yaml"></a>
 
 ```
-﻿  [Action](#cfn-wafregional-webacl-rule-action) : 
+  [Action](#cfn-wafregional-webacl-rule-action): 
     [Action](aws-properties-wafregional-webacl-action.md)
-﻿  [Priority](#cfn-wafregional-webacl-rule-priority) : Integer
-﻿  [RuleId](#cfn-wafregional-webacl-rule-ruleid) : String
+  [Priority](#cfn-wafregional-webacl-rule-priority): Integer
+  [RuleId](#cfn-wafregional-webacl-rule-ruleid): String
 ```
 
 ## Properties<a name="aws-properties-wafregional-webacl-rule-properties"></a>

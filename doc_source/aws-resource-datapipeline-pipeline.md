@@ -37,17 +37,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DataPipeline::Pipeline
-Properties : 
-﻿  [Activate](#cfn-datapipeline-pipeline-activate) : Boolean
-﻿  [Description](#cfn-datapipeline-pipeline-description) : String
-﻿  [Name](#cfn-datapipeline-pipeline-name) : String
-﻿  [ParameterObjects](#cfn-datapipeline-pipeline-parameterobjects) : 
+Properties: 
+  [Activate](#cfn-datapipeline-pipeline-activate): Boolean
+  [Description](#cfn-datapipeline-pipeline-description): String
+  [Name](#cfn-datapipeline-pipeline-name): String
+  [ParameterObjects](#cfn-datapipeline-pipeline-parameterobjects): 
     - [ParameterObject](aws-properties-datapipeline-pipeline-parameterobjects.md)
-﻿  [ParameterValues](#cfn-datapipeline-pipeline-parametervalues) : 
+  [ParameterValues](#cfn-datapipeline-pipeline-parametervalues): 
     - [ParameterValue](aws-properties-datapipeline-pipeline-parametervalues.md)
-﻿  [PipelineObjects](#cfn-datapipeline-pipeline-pipelineobjects) : 
+  [PipelineObjects](#cfn-datapipeline-pipeline-pipelineobjects): 
     - [PipelineObject](aws-properties-datapipeline-pipeline-pipelineobjects.md)
-﻿  [PipelineTags](#cfn-datapipeline-pipeline-pipelinetags) : 
+  [PipelineTags](#cfn-datapipeline-pipeline-pipelinetags): 
     - [PipelineTag](aws-properties-datapipeline-pipeline-pipelinetags.md)
 ```
 

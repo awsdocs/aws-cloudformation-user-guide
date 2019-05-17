@@ -27,14 +27,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::FlowLog
-Properties : 
-﻿  [DeliverLogsPermissionArn](#cfn-ec2-flowlog-deliverlogspermissionarn) : String
-﻿  [LogDestination](#cfn-ec2-flowlog-logdestination) : String
-﻿  [LogDestinationType](#cfn-ec2-flowlog-logdestinationtype) : String
-﻿  [LogGroupName](#cfn-ec2-flowlog-loggroupname) : String
-﻿  [ResourceId](#cfn-ec2-flowlog-resourceid) : String
-﻿  [ResourceType](#cfn-ec2-flowlog-resourcetype) : String
-﻿  [TrafficType](#cfn-ec2-flowlog-traffictype) : String
+Properties: 
+  [DeliverLogsPermissionArn](#cfn-ec2-flowlog-deliverlogspermissionarn): String
+  [LogDestination](#cfn-ec2-flowlog-logdestination): String
+  [LogDestinationType](#cfn-ec2-flowlog-logdestinationtype): String
+  [LogGroupName](#cfn-ec2-flowlog-loggroupname): String
+  [ResourceId](#cfn-ec2-flowlog-resourceid): String
+  [ResourceType](#cfn-ec2-flowlog-resourcetype): String
+  [TrafficType](#cfn-ec2-flowlog-traffictype): String
 ```
 
 ## Properties<a name="aws-resource-ec2-flowlog-properties"></a>

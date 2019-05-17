@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::GuardDuty::Master
-Properties : 
-﻿  [DetectorId](#cfn-guardduty-master-detectorid) : String
-﻿  [InvitationId](#cfn-guardduty-master-invitationid) : String
-﻿  [MasterId](#cfn-guardduty-master-masterid) : String
+Properties: 
+  [DetectorId](#cfn-guardduty-master-detectorid): String
+  [InvitationId](#cfn-guardduty-master-invitationid): String
+  [MasterId](#cfn-guardduty-master-masterid): String
 ```
 
 ## Properties<a name="aws-resource-guardduty-master-properties"></a>

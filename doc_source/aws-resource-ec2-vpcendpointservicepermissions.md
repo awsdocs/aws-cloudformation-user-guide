@@ -24,10 +24,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPCEndpointServicePermissions
-Properties : 
-﻿  [AllowedPrincipals](#cfn-ec2-vpcendpointservicepermissions-allowedprincipals) : 
+Properties: 
+  [AllowedPrincipals](#cfn-ec2-vpcendpointservicepermissions-allowedprincipals): 
     - String
-﻿  [ServiceId](#cfn-ec2-vpcendpointservicepermissions-serviceid) : String
+  [ServiceId](#cfn-ec2-vpcendpointservicepermissions-serviceid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-vpcendpointservicepermissions-properties"></a>

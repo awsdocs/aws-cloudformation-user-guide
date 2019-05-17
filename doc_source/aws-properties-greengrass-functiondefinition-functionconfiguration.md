@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-functiondefinition-functionconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [EncodingType](#cfn-greengrass-functiondefinition-functionconfiguration-encodingtype) : String
-﻿  [Environment](#cfn-greengrass-functiondefinition-functionconfiguration-environment) : 
+  [EncodingType](#cfn-greengrass-functiondefinition-functionconfiguration-encodingtype): String
+  [Environment](#cfn-greengrass-functiondefinition-functionconfiguration-environment): 
     [Environment](aws-properties-greengrass-functiondefinition-environment.md)
-﻿  [ExecArgs](#cfn-greengrass-functiondefinition-functionconfiguration-execargs) : String
-﻿  [Executable](#cfn-greengrass-functiondefinition-functionconfiguration-executable) : String
-﻿  [MemorySize](#cfn-greengrass-functiondefinition-functionconfiguration-memorysize) : Integer
-﻿  [Pinned](#cfn-greengrass-functiondefinition-functionconfiguration-pinned) : Boolean
-﻿  [Timeout](#cfn-greengrass-functiondefinition-functionconfiguration-timeout) : Integer
+  [ExecArgs](#cfn-greengrass-functiondefinition-functionconfiguration-execargs): String
+  [Executable](#cfn-greengrass-functiondefinition-functionconfiguration-executable): String
+  [MemorySize](#cfn-greengrass-functiondefinition-functionconfiguration-memorysize): Integer
+  [Pinned](#cfn-greengrass-functiondefinition-functionconfiguration-pinned): Boolean
+  [Timeout](#cfn-greengrass-functiondefinition-functionconfiguration-timeout): Integer
 ```
 
 ## Properties<a name="aws-properties-greengrass-functiondefinition-functionconfiguration-properties"></a>

@@ -27,14 +27,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGatewayV2::Api
-Properties : 
-﻿  [ApiKeySelectionExpression](#cfn-apigatewayv2-api-apikeyselectionexpression) : String
-﻿  [Description](#cfn-apigatewayv2-api-description) : String
-﻿  [DisableSchemaValidation](#cfn-apigatewayv2-api-disableschemavalidation) : Boolean
-﻿  [Name](#cfn-apigatewayv2-api-name) : String
-﻿  [ProtocolType](#cfn-apigatewayv2-api-protocoltype) : String
-﻿  [RouteSelectionExpression](#cfn-apigatewayv2-api-routeselectionexpression) : String
-﻿  [Version](#cfn-apigatewayv2-api-version) : String
+Properties: 
+  [ApiKeySelectionExpression](#cfn-apigatewayv2-api-apikeyselectionexpression): String
+  [Description](#cfn-apigatewayv2-api-description): String
+  [DisableSchemaValidation](#cfn-apigatewayv2-api-disableschemavalidation): Boolean
+  [Name](#cfn-apigatewayv2-api-name): String
+  [ProtocolType](#cfn-apigatewayv2-api-protocoltype): String
+  [RouteSelectionExpression](#cfn-apigatewayv2-api-routeselectionexpression): String
+  [Version](#cfn-apigatewayv2-api-version): String
 ```
 
 ## Properties<a name="aws-resource-apigatewayv2-api-properties"></a>

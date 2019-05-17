@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups-syntax.yaml"></a>
 
 ```
-﻿  [GroupId](#cfn-ec2-spotfleet-groupidentifier-groupid) : String
+  [GroupId](#cfn-ec2-spotfleet-groupidentifier-groupid): String
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups-properties"></a>

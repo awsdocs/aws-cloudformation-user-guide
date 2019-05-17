@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ses-receiptfilter-filter-syntax.yaml"></a>
 
 ```
-﻿  [IpFilter](#cfn-ses-receiptfilter-filter-ipfilter) : 
+  [IpFilter](#cfn-ses-receiptfilter-filter-ipfilter): 
     [IpFilter](aws-properties-ses-receiptfilter-ipfilter.md)
-﻿  [Name](#cfn-ses-receiptfilter-filter-name) : String
+  [Name](#cfn-ses-receiptfilter-filter-name): String
 ```
 
 ## Properties<a name="aws-properties-ses-receiptfilter-filter-properties"></a>

@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-partition-partitioninput-syntax.yaml"></a>
 
 ```
-﻿  [Parameters](#cfn-glue-partition-partitioninput-parameters) : Json
-﻿  [StorageDescriptor](#cfn-glue-partition-partitioninput-storagedescriptor) : 
+  [Parameters](#cfn-glue-partition-partitioninput-parameters): Json
+  [StorageDescriptor](#cfn-glue-partition-partitioninput-storagedescriptor): 
     [StorageDescriptor](aws-properties-glue-partition-storagedescriptor.md)
-﻿  [Values](#cfn-glue-partition-partitioninput-values) : 
+  [Values](#cfn-glue-partition-partitioninput-values): 
     - String
 ```
 

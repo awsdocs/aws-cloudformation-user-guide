@@ -33,25 +33,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::Method
-Properties : 
-﻿  [ApiKeyRequired](#cfn-apigateway-method-apikeyrequired) : Boolean
-﻿  [AuthorizationScopes](#cfn-apigateway-method-authorizationscopes) : 
+Properties: 
+  [ApiKeyRequired](#cfn-apigateway-method-apikeyrequired): Boolean
+  [AuthorizationScopes](#cfn-apigateway-method-authorizationscopes): 
     - String
-﻿  [AuthorizationType](#cfn-apigateway-method-authorizationtype) : String
-﻿  [AuthorizerId](#cfn-apigateway-method-authorizerid) : String
-﻿  [HttpMethod](#cfn-apigateway-method-httpmethod) : String
-﻿  [Integration](#cfn-apigateway-method-integration) : 
+  [AuthorizationType](#cfn-apigateway-method-authorizationtype): String
+  [AuthorizerId](#cfn-apigateway-method-authorizerid): String
+  [HttpMethod](#cfn-apigateway-method-httpmethod): String
+  [Integration](#cfn-apigateway-method-integration): 
     [Integration](aws-properties-apitgateway-method-integration.md)
-﻿  [MethodResponses](#cfn-apigateway-method-methodresponses) : 
+  [MethodResponses](#cfn-apigateway-method-methodresponses): 
     - [MethodResponse](aws-properties-apitgateway-method-methodresponse.md)
-﻿  [OperationName](#cfn-apigateway-method-operationname) : String
-﻿  [RequestModels](#cfn-apigateway-method-requestmodels) : 
+  [OperationName](#cfn-apigateway-method-operationname): String
+  [RequestModels](#cfn-apigateway-method-requestmodels): 
     Key : Value
-﻿  [RequestParameters](#cfn-apigateway-method-requestparameters) : 
+  [RequestParameters](#cfn-apigateway-method-requestparameters): 
     Key : Value
-﻿  [RequestValidatorId](#cfn-apigateway-method-requestvalidatorid) : String
-﻿  [ResourceId](#cfn-apigateway-method-resourceid) : String
-﻿  [RestApiId](#cfn-apigateway-method-restapiid) : String
+  [RequestValidatorId](#cfn-apigateway-method-requestvalidatorid): String
+  [ResourceId](#cfn-apigateway-method-resourceid): String
+  [RestApiId](#cfn-apigateway-method-restapiid): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-method-properties"></a>

@@ -22,8 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-budgets-budget-spend-syntax.yaml"></a>
 
 ```
-﻿  [Amount](#cfn-budgets-budget-spend-amount) : Double
-﻿  [Unit](#cfn-budgets-budget-spend-unit) : String
+  [Amount](#cfn-budgets-budget-spend-amount): Double
+  [Unit](#cfn-budgets-budget-spend-unit): String
 ```
 
 ## Properties<a name="aws-properties-budgets-budget-spend-properties"></a>

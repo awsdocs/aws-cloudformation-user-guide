@@ -44,32 +44,32 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CloudWatch::Alarm
-Properties : 
-﻿  [ActionsEnabled](#cfn-cloudwatch-alarms-actionsenabled) : Boolean
-﻿  [AlarmActions](#cfn-cloudwatch-alarms-alarmactions) : 
+Properties: 
+  [ActionsEnabled](#cfn-cloudwatch-alarms-actionsenabled): Boolean
+  [AlarmActions](#cfn-cloudwatch-alarms-alarmactions): 
     - String
-﻿  [AlarmDescription](#cfn-cloudwatch-alarms-alarmdescription) : String
-﻿  [AlarmName](#cfn-cloudwatch-alarms-alarmname) : String
-﻿  [ComparisonOperator](#cfn-cloudwatch-alarms-comparisonoperator) : String
-﻿  [DatapointsToAlarm](#cfn-cloudwatch-alarm-datapointstoalarm) : Integer
-﻿  [Dimensions](#cfn-cloudwatch-alarms-dimension) : 
+  [AlarmDescription](#cfn-cloudwatch-alarms-alarmdescription): String
+  [AlarmName](#cfn-cloudwatch-alarms-alarmname): String
+  [ComparisonOperator](#cfn-cloudwatch-alarms-comparisonoperator): String
+  [DatapointsToAlarm](#cfn-cloudwatch-alarm-datapointstoalarm): Integer
+  [Dimensions](#cfn-cloudwatch-alarms-dimension): 
     - [Dimension](aws-properties-cw-dimension.md)
-﻿  [EvaluateLowSampleCountPercentile](#cfn-cloudwatch-alarms-evaluatelowsamplecountpercentile) : String
-﻿  [EvaluationPeriods](#cfn-cloudwatch-alarms-evaluationperiods) : Integer
-﻿  [ExtendedStatistic](#cfn-cloudwatch-alarms-extendedstatistic) : String
-﻿  [InsufficientDataActions](#cfn-cloudwatch-alarms-insufficientdataactions) : 
+  [EvaluateLowSampleCountPercentile](#cfn-cloudwatch-alarms-evaluatelowsamplecountpercentile): String
+  [EvaluationPeriods](#cfn-cloudwatch-alarms-evaluationperiods): Integer
+  [ExtendedStatistic](#cfn-cloudwatch-alarms-extendedstatistic): String
+  [InsufficientDataActions](#cfn-cloudwatch-alarms-insufficientdataactions): 
     - String
-﻿  [MetricName](#cfn-cloudwatch-alarms-metricname) : String
-﻿  [Metrics](#cfn-cloudwatch-alarm-metrics) : 
+  [MetricName](#cfn-cloudwatch-alarms-metricname): String
+  [Metrics](#cfn-cloudwatch-alarm-metrics): 
     - [MetricDataQuery](aws-properties-cloudwatch-alarm-metricdataquery.md)
-﻿  [Namespace](#cfn-cloudwatch-alarms-namespace) : String
-﻿  [OKActions](#cfn-cloudwatch-alarms-okactions) : 
+  [Namespace](#cfn-cloudwatch-alarms-namespace): String
+  [OKActions](#cfn-cloudwatch-alarms-okactions): 
     - String
-﻿  [Period](#cfn-cloudwatch-alarms-period) : Integer
-﻿  [Statistic](#cfn-cloudwatch-alarms-statistic) : String
-﻿  [Threshold](#cfn-cloudwatch-alarms-threshold) : Double
-﻿  [TreatMissingData](#cfn-cloudwatch-alarms-treatmissingdata) : String
-﻿  [Unit](#cfn-cloudwatch-alarms-unit) : String
+  [Period](#cfn-cloudwatch-alarms-period): Integer
+  [Statistic](#cfn-cloudwatch-alarms-statistic): String
+  [Threshold](#cfn-cloudwatch-alarms-threshold): Double
+  [TreatMissingData](#cfn-cloudwatch-alarms-treatmissingdata): String
+  [Unit](#cfn-cloudwatch-alarms-unit): String
 ```
 
 ## Properties<a name="aws-properties-cw-alarm-properties"></a>

@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IoT::ThingPrincipalAttachment
-Properties : 
-﻿  [Principal](#cfn-iot-thingprincipalattachment-principal) : String
-﻿  [ThingName](#cfn-iot-thingprincipalattachment-thingname) : String
+Properties: 
+  [Principal](#cfn-iot-thingprincipalattachment-principal): String
+  [ThingName](#cfn-iot-thingprincipalattachment-thingname): String
 ```
 
 ## Properties<a name="aws-resource-iot-thingprincipalattachment-properties"></a>

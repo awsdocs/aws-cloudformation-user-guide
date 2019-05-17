@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-route53resolver-resolverendpoint-ipaddressrequest-syntax.yaml"></a>
 
 ```
-﻿  [Ip](#cfn-route53resolver-resolverendpoint-ipaddressrequest-ip) : String
-﻿  [SubnetId](#cfn-route53resolver-resolverendpoint-ipaddressrequest-subnetid) : String
+  [Ip](#cfn-route53resolver-resolverendpoint-ipaddressrequest-ip): String
+  [SubnetId](#cfn-route53resolver-resolverendpoint-ipaddressrequest-subnetid): String
 ```
 
 ## Properties<a name="aws-properties-route53resolver-resolverendpoint-ipaddressrequest-properties"></a>

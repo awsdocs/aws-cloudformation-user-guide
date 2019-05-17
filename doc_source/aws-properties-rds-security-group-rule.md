@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-rds-security-group-rule-syntax.yaml"></a>
 
 ```
-﻿  [CIDRIP](#cfn-rds-securitygroup-cidrip) : String
-﻿  [EC2SecurityGroupId](#cfn-rds-securitygroup-ec2securitygroupid) : String
-﻿  [EC2SecurityGroupName](#cfn-rds-securitygroup-ec2securitygroupname) : String
-﻿  [EC2SecurityGroupOwnerId](#cfn-rds-securitygroup-ec2securitygroupownerid) : String
+  [CIDRIP](#cfn-rds-securitygroup-cidrip): String
+  [EC2SecurityGroupId](#cfn-rds-securitygroup-ec2securitygroupid): String
+  [EC2SecurityGroupName](#cfn-rds-securitygroup-ec2securitygroupname): String
+  [EC2SecurityGroupOwnerId](#cfn-rds-securitygroup-ec2securitygroupownerid): String
 ```
 
 ## Properties<a name="aws-properties-rds-security-group-rule-properties"></a>

@@ -25,15 +25,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-artifacts-syntax.yaml"></a>
 
 ```
-﻿  [ArtifactIdentifier](#cfn-codebuild-project-artifacts-artifactidentifier) : String
-﻿  [EncryptionDisabled](#cfn-codebuild-project-artifacts-encryptiondisabled) : Boolean
-﻿  [Location](#cfn-codebuild-project-artifacts-location) : String
-﻿  [Name](#cfn-codebuild-project-artifacts-name) : String
-﻿  [NamespaceType](#cfn-codebuild-project-artifacts-namespacetype) : String
-﻿  [OverrideArtifactName](#cfn-codebuild-project-artifacts-overrideartifactname) : Boolean
-﻿  [Packaging](#cfn-codebuild-project-artifacts-packaging) : String
-﻿  [Path](#cfn-codebuild-project-artifacts-path) : String
-﻿  [Type](#cfn-codebuild-project-artifacts-type) : String
+  [ArtifactIdentifier](#cfn-codebuild-project-artifacts-artifactidentifier): String
+  [EncryptionDisabled](#cfn-codebuild-project-artifacts-encryptiondisabled): Boolean
+  [Location](#cfn-codebuild-project-artifacts-location): String
+  [Name](#cfn-codebuild-project-artifacts-name): String
+  [NamespaceType](#cfn-codebuild-project-artifacts-namespacetype): String
+  [OverrideArtifactName](#cfn-codebuild-project-artifacts-overrideartifactname): Boolean
+  [Packaging](#cfn-codebuild-project-artifacts-packaging): String
+  [Path](#cfn-codebuild-project-artifacts-path): String
+  [Type](#cfn-codebuild-project-artifacts-type): String
 ```
 
 ## Properties<a name="aws-properties-codebuild-project-artifacts-properties"></a>

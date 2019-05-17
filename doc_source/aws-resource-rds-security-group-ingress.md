@@ -29,12 +29,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RDS::DBSecurityGroupIngress
-Properties : 
-﻿  [CIDRIP](#cfn-rds-securitygroup-ingress-cidrip) : String
-﻿  [DBSecurityGroupName](#cfn-rds-securitygroup-ingress-dbsecuritygroupname) : String
-﻿  [EC2SecurityGroupId](#cfn-rds-securitygroup-ingress-ec2securitygroupid) : String
-﻿  [EC2SecurityGroupName](#cfn-rds-securitygroup-ingress-ec2securitygroupname) : String
-﻿  [EC2SecurityGroupOwnerId](#cfn-rds-securitygroup-ingress-ec2securitygroupownerid) : String
+Properties: 
+  [CIDRIP](#cfn-rds-securitygroup-ingress-cidrip): String
+  [DBSecurityGroupName](#cfn-rds-securitygroup-ingress-dbsecuritygroupname): String
+  [EC2SecurityGroupId](#cfn-rds-securitygroup-ingress-ec2securitygroupid): String
+  [EC2SecurityGroupName](#cfn-rds-securitygroup-ingress-ec2securitygroupname): String
+  [EC2SecurityGroupOwnerId](#cfn-rds-securitygroup-ingress-ec2securitygroupownerid): String
 ```
 
 ## Properties<a name="aws-resource-rds-security-group-ingress-properties"></a>

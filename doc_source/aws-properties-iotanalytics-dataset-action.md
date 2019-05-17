@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-dataset-action-syntax.yaml"></a>
 
 ```
-﻿  [ActionName](#cfn-iotanalytics-dataset-action-actionname) : String
-﻿  [ContainerAction](#cfn-iotanalytics-dataset-action-containeraction) : 
+  [ActionName](#cfn-iotanalytics-dataset-action-actionname): String
+  [ContainerAction](#cfn-iotanalytics-dataset-action-containeraction): 
     [ContainerAction](aws-properties-iotanalytics-dataset-containeraction.md)
-﻿  [QueryAction](#cfn-iotanalytics-dataset-action-queryaction) : 
+  [QueryAction](#cfn-iotanalytics-dataset-action-queryaction): 
     [QueryAction](aws-properties-iotanalytics-dataset-queryaction.md)
 ```
 

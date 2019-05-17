@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cognito-identitypoolroleattachment-mappingrule-syntax.yaml"></a>
 
 ```
-﻿  [Claim](#cfn-cognito-identitypoolroleattachment-mappingrule-claim) : String
-﻿  [MatchType](#cfn-cognito-identitypoolroleattachment-mappingrule-matchtype) : String
-﻿  [RoleARN](#cfn-cognito-identitypoolroleattachment-mappingrule-rolearn) : String
-﻿  [Value](#cfn-cognito-identitypoolroleattachment-mappingrule-value) : String
+  [Claim](#cfn-cognito-identitypoolroleattachment-mappingrule-claim): String
+  [MatchType](#cfn-cognito-identitypoolroleattachment-mappingrule-matchtype): String
+  [RoleARN](#cfn-cognito-identitypoolroleattachment-mappingrule-rolearn): String
+  [Value](#cfn-cognito-identitypoolroleattachment-mappingrule-value): String
 ```
 
 ## Properties<a name="aws-properties-cognito-identitypoolroleattachment-mappingrule-properties"></a>

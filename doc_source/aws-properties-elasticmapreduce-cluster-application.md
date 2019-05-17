@@ -24,12 +24,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-application-syntax.yaml"></a>
 
 ```
-﻿  [AdditionalInfo](#cfn-elasticmapreduce-cluster-application-additionalinfo) : 
+  [AdditionalInfo](#cfn-elasticmapreduce-cluster-application-additionalinfo): 
     Key : Value
-﻿  [Args](#cfn-elasticmapreduce-cluster-application-args) : 
+  [Args](#cfn-elasticmapreduce-cluster-application-args): 
     - String
-﻿  [Name](#cfn-elasticmapreduce-cluster-application-name) : String
-﻿  [Version](#cfn-elasticmapreduce-cluster-application-version) : String
+  [Name](#cfn-elasticmapreduce-cluster-application-name): String
+  [Version](#cfn-elasticmapreduce-cluster-application-version): String
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-application-properties"></a>

@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-stepconfig-syntax.yaml"></a>
 
 ```
-﻿  [ActionOnFailure](#cfn-elasticmapreduce-cluster-stepconfig-actiononfailure) : String
-﻿  [HadoopJarStep](#cfn-elasticmapreduce-cluster-stepconfig-hadoopjarstep) : 
+  [ActionOnFailure](#cfn-elasticmapreduce-cluster-stepconfig-actiononfailure): String
+  [HadoopJarStep](#cfn-elasticmapreduce-cluster-stepconfig-hadoopjarstep): 
     [HadoopJarStepConfig](aws-properties-elasticmapreduce-cluster-hadoopjarstepconfig.md)
-﻿  [Name](#cfn-elasticmapreduce-cluster-stepconfig-name) : String
+  [Name](#cfn-elasticmapreduce-cluster-stepconfig-name): String
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-stepconfig-properties"></a>

@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SSM::Document
-Properties : 
-﻿  [Content](#cfn-ssm-document-content) : Json
-﻿  [DocumentType](#cfn-ssm-document-documenttype) : String
-﻿  [Tags](#cfn-ssm-document-tags) : 
+Properties: 
+  [Content](#cfn-ssm-document-content): Json
+  [DocumentType](#cfn-ssm-document-documenttype): String
+  [Tags](#cfn-ssm-document-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-virtualnode-portmapping-syntax.yaml"></a>
 
 ```
-﻿  [Port](#cfn-appmesh-virtualnode-portmapping-port) : Integer
-﻿  [Protocol](#cfn-appmesh-virtualnode-portmapping-protocol) : String
+  [Port](#cfn-appmesh-virtualnode-portmapping-port): Integer
+  [Protocol](#cfn-appmesh-virtualnode-portmapping-protocol): String
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-portmapping-properties"></a>

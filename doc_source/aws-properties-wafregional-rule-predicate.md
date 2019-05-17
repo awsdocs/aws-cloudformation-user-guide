@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-wafregional-rule-predicate-syntax.yaml"></a>
 
 ```
-﻿  [DataId](#cfn-wafregional-rule-predicate-dataid) : String
-﻿  [Negated](#cfn-wafregional-rule-predicate-negated) : Boolean
-﻿  [Type](#cfn-wafregional-rule-predicate-type) : String
+  [DataId](#cfn-wafregional-rule-predicate-dataid): String
+  [Negated](#cfn-wafregional-rule-predicate-negated): Boolean
+  [Type](#cfn-wafregional-rule-predicate-type): String
 ```
 
 ## Properties<a name="aws-properties-wafregional-rule-predicate-properties"></a>

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-stepfunctions-activity-tagsentry-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-stepfunctions-activity-tagsentry-key) : String
-﻿  [Value](#cfn-stepfunctions-activity-tagsentry-value) : String
+  [Key](#cfn-stepfunctions-activity-tagsentry-key): String
+  [Value](#cfn-stepfunctions-activity-tagsentry-value): String
 ```
 
 ## Properties<a name="aws-properties-stepfunctions-activity-tagsentry-properties"></a>

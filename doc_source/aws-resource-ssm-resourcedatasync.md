@@ -28,13 +28,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SSM::ResourceDataSync
-Properties : 
-﻿  [BucketName](#cfn-ssm-resourcedatasync-bucketname) : String
-﻿  [BucketPrefix](#cfn-ssm-resourcedatasync-bucketprefix) : String
-﻿  [BucketRegion](#cfn-ssm-resourcedatasync-bucketregion) : String
-﻿  [KMSKeyArn](#cfn-ssm-resourcedatasync-kmskeyarn) : String
-﻿  [SyncFormat](#cfn-ssm-resourcedatasync-syncformat) : String
-﻿  [SyncName](#cfn-ssm-resourcedatasync-syncname) : String
+Properties: 
+  [BucketName](#cfn-ssm-resourcedatasync-bucketname): String
+  [BucketPrefix](#cfn-ssm-resourcedatasync-bucketprefix): String
+  [BucketRegion](#cfn-ssm-resourcedatasync-bucketregion): String
+  [KMSKeyArn](#cfn-ssm-resourcedatasync-kmskeyarn): String
+  [SyncFormat](#cfn-ssm-resourcedatasync-syncformat): String
+  [SyncName](#cfn-ssm-resourcedatasync-syncname): String
 ```
 
 ## Properties<a name="aws-resource-ssm-resourcedatasync-properties"></a>

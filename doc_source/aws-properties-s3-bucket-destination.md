@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-destination-syntax.yaml"></a>
 
 ```
-﻿  [BucketAccountId](#cfn-s3-bucket-destination-bucketaccountid) : String
-﻿  [BucketArn](#cfn-s3-bucket-destination-bucketarn) : String
-﻿  [Format](#cfn-s3-bucket-destination-format) : String
-﻿  [Prefix](#cfn-s3-bucket-destination-prefix) : String
+  [BucketAccountId](#cfn-s3-bucket-destination-bucketaccountid): String
+  [BucketArn](#cfn-s3-bucket-destination-bucketarn): String
+  [Format](#cfn-s3-bucket-destination-format): String
+  [Prefix](#cfn-s3-bucket-destination-prefix): String
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-destination-properties"></a>

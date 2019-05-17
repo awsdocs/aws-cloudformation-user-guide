@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cognito-userpool-numberattributeconstraints-syntax.yaml"></a>
 
 ```
-﻿  [MaxValue](#cfn-cognito-userpool-numberattributeconstraints-maxvalue) : String
-﻿  [MinValue](#cfn-cognito-userpool-numberattributeconstraints-minvalue) : String
+  [MaxValue](#cfn-cognito-userpool-numberattributeconstraints-maxvalue): String
+  [MinValue](#cfn-cognito-userpool-numberattributeconstraints-minvalue): String
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-numberattributeconstraints-properties"></a>

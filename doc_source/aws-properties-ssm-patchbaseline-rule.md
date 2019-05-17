@@ -22,10 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ssm-patchbaseline-rule-syntax.yaml"></a>
 
 ```
-﻿  [ApproveAfterDays](#cfn-ssm-patchbaseline-rule-approveafterdays) : Integer
-﻿  [ComplianceLevel](#cfn-ssm-patchbaseline-rule-compliancelevel) : String
-﻿  [EnableNonSecurity](#cfn-ssm-patchbaseline-rule-enablenonsecurity) : Boolean
-﻿  [PatchFilterGroup](#cfn-ssm-patchbaseline-rule-patchfiltergroup) : 
+  [ApproveAfterDays](#cfn-ssm-patchbaseline-rule-approveafterdays): Integer
+  [ComplianceLevel](#cfn-ssm-patchbaseline-rule-compliancelevel): String
+  [EnableNonSecurity](#cfn-ssm-patchbaseline-rule-enablenonsecurity): Boolean
+  [PatchFilterGroup](#cfn-ssm-patchbaseline-rule-patchfiltergroup): 
     [PatchFilterGroup](aws-properties-ssm-patchbaseline-patchfiltergroup.md)
 ```
 

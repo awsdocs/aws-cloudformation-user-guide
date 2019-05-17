@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Cognito::UserPoolUserToGroupAttachment
-Properties : 
-﻿  [GroupName](#cfn-cognito-userpoolusertogroupattachment-groupname) : String
-﻿  [UserPoolId](#cfn-cognito-userpoolusertogroupattachment-userpoolid) : String
-﻿  [Username](#cfn-cognito-userpoolusertogroupattachment-username) : String
+Properties: 
+  [GroupName](#cfn-cognito-userpoolusertogroupattachment-groupname): String
+  [UserPoolId](#cfn-cognito-userpoolusertogroupattachment-userpoolid): String
+  [Username](#cfn-cognito-userpoolusertogroupattachment-username): String
 ```
 
 ## Properties<a name="aws-resource-cognito-userpoolusertogroupattachment-properties"></a>

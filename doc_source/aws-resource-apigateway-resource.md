@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::Resource
-Properties : 
-﻿  [ParentId](#cfn-apigateway-resource-parentid) : String
-﻿  [PathPart](#cfn-apigateway-resource-pathpart) : String
-﻿  [RestApiId](#cfn-apigateway-resource-restapiid) : String
+Properties: 
+  [ParentId](#cfn-apigateway-resource-parentid): String
+  [PathPart](#cfn-apigateway-resource-pathpart): String
+  [RestApiId](#cfn-apigateway-resource-restapiid): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-resource-properties"></a>

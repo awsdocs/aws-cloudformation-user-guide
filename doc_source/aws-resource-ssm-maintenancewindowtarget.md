@@ -26,14 +26,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SSM::MaintenanceWindowTarget
-Properties : 
-﻿  [Description](#cfn-ssm-maintenancewindowtarget-description) : String
-﻿  [Name](#cfn-ssm-maintenancewindowtarget-name) : String
-﻿  [OwnerInformation](#cfn-ssm-maintenancewindowtarget-ownerinformation) : String
-﻿  [ResourceType](#cfn-ssm-maintenancewindowtarget-resourcetype) : String
-﻿  [Targets](#cfn-ssm-maintenancewindowtarget-targets) : 
+Properties: 
+  [Description](#cfn-ssm-maintenancewindowtarget-description): String
+  [Name](#cfn-ssm-maintenancewindowtarget-name): String
+  [OwnerInformation](#cfn-ssm-maintenancewindowtarget-ownerinformation): String
+  [ResourceType](#cfn-ssm-maintenancewindowtarget-resourcetype): String
+  [Targets](#cfn-ssm-maintenancewindowtarget-targets): 
     - [Targets](aws-properties-ssm-maintenancewindowtarget-targets.md)
-﻿  [WindowId](#cfn-ssm-maintenancewindowtarget-windowid) : String
+  [WindowId](#cfn-ssm-maintenancewindowtarget-windowid): String
 ```
 
 ## Properties<a name="aws-resource-ssm-maintenancewindowtarget-properties"></a>
@@ -56,7 +56,7 @@ The target name\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OwnerInformation`  <a name="cfn-ssm-maintenancewindowtarget-ownerinformation"></a>
-A user\-provided value that will be included in any CloudWatch events that are raised while running tasks for these targets in this Maintenance Window\.  
+A user\-provided value that will be included in any CloudWatch events that are raised while running tasks for these targets in this maintenance window\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -64,25 +64,29 @@ A user\-provided value that will be included in any CloudWatch events that are r
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceType`  <a name="cfn-ssm-maintenancewindowtarget-resourcetype"></a>
-The type of target that is being registered with the Maintenance Window\.  
+The type of target that is being registered with the maintenance window\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `INSTANCE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-ssm-maintenancewindowtarget-targets"></a>
-The targets, either instances or tags\.  
-Specify instances using the following format:  
- `Key=instanceids,Values=<instanceid1>,<instanceid2>`   
-Tags are specified using the following format:  
- `Key=<tag name>,Values=<tag value>`\.  
+The targets to register with the maintenance window\. In other words, the instances to run commands on when the maintenance window runs\.  
+You can specify targets using either instance IDs or tags that have been applied to instances\.  
+ **Example 1**: Specify instance IDs  
+ `Key=InstanceIds,Values=instance-id-1,instance-id-2,instance-id-3 `   
+ **Example 2**: Use tag key\-pairs applied to instances  
+ `Key=tag:my-tag-key,Values=my-tag-value-1,my-tag-value-2 `   
+ **Example 3**: Use tag\-keys applied to instances  
+ `Key=tag-key,Values=my-tag-key-1,my-tag-key-2 `   
+For more information about these examples formats, including the best use case for each one, see [Examples: Register Targets with a Maintenance Window](https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html) in the *AWS Systems Manager User Guide*\.  
 *Required*: Yes  
 *Type*: [List](aws-properties-ssm-maintenancewindowtarget-targets.md) of [Targets](aws-properties-ssm-maintenancewindowtarget-targets.md)  
 *Maximum*: `5`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WindowId`  <a name="cfn-ssm-maintenancewindowtarget-windowid"></a>
-The ID of the Maintenance Window to register the target with\.  
+The ID of the maintenance window to register the target with\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  

@@ -23,11 +23,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppStream::DirectoryConfig
-Properties : 
-﻿  [DirectoryName](#cfn-appstream-directoryconfig-directoryname) : String
-﻿  [OrganizationalUnitDistinguishedNames](#cfn-appstream-directoryconfig-organizationalunitdistinguishednames) : 
+Properties: 
+  [DirectoryName](#cfn-appstream-directoryconfig-directoryname): String
+  [OrganizationalUnitDistinguishedNames](#cfn-appstream-directoryconfig-organizationalunitdistinguishednames): 
     - String
-﻿  [ServiceAccountCredentials](#cfn-appstream-directoryconfig-serviceaccountcredentials) : 
+  [ServiceAccountCredentials](#cfn-appstream-directoryconfig-serviceaccountcredentials): 
     [ServiceAccountCredentials](aws-properties-appstream-directoryconfig-serviceaccountcredentials.md)
 ```
 

@@ -32,23 +32,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-syntax.yaml"></a>
 
 ```
-﻿  [AllocationStrategy](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-allocationstrategy) : String
-﻿  [ExcessCapacityTerminationPolicy](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-excesscapacityterminationpolicy) : String
-﻿  [IamFleetRole](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-iamfleetrole) : String
-﻿  [InstanceInterruptionBehavior](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-instanceinterruptionbehavior) : String
-﻿  [LaunchSpecifications](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications) : 
+  [AllocationStrategy](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-allocationstrategy): String
+  [ExcessCapacityTerminationPolicy](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-excesscapacityterminationpolicy): String
+  [IamFleetRole](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-iamfleetrole): String
+  [InstanceInterruptionBehavior](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-instanceinterruptionbehavior): String
+  [LaunchSpecifications](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications): 
     - [SpotFleetLaunchSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md)
-﻿  [LaunchTemplateConfigs](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs) : 
+  [LaunchTemplateConfigs](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs): 
     - [LaunchTemplateConfig](aws-properties-ec2-spotfleet-launchtemplateconfig.md)
-﻿  [LoadBalancersConfig](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-loadbalancersconfig) : 
+  [LoadBalancersConfig](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-loadbalancersconfig): 
     [LoadBalancersConfig](aws-properties-ec2-spotfleet-loadbalancersconfig.md)
-﻿  [ReplaceUnhealthyInstances](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-replaceunhealthyinstances) : Boolean
-﻿  [SpotPrice](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotprice) : String
-﻿  [TargetCapacity](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacity) : Integer
-﻿  [TerminateInstancesWithExpiration](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-terminateinstanceswithexpiration) : Boolean
-﻿  [Type](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-type) : String
-﻿  [ValidFrom](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-validfrom) : String
-﻿  [ValidUntil](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-validuntil) : String
+  [ReplaceUnhealthyInstances](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-replaceunhealthyinstances): Boolean
+  [SpotPrice](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotprice): String
+  [TargetCapacity](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacity): Integer
+  [TerminateInstancesWithExpiration](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-terminateinstanceswithexpiration): Boolean
+  [Type](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-type): String
+  [ValidFrom](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-validfrom): String
+  [ValidUntil](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-validuntil): String
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-properties"></a>

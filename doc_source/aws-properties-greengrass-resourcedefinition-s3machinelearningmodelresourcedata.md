@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-syntax.yaml"></a>
 
 ```
-﻿  [DestinationPath](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-destinationpath) : String
-﻿  [S3Uri](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-s3uri) : String
+  [DestinationPath](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-destinationpath): String
+  [S3Uri](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-s3uri): String
 ```
 
 ## Properties<a name="aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-properties"></a>

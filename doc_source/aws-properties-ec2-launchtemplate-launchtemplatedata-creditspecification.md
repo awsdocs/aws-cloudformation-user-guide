@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-creditspecification-syntax.yaml"></a>
 
 ```
-﻿  [CpuCredits](#cfn-ec2-launchtemplate-launchtemplatedata-creditspecification-cpucredits) : String
+  [CpuCredits](#cfn-ec2-launchtemplate-launchtemplatedata-creditspecification-cpucredits): String
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-creditspecification-properties"></a>

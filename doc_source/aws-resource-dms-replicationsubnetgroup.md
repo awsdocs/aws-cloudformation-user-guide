@@ -27,12 +27,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DMS::ReplicationSubnetGroup
-Properties : 
-﻿  [ReplicationSubnetGroupDescription](#cfn-dms-replicationsubnetgroup-replicationsubnetgroupdescription) : String
-﻿  [ReplicationSubnetGroupIdentifier](#cfn-dms-replicationsubnetgroup-replicationsubnetgroupidentifier) : String
-﻿  [SubnetIds](#cfn-dms-replicationsubnetgroup-subnetids) : 
+Properties: 
+  [ReplicationSubnetGroupDescription](#cfn-dms-replicationsubnetgroup-replicationsubnetgroupdescription): String
+  [ReplicationSubnetGroupIdentifier](#cfn-dms-replicationsubnetgroup-replicationsubnetgroupidentifier): String
+  [SubnetIds](#cfn-dms-replicationsubnetgroup-subnetids): 
     - String
-﻿  [Tags](#cfn-dms-replicationsubnetgroup-tags) : 
+  [Tags](#cfn-dms-replicationsubnetgroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

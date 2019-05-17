@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ssm-association-parametervalues-syntax.yaml"></a>
 
 ```
-﻿  [ParameterValues](#cfn-ssm-association-parametervalues-parametervalues) : 
+  [ParameterValues](#cfn-ssm-association-parametervalues-parametervalues): 
     - [String](#aws-properties-ssm-association-parametervalues)
 ```
 

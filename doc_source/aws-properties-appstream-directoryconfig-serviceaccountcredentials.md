@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appstream-directoryconfig-serviceaccountcredentials-syntax.yaml"></a>
 
 ```
-﻿  [AccountName](#cfn-appstream-directoryconfig-serviceaccountcredentials-accountname) : String
-﻿  [AccountPassword](#cfn-appstream-directoryconfig-serviceaccountcredentials-accountpassword) : String
+  [AccountName](#cfn-appstream-directoryconfig-serviceaccountcredentials-accountname): String
+  [AccountPassword](#cfn-appstream-directoryconfig-serviceaccountcredentials-accountpassword): String
 ```
 
 ## Properties<a name="aws-properties-appstream-directoryconfig-serviceaccountcredentials-properties"></a>

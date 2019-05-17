@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisfirehose-deliverystream-elasticsearchbufferinghints-syntax.yaml"></a>
 
 ```
-﻿  [IntervalInSeconds](#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-intervalinseconds) : Integer
-﻿  [SizeInMBs](#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-sizeinmbs) : Integer
+  [IntervalInSeconds](#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-intervalinseconds): Integer
+  [SizeInMBs](#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-sizeinmbs): Integer
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-elasticsearchbufferinghints-properties"></a>

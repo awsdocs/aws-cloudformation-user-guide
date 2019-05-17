@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-taskdefinition-containerdefinitions-environment-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-ecs-taskdefinition-containerdefinition-environment-name) : String
-﻿  [Value](#cfn-ecs-taskdefinition-containerdefinition-environment-value) : String
+  [Name](#cfn-ecs-taskdefinition-containerdefinition-environment-name): String
+  [Value](#cfn-ecs-taskdefinition-containerdefinition-environment-value): String
 ```
 
 ## Properties<a name="aws-properties-ecs-taskdefinition-containerdefinitions-environment-properties"></a>

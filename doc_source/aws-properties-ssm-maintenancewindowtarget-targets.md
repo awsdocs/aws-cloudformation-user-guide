@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ssm-maintenancewindowtarget-targets-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-ssm-maintenancewindowtarget-targets-key) : String
-﻿  [Values](#cfn-ssm-maintenancewindowtarget-targets-values) : 
+  [Key](#cfn-ssm-maintenancewindowtarget-targets-key): String
+  [Values](#cfn-ssm-maintenancewindowtarget-targets-values): 
     - String
 ```
 

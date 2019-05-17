@@ -23,12 +23,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: Alexa::ASK::Skill
-Properties : 
-﻿  [AuthenticationConfiguration](#cfn-ask-skill-authenticationconfiguration) : 
+Properties: 
+  [AuthenticationConfiguration](#cfn-ask-skill-authenticationconfiguration): 
     [AuthenticationConfiguration](aws-properties-ask-skill-authenticationconfiguration.md)
-﻿  [SkillPackage](#cfn-ask-skill-skillpackage) : 
+  [SkillPackage](#cfn-ask-skill-skillpackage): 
     [SkillPackage](aws-properties-ask-skill-skillpackage.md)
-﻿  [VendorId](#cfn-ask-skill-vendorid) : String
+  [VendorId](#cfn-ask-skill-vendorid): String
 ```
 
 ## Properties<a name="aws-resource-ask-skill-properties"></a>

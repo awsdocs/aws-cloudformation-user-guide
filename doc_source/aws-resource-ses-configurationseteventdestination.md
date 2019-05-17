@@ -29,9 +29,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SES::ConfigurationSetEventDestination
-Properties : 
-﻿  [ConfigurationSetName](#cfn-ses-configurationseteventdestination-configurationsetname) : String
-﻿  [EventDestination](#cfn-ses-configurationseteventdestination-eventdestination) : 
+Properties: 
+  [ConfigurationSetName](#cfn-ses-configurationseteventdestination-configurationsetname): String
+  [EventDestination](#cfn-ses-configurationseteventdestination-eventdestination): 
     [EventDestination](aws-properties-ses-configurationseteventdestination-eventdestination.md)
 ```
 

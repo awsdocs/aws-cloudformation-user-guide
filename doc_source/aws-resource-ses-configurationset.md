@@ -21,8 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SES::ConfigurationSet
-Properties : 
-﻿  [Name](#cfn-ses-configurationset-name) : String
+Properties: 
+  [Name](#cfn-ses-configurationset-name): String
 ```
 
 ## Properties<a name="aws-resource-ses-configurationset-properties"></a>

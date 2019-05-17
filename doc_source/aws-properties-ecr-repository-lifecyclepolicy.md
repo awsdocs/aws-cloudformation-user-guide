@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecr-repository-lifecyclepolicy-syntax.yaml"></a>
 
 ```
-﻿  [LifecyclePolicyText](#cfn-ecr-repository-lifecyclepolicy-lifecyclepolicytext) : String
-﻿  [RegistryId](#cfn-ecr-repository-lifecyclepolicy-registryid) : String
+  [LifecyclePolicyText](#cfn-ecr-repository-lifecyclepolicy-lifecyclepolicytext): String
+  [RegistryId](#cfn-ecr-repository-lifecyclepolicy-registryid): String
 ```
 
 ## Properties<a name="aws-properties-ecr-repository-lifecyclepolicy-properties"></a>

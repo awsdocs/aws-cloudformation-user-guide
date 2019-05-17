@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-ec2fleet-tagrequest-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-ec2-ec2fleet-tagrequest-key) : String
-﻿  [Value](#cfn-ec2-ec2fleet-tagrequest-value) : String
+  [Key](#cfn-ec2-ec2fleet-tagrequest-key): String
+  [Value](#cfn-ec2-ec2fleet-tagrequest-value): String
 ```
 
 ## Properties<a name="aws-properties-ec2-ec2fleet-tagrequest-properties"></a>

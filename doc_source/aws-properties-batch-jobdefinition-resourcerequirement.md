@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-batch-jobdefinition-resourcerequirement-syntax.yaml"></a>
 
 ```
-﻿  [Type](#cfn-batch-jobdefinition-resourcerequirement-type) : String
-﻿  [Value](#cfn-batch-jobdefinition-resourcerequirement-value) : String
+  [Type](#cfn-batch-jobdefinition-resourcerequirement-type): String
+  [Value](#cfn-batch-jobdefinition-resourcerequirement-value): String
 ```
 
 ## Properties<a name="aws-properties-batch-jobdefinition-resourcerequirement-properties"></a>

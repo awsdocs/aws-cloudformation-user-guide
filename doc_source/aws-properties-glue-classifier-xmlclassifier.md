@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-classifier-xmlclassifier-syntax.yaml"></a>
 
 ```
-﻿  [Classification](#cfn-glue-classifier-xmlclassifier-classification) : String
-﻿  [Name](#cfn-glue-classifier-xmlclassifier-name) : String
-﻿  [RowTag](#cfn-glue-classifier-xmlclassifier-rowtag) : String
+  [Classification](#cfn-glue-classifier-xmlclassifier-classification): String
+  [Name](#cfn-glue-classifier-xmlclassifier-name): String
+  [RowTag](#cfn-glue-classifier-xmlclassifier-rowtag): String
 ```
 
 ## Properties<a name="aws-properties-glue-classifier-xmlclassifier-properties"></a>

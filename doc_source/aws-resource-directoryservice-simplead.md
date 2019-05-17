@@ -28,15 +28,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DirectoryService::SimpleAD
-Properties : 
-﻿  [CreateAlias](#cfn-directoryservice-simplead-createalias) : Boolean
-﻿  [Description](#cfn-directoryservice-simplead-description) : String
-﻿  [EnableSso](#cfn-directoryservice-simplead-enablesso) : Boolean
-﻿  [Name](#cfn-directoryservice-simplead-name) : String
-﻿  [Password](#cfn-directoryservice-simplead-password) : String
-﻿  [ShortName](#cfn-directoryservice-simplead-shortname) : String
-﻿  [Size](#cfn-directoryservice-simplead-size) : String
-﻿  [VpcSettings](#cfn-directoryservice-simplead-vpcsettings) : 
+Properties: 
+  [CreateAlias](#cfn-directoryservice-simplead-createalias): Boolean
+  [Description](#cfn-directoryservice-simplead-description): String
+  [EnableSso](#cfn-directoryservice-simplead-enablesso): Boolean
+  [Name](#cfn-directoryservice-simplead-name): String
+  [Password](#cfn-directoryservice-simplead-password): String
+  [ShortName](#cfn-directoryservice-simplead-shortname): String
+  [Size](#cfn-directoryservice-simplead-size): String
+  [VpcSettings](#cfn-directoryservice-simplead-vpcsettings): 
     [VpcSettings](aws-properties-directoryservice-simplead-vpcsettings.md)
 ```
 

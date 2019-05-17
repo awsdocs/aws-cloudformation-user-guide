@@ -21,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apigatewayv2-stage-routesettings-syntax.yaml"></a>
 
 ```
-﻿  [DataTraceEnabled](#cfn-apigatewayv2-stage-routesettings-datatraceenabled) : Boolean
-﻿  [DetailedMetricsEnabled](#cfn-apigatewayv2-stage-routesettings-detailedmetricsenabled) : Boolean
-﻿  [LoggingLevel](#cfn-apigatewayv2-stage-routesettings-logginglevel) : String
-﻿  [ThrottlingBurstLimit](#cfn-apigatewayv2-stage-routesettings-throttlingburstlimit) : Integer
-﻿  [ThrottlingRateLimit](#cfn-apigatewayv2-stage-routesettings-throttlingratelimit) : Double
+  [DataTraceEnabled](#cfn-apigatewayv2-stage-routesettings-datatraceenabled): Boolean
+  [DetailedMetricsEnabled](#cfn-apigatewayv2-stage-routesettings-detailedmetricsenabled): Boolean
+  [LoggingLevel](#cfn-apigatewayv2-stage-routesettings-logginglevel): String
+  [ThrottlingBurstLimit](#cfn-apigatewayv2-stage-routesettings-throttlingburstlimit): Integer
+  [ThrottlingRateLimit](#cfn-apigatewayv2-stage-routesettings-throttlingratelimit): Double
 ```
 
 ## Properties<a name="aws-properties-apigatewayv2-stage-routesettings-properties"></a>

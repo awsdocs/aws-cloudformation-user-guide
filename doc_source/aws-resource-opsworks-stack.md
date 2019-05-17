@@ -47,41 +47,41 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::OpsWorks::Stack
-Properties : 
-﻿  [AgentVersion](#cfn-opsworks-stack-agentversion) : String
-﻿  [Attributes](#cfn-opsworks-stack-attributes) : 
+Properties: 
+  [AgentVersion](#cfn-opsworks-stack-agentversion): String
+  [Attributes](#cfn-opsworks-stack-attributes): 
     Key : Value
-﻿  [ChefConfiguration](#cfn-opsworks-stack-chefconfiguration) : 
+  [ChefConfiguration](#cfn-opsworks-stack-chefconfiguration): 
     [ChefConfiguration](aws-properties-opsworks-stack-chefconfiguration.md)
-﻿  [CloneAppIds](#cfn-opsworks-stack-cloneappids) : 
+  [CloneAppIds](#cfn-opsworks-stack-cloneappids): 
     - String
-﻿  [ClonePermissions](#cfn-opsworks-stack-clonepermissions) : Boolean
-﻿  [ConfigurationManager](#cfn-opsworks-stack-configmanager) : 
+  [ClonePermissions](#cfn-opsworks-stack-clonepermissions): Boolean
+  [ConfigurationManager](#cfn-opsworks-stack-configmanager): 
     [StackConfigurationManager](aws-properties-opsworks-stack-stackconfigmanager.md)
-﻿  [CustomCookbooksSource](#cfn-opsworks-stack-custcookbooksource) : 
+  [CustomCookbooksSource](#cfn-opsworks-stack-custcookbooksource): 
     [Source](aws-properties-opsworks-stack-source.md)
-﻿  [CustomJson](#cfn-opsworks-stack-custjson) : 
+  [CustomJson](#cfn-opsworks-stack-custjson): 
     Json
-﻿  [DefaultAvailabilityZone](#cfn-opsworks-stack-defaultaz) : String
-﻿  [DefaultInstanceProfileArn](#cfn-opsworks-stack-defaultinstanceprof) : String
-﻿  [DefaultOs](#cfn-opsworks-stack-defaultos) : String
-﻿  [DefaultRootDeviceType](#cfn-opsworks-stack-defaultrootdevicetype) : String
-﻿  [DefaultSshKeyName](#cfn-opsworks-stack-defaultsshkeyname) : String
-﻿  [DefaultSubnetId](#defaultsubnet) : String
-﻿  [EcsClusterArn](#cfn-opsworks-stack-ecsclusterarn) : String
-﻿  [ElasticIps](#cfn-opsworks-stack-elasticips) : 
+  [DefaultAvailabilityZone](#cfn-opsworks-stack-defaultaz): String
+  [DefaultInstanceProfileArn](#cfn-opsworks-stack-defaultinstanceprof): String
+  [DefaultOs](#cfn-opsworks-stack-defaultos): String
+  [DefaultRootDeviceType](#cfn-opsworks-stack-defaultrootdevicetype): String
+  [DefaultSshKeyName](#cfn-opsworks-stack-defaultsshkeyname): String
+  [DefaultSubnetId](#defaultsubnet): String
+  [EcsClusterArn](#cfn-opsworks-stack-ecsclusterarn): String
+  [ElasticIps](#cfn-opsworks-stack-elasticips): 
     - [ElasticIp](aws-properties-opsworks-stack-elasticip.md)
-﻿  [HostnameTheme](#cfn-opsworks-stack-hostnametheme) : String
-﻿  [Name](#cfn-opsworks-stack-name) : String
-﻿  [RdsDbInstances](#cfn-opsworks-stack-rdsdbinstances) : 
+  [HostnameTheme](#cfn-opsworks-stack-hostnametheme): String
+  [Name](#cfn-opsworks-stack-name): String
+  [RdsDbInstances](#cfn-opsworks-stack-rdsdbinstances): 
     - [RdsDbInstance](aws-properties-opsworks-stack-rdsdbinstance.md)
-﻿  [ServiceRoleArn](#cfn-opsworks-stack-servicerolearn) : String
-﻿  [SourceStackId](#cfn-opsworks-stack-sourcestackid) : String
-﻿  [Tags](#cfn-opsworks-stack-tags) : 
+  [ServiceRoleArn](#cfn-opsworks-stack-servicerolearn): String
+  [SourceStackId](#cfn-opsworks-stack-sourcestackid): String
+  [Tags](#cfn-opsworks-stack-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [UseCustomCookbooks](#usecustcookbooks) : Boolean
-﻿  [UseOpsworksSecurityGroups](#cfn-opsworks-stack-useopsworkssecuritygroups) : Boolean
-﻿  [VpcId](#cfn-opsworks-stack-vpcid) : String
+  [UseCustomCookbooks](#usecustcookbooks): Boolean
+  [UseOpsworksSecurityGroups](#cfn-opsworks-stack-useopsworkssecuritygroups): Boolean
+  [VpcId](#cfn-opsworks-stack-vpcid): String
 ```
 
 ## Properties<a name="aws-resource-opsworks-stack-properties"></a>

@@ -20,9 +20,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-syntax.yaml"></a>
 
 ```
-﻿  [CapacityReservationPreference](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationpreference) : 
+  [CapacityReservationPreference](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationpreference): 
     [CapacityReservationPreference](aws-properties-ec2-launchtemplate-capacityreservationpreference.md)
-﻿  [CapacityReservationTarget](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationtarget) : 
+  [CapacityReservationTarget](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationtarget): 
     [CapacityReservationTarget](aws-properties-ec2-launchtemplate-capacityreservationtarget.md)
 ```
 

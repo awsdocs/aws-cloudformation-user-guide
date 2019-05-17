@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::Host
-Properties : 
-﻿  [AutoPlacement](#cfn-ec2-host-autoplacement) : String
-﻿  [AvailabilityZone](#cfn-ec2-host-availabilityzone) : String
-﻿  [InstanceType](#cfn-ec2-host-instancetype) : String
+Properties: 
+  [AutoPlacement](#cfn-ec2-host-autoplacement): String
+  [AvailabilityZone](#cfn-ec2-host-availabilityzone): String
+  [InstanceType](#cfn-ec2-host-instancetype): String
 ```
 
 ## Properties<a name="aws-resource-ec2-host-properties"></a>

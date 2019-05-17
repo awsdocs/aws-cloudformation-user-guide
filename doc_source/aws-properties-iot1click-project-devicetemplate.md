@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot1click-project-devicetemplate-syntax.yaml"></a>
 
 ```
-﻿  [CallbackOverrides](#cfn-iot1click-project-devicetemplate-callbackoverrides) : Json
-﻿  [DeviceType](#cfn-iot1click-project-devicetemplate-devicetype) : String
+  [CallbackOverrides](#cfn-iot1click-project-devicetemplate-callbackoverrides): Json
+  [DeviceType](#cfn-iot1click-project-devicetemplate-devicetype): String
 ```
 
 ## Properties<a name="aws-properties-iot1click-project-devicetemplate-properties"></a>

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-classifier-jsonclassifier-syntax.yaml"></a>
 
 ```
-﻿  [JsonPath](#cfn-glue-classifier-jsonclassifier-jsonpath) : String
-﻿  [Name](#cfn-glue-classifier-jsonclassifier-name) : String
+  [JsonPath](#cfn-glue-classifier-jsonclassifier-jsonpath): String
+  [Name](#cfn-glue-classifier-jsonclassifier-name): String
 ```
 
 ## Properties<a name="aws-properties-glue-classifier-jsonclassifier-properties"></a>

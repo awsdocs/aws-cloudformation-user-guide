@@ -36,16 +36,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::TransitGateway
-Properties : 
-﻿  [AmazonSideAsn](#cfn-ec2-transitgateway-amazonsideasn) : Integer
-﻿  [AutoAcceptSharedAttachments](#cfn-ec2-transitgateway-autoacceptsharedattachments) : String
-﻿  [DefaultRouteTableAssociation](#cfn-ec2-transitgateway-defaultroutetableassociation) : String
-﻿  [DefaultRouteTablePropagation](#cfn-ec2-transitgateway-defaultroutetablepropagation) : String
-﻿  [Description](#cfn-ec2-transitgateway-description) : String
-﻿  [DnsSupport](#cfn-ec2-transitgateway-dnssupport) : String
-﻿  [Tags](#cfn-ec2-transitgateway-tags) : 
+Properties: 
+  [AmazonSideAsn](#cfn-ec2-transitgateway-amazonsideasn): Integer
+  [AutoAcceptSharedAttachments](#cfn-ec2-transitgateway-autoacceptsharedattachments): String
+  [DefaultRouteTableAssociation](#cfn-ec2-transitgateway-defaultroutetableassociation): String
+  [DefaultRouteTablePropagation](#cfn-ec2-transitgateway-defaultroutetablepropagation): String
+  [Description](#cfn-ec2-transitgateway-description): String
+  [DnsSupport](#cfn-ec2-transitgateway-dnssupport): String
+  [Tags](#cfn-ec2-transitgateway-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VpnEcmpSupport](#cfn-ec2-transitgateway-vpnecmpsupport) : String
+  [VpnEcmpSupport](#cfn-ec2-transitgateway-vpnecmpsupport): String
 ```
 
 ## Properties<a name="aws-resource-ec2-transitgateway-properties"></a>
@@ -155,7 +155,7 @@ The following example declares a transit gateway\.
       VpnEcmpSupport: "enable"
       Tags:
       - Key: Application
-      Value: !Ref 'AWS::StackId'
+        Value: !Ref 'AWS::StackId'
 ```
 
 ## See Also<a name="aws-resource-ec2-transitgateway--seealso"></a>

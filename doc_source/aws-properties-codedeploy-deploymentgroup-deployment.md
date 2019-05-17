@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-deployment-syntax.yaml"></a>
 
 ```
-﻿  [Description](#cfn-properties-codedeploy-deploymentgroup-deployment-description) : String
-﻿  [IgnoreApplicationStopFailures](#cfn-properties-codedeploy-deploymentgroup-deployment-ignoreapplicationstopfailures) : Boolean
-﻿  [Revision](#cfn-properties-codedeploy-deploymentgroup-deployment-revision) : 
+  [Description](#cfn-properties-codedeploy-deploymentgroup-deployment-description): String
+  [IgnoreApplicationStopFailures](#cfn-properties-codedeploy-deploymentgroup-deployment-ignoreapplicationstopfailures): Boolean
+  [Revision](#cfn-properties-codedeploy-deploymentgroup-deployment-revision): 
     [RevisionLocation](aws-properties-codedeploy-deploymentgroup-deployment-revision.md)
 ```
 

@@ -35,28 +35,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DynamoDB::Table
-Properties : 
-﻿  [AttributeDefinitions](#cfn-dynamodb-table-attributedef) : 
+Properties: 
+  [AttributeDefinitions](#cfn-dynamodb-table-attributedef): 
     - [AttributeDefinition](aws-properties-dynamodb-attributedef.md)
-﻿  [BillingMode](#cfn-dynamodb-table-billingmode) : String
-﻿  [GlobalSecondaryIndexes](#cfn-dynamodb-table-gsi) : 
+  [BillingMode](#cfn-dynamodb-table-billingmode): String
+  [GlobalSecondaryIndexes](#cfn-dynamodb-table-gsi): 
     - [GlobalSecondaryIndex](aws-properties-dynamodb-gsi.md)
-﻿  [KeySchema](#cfn-dynamodb-table-keyschema) : 
+  [KeySchema](#cfn-dynamodb-table-keyschema): 
     - [KeySchema](aws-properties-dynamodb-keyschema.md)
-﻿  [LocalSecondaryIndexes](#cfn-dynamodb-table-lsi) : 
+  [LocalSecondaryIndexes](#cfn-dynamodb-table-lsi): 
     - [LocalSecondaryIndex](aws-properties-dynamodb-lsi.md)
-﻿  [PointInTimeRecoverySpecification](#cfn-dynamodb-table-pointintimerecoveryspecification) : 
+  [PointInTimeRecoverySpecification](#cfn-dynamodb-table-pointintimerecoveryspecification): 
     [PointInTimeRecoverySpecification](aws-properties-dynamodb-table-pointintimerecoveryspecification.md)
-﻿  [ProvisionedThroughput](#cfn-dynamodb-table-provisionedthroughput) : 
+  [ProvisionedThroughput](#cfn-dynamodb-table-provisionedthroughput): 
     [ProvisionedThroughput](aws-properties-dynamodb-provisionedthroughput.md)
-﻿  [SSESpecification](#cfn-dynamodb-table-ssespecification) : 
+  [SSESpecification](#cfn-dynamodb-table-ssespecification): 
     [SSESpecification](aws-properties-dynamodb-table-ssespecification.md)
-﻿  [StreamSpecification](#cfn-dynamodb-table-streamspecification) : 
+  [StreamSpecification](#cfn-dynamodb-table-streamspecification): 
     [StreamSpecification](aws-properties-dynamodb-streamspecification.md)
-﻿  [TableName](#cfn-dynamodb-table-tablename) : String
-﻿  [Tags](#cfn-dynamodb-table-tags) : 
+  [TableName](#cfn-dynamodb-table-tablename): String
+  [Tags](#cfn-dynamodb-table-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [TimeToLiveSpecification](#cfn-dynamodb-table-timetolivespecification) : 
+  [TimeToLiveSpecification](#cfn-dynamodb-table-timetolivespecification): 
     [TimeToLiveSpecification](aws-properties-dynamodb-timetolivespecification.md)
 ```
 

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appstream-stack-applicationsettings-syntax.yaml"></a>
 
 ```
-﻿  [Enabled](#cfn-appstream-stack-applicationsettings-enabled) : Boolean
-﻿  [SettingsGroup](#cfn-appstream-stack-applicationsettings-settingsgroup) : String
+  [Enabled](#cfn-appstream-stack-applicationsettings-enabled): Boolean
+  [SettingsGroup](#cfn-appstream-stack-applicationsettings-settingsgroup): String
 ```
 
 ## Properties<a name="aws-properties-appstream-stack-applicationsettings-properties"></a>

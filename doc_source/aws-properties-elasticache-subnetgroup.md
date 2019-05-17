@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ElastiCache::SubnetGroup
-Properties : 
-﻿  [CacheSubnetGroupName](#cfn-elasticache-subnetgroup-cachesubnetgroupname) : String
-﻿  [Description](#cfn-elasticache-subnetgroup-description) : String
-﻿  [SubnetIds](#cfn-elasticache-subnetgroup-subnetids) : 
+Properties: 
+  [CacheSubnetGroupName](#cfn-elasticache-subnetgroup-cachesubnetgroupname): String
+  [Description](#cfn-elasticache-subnetgroup-description): String
+  [SubnetIds](#cfn-elasticache-subnetgroup-subnetids): 
     - String
 ```
 

@@ -23,19 +23,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-opsworks-instance-timebasedautoscaling-syntax.yaml"></a>
 
 ```
-﻿  [Friday](#cfn-opsworks-instance-timebasedautoscaling-friday) : 
+  [Friday](#cfn-opsworks-instance-timebasedautoscaling-friday): 
     Key : Value
-﻿  [Monday](#cfn-opsworks-instance-timebasedautoscaling-monday) : 
+  [Monday](#cfn-opsworks-instance-timebasedautoscaling-monday): 
     Key : Value
-﻿  [Saturday](#cfn-opsworks-instance-timebasedautoscaling-saturday) : 
+  [Saturday](#cfn-opsworks-instance-timebasedautoscaling-saturday): 
     Key : Value
-﻿  [Sunday](#cfn-opsworks-instance-timebasedautoscaling-sunday) : 
+  [Sunday](#cfn-opsworks-instance-timebasedautoscaling-sunday): 
     Key : Value
-﻿  [Thursday](#cfn-opsworks-instance-timebasedautoscaling-thursday) : 
+  [Thursday](#cfn-opsworks-instance-timebasedautoscaling-thursday): 
     Key : Value
-﻿  [Tuesday](#cfn-opsworks-instance-timebasedautoscaling-tuesday) : 
+  [Tuesday](#cfn-opsworks-instance-timebasedautoscaling-tuesday): 
     Key : Value
-﻿  [Wednesday](#cfn-opsworks-instance-timebasedautoscaling-wednesday) : 
+  [Wednesday](#cfn-opsworks-instance-timebasedautoscaling-wednesday): 
     Key : Value
 ```
 

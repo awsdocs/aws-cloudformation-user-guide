@@ -26,18 +26,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-table-tableinput-syntax.yaml"></a>
 
 ```
-﻿  [Description](#cfn-glue-table-tableinput-description) : String
-﻿  [Name](#cfn-glue-table-tableinput-name) : String
-﻿  [Owner](#cfn-glue-table-tableinput-owner) : String
-﻿  [Parameters](#cfn-glue-table-tableinput-parameters) : Json
-﻿  [PartitionKeys](#cfn-glue-table-tableinput-partitionkeys) : 
+  [Description](#cfn-glue-table-tableinput-description): String
+  [Name](#cfn-glue-table-tableinput-name): String
+  [Owner](#cfn-glue-table-tableinput-owner): String
+  [Parameters](#cfn-glue-table-tableinput-parameters): Json
+  [PartitionKeys](#cfn-glue-table-tableinput-partitionkeys): 
     - [Column](aws-properties-glue-table-column.md)
-﻿  [Retention](#cfn-glue-table-tableinput-retention) : Integer
-﻿  [StorageDescriptor](#cfn-glue-table-tableinput-storagedescriptor) : 
+  [Retention](#cfn-glue-table-tableinput-retention): Integer
+  [StorageDescriptor](#cfn-glue-table-tableinput-storagedescriptor): 
     [StorageDescriptor](aws-properties-glue-table-storagedescriptor.md)
-﻿  [TableType](#cfn-glue-table-tableinput-tabletype) : String
-﻿  [ViewExpandedText](#cfn-glue-table-tableinput-viewexpandedtext) : String
-﻿  [ViewOriginalText](#cfn-glue-table-tableinput-vieworiginaltext) : String
+  [TableType](#cfn-glue-table-tableinput-tabletype): String
+  [ViewExpandedText](#cfn-glue-table-tableinput-viewexpandedtext): String
+  [ViewOriginalText](#cfn-glue-table-tableinput-vieworiginaltext): String
 ```
 
 ## Properties<a name="aws-properties-glue-table-tableinput-properties"></a>

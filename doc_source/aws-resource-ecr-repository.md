@@ -23,11 +23,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ECR::Repository
-Properties : 
-﻿  [LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy) : 
+Properties: 
+  [LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy): 
     [LifecyclePolicy](aws-properties-ecr-repository-lifecyclepolicy.md)
-﻿  [RepositoryName](#cfn-ecr-repository-repositoryname) : String
-﻿  [RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext) : Json
+  [RepositoryName](#cfn-ecr-repository-repositoryname): String
+  [RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext): Json
 ```
 
 ## Properties<a name="aws-resource-ecr-repository-properties"></a>

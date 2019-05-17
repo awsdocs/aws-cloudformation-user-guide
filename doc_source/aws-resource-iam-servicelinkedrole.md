@@ -25,10 +25,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IAM::ServiceLinkedRole
-Properties : 
-﻿  [AWSServiceName](#cfn-iam-servicelinkedrole-awsservicename) : String
-﻿  [CustomSuffix](#cfn-iam-servicelinkedrole-customsuffix) : String
-﻿  [Description](#cfn-iam-servicelinkedrole-description) : String
+Properties: 
+  [AWSServiceName](#cfn-iam-servicelinkedrole-awsservicename): String
+  [CustomSuffix](#cfn-iam-servicelinkedrole-customsuffix): String
+  [Description](#cfn-iam-servicelinkedrole-description): String
 ```
 
 ## Properties<a name="aws-resource-iam-servicelinkedrole-properties"></a>

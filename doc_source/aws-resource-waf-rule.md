@@ -27,10 +27,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::WAF::Rule
-Properties : 
-﻿  [MetricName](#cfn-waf-rule-metricname) : String
-﻿  [Name](#cfn-waf-rule-name) : String
-﻿  [Predicates](#cfn-waf-rule-predicates) : 
+Properties: 
+  [MetricName](#cfn-waf-rule-metricname): String
+  [Name](#cfn-waf-rule-name): String
+  [Predicates](#cfn-waf-rule-predicates): 
     - [Predicate](aws-properties-waf-rule-predicates.md)
 ```
 

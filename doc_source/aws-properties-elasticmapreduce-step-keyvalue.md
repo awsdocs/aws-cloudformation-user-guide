@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-step-keyvalue-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-elasticmapreduce-step-keyvalue-key) : String
-﻿  [Value](#cfn-elasticmapreduce-step-keyvalue-value) : String
+  [Key](#cfn-elasticmapreduce-step-keyvalue-key): String
+  [Value](#cfn-elasticmapreduce-step-keyvalue-value): String
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-step-keyvalue-properties"></a>

@@ -28,17 +28,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CodePipeline::Webhook
-Properties : 
-﻿  [Authentication](#cfn-codepipeline-webhook-authentication) : String
-﻿  [AuthenticationConfiguration](#cfn-codepipeline-webhook-authenticationconfiguration) : 
+Properties: 
+  [Authentication](#cfn-codepipeline-webhook-authentication): String
+  [AuthenticationConfiguration](#cfn-codepipeline-webhook-authenticationconfiguration): 
     [WebhookAuthConfiguration](aws-properties-codepipeline-webhook-webhookauthconfiguration.md)
-﻿  [Filters](#cfn-codepipeline-webhook-filters) : 
+  [Filters](#cfn-codepipeline-webhook-filters): 
     - [WebhookFilterRule](aws-properties-codepipeline-webhook-webhookfilterrule.md)
-﻿  [Name](#cfn-codepipeline-webhook-name) : String
-﻿  [RegisterWithThirdParty](#cfn-codepipeline-webhook-registerwiththirdparty) : Boolean
-﻿  [TargetAction](#cfn-codepipeline-webhook-targetaction) : String
-﻿  [TargetPipeline](#cfn-codepipeline-webhook-targetpipeline) : String
-﻿  [TargetPipelineVersion](#cfn-codepipeline-webhook-targetpipelineversion) : Integer
+  [Name](#cfn-codepipeline-webhook-name): String
+  [RegisterWithThirdParty](#cfn-codepipeline-webhook-registerwiththirdparty): Boolean
+  [TargetAction](#cfn-codepipeline-webhook-targetaction): String
+  [TargetPipeline](#cfn-codepipeline-webhook-targetpipeline): String
+  [TargetPipelineVersion](#cfn-codepipeline-webhook-targetpipelineversion): Integer
 ```
 
 ## Properties<a name="aws-resource-codepipeline-webhook-properties"></a>

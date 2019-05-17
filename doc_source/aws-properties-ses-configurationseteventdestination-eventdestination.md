@@ -26,14 +26,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ses-configurationseteventdestination-eventdestination-syntax.yaml"></a>
 
 ```
-﻿  [CloudWatchDestination](#cfn-ses-configurationseteventdestination-eventdestination-cloudwatchdestination) : 
+  [CloudWatchDestination](#cfn-ses-configurationseteventdestination-eventdestination-cloudwatchdestination): 
     [CloudWatchDestination](aws-properties-ses-configurationseteventdestination-cloudwatchdestination.md)
-﻿  [Enabled](#cfn-ses-configurationseteventdestination-eventdestination-enabled) : Boolean
-﻿  [KinesisFirehoseDestination](#cfn-ses-configurationseteventdestination-eventdestination-kinesisfirehosedestination) : 
+  [Enabled](#cfn-ses-configurationseteventdestination-eventdestination-enabled): Boolean
+  [KinesisFirehoseDestination](#cfn-ses-configurationseteventdestination-eventdestination-kinesisfirehosedestination): 
     [KinesisFirehoseDestination](aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.md)
-﻿  [MatchingEventTypes](#cfn-ses-configurationseteventdestination-eventdestination-matchingeventtypes) : 
+  [MatchingEventTypes](#cfn-ses-configurationseteventdestination-eventdestination-matchingeventtypes): 
     - String
-﻿  [Name](#cfn-ses-configurationseteventdestination-eventdestination-name) : String
+  [Name](#cfn-ses-configurationseteventdestination-eventdestination-name): String
 ```
 
 ## Properties<a name="aws-properties-ses-configurationseteventdestination-eventdestination-properties"></a>

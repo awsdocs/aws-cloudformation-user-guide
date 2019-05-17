@@ -22,8 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint-syntax.yaml"></a>
 
 ```
-﻿  [Expression](#cfn-ecs-taskdefinition-taskdefinitionplacementconstraint-expression) : String
-﻿  [Type](#cfn-ecs-taskdefinition-taskdefinitionplacementconstraint-type) : String
+  [Expression](#cfn-ecs-taskdefinition-taskdefinitionplacementconstraint-expression): String
+  [Type](#cfn-ecs-taskdefinition-taskdefinitionplacementconstraint-type): String
 ```
 
 ## Properties<a name="aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint-properties"></a>

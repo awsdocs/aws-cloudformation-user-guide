@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-gitsubmodulesconfig-syntax.yaml"></a>
 
 ```
-﻿  [FetchSubmodules](#cfn-codebuild-project-gitsubmodulesconfig-fetchsubmodules) : Boolean
+  [FetchSubmodules](#cfn-codebuild-project-gitsubmodulesconfig-fetchsubmodules): Boolean
 ```
 
 ## Properties<a name="aws-properties-codebuild-project-gitsubmodulesconfig-properties"></a>

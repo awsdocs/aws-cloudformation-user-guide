@@ -25,12 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::GuardDuty::IPSet
-Properties : 
-﻿  [Activate](#cfn-guardduty-ipset-activate) : Boolean
-﻿  [DetectorId](#cfn-guardduty-ipset-detectorid) : String
-﻿  [Format](#cfn-guardduty-ipset-format) : String
-﻿  [Location](#cfn-guardduty-ipset-location) : String
-﻿  [Name](#cfn-guardduty-ipset-name) : String
+Properties: 
+  [Activate](#cfn-guardduty-ipset-activate): Boolean
+  [DetectorId](#cfn-guardduty-ipset-detectorid): String
+  [Format](#cfn-guardduty-ipset-format): String
+  [Location](#cfn-guardduty-ipset-location): String
+  [Name](#cfn-guardduty-ipset-name): String
 ```
 
 ## Properties<a name="aws-resource-guardduty-ipset-properties"></a>

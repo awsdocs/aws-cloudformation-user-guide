@@ -22,12 +22,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-functiondefinitionversion-environment-syntax.yaml"></a>
 
 ```
-﻿  [AccessSysfs](#cfn-greengrass-functiondefinitionversion-environment-accesssysfs) : Boolean
-﻿  [Execution](#cfn-greengrass-functiondefinitionversion-environment-execution) : 
+  [AccessSysfs](#cfn-greengrass-functiondefinitionversion-environment-accesssysfs): Boolean
+  [Execution](#cfn-greengrass-functiondefinitionversion-environment-execution): 
     [Execution](aws-properties-greengrass-functiondefinitionversion-execution.md)
-﻿  [ResourceAccessPolicies](#cfn-greengrass-functiondefinitionversion-environment-resourceaccesspolicies) : 
+  [ResourceAccessPolicies](#cfn-greengrass-functiondefinitionversion-environment-resourceaccesspolicies): 
     - [ResourceAccessPolicy](aws-properties-greengrass-functiondefinitionversion-resourceaccesspolicy.md)
-﻿  [Variables](#cfn-greengrass-functiondefinitionversion-environment-variables) : Json
+  [Variables](#cfn-greengrass-functiondefinitionversion-environment-variables): Json
 ```
 
 ## Properties<a name="aws-properties-greengrass-functiondefinitionversion-environment-properties"></a>

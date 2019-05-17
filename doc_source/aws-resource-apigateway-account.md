@@ -25,8 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::Account
-Properties : 
-﻿  [CloudWatchRoleArn](#cfn-apigateway-account-cloudwatchrolearn) : String
+Properties: 
+  [CloudWatchRoleArn](#cfn-apigateway-account-cloudwatchrolearn): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-account-properties"></a>

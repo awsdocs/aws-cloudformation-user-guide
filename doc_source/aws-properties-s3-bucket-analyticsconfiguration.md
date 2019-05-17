@@ -22,11 +22,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-analyticsconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [Id](#cfn-s3-bucket-analyticsconfiguration-id) : String
-﻿  [Prefix](#cfn-s3-bucket-analyticsconfiguration-prefix) : String
-﻿  [StorageClassAnalysis](#cfn-s3-bucket-analyticsconfiguration-storageclassanalysis) : 
+  [Id](#cfn-s3-bucket-analyticsconfiguration-id): String
+  [Prefix](#cfn-s3-bucket-analyticsconfiguration-prefix): String
+  [StorageClassAnalysis](#cfn-s3-bucket-analyticsconfiguration-storageclassanalysis): 
     [StorageClassAnalysis](aws-properties-s3-bucket-storageclassanalysis.md)
-﻿  [TagFilters](#cfn-s3-bucket-analyticsconfiguration-tagfilters) : 
+  [TagFilters](#cfn-s3-bucket-analyticsconfiguration-tagfilters): 
     - [TagFilter](aws-properties-s3-bucket-tagfilter.md)
 ```
 

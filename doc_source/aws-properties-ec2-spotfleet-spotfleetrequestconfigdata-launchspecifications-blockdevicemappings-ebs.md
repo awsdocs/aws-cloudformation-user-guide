@@ -22,12 +22,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs-syntax.yaml"></a>
 
 ```
-﻿  [DeleteOnTermination](#cfn-ec2-spotfleet-ebsblockdevice-deleteontermination) : Boolean
-﻿  [Encrypted](#cfn-ec2-spotfleet-ebsblockdevice-encrypted) : Boolean
-﻿  [Iops](#cfn-ec2-spotfleet-ebsblockdevice-iops) : Integer
-﻿  [SnapshotId](#cfn-ec2-spotfleet-ebsblockdevice-snapshotid) : String
-﻿  [VolumeSize](#cfn-ec2-spotfleet-ebsblockdevice-volumesize) : Integer
-﻿  [VolumeType](#cfn-ec2-spotfleet-ebsblockdevice-volumetype) : String
+  [DeleteOnTermination](#cfn-ec2-spotfleet-ebsblockdevice-deleteontermination): Boolean
+  [Encrypted](#cfn-ec2-spotfleet-ebsblockdevice-encrypted): Boolean
+  [Iops](#cfn-ec2-spotfleet-ebsblockdevice-iops): Integer
+  [SnapshotId](#cfn-ec2-spotfleet-ebsblockdevice-snapshotid): String
+  [VolumeSize](#cfn-ec2-spotfleet-ebsblockdevice-volumesize): Integer
+  [VolumeType](#cfn-ec2-spotfleet-ebsblockdevice-volumetype): String
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs-properties"></a>

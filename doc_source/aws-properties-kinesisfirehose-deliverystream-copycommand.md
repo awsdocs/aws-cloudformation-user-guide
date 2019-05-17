@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisfirehose-deliverystream-copycommand-syntax.yaml"></a>
 
 ```
-﻿  [CopyOptions](#cfn-kinesisfirehose-deliverystream-copycommand-copyoptions) : String
-﻿  [DataTableColumns](#cfn-kinesisfirehose-deliverystream-copycommand-datatablecolumns) : String
-﻿  [DataTableName](#cfn-kinesisfirehose-deliverystream-copycommand-datatablename) : String
+  [CopyOptions](#cfn-kinesisfirehose-deliverystream-copycommand-copyoptions): String
+  [DataTableColumns](#cfn-kinesisfirehose-deliverystream-copycommand-datatablecolumns): String
+  [DataTableName](#cfn-kinesisfirehose-deliverystream-copycommand-datatablename): String
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-copycommand-properties"></a>

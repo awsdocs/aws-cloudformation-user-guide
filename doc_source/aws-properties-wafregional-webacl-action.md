@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-wafregional-webacl-action-syntax.yaml"></a>
 
 ```
-﻿  [Type](#cfn-wafregional-webacl-action-type) : String
+  [Type](#cfn-wafregional-webacl-action-type): String
 ```
 
 ## Properties<a name="aws-properties-wafregional-webacl-action-properties"></a>

@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apigateway-deployment-deploymentcanarysettings-syntax.yaml"></a>
 
 ```
-﻿  [PercentTraffic](#cfn-apigateway-deployment-deploymentcanarysettings-percenttraffic) : Double
-﻿  [StageVariableOverrides](#cfn-apigateway-deployment-deploymentcanarysettings-stagevariableoverrides) : 
+  [PercentTraffic](#cfn-apigateway-deployment-deploymentcanarysettings-percenttraffic): Double
+  [StageVariableOverrides](#cfn-apigateway-deployment-deploymentcanarysettings-stagevariableoverrides): 
     Key : Value
-﻿  [UseStageCache](#cfn-apigateway-deployment-deploymentcanarysettings-usestagecache) : Boolean
+  [UseStageCache](#cfn-apigateway-deployment-deploymentcanarysettings-usestagecache): Boolean
 ```
 
 ## Properties<a name="aws-properties-apigateway-deployment-deploymentcanarysettings-properties"></a>

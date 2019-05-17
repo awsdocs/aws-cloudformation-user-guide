@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-datapipeline-pipeline-parametervalues-syntax.yaml"></a>
 
 ```
-﻿  [Id](#cfn-datapipeline-pipeline-parametervalues-id) : String
-﻿  [StringValue](#cfn-datapipeline-pipeline-parametervalues-stringvalue) : 
+  [Id](#cfn-datapipeline-pipeline-parametervalues-id): String
+  [StringValue](#cfn-datapipeline-pipeline-parametervalues-stringvalue): 
     String
 ```
 

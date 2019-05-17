@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-dataset-resourceconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [ComputeType](#cfn-iotanalytics-dataset-resourceconfiguration-computetype) : String
-﻿  [VolumeSizeInGB](#cfn-iotanalytics-dataset-resourceconfiguration-volumesizeingb) : Integer
+  [ComputeType](#cfn-iotanalytics-dataset-resourceconfiguration-computetype): String
+  [VolumeSizeInGB](#cfn-iotanalytics-dataset-resourceconfiguration-volumesizeingb): Integer
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-dataset-resourceconfiguration-properties"></a>

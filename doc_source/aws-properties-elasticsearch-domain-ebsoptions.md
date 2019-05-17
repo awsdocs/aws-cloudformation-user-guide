@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticsearch-domain-ebsoptions-syntax.yaml"></a>
 
 ```
-﻿  [EBSEnabled](#cfn-elasticsearch-domain-ebsoptions-ebsenabled) : Boolean
-﻿  [Iops](#cfn-elasticsearch-domain-ebsoptions-iops) : Integer
-﻿  [VolumeSize](#cfn-elasticsearch-domain-ebsoptions-volumesize) : Integer
-﻿  [VolumeType](#cfn-elasticsearch-domain-ebsoptions-volumetype) : String
+  [EBSEnabled](#cfn-elasticsearch-domain-ebsoptions-ebsenabled): Boolean
+  [Iops](#cfn-elasticsearch-domain-ebsoptions-iops): Integer
+  [VolumeSize](#cfn-elasticsearch-domain-ebsoptions-volumesize): Integer
+  [VolumeType](#cfn-elasticsearch-domain-ebsoptions-volumetype): String
 ```
 
 ## Properties<a name="aws-properties-elasticsearch-domain-ebsoptions-properties"></a>

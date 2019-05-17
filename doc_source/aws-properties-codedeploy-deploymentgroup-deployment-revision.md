@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-syntax.yaml"></a>
 
 ```
-﻿  [GitHubLocation](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation) : 
+  [GitHubLocation](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation): 
     [GitHubLocation](aws-properties-codedeploy-deploymentgroup-deployment-revision-githublocation.md)
-﻿  [RevisionType](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-revisiontype) : String
-﻿  [S3Location](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location) : 
+  [RevisionType](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-revisiontype): String
+  [S3Location](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location): 
     [S3Location](aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location.md)
 ```
 

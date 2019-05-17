@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [CodeContent](#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontent) : 
+  [CodeContent](#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontent): 
     [CodeContent](aws-properties-kinesisanalyticsv2-application-codecontent.md)
-﻿  [CodeContentType](#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontenttype) : String
+  [CodeContentType](#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontenttype): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration-properties"></a>

@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-trigger-predicate-syntax.yaml"></a>
 
 ```
-﻿  [Conditions](#cfn-glue-trigger-predicate-conditions) : 
+  [Conditions](#cfn-glue-trigger-predicate-conditions): 
     - [Condition](aws-properties-glue-trigger-condition.md)
-﻿  [Logical](#cfn-glue-trigger-predicate-logical) : String
+  [Logical](#cfn-glue-trigger-predicate-logical): String
 ```
 
 ## Properties<a name="aws-properties-glue-trigger-predicate-properties"></a>

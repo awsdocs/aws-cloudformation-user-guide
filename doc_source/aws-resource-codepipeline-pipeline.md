@@ -27,17 +27,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CodePipeline::Pipeline
-Properties : 
-﻿  [ArtifactStore](#cfn-codepipeline-pipeline-artifactstore) : 
+Properties: 
+  [ArtifactStore](#cfn-codepipeline-pipeline-artifactstore): 
     [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md)
-﻿  [ArtifactStores](#cfn-codepipeline-pipeline-artifactstores) : 
+  [ArtifactStores](#cfn-codepipeline-pipeline-artifactstores): 
     - [ArtifactStoreMap](aws-properties-codepipeline-pipeline-artifactstoremap.md)
-﻿  [DisableInboundStageTransitions](#cfn-codepipeline-pipeline-disableinboundstagetransitions) : 
+  [DisableInboundStageTransitions](#cfn-codepipeline-pipeline-disableinboundstagetransitions): 
     - [StageTransition](aws-properties-codepipeline-pipeline-disableinboundstagetransitions.md)
-﻿  [Name](#cfn-codepipeline-pipeline-name) : String
-﻿  [RestartExecutionOnUpdate](#cfn-codepipeline-pipeline-restartexecutiononupdate) : Boolean
-﻿  [RoleArn](#cfn-codepipeline-pipeline-rolearn) : String
-﻿  [Stages](#cfn-codepipeline-pipeline-stages) : 
+  [Name](#cfn-codepipeline-pipeline-name): String
+  [RestartExecutionOnUpdate](#cfn-codepipeline-pipeline-restartexecutiononupdate): Boolean
+  [RoleArn](#cfn-codepipeline-pipeline-rolearn): String
+  [Stages](#cfn-codepipeline-pipeline-stages): 
     - [StageDeclaration](aws-properties-codepipeline-pipeline-stages.md)
 ```
 

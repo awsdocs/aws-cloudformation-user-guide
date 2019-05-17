@@ -31,16 +31,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IAM::ManagedPolicy
-Properties : 
-﻿  [Description](#cfn-iam-managedpolicy-description) : String
-﻿  [Groups](#cfn-iam-managedpolicy-groups) : 
+Properties: 
+  [Description](#cfn-iam-managedpolicy-description): String
+  [Groups](#cfn-iam-managedpolicy-groups): 
     - String
-﻿  [ManagedPolicyName](#cfn-iam-managedpolicy-managedpolicyname) : String
-﻿  [Path](#cfn-ec2-dhcpoptions-path) : String
-﻿  [PolicyDocument](#cfn-iam-managedpolicy-policydocument) : Json
-﻿  [Roles](#cfn-iam-managedpolicy-roles) : 
+  [ManagedPolicyName](#cfn-iam-managedpolicy-managedpolicyname): String
+  [Path](#cfn-ec2-dhcpoptions-path): String
+  [PolicyDocument](#cfn-iam-managedpolicy-policydocument): Json
+  [Roles](#cfn-iam-managedpolicy-roles): 
     - String
-﻿  [Users](#cfn-iam-managedpolicy-users) : 
+  [Users](#cfn-iam-managedpolicy-users): 
     - String
 ```
 

@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AmazonMQ::Configuration
-Properties : 
-﻿  [Data](#cfn-amazonmq-configuration-data) : String
-﻿  [Description](#cfn-amazonmq-configuration-description) : String
-﻿  [EngineType](#cfn-amazonmq-configuration-enginetype) : String
-﻿  [EngineVersion](#cfn-amazonmq-configuration-engineversion) : String
-﻿  [Name](#cfn-amazonmq-configuration-name) : String
-﻿  [Tags](#cfn-amazonmq-configuration-tags) : 
+Properties: 
+  [Data](#cfn-amazonmq-configuration-data): String
+  [Description](#cfn-amazonmq-configuration-description): String
+  [EngineType](#cfn-amazonmq-configuration-enginetype): String
+  [EngineVersion](#cfn-amazonmq-configuration-engineversion): String
+  [Name](#cfn-amazonmq-configuration-name): String
+  [Tags](#cfn-amazonmq-configuration-tags): 
     - [TagsEntry](aws-properties-amazonmq-configuration-tagsentry.md)
 ```
 

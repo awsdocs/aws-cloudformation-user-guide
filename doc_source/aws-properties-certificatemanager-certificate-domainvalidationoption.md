@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-certificatemanager-certificate-domainvalidationoption-syntax.yaml"></a>
 
 ```
-﻿  [DomainName](#cfn-certificatemanager-certificate-domainvalidationoptions-domainname) : String
-﻿  [ValidationDomain](#cfn-certificatemanager-certificate-domainvalidationoption-validationdomain) : String
+  [DomainName](#cfn-certificatemanager-certificate-domainvalidationoptions-domainname): String
+  [ValidationDomain](#cfn-certificatemanager-certificate-domainvalidationoption-validationdomain): String
 ```
 
 ## Properties<a name="aws-properties-certificatemanager-certificate-domainvalidationoption-properties"></a>

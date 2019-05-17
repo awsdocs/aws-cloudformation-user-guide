@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ses-configurationseteventdestination-cloudwatchdestination-syntax.yaml"></a>
 
 ```
-﻿  [DimensionConfigurations](#cfn-ses-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations) : 
+  [DimensionConfigurations](#cfn-ses-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations): 
     - [DimensionConfiguration](aws-properties-ses-configurationseteventdestination-dimensionconfiguration.md)
 ```
 

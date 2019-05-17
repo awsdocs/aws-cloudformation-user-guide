@@ -31,20 +31,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SageMaker::NotebookInstance
-Properties : 
-﻿  [DirectInternetAccess](#cfn-sagemaker-notebookinstance-directinternetaccess) : String
-﻿  [InstanceType](#cfn-sagemaker-notebookinstance-instancetype) : String
-﻿  [KmsKeyId](#cfn-sagemaker-notebookinstance-kmskeyid) : String
-﻿  [LifecycleConfigName](#cfn-sagemaker-notebookinstance-lifecycleconfigname) : String
-﻿  [NotebookInstanceName](#cfn-sagemaker-notebookinstance-notebookinstancename) : String
-﻿  [RoleArn](#cfn-sagemaker-notebookinstance-rolearn) : String
-﻿  [RootAccess](#cfn-sagemaker-notebookinstance-rootaccess) : String
-﻿  [SecurityGroupIds](#cfn-sagemaker-notebookinstance-securitygroupids) : 
+Properties: 
+  [DirectInternetAccess](#cfn-sagemaker-notebookinstance-directinternetaccess): String
+  [InstanceType](#cfn-sagemaker-notebookinstance-instancetype): String
+  [KmsKeyId](#cfn-sagemaker-notebookinstance-kmskeyid): String
+  [LifecycleConfigName](#cfn-sagemaker-notebookinstance-lifecycleconfigname): String
+  [NotebookInstanceName](#cfn-sagemaker-notebookinstance-notebookinstancename): String
+  [RoleArn](#cfn-sagemaker-notebookinstance-rolearn): String
+  [RootAccess](#cfn-sagemaker-notebookinstance-rootaccess): String
+  [SecurityGroupIds](#cfn-sagemaker-notebookinstance-securitygroupids): 
     - String
-﻿  [SubnetId](#cfn-sagemaker-notebookinstance-subnetid) : String
-﻿  [Tags](#cfn-sagemaker-notebookinstance-tags) : 
+  [SubnetId](#cfn-sagemaker-notebookinstance-subnetid): String
+  [Tags](#cfn-sagemaker-notebookinstance-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VolumeSizeInGB](#cfn-sagemaker-notebookinstance-volumesizeingb) : Integer
+  [VolumeSizeInGB](#cfn-sagemaker-notebookinstance-volumesizeingb): Integer
 ```
 
 ## Properties<a name="aws-resource-sagemaker-notebookinstance-properties"></a>

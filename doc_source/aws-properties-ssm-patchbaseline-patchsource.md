@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ssm-patchbaseline-patchsource-syntax.yaml"></a>
 
 ```
-﻿  [Configuration](#cfn-ssm-patchbaseline-patchsource-configuration) : String
-﻿  [Name](#cfn-ssm-patchbaseline-patchsource-name) : String
-﻿  [Products](#cfn-ssm-patchbaseline-patchsource-products) : 
+  [Configuration](#cfn-ssm-patchbaseline-patchsource-configuration): String
+  [Name](#cfn-ssm-patchbaseline-patchsource-name): String
+  [Products](#cfn-ssm-patchbaseline-patchsource-products): 
     - String
 ```
 

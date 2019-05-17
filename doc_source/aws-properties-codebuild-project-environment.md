@@ -24,16 +24,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-environment-syntax.yaml"></a>
 
 ```
-﻿  [Certificate](#cfn-codebuild-project-environment-certificate) : String
-﻿  [ComputeType](#cfn-codebuild-project-environment-computetype) : String
-﻿  [EnvironmentVariables](#cfn-codebuild-project-environment-environmentvariables) : 
+  [Certificate](#cfn-codebuild-project-environment-certificate): String
+  [ComputeType](#cfn-codebuild-project-environment-computetype): String
+  [EnvironmentVariables](#cfn-codebuild-project-environment-environmentvariables): 
     - [EnvironmentVariable](aws-properties-codebuild-project-environmentvariable.md)
-﻿  [Image](#cfn-codebuild-project-environment-image) : String
-﻿  [ImagePullCredentialsType](#cfn-codebuild-project-environment-imagepullcredentialstype) : String
-﻿  [PrivilegedMode](#cfn-codebuild-project-environment-privilegedmode) : Boolean
-﻿  [RegistryCredential](#cfn-codebuild-project-environment-registrycredential) : 
+  [Image](#cfn-codebuild-project-environment-image): String
+  [ImagePullCredentialsType](#cfn-codebuild-project-environment-imagepullcredentialstype): String
+  [PrivilegedMode](#cfn-codebuild-project-environment-privilegedmode): Boolean
+  [RegistryCredential](#cfn-codebuild-project-environment-registrycredential): 
     [RegistryCredential](aws-properties-codebuild-project-registrycredential.md)
-﻿  [Type](#cfn-codebuild-project-environment-type) : String
+  [Type](#cfn-codebuild-project-environment-type): String
 ```
 
 ## Properties<a name="aws-properties-codebuild-project-environment-properties"></a>

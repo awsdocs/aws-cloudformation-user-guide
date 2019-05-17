@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IAM::UserToGroupAddition
-Properties : 
-﻿  [GroupName](#cfn-iam-addusertogroup-groupname) : String
-﻿  [Users](#cfn-iam-addusertogroup-users) : 
+Properties: 
+  [GroupName](#cfn-iam-addusertogroup-groupname): String
+  [Users](#cfn-iam-addusertogroup-users): 
     - String
 ```
 

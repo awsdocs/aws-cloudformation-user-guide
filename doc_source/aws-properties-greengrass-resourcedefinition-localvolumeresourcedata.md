@@ -21,10 +21,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-resourcedefinition-localvolumeresourcedata-syntax.yaml"></a>
 
 ```
-﻿  [DestinationPath](#cfn-greengrass-resourcedefinition-localvolumeresourcedata-destinationpath) : String
-﻿  [GroupOwnerSetting](#cfn-greengrass-resourcedefinition-localvolumeresourcedata-groupownersetting) : 
+  [DestinationPath](#cfn-greengrass-resourcedefinition-localvolumeresourcedata-destinationpath): String
+  [GroupOwnerSetting](#cfn-greengrass-resourcedefinition-localvolumeresourcedata-groupownersetting): 
     [GroupOwnerSetting](aws-properties-greengrass-resourcedefinition-groupownersetting.md)
-﻿  [SourcePath](#cfn-greengrass-resourcedefinition-localvolumeresourcedata-sourcepath) : String
+  [SourcePath](#cfn-greengrass-resourcedefinition-localvolumeresourcedata-sourcepath): String
 ```
 
 ## Properties<a name="aws-properties-greengrass-resourcedefinition-localvolumeresourcedata-properties"></a>

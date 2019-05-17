@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cw-dimension-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-cloudwatch-alarm-dimension-name) : String
-﻿  [Value](#cfn-cloudwatch-alarm-dimension-value) : String
+  [Name](#cfn-cloudwatch-alarm-dimension-name): String
+  [Value](#cfn-cloudwatch-alarm-dimension-value): String
 ```
 
 ## Properties<a name="aws-properties-cw-dimension-properties"></a>

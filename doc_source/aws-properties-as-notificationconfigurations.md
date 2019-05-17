@@ -20,9 +20,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-as-notificationconfigurations-syntax.yaml"></a>
 
 ```
-﻿  [NotificationTypes](#cfn-as-group-notificationconfigurations-notificationtypes) : 
+  [NotificationTypes](#cfn-as-group-notificationconfigurations-notificationtypes): 
     - String
-﻿  [TopicARN](#cfn-autoscaling-autoscalinggroup-notificationconfigurations-topicarn) : String
+  [TopicARN](#cfn-autoscaling-autoscalinggroup-notificationconfigurations-topicarn): String
 ```
 
 ## Properties<a name="aws-properties-as-notificationconfigurations-properties"></a>

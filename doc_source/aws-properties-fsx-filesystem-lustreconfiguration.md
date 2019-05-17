@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-fsx-filesystem-lustreconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [ExportPath](#cfn-fsx-filesystem-lustreconfiguration-exportpath) : String
-﻿  [ImportPath](#cfn-fsx-filesystem-lustreconfiguration-importpath) : String
-﻿  [ImportedFileChunkSize](#cfn-fsx-filesystem-lustreconfiguration-importedfilechunksize) : Integer
-﻿  [WeeklyMaintenanceStartTime](#cfn-fsx-filesystem-lustreconfiguration-weeklymaintenancestarttime) : String
+  [ExportPath](#cfn-fsx-filesystem-lustreconfiguration-exportpath): String
+  [ImportPath](#cfn-fsx-filesystem-lustreconfiguration-importpath): String
+  [ImportedFileChunkSize](#cfn-fsx-filesystem-lustreconfiguration-importedfilechunksize): Integer
+  [WeeklyMaintenanceStartTime](#cfn-fsx-filesystem-lustreconfiguration-weeklymaintenancestarttime): String
 ```
 
 ## Properties<a name="aws-properties-fsx-filesystem-lustreconfiguration-properties"></a>

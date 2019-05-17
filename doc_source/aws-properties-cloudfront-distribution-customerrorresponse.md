@@ -24,10 +24,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudfront-distribution-customerrorresponse-syntax.yaml"></a>
 
 ```
-﻿  [ErrorCachingMinTTL](#cfn-cloudfront-distribution-customerrorresponse-errorcachingminttl) : Double
-﻿  [ErrorCode](#cfn-cloudfront-distribution-customerrorresponse-errorcode) : Integer
-﻿  [ResponseCode](#cfn-cloudfront-distribution-customerrorresponse-responsecode) : Integer
-﻿  [ResponsePagePath](#cfn-cloudfront-distribution-customerrorresponse-responsepagepath) : String
+  [ErrorCachingMinTTL](#cfn-cloudfront-distribution-customerrorresponse-errorcachingminttl): Double
+  [ErrorCode](#cfn-cloudfront-distribution-customerrorresponse-errorcode): Integer
+  [ResponseCode](#cfn-cloudfront-distribution-customerrorresponse-responsecode): Integer
+  [ResponsePagePath](#cfn-cloudfront-distribution-customerrorresponse-responsepagepath): String
 ```
 
 ## Properties<a name="aws-properties-cloudfront-distribution-customerrorresponse-properties"></a>

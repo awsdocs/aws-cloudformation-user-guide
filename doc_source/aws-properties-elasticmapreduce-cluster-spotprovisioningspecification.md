@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-spotprovisioningspecification-syntax.yaml"></a>
 
 ```
-﻿  [BlockDurationMinutes](#cfn-elasticmapreduce-cluster-spotprovisioningspecification-blockdurationminutes) : Integer
-﻿  [TimeoutAction](#cfn-elasticmapreduce-cluster-spotprovisioningspecification-timeoutaction) : String
-﻿  [TimeoutDurationMinutes](#cfn-elasticmapreduce-cluster-spotprovisioningspecification-timeoutdurationminutes) : Integer
+  [BlockDurationMinutes](#cfn-elasticmapreduce-cluster-spotprovisioningspecification-blockdurationminutes): Integer
+  [TimeoutAction](#cfn-elasticmapreduce-cluster-spotprovisioningspecification-timeoutaction): String
+  [TimeoutDurationMinutes](#cfn-elasticmapreduce-cluster-spotprovisioningspecification-timeoutdurationminutes): Integer
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-spotprovisioningspecification-properties"></a>

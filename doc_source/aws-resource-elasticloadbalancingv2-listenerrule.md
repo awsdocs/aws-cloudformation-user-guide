@@ -24,13 +24,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ElasticLoadBalancingV2::ListenerRule
-Properties : 
-﻿  [Actions](#cfn-elasticloadbalancingv2-listenerrule-actions) : 
+Properties: 
+  [Actions](#cfn-elasticloadbalancingv2-listenerrule-actions): 
     - [Action](aws-properties-elasticloadbalancingv2-listenerrule-actions.md)
-﻿  [Conditions](#cfn-elasticloadbalancingv2-listenerrule-conditions) : 
+  [Conditions](#cfn-elasticloadbalancingv2-listenerrule-conditions): 
     - [RuleCondition](aws-properties-elasticloadbalancingv2-listenerrule-conditions.md)
-﻿  [ListenerArn](#cfn-elasticloadbalancingv2-listenerrule-listenerarn) : String
-﻿  [Priority](#cfn-elasticloadbalancingv2-listenerrule-priority) : Integer
+  [ListenerArn](#cfn-elasticloadbalancingv2-listenerrule-listenerarn): String
+  [Priority](#cfn-elasticloadbalancingv2-listenerrule-priority): Integer
 ```
 
 ## Properties<a name="aws-resource-elasticloadbalancingv2-listenerrule-properties"></a>

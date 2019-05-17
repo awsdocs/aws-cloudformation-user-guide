@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-triggerconfig-syntax.yaml"></a>
 
 ```
-﻿  [TriggerEvents](#cfn-codedeploy-deploymentgroup-triggerconfig-triggerevents) : 
+  [TriggerEvents](#cfn-codedeploy-deploymentgroup-triggerconfig-triggerevents): 
     - String
-﻿  [TriggerName](#cfn-codedeploy-deploymentgroup-triggerconfig-triggername) : String
-﻿  [TriggerTargetArn](#cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn) : String
+  [TriggerName](#cfn-codedeploy-deploymentgroup-triggerconfig-triggername): String
+  [TriggerTargetArn](#cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn): String
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-triggerconfig-properties"></a>

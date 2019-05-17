@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appsync-datasource-dynamodbconfig-syntax.yaml"></a>
 
 ```
-﻿  [AwsRegion](#cfn-appsync-datasource-dynamodbconfig-awsregion) : String
-﻿  [TableName](#cfn-appsync-datasource-dynamodbconfig-tablename) : String
-﻿  [UseCallerCredentials](#cfn-appsync-datasource-dynamodbconfig-usecallercredentials) : Boolean
+  [AwsRegion](#cfn-appsync-datasource-dynamodbconfig-awsregion): String
+  [TableName](#cfn-appsync-datasource-dynamodbconfig-tablename): String
+  [UseCallerCredentials](#cfn-appsync-datasource-dynamodbconfig-usecallercredentials): Boolean
 ```
 
 ## Properties<a name="aws-properties-appsync-datasource-dynamodbconfig-properties"></a>

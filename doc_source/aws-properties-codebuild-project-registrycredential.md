@@ -22,8 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-registrycredential-syntax.yaml"></a>
 
 ```
-﻿  [Credential](#cfn-codebuild-project-registrycredential-credential) : String
-﻿  [CredentialProvider](#cfn-codebuild-project-registrycredential-credentialprovider) : String
+  [Credential](#cfn-codebuild-project-registrycredential-credential): String
+  [CredentialProvider](#cfn-codebuild-project-registrycredential-credentialprovider): String
 ```
 
 ## Properties<a name="aws-properties-codebuild-project-registrycredential-properties"></a>

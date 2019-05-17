@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloud9-environmentec2-repository-syntax.yaml"></a>
 
 ```
-﻿  [PathComponent](#cfn-cloud9-environmentec2-repository-pathcomponent) : String
-﻿  [RepositoryUrl](#cfn-cloud9-environmentec2-repository-repositoryurl) : String
+  [PathComponent](#cfn-cloud9-environmentec2-repository-pathcomponent): String
+  [RepositoryUrl](#cfn-cloud9-environmentec2-repository-repositoryurl): String
 ```
 
 ## Properties<a name="aws-properties-cloud9-environmentec2-repository-properties"></a>

@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-virtualnode-listener-syntax.yaml"></a>
 
 ```
-﻿  [HealthCheck](#cfn-appmesh-virtualnode-listener-healthcheck) : 
+  [HealthCheck](#cfn-appmesh-virtualnode-listener-healthcheck): 
     [HealthCheck](aws-properties-appmesh-virtualnode-healthcheck.md)
-﻿  [PortMapping](#cfn-appmesh-virtualnode-listener-portmapping) : 
+  [PortMapping](#cfn-appmesh-virtualnode-listener-portmapping): 
     [PortMapping](aws-properties-appmesh-virtualnode-portmapping.md)
 ```
 

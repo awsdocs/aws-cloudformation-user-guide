@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::SubnetNetworkAclAssociation
-Properties : 
-﻿  [NetworkAclId](#cfn-ec2-subnetnetworkaclassociation-networkaclid) : String
-﻿  [SubnetId](#cfn-ec2-subnetnetworkaclassociation-associationid) : String
+Properties: 
+  [NetworkAclId](#cfn-ec2-subnetnetworkaclassociation-networkaclid): String
+  [SubnetId](#cfn-ec2-subnetnetworkaclassociation-associationid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-subnet-network-acl-assoc-properties"></a>

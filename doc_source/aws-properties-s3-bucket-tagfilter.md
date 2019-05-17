@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-tagfilter-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-s3-bucket-tagfilter-key) : String
-﻿  [Value](#cfn-s3-bucket-tagfilter-value) : String
+  [Key](#cfn-s3-bucket-tagfilter-key): String
+  [Value](#cfn-s3-bucket-tagfilter-value): String
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-tagfilter-properties"></a>

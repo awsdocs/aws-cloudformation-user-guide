@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dms-endpoint-dynamodbsettings-syntax.yaml"></a>
 
 ```
-﻿  [ServiceAccessRoleArn](#cfn-dms-endpoint-dynamodbsettings-serviceaccessrolearn) : String
+  [ServiceAccessRoleArn](#cfn-dms-endpoint-dynamodbsettings-serviceaccessrolearn): String
 ```
 
 ## Properties<a name="aws-properties-dms-endpoint-dynamodbsettings-properties"></a>

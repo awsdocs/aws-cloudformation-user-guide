@@ -33,14 +33,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AutoScaling::ScheduledAction
-Properties : 
-﻿  [AutoScalingGroupName](#cfn-as-scheduledaction-asgname) : String
-﻿  [DesiredCapacity](#cfn-as-scheduledaction-desiredcapacity) : Integer
-﻿  [EndTime](#cfn-as-scheduledaction-endtime) : String
-﻿  [MaxSize](#cfn-as-scheduledaction-maxsize) : Integer
-﻿  [MinSize](#cfn-as-scheduledaction-minsize) : Integer
-﻿  [Recurrence](#cfn-as-scheduledaction-recurrence) : String
-﻿  [StartTime](#cfn-as-scheduledaction-starttime) : String
+Properties: 
+  [AutoScalingGroupName](#cfn-as-scheduledaction-asgname): String
+  [DesiredCapacity](#cfn-as-scheduledaction-desiredcapacity): Integer
+  [EndTime](#cfn-as-scheduledaction-endtime): String
+  [MaxSize](#cfn-as-scheduledaction-maxsize): Integer
+  [MinSize](#cfn-as-scheduledaction-minsize): Integer
+  [Recurrence](#cfn-as-scheduledaction-recurrence): String
+  [StartTime](#cfn-as-scheduledaction-starttime): String
 ```
 
 ## Properties<a name="aws-resource-as-scheduledaction-properties"></a>

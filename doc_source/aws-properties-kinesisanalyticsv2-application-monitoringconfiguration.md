@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-monitoringconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [ConfigurationType](#cfn-kinesisanalyticsv2-application-monitoringconfiguration-configurationtype) : String
-﻿  [LogLevel](#cfn-kinesisanalyticsv2-application-monitoringconfiguration-loglevel) : String
-﻿  [MetricsLevel](#cfn-kinesisanalyticsv2-application-monitoringconfiguration-metricslevel) : String
+  [ConfigurationType](#cfn-kinesisanalyticsv2-application-monitoringconfiguration-configurationtype): String
+  [LogLevel](#cfn-kinesisanalyticsv2-application-monitoringconfiguration-loglevel): String
+  [MetricsLevel](#cfn-kinesisanalyticsv2-application-monitoringconfiguration-metricslevel): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-monitoringconfiguration-properties"></a>

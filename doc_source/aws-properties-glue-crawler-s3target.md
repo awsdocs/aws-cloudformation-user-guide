@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-crawler-s3target-syntax.yaml"></a>
 
 ```
-﻿  [Exclusions](#cfn-glue-crawler-s3target-exclusions) : 
+  [Exclusions](#cfn-glue-crawler-s3target-exclusions): 
     - String
-﻿  [Path](#cfn-glue-crawler-s3target-path) : String
+  [Path](#cfn-glue-crawler-s3target-path): String
 ```
 
 ## Properties<a name="aws-properties-glue-crawler-s3target-properties"></a>

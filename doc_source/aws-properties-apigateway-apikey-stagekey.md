@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apigateway-apikey-stagekey-syntax.yaml"></a>
 
 ```
-﻿  [RestApiId](#cfn-apigateway-apikey-stagekey-restapiid) : String
-﻿  [StageName](#cfn-apigateway-apikey-stagekey-stagename) : String
+  [RestApiId](#cfn-apigateway-apikey-stagekey-restapiid): String
+  [StageName](#cfn-apigateway-apikey-stagekey-stagename): String
 ```
 
 ## Properties<a name="aws-properties-apigateway-apikey-stagekey-properties"></a>

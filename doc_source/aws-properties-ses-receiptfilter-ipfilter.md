@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ses-receiptfilter-ipfilter-syntax.yaml"></a>
 
 ```
-﻿  [Cidr](#cfn-ses-receiptfilter-ipfilter-cidr) : String
-﻿  [Policy](#cfn-ses-receiptfilter-ipfilter-policy) : String
+  [Cidr](#cfn-ses-receiptfilter-ipfilter-cidr): String
+  [Policy](#cfn-ses-receiptfilter-ipfilter-policy): String
 ```
 
 ## Properties<a name="aws-properties-ses-receiptfilter-ipfilter-properties"></a>

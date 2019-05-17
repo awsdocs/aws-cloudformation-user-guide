@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dlm-lifecyclepolicy-retainrule-syntax.yaml"></a>
 
 ```
-﻿  [Count](#cfn-dlm-lifecyclepolicy-retainrule-count) : Integer
+  [Count](#cfn-dlm-lifecyclepolicy-retainrule-count): Integer
 ```
 
 ## Properties<a name="aws-properties-dlm-lifecyclepolicy-retainrule-properties"></a>

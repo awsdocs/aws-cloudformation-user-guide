@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-service-deploymentconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [MaximumPercent](#cfn-ecs-service-deploymentconfiguration-maximumpercent) : Integer
-﻿  [MinimumHealthyPercent](#cfn-ecs-service-deploymentconfiguration-minimumhealthypercent) : Integer
+  [MaximumPercent](#cfn-ecs-service-deploymentconfiguration-maximumpercent): Integer
+  [MinimumHealthyPercent](#cfn-ecs-service-deploymentconfiguration-minimumhealthypercent): Integer
 ```
 
 ## Properties<a name="aws-properties-ecs-service-deploymentconfiguration-properties"></a>

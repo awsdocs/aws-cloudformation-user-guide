@@ -51,40 +51,40 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Redshift::Cluster
-Properties : 
-﻿  [AllowVersionUpgrade](#cfn-redshift-cluster-allowversionupgrade) : Boolean
-﻿  [AutomatedSnapshotRetentionPeriod](#cfn-redshift-cluster-automatedsnapshotretentionperiod) : Integer
-﻿  [AvailabilityZone](#cfn-redshift-cluster-availabilityzone) : String
-﻿  [ClusterIdentifier](#cfn-redshift-cluster-clusteridentifier) : String
-﻿  [ClusterParameterGroupName](#cfn-redshift-cluster-clusterparametergroupname) : String
-﻿  [ClusterSecurityGroups](#cfn-redshift-cluster-clustersecuritygroups) : 
+Properties: 
+  [AllowVersionUpgrade](#cfn-redshift-cluster-allowversionupgrade): Boolean
+  [AutomatedSnapshotRetentionPeriod](#cfn-redshift-cluster-automatedsnapshotretentionperiod): Integer
+  [AvailabilityZone](#cfn-redshift-cluster-availabilityzone): String
+  [ClusterIdentifier](#cfn-redshift-cluster-clusteridentifier): String
+  [ClusterParameterGroupName](#cfn-redshift-cluster-clusterparametergroupname): String
+  [ClusterSecurityGroups](#cfn-redshift-cluster-clustersecuritygroups): 
     - String
-﻿  [ClusterSubnetGroupName](#cfn-redshift-cluster-clustersubnetgroupname) : String
-﻿  [ClusterType](#cfn-redshift-cluster-clustertype) : String
-﻿  [ClusterVersion](#cfn-redshift-cluster-clusterversion) : String
-﻿  [DBName](#cfn-redshift-cluster-dbname) : String
-﻿  [ElasticIp](#cfn-redshift-cluster-elasticip) : String
-﻿  [Encrypted](#cfn-redshift-cluster-encrypted) : Boolean
-﻿  [HsmClientCertificateIdentifier](#cfn-redshift-cluster-hsmclientcertidentifier) : String
-﻿  [HsmConfigurationIdentifier](#cfn-redshift-cluster-HsmConfigurationIdentifier) : String
-﻿  [IamRoles](#cfn-redshift-cluster-iamroles) : 
+  [ClusterSubnetGroupName](#cfn-redshift-cluster-clustersubnetgroupname): String
+  [ClusterType](#cfn-redshift-cluster-clustertype): String
+  [ClusterVersion](#cfn-redshift-cluster-clusterversion): String
+  [DBName](#cfn-redshift-cluster-dbname): String
+  [ElasticIp](#cfn-redshift-cluster-elasticip): String
+  [Encrypted](#cfn-redshift-cluster-encrypted): Boolean
+  [HsmClientCertificateIdentifier](#cfn-redshift-cluster-hsmclientcertidentifier): String
+  [HsmConfigurationIdentifier](#cfn-redshift-cluster-HsmConfigurationIdentifier): String
+  [IamRoles](#cfn-redshift-cluster-iamroles): 
     - String
-﻿  [KmsKeyId](#cfn-redshift-cluster-kmskeyid) : String
-﻿  [LoggingProperties](#cfn-redshift-cluster-loggingproperties) : 
+  [KmsKeyId](#cfn-redshift-cluster-kmskeyid): String
+  [LoggingProperties](#cfn-redshift-cluster-loggingproperties): 
     [LoggingProperties](aws-properties-redshift-cluster-loggingproperties.md)
-﻿  [MasterUserPassword](#cfn-redshift-cluster-masteruserpassword) : String
-﻿  [MasterUsername](#cfn-redshift-cluster-masterusername) : String
-﻿  [NodeType](#cfn-redshift-cluster-nodetype) : String
-﻿  [NumberOfNodes](#cfn-redshift-cluster-nodetype) : Integer
-﻿  [OwnerAccount](#cfn-redshift-cluster-owneraccount) : String
-﻿  [Port](#cfn-redshift-cluster-port) : Integer
-﻿  [PreferredMaintenanceWindow](#cfn-redshift-cluster-preferredmaintenancewindow) : String
-﻿  [PubliclyAccessible](#cfn-redshift-cluster-publiclyaccessible) : Boolean
-﻿  [SnapshotClusterIdentifier](#cfn-redshift-cluster-snapshotclusteridentifier) : String
-﻿  [SnapshotIdentifier](#cfn-redshift-cluster-snapshotidentifier) : String
-﻿  [Tags](#cfn-redshift-cluster-tags) : 
+  [MasterUserPassword](#cfn-redshift-cluster-masteruserpassword): String
+  [MasterUsername](#cfn-redshift-cluster-masterusername): String
+  [NodeType](#cfn-redshift-cluster-nodetype): String
+  [NumberOfNodes](#cfn-redshift-cluster-nodetype): Integer
+  [OwnerAccount](#cfn-redshift-cluster-owneraccount): String
+  [Port](#cfn-redshift-cluster-port): Integer
+  [PreferredMaintenanceWindow](#cfn-redshift-cluster-preferredmaintenancewindow): String
+  [PubliclyAccessible](#cfn-redshift-cluster-publiclyaccessible): Boolean
+  [SnapshotClusterIdentifier](#cfn-redshift-cluster-snapshotclusteridentifier): String
+  [SnapshotIdentifier](#cfn-redshift-cluster-snapshotidentifier): String
+  [Tags](#cfn-redshift-cluster-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VpcSecurityGroupIds](#cfn-redshift-cluster-vpcsecuritygroupids) : 
+  [VpcSecurityGroupIds](#cfn-redshift-cluster-vpcsecuritygroupids): 
     - String
 ```
 
@@ -99,7 +99,7 @@ Default: `true`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutomatedSnapshotRetentionPeriod`  <a name="cfn-redshift-cluster-automatedsnapshotretentionperiod"></a>
-The number of days that automated snapshots are retained\. If the value is 0, automated snapshots are disabled\. Even if automated snapshots are disabled, you can still create manual snapshots when you want with \.   
+The number of days that automated snapshots are retained\. If the value is 0, automated snapshots are disabled\. Even if automated snapshots are disabled, you can still create manual snapshots when you want with CreateClusterSnapshot\.   
 Default: `1`   
 Constraints: Must be a value from 0 to 35\.  
 *Required*: No  

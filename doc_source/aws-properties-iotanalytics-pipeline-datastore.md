@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-pipeline-datastore-syntax.yaml"></a>
 
 ```
-﻿  [DatastoreName](#cfn-iotanalytics-pipeline-datastore-datastorename) : String
-﻿  [Name](#cfn-iotanalytics-pipeline-datastore-name) : String
+  [DatastoreName](#cfn-iotanalytics-pipeline-datastore-datastorename): String
+  [Name](#cfn-iotanalytics-pipeline-datastore-name): String
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-pipeline-datastore-properties"></a>

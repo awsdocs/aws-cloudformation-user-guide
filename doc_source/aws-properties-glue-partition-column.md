@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-partition-column-syntax.yaml"></a>
 
 ```
-﻿  [Comment](#cfn-glue-partition-column-comment) : String
-﻿  [Name](#cfn-glue-partition-column-name) : String
-﻿  [Type](#cfn-glue-partition-column-type) : String
+  [Comment](#cfn-glue-partition-column-comment): String
+  [Name](#cfn-glue-partition-column-name): String
+  [Type](#cfn-glue-partition-column-type): String
 ```
 
 ## Properties<a name="aws-properties-glue-partition-column-properties"></a>

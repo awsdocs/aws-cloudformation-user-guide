@@ -24,12 +24,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DocDB::DBSubnetGroup
-Properties : 
-﻿  [DBSubnetGroupDescription](#cfn-docdb-dbsubnetgroup-dbsubnetgroupdescription) : String
-﻿  [DBSubnetGroupName](#cfn-docdb-dbsubnetgroup-dbsubnetgroupname) : String
-﻿  [SubnetIds](#cfn-docdb-dbsubnetgroup-subnetids) : 
+Properties: 
+  [DBSubnetGroupDescription](#cfn-docdb-dbsubnetgroup-dbsubnetgroupdescription): String
+  [DBSubnetGroupName](#cfn-docdb-dbsubnetgroup-dbsubnetgroupname): String
+  [SubnetIds](#cfn-docdb-dbsubnetgroup-subnetids): 
     - String
-﻿  [Tags](#cfn-docdb-dbsubnetgroup-tags) : 
+  [Tags](#cfn-docdb-dbsubnetgroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 

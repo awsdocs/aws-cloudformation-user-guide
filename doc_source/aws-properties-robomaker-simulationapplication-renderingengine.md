@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-robomaker-simulationapplication-renderingengine-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-robomaker-simulationapplication-renderingengine-name) : String
-﻿  [Version](#cfn-robomaker-simulationapplication-renderingengine-version) : String
+  [Name](#cfn-robomaker-simulationapplication-renderingengine-name): String
+  [Version](#cfn-robomaker-simulationapplication-renderingengine-version): String
 ```
 
 ## Properties<a name="aws-properties-robomaker-simulationapplication-renderingengine-properties"></a>

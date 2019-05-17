@@ -22,13 +22,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-connection-connectioninput-syntax.yaml"></a>
 
 ```
-﻿  [ConnectionProperties](#cfn-glue-connection-connectioninput-connectionproperties) : Json
-﻿  [ConnectionType](#cfn-glue-connection-connectioninput-connectiontype) : String
-﻿  [Description](#cfn-glue-connection-connectioninput-description) : String
-﻿  [MatchCriteria](#cfn-glue-connection-connectioninput-matchcriteria) : 
+  [ConnectionProperties](#cfn-glue-connection-connectioninput-connectionproperties): Json
+  [ConnectionType](#cfn-glue-connection-connectioninput-connectiontype): String
+  [Description](#cfn-glue-connection-connectioninput-description): String
+  [MatchCriteria](#cfn-glue-connection-connectioninput-matchcriteria): 
     - String
-﻿  [Name](#cfn-glue-connection-connectioninput-name) : String
-﻿  [PhysicalConnectionRequirements](#cfn-glue-connection-connectioninput-physicalconnectionrequirements) : 
+  [Name](#cfn-glue-connection-connectioninput-name): String
+  [PhysicalConnectionRequirements](#cfn-glue-connection-connectioninput-physicalconnectionrequirements): 
     [PhysicalConnectionRequirements](aws-properties-glue-connection-physicalconnectionrequirements.md)
 ```
 

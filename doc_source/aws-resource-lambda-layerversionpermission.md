@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Lambda::LayerVersionPermission
-Properties : 
-﻿  [Action](#cfn-lambda-layerversionpermission-action) : String
-﻿  [LayerVersionArn](#cfn-lambda-layerversionpermission-layerversionarn) : String
-﻿  [OrganizationId](#cfn-lambda-layerversionpermission-organizationid) : String
-﻿  [Principal](#cfn-lambda-layerversionpermission-principal) : String
+Properties: 
+  [Action](#cfn-lambda-layerversionpermission-action): String
+  [LayerVersionArn](#cfn-lambda-layerversionpermission-layerversionarn): String
+  [OrganizationId](#cfn-lambda-layerversionpermission-organizationid): String
+  [Principal](#cfn-lambda-layerversionpermission-principal): String
 ```
 
 ## Properties<a name="aws-resource-lambda-layerversionpermission-properties"></a>

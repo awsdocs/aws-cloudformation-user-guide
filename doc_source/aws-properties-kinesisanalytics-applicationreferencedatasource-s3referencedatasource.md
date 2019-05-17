@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-syntax.yaml"></a>
 
 ```
-﻿  [BucketARN](#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-bucketarn) : String
-﻿  [FileKey](#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-filekey) : String
-﻿  [ReferenceRoleARN](#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-referencerolearn) : String
+  [BucketARN](#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-bucketarn): String
+  [FileKey](#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-filekey): String
+  [ReferenceRoleARN](#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-referencerolearn): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-properties"></a>

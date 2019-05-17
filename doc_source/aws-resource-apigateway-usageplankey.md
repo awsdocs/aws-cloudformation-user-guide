@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::UsagePlanKey
-Properties : 
-﻿  [KeyId](#cfn-apigateway-usageplankey-keyid) : String
-﻿  [KeyType](#cfn-apigateway-usageplankey-keytype) : String
-﻿  [UsagePlanId](#cfn-apigateway-usageplankey-usageplanid) : String
+Properties: 
+  [KeyId](#cfn-apigateway-usageplankey-keyid): String
+  [KeyType](#cfn-apigateway-usageplankey-keytype): String
+  [UsagePlanId](#cfn-apigateway-usageplankey-usageplanid): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-usageplankey-properties"></a>

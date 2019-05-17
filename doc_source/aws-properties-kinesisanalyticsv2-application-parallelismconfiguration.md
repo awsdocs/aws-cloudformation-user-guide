@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-parallelismconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [AutoScalingEnabled](#cfn-kinesisanalyticsv2-application-parallelismconfiguration-autoscalingenabled) : Boolean
-﻿  [ConfigurationType](#cfn-kinesisanalyticsv2-application-parallelismconfiguration-configurationtype) : String
-﻿  [Parallelism](#cfn-kinesisanalyticsv2-application-parallelismconfiguration-parallelism) : Integer
-﻿  [ParallelismPerKPU](#cfn-kinesisanalyticsv2-application-parallelismconfiguration-parallelismperkpu) : Integer
+  [AutoScalingEnabled](#cfn-kinesisanalyticsv2-application-parallelismconfiguration-autoscalingenabled): Boolean
+  [ConfigurationType](#cfn-kinesisanalyticsv2-application-parallelismconfiguration-configurationtype): String
+  [Parallelism](#cfn-kinesisanalyticsv2-application-parallelismconfiguration-parallelism): Integer
+  [ParallelismPerKPU](#cfn-kinesisanalyticsv2-application-parallelismconfiguration-parallelismperkpu): Integer
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-parallelismconfiguration-properties"></a>

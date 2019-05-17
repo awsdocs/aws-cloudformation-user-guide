@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-cloudwatchlogsconfig-syntax.yaml"></a>
 
 ```
-﻿  [GroupName](#cfn-codebuild-project-cloudwatchlogsconfig-groupname) : String
-﻿  [Status](#cfn-codebuild-project-cloudwatchlogsconfig-status) : String
-﻿  [StreamName](#cfn-codebuild-project-cloudwatchlogsconfig-streamname) : String
+  [GroupName](#cfn-codebuild-project-cloudwatchlogsconfig-groupname): String
+  [Status](#cfn-codebuild-project-cloudwatchlogsconfig-status): String
+  [StreamName](#cfn-codebuild-project-cloudwatchlogsconfig-streamname): String
 ```
 
 ## Properties<a name="aws-properties-codebuild-project-cloudwatchlogsconfig-properties"></a>

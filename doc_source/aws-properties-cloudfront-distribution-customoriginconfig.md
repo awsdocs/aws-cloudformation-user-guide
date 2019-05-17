@@ -22,12 +22,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudfront-distribution-customoriginconfig-syntax.yaml"></a>
 
 ```
-﻿  [HTTPPort](#cfn-cloudfront-distribution-customoriginconfig-httpport) : Integer
-﻿  [HTTPSPort](#cfn-cloudfront-distribution-customoriginconfig-httpsport) : Integer
-﻿  [OriginKeepaliveTimeout](#cfn-cloudfront-distribution-customoriginconfig-originkeepalivetimeout) : Integer
-﻿  [OriginProtocolPolicy](#cfn-cloudfront-distribution-customoriginconfig-originprotocolpolicy) : String
-﻿  [OriginReadTimeout](#cfn-cloudfront-distribution-customoriginconfig-originreadtimeout) : Integer
-﻿  [OriginSSLProtocols](#cfn-cloudfront-distribution-customoriginconfig-originsslprotocols) : 
+  [HTTPPort](#cfn-cloudfront-distribution-customoriginconfig-httpport): Integer
+  [HTTPSPort](#cfn-cloudfront-distribution-customoriginconfig-httpsport): Integer
+  [OriginKeepaliveTimeout](#cfn-cloudfront-distribution-customoriginconfig-originkeepalivetimeout): Integer
+  [OriginProtocolPolicy](#cfn-cloudfront-distribution-customoriginconfig-originprotocolpolicy): String
+  [OriginReadTimeout](#cfn-cloudfront-distribution-customoriginconfig-originreadtimeout): Integer
+  [OriginSSLProtocols](#cfn-cloudfront-distribution-customoriginconfig-originsslprotocols): 
     - String
 ```
 

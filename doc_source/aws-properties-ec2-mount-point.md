@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-mount-point-syntax.yaml"></a>
 
 ```
-﻿  [Device](#cfn-ec2-mountpoint-device) : String
-﻿  [VolumeId](#cfn-ec2-mountpoint-volumeid) : String
+  [Device](#cfn-ec2-mountpoint-device): String
+  [VolumeId](#cfn-ec2-mountpoint-volumeid): String
 ```
 
 ## Properties<a name="aws-properties-ec2-mount-point-properties"></a>

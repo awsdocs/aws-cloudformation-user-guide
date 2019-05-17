@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-opsworkscm-server-engineattribute-syntax.yaml"></a>
 
 ```
-﻿  [Name](#cfn-opsworkscm-server-engineattribute-name) : String
-﻿  [Value](#cfn-opsworkscm-server-engineattribute-value) : String
+  [Name](#cfn-opsworkscm-server-engineattribute-name): String
+  [Value](#cfn-opsworkscm-server-engineattribute-value): String
 ```
 
 ## Properties<a name="aws-properties-opsworkscm-server-engineattribute-properties"></a>

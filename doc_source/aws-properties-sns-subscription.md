@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-sns-subscription-syntax.yaml"></a>
 
 ```
-﻿  [Endpoint](#cfn-sns-topic-subscription-endpoint) : String
-﻿  [Protocol](#cfn-sns-topic-subscription-protocol) : String
+  [Endpoint](#cfn-sns-topic-subscription-endpoint): String
+  [Protocol](#cfn-sns-topic-subscription-protocol): String
 ```
 
 ## Properties<a name="aws-properties-sns-subscription-properties"></a>

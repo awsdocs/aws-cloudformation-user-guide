@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-ec2tagsetlistobject-syntax.yaml"></a>
 
 ```
-﻿  [Ec2TagGroup](#cfn-codedeploy-deploymentgroup-ec2tagsetlistobject-ec2taggroup) : 
+  [Ec2TagGroup](#cfn-codedeploy-deploymentgroup-ec2tagsetlistobject-ec2taggroup): 
     - [EC2TagFilter](aws-properties-codedeploy-deploymentgroup-ec2tagfilter.md)
 ```
 

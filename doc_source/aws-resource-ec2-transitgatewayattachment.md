@@ -28,13 +28,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::TransitGatewayAttachment
-Properties : 
-﻿  [SubnetIds](#cfn-ec2-transitgatewayattachment-subnetids) : 
+Properties: 
+  [SubnetIds](#cfn-ec2-transitgatewayattachment-subnetids): 
     - String
-﻿  [Tags](#cfn-ec2-transitgatewayattachment-tags) : 
+  [Tags](#cfn-ec2-transitgatewayattachment-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [TransitGatewayId](#cfn-ec2-transitgatewayattachment-transitgatewayid) : String
-﻿  [VpcId](#cfn-ec2-transitgatewayattachment-vpcid) : String
+  [TransitGatewayId](#cfn-ec2-transitgatewayattachment-transitgatewayid): String
+  [VpcId](#cfn-ec2-transitgatewayattachment-vpcid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-transitgatewayattachment-properties"></a>

@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-dataset-triggeringdataset-syntax.yaml"></a>
 
 ```
-﻿  [DatasetName](#cfn-iotanalytics-dataset-triggeringdataset-datasetname) : String
+  [DatasetName](#cfn-iotanalytics-dataset-triggeringdataset-datasetname): String
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-dataset-triggeringdataset-properties"></a>

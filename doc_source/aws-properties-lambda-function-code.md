@@ -22,10 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-lambda-function-code-syntax.yaml"></a>
 
 ```
-﻿  [S3Bucket](#cfn-lambda-function-code-s3bucket) : String
-﻿  [S3Key](#cfn-lambda-function-code-s3key) : String
-﻿  [S3ObjectVersion](#cfn-lambda-function-code-s3objectversion) : String
-﻿  [ZipFile](#cfn-lambda-function-code-zipfile) : String
+  [S3Bucket](#cfn-lambda-function-code-s3bucket): String
+  [S3Key](#cfn-lambda-function-code-s3key): String
+  [S3ObjectVersion](#cfn-lambda-function-code-s3objectversion): String
+  [ZipFile](#cfn-lambda-function-code-zipfile): String
 ```
 
 ## Properties<a name="aws-properties-lambda-function-code-properties"></a>

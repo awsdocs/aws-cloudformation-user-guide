@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-mesh-egressfilter-syntax.yaml"></a>
 
 ```
-﻿  [Type](#cfn-appmesh-mesh-egressfilter-type) : String
+  [Type](#cfn-appmesh-mesh-egressfilter-type): String
 ```
 
 ## Properties<a name="aws-properties-appmesh-mesh-egressfilter-properties"></a>

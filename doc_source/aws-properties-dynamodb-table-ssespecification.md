@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dynamodb-table-ssespecification-syntax.yaml"></a>
 
 ```
-﻿  [SSEEnabled](#cfn-dynamodb-table-ssespecification-sseenabled) : Boolean
+  [SSEEnabled](#cfn-dynamodb-table-ssespecification-sseenabled): Boolean
 ```
 
 ## Properties<a name="aws-properties-dynamodb-table-ssespecification-properties"></a>

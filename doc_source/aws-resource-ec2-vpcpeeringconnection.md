@@ -33,14 +33,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPCPeeringConnection
-Properties : 
-﻿  [PeerOwnerId](#cfn-ec2-vpcpeeringconnection-peerownerid) : String
-﻿  [PeerRegion](#cfn-ec2-vpcpeeringconnection-peerregion) : String
-﻿  [PeerRoleArn](#cfn-ec2-vpcpeeringconnection-peerrolearn) : String
-﻿  [PeerVpcId](#cfn-ec2-vpcpeeringconnection-peervpcid) : String
-﻿  [Tags](#cfn-ec2-vpcpeeringconnection-tags) : 
+Properties: 
+  [PeerOwnerId](#cfn-ec2-vpcpeeringconnection-peerownerid): String
+  [PeerRegion](#cfn-ec2-vpcpeeringconnection-peerregion): String
+  [PeerRoleArn](#cfn-ec2-vpcpeeringconnection-peerrolearn): String
+  [PeerVpcId](#cfn-ec2-vpcpeeringconnection-peervpcid): String
+  [Tags](#cfn-ec2-vpcpeeringconnection-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VpcId](#cfn-ec2-vpcpeeringconnection-vpcid) : String
+  [VpcId](#cfn-ec2-vpcpeeringconnection-vpcid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-vpcpeeringconnection-properties"></a>

@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource-syntax.yaml"></a>
 
 ```
-﻿  [BucketARN](#cfn-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource-bucketarn) : String
-﻿  [FileKey](#cfn-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource-filekey) : String
+  [BucketARN](#cfn-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource-bucketarn): String
+  [FileKey](#cfn-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource-filekey): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource-properties"></a>

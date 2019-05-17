@@ -23,11 +23,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceDiscovery::Instance
-Properties : 
-﻿  [InstanceAttributes](#cfn-servicediscovery-instance-instanceattributes) : 
+Properties: 
+  [InstanceAttributes](#cfn-servicediscovery-instance-instanceattributes): 
     Key : Value
-﻿  [InstanceId](#cfn-servicediscovery-instance-instanceid) : String
-﻿  [ServiceId](#cfn-servicediscovery-instance-serviceid) : String
+  [InstanceId](#cfn-servicediscovery-instance-instanceid): String
+  [ServiceId](#cfn-servicediscovery-instance-serviceid): String
 ```
 
 ## Properties<a name="aws-resource-servicediscovery-instance-properties"></a>

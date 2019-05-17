@@ -31,10 +31,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::EIP
-Properties : 
-﻿  [Domain](#cfn-ec2-eip-domain) : String
-﻿  [InstanceId](#cfn-ec2-eip-instanceid) : String
-﻿  [PublicIpv4Pool](#cfn-ec2-eip-publicipv4pool) : String
+Properties: 
+  [Domain](#cfn-ec2-eip-domain): String
+  [InstanceId](#cfn-ec2-eip-instanceid): String
+  [PublicIpv4Pool](#cfn-ec2-eip-publicipv4pool): String
 ```
 
 ## Properties<a name="aws-properties-ec2-eip-properties"></a>

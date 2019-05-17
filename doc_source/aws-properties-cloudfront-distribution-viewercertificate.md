@@ -31,11 +31,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudfront-distribution-viewercertificate-syntax.yaml"></a>
 
 ```
-﻿  [AcmCertificateArn](#cfn-cloudfront-distribution-viewercertificate-acmcertificatearn) : String
-﻿  [CloudFrontDefaultCertificate](#cfn-cloudfront-distribution-viewercertificate-cloudfrontdefaultcertificate) : Boolean
-﻿  [IamCertificateId](#cfn-cloudfront-distribution-viewercertificate-iamcertificateid) : String
-﻿  [MinimumProtocolVersion](#cfn-cloudfront-distribution-viewercertificate-minimumprotocolversion) : String
-﻿  [SslSupportMethod](#cfn-cloudfront-distribution-viewercertificate-sslsupportmethod) : String
+  [AcmCertificateArn](#cfn-cloudfront-distribution-viewercertificate-acmcertificatearn): String
+  [CloudFrontDefaultCertificate](#cfn-cloudfront-distribution-viewercertificate-cloudfrontdefaultcertificate): Boolean
+  [IamCertificateId](#cfn-cloudfront-distribution-viewercertificate-iamcertificateid): String
+  [MinimumProtocolVersion](#cfn-cloudfront-distribution-viewercertificate-minimumprotocolversion): String
+  [SslSupportMethod](#cfn-cloudfront-distribution-viewercertificate-sslsupportmethod): String
 ```
 
 ## Properties<a name="aws-properties-cloudfront-distribution-viewercertificate-properties"></a>

@@ -28,16 +28,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::DHCPOptions
-Properties : 
-﻿  [DomainName](#cfn-ec2-dhcpoptions-domainname) : String
-﻿  [DomainNameServers](#cfn-ec2-dhcpoptions-domainnameservers) : 
+Properties: 
+  [DomainName](#cfn-ec2-dhcpoptions-domainname): String
+  [DomainNameServers](#cfn-ec2-dhcpoptions-domainnameservers): 
     - String
-﻿  [NetbiosNameServers](#cfn-ec2-dhcpoptions-netbiosnameservers) : 
+  [NetbiosNameServers](#cfn-ec2-dhcpoptions-netbiosnameservers): 
     - String
-﻿  [NetbiosNodeType](#cfn-ec2-dhcpoptions-netbiosnodetype) : Integer
-﻿  [NtpServers](#cfn-ec2-dhcpoptions-ntpservers) : 
+  [NetbiosNodeType](#cfn-ec2-dhcpoptions-netbiosnodetype): Integer
+  [NtpServers](#cfn-ec2-dhcpoptions-ntpservers): 
     - String
-﻿  [Tags](#cfn-ec2-dhcpoptions-tags) : 
+  [Tags](#cfn-ec2-dhcpoptions-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
@@ -106,9 +106,8 @@ myDhcpOptions:
           - 10.2.5.1
         NetbiosNodeType: 2
         Tags: 
-          - 
-            Key: project
-            Value: 123
+          - Key: project
+          Value: 123
 ```
 
 ### <a name="aws-resource-ec2-dhcp-options--examples--"></a>

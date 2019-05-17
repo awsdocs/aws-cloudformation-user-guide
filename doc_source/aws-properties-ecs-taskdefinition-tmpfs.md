@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-taskdefinition-tmpfs-syntax.yaml"></a>
 
 ```
-﻿  [ContainerPath](#cfn-ecs-taskdefinition-tmpfs-containerpath) : String
-﻿  [MountOptions](#cfn-ecs-taskdefinition-tmpfs-mountoptions) : 
+  [ContainerPath](#cfn-ecs-taskdefinition-tmpfs-containerpath): String
+  [MountOptions](#cfn-ecs-taskdefinition-tmpfs-mountoptions): 
     - String
-﻿  [Size](#cfn-ecs-taskdefinition-tmpfs-size) : Integer
+  [Size](#cfn-ecs-taskdefinition-tmpfs-size): Integer
 ```
 
 ## Properties<a name="aws-properties-ecs-taskdefinition-tmpfs-properties"></a>

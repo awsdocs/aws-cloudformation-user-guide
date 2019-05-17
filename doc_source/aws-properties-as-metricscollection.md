@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-as-metricscollection-syntax.yaml"></a>
 
 ```
-﻿  [Granularity](#cfn-as-metricscollection-granularity) : String
-﻿  [Metrics](#cfn-as-metricscollection-metrics) : 
+  [Granularity](#cfn-as-metricscollection-granularity): String
+  [Metrics](#cfn-as-metricscollection-metrics): 
     - String
 ```
 

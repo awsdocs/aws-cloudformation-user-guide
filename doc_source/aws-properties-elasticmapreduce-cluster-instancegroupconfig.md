@@ -24,17 +24,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-instancegroupconfig-syntax.yaml"></a>
 
 ```
-﻿  [AutoScalingPolicy](#cfn-elasticmapreduce-cluster-instancegroupconfig-autoscalingpolicy) : 
+  [AutoScalingPolicy](#cfn-elasticmapreduce-cluster-instancegroupconfig-autoscalingpolicy): 
     [AutoScalingPolicy](aws-properties-elasticmapreduce-cluster-autoscalingpolicy.md)
-﻿  [BidPrice](#cfn-elasticmapreduce-cluster-instancegroupconfig-bidprice) : String
-﻿  [Configurations](#cfn-elasticmapreduce-cluster-instancegroupconfig-configurations) : 
+  [BidPrice](#cfn-elasticmapreduce-cluster-instancegroupconfig-bidprice): String
+  [Configurations](#cfn-elasticmapreduce-cluster-instancegroupconfig-configurations): 
     - [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md)
-﻿  [EbsConfiguration](#cfn-elasticmapreduce-cluster-instancegroupconfig-ebsconfiguration) : 
+  [EbsConfiguration](#cfn-elasticmapreduce-cluster-instancegroupconfig-ebsconfiguration): 
     [EbsConfiguration](aws-properties-elasticmapreduce-cluster-ebsconfiguration.md)
-﻿  [InstanceCount](#cfn-elasticmapreduce-cluster-instancegroupconfig-instancecount) : Integer
-﻿  [InstanceType](#cfn-elasticmapreduce-cluster-instancegroupconfig-instancetype) : String
-﻿  [Market](#cfn-elasticmapreduce-cluster-instancegroupconfig-market) : String
-﻿  [Name](#cfn-elasticmapreduce-cluster-instancegroupconfig-name) : String
+  [InstanceCount](#cfn-elasticmapreduce-cluster-instancegroupconfig-instancecount): Integer
+  [InstanceType](#cfn-elasticmapreduce-cluster-instancegroupconfig-instancetype): String
+  [Market](#cfn-elasticmapreduce-cluster-instancegroupconfig-market): String
+  [Name](#cfn-elasticmapreduce-cluster-instancegroupconfig-name): String
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-instancegroupconfig-properties"></a>

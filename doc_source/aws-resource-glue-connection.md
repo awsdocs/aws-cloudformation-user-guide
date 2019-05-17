@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Glue::Connection
-Properties : 
-﻿  [CatalogId](#cfn-glue-connection-catalogid) : String
-﻿  [ConnectionInput](#cfn-glue-connection-connectioninput) : 
+Properties: 
+  [CatalogId](#cfn-glue-connection-catalogid): String
+  [ConnectionInput](#cfn-glue-connection-connectioninput): 
     [ConnectionInput](aws-properties-glue-connection-connectioninput.md)
 ```
 

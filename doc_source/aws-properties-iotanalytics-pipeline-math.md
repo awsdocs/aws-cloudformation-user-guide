@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-pipeline-math-syntax.yaml"></a>
 
 ```
-﻿  [Attribute](#cfn-iotanalytics-pipeline-math-attribute) : String
-﻿  [Math](#cfn-iotanalytics-pipeline-math-math) : [String](#aws-properties-iotanalytics-pipeline-math)
-﻿  [Name](#cfn-iotanalytics-pipeline-math-name) : String
-﻿  [Next](#cfn-iotanalytics-pipeline-math-next) : String
+  [Attribute](#cfn-iotanalytics-pipeline-math-attribute): String
+  [Math](#cfn-iotanalytics-pipeline-math-math): [String](#aws-properties-iotanalytics-pipeline-math)
+  [Name](#cfn-iotanalytics-pipeline-math-name): String
+  [Next](#cfn-iotanalytics-pipeline-math-next): String
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-pipeline-math-properties"></a>

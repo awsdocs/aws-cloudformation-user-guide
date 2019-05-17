@@ -27,14 +27,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SNS::Subscription
-Properties : 
-﻿  [DeliveryPolicy](#cfn-sns-subscription-deliverypolicy) : Json
-﻿  [Endpoint](#cfn-sns-endpoint) : String
-﻿  [FilterPolicy](#cfn-sns-subscription-filterpolicy) : Json
-﻿  [Protocol](#cfn-sns-protocol) : String
-﻿  [RawMessageDelivery](#cfn-sns-subscription-rawmessagedelivery) : Boolean
-﻿  [Region](#cfn-sns-subscription-region) : String
-﻿  [TopicArn](#topicarn) : String
+Properties: 
+  [DeliveryPolicy](#cfn-sns-subscription-deliverypolicy): Json
+  [Endpoint](#cfn-sns-endpoint): String
+  [FilterPolicy](#cfn-sns-subscription-filterpolicy): Json
+  [Protocol](#cfn-sns-protocol): String
+  [RawMessageDelivery](#cfn-sns-subscription-rawmessagedelivery): Boolean
+  [Region](#cfn-sns-subscription-region): String
+  [TopicArn](#topicarn): String
 ```
 
 ## Properties<a name="aws-resource-sns-subscription-properties"></a>

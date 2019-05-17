@@ -20,11 +20,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-config-configrule-scope-syntax.yaml"></a>
 
 ```
-﻿  [ComplianceResourceId](#cfn-config-configrule-scope-complianceresourceid) : String
-﻿  [ComplianceResourceTypes](#cfn-config-configrule-scope-complianceresourcetypes) : 
+  [ComplianceResourceId](#cfn-config-configrule-scope-complianceresourceid): String
+  [ComplianceResourceTypes](#cfn-config-configrule-scope-complianceresourcetypes): 
     - String
-﻿  [TagKey](#cfn-config-configrule-scope-tagkey) : String
-﻿  [TagValue](#cfn-config-configrule-scope-tagvalue) : String
+  [TagKey](#cfn-config-configrule-scope-tagkey): String
+  [TagValue](#cfn-config-configrule-scope-tagvalue): String
 ```
 
 ## Properties<a name="aws-properties-config-configrule-scope-properties"></a>

@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Route53Resolver::ResolverRuleAssociation
-Properties : 
-﻿  [Name](#cfn-route53resolver-resolverruleassociation-name) : String
-﻿  [ResolverRuleId](#cfn-route53resolver-resolverruleassociation-resolverruleid) : String
-﻿  [VPCId](#cfn-route53resolver-resolverruleassociation-vpcid) : String
+Properties: 
+  [Name](#cfn-route53resolver-resolverruleassociation-name): String
+  [ResolverRuleId](#cfn-route53resolver-resolverruleassociation-resolverruleid): String
+  [VPCId](#cfn-route53resolver-resolverruleassociation-vpcid): String
 ```
 
 ## Properties<a name="aws-resource-route53resolver-resolverruleassociation-properties"></a>

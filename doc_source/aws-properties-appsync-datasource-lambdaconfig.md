@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appsync-datasource-lambdaconfig-syntax.yaml"></a>
 
 ```
-﻿  [LambdaFunctionArn](#cfn-appsync-datasource-lambdaconfig-lambdafunctionarn) : String
+  [LambdaFunctionArn](#cfn-appsync-datasource-lambdaconfig-lambdafunctionarn): String
 ```
 
 ## Properties<a name="aws-properties-appsync-datasource-lambdaconfig-properties"></a>

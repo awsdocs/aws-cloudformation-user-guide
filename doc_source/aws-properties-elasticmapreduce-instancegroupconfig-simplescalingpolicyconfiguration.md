@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [AdjustmentType](#cfn-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-adjustmenttype) : String
-﻿  [CoolDown](#cfn-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-cooldown) : Integer
-﻿  [ScalingAdjustment](#cfn-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-scalingadjustment) : Integer
+  [AdjustmentType](#cfn-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-adjustmenttype): String
+  [CoolDown](#cfn-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-cooldown): Integer
+  [ScalingAdjustment](#cfn-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-scalingadjustment): Integer
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-properties"></a>

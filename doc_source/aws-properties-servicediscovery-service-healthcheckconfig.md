@@ -52,9 +52,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-servicediscovery-service-healthcheckconfig-syntax.yaml"></a>
 
 ```
-﻿  [FailureThreshold](#cfn-servicediscovery-service-healthcheckconfig-failurethreshold) : Double
-﻿  [ResourcePath](#cfn-servicediscovery-service-healthcheckconfig-resourcepath) : String
-﻿  [Type](#cfn-servicediscovery-service-healthcheckconfig-type) : String
+  [FailureThreshold](#cfn-servicediscovery-service-healthcheckconfig-failurethreshold): Double
+  [ResourcePath](#cfn-servicediscovery-service-healthcheckconfig-resourcepath): String
+  [Type](#cfn-servicediscovery-service-healthcheckconfig-type): String
 ```
 
 ## Properties<a name="aws-properties-servicediscovery-service-healthcheckconfig-properties"></a>

@@ -25,12 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceCatalog::LaunchTemplateConstraint
-Properties : 
-﻿  [AcceptLanguage](#cfn-servicecatalog-launchtemplateconstraint-acceptlanguage) : String
-﻿  [Description](#cfn-servicecatalog-launchtemplateconstraint-description) : String
-﻿  [PortfolioId](#cfn-servicecatalog-launchtemplateconstraint-portfolioid) : String
-﻿  [ProductId](#cfn-servicecatalog-launchtemplateconstraint-productid) : String
-﻿  [Rules](#cfn-servicecatalog-launchtemplateconstraint-rules) : String
+Properties: 
+  [AcceptLanguage](#cfn-servicecatalog-launchtemplateconstraint-acceptlanguage): String
+  [Description](#cfn-servicecatalog-launchtemplateconstraint-description): String
+  [PortfolioId](#cfn-servicecatalog-launchtemplateconstraint-portfolioid): String
+  [ProductId](#cfn-servicecatalog-launchtemplateconstraint-productid): String
+  [Rules](#cfn-servicecatalog-launchtemplateconstraint-rules): String
 ```
 
 ## Properties<a name="aws-resource-servicecatalog-launchtemplateconstraint-properties"></a>

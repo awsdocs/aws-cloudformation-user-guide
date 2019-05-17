@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-job-executionproperty-syntax.yaml"></a>
 
 ```
-﻿  [MaxConcurrentRuns](#cfn-glue-job-executionproperty-maxconcurrentruns) : Double
+  [MaxConcurrentRuns](#cfn-glue-job-executionproperty-maxconcurrentruns): Double
 ```
 
 ## Properties<a name="aws-properties-glue-job-executionproperty-properties"></a>

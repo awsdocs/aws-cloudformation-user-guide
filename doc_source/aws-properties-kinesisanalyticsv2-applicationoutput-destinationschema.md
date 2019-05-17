@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-applicationoutput-destinationschema-syntax.yaml"></a>
 
 ```
-﻿  [RecordFormatType](#cfn-kinesisanalyticsv2-applicationoutput-destinationschema-recordformattype) : String
+  [RecordFormatType](#cfn-kinesisanalyticsv2-applicationoutput-destinationschema-recordformattype): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-applicationoutput-destinationschema-properties"></a>

@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-instance-licensespecification-syntax.yaml"></a>
 
 ```
-﻿  [LicenseConfigurationArn](#cfn-ec2-instance-licensespecification-licenseconfigurationarn) : String
+  [LicenseConfigurationArn](#cfn-ec2-instance-licensespecification-licenseconfigurationarn): String
 ```
 
 ## Properties<a name="aws-properties-ec2-instance-licensespecification-properties"></a>

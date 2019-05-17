@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-elb-connectiondrainingpolicy-syntax.yaml"></a>
 
 ```
-﻿  [Enabled](#cfn-elb-connectiondrainingpolicy-enabled) : Boolean
-﻿  [Timeout](#cfn-elb-connectiondrainingpolicy-timeout) : Integer
+  [Enabled](#cfn-elb-connectiondrainingpolicy-enabled): Boolean
+  [Timeout](#cfn-elb-connectiondrainingpolicy-timeout): Integer
 ```
 
 ## Properties<a name="aws-properties-ec2-elb-connectiondrainingpolicy-properties"></a>

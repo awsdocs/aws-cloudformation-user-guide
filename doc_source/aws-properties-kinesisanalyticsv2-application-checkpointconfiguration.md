@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-checkpointconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [CheckpointInterval](#cfn-kinesisanalyticsv2-application-checkpointconfiguration-checkpointinterval) : Integer
-﻿  [CheckpointingEnabled](#cfn-kinesisanalyticsv2-application-checkpointconfiguration-checkpointingenabled) : Boolean
-﻿  [ConfigurationType](#cfn-kinesisanalyticsv2-application-checkpointconfiguration-configurationtype) : String
-﻿  [MinPauseBetweenCheckpoints](#cfn-kinesisanalyticsv2-application-checkpointconfiguration-minpausebetweencheckpoints) : Integer
+  [CheckpointInterval](#cfn-kinesisanalyticsv2-application-checkpointconfiguration-checkpointinterval): Integer
+  [CheckpointingEnabled](#cfn-kinesisanalyticsv2-application-checkpointconfiguration-checkpointingenabled): Boolean
+  [ConfigurationType](#cfn-kinesisanalyticsv2-application-checkpointconfiguration-configurationtype): String
+  [MinPauseBetweenCheckpoints](#cfn-kinesisanalyticsv2-application-checkpointconfiguration-minpausebetweencheckpoints): Integer
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-checkpointconfiguration-properties"></a>

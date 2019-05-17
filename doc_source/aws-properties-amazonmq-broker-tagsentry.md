@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-amazonmq-broker-tagsentry-syntax.yaml"></a>
 
 ```
-﻿  [Key](#cfn-amazonmq-broker-tagsentry-key) : String
-﻿  [Value](#cfn-amazonmq-broker-tagsentry-value) : String
+  [Key](#cfn-amazonmq-broker-tagsentry-key): String
+  [Value](#cfn-amazonmq-broker-tagsentry-value): String
 ```
 
 ## Properties<a name="aws-properties-amazonmq-broker-tagsentry-properties"></a>

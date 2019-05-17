@@ -22,11 +22,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-blockdevicemapping-syntax.yaml"></a>
 
 ```
-﻿  [DeviceName](#cfn-ec2-launchtemplate-blockdevicemapping-devicename) : String
-﻿  [Ebs](#cfn-ec2-launchtemplate-blockdevicemapping-ebs) : 
+  [DeviceName](#cfn-ec2-launchtemplate-blockdevicemapping-devicename): String
+  [Ebs](#cfn-ec2-launchtemplate-blockdevicemapping-ebs): 
     [Ebs](aws-properties-ec2-launchtemplate-blockdevicemapping-ebs.md)
-﻿  [NoDevice](#cfn-ec2-launchtemplate-blockdevicemapping-nodevice) : String
-﻿  [VirtualName](#cfn-ec2-launchtemplate-blockdevicemapping-virtualname) : String
+  [NoDevice](#cfn-ec2-launchtemplate-blockdevicemapping-nodevice): String
+  [VirtualName](#cfn-ec2-launchtemplate-blockdevicemapping-virtualname): String
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-blockdevicemapping-properties"></a>

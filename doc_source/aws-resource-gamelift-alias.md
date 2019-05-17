@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::GameLift::Alias
-Properties : 
-﻿  [Description](#cfn-gamelift-alias-description) : String
-﻿  [Name](#cfn-gamelift-alias-name) : String
-﻿  [RoutingStrategy](#cfn-gamelift-alias-routingstrategy) : 
+Properties: 
+  [Description](#cfn-gamelift-alias-description): String
+  [Name](#cfn-gamelift-alias-name): String
+  [RoutingStrategy](#cfn-gamelift-alias-routingstrategy): 
     [RoutingStrategy](aws-properties-gamelift-alias-routingstrategy.md)
 ```
 

@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticbeanstalk-application-maxcountrule-syntax.yaml"></a>
 
 ```
-﻿  [DeleteSourceFromS3](#cfn-elasticbeanstalk-application-maxcountrule-deletesourcefroms3) : Boolean
-﻿  [Enabled](#cfn-elasticbeanstalk-application-maxcountrule-enabled) : Boolean
-﻿  [MaxCount](#cfn-elasticbeanstalk-application-maxcountrule-maxcount) : Integer
+  [DeleteSourceFromS3](#cfn-elasticbeanstalk-application-maxcountrule-deletesourcefroms3): Boolean
+  [Enabled](#cfn-elasticbeanstalk-application-maxcountrule-enabled): Boolean
+  [MaxCount](#cfn-elasticbeanstalk-application-maxcountrule-maxcount): Integer
 ```
 
 ## Properties<a name="aws-properties-elasticbeanstalk-application-maxcountrule-properties"></a>

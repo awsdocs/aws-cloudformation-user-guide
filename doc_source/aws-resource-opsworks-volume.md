@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::OpsWorks::Volume
-Properties : 
-﻿  [Ec2VolumeId](#cfn-opsworks-volume-ec2volumeid) : String
-﻿  [MountPoint](#cfn-opsworks-volume-mountpoint) : String
-﻿  [Name](#cfn-opsworks-volume-name) : String
-﻿  [StackId](#cfn-opsworks-volume-stackid) : String
+Properties: 
+  [Ec2VolumeId](#cfn-opsworks-volume-ec2volumeid): String
+  [MountPoint](#cfn-opsworks-volume-mountpoint): String
+  [Name](#cfn-opsworks-volume-name): String
+  [StackId](#cfn-opsworks-volume-stackid): String
 ```
 
 ## Properties<a name="aws-resource-opsworks-volume-properties"></a>

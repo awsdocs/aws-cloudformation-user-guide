@@ -23,13 +23,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-virtualnode-healthcheck-syntax.yaml"></a>
 
 ```
-﻿  [HealthyThreshold](#cfn-appmesh-virtualnode-healthcheck-healthythreshold) : Integer
-﻿  [IntervalMillis](#cfn-appmesh-virtualnode-healthcheck-intervalmillis) : Integer
-﻿  [Path](#cfn-appmesh-virtualnode-healthcheck-path) : String
-﻿  [Port](#cfn-appmesh-virtualnode-healthcheck-port) : Integer
-﻿  [Protocol](#cfn-appmesh-virtualnode-healthcheck-protocol) : String
-﻿  [TimeoutMillis](#cfn-appmesh-virtualnode-healthcheck-timeoutmillis) : Integer
-﻿  [UnhealthyThreshold](#cfn-appmesh-virtualnode-healthcheck-unhealthythreshold) : Integer
+  [HealthyThreshold](#cfn-appmesh-virtualnode-healthcheck-healthythreshold): Integer
+  [IntervalMillis](#cfn-appmesh-virtualnode-healthcheck-intervalmillis): Integer
+  [Path](#cfn-appmesh-virtualnode-healthcheck-path): String
+  [Port](#cfn-appmesh-virtualnode-healthcheck-port): Integer
+  [Protocol](#cfn-appmesh-virtualnode-healthcheck-protocol): String
+  [TimeoutMillis](#cfn-appmesh-virtualnode-healthcheck-timeoutmillis): Integer
+  [UnhealthyThreshold](#cfn-appmesh-virtualnode-healthcheck-unhealthythreshold): Integer
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-healthcheck-properties"></a>
@@ -53,7 +53,7 @@ The destination path for the health check request\. This is required only if the
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Port`  <a name="cfn-appmesh-virtualnode-healthcheck-port"></a>
-The destination port for the health check request\. This port must match the port defined in the for the listener\.  
+The destination port for the health check request\. This port must match the port defined in the [PortMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-virtualrouterlistener.html#cfn-appmesh-virtualrouter-virtualrouterlistener-portmapping) for the listener\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

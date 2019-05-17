@@ -35,15 +35,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CloudFormation::Stack
-Properties : 
-﻿  [NotificationARNs](#cfn-cloudformation-stack-notificationarns) : 
+Properties: 
+  [NotificationARNs](#cfn-cloudformation-stack-notificationarns): 
     - String
-﻿  [Parameters](#cfn-cloudformation-stack-parameters) : 
+  [Parameters](#cfn-cloudformation-stack-parameters): 
     Key : Value
-﻿  [Tags](#cfn-cloudformation-stack-tags) : 
+  [Tags](#cfn-cloudformation-stack-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [TemplateURL](#cfn-cloudformation-stack-templateurl) : String
-﻿  [TimeoutInMinutes](#cfn-cloudformation-stack-timeoutinminutes) : Integer
+  [TemplateURL](#cfn-cloudformation-stack-templateurl): String
+  [TimeoutInMinutes](#cfn-cloudformation-stack-timeoutinminutes): Integer
 ```
 
 ## Properties<a name="aws-properties-stack-properties"></a>

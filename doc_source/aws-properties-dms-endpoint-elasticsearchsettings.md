@@ -18,10 +18,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dms-endpoint-elasticsearchsettings-syntax.yaml"></a>
 
 ```
-﻿  [EndpointUri](#cfn-dms-endpoint-elasticsearchsettings-endpointuri) : String
-﻿  [ErrorRetryDuration](#cfn-dms-endpoint-elasticsearchsettings-errorretryduration) : Integer
-﻿  [FullLoadErrorPercentage](#cfn-dms-endpoint-elasticsearchsettings-fullloaderrorpercentage) : Integer
-﻿  [ServiceAccessRoleArn](#cfn-dms-endpoint-elasticsearchsettings-serviceaccessrolearn) : String
+  [EndpointUri](#cfn-dms-endpoint-elasticsearchsettings-endpointuri): String
+  [ErrorRetryDuration](#cfn-dms-endpoint-elasticsearchsettings-errorretryduration): Integer
+  [FullLoadErrorPercentage](#cfn-dms-endpoint-elasticsearchsettings-fullloaderrorpercentage): Integer
+  [ServiceAccessRoleArn](#cfn-dms-endpoint-elasticsearchsettings-serviceaccessrolearn): String
 ```
 
 ## Properties<a name="aws-properties-dms-endpoint-elasticsearchsettings-properties"></a>

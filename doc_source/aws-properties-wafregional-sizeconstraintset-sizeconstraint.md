@@ -20,11 +20,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-wafregional-sizeconstraintset-sizeconstraint-syntax.yaml"></a>
 
 ```
-﻿  [ComparisonOperator](#cfn-wafregional-sizeconstraintset-sizeconstraint-comparisonoperator) : String
-﻿  [FieldToMatch](#cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch) : 
+  [ComparisonOperator](#cfn-wafregional-sizeconstraintset-sizeconstraint-comparisonoperator): String
+  [FieldToMatch](#cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch): 
     [FieldToMatch](aws-properties-wafregional-sizeconstraintset-fieldtomatch.md)
-﻿  [Size](#cfn-wafregional-sizeconstraintset-sizeconstraint-size) : Integer
-﻿  [TextTransformation](#cfn-wafregional-sizeconstraintset-sizeconstraint-texttransformation) : String
+  [Size](#cfn-wafregional-sizeconstraintset-sizeconstraint-size): Integer
+  [TextTransformation](#cfn-wafregional-sizeconstraintset-sizeconstraint-texttransformation): String
 ```
 
 ## Properties<a name="aws-properties-wafregional-sizeconstraintset-sizeconstraint-properties"></a>

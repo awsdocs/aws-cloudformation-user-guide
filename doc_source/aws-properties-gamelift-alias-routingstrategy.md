@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-gamelift-alias-routingstrategy-syntax.yaml"></a>
 
 ```
-﻿  [FleetId](#cfn-gamelift-alias-routingstrategy-fleetid) : String
-﻿  [Message](#cfn-gamelift-alias-routingstrategy-message) : String
-﻿  [Type](#cfn-gamelift-alias-routingstrategy-type) : String
+  [FleetId](#cfn-gamelift-alias-routingstrategy-fleetid): String
+  [Message](#cfn-gamelift-alias-routingstrategy-message): String
+  [Type](#cfn-gamelift-alias-routingstrategy-type): String
 ```
 
 ## Properties<a name="aws-properties-gamelift-alias-routingstrategy-properties"></a>

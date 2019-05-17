@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination-syntax.yaml"></a>
 
 ```
-﻿  [DeliveryStreamARN](#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-deliverystreamarn) : String
-﻿  [IAMRoleARN](#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-iamrolearn) : String
+  [DeliveryStreamARN](#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-deliverystreamarn): String
+  [IAMRoleARN](#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-iamrolearn): String
 ```
 
 ## Properties<a name="aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination-properties"></a>

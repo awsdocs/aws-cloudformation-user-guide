@@ -24,10 +24,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::RouteTable
-Properties : 
-﻿  [Tags](#cfn-ec2-routetable-tags) : 
+Properties: 
+  [Tags](#cfn-ec2-routetable-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VpcId](#cfn-ec2-routetable-vpcid) : String
+  [VpcId](#cfn-ec2-routetable-vpcid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-route-table-properties"></a>

@@ -25,12 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGatewayV2::Model
-Properties : 
-﻿  [ApiId](#cfn-apigatewayv2-model-apiid) : String
-﻿  [ContentType](#cfn-apigatewayv2-model-contenttype) : String
-﻿  [Description](#cfn-apigatewayv2-model-description) : String
-﻿  [Name](#cfn-apigatewayv2-model-name) : String
-﻿  [Schema](#cfn-apigatewayv2-model-schema) : Json
+Properties: 
+  [ApiId](#cfn-apigatewayv2-model-apiid): String
+  [ContentType](#cfn-apigatewayv2-model-contenttype): String
+  [Description](#cfn-apigatewayv2-model-description): String
+  [Name](#cfn-apigatewayv2-model-name): String
+  [Schema](#cfn-apigatewayv2-model-schema): Json
 ```
 
 ## Properties<a name="aws-resource-apigatewayv2-model-properties"></a>

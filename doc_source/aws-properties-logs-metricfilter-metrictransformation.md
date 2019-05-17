@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-logs-metricfilter-metrictransformation-syntax.yaml"></a>
 
 ```
-﻿  [DefaultValue](#cfn-cwl-metricfilter-metrictransformation-defaultvalue) : Double
-﻿  [MetricName](#cfn-cwl-metricfilter-metrictransformation-metricname) : String
-﻿  [MetricNamespace](#cfn-cwl-metricfilter-metrictransformation-metricnamespace) : String
-﻿  [MetricValue](#cfn-cwl-metricfilter-metrictransformation-metricvalue) : String
+  [DefaultValue](#cfn-cwl-metricfilter-metrictransformation-defaultvalue): Double
+  [MetricName](#cfn-cwl-metricfilter-metrictransformation-metricname): String
+  [MetricNamespace](#cfn-cwl-metricfilter-metrictransformation-metricnamespace): String
+  [MetricValue](#cfn-cwl-metricfilter-metrictransformation-metricvalue): String
 ```
 
 ## Properties<a name="aws-properties-logs-metricfilter-metrictransformation-properties"></a>

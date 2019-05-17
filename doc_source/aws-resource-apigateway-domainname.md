@@ -26,12 +26,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::DomainName
-Properties : 
-﻿  [CertificateArn](#cfn-apigateway-domainname-certificatearn) : String
-﻿  [DomainName](#cfn-apigateway-domainname-domainname) : String
-﻿  [EndpointConfiguration](#cfn-apigateway-domainname-endpointconfiguration) : 
+Properties: 
+  [CertificateArn](#cfn-apigateway-domainname-certificatearn): String
+  [DomainName](#cfn-apigateway-domainname-domainname): String
+  [EndpointConfiguration](#cfn-apigateway-domainname-endpointconfiguration): 
     [EndpointConfiguration](aws-properties-apigateway-domainname-endpointconfiguration.md)
-﻿  [RegionalCertificateArn](#cfn-apigateway-domainname-regionalcertificatearn) : String
+  [RegionalCertificateArn](#cfn-apigateway-domainname-regionalcertificatearn): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-domainname-properties"></a>

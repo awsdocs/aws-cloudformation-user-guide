@@ -31,16 +31,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::Route
-Properties : 
-﻿  [DestinationCidrBlock](#cfn-ec2-route-destinationcidrblock) : String
-﻿  [DestinationIpv6CidrBlock](#cfn-ec2-route-destinationipv6cidrblock) : String
-﻿  [EgressOnlyInternetGatewayId](#cfn-ec2-route-egressonlyinternetgatewayid) : String
-﻿  [GatewayId](#cfn-ec2-route-gatewayid) : String
-﻿  [InstanceId](#cfn-ec2-route-instanceid) : String
-﻿  [NatGatewayId](#cfn-ec2-route-natgatewayid) : String
-﻿  [NetworkInterfaceId](#cfn-ec2-route-networkinterfaceid) : String
-﻿  [RouteTableId](#cfn-ec2-route-routetableid) : String
-﻿  [VpcPeeringConnectionId](#cfn-ec2-route-vpcpeeringconnectionid) : String
+Properties: 
+  [DestinationCidrBlock](#cfn-ec2-route-destinationcidrblock): String
+  [DestinationIpv6CidrBlock](#cfn-ec2-route-destinationipv6cidrblock): String
+  [EgressOnlyInternetGatewayId](#cfn-ec2-route-egressonlyinternetgatewayid): String
+  [GatewayId](#cfn-ec2-route-gatewayid): String
+  [InstanceId](#cfn-ec2-route-instanceid): String
+  [NatGatewayId](#cfn-ec2-route-natgatewayid): String
+  [NetworkInterfaceId](#cfn-ec2-route-networkinterfaceid): String
+  [RouteTableId](#cfn-ec2-route-routetableid): String
+  [VpcPeeringConnectionId](#cfn-ec2-route-vpcpeeringconnectionid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-route-properties"></a>

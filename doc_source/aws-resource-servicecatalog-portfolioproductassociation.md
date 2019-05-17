@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceCatalog::PortfolioProductAssociation
-Properties : 
-﻿  [AcceptLanguage](#cfn-servicecatalog-portfolioproductassociation-acceptlanguage) : String
-﻿  [PortfolioId](#cfn-servicecatalog-portfolioproductassociation-portfolioid) : String
-﻿  [ProductId](#cfn-servicecatalog-portfolioproductassociation-productid) : String
-﻿  [SourcePortfolioId](#cfn-servicecatalog-portfolioproductassociation-sourceportfolioid) : String
+Properties: 
+  [AcceptLanguage](#cfn-servicecatalog-portfolioproductassociation-acceptlanguage): String
+  [PortfolioId](#cfn-servicecatalog-portfolioproductassociation-portfolioid): String
+  [ProductId](#cfn-servicecatalog-portfolioproductassociation-productid): String
+  [SourcePortfolioId](#cfn-servicecatalog-portfolioproductassociation-sourceportfolioid): String
 ```
 
 ## Properties<a name="aws-resource-servicecatalog-portfolioproductassociation-properties"></a>

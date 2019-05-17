@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-batch-jobqueue-computeenvironmentorder-syntax.yaml"></a>
 
 ```
-﻿  [ComputeEnvironment](#cfn-batch-jobqueue-computeenvironmentorder-computeenvironment) : String
-﻿  [Order](#cfn-batch-jobqueue-computeenvironmentorder-order) : Integer
+  [ComputeEnvironment](#cfn-batch-jobqueue-computeenvironmentorder-computeenvironment): String
+  [Order](#cfn-batch-jobqueue-computeenvironmentorder-order): Integer
 ```
 
 ## Properties<a name="aws-properties-batch-jobqueue-computeenvironmentorder-properties"></a>

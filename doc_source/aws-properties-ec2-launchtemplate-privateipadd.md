@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-privateipadd-syntax.yaml"></a>
 
 ```
-﻿  [Primary](#cfn-ec2-launchtemplate-privateipadd-primary) : Boolean
-﻿  [PrivateIpAddress](#cfn-ec2-launchtemplate-privateipadd-privateipaddress) : String
+  [Primary](#cfn-ec2-launchtemplate-privateipadd-primary): Boolean
+  [PrivateIpAddress](#cfn-ec2-launchtemplate-privateipadd-privateipaddress): String
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-privateipadd-properties"></a>

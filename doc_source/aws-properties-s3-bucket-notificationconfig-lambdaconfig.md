@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-notificationconfig-lambdaconfig-syntax.yaml"></a>
 
 ```
-﻿  [Event](#cfn-s3-bucket-notificationconfig-lambdaconfig-event) : String
-﻿  [Filter](#cfn-s3-bucket-notificationconfig-lambdaconfig-filter) : 
+  [Event](#cfn-s3-bucket-notificationconfig-lambdaconfig-event): String
+  [Filter](#cfn-s3-bucket-notificationconfig-lambdaconfig-filter): 
     [NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md)
-﻿  [Function](#cfn-s3-bucket-notificationconfig-lambdaconfig-function) : String
+  [Function](#cfn-s3-bucket-notificationconfig-lambdaconfig-function): String
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-notificationconfig-lambdaconfig-properties"></a>

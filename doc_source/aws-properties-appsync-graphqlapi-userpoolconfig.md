@@ -22,10 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appsync-graphqlapi-userpoolconfig-syntax.yaml"></a>
 
 ```
-﻿  [AppIdClientRegex](#cfn-appsync-graphqlapi-userpoolconfig-appidclientregex) : String
-﻿  [AwsRegion](#cfn-appsync-graphqlapi-userpoolconfig-awsregion) : String
-﻿  [DefaultAction](#cfn-appsync-graphqlapi-userpoolconfig-defaultaction) : String
-﻿  [UserPoolId](#cfn-appsync-graphqlapi-userpoolconfig-userpoolid) : String
+  [AppIdClientRegex](#cfn-appsync-graphqlapi-userpoolconfig-appidclientregex): String
+  [AwsRegion](#cfn-appsync-graphqlapi-userpoolconfig-awsregion): String
+  [DefaultAction](#cfn-appsync-graphqlapi-userpoolconfig-defaultaction): String
+  [UserPoolId](#cfn-appsync-graphqlapi-userpoolconfig-userpoolid): String
 ```
 
 ## Properties<a name="aws-properties-appsync-graphqlapi-userpoolconfig-properties"></a>

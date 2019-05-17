@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticsearch-domain-nodetonodeencryptionoptions-syntax.yaml"></a>
 
 ```
-﻿  [Enabled](#cfn-elasticsearch-domain-nodetonodeencryptionoptions-enabled) : Boolean
+  [Enabled](#cfn-elasticsearch-domain-nodetonodeencryptionoptions-enabled): Boolean
 ```
 
 ## Properties<a name="aws-properties-elasticsearch-domain-nodetonodeencryptionoptions-properties"></a>

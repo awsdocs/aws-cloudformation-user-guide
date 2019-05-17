@@ -39,33 +39,33 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EMR::Cluster
-Properties : 
-﻿  [AdditionalInfo](#cfn-elasticmapreduce-cluster-additionalinfo) : Json
-﻿  [Applications](#cfn-elasticmapreduce-cluster-applications) : 
+Properties: 
+  [AdditionalInfo](#cfn-elasticmapreduce-cluster-additionalinfo): Json
+  [Applications](#cfn-elasticmapreduce-cluster-applications): 
     - [Application](aws-properties-elasticmapreduce-cluster-application.md)
-﻿  [AutoScalingRole](#cfn-elasticmapreduce-cluster-autoscalingrole) : String
-﻿  [BootstrapActions](#cfn-elasticmapreduce-cluster-bootstrapactions) : 
+  [AutoScalingRole](#cfn-elasticmapreduce-cluster-autoscalingrole): String
+  [BootstrapActions](#cfn-elasticmapreduce-cluster-bootstrapactions): 
     - [BootstrapActionConfig](aws-properties-elasticmapreduce-cluster-bootstrapactionconfig.md)
-﻿  [Configurations](#cfn-elasticmapreduce-cluster-configurations) : 
+  [Configurations](#cfn-elasticmapreduce-cluster-configurations): 
     - [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md)
-﻿  [CustomAmiId](#cfn-elasticmapreduce-cluster-customamiid) : String
-﻿  [EbsRootVolumeSize](#cfn-elasticmapreduce-cluster-ebsrootvolumesize) : Integer
-﻿  [Instances](#cfn-elasticmapreduce-cluster-instances) : 
+  [CustomAmiId](#cfn-elasticmapreduce-cluster-customamiid): String
+  [EbsRootVolumeSize](#cfn-elasticmapreduce-cluster-ebsrootvolumesize): Integer
+  [Instances](#cfn-elasticmapreduce-cluster-instances): 
     [JobFlowInstancesConfig](aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.md)
-﻿  [JobFlowRole](#cfn-elasticmapreduce-cluster-jobflowrole) : String
-﻿  [KerberosAttributes](#cfn-elasticmapreduce-cluster-kerberosattributes) : 
+  [JobFlowRole](#cfn-elasticmapreduce-cluster-jobflowrole): String
+  [KerberosAttributes](#cfn-elasticmapreduce-cluster-kerberosattributes): 
     [KerberosAttributes](aws-properties-elasticmapreduce-cluster-kerberosattributes.md)
-﻿  [LogUri](#cfn-elasticmapreduce-cluster-loguri) : String
-﻿  [Name](#cfn-elasticmapreduce-cluster-name) : String
-﻿  [ReleaseLabel](#cfn-elasticmapreduce-cluster-releaselabel) : String
-﻿  [ScaleDownBehavior](#cfn-elasticmapreduce-cluster-scaledownbehavior) : String
-﻿  [SecurityConfiguration](#cfn-elasticmapreduce-cluster-securityconfiguration) : String
-﻿  [ServiceRole](#cfn-elasticmapreduce-cluster-servicerole) : String
-﻿  [Steps](#cfn-elasticmapreduce-cluster-steps) : 
+  [LogUri](#cfn-elasticmapreduce-cluster-loguri): String
+  [Name](#cfn-elasticmapreduce-cluster-name): String
+  [ReleaseLabel](#cfn-elasticmapreduce-cluster-releaselabel): String
+  [ScaleDownBehavior](#cfn-elasticmapreduce-cluster-scaledownbehavior): String
+  [SecurityConfiguration](#cfn-elasticmapreduce-cluster-securityconfiguration): String
+  [ServiceRole](#cfn-elasticmapreduce-cluster-servicerole): String
+  [Steps](#cfn-elasticmapreduce-cluster-steps): 
     - [StepConfig](aws-properties-elasticmapreduce-cluster-stepconfig.md)
-﻿  [Tags](#cfn-elasticmapreduce-cluster-tags) : 
+  [Tags](#cfn-elasticmapreduce-cluster-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VisibleToAllUsers](#cfn-elasticmapreduce-cluster-visibletoallusers) : Boolean
+  [VisibleToAllUsers](#cfn-elasticmapreduce-cluster-visibletoallusers): Boolean
 ```
 
 ## Properties<a name="aws-resource-elasticmapreduce-cluster-properties"></a>
@@ -194,7 +194,7 @@ A list of tags associated with a cluster\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VisibleToAllUsers`  <a name="cfn-elasticmapreduce-cluster-visibletoallusers"></a>
-Indicates whether the cluster is visible to all IAM users of the AWS account associated with the cluster\. The default value, `true`, indicates that all IAM users in the AWS account can perform cluster actions if they have the proper IAM policy permissions\. If this value is `false`, only the IAM user that created the cluster can perform actions\. This value can be changed on a running cluster by using the action\. You can override the default value of `true` when you create a cluster by using the `VisibleToAllUsers` parameter of the `RunJobFlow` action\.  
+Indicates whether the cluster is visible to all IAM users of the AWS account associated with the cluster\. The default value, `true`, indicates that all IAM users in the AWS account can perform cluster actions if they have the proper IAM policy permissions\. If this value is `false`, only the IAM user that created the cluster can perform actions\. This value can be changed on a running cluster by using the SetVisibleToAllUsers action\. You can override the default value of `true` when you create a cluster by using the `VisibleToAllUsers` parameter of the `RunJobFlow` action\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

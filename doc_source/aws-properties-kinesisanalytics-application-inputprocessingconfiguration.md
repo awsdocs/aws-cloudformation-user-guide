@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalytics-application-inputprocessingconfiguration-syntax.yaml"></a>
 
 ```
-﻿  [InputLambdaProcessor](#cfn-kinesisanalytics-application-inputprocessingconfiguration-inputlambdaprocessor) : 
+  [InputLambdaProcessor](#cfn-kinesisanalytics-application-inputprocessingconfiguration-inputlambdaprocessor): 
     [InputLambdaProcessor](aws-properties-kinesisanalytics-application-inputlambdaprocessor.md)
 ```
 

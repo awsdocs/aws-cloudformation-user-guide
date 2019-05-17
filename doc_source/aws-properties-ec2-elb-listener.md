@@ -22,13 +22,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-elb-listener-syntax.yaml"></a>
 
 ```
-﻿  [InstancePort](#cfn-ec2-elb-listener-instanceport) : String
-﻿  [InstanceProtocol](#cfn-ec2-elb-listener-instanceprotocol) : String
-﻿  [LoadBalancerPort](#cfn-ec2-elb-listener-loadbalancerport) : String
-﻿  [PolicyNames](#cfn-ec2-elb-listener-policynames) : 
+  [InstancePort](#cfn-ec2-elb-listener-instanceport): String
+  [InstanceProtocol](#cfn-ec2-elb-listener-instanceprotocol): String
+  [LoadBalancerPort](#cfn-ec2-elb-listener-loadbalancerport): String
+  [PolicyNames](#cfn-ec2-elb-listener-policynames): 
     - String
-﻿  [Protocol](#cfn-ec2-elb-listener-protocol) : String
-﻿  [SSLCertificateId](#cfn-ec2-elb-listener-sslcertificateid) : String
+  [Protocol](#cfn-ec2-elb-listener-protocol): String
+  [SSLCertificateId](#cfn-ec2-elb-listener-sslcertificateid): String
 ```
 
 ## Properties<a name="aws-properties-ec2-elb-listener-properties"></a>

@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-devicedefinition-devicedefinitionversion-syntax.yaml"></a>
 
 ```
-﻿  [Devices](#cfn-greengrass-devicedefinition-devicedefinitionversion-devices) : 
+  [Devices](#cfn-greengrass-devicedefinition-devicedefinitionversion-devices): 
     - [Device](aws-properties-greengrass-devicedefinition-device.md)
 ```
 

@@ -30,24 +30,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apitgateway-method-integration-syntax.yaml"></a>
 
 ```
-﻿  [CacheKeyParameters](#cfn-apigateway-method-integration-cachekeyparameters) : 
+  [CacheKeyParameters](#cfn-apigateway-method-integration-cachekeyparameters): 
     - String
-﻿  [CacheNamespace](#cfn-apigateway-method-integration-cachenamespace) : String
-﻿  [ConnectionId](#cfn-apigateway-method-integration-connectionid) : String
-﻿  [ConnectionType](#cfn-apigateway-method-integration-connectiontype) : String
-﻿  [ContentHandling](#cfn-apigateway-method-integration-contenthandling) : String
-﻿  [Credentials](#cfn-apigateway-method-integration-credentials) : String
-﻿  [IntegrationHttpMethod](#cfn-apigateway-method-integration-integrationhttpmethod) : String
-﻿  [IntegrationResponses](#cfn-apigateway-method-integration-integrationresponses) : 
+  [CacheNamespace](#cfn-apigateway-method-integration-cachenamespace): String
+  [ConnectionId](#cfn-apigateway-method-integration-connectionid): String
+  [ConnectionType](#cfn-apigateway-method-integration-connectiontype): String
+  [ContentHandling](#cfn-apigateway-method-integration-contenthandling): String
+  [Credentials](#cfn-apigateway-method-integration-credentials): String
+  [IntegrationHttpMethod](#cfn-apigateway-method-integration-integrationhttpmethod): String
+  [IntegrationResponses](#cfn-apigateway-method-integration-integrationresponses): 
     - [IntegrationResponse](aws-properties-apitgateway-method-integration-integrationresponse.md)
-﻿  [PassthroughBehavior](#cfn-apigateway-method-integration-passthroughbehavior) : String
-﻿  [RequestParameters](#cfn-apigateway-method-integration-requestparameters) : 
+  [PassthroughBehavior](#cfn-apigateway-method-integration-passthroughbehavior): String
+  [RequestParameters](#cfn-apigateway-method-integration-requestparameters): 
     Key : Value
-﻿  [RequestTemplates](#cfn-apigateway-method-integration-requesttemplates) : 
+  [RequestTemplates](#cfn-apigateway-method-integration-requesttemplates): 
     Key : Value
-﻿  [TimeoutInMillis](#cfn-apigateway-method-integration-timeoutinmillis) : Integer
-﻿  [Type](#cfn-apigateway-method-integration-type) : String
-﻿  [Uri](#cfn-apigateway-method-integration-uri) : String
+  [TimeoutInMillis](#cfn-apigateway-method-integration-timeoutinmillis): Integer
+  [Type](#cfn-apigateway-method-integration-type): String
+  [Uri](#cfn-apigateway-method-integration-uri): String
 ```
 
 ## Properties<a name="aws-properties-apitgateway-method-integration-properties"></a>

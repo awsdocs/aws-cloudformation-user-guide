@@ -30,12 +30,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Lambda::EventSourceMapping
-Properties : 
-﻿  [BatchSize](#cfn-lambda-eventsourcemapping-batchsize) : Integer
-﻿  [Enabled](#cfn-lambda-eventsourcemapping-enabled) : Boolean
-﻿  [EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn) : String
-﻿  [FunctionName](#cfn-lambda-eventsourcemapping-functionname) : String
-﻿  [StartingPosition](#cfn-lambda-eventsourcemapping-startingposition) : String
+Properties: 
+  [BatchSize](#cfn-lambda-eventsourcemapping-batchsize): Integer
+  [Enabled](#cfn-lambda-eventsourcemapping-enabled): Boolean
+  [EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn): String
+  [FunctionName](#cfn-lambda-eventsourcemapping-functionname): String
+  [StartingPosition](#cfn-lambda-eventsourcemapping-startingposition): String
 ```
 
 ## Properties<a name="aws-resource-lambda-eventsourcemapping-properties"></a>

@@ -25,9 +25,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-autoscaling-scalingpolicy-stepadjustments-syntax.yaml"></a>
 
 ```
-﻿  [MetricIntervalLowerBound](#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervallowerbound) : Double
-﻿  [MetricIntervalUpperBound](#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervalupperbound) : Double
-﻿  [ScalingAdjustment](#cfn-autoscaling-scalingpolicy-stepadjustment-scalingadjustment) : Integer
+  [MetricIntervalLowerBound](#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervallowerbound): Double
+  [MetricIntervalUpperBound](#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervalupperbound): Double
+  [ScalingAdjustment](#cfn-autoscaling-scalingpolicy-stepadjustment-scalingadjustment): Integer
 ```
 
 ## Properties<a name="aws-properties-autoscaling-scalingpolicy-stepadjustments-properties"></a>

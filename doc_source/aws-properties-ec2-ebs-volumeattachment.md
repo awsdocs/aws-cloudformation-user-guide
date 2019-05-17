@@ -29,10 +29,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VolumeAttachment
-Properties : 
-﻿  [Device](#cfn-ec2-ebs-volumeattachment-device) : String
-﻿  [InstanceId](#cfn-ec2-ebs-volumeattachment-instanceid) : String
-﻿  [VolumeId](#cfn-ec2-ebs-volumeattachment-volumeid) : String
+Properties: 
+  [Device](#cfn-ec2-ebs-volumeattachment-device): String
+  [InstanceId](#cfn-ec2-ebs-volumeattachment-instanceid): String
+  [VolumeId](#cfn-ec2-ebs-volumeattachment-volumeid): String
 ```
 
 ## Properties<a name="aws-properties-ec2-ebs-volumeattachment-properties"></a>

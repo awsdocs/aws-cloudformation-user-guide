@@ -27,11 +27,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SES::ReceiptRule
-Properties : 
-﻿  [After](#cfn-ses-receiptrule-after) : String
-﻿  [Rule](#cfn-ses-receiptrule-rule) : 
+Properties: 
+  [After](#cfn-ses-receiptrule-after): String
+  [Rule](#cfn-ses-receiptrule-rule): 
     [Rule](aws-properties-ses-receiptrule-rule.md)
-﻿  [RuleSetName](#cfn-ses-receiptrule-rulesetname) : String
+  [RuleSetName](#cfn-ses-receiptrule-rulesetname): String
 ```
 
 ## Properties<a name="aws-resource-ses-receiptrule-properties"></a>

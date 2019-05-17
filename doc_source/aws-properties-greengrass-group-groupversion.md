@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-group-groupversion-syntax.yaml"></a>
 
 ```
-﻿  [ConnectorDefinitionVersionArn](#cfn-greengrass-group-groupversion-connectordefinitionversionarn) : String
-﻿  [CoreDefinitionVersionArn](#cfn-greengrass-group-groupversion-coredefinitionversionarn) : String
-﻿  [DeviceDefinitionVersionArn](#cfn-greengrass-group-groupversion-devicedefinitionversionarn) : String
-﻿  [FunctionDefinitionVersionArn](#cfn-greengrass-group-groupversion-functiondefinitionversionarn) : String
-﻿  [LoggerDefinitionVersionArn](#cfn-greengrass-group-groupversion-loggerdefinitionversionarn) : String
-﻿  [ResourceDefinitionVersionArn](#cfn-greengrass-group-groupversion-resourcedefinitionversionarn) : String
-﻿  [SubscriptionDefinitionVersionArn](#cfn-greengrass-group-groupversion-subscriptiondefinitionversionarn) : String
+  [ConnectorDefinitionVersionArn](#cfn-greengrass-group-groupversion-connectordefinitionversionarn): String
+  [CoreDefinitionVersionArn](#cfn-greengrass-group-groupversion-coredefinitionversionarn): String
+  [DeviceDefinitionVersionArn](#cfn-greengrass-group-groupversion-devicedefinitionversionarn): String
+  [FunctionDefinitionVersionArn](#cfn-greengrass-group-groupversion-functiondefinitionversionarn): String
+  [LoggerDefinitionVersionArn](#cfn-greengrass-group-groupversion-loggerdefinitionversionarn): String
+  [ResourceDefinitionVersionArn](#cfn-greengrass-group-groupversion-resourcedefinitionversionarn): String
+  [SubscriptionDefinitionVersionArn](#cfn-greengrass-group-groupversion-subscriptiondefinitionversionarn): String
 ```
 
 ## Properties<a name="aws-properties-greengrass-group-groupversion-properties"></a>

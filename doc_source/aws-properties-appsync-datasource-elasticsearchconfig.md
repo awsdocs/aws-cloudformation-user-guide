@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appsync-datasource-elasticsearchconfig-syntax.yaml"></a>
 
 ```
-﻿  [AwsRegion](#cfn-appsync-datasource-elasticsearchconfig-awsregion) : String
-﻿  [Endpoint](#cfn-appsync-datasource-elasticsearchconfig-endpoint) : String
+  [AwsRegion](#cfn-appsync-datasource-elasticsearchconfig-awsregion): String
+  [Endpoint](#cfn-appsync-datasource-elasticsearchconfig-endpoint): String
 ```
 
 ## Properties<a name="aws-properties-appsync-datasource-elasticsearchconfig-properties"></a>

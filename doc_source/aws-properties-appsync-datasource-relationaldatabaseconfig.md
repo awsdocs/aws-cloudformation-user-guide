@@ -20,9 +20,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appsync-datasource-relationaldatabaseconfig-syntax.yaml"></a>
 
 ```
-﻿  [RdsHttpEndpointConfig](#cfn-appsync-datasource-relationaldatabaseconfig-rdshttpendpointconfig) : 
+  [RdsHttpEndpointConfig](#cfn-appsync-datasource-relationaldatabaseconfig-rdshttpendpointconfig): 
     [RdsHttpEndpointConfig](aws-properties-appsync-datasource-rdshttpendpointconfig.md)
-﻿  [RelationalDatabaseSourceType](#cfn-appsync-datasource-relationaldatabaseconfig-relationaldatabasesourcetype) : String
+  [RelationalDatabaseSourceType](#cfn-appsync-datasource-relationaldatabaseconfig-relationaldatabasesourcetype): String
 ```
 
 ## Properties<a name="aws-properties-appsync-datasource-relationaldatabaseconfig-properties"></a>

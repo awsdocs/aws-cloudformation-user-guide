@@ -23,12 +23,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudwatch-alarm-metricdataquery-syntax.yaml"></a>
 
 ```
-﻿  [Expression](#cfn-cloudwatch-alarm-metricdataquery-expression) : String
-﻿  [Id](#cfn-cloudwatch-alarm-metricdataquery-id) : String
-﻿  [Label](#cfn-cloudwatch-alarm-metricdataquery-label) : String
-﻿  [MetricStat](#cfn-cloudwatch-alarm-metricdataquery-metricstat) : 
+  [Expression](#cfn-cloudwatch-alarm-metricdataquery-expression): String
+  [Id](#cfn-cloudwatch-alarm-metricdataquery-id): String
+  [Label](#cfn-cloudwatch-alarm-metricdataquery-label): String
+  [MetricStat](#cfn-cloudwatch-alarm-metricdataquery-metricstat): 
     [MetricStat](aws-properties-cloudwatch-alarm-metricstat.md)
-﻿  [ReturnData](#cfn-cloudwatch-alarm-metricdataquery-returndata) : Boolean
+  [ReturnData](#cfn-cloudwatch-alarm-metricdataquery-returndata): Boolean
 ```
 
 ## Properties<a name="aws-properties-cloudwatch-alarm-metricdataquery-properties"></a>

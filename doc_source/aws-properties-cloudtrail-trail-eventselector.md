@@ -21,10 +21,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudtrail-trail-eventselector-syntax.yaml"></a>
 
 ```
-﻿  [DataResources](#cfn-cloudtrail-trail-eventselector-dataresources) : 
+  [DataResources](#cfn-cloudtrail-trail-eventselector-dataresources): 
     - [DataResource](aws-properties-cloudtrail-trail-dataresource.md)
-﻿  [IncludeManagementEvents](#cfn-cloudtrail-trail-eventselector-includemanagementevents) : Boolean
-﻿  [ReadWriteType](#cfn-cloudtrail-trail-eventselector-readwritetype) : String
+  [IncludeManagementEvents](#cfn-cloudtrail-trail-eventselector-includemanagementevents): Boolean
+  [ReadWriteType](#cfn-cloudtrail-trail-eventselector-readwritetype): String
 ```
 
 ## Properties<a name="aws-properties-cloudtrail-trail-eventselector-properties"></a>

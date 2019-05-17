@@ -41,32 +41,32 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ElastiCache::CacheCluster
-Properties : 
-﻿  [AZMode](#cfn-elasticache-cachecluster-azmode) : String
-﻿  [AutoMinorVersionUpgrade](#cfn-elasticache-cachecluster-autominorversionupgrade) : Boolean
-﻿  [CacheNodeType](#cfn-elasticache-cachecluster-cachenodetype) : String
-﻿  [CacheParameterGroupName](#cfn-elasticache-cachecluster-cacheparametergroupname) : String
-﻿  [CacheSecurityGroupNames](#cfn-elasticache-cachecluster-cachesecuritygroupnames) : 
+Properties: 
+  [AZMode](#cfn-elasticache-cachecluster-azmode): String
+  [AutoMinorVersionUpgrade](#cfn-elasticache-cachecluster-autominorversionupgrade): Boolean
+  [CacheNodeType](#cfn-elasticache-cachecluster-cachenodetype): String
+  [CacheParameterGroupName](#cfn-elasticache-cachecluster-cacheparametergroupname): String
+  [CacheSecurityGroupNames](#cfn-elasticache-cachecluster-cachesecuritygroupnames): 
     - String
-﻿  [CacheSubnetGroupName](#cfn-elasticache-cachecluster-cachesubnetgroupname) : String
-﻿  [ClusterName](#cfn-elasticache-cachecluster-clustername) : String
-﻿  [Engine](#cfn-elasticache-cachecluster-engine) : String
-﻿  [EngineVersion](#cfn-elasticache-cachecluster-engineversion) : String
-﻿  [NotificationTopicArn](#cfn-elasticache-cachecluster-notificationtopicarn) : String
-﻿  [NumCacheNodes](#cfn-elasticache-cachecluster-numcachenodes) : Integer
-﻿  [Port](#cfn-elasticache-cachecluster-port) : Integer
-﻿  [PreferredAvailabilityZone](#cfn-elasticache-cachecluster-preferredavailabilityzone) : String
-﻿  [PreferredAvailabilityZones](#cfn-elasticache-cachecluster-preferredavailabilityzones) : 
+  [CacheSubnetGroupName](#cfn-elasticache-cachecluster-cachesubnetgroupname): String
+  [ClusterName](#cfn-elasticache-cachecluster-clustername): String
+  [Engine](#cfn-elasticache-cachecluster-engine): String
+  [EngineVersion](#cfn-elasticache-cachecluster-engineversion): String
+  [NotificationTopicArn](#cfn-elasticache-cachecluster-notificationtopicarn): String
+  [NumCacheNodes](#cfn-elasticache-cachecluster-numcachenodes): Integer
+  [Port](#cfn-elasticache-cachecluster-port): Integer
+  [PreferredAvailabilityZone](#cfn-elasticache-cachecluster-preferredavailabilityzone): String
+  [PreferredAvailabilityZones](#cfn-elasticache-cachecluster-preferredavailabilityzones): 
     - String
-﻿  [PreferredMaintenanceWindow](#cfn-elasticache-cachecluster-preferredmaintenancewindow) : String
-﻿  [SnapshotArns](#cfn-elasticache-cachecluster-snapshotarns) : 
+  [PreferredMaintenanceWindow](#cfn-elasticache-cachecluster-preferredmaintenancewindow): String
+  [SnapshotArns](#cfn-elasticache-cachecluster-snapshotarns): 
     - String
-﻿  [SnapshotName](#cfn-elasticache-cachecluster-snapshotname) : String
-﻿  [SnapshotRetentionLimit](#cfn-elasticache-cachecluster-snapshotretentionlimit) : Integer
-﻿  [SnapshotWindow](#cfn-elasticache-cachecluster-snapshotwindow) : String
-﻿  [Tags](#cfn-elasticache-cachecluster-tags) : 
+  [SnapshotName](#cfn-elasticache-cachecluster-snapshotname): String
+  [SnapshotRetentionLimit](#cfn-elasticache-cachecluster-snapshotretentionlimit): Integer
+  [SnapshotWindow](#cfn-elasticache-cachecluster-snapshotwindow): String
+  [Tags](#cfn-elasticache-cachecluster-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-﻿  [VpcSecurityGroupIds](#cfn-elasticache-cachecluster-vpcsecuritygroupids) : 
+  [VpcSecurityGroupIds](#cfn-elasticache-cachecluster-vpcsecuritygroupids): 
     - String
 ```
 
