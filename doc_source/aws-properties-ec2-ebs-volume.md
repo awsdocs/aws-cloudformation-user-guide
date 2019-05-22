@@ -151,6 +151,21 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 }
 ```
 
+#### YAML<a name="aws-properties-ec2-ebs-volume--examples--Encrypted_Amazon_EBS_Volume_with_DeletionPolicy_to_Make_a_Snapshot_on_Delete--yaml"></a>
+
+```
+NewVolume:
+  Type: AWS::EC2::Volume
+  Properties:
+    Size: 100
+    Encrypted: true
+    AvailabilityZone: !GetAtt Ec2Instance.AvailabilityZone
+    Tags:
+      - Key: MyTag
+        Value: TagValue
+  DeletionPolicy: Snapshot
+```
+
 ### Amazon EBS Volume with 100 Provisioned IOPS<a name="aws-properties-ec2-ebs-volume--examples--Amazon_EBS_Volume_with_100_Provisioned_IOPS"></a>
 
 #### JSON<a name="aws-properties-ec2-ebs-volume--examples--Amazon_EBS_Volume_with_100_Provisioned_IOPS--json"></a>
@@ -165,6 +180,18 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
       "AvailabilityZone" : { "Fn::GetAtt" : [ "EC2Instance", "AvailabilityZone" ] }
    }
 }
+```
+
+#### YAML<a name="aws-properties-ec2-ebs-volume--examples--Amazon_EBS_Volume_with_100_Provisioned_IOPS--yaml"></a>
+
+```
+NewVolume:
+  Type: AWS::EC2::Volume
+  Properties:
+    Size: 100
+    VolumeType: io1
+    Iops: 100
+    AvailabilityZone: !GetAtt Ec2Instance.AvailabilityZone
 ```
 
 ## See Also<a name="aws-properties-ec2-ebs-volume--seealso"></a>
