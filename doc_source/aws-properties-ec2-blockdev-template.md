@@ -98,5 +98,17 @@ This example creates a 50GB io1 EBS volume from a snapshot, and configures it to
 }
 ```
 
+#### YAML<a name="aws-properties-ec2-blockdev-template--examples--Creating_an_EBS_volume_from_a_snapshot--yaml"></a>
+
+```
+- DeviceName: /dev/sdac
+  Ebs:
+    SnapshotId: snap-xxxxxx
+    VolumeSize: 50
+    VolumeType: io1
+    Iops: 1000
+    DeleteOnTermination: false
+```
+
 ## See Also<a name="aws-properties-ec2-blockdev-template--seealso"></a>
 +  [ CreateVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the *Amazon Elastic Compute Cloud API Reference*
