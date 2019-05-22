@@ -119,3 +119,16 @@ The following example creates a flow log for the VPC called MyVPC and logs all t
   }
 }
 ```
+
+#### YAML<a name="aws-resource-ec2-flowlog--examples--Creating_a_flow_log_that_monitors_all_traffic_types--yaml"></a>
+
+```
+MyFlowLog:
+  Type: AWS::EC2:FlowLog
+  Properties:
+    DeliverLogsPermissionArn: !GetAtt FlowLogRole.Arn
+    LogGroupName: FlowLogsGroup
+    ResourceId: !Ref MyVPC
+    ResourceType: VPC
+    TrafficType: ALL
+```
