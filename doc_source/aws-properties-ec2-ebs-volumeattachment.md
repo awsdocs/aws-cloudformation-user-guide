@@ -86,6 +86,27 @@ This example attaches an EC2 EBS volume to the EC2 instance with the logical nam
 }
 ```
 
+#### YAML<a name="aws-properties-ec2-ebs-volumeattachment--examples--Attach_an_EBS_Volume_to_a_Running_Instance--yaml"></a>
+
+```
+NewVolume:
+  Type: AWS::EC2::Volume
+  Properties:
+    Size: 100
+    AvailabilityZone: !GetAtt Ec2Instance.AvailabilityZone
+    Tags:
+      - Key: MyTag
+        Value: TagValue
+  DeletionPolicy: Snapshot
+
+MountPoint:
+  Type: AWS::EC2::VolumeAttachment
+  Properties:
+    InstanceId: !Ref Ec2Instance
+    VolumeId: !Ref NewVolume
+    Device: /dev/sdh
+```
+
 ## See Also<a name="aws-properties-ec2-ebs-volumeattachment--seealso"></a>
 +  [Amazon Elastic Block Store \(Amazon EBS\)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html) in the *Amazon Elastic Compute Cloud User Guide*
 +  [Attaching a Volume to an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html) in the *Amazon Elastic Compute Cloud User Guide* 
