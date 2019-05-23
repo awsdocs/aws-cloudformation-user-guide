@@ -336,3 +336,22 @@ The following example specifies a configuration that controls a crawler's behavi
     }
 }
 ```
+
+#### YAML<a name="aws-resource-glue-crawler--examples--Crawler_Configuration--yaml"></a>
+
+```
+Type: AWS::Glue::Crawler
+Properties:
+  Role: role1
+  Classifiers:
+    - ''
+  Description: example classifier
+  SchemaChangePolicy: ''
+  Schedule: Schedule
+  DatabaseName: test
+  Targets:
+    - ''
+  TablePrefix: test-
+  Name: my-crawler
+  Configuration: "{\"Version\":1.0,\"CrawlerOutput\":{\"Partitions\":{\"AddOrUpdateBehavior\":\"InheritFromTable\"},\"Tables\":{\"AddOrUpdateBehavior\":\"MergeNewColumns\"}}}"
+```
