@@ -77,3 +77,14 @@ The following example allocates a dedicated host for `c3.large` instances in the
   }
 }
 ```
+
+#### YAML<a name="aws-resource-ec2-host--examples--Allocating_a_Dedicated_Host--yaml"></a>
+
+```
+Host:
+  Type: AWS::EC2::Host
+  Properties:
+    AutoPlacement: on
+    AvailabilityZone: us-east-1a
+    InstanceType: c3.large
+```
