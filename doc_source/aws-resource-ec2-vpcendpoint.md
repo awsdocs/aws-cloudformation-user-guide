@@ -150,7 +150,7 @@ The following example specifies a VPC endpoint that allows only the s3:GetObject
          }]
    },
    "RouteTableIds" : [ {"Ref" : "routetableA"}, {"Ref" : "routetableB"} ],
-   "ServiceName" : { "Fn::Join": [ "", [ "com.amazonaws.", { "Ref": "AWS::Region" }, ".s3" ] ] },
+   "ServiceName" : {"Fn::Sub" : "com.amazonaws.${AWS::Region}.s3"},
    "VpcId" : {"Ref" : "VPCID"}
  }
 }
@@ -174,10 +174,6 @@ S3Endpoint:
          RouteTableIds:
           - !Ref routetableA
           - !Ref routetableB
-         ServiceName: !Join 
-            - ''
-            - - com.amazonaws.
-              - !Ref 'AWS::Region'
-              - .s3
+         ServiceName: !Sub com.amazonaws.${AWS::Region}.s3
          VpcId: !Ref VPCID
 ```
