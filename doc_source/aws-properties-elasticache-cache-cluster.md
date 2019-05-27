@@ -338,26 +338,26 @@ For the cache cluster, the `VpcSecurityGroupIds` property is used to associate t
 
 ```
 ElasticacheSecurityGroup:
-            Type: AWS::EC2::SecurityGroup
-            Properties:
-            GroupDescription: "Elasticache Security Group"
-            SecurityGroupIngress:
-            -
-            IpProtocol: "tcp"
-            FromPort: "11211"
-            ToPort: "11211"
-            SourceSecurityGroupName:
+  Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: "Elasticache Security Group"
+      SecurityGroupIngress:
+        -
+          IpProtocol: "tcp"
+          FromPort: "11211"
+          ToPort: "11211"
+          SourceSecurityGroupName:
             Ref: "InstanceSecurityGroup"
-            ElasticacheCluster:
-            Type: AWS::ElastiCache::CacheCluster
-            Properties:
-            AutoMinorVersionUpgrade: "true"
-            Engine: "memcached"
-            CacheNodeType: "cache.t2.micro"
-            NumCacheNodes: "1"
-            VpcSecurityGroupIds:
-            -
-            Fn::GetAtt:
+ElasticacheCluster:
+  Type: AWS::ElastiCache::CacheCluster
+    Properties:
+      AutoMinorVersionUpgrade: "true"
+      Engine: "memcached"
+      CacheNodeType: "cache.t2.micro"
+      NumCacheNodes: "1"
+      VpcSecurityGroupIds:
+        -
+          Fn::GetAtt:
             - "ElasticacheSecurityGroup"
             - "GroupId"
 ```
