@@ -385,16 +385,16 @@ The following example launches a cache cluster with three nodes, where two nodes
 
 ```
 myCacheCluster:
-            Type: AWS::ElastiCache::CacheCluster
-            Properties:
-            AZMode: "cross-az"
-            CacheNodeType: "cache.m3.medium"
-            Engine: "memcached"
-            NumCacheNodes: "3"
-            PreferredAvailabilityZones:
-            - "us-west-2a"
-            - "us-west-2a"
-            - "us-west-2b"
+  Type: AWS::ElastiCache::CacheCluster
+  Properties:
+    AZMode: "cross-az"
+    CacheNodeType: "cache.m3.medium"
+    Engine: "memcached"
+    NumCacheNodes: "3"
+    PreferredAvailabilityZones:
+      - "us-west-2a"
+      - "us-west-2a"
+      - "us-west-2b"
 ```
 
 ## See Also<a name="aws-properties-elasticache-cache-cluster--seealso"></a>
