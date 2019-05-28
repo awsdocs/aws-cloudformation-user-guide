@@ -427,19 +427,19 @@ The following example declares a replication group with two nodes and automatic 
 
 ```
 myReplicationGroup: 
-            Type: AWS::ElastiCache::ReplicationGroup
-            Properties: 
-            ReplicationGroupDescription: "my description"
-            NumCacheClusters: "2"
-            Engine: "redis"
-            CacheNodeType: "cache.m3.medium"
-            AutoMinorVersionUpgrade: "true"
-            AutomaticFailoverEnabled: "true"
-            CacheSubnetGroupName: "subnetgroup"
-            EngineVersion: "2.8.6"
-            PreferredMaintenanceWindow: "wed:09:25-wed:22:30"
-            SnapshotRetentionLimit: "4"
-            SnapshotWindow: "03:30-05:30"
+  Type: AWS::ElastiCache::ReplicationGroup
+  Properties: 
+    ReplicationGroupDescription: "my description"
+    NumCacheClusters: "2"
+    Engine: "redis"
+    CacheNodeType: "cache.m3.medium"
+    AutoMinorVersionUpgrade: "true"
+    AutomaticFailoverEnabled: "true"
+    CacheSubnetGroupName: "subnetgroup"
+    EngineVersion: "2.8.6"
+    PreferredMaintenanceWindow: "wed:09:25-wed:22:30"
+    SnapshotRetentionLimit: "4"
+    SnapshotWindow: "03:30-05:30"
 ```
 
 ### Declare a Replication Group with Two Node Groups<a name="aws-resource-elasticache-replicationgroup--examples--Declare_a_Replication_Group_with_Two_Node_Groups"></a>
@@ -475,23 +475,25 @@ The following example declares a replication group with two nodes groups \(shard
 #### YAML<a name="aws-resource-elasticache-replicationgroup--examples--Declare_a_Replication_Group_with_Two_Node_Groups--yaml"></a>
 
 ```
-  Properties:
-            AutomaticFailoverEnabled: true
-            AutoMinorVersionUpgrade: true
-            CacheNodeType: cache.r3.large
-            CacheSubnetGroupName:
-            Ref: CacheSubnetGroup
-            Engine: redis
-            EngineVersion: '3.2'
-            NumNodeGroups: '2'
-            ReplicasPerNodeGroup: '3'
-            Port: 6379
-            PreferredMaintenanceWindow: sun:05:00-sun:09:00
-            ReplicationGroupDescription: A sample replication group
-            SecurityGroupIds:
-            - Ref: ReplicationGroupSG
-            SnapshotRetentionLimit: 5
-            SnapshotWindow: 10:00-12:00
+myReplicationGroup: 
+  Type: AWS::ElastiCache::ReplicationGroup
+  Properties: 
+    AutomaticFailoverEnabled: true
+    AutoMinorVersionUpgrade: true
+    CacheNodeType: cache.r3.large
+    CacheSubnetGroupName:
+    Ref: CacheSubnetGroup
+    Engine: redis
+    EngineVersion: '3.2'
+    NumNodeGroups: '2'
+    ReplicasPerNodeGroup: '3'
+    Port: 6379
+    PreferredMaintenanceWindow: sun:05:00-sun:09:00
+    ReplicationGroupDescription: A sample replication group
+    SecurityGroupIds:
+    - Ref: ReplicationGroupSG
+    SnapshotRetentionLimit: 5
+    SnapshotWindow: 10:00-12:00
 ```
 
 ## See Also<a name="aws-resource-elasticache-replicationgroup--seealso"></a>
