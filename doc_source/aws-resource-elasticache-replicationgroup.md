@@ -92,7 +92,7 @@ Properties:
 `AtRestEncryptionEnabled`  <a name="cfn-elasticache-replicationgroup-atrestencryptionenabled"></a>
 A flag that enables encryption at rest when set to `true`\.  
 You cannot modify the value of `AtRestEncryptionEnabled` after the replication group is created\. To enable encryption at rest on a replication group you must set `AtRestEncryptionEnabled` to `true` when you create the replication group\.   
- **Required:** Only available when creating a replication group in an Amazon VPC using redis version `3.2.6` or `4.x`\.  
+ **Required:** Only available when creating a replication group in an Amazon VPC using redis version `3.2.6` or `4.x` onward\.  
 Default: `false`   
 *Required*: No  
 *Type*: Boolean  
@@ -136,38 +136,33 @@ The following node types are supported by ElastiCache\. Generally speaking, the 
 + General purpose:
   + Current generation: 
 
-     **T2 node types:** `cache.t2.micro`, `cache.t2.small`, `cache.t2.medium` 
+    **M5 node types:** `cache.m5.large`, `cache.m5.xlarge`, `cache.m5.2xlarge`, `cache.m5.4xlarge`, `cache.m5.12xlarge`, `cache.m5.24xlarge` 
 
-     **M3 node types:** `cache.m3.medium`, `cache.m3.large`, `cache.m3.xlarge`, `cache.m3.2xlarge` 
+    **M4 node types:** `cache.m4.large`, `cache.m4.xlarge`, `cache.m4.2xlarge`, `cache.m4.4xlarge`, `cache.m4.10xlarge`
 
-     **M4 node types:** `cache.m4.large`, `cache.m4.xlarge`, `cache.m4.2xlarge`, `cache.m4.4xlarge`, `cache.m4.10xlarge` 
+    **T2 node types:** `cache.t2.micro`, `cache.t2.small`, `cache.t2.medium`
   + Previous generation: \(not recommended\)
 
-     **T1 node types:** `cache.t1.micro` 
+    **T1 node types:** `cache.t1.micro`
 
-     **M1 node types:** `cache.m1.small`, `cache.m1.medium`, `cache.m1.large`, `cache.m1.xlarge` 
+    **M1 node types:** `cache.m1.small`, `cache.m1.medium`, `cache.m1.large`, `cache.m1.xlarge`
+
+    **M3 node types:** `cache.m3.medium`, `cache.m3.large`, `cache.m3.xlarge`, `cache.m3.2xlarge`
 + Compute optimized:
   + Previous generation: \(not recommended\)
 
-     **C1 node types:** `cache.c1.xlarge` 
+    **C1 node types:** `cache.c1.xlarge`
 + Memory optimized:
   + Current generation: 
 
-     **R3 node types:** `cache.r3.large`, `cache.r3.xlarge`, `cache.r3.2xlarge`, `cache.r3.4xlarge`, `cache.r3.8xlarge` 
+    **R5 node types:** `cache.r5.large`, `cache.r5.xlarge`, `cache.r5.2xlarge`, `cache.r5.4xlarge`, `cache.r5.12xlarge`, `cache.r5.24xlarge`
 
-     **R4 node types;** `cache.r4.large`, `cache.r4.xlarge`, `cache.r4.2xlarge`, `cache.r4.4xlarge`, `cache.r4.8xlarge`, `cache.r4.16xlarge` 
+    **R4 node types:** `cache.r4.large`, `cache.r4.xlarge`, `cache.r4.2xlarge`, `cache.r4.4xlarge`, `cache.r4.8xlarge`, `cache.r4.16xlarge`
   + Previous generation: \(not recommended\)
 
-     **M2 node types:** `cache.m2.xlarge`, `cache.m2.2xlarge`, `cache.m2.4xlarge` 
- **Notes:**   
-+ All T2 instances are created in an Amazon Virtual Private Cloud \(Amazon VPC\)\.
-+ Redis \(cluster mode disabled\): Redis backup/restore is not supported on T1 and T2 instances\. 
-+ Redis \(cluster mode enabled\): Backup/restore is not supported on T1 instances\.
-+ Redis Append\-only files \(AOF\) functionality is not supported for T1 or T2 instances\.
-For a complete listing of node types and specifications, see:  
-+  [Amazon ElastiCache Product Features and Details](http://aws.amazon.com/elasticache/details) 
-+  [Cache Node Type\-Specific Parameters for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/ParameterGroups.Memcached.html#ParameterGroups.Memcached.NodeSpecific) 
-+  [Cache Node Type\-Specific Parameters for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/ParameterGroups.Redis.html#ParameterGroups.Redis.NodeSpecific) 
+    **M2 node types:** `cache.m2.xlarge`, `cache.m2.2xlarge`, `cache.m2.4xlarge`
+
+    **R3 node types:** `cache.r3.large`, `cache.r3.xlarge`, `cache.r3.2xlarge`, `cache.r3.4xlarge`, `cache.r3.8xlarge`
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -346,9 +341,9 @@ A list of cost allocation tags to be added to this resource\. Tags are comma\-se
 `TransitEncryptionEnabled`  <a name="cfn-elasticache-replicationgroup-transitencryptionenabled"></a>
 A flag that enables in\-transit encryption when set to `true`\.  
 You cannot modify the value of `TransitEncryptionEnabled` after the cluster is created\. To enable in\-transit encryption on a cluster you must set `TransitEncryptionEnabled` to `true` when you create a cluster\.  
-This parameter is valid only if the `Engine` parameter is `redis`, the `EngineVersion` parameter is `3.2.6` or `4.x`, and the cluster is being created in an Amazon VPC\.  
+This parameter is valid only if the `Engine` parameter is `redis`, the `EngineVersion` parameter is `3.2.6` or `4.x` or `5.x`, and the cluster is being created in an Amazon VPC\.  
 If you enable in\-transit encryption, you must also specify a value for `CacheSubnetGroup`\.  
- **Required:** Only available when creating a replication group in an Amazon VPC using redis version `3.2.6` or `4.x`\.  
+ **Required:** Only available when creating a replication group in an Amazon VPC using redis version `3.2.6` or `4.x` onward\.  
 Default: `false`   
 For HIPAA compliance, you must specify `TransitEncryptionEnabled` as `true`, an `AuthToken`, and a `CacheSubnetGroup`\.
 *Required*: No  

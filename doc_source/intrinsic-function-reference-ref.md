@@ -128,6 +128,9 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::AutoScaling::LifecycleHook](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-lifecyclehook.html)  |  Name  |  `mylifecyclehookname`  | 
 |  [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html)  |  Scaling policy Amazon Resource Name \(ARN\)  |  `arn:aws:autoscaling:us-east-1:123456789012:scalingPolicy:ab12c4d5-a1b2-a1b2-a1b2-ab12c4d56789:autoScalingGroupName/myStack-AutoScalingGroup-AB12C4D5E6:policyName/myStack-myScalingPolicy-AB12C4D5E6`  | 
 |  [AWS::AutoScaling::ScheduledAction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html)  |  Name  |  `mystack-myscheduledaction-NT5EUXTNTXXD`  | 
+| [AWS::Backup::BackupPlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupplan.html) |  `BackupPlanId`  |  `a1b2c3d4-0123-4567-8901-a1b2c3d4e5f6`  | 
+| [AWS::Backup::BackupSelection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupselection.html) |  `BackupSelectionId`  |  `a1b2c3d4-0123-4567-8901-a1b2c3d4e5f6`  | 
+| [AWS::Backup::BackupVault](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html) |  `BackupVaultName`  |  `Default`  | 
 | [AWS::Batch::ComputeEnvironment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html) |  AWS Batch Compute Environment Amazon Resource Name \(ARN\)  |  `arn:aws:batch:us-east-1:555555555555:compute-environment/M4OnDemand`  | 
 | [AWS::Batch::JobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html) |  AWS Batch Job Definition Amazon Resource Name \(ARN\)  |  `arn:aws:batch:us-east-1:111122223333:job-definition/test-gpu:2`  | 
 | [AWS::Batch::JobQueue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html) |  AWS Batch Job Queue Amazon Resource Name \(ARN\)  |  `arn:aws:batch:us-east-1:111122223333:job-queue/HighPriority`  | 
@@ -266,6 +269,7 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::Glue::Crawler](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html)  |  Name  |  `abc123`  | 
 |  [AWS::Glue::Database](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html)  |  `DatabaseInput` name  |  `abc123`  | 
 |  [AWS::Glue::Job](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html)  |  Name  |  `abc123`  | 
+|  [AWS::Glue::SecurityConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-securityconfiguration.html)  |  Name  |   | 
 |  [AWS::Glue::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html)  |  `TableInput` name  |  `abc123`  | 
 |  [AWS::Glue::Trigger](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html)  |  Name  |  `abc123`  | 
 |  [AWS::Greengrass::ConnectorDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html)  |  ID  |  `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`  | 
@@ -320,6 +324,7 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)  |  Name  |  `mystack-myLogGroup-1341JS4M96031`  | 
 |  [AWS::Logs::LogStream](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-logstream.html)  |  Log stream name  |  `MyAppLogStream`  | 
 |  [AWS::Logs::SubscriptionFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-subscriptionfilter.html)  |  Subscription filter name  |   | 
+|  [AWS::MediaStore::Container](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html)  |  Container name  |   | 
 |  [AWS::Neptune::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html)  |  Name  |   | 
 |  [AWS::Neptune::DBClusterParameterGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbclusterparametergroup.html)  |  Name  |   | 
 |  [AWS::Neptune::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html)  |  `DBInstanceIdentifier`  |  `mystack-mydb-ea5ugmfvuaxg`  | 
@@ -332,6 +337,10 @@ This section lists sample values returned by `Ref` for particular AWS CloudForma
 |  [AWS::OpsWorks::UserProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html)  |  IAM user Amazon Resource Name  |  `arn:aws:iam::123456789012:user/opsworksuser`  | 
 |  [AWS::OpsWorks::Volume](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html)  |  AWS OpsWorks Volume ID  |  `1ab23cd4-92ff-4501-b37c-example`  | 
 |  [AWS::OpsWorksCM::Server](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html)  |  AWS OpsWorks CM server Amazon Resource Name  |  `arn:aws:OpsWorksCM:us-east-1:123456789012:server/server-a1bzhi`  | 
+|  [AWS::PinpointEmail::ConfigurationSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationset.html)  |  The name of an Amazon Pinpoint Email API configuration set  |  `myConfigurationSet`  | 
+|  [AWS::PinpointEmail::ConfigurationSetEventDestination](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationseteventdestination.html)  |  The name of an event destination in an Amazon Pinpoint Email API configuration set  |  `myConfigurationSetEventDestination`  | 
+|  [AWS::PinpointEmail::DedicatedIpPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-dedicatedippool.html)  |  The name of a dedicated IP pool used to send email through the Amazon Pinpoint Email API  |  `myIpPool`  | 
+|  [AWS::PinpointEmail::Identity](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-dedicatedippool.html)  |  The name \(email address or domain name\) of an identity used to send email by using the Amazon Pinpoint Email API\.  |  `sender@example.com`  | 
 |  [AWS::RAM::ResourceShare](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html)  |  Resource share ARN  |  `arn:aws:ram:us-east-1:123456789012:resource-share/12345678-1234-1234-1234-12345678`  | 
 |  [AWS::RDS::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html)  |  Cluster name  |  `test-rdscluster-pdedtss0mfqr`  | 
 |  [AWS::RDS::DBClusterParameterGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html)  |  Parameter group name  |  `test-dbparamgroup-4l8qqx46vjby`  | 

@@ -18,8 +18,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[NumberOfNodes](#cfn-glue-devendpoint-numberofnodes)" : Integer,
       "[PublicKey](#cfn-glue-devendpoint-publickey)" : String,
       "[RoleArn](#cfn-glue-devendpoint-rolearn)" : String,
+      "[SecurityConfiguration](#cfn-glue-devendpoint-securityconfiguration)" : String,
       "[SecurityGroupIds](#cfn-glue-devendpoint-securitygroupids)" : [ String, ... ],
-      "[SubnetId](#cfn-glue-devendpoint-subnetid)" : String
+      "[SubnetId](#cfn-glue-devendpoint-subnetid)" : String,
+      "[Tags](#cfn-glue-devendpoint-tags)" : Json
     }
 }
 ```
@@ -35,9 +37,11 @@ Properties:
   [NumberOfNodes](#cfn-glue-devendpoint-numberofnodes): Integer
   [PublicKey](#cfn-glue-devendpoint-publickey): String
   [RoleArn](#cfn-glue-devendpoint-rolearn): String
+  [SecurityConfiguration](#cfn-glue-devendpoint-securityconfiguration): String
   [SecurityGroupIds](#cfn-glue-devendpoint-securitygroupids): 
     - String
   [SubnetId](#cfn-glue-devendpoint-subnetid): String
+  [Tags](#cfn-glue-devendpoint-tags): Json
 ```
 
 ## Properties<a name="aws-resource-glue-devendpoint-properties"></a>
@@ -70,13 +74,19 @@ The number of AWS Glue Data Processing Units \(DPUs\) allocated to this `DevEndp
 
 `PublicKey`  <a name="cfn-glue-devendpoint-publickey"></a>
 The public key to be used by this `DevEndpoint` for authentication\. This attribute is provided for backward compatibility because the recommended attribute to use is public keys\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-glue-devendpoint-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role used in this `DevEndpoint`\.  
 *Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SecurityConfiguration`  <a name="cfn-glue-devendpoint-securityconfiguration"></a>
+The name of the `SecurityConfiguration` structure to be used with this `DevEndpoint`\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -90,6 +100,12 @@ A list of security group identifiers used in this `DevEndpoint`\.
 The subnet ID for this `DevEndpoint`\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-glue-devendpoint-tags"></a>
+The tags to use with this DevEndpoint\. You can use tags to limit access to the DevEndpoint\. For more information about tags in AWS Glue, see [AWS Tags in AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html) in the developer guide\.  
+*Required*: No  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-glue-devendpoint-return-values"></a>

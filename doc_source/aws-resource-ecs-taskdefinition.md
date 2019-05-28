@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Memory](#cfn-ecs-taskdefinition-memory)" : String,
       "[NetworkMode](#cfn-ecs-taskdefinition-networkmode)" : String,
       "[PlacementConstraints](#cfn-ecs-taskdefinition-placementconstraints)" : [ [TaskDefinitionPlacementConstraint](aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.md), ... ],
+      "[ProxyConfiguration](#cfn-ecs-taskdefinition-proxyconfiguration)" : [ProxyConfiguration](aws-properties-ecs-taskdefinition-proxyconfiguration.md),
       "[RequiresCompatibilities](#cfn-ecs-taskdefinition-requirescompatibilities)" : [ String, ... ],
       "[TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn)" : String,
       "[Volumes](#cfn-ecs-taskdefinition-volumes)" : [ [Volume](aws-properties-ecs-taskdefinition-volumes.md), ... ]
@@ -40,6 +41,8 @@ Properties:
   [NetworkMode](#cfn-ecs-taskdefinition-networkmode): String
   [PlacementConstraints](#cfn-ecs-taskdefinition-placementconstraints): 
     - [TaskDefinitionPlacementConstraint](aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.md)
+  [ProxyConfiguration](#cfn-ecs-taskdefinition-proxyconfiguration): 
+    [ProxyConfiguration](aws-properties-ecs-taskdefinition-proxyconfiguration.md)
   [RequiresCompatibilities](#cfn-ecs-taskdefinition-requirescompatibilities): 
     - String
   [TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn): String
@@ -107,6 +110,13 @@ For more information, see [Network settings](https://docs.docker.com/engine/refe
 An array of placement constraint objects to use for tasks\. This field is not valid if you are using the Fargate launch type for your task\.  
 *Required*: No  
 *Type*: List of [TaskDefinitionPlacementConstraint](aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ProxyConfiguration`  <a name="cfn-ecs-taskdefinition-proxyconfiguration"></a>
+The `ProxyConfiguration` property specifies the configuration details for the App Mesh proxy\.  
+Your Amazon ECS container instances require at least version 1\.26\.0 of the container agent and at least version 1\.26\.0\-1 of the `ecs-init` package to enable a proxy configuration\. If your container instances are launched from the Amazon ECS\-optimized AMI version `20190301` or later, then they contain the required versions of the container agent and `ecs-init`\. For more information, see [Amazon ECS\-optimized Linux AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+*Required*: No  
+*Type*: [ProxyConfiguration](aws-properties-ecs-taskdefinition-proxyconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RequiresCompatibilities`  <a name="cfn-ecs-taskdefinition-requirescompatibilities"></a>

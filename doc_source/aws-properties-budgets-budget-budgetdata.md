@@ -43,7 +43,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `BudgetLimit`  <a name="cfn-budgets-budget-budgetdata-budgetlimit"></a>
 The total amount of cost, usage, RI utilization, or RI coverage that you want to track with your budget\.  
- `BudgetLimit` is required for cost or usage budgets, but optional for RI utilization or coverage budgets\. RI utilization or coverage budgets default to `100`, which is the only valid value for RI utilization or coverage budgets\.  
+ `BudgetLimit` is required for cost or usage budgets, but optional for RI utilization or coverage budgets\. RI utilization or coverage budgets default to `100`, which is the only valid value for RI utilization or coverage budgets\. You can't use `BudgetLimit` with `PlannedBudgetLimits` for `CreateBudget` and `UpdateBudget` actions\.   
 *Required*: No  
 *Type*: [Spend](aws-properties-budgets-budget-spend.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -55,14 +55,14 @@ The name of a budget\. The value must be unique within an account\. `BudgetName`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BudgetType`  <a name="cfn-budgets-budget-budgetdata-budgettype"></a>
-Whether this budget tracks monetary costs, usage, RI utilization, or RI coverage\.  
+Whether this budget tracks costs, usage, RI utilization, or RI coverage\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `COST | RI_COVERAGE | RI_UTILIZATION | USAGE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CostFilters`  <a name="cfn-budgets-budget-budgetdata-costfilters"></a>
-The cost filters, such as service or region, that are applied to a budget\.  
+The cost filters, such as service or tag, that are applied to a budget\.  
 AWS Budgets supports the following services as a filter for RI budgets:  
 + Amazon Elastic Compute Cloud \- Compute
 + Amazon Redshift

@@ -35,7 +35,7 @@ Set to `True` if only the administrator is allowed to create user profiles\. Set
 
 `InviteMessageTemplate`  <a name="cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate"></a>
 The message template to be used for the welcome message to new users\.  
-See also [Customizing User Invitation Messages](http://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-message-customizations.html#cognito-user-pool-settings-user-invitation-message-customization)\.  
+See also [Customizing User Invitation Messages](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-message-customizations.html#cognito-user-pool-settings-user-invitation-message-customization)\.  
 *Required*: No  
 *Type*: [InviteMessageTemplate](aws-properties-cognito-userpool-invitemessagetemplate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
