@@ -132,7 +132,7 @@ This example creates a virtual node with two backends and a listener with a heal
                ],
                "Listeners": [
                   {
-                     "HealthCheckPolicy": {
+                     "HealthCheck": {
                         "HealthyThreshold": 2,
                         "IntervalMillis": 5000,
                         "Path": "Path",
@@ -231,7 +231,7 @@ Resources:
         - VirtualService:
             VirtualServiceName: "Backend_2"
         Listeners:
-        - HealthCheckPolicy:
+        - HealthCheck:
             HealthyThreshold: 2
             IntervalMillis: 5000
             Path: "Path"
