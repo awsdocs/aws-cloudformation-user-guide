@@ -2,7 +2,7 @@
 
 The `Target` property type specifies a target, such as an AWS Lambda function or an Amazon Kinesis data stream, that CloudWatch Events invokes when a rule is triggered\. 
 
- `Targets` property of the [AWS::Events::Rule](https://docs.aws.amazon.com/AWSCloudFormation/UserGuide/aws-resource-events-rule.html) resource contains a list of one or more `Target` property types\.
+ `Targets` property of the [AWS::Events::Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html) resource contains a list of one or more `Target` property types\.
 
 ## Syntax<a name="aws-properties-events-rule-target-syntax"></a>
 

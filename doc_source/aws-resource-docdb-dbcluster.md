@@ -232,10 +232,10 @@ The reader endpoint for the DB cluster\. For example: `sample-cluster.cluster-ro
          "Type" : "AWS::DocDB::DBCluster",
          "Properties" : {
             "BackupRetentionPeriod" : 8,
-            "DBClusterIdentufier" : "sample-cluster",
+            "DBClusterIdentifier" : "sample-cluster",
             "DBClusterParameterGroupName" : "default.docdb3.6",
             "DBSubnetGroupName" : "default",
-            "KMSKeyId" : "your-kms-key-id",
+            "KmsKeyId" : "your-kms-key-id",
             "MasterUsername" : "your-master-username",
             "MasterUserPassword" : "your-master-user-password",
             "Port" : "27017",
@@ -259,10 +259,10 @@ Resources:
       Type: "AWS::DocDB::DBCluster"
       Properties: 
          BackupRetentionPeriod : 8
-         DBClusterIdentufier : "sample-cluster"
+         DBClusterIdentifier : "sample-cluster"
          DBClusterParameterGroupName : "default.docdb3.6"
          DBSubnetGroupName : "default"
-         KMSKeyId : "your-kms-key-id"
+         KmsKeyId : "your-kms-key-id"
          MasterUsername : "your-master-username"
          MasterUserPassword : "your-master-user-password"
          Port : "27017"

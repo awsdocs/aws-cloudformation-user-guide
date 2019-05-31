@@ -80,7 +80,7 @@ An Amazon S3 bucket where you want to store the output details of the request\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parameters`  <a name="cfn-ssm-association-parameters"></a>
-The parameters for the runtime configuration of the document\.   
+The parameters for the runtime configuration of the document\.  
 *Required*: No  
 *Type*: Map of [ParameterValues](aws-properties-ssm-association-parametervalues.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

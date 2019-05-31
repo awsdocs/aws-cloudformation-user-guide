@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodeCommit::Repository",
   "Properties" : {
+      "[Code](#cfn-codecommit-repository-code)" : [Code](aws-properties-codecommit-repository-code.md),
       "[RepositoryDescription](#cfn-codecommit-repository-repositorydescription)" : String,
       "[RepositoryName](#cfn-codecommit-repository-repositoryname)" : String,
       "[Triggers](#cfn-codecommit-repository-triggers)" : [ [RepositoryTrigger](aws-properties-codecommit-repository-repositorytrigger.md), ... ]
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::CodeCommit::Repository
 Properties: 
+  [Code](#cfn-codecommit-repository-code): 
+    [Code](aws-properties-codecommit-repository-code.md)
   [RepositoryDescription](#cfn-codecommit-repository-repositorydescription): String
   [RepositoryName](#cfn-codecommit-repository-repositoryname): String
   [Triggers](#cfn-codecommit-repository-triggers): 
@@ -31,6 +34,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-codecommit-repository-properties"></a>
+
+`Code`  <a name="cfn-codecommit-repository-code"></a>
+Information about code to be committed to a repository after it is created in an AWS CloudFormation stack\.  
+*Required*: No  
+*Type*: [Code](aws-properties-codecommit-repository-code.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RepositoryDescription`  <a name="cfn-codecommit-repository-repositorydescription"></a>
 A comment or description about the new repository\.  

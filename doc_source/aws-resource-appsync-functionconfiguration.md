@@ -51,7 +51,7 @@ The AWS AppSync GraphQL API that you want to attach using this function\.
 
 `DataSourceName`  <a name="cfn-appsync-functionconfiguration-datasourcename"></a>
 The name of data source this function will attach\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -63,13 +63,13 @@ The `Function` description\.
 
 `FunctionVersion`  <a name="cfn-appsync-functionconfiguration-functionversion"></a>
 The version of the request mapping template\. Currently only the 2018\-05\-29 version of the template is supported\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-appsync-functionconfiguration-name"></a>
 The name of the function\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

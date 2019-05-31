@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Command](#cfn-ecs-taskdefinition-containerdefinition-command)" : [ String, ... ],
   "[Cpu](#cfn-ecs-taskdefinition-containerdefinition-cpu)" : Integer,
+  "[DependsOn](#cfn-ecs-taskdefinition-containerdefinition-dependson)" : [ [ContainerDependency](aws-properties-ecs-taskdefinition-containerdependency.md), ... ],
   "[DisableNetworking](#cfn-ecs-taskdefinition-containerdefinition-disablenetworking)" : Boolean,
   "[DnsSearchDomains](#cfn-ecs-taskdefinition-containerdefinition-dnssearchdomains)" : [ String, ... ],
   "[DnsServers](#cfn-ecs-taskdefinition-containerdefinition-dnsservers)" : [ String, ... ],
@@ -35,6 +36,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Privileged](#cfn-ecs-taskdefinition-containerdefinition-privileged)" : Boolean,
   "[ReadonlyRootFilesystem](#cfn-ecs-taskdefinition-containerdefinition-readonlyrootfilesystem)" : Boolean,
   "[RepositoryCredentials](#cfn-ecs-taskdefinition-containerdefinition-repositorycredentials)" : [RepositoryCredentials](aws-properties-ecs-taskdefinition-repositorycredentials.md),
+  "[StartTimeout](#cfn-ecs-taskdefinition-containerdefinition-starttimeout)" : Integer,
+  "[StopTimeout](#cfn-ecs-taskdefinition-containerdefinition-stoptimeout)" : Integer,
   "[Ulimits](#cfn-ecs-taskdefinition-containerdefinition-ulimits)" : [ [Ulimit](aws-properties-ecs-taskdefinition-containerdefinitions-ulimit.md), ... ],
   "[User](#cfn-ecs-taskdefinition-containerdefinition-user)" : String,
   "[VolumesFrom](#cfn-ecs-taskdefinition-containerdefinition-volumesfrom)" : [ [VolumeFrom](aws-properties-ecs-taskdefinition-containerdefinitions-volumesfrom.md), ... ],
@@ -48,6 +51,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Command](#cfn-ecs-taskdefinition-containerdefinition-command): 
     - String
   [Cpu](#cfn-ecs-taskdefinition-containerdefinition-cpu): Integer
+  [DependsOn](#cfn-ecs-taskdefinition-containerdefinition-dependson): 
+    - [ContainerDependency](aws-properties-ecs-taskdefinition-containerdependency.md)
   [DisableNetworking](#cfn-ecs-taskdefinition-containerdefinition-disablenetworking): Boolean
   [DnsSearchDomains](#cfn-ecs-taskdefinition-containerdefinition-dnssearchdomains): 
     - String
@@ -85,6 +90,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ReadonlyRootFilesystem](#cfn-ecs-taskdefinition-containerdefinition-readonlyrootfilesystem): Boolean
   [RepositoryCredentials](#cfn-ecs-taskdefinition-containerdefinition-repositorycredentials): 
     [RepositoryCredentials](aws-properties-ecs-taskdefinition-repositorycredentials.md)
+  [StartTimeout](#cfn-ecs-taskdefinition-containerdefinition-starttimeout): Integer
+  [StopTimeout](#cfn-ecs-taskdefinition-containerdefinition-stoptimeout): Integer
   [Ulimits](#cfn-ecs-taskdefinition-containerdefinition-ulimits): 
     - [Ulimit](aws-properties-ecs-taskdefinition-containerdefinitions-ulimit.md)
   [User](#cfn-ecs-taskdefinition-containerdefinition-user): String
@@ -113,6 +120,14 @@ On Linux container instances, the Docker daemon on the container instance uses t
 On Windows container instances, the CPU limit is enforced as an absolute limit, or a quota\. Windows containers only have access to the specified amount of CPU that is described in the task definition\.  
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`DependsOn`  <a name="cfn-ecs-taskdefinition-containerdefinition-dependson"></a>
+The dependencies defined for container startup and shutdown\. A container can contain multiple dependencies\. When a dependency is defined for container startup, for container shutdown it is reversed\.  
+For tasks using the EC2 launch type, the container instances require at least version 1\.26\.0 of the container agent to enable container dependencies\. However, we recommend using the latest container agent version\. For information about checking your agent version and updating to the latest version, see [Updating the Amazon ECS Container Agent](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html) in the *Amazon Elastic Container Service Developer Guide*\. If you are using an Amazon ECS\-optimized Linux AMI, your instance needs at least version 1\.26\.0\-1 of the `ecs-init` package\. If your container instances are launched from version `20190301` or later, then they contain the required versions of the container agent and `ecs-init`\. For more information, see [Amazon ECS\-optimized Linux AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+This parameter is available for tasks using the Fargate launch type in the Ohio \(us\-east\-2\) region only and the task or service requires platform version 1\.3\.0 or later\.  
+*Required*: No  
+*Type*: List of [ContainerDependency](aws-properties-ecs-taskdefinition-containerdependency.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DisableNetworking`  <a name="cfn-ecs-taskdefinition-containerdefinition-disablenetworking"></a>
@@ -289,6 +304,21 @@ This parameter is not supported for Windows containers\.
 The private repository authentication credentials to use\.  
 *Required*: No  
 *Type*: [RepositoryCredentials](aws-properties-ecs-taskdefinition-repositorycredentials.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`StartTimeout`  <a name="cfn-ecs-taskdefinition-containerdefinition-starttimeout"></a>
+Time duration to wait before giving up on resolving dependencies for a container\. For example, you specify two containers in a task definition with containerA having a dependency on containerB reaching a `COMPLETE`, `SUCCESS`, or `HEALTHY` status\. If a `startTimeout` value is specified for containerB and it does not reach the desired status within that time then containerA will give up and not start\. This results in the task transitioning to a `STOPPED` state\.  
+For tasks using the EC2 launch type, the container instances require at least version 1\.26\.0 of the container agent to enable a container start timeout value\. However, we recommend using the latest container agent version\. For information about checking your agent version and updating to the latest version, see [Updating the Amazon ECS Container Agent](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html) in the *Amazon Elastic Container Service Developer Guide*\. If you are using an Amazon ECS\-optimized Linux AMI, your instance needs at least version 1\.26\.0\-1 of the `ecs-init` package\. If your container instances are launched from version `20190301` or later, then they contain the required versions of the container agent and `ecs-init`\. For more information, see [Amazon ECS\-optimized Linux AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+This parameter is available for tasks using the Fargate launch type in the Ohio \(us\-east\-2\) region only and the task or service requires platform version 1\.3\.0 or later\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`StopTimeout`  <a name="cfn-ecs-taskdefinition-containerdefinition-stoptimeout"></a>
+Time duration to wait before the container is forcefully killed if it doesn't exit normally on its own\. For tasks using the Fargate launch type, the max `stopTimeout` value is 2 minutes\. This parameter is available for tasks using the Fargate launch type in the Ohio \(us\-east\-2\) region only and the task or service requires platform version 1\.3\.0 or later\.  
+For tasks using the EC2 launch type, the stop timeout value for the container takes precedence over the `ECS_CONTAINER_STOP_TIMEOUT` container agent configuration parameter, if used\. Container instances require at least version 1\.26\.0 of the container agent to enable a container stop timeout value\. However, we recommend using the latest container agent version\. For information about checking your agent version and updating to the latest version, see [Updating the Amazon ECS Container Agent](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html) in the *Amazon Elastic Container Service Developer Guide*\. If you are using an Amazon ECS\-optimized Linux AMI, your instance needs at least version 1\.26\.0\-1 of the `ecs-init` package\. If your container instances are launched from version `20190301` or later, then they contain the required versions of the container agent and `ecs-init`\. For more information, see [Amazon ECS\-optimized Linux AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ulimits`  <a name="cfn-ecs-taskdefinition-containerdefinition-ulimits"></a>

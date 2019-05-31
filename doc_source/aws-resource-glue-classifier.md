@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Glue::Classifier",
   "Properties" : {
+      "[CsvClassifier](#cfn-glue-classifier-csvclassifier)" : [CsvClassifier](aws-properties-glue-classifier-csvclassifier.md),
       "[GrokClassifier](#cfn-glue-classifier-grokclassifier)" : [GrokClassifier](aws-properties-glue-classifier-grokclassifier.md),
       "[JsonClassifier](#cfn-glue-classifier-jsonclassifier)" : [JsonClassifier](aws-properties-glue-classifier-jsonclassifier.md),
       "[XMLClassifier](#cfn-glue-classifier-xmlclassifier)" : [XMLClassifier](aws-properties-glue-classifier-xmlclassifier.md)
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Glue::Classifier
 Properties: 
+  [CsvClassifier](#cfn-glue-classifier-csvclassifier): 
+    [CsvClassifier](aws-properties-glue-classifier-csvclassifier.md)
   [GrokClassifier](#cfn-glue-classifier-grokclassifier): 
     [GrokClassifier](aws-properties-glue-classifier-grokclassifier.md)
   [JsonClassifier](#cfn-glue-classifier-jsonclassifier): 
@@ -33,6 +36,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-glue-classifier-properties"></a>
+
+`CsvClassifier`  <a name="cfn-glue-classifier-csvclassifier"></a>
+A classifier for comma\-separated values \(CSV\)\.  
+*Required*: No  
+*Type*: [CsvClassifier](aws-properties-glue-classifier-csvclassifier.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GrokClassifier`  <a name="cfn-glue-classifier-grokclassifier"></a>
 A classifier that uses `grok`\.  

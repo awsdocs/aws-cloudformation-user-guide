@@ -12,10 +12,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AppSync::GraphQLApi",
   "Properties" : {
+      "[AdditionalAuthenticationProviders](#cfn-appsync-graphqlapi-additionalauthenticationproviders)" : [AdditionalAuthenticationProviders](aws-properties-appsync-graphqlapi-additionalauthenticationproviders.md),
       "[AuthenticationType](#cfn-appsync-graphqlapi-authenticationtype)" : String,
       "[LogConfig](#cfn-appsync-graphqlapi-logconfig)" : [LogConfig](aws-properties-appsync-graphqlapi-logconfig.md),
       "[Name](#cfn-appsync-graphqlapi-name)" : String,
       "[OpenIDConnectConfig](#cfn-appsync-graphqlapi-openidconnectconfig)" : [OpenIDConnectConfig](aws-properties-appsync-graphqlapi-openidconnectconfig.md),
+      "[Tags](#cfn-appsync-graphqlapi-tags)" : [Tags](aws-properties-appsync-graphqlapi-tags.md),
       "[UserPoolConfig](#cfn-appsync-graphqlapi-userpoolconfig)" : [UserPoolConfig](aws-properties-appsync-graphqlapi-userpoolconfig.md)
     }
 }
@@ -26,17 +28,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::AppSync::GraphQLApi
 Properties: 
+  [AdditionalAuthenticationProviders](#cfn-appsync-graphqlapi-additionalauthenticationproviders): 
+    [AdditionalAuthenticationProviders](aws-properties-appsync-graphqlapi-additionalauthenticationproviders.md)
   [AuthenticationType](#cfn-appsync-graphqlapi-authenticationtype): String
   [LogConfig](#cfn-appsync-graphqlapi-logconfig): 
     [LogConfig](aws-properties-appsync-graphqlapi-logconfig.md)
   [Name](#cfn-appsync-graphqlapi-name): String
   [OpenIDConnectConfig](#cfn-appsync-graphqlapi-openidconnectconfig): 
     [OpenIDConnectConfig](aws-properties-appsync-graphqlapi-openidconnectconfig.md)
+  [Tags](#cfn-appsync-graphqlapi-tags): 
+    [Tags](aws-properties-appsync-graphqlapi-tags.md)
   [UserPoolConfig](#cfn-appsync-graphqlapi-userpoolconfig): 
     [UserPoolConfig](aws-properties-appsync-graphqlapi-userpoolconfig.md)
 ```
 
 ## Properties<a name="aws-resource-appsync-graphqlapi-properties"></a>
+
+`AdditionalAuthenticationProviders`  <a name="cfn-appsync-graphqlapi-additionalauthenticationproviders"></a>
+A list of additional authentication providers for the `GraphqlApi` API\.  
+*Required*: No  
+*Type*: [AdditionalAuthenticationProviders](aws-properties-appsync-graphqlapi-additionalauthenticationproviders.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthenticationType`  <a name="cfn-appsync-graphqlapi-authenticationtype"></a>
 Security configuration for your GraphQL API\. For allowed values \(such as `API_KEY`, `AWS_IAM`, or `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`\), see [Security](https://docs.aws.amazon.com/appsync/latest/devguide/security.html) in the *AWS AppSync Developer Guide*\.  
@@ -60,6 +72,12 @@ The API name\.
 The OpenID Connect configuration\.  
 *Required*: No  
 *Type*: [OpenIDConnectConfig](aws-properties-appsync-graphqlapi-openidconnectconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-appsync-graphqlapi-tags"></a>
+An arbitrary set of tags \(key\-value pairs\) for this GraphQL API\.  
+*Required*: No  
+*Type*: [Tags](aws-properties-appsync-graphqlapi-tags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserPoolConfig`  <a name="cfn-appsync-graphqlapi-userpoolconfig"></a>

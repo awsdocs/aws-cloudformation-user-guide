@@ -81,7 +81,7 @@ Indicates whether actions should be executed during any changes to the alarm sta
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AlarmActions`  <a name="cfn-cloudwatch-alarms-alarmactions"></a>
-The actions to execute when this alarm transitions to the `ALARM` state from any other state\. The list of actions to execute when this alarm transitions into an ALARM state from any other state\. Specify each action as an Amazon Resource Name \(ARN\)\. For more information about creating alarms and the actions that you can specify, see [PutMetricAlarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricAlarm.html) in the *Amazon CloudWatch API Reference*\.  
+The list of actions to execute when this alarm transitions into an ALARM state from any other state\. Specify each action as an Amazon Resource Name \(ARN\)\. For more information about creating alarms and the actions that you can specify, see [PutMetricAlarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricAlarm.html) in the *Amazon CloudWatch API Reference*\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `5`  
@@ -120,7 +120,7 @@ The number of datapoints that must be breaching to trigger the alarm\. This is u
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Dimensions`  <a name="cfn-cloudwatch-alarms-dimension"></a>
-The dimensions for the metric associated with the alarm\.  
+The dimensions for the metric associated with the alarm\. For an alarm based on a math expression, you can't specify `Dimensions`\. Instead, you use `Metrics`\.  
 *Required*: No  
 *Type*: List of [Dimension](aws-properties-cw-dimension.md)  
 *Maximum*: `10`  
@@ -143,6 +143,7 @@ The number of periods over which data is compared to the specified threshold\.
 
 `ExtendedStatistic`  <a name="cfn-cloudwatch-alarms-extendedstatistic"></a>
 The percentile statistic for the metric associated with the alarm\. Specify a value between p0\.0 and p100\.  
+For an alarm based on a math expression, you can't specify `ExtendedStatistic`\. Instead, you use `Metrics`\.  
 *Required*: No  
 *Type*: String  
 *Pattern*: `p(\d{1,2}(\.\d{0,2})?|100)`  
@@ -156,7 +157,7 @@ The actions to execute when this alarm transitions to the `INSUFFICIENT_DATA` st
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricName`  <a name="cfn-cloudwatch-alarms-metricname"></a>
-The name of the metric associated with the alarm\.  
+The name of the metric associated with the alarm\. This is required for an alarm based on a metric\. For an alarm based on a math expression, you use `Metrics` instead and you can't specify `MetricName`\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -164,13 +165,14 @@ The name of the metric associated with the alarm\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Metrics`  <a name="cfn-cloudwatch-alarm-metrics"></a>
-Specifies the metric data to return\.  
+An array that enables you to create an alarm based on the result of a metric math expression\. Each item in the array either retrieves a metric or performs a math expression\.  
+If you specify the `Metrics` parameter, you cannot specify `MetricName`, `Dimensions`, `Period`, `Namespace`, `Statistic`, or `ExtendedStatistic`\.   
 *Required*: No  
 *Type*: List of [MetricDataQuery](aws-properties-cloudwatch-alarm-metricdataquery.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Namespace`  <a name="cfn-cloudwatch-alarms-namespace"></a>
-The namespace of the metric associated with the alarm\.  
+The namespace of the metric associated with the alarm\. This is required for an alarm based on a metric\. For an alarm based on a math expression, you can't specify `Namespace` and you use `Metrics` instead\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -186,7 +188,7 @@ The actions to execute when this alarm transitions to the `OK` state from any ot
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Period`  <a name="cfn-cloudwatch-alarms-period"></a>
-The period, in seconds, over which the statistic is applied\.  
+The period, in seconds, over which the statistic is applied\. This is required for an alarm based on a metric\. For an alarm based on a math expression, you can't specify `Period`, and instead you use the `Metrics` parameter\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -194,6 +196,7 @@ The period, in seconds, over which the statistic is applied\.
 
 `Statistic`  <a name="cfn-cloudwatch-alarms-statistic"></a>
 The statistic for the metric associated with the alarm, other than percentile\. For percentile statistics, use `ExtendedStatistic`\.  
+For an alarm based on a math expression, you can't specify `Statistic`\. Instead, you use `Metrics`\.  
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `Average | Maximum | Minimum | SampleCount | Sum`  
@@ -206,7 +209,8 @@ The value to compare with the specified statistic\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TreatMissingData`  <a name="cfn-cloudwatch-alarms-treatmissingdata"></a>
-Sets how this alarm is to handle missing data points\. If this parameter is omitted, the default behavior of `missing` is used\. For more information, see [ Configuring How CloudWatch Alarms Treat Missing Data](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-missing-data) in the *Amazon CloudWatch User Guide*\.  
+Sets how this alarm is to handle missing data points\. Valid values are `breaching`, `notBreaching`, `ignore`, and `missing`\. For more information, see [ Configuring How CloudWatch Alarms Treat Missing Data](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-missing-data) in the *Amazon CloudWatch User Guide*\.  
+If you omit this parameter, the default behavior of `missing` is used\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

@@ -133,7 +133,7 @@ MyIPSetRule:
         DataId: 
           Ref: "MyIPSetBlacklist"
         Negated: false
-Type: "IPMatch"
+    Type: "IPMatch"
 ```
 
 ### Create a Web ACL<a name="aws-resource-wafregional-ipset--examples--Create_a_Web_ACL"></a>

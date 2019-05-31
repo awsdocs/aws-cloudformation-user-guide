@@ -71,7 +71,8 @@ The description to display\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DisconnectTimeoutInSeconds`  <a name="cfn-appstream-fleet-disconnecttimeoutinseconds"></a>
-The time after disconnection when a session is considered to have ended, in seconds\. If a user who was disconnected reconnects within this time interval, the user is connected to their previous session\. Specify a value between 60 and 360000\.  
+The amount of time that a streaming session remains active after users disconnect\. If users try to reconnect to the streaming session after a disconnection or network interruption within this time interval, they are connected to their previous session\. Otherwise, they are connected to a new session with a new streaming instance\.   
+Specify a value between 60 and 360000\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -148,7 +149,8 @@ The instance type to use when launching fleet instances\. The following instance
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxUserDurationInSeconds`  <a name="cfn-appstream-fleet-maxuserdurationinseconds"></a>
-The maximum time that a streaming session can run, in seconds\. Specify a value between 600 and 360000\.  
+The maximum amount of time that a streaming session can remain active, in seconds\. If users are still connected to a streaming instance five minutes before this limit is reached, they are prompted to save any open documents before being disconnected\. After this time elapses, the instance is terminated and replaced by a new instance\.  
+Specify a value between 600 and 360000\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

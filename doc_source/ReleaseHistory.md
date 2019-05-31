@@ -4,6 +4,91 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::CodeCommit::Repository and AWS::EC2::LaunchTemplate\. 
+
+ [Code](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-code.html)   
+Use the `Code` resource to provide information about code to be committed\. 
+
+ [S3](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html)   
+Use the `S3` resource to provide information about the Amazon S3 bucket that contains the code that will be committed to the new repository\. 
+
+ [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)   
+In the [NetworkInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html) property, use `InterfaceType` to specify the type of network interface\.  | May 23, 2019 | 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::Backup::BackupPlan, AWS::Backup::BackupSelection, AWS::Backup::BackupVault, AWS::PinpointEmail::ConfigurationSet, AWS::PinpointEmail::ConfigurationSetEventDestination, AWS::PinpointEmail::DedicatedIpPool, AWS::PinpointEmail::Identity, AWS::Transfer::Server, AWS::Transfer::User, AWS::WAFRegional::GeoMatchSet, AWS::WAFRegional::RateBasedRule, and AWS::WAFRegional::RegexPatternSet\. 
+
+ [AWS::Backup::BackupPlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupplan.html)   
+Contains an optional backup plan display name and an array of BackupRule objects, each of which specifies a backup rule\. Each rule in a backup plan is a separate scheduled task and can back up a different selection of AWS resources\.  
+
+[AWS::Backup::BackupSelection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupselection.html)  
+Specifies a set of resources to assign to a backup plan\. 
+
+[AWS::Backup::BackupVault](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html)  
+Creates a logical container where backups are stored\. A CreateBackupVault request includes a name, optionally one or more resource tags, an encryption key, and a request ID\. 
+
+ [AWS::PinpointEmail::ConfigurationSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationset.html)   
+Use the `AWS::PinpointEmail::ConfigurationSet` resource to specify configuration sets for the Amazon Pinpoint Email API\. 
+
+ [AWS::PinpointEmail::ConfigurationSetEventDestination](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationseteventdestination.html)   
+Use the `AWS::PinpointEmail::ConfigurationSetEventDestination` resource to specify destinations for events related to sending email in the Amazon Pinpoint Email API\. 
+
+ [AWS::PinpointEmail::DedicatedIpPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-dedicatedippool.html)   
+Use the `AWS::PinpointEmail::DedicatedIpPool` resource to specify groups of dedicated IP addresses in the Amazon Pinpoint Email API\. 
+
+ [AWS::PinpointEmail::Identity](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-identity.html)   
+Use the `AWS::PinpointEmail::Identity` resource to specify identities \(email addresses or domains\) for sending email through the Amazon Pinpoint Email API\. 
+
+ [AWS::Transfer::Server](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html)   
+Creates an autoscaling virtual server based on Secure File Transfer Protocol \(SFTP\) in AWS\. 
+
+ [AWS::Transfer::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html)   
+Creates a user and associates them with an existing Secure File Transfer Protocol \(SFTP\) server\. 
+
+ [AWS::WafRegional::GeoMatchSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-geomatchset.html)  
+The `AWS::WAFRegional::GeoMatchSet` resource contains one or more countries that AWS WAF will search for\. 
+
+ [AWS::WafRegional::RateBasedRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-ratebasedrule.html)  
+The `AWS::WAFRegional::RateBasedRule` resource is identical to a regular Rule, with one addition: a RateBasedRule counts the number of requests that arrive from a specified IP address every five minutes\. 
+
+ [AWS::WafRegional::RegexPatternSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-regexpatternset.html)  
+The `AWS::WAFRegional::RegexPatternSet` resource specifies the regular expression \(regex\) pattern that you want AWS WAF to search for\.  | May 23, 2019 | 
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::AppSync::GraphQLApi, AWS::Cognito::UserPool, AWS::Glue::Classifier, AWS::Glue::Crawler, AWS::Glue::DevEndpoint, AWS::Glue::Job, and AWS::Glue::Trigger\. 
+
+ [AWS::AppSync::GraphQLApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html)   
+Use the `AdditionalAuthenticationProviders` property to specify a list of additional authentication providers for the GraphqlApi API\.  
+Use the `Tags` property to specify an arbitrary set of tags \(key\-value pairs\) for this GraphQL API\. 
+
+ [AWS::Cognito::UserPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html)   
+In the [PasswordPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html) property type, use the `TemporaryPasswordValidityDays` property to specify the number of days a temporary password is valid\. If the user does not sign\-in during this time, their password will need to be reset by an administrator\.  
+When you set `TemporaryPasswordValidityDays` for a user pool, you will no longer be able to set the deprecated `UnusedAccountValidityDays` value for that user pool\. 
+
+[AWS::Glue::Classifier](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-classifier.html)  
+Use the `CsvClassifier` property to specify a classifier for comma\-separated values \(CSV\)\. 
+
+ [AWS::Glue::Crawler](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html)   
+Use the `CrawlerSecurityConfiguration` property to specify the name of the `SecurityConfiguration` structure to be used by this crawler\.  
+Use the `Tags` property to specify the tags to use with this crawler request\. You can use tags to limit access to the crawler\. 
+
+ [AWS::Glue::DevEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html)   
+Use the `SecurityConfiguration` property to specify the name of the `SecurityConfiguration` structure to be used by this `DevEndpoint`\.  
+Use the `Tags` property to specify the tags to use with this `DevEndpoint`\. You can use tags to limit access to the `DevEndpoint`\. 
+
+ [AWS::Glue::Job](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html)   
+Use the `SecurityConfiguration` property to specify the name of the `SecurityConfiguration` structure to be used with this job\.  
+Use the `Tags` property to specify the tags to use with this job\. You can use tags to limit access to the job\. 
+
+ [AWS::Glue::Trigger](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html)   
+Use the `Tags` property to specify the tags to use with this trigger\. You can use tags to limit access to the trigger\.  | May 17, 2019 | 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::Glue::DataCatalogEncryptionSettings, AWS::Glue::SecurityConfiguration, and AWS::MediaStore::Container\. 
+
+ [AWS::Glue::DataCatalogEncryptionSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-datacatalogencryptionsettings.html)   
+Sets the security configuration for a specified catalog\. After the configuration has been set, the specified encryption is applied to every catalog write thereafter\. 
+
+ [AWS::Glue::SecurityConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-securityconfiguration.html)   
+Creates a new security configuration\. 
+
+[AWS::MediaStore::Container](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html)  
+The `AWS::MediaStore::Container` resource specifies a storage container to hold objects\. A container is similar to a bucket in Amazon S3\.  
+When you create a container using AWS CloudFormation, the template manages data for five API actions: creating a container, setting access logging, updating the default container policy, adding a cross\-origin resource sharing \(CORS\) policy, and adding an object lifecycle policy\.  | May 17, 2019 | 
 | [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::ServiceCatalog::CloudFormationProduct\. 
 
  [AWS::ServiceCatalog::CloudFormationProduct](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html)   

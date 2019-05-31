@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Classifiers](#cfn-glue-crawler-classifiers)" : [ String, ... ],
       "[Configuration](#cfn-glue-crawler-configuration)" : String,
+      "[CrawlerSecurityConfiguration](#cfn-glue-crawler-crawlersecurityconfiguration)" : String,
       "[DatabaseName](#cfn-glue-crawler-databasename)" : String,
       "[Description](#cfn-glue-crawler-description)" : String,
       "[Name](#cfn-glue-crawler-name)" : String,
@@ -21,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Schedule](#cfn-glue-crawler-schedule)" : [Schedule](aws-properties-glue-crawler-schedule.md),
       "[SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy)" : [SchemaChangePolicy](aws-properties-glue-crawler-schemachangepolicy.md),
       "[TablePrefix](#cfn-glue-crawler-tableprefix)" : String,
+      "[Tags](#cfn-glue-crawler-tags)" : Json,
       "[Targets](#cfn-glue-crawler-targets)" : [Targets](aws-properties-glue-crawler-targets.md)
     }
 }
@@ -34,6 +36,7 @@ Properties:
   [Classifiers](#cfn-glue-crawler-classifiers): 
     - String
   [Configuration](#cfn-glue-crawler-configuration): String
+  [CrawlerSecurityConfiguration](#cfn-glue-crawler-crawlersecurityconfiguration): String
   [DatabaseName](#cfn-glue-crawler-databasename): String
   [Description](#cfn-glue-crawler-description): String
   [Name](#cfn-glue-crawler-name): String
@@ -43,6 +46,7 @@ Properties:
   [SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy): 
     [SchemaChangePolicy](aws-properties-glue-crawler-schemachangepolicy.md)
   [TablePrefix](#cfn-glue-crawler-tableprefix): String
+  [Tags](#cfn-glue-crawler-tags): Json
   [Targets](#cfn-glue-crawler-targets): 
     [Targets](aws-properties-glue-crawler-targets.md)
 ```
@@ -57,6 +61,12 @@ A list of UTF\-8 strings that specify the custom classifiers that are associated
 
 `Configuration`  <a name="cfn-glue-crawler-configuration"></a>
 Crawler configuration information\. This versioned JSON string allows users to specify aspects of a crawler's behavior\. For more information, see [Configuring a Crawler](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html)\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CrawlerSecurityConfiguration`  <a name="cfn-glue-crawler-crawlersecurityconfiguration"></a>
+The name of the `SecurityConfiguration` structure to be used by this crawler\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -101,6 +111,12 @@ The policy that specifies update and delete behaviors for the crawler\.
 The prefix added to the names of tables that are created\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-glue-crawler-tags"></a>
+The tags to use with this crawler request\. You can use tags to limit access to the crawler\. For more information about tags in AWS Glue, see [AWS Tags in AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html) in the developer guide\.  
+*Required*: No  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-glue-crawler-targets"></a>
