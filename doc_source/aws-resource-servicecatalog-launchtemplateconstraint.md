@@ -1,11 +1,6 @@
 # AWS::ServiceCatalog::LaunchTemplateConstraint<a name="aws-resource-servicecatalog-launchtemplateconstraint"></a>
 
-Creates a template constraint for AWS Service Catalog\. For more information, see [CreateConstraint](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateConstraint.html) in the *AWS Service Catalog Developer Guide*\.
-
-**Topics**
-+ [Syntax](#aws-resource-servicecatalog-launchtemplateconstraint-syntax)
-+ [Properties](#aws-resource-servicecatalog-launchtemplateconstraint-properties)
-+ [Return Values](#aws-resource-servicecatalog-launchtemplateconstraint-returnvalues)
+Specifies a template constraint\.
 
 ## Syntax<a name="aws-resource-servicecatalog-launchtemplateconstraint-syntax"></a>
 
@@ -17,22 +12,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ServiceCatalog::LaunchTemplateConstraint",
   "Properties" : {
-    "[Description](#cfn-servicecatalog-launchtemplateconstraint-description)" : String,
-    "[AcceptLanguage](#cfn-servicecatalog-launchtemplateconstraint-acceptlanguage)" : String,
-    "[PortfolioId](#cfn-servicecatalog-launchtemplateconstraint-portfolioid)" : String,
-    "[ProductId](#cfn-servicecatalog-launchtemplateconstraint-productid)" : String,
-    "[Rules](#cfn-servicecatalog-launchtemplateconstraint-rules)" : String
-  }
+      "[AcceptLanguage](#cfn-servicecatalog-launchtemplateconstraint-acceptlanguage)" : String,
+      "[Description](#cfn-servicecatalog-launchtemplateconstraint-description)" : String,
+      "[PortfolioId](#cfn-servicecatalog-launchtemplateconstraint-portfolioid)" : String,
+      "[ProductId](#cfn-servicecatalog-launchtemplateconstraint-productid)" : String,
+      "[Rules](#cfn-servicecatalog-launchtemplateconstraint-rules)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-servicecatalog-launchtemplateconstraint-syntax.yaml"></a>
 
 ```
-Type: "AWS::ServiceCatalog::LaunchTemplateConstraint"
-Properties:
-  [Description](#cfn-servicecatalog-launchtemplateconstraint-description): String
+Type: AWS::ServiceCatalog::LaunchTemplateConstraint
+Properties: 
   [AcceptLanguage](#cfn-servicecatalog-launchtemplateconstraint-acceptlanguage): String
+  [Description](#cfn-servicecatalog-launchtemplateconstraint-description): String
   [PortfolioId](#cfn-servicecatalog-launchtemplateconstraint-portfolioid): String
   [ProductId](#cfn-servicecatalog-launchtemplateconstraint-productid): String
   [Rules](#cfn-servicecatalog-launchtemplateconstraint-rules): String
@@ -42,38 +37,52 @@ Properties:
 
 `AcceptLanguage`  <a name="cfn-servicecatalog-launchtemplateconstraint-acceptlanguage"></a>
 The language code\.  
++  `en` \- English \(default\)
++  `jp` \- Japanese
++  `zh` \- Chinese
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Maximum*: `100`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-servicecatalog-launchtemplateconstraint-description"></a>
 The description of the constraint\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Maximum*: `2000`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PortfolioId`  <a name="cfn-servicecatalog-launchtemplateconstraint-portfolioid"></a>
 The portfolio identifier\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `100`  
+*Pattern*: `^[a-zA-Z0-9_\-]*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ProductId`  <a name="cfn-servicecatalog-launchtemplateconstraint-productid"></a>
 The product identifier\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `100`  
+*Pattern*: `^[a-zA-Z0-9_\-]*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Rules`  <a name="cfn-servicecatalog-launchtemplateconstraint-rules"></a>
 The constraint rules\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-servicecatalog-launchtemplateconstraint-returnvalues"></a>
+## Return Values<a name="aws-resource-servicecatalog-launchtemplateconstraint-return-values"></a>
 
-### Ref<a name="aws-resource-servicecatalog-launchtemplateconstraint-ref"></a>
+### Ref<a name="aws-resource-servicecatalog-launchtemplateconstraint-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::ServiceCatalog::LaunchTemplateConstraint` resource to the intrinsic `Ref` function, the function returns the identifier of the constraint\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the identifier of the constraint\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+## See Also<a name="aws-resource-servicecatalog-launchtemplateconstraint--seealso"></a>
++ [CreateConstraint](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateConstraint.html) in the *AWS Service Catalog API Reference*

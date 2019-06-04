@@ -1,8 +1,6 @@
-# Amazon Kinesis Data Analytics ApplicationReferenceDataSource RecordFormat<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat"></a>
+# AWS::KinesisAnalytics::ApplicationReferenceDataSource RecordFormat<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat"></a>
 
-The `RecordFormat` property type specifies the record format and relevant mapping information that should be applied to schematize the records on the stream\. 
-
- `RecordFormat` is a property of the [ReferenceSchema](aws-properties-kinesisanalytics-applicationreferencedatasource-referenceschema.md) parameter\. 
+ Describes the record format and relevant mapping information that should be applied to schematize the records on the stream\. 
 
 ## Syntax<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat-syntax"></a>
 
@@ -12,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[MappingParameters](#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-mappingparameters)" : [*MappingParameters*](aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.md),
+  "[MappingParameters](#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-mappingparameters)" : [MappingParameters](aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.md),
   "[RecordFormatType](#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-recordformattype)" : String
 }
 ```
@@ -21,20 +19,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [MappingParameters](#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-mappingparameters): 
-    [*MappingParameters*](aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.md)
+    [MappingParameters](aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.md)
   [RecordFormatType](#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-recordformattype): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat-properties"></a>
 
 `MappingParameters`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-recordformat-mappingparameters"></a>
-When configuring application input at the time of creating or updating an application, provides additional mapping information specific to the record format \(such as JSON, CSV, or record fields delimited by some delimiter\) on the streaming source\.   
- *Required*: No  
- *Type*: [MappingParameters](aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+When configuring application input at the time of creating or updating an application, provides additional mapping information specific to the record format \(such as JSON, CSV, or record fields delimited by some delimiter\) on the streaming source\.  
+*Required*: No  
+*Type*: [MappingParameters](aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RecordFormatType`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-recordformat-recordformattype"></a>
-The type of record format \(CSV or JSON\)\.  
- *Required*: Yes  
- *Type*: String;  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The type of record format\.  
+*Required*: Yes  
+*Type*: String  
+*Allowed Values*: `CSV | JSON`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

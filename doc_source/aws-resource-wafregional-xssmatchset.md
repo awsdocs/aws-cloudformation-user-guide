@@ -1,6 +1,6 @@
 # AWS::WAFRegional::XssMatchSet<a name="aws-resource-wafregional-xssmatchset"></a>
 
-The `AWS::WAFRegional::XssMatchSet` resource specifies the parts of web requests that you want AWS WAF to inspect for cross\-site scripting attacks and the name of the header to inspect\. For more information, see [XssMatchSet](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_XssMatchSet.html) in the *AWS WAF Regional API Reference*\.
+A complex type that contains `XssMatchTuple` objects, which specify the parts of web requests that you want AWS WAF to inspect for cross\-site scripting attacks and, if you want AWS WAF to inspect a header, the name of the header\. If a `XssMatchSet` contains more than one `XssMatchTuple` object, a request needs to include cross\-site scripting attacks in only one of the specified parts of the request to be considered a match\.
 
 ## Syntax<a name="aws-resource-wafregional-xssmatchset-syntax"></a>
 
@@ -12,51 +12,53 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFRegional::XssMatchSet",
   "Properties" : {
-    "[Name](#cfn-wafregional-xssmatchset-name)" : String,
-    "[XssMatchTuples](#cfn-wafregional-xssmatchset-xssmatchtuples)" : [ XssMatchTuple, ... ]
-  }
+      "[Name](#cfn-wafregional-xssmatchset-name)" : String,
+      "[XssMatchTuples](#cfn-wafregional-xssmatchset-xssmatchtuples)" : [ [XssMatchTuple](aws-properties-wafregional-xssmatchset-xssmatchtuple.md), ... ]
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-wafregional-xssmatchset-syntax.yaml"></a>
 
 ```
-Type: "AWS::WAFRegional::XssMatchSet"
+Type: AWS::WAFRegional::XssMatchSet
 Properties: 
   [Name](#cfn-wafregional-xssmatchset-name): String
-  [XssMatchTuples](#cfn-wafregional-xssmatchset-xssmatchtuples):
-    - XssMatchTuple
+  [XssMatchTuples](#cfn-wafregional-xssmatchset-xssmatchtuples): 
+    - [XssMatchTuple](aws-properties-wafregional-xssmatchset-xssmatchtuple.md)
 ```
 
-## Properties<a name="w13ab1c21c10d237c41b7"></a>
+## Properties<a name="aws-resource-wafregional-xssmatchset-properties"></a>
 
 `Name`  <a name="cfn-wafregional-xssmatchset-name"></a>
-A friendly name or description for the `XssMatchSet`\.  
+The name, if any, of the `XssMatchSet`\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `XssMatchTuples`  <a name="cfn-wafregional-xssmatchset-xssmatchtuples"></a>
-The parts of web requests that you want to inspect for cross\-site scripting attacks\.  
+Specifies the parts of web requests that you want to inspect for cross\-site scripting attacks\.  
 *Required*: No  
-*Type*: List of [AWS WAF Regional XssMatchSet XssMatchTuple](aws-properties-wafregional-xssmatchset-xssmatchtuple.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of [XssMatchTuple](aws-properties-wafregional-xssmatchset-xssmatchtuple.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10d237c41b9"></a>
+## Return Values<a name="aws-resource-wafregional-xssmatchset-return-values"></a>
 
-### Ref<a name="w13ab1c21c10d237c41b9b2"></a>
+### Ref<a name="aws-resource-wafregional-xssmatchset-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource physical ID, such as `1234a1a-a1b1-12a1-abcd-a123b123456`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource physical ID, such as 1234a1a\-a1b1\-12a1\-abcd\-a123b123456\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Examples<a name="w13ab1c21c10d237c41c11"></a>
+## Examples<a name="aws-resource-wafregional-xssmatchset--examples"></a>
 
-### Define Which Part of a Request to Check for Cross\-site Scripting<a name="w13ab1c21c10d237c41c11b2"></a>
+### Define Which Part of a Request to Check for Cross\-site Scripting<a name="aws-resource-wafregional-xssmatchset--examples--Define_Which_Part_of_a_Request_to_Check_for_Cross-site_Scripting"></a>
 
 The following example looks for cross\-site scripting in the URI or query string of an HTTP request\.
 
-#### JSON<a name="aws-resource-wafregional-xssmatchset-example1.json"></a>
+#### JSON<a name="aws-resource-wafregional-xssmatchset--examples--Define_Which_Part_of_a_Request_to_Check_for_Cross-site_Scripting--json"></a>
 
 ```
 "DetectXSS": {
@@ -81,7 +83,7 @@ The following example looks for cross\-site scripting in the URI or query string
 }
 ```
 
-#### YAML<a name="aws-resource-wafregional-xssmatchset-example1.yaml"></a>
+#### YAML<a name="aws-resource-wafregional-xssmatchset--examples--Define_Which_Part_of_a_Request_to_Check_for_Cross-site_Scripting--yaml"></a>
 
 ```
 DetectXSS: 
@@ -96,14 +98,14 @@ DetectXSS:
       - 
         FieldToMatch: 
           Type: "QUERY_STRING"
-        TextTransformation: "NONE"
+TextTransformation: "NONE"
 ```
 
-### Associate an XssMatchSet with a Web ACL Rule<a name="w13ab1c21c10d237c41c11b4"></a>
+### Associate an XssMatchSet with a Web ACL Rule<a name="aws-resource-wafregional-xssmatchset--examples--Associate_an_XssMatchSet_with_a_Web_ACL_Rule"></a>
 
 The following example associates the `DetectXSS` match set with a web access control list \(ACL\) rule\.
 
-#### JSON<a name="aws-resource-wafregional-xssmatchset-example2.json"></a>
+#### JSON<a name="aws-resource-wafregional-xssmatchset--examples--Associate_an_XssMatchSet_with_a_Web_ACL_Rule--json"></a>
 
 ```
 "XSSRule" : {
@@ -122,7 +124,7 @@ The following example associates the `DetectXSS` match set with a web access con
 }
 ```
 
-#### YAML<a name="aws-resource-wafregional-xssmatchset-example2.yaml"></a>
+#### YAML<a name="aws-resource-wafregional-xssmatchset--examples--Associate_an_XssMatchSet_with_a_Web_ACL_Rule--yaml"></a>
 
 ```
 XSSRule: 
@@ -135,14 +137,14 @@ XSSRule:
         DataId: 
           Ref: "DetectXSS"
         Negated: false
-        Type: "XssMatch"
+Type: "XssMatch"
 ```
 
-### Create a Web ACL<a name="w13ab1c21c10d237c41c11b6"></a>
+### Create a Web ACL<a name="aws-resource-wafregional-xssmatchset--examples--Create_a_Web_ACL"></a>
 
 The following example associates the `XSSRule` rule with a web ACL\. The web ACL allows all requests except for ones that contain cross\-site scripting in the URI or query string of an HTTP request\.
 
-#### JSON<a name="aws-resource-wafregional-xssmatchset-example3.json"></a>
+#### JSON<a name="aws-resource-wafregional-xssmatchset--examples--Create_a_Web_ACL--json"></a>
 
 ```
 "MyWebACL": {
@@ -166,7 +168,7 @@ The following example associates the `XSSRule` rule with a web ACL\. The web ACL
 }
 ```
 
-#### YAML<a name="aws-resource-wafregional-xssmatchset-example3.yaml"></a>
+#### YAML<a name="aws-resource-wafregional-xssmatchset--examples--Create_a_Web_ACL--yaml"></a>
 
 ```
 MyWebACL: 
@@ -182,5 +184,5 @@ MyWebACL:
           Type: "BLOCK"
         Priority: 1
         RuleId: 
-          Ref: "XSSRule"
+Ref: "XSSRule"
 ```

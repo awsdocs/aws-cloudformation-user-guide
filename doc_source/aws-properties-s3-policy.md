@@ -1,60 +1,53 @@
 # AWS::S3::BucketPolicy<a name="aws-properties-s3-policy"></a>
 
-The AWS::S3::BucketPolicy type applies an Amazon S3 bucket policy to an Amazon S3 bucket\.
+Applies an Amazon S3 bucket policy to an Amazon S3 bucket\.
 
-AWS::S3::BucketPolicy Snippet: [Declaring an Amazon S3 Bucket Policy](quickref-iam.md#scenario-bucket-policy)
-
-**Topics**
-+ [Syntax](#aws-resource-s3-bucketpolicy-syntax)
-+ [Properties](#w13ab1c21c10d204c17c11)
-+ [Examples](#w13ab1c21c10d204c17c13)
-
-## Syntax<a name="aws-resource-s3-bucketpolicy-syntax"></a>
+## Syntax<a name="aws-properties-s3-policy-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-resource-s3-bucketpolicy-syntax.json"></a>
+### JSON<a name="aws-properties-s3-policy-syntax.json"></a>
 
 ```
 {
-   "Type" : "AWS::S3::BucketPolicy",
-   "Properties" : {
-      "[Bucket](#cfn-s3-bucketpolicy-bucket)" : String,
-      "[PolicyDocument](#cfn-s3-bucketpolicy-policydocument)" : JSON
-   }
+  "Type" : "AWS::S3::BucketPolicy",
+  "Properties" : {
+      "[Bucket](#aws-properties-s3-policy-bucket)" : String,
+      "[PolicyDocument](#aws-properties-s3-policy-policydocument)" : Json
+    }
 }
 ```
 
-### YAML<a name="aws-resource-s3-bucketpolicy-syntax.yaml"></a>
+### YAML<a name="aws-properties-s3-policy-syntax.yaml"></a>
 
 ```
 Type: AWS::S3::BucketPolicy
 Properties: 
-  [Bucket](#cfn-s3-bucketpolicy-bucket): String
-  [PolicyDocument](#cfn-s3-bucketpolicy-policydocument): JSON
+  [Bucket](#aws-properties-s3-policy-bucket): String
+  [PolicyDocument](#aws-properties-s3-policy-policydocument): Json
 ```
 
-## Properties<a name="w13ab1c21c10d204c17c11"></a>
+## Properties<a name="aws-properties-s3-policy-properties"></a>
 
-`Bucket`  <a name="cfn-s3-bucketpolicy-bucket"></a>
+`Bucket`  <a name="aws-properties-s3-policy-bucket"></a>
 The name of the Amazon S3 bucket to which the policy applies\.  
 *Required*: Yes  
 *Type*: String  
-You cannot update this property\. If you want to add or remove a bucket from a bucket policy, you must modify your AWS CloudFormation template by creating a new bucket policy resource and removing the old one\. Then use the modified template to update your AWS CloudFormation stack\.
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`PolicyDocument`  <a name="cfn-s3-bucketpolicy-policydocument"></a>
-A policy document containing permissions to add to the specified bucket\. For more information, see [Access Policy Language Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html) in the *Amazon Simple Storage Service Developer Guide*\.  
+`PolicyDocument`  <a name="aws-properties-s3-policy-policydocument"></a>
+ A policy document containing permissions to add to the specified bucket\. For more information, see [Access Policy Language Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html) in the *Amazon Simple Storage Service Developer Guide*\.   
 *Required*: Yes  
-*Type*: JSON object  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Examples<a name="w13ab1c21c10d204c17c13"></a>
+## Examples<a name="aws-properties-s3-policy--examples"></a>
 
-### Bucket policy that allows GET requests from specific referers<a name="w13ab1c21c10d204c17c13b2"></a>
+### Bucket policy that allows GET requests from specific referers<a name="aws-properties-s3-policy--examples--Bucket_policy_that_allows_GET_requests_from_specific_referers"></a>
 
-The following sample is a bucket policy that is attached to the `myExampleBucket` bucket and allows GET requests that originate from `www.example.com` and `example.com`:
+ The following sample is a bucket policy that is attached to the myExampleBucket bucket and allows GET requests that originate from www\.example\.com and example\.com: 
 
-#### JSON<a name="aws-resource-s3-bucketpolicy-example.json"></a>
+#### JSON<a name="aws-properties-s3-policy--examples--Bucket_policy_that_allows_GET_requests_from_specific_referers--json"></a>
 
 ```
 "SampleBucketPolicy" : {
@@ -81,7 +74,7 @@ The following sample is a bucket policy that is attached to the `myExampleBucket
 }
 ```
 
-#### YAML<a name="aws-resource-s3-bucketpolicy-example.yaml"></a>
+#### YAML<a name="aws-properties-s3-policy--examples--Bucket_policy_that_allows_GET_requests_from_specific_referers--yaml"></a>
 
 ```
 SampleBucketPolicy: 

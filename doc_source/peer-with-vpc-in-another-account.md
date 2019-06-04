@@ -1,6 +1,6 @@
 # Walkthrough: Peer with an Amazon VPC in Another AWS Account<a name="peer-with-vpc-in-another-account"></a>
 
-You can peer with a virtual private cloud \(VPC\) in another AWS account by using [AWS::EC2::VPCPeeringConnection](aws-resource-ec2-vpcpeeringconnection.md)\. This creates a networking connection between two VPCs that enables you to route traffic between them so they can communicate as if they were within the same network\. A VPC peering connection can help facilitate data access and data transfer\.
+You can peer with a virtual private cloud \(VPC\) in another AWS account by using [AWS::EC2::VPCPeeringConnection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html)\. This creates a networking connection between two VPCs that enables you to route traffic between them so they can communicate as if they were within the same network\. A VPC peering connection can help facilitate data access and data transfer\.
 
 To establish a VPC peering connection, you need to authorize two separate AWS accounts within a single AWS CloudFormation stack\.
 
@@ -160,7 +160,7 @@ In this step, you'll create the VPC and role in the *accepter account*\.
 
 Now that you've created the VPC and cross\-account role, you can peer with the VPC using another AWS account \(the *requester account*\)\.
 
- **To create a template that includes the [AWS::EC2::VPCPeeringConnection](aws-resource-ec2-vpcpeeringconnection.md) resource \(example\)** 
+ **To create a template that includes the [AWS::EC2::VPCPeeringConnection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html) resource \(example\)** 
 
 1. Go back to the AWS CloudFormation console home page\. 
 

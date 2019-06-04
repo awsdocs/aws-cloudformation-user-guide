@@ -1,8 +1,8 @@
-# Amazon CloudWatch Events Rule InputTransformer<a name="aws-properties-events-rule-inputtransformer"></a>
+# AWS::Events::Rule InputTransformer<a name="aws-properties-events-rule-inputtransformer"></a>
 
-<a name="aws-properties-events-rule-inputtransformer-description"></a>The `InputTransformer` property type specifies settings that provide custom input to an Amazon CloudWatch Events rule target based on certain event data\.
+The `InputTransformer` property type specifies settings that provide custom input to an Amazon CloudWatch Events target based on certain event data\.
 
-<a name="aws-properties-events-rule-inputtransformer-inheritance"></a> `InputTransformer` is a property of the [Target](aws-properties-events-rule-target.md) property type\. 
+ `InputTransformer` is a property of the [Target](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html) property type\.
 
 ## Syntax<a name="aws-properties-events-rule-inputtransformer-syntax"></a>
 
@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[InputPathsMap](#cfn-events-rule-inputtransformer-inputpathsmap)" : { String:String, ... },
+  "[InputPathsMap](#cfn-events-rule-inputtransformer-inputpathsmap)" : {Key : Value, ...},
   "[InputTemplate](#cfn-events-rule-inputtransformer-inputtemplate)" : String
 }
 ```
@@ -20,23 +20,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-events-rule-inputtransformer-syntax.yaml"></a>
 
 ```
-[InputPathsMap](#cfn-events-rule-inputtransformer-inputpathsmap): 
-  String: String
-[InputTemplate](#cfn-events-rule-inputtransformer-inputtemplate): String
+  [InputPathsMap](#cfn-events-rule-inputtransformer-inputpathsmap): 
+    Key : Value
+  [InputTemplate](#cfn-events-rule-inputtransformer-inputtemplate): String
 ```
 
 ## Properties<a name="aws-properties-events-rule-inputtransformer-properties"></a>
 
-For more information, including constraints, see [InputTransformer](https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_InputTransformer.html) in the *Amazon CloudWatch Events API Reference*\.
-
 `InputPathsMap`  <a name="cfn-events-rule-inputtransformer-inputpathsmap"></a>
-The map of JSON paths to extract from the event, as key\-value pairs where each value is a JSON path\. You must use JSON dot notation, not bracket notation\. Duplicates aren't allowed\.  
- *Required*: No  
- *Type*: String\-to\-string map  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Map of JSON paths to be extracted from the event\. You can then insert these in the template in `InputTemplate` to produce the output you want to be sent to the target\.  
+ `InputPathsMap` is an array key\-value pairs, where each value is a valid JSON path\. You can have as many as 10 key\-value pairs\. You must use JSON dot notation, not bracket notation\.  
+The keys cannot start with "AWS\."   
+*Required*: No  
+*Type*: Map of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputTemplate`  <a name="cfn-events-rule-inputtransformer-inputtemplate"></a>
-The input template where you can use the values of the keys from `InputPathsMap` to customize the data that's sent to the target\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Input template where you specify placeholders that will be filled with the values of the keys from `InputPathsMap` to customize the data sent to the target\. Enclose each `InputPathsMaps` value in brackets: <*value*> The `InputTemplate` must be valid JSON\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `8192`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

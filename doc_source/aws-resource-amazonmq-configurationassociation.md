@@ -1,6 +1,6 @@
 # AWS::AmazonMQ::ConfigurationAssociation<a name="aws-resource-amazonmq-configurationassociation"></a>
 
-Use the AWS CloudFormation `AWS::AmazonMQ::ConfigurationAssociation` resource to associate a Configuration with a Broker, or return information about the specified configurationassociation\. Only use one per broker, and don't use a configuration on the broker resource if you have associated a configuration with that broker\. 
+Use the AWS CloudFormation `AWS::AmazonMQ::ConfigurationAssociation` resource to associate a configuration with a broker, or return information about the specified ConfigurationAssociation\. Only use one per broker, and don't use a configuration on the broker resource if you have associated a configuration with that broker\.
 
 ## Syntax<a name="aws-resource-amazonmq-configurationassociation-syntax"></a>
 
@@ -12,55 +12,53 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AmazonMQ::ConfigurationAssociation",
   "Properties" : {
-    "[Broker](#cfn-amazonmq-configurationassociation-broker)" : String,
-    "[Configuration](#cfn-amazonmq-configurationassociation-configuration)" : [*ConfigurationId*](aws-properties-amazonmq-configurationassociation-configurationid.md)
-  }
+      "[Broker](#cfn-amazonmq-configurationassociation-broker)" : String,
+      "[Configuration](#cfn-amazonmq-configurationassociation-configuration)" : [ConfigurationId](aws-properties-amazonmq-configurationassociation-configurationid.md)
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-amazonmq-configurationassociation-syntax.yaml"></a>
 
 ```
-Type: "AWS::AmazonMQ::ConfigurationAssociation"
-Properties:
+Type: AWS::AmazonMQ::ConfigurationAssociation
+Properties: 
   [Broker](#cfn-amazonmq-configurationassociation-broker): String
   [Configuration](#cfn-amazonmq-configurationassociation-configuration): 
-    [*ConfigurationId*](aws-properties-amazonmq-configurationassociation-configurationid.md)
+    [ConfigurationId](aws-properties-amazonmq-configurationassociation-configurationid.md)
 ```
 
 ## Properties<a name="aws-resource-amazonmq-configurationassociation-properties"></a>
 
 `Broker`  <a name="cfn-amazonmq-configurationassociation-broker"></a>
 The broker to associate with a configuration\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Configuration`  <a name="cfn-amazonmq-configurationassociation-configuration"></a>
 The configuration to associate with a broker\.  
- *Required*: Yes  
- *Type*: [ConfigurationId](aws-properties-amazonmq-configurationassociation-configurationid.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: Yes  
+*Type*: [ConfigurationId](aws-properties-amazonmq-configurationassociation-configurationid.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-amazonmq-configurationassociation-returnvalues"></a>
+## Return Values<a name="aws-resource-amazonmq-configurationassociation-return-values"></a>
 
-### Ref<a name="aws-resource-amazonmq-configurationassociation-ref"></a>
+### Ref<a name="aws-resource-amazonmq-configurationassociation-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::AmazonMQ::ConfigurationAssociation` resource to the intrinsic `Ref` function, the function returns the Amazon MQ configurationassociation ID\. For example: 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon MQ configurationassociation ID\. For example: 
 
-```
-c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9
-```
+ `c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9` 
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Examples<a name="aws-resource-amazonmq-configurationassociation-examples"></a>
+## Examples<a name="aws-resource-amazonmq-configurationassociation--examples"></a>
 
-### ConfigurationAssociation<a name="aws-resource-amazonmq-configurationassociation-example1"></a>
+### ConfigurationAssociation<a name="aws-resource-amazonmq-configurationassociation--examples--ConfigurationAssociation"></a>
 
-The following example creates an Amazon MQ `ConfigurationAssociation`\.
+The following example creates an Amazon MQ ConfigurationAssociation\.
 
-#### JSON<a name="aws-resource-amazonmq-configurationassociation-example1.json"></a>
+#### JSON<a name="aws-resource-amazonmq-configurationassociation--examples--ConfigurationAssociation--json"></a>
 
 ```
 "ConfigurationAssociation1": {
@@ -84,7 +82,7 @@ The following example creates an Amazon MQ `ConfigurationAssociation`\.
 	}
 ```
 
-#### YAML<a name="aws-resource-amazonmq-configurationassociation-example1.yaml"></a>
+#### YAML<a name="aws-resource-amazonmq-configurationassociation--examples--ConfigurationAssociation--yaml"></a>
 
 ```
  ConfigurationAssociation1:
@@ -95,6 +93,3 @@ The following example creates an Amazon MQ `ConfigurationAssociation`\.
         Id: {Ref: Configuration1}
         Revision: {'Fn::GetAtt': [Configuration1, Revision]}
 ```
-
-## See Also<a name="aws-resource-amazonmq-configurationassociation-seealso"></a>
-+  [Broker Architecture](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-architecture.html) in the *Amazon MQ Developer Guide* 

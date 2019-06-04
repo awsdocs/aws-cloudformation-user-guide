@@ -1,8 +1,6 @@
-# AWS Glue Crawler S3Target<a name="aws-properties-glue-crawler-s3target"></a>
+# AWS::Glue::Crawler S3Target<a name="aws-properties-glue-crawler-s3target"></a>
 
-<a name="aws-properties-glue-crawler-s3target-description"></a>The `S3Target` property type specifies an Amazon S3 target for an AWS Glue crawl\.
-
-<a name="aws-properties-glue-crawler-s3target-inheritance"></a> The `S3Targets` property of the [Targets](aws-properties-glue-crawler-targets.md) property type contains a list of `S3Target` property types\.
+Specifies a data store in Amazon Simple Storage Service \(Amazon S3\)\.
 
 ## Syntax<a name="aws-properties-glue-crawler-s3target-syntax"></a>
 
@@ -12,31 +10,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Path](#cfn-glue-crawler-s3target-path)" : String,
-  "[Exclusions](#cfn-glue-crawler-s3target-exclusions)" : [ String, ... ]
+  "[Exclusions](#cfn-glue-crawler-s3target-exclusions)" : [ String, ... ],
+  "[Path](#cfn-glue-crawler-s3target-path)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-glue-crawler-s3target-syntax.yaml"></a>
 
 ```
-[Path](#cfn-glue-crawler-s3target-path): String
-[Exclusions](#cfn-glue-crawler-s3target-exclusions): 
-  - String
+  [Exclusions](#cfn-glue-crawler-s3target-exclusions): 
+    - String
+  [Path](#cfn-glue-crawler-s3target-path): String
 ```
 
 ## Properties<a name="aws-properties-glue-crawler-s3target-properties"></a>
 
-For more information, see [S3Target Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-crawling.html#aws-glue-api-crawler-crawling-S3Target) in the *AWS Glue Developer Guide*\.
+`Exclusions`  <a name="cfn-glue-crawler-s3target-exclusions"></a>
+A list of glob patterns used to exclude from the crawl\. For more information, see [Catalog Tables with a Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html)\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Path`  <a name="cfn-glue-crawler-s3target-path"></a>
 The path to the Amazon S3 target\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
-`Exclusions`  <a name="cfn-glue-crawler-s3target-exclusions"></a>
-A list of UTF\-8 strings that specify the Amazon S3 objects to exclude from the crawl\.  
- *Required*: No  
- *Type*: List of String values  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

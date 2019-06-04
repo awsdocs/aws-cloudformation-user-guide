@@ -8,7 +8,7 @@ This walkthrough shows you how to create a custom resource and associate a Lambd
 
 Walkthrough Overview
 
-For this walkthrough, you'll create a stack with a custom resource, a Lambda function, and an EC2 instance\. The walkthough provides sample code and a sample template that you'll use to create the stack\.
+For this walkthrough, you'll create a stack with a custom resource, a Lambda function, and an EC2 instance\. The walkthrough provides sample code and a sample template that you'll use to create the stack\.
 
 The sample template uses the custom resource type to invoke and send input values to the Lambda function\. When you use the template, AWS CloudFormation invokes the function and sends information to it, such as the request type, input data, and a pre\-signed Amazon Simple Storage Service \(Amazon S3\) URL\. The function uses that information to look up the AMI ID, and then sends a response to the pre\-signed URL\.
 
@@ -324,5 +324,5 @@ All the resources that you created are deleted\.
 
 Now that you understand how to create and use Lambda functions with AWS CloudFormation, you can use the sample template and code from this walkthrough to build other stacks and functions\.
 
-## Related Information<a name="w13ab1c17c25c14b7c29"></a>
+## Related Information<a name="w4784ab1c17c25c14b7c29"></a>
 + [AWS CloudFormation Custom Resource Reference](crpg-ref.md)

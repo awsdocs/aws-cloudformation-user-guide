@@ -7,7 +7,7 @@
 
 ## Creating an Amazon S3 Bucket with Defaults<a name="scenario-s3-bucket"></a>
 
-This example uses a [AWS::S3::Bucket](aws-properties-s3-bucket.md) to create a bucket with default settings\.
+This example uses a [AWS::S3::Bucket](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html) to create a bucket with default settings\.
 
 ### JSON<a name="quickref-s3-example-1.json"></a>
 

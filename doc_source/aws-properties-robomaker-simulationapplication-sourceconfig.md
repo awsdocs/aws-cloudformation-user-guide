@@ -1,8 +1,6 @@
-# RoboMaker SimulationApplication SourceConfig<a name="aws-properties-robomaker-simulationapplication-sourceconfig"></a>
+# AWS::RoboMaker::SimulationApplication SourceConfig<a name="aws-properties-robomaker-simulationapplication-sourceconfig"></a>
 
-<a name="aws-properties-robomaker-simulationapplication-sourceconfig-description"></a>The `SourceConfig` property type specifies the source configuration for an AWS RoboMaker simulation application\.
-
-<a name="aws-properties-robomaker-simulationapplication-sourceconfig-inheritance"></a> `SourceConfig` is a property of the [AWS::RoboMaker::SimulationApplication](aws-resource-robomaker-simulationapplication.md) resource\.
+Information about a source configuration\.
 
 ## Syntax<a name="aws-properties-robomaker-simulationapplication-sourceconfig-syntax"></a>
 
@@ -21,30 +19,34 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-robomaker-simulationapplication-sourceconfig-syntax.yaml"></a>
 
 ```
-[Architecture](#cfn-robomaker-simulationapplication-sourceconfig-architecture): String
-[S3Bucket](#cfn-robomaker-simulationapplication-sourceconfig-s3bucket): String
-[S3Key](#cfn-robomaker-simulationapplication-sourceconfig-s3key): String
+  [Architecture](#cfn-robomaker-simulationapplication-sourceconfig-architecture): String
+  [S3Bucket](#cfn-robomaker-simulationapplication-sourceconfig-s3bucket): String
+  [S3Key](#cfn-robomaker-simulationapplication-sourceconfig-s3key): String
 ```
 
 ## Properties<a name="aws-properties-robomaker-simulationapplication-sourceconfig-properties"></a>
 
 `Architecture`  <a name="cfn-robomaker-simulationapplication-sourceconfig-architecture"></a>
-The target processor architecture\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The target processor architecture for the application\.  
+*Required*: Yes  
+*Type*: String  
+*Allowed Values*: `ARM64 | ARMHF | X86_64`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Bucket`  <a name="cfn-robomaker-simulationapplication-sourceconfig-s3bucket"></a>
 The Amazon S3 bucket name\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `3`  
+*Maximum*: `63`  
+*Pattern*: `[a-z0-9][a-z0-9\-]*[a-z0-9]`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Key`  <a name="cfn-robomaker-simulationapplication-sourceconfig-s3key"></a>
-The Amazon S3 object key\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
-## See Also<a name="aws-properties-robomaker-simulationapplication-sourceconfig-seealso"></a>
-+ [SourceConfig](https://docs.aws.amazon.com/robomaker/latest/dg/API_SourceConfig) in the *RoboMaker Developer Guide*
+The s3 object key\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
+*Pattern*: `.*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

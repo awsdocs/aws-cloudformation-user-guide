@@ -1,11 +1,6 @@
 # AWS::ApiGateway::GatewayResponse<a name="aws-resource-apigateway-gatewayresponse"></a>
 
-The `AWS::ApiGateway::GatewayResponse` resource creates a custom response for your API Gateway API\. For more information, see [API Gateway Responses ](https://docs.aws.amazon.com/apigateway/latest/developerguide/customize-gateway-responses.html#api-gateway-gatewayResponse-definition) in the *API Gateway Developer Guide*\.
-
-**Topics**
-+ [Syntax](#aws-resource-apigateway-gatewayresponse-syntax)
-+ [Properties](#aws-resource-apigateway-gatewayresponse-properties)
-+ [Examples](#aws-resource-apigateway-gatewayresponse-examples)
+The `AWS::ApiGateway::GatewayResponse` resource creates a gateway response for your API\. For more information, see [API Gateway Responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/customize-gateway-responses.html#api-gateway-gatewayResponse-definition) in the *API Gateway Developer Guide*\.
 
 ## Syntax<a name="aws-resource-apigateway-gatewayresponse-syntax"></a>
 
@@ -17,12 +12,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::GatewayResponse",
   "Properties" : {
-    "[ResponseParameters](#cfn-apigateway-gatewayresponse-responseparameters)" : { String:String, ... },
-    "[ResponseTemplates](#cfn-apigateway-gatewayresponse-responsetemplates)" : { String:String, ... },
-    "[ResponseType](#cfn-apigateway-gatewayresponse-responsetype)" : String,
-    "[RestApiId](#cfn-apigateway-gatewayresponse-restapiid)" : String,
-    "[StatusCode](#cfn-apigateway-gatewayresponse-statuscode)" : String
-  }
+      "[ResponseParameters](#cfn-apigateway-gatewayresponse-responseparameters)" : {Key : Value, ...},
+      "[ResponseTemplates](#cfn-apigateway-gatewayresponse-responsetemplates)" : {Key : Value, ...},
+      "[ResponseType](#cfn-apigateway-gatewayresponse-responsetype)" : String,
+      "[RestApiId](#cfn-apigateway-gatewayresponse-restapiid)" : String,
+      "[StatusCode](#cfn-apigateway-gatewayresponse-statuscode)" : String
+    }
 }
 ```
 
@@ -30,11 +25,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::GatewayResponse
-Properties:
+Properties: 
   [ResponseParameters](#cfn-apigateway-gatewayresponse-responseparameters): 
-    String: String
+    Key : Value
   [ResponseTemplates](#cfn-apigateway-gatewayresponse-responsetemplates): 
-    String: String
+    Key : Value
   [ResponseType](#cfn-apigateway-gatewayresponse-responsetype): String
   [RestApiId](#cfn-apigateway-gatewayresponse-restapiid): String
   [StatusCode](#cfn-apigateway-gatewayresponse-statuscode): String
@@ -44,41 +39,41 @@ Properties:
 
 `ResponseParameters`  <a name="cfn-apigateway-gatewayresponse-responseparameters"></a>
 The response parameters \(paths, query strings, and headers\) for the response\. Duplicates not allowed\.  
- *Required*: No  
- *Type*: String to string map  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: Map of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResponseTemplates`  <a name="cfn-apigateway-gatewayresponse-responsetemplates"></a>
 The response templates for the response\. Duplicates not allowed\.  
- *Required*: No  
- *Type*: String to string map  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: Map of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResponseType`  <a name="cfn-apigateway-gatewayresponse-responsetype"></a>
 The response type\. For valid values, see [GatewayResponse](https://docs.aws.amazon.com/apigateway/api-reference/resource/gateway-response/) in the *API Gateway API Reference*\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RestApiId`  <a name="cfn-apigateway-gatewayresponse-restapiid"></a>
-The identifier of the targeted API entity\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+The identifier of the API\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StatusCode`  <a name="cfn-apigateway-gatewayresponse-statuscode"></a>
 The HTTP status code for the response\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Examples<a name="aws-resource-apigateway-gatewayresponse-examples"></a>
+## Examples<a name="aws-resource-apigateway-gatewayresponse--examples"></a>
 
-### 404 Response<a name="aws-resource-apigateway-gatewayresponse-example2"></a>
+### 404 Response<a name="aws-resource-apigateway-gatewayresponse--examples--404_Response"></a>
 
 The following example returns a 404 status code for resource not found instead of missing authentication token for a CORS request \(applicable to unsecured/unrestricted APIs\)\.
 
-#### JSON<a name="aws-resource-apigateway-gatewayresponse-example2.json"></a>
+#### JSON<a name="aws-resource-apigateway-gatewayresponse--examples--404_Response--json"></a>
 
 ```
 {
@@ -108,7 +103,7 @@ The following example returns a 404 status code for resource not found instead o
 }
 ```
 
-#### YAML<a name="aws-resource-apigateway-gatewayresponse-example2.yaml"></a>
+#### YAML<a name="aws-resource-apigateway-gatewayresponse--examples--404_Response--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -128,11 +123,11 @@ Resources:
       StatusCode: '404'
 ```
 
-### Parameterized Response<a name="aws-resource-apigateway-gatewayresponse-example1"></a>
+### Parameterized Response<a name="aws-resource-apigateway-gatewayresponse--examples--Parameterized_Response"></a>
 
 The following example creates a response for an API based on the supplied parameters\.
 
-#### JSON<a name="aws-resource-apigateway-gatewayresponse-example1.json"></a>
+#### JSON<a name="aws-resource-apigateway-gatewayresponse--examples--Parameterized_Response--json"></a>
 
 ```
 {
@@ -188,7 +183,7 @@ The following example creates a response for an API based on the supplied parame
 }
 ```
 
-#### YAML<a name="aws-resource-apigateway-gatewayresponse-example1.yaml"></a>
+#### YAML<a name="aws-resource-apigateway-gatewayresponse--examples--Parameterized_Response--yaml"></a>
 
 ```
 Parameters:
@@ -217,3 +212,6 @@ Resources :
             RestApiId: !Ref RestApi
             StatusCode: !Ref statusCode
 ```
+
+## See Also<a name="aws-resource-apigateway-gatewayresponse--seealso"></a>
++ [gatewayresponse:put](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/gatewayresponse-put/) in the *Amazon API Gateway REST API Reference*

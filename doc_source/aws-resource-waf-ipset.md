@@ -1,6 +1,8 @@
 # AWS::WAF::IPSet<a name="aws-resource-waf-ipset"></a>
 
-The `AWS::WAF::IPSet` resource creates an AWS WAF `IPSet` that specifies which web requests to permit or block based on the IP addresses from which the requests originate\. For more information, see [CreateIPSet](https://docs.aws.amazon.com/waf/latest/APIReference/API_CreateIPSet.html) in the *AWS WAF API Reference*\.
+Contains one or more IP addresses or blocks of IP addresses specified in Classless Inter\-Domain Routing \(CIDR\) notation\. AWS WAF supports IPv4 address ranges: /8 and any range between /16 through /32\. AWS WAF supports IPv6 address ranges: /24, /32, /48, /56, /64, and /128\.
+
+To specify an individual IP address, you specify the four\-part IP address followed by a `/32`, for example, 192\.0\.2\.0/31\. To block a range of IP addresses, you can specify /8 or any range between /16 through /32 \(for IPv4\) or /24, /32, /48, /56, /64, or /128 \(for IPv6\)\. For more information about CIDR notation, see the Wikipedia entry [Classless Inter\-Domain Routing](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)\. 
 
 ## Syntax<a name="aws-resource-waf-ipset-syntax"></a>
 
@@ -12,51 +14,53 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAF::IPSet",
   "Properties" : {
-    "[IPSetDescriptors](#cfn-waf-ipset-ipsetdescriptors)" : [ IPSet descriptor, ... ],
-    "[Name](#cfn-waf-ipset-name)" : String
-  }
+      "[IPSetDescriptors](#cfn-waf-ipset-ipsetdescriptors)" : [ [IPSetDescriptor](aws-properties-waf-ipset-ipsetdescriptors.md), ... ],
+      "[Name](#cfn-waf-ipset-name)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-waf-ipset-syntax.yaml"></a>
 
 ```
-Type: "AWS::WAF::IPSet"
+Type: AWS::WAF::IPSet
 Properties: 
-  [IPSetDescriptors](#cfn-waf-ipset-ipsetdescriptors):
-    - IPSet descriptor
+  [IPSetDescriptors](#cfn-waf-ipset-ipsetdescriptors): 
+    - [IPSetDescriptor](aws-properties-waf-ipset-ipsetdescriptors.md)
   [Name](#cfn-waf-ipset-name): String
 ```
 
-## Properties<a name="w13ab1c21c10d234c17b7"></a>
+## Properties<a name="aws-resource-waf-ipset-properties"></a>
 
 `IPSetDescriptors`  <a name="cfn-waf-ipset-ipsetdescriptors"></a>
-The IP address type and IP address range \(in CIDR notation\) from which web requests originate\. If you associate the `IPSet` with a [web ACL](aws-resource-waf-webacl.md) that is associated with an Amazon CloudFront \(CloudFront\) distribution and the viewer did not use an HTTP proxy or a load balancer to send the request, this descriptor is the value of the c\-ip field in the CloudFront access logs\.  
+The IP address type \(`IPV4` or `IPV6`\) and the IP address range \(in CIDR notation\) that web requests originate from\. If the `WebACL` is associated with a CloudFront distribution and the viewer did not use an HTTP proxy or a load balancer to send the request, this is the value of the c\-ip field in the CloudFront access logs\.  
 *Required*: No  
-*Type*: List of [AWS WAF IPSet IPSetDescriptors](aws-properties-waf-ipset-ipsetdescriptors.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of [IPSetDescriptor](aws-properties-waf-ipset-ipsetdescriptors.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-waf-ipset-name"></a>
-A friendly name or description of the `IPSet`\.  
+A friendly name or description of the `IPSet`\. You can't change the name of an `IPSet` after you create it\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="w13ab1c21c10d234c17b9"></a>
+## Return Values<a name="aws-resource-waf-ipset-return-values"></a>
 
-### Ref<a name="w13ab1c21c10d234c17b9b2"></a>
+### Ref<a name="aws-resource-waf-ipset-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource physical ID, such as `1234a1a-a1b1-12a1-abcd-a123b123456`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource physical ID, such as 1234a1a\-a1b1\-12a1\-abcd\-a123b123456\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Examples<a name="w13ab1c21c10d234c17c11"></a>
+## Examples<a name="aws-resource-waf-ipset--examples"></a>
 
-### Define IP Addresses<a name="w13ab1c21c10d234c17c11b2"></a>
+### Define IP Addresses<a name="aws-resource-waf-ipset--examples--Define_IP_Addresses"></a>
 
 The following example defines a set of IP addresses for a web access control list \(ACL\) rule\.
 
-#### JSON<a name="aws-resource-waf-ipset-example1.json"></a>
+#### JSON<a name="aws-resource-waf-ipset--examples--Define_IP_Addresses--json"></a>
 
 ```
 "MyIPSetBlacklist": {
@@ -77,7 +81,7 @@ The following example defines a set of IP addresses for a web access control lis
 }
 ```
 
-#### YAML<a name="aws-resource-waf-ipset-example1.yaml"></a>
+#### YAML<a name="aws-resource-waf-ipset--examples--Define_IP_Addresses--yaml"></a>
 
 ```
 MyIPSetBlacklist: 
@@ -90,14 +94,14 @@ MyIPSetBlacklist:
         Value: "192.0.2.44/32"
       - 
         Type: "IPV4"
-        Value: "192.0.7.0/24"
+Value: "192.0.7.0/24"
 ```
 
-### Associate an IPSet with a Web ACL Rule<a name="w13ab1c21c10d234c17c11b4"></a>
+### Associate an IPSet with a Web ACL Rule<a name="aws-resource-waf-ipset--examples--Associate_an_IPSet_with_a_Web_ACL_Rule"></a>
 
 The following example associates the `MyIPSetBlacklist` IP Set with a web ACL rule\.
 
-#### JSON<a name="aws-resource-waf-ipset-example2.json"></a>
+#### JSON<a name="aws-resource-waf-ipset--examples--Associate_an_IPSet_with_a_Web_ACL_Rule--json"></a>
 
 ```
 "MyIPSetRule" : {
@@ -116,7 +120,7 @@ The following example associates the `MyIPSetBlacklist` IP Set with a web ACL ru
 }
 ```
 
-#### YAML<a name="aws-resource-waf-ipset-example2.yaml"></a>
+#### YAML<a name="aws-resource-waf-ipset--examples--Associate_an_IPSet_with_a_Web_ACL_Rule--yaml"></a>
 
 ```
 MyIPSetRule: 
@@ -129,14 +133,14 @@ MyIPSetRule:
         DataId: 
           Ref: "MyIPSetBlacklist"
         Negated: false
-        Type: "IPMatch"
+Type: "IPMatch"
 ```
 
-### Create a Web ACL<a name="w13ab1c21c10d234c17c11b6"></a>
+### Create a Web ACL<a name="aws-resource-waf-ipset--examples--Create_a_Web_ACL"></a>
 
 The following example associates the `MyIPSetRule` rule with a web ACL\. The web ACL allows requests that originate from all IP addresses except for addresses that are defined in the `MyIPSetRule`\.
 
-#### JSON<a name="aws-resource-waf-ipset-example3.json"></a>
+#### JSON<a name="aws-resource-waf-ipset--examples--Create_a_Web_ACL--json"></a>
 
 ```
 "MyWebACL": {
@@ -160,7 +164,7 @@ The following example associates the `MyIPSetRule` rule with a web ACL\. The web
 }
 ```
 
-#### YAML<a name="aws-resource-waf-ipset-example3.yaml"></a>
+#### YAML<a name="aws-resource-waf-ipset--examples--Create_a_Web_ACL--yaml"></a>
 
 ```
 MyWebACL: 
@@ -176,5 +180,5 @@ MyWebACL:
           Type: "BLOCK"
         Priority: 1
         RuleId: 
-          Ref: "MyIPSetRule"
+Ref: "MyIPSetRule"
 ```

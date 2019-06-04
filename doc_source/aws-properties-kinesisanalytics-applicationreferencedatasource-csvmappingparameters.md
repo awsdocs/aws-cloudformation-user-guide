@@ -1,8 +1,10 @@
-# Amazon Kinesis Data Analytics ApplicationReferenceDataSource CSVMappingParameters<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters"></a>
+# AWS::KinesisAnalytics::ApplicationReferenceDataSource CSVMappingParameters<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters"></a>
 
-In AWS CloudFormation, use the `CSVMappingParameters` property to specify additional mapping information when the record format uses delimiters, such as CSV\. 
+Provides additional mapping information when the record format uses delimiters, such as CSV\. For example, the following sample records use CSV format, where the records use the *'\\n'* as the row delimiter and a comma \(","\) as the column delimiter: 
 
- `CSVMappingParameters` is a property of the [MappingParameters](aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.md) resource\. 
+ `"name1", "address1"` 
+
+ `"name2", "address2"` 
 
 ## Syntax<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-syntax"></a>
 
@@ -27,13 +29,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-properties"></a>
 
 `RecordColumnDelimiter`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-recordcolumndelimiter"></a>
-The column delimiter\. For example, in a CSV format, a comma \(","\) is the typical column delimiter\.   
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Column delimiter\. For example, in a CSV format, a comma \(","\) is the typical column delimiter\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RecordRowDelimiter`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-recordrowdelimiter"></a>
-The row delimiter\. For example, in a CSV format, "\\n" is the typical row delimiter\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Row delimiter\. For example, in a CSV format, *'\\n'* is the typical row delimiter\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

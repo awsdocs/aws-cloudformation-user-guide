@@ -12,10 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Cognito::IdentityPoolRoleAttachment",
   "Properties" : {
-    "[IdentityPoolId](#cfn-cognito-identitypoolroleattachment-identitypoolid)" : String,
-    "[RoleMappings](#cfn-cognito-identitypoolroleattachment-rolemappings)" : String to RoleMapping object map,
-    "[Roles](#cfn-cognito-identitypoolroleattachment-roles)" : { String:String, ... }
-  }
+      "[IdentityPoolId](#cfn-cognito-identitypoolroleattachment-identitypoolid)" : String,
+      "[RoleMappings](#cfn-cognito-identitypoolroleattachment-rolemappings)" : Json,
+      "[Roles](#cfn-cognito-identitypoolroleattachment-roles)" : Json
+    }
 }
 ```
 
@@ -23,38 +23,36 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Cognito::IdentityPoolRoleAttachment
-Properties:
+Properties: 
   [IdentityPoolId](#cfn-cognito-identitypoolroleattachment-identitypoolid): String
-  [RoleMappings](#cfn-cognito-identitypoolroleattachment-rolemappings): 
-    String to RoleMapping object map
-  [Roles](#cfn-cognito-identitypoolroleattachment-roles): 
-    String:String
+  [RoleMappings](#cfn-cognito-identitypoolroleattachment-rolemappings): Json
+  [Roles](#cfn-cognito-identitypoolroleattachment-roles): Json
 ```
 
-## Properties<a name="w13ab1c21c10c84c17b9"></a>
+## Properties<a name="aws-resource-cognito-identitypoolroleattachment-properties"></a>
 
 `IdentityPoolId`  <a name="cfn-cognito-identitypoolroleattachment-identitypoolid"></a>
 An identity pool ID in the format `REGION:GUID`\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleMappings`  <a name="cfn-cognito-identitypoolroleattachment-rolemappings"></a>
-How users for a specific identity provider are to mapped to roles\. This is a string to RoleMapping object map\. The string identifies the identity provider, for example, "graph\.facebook\.com" or "cognito\-idp\-east\-1\.amazonaws\.com/us\-east\-1\_abcdefghi:app\_client\_id"  
+How users for a specific identity provider are mapped to roles\. This is a string to RoleMapping object map\. The string identifies the identity provider, for example, "graph\.facebook\.com" or "cognito\-idp\-east\-1\.amazonaws\.com/us\-east\-1\_abcdefghi:app\_client\_id"  
 *Required*: No  
-*Type*: String to [Amazon Cognito IdentityPoolRoleAttachment RoleMapping](aws-properties-cognito-identitypoolroleattachment-rolemapping.md) object map\.  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Roles`  <a name="cfn-cognito-identitypoolroleattachment-roles"></a>
 The map of roles associated with this pool\. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN\.  
 *Required*: No  
-*Type:* String to string map  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10c84c17c11"></a>
+## Return Values<a name="aws-resource-cognito-identitypoolroleattachment-return-values"></a>
 
-### Ref<a name="w13ab1c21c10c84c17c11b2"></a>
+### Ref<a name="aws-resource-cognito-identitypoolroleattachment-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns a generated ID, such as `IdentityPoolRoleAttachment-EXAMPLEwnOR3n`\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a generated ID, such as `IdentityPoolRoleAttachment-EXAMPLEwnOR3n`\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

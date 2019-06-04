@@ -1,8 +1,6 @@
-# Amazon Kinesis Data Analytics Application MappingParameters<a name="aws-properties-kinesisanalyticsv2-application-mappingparameters"></a>
+# AWS::KinesisAnalyticsV2::Application MappingParameters<a name="aws-properties-kinesisanalyticsv2-application-mappingparameters"></a>
 
-<a name="aws-properties-kinesisanalyticsv2-application-mappingparameters-description"></a>The `MappingParameters` property type specifies additional mapping information specific to the record format \(such as JSON, CSV, or record fields delimited by some delimiter\) on the streaming source for a SQL\-based Kinesis Data Analytics application\.
-
-<a name="aws-properties-kinesisanalyticsv2-application-mappingparameters-inheritance"></a> `MappingParameters` is a property of the [RecordFormat](aws-properties-kinesisanalyticsv2-application-recordformat.md) property\.
+When you configure an SQL\-based Amazon Kinesis Data Analytics application's input at the time of creating or updating an application, provides additional mapping information specific to the record format \(such as JSON, CSV, or record fields delimited by some delimiter\) on the streaming source\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-mappingparameters-syntax"></a>
 
@@ -12,28 +10,33 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[JSONMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-jsonmappingparameters)" : [*JSONMappingParameters*](aws-properties-kinesisanalyticsv2-application-jsonmappingparameters.md),
-  "[CSVMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-csvmappingparameters)" : [*CSVMappingParameters*](aws-properties-kinesisanalyticsv2-application-csvmappingparameters.md)
+  "[CSVMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-csvmappingparameters)" : [CSVMappingParameters](aws-properties-kinesisanalyticsv2-application-csvmappingparameters.md),
+  "[JSONMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-jsonmappingparameters)" : [JSONMappingParameters](aws-properties-kinesisanalyticsv2-application-jsonmappingparameters.md)
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-mappingparameters-syntax.yaml"></a>
 
 ```
-[JSONMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-jsonmappingparameters): [*JSONMappingParameters*](aws-properties-kinesisanalyticsv2-application-jsonmappingparameters.md)
-[CSVMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-csvmappingparameters): [*CSVMappingParameters*](aws-properties-kinesisanalyticsv2-application-csvmappingparameters.md)
+  [CSVMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-csvmappingparameters): 
+    [CSVMappingParameters](aws-properties-kinesisanalyticsv2-application-csvmappingparameters.md)
+  [JSONMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-jsonmappingparameters): 
+    [JSONMappingParameters](aws-properties-kinesisanalyticsv2-application-jsonmappingparameters.md)
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-mappingparameters-properties"></a>
 
-`JSONMappingParameters`  <a name="cfn-kinesisanalyticsv2-application-mappingparameters-jsonmappingparameters"></a>
-Provides additional mapping information when JSON is the record format on the streaming source\.   
- *Required*: No  
- *Type*: [JSONMappingParameters](aws-properties-kinesisanalyticsv2-application-jsonmappingparameters.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
 `CSVMappingParameters`  <a name="cfn-kinesisanalyticsv2-application-mappingparameters-csvmappingparameters"></a>
 Provides additional mapping information when the record format uses delimiters \(for example, CSV\)\.  
- *Required*: No  
- *Type*: [CSVMappingParameters](aws-properties-kinesisanalyticsv2-application-csvmappingparameters.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: [CSVMappingParameters](aws-properties-kinesisanalyticsv2-application-csvmappingparameters.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`JSONMappingParameters`  <a name="cfn-kinesisanalyticsv2-application-mappingparameters-jsonmappingparameters"></a>
+Provides additional mapping information when JSON is the record format on the streaming source\.  
+*Required*: No  
+*Type*: [JSONMappingParameters](aws-properties-kinesisanalyticsv2-application-jsonmappingparameters.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See Also<a name="aws-properties-kinesisanalyticsv2-application-mappingparameters--seealso"></a>
++  [MappingParameters](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_MappingParameters.html) in the *Amazon Kinesis Data Analytics API Reference* 

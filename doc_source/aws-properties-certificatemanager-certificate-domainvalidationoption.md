@@ -1,8 +1,8 @@
-# AWS Certificate Manager Certificate DomainValidationOption<a name="aws-properties-certificatemanager-certificate-domainvalidationoption"></a>
+# AWS::CertificateManager::Certificate DomainValidationOption<a name="aws-properties-certificatemanager-certificate-domainvalidationoption"></a>
 
-`DomainValidationOption` is a property of the [AWS::CertificateManager::Certificate](aws-resource-certificatemanager-certificate.md) resource that specifies the AWS Certificate Manager \(ACM\) Certificate domain that registrars use to send validation emails\.
+ `DomainValidationOption` is a property of the [AWS::CertificateManager::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html) resource that specifies the AWS Certificate Manager \(ACM\) certificate domain to which ACM will send validation emails\.
 
-## Syntax<a name="w13ab1c21c10c51c13c19b5"></a>
+## Syntax<a name="aws-properties-certificatemanager-certificate-domainvalidationoption-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
@@ -11,25 +11,38 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DomainName](#cfn-certificatemanager-certificate-domainvalidationoptions-domainname)" : String,
-  "[ValidationDomain](#cfn-certificatemanager-certificate-domainvalidationoptions-validationdomain)" : String
+  "[ValidationDomain](#cfn-certificatemanager-certificate-domainvalidationoption-validationdomain)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-certificatemanager-certificate-domainvalidationoption-syntax.yaml"></a>
 
 ```
-[DomainName](#cfn-certificatemanager-certificate-domainvalidationoptions-domainname): String
-[ValidationDomain](#cfn-certificatemanager-certificate-domainvalidationoptions-validationdomain): String
+  [DomainName](#cfn-certificatemanager-certificate-domainvalidationoptions-domainname): String
+  [ValidationDomain](#cfn-certificatemanager-certificate-domainvalidationoption-validationdomain): String
 ```
 
-## Properties<a name="w13ab1c21c10c51c13c19b7"></a>
+## Properties<a name="aws-properties-certificatemanager-certificate-domainvalidationoption-properties"></a>
 
 `DomainName`  <a name="cfn-certificatemanager-certificate-domainvalidationoptions-domainname"></a>
-Fully Qualified Domain Name \(FQDN\) of the Certificate that you are requesting\.  
+A fully qualified domain name \(FQDN\) in the certificate request\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `253`  
+*Pattern*: `^(\*\.)?(((?!-)[A-Za-z0-9-]{0,62}[A-Za-z0-9])\.)+((?!-)[A-Za-z0-9-]{1,62}[A-Za-z0-9])$`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`ValidationDomain`  <a name="cfn-certificatemanager-certificate-domainvalidationoptions-validationdomain"></a>
-The domain that domain name registrars use to send validation emails\. Registrars use this value as the email address suffix when sending emails to verify your identity\. This value must be the same as the domain name or a superdomain of the domain name\. For more information, see the `ValidationDomain` content for the [DomainValidationOption](https://docs.aws.amazon.com/acm/latest/APIReference/API_DomainValidationOption.html) data type in the *AWS Certificate Manager API Reference*\.  
+`ValidationDomain`  <a name="cfn-certificatemanager-certificate-domainvalidationoption-validationdomain"></a>
+The domain name to which you want ACM to send validation emails\. This domain name is the suffix of the email addresses that you want ACM to use\. This must be the same as the `DomainName` value or a superdomain of the `DomainName` value\. For example, if you request a certificate for `testing.example.com`, you can specify `example.com` as this value\. In that case, ACM sends domain validation emails to the following five addresses:  
++ admin@example\.com
++ administrator@example\.com
++ hostmaster@example\.com
++ postmaster@example\.com
++ webmaster@example\.com
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `253`  
+*Pattern*: `^(\*\.)?(((?!-)[A-Za-z0-9-]{0,62}[A-Za-z0-9])\.)+((?!-)[A-Za-z0-9-]{1,62}[A-Za-z0-9])$`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

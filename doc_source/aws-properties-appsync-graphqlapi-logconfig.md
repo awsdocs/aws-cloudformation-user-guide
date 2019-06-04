@@ -1,8 +1,8 @@
-# AWS AppSync GraphQLApi LogConfig<a name="aws-properties-appsync-graphqlapi-logconfig"></a>
+# AWS::AppSync::GraphQLApi LogConfig<a name="aws-properties-appsync-graphqlapi-logconfig"></a>
 
-<a name="aws-properties-appsync-graphqlapi-logconfig-description"></a>The `LogConfig` property type specifies the logging configuration when writing GraphQL operations and tracing to Amazon Cloudwatch for a AWS AppSync GraphQL API\.
+The `LogConfig` property type specifies the logging configuration when writing GraphQL operations and tracing to Amazon CloudWatch for a AWS AppSync GraphQL API\.
 
-<a name="aws-properties-appsync-graphqlapi-logconfig-inheritance"></a> `LogConfig` is a property of the [AWS::AppSync::GraphQLApi](aws-resource-appsync-graphqlapi.md) property type\.
+ `LogConfig` is a property of the [AWS::AppSync::GraphQLApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html) property type\. 
 
 ## Syntax<a name="aws-properties-appsync-graphqlapi-logconfig-syntax"></a>
 
@@ -20,23 +20,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appsync-graphqlapi-logconfig-syntax.yaml"></a>
 
 ```
-[CloudWatchLogsRoleArn](#cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn): String
-[FieldLogLevel](#cfn-appsync-graphqlapi-logconfig-fieldloglevel): String
+  [CloudWatchLogsRoleArn](#cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn): String
+  [FieldLogLevel](#cfn-appsync-graphqlapi-logconfig-fieldloglevel): String
 ```
 
 ## Properties<a name="aws-properties-appsync-graphqlapi-logconfig-properties"></a>
 
 `CloudWatchLogsRoleArn`  <a name="cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn"></a>
-The IAM role that will allow publishing CloudWatch logs into the customer's account\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The service role that AWS AppSync will assume to publish to Amazon CloudWatch Logs in your account\.   
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldLogLevel`  <a name="cfn-appsync-graphqlapi-logconfig-fieldloglevel"></a>
-The desired level of logging\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
-## See Also<a name="aws-properties-appsync-graphqlapi-logconfig-seealso"></a>
-+ [ LogConfig](https://docs.aws.amazon.com/appsync/latest/APIReference/API_LogConfig.html) operation in the *AWS AppSync API Reference*
+The field logging level\. Values can be NONE, ERROR, or ALL\.   
++  **NONE**: No field\-level logs are captured\.
++  **ERROR**: Logs the following information only for the fields that are in error:
+  + The error section in the server response\.
+  + Field\-level errors\.
+  + The generated request/response functions that got resolved for error fields\.
++  **ALL**: The following information is logged for all fields in the query:
+  + Field\-level tracing information\.
+  + The generated request/response functions that got resolved for each field\.
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

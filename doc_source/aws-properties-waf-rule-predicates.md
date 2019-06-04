@@ -1,8 +1,10 @@
-# AWS WAF Rule Predicates<a name="aws-properties-waf-rule-predicates"></a>
+# AWS::WAF::Rule Predicate<a name="aws-properties-waf-rule-predicates"></a>
 
-`Predicates` is a property of the [AWS::WAF::Rule](aws-resource-waf-rule.md) resource that specifies the `ByteMatchSet`, `IPSet`, `SizeConstraintSet`, `SqlInjectionMatchSet`, or `XssMatchSet` objects to include in an AWS WAF rule\. If you add more than one predicate to a rule, an incoming request must match all of the specifications in the predicates to be allowed or blocked\.
+Specifies the `ByteMatchSet`, `IPSet`, `SqlInjectionMatchSet`, `XssMatchSet`, `RegexMatchSet`, `GeoMatchSet`, and `SizeConstraintSet` objects that you want to add to a `Rule` and, for each object, indicates whether you want to negate the settings, for example, requests that do NOT originate from the IP address 192\.0\.2\.44\. 
 
-## Syntax<a name="w13ab1c21c10d234c21c17b5"></a>
+## Syntax<a name="aws-properties-waf-rule-predicates-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-waf-rule-predicates-syntax.json"></a>
 
@@ -17,26 +19,31 @@
 ### YAML<a name="aws-properties-waf-rule-predicates-syntax.yaml"></a>
 
 ```
-[DataId](#cfn-waf-rule-predicates-dataid): String
-[Negated](#cfn-waf-rule-predicates-negated): Boolean
-[Type](#cfn-waf-rule-predicates-type): String
+  [DataId](#cfn-waf-rule-predicates-dataid): String
+  [Negated](#cfn-waf-rule-predicates-negated): Boolean
+  [Type](#cfn-waf-rule-predicates-type): String
 ```
 
-## Properties<a name="w13ab1c21c10d234c21c17b7"></a>
+## Properties<a name="aws-properties-waf-rule-predicates-properties"></a>
 
 `DataId`  <a name="cfn-waf-rule-predicates-dataid"></a>
-The unique identifier of a predicate, such as the ID of a `ByteMatchSet` or `IPSet`\.  
+A unique identifier for a predicate in a `Rule`, such as `ByteMatchSetId` or `IPSetId`\. The ID is returned by the corresponding `Create` or `List` command\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Negated`  <a name="cfn-waf-rule-predicates-negated"></a>
-Whether to use the settings or the negated settings that you specified in the `ByteMatchSet`, `IPSet`, `SizeConstraintSet`, `SqlInjectionMatchSet`, or `XssMatchSet` objects\.  
-Specify `false` if you want AWS WAF to allow, block, or count requests based on the settings in the specified `ByteMatchSet`, `IPSet`, `SizeConstraintSet`, `SqlInjectionMatchSet`, or `XssMatchSet` objects\. For example, if an `IPSet` object includes the IP address `192.0.2.44`, AWS WAF allows, blocks, or counts requests originating from that IP address\.  
-Specify `true` if you want AWS WAF to allow, block, or count requests based on the negated settings in the `ByteMatchSet`, `IPSet`, `SizeConstraintSet`, `SqlInjectionMatchSet`, or `XssMatchSet` objects\. For example, if an `IPSet` object includes the IP address `192.0.2.44`, AWS WAF allows, blocks, or counts requests originating from all IP addresses except 192\.0\.2\.44\.  
+Set `Negated` to `False` if you want AWS WAF to allow, block, or count requests based on the settings in the specified `ByteMatchSet`, `IPSet`, `SqlInjectionMatchSet`, `XssMatchSet`, `RegexMatchSet`, `GeoMatchSet`, or `SizeConstraintSet`\. For example, if an `IPSet` includes the IP address `192.0.2.44`, AWS WAF will allow or block requests based on that IP address\.  
+Set `Negated` to `True` if you want AWS WAF to allow or block a request based on the negation of the settings in the `ByteMatchSet`, `IPSet`, `SqlInjectionMatchSet`, `XssMatchSet`, `RegexMatchSet`, `GeoMatchSet`, or `SizeConstraintSet`\. For example, if an `IPSet` includes the IP address `192.0.2.44`, AWS WAF will allow, block, or count requests based on all IP addresses *except* `192.0.2.44`\.  
 *Required*: Yes  
-*Type*: Boolean
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-waf-rule-predicates-type"></a>
-The type of predicate in a rule, such as an `IPSet` \(`IPMatch`\)\. For valid values, see the `Type` contents of the [Predicate](https://docs.aws.amazon.com/waf/latest/APIReference/API_Predicate.html) data type in the *AWS WAF API Reference*\.  
+The type of predicate in a `Rule`, such as `ByteMatch` or `IPSet`\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Allowed Values*: `ByteMatch | GeoMatch | IPMatch | RegexMatch | SizeConstraint | SqlInjectionMatch | XssMatch`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

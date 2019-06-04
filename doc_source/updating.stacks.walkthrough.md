@@ -420,7 +420,7 @@ Completing this procedure will deploy live AWS services\. You will be charged th
 
 1. Copy the previous template and save it locally on your system as a text file\. Note the location because you'll need to use the file in a subsequent step\.
 
-1. Log in to the AWS CloudFormation console at [ https://console\.aws\.amazon\.com/cloudformation ](https://console.aws.amazon.com/cloudformation)\. 
+1. Log in to the AWS CloudFormation console at [ https://console\.aws\.amazon\.com/cloudformation ](https://console.aws.amazon.com/cloudformation)\.
 
 1. Click **Create New Stack**\.
 

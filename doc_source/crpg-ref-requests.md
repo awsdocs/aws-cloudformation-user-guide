@@ -2,7 +2,7 @@
 
 ## Template Developer Request Properties<a name="crpg-ref-request-properties"></a>
 
-The template developer uses the AWS CloudFormation resource, [AWS::CloudFormation::CustomResource](aws-resource-cfn-customresource.md), to specify a custom resource in a template\.
+The template developer uses the AWS CloudFormation resource, [AWS::CloudFormation::CustomResource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html), to specify a custom resource in a template\.
 
 In `AWS::CloudFormation::CustomResource`, all properties are defined by the custom resource provider\. There is only one required property: `ServiceToken`\.
 

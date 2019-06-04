@@ -1,8 +1,12 @@
-# Elastic Load Balancing V1 LBCookieStickinessPolicy<a name="aws-properties-ec2-elb-LBCookieStickinessPolicy"></a>
+# AWS::ElasticLoadBalancing::LoadBalancer LBCookieStickinessPolicy<a name="aws-properties-ec2-elb-LBCookieStickinessPolicy"></a>
 
-The LBCookieStickinessPolicy type is an embedded property of the [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md) type\.
+Specifies a policy for duration\-based session stickiness for your Classic Load Balancer\.
 
-## Syntax<a name="w13ab1c21c10d135c16c39b5"></a>
+To associate a policy with a listener, use the [PolicyNames](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames) property for the listener\.
+
+## Syntax<a name="aws-properties-ec2-elb-LBCookieStickinessPolicy-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-ec2-elb-LBCookieStickinessPolicy-syntax.json"></a>
 
@@ -16,21 +20,24 @@ The LBCookieStickinessPolicy type is an embedded property of the [AWS::ElasticLo
 ### YAML<a name="aws-properties-ec2-elb-LBCookieStickinessPolicy-syntax.yaml"></a>
 
 ```
-[CookieExpirationPeriod](#cfn-elb-lbcookiestickinesspolicy-cookieexpirationperiod): String
-[PolicyName](#cfn-elb-lbcookiestickinesspolicy-policyname): String
+  [CookieExpirationPeriod](#cfn-elb-lbcookiestickinesspolicy-cookieexpirationperiod): String
+  [PolicyName](#cfn-elb-lbcookiestickinesspolicy-policyname): String
 ```
 
-## Properties<a name="w13ab1c21c10d135c16c39b7"></a>
+## Properties<a name="aws-properties-ec2-elb-LBCookieStickinessPolicy-properties"></a>
 
 `CookieExpirationPeriod`  <a name="cfn-elb-lbcookiestickinesspolicy-cookieexpirationperiod"></a>
-The time period, in seconds, after which the cookie should be considered stale\. If this parameter isn't specified, the sticky session will last for the duration of the browser session\.  
+The time period, in seconds, after which the cookie should be considered stale\. If this parameter is not specified, the stickiness session lasts for the duration of the browser session\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyName`  <a name="cfn-elb-lbcookiestickinesspolicy-policyname"></a>
-The name of the policy being created\. The name must be unique within the set of policies for this load balancer\.  
-To associate this policy with a listener, include the policy name in the listener's [PolicyNames](aws-properties-ec2-elb-listener.md) property\.
+The name of the policy\. This name must be unique within the set of policies for this load balancer\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="w13ab1c21c10d135c16c39b9"></a>
-+ Sample template snippets in the Examples section of [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md)\.
-+ [CreateLBCookieStickinessPolicy](http://docs.aws.amazon.com/ElasticLoadBalancing/latest/APIReference/API_CreateLBCookieStickinessPolicy.html) in the *Elastic Load Balancing API Reference version 2012\-06\-01*
+## See Also<a name="aws-properties-ec2-elb-LBCookieStickinessPolicy--seealso"></a>
++  [CreateLBCookieStickinessPolicy](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateLBCookieStickinessPolicy.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)* 
++  [Sticky Sessions](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-sticky-sessions.html) in the *User Guide for Classic Load Balancers* 

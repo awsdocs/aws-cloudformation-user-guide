@@ -9,14 +9,14 @@ You can add as many files as you need to your repository\. For example, you migh
 This topic describes each artifact type\.
 
 **Topics**
-+ [Stack Template File](#w13ab1c13c15c13)
-+ [Template Configuration File](#w13ab1c13c15c15)
++ [Stack Template File](#w4784ab1c13c15c13)
++ [Template Configuration File](#w4784ab1c13c15c15)
 
-## Stack Template File<a name="w13ab1c13c15c13"></a>
+## Stack Template File<a name="w4784ab1c13c15c13"></a>
 
 A stack template file defines the resources that AWS CloudFormation provisions and configures\. These files are the same template files that you use when you create or update stacks using AWS CloudFormation\. You can use YAML or JSON\-formatted templates\. For more information about templates, see [Template Anatomy](template-anatomy.md)\.
 
-## Template Configuration File<a name="w13ab1c13c15c15"></a>
+## Template Configuration File<a name="w4784ab1c13c15c15"></a>
 
 A template configuration file is a JSON\-formatted text file that can specify template parameter values, a [stack policy](protect-stack-resources.md), and tags\. Use these configuration files to specify parameter values or a stack policy for a stack\. All of the parameter values that you specify must be declared in the associated template\.
 

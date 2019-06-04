@@ -1,38 +1,43 @@
-# Elastic Load Balancing V1 AppCookieStickinessPolicy<a name="aws-properties-ec2-elb-AppCookieStickinessPolicy"></a>
+# AWS::ElasticLoadBalancing::LoadBalancer AppCookieStickinessPolicy<a name="aws-properties-ec2-elb-AppCookieStickinessPolicy"></a>
 
-The AppCookieStickinessPolicy type is an embedded property of the [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md) type\.
+Specifies a policy for application\-controlled session stickiness for your Classic Load Balancer\.
 
-## Syntax<a name="w13ab1c21c10d135c16c21b5"></a>
+To associate a policy with a listener, use the [PolicyNames](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames) property for the listener\.
+
+## Syntax<a name="aws-properties-ec2-elb-AppCookieStickinessPolicy-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-ec2-elb-AppCookieStickinessPolicy-syntax.json"></a>
 
 ```
 {
-   "[CookieName](#cfn-elb-appcookiestickinesspolicy-cookiename)" : String,
-   "[PolicyName](#cfn-elb-appcookiestickinesspolicy-policyname)" : String
+  "[CookieName](#cfn-elb-appcookiestickinesspolicy-cookiename)" : String,
+  "[PolicyName](#cfn-elb-appcookiestickinesspolicy-policyname)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-ec2-elb-AppCookieStickinessPolicy-syntax.yaml"></a>
 
 ```
-[CookieName](#cfn-elb-appcookiestickinesspolicy-cookiename): String
-[PolicyName](#cfn-elb-appcookiestickinesspolicy-policyname): String
+  [CookieName](#cfn-elb-appcookiestickinesspolicy-cookiename): String
+  [PolicyName](#cfn-elb-appcookiestickinesspolicy-policyname): String
 ```
 
-## Properties<a name="w13ab1c21c10d135c16c21b7"></a>
+## Properties<a name="aws-properties-ec2-elb-AppCookieStickinessPolicy-properties"></a>
 
 `CookieName`  <a name="cfn-elb-appcookiestickinesspolicy-cookiename"></a>
-Name of the application cookie used for stickiness\.  
+The name of the application cookie used for stickiness\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyName`  <a name="cfn-elb-appcookiestickinesspolicy-policyname"></a>
-The name of the policy being created\. The name must be unique within the set of policies for this Load Balancer\.  
-To associate this policy with a listener, include the policy name in the listener's [PolicyNames](aws-properties-ec2-elb-listener.md) property\.
+The mnemonic name for the policy being created\. The name must be unique within a set of policies for this load balancer\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="w13ab1c21c10d135c16c21b9"></a>
-+ Sample template snippets in the Examples section of [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md)\.
-+ [CreateAppCookieStickinessPolicy](http://docs.aws.amazon.com/ElasticLoadBalancing/latest/APIReference/API_CreateAppCookieStickinessPolicy.html)in the *Elastic Load Balancing API Reference version 2012\-06\-01*
+## See Also<a name="aws-properties-ec2-elb-AppCookieStickinessPolicy--seealso"></a>
++  [CreateAppCookieStickinessPolicy](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateAppCookieStickinessPolicy.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)* 
++  [Sticky Sessions](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-sticky-sessions.html) in the *User Guide for Classic Load Balancers* 

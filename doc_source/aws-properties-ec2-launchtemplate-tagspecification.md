@@ -1,8 +1,8 @@
-# Amazon EC2 LaunchTemplate TagSpecification<a name="aws-properties-ec2-launchtemplate-tagspecification"></a>
+# AWS::EC2::LaunchTemplate TagSpecification<a name="aws-properties-ec2-launchtemplate-tagspecification"></a>
 
-<a name="aws-properties-ec2-launchtemplate-tagspecification-description"></a>The `TagSpecification` property type specifies the tags specification for an Amazon EC2 launch template\.
+Specifies tags to apply to a resource when the resource is created\.
 
-<a name="aws-properties-ec2-launchtemplate-tagspecification-inheritance"></a> `TagSpecification` is a property of the [Amazon EC2 LaunchTemplate LaunchTemplateData](aws-properties-ec2-launchtemplate-launchtemplatedata.md) property type\.
+ `TagSpecification` is a property of the [Amazon EC2 LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html) property type\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-tagspecification-syntax"></a>
 
@@ -13,32 +13,32 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ResourceType](#cfn-ec2-launchtemplate-tagspecification-resourcetype)" : String,
-  "[Tags](#cfn-ec2-launchtemplate-tagspecification-tags)" : [ [*Tag*](aws-properties-resource-tags.md), ... ]
+  "[Tags](#cfn-ec2-launchtemplate-tagspecification-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-ec2-launchtemplate-tagspecification-syntax.yaml"></a>
 
 ```
-[ResourceType](#cfn-ec2-launchtemplate-tagspecification-resourcetype): String
-[Tags](#cfn-ec2-launchtemplate-tagspecification-tags): 
-  - [*Tag*](aws-properties-resource-tags.md)
+  [ResourceType](#cfn-ec2-launchtemplate-tagspecification-resourcetype): String
+  [Tags](#cfn-ec2-launchtemplate-tagspecification-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-tagspecification-properties"></a>
 
 `ResourceType`  <a name="cfn-ec2-launchtemplate-tagspecification-resourcetype"></a>
-The type of resource to tag\. Currently, the resource types that support tagging on creation are `instance` and `volume`\.  
-For a list of valid values, see [LaunchTemplateTagSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateTagSpecificationRequest.html) in the *Amazon EC2 API Reference*  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The type of resource to tag\. Currently, the resource types that support tagging on creation are `instance` and `volume`\. To tag a resource after it has been created, see [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html)\.  
+*Required*: No  
+*Type*: String  
+*Allowed Values*: `client-vpn-endpoint | customer-gateway | dedicated-host | dhcp-options | elastic-ip | fleet | fpga-image | host-reservation | image | instance | internet-gateway | launch-template | natgateway | network-acl | network-interface | reserved-instances | route-table | security-group | snapshot | spot-instances-request | subnet | transit-gateway | transit-gateway-attachment | transit-gateway-route-table | volume | vpc | vpc-peering-connection | vpn-connection | vpn-gateway`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-ec2-launchtemplate-tagspecification-tags"></a>
 The tags to apply to the resource\.  
- *Required*: No  
- *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-launchtemplate-tagspecification-seealso"></a>
-+ [LaunchTemplateTagSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateTagSpecificationRequest.html) in the *Amazon EC2 API Reference*
+## See Also<a name="aws-properties-ec2-launchtemplate-tagspecification--seealso"></a>
++  [ LaunchTemplateTagSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateTagSpecificationRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 

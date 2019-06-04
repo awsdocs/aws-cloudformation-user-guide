@@ -1,17 +1,9 @@
 # AWS::SecretsManager::RotationSchedule<a name="aws-resource-secretsmanager-rotationschedule"></a>
 
-The `AWS::SecretsManager::RotationSchedule` resource configures rotation for a secret\. The secret must already be configured with the details of the database or service\. If you define both the secret and the database or service in a AWS CloudFormation template, then define the [AWS::SecretsManager::SecretTargetAttachment](aws-resource-secretsmanager-secrettargetattachment.md) resource to populate the secret with the connection details of the database or service before you attempt to configure rotation\.
+The `AWS::SecretsManager::RotationSchedule` resource configures rotation for a secret\. The secret must already be configured with the details of the database or service\. If you define both the secret and the database or service in an AWS CloudFormation template, then define the [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html) resource to populate the secret with the connection details of the database or service before you attempt to configure rotation\.
 
 **Important**  
-When you configure rotation for a secret, Secrets Manager automatically rotates the secret one time\. Ensure that you configure all your clients to retrieve the secret using Secrets Manager before configuring rotation to prevent breaking them\.
-
-**Topics**
-+ [Syntax](#aws-resource-secretsmanager-rotationschedule-syntax)
-+ [Properties](#aws-resource-secretsmanager-rotationschedule-properties)
-+ [Return Values](#aws-resource-secretsmanager-rotationschedule-returnvalues)
-+ [Examples](#aws-resource-secretsmanager-rotationschedule-examples)
-+ [See Also](#aws-resource-secretsmanager-rotationschedule-seealso)
-+ [Secrets Manager RotationSchedule RotationRules](aws-properties-secretsmanager-rotationschedule-rotationrules.md)
+When you configure rotation for a secret, AWS CloudFormation automatically rotates the secret one time\. Ensure that you configure all your clients to retrieve the secret using Secrets Manager before configuring rotation to prevent breaking them\.
 
 ## Syntax<a name="aws-resource-secretsmanager-rotationschedule-syntax"></a>
 
@@ -23,72 +15,63 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SecretsManager::RotationSchedule",
   "Properties" : {
-    "[SecretId](#cfn-secretsmanager-rotationschedule-secretid)" : String,
-    "[RotationLambdaARN](#cfn-secretsmanager-rotationschedule-rotationlambdaarn)" : String,
-    "[RotationRules](#cfn-secretsmanager-rotationschedule-rotationrules)" : [*RotationRules*](aws-properties-secretsmanager-rotationschedule-rotationrules.md)
-  }
+      "[RotationLambdaARN](#cfn-secretsmanager-rotationschedule-rotationlambdaarn)" : String,
+      "[RotationRules](#cfn-secretsmanager-rotationschedule-rotationrules)" : [RotationRules](aws-properties-secretsmanager-rotationschedule-rotationrules.md),
+      "[SecretId](#cfn-secretsmanager-rotationschedule-secretid)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-secretsmanager-rotationschedule-syntax.yaml"></a>
 
 ```
-Type: "AWS::SecretsManager::RotationSchedule"
-Properties:
-  [SecretId](#cfn-secretsmanager-rotationschedule-secretid): String
+Type: AWS::SecretsManager::RotationSchedule
+Properties: 
   [RotationLambdaARN](#cfn-secretsmanager-rotationschedule-rotationlambdaarn): String
-  [RotationRules](#cfn-secretsmanager-rotationschedule-rotationrules): [*RotationRules*](aws-properties-secretsmanager-rotationschedule-rotationrules.md)
+  [RotationRules](#cfn-secretsmanager-rotationschedule-rotationrules): 
+    [RotationRules](aws-properties-secretsmanager-rotationschedule-rotationrules.md)
+  [SecretId](#cfn-secretsmanager-rotationschedule-secretid): String
 ```
 
 ## Properties<a name="aws-resource-secretsmanager-rotationschedule-properties"></a>
 
-`SecretId`  <a name="cfn-secretsmanager-rotationschedule-secretid"></a>
-Specifies the Amazon Resource Name \(ARN\) or the friendly name of the secret that you want to rotate\. To reference a secret also that's created in this template, use the [Ref](intrinsic-function-reference-ref.md) function with the secret's logical ID\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
-
 `RotationLambdaARN`  <a name="cfn-secretsmanager-rotationschedule-rotationlambdaarn"></a>
-Specifies the ARN of the Lambda function that can rotate the secret\. If you don't specify this parameter, then the secret must already have the ARN of a Lambda function configured\. To reference a Lambda function that's also created in this template, use the [Ref](intrinsic-function-reference-ref.md) function with the function's logical ID\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Specifies the ARN of the Lambda function that can rotate the secret\. If you don't specify this parameter, then the secret must already have the ARN of a Lambda function configured\. To reference a Lambda function that's also created in this template, use the [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) function with the function's logical ID\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RotationRules`  <a name="cfn-secretsmanager-rotationschedule-rotationrules"></a>
 Specifies a structure that defines the rotation schedule for this secret\.  
- *Required*: No  
- *Type*: [Secrets Manager RotationSchedule RotationRules](aws-properties-secretsmanager-rotationschedule-rotationrules.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: [RotationRules](aws-properties-secretsmanager-rotationschedule-rotationrules.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-secretsmanager-rotationschedule-returnvalues"></a>
+`SecretId`  <a name="cfn-secretsmanager-rotationschedule-secretid"></a>
+Specifies the Amazon Resource Name \(ARN\) or the friendly name of the secret that you want to rotate\. To reference a secret also that's created in this template, use the [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) function with the secret's logical ID\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-### Ref<a name="aws-resource-secretsmanager-rotationschedule-ref"></a>
+## Return Values<a name="aws-resource-secretsmanager-rotationschedule-return-values"></a>
+
+### Ref<a name="aws-resource-secretsmanager-rotationschedule-return-values-ref"></a>
 
 When you pass the logical ID of an `AWS::SecretsManager::RotationSchedule` resource to the intrinsic `Ref` function, the function returns the ARN of the secret that's being configured, such as:
 
-`arn:aws:secretsmanager:us-west-2:123456789012:secret:my-path/my-secret-name-1a2b3c`
+*arn:aws:secretsmanager: us\-west\-2*:*123456789012*:secret:*my\-path/my\-secret\-name*\-*1a2b3c* 
 
-This enables you to reference a secret that you create in one part of the stack template from within the definition of another resource later, in the same template\. You typically do this when you define the [AWS::SecretsManager::SecretTargetAttachment](aws-resource-secretsmanager-secrettargetattachment.md) resource type\.
+This enables you to reference a secret that you create in one part of the stack template from within the definition of another resource later, in the same template\. You typically do this when you define the [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html) resource type\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
 
-### Fn::GetAtt<a name="aws-resource-secretsmanager-rotationschedule-getatt"></a>
+## Examples<a name="aws-resource-secretsmanager-rotationschedule--examples"></a>
 
-`Fn::GetAtt` returns a value for a specified attribute of this type\. This section lists the available attributes and a sample return value\.
+### Configuring a Secret to Rotate<a name="aws-resource-secretsmanager-rotationschedule--examples--Configuring_a_Secret_to_Rotate"></a>
 
-`VersionId`  
-The unique version ID of the new version of the secret created by the initial rotation that's triggered by this request\.
+The following example shows a complete example of creating a secret, creating an RDS database instance that's associated with the secret and configuring it to rotate\. The example shows how to define a Lambda rotation function, attach the required trust and permissions policies, and associate the function with the secret on a defined schedule\.
 
-## Examples<a name="aws-resource-secretsmanager-rotationschedule-examples"></a>
-
-### Configuring a Secret to Rotate<a name="aws-resource-secretsmanager-rotationschedule-addingrotation"></a>
-
-The following example shows a complete example of creating a secret, creating an RDS DB instance that's associated with the secret, and configuring it to rotate\. It shows how to define a Lambda rotation function, attach the required trust and permissions policies, and then associate the function with the secret on a defined schedule\.
-
-**Note**  
-The JSON specification doesn't allow any kind of comments\. See the YAML example for comments\.
-
-#### JSON<a name="aws-resource-secretsmanager-rotationschedule-addingrotation.json"></a>
+#### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--Configuring_a_Secret_to_Rotate--json"></a>
 
 ```
 {
@@ -247,7 +230,7 @@ The JSON specification doesn't allow any kind of comments\. See the YAML example
 }
 ```
 
-#### YAML<a name="aws-resource-secretsmanager-secret-addingrotation.yaml"></a>
+#### YAML<a name="aws-resource-secretsmanager-rotationschedule--examples--Configuring_a_Secret_to_Rotate--yaml"></a>
 
 ```
 #This is a Secret resource with a randomly generated password in its SecretString JSON.
@@ -384,6 +367,6 @@ The JSON specification doesn't allow any kind of comments\. See the YAML example
         S3ObjectVersion: <% replace-this-with-lambda-zip-file-version-if-s3-bucket-versioning-is-enabled %>
 ```
 
-## See Also<a name="aws-resource-secretsmanager-rotationschedule-seealso"></a>
-+ [RotateSecret](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_RotateSecret.html) in the *AWS Secrets Manager API Reference*
-+ [Rotating Your AWS Secrets Manager Secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html) in the *AWS Secrets Manager User Guide*
+## See Also<a name="aws-resource-secretsmanager-rotationschedule--seealso"></a>
++  [RotateSecret](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_RotateSecret.html) in the AWS Secrets Manager API Reference
++  [Rotating Your AWS Secrets Manager Secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html) in the AWS Secrets Manager User Guide

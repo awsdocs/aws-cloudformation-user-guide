@@ -1,13 +1,13 @@
 # AWS::DocDB::DBClusterParameterGroup<a name="aws-resource-docdb-dbclusterparametergroup"></a>
 
-The `AWS::DocDB::DBClusterParameterGroup` Amazon DocumentDB \(with MongoDB compatibility\) resource describes a DBClusterParameterGroup\. For more information, see [DBClusterParameterGroup](https://docs.aws.amazon.com/amazondocdb/latest/developerguide/API_DBClusterParameterGroup) in the *Amazon DocumentDB Developer Guide*\.
+The `AWS::DocDB::DBClusterParameterGroup` Amazon DocumentDB \(with MongoDB compatibility\) resource describes a DBClusterParameterGroup\. For more information, see [DBClusterParameterGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DBClusterParameterGroup.html) in the *Amazon DocumentDB Developer Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-docdb-dbclusterparametergroup-syntax)
-+ [Properties](#aws-resource-docdb-dbclusterparametergroup-properties)
-+ [Return Values](#aws-resource-docdb-dbclusterparametergroup-returnvalues)
-+ [Example](#aws-resource-docdb-dbclusterparametergroup-examples)
-+ [See Also](#aws-resource-docdb-dbclusterparametergroup-seealso)
+Parameters in a DB cluster parameter group apply to all of the instances in a DB cluster\.
+
+A DB cluster parameter group is initially created with the default parameters for the database engine used by instances in the DB cluster\. To provide custom values for any of the parameters, you must modify the group after you create it\. After you create a DB cluster parameter group, you must associate it with your DB cluster\. For the new DB cluster parameter group and associated settings to take effect, you must then reboot the DB instances in the DB cluster without failover\.
+
+**Important**  
+After you create a DB cluster parameter group, you should wait at least 5 minutes before creating your first DB cluster that uses that DB cluster parameter group as the default parameter group\. This allows Amazon DocumentDB to fully complete the create action before the DB cluster parameter group is used as the default for a new DB cluster\. This step is especially important for parameters that are critical when creating the default database for a DB cluster, such as the character set for the default database defined by the `character_set_database` parameter\.
 
 ## Syntax<a name="aws-resource-docdb-dbclusterparametergroup-syntax"></a>
 
@@ -19,116 +19,106 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::DocDB::DBClusterParameterGroup",
   "Properties" : {
-    "[Description](#cfn-docdb-dbclusterparametergroup-description)" : String,
-    "[Family](#cfn-docdb-dbclusterparametergroup-family)" : String,
-    "[Name](#cfn-docdb-dbclusterparametergroup-name)" : String,
-    "[Parameters](#cfn-docdb-dbclusterparametergroup-parameters)" : Json,
-    "[Tags](#cfn-docdb-dbclusterparametergroup-tags)" : [ [*Tag*](aws-properties-resource-tags.md), ... ]
-  }
+      "[Description](#cfn-docdb-dbclusterparametergroup-description)" : String,
+      "[Family](#cfn-docdb-dbclusterparametergroup-family)" : String,
+      "[Name](#cfn-docdb-dbclusterparametergroup-name)" : String,
+      "[Parameters](#cfn-docdb-dbclusterparametergroup-parameters)" : Json,
+      "[Tags](#cfn-docdb-dbclusterparametergroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-docdb-dbclusterparametergroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::DocDB::DBClusterParameterGroup"
-Properties:
+Type: AWS::DocDB::DBClusterParameterGroup
+Properties: 
   [Description](#cfn-docdb-dbclusterparametergroup-description): String
   [Family](#cfn-docdb-dbclusterparametergroup-family): String
   [Name](#cfn-docdb-dbclusterparametergroup-name): String
   [Parameters](#cfn-docdb-dbclusterparametergroup-parameters): Json
   [Tags](#cfn-docdb-dbclusterparametergroup-tags): 
-    - [*Tag*](aws-properties-resource-tags.md)
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-docdb-dbclusterparametergroup-properties"></a>
 
 `Description`  <a name="cfn-docdb-dbclusterparametergroup-description"></a>
-Provides the customer\-specified description for this DB cluster parameter group\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+The description for the DB cluster parameter group\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Family`  <a name="cfn-docdb-dbclusterparametergroup-family"></a>
-The DB cluster parameter group from which user created DB cluster parameter groups are created\. For example, `default.docdb3.6`\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+The DB cluster parameter group family name\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-docdb-dbclusterparametergroup-name"></a>
-Provides the name of the DB parameter group family that this DB cluster parameter group is compatible with\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+The name of the DB cluster parameter group\.  
+Constraints:  
++ Must match the name of an existing `DBClusterParameterGroup`\.
+This value is stored as a lowercase string\.
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Parameters`  <a name="cfn-docdb-dbclusterparametergroup-parameters"></a>
-Provides the name of the DB cluster parameter group\.  
- *Required*: Yes  
- *Type*: Json  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Provides a list of parameters for the DB cluster parameter group\.  
+*Required*: Yes  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-docdb-dbclusterparametergroup-tags"></a>
-A list of up to 50 tags\. A tag is metadata assigned to an Amazon DocumentDB resource consisting of a key\-value pair\.  
- *Required*: No  
- *Type*: List of [Resource Tag](aws-properties-resource-tags.md) property types  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The tags to be assigned to the DB cluster parameter group\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-docdb-dbclusterparametergroup-returnvalues"></a>
+## Return Values<a name="aws-resource-docdb-dbclusterparametergroup-return-values"></a>
 
-### Ref<a name="aws-resource-docdb-dbclusterparametergroup-ref"></a>
+### Ref<a name="aws-resource-docdb-dbclusterparametergroup-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::DocDB::DBClusterParameterGroup` resource to the intrinsic `Ref` function, the function returns the DBClusterParameterGroup's name, such as `sample-db-cluster-param-group`\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the DBClusterParameterGroup's name, such as `sample-db-cluster-param-group`\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Example<a name="aws-resource-docdb-dbclusterparametergroup-examples"></a>
+## Examples<a name="aws-resource-docdb-dbclusterparametergroup--examples"></a>
 
-### JSON<a name="aws-resource-docdb-dbclusterparametergroup-example1.json"></a>
+### <a name="aws-resource-docdb-dbclusterparametergroup--examples--"></a>
+
+#### JSON<a name="aws-resource-docdb-dbclusterparametergroup--examples----json"></a>
 
 ```
 {
-   "AWSTemplateFormatVersion" : "2010-09-09",
-   "Resources" : {
-      "myDBInstance" : {
-         "Type" : "AWS::DocDB::DBClusterParameterGroup",
-         "Properties" : {
-            "Description" : "description",
-            "Family" : "docdb3.6",
-            "Name" : "modified-docdb3.6",
-            "Parameters" : [ {"Name" : "String", "Value" : "String"} ],
-            "Tags" : [ {"Key" : "String", "Value" : "String"} ]
-         }
-      }
+   "Type" : "AWS::DocDB::DBClusterParameterGroup",
+   "Properties" : {
+      "Description" : String,
+      "Family" : String,
+      "Name" : String,
+      "Parameters" : Json,
+      "Tags" : [ Tag, ... ]
    }
 }
 ```
 
-### YAML<a name="aws-resource-docdb-dbclusterparametergroup-example1.yaml"></a>
+#### YAML<a name="aws-resource-docdb-dbclusterparametergroup--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: "2010-09-09"
-Resources: 
-  myDBInstance: 
-    Type: "AWS::DocDB::DBClusterParameterGroup"
-    Properties: 
-      Description : "description"
-      Family : "docdb3.6"
-      Name : "modified-docdb3.6"
-      Parameters : 
-        - 
-          Name : "String"
-          Value : "String"
-      Tags: 
-        - 
-          Key: "String"
-          Value: "String"
+Type: "AWS::DocDB::DBClusterParameterGroup"
+Properties:
+   Description: String
+   Family: String
+   Name: String
+   Parameters: Json
+   Tags: 
+      - Tag
 ```
 
-## See Also<a name="aws-resource-docdb-dbclusterparametergroup-seealso"></a>
-
-For more information, see the following topics in the *Amazon DocumentDB Developers Guide*\.
-+ [DBClusterParameterGroup](https://docs.aws.amazon.com/amazondocdb/latest/developerguide/API_DBClusterParameterGroup)
-+ [CreateDBClusterParameterGroup](https://docs.aws.amazon.com/amazondocdb/latest/developerguide/API_CreateDBClusterParameterGroup)
-+ [DeleteDBClusterParameterGroup](https://docs.aws.amazon.com/amazondocdb/latest/developerguide/API_DeleteDBClusterParameterGroup)
-+ [DescribeDBClusterParameterGroup](https://docs.aws.amazon.com/amazondocdb/latest/developerguide/API_DescribeDBClusterParameterGroup)
-+ [ModifyDBClusterParameterGroup](https://docs.aws.amazon.com/amazondocdb/latest/developerguide/API_ModifyDBClusterParameterGroup)
+## See Also<a name="aws-resource-docdb-dbclusterparametergroup--seealso"></a>
++  [DBClusterParameterGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DBClusterParameterGroup.html) 
++  [CreateDBClusterParameterGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBClusterParameterGroup.html) 
++  [DeleteDBClusterParameterGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DeleteDBClusterParameterGroup.html) 
++  [DescribeDBClusterParameterGroups](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DescribeDBClusterParameterGroups.html) 
++  [ModifyDBClusterParameterGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_ModifyDBClusterParameterGroup.html) 

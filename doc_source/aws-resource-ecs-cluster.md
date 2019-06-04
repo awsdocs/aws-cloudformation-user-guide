@@ -1,12 +1,6 @@
 # AWS::ECS::Cluster<a name="aws-resource-ecs-cluster"></a>
 
-The `AWS::ECS::Cluster` resource creates an Amazon Elastic Container Service \(Amazon ECS\) cluster\. This resource has no properties; use the Amazon ECS container agent to connect to the cluster\. For more information, see [Amazon ECS Container Agent](https://docs.aws.amazon.com/AmazonECS/latest/developerguide//ECS_agent.html) in the *Amazon Elastic Container Service Developer Guide*\.
-
-**Topics**
-+ [Syntax](#aws-resource-ecs-cluster-syntax)
-+ [Properties](#aws-resource-servicename-cluster-properties)
-+ [Return Values](#aws-resource-ecs-cluster-returnvalues)
-+ [Example](#w13ab1c21c10d117c13c13)
+The `AWS::ECS::Cluster` resource creates an Amazon Elastic Container Service \(Amazon ECS\) cluster\.
 
 ## Syntax<a name="aws-resource-ecs-cluster-syntax"></a>
 
@@ -18,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ECS::Cluster",
   "Properties" : {
-    "[ClusterName](#cfn-ecs-cluster-clustername)" : String
-  }
+      "[ClusterName](#cfn-ecs-cluster-clustername)" : String
+    }
 }
 ```
 
@@ -27,47 +21,48 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ECS::Cluster
-Properties:
+Properties: 
   [ClusterName](#cfn-ecs-cluster-clustername): String
 ```
 
-## Properties<a name="aws-resource-servicename-cluster-properties"></a>
+## Properties<a name="aws-resource-ecs-cluster-properties"></a>
 
 `ClusterName`  <a name="cfn-ecs-cluster-clustername"></a>
-A name for the cluster\. If you don't specify a name, AWS CloudFormation generates a unique physical ID for the name\. For more information, see [Name Type](aws-properties-name.md)\.  
-If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
+A user\-generated string that you use to identify your cluster\. If you don't specify a name, AWS CloudFormation generates a unique physical ID for the name\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ecs-cluster-returnvalues"></a>
+## Return Values<a name="aws-resource-ecs-cluster-return-values"></a>
 
-### Ref<a name="aws-resource-ecs-cluster-ref"></a>
+### Ref<a name="aws-resource-ecs-cluster-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
 
-In the following sample, the `Ref` function returns the name of the `MyECSCluster` cluster, such as `MyStack-MyECSCluster-NT5EUXTNTXXD`\.
+In the following example, the `Ref` function returns the name of the `MyECSCluster` cluster, such as `MyStack-MyECSCluster-NT5EUXTNTXXD`\.
 
-```
-{ "Ref": "MyECSCluster" }
-```
+ `{ "Ref": "MyECSCluster" }` 
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Fn::GetAtt<a name="aws-resource-ecs-cluster-getatt"></a>
+### Fn::GetAtt<a name="aws-resource-ecs-cluster-return-values-fn--getatt"></a>
 
-`Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-ecs-cluster-return-values-fn--getatt-fn--getatt"></a>
+
+`Arn`  <a name="Arn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the Amazon ECS cluster, such as `arn:aws:ecs:us-east-2:123456789012:cluster/MyECSCluster`\.
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
+## Examples<a name="aws-resource-ecs-cluster--examples"></a>
 
-## Example<a name="w13ab1c21c10d117c13c13"></a>
+### Creating an Amazon ECS cluster<a name="aws-resource-ecs-cluster--examples--Creating_an_Amazon_ECS_cluster"></a>
 
 The following sample declares an Amazon ECS cluster:
 
-### JSON<a name="aws-resource-ecs-cluster-example.json"></a>
+#### JSON<a name="aws-resource-ecs-cluster--examples--Creating_an_Amazon_ECS_cluster--json"></a>
 
 ```
 "MyCluster": {
@@ -75,7 +70,7 @@ The following sample declares an Amazon ECS cluster:
 }
 ```
 
-### YAML<a name="aws-resource-ecs-cluster-example.yaml"></a>
+#### YAML<a name="aws-resource-ecs-cluster--examples--Creating_an_Amazon_ECS_cluster--yaml"></a>
 
 ```
 MyCluster:

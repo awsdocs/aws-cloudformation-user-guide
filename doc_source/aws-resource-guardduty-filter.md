@@ -1,6 +1,6 @@
 # AWS::GuardDuty::Filter<a name="aws-resource-guardduty-filter"></a>
 
-You can use the `AWS::GuardDuty::Filter` resource to create a GuardDuty filter using the specified finding criteria\. 
+The `AWS::GuardDuty::Filter` resource specifies a new filter defined by the provided `findingCriteria`\.
 
 ## Syntax<a name="aws-resource-guardduty-filter-syntax"></a>
 
@@ -12,115 +12,116 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::GuardDuty::Filter",
   "Properties" : {
-    "[Action](#cfn-guardduty-filter-action)" : String,
-    "[Description](#cfn-guardduty-filter-description)" : String,
-    "[DetectorId](#cfn-guardduty-filter-detectorid)" : String,
-    "[FindingCriteria](#cfn-guardduty-filter-findingcriteria)" : [*FindingCriteria*](aws-properties-guardduty-filter-findingcriteria.md),
-    "[Rank](#cfn-guardduty-filter-rank)" : Integer,
-    "[Name](#cfn-guardduty-filter-name)" : String
-  }
+      "[Action](#cfn-guardduty-filter-action)" : String,
+      "[Description](#cfn-guardduty-filter-description)" : String,
+      "[DetectorId](#cfn-guardduty-filter-detectorid)" : String,
+      "[FindingCriteria](#cfn-guardduty-filter-findingcriteria)" : [FindingCriteria](aws-properties-guardduty-filter-findingcriteria.md),
+      "[Name](#cfn-guardduty-filter-name)" : String,
+      "[Rank](#cfn-guardduty-filter-rank)" : Integer
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-guardduty-filter-syntax.yaml"></a>
 
 ```
-Type: "AWS::GuardDuty::Filter"
-Properties:
+Type: AWS::GuardDuty::Filter
+Properties: 
   [Action](#cfn-guardduty-filter-action): String
   [Description](#cfn-guardduty-filter-description): String
   [DetectorId](#cfn-guardduty-filter-detectorid): String
-  [FindingCriteria](#cfn-guardduty-filter-findingcriteria): [*FindingCriteria*](aws-properties-guardduty-filter-findingcriteria.md)
-  [Rank](#cfn-guardduty-filter-rank): Integer
+  [FindingCriteria](#cfn-guardduty-filter-findingcriteria): 
+    [FindingCriteria](aws-properties-guardduty-filter-findingcriteria.md)
   [Name](#cfn-guardduty-filter-name): String
+  [Rank](#cfn-guardduty-filter-rank): Integer
 ```
 
 ## Properties<a name="aws-resource-guardduty-filter-properties"></a>
 
 `Action`  <a name="cfn-guardduty-filter-action"></a>
-Specifies the action that is to be applied to the findings that match the filter\. Valid values are: NOOP \| ARCHIVE  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Specifies the action that is to be applied to the findings that match the filter\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-guardduty-filter-description"></a>
 The description of the filter\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DetectorId`  <a name="cfn-guardduty-filter-detectorid"></a>
-The ID of the detector that specifies the GuardDuty service whose findings you want to filter\.   
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+The ID of the detector to associate the `Filter` with\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FindingCriteria`  <a name="cfn-guardduty-filter-findingcriteria"></a>
 Represents the criteria to be used in the filter for querying findings\.  
- *Required*: Yes  
- *Type*: [FindingCriteria](aws-properties-guardduty-filter-findingcriteria.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
-`Rank`  <a name="cfn-guardduty-filter-rank"></a>
-Specifies the position of the filter in the list of current filters\. Also specifies the order in which this filter is applied to the findings\.   
- *Required*: Yes  
- *Type*: Integer  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: Yes  
+*Type*: [FindingCriteria](aws-properties-guardduty-filter-findingcriteria.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-guardduty-filter-name"></a>
 The name of the filter\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-guardduty-filter-returnvalues"></a>
+`Rank`  <a name="cfn-guardduty-filter-rank"></a>
+Specifies the position of the filter in the list of current filters\. Also specifies the order in which this filter is applied to the findings\.  
+*Required*: Yes  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-### Ref<a name="aws-resource-guardduty-filter-ref"></a>
+## Return Values<a name="aws-resource-guardduty-filter-return-values"></a>
 
-When you pass the logical ID of an `AWS::GuardDuty::Filter` resource to the intrinsic `Ref` function, the function returns the name of the created filter, such as `SampleFilter`\. 
+### Ref<a name="aws-resource-guardduty-filter-return-values-ref"></a>
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the filter, such as `SampleFilter`\.
 
-## Examples<a name="aws-resource-guardduty-filter-examples"></a>
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Declaring a GuardDuty Member Resource<a name="aws-resource-guardduty-filter-example1"></a>
+## Examples<a name="aws-resource-guardduty-filter--examples"></a>
 
-The following example shows how to declare an AWS::GuardDuty::Filter resource to create a filter for your GuardDuty findings\.
+### Declare a Filter Resource<a name="aws-resource-guardduty-filter--examples--Declare_a_Filter_Resource"></a>
 
-#### JSON<a name="aws-resource-guardduty-filter-example1.json"></a>
+The following example shows how to declare a GuardDuty `Filter` resource:
+
+#### JSON<a name="aws-resource-guardduty-filter--examples--Declare_a_Filter_Resource--json"></a>
 
 ```
 {
-  "Type": "AWS::GuardDuty::Filter",
-  "Properties": {
-    "Action": "ARCHIVE",
-    "Description": "SampleFilter",
-    "DetectorId": "a12abc34d567e8fa901bc2d34e56789f0",
-    "FindingCriteria": {
-      "Criterion": {
-        "updatedAt": {
-          "Gte": 0
+    "Type": "AWS::GuardDuty::Filter",
+    "Properties": {
+        "Action": "ARCHIVE",
+        "Description": "SampleFilter",
+        "DetectorId": "a12abc34d567e8fa901bc2d34e56789f0",
+        "FindingCriteria": {
+            "Criterion": {
+                "updatedAt": {
+                "Gte": 0
+                }
         }
-      }
     },
     "Rank": 1,
     "Name": "SampleFilter"
-  }
+    }
 }
 ```
 
-#### YAML<a name="aws-resource-guardduty-filter-example1.yaml"></a>
+#### YAML<a name="aws-resource-guardduty-filter--examples--Declare_a_Filter_Resource--yaml"></a>
 
 ```
 Type: "AWS::GuardDuty::Filter"
 Properties:
- Action : "ARCHIVE"
- Description : "SampleFilter"
- DetectorId : "a12abc34d567e8fa901bc2d34e56789f0"
- FindingCriteria : 
-   Criterion:
-      "updatedAt":
-          Gte: 0	
- Rank : 1
- Name : "SampleFilter"
+    Action : "ARCHIVE"
+    Description : "SampleFilter"
+    DetectorId : "a12abc34d567e8fa901bc2d34e56789f0"
+    FindingCriteria : 
+        Criterion:
+            "updatedAt":
+                Gte: 0	
+    Rank : 1
+    Name : "SampleFilter"
 ```

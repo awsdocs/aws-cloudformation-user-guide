@@ -1,8 +1,6 @@
-# Amazon Kinesis Data Analytics Application ApplicationSnapshotConfiguration<a name="aws-properties-kinesisanalyticsv2-application-applicationsnapshotconfiguration"></a>
+# AWS::KinesisAnalyticsV2::Application ApplicationSnapshotConfiguration<a name="aws-properties-kinesisanalyticsv2-application-applicationsnapshotconfiguration"></a>
 
-<a name="aws-properties-kinesisanalyticsv2-application-applicationsnapshotconfiguration-description"></a>The `ApplicationSnapshotConfiguration` property type describes whether snapshots are enabled for a Java\-based Kinesis Data Analytics application\.
-
-<a name="aws-properties-kinesisanalyticsv2-application-applicationsnapshotconfiguration-inheritance"></a> `ApplicationSnapshotConfiguration` is a property of the [ApplicationConfiguration](aws-properties-kinesisanalyticsv2-application-applicationconfiguration.md) property\.
+Describes whether snapshots are enabled for a Java\-based Kinesis Data Analytics application\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-applicationsnapshotconfiguration-syntax"></a>
 
@@ -19,13 +17,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-applicationsnapshotconfiguration-syntax.yaml"></a>
 
 ```
-[SnapshotsEnabled](#cfn-kinesisanalyticsv2-application-applicationsnapshotconfiguration-snapshotsenabled): Boolean
+  [SnapshotsEnabled](#cfn-kinesisanalyticsv2-application-applicationsnapshotconfiguration-snapshotsenabled): Boolean
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-applicationsnapshotconfiguration-properties"></a>
 
 `SnapshotsEnabled`  <a name="cfn-kinesisanalyticsv2-application-applicationsnapshotconfiguration-snapshotsenabled"></a>
 Describes whether snapshots are enabled for a Java\-based Kinesis Data Analytics application\.  
- *Required*: Yes  
- *Type*: Boolean  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: Yes  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See Also<a name="aws-properties-kinesisanalyticsv2-application-applicationsnapshotconfiguration--seealso"></a>
++  [ApplicationSnapshotConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ApplicationSnapshotConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference* 
