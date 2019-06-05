@@ -1,0 +1,18 @@
+# Pinpoint Resource Type Reference<a name="AWS_Pinpoint"></a>
+
+**Resource Types**
++ [AWS::Pinpoint::ADMChannel](aws-resource-pinpoint-admchannel.md)
++ [AWS::Pinpoint::APNSChannel](aws-resource-pinpoint-apnschannel.md)
++ [AWS::Pinpoint::APNSSandboxChannel](aws-resource-pinpoint-apnssandboxchannel.md)
++ [AWS::Pinpoint::APNSVoipChannel](aws-resource-pinpoint-apnsvoipchannel.md)
++ [AWS::Pinpoint::APNSVoipSandboxChannel](aws-resource-pinpoint-apnsvoipsandboxchannel.md)
++ [AWS::Pinpoint::App](aws-resource-pinpoint-app.md)
++ [AWS::Pinpoint::ApplicationSettings](aws-resource-pinpoint-applicationsettings.md)
++ [AWS::Pinpoint::BaiduChannel](aws-resource-pinpoint-baiduchannel.md)
++ [AWS::Pinpoint::Campaign](aws-resource-pinpoint-campaign.md)
++ [AWS::Pinpoint::EmailChannel](aws-resource-pinpoint-emailchannel.md)
++ [AWS::Pinpoint::EventStream](aws-resource-pinpoint-eventstream.md)
++ [AWS::Pinpoint::GCMChannel](aws-resource-pinpoint-gcmchannel.md)
++ [AWS::Pinpoint::SMSChannel](aws-resource-pinpoint-smschannel.md)
++ [AWS::Pinpoint::Segment](aws-resource-pinpoint-segment.md)
++ [AWS::Pinpoint::VoiceChannel](aws-resource-pinpoint-voicechannel.md)
