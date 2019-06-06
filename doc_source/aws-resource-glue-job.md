@@ -21,7 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[LogUri](#cfn-glue-job-loguri)" : String,
       "[MaxRetries](#cfn-glue-job-maxretries)" : Double,
       "[Name](#cfn-glue-job-name)" : String,
-      "[Role](#cfn-glue-job-role)" : String
+      "[Role](#cfn-glue-job-role)" : String,
+      "[SecurityConfiguration](#cfn-glue-job-securityconfiguration)" : String,
+      "[Tags](#cfn-glue-job-tags)" : Json
     }
 }
 ```
@@ -44,6 +46,8 @@ Properties:
   [MaxRetries](#cfn-glue-job-maxretries): Double
   [Name](#cfn-glue-job-name): String
   [Role](#cfn-glue-job-role): String
+  [SecurityConfiguration](#cfn-glue-job-securityconfiguration): String
+  [Tags](#cfn-glue-job-tags): Json
 ```
 
 ## Properties<a name="aws-resource-glue-job-properties"></a>
@@ -68,9 +72,9 @@ The connections used for this job\.
 
 `DefaultArguments`  <a name="cfn-glue-job-defaultarguments"></a>
 The default arguments for this job, specified as name\-value pairs\.  
-You can specify arguments here that your own job\-execution script consumes, as well as arguments that AWS Glue itself consumes\.  
-For information about how to specify and consume your own Job arguments, see the [Calling AWS Glue APIs in Python](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) topic in the developer guide\.  
-For information about the key\-value pairs that AWS Glue consumes to set up your job, see the [Special Parameters Used by AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html) topic in the developer guide\.  
+You can specify arguments here that your own job\-execution script consumes, in addition to arguments that AWS Glue itself consumes\.  
+For information about how to specify and consume your own job arguments, see [Calling AWS Glue APIs in Python](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) in the *AWS Glue Developer Guide*\.  
+For information about the key\-value pairs that AWS Glue consumes to set up your job, see [Special Parameters Used by AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html) in the *AWS Glue Developer Guide*\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -109,6 +113,18 @@ The name you assign to this job definition\.
 The name or Amazon Resource Name \(ARN\) of the IAM role associated with this job\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SecurityConfiguration`  <a name="cfn-glue-job-securityconfiguration"></a>
+The name of the `SecurityConfiguration` structure to be used with this job\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-glue-job-tags"></a>
+The tags to use with this job\. You can use tags to limit access to the job\. For more information about tags in AWS Glue, see [AWS Tags in AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html) in the developer guide\.  
+*Required*: No  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-glue-job-return-values"></a>

@@ -1,6 +1,6 @@
 # AWS::SSM::MaintenanceWindowTarget Targets<a name="aws-properties-ssm-maintenancewindowtarget-targets"></a>
 
-The `Targets` property type specifies adding a target to a Maintenance Window target in AWS Systems Manager\.
+The `Targets` property type specifies adding a target to a maintenance window target in AWS Systems Manager\.
 
  `Targets` is a property of the [AWS::SSM::MaintenanceWindowTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html) resource\.
 

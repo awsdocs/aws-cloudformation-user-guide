@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ssm-association-parametervalues-properties"></a>
 
 `ParameterValues`  <a name="cfn-ssm-association-parametervalues-parametervalues"></a>
-The parameters for the runtime configuration of the document\.   
+The parameters for the runtime configuration of the document\.  
 *Required*: Yes  
 *Type*: [List](#aws-properties-ssm-association-parametervalues) of [String](#aws-properties-ssm-association-parametervalues)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

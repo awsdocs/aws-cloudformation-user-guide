@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Address`  <a name="cfn-budgets-budget-subscriber-address"></a>
 The address that AWS sends budget notifications to, either an SNS topic or an email\.  
-AWS validates the address for a `CreateSubscriber` request with the `.*` regex\.  
+When you create a subscriber, the value of `Address` can't contain line breaks\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

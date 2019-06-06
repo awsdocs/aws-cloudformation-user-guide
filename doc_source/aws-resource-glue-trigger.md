@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-glue-trigger-name)" : String,
       "[Predicate](#cfn-glue-trigger-predicate)" : [Predicate](aws-properties-glue-trigger-predicate.md),
       "[Schedule](#cfn-glue-trigger-schedule)" : String,
+      "[Tags](#cfn-glue-trigger-tags)" : Json,
       "[Type](#cfn-glue-trigger-type)" : String
     }
 }
@@ -34,6 +35,7 @@ Properties:
   [Predicate](#cfn-glue-trigger-predicate): 
     [Predicate](aws-properties-glue-trigger-predicate.md)
   [Schedule](#cfn-glue-trigger-schedule): String
+  [Tags](#cfn-glue-trigger-tags): Json
   [Type](#cfn-glue-trigger-type): String
 ```
 
@@ -64,9 +66,15 @@ The predicate of this trigger, which defines when it will fire\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Schedule`  <a name="cfn-glue-trigger-schedule"></a>
-A `cron` expression used to specify the schedule \(see [Time\-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)\. For example, to run something every day at 12:15 UTC, you would specify: `cron(15 12 * * ? *)`\.  
+A `cron` expression used to specify the schedule\. For more information, see [Time\-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html) in the *AWS Glue Developer Guide*\. For example, to run something every day at 12:15 UTC, specify `cron(15 12 * * ? *)`\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-glue-trigger-tags"></a>
+The tags to use with this trigger\. You can use tags to limit access to the trigger\. For more information about tags in AWS Glue, see [AWS Tags in AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html) in the developer guide\.\.  
+*Required*: No  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-glue-trigger-type"></a>

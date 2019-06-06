@@ -28,8 +28,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The name of the Time to Live attribute used to store the expiration time for items in the table\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-dynamodb-timetolivespecification-enabled"></a>

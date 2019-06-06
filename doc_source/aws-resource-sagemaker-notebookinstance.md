@@ -12,6 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::NotebookInstance",
   "Properties" : {
+      "[AcceleratorTypes](#cfn-sagemaker-notebookinstance-acceleratortypes)" : [ String, ... ],
+      "[AdditionalCodeRepositories](#cfn-sagemaker-notebookinstance-additionalcoderepositories)" : [ String, ... ],
+      "[DefaultCodeRepository](#cfn-sagemaker-notebookinstance-defaultcoderepository)" : String,
       "[DirectInternetAccess](#cfn-sagemaker-notebookinstance-directinternetaccess)" : String,
       "[InstanceType](#cfn-sagemaker-notebookinstance-instancetype)" : String,
       "[KmsKeyId](#cfn-sagemaker-notebookinstance-kmskeyid)" : String,
@@ -32,6 +35,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::SageMaker::NotebookInstance
 Properties: 
+  [AcceleratorTypes](#cfn-sagemaker-notebookinstance-acceleratortypes): 
+    - String
+  [AdditionalCodeRepositories](#cfn-sagemaker-notebookinstance-additionalcoderepositories): 
+    - String
+  [DefaultCodeRepository](#cfn-sagemaker-notebookinstance-defaultcoderepository): String
   [DirectInternetAccess](#cfn-sagemaker-notebookinstance-directinternetaccess): String
   [InstanceType](#cfn-sagemaker-notebookinstance-instancetype): String
   [KmsKeyId](#cfn-sagemaker-notebookinstance-kmskeyid): String
@@ -49,6 +57,28 @@ Properties:
 
 ## Properties<a name="aws-resource-sagemaker-notebookinstance-properties"></a>
 
+`AcceleratorTypes`  <a name="cfn-sagemaker-notebookinstance-acceleratortypes"></a>
+A list of Elastic Inference \(EI\) instance types to associate with this notebook instance\. Currently, only one instance type can be associated with a notebook instance\. For more information, see Using Elastic Inference in Amazon SageMaker\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AdditionalCodeRepositories`  <a name="cfn-sagemaker-notebookinstance-additionalcoderepositories"></a>
+An array of up to three Git repositories associated with the notebook instance\. These can be either the names of Git repositories stored as resources in your account, or the URL of Git repositories in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository\. These repositories are cloned at the same level as the default repository of your notebook instance\. For more information, see [Associating Git Repositories with Amazon SageMaker Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html)\.  
+*Required*: No  
+*Type*: List of String  
+*Maximum*: `3`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DefaultCodeRepository`  <a name="cfn-sagemaker-notebookinstance-defaultcoderepository"></a>
+The Git repository associated with the notebook instance as its default code repository\. This can be either the name of a Git repository stored as a resource in your account, or the URL of a Git repository in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository\. When you open a notebook instance, it opens in the directory that contains this repository\. For more information, see [Associating Git Repositories with Amazon SageMaker Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html)\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
+*Pattern*: `^https://([^/]+)/?(.*)$|^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `DirectInternetAccess`  <a name="cfn-sagemaker-notebookinstance-directinternetaccess"></a>
 Sets whether Amazon SageMaker provides internet access to the notebook instance\. If you set this to `Disabled` this notebook instance will be able to access resources only in your VPC, and will not be able to connect to Amazon SageMaker training and endpoint services unless your configure a NAT Gateway in your VPC\.  
 For more information, see [Notebook Instances Are Internet\-Enabled by Default](https://docs.aws.amazon.com/sagemaker/latest/dg/appendix-additional-considerations.html#appendix-notebook-and-internet-access)\. You can set the value of this parameter to `Disabled` only if you set a value for the `SubnetId` parameter\.  
@@ -65,7 +95,7 @@ The type of ML compute instance to launch for the notebook instance\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-sagemaker-notebookinstance-kmskeyid"></a>
-The Amazon Resource Name \(ARN\) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to your notebook instance\. The KMS key you provide must be enabled\. For information, see [Enabling and Disabling Keys](http://docs.aws.amazon.com/kms/latest/developerguide/enabling-keys.html) in the *AWS Key Management Service Developer Guide*\.  
+The Amazon Resource Name \(ARN\) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to your notebook instance\. The KMS key you provide must be enabled\. For information, see [Enabling and Disabling Keys](https://docs.aws.amazon.com/kms/latest/developerguide/enabling-keys.html) in the *AWS Key Management Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `2048`  
@@ -104,7 +134,7 @@ Lifecycle configurations need root access to be able to set up a notebook instan
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `Disabled | Enabled`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIds`  <a name="cfn-sagemaker-notebookinstance-securitygroupids"></a>
 The VPC security group IDs, in the form sg\-xxxxxxxx\. The security groups must be for the same VPC as specified in the subnet\.   
@@ -151,8 +181,6 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
-
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 #### <a name="aws-resource-sagemaker-notebookinstance-return-values-fn--getatt-fn--getatt"></a>
 

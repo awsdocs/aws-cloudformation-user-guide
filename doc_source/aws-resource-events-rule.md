@@ -291,7 +291,7 @@ The following example creates a rule that notifies an Amazon Simple Notification
         }
       ]
     },
-    "Topics": [ "Ref": "MySNSTopic" ]
+    "Topics": [ {"Ref": "MySNSTopic"} ]
   }
 }
 ```
