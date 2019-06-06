@@ -150,7 +150,7 @@ The following example specifies a VPC endpoint that allows only the s3:GetObject
          }]
    },
    "RouteTableIds" : [ {"Ref" : "routetableA"}, {"Ref" : "routetableB"} ],
-   "ServiceName" : { "Fn::Join": [ "", [ "com.amazonaws.", { "Ref": "AWS::Region" }, ".s3" ] ] },
+   "ServiceName" : {"Fn::Sub" : "com.amazonaws.${AWS::Region}.s3"},
    "VpcId" : {"Ref" : "VPCID"}
  }
 }
@@ -159,9 +159,8 @@ The following example specifies a VPC endpoint that allows only the s3:GetObject
 #### YAML<a name="aws-resource-ec2-vpcendpoint--examples--VPC_Endpoint--yaml"></a>
 
 ```
-S3Endpoint:
-  Type: AWS::EC2::VPCEndpoint
-  Properties:
+Type: AWS::EC2::VPCEndpoint
+Properties:
   PolicyDocument: 
     Version: 2012-10-17
   Statement:
