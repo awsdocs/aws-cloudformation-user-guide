@@ -54,7 +54,7 @@ You must specify the `DestinationCidrBlock` or `DestinationIpv6CidrBlock` proper
 
 `DestinationIpv6CidrBlock`  <a name="cfn-ec2-route-destinationipv6cidrblock"></a>
 The IPv6 CIDR block used for the destination match\.  
-You must specify the `DestinationCidrBlock` or `DestinationCidrBlock` property\.  
+You must specify the `DestinationIpv6CidrBlock` or `DestinationCidrBlock` property\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
