@@ -67,7 +67,7 @@ If you need to increase the maximum time limit, contact the [AWS Support Center]
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OriginSSLProtocols`  <a name="cfn-cloudfront-distribution-customoriginconfig-originsslprotocols"></a>
-The SSL/TLS protocols that you want CloudFront to use when communicating with your origin over HTTPS\.  
+The SSL/TLS protocols that you want CloudFront to use when communicating with your origin over HTTPS\. Valid values are `TLSv1.2`, `TLSv1.1`, `TLSv1`, and `SSLv3`\. 
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
