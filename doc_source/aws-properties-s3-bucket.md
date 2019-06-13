@@ -159,7 +159,6 @@ Amazon S3 can store replicated objects in only one destination bucket\. The dest
 
 `Tags`  <a name="cfn-s3-bucket-tags"></a>
 An arbitrary set of tags \(key\-value pairs\) for this S3 bucket\.  
- We recommend limiting the number of tags to seven\. Applying more than seven tags prevents the AWS CLI and the AWS CloudFormation console and API actions from listing the tags for the bucket\. 
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
