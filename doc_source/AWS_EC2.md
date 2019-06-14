@@ -2,6 +2,10 @@
 
 **Resource Types**
 + [AWS::EC2::CapacityReservation](aws-resource-ec2-capacityreservation.md)
++ [AWS::EC2::ClientVpnAuthorizationRule](aws-resource-ec2-clientvpnauthorizationrule.md)
++ [AWS::EC2::ClientVpnEndpoint](aws-resource-ec2-clientvpnendpoint.md)
++ [AWS::EC2::ClientVpnRoute](aws-resource-ec2-clientvpnroute.md)
++ [AWS::EC2::ClientVpnTargetNetworkAssociation](aws-resource-ec2-clientvpntargetnetworkassociation.md)
 + [AWS::EC2::CustomerGateway](aws-resource-ec2-customer-gateway.md)
 + [AWS::EC2::DHCPOptions](aws-resource-ec2-dhcp-options.md)
 + [AWS::EC2::EC2Fleet](aws-resource-ec2-ec2fleet.md)

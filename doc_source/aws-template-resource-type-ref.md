@@ -11,6 +11,7 @@ service-provider::service-name::data-type-name
 **Topics**
 + [ASK](Alexa_ASK.md)
 + [AmazonMQ](AWS_AmazonMQ.md)
++ [Amplify Console](AWS_Amplify.md)
 + [API Gateway](AWS_ApiGateway.md)
 + [API Gateway V2](AWS_ApiGatewayV2.md)
 + [Application Auto Scaling](AWS_ApplicationAutoScaling.md)
@@ -74,6 +75,7 @@ service-provider::service-name::data-type-name
 + [KMS](AWS_KMS.md)
 + [Lambda](AWS_Lambda.md)
 + [MediaStore](AWS_MediaStore.md)
++ [MSK](AWS_MSK.md)
 + [Amazon Neptune](AWS_Neptune.md)
 + [OpsWorks](AWS_OpsWorks.md)
 + [OpsWorks\-CM](AWS_OpsWorksCM.md)

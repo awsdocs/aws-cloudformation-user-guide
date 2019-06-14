@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CoreInstanceGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-coreinstancegroup)" : [InstanceGroupConfig](aws-properties-elasticmapreduce-cluster-instancegroupconfig.md),
   "[Ec2KeyName](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2keyname)" : String,
   "[Ec2SubnetId](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetid)" : String,
+  "[Ec2SubnetIds](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetids)" : [ String, ... ],
   "[EmrManagedMasterSecurityGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-emrmanagedmastersecuritygroup)" : String,
   "[EmrManagedSlaveSecurityGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-emrmanagedslavesecuritygroup)" : String,
   "[HadoopVersion](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-hadoopversion)" : String,
@@ -41,6 +42,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     [InstanceGroupConfig](aws-properties-elasticmapreduce-cluster-instancegroupconfig.md)
   [Ec2KeyName](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2keyname): String
   [Ec2SubnetId](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetid): String
+  [Ec2SubnetIds](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetids): 
+    - String
   [EmrManagedMasterSecurityGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-emrmanagedmastersecuritygroup): String
   [EmrManagedSlaveSecurityGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-emrmanagedslavesecuritygroup): String
   [HadoopVersion](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-hadoopversion): String
@@ -98,6 +101,13 @@ Amazon VPC currently does not support cluster compute quadruple extra large \(cc
 *Minimum*: `0`  
 *Maximum*: `256`  
 *Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Ec2SubnetIds`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetids"></a>
+Applies to clusters that use the instance fleet configuration\. When multiple EC2 subnet IDs are specified, Amazon EMR evaluates them and launches instances in the optimal subnet\.  
+The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\.
+*Required*: No  
+*Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EmrManagedMasterSecurityGroup`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-emrmanagedmastersecuritygroup"></a>
