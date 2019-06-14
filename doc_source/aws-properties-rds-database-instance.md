@@ -352,8 +352,7 @@ For more information, see [Using Amazon Performance Insights](https://docs.aws.a
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Engine`  <a name="cfn-rds-dbinstance-engine"></a>
-The name of the database engine that you want to use for this DB cluster\. For valid values, see the `Engine` parameter of the [CreateDBCluster](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCluster.html) action in the *Amazon RDS API Reference*\.  
-If you don't specify a value for the `DBClusterParameterGroupName` property and `default.aurora5.6` is used, specifying `aurora.mysql` or `aurora-postgresql` for this property might result in an error\.
+The name of the database engine to be used for this instance\. For valid values, see the `Engine` parameter of the [CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) action in the *Amazon RDS API Reference*\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
