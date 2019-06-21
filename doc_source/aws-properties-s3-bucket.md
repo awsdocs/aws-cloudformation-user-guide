@@ -159,7 +159,6 @@ Places an object lock configuration on the specified bucket\. The rule specified
 Indicates whether this bucket has an object lock configuration enabled\.  
 *Required*: No  
 *Type*: Boolean  
-*Allowed Values*: `Enabled`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PublicAccessBlockConfiguration`  <a name="cfn-s3-bucket-publicaccessblockconfiguration"></a>
