@@ -156,7 +156,7 @@ Service discovery is supported for Fargate tasks if you are using platform versi
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TaskDefinition`  <a name="cfn-ecs-service-taskdefinition"></a>
-The `family` and `revision` \(`family:revision`\) or full ARN of the task definition to run in your service\. If a `revision` is not specified, the latest `ACTIVE` revision is used\.  
+The `family` and `revision` \(`family:revision`\) or full ARN of the task definition to run in your service\. The `revision` is required in order for the resource to stabilize\.  
 A task definition must be specified if the service is using the `ECS` deployment controller\.  
 *Required*: Yes  
 *Type*: String  
