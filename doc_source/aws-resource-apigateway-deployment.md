@@ -3,7 +3,7 @@
 The `AWS::ApiGateway::Deployment` resource deploys an API Gateway `RestApi` resource to a stage so that clients can call the API over the internet\. The stage acts as an environment\.
 
 **Important**
-If when using this resource you require the ability to change the stage configuration after deployment it is strongly recommended that you instead look into using the [`AWS::ApiGateway::Stage`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html) resource instead of this as updates are not properly supported by this resource.
+If when using this resource you require the ability to change the stage configuration after deployment it is strongly recommended that you instead look into using the [`AWS::ApiGateway::Stage`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html) resource to define your Stage instead of this as updates to the `StageDescription` are not properly supported by this resource.
 
 ## Syntax<a name="aws-resource-apigateway-deployment-syntax"></a>
 
@@ -62,7 +62,7 @@ The ID of the `RestApi` resource to deploy\.
 Configures the stage that API Gateway creates with this deployment\.  
 *Required*: No  
 *Type*: [StageDescription](aws-properties-apigateway-deployment-stagedescription.md)  
-*Update requires*: Not supported without a change to `StageName`, otherwise [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: Updates are not supported without a change to `StageName`. [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt) if you specify a new `StageName`.
 
 `StageName`  <a name="cfn-apigateway-deployment-stagename"></a>
 A name for the stage that API Gateway creates with this deployment\. Use only alphanumeric characters\.  
