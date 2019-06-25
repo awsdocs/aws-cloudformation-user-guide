@@ -3,7 +3,7 @@
 The `AWS::ApiGateway::Deployment` resource deploys an API Gateway `RestApi` resource to a stage so that clients can call the API over the internet\. The stage acts as an environment\.
 
 **Important**
-If when using this resource you require the ability to change the stage configuration after deployment it is strongly recommended that you instead look into using the [`AWS::ApiGateway::Stage`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html) resource to define your Stage instead of this as updates to the `StageDescription` are not properly supported by this resource.
+It is strongly recommended that for non-trivial cases that you use a [`AWS::ApiGateway::Stage`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html) resource to define your Stage instead of this as updates involving Stages are not fully supported and may result in unexpected behaviour and errors.
 
 ## Syntax<a name="aws-resource-apigateway-deployment-syntax"></a>
 
@@ -62,13 +62,13 @@ The ID of the `RestApi` resource to deploy\.
 Configures the stage that API Gateway creates with this deployment\.  
 *Required*: No  
 *Type*: [StageDescription](aws-properties-apigateway-deployment-stagedescription.md)  
-*Update requires*: Updates are not supported without a change to `StageName`. [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt) if you specify a new `StageName`.
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StageName`  <a name="cfn-apigateway-deployment-stagename"></a>
 A name for the stage that API Gateway creates with this deployment\. Use only alphanumeric characters\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: Not supported.
 
 ## Return Values<a name="aws-resource-apigateway-deployment-return-values"></a>
 
