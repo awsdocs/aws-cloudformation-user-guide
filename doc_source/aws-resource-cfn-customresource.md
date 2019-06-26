@@ -151,8 +151,7 @@ MyCustomResource:
   Type: "Custom::TestLambdaCrossStackRef"
   Properties: 
     ServiceToken:
-      !Sub |
-        arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${LambdaFunctionName}
+      !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${LambdaFunctionName}
     StackName: 
       Ref: "NetworkStackName"
 ```
