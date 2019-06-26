@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dlm-lifecyclepolicy-policydetails-properties"></a>
 
 `ResourceTypes`  <a name="cfn-dlm-lifecyclepolicy-policydetails-resourcetypes"></a>
-The resource type\. The only supported value is `VOLUME`\.  
+The resource type\. Specify one of `INSTANCE` or `VOLUME`\.  
 *Required*: Yes  
 *Type*: List of String  
 *Maximum*: `1`  
