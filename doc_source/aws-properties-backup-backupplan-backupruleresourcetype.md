@@ -10,12 +10,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CompletionWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-completionwindowminutes)" : Double,
+  "[CompletionWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-completionwindowminutes)" : Number,
   "[Lifecycle](#cfn-backup-backupplan-backupruleresourcetype-lifecycle)" : [LifecycleResourceType](aws-properties-backup-backupplan-lifecycleresourcetype.md),
   "[RecoveryPointTags](#cfn-backup-backupplan-backupruleresourcetype-recoverypointtags)" : Json,
   "[RuleName](#cfn-backup-backupplan-backupruleresourcetype-rulename)" : String,
   "[ScheduleExpression](#cfn-backup-backupplan-backupruleresourcetype-scheduleexpression)" : String,
-  "[StartWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-startwindowminutes)" : Double,
+  "[StartWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-startwindowminutes)" : Number,
   "[TargetBackupVault](#cfn-backup-backupplan-backupruleresourcetype-targetbackupvault)" : String
 }
 ```
@@ -23,13 +23,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-backup-backupplan-backupruleresourcetype-syntax.yaml"></a>
 
 ```
-  [CompletionWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-completionwindowminutes): Double
+  [CompletionWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-completionwindowminutes): Number
   [Lifecycle](#cfn-backup-backupplan-backupruleresourcetype-lifecycle): 
     [LifecycleResourceType](aws-properties-backup-backupplan-lifecycleresourcetype.md)
   [RecoveryPointTags](#cfn-backup-backupplan-backupruleresourcetype-recoverypointtags): Json
   [RuleName](#cfn-backup-backupplan-backupruleresourcetype-rulename): String
   [ScheduleExpression](#cfn-backup-backupplan-backupruleresourcetype-scheduleexpression): String
-  [StartWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-startwindowminutes): Double
+  [StartWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-startwindowminutes): Number
   [TargetBackupVault](#cfn-backup-backupplan-backupruleresourcetype-targetbackupvault): String
 ```
 
