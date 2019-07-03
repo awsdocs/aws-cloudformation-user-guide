@@ -41,7 +41,8 @@ Indicates whether the EBS volume is deleted on instance termination\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Encrypted`  <a name="cfn-ec2-blockdev-template-encrypted"></a>
-Indicates whether the volume is encrypted\. Encrypted Amazon EBS volumes can only be attached to instance types that support Amazon EBS encryption\. Volumes that are created from encrypted snapshots are automatically encrypted\. You cannot create an encrypted volume from an unencrypted snapshot or vice versa\. If your AMI uses encrypted volumes, you can only launch the AMI on supported instance types\. For more information, see [ Amazon EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+Specifies whether the volume should be encrypted\. The effect of setting the encryption state to `true` depends on the volume origin \(new or from a snapshot\), starting encryption state, ownership, and whether encryption by default is enabled\. For more information, see [Encryption by Default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-by-default) in the *Amazon Elastic Compute Cloud User Guide*\.  
+Encrypted Amazon EBS volumes must be attached to instances that support Amazon EBS encryption\. For more information, see [Supported Instance Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -89,13 +90,26 @@ This example creates a 50GB io1 EBS volume from a snapshot, and configures it to
 {
     "DeviceName": "/dev/sdc",
     "Ebs": {
-        "SnapshotId": "snap-xxxxxx",
+        "SnapshotId": "snap-xxxxxxxx",
         "VolumeSize": "50",
         "VolumeType": "io1",
         "Iops": "1000",
         "DeleteOnTermination": "false"
     }
 }
+```
+
+#### YAML<a name="aws-properties-ec2-blockdev-template--examples--Creating_an_EBS_volume_from_a_snapshot--yaml"></a>
+
+```
+BlockDeviceMappings:
+  - DeviceName: /dev/sdc
+    Ebs:
+      SnapshotId: snap-xxxxxxxx
+      VolumeSize: 50
+      VolumeType: io1
+      Iops: 1000
+      DeleteOnTermination: false
 ```
 
 ## See Also<a name="aws-properties-ec2-blockdev-template--seealso"></a>

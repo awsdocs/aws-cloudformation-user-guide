@@ -12,21 +12,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[BlockDurationMinutes](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-blockdurationminutes)" : Integer,
   "[InstanceInterruptionBehavior](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-instanceinterruptionbehavior)" : String,
   "[MaxPrice](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-maxprice)" : String,
-  "[SpotInstanceType](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-spotinstancetype)" : String
+  "[SpotInstanceType](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-spotinstancetype)" : String,
+  "[ValidUntil](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-validuntil)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-syntax.yaml"></a>
 
 ```
+  [BlockDurationMinutes](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-blockdurationminutes): Integer
   [InstanceInterruptionBehavior](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-instanceinterruptionbehavior): String
   [MaxPrice](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-maxprice): String
   [SpotInstanceType](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-spotinstancetype): String
+  [ValidUntil](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-validuntil): String
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-properties"></a>
+
+`BlockDurationMinutes`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-blockdurationminutes"></a>
+The required duration for the Spot Instances \(also known as Spot blocks\), in minutes\. This value must be a multiple of 60 \(60, 120, 180, 240, 300, or 360\)\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceInterruptionBehavior`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-instanceinterruptionbehavior"></a>
 The behavior when a Spot Instance is interrupted\. The default is `terminate`\.  
@@ -46,6 +56,12 @@ The Spot Instance request type\.
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `one-time | persistent`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ValidUntil`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-validuntil"></a>
+The end date of the request\. For a one\-time request, the request remains active until all instances launch, the request is canceled, or this date is reached\. If the request is persistent, it remains active until it is canceled or this date and time is reached\. The default end date is 7 days from the current date\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions--seealso"></a>
