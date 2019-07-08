@@ -130,8 +130,7 @@ The dimensions for the metric associated with the alarm\. For an alarm based on 
 Used only for alarms based on percentiles\. If `ignore`, the alarm state does not change during periods with too few data points to be statistically significant\. If `evaluate` or this parameter is not used, the alarm is always evaluated and possibly changes state no matter how many data points are available\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
+*Allowed Values*: `evaluate | ignore`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EvaluationPeriods`  <a name="cfn-cloudwatch-alarms-evaluationperiods"></a>
