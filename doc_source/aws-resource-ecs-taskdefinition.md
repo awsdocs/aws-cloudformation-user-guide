@@ -187,7 +187,7 @@ The following example defines an Amazon ECS task definition, which includes two 
         "FOREGROUND"
       ],
       "Memory":"500",
-      "Essential": "true"
+      "Essential": true
     },
     {
       "Name": "busybox",
@@ -201,7 +201,7 @@ The following example defines an Amazon ECS task definition, which includes two 
       "Command": [
         "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
       ],
-      "Essential" : "false",
+      "Essential" : false,
       "VolumesFrom": [
         {
           "SourceContainer": {"Ref":"AppName"}
@@ -246,7 +246,7 @@ taskdefinition:
           - "-D"
           - "FOREGROUND"
         Memory: "500"
-        Essential: "true"
+        Essential: true
       - 
         Name: "busybox"
         Image: "busybox"
@@ -257,7 +257,7 @@ taskdefinition:
         Memory: "500"
         Command: 
           - "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
-        Essential: "false"
+        Essential: false
         VolumesFrom: 
           - 
             SourceContainer: 
@@ -303,7 +303,7 @@ The following example defines an Amazon ECS task definition that specifies EC2 a
               "FOREGROUND"
             ],
             "Memory": "500",
-            "Essential": "true"
+            "Essential": true
           },
           {
             "Name": "busybox",
@@ -317,7 +317,7 @@ The following example defines an Amazon ECS task definition that specifies EC2 a
             "Command": [
               "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
             ],
-            "Essential": "false",
+            "Essential": false,
             "VolumesFrom": [
               {
                 "SourceContainer": "my-app"
@@ -364,7 +364,7 @@ Resources:
             - "-D"
             - "FOREGROUND"
           Memory: "500"
-          Essential: "true"
+          Essential: true
         - 
           Name: "busybox"
           Image: "busybox"
@@ -375,7 +375,7 @@ Resources:
           Memory: "500"
           Command: 
             - "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
-          Essential: "false"
+          Essential: false
           VolumesFrom: 
             - 
               SourceContainer: "my-app"
