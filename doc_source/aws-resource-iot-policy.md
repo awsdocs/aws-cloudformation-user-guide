@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoT::Policy",
   "Properties" : {
-      "[PolicyDocument](#cfn-iot-policy-policydocument)" : Json,
+      "[PolicyDocument](#cfn-iot-policy-policydocument)" : Object,
       "[PolicyName](#cfn-iot-policy-policyname)" : String
     }
 }
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::IoT::Policy
 Properties: 
-  [PolicyDocument](#cfn-iot-policy-policydocument): Json
+  [PolicyDocument](#cfn-iot-policy-policydocument): Object
   [PolicyName](#cfn-iot-policy-policyname): String
 ```
 
@@ -32,7 +32,7 @@ Properties:
 `PolicyDocument`  <a name="cfn-iot-policy-policydocument"></a>
 The JSON document that describes the policy\.  
 *Required*: Yes  
-*Type*: Json  
+*Type*: Object  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PolicyName`  <a name="cfn-iot-policy-policyname"></a>
