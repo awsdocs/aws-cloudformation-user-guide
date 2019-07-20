@@ -65,7 +65,7 @@ Properties:
 `AttributeDefinitions`  <a name="cfn-dynamodb-table-attributedef"></a>
 A list of attributes that describe the key schema for the table and indexes\. Duplicates are allowed\.   
 Update requires: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)\. Replacement if you edit an existing AttributeDefinition\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: List of [AttributeDefinition](aws-properties-dynamodb-attributedef.md)
 
 `BillingMode`  <a name="cfn-dynamodb-table-billingmode"></a>
