@@ -8,8 +8,6 @@ When you are declaring a resource in a template and you need to specify another 
 
 For some resources, an identifier is returned that has another significant meaning in the context of the resource\. An [AWS::EC2::EIP](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html) resource, for instance, returns the IP address, and an [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) returns the instance ID\. 
 
-At the bottom of this topic, there is a table that lists the values returned for many common resource types\. More information about `Ref` return values for a particular resource or property can be found in the documentation for that resource or property\.
-
 **Tip**  
 You can also use `Ref` to add values to Output messages\.
 

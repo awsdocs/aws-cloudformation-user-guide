@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BranchName](#cfn-amplify-branch-branchname)" : String,
       "[BuildSpec](#cfn-amplify-branch-buildspec)" : String,
       "[Description](#cfn-amplify-branch-description)" : String,
+      "[EnableAutoBuild](#cfn-amplify-branch-enableautobuild)" : Boolean,
       "[EnvironmentVariables](#cfn-amplify-branch-environmentvariables)" : [ [EnvironmentVariable](aws-properties-amplify-branch-environmentvariable.md), ... ],
       "[Stage](#cfn-amplify-branch-stage)" : String,
       "[Tags](#cfn-amplify-branch-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -35,6 +36,7 @@ Properties:
   [BranchName](#cfn-amplify-branch-branchname): String
   [BuildSpec](#cfn-amplify-branch-buildspec): String
   [Description](#cfn-amplify-branch-description): String
+  [EnableAutoBuild](#cfn-amplify-branch-enableautobuild): Boolean
   [EnvironmentVariables](#cfn-amplify-branch-environmentvariables): 
     - [EnvironmentVariable](aws-properties-amplify-branch-environmentvariable.md)
   [Stage](#cfn-amplify-branch-stage): String
@@ -72,6 +74,12 @@ Properties:
  Description for the branch\.   
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EnableAutoBuild`  <a name="cfn-amplify-branch-enableautobuild"></a>
+ Enables auto building for the branch\.   
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnvironmentVariables`  <a name="cfn-amplify-branch-environmentvariables"></a>

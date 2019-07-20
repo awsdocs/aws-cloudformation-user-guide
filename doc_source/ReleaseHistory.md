@@ -4,12 +4,30 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
-| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::IoTAnalytics::Channel, AWS::IoTAnalytics::Datastore 
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::Amplify::App and AWS::Amplify::Branch\. 
+
+[AWS::Amplify::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html)  
+Use the `AutoBranchCreationConfig` property type to automatically create branches that match a certain pattern\. 
+
+[AWS::Amplify::Branch](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html)  
+Use the `EnableAutoBuild` property to enable automatic builds for a branch\.  | July 18, 2019 | 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::IoTEvents::DetectorModel and AWS::IoTEvents::Input\. 
+
+ [ AWS::IoTEvents::DetectorModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-detectormodel.html)   
+Use the `DetectorModel` resource to create a detector model\. 
+
+ [ AWS::IoTEvents::Input](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-input.html)   
+Use the `Input` resource to create an input\.  | July 18, 2019 | 
+| [New resource](#ReleaseHistory) | The following resource was added: AWS::CloudWatch::AnomalyDetector\. 
+
+ [AWS::CloudWatch::AnomalyDetector](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-anomalydetector.html)   
+Use the `AWS::CloudWatch::AnomalyDetector` resource to specify an anomaly detection band for a certain metric and statistic\. The band represents the expected "normal" range for the metric values\.  | July 12, 2019 | 
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::IoTAnalytics::Channel and AWS::IoTAnalytics::Datastore\. 
 
  [AWS::IoTAnalytics::Channel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-channel.html)   
 Use the `ChannelStorage` property to specify channel data is stored\. 
 
- [AWS::IoTAnalytics::Datastore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html)   
+ [AWS::IoTAnalytics::Datastore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-datastore.html)   
 Use the `DatastoreStorage` property to specify where data store data is stored\.  | June 27, 2019 | 
 | [New resources](#ReleaseHistory) | The following resources were added: AWS::MediaLives::Channel, AWS::MediaLives::Input, and AWS::MediaLives::InputSecurityGroup\. 
 

@@ -66,6 +66,7 @@ service-provider::service-name::data-type-name
 + [IoT](AWS_IoT.md)
 + [IoT1Click](AWS_IoT1Click.md)
 + [IoT Analytics](AWS_IoTAnalytics.md)
++ [IoTEvents](AWS_IoTEvents.md)
 + [AWS IoT Greengrass](AWS_Greengrass.md)
 + [AWS IoT Things Graph](AWS_IoTThingsGraph.md)
 + [Amazon Kinesis](AWS_Kinesis.md)
