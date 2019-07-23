@@ -4,6 +4,10 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](#ReleaseHistory) | The following resource was updated: AWS::AmazonMQ::Broker\. 
+
+ [ AWS::AmazonMQ::Broker](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html)   
+Use the `encryptionOptions` property to specify an AWS\-owned CMK or a customer\-managed CMK\.  | July 22, 2019 | 
 | [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::Amplify::App and AWS::Amplify::Branch\. 
 
 [AWS::Amplify::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html)  
@@ -29,15 +33,15 @@ Use the `ChannelStorage` property to specify channel data is stored\.
 
  [AWS::IoTAnalytics::Datastore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-datastore.html)   
 Use the `DatastoreStorage` property to specify where data store data is stored\.  | June 27, 2019 | 
-| [New resources](#ReleaseHistory) | The following resources were added: AWS::MediaLives::Channel, AWS::MediaLives::Input, and AWS::MediaLives::InputSecurityGroup\. 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::MediaLive::Channel, AWS::MediaLive::Input, and AWS::MediaLive::InputSecurityGroup\. 
 
- [AWS::AWS::MediaLive::Channel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html)   
+ [AWS::MediaLive::Channel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html)   
 The `AWS::MediaLive::Channel` resource creates a channel\. A MediaLive channel ingests and transcodes \(decodes and encodes\) source content from the inputs that are attached to that channel, and packages the new content into outputs\.  
 
- [AWS::AWS::MediaLive::Input](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html)   
+ [AWS::MediaLive::Input](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html)   
 The `AWS::MediaLive::Input` resource creates an input\. A MediaLive input holds information that describes how the MediaLive channel is connected to the upstream system that is providing the source content that is to be transcoded\.  
 
- [AWS::AWS::MediaLive::InputSecurityGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-inputsecuritygroup.html)   
+ [AWS::MediaLive::InputSecurityGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-inputsecuritygroup.html)   
 The `AWS::MediaLive::InputSecurityGroup` resource creates an input security group\. A MediaLive input security group is associated with a MediaLive input\. The input security group is an "allow list" of IP addresses that controls whether an external IP address can push content to the associated MediaLive input\.   | June 27, 2019 | 
 | [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::EC2::LaunchTemplate 
 
@@ -1219,6 +1223,7 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Release Date | Description | API Version | 
 | --- | --- | --- | --- | 
+|  Updated resources  |  July 22, 2019  |  Use the `encryptionOptions` property to specify an AWS\-owned CMK or a customer\-managed CMK for Amazon MQ brokers\.  |  2010\-05\-15  | 
 |  Stack set naming convention  |  April 10, 2018  |  AWS CloudFormation stacks created using stack sets now follow a new naming convention, in which the stack name contains the stack set name\.  |  2010\-05\-15  | 
 |  New resources  |  April 10, 2018  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 |  Updated resource  |  April 10, 2018  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
