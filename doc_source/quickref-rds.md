@@ -20,8 +20,8 @@ This example shows an Amazon RDS DB Instance resource\. Because the optional Eng
  3.  "Properties" : {
  4.      "DBSecurityGroups" : [
  5.         {"Ref" : "MyDbSecurityByEC2SecurityGroup"}, {"Ref" : "MyDbSecurityByCIDRIPGroup"} ],
- 6.      "AllocatedStorage" : "5",
- 7.      "DBInstanceClass" : "db.m1.small",
+ 6.      "AllocatedStorage" : "20",
+ 7.      "DBInstanceClass" : "db.m3.medium",
  8.      "Engine" : "MySQL",
  9.      "MasterUsername" : "MyName",
 10.      "MasterUserPassword" : "MyPassword"
@@ -39,8 +39,8 @@ This example shows an Amazon RDS DB Instance resource\. Because the optional Eng
  4.     DBSecurityGroups:
  5.     - Ref: MyDbSecurityByEC2SecurityGroup
  6.     - Ref: MyDbSecurityByCIDRIPGroup
- 7.     AllocatedStorage: '5'
- 8.     DBInstanceClass: db.m1.small
+ 7.     AllocatedStorage: '20'
+ 8.     DBInstanceClass: db.m3.medium
  9.     Engine: MySQL
 10.     MasterUsername: MyName
 11.     MasterUserPassword: MyPassword
@@ -59,8 +59,8 @@ This example creates an Oracle Database DB Instance resource by specifying the E
  3.  "Properties" : {
  4.      "DBSecurityGroups" : [
  5.         {"Ref" : "MyDbSecurityByEC2SecurityGroup"}, {"Ref" : "MyDbSecurityByCIDRIPGroup"} ],
- 6.      "AllocatedStorage" : "5",
- 7.      "DBInstanceClass" : "db.m1.small",
+ 6.      "AllocatedStorage" : "20",
+ 7.      "DBInstanceClass" : "db.m3.medium",
  8.      "Engine" : "oracle-ee",
  9.      "LicenseModel" : "bring-your-own-license",
 10.      "MasterUsername" : "master",
@@ -79,8 +79,8 @@ This example creates an Oracle Database DB Instance resource by specifying the E
  4.     DBSecurityGroups:
  5.     - Ref: MyDbSecurityByEC2SecurityGroup
  6.     - Ref: MyDbSecurityByCIDRIPGroup
- 7.     AllocatedStorage: '5'
- 8.     DBInstanceClass: db.m1.small
+ 7.     AllocatedStorage: '20'
+ 8.     DBInstanceClass: db.m3.medium
  9.     Engine: oracle-ee
 10.     LicenseModel: bring-your-own-license
 11.     MasterUsername: master
@@ -214,8 +214,8 @@ This example shows an [AWS::RDS::DBSecurityGroup](https://docs.aws.amazon.com/AW
       "DBinstance" : {
          "Type" : "AWS::RDS::DBInstance",
          "Properties" : {
-            "AllocatedStorage" : "5",
-            "DBInstanceClass" : "db.m1.small",
+            "AllocatedStorage" : "20",
+            "DBInstanceClass" : "db.m3.medium",
            "DBName" : {"Ref": "MyDBName" },
             "DBSecurityGroups" : [ { "Ref" : "DbSecurityByEC2SecurityGroup" } ],
             "DBSubnetGroupName" : { "Ref" : "MyDBSubnetGroup" },
@@ -250,8 +250,8 @@ Resources:
   DBinstance:
     Type: AWS::RDS::DBInstance
     Properties:
-      AllocatedStorage: '5'
-      DBInstanceClass: db.m1.small
+      AllocatedStorage: '20'
+      DBInstanceClass: db.m3.medium
       DBName:
         Ref: MyDBName
       DBSecurityGroups:
