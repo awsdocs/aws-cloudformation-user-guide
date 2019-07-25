@@ -2,6 +2,9 @@
 
 Associates the specified attachment with the specified transit gateway route table\. You can associate only one route table with an attachment\.
 
+**Note**  
+It is not possible to update the route table of a transit gateway by changing the TransitGatewayRouteTableId property\. This is because the update of this property requires the route table to be detached first before attaching a new route table\. To update the route table on the AWS::EC2::TransitGatewayRouteTableAssociation resource, first update the CloudFormation stack with the resource removed and then re-update the stack to create the resource with the updated TransitGatewayRouteTableId property\. For more information, refer to the [Update Behaviours](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html) page\.
+
 ## Syntax<a name="aws-resource-ec2-transitgatewayroutetableassociation-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
