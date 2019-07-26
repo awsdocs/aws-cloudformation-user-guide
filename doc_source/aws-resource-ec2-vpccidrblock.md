@@ -1,6 +1,6 @@
 # AWS::EC2::VPCCidrBlock<a name="aws-resource-ec2-vpccidrblock"></a>
 
-Associates a CIDR block with your subnet\. You can only associate a single IPv6 CIDR block with your subnet\. An IPv6 CIDR block must have a prefix length of /64\.
+Associates a CIDR block with your VPC\. You can only associate a single IPv6 CIDR block with your VPC\. An IPv6 CIDR block must have a prefix length of /64\.
 
 For more information about associating CIDR blocks with your VPC and applicable restrictions, see [VPC and Subnet Sizing](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#VPC_Sizing) in the *Amazon Virtual Private Cloud User Guide*\.
 
