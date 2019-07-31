@@ -118,11 +118,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 In the following examples you can find the YAML for each template, followed by the equivalent JSON. You can use either language.
 
-## Get Started With Amazon MSK
+## Get Started With Amazon MSK<a name="aws-resource-msk-cluster--examples--Get_Started_With_Amazon_MSK"></a>
 
 This example template creates an MSK cluster in a simple architecture to help you get started.
 
-#### YAML
+#### YAML<a name="aws-resource-msk-cluster--examples--Get_Started_With_Amazon_MSK--yaml"></a>
 
 ```
 ---
@@ -1784,7 +1784,7 @@ Resources:
 }
 ```
 
-### Create Two MSK Clusters To Use With Apache MirrorMaker
+### Create Two MSK Clusters To Use With Apache MirrorMaker<a name="aws-resource-msk-cluster--examples--Create_Two_MSK_Clusters_To_Use_With_Apache_MirrorMaker"></a>
 
 This YAML shows how to set up two MSK clusters for MirrorMaker. It also sets up the Amazon VPC, subnets, security groups, and IAM roles that are necessary for this example. In addition, it creates an EC2 instance that has Apache Kafka, Java, and the AWS CLI. You can use this EC2 instance to run Apache Kafka tools, including MirrorMaker. You must manually create the MirrorMaker configuration files.
 
