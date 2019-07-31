@@ -719,6 +719,8 @@ Metadata:
         id: 90cff42d-8429-4a50-b584-5a2ba16651ea
 ```
 
+#### JSON<a name="aws-resource-msk-cluster--examples--Get_Started_With_Amazon_MSK--json"></a>
+
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
@@ -1659,6 +1661,8 @@ Resources:
         - "ReplaceWithSubnetId3"
 ```
 
+#### JSON<a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Only_Specify_Values_for_the_Required_Properties--json"></a>
+
 ```
 {
     "Description": "MSK Cluster with required properties.",
@@ -1727,6 +1731,8 @@ Resources:
         - "ReplaceWithSubnetId3"
 ```
 
+#### JSON<a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Explicitly_Set_All_Properties--json"></a>
+
 ```
 {
     "Description": "MSK Cluster with all properties",
@@ -1787,6 +1793,8 @@ Resources:
 ### Create Two MSK Clusters To Use With Apache MirrorMaker<a name="aws-resource-msk-cluster--examples--Create_Two_MSK_Clusters_To_Use_With_Apache_MirrorMaker"></a>
 
 This YAML shows how to set up two MSK clusters for MirrorMaker. It also sets up the Amazon VPC, subnets, security groups, and IAM roles that are necessary for this example. In addition, it creates an EC2 instance that has Apache Kafka, Java, and the AWS CLI. You can use this EC2 instance to run Apache Kafka tools, including MirrorMaker. You must manually create the MirrorMaker configuration files.
+
+#### YAML<a name="aws-resource-msk-cluster--examples--Create_Two_MSK_Clusters_To_Use_With_Apache_MirrorMaker--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -2138,6 +2146,8 @@ Outputs:
     Description: The Arn for the MSKMMCluster2 MSK cluster
     Value: !Ref MSKMMCluster2
 ```
+
+#### JSON<a name="aws-resource-msk-cluster--examples--Create_Two_MSK_Clusters_To_Use_With_Apache_MirrorMaker--json"></a>
 
 ```
 {
