@@ -331,7 +331,7 @@ Resources:
   MSKSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
-      GroupDescription: Enable SSH access via port 22
+      GroupDescription: Allow traffic between Kafka clients and brokers
       VpcId: !Ref VPC
       SecurityGroupIngress:
         - IpProtocol: tcp
@@ -1095,7 +1095,7 @@ Metadata:
         "MSKSecurityGroup": {
             "Type": "AWS::EC2::SecurityGroup",
             "Properties": {
-                "GroupDescription": "Enable SSH access via port 22",
+                "GroupDescription": "Allow traffic between Kafka clients and brokers",
                 "VpcId": {
                     "Ref": "VPC"
                 },
