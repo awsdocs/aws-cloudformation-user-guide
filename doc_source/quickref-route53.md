@@ -142,7 +142,7 @@ This example uses an [AWS::Route53::RecordSetGroup](https://docs.aws.amazon.com/
 
 ## Using RecordSetGroup to Set Up an Alias Resource Record Set<a name="scenario-recordsetgroup-zoneapex"></a>
 
-This example uses an [AWS::Route53::RecordSetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html) to set up an alias resource record set for the "example\.com\." hosted zone\. The `RecordSets` property contains the A record for the zone apex "example\.com\." The [AliasTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html) property specifies the hosted zone ID and DNS name for the myELB LoadBalancer by using the [GetAtt](intrinsic-function-reference-getatt.md) intrinsic function to retrieve the CanonicalHostedZoneNameID and DNSName properties of myELB resource\. For more information about alias resource record sets, see [Creating Alias Resource Record Sets](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingAliasRRSets.html) in the *Route 53 Developer Guide*\.
+This example uses an [AWS::Route53::RecordSetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html) to set up an alias resource record set for the "example\.com\." hosted zone\. The `RecordSets` property contains the A record for the zone apex "example\.com\." The [AliasTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html) property specifies the hosted zone ID and DNS name for the myELB LoadBalancer by using the [GetAtt](intrinsic-function-reference-getatt.md) intrinsic function to retrieve the CanonicalHostedZoneID and DNSName properties of myELB resource\. For more information about alias resource record sets, see [Creating Alias Resource Record Sets](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingAliasRRSets.html) in the *Route 53 Developer Guide*\.
 
 ### JSON<a name="quickref-route53-example-4.json"></a>
 
@@ -168,7 +168,7 @@ This example uses an [AWS::Route53::RecordSetGroup](https://docs.aws.amazon.com/
 19.               "Name" : "example.com.",
 20.               "Type" : "A",
 21.               "AliasTarget" : {
-22.                   "HostedZoneId" : { "Fn::GetAtt" : ["myELB", "CanonicalHostedZoneNameID"] },
+22.                   "HostedZoneId" : { "Fn::GetAtt" : ["myELB", "CanonicalHostedZoneID"] },
 23.                   "DNSName" : { "Fn::GetAtt" : ["myELB","DNSName"] }
 24.               }
 25.             }
@@ -198,7 +198,7 @@ This example uses an [AWS::Route53::RecordSetGroup](https://docs.aws.amazon.com/
 16.     - Name: example.com.
 17.       Type: A
 18.       AliasTarget:
-19.         HostedZoneId: !GetAtt myELB.CanonicalHostedZoneNameID
+19.         HostedZoneId: !GetAtt myELB.CanonicalHostedZoneID
 20.         DNSName: !GetAtt myELB.DNSName
 ```
 
