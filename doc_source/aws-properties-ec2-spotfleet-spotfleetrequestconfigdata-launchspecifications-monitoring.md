@@ -23,8 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring-properties"></a>
 
 `Enabled`  <a name="cfn-ec2-spotfleet-spotfleetmonitoring-enabled"></a>
-Enables monitoring for the instance\.  
-Default: `false`   
-*Required*: No  
-*Type*: Boolean  
+Enables monitoring for the instance\.
+Default: `false`
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

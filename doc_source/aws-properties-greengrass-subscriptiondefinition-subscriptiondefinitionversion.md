@@ -2,7 +2,7 @@
 
 <a name="aws-properties-greengrass-subscriptiondefinition-subscriptiondefinitionversion-description"></a> A subscription definition version contains a list of [subscriptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-subscriptiondefinition-subscription.html)\.
 
-**Note**  
+**Note**
 After you create a subscription definition version that contains the subscriptions you want to deploy, you must add it to your group version\. For more information, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)\.
 
 <a name="aws-properties-greengrass-subscriptiondefinition-subscriptiondefinitionversion-inheritance"></a> In an AWS CloudFormation template, `SubscriptionDefinitionVersion` is the property type of the `InitialVersion` property in the [ `AWS::Greengrass::SubscriptionDefinition` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinition.html) resource\.
@@ -22,18 +22,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-subscriptiondefinition-subscriptiondefinitionversion-syntax.yaml"></a>
 
 ```
-  [Subscriptions](#cfn-greengrass-subscriptiondefinition-subscriptiondefinitionversion-subscriptions): 
+  [Subscriptions](#cfn-greengrass-subscriptiondefinition-subscriptiondefinitionversion-subscriptions):
     - [Subscription](aws-properties-greengrass-subscriptiondefinition-subscription.md)
 ```
 
 ## Properties<a name="aws-properties-greengrass-subscriptiondefinition-subscriptiondefinitionversion-properties"></a>
 
 `Subscriptions`  <a name="cfn-greengrass-subscriptiondefinition-subscriptiondefinitionversion-subscriptions"></a>
-The subscriptions in this version\.  
-*Required*: Yes  
-*Type*: List of [Subscription](aws-properties-greengrass-subscriptiondefinition-subscription.md)  
+The subscriptions in this version\.
+*Required*: Yes
+*Type*: List of [Subscription](aws-properties-greengrass-subscriptiondefinition-subscription.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See Also<a name="aws-properties-greengrass-subscriptiondefinition-subscriptiondefinitionversion--seealso"></a>
-+  [SubscriptionDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-subscriptiondefinitionversion.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [SubscriptionDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-subscriptiondefinitionversion.html) in the * AWS IoT Greengrass API Reference *
++  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)

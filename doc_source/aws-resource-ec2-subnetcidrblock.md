@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::SubnetCidrBlock
-Properties: 
+Properties:
   [Ipv6CidrBlock](#cfn-ec2-subnetcidrblock-ipv6cidrblock): String
   [SubnetId](#cfn-ec2-subnetcidrblock-subnetid): String
 ```
@@ -30,15 +30,15 @@ Properties:
 ## Properties<a name="aws-resource-ec2-subnetcidrblock-properties"></a>
 
 `Ipv6CidrBlock`  <a name="cfn-ec2-subnetcidrblock-ipv6cidrblock"></a>
-The IPv6 network range for the subnet, in CIDR notation\. The subnet size must use a /64 prefix length\.  
-*Required*: Yes  
-*Type*: String  
+The IPv6 network range for the subnet, in CIDR notation\. The subnet size must use a /64 prefix length\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetId`  <a name="cfn-ec2-subnetcidrblock-subnetid"></a>
-The ID of the subnet\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the subnet\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-subnetcidrblock-return-values"></a>
@@ -53,7 +53,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Subnet CIDR Block Association<a name="aws-resource-ec2-subnetcidrblock--examples--Subnet_CIDR_Block_Association"></a>
 
-The following example associates an IPv6 CIDR block \(with a prefix length of /64\) with the Ipv6TestSubnet subnet\. 
+The following example associates an IPv6 CIDR block \(with a prefix length of /64\) with the Ipv6TestSubnet subnet\.
 
 #### JSON<a name="aws-resource-ec2-subnetcidrblock--examples--Subnet_CIDR_Block_Association--json"></a>
 

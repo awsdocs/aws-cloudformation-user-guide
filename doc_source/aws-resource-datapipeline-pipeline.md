@@ -4,13 +4,13 @@ The AWS::DataPipeline::Pipeline resource specifies a data pipeline that you can 
 
 The `AWS::DataPipeline::Pipeline` resource adds tasks, schedules, and preconditions to the specified pipeline\. You can use `PutPipelineDefinition` to populate a new pipeline\.
 
- `PutPipelineDefinition` also validates the configuration as it adds it to the pipeline\. Changes to the pipeline are saved unless one of the following validation errors exist in the pipeline\. 
+ `PutPipelineDefinition` also validates the configuration as it adds it to the pipeline\. Changes to the pipeline are saved unless one of the following validation errors exist in the pipeline\.
 + An object is missing a name or identifier field\.
 + A string or reference field is empty\.
 + The number of objects in the pipeline exceeds the allowed maximum number of objects\.
 + The pipeline is in a FINISHED state\.
 
- Pipeline object definitions are passed to the [PutPipelineDefinition](https://docs.aws.amazon.com/datapipeline/latest/APIReference/API_PutPipelineDefinition.html) action and returned by the [GetPipelineDefinition](https://docs.aws.amazon.com/datapipeline/latest/APIReference/API_GetPipelineDefinition.html) action\. 
+ Pipeline object definitions are passed to the [PutPipelineDefinition](https://docs.aws.amazon.com/datapipeline/latest/APIReference/API_PutPipelineDefinition.html) action and returned by the [GetPipelineDefinition](https://docs.aws.amazon.com/datapipeline/latest/APIReference/API_GetPipelineDefinition.html) action\.
 
 ## Syntax<a name="aws-resource-datapipeline-pipeline-syntax"></a>
 
@@ -37,68 +37,68 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DataPipeline::Pipeline
-Properties: 
+Properties:
   [Activate](#cfn-datapipeline-pipeline-activate): Boolean
   [Description](#cfn-datapipeline-pipeline-description): String
   [Name](#cfn-datapipeline-pipeline-name): String
-  [ParameterObjects](#cfn-datapipeline-pipeline-parameterobjects): 
+  [ParameterObjects](#cfn-datapipeline-pipeline-parameterobjects):
     - [ParameterObject](aws-properties-datapipeline-pipeline-parameterobjects.md)
-  [ParameterValues](#cfn-datapipeline-pipeline-parametervalues): 
+  [ParameterValues](#cfn-datapipeline-pipeline-parametervalues):
     - [ParameterValue](aws-properties-datapipeline-pipeline-parametervalues.md)
-  [PipelineObjects](#cfn-datapipeline-pipeline-pipelineobjects): 
+  [PipelineObjects](#cfn-datapipeline-pipeline-pipelineobjects):
     - [PipelineObject](aws-properties-datapipeline-pipeline-pipelineobjects.md)
-  [PipelineTags](#cfn-datapipeline-pipeline-pipelinetags): 
+  [PipelineTags](#cfn-datapipeline-pipeline-pipelinetags):
     - [PipelineTag](aws-properties-datapipeline-pipeline-pipelinetags.md)
 ```
 
 ## Properties<a name="aws-resource-datapipeline-pipeline-properties"></a>
 
 `Activate`  <a name="cfn-datapipeline-pipeline-activate"></a>
-Indicates whether to validate and start the pipeline or stop an active pipeline\. By default, the value is set to `true`\.  
-*Required*: No  
-*Type*: Boolean  
+Indicates whether to validate and start the pipeline or stop an active pipeline\. By default, the value is set to `true`\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-datapipeline-pipeline-description"></a>
-A description of the pipeline\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `1024`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+A description of the pipeline\.
+*Required*: No
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `1024`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-datapipeline-pipeline-name"></a>
-The name of the pipeline\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `1024`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\n\t]*`  
+The name of the pipeline\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `1024`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\n\t]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ParameterObjects`  <a name="cfn-datapipeline-pipeline-parameterobjects"></a>
-The parameter objects used with the pipeline\.  
-*Required*: Yes  
-*Type*: List of [ParameterObject](aws-properties-datapipeline-pipeline-parameterobjects.md)  
+The parameter objects used with the pipeline\.
+*Required*: Yes
+*Type*: List of [ParameterObject](aws-properties-datapipeline-pipeline-parameterobjects.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ParameterValues`  <a name="cfn-datapipeline-pipeline-parametervalues"></a>
-The parameter values used with the pipeline\.  
-*Required*: No  
-*Type*: List of [ParameterValue](aws-properties-datapipeline-pipeline-parametervalues.md)  
+The parameter values used with the pipeline\.
+*Required*: No
+*Type*: List of [ParameterValue](aws-properties-datapipeline-pipeline-parametervalues.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PipelineObjects`  <a name="cfn-datapipeline-pipeline-pipelineobjects"></a>
-The objects that define the pipeline\. These objects overwrite the existing pipeline definition\. Not all objects, fields, and values can be updated\. For information about restrictions, see [Editing Your Pipeline](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-manage-pipeline-modify-console.html) in the *AWS Data Pipeline Developer Guide*\.  
-*Required*: No  
-*Type*: List of [PipelineObject](aws-properties-datapipeline-pipeline-pipelineobjects.md)  
+The objects that define the pipeline\. These objects overwrite the existing pipeline definition\. Not all objects, fields, and values can be updated\. For information about restrictions, see [Editing Your Pipeline](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-manage-pipeline-modify-console.html) in the *AWS Data Pipeline Developer Guide*\.
+*Required*: No
+*Type*: List of [PipelineObject](aws-properties-datapipeline-pipeline-pipelineobjects.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PipelineTags`  <a name="cfn-datapipeline-pipeline-pipelinetags"></a>
-A list of arbitrary tags \(key\-value pairs\) to associate with the pipeline, which you can use to control permissions\. For more information, see [Controlling Access to Pipelines and Resources](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-control-access.html) in the *AWS Data Pipeline Developer Guide*\.  
-*Required*: No  
-*Type*: List of [PipelineTag](aws-properties-datapipeline-pipeline-pipelinetags.md)  
+A list of arbitrary tags \(key\-value pairs\) to associate with the pipeline, which you can use to control permissions\. For more information, see [Controlling Access to Pipelines and Resources](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-control-access.html) in the *AWS Data Pipeline Developer Guide*\.
+*Required*: No
+*Type*: List of [PipelineTag](aws-properties-datapipeline-pipeline-pipelinetags.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-datapipeline-pipeline-return-values"></a>
@@ -348,171 +348,171 @@ The following data pipeline backs up data from an Amazon DynamoDB table to an Am
 #### YAML<a name="aws-resource-datapipeline-pipeline--examples----yaml"></a>
 
 ```
-DynamoDBInputS3OutputHive: 
+DynamoDBInputS3OutputHive:
   Type: AWS::DataPipeline::Pipeline
-  Properties: 
+  Properties:
     Name: DynamoDBInputS3OutputHive
     Description: "Pipeline to backup DynamoDB data to S3"
     Activate: true
-    ParameterObjects: 
-      - 
+    ParameterObjects:
+      -
         Id: "myDDBReadThroughputRatio"
-        Attributes: 
-          - 
+        Attributes:
+          -
             Key: "description"
             StringValue: "DynamoDB read throughput ratio"
-          - 
+          -
             Key: "type"
             StringValue: "Double"
-          - 
+          -
             Key: "default"
             StringValue: "0.2"
-      - 
+      -
         Id: "myOutputS3Loc"
-        Attributes: 
-          - 
+        Attributes:
+          -
             Key: "description"
             StringValue: "S3 output bucket"
-          - 
+          -
             Key: "type"
             StringValue: "AWS::S3::ObjectKey"
-          - 
+          -
             Key: "default"
-            StringValue: 
-              Fn::Join: 
+            StringValue:
+              Fn::Join:
                 - ""
-                - 
+                -
                   - "s3://"
-                  - 
+                  -
                     Ref: "S3OutputLoc"
-      - 
+      -
         Id: "myDDBTableName"
-        Attributes: 
-          - 
+        Attributes:
+          -
             Key: "description"
             StringValue: "DynamoDB Table Name "
-          - 
+          -
             Key: "type"
             StringValue: "String"
-    ParameterValues: 
-      - 
+    ParameterValues:
+      -
         Id: "myDDBTableName"
-        StringValue: 
+        StringValue:
           Ref: "TableName"
-    PipelineObjects: 
-      - 
+    PipelineObjects:
+      -
         Id: "S3BackupLocation"
         Name: "Copy data to this S3 location"
-        Fields: 
-          - 
+        Fields:
+          -
             Key: "type"
             StringValue: "S3DataNode"
-          - 
+          -
             Key: "dataFormat"
             RefValue: "DDBExportFormat"
-          - 
+          -
             Key: "directoryPath"
             StringValue: "#{myOutputS3Loc}/#{format(@scheduledStartTime, 'YYYY-MM-dd-HH-mm-ss')}"
-      - 
+      -
         Id: "DDBSourceTable"
         Name: "DDBSourceTable"
-        Fields: 
-          - 
+        Fields:
+          -
             Key: "tableName"
             StringValue: "#{myDDBTableName}"
-          - 
+          -
             Key: "type"
             StringValue: "DynamoDBDataNode"
-          - 
+          -
             Key: "dataFormat"
             RefValue: "DDBExportFormat"
-          - 
+          -
             Key: "readThroughputPercent"
             StringValue: "#{myDDBReadThroughputRatio}"
-      - 
+      -
         Id: "DDBExportFormat"
         Name: "DDBExportFormat"
-        Fields: 
-          - 
+        Fields:
+          -
             Key: "type"
             StringValue: "DynamoDBExportDataFormat"
-      - 
+      -
         Id: "TableBackupActivity"
         Name: "TableBackupActivity"
-        Fields: 
-          - 
+        Fields:
+          -
             Key: "resizeClusterBeforeRunning"
             StringValue: "true"
-          - 
+          -
             Key: "type"
             StringValue: "HiveCopyActivity"
-          - 
+          -
             Key: "input"
             RefValue: "DDBSourceTable"
-          - 
+          -
             Key: "runsOn"
             RefValue: "EmrClusterForBackup"
-          - 
+          -
             Key: "output"
             RefValue: "S3BackupLocation"
-      - 
+      -
         Id: "DefaultSchedule"
         Name: "RunOnce"
-        Fields: 
-          - 
+        Fields:
+          -
             Key: "occurrences"
             StringValue: "1"
-          - 
+          -
             Key: "startAt"
             StringValue: "FIRST_ACTIVATION_DATE_TIME"
-          - 
+          -
             Key: "type"
             StringValue: "Schedule"
-          - 
+          -
             Key: "period"
             StringValue: "1 Day"
-      - 
+      -
         Id: "Default"
         Name: "Default"
-        Fields: 
-          - 
+        Fields:
+          -
             Key: "type"
             StringValue: "Default"
-          - 
+          -
             Key: "scheduleType"
             StringValue: "cron"
-          - 
+          -
             Key: "failureAndRerunMode"
             StringValue: "CASCADE"
-          - 
+          -
             Key: "role"
             StringValue: "DataPipelineDefaultRole"
-          - 
+          -
             Key: "resourceRole"
             StringValue: "DataPipelineDefaultResourceRole"
-          - 
+          -
             Key: "schedule"
             RefValue: "DefaultSchedule"
-      - 
+      -
         Id: "EmrClusterForBackup"
         Name: "EmrClusterForBackup"
-        Fields: 
-          - 
+        Fields:
+          -
             Key: "terminateAfter"
             StringValue: "2 Hours"
-          - 
+          -
             Key: "amiVersion"
             StringValue: "3.3.2"
-          - 
+          -
             Key: "masterInstanceType"
             StringValue: "m1.medium"
-          - 
+          -
             Key: "coreInstanceType"
             StringValue: "m1.medium"
-          - 
+          -
             Key: "coreInstanceCount"
             StringValue: "1"
-          - 
+          -
             Key: "type"
             StringValue: "EmrCluster"
 ```

@@ -133,7 +133,7 @@ This example creates a bucket as a website\. The AccessControl property is set t
 19.             Effect: Allow
 20.             Principal: '*'
 21.             Action: 's3:GetObject'
-22.             Resource: !Join 
+22.             Resource: !Join
 23.               - ''
 24.               - - 'arn:aws:s3:::'
 25.                 - !Ref S3Bucket
@@ -141,15 +141,15 @@ This example creates a bucket as a website\. The AccessControl property is set t
 27.       Bucket: !Ref S3Bucket
 28. Outputs:
 29.   WebsiteURL:
-30.     Value: !GetAtt 
+30.     Value: !GetAtt
 31.       - S3Bucket
 32.       - WebsiteURL
 33.     Description: URL for website hosted on S3
 34.   S3BucketSecureURL:
-35.     Value: !Join 
+35.     Value: !Join
 36.       - ''
 37.       - - 'https://'
-38.         - !GetAtt 
+38.         - !GetAtt
 39.           - S3Bucket
 40.           - DomainName
 41.     Description: Name of S3 bucket to hold website content
@@ -170,7 +170,7 @@ For more information about using a custom domain, see [Setting Up a Static Websi
         "RegionMap" : {
             "us-east-1" : { "S3hostedzoneID" : "Z3AQBSTGFYJSTF", "websiteendpoint" : "s3-website-us-east-1.amazonaws.com" },
             "us-west-1" : { "S3hostedzoneID" : "Z2F56UZL2M1ACD", "websiteendpoint" : "s3-website-us-west-1.amazonaws.com" },
-            "us-west-2" : { "S3hostedzoneID" : "Z3BJ6K6RIION7M", "websiteendpoint" : "s3-website-us-west-2.amazonaws.com" },            
+            "us-west-2" : { "S3hostedzoneID" : "Z3BJ6K6RIION7M", "websiteendpoint" : "s3-website-us-west-2.amazonaws.com" },
             "eu-west-1" : { "S3hostedzoneID" : "Z1BKCTXD74EZPE", "websiteendpoint" : "s3-website-eu-west-1.amazonaws.com" },
             "ap-southeast-1" : { "S3hostedzoneID" : "Z3O0J2DXBE1FTB", "websiteendpoint" : "s3-website-ap-southeast-1.amazonaws.com" },
             "ap-southeast-2" : { "S3hostedzoneID" : "Z1WCIGYICN2BYD", "websiteendpoint" : "s3-website-ap-southeast-2.amazonaws.com" },
@@ -188,7 +188,7 @@ For more information about using a custom domain, see [Setting Up a Static Websi
         "RootBucket": {
             "Type": "AWS::S3::Bucket",
             "Properties": {
-                "BucketName" : {"Ref":"RootDomainName"},                
+                "BucketName" : {"Ref":"RootDomainName"},
                 "AccessControl": "PublicRead",
                 "WebsiteConfiguration": {
                     "IndexDocument":"index.html",
@@ -304,12 +304,12 @@ Resources:
   myDNS:
     Type: AWS::Route53::RecordSetGroup
     Properties:
-      HostedZoneName: !Sub 
+      HostedZoneName: !Sub
           - ${Domain}.
           - Domain: !Ref RootDomainName
       Comment: Zone apex alias.
       RecordSets:
-      - 
+      -
         Name: !Ref RootDomainName
         Type: A
         AliasTarget:

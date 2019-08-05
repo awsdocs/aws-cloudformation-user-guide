@@ -20,42 +20,42 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-step-hadoopjarstepconfig-syntax.yaml"></a>
 
 ```
-  [Args](#cfn-elasticmapreduce-step-hadoopjarstepconfig-args): 
+  [Args](#cfn-elasticmapreduce-step-hadoopjarstepconfig-args):
     - String
   [Jar](#cfn-elasticmapreduce-step-hadoopjarstepconfig-jar): String
   [MainClass](#cfn-elasticmapreduce-step-hadoopjarstepconfig-mainclass): String
-  [StepProperties](#cfn-elasticmapreduce-step-hadoopjarstepconfig-stepproperties): 
+  [StepProperties](#cfn-elasticmapreduce-step-hadoopjarstepconfig-stepproperties):
     - [KeyValue](aws-properties-elasticmapreduce-step-keyvalue.md)
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-step-hadoopjarstepconfig-properties"></a>
 
 `Args`  <a name="cfn-elasticmapreduce-step-hadoopjarstepconfig-args"></a>
-A list of command line arguments passed to the JAR file's main function when executed\.  
-*Required*: No  
-*Type*: List of String  
+A list of command line arguments passed to the JAR file's main function when executed\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Jar`  <a name="cfn-elasticmapreduce-step-hadoopjarstepconfig-jar"></a>
-A path to a JAR file run during the step\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `10280`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+A path to a JAR file run during the step\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `10280`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MainClass`  <a name="cfn-elasticmapreduce-step-hadoopjarstepconfig-mainclass"></a>
-The name of the main class in the specified Java file\. If not specified, the JAR file should specify a Main\-Class in its manifest file\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `10280`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+The name of the main class in the specified Java file\. If not specified, the JAR file should specify a Main\-Class in its manifest file\.
+*Required*: No
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `10280`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StepProperties`  <a name="cfn-elasticmapreduce-step-hadoopjarstepconfig-stepproperties"></a>
-A list of Java properties that are set when the step runs\. You can use these properties to pass key value pairs to your main function\.  
-*Required*: No  
-*Type*: List of [KeyValue](aws-properties-elasticmapreduce-step-keyvalue.md)  
+A list of Java properties that are set when the step runs\. You can use these properties to pass key value pairs to your main function\.
+*Required*: No
+*Type*: List of [KeyValue](aws-properties-elasticmapreduce-step-keyvalue.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

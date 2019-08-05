@@ -23,36 +23,36 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::GameLift::Alias
-Properties: 
+Properties:
   [Description](#cfn-gamelift-alias-description): String
   [Name](#cfn-gamelift-alias-name): String
-  [RoutingStrategy](#cfn-gamelift-alias-routingstrategy): 
+  [RoutingStrategy](#cfn-gamelift-alias-routingstrategy):
     [RoutingStrategy](aws-properties-gamelift-alias-routingstrategy.md)
 ```
 
 ## Properties<a name="aws-resource-gamelift-alias-properties"></a>
 
 `Description`  <a name="cfn-gamelift-alias-description"></a>
-Human\-readable description of an alias\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `1024`  
+Human\-readable description of an alias\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `1024`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-gamelift-alias-name"></a>
-Descriptive label that is associated with an alias\. Alias names do not need to be unique\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `1024`  
-*Pattern*: `.*\S.*`  
+Descriptive label that is associated with an alias\. Alias names do not need to be unique\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `1024`
+*Pattern*: `.*\S.*`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoutingStrategy`  <a name="cfn-gamelift-alias-routingstrategy"></a>
-A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message\.  
-*Required*: Yes  
-*Type*: [RoutingStrategy](aws-properties-gamelift-alias-routingstrategy.md)  
+A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message\.
+*Required*: Yes
+*Type*: [RoutingStrategy](aws-properties-gamelift-alias-routingstrategy.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-gamelift-alias-return-values"></a>
@@ -88,15 +88,15 @@ The following example creates a terminal alias named `TerminalAlias` with a gene
 #### YAML<a name="aws-resource-gamelift-alias--examples--Create_terminal_alias--yaml"></a>
 
 ```
-AliasResource: 
+AliasResource:
   Type: AWS::GameLift::Alias
-  Properties: 
+  Properties:
     Name: "TerminalAlias"
     Description: "A terminal alias"
-    RoutingStrategy: 
+    RoutingStrategy:
       Type: "TERMINAL"
       Message: "Terminal routing strategy message"
 ```
 
 ## See Also<a name="aws-resource-gamelift-alias--seealso"></a>
-+  [CreateAlias](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateAlias.html) in the *Amazon GameLift API Reference* 
++  [CreateAlias](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateAlias.html) in the *Amazon GameLift API Reference*

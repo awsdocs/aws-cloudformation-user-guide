@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IoT::ThingPrincipalAttachment
-Properties: 
+Properties:
   [Principal](#cfn-iot-thingprincipalattachment-principal): String
   [ThingName](#cfn-iot-thingprincipalattachment-thingname): String
 ```
@@ -32,15 +32,15 @@ Properties:
 ## Properties<a name="aws-resource-iot-thingprincipalattachment-properties"></a>
 
 `Principal`  <a name="cfn-iot-thingprincipalattachment-principal"></a>
-The principal, which can be a certificate ARN \(as returned from the `CreateCertificate` operation\) or an Amazon Cognito ID\.  
-*Required*: Yes  
-*Type*: String  
+The principal, which can be a certificate ARN \(as returned from the `CreateCertificate` operation\) or an Amazon Cognito ID\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ThingName`  <a name="cfn-iot-thingprincipalattachment-thingname"></a>
-The name of the AWS IoT thing\.  
-*Required*: Yes  
-*Type*: String  
+The name of the AWS IoT thing\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Examples<a name="aws-resource-iot-thingprincipalattachment--examples"></a>
@@ -77,14 +77,14 @@ The following example attaches a principal to a thing\.
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"
-Resources: 
-   MyThingPrincipalAttachment: 
+Resources:
+   MyThingPrincipalAttachment:
       Type: AWS::IoT::ThingPrincipalAttachment
-      Properties: 
-         ThingName: 
+      Properties:
+         ThingName:
             Ref: "NameParameter"
          Principal: "arn:aws:iot:ap-southeast-2:123456789012:cert/a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2"
-Parameters: 
-   NameParameter: 
+Parameters:
+   NameParameter:
       Type: "String"
 ```

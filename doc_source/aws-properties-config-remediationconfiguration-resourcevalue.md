@@ -23,8 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-config-remediationconfiguration-resourcevalue-properties"></a>
 
 `Value`  <a name="cfn-config-remediationconfiguration-resourcevalue-value"></a>
-The value is a resource ID\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `RESOURCE_ID`  
+The value is a resource ID\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `RESOURCE_ID`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

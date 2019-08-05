@@ -24,12 +24,12 @@
 ## Properties<a name="w4784ab1c17c15c15c25c23b7"></a>
 
 `Label`  <a name="cfn-cloudformation-interface-parametergroups-label"></a>
-A name for the parameter group\.  
-*Required*: No  
+A name for the parameter group\.
+*Required*: No
 *Type*: [AWS CloudFormation Interface Label](aws-properties-cloudformation-interface-label.md)
 
 `Parameters`  <a name="cfn-cloudformation-interface-parametergroups-parameters"></a>
-A list of case\-sensitive parameter logical IDs to include in the group\. Parameters must already be defined in the `Parameters` section of the template\. A parameter can be included in only one parameter group\.  
-The console lists the parameters that you don't associate with a parameter group in alphabetical order in the `Other parameters` group\.  
-*Required*: No  
+A list of case\-sensitive parameter logical IDs to include in the group\. Parameters must already be defined in the `Parameters` section of the template\. A parameter can be included in only one parameter group\.
+The console lists the parameters that you don't associate with a parameter group in alphabetical order in the `Other parameters` group\.
+*Required*: No
 *Type*: List of String values

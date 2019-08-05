@@ -14,14 +14,14 @@ To make broad changes to your template, use the **Template** view\. In the **Tem
 
 ## Converting templates into YAML or JSON<a name="w4784ab1c17c17c13c17c15"></a>
 
-You can convert a valid template back and forth between JSON and YAML by selecting the appropriate radio button in **Choose template language**\. Designer can only convert valid YAML or valid JSON templates\. If the conversion succeeds, the **Messages** pane displays a message like: *Successfully converted the template to YAML*\. 
+You can convert a valid template back and forth between JSON and YAML by selecting the appropriate radio button in **Choose template language**\. Designer can only convert valid YAML or valid JSON templates\. If the conversion succeeds, the **Messages** pane displays a message like: *Successfully converted the template to YAML*\.
 
-**Important**  
+**Important**
 We recommend that you do not add `#` YAML comments to your templates in Designer\. If your YAML template has `#` comments, Designer doesn't preserve those comments when editing the YAML or converting to JSON\. If you edit or modify your template in Designer \(for example, if you drag a resource on the canvas\), your comments are lost\.
 
 Once you choose a template language, any new resources you drag onto the canvas will be created in the language you have selected\. To change back to another language, make sure your template is valid and then select **YAML** or **JSON** where it says **Choose template language**\.
 
-**Note**  
+**Note**
 When you convert a template to YAML, Designer uses short form notation for functions\. For example, `- !GetAtt`\. In addition, any visual links that you draw will use short form notation in YAML mode\. For more information about intrinsic functions, see [`Ref`](intrinsic-function-reference-ref.md)\.
 
 ## Autocomplete<a name="w4784ab1c17c17c13c17c17"></a>
@@ -38,9 +38,9 @@ For a YAML template, you can first delete the opening and closing curly braces a
 
 Designer's integrated JSON and YAML editor provides the following keyboard shortcuts:
 
-Ctrl\+Space  
+Ctrl\+Space
 Within the `Properties` key of a resource, lists all of the available properties for the resource\.
 
-Ctrl\+F  
-Searches for a specified value\.  
+Ctrl\+F
+Searches for a specified value\.
 To highlight everything that matches the specified value, press **Alt\+Enter**\.

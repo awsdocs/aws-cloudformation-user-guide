@@ -8,7 +8,7 @@ To create a change set for a new stack, submit the configuration that you want t
 
 **To create a change set \(console\)**
 
-1. In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), choose **Create Stack**, and then choose **Create Change Set for New Stack**\.  
+1. In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), choose **Create Stack**, and then choose **Create Change Set for New Stack**\.
 ![\[The Create Change Set for New Stack option in the Create Stack menu.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cfn-console-create-changeset-for-new-stack.png)
 
 1. On the **Select Template** page, specify the location of your template\.
@@ -34,7 +34,7 @@ To create a change set for a new stack, submit the configuration that you want t
 
    When you finish, choose **Create change set**\.
 
-   While AWS CloudFormation begins to create the change set, the status of the change set is **CREATE\_IN\_PROGRESS**\. When AWS CloudFormation completes the creation progress, it sets its status to **CREATE\_COMPLETE**\. In the **Changes** section, AWS CloudFormation lists the proposed configuration of your stack\.  
+   While AWS CloudFormation begins to create the change set, the status of the change set is **CREATE\_IN\_PROGRESS**\. When AWS CloudFormation completes the creation progress, it sets its status to **CREATE\_COMPLETE**\. In the **Changes** section, AWS CloudFormation lists the proposed configuration of your stack\.
 ![\[Preview of the change set.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cfn-console-create-changeset-for-new-stack-preview.png)
 
    If AWS CloudFormation fails to create the change set and reports the **CREATE\_FAILED** status, fix the error displayed in the **Status** field, and then create a new change set\. At this stage, you can try various configurations and make corrections and changes to your stack before executing the next change set\.

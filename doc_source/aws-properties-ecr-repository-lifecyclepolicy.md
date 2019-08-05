@@ -25,20 +25,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecr-repository-lifecyclepolicy-properties"></a>
 
 `LifecyclePolicyText`  <a name="cfn-ecr-repository-lifecyclepolicy-lifecyclepolicytext"></a>
-The JSON repository policy text to apply to the repository\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `100`  
-*Maximum*: `30720`  
+The JSON repository policy text to apply to the repository\.
+*Required*: No
+*Type*: String
+*Minimum*: `100`
+*Maximum*: `30720`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegistryId`  <a name="cfn-ecr-repository-lifecyclepolicy-registryid"></a>
-The AWS account ID associated with the registry that contains the repository\. If you do  not specify a registry, the default registry is assumed\.  
-*Required*: No  
-*Type*: String  
-*Pattern*: `[0-9]{12}`  
+The AWS account ID associated with the registry that contains the repository\. If you do  not specify a registry, the default registry is assumed\.
+*Required*: No
+*Type*: String
+*Pattern*: `[0-9]{12}`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-ecr-repository-lifecyclepolicy--seealso"></a>
-+  [Creating a Lifecycle Policy](https://docs.aws.amazon.com/AmazonECR/latest/userguide/lp_creation.html) in the *Amazon Elastic Container Registry User Guide* 
-+  [PutLifecyclePolicy](https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_PutLifecyclePolicy.html) in the *Amazon Elastic Container Registry API Reference* 
++  [Creating a Lifecycle Policy](https://docs.aws.amazon.com/AmazonECR/latest/userguide/lp_creation.html) in the *Amazon Elastic Container Registry User Guide*
++  [PutLifecyclePolicy](https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_PutLifecyclePolicy.html) in the *Amazon Elastic Container Registry API Reference*

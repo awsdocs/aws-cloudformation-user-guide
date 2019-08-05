@@ -29,14 +29,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-glue-datacatalogencryptionsettings-connectionpasswordencryption-properties"></a>
 
 `KmsKeyId`  <a name="cfn-glue-datacatalogencryptionsettings-connectionpasswordencryption-kmskeyid"></a>
-An AWS KMS key that is used to encrypt the connection password\.  
-If connection password protection is enabled, the caller of `CreateConnection` and `UpdateConnection` needs at least `kms:Encrypt` permission on the specified AWS KMS key, to encrypt passwords before storing them in the Data Catalog\. You can set the decrypt permission to enable or restrict access on the password key according to your security requirements\.  
-*Required*: No  
-*Type*: String  
+An AWS KMS key that is used to encrypt the connection password\.
+If connection password protection is enabled, the caller of `CreateConnection` and `UpdateConnection` needs at least `kms:Encrypt` permission on the specified AWS KMS key, to encrypt passwords before storing them in the Data Catalog\. You can set the decrypt permission to enable or restrict access on the password key according to your security requirements\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReturnConnectionPasswordEncrypted`  <a name="cfn-glue-datacatalogencryptionsettings-connectionpasswordencryption-returnconnectionpasswordencrypted"></a>
-When the `ReturnConnectionPasswordEncrypted` flag is set to "true", passwords remain encrypted in the responses of `GetConnection` and `GetConnections`\. This encryption takes effect independently from catalog encryption\.   
-*Required*: No  
-*Type*: Boolean  
+When the `ReturnConnectionPasswordEncrypted` flag is set to "true", passwords remain encrypted in the responses of `GetConnection` and `GetConnections`\. This encryption takes effect independently from catalog encryption\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

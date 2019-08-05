@@ -1,6 +1,6 @@
 # AWS::CodePipeline::Pipeline<a name="aws-resource-codepipeline-pipeline"></a>
 
-The `AWS::CodePipeline::Pipeline` resource creates a CodePipeline pipeline that describes how software changes go through a release process\. For more information, see [What Is CodePipeline?](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html) in the *AWS CodePipeline User Guide*\. 
+The `AWS::CodePipeline::Pipeline` resource creates a CodePipeline pipeline that describes how software changes go through a release process\. For more information, see [What Is CodePipeline?](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html) in the *AWS CodePipeline User Guide*\.
 
 ## Syntax<a name="aws-resource-codepipeline-pipeline-syntax"></a>
 
@@ -27,68 +27,68 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CodePipeline::Pipeline
-Properties: 
-  [ArtifactStore](#cfn-codepipeline-pipeline-artifactstore): 
+Properties:
+  [ArtifactStore](#cfn-codepipeline-pipeline-artifactstore):
     [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md)
-  [ArtifactStores](#cfn-codepipeline-pipeline-artifactstores): 
+  [ArtifactStores](#cfn-codepipeline-pipeline-artifactstores):
     - [ArtifactStoreMap](aws-properties-codepipeline-pipeline-artifactstoremap.md)
-  [DisableInboundStageTransitions](#cfn-codepipeline-pipeline-disableinboundstagetransitions): 
+  [DisableInboundStageTransitions](#cfn-codepipeline-pipeline-disableinboundstagetransitions):
     - [StageTransition](aws-properties-codepipeline-pipeline-disableinboundstagetransitions.md)
   [Name](#cfn-codepipeline-pipeline-name): String
   [RestartExecutionOnUpdate](#cfn-codepipeline-pipeline-restartexecutiononupdate): Boolean
   [RoleArn](#cfn-codepipeline-pipeline-rolearn): String
-  [Stages](#cfn-codepipeline-pipeline-stages): 
+  [Stages](#cfn-codepipeline-pipeline-stages):
     - [StageDeclaration](aws-properties-codepipeline-pipeline-stages.md)
 ```
 
 ## Properties<a name="aws-resource-codepipeline-pipeline-properties"></a>
 
 `ArtifactStore`  <a name="cfn-codepipeline-pipeline-artifactstore"></a>
-The Amazon S3 bucket where artifacts are stored for the pipeline\.  
-*Required*: No  
-*Type*: [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md)  
+The Amazon S3 bucket where artifacts are stored for the pipeline\.
+*Required*: No
+*Type*: [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ArtifactStores`  <a name="cfn-codepipeline-pipeline-artifactstores"></a>
-A mapping of `artifactStore` objects and their corresponding regions\. There must be an artifact store for the pipeline region and for each cross\-region action within the pipeline\. You can only use either `artifactStore` or `artifactStores`, not both\.  
-If you create a cross\-region action in your pipeline, you must use `artifactStores`\.  
-*Required*: No  
-*Type*: List of [ArtifactStoreMap](aws-properties-codepipeline-pipeline-artifactstoremap.md)  
+A mapping of `artifactStore` objects and their corresponding regions\. There must be an artifact store for the pipeline region and for each cross\-region action within the pipeline\. You can only use either `artifactStore` or `artifactStores`, not both\.
+If you create a cross\-region action in your pipeline, you must use `artifactStores`\.
+*Required*: No
+*Type*: List of [ArtifactStoreMap](aws-properties-codepipeline-pipeline-artifactstoremap.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DisableInboundStageTransitions`  <a name="cfn-codepipeline-pipeline-disableinboundstagetransitions"></a>
-Represents the input of a `DisableStageTransition` action\.  
-*Required*: No  
-*Type*: List of [StageTransition](aws-properties-codepipeline-pipeline-disableinboundstagetransitions.md)  
+Represents the input of a `DisableStageTransition` action\.
+*Required*: No
+*Type*: List of [StageTransition](aws-properties-codepipeline-pipeline-disableinboundstagetransitions.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-codepipeline-pipeline-name"></a>
-The name of the pipeline\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
-*Pattern*: `[A-Za-z0-9.@\-_]+`  
+The name of the pipeline\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
+*Pattern*: `[A-Za-z0-9.@\-_]+`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RestartExecutionOnUpdate`  <a name="cfn-codepipeline-pipeline-restartexecutiononupdate"></a>
-Indicates whether to rerun the CodePipeline pipeline after you update it\.  
-*Required*: No  
-*Type*: Boolean  
+Indicates whether to rerun the CodePipeline pipeline after you update it\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-codepipeline-pipeline-rolearn"></a>
-The Amazon Resource Name \(ARN\) for AWS CodePipeline to use to either perform actions with no `actionRoleArn`, or to use to assume roles for actions with an `actionRoleArn`\.  
-*Required*: Yes  
-*Type*: String  
-*Maximum*: `1024`  
-*Pattern*: `arn:aws(-[\w]+)*:iam::[0-9]{12}:role/.*`  
+The Amazon Resource Name \(ARN\) for AWS CodePipeline to use to either perform actions with no `actionRoleArn`, or to use to assume roles for actions with an `actionRoleArn`\.
+*Required*: Yes
+*Type*: String
+*Maximum*: `1024`
+*Pattern*: `arn:aws(-[\w]+)*:iam::[0-9]{12}:role/.*`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Stages`  <a name="cfn-codepipeline-pipeline-stages"></a>
-Represents information about a stage and its definition\.  
-*Required*: Yes  
-*Type*: List of [StageDeclaration](aws-properties-codepipeline-pipeline-stages.md)  
+Represents information about a stage and its definition\.
+*Required*: Yes
+*Type*: List of [StageDeclaration](aws-properties-codepipeline-pipeline-stages.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-codepipeline-pipeline-return-values"></a>
@@ -108,7 +108,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-codepipeline-pipeline-return-values-fn--getatt-fn--getatt"></a>
 
 `Version`  <a name="Version-fn::getatt"></a>
-The version of the pipeline\.  
+The version of the pipeline\.
 A new pipeline is always assigned a version number of 1\. This number increments when a pipeline is updated\.
 
 ## Examples<a name="aws-resource-codepipeline-pipeline--examples"></a>
@@ -121,168 +121,168 @@ The following example creates a pipeline with a source, beta, and release stage\
 
 ```
 "AppPipeline": {
-  "Type": "AWS::CodePipeline::Pipeline", 
-  "Properties": { 
+  "Type": "AWS::CodePipeline::Pipeline",
+  "Properties": {
     "RoleArn": { "Ref" : "CodePipelineServiceRole" },
-    "Stages": [ 
-      { 
-        "Name": "Source",
-        "Actions": [ 
-          { 
-            "Name": "SourceAction",
-            "ActionTypeId": { 
-              "Category": "Source", 
-              "Owner": "AWS",
-              "Version": "1", 
-              "Provider": "S3" 
-            }, 
-            "OutputArtifacts": [ 
-              { "Name": "SourceOutput" 
-              }
-            ], 
-            "Configuration": { 
-              "S3Bucket": { "Ref" : "SourceS3Bucket" }, 
-              "S3ObjectKey": { "Ref" : "SourceS3ObjectKey" }
-            }, 
-            "RunOrder": 1 
-          } 
-        ] 
-      }, 
-      { 
-        "Name": "Beta", 
-        "Actions": [ 
-          { 
-            "Name": "BetaAction", 
-            "InputArtifacts": [ 
-              { 
-                "Name": "SourceOutput" 
-              } 
-            ], 
-            "ActionTypeId": {
-              "Category": "Deploy", 
-              "Owner": "AWS", 
-              "Version": "1", 
-              "Provider": "CodeDeploy" 
-            },
-            "Configuration": { 
-              "ApplicationName": {"Ref" : "ApplicationName"}, 
-              "DeploymentGroupName": {"Ref" : "DeploymentGroupName"} 
-            }, 
-            "RunOrder": 1 
-          } 
-        ] 
-      }, 
-      { 
-        "Name": "Release", 
-        "Actions": [ 
-          {
-            "Name": "ReleaseAction", 
-            "InputArtifacts": [ 
-              { 
-                "Name": "SourceOutput" 
-              } 
-            ], 
-            "ActionTypeId": {
-              "Category": "Deploy", 
-              "Owner": "AWS", 
-              "Version": "1", 
-              "Provider": "CodeDeploy" 
-            },
-            "Configuration": { 
-              "ApplicationName": {"Ref" : "ApplicationName"}, 
-              "DeploymentGroupName": {"Ref" : "DeploymentGroupName"} 
-            }, 
-            "RunOrder": 1 
-          } 
-        ] 
-      } 
-    ], 
-    "ArtifactStore": { 
-      "Type": "S3",
-      "Location": { "Ref" : "ArtifactStoreS3Location" } 
-    }, 
-    "DisableInboundStageTransitions": [ 
+    "Stages": [
       {
-        "StageName": "Release", 
-        "Reason": "Disabling the transition until integration tests are completed" 
-      } 
-    ] 
-  } 
+        "Name": "Source",
+        "Actions": [
+          {
+            "Name": "SourceAction",
+            "ActionTypeId": {
+              "Category": "Source",
+              "Owner": "AWS",
+              "Version": "1",
+              "Provider": "S3"
+            },
+            "OutputArtifacts": [
+              { "Name": "SourceOutput"
+              }
+            ],
+            "Configuration": {
+              "S3Bucket": { "Ref" : "SourceS3Bucket" },
+              "S3ObjectKey": { "Ref" : "SourceS3ObjectKey" }
+            },
+            "RunOrder": 1
+          }
+        ]
+      },
+      {
+        "Name": "Beta",
+        "Actions": [
+          {
+            "Name": "BetaAction",
+            "InputArtifacts": [
+              {
+                "Name": "SourceOutput"
+              }
+            ],
+            "ActionTypeId": {
+              "Category": "Deploy",
+              "Owner": "AWS",
+              "Version": "1",
+              "Provider": "CodeDeploy"
+            },
+            "Configuration": {
+              "ApplicationName": {"Ref" : "ApplicationName"},
+              "DeploymentGroupName": {"Ref" : "DeploymentGroupName"}
+            },
+            "RunOrder": 1
+          }
+        ]
+      },
+      {
+        "Name": "Release",
+        "Actions": [
+          {
+            "Name": "ReleaseAction",
+            "InputArtifacts": [
+              {
+                "Name": "SourceOutput"
+              }
+            ],
+            "ActionTypeId": {
+              "Category": "Deploy",
+              "Owner": "AWS",
+              "Version": "1",
+              "Provider": "CodeDeploy"
+            },
+            "Configuration": {
+              "ApplicationName": {"Ref" : "ApplicationName"},
+              "DeploymentGroupName": {"Ref" : "DeploymentGroupName"}
+            },
+            "RunOrder": 1
+          }
+        ]
+      }
+    ],
+    "ArtifactStore": {
+      "Type": "S3",
+      "Location": { "Ref" : "ArtifactStoreS3Location" }
+    },
+    "DisableInboundStageTransitions": [
+      {
+        "StageName": "Release",
+        "Reason": "Disabling the transition until integration tests are completed"
+      }
+    ]
+  }
 }
 ```
 
 #### YAML<a name="aws-resource-codepipeline-pipeline--examples--Pipeline_Resource_Configuration--yaml"></a>
 
 ```
-AppPipeline: 
-  Type: AWS::CodePipeline::Pipeline 
-  Properties: 
+AppPipeline:
+  Type: AWS::CodePipeline::Pipeline
+  Properties:
     RoleArn:
-      Ref: CodePipelineServiceRole 
-    Stages: 
-      - 
-        Name: Source 
-        Actions: 
-          - 
+      Ref: CodePipelineServiceRole
+    Stages:
+      -
+        Name: Source
+        Actions:
+          -
             Name: SourceAction
-            ActionTypeId: 
-              Category: Source 
-              Owner: AWS 
-              Version: 1 
-              Provider: S3 
-            OutputArtifacts: 
-              - 
-                Name: SourceOutput 
-            Configuration: 
-              S3Bucket: 
-                Ref: SourceS3Bucket 
-              S3ObjectKey: 
-                Ref: SourceS3ObjectKey 
-            RunOrder: 1 
-      - 
-        Name: Beta 
-        Actions: 
-          - 
-            Name: BetaAction 
-            InputArtifacts: 
-              -
-                Name: SourceOutput 
-            ActionTypeId: 
-              Category: Deploy 
-              Owner: AWS 
-              Version: 1 
-              Provider: CodeDeploy
-            Configuration: 
-              ApplicationName: 
-                Ref: ApplicationName 
-              DeploymentGroupName: 
-                Ref: DeploymentGroupName 
-            RunOrder: 1 
-      - 
-        Name: Release 
-        Actions: 
-          - 
-            Name: ReleaseAction
-            InputArtifacts: 
-              - 
-                Name: SourceOutput 
-            ActionTypeId: 
-              Category: Deploy 
-              Owner: AWS 
+            ActionTypeId:
+              Category: Source
+              Owner: AWS
               Version: 1
-              Provider: CodeDeploy 
-            Configuration: 
-              ApplicationName: 
+              Provider: S3
+            OutputArtifacts:
+              -
+                Name: SourceOutput
+            Configuration:
+              S3Bucket:
+                Ref: SourceS3Bucket
+              S3ObjectKey:
+                Ref: SourceS3ObjectKey
+            RunOrder: 1
+      -
+        Name: Beta
+        Actions:
+          -
+            Name: BetaAction
+            InputArtifacts:
+              -
+                Name: SourceOutput
+            ActionTypeId:
+              Category: Deploy
+              Owner: AWS
+              Version: 1
+              Provider: CodeDeploy
+            Configuration:
+              ApplicationName:
                 Ref: ApplicationName
-              DeploymentGroupName: 
-                Ref: DeploymentGroupName 
-            RunOrder: 1 
-    ArtifactStore: 
-      Type: S3 
+              DeploymentGroupName:
+                Ref: DeploymentGroupName
+            RunOrder: 1
+      -
+        Name: Release
+        Actions:
+          -
+            Name: ReleaseAction
+            InputArtifacts:
+              -
+                Name: SourceOutput
+            ActionTypeId:
+              Category: Deploy
+              Owner: AWS
+              Version: 1
+              Provider: CodeDeploy
+            Configuration:
+              ApplicationName:
+                Ref: ApplicationName
+              DeploymentGroupName:
+                Ref: DeploymentGroupName
+            RunOrder: 1
+    ArtifactStore:
+      Type: S3
       Location:
-        Ref: ArtifactStoreS3Location 
-    DisableInboundStageTransitions: 
-      - 
-        StageName: Release 
+        Ref: ArtifactStoreS3Location
+    DisableInboundStageTransitions:
+      -
+        StageName: Release
         Reason: "Disabling the transition until integration tests are completed"
 ```

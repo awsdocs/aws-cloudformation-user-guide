@@ -30,7 +30,7 @@ In the example, when AWS CloudFormation creates the `AllSecurityGroups` custom r
       "t2.micro"    : { "Arch" : "HVM64"  },
       "m1.small"    : { "Arch" : "HVM64"   }
     },
-    
+
     "AWSRegionArch2AMI" : {
       "us-east-1"        : {"HVM64" : "ami-0ff8a91507f77f867", "HVMG2" : "ami-0a584ac55a7631c0c"},
       "us-west-2"        : {"HVM64" : "ami-a0cfeed8", "HVMG2" : "ami-0e09505bc235aa82d"},
@@ -43,7 +43,7 @@ In the example, when AWS CloudFormation creates the `AllSecurityGroups` custom r
       "sa-east-1"        : {"HVM64" : "ami-07b14488da8ea02a0", "HVMG2" : "NOT_SUPPORTED"},
       "cn-north-1"       : {"HVM64" : "ami-0a4eaf6c4454eda75", "HVMG2" : "NOT_SUPPORTED"}
     }
-    
+
   },
   "Resources" : {
     "SecurityGroup" : {
@@ -151,7 +151,7 @@ Mappings:
       Arch: HVM64
     m1.small:
       Arch: HVM64
-      
+
   AWSRegionArch2AMI:
     us-east-1:
       HVM64: ami-0ff8a91507f77f867

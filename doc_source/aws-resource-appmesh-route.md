@@ -29,12 +29,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppMesh::Route
-Properties: 
+Properties:
   [MeshName](#cfn-appmesh-route-meshname): String
   [RouteName](#cfn-appmesh-route-routename): String
-  [Spec](#cfn-appmesh-route-spec): 
+  [Spec](#cfn-appmesh-route-spec):
     [RouteSpec](aws-properties-appmesh-route-routespec.md)
-  [Tags](#cfn-appmesh-route-tags): 
+  [Tags](#cfn-appmesh-route-tags):
     - [TagRef](aws-properties-appmesh-route-tagref.md)
   [VirtualRouterName](#cfn-appmesh-route-virtualroutername): String
 ```
@@ -42,33 +42,33 @@ Properties:
 ## Properties<a name="aws-resource-appmesh-route-properties"></a>
 
 `MeshName`  <a name="cfn-appmesh-route-meshname"></a>
-The name of the service mesh to create the route in\.  
-*Required*: Yes  
-*Type*: String  
+The name of the service mesh to create the route in\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RouteName`  <a name="cfn-appmesh-route-routename"></a>
-The name to use for the route\.  
-*Required*: Yes  
-*Type*: String  
+The name to use for the route\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Spec`  <a name="cfn-appmesh-route-spec"></a>
-The route specification to apply\.  
-*Required*: Yes  
-*Type*: [RouteSpec](aws-properties-appmesh-route-routespec.md)  
+The route specification to apply\.
+*Required*: Yes
+*Type*: [RouteSpec](aws-properties-appmesh-route-routespec.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-appmesh-route-tags"></a>
-Optional metadata that you can apply to the route to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.  
-*Required*: No  
-*Type*: List of [TagRef](aws-properties-appmesh-route-tagref.md)  
+Optional metadata that you can apply to the route to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.
+*Required*: No
+*Type*: List of [TagRef](aws-properties-appmesh-route-tagref.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VirtualRouterName`  <a name="cfn-appmesh-route-virtualroutername"></a>
-The name of the virtual router in which to create the route\.  
-*Required*: Yes  
-*Type*: String  
+The name of the virtual router in which to create the route\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-appmesh-route-return-values"></a>
@@ -77,7 +77,7 @@ The name of the virtual router in which to create the route\.
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ARN\. For example:
 
- `{ "Ref": "myRoute" }` 
+ `{ "Ref": "myRoute" }`
 
 When you pass the logical ID of an `AWS::AppMesh::Route` resource to the intrinsic Ref function, the function returns the route ARN, such as `arn:aws:appmesh:us-east-1:555555555555:route/myRoute `\.
 

@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-batch-jobqueue-computeenvironmentorder-properties"></a>
 
 `ComputeEnvironment`  <a name="cfn-batch-jobqueue-computeenvironmentorder-computeenvironment"></a>
-The Amazon Resource Name \(ARN\) of the compute environment\.  
-*Required*: Yes  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of the compute environment\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Order`  <a name="cfn-batch-jobqueue-computeenvironmentorder-order"></a>
-The order of the compute environment\.  
-*Required*: Yes  
-*Type*: Integer  
+The order of the compute environment\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

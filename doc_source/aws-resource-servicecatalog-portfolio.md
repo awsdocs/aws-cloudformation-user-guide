@@ -25,55 +25,55 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceCatalog::Portfolio
-Properties: 
+Properties:
   [AcceptLanguage](#cfn-servicecatalog-portfolio-acceptlanguage): String
   [Description](#cfn-servicecatalog-portfolio-description): String
   [DisplayName](#cfn-servicecatalog-portfolio-displayname): String
   [ProviderName](#cfn-servicecatalog-portfolio-providername): String
-  [Tags](#cfn-servicecatalog-portfolio-tags): 
+  [Tags](#cfn-servicecatalog-portfolio-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-servicecatalog-portfolio-properties"></a>
 
 `AcceptLanguage`  <a name="cfn-servicecatalog-portfolio-acceptlanguage"></a>
-The language code\.  
+The language code\.
 +  `en` \- English \(default\)
 +  `jp` \- Japanese
 +  `zh` \- Chinese
-*Required*: No  
-*Type*: String  
-*Maximum*: `100`  
+*Required*: No
+*Type*: String
+*Maximum*: `100`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-servicecatalog-portfolio-description"></a>
-The description of the portfolio\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `2000`  
+The description of the portfolio\.
+*Required*: No
+*Type*: String
+*Maximum*: `2000`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DisplayName`  <a name="cfn-servicecatalog-portfolio-displayname"></a>
-The name to use for display purposes\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
+The name to use for display purposes\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProviderName`  <a name="cfn-servicecatalog-portfolio-providername"></a>
-The name of the portfolio provider\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `50`  
+The name of the portfolio provider\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `50`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-servicecatalog-portfolio-tags"></a>
-One or more tags\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Maximum*: `20`  
+One or more tags\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+*Maximum*: `20`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-servicecatalog-portfolio-return-values"></a>

@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloud9-environmentec2-repository-properties"></a>
 
 `PathComponent`  <a name="cfn-cloud9-environmentec2-repository-pathcomponent"></a>
-The path within the development environment's default file system location to clone the AWS CodeCommit repository into\. For example, `/REPOSITORY_NAME` would clone the repository into the `/home/USER_NAME/environment/REPOSITORY_NAME` directory in the environment\.  
-*Required*: Yes  
-*Type*: String  
+The path within the development environment's default file system location to clone the AWS CodeCommit repository into\. For example, `/REPOSITORY_NAME` would clone the repository into the `/home/USER_NAME/environment/REPOSITORY_NAME` directory in the environment\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RepositoryUrl`  <a name="cfn-cloud9-environmentec2-repository-repositoryurl"></a>
-The clone URL of the AWS CodeCommit repository to be cloned\. For example, for an AWS CodeCommit repository this might be `https://git-codecommit.us-east-2.amazonaws.com/v1/repos/REPOSITORY_NAME`\.  
-*Required*: Yes  
-*Type*: String  
+The clone URL of the AWS CodeCommit repository to be cloned\. For example, for an AWS CodeCommit repository this might be `https://git-codecommit.us-east-2.amazonaws.com/v1/repos/REPOSITORY_NAME`\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

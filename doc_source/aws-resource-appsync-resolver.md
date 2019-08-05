@@ -30,12 +30,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppSync::Resolver
-Properties: 
+Properties:
   [ApiId](#cfn-appsync-resolver-apiid): String
   [DataSourceName](#cfn-appsync-resolver-datasourcename): String
   [FieldName](#cfn-appsync-resolver-fieldname): String
   [Kind](#cfn-appsync-resolver-kind): String
-  [PipelineConfig](#cfn-appsync-resolver-pipelineconfig): 
+  [PipelineConfig](#cfn-appsync-resolver-pipelineconfig):
     [PipelineConfig](aws-properties-appsync-resolver-pipelineconfig.md)
   [RequestMappingTemplate](#cfn-appsync-resolver-requestmappingtemplate): String
   [RequestMappingTemplateS3Location](#cfn-appsync-resolver-requestmappingtemplates3location): String
@@ -47,85 +47,85 @@ Properties:
 ## Properties<a name="aws-resource-appsync-resolver-properties"></a>
 
 `ApiId`  <a name="cfn-appsync-resolver-apiid"></a>
-The AWS AppSync GraphQL API to which you want to attach this resolver\.  
-*Required*: Yes  
-*Type*: String  
+The AWS AppSync GraphQL API to which you want to attach this resolver\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DataSourceName`  <a name="cfn-appsync-resolver-datasourcename"></a>
-The resolver data source name\.  
-*Required*: No  
-*Type*: String  
+The resolver data source name\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldName`  <a name="cfn-appsync-resolver-fieldname"></a>
-The GraphQL field on a type that invokes the resolver\.   
-*Required*: Yes  
-*Type*: String  
+The GraphQL field on a type that invokes the resolver\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Kind`  <a name="cfn-appsync-resolver-kind"></a>
-The resolver type\.  
+The resolver type\.
 +  **UNIT**: A UNIT resolver type\. A UNIT resolver is the default resolver type\. A UNIT resolver enables you to execute a GraphQL query against a single data source\.
 +  **PIPELINE**: A PIPELINE resolver type\. A PIPELINE resolver enables you to execute a series of `Function` in a serial manner\. You can use a pipeline resolver to execute a GraphQL query against multiple data sources\.
-*Required*: No  
-*Type*: String  
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PipelineConfig`  <a name="cfn-appsync-resolver-pipelineconfig"></a>
-Functions linked with the pipeline resolver\.  
-*Required*: No  
-*Type*: [PipelineConfig](aws-properties-appsync-resolver-pipelineconfig.md)  
+Functions linked with the pipeline resolver\.
+*Required*: No
+*Type*: [PipelineConfig](aws-properties-appsync-resolver-pipelineconfig.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RequestMappingTemplate`  <a name="cfn-appsync-resolver-requestmappingtemplate"></a>
-The request mapping template\.  
-*Required*: No  
-*Type*: String  
+The request mapping template\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RequestMappingTemplateS3Location`  <a name="cfn-appsync-resolver-requestmappingtemplates3location"></a>
-The location of a request mapping template in an Amazon S3 bucket\. Use this if you want to provision with a template file in Amazon S3 rather than embedding it in your CloudFormation template\.  
-*Required*: No  
-*Type*: String  
+The location of a request mapping template in an Amazon S3 bucket\. Use this if you want to provision with a template file in Amazon S3 rather than embedding it in your CloudFormation template\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResponseMappingTemplate`  <a name="cfn-appsync-resolver-responsemappingtemplate"></a>
-The response mapping template\.  
-*Required*: No  
-*Type*: String  
+The response mapping template\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResponseMappingTemplateS3Location`  <a name="cfn-appsync-resolver-responsemappingtemplates3location"></a>
-The location of a response mapping template in an Amazon S3 bucket\. Use this if you want to provision with a template file in Amazon S3 rather than embedding it in your CloudFormation template\.  
-*Required*: No  
-*Type*: String  
+The location of a response mapping template in an Amazon S3 bucket\. Use this if you want to provision with a template file in Amazon S3 rather than embedding it in your CloudFormation template\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TypeName`  <a name="cfn-appsync-resolver-typename"></a>
-The GraphQL type that invokes this resolver\.  
-*Required*: Yes  
-*Type*: String  
+The GraphQL type that invokes this resolver\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-appsync-resolver-return-values"></a>
 
 ### Ref<a name="aws-resource-appsync-resolver-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::AppSync::Resolver` resource to the intrinsic `Ref` function, the function returns the ARN of the Resolver, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/types/typename/resolvers/resolvername`\. 
+When you pass the logical ID of an `AWS::AppSync::Resolver` resource to the intrinsic `Ref` function, the function returns the ARN of the Resolver, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/types/typename/resolvers/resolvername`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref)\.
 
 ### Fn::GetAtt<a name="aws-resource-appsync-resolver-return-values-fn--getatt"></a>
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
+ `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt)\. 
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt)\.
 
 #### <a name="aws-resource-appsync-resolver-return-values-fn--getatt-fn--getatt"></a>
 
 `FieldName`  <a name="FieldName-fn::getatt"></a>
-The GraphQL field on a type that invokes the resolver\. 
+The GraphQL field on a type that invokes the resolver\.
 
 `ResolverArn`  <a name="ResolverArn-fn::getatt"></a>
 ARN of the resolver, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/types/typename/resolvers/resolvername`\.
@@ -137,7 +137,7 @@ The GraphQL type that invokes this resolver\.
 
 ### Resolver Creation Example<a name="aws-resource-appsync-resolver--examples--Resolver_Creation_Example"></a>
 
-The following example creates a resolver and associates it with an existing GraphQL API and a data source by passing the GraphQL API ID and data source name as a parameter\. 
+The following example creates a resolver and associates it with an existing GraphQL API and a data source by passing the GraphQL API ID and data source name as a parameter\.
 
 #### YAML<a name="aws-resource-appsync-resolver--examples--Resolver_Creation_Example--yaml"></a>
 

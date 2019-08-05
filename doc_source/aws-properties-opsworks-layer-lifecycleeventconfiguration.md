@@ -17,14 +17,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-opsworks-layer-lifecycleeventconfiguration-syntax.yaml"></a>
 
 ```
-  [ShutdownEventConfiguration](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration): 
+  [ShutdownEventConfiguration](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration):
     [ShutdownEventConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.md)
 ```
 
 ## Properties<a name="aws-properties-opsworks-layer-lifecycleeventconfiguration-properties"></a>
 
 `ShutdownEventConfiguration`  <a name="cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration"></a>
-The Shutdown event configuration\.  
-*Required*: No  
-*Type*: [ShutdownEventConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.md)  
+The Shutdown event configuration\.
+*Required*: No
+*Type*: [ShutdownEventConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -21,24 +21,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [MarketType](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-markettype): String
-  [SpotOptions](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions): 
+  [SpotOptions](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions):
     [SpotOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions.md)
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-properties"></a>
 
 `MarketType`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-markettype"></a>
-The market type\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `spot`  
+The market type\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `spot`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SpotOptions`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions"></a>
-The options for Spot Instances\.  
-*Required*: No  
-*Type*: [SpotOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions.md)  
+The options for Spot Instances\.
+*Required*: No
+*Type*: [SpotOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions--seealso"></a>
-+  [ LaunchTemplateInstanceMarketOptionsRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateInstanceMarketOptionsRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
++  [ LaunchTemplateInstanceMarketOptionsRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateInstanceMarketOptionsRequest.html) in the *Amazon Elastic Compute Cloud API Reference*

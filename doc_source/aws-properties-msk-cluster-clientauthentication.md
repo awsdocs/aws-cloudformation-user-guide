@@ -17,14 +17,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-msk-cluster-clientauthentication-syntax.yaml"></a>
 
 ```
-  [Tls](#cfn-msk-cluster-clientauthentication-tls): 
+  [Tls](#cfn-msk-cluster-clientauthentication-tls):
     [Tls](aws-properties-msk-cluster-tls.md)
 ```
 
 ## Properties<a name="aws-properties-msk-cluster-clientauthentication-properties"></a>
 
 `Tls`  <a name="cfn-msk-cluster-clientauthentication-tls"></a>
-Details for client authentication using TLS\.  
-*Required*: No  
-*Type*: [Tls](aws-properties-msk-cluster-tls.md)  
+Details for client authentication using TLS\.
+*Required*: No
+*Type*: [Tls](aws-properties-msk-cluster-tls.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

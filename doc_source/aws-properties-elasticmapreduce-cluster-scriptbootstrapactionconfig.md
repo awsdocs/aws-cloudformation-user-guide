@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-scriptbootstrapactionconfig-syntax.yaml"></a>
 
 ```
-  [Args](#cfn-elasticmapreduce-cluster-scriptbootstrapactionconfig-args): 
+  [Args](#cfn-elasticmapreduce-cluster-scriptbootstrapactionconfig-args):
     - String
   [Path](#cfn-elasticmapreduce-cluster-scriptbootstrapactionconfig-path): String
 ```
@@ -26,16 +26,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-scriptbootstrapactionconfig-properties"></a>
 
 `Args`  <a name="cfn-elasticmapreduce-cluster-scriptbootstrapactionconfig-args"></a>
-A list of command line arguments to pass to the bootstrap action script\.  
-*Required*: No  
-*Type*: List of String  
+A list of command line arguments to pass to the bootstrap action script\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Path`  <a name="cfn-elasticmapreduce-cluster-scriptbootstrapactionconfig-path"></a>
-Location of the script to run during a bootstrap action\. Can be either a location in Amazon S3 or on a local file system\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `10280`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+Location of the script to run during a bootstrap action\. Can be either a location in Amazon S3 or on a local file system\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `10280`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

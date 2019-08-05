@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-msk-cluster-configurationinfo-properties"></a>
 
 `Arn`  <a name="cfn-msk-cluster-configurationinfo-arn"></a>
-The Amazon Resource Name \(ARN\) of the MSK configuration to use\. For example, `arn:aws:kafka:us-east-1:123456789012:configuration/example-configuration-name/abcdabcd-1234-abcd-1234-abcd123e8e8e-1`\.  
-*Required*: Yes  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of the MSK configuration to use\. For example, `arn:aws:kafka:us-east-1:123456789012:configuration/example-configuration-name/abcdabcd-1234-abcd-1234-abcd123e8e8e-1`\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Revision`  <a name="cfn-msk-cluster-configurationinfo-revision"></a>
-The revision of the Amazon MSK configuration to use\.  
-*Required*: Yes  
-*Type*: Integer  
+The revision of the Amazon MSK configuration to use\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

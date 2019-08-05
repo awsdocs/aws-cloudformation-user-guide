@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Config::AggregationAuthorization
-Properties: 
+Properties:
   [AuthorizedAccountId](#cfn-config-aggregationauthorization-authorizedaccountid): String
   [AuthorizedAwsRegion](#cfn-config-aggregationauthorization-authorizedawsregion): String
 ```
@@ -30,18 +30,18 @@ Properties:
 ## Properties<a name="aws-resource-config-aggregationauthorization-properties"></a>
 
 `AuthorizedAccountId`  <a name="cfn-config-aggregationauthorization-authorizedaccountid"></a>
-The 12\-digit account ID of the account authorized to aggregate data\.  
-*Required*: Yes  
-*Type*: String  
-*Pattern*: `\d{12}`  
+The 12\-digit account ID of the account authorized to aggregate data\.
+*Required*: Yes
+*Type*: String
+*Pattern*: `\d{12}`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AuthorizedAwsRegion`  <a name="cfn-config-aggregationauthorization-authorizedawsregion"></a>
-The region authorized to collect aggregated data\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `64`  
+The region authorized to collect aggregated data\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `64`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-config-aggregationauthorization-return-values"></a>
@@ -56,7 +56,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Authorize Another Account<a name="aws-resource-config-aggregationauthorization--examples--Authorize_Another_Account"></a>
 
-The following example creates an AggregationAuthorization that authorizes another account to aggregate your AWS Config data into a specific region\. 
+The following example creates an AggregationAuthorization that authorizes another account to aggregate your AWS Config data into a specific region\.
 
 #### JSON<a name="aws-resource-config-aggregationauthorization--examples--Authorize_Another_Account--json"></a>
 
@@ -73,9 +73,9 @@ The following example creates an AggregationAuthorization that authorizes anothe
 #### YAML<a name="aws-resource-config-aggregationauthorization--examples--Authorize_Another_Account--yaml"></a>
 
 ```
-AggregationAuthorization: 
+AggregationAuthorization:
   Type: "AWS::Config::AggregationAuthorization"
-  Properties: 
+  Properties:
     AuthorizedAccountId: 123456789012
     AuthorizedAwsRegion: us-west-2
 ```

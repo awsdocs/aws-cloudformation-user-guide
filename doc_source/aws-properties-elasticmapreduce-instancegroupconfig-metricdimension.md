@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-instancegroupconfig-metricdimension-properties"></a>
 
 `Key`  <a name="cfn-elasticmapreduce-instancegroupconfig-metricdimension-key"></a>
-The dimension name\.  
-*Required*: Yes  
-*Type*: String  
+The dimension name\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-elasticmapreduce-instancegroupconfig-metricdimension-value"></a>
-The dimension value\.  
-*Required*: Yes  
-*Type*: String  
+The dimension value\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -22,26 +22,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::WAF::XssMatchSet
-Properties: 
+Properties:
   [Name](#cfn-waf-xssmatchset-name): String
-  [XssMatchTuples](#cfn-waf-xssmatchset-xssmatchtuples): 
+  [XssMatchTuples](#cfn-waf-xssmatchset-xssmatchtuples):
     - [XssMatchTuple](aws-properties-waf-xssmatchset-xssmatchtuple.md)
 ```
 
 ## Properties<a name="aws-resource-waf-xssmatchset-properties"></a>
 
 `Name`  <a name="cfn-waf-xssmatchset-name"></a>
-The name, if any, of the `XssMatchSet`\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
+The name, if any, of the `XssMatchSet`\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `XssMatchTuples`  <a name="cfn-waf-xssmatchset-xssmatchtuples"></a>
-Specifies the parts of web requests that you want to inspect for cross\-site scripting attacks\.  
-*Required*: Yes  
-*Type*: List of [XssMatchTuple](aws-properties-waf-xssmatchset-xssmatchtuple.md)  
+Specifies the parts of web requests that you want to inspect for cross\-site scripting attacks\.
+*Required*: Yes
+*Type*: List of [XssMatchTuple](aws-properties-waf-xssmatchset-xssmatchtuple.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-waf-xssmatchset-return-values"></a>
@@ -86,17 +86,17 @@ The following example looks for cross\-site scripting in the URI or query string
 #### YAML<a name="aws-resource-waf-xssmatchset--examples--Define_Which_Part_of_a_Request_to_Check_for_Cross-site_Scripting--yaml"></a>
 
 ```
-DetectXSS: 
+DetectXSS:
   Type: "AWS::WAF::XssMatchSet"
-  Properties: 
+  Properties:
     Name: "XssMatchSet"
-    XssMatchTuples: 
-      - 
-        FieldToMatch: 
+    XssMatchTuples:
+      -
+        FieldToMatch:
           Type: "URI"
         TextTransformation: "NONE"
-      - 
-        FieldToMatch: 
+      -
+        FieldToMatch:
           Type: "QUERY_STRING"
 TextTransformation: "NONE"
 ```
@@ -127,14 +127,14 @@ The following example associates the `DetectXSS` match set with a web access con
 #### YAML<a name="aws-resource-waf-xssmatchset--examples--Associate_an_XssMatchSet_with_a_Web_ACL_Rule--yaml"></a>
 
 ```
-XSSRule: 
+XSSRule:
   Type: "AWS::WAF::Rule"
-  Properties: 
+  Properties:
     Name: "XSSRule"
     MetricName: "XSSRule"
-    Predicates: 
-      - 
-        DataId: 
+    Predicates:
+      -
+        DataId:
           Ref: "DetectXSS"
         Negated: false
 Type: "XssMatch"
@@ -171,18 +171,18 @@ The following example associates the `XSSRule` rule with a web ACL\. The web ACL
 #### YAML<a name="aws-resource-waf-xssmatchset--examples--Create_a_Web_ACL--yaml"></a>
 
 ```
-MyWebACL: 
+MyWebACL:
   Type: "AWS::WAF::WebACL"
-  Properties: 
+  Properties:
     Name: "Web ACL to block cross-site scripting"
-    DefaultAction: 
+    DefaultAction:
       Type: "ALLOW"
     MetricName: "DetectXSSWebACL"
-    Rules: 
-      - 
-        Action: 
+    Rules:
+      -
+        Action:
           Type: "BLOCK"
         Priority: 1
-        RuleId: 
+        RuleId:
 Ref: "XSSRule"
 ```

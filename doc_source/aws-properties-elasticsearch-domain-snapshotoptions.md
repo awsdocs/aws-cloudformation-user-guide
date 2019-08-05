@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticsearch-domain-snapshotoptions-properties"></a>
 
 `AutomatedSnapshotStartHour`  <a name="cfn-elasticsearch-domain-snapshotoptions-automatedsnapshotstarthour"></a>
-The hour in UTC during which the service takes an automated daily snapshot of the indices in the Amazon ES domain\. For example, if you specify 0, Amazon ES takes an automated snapshot everyday between midnight and 1 am\. You can specify a value between 0 and 23\.  
-*Required*: No  
-*Type*: Integer  
+The hour in UTC during which the service takes an automated daily snapshot of the indices in the Amazon ES domain\. For example, if you specify 0, Amazon ES takes an automated snapshot everyday between midnight and 1 am\. You can specify a value between 0 and 23\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appmesh-route-weightedtarget-properties"></a>
 
 `VirtualNode`  <a name="cfn-appmesh-route-weightedtarget-virtualnode"></a>
-The virtual node to associate with the weighted target\.  
-*Required*: Yes  
-*Type*: String  
+The virtual node to associate with the weighted target\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Weight`  <a name="cfn-appmesh-route-weightedtarget-weight"></a>
-The relative weight of the weighted target\.  
-*Required*: Yes  
-*Type*: Integer  
+The relative weight of the weighted target\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

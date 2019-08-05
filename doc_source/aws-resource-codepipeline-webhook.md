@@ -28,11 +28,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CodePipeline::Webhook
-Properties: 
+Properties:
   [Authentication](#cfn-codepipeline-webhook-authentication): String
-  [AuthenticationConfiguration](#cfn-codepipeline-webhook-authenticationconfiguration): 
+  [AuthenticationConfiguration](#cfn-codepipeline-webhook-authenticationconfiguration):
     [WebhookAuthConfiguration](aws-properties-codepipeline-webhook-webhookauthconfiguration.md)
-  [Filters](#cfn-codepipeline-webhook-filters): 
+  [Filters](#cfn-codepipeline-webhook-filters):
     - [WebhookFilterRule](aws-properties-codepipeline-webhook-webhookfilterrule.md)
   [Name](#cfn-codepipeline-webhook-name): String
   [RegisterWithThirdParty](#cfn-codepipeline-webhook-registerwiththirdparty): Boolean
@@ -44,68 +44,68 @@ Properties:
 ## Properties<a name="aws-resource-codepipeline-webhook-properties"></a>
 
 `Authentication`  <a name="cfn-codepipeline-webhook-authentication"></a>
-Supported options are GITHUB\_HMAC, IP and UNAUTHENTICATED\.  
+Supported options are GITHUB\_HMAC, IP and UNAUTHENTICATED\.
 + For information about the authentication scheme implemented by GITHUB\_HMAC, see [Securing your webhooks](https://developer.github.com/webhooks/securing/) on the GitHub Developer website\.
 +  IP will reject webhooks trigger requests unless they originate from an IP within the IP range whitelisted in the authentication configuration\.
 +  UNAUTHENTICATED will accept all webhook trigger requests regardless of origin\.
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `GITHUB_HMAC | IP | UNAUTHENTICATED`  
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `GITHUB_HMAC | IP | UNAUTHENTICATED`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthenticationConfiguration`  <a name="cfn-codepipeline-webhook-authenticationconfiguration"></a>
-Properties that configure the authentication applied to incoming webhook trigger requests\. The required properties depend on the authentication type\. For GITHUB\_HMAC, only the `SecretToken `property must be set\. For IP, only the `AllowedIPRange `property must be set to a valid CIDR range\. For UNAUTHENTICATED, no properties can be set\.  
-*Required*: Yes  
-*Type*: [WebhookAuthConfiguration](aws-properties-codepipeline-webhook-webhookauthconfiguration.md)  
+Properties that configure the authentication applied to incoming webhook trigger requests\. The required properties depend on the authentication type\. For GITHUB\_HMAC, only the `SecretToken `property must be set\. For IP, only the `AllowedIPRange `property must be set to a valid CIDR range\. For UNAUTHENTICATED, no properties can be set\.
+*Required*: Yes
+*Type*: [WebhookAuthConfiguration](aws-properties-codepipeline-webhook-webhookauthconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Filters`  <a name="cfn-codepipeline-webhook-filters"></a>
-A list of rules applied to the body/payload sent in the POST request to a webhook URL\. All defined rules must pass for the request to be accepted and the pipeline started\.  
-*Required*: Yes  
-*Type*: List of [WebhookFilterRule](aws-properties-codepipeline-webhook-webhookfilterrule.md)  
-*Maximum*: `5`  
+A list of rules applied to the body/payload sent in the POST request to a webhook URL\. All defined rules must pass for the request to be accepted and the pipeline started\.
+*Required*: Yes
+*Type*: List of [WebhookFilterRule](aws-properties-codepipeline-webhook-webhookfilterrule.md)
+*Maximum*: `5`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-codepipeline-webhook-name"></a>
-The name of the webhook\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
-*Pattern*: `[A-Za-z0-9.@\-_]+`  
+The name of the webhook\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
+*Pattern*: `[A-Za-z0-9.@\-_]+`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RegisterWithThirdParty`  <a name="cfn-codepipeline-webhook-registerwiththirdparty"></a>
-Configures a connection between the webhook that was created and the external tool with events to be detected\.  
-*Required*: No  
-*Type*: Boolean  
+Configures a connection between the webhook that was created and the external tool with events to be detected\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetAction`  <a name="cfn-codepipeline-webhook-targetaction"></a>
-The name of the action in a pipeline you want to connect to the webhook\. The action must be from the source \(first\) stage of the pipeline\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
-*Pattern*: `[A-Za-z0-9.@\-_]+`  
+The name of the action in a pipeline you want to connect to the webhook\. The action must be from the source \(first\) stage of the pipeline\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
+*Pattern*: `[A-Za-z0-9.@\-_]+`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetPipeline`  <a name="cfn-codepipeline-webhook-targetpipeline"></a>
-The name of the pipeline you want to connect to the webhook\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
-*Pattern*: `[A-Za-z0-9.@\-_]+`  
+The name of the pipeline you want to connect to the webhook\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
+*Pattern*: `[A-Za-z0-9.@\-_]+`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetPipelineVersion`  <a name="cfn-codepipeline-webhook-targetpipelineversion"></a>
-The version number of the pipeline to be connected to the trigger request\.  
-Required: Yes   
-Type: Integer   
- Update requires: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)   
-*Required*: Yes  
-*Type*: Integer  
+The version number of the pipeline to be connected to the trigger request\.
+Required: Yes
+Type: Integer
+ Update requires: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-codepipeline-webhook-return-values"></a>
@@ -136,45 +136,45 @@ The following example creates a webhook named MyWebhook and registers the webhoo
 #### JSON<a name="aws-resource-codepipeline-webhook--examples--Webhook_Resource_Configuration--json"></a>
 
 ```
-{ 
-  "Webhook": { 
-    "Type": "AWS::CodePipeline::Webhook", 
+{
+  "Webhook": {
+    "Type": "AWS::CodePipeline::Webhook",
     "Properties": {
-      "AuthenticationConfiguration": { 
-        "SecretToken": "secret" 
-      }, 
-      "Filters": [ 
-        { 
-          "JsonPath": "$.ref", 
-          "MatchEquals": "refs/heads/{Branch}" 
-        } 
-      ], 
+      "AuthenticationConfiguration": {
+        "SecretToken": "secret"
+      },
+      "Filters": [
+        {
+          "JsonPath": "$.ref",
+          "MatchEquals": "refs/heads/{Branch}"
+        }
+      ],
       "Authentication": "GITHUB_HMAC",
-      "TargetPipeline": { "Ref" : "WebhookPipeline" }, 
-      "TargetAction": "Source", 
-      "Name": "MyWebhook", 
+      "TargetPipeline": { "Ref" : "WebhookPipeline" },
+      "TargetAction": "Source",
+      "Name": "MyWebhook",
       "TargetPipelineVersion": { "Fn::GetAtt" : [ "WebhookPipeline", "Version" ] },
-      "RegisterWithThirdParty": "true" 
-    } 
-  } 
+      "RegisterWithThirdParty": "true"
+    }
+  }
 }
 ```
 
 #### YAML<a name="aws-resource-codepipeline-webhook--examples--Webhook_Resource_Configuration--yaml"></a>
 
 ```
-Webhook: 
-  Type: 'AWS::CodePipeline::Webhook' 
+Webhook:
+  Type: 'AWS::CodePipeline::Webhook'
   Properties:
-    AuthenticationConfiguration: 
-      SecretToken: secret 
-    Filters: 
-    - JsonPath: "$.ref" 
-      MatchEquals: refs/heads/{Branch} 
-    Authentication: GITHUB_HMAC 
+    AuthenticationConfiguration:
+      SecretToken: secret
+    Filters:
+    - JsonPath: "$.ref"
+      MatchEquals: refs/heads/{Branch}
+    Authentication: GITHUB_HMAC
     TargetPipeline: !Ref WebhookPipeline
-    TargetAction: Source 
-    Name: MyWebhook 
+    TargetAction: Source
+    Name: MyWebhook
     TargetPipelineVersion: !GetAtt WebhookPipeline.Version
     RegisterWithThirdParty: 'true'
 ```

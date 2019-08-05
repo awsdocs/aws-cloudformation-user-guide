@@ -19,7 +19,7 @@ In the walkthrough, you will complete the following steps:
 1. [Provision resources](#working-with-templates-cfn-designer-walkthrough-createbasicwebserver-provision)
 
    None of your template resources are up and running until you create a stack\. We'll use the template that you just created to launch an AWS CloudFormation stack, which will provision all the resources that are defined in your template\.
-**Note**  
+**Note**
 AWS CloudFormation is a free service; however, you are charged for the AWS resources you include in your stacks at the current rate for each\. For more information about AWS pricing, see the detail page for each product on [http://aws\.amazon\.com](http://aws.amazon.com)\.
 
 Prerequisites
@@ -77,7 +77,7 @@ We'll use the AWS CloudFormation Designer drag\-and\-drop interface to add an Am
    Note that we still need to specify the VPC properties, such as the VPC's CIDR block\. We'll do that later\. This is true for all resources that we'll add\.
 
 1. Rename the VPC\.
-**Note**  
+**Note**
 When you rename a resource, you rename its logical ID, which is the name that is referenced in the template \(not the name assigned when AWS CloudFormation creates the resource\)\. For more information, see [Resources](resources-section-structure.md)\.
 
    1. Choose the VPC resource\.
@@ -181,60 +181,60 @@ Parameters are input values that you specify when you create a stack\. They're u
          "Description" : "WebServer EC2 instance type",
          "Type" : "String",
          "Default" : "t2.small",
-         "AllowedValues" : [ 
-           "t1.micro", 
-           "t2.nano", 
-           "t2.micro", 
-           "t2.small", 
-           "t2.medium", 
-           "t2.large", 
-           "m1.small", 
-           "m1.medium", 
-           "m1.large", 
-           "m1.xlarge", 
-           "m2.xlarge", 
-           "m2.2xlarge", 
-           "m2.4xlarge", 
-           "m3.medium", 
-           "m3.large", 
-           "m3.xlarge", 
-           "m3.2xlarge", 
-           "m4.large", 
-           "m4.xlarge", 
-           "m4.2xlarge", 
-           "m4.4xlarge", 
-           "m4.10xlarge", 
-           "c1.medium", 
-           "c1.xlarge", 
-           "c3.large", 
-           "c3.xlarge", 
-           "c3.2xlarge", 
-           "c3.4xlarge", 
-           "c3.8xlarge", 
-           "c4.large", 
-           "c4.xlarge", 
-           "c4.2xlarge", 
-           "c4.4xlarge", 
-           "c4.8xlarge", 
-           "g2.2xlarge", 
-           "g2.8xlarge", 
-           "r3.large", 
-           "r3.xlarge", 
-           "r3.2xlarge", 
-           "r3.4xlarge", 
-           "r3.8xlarge", 
-           "i2.xlarge", 
-           "i2.2xlarge", 
-           "i2.4xlarge", 
-           "i2.8xlarge", 
-           "d2.xlarge", 
-           "d2.2xlarge", 
-           "d2.4xlarge", 
-           "d2.8xlarge", 
-           "hi1.4xlarge", 
-           "hs1.8xlarge", 
-           "cr1.8xlarge", 
-           "cc2.8xlarge", 
+         "AllowedValues" : [
+           "t1.micro",
+           "t2.nano",
+           "t2.micro",
+           "t2.small",
+           "t2.medium",
+           "t2.large",
+           "m1.small",
+           "m1.medium",
+           "m1.large",
+           "m1.xlarge",
+           "m2.xlarge",
+           "m2.2xlarge",
+           "m2.4xlarge",
+           "m3.medium",
+           "m3.large",
+           "m3.xlarge",
+           "m3.2xlarge",
+           "m4.large",
+           "m4.xlarge",
+           "m4.2xlarge",
+           "m4.4xlarge",
+           "m4.10xlarge",
+           "c1.medium",
+           "c1.xlarge",
+           "c3.large",
+           "c3.xlarge",
+           "c3.2xlarge",
+           "c3.4xlarge",
+           "c3.8xlarge",
+           "c4.large",
+           "c4.xlarge",
+           "c4.2xlarge",
+           "c4.4xlarge",
+           "c4.8xlarge",
+           "g2.2xlarge",
+           "g2.8xlarge",
+           "r3.large",
+           "r3.xlarge",
+           "r3.2xlarge",
+           "r3.4xlarge",
+           "r3.8xlarge",
+           "i2.xlarge",
+           "i2.2xlarge",
+           "i2.4xlarge",
+           "i2.8xlarge",
+           "d2.xlarge",
+           "d2.2xlarge",
+           "d2.4xlarge",
+           "d2.8xlarge",
+           "hi1.4xlarge",
+           "hs1.8xlarge",
+           "cr1.8xlarge",
+           "cc2.8xlarge",
            "cg1.4xlarge"
          ],
          "ConstraintDescription" : "must be a valid EC2 instance type."
@@ -344,7 +344,7 @@ Mappings are a set of keys that are associated with a set of name\-value pairs\.
 1. Copy the following JSON mappings and paste them into the integrated editor\.
 
    ```
-   {      
+   {
      "Mappings" : {
        "AWSInstanceType2Arch" : {
          "t1.micro"    : { "Arch" : "HVM64"  },
@@ -632,10 +632,10 @@ Outputs declare values that you want available to a `describe stacks` API call o
    ```
    Outputs:
      URL:
-       Value: !Join 
+       Value: !Join
          - ''
          - - 'http://'
-           - !GetAtt 
+           - !GetAtt
              - WebServerInstance
              - PublicIp
        Description: Newly created application URL
@@ -674,14 +674,14 @@ Many resources have required properties that define their configurations or sett
          EnableDnsHostnames: 'true'
          CidrBlock: 10.0.0.0/16
    ```
-**Note**  
+**Note**
 For efficiency, we provide JSON and YAML snippets that you can copy and paste\. Note, however, that the editor has an auto\-complete feature that you can use to manually specify each property\. For more information, see [Integrated JSON and YAML Editor](working-with-templates-cfn-designer-json-editor.md)\.
 
-1. Repeat this process for the following resources:  
-`PublicSubnet`  
-Add the following CIDR block property after the VPC ID property\. AWS CloudFormation Designer automatically added the VPC ID property when you dragged the subnet inside the VPC\.  
+1. Repeat this process for the following resources:
+`PublicSubnet`
+Add the following CIDR block property after the VPC ID property\. AWS CloudFormation Designer automatically added the VPC ID property when you dragged the subnet inside the VPC\.
 You'll see a few other associations that AWS CloudFormation Designer automatically created for you\. Add just the new properties, which are in bold\.
-JSON  
+JSON
 
    ```
            "VpcId": {
@@ -689,35 +689,35 @@ JSON
            },
            "CidrBlock": "10.0.0.0/24"
    ```
-YAML  
+YAML
 
    ```
          VpcId: !Ref VPC
          CidrBlock: 10.0.0.0/24
-   ```  
-`PublicRoute`  
-Add the following destination CIDR block property, which directs all traffic to the Internet gateway:  
-JSON  
+   ```
+`PublicRoute`
+Add the following destination CIDR block property, which directs all traffic to the Internet gateway:
+JSON
 
    ```
            "DestinationCidrBlock": "0.0.0.0/0",
            "RouteTableId": {
              "Ref": "PublicRouteTable"
-           },        
+           },
            "GatewayId": {
              "Ref": "InternetGateway"
            }
    ```
-YAML  
+YAML
 
    ```
          DestinationCidrBlock: 0.0.0.0/0
          RouteTableId: !Ref PublicRouteTable
          GatewayId: !Ref InternetGateway
-   ```  
-`WebServerSecurityGroup`  
-Add the following inbound rules that determine what traffic can reach the web server instance\. The rules allow all HTTP and certain SSH traffic, which you specify as a parameter value when you create a stack\.  
-JSON  
+   ```
+`WebServerSecurityGroup`
+Add the following inbound rules that determine what traffic can reach the web server instance\. The rules allow all HTTP and certain SSH traffic, which you specify as a parameter value when you create a stack\.
+JSON
 
    ```
            "VpcId": {
@@ -741,7 +741,7 @@ JSON
              }
            ]
    ```
-YAML  
+YAML
 
    ```
          VpcId: !Ref VPC
@@ -755,14 +755,14 @@ YAML
              FromPort: '22'
              ToPort: '22'
              CidrIp: !Ref SSHLocation
-   ```  
-`WebServerInstance`  
-You need to specify a number of properties for the web server instance, so we'll highlight just a few for demonstration purposes\. The `InstanceType` and `ImageId` properties use the parameter and mapping values that we specified in the previous section\. When you create a stack, you specify the instance type as a parameter value\. The `ImageId` value is a mapping that is based on your stack's region and the instance type that you specified\.  
-The `NetworkInterfaces` property specifies network settings for the web server instance\. This property allows us to associate the security group and subnet with the instance\. Although AWS CloudFormation Designer used the `SubnetId` property to associate the instance with the subnet, we need to use the `NetworkInterfaces` property because that's the only way to give the web server a public IP\. And when you specify the `NetworkInterfaces` property, you are required to specify the subnet and security group within that property\.  
-In the `UserData` property, we specify configuration scripts that run after the instance is up and running\. All of the configuration information is defined in the instance's metadata, which we'll add in the next step\.  
-Replace all properties with the following snippet:  
+   ```
+`WebServerInstance`
+You need to specify a number of properties for the web server instance, so we'll highlight just a few for demonstration purposes\. The `InstanceType` and `ImageId` properties use the parameter and mapping values that we specified in the previous section\. When you create a stack, you specify the instance type as a parameter value\. The `ImageId` value is a mapping that is based on your stack's region and the instance type that you specified\.
+The `NetworkInterfaces` property specifies network settings for the web server instance\. This property allows us to associate the security group and subnet with the instance\. Although AWS CloudFormation Designer used the `SubnetId` property to associate the instance with the subnet, we need to use the `NetworkInterfaces` property because that's the only way to give the web server a public IP\. And when you specify the `NetworkInterfaces` property, you are required to specify the subnet and security group within that property\.
+In the `UserData` property, we specify configuration scripts that run after the instance is up and running\. All of the configuration information is defined in the instance's metadata, which we'll add in the next step\.
+Replace all properties with the following snippet:
 Do not append this snippet to existing properties\.
-JSON  
+JSON
 
    ```
           "InstanceType": {
@@ -840,14 +840,14 @@ JSON
              }
            }
    ```
-YAML  
+YAML
 
    ```
          InstanceType: !Ref InstanceType
-         ImageId: !FindInMap 
+         ImageId: !FindInMap
            - AWSRegionArch2AMI
            - !Ref 'AWS::Region'
-           - !FindInMap 
+           - !FindInMap
              - AWSInstanceType2Arch
              - !Ref InstanceType
              - Arch
@@ -859,7 +859,7 @@ YAML
              DeviceIndex: '0'
              DeleteOnTermination: 'true'
              SubnetId: !Ref PublicSubnet
-         UserData: !Base64 
+         UserData: !Base64
            'Fn::Join':
              - ''
              - - |
@@ -876,7 +876,7 @@ YAML
                - '         --region '
                - !Ref 'AWS::Region'
                - |+
-   
+
                - |
                  # Signal the status from cfn-init
                - '/opt/aws/bin/cfn-signal -e $? '
@@ -941,9 +941,9 @@ YAML
                     httpd: []
                 files:
                   /var/www/html/index.html:
-                    content: !Join 
+                    content: !Join
                       - |+
-      
+
                       - - >-
                           <h1>Congratulations, you have successfully launched the AWS
                           CloudFormation sample.</h1>
@@ -987,6 +987,6 @@ To create a stack, you can launch the AWS CloudFormation Create Stack Wizard fro
 
 1. Ensure that the stack name and Amazon EC2 key\-pair name are correct, and then choose **Create**\.
 
-It can take several minutes for AWS CloudFormation to create your stack\. To monitor progress, view the stack events\. For more information about viewing stack events, see [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)\. After the stack is created, view the stack outputs and go to the sample website URL to verify that the website is running\. For more information, see [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)\. 
+It can take several minutes for AWS CloudFormation to create your stack\. To monitor progress, view the stack events\. For more information about viewing stack events, see [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)\. After the stack is created, view the stack outputs and go to the sample website URL to verify that the website is running\. For more information, see [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)\.
 
 Now that you've successfully created a template and launched a stack using AWS CloudFormation Designer, you can use the stack in the following walkthrough: [Walkthrough: Use AWS CloudFormation Designer to Modify a Stack's Template](working-with-templates-cfn-designer-walkthrough-updatebasicwebserver.md), which modifies the template to create a scalable web server\.

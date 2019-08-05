@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudwatch-anomalydetector-range-properties"></a>
 
 `EndTime`  <a name="cfn-cloudwatch-anomalydetector-range-endtime"></a>
-The end time of the range to exclude\. The format is `yyyy-MM-dd'T'HH:mm:ss`\. For example, `2019-07-01T23:59:59`\.   
-*Required*: Yes  
-*Type*: String  
+The end time of the range to exclude\. The format is `yyyy-MM-dd'T'HH:mm:ss`\. For example, `2019-07-01T23:59:59`\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StartTime`  <a name="cfn-cloudwatch-anomalydetector-range-starttime"></a>
-The start time of the range to exclude\. The format is `yyyy-MM-dd'T'HH:mm:ss`\. For example, `2019-07-01T23:59:59`\.   
-*Required*: Yes  
-*Type*: String  
+The start time of the range to exclude\. The format is `yyyy-MM-dd'T'HH:mm:ss`\. For example, `2019-07-01T23:59:59`\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

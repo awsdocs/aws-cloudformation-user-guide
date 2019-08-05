@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotevents-detectormodel-sqs-properties"></a>
 
 `QueueUrl`  <a name="cfn-iotevents-detectormodel-sqs-queueurl"></a>
-The URL of the Amazon SQS queue where the data is written\.  
-*Required*: No  
-*Type*: String  
+The URL of the Amazon SQS queue where the data is written\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UseBase64`  <a name="cfn-iotevents-detectormodel-sqs-usebase64"></a>
-Set this to TRUE if you want the data to be Base\-64 encoded before it is written to the queue\. Otherwise, set this to FALSE\.  
-*Required*: No  
-*Type*: Boolean  
+Set this to TRUE if you want the data to be Base\-64 encoded before it is written to the queue\. Otherwise, set this to FALSE\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

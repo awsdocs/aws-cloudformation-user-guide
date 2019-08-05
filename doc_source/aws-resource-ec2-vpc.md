@@ -25,50 +25,50 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPC
-Properties: 
+Properties:
   [CidrBlock](#cfn-aws-ec2-vpc-cidrblock): String
   [EnableDnsHostnames](#cfn-aws-ec2-vpc-EnableDnsHostnames): Boolean
   [EnableDnsSupport](#cfn-aws-ec2-vpc-EnableDnsSupport): Boolean
   [InstanceTenancy](#cfn-aws-ec2-vpc-instancetenancy): String
-  [Tags](#cfn-aws-ec2-vpc-tags): 
+  [Tags](#cfn-aws-ec2-vpc-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-ec2-vpc-properties"></a>
 
 `CidrBlock`  <a name="cfn-aws-ec2-vpc-cidrblock"></a>
-The primary IPv4 CIDR block for the VPC\.  
-*Required*: Yes  
-*Type*: String  
+The primary IPv4 CIDR block for the VPC\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EnableDnsHostnames`  <a name="cfn-aws-ec2-vpc-EnableDnsHostnames"></a>
-Indicates whether the instances launched in the VPC get DNS hostnames\. If enabled, instances in the VPC get DNS hostnames; otherwise, they do not\.  
-You can only enable DNS hostnames if you've enabled DNS support\.  
-*Required*: No  
-*Type*: Boolean  
+Indicates whether the instances launched in the VPC get DNS hostnames\. If enabled, instances in the VPC get DNS hostnames; otherwise, they do not\.
+You can only enable DNS hostnames if you've enabled DNS support\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnableDnsSupport`  <a name="cfn-aws-ec2-vpc-EnableDnsSupport"></a>
-Indicates whether the DNS resolution is supported for the VPC\. If enabled, queries to the Amazon provided DNS server at the 169\.254\.169\.253 IP address, or the reserved IP address at the base of the VPC network range "plus two" succeed\. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled\.  
-*Required*: No  
-*Type*: Boolean  
+Indicates whether the DNS resolution is supported for the VPC\. If enabled, queries to the Amazon provided DNS server at the 169\.254\.169\.253 IP address, or the reserved IP address at the base of the VPC network range "plus two" succeed\. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceTenancy`  <a name="cfn-aws-ec2-vpc-instancetenancy"></a>
-The allowed tenancy of instances launched into the VPC\.   
+The allowed tenancy of instances launched into the VPC\.
 + `"default"`: Instances can be launched with any tenancy\.
 + `"dedicated"`: Any instance launched into the VPC automatically has dedicated tenancy, unless you launch it with the default tenancy\.
-Updating `InstanceTenancy` requires no replacement only if you are updating its value from `"dedicated"` to `"default"`\. Updating `InstanceTenancy` from `"default"` to `"dedicated"` requires replacement\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `dedicated | default | host`  
+Updating `InstanceTenancy` requires no replacement only if you are updating its value from `"dedicated"` to `"default"`\. Updating `InstanceTenancy` from `"default"` to `"dedicated"` requires replacement\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `dedicated | default | host`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-aws-ec2-vpc-tags"></a>
-The tags for the VPC\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+The tags for the VPC\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-ec2-vpc-return-values"></a>

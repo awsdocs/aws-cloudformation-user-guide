@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Pinpoint::VoiceChannel
-Properties: 
+Properties:
   [ApplicationId](#cfn-pinpoint-voicechannel-applicationid): String
   [Enabled](#cfn-pinpoint-voicechannel-enabled): Boolean
 ```
@@ -30,15 +30,15 @@ Properties:
 ## Properties<a name="aws-resource-pinpoint-voicechannel-properties"></a>
 
 `ApplicationId`  <a name="cfn-pinpoint-voicechannel-applicationid"></a>
-The unique ID of the Amazon Pinpoint app that you're setting up the voice channel for\.  
-*Required*: Yes  
-*Type*: String  
+The unique ID of the Amazon Pinpoint app that you're setting up the voice channel for\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Enabled`  <a name="cfn-pinpoint-voicechannel-enabled"></a>
-Specifies whether to enable the voice channel for the application\.  
-*Required*: No  
-*Type*: Boolean  
+Specifies whether to enable the voice channel for the application\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-pinpoint-voicechannel-return-values"></a>

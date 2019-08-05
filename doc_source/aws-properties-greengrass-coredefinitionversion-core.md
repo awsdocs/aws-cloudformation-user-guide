@@ -31,29 +31,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-greengrass-coredefinitionversion-core-properties"></a>
 
 `CertificateArn`  <a name="cfn-greengrass-coredefinitionversion-core-certificatearn"></a>
-The ARN of the device certificate for the core\. This X\.509 certificate is used to authenticate the core with AWS IoT and AWS IoT Greengrass services\.  
-*Required*: Yes  
-*Type*: String  
+The ARN of the device certificate for the core\. This X\.509 certificate is used to authenticate the core with AWS IoT and AWS IoT Greengrass services\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Id`  <a name="cfn-greengrass-coredefinitionversion-core-id"></a>
-A descriptive or arbitrary ID for the core\. This value must be unique within the core definition version\. Maximum length is 128 characters with pattern `[a-zA-Z0-9:_-]+`\.  
-*Required*: Yes  
-*Type*: String  
+A descriptive or arbitrary ID for the core\. This value must be unique within the core definition version\. Maximum length is 128 characters with pattern `[a-zA-Z0-9:_-]+`\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SyncShadow`  <a name="cfn-greengrass-coredefinitionversion-core-syncshadow"></a>
-Indicates whether the core's local shadow is synced with the cloud automatically\. The default is false\.  
-*Required*: No  
-*Type*: Boolean  
+Indicates whether the core's local shadow is synced with the cloud automatically\. The default is false\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ThingArn`  <a name="cfn-greengrass-coredefinitionversion-core-thingarn"></a>
-The Amazon Resource Name \(ARN\) of the core, which is an AWS IoT device \(thing\)\.  
-*Required*: Yes  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of the core, which is an AWS IoT device \(thing\)\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See Also<a name="aws-properties-greengrass-coredefinitionversion-core--seealso"></a>
-+  [Core](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-core.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [Core](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-core.html) in the * AWS IoT Greengrass API Reference *
++  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)

@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-pinpoint-segment-segmentgroups-syntax.yaml"></a>
 
 ```
-  [Groups](#cfn-pinpoint-segment-segmentgroups-groups): 
+  [Groups](#cfn-pinpoint-segment-segmentgroups-groups):
     - [Groups](aws-properties-pinpoint-segment-segmentgroups-groups.md)
   [Include](#cfn-pinpoint-segment-segmentgroups-include): String
 ```
@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-segment-segmentgroups-properties"></a>
 
 `Groups`  <a name="cfn-pinpoint-segment-segmentgroups-groups"></a>
-Specifies the set of segment criteria to evaluate when handling segment groups for the segment\.  
-*Required*: No  
-*Type*: [List](aws-properties-pinpoint-segment-segmentgroups-groups.md) of [Groups](aws-properties-pinpoint-segment-segmentgroups-groups.md)  
+Specifies the set of segment criteria to evaluate when handling segment groups for the segment\.
+*Required*: No
+*Type*: [List](aws-properties-pinpoint-segment-segmentgroups-groups.md) of [Groups](aws-properties-pinpoint-segment-segmentgroups-groups.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Include`  <a name="cfn-pinpoint-segment-segmentgroups-include"></a>
-Specifies how to handle multiple segment groups for the segment\. For example, if the segment includes three segment groups, whether the resulting segment includes endpoints that match all, any, or none of the segment groups\.  
-*Required*: No  
-*Type*: String  
+Specifies how to handle multiple segment groups for the segment\. For example, if the segment includes three segment groups, whether the resulting segment includes endpoints that match all, any, or none of the segment groups\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

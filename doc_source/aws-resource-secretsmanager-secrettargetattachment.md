@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SecretsManager::SecretTargetAttachment
-Properties: 
+Properties:
   [SecretId](#cfn-secretsmanager-secrettargetattachment-secretid): String
   [TargetId](#cfn-secretsmanager-secrettargetattachment-targetid): String
   [TargetType](#cfn-secretsmanager-secrettargetattachment-targettype): String
@@ -38,23 +38,23 @@ Properties:
 ## Properties<a name="aws-resource-secretsmanager-secrettargetattachment-properties"></a>
 
 `SecretId`  <a name="cfn-secretsmanager-secrettargetattachment-secretid"></a>
-The Amazon Resource Name \(ARN\) or the friendly name of the secret that contains the credentials that you want to use with the specified service or database\. To reference a secret that's also created in this template, use the see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) function with the secret's logical ID\.  
-*Required*: Yes  
-*Type*: String  
+The Amazon Resource Name \(ARN\) or the friendly name of the secret that contains the credentials that you want to use with the specified service or database\. To reference a secret that's also created in this template, use the see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) function with the secret's logical ID\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetId`  <a name="cfn-secretsmanager-secrettargetattachment-targetid"></a>
-The ARN of the service or database whose credentials are stored in the specified secret\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `20`  
-*Maximum*: `2048`  
+The ARN of the service or database whose credentials are stored in the specified secret\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `20`
+*Maximum*: `2048`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetType`  <a name="cfn-secretsmanager-secrettargetattachment-targettype"></a>
-A string used by the Secrets Manager console to determine how to parse the structure of the secret text and place the values in the proper fields of the console user interface\. If you created this secret using the Secrets Manager console then we recommend that you do not modify this value\. If this is a custom secret, then this field is available for your use\. As a best practice, do not store any sensitive information in this field\. Instead, store sensitive information in the `SecretString` or `SecretBinary` fields to ensure that it is encrypted\.  
-*Required*: Yes  
-*Type*: String  
+A string used by the Secrets Manager console to determine how to parse the structure of the secret text and place the values in the proper fields of the console user interface\. If you created this secret using the Secrets Manager console then we recommend that you do not modify this value\. If this is a custom secret, then this field is available for your use\. As a best practice, do not store any sensitive information in this field\. Instead, store sensitive information in the `SecretString` or `SecretBinary` fields to ensure that it is encrypted\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-secretsmanager-secrettargetattachment-return-values"></a>
@@ -67,7 +67,7 @@ When you pass the logical ID of an `AWS::SecretsManager::SecretTargetAttachement
 
 This enables you to reference a secret that you create in one part of the stack template from within the definition of another resource from a different part of the same template\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-secretsmanager-secrettargetattachment--examples"></a>
 
@@ -75,7 +75,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 The following example creates a secret,and then creates an Amazon RDS DB instance by using the credentials found in the secret for the new database's master user and password\. Finally, it updates the secret with the connection details of the database by defining the `SecretTargetAttachment`object\.
 
-**Note**  
+**Note**
 The JSON specification doesn't allow any kind of comments\. See the YAML example for comments\.
 
 #### JSON<a name="aws-resource-secretsmanager-secrettargetattachment--examples--Creating_a_Secret_and_an_RDS_DB_Instance--json"></a>

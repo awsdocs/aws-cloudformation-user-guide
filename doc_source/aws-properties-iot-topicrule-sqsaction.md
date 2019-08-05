@@ -27,19 +27,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-topicrule-sqsaction-properties"></a>
 
 `QueueUrl`  <a name="cfn-iot-topicrule-sqsaction-queueurl"></a>
-The URL of the Amazon SQS queue\.  
-*Required*: Yes  
-*Type*: String  
+The URL of the Amazon SQS queue\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-iot-topicrule-sqsaction-rolearn"></a>
-The ARN of the IAM role that grants access\.  
-*Required*: Yes  
-*Type*: String  
+The ARN of the IAM role that grants access\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UseBase64`  <a name="cfn-iot-topicrule-sqsaction-usebase64"></a>
-Specifies whether to use Base64 encoding\.  
-*Required*: No  
-*Type*: Boolean  
+Specifies whether to use Base64 encoding\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

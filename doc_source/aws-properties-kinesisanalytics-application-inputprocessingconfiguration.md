@@ -17,14 +17,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalytics-application-inputprocessingconfiguration-syntax.yaml"></a>
 
 ```
-  [InputLambdaProcessor](#cfn-kinesisanalytics-application-inputprocessingconfiguration-inputlambdaprocessor): 
+  [InputLambdaProcessor](#cfn-kinesisanalytics-application-inputprocessingconfiguration-inputlambdaprocessor):
     [InputLambdaProcessor](aws-properties-kinesisanalytics-application-inputlambdaprocessor.md)
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-application-inputprocessingconfiguration-properties"></a>
 
 `InputLambdaProcessor`  <a name="cfn-kinesisanalytics-application-inputprocessingconfiguration-inputlambdaprocessor"></a>
-The [InputLambdaProcessor](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputlambdaprocessor.html) that is used to preprocess the records in the stream before being processed by your application code\.  
-*Required*: No  
-*Type*: [InputLambdaProcessor](aws-properties-kinesisanalytics-application-inputlambdaprocessor.md)  
+The [InputLambdaProcessor](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputlambdaprocessor.html) that is used to preprocess the records in the stream before being processed by your application code\.
+*Required*: No
+*Type*: [InputLambdaProcessor](aws-properties-kinesisanalytics-application-inputlambdaprocessor.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -25,17 +25,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration-properties"></a>
 
 `ApplicationName`  <a name="cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration-applicationname"></a>
-The name of the application associated with the configuration\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
+The name of the application associated with the configuration\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TemplateName`  <a name="cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration-templatename"></a>
-The name of the configuration template\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
+The name of the configuration template\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

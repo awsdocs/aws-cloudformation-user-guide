@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-taskdefinition-containerdefinitions-environment-properties"></a>
 
 `Name`  <a name="cfn-ecs-taskdefinition-containerdefinition-environment-name"></a>
-The name of the key\-value pair\. For environment variables, this is the name of the environment variable\.  
-*Required*: No  
-*Type*: String  
+The name of the key\-value pair\. For environment variables, this is the name of the environment variable\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Value`  <a name="cfn-ecs-taskdefinition-containerdefinition-environment-value"></a>
-The value of the key\-value pair\. For environment variables, this is the value of the environment variable\.  
-*Required*: No  
-*Type*: String  
+The value of the key\-value pair\. For environment variables, this is the value of the environment variable\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

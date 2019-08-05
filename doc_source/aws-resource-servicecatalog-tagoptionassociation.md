@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceCatalog::TagOptionAssociation
-Properties: 
+Properties:
   [ResourceId](#cfn-servicecatalog-tagoptionassociation-resourceid): String
   [TagOptionId](#cfn-servicecatalog-tagoptionassociation-tagoptionid): String
 ```
@@ -30,15 +30,15 @@ Properties:
 ## Properties<a name="aws-resource-servicecatalog-tagoptionassociation-properties"></a>
 
 `ResourceId`  <a name="cfn-servicecatalog-tagoptionassociation-resourceid"></a>
-The resource identifier\.  
-*Required*: Yes  
-*Type*: String  
+The resource identifier\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TagOptionId`  <a name="cfn-servicecatalog-tagoptionassociation-tagoptionid"></a>
-The TagOption identifier\.  
-*Required*: Yes  
-*Type*: String  
+The TagOption identifier\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-servicecatalog-tagoptionassociation-return-values"></a>

@@ -1,6 +1,6 @@
 # AWS::EC2::PlacementGroup<a name="aws-resource-ec2-placementgroup"></a>
 
-Specifies a placement group in which to launch instances\. The strategy of the placement group determines how the instances are organized within the group\. 
+Specifies a placement group in which to launch instances\. The strategy of the placement group determines how the instances are organized within the group\.
 
 A `cluster` placement group is a logical grouping of instances within a single Availability Zone that benefit from low network latency, high network throughput\. A `spread` placement group places instances on distinct hardware\. A `partition` placement group places groups of instances in different partitions, where instances in one partition do not share the same hardware with instances in another partition\.
 
@@ -25,17 +25,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::PlacementGroup
-Properties: 
+Properties:
   [Strategy](#cfn-ec2-placementgroup-strategy): String
 ```
 
 ## Properties<a name="aws-resource-ec2-placementgroup-properties"></a>
 
 `Strategy`  <a name="cfn-ec2-placementgroup-strategy"></a>
-The placement strategy\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `cluster | partition | spread`  
+The placement strategy\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `cluster | partition | spread`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-placementgroup-return-values"></a>
@@ -50,7 +50,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Create a Placement Group<a name="aws-resource-ec2-placementgroup--examples--Create_a_Placement_Group"></a>
 
-The following example declares a placement group with a cluster placement strategy\. 
+The following example declares a placement group with a cluster placement strategy\.
 
 #### JSON<a name="aws-resource-ec2-placementgroup--examples--Create_a_Placement_Group--json"></a>
 

@@ -8,7 +8,7 @@ AWS CloudFormation provides the following Python helper scripts that you can use
 
 You call the scripts directly from your template\. The scripts work in conjunction with resource metadata that's defined in the same template\. The scripts run on the Amazon EC2 instance during the stack creation process\.
 
-**Note**  
+**Note**
 The scripts are not executed by default\. You must include calls in your template to execute specific helper scripts\.
 
 ## Amazon Linux AMI Images<a name="cfn-helper-scripts-reference-amazon-amis"></a>
@@ -22,12 +22,12 @@ The AWS CloudFormation helper scripts are preinstalled on Amazon Linux AMI image
 <a name="cfn-helper-scripts-reference-downloads"></a>For Linux/Unix distributions other than Amazon Linux AMI images and for Microsoft Windows \(2008 or later\), you can download the aws\-cfn\-bootstrap package\.
 
 
-| File Format | Download URL | 
-| --- | --- | 
-|  RPM  |  [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.amzn1\.noarch\.rpm](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.amzn1.noarch.rpm) Source files: [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.src\.rpm](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.src.rpm)  | 
-|  TAR\.GZ  |  [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.tar\.gz](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.tar.gz) Uses the Python easy\-install tools\. To complete the installation for Ubuntu, you must create a symlink: `ln -s /root/aws-cfn-bootstrap-latest/init/ubuntu/cfn-hup /etc/init.d/cfn-hup`  | 
-|  ZIP  |  [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.zip](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.zip)  | 
-|  MSI  |  32\-bit Windows: [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.msi](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.msi)  64\-bit Windows: [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-win64\-latest\.msi](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-win64-latest.msi)  | 
+| File Format | Download URL |
+| --- | --- |
+|  RPM  |  [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.amzn1\.noarch\.rpm](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.amzn1.noarch.rpm) Source files: [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.src\.rpm](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.src.rpm)  |
+|  TAR\.GZ  |  [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.tar\.gz](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.tar.gz) Uses the Python easy\-install tools\. To complete the installation for Ubuntu, you must create a symlink: `ln -s /root/aws-cfn-bootstrap-latest/init/ubuntu/cfn-hup /etc/init.d/cfn-hup`  |
+|  ZIP  |  [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.zip](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.zip)  |
+|  MSI  |  32\-bit Windows: [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.msi](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.msi)  64\-bit Windows: [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-win64\-latest\.msi](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-win64-latest.msi)  |
 
 ## Permissions for helper scripts<a name="cfn-helper-scripts-reference-permissions"></a>
 
@@ -38,7 +38,7 @@ If you choose to specify an option, we recommend that you specify only one of th
 + `--credential-file`
 + `--access-key` together with `--secret-key`
 
-If you do specify an option, keep in mind which permissions the various helper scripts require: 
+If you do specify an option, keep in mind which permissions the various helper scripts require:
 + `cfn-signal` requires [ `cloudformation:SignalResource`](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SignalResource.html)
 + All other helper scripts require [ `cloudformation:DescribeStackResource`](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeStackResources.html)
 

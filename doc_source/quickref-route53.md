@@ -19,7 +19,7 @@ This example adds an Amazon Route 53 resource record set containing an SPF recor
 ```
  1. "myDNSRecord" : {
  2.   "Type" : "AWS::Route53::RecordSet",
- 3.   "Properties" : 
+ 3.   "Properties" :
  4.   {
  5.     "HostedZoneId" : "Z3DG6IL3SJCGPX",
  6.     "Name" : "mysite.example.com.",
@@ -206,7 +206,7 @@ This example uses an [AWS::Route53::RecordSetGroup](https://docs.aws.amazon.com/
 
 The following example creates an alias record set that routes queries to the specified CloudFront distribution domain name\.
 
-**Note**  
+**Note**
 When you create alias resource record sets, you must specify `Z2FDTNDATAQYW2` for the `HostedZoneId` property, as shown in the following example\. Alias resource record sets for CloudFront can't be created in a private zone\.
 
 ### JSON<a name="quickref-route53-example-5.json"></a>

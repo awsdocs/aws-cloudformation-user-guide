@@ -27,20 +27,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-defaultretention-properties"></a>
 
 `Days`  <a name="cfn-s3-bucket-defaultretention-days"></a>
-The number of days that you want to specify for the default retention period\.  
-*Required*: No  
-*Type*: Integer  
+The number of days that you want to specify for the default retention period\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Mode`  <a name="cfn-s3-bucket-defaultretention-mode"></a>
-The default object lock retention mode you want to apply to new objects placed in the specified bucket\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `COMPLIANCE | GOVERNANCE`  
+The default object lock retention mode you want to apply to new objects placed in the specified bucket\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `COMPLIANCE | GOVERNANCE`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Years`  <a name="cfn-s3-bucket-defaultretention-years"></a>
-The number of years that you want to specify for the default retention period\.  
-*Required*: No  
-*Type*: Integer  
+The number of years that you want to specify for the default retention period\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

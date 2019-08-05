@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-batch-jobdefinition-resourcerequirement-properties"></a>
 
 `Type`  <a name="cfn-batch-jobdefinition-resourcerequirement-type"></a>
-The type of resource to assign to a container\. Currently, the only supported resource type is `GPU`\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `GPU`  
+The type of resource to assign to a container\. Currently, the only supported resource type is `GPU`\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `GPU`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-batch-jobdefinition-resourcerequirement-value"></a>
-The number of physical GPUs to reserve for the container\. The number of GPUs reserved for all containers in a job should not exceed the number of available GPUs on the compute resource that the job is launched on\.  
-*Required*: No  
-*Type*: String  
+The number of physical GPUs to reserve for the container\. The number of GPUs reserved for all containers in a job should not exceed the number of available GPUs on the compute resource that the job is launched on\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -13,9 +13,9 @@ Nested stacks can themselves contain other nested stacks, resulting in a hierarc
 
 ![\[Nested stacks, which are created as part of another stack, have an immediate parent stack, as well as the top-level root stack.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cfn-console-nested-stacks.png)
 
-Using nested stacks to declare common components is considered a [best practice](best-practices.md#nested)\. 
+Using nested stacks to declare common components is considered a [best practice](best-practices.md#nested)\.
 
-Certain stack operations, such as stack updates, should be initiated from the root stack rather than performed directly on nested stacks themselves\. Also, in some cases, nested stacks affect how stack operations are performed\. For more information, refer to the following topics: 
+Certain stack operations, such as stack updates, should be initiated from the root stack rather than performed directly on nested stacks themselves\. Also, in some cases, nested stacks affect how stack operations are performed\. For more information, refer to the following topics:
 + [Use Nested Stacks to Reuse Common Template Patterns](best-practices.md#nested)
 + [Protecting a Stack From Being Deleted](using-cfn-protect-stacks.md)
 + [Update Behaviors of Stack Resources](using-cfn-updating-stacks-update-behaviors.md)

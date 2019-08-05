@@ -22,26 +22,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Budgets::Budget
-Properties: 
-  [Budget](#cfn-budgets-budget-budget): 
+Properties:
+  [Budget](#cfn-budgets-budget-budget):
     [BudgetData](aws-properties-budgets-budget-budgetdata.md)
-  [NotificationsWithSubscribers](#cfn-budgets-budget-notificationswithsubscribers): 
+  [NotificationsWithSubscribers](#cfn-budgets-budget-notificationswithsubscribers):
     - [NotificationWithSubscribers](aws-properties-budgets-budget-notificationwithsubscribers.md)
 ```
 
 ## Properties<a name="aws-resource-budgets-budget-properties"></a>
 
 `Budget`  <a name="cfn-budgets-budget-budget"></a>
-The budget object that you want to create\.  
-*Required*: Yes  
-*Type*: [BudgetData](aws-properties-budgets-budget-budgetdata.md)  
+The budget object that you want to create\.
+*Required*: Yes
+*Type*: [BudgetData](aws-properties-budgets-budget-budgetdata.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NotificationsWithSubscribers`  <a name="cfn-budgets-budget-notificationswithsubscribers"></a>
-A notification that you want to associate with a budget\. A budget can have up to five notifications, and each notification can have one SNS subscriber and up to 10 email subscribers\. If you include notifications and subscribers in your `CreateBudget` call, AWS creates the notifications and subscribers for you\.  
-*Required*: No  
-*Type*: List of [NotificationWithSubscribers](aws-properties-budgets-budget-notificationwithsubscribers.md)  
-*Maximum*: `5`  
+A notification that you want to associate with a budget\. A budget can have up to five notifications, and each notification can have one SNS subscriber and up to 10 email subscribers\. If you include notifications and subscribers in your `CreateBudget` call, AWS creates the notifications and subscribers for you\.
+*Required*: No
+*Type*: List of [NotificationWithSubscribers](aws-properties-budgets-budget-notificationwithsubscribers.md)
+*Maximum*: `5`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-budgets-budget-return-values"></a>
@@ -175,4 +175,4 @@ Outputs:
 ```
 
 ## See Also<a name="aws-resource-budgets-budget--seealso"></a>
-+  [CreateBudget](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_CreateBudget.html) in the *AWS Cost Explorer Service Cost Management APIs* 
++  [CreateBudget](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_CreateBudget.html) in the *AWS Cost Explorer Service Cost Management APIs*

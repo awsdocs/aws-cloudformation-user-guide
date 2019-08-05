@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Cloud9::EnvironmentEC2
-Properties: 
+Properties:
   [AutomaticStopTimeMinutes](#cfn-cloud9-environmentec2-automaticstoptimeminutes): Integer
   [Description](#cfn-cloud9-environmentec2-description): String
   [InstanceType](#cfn-cloud9-environmentec2-instancetype): String
   [Name](#cfn-cloud9-environmentec2-name): String
   [OwnerArn](#cfn-cloud9-environmentec2-ownerarn): String
-  [Repositories](#cfn-cloud9-environmentec2-repositories): 
+  [Repositories](#cfn-cloud9-environmentec2-repositories):
     - [Repository](aws-properties-cloud9-environmentec2-repository.md)
   [SubnetId](#cfn-cloud9-environmentec2-subnetid): String
 ```
@@ -41,53 +41,53 @@ Properties:
 ## Properties<a name="aws-resource-cloud9-environmentec2-properties"></a>
 
 `AutomaticStopTimeMinutes`  <a name="cfn-cloud9-environmentec2-automaticstoptimeminutes"></a>
-The number of minutes until the running instance is shut down after the environment was last used\.  
-*Required*: No  
-*Type*: Integer  
-*Maximum*: `20160`  
+The number of minutes until the running instance is shut down after the environment was last used\.
+*Required*: No
+*Type*: Integer
+*Maximum*: `20160`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-cloud9-environmentec2-description"></a>
-The description of the environment to create\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `200`  
+The description of the environment to create\.
+*Required*: No
+*Type*: String
+*Maximum*: `200`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceType`  <a name="cfn-cloud9-environmentec2-instancetype"></a>
-The type of instance to connect to the environment \(for example, `t2.micro`\)\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `5`  
-*Maximum*: `20`  
-*Pattern*: `^[a-z][1-9][.][a-z0-9]+$`  
+The type of instance to connect to the environment \(for example, `t2.micro`\)\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `5`
+*Maximum*: `20`
+*Pattern*: `^[a-z][1-9][.][a-z0-9]+$`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-cloud9-environmentec2-name"></a>
-The name of the environment\.  
-*Required*: No  
-*Type*: String  
+The name of the environment\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OwnerArn`  <a name="cfn-cloud9-environmentec2-ownerarn"></a>
-The Amazon Resource Name \(ARN\) of the environment owner\. This ARN can be the ARN of any AWS Identity and Access Management \(IAM\) principal\. If this value is not specified, the ARN defaults to this environment's creator\.  
-*Required*: No  
-*Type*: String  
-*Pattern*: `arn:aws:(iam|sts)::\d+:(root|user|federated-user|assumed-role)\/?\S*`  
+The Amazon Resource Name \(ARN\) of the environment owner\. This ARN can be the ARN of any AWS Identity and Access Management \(IAM\) principal\. If this value is not specified, the ARN defaults to this environment's creator\.
+*Required*: No
+*Type*: String
+*Pattern*: `arn:aws:(iam|sts)::\d+:(root|user|federated-user|assumed-role)\/?\S*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Repositories`  <a name="cfn-cloud9-environmentec2-repositories"></a>
-Any AWS CodeCommit source code repositories to be cloned into the development environment\.  
-*Required*: No  
-*Type*: List of [Repository](aws-properties-cloud9-environmentec2-repository.md)  
+Any AWS CodeCommit source code repositories to be cloned into the development environment\.
+*Required*: No
+*Type*: List of [Repository](aws-properties-cloud9-environmentec2-repository.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetId`  <a name="cfn-cloud9-environmentec2-subnetid"></a>
-The ID of the subnet in Amazon Virtual Private Cloud \(Amazon VPC\) that AWS Cloud9 will use to communicate with the Amazon Elastic Compute Cloud \(Amazon EC2\) instance\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `5`  
-*Maximum*: `30`  
+The ID of the subnet in Amazon Virtual Private Cloud \(Amazon VPC\) that AWS Cloud9 will use to communicate with the Amazon Elastic Compute Cloud \(Amazon EC2\) instance\.
+*Required*: No
+*Type*: String
+*Minimum*: `5`
+*Maximum*: `30`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-cloud9-environmentec2-return-values"></a>

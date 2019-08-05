@@ -23,9 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-apigatewayv2-route-parameterconstraints-properties"></a>
 
 `Required`  <a name="cfn-apigatewayv2-route-parameterconstraints-required"></a>
-Specifies whether the parameter is required\.  
-*Required*: Yes  
-*Type*: Boolean  
+Specifies whether the parameter is required\.
+*Required*: Yes
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-apigatewayv2-route-parameterconstraints--seealso"></a>

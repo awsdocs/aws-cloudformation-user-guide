@@ -1,6 +1,6 @@
 # AWS::ApiGateway::ApiKey<a name="aws-resource-apigateway-apikey"></a>
 
-The `AWS::ApiGateway::ApiKey` resource creates a unique key that you can distribute to clients who are executing API Gateway `Method` resources that require an API key\. To specify which API key clients must use, map the API key with the `RestApi` and `Stage` resources that include the methods that require a key\. 
+The `AWS::ApiGateway::ApiKey` resource creates a unique key that you can distribute to clients who are executing API Gateway `Method` resources that require an API key\. To specify which API key clients must use, map the API key with the `RestApi` and `Stage` resources that include the methods that require a key\.
 
 ## Syntax<a name="aws-resource-apigateway-apikey-syntax"></a>
 
@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::ApiKey
-Properties: 
+Properties:
   [CustomerId](#cfn-apigateway-apikey-customerid): String
   [Description](#cfn-apigateway-apikey-description): String
   [Enabled](#cfn-apigateway-apikey-enabled): Boolean
   [GenerateDistinctId](#cfn-apigateway-apikey-generatedistinctid): Boolean
   [Name](#cfn-apigateway-apikey-name): String
-  [StageKeys](#cfn-apigateway-apikey-stagekeys): 
+  [StageKeys](#cfn-apigateway-apikey-stagekeys):
     - [StageKey](aws-properties-apigateway-apikey-stagekey.md)
   [Value](#cfn-apigateway-apikey-value): String
 ```
@@ -41,46 +41,46 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-apikey-properties"></a>
 
 `CustomerId`  <a name="cfn-apigateway-apikey-customerid"></a>
-An AWS Marketplace customer identifier to use when integrating with the AWS SaaS Marketplace\.  
-*Required*: No  
-*Type*: String  
+An AWS Marketplace customer identifier to use when integrating with the AWS SaaS Marketplace\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-apigateway-apikey-description"></a>
-A description of the purpose of the API key\.  
-*Required*: No  
-*Type*: String  
+A description of the purpose of the API key\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-apigateway-apikey-enabled"></a>
-Indicates whether the API key can be used by clients\.  
-*Required*: No  
-*Type*: Boolean  
+Indicates whether the API key can be used by clients\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GenerateDistinctId`  <a name="cfn-apigateway-apikey-generatedistinctid"></a>
-Specifies whether the key identifier is distinct from the created API key value\.  
-*Required*: No  
-*Type*: Boolean  
+Specifies whether the key identifier is distinct from the created API key value\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-apigateway-apikey-name"></a>
-A name for the API key\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the API key name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
-If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\. 
-*Required*: No  
-*Type*: String  
+A name for the API key\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the API key name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.
+If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StageKeys`  <a name="cfn-apigateway-apikey-stagekeys"></a>
-A list of stages to associate with this API key\.  
-*Required*: No  
-*Type*: List of [StageKey](aws-properties-apigateway-apikey-stagekey.md)  
+A list of stages to associate with this API key\.
+*Required*: No
+*Type*: List of [StageKey](aws-properties-apigateway-apikey-stagekey.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-apigateway-apikey-value"></a>
-The value of the API key\.  
-*Required*: No  
-*Type*: String  
+The value of the API key\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-apigateway-apikey-return-values"></a>

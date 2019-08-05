@@ -24,8 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Batch::JobQueue
-Properties: 
-  [ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder): 
+Properties:
+  [ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder):
     - [ComputeEnvironmentOrder](aws-properties-batch-jobqueue-computeenvironmentorder.md)
   [JobQueueName](#cfn-batch-jobqueue-jobqueuename): String
   [Priority](#cfn-batch-jobqueue-priority): Integer
@@ -35,28 +35,28 @@ Properties:
 ## Properties<a name="aws-resource-batch-jobqueue-properties"></a>
 
 `ComputeEnvironmentOrder`  <a name="cfn-batch-jobqueue-computeenvironmentorder"></a>
-The set of compute environments mapped to a job queue and their order relative to each other\. The job scheduler uses this parameter to determine which compute environment should execute a given job\. Compute environments must be in the `VALID` state before you can associate them with a job queue\. You can associate up to three compute environments with a job queue\.  
-*Required*: Yes  
-*Type*: [List](aws-properties-batch-jobqueue-computeenvironmentorder.md) of [ComputeEnvironmentOrder](aws-properties-batch-jobqueue-computeenvironmentorder.md)  
+The set of compute environments mapped to a job queue and their order relative to each other\. The job scheduler uses this parameter to determine which compute environment should execute a given job\. Compute environments must be in the `VALID` state before you can associate them with a job queue\. You can associate up to three compute environments with a job queue\.
+*Required*: Yes
+*Type*: [List](aws-properties-batch-jobqueue-computeenvironmentorder.md) of [ComputeEnvironmentOrder](aws-properties-batch-jobqueue-computeenvironmentorder.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JobQueueName`  <a name="cfn-batch-jobqueue-jobqueuename"></a>
-The name of the job queue\.  
-*Required*: No  
-*Type*: String  
+The name of the job queue\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Priority`  <a name="cfn-batch-jobqueue-priority"></a>
-The priority of the job queue\. Job queues with a higher priority \(or a higher integer value for the `priority` parameter\) are evaluated first when associated with the same compute environment\. Priority is determined in descending order, for example, a job queue with a priority value of `10` is given scheduling preference over a job queue with a priority value of `1`\.  
-*Required*: Yes  
-*Type*: Integer  
+The priority of the job queue\. Job queues with a higher priority \(or a higher integer value for the `priority` parameter\) are evaluated first when associated with the same compute environment\. Priority is determined in descending order, for example, a job queue with a priority value of `10` is given scheduling preference over a job queue with a priority value of `1`\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `State`  <a name="cfn-batch-jobqueue-state"></a>
-The state of the job queue\. If the job queue state is `ENABLED`, it is able to accept jobs\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+The state of the job queue\. If the job queue state is `ENABLED`, it is able to accept jobs\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `DISABLED | ENABLED`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-batch-jobqueue-return-values"></a>

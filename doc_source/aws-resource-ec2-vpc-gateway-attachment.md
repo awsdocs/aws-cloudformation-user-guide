@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPCGatewayAttachment
-Properties: 
+Properties:
   [InternetGatewayId](#cfn-ec2-vpcgatewayattachment-internetgatewayid): String
   [VpcId](#cfn-ec2-vpcgatewayattachment-vpcid): String
   [VpnGatewayId](#cfn-ec2-vpcgatewayattachment-vpngatewayid): String
@@ -32,23 +32,23 @@ Properties:
 ## Properties<a name="aws-resource-ec2-vpc-gateway-attachment-properties"></a>
 
 `InternetGatewayId`  <a name="cfn-ec2-vpcgatewayattachment-internetgatewayid"></a>
-The ID of the internet gateway\.  
-You must specify either `InternetGatewayId` or `VpnGatewayId`, but not both\.  
-*Required*: No  
-*Type*: String  
+The ID of the internet gateway\.
+You must specify either `InternetGatewayId` or `VpnGatewayId`, but not both\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcId`  <a name="cfn-ec2-vpcgatewayattachment-vpcid"></a>
-The ID of the VPC\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the VPC\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpnGatewayId`  <a name="cfn-ec2-vpcgatewayattachment-vpngatewayid"></a>
-The ID of the virtual private gateway\.  
-You must specify either `InternetGatewayId` or `VpnGatewayId`, but not both\.  
-*Required*: No  
-*Type*: String  
+The ID of the virtual private gateway\.
+You must specify either `InternetGatewayId` or `VpnGatewayId`, but not both\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-ec2-vpc-gateway-attachment-return-values"></a>
@@ -63,7 +63,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### VPN Gateway Attachment<a name="aws-resource-ec2-vpc-gateway-attachment--examples--VPN_Gateway_Attachment"></a>
 
-To attach both an Internet gateway and a VPN gateway to a VPC, you must specify two separate AWS::EC2::VPCGatewayAttachment resources: 
+To attach both an Internet gateway and a VPN gateway to a VPC, you must specify two separate AWS::EC2::VPCGatewayAttachment resources:
 
 #### JSON<a name="aws-resource-ec2-vpc-gateway-attachment--examples--VPN_Gateway_Attachment--json"></a>
 
@@ -75,7 +75,7 @@ To attach both an Internet gateway and a VPN gateway to a VPC, you must specify 
        "InternetGatewayId" : { "Ref" : "myInternetGateway" }
     }
 },
-            
+
 "AttachVpnGateway" : {
    "Type" : "AWS::EC2::VPCGatewayAttachment",
    "Properties" : {

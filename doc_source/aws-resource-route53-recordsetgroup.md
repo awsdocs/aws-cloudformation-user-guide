@@ -24,41 +24,41 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Route53::RecordSetGroup
-Properties: 
+Properties:
   [Comment](#cfn-route53-recordsetgroup-comment): String
   [HostedZoneId](#cfn-route53-recordsetgroup-hostedzoneid): String
   [HostedZoneName](#cfn-route53-recordsetgroup-hostedzonename): String
-  [RecordSets](#cfn-route53-recordsetgroup-recordsets): 
+  [RecordSets](#cfn-route53-recordsetgroup-recordsets):
     - [RecordSet](aws-properties-route53-recordset-1.md)
 ```
 
 ## Properties<a name="aws-resource-route53-recordsetgroup-properties"></a>
 
 `Comment`  <a name="cfn-route53-recordsetgroup-comment"></a>
- *Optional:* Any comments you want to include about a change batch request\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `256`  
+ *Optional:* Any comments you want to include about a change batch request\.
+*Required*: No
+*Type*: String
+*Maximum*: `256`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HostedZoneId`  <a name="cfn-route53-recordsetgroup-hostedzoneid"></a>
-The ID of the hosted zone that contains the resource record sets that you want to change\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `32`  
+The ID of the hosted zone that contains the resource record sets that you want to change\.
+*Required*: No
+*Type*: String
+*Maximum*: `32`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HostedZoneName`  <a name="cfn-route53-recordsetgroup-hostedzonename"></a>
-The name of the hosted zone that you want to create, update, or delete resource record sets in\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `1024`  
+The name of the hosted zone that you want to create, update, or delete resource record sets in\.
+*Required*: No
+*Type*: String
+*Maximum*: `1024`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RecordSets`  <a name="cfn-route53-recordsetgroup-recordsets"></a>
-A complex type that contains one `RecordSet` element for each resource record set that you want to add, update, or delete\.  
-*Required*: No  
-*Type*: List of [RecordSet](aws-properties-route53-recordset-1.md)  
+A complex type that contains one `RecordSet` element for each resource record set that you want to add, update, or delete\.
+*Required*: No
+*Type*: List of [RecordSet](aws-properties-route53-recordset-1.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-route53-recordsetgroup-return-values"></a>
@@ -89,7 +89,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
       "Type" : "AWS::Route53::RecordSet",
       "Properties" : {
          "HostedZoneName" : { "Ref" : "HostedZoneResource" },
-         "Comment" : "DNS name for my instance.",  
+         "Comment" : "DNS name for my instance.",
          "Name" : {
             "Fn::Join" : [ "", [
                {"Ref" : "Ec2Instance"}, ".",

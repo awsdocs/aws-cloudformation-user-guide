@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGatewayV2::Api
-Properties: 
+Properties:
   [ApiKeySelectionExpression](#cfn-apigatewayv2-api-apikeyselectionexpression): String
   [Description](#cfn-apigatewayv2-api-description): String
   [DisableSchemaValidation](#cfn-apigatewayv2-api-disableschemavalidation): Boolean
@@ -40,45 +40,45 @@ Properties:
 ## Properties<a name="aws-resource-apigatewayv2-api-properties"></a>
 
 `ApiKeySelectionExpression`  <a name="cfn-apigatewayv2-api-apikeyselectionexpression"></a>
-An API key selection expression\. See [API Key Selection Expressions](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-apikey-selection-expressions)\.  
-*Required*: No  
-*Type*: String  
+An API key selection expression\. See [API Key Selection Expressions](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-apikey-selection-expressions)\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-apigatewayv2-api-description"></a>
-The description of the API\.  
-*Required*: No  
-*Type*: String  
+The description of the API\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DisableSchemaValidation`  <a name="cfn-apigatewayv2-api-disableschemavalidation"></a>
-Avoid validating models when creating a deployment\.  
-*Required*: No  
-*Type*: Boolean  
+Avoid validating models when creating a deployment\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-apigatewayv2-api-name"></a>
-The name of the API\.  
-*Required*: Yes  
-*Type*: String  
+The name of the API\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProtocolType`  <a name="cfn-apigatewayv2-api-protocoltype"></a>
-The API protocol: Currently only `WEBSOCKET` is supported\.  
-*Required*: Yes  
-*Type*: String  
+The API protocol: Currently only `WEBSOCKET` is supported\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RouteSelectionExpression`  <a name="cfn-apigatewayv2-api-routeselectionexpression"></a>
-The route selection expression for the API\.  
-*Required*: Yes  
-*Type*: String  
+The route selection expression for the API\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-apigatewayv2-api-version"></a>
-A version identifier for the API\.  
-*Required*: No  
-*Type*: String  
+A version identifier for the API\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-apigatewayv2-api-return-values"></a>

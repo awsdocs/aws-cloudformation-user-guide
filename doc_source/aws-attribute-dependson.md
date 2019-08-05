@@ -2,8 +2,8 @@
 
 With the `DependsOn` attribute you can specify that the creation of a specific resource follows another\. When you add a `DependsOn` attribute to a resource, that resource is created only after the creation of the resource specified in the `DependsOn` attribute\.
 
-**Important**  
-Dependent stacks also have implicit dependencies\. For example, if the properties of resource A use a `!Ref` to resource B, the following rule apply:  
+**Important**
+Dependent stacks also have implicit dependencies\. For example, if the properties of resource A use a `!Ref` to resource B, the following rule apply:
 Resource B is created before resource A\.
 Resource A is deleted before resource B\.
 
@@ -12,7 +12,7 @@ You can use the `DependsOn` attribute with any resource\. Here are some typical 
 + Declare dependencies for resources that must be created or deleted in a specific order\. For example, you must explicitly declare dependencies on gateway attachments for some resources in a VPC\. For more information, see [When a DependsOn attribute is required](#gatewayattachment)\.
 + Override default parallelism when creating, updating, or deleting resources\. AWS CloudFormation creates, updates, and deletes resources in parallel to the extent possible\. It automatically determines which resources in a template can be parallelized and which have dependencies that require other operations to finish first\. You can use `DependsOn` to explicitly specify dependencies, which overrides the default parallelism and directs CloudFormation to operate on those resources in a specified order\.
 
-**Note**  
+**Note**
 During a stack update, resources that depend on updated resources are updated automatically\. AWS CloudFormation makes no changes to the automatically\-updated resources, but, if a stack policy is associated with these resources, your account must have the permissions to update them\.
 
 ## Syntax<a name="w4784ab1c21c19c15c13"></a>
@@ -34,20 +34,20 @@ The following template contains an [AWS::EC2::Instance](https://docs.aws.amazon.
  2.     "AWSTemplateFormatVersion" : "2010-09-09",
  3.     "Mappings" : {
  4.         "RegionMap" : {
- 5.             "us-east-1" : { 
- 6.                 "AMI" : "ami-0ff8a91507f77f867" 
+ 5.             "us-east-1" : {
+ 6.                 "AMI" : "ami-0ff8a91507f77f867"
  7.             },
- 8.             "us-west-1" : { 
- 9.                 "AMI" : "ami-0bdb828fd58c52235" 
+ 8.             "us-west-1" : {
+ 9.                 "AMI" : "ami-0bdb828fd58c52235"
 10.             },
-11.             "eu-west-1" : { 
-12.                 "AMI" : "ami-047bb4163c506cd98" 
+11.             "eu-west-1" : {
+12.                 "AMI" : "ami-047bb4163c506cd98"
 13.             },
-14.             "ap-northeast-1" : { 
-15.                 "AMI" : "ami-06cd52961ce9f0d85" 
+14.             "ap-northeast-1" : {
+15.                 "AMI" : "ami-06cd52961ce9f0d85"
 16.             },
-17.             "ap-southeast-1" : { 
-18.                 "AMI" : "ami-08569b978cc4dfa10" 
+17.             "ap-southeast-1" : {
+18.                 "AMI" : "ami-08569b978cc4dfa10"
 19.             }
 20.         }
 21.     },
@@ -143,11 +143,11 @@ The following snippet shows a sample gateway attachment and an Amazon EC2 instan
 "GatewayToInternet" : {
   "Type" : "AWS::EC2::VPCGatewayAttachment",
   "Properties" : {
-    "VpcId" : { 
-      "Ref" : "VPC" 
+    "VpcId" : {
+      "Ref" : "VPC"
     },
-    "InternetGatewayId" : { 
-      "Ref" : "InternetGateway" 
+    "InternetGatewayId" : {
+      "Ref" : "InternetGateway"
     }
   }
 },
@@ -156,11 +156,11 @@ The following snippet shows a sample gateway attachment and an Amazon EC2 instan
   "Type" : "AWS::EC2::Instance",
   "DependsOn" : "GatewayToInternet",
   "Properties" : {
-    "InstanceType" : { 
-      "Ref" : "EC2InstanceType" 
+    "InstanceType" : {
+      "Ref" : "EC2InstanceType"
     },
-    "KeyName"  : { 
-      "Ref" : "KeyName" 
+    "KeyName"  : {
+      "Ref" : "KeyName"
     },
     "ImageId": {
       "Fn::FindInMap": [
@@ -182,15 +182,15 @@ The following snippet shows a sample gateway attachment and an Amazon EC2 instan
     "NetworkInterfaces" : [
       {
         "GroupSet" : [
-          { 
-            "Ref" : "EC2SecurityGroup" 
+          {
+            "Ref" : "EC2SecurityGroup"
           }
         ],
         "AssociatePublicIpAddress" : "true",
         "DeviceIndex" : "0",
         "DeleteOnTermination" : "true",
-        "SubnetId" : { 
-          "Ref" : "PublicSubnet" 
+        "SubnetId" : {
+          "Ref" : "PublicSubnet"
         }
       }
     ]
@@ -255,8 +255,8 @@ When you use Auto Scaling or Amazon Elastic Compute Cloud \(Amazon EC2\) to crea
       {
         "ContainerName": "simple-app",
         "ContainerPort": "80",
-        "LoadBalancerName" : { 
-          "Ref" : "EcsElasticLoadBalancer" 
+        "LoadBalancerName" : {
+          "Ref" : "EcsElasticLoadBalancer"
         }
       }
     ],

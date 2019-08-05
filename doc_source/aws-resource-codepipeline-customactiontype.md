@@ -1,6 +1,6 @@
 # AWS::CodePipeline::CustomActionType<a name="aws-resource-codepipeline-customactiontype"></a>
 
-The `AWS::CodePipeline::CustomActionType` resource creates a custom action for activities that aren't included in the CodePipeline default actions, such as running an internally developed build process or a test suite\. You can use these custom actions in the stage of a pipeline\. For more information, see [Create and Add a Custom Action in AWS CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/how-to-create-custom-action.html) in the *AWS CodePipeline User Guide*\. 
+The `AWS::CodePipeline::CustomActionType` resource creates a custom action for activities that aren't included in the CodePipeline default actions, such as running an internally developed build process or a test suite\. You can use these custom actions in the stage of a pipeline\. For more information, see [Create and Add a Custom Action in AWS CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/how-to-create-custom-action.html) in the *AWS CodePipeline User Guide*\.
 
 ## Syntax<a name="aws-resource-codepipeline-customactiontype-syntax"></a>
 
@@ -27,16 +27,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CodePipeline::CustomActionType
-Properties: 
+Properties:
   [Category](#cfn-codepipeline-customactiontype-category): String
-  [ConfigurationProperties](#cfn-codepipeline-customactiontype-configurationproperties): 
+  [ConfigurationProperties](#cfn-codepipeline-customactiontype-configurationproperties):
     - [ConfigurationProperties](aws-properties-codepipeline-customactiontype-configurationproperties.md)
-  [InputArtifactDetails](#cfn-codepipeline-customactiontype-inputartifactdetails): 
+  [InputArtifactDetails](#cfn-codepipeline-customactiontype-inputartifactdetails):
     [ArtifactDetails](aws-properties-codepipeline-customactiontype-artifactdetails.md)
-  [OutputArtifactDetails](#cfn-codepipeline-customactiontype-outputartifactdetails): 
+  [OutputArtifactDetails](#cfn-codepipeline-customactiontype-outputartifactdetails):
     [ArtifactDetails](aws-properties-codepipeline-customactiontype-artifactdetails.md)
   [Provider](#cfn-codepipeline-customactiontype-provider): String
-  [Settings](#cfn-codepipeline-customactiontype-settings): 
+  [Settings](#cfn-codepipeline-customactiontype-settings):
     [Settings](aws-properties-codepipeline-customactiontype-settings.md)
   [Version](#cfn-codepipeline-customactiontype-version): String
 ```
@@ -44,55 +44,55 @@ Properties:
 ## Properties<a name="aws-resource-codepipeline-customactiontype-properties"></a>
 
 `Category`  <a name="cfn-codepipeline-customactiontype-category"></a>
-The category of the custom action, such as a build action or a test action\.  
+The category of the custom action, such as a build action or a test action\.
 Although `Source` and `Approval` are listed as valid values, they are not currently functional\. These values are reserved for future use\.
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `Approval | Build | Deploy | Invoke | Source | Test`  
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `Approval | Build | Deploy | Invoke | Source | Test`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ConfigurationProperties`  <a name="cfn-codepipeline-customactiontype-configurationproperties"></a>
-The configuration properties for the custom action\.  
+The configuration properties for the custom action\.
 You can refer to a name in the configuration properties of the custom action within the URL templates by following the format of \{Config:name\}, as long as the configuration property is both required and not secret\. For more information, see [Create a Custom Action for a Pipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/how-to-create-custom-action.html)\.
-*Required*: No  
-*Type*: [List](aws-properties-codepipeline-customactiontype-configurationproperties.md) of [ConfigurationProperties](aws-properties-codepipeline-customactiontype-configurationproperties.md)  
-*Maximum*: `10`  
+*Required*: No
+*Type*: [List](aws-properties-codepipeline-customactiontype-configurationproperties.md) of [ConfigurationProperties](aws-properties-codepipeline-customactiontype-configurationproperties.md)
+*Maximum*: `10`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InputArtifactDetails`  <a name="cfn-codepipeline-customactiontype-inputartifactdetails"></a>
-The details of the input artifact for the action, such as its commit ID\.  
-*Required*: Yes  
-*Type*: [ArtifactDetails](aws-properties-codepipeline-customactiontype-artifactdetails.md)  
+The details of the input artifact for the action, such as its commit ID\.
+*Required*: Yes
+*Type*: [ArtifactDetails](aws-properties-codepipeline-customactiontype-artifactdetails.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OutputArtifactDetails`  <a name="cfn-codepipeline-customactiontype-outputartifactdetails"></a>
-The details of the output artifact of the action, such as its commit ID\.  
-*Required*: Yes  
-*Type*: [ArtifactDetails](aws-properties-codepipeline-customactiontype-artifactdetails.md)  
+The details of the output artifact of the action, such as its commit ID\.
+*Required*: Yes
+*Type*: [ArtifactDetails](aws-properties-codepipeline-customactiontype-artifactdetails.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Provider`  <a name="cfn-codepipeline-customactiontype-provider"></a>
-The provider of the service used in the custom action, such as AWS CodeDeploy\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `25`  
-*Pattern*: `[0-9A-Za-z_-]+`  
+The provider of the service used in the custom action, such as AWS CodeDeploy\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `25`
+*Pattern*: `[0-9A-Za-z_-]+`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Settings`  <a name="cfn-codepipeline-customactiontype-settings"></a>
-URLs that provide users information about this custom action\.  
-*Required*: No  
-*Type*: [Settings](aws-properties-codepipeline-customactiontype-settings.md)  
+URLs that provide users information about this custom action\.
+*Required*: No
+*Type*: [Settings](aws-properties-codepipeline-customactiontype-settings.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Version`  <a name="cfn-codepipeline-customactiontype-version"></a>
-The version identifier of the custom action\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `9`  
-*Pattern*: `[0-9A-Za-z_-]+`  
+The version identifier of the custom action\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `9`
+*Pattern*: `[0-9A-Za-z_-]+`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-codepipeline-customactiontype-return-values"></a>
@@ -112,66 +112,66 @@ The following example is a custom build action that requires users to specify on
 #### JSON<a name="aws-resource-codepipeline-customactiontype--examples--Custom_Action_Type_Resource_Configuration--json"></a>
 
 ```
-"MyCustomActionType": { 
-  "Type": "AWS::CodePipeline::CustomActionType", 
-  "Properties": { 
-    "Category": "Build", 
-    "Provider": "My-Build-Provider-Name", 
-    "Version": { "Ref" : "Version" }, 
-    "ConfigurationProperties": [ 
+"MyCustomActionType": {
+  "Type": "AWS::CodePipeline::CustomActionType",
+  "Properties": {
+    "Category": "Build",
+    "Provider": "My-Build-Provider-Name",
+    "Version": { "Ref" : "Version" },
+    "ConfigurationProperties": [
       {
-        "Description": "The name of the build project must be provided when this action is added to the pipeline.", 
-        "Key": "true", 
-        "Name": "MyProjectName", 
-        "Queryable": "false", 
-        "Required": "true", 
-        "Secret": "false", 
-        "Type": "String" 
-      } 
-    ], 
-    "InputArtifactDetails": { 
-      "MaximumCount": "1", 
-      "MinimumCount": "1" 
-    }, 
-    "OutputArtifactDetails": { 
-      "MaximumCount": { "Ref" : "MaximumCountForOutputArtifactDetails" }, 
-      "MinimumCount": "0" 
-    }, 
+        "Description": "The name of the build project must be provided when this action is added to the pipeline.",
+        "Key": "true",
+        "Name": "MyProjectName",
+        "Queryable": "false",
+        "Required": "true",
+        "Secret": "false",
+        "Type": "String"
+      }
+    ],
+    "InputArtifactDetails": {
+      "MaximumCount": "1",
+      "MinimumCount": "1"
+    },
+    "OutputArtifactDetails": {
+      "MaximumCount": { "Ref" : "MaximumCountForOutputArtifactDetails" },
+      "MinimumCount": "0"
+    },
     "Settings": {
       "EntityUrlTemplate": "https://my-build-instance/job/{Config:ProjectName}/",
       "ExecutionUrlTemplate": "https://my-build-instance/job/{Config:ProjectName}/lastSuccessfulBuild/{ExternalExecutionId}/"
-    } 
-  } 
+    }
+  }
 }
 ```
 
 #### YAML<a name="aws-resource-codepipeline-customactiontype--examples--Custom_Action_Type_Resource_Configuration--yaml"></a>
 
 ```
-MyCustomActionType: 
+MyCustomActionType:
   Type: AWS::CodePipeline::CustomActionType
-  Properties: 
-    Category: Build 
-    Provider: "My-Build-Provider-Name" 
-    Version: 
+  Properties:
+    Category: Build
+    Provider: "My-Build-Provider-Name"
+    Version:
       Ref: Version
-    ConfigurationProperties: 
-      - 
-        Description: "The name of the build project must be provided when this action is added to the pipeline." 
-        Key: true 
-        Name: MyProjectName 
+    ConfigurationProperties:
+      -
+        Description: "The name of the build project must be provided when this action is added to the pipeline."
+        Key: true
+        Name: MyProjectName
         Queryable: false
-        Required: true 
-        Secret: false 
-        Type: String 
-    InputArtifactDetails: 
+        Required: true
+        Secret: false
+        Type: String
+    InputArtifactDetails:
       MaximumCount: 1
-      MinimumCount: 1 
-    OutputArtifactDetails: 
-      MaximumCount: 
-        Ref: MaximumCountForOutputArtifactDetails 
-      MinimumCount: 0 
-    Settings: 
-      EntityUrlTemplate: "https://my-build-instance/job/{Config:ProjectName}/" 
+      MinimumCount: 1
+    OutputArtifactDetails:
+      MaximumCount:
+        Ref: MaximumCountForOutputArtifactDetails
+      MinimumCount: 0
+    Settings:
+      EntityUrlTemplate: "https://my-build-instance/job/{Config:ProjectName}/"
       ExecutionUrlTemplate: "https://my-build-instance/job/{Config:ProjectName}/lastSuccessfulBuild/{ExternalExecutionId}/"
 ```

@@ -23,13 +23,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-kinesisfirehoseinput-properties"></a>
 
 `ResourceARN`  <a name="cfn-kinesisanalyticsv2-application-kinesisfirehoseinput-resourcearn"></a>
-The Amazon Resource Name \(ARN\) of the delivery stream\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `2048`  
-*Pattern*: `arn:.*`  
+The Amazon Resource Name \(ARN\) of the delivery stream\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `2048`
+*Pattern*: `arn:.*`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-kinesisanalyticsv2-application-kinesisfirehoseinput--seealso"></a>
-+  [KinesisFirehoseInput](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_KinesisFirehoseInput.html) in the *Amazon Kinesis Data Analytics API Reference* 
++  [KinesisFirehoseInput](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_KinesisFirehoseInput.html) in the *Amazon Kinesis Data Analytics API Reference*

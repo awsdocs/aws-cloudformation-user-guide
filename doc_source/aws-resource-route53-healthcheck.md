@@ -2,7 +2,7 @@
 
 The `AWS::Route53::HealthCheck` resource is a Route 53 resource type that contains settings for a Route 53 health check\.
 
-For information about associating health checks with resource record sets, see [HealthCheckId](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResourceRecordSet.html#Route53-Type-ResourceRecordSet-HealthCheckId) in [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html)\. 
+For information about associating health checks with resource record sets, see [HealthCheckId](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResourceRecordSet.html#Route53-Type-ResourceRecordSet-HealthCheckId) in [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html)\.
 
 **ELB Load Balancers**
 
@@ -35,25 +35,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Route53::HealthCheck
-Properties: 
-  [HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig): 
+Properties:
+  [HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig):
     [HealthCheckConfig](aws-properties-route53-healthcheck-healthcheckconfig.md)
-  [HealthCheckTags](#cfn-route53-healthcheck-healthchecktags): 
+  [HealthCheckTags](#cfn-route53-healthcheck-healthchecktags):
     - [HealthCheckTag](aws-properties-route53-healthcheck-healthchecktag.md)
 ```
 
 ## Properties<a name="aws-resource-route53-healthcheck-properties"></a>
 
 `HealthCheckConfig`  <a name="cfn-route53-healthcheck-healthcheckconfig"></a>
-A complex type that contains detailed information about one health check\.  
-*Required*: Yes  
-*Type*: [HealthCheckConfig](aws-properties-route53-healthcheck-healthcheckconfig.md)  
+A complex type that contains detailed information about one health check\.
+*Required*: Yes
+*Type*: [HealthCheckConfig](aws-properties-route53-healthcheck-healthcheckconfig.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckTags`  <a name="cfn-route53-healthcheck-healthchecktags"></a>
-The `HealthCheckTags` property describes key\-value pairs that are associated with an `AWS::Route53::HealthCheck` resource\.   
-*Required*: No  
-*Type*: List of [HealthCheckTag](aws-properties-route53-healthcheck-healthchecktag.md)  
+The `HealthCheckTags` property describes key\-value pairs that are associated with an `AWS::Route53::HealthCheck` resource\.
+*Required*: No
+*Type*: List of [HealthCheckTag](aws-properties-route53-healthcheck-healthchecktag.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-route53-healthcheck-return-values"></a>
@@ -100,10 +100,10 @@ The following example creates an Amazon Route 53 health check that sends HTTP re
 #### YAML<a name="aws-resource-route53-healthcheck--examples--Create_health_check--yaml"></a>
 
 ```
-myHealthCheck: 
+myHealthCheck:
   Type: "AWS::Route53::HealthCheck"
-  Properties: 
-    HealthCheckConfig: 
+  Properties:
+    HealthCheckConfig:
       IPAddress: "192.0.2.44"
       Port: "80"
       Type: "HTTP"
@@ -111,11 +111,11 @@ myHealthCheck:
       FullyQualifiedDomainName: "example.com"
       RequestInterval: "30"
       FailureThreshold: "3"
-    HealthCheckTags: 
-      - 
+    HealthCheckTags:
+      -
         Key: "SampleKey1"
         Value: "SampleValue1"
-      - 
+      -
         Key: "SampleKey2"
         Value: "SampleValue2"
 ```

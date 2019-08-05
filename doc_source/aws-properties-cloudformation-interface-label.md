@@ -21,6 +21,6 @@ default: String
 ## Properties<a name="w4784ab1c17c15c15c25c19b7"></a>
 
 `default`  <a name="cfn-cloudformation-interface-labelproperty-default"></a>
-The default label that the AWS CloudFormation console uses to name a parameter group or parameter\.  
-*Required*: No  
+The default label that the AWS CloudFormation console uses to name a parameter group or parameter\.
+*Required*: No
 *Type*: String

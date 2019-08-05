@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ActionOnFailure](#cfn-elasticmapreduce-cluster-stepconfig-actiononfailure): String
-  [HadoopJarStep](#cfn-elasticmapreduce-cluster-stepconfig-hadoopjarstep): 
+  [HadoopJarStep](#cfn-elasticmapreduce-cluster-stepconfig-hadoopjarstep):
     [HadoopJarStepConfig](aws-properties-elasticmapreduce-cluster-hadoopjarstepconfig.md)
   [Name](#cfn-elasticmapreduce-cluster-stepconfig-name): String
 ```
@@ -28,23 +28,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-stepconfig-properties"></a>
 
 `ActionOnFailure`  <a name="cfn-elasticmapreduce-cluster-stepconfig-actiononfailure"></a>
-The action to take when the cluster step fails\. Possible values are TERMINATE\_CLUSTER, CANCEL\_AND\_WAIT, and CONTINUE\. TERMINATE\_JOB\_FLOW is provided for backward compatibility\. We recommend using TERMINATE\_CLUSTER instead\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `CANCEL_AND_WAIT | CONTINUE | TERMINATE_CLUSTER | TERMINATE_JOB_FLOW`  
+The action to take when the cluster step fails\. Possible values are TERMINATE\_CLUSTER, CANCEL\_AND\_WAIT, and CONTINUE\. TERMINATE\_JOB\_FLOW is provided for backward compatibility\. We recommend using TERMINATE\_CLUSTER instead\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `CANCEL_AND_WAIT | CONTINUE | TERMINATE_CLUSTER | TERMINATE_JOB_FLOW`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HadoopJarStep`  <a name="cfn-elasticmapreduce-cluster-stepconfig-hadoopjarstep"></a>
-The JAR file used for the step\.  
-*Required*: Yes  
-*Type*: [HadoopJarStepConfig](aws-properties-elasticmapreduce-cluster-hadoopjarstepconfig.md)  
+The JAR file used for the step\.
+*Required*: Yes
+*Type*: [HadoopJarStepConfig](aws-properties-elasticmapreduce-cluster-hadoopjarstepconfig.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-elasticmapreduce-cluster-stepconfig-name"></a>
-The name of the step\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `256`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+The name of the step\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `256`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

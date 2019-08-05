@@ -21,16 +21,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ECS::Cluster
-Properties: 
+Properties:
   [ClusterName](#cfn-ecs-cluster-clustername): String
 ```
 
 ## Properties<a name="aws-resource-ecs-cluster-properties"></a>
 
 `ClusterName`  <a name="cfn-ecs-cluster-clustername"></a>
-A user\-generated string that you use to identify your cluster\. If you don't specify a name, AWS CloudFormation generates a unique physical ID for the name\.  
-*Required*: No  
-*Type*: String  
+A user\-generated string that you use to identify your cluster\. If you don't specify a name, AWS CloudFormation generates a unique physical ID for the name\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ecs-cluster-return-values"></a>
@@ -41,7 +41,7 @@ A user\-generated string that you use to identify your cluster\. If you don't sp
 
 In the following example, the `Ref` function returns the name of the `MyECSCluster` cluster, such as `MyStack-MyECSCluster-NT5EUXTNTXXD`\.
 
- `{ "Ref": "MyECSCluster" }` 
+ `{ "Ref": "MyECSCluster" }`
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

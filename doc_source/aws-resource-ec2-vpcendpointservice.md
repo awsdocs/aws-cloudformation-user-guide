@@ -24,24 +24,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPCEndpointService
-Properties: 
+Properties:
   [AcceptanceRequired](#cfn-ec2-vpcendpointservice-acceptancerequired): Boolean
-  [NetworkLoadBalancerArns](#cfn-ec2-vpcendpointservice-networkloadbalancerarns): 
+  [NetworkLoadBalancerArns](#cfn-ec2-vpcendpointservice-networkloadbalancerarns):
     - String
 ```
 
 ## Properties<a name="aws-resource-ec2-vpcendpointservice-properties"></a>
 
 `AcceptanceRequired`  <a name="cfn-ec2-vpcendpointservice-acceptancerequired"></a>
-Indicates whether requests from service consumers to create an endpoint to your service must be accepted\.  
-*Required*: No  
-*Type*: Boolean  
+Indicates whether requests from service consumers to create an endpoint to your service must be accepted\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkLoadBalancerArns`  <a name="cfn-ec2-vpcendpointservice-networkloadbalancerarns"></a>
-The Amazon Resource Names \(ARNs\) of one or more Network Load Balancers for your service\.  
-*Required*: Yes  
-*Type*: List of String  
+The Amazon Resource Names \(ARNs\) of one or more Network Load Balancers for your service\.
+*Required*: Yes
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-ec2-vpcendpointservice-return-values"></a>

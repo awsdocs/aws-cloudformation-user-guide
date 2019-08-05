@@ -29,15 +29,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::MSK::Cluster
-Properties: 
-  [BrokerNodeGroupInfo](#cfn-msk-cluster-brokernodegroupinfo): 
+Properties:
+  [BrokerNodeGroupInfo](#cfn-msk-cluster-brokernodegroupinfo):
     [BrokerNodeGroupInfo](aws-properties-msk-cluster-brokernodegroupinfo.md)
-  [ClientAuthentication](#cfn-msk-cluster-clientauthentication): 
+  [ClientAuthentication](#cfn-msk-cluster-clientauthentication):
     [ClientAuthentication](aws-properties-msk-cluster-clientauthentication.md)
   [ClusterName](#cfn-msk-cluster-clustername): String
-  [ConfigurationInfo](#cfn-msk-cluster-configurationinfo): 
+  [ConfigurationInfo](#cfn-msk-cluster-configurationinfo):
     [ConfigurationInfo](aws-properties-msk-cluster-configurationinfo.md)
-  [EncryptionInfo](#cfn-msk-cluster-encryptioninfo): 
+  [EncryptionInfo](#cfn-msk-cluster-encryptioninfo):
     [EncryptionInfo](aws-properties-msk-cluster-encryptioninfo.md)
   [EnhancedMonitoring](#cfn-msk-cluster-enhancedmonitoring): String
   [KafkaVersion](#cfn-msk-cluster-kafkaversion): String
@@ -48,58 +48,58 @@ Properties:
 ## Properties<a name="aws-resource-msk-cluster-properties"></a>
 
 `BrokerNodeGroupInfo`  <a name="cfn-msk-cluster-brokernodegroupinfo"></a>
-The setup to be used for brokers in the cluster\.  
-*Required*: Yes  
-*Type*: [BrokerNodeGroupInfo](aws-properties-msk-cluster-brokernodegroupinfo.md)  
+The setup to be used for brokers in the cluster\.
+*Required*: Yes
+*Type*: [BrokerNodeGroupInfo](aws-properties-msk-cluster-brokernodegroupinfo.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ClientAuthentication`  <a name="cfn-msk-cluster-clientauthentication"></a>
-Includes information related to client authentication\.  
-*Required*: No  
-*Type*: [ClientAuthentication](aws-properties-msk-cluster-clientauthentication.md)  
+Includes information related to client authentication\.
+*Required*: No
+*Type*: [ClientAuthentication](aws-properties-msk-cluster-clientauthentication.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ClusterName`  <a name="cfn-msk-cluster-clustername"></a>
-The name of the cluster\.  
-*Required*: Yes  
-*Type*: String  
+The name of the cluster\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ConfigurationInfo`  <a name="cfn-msk-cluster-configurationinfo"></a>
-The Amazon MSK configuration to use for the cluster\.  
-*Required*: No  
-*Type*: [ConfigurationInfo](aws-properties-msk-cluster-configurationinfo.md)  
+The Amazon MSK configuration to use for the cluster\.
+*Required*: No
+*Type*: [ConfigurationInfo](aws-properties-msk-cluster-configurationinfo.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EncryptionInfo`  <a name="cfn-msk-cluster-encryptioninfo"></a>
-Includes all encryption\-related information\.  
-*Required*: No  
-*Type*: [EncryptionInfo](aws-properties-msk-cluster-encryptioninfo.md)  
+Includes all encryption\-related information\.
+*Required*: No
+*Type*: [EncryptionInfo](aws-properties-msk-cluster-encryptioninfo.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EnhancedMonitoring`  <a name="cfn-msk-cluster-enhancedmonitoring"></a>
-Specifies the level of monitoring for the MSK cluster\. The possible values are `DEFAULT`, `PER_BROKER`, and `PER_TOPIC_PER_BROKER`\.  
-*Required*: No  
-*Type*: String  
+Specifies the level of monitoring for the MSK cluster\. The possible values are `DEFAULT`, `PER_BROKER`, and `PER_TOPIC_PER_BROKER`\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KafkaVersion`  <a name="cfn-msk-cluster-kafkaversion"></a>
-The version of Apache Kafka\.  
-*Required*: Yes  
-*Type*: String  
+The version of Apache Kafka\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NumberOfBrokerNodes`  <a name="cfn-msk-cluster-numberofbrokernodes"></a>
-The number of broker nodes you want in the Amazon MSK cluster\.  
-*Required*: Yes  
-*Type*: Integer  
+The number of broker nodes you want in the Amazon MSK cluster\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-msk-cluster-tags"></a>
-An array of key\-value pairs to apply to this resource\. You can specify tags in JSON or in YAML, depending on which format you use for your template\.  
-For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
-*Required*: No  
-*Type*: Json  
+An array of key\-value pairs to apply to this resource\. You can specify tags in JSON or in YAML, depending on which format you use for your template\.
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.
+*Required*: No
+*Type*: Json
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-msk-cluster-return-values"></a>
@@ -108,7 +108,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon MSK cluster ARN\. For example:
 
- `REF MyTestCluster` 
+ `REF MyTestCluster`
 
 For the Amazon MSK cluster `MyTestCluster`, Ref returns the ARN of the cluster\.
 

@@ -4,7 +4,7 @@ If you want to modify resources and properties that are declared in a stack temp
 
 If you want to modify just the parameters or settings of a stack \(like a stack's Amazon SNS topic\), you can reuse the existing stack template\. You don't need to get a copy of the stack template or make modifications to the stack template\.
 
-**Note**  
+**Note**
 If your template includes an unsupported change, AWS CloudFormation returns a message saying that the change is not permitted\. This message might occur asynchronously, however, because resources are created and updated by AWS CloudFormation in a non\-deterministic order by default\.
 
 **Topics**
@@ -13,7 +13,7 @@ If your template includes an unsupported change, AWS CloudFormation returns a me
 
 ## Update a Stack's Template \(Console\)<a name="using-cfn-updating-stacks-get-stack.CON"></a>
 
-1. In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), select the stack that you want to update and then choose the **Actions** and then **View in Designer**\.  
+1. In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), select the stack that you want to update and then choose the **Actions** and then **View in Designer**\.
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stack-detail-pane-template.png)
 
    AWS CloudFormation opens a copy of the stack's template in AWS CloudFormation Designer\.
@@ -33,14 +33,14 @@ If your template includes an unsupported change, AWS CloudFormation returns a me
      + *Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
      + *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
    + Add, modify, or delete attributes for resources \(`Metadata`, `DependsOn`, `CreationPolicy`, `UpdatePolicy`, and `DeletionPolicy`\)\.
-**Important**  
+**Important**
 You cannot update the `CreationPolicy`, `DeletionPolicy`\. or `UpdatePolicy` attribute by itself\. You can update them only when you include changes that add, modify, or delete resources\. For example, you can add or modify a metadata attribute of a resource\.
    + Add, modify, or delete parameter declarations\. However, you cannot add, modify, or delete a parameter that is used by a resource that does not support updates\.
    + Add, modify, or delete mapping declarations\.
-**Important**  
+**Important**
 If the values in a mapping are not being used by your stack, you can't update the mapping by itself\. You need to include changes that add, modify, or delete resources\. For example, you can add or modify a metadata attribute of a resource\. If you update a mapping value that your stack is using, you don't need to make any other changes to trigger an update\.
    + Add, modify, or delete condition declarations\.
-**Important**  
+**Important**
 You cannot update conditions by themselves\. You can update conditions only when you include changes that add, modify, or delete resources\. For example, you can add or modify a metadata attribute of a resource\.
    + Add, modify, or delete output value declarations\.
 

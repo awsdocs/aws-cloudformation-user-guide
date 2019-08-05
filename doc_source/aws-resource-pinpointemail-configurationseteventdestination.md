@@ -25,9 +25,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::PinpointEmail::ConfigurationSetEventDestination
-Properties: 
+Properties:
   [ConfigurationSetName](#cfn-pinpointemail-configurationseteventdestination-configurationsetname): String
-  [EventDestination](#cfn-pinpointemail-configurationseteventdestination-eventdestination): 
+  [EventDestination](#cfn-pinpointemail-configurationseteventdestination-eventdestination):
     [EventDestination](aws-properties-pinpointemail-configurationseteventdestination-eventdestination.md)
   [EventDestinationName](#cfn-pinpointemail-configurationseteventdestination-eventdestinationname): String
 ```
@@ -35,21 +35,21 @@ Properties:
 ## Properties<a name="aws-resource-pinpointemail-configurationseteventdestination-properties"></a>
 
 `ConfigurationSetName`  <a name="cfn-pinpointemail-configurationseteventdestination-configurationsetname"></a>
-The name of the configuration set that contains the event destination that you want to modify\.  
-*Required*: Yes  
-*Type*: String  
+The name of the configuration set that contains the event destination that you want to modify\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EventDestination`  <a name="cfn-pinpointemail-configurationseteventdestination-eventdestination"></a>
-An object that defines the event destination\.  
-*Required*: No  
-*Type*: [EventDestination](aws-properties-pinpointemail-configurationseteventdestination-eventdestination.md)  
+An object that defines the event destination\.
+*Required*: No
+*Type*: [EventDestination](aws-properties-pinpointemail-configurationseteventdestination-eventdestination.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventDestinationName`  <a name="cfn-pinpointemail-configurationseteventdestination-eventdestinationname"></a>
-The name of the event destination that you want to modify\.  
-*Required*: Yes  
-*Type*: String  
+The name of the event destination that you want to modify\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-pinpointemail-configurationseteventdestination-return-values"></a>
@@ -58,7 +58,7 @@ The name of the event destination that you want to modify\.
 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
 
- `{ "Ref": "myEventDestination" }` 
+ `{ "Ref": "myEventDestination" }`
 
 For the Amazon Pinpoint event destination `myEventDestination`, Ref returns the name of the configuration set event destination\.
 

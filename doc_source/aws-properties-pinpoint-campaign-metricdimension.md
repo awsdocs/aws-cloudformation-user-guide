@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-campaign-metricdimension-properties"></a>
 
 `ComparisonOperator`  <a name="cfn-pinpoint-campaign-metricdimension-comparisonoperator"></a>
-The operator to use when comparing metric values\. Valid values are: `GREATER_THAN`, `LESS_THAN`, `GREATER_THAN_OR_EQUAL`, `LESS_THAN_OR_EQUAL`, and `EQUAL`\.  
-*Required*: No  
-*Type*: String  
+The operator to use when comparing metric values\. Valid values are: `GREATER_THAN`, `LESS_THAN`, `GREATER_THAN_OR_EQUAL`, `LESS_THAN_OR_EQUAL`, and `EQUAL`\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-pinpoint-campaign-metricdimension-value"></a>
-The value to compare\.  
-*Required*: No  
-*Type*: Double  
+The value to compare\.
+*Required*: No
+*Type*: Double
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

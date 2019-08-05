@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpointemail-configurationset-trackingoptions-properties"></a>
 
 `CustomRedirectDomain`  <a name="cfn-pinpointemail-configurationset-trackingoptions-customredirectdomain"></a>
-The domain that you want to use for tracking open and click events\.  
-*Required*: No  
-*Type*: String  
+The domain that you want to use for tracking open and click events\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

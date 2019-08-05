@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-application-syntax.yaml"></a>
 
 ```
-  [AdditionalInfo](#cfn-elasticmapreduce-cluster-application-additionalinfo): 
+  [AdditionalInfo](#cfn-elasticmapreduce-cluster-application-additionalinfo):
     Key : Value
-  [Args](#cfn-elasticmapreduce-cluster-application-args): 
+  [Args](#cfn-elasticmapreduce-cluster-application-args):
     - String
   [Name](#cfn-elasticmapreduce-cluster-application-name): String
   [Version](#cfn-elasticmapreduce-cluster-application-version): String
@@ -35,25 +35,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-application-properties"></a>
 
 `AdditionalInfo`  <a name="cfn-elasticmapreduce-cluster-application-additionalinfo"></a>
-This option is for advanced users only\. This is meta information about clusters and applications that are used for testing and troubleshooting\.  
-*Required*: No  
-*Type*: Map of String  
+This option is for advanced users only\. This is meta information about clusters and applications that are used for testing and troubleshooting\.
+*Required*: No
+*Type*: Map of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Args`  <a name="cfn-elasticmapreduce-cluster-application-args"></a>
-Arguments for Amazon EMR to pass to the application\.  
-*Required*: No  
-*Type*: List of String  
+Arguments for Amazon EMR to pass to the application\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-elasticmapreduce-cluster-application-name"></a>
-The name of the application\.  
-*Required*: No  
-*Type*: String  
+The name of the application\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-elasticmapreduce-cluster-application-version"></a>
-The version of the application\.  
-*Required*: No  
-*Type*: String  
+The version of the application\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

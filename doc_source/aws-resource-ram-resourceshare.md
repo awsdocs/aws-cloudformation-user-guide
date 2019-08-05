@@ -25,47 +25,47 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RAM::ResourceShare
-Properties: 
+Properties:
   [AllowExternalPrincipals](#cfn-ram-resourceshare-allowexternalprincipals): Boolean
   [Name](#cfn-ram-resourceshare-name): String
-  [Principals](#cfn-ram-resourceshare-principals): 
+  [Principals](#cfn-ram-resourceshare-principals):
     - String
-  [ResourceArns](#cfn-ram-resourceshare-resourcearns): 
+  [ResourceArns](#cfn-ram-resourceshare-resourcearns):
     - String
-  [Tags](#cfn-ram-resourceshare-tags): 
+  [Tags](#cfn-ram-resourceshare-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-ram-resourceshare-properties"></a>
 
 `AllowExternalPrincipals`  <a name="cfn-ram-resourceshare-allowexternalprincipals"></a>
-Indicates whether principals outside your AWS organization can be associated with a resource share\.  
-*Required*: No  
-*Type*: Boolean  
+Indicates whether principals outside your AWS organization can be associated with a resource share\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ram-resourceshare-name"></a>
-The name of the resource share\.  
-*Required*: Yes  
-*Type*: String  
+The name of the resource share\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Principals`  <a name="cfn-ram-resourceshare-principals"></a>
-The principals to associate with the resource share\. The possible values are IDs of AWS accounts, the ARN of an OU or organization from AWS Organizations\.  
-*Required*: No  
-*Type*: List of String  
+The principals to associate with the resource share\. The possible values are IDs of AWS accounts, the ARN of an OU or organization from AWS Organizations\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceArns`  <a name="cfn-ram-resourceshare-resourcearns"></a>
-The Amazon Resource Names \(ARN\) of the resources to associate with the resource share\.  
-*Required*: No  
-*Type*: List of String  
+The Amazon Resource Names \(ARN\) of the resources to associate with the resource share\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-ram-resourceshare-tags"></a>
-One or more tags\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+One or more tags\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-ram-resourceshare-return-values"></a>
@@ -146,5 +146,5 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-ram-resourceshare--seealso"></a>
-+  [CreateResourceShare](https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html) in the *AWS Resource Access Manager API Reference* 
-+  [AWS Resource Access Manager User Guide](https://docs.aws.amazon.com/ram/latest/userguide) 
++  [CreateResourceShare](https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html) in the *AWS Resource Access Manager API Reference*
++  [AWS Resource Access Manager User Guide](https://docs.aws.amazon.com/ram/latest/userguide)

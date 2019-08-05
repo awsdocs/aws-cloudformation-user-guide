@@ -24,52 +24,52 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SageMaker::EndpointConfig
-Properties: 
+Properties:
   [EndpointConfigName](#cfn-sagemaker-endpointconfig-endpointconfigname): String
   [KmsKeyId](#cfn-sagemaker-endpointconfig-kmskeyid): String
-  [ProductionVariants](#cfn-sagemaker-endpointconfig-productionvariants): 
+  [ProductionVariants](#cfn-sagemaker-endpointconfig-productionvariants):
     - [ProductionVariant](aws-properties-sagemaker-endpointconfig-productionvariant.md)
-  [Tags](#cfn-sagemaker-endpointconfig-tags): 
+  [Tags](#cfn-sagemaker-endpointconfig-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-sagemaker-endpointconfig-properties"></a>
 
 `EndpointConfigName`  <a name="cfn-sagemaker-endpointconfig-endpointconfigname"></a>
-The name of the endpoint configuration\. You specify this name in a [CreateEndpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpoint.html) request\.   
-*Required*: No  
-*Type*: String  
-*Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+The name of the endpoint configuration\. You specify this name in a [CreateEndpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpoint.html) request\.
+*Required*: No
+*Type*: String
+*Maximum*: `63`
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-sagemaker-endpointconfig-kmskeyid"></a>
-The Amazon Resource Name \(ARN\) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `2048`  
-*Pattern*: `.*`  
+The Amazon Resource Name \(ARN\) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint\.
+*Required*: No
+*Type*: String
+*Maximum*: `2048`
+*Pattern*: `.*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ProductionVariants`  <a name="cfn-sagemaker-endpointconfig-productionvariants"></a>
-A list of `ProductionVariant` objects, one for each model that you want to host at this endpoint\.  
-*Required*: Yes  
-*Type*: List of [ProductionVariant](aws-properties-sagemaker-endpointconfig-productionvariant.md)  
+A list of `ProductionVariant` objects, one for each model that you want to host at this endpoint\.
+*Required*: Yes
+*Type*: List of [ProductionVariant](aws-properties-sagemaker-endpointconfig-productionvariant.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-sagemaker-endpointconfig-tags"></a>
-A list of key\-value pairs to apply to this resource\.  
-For more information, see [Resource Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) and [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what)\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Maximum*: `50`  
+A list of key\-value pairs to apply to this resource\.
+For more information, see [Resource Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) and [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what)\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+*Maximum*: `50`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-sagemaker-endpointconfig-return-values"></a>
 
 ### Ref<a name="aws-resource-sagemaker-endpointconfig-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the endpoint configuration, such as `arn:aws:sagemaker:us-west-2:01234567>8901:endpoint-config/myendpointconfig` 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the endpoint configuration, such as `arn:aws:sagemaker:us-west-2:01234567>8901:endpoint-config/myendpointconfig`
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -200,9 +200,9 @@ The following example creates an endpoint configuration from a trained model, an
     "EndpointName": {
       "Value": { "Fn::GetAtt" : [ "Endpoint", "EndpointName" ] }
     }
-    
+
   }
-  
+
 }
 ```
 
@@ -210,8 +210,8 @@ The following example creates an endpoint configuration from a trained model, an
 
 ```
 Description: "Basic Hosting entities test.  We need models to create endpoint configs."
-Mappings: 
-  RegionMap: 
+Mappings:
+  RegionMap:
     "us-west-2":
       "NullTransformer": "123456789012.dkr.ecr.us-west-2.amazonaws.com/mymodel:latest"
     "us-east-2":
@@ -250,27 +250,27 @@ Resources:
         Image: !FindInMap [RegionMap, !Ref "AWS::Region", "NullTransformer"]
       ExecutionRoleArn: !GetAtt ExecutionRole.Arn
 
-  ExecutionRole: 
+  ExecutionRole:
     Type: "AWS::IAM::Role"
-    Properties: 
-      AssumeRolePolicyDocument: 
+    Properties:
+      AssumeRolePolicyDocument:
         Version: "2012-10-17"
-        Statement: 
-          - 
+        Statement:
+          -
             Effect: "Allow"
-            Principal: 
-              Service: 
+            Principal:
+              Service:
                 - "sagemaker.amazonaws.com"
-            Action: 
+            Action:
               - "sts:AssumeRole"
       Path: "/"
-      Policies: 
-        - 
+      Policies:
+        -
           PolicyName: "root"
-          PolicyDocument: 
+          PolicyDocument:
             Version: "2012-10-17"
-            Statement: 
-              - 
+            Statement:
+              -
                 Effect: "Allow"
                 Action: "*"
                 Resource: "*"

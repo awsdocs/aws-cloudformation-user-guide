@@ -23,16 +23,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Pinpoint::App
-Properties: 
+Properties:
   [Name](#cfn-pinpoint-app-name): String
 ```
 
 ## Properties<a name="aws-resource-pinpoint-app-properties"></a>
 
 `Name`  <a name="cfn-pinpoint-app-name"></a>
-The display name of the application\.  
-*Required*: Yes  
-*Type*: String  
+The display name of the application\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-pinpoint-app-return-values"></a>

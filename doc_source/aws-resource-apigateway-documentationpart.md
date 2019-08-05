@@ -23,8 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::DocumentationPart
-Properties: 
-  [Location](#cfn-apigateway-documentationpart-location): 
+Properties:
+  [Location](#cfn-apigateway-documentationpart-location):
     [Location](aws-properties-apigateway-documentationpart-location.md)
   [Properties](#cfn-apigateway-documentationpart-properties): String
   [RestApiId](#cfn-apigateway-documentationpart-restapiid): String
@@ -33,21 +33,21 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-documentationpart-properties"></a>
 
 `Location`  <a name="cfn-apigateway-documentationpart-location"></a>
-The location of the API entity that the documentation applies to\.  
-*Required*: Yes  
-*Type*: [Location](aws-properties-apigateway-documentationpart-location.md)  
+The location of the API entity that the documentation applies to\.
+*Required*: Yes
+*Type*: [Location](aws-properties-apigateway-documentationpart-location.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Properties`  <a name="cfn-apigateway-documentationpart-properties"></a>
-The documentation content map of the targeted API entity\.  
-*Required*: Yes  
-*Type*: String  
+The documentation content map of the targeted API entity\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RestApiId`  <a name="cfn-apigateway-documentationpart-restapiid"></a>
-The identifier of the targeted API entity\.  
-*Required*: Yes  
-*Type*: String  
+The identifier of the targeted API entity\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-apigateway-documentationpart-return-values"></a>

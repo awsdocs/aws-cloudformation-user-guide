@@ -228,12 +228,12 @@ The following example shows commands in the EC2 user data that use the pseudo pa
  1.           "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
  2.              "#!/bin/bash -xe\n",
  3.              "yum install -y aws-cfn-bootstrap\n",
- 4. 
+ 4.
  5.              "/opt/aws/bin/cfn-init -v ",
  6.              "         --stack ", { "Ref" : "AWS::StackName" },
  7.              "         --resource LaunchConfig ",
  8.              "         --region ", { "Ref" : "AWS::Region" }, "\n",
- 9. 
+ 9.
 10.              "/opt/aws/bin/cfn-signal -e $? ",
 11.              "         --stack ", { "Ref" : "AWS::StackName" },
 12.              "         --resource WebServerGroup ",
@@ -419,11 +419,11 @@ This example shows an AWS Tag property\. You would specify this property within 
 ### YAML<a name="quickref-general-example-15.yaml"></a>
 
 ```
-1. Tags: 
-2.   - 
+1. Tags:
+2.   -
 3.     Key: "keyname1"
 4.     Value: "value1"
-5.   - 
+5.   -
 6.     Key: "keyname2"
 7.     Value: "value2"
 ```

@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Logs::SubscriptionFilter
-Properties: 
+Properties:
   [DestinationArn](#cfn-cwl-subscriptionfilter-destinationarn): String
   [FilterPattern](#cfn-cwl-subscriptionfilter-filterpattern): String
   [LogGroupName](#cfn-cwl-subscriptionfilter-loggroupname): String
@@ -40,32 +40,32 @@ Properties:
 ## Properties<a name="aws-resource-logs-subscriptionfilter-properties"></a>
 
 `DestinationArn`  <a name="cfn-cwl-subscriptionfilter-destinationarn"></a>
-The Amazon Resource Name \(ARN\) of the destination\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
+The Amazon Resource Name \(ARN\) of the destination\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FilterPattern`  <a name="cfn-cwl-subscriptionfilter-filterpattern"></a>
-The filtering expressions that restrict what gets delivered to the destination AWS resource\. For more information about the filter pattern syntax, see [Filter and Pattern Syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html)\.   
-*Required*: Yes  
-*Type*: String  
+The filtering expressions that restrict what gets delivered to the destination AWS resource\. For more information about the filter pattern syntax, see [Filter and Pattern Syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html)\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LogGroupName`  <a name="cfn-cwl-subscriptionfilter-loggroupname"></a>
-The log group to associate with the subscription filter\. All log events that are uploaded to this log group are filtered and delivered to the specified AWS resource if the filter pattern matches the log events\.   
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `512`  
-*Pattern*: `[\.\-_/#A-Za-z0-9]+`  
+The log group to associate with the subscription filter\. All log events that are uploaded to this log group are filtered and delivered to the specified AWS resource if the filter pattern matches the log events\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `512`
+*Pattern*: `[\.\-_/#A-Za-z0-9]+`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleArn`  <a name="cfn-cwl-subscriptionfilter-rolearn"></a>
-The ARN of an IAM role that grants CloudWatch Logs permissions to deliver ingested log events to the destination stream\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
+The ARN of an IAM role that grants CloudWatch Logs permissions to deliver ingested log events to the destination stream\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-logs-subscriptionfilter-return-values"></a>
@@ -99,18 +99,18 @@ The following example sends log events that are associated with the `Root` user 
 #### YAML<a name="aws-resource-logs-subscriptionfilter--examples--Create_a_Subscription_Filter--yaml"></a>
 
 ```
-SubscriptionFilter: 
+SubscriptionFilter:
   Type: AWS::Logs::SubscriptionFilter
-  Properties: 
-    RoleArn: 
-      Fn::GetAtt: 
+  Properties:
+    RoleArn:
+      Fn::GetAtt:
         - "CloudWatchIAMRole"
         - "Arn"
-    LogGroupName: 
+    LogGroupName:
       Ref: "LogGroup"
     FilterPattern: "{$.userIdentity.type = Root}"
-    DestinationArn: 
-      Fn::GetAtt: 
+    DestinationArn:
+      Fn::GetAtt:
         - "KinesisStream"
         - "Arn"
 ```

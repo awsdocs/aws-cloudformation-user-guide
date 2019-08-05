@@ -4,7 +4,7 @@ The `AWS::S3::Bucket` resource creates an Amazon S3 bucket in the same AWS Regio
 
 To control how AWS CloudFormation handles the bucket when the stack is deleted, you can set a deletion policy for your bucket\. You can choose to *retain* the bucket or to *delete* the bucket\. For more information, see [DeletionPolicy Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)\.
 
-**Important**  
+**Important**
 You can only delete empty buckets\. Deletion fails for buckets that have contents\.
 
 ## Syntax<a name="aws-properties-s3-bucket-syntax"></a>
@@ -43,155 +43,155 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::S3::Bucket
-Properties: 
-  [AccelerateConfiguration](#cfn-s3-bucket-accelerateconfiguration): 
+Properties:
+  [AccelerateConfiguration](#cfn-s3-bucket-accelerateconfiguration):
     [AccelerateConfiguration](aws-properties-s3-bucket-accelerateconfiguration.md)
   [AccessControl](#cfn-s3-bucket-accesscontrol): String
-  [AnalyticsConfigurations](#cfn-s3-bucket-analyticsconfigurations): 
+  [AnalyticsConfigurations](#cfn-s3-bucket-analyticsconfigurations):
     - [AnalyticsConfiguration](aws-properties-s3-bucket-analyticsconfiguration.md)
-  [BucketEncryption](#cfn-s3-bucket-bucketencryption): 
+  [BucketEncryption](#cfn-s3-bucket-bucketencryption):
     [BucketEncryption](aws-properties-s3-bucket-bucketencryption.md)
   [BucketName](#cfn-s3-bucket-name): String
-  [CorsConfiguration](#cfn-s3-bucket-crossoriginconfig): 
+  [CorsConfiguration](#cfn-s3-bucket-crossoriginconfig):
     [CorsConfiguration](aws-properties-s3-bucket-cors.md)
-  [InventoryConfigurations](#cfn-s3-bucket-inventoryconfigurations): 
+  [InventoryConfigurations](#cfn-s3-bucket-inventoryconfigurations):
     - [InventoryConfiguration](aws-properties-s3-bucket-inventoryconfiguration.md)
-  [LifecycleConfiguration](#cfn-s3-bucket-lifecycleconfig): 
+  [LifecycleConfiguration](#cfn-s3-bucket-lifecycleconfig):
     [LifecycleConfiguration](aws-properties-s3-bucket-lifecycleconfig.md)
-  [LoggingConfiguration](#cfn-s3-bucket-loggingconfig): 
+  [LoggingConfiguration](#cfn-s3-bucket-loggingconfig):
     [LoggingConfiguration](aws-properties-s3-bucket-loggingconfig.md)
-  [MetricsConfigurations](#cfn-s3-bucket-metricsconfigurations): 
+  [MetricsConfigurations](#cfn-s3-bucket-metricsconfigurations):
     - [MetricsConfiguration](aws-properties-s3-bucket-metricsconfiguration.md)
-  [NotificationConfiguration](#cfn-s3-bucket-notification): 
+  [NotificationConfiguration](#cfn-s3-bucket-notification):
     [NotificationConfiguration](aws-properties-s3-bucket-notificationconfig.md)
-  [ObjectLockConfiguration](#cfn-s3-bucket-objectlockconfiguration): 
+  [ObjectLockConfiguration](#cfn-s3-bucket-objectlockconfiguration):
     [ObjectLockConfiguration](aws-properties-s3-bucket-objectlockconfiguration.md)
   [ObjectLockEnabled](#cfn-s3-bucket-objectlockenabled): Boolean
-  [PublicAccessBlockConfiguration](#cfn-s3-bucket-publicaccessblockconfiguration): 
+  [PublicAccessBlockConfiguration](#cfn-s3-bucket-publicaccessblockconfiguration):
     [PublicAccessBlockConfiguration](aws-properties-s3-bucket-publicaccessblockconfiguration.md)
-  [ReplicationConfiguration](#cfn-s3-bucket-replicationconfiguration): 
+  [ReplicationConfiguration](#cfn-s3-bucket-replicationconfiguration):
     [ReplicationConfiguration](aws-properties-s3-bucket-replicationconfiguration.md)
-  [Tags](#cfn-s3-bucket-tags): 
+  [Tags](#cfn-s3-bucket-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-  [VersioningConfiguration](#cfn-s3-bucket-versioning): 
+  [VersioningConfiguration](#cfn-s3-bucket-versioning):
     [VersioningConfiguration](aws-properties-s3-bucket-versioningconfig.md)
-  [WebsiteConfiguration](#cfn-s3-bucket-websiteconfiguration): 
+  [WebsiteConfiguration](#cfn-s3-bucket-websiteconfiguration):
     [WebsiteConfiguration](aws-properties-s3-websiteconfiguration.md)
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-properties"></a>
 
 `AccelerateConfiguration`  <a name="cfn-s3-bucket-accelerateconfiguration"></a>
-Configures the transfer acceleration state for an Amazon S3 bucket\. For more information, see [Amazon S3 Transfer Acceleration](https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html) in the *Amazon Simple Storage Service Developer Guide*\.  
-*Required*: No  
-*Type*: [AccelerateConfiguration](aws-properties-s3-bucket-accelerateconfiguration.md)  
+Configures the transfer acceleration state for an Amazon S3 bucket\. For more information, see [Amazon S3 Transfer Acceleration](https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html) in the *Amazon Simple Storage Service Developer Guide*\.
+*Required*: No
+*Type*: [AccelerateConfiguration](aws-properties-s3-bucket-accelerateconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AccessControl`  <a name="cfn-s3-bucket-accesscontrol"></a>
-A canned access control list \(ACL\) that grants predefined permissions to the bucket\. For more information about canned ACLs, see [Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) in the *Amazon Simple Storage Service Developer Guide*\.  
-*Required*: No  
-*Type*: String  
+A canned access control list \(ACL\) that grants predefined permissions to the bucket\. For more information about canned ACLs, see [Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) in the *Amazon Simple Storage Service Developer Guide*\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AnalyticsConfigurations`  <a name="cfn-s3-bucket-analyticsconfigurations"></a>
- Specifies the configuration and any analyses for the analytics filter of an Amazon S3 bucket\.  
-For more information, see [GET Bucket analytics](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETAnalyticsConfig.html) in the *Amazon Simple Storage Service API Reference*\.   
-*Required*: No  
-*Type*: List of [AnalyticsConfiguration](aws-properties-s3-bucket-analyticsconfiguration.md)  
+ Specifies the configuration and any analyses for the analytics filter of an Amazon S3 bucket\.
+For more information, see [GET Bucket analytics](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETAnalyticsConfig.html) in the *Amazon Simple Storage Service API Reference*\.
+*Required*: No
+*Type*: List of [AnalyticsConfiguration](aws-properties-s3-bucket-analyticsconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BucketEncryption`  <a name="cfn-s3-bucket-bucketencryption"></a>
-Specifies default encryption for a bucket using server\-side encryption with Amazon S3\-managed keys \(SSE\-S3\) or AWS KMS\-managed keys \(SSE\-KMS\) bucket\. For information about the Amazon S3 default encryption feature, see [ Amazon S3 Default Encryption for S3 Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) in the *Amazon Simple Storage Service Developer Guide*\.  
-*Required*: No  
-*Type*: [BucketEncryption](aws-properties-s3-bucket-bucketencryption.md)  
+Specifies default encryption for a bucket using server\-side encryption with Amazon S3\-managed keys \(SSE\-S3\) or AWS KMS\-managed keys \(SSE\-KMS\) bucket\. For information about the Amazon S3 default encryption feature, see [ Amazon S3 Default Encryption for S3 Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) in the *Amazon Simple Storage Service Developer Guide*\.
+*Required*: No
+*Type*: [BucketEncryption](aws-properties-s3-bucket-bucketencryption.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BucketName`  <a name="cfn-s3-bucket-name"></a>
-A name for the bucket\. If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the bucket name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\. The bucket name must contain only lowercase letters, numbers, periods \(\.\), and dashes \(\-\)\.  
+A name for the bucket\. If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the bucket name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\. The bucket name must contain only lowercase letters, numbers, periods \(\.\), and dashes \(\-\)\.
 If you specify a name, you can't perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you need to replace the resource, specify a new name\.
-*Required*: No  
-*Type*: String  
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CorsConfiguration`  <a name="cfn-s3-bucket-crossoriginconfig"></a>
-Describes the cross\-origin access configuration for objects in an Amazon S3 bucket\. For more information, see [Enabling Cross\-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) in the *Amazon Simple Storage Service Developer Guide*\.  
-*Required*: No  
-*Type*: [CorsConfiguration](aws-properties-s3-bucket-cors.md)  
+Describes the cross\-origin access configuration for objects in an Amazon S3 bucket\. For more information, see [Enabling Cross\-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) in the *Amazon Simple Storage Service Developer Guide*\.
+*Required*: No
+*Type*: [CorsConfiguration](aws-properties-s3-bucket-cors.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InventoryConfigurations`  <a name="cfn-s3-bucket-inventoryconfigurations"></a>
-Specifies the inventory configuration for an Amazon S3 bucket\. For more information, see [GET Bucket inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in the *Amazon Simple Storage Service API Reference*\.   
-*Required*: No  
-*Type*: List of [InventoryConfiguration](aws-properties-s3-bucket-inventoryconfiguration.md)  
+Specifies the inventory configuration for an Amazon S3 bucket\. For more information, see [GET Bucket inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in the *Amazon Simple Storage Service API Reference*\.
+*Required*: No
+*Type*: List of [InventoryConfiguration](aws-properties-s3-bucket-inventoryconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LifecycleConfiguration`  <a name="cfn-s3-bucket-lifecycleconfig"></a>
-Specifies the lifecycle configuration for objects in an Amazon S3 bucket\. For more information, see [Object Lifecycle Management](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) in the *Amazon Simple Storage Service Developer Guide*\.  
-*Required*: No  
-*Type*: [LifecycleConfiguration](aws-properties-s3-bucket-lifecycleconfig.md)  
+Specifies the lifecycle configuration for objects in an Amazon S3 bucket\. For more information, see [Object Lifecycle Management](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) in the *Amazon Simple Storage Service Developer Guide*\.
+*Required*: No
+*Type*: [LifecycleConfiguration](aws-properties-s3-bucket-lifecycleconfig.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoggingConfiguration`  <a name="cfn-s3-bucket-loggingconfig"></a>
-Settings that define where logs are stored\.  
-*Required*: No  
-*Type*: [LoggingConfiguration](aws-properties-s3-bucket-loggingconfig.md)  
+Settings that define where logs are stored\.
+*Required*: No
+*Type*: [LoggingConfiguration](aws-properties-s3-bucket-loggingconfig.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricsConfigurations`  <a name="cfn-s3-bucket-metricsconfigurations"></a>
-Specifies a metrics configuration for the CloudWatch request metrics \(specified by the metrics configuration ID\) from an Amazon S3 bucket\. If you're updating an existing metrics configuration, note that this is a full replacement of the existing metrics configuration\. If you don't include the elements you want to keep, they are erased\. For more information, see [ PUT Bucket metrics](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTMetricConfiguration.html) in the *Amazon Simple Storage Service API Reference*\.  
-*Required*: No  
-*Type*: List of [MetricsConfiguration](aws-properties-s3-bucket-metricsconfiguration.md)  
+Specifies a metrics configuration for the CloudWatch request metrics \(specified by the metrics configuration ID\) from an Amazon S3 bucket\. If you're updating an existing metrics configuration, note that this is a full replacement of the existing metrics configuration\. If you don't include the elements you want to keep, they are erased\. For more information, see [ PUT Bucket metrics](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTMetricConfiguration.html) in the *Amazon Simple Storage Service API Reference*\.
+*Required*: No
+*Type*: List of [MetricsConfiguration](aws-properties-s3-bucket-metricsconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NotificationConfiguration`  <a name="cfn-s3-bucket-notification"></a>
-Configuration that defines how Amazon S3 handles bucket notifications\.  
-*Required*: No  
-*Type*: [NotificationConfiguration](aws-properties-s3-bucket-notificationconfig.md)  
+Configuration that defines how Amazon S3 handles bucket notifications\.
+*Required*: No
+*Type*: [NotificationConfiguration](aws-properties-s3-bucket-notificationconfig.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ObjectLockConfiguration`  <a name="cfn-s3-bucket-objectlockconfiguration"></a>
-Places an object lock configuration on the specified bucket\. The rule specified in the object lock configuration will be applied by default to every new object placed in the specified bucket\.  
-*Required*: No  
-*Type*: [ObjectLockConfiguration](aws-properties-s3-bucket-objectlockconfiguration.md)  
+Places an object lock configuration on the specified bucket\. The rule specified in the object lock configuration will be applied by default to every new object placed in the specified bucket\.
+*Required*: No
+*Type*: [ObjectLockConfiguration](aws-properties-s3-bucket-objectlockconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ObjectLockEnabled`  <a name="cfn-s3-bucket-objectlockenabled"></a>
-Indicates whether this bucket has an object lock configuration enabled\.  
-*Required*: No  
-*Type*: Boolean  
-*Allowed Values*: `Enabled`  
+Indicates whether this bucket has an object lock configuration enabled\.
+*Required*: No
+*Type*: Boolean
+*Allowed Values*: `Enabled`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PublicAccessBlockConfiguration`  <a name="cfn-s3-bucket-publicaccessblockconfiguration"></a>
-Configuration that defines how Amazon S3 handles public access\.  
-*Required*: No  
-*Type*: [PublicAccessBlockConfiguration](aws-properties-s3-bucket-publicaccessblockconfiguration.md)  
+Configuration that defines how Amazon S3 handles public access\.
+*Required*: No
+*Type*: [PublicAccessBlockConfiguration](aws-properties-s3-bucket-publicaccessblockconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReplicationConfiguration`  <a name="cfn-s3-bucket-replicationconfiguration"></a>
-Configuration for replicating objects in an S3 bucket\. To enable replication, you must also enable versioning by using the `VersioningConfiguration` property\.  
-Amazon S3 can store replicated objects in only one destination bucket\. The destination bucket must already exist and be in a different AWS Region than your source bucket\.  
-*Required*: No  
-*Type*: [ReplicationConfiguration](aws-properties-s3-bucket-replicationconfiguration.md)  
+Configuration for replicating objects in an S3 bucket\. To enable replication, you must also enable versioning by using the `VersioningConfiguration` property\.
+Amazon S3 can store replicated objects in only one destination bucket\. The destination bucket must already exist and be in a different AWS Region than your source bucket\.
+*Required*: No
+*Type*: [ReplicationConfiguration](aws-properties-s3-bucket-replicationconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-s3-bucket-tags"></a>
-An arbitrary set of tags \(key\-value pairs\) for this S3 bucket\.  
- We recommend limiting the number of tags to seven\. Applying more than seven tags prevents the AWS CLI and the AWS CloudFormation console and API actions from listing the tags for the bucket\. 
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+An arbitrary set of tags \(key\-value pairs\) for this S3 bucket\.
+ We recommend limiting the number of tags to seven\. Applying more than seven tags prevents the AWS CLI and the AWS CloudFormation console and API actions from listing the tags for the bucket\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VersioningConfiguration`  <a name="cfn-s3-bucket-versioning"></a>
-Enables multiple versions of all objects in this bucket\. You might enable versioning to prevent objects from being deleted or overwritten by mistake or to archive objects so that you can retrieve previous versions of them\.  
-*Required*: No  
-*Type*: [VersioningConfiguration](aws-properties-s3-bucket-versioningconfig.md)  
+Enables multiple versions of all objects in this bucket\. You might enable versioning to prevent objects from being deleted or overwritten by mistake or to archive objects so that you can retrieve previous versions of them\.
+*Required*: No
+*Type*: [VersioningConfiguration](aws-properties-s3-bucket-versioningconfig.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WebsiteConfiguration`  <a name="cfn-s3-bucket-websiteconfiguration"></a>
-Information used to configure the bucket as a static website\. For more information, see [Hosting Websites on Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html)\.  
-*Required*: No  
-*Type*: [WebsiteConfiguration](aws-properties-s3-websiteconfiguration.md)  
+Information used to configure the bucket as a static website\. For more information, see [Hosting Websites on Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html)\.
+*Required*: No
+*Type*: [WebsiteConfiguration](aws-properties-s3-websiteconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-properties-s3-bucket-return-values"></a>
@@ -200,7 +200,7 @@ Information used to configure the bucket as a static website\. For more informat
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
 
-Example: `mystack-mybucket-kdwwxmddtr2g` 
+Example: `mystack-mybucket-kdwwxmddtr2g`
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -213,26 +213,26 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-properties-s3-bucket-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Returns the Amazon Resource Name \(ARN\) of the specified bucket\.  
-Example: `arn:aws:s3:::mybucket` 
+Returns the Amazon Resource Name \(ARN\) of the specified bucket\.
+Example: `arn:aws:s3:::mybucket`
 
 `DomainName`  <a name="DomainName-fn::getatt"></a>
-Returns the IPv4 DNS name of the specified bucket\.  
-Example: `mystack-mybucket-kdwwxmddtr2g.s3.amazonaws.com` 
+Returns the IPv4 DNS name of the specified bucket\.
+Example: `mystack-mybucket-kdwwxmddtr2g.s3.amazonaws.com`
 
 `DualStackDomainName`  <a name="DualStackDomainName-fn::getatt"></a>
-Returns the IPv6 DNS name of the specified bucket\.  
-Example: ` mystack-mybucket-kdwwxmddtr2g.s3.dualstack.us-east-2.amazonaws.com`   
+Returns the IPv6 DNS name of the specified bucket\.
+Example: ` mystack-mybucket-kdwwxmddtr2g.s3.dualstack.us-east-2.amazonaws.com`
 For more information about dual\-stack endpoints, see [Using Amazon S3 Dual\-Stack Endpoints](https://docs.aws.amazon.com/AmazonS3/latest/dev/dual-stack-endpoints.html)\.
 
 `RegionalDomainName`  <a name="RegionalDomainName-fn::getatt"></a>
-Returns the regional domain name of the specified bucket\.  
-Example: `mystack-mybucket-kdwwxmddtr2g.s3.us-east-2.amazonaws.com` 
+Returns the regional domain name of the specified bucket\.
+Example: `mystack-mybucket-kdwwxmddtr2g.s3.us-east-2.amazonaws.com`
 
 `WebsiteURL`  <a name="WebsiteURL-fn::getatt"></a>
-Returns the Amazon S3 website endpoint for the specified bucket\.  
-Example \(IPv4\): `http://mystack-mybucket-kdwwxmddtr2g.s3-website-us-east-2.amazonaws.com/`   
-Example \(IPv6\): `http://mystack-mybucket-kdwwxmddtr2g.s3.dualstack.us-east-2.amazonaws.com/` 
+Returns the Amazon S3 website endpoint for the specified bucket\.
+Example \(IPv4\): `http://mystack-mybucket-kdwwxmddtr2g.s3-website-us-east-2.amazonaws.com/`
+Example \(IPv6\): `http://mystack-mybucket-kdwwxmddtr2g.s3.dualstack.us-east-2.amazonaws.com/`
 
 ## Examples<a name="aws-properties-s3-bucket--examples"></a>
 
@@ -291,7 +291,7 @@ The following example creates an S3 bucket and grants it permission to write to 
         }
       }]
     }
-  }    
+  }
 },
 "BucketBackupPolicy": {
   "Type": "AWS::IAM::Policy",
@@ -333,14 +333,14 @@ The following example creates an S3 bucket and grants it permission to write to 
         ],
         "Effect": "Allow",
         "Resource": [{
-          "Fn::Join": [ "", [ 
+          "Fn::Join": [ "", [
              "arn:aws:s3:::", {
-               "Fn::Join": [ "-", [ 
-                 { "Ref": "AWS::Region" }, 
-                 { "Ref": "AWS::StackName" }, 
+               "Fn::Join": [ "-", [
+                 { "Ref": "AWS::Region" },
+                 { "Ref": "AWS::StackName" },
                  "replicationbucket"
                ]]
-             }, 
+             },
              "/*"
           ]]
         }]
@@ -406,7 +406,7 @@ BucketBackupPolicy:
 
 ### Configure a Static Website with a Routing Rule<a name="aws-properties-s3-bucket--examples--Configure_a_Static_Website_with_a_Routing_Rule"></a>
 
-In this example, `AWS::S3::Bucket's Fn::GetAtt` values are used to provide outputs\. If an HTTP 404 error occurs, the routing rule redirects requests to an EC2 instance and inserts the object key prefix `report-404/` in the redirect\. For example, if you request a page called `ExamplePage.html` and it results in an HTTP 404 error, the request is routed to a page called `report-404/ExamplePage.html` on the specified instance\. For all other HTTP error codes, `error.html` is returned\. 
+In this example, `AWS::S3::Bucket's Fn::GetAtt` values are used to provide outputs\. If an HTTP 404 error occurs, the routing rule redirects requests to an EC2 instance and inserts the object key prefix `report-404/` in the redirect\. For example, if you request a page called `ExamplePage.html` and it results in an HTTP 404 error, the request is routed to a page called `report-404/ExamplePage.html` on the specified instance\. For all other HTTP error codes, `error.html` is returned\.
 
 This example also specifies a metrics configuration called `EntireBucket` that enables CloudWatch request metrics at the bucket level\.
 
@@ -468,7 +468,7 @@ Resources:
     Properties:
       AccessControl: PublicRead
       BucketName: public-bucket
-      MetricsConfigurations: 
+      MetricsConfigurations:
         - Id: EntireBucket
       WebsiteConfiguration:
         IndexDocument: index.html
@@ -915,7 +915,7 @@ Resources:
           StorageClassAnalysis:
             DataExport:
               Destination:
-                BucketArn: !GetAtt 
+                BucketArn: !GetAtt
                   - Helper
                   - Arn
                 Format: CSV
@@ -928,7 +928,7 @@ Resources:
       InventoryConfigurations:
         - Id: InventoryConfigurationId
           Destination:
-            BucketArn: !GetAtt 
+            BucketArn: !GetAtt
               - Helper
               - Arn
             Format: CSV

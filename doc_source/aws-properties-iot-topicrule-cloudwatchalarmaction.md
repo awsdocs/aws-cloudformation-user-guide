@@ -29,25 +29,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-topicrule-cloudwatchalarmaction-properties"></a>
 
 `AlarmName`  <a name="cfn-iot-topicrule-cloudwatchalarmaction-alarmname"></a>
-The CloudWatch alarm name\.  
-*Required*: Yes  
-*Type*: String  
+The CloudWatch alarm name\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-iot-topicrule-cloudwatchalarmaction-rolearn"></a>
-The IAM role that allows access to the CloudWatch alarm\.  
-*Required*: Yes  
-*Type*: String  
+The IAM role that allows access to the CloudWatch alarm\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StateReason`  <a name="cfn-iot-topicrule-cloudwatchalarmaction-statereason"></a>
-The reason for the alarm change\.  
-*Required*: Yes  
-*Type*: String  
+The reason for the alarm change\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StateValue`  <a name="cfn-iot-topicrule-cloudwatchalarmaction-statevalue"></a>
-The value of the alarm state\. Acceptable values are: OK, ALARM, INSUFFICIENT\_DATA\.  
-*Required*: Yes  
-*Type*: String  
+The value of the alarm state\. Acceptable values are: OK, ALARM, INSUFFICIENT\_DATA\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -29,23 +29,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-tagfilter-properties"></a>
 
 `Key`  <a name="cfn-codedeploy-deploymentgroup-tagfilter-key"></a>
-The on\-premises instance tag filter key\.  
-*Required*: No  
-*Type*: String  
+The on\-premises instance tag filter key\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-codedeploy-deploymentgroup-tagfilter-type"></a>
-The on\-premises instance tag filter type:  
+The on\-premises instance tag filter type:
 + KEY\_ONLY: Key only\.
 + VALUE\_ONLY: Value only\.
 + KEY\_AND\_VALUE: Key and value\.
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `KEY_AND_VALUE | KEY_ONLY | VALUE_ONLY`  
+*Required*: No
+*Type*: String
+*Allowed Values*: `KEY_AND_VALUE | KEY_ONLY | VALUE_ONLY`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-codedeploy-deploymentgroup-tagfilter-value"></a>
-The on\-premises instance tag filter value\.  
-*Required*: No  
-*Type*: String  
+The on\-premises instance tag filter value\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

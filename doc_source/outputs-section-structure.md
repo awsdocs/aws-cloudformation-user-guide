@@ -10,7 +10,7 @@ The following example demonstrates the structure of the `Outputs` section\.
 
 ### JSON<a name="outputs-section-structure-syntax.json"></a>
 
-Use braces to enclose all output declarations\. Delimit multiple outputs with commas\. 
+Use braces to enclose all output declarations\. Delimit multiple outputs with commas\.
 
 ```
 "Outputs" : {
@@ -39,18 +39,18 @@ Outputs:
 
 The `Outputs` section can include the following fields\.
 
-**Logical ID**  
+**Logical ID**
 An identifier for the current output\. The logical ID must be alphanumeric \(`a-z`, `A-Z`, `0-9`\) and unique within the template\.
 
-**Description \(optional\)**  
+**Description \(optional\)**
 A `String` type that describes the output value\. The value for the description declaration must be a literal string that is between 0 and 1024 bytes in length\. You cannot use a parameter or function to specify the description\. The description can be a maximum of 4 K in length\.
 
-**Value \(required\)**  
+**Value \(required\)**
 The value of the property returned by the `aws cloudformation describe-stacks` command\. The value of an output can include literals, parameter references, pseudo\-parameters, a mapping value, or intrinsic functions\.
 
-**Export \(optional\)**  
-The name of the resource output to be exported for a [cross\-stack reference](walkthrough-crossstackref.md)\.  
-The following restrictions apply to cross\-stack references:  
+**Export \(optional\)**
+The name of the resource output to be exported for a [cross\-stack reference](walkthrough-crossstackref.md)\.
+The following restrictions apply to cross\-stack references:
 + For each AWS account, `Export` names must be unique within a region\.
 + You can't create cross\-stack references across regions\. You can use the intrinsic function `Fn::ImportValue` to import only values that have been exported within the same region\.
 + For outputs, the value of the `Name` property of an `Export` can't use `Ref` or `GetAtt` functions that depend on a resource\.
@@ -58,8 +58,8 @@ The following restrictions apply to cross\-stack references:
   Similarly, the `ImportValue` function can't include `Ref` or `GetAtt` functions that depend on a resource\.
 + You can't delete a stack if another stack references one of its outputs\.
 + You can't modify or remove an output value that is referenced by another stack\.
-You can use intrinsic functions to customize the `Name` value of an export\. The following examples use the `Fn::Join` function\.  
-JSON  
+You can use intrinsic functions to customize the `Name` value of an export\. The following examples use the `Fn::Join` function\.
+JSON
 
 ```
 "Export" : {
@@ -68,7 +68,7 @@ JSON
   }
 }
 ```
-YAML  
+YAML
 
 ```
 Export:
@@ -90,12 +90,12 @@ In the following example, the output named `BackupLoadBalancerDNSName` returns t
 ```
 "Outputs" : {
   "BackupLoadBalancerDNSName" : {
-    "Description": "The DNSName of the backup load balancer",  
+    "Description": "The DNSName of the backup load balancer",
     "Value" : { "Fn::GetAtt" : [ "BackupLoadBalancer", "DNSName" ]},
     "Condition" : "CreateProdResources"
   },
   "InstanceID" : {
-    "Description": "The Instance ID",  
+    "Description": "The Instance ID",
     "Value" : { "Ref" : "EC2Instance" }
   }
 }

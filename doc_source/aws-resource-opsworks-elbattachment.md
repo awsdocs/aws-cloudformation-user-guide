@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::OpsWorks::ElasticLoadBalancerAttachment
-Properties: 
+Properties:
   [ElasticLoadBalancerName](#cfn-opsworks-elbattachment-elbname): String
   [LayerId](#cfn-opsworks-elbattachment-layerid): String
 ```
@@ -30,15 +30,15 @@ Properties:
 ## Properties<a name="aws-resource-opsworks-elbattachment-properties"></a>
 
 `ElasticLoadBalancerName`  <a name="cfn-opsworks-elbattachment-elbname"></a>
-The Elastic Load Balancing instance's name\.  
-*Required*: Yes  
-*Type*: String  
+The Elastic Load Balancing instance's name\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LayerId`  <a name="cfn-opsworks-elbattachment-layerid"></a>
-The AWS OpsWorks layer ID that the Elastic Load Balancing load balancer will be attached to\.  
-*Required*: Yes  
-*Type*: String  
+The AWS OpsWorks layer ID that the Elastic Load Balancing load balancer will be attached to\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-opsworks-elbattachment--examples"></a>
@@ -62,12 +62,12 @@ The following snippet specifies a load balancer attachment to an AWS OpsWorks la
 #### YAML<a name="aws-resource-opsworks-elbattachment--examples--Template_Snippet--yaml"></a>
 
 ```
-ELBAttachment: 
+ELBAttachment:
   Type: "AWS::OpsWorks::ElasticLoadBalancerAttachment"
-  Properties: 
-    ElasticLoadBalancerName: 
+  Properties:
+    ElasticLoadBalancerName:
       Ref: "ELB"
-    LayerId: 
+    LayerId:
       Ref: "Layer"
 ```
 

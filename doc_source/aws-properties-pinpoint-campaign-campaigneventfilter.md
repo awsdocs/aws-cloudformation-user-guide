@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-pinpoint-campaign-campaigneventfilter-syntax.yaml"></a>
 
 ```
-  [Dimensions](#cfn-pinpoint-campaign-campaigneventfilter-dimensions): 
+  [Dimensions](#cfn-pinpoint-campaign-campaigneventfilter-dimensions):
     [EventDimensions](aws-properties-pinpoint-campaign-eventdimensions.md)
   [FilterType](#cfn-pinpoint-campaign-campaigneventfilter-filtertype): String
 ```
@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-campaign-campaigneventfilter-properties"></a>
 
 `Dimensions`  <a name="cfn-pinpoint-campaign-campaigneventfilter-dimensions"></a>
-The dimension settings of the event filter for the campaign\.  
-*Required*: No  
-*Type*: [EventDimensions](aws-properties-pinpoint-campaign-eventdimensions.md)  
+The dimension settings of the event filter for the campaign\.
+*Required*: No
+*Type*: [EventDimensions](aws-properties-pinpoint-campaign-eventdimensions.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FilterType`  <a name="cfn-pinpoint-campaign-campaigneventfilter-filtertype"></a>
-The type of event that causes the campaign to be sent\. Valid values are: `SYSTEM`, sends the campaign when a system event occurs; and, `ENDPOINT`, sends the campaign when an endpoint event \(Events resource\) occurs\.  
-*Required*: No  
-*Type*: String  
+The type of event that causes the campaign to be sent\. Valid values are: `SYSTEM`, sends the campaign when a system event occurs; and, `ENDPOINT`, sends the campaign when an endpoint event \(Events resource\) occurs\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

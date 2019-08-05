@@ -8,7 +8,7 @@ Any inbound traffic that your virtual node expects should be specified as a `lis
 
 The response metadata for your new virtual node contains the `arn` that is associated with the virtual node\. Set this value \(either the full ARN or the truncated resource name: for example, `mesh/default/virtualNode/simpleapp`\) as the `APPMESH_VIRTUAL_NODE_NAME` environment variable for your task group's Envoy proxy container in your task definition or pod spec\. This is then mapped to the `node.id` and `node.cluster` Envoy parameters\.
 
-**Note**  
+**Note**
 If you require your Envoy stats or tracing to use a different name, you can override the `node.cluster` value that is set by `APPMESH_VIRTUAL_NODE_NAME` with the `APPMESH_VIRTUAL_NODE_CLUSTER` environment variable\.
 
 ## Syntax<a name="aws-resource-appmesh-virtualnode-syntax"></a>
@@ -33,11 +33,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppMesh::VirtualNode
-Properties: 
+Properties:
   [MeshName](#cfn-appmesh-virtualnode-meshname): String
-  [Spec](#cfn-appmesh-virtualnode-spec): 
+  [Spec](#cfn-appmesh-virtualnode-spec):
     [VirtualNodeSpec](aws-properties-appmesh-virtualnode-virtualnodespec.md)
-  [Tags](#cfn-appmesh-virtualnode-tags): 
+  [Tags](#cfn-appmesh-virtualnode-tags):
     - [TagRef](aws-properties-appmesh-virtualnode-tagref.md)
   [VirtualNodeName](#cfn-appmesh-virtualnode-virtualnodename): String
 ```
@@ -45,27 +45,27 @@ Properties:
 ## Properties<a name="aws-resource-appmesh-virtualnode-properties"></a>
 
 `MeshName`  <a name="cfn-appmesh-virtualnode-meshname"></a>
-The name of the service mesh to create the virtual node in\.  
-*Required*: Yes  
-*Type*: String  
+The name of the service mesh to create the virtual node in\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Spec`  <a name="cfn-appmesh-virtualnode-spec"></a>
-The virtual node specification to apply\.  
-*Required*: Yes  
-*Type*: [VirtualNodeSpec](aws-properties-appmesh-virtualnode-virtualnodespec.md)  
+The virtual node specification to apply\.
+*Required*: Yes
+*Type*: [VirtualNodeSpec](aws-properties-appmesh-virtualnode-virtualnodespec.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-appmesh-virtualnode-tags"></a>
-Optional metadata that you can apply to the virtual node to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.  
-*Required*: No  
-*Type*: List of [TagRef](aws-properties-appmesh-virtualnode-tagref.md)  
+Optional metadata that you can apply to the virtual node to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.
+*Required*: No
+*Type*: List of [TagRef](aws-properties-appmesh-virtualnode-tagref.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VirtualNodeName`  <a name="cfn-appmesh-virtualnode-virtualnodename"></a>
-The name to use for the virtual node\.  
-*Required*: Yes  
-*Type*: String  
+The name to use for the virtual node\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-appmesh-virtualnode-return-values"></a>
@@ -74,7 +74,7 @@ The name to use for the virtual node\.
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ARN\. For example:
 
- `{ "Ref": "myVirtualNode" }` 
+ `{ "Ref": "myVirtualNode" }`
 
 When you pass the logical ID of an `AWS::AppMesh::VirtualNode` resource to the intrinsic Ref function, the function returns the virtual node ARN, such as `arn:aws:appmesh:us-east-1:555555555555:virtualNode/myVirtualNode `\.
 

@@ -24,8 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::RouteTable
-Properties: 
-  [Tags](#cfn-ec2-routetable-tags): 
+Properties:
+  [Tags](#cfn-ec2-routetable-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcId](#cfn-ec2-routetable-vpcid): String
 ```
@@ -33,15 +33,15 @@ Properties:
 ## Properties<a name="aws-resource-ec2-route-table-properties"></a>
 
 `Tags`  <a name="cfn-ec2-routetable-tags"></a>
-Any tags assigned to the route table\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+Any tags assigned to the route table\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcId`  <a name="cfn-ec2-routetable-vpcid"></a>
-The ID of the VPC\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the VPC\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-route-table-return-values"></a>
@@ -76,7 +76,7 @@ The following example uses the VPC ID from a VPC named myVPC that was declared e
   myRouteTable:
     Type: AWS::EC2::RouteTable
     Properties:
-      VpcId:  
+      VpcId:
         Ref: myVPC
       Tags:
       - Key: foo

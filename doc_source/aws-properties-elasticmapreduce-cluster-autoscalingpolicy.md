@@ -18,22 +18,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-autoscalingpolicy-syntax.yaml"></a>
 
 ```
-  [Constraints](#cfn-elasticmapreduce-cluster-autoscalingpolicy-constraints): 
+  [Constraints](#cfn-elasticmapreduce-cluster-autoscalingpolicy-constraints):
     [ScalingConstraints](aws-properties-elasticmapreduce-cluster-scalingconstraints.md)
-  [Rules](#cfn-elasticmapreduce-cluster-autoscalingpolicy-rules): 
+  [Rules](#cfn-elasticmapreduce-cluster-autoscalingpolicy-rules):
     - [ScalingRule](aws-properties-elasticmapreduce-cluster-scalingrule.md)
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-autoscalingpolicy-properties"></a>
 
 `Constraints`  <a name="cfn-elasticmapreduce-cluster-autoscalingpolicy-constraints"></a>
-The upper and lower EC2 instance limits for an automatic scaling policy\. Automatic scaling activity will not cause an instance group to grow above or below these limits\.  
-*Required*: Yes  
-*Type*: [ScalingConstraints](aws-properties-elasticmapreduce-cluster-scalingconstraints.md)  
+The upper and lower EC2 instance limits for an automatic scaling policy\. Automatic scaling activity will not cause an instance group to grow above or below these limits\.
+*Required*: Yes
+*Type*: [ScalingConstraints](aws-properties-elasticmapreduce-cluster-scalingconstraints.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Rules`  <a name="cfn-elasticmapreduce-cluster-autoscalingpolicy-rules"></a>
-The scale\-in and scale\-out rules that comprise the automatic scaling policy\.  
-*Required*: Yes  
-*Type*: List of [ScalingRule](aws-properties-elasticmapreduce-cluster-scalingrule.md)  
+The scale\-in and scale\-out rules that comprise the automatic scaling policy\.
+*Required*: Yes
+*Type*: List of [ScalingRule](aws-properties-elasticmapreduce-cluster-scalingrule.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

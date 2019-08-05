@@ -22,25 +22,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Backup::BackupSelection
-Properties: 
+Properties:
   [BackupPlanId](#cfn-backup-backupselection-backupplanid): String
-  [BackupSelection](#cfn-backup-backupselection-backupselection): 
+  [BackupSelection](#cfn-backup-backupselection-backupselection):
     [BackupSelectionResourceType](aws-properties-backup-backupselection-backupselectionresourcetype.md)
 ```
 
 ## Properties<a name="aws-resource-backup-backupselection-properties"></a>
 
 `BackupPlanId`  <a name="cfn-backup-backupselection-backupplanid"></a>
-Uniquely identifies a backup plan\.  
-*Required*: Yes  
-*Type*: String  
+Uniquely identifies a backup plan\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BackupSelection`  <a name="cfn-backup-backupselection-backupselection"></a>
-Specifies the body of a request to assign a set of resources to a backup plan\.  
-It includes an array of resources, an optional array of patterns to exclude resources, an optional role to provide access to the AWS service the resource belongs to, and an optional array of tags used to identify a set of resources\.  
-*Required*: Yes  
-*Type*: [BackupSelectionResourceType](aws-properties-backup-backupselection-backupselectionresourcetype.md)  
+Specifies the body of a request to assign a set of resources to a backup plan\.
+It includes an array of resources, an optional array of patterns to exclude resources, an optional role to provide access to the AWS service the resource belongs to, and an optional array of tags used to identify a set of resources\.
+*Required*: Yes
+*Type*: [BackupSelectionResourceType](aws-properties-backup-backupselection-backupselectionresourcetype.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-backup-backupselection-return-values"></a>

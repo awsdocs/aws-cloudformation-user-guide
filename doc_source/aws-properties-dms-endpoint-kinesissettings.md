@@ -25,20 +25,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dms-endpoint-kinesissettings-properties"></a>
 
 `MessageFormat`  <a name="cfn-dms-endpoint-kinesissettings-messageformat"></a>
-The output format for the records created on the endpoint\. The message format is `JSON`\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `json`  
+The output format for the records created on the endpoint\. The message format is `JSON`\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `json`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceAccessRoleArn`  <a name="cfn-dms-endpoint-kinesissettings-serviceaccessrolearn"></a>
-The Amazon Resource Name \(ARN\) for the IAM role that DMS uses to write to the Amazon Kinesis data stream\.  
-*Required*: No  
-*Type*: String  
+The Amazon Resource Name \(ARN\) for the IAM role that DMS uses to write to the Amazon Kinesis data stream\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StreamArn`  <a name="cfn-dms-endpoint-kinesissettings-streamarn"></a>
-The Amazon Resource Name \(ARN\) for the Amazon Kinesis Data Streams endpoint\.  
-*Required*: No  
-*Type*: String  
+The Amazon Resource Name \(ARN\) for the Amazon Kinesis Data Streams endpoint\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

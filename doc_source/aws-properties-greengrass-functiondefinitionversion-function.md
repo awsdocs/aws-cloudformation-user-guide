@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [FunctionArn](#cfn-greengrass-functiondefinitionversion-function-functionarn): String
-  [FunctionConfiguration](#cfn-greengrass-functiondefinitionversion-function-functionconfiguration): 
+  [FunctionConfiguration](#cfn-greengrass-functiondefinitionversion-function-functionconfiguration):
     [FunctionConfiguration](aws-properties-greengrass-functiondefinitionversion-functionconfiguration.md)
   [Id](#cfn-greengrass-functiondefinitionversion-function-id): String
 ```
@@ -30,23 +30,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-greengrass-functiondefinitionversion-function-properties"></a>
 
 `FunctionArn`  <a name="cfn-greengrass-functiondefinitionversion-function-functionarn"></a>
-The Amazon Resource Name \(ARN\) of the alias \(recommended\) or version of the referenced Lambda function\.  
-*Required*: Yes  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of the alias \(recommended\) or version of the referenced Lambda function\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FunctionConfiguration`  <a name="cfn-greengrass-functiondefinitionversion-function-functionconfiguration"></a>
-The group\-specific settings of the Lambda function\. These settings configure the function's behavior in the Greengrass group\.  
-*Required*: Yes  
-*Type*: [FunctionConfiguration](aws-properties-greengrass-functiondefinitionversion-functionconfiguration.md)  
+The group\-specific settings of the Lambda function\. These settings configure the function's behavior in the Greengrass group\.
+*Required*: Yes
+*Type*: [FunctionConfiguration](aws-properties-greengrass-functiondefinitionversion-functionconfiguration.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Id`  <a name="cfn-greengrass-functiondefinitionversion-function-id"></a>
-A descriptive or arbitrary ID for the function\. This value must be unique within the function definition version\. Maximum length is 128 characters with pattern `[a-zA-Z0-9:_-]+`\.  
-*Required*: Yes  
-*Type*: String  
+A descriptive or arbitrary ID for the function\. This value must be unique within the function definition version\. Maximum length is 128 characters with pattern `[a-zA-Z0-9:_-]+`\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See Also<a name="aws-properties-greengrass-functiondefinitionversion-function--seealso"></a>
-+  [Function](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-function.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [Function](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-function.html) in the * AWS IoT Greengrass API Reference *
++  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)

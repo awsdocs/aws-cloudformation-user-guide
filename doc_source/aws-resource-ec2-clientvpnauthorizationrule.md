@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::ClientVpnAuthorizationRule
-Properties: 
+Properties:
   [AccessGroupId](#cfn-ec2-clientvpnauthorizationrule-accessgroupid): String
   [AuthorizeAllGroups](#cfn-ec2-clientvpnauthorizationrule-authorizeallgroups): Boolean
   [ClientVpnEndpointId](#cfn-ec2-clientvpnauthorizationrule-clientvpnendpointid): String
@@ -36,33 +36,33 @@ Properties:
 ## Properties<a name="aws-resource-ec2-clientvpnauthorizationrule-properties"></a>
 
 `AccessGroupId`  <a name="cfn-ec2-clientvpnauthorizationrule-accessgroupid"></a>
-The ID of the Active Directory group to grant access\.  
-*Required*: No  
-*Type*: String  
+The ID of the Active Directory group to grant access\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AuthorizeAllGroups`  <a name="cfn-ec2-clientvpnauthorizationrule-authorizeallgroups"></a>
-Indicates whether to grant access to all clients\. Use `true` to grant all clients who successfully establish a VPN connection access to the network\.  
-*Required*: No  
-*Type*: Boolean  
+Indicates whether to grant access to all clients\. Use `true` to grant all clients who successfully establish a VPN connection access to the network\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ClientVpnEndpointId`  <a name="cfn-ec2-clientvpnauthorizationrule-clientvpnendpointid"></a>
-The ID of the Client VPN endpoint\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the Client VPN endpoint\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-ec2-clientvpnauthorizationrule-description"></a>
-A brief description of the authorization rule\.  
-*Required*: No  
-*Type*: String  
+A brief description of the authorization rule\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TargetNetworkCidr`  <a name="cfn-ec2-clientvpnauthorizationrule-targetnetworkcidr"></a>
-The IPv4 address range, in CIDR notation, of the network for which access is being authorized\.  
-*Required*: Yes  
-*Type*: String  
+The IPv4 address range, in CIDR notation, of the network for which access is being authorized\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Examples<a name="aws-resource-ec2-clientvpnauthorizationrule--examples"></a>
@@ -77,7 +77,7 @@ The following example adds an authorization rule that grants all users access to
 myAuthRule:
   Type: "AWS::EC2::ClientVpnAuthorizationRule"
   Properties:
-    ClientVpnEndpointId: 
+    ClientVpnEndpointId:
       Ref: myClientVpnEndpoint
     AuthorizeAllGroups: true
     TargetNetworkCidr: "0.0.0.0/0"

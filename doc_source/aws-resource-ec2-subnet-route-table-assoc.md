@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::SubnetRouteTableAssociation
-Properties: 
+Properties:
   [RouteTableId](#cfn-ec2-subnetroutetableassociation-routetableid): String
   [SubnetId](#cfn-ec2-subnetroutetableassociation-subnetid): String
 ```
@@ -30,16 +30,16 @@ Properties:
 ## Properties<a name="aws-resource-ec2-subnet-route-table-assoc-properties"></a>
 
 `RouteTableId`  <a name="cfn-ec2-subnetroutetableassociation-routetableid"></a>
-The ID of the route table\.  
-The physical ID changes when the route table ID is changed\.   
-*Required*: Yes  
-*Type*: String  
+The ID of the route table\.
+The physical ID changes when the route table ID is changed\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetId`  <a name="cfn-ec2-subnetroutetableassociation-subnetid"></a>
-The ID of the subnet\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the subnet\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-subnet-route-table-assoc-return-values"></a>

@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-stepfunctions-activity-tagsentry-properties"></a>
 
 `Key`  <a name="cfn-stepfunctions-activity-tagsentry-key"></a>
-The `key` for a key\-value pair in a tag entry\.  
-*Required*: Yes  
-*Type*: String  
+The `key` for a key\-value pair in a tag entry\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-stepfunctions-activity-tagsentry-value"></a>
-The `value` for a key\-value pair in a tag entry\.  
-*Required*: Yes  
-*Type*: String  
+The `value` for a key\-value pair in a tag entry\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

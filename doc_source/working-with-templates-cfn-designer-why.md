@@ -8,7 +8,7 @@ Parsing JSON\- or YAML\-formatted text files to see the resources that are in yo
 
 Designer defines the information about your resources, such as their size and relative position, in template metadata\. When you open a template, Designer automatically adds this metadata so that the current layout is preserved when you save your template\. When you reopen a template in Designer, it displays the diagram exactly as it appeared when you last saved the template\.
 
-All layout information is defined in the `AWS::CloudFormation::Designer` metadata key, which is used only by Designer and won't interfere with creating AWS CloudFormation stacks\. The following example of template metadata shows the layout information that Designer adds to a template as metadata: 
+All layout information is defined in the `AWS::CloudFormation::Designer` metadata key, which is used only by Designer and won't interfere with creating AWS CloudFormation stacks\. The following example of template metadata shows the layout information that Designer adds to a template as metadata:
 
 ### JSON<a name="working-with-templates-cfn-designer-example-template-metadata.json"></a>
 

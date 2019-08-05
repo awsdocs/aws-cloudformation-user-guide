@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppSync::GraphQLSchema
-Properties: 
+Properties:
   [ApiId](#cfn-appsync-graphqlschema-apiid): String
   [Definition](#cfn-appsync-graphqlschema-definition): String
   [DefinitionS3Location](#cfn-appsync-graphqlschema-definitions3location): String
@@ -32,29 +32,29 @@ Properties:
 ## Properties<a name="aws-resource-appsync-graphqlschema-properties"></a>
 
 `ApiId`  <a name="cfn-appsync-graphqlschema-apiid"></a>
-The AWS AppSync GraphQL API identifier to which you want to apply this schema\.  
-*Required*: Yes  
-*Type*: String  
+The AWS AppSync GraphQL API identifier to which you want to apply this schema\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Definition`  <a name="cfn-appsync-graphqlschema-definition"></a>
-The text representation of a GraphQL schema in SDL format\.  
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref)\.  
-*Required*: No  
-*Type*: String  
+The text representation of a GraphQL schema in SDL format\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref)\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefinitionS3Location`  <a name="cfn-appsync-graphqlschema-definitions3location"></a>
-The location of a GraphQL schema file in an Amazon S3 bucket\. Use this if you want to provision with the schema living in Amazon S3 rather than embedding it in your CloudFormation template\.  
-*Required*: No  
-*Type*: String  
+The location of a GraphQL schema file in an Amazon S3 bucket\. Use this if you want to provision with the schema living in Amazon S3 rather than embedding it in your CloudFormation template\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-appsync-graphqlschema-return-values"></a>
 
 ### Ref<a name="aws-resource-appsync-graphqlschema-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::AppSync::GraphQLSchema` resource to the intrinsic `Ref` function, the function returns the GraphQL API id with the literal String GraphQLSchema attached to it\. 
+When you pass the logical ID of an `AWS::AppSync::GraphQLSchema` resource to the intrinsic `Ref` function, the function returns the GraphQL API id with the literal String GraphQLSchema attached to it\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref)\.
 
@@ -104,7 +104,7 @@ Resources:
         "DefinitionS3Location": {
           "Ref": "graphQlSchemaS3DescriptionLocation"
         }
-      }       
+      }
     }
   }
 }

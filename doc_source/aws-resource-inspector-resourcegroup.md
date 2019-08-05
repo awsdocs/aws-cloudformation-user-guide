@@ -21,19 +21,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Inspector::ResourceGroup
-Properties: 
-  [ResourceGroupTags](#cfn-inspector-resourcegroup-resourcegrouptags): 
+Properties:
+  [ResourceGroupTags](#cfn-inspector-resourcegroup-resourcegrouptags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-inspector-resourcegroup-properties"></a>
 
 `ResourceGroupTags`  <a name="cfn-inspector-resourcegroup-resourcegrouptags"></a>
-The tags \(key and value pairs\) that will be associated with the resource group\.  
-For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
-*Required*: Yes  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Maximum*: `10`  
+The tags \(key and value pairs\) that will be associated with the resource group\.
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.
+*Required*: Yes
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+*Maximum*: `10`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-inspector-resourcegroup-return-values"></a>
@@ -76,10 +76,10 @@ The following example shows how to declare an `AWS::Inspector::ResourceGroup` re
 #### YAML<a name="aws-resource-inspector-resourcegroup--examples--Declaring_an_Amazon_Inspector_Reource_Group_Resource--yaml"></a>
 
 ```
-myresourcegroup: 
+myresourcegroup:
   Type: "AWS::Inspector::ResourceGroup"
-  Properties: 
-    ResourceGroupTags: 
+  Properties:
+    ResourceGroupTags:
       - Key: "Name"
       Value: "example"
 ```

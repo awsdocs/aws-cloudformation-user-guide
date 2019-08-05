@@ -21,5 +21,5 @@ Depending on the update behavior, you can decide when to modify resources to red
 
 This example is not exhaustive; it's meant to give you an idea of the things to plan for when a resource is replaced during an update\.
 
-**Note**  
+**Note**
 If the template includes one or more [nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html), AWS CloudFormation also initiates an update for every nested stack\. This is necessary to determine whether the nested stacks have been modified\. AWS CloudFormation updates only those resources in the nested stacks that have changes specified in corresponding templates\.

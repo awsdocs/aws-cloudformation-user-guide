@@ -33,31 +33,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ses-receiptrule-bounceaction-properties"></a>
 
 `Message`  <a name="cfn-ses-receiptrule-bounceaction-message"></a>
-Human\-readable text to include in the bounce message\.  
-*Required*: Yes  
-*Type*: String  
+Human\-readable text to include in the bounce message\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Sender`  <a name="cfn-ses-receiptrule-bounceaction-sender"></a>
-The email address of the sender of the bounced email\. This is the address that the bounce message is sent from\.  
-*Required*: Yes  
-*Type*: String  
+The email address of the sender of the bounced email\. This is the address that the bounce message is sent from\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SmtpReplyCode`  <a name="cfn-ses-receiptrule-bounceaction-smtpreplycode"></a>
-The SMTP reply code, as defined by [RFC 5321](https://tools.ietf.org/html/rfc5321)\.  
-*Required*: Yes  
-*Type*: String  
+The SMTP reply code, as defined by [RFC 5321](https://tools.ietf.org/html/rfc5321)\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StatusCode`  <a name="cfn-ses-receiptrule-bounceaction-statuscode"></a>
-The SMTP enhanced status code, as defined by [RFC 3463](https://tools.ietf.org/html/rfc3463)\.  
-*Required*: No  
-*Type*: String  
+The SMTP enhanced status code, as defined by [RFC 3463](https://tools.ietf.org/html/rfc3463)\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TopicArn`  <a name="cfn-ses-receiptrule-bounceaction-topicarn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon SNS topic to notify when the bounce action is taken\. An example of an Amazon SNS topic ARN is `arn:aws:sns:us-west-2:123456789012:MyTopic`\. For more information about Amazon SNS topics, see the [Amazon SNS Developer Guide](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html)\.  
-*Required*: No  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of the Amazon SNS topic to notify when the bounce action is taken\. An example of an Amazon SNS topic ARN is `arn:aws:sns:us-west-2:123456789012:MyTopic`\. For more information about Amazon SNS topics, see the [Amazon SNS Developer Guide](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html)\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

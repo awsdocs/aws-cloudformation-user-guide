@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [EncodingType](#cfn-greengrass-functiondefinition-functionconfiguration-encodingtype): String
-  [Environment](#cfn-greengrass-functiondefinition-functionconfiguration-environment): 
+  [Environment](#cfn-greengrass-functiondefinition-functionconfiguration-environment):
     [Environment](aws-properties-greengrass-functiondefinition-environment.md)
   [ExecArgs](#cfn-greengrass-functiondefinition-functionconfiguration-execargs): String
   [Executable](#cfn-greengrass-functiondefinition-functionconfiguration-executable): String
@@ -38,48 +38,48 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-greengrass-functiondefinition-functionconfiguration-properties"></a>
 
 `EncodingType`  <a name="cfn-greengrass-functiondefinition-functionconfiguration-encodingtype"></a>
-The expected encoding type of the input payload for the function\. Valid values are `json` \(default\) and `binary`\.  
-*Required*: No  
-*Type*: String  
+The expected encoding type of the input payload for the function\. Valid values are `json` \(default\) and `binary`\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Environment`  <a name="cfn-greengrass-functiondefinition-functionconfiguration-environment"></a>
-The environment configuration of the function\.  
-*Required*: No  
-*Type*: [Environment](aws-properties-greengrass-functiondefinition-environment.md)  
+The environment configuration of the function\.
+*Required*: No
+*Type*: [Environment](aws-properties-greengrass-functiondefinition-environment.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExecArgs`  <a name="cfn-greengrass-functiondefinition-functionconfiguration-execargs"></a>
-The execution arguments\.  
-*Required*: No  
-*Type*: String  
+The execution arguments\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Executable`  <a name="cfn-greengrass-functiondefinition-functionconfiguration-executable"></a>
-The name of the function executable\.  
-*Required*: No  
-*Type*: String  
+The name of the function executable\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MemorySize`  <a name="cfn-greengrass-functiondefinition-functionconfiguration-memorysize"></a>
-The memory size \(in KB\) required by the function\.  
+The memory size \(in KB\) required by the function\.
 This property applies only to Lambda functions that run in a Greengrass container\.
-*Required*: No  
-*Type*: Integer  
+*Required*: No
+*Type*: Integer
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Pinned`  <a name="cfn-greengrass-functiondefinition-functionconfiguration-pinned"></a>
-Indicates whether the function is pinned \(or *long\-lived*\)\. Pinned functions start when the core starts and process all requests in the same container\. The default value is false\.  
-*Required*: No  
-*Type*: Boolean  
+Indicates whether the function is pinned \(or *long\-lived*\)\. Pinned functions start when the core starts and process all requests in the same container\. The default value is false\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Timeout`  <a name="cfn-greengrass-functiondefinition-functionconfiguration-timeout"></a>
-The allowed execution time \(in seconds\) after which the function should terminate\. For pinned functions, this timeout applies for each request\.  
-*Required*: No  
-*Type*: Integer  
+The allowed execution time \(in seconds\) after which the function should terminate\. For pinned functions, this timeout applies for each request\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See Also<a name="aws-properties-greengrass-functiondefinition-functionconfiguration--seealso"></a>
-+  [FunctionConfiguration](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functionconfiguration.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [FunctionConfiguration](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functionconfiguration.html) in the * AWS IoT Greengrass API Reference *
++  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)

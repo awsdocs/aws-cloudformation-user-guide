@@ -25,16 +25,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotanalytics-dataset-resourceconfiguration-properties"></a>
 
 `ComputeType`  <a name="cfn-iotanalytics-dataset-resourceconfiguration-computetype"></a>
-The type of the compute resource used to execute the "containerAction"\. Possible values are: ACU\_1 \(vCPU=4, memory=16GiB\) or ACU\_2 \(vCPU=8, memory=32GiB\)\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `ACU_1 | ACU_2`  
+The type of the compute resource used to execute the "containerAction"\. Possible values are: ACU\_1 \(vCPU=4, memory=16GiB\) or ACU\_2 \(vCPU=8, memory=32GiB\)\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `ACU_1 | ACU_2`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeSizeInGB`  <a name="cfn-iotanalytics-dataset-resourceconfiguration-volumesizeingb"></a>
-The size \(in GB\) of the persistent storage available to the resource instance used to execute the "containerAction" \(min: 1, max: 50\)\.  
-*Required*: Yes  
-*Type*: Integer  
-*Minimum*: `1`  
-*Maximum*: `50`  
+The size \(in GB\) of the persistent storage available to the resource instance used to execute the "containerAction" \(min: 1, max: 50\)\.
+*Required*: Yes
+*Type*: Integer
+*Minimum*: `1`
+*Maximum*: `50`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

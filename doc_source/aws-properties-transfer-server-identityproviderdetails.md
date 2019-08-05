@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-transfer-server-identityproviderdetails-properties"></a>
 
 `InvocationRole`  <a name="cfn-transfer-server-identityproviderdetails-invocationrole"></a>
-The `InvocationRole` parameter provides the type of `InvocationRole` used to authenticate the user account\.  
-*Required*: Yes  
-*Type*: String  
-*Pattern*: `arn:.*role/.*`  
+The `InvocationRole` parameter provides the type of `InvocationRole` used to authenticate the user account\.
+*Required*: Yes
+*Type*: String
+*Pattern*: `arn:.*role/.*`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Url`  <a name="cfn-transfer-server-identityproviderdetails-url"></a>
-The `Url` parameter provides contains the location of the service endpoint used to authenticate users\.  
-*Required*: Yes  
-*Type*: String  
+The `Url` parameter provides contains the location of the service endpoint used to authenticate users\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

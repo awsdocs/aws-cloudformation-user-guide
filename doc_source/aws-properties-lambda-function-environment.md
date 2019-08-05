@@ -17,14 +17,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-lambda-function-environment-syntax.yaml"></a>
 
 ```
-  [Variables](#cfn-lambda-function-environment-variables): 
+  [Variables](#cfn-lambda-function-environment-variables):
     Key : Value
 ```
 
 ## Properties<a name="aws-properties-lambda-function-environment-properties"></a>
 
 `Variables`  <a name="cfn-lambda-function-environment-variables"></a>
-Environment variable key\-value pairs\.  
-*Required*: No  
-*Type*: Map of String  
+Environment variable key\-value pairs\.
+*Required*: No
+*Type*: Map of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

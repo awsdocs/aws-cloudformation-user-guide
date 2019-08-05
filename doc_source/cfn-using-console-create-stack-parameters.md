@@ -22,7 +22,7 @@ When you create stacks that contain AWS\-specific parameter types, the AWS Cloud
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-create-stack-specifyparameters.png)
 
-**Note**  
+**Note**
 The console doesn't provide a drop\-down list or enable you to search for values with the `AWS::EC2::Image::Id` parameter type; AWS CloudFormation only verifies if the input values are valid Amazon Elastic Compute Cloud image IDs\.
 
 Group and Sort Parameters

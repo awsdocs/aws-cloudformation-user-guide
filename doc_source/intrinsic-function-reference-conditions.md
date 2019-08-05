@@ -8,7 +8,7 @@ You might use conditions when you want to reuse a template that can create resou
 
 For more information about the Conditions section, see [Conditions](conditions-section-structure.md)\.
 
-**Note**  
+**Note**
 You can only reference other conditions and values from the Parameters and Mappings sections of a template\. For example, you can reference a value from an input parameter, but you cannot reference the logical ID of a resource in a condition\.
 
 **Topics**
@@ -24,7 +24,7 @@ Associating a Condition
 
 To conditionally create resources, resource properties, or outputs, you must associate a condition with them\. Add the `Condition:` key and the logical ID of the condition as an attribute to associate a condition, as shown in the following snippet\. AWS CloudFormation creates the `NewVolume` resource only when the `CreateProdResources` condition evaluates to true\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
 "NewVolume" : {
@@ -36,20 +36,20 @@ To conditionally create resources, resource properties, or outputs, you must ass
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 NewVolume:
   Type: "AWS::EC2::Volume"
   Condition: CreateProdResources
-  Properties: 
+  Properties:
     Size: 100
     AvailabilityZone: !GetAtt EC2Instance.AvailabilityZone
 ```
 
 For the `Fn::If` function, you only need to specify the condition name\. The following snippet shows how to use `Fn::If` to conditionally specify a resource property\. If the `CreateLargeSize` condition is true, AWS CloudFormation sets the volume size to `100`\. If the condition is false, AWS CloudFormation sets the volume size to `10`\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
 "NewVolume" : {
@@ -67,13 +67,13 @@ For the `Fn::If` function, you only need to specify the condition name\. The fol
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 NewVolume:
   Type: "AWS::EC2::Volume"
-  Properties: 
-    Size: 
+  Properties:
+    Size:
       !If [CreateLargeSize, 100, 10]
     AvailabilityZone: !GetAtt: Ec2Instance.AvailabilityZone
   DeletionPolicy: Snapshot
@@ -81,7 +81,7 @@ NewVolume:
 
 You can also use conditions inside other conditions\. The following snippet is from the `Conditions` section of a template\. The `MyAndCondition` condition includes the `SomeOtherCondition` condition:
 
-**Example JSON**  
+**Example JSON**
 
 ```
 "MyAndCondition": {
@@ -92,7 +92,7 @@ You can also use conditions inside other conditions\. The following snippet is f
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 MyAndCondition: !And
@@ -128,7 +128,7 @@ Syntax for the short form:
 
 ### Parameters<a name="w4784ab1c21c24c21c33b6"></a>
 
-`condition`  
+`condition`
 A condition that evaluates to `true` or `false`\.
 
 ### Example<a name="w4784ab1c21c24c21c33b8"></a>
@@ -182,7 +182,7 @@ Syntax for the short form:
 
 ### Parameters<a name="w4784ab1c21c24c21c35b6"></a>
 
-`value`  
+`value`
 A value of any type that you want to compare\.
 
 ### Example<a name="w4784ab1c21c24c21c35b8"></a>
@@ -235,13 +235,13 @@ Syntax for the short form:
 
 ### Parameters<a name="w4784ab1c21c24c21c39b6"></a>
 
-`condition_name`  
+`condition_name`
 A reference to a condition in the Conditions section\. Use the condition's name to reference it\.
 
-`value_if_true`  
+`value_if_true`
 A value to be returned if the specified condition evaluates to `true`\.
 
-`value_if_false`  
+`value_if_false`
 A value to be returned if the specified condition evaluates to `false`\.
 
 ### Examples<a name="w4784ab1c21c24c21c39b8"></a>
@@ -296,7 +296,7 @@ In the Output section of a template, you can use the `Fn::If` function to condit
 
 ```
 Outputs:
-  SecurityGroupId: 
+  SecurityGroupId:
     Description: Group ID of the security group used.
     Value: !If [CreateNewSecurityGroup, !Ref NewSecurityGroup, !Ref ExistingSecurityGroup]
 ```
@@ -334,7 +334,7 @@ The following snippet uses the `AWS::NoValue` pseudo parameter in an `Fn::If` fu
 ```
 MyDB:
   Type: "AWS::RDS::DBInstance"
-  Properties: 
+  Properties:
     AllocatedStorage: 5
     DBInstanceClass: db.m1.small
     Engine: MySQL
@@ -364,7 +364,7 @@ The following snippet provides an auto scaling update policy only if the `Rollin
       },
       {
         "Ref" : "AWS::NoValue"
-      }  
+      }
     ]
   }
 }
@@ -375,7 +375,7 @@ The following snippet provides an auto scaling update policy only if the `Rollin
 ```
 UpdatePolicy:
   AutoScalingRollingUpdate:
-    !If 
+    !If
       - RollingUpdates
       -
         MaxBatchSize: 2
@@ -412,7 +412,7 @@ Syntax for the short form:
 
 ### Parameters<a name="w4784ab1c21c24c21c41b6"></a>
 
-`condition`  
+`condition`
 A condition such as `Fn::Equals` that evaluates to `true` or `false`\.
 
 ### Example<a name="w4784ab1c21c24c21c41b8"></a>
@@ -467,7 +467,7 @@ Syntax for the short form:
 
 ### Parameters<a name="w4784ab1c21c24c21c43b6"></a>
 
-`condition`  
+`condition`
 A condition that evaluates to `true` or `false`\.
 
 ### Example<a name="w4784ab1c21c24c21c43b8"></a>

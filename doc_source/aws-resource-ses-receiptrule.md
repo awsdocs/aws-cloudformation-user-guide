@@ -27,9 +27,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SES::ReceiptRule
-Properties: 
+Properties:
   [After](#cfn-ses-receiptrule-after): String
-  [Rule](#cfn-ses-receiptrule-rule): 
+  [Rule](#cfn-ses-receiptrule-rule):
     [Rule](aws-properties-ses-receiptrule-rule.md)
   [RuleSetName](#cfn-ses-receiptrule-rulesetname): String
 ```
@@ -37,21 +37,21 @@ Properties:
 ## Properties<a name="aws-resource-ses-receiptrule-properties"></a>
 
 `After`  <a name="cfn-ses-receiptrule-after"></a>
-The name of the existing rule that you want to place the current rule after\. If this parameter is `null`, the new rule is added as the first entry in the receipt rule set\.  
-*Required*: No  
-*Type*: String  
+The name of the existing rule that you want to place the current rule after\. If this parameter is `null`, the new rule is added as the first entry in the receipt rule set\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Rule`  <a name="cfn-ses-receiptrule-rule"></a>
-A data structure that contains the specified rule's name, actions, recipients, domains, enabled status, scan status, and TLS policy\.  
-*Required*: Yes  
-*Type*: [Rule](aws-properties-ses-receiptrule-rule.md)  
+A data structure that contains the specified rule's name, actions, recipients, domains, enabled status, scan status, and TLS policy\.
+*Required*: Yes
+*Type*: [Rule](aws-properties-ses-receiptrule-rule.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleSetName`  <a name="cfn-ses-receiptrule-rulesetname"></a>
-The name of the rule set that you want to add the receipt rule to\.  
-*Required*: Yes  
-*Type*: String  
+The name of the rule set that you want to add the receipt rule to\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ses-receiptrule-return-values"></a>

@@ -32,65 +32,65 @@ scripts to install the packages and files necessary to deploy the Apache web ser
       "Description" : "Name of an existing EC2 KeyPair to enable SSH access to the instance",
       "Type": "AWS::EC2::KeyPair::KeyName",
       "ConstraintDescription" : "Can contain only ASCII characters."
-    },  
+    },
     "InstanceType" : {
       "Description" : "WebServer EC2 instance type",
       "Type" : "String",
       "Default" : "t2.small",
-      "AllowedValues" : [ 
-        "t1.micro", 
-        "t2.nano", 
-        "t2.micro", 
-        "t2.small", 
-        "t2.medium", 
-        "t2.large", 
-        "m1.small", 
-        "m1.medium", 
-        "m1.large", 
-        "m1.xlarge", 
-        "m2.xlarge", 
-        "m2.2xlarge", 
-        "m2.4xlarge", 
-        "m3.medium", 
-        "m3.large", 
-        "m3.xlarge", 
-        "m3.2xlarge", 
-        "m4.large", 
-        "m4.xlarge", 
-        "m4.2xlarge", 
-        "m4.4xlarge", 
-        "m4.10xlarge", 
-        "c1.medium", 
-        "c1.xlarge", 
-        "c3.large", 
-        "c3.xlarge", 
-        "c3.2xlarge", 
-        "c3.4xlarge", 
-        "c3.8xlarge", 
-        "c4.large", 
-        "c4.xlarge", 
-        "c4.2xlarge", 
-        "c4.4xlarge", 
-        "c4.8xlarge", 
-        "g2.2xlarge", 
-        "g2.8xlarge", 
-        "r3.large", 
-        "r3.xlarge", 
-        "r3.2xlarge", 
-        "r3.4xlarge", 
-        "r3.8xlarge", 
-        "i2.xlarge", 
-        "i2.2xlarge", 
-        "i2.4xlarge", 
-        "i2.8xlarge", 
-        "d2.xlarge", 
-        "d2.2xlarge", 
-        "d2.4xlarge", 
-        "d2.8xlarge", 
-        "hi1.4xlarge", 
-        "hs1.8xlarge", 
-        "cr1.8xlarge", 
-        "cc2.8xlarge", 
+      "AllowedValues" : [
+        "t1.micro",
+        "t2.nano",
+        "t2.micro",
+        "t2.small",
+        "t2.medium",
+        "t2.large",
+        "m1.small",
+        "m1.medium",
+        "m1.large",
+        "m1.xlarge",
+        "m2.xlarge",
+        "m2.2xlarge",
+        "m2.4xlarge",
+        "m3.medium",
+        "m3.large",
+        "m3.xlarge",
+        "m3.2xlarge",
+        "m4.large",
+        "m4.xlarge",
+        "m4.2xlarge",
+        "m4.4xlarge",
+        "m4.10xlarge",
+        "c1.medium",
+        "c1.xlarge",
+        "c3.large",
+        "c3.xlarge",
+        "c3.2xlarge",
+        "c3.4xlarge",
+        "c3.8xlarge",
+        "c4.large",
+        "c4.xlarge",
+        "c4.2xlarge",
+        "c4.4xlarge",
+        "c4.8xlarge",
+        "g2.2xlarge",
+        "g2.8xlarge",
+        "r3.large",
+        "r3.xlarge",
+        "r3.2xlarge",
+        "r3.4xlarge",
+        "r3.8xlarge",
+        "i2.xlarge",
+        "i2.2xlarge",
+        "i2.4xlarge",
+        "i2.8xlarge",
+        "d2.xlarge",
+        "d2.2xlarge",
+        "d2.4xlarge",
+        "d2.8xlarge",
+        "hi1.4xlarge",
+        "hs1.8xlarge",
+        "cr1.8xlarge",
+        "cc2.8xlarge",
         "cg1.4xlarge"
       ],
       "ConstraintDescription" : "must be a valid EC2 instance type."
@@ -103,10 +103,10 @@ scripts to install the packages and files necessary to deploy the Apache web ser
       "Default": "0.0.0.0/0",
       "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
       "ConstraintDescription": "Must be a valid IP CIDR range of the form x.x.x.x/x"
-    } 
+    }
   },
 
-{      
+{
   "Mappings" : {
     "AWSInstanceType2Arch" : {
       "t1.micro"    : { "Arch" : "HVM64"  },
@@ -331,7 +331,7 @@ In the following example, sections marked with an ellipsis \(`...`\) are omitted
               }
             },
             "services" : {
-              "sysvinit" : {  
+              "sysvinit" : {
                 "httpd"   : { "enabled" : "true", "ensureRunning" : "true" }
               }
             }
@@ -497,7 +497,7 @@ Now that we have a template that installs Linux, Apache, MySQL, and PHP, we'll n
             },
 
             "services" : {
-              "sysvinit" : {  
+              "sysvinit" : {
                 "mysqld"  : { "enabled" : "true", "ensureRunning" : "true" },
                 "httpd"   : { "enabled" : "true", "ensureRunning" : "true" },
                 "cfn-hup" : { "enabled" : "true", "ensureRunning" : "true",
@@ -528,7 +528,7 @@ Now that we have a template that installs Linux, Apache, MySQL, and PHP, we'll n
         "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
           "#!/bin/bash -xe\n",
           "yum install -y aws-cfn-bootstrap\n",
-          
+
           "# Install the files and packages from the metadata\n",
           "/opt/aws/bin/cfn-init ",
           "         --stack ", { "Ref" : "AWS::StackName" },
@@ -594,7 +594,7 @@ The following example adds a creation policy to the Amazon EC2 instance to ensur
              "         --stack ", { "Ref" : "AWS::StackName" },
              "         --resource WebServerInstance ",
              "         --region ", { "Ref" : "AWS::Region" }, "\n"
-        ]]}}        
+        ]]}}
       },
       "CreationPolicy" : {
         "ResourceSignal" : {
@@ -625,16 +625,16 @@ The following example shows final complete template\. You can also view the temp
 ```
 {
   "AWSTemplateFormatVersion" : "2010-09-09",
-  
+
   "Description" : "AWS CloudFormation Sample Template LAMP_Single_Instance: Create a LAMP stack using a single EC2 instance and a local MySQL database for storage. This template demonstrates using the AWS CloudFormation bootstrap scripts to install the packages and files necessary to deploy the Apache web server, PHP and MySQL at instance launch time. **WARNING** This template creates an Amazon EC2 instance. You will be billed for the AWS resources used if you create a stack from this template.",
-  
+
   "Parameters" : {
-      
+
     "KeyName": {
       "Description" : "Name of an existing EC2 KeyPair to enable SSH access to the instance",
       "Type": "AWS::EC2::KeyPair::KeyName",
       "ConstraintDescription" : "Can contain only ASCII characters."
-    },    
+    },
 
     "DBName": {
       "Default": "MyDatabase",
@@ -680,60 +680,60 @@ The following example shows final complete template\. You can also view the temp
       "Description" : "WebServer EC2 instance type",
       "Type" : "String",
       "Default" : "t2.small",
-      "AllowedValues" : [ 
-        "t1.micro", 
-        "t2.nano", 
-        "t2.micro", 
-        "t2.small", 
-        "t2.medium", 
-        "t2.large", 
-        "m1.small", 
-        "m1.medium", 
-        "m1.large", 
-        "m1.xlarge", 
-        "m2.xlarge", 
-        "m2.2xlarge", 
-        "m2.4xlarge", 
-        "m3.medium", 
-        "m3.large", 
-        "m3.xlarge", 
-        "m3.2xlarge", 
-        "m4.large", 
-        "m4.xlarge", 
-        "m4.2xlarge", 
-        "m4.4xlarge", 
-        "m4.10xlarge", 
-        "c1.medium", 
-        "c1.xlarge", 
-        "c3.large", 
-        "c3.xlarge", 
-        "c3.2xlarge", 
-        "c3.4xlarge", 
-        "c3.8xlarge", 
-        "c4.large", 
-        "c4.xlarge", 
-        "c4.2xlarge", 
-        "c4.4xlarge", 
-        "c4.8xlarge", 
-        "g2.2xlarge", 
-        "g2.8xlarge", 
-        "r3.large", 
-        "r3.xlarge", 
-        "r3.2xlarge", 
-        "r3.4xlarge", 
-        "r3.8xlarge", 
-        "i2.xlarge", 
-        "i2.2xlarge", 
-        "i2.4xlarge", 
-        "i2.8xlarge", 
-        "d2.xlarge", 
-        "d2.2xlarge", 
-        "d2.4xlarge", 
-        "d2.8xlarge", 
-        "hi1.4xlarge", 
-        "hs1.8xlarge", 
-        "cr1.8xlarge", 
-        "cc2.8xlarge", 
+      "AllowedValues" : [
+        "t1.micro",
+        "t2.nano",
+        "t2.micro",
+        "t2.small",
+        "t2.medium",
+        "t2.large",
+        "m1.small",
+        "m1.medium",
+        "m1.large",
+        "m1.xlarge",
+        "m2.xlarge",
+        "m2.2xlarge",
+        "m2.4xlarge",
+        "m3.medium",
+        "m3.large",
+        "m3.xlarge",
+        "m3.2xlarge",
+        "m4.large",
+        "m4.xlarge",
+        "m4.2xlarge",
+        "m4.4xlarge",
+        "m4.10xlarge",
+        "c1.medium",
+        "c1.xlarge",
+        "c3.large",
+        "c3.xlarge",
+        "c3.2xlarge",
+        "c3.4xlarge",
+        "c3.8xlarge",
+        "c4.large",
+        "c4.xlarge",
+        "c4.2xlarge",
+        "c4.4xlarge",
+        "c4.8xlarge",
+        "g2.2xlarge",
+        "g2.8xlarge",
+        "r3.large",
+        "r3.xlarge",
+        "r3.2xlarge",
+        "r3.4xlarge",
+        "r3.8xlarge",
+        "i2.xlarge",
+        "i2.2xlarge",
+        "i2.4xlarge",
+        "i2.8xlarge",
+        "d2.xlarge",
+        "d2.2xlarge",
+        "d2.4xlarge",
+        "d2.8xlarge",
+        "hi1.4xlarge",
+        "hs1.8xlarge",
+        "cr1.8xlarge",
+        "cc2.8xlarge",
         "cg1.4xlarge"
       ],
       "ConstraintDescription" : "must be a valid EC2 instance type."
@@ -746,9 +746,9 @@ The following example shows final complete template\. You can also view the temp
       "Default": "0.0.0.0/0",
       "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
       "ConstraintDescription": "Must be a valid IP CIDR range of the form x.x.x.x/x"
-    } 
+    }
   },
-  
+
   "Mappings" : {
     "AWSInstanceType2Arch" : {
       "t1.micro"    : { "Arch" : "HVM64"  },
@@ -827,10 +827,10 @@ The following example shows final complete template\. You can also view the temp
     }
 
   },
-    
-  "Resources" : {     
-      
-    "WebServerInstance": {  
+
+  "Resources" : {
+
+    "WebServerInstance": {
       "Type": "AWS::EC2::Instance",
       "Metadata" : {
         "AWS::CloudFormation::Init" : {
@@ -951,7 +951,7 @@ The following example shows final complete template\. You can also view the temp
             },
 
             "services" : {
-              "sysvinit" : {  
+              "sysvinit" : {
                 "mysqld"  : { "enabled" : "true", "ensureRunning" : "true" },
                 "httpd"   : { "enabled" : "true", "ensureRunning" : "true" },
                 "cfn-hup" : { "enabled" : "true", "ensureRunning" : "true",
@@ -996,7 +996,7 @@ The following example shows final complete template\. You can also view the temp
              "         --stack ", { "Ref" : "AWS::StackName" },
              "         --resource WebServerInstance ",
              "         --region ", { "Ref" : "AWS::Region" }, "\n"
-        ]]}}        
+        ]]}}
       },
       "CreationPolicy" : {
         "ResourceSignal" : {
@@ -1004,7 +1004,7 @@ The following example shows final complete template\. You can also view the temp
         }
       }
     },
-    
+
     "WebServerSecurityGroup" : {
       "Type" : "AWS::EC2::SecurityGroup",
       "Properties" : {
@@ -1013,10 +1013,10 @@ The following example shows final complete template\. You can also view the temp
           {"IpProtocol" : "tcp", "FromPort" : "80", "ToPort" : "80", "CidrIp" : "0.0.0.0/0"},
           {"IpProtocol" : "tcp", "FromPort" : "22", "ToPort" : "22", "CidrIp" : { "Ref" : "SSHLocation"}}
         ]
-      }      
-    }          
+      }
+    }
   },
-  
+
   "Outputs" : {
     "WebsiteURL" : {
       "Description" : "URL for newly created LAMP stack",

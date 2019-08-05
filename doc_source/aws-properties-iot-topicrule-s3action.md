@@ -27,19 +27,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-topicrule-s3action-properties"></a>
 
 `BucketName`  <a name="cfn-iot-topicrule-s3action-bucketname"></a>
-The Amazon S3 bucket\.  
-*Required*: Yes  
-*Type*: String  
+The Amazon S3 bucket\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Key`  <a name="cfn-iot-topicrule-s3action-key"></a>
-The object key\.  
-*Required*: Yes  
-*Type*: String  
+The object key\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-iot-topicrule-s3action-rolearn"></a>
-The ARN of the IAM role that grants access\.  
-*Required*: Yes  
-*Type*: String  
+The ARN of the IAM role that grants access\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

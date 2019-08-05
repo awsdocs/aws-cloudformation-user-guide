@@ -31,31 +31,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-topicrule-elasticsearchaction-properties"></a>
 
 `Endpoint`  <a name="cfn-iot-topicrule-elasticsearchaction-endpoint"></a>
-The endpoint of your Elasticsearch domain\.  
-*Required*: Yes  
-*Type*: String  
+The endpoint of your Elasticsearch domain\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-iot-topicrule-elasticsearchaction-id"></a>
-The unique identifier for the document you are storing\.  
-*Required*: Yes  
-*Type*: String  
+The unique identifier for the document you are storing\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Index`  <a name="cfn-iot-topicrule-elasticsearchaction-index"></a>
-The Elasticsearch index where you want to store your data\.  
-*Required*: Yes  
-*Type*: String  
+The Elasticsearch index where you want to store your data\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-iot-topicrule-elasticsearchaction-rolearn"></a>
-The IAM role ARN that has access to Elasticsearch\.  
-*Required*: Yes  
-*Type*: String  
+The IAM role ARN that has access to Elasticsearch\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-iot-topicrule-elasticsearchaction-type"></a>
-The type of document you are storing\.  
-*Required*: Yes  
-*Type*: String  
+The type of document you are storing\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

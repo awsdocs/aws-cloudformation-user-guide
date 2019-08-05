@@ -4,8 +4,8 @@ The `AWS::Greengrass::ResourceDefinition` resource represents a resource definit
 
 Resource definitions can reference multiple resource definition versions\. All resource definition versions must be associated with a resource definition\. Each resource definition version can contain one or more resources\. \(In AWS CloudFormation, resources are named *resource instances*\.\)
 
-**Note**  
-When you create a resource definition, you can optionally include an initial resource definition version\. To associate a resource definition version later, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinitionversion.html) resource and specify the ID of this resource definition\.  
+**Note**
+When you create a resource definition, you can optionally include an initial resource definition version\. To associate a resource definition version later, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinitionversion.html) resource and specify the ID of this resource definition\.
 After you create the resource definition version that contains the resources you want to deploy, you must add it to your group version\. For more information, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)\.
 
 ## Syntax<a name="aws-resource-greengrass-resourcedefinition-syntax"></a>
@@ -28,8 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Greengrass::ResourceDefinition
-Properties: 
-  [InitialVersion](#cfn-greengrass-resourcedefinition-initialversion): 
+Properties:
+  [InitialVersion](#cfn-greengrass-resourcedefinition-initialversion):
     [ResourceDefinitionVersion](aws-properties-greengrass-resourcedefinition-resourcedefinitionversion.md)
   [Name](#cfn-greengrass-resourcedefinition-name): String
 ```
@@ -37,16 +37,16 @@ Properties:
 ## Properties<a name="aws-resource-greengrass-resourcedefinition-properties"></a>
 
 `InitialVersion`  <a name="cfn-greengrass-resourcedefinition-initialversion"></a>
-The resource definition version to include when the resource definition is created\. A resource definition version contains a list of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html) property types\.  
+The resource definition version to include when the resource definition is created\. A resource definition version contains a list of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html) property types\.
 To associate a resource definition version after the resource definition is created, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinitionversion.html) resource and specify the ID of this resource definition\.
-*Required*: No  
-*Type*: [ResourceDefinitionVersion](aws-properties-greengrass-resourcedefinition-resourcedefinitionversion.md)  
+*Required*: No
+*Type*: [ResourceDefinitionVersion](aws-properties-greengrass-resourcedefinition-resourcedefinitionversion.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-greengrass-resourcedefinition-name"></a>
-The name of the resource definition\.  
-*Required*: Yes  
-*Type*: String  
+The name of the resource definition\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-greengrass-resourcedefinition-return-values"></a>
@@ -72,7 +72,7 @@ The Amazon Resource Name \(ARN\) of the `ResourceDefinition`, such as `arn:aws:g
 The ID of the `ResourceDefinition`, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\.
 
 `LatestVersionArn`  <a name="LatestVersionArn-fn::getatt"></a>
-The ARN of the last `ResourceDefinitionVersion` that was added to the `ResourceDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/resources/1234a5b6-78cd-901e-2fgh-3i45j6k178l9/versions/9876ac30-4bdb-4f9d-95af-b5fdb66be1a2`\. 
+The ARN of the last `ResourceDefinitionVersion` that was added to the `ResourceDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/resources/1234a5b6-78cd-901e-2fgh-3i45j6k178l9/versions/9876ac30-4bdb-4f9d-95af-b5fdb66be1a2`\.
 
 `Name`  <a name="Name-fn::getatt"></a>
 The name of the `ResourceDefinition`, such as `MyResourceDefinition`\.
@@ -221,7 +221,7 @@ TestResourceDefinitionVersion:
         Name: SageMakerMachineLearningModelResourceData
         ResourceDataContainer:
           SageMakerMachineLearningModelResourceData:
-            SageMakerJobArn: !Join 
+            SageMakerJobArn: !Join
               - ':'
               - - 'arn:aws:sagemaker'
                 - !Ref 'AWS::Region'
@@ -238,7 +238,7 @@ TestResourceDefinitionVersion:
         Name: SecretsManagerSecretResourceData
         ResourceDataContainer:
           SecretsManagerSecretResourceData:
-            ARN: !Join 
+            ARN: !Join
               - ':'
               - - 'arn:aws:secretsmanager'
                 - !Ref 'AWS::Region'
@@ -250,5 +250,5 @@ TestResourceDefinitionVersion:
 ```
 
 ## See Also<a name="aws-resource-greengrass-resourcedefinition--seealso"></a>
-+  [CreateResourceDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createresourcedefinition-post.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [CreateResourceDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createresourcedefinition-post.html) in the * AWS IoT Greengrass API Reference *
++  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)

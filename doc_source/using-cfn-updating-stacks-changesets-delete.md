@@ -12,7 +12,7 @@ Deleting a change set removes it from the list of change sets for the stack\. De
 
    The AWS CloudFormation console directs you to the detail page for the change set\.
 
-1. Choose **Other Actions**, and then choose **Delete**\.  
+1. Choose **Other Actions**, and then choose **Delete**\.
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-changeset-delete.png)
 
 1. Confirm that this is the change set you want to delete, and then choose **Delete**\.

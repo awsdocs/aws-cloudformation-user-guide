@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-virtualnode-awscloudmapservicediscovery-syntax.yaml"></a>
 
 ```
-  [Attributes](#cfn-appmesh-virtualnode-awscloudmapservicediscovery-attributes): 
+  [Attributes](#cfn-appmesh-virtualnode-awscloudmapservicediscovery-attributes):
     - [AwsCloudMapInstanceAttribute](aws-properties-appmesh-virtualnode-awscloudmapinstanceattribute.md)
   [NamespaceName](#cfn-appmesh-virtualnode-awscloudmapservicediscovery-namespacename): String
   [ServiceName](#cfn-appmesh-virtualnode-awscloudmapservicediscovery-servicename): String
@@ -28,19 +28,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appmesh-virtualnode-awscloudmapservicediscovery-properties"></a>
 
 `Attributes`  <a name="cfn-appmesh-virtualnode-awscloudmapservicediscovery-attributes"></a>
-A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance\. Only instances that match all of the specified key/value pairs will be returned\.  
-*Required*: No  
-*Type*: List of [AwsCloudMapInstanceAttribute](aws-properties-appmesh-virtualnode-awscloudmapinstanceattribute.md)  
+A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance\. Only instances that match all of the specified key/value pairs will be returned\.
+*Required*: No
+*Type*: List of [AwsCloudMapInstanceAttribute](aws-properties-appmesh-virtualnode-awscloudmapinstanceattribute.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NamespaceName`  <a name="cfn-appmesh-virtualnode-awscloudmapservicediscovery-namespacename"></a>
-The name of the AWS Cloud Map namespace to use\.  
-*Required*: Yes  
-*Type*: String  
+The name of the AWS Cloud Map namespace to use\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceName`  <a name="cfn-appmesh-virtualnode-awscloudmapservicediscovery-servicename"></a>
-The name of the AWS Cloud Map service to use\.  
-*Required*: Yes  
-*Type*: String  
+The name of the AWS Cloud Map service to use\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

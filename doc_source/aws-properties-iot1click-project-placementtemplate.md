@@ -2,7 +2,7 @@
 
 In AWS CloudFormation, use the `PlacementTemplate` property type to define the template for an AWS IoT 1\-Click project\.
 
-`PlacementTemplate` is a property of the `AWS::IoT1Click::Project` resource\. 
+`PlacementTemplate` is a property of the `AWS::IoT1Click::Project` resource\.
 
 ## Syntax<a name="aws-properties-iot1click-project-placementtemplate-syntax"></a>
 
@@ -27,15 +27,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot1click-project-placementtemplate-properties"></a>
 
 `DefaultAttributes`  <a name="cfn-iot1click-project-placementtemplate-defaultattributes"></a>
-The default attributes \(key\-value pairs\) to be applied to all placements using this template\.  
-*Required*: No  
-*Type*: Json  
+The default attributes \(key\-value pairs\) to be applied to all placements using this template\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeviceTemplates`  <a name="cfn-iot1click-project-placementtemplate-devicetemplates"></a>
-An object specifying the [DeviceTemplate](https://docs.aws.amazon.com/iot-1-click/latest/projects-apireference/API_DeviceTemplate.html) for all placements using this \([PlacementTemplate](https://docs.aws.amazon.com/iot-1-click/latest/projects-apireference/API_PlacementTemplate.html)\) template\.  
-*Required*: No  
-*Type*: Json  
+An object specifying the [DeviceTemplate](https://docs.aws.amazon.com/iot-1-click/latest/projects-apireference/API_DeviceTemplate.html) for all placements using this \([PlacementTemplate](https://docs.aws.amazon.com/iot-1-click/latest/projects-apireference/API_PlacementTemplate.html)\) template\.
+*Required*: No
+*Type*: Json
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See Also<a name="aws-properties-iot1click-project-placementtemplate--seealso"></a>

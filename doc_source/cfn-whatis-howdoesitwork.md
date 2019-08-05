@@ -6,8 +6,8 @@ The calls that AWS CloudFormation makes are all declared by your template\. For 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/create-stack-diagram.png)
 
-1. You can design an AWS CloudFormation template \(a JSON or YAML\-formatted document\) in [AWS CloudFormation Designer](https://console.aws.amazon.com/cloudformation/designer) or write one in a text editor\. You can also choose to use a provided template\. The template describes the resources you want and their settings\. For example, suppose you want to create an EC2 instance\. Your template can declare an EC2 instance and describe its properties, as shown in the following example:  
-**Example JSON Syntax**  
+1. You can design an AWS CloudFormation template \(a JSON or YAML\-formatted document\) in [AWS CloudFormation Designer](https://console.aws.amazon.com/cloudformation/designer) or write one in a text editor\. You can also choose to use a provided template\. The template describes the resources you want and their settings\. For example, suppose you want to create an EC2 instance\. Your template can declare an EC2 instance and describe its properties, as shown in the following example:
+**Example JSON Syntax**
 
    ```
    {
@@ -23,8 +23,8 @@ The calls that AWS CloudFormation makes are all declared by your template\. For 
        }
      }
    }
-   ```  
-**Example YAML Syntax**  
+   ```
+**Example YAML Syntax**
 
    ```
    AWSTemplateFormatVersion: '2010-09-09'
@@ -42,8 +42,8 @@ The calls that AWS CloudFormation makes are all declared by your template\. For 
 1. Create an AWS CloudFormation stack by specifying the location of your template file , such as a path on your local computer or an Amazon S3 URL\. If the template contains parameters, you can specify input values when you create the stack\. Parameters enable you to pass in values to your template so that you can customize your resources each time you create a stack\.
 
    You can create stacks by using the AWS CloudFormation [console](cfn-console-create-stack.md), [API](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html), or [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html)\.
-**Note**  
-If you specify a template file stored locally, AWS CloudFormation uploads it to an S3 bucket in your AWS account\. AWS CloudFormation creates a bucket for each region in which you upload a template file\. The buckets are accessible to anyone with Amazon Simple Storage Service \(Amazon S3\) permissions in your AWS account\. If a bucket created by AWS CloudFormation is already present, the template is added to that bucket\.  
+**Note**
+If you specify a template file stored locally, AWS CloudFormation uploads it to an S3 bucket in your AWS account\. AWS CloudFormation creates a bucket for each region in which you upload a template file\. The buckets are accessible to anyone with Amazon Simple Storage Service \(Amazon S3\) permissions in your AWS account\. If a bucket created by AWS CloudFormation is already present, the template is added to that bucket\.
 You can use your own bucket and manage its permissions by manually uploading templates to Amazon S3\. Then whenever you create or update a stack, specify the Amazon S3 URL of a template file\.
 
 AWS CloudFormation provisions and configures resources by making calls to the AWS services that are described in your template\.
@@ -56,7 +56,7 @@ When you need to update your stack's resources, you can modify the stack's templ
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/update-stack-diagram.png)
 
-**Important**  
+**Important**
 Updates can cause interruptions\. Depending on the resource and properties that you are updating, an update might interrupt or even replace an existing resource\. For more information, see [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)\.
 
 1. You can modify an AWS CloudFormation stack template by using [AWS CloudFormation Designer](https://console.aws.amazon.com/cloudformation/designer) or a text editor\. For example, if you want to change the instance type for an EC2 instance, you would change the value of the `InstanceType` property in the original stack's template\.
@@ -68,11 +68,11 @@ Updates can cause interruptions\. Depending on the resource and properties that 
 1. Create a change set by specifying the stack that you want to update and the location of the modified template, such as a path on your local computer or an Amazon S3 URL\. If the template contains parameters, you can specify values when you create the change set\.
 
    For more information about creating change sets, see [Updating Stacks Using Change Sets](using-cfn-updating-stacks-changesets.md)\.
-**Note**  
+**Note**
 If you specify a template that is stored on your local computer, AWS CloudFormation automatically uploads your template to an S3 bucket in your AWS account\.
 
 1. View the change set to check that AWS CloudFormation will perform the changes that you expect\. For example, check whether AWS CloudFormation will replace any critical stack resources\. You can create as many change sets as you need until you have included the changes that you want\.
-**Important**  
+**Important**
 Change sets don't indicate whether your stack update will be successful\. For example, a change set doesn't check if you will surpass an account [limit](cloudformation-limits.md), if you're updating a [resource](aws-template-resource-type-ref.md) that doesn't support updates, or if you have insufficient [permissions](using-iam-template.md) to modify a resource, all of which can cause a stack update to fail\.
 
 1. Execute the change set that you want to apply to your stack\. AWS CloudFormation updates your stack by updating only the resources that you modified and signals that your stack has been successfully updated\. If the stack updates fails, AWS CloudFormation rolls back changes to restore the stack to the last known working state\.

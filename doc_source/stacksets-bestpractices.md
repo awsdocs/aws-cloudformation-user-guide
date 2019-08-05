@@ -10,7 +10,7 @@ Review the [AWS CloudFormation Best Practices](http://docs.aws.amazon.com/AWSClo
 ## Defining the Template<a name="w4784ab1c19c19b6"></a>
 + Define the template that you want to standardize in multiple accounts, within multiple regions\.
 + As you create the template, be sure that global resources \(such as IAM roles and Amazon S3 buckets\) do not have naming conflicts when they are created in more than one region in the same account\.
-+ A stack set has a single template and parameter set\. The same stack is created in all accounts that are associated with a stack set\. As you author your templates, make them granular enough to allow you a good balance of control and standardization\.  
++ A stack set has a single template and parameter set\. The same stack is created in all accounts that are associated with a stack set\. As you author your templates, make them granular enough to allow you a good balance of control and standardization\.
 + We recommend that you store your template in an Amazon S3 bucket\.
 
 ## Creating or Adding Stacks to the Stack Set<a name="w4784ab1c19c19b8"></a>

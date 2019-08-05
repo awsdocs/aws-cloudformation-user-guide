@@ -31,29 +31,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest-properties"></a>
 
 `DefaultTargetCapacityType`  <a name="cfn-ec2-ec2fleet-targetcapacityspecificationrequest-defaulttargetcapacitytype"></a>
-The default `TotalTargetCapacity`, which is either `Spot` or `On-Demand`\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `on-demand | spot`  
+The default `TotalTargetCapacity`, which is either `Spot` or `On-Demand`\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `on-demand | spot`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OnDemandTargetCapacity`  <a name="cfn-ec2-ec2fleet-targetcapacityspecificationrequest-ondemandtargetcapacity"></a>
-The number of On\-Demand units to request\.  
-*Required*: No  
-*Type*: Integer  
+The number of On\-Demand units to request\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SpotTargetCapacity`  <a name="cfn-ec2-ec2fleet-targetcapacityspecificationrequest-spottargetcapacity"></a>
-The number of Spot units to request\.  
-*Required*: No  
-*Type*: Integer  
+The number of Spot units to request\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TotalTargetCapacity`  <a name="cfn-ec2-ec2fleet-targetcapacityspecificationrequest-totaltargetcapacity"></a>
-The number of units to request, filled using `DefaultTargetCapacityType`\.  
-*Required*: Yes  
-*Type*: Integer  
+The number of units to request, filled using `DefaultTargetCapacityType`\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest--seealso"></a>
-+  [ TargetCapacitySpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TargetCapacitySpecificationRequest.html) in the *Amazon EC2 API Reference* 
++  [ TargetCapacitySpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TargetCapacitySpecificationRequest.html) in the *Amazon EC2 API Reference*

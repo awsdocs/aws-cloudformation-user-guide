@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::TransitGatewayRoute
-Properties: 
+Properties:
   [Blackhole](#cfn-ec2-transitgatewayroute-blackhole): Boolean
   [DestinationCidrBlock](#cfn-ec2-transitgatewayroute-destinationcidrblock): String
   [TransitGatewayAttachmentId](#cfn-ec2-transitgatewayroute-transitgatewayattachmentid): String
@@ -34,27 +34,27 @@ Properties:
 ## Properties<a name="aws-resource-ec2-transitgatewayroute-properties"></a>
 
 `Blackhole`  <a name="cfn-ec2-transitgatewayroute-blackhole"></a>
-Indicates whether to drop traffic that matches this route\.  
-*Required*: No  
-*Type*: Boolean  
+Indicates whether to drop traffic that matches this route\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DestinationCidrBlock`  <a name="cfn-ec2-transitgatewayroute-destinationcidrblock"></a>
-The CIDR block used for destination matches\.  
-*Required*: No  
-*Type*: String  
+The CIDR block used for destination matches\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TransitGatewayAttachmentId`  <a name="cfn-ec2-transitgatewayroute-transitgatewayattachmentid"></a>
-The ID of the attachment\.  
-*Required*: No  
-*Type*: String  
+The ID of the attachment\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TransitGatewayRouteTableId`  <a name="cfn-ec2-transitgatewayroute-transitgatewayroutetableid"></a>
-The ID of the transit gateway route table\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the transit gateway route table\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-transitgatewayroute-return-values"></a>

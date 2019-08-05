@@ -27,25 +27,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-monitoringconfiguration-properties"></a>
 
 `ConfigurationType`  <a name="cfn-kinesisanalyticsv2-application-monitoringconfiguration-configurationtype"></a>
-Describes whether to use the default CloudWatch logging configuration for an application\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `CUSTOM | DEFAULT`  
+Describes whether to use the default CloudWatch logging configuration for an application\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `CUSTOM | DEFAULT`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogLevel`  <a name="cfn-kinesisanalyticsv2-application-monitoringconfiguration-loglevel"></a>
-Describes the verbosity of the CloudWatch Logs for an application\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `DEBUG | ERROR | INFO | WARN`  
+Describes the verbosity of the CloudWatch Logs for an application\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `DEBUG | ERROR | INFO | WARN`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricsLevel`  <a name="cfn-kinesisanalyticsv2-application-monitoringconfiguration-metricslevel"></a>
-Describes the granularity of the CloudWatch Logs for an application\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `APPLICATION | OPERATOR | PARALLELISM | TASK`  
+Describes the granularity of the CloudWatch Logs for an application\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `APPLICATION | OPERATOR | PARALLELISM | TASK`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-kinesisanalyticsv2-application-monitoringconfiguration--seealso"></a>
-+  [MonitoringConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_MonitoringConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference* 
++  [MonitoringConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_MonitoringConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference*

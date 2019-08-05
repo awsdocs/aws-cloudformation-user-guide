@@ -18,22 +18,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-config-remediationconfiguration-remediationparametervalue-syntax.yaml"></a>
 
 ```
-  [ResourceValue](#cfn-config-remediationconfiguration-remediationparametervalue-resourcevalue): 
+  [ResourceValue](#cfn-config-remediationconfiguration-remediationparametervalue-resourcevalue):
     [ResourceValue](aws-properties-config-remediationconfiguration-resourcevalue.md)
-  [StaticValue](#cfn-config-remediationconfiguration-remediationparametervalue-staticvalue): 
+  [StaticValue](#cfn-config-remediationconfiguration-remediationparametervalue-staticvalue):
     [StaticValue](aws-properties-config-remediationconfiguration-staticvalue.md)
 ```
 
 ## Properties<a name="aws-properties-config-remediationconfiguration-remediationparametervalue-properties"></a>
 
 `ResourceValue`  <a name="cfn-config-remediationconfiguration-remediationparametervalue-resourcevalue"></a>
-The value is dynamic and changes at run\-time\.  
-*Required*: No  
-*Type*: [ResourceValue](aws-properties-config-remediationconfiguration-resourcevalue.md)  
+The value is dynamic and changes at run\-time\.
+*Required*: No
+*Type*: [ResourceValue](aws-properties-config-remediationconfiguration-resourcevalue.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StaticValue`  <a name="cfn-config-remediationconfiguration-remediationparametervalue-staticvalue"></a>
-The value is static and does not change at run\-time\.  
-*Required*: No  
-*Type*: [StaticValue](aws-properties-config-remediationconfiguration-staticvalue.md)  
+The value is static and does not change at run\-time\.
+*Required*: No
+*Type*: [StaticValue](aws-properties-config-remediationconfiguration-staticvalue.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

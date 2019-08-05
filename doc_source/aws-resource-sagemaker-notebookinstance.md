@@ -1,6 +1,6 @@
 # AWS::SageMaker::NotebookInstance<a name="aws-resource-sagemaker-notebookinstance"></a>
 
-The `AWS::SageMaker::NotebookInstance` resource creates an Amazon SageMaker notebook instance\. A notebook instance is a machine learning \(ML\) compute instance running on a Jupyter notebook\. For more information, see [Use Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi.html)\. 
+The `AWS::SageMaker::NotebookInstance` resource creates an Amazon SageMaker notebook instance\. A notebook instance is a machine learning \(ML\) compute instance running on a Jupyter notebook\. For more information, see [Use Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi.html)\.
 
 ## Syntax<a name="aws-resource-sagemaker-notebookinstance-syntax"></a>
 
@@ -34,10 +34,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SageMaker::NotebookInstance
-Properties: 
-  [AcceleratorTypes](#cfn-sagemaker-notebookinstance-acceleratortypes): 
+Properties:
+  [AcceleratorTypes](#cfn-sagemaker-notebookinstance-acceleratortypes):
     - String
-  [AdditionalCodeRepositories](#cfn-sagemaker-notebookinstance-additionalcoderepositories): 
+  [AdditionalCodeRepositories](#cfn-sagemaker-notebookinstance-additionalcoderepositories):
     - String
   [DefaultCodeRepository](#cfn-sagemaker-notebookinstance-defaultcoderepository): String
   [DirectInternetAccess](#cfn-sagemaker-notebookinstance-directinternetaccess): String
@@ -47,10 +47,10 @@ Properties:
   [NotebookInstanceName](#cfn-sagemaker-notebookinstance-notebookinstancename): String
   [RoleArn](#cfn-sagemaker-notebookinstance-rolearn): String
   [RootAccess](#cfn-sagemaker-notebookinstance-rootaccess): String
-  [SecurityGroupIds](#cfn-sagemaker-notebookinstance-securitygroupids): 
+  [SecurityGroupIds](#cfn-sagemaker-notebookinstance-securitygroupids):
     - String
   [SubnetId](#cfn-sagemaker-notebookinstance-subnetid): String
-  [Tags](#cfn-sagemaker-notebookinstance-tags): 
+  [Tags](#cfn-sagemaker-notebookinstance-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VolumeSizeInGB](#cfn-sagemaker-notebookinstance-volumesizeingb): Integer
 ```
@@ -58,114 +58,114 @@ Properties:
 ## Properties<a name="aws-resource-sagemaker-notebookinstance-properties"></a>
 
 `AcceleratorTypes`  <a name="cfn-sagemaker-notebookinstance-acceleratortypes"></a>
-A list of Elastic Inference \(EI\) instance types to associate with this notebook instance\. Currently, only one instance type can be associated with a notebook instance\. For more information, see Using Elastic Inference in Amazon SageMaker\.  
-*Required*: No  
-*Type*: List of String  
+A list of Elastic Inference \(EI\) instance types to associate with this notebook instance\. Currently, only one instance type can be associated with a notebook instance\. For more information, see Using Elastic Inference in Amazon SageMaker\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AdditionalCodeRepositories`  <a name="cfn-sagemaker-notebookinstance-additionalcoderepositories"></a>
-An array of up to three Git repositories associated with the notebook instance\. These can be either the names of Git repositories stored as resources in your account, or the URL of Git repositories in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository\. These repositories are cloned at the same level as the default repository of your notebook instance\. For more information, see [Associating Git Repositories with Amazon SageMaker Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html)\.  
-*Required*: No  
-*Type*: List of String  
-*Maximum*: `3`  
+An array of up to three Git repositories associated with the notebook instance\. These can be either the names of Git repositories stored as resources in your account, or the URL of Git repositories in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository\. These repositories are cloned at the same level as the default repository of your notebook instance\. For more information, see [Associating Git Repositories with Amazon SageMaker Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html)\.
+*Required*: No
+*Type*: List of String
+*Maximum*: `3`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultCodeRepository`  <a name="cfn-sagemaker-notebookinstance-defaultcoderepository"></a>
-The Git repository associated with the notebook instance as its default code repository\. This can be either the name of a Git repository stored as a resource in your account, or the URL of a Git repository in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository\. When you open a notebook instance, it opens in the directory that contains this repository\. For more information, see [Associating Git Repositories with Amazon SageMaker Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html)\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `1024`  
-*Pattern*: `^https://([^/]+)/?(.*)$|^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+The Git repository associated with the notebook instance as its default code repository\. This can be either the name of a Git repository stored as a resource in your account, or the URL of a Git repository in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository\. When you open a notebook instance, it opens in the directory that contains this repository\. For more information, see [Associating Git Repositories with Amazon SageMaker Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html)\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `1024`
+*Pattern*: `^https://([^/]+)/?(.*)$|^[a-zA-Z0-9](-*[a-zA-Z0-9])*`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DirectInternetAccess`  <a name="cfn-sagemaker-notebookinstance-directinternetaccess"></a>
-Sets whether Amazon SageMaker provides internet access to the notebook instance\. If you set this to `Disabled` this notebook instance will be able to access resources only in your VPC, and will not be able to connect to Amazon SageMaker training and endpoint services unless your configure a NAT Gateway in your VPC\.  
-For more information, see [Notebook Instances Are Internet\-Enabled by Default](https://docs.aws.amazon.com/sagemaker/latest/dg/appendix-additional-considerations.html#appendix-notebook-and-internet-access)\. You can set the value of this parameter to `Disabled` only if you set a value for the `SubnetId` parameter\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `Disabled | Enabled`  
+Sets whether Amazon SageMaker provides internet access to the notebook instance\. If you set this to `Disabled` this notebook instance will be able to access resources only in your VPC, and will not be able to connect to Amazon SageMaker training and endpoint services unless your configure a NAT Gateway in your VPC\.
+For more information, see [Notebook Instances Are Internet\-Enabled by Default](https://docs.aws.amazon.com/sagemaker/latest/dg/appendix-additional-considerations.html#appendix-notebook-and-internet-access)\. You can set the value of this parameter to `Disabled` only if you set a value for the `SubnetId` parameter\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `Disabled | Enabled`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceType`  <a name="cfn-sagemaker-notebookinstance-instancetype"></a>
-The type of ML compute instance to launch for the notebook instance\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `ml.c4.2xlarge | ml.c4.4xlarge | ml.c4.8xlarge | ml.c4.xlarge | ml.c5.18xlarge | ml.c5.2xlarge | ml.c5.4xlarge | ml.c5.9xlarge | ml.c5.xlarge | ml.c5d.18xlarge | ml.c5d.2xlarge | ml.c5d.4xlarge | ml.c5d.9xlarge | ml.c5d.xlarge | ml.m4.10xlarge | ml.m4.16xlarge | ml.m4.2xlarge | ml.m4.4xlarge | ml.m4.xlarge | ml.m5.12xlarge | ml.m5.24xlarge | ml.m5.2xlarge | ml.m5.4xlarge | ml.m5.xlarge | ml.p2.16xlarge | ml.p2.8xlarge | ml.p2.xlarge | ml.p3.16xlarge | ml.p3.2xlarge | ml.p3.8xlarge | ml.t2.2xlarge | ml.t2.large | ml.t2.medium | ml.t2.xlarge | ml.t3.2xlarge | ml.t3.large | ml.t3.medium | ml.t3.xlarge`  
+The type of ML compute instance to launch for the notebook instance\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `ml.c4.2xlarge | ml.c4.4xlarge | ml.c4.8xlarge | ml.c4.xlarge | ml.c5.18xlarge | ml.c5.2xlarge | ml.c5.4xlarge | ml.c5.9xlarge | ml.c5.xlarge | ml.c5d.18xlarge | ml.c5d.2xlarge | ml.c5d.4xlarge | ml.c5d.9xlarge | ml.c5d.xlarge | ml.m4.10xlarge | ml.m4.16xlarge | ml.m4.2xlarge | ml.m4.4xlarge | ml.m4.xlarge | ml.m5.12xlarge | ml.m5.24xlarge | ml.m5.2xlarge | ml.m5.4xlarge | ml.m5.xlarge | ml.p2.16xlarge | ml.p2.8xlarge | ml.p2.xlarge | ml.p3.16xlarge | ml.p3.2xlarge | ml.p3.8xlarge | ml.t2.2xlarge | ml.t2.large | ml.t2.medium | ml.t2.xlarge | ml.t3.2xlarge | ml.t3.large | ml.t3.medium | ml.t3.xlarge`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-sagemaker-notebookinstance-kmskeyid"></a>
-The Amazon Resource Name \(ARN\) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to your notebook instance\. The KMS key you provide must be enabled\. For information, see [Enabling and Disabling Keys](https://docs.aws.amazon.com/kms/latest/developerguide/enabling-keys.html) in the *AWS Key Management Service Developer Guide*\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `2048`  
-*Pattern*: `.*`  
+The Amazon Resource Name \(ARN\) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to your notebook instance\. The KMS key you provide must be enabled\. For information, see [Enabling and Disabling Keys](https://docs.aws.amazon.com/kms/latest/developerguide/enabling-keys.html) in the *AWS Key Management Service Developer Guide*\.
+*Required*: No
+*Type*: String
+*Maximum*: `2048`
+*Pattern*: `.*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LifecycleConfigName`  <a name="cfn-sagemaker-notebookinstance-lifecycleconfigname"></a>
-The name of a lifecycle configuration to associate with the notebook instance\. For information about lifestyle configurations, see [Customize a Notebook Instance](https://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html) in the *Amazon SageMaker Developer Guide*\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+The name of a lifecycle configuration to associate with the notebook instance\. For information about lifestyle configurations, see [Customize a Notebook Instance](https://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html) in the *Amazon SageMaker Developer Guide*\.
+*Required*: No
+*Type*: String
+*Maximum*: `63`
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NotebookInstanceName`  <a name="cfn-sagemaker-notebookinstance-notebookinstancename"></a>
-The name of the new notebook instance\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+The name of the new notebook instance\.
+*Required*: No
+*Type*: String
+*Maximum*: `63`
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleArn`  <a name="cfn-sagemaker-notebookinstance-rolearn"></a>
- When you send any requests to AWS resources from the notebook instance, Amazon SageMaker assumes this role to perform tasks on your behalf\. You must grant this role necessary permissions so Amazon SageMaker can perform these tasks\. The policy must allow the Amazon SageMaker service principal \(sagemaker\.amazonaws\.com\) permissions to assume this role\. For more information, see [Amazon SageMaker Roles](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html)\.   
+ When you send any requests to AWS resources from the notebook instance, Amazon SageMaker assumes this role to perform tasks on your behalf\. You must grant this role necessary permissions so Amazon SageMaker can perform these tasks\. The policy must allow the Amazon SageMaker service principal \(sagemaker\.amazonaws\.com\) permissions to assume this role\. For more information, see [Amazon SageMaker Roles](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html)\.
 To be able to pass this role to Amazon SageMaker, the caller of this API must have the `iam:PassRole` permission\.
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `20`  
-*Maximum*: `2048`  
-*Pattern*: `^arn:aws[a-z\-]*:iam::\d{12}:role/?[a-zA-Z_0-9+=,.@\-_/]+$`  
+*Required*: Yes
+*Type*: String
+*Minimum*: `20`
+*Maximum*: `2048`
+*Pattern*: `^arn:aws[a-z\-]*:iam::\d{12}:role/?[a-zA-Z_0-9+=,.@\-_/]+$`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RootAccess`  <a name="cfn-sagemaker-notebookinstance-rootaccess"></a>
-Whether root access is enabled or disabled for users of the notebook instance\. The default value is `Enabled`\.  
+Whether root access is enabled or disabled for users of the notebook instance\. The default value is `Enabled`\.
 Lifecycle configurations need root access to be able to set up a notebook instance\. Because of this, lifecycle configurations associated with a notebook instance always run with root access even if you disable root access for users\.
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `Disabled | Enabled`  
+*Required*: No
+*Type*: String
+*Allowed Values*: `Disabled | Enabled`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIds`  <a name="cfn-sagemaker-notebookinstance-securitygroupids"></a>
-The VPC security group IDs, in the form sg\-xxxxxxxx\. The security groups must be for the same VPC as specified in the subnet\.   
-*Required*: No  
-*Type*: List of String  
-*Maximum*: `5`  
+The VPC security group IDs, in the form sg\-xxxxxxxx\. The security groups must be for the same VPC as specified in the subnet\.
+*Required*: No
+*Type*: List of String
+*Maximum*: `5`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetId`  <a name="cfn-sagemaker-notebookinstance-subnetid"></a>
-The ID of the subnet in a VPC to which you would like to have a connectivity from your ML compute instance\.   
-*Required*: No  
-*Type*: String  
-*Maximum*: `32`  
-*Pattern*: `[-0-9a-zA-Z]+`  
+The ID of the subnet in a VPC to which you would like to have a connectivity from your ML compute instance\.
+*Required*: No
+*Type*: String
+*Maximum*: `32`
+*Pattern*: `[-0-9a-zA-Z]+`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-sagemaker-notebookinstance-tags"></a>
-A list of key\-value pairs to apply to this resource\.  
-For more information, see [Resource Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) and [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what)\.  
-You can add tags later by using the `CreateTags` API\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Maximum*: `50`  
+A list of key\-value pairs to apply to this resource\.
+For more information, see [Resource Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) and [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what)\.
+You can add tags later by using the `CreateTags` API\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+*Maximum*: `50`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeSizeInGB`  <a name="cfn-sagemaker-notebookinstance-volumesizeingb"></a>
-The size, in GB, of the ML storage volume to attach to the notebook instance\. The default value is 5 GB\.  
-*Required*: No  
-*Type*: Integer  
-*Minimum*: `5`  
-*Maximum*: `16384`  
+The size, in GB, of the ML storage volume to attach to the notebook instance\. The default value is 5 GB\.
+*Required*: No
+*Type*: Integer
+*Minimum*: `5`
+*Maximum*: `16384`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-sagemaker-notebookinstance-return-values"></a>
@@ -249,7 +249,7 @@ The following example creates a notebook instance\.
        "Value": { "Ref" : "BasicNotebookInstance" }
        }
   },
-  
+
 }
 ```
 
@@ -263,27 +263,27 @@ Resources:
     Properties:
       InstanceType: "ml.t2.large"
       RoleArn: !GetAtt ExecutionRole.Arn
-  ExecutionRole: 
+  ExecutionRole:
     Type: "AWS::IAM::Role"
-    Properties: 
-      AssumeRolePolicyDocument: 
+    Properties:
+      AssumeRolePolicyDocument:
         Version: "2012-10-17"
-        Statement: 
-          - 
+        Statement:
+          -
             Effect: "Allow"
-            Principal: 
-              Service: 
+            Principal:
+              Service:
                 - "sagemaker.amazonaws.com"
-            Action: 
+            Action:
               - "sts:AssumeRole"
       Path: "/"
-      Policies: 
-        - 
+      Policies:
+        -
           PolicyName: "root"
-          PolicyDocument: 
+          PolicyDocument:
             Version: "2012-10-17"
-            Statement: 
-              - 
+            Statement:
+              -
                 Effect: "Allow"
                 Action: "*"
                 Resource: "*"

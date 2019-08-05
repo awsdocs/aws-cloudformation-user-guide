@@ -3,7 +3,7 @@
 You can monitor the progress of a stack update by viewing the stack's events\. The console's **Events** tab displays each major step in the creation and update of the stack sorted by the time of each event with latest events on top\. The start of the stack update process is marked with an UPDATE\_IN\_PROGRESS event for the stack:
 
 ```
-2011-09-30 09:35 PDT AWS::CloudFormation::Stack MyStack UPDATE_IN_PROGRESS 
+2011-09-30 09:35 PDT AWS::CloudFormation::Stack MyStack UPDATE_IN_PROGRESS
 ```
 
 Next are events that mark the beginning and completion of the update of each resource that was changed in the update template\. For example, updating an [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html) resource named MyDB would result in the following entries:
@@ -18,7 +18,7 @@ The UPDATE\_IN\_PROGRESS event is logged when AWS CloudFormation reports that it
 When AWS CloudFormation has successfully updated the stack, you will see the following event:
 
 ```
-2011-09-30 09:35 PDT AWS::CloudFormation::Stack MyStack UPDATE_COMPLETE 
+2011-09-30 09:35 PDT AWS::CloudFormation::Stack MyStack UPDATE_COMPLETE
 ```
 
 If an update of a resource fails, AWS CloudFormation reports an UPDATE\_FAILED event that includes a reason for the failure\. For example, if your update template specified a property change that is not supported by the resource such as reducing the size of AllocatedStorage for an [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html) resource, you would see events like these:

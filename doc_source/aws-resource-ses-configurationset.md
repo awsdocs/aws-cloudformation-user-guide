@@ -21,18 +21,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SES::ConfigurationSet
-Properties: 
+Properties:
   [Name](#cfn-ses-configurationset-name): String
 ```
 
 ## Properties<a name="aws-resource-ses-configurationset-properties"></a>
 
 `Name`  <a name="cfn-ses-configurationset-name"></a>
-The name of the configuration set\. The name must:  
+The name of the configuration set\. The name must:
 + Only contain ASCII letters \(a–z, A–Z\), numbers \(0–9\), underscores \(\_\), or dashes \(\-\)\.
 + Contain 64 characters or fewer\.
-*Required*: No  
-*Type*: String  
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ses-configurationset-return-values"></a>

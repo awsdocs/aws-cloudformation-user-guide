@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::EIPAssociation
-Properties: 
+Properties:
   [AllocationId](#cfn-ec2-eipassociation-allocationid): String
   [EIP](#cfn-ec2-eipassociation-eip): String
   [InstanceId](#cfn-ec2-eipassociation-instanceid): String
@@ -42,30 +42,30 @@ Properties:
 ## Properties<a name="aws-properties-ec2-eip-association-properties"></a>
 
 `AllocationId`  <a name="cfn-ec2-eipassociation-allocationid"></a>
-\[EC2\-VPC\] The allocation ID\. This is required for EC2\-VPC\.  
-*Required*: Conditional  
+\[EC2\-VPC\] The allocation ID\. This is required for EC2\-VPC\.
+*Required*: Conditional
 *Type*: String
 
 `EIP`  <a name="cfn-ec2-eipassociation-eip"></a>
-The Elastic IP address to associate with the instance\. This is required for EC2\-Classic\.  
-*Required*: Conditional  
+The Elastic IP address to associate with the instance\. This is required for EC2\-Classic\.
+*Required*: Conditional
 *Type*: String
 
 `InstanceId`  <a name="cfn-ec2-eipassociation-instanceid"></a>
-The ID of the instance\. This is required for EC2\-Classic\. For EC2\-VPC, you can specify either the instance ID or the network interface ID, but not both\. The operation fails if you specify an instance ID unless exactly one network interface is attached\.  
-*Required*: Conditional  
+The ID of the instance\. This is required for EC2\-Classic\. For EC2\-VPC, you can specify either the instance ID or the network interface ID, but not both\. The operation fails if you specify an instance ID unless exactly one network interface is attached\.
+*Required*: Conditional
 *Type*: String
 
 `NetworkInterfaceId`  <a name="cfn-ec2-eipassociation-networkinterfaceid"></a>
-\[EC2\-VPC\] The ID of the network interface\. If the instance has more than one network interface, you must specify a network interface ID\.  
-For EC2\-VPC, you can specify either the instance ID or the network interface ID, but not both\.   
-*Required*: Conditional  
+\[EC2\-VPC\] The ID of the network interface\. If the instance has more than one network interface, you must specify a network interface ID\.
+For EC2\-VPC, you can specify either the instance ID or the network interface ID, but not both\.
+*Required*: Conditional
 *Type*: String
 
 `PrivateIpAddress`  <a name="cfn-ec2-eipassociation-PrivateIpAddress"></a>
-\[EC2\-VPC\] The primary or secondary private IP address to associate with the Elastic IP address\. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address\.  
-*Required*: No  
-*Type*: String  
+\[EC2\-VPC\] The primary or secondary private IP address to associate with the Elastic IP address\. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-properties-ec2-eip-association-return-values"></a>
@@ -212,7 +212,7 @@ Resources:
     Properties:
       SubnetId: !Ref SubnetId
       Description: Interface for controlling traffic such as SSH
-      GroupSet: 
+      GroupSet:
       - !Ref SSHSecurityGroup
       SourceDestCheck: true
       Tags:
@@ -223,7 +223,7 @@ Resources:
     Properties:
       SubnetId: !Ref SubnetId
       Description: Interface for controlling traffic such as SSH
-      GroupSet: 
+      GroupSet:
       - !Ref WebSecurityGroup
       SourceDestCheck: true
       Tags:

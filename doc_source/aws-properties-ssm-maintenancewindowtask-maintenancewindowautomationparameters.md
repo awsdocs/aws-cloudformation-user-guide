@@ -27,14 +27,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters-properties"></a>
 
 `DocumentVersion`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion"></a>
-The version of an Automation document to use during task execution\.  
-*Required*: No  
-*Type*: String  
-*Pattern*: `([$]LATEST|[$]DEFAULT|^[1-9][0-9]*$)`  
+The version of an Automation document to use during task execution\.
+*Required*: No
+*Type*: String
+*Pattern*: `([$]LATEST|[$]DEFAULT|^[1-9][0-9]*$)`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parameters`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters"></a>
-The parameters for the AUTOMATION task\.  
-*Required*: No  
-*Type*: Json  
+The parameters for the AUTOMATION task\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

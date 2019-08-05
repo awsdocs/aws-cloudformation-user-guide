@@ -1,6 +1,6 @@
 # AWS::ApiGatewayV2::DomainName<a name="aws-resource-apigatewayv2-domainname"></a>
 
-The `AWS::ApiGatewayV2::DomainName` resource specifies a custom domain name for your API in Amazon API Gateway \(API Gateway\)\. 
+The `AWS::ApiGatewayV2::DomainName` resource specifies a custom domain name for your API in Amazon API Gateway \(API Gateway\)\.
 
 You can use a custom domain name to provide a URL that's more intuitive and easier to recall\. For more information about using custom domain names, see [Set up Custom Domain Name for an API in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html) in the *API Gateway Developer Guide*\.
 
@@ -24,24 +24,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGatewayV2::DomainName
-Properties: 
+Properties:
   [DomainName](#cfn-apigatewayv2-domainname-domainname): String
-  [DomainNameConfigurations](#cfn-apigatewayv2-domainname-domainnameconfigurations): 
+  [DomainNameConfigurations](#cfn-apigatewayv2-domainname-domainnameconfigurations):
     - [DomainNameConfiguration](aws-properties-apigatewayv2-domainname-domainnameconfiguration.md)
 ```
 
 ## Properties<a name="aws-resource-apigatewayv2-domainname-properties"></a>
 
 `DomainName`  <a name="cfn-apigatewayv2-domainname-domainname"></a>
-The custom domain name for your API in Amazon API Gateway\. Uppercase letters are not supported\.  
-*Required*: Yes  
-*Type*: String  
+The custom domain name for your API in Amazon API Gateway\. Uppercase letters are not supported\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DomainNameConfigurations`  <a name="cfn-apigatewayv2-domainname-domainnameconfigurations"></a>
-The domain name configurations\.  
-*Required*: No  
-*Type*: List of [DomainNameConfiguration](aws-properties-apigatewayv2-domainname-domainnameconfiguration.md)  
+The domain name configurations\.
+*Required*: No
+*Type*: List of [DomainNameConfiguration](aws-properties-apigatewayv2-domainname-domainnameconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-apigatewayv2-domainname-return-values"></a>

@@ -17,14 +17,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-cors-syntax.yaml"></a>
 
 ```
-  [CorsRules](#cfn-s3-bucket-cors-corsrule): 
+  [CorsRules](#cfn-s3-bucket-cors-corsrule):
     - [CorsRule](aws-properties-s3-bucket-cors-corsrule.md)
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-cors-properties"></a>
 
 `CorsRules`  <a name="cfn-s3-bucket-cors-corsrule"></a>
-A set of allowed origins and methods\.  
-*Required*: Yes  
-*Type*: List of [CorsRule](aws-properties-s3-bucket-cors-corsrule.md)  
+A set of allowed origins and methods\.
+*Required*: Yes
+*Type*: List of [CorsRule](aws-properties-s3-bucket-cors-corsrule.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

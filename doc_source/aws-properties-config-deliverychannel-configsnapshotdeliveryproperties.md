@@ -2,7 +2,7 @@
 
 Provides options for how often AWS Config delivers configuration snapshots to the Amazon S3 bucket in your delivery channel\.
 
-**Note**  
+**Note**
 If you want to create a rule that triggers evaluations for your resources when AWS Config delivers the configuration snapshot, see the following:
 
 The frequency for a rule that triggers evaluations for your resources when AWS Config delivers the configuration snapshot is set by one of two values, depending on which is less frequent:
@@ -13,11 +13,11 @@ If the `deliveryFrequency` value is less frequent than the `MaximumExecutionFreq
 
 1. For example, you want your rule to run evaluations when AWS Config delivers the configuration snapshot\.
 
-1. You specify the `MaximumExecutionFrequency` value for `Six_Hours`\. 
+1. You specify the `MaximumExecutionFrequency` value for `Six_Hours`\.
 
 1. You then specify the delivery channel `deliveryFrequency` value for `TwentyFour_Hours`\.
 
-1. Because the value for `deliveryFrequency` is less frequent than `MaximumExecutionFrequency`, AWS Config invokes evaluations for the rule every 24 hours\. 
+1. Because the value for `deliveryFrequency` is less frequent than `MaximumExecutionFrequency`, AWS Config invokes evaluations for the rule every 24 hours\.
 
 You should set the `MaximumExecutionFrequency` value to be at least as frequent as the `deliveryFrequency` value\. You can view the `deliveryFrequency` value by using the `DescribeDeliveryChannnels` action\.
 
@@ -44,8 +44,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-config-deliverychannel-configsnapshotdeliveryproperties-properties"></a>
 
 `DeliveryFrequency`  <a name="cfn-config-deliverychannel-configsnapshotdeliveryproperties-deliveryfrequency"></a>
-The frequency with which AWS Config delivers configuration snapshots\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `One_Hour | Six_Hours | Three_Hours | Twelve_Hours | TwentyFour_Hours`  
+The frequency with which AWS Config delivers configuration snapshots\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `One_Hour | Six_Hours | Three_Hours | Twelve_Hours | TwentyFour_Hours`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

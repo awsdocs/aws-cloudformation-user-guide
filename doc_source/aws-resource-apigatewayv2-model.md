@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGatewayV2::Model
-Properties: 
+Properties:
   [ApiId](#cfn-apigatewayv2-model-apiid): String
   [ContentType](#cfn-apigatewayv2-model-contenttype): String
   [Description](#cfn-apigatewayv2-model-description): String
@@ -36,33 +36,33 @@ Properties:
 ## Properties<a name="aws-resource-apigatewayv2-model-properties"></a>
 
 `ApiId`  <a name="cfn-apigatewayv2-model-apiid"></a>
-The API identifier\.  
-*Required*: Yes  
-*Type*: String  
+The API identifier\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ContentType`  <a name="cfn-apigatewayv2-model-contenttype"></a>
-The content\-type for the model, for example, "application/json"\.  
-*Required*: No  
-*Type*: String  
+The content\-type for the model, for example, "application/json"\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-apigatewayv2-model-description"></a>
-The description of the model\.  
-*Required*: No  
-*Type*: String  
+The description of the model\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-apigatewayv2-model-name"></a>
-The name of the model\.  
-*Required*: Yes  
-*Type*: String  
+The name of the model\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Schema`  <a name="cfn-apigatewayv2-model-schema"></a>
-The schema for the model\. For application/json models, this should be JSON schema draft 4 model\.  
-*Required*: Yes  
-*Type*: Json  
+The schema for the model\. For application/json models, this should be JSON schema draft 4 model\.
+*Required*: Yes
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-apigatewayv2-model-return-values"></a>

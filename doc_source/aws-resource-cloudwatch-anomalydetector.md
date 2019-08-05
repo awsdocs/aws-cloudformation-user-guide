@@ -25,10 +25,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CloudWatch::AnomalyDetector
-Properties: 
-  [Configuration](#cfn-cloudwatch-anomalydetector-configuration): 
+Properties:
+  [Configuration](#cfn-cloudwatch-anomalydetector-configuration):
     [Configuration](aws-properties-cloudwatch-anomalydetector-configuration.md)
-  [Dimensions](#cfn-cloudwatch-anomalydetector-dimensions): 
+  [Dimensions](#cfn-cloudwatch-anomalydetector-dimensions):
     - [Dimension](aws-properties-cloudwatch-anomalydetector-dimension.md)
   [MetricName](#cfn-cloudwatch-anomalydetector-metricname): String
   [Namespace](#cfn-cloudwatch-anomalydetector-namespace): String
@@ -38,33 +38,33 @@ Properties:
 ## Properties<a name="aws-resource-cloudwatch-anomalydetector-properties"></a>
 
 `Configuration`  <a name="cfn-cloudwatch-anomalydetector-configuration"></a>
-Specifies details about how the anomaly detection model is to be trained, including time ranges to exclude when training and updating the model\. The configuration can also include the time zone to use for the metric\.  
-*Required*: No  
-*Type*: [Configuration](aws-properties-cloudwatch-anomalydetector-configuration.md)  
+Specifies details about how the anomaly detection model is to be trained, including time ranges to exclude when training and updating the model\. The configuration can also include the time zone to use for the metric\.
+*Required*: No
+*Type*: [Configuration](aws-properties-cloudwatch-anomalydetector-configuration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Dimensions`  <a name="cfn-cloudwatch-anomalydetector-dimensions"></a>
-The dimensions of the metric associated with the anomaly detection band\.  
-*Required*: No  
-*Type*: List of [Dimension](aws-properties-cloudwatch-anomalydetector-dimension.md)  
+The dimensions of the metric associated with the anomaly detection band\.
+*Required*: No
+*Type*: List of [Dimension](aws-properties-cloudwatch-anomalydetector-dimension.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MetricName`  <a name="cfn-cloudwatch-anomalydetector-metricname"></a>
-The name of the metric associated with the anomaly detection band\.  
-*Required*: Yes  
-*Type*: String  
+The name of the metric associated with the anomaly detection band\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Namespace`  <a name="cfn-cloudwatch-anomalydetector-namespace"></a>
-The namespace of the metric associated with the anomaly detection band\.  
-*Required*: Yes  
-*Type*: String  
+The namespace of the metric associated with the anomaly detection band\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Stat`  <a name="cfn-cloudwatch-anomalydetector-stat"></a>
-The statistic of the metric associated with the anomaly detection band\.  
-*Required*: Yes  
-*Type*: String  
+The statistic of the metric associated with the anomaly detection band\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Examples<a name="aws-resource-cloudwatch-anomalydetector--examples"></a>

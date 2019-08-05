@@ -29,25 +29,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-greengrass-connectordefinition-connector-properties"></a>
 
 `ConnectorArn`  <a name="cfn-greengrass-connectordefinition-connector-connectorarn"></a>
-The Amazon Resource Name \(ARN\) of the connector\.  
-For more information about AWS\-provided connectors, see [AWS\-Provided Greengrass Connectors](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors-list.html)\.  
-*Required*: Yes  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of the connector\.
+For more information about AWS\-provided connectors, see [AWS\-Provided Greengrass Connectors](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors-list.html)\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Id`  <a name="cfn-greengrass-connectordefinition-connector-id"></a>
-A descriptive or arbitrary ID for the connector\. This value must be unique within the connector definition version\. Maximum length is 128 characters with pattern `[a-zA-Z0-9:_-]+`\.  
-*Required*: Yes  
-*Type*: String  
+A descriptive or arbitrary ID for the connector\. This value must be unique within the connector definition version\. Maximum length is 128 characters with pattern `[a-zA-Z0-9:_-]+`\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Parameters`  <a name="cfn-greengrass-connectordefinition-connector-parameters"></a>
-The parameters or configuration used by the connector\.  
-For more information about AWS\-provided connectors, see [AWS\-Provided Greengrass Connectors](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors-list.html)\.  
-*Required*: No  
-*Type*: Json  
+The parameters or configuration used by the connector\.
+For more information about AWS\-provided connectors, see [AWS\-Provided Greengrass Connectors](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors-list.html)\.
+*Required*: No
+*Type*: Json
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See Also<a name="aws-properties-greengrass-connectordefinition-connector--seealso"></a>
-+  [Connector](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-connector.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [Connector](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-connector.html) in the * AWS IoT Greengrass API Reference *
++  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)

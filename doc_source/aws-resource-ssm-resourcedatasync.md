@@ -1,6 +1,6 @@
 # AWS::SSM::ResourceDataSync<a name="aws-resource-ssm-resourcedatasync"></a>
 
-The `AWS::SSM::ResourceDataSync` resource creates or deletes a Resource Data Sync for AWS Systems Manager Inventory\. You can use Resource Data Sync to send Inventory data collected from all of your Systems Manager managed instances to a single Amazon S3 bucket that you have already created in your account\. Resource Data Sync then automatically updates the centralized data when new Inventory data is collected\. 
+The `AWS::SSM::ResourceDataSync` resource creates or deletes a Resource Data Sync for AWS Systems Manager Inventory\. You can use Resource Data Sync to send Inventory data collected from all of your Systems Manager managed instances to a single Amazon S3 bucket that you have already created in your account\. Resource Data Sync then automatically updates the centralized data when new Inventory data is collected\.
 
 For more information, see [Configuring Inventory Collection](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-configuring.html#sysman-inventory-datasync) in the *AWS Systems Manager User Guide*\.
 
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SSM::ResourceDataSync
-Properties: 
+Properties:
   [BucketName](#cfn-ssm-resourcedatasync-bucketname): String
   [BucketPrefix](#cfn-ssm-resourcedatasync-bucketprefix): String
   [BucketRegion](#cfn-ssm-resourcedatasync-bucketregion): String
@@ -40,51 +40,51 @@ Properties:
 ## Properties<a name="aws-resource-ssm-resourcedatasync-properties"></a>
 
 `BucketName`  <a name="cfn-ssm-resourcedatasync-bucketname"></a>
-The name of the Amazon S3 bucket where the aggregated data is stored\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `2048`  
+The name of the Amazon S3 bucket where the aggregated data is stored\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `2048`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BucketPrefix`  <a name="cfn-ssm-resourcedatasync-bucketprefix"></a>
-An Amazon S3 prefix for the bucket\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `256`  
+An Amazon S3 prefix for the bucket\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `256`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BucketRegion`  <a name="cfn-ssm-resourcedatasync-bucketregion"></a>
-The AWS Region with the Amazon S3 bucket targeted by the Resource Data Sync\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `64`  
+The AWS Region with the Amazon S3 bucket targeted by the Resource Data Sync\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `64`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KMSKeyArn`  <a name="cfn-ssm-resourcedatasync-kmskeyarn"></a>
-The ARN of an encryption key for a destination in Amazon S3\. You can use a KMS key to encrypt inventory data in Amazon S3\. You must specify a key that exist in the same region as the destination Amazon S3 bucket\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `512`  
-*Pattern*: `arn:.*`  
+The ARN of an encryption key for a destination in Amazon S3\. You can use a KMS key to encrypt inventory data in Amazon S3\. You must specify a key that exist in the same region as the destination Amazon S3 bucket\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `512`
+*Pattern*: `arn:.*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SyncFormat`  <a name="cfn-ssm-resourcedatasync-syncformat"></a>
-A supported sync format\. The following format is currently supported: JsonSerDe  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `JsonSerDe`  
+A supported sync format\. The following format is currently supported: JsonSerDe
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `JsonSerDe`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SyncName`  <a name="cfn-ssm-resourcedatasync-syncname"></a>
-A name for the Resource Data Sync\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `64`  
+A name for the Resource Data Sync\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `64`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ssm-resourcedatasync-return-values"></a>
@@ -138,6 +138,6 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-ssm-resourcedatasync--seealso"></a>
-+  [What is Systems Manager?](https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html) 
-+  [AWS Systems Manager Inventory](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html) 
-+  [Configuring Inventory Collection](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-configuring.html) 
++  [What is Systems Manager?](https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html)
++  [AWS Systems Manager Inventory](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html)
++  [Configuring Inventory Collection](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-configuring.html)

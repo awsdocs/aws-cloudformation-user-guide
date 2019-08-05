@@ -28,10 +28,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::TransitGatewayAttachment
-Properties: 
-  [SubnetIds](#cfn-ec2-transitgatewayattachment-subnetids): 
+Properties:
+  [SubnetIds](#cfn-ec2-transitgatewayattachment-subnetids):
     - String
-  [Tags](#cfn-ec2-transitgatewayattachment-tags): 
+  [Tags](#cfn-ec2-transitgatewayattachment-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TransitGatewayId](#cfn-ec2-transitgatewayattachment-transitgatewayid): String
   [VpcId](#cfn-ec2-transitgatewayattachment-vpcid): String
@@ -40,27 +40,27 @@ Properties:
 ## Properties<a name="aws-resource-ec2-transitgatewayattachment-properties"></a>
 
 `SubnetIds`  <a name="cfn-ec2-transitgatewayattachment-subnetids"></a>
-The IDs of one or more subnets\. You can specify only one subnet per Availability Zone\. You must specify at least one subnet, but we recommend that you specify two subnets for better availability\. The transit gateway uses one IP address from each specified subnet\.  
-*Required*: Yes  
-*Type*: List of String  
+The IDs of one or more subnets\. You can specify only one subnet per Availability Zone\. You must specify at least one subnet, but we recommend that you specify two subnets for better availability\. The transit gateway uses one IP address from each specified subnet\.
+*Required*: Yes
+*Type*: List of String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ec2-transitgatewayattachment-tags"></a>
-The tags for the attachment\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+The tags for the attachment\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TransitGatewayId`  <a name="cfn-ec2-transitgatewayattachment-transitgatewayid"></a>
-The ID of the transit gateway\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the transit gateway\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcId`  <a name="cfn-ec2-transitgatewayattachment-vpcid"></a>
-The ID of the VPC\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the VPC\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-transitgatewayattachment-return-values"></a>

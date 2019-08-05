@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-clientvpnendpoint-clientauthenticationrequest-syntax.yaml"></a>
 
 ```
-  [ActiveDirectory](#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-activedirectory): 
+  [ActiveDirectory](#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-activedirectory):
     [DirectoryServiceAuthenticationRequest](aws-properties-ec2-clientvpnendpoint-directoryserviceauthenticationrequest.md)
-  [MutualAuthentication](#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-mutualauthentication): 
+  [MutualAuthentication](#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-mutualauthentication):
     [CertificateAuthenticationRequest](aws-properties-ec2-clientvpnendpoint-certificateauthenticationrequest.md)
   [Type](#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-type): String
 ```
@@ -29,20 +29,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-clientvpnendpoint-clientauthenticationrequest-properties"></a>
 
 `ActiveDirectory`  <a name="cfn-ec2-clientvpnendpoint-clientauthenticationrequest-activedirectory"></a>
-Information about the Active Directory to be used, if applicable\. You must provide this information if **Type** is `directory-service-authentication`\.  
-*Required*: No  
-*Type*: [DirectoryServiceAuthenticationRequest](aws-properties-ec2-clientvpnendpoint-directoryserviceauthenticationrequest.md)  
+Information about the Active Directory to be used, if applicable\. You must provide this information if **Type** is `directory-service-authentication`\.
+*Required*: No
+*Type*: [DirectoryServiceAuthenticationRequest](aws-properties-ec2-clientvpnendpoint-directoryserviceauthenticationrequest.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MutualAuthentication`  <a name="cfn-ec2-clientvpnendpoint-clientauthenticationrequest-mutualauthentication"></a>
-Information about the authentication certificates to be used, if applicable\. You must provide this information if **Type** is `certificate-authentication`\.  
-*Required*: No  
-*Type*: [CertificateAuthenticationRequest](aws-properties-ec2-clientvpnendpoint-certificateauthenticationrequest.md)  
+Information about the authentication certificates to be used, if applicable\. You must provide this information if **Type** is `certificate-authentication`\.
+*Required*: No
+*Type*: [CertificateAuthenticationRequest](aws-properties-ec2-clientvpnendpoint-certificateauthenticationrequest.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-ec2-clientvpnendpoint-clientauthenticationrequest-type"></a>
-The type of client authentication to be used\. Specify `certificate-authentication` to use certificate\-based authentication, or `directory-service-authentication` to use Active Directory authentication\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `certificate-authentication | directory-service-authentication`  
+The type of client authentication to be used\. Specify `certificate-authentication` to use certificate\-based authentication, or `directory-service-authentication` to use Active Directory authentication\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `certificate-authentication | directory-service-authentication`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

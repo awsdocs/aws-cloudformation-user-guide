@@ -1,6 +1,6 @@
 # Walkthrough: Use AWS CloudFormation Designer to Modify a Stack's Template<a name="working-with-templates-cfn-designer-walkthrough-updatebasicwebserver"></a>
 
-You can use AWS CloudFormation Designer to easily modify a stack's template, and then submit it to AWS CloudFormation to update the stack\. Typically, when you modify a stack, you need to get a copy of its template, modify the template in a text editor, and then use AWS CloudFormation to update the stack\. With AWS CloudFormation Designer, you can quickly get a copy of any running stack's template, modify it, and then update the stack without ever leaving the console\. 
+You can use AWS CloudFormation Designer to easily modify a stack's template, and then submit it to AWS CloudFormation to update the stack\. Typically, when you modify a stack, you need to get a copy of its template, modify the template in a text editor, and then use AWS CloudFormation to update the stack\. With AWS CloudFormation Designer, you can quickly get a copy of any running stack's template, modify it, and then update the stack without ever leaving the console\.
 
 In this walkthrough, we'll start with a [basic web server](working-with-templates-cfn-designer-walkthrough-createbasicwebserver.md) stack, and then modify it so that the web server is scalable and durable\. By the end of the walkthrough, you'll have a template similar to the following sample: [https://console\.aws\.amazon\.com/cloudformation/designer/home?templateUrl=https://s3\.amazonaws\.com/cloudformation\-examples/sample\-as\-vpc\.template&region=us\-east\-1](https://console.aws.amazon.com/cloudformation/designer/home?templateUrl=https://s3.amazonaws.com/cloudformation-examples/sample-as-vpc.template&region=us-east-1)\.
 
@@ -12,12 +12,12 @@ In this walkthrough, we will complete the following steps:
 
 1. [Modify the template\.](#working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-modify-template)
 
-   We'll use AWS CloudFormation Designer to modify the stack's template so that your website is scalable and durable by replacing the EC2 instance with an Auto Scaling group and an Elastic Load Balancing load balancer\. 
+   We'll use AWS CloudFormation Designer to modify the stack's template so that your website is scalable and durable by replacing the EC2 instance with an Auto Scaling group and an Elastic Load Balancing load balancer\.
 
 1. [Update the stack\.](#working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-update-stack)
 
    After saving the modifications, we'll update the basic web server stack with the modified template\.
-**Note**  
+**Note**
 AWS CloudFormation is a free service; however, you are charged for the AWS resources you include in your stacks at the current rate for each\. For more information about AWS pricing, see the detail page for each product on [http://aws\.amazon\.com](http://aws.amazon.com)\.
 
 1. [Delete the stack\.](#working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-delete-stack)
@@ -61,7 +61,7 @@ We'll modify the basic web server template by using AWS CloudFormation Designer'
 1. From the **Resource types** pane, add the following resources into the `PublicSubnet` resource: **AutoScalingGroup**, **LaunchConfiguration**, and **LoadBalancer**\. Before adding resources, you might need to expand the subnet to include all the resources\.
 
    The resources are organized by resource categories\. The Auto Scaling group and launch configuration are in the **AutoScaling** category, and the load balancer is in the **ElasticLoadBalancing** category\.
-**Note**  
+**Note**
 These resources do not follow the container model, so AWS CloudFormation Designer doesn't automatically associate them with the subnet\. We'll create connections later on in this step\.
 
 1. From the **Resource types** pane in the **EC2** category, add the **SecurityGroup** resource anywhere in the VPC except in the subnet\.
@@ -151,10 +151,10 @@ These resources do not follow the container model, so AWS CloudFormation Designe
               - !Ref PublicSubnet
       ```
 
-   1. Repeat this process for the following resources:  
-`WebServerFleet`  
-Add the `MaxSize`, `MinSize`, and `DesiredCapacity` properties\. These properties specify the maximum and minimum number of instances that you can launch in the Auto Scaling group and the initial number of instances to start with\. The desired capacity value refers to a new parameter, which we'll add later in this procedure\.  
-JSON  
+   1. Repeat this process for the following resources:
+`WebServerFleet`
+Add the `MaxSize`, `MinSize`, and `DesiredCapacity` properties\. These properties specify the maximum and minimum number of instances that you can launch in the Auto Scaling group and the initial number of instances to start with\. The desired capacity value refers to a new parameter, which we'll add later in this procedure\.
+JSON
 
       ```
               "MinSize": "1",
@@ -176,7 +176,7 @@ JSON
                 }
               ]
       ```
-YAML  
+YAML
 
       ```
             MinSize: '1'
@@ -187,10 +187,10 @@ YAML
             LaunchConfigurationName: !Ref WebServerLaunchConfig
             LoadBalancerNames:
               - !Ref PublicElasticLoadBalancer
-      ```  
-`PublicLoadBalancerSecurityGroup`  
-Add the following inbound and outbound rules that determine the traffic that can reach and leave the load balancer\. The rules allows all HTTP traffic to reach and leave the load balancer\.  
-JSON  
+      ```
+`PublicLoadBalancerSecurityGroup`
+Add the following inbound and outbound rules that determine the traffic that can reach and leave the load balancer\. The rules allows all HTTP traffic to reach and leave the load balancer\.
+JSON
 
       ```
               "GroupDescription": "Public Elastic Load Balancing security group with HTTP access on port 80 from the Internet",
@@ -214,7 +214,7 @@ JSON
                 "Ref": "VPC"
               }
       ```
-YAML  
+YAML
 
       ```
             GroupDescription: >-
@@ -231,10 +231,10 @@ YAML
                 ToPort: '80'
                 CidrIp: 0.0.0.0/0
             VpcId: !Ref VPC
-      ```  
-`WebServerSecurityGroup`  
-Modify the HTTP inbound rule to allow only traffic from the load balancer\.  
-JSON  
+      ```
+`WebServerSecurityGroup`
+Modify the HTTP inbound rule to allow only traffic from the load balancer\.
+JSON
 
       ```
               "GroupDescription": "Allow access from load balancer and SSH traffic",
@@ -260,7 +260,7 @@ JSON
                 "Ref": "VPC"
               }
       ```
-YAML  
+YAML
 
       ```
             VpcId: !Ref VPC
@@ -274,11 +274,11 @@ YAML
                 FromPort: '22'
                 ToPort: '22'
                 CidrIp: !Ref SSHLocation
-      ```  
-`WebServerLaunchConfig`  
-The launch configuration has a number of different properties that you need to specify, so we'll highlight just a few of them\. The `InstanceType` and `ImageId` properties use the parameter and mapping values that were already specified in the template\. You specify the instance type as a parameter value when you create a stack\. The `ImageId` value is a mapping that is based on your stack's region and the instance type that you specified\.  
-In the `UserData` property, we specify configurations scripts that run after the instance is up and running\. All of the configuration information is defined in the instance's metadata, which we'll add in the next step\.  
-JSON  
+      ```
+`WebServerLaunchConfig`
+The launch configuration has a number of different properties that you need to specify, so we'll highlight just a few of them\. The `InstanceType` and `ImageId` properties use the parameter and mapping values that were already specified in the template\. You specify the instance type as a parameter value when you create a stack\. The `ImageId` value is a mapping that is based on your stack's region and the instance type that you specified\.
+In the `UserData` property, we specify configurations scripts that run after the instance is up and running\. All of the configuration information is defined in the instance's metadata, which we'll add in the next step\.
+JSON
 
       ```
               "InstanceType": {
@@ -347,20 +347,20 @@ JSON
                 }
               ]
       ```
-YAML  
+YAML
 
       ```
             InstanceType: !Ref InstanceType
-            ImageId: !FindInMap 
+            ImageId: !FindInMap
               - AWSRegionArch2AMI
               - !Ref 'AWS::Region'
-              - !FindInMap 
+              - !FindInMap
                 - AWSInstanceType2Arch
                 - !Ref InstanceType
                 - Arch
             KeyName: !Ref KeyName
             AssociatePublicIpAddress: 'true'
-            UserData: !Base64 
+            UserData: !Base64
               'Fn::Join':
                 - ''
                 - - |
@@ -377,7 +377,7 @@ YAML
                   - '         --region '
                   - !Ref 'AWS::Region'
                   - |+
-      
+
                   - |
                     # Signal the status from cfn-init
                   - '/opt/aws/bin/cfn-signal -e $? '
@@ -387,7 +387,7 @@ YAML
                   - '         --region '
                   - !Ref 'AWS::Region'
                   - |+
-      
+
             SecurityGroups:
               - !Ref WebServerSecurityGroup
       ```
@@ -445,9 +445,9 @@ YAML
                     httpd: []
                 files:
                   /var/www/html/index.html:
-                    content: !Join 
+                    content: !Join
                       - |+
-      
+
                       - - >-
                           <h1>Congratulations, you have successfully launched the AWS
                           CloudFormation sample.</h1>
@@ -517,7 +517,7 @@ YAML
       ```
       Outputs:
         URL:
-          Value: !GetAtt 
+          Value: !GetAtt
             - PublicElasticLoadBalancer
             - DNSName
           Description: Newly created application URL
@@ -567,4 +567,4 @@ To make sure you are not charged for unwanted services, delete your stack and it
 
 1. In the confirmation message, choose **Yes, Delete**\.
 
-It can take several minutes for AWS CloudFormation to delete your stack\. To monitor progress, view the stack events\. After the stack is deleted, all the resources that you created are deleted\. Now that you understand how to use AWS CloudFormation Designer, you can use it to build and modify your own templates\. 
+It can take several minutes for AWS CloudFormation to delete your stack\. To monitor progress, view the stack events\. After the stack is deleted, all the resources that you created are deleted\. Now that you understand how to use AWS CloudFormation Designer, you can use it to build and modify your own templates\.

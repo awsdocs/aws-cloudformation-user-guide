@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Pinpoint::APNSSandboxChannel
-Properties: 
+Properties:
   [ApplicationId](#cfn-pinpoint-apnssandboxchannel-applicationid): String
   [BundleId](#cfn-pinpoint-apnssandboxchannel-bundleid): String
   [Certificate](#cfn-pinpoint-apnssandboxchannel-certificate): String
@@ -46,57 +46,57 @@ Properties:
 ## Properties<a name="aws-resource-pinpoint-apnssandboxchannel-properties"></a>
 
 `ApplicationId`  <a name="cfn-pinpoint-apnssandboxchannel-applicationid"></a>
-The unique identifier of the Amazon Pinpoint application that the APNs sandbox channel applies to\.  
-*Required*: Yes  
-*Type*: String  
+The unique identifier of the Amazon Pinpoint application that the APNs sandbox channel applies to\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BundleId`  <a name="cfn-pinpoint-apnssandboxchannel-bundleid"></a>
-The bundle identifier that's assigned to your iOS app\. This identifier is used for APNs tokens\.  
-*Required*: No  
-*Type*: String  
+The bundle identifier that's assigned to your iOS app\. This identifier is used for APNs tokens\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Certificate`  <a name="cfn-pinpoint-apnssandboxchannel-certificate"></a>
-The APNs client certificate that you received from Apple\. Specify this value if you want Amazon Pinpoint to communicate with APNs by using an APNs certificate\.  
-*Required*: No  
-*Type*: String  
+The APNs client certificate that you received from Apple\. Specify this value if you want Amazon Pinpoint to communicate with APNs by using an APNs certificate\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultAuthenticationMethod`  <a name="cfn-pinpoint-apnssandboxchannel-defaultauthenticationmethod"></a>
-The default authentication method that you want Amazon Pinpoint to use when authenticating with APNs\. Valid options are `key` or `certificate`\.  
-*Required*: No  
-*Type*: String  
+The default authentication method that you want Amazon Pinpoint to use when authenticating with APNs\. Valid options are `key` or `certificate`\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-pinpoint-apnssandboxchannel-enabled"></a>
-Specifies whether to enable the APNs Sandbox channel for the Amazon Pinpoint application\.  
-*Required*: No  
-*Type*: Boolean  
+Specifies whether to enable the APNs Sandbox channel for the Amazon Pinpoint application\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrivateKey`  <a name="cfn-pinpoint-apnssandboxchannel-privatekey"></a>
-The private key for the APNs client certificate that you want Amazon Pinpoint to use to communicate with APNs\.  
-*Required*: No  
-*Type*: String  
+The private key for the APNs client certificate that you want Amazon Pinpoint to use to communicate with APNs\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TeamId`  <a name="cfn-pinpoint-apnssandboxchannel-teamid"></a>
-The identifier that's assigned to your Apple Developer Account team\. This identifier is used for APNs tokens\.  
-*Required*: No  
-*Type*: String  
+The identifier that's assigned to your Apple Developer Account team\. This identifier is used for APNs tokens\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TokenKey`  <a name="cfn-pinpoint-apnssandboxchannel-tokenkey"></a>
-The authentication key to use for APNs tokens\.  
-*Required*: No  
-*Type*: String  
+The authentication key to use for APNs tokens\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TokenKeyId`  <a name="cfn-pinpoint-apnssandboxchannel-tokenkeyid"></a>
-The key identifier that's assigned to your APNs signing key\. Specify this value if you want Amazon Pinpoint to communicate with APNs by using APNs tokens\.  
-*Required*: No  
-*Type*: String  
+The key identifier that's assigned to your APNs signing key\. Specify this value if you want Amazon Pinpoint to communicate with APNs by using APNs tokens\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-pinpoint-apnssandboxchannel-return-values"></a>

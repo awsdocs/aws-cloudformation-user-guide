@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-segment-segmentgroups-groups-sourcesegments-properties"></a>
 
 `Id`  <a name="cfn-pinpoint-segment-segmentgroups-groups-sourcesegments-id"></a>
-The unique ID of the source segment\.  
-*Required*: Yes  
-*Type*: String  
+The unique ID of the source segment\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-pinpoint-segment-segmentgroups-groups-sourcesegments-version"></a>
-The version number of the source segment\.  
-*Required*: No  
-*Type*: Integer  
+The version number of the source segment\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -25,15 +25,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-beanstalk-sourcebundle-properties"></a>
 
 `S3Bucket`  <a name="cfn-beanstalk-sourcebundle-s3bucket"></a>
-The Amazon S3 bucket where the data is located\.  
-*Required*: Yes  
-*Type*: String  
-*Maximum*: `255`  
+The Amazon S3 bucket where the data is located\.
+*Required*: Yes
+*Type*: String
+*Maximum*: `255`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Key`  <a name="cfn-beanstalk-sourcebundle-s3key"></a>
-The Amazon S3 key where the data is located\.  
-*Required*: Yes  
-*Type*: String  
-*Maximum*: `1024`  
+The Amazon S3 key where the data is located\.
+*Required*: Yes
+*Type*: String
+*Maximum*: `1024`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

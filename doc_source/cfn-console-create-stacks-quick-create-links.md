@@ -6,14 +6,14 @@ Use quick\-create links to get stacks up and running quickly from the AWS CloudF
 
 AWS CloudFormation supports the following URL query parameters:
 
-`templateURL`  
+`templateURL`
 Required\. Specifies the URL of the stack template\. URL encoding is supported, but it isn't required\.
 
-`stackName`  
+`stackName`
 Optional\. Specifies the stack name\.A stack name can contain only alphanumeric characters \(case\-sensitive\) and hyphens\. It must start with an alphabetic character and can't be longer than 128 characters\.
 
-Any parameter in the stack template that isn't a `NoEcho` parameter type  
-Optional\. Use the format `param_parameterName` to specify template parameters in the URL query string\. The URL parameter must include the `param_` prefix, and the parameter name segment must exactly match the parameter name in the template\. For example: `param_DBName`\.  
+Any parameter in the stack template that isn't a `NoEcho` parameter type
+Optional\. Use the format `param_parameterName` to specify template parameters in the URL query string\. The URL parameter must include the `param_` prefix, and the parameter name segment must exactly match the parameter name in the template\. For example: `param_DBName`\.
 AWS CloudFormation ignores parameters that don't exist in the template and `NoEcho` parameter types \(typically, user names and passwords\)\. URL parameters override default values that are specified in the template\. You can include as many parameters as needed\. For more information about `NoEcho` parameter types, see [Parameters](parameters-section-structure.md)\.
 
 All query parameter names are case sensitive\. Users can overwrite these values in the console before creating the stack\.

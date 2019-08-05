@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGatewayV2::Deployment
-Properties: 
+Properties:
   [ApiId](#cfn-apigatewayv2-deployment-apiid): String
   [Description](#cfn-apigatewayv2-deployment-description): String
   [StageName](#cfn-apigatewayv2-deployment-stagename): String
@@ -32,21 +32,21 @@ Properties:
 ## Properties<a name="aws-resource-apigatewayv2-deployment-properties"></a>
 
 `ApiId`  <a name="cfn-apigatewayv2-deployment-apiid"></a>
-The API identifier\.  
-*Required*: Yes  
-*Type*: String  
+The API identifier\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-apigatewayv2-deployment-description"></a>
-The description for the deployment resource\.  
-*Required*: No  
-*Type*: String  
+The description for the deployment resource\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StageName`  <a name="cfn-apigatewayv2-deployment-stagename"></a>
-The name of the `Stage` resource for the `Deployment` resource to create\.  
-*Required*: No  
-*Type*: String  
+The name of the `Stage` resource for the `Deployment` resource to create\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-apigatewayv2-deployment-return-values"></a>

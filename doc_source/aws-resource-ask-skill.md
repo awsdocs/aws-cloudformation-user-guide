@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: Alexa::ASK::Skill
-Properties: 
-  [AuthenticationConfiguration](#cfn-ask-skill-authenticationconfiguration): 
+Properties:
+  [AuthenticationConfiguration](#cfn-ask-skill-authenticationconfiguration):
     [AuthenticationConfiguration](aws-properties-ask-skill-authenticationconfiguration.md)
-  [SkillPackage](#cfn-ask-skill-skillpackage): 
+  [SkillPackage](#cfn-ask-skill-skillpackage):
     [SkillPackage](aws-properties-ask-skill-skillpackage.md)
   [VendorId](#cfn-ask-skill-vendorid): String
 ```
@@ -34,21 +34,21 @@ Properties:
 ## Properties<a name="aws-resource-ask-skill-properties"></a>
 
 `AuthenticationConfiguration`  <a name="cfn-ask-skill-authenticationconfiguration"></a>
- Login with Amazon \(LWA\) configuration used to authenticate with the Alexa service\. Only Login with Amazon clients created through the [Amazon Developer Console](https://developer.amazon.com/lwa/sp/overview.html) are supported\. The client ID, client secret, and refresh token are required\.  
-*Required*: Yes  
-*Type*: [AuthenticationConfiguration](aws-properties-ask-skill-authenticationconfiguration.md)  
+ Login with Amazon \(LWA\) configuration used to authenticate with the Alexa service\. Only Login with Amazon clients created through the [Amazon Developer Console](https://developer.amazon.com/lwa/sp/overview.html) are supported\. The client ID, client secret, and refresh token are required\.
+*Required*: Yes
+*Type*: [AuthenticationConfiguration](aws-properties-ask-skill-authenticationconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SkillPackage`  <a name="cfn-ask-skill-skillpackage"></a>
-Configuration for the skill package that contains the components of the Alexa skill\. Skill packages are retrieved from an Amazon S3 bucket and key and used to create and update the skill\. For more information about the skill package format, see the [Skill Package API Reference](https://developer.amazon.com/docs/smapi/skill-package-api-reference.html#skill-package-format)\.   
-*Required*: Yes  
-*Type*: [SkillPackage](aws-properties-ask-skill-skillpackage.md)  
+Configuration for the skill package that contains the components of the Alexa skill\. Skill packages are retrieved from an Amazon S3 bucket and key and used to create and update the skill\. For more information about the skill package format, see the [Skill Package API Reference](https://developer.amazon.com/docs/smapi/skill-package-api-reference.html#skill-package-format)\.
+*Required*: Yes
+*Type*: [SkillPackage](aws-properties-ask-skill-skillpackage.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VendorId`  <a name="cfn-ask-skill-vendorid"></a>
-The vendor ID associated with the Amazon developer account that will host the skill\. Details for retrieving the vendor ID are in [How to get your vendor ID](https://github.com/alexa/alexa-smarthome/wiki/How-to-get-your-vendor-ID)\. The provided LWA credentials must be linked to the developer account associated with this vendor ID\.  
-*Required*: Yes  
-*Type*: String  
+The vendor ID associated with the Amazon developer account that will host the skill\. Details for retrieving the vendor ID are in [How to get your vendor ID](https://github.com/alexa/alexa-smarthome/wiki/How-to-get-your-vendor-ID)\. The provided LWA credentials must be linked to the developer account associated with this vendor ID\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ask-skill-return-values"></a>
@@ -68,53 +68,53 @@ The following example retrieves the skill package from an S3 bucket and provides
 #### JSON<a name="aws-resource-ask-skill--examples--Alexa_Skill_Resource_Configuration--json"></a>
 
 ```
-"MySkill": { 
-  "Type": "Alexa::ASK::Skill", 
+"MySkill": {
+  "Type": "Alexa::ASK::Skill",
   "Properties": {
-    "SkillPackage": { 
-      "S3Bucket": "my-skill-packages", 
+    "SkillPackage": {
+      "S3Bucket": "my-skill-packages",
       "S3Key": "skillpackage.zip",
-      "S3BucketRole": { "Fn::GetAtt": [ "S3BucketReadRole", "Arn" ] }, 
+      "S3BucketRole": { "Fn::GetAtt": [ "S3BucketReadRole", "Arn" ] },
       "Overrides": {
-        "Manifest": { 
-          "apis": { 
-            "custom": { 
-              "endpoint": { 
+        "Manifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
                 "uri": { "Fn::GetAtt" : [ "SkillFunction", "Arn" ] }
-              } 
-            } 
-          } 
-        } 
-      } 
-    }, 
-    "AuthenticationConfiguration": { 
-      "ClientId": "amzn1.application-oa2-client.1234", 
-      "ClientSecret": "1234", 
-      "RefreshToken": "Atzr|1234" 
-    }, 
-    "VendorId": "1234" 
-  } 
+              }
+            }
+          }
+        }
+      }
+    },
+    "AuthenticationConfiguration": {
+      "ClientId": "amzn1.application-oa2-client.1234",
+      "ClientSecret": "1234",
+      "RefreshToken": "Atzr|1234"
+    },
+    "VendorId": "1234"
+  }
 }
 ```
 
 #### YAML<a name="aws-resource-ask-skill--examples--Alexa_Skill_Resource_Configuration--yaml"></a>
 
 ```
-MySkill: Type: "Alexa::ASK::Skill" 
-  Properties: 
+MySkill: Type: "Alexa::ASK::Skill"
+  Properties:
     SkillPackage:
-      S3Bucket: "my-skill-packages" 
-      S3Key: "skillpackage.zip" 
-      S3BucketRole: !GetAtt S3BucketReadRole.Arn 
-      Overrides: 
-        Manifest: 
-          apis: 
-            custom: 
-              endpoint: 
-                uri: !GetAtt SkillFunction.Arn 
-    AuthenticationConfiguration: 
-      ClientId: "amzn1.application-oa2-client.1234" 
-      ClientSecret: "1234" 
+      S3Bucket: "my-skill-packages"
+      S3Key: "skillpackage.zip"
+      S3BucketRole: !GetAtt S3BucketReadRole.Arn
+      Overrides:
+        Manifest:
+          apis:
+            custom:
+              endpoint:
+                uri: !GetAtt SkillFunction.Arn
+    AuthenticationConfiguration:
+      ClientId: "amzn1.application-oa2-client.1234"
+      ClientSecret: "1234"
       RefreshToken: "Atzr|1234"
     VendorId: "1234"
 ```

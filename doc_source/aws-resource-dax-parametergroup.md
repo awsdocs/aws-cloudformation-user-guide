@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DAX::ParameterGroup
-Properties: 
+Properties:
   [Description](#cfn-dax-parametergroup-description): String
   [ParameterGroupName](#cfn-dax-parametergroup-parametergroupname): String
   [ParameterNameValues](#cfn-dax-parametergroup-parameternamevalues): Json
@@ -32,28 +32,28 @@ Properties:
 ## Properties<a name="aws-resource-dax-parametergroup-properties"></a>
 
 `Description`  <a name="cfn-dax-parametergroup-description"></a>
-A description of the parameter group\.  
-*Required*: No  
-*Type*: String  
+A description of the parameter group\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ParameterGroupName`  <a name="cfn-dax-parametergroup-parametergroupname"></a>
-The name of the parameter group\.  
-*Required*: No  
-*Type*: String  
+The name of the parameter group\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ParameterNameValues`  <a name="cfn-dax-parametergroup-parameternamevalues"></a>
-An array of name\-value pairs for the parameters in the group\. Each element in the array represents a single parameter\.  
-*Required*: No  
-*Type*: Json  
+An array of name\-value pairs for the parameters in the group\. Each element in the array represents a single parameter\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-dax-parametergroup-return-values"></a>
 
 ### Ref<a name="aws-resource-dax-parametergroup-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the created parameter group\. For example: 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the created parameter group\. For example:
 
 ```
 { "Ref": "MyDAXParameterGroup" }
@@ -111,8 +111,8 @@ Resources:
   daxParamGroup:
     Type: AWS::DAX::ParameterGroup
     Properties:
-      ParameterGroupName: "MyDAXParameterGroup" 
-      Description: "Description for my DAX parameter group" 
+      ParameterGroupName: "MyDAXParameterGroup"
+      Description: "Description for my DAX parameter group"
       ParameterNameValues:
          "query-ttl-millis" : "75000"
          "record-ttl-millis" : "88000"

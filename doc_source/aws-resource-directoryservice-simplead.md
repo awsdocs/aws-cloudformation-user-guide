@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DirectoryService::SimpleAD
-Properties: 
+Properties:
   [CreateAlias](#cfn-directoryservice-simplead-createalias): Boolean
   [Description](#cfn-directoryservice-simplead-description): String
   [EnableSso](#cfn-directoryservice-simplead-enablesso): Boolean
@@ -36,66 +36,66 @@ Properties:
   [Password](#cfn-directoryservice-simplead-password): String
   [ShortName](#cfn-directoryservice-simplead-shortname): String
   [Size](#cfn-directoryservice-simplead-size): String
-  [VpcSettings](#cfn-directoryservice-simplead-vpcsettings): 
+  [VpcSettings](#cfn-directoryservice-simplead-vpcsettings):
     [VpcSettings](aws-properties-directoryservice-simplead-vpcsettings.md)
 ```
 
 ## Properties<a name="aws-resource-directoryservice-simplead-properties"></a>
 
 `CreateAlias`  <a name="cfn-directoryservice-simplead-createalias"></a>
-If set to `true`, specifies an alias for a directory and assigns the alias to the directory\. The alias is used to construct the access URL for the directory, such as `http://<alias>.awsapps.com`\. By default, this property is set to `false`\.  
+If set to `true`, specifies an alias for a directory and assigns the alias to the directory\. The alias is used to construct the access URL for the directory, such as `http://<alias>.awsapps.com`\. By default, this property is set to `false`\.
 After an alias has been created, it cannot be deleted or reused, so this operation should only be used when absolutely necessary\.
-*Required*: No  
-*Type*: Boolean  
+*Required*: No
+*Type*: Boolean
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-directoryservice-simplead-description"></a>
-A textual description for the directory\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `128`  
-*Pattern*: `^([a-zA-Z0-9_])[\\a-zA-Z0-9_@#%*+=:?./!\s-]*$`  
+A textual description for the directory\.
+*Required*: No
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `128`
+*Pattern*: `^([a-zA-Z0-9_])[\\a-zA-Z0-9_@#%*+=:?./!\s-]*$`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EnableSso`  <a name="cfn-directoryservice-simplead-enablesso"></a>
-Whether to enable single sign\-on for a directory\. If you don't specify a value, AWS CloudFormation disables single sign\-on by default\.  
-*Required*: No  
-*Type*: Boolean  
+Whether to enable single sign\-on for a directory\. If you don't specify a value, AWS CloudFormation disables single sign\-on by default\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-directoryservice-simplead-name"></a>
-The fully qualified name for the directory, such as `corp.example.com`\.  
-*Required*: Yes  
-*Type*: String  
-*Pattern*: `^([a-zA-Z0-9]+[\\.-])+([a-zA-Z0-9])+$`  
+The fully qualified name for the directory, such as `corp.example.com`\.
+*Required*: Yes
+*Type*: String
+*Pattern*: `^([a-zA-Z0-9]+[\\.-])+([a-zA-Z0-9])+$`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Password`  <a name="cfn-directoryservice-simplead-password"></a>
-The password for the directory administrator\. The directory creation process creates a directory administrator account with the user name `Administrator` and this password\.  
-*Required*: Yes  
-*Type*: String  
-*Pattern*: `(?=^.{8,64}$)((?=.*\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[^A-Za-z0-9\s])(?=.*[a-z])|(?=.*[^A-Za-z0-9\s])(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9\s]))^.*`  
+The password for the directory administrator\. The directory creation process creates a directory administrator account with the user name `Administrator` and this password\.
+*Required*: Yes
+*Type*: String
+*Pattern*: `(?=^.{8,64}$)((?=.*\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[^A-Za-z0-9\s])(?=.*[a-z])|(?=.*[^A-Za-z0-9\s])(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9\s]))^.*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ShortName`  <a name="cfn-directoryservice-simplead-shortname"></a>
-The short name of the directory, such as `CORP`\.  
-*Required*: No  
-*Type*: String  
-*Pattern*: `^[^\\/:*?\"\<\>|.]+[^\\/:*?\"<>|]*$`  
+The short name of the directory, such as `CORP`\.
+*Required*: No
+*Type*: String
+*Pattern*: `^[^\\/:*?\"\<\>|.]+[^\\/:*?\"<>|]*$`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Size`  <a name="cfn-directoryservice-simplead-size"></a>
-The size of the directory\. For valid values, see [CreateDirectory](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_CreateDirectory.html) in the *AWS Directory Service API Reference*\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `Large | Small`  
+The size of the directory\. For valid values, see [CreateDirectory](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_CreateDirectory.html) in the *AWS Directory Service API Reference*\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `Large | Small`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcSettings`  <a name="cfn-directoryservice-simplead-vpcsettings"></a>
-A [DirectoryVpcSettings](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_DirectoryVpcSettings.html) object that contains additional information for the operation\.  
-*Required*: Yes  
-*Type*: [VpcSettings](aws-properties-directoryservice-simplead-vpcsettings.md)  
+A [DirectoryVpcSettings](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_DirectoryVpcSettings.html) object that contains additional information for the operation\.
+*Required*: Yes
+*Type*: [VpcSettings](aws-properties-directoryservice-simplead-vpcsettings.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-directoryservice-simplead-return-values"></a>
@@ -139,7 +139,7 @@ The following example creates a Simple AD directory, where the directory DNS nam
     "Name" : "corp.example.com",
     "Password" : { "Ref" : "SimpleADPW" },
     "Size" : "Small",
-    "VpcSettings" : { 
+    "VpcSettings" : {
       "SubnetIds" : [ { "Ref" : "subnetID1" }, { "Ref" : "subnetID2" } ],
       "VpcId" : { "Ref" : "vpcID" }
     }
@@ -150,18 +150,18 @@ The following example creates a Simple AD directory, where the directory DNS nam
 #### YAML<a name="aws-resource-directoryservice-simplead--examples--Create_a_Simple_AD_Directory--yaml"></a>
 
 ```
-myDirectory: 
+myDirectory:
   Type: AWS::DirectoryService::SimpleAD
-  Properties: 
+  Properties:
     Name: "corp.example.com"
-    Password: 
+    Password:
       Ref: SimpleADPW
     Size: "Small"
-    VpcSettings: 
-      SubnetIds: 
+    VpcSettings:
+      SubnetIds:
         - Ref: subnetID1
         - Ref: subnetID2
-      VpcId: 
+      VpcId:
         Ref: vpcID
 ```
 

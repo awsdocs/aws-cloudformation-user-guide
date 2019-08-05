@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-inputsecuritygroup-inputwhitelistrulecidr-properties"></a>
 
 `Cidr`  <a name="cfn-medialive-inputsecuritygroup-inputwhitelistrulecidr-cidr"></a>
-An IPv4 CIDR range to include in this input security group\.  
-*Required*: No  
-*Type*: String  
+An IPv4 CIDR range to include in this input security group\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

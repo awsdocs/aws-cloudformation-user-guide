@@ -1,6 +1,6 @@
 # AWS::Events::Rule Target<a name="aws-properties-events-rule-target"></a>
 
-The `Target` property type specifies a target, such as an AWS Lambda function or an Amazon Kinesis data stream, that CloudWatch Events invokes when a rule is triggered\. 
+The `Target` property type specifies a target, such as an AWS Lambda function or an Amazon Kinesis data stream, that CloudWatch Events invokes when a rule is triggered\.
 
  `Targets` property of the [AWS::Events::Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html) resource contains a list of one or more `Target` property types\.
 
@@ -29,92 +29,92 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Arn](#cfn-events-rule-target-arn): String
-  [EcsParameters](#cfn-events-rule-target-ecsparameters): 
+  [EcsParameters](#cfn-events-rule-target-ecsparameters):
     [EcsParameters](aws-properties-events-rule-ecsparameters.md)
   [Id](#cfn-events-rule-target-id): String
   [Input](#cfn-events-rule-target-input): String
   [InputPath](#cfn-events-rule-target-inputpath): String
-  [InputTransformer](#cfn-events-rule-target-inputtransformer): 
+  [InputTransformer](#cfn-events-rule-target-inputtransformer):
     [InputTransformer](aws-properties-events-rule-inputtransformer.md)
-  [KinesisParameters](#cfn-events-rule-target-kinesisparameters): 
+  [KinesisParameters](#cfn-events-rule-target-kinesisparameters):
     [KinesisParameters](aws-properties-events-rule-kinesisparameters.md)
   [RoleArn](#cfn-events-rule-target-rolearn): String
-  [RunCommandParameters](#cfn-events-rule-target-runcommandparameters): 
+  [RunCommandParameters](#cfn-events-rule-target-runcommandparameters):
     [RunCommandParameters](aws-properties-events-rule-runcommandparameters.md)
-  [SqsParameters](#cfn-events-rule-target-sqsparameters): 
+  [SqsParameters](#cfn-events-rule-target-sqsparameters):
     [SqsParameters](aws-properties-events-rule-sqsparameters.md)
 ```
 
 ## Properties<a name="aws-properties-events-rule-target-properties"></a>
 
 `Arn`  <a name="cfn-events-rule-target-arn"></a>
-The Amazon Resource Name \(ARN\) of the target\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `1600`  
+The Amazon Resource Name \(ARN\) of the target\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `1600`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EcsParameters`  <a name="cfn-events-rule-target-ecsparameters"></a>
-Contains the Amazon ECS task definition and task count to be used, if the event target is an Amazon ECS task\. For more information about Amazon ECS tasks, see [Task Definitions ](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_defintions.html) in the *Amazon EC2 Container Service Developer Guide*\.  
-*Required*: No  
-*Type*: [EcsParameters](aws-properties-events-rule-ecsparameters.md)  
+Contains the Amazon ECS task definition and task count to be used, if the event target is an Amazon ECS task\. For more information about Amazon ECS tasks, see [Task Definitions ](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_defintions.html) in the *Amazon EC2 Container Service Developer Guide*\.
+*Required*: No
+*Type*: [EcsParameters](aws-properties-events-rule-ecsparameters.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-events-rule-target-id"></a>
-The ID of the target\. It can include alphanumeric characters, periods \(\.\), hyphens \(\-\), and underscores \(\_\)\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `64`  
-*Pattern*: `[\.\-_A-Za-z0-9]+`  
+The ID of the target\. It can include alphanumeric characters, periods \(\.\), hyphens \(\-\), and underscores \(\_\)\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `64`
+*Pattern*: `[\.\-_A-Za-z0-9]+`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Input`  <a name="cfn-events-rule-target-input"></a>
-Valid JSON text passed to the target\. If you use this property, nothing from the event text itself is passed to the target\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `8192`  
+Valid JSON text passed to the target\. If you use this property, nothing from the event text itself is passed to the target\.
+*Required*: No
+*Type*: String
+*Maximum*: `8192`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputPath`  <a name="cfn-events-rule-target-inputpath"></a>
-When you don't want to pass the entire matched event, `InputPath ` describes which part of the event to pass to the target\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `256`  
+When you don't want to pass the entire matched event, `InputPath ` describes which part of the event to pass to the target\.
+*Required*: No
+*Type*: String
+*Maximum*: `256`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputTransformer`  <a name="cfn-events-rule-target-inputtransformer"></a>
-Settings to enable you to provide custom input to a target based on certain event data\. You can extract one or more key\-value pairs from the event and then use that data to send customized input to the target\.  
-*Required*: No  
-*Type*: [InputTransformer](aws-properties-events-rule-inputtransformer.md)  
+Settings to enable you to provide custom input to a target based on certain event data\. You can extract one or more key\-value pairs from the event and then use that data to send customized input to the target\.
+*Required*: No
+*Type*: [InputTransformer](aws-properties-events-rule-inputtransformer.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KinesisParameters`  <a name="cfn-events-rule-target-kinesisparameters"></a>
-The custom parameter you can use to control the shard assignment, when the target is a Kinesis data stream\. If you do not include this parameter, the default is to use the `eventId` as the partition key\.  
-*Required*: No  
-*Type*: [KinesisParameters](aws-properties-events-rule-kinesisparameters.md)  
+The custom parameter you can use to control the shard assignment, when the target is a Kinesis data stream\. If you do not include this parameter, the default is to use the `eventId` as the partition key\.
+*Required*: No
+*Type*: [KinesisParameters](aws-properties-events-rule-kinesisparameters.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-events-rule-target-rolearn"></a>
-The Amazon Resource Name \(ARN\) of the IAM role to be used for this target when the rule is triggered\. If one rule triggers multiple targets, you can use a different IAM role for each target\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `1600`  
+The Amazon Resource Name \(ARN\) of the IAM role to be used for this target when the rule is triggered\. If one rule triggers multiple targets, you can use a different IAM role for each target\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `1600`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RunCommandParameters`  <a name="cfn-events-rule-target-runcommandparameters"></a>
-Parameters used when you are using the rule to invoke Amazon EC2 Run Command\.  
-*Required*: No  
-*Type*: [RunCommandParameters](aws-properties-events-rule-runcommandparameters.md)  
+Parameters used when you are using the rule to invoke Amazon EC2 Run Command\.
+*Required*: No
+*Type*: [RunCommandParameters](aws-properties-events-rule-runcommandparameters.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SqsParameters`  <a name="cfn-events-rule-target-sqsparameters"></a>
-Contains the message group ID to use when the target is a FIFO queue\.  
-If you specify an SQS FIFO queue as a target, the queue must have content\-based deduplication enabled\.  
-*Required*: No  
-*Type*: [SqsParameters](aws-properties-events-rule-sqsparameters.md)  
+Contains the message group ID to use when the target is a FIFO queue\.
+If you specify an SQS FIFO queue as a target, the queue must have content\-based deduplication enabled\.
+*Required*: No
+*Type*: [SqsParameters](aws-properties-events-rule-sqsparameters.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-events-rule-target--examples"></a>
@@ -177,17 +177,17 @@ MyEventsRule:
     EventPattern:
       source:
         - aws.ec2
-    RoleArn: !GetAtt 
+    RoleArn: !GetAtt
       - EventsInvokeKinesisTargetRole
       - Arn
     ScheduleExpression: rate(5 minutes)
     State: ENABLED
     Targets:
-      - Arn: !GetAtt 
+      - Arn: !GetAtt
           - MyFirstStream
           - Arn
         Id: Id123
-        RoleArn: !GetAtt 
+        RoleArn: !GetAtt
           - EventsInvokeKinesisTargetRole
           - Arn
         KinesisParameters:
@@ -265,10 +265,10 @@ MyEventsRule:
     ScheduleExpression: rate(15 minutes)
     State: DISABLED
     Targets:
-      - Arn: !GetAtt 
+      - Arn: !GetAtt
           - MyCluster
           - Arn
-        RoleArn: !GetAtt 
+        RoleArn: !GetAtt
           - ECSTaskRole
           - Arn
         Id: Id345

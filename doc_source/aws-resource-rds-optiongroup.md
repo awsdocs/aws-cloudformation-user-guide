@@ -25,46 +25,46 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RDS::OptionGroup
-Properties: 
+Properties:
   [EngineName](#cfn-rds-optiongroup-enginename): String
   [MajorEngineVersion](#cfn-rds-optiongroup-majorengineversion): String
-  [OptionConfigurations](#cfn-rds-optiongroup-optionconfigurations): 
+  [OptionConfigurations](#cfn-rds-optiongroup-optionconfigurations):
     - [OptionConfiguration](aws-properties-rds-optiongroup-optionconfigurations.md)
   [OptionGroupDescription](#cfn-rds-optiongroup-optiongroupdescription): String
-  [Tags](#cfn-rds-optiongroup-tags): 
+  [Tags](#cfn-rds-optiongroup-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-rds-optiongroup-properties"></a>
 
 `EngineName`  <a name="cfn-rds-optiongroup-enginename"></a>
-Specifies the name of the engine that this option group should be associated with\.  
-*Required*: Yes  
-*Type*: String  
+Specifies the name of the engine that this option group should be associated with\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MajorEngineVersion`  <a name="cfn-rds-optiongroup-majorengineversion"></a>
-Specifies the major version of the engine that this option group should be associated with\.  
-*Required*: Yes  
-*Type*: String  
+Specifies the major version of the engine that this option group should be associated with\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OptionConfigurations`  <a name="cfn-rds-optiongroup-optionconfigurations"></a>
-A list of all available options  
-*Required*: Yes  
-*Type*: List of [OptionConfiguration](aws-properties-rds-optiongroup-optionconfigurations.md)  
+A list of all available options
+*Required*: Yes
+*Type*: List of [OptionConfiguration](aws-properties-rds-optiongroup-optionconfigurations.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OptionGroupDescription`  <a name="cfn-rds-optiongroup-optiongroupdescription"></a>
-The description of the option group\.  
-*Required*: Yes  
-*Type*: String  
+The description of the option group\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-rds-optiongroup-tags"></a>
-Tags to assign to the option group\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+Tags to assign to the option group\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-rds-optiongroup-return-values"></a>
@@ -79,7 +79,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Multiple Option Configurations<a name="aws-resource-rds-optiongroup--examples--Multiple_Option_Configurations"></a>
 
-The following example creates an option group with two option configurations \(`OEM` and `APEX`\): 
+The following example creates an option group with two option configurations \(`OEM` and `APEX`\):
 
 #### JSON<a name="aws-resource-rds-optiongroup--examples--Multiple_Option_Configurations--json"></a>
 
@@ -111,18 +111,18 @@ The following example creates an option group with two option configurations \(`
 #### YAML<a name="aws-resource-rds-optiongroup--examples--Multiple_Option_Configurations--yaml"></a>
 
 ```
---- 
-OracleOptionGroup: 
-  Properties: 
+---
+OracleOptionGroup:
+  Properties:
     EngineName: oracle-ee
     MajorEngineVersion: "12.1"
-    OptionConfigurations: 
-      - 
-        DBSecurityGroupMemberships: 
+    OptionConfigurations:
+      -
+        DBSecurityGroupMemberships:
           - default
         OptionName: OEM
         Port: "5500"
-      - 
+      -
         OptionName: APEX
     OptionGroupDescription: "A test option group"
   Type: "AWS::RDS::OptionGroup"
@@ -130,7 +130,7 @@ OracleOptionGroup:
 
 ### Multiple Settings<a name="aws-resource-rds-optiongroup--examples--Multiple_Settings"></a>
 
-The following snippet creates an option group that specifies two option settings for the `MEMCACHED` option: 
+The following snippet creates an option group that specifies two option settings for the `MEMCACHED` option:
 
 #### JSON<a name="aws-resource-rds-optiongroup--examples--Multiple_Settings--json"></a>
 
@@ -169,23 +169,23 @@ The following snippet creates an option group that specifies two option settings
 #### YAML<a name="aws-resource-rds-optiongroup--examples--Multiple_Settings--yaml"></a>
 
 ```
---- 
-SQLOptionGroup: 
-  Properties: 
+---
+SQLOptionGroup:
+  Properties:
     EngineName: mysql
     MajorEngineVersion: "5.6"
-    OptionConfigurations: 
-      - 
+    OptionConfigurations:
+      -
         OptionName: MEMCACHED
-        OptionSettings: 
-          - 
+        OptionSettings:
+          -
             Name: CHUNK_SIZE
             Value: "32"
-          - 
+          -
             Name: BINDING_PROTOCOL
             Value: ascii
         Port: "1234"
-        VpcSecurityGroupMemberships: 
+        VpcSecurityGroupMemberships:
           - sg-a1238db7
     OptionGroupDescription: "A test option group"
   Type: "AWS::RDS::OptionGroup"

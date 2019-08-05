@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceDiscovery::PrivateDnsNamespace
-Properties: 
+Properties:
   [Description](#cfn-servicediscovery-privatednsnamespace-description): String
   [Name](#cfn-servicediscovery-privatednsnamespace-name): String
   [Vpc](#cfn-servicediscovery-privatednsnamespace-vpc): String
@@ -32,24 +32,24 @@ Properties:
 ## Properties<a name="aws-resource-servicediscovery-privatednsnamespace-properties"></a>
 
 `Description`  <a name="cfn-servicediscovery-privatednsnamespace-description"></a>
-A description for the namespace\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `1024`  
+A description for the namespace\.
+*Required*: No
+*Type*: String
+*Maximum*: `1024`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-servicediscovery-privatednsnamespace-name"></a>
-The name that you want to assign to this namespace\. When you create a private DNS namespace, AWS Cloud Map automatically creates an Amazon Route 53 private hosted zone that has the same name as the namespace\.  
-*Required*: Yes  
-*Type*: String  
-*Maximum*: `1024`  
+The name that you want to assign to this namespace\. When you create a private DNS namespace, AWS Cloud Map automatically creates an Amazon Route 53 private hosted zone that has the same name as the namespace\.
+*Required*: Yes
+*Type*: String
+*Maximum*: `1024`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Vpc`  <a name="cfn-servicediscovery-privatednsnamespace-vpc"></a>
-The ID of the Amazon VPC that you want to associate the namespace with\.  
-*Required*: Yes  
-*Type*: String  
-*Maximum*: `64`  
+The ID of the Amazon VPC that you want to associate the namespace with\.
+*Required*: Yes
+*Type*: String
+*Maximum*: `64`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-servicediscovery-privatednsnamespace-return-values"></a>
@@ -104,4 +104,4 @@ Properties:
 ```
 
 ## See Also<a name="aws-resource-servicediscovery-privatednsnamespace--seealso"></a>
-+  [CreatePrivateDnsNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreatePrivateDnsNamespace.html) in the *AWS Cloud Map API Reference* 
++  [CreatePrivateDnsNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreatePrivateDnsNamespace.html) in the *AWS Cloud Map API Reference*

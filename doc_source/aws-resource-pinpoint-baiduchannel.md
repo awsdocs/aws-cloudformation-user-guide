@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Pinpoint::BaiduChannel
-Properties: 
+Properties:
   [ApiKey](#cfn-pinpoint-baiduchannel-apikey): String
   [ApplicationId](#cfn-pinpoint-baiduchannel-applicationid): String
   [Enabled](#cfn-pinpoint-baiduchannel-enabled): Boolean
@@ -36,27 +36,27 @@ Properties:
 ## Properties<a name="aws-resource-pinpoint-baiduchannel-properties"></a>
 
 `ApiKey`  <a name="cfn-pinpoint-baiduchannel-apikey"></a>
-The API key that you received from the Baidu Cloud Push service to communicate with the service\.  
-*Required*: Yes  
-*Type*: String  
+The API key that you received from the Baidu Cloud Push service to communicate with the service\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApplicationId`  <a name="cfn-pinpoint-baiduchannel-applicationid"></a>
-The unique ID of the Amazon Pinpoint app that you're configuring the Baidu channel for\.  
-*Required*: Yes  
-*Type*: String  
+The unique ID of the Amazon Pinpoint app that you're configuring the Baidu channel for\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Enabled`  <a name="cfn-pinpoint-baiduchannel-enabled"></a>
-Specifies whether to enable the Baidu channel for the application\.  
-*Required*: No  
-*Type*: Boolean  
+Specifies whether to enable the Baidu channel for the application\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretKey`  <a name="cfn-pinpoint-baiduchannel-secretkey"></a>
-The secret key that you received from the Baidu Cloud Push service to communicate with the service\.  
-*Required*: Yes  
-*Type*: String  
+The secret key that you received from the Baidu Cloud Push service to communicate with the service\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-pinpoint-baiduchannel-return-values"></a>

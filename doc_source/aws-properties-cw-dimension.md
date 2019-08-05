@@ -25,19 +25,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cw-dimension-properties"></a>
 
 `Name`  <a name="cfn-cloudwatch-alarm-dimension-name"></a>
-The name of the dimension, from 1–255 characters in length\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
+The name of the dimension, from 1–255 characters in length\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `255`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-cloudwatch-alarm-dimension-value"></a>
-The value for the dimension, from 1–255 characters in length\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
+The value for the dimension, from 1–255 characters in length\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `255`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-cw-dimension--examples"></a>

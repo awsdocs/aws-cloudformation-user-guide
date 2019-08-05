@@ -6,7 +6,7 @@ AWS OpsWorks is an application management service that simplifies a wide range o
 
 The following sample template deploys a sample AWS OpsWorks PHP web application that is stored in public Git repository\. The AWS OpsWorks stack includes two application servers with a load balancer that distributes incoming traffic evenly across the servers\. The AWS OpsWorks stack also includes a back\-end MySQL database server to store data\. For more information about the sample AWS OpsWorks application, see [Walkthrough: Learn AWS AWS OpsWorks Basics by Creating an Application Server Stack](https://docs.aws.amazon.com/opsworks/latest/userguide/gettingstarted.html) in the *AWS OpsWorks User Guide*\.
 
-**Note**  
+**Note**
 The `ServiceRoleArn` and `DefaultInstanceProfileArn` properties reference IAM roles that are created after you use AWS OpsWorks for the first time\.
 
 ### JSON<a name="quickref-opsworks-example-1.json"></a>
@@ -73,7 +73,7 @@ The `ServiceRoleArn` and `DefaultInstanceProfileArn` properties reference IAM ro
           "Url": "git://github.com/amazonwebservices/opsworks-example-cookbooks.git"
         }
       }
-    },    
+    },
     "myLayer": {
       "Type": "AWS::OpsWorks::Layer",
       "DependsOn": "myApp",
@@ -110,14 +110,14 @@ The `ServiceRoleArn` and `DefaultInstanceProfileArn` properties reference IAM ro
         },
         "VolumeConfigurations":[{"MountPoint":"/vol/mysql","NumberOfDisks":1,"Size":10}]
       }
-    },    
+    },
     "ELBAttachment" : {
       "Type" : "AWS::OpsWorks::ElasticLoadBalancerAttachment",
       "Properties" : {
         "ElasticLoadBalancerName" : { "Ref" : "ELB" },
         "LayerId" : { "Ref" : "myLayer" }
       }
-    },	
+    },
     "ELB" : {
       "Type": "AWS::ElasticLoadBalancing::LoadBalancer",
       "Properties": {
@@ -144,7 +144,7 @@ The `ServiceRoleArn` and `DefaultInstanceProfileArn` properties reference IAM ro
         "LayerIds": [{"Ref": "myLayer"}],
         "InstanceType": "m1.small"
       }
-    },    
+    },
     "myAppInstance2": {
       "Type": "AWS::OpsWorks::Instance",
       "Properties": {

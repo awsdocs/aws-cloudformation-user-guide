@@ -29,7 +29,7 @@ For example, the resource type for an Amazon S3 bucket is [AWS::S3::Bucket](http
 
 Let's take a look at a very basic template\. The following template declares a single resource of type AWS::S3::Bucket: with the name HelloBucket\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
 {
@@ -41,7 +41,7 @@ Let's take a look at a very basic template\. The following template declares a s
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 Resources:
@@ -51,7 +51,7 @@ Resources:
 
 If you use this template to create a stack, AWS CloudFormation will create an Amazon S3 bucket\. Creating a bucket is simple, because AWS CloudFormation can create a bucket with default settings\. For other resources, such as an Auto Scaling group or EC2 instance, AWS CloudFormation requires more information\. Resource declarations use a `Properties` attribute to specify the information used to create a resource\.
 
- Depending on the resource type, some properties are required, such as the ImageId property for an [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource, and others are optional\. Some properties have default values, such as the AccessControl property of the AWS::S3::Bucket resource, so specifying a value for those properties is optional\. Other properties are not required but may add functionality that you want, such as the WebsiteConfiguration property of the AWS::S3::Bucket resource\. Specifying a value for such properties is entirely optional and based on your needs\. In the example above, because the AWS::S3::Bucket resource has only optional properties and we didn't need any of the optional features, we could accept the defaults and omit the Properties attribute\. 
+ Depending on the resource type, some properties are required, such as the ImageId property for an [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource, and others are optional\. Some properties have default values, such as the AccessControl property of the AWS::S3::Bucket resource, so specifying a value for those properties is optional\. Other properties are not required but may add functionality that you want, such as the WebsiteConfiguration property of the AWS::S3::Bucket resource\. Specifying a value for such properties is entirely optional and based on your needs\. In the example above, because the AWS::S3::Bucket resource has only optional properties and we didn't need any of the optional features, we could accept the defaults and omit the Properties attribute\.
 
  To view the properties for each resource type, see the topics in [AWS Resource and Property Types Reference](aws-template-resource-type-ref.md)\.
 
@@ -59,7 +59,7 @@ If you use this template to create a stack, AWS CloudFormation will create an Am
 
 Usually, a property for a resource is simply a string value\. For example, the following template specifies a canned ACL \(PublicRead\) for the AccessControl property of the bucket\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
 {
@@ -67,14 +67,14 @@ Usually, a property for a resource is simply a string value\. For example, the f
         "HelloBucket" : {
             "Type" : "AWS::S3::Bucket",
             "Properties" : {
-               "AccessControl" : "PublicRead"               
+               "AccessControl" : "PublicRead"
             }
         }
     }
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 Resources:
@@ -86,7 +86,7 @@ Resources:
 
 Some resources can have multiple properties, and some properties can have one or more subproperties\. For example, the [AWS::S3::Bucket](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html) resource has two properties, AccessControl and WebsiteConfiguration\. The WebsiteConfiguration property has two subproperties, IndexDocument and ErrorDocument\. The following template shows our original bucket resource with the additional properties\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
 {
@@ -97,15 +97,15 @@ Some resources can have multiple properties, and some properties can have one or
                "AccessControl" : "PublicRead",
                "WebsiteConfiguration" : {
                     "IndexDocument" : "index.html",
-                    "ErrorDocument" : "error.html"            
-               }               
+                    "ErrorDocument" : "error.html"
+               }
             }
         }
     }
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 Resources:
@@ -122,7 +122,7 @@ One of the greatest benefits of templates and AWS CloudFormation is the ability 
 
  You're probably wondering how you set properties on one resource based on the name or property of another resource\. For example, you can create a CloudFront distribution backed by an S3 bucket or  an EC2 instance that uses EC2 security groups, and all of these resources can be created in the same template\. AWS CloudFormation has a number of intrinsic functions that you can use to refer to other resources and their properties\. You can use the [Ref function](intrinsic-function-reference-ref.md) to refer to an identifying property of a resource\. Frequently, this is the physical name of the resource; however, sometimes it can be an identifier, such as the IP address for an [AWS::EC2::EIP](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html) resource or an Amazon Resource Name \(ARN\) for an Amazon SNS topic\. For a list of values returned by the Ref function, see [Ref function](intrinsic-function-reference-ref.md)\. The following template contains an [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource\. The resource's SecurityGroups property calls the Ref function to refer to the AWS::EC2::SecurityGroup resource InstanceSecurityGroup\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
 {
@@ -157,7 +157,7 @@ One of the greatest benefits of templates and AWS CloudFormation is the ability 
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 Resources:
@@ -179,9 +179,9 @@ Resources:
           CidrIp: 0.0.0.0/0
 ```
 
-The SecurityGroups property is a list of security groups, and in the previous example we have only one item in the list\. The following template has an additional item in the SecurityGroups property list\. 
+The SecurityGroups property is a list of security groups, and in the previous example we have only one item in the list\. The following template has an additional item in the SecurityGroups property list\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
 {
@@ -217,7 +217,7 @@ The SecurityGroups property is a list of security groups, and in the previous ex
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 Resources:
@@ -244,7 +244,7 @@ MyExistingSecurityGroup is a string that refers to an existing EC2 security grou
 
 In the example above, the KeyName property of the [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) is the literal string mykey\. This means that a key pair with the name mykey must exist in the region where the stack is being created; otherwise, stack creation will fail because the key pair does not exist\. The key pair you use can vary with the region where you are creating the stack, or you may want to share the template with someone else so that they can use it with their AWS account\. If so, you can use an input parameter so that the key pair name can be specified when the stack is created\. The Ref function can refer to input parameters that are specified at stack creation time\. The following template adds a Parameters object containing the KeyName parameter, which is used to specify the KeyName property for the AWS::EC2::Instance resource\. The parameter type is `AWS::EC2::KeyPair::KeyName`, which ensures a user specifies a valid key pair name in his or her account and in the region where the stack is being created\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
 {
@@ -288,7 +288,7 @@ In the example above, the KeyName property of the [AWS::EC2::Instance](https://d
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 Parameters:
@@ -315,9 +315,9 @@ Resources:
           CidrIp: 0.0.0.0/0
 ```
 
-The Ref function is handy if the parameter or the value returned for a resource is exactly what you want; however, you may need other attributes of a resource\. For example, if you want to create a CloudFront distribution with an S3 origin, you need to specify the bucket location by using a DNS\-style address\. A number of resources have additional attributes whose values you can use in your template\. To get these attributes, you use the [Fn::GetAtt](intrinsic-function-reference-getatt.md) function\. The following template creates a CloudFront distribution resource that specifies the DNS name of an S3 bucket resource using Fn::GetAtt function to get the bucket's DomainName attribute\. 
+The Ref function is handy if the parameter or the value returned for a resource is exactly what you want; however, you may need other attributes of a resource\. For example, if you want to create a CloudFront distribution with an S3 origin, you need to specify the bucket location by using a DNS\-style address\. A number of resources have additional attributes whose values you can use in your template\. To get these attributes, you use the [Fn::GetAtt](intrinsic-function-reference-getatt.md) function\. The following template creates a CloudFront distribution resource that specifies the DNS name of an S3 bucket resource using Fn::GetAtt function to get the bucket's DomainName attribute\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
 {
@@ -356,7 +356,7 @@ The Ref function is handy if the parameter or the value returned for a resource 
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 Resources:
@@ -367,7 +367,7 @@ Resources:
     Properties:
       DistributionConfig:
         Origins:
-          - DomainName: !GetAtt 
+          - DomainName: !GetAtt
               - myBucket
               - DomainName
             Id: myS3Origin
@@ -388,9 +388,9 @@ So far, you've learned about resources and a little bit about how to use them to
 
 You declare parameters in a template's Parameters object\. A parameter contains a list of attributes that define its value and constraints against its value\. The only required attribute is Type, which can be String, Number, or an AWS\-specific type\. You can also add a Description attribute that tells a user more about what kind of value they should specify\. The parameter's name and description appear in the Specify Parameters page when a user uses the template in the Create Stack wizard\.
 
-The following template fragment is a Parameters object that declares the parameters used in the Specify Parameters page above\. 
+The following template fragment is a Parameters object that declares the parameters used in the Specify Parameters page above\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
   "Parameters": {
@@ -417,7 +417,7 @@ The following template fragment is a Parameters object that declares the paramet
   }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 Parameters:
@@ -446,21 +446,21 @@ You'll notice that the `KeyName` parameter has no `Default` attribute and the ot
 
 For AWS\-specific parameter types, AWS CloudFormation validates input values against existing values in the user's AWS account and in the region where he or she is creating the stack *before* creating any stack resources\. In the sample template, the `KeyName` parameter is an AWS\-specific parameter type of `AWS::EC2::KeyPair::KeyName`\. AWS CloudFormation checks that users specify a valid EC2 key pair name before creating the stack\. Another example of an AWS\-specific parameter type is `AWS::EC2::VPC::Id`, which requires users to specify a valid VPC ID\. In addition to upfront validation, the AWS console shows a drop\-down list of valid values for AWS\-specific parameter types, such as valid EC2 key pair names or VPC IDs, when users use the Create Stack wizard\.
 
- For the `String` type, you can use the following attributes to declare constraints: `MinLength`, `MaxLength`, `Default`, `AllowedValues`, and `AllowedPattern`\. In the example above, the `WordPressUser` parameter has three constraints: the parameter value must be 1 to 16 character long \(`MinLength`, `MaxLength`\) and must begin with a letter followed by any combination of letters and numbers \(`AllowedPattern`\)\. 
+ For the `String` type, you can use the following attributes to declare constraints: `MinLength`, `MaxLength`, `Default`, `AllowedValues`, and `AllowedPattern`\. In the example above, the `WordPressUser` parameter has three constraints: the parameter value must be 1 to 16 character long \(`MinLength`, `MaxLength`\) and must begin with a letter followed by any combination of letters and numbers \(`AllowedPattern`\)\.
 
- For the `Number` type, you can declare the following constraints: `MinValue`, `MaxValue`, `Default`, and `AllowedValues`\. A number can be an integer or a float value\. In the example above, the `WebServerPort` parameter must be a number between 1 and 65535 inclusive \(`MinValue`, `MaxValue`\)\. 
+ For the `Number` type, you can declare the following constraints: `MinValue`, `MaxValue`, `Default`, and `AllowedValues`\. A number can be an integer or a float value\. In the example above, the `WebServerPort` parameter must be a number between 1 and 65535 inclusive \(`MinValue`, `MaxValue`\)\.
 
-Earlier in this section, we mentioned that parameters are a good way to specify sensitive or implementation\-specific data, such as passwords or user names, that you need to use but do not want to embed in the template itself\. For sensitive information, you can use the `NoEcho` attribute to prevent a parameter value from being displayed in the console, command line tools, or API\. If you set the `NoEcho` attribute to `true`, the parameter value is returned as asterisks \(`*****`\)\. In the example above, the `WordPressUser` parameter value is not visible to anyone viewing the stack's settings, and its value is returned as asterisks\. 
+Earlier in this section, we mentioned that parameters are a good way to specify sensitive or implementation\-specific data, such as passwords or user names, that you need to use but do not want to embed in the template itself\. For sensitive information, you can use the `NoEcho` attribute to prevent a parameter value from being displayed in the console, command line tools, or API\. If you set the `NoEcho` attribute to `true`, the parameter value is returned as asterisks \(`*****`\)\. In the example above, the `WordPressUser` parameter value is not visible to anyone viewing the stack's settings, and its value is returned as asterisks\.
 
 ## Specifying Conditional Values Using Mappings<a name="gettingstarted.templatebasics.mappings"></a>
 
-Parameters are a great way to enable users to specify unique or sensitive values for use in the properties of stack resources; however, there may be settings that are region dependent or are somewhat complex for users to figure out because of other conditions or dependencies\. In these cases, you would want to put some logic in the template itself so that users can specify simpler values \(or none at all\) to get the results that they want\. In an earlier example, we hardcoded the AMI ID for the ImageId property of our EC2 instance\. This works fine in the US\-East region, where it represents the AMI that we want\. However, if the user tries to build the stack in a different region he or she will get the wrong AMI or no AMI at all\. \(AMI IDs are unique to a region, so the same AMI ID in a different region may not represent any AMI or a completely different one\.\) 
+Parameters are a great way to enable users to specify unique or sensitive values for use in the properties of stack resources; however, there may be settings that are region dependent or are somewhat complex for users to figure out because of other conditions or dependencies\. In these cases, you would want to put some logic in the template itself so that users can specify simpler values \(or none at all\) to get the results that they want\. In an earlier example, we hardcoded the AMI ID for the ImageId property of our EC2 instance\. This works fine in the US\-East region, where it represents the AMI that we want\. However, if the user tries to build the stack in a different region he or she will get the wrong AMI or no AMI at all\. \(AMI IDs are unique to a region, so the same AMI ID in a different region may not represent any AMI or a completely different one\.\)
 
  To avoid this problem, you need a way to specify the right AMI ID based on a conditional input \(in this example, the region where the stack is created\)\. There are two template features that can help, the Mappings object and the AWS::Region pseudo parameter\.
 
-The AWS::Region pseudo parameter is a value that AWS CloudFormation resolves as the region where the stack is created\. Pseudo parameters are resolved by AWS CloudFormation when you create the stack\. Mappings enable you to use an input value as a condition that determines another value\. Similar to a switch statement, a mapping associates one set of values with another\. Using the AWS::Region parameter together with a mapping, you can ensure that an AMI ID appropriate to the region is specified\. The following template contains a Mappings object with a mapping named RegionMap that is used to map an AMI ID to the appropriate region\. 
+The AWS::Region pseudo parameter is a value that AWS CloudFormation resolves as the region where the stack is created\. Pseudo parameters are resolved by AWS CloudFormation when you create the stack\. Mappings enable you to use an input value as a condition that determines another value\. Similar to a switch statement, a mapping associates one set of values with another\. Using the AWS::Region parameter together with a mapping, you can ensure that an AMI ID appropriate to the region is specified\. The following template contains a Mappings object with a mapping named RegionMap that is used to map an AMI ID to the appropriate region\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
 {
@@ -514,7 +514,7 @@ The AWS::Region pseudo parameter is a value that AWS CloudFormation resolves as 
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 Parameters:
@@ -538,23 +538,23 @@ Resources:
     Type: 'AWS::EC2::Instance'
     Properties:
       KeyName: !Ref KeyName
-      ImageId: !FindInMap 
+      ImageId: !FindInMap
         - RegionMap
         - !Ref 'AWS::Region'
         - AMI
       UserData: !Base64 '80'
 ```
 
-In the RegionMap, each region is mapped to a name\-value pair\. The name\-value pair is a label, and the value to map\. In the RegionMap, AMI is the label and the AMI ID is the value\. To use a map to return a value, you use the [Fn::FindInMap](intrinsic-function-reference-findinmap.md) function, passing the name of the map, the value used to find the mapped value, and the label of the mapped value you want to return\. In the example above, the ImageId property of the resource Ec2Instance uses the Fn::FindInMap function to determine its value by specifying RegionMap as the map to use, AWS::Region as the input value to map from, and AMI as the label to identify the value to map to\. For example, if this template were used to create a stack in the us\-west\-1 region, ImageId would be set to ami\-655a0a20\. 
+In the RegionMap, each region is mapped to a name\-value pair\. The name\-value pair is a label, and the value to map\. In the RegionMap, AMI is the label and the AMI ID is the value\. To use a map to return a value, you use the [Fn::FindInMap](intrinsic-function-reference-findinmap.md) function, passing the name of the map, the value used to find the mapped value, and the label of the mapped value you want to return\. In the example above, the ImageId property of the resource Ec2Instance uses the Fn::FindInMap function to determine its value by specifying RegionMap as the map to use, AWS::Region as the input value to map from, and AMI as the label to identify the value to map to\. For example, if this template were used to create a stack in the us\-west\-1 region, ImageId would be set to ami\-655a0a20\.
 
-**Tip**  
+**Tip**
 The AWS::Region pseudo parameter enables you to get the region where the stack is created\. Some resources, such as [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html), [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html), and [AWS::ElasticLoadBalancing::LoadBalancer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html), have a property that specifies availability zones\. You can use the [Fn::GetAZs function](intrinsic-function-reference-getavailabilityzones.md) to get the list of all availability zones in a region\.
 
 ## Constructed Values and Output Values<a name="gettingstarted.templatebasics.outputs"></a>
 
 Parameters and mappings are an excellent way to pass or determine specific values at stack creation time, but there can be situations where a value from a parameter or other resource attribute is only part of the value you need\. For example, in the following fragment from the WordPress template, the Fn::Join function constructs the Target subproperty of the HealthCheck property for the ElasticLoadBalancer resource by concatenating the WebServerPort parameter with other literal strings to form the value needed\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
 {
@@ -606,7 +606,7 @@ Parameters and mappings are an excellent way to pass or determine specific value
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 Resources:
@@ -622,7 +622,7 @@ Resources:
           InstancePort: !Ref WebServerPort
           Protocol: HTTP
       HealthCheck:
-        Target: !Join 
+        Target: !Join
           - ''
           - - 'HTTP:'
             - !Ref WebServerPort
@@ -633,7 +633,7 @@ Resources:
         Timeout: '5'
 ```
 
-The Fn::Join function takes two parameters, a delimiter that separates the values you want to concatenate and an array of values in the order that you want them to appear\. In the example above, the Fn::Join function specifies an empty string as the delimiter and HTTP:, the value of the WebServerPort parameter, and a / character as the values to concatenate\. If WebServerPort had a value of 8888, the Target property would be set to the following value: 
+The Fn::Join function takes two parameters, a delimiter that separates the values you want to concatenate and an array of values in the order that you want them to appear\. In the example above, the Fn::Join function specifies an empty string as the delimiter and HTTP:, the value of the WebServerPort parameter, and a / character as the values to concatenate\. If WebServerPort had a value of 8888, the Target property would be set to the following value:
 
 ```
 HTTP:8888/
@@ -641,7 +641,7 @@ HTTP:8888/
 
 The Fn::Join function is also useful for declaring output values for the stack\. The Outputs object in the template contains declarations for the values that you want to have available after the stack is created\. An output is a convenient way to capture important information about your resources or input parameters\. For example, in the WordPress template, we declare the following Outputs object\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
 "Outputs": {
@@ -682,24 +682,24 @@ The Fn::Join function is also useful for declaring output values for the stack\.
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 Outputs:
   InstallURL:
-    Value: !Join 
+    Value: !Join
       - ''
       - - 'http://'
-        - !GetAtt 
+        - !GetAtt
           - ElasticLoadBalancer
           - DNSName
         - /wp-admin/install.php
     Description: Installation URL of the WordPress website
   WebsiteURL:
-    Value: !Join 
+    Value: !Join
       - ''
       - - 'http://'
-        - !GetAtt 
+        - !GetAtt
           - ElasticLoadBalancer
           - DNSName
 ```

@@ -22,25 +22,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Glue::Connection
-Properties: 
+Properties:
   [CatalogId](#cfn-glue-connection-catalogid): String
-  [ConnectionInput](#cfn-glue-connection-connectioninput): 
+  [ConnectionInput](#cfn-glue-connection-connectioninput):
     [ConnectionInput](aws-properties-glue-connection-connectioninput.md)
 ```
 
 ## Properties<a name="aws-resource-glue-connection-properties"></a>
 
 `CatalogId`  <a name="cfn-glue-connection-catalogid"></a>
-The ID of the data catalog to create the catalog object in\. Currently, this should be the AWS account ID\.  
+The ID of the data catalog to create the catalog object in\. Currently, this should be the AWS account ID\.
 To specify the account ID, you can use the `Ref` intrinsic function with the `AWS::AccountId` pseudo parameter\. For example: `!Ref AWS::AccountId`\.
-*Required*: Yes  
-*Type*: String  
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ConnectionInput`  <a name="cfn-glue-connection-connectioninput"></a>
-The connection that you want to create\.  
-*Required*: Yes  
-*Type*: [ConnectionInput](aws-properties-glue-connection-connectioninput.md)  
+The connection that you want to create\.
+*Required*: Yes
+*Type*: [ConnectionInput](aws-properties-glue-connection-connectioninput.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-glue-connection-return-values"></a>

@@ -39,21 +39,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EMR::Cluster
-Properties: 
+Properties:
   [AdditionalInfo](#cfn-elasticmapreduce-cluster-additionalinfo): Json
-  [Applications](#cfn-elasticmapreduce-cluster-applications): 
+  [Applications](#cfn-elasticmapreduce-cluster-applications):
     - [Application](aws-properties-elasticmapreduce-cluster-application.md)
   [AutoScalingRole](#cfn-elasticmapreduce-cluster-autoscalingrole): String
-  [BootstrapActions](#cfn-elasticmapreduce-cluster-bootstrapactions): 
+  [BootstrapActions](#cfn-elasticmapreduce-cluster-bootstrapactions):
     - [BootstrapActionConfig](aws-properties-elasticmapreduce-cluster-bootstrapactionconfig.md)
-  [Configurations](#cfn-elasticmapreduce-cluster-configurations): 
+  [Configurations](#cfn-elasticmapreduce-cluster-configurations):
     - [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md)
   [CustomAmiId](#cfn-elasticmapreduce-cluster-customamiid): String
   [EbsRootVolumeSize](#cfn-elasticmapreduce-cluster-ebsrootvolumesize): Integer
-  [Instances](#cfn-elasticmapreduce-cluster-instances): 
+  [Instances](#cfn-elasticmapreduce-cluster-instances):
     [JobFlowInstancesConfig](aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.md)
   [JobFlowRole](#cfn-elasticmapreduce-cluster-jobflowrole): String
-  [KerberosAttributes](#cfn-elasticmapreduce-cluster-kerberosattributes): 
+  [KerberosAttributes](#cfn-elasticmapreduce-cluster-kerberosattributes):
     [KerberosAttributes](aws-properties-elasticmapreduce-cluster-kerberosattributes.md)
   [LogUri](#cfn-elasticmapreduce-cluster-loguri): String
   [Name](#cfn-elasticmapreduce-cluster-name): String
@@ -61,9 +61,9 @@ Properties:
   [ScaleDownBehavior](#cfn-elasticmapreduce-cluster-scaledownbehavior): String
   [SecurityConfiguration](#cfn-elasticmapreduce-cluster-securityconfiguration): String
   [ServiceRole](#cfn-elasticmapreduce-cluster-servicerole): String
-  [Steps](#cfn-elasticmapreduce-cluster-steps): 
+  [Steps](#cfn-elasticmapreduce-cluster-steps):
     - [StepConfig](aws-properties-elasticmapreduce-cluster-stepconfig.md)
-  [Tags](#cfn-elasticmapreduce-cluster-tags): 
+  [Tags](#cfn-elasticmapreduce-cluster-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VisibleToAllUsers](#cfn-elasticmapreduce-cluster-visibletoallusers): Boolean
 ```
@@ -71,132 +71,132 @@ Properties:
 ## Properties<a name="aws-resource-elasticmapreduce-cluster-properties"></a>
 
 `AdditionalInfo`  <a name="cfn-elasticmapreduce-cluster-additionalinfo"></a>
-A JSON string for selecting additional features\.  
-*Required*: No  
-*Type*: Json  
-*Minimum*: `0`  
-*Maximum*: `10280`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+A JSON string for selecting additional features\.
+*Required*: No
+*Type*: Json
+*Minimum*: `0`
+*Maximum*: `10280`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Applications`  <a name="cfn-elasticmapreduce-cluster-applications"></a>
-The applications to install on this cluster, for example, Spark, Flink, Oozie, Zeppelin, and so on\.  
-*Required*: No  
-*Type*: List of [Application](aws-properties-elasticmapreduce-cluster-application.md)  
+The applications to install on this cluster, for example, Spark, Flink, Oozie, Zeppelin, and so on\.
+*Required*: No
+*Type*: List of [Application](aws-properties-elasticmapreduce-cluster-application.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AutoScalingRole`  <a name="cfn-elasticmapreduce-cluster-autoscalingrole"></a>
-An IAM role for automatic scaling policies\. The default role is `EMR_AutoScaling_DefaultRole`\. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `10280`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+An IAM role for automatic scaling policies\. The default role is `EMR_AutoScaling_DefaultRole`\. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group\.
+*Required*: No
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `10280`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BootstrapActions`  <a name="cfn-elasticmapreduce-cluster-bootstrapactions"></a>
-A list of bootstrap actions to run before Hadoop starts on the cluster nodes\.  
-*Required*: No  
-*Type*: List of [BootstrapActionConfig](aws-properties-elasticmapreduce-cluster-bootstrapactionconfig.md)  
+A list of bootstrap actions to run before Hadoop starts on the cluster nodes\.
+*Required*: No
+*Type*: List of [BootstrapActionConfig](aws-properties-elasticmapreduce-cluster-bootstrapactionconfig.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Configurations`  <a name="cfn-elasticmapreduce-cluster-configurations"></a>
-Applies only to Amazon EMR releases 4\.x and later\. The list of Configurations supplied to the EMR cluster\.  
-*Required*: No  
-*Type*: List of [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md)  
+Applies only to Amazon EMR releases 4\.x and later\. The list of Configurations supplied to the EMR cluster\.
+*Required*: No
+*Type*: List of [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CustomAmiId`  <a name="cfn-elasticmapreduce-cluster-customamiid"></a>
-Available only in Amazon EMR version 5\.7\.0 and later\. The ID of a custom Amazon EBS\-backed Linux AMI if the cluster uses a custom AMI\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `256`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+Available only in Amazon EMR version 5\.7\.0 and later\. The ID of a custom Amazon EBS\-backed Linux AMI if the cluster uses a custom AMI\.
+*Required*: No
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `256`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EbsRootVolumeSize`  <a name="cfn-elasticmapreduce-cluster-ebsrootvolumesize"></a>
-The size, in GiB, of the EBS root device volume of the Linux AMI that is used for each EC2 instance\. Available in Amazon EMR version 4\.x and later\.  
-*Required*: No  
-*Type*: Integer  
+The size, in GiB, of the EBS root device volume of the Linux AMI that is used for each EC2 instance\. Available in Amazon EMR version 4\.x and later\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Instances`  <a name="cfn-elasticmapreduce-cluster-instances"></a>
-A specification of the number and type of Amazon EC2 instances\.  
-*Required*: Yes  
+A specification of the number and type of Amazon EC2 instances\.
+*Required*: Yes
 *Type*: [JobFlowInstancesConfig](aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.md)
 
 `JobFlowRole`  <a name="cfn-elasticmapreduce-cluster-jobflowrole"></a>
-Also called instance profile and EC2 role\. An IAM role for an EMR cluster\. The EC2 instances of the cluster assume this role\. The default role is `EMR_EC2_DefaultRole`\. In order to use the default role, you must have already created it using the CLI or console\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `10280`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+Also called instance profile and EC2 role\. An IAM role for an EMR cluster\. The EC2 instances of the cluster assume this role\. The default role is `EMR_EC2_DefaultRole`\. In order to use the default role, you must have already created it using the CLI or console\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `10280`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KerberosAttributes`  <a name="cfn-elasticmapreduce-cluster-kerberosattributes"></a>
-Attributes for Kerberos configuration when Kerberos authentication is enabled using a security configuration\. For more information see [Use Kerberos Authentication](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-kerberos.html) in the *EMR Management Guide*\.  
-*Required*: No  
-*Type*: [KerberosAttributes](aws-properties-elasticmapreduce-cluster-kerberosattributes.md)  
+Attributes for Kerberos configuration when Kerberos authentication is enabled using a security configuration\. For more information see [Use Kerberos Authentication](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-kerberos.html) in the *EMR Management Guide*\.
+*Required*: No
+*Type*: [KerberosAttributes](aws-properties-elasticmapreduce-cluster-kerberosattributes.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LogUri`  <a name="cfn-elasticmapreduce-cluster-loguri"></a>
-The path to the Amazon S3 location where logs for this cluster are stored\.  
-*Required*: No  
-*Type*: String  
+The path to the Amazon S3 location where logs for this cluster are stored\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-elasticmapreduce-cluster-name"></a>
-The name of the cluster\.  
-*Required*: Yes  
-*Type*: String  
+The name of the cluster\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ReleaseLabel`  <a name="cfn-elasticmapreduce-cluster-releaselabel"></a>
-The Amazon EMR release label, which determines the version of open\-source application packages installed on the cluster\. Release labels are in the form `emr-x.x.x`, where x\.x\.x is an Amazon EMR release version, for example, `emr-5.14.0`\. For more information about Amazon EMR release versions and included application versions and features, see [https://docs.aws.amazon.com/emr/latest/ReleaseGuide/](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/)\. The release label applies only to Amazon EMR releases versions 4\.x and later\. Earlier versions use `AmiVersion`\.  
-*Required*: No  
-*Type*: String  
+The Amazon EMR release label, which determines the version of open\-source application packages installed on the cluster\. Release labels are in the form `emr-x.x.x`, where x\.x\.x is an Amazon EMR release version, for example, `emr-5.14.0`\. For more information about Amazon EMR release versions and included application versions and features, see [https://docs.aws.amazon.com/emr/latest/ReleaseGuide/](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/)\. The release label applies only to Amazon EMR releases versions 4\.x and later\. Earlier versions use `AmiVersion`\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ScaleDownBehavior`  <a name="cfn-elasticmapreduce-cluster-scaledownbehavior"></a>
-The way that individual Amazon EC2 instances terminate when an automatic scale\-in activity occurs or an instance group is resized\. `TERMINATE_AT_INSTANCE_HOUR` indicates that Amazon EMR terminates nodes at the instance\-hour boundary, regardless of when the request to terminate the instance was submitted\. This option is only available with Amazon EMR 5\.1\.0 and later and is the default for clusters created using that version\. `TERMINATE_AT_TASK_COMPLETION` indicates that Amazon EMR blacklists and drains tasks from nodes before terminating the Amazon EC2 instances, regardless of the instance\-hour boundary\. With either behavior, Amazon EMR removes the least active nodes first and blocks instance termination if it could lead to HDFS corruption\. `TERMINATE_AT_TASK_COMPLETION` is available only in Amazon EMR version 4\.1\.0 and later, and is the default for versions of Amazon EMR earlier than 5\.1\.0\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `TERMINATE_AT_INSTANCE_HOUR | TERMINATE_AT_TASK_COMPLETION`  
+The way that individual Amazon EC2 instances terminate when an automatic scale\-in activity occurs or an instance group is resized\. `TERMINATE_AT_INSTANCE_HOUR` indicates that Amazon EMR terminates nodes at the instance\-hour boundary, regardless of when the request to terminate the instance was submitted\. This option is only available with Amazon EMR 5\.1\.0 and later and is the default for clusters created using that version\. `TERMINATE_AT_TASK_COMPLETION` indicates that Amazon EMR blacklists and drains tasks from nodes before terminating the Amazon EC2 instances, regardless of the instance\-hour boundary\. With either behavior, Amazon EMR removes the least active nodes first and blocks instance termination if it could lead to HDFS corruption\. `TERMINATE_AT_TASK_COMPLETION` is available only in Amazon EMR version 4\.1\.0 and later, and is the default for versions of Amazon EMR earlier than 5\.1\.0\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `TERMINATE_AT_INSTANCE_HOUR | TERMINATE_AT_TASK_COMPLETION`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecurityConfiguration`  <a name="cfn-elasticmapreduce-cluster-securityconfiguration"></a>
-The name of the security configuration applied to the cluster\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `10280`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+The name of the security configuration applied to the cluster\.
+*Required*: No
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `10280`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServiceRole`  <a name="cfn-elasticmapreduce-cluster-servicerole"></a>
-The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf\.  
-*Required*: Yes  
-*Type*: String  
+The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Steps`  <a name="cfn-elasticmapreduce-cluster-steps"></a>
-A list of steps to run\.  
-*Required*: No  
-*Type*: List of [StepConfig](aws-properties-elasticmapreduce-cluster-stepconfig.md)  
+A list of steps to run\.
+*Required*: No
+*Type*: List of [StepConfig](aws-properties-elasticmapreduce-cluster-stepconfig.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-elasticmapreduce-cluster-tags"></a>
-A list of tags associated with a cluster\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+A list of tags associated with a cluster\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VisibleToAllUsers`  <a name="cfn-elasticmapreduce-cluster-visibletoallusers"></a>
-Indicates whether the cluster is visible to all IAM users of the AWS account associated with the cluster\. The default value, `true`, indicates that all IAM users in the AWS account can perform cluster actions if they have the proper IAM policy permissions\. If this value is `false`, only the IAM user that created the cluster can perform actions\. This value can be changed on a running cluster by using the SetVisibleToAllUsers action\. You can override the default value of `true` when you create a cluster by using the `VisibleToAllUsers` parameter of the `RunJobFlow` action\.  
-*Required*: No  
-*Type*: Boolean  
+Indicates whether the cluster is visible to all IAM users of the AWS account associated with the cluster\. The default value, `true`, indicates that all IAM users in the AWS account can perform cluster actions if they have the proper IAM policy permissions\. If this value is `false`, only the IAM user that created the cluster can perform actions\. This value can be changed on a running cluster by using the SetVisibleToAllUsers action\. You can override the default value of `true` when you create a cluster by using the `VisibleToAllUsers` parameter of the `RunJobFlow` action\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-elasticmapreduce-cluster-return-values"></a>
@@ -847,7 +847,7 @@ Resources:
           - Sid: Enable IAM User Permissions
             Effect: Allow
             Principal:
-              AWS: !GetAtt 
+              AWS: !GetAtt
                 - emrEc2Role
                 - Arn
             Action: 'kms:*'
@@ -855,7 +855,7 @@ Resources:
           - Sid: Enable IAM User Permissions
             Effect: Allow
             Principal:
-              AWS: !Join 
+              AWS: !Join
                 - ''
                 - - 'arn:aws:iam::'
                   - !Ref 'AWS::AccountId'
@@ -912,7 +912,7 @@ Resources:
         - !Ref emrEc2Role
 Outputs:
   keyArn:
-    Value: !GetAtt 
+    Value: !GetAtt
       - key
       - Arn
 ```

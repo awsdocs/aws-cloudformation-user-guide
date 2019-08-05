@@ -25,10 +25,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::GatewayResponse
-Properties: 
-  [ResponseParameters](#cfn-apigateway-gatewayresponse-responseparameters): 
+Properties:
+  [ResponseParameters](#cfn-apigateway-gatewayresponse-responseparameters):
     Key : Value
-  [ResponseTemplates](#cfn-apigateway-gatewayresponse-responsetemplates): 
+  [ResponseTemplates](#cfn-apigateway-gatewayresponse-responsetemplates):
     Key : Value
   [ResponseType](#cfn-apigateway-gatewayresponse-responsetype): String
   [RestApiId](#cfn-apigateway-gatewayresponse-restapiid): String
@@ -38,33 +38,33 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-gatewayresponse-properties"></a>
 
 `ResponseParameters`  <a name="cfn-apigateway-gatewayresponse-responseparameters"></a>
-The response parameters \(paths, query strings, and headers\) for the response\. Duplicates not allowed\.  
-*Required*: No  
-*Type*: Map of String  
+The response parameters \(paths, query strings, and headers\) for the response\. Duplicates not allowed\.
+*Required*: No
+*Type*: Map of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResponseTemplates`  <a name="cfn-apigateway-gatewayresponse-responsetemplates"></a>
-The response templates for the response\. Duplicates not allowed\.  
-*Required*: No  
-*Type*: Map of String  
+The response templates for the response\. Duplicates not allowed\.
+*Required*: No
+*Type*: Map of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResponseType`  <a name="cfn-apigateway-gatewayresponse-responsetype"></a>
-The response type\. For valid values, see [GatewayResponse](https://docs.aws.amazon.com/apigateway/api-reference/resource/gateway-response/) in the *API Gateway API Reference*\.  
-*Required*: Yes  
-*Type*: String  
+The response type\. For valid values, see [GatewayResponse](https://docs.aws.amazon.com/apigateway/api-reference/resource/gateway-response/) in the *API Gateway API Reference*\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RestApiId`  <a name="cfn-apigateway-gatewayresponse-restapiid"></a>
-The identifier of the API\.  
-*Required*: Yes  
-*Type*: String  
+The identifier of the API\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StatusCode`  <a name="cfn-apigateway-gatewayresponse-statuscode"></a>
-The HTTP status code for the response\.  
-*Required*: No  
-*Type*: String  
+The HTTP status code for the response\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-apigateway-gatewayresponse--examples"></a>

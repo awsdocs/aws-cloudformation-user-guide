@@ -23,9 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-route53-hostedzone-queryloggingconfig-properties"></a>
 
 `CloudWatchLogsLogGroupArn`  <a name="cfn-route53-hostedzone-queryloggingconfig-cloudwatchlogsloggrouparn"></a>
-The Amazon Resource Name \(ARN\) of the CloudWatch Logs log group that Amazon Route 53 is publishing logs to\.  
-*Required*: Yes  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of the CloudWatch Logs log group that Amazon Route 53 is publishing logs to\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-route53-hostedzone-queryloggingconfig--seealso"></a>

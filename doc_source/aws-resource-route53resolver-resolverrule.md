@@ -26,60 +26,60 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Route53Resolver::ResolverRule
-Properties: 
+Properties:
   [DomainName](#cfn-route53resolver-resolverrule-domainname): String
   [Name](#cfn-route53resolver-resolverrule-name): String
   [ResolverEndpointId](#cfn-route53resolver-resolverrule-resolverendpointid): String
   [RuleType](#cfn-route53resolver-resolverrule-ruletype): String
-  [Tags](#cfn-route53resolver-resolverrule-tags): 
+  [Tags](#cfn-route53resolver-resolverrule-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-  [TargetIps](#cfn-route53resolver-resolverrule-targetips): 
+  [TargetIps](#cfn-route53resolver-resolverrule-targetips):
     - [TargetAddress](aws-properties-route53resolver-resolverrule-targetaddress.md)
 ```
 
 ## Properties<a name="aws-resource-route53resolver-resolverrule-properties"></a>
 
 `DomainName`  <a name="cfn-route53resolver-resolverrule-domainname"></a>
-DNS queries for this domain name are forwarded to the IP addresses that are specified in `TargetIps`\. If a query matches multiple resolver rules \(example\.com and www\.example\.com\), the query is routed using the resolver rule that contains the most specific domain name \(www\.example\.com\)\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `256`  
+DNS queries for this domain name are forwarded to the IP addresses that are specified in `TargetIps`\. If a query matches multiple resolver rules \(example\.com and www\.example\.com\), the query is routed using the resolver rule that contains the most specific domain name \(www\.example\.com\)\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `256`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-route53resolver-resolverrule-name"></a>
-The name for the resolver rule, which you specified when you created the resolver rule\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `64`  
-*Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9-_' ']+)`  
+The name for the resolver rule, which you specified when you created the resolver rule\.
+*Required*: No
+*Type*: String
+*Maximum*: `64`
+*Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9-_' ']+)`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResolverEndpointId`  <a name="cfn-route53resolver-resolverrule-resolverendpointid"></a>
-The ID of the endpoint that the rule is associated with\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `64`  
+The ID of the endpoint that the rule is associated with\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `64`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleType`  <a name="cfn-route53resolver-resolverrule-ruletype"></a>
-This value is always `FORWARD`\. Other resolver rule types aren't supported\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `FORWARD | RECURSIVE | SYSTEM`  
+This value is always `FORWARD`\. Other resolver rule types aren't supported\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `FORWARD | RECURSIVE | SYSTEM`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-route53resolver-resolverrule-tags"></a>
-A list of the tag keys and values that you want to associate with the endpoint\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+A list of the tag keys and values that you want to associate with the endpoint\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetIps`  <a name="cfn-route53resolver-resolverrule-targetips"></a>
-An array that contains the IP addresses and ports that an outbound endpoint forwards DNS queries to\. Typically, these are the IP addresses of DNS resolvers on your network\. Specify IPv4 addresses\. IPv6 is not supported\.  
-*Required*: No  
-*Type*: List of [TargetAddress](aws-properties-route53resolver-resolverrule-targetaddress.md)  
+An array that contains the IP addresses and ports that an outbound endpoint forwards DNS queries to\. Typically, these are the IP addresses of DNS resolvers on your network\. Specify IPv4 addresses\. IPv6 is not supported\.
+*Required*: No
+*Type*: List of [TargetAddress](aws-properties-route53resolver-resolverrule-targetaddress.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-route53resolver-resolverrule-return-values"></a>
@@ -105,7 +105,7 @@ The Amazon Resource Name \(ARN\) of the resolver rule, such as `arn:aws:route53R
 DNS queries for this domain name are forwarded to the IP addresses that are specified in TargetIps\. If a query matches multiple resolver rules \(example\.com and www\.example\.com\), the query is routed using the resolver rule that contains the most specific domain name \(www\.example\.com\)\.
 
 `Name`  <a name="Name-fn::getatt"></a>
-A friendly name that lets you easily find a rule in the Resolver dashboard in the Route 53 console\. 
+A friendly name that lets you easily find a rule in the Resolver dashboard in the Route 53 console\.
 
 `ResolverEndpointId`  <a name="ResolverEndpointId-fn::getatt"></a>
 The ID of the outbound endpoint that the rule is associated with, such as `rslvr-out-fdc049932dexample`\.
@@ -131,7 +131,7 @@ The following example creates an Amazon Route 53 outbound resolver rule\.
     "DomainName" : "example.com",
     "Name" : "MyRule",
     "ResolverEndpointId" : "rslvr-out-fdc049932dexample",
-    "RuleType" : "FORWARD", 
+    "RuleType" : "FORWARD",
     "Tags" : [
       {
         "Key": "LineOfBusiness",
@@ -154,20 +154,20 @@ The following example creates an Amazon Route 53 outbound resolver rule\.
 
 ```
 Type : AWS::Route53Resolver::ResolverRule
-Properties : 
+Properties :
   DomainName : example.com
   Name : MyRule
   ResolverEndpointId : rslvr-out-fdc049932dexample
-  RuleType : FORWARD 
-  Tags : 
-    - 
+  RuleType : FORWARD
+  Tags :
+    -
       Key : LineOfBusiness
       Value : Engineering
   TargetIps :
-    - 
+    -
       IP : 192.0.2.6
       IP : 192.0.2.99
 ```
 
 ## See Also<a name="aws-resource-route53resolver-resolverrule--seealso"></a>
-+  [ResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ResolverRule.html) in the *Amazon Route 53 API Reference* 
++  [ResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ResolverRule.html) in the *Amazon Route 53 API Reference*

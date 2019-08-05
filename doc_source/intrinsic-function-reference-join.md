@@ -26,10 +26,10 @@ Syntax for the short form:
 
 ## Parameters<a name="intrinsic-function-reference-join-parameters"></a>
 
-delimiter  
+delimiter
 The value you want to occur between fragments\. The delimiter will occur between fragments only\. It will not terminate the final value\.
 
-ListOfValues  
+ListOfValues
 The list of values you want combined\.
 
 ## Return Value<a name="intrinsic-function-reference-join-returnvalues"></a>
@@ -88,7 +88,7 @@ The following example uses `Fn::Join` to construct a string value\. It uses the 
 6.     - !Ref 'AWS::AccountId'
 ```
 
-**Note**  
+**Note**
 Also see the [`Fn::Sub`](intrinsic-function-reference-sub.md) function for similar functionality\.
 
 ## Supported Functions<a name="intrinsic-function-reference-join-supportedfunctions"></a>

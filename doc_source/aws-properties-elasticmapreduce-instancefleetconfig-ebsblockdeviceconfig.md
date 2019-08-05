@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-syntax.yaml"></a>
 
 ```
-  [VolumeSpecification](#cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumespecification): 
+  [VolumeSpecification](#cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumespecification):
     [VolumeSpecification](aws-properties-elasticmapreduce-instancefleetconfig-volumespecification.md)
   [VolumesPerInstance](#cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumesperinstance): Integer
 ```
@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-properties"></a>
 
 `VolumeSpecification`  <a name="cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumespecification"></a>
-EBS volume specifications such as volume type, IOPS, and size \(GiB\) that will be requested for the EBS volume attached to an EC2 instance in the cluster\.  
-*Required*: Yes  
-*Type*: [VolumeSpecification](aws-properties-elasticmapreduce-instancefleetconfig-volumespecification.md)  
+EBS volume specifications such as volume type, IOPS, and size \(GiB\) that will be requested for the EBS volume attached to an EC2 instance in the cluster\.
+*Required*: Yes
+*Type*: [VolumeSpecification](aws-properties-elasticmapreduce-instancefleetconfig-volumespecification.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VolumesPerInstance`  <a name="cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumesperinstance"></a>
-Number of EBS volumes with a specific volume configuration that will be associated with every instance in the instance group  
-*Required*: No  
-*Type*: Integer  
+Number of EBS volumes with a specific volume configuration that will be associated with every instance in the instance group
+*Required*: No
+*Type*: Integer
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -21,17 +21,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::InternetGateway
-Properties: 
-  [Tags](#cfn-ec2-internetgateway-tags): 
+Properties:
+  [Tags](#cfn-ec2-internetgateway-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-ec2-internetgateway-properties"></a>
 
 `Tags`  <a name="cfn-ec2-internetgateway-tags"></a>
-Any tags to assign to the internet gateway\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+Any tags to assign to the internet gateway\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-ec2-internetgateway-return-values"></a>

@@ -48,7 +48,7 @@ In the following sample, Amazon CloudWatch sends an email notification when char
 SpendingAlarm:
   Type: AWS::CloudWatch::Alarm
   Properties:
-    AlarmDescription: 
+    AlarmDescription:
       'Fn::Join':
         - ''
         - - Alarm if AWS spending is over $

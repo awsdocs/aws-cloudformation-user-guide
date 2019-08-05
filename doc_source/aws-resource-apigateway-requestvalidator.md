@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::RequestValidator
-Properties: 
+Properties:
   [Name](#cfn-apigateway-requestvalidator-name): String
   [RestApiId](#cfn-apigateway-requestvalidator-restapiid): String
   [ValidateRequestBody](#cfn-apigateway-requestvalidator-validaterequestbody): Boolean
@@ -34,27 +34,27 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-requestvalidator-properties"></a>
 
 `Name`  <a name="cfn-apigateway-requestvalidator-name"></a>
-The name of this request validator\.  
-*Required*: No  
-*Type*: String  
+The name of this request validator\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RestApiId`  <a name="cfn-apigateway-requestvalidator-restapiid"></a>
-The identifier of the targeted API entity\.  
-*Required*: Yes  
-*Type*: String  
+The identifier of the targeted API entity\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ValidateRequestBody`  <a name="cfn-apigateway-requestvalidator-validaterequestbody"></a>
-Indicates whether to validate the request body according to the configured schema for the targeted API and method\.  
-*Required*: No  
-*Type*: Boolean  
+Indicates whether to validate the request body according to the configured schema for the targeted API and method\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ValidateRequestParameters`  <a name="cfn-apigateway-requestvalidator-validaterequestparameters"></a>
-Indicates whether to validate request parameters\.  
-*Required*: No  
-*Type*: Boolean  
+Indicates whether to validate request parameters\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-apigateway-requestvalidator-return-values"></a>

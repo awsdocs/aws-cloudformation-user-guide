@@ -4,23 +4,23 @@ When you want to quickly deploy updates to your stack, perform a direct update\.
 
 For resource properties that don't support updates, you must keep the current values\. To preview the changes that AWS CloudFormation will make to your stack before you update it, use change sets\. For more information, see [Updating Stacks Using Change Sets](using-cfn-updating-stacks-changesets.md)\.
 
-**Note**  
+**Note**
 When updating a stack, AWS CloudFormation might interrupt resources or replace updated resources, depending on which properties you update\. For more information about resource update behaviors, see [Update Behaviors of Stack Resources](using-cfn-updating-stacks-update-behaviors.md)\.
 
 **To update a AWS CloudFormation stack \(console\)**
 
 1. In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), from the list of stacks, select the running stack that you want to update\.
 
-1. Choose **Actions** and then **Update Stack**\.  
+1. Choose **Actions** and then **Update Stack**\.
 ![\[The Update Stack option in the Actions menu.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cfn-update-stack-initiating.png)
 
 1. If you modified the stack template, specify the location of the updated template\. If not, select **Use current template**\.
    + For a template stored locally on your computer, select **Upload a template to Amazon S3**\. Choose **Choose File** to navigate to the file and select it, and then click **Next**\.
-**Note**  
-If you upload a local template file, AWS CloudFormation uploads it to an Amazon Simple Storage Service \(Amazon S3\) bucket in your AWS account\. If you don't already have an S3 bucket that was created by AWS CloudFormation, it creates a unique bucket for each Region in which you upload a template file\. If you already have an S3 bucket that was created by AWS CloudFormation in your AWS account, AWS CloudFormation adds the template to that bucket\.  
-Considerations to keep in mind about S3 buckets created by AWS CloudFormation  
+**Note**
+If you upload a local template file, AWS CloudFormation uploads it to an Amazon Simple Storage Service \(Amazon S3\) bucket in your AWS account\. If you don't already have an S3 bucket that was created by AWS CloudFormation, it creates a unique bucket for each Region in which you upload a template file\. If you already have an S3 bucket that was created by AWS CloudFormation in your AWS account, AWS CloudFormation adds the template to that bucket\.
+Considerations to keep in mind about S3 buckets created by AWS CloudFormation
 The buckets are accessible to anyone with Amazon S3 permissions in your AWS account\.
-AWS CloudFormation creates the buckets with server\-side encryption enabled by default, thereby encrypting all objects stored in the bucket\.   
+AWS CloudFormation creates the buckets with server\-side encryption enabled by default, thereby encrypting all objects stored in the bucket\.
 You can directly manage encryption options for buckets that AWS CloudFormation has created; for example, using the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/) , or the AWS CLI\. For more information, see [Amazon S3 Default Encryption for S3 Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) in the *[Amazon Simple Storage Service Developer Guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/)*\.
 You can use your own bucket and manage its permissions by manually uploading templates to Amazon S3\. When you create or update a stack, specify the Amazon S3 URL of a template file\.
    + For a template stored in an Amazon S3 bucket, select **Specify an Amazon S3 URL**\. Enter or paste the URL for the template, and then click **Next**\.
@@ -46,7 +46,7 @@ You can use your own bucket and manage its permissions by manually uploading tem
    Your stack enters the **UPDATE\_IN\_PROGRESS** state\. After it has finished updating, the state is set to **UPDATE\_COMPLETE**\.
 
    If the stack update fails, AWS CloudFormation automatically rolls back changes, and sets the state to **UPDATE\_ROLLBACK\_COMPLETE**\.
-**Note**  
+**Note**
 You can cancel an update while it's in the **UPDATE\_IN\_PROGRESS** state\. For more information, see [Canceling a Stack Update](using-cfn--stack-update-cancel.md)\.
 
 **To update a AWS CloudFormation stack \(AWS CLI\)**

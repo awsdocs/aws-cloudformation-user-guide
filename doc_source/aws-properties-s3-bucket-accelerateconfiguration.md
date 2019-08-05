@@ -23,8 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-accelerateconfiguration-properties"></a>
 
 `AccelerationStatus`  <a name="cfn-s3-bucket-accelerateconfiguration-accelerationstatus"></a>
-Specifies the transfer acceleration status of the bucket\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `Enabled | Suspended`  
+Specifies the transfer acceleration status of the bucket\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `Enabled | Suspended`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

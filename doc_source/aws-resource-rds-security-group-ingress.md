@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RDS::DBSecurityGroupIngress
-Properties: 
+Properties:
   [CIDRIP](#cfn-rds-securitygroup-ingress-cidrip): String
   [DBSecurityGroupName](#cfn-rds-securitygroup-ingress-dbsecuritygroupname): String
   [EC2SecurityGroupId](#cfn-rds-securitygroup-ingress-ec2securitygroupid): String
@@ -40,33 +40,33 @@ Properties:
 ## Properties<a name="aws-resource-rds-security-group-ingress-properties"></a>
 
 `CIDRIP`  <a name="cfn-rds-securitygroup-ingress-cidrip"></a>
-The IP range to authorize\.  
-*Required*: No  
-*Type*: String  
+The IP range to authorize\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DBSecurityGroupName`  <a name="cfn-rds-securitygroup-ingress-dbsecuritygroupname"></a>
-The name of the DB Security Group to add authorization to\.  
-*Required*: Yes  
-*Type*: String  
+The name of the DB Security Group to add authorization to\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EC2SecurityGroupId`  <a name="cfn-rds-securitygroup-ingress-ec2securitygroupid"></a>
- Id of the EC2 Security Group to authorize\. For VPC DB Security Groups, `EC2SecurityGroupId` must be provided\. Otherwise, EC2SecurityGroupOwnerId and either `EC2SecurityGroupName` or `EC2SecurityGroupId` must be provided\.   
-*Required*: No  
-*Type*: String  
+ Id of the EC2 Security Group to authorize\. For VPC DB Security Groups, `EC2SecurityGroupId` must be provided\. Otherwise, EC2SecurityGroupOwnerId and either `EC2SecurityGroupName` or `EC2SecurityGroupId` must be provided\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EC2SecurityGroupName`  <a name="cfn-rds-securitygroup-ingress-ec2securitygroupname"></a>
- Name of the EC2 Security Group to authorize\. For VPC DB Security Groups, `EC2SecurityGroupId` must be provided\. Otherwise, EC2SecurityGroupOwnerId and either `EC2SecurityGroupName` or `EC2SecurityGroupId` must be provided\.   
-*Required*: No  
-*Type*: String  
+ Name of the EC2 Security Group to authorize\. For VPC DB Security Groups, `EC2SecurityGroupId` must be provided\. Otherwise, EC2SecurityGroupOwnerId and either `EC2SecurityGroupName` or `EC2SecurityGroupId` must be provided\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EC2SecurityGroupOwnerId`  <a name="cfn-rds-securitygroup-ingress-ec2securitygroupownerid"></a>
- AWS Account Number of the owner of the EC2 Security Group specified in the EC2SecurityGroupName parameter\. The AWS Access Key ID is not an acceptable value\. For VPC DB Security Groups, `EC2SecurityGroupId` must be provided\. Otherwise, EC2SecurityGroupOwnerId and either `EC2SecurityGroupName` or `EC2SecurityGroupId` must be provided\.   
-*Required*: No  
-*Type*: String  
+ AWS Account Number of the owner of the EC2 Security Group specified in the EC2SecurityGroupName parameter\. The AWS Access Key ID is not an acceptable value\. For VPC DB Security Groups, `EC2SecurityGroupId` must be provided\. Otherwise, EC2SecurityGroupOwnerId and either `EC2SecurityGroupName` or `EC2SecurityGroupId` must be provided\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-rds-security-group-ingress-return-values"></a>

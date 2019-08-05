@@ -27,16 +27,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RoboMaker::SimulationApplication
-Properties: 
+Properties:
   [CurrentRevisionId](#cfn-robomaker-simulationapplication-currentrevisionid): String
   [Name](#cfn-robomaker-simulationapplication-name): String
-  [RenderingEngine](#cfn-robomaker-simulationapplication-renderingengine): 
+  [RenderingEngine](#cfn-robomaker-simulationapplication-renderingengine):
     [RenderingEngine](aws-properties-robomaker-simulationapplication-renderingengine.md)
-  [RobotSoftwareSuite](#cfn-robomaker-simulationapplication-robotsoftwaresuite): 
+  [RobotSoftwareSuite](#cfn-robomaker-simulationapplication-robotsoftwaresuite):
     [RobotSoftwareSuite](aws-properties-robomaker-simulationapplication-robotsoftwaresuite.md)
-  [SimulationSoftwareSuite](#cfn-robomaker-simulationapplication-simulationsoftwaresuite): 
+  [SimulationSoftwareSuite](#cfn-robomaker-simulationapplication-simulationsoftwaresuite):
     [SimulationSoftwareSuite](aws-properties-robomaker-simulationapplication-simulationsoftwaresuite.md)
-  [Sources](#cfn-robomaker-simulationapplication-sources): 
+  [Sources](#cfn-robomaker-simulationapplication-sources):
     - [SourceConfig](aws-properties-robomaker-simulationapplication-sourceconfig.md)
   [Tags](#cfn-robomaker-simulationapplication-tags): Json
 ```
@@ -44,55 +44,55 @@ Properties:
 ## Properties<a name="aws-resource-robomaker-simulationapplication-properties"></a>
 
 `CurrentRevisionId`  <a name="cfn-robomaker-simulationapplication-currentrevisionid"></a>
-The current revision id\.  
-*Required*: No  
-*Type*: String  
+The current revision id\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-robomaker-simulationapplication-name"></a>
-The name of the simulation application\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
-*Pattern*: `[a-zA-Z0-9_\-]*`  
+The name of the simulation application\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `255`
+*Pattern*: `[a-zA-Z0-9_\-]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RenderingEngine`  <a name="cfn-robomaker-simulationapplication-renderingengine"></a>
-The rendering engine for the simulation application\.  
-*Required*: Yes  
-*Type*: [RenderingEngine](aws-properties-robomaker-simulationapplication-renderingengine.md)  
+The rendering engine for the simulation application\.
+*Required*: Yes
+*Type*: [RenderingEngine](aws-properties-robomaker-simulationapplication-renderingengine.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RobotSoftwareSuite`  <a name="cfn-robomaker-simulationapplication-robotsoftwaresuite"></a>
-The robot software suite of the simulation application\.  
-*Required*: Yes  
-*Type*: [RobotSoftwareSuite](aws-properties-robomaker-simulationapplication-robotsoftwaresuite.md)  
+The robot software suite of the simulation application\.
+*Required*: Yes
+*Type*: [RobotSoftwareSuite](aws-properties-robomaker-simulationapplication-robotsoftwaresuite.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SimulationSoftwareSuite`  <a name="cfn-robomaker-simulationapplication-simulationsoftwaresuite"></a>
-The simulation software suite used by the simulation application\.  
-*Required*: Yes  
-*Type*: [SimulationSoftwareSuite](aws-properties-robomaker-simulationapplication-simulationsoftwaresuite.md)  
+The simulation software suite used by the simulation application\.
+*Required*: Yes
+*Type*: [SimulationSoftwareSuite](aws-properties-robomaker-simulationapplication-simulationsoftwaresuite.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Sources`  <a name="cfn-robomaker-simulationapplication-sources"></a>
-The sources of the simulation application\.  
-*Required*: Yes  
-*Type*: List of [SourceConfig](aws-properties-robomaker-simulationapplication-sourceconfig.md)  
+The sources of the simulation application\.
+*Required*: Yes
+*Type*: List of [SourceConfig](aws-properties-robomaker-simulationapplication-sourceconfig.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-robomaker-simulationapplication-tags"></a>
-A map that contains tag keys and tag values that are attached to the simulation application\.  
-*Required*: No  
-*Type*: Json  
+A map that contains tag keys and tag values that are attached to the simulation application\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-robomaker-simulationapplication-return-values"></a>
 
 ### Ref<a name="aws-resource-robomaker-simulationapplication-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::RoboMaker::SimulationApplication` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the simulation application, such as `arn:aws:robomaker:us-west-2:123456789012:simulation-application/MySimulationApplication/1546541201334`\. 
+When you pass the logical ID of an `AWS::RoboMaker::SimulationApplication` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the simulation application, such as `arn:aws:robomaker:us-west-2:123456789012:simulation-application/MySimulationApplication/1546541201334`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

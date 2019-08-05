@@ -22,25 +22,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CloudFront::Distribution
-Properties: 
-  [DistributionConfig](#cfn-cloudfront-distribution-distributionconfig): 
+Properties:
+  [DistributionConfig](#cfn-cloudfront-distribution-distributionconfig):
     [DistributionConfig](aws-properties-cloudfront-distribution-distributionconfig.md)
-  [Tags](#cfn-cloudfront-distribution-tags): 
+  [Tags](#cfn-cloudfront-distribution-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-cloudfront-distribution-properties"></a>
 
 `DistributionConfig`  <a name="cfn-cloudfront-distribution-distributionconfig"></a>
-The current configuration information for the distribution\. Send a `GET` request to the `/CloudFront API version/distribution ID/config` resource\.  
-*Required*: Yes  
-*Type*: [DistributionConfig](aws-properties-cloudfront-distribution-distributionconfig.md)  
+The current configuration information for the distribution\. Send a `GET` request to the `/CloudFront API version/distribution ID/config` resource\.
+*Required*: Yes
+*Type*: [DistributionConfig](aws-properties-cloudfront-distribution-distributionconfig.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-cloudfront-distribution-tags"></a>
-A complex type that contains zero or more `Tag` elements\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+A complex type that contains zero or more `Tag` elements\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-cloudfront-distribution-return-values"></a>
@@ -60,7 +60,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-cloudfront-distribution-return-values-fn--getatt-fn--getatt"></a>
 
 `DomainName`  <a name="DomainName-fn::getatt"></a>
-The domain name of the resource, such as `sct27g85mgx04.cloudfront.net`\. 
+The domain name of the resource, such as `sct27g85mgx04.cloudfront.net`\.
 
 ## Examples<a name="aws-resource-cloudfront-distribution--examples"></a>
 
@@ -146,4 +146,4 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-cloudfront-distribution--seealso"></a>
-+  [CreateDistribution](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateDistribution.html) in the *Amazon CloudFront API Reference* 
++  [CreateDistribution](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateDistribution.html) in the *Amazon CloudFront API Reference*

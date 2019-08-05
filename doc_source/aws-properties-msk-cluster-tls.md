@@ -17,14 +17,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-msk-cluster-tls-syntax.yaml"></a>
 
 ```
-  [CertificateAuthorityArnList](#cfn-msk-cluster-tls-certificateauthorityarnlist): 
+  [CertificateAuthorityArnList](#cfn-msk-cluster-tls-certificateauthorityarnlist):
     - String
 ```
 
 ## Properties<a name="aws-properties-msk-cluster-tls-properties"></a>
 
 `CertificateAuthorityArnList`  <a name="cfn-msk-cluster-tls-certificateauthorityarnlist"></a>
-List of ACM Certificate Authority ARNs\.  
-*Required*: No  
-*Type*: List of String  
+List of ACM Certificate Authority ARNs\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

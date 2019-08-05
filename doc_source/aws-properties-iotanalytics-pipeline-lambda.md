@@ -29,35 +29,35 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotanalytics-pipeline-lambda-properties"></a>
 
 `BatchSize`  <a name="cfn-iotanalytics-pipeline-lambda-batchsize"></a>
-The number of messages passed to the Lambda function for processing\.  
-The AWS Lambda function must be able to process all of these messages within five minutes, which is the maximum timeout duration for Lambda functions\.  
-*Required*: No  
-*Type*: Integer  
-*Minimum*: `1`  
-*Maximum*: `1000`  
+The number of messages passed to the Lambda function for processing\.
+The AWS Lambda function must be able to process all of these messages within five minutes, which is the maximum timeout duration for Lambda functions\.
+*Required*: No
+*Type*: Integer
+*Minimum*: `1`
+*Maximum*: `1000`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LambdaName`  <a name="cfn-iotanalytics-pipeline-lambda-lambdaname"></a>
-The name of the Lambda function that is run on the message\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `64`  
-*Pattern*: `^[a-zA-Z0-9_-]+$`  
+The name of the Lambda function that is run on the message\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `64`
+*Pattern*: `^[a-zA-Z0-9_-]+$`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-iotanalytics-pipeline-lambda-name"></a>
-The name of the 'lambda' activity\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
+The name of the 'lambda' activity\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Next`  <a name="cfn-iotanalytics-pipeline-lambda-next"></a>
-The next activity in the pipeline\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
+The next activity in the pipeline\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

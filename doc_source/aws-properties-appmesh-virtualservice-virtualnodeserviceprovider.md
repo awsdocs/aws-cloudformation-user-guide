@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appmesh-virtualservice-virtualnodeserviceprovider-properties"></a>
 
 `VirtualNodeName`  <a name="cfn-appmesh-virtualservice-virtualnodeserviceprovider-virtualnodename"></a>
-The name of the virtual node that is acting as a service provider\.  
-*Required*: Yes  
-*Type*: String  
+The name of the virtual node that is acting as a service provider\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

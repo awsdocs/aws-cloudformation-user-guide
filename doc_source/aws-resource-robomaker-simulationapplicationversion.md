@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RoboMaker::SimulationApplicationVersion
-Properties: 
+Properties:
   [Application](#cfn-robomaker-simulationapplicationversion-application): String
   [CurrentRevisionId](#cfn-robomaker-simulationapplicationversion-currentrevisionid): String
 ```
@@ -30,28 +30,28 @@ Properties:
 ## Properties<a name="aws-resource-robomaker-simulationapplicationversion-properties"></a>
 
 `Application`  <a name="cfn-robomaker-simulationapplicationversion-application"></a>
-The application information for the simulation application\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `1224`  
-*Pattern*: `arn:.*`  
+The application information for the simulation application\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `1224`
+*Pattern*: `arn:.*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CurrentRevisionId`  <a name="cfn-robomaker-simulationapplicationversion-currentrevisionid"></a>
-The current revision id for the simulation application\. If you provide a value and it matches the latest revision ID, a new version will be created\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `40`  
-*Pattern*: `[a-zA-Z0-9_.\-]*`  
+The current revision id for the simulation application\. If you provide a value and it matches the latest revision ID, a new version will be created\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `40`
+*Pattern*: `[a-zA-Z0-9_.\-]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-robomaker-simulationapplicationversion-return-values"></a>
 
 ### Ref<a name="aws-resource-robomaker-simulationapplicationversion-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::RoboMaker::SimulationApplicationVersion` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the simulation application version, such as ` arn:aws:robomaker:us-west-2:123456789012:simulation-application/MySimulationApplication/1546541201334`\. 
+When you pass the logical ID of an `AWS::RoboMaker::SimulationApplicationVersion` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the simulation application version, such as ` arn:aws:robomaker:us-west-2:123456789012:simulation-application/MySimulationApplication/1546541201334`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -95,11 +95,11 @@ The following example creates a simulation application version\.
     "BasicSimulationApplicationVersion": {
       "Type": "AWS::RoboMaker::SimulationApplicationVersion",
       "Properties": {
-        "Application": { 
-          "Fn::GetAtt" : [ "BasicSimulationApplication", "Arn" ] 
+        "Application": {
+          "Fn::GetAtt" : [ "BasicSimulationApplication", "Arn" ]
         },
-        "CurrentRevisionId": { 
-          "Fn::GetAtt" : [ "BasicSimulationApplication", "CurrentRevisionId" ] 
+        "CurrentRevisionId": {
+          "Fn::GetAtt" : [ "BasicSimulationApplication", "CurrentRevisionId" ]
         }
       }
     }

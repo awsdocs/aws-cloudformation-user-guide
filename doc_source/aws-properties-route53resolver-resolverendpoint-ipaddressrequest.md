@@ -25,20 +25,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-route53resolver-resolverendpoint-ipaddressrequest-properties"></a>
 
 `Ip`  <a name="cfn-route53resolver-resolverendpoint-ipaddressrequest-ip"></a>
-The IP address that you want to use for DNS queries\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `7`  
-*Maximum*: `36`  
+The IP address that you want to use for DNS queries\.
+*Required*: No
+*Type*: String
+*Minimum*: `7`
+*Maximum*: `36`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetId`  <a name="cfn-route53resolver-resolverendpoint-ipaddressrequest-subnetid"></a>
-The ID of the subnet that contains the IP address\.   
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `32`  
+The ID of the subnet that contains the IP address\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `32`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-route53resolver-resolverendpoint-ipaddressrequest--seealso"></a>
-+  [IpAddressRequest](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_IpAddressRequest.html) in the *Amazon Route 53 API Reference* 
++  [IpAddressRequest](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_IpAddressRequest.html) in the *Amazon Route 53 API Reference*

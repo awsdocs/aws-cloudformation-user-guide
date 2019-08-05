@@ -27,26 +27,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotanalytics-pipeline-channel-properties"></a>
 
 `ChannelName`  <a name="cfn-iotanalytics-pipeline-channel-channelname"></a>
-The name of the channel from which the messages are processed\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
-*Pattern*: `^[a-zA-Z0-9_]+$`  
+The name of the channel from which the messages are processed\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
+*Pattern*: `^[a-zA-Z0-9_]+$`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-iotanalytics-pipeline-channel-name"></a>
-The name of the 'channel' activity\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
+The name of the 'channel' activity\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Next`  <a name="cfn-iotanalytics-pipeline-channel-next"></a>
-The next activity in the pipeline\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
+The next activity in the pipeline\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -27,17 +27,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-greengrass-resourcedefinition-groupownersetting-properties"></a>
 
 `AutoAddGroupOwner`  <a name="cfn-greengrass-resourcedefinition-groupownersetting-autoaddgroupowner"></a>
-Indicates whether to give the privileges of the Linux group that owns the resource to the Lambda process\. This gives the Lambda process the file access permissions of the Linux group\.  
-*Required*: Yes  
-*Type*: Boolean  
+Indicates whether to give the privileges of the Linux group that owns the resource to the Lambda process\. This gives the Lambda process the file access permissions of the Linux group\.
+*Required*: Yes
+*Type*: Boolean
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `GroupOwner`  <a name="cfn-greengrass-resourcedefinition-groupownersetting-groupowner"></a>
-The name of the Linux group whose privileges you want to add to the Lambda process\. This value is ignored if `AutoAddGroupOwner` is true\.  
-*Required*: No  
-*Type*: String  
+The name of the Linux group whose privileges you want to add to the Lambda process\. This value is ignored if `AutoAddGroupOwner` is true\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See Also<a name="aws-properties-greengrass-resourcedefinition-groupownersetting--seealso"></a>
-+  [GroupOwnerSetting](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-groupownersetting.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [GroupOwnerSetting](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-groupownersetting.html) in the * AWS IoT Greengrass API Reference *
++  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)

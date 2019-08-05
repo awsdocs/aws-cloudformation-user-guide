@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::NetworkInterfaceAttachment
-Properties: 
+Properties:
   [DeleteOnTermination](#cfn-ec2-network-interface-attachment-deleteonterm): Boolean
   [DeviceIndex](#cfn-ec2-network-interface-attachment-deviceindex): String
   [InstanceId](#cfn-ec2-network-interface-attachment-instanceid): String
@@ -34,27 +34,27 @@ Properties:
 ## Properties<a name="aws-resource-ec2-network-interface-attachment-properties"></a>
 
 `DeleteOnTermination`  <a name="cfn-ec2-network-interface-attachment-deleteonterm"></a>
-Whether to delete the network interface when the instance terminates\. By default, this value is set to `true`\.  
-*Required*: No  
-*Type*: Boolean  
+Whether to delete the network interface when the instance terminates\. By default, this value is set to `true`\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeviceIndex`  <a name="cfn-ec2-network-interface-attachment-deviceindex"></a>
-The network interface's position in the attachment order\. For example, the first attached network interface has a `DeviceIndex` of 0\.  
-*Required*: Yes  
-*Type*: String  
+The network interface's position in the attachment order\. For example, the first attached network interface has a `DeviceIndex` of 0\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceId`  <a name="cfn-ec2-network-interface-attachment-instanceid"></a>
-The ID of the instance to which you will attach the ENI\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the instance to which you will attach the ENI\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkInterfaceId`  <a name="cfn-ec2-network-interface-attachment-networkinterfaceid"></a>
-The ID of the ENI that you want to attach\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the ENI that you want to attach\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-ec2-network-interface-attachment-return-values"></a>
@@ -79,7 +79,7 @@ The following example attaches `MyNetworkInterface` to `MyInstance`\.
       "Properties" : {
          "InstanceId" : {"Ref" : "MyInstance"},
          "NetworkInterfaceId" : {"Ref" : "MyNetworkInterface"},
-         "DeviceIndex" : "1" 
+         "DeviceIndex" : "1"
       }
 }
 ```

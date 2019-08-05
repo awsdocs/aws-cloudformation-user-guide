@@ -1,6 +1,6 @@
 # AWS::Logs::Destination<a name="aws-resource-logs-destination"></a>
 
-The AWS::Logs::Destination resource specifies a CloudWatch Logs destination\. A destination encapsulates a physical resource \(such as an Amazon Kinesis data stream\) and enables you to subscribe that resource to a stream of log events\. 
+The AWS::Logs::Destination resource specifies a CloudWatch Logs destination\. A destination encapsulates a physical resource \(such as an Amazon Kinesis data stream\) and enables you to subscribe that resource to a stream of log events\.
 
 ## Syntax<a name="aws-resource-logs-destination-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Logs::Destination
-Properties: 
+Properties:
   [DestinationName](#cfn-logs-destination-destinationname): String
   [DestinationPolicy](#cfn-logs-destination-destinationpolicy): String
   [RoleArn](#cfn-logs-destination-rolearn): String
@@ -34,33 +34,33 @@ Properties:
 ## Properties<a name="aws-resource-logs-destination-properties"></a>
 
 `DestinationName`  <a name="cfn-logs-destination-destinationname"></a>
-The name of the destination\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `512`  
-*Pattern*: `[^:*]*`  
+The name of the destination\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `512`
+*Pattern*: `[^:*]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DestinationPolicy`  <a name="cfn-logs-destination-destinationpolicy"></a>
-An IAM policy document that governs which AWS accounts can create subscription filters against this destination\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
+An IAM policy document that governs which AWS accounts can create subscription filters against this destination\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-logs-destination-rolearn"></a>
-The ARN of an IAM role that permits CloudWatch Logs to send data to the specified AWS resource\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
+The ARN of an IAM role that permits CloudWatch Logs to send data to the specified AWS resource\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetArn`  <a name="cfn-logs-destination-targetarn"></a>
-The Amazon Resource Name \(ARN\) of the physical target to where the log events are delivered \(for example, a Kinesis stream\)\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
+The Amazon Resource Name \(ARN\) of the physical target to where the log events are delivered \(for example, a Kinesis stream\)\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-logs-destination-return-values"></a>
@@ -106,9 +106,9 @@ In the following example, the target stream \(`TestStream`\) can receive log eve
 #### YAML<a name="aws-resource-logs-destination--examples--Create_a_Destination--yaml"></a>
 
 ```
-DestinationWithName: 
+DestinationWithName:
   Type: AWS::Logs::Destination
-  Properties: 
+  Properties:
     DestinationName: "TestDestination"
     RoleArn: "arn:aws:iam::123456789012:role/LogKinesisRole"
     TargetArn: "arn:aws:kinesis:us-east-1:123456789012:stream/TestStream"

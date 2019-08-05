@@ -17,15 +17,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-spotfleet-targetgroupsconfig-syntax.yaml"></a>
 
 ```
-  [TargetGroups](#cfn-ec2-spotfleet-targetgroupsconfig-targetgroups): 
+  [TargetGroups](#cfn-ec2-spotfleet-targetgroupsconfig-targetgroups):
     - [TargetGroup](aws-properties-ec2-spotfleet-targetgroup.md)
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-targetgroupsconfig-properties"></a>
 
 `TargetGroups`  <a name="cfn-ec2-spotfleet-targetgroupsconfig-targetgroups"></a>
-One or more target groups\.  
-*Required*: Yes  
-*Type*: List of [TargetGroup](aws-properties-ec2-spotfleet-targetgroup.md)  
-*Maximum*: `5`  
+One or more target groups\.
+*Required*: Yes
+*Type*: List of [TargetGroup](aws-properties-ec2-spotfleet-targetgroup.md)
+*Maximum*: `5`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

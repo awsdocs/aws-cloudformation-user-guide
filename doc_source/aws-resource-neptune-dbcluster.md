@@ -2,7 +2,7 @@
 
 The `AWS::Neptune::DBCluster` resource creates an Amazon Neptune DB cluster\. Neptune is a fully managed graph database\.
 
-**Note**  
+**Note**
 Currently, you can create this resource only in AWS Regions in which Amazon Neptune is supported\.
 
 If no `DeletionPolicy` is set for `AWS::Neptune::DBCluster` resources, the default deletion behavior is that the entire volume will be deleted without a snapshot\. To retain a backup of the volume, the `DeletionPolicy` should be set to `Snapshot`\. For more information about how AWS CloudFormation deletes resources, see [DeletionPolicy Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)\.
@@ -39,8 +39,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Neptune::DBCluster
-Properties: 
-  [AvailabilityZones](#cfn-neptune-dbcluster-availabilityzones): 
+Properties:
+  [AvailabilityZones](#cfn-neptune-dbcluster-availabilityzones):
     - String
   [BackupRetentionPeriod](#cfn-neptune-dbcluster-backupretentionperiod): Integer
   [DBClusterIdentifier](#cfn-neptune-dbcluster-dbclusteridentifier): String
@@ -53,101 +53,101 @@ Properties:
   [PreferredMaintenanceWindow](#cfn-neptune-dbcluster-preferredmaintenancewindow): String
   [SnapshotIdentifier](#cfn-neptune-dbcluster-snapshotidentifier): String
   [StorageEncrypted](#cfn-neptune-dbcluster-storageencrypted): Boolean
-  [Tags](#cfn-neptune-dbcluster-tags): 
+  [Tags](#cfn-neptune-dbcluster-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-  [VpcSecurityGroupIds](#cfn-neptune-dbcluster-vpcsecuritygroupids): 
+  [VpcSecurityGroupIds](#cfn-neptune-dbcluster-vpcsecuritygroupids):
     - String
 ```
 
 ## Properties<a name="aws-resource-neptune-dbcluster-properties"></a>
 
 `AvailabilityZones`  <a name="cfn-neptune-dbcluster-availabilityzones"></a>
-Provides the list of EC2 Availability Zones that instances in the DB cluster can be created in\.  
-*Required*: No  
-*Type*: List of String  
+Provides the list of EC2 Availability Zones that instances in the DB cluster can be created in\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BackupRetentionPeriod`  <a name="cfn-neptune-dbcluster-backupretentionperiod"></a>
-Specifies the number of days for which automatic DB snapshots are retained\.  
-An update may require some interruption\. See [ModifyDBInstance](https://docs.aws.amazon.com/neptune/latest/userguide/api-instances.html#ModifyDBInstance) in the Amazon Neptune User Guide for more information\.  
-*Required*: No  
-*Type*: Integer  
+Specifies the number of days for which automatic DB snapshots are retained\.
+An update may require some interruption\. See [ModifyDBInstance](https://docs.aws.amazon.com/neptune/latest/userguide/api-instances.html#ModifyDBInstance) in the Amazon Neptune User Guide for more information\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DBClusterIdentifier`  <a name="cfn-neptune-dbcluster-dbclusteridentifier"></a>
-Contains a user\-supplied DB cluster identifier\. This identifier is the unique key that identifies a DB cluster\.  
-*Required*: No  
-*Type*: String  
+Contains a user\-supplied DB cluster identifier\. This identifier is the unique key that identifies a DB cluster\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DBClusterParameterGroupName`  <a name="cfn-neptune-dbcluster-dbclusterparametergroupname"></a>
-Provides the name of the DB cluster parameter group\.  
-An update may require some interruption\. See [ModifyDBInstance](https://docs.aws.amazon.com/neptune/latest/userguide/api-instances.html#ModifyDBInstance) in the Amazon Neptune User Guide for more information\.  
-*Required*: No  
-*Type*: String  
+Provides the name of the DB cluster parameter group\.
+An update may require some interruption\. See [ModifyDBInstance](https://docs.aws.amazon.com/neptune/latest/userguide/api-instances.html#ModifyDBInstance) in the Amazon Neptune User Guide for more information\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DBSubnetGroupName`  <a name="cfn-neptune-dbcluster-dbsubnetgroupname"></a>
-Specifies information on the subnet group associated with the DB cluster, including the name, description, and subnets in the subnet group\.  
-*Required*: No  
-*Type*: String  
+Specifies information on the subnet group associated with the DB cluster, including the name, description, and subnets in the subnet group\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IamAuthEnabled`  <a name="cfn-neptune-dbcluster-iamauthenabled"></a>
-True if mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts is enabled, and otherwise false\.  
-*Required*: No  
-*Type*: Boolean  
+True if mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts is enabled, and otherwise false\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-neptune-dbcluster-kmskeyid"></a>
-If `StorageEncrypted` is true, the AWS KMS key identifier for the encrypted DB cluster\.  
-*Required*: No  
-*Type*: String  
+If `StorageEncrypted` is true, the AWS KMS key identifier for the encrypted DB cluster\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Port`  <a name="cfn-neptune-dbcluster-port"></a>
-Specifies the port that the database engine is listening on\.  
-*Required*: No  
-*Type*: Integer  
+Specifies the port that the database engine is listening on\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PreferredBackupWindow`  <a name="cfn-neptune-dbcluster-preferredbackupwindow"></a>
-Specifies the daily time range during which automated backups are created if automated backups are enabled, as determined by the `BackupRetentionPeriod`\.  
-An update may require some interruption\.  
-*Required*: No  
-*Type*: String  
+Specifies the daily time range during which automated backups are created if automated backups are enabled, as determined by the `BackupRetentionPeriod`\.
+An update may require some interruption\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PreferredMaintenanceWindow`  <a name="cfn-neptune-dbcluster-preferredmaintenancewindow"></a>
-Specifies the weekly time range during which system maintenance can occur, in Universal Coordinated Time \(UTC\)\.  
-*Required*: No  
-*Type*: String  
+Specifies the weekly time range during which system maintenance can occur, in Universal Coordinated Time \(UTC\)\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnapshotIdentifier`  <a name="cfn-neptune-dbcluster-snapshotidentifier"></a>
-Contains the identifier of the source DB cluster if this DB cluster is a Read Replica\.  
-*Required*: No  
-*Type*: String  
+Contains the identifier of the source DB cluster if this DB cluster is a Read Replica\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageEncrypted`  <a name="cfn-neptune-dbcluster-storageencrypted"></a>
-Indicates whether the DB cluster is encrypted\.  
-If you specify the `DBClusterIdentifier`, `DBSnapshotIdentifier`, or `SourceDBInstanceIdentifier` property, don't specify this property\. The value is inherited from the cluster, snapshot, or source DB instance\. If you specify the `KmsKeyId` property, you must enable encryption\.  
-If you specify the `KmsKeyId`, you must enable encryption by setting `StorageEncrypted` to true\.  
-*Required*: No  
-*Type*: Boolean  
+Indicates whether the DB cluster is encrypted\.
+If you specify the `DBClusterIdentifier`, `DBSnapshotIdentifier`, or `SourceDBInstanceIdentifier` property, don't specify this property\. The value is inherited from the cluster, snapshot, or source DB instance\. If you specify the `KmsKeyId` property, you must enable encryption\.
+If you specify the `KmsKeyId`, you must enable encryption by setting `StorageEncrypted` to true\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-neptune-dbcluster-tags"></a>
-The tags assigned to this cluster\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+The tags assigned to this cluster\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcSecurityGroupIds`  <a name="cfn-neptune-dbcluster-vpcsecuritygroupids"></a>
-Provides a list of VPC security groups that the DB cluster belongs to\.  
-*Required*: No  
-*Type*: List of String  
+Provides a list of VPC security groups that the DB cluster belongs to\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-neptune-dbcluster-return-values"></a>
@@ -170,10 +170,10 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The resource id for the DB cluster\. For example: `cluster-ABCD1234EFGH5678IJKL90MNOP`\. The cluster ID uniquely identifies the cluster and is used in things like IAM authentication policies\.
 
 `Endpoint`  <a name="Endpoint-fn::getatt"></a>
-The connection endpoint for the DB cluster\. For example: `mystack-mydbcluster-1apw1j4phylrk.cg034hpkmmjt.us-east-2.rds.amazonaws.com` 
+The connection endpoint for the DB cluster\. For example: `mystack-mydbcluster-1apw1j4phylrk.cg034hpkmmjt.us-east-2.rds.amazonaws.com`
 
 `Port`  <a name="Port-fn::getatt"></a>
 The port number on which the DB cluster accepts connections\. For example: `8182`\.
 
 `ReadEndpoint`  <a name="ReadEndpoint-fn::getatt"></a>
-The reader endpoint for the DB cluster\. For example: `mystack-mydbcluster-ro-1apw1j4phylrk.cg034hpkmmjt.us-east-2.rds.amazonaws.com` 
+The reader endpoint for the DB cluster\. For example: `mystack-mydbcluster-ro-1apw1j4phylrk.cg034hpkmmjt.us-east-2.rds.amazonaws.com`

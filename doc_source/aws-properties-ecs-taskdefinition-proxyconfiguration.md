@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ContainerName](#cfn-ecs-taskdefinition-proxyconfiguration-containername): String
-  [ProxyConfigurationProperties](#cfn-ecs-taskdefinition-proxyconfiguration-proxyconfigurationproperties): 
+  [ProxyConfigurationProperties](#cfn-ecs-taskdefinition-proxyconfiguration-proxyconfigurationproperties):
     - [KeyValuePair](aws-properties-ecs-taskdefinition-containerdefinitions-environment.md)
   [Type](#cfn-ecs-taskdefinition-proxyconfiguration-type): String
 ```
@@ -32,13 +32,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-taskdefinition-proxyconfiguration-properties"></a>
 
 `ContainerName`  <a name="cfn-ecs-taskdefinition-proxyconfiguration-containername"></a>
-The name of the container that will serve as the App Mesh proxy\.  
-*Required*: Yes  
-*Type*: String  
+The name of the container that will serve as the App Mesh proxy\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ProxyConfigurationProperties`  <a name="cfn-ecs-taskdefinition-proxyconfiguration-proxyconfigurationproperties"></a>
-The set of network configuration parameters to provide the Container Network Interface \(CNI\) plugin, specified as key\-value pairs\.  
+The set of network configuration parameters to provide the Container Network Interface \(CNI\) plugin, specified as key\-value pairs\.
 +  `IgnoredUID` \- \(Required\) The user ID \(UID\) of the proxy container as defined by the `user` parameter in a container definition\. This is used to ensure the proxy ignores its own traffic\. If `IgnoredGID` is specified, this field can be empty\.
 +  `IgnoredGID` \- \(Required\) The group ID \(GID\) of the proxy container as defined by the `user` parameter in a container definition\. This is used to ensure the proxy ignores its own traffic\. If `IgnoredUID` is specified, this field can be empty\.
 +  `AppPorts` \- \(Required\) The list of ports that the application uses\. Network traffic to these ports is forwarded to the `ProxyIngressPort` and `ProxyEgressPort`\.
@@ -46,13 +46,13 @@ The set of network configuration parameters to provide the Container Network Int
 +  `ProxyEgressPort` \- \(Required\) Specifies the port that outgoing traffic from the `AppPorts` is directed to\.
 +  `EgressIgnoredPorts` \- \(Required\) The egress traffic going to the specified ports is ignored and not redirected to the `ProxyEgressPort`\. It can be an empty list\.
 +  `EgressIgnoredIPs` \- \(Required\) The egress traffic going to the specified IP addresses is ignored and not redirected to the `ProxyEgressPort`\. It can be an empty list\.
-*Required*: No  
-*Type*: List of [KeyValuePair](aws-properties-ecs-taskdefinition-containerdefinitions-environment.md)  
+*Required*: No
+*Type*: List of [KeyValuePair](aws-properties-ecs-taskdefinition-containerdefinitions-environment.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Type`  <a name="cfn-ecs-taskdefinition-proxyconfiguration-type"></a>
-The proxy type\. The only supported value is `APPMESH`\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `APPMESH`  
+The proxy type\. The only supported value is `APPMESH`\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `APPMESH`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

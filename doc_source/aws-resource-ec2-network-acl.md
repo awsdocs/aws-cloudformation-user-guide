@@ -22,8 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::NetworkAcl
-Properties: 
-  [Tags](#cfn-ec2-networkacl-tags): 
+Properties:
+  [Tags](#cfn-ec2-networkacl-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcId](#cfn-ec2-networkacl-vpcid): String
 ```
@@ -31,15 +31,15 @@ Properties:
 ## Properties<a name="aws-resource-ec2-network-acl-properties"></a>
 
 `Tags`  <a name="cfn-ec2-networkacl-tags"></a>
-An arbitrary set of tags \(key–value pairs\) for this ACL\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+An arbitrary set of tags \(key–value pairs\) for this ACL\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcId`  <a name="cfn-ec2-networkacl-vpcid"></a>
-The ID of the VPC for the network ACL\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the VPC for the network ACL\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-network-acl-return-values"></a>

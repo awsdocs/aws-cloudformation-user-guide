@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Pinpoint::EmailChannel
-Properties: 
+Properties:
   [ApplicationId](#cfn-pinpoint-emailchannel-applicationid): String
   [ConfigurationSet](#cfn-pinpoint-emailchannel-configurationset): String
   [Enabled](#cfn-pinpoint-emailchannel-enabled): Boolean
@@ -38,39 +38,39 @@ Properties:
 ## Properties<a name="aws-resource-pinpoint-emailchannel-properties"></a>
 
 `ApplicationId`  <a name="cfn-pinpoint-emailchannel-applicationid"></a>
-The unique ID of the Amazon Pinpoint app that you're specifying the email channel for\.  
-*Required*: Yes  
-*Type*: String  
+The unique ID of the Amazon Pinpoint app that you're specifying the email channel for\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ConfigurationSet`  <a name="cfn-pinpoint-emailchannel-configurationset"></a>
-The configuration set that you want to apply to email that you send through the channel by using the [Amazon Pinpoint Email API](emailAPIreference.html)\.  
-*Required*: No  
-*Type*: String  
+The configuration set that you want to apply to email that you send through the channel by using the [Amazon Pinpoint Email API](emailAPIreference.html)\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-pinpoint-emailchannel-enabled"></a>
-Specifies whether to enable the email channel for the application\.  
-*Required*: No  
-*Type*: Boolean  
+Specifies whether to enable the email channel for the application\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FromAddress`  <a name="cfn-pinpoint-emailchannel-fromaddress"></a>
-The verified email address that you want to send email from when you send email through the channel\.  
-*Required*: Yes  
-*Type*: String  
+The verified email address that you want to send email from when you send email through the channel\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Identity`  <a name="cfn-pinpoint-emailchannel-identity"></a>
-The Amazon Resource Name \(ARN\) of the identity, verified with Amazon Simple Email Service \(Amazon SES\), that you want to use when you send email through the channel\.  
-*Required*: Yes  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of the identity, verified with Amazon Simple Email Service \(Amazon SES\), that you want to use when you send email through the channel\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-pinpoint-emailchannel-rolearn"></a>
-The ARN of the AWS Identity and Access Management \(IAM\) role that you want Amazon Pinpoint to use when it submits email\-related event data for the channel\.  
-*Required*: No  
-*Type*: String  
+The ARN of the AWS Identity and Access Management \(IAM\) role that you want Amazon Pinpoint to use when it submits email\-related event data for the channel\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-pinpoint-emailchannel-return-values"></a>

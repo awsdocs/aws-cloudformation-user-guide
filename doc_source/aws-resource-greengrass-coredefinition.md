@@ -4,8 +4,8 @@ The `AWS::Greengrass::CoreDefinition` resource represents a core definition for 
 
 Core definitions can reference multiple core definition versions\. All core definition versions must be associated with a core definition\. Each core definition version can contain one Greengrass core\.
 
-**Note**  
-When you create a core definition, you can optionally include an initial core definition version\. To associate a core definition version later, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html) resource and specify the ID of this core definition\.  
+**Note**
+When you create a core definition, you can optionally include an initial core definition version\. To associate a core definition version later, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html) resource and specify the ID of this core definition\.
 After you create the core definition version that contains the core you want to deploy, you must add it to your group version\. For more information, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)\.
 
 ## Syntax<a name="aws-resource-greengrass-coredefinition-syntax"></a>
@@ -28,8 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Greengrass::CoreDefinition
-Properties: 
-  [InitialVersion](#cfn-greengrass-coredefinition-initialversion): 
+Properties:
+  [InitialVersion](#cfn-greengrass-coredefinition-initialversion):
     [CoreDefinitionVersion](aws-properties-greengrass-coredefinition-coredefinitionversion.md)
   [Name](#cfn-greengrass-coredefinition-name): String
 ```
@@ -37,23 +37,23 @@ Properties:
 ## Properties<a name="aws-resource-greengrass-coredefinition-properties"></a>
 
 `InitialVersion`  <a name="cfn-greengrass-coredefinition-initialversion"></a>
-The core definition version to include when the core definition is created\. Currently, a core definition version can contain only one [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-core.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-core.html)\.  
+The core definition version to include when the core definition is created\. Currently, a core definition version can contain only one [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-core.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-core.html)\.
 To associate a core definition version after the core definition is created, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html) resource and specify the ID of this core definition\.
-*Required*: No  
-*Type*: [CoreDefinitionVersion](aws-properties-greengrass-coredefinition-coredefinitionversion.md)  
+*Required*: No
+*Type*: [CoreDefinitionVersion](aws-properties-greengrass-coredefinition-coredefinitionversion.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-greengrass-coredefinition-name"></a>
-The name of the core definition\.  
-*Required*: Yes  
-*Type*: String  
+The name of the core definition\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-greengrass-coredefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-coredefinition-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the core definition, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the core definition, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -66,16 +66,16 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-greengrass-coredefinition-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the `CoreDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/cores/1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
+The Amazon Resource Name \(ARN\) of the `CoreDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/cores/1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\.
 
 `Id`  <a name="Id-fn::getatt"></a>
-The ID of the `CoreDefinition`, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
+The ID of the `CoreDefinition`, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\.
 
 `LatestVersionArn`  <a name="LatestVersionArn-fn::getatt"></a>
-The ARN of the last `CoreDefinitionVersion` that was added to the `CoreDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/cores/1234a5b6-78cd-901e-2fgh-3i45j6k178l9/versions/9876ac30-4bdb-4f9d-95af-b5fdb66be1a2`\. 
+The ARN of the last `CoreDefinitionVersion` that was added to the `CoreDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/cores/1234a5b6-78cd-901e-2fgh-3i45j6k178l9/versions/9876ac30-4bdb-4f9d-95af-b5fdb66be1a2`\.
 
 `Name`  <a name="Name-fn::getatt"></a>
-The name of the `CoreDefinition`, such as `MyCoreDefinition`\. 
+The name of the `CoreDefinition`, such as `MyCoreDefinition`\.
 
 ## Examples<a name="aws-resource-greengrass-coredefinition--examples"></a>
 
@@ -180,5 +180,5 @@ Outputs:
 ```
 
 ## See Also<a name="aws-resource-greengrass-coredefinition--seealso"></a>
-+  [CreateCoreDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createcoredefinition-post.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [CreateCoreDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createcoredefinition-post.html) in the * AWS IoT Greengrass API Reference *
++  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)

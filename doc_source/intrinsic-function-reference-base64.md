@@ -24,14 +24,14 @@ Syntax for the short form:
 !Base64 valueToEncode
 ```
 
-**Note**  
-If you use the short form and immediately include another function in the `valueToEncode` parameter, use the full function name for at least one of the functions\. For example, the following syntax is invalid:   
+**Note**
+If you use the short form and immediately include another function in the `valueToEncode` parameter, use the full function name for at least one of the functions\. For example, the following syntax is invalid:
 
 ```
 !Base64 !Sub string
 !Base64 !Ref logical_ID
 ```
- Instead, use the full function name for at least one of the functions, as shown in the following examples:   
+ Instead, use the full function name for at least one of the functions, as shown in the following examples:
 
 ```
 !Base64
@@ -43,7 +43,7 @@ Fn::Base64:
 
 ## Parameters<a name="w4784ab1c21c24c12b7"></a>
 
-valueToEncode  
+valueToEncode
 The string value you want to convert to Base64\.
 
 ## Return Value:<a name="w4784ab1c21c24c12b9"></a>

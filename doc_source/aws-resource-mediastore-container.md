@@ -27,10 +27,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::MediaStore::Container
-Properties: 
+Properties:
   [AccessLoggingEnabled](#cfn-mediastore-container-accessloggingenabled): Boolean
   [ContainerName](#cfn-mediastore-container-containername): String
-  [CorsPolicy](#cfn-mediastore-container-corspolicy): 
+  [CorsPolicy](#cfn-mediastore-container-corspolicy):
     - [CorsRule](aws-properties-mediastore-container-corsrule.md)
   [LifecyclePolicy](#cfn-mediastore-container-lifecyclepolicy): String
   [Policy](#cfn-mediastore-container-policy): String
@@ -39,40 +39,40 @@ Properties:
 ## Properties<a name="aws-resource-mediastore-container-properties"></a>
 
 `AccessLoggingEnabled`  <a name="cfn-mediastore-container-accessloggingenabled"></a>
-The state of access logging on the container\. This value is `false` by default, indicating that AWS Elemental MediaStore does not send access logs to Amazon CloudWatch Logs\. When you enable access logging on the container, MediaStore changes this value to `true`, indicating that the service delivers access logs for objects stored in that container to CloudWatch Logs\.  
-*Required*: No  
-*Type*: Boolean  
+The state of access logging on the container\. This value is `false` by default, indicating that AWS Elemental MediaStore does not send access logs to Amazon CloudWatch Logs\. When you enable access logging on the container, MediaStore changes this value to `true`, indicating that the service delivers access logs for objects stored in that container to CloudWatch Logs\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ContainerName`  <a name="cfn-mediastore-container-containername"></a>
-The name for the container\. The name must be from 1 to 255 characters\. Container names must be unique to your AWS account within a specific region\. As an example, you could create a container named `movies` in every region, as long as you don’t have an existing container with that name\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
-*Pattern*: `[\w-]+`  
+The name for the container\. The name must be from 1 to 255 characters\. Container names must be unique to your AWS account within a specific region\. As an example, you could create a container named `movies` in every region, as long as you don’t have an existing container with that name\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `255`
+*Pattern*: `[\w-]+`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CorsPolicy`  <a name="cfn-mediastore-container-corspolicy"></a>
-Sets the cross\-origin resource sharing \(CORS\) configuration on a container so that the container can service cross\-origin requests\. For example, you might want to enable a request whose origin is http://www\.example\.com to access your AWS Elemental MediaStore container at my\.example\.container\.com by using the browser's XMLHttpRequest capability\.  
-To enable CORS on a container, you attach a CORS policy to the container\. In the CORS policy, you configure rules that identify origins and the HTTP methods that can be executed on your container\. The policy can contain up to 398,000 characters\. You can add up to 100 rules to a CORS policy\. If more than one rule applies, the service uses the first applicable rule listed\.  
-To learn more about CORS, see [Cross\-Origin Resource Sharing \(CORS\) in AWS Elemental MediaStore](https://docs.aws.amazon.com/mediastore/latest/ug/cors-policy.html)\.  
-*Required*: No  
-*Type*: List of [CorsRule](aws-properties-mediastore-container-corsrule.md)  
+Sets the cross\-origin resource sharing \(CORS\) configuration on a container so that the container can service cross\-origin requests\. For example, you might want to enable a request whose origin is http://www\.example\.com to access your AWS Elemental MediaStore container at my\.example\.container\.com by using the browser's XMLHttpRequest capability\.
+To enable CORS on a container, you attach a CORS policy to the container\. In the CORS policy, you configure rules that identify origins and the HTTP methods that can be executed on your container\. The policy can contain up to 398,000 characters\. You can add up to 100 rules to a CORS policy\. If more than one rule applies, the service uses the first applicable rule listed\.
+To learn more about CORS, see [Cross\-Origin Resource Sharing \(CORS\) in AWS Elemental MediaStore](https://docs.aws.amazon.com/mediastore/latest/ug/cors-policy.html)\.
+*Required*: No
+*Type*: List of [CorsRule](aws-properties-mediastore-container-corsrule.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LifecyclePolicy`  <a name="cfn-mediastore-container-lifecyclepolicy"></a>
-Writes an object lifecycle policy to a container\. If the container already has an object lifecycle policy, the service replaces the existing policy with the new policy\. It takes up to 20 minutes for the change to take effect\.  
-For information about how to construct an object lifecycle policy, see [Components of an Object Lifecycle Policy](https://docs.aws.amazon.com/mediastore/latest/ug/policies-object-lifecycle-components.html)\.  
-*Required*: No  
-*Type*: String  
+Writes an object lifecycle policy to a container\. If the container already has an object lifecycle policy, the service replaces the existing policy with the new policy\. It takes up to 20 minutes for the change to take effect\.
+For information about how to construct an object lifecycle policy, see [Components of an Object Lifecycle Policy](https://docs.aws.amazon.com/mediastore/latest/ug/policies-object-lifecycle-components.html)\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Policy`  <a name="cfn-mediastore-container-policy"></a>
-Creates an access policy for the specified container to restrict the users and clients that can access it\. For information about the data that is included in an access policy, see the [AWS Identity and Access Management User Guide](https://aws.amazon.com/documentation/iam/)\.  
-For this release of the REST API, you can create only one policy for a container\. If you enter `PutContainerPolicy` twice, the second command modifies the existing policy\.   
-*Required*: No  
-*Type*: String  
+Creates an access policy for the specified container to restrict the users and clients that can access it\. For information about the data that is included in an access policy, see the [AWS Identity and Access Management User Guide](https://aws.amazon.com/documentation/iam/)\.
+For this release of the REST API, you can create only one policy for a container\. If you enter `PutContainerPolicy` twice, the second command modifies the existing policy\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-mediastore-container-return-values"></a>

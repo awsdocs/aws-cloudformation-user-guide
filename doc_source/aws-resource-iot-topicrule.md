@@ -22,24 +22,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IoT::TopicRule
-Properties: 
+Properties:
   [RuleName](#cfn-iot-topicrule-rulename): String
-  [TopicRulePayload](#cfn-iot-topicrule-topicrulepayload): 
+  [TopicRulePayload](#cfn-iot-topicrule-topicrulepayload):
     [TopicRulePayload](aws-properties-iot-topicrule-topicrulepayload.md)
 ```
 
 ## Properties<a name="aws-resource-iot-topicrule-properties"></a>
 
 `RuleName`  <a name="cfn-iot-topicrule-rulename"></a>
-The name of the rule\.  
-*Required*: No  
-*Type*: String  
+The name of the rule\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TopicRulePayload`  <a name="cfn-iot-topicrule-topicrulepayload"></a>
-The rule payload\.  
-*Required*: Yes  
-*Type*: [TopicRulePayload](aws-properties-iot-topicrule-topicrulepayload.md)  
+The rule payload\.
+*Required*: Yes
+*Type*: [TopicRulePayload](aws-properties-iot-topicrule-topicrulepayload.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-iot-topicrule-return-values"></a>
@@ -48,11 +48,11 @@ The rule payload\.
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the topic rule name\. For example:
 
- `{ "Ref": "MyTopicRule" }` 
+ `{ "Ref": "MyTopicRule" }`
 
 For a stack named My\-Stack \(the – character is omitted\), a value similar to the following is returned:
 
- `MyStackMyTopicRule12ABC3D456EFG` 
+ `MyStackMyTopicRule12ABC3D456EFG`
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -134,43 +134,43 @@ The following example declares an AWS IoT rule\.
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"
-Resources: 
-   MyTopicRule: 
+Resources:
+   MyTopicRule:
       Type: AWS::IoT::TopicRule
-      Properties: 
-         RuleName: 
+      Properties:
+         RuleName:
             Ref: "NameParameter"
-         TopicRulePayload: 
+         TopicRulePayload:
             RuleDisabled: "true"
             Sql: >-
                Select temp FROM 'SomeTopic' WHERE temp > 60
-            Actions: 
-               - 
-                  S3: 
-                     BucketName: 
+            Actions:
+               -
+                  S3:
+                     BucketName:
                         Ref: "MyBucket"
-                     RoleArn: 
-                        Fn::GetAtt: 
+                     RoleArn:
+                        Fn::GetAtt:
                            - "MyRole"
                            - "Arn"
                      Key: "MyKey.txt"
-   MyBucket: 
+   MyBucket:
       Type: AWS::S3::Bucket
       Properties:
-   MyRole: 
+   MyRole:
       Type: AWS::IAM::Role
-      Properties: 
-         AssumeRolePolicyDocument: 
+      Properties:
+         AssumeRolePolicyDocument:
             Version: "2012-10-17"
-            Statement: 
-               - 
+            Statement:
+               -
                   Effect: "Allow"
-                  Principal: 
-                     Service: 
+                  Principal:
+                     Service:
                         - "iot.amazonaws.com"
-                  Action: 
+                  Action:
                      - "sts:AssumeRole"
-Parameters: 
-   NameParameter: 
+Parameters:
+   NameParameter:
       Type: "String"
 ```

@@ -23,9 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dlm-lifecyclepolicy-retainrule-properties"></a>
 
 `Count`  <a name="cfn-dlm-lifecyclepolicy-retainrule-count"></a>
-The number of snapshots to keep for each volume, up to a maximum of 1000\.  
-*Required*: Yes  
-*Type*: Integer  
-*Minimum*: `1`  
-*Maximum*: `1000`  
+The number of snapshots to keep for each volume, up to a maximum of 1000\.
+*Required*: Yes
+*Type*: Integer
+*Minimum*: `1`
+*Maximum*: `1000`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

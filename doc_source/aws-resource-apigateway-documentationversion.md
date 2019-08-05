@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::DocumentationVersion
-Properties: 
+Properties:
   [Description](#cfn-apigateway-documentationversion-description): String
   [DocumentationVersion](#cfn-apigateway-documentationversion-documentationversion): String
   [RestApiId](#cfn-apigateway-documentationversion-restapiid): String
@@ -32,21 +32,21 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-documentationversion-properties"></a>
 
 `Description`  <a name="cfn-apigateway-documentationversion-description"></a>
-The description of the API documentation snapshot\.  
-*Required*: No  
-*Type*: String  
+The description of the API documentation snapshot\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DocumentationVersion`  <a name="cfn-apigateway-documentationversion-documentationversion"></a>
-The version identifier of the API documentation snapshot\.  
-*Required*: Yes  
-*Type*: String  
+The version identifier of the API documentation snapshot\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RestApiId`  <a name="cfn-apigateway-documentationversion-restapiid"></a>
-The identifier of the API\.  
-*Required*: Yes  
-*Type*: String  
+The identifier of the API\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Examples<a name="aws-resource-apigateway-documentationversion--examples"></a>
@@ -213,7 +213,7 @@ Resources:
     Properties:
       AuthorizationType: NONE
       HttpMethod: POST
-      ResourceId: !GetAtt 
+      ResourceId: !GetAtt
         - RestApi
         - RootResourceId
       RestApiId: !Ref RestApi

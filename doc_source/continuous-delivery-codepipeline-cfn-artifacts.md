@@ -33,7 +33,7 @@ To create a configuration file, use the following format :
   "Tags" : {
     "TagKey" : "TagValue",
     ...
-  }, 
+  },
   "StackPolicy" : {
     "Statement" : [
       StackPolicyStatement

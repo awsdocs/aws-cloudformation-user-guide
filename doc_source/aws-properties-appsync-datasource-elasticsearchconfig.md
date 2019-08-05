@@ -2,7 +2,7 @@
 
 The `ElasticsearchConfig` property type specifies the `AwsRegion` and `Endpoints` for an Amazon Elasticsearch Service domain in your account for an AWS AppSync data source\.
 
-ElasticsearchConfig is a property of the [AWS::AppSync::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html) property type\. 
+ElasticsearchConfig is a property of the [AWS::AppSync::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html) property type\.
 
 ## Syntax<a name="aws-properties-appsync-datasource-elasticsearchconfig-syntax"></a>
 
@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appsync-datasource-elasticsearchconfig-properties"></a>
 
 `AwsRegion`  <a name="cfn-appsync-datasource-elasticsearchconfig-awsregion"></a>
-The AWS Region\.  
-*Required*: Yes  
-*Type*: String  
+The AWS Region\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Endpoint`  <a name="cfn-appsync-datasource-elasticsearchconfig-endpoint"></a>
-The endpoint\.  
-*Required*: Yes  
-*Type*: String  
+The endpoint\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotanalytics-dataset-retentionperiod-properties"></a>
 
 `NumberOfDays`  <a name="cfn-iotanalytics-dataset-retentionperiod-numberofdays"></a>
-The number of days that message data is kept\. The "unlimited" parameter must be false\.  
-*Required*: Yes  
-*Type*: Integer  
-*Minimum*: `1`  
+The number of days that message data is kept\. The "unlimited" parameter must be false\.
+*Required*: Yes
+*Type*: Integer
+*Minimum*: `1`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Unlimited`  <a name="cfn-iotanalytics-dataset-retentionperiod-unlimited"></a>
-If true, message data is kept indefinitely\.  
-*Required*: Yes  
-*Type*: Boolean  
+If true, message data is kept indefinitely\.
+*Required*: Yes
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -2,7 +2,7 @@
 
 Requests a VPC peering connection between two VPCs: a requester VPC that you own and an accepter VPC with which to create the connection\. The accepter VPC can belong to another AWS account and can be in a different Region to the requester VPC\. The requester VPC and accepter VPC cannot have overlapping CIDR blocks\.
 
-**Note**  
+**Note**
 Limitations and rules apply to a VPC peering connection\. For more information, see the [limitations](https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-basics.html#vpc-peering-limitations) section in the *VPC Peering Guide*\.
 
 The owner of the accepter VPC must accept the peering request to activate the peering connection\. The VPC peering connection request expires after 7 days, after which it cannot be accepted or rejected\.
@@ -33,12 +33,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPCPeeringConnection
-Properties: 
+Properties:
   [PeerOwnerId](#cfn-ec2-vpcpeeringconnection-peerownerid): String
   [PeerRegion](#cfn-ec2-vpcpeeringconnection-peerregion): String
   [PeerRoleArn](#cfn-ec2-vpcpeeringconnection-peerrolearn): String
   [PeerVpcId](#cfn-ec2-vpcpeeringconnection-peervpcid): String
-  [Tags](#cfn-ec2-vpcpeeringconnection-tags): 
+  [Tags](#cfn-ec2-vpcpeeringconnection-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcId](#cfn-ec2-vpcpeeringconnection-vpcid): String
 ```
@@ -46,41 +46,41 @@ Properties:
 ## Properties<a name="aws-resource-ec2-vpcpeeringconnection-properties"></a>
 
 `PeerOwnerId`  <a name="cfn-ec2-vpcpeeringconnection-peerownerid"></a>
-The AWS account ID of the owner of the accepter VPC\.  
-Default: Your AWS account ID  
-*Required*: No  
-*Type*: String  
+The AWS account ID of the owner of the accepter VPC\.
+Default: Your AWS account ID
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PeerRegion`  <a name="cfn-ec2-vpcpeeringconnection-peerregion"></a>
-The Region code for the accepter VPC, if the accepter VPC is located in a Region other than the Region in which you make the request\.  
-Default: The Region in which you make the request\.  
-*Required*: No  
-*Type*: String  
+The Region code for the accepter VPC, if the accepter VPC is located in a Region other than the Region in which you make the request\.
+Default: The Region in which you make the request\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PeerRoleArn`  <a name="cfn-ec2-vpcpeeringconnection-peerrolearn"></a>
-The Amazon Resource Name \(ARN\) of the VPC peer role for the peering connection in another AWS account\.  
-*Required*: No  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of the VPC peer role for the peering connection in another AWS account\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PeerVpcId`  <a name="cfn-ec2-vpcpeeringconnection-peervpcid"></a>
-The ID of the VPC with which you are creating the VPC peering connection\. You must specify this parameter in the request\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the VPC with which you are creating the VPC peering connection\. You must specify this parameter in the request\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ec2-vpcpeeringconnection-tags"></a>
-Any tags assigned to the resource\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+Any tags assigned to the resource\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcId`  <a name="cfn-ec2-vpcpeeringconnection-vpcid"></a>
-The ID of the VPC\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the VPC\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-vpcpeeringconnection-return-values"></a>
@@ -202,7 +202,7 @@ The following example specifies a VPC, and then creates a peering connection wit
            "EnableDnsHostnames": false,
            "InstanceTenancy": "default"
         }
-     },        
+     },
      "myPrivateEC2Subnet" : {
         "Type" : "AWS::EC2::Subnet",
         "Properties" : {
@@ -213,9 +213,9 @@ The following example specifies a VPC, and then creates a peering connection wit
      "RouteTable" : {
            "Type" : "AWS::EC2::RouteTable",
            "Properties" : {
-               "VpcId" : {"Ref" : "myPrivateVPC"}            
+               "VpcId" : {"Ref" : "myPrivateVPC"}
            }
-     },        
+     },
      "PeeringRoute1" : {
          "Type" : "AWS::EC2::Route",
           "Properties" : {
@@ -239,7 +239,7 @@ The following example specifies a VPC, and then creates a peering connection wit
              "EnableDnsHostnames": true,
              "InstanceTenancy": "default"
          }
-     },        
+     },
      "PublicSubnet": {
           "Type": "AWS::EC2::Subnet",
           "Properties": {
@@ -502,7 +502,7 @@ Resources:
              Ref: EC2PublicSubnetCIDRRange
            VpcId:
              Ref: myVPC
-       myInternetGateway:     
+       myInternetGateway:
          Type: AWS::EC2::InternetGateway
        AttachGateway:
          Type: AWS::EC2::VPCGatewayAttachment

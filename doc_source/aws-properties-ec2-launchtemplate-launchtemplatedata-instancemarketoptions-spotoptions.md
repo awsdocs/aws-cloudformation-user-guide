@@ -33,36 +33,36 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-properties"></a>
 
 `BlockDurationMinutes`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-blockdurationminutes"></a>
-The required duration for the Spot Instances \(also known as Spot blocks\), in minutes\. This value must be a multiple of 60 \(60, 120, 180, 240, 300, or 360\)\.  
-*Required*: No  
-*Type*: Integer  
+The required duration for the Spot Instances \(also known as Spot blocks\), in minutes\. This value must be a multiple of 60 \(60, 120, 180, 240, 300, or 360\)\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceInterruptionBehavior`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-instanceinterruptionbehavior"></a>
-The behavior when a Spot Instance is interrupted\. The default is `terminate`\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `hibernate | stop | terminate`  
+The behavior when a Spot Instance is interrupted\. The default is `terminate`\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `hibernate | stop | terminate`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxPrice`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-maxprice"></a>
-The maximum hourly price you're willing to pay for the Spot Instances\.  
-*Required*: No  
-*Type*: String  
+The maximum hourly price you're willing to pay for the Spot Instances\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SpotInstanceType`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-spotinstancetype"></a>
-The Spot Instance request type\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `one-time | persistent`  
+The Spot Instance request type\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `one-time | persistent`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ValidUntil`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-validuntil"></a>
-The end date of the request\. For a one\-time request, the request remains active until all instances launch, the request is canceled, or this date is reached\. If the request is persistent, it remains active until it is canceled or this date and time is reached\. The default end date is 7 days from the current date\.  
-*Required*: No  
-*Type*: String  
+The end date of the request\. For a one\-time request, the request remains active until all instances launch, the request is canceled, or this date is reached\. If the request is persistent, it remains active until it is canceled or this date and time is reached\. The default end date is 7 days from the current date\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions--seealso"></a>
-+  [ LaunchTemplateSpotMarketOptionsRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateSpotMarketOptionsRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
++  [ LaunchTemplateSpotMarketOptionsRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateSpotMarketOptionsRequest.html) in the *Amazon Elastic Compute Cloud API Reference*

@@ -30,10 +30,10 @@ Syntax for the short form:
 
 You must specify both parameters\.
 
-delimiter  
+delimiter
 A string value that determines where the source string is divided\.
 
-source string  
+source string
 The string value that you want to split\.
 
 ## Return Value<a name="w4784ab1c21c24c55c11"></a>

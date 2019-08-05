@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-tagfilter-properties"></a>
 
 `Key`  <a name="cfn-s3-bucket-tagfilter-key"></a>
-The tag key\.  
-*Required*: Yes  
-*Type*: String  
+The tag key\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-s3-bucket-tagfilter-value"></a>
-The tag value\.  
-*Required*: Yes  
-*Type*: String  
+The tag value\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

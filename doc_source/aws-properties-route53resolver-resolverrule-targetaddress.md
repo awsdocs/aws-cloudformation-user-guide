@@ -25,20 +25,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-route53resolver-resolverrule-targetaddress-properties"></a>
 
 `Ip`  <a name="cfn-route53resolver-resolverrule-targetaddress-ip"></a>
-One IP address that you want to forward DNS queries to\. You can specify only IPv4 addresses\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `7`  
-*Maximum*: `36`  
+One IP address that you want to forward DNS queries to\. You can specify only IPv4 addresses\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `7`
+*Maximum*: `36`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Port`  <a name="cfn-route53resolver-resolverrule-targetaddress-port"></a>
-The port at `Ip` that you want to forward DNS queries to\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `65535`  
+The port at `Ip` that you want to forward DNS queries to\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `65535`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-route53resolver-resolverrule-targetaddress--seealso"></a>
-+  [TargetAddress](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_TargetAddress.html) in the *Amazon Route 53 API Reference* 
++  [TargetAddress](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_TargetAddress.html) in the *Amazon Route 53 API Reference*

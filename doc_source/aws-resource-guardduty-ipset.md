@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::GuardDuty::IPSet
-Properties: 
+Properties:
   [Activate](#cfn-guardduty-ipset-activate): Boolean
   [DetectorId](#cfn-guardduty-ipset-detectorid): String
   [Format](#cfn-guardduty-ipset-format): String
@@ -36,33 +36,33 @@ Properties:
 ## Properties<a name="aws-resource-guardduty-ipset-properties"></a>
 
 `Activate`  <a name="cfn-guardduty-ipset-activate"></a>
-Indicated whether or not GuardDuty uses the `IPSet`\.  
-*Required*: Yes  
-*Type*: Boolean  
+Indicated whether or not GuardDuty uses the `IPSet`\.
+*Required*: Yes
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DetectorId`  <a name="cfn-guardduty-ipset-detectorid"></a>
-The unique ID of the detector for the GuardDuty service to associate the `IPSet` with\.  
-*Required*: Yes  
-*Type*: String  
+The unique ID of the detector for the GuardDuty service to associate the `IPSet` with\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Format`  <a name="cfn-guardduty-ipset-format"></a>
-The format of the file that contains the `IPSet`\.  
-*Required*: Yes  
-*Type*: String  
+The format of the file that contains the `IPSet`\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Location`  <a name="cfn-guardduty-ipset-location"></a>
-The URI of the file that contains the `IPSet`\.  
-*Required*: Yes  
-*Type*: String  
+The URI of the file that contains the `IPSet`\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-guardduty-ipset-name"></a>
-The name for the `IPSet`\. This name is displayed in all findings that are triggered by activity associated with the IP addresses included in this `IPSet`\.  
-*Required*: No  
-*Type*: String  
+The name for the `IPSet`\. This name is displayed in all findings that are triggered by activity associated with the IP addresses included in this `IPSet`\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-guardduty-ipset-return-values"></a>

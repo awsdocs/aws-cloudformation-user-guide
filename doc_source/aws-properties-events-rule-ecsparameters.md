@@ -27,16 +27,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-events-rule-ecsparameters-properties"></a>
 
 `TaskCount`  <a name="cfn-events-rule-ecsparameters-taskcount"></a>
-The number of tasks to create based on `TaskDefinition`\. The default is 1\.  
-*Required*: No  
-*Type*: Integer  
-*Minimum*: `1`  
+The number of tasks to create based on `TaskDefinition`\. The default is 1\.
+*Required*: No
+*Type*: Integer
+*Minimum*: `1`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TaskDefinitionArn`  <a name="cfn-events-rule-ecsparameters-taskdefinitionarn"></a>
-The ARN of the task definition to use\.   
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `1600`  
+The ARN of the task definition to use\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `1600`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

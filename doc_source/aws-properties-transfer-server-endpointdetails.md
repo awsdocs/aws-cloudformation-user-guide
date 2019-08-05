@@ -23,8 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-transfer-server-endpointdetails-properties"></a>
 
 `VpcEndpointId`  <a name="cfn-transfer-server-endpointdetails-vpcendpointid"></a>
-The ID of the VPC endpoint\.  
-*Required*: Yes  
-*Type*: String  
-*Pattern*: `^vpce-[0-9a-f]{17}$`  
+The ID of the VPC endpoint\.
+*Required*: Yes
+*Type*: String
+*Pattern*: `^vpce-[0-9a-f]{17}$`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

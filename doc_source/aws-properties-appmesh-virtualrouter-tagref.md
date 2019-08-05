@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appmesh-virtualrouter-tagref-properties"></a>
 
 `Key`  <a name="cfn-appmesh-virtualrouter-tagref-key"></a>
-One part of a key\-value pair that make up a tag\. A `key` is a general label that acts like a category for more specific tag values\.  
-*Required*: Yes  
-*Type*: String  
+One part of a key\-value pair that make up a tag\. A `key` is a general label that acts like a category for more specific tag values\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-appmesh-virtualrouter-tagref-value"></a>
-The optional part of a key\-value pair that make up a tag\. A `value` acts as a descriptor within a tag category \(key\)\.  
-*Required*: No  
-*Type*: String  
+The optional part of a key\-value pair that make up a tag\. A `value` acts as a descriptor within a tag category \(key\)\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

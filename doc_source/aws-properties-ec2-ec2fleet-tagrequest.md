@@ -27,15 +27,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-ec2fleet-tagrequest-properties"></a>
 
 `Key`  <a name="cfn-ec2-ec2fleet-tagrequest-key"></a>
-The value of the tag\.  
-Constraints: Tag values are case\-sensitive and accept a maximum of 255 Unicode characters\.  
-*Required*: No  
-*Type*: String  
+The value of the tag\.
+Constraints: Tag values are case\-sensitive and accept a maximum of 255 Unicode characters\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-ec2-ec2fleet-tagrequest-value"></a>
-The key of the tag\.  
-Constraints: Tag keys are case\-sensitive and accept a maximum of 127 Unicode characters\. May not begin with `aws:`\.  
-*Required*: No  
-*Type*: String  
+The key of the tag\.
+Constraints: Tag keys are case\-sensitive and accept a maximum of 127 Unicode characters\. May not begin with `aws:`\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

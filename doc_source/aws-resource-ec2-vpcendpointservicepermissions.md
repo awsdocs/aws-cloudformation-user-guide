@@ -24,8 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPCEndpointServicePermissions
-Properties: 
-  [AllowedPrincipals](#cfn-ec2-vpcendpointservicepermissions-allowedprincipals): 
+Properties:
+  [AllowedPrincipals](#cfn-ec2-vpcendpointservicepermissions-allowedprincipals):
     - String
   [ServiceId](#cfn-ec2-vpcendpointservicepermissions-serviceid): String
 ```
@@ -33,15 +33,15 @@ Properties:
 ## Properties<a name="aws-resource-ec2-vpcendpointservicepermissions-properties"></a>
 
 `AllowedPrincipals`  <a name="cfn-ec2-vpcendpointservicepermissions-allowedprincipals"></a>
-The Amazon Resource Names \(ARN\) of one or more principals \(IAM users, IAM roles, and AWS accounts\)\. Permissions are granted to the principals in this list\. To grant permissions to all principals, specify an asterisk \(\*\)\. Permissions are revoked for principals not in this list\. If the list is empty, then all permissions are revoked\.   
-*Required*: No  
-*Type*: List of String  
+The Amazon Resource Names \(ARN\) of one or more principals \(IAM users, IAM roles, and AWS accounts\)\. Permissions are granted to the principals in this list\. To grant permissions to all principals, specify an asterisk \(\*\)\. Permissions are revoked for principals not in this list\. If the list is empty, then all permissions are revoked\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceId`  <a name="cfn-ec2-vpcendpointservicepermissions-serviceid"></a>
-The ID of the service\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the service\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-vpcendpointservicepermissions-return-values"></a>

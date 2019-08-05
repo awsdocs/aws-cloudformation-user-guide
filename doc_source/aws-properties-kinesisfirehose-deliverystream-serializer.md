@@ -18,22 +18,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisfirehose-deliverystream-serializer-syntax.yaml"></a>
 
 ```
-  [OrcSerDe](#cfn-kinesisfirehose-deliverystream-serializer-orcserde): 
+  [OrcSerDe](#cfn-kinesisfirehose-deliverystream-serializer-orcserde):
     [OrcSerDe](aws-properties-kinesisfirehose-deliverystream-orcserde.md)
-  [ParquetSerDe](#cfn-kinesisfirehose-deliverystream-serializer-parquetserde): 
+  [ParquetSerDe](#cfn-kinesisfirehose-deliverystream-serializer-parquetserde):
     [ParquetSerDe](aws-properties-kinesisfirehose-deliverystream-parquetserde.md)
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-serializer-properties"></a>
 
 `OrcSerDe`  <a name="cfn-kinesisfirehose-deliverystream-serializer-orcserde"></a>
-A serializer to use for converting data to the ORC format before storing it in Amazon S3\. For more information, see [Apache ORC](https://orc.apache.org/docs/)\.  
-*Required*: No  
-*Type*: [OrcSerDe](aws-properties-kinesisfirehose-deliverystream-orcserde.md)  
+A serializer to use for converting data to the ORC format before storing it in Amazon S3\. For more information, see [Apache ORC](https://orc.apache.org/docs/)\.
+*Required*: No
+*Type*: [OrcSerDe](aws-properties-kinesisfirehose-deliverystream-orcserde.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ParquetSerDe`  <a name="cfn-kinesisfirehose-deliverystream-serializer-parquetserde"></a>
-A serializer to use for converting data to the Parquet format before storing it in Amazon S3\. For more information, see [Apache Parquet](https://parquet.apache.org/documentation/latest/)\.  
-*Required*: No  
-*Type*: [ParquetSerDe](aws-properties-kinesisfirehose-deliverystream-parquetserde.md)  
+A serializer to use for converting data to the Parquet format before storing it in Amazon S3\. For more information, see [Apache Parquet](https://parquet.apache.org/documentation/latest/)\.
+*Required*: No
+*Type*: [ParquetSerDe](aws-properties-kinesisfirehose-deliverystream-parquetserde.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

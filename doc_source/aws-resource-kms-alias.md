@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::KMS::Alias
-Properties: 
+Properties:
   [AliasName](#cfn-kms-alias-aliasname): String
   [TargetKeyId](#cfn-kms-alias-targetkeyid): String
 ```
@@ -38,20 +38,20 @@ Properties:
 ## Properties<a name="aws-resource-kms-alias-properties"></a>
 
 `AliasName`  <a name="cfn-kms-alias-aliasname"></a>
-Specifies the alias name\. This value must begin with `alias/` followed by a name, such as `alias/ExampleAlias`\. The alias name cannot begin with `alias/aws/`\. The `alias/aws/` prefix is reserved for AWS managed CMKs\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `256`  
-*Pattern*: `^[a-zA-Z0-9:/_-]+$`  
+Specifies the alias name\. This value must begin with `alias/` followed by a name, such as `alias/ExampleAlias`\. The alias name cannot begin with `alias/aws/`\. The `alias/aws/` prefix is reserved for AWS managed CMKs\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `256`
+*Pattern*: `^[a-zA-Z0-9:/_-]+$`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TargetKeyId`  <a name="cfn-kms-alias-targetkeyid"></a>
-Identifies the CMK to which the alias refers\. Specify the key ID or the Amazon Resource Name \(ARN\) of the CMK\. You cannot specify another alias\. For help finding the key ID and ARN, see [Finding the Key ID and ARN](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html#find-cmk-id-arn) in the *AWS Key Management Service Developer Guide*\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `2048`  
+Identifies the CMK to which the alias refers\. Specify the key ID or the Amazon Resource Name \(ARN\) of the CMK\. You cannot specify another alias\. For help finding the key ID and ARN, see [Finding the Key ID and ARN](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html#find-cmk-id-arn) in the *AWS Key Management Service Developer Guide*\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `2048`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-kms-alias-return-values"></a>

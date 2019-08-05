@@ -21,16 +21,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::ClientCertificate
-Properties: 
+Properties:
   [Description](#cfn-apigateway-clientcertificate-description): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-clientcertificate-properties"></a>
 
 `Description`  <a name="cfn-apigateway-clientcertificate-description"></a>
-A description of the client certificate\.  
-*Required*: No  
-*Type*: String  
+A description of the client certificate\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-apigateway-clientcertificate-return-values"></a>

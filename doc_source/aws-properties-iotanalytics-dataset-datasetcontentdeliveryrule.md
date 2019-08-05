@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-dataset-datasetcontentdeliveryrule-syntax.yaml"></a>
 
 ```
-  [Destination](#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-destination): 
+  [Destination](#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-destination):
     [DatasetContentDeliveryRuleDestination](aws-properties-iotanalytics-dataset-datasetcontentdeliveryruledestination.md)
   [EntryName](#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-entryname): String
 ```
@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotanalytics-dataset-datasetcontentdeliveryrule-properties"></a>
 
 `Destination`  <a name="cfn-iotanalytics-dataset-datasetcontentdeliveryrule-destination"></a>
-The destination to which data set contents are delivered\.  
-*Required*: Yes  
-*Type*: [DatasetContentDeliveryRuleDestination](aws-properties-iotanalytics-dataset-datasetcontentdeliveryruledestination.md)  
+The destination to which data set contents are delivered\.
+*Required*: Yes
+*Type*: [DatasetContentDeliveryRuleDestination](aws-properties-iotanalytics-dataset-datasetcontentdeliveryruledestination.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EntryName`  <a name="cfn-iotanalytics-dataset-datasetcontentdeliveryrule-entryname"></a>
-The name of the data set content delivery rules entry\.  
-*Required*: No  
-*Type*: String  
+The name of the data set content delivery rules entry\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

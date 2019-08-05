@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::WAFRegional::WebACLAssociation
-Properties: 
+Properties:
   [ResourceArn](#cfn-wafregional-webaclassociation-resourcearn): String
   [WebACLId](#cfn-wafregional-webaclassociation-webaclid): String
 ```
@@ -30,15 +30,15 @@ Properties:
 ## Properties<a name="aws-resource-wafregional-webaclassociation-properties"></a>
 
 `ResourceArn`  <a name="cfn-wafregional-webaclassociation-resourcearn"></a>
-The Amazon Resource Name \(ARN\) of the resource to protect with the web ACL\.  
-*Required*: Yes  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of the resource to protect with the web ACL\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `WebACLId`  <a name="cfn-wafregional-webaclassociation-webaclid"></a>
-A unique identifier \(ID\) for the web ACL\.  
-*Required*: Yes  
-*Type*: String  
+A unique identifier \(ID\) for the web ACL\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Examples<a name="aws-resource-wafregional-webaclassociation--examples"></a>

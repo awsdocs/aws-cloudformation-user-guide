@@ -24,39 +24,39 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Pinpoint::Segment
-Properties: 
+Properties:
   [ApplicationId](#cfn-pinpoint-segment-applicationid): String
-  [Dimensions](#cfn-pinpoint-segment-dimensions): 
+  [Dimensions](#cfn-pinpoint-segment-dimensions):
     [SegmentDimensions](aws-properties-pinpoint-segment-segmentdimensions.md)
   [Name](#cfn-pinpoint-segment-name): String
-  [SegmentGroups](#cfn-pinpoint-segment-segmentgroups): 
+  [SegmentGroups](#cfn-pinpoint-segment-segmentgroups):
     [SegmentGroups](aws-properties-pinpoint-segment-segmentgroups.md)
 ```
 
 ## Properties<a name="aws-resource-pinpoint-segment-properties"></a>
 
 `ApplicationId`  <a name="cfn-pinpoint-segment-applicationid"></a>
-The unique ID of the Amazon Pinpoint app that the segment is associated with\.  
-*Required*: Yes  
-*Type*: String  
+The unique ID of the Amazon Pinpoint app that the segment is associated with\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Dimensions`  <a name="cfn-pinpoint-segment-dimensions"></a>
-The criteria that define the dimensions for the segment\.  
-*Required*: No  
-*Type*: [SegmentDimensions](aws-properties-pinpoint-segment-segmentdimensions.md)  
+The criteria that define the dimensions for the segment\.
+*Required*: No
+*Type*: [SegmentDimensions](aws-properties-pinpoint-segment-segmentdimensions.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-pinpoint-segment-name"></a>
-The name of the segment\.  
-*Required*: Yes  
-*Type*: String  
+The name of the segment\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SegmentGroups`  <a name="cfn-pinpoint-segment-segmentgroups"></a>
-The segment group, which consists of zero or more base segments, to use and the dimensions to apply to those base segments in order to build the segment\. Your request can include only one segment group\.  
-*Required*: No  
-*Type*: [SegmentGroups](aws-properties-pinpoint-segment-segmentgroups.md)  
+The segment group, which consists of zero or more base segments, to use and the dimensions to apply to those base segments in order to build the segment\. Your request can include only one segment group\.
+*Required*: No
+*Type*: [SegmentGroups](aws-properties-pinpoint-segment-segmentgroups.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-pinpoint-segment-return-values"></a>

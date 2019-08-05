@@ -23,34 +23,34 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SSM::Document
-Properties: 
+Properties:
   [Content](#cfn-ssm-document-content): Json
   [DocumentType](#cfn-ssm-document-documenttype): String
-  [Tags](#cfn-ssm-document-tags): 
+  [Tags](#cfn-ssm-document-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-ssm-document-properties"></a>
 
 `Content`  <a name="cfn-ssm-document-content"></a>
-A valid JSON or YAML string\.  
-*Required*: Yes  
-*Type*: Json  
-*Minimum*: `1`  
+A valid JSON or YAML string\.
+*Required*: Yes
+*Type*: Json
+*Minimum*: `1`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DocumentType`  <a name="cfn-ssm-document-documenttype"></a>
-The type of document to create\. Valid document types include: `Command`, `Policy`, `Automation`, `Session`, and `Package`\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `Automation | Command | Package | Policy | Session`  
+The type of document to create\. Valid document types include: `Command`, `Policy`, `Automation`, `Session`, and `Package`\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `Automation | Command | Package | Policy | Session`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ssm-document-tags"></a>
-AWS CloudFormation resource tags to apply to the document\. Use tags to help you identify and categorize resources\.   
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Maximum*: `1000`  
+AWS CloudFormation resource tags to apply to the document\. Use tags to help you identify and categorize resources\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+*Maximum*: `1000`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-ssm-document-return-values"></a>
@@ -110,27 +110,27 @@ The following Systems Manager document joins instances to a directory in AWS Dir
 #### YAML<a name="aws-resource-ssm-document--examples--Join_a_managed_instance_to_a_directory_in_AWS_Directory_Service--yaml"></a>
 
 ```
-document: 
+document:
   Type: "AWS::SSM::Document"
-  Properties: 
-    Content: 
+  Properties:
+    Content:
       schemaVersion: "1.2"
       description: "Join instances to an AWS Directory Service domain."
-      parameters: 
-        directoryId: 
+      parameters:
+        directoryId:
           type: "String"
           description: "(Required) The ID of the AWS Directory Service directory."
-        directoryName: 
+        directoryName:
           type: "String"
           description: "(Required) The name of the directory; for example, test.example.com"
-        dnsIpAddresses: 
+        dnsIpAddresses:
           type: "StringList"
           default: []
           description: "(Optional) The IP addresses of the DNS servers in the directory. Required when DHCP is not configured. Learn more at http://docs.aws.amazon.com/directoryservice/latest/simple-ad/join_get_dns_addresses.html"
           allowedPattern: "((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"
-      runtimeConfig: 
-        aws:domainJoin: 
-          properties: 
+      runtimeConfig:
+        aws:domainJoin:
+          properties:
             directoryId: "{{ directoryId }}"
             directoryName: "{{ directoryName }}"
             dnsIpAddresses: "{{ dnsIpAddresses }}"
@@ -170,43 +170,43 @@ The following example shows how to associate the SSM document with an instance\.
 #### YAML<a name="aws-resource-ssm-document--examples--Associate_the_Systems_Manager_document_with_an_instance--yaml"></a>
 
 ```
-myEC2: 
+myEC2:
   Type: "AWS::EC2::Instance"
-  Properties: 
-    ImageId: 
+  Properties:
+    ImageId:
       Ref: "myImageId"
     InstanceType: "t2.micro"
-    SsmAssociations: 
-      - 
-        DocumentName: 
+    SsmAssociations:
+      -
+        DocumentName:
           Ref: "document"
-        AssociationParameters: 
-          - 
+        AssociationParameters:
+          -
             Key: "directoryId"
-            Value: 
-              - 
+            Value:
+              -
                 Ref: "myDirectory"
-          - 
+          -
             Key: "directoryName"
-            Value: 
+            Value:
               - "testDirectory.example.com"
-          - 
+          -
             Key: "dnsIpAddresses"
-            Value: 
-              Fn::GetAtt: 
+            Value:
+              Fn::GetAtt:
                 - "myDirectory"
                 - "DnsIpAddresses"
-    IamInstanceProfile: 
+    IamInstanceProfile:
       Ref: "myInstanceProfile"
-    NetworkInterfaces: 
-      - 
+    NetworkInterfaces:
+      -
         DeviceIndex: "0"
         AssociatePublicIpAddress: "true"
-        SubnetId: 
+        SubnetId:
           Ref: "mySubnet"
-    KeyName: 
+    KeyName:
       Ref: "myKeyName"
 ```
 
 ## See Also<a name="aws-resource-ssm-document--seealso"></a>
-+  [AWS Systems Manager Documents](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html) 
++  [AWS Systems Manager Documents](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html)

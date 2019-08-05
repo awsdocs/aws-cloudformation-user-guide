@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codepipeline-pipeline-artifactstore-encryptionkey-properties"></a>
 
 `Id`  <a name="cfn-codepipeline-pipeline-artifactstore-encryptionkey-id"></a>
-The ID used to identify the key\. For an AWS KMS key, this is the key ID or key ARN\.  
-*Required*: Yes  
-*Type*: String  
+The ID used to identify the key\. For an AWS KMS key, this is the key ID or key ARN\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-codepipeline-pipeline-artifactstore-encryptionkey-type"></a>
-The type of encryption key, such as an AWS Key Management Service \(AWS KMS\) key\. When creating or updating a pipeline, the value must be set to 'KMS'\.  
-*Required*: Yes  
-*Type*: String  
+The type of encryption key, such as an AWS Key Management Service \(AWS KMS\) key\. When creating or updating a pipeline, the value must be set to 'KMS'\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

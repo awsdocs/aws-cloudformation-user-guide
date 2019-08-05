@@ -27,24 +27,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codebuild-project-environmentvariable-properties"></a>
 
 `Name`  <a name="cfn-codebuild-project-environmentvariable-name"></a>
-The name or key of the environment variable\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
+The name or key of the environment variable\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-codebuild-project-environmentvariable-type"></a>
-The type of environment variable\. Valid values include:  
+The type of environment variable\. Valid values include:
 +  `PARAMETER_STORE`: An environment variable stored in Amazon EC2 Systems Manager Parameter Store\.
 +  `PLAINTEXT`: An environment variable in plaintext format\.
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `PARAMETER_STORE | PLAINTEXT`  
+*Required*: No
+*Type*: String
+*Allowed Values*: `PARAMETER_STORE | PLAINTEXT`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-codebuild-project-environmentvariable-value"></a>
-The value of the environment variable\.  
+The value of the environment variable\.
 We strongly discourage the use of environment variables to store sensitive values, especially AWS secret key IDs and secret access keys\. Environment variables can be displayed in plain text using the AWS CodeBuild console and the AWS Command Line Interface \(AWS CLI\)\.
-*Required*: Yes  
-*Type*: String  
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

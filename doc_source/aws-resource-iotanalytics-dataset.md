@@ -1,6 +1,6 @@
 # AWS::IoTAnalytics::Dataset<a name="aws-resource-iotanalytics-dataset"></a>
 
-The AWS::IoTAnalytics::Dataset resource stores data retrieved from a data store by applying a "queryAction" \(an SQL query\) or a "containerAction" \(executing a containerized application\)\. The data set can be populated manually by calling "CreateDatasetContent" or automatically according to a "trigger" you specify\. For more information, see [ How to Use AWS IoT Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how) in the *AWS IoT Analytics User Guide*\. 
+The AWS::IoTAnalytics::Dataset resource stores data retrieved from a data store by applying a "queryAction" \(an SQL query\) or a "containerAction" \(executing a containerized application\)\. The data set can be populated manually by calling "CreateDatasetContent" or automatically according to a "trigger" you specify\. For more information, see [ How to Use AWS IoT Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how) in the *AWS IoT Analytics User Guide*\.
 
 ## Syntax<a name="aws-resource-iotanalytics-dataset-syntax"></a>
 
@@ -27,72 +27,72 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IoTAnalytics::Dataset
-Properties: 
-  [Actions](#cfn-iotanalytics-dataset-actions): 
+Properties:
+  [Actions](#cfn-iotanalytics-dataset-actions):
     - [Action](aws-properties-iotanalytics-dataset-action.md)
-  [ContentDeliveryRules](#cfn-iotanalytics-dataset-contentdeliveryrules): 
+  [ContentDeliveryRules](#cfn-iotanalytics-dataset-contentdeliveryrules):
     - [DatasetContentDeliveryRule](aws-properties-iotanalytics-dataset-datasetcontentdeliveryrule.md)
   [DatasetName](#cfn-iotanalytics-dataset-datasetname): String
-  [RetentionPeriod](#cfn-iotanalytics-dataset-retentionperiod): 
+  [RetentionPeriod](#cfn-iotanalytics-dataset-retentionperiod):
     [RetentionPeriod](aws-properties-iotanalytics-dataset-retentionperiod.md)
-  [Tags](#cfn-iotanalytics-dataset-tags): 
+  [Tags](#cfn-iotanalytics-dataset-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-  [Triggers](#cfn-iotanalytics-dataset-triggers): 
+  [Triggers](#cfn-iotanalytics-dataset-triggers):
     - [Trigger](aws-properties-iotanalytics-dataset-trigger.md)
-  [VersioningConfiguration](#cfn-iotanalytics-dataset-versioningconfiguration): 
+  [VersioningConfiguration](#cfn-iotanalytics-dataset-versioningconfiguration):
     [VersioningConfiguration](aws-properties-iotanalytics-dataset-versioningconfiguration.md)
 ```
 
 ## Properties<a name="aws-resource-iotanalytics-dataset-properties"></a>
 
 `Actions`  <a name="cfn-iotanalytics-dataset-actions"></a>
-The "DatasetAction" objects that automatically create the data set contents\.  
-*Required*: Yes  
-*Type*: List of [Action](aws-properties-iotanalytics-dataset-action.md)  
-*Maximum*: `1`  
+The "DatasetAction" objects that automatically create the data set contents\.
+*Required*: Yes
+*Type*: List of [Action](aws-properties-iotanalytics-dataset-action.md)
+*Maximum*: `1`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ContentDeliveryRules`  <a name="cfn-iotanalytics-dataset-contentdeliveryrules"></a>
-When data set contents are created they are delivered to destinations specified here\.  
-*Required*: No  
-*Type*: List of [DatasetContentDeliveryRule](aws-properties-iotanalytics-dataset-datasetcontentdeliveryrule.md)  
-*Maximum*: `20`  
+When data set contents are created they are delivered to destinations specified here\.
+*Required*: No
+*Type*: List of [DatasetContentDeliveryRule](aws-properties-iotanalytics-dataset-datasetcontentdeliveryrule.md)
+*Maximum*: `20`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DatasetName`  <a name="cfn-iotanalytics-dataset-datasetname"></a>
-The name of the data set\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
-*Pattern*: `^[a-zA-Z0-9_]+$`  
+The name of the data set\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
+*Pattern*: `^[a-zA-Z0-9_]+$`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RetentionPeriod`  <a name="cfn-iotanalytics-dataset-retentionperiod"></a>
-\[Optional\] How long, in days, message data is kept for the data set\.  
-*Required*: No  
-*Type*: [RetentionPeriod](aws-properties-iotanalytics-dataset-retentionperiod.md)  
+\[Optional\] How long, in days, message data is kept for the data set\.
+*Required*: No
+*Type*: [RetentionPeriod](aws-properties-iotanalytics-dataset-retentionperiod.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-iotanalytics-dataset-tags"></a>
-Metadata which can be used to manage the data set\.  
-For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Maximum*: `50`  
+Metadata which can be used to manage the data set\.
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+*Maximum*: `50`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Triggers`  <a name="cfn-iotanalytics-dataset-triggers"></a>
-The "DatasetTrigger" objects that specify when the data set is automatically updated\.  
-*Required*: No  
-*Type*: List of [Trigger](aws-properties-iotanalytics-dataset-trigger.md)  
-*Maximum*: `5`  
+The "DatasetTrigger" objects that specify when the data set is automatically updated\.
+*Required*: No
+*Type*: List of [Trigger](aws-properties-iotanalytics-dataset-trigger.md)
+*Maximum*: `5`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VersioningConfiguration`  <a name="cfn-iotanalytics-dataset-versioningconfiguration"></a>
-\[Optional\] How many versions of data set contents are kept\. If not specified or set to null, only the latest version plus the latest succeeded version \(if they are different\) are kept for the time period specified by the "retentionPeriod" parameter\. \(For more information, see https://docs\.aws\.amazon\.com/iotanalytics/latest/userguide/getting\-started\.html\#aws\-iot\-analytics\-dataset\-versions\)  
-*Required*: No  
-*Type*: [VersioningConfiguration](aws-properties-iotanalytics-dataset-versioningconfiguration.md)  
+\[Optional\] How many versions of data set contents are kept\. If not specified or set to null, only the latest version plus the latest succeeded version \(if they are different\) are kept for the time period specified by the "retentionPeriod" parameter\. \(For more information, see https://docs\.aws\.amazon\.com/iotanalytics/latest/userguide/getting\-started\.html\#aws\-iot\-analytics\-dataset\-versions\)
+*Required*: No
+*Type*: [VersioningConfiguration](aws-properties-iotanalytics-dataset-versioningconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-iotanalytics-dataset--examples"></a>
@@ -305,7 +305,7 @@ Resources:
       Actions:
         - ActionName: ContainerAction
           ContainerAction:
-            Image: "<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage" 
+            Image: "<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage"
             ExecutionRoleArn: "arn:aws:iam::<your_Account_Id>:role/ExecutionRole"
             ResourceConfiguration:
               ComputeType: "ACU_1"
@@ -421,7 +421,7 @@ Resources:
         -
           ActionName: "ContainerAction"
           ContainerAction:
-            Image: "<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage" 
+            Image: "<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage"
             ExecutionRoleArn: "arn:aws:iam::<your_Account_Id>:role/ExecutionRole"
             ResourceConfiguration:
               ComputeType: "ACU_1"
@@ -448,5 +448,5 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-iotanalytics-dataset--seealso"></a>
-+  [How to Use AWS IoT Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how) in the *AWS IoT Analytics User Guide* 
-+  [CreateDataset](https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_CreateDataset.html) in the *AWS IoT Analytics API Reference* 
++  [How to Use AWS IoT Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how) in the *AWS IoT Analytics User Guide*
++  [CreateDataset](https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_CreateDataset.html) in the *AWS IoT Analytics API Reference*

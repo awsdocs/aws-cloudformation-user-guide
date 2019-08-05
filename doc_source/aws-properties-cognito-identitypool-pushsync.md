@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cognito-identitypool-pushsync-syntax.yaml"></a>
 
 ```
-  [ApplicationArns](#cfn-cognito-identitypool-pushsync-applicationarns): 
+  [ApplicationArns](#cfn-cognito-identitypool-pushsync-applicationarns):
     - String
   [RoleArn](#cfn-cognito-identitypool-pushsync-rolearn): String
 ```
@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cognito-identitypool-pushsync-properties"></a>
 
 `ApplicationArns`  <a name="cfn-cognito-identitypool-pushsync-applicationarns"></a>
-List of Amazon SNS platform application ARNs that could be used by clients\.  
-*Required*: No  
-*Type*: List of String  
+List of Amazon SNS platform application ARNs that could be used by clients\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-cognito-identitypool-pushsync-rolearn"></a>
-An IAM role configured to allow Amazon Cognito to call SNS on behalf of the developer\.  
-*Required*: No  
-*Type*: String  
+An IAM role configured to allow Amazon Cognito to call SNS on behalf of the developer\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

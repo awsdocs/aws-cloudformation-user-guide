@@ -4,8 +4,8 @@ The `AWS::Greengrass::ConnectorDefinition` resource represents a connector defin
 
 Connector definitions can reference multiple connector definition versions\. All connector definition versions must be associated with a connector definition\. Each connector definition version can contain one or more connectors\.
 
-**Note**  
-When you create a connector definition, you can optionally include an initial connector definition version\. To associate a connector definition version later, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html) resource and specify the ID of this connector definition\.  
+**Note**
+When you create a connector definition, you can optionally include an initial connector definition version\. To associate a connector definition version later, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html) resource and specify the ID of this connector definition\.
 After you create the connector definition version that contains the connectors you want to deploy, you must add it to your group version\. For more information, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)\.
 
 ## Syntax<a name="aws-resource-greengrass-connectordefinition-syntax"></a>
@@ -28,8 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Greengrass::ConnectorDefinition
-Properties: 
-  [InitialVersion](#cfn-greengrass-connectordefinition-initialversion): 
+Properties:
+  [InitialVersion](#cfn-greengrass-connectordefinition-initialversion):
     [ConnectorDefinitionVersion](aws-properties-greengrass-connectordefinition-connectordefinitionversion.md)
   [Name](#cfn-greengrass-connectordefinition-name): String
 ```
@@ -37,23 +37,23 @@ Properties:
 ## Properties<a name="aws-resource-greengrass-connectordefinition-properties"></a>
 
 `InitialVersion`  <a name="cfn-greengrass-connectordefinition-initialversion"></a>
-The connector definition version to include when the connector definition is created\. A connector definition version contains a list of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connector.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connector.html) property types\.  
+The connector definition version to include when the connector definition is created\. A connector definition version contains a list of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connector.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connector.html) property types\.
 To associate a connector definition version after the connector definition is created, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html) resource and specify the ID of this connector definition\.
-*Required*: No  
-*Type*: [ConnectorDefinitionVersion](aws-properties-greengrass-connectordefinition-connectordefinitionversion.md)  
+*Required*: No
+*Type*: [ConnectorDefinitionVersion](aws-properties-greengrass-connectordefinition-connectordefinitionversion.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-greengrass-connectordefinition-name"></a>
-The name of the connector definition\.  
-*Required*: Yes  
-*Type*: String  
+The name of the connector definition\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-greengrass-connectordefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-connectordefinition-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the connector definition, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the connector definition, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -66,16 +66,16 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-greengrass-connectordefinition-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the `ConnectorDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/connectors/1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
+The Amazon Resource Name \(ARN\) of the `ConnectorDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/connectors/1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\.
 
 `Id`  <a name="Id-fn::getatt"></a>
-The ID of the `ConnectorDefinition`, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
+The ID of the `ConnectorDefinition`, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\.
 
 `LatestVersionArn`  <a name="LatestVersionArn-fn::getatt"></a>
-The ARN of the last `ConnectorDefinitionVersion` that was added to the `ConnectorDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/connectors/1234a5b6-78cd-901e-2fgh-3i45j6k178l9/versions/9876ac30-4bdb-4f9d-95af-b5fdb66be1a2`\. 
+The ARN of the last `ConnectorDefinitionVersion` that was added to the `ConnectorDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/connectors/1234a5b6-78cd-901e-2fgh-3i45j6k178l9/versions/9876ac30-4bdb-4f9d-95af-b5fdb66be1a2`\.
 
 `Name`  <a name="Name-fn::getatt"></a>
-The name of the `ConnectorDefinition`, such as `MyConnectorDefinition`\. 
+The name of the `ConnectorDefinition`, such as `MyConnectorDefinition`\.
 
 ## Examples<a name="aws-resource-greengrass-connectordefinition--examples"></a>
 
@@ -142,13 +142,13 @@ TestConnectorDefinition:
     InitialVersion:
       Connectors:
         - Id: Connector1
-          ConnectorArn: !Join 
+          ConnectorArn: !Join
             - ':'
             - - 'arn:aws:greengrass'
               - !Ref 'AWS::Region'
               - ':/connectors/SNS/versions/1'
           Parameters:
-            DefaultSNSArn: !Join 
+            DefaultSNSArn: !Join
               - ':'
               - - 'arn:aws:sns'
                 - !Ref 'AWS::Region'
@@ -157,5 +157,5 @@ TestConnectorDefinition:
 ```
 
 ## See Also<a name="aws-resource-greengrass-connectordefinition--seealso"></a>
-+  [CreateConnectorDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createconnectordefinition-post.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [CreateConnectorDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createconnectordefinition-post.html) in the * AWS IoT Greengrass API Reference *
++  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)

@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Pinpoint::GCMChannel
-Properties: 
+Properties:
   [ApiKey](#cfn-pinpoint-gcmchannel-apikey): String
   [ApplicationId](#cfn-pinpoint-gcmchannel-applicationid): String
   [Enabled](#cfn-pinpoint-gcmchannel-enabled): Boolean
@@ -34,21 +34,21 @@ Properties:
 ## Properties<a name="aws-resource-pinpoint-gcmchannel-properties"></a>
 
 `ApiKey`  <a name="cfn-pinpoint-gcmchannel-apikey"></a>
-The API key, also called the *server key*, that you received from Google to communicate with Google services\.  
-*Required*: Yes  
-*Type*: String  
+The API key, also called the *server key*, that you received from Google to communicate with Google services\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApplicationId`  <a name="cfn-pinpoint-gcmchannel-applicationid"></a>
-The unique identifier for the Amazon Pinpoint app that the GCM channel applies to\.  
-*Required*: Yes  
-*Type*: String  
+The unique identifier for the Amazon Pinpoint app that the GCM channel applies to\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Enabled`  <a name="cfn-pinpoint-gcmchannel-enabled"></a>
-Specifies whether to enable the GCM channel for the Amazon Pinpoint application\.  
-*Required*: No  
-*Type*: Boolean  
+Specifies whether to enable the GCM channel for the Amazon Pinpoint application\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-pinpoint-gcmchannel-return-values"></a>

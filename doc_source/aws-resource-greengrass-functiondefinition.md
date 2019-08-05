@@ -4,8 +4,8 @@ The `AWS::Greengrass::FunctionDefinition` resource represents a function definit
 
 Function definitions can reference multiple function definition versions\. All function definition versions must be associated with a function definition\. Each function definition version can contain one or more functions\.
 
-**Note**  
-When you create a function definition, you can optionally include an initial function definition version\. To associate a function definition version later, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html) resource and specify the ID of this function definition\.  
+**Note**
+When you create a function definition, you can optionally include an initial function definition version\. To associate a function definition version later, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html) resource and specify the ID of this function definition\.
 After you create the function definition version that contains the functions you want to deploy, you must add it to your group version\. For more information, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)\.
 
 ## Syntax<a name="aws-resource-greengrass-functiondefinition-syntax"></a>
@@ -28,8 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Greengrass::FunctionDefinition
-Properties: 
-  [InitialVersion](#cfn-greengrass-functiondefinition-initialversion): 
+Properties:
+  [InitialVersion](#cfn-greengrass-functiondefinition-initialversion):
     [FunctionDefinitionVersion](aws-properties-greengrass-functiondefinition-functiondefinitionversion.md)
   [Name](#cfn-greengrass-functiondefinition-name): String
 ```
@@ -37,23 +37,23 @@ Properties:
 ## Properties<a name="aws-resource-greengrass-functiondefinition-properties"></a>
 
 `InitialVersion`  <a name="cfn-greengrass-functiondefinition-initialversion"></a>
-The function definition version to include when the function definition is created\. A function definition version contains a list of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-function.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-function.html) property types\.  
+The function definition version to include when the function definition is created\. A function definition version contains a list of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-function.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-function.html) property types\.
 To associate a function definition version after the function definition is created, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html) resource and specify the ID of this function definition\.
-*Required*: No  
-*Type*: [FunctionDefinitionVersion](aws-properties-greengrass-functiondefinition-functiondefinitionversion.md)  
+*Required*: No
+*Type*: [FunctionDefinitionVersion](aws-properties-greengrass-functiondefinition-functiondefinitionversion.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-greengrass-functiondefinition-name"></a>
-The name of the function definition\.  
-*Required*: Yes  
-*Type*: String  
+The name of the function definition\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-greengrass-functiondefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-functiondefinition-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the function definition, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the function definition, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -66,16 +66,16 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-greengrass-functiondefinition-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the `FunctionDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/functions/1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
+The Amazon Resource Name \(ARN\) of the `FunctionDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/functions/1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\.
 
 `Id`  <a name="Id-fn::getatt"></a>
-The ID of the `FunctionDefinition`, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
+The ID of the `FunctionDefinition`, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\.
 
 `LatestVersionArn`  <a name="LatestVersionArn-fn::getatt"></a>
-The ARN of the last `FunctionDefinitionVersion` that was added to the `FunctionDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/functions/1234a5b6-78cd-901e-2fgh-3i45j6k178l9/versions/9876ac30-4bdb-4f9d-95af-b5fdb66be1a2`\. 
+The ARN of the last `FunctionDefinitionVersion` that was added to the `FunctionDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/functions/1234a5b6-78cd-901e-2fgh-3i45j6k178l9/versions/9876ac30-4bdb-4f9d-95af-b5fdb66be1a2`\.
 
 `Name`  <a name="Name-fn::getatt"></a>
-The name of the `FunctionDefinition`, such as `MyFunctionDefinition`\. 
+The name of the `FunctionDefinition`, such as `MyFunctionDefinition`\.
 
 ## Examples<a name="aws-resource-greengrass-functiondefinition--examples"></a>
 
@@ -178,5 +178,5 @@ TestFunctionDefinition:
 ```
 
 ## See Also<a name="aws-resource-greengrass-functiondefinition--seealso"></a>
-+  [CreateFunctionDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createfunctiondefinition-post.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [CreateFunctionDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createfunctiondefinition-post.html) in the * AWS IoT Greengrass API Reference *
++  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)

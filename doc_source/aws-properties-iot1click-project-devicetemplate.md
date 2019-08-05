@@ -27,15 +27,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot1click-project-devicetemplate-properties"></a>
 
 `CallbackOverrides`  <a name="cfn-iot1click-project-devicetemplate-callbackoverrides"></a>
-An optional AWS Lambda function to invoke instead of the default AWS Lambda function provided by the placement template\.  
-*Required*: No  
-*Type*: Json  
+An optional AWS Lambda function to invoke instead of the default AWS Lambda function provided by the placement template\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeviceType`  <a name="cfn-iot1click-project-devicetemplate-devicetype"></a>
-The device type, which currently must be `"button"`\.  
-*Required*: No  
-*Type*: String  
+The device type, which currently must be `"button"`\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-iot1click-project-devicetemplate--seealso"></a>

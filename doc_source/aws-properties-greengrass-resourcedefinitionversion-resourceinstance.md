@@ -23,31 +23,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Id](#cfn-greengrass-resourcedefinitionversion-resourceinstance-id): String
   [Name](#cfn-greengrass-resourcedefinitionversion-resourceinstance-name): String
-  [ResourceDataContainer](#cfn-greengrass-resourcedefinitionversion-resourceinstance-resourcedatacontainer): 
+  [ResourceDataContainer](#cfn-greengrass-resourcedefinitionversion-resourceinstance-resourcedatacontainer):
     [ResourceDataContainer](aws-properties-greengrass-resourcedefinitionversion-resourcedatacontainer.md)
 ```
 
 ## Properties<a name="aws-properties-greengrass-resourcedefinitionversion-resourceinstance-properties"></a>
 
 `Id`  <a name="cfn-greengrass-resourcedefinitionversion-resourceinstance-id"></a>
-A descriptive or arbitrary ID for the resource\. This value must be unique within the resource definition version\. Maximum length is 128 characters with pattern `[a-zA-Z0-9:_-]+`\.  
-*Required*: Yes  
-*Type*: String  
+A descriptive or arbitrary ID for the resource\. This value must be unique within the resource definition version\. Maximum length is 128 characters with pattern `[a-zA-Z0-9:_-]+`\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-greengrass-resourcedefinitionversion-resourceinstance-name"></a>
-The descriptive resource name, which is displayed on the AWS IoT Greengrass console\. Maximum length 128 characters with pattern \[a\-zA\-Z0\-9:\_\-\]\+\. This must be unique within a Greengrass group\.  
-*Required*: Yes  
-*Type*: String  
+The descriptive resource name, which is displayed on the AWS IoT Greengrass console\. Maximum length 128 characters with pattern \[a\-zA\-Z0\-9:\_\-\]\+\. This must be unique within a Greengrass group\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ResourceDataContainer`  <a name="cfn-greengrass-resourcedefinitionversion-resourceinstance-resourcedatacontainer"></a>
-A container for resource data\. The container takes only one of the following supported resource data types: `LocalDeviceResourceData`, `LocalVolumeResourceData`, `SageMakerMachineLearningModelResourceData`, `S3MachineLearningModelResourceData`, or `SecretsManagerSecretResourceData`\.  
+A container for resource data\. The container takes only one of the following supported resource data types: `LocalDeviceResourceData`, `LocalVolumeResourceData`, `SageMakerMachineLearningModelResourceData`, `S3MachineLearningModelResourceData`, or `SecretsManagerSecretResourceData`\.
 Only one resource type can be defined for a `ResourceDataContainer` instance\.
-*Required*: Yes  
-*Type*: [ResourceDataContainer](aws-properties-greengrass-resourcedefinitionversion-resourcedatacontainer.md)  
+*Required*: Yes
+*Type*: [ResourceDataContainer](aws-properties-greengrass-resourcedefinitionversion-resourcedatacontainer.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See Also<a name="aws-properties-greengrass-resourcedefinitionversion-resourceinstance--seealso"></a>
-+  [Resource](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-resource.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [Resource](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-resource.html) in the * AWS IoT Greengrass API Reference *
++  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)

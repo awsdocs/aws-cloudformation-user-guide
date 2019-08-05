@@ -16,7 +16,7 @@ Termination protection is different than disabling rollback\. Termination protec
 **To enable or disable termination protection on an existing stack**
 
 1. Sign in to the AWS Management Console and open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation/](https://console.aws.amazon.com/cloudformation/)\. Select the stack that you want\.
-**Note**  
+**Note**
 If **NESTED** is displayed next to the stack name, the stack is a nested stack\. You can only change termination protection on the root stack to which the nested stack belongs\.
 
 1. Choose **Actions** and then **Change Termination Protection**\.
@@ -48,7 +48,7 @@ To enable or disable termination protection on stacks, a user requires permissio
 
 For more information on specifying permissions in AWS CloudFormation, see [Controlling Access with AWS Identity and Access Management](using-iam-template.md)\.
 
-**Example A sample policy that grants permissions to change stack termination protection**  
+**Example A sample policy that grants permissions to change stack termination protection**
 
 ```
 {

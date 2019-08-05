@@ -23,43 +23,43 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SageMaker::NotebookInstanceLifecycleConfig
-Properties: 
+Properties:
   [NotebookInstanceLifecycleConfigName](#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecycleconfigname): String
-  [OnCreate](#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate): 
+  [OnCreate](#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate):
     - [NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md)
-  [OnStart](#cfn-sagemaker-notebookinstancelifecycleconfig-onstart): 
+  [OnStart](#cfn-sagemaker-notebookinstancelifecycleconfig-onstart):
     - [NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md)
 ```
 
 ## Properties<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-properties"></a>
 
 `NotebookInstanceLifecycleConfigName`  <a name="cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecycleconfigname"></a>
-The name of the lifecycle configuration\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+The name of the lifecycle configuration\.
+*Required*: No
+*Type*: String
+*Maximum*: `63`
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OnCreate`  <a name="cfn-sagemaker-notebookinstancelifecycleconfig-oncreate"></a>
-A shell script that runs only once, when you create a notebook instance\. The shell script must be a base64\-encoded string\.  
-*Required*: No  
-*Type*: List of [NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md)  
-*Maximum*: `1`  
+A shell script that runs only once, when you create a notebook instance\. The shell script must be a base64\-encoded string\.
+*Required*: No
+*Type*: List of [NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md)
+*Maximum*: `1`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OnStart`  <a name="cfn-sagemaker-notebookinstancelifecycleconfig-onstart"></a>
-A shell script that runs every time you start a notebook instance, including when you create the notebook instance\. The shell script must be a base64\-encoded string\.  
-*Required*: No  
-*Type*: List of [NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md)  
-*Maximum*: `1`  
+A shell script that runs every time you start a notebook instance, including when you create the notebook instance\. The shell script must be a base64\-encoded string\.
+*Required*: No
+*Type*: List of [NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md)
+*Maximum*: `1`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-return-values"></a>
 
 ### Ref<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the endpoint configuration, such as `arn:aws:sagemaker:us-west-2:012345678901:notebook-instance-lifecycle-config/mylifecycleconfig` 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the endpoint configuration, such as `arn:aws:sagemaker:us-west-2:012345678901:notebook-instance-lifecycle-config/mylifecycleconfig`
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -69,7 +69,7 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
+ `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 #### <a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-return-values-fn--getatt-fn--getatt"></a>
 
@@ -173,27 +173,27 @@ Resources:
       OnStart:
         - Content:
             Fn::Base64: "echo 'hello'"
-  ExecutionRole: 
+  ExecutionRole:
     Type: "AWS::IAM::Role"
-    Properties: 
-      AssumeRolePolicyDocument: 
+    Properties:
+      AssumeRolePolicyDocument:
         Version: "2012-10-17"
-        Statement: 
-          - 
+        Statement:
+          -
             Effect: "Allow"
-            Principal: 
-              Service: 
+            Principal:
+              Service:
                 - "sagemaker.amazonaws.com"
-            Action: 
+            Action:
               - "sts:AssumeRole"
       Path: "/"
-      Policies: 
-        - 
+      Policies:
+        -
           PolicyName: "root"
-          PolicyDocument: 
+          PolicyDocument:
             Version: "2012-10-17"
-            Statement: 
-              - 
+            Statement:
+              -
                 Effect: "Allow"
                 Action: "*"
                 Resource: "*"

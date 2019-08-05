@@ -26,11 +26,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppMesh::VirtualService
-Properties: 
+Properties:
   [MeshName](#cfn-appmesh-virtualservice-meshname): String
-  [Spec](#cfn-appmesh-virtualservice-spec): 
+  [Spec](#cfn-appmesh-virtualservice-spec):
     [VirtualServiceSpec](aws-properties-appmesh-virtualservice-virtualservicespec.md)
-  [Tags](#cfn-appmesh-virtualservice-tags): 
+  [Tags](#cfn-appmesh-virtualservice-tags):
     - [TagRef](aws-properties-appmesh-virtualservice-tagref.md)
   [VirtualServiceName](#cfn-appmesh-virtualservice-virtualservicename): String
 ```
@@ -38,27 +38,27 @@ Properties:
 ## Properties<a name="aws-resource-appmesh-virtualservice-properties"></a>
 
 `MeshName`  <a name="cfn-appmesh-virtualservice-meshname"></a>
-The name of the service mesh to create the virtual service in\.  
-*Required*: Yes  
-*Type*: String  
+The name of the service mesh to create the virtual service in\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Spec`  <a name="cfn-appmesh-virtualservice-spec"></a>
-The virtual service specification to apply\.  
-*Required*: Yes  
-*Type*: [VirtualServiceSpec](aws-properties-appmesh-virtualservice-virtualservicespec.md)  
+The virtual service specification to apply\.
+*Required*: Yes
+*Type*: [VirtualServiceSpec](aws-properties-appmesh-virtualservice-virtualservicespec.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-appmesh-virtualservice-tags"></a>
-Optional metadata that you can apply to the virtual service to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.  
-*Required*: No  
-*Type*: List of [TagRef](aws-properties-appmesh-virtualservice-tagref.md)  
+Optional metadata that you can apply to the virtual service to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.
+*Required*: No
+*Type*: List of [TagRef](aws-properties-appmesh-virtualservice-tagref.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VirtualServiceName`  <a name="cfn-appmesh-virtualservice-virtualservicename"></a>
-The name to use for the virtual service\.  
-*Required*: Yes  
-*Type*: String  
+The name to use for the virtual service\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-appmesh-virtualservice-return-values"></a>
@@ -67,7 +67,7 @@ The name to use for the virtual service\.
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ARN\. For example:
 
- `{ "Ref": "myVirtualService" }` 
+ `{ "Ref": "myVirtualService" }`
 
 When you pass the logical ID of an `AWS::AppMesh::VirtualService` resource to the intrinsic Ref function, the function returns the virtual service ARN, such as `arn:aws:appmesh:us-east-1:555555555555:virtualService/myVirtualService `\.
 

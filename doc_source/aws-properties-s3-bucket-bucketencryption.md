@@ -17,14 +17,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-bucketencryption-syntax.yaml"></a>
 
 ```
-  [ServerSideEncryptionConfiguration](#cfn-s3-bucket-bucketencryption-serversideencryptionconfiguration): 
+  [ServerSideEncryptionConfiguration](#cfn-s3-bucket-bucketencryption-serversideencryptionconfiguration):
     - [ServerSideEncryptionRule](aws-properties-s3-bucket-serversideencryptionrule.md)
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-bucketencryption-properties"></a>
 
 `ServerSideEncryptionConfiguration`  <a name="cfn-s3-bucket-bucketencryption-serversideencryptionconfiguration"></a>
-Specifies the default server\-side\-encryption configuration\.  
-*Required*: Yes  
-*Type*: List of [ServerSideEncryptionRule](aws-properties-s3-bucket-serversideencryptionrule.md)  
+Specifies the default server\-side\-encryption configuration\.
+*Required*: Yes
+*Type*: List of [ServerSideEncryptionRule](aws-properties-s3-bucket-serversideencryptionrule.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

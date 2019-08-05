@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceDiscovery::PublicDnsNamespace
-Properties: 
+Properties:
   [Description](#cfn-servicediscovery-publicdnsnamespace-description): String
   [Name](#cfn-servicediscovery-publicdnsnamespace-name): String
 ```
@@ -30,17 +30,17 @@ Properties:
 ## Properties<a name="aws-resource-servicediscovery-publicdnsnamespace-properties"></a>
 
 `Description`  <a name="cfn-servicediscovery-publicdnsnamespace-description"></a>
-A description for the namespace\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `1024`  
+A description for the namespace\.
+*Required*: No
+*Type*: String
+*Maximum*: `1024`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-servicediscovery-publicdnsnamespace-name"></a>
-The name that you want to assign to this namespace\.  
-*Required*: Yes  
-*Type*: String  
-*Maximum*: `1024`  
+The name that you want to assign to this namespace\.
+*Required*: Yes
+*Type*: String
+*Maximum*: `1024`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-servicediscovery-publicdnsnamespace-return-values"></a>
@@ -93,4 +93,4 @@ Properties:
 ```
 
 ## See Also<a name="aws-resource-servicediscovery-publicdnsnamespace--seealso"></a>
-+  [CreatePublicDnsNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreatePublicDnsNamespace.html) in the *AWS Cloud Map API Reference* 
++  [CreatePublicDnsNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreatePublicDnsNamespace.html) in the *AWS Cloud Map API Reference*

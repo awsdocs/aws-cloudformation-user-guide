@@ -17,18 +17,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-environmentproperties-syntax.yaml"></a>
 
 ```
-  [PropertyGroups](#cfn-kinesisanalyticsv2-application-environmentproperties-propertygroups): 
+  [PropertyGroups](#cfn-kinesisanalyticsv2-application-environmentproperties-propertygroups):
     - [PropertyGroup](aws-properties-kinesisanalyticsv2-application-propertygroup.md)
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-environmentproperties-properties"></a>
 
 `PropertyGroups`  <a name="cfn-kinesisanalyticsv2-application-environmentproperties-propertygroups"></a>
-Describes the execution property groups\.  
-*Required*: No  
-*Type*: List of [PropertyGroup](aws-properties-kinesisanalyticsv2-application-propertygroup.md)  
-*Maximum*: `50`  
+Describes the execution property groups\.
+*Required*: No
+*Type*: List of [PropertyGroup](aws-properties-kinesisanalyticsv2-application-propertygroup.md)
+*Maximum*: `50`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-kinesisanalyticsv2-application-environmentproperties--seealso"></a>
-+  [EnvironmentProperties](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_EnvironmentProperties.html) in the *Amazon Kinesis Data Analytics API Reference* 
++  [EnvironmentProperties](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_EnvironmentProperties.html) in the *Amazon Kinesis Data Analytics API Reference*

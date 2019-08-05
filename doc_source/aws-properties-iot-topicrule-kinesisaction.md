@@ -27,19 +27,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-topicrule-kinesisaction-properties"></a>
 
 `PartitionKey`  <a name="cfn-iot-topicrule-kinesisaction-partitionkey"></a>
-The partition key\.  
-*Required*: No  
-*Type*: String  
+The partition key\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-iot-topicrule-kinesisaction-rolearn"></a>
-The ARN of the IAM role that grants access to the Amazon Kinesis stream\.  
-*Required*: Yes  
-*Type*: String  
+The ARN of the IAM role that grants access to the Amazon Kinesis stream\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StreamName`  <a name="cfn-iot-topicrule-kinesisaction-streamname"></a>
-The name of the Amazon Kinesis stream\.  
-*Required*: Yes  
-*Type*: String  
+The name of the Amazon Kinesis stream\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

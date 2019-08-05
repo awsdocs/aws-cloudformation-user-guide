@@ -27,8 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-events-rule-kinesisparameters-properties"></a>
 
 `PartitionKeyPath`  <a name="cfn-events-rule-kinesisparameters-partitionkeypath"></a>
-The JSON path to be extracted from the event and used as the partition key\. For more information, see [Partition Key](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) in the *Amazon Kinesis Data Streams Developer Guide*\.  
-*Required*: Yes  
-*Type*: String  
-*Maximum*: `256`  
+The JSON path to be extracted from the event and used as the partition key\. For more information, see [Partition Key](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) in the *Amazon Kinesis Data Streams Developer Guide*\.
+*Required*: Yes
+*Type*: String
+*Maximum*: `256`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

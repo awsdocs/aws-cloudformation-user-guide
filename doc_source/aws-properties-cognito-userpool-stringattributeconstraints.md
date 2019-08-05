@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cognito-userpool-stringattributeconstraints-properties"></a>
 
 `MaxLength`  <a name="cfn-cognito-userpool-stringattributeconstraints-maxlength"></a>
-The maximum length\.  
-*Required*: No  
-*Type*: String  
+The maximum length\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinLength`  <a name="cfn-cognito-userpool-stringattributeconstraints-minlength"></a>
-The minimum length\.  
-*Required*: No  
-*Type*: String  
+The minimum length\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

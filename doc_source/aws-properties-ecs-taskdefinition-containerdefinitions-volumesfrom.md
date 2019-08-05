@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-taskdefinition-containerdefinitions-volumesfrom-properties"></a>
 
 `ReadOnly`  <a name="cfn-ecs-taskdefinition-containerdefinition-volumesfrom-readonly"></a>
-If this value is `true`, the container has read\-only access to the volume\. If this value is `false`, then the container can write to the volume\. The default value is `false`\.  
-*Required*: No  
-*Type*: Boolean  
+If this value is `true`, the container has read\-only access to the volume\. If this value is `false`, then the container can write to the volume\. The default value is `false`\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceContainer`  <a name="cfn-ecs-taskdefinition-containerdefinition-volumesfrom-sourcecontainer"></a>
-The name of another container within the same task definition from which to mount volumes\.  
-*Required*: No  
-*Type*: String  
+The name of another container within the same task definition from which to mount volumes\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

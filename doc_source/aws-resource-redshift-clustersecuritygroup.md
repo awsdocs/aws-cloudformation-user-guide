@@ -24,24 +24,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Redshift::ClusterSecurityGroup
-Properties: 
+Properties:
   [Description](#cfn-redshift-clustersecuritygroup-description): String
-  [Tags](#cfn-redshift-clustersecuritygroup-tags): 
+  [Tags](#cfn-redshift-clustersecuritygroup-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-redshift-clustersecuritygroup-properties"></a>
 
 `Description`  <a name="cfn-redshift-clustersecuritygroup-description"></a>
-A description for the security group\.  
-*Required*: Yes  
-*Type*: String  
+A description for the security group\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-redshift-clustersecuritygroup-tags"></a>
-Specifies an arbitrary set of tags \(key–value pairs\) to associate with this security group\. Use tags to manage your resources\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+Specifies an arbitrary set of tags \(key–value pairs\) to associate with this security group\. Use tags to manage your resources\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-redshift-clustersecuritygroup-return-values"></a>
@@ -50,7 +50,7 @@ Specifies an arbitrary set of tags \(key–value pairs\) to associate with this 
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
 
- `{ "Ref": "myClusterSecurityGroup" }` 
+ `{ "Ref": "myClusterSecurityGroup" }`
 
 For the Amazon Redshift cluster security group `myClusterSecurityGroup`, Ref returns the name of the cluster security group\.
 
@@ -82,9 +82,9 @@ The following example describes an Amazon Redshift cluster security group that y
 #### YAML<a name="aws-resource-redshift-clustersecuritygroup--examples--Specify_a_Cluster_Security_Group--yaml"></a>
 
 ```
-myClusterSecurityGroup: 
+myClusterSecurityGroup:
   Type: "AWS::Redshift::ClusterSecurityGroup"
-  Properties: 
+  Properties:
     Description: "Security group to determine where connections to the Amazon Redshift cluster can come from"
     Tags:
       - Key: foo

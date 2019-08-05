@@ -23,8 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisanalytics-application-jsonmappingparameters-properties"></a>
 
 `RecordRowPath`  <a name="cfn-kinesisanalytics-application-jsonmappingparameters-recordrowpath"></a>
-Path to the top\-level parent that contains the records\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
+Path to the top\-level parent that contains the records\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

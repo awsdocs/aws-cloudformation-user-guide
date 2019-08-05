@@ -13,7 +13,7 @@ An AWS CloudFormation template is a JSON or YAML formatted text file\. You can s
 
 For example, if you created a stack with the following template, AWS CloudFormation provisions an instance with an `ami-0ff8a91507f77f867` AMI ID, `t2.micro` instance type, `testkey` key pair name, and an Amazon EBS volume\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
 {
@@ -43,7 +43,7 @@ For example, if you created a stack with the following template, AWS CloudFormat
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"
@@ -51,7 +51,7 @@ Description: A sample template
 Resources:
   MyEC2Instance:
     Type: "AWS::EC2::Instance"
-    Properties: 
+    Properties:
       ImageId: "ami-0ff8a91507f77f867"
       InstanceType: t2.micro
       KeyName: testkey
@@ -67,7 +67,7 @@ Resources:
 
 You can also specify multiple resources in a single template and configure these resources to work together\. For example, you can modify the previous template to include an Elastic IP \(EIP\) and associate it with the Amazon EC2 instance, as shown in the following example:
 
-**Example JSON**  
+**Example JSON**
 
 ```
 {
@@ -103,7 +103,7 @@ You can also specify multiple resources in a single template and configure these
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"
@@ -111,7 +111,7 @@ Description: A sample template
 Resources:
   MyEC2Instance:
     Type: "AWS::EC2::Instance"
-    Properties: 
+    Properties:
       ImageId: "ami-0ff8a91507f77f867"
       InstanceType: t2.micro
       KeyName: testkey

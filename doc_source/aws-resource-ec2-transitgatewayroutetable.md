@@ -22,8 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::TransitGatewayRouteTable
-Properties: 
-  [Tags](#cfn-ec2-transitgatewayroutetable-tags): 
+Properties:
+  [Tags](#cfn-ec2-transitgatewayroutetable-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TransitGatewayId](#cfn-ec2-transitgatewayroutetable-transitgatewayid): String
 ```
@@ -31,15 +31,15 @@ Properties:
 ## Properties<a name="aws-resource-ec2-transitgatewayroutetable-properties"></a>
 
 `Tags`  <a name="cfn-ec2-transitgatewayroutetable-tags"></a>
-Any tags assigned to the route table\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+Any tags assigned to the route table\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TransitGatewayId`  <a name="cfn-ec2-transitgatewayroutetable-transitgatewayid"></a>
-The ID of the transit gateway\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the transit gateway\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-transitgatewayroutetable-return-values"></a>

@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Logs::LogStream
-Properties: 
+Properties:
   [LogGroupName](#cfn-logs-logstream-loggroupname): String
   [LogStreamName](#cfn-logs-logstream-logstreamname): String
 ```
@@ -37,21 +37,21 @@ Properties:
 ## Properties<a name="aws-resource-logs-logstream-properties"></a>
 
 `LogGroupName`  <a name="cfn-logs-logstream-loggroupname"></a>
-The name of the log group where the log stream is created\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `512`  
-*Pattern*: `[\.\-_/#A-Za-z0-9]+`  
+The name of the log group where the log stream is created\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `512`
+*Pattern*: `[\.\-_/#A-Za-z0-9]+`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LogStreamName`  <a name="cfn-logs-logstream-logstreamname"></a>
-The name of the log stream\. The name must be unique within the log group\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `512`  
-*Pattern*: `[^:*]*`  
+The name of the log stream\. The name must be unique within the log group\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `512`
+*Pattern*: `[^:*]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-logs-logstream-return-values"></a>
@@ -83,9 +83,9 @@ The following example creates a log stream named `MyAppLogStream` in the `exampl
 #### YAML<a name="aws-resource-logs-logstream--examples--Create_a_Log_Stream--yaml"></a>
 
 ```
-LogStream: 
+LogStream:
   Type: AWS::Logs::LogStream
-  Properties: 
+  Properties:
     LogGroupName: "exampleLogGroup"
     LogStreamName: "MyAppLogStream"
 ```

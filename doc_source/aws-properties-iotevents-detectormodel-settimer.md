@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotevents-detectormodel-settimer-properties"></a>
 
 `Seconds`  <a name="cfn-iotevents-detectormodel-settimer-seconds"></a>
-The number of seconds until the timer expires\. The minimum value is 60 seconds to ensure accuracy\.  
-*Required*: No  
-*Type*: Integer  
+The number of seconds until the timer expires\. The minimum value is 60 seconds to ensure accuracy\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimerName`  <a name="cfn-iotevents-detectormodel-settimer-timername"></a>
-The name of the timer\.  
-*Required*: No  
-*Type*: String  
+The name of the timer\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

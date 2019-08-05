@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGatewayV2::RouteResponse
-Properties: 
+Properties:
   [ApiId](#cfn-apigatewayv2-routeresponse-apiid): String
   [ModelSelectionExpression](#cfn-apigatewayv2-routeresponse-modelselectionexpression): String
   [ResponseModels](#cfn-apigatewayv2-routeresponse-responsemodels): Json
@@ -38,39 +38,39 @@ Properties:
 ## Properties<a name="aws-resource-apigatewayv2-routeresponse-properties"></a>
 
 `ApiId`  <a name="cfn-apigatewayv2-routeresponse-apiid"></a>
-The API identifier\.  
-*Required*: Yes  
-*Type*: String  
+The API identifier\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ModelSelectionExpression`  <a name="cfn-apigatewayv2-routeresponse-modelselectionexpression"></a>
-The model selection expression for the route response\.  
-*Required*: No  
-*Type*: String  
+The model selection expression for the route response\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResponseModels`  <a name="cfn-apigatewayv2-routeresponse-responsemodels"></a>
-The response models for the route response\.  
-*Required*: No  
-*Type*: Json  
+The response models for the route response\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResponseParameters`  <a name="cfn-apigatewayv2-routeresponse-responseparameters"></a>
-The route response parameters\.  
-*Required*: No  
-*Type*: Json  
+The route response parameters\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RouteId`  <a name="cfn-apigatewayv2-routeresponse-routeid"></a>
-The route ID\.  
-*Required*: Yes  
-*Type*: String  
+The route ID\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RouteResponseKey`  <a name="cfn-apigatewayv2-routeresponse-routeresponsekey"></a>
-The route response key\.  
-*Required*: Yes  
-*Type*: String  
+The route response key\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-apigatewayv2-routeresponse-return-values"></a>

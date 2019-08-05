@@ -23,8 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-taskdefinition-repositorycredentials-properties"></a>
 
 `CredentialsParameter`  <a name="cfn-ecs-taskdefinition-repositorycredentials-credentialsparameter"></a>
-The Amazon Resource Name \(ARN\) of the secret containing the private repository credentials\.  
+The Amazon Resource Name \(ARN\) of the secret containing the private repository credentials\.
 When you are using the Amazon ECS API, AWS CLI, or AWS SDK, if the secret exists in the same Region as the task that you are launching then you can use either the full ARN or the name of the secret\. When you are using the AWS Management Console, you must specify the full ARN of the secret\.
-*Required*: No  
-*Type*: String  
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

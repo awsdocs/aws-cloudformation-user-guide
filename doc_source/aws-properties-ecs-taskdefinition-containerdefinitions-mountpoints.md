@@ -27,19 +27,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-taskdefinition-containerdefinitions-mountpoints-properties"></a>
 
 `ContainerPath`  <a name="cfn-ecs-taskdefinition-containerdefinition-mountpoints-containerpath"></a>
-The path on the container to mount the host volume at\.  
-*Required*: No  
-*Type*: String  
+The path on the container to mount the host volume at\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ReadOnly`  <a name="cfn-ecs-taskdefinition-containerdefinition-mountpoints-readonly"></a>
-If this value is `true`, the container has read\-only access to the volume\. If this value is `false`, then the container can write to the volume\. The default value is `false`\.  
-*Required*: No  
-*Type*: Boolean  
+If this value is `true`, the container has read\-only access to the volume\. If this value is `false`, then the container can write to the volume\. The default value is `false`\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceVolume`  <a name="cfn-ecs-taskdefinition-containerdefinition-mountpoints-sourcevolume"></a>
-The name of the volume to mount\. Must be a volume name referenced in the `name` parameter of task definition `volume`\.  
-*Required*: No  
-*Type*: String  
+The name of the volume to mount\. Must be a volume name referenced in the `name` parameter of task definition `volume`\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

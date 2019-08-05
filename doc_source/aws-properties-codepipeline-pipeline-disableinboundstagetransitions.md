@@ -25,19 +25,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codepipeline-pipeline-disableinboundstagetransitions-properties"></a>
 
 `Reason`  <a name="cfn-codepipeline-pipeline-disableinboundstagetransitions-reason"></a>
-The reason given to the user why a stage is disabled, such as waiting for manual approval or manual tests\. This message is displayed in the pipeline console UI\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `300`  
-*Pattern*: `[a-zA-Z0-9!@ \(\)\.\*\?\-]+`  
+The reason given to the user why a stage is disabled, such as waiting for manual approval or manual tests\. This message is displayed in the pipeline console UI\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `300`
+*Pattern*: `[a-zA-Z0-9!@ \(\)\.\*\?\-]+`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StageName`  <a name="cfn-codepipeline-pipeline-disableinboundstagetransitions-stagename"></a>
-The name of the stage where you want to disable the inbound or outbound transition of artifacts\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
-*Pattern*: `[A-Za-z0-9.@\-_]+`  
+The name of the stage where you want to disable the inbound or outbound transition of artifacts\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
+*Pattern*: `[A-Za-z0-9.@\-_]+`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

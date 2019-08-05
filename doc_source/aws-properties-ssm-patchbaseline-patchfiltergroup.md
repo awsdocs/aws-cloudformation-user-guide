@@ -19,15 +19,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ssm-patchbaseline-patchfiltergroup-syntax.yaml"></a>
 
 ```
-  [PatchFilters](#cfn-ssm-patchbaseline-patchfiltergroup-patchfilters): 
+  [PatchFilters](#cfn-ssm-patchbaseline-patchfiltergroup-patchfilters):
     - [PatchFilter](aws-properties-ssm-patchbaseline-patchfilter.md)
 ```
 
 ## Properties<a name="aws-properties-ssm-patchbaseline-patchfiltergroup-properties"></a>
 
 `PatchFilters`  <a name="cfn-ssm-patchbaseline-patchfiltergroup-patchfilters"></a>
-The set of patch filters that make up the group\.  
-*Required*: No  
-*Type*: List of [PatchFilter](aws-properties-ssm-patchbaseline-patchfilter.md)  
-*Maximum*: `4`  
+The set of patch filters that make up the group\.
+*Required*: No
+*Type*: List of [PatchFilter](aws-properties-ssm-patchbaseline-patchfilter.md)
+*Maximum*: `4`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

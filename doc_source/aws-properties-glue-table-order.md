@@ -25,16 +25,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-glue-table-order-properties"></a>
 
 `Column`  <a name="cfn-glue-table-order-column"></a>
-The name of the column\.  
-*Required*: Yes  
-*Type*: [String](aws-properties-glue-table-column.md)  
+The name of the column\.
+*Required*: Yes
+*Type*: [String](aws-properties-glue-table-column.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SortOrder`  <a name="cfn-glue-table-order-sortorder"></a>
-Indicates that the column is sorted in ascending order \(`== 1`\), or in descending order \(`==0`\)\.  
-*Required*: Yes  
-*Type*: Integer  
+Indicates that the column is sorted in ascending order \(`== 1`\), or in descending order \(`==0`\)\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-glue-table-order--seealso"></a>
-+  [Order Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-Order) in the *AWS Glue Developer Guide* 
++  [Order Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-Order) in the *AWS Glue Developer Guide*

@@ -22,8 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::WAFRegional::GeoMatchSet
-Properties: 
-  [GeoMatchConstraints](#cfn-wafregional-geomatchset-geomatchconstraints): 
+Properties:
+  [GeoMatchConstraints](#cfn-wafregional-geomatchset-geomatchconstraints):
     - [GeoMatchConstraint](aws-properties-wafregional-geomatchset-geomatchconstraint.md)
   [Name](#cfn-wafregional-geomatchset-name): String
 ```
@@ -31,17 +31,17 @@ Properties:
 ## Properties<a name="aws-resource-wafregional-geomatchset-properties"></a>
 
 `GeoMatchConstraints`  <a name="cfn-wafregional-geomatchset-geomatchconstraints"></a>
-An array of `GeoMatchConstraint` objects, which contain the country that you want AWS WAF to search for\.  
-*Required*: No  
-*Type*: List of [GeoMatchConstraint](aws-properties-wafregional-geomatchset-geomatchconstraint.md)  
+An array of `GeoMatchConstraint` objects, which contain the country that you want AWS WAF to search for\.
+*Required*: No
+*Type*: List of [GeoMatchConstraint](aws-properties-wafregional-geomatchset-geomatchconstraint.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-wafregional-geomatchset-name"></a>
-A friendly name or description of the [AWS::WAFRegional::GeoMatchSet](#aws-resource-wafregional-geomatchset)\. You can't change the name of an `GeoMatchSet` after you create it\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
+A friendly name or description of the [AWS::WAFRegional::GeoMatchSet](#aws-resource-wafregional-geomatchset)\. You can't change the name of an `GeoMatchSet` after you create it\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-wafregional-geomatchset-return-values"></a>
@@ -75,22 +75,22 @@ The following example defines a set of GeoMatchConstraints for a web access cont
         "Value" : "ZW"
       }
     ]
-  }      
+  }
 }
 ```
 
 #### YAML<a name="aws-resource-wafregional-geomatchset--examples--Define_Geographic_Constraints--yaml"></a>
 
 ```
-MyGeoConstraints: 
+MyGeoConstraints:
   Type: "AWS::WAFRegional::GeoMatchSet"
-  Properties: 
+  Properties:
     Name: "GeoMatchSet for restricted countries"
-    GeoMatchConstraints: 
-      - 
+    GeoMatchConstraints:
+      -
         Type: "Country"
         Value: "AE"
-      - 
+      -
         Type: "Country"
     Value: "AE"
 ```
@@ -114,21 +114,21 @@ The following example associates the `MyGeoConstraints` with a web ACL rule\.
         "Type" : "GeoMatch"
       }
     ]
-  }      
+  }
 }
 ```
 
 #### YAML<a name="aws-resource-wafregional-geomatchset--examples--Associate_a_GeoMatchSet_with_a_Web_ACL_Rule--yaml"></a>
 
 ```
-MyGeoMatchRule: 
+MyGeoMatchRule:
   Type: "AWS::WAFRegional::Rule"
-  Properties: 
+  Properties:
     Name: "MyGeoMatchRule"
     MetricName: "MyGeoMatchRule"
-    Predicates: 
-      - 
-        DataId: 
+    Predicates:
+      -
+        DataId:
           Ref: "MyGeoConstraints"
         Negated: false
     Type: "GeoMatch"
@@ -158,25 +158,25 @@ The following example associates the `MyGeoMatchRule` rule with a web ACL\. The 
         "RuleId" : { "Ref" : "MyGeoMatchRule" }
       }
     ]
-  }      
+  }
 }
 ```
 
 #### YAML<a name="aws-resource-wafregional-geomatchset--examples--Create_a_Web_ACL--yaml"></a>
 
 ```
-MyWebACL: 
+MyWebACL:
   Type: "AWS::WAFRegional::WebACL"
-  Properties: 
+  Properties:
     Name: "WebACL to block restricted countries"
-    DefaultAction: 
+    DefaultAction:
       Type: "ALLOW"
     MetricName: "MyWebACL"
-    Rules: 
-      - 
-        Action: 
+    Rules:
+      -
+        Action:
           Type: "BLOCK"
         Priority: 1
-        RuleId: 
+        RuleId:
     Ref: "MyGeoMatchRule"
 ```

@@ -52,6 +52,6 @@ After you have fixed the underlying cause of the stack creation failure, and you
 
 **Problem:**A stack deletion has failed\.
 
-**Cause:**Stack deletion will fail for any stacks on which termination protection has been enabled\. 
+**Cause:**Stack deletion will fail for any stacks on which termination protection has been enabled\.
 
 **Solution:**Determine if termination protection has been enabled for the stack\. If it has, disable termination protection and then perform the stack instance deletion again\.

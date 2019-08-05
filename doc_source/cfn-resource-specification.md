@@ -4,32 +4,32 @@ The AWS CloudFormation resource specification is a JSON\-formatted text file tha
 
 The resource specification is organized as both a single file and as a series of files, where each file contains the definition of one resource type\. The single and separated files contain identical information\. Depending on the tool and your implementation, use the file or files that work for you\.
 
-To download the resource specification, see the following table\. 
+To download the resource specification, see the following table\.
 
 Resource availability may vary by region\. To check the availability of a resource in a given region, refer to the resource specification for that region\.
 
 
-**Resource Specification**  
+**Resource Specification**
 
-|  Region Name  |  Region  |  Single File  |  All Files  | 
-| --- | --- | --- | --- | 
-|  Asia Pacific \(Mumbai\)  |  ap\-south\-1  |  [\.json](https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d2senuesg1djtx.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
-|  Asia Pacific \(Osaka\-Local\)  |  ap\-northeast\-3  |  [\.json](https://d2zq80gdmjim8k.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d2zq80gdmjim8k.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
-|  Asia Pacific \(Seoul\)  |  ap\-northeast\-2  |  [\.json](https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d1ane3fvebulky.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
-|  Asia Pacific \(Singapore\)  |  ap\-southeast\-1  |  [\.json](https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://doigdx0kgq9el.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
-|  Asia Pacific \(Sydney\)  |  ap\-southeast\-2  |  [\.json](https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d2stg8d246z9di.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
-|  Asia Pacific \(Tokyo\)  |  ap\-northeast\-1  |  [\.json](https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d33vqc0rt9ld30.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
-|  Canada \(Central\)  |  ca\-central\-1  |  [\.json](https://d2s8ygphhesbe7.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d2s8ygphhesbe7.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
-|  EU \(Frankfurt\)  |  eu\-central\-1  |  [\.json](https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d1mta8qj7i28i2.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
-|  EU \(Ireland\)  |  eu\-west\-1  |  [\.json](https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d3teyb21fexa9r.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
-|  EU \(London\)  |  eu\-west\-2  |  [\.json](https://d1742qcu2c1ncx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d1742qcu2c1ncx.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
-|  EU \(Paris\)  |  eu\-west\-3  |  [\.json](https://d2d0mfegowb3wk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d2d0mfegowb3wk.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
-|  EU \(Stockholm\)  |  eu\-north\-1  |  [\.json](https://diy8iv58sj6ba.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://diy8iv58sj6ba.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
-|  South America \(São Paulo\)  |  sa\-east\-1  |  [\.json](https://d3c9jyj3w509b0.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d3c9jyj3w509b0.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
-|  US East \(N\. Virginia\)  |  us\-east\-1  |  [\.json](https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d1uauaxba7bl26.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
-|  US East \(Ohio\)  |  us\-east\-2  |  [\.json](https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://dnwj8swjjbsbt.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
-|  US West \(N\. California\)  |  us\-west\-1  |  [\.json](https://d68hl49wbnanq.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d68hl49wbnanq.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
-|  US West \(Oregon\)  |  us\-west\-2  |  [\.json](https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d201a2mn26r7lk.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
+|  Region Name  |  Region  |  Single File  |  All Files  |
+| --- | --- | --- | --- |
+|  Asia Pacific \(Mumbai\)  |  ap\-south\-1  |  [\.json](https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d2senuesg1djtx.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  |
+|  Asia Pacific \(Osaka\-Local\)  |  ap\-northeast\-3  |  [\.json](https://d2zq80gdmjim8k.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d2zq80gdmjim8k.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  |
+|  Asia Pacific \(Seoul\)  |  ap\-northeast\-2  |  [\.json](https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d1ane3fvebulky.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  |
+|  Asia Pacific \(Singapore\)  |  ap\-southeast\-1  |  [\.json](https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://doigdx0kgq9el.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  |
+|  Asia Pacific \(Sydney\)  |  ap\-southeast\-2  |  [\.json](https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d2stg8d246z9di.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  |
+|  Asia Pacific \(Tokyo\)  |  ap\-northeast\-1  |  [\.json](https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d33vqc0rt9ld30.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  |
+|  Canada \(Central\)  |  ca\-central\-1  |  [\.json](https://d2s8ygphhesbe7.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d2s8ygphhesbe7.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  |
+|  EU \(Frankfurt\)  |  eu\-central\-1  |  [\.json](https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d1mta8qj7i28i2.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  |
+|  EU \(Ireland\)  |  eu\-west\-1  |  [\.json](https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d3teyb21fexa9r.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  |
+|  EU \(London\)  |  eu\-west\-2  |  [\.json](https://d1742qcu2c1ncx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d1742qcu2c1ncx.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  |
+|  EU \(Paris\)  |  eu\-west\-3  |  [\.json](https://d2d0mfegowb3wk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d2d0mfegowb3wk.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  |
+|  EU \(Stockholm\)  |  eu\-north\-1  |  [\.json](https://diy8iv58sj6ba.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://diy8iv58sj6ba.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  |
+|  South America \(São Paulo\)  |  sa\-east\-1  |  [\.json](https://d3c9jyj3w509b0.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d3c9jyj3w509b0.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  |
+|  US East \(N\. Virginia\)  |  us\-east\-1  |  [\.json](https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d1uauaxba7bl26.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  |
+|  US East \(Ohio\)  |  us\-east\-2  |  [\.json](https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://dnwj8swjjbsbt.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  |
+|  US West \(N\. California\)  |  us\-west\-1  |  [\.json](https://d68hl49wbnanq.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d68hl49wbnanq.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  |
+|  US West \(Oregon\)  |  us\-west\-2  |  [\.json](https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d201a2mn26r7lk.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  |
 
 The following example shows the specification for an AWS Key Management Service key resource \(`AWS::KMS::Key`\)\. It shows the properties for the `AWS::KMS::Key` resource, which properties are required, the type of allowed value for each property, and their update behavior\. For details about the specification, see [Specification Format](cfn-resource-specification-format.md)\.
 

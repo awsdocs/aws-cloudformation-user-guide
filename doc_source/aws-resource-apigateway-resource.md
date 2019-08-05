@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::Resource
-Properties: 
+Properties:
   [ParentId](#cfn-apigateway-resource-parentid): String
   [PathPart](#cfn-apigateway-resource-pathpart): String
   [RestApiId](#cfn-apigateway-resource-restapiid): String
@@ -32,21 +32,21 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-resource-properties"></a>
 
 `ParentId`  <a name="cfn-apigateway-resource-parentid"></a>
-If you want to create a child resource, the ID of the parent resource\. For resources without a parent, specify the `RestApi` root resource ID, such as `{ "Fn::GetAtt": ["MyRestApi", "RootResourceId"] }`\.  
-*Required*: Yes  
-*Type*: String  
+If you want to create a child resource, the ID of the parent resource\. For resources without a parent, specify the `RestApi` root resource ID, such as `{ "Fn::GetAtt": ["MyRestApi", "RootResourceId"] }`\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PathPart`  <a name="cfn-apigateway-resource-pathpart"></a>
-A path name for the resource\.  
-*Required*: Yes  
-*Type*: String  
+A path name for the resource\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RestApiId`  <a name="cfn-apigateway-resource-restapiid"></a>
-The ID of the [RestApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html) resource in which you want to create this resource\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the [RestApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html) resource in which you want to create this resource\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-apigateway-resource-return-values"></a>
@@ -92,7 +92,7 @@ Stack:
   Type: 'AWS::ApiGateway::Resource'
   Properties:
     RestApiId: !Ref MyApi
-    ParentId: !GetAtt 
+    ParentId: !GetAtt
       - MyApi
       - RootResourceId
     PathPart: stack

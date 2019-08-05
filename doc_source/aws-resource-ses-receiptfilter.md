@@ -21,17 +21,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SES::ReceiptFilter
-Properties: 
-  [Filter](#cfn-ses-receiptfilter-filter): 
+Properties:
+  [Filter](#cfn-ses-receiptfilter-filter):
     [Filter](aws-properties-ses-receiptfilter-filter.md)
 ```
 
 ## Properties<a name="aws-resource-ses-receiptfilter-properties"></a>
 
 `Filter`  <a name="cfn-ses-receiptfilter-filter"></a>
-A data structure that describes the IP address filter that you want to specify\. This object consists of a name, an IP address range, and a boolean that indicates whether to allow or block mail from the IP range\.  
-*Required*: Yes  
-*Type*: [Filter](aws-properties-ses-receiptfilter-filter.md)  
+A data structure that describes the IP address filter that you want to specify\. This object consists of a name, an IP address range, and a boolean that indicates whether to allow or block mail from the IP range\.
+*Required*: Yes
+*Type*: [Filter](aws-properties-ses-receiptfilter-filter.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Examples<a name="aws-resource-ses-receiptfilter--examples"></a>

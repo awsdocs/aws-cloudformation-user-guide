@@ -1,12 +1,12 @@
 # Get Started<a name="GettingStarted.Walkthrough"></a>
 
-With the right template, you can deploy at once all the AWS resources you need for an application\. In this section, you'll examine a template that declares the resources for a WordPress blog, creates a WordPress blog as a stack, monitors the stack creation process, examines the resources on the stack, and then deletes the stack\. You use the AWS Management Console to complete these tasks\. 
+With the right template, you can deploy at once all the AWS resources you need for an application\. In this section, you'll examine a template that declares the resources for a WordPress blog, creates a WordPress blog as a stack, monitors the stack creation process, examines the resources on the stack, and then deletes the stack\. You use the AWS Management Console to complete these tasks\.
 
 ## Step 1: Pick a template<a name="GettingStarted.Walkthrough.PickTemplate"></a>
 
 First, you'll need a template that specifies the resources that you want in your stack\. For this step, you use a sample template that is already prepared\. The sample template creates a basic WordPress blog that uses a single Amazon EC2 instance with a local MySQL database for storage\. The template also creates an Amazon EC2 security group to control firewall settings for the Amazon EC2 instance\.
 
-**Important**  
+**Important**
 AWS CloudFormation is free, but the AWS resources that AWS CloudFormation creates are live \(and not running in a sandbox\)\. You will incur the standard usage fees for these resources until you terminate them in the last task in this tutorial\. The total charges will be minimal\. For information about how you might minimize any charges, go to [http://aws\.amazon\.com/free/](http://aws.amazon.com/free/)\.
 
 **To view the template**
@@ -14,13 +14,13 @@ AWS CloudFormation is free, but the AWS resources that AWS CloudFormation create
 
 A template is a JSON or YAML text file that contains the configuration information about the AWS resources you want to create in the stack\. For this walkthrough, the sample template includes six top\-level sections: `AWSTemplateFormatVersion`, `Description`, `Parameters`, `Mappings`, `Resources`, and `Outputs`; however, only the `Resources` section is required\.
 
-The Resources section contains the definitions of the AWS resources you want to create with the template\. Each resource is listed separately and specifies the properties that are necessary for creating that particular resource\. The following resource declaration is the configuration for the EC2 instance, which in this example has the logical name `WebServer`: 
+The Resources section contains the definitions of the AWS resources you want to create with the template\. Each resource is listed separately and specifies the properties that are necessary for creating that particular resource\. The following resource declaration is the configuration for the EC2 instance, which in this example has the logical name `WebServer`:
 
-**Example JSON**  
+**Example JSON**
 
 ```
  1. "Resources" : {
- 2.   ...    
+ 2.   ...
  3.   "WebServer": {
  4.     "Type" : "AWS::EC2::Instance",
  5.     "Properties": {
@@ -32,13 +32,13 @@ The Resources section contains the definitions of the AWS resources you want to 
 11.       "UserData" : { "Fn::Base64" : { "Fn::Join" : ["", [
 12.                      "#!/bin/bash -xe\n",
 13.                      "yum update -y aws-cfn-bootstrap\n",
-14. 
+14.
 15.                      "/opt/aws/bin/cfn-init -v ",
 16.                      "         --stack ", { "Ref" : "AWS::StackName" },
 17.                      "         --resource WebServer ",
 18.                      "         --configsets wordpress_install ",
 19.                      "         --region ", { "Ref" : "AWS::Region" }, "\n",
-20. 
+20.
 21.                      "/opt/aws/bin/cfn-signal -e $? ",
 22.                      "         --stack ", { "Ref" : "AWS::StackName" },
 23.                      "         --resource WebServer ",
@@ -47,7 +47,7 @@ The Resources section contains the definitions of the AWS resources you want to 
 26.     },
 27.     ...
 28.   },
-29.   ...  
+29.   ...
 30.   "WebServerSecurityGroup" : {
 31.     "Type" : "AWS::EC2::SecurityGroup",
 32.     "Properties" : {
@@ -58,19 +58,19 @@ The Resources section contains the definitions of the AWS resources you want to 
 37.       ]
 38.     }
 39.   },
-40.   ...    
+40.   ...
 41. },
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
- 1. Resources: 
- 2.   ...    
+ 1. Resources:
+ 2.   ...
  3.   WebServer:
  4.     Type: AWS::EC2::Instance
  5.     Properties:
- 6.       ImageId: !FindInMap [AWSRegionArch2AMI, !Ref 'AWS::Region', !FindInMap [AWSInstanceType2Arch, !Ref InstanceType, Arch]]      
+ 6.       ImageId: !FindInMap [AWSRegionArch2AMI, !Ref 'AWS::Region', !FindInMap [AWSInstanceType2Arch, !Ref InstanceType, Arch]]
  7.       InstanceType:
  8.         Ref: InstanceType
  9.       KeyName:
@@ -85,7 +85,7 @@ The Resources section contains the definitions of the AWS resources you want to 
 18.            /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackId} --resource WebServer --region ${AWS::Region}
 19.     ...
 20.   ...
-21.   
+21.
 22.   WebServerSecurityGroup:
 23.     Type: AWS::EC2::SecurityGroup
 24.     Properties:
@@ -99,7 +99,7 @@ The Resources section contains the definitions of the AWS resources you want to 
 32.         FromPort: '22'
 33.         IpProtocol: tcp
 34.         ToPort: '22'
-35. 
+35.
 36.   ...
 ```
 
@@ -111,17 +111,17 @@ You use the *Parameters* section to declare values that can be passed to the tem
 
 The following parameters are used in the template to specify values that are used in properties of the EC2 instance:
 
-**Example JSON**  
+**Example JSON**
 
 ```
  1. "Parameters" : {
- 2.   ...      
+ 2.   ...
  3.   "KeyName": {
  4.     "Description" : "Name of an existing EC2 KeyPair to enable SSH access to the instances",
  5.     "Type": "AWS::EC2::KeyPair::KeyName",
  6.     "ConstraintDescription" : "must be the name of an existing EC2 KeyPair."
  7.   },
- 8. 
+ 8.
  9.   "InstanceType" : {
 10.     "Description" : "WebServer EC2 instance type",
 11.     "Type" : "String",
@@ -132,11 +132,11 @@ The following parameters are used in the template to specify values that are use
 16. ...
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
  1. Parameters:
- 2.   ...      
+ 2.   ...
  3.   KeyName:
  4.     ConstraintDescription: must be the name of an existing EC2 KeyPair.
  5.     Description: Name of an existing EC2 KeyPair to enable SSH access to the instances
@@ -206,7 +206,7 @@ The following parameters are used in the template to specify values that are use
 
 In the `WebServer` resource declaration, you see the `KeyName` property specified with the `KeyName` parameter:
 
-**Example JSON**  
+**Example JSON**
 
 ```
 1. "WebServer" : {
@@ -218,7 +218,7 @@ In the `WebServer` resource declaration, you see the `KeyName` property specifie
 7. },
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 1. WebServer:
@@ -233,7 +233,7 @@ The braces contain a call to the [Ref](intrinsic-function-reference-ref.md) func
 
 The Ref function can also set a resource's property to the value of another resource\. For example, the resource declaration `WebServer` contains the following property declaration:
 
-**Example JSON**  
+**Example JSON**
 
 ```
 1. "WebServer" : {
@@ -246,7 +246,7 @@ The Ref function can also set a resource's property to the value of another reso
 8. },
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 1. WebServer:
@@ -271,9 +271,9 @@ The example WordPress template contains an input parameter, `KeyName`, that spec
 
 Make sure you have a valid Amazon EC2 key pair and record the key pair name before you create the stack\.
 
-To see your key pairs, open the Amazon EC2 console, then click **Key Pairs** in the navigation pane\. 
+To see your key pairs, open the Amazon EC2 console, then click **Key Pairs** in the navigation pane\.
 
-**Note**  
+**Note**
 If you don't have an Amazon EC2 key pair, you must create the key pair in the same region where you are creating the stack\. For information about creating a key pair, see [Getting an SSH Key Pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) in the *Amazon EC2 User Guide for Linux Instances*\.
 
 Now that you have a valid key pair, let's use the WordPress template to create a stack\.
@@ -291,18 +291,18 @@ You will create your stack based on the *WordPress\-1\.0\.0* file discussed earl
 1. In the **Template** section, select **Specify an Amazon S3 Template URL** to type or paste the URL for the sample WordPress template, and then click **Next**:
 
    `https://s3-us-west-2.amazonaws.com/cloudformation-templates-us-west-2/WordPress_Single_Instance.template`
-**Note**  
+**Note**
 AWS CloudFormation templates that are stored in an S3 bucket must be accessible to the user who is creating the stack, and must be located in the *same region* as the stack that is being created\. Therefore, if the S3 bucket is located in the `us-east-2` Region, the stack must also be created in `us-east-2`\.
 
 1. In the **Specify Details** section, enter a stack name in the **Name** field\. For this example, use **MyWPTestStack**\. The stack name cannot contain spaces\.
 
 1. In the **KeyName** field, enter the name of a valid Amazon EC2 key pair in the same region you are creating the stack\.
-**Note**  
+**Note**
 On the **Specify Parameters** page, you'll recognize the parameters from the Parameters section of the template\.
 
 1. Click **Next**\.
 
-1. In this scenario, we won't add any tags\. Click **Next**\. Tags, which are key\-value pairs, can help you identify your stacks\. For more information, see [ Adding Tags to Your AWS CloudFormation Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide//cfn-console-add-tags.html)\. 
+1. In this scenario, we won't add any tags\. Click **Next**\. Tags, which are key\-value pairs, can help you identify your stacks\. For more information, see [ Adding Tags to Your AWS CloudFormation Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide//cfn-console-add-tags.html)\.
 
 1. Review the information for the stack\. When you're satisfied with the settings, click **Create**\.
 

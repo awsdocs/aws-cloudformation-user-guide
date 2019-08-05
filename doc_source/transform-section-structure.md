@@ -1,6 +1,6 @@
 # Transform<a name="transform-section-structure"></a>
 
-The optional `Transform` section specifies one or more macros that AWS CloudFormation uses to process your template\. The `Transform` section builds on the simple, declarative language of AWS CloudFormation with a powerful macro system\. 
+The optional `Transform` section specifies one or more macros that AWS CloudFormation uses to process your template\. The `Transform` section builds on the simple, declarative language of AWS CloudFormation with a powerful macro system\.
 
 You can declare one or more macros within a template\. AWS CloudFormation executes macros in the order that they are specified\. When you create a change set, AWS CloudFormation generates a change set that includes the processed template content\. You can then review the changes and execute the change set\. For more information, see [Using AWS CloudFormation Macros to Perform Custom Processing on Templates](template-macros.md)\.
 
@@ -14,19 +14,19 @@ For example, in the template sample below, AWS CloudFormation evaluates `MyMacro
 
 ```
 // Start of processable content for MyMacro and AWS::Serverless
-AWSTemplateFormatVersion: 2010-09-09 
+AWSTemplateFormatVersion: 2010-09-09
  Transform: [MyMacro, AWS::Serverless]
  Resources:
     WaitCondition:
       Type: AWS::CloudFormation::WaitCondition
     MyBucket:
-      Type: 'AWS::S3::Bucket'  
+      Type: 'AWS::S3::Bucket'
       Properties:
-        BucketName: MyBucket 
-        Tags: [{"key":"value"}] 
-        CorsConfiguration:[]   
+        BucketName: MyBucket
+        Tags: [{"key":"value"}]
+        CorsConfiguration:[]
     MyEc2Instance:
-      Type: 'AWS::EC2::Instance' 
+      Type: 'AWS::EC2::Instance'
       Properties:
         ImageID: "ami-123"
 // End of processable content for MyMacro and AWS::Serverless

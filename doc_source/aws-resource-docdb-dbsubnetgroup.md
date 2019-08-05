@@ -1,6 +1,6 @@
 # AWS::DocDB::DBSubnetGroup<a name="aws-resource-docdb-dbsubnetgroup"></a>
 
-The `AWS::DocDB::DBSubnetGroup` Amazon DocumentDB \(with MongoDB compatibility\) resource describes a DBSubnetGroup\. DB subnet groups must contain at least one subnet in at least two Availability Zones in the AWS Region\. For more information, see [DBSubnetGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DBSubnetGroup.html) in the *Amazon DocumentDB Developer Guide*\. 
+The `AWS::DocDB::DBSubnetGroup` Amazon DocumentDB \(with MongoDB compatibility\) resource describes a DBSubnetGroup\. DB subnet groups must contain at least one subnet in at least two Availability Zones in the AWS Region\. For more information, see [DBSubnetGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DBSubnetGroup.html) in the *Amazon DocumentDB Developer Guide*\.
 
 ## Syntax<a name="aws-resource-docdb-dbsubnetgroup-syntax"></a>
 
@@ -24,41 +24,41 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DocDB::DBSubnetGroup
-Properties: 
+Properties:
   [DBSubnetGroupDescription](#cfn-docdb-dbsubnetgroup-dbsubnetgroupdescription): String
   [DBSubnetGroupName](#cfn-docdb-dbsubnetgroup-dbsubnetgroupname): String
-  [SubnetIds](#cfn-docdb-dbsubnetgroup-subnetids): 
+  [SubnetIds](#cfn-docdb-dbsubnetgroup-subnetids):
     - String
-  [Tags](#cfn-docdb-dbsubnetgroup-tags): 
+  [Tags](#cfn-docdb-dbsubnetgroup-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-docdb-dbsubnetgroup-properties"></a>
 
 `DBSubnetGroupDescription`  <a name="cfn-docdb-dbsubnetgroup-dbsubnetgroupdescription"></a>
-The description for the DB subnet group\.  
-*Required*: Yes  
-*Type*: String  
+The description for the DB subnet group\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DBSubnetGroupName`  <a name="cfn-docdb-dbsubnetgroup-dbsubnetgroupname"></a>
-The name for the DB subnet group\. This value is stored as a lowercase string\.  
-Constraints: Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens\. Must not be default\.  
-Example: `mySubnetgroup`   
-*Required*: No  
-*Type*: String  
+The name for the DB subnet group\. This value is stored as a lowercase string\.
+Constraints: Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens\. Must not be default\.
+Example: `mySubnetgroup`
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-docdb-dbsubnetgroup-subnetids"></a>
-The Amazon EC2 subnet IDs for the DB subnet group\.  
-*Required*: Yes  
-*Type*: List of String  
+The Amazon EC2 subnet IDs for the DB subnet group\.
+*Required*: Yes
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-docdb-dbsubnetgroup-tags"></a>
-The tags to be assigned to the DB subnet group\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+The tags to be assigned to the DB subnet group\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-docdb-dbsubnetgroup-return-values"></a>
@@ -95,24 +95,24 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"
-Resources: 
-   myDBSubnetGroup: 
+Resources:
+   myDBSubnetGroup:
       Type: "AWS::DocDB::DBSubnetGroup"
-      Properties: 
+      Properties:
          DBSubnetGroupDescription: "description"
-         SubnetIds: 
+         SubnetIds:
             - "subnet-7b5b4112"
             - "subnet-7b5b4115"
-         Tags: 
-            - 
+         Tags:
+            -
                Key: "String"
                Value: "String"
 ```
 
 ## See Also<a name="aws-resource-docdb-dbsubnetgroup--seealso"></a>
-+  [Subnet](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_Subnet.html) 
-+  [DBSubnetGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DBSubnetGroup.html) 
-+  [CreateDBSubnetGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBSubnetGroup.html) 
-+  [DeleteDBSubnetGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DeleteDBSubnetGroup.html) 
-+  [DescribeDBSubnetGroups](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DescribeDBSubnetGroups.html) 
-+  [ModifyDBSubnetGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_ModifyDBSubnetGroup.html) 
++  [Subnet](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_Subnet.html)
++  [DBSubnetGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DBSubnetGroup.html)
++  [CreateDBSubnetGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBSubnetGroup.html)
++  [DeleteDBSubnetGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DeleteDBSubnetGroup.html)
++  [DescribeDBSubnetGroups](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DescribeDBSubnetGroups.html)
++  [ModifyDBSubnetGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_ModifyDBSubnetGroup.html)

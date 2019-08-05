@@ -6,15 +6,15 @@ You can delete stack instances from a stack set in either the AWS Management Con
 
 1. Open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
-1. At the top of the page, choose **StackSets**\. On the StackSets home page, select the stack set that you created in [Create a New Stack Set](stacksets-getting-started-create.md)\. In this walkthrough, we created a stack set named `my-awsconfig-stackset`\.  
+1. At the top of the page, choose **StackSets**\. On the StackSets home page, select the stack set that you created in [Create a New Stack Set](stacksets-getting-started-create.md)\. In this walkthrough, we created a stack set named `my-awsconfig-stackset`\.
 ![\[Select stack set\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/stacksets_my_awsconfig.png)
 
 1. With the stack set selected, choose **Manage stacks in stack set** from the **Actions** menu\.
 
-1. Choose **Delete stacks**, and then choose **Next**\.  
+1. Choose **Delete stacks**, and then choose **Next**\.
 ![\[Manage stacks in stack set, Delete stacks selected\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/stacksets_manage_delete.png)
 
-1. On the **Set deployment options** page, in the **Accounts** area, choose **Delete stacks from account**\.  
+1. On the **Set deployment options** page, in the **Accounts** area, choose **Delete stacks from account**\.
 ![\[Delete stacks from all accounts\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/stacksets_delete_accounts.png)
 
 1. In the **Delete stacks from account** text box, paste all target account IDs that you used to create your stack set in [Create a New Stack Set](stacksets-getting-started-create.md)\.

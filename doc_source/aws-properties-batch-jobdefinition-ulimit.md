@@ -27,19 +27,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-batch-jobdefinition-ulimit-properties"></a>
 
 `HardLimit`  <a name="cfn-batch-jobdefinition-ulimit-hardlimit"></a>
-The hard limit for the `ulimit` type\.  
-*Required*: Yes  
-*Type*: Integer  
+The hard limit for the `ulimit` type\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-batch-jobdefinition-ulimit-name"></a>
-The `type` of the `ulimit`\.  
-*Required*: Yes  
-*Type*: String  
+The `type` of the `ulimit`\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SoftLimit`  <a name="cfn-batch-jobdefinition-ulimit-softlimit"></a>
-The soft limit for the `ulimit` type\.  
-*Required*: Yes  
-*Type*: Integer  
+The soft limit for the `ulimit` type\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -27,24 +27,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotanalytics-pipeline-addattributes-properties"></a>
 
 `Attributes`  <a name="cfn-iotanalytics-pipeline-addattributes-attributes"></a>
-A list of 1\-50 "AttributeNameMapping" objects that map an existing attribute to a new attribute\.  
+A list of 1\-50 "AttributeNameMapping" objects that map an existing attribute to a new attribute\.
 The existing attributes remain in the message, so if you want to remove the originals, use "RemoveAttributeActivity"\.
-*Required*: No  
-*Type*: Json  
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-iotanalytics-pipeline-addattributes-name"></a>
-The name of the 'addAttributes' activity\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
+The name of the 'addAttributes' activity\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Next`  <a name="cfn-iotanalytics-pipeline-addattributes-next"></a>
-The next activity in the pipeline\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
+The next activity in the pipeline\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

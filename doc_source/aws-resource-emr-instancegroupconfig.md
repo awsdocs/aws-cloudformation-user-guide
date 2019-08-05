@@ -30,13 +30,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EMR::InstanceGroupConfig
-Properties: 
-  [AutoScalingPolicy](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy): 
+Properties:
+  [AutoScalingPolicy](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy):
     [AutoScalingPolicy](aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy.md)
   [BidPrice](#cfn-emr-instancegroupconfig-bidprice): String
-  [Configurations](#cfn-emr-instancegroupconfig-configurations): 
+  [Configurations](#cfn-emr-instancegroupconfig-configurations):
     - [Configuration](aws-properties-emr-cluster-configuration.md)
-  [EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration): 
+  [EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration):
     [EbsConfiguration](aws-properties-emr-ebsconfiguration.md)
   [InstanceCount](#cfn-emr-instancegroupconfiginstancecount-): Integer
   [InstanceRole](#cfn-emr-instancegroupconfig-instancerole): String
@@ -49,76 +49,76 @@ Properties:
 ## Properties<a name="aws-resource-emr-instancegroupconfig-properties"></a>
 
 `AutoScalingPolicy`  <a name="cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy"></a>
-`AutoScalingPolicy` is a subproperty of `InstanceGroupConfig`\. `AutoScalingPolicy` defines how an instance group dynamically adds and terminates EC2 instances in response to the value of a CloudWatch metric\. For more information, see [Using Automatic Scaling in Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html) in the *Amazon EMR Management Guide*\.  
-*Required*: No  
-*Type*: [AutoScalingPolicy](aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy.md)  
+`AutoScalingPolicy` is a subproperty of `InstanceGroupConfig`\. `AutoScalingPolicy` defines how an instance group dynamically adds and terminates EC2 instances in response to the value of a CloudWatch metric\. For more information, see [Using Automatic Scaling in Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html) in the *Amazon EMR Management Guide*\.
+*Required*: No
+*Type*: [AutoScalingPolicy](aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BidPrice`  <a name="cfn-emr-instancegroupconfig-bidprice"></a>
-The maximum Spot price your are willing to pay for EC2 instances\.  
-If `BidPrice` is specified, Amazon EMR uses Spot Instances for the instance group\. Specified in USD\. Alternatively, a value of `OnDemandPrice` indicates that the maximum Spot price is set equal to the On\-Demand price\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `256`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+The maximum Spot price your are willing to pay for EC2 instances\.
+If `BidPrice` is specified, Amazon EMR uses Spot Instances for the instance group\. Specified in USD\. Alternatively, a value of `OnDemandPrice` indicates that the maximum Spot price is set equal to the On\-Demand price\.
+*Required*: No
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `256`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Configurations`  <a name="cfn-emr-instancegroupconfig-configurations"></a>
 Amazon EMR releases 4\.x or later\.
-The list of configurations supplied for an EMR cluster instance group\. You can specify a separate configuration for each instance group \(master, core, and task\)\.  
-*Required*: No  
-*Type*: List of [Configuration](aws-properties-emr-cluster-configuration.md)  
+The list of configurations supplied for an EMR cluster instance group\. You can specify a separate configuration for each instance group \(master, core, and task\)\.
+*Required*: No
+*Type*: List of [Configuration](aws-properties-emr-cluster-configuration.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EbsConfiguration`  <a name="cfn-emr-instancegroupconfig-ebsconfiguration"></a>
-`EbsConfiguration` determines the EBS volumes to attach to EMR cluster instances\.  
-*Required*: No  
-*Type*: [EbsConfiguration](aws-properties-emr-ebsconfiguration.md)  
+`EbsConfiguration` determines the EBS volumes to attach to EMR cluster instances\.
+*Required*: No
+*Type*: [EbsConfiguration](aws-properties-emr-ebsconfiguration.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceCount`  <a name="cfn-emr-instancegroupconfiginstancecount-"></a>
-Target number of instances for the instance group\.  
-*Required*: Yes  
-*Type*: Integer  
+Target number of instances for the instance group\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceRole`  <a name="cfn-emr-instancegroupconfig-instancerole"></a>
-The role of the instance group in the cluster\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `CORE | MASTER | TASK`  
+The role of the instance group in the cluster\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `CORE | MASTER | TASK`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceType`  <a name="cfn-emr-instancegroupconfig-instancetype"></a>
-The EC2 instance type for all instances in the instance group\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `256`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+The EC2 instance type for all instances in the instance group\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `256`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `JobFlowId`  <a name="cfn-emr-instancegroupconfig-jobflowid"></a>
-The ID of an Amazon EMR cluster that you want to associate this instance group with\.  
-*Required*: Yes  
-*Type*: String  
+The ID of an Amazon EMR cluster that you want to associate this instance group with\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Market`  <a name="cfn-emr-instancegroupconfig-market"></a>
-Market type of the EC2 instances used to create a cluster node\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `ON_DEMAND | SPOT`  
+Market type of the EC2 instances used to create a cluster node\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `ON_DEMAND | SPOT`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-emr-instancegroupconfig-name"></a>
-Friendly name given to the instance group\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `256`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+Friendly name given to the instance group\.
+*Required*: No
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `256`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-emr-instancegroupconfig-return-values"></a>
@@ -158,12 +158,12 @@ The following example adds a task instance group to a cluster named `TestCluster
 #### YAML<a name="aws-resource-emr-instancegroupconfig--examples--Add_a_task_instance_group--yaml"></a>
 
 ```
-TestInstanceGroupConfig: 
-  Properties: 
+TestInstanceGroupConfig:
+  Properties:
     InstanceCount: 2
     InstanceRole: TASK
     InstanceType: m3.xlarge
-    JobFlowId: 
+    JobFlowId:
       Ref: cluster
     Market: ON_DEMAND
     Name: cfnTask2

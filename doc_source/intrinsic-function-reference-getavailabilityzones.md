@@ -2,8 +2,8 @@
 
 The intrinsic function `Fn::GetAZs` returns an array that lists Availability Zones for a specified region\. Because customers have access to different Availability Zones, the intrinsic function `Fn::GetAZs` enables template authors to write templates that adapt to the calling user's access\. That way you don't have to hard\-code a full list of Availability Zones for a specified region\.
 
-**Important**  
-For the EC2\-Classic platform, the `Fn::GetAZs` function returns all Availability Zones for a region\. For the [EC2\-VPC](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-platforms.html) platform, the `Fn::GetAZs` function returns only Availability Zones that have a default subnet unless none of the Availability Zones has a default subnet; in that case, all Availability Zones are returned\.  
+**Important**
+For the EC2\-Classic platform, the `Fn::GetAZs` function returns all Availability Zones for a region\. For the [EC2\-VPC](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-platforms.html) platform, the `Fn::GetAZs` function returns only Availability Zones that have a default subnet unless none of the Availability Zones has a default subnet; in that case, all Availability Zones are returned\.
 Similarly to the response from the `describe-availability-zones` AWS CLI command, the order of the results from the `Fn::GetAZs` function is not guaranteed and can change when new Availability Zones are added\.
 
 IAM permissions
@@ -34,8 +34,8 @@ Syntax for the short form:
 
 ## Parameters<a name="w4784ab1c21c24c36c13"></a>
 
-region  
-The name of the region for which you want to get the Availability Zones\.  
+region
+The name of the region for which you want to get the Availability Zones\.
 You can use the `AWS::Region` pseudo parameter to specify the region in which the stack is created\. Specifying an empty string is equivalent to specifying `AWS::Region`\.
 
 ## Return Value<a name="w4784ab1c21c24c36c15"></a>
@@ -79,16 +79,16 @@ The following example uses `Fn::GetAZs` to specify a subnet's Availability Zone:
 "mySubnet" : {
   "Type" : "AWS::EC2::Subnet",
   "Properties" : {
-    "VpcId" : { 
-      "Ref" : "VPC"   
+    "VpcId" : {
+      "Ref" : "VPC"
     },
     "CidrBlock" : "10.0.0.0/24",
     "AvailabilityZone" : {
-      "Fn::Select" : [ 
-        "0", 
-        { 
-          "Fn::GetAZs" : "" 
-        } 
+      "Fn::Select" : [
+        "0",
+        {
+          "Fn::GetAZs" : ""
+        }
       ]
     }
   }
@@ -98,14 +98,14 @@ The following example uses `Fn::GetAZs` to specify a subnet's Availability Zone:
 #### YAML<a name="intrinsic-function-reference-getazs-example.yaml"></a>
 
 ```
-mySubnet: 
+mySubnet:
   Type: "AWS::EC2::Subnet"
-  Properties: 
-    VpcId: 
+  Properties:
+    VpcId:
       !Ref VPC
     CidrBlock: 10.0.0.0/24
-    AvailabilityZone: 
-      Fn::Select: 
+    AvailabilityZone:
+      Fn::Select:
         - 0
         - Fn::GetAZs: ""
 ```
@@ -119,16 +119,16 @@ The following examples show valid patterns for using nested intrinsic functions 
 #### YAML<a name="intrinsic-function-reference-select-example3.yaml"></a>
 
 ```
-1. AvailabilityZone: !Select 
+1. AvailabilityZone: !Select
 2.   - 0
-3.   - !GetAZs 
+3.   - !GetAZs
 4.     Ref: 'AWS::Region'
 ```
 
 #### YAML<a name="intrinsic-function-reference-select-example4.yaml"></a>
 
 ```
-1. AvailabilityZone: !Select 
+1. AvailabilityZone: !Select
 2.   - 0
 3.   - Fn::GetAZs: !Ref 'AWS::Region'
 ```

@@ -2,7 +2,7 @@
 
 The intrinsic function `Fn::Select` returns a single object from a list of objects by index\.
 
-**Important**  
+**Important**
 Fn::Select does not check for null values or if the index is out of bounds of the array\. Both conditions will result in a stack error, so you should be certain that the index you choose is valid, and that the list contains non\-null values\.
 
 ## Declaration<a name="w4784ab1c21c24c51b7"></a>
@@ -18,7 +18,7 @@ Fn::Select does not check for null values or if the index is out of bounds of th
 Syntax for the full function name:
 
 ```
-Fn::Select: [ index, listOfObjects ] 
+Fn::Select: [ index, listOfObjects ]
 ```
 
 Syntax for the short form:
@@ -29,10 +29,10 @@ Syntax for the short form:
 
 ## Parameters<a name="w4784ab1c21c24c51b9"></a>
 
-index  
+index
 The index of the object to retrieve\. This must be a value from zero to N\-1, where N represents the number of elements in the array\.
 
-listOfObjects  
+listOfObjects
 The list of objects to select from\. This list must not be null, nor can it have null entries\.
 
 ## Return Value<a name="w4784ab1c21c24c51c11"></a>
@@ -78,8 +78,8 @@ You can use `Fn::Select` to select an object from a `CommaDelimitedList` paramet
 #### YAML<a name="intrinsic-function-reference-select-example1.yaml"></a>
 
 ```
-1. Parameters: 
-2.   DbSubnetIpBlocks: 
+1. Parameters:
+2.   DbSubnetIpBlocks:
 3.     Description: "Comma-delimited list of three CIDR blocks"
 4.     Type: CommaDelimitedList
 5.     Default: "10.0.48.0/24, 10.0.112.0/24, 10.0.176.0/24"
@@ -102,9 +102,9 @@ To specify one of the three CIDR blocks, use `Fn::Select` in the Resources secti
 #### YAML<a name="intrinsic-function-reference-select-example2.yaml"></a>
 
 ```
-Subnet0: 
+Subnet0:
   Type: "AWS::EC2::Subnet"
-  Properties: 
+  Properties:
     VpcId: !Ref VPC
     CidrBlock: !Select [ 0, !Ref DbSubnetIpBlocks ]
 ```
@@ -118,16 +118,16 @@ The following examples show valid patterns for using nested intrinsic functions 
 #### YAML<a name="intrinsic-function-reference-select-example3.yaml"></a>
 
 ```
-1. AvailabilityZone: !Select 
+1. AvailabilityZone: !Select
 2.   - 0
-3.   - !GetAZs 
+3.   - !GetAZs
 4.     Ref: 'AWS::Region'
 ```
 
 #### YAML<a name="intrinsic-function-reference-select-example4.yaml"></a>
 
 ```
-1. AvailabilityZone: !Select 
+1. AvailabilityZone: !Select
 2.   - 0
 3.   - Fn::GetAZs: !Ref 'AWS::Region'
 ```

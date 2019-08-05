@@ -19,18 +19,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-greengrass-functiondefinition-defaultconfig-syntax.yaml"></a>
 
 ```
-  [Execution](#cfn-greengrass-functiondefinition-defaultconfig-execution): 
+  [Execution](#cfn-greengrass-functiondefinition-defaultconfig-execution):
     [Execution](aws-properties-greengrass-functiondefinition-execution.md)
 ```
 
 ## Properties<a name="aws-properties-greengrass-functiondefinition-defaultconfig-properties"></a>
 
 `Execution`  <a name="cfn-greengrass-functiondefinition-defaultconfig-execution"></a>
-Configuration settings for the Lambda execution environment on the AWS IoT Greengrass core\.  
-*Required*: Yes  
-*Type*: [Execution](aws-properties-greengrass-functiondefinition-execution.md)  
+Configuration settings for the Lambda execution environment on the AWS IoT Greengrass core\.
+*Required*: Yes
+*Type*: [Execution](aws-properties-greengrass-functiondefinition-execution.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-greengrass-functiondefinition-defaultconfig--seealso"></a>
-+  [FunctionDefaultConfig](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functiondefaultconfig.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [FunctionDefaultConfig](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functiondefaultconfig.html) in the * AWS IoT Greengrass API Reference *
++  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)

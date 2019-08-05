@@ -35,15 +35,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DeleteOnTermination](#cfn-ec2-launchtemplate-networkinterface-deleteontermination): Boolean
   [Description](#cfn-ec2-launchtemplate-networkinterface-description): String
   [DeviceIndex](#cfn-ec2-launchtemplate-networkinterface-deviceindex): Integer
-  [Groups](#cfn-ec2-launchtemplate-networkinterface-groups): 
+  [Groups](#cfn-ec2-launchtemplate-networkinterface-groups):
     - String
   [InterfaceType](#cfn-ec2-launchtemplate-networkinterface-interfacetype): String
   [Ipv6AddressCount](#cfn-ec2-launchtemplate-networkinterface-ipv6addresscount): Integer
-  [Ipv6Addresses](#cfn-ec2-launchtemplate-networkinterface-ipv6addresses): 
+  [Ipv6Addresses](#cfn-ec2-launchtemplate-networkinterface-ipv6addresses):
     - [Ipv6Add](aws-properties-ec2-launchtemplate-ipv6add.md)
   [NetworkInterfaceId](#cfn-ec2-launchtemplate-networkinterface-networkinterfaceid): String
   [PrivateIpAddress](#cfn-ec2-launchtemplate-networkinterface-privateipaddress): String
-  [PrivateIpAddresses](#cfn-ec2-launchtemplate-networkinterface-privateipaddresses): 
+  [PrivateIpAddresses](#cfn-ec2-launchtemplate-networkinterface-privateipaddresses):
     - [PrivateIpAdd](aws-properties-ec2-launchtemplate-privateipadd.md)
   [SecondaryPrivateIpAddressCount](#cfn-ec2-launchtemplate-networkinterface-secondaryprivateipaddresscount): Integer
   [SubnetId](#cfn-ec2-launchtemplate-networkinterface-subnetid): String
@@ -52,84 +52,84 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-launchtemplate-networkinterface-properties"></a>
 
 `AssociatePublicIpAddress`  <a name="cfn-ec2-launchtemplate-networkinterface-associatepublicipaddress"></a>
-Associates a public IPv4 address with eth0 for a new network interface\.  
-*Required*: No  
-*Type*: Boolean  
+Associates a public IPv4 address with eth0 for a new network interface\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeleteOnTermination`  <a name="cfn-ec2-launchtemplate-networkinterface-deleteontermination"></a>
-Indicates whether the network interface is deleted when the instance is terminated\.  
-*Required*: No  
-*Type*: Boolean  
+Indicates whether the network interface is deleted when the instance is terminated\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-ec2-launchtemplate-networkinterface-description"></a>
-A description for the network interface\.  
-*Required*: No  
-*Type*: String  
+A description for the network interface\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeviceIndex`  <a name="cfn-ec2-launchtemplate-networkinterface-deviceindex"></a>
-The device index for the network interface attachment\.  
-*Required*: No  
-*Type*: Integer  
+The device index for the network interface attachment\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Groups`  <a name="cfn-ec2-launchtemplate-networkinterface-groups"></a>
-The IDs of one or more security groups\.  
-*Required*: No  
-*Type*: List of String  
+The IDs of one or more security groups\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InterfaceType`  <a name="cfn-ec2-launchtemplate-networkinterface-interfacetype"></a>
-The type of network interface\. To create an Elastic Fabric Adapter \(EFA\), specify `efa`\. For more information, see [Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
-If you are not creating an EFA, specify `interface` or omit this parameter\.  
-Valid values: `interface` \| `efa`   
-*Required*: No  
-*Type*: String  
+The type of network interface\. To create an Elastic Fabric Adapter \(EFA\), specify `efa`\. For more information, see [Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+If you are not creating an EFA, specify `interface` or omit this parameter\.
+Valid values: `interface` \| `efa`
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Ipv6AddressCount`  <a name="cfn-ec2-launchtemplate-networkinterface-ipv6addresscount"></a>
-The number of IPv6 addresses to assign to a network interface\. Amazon EC2 automatically selects the IPv6 addresses from the subnet range\. You can't use this option if specifying specific IPv6 addresses\.  
-*Required*: No  
-*Type*: Integer  
+The number of IPv6 addresses to assign to a network interface\. Amazon EC2 automatically selects the IPv6 addresses from the subnet range\. You can't use this option if specifying specific IPv6 addresses\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Ipv6Addresses`  <a name="cfn-ec2-launchtemplate-networkinterface-ipv6addresses"></a>
-One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet\. You can't use this option if you're specifying a number of IPv6 addresses\.  
-*Required*: No  
-*Type*: List of [Ipv6Add](aws-properties-ec2-launchtemplate-ipv6add.md)  
+One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet\. You can't use this option if you're specifying a number of IPv6 addresses\.
+*Required*: No
+*Type*: List of [Ipv6Add](aws-properties-ec2-launchtemplate-ipv6add.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkInterfaceId`  <a name="cfn-ec2-launchtemplate-networkinterface-networkinterfaceid"></a>
-The ID of the network interface\.  
-*Required*: No  
-*Type*: String  
+The ID of the network interface\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrivateIpAddress`  <a name="cfn-ec2-launchtemplate-networkinterface-privateipaddress"></a>
-The primary private IPv4 address of the network interface\.  
-*Required*: No  
-*Type*: String  
+The primary private IPv4 address of the network interface\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrivateIpAddresses`  <a name="cfn-ec2-launchtemplate-networkinterface-privateipaddresses"></a>
-One or more private IPv4 addresses\.  
-*Required*: No  
-*Type*: List of [PrivateIpAdd](aws-properties-ec2-launchtemplate-privateipadd.md)  
+One or more private IPv4 addresses\.
+*Required*: No
+*Type*: List of [PrivateIpAdd](aws-properties-ec2-launchtemplate-privateipadd.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecondaryPrivateIpAddressCount`  <a name="cfn-ec2-launchtemplate-networkinterface-secondaryprivateipaddresscount"></a>
-The number of secondary private IPv4 addresses to assign to a network interface\.  
-*Required*: No  
-*Type*: Integer  
+The number of secondary private IPv4 addresses to assign to a network interface\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetId`  <a name="cfn-ec2-launchtemplate-networkinterface-subnetid"></a>
-The ID of the subnet for the network interface\.  
-*Required*: No  
-*Type*: String  
+The ID of the subnet for the network interface\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-ec2-launchtemplate-networkinterface--seealso"></a>
-+  [ LaunchTemplateInstanceNetworkInterfaceSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateInstanceNetworkInterfaceSpecificationRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
++  [ LaunchTemplateInstanceNetworkInterfaceSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateInstanceNetworkInterfaceSpecificationRequest.html) in the *Amazon Elastic Compute Cloud API Reference*

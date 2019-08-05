@@ -6,7 +6,7 @@ Amazon Redshift is a fully managed, petabyte\-scale data warehouse service in th
 
 The following sample template creates an Amazon Redshift cluster according to the parameter values that are specified when the stack is created\. The cluster parameter group that is associated with the Amazon Redshift cluster enables user activity logging\. The template also launches the Amazon Redshift clusters in an Amazon VPC that is defined in the template\. The VPC includes an internet gateway so that you can access the Amazon Redshift clusters from the Internet\. However, the communication between the cluster and the Internet gateway must also be enabled, which is done by the route table entry\.
 
-**Note**  
+**Note**
 The template includes the `IsMultiNodeCluster` condition so that the `NumberOfNodes` parameter is declared only when the `ClusterType` parameter value is set to `multi-node`\.
 
 ### JSON<a name="quickref-redshift-example-1.json"></a>
@@ -37,7 +37,7 @@ The template includes the `IsMultiNodeCluster` condition so that the `NumberOfNo
       "Type" : "String",
       "Default" : "ds2.xlarge",
       "AllowedValues" : [ "ds2.xlarge", "ds2.8xlarge", "dc1.large", "dc1.8xlarge" ]
-    }, 
+    },
     "MasterUsername" : {
       "Description" : "The user name that is associated with the master user account for the cluster that is being created",
       "Type" : "String",
@@ -66,7 +66,7 @@ The template includes the `IsMultiNodeCluster` condition so that the `NumberOfNo
   },
   "Conditions" : {
     "IsMultiNodeCluster" : {
-      "Fn::Equals" : [{ "Ref" : "ClusterType" }, "multi-node" ]        
+      "Fn::Equals" : [{ "Ref" : "ClusterType" }, "multi-node" ]
     }
   },
   "Resources" : {
@@ -79,7 +79,7 @@ The template includes the `IsMultiNodeCluster` condition so that the `NumberOfNo
         "NodeType" : { "Ref" : "NodeType" },
         "DBName" : { "Ref" : "DatabaseName" },
         "MasterUsername" : { "Ref" : "MasterUsername" },
-        "MasterUserPassword" : { "Ref" : "MasterUserPassword" },               
+        "MasterUserPassword" : { "Ref" : "MasterUserPassword" },
         "ClusterParameterGroupName" : { "Ref" : "RedshiftClusterParameterGroup" },
         "VpcSecurityGroupIds" : [ { "Ref" : "SecurityGroup" } ],
         "ClusterSubnetGroupName" : { "Ref" : "RedshiftClusterSubnetGroup" },

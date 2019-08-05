@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-taskdefinition-containerdefinitions-hostentry-properties"></a>
 
 `Hostname`  <a name="cfn-ecs-taskdefinition-containerdefinition-hostentry-hostname"></a>
-The hostname to use in the `/etc/hosts` entry\.  
-*Required*: Yes  
-*Type*: String  
+The hostname to use in the `/etc/hosts` entry\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IpAddress`  <a name="cfn-ecs-taskdefinition-containerdefinition-hostentry-ipaddress"></a>
-The IP address to use in the `/etc/hosts` entry\.  
-*Required*: Yes  
-*Type*: String  
+The IP address to use in the `/etc/hosts` entry\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

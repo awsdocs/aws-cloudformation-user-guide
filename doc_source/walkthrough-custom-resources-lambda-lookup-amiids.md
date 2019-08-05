@@ -16,7 +16,7 @@ After AWS CloudFormation gets a response in the pre\-signed URL location, it pro
 
 The following list summarizes the process\. You need AWS Identity and Access Management \(IAM\) permissions to use all the corresponding services, such as Lambda, Amazon EC2, and AWS CloudFormation\.
 
-**Note**  
+**Note**
 AWS CloudFormation is a free service; however, you are charged for the AWS resources, such as the Lambda function and EC2 instance, that you include in your stacks at the current rate for each\. For more information about AWS pricing, see the detail page for each product at [http://aws\.amazon\.com](http://aws.amazon.com)\.
 
 1. [Save the sample Lambda package in an Amazon Simple Storage Service \(Amazon S3\) bucket\.](#walkthrough-custom-resources-lambda-lookup-amiids-savesample)
@@ -41,10 +41,10 @@ The function takes an instance's architecture and region as inputs from an AWS C
 
 **To download and save the package in Amazon S3**
 
-1. Download the sample package from Amazon S3\. When you save the file, use the same file name as the sample, `amilookup.zip` or `amilookup-win.zip`\.  
-**Look up Linux AMI IDs**  
-[https://s3\.amazonaws\.com/cloudformation\-examples/lambda/amilookup\.zip](https://s3.amazonaws.com/cloudformation-examples/lambda/amilookup.zip)  
-**Look up Windows AMI IDs**  
+1. Download the sample package from Amazon S3\. When you save the file, use the same file name as the sample, `amilookup.zip` or `amilookup-win.zip`\.
+**Look up Linux AMI IDs**
+[https://s3\.amazonaws\.com/cloudformation\-examples/lambda/amilookup\.zip](https://s3.amazonaws.com/cloudformation-examples/lambda/amilookup.zip)
+**Look up Windows AMI IDs**
 [https://s3\.amazonaws\.com/cloudformation\-examples/lambda/amilookup\-win\.zip](https://s3.amazonaws.com/cloudformation-examples/lambda/amilookup-win.zip)
 
 1. Open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/home](https://console.aws.amazon.com/s3/home)\.
@@ -67,17 +67,17 @@ During stack creation, the custom resource invokes the Lambda function and waits
 
 The following snippets explain relevant parts of the sample template to help you understand how to associate a Lambda function with a custom resource and how to use the function's response\. To view the entire sample template, see:
 
-**Linux template**  
+**Linux template**
 [https://s3\.amazonaws\.com/cloudformation\-examples/lambda/LambdaAMILookupSample\.template](https://s3.amazonaws.com/cloudformation-examples/lambda/LambdaAMILookupSample.template)
 
-**Windows template**  
+**Windows template**
 [https://s3\.amazonaws\.com/cloudformation\-examples/lambda/LambdaAMILookupSample\-win\.template](https://s3.amazonaws.com/cloudformation-examples/lambda/LambdaAMILookupSample-win.template)
 
 Stack Template Snippets
 
 To create the Lambda function, you declare the `AWS::Lambda::Function` resource, which requires the function's source code, handler name, runtime environment, and execution role ARN\.
 
-**Example JSON Syntax**  
+**Example JSON Syntax**
 
 ```
 "AMIInfoFunction": {
@@ -95,7 +95,7 @@ To create the Lambda function, you declare the `AWS::Lambda::Function` resource,
 }
 ```
 
-**Example YAML Syntax**  
+**Example YAML Syntax**
 
 ```
 AMIInfoFunction:
@@ -116,7 +116,7 @@ For this walkthrough, the execution time for the function exceeds the default va
 
 The execution role, which is declared elsewhere in the template, is specified by using the `Fn::GetAtt` intrinsic function in the `Role` property\. The execution role grants the Lambda function permission to send logs to AWS and to call the EC2 `DescribeImages` API\. The following snippet shows the role and policy that grant the appropriate permission:
 
-**Example JSON Syntax**  
+**Example JSON Syntax**
 
 ```
 "LambdaExecutionRole": {
@@ -151,7 +151,7 @@ The execution role, which is declared elsewhere in the template, is specified by
 }
 ```
 
-**Example YAML Syntax**  
+**Example YAML Syntax**
 
 ```
 LambdaExecutionRole:
@@ -186,7 +186,7 @@ LambdaExecutionRole:
 
 For both the Linux and Windows templates, the custom resource invokes the Lambda function that is associated with it\. To associate a function with a custom resource, you specify the Amazon Resource Name \(ARN\) of the function for the `ServiceToken` property, using the `Fn::GetAtt` intrinsic function\. AWS CloudFormation sends the additional properties that are included in the custom resource declaration, such as `Region` and `Architecture`, to the Lambda function as inputs\. The Lambda function determines the correct names and values for these input properties\.
 
-**Example JSON Syntax**  
+**Example JSON Syntax**
 
 ```
 "AMIInfo": {
@@ -199,7 +199,7 @@ For both the Linux and Windows templates, the custom resource invokes the Lambda
 }
 ```
 
-**Example YAML Syntax**  
+**Example YAML Syntax**
 
 ```
 AMIInfo:
@@ -216,7 +216,7 @@ AMIInfo:
 
 For Windows, the custom resource provides the Windows version to the Lambda function instead of the instance's architecture\.
 
-**Example JSON Syntax**  
+**Example JSON Syntax**
 
 ```
 "AMIInfo": {
@@ -229,7 +229,7 @@ For Windows, the custom resource provides the Windows version to the Lambda func
 }
 ```
 
-**Example YAML Syntax**  
+**Example YAML Syntax**
 
 ```
 AMIInfo:
@@ -245,17 +245,17 @@ When AWS CloudFormation invokes the Lambda function, the function calls the EC2 
 When returning the ID of the latest AMI, the function sends the ID to a pre\-signed URL in the `Data` property of the [response object](crpg-ref-responses.md)\. The data is structured as a name\-value pair, as shown in the following example:
 
 ```
-"Data": { 
+"Data": {
   "Id": "ami-43795473"
 }
 ```
 
 The following snippet shows how to get the data from a Lambda function\. It uses the `Fn::GetAtt` intrinsic function, providing the name of the custom resource and the attribute name of the value that you want to get\. In this walkthrough, the custom resource name is `AMIInfo` and the attribute name is `Id`\.
 
-**Example JSON Syntax**  
+**Example JSON Syntax**
 
 ```
-"SampleInstance": {  
+"SampleInstance": {
   "Type": "AWS::EC2::Instance",
   "Properties": {
     "InstanceType"   : { "Ref" : "InstanceType" },
@@ -264,7 +264,7 @@ The following snippet shows how to get the data from a Lambda function\. It uses
 }
 ```
 
-**Example YAML Syntax**  
+**Example YAML Syntax**
 
 ```
 SampleInstance:
@@ -282,10 +282,10 @@ Now that you understand what the template does, use the sample template to creat
 
 1. Choose **Create Stack**\.
 
-1. In the **Template** section, choose **Specify an Amazon S3 template URL**, and then copy and paste the following URL in the text box:  
-**Linux template**  
-`[https://s3\.amazonaws\.com/cloudformation\-examples/lambda/LambdaAMILookupSample\.template](https://s3.amazonaws.com/cloudformation-examples/lambda/LambdaAMILookupSample.template)`  
-**Windows template**  
+1. In the **Template** section, choose **Specify an Amazon S3 template URL**, and then copy and paste the following URL in the text box:
+**Linux template**
+`[https://s3\.amazonaws\.com/cloudformation\-examples/lambda/LambdaAMILookupSample\.template](https://s3.amazonaws.com/cloudformation-examples/lambda/LambdaAMILookupSample.template)`
+**Windows template**
 `[https://s3\.amazonaws\.com/cloudformation\-examples/lambda/LambdaAMILookupSample\-win\.template](https://s3.amazonaws.com/cloudformation-examples/lambda/LambdaAMILookupSample-win.template)`
 
 1. Choose **Next**\.

@@ -12,7 +12,7 @@ If you cancel a stack update, the stack is rolled back to the stack configuratio
 
 1. From the list of stacks in the AWS CloudFormation console, select the stack that is currently being updated \(its state must be `UPDATE_IN_PROGRESS`\) \.
 
-1. Choose **Actions** and then **Cancel Update**\.  
+1. Choose **Actions** and then **Cancel Update**\.
 ![\[The Cancel Update option in the Actions menu.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cfn-cancel-stack-update.png)
 
 1. To continue canceling the update, click **Yes, Cancel Update** when prompted\. Otherwise, click **Cancel** to resume the update\.

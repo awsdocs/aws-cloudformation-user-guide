@@ -4,7 +4,7 @@ When you use the `ZipFile` property to specify your function's source code and t
 
 After executing the `send` method, the Lambda function terminates, so anything you write after that method is ignored\.
 
-**Note**  
+**Note**
 The `cfn-response` module is available only when you use the `ZipFile` property to write your source code\. It isn't available for source code that's stored in Amazon S3 buckets\. For code in buckets, you must write your own functions to send responses\.
 
 ## Loading the `cfn-response` Module<a name="w4297ab1c17c25c14b9b9"></a>
@@ -17,7 +17,7 @@ var response = require('cfn-response');
 
 For Python, use the `import` statement to load the `cfnresponse` module, as shown in the following example:
 
-**Note**  
+**Note**
 Use this exact import statement\. If you use other variants of the import statement, AWS CloudFormation doesn't include the response module\.
 
 ```
@@ -28,22 +28,22 @@ import cfnresponse
 
 You can use the following parameters with the `send` method\.
 
-`event`  
+`event`
 The fields in a [custom resource request](crpg-ref-requesttypes.md)\.
 
-`context`  
+`context`
 An object, specific to Lambda functions, that you can use to specify when the function and any callbacks have completed execution, or to access information from within the Lambda execution environment\. For more information, see [Programming Model \(Node\.js\)](https://docs.aws.amazon.com/lambda/latest/dg/programming-model.html) in the *AWS Lambda Developer Guide*\.
 
-`responseStatus`  
+`responseStatus`
 Whether the function successfully completed\. Use the `cfnresponse` module constants to specify the status: `SUCCESS` for successful executions and `FAILED` for failed executions\.
 
-`responseData`  
+`responseData`
 The `Data` field of a custom resource [response object](crpg-ref-responses.md)\. The data is a list of name\-value pairs\.
 
-`physicalResourceId`  
+`physicalResourceId`
 Optional\. The unique identifier of the custom resource that invoked the function\. By default, the module uses the name of the Amazon CloudWatch Logs log stream that's associated with the Lambda function\.
 
-`noEcho`  
+`noEcho`
 Optional\. Indicates whether to mask the output of the custom resource when it's retrieved by using the `Fn::GetAtt` function\. If set to `true`, all returned values are masked with asterisks \(\*\*\*\*\*\)\. By default, this value is `false`\.
 
 ## Examples<a name="w4297ab1c17c25c14b9c13"></a>
@@ -119,12 +119,12 @@ The following is the response module source code for the Node\.js functions\. Re
    A copy of the License is located at http://aws.amazon.com/agreement/ .
    This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, express or implied.
    See the License for the specific language governing permissions and limitations under the License. */
- 
+
 exports.SUCCESS = "SUCCESS";
 exports.FAILED = "FAILED";
- 
+
 exports.send = function(event, context, responseStatus, responseData, physicalResourceId, noEcho) {
- 
+
     var responseBody = JSON.stringify({
         Status: responseStatus,
         Reason: "See the details in CloudWatch Log Stream: " + context.logStreamName,
@@ -135,12 +135,12 @@ exports.send = function(event, context, responseStatus, responseData, physicalRe
         NoEcho: noEcho || false,
         Data: responseData
     });
- 
+
     console.log("Response body:\n", responseBody);
- 
+
     var https = require("https");
     var url = require("url");
- 
+
     var parsedUrl = url.parse(event.ResponseURL);
     var options = {
         hostname: parsedUrl.hostname,
@@ -152,24 +152,24 @@ exports.send = function(event, context, responseStatus, responseData, physicalRe
             "content-length": responseBody.length
         }
     };
- 
+
     var request = https.request(options, function(response) {
         console.log("Status code: " + response.statusCode);
         console.log("Status message: " + response.statusMessage);
         context.done();
     });
- 
+
     request.on("error", function(error) {
         console.log("send(..) failed executing https.request(..): " + error);
         context.done();
     });
- 
+
     request.write(responseBody);
     request.end();
 }
 ```
 
-The following is the response module source code for Python 3 functions: 
+The following is the response module source code for Python 3 functions:
 
 ```
 #  Copyright 2016 Amazon Web Services, Inc. or its affiliates. All Rights Reserved.
@@ -178,18 +178,18 @@ The following is the response module source code for Python 3 functions:
 #  A copy of the License is located at http://aws.amazon.com/agreement/ .
 #  This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, express or implied.
 #  See the License for the specific language governing permissions and limitations under the License.
- 
+
 from botocore.vendored import requests
 import json
- 
+
 SUCCESS = "SUCCESS"
 FAILED = "FAILED"
- 
+
 def send(event, context, responseStatus, responseData, physicalResourceId=None, noEcho=False):
     responseUrl = event['ResponseURL']
- 
+
     print(responseUrl)
- 
+
     responseBody = {}
     responseBody['Status'] = responseStatus
     responseBody['Reason'] = 'See the details in CloudWatch Log Stream: ' + context.log_stream_name
@@ -199,16 +199,16 @@ def send(event, context, responseStatus, responseData, physicalResourceId=None, 
     responseBody['LogicalResourceId'] = event['LogicalResourceId']
     responseBody['NoEcho'] = noEcho
     responseBody['Data'] = responseData
- 
+
     json_responseBody = json.dumps(responseBody)
- 
+
     print("Response body:\n" + json_responseBody)
- 
+
     headers = {
         'content-type' : '',
         'content-length' : str(len(json_responseBody))
     }
- 
+
     try:
         response = requests.put(responseUrl,
                                 data=json_responseBody,
@@ -227,18 +227,18 @@ The following is the response module source code for Python 2 functions:
 #  A copy of the License is located at http://aws.amazon.com/agreement/ .
 #  This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, express or implied.
 #  See the License for the specific language governing permissions and limitations under the License.
- 
+
 from botocore.vendored import requests
 import json
- 
+
 SUCCESS = "SUCCESS"
 FAILED = "FAILED"
- 
+
 def send(event, context, responseStatus, responseData, physicalResourceId=None, noEcho=False):
     responseUrl = event['ResponseURL']
- 
+
     print responseUrl
- 
+
     responseBody = {}
     responseBody['Status'] = responseStatus
     responseBody['Reason'] = 'See the details in CloudWatch Log Stream: ' + context.log_stream_name
@@ -248,16 +248,16 @@ def send(event, context, responseStatus, responseData, physicalResourceId=None, 
     responseBody['LogicalResourceId'] = event['LogicalResourceId']
     responseBody['NoEcho'] = noEcho
     responseBody['Data'] = responseData
- 
+
     json_responseBody = json.dumps(responseBody)
-   
+
     print "Response body:\n" + json_responseBody
- 
+
     headers = {
-        'content-type' : '', 
+        'content-type' : '',
         'content-length' : str(len(json_responseBody))
     }
-    
+
     try:
         response = requests.put(responseUrl,
                                 data=json_responseBody,

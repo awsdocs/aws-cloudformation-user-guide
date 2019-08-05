@@ -52,15 +52,15 @@ Syntax for the short form:
 
 ## Parameters<a name="w4784ab1c21c24c59b7"></a>
 
-`String`  
-A string with variables that AWS CloudFormation substitutes with their associated values at runtime\. Write variables as `${MyVarName}`\. Variables can be template parameter names, resource logical IDs, resource attributes, or a variable in a key\-value map\. If you specify only template parameter names, resource logical IDs, and resource attributes, don't specify a key\-value map\.  
-If you specify template parameter names or resource logical IDs, such as `${InstanceTypeParameter}`, AWS CloudFormation returns the same values as if you used the `Ref` intrinsic function\. If you specify resource attributes, such as `${MyInstance.PublicIp}`, AWS CloudFormation returns the same values as if you used the `Fn::GetAtt` intrinsic function\.  
+`String`
+A string with variables that AWS CloudFormation substitutes with their associated values at runtime\. Write variables as `${MyVarName}`\. Variables can be template parameter names, resource logical IDs, resource attributes, or a variable in a key\-value map\. If you specify only template parameter names, resource logical IDs, and resource attributes, don't specify a key\-value map\.
+If you specify template parameter names or resource logical IDs, such as `${InstanceTypeParameter}`, AWS CloudFormation returns the same values as if you used the `Ref` intrinsic function\. If you specify resource attributes, such as `${MyInstance.PublicIp}`, AWS CloudFormation returns the same values as if you used the `Fn::GetAtt` intrinsic function\.
 To write a dollar sign and curly braces \(`${}`\) literally, add an exclamation point \(`!`\) after the open curly brace, such as `${!Literal}`\. AWS CloudFormation resolves this text as `${Literal}`\.
 
-`VarName`  
+`VarName`
 The name of a variable that you included in the `String` parameter\.
 
-`VarValue`  
+`VarValue`
 The value that AWS CloudFormation substitutes for the associated variable name at runtime\.
 
 ## Return Value<a name="w4784ab1c21c24c59b9"></a>

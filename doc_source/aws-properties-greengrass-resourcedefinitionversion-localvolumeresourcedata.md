@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DestinationPath](#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-destinationpath): String
-  [GroupOwnerSetting](#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-groupownersetting): 
+  [GroupOwnerSetting](#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-groupownersetting):
     [GroupOwnerSetting](aws-properties-greengrass-resourcedefinitionversion-groupownersetting.md)
   [SourcePath](#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-sourcepath): String
 ```
@@ -30,23 +30,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-greengrass-resourcedefinitionversion-localvolumeresourcedata-properties"></a>
 
 `DestinationPath`  <a name="cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-destinationpath"></a>
-The absolute local path of the resource in the Lambda environment\.  
-*Required*: Yes  
-*Type*: String  
+The absolute local path of the resource in the Lambda environment\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `GroupOwnerSetting`  <a name="cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-groupownersetting"></a>
-Settings that define additional Linux OS group permissions to give to the Lambda function process\.  
-*Required*: No  
-*Type*: [GroupOwnerSetting](aws-properties-greengrass-resourcedefinitionversion-groupownersetting.md)  
+Settings that define additional Linux OS group permissions to give to the Lambda function process\.
+*Required*: No
+*Type*: [GroupOwnerSetting](aws-properties-greengrass-resourcedefinitionversion-groupownersetting.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourcePath`  <a name="cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-sourcepath"></a>
-The local absolute path of the volume resource on the host\. The source path for a volume resource type cannot start with `/sys`\.  
-*Required*: Yes  
-*Type*: String  
+The local absolute path of the volume resource on the host\. The source path for a volume resource type cannot start with `/sys`\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See Also<a name="aws-properties-greengrass-resourcedefinitionversion-localvolumeresourcedata--seealso"></a>
-+  [LocalVolumeResourceData](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-localvolumeresourcedata.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [LocalVolumeResourceData](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-localvolumeresourcedata.html) in the * AWS IoT Greengrass API Reference *
++  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)

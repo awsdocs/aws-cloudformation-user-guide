@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-serversideencryptionbydefault-properties"></a>
 
 `KMSMasterKeyID`  <a name="cfn-s3-bucket-serversideencryptionbydefault-kmsmasterkeyid"></a>
-KMS master key ID to use for the default encryption\. This parameter is allowed if and only if `SSEAlgorithm` is set to `aws:kms`\.  
-*Required*: No  
-*Type*: String  
+KMS master key ID to use for the default encryption\. This parameter is allowed if and only if `SSEAlgorithm` is set to `aws:kms`\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SSEAlgorithm`  <a name="cfn-s3-bucket-serversideencryptionbydefault-ssealgorithm"></a>
-Server\-side encryption algorithm to use for the default encryption\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `AES256 | aws:kms`  
+Server\-side encryption algorithm to use for the default encryption\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `AES256 | aws:kms`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

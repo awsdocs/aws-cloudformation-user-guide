@@ -17,17 +17,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration-syntax.yaml"></a>
 
 ```
-  [Inputs](#cfn-kinesisanalyticsv2-application-sqlapplicationconfiguration-inputs): 
+  [Inputs](#cfn-kinesisanalyticsv2-application-sqlapplicationconfiguration-inputs):
     - [Input](aws-properties-kinesisanalyticsv2-application-input.md)
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration-properties"></a>
 
 `Inputs`  <a name="cfn-kinesisanalyticsv2-application-sqlapplicationconfiguration-inputs"></a>
-The array of [Input](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_Input.html) objects describing the input streams used by the application\.  
-*Required*: No  
-*Type*: List of [Input](aws-properties-kinesisanalyticsv2-application-input.md)  
+The array of [Input](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_Input.html) objects describing the input streams used by the application\.
+*Required*: No
+*Type*: List of [Input](aws-properties-kinesisanalyticsv2-application-input.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration--seealso"></a>
-+  [SqlApplicationConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_SqlApplicationConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference* 
++  [SqlApplicationConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_SqlApplicationConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference*

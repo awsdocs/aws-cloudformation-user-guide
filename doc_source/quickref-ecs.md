@@ -4,7 +4,7 @@ Amazon Elastic Container Service \(Amazon ECS\) is a container management servic
 
 The following example template deploys a web application in an Amazon ECS container with autoscaling and an application load balancer\. For more information, see [Getting Started with Amazon ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide//ECS_GetStarted.html) in the *Amazon Elastic Container Service Developer Guide*\.
 
-**Important**  
+**Important**
 For the latest AMI IDs, see [Amazon ECS\-optimized AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in the *Amazon Elastic Container Service Developer Guide*\.
 
 ## JSON<a name="quickref-ecs-example-1.json"></a>
@@ -567,10 +567,10 @@ For the latest AMI IDs, see [Amazon ECS\-optimized AMI](https://docs.aws.amazon.
           {
             "Name":"LoadBalancer",
             "Value":{
-              "Fn::GetAtt" : [ 
-                "ECSALB", 
+              "Fn::GetAtt" : [
+                "ECSALB",
                 "LoadBalancerFullName"
-              ] 
+              ]
             }
           }
         ],
@@ -985,7 +985,7 @@ Resources:
       Namespace: AWS/ApplicationELB
       Dimensions:
         - Name: LoadBalancer
-          Value: !GetAtt 
+          Value: !GetAtt
             - ECSALB
             - LoadBalancerFullName
       ComparisonOperator: GreaterThanThreshold

@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ComplianceResourceId](#cfn-config-configrule-scope-complianceresourceid): String
-  [ComplianceResourceTypes](#cfn-config-configrule-scope-complianceresourcetypes): 
+  [ComplianceResourceTypes](#cfn-config-configrule-scope-complianceresourcetypes):
     - String
   [TagKey](#cfn-config-configrule-scope-tagkey): String
   [TagValue](#cfn-config-configrule-scope-tagvalue): String
@@ -30,32 +30,32 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-config-configrule-scope-properties"></a>
 
 `ComplianceResourceId`  <a name="cfn-config-configrule-scope-complianceresourceid"></a>
-The ID of the only AWS resource that you want to trigger an evaluation for the rule\. If you specify a resource ID, you must specify one resource type for `ComplianceResourceTypes`\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `768`  
+The ID of the only AWS resource that you want to trigger an evaluation for the rule\. If you specify a resource ID, you must specify one resource type for `ComplianceResourceTypes`\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `768`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ComplianceResourceTypes`  <a name="cfn-config-configrule-scope-complianceresourcetypes"></a>
-The resource types of only those AWS resources that you want to trigger an evaluation for the rule\. You can only specify one type if you also specify a resource ID for `ComplianceResourceId`\.  
-*Required*: No  
-*Type*: List of String  
-*Maximum*: `100`  
+The resource types of only those AWS resources that you want to trigger an evaluation for the rule\. You can only specify one type if you also specify a resource ID for `ComplianceResourceId`\.
+*Required*: No
+*Type*: List of String
+*Maximum*: `100`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TagKey`  <a name="cfn-config-configrule-scope-tagkey"></a>
-The tag key that is applied to only those AWS resources that you want to trigger an evaluation for the rule\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
+The tag key that is applied to only those AWS resources that you want to trigger an evaluation for the rule\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TagValue`  <a name="cfn-config-configrule-scope-tagvalue"></a>
-The tag value applied to only those AWS resources that you want to trigger an evaluation for the rule\. If you specify a value for `TagValue`, you must also specify a value for `TagKey`\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `256`  
+The tag value applied to only those AWS resources that you want to trigger an evaluation for the rule\. If you specify a value for `TagValue`, you must also specify a value for `TagKey`\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `256`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

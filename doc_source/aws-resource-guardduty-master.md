@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::GuardDuty::Master
-Properties: 
+Properties:
   [DetectorId](#cfn-guardduty-master-detectorid): String
   [InvitationId](#cfn-guardduty-master-invitationid): String
   [MasterId](#cfn-guardduty-master-masterid): String
@@ -32,21 +32,21 @@ Properties:
 ## Properties<a name="aws-resource-guardduty-master-properties"></a>
 
 `DetectorId`  <a name="cfn-guardduty-master-detectorid"></a>
-The unique ID of the detector associated with the GuardDuty master account\.  
-*Required*: Yes  
-*Type*: String  
+The unique ID of the detector associated with the GuardDuty master account\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InvitationId`  <a name="cfn-guardduty-master-invitationid"></a>
-The ID of the invitation that is sent to the account designated as a member account\. You can find the invitation ID by using the ListInvitation action of the GuardDuty API\.  
-*Required*: No  
-*Type*: String  
+The ID of the invitation that is sent to the account designated as a member account\. You can find the invitation ID by using the ListInvitation action of the GuardDuty API\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MasterId`  <a name="cfn-guardduty-master-masterid"></a>
-The AWS account ID of the account designated as the GuardDuty master account\.  
-*Required*: Yes  
-*Type*: String  
+The AWS account ID of the account designated as the GuardDuty master account\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-guardduty-master-return-values"></a>

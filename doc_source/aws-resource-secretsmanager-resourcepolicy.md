@@ -1,6 +1,6 @@
 # AWS::SecretsManager::ResourcePolicy<a name="aws-resource-secretsmanager-resourcepolicy"></a>
 
-Attaches the contents of the specified resource\-based permission policy to a secret\. A resource\-based policy is optional\. Alternatively, you can use IAM identity\-based policies that specify the secret's Amazon Resource Name \(ARN\) in the policy statement's `Resources` element\. You can also use a combination of both identity\-based and resource\-based policies\. The affected users and roles receive the permissions that are permitted by all relevant policies\. 
+Attaches the contents of the specified resource\-based permission policy to a secret\. A resource\-based policy is optional\. Alternatively, you can use IAM identity\-based policies that specify the secret's Amazon Resource Name \(ARN\) in the policy statement's `Resources` element\. You can also use a combination of both identity\-based and resource\-based policies\. The affected users and roles receive the permissions that are permitted by all relevant policies\.
 
 ## Syntax<a name="aws-resource-secretsmanager-resourcepolicy-syntax"></a>
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SecretsManager::ResourcePolicy
-Properties: 
+Properties:
   [ResourcePolicy](#cfn-secretsmanager-resourcepolicy-resourcepolicy): Json
   [SecretId](#cfn-secretsmanager-resourcepolicy-secretid): String
 ```
@@ -30,16 +30,16 @@ Properties:
 ## Properties<a name="aws-resource-secretsmanager-resourcepolicy-properties"></a>
 
 `ResourcePolicy`  <a name="cfn-secretsmanager-resourcepolicy-resourcepolicy"></a>
-Specifies a JSON object that's constructed according to the grammar and syntax for a resource\-based policy\. The policy identifies who can access or manage this secret and its versions\. For information on how to format a JSON object as a parameter for this resource type, see [Using Resource\-based Policies for Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/UserGuide/auth-and-access-resource-based-policies.html)in the AWS Secrets Manager User Guide\. Those same rules apply here\.   
-*Required*: Yes  
-*Type*: Json  
+Specifies a JSON object that's constructed according to the grammar and syntax for a resource\-based policy\. The policy identifies who can access or manage this secret and its versions\. For information on how to format a JSON object as a parameter for this resource type, see [Using Resource\-based Policies for Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/UserGuide/auth-and-access-resource-based-policies.html)in the AWS Secrets Manager User Guide\. Those same rules apply here\.
+*Required*: Yes
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretId`  <a name="cfn-secretsmanager-resourcepolicy-secretid"></a>
-Specifies the Amazon Resource Name \(ARN\) or the friendly name of the secret that you want to attach a resource\-based permissions policy to\.   
+Specifies the Amazon Resource Name \(ARN\) or the friendly name of the secret that you want to attach a resource\-based permissions policy to\.
 If you use this property to change the `SecretId` for an existing resource\-based policy, it removes the policy from the original secret, and then attaches the policy to the secret with the specified `SecretId`\. This results in changing the permissions for two secrets\.
-*Required*: Yes  
-*Type*: String  
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-secretsmanager-resourcepolicy-return-values"></a>

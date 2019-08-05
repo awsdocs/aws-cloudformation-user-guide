@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-topicrule-putiteminput-properties"></a>
 
 `TableName`  <a name="cfn-iot-topicrule-putiteminput-tablename"></a>
-The table where the message data will be written\.  
-*Required*: Yes  
-*Type*: String  
+The table where the message data will be written\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

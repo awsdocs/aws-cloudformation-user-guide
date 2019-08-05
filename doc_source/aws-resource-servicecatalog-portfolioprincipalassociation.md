@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceCatalog::PortfolioPrincipalAssociation
-Properties: 
+Properties:
   [AcceptLanguage](#cfn-servicecatalog-portfolioprincipalassociation-acceptlanguage): String
   [PortfolioId](#cfn-servicecatalog-portfolioprincipalassociation-portfolioid): String
   [PrincipalARN](#cfn-servicecatalog-portfolioprincipalassociation-principalarn): String
@@ -34,37 +34,37 @@ Properties:
 ## Properties<a name="aws-resource-servicecatalog-portfolioprincipalassociation-properties"></a>
 
 `AcceptLanguage`  <a name="cfn-servicecatalog-portfolioprincipalassociation-acceptlanguage"></a>
-The language code\.  
+The language code\.
 +  `en` \- English \(default\)
 +  `jp` \- Japanese
 +  `zh` \- Chinese
-*Required*: No  
-*Type*: String  
-*Maximum*: `100`  
+*Required*: No
+*Type*: String
+*Maximum*: `100`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PortfolioId`  <a name="cfn-servicecatalog-portfolioprincipalassociation-portfolioid"></a>
-The portfolio identifier\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
-*Pattern*: `^[a-zA-Z0-9_\-]*`  
+The portfolio identifier\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
+*Pattern*: `^[a-zA-Z0-9_\-]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PrincipalARN`  <a name="cfn-servicecatalog-portfolioprincipalassociation-principalarn"></a>
-The ARN of the principal \(IAM user, role, or group\)\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `1000`  
+The ARN of the principal \(IAM user, role, or group\)\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `1000`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PrincipalType`  <a name="cfn-servicecatalog-portfolioprincipalassociation-principaltype"></a>
-The principal type\. The supported value is `IAM`\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `IAM`  
+The principal type\. The supported value is `IAM`\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `IAM`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-servicecatalog-portfolioprincipalassociation-return-values"></a>

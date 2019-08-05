@@ -19,26 +19,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Key](#cfn-datapipeline-pipeline-parameterobjects-attribtues-key): String
-  [StringValue](#cfn-datapipeline-pipeline-parameterobjects-attribtues-stringvalue): 
+  [StringValue](#cfn-datapipeline-pipeline-parameterobjects-attribtues-stringvalue):
     String
 ```
 
 ## Properties<a name="aws-properties-datapipeline-pipeline-parameterobjects-attributes-properties"></a>
 
 `Key`  <a name="cfn-datapipeline-pipeline-parameterobjects-attribtues-key"></a>
-The field identifier\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `256`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+The field identifier\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `256`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StringValue`  <a name="cfn-datapipeline-pipeline-parameterobjects-attribtues-stringvalue"></a>
-The field value, expressed as a String\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `10240`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+The field value, expressed as a String\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `10240`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

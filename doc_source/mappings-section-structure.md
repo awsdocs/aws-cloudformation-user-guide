@@ -31,13 +31,13 @@ Within a mapping, each map is a key followed by another mapping\. The key identi
 ### YAML<a name="mappings-section-structure-syntax.yaml"></a>
 
 ```
-Mappings: 
-  Mapping01: 
-    Key01: 
+Mappings:
+  Mapping01:
+    Key01:
       Name: Value01
-    Key02: 
+    Key02:
       Name: Value02
-    Key03: 
+    Key03:
       Name: Value03
 ```
 
@@ -47,7 +47,7 @@ Mappings:
 
 The following example shows a `Mappings` section with a map `RegionMap`, which contains five keys that map to name\-value pairs containing single string values\. The keys are region names\. Each name\-value pair is the AMI ID for the HVM64 AMI in the region represented by the key\.
 
-The name\-value pairs have a name \(HVM64 in the example\) and a value\. By naming the values, you can map more than one set of values to a key\. 
+The name\-value pairs have a name \(HVM64 in the example\) and a value\. By naming the values, you can map more than one set of values to a key\.
 
 #### JSON<a name="mappings-section-structure-example1.json"></a>
 
@@ -66,17 +66,17 @@ The name\-value pairs have a name \(HVM64 in the example\) and a value\. By nami
 #### YAML<a name="mappings-section-structure-example1.yaml"></a>
 
 ```
-Mappings: 
-  RegionMap: 
-    us-east-1: 
+Mappings:
+  RegionMap:
+    us-east-1:
       "HVM64": "ami-0ff8a91507f77f867"
-    us-west-1: 
+    us-west-1:
       "HVM64": "ami-0bdb828fd58c52235"
-    eu-west-1: 
+    eu-west-1:
       "HVM64": "ami-047bb4163c506cd98"
-    ap-southeast-1: 
+    ap-southeast-1:
       "HVM64": "ami-08569b978cc4dfa10"
-    ap-northeast-1: 
+    ap-northeast-1:
       "HVM64": "ami-06cd52961ce9f0d85"
 ```
 
@@ -99,7 +99,7 @@ The following example has region keys that are mapped to two sets of values: one
 #### YAML<a name="mappings-section-structure-example2.yaml"></a>
 
 ```
-RegionMap: 
+RegionMap:
     us-east-1:
       HVM64: ami-0ff8a91507f77f867
       HVMG2: ami-0a584ac55a7631c0c
@@ -153,8 +153,8 @@ You can use the `[Fn::FindInMap](intrinsic-function-reference-findinmap.md)` fun
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"
-Mappings: 
-  RegionMap: 
+Mappings:
+  RegionMap:
     us-east-1:
       HVM64: ami-0ff8a91507f77f867
       HVMG2: ami-0a584ac55a7631c0c
@@ -170,10 +170,10 @@ Mappings:
     ap-southeast-1:
       HVM64: ami-08569b978cc4dfa10
       HVMG2: ami-0be9df32ae9f92309
-Resources: 
-  myEC2Instance: 
+Resources:
+  myEC2Instance:
     Type: "AWS::EC2::Instance"
-    Properties: 
+    Properties:
       ImageId: !FindInMap [RegionMap, !Ref "AWS::Region", HVM64]
       InstanceType: m1.small
 ```
@@ -195,7 +195,7 @@ You can use an input parameter with the `Fn::FindInMap` function to refer to a s
       "ConstraintDescription": "must be a prod or test"
     }
   },
-	
+
   "Mappings" : {
     "RegionAndInstanceTypeToAMIID" : {
       "us-east-1": {
@@ -213,50 +213,50 @@ You can use an input parameter with the `Fn::FindInMap` function to refer to a s
   },
 
   "Resources" : {
-  
+
    ...other resources...
 
     },
-    
+
   "Outputs" : {
     "TestOutput" : {
       "Description" : "Return the name of the AMI ID that matches the region and environment type keys",
       "Value" : { "Fn::FindInMap" : [ "RegionAndInstanceTypeToAMIID", { "Ref" : "AWS::Region" }, { "Ref" : "EnvironmentType" } ]}
     }
   }
-  
+
 }
 ```
 
 #### YAML<a name="mappings-section-structure-example4.yaml"></a>
 
 ```
-  Parameters: 
-    EnvironmentType: 
+  Parameters:
+    EnvironmentType:
       Description: The environment type
       Type: String
       Default: test
-      AllowedValues: 
+      AllowedValues:
         - prod
         - test
       ConstraintDescription: must be a prod or test
-  Mappings: 
-    RegionAndInstanceTypeToAMIID: 
-      us-east-1: 
+  Mappings:
+    RegionAndInstanceTypeToAMIID:
+      us-east-1:
         test: "ami-8ff710e2"
         prod: "ami-f5f41398"
-      us-west-2: 
+      us-west-2:
         test: "ami-eff1028f"
         prod: "ami-d0f506b0"
-        
+
       ...other regions and AMI IDs...
-  
+
   Resources:
-  
+
    ...other resources...
 
-  Outputs: 
-    TestOutput: 
+  Outputs:
+    TestOutput:
       Description: Return the name of the AMI ID that matches the region and environment type keys
       Value: !FindInMap [RegionAndInstanceTypeToAMIID, !Ref "AWS::Region", !Ref EnvironmentType]
 ```

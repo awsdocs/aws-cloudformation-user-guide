@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codepipeline-pipeline-stages-syntax.yaml"></a>
 
 ```
-  [Actions](#cfn-codepipeline-pipeline-stages-actions): 
+  [Actions](#cfn-codepipeline-pipeline-stages-actions):
     - [ActionDeclaration](aws-properties-codepipeline-pipeline-stages-actions.md)
-  [Blockers](#cfn-codepipeline-pipeline-stages-blockers): 
+  [Blockers](#cfn-codepipeline-pipeline-stages-blockers):
     - [BlockerDeclaration](aws-properties-codepipeline-pipeline-stages-blockers.md)
   [Name](#cfn-codepipeline-pipeline-stages-name): String
 ```
@@ -29,22 +29,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codepipeline-pipeline-stages-properties"></a>
 
 `Actions`  <a name="cfn-codepipeline-pipeline-stages-actions"></a>
-The actions included in a stage\.  
-*Required*: Yes  
-*Type*: List of [ActionDeclaration](aws-properties-codepipeline-pipeline-stages-actions.md)  
+The actions included in a stage\.
+*Required*: Yes
+*Type*: List of [ActionDeclaration](aws-properties-codepipeline-pipeline-stages-actions.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Blockers`  <a name="cfn-codepipeline-pipeline-stages-blockers"></a>
-Reserved for future use\.  
-*Required*: No  
-*Type*: List of [BlockerDeclaration](aws-properties-codepipeline-pipeline-stages-blockers.md)  
+Reserved for future use\.
+*Required*: No
+*Type*: List of [BlockerDeclaration](aws-properties-codepipeline-pipeline-stages-blockers.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-codepipeline-pipeline-stages-name"></a>
-The name of the stage\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
-*Pattern*: `[A-Za-z0-9.@\-_]+`  
+The name of the stage\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
+*Pattern*: `[A-Za-z0-9.@\-_]+`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

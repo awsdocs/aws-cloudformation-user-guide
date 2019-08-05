@@ -21,16 +21,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SecurityHub::Hub
-Properties: 
+Properties:
   [Tags](#cfn-securityhub-hub-tags): Json
 ```
 
 ## Properties<a name="aws-resource-securityhub-hub-properties"></a>
 
 `Tags`  <a name="cfn-securityhub-hub-tags"></a>
-The tags to add to the hub resource\.  
-*Required*: No  
-*Type*: Json  
+The tags to add to the hub resource\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-securityhub-hub-return-values"></a>
@@ -68,7 +68,7 @@ The following example shows how to declare a Security Hub `Hub` resource:
                 "Value" : {"Ref" : "ExampleHubWithTags"}
             }
         }
-            
+
 }
 ```
 

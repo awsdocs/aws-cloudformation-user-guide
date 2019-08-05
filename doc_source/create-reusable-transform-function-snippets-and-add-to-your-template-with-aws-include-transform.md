@@ -2,13 +2,13 @@
 
 Use the `AWS::Include` transform, which is a macro hosted by AWS CloudFormation, to insert boilerplate content into your templates\. The `AWS::Include` transform lets you create a reference to a template snippet in an Amazon S3 bucket\. When [Creating a Change Set](using-cfn-updating-stacks-changesets-create.md) or [Updating Stacks Using Change Sets](using-cfn-updating-stacks-changesets.md), and the templates reference `AWS::Include`, AWS CloudFormation inserts the contents of the specified file at the location of the transform in the template\. The `AWS::Include` function behaves similarly to an `include`, `copy`, or `import` directive in programming languages\.
 
-For example, you might have a Lambda function that you want to reuse in one or more AWS CloudFormation templates\. 
+For example, you might have a Lambda function that you want to reuse in one or more AWS CloudFormation templates\.
 
 Unlike custom macros, the `AWS::Include` transform doesn't require special permissions to use it because it is hosted by AWS CloudFormation\. It can be used by templates in any account within AWS CloudFormation\. Also, there is no charge incurred when using this transform\. AWS CloudFormation treats the `AWS::Include` transform the same as any other macro in terms of evaluation order and scope\. For more information about macros, see [Using AWS CloudFormation Macros to Perform Custom Processing on Templates](template-macros.md)\.
 
 ## Usage<a name="aws-include-transform-usage"></a>
 
-You can use the `AWS::Include` transform anywhere within the AWS CloudFormation template except in the template parameters section or the template version field\. For example, you can use `AWS::Include` in the mappings section\. 
+You can use the `AWS::Include` transform anywhere within the AWS CloudFormation template except in the template parameters section or the template version field\. For example, you can use `AWS::Include` in the mappings section\.
 
 ### Syntax at the Top Level of a Template<a name="aws-include-syntax-top-level-overview"></a>
 

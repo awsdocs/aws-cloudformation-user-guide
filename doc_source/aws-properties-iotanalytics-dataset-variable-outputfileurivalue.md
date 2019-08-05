@@ -23,8 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotanalytics-dataset-variable-outputfileurivalue-properties"></a>
 
 `FileName`  <a name="cfn-iotanalytics-dataset-variable-outputfileurivalue-filename"></a>
-The URI of the location where data set contents are stored, usually the URI of a file in an S3 bucket\.  
-*Required*: No  
-*Type*: String  
-*Pattern*: `[\w\.-]{1,255}`  
+The URI of the location where data set contents are stored, usually the URI of a file in an S3 bucket\.
+*Required*: No
+*Type*: String
+*Pattern*: `[\w\.-]{1,255}`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

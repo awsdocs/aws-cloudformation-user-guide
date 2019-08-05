@@ -25,35 +25,35 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Logs::MetricFilter
-Properties: 
+Properties:
   [FilterPattern](#cfn-cwl-metricfilter-filterpattern): String
   [LogGroupName](#cfn-cwl-metricfilter-loggroupname): String
-  [MetricTransformations](#cfn-cwl-metricfilter-metrictransformations): 
+  [MetricTransformations](#cfn-cwl-metricfilter-metrictransformations):
     - [MetricTransformation](aws-properties-logs-metricfilter-metrictransformation.md)
 ```
 
 ## Properties<a name="aws-resource-logs-metricfilter-properties"></a>
 
 `FilterPattern`  <a name="cfn-cwl-metricfilter-filterpattern"></a>
-A filter pattern for extracting metric data out of ingested log events\.  
-*Required*: Yes  
-*Type*: String  
+A filter pattern for extracting metric data out of ingested log events\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogGroupName`  <a name="cfn-cwl-metricfilter-loggroupname"></a>
-The name of an existing log group that you want to associate with this metric filter\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `512`  
-*Pattern*: `[\.\-_/#A-Za-z0-9]+`  
+The name of an existing log group that you want to associate with this metric filter\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `512`
+*Pattern*: `[\.\-_/#A-Za-z0-9]+`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MetricTransformations`  <a name="cfn-cwl-metricfilter-metrictransformations"></a>
-The metric transformations\.  
-*Required*: Yes  
-*Type*: List of [MetricTransformation](aws-properties-logs-metricfilter-metrictransformation.md)  
-*Maximum*: `1`  
+The metric transformations\.
+*Required*: Yes
+*Type*: List of [MetricTransformation](aws-properties-logs-metricfilter-metrictransformation.md)
+*Maximum*: `1`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-logs-metricfilter--examples"></a>
@@ -84,14 +84,14 @@ The following example sends a value of `1` to the `404Count` metric whenever the
 #### YAML<a name="aws-resource-logs-metricfilter--examples--Create_a_Metric_Filter--yaml"></a>
 
 ```
-404MetricFilter: 
+404MetricFilter:
   Type: AWS::Logs::MetricFilter
-  Properties: 
-    LogGroupName: 
+  Properties:
+    LogGroupName:
       Ref: "myLogGroup"
     FilterPattern: "[ip, identity, user_id, timestamp, request, status_code = 404, size]"
-    MetricTransformations: 
-      - 
+    MetricTransformations:
+      -
         MetricValue: "1"
         MetricNamespace: "WebServer/404s"
         MetricName: "404Count"

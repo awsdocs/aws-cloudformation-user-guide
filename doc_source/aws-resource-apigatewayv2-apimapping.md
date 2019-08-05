@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGatewayV2::ApiMapping
-Properties: 
+Properties:
   [ApiId](#cfn-apigatewayv2-apimapping-apiid): String
   [ApiMappingKey](#cfn-apigatewayv2-apimapping-apimappingkey): String
   [DomainName](#cfn-apigatewayv2-apimapping-domainname): String
@@ -34,27 +34,27 @@ Properties:
 ## Properties<a name="aws-resource-apigatewayv2-apimapping-properties"></a>
 
 `ApiId`  <a name="cfn-apigatewayv2-apimapping-apiid"></a>
-The identifier of the API\.  
-*Required*: Yes  
-*Type*: String  
+The identifier of the API\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ApiMappingKey`  <a name="cfn-apigatewayv2-apimapping-apimappingkey"></a>
-The API mapping key\.  
-*Required*: No  
-*Type*: String  
+The API mapping key\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DomainName`  <a name="cfn-apigatewayv2-apimapping-domainname"></a>
-The domain name\.  
-*Required*: Yes  
-*Type*: String  
+The domain name\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Stage`  <a name="cfn-apigatewayv2-apimapping-stage"></a>
-The API stage\.  
-*Required*: Yes  
-*Type*: String  
+The API stage\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-apigatewayv2-apimapping-return-values"></a>

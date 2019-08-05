@@ -28,9 +28,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Events::EventBusPolicy
-Properties: 
+Properties:
   [Action](#cfn-events-eventbuspolicy-action): String
-  [Condition](#cfn-events-eventbuspolicy-condition): 
+  [Condition](#cfn-events-eventbuspolicy-condition):
     [Condition](aws-properties-events-eventbuspolicy-condition.md)
   [Principal](#cfn-events-eventbuspolicy-principal): String
   [StatementId](#cfn-events-eventbuspolicy-statementid): String
@@ -39,39 +39,39 @@ Properties:
 ## Properties<a name="aws-resource-events-eventbuspolicy-properties"></a>
 
 `Action`  <a name="cfn-events-eventbuspolicy-action"></a>
-The action that you are enabling the other account to perform\. Currently, this must be `events:PutEvents`\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `64`  
-*Pattern*: `events:[a-zA-Z]+`  
+The action that you are enabling the other account to perform\. Currently, this must be `events:PutEvents`\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `64`
+*Pattern*: `events:[a-zA-Z]+`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Condition`  <a name="cfn-events-eventbuspolicy-condition"></a>
-`Condition` is a JSON string that you can use to limit the event bus permissions that you're granting only to accounts that fulfill the condition\. Currently, the only supported condition is membership in a certain AWS organization\. For more information about AWS Organizations, see [What Is AWS Organizations?](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html) in the *AWS Organizations User Guide*\.  
- `Condition` is a property of the [ AWS::Events::EventBusPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html) resource type\.  
-If you specify `Condition` with an AWS organization ID and specify "\*" as the value for `Principal`, you grant permission to all the accounts in the named organization\.  
-*Required*: No  
-*Type*: [Condition](aws-properties-events-eventbuspolicy-condition.md)  
+`Condition` is a JSON string that you can use to limit the event bus permissions that you're granting only to accounts that fulfill the condition\. Currently, the only supported condition is membership in a certain AWS organization\. For more information about AWS Organizations, see [What Is AWS Organizations?](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html) in the *AWS Organizations User Guide*\.
+ `Condition` is a property of the [ AWS::Events::EventBusPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html) resource type\.
+If you specify `Condition` with an AWS organization ID and specify "\*" as the value for `Principal`, you grant permission to all the accounts in the named organization\.
+*Required*: No
+*Type*: [Condition](aws-properties-events-eventbuspolicy-condition.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Principal`  <a name="cfn-events-eventbuspolicy-principal"></a>
-The 12\-digit AWS account ID that you are permitting to put events to your default event bus\. Specify "\*" to permit any account to put events to your default event bus\.  
-If you specify "\*" without specifying `Condition`, avoid creating rules that may match undesirable events\. To create more secure rules, make sure that the event pattern for each rule contains an `account` field with a specific account ID from which to receive events\. Rules with an account field do not match any events sent from other accounts\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `12`  
-*Pattern*: `(\d{12}|\*)`  
+The 12\-digit AWS account ID that you are permitting to put events to your default event bus\. Specify "\*" to permit any account to put events to your default event bus\.
+If you specify "\*" without specifying `Condition`, avoid creating rules that may match undesirable events\. To create more secure rules, make sure that the event pattern for each rule contains an `account` field with a specific account ID from which to receive events\. Rules with an account field do not match any events sent from other accounts\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `12`
+*Pattern*: `(\d{12}|\*)`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StatementId`  <a name="cfn-events-eventbuspolicy-statementid"></a>
-An identifier string for the external account that you're granting permissions to\. If you later want to revoke the permission for this external account, you must specify this `StatementId`\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `64`  
-*Pattern*: `[a-zA-Z0-9-_]+`  
+An identifier string for the external account that you're granting permissions to\. If you later want to revoke the permission for this external account, you must specify this `StatementId`\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `64`
+*Pattern*: `[a-zA-Z0-9-_]+`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-events-eventbuspolicy-return-values"></a>
@@ -86,7 +86,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Grant Permission to One Account<a name="aws-resource-events-eventbuspolicy--examples--Grant_Permission_to_One_Account"></a>
 
-The following example grants permission to one AWS account with an account ID of `111122223333`\. 
+The following example grants permission to one AWS account with an account ID of `111122223333`\.
 
 #### JSON<a name="aws-resource-events-eventbuspolicy--examples--Grant_Permission_to_One_Account--json"></a>
 
@@ -104,9 +104,9 @@ The following example grants permission to one AWS account with an account ID of
 #### YAML<a name="aws-resource-events-eventbuspolicy--examples--Grant_Permission_to_One_Account--yaml"></a>
 
 ```
-SampleEventBusPolicy: 
+SampleEventBusPolicy:
     Type: AWS::Events::EventBusPolicy
-    Properties: 
+    Properties:
         Action: "events:PutEvents"
         Principal: "111122223333"
         StatementId: "MyStatement"
@@ -137,13 +137,13 @@ The following example grants permission to all AWS accounts in the organization 
 #### YAML<a name="aws-resource-events-eventbuspolicy--examples--Grant_Permission_to_an_Organization--yaml"></a>
 
 ```
-SampleEventBusPolicy: 
+SampleEventBusPolicy:
     Type: AWS::Events::EventBusPolicy
-    Properties: 
+    Properties:
         Action: "events:PutEvents"
         Principal: "*"
         StatementId: "MyStatement"
-        Condition: 
+        Condition:
             Type: "StringEquals"
             Key: "aws:PrincipalOrgID"
             Value: "o-1234567890"

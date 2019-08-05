@@ -8,7 +8,7 @@ For more information about exporting and importing output values, see [Exporting
 
 **To list stacks that import an exported output value \(console\)**
 
-1. In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), from the **CloudFormation** drop\-down menu, choose **Exports**\.  
+1. In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), from the **CloudFormation** drop\-down menu, choose **Exports**\.
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-cfn-exports.png)
 
 1. From the list of exported output values, choose the value\. The `Imports` section of the detail page lists all of the stacks that are importing the value\.

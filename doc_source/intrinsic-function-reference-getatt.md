@@ -26,10 +26,10 @@ Syntax for the short form:
 
 ## Parameters<a name="getatt-parameters"></a>
 
-`logicalNameOfResource`  
+`logicalNameOfResource`
 The logical name \(also called *logical ID*\) of the resource that contains the attribute that you want\.
 
-`attributeName`  
+`attributeName`
 The name of the resource\-specific attribute whose value you want\. See the resource's reference page for details about the attributes available for that resource type\.
 
 ## Return Value<a name="intrinsic-function-reference-getatt-return"></a>

@@ -30,20 +30,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Cognito::IdentityPool
-Properties: 
+Properties:
   [AllowUnauthenticatedIdentities](#cfn-cognito-identitypool-allowunauthenticatedidentities): Boolean
   [CognitoEvents](#cfn-cognito-identitypool-cognitoevents): Json
-  [CognitoIdentityProviders](#cfn-cognito-identitypool-cognitoidentityproviders): 
+  [CognitoIdentityProviders](#cfn-cognito-identitypool-cognitoidentityproviders):
     - [CognitoIdentityProvider](aws-properties-cognito-identitypool-cognitoidentityprovider.md)
-  [CognitoStreams](#cfn-cognito-identitypool-cognitostreams): 
+  [CognitoStreams](#cfn-cognito-identitypool-cognitostreams):
     [CognitoStreams](aws-properties-cognito-identitypool-cognitostreams.md)
   [DeveloperProviderName](#cfn-cognito-identitypool-developerprovidername): String
   [IdentityPoolName](#cfn-cognito-identitypool-identitypoolname): String
-  [OpenIdConnectProviderARNs](#cfn-cognito-identitypool-openidconnectproviderarns): 
+  [OpenIdConnectProviderARNs](#cfn-cognito-identitypool-openidconnectproviderarns):
     - String
-  [PushSync](#cfn-cognito-identitypool-pushsync): 
+  [PushSync](#cfn-cognito-identitypool-pushsync):
     [PushSync](aws-properties-cognito-identitypool-pushsync.md)
-  [SamlProviderARNs](#cfn-cognito-identitypool-samlproviderarns): 
+  [SamlProviderARNs](#cfn-cognito-identitypool-samlproviderarns):
     - String
   [SupportedLoginProviders](#cfn-cognito-identitypool-supportedloginproviders): Json
 ```
@@ -51,68 +51,68 @@ Properties:
 ## Properties<a name="aws-resource-cognito-identitypool-properties"></a>
 
 `AllowUnauthenticatedIdentities`  <a name="cfn-cognito-identitypool-allowunauthenticatedidentities"></a>
-Specifies whether the identity pool supports unauthenticated logins\.  
-*Required*: Yes  
-*Type*: Boolean  
+Specifies whether the identity pool supports unauthenticated logins\.
+*Required*: Yes
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CognitoEvents`  <a name="cfn-cognito-identitypool-cognitoevents"></a>
-The events to configure\.  
-*Required*: No  
-*Type*: Json  
+The events to configure\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CognitoIdentityProviders`  <a name="cfn-cognito-identitypool-cognitoidentityproviders"></a>
-An array of Amazon Cognito user pools and their client IDs\.  
-*Required*: No  
-*Type*: List of [CognitoIdentityProvider](aws-properties-cognito-identitypool-cognitoidentityprovider.md)  
+An array of Amazon Cognito user pools and their client IDs\.
+*Required*: No
+*Type*: List of [CognitoIdentityProvider](aws-properties-cognito-identitypool-cognitoidentityprovider.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CognitoStreams`  <a name="cfn-cognito-identitypool-cognitostreams"></a>
-Configuration options for configuring Amazon Cognito streams\.  
-*Required*: No  
-*Type*: [CognitoStreams](aws-properties-cognito-identitypool-cognitostreams.md)  
+Configuration options for configuring Amazon Cognito streams\.
+*Required*: No
+*Type*: [CognitoStreams](aws-properties-cognito-identitypool-cognitostreams.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeveloperProviderName`  <a name="cfn-cognito-identitypool-developerprovidername"></a>
-The "domain" by which Amazon Cognito will refer to your users\. This name acts as a placeholder that allows your backend and the Amazon Cognito service to communicate about the developer provider\. For the `DeveloperProviderName`, you can use letters and periods \(\.\), underscores \(\_\), and dashes \(\-\)\.  
-*Minimum length*: 1  
-*Maximum length*: 100  
-*Required*: No  
-*Type*: String  
+The "domain" by which Amazon Cognito will refer to your users\. This name acts as a placeholder that allows your backend and the Amazon Cognito service to communicate about the developer provider\. For the `DeveloperProviderName`, you can use letters and periods \(\.\), underscores \(\_\), and dashes \(\-\)\.
+*Minimum length*: 1
+*Maximum length*: 100
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IdentityPoolName`  <a name="cfn-cognito-identitypool-identitypoolname"></a>
-The name of your Amazon Cognito identity pool\.  
-*Minimum length*: 1  
-*Maximum length*: 128  
-*Pattern*: `[\w ]+`  
-*Required*: No  
-*Type*: String  
+The name of your Amazon Cognito identity pool\.
+*Minimum length*: 1
+*Maximum length*: 128
+*Pattern*: `[\w ]+`
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OpenIdConnectProviderARNs`  <a name="cfn-cognito-identitypool-openidconnectproviderarns"></a>
-A list of ARNs for the OpendID Connect provider\.  
-*Required*: No  
-*Type*: List of String  
+A list of ARNs for the OpendID Connect provider\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PushSync`  <a name="cfn-cognito-identitypool-pushsync"></a>
-Configuration options to be applied to the identity pool\.  
-*Required*: No  
-*Type*: [PushSync](aws-properties-cognito-identitypool-pushsync.md)  
+Configuration options to be applied to the identity pool\.
+*Required*: No
+*Type*: [PushSync](aws-properties-cognito-identitypool-pushsync.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SamlProviderARNs`  <a name="cfn-cognito-identitypool-samlproviderarns"></a>
-A list of Amazon Resource Names \(ARNs\) of Security Assertion Markup Language \(SAML\) providers\.  
-*Required*: No  
-*Type*: List of String  
+A list of Amazon Resource Names \(ARNs\) of Security Assertion Markup Language \(SAML\) providers\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SupportedLoginProviders`  <a name="cfn-cognito-identitypool-supportedloginproviders"></a>
-Key\-value pairs that map provider names to provider app IDs\.  
-*Required*: No  
-*Type*: Json  
+Key\-value pairs that map provider names to provider app IDs\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-cognito-identitypool-return-values"></a>

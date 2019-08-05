@@ -29,23 +29,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordcolumn-properties"></a>
 
 `Mapping`  <a name="cfn-kinesisanalyticsv2-applicationreferencedatasource-recordcolumn-mapping"></a>
-A reference to the data element in the streaming input or the reference data source\.  
-*Required*: No  
-*Type*: String  
+A reference to the data element in the streaming input or the reference data source\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-kinesisanalyticsv2-applicationreferencedatasource-recordcolumn-name"></a>
-The name of the column that is created in the in\-application input stream or reference table\.  
-*Required*: Yes  
-*Type*: String  
+The name of the column that is created in the in\-application input stream or reference table\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SqlType`  <a name="cfn-kinesisanalyticsv2-applicationreferencedatasource-recordcolumn-sqltype"></a>
-The type of column created in the in\-application input stream or reference table\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
+The type of column created in the in\-application input stream or reference table\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordcolumn--seealso"></a>
-+  [RecordColumn](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_RecordColumn.html) in the *Amazon Kinesis Data Analytics API Reference* 
++  [RecordColumn](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_RecordColumn.html) in the *Amazon Kinesis Data Analytics API Reference*

@@ -8,5 +8,5 @@ The following example deletes the `myteststack` stack:
 1. PROMPT> aws cloudformation delete-stack --stack-name myteststack
 ```
 
-**Note**  
+**Note**
 You cannot delete a stack that has termination protection enabled\. For more information, see [Protecting a Stack From Being Deleted](using-cfn-protect-stacks.md)

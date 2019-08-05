@@ -17,14 +17,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-lifecycleconfig-syntax.yaml"></a>
 
 ```
-  [Rules](#cfn-s3-bucket-lifecycleconfig-rules): 
+  [Rules](#cfn-s3-bucket-lifecycleconfig-rules):
     - [Rule](aws-properties-s3-bucket-lifecycleconfig-rule.md)
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-lifecycleconfig-properties"></a>
 
 `Rules`  <a name="cfn-s3-bucket-lifecycleconfig-rules"></a>
-A lifecycle rule for individual objects in an Amazon S3 bucket\.  
-*Required*: Yes  
-*Type*: List of [Rule](aws-properties-s3-bucket-lifecycleconfig-rule.md)  
+A lifecycle rule for individual objects in an Amazon S3 bucket\.
+*Required*: Yes
+*Type*: List of [Rule](aws-properties-s3-bucket-lifecycleconfig-rule.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

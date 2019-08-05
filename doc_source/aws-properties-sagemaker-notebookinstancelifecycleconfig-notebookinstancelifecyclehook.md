@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook-properties"></a>
 
 `Content`  <a name="cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook-content"></a>
-A base64\-encoded string that contains a shell script for a notebook instance lifecycle configuration\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `16384`  
-*Pattern*: `[\S\s]+`  
+A base64\-encoded string that contains a shell script for a notebook instance lifecycle configuration\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `16384`
+*Pattern*: `[\S\s]+`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

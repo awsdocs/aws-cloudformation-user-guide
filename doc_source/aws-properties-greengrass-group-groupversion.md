@@ -37,47 +37,47 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-greengrass-group-groupversion-properties"></a>
 
 `ConnectorDefinitionVersionArn`  <a name="cfn-greengrass-group-groupversion-connectordefinitionversionarn"></a>
-The Amazon Resource Name \(ARN\) of the connector definition version that contains the connectors you want to deploy with the group version\.  
-*Required*: No  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of the connector definition version that contains the connectors you want to deploy with the group version\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CoreDefinitionVersionArn`  <a name="cfn-greengrass-group-groupversion-coredefinitionversionarn"></a>
-The ARN of the core definition version that contains the core you want to deploy with the group version\. Currently, the core definition version can contain only one core\.  
-*Required*: No  
-*Type*: String  
+The ARN of the core definition version that contains the core you want to deploy with the group version\. Currently, the core definition version can contain only one core\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DeviceDefinitionVersionArn`  <a name="cfn-greengrass-group-groupversion-devicedefinitionversionarn"></a>
-The ARN of the device definition version that contains the devices you want to deploy with the group version\.  
-*Required*: No  
-*Type*: String  
+The ARN of the device definition version that contains the devices you want to deploy with the group version\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FunctionDefinitionVersionArn`  <a name="cfn-greengrass-group-groupversion-functiondefinitionversionarn"></a>
-The ARN of the function definition version that contains the functions you want to deploy with the group version\.  
-*Required*: No  
-*Type*: String  
+The ARN of the function definition version that contains the functions you want to deploy with the group version\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LoggerDefinitionVersionArn`  <a name="cfn-greengrass-group-groupversion-loggerdefinitionversionarn"></a>
-The ARN of the logger definition version that contains the loggers you want to deploy with the group version\.  
-*Required*: No  
-*Type*: String  
+The ARN of the logger definition version that contains the loggers you want to deploy with the group version\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ResourceDefinitionVersionArn`  <a name="cfn-greengrass-group-groupversion-resourcedefinitionversionarn"></a>
-The ARN of the resource definition version that contains the resources you want to deploy with the group version\.  
-*Required*: No  
-*Type*: String  
+The ARN of the resource definition version that contains the resources you want to deploy with the group version\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubscriptionDefinitionVersionArn`  <a name="cfn-greengrass-group-groupversion-subscriptiondefinitionversionarn"></a>
-The ARN of the subscription definition version that contains the subscriptions you want to deploy with the group version\.  
-*Required*: No  
-*Type*: String  
+The ARN of the subscription definition version that contains the subscriptions you want to deploy with the group version\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See Also<a name="aws-properties-greengrass-group-groupversion--seealso"></a>
-+  [GroupVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-groupversion.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [GroupVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-groupversion.html) in the * AWS IoT Greengrass API Reference *
++  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)

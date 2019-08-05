@@ -25,9 +25,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Batch::ComputeEnvironment
-Properties: 
+Properties:
   [ComputeEnvironmentName](#cfn-batch-computeenvironment-computeenvironmentname): String
-  [ComputeResources](#cfn-batch-computeenvironment-computeresources): 
+  [ComputeResources](#cfn-batch-computeenvironment-computeresources):
     [ComputeResources](aws-properties-batch-computeenvironment-computeresources.md)
   [ServiceRole](#cfn-batch-computeenvironment-servicerole): String
   [State](#cfn-batch-computeenvironment-state): String
@@ -37,37 +37,37 @@ Properties:
 ## Properties<a name="aws-resource-batch-computeenvironment-properties"></a>
 
 `ComputeEnvironmentName`  <a name="cfn-batch-computeenvironment-computeenvironmentname"></a>
-The name for your compute environment\. Up to 128 letters \(uppercase and lowercase\), numbers, hyphens, and underscores are allowed\.  
-*Required*: No  
-*Type*: String  
+The name for your compute environment\. Up to 128 letters \(uppercase and lowercase\), numbers, hyphens, and underscores are allowed\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ComputeResources`  <a name="cfn-batch-computeenvironment-computeresources"></a>
-The ComputeResources property type specifies details of the compute resources managed by the compute environment\. This parameter is required for managed compute environments\. For more information, see [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.  
-*Required*: No  
-*Type*: [ComputeResources](aws-properties-batch-computeenvironment-computeresources.md)  
+The ComputeResources property type specifies details of the compute resources managed by the compute environment\. This parameter is required for managed compute environments\. For more information, see [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.
+*Required*: No
+*Type*: [ComputeResources](aws-properties-batch-computeenvironment-computeresources.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceRole`  <a name="cfn-batch-computeenvironment-servicerole"></a>
-The full Amazon Resource Name \(ARN\) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf\.  
-If your specified role has a path other than `/`, then you must either specify the full role ARN \(this is recommended\) or prefix the role name with the path\.  
+The full Amazon Resource Name \(ARN\) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf\.
+If your specified role has a path other than `/`, then you must either specify the full role ARN \(this is recommended\) or prefix the role name with the path\.
 Depending on how you created your AWS Batch service role, its ARN may contain the `service-role` path prefix\. When you only specify the name of the service role, AWS Batch assumes that your ARN does not use the `service-role` path prefix\. Because of this, we recommend that you specify the full ARN of your service role when you create compute environments\.
-*Required*: Yes  
-*Type*: String  
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `State`  <a name="cfn-batch-computeenvironment-state"></a>
-The state of the compute environment\. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+The state of the compute environment\. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `DISABLED | ENABLED`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-batch-computeenvironment-type"></a>
-The type of the compute environment\. For more information, see [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `MANAGED | UNMANAGED`  
+The type of the compute environment\. For more information, see [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `MANAGED | UNMANAGED`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-batch-computeenvironment-return-values"></a>

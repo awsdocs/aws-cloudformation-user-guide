@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-route53-hostedzone-hostedzoneconfig-properties"></a>
 
 `Comment`  <a name="cfn-route53-hostedzone-hostedzoneconfig-comment"></a>
-Any comments that you want to include about the hosted zone\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `256`  
+Any comments that you want to include about the hosted zone\.
+*Required*: No
+*Type*: String
+*Maximum*: `256`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-route53-hostedzone-hostedzoneconfig--seealso"></a>

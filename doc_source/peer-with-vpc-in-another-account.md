@@ -9,14 +9,14 @@ For more information about VPC peering and its limitations, see [VPC Peering Ove
 ## Prerequisites<a name="peer-with-vpc-in-another-account-prerequisites"></a>
 
 1. You need a peer VPC ID, a peer AWS account ID, and a [cross\-account access role](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_permissions-to-switch.html) for the peering connection\.
-**Note**  
+**Note**
 This walkthrough refers to two accounts: First is an account that allows cross\-account peering \(the *accepter account*\)\. Second is an account that requests the peering connection \(the *requester account*\)\.
 
 1. To accept the VPC peering connection, the cross\-account access role must be assumable by you\. The resource behaves the same way as a VPC peering connection resource in the same account\.
 
 ## Step 1: Create a VPC and a Cross\-Account Role<a name="step-1-create-vpc-and-cross-account-role"></a>
 
- **Create a VPC and a cross\-account access role \(example\)** 
+ **Create a VPC and a cross\-account access role \(example\)**
 
 In this step, you'll create the VPC and role in the *accepter account*\.
 
@@ -28,8 +28,8 @@ In this step, you'll create the VPC and role in the *accepter account*\.
 
    If you are creating the template in another text editor, choose **Upload a template to Amazon S3** or **Specify an Amazon S3 template URL**, as appropriate\.
 
-1. Use the following example template to create the VPC and the cross\-account role allowing another account to achieve peering\.  
-**Example JSON**  
+1. Use the following example template to create the VPC and the cross\-account role allowing another account to achieve peering\.
+**Example JSON**
 
    ```
    {
@@ -103,8 +103,8 @@ In this step, you'll create the VPC and role in the *accepter account*\.
        }
      }
    }
-   ```  
-**Example YAML**  
+   ```
+**Example YAML**
 
    ```
    AWSTemplateFormatVersion: 2010-09-09
@@ -143,7 +143,7 @@ In this step, you'll create the VPC and role in the *accepter account*\.
      VPCId:
        Value: !Ref vpc
      RoleARN:
-       Value: !GetAtt 
+       Value: !GetAtt
          - peerRole
          - Arn
    ```
@@ -160,9 +160,9 @@ In this step, you'll create the VPC and role in the *accepter account*\.
 
 Now that you've created the VPC and cross\-account role, you can peer with the VPC using another AWS account \(the *requester account*\)\.
 
- **To create a template that includes the [AWS::EC2::VPCPeeringConnection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html) resource \(example\)** 
+ **To create a template that includes the [AWS::EC2::VPCPeeringConnection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html) resource \(example\)**
 
-1. Go back to the AWS CloudFormation console home page\. 
+1. Go back to the AWS CloudFormation console home page\.
 
 1. Choose **Create Stack**\.
 
@@ -170,8 +170,8 @@ Now that you've created the VPC and cross\-account role, you can peer with the V
 
    If you are creating the template in another text editor, choose **Upload a template to Amazon S3** or **Specify an Amazon S3 template URL**, as appropriate\.
 
-1. Use the following example template to create a VPC and a VPC peering connection using the peer role you created in Step 1\.  
-**Example JSON**  
+1. Use the following example template to create a VPC and a VPC peering connection using the peer role you created in Step 1\.
+**Example JSON**
 
    ```
    {
@@ -229,8 +229,8 @@ Now that you've created the VPC and cross\-account role, you can peer with the V
        }
      }
    }
-   ```  
-**Example YAML**  
+   ```
+**Example YAML**
 
    ```
    AWSTemplateFormatVersion: 2010-09-09
@@ -278,13 +278,13 @@ You might want to create a highly restrictive policy for peering your VPC with a
 
 The following example template shows how to change the VPC peer owner template \(the *accepter account* created in Step 1 above\) so that it is more restrictive\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
     {
         "AWSTemplateFormatVersion": "2010-09-09",
         "Description": "Create a VPC and an assumable role for cross account VPC peering.",
-        
+
         "Parameters": {
             "PeerRequesterAccountId": {
                 "Type": "String"
@@ -371,7 +371,7 @@ The following example template shows how to change the VPC peer owner template \
     }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 AWSTemplateFormatVersion: 2010-09-09

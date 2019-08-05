@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lambda-alias-versionweight-properties"></a>
 
 `FunctionVersion`  <a name="cfn-lambda-alias-versionweight-functionversion"></a>
-The name of the second alias\.  
-*Required*: Yes  
-*Type*: String  
+The name of the second alias\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FunctionWeight`  <a name="cfn-lambda-alias-versionweight-functionweight"></a>
-The percentage of traffic that's routed to the second alias\.  
-*Required*: Yes  
-*Type*: Double  
+The percentage of traffic that's routed to the second alias\.
+*Required*: Yes
+*Type*: Double
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -21,26 +21,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ContainerPath](#cfn-ecs-taskdefinition-device-containerpath): String
   [HostPath](#cfn-ecs-taskdefinition-device-hostpath): String
-  [Permissions](#cfn-ecs-taskdefinition-device-permissions): 
+  [Permissions](#cfn-ecs-taskdefinition-device-permissions):
     - String
 ```
 
 ## Properties<a name="aws-properties-ecs-taskdefinition-device-properties"></a>
 
 `ContainerPath`  <a name="cfn-ecs-taskdefinition-device-containerpath"></a>
-The path inside the container at which to expose the host device\.  
-*Required*: No  
-*Type*: String  
+The path inside the container at which to expose the host device\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HostPath`  <a name="cfn-ecs-taskdefinition-device-hostpath"></a>
-The path for the device on the host container instance\.  
-*Required*: Yes  
-*Type*: String  
+The path for the device on the host container instance\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Permissions`  <a name="cfn-ecs-taskdefinition-device-permissions"></a>
-The explicit permissions to provide to the container for the device\. By default, the container has permissions for `read`, `write`, and `mknod` for the device\.  
-*Required*: No  
-*Type*: List of String  
+The explicit permissions to provide to the container for the device\. By default, the container has permissions for `read`, `write`, and `mknod` for the device\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

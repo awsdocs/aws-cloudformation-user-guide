@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-glue-datacatalogencryptionsettings-encryptionatrest-properties"></a>
 
 `CatalogEncryptionMode`  <a name="cfn-glue-datacatalogencryptionsettings-encryptionatrest-catalogencryptionmode"></a>
-The encryption\-at\-rest mode for encrypting Data Catalog data\.  
-*Required*: No  
-*Type*: String  
+The encryption\-at\-rest mode for encrypting Data Catalog data\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SseAwsKmsKeyId`  <a name="cfn-glue-datacatalogencryptionsettings-encryptionatrest-sseawskmskeyid"></a>
-The ID of the AWS KMS key to use for encryption at rest\.  
-*Required*: No  
-*Type*: String  
+The ID of the AWS KMS key to use for encryption at rest\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

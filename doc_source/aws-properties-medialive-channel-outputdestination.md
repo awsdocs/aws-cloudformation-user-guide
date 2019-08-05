@@ -22,28 +22,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Id](#cfn-medialive-channel-outputdestination-id): String
-  [MediaPackageSettings](#cfn-medialive-channel-outputdestination-mediapackagesettings): 
+  [MediaPackageSettings](#cfn-medialive-channel-outputdestination-mediapackagesettings):
     - [MediaPackageOutputDestinationSettings](aws-properties-medialive-channel-mediapackageoutputdestinationsettings.md)
-  [Settings](#cfn-medialive-channel-outputdestination-settings): 
+  [Settings](#cfn-medialive-channel-outputdestination-settings):
     - [OutputDestinationSettings](aws-properties-medialive-channel-outputdestinationsettings.md)
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-outputdestination-properties"></a>
 
 `Id`  <a name="cfn-medialive-channel-outputdestination-id"></a>
-The ID for this destination\.  
-*Required*: No  
-*Type*: String  
+The ID for this destination\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MediaPackageSettings`  <a name="cfn-medialive-channel-outputdestination-mediapackagesettings"></a>
-The destination settings for a MediaPackage output\.  
-*Required*: No  
-*Type*: List of [MediaPackageOutputDestinationSettings](aws-properties-medialive-channel-mediapackageoutputdestinationsettings.md)  
+The destination settings for a MediaPackage output\.
+*Required*: No
+*Type*: List of [MediaPackageOutputDestinationSettings](aws-properties-medialive-channel-mediapackageoutputdestinationsettings.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Settings`  <a name="cfn-medialive-channel-outputdestination-settings"></a>
-The destination settings for an output\.  
-*Required*: No  
-*Type*: List of [OutputDestinationSettings](aws-properties-medialive-channel-outputdestinationsettings.md)  
+The destination settings for an output\.
+*Required*: No
+*Type*: List of [OutputDestinationSettings](aws-properties-medialive-channel-outputdestinationsettings.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

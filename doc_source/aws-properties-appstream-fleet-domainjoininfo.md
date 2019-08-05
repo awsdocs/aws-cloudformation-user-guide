@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appstream-fleet-domainjoininfo-properties"></a>
 
 `DirectoryName`  <a name="cfn-appstream-fleet-domainjoininfo-directoryname"></a>
-The fully qualified name of the directory \(for example, corp\.example\.com\)\.  
-*Required*: No  
-*Type*: String  
+The fully qualified name of the directory \(for example, corp\.example\.com\)\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OrganizationalUnitDistinguishedName`  <a name="cfn-appstream-fleet-domainjoininfo-organizationalunitdistinguishedname"></a>
-The distinguished name of the organizational unit for computer accounts\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `2000`  
+The distinguished name of the organizational unit for computer accounts\.
+*Required*: No
+*Type*: String
+*Maximum*: `2000`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

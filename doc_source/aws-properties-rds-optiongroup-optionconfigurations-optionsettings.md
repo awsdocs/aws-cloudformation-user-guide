@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-rds-optiongroup-optionconfigurations-optionsettings-properties"></a>
 
 `Name`  <a name="cfn-rds-optiongroup-optionconfigurations-optionsettings-name"></a>
-The name of the option that has settings that you can set\.  
-*Required*: No  
-*Type*: String  
+The name of the option that has settings that you can set\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-rds-optiongroup-optionconfigurations-optionsettings-value"></a>
-The current value of the option setting\.  
-*Required*: No  
-*Type*: String  
+The current value of the option setting\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

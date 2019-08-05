@@ -25,9 +25,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ask-skill-overrides-properties"></a>
 
 `Manifest`  <a name="cfn-ask-skill-overrides-manifest"></a>
-Overrides to apply to the skill manifest inside of the skill package\. The skill manifest contains metadata about the skill\. For more information, see [Skill Manifest Schemas](https://developer.amazon.com/docs/smapi/skill-manifest.html)\.  
-*Required*: No  
-*Type*: Json  
+Overrides to apply to the skill manifest inside of the skill package\. The skill manifest contains metadata about the skill\. For more information, see [Skill Manifest Schemas](https://developer.amazon.com/docs/smapi/skill-manifest.html)\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-ask-skill-overrides--examples"></a>

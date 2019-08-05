@@ -17,15 +17,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-service-networkconfiguration-syntax.yaml"></a>
 
 ```
-  [AwsvpcConfiguration](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration): 
+  [AwsvpcConfiguration](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration):
     [AwsVpcConfiguration](aws-properties-ecs-service-awsvpcconfiguration.md)
 ```
 
 ## Properties<a name="aws-properties-ecs-service-networkconfiguration-properties"></a>
 
 `AwsvpcConfiguration`  <a name="cfn-ecs-service-networkconfiguration-awsvpcconfiguration"></a>
-The VPC subnets and security groups associated with a task\.  
+The VPC subnets and security groups associated with a task\.
 All specified subnets and security groups must be from the same VPC\.
-*Required*: No  
-*Type*: [AwsVpcConfiguration](aws-properties-ecs-service-awsvpcconfiguration.md)  
+*Required*: No
+*Type*: [AwsVpcConfiguration](aws-properties-ecs-service-awsvpcconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

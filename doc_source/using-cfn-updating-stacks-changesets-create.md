@@ -8,7 +8,7 @@ To modify a template, for example to add a new resource to your stack, modify a 
 
 1. In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), from the list of stacks, select the running stack for which you want to create a change set\.
 
-1. Choose **Actions**, and then choose **Create Change Set**\.  
+1. Choose **Actions**, and then choose **Create Change Set**\.
 ![\[The Create Change Set For Current Stack option in the Actions menu.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-changeset-create.png)
 
 1. If you modified the stack template, specify the location of the updated template\. If not, select **Use current template**\.
@@ -31,7 +31,7 @@ To modify a template, for example to add a new resource to your stack, modify a 
 
 1. Choose **Create change set**\.
 
-   You're redirected to the change set's detail page\. While AWS CloudFormation generates the change set, the status of the change set is **CREATE\_IN\_PROGRESS**\. After it has created the change set, AWS CloudFormation sets the status to **CREATE\_COMPLETE**\. In the **Changes** section, AWS CloudFormation lists all of the changes that it will make to your stack\. For more information, see [Viewing a Change Set](using-cfn-updating-stacks-changesets-view.md)\.  
+   You're redirected to the change set's detail page\. While AWS CloudFormation generates the change set, the status of the change set is **CREATE\_IN\_PROGRESS**\. After it has created the change set, AWS CloudFormation sets the status to **CREATE\_COMPLETE**\. In the **Changes** section, AWS CloudFormation lists all of the changes that it will make to your stack\. For more information, see [Viewing a Change Set](using-cfn-updating-stacks-changesets-view.md)\.
 ![\[The details page for the change set.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-changeset-details.png)
 
    If AWS CloudFormation fails to create the change set \(reports `FAILED` status\), fix the error displayed in the **Status** field, and recreate the change set\.

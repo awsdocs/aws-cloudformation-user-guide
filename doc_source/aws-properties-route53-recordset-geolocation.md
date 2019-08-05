@@ -27,29 +27,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-route53-recordset-geolocation-properties"></a>
 
 `ContinentCode`  <a name="cfn-route53-recordset-geolocation-continentcode"></a>
-The two\-letter code for the continent\.  
-Valid values: `AF` \| `AN` \| `AS` \| `EU` \| `OC` \| `NA` \| `SA`   
-Constraint: Specifying `ContinentCode` with either `CountryCode` or `SubdivisionCode` returns an `InvalidInput` error\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `2`  
-*Maximum*: `2`  
+The two\-letter code for the continent\.
+Valid values: `AF` \| `AN` \| `AS` \| `EU` \| `OC` \| `NA` \| `SA`
+Constraint: Specifying `ContinentCode` with either `CountryCode` or `SubdivisionCode` returns an `InvalidInput` error\.
+*Required*: No
+*Type*: String
+*Minimum*: `2`
+*Maximum*: `2`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CountryCode`  <a name="cfn-route53-recordset-geolocation-countrycode"></a>
-The two\-letter code for the country\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `2`  
+The two\-letter code for the country\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `2`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubdivisionCode`  <a name="cfn-route53-recordset-geolocation-subdivisioncode"></a>
-The code for the subdivision\. Route 53 currently supports only states in the United States\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `3`  
+The code for the subdivision\. Route 53 currently supports only states in the United States\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `3`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-route53-recordset-geolocation--seealso"></a>

@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::TransitGatewayRouteTableAssociation
-Properties: 
+Properties:
   [TransitGatewayAttachmentId](#cfn-ec2-transitgatewayroutetableassociation-transitgatewayattachmentid): String
   [TransitGatewayRouteTableId](#cfn-ec2-transitgatewayroutetableassociation-transitgatewayroutetableid): String
 ```
@@ -30,15 +30,15 @@ Properties:
 ## Properties<a name="aws-resource-ec2-transitgatewayroutetableassociation-properties"></a>
 
 `TransitGatewayAttachmentId`  <a name="cfn-ec2-transitgatewayroutetableassociation-transitgatewayattachmentid"></a>
-The ID of the attachment\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the attachment\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TransitGatewayRouteTableId`  <a name="cfn-ec2-transitgatewayroutetableassociation-transitgatewayroutetableid"></a>
-The ID of the route table for the transit gateway\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the route table for the transit gateway\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-transitgatewayroutetableassociation-return-values"></a>

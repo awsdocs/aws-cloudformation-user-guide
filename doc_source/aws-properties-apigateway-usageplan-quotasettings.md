@@ -27,21 +27,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-apigateway-usageplan-quotasettings-properties"></a>
 
 `Limit`  <a name="cfn-apigateway-usageplan-quotasettings-limit"></a>
-The maximum number of requests that users can make within the specified time period\.  
-*Required*: No  
-*Type*: Integer  
+The maximum number of requests that users can make within the specified time period\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Offset`  <a name="cfn-apigateway-usageplan-quotasettings-offset"></a>
-For the initial time period, the number of requests to subtract from the specified limit\. When you first implement a usage plan, the plan might start in the middle of the week or month\. With this property, you can decrease the limit for this initial time period\.  
-*Required*: No  
-*Type*: Integer  
+For the initial time period, the number of requests to subtract from the specified limit\. When you first implement a usage plan, the plan might start in the middle of the week or month\. With this property, you can decrease the limit for this initial time period\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Period`  <a name="cfn-apigateway-usageplan-quotasettings-period"></a>
-The time period for which the maximum limit of requests applies, such as `DAY` or `WEEK`\. For valid values, see the period property for the [UsagePlan](https://docs.aws.amazon.com/apigateway/api-reference/resource/usage-plan) resource in the *Amazon API Gateway REST API Reference*\.  
-*Required*: No  
-*Type*: String  
+The time period for which the maximum limit of requests applies, such as `DAY` or `WEEK`\. For valid values, see the period property for the [UsagePlan](https://docs.aws.amazon.com/apigateway/api-reference/resource/usage-plan) resource in the *Amazon API Gateway REST API Reference*\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-apigateway-usageplan-quotasettings--seealso"></a>

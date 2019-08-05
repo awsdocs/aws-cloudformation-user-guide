@@ -35,26 +35,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-service-loadbalancers-properties"></a>
 
 `ContainerName`  <a name="cfn-ecs-service-loadbalancers-containername"></a>
-The name of the container \(as it appears in a container definition\) to associate with the load balancer\.  
-*Required*: No  
-*Type*: String  
+The name of the container \(as it appears in a container definition\) to associate with the load balancer\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ContainerPort`  <a name="cfn-ecs-service-loadbalancers-containerport"></a>
-The port on the container to associate with the load balancer\. This port must correspond to a `containerPort` in the service's task definition\. Your container instances must allow ingress traffic on the `hostPort` of the port mapping\.  
-*Required*: Yes  
-*Type*: Integer  
+The port on the container to associate with the load balancer\. This port must correspond to a `containerPort` in the service's task definition\. Your container instances must allow ingress traffic on the `hostPort` of the port mapping\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LoadBalancerName`  <a name="cfn-ecs-service-loadbalancers-loadbalancername"></a>
-The name of the load balancer to associate with the Amazon ECS service\.  
-*Required*: No  
-*Type*: String  
+The name of the load balancer to associate with the Amazon ECS service\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TargetGroupArn`  <a name="cfn-ecs-service-loadbalancers-targetgrouparn"></a>
-The full Amazon Resource Name \(ARN\) of the Elastic Load Balancing target group or groups associated with a service\. For services using the `ECS` deployment controller, you are limited to one target group\. For services using the `CODE_DEPLOY` deployment controller, you are required to define two target groups for the load balancer\.  
+The full Amazon Resource Name \(ARN\) of the Elastic Load Balancing target group or groups associated with a service\. For services using the `ECS` deployment controller, you are limited to one target group\. For services using the `CODE_DEPLOY` deployment controller, you are required to define two target groups for the load balancer\.
 If your service's task definition uses the `awsvpc` network mode \(which is required for the Fargate launch type\), you must choose `ip` as the target type, not `instance`, because tasks that use the `awsvpc` network mode are associated with an elastic network interface, not an Amazon EC2 instance\.
-*Required*: No  
-*Type*: String  
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -1,6 +1,6 @@
 # AWS::Athena::NamedQuery<a name="aws-resource-athena-namedquery"></a>
 
-The AWS::Athena::NamedQuery resource specifies an Amazon Athena query, where `QueryString` is the list of SQL query statements that comprise the query\. For more information, see [CreateNamedQuery](https://docs.aws.amazon.com/athena/latest/APIReference/API_CreateNamedQuery.html) in the *Amazon Athena API Reference*\. 
+The AWS::Athena::NamedQuery resource specifies an Amazon Athena query, where `QueryString` is the list of SQL query statements that comprise the query\. For more information, see [CreateNamedQuery](https://docs.aws.amazon.com/athena/latest/APIReference/API_CreateNamedQuery.html) in the *Amazon Athena API Reference*\.
 
 ## Syntax<a name="aws-resource-athena-namedquery-syntax"></a>
 
@@ -24,46 +24,46 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Athena::NamedQuery
-Properties: 
+Properties:
   [Database](#cfn-athena-namedquery-database): String
   [Description](#cfn-athena-namedquery-description): String
   [Name](#cfn-athena-namedquery-name): String
-  [QueryString](#cfn-athena-namedquery-querystring): 
+  [QueryString](#cfn-athena-namedquery-querystring):
     String
 ```
 
 ## Properties<a name="aws-resource-athena-namedquery-properties"></a>
 
 `Database`  <a name="cfn-athena-namedquery-database"></a>
-The database to which the query belongs\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
+The database to which the query belongs\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `255`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-athena-namedquery-description"></a>
-The query description\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `1024`  
+The query description\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `1024`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-athena-namedquery-name"></a>
-The query name\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
+The query name\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `QueryString`  <a name="cfn-athena-namedquery-querystring"></a>
-The SQL query statements that comprise the query\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `262144`  
+The SQL query statements that comprise the query\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `262144`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-athena-namedquery-return-values"></a>

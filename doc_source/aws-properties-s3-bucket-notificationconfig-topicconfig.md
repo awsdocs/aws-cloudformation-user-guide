@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Event](#cfn-s3-bucket-notificationconfig-topicconfig-event): String
-  [Filter](#cfn-s3-bucket-notificationconfig-topicconfig-filter): 
+  [Filter](#cfn-s3-bucket-notificationconfig-topicconfig-filter):
     [NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md)
   [Topic](#cfn-s3-bucket-notificationconfig-topicconfig-topic): String
 ```
@@ -28,19 +28,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-notificationconfig-topicconfig-properties"></a>
 
 `Event`  <a name="cfn-s3-bucket-notificationconfig-topicconfig-event"></a>
-The Amazon S3 bucket event about which to send notifications\. For more information, see [Supported Event Types](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon Simple Storage Service Developer Guide*\.  
-*Required*: Yes  
-*Type*: String  
+The Amazon S3 bucket event about which to send notifications\. For more information, see [Supported Event Types](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon Simple Storage Service Developer Guide*\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Filter`  <a name="cfn-s3-bucket-notificationconfig-topicconfig-filter"></a>
-The filtering rules that determine for which objects to send notifications\. For example, you can create a filter so that Amazon S3 sends notifications only when image files with a `.jpg` extension are added to the bucket\.  
-*Required*: No  
-*Type*: [NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md)  
+The filtering rules that determine for which objects to send notifications\. For example, you can create a filter so that Amazon S3 sends notifications only when image files with a `.jpg` extension are added to the bucket\.
+*Required*: No
+*Type*: [NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Topic`  <a name="cfn-s3-bucket-notificationconfig-topicconfig-topic"></a>
-The Amazon Resource Name \(ARN\) of the Amazon SNS topic to which Amazon S3 publishes a message when it detects events of the specified type\.  
-*Required*: Yes  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of the Amazon SNS topic to which Amazon S3 publishes a message when it detects events of the specified type\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

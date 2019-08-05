@@ -2,7 +2,7 @@
 
 To check your template file for syntax errors, you can use the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/validate-template.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/validate-template.html) command\.
 
-**Note**  
+**Note**
 The `aws cloudformation validate-template` command is designed to check only the syntax of your template\. It does not ensure that the property values that you have specified for a resource are valid for that resource\. Nor does it determine the number of resources that will exist when the stack is created\.
 
 To check the operational validity, you need to attempt to create the stack\. There is no sandbox or test area for AWS CloudFormation stacks, so you are charged for the resources you create during testing\.

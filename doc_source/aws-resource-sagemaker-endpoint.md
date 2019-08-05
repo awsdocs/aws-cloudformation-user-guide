@@ -23,37 +23,37 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SageMaker::Endpoint
-Properties: 
+Properties:
   [EndpointConfigName](#cfn-sagemaker-endpoint-endpointconfigname): String
   [EndpointName](#cfn-sagemaker-endpoint-endpointname): String
-  [Tags](#cfn-sagemaker-endpoint-tags): 
+  [Tags](#cfn-sagemaker-endpoint-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-sagemaker-endpoint-properties"></a>
 
 `EndpointConfigName`  <a name="cfn-sagemaker-endpoint-endpointconfigname"></a>
-The name of the [AWS::SageMaker::EndpointConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html) resource that specifies the configuration for the endpoint\. For more information, see [CreateEndpointConfig](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html)\.   
-*Required*: Yes  
-*Type*: String  
-*Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+The name of the [AWS::SageMaker::EndpointConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html) resource that specifies the configuration for the endpoint\. For more information, see [CreateEndpointConfig](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html)\.
+*Required*: Yes
+*Type*: String
+*Maximum*: `63`
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointName`  <a name="cfn-sagemaker-endpoint-endpointname"></a>
-The name of the endpoint\. The name must be unique within an AWS Region in your AWS account\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+The name of the endpoint\. The name must be unique within an AWS Region in your AWS account\.
+*Required*: No
+*Type*: String
+*Maximum*: `63`
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-sagemaker-endpoint-tags"></a>
-A list of key\-value pairs to apply to this resource\.  
-For more information, see [Resource Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) and [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what) in the * AWS Billing and Cost Management User Guide*\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Maximum*: `50`  
+A list of key\-value pairs to apply to this resource\.
+For more information, see [Resource Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) and [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what) in the * AWS Billing and Cost Management User Guide*\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+*Maximum*: `50`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-sagemaker-endpoint-return-values"></a>
@@ -70,12 +70,12 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
+ `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 #### <a name="aws-resource-sagemaker-endpoint-return-values-fn--getatt-fn--getatt"></a>
 
 `EndpointName`  <a name="EndpointName-fn::getatt"></a>
-The name of the endpoint, such as `MyEndpoint`\. 
+The name of the endpoint, such as `MyEndpoint`\.
 
 ## Examples<a name="aws-resource-sagemaker-endpoint--examples"></a>
 
@@ -191,9 +191,9 @@ The following example creates an endpoint configuration from a trained model, an
     "EndpointName": {
       "Value": { "Fn::GetAtt" : [ "Endpoint", "EndpointName" ] }
     }
-    
+
   }
-  
+
 }
 ```
 
@@ -201,8 +201,8 @@ The following example creates an endpoint configuration from a trained model, an
 
 ```
 Description: "Basic Hosting entities test.  We need models to create endpoint configs."
-Mappings: 
-  RegionMap: 
+Mappings:
+  RegionMap:
     "us-west-2":
       "NullTransformer": "123456789012.dkr.ecr.us-west-2.amazonaws.com/mymodel:latest"
     "us-east-2":
@@ -241,27 +241,27 @@ Resources:
         Image: !FindInMap [RegionMap, !Ref "AWS::Region", "NullTransformer"]
       ExecutionRoleArn: !GetAtt ExecutionRole.Arn
 
-  ExecutionRole: 
+  ExecutionRole:
     Type: "AWS::IAM::Role"
-    Properties: 
-      AssumeRolePolicyDocument: 
+    Properties:
+      AssumeRolePolicyDocument:
         Version: "2012-10-17"
-        Statement: 
-          - 
+        Statement:
+          -
             Effect: "Allow"
-            Principal: 
-              Service: 
+            Principal:
+              Service:
                 - "sagemaker.amazonaws.com"
-            Action: 
+            Action:
               - "sts:AssumeRole"
       Path: "/"
-      Policies: 
-        - 
+      Policies:
+        -
           PolicyName: "root"
-          PolicyDocument: 
+          PolicyDocument:
             Version: "2012-10-17"
-            Statement: 
-              - 
+            Statement:
+              -
                 Effect: "Allow"
                 Action: "*"
                 Resource: "*"

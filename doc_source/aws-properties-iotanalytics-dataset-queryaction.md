@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-dataset-queryaction-syntax.yaml"></a>
 
 ```
-  [Filters](#cfn-iotanalytics-dataset-queryaction-filters): 
+  [Filters](#cfn-iotanalytics-dataset-queryaction-filters):
     - [Filter](aws-properties-iotanalytics-dataset-filter.md)
   [SqlQuery](#cfn-iotanalytics-dataset-queryaction-sqlquery): String
 ```
@@ -26,14 +26,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotanalytics-dataset-queryaction-properties"></a>
 
 `Filters`  <a name="cfn-iotanalytics-dataset-queryaction-filters"></a>
-Pre\-filters applied to message data\.  
-*Required*: No  
-*Type*: List of [Filter](aws-properties-iotanalytics-dataset-filter.md)  
-*Maximum*: `1`  
+Pre\-filters applied to message data\.
+*Required*: No
+*Type*: List of [Filter](aws-properties-iotanalytics-dataset-filter.md)
+*Maximum*: `1`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SqlQuery`  <a name="cfn-iotanalytics-dataset-queryaction-sqlquery"></a>
-An "SqlQueryDatasetAction" object that uses an SQL query to automatically create data set contents\.  
-*Required*: Yes  
-*Type*: String  
+An "SqlQueryDatasetAction" object that uses an SQL query to automatically create data set contents\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

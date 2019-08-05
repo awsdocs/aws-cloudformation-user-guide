@@ -22,25 +22,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Glue::Database
-Properties: 
+Properties:
   [CatalogId](#cfn-glue-database-catalogid): String
-  [DatabaseInput](#cfn-glue-database-databaseinput): 
+  [DatabaseInput](#cfn-glue-database-databaseinput):
     [DatabaseInput](aws-properties-glue-database-databaseinput.md)
 ```
 
 ## Properties<a name="aws-resource-glue-database-properties"></a>
 
 `CatalogId`  <a name="cfn-glue-database-catalogid"></a>
-The AWS account ID for the account in which to create the catalog object\.  
- To specify the account ID, you can use the `Ref` intrinsic function with the `AWS::AccountId` pseudo parameter\. For example: `!Ref AWS::AccountId` 
-*Required*: Yes  
-*Type*: String  
+The AWS account ID for the account in which to create the catalog object\.
+ To specify the account ID, you can use the `Ref` intrinsic function with the `AWS::AccountId` pseudo parameter\. For example: `!Ref AWS::AccountId`
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DatabaseInput`  <a name="cfn-glue-database-databaseinput"></a>
-The metadata for the database\.  
-*Required*: Yes  
-*Type*: [DatabaseInput](aws-properties-glue-database-databaseinput.md)  
+The metadata for the database\.
+*Required*: Yes
+*Type*: [DatabaseInput](aws-properties-glue-database-databaseinput.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-glue-database-return-values"></a>

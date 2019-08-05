@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::NetworkInterfacePermission
-Properties: 
+Properties:
   [AwsAccountId](#cfn-ec2-networkinterfacepermission-awsaccountid): String
   [NetworkInterfaceId](#cfn-ec2-networkinterfacepermission-networkinterfaceid): String
   [Permission](#cfn-ec2-networkinterfacepermission-permission): String
@@ -32,22 +32,22 @@ Properties:
 ## Properties<a name="aws-resource-ec2-networkinterfacepermission-properties"></a>
 
 `AwsAccountId`  <a name="cfn-ec2-networkinterfacepermission-awsaccountid"></a>
-The AWS account ID\.  
-*Required*: Yes  
-*Type*: String  
+The AWS account ID\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NetworkInterfaceId`  <a name="cfn-ec2-networkinterfacepermission-networkinterfaceid"></a>
-The ID of the network interface\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the network interface\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Permission`  <a name="cfn-ec2-networkinterfacepermission-permission"></a>
-The type of permission to grant: `INSTANCE-ATTACH` or `EIP-ASSOCIATE`\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `EIP-ASSOCIATE | INSTANCE-ATTACH`  
+The type of permission to grant: `INSTANCE-ATTACH` or `EIP-ASSOCIATE`\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `EIP-ASSOCIATE | INSTANCE-ATTACH`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-networkinterfacepermission-return-values"></a>

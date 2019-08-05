@@ -2,9 +2,9 @@
 
 ## Conditionally create resources for a production, development, or test stack<a name="w4784ab1c21c24c21c47b3"></a>
 
-In some cases, you might want to create stacks that are similar but with minor tweaks\. For example, you might have a template that you use for production applications\. You want to create the same production stack so that you can use it for development or testing\. However, for development and testing, you might not require all the extra capacity that's included in a production\-level stack\. Instead, you can use an environment type input parameter in order to conditionally create stack resources that are specific to production, development, or testing, as shown in the following sample: 
+In some cases, you might want to create stacks that are similar but with minor tweaks\. For example, you might have a template that you use for production applications\. You want to create the same production stack so that you can use it for development or testing\. However, for development and testing, you might not require all the extra capacity that's included in a production\-level stack\. Instead, you can use an environment type input parameter in order to conditionally create stack resources that are specific to production, development, or testing, as shown in the following sample:
 
-**Example JSON**  
+**Example JSON**
 
 ```
 {
@@ -22,7 +22,7 @@ In some cases, you might want to create stacks that are similar but with minor t
       "ap-northeast-1" : { "AMI" : "ami-06cd52961ce9f0d85"}
     }
   },
-  
+
   "Parameters" : {
     "EnvType" : {
       "Description" : "Environment type.",
@@ -32,12 +32,12 @@ In some cases, you might want to create stacks that are similar but with minor t
       "ConstraintDescription" : "must specify prod, dev, or test."
     }
   },
-  
+
   "Conditions" : {
     "CreateProdResources" : {"Fn::Equals" : [{"Ref" : "EnvType"}, "prod"]},
     "CreateDevResources" : {"Fn::Equals" : [{"Ref" : "EnvType"}, "dev"]}
   },
-  
+
   "Resources" : {
     "EC2Instance" : {
       "Type" : "AWS::EC2::Instance",
@@ -54,7 +54,7 @@ In some cases, you might want to create stacks that are similar but with minor t
         ]}
       }
     },
-    
+
     "MountPoint" : {
       "Type" : "AWS::EC2::VolumeAttachment",
       "Condition" : "CreateProdResources",
@@ -77,7 +77,7 @@ In some cases, you might want to create stacks that are similar but with minor t
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"
@@ -108,7 +108,7 @@ Parameters:
     Type: String
     AllowedValues: [prod, dev, test]
     ConstraintDescription: must specify prod, dev, or test.
-  
+
 Conditions:
   CreateProdResources: !Equals [!Ref EnvType, prod]
   CreateDevResources: !Equals [!Ref EnvType, "dev"]
@@ -118,7 +118,7 @@ Resources:
     Type: "AWS::EC2::Instance"
     Properties:
       ImageId: !FindInMap [RegionMap, !Ref "AWS::Region", AMI]
-      InstanceType: !If [CreateProdResources, c1.xlarge, !If [CreateDevResources, m1.large, m1.small]]    
+      InstanceType: !If [CreateProdResources, c1.xlarge, !If [CreateDevResources, m1.large, m1.small]]
   MountPoint:
     Type: "AWS::EC2::VolumeAttachment"
     Condition: CreateProdResources
@@ -144,7 +144,7 @@ In the `InstanceType` property, the template nests two `Fn::If` intrinsic functi
 
 In this example, you can create an Amazon RDS DB instance from a snapshot\. If you specify the `DBSnapshotName` parameter, AWS CloudFormation uses the parameter value as the snapshot name when creating the DB instance\. If you keep the default value \(empty string\), AWS CloudFormation removes the `DBSnapshotIdentifier` property and creates a DB instance from scratch\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
 {
@@ -172,10 +172,10 @@ In this example, you can create an Amazon RDS DB instance from a snapshot\. If y
     "DBSnapshotName": {
       "Description": "The name of a DB snapshot (optional)",
       "Default": "",
-      "Type": "String"      
+      "Type": "String"
     }
   },
-  
+
   "Conditions": {
     "UseDBSnapshot": {"Fn::Not": [{"Fn::Equals" : [{"Ref" : "DBSnapshotName"}, ""]}]}
   },
@@ -217,12 +217,12 @@ In this example, you can create an Amazon RDS DB instance from a snapshot\. If y
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"
-Parameters: 
-  DBUser: 
+Parameters:
+  DBUser:
     NoEcho: true
     Description: The database admin account username
     Type: String
@@ -230,7 +230,7 @@ Parameters:
     MaxLength: 16
     AllowedPattern: "[a-zA-Z][a-zA-Z0-9]*"
     ConstraintDescription: must begin with a letter and contain only alphanumeric characters.
-  DBPassword: 
+  DBPassword:
     NoEcho: true
     Description: The database admin account password
     Type: String
@@ -238,16 +238,16 @@ Parameters:
     MaxLength: 41
     AllowedPattern: "[a-zA-Z0-9]*"
     ConstraintDescription: must contain only alphanumeric characters.
-  DBSnapshotName: 
+  DBSnapshotName:
     Description: The name of a DB snapshot (optional)
     Default: ""
     Type: String
-Conditions: 
+Conditions:
   UseDBSnapshot: !Not [!Equals [!Ref DBSnapshotName, ""]]
-Resources: 
-  MyDB: 
+Resources:
+  MyDB:
     Type: "AWS::RDS::DBInstance"
-    Properties: 
+    Properties:
       AllocatedStorage: 5
       DBInstanceClass: db.m1.small
       Engine: MySQL
@@ -256,12 +256,12 @@ Resources:
       MasterUserPassword: !Ref DBPassword
       DBParameterGroupName: !Ref MyRDSParamGroup
       DBSnapshotIdentifier: !If [UseDBSnapshot, !Ref DBSnapshotName, !Ref "AWS::NoValue"]
-  MyRDSParamGroup: 
+  MyRDSParamGroup:
     Type: "AWS::RDS::DBParameterGroup"
-    Properties: 
+    Properties:
       Family: MySQL5.5
       Description: CloudFormation Sample Database Parameter Group
-      Parameters: 
+      Parameters:
         autocommit: 1
         general_log: 1
         old_passwords: 0
@@ -273,7 +273,7 @@ The `UseDBSnapshot` condition evaluates to true only if the `DBSnapshotName` is 
 
 In this example, you can use an Amazon EC2 security group that has already been created or you can create a new security group, which is specified in the template\. For the `ExistingSecurityGroup` parameter, you can specify the `default` security group name or `NONE`\. If you specify `default`, AWS CloudFormation uses a security group that has already been created and is named `default`\. If you specify `NONE`, AWS CloudFormation creates the security group that's defined in the template\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
 {
@@ -285,7 +285,7 @@ In this example, you can use an Amazon EC2 security group that has already been 
       "AllowedValues" : ["default", "NONE"]
     }
   },
- 
+
   "Conditions" : {
     "CreateNewSecurityGroup" : {"Fn::Equals" : [{"Ref" : "ExistingSecurityGroup"}, "NONE"] }
   },
@@ -335,37 +335,37 @@ In this example, you can use an Amazon EC2 security group that has already been 
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
-Parameters: 
-  ExistingSecurityGroup: 
+Parameters:
+  ExistingSecurityGroup:
     Description: An existing security group ID (optional).
     Default: NONE
     Type: String
-    AllowedValues: 
+    AllowedValues:
       - default
       - NONE
-Conditions: 
+Conditions:
   CreateNewSecurityGroup: !Equals [!Ref ExistingSecurityGroup, NONE]
-Resources: 
-  MyInstance: 
+Resources:
+  MyInstance:
     Type: "AWS::EC2::Instance"
-    Properties: 
+    Properties:
       ImageId: "ami-0ff8a91507f77f867"
       SecurityGroups: !If [CreateNewSecurityGroup, !Ref NewSecurityGroup, !Ref ExistingSecurityGroup]
-  NewSecurityGroup: 
+  NewSecurityGroup:
     Type: "AWS::EC2::SecurityGroup"
     Condition: CreateNewSecurityGroup
-    Properties: 
+    Properties:
       GroupDescription: Enable HTTP access via port 80
-      SecurityGroupIngress: 
-        - 
+      SecurityGroupIngress:
+        -
           IpProtocol: tcp
           FromPort: 80
           ToPort: 80
           CidrIp: 0.0.0.0/0
-Outputs: 
+Outputs:
   SecurityGroupId:
     Description: Group ID of the security group used.
     Value: !If [CreateNewSecurityGroup, !Ref NewSecurityGroup, !Ref ExistingSecurityGroup]

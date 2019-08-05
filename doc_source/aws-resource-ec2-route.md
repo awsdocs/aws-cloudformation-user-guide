@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::Route
-Properties: 
+Properties:
   [DestinationCidrBlock](#cfn-ec2-route-destinationcidrblock): String
   [DestinationIpv6CidrBlock](#cfn-ec2-route-destinationipv6cidrblock): String
   [EgressOnlyInternetGatewayId](#cfn-ec2-route-egressonlyinternetgatewayid): String
@@ -48,69 +48,69 @@ Properties:
 ## Properties<a name="aws-resource-ec2-route-properties"></a>
 
 `DestinationCidrBlock`  <a name="cfn-ec2-route-destinationcidrblock"></a>
-The IPv4 CIDR block used for the destination match\.  
-You must specify the `DestinationCidrBlock` or `DestinationIpv6CidrBlock` property\.  
-*Required*: No  
-*Type*: String  
+The IPv4 CIDR block used for the destination match\.
+You must specify the `DestinationCidrBlock` or `DestinationIpv6CidrBlock` property\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DestinationIpv6CidrBlock`  <a name="cfn-ec2-route-destinationipv6cidrblock"></a>
-The IPv6 CIDR block used for the destination match\.  
-You must specify the `DestinationCidrBlock` or `DestinationIpv6CidrBlock` property\.  
-*Required*: No  
-*Type*: String  
+The IPv6 CIDR block used for the destination match\.
+You must specify the `DestinationCidrBlock` or `DestinationIpv6CidrBlock` property\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EgressOnlyInternetGatewayId`  <a name="cfn-ec2-route-egressonlyinternetgatewayid"></a>
-The ID of the egress\-only internet gateway\.  
-*Required*: No  
-*Type*: String  
+The ID of the egress\-only internet gateway\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GatewayId`  <a name="cfn-ec2-route-gatewayid"></a>
-The ID of a gateway attached to your VPC\.  
- You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\.  
-*Required*: No  
-*Type*: String  
+The ID of a gateway attached to your VPC\.
+ You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceId`  <a name="cfn-ec2-route-instanceid"></a>
-The ID of a NAT instance in your VPC\.  
-You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\.  
-*Required*: No  
-*Type*: String  
+The ID of a NAT instance in your VPC\.
+You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NatGatewayId`  <a name="cfn-ec2-route-natgatewayid"></a>
-The ID of a NAT gateway\.  
-You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\.  
-*Required*: No  
-*Type*: String  
+The ID of a NAT gateway\.
+You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkInterfaceId`  <a name="cfn-ec2-route-networkinterfaceid"></a>
-The ID of the network interface\.  
-You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\.  
-*Required*: No  
-*Type*: String  
+The ID of the network interface\.
+You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RouteTableId`  <a name="cfn-ec2-route-routetableid"></a>
-The ID of the route table\. The routing table must be associated with the same VPC that the virtual private gateway is attached to\.   
-*Required*: Yes  
-*Type*: String  
+The ID of the route table\. The routing table must be associated with the same VPC that the virtual private gateway is attached to\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TransitGatewayId`  <a name="cfn-ec2-route-transitgatewayid"></a>
-The ID of a transit gateway\.  
-*Required*: No  
-*Type*: String  
+The ID of a transit gateway\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcPeeringConnectionId`  <a name="cfn-ec2-route-vpcpeeringconnectionid"></a>
-The ID of a VPC peering connection\.  
-*Required*: No  
-*Type*: String  
+The ID of a VPC peering connection\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-ec2-route-return-values"></a>

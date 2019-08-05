@@ -29,12 +29,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGatewayV2::Stage
-Properties: 
-  [AccessLogSettings](#cfn-apigatewayv2-stage-accesslogsettings): 
+Properties:
+  [AccessLogSettings](#cfn-apigatewayv2-stage-accesslogsettings):
     [AccessLogSettings](aws-properties-apigatewayv2-stage-accesslogsettings.md)
   [ApiId](#cfn-apigatewayv2-stage-apiid): String
   [ClientCertificateId](#cfn-apigatewayv2-stage-clientcertificateid): String
-  [DefaultRouteSettings](#cfn-apigatewayv2-stage-defaultroutesettings): 
+  [DefaultRouteSettings](#cfn-apigatewayv2-stage-defaultroutesettings):
     [RouteSettings](aws-properties-apigatewayv2-stage-routesettings.md)
   [DeploymentId](#cfn-apigatewayv2-stage-deploymentid): String
   [Description](#cfn-apigatewayv2-stage-description): String
@@ -46,57 +46,57 @@ Properties:
 ## Properties<a name="aws-resource-apigatewayv2-stage-properties"></a>
 
 `AccessLogSettings`  <a name="cfn-apigatewayv2-stage-accesslogsettings"></a>
-Settings for logging access in this stage\.  
-*Required*: No  
-*Type*: [AccessLogSettings](aws-properties-apigatewayv2-stage-accesslogsettings.md)  
+Settings for logging access in this stage\.
+*Required*: No
+*Type*: [AccessLogSettings](aws-properties-apigatewayv2-stage-accesslogsettings.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApiId`  <a name="cfn-apigatewayv2-stage-apiid"></a>
-The API identifier\.  
-*Required*: Yes  
-*Type*: String  
+The API identifier\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ClientCertificateId`  <a name="cfn-apigatewayv2-stage-clientcertificateid"></a>
-The identifier of a client certificate for a `Stage`\.  
-*Required*: No  
-*Type*: String  
+The identifier of a client certificate for a `Stage`\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultRouteSettings`  <a name="cfn-apigatewayv2-stage-defaultroutesettings"></a>
-The default route settings for the stage\.  
-*Required*: No  
-*Type*: [RouteSettings](aws-properties-apigatewayv2-stage-routesettings.md)  
+The default route settings for the stage\.
+*Required*: No
+*Type*: [RouteSettings](aws-properties-apigatewayv2-stage-routesettings.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeploymentId`  <a name="cfn-apigatewayv2-stage-deploymentid"></a>
-The deployment identifier for the API stage\.  
-*Required*: Yes  
-*Type*: String  
+The deployment identifier for the API stage\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-apigatewayv2-stage-description"></a>
-The description for the API stage\.  
-*Required*: No  
-*Type*: String  
+The description for the API stage\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RouteSettings`  <a name="cfn-apigatewayv2-stage-routesettings"></a>
-Route settings for the stage\.  
-*Required*: No  
-*Type*: [Json](aws-properties-apigatewayv2-stage-routesettings.md)  
+Route settings for the stage\.
+*Required*: No
+*Type*: [Json](aws-properties-apigatewayv2-stage-routesettings.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StageName`  <a name="cfn-apigatewayv2-stage-stagename"></a>
-The stage name\. Stage names can only contain alphanumeric characters, hyphens, and underscores\. Maximum length is 128 characters\.  
-*Required*: Yes  
-*Type*: String  
+The stage name\. Stage names can only contain alphanumeric characters, hyphens, and underscores\. Maximum length is 128 characters\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StageVariables`  <a name="cfn-apigatewayv2-stage-stagevariables"></a>
-A map that defines the stage variables for a `Stage`\. Variable names can have alphanumeric and underscore characters, and the values must match \[A\-Za\-z0\-9\-\.\_\~:/?\#&=,\]\+\.  
-*Required*: No  
-*Type*: Json  
+A map that defines the stage variables for a `Stage`\. Variable names can have alphanumeric and underscore characters, and the values must match \[A\-Za\-z0\-9\-\.\_\~:/?\#&=,\]\+\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-apigatewayv2-stage-return-values"></a>

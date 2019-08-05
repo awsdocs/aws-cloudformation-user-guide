@@ -31,10 +31,10 @@ Syntax for the short form:
 
 ## Parameters<a name="intrinsic-function-reference-transform-parameters"></a>
 
-Name  
+Name
 The name of the macro you want to perform the processing\.
 
-Parameters  
+Parameters
 The list parameters, specified as key\-value pairs, to pass to the macro\.
 
 ## Return Value<a name="intrinsic-function-reference-transform-returnvalue"></a>

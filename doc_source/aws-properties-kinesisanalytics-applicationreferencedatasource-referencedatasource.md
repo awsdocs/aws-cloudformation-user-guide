@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-referencedatasource-syntax.yaml"></a>
 
 ```
-  [ReferenceSchema](#cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource-referenceschema): 
+  [ReferenceSchema](#cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource-referenceschema):
     [ReferenceSchema](aws-properties-kinesisanalytics-applicationreferencedatasource-referenceschema.md)
-  [S3ReferenceDataSource](#cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource-s3referencedatasource): 
+  [S3ReferenceDataSource](#cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource-s3referencedatasource):
     [S3ReferenceDataSource](aws-properties-kinesisanalytics-applicationreferencedatasource-s3referencedatasource.md)
   [TableName](#cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource-tablename): String
 ```
@@ -29,21 +29,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-referencedatasource-properties"></a>
 
 `ReferenceSchema`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource-referenceschema"></a>
-Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in\-application stream\.  
-*Required*: Yes  
-*Type*: [ReferenceSchema](aws-properties-kinesisanalytics-applicationreferencedatasource-referenceschema.md)  
+Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in\-application stream\.
+*Required*: Yes
+*Type*: [ReferenceSchema](aws-properties-kinesisanalytics-applicationreferencedatasource-referenceschema.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3ReferenceDataSource`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource-s3referencedatasource"></a>
-Identifies the S3 bucket and object that contains the reference data\. Also identifies the IAM role Amazon Kinesis Analytics can assume to read this object on your behalf\. An Amazon Kinesis Analytics application loads reference data only once\. If the data changes, you call the `UpdateApplication` operation to trigger reloading of data into your application\.   
-*Required*: No  
-*Type*: [S3ReferenceDataSource](aws-properties-kinesisanalytics-applicationreferencedatasource-s3referencedatasource.md)  
+Identifies the S3 bucket and object that contains the reference data\. Also identifies the IAM role Amazon Kinesis Analytics can assume to read this object on your behalf\. An Amazon Kinesis Analytics application loads reference data only once\. If the data changes, you call the `UpdateApplication` operation to trigger reloading of data into your application\.
+*Required*: No
+*Type*: [S3ReferenceDataSource](aws-properties-kinesisanalytics-applicationreferencedatasource-s3referencedatasource.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TableName`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource-tablename"></a>
-Name of the in\-application table to create\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `32`  
+Name of the in\-application table to create\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `32`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

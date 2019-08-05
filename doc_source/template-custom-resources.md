@@ -4,20 +4,20 @@ Custom resources enable you to write custom provisioning logic in templates that
 
 Use the [AWS::CloudFormation::CustomResource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html) or [Custom::*MyCustomResourceTypeName*](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html#aws-resource-cfn-customresource--remarks) resource type to define custom resources in your templates\. Custom resources require one property: the service token, which specifies where AWS CloudFormation sends requests to, such as an Amazon SNS topic\.
 
-**Note**  
+**Note**
 If you use the [VPC endpoint](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html) feature, custom resources in the VPC must have access to AWS CloudFormation\-specific S3 buckets\. Custom resources must send responses to a pre\-signed Amazon S3 URL\. If they can't send responses to Amazon S3, AWS CloudFormation won't receive a response and the stack operation fails\. For more information, see [Setting Up VPC Endpoints for AWS CloudFormation](cfn-vpce-bucketnames.md)\.
 
 ## How Custom Resources Work<a name="how-custom-resources-work"></a>
 
 Any action taken for a custom resource involves three parties\.
 
-template developer  
+template developer
 Creates a template that includes a custom resource type\. The template developer specifies the service token and any input data in the template\.
 
-custom resource provider  
+custom resource provider
 Owns the custom resource and determines how to handle and respond to requests from AWS CloudFormation\. The custom resource provider must provide a service token that the template developer uses\.
 
-AWS CloudFormation  
+AWS CloudFormation
 During a stack operation, sends a request to a service token that is specified in the template, and then waits for a response before proceeding with the stack operation\.
 
  The template developer and custom resource provider can be the same person or entity, but the process is the same\. The following steps describe the general process:
@@ -46,13 +46,13 @@ During a stack operation, sends a request to a service token that is specified i
       }
    }
    ```
-**Note**  
+**Note**
 In this example, `ResourceProperties` allows AWS CloudFormation to create a custom payload to send to the Lambda function\.
 
 1. The custom resource provider processes the AWS CloudFormation request and returns a response of `SUCCESS` or `FAILED` to the pre\-signed URL\. The custom resource provider provides the response in a JSON\-formatted file and uploads it to the pre\-signed S3 URL\. For more information, see [Uploading Objects Using Pre\-Signed URLs](https://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
    In the response, the custom resource provider can also include name\-value pairs that the template developer can access\. For example, the response can include output data if the request succeeded or an error message if the request failed\. For more information about responses, see [Custom Resource Response Objects](crpg-ref-responses.md)\.
-**Important**  
+**Important**
 If the name\-value pairs contain sensitive information, you should use the `NoEcho` field to mask the output of the custom resource\. Otherwise, the values are visible through APIs that surface property values \(such as `DescribeStackEvents`\)\.
 
    The custom resource provider is responsible for listening and responding to the request\. For example, for Amazon SNS notifications, the custom resource provider must listen and respond to notifications that are sent to a specific topic ARN\. AWS CloudFormation waits and listens for a response in the pre\-signed URL location\.

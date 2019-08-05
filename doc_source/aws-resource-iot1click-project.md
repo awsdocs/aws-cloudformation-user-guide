@@ -23,9 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IoT1Click::Project
-Properties: 
+Properties:
   [Description](#cfn-iot1click-project-description): String
-  [PlacementTemplate](#cfn-iot1click-project-placementtemplate): 
+  [PlacementTemplate](#cfn-iot1click-project-placementtemplate):
     [PlacementTemplate](aws-properties-iot1click-project-placementtemplate.md)
   [ProjectName](#cfn-iot1click-project-projectname): String
 ```
@@ -33,21 +33,21 @@ Properties:
 ## Properties<a name="aws-resource-iot1click-project-properties"></a>
 
 `Description`  <a name="cfn-iot1click-project-description"></a>
-The description of the project\.  
-*Required*: No  
-*Type*: String  
+The description of the project\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PlacementTemplate`  <a name="cfn-iot1click-project-placementtemplate"></a>
-An object describing the project's placement specifications\.  
-*Required*: Yes  
-*Type*: [PlacementTemplate](aws-properties-iot1click-project-placementtemplate.md)  
+An object describing the project's placement specifications\.
+*Required*: Yes
+*Type*: [PlacementTemplate](aws-properties-iot1click-project-placementtemplate.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProjectName`  <a name="cfn-iot1click-project-projectname"></a>
-The name of the project from which to obtain information\.  
-*Required*: No  
-*Type*: String  
+The name of the project from which to obtain information\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-iot1click-project-return-values"></a>

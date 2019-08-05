@@ -29,31 +29,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-parallelismconfiguration-properties"></a>
 
 `AutoScalingEnabled`  <a name="cfn-kinesisanalyticsv2-application-parallelismconfiguration-autoscalingenabled"></a>
-Describes whether the Kinesis Data Analytics service can increase the parallelism of the application in response to increased throughput\.  
-*Required*: No  
-*Type*: Boolean  
+Describes whether the Kinesis Data Analytics service can increase the parallelism of the application in response to increased throughput\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConfigurationType`  <a name="cfn-kinesisanalyticsv2-application-parallelismconfiguration-configurationtype"></a>
-Describes whether the application uses the default parallelism for the Kinesis Data Analytics service\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `CUSTOM | DEFAULT`  
+Describes whether the application uses the default parallelism for the Kinesis Data Analytics service\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `CUSTOM | DEFAULT`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parallelism`  <a name="cfn-kinesisanalyticsv2-application-parallelismconfiguration-parallelism"></a>
-Describes the initial number of parallel tasks that a Java\-based Kinesis Data Analytics application can perform\. The Kinesis Data Analytics service can increase this number automatically if [ParallelismConfiguration:AutoScalingEnabled](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ParallelismConfiguration.html#kinesisanalytics-Type-ParallelismConfiguration-AutoScalingEnabled.html) is set to `true`\.  
-*Required*: No  
-*Type*: Integer  
-*Minimum*: `1`  
+Describes the initial number of parallel tasks that a Java\-based Kinesis Data Analytics application can perform\. The Kinesis Data Analytics service can increase this number automatically if [ParallelismConfiguration:AutoScalingEnabled](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ParallelismConfiguration.html#kinesisanalytics-Type-ParallelismConfiguration-AutoScalingEnabled.html) is set to `true`\.
+*Required*: No
+*Type*: Integer
+*Minimum*: `1`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ParallelismPerKPU`  <a name="cfn-kinesisanalyticsv2-application-parallelismconfiguration-parallelismperkpu"></a>
-Describes the number of parallel tasks that a Java\-based Kinesis Data Analytics application can perform per Kinesis Processing Unit \(KPU\) used by the application\. For more information about KPUs, see [Amazon Kinesis Data Analytics Pricing](http://aws.amazon.com/kinesis/data-analytics/pricing/)\.  
-*Required*: No  
-*Type*: Integer  
-*Minimum*: `1`  
+Describes the number of parallel tasks that a Java\-based Kinesis Data Analytics application can perform per Kinesis Processing Unit \(KPU\) used by the application\. For more information about KPUs, see [Amazon Kinesis Data Analytics Pricing](http://aws.amazon.com/kinesis/data-analytics/pricing/)\.
+*Required*: No
+*Type*: Integer
+*Minimum*: `1`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-kinesisanalyticsv2-application-parallelismconfiguration--seealso"></a>
-+  [ParallelismConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ParallelismConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference* 
++  [ParallelismConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ParallelismConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference*

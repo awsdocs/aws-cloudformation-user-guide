@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dynamodb-table-ssespecification-properties"></a>
 
 `SSEEnabled`  <a name="cfn-dynamodb-table-ssespecification-sseenabled"></a>
-Indicates whether server\-side encryption is done using an AWS managed CMK or an AWS owned CMK\. If enabled \(true\), server\-side encryption type is set to `KMS` and an AWS managed CMK is used \(AWS KMS charges apply\)\. If disabled \(false\) or not specified, server\-side encryption is set to AWS owned CMK\.  
-*Required*: Yes  
-*Type*: Boolean  
+Indicates whether server\-side encryption is done using an AWS managed CMK or an AWS owned CMK\. If enabled \(true\), server\-side encryption type is set to `KMS` and an AWS managed CMK is used \(AWS KMS charges apply\)\. If disabled \(false\) or not specified, server\-side encryption is set to AWS owned CMK\.
+*Required*: Yes
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

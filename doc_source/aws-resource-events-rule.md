@@ -1,6 +1,6 @@
 # AWS::Events::Rule<a name="aws-resource-events-rule"></a>
 
-The `AWS::Events::Rule` resource creates a rule that matches incoming events and routes them to one or more targets for processing\. For more information, see [What Is Amazon CloudWatch Events?](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html)\. 
+The `AWS::Events::Rule` resource creates a rule that matches incoming events and routes them to one or more targets for processing\. For more information, see [What Is Amazon CloudWatch Events?](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html)\.
 
 A rule must contain at least an `EventPattern` or `ScheduleExpression`\. Rules with `EventPattern` are triggered when a matching event is observed\. Rules with `ScheduleExpression` self\-trigger based on the given schedule\. A rule can have both an `EventPattern` and a `ScheduleExpression`, in which case the rule triggers on matching events as well as on a schedule\.
 
@@ -31,76 +31,76 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Events::Rule
-Properties: 
+Properties:
   [Description](#cfn-events-rule-description): String
   [EventPattern](#cfn-events-rule-eventpattern): Json
   [Name](#cfn-events-rule-name): String
   [RoleArn](#cfn-events-rule-rolearn): String
   [ScheduleExpression](#cfn-events-rule-scheduleexpression): String
   [State](#cfn-events-rule-state): String
-  [Targets](#cfn-events-rule-targets): 
+  [Targets](#cfn-events-rule-targets):
     - [Target](aws-properties-events-rule-target.md)
 ```
 
 ## Properties<a name="aws-resource-events-rule-properties"></a>
 
 `Description`  <a name="cfn-events-rule-description"></a>
-The description of the rule\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `512`  
+The description of the rule\.
+*Required*: No
+*Type*: String
+*Maximum*: `512`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventPattern`  <a name="cfn-events-rule-eventpattern"></a>
-Describes which events CloudWatch Events routes to the specified target\. For more information, see [Event Patterns in CloudWatch Events](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEventsandEventPatterns.html) in the *Amazon CloudWatch Events User Guide*\.  
-*Required*: No  
-*Type*: Json  
+Describes which events CloudWatch Events routes to the specified target\. For more information, see [Event Patterns in CloudWatch Events](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEventsandEventPatterns.html) in the *Amazon CloudWatch Events User Guide*\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-events-rule-name"></a>
-The name of the rule\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the rule name\.   
+The name of the rule\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the rule name\.
 If you specify a name, you can't perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `64`  
-*Pattern*: `[\.\-_A-Za-z0-9]+`  
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `64`
+*Pattern*: `[\.\-_A-Za-z0-9]+`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleArn`  <a name="cfn-events-rule-rolearn"></a>
-The Amazon Resource Name \(ARN\) of the role that is used for target invocation\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `1600`  
+The Amazon Resource Name \(ARN\) of the role that is used for target invocation\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `1600`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduleExpression`  <a name="cfn-events-rule-scheduleexpression"></a>
-The scheduling expression that determines when and how often the rule runs\. For more information, see [Schedule Expressions for Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html)\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `256`  
+The scheduling expression that determines when and how often the rule runs\. For more information, see [Schedule Expressions for Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html)\.
+*Required*: No
+*Type*: String
+*Maximum*: `256`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `State`  <a name="cfn-events-rule-state"></a>
-Indicates whether the rule is enabled\.   
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+Indicates whether the rule is enabled\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `DISABLED | ENABLED`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-events-rule-targets"></a>
-The resources that CloudWatch Events routes events to and invokes when the rule is triggered\. For information about valid targets, see [PutTargets](https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_PutTargets.html)\.  
-If you're setting the event bus of another account as the target and that account granted permission to your account through an organization instead of directly by the account ID, you must specify a `RoleArn` with proper permissions in the `Target` structure\. For more information, see [Sending and Receiving Events Between AWS Accounts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEvents-CrossAccountEventDelivery.html) in the *Amazon CloudWatch Events User Guide*\.  
-*Required*: No  
-*Type*: List of [Target](aws-properties-events-rule-target.md)  
+The resources that CloudWatch Events routes events to and invokes when the rule is triggered\. For information about valid targets, see [PutTargets](https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_PutTargets.html)\.
+If you're setting the event bus of another account as the target and that account granted permission to your account through an organization instead of directly by the account ID, you must specify a `RoleArn` with proper permissions in the `Target` structure\. For more information, see [Sending and Receiving Events Between AWS Accounts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEvents-CrossAccountEventDelivery.html) in the *Amazon CloudWatch Events User Guide*\.
+*Required*: No
+*Type*: List of [Target](aws-properties-events-rule-target.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-events-rule-return-values"></a>
 
 ### Ref<a name="aws-resource-events-rule-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns event rule ID, such as `mystack-ScheduledRule-ABCDEFGHIJK`\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns event rule ID, such as `mystack-ScheduledRule-ABCDEFGHIJK`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -115,7 +115,7 @@ The ARN of the rule, such as `arn:aws:events:us-east-2:123456789012:rule/example
 
 ### Regularly Invoke Lambda Function<a name="aws-resource-events-rule--examples--Regularly_Invoke_Lambda_Function"></a>
 
-The following example creates a rule that invokes the specified Lambda function every 10 minutes\. The `PermissionForEventsToInvokeLambda` resource grants CloudWatch Events permission to invoke the associated function\. 
+The following example creates a rule that invokes the specified Lambda function every 10 minutes\. The `PermissionForEventsToInvokeLambda` resource grants CloudWatch Events permission to invoke the associated function\.
 
 #### JSON<a name="aws-resource-events-rule--examples--Regularly_Invoke_Lambda_Function--json"></a>
 
@@ -146,28 +146,28 @@ The following example creates a rule that invokes the specified Lambda function 
 #### YAML<a name="aws-resource-events-rule--examples--Regularly_Invoke_Lambda_Function--yaml"></a>
 
 ```
-ScheduledRule: 
+ScheduledRule:
   Type: AWS::Events::Rule
-  Properties: 
+  Properties:
     Description: "ScheduledRule"
     ScheduleExpression: "rate(10 minutes)"
     State: "ENABLED"
-    Targets: 
-      - 
-        Arn: 
-          Fn::GetAtt: 
+    Targets:
+      -
+        Arn:
+          Fn::GetAtt:
             - "LambdaFunction"
             - "Arn"
         Id: "TargetFunctionV1"
-PermissionForEventsToInvokeLambda: 
+PermissionForEventsToInvokeLambda:
   Type: AWS::Lambda::Permission
-  Properties: 
-    FunctionName: 
+  Properties:
+    FunctionName:
       Ref: "LambdaFunction"
     Action: "lambda:InvokeFunction"
     Principal: "events.amazonaws.com"
-    SourceArn: 
-      Fn::GetAtt: 
+    SourceArn:
+      Fn::GetAtt:
         - "ScheduledRule"
         - "Arn"
 ```
@@ -217,42 +217,42 @@ The following example creates a rule that invokes the specified Lambda function 
 #### YAML<a name="aws-resource-events-rule--examples--Invoke_Lambda_Function_in_Response_to_an_Event--yaml"></a>
 
 ```
-EventRule: 
+EventRule:
   Type: AWS::Events::Rule
-  Properties: 
+  Properties:
     Description: "EventRule"
-    EventPattern: 
-      source: 
+    EventPattern:
+      source:
         - "aws.ec2"
-      detail-type: 
+      detail-type:
         - "EC2 Instance State-change Notification"
-      detail: 
-        state: 
+      detail:
+        state:
           - "stopping"
     State: "ENABLED"
-    Targets: 
-      - 
-        Arn: 
-          Fn::GetAtt: 
+    Targets:
+      -
+        Arn:
+          Fn::GetAtt:
             - "LambdaFunction"
             - "Arn"
         Id: "TargetFunctionV1"
-PermissionForEventsToInvokeLambda: 
+PermissionForEventsToInvokeLambda:
   Type: AWS::Lambda::Permission
-  Properties: 
-    FunctionName: 
+  Properties:
+    FunctionName:
       Ref: "LambdaFunction"
     Action: "lambda:InvokeFunction"
     Principal: "events.amazonaws.com"
-    SourceArn: 
-      Fn::GetAtt: 
+    SourceArn:
+      Fn::GetAtt:
         - "EventRule"
         - "Arn"
 ```
 
 ### Notify a Topic in Response to a Log Entry<a name="aws-resource-events-rule--examples--Notify_a_Topic_in_Response_to_a_Log_Entry"></a>
 
-The following example creates a rule that notifies an Amazon Simple Notification Service topic if an AWS CloudTrail log entry contains a call by the Root user\. The `EventTopicPolicy ` resource grants Amazon CloudWatch Events permission to notify the associated Amazon SNS topic\. 
+The following example creates a rule that notifies an Amazon Simple Notification Service topic if an AWS CloudTrail log entry contains a call by the Root user\. The `EventTopicPolicy ` resource grants Amazon CloudWatch Events permission to notify the associated Amazon SNS topic\.
 
 #### JSON<a name="aws-resource-events-rule--examples--Notify_a_Topic_in_Response_to_a_Log_Entry--json"></a>
 
@@ -263,8 +263,8 @@ The following example creates a rule that notifies an Amazon Simple Notification
     "Description": "EventRule",
     "EventPattern": {
       "detail-type": [ "AWS API Call via CloudTrail" ],
-      "detail": { 
-        "userIdentity": { 
+      "detail": {
+        "userIdentity": {
           "type": [ "Root" ]
         }
       }
@@ -299,21 +299,21 @@ The following example creates a rule that notifies an Amazon Simple Notification
 #### YAML<a name="aws-resource-events-rule--examples--Notify_a_Topic_in_Response_to_a_Log_Entry--yaml"></a>
 
 ```
-OpsEventRule: 
+OpsEventRule:
   Type: AWS::Events::Rule
-  Properties: 
+  Properties:
     Description: "EventRule"
-    EventPattern: 
-      detail-type: 
+    EventPattern:
+      detail-type:
         - "AWS API Call via CloudTrail"
-      detail: 
-        userIdentity: 
-          type: 
+      detail:
+        userIdentity:
+          type:
             - "Root"
     State: "ENABLED"
-    Targets: 
-      - 
-        Arn: 
+    Targets:
+      -
+        Arn:
           Ref: "MySNSTopic"
         Id: "OpsTopic"
 EventTopicPolicy:

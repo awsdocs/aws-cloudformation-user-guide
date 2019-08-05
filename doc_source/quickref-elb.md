@@ -54,7 +54,7 @@ This example shows an Elastic Load Balancing load balancer with two Amazon EC2 i
 11.             "InstancePort" : "80",
 12.             "Protocol" : "HTTP"
 13.         } ],
-14. 
+14.
 15.         "HealthCheck" : {
 16.             "Target" : "HTTP:80/",
 17.             "HealthyThreshold" : "3",

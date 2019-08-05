@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Route53Resolver::ResolverRuleAssociation
-Properties: 
+Properties:
   [Name](#cfn-route53resolver-resolverruleassociation-name): String
   [ResolverRuleId](#cfn-route53resolver-resolverruleassociation-resolverruleid): String
   [VPCId](#cfn-route53resolver-resolverruleassociation-vpcid): String
@@ -32,27 +32,27 @@ Properties:
 ## Properties<a name="aws-resource-route53resolver-resolverruleassociation-properties"></a>
 
 `Name`  <a name="cfn-route53resolver-resolverruleassociation-name"></a>
-The name of an association between a resolver rule and a VPC\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `64`  
-*Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9-_' ']+)`  
+The name of an association between a resolver rule and a VPC\.
+*Required*: No
+*Type*: String
+*Maximum*: `64`
+*Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9-_' ']+)`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ResolverRuleId`  <a name="cfn-route53resolver-resolverruleassociation-resolverruleid"></a>
-The ID of the resolver rule that you associated with the VPC that is specified by `VPCId`\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `64`  
+The ID of the resolver rule that you associated with the VPC that is specified by `VPCId`\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `64`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VPCId`  <a name="cfn-route53resolver-resolverruleassociation-vpcid"></a>
-The ID of the VPC that you associated the resolver rule with\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `64`  
+The ID of the VPC that you associated the resolver rule with\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `64`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-route53resolver-resolverruleassociation-return-values"></a>
@@ -84,4 +84,4 @@ The ID of the resolver rule that you associated with the VPC that is specified b
 The ID of the VPC that you associated the resolver rule with, such as `vpc-03cf94c75cexample`\.
 
 ## See Also<a name="aws-resource-route53resolver-resolverruleassociation--seealso"></a>
-+  [ResolverRuleAssociation](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ResolverRuleAssociation.html) in the *Amazon Route 53 API Reference* 
++  [ResolverRuleAssociation](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ResolverRuleAssociation.html) in the *Amazon Route 53 API Reference*

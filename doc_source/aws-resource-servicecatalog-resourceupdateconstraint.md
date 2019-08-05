@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceCatalog::ResourceUpdateConstraint
-Properties: 
+Properties:
   [AcceptLanguage](#cfn-servicecatalog-resourceupdateconstraint-acceptlanguage): String
   [Description](#cfn-servicecatalog-resourceupdateconstraint-description): String
   [PortfolioId](#cfn-servicecatalog-resourceupdateconstraint-portfolioid): String
@@ -36,45 +36,45 @@ Properties:
 ## Properties<a name="aws-resource-servicecatalog-resourceupdateconstraint-properties"></a>
 
 `AcceptLanguage`  <a name="cfn-servicecatalog-resourceupdateconstraint-acceptlanguage"></a>
-The language code\.  
+The language code\.
 +  `en` \- English \(default\)
 +  `jp` \- Japanese
 +  `zh` \- Chinese
-*Required*: No  
-*Type*: String  
-*Maximum*: `100`  
+*Required*: No
+*Type*: String
+*Maximum*: `100`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-servicecatalog-resourceupdateconstraint-description"></a>
-The description of the constraint\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `2000`  
+The description of the constraint\.
+*Required*: No
+*Type*: String
+*Maximum*: `2000`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PortfolioId`  <a name="cfn-servicecatalog-resourceupdateconstraint-portfolioid"></a>
-The portfolio identifier\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
-*Pattern*: `^[a-zA-Z0-9_\-]*`  
+The portfolio identifier\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
+*Pattern*: `^[a-zA-Z0-9_\-]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ProductId`  <a name="cfn-servicecatalog-resourceupdateconstraint-productid"></a>
-The product identifier\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
-*Pattern*: `^[a-zA-Z0-9_\-]*`  
+The product identifier\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
+*Pattern*: `^[a-zA-Z0-9_\-]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TagUpdateOnProvisionedProduct`  <a name="cfn-servicecatalog-resourceupdateconstraint-tagupdateonprovisionedproduct"></a>
-If set to `ALLOWED`, lets users change tags in a [CloudFormationProvisionedProduct](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html) resource\.  
-If set to `NOT_ALLOWED`, prevents users from changing tags in a [CloudFormationProvisionedProduct](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html) resource\.  
-*Required*: Yes  
-*Type*: String  
+If set to `ALLOWED`, lets users change tags in a [CloudFormationProvisionedProduct](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html) resource\.
+If set to `NOT_ALLOWED`, prevents users from changing tags in a [CloudFormationProvisionedProduct](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html) resource\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-servicecatalog-resourceupdateconstraint-return-values"></a>

@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appmesh-virtualnode-awscloudmapinstanceattribute-properties"></a>
 
 `Key`  <a name="cfn-appmesh-virtualnode-awscloudmapinstanceattribute-key"></a>
-The name of an AWS Cloud Map service instance attribute key\. Any AWS Cloud Map service instance that contains the specified key and value is returned\.  
-*Required*: Yes  
-*Type*: String  
+The name of an AWS Cloud Map service instance attribute key\. Any AWS Cloud Map service instance that contains the specified key and value is returned\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-appmesh-virtualnode-awscloudmapinstanceattribute-value"></a>
-The value of an AWS Cloud Map service instance attribute key\. Any AWS Cloud Map service instance that contains the specified key and value is returned\.  
-*Required*: Yes  
-*Type*: String  
+The value of an AWS Cloud Map service instance attribute key\. Any AWS Cloud Map service instance that contains the specified key and value is returned\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

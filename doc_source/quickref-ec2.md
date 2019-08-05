@@ -8,9 +8,9 @@
 
 ```
     "Ec2Instance" : {
-      "Type" : "AWS::EC2::Instance", 
+      "Type" : "AWS::EC2::Instance",
       "Properties" : {
-        "ImageId" : { "Fn::FindInMap" : [ "AWSRegionArch2AMI", { "Ref" : "AWS::Region" }, 
+        "ImageId" : { "Fn::FindInMap" : [ "AWSRegionArch2AMI", { "Ref" : "AWS::Region" },
                                           { "Fn::FindInMap" : [ "AWSInstanceType2Arch", { "Ref" : "InstanceType" }, "Arch" ] } ] },
         "KeyName" : { "Ref" : "KeyName" },
         "InstanceType" : { "Ref" : "InstanceType" },
@@ -18,7 +18,7 @@
         "BlockDeviceMappings" : [
           {
             "DeviceName" : "/dev/sda1",
-            "Ebs" : { "VolumeSize" : "50" } 
+            "Ebs" : { "VolumeSize" : "50" }
           },{
             "DeviceName" : "/dev/sdm",
             "Ebs" : { "VolumeSize" : "100" }
@@ -56,7 +56,7 @@ EC2Instance:
 
 ```
     "Ec2Instance" : {
-      "Type" : "AWS::EC2::Instance", 
+      "Type" : "AWS::EC2::Instance",
       "Properties" : {
         "ImageId" : { "Fn::FindInMap" : [ "AWSRegionArch2AMI", { "Ref" : "AWS::Region" }, "PV64" ]},
         "KeyName" : { "Ref" : "KeyName" },
@@ -169,7 +169,7 @@ This example shows how to assign an existing VPC Elastic IP address to an Amazon
 
 ### VPC\_EC2\_Instance\_With\_ENI<a name="w4784ab1c17c23c39c13b3"></a>
 
-Sample template showing how to create an instance with two elastic network interface \(ENI\)\. The sample assumes you have already created a VPC\. 
+Sample template showing how to create an instance with two elastic network interface \(ENI\)\. The sample assumes you have already created a VPC\.
 
 #### JSON<a name="cfn-template-snippets-eni-example-1.json"></a>
 
@@ -303,7 +303,7 @@ Resources:
     Properties:
       SubnetId: !Ref SubnetId
       Description: Interface for controlling traffic such as SSH
-      GroupSet: 
+      GroupSet:
       - !Ref SSHSecurityGroup
       SourceDestCheck: true
       Tags:
@@ -315,7 +315,7 @@ Resources:
     Properties:
       SubnetId: !Ref SubnetId
       Description: Interface for controlling traffic such as SSH
-      GroupSet: 
+      GroupSet:
       - !Ref WebSecurityGroup
       SourceDestCheck: true
       Tags:
@@ -405,7 +405,7 @@ This snippet shows an AWS::EC2::Instance resource with one Amazon EC2 volume, on
 24.         },
 25.         "Device" : "/dev/sdk" }
 26.      ],
-27. 
+27.
 28.      "Tags" : [ {
 29.          "Key" : "Name",
 30.          "Value" : "MyTag"
@@ -655,9 +655,9 @@ Resources:
 
 ## Using AWS::EC2::SecurityGroupIngress to Create Mutually Referencing Amazon EC2 Security Group Resources<a name="scenario-ec2-security-group-ingress"></a>
 
-This snippet shows two AWS::EC2::SecurityGroupIngress resources that add mutual ingress rules to the EC2 security groups SGroup1 and SGroup2\. The SGroup1Ingress resource enables ingress from SGroup2 through TCP/IP port 80 to SGroup1\. The SGroup2Ingress resource enables ingress from SGroup1 through TCP/IP port 80 to SGroup2\. 
+This snippet shows two AWS::EC2::SecurityGroupIngress resources that add mutual ingress rules to the EC2 security groups SGroup1 and SGroup2\. The SGroup1Ingress resource enables ingress from SGroup2 through TCP/IP port 80 to SGroup1\. The SGroup2Ingress resource enables ingress from SGroup1 through TCP/IP port 80 to SGroup2\.
 
-**Note**  
+**Note**
 If you are using an Amazon VPC, use the `AWS::EC2::SecurityGroup` resource and specify the `VpcId` property\.
 
 ### JSON<a name="quickref-ec2-example-12.json"></a>
@@ -758,7 +758,7 @@ This snippet shows a simple Amazon EC2 volume resource with a DeletionPolicy att
 
 ## Amazon EC2 VolumeAttachment Resource<a name="scenario-ec2-volumeattachment"></a>
 
-This snippet shows the following resources: an Amazon EC2 instance using an Amazon Linux AMI from the US\-East \(Northern Virginia\) Region, an EC2 security group that allows SSH access to IP addresses, a new Amazon EBS volume sized at 100 GB and in the same Availability Zone as the EC2 instance, and a volume attachment that attaches the new volume to the EC2 instance\. 
+This snippet shows the following resources: an Amazon EC2 instance using an Amazon Linux AMI from the US\-East \(Northern Virginia\) Region, an EC2 security group that allows SSH access to IP addresses, a new Amazon EBS volume sized at 100 GB and in the same Availability Zone as the EC2 instance, and a volume attachment that attaches the new volume to the EC2 instance\.
 
 ### JSON<a name="quickref-ec2-example-14.json"></a>
 
@@ -771,7 +771,7 @@ This snippet shows the following resources: an Amazon EC2 instance using an Amaz
  6.      "ImageId" : "ami-0ff8a91507f77f867"
  7.    }
  8.  },
- 9. 
+ 9.
 10.  "InstanceSecurityGroup" : {
 11.    "Type" : "AWS::EC2::SecurityGroup",
 12.    "Properties" : {
@@ -784,7 +784,7 @@ This snippet shows the following resources: an Amazon EC2 instance using an Amaz
 19.      } ]
 20.    }
 21.  },
-22. 
+22.
 23.  "NewVolume" : {
 24.    "Type" : "AWS::EC2::Volume",
 25.    "Properties" : {
@@ -792,7 +792,7 @@ This snippet shows the following resources: an Amazon EC2 instance using an Amaz
 27.      "AvailabilityZone" : { "Fn::GetAtt" : [ "Ec2Instance", "AvailabilityZone" ]}
 28.    }
 29.  },
-30. 
+30.
 31.  "MountPoint" : {
 32.    "Type" : "AWS::EC2::VolumeAttachment",
 33.    "Properties" : {

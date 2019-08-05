@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IoT::Certificate
-Properties: 
+Properties:
   [CertificateSigningRequest](#cfn-iot-certificate-certificatesigningrequest): String
   [Status](#cfn-iot-certificate-status): String
 ```
@@ -30,16 +30,16 @@ Properties:
 ## Properties<a name="aws-resource-iot-certificate-properties"></a>
 
 `CertificateSigningRequest`  <a name="cfn-iot-certificate-certificatesigningrequest"></a>
-The certificate signing request \(CSR\)\.  
-*Required*: Yes  
-*Type*: String  
+The certificate signing request \(CSR\)\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Status`  <a name="cfn-iot-certificate-status"></a>
-The status of the certificate\.  
-The status value REGISTER\_INACTIVE is deprecated and should not be used\.  
-*Required*: Yes  
-*Type*: String  
+The status of the certificate\.
+The status value REGISTER\_INACTIVE is deprecated and should not be used\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-iot-certificate-return-values"></a>
@@ -48,11 +48,11 @@ The status value REGISTER\_INACTIVE is deprecated and should not be used\.
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the certificate ID\. For example:
 
- `{ "Ref": "MyCertificate" }` 
+ `{ "Ref": "MyCertificate" }`
 
 A value similar to the following is returned:
 
- `a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2` 
+ `a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2`
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -65,7 +65,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-iot-certificate-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Returns the Amazon Resource Name \(ARN\) for the instance profile\. For example:  
- `{ "Fn::GetAtt": ["MyCertificate", "Arn"] }`   
-A value similar to the following is returned:  
- `arn:aws:iot:ap-southeast-2:123456789012:cert/a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2` 
+Returns the Amazon Resource Name \(ARN\) for the instance profile\. For example:
+ `{ "Fn::GetAtt": ["MyCertificate", "Arn"] }`
+A value similar to the following is returned:
+ `arn:aws:iot:ap-southeast-2:123456789012:cert/a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2`

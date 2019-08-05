@@ -4,7 +4,7 @@ With Elastic Beanstalk, you can quickly deploy and manage applications in AWS wi
 
 ## Elastic Beanstalk Sample PHP<a name="quickref-elasticbeanstalk-sampleenv"></a>
 
-The following sample template deploys a sample PHP web application that is stored in an Amazon S3 bucket\. The Elastic Beanstalk environment is 64\-bit Amazon Linux running PHP 5\.3\. The environment is also an autoscaling, load\-balancing environment, with a minimum of two Amazon EC2 instances and a maximum of six\. 
+The following sample template deploys a sample PHP web application that is stored in an Amazon S3 bucket\. The Elastic Beanstalk environment is 64\-bit Amazon Linux running PHP 5\.3\. The environment is also an autoscaling, load\-balancing environment, with a minimum of two Amazon EC2 instances and a maximum of six\.
 
 ### JSON<a name="quickref-elasticbeanstalk-example-1.json"></a>
 

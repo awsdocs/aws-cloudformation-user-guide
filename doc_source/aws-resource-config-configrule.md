@@ -4,7 +4,7 @@ Specifies an AWS Config rule for evaluating whether your AWS resources comply wi
 
 You can use this action for custom AWS Config rules and AWS managed Config rules\. A custom AWS Config rule is a rule that you develop and maintain\. An AWS managed Config rule is a customizable, predefined rule that AWS Config provides\.
 
-If you are adding a new custom AWS Config rule, you must first create the AWS Lambda function that the rule invokes to evaluate your resources\. When you use the `PutConfigRule` action to add the rule to AWS Config, you must specify the Amazon Resource Name \(ARN\) that AWS Lambda assigns to the function\. Specify the ARN for the `SourceIdentifier` key\. This key is part of the `Source` object, which is part of the `ConfigRule` object\. 
+If you are adding a new custom AWS Config rule, you must first create the AWS Lambda function that the rule invokes to evaluate your resources\. When you use the `PutConfigRule` action to add the rule to AWS Config, you must specify the Amazon Resource Name \(ARN\) that AWS Lambda assigns to the function\. Specify the ARN for the `SourceIdentifier` key\. This key is part of the `Source` object, which is part of the `ConfigRule` object\.
 
 If you are adding an AWS managed Config rule, specify the rule's identifier for the `SourceIdentifier` key\. To reference AWS managed Config rule identifiers, see [About AWS Managed Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html)\.
 
@@ -42,63 +42,63 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Config::ConfigRule
-Properties: 
+Properties:
   [ConfigRuleName](#cfn-config-configrule-configrulename): String
   [Description](#cfn-config-configrule-description): String
   [InputParameters](#cfn-config-configrule-inputparameters): Json
   [MaximumExecutionFrequency](#cfn-config-configrule-maximumexecutionfrequency): String
-  [Scope](#cfn-config-configrule-scope): 
+  [Scope](#cfn-config-configrule-scope):
     [Scope](aws-properties-config-configrule-scope.md)
-  [Source](#cfn-config-configrule-source): 
+  [Source](#cfn-config-configrule-source):
     [Source](aws-properties-config-configrule-source.md)
 ```
 
 ## Properties<a name="aws-resource-config-configrule-properties"></a>
 
 `ConfigRuleName`  <a name="cfn-config-configrule-configrulename"></a>
-A name for the AWS Config rule\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the rule name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.   
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `64`  
+A name for the AWS Config rule\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the rule name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `64`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-config-configrule-description"></a>
-The description that you provide for the AWS Config rule\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `256`  
+The description that you provide for the AWS Config rule\.
+*Required*: No
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `256`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputParameters`  <a name="cfn-config-configrule-inputparameters"></a>
-A string, in JSON format, that is passed to the AWS Config rule Lambda function\.  
-*Required*: No  
-*Type*: Json  
-*Minimum*: `1`  
-*Maximum*: `1024`  
+A string, in JSON format, that is passed to the AWS Config rule Lambda function\.
+*Required*: No
+*Type*: Json
+*Minimum*: `1`
+*Maximum*: `1024`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumExecutionFrequency`  <a name="cfn-config-configrule-maximumexecutionfrequency"></a>
-The maximum frequency with which AWS Config runs evaluations for a rule\. You can specify a value for `MaximumExecutionFrequency` when:  
+The maximum frequency with which AWS Config runs evaluations for a rule\. You can specify a value for `MaximumExecutionFrequency` when:
 + You are using an AWS managed rule that is triggered at a periodic frequency\.
 + Your custom rule is triggered when AWS Config delivers the configuration snapshot\. For more information, see [ConfigSnapshotDeliveryProperties](https://docs.aws.amazon.com/config/latest/APIReference/API_ConfigSnapshotDeliveryProperties.html)\.
 By default, rules with a periodic trigger are evaluated every 24 hours\. To change the frequency, specify a valid value for the `MaximumExecutionFrequency` parameter\.
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `One_Hour | Six_Hours | Three_Hours | Twelve_Hours | TwentyFour_Hours`  
+*Required*: No
+*Type*: String
+*Allowed Values*: `One_Hour | Six_Hours | Three_Hours | Twelve_Hours | TwentyFour_Hours`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scope`  <a name="cfn-config-configrule-scope"></a>
-Defines which resources can trigger an evaluation for the rule\. The scope can include one or more resource types, a combination of one resource type and one resource ID, or a combination of a tag key and value\. Specify a scope to constrain the resources that can trigger an evaluation for the rule\. If you do not specify a scope, evaluations are triggered when any resource in the recording group changes\.  
-*Required*: No  
-*Type*: [Scope](aws-properties-config-configrule-scope.md)  
+Defines which resources can trigger an evaluation for the rule\. The scope can include one or more resource types, a combination of one resource type and one resource ID, or a combination of a tag key and value\. Specify a scope to constrain the resources that can trigger an evaluation for the rule\. If you do not specify a scope, evaluations are triggered when any resource in the recording group changes\.
+*Required*: No
+*Type*: [Scope](aws-properties-config-configrule-scope.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Source`  <a name="cfn-config-configrule-source"></a>
-Provides the rule owner \(AWS or customer\), the rule identifier, and the notifications that cause the function to evaluate your AWS resources\.  
-*Required*: Yes  
-*Type*: [Source](aws-properties-config-configrule-source.md)  
+Provides the rule owner \(AWS or customer\), the rule identifier, and the notifications that cause the function to evaluate your AWS resources\.
+*Required*: Yes
+*Type*: [Source](aws-properties-config-configrule-source.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-config-configrule-return-values"></a>
@@ -121,7 +121,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The Amazon Resource Name \(ARN\) of the AWS Config rule, such as `arn:aws:config:us-east-1:123456789012:config-rule/config-rule-a1bzhi`\.
 
 `Compliance.Type`  <a name="Compliance.Type-fn::getatt"></a>
-The compliance status of an AWS Config rule, such as `COMPLIANT` or `NON_COMPLIANT`\. 
+The compliance status of an AWS Config rule, such as `COMPLIANT` or `NON_COMPLIANT`\.
 
 `ConfigRuleId`  <a name="ConfigRuleId-fn::getatt"></a>
 The ID of the AWS Config rule, such as `config-rule-a1bzhi`\.
@@ -130,7 +130,7 @@ The ID of the AWS Config rule, such as `config-rule-a1bzhi`\.
 
 ### Config Rule<a name="aws-resource-config-configrule--examples--Config_Rule"></a>
 
-The following example uses an AWS managed rule that checks whether EC2 volumes resource types have a CostCenter tag\. 
+The following example uses an AWS managed rule that checks whether EC2 volumes resource types have a CostCenter tag\.
 
 #### JSON<a name="aws-resource-config-configrule--examples--Config_Rule--json"></a>
 
@@ -153,22 +153,22 @@ The following example uses an AWS managed rule that checks whether EC2 volumes r
 #### YAML<a name="aws-resource-config-configrule--examples--Config_Rule--yaml"></a>
 
 ```
-ConfigRuleForVolumeTags: 
+ConfigRuleForVolumeTags:
   Type: AWS::Config::ConfigRule
-  Properties: 
-    InputParameters: 
+  Properties:
+    InputParameters:
       tag1Key: CostCenter
-    Scope: 
-      ComplianceResourceTypes: 
+    Scope:
+      ComplianceResourceTypes:
         - "AWS::EC2::Volume"
-    Source: 
+    Source:
       Owner: AWS
       SourceIdentifier: "REQUIRED_TAGS"
 ```
 
 ### Rule Using Lambda Function<a name="aws-resource-config-configrule--examples--Rule_Using_Lambda_Function"></a>
 
-The following example creates a custom configuration rule that uses a Lambda function\. The function checks whether an EC2 volume has the AutoEnableIO property set to true\. Note that the configuration rule has a dependency on the Lambda policy so that the rule calls the function only after it's permitted to do so\. 
+The following example creates a custom configuration rule that uses a Lambda function\. The function checks whether an EC2 volume has the AutoEnableIO property set to true\. Note that the configuration rule has a dependency on the Lambda policy so that the rule calls the function only after it's permitted to do so\.
 
 #### JSON<a name="aws-resource-config-configrule--examples--Rule_Using_Lambda_Function--json"></a>
 
@@ -254,20 +254,20 @@ The following example creates a custom configuration rule that uses a Lambda fun
 #### YAML<a name="aws-resource-config-configrule--examples--Rule_Using_Lambda_Function--yaml"></a>
 
 ```
-ConfigPermissionToCallLambda: 
+ConfigPermissionToCallLambda:
   Type: AWS::Lambda::Permission
-  Properties: 
-    FunctionName: 
-      Fn::GetAtt: 
+  Properties:
+    FunctionName:
+      Fn::GetAtt:
         - VolumeAutoEnableIOComplianceCheck
         - Arn
     Action: "lambda:InvokeFunction"
     Principal: "config.amazonaws.com"
-VolumeAutoEnableIOComplianceCheck: 
+VolumeAutoEnableIOComplianceCheck:
   Type: AWS::Lambda::Function
-  Properties: 
-    Code: 
-      ZipFile: 
+  Properties:
+    Code:
+      ZipFile:
         !Sub |
           var aws  = require('aws-sdk');
           var config = new aws.ConfigService();
@@ -304,27 +304,27 @@ VolumeAutoEnableIOComplianceCheck:
     Handler: "index.handler"
     Runtime: nodejs8.10
     Timeout: 30
-    Role: 
-      Fn::GetAtt: 
+    Role:
+      Fn::GetAtt:
         - LambdaExecutionRole
         - Arn
-ConfigRuleForVolumeAutoEnableIO: 
+ConfigRuleForVolumeAutoEnableIO:
   Type: AWS::Config::ConfigRule
-  Properties: 
+  Properties:
     ConfigRuleName: ConfigRuleForVolumeAutoEnableIO
-    Scope: 
-      ComplianceResourceId: 
+    Scope:
+      ComplianceResourceId:
         Ref: Ec2Volume
-      ComplianceResourceTypes: 
+      ComplianceResourceTypes:
         - "AWS::EC2::Volume"
-    Source: 
+    Source:
       Owner: "CUSTOM_LAMBDA"
-      SourceDetails: 
-        - 
+      SourceDetails:
+        -
           EventSource: "aws.config"
           MessageType: "ConfigurationItemChangeNotification"
-      SourceIdentifier: 
-        Fn::GetAtt: 
+      SourceIdentifier:
+        Fn::GetAtt:
           - VolumeAutoEnableIOComplianceCheck
           - Arn
   DependsOn: ConfigPermissionToCallLambda

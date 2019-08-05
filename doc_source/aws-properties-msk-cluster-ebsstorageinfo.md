@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-msk-cluster-ebsstorageinfo-properties"></a>
 
 `VolumeSize`  <a name="cfn-msk-cluster-ebsstorageinfo-volumesize"></a>
-The size in GiB of the EBS volume for the data drive on each broker node\.  
-*Required*: No  
-*Type*: Integer  
+The size in GiB of the EBS volume for the data drive on each broker node\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

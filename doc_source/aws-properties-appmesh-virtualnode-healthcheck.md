@@ -35,43 +35,43 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appmesh-virtualnode-healthcheck-properties"></a>
 
 `HealthyThreshold`  <a name="cfn-appmesh-virtualnode-healthcheck-healthythreshold"></a>
-The number of consecutive successful health checks that must occur before declaring listener healthy\.  
-*Required*: Yes  
-*Type*: Integer  
+The number of consecutive successful health checks that must occur before declaring listener healthy\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IntervalMillis`  <a name="cfn-appmesh-virtualnode-healthcheck-intervalmillis"></a>
-The time period in milliseconds between each health check execution\.  
-*Required*: Yes  
-*Type*: Integer  
+The time period in milliseconds between each health check execution\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Path`  <a name="cfn-appmesh-virtualnode-healthcheck-path"></a>
-The destination path for the health check request\. This is required only if the specified protocol is HTTP\. If the protocol is TCP, this parameter is ignored\.  
-*Required*: No  
-*Type*: String  
+The destination path for the health check request\. This is required only if the specified protocol is HTTP\. If the protocol is TCP, this parameter is ignored\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Port`  <a name="cfn-appmesh-virtualnode-healthcheck-port"></a>
-The destination port for the health check request\. This port must match the port defined in the [PortMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-virtualrouterlistener.html#cfn-appmesh-virtualrouter-virtualrouterlistener-portmapping) for the listener\.  
-*Required*: No  
-*Type*: Integer  
+The destination port for the health check request\. This port must match the port defined in the [PortMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-virtualrouterlistener.html#cfn-appmesh-virtualrouter-virtualrouterlistener-portmapping) for the listener\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Protocol`  <a name="cfn-appmesh-virtualnode-healthcheck-protocol"></a>
-The protocol for the health check request\.  
-*Required*: Yes  
-*Type*: String  
+The protocol for the health check request\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeoutMillis`  <a name="cfn-appmesh-virtualnode-healthcheck-timeoutmillis"></a>
-The amount of time to wait when receiving a response from the health check, in milliseconds\.  
-*Required*: Yes  
-*Type*: Integer  
+The amount of time to wait when receiving a response from the health check, in milliseconds\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UnhealthyThreshold`  <a name="cfn-appmesh-virtualnode-healthcheck-unhealthythreshold"></a>
-The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy\.   
-*Required*: Yes  
-*Type*: Integer  
+The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotevents-detectormodel-setvariable-properties"></a>
 
 `Value`  <a name="cfn-iotevents-detectormodel-setvariable-value"></a>
-The new value of the variable\.  
-*Required*: No  
-*Type*: String  
+The new value of the variable\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VariableName`  <a name="cfn-iotevents-detectormodel-setvariable-variablename"></a>
-The name of the variable\.  
-*Required*: No  
-*Type*: String  
+The name of the variable\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -17,14 +17,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-storageclassanalysis-syntax.yaml"></a>
 
 ```
-  [DataExport](#cfn-s3-bucket-storageclassanalysis-dataexport): 
+  [DataExport](#cfn-s3-bucket-storageclassanalysis-dataexport):
     [DataExport](aws-properties-s3-bucket-dataexport.md)
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-storageclassanalysis-properties"></a>
 
 `DataExport`  <a name="cfn-s3-bucket-storageclassanalysis-dataexport"></a>
-Specifies how data related to the storage class analysis for an Amazon S3 bucket should be exported\.  
-*Required*: No  
-*Type*: [DataExport](aws-properties-s3-bucket-dataexport.md)  
+Specifies how data related to the storage class analysis for an Amazon S3 bucket should be exported\.
+*Required*: No
+*Type*: [DataExport](aws-properties-s3-bucket-dataexport.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

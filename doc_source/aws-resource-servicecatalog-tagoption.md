@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceCatalog::TagOption
-Properties: 
+Properties:
   [Active](#cfn-servicecatalog-tagoption-active): Boolean
   [Key](#cfn-servicecatalog-tagoption-key): String
   [Value](#cfn-servicecatalog-tagoption-value): String
@@ -32,21 +32,21 @@ Properties:
 ## Properties<a name="aws-resource-servicecatalog-tagoption-properties"></a>
 
 `Active`  <a name="cfn-servicecatalog-tagoption-active"></a>
-The TagOption active state\.  
-*Required*: No  
-*Type*: Boolean  
+The TagOption active state\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Key`  <a name="cfn-servicecatalog-tagoption-key"></a>
-The TagOption key\.  
-*Required*: Yes  
-*Type*: String  
+The TagOption key\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Value`  <a name="cfn-servicecatalog-tagoption-value"></a>
-The TagOption value\.  
-*Required*: Yes  
-*Type*: String  
+The TagOption value\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-servicecatalog-tagoption-return-values"></a>

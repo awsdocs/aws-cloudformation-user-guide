@@ -24,27 +24,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource
-Properties: 
+Properties:
   [ApplicationName](#cfn-kinesisanalyticsv2-applicationreferencedatasource-applicationname): String
-  [ReferenceDataSource](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource): 
+  [ReferenceDataSource](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource):
     [ReferenceDataSource](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource.md)
 ```
 
 ## Properties<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource-properties"></a>
 
 `ApplicationName`  <a name="cfn-kinesisanalyticsv2-applicationreferencedatasource-applicationname"></a>
-The name of the application\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
-*Pattern*: `[a-zA-Z0-9_.-]+`  
+The name of the application\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
+*Pattern*: `[a-zA-Z0-9_.-]+`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ReferenceDataSource`  <a name="cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource"></a>
-For an SQL\-based Amazon Kinesis Data Analytics application, describes the reference data source by providing the source information \(Amazon S3 bucket name and object key name\), the resulting in\-application table name that is created, and the necessary schema to map the data elements in the Amazon S3 object to the in\-application table\.  
-*Required*: Yes  
-*Type*: [ReferenceDataSource](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource.md)  
+For an SQL\-based Amazon Kinesis Data Analytics application, describes the reference data source by providing the source information \(Amazon S3 bucket name and object key name\), the resulting in\-application table name that is created, and the necessary schema to map the data elements in the Amazon S3 object to the in\-application table\.
+*Required*: Yes
+*Type*: [ReferenceDataSource](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--examples"></a>
@@ -115,11 +115,11 @@ ApplicationReferenceDataSource:
             JSONMappingParameters:
               RecordRowPath: $
       S3ReferenceDataSource:
-        BucketARN: !GetAtt 
+        BucketARN: !GetAtt
           - S3Bucket
           - Arn
         FileKey: fakeKey
 ```
 
 ## See Also<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--seealso"></a>
-+  [AddApplicationReferenceDataSource](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_AddApplicationReferenceDataSource.html) in the *Amazon Kinesis Data Analytics API Reference* 
++  [AddApplicationReferenceDataSource](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_AddApplicationReferenceDataSource.html) in the *Amazon Kinesis Data Analytics API Reference*

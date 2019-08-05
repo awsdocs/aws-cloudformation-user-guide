@@ -25,15 +25,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-apigateway-apikey-stagekey-properties"></a>
 
 `RestApiId`  <a name="cfn-apigateway-apikey-stagekey-restapiid"></a>
-The ID of a `RestApi` resource that includes the stage with which you want to associate the API key\.  
-*Required*: No  
-*Type*: String  
+The ID of a `RestApi` resource that includes the stage with which you want to associate the API key\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StageName`  <a name="cfn-apigateway-apikey-stagekey-stagename"></a>
-The name of the stage with which to associate the API key\. The stage must be included in the `RestApi` resource that you specified in the `RestApiId` property\.  
-*Required*: No  
-*Type*: String  
+The name of the stage with which to associate the API key\. The stage must be included in the `RestApi` resource that you specified in the `RestApiId` property\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-apigateway-apikey-stagekey--seealso"></a>

@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Pinpoint::EventStream
-Properties: 
+Properties:
   [ApplicationId](#cfn-pinpoint-eventstream-applicationid): String
   [DestinationStreamArn](#cfn-pinpoint-eventstream-destinationstreamarn): String
   [RoleArn](#cfn-pinpoint-eventstream-rolearn): String
@@ -32,23 +32,23 @@ Properties:
 ## Properties<a name="aws-resource-pinpoint-eventstream-properties"></a>
 
 `ApplicationId`  <a name="cfn-pinpoint-eventstream-applicationid"></a>
-The unique ID of the Amazon Pinpoint app that you want to export data from\.  
-*Required*: Yes  
-*Type*: String  
+The unique ID of the Amazon Pinpoint app that you want to export data from\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DestinationStreamArn`  <a name="cfn-pinpoint-eventstream-destinationstreamarn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon Kinesis data stream or Amazon Kinesis Data Firehose delivery stream that you want to publish event data to\.  
-For a Kinesis data stream, the ARN format is: `arn:aws:kinesis:region:account-id:stream/stream_name `   
-For a Kinesis Data Firehose delivery stream, the ARN format is: `arn:aws:firehose:region:account-id:deliverystream/stream_name `   
-*Required*: Yes  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of the Amazon Kinesis data stream or Amazon Kinesis Data Firehose delivery stream that you want to publish event data to\.
+For a Kinesis data stream, the ARN format is: `arn:aws:kinesis:region:account-id:stream/stream_name `
+For a Kinesis Data Firehose delivery stream, the ARN format is: `arn:aws:firehose:region:account-id:deliverystream/stream_name `
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-pinpoint-eventstream-rolearn"></a>
-The AWS Identity and Access Management \(IAM\) role that authorizes Amazon Pinpoint to publish event data to the stream in your AWS account\.  
-*Required*: Yes  
-*Type*: String  
+The AWS Identity and Access Management \(IAM\) role that authorizes Amazon Pinpoint to publish event data to the stream in your AWS account\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-pinpoint-eventstream-return-values"></a>

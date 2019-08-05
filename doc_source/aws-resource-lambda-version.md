@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Lambda::Version
-Properties: 
+Properties:
   [CodeSha256](#cfn-lambda-version-codesha256): String
   [Description](#cfn-lambda-version-description): String
   [FunctionName](#cfn-lambda-version-functionname): String
@@ -32,39 +32,39 @@ Properties:
 ## Properties<a name="aws-resource-lambda-version-properties"></a>
 
 `CodeSha256`  <a name="cfn-lambda-version-codesha256"></a>
-Only publish a version if the hash value matches the value that's specified\. Use this option to avoid publishing a version if the function code has changed since you last updated it\.  
-*Required*: No  
-*Type*: String  
+Only publish a version if the hash value matches the value that's specified\. Use this option to avoid publishing a version if the function code has changed since you last updated it\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-lambda-version-description"></a>
-A description for the version to override the description in the function configuration\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `256`  
+A description for the version to override the description in the function configuration\.
+*Required*: No
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `256`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FunctionName`  <a name="cfn-lambda-version-functionname"></a>
-The name of the Lambda function\.  
+The name of the Lambda function\.
 
 **Name formats**
 +  **Function name** \- `MyFunction`\.
 +  **Function ARN** \- `arn:aws:lambda:us-west-2:123456789012:function:MyFunction`\.
 +  **Partial ARN** \- `123456789012:function:MyFunction`\.
-The length constraint applies only to the full ARN\. If you specify only the function name, it is limited to 64 characters in length\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `140`  
-*Pattern*: `(arn:(aws[a-zA-Z-]*)?:lambda:)?([a-z]{2}(-gov)?-[a-z]+-\d{1}:)?(\d{12}:)?(function:)?([a-zA-Z0-9-_]+)(:(\$LATEST|[a-zA-Z0-9-_]+))?`  
+The length constraint applies only to the full ARN\. If you specify only the function name, it is limited to 64 characters in length\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `140`
+*Pattern*: `(arn:(aws[a-zA-Z-]*)?:lambda:)?([a-z]{2}(-gov)?-[a-z]+-\d{1}:)?(\d{12}:)?(function:)?([a-zA-Z0-9-_]+)(:(\$LATEST|[a-zA-Z0-9-_]+))?`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-lambda-version-return-values"></a>
 
 ### Ref<a name="aws-resource-lambda-version-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the version, such as `arn:aws:lambda:us-west-2:123456789012:function:helloworld:1`\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the version, such as `arn:aws:lambda:us-west-2:123456789012:function:helloworld:1`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -102,10 +102,10 @@ Create a version of function `MyFunction`\.
 #### YAML<a name="aws-resource-lambda-version--examples--Function_Version--yaml"></a>
 
 ```
-MyVersion: 
+MyVersion:
   Type: AWS::Lambda::Version
-  Properties: 
-    FunctionName: 
+  Properties:
+    FunctionName:
       Ref: "MyFunction"
     Description: "A test version of MyFunction"
 ```

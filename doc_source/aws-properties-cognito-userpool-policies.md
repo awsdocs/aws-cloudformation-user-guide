@@ -17,14 +17,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cognito-userpool-policies-syntax.yaml"></a>
 
 ```
-  [PasswordPolicy](#cfn-cognito-userpool-policies-passwordpolicy): 
+  [PasswordPolicy](#cfn-cognito-userpool-policies-passwordpolicy):
     [PasswordPolicy](aws-properties-cognito-userpool-passwordpolicy.md)
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-policies-properties"></a>
 
 `PasswordPolicy`  <a name="cfn-cognito-userpool-policies-passwordpolicy"></a>
-The password policy\.  
-*Required*: No  
-*Type*: [PasswordPolicy](aws-properties-cognito-userpool-passwordpolicy.md)  
+The password policy\.
+*Required*: No
+*Type*: [PasswordPolicy](aws-properties-cognito-userpool-passwordpolicy.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

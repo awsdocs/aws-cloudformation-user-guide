@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-websiteconfiguration-redirectallrequeststo-properties"></a>
 
 `HostName`  <a name="cfn-s3-websiteconfiguration-redirectallrequeststo-hostname"></a>
-Name of the host where requests are redirected\.  
-*Required*: Yes  
-*Type*: String  
+Name of the host where requests are redirected\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Protocol`  <a name="cfn-s3-websiteconfiguration-redirectallrequeststo-protocol"></a>
-Protocol to use when redirecting requests\. The default is the protocol that is used in the original request\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `http | https`  
+Protocol to use when redirecting requests\. The default is the protocol that is used in the original request\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `http | https`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -25,12 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::Deployment
-Properties: 
-  [DeploymentCanarySettings](#cfn-apigateway-deployment-deploymentcanarysettings): 
+Properties:
+  [DeploymentCanarySettings](#cfn-apigateway-deployment-deploymentcanarysettings):
     [DeploymentCanarySettings](aws-properties-apigateway-deployment-deploymentcanarysettings.md)
   [Description](#cfn-apigateway-deployment-description): String
   [RestApiId](#cfn-apigateway-deployment-restapiid): String
-  [StageDescription](#cfn-apigateway-deployment-stagedescription): 
+  [StageDescription](#cfn-apigateway-deployment-stagedescription):
     [StageDescription](aws-properties-apigateway-deployment-stagedescription.md)
   [StageName](#cfn-apigateway-deployment-stagename): String
 ```
@@ -38,33 +38,33 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-deployment-properties"></a>
 
 `DeploymentCanarySettings`  <a name="cfn-apigateway-deployment-deploymentcanarysettings"></a>
-Specifies settings for the canary deployment\.  
-*Required*: No  
-*Type*: [DeploymentCanarySettings](aws-properties-apigateway-deployment-deploymentcanarysettings.md)  
+Specifies settings for the canary deployment\.
+*Required*: No
+*Type*: [DeploymentCanarySettings](aws-properties-apigateway-deployment-deploymentcanarysettings.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-apigateway-deployment-description"></a>
-A description of the purpose of the API Gateway deployment\.  
-*Required*: No  
-*Type*: String  
+A description of the purpose of the API Gateway deployment\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RestApiId`  <a name="cfn-apigateway-deployment-restapiid"></a>
-The ID of the `RestApi` resource to deploy\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the `RestApi` resource to deploy\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StageDescription`  <a name="cfn-apigateway-deployment-stagedescription"></a>
-Configures the stage that API Gateway creates with this deployment\.  
-*Required*: No  
-*Type*: [StageDescription](aws-properties-apigateway-deployment-stagedescription.md)  
+Configures the stage that API Gateway creates with this deployment\.
+*Required*: No
+*Type*: [StageDescription](aws-properties-apigateway-deployment-stagedescription.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StageName`  <a name="cfn-apigateway-deployment-stagename"></a>
-A name for the stage that API Gateway creates with this deployment\. Use only alphanumeric characters\.  
-*Required*: No  
-*Type*: String  
+A name for the stage that API Gateway creates with this deployment\. Use only alphanumeric characters\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-apigateway-deployment-return-values"></a>

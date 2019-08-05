@@ -25,10 +25,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-launchtemplate-elasticgpuspecification-properties"></a>
 
 `Type`  <a name="cfn-ec2-launchtemplate-elasticgpuspecification-type"></a>
-The type of Elastic Graphics accelerator\.  
-*Required*: No  
-*Type*: String  
+The type of Elastic Graphics accelerator\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-ec2-launchtemplate-elasticgpuspecification--seealso"></a>
-+  [ ElasticGpuSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ElasticGpuSpecification.html) in the *Amazon Elastic Compute Cloud API Reference* 
++  [ ElasticGpuSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ElasticGpuSpecification.html) in the *Amazon Elastic Compute Cloud API Reference*

@@ -27,19 +27,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codecommit-repository-s3-properties"></a>
 
 `Bucket`  <a name="cfn-codecommit-repository-s3-bucket"></a>
-The name of the Amazon S3 bucket that contains the ZIP file with the content that will be committed to the new repository\.  
-*Required*: Yes  
-*Type*: String  
+The name of the Amazon S3 bucket that contains the ZIP file with the content that will be committed to the new repository\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Key`  <a name="cfn-codecommit-repository-s3-key"></a>
-The key to use for accessing the Amazon S3 bucket\.  
-*Required*: Yes  
-*Type*: String  
+The key to use for accessing the Amazon S3 bucket\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ObjectVersion`  <a name="cfn-codecommit-repository-s3-objectversion"></a>
-The object version of the ZIP file, if versioning is enabled for the Amazon S3 bucket\.  
-*Required*: No  
-*Type*: String  
+The object version of the ZIP file, if versioning is enabled for the Amazon S3 bucket\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

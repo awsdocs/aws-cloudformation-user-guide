@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cognito-userpool-numberattributeconstraints-properties"></a>
 
 `MaxValue`  <a name="cfn-cognito-userpool-numberattributeconstraints-maxvalue"></a>
-The maximum value of an attribute that is of the number data type\.  
-*Required*: No  
-*Type*: String  
+The maximum value of an attribute that is of the number data type\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinValue`  <a name="cfn-cognito-userpool-numberattributeconstraints-minvalue"></a>
-The minimum value of an attribute that is of the number data type\.  
-*Required*: No  
-*Type*: String  
+The minimum value of an attribute that is of the number data type\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

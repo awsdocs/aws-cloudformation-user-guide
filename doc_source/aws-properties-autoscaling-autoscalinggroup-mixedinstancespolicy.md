@@ -20,24 +20,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-autoscaling-autoscalinggroup-mixedinstancespolicy-syntax.yaml"></a>
 
 ```
-  [InstancesDistribution](#cfn-as-mixedinstancespolicy-instancesdistribution): 
+  [InstancesDistribution](#cfn-as-mixedinstancespolicy-instancesdistribution):
     [InstancesDistribution](aws-properties-autoscaling-autoscalinggroup-instancesdistribution.md)
-  [LaunchTemplate](#cfn-as-mixedinstancespolicy-launchtemplate): 
+  [LaunchTemplate](#cfn-as-mixedinstancespolicy-launchtemplate):
     [LaunchTemplate](aws-properties-autoscaling-autoscalinggroup-launchtemplate.md)
 ```
 
 ## Properties<a name="aws-properties-autoscaling-autoscalinggroup-mixedinstancespolicy-properties"></a>
 
 `InstancesDistribution`  <a name="cfn-as-mixedinstancespolicy-instancesdistribution"></a>
-The instances distribution to use\.  
-If you leave this property unspecified when creating a mixed instances policy, the default values are used\.  
-*Required*: No  
-*Type*: [InstancesDistribution](aws-properties-autoscaling-autoscalinggroup-instancesdistribution.md)  
+The instances distribution to use\.
+If you leave this property unspecified when creating a mixed instances policy, the default values are used\.
+*Required*: No
+*Type*: [InstancesDistribution](aws-properties-autoscaling-autoscalinggroup-instancesdistribution.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LaunchTemplate`  <a name="cfn-as-mixedinstancespolicy-launchtemplate"></a>
-The launch template and instance types \(overrides\)\.  
-This property must be specified when creating a mixed instances policy\.  
-*Required*: Conditional  
-*Type*: [LaunchTemplate](aws-properties-autoscaling-autoscalinggroup-launchtemplate.md)  
+The launch template and instance types \(overrides\)\.
+This property must be specified when creating a mixed instances policy\.
+*Required*: Conditional
+*Type*: [LaunchTemplate](aws-properties-autoscaling-autoscalinggroup-launchtemplate.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::SubnetNetworkAclAssociation
-Properties: 
+Properties:
   [NetworkAclId](#cfn-ec2-subnetnetworkaclassociation-networkaclid): String
   [SubnetId](#cfn-ec2-subnetnetworkaclassociation-associationid): String
 ```
@@ -32,15 +32,15 @@ Properties:
 ## Properties<a name="aws-resource-ec2-subnet-network-acl-assoc-properties"></a>
 
 `NetworkAclId`  <a name="cfn-ec2-subnetnetworkaclassociation-networkaclid"></a>
-The ID of the network ACL\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the network ACL\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetId`  <a name="cfn-ec2-subnetnetworkaclassociation-associationid"></a>
-The ID of the subnet\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the subnet\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-subnet-network-acl-assoc-return-values"></a>

@@ -25,17 +25,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudwatch-anomalydetector-dimension-properties"></a>
 
 `Name`  <a name="cfn-cloudwatch-anomalydetector-dimension-name"></a>
-The name of the dimension\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
+The name of the dimension\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `255`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Value`  <a name="cfn-cloudwatch-anomalydetector-dimension-value"></a>
-The value representing the dimension measurement\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
+The value representing the dimension measurement\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `255`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

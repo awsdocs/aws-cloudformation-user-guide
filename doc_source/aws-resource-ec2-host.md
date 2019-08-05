@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::Host
-Properties: 
+Properties:
   [AutoPlacement](#cfn-ec2-host-autoplacement): String
   [AvailabilityZone](#cfn-ec2-host-availabilityzone): String
   [HostRecovery](#cfn-ec2-host-hostrecovery): String
@@ -34,31 +34,31 @@ Properties:
 ## Properties<a name="aws-resource-ec2-host-properties"></a>
 
 `AutoPlacement`  <a name="cfn-ec2-host-autoplacement"></a>
-Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID\. For more information, see [ Understanding Instance Placement and Host Affinity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#dedicated-hosts-understanding) in the *Amazon EC2 User Guide for Linux Instances*\.  
-Default: `on`   
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `off | on`  
+Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID\. For more information, see [ Understanding Instance Placement and Host Affinity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#dedicated-hosts-understanding) in the *Amazon EC2 User Guide for Linux Instances*\.
+Default: `on`
+*Required*: No
+*Type*: String
+*Allowed Values*: `off | on`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailabilityZone`  <a name="cfn-ec2-host-availabilityzone"></a>
-The Availability Zone in which to allocate the Dedicated Host\.  
-*Required*: Yes  
-*Type*: String  
+The Availability Zone in which to allocate the Dedicated Host\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HostRecovery`  <a name="cfn-ec2-host-hostrecovery"></a>
-Indicates whether to enable or disable host recovery for the Dedicated Host\. Host recovery is disabled by default\. For more information, see [ Host Recovery](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-recovery.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
-Default: `off`   
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `off | on`  
+Indicates whether to enable or disable host recovery for the Dedicated Host\. Host recovery is disabled by default\. For more information, see [ Host Recovery](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-recovery.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+Default: `off`
+*Required*: No
+*Type*: String
+*Allowed Values*: `off | on`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceType`  <a name="cfn-ec2-host-instancetype"></a>
-Specifies the instance type for which to configure your Dedicated Hosts\. When you specify the instance type, that is the only instance type that you can launch onto that host\.  
-*Required*: Yes  
-*Type*: String  
+Specifies the instance type for which to configure your Dedicated Hosts\. When you specify the instance type, that is the only instance type that you can launch onto that host\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-host-return-values"></a>
@@ -93,7 +93,7 @@ The following example allocates a dedicated host for `c3.large` instances in the
 ```
 Host:
   Type: AWS::EC2::Host
-  Properties: 
+  Properties:
     AutoPlacement: on
     AvailabilityZone: us-east-1a
     InstanceType: c3.large

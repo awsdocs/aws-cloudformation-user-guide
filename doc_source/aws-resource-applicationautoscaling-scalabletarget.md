@@ -1,6 +1,6 @@
 # AWS::ApplicationAutoScaling::ScalableTarget<a name="aws-resource-applicationautoscaling-scalabletarget"></a>
 
-The `AWS::ApplicationAutoScaling::ScalableTarget` resource specifies a resource that Application Auto Scaling can scale\. 
+The `AWS::ApplicationAutoScaling::ScalableTarget` resource specifies a resource that Application Auto Scaling can scale\.
 
 For more information, see [RegisterScalableTarget](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html) in the *Application Auto Scaling API Reference*\.
 
@@ -29,13 +29,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApplicationAutoScaling::ScalableTarget
-Properties: 
+Properties:
   [MaxCapacity](#cfn-applicationautoscaling-scalabletarget-maxcapacity): Integer
   [MinCapacity](#cfn-applicationautoscaling-scalabletarget-mincapacity): Integer
   [ResourceId](#cfn-applicationautoscaling-scalabletarget-resourceid): String
   [RoleARN](#cfn-applicationautoscaling-scalabletarget-rolearn): String
   [ScalableDimension](#cfn-applicationautoscaling-scalabletarget-scalabledimension): String
-  [ScheduledActions](#cfn-applicationautoscaling-scalabletarget-scheduledactions): 
+  [ScheduledActions](#cfn-applicationautoscaling-scalabletarget-scheduledactions):
     - [ScheduledAction](aws-properties-applicationautoscaling-scalabletarget-scheduledaction.md)
   [ServiceNamespace](#cfn-applicationautoscaling-scalabletarget-servicenamespace): String
 ```
@@ -43,56 +43,56 @@ Properties:
 ## Properties<a name="aws-resource-applicationautoscaling-scalabletarget-properties"></a>
 
 `MaxCapacity`  <a name="cfn-applicationautoscaling-scalabletarget-maxcapacity"></a>
-The maximum value to scale to in response to a scale\-out event\.  
-*Required*: Yes  
-*Type*: Integer  
+The maximum value to scale to in response to a scale\-out event\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinCapacity`  <a name="cfn-applicationautoscaling-scalabletarget-mincapacity"></a>
-The minimum value to scale to in response to a scale\-in event\.  
-*Required*: Yes  
-*Type*: Integer  
+The minimum value to scale to in response to a scale\-in event\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceId`  <a name="cfn-applicationautoscaling-scalabletarget-resourceid"></a>
-The resource identifier to associate with this scalable target\. This string consists of the resource type and unique identifier\. For valid values, see the `ResourceId` parameter for [RegisterScalableTarget](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html) in the *Application Auto Scaling API Reference*\.  
-*Required*: Yes  
-*Type*: String  
+The resource identifier to associate with this scalable target\. This string consists of the resource type and unique identifier\. For valid values, see the `ResourceId` parameter for [RegisterScalableTarget](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html) in the *Application Auto Scaling API Reference*\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleARN`  <a name="cfn-applicationautoscaling-scalabletarget-rolearn"></a>
-The Amazon Resource Name \(ARN\) of an AWS Identity and Access Management \(IAM\) role that allows Application Auto Scaling to modify the scalable target on your behalf\.  
-*Required*: Yes  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of an AWS Identity and Access Management \(IAM\) role that allows Application Auto Scaling to modify the scalable target on your behalf\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScalableDimension`  <a name="cfn-applicationautoscaling-scalabletarget-scalabledimension"></a>
-The scalable dimension that is associated with the scalable target\. Specify the service namespace, resource type, and scaling property, for example, `ecs:service:DesiredCount` for the desired task count of an Amazon ECS service\. For valid values, see the `ScalableDimension` parameter for [RegisterScalableTarget](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html) in the *Application Auto Scaling API Reference*\.  
-*Required*: Yes  
-*Type*: String  
+The scalable dimension that is associated with the scalable target\. Specify the service namespace, resource type, and scaling property, for example, `ecs:service:DesiredCount` for the desired task count of an Amazon ECS service\. For valid values, see the `ScalableDimension` parameter for [RegisterScalableTarget](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html) in the *Application Auto Scaling API Reference*\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ScheduledActions`  <a name="cfn-applicationautoscaling-scalabletarget-scheduledactions"></a>
-The scheduled actions for the scalable target\. Duplicates aren't allowed\.  
-*Required*: No  
-*Type*: List of [ScheduledAction](aws-properties-applicationautoscaling-scalabletarget-scheduledaction.md)  
+The scheduled actions for the scalable target\. Duplicates aren't allowed\.
+*Required*: No
+*Type*: List of [ScheduledAction](aws-properties-applicationautoscaling-scalabletarget-scheduledaction.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceNamespace`  <a name="cfn-applicationautoscaling-scalabletarget-servicenamespace"></a>
-The namespace of the AWS service that provides the resource or `custom-resource` for a resource provided by your own application or service\. For valid values, see the `ServiceNamespace` parameter for [RegisterScalableTarget](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html) in the *Application Auto Scaling API Reference*\.  
-*Required*: Yes  
-*Type*: String  
+The namespace of the AWS service that provides the resource or `custom-resource` for a resource provided by your own application or service\. For valid values, see the `ServiceNamespace` parameter for [RegisterScalableTarget](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html) in the *Application Auto Scaling API Reference*\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-applicationautoscaling-scalabletarget-return-values"></a>
 
 ### Ref<a name="aws-resource-applicationautoscaling-scalabletarget-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the AWS CloudFormation\-generated ID of the resource\. For example: `service/ecsStack-MyECSCluster-AB12CDE3F4GH/ecsStack-MyECSService-AB12CDE3F4GH|ecs:service:DesiredCount|ecs`\. 
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the AWS CloudFormation\-generated ID of the resource\. For example: `service/ecsStack-MyECSCluster-AB12CDE3F4GH/ecsStack-MyECSService-AB12CDE3F4GH|ecs:service:DesiredCount|ecs`\.
 
 AWS CloudFormation uses the following format to generate the ID: `service/resource_ID|scalable_dimension|service_namespace `\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-applicationautoscaling-scalabletarget--examples"></a>
 
@@ -136,7 +136,7 @@ scalableTarget:
 
 ### Using Functions to Construct the Resource ID<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Using_Functions_to_Construct_the_Resource_ID"></a>
 
-The following example uses the [Fn::Join](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-join.html) and `Ref` intrinsic functions to construct the `ResourceId` property of the scaling target\. 
+The following example uses the [Fn::Join](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-join.html) and `Ref` intrinsic functions to construct the `ResourceId` property of the scaling target\.
 
 #### JSON<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Using_Functions_to_Construct_the_Resource_ID--json"></a>
 
@@ -179,11 +179,11 @@ SpotFleetScalingTarget:
   Properties:
     MaxCapacity: 2
     MinCapacity: 1
-    ResourceId: !Join 
+    ResourceId: !Join
       - /
       - - spot-fleet-request
         - !Ref ECSSpotFleet
-    RoleARN: !GetAtt 
+    RoleARN: !GetAtt
       - AutoScalingRole
       - Arn
     ScalableDimension: 'ec2:spot-fleet-request:TargetCapacity'
@@ -192,7 +192,7 @@ SpotFleetScalingTarget:
 
 ### Application Auto Scaling Scalable Target with an Amazon DynamoDB Table<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Application_Auto_Scaling_Scalable_Target_with_an_Amazon_DynamoDB_Table"></a>
 
-This example registers an [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html) as a scalable target\. It also defines a `TargetTrackingScaling` scaling policy that scales the `WriteCapacityUnits` throughput for the table\. 
+This example registers an [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html) as a scalable target\. It also defines a `TargetTrackingScaling` scaling policy that scales the `WriteCapacityUnits` throughput for the table\.
 
 #### JSON<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Application_Auto_Scaling_Scalable_Target_with_an_Amazon_DynamoDB_Table--json"></a>
 
@@ -441,7 +441,7 @@ Resources:
 
 ### Scheduled Actions<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Scheduled_Actions"></a>
 
-The following example creates a [ScheduledAction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scheduledaction.html) for a scalable target\. 
+The following example creates a [ScheduledAction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scheduledaction.html) for a scalable target\.
 
 #### JSON<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Scheduled_Actions--json"></a>
 
@@ -677,14 +677,14 @@ Resources:
   scalableTarget:
     Type: AWS::ApplicationAutoScaling::ScalableTarget
     Properties:
-      ResourceId: !Join 
+      ResourceId: !Join
         - /
         - - service
           - !Ref cluster
           - !GetAtt service.Name
       ServiceNamespace: ecs
       ScalableDimension: 'ecs:service:DesiredCount'
-      RoleARN: !GetAtt 
+      RoleARN: !GetAtt
         - scalingRole
         - Arn
       MaxCapacity: '2'
@@ -766,7 +766,7 @@ Resources:
 Outputs:
   resourceId:
     Description: ResourceId
-    Value: !Join 
+    Value: !Join
       - /
       - - service
         - !Ref cluster

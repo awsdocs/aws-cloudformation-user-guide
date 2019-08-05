@@ -25,19 +25,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-step-keyvalue-properties"></a>
 
 `Key`  <a name="cfn-elasticmapreduce-step-keyvalue-key"></a>
-The unique identifier of a key value pair\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `10280`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+The unique identifier of a key value pair\.
+*Required*: No
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `10280`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Value`  <a name="cfn-elasticmapreduce-step-keyvalue-value"></a>
-The value part of the identified key\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `10280`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+The value part of the identified key\.
+*Required*: No
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `10280`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

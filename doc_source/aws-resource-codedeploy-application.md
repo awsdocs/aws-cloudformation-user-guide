@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CodeDeploy::Application
-Properties: 
+Properties:
   [ApplicationName](#cfn-codedeploy-application-applicationname): String
   [ComputePlatform](#cfn-codedeploy-application-computeplatform): String
 ```
@@ -30,19 +30,19 @@ Properties:
 ## Properties<a name="aws-resource-codedeploy-application-properties"></a>
 
 `ApplicationName`  <a name="cfn-codedeploy-application-applicationname"></a>
- A name for the application\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the application name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.   
- Updates to `ApplicationName` are not supported\. 
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
+ A name for the application\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the application name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.
+ Updates to `ApplicationName` are not supported\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ComputePlatform`  <a name="cfn-codedeploy-application-computeplatform"></a>
-The compute platform that CodeDeploy deploys the application to\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `ECS | Lambda | Server`  
+The compute platform that CodeDeploy deploys the application to\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `ECS | Lambda | Server`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-codedeploy-application-return-values"></a>

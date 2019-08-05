@@ -19,19 +19,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-apigateway-restapi-endpointconfiguration-syntax.yaml"></a>
 
 ```
-  [Types](#cfn-apigateway-restapi-endpointconfiguration-types): 
+  [Types](#cfn-apigateway-restapi-endpointconfiguration-types):
     - String
 ```
 
 ## Properties<a name="aws-properties-apigateway-restapi-endpointconfiguration-properties"></a>
 
 `Types`  <a name="cfn-apigateway-restapi-endpointconfiguration-types"></a>
-A list of endpoint types of an API or its custom domain name\. Valid values include:  
+A list of endpoint types of an API or its custom domain name\. Valid values include:
 + `EDGE`: For an edge\-optimized API and its custom domain name\.
 + `REGIONAL`: For a regional API and its custom domain name\.
 + `PRIVATE`: For a private API\.
-*Required*: No  
-*Type*: List of String  
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-apigateway-restapi-endpointconfiguration--seealso"></a>

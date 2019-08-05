@@ -33,13 +33,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceDiscovery::Service
-Properties: 
+Properties:
   [Description](#cfn-servicediscovery-service-description): String
-  [DnsConfig](#cfn-servicediscovery-service-dnsconfig): 
+  [DnsConfig](#cfn-servicediscovery-service-dnsconfig):
     [DnsConfig](aws-properties-servicediscovery-service-dnsconfig.md)
-  [HealthCheckConfig](#cfn-servicediscovery-service-healthcheckconfig): 
+  [HealthCheckConfig](#cfn-servicediscovery-service-healthcheckconfig):
     [HealthCheckConfig](aws-properties-servicediscovery-service-healthcheckconfig.md)
-  [HealthCheckCustomConfig](#cfn-servicediscovery-service-healthcheckcustomconfig): 
+  [HealthCheckCustomConfig](#cfn-servicediscovery-service-healthcheckcustomconfig):
     [HealthCheckCustomConfig](aws-properties-servicediscovery-service-healthcheckcustomconfig.md)
   [Name](#cfn-servicediscovery-service-name): String
   [NamespaceId](#cfn-servicediscovery-service-namespaceid): String
@@ -48,44 +48,44 @@ Properties:
 ## Properties<a name="aws-resource-servicediscovery-service-properties"></a>
 
 `Description`  <a name="cfn-servicediscovery-service-description"></a>
-The description of the service\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `1024`  
+The description of the service\.
+*Required*: No
+*Type*: String
+*Maximum*: `1024`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DnsConfig`  <a name="cfn-servicediscovery-service-dnsconfig"></a>
-A complex type that contains information about the Route 53 DNS records that you want AWS Cloud Map to create when you register an instance\.  
-*Required*: No  
-*Type*: [DnsConfig](aws-properties-servicediscovery-service-dnsconfig.md)  
+A complex type that contains information about the Route 53 DNS records that you want AWS Cloud Map to create when you register an instance\.
+*Required*: No
+*Type*: [DnsConfig](aws-properties-servicediscovery-service-dnsconfig.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckConfig`  <a name="cfn-servicediscovery-service-healthcheckconfig"></a>
- *Public DNS namespaces only\.* A complex type that contains settings for an optional health check\. If you specify settings for a health check, AWS Cloud Map associates the health check with the records that you specify in `DnsConfig`\.  
-For information about the charges for health checks, see [Amazon Route 53 Pricing](http://aws.amazon.com/route53/pricing/)\.  
-*Required*: No  
-*Type*: [HealthCheckConfig](aws-properties-servicediscovery-service-healthcheckconfig.md)  
+ *Public DNS namespaces only\.* A complex type that contains settings for an optional health check\. If you specify settings for a health check, AWS Cloud Map associates the health check with the records that you specify in `DnsConfig`\.
+For information about the charges for health checks, see [Amazon Route 53 Pricing](http://aws.amazon.com/route53/pricing/)\.
+*Required*: No
+*Type*: [HealthCheckConfig](aws-properties-servicediscovery-service-healthcheckconfig.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckCustomConfig`  <a name="cfn-servicediscovery-service-healthcheckcustomconfig"></a>
-A complex type that contains information about an optional custom health check\.  
+A complex type that contains information about an optional custom health check\.
 If you specify a health check configuration, you can specify either `HealthCheckCustomConfig` or `HealthCheckConfig` but not both\.
-*Required*: No  
-*Type*: [HealthCheckCustomConfig](aws-properties-servicediscovery-service-healthcheckcustomconfig.md)  
+*Required*: No
+*Type*: [HealthCheckCustomConfig](aws-properties-servicediscovery-service-healthcheckcustomconfig.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-servicediscovery-service-name"></a>
-The name of the service\.  
-*Required*: No  
-*Type*: String  
-*Pattern*: `((?=^.{1,127}$)^([a-zA-Z0-9_][a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_]|[a-zA-Z0-9])(\.([a-zA-Z0-9_][a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_]|[a-zA-Z0-9]))*$)|(^\.$)`  
+The name of the service\.
+*Required*: No
+*Type*: String
+*Pattern*: `((?=^.{1,127}$)^([a-zA-Z0-9_][a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_]|[a-zA-Z0-9])(\.([a-zA-Z0-9_][a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_]|[a-zA-Z0-9]))*$)|(^\.$)`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NamespaceId`  <a name="cfn-servicediscovery-service-namespaceid"></a>
-The ID of the namespace that was used to create the service\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `64`  
+The ID of the namespace that was used to create the service\.
+*Required*: No
+*Type*: String
+*Maximum*: `64`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-servicediscovery-service-return-values"></a>
@@ -172,4 +172,4 @@ Properties:
 ```
 
 ## See Also<a name="aws-resource-servicediscovery-service--seealso"></a>
-+  [CreateService](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateService.html) in the *AWS Cloud Map API Reference* 
++  [CreateService](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateService.html) in the *AWS Cloud Map API Reference*

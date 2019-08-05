@@ -9,7 +9,7 @@ You can create up to 5000 log groups per account\. You must use the following gu
 
 If you associate a AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) with the log group, ingested data is encrypted using the CMK\. This association is stored as long as the data encrypted with the CMK is still within Amazon CloudWatch Logs\. This enables Amazon CloudWatch Logs to decrypt this data whenever it is requested\.
 
-If you attempt to associate a CMK with the log group but the CMK doesn't exist or the CMK is disabled, you will receive an `InvalidParameterException` error\. 
+If you attempt to associate a CMK with the log group but the CMK doesn't exist or the CMK is disabled, you will receive an `InvalidParameterException` error\.
 
 ## Syntax<a name="aws-resource-logs-loggroup-syntax"></a>
 
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Logs::LogGroup
-Properties: 
+Properties:
   [LogGroupName](#cfn-cwl-loggroup-loggroupname): String
   [RetentionInDays](#cfn-cwl-loggroup-retentionindays): Integer
 ```
@@ -39,18 +39,18 @@ Properties:
 ## Properties<a name="aws-resource-logs-loggroup-properties"></a>
 
 `LogGroupName`  <a name="cfn-cwl-loggroup-loggroupname"></a>
-The name of the log group\. If you don't specify a name, AWS CloudFormation generates a unique ID for the log group\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `512`  
-*Pattern*: `[\.\-_/#A-Za-z0-9]+`  
+The name of the log group\. If you don't specify a name, AWS CloudFormation generates a unique ID for the log group\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `512`
+*Pattern*: `[\.\-_/#A-Za-z0-9]+`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RetentionInDays`  <a name="cfn-cwl-loggroup-retentionindays"></a>
-The number of days to retain the log events in the specified log group\. Possible values are: 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, and 3653\.  
-*Required*: No  
-*Type*: Integer  
+The number of days to retain the log events in the specified log group\. Possible values are: 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, and 3653\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-logs-loggroup-return-values"></a>
@@ -92,8 +92,8 @@ The following example creates a log group that retains events for 7 days\.
 #### YAML<a name="aws-resource-logs-loggroup--examples--Create_a_Log_Group--yaml"></a>
 
 ```
-myLogGroup: 
+myLogGroup:
   Type: AWS::Logs::LogGroup
-  Properties: 
+  Properties:
   RetentionInDays: 7
 ```

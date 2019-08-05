@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Glue::DevEndpoint
-Properties: 
+Properties:
   [EndpointName](#cfn-glue-devendpoint-endpointname): String
   [ExtraJarsS3Path](#cfn-glue-devendpoint-extrajarss3path): String
   [ExtraPythonLibsS3Path](#cfn-glue-devendpoint-extrapythonlibss3path): String
@@ -38,7 +38,7 @@ Properties:
   [PublicKey](#cfn-glue-devendpoint-publickey): String
   [RoleArn](#cfn-glue-devendpoint-rolearn): String
   [SecurityConfiguration](#cfn-glue-devendpoint-securityconfiguration): String
-  [SecurityGroupIds](#cfn-glue-devendpoint-securitygroupids): 
+  [SecurityGroupIds](#cfn-glue-devendpoint-securitygroupids):
     - String
   [SubnetId](#cfn-glue-devendpoint-subnetid): String
   [Tags](#cfn-glue-devendpoint-tags): Json
@@ -47,65 +47,65 @@ Properties:
 ## Properties<a name="aws-resource-glue-devendpoint-properties"></a>
 
 `EndpointName`  <a name="cfn-glue-devendpoint-endpointname"></a>
-The name of the `DevEndpoint`\.  
-*Required*: No  
-*Type*: String  
+The name of the `DevEndpoint`\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExtraJarsS3Path`  <a name="cfn-glue-devendpoint-extrajarss3path"></a>
-The path to one or more Java `.jar` files in an S3 bucket that should be loaded in your `DevEndpoint`\.  
+The path to one or more Java `.jar` files in an S3 bucket that should be loaded in your `DevEndpoint`\.
 You can only use pure Java/Scala libraries with a `DevEndpoint`\.
-*Required*: No  
-*Type*: String  
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExtraPythonLibsS3Path`  <a name="cfn-glue-devendpoint-extrapythonlibss3path"></a>
-The paths to one or more Python libraries in an Amazon S3 bucket that should be loaded in your `DevEndpoint`\. Multiple values must be complete paths separated by a comma\.  
+The paths to one or more Python libraries in an Amazon S3 bucket that should be loaded in your `DevEndpoint`\. Multiple values must be complete paths separated by a comma\.
 You can only use pure Python libraries with a `DevEndpoint`\. Libraries that rely on C extensions, such as the [pandas](http://pandas.pydata.org/) Python data analysis library, are not currently supported\.
-*Required*: No  
-*Type*: String  
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NumberOfNodes`  <a name="cfn-glue-devendpoint-numberofnodes"></a>
-The number of AWS Glue Data Processing Units \(DPUs\) allocated to this `DevEndpoint`\.  
-*Required*: No  
-*Type*: Integer  
+The number of AWS Glue Data Processing Units \(DPUs\) allocated to this `DevEndpoint`\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PublicKey`  <a name="cfn-glue-devendpoint-publickey"></a>
-The public key to be used by this `DevEndpoint` for authentication\. This attribute is provided for backward compatibility because the recommended attribute to use is public keys\.  
-*Required*: No  
-*Type*: String  
+The public key to be used by this `DevEndpoint` for authentication\. This attribute is provided for backward compatibility because the recommended attribute to use is public keys\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-glue-devendpoint-rolearn"></a>
-The Amazon Resource Name \(ARN\) of the IAM role used in this `DevEndpoint`\.  
-*Required*: Yes  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of the IAM role used in this `DevEndpoint`\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityConfiguration`  <a name="cfn-glue-devendpoint-securityconfiguration"></a>
-The name of the `SecurityConfiguration` structure to be used with this `DevEndpoint`\.  
-*Required*: No  
-*Type*: String  
+The name of the `SecurityConfiguration` structure to be used with this `DevEndpoint`\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIds`  <a name="cfn-glue-devendpoint-securitygroupids"></a>
-A list of security group identifiers used in this `DevEndpoint`\.  
-*Required*: No  
-*Type*: List of String  
+A list of security group identifiers used in this `DevEndpoint`\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetId`  <a name="cfn-glue-devendpoint-subnetid"></a>
-The subnet ID for this `DevEndpoint`\.  
-*Required*: No  
-*Type*: String  
+The subnet ID for this `DevEndpoint`\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-glue-devendpoint-tags"></a>
-The tags to use with this DevEndpoint\. You can use tags to limit access to the DevEndpoint\. For more information about tags in AWS Glue, see [AWS Tags in AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html) in the developer guide\.  
-*Required*: No  
-*Type*: Json  
+The tags to use with this DevEndpoint\. You can use tags to limit access to the DevEndpoint\. For more information about tags in AWS Glue, see [AWS Tags in AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html) in the developer guide\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-glue-devendpoint-return-values"></a>
@@ -117,4 +117,4 @@ The tags to use with this DevEndpoint\. You can use tags to limit access to the 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## See Also<a name="aws-resource-glue-devendpoint--seealso"></a>
-+  [DevEndpoint Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-dev-endpoint.html#aws-glue-api-jobs-dev-endpoint-DevEndpoint) in the *AWS Glue Developer Guide* 
++  [DevEndpoint Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-dev-endpoint.html#aws-glue-api-jobs-dev-endpoint-DevEndpoint) in the *AWS Glue Developer Guide*

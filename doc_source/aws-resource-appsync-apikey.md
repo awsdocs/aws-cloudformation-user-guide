@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppSync::ApiKey
-Properties: 
+Properties:
   [ApiId](#cfn-appsync-apikey-apiid): String
   [Description](#cfn-appsync-apikey-description): String
   [Expires](#cfn-appsync-apikey-expires): Double
@@ -32,36 +32,36 @@ Properties:
 ## Properties<a name="aws-resource-appsync-apikey-properties"></a>
 
 `ApiId`  <a name="cfn-appsync-apikey-apiid"></a>
-Unique AWS AppSync GraphQL API ID for this API key\.  
-*Required*: Yes  
-*Type*: String  
+Unique AWS AppSync GraphQL API ID for this API key\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-appsync-apikey-description"></a>
-Unique description of your API key\.  
-*Required*: No  
-*Type*: String  
+Unique description of your API key\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Expires`  <a name="cfn-appsync-apikey-expires"></a>
-Expiration time of the API key in seconds \(using Unix Epoch time\), with a minimum of 1 day and a maximum of 365 days\. The default value is 7 days\.   
-*Required*: No  
-*Type*: Double  
+Expiration time of the API key in seconds \(using Unix Epoch time\), with a minimum of 1 day and a maximum of 365 days\. The default value is 7 days\.
+*Required*: No
+*Type*: Double
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-appsync-apikey-return-values"></a>
 
 ### Ref<a name="aws-resource-appsync-apikey-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::AppSync::ApiKey` resource to the intrinsic `Ref` function, the function returns the ARN of the API key, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/apikey/apikeya1bzhi`\. 
+When you pass the logical ID of an `AWS::AppSync::ApiKey` resource to the intrinsic `Ref` function, the function returns the ARN of the API key, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/apikey/apikeya1bzhi`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref)\.
 
 ### Fn::GetAtt<a name="aws-resource-appsync-apikey-return-values-fn--getatt"></a>
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
+ `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt)\. 
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt)\.
 
 #### <a name="aws-resource-appsync-apikey-return-values-fn--getatt-fn--getatt"></a>
 
@@ -75,7 +75,7 @@ The Amazon Resource Name \(ARN\) of the API key, such as `arn:aws:appsync:us-eas
 
 ### API Key Creation Example<a name="aws-resource-appsync-apikey--examples--API_Key_Creation_Example"></a>
 
-The following example creates an API key and associates it with an existing GraphQL API by passing the GraphQL API ID as a parameter\. 
+The following example creates an API key and associates it with an existing GraphQL API by passing the GraphQL API ID as a parameter\.
 
 #### YAML<a name="aws-resource-appsync-apikey--examples--API_Key_Creation_Example--yaml"></a>
 

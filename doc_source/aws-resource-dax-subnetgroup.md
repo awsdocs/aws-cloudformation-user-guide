@@ -23,38 +23,38 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DAX::SubnetGroup
-Properties: 
+Properties:
   [Description](#cfn-dax-subnetgroup-description): String
   [SubnetGroupName](#cfn-dax-subnetgroup-subnetgroupname): String
-  [SubnetIds](#cfn-dax-subnetgroup-subnetids): 
+  [SubnetIds](#cfn-dax-subnetgroup-subnetids):
     - String
 ```
 
 ## Properties<a name="aws-resource-dax-subnetgroup-properties"></a>
 
 `Description`  <a name="cfn-dax-subnetgroup-description"></a>
-The description of the subnet group\.  
-*Required*: No  
-*Type*: String  
+The description of the subnet group\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetGroupName`  <a name="cfn-dax-subnetgroup-subnetgroupname"></a>
-The name of the subnet group\.  
-*Required*: No  
-*Type*: String  
+The name of the subnet group\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-dax-subnetgroup-subnetids"></a>
-A list of VPC subnet IDs for the subnet group\.  
-*Required*: Yes  
-*Type*: List of String  
+A list of VPC subnet IDs for the subnet group\.
+*Required*: Yes
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-dax-subnetgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-dax-subnetgroup-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the created activity\. For example 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the created activity\. For example
 
 ```
 { "Ref": "MyDAXSubnetGroup" }
@@ -146,8 +146,8 @@ Resources:
   MyDAXSubnetGroup:
     Type: AWS::DAX::SubnetGroup
     Properties:
-      SubnetGroupName: "my-dax-subnet-group" 
-      Description: "Description of my DAX subnet group" 
+      SubnetGroupName: "my-dax-subnet-group"
+      Description: "Description of my DAX subnet group"
       SubnetIds:
         - !Ref subnet1
         - !Ref subnet2

@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-pinpoint-campaign-writetreatmentresource-syntax.yaml"></a>
 
 ```
-  [MessageConfiguration](#cfn-pinpoint-campaign-writetreatmentresource-messageconfiguration): 
+  [MessageConfiguration](#cfn-pinpoint-campaign-writetreatmentresource-messageconfiguration):
     [MessageConfiguration](aws-properties-pinpoint-campaign-messageconfiguration.md)
-  [Schedule](#cfn-pinpoint-campaign-writetreatmentresource-schedule): 
+  [Schedule](#cfn-pinpoint-campaign-writetreatmentresource-schedule):
     [Schedule](aws-properties-pinpoint-campaign-schedule.md)
   [SizePercent](#cfn-pinpoint-campaign-writetreatmentresource-sizepercent): Integer
   [TreatmentDescription](#cfn-pinpoint-campaign-writetreatmentresource-treatmentdescription): String
@@ -33,31 +33,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-campaign-writetreatmentresource-properties"></a>
 
 `MessageConfiguration`  <a name="cfn-pinpoint-campaign-writetreatmentresource-messageconfiguration"></a>
-The message configuration settings for the treatment\.  
-*Required*: No  
-*Type*: [MessageConfiguration](aws-properties-pinpoint-campaign-messageconfiguration.md)  
+The message configuration settings for the treatment\.
+*Required*: No
+*Type*: [MessageConfiguration](aws-properties-pinpoint-campaign-messageconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Schedule`  <a name="cfn-pinpoint-campaign-writetreatmentresource-schedule"></a>
-The schedule settings for the treatment\.  
-*Required*: No  
-*Type*: [Schedule](aws-properties-pinpoint-campaign-schedule.md)  
+The schedule settings for the treatment\.
+*Required*: No
+*Type*: [Schedule](aws-properties-pinpoint-campaign-schedule.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SizePercent`  <a name="cfn-pinpoint-campaign-writetreatmentresource-sizepercent"></a>
-The allocated percentage of users \(segment members\) to send the treatment to\.  
-*Required*: No  
-*Type*: Integer  
+The allocated percentage of users \(segment members\) to send the treatment to\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TreatmentDescription`  <a name="cfn-pinpoint-campaign-writetreatmentresource-treatmentdescription"></a>
-The custom description of the treatment\.  
-*Required*: No  
-*Type*: String  
+The custom description of the treatment\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TreatmentName`  <a name="cfn-pinpoint-campaign-writetreatmentresource-treatmentname"></a>
-The custom name of the treatment\. A treatment is a variation of a campaign that's used for A/B testing of a campaign\.  
-*Required*: No  
-*Type*: String  
+The custom name of the treatment\. A treatment is a variation of a campaign that's used for A/B testing of a campaign\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

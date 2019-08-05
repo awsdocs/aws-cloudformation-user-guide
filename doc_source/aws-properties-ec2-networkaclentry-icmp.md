@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-networkaclentry-icmp-properties"></a>
 
 `Code`  <a name="cfn-ec2-networkaclentry-icmp-code"></a>
-The Internet Control Message Protocol \(ICMP\) code\. You can use \-1 to specify all ICMP codes for the given ICMP type\. Requirement is conditional: Required if you specify 1 \(ICMP\) for the protocol parameter\.  
-*Required*: No  
-*Type*: Integer  
+The Internet Control Message Protocol \(ICMP\) code\. You can use \-1 to specify all ICMP codes for the given ICMP type\. Requirement is conditional: Required if you specify 1 \(ICMP\) for the protocol parameter\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-ec2-networkaclentry-icmp-type"></a>
-The Internet Control Message Protocol \(ICMP\) type\. You can use \-1 to specify all ICMP types\. Conditional requirement: Required if you specify 1 \(ICMP\) for the `CreateNetworkAclEntry` protocol parameter\.  
-*Required*: No  
-*Type*: Integer  
+The Internet Control Message Protocol \(ICMP\) type\. You can use \-1 to specify all ICMP types\. Conditional requirement: Required if you specify 1 \(ICMP\) for the `CreateNetworkAclEntry` protocol parameter\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

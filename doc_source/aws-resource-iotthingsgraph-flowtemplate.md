@@ -22,31 +22,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IoTThingsGraph::FlowTemplate
-Properties: 
+Properties:
   [CompatibleNamespaceVersion](#cfn-iotthingsgraph-flowtemplate-compatiblenamespaceversion): Double
-  [Definition](#cfn-iotthingsgraph-flowtemplate-definition): 
+  [Definition](#cfn-iotthingsgraph-flowtemplate-definition):
     [DefinitionDocument](aws-properties-iotthingsgraph-flowtemplate-definitiondocument.md)
 ```
 
 ## Properties<a name="aws-resource-iotthingsgraph-flowtemplate-properties"></a>
 
 `CompatibleNamespaceVersion`  <a name="cfn-iotthingsgraph-flowtemplate-compatiblenamespaceversion"></a>
-The version of the user's namespace against which the workflow was validated\. Use this value in your system instance\.  
-*Required*: No  
-*Type*: Double  
+The version of the user's namespace against which the workflow was validated\. Use this value in your system instance\.
+*Required*: No
+*Type*: Double
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Definition`  <a name="cfn-iotthingsgraph-flowtemplate-definition"></a>
-A workflow's definition document\.  
-*Required*: Yes  
-*Type*: [DefinitionDocument](aws-properties-iotthingsgraph-flowtemplate-definitiondocument.md)  
+A workflow's definition document\.
+*Required*: Yes
+*Type*: [DefinitionDocument](aws-properties-iotthingsgraph-flowtemplate-definitiondocument.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-iotthingsgraph-flowtemplate-return-values"></a>
 
 ### Ref<a name="aws-resource-iotthingsgraph-flowtemplate-return-values-ref"></a>
 
- `{ "Ref": "summary" }` 
+ `{ "Ref": "summary" }`
 
 Ref returns the `FlowTemplateSummary` that describes the workflow\.
 

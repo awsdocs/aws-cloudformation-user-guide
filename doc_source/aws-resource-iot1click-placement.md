@@ -1,6 +1,6 @@
 # AWS::IoT1Click::Placement<a name="aws-resource-iot1click-placement"></a>
 
-The `AWS::IoT1Click::Placement` resource creates a placement to be associated with an AWS IoT 1\-Click project\. A placement is an instance of a device in a location\. For more information, see [Projects, Templates, and Placements](https://docs.aws.amazon.com/iot-1-click/latest/developerguide/1click-PTP.html) in the *AWS IoT 1\-Click Developer Guide*\. 
+The `AWS::IoT1Click::Placement` resource creates a placement to be associated with an AWS IoT 1\-Click project\. A placement is an instance of a device in a location\. For more information, see [Projects, Templates, and Placements](https://docs.aws.amazon.com/iot-1-click/latest/developerguide/1click-PTP.html) in the *AWS IoT 1\-Click Developer Guide*\.
 
 ## Syntax<a name="aws-resource-iot1click-placement-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IoT1Click::Placement
-Properties: 
+Properties:
   [AssociatedDevices](#cfn-iot1click-placement-associateddevices): Json
   [Attributes](#cfn-iot1click-placement-attributes): Json
   [PlacementName](#cfn-iot1click-placement-placementname): String
@@ -34,27 +34,27 @@ Properties:
 ## Properties<a name="aws-resource-iot1click-placement-properties"></a>
 
 `AssociatedDevices`  <a name="cfn-iot1click-placement-associateddevices"></a>
-The devices to associate with the placement, as defined by a mapping of zero or more key\-value pairs wherein the key is a template name and the value is a device ID\.  
-*Required*: No  
-*Type*: Json  
+The devices to associate with the placement, as defined by a mapping of zero or more key\-value pairs wherein the key is a template name and the value is a device ID\.
+*Required*: No
+*Type*: Json
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Attributes`  <a name="cfn-iot1click-placement-attributes"></a>
-The user\-defined attributes associated with the placement\.  
-*Required*: No  
-*Type*: Json  
+The user\-defined attributes associated with the placement\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PlacementName`  <a name="cfn-iot1click-placement-placementname"></a>
-The name of the placement\.  
-*Required*: No  
-*Type*: String  
+The name of the placement\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ProjectName`  <a name="cfn-iot1click-placement-projectname"></a>
-The name of the project containing the placement\.  
-*Required*: Yes  
-*Type*: String  
+The name of the project containing the placement\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-iot1click-placement-return-values"></a>

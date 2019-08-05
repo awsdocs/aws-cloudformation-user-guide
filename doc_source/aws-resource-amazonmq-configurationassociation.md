@@ -22,33 +22,33 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AmazonMQ::ConfigurationAssociation
-Properties: 
+Properties:
   [Broker](#cfn-amazonmq-configurationassociation-broker): String
-  [Configuration](#cfn-amazonmq-configurationassociation-configuration): 
+  [Configuration](#cfn-amazonmq-configurationassociation-configuration):
     [ConfigurationId](aws-properties-amazonmq-configurationassociation-configurationid.md)
 ```
 
 ## Properties<a name="aws-resource-amazonmq-configurationassociation-properties"></a>
 
 `Broker`  <a name="cfn-amazonmq-configurationassociation-broker"></a>
-The broker to associate with a configuration\.  
-*Required*: Yes  
-*Type*: String  
+The broker to associate with a configuration\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Configuration`  <a name="cfn-amazonmq-configurationassociation-configuration"></a>
-The configuration to associate with a broker\.  
-*Required*: Yes  
-*Type*: [ConfigurationId](aws-properties-amazonmq-configurationassociation-configurationid.md)  
+The configuration to associate with a broker\.
+*Required*: Yes
+*Type*: [ConfigurationId](aws-properties-amazonmq-configurationassociation-configurationid.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-amazonmq-configurationassociation-return-values"></a>
 
 ### Ref<a name="aws-resource-amazonmq-configurationassociation-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon MQ configurationassociation ID\. For example: 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon MQ configurationassociation ID\. For example:
 
- `c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9` 
+ `c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9`
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

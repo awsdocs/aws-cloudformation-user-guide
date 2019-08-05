@@ -36,14 +36,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::TransitGateway
-Properties: 
+Properties:
   [AmazonSideAsn](#cfn-ec2-transitgateway-amazonsideasn): Integer
   [AutoAcceptSharedAttachments](#cfn-ec2-transitgateway-autoacceptsharedattachments): String
   [DefaultRouteTableAssociation](#cfn-ec2-transitgateway-defaultroutetableassociation): String
   [DefaultRouteTablePropagation](#cfn-ec2-transitgateway-defaultroutetablepropagation): String
   [Description](#cfn-ec2-transitgateway-description): String
   [DnsSupport](#cfn-ec2-transitgateway-dnssupport): String
-  [Tags](#cfn-ec2-transitgateway-tags): 
+  [Tags](#cfn-ec2-transitgateway-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpnEcmpSupport](#cfn-ec2-transitgateway-vpnecmpsupport): String
 ```
@@ -51,56 +51,56 @@ Properties:
 ## Properties<a name="aws-resource-ec2-transitgateway-properties"></a>
 
 `AmazonSideAsn`  <a name="cfn-ec2-transitgateway-amazonsideasn"></a>
-A private Autonomous System Number \(ASN\) for the Amazon side of a BGP session\. The range is 64512 to 65534 for 16\-bit ASNs and 4200000000 to 4294967294 for 32\-bit ASNs\.  
-*Required*: No  
-*Type*: Integer  
+A private Autonomous System Number \(ASN\) for the Amazon side of a BGP session\. The range is 64512 to 65534 for 16\-bit ASNs and 4200000000 to 4294967294 for 32\-bit ASNs\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AutoAcceptSharedAttachments`  <a name="cfn-ec2-transitgateway-autoacceptsharedattachments"></a>
-Indicates whether attachment requests are automatically accepted\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `disable | enable`  
+Indicates whether attachment requests are automatically accepted\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `disable | enable`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DefaultRouteTableAssociation`  <a name="cfn-ec2-transitgateway-defaultroutetableassociation"></a>
-Indicates whether resource attachments are automatically associated with the default association route table\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `disable | enable`  
+Indicates whether resource attachments are automatically associated with the default association route table\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `disable | enable`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DefaultRouteTablePropagation`  <a name="cfn-ec2-transitgateway-defaultroutetablepropagation"></a>
-Indicates whether resource attachments automatically propagate routes to the default propagation route table\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `disable | enable`  
+Indicates whether resource attachments automatically propagate routes to the default propagation route table\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `disable | enable`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-ec2-transitgateway-description"></a>
-The description of the transit gateway\.  
-*Required*: No  
-*Type*: String  
+The description of the transit gateway\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DnsSupport`  <a name="cfn-ec2-transitgateway-dnssupport"></a>
-Indicates whether DNS support is enabled\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `disable | enable`  
+Indicates whether DNS support is enabled\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `disable | enable`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ec2-transitgateway-tags"></a>
-The tags for the transit gateway\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+The tags for the transit gateway\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpnEcmpSupport`  <a name="cfn-ec2-transitgateway-vpnecmpsupport"></a>
-Indicates whether Equal Cost Multipath Protocol support is enabled\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `disable | enable`  
+Indicates whether Equal Cost Multipath Protocol support is enabled\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `disable | enable`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-transitgateway-return-values"></a>

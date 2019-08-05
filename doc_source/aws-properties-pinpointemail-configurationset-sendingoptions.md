@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpointemail-configurationset-sendingoptions-properties"></a>
 
 `SendingEnabled`  <a name="cfn-pinpointemail-configurationset-sendingoptions-sendingenabled"></a>
-If `true`, email sending is enabled for the configuration set\. If `false`, email sending is disabled for the configuration set\.  
-*Required*: No  
-*Type*: Boolean  
+If `true`, email sending is enabled for the configuration set\. If `false`, email sending is disabled for the configuration set\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Config::RemediationConfiguration
-Properties: 
+Properties:
   [ConfigRuleName](#cfn-config-remediationconfiguration-configrulename): String
   [Parameters](#cfn-config-remediationconfiguration-parameters): Json
   [ResourceType](#cfn-config-remediationconfiguration-resourcetype): String
@@ -38,45 +38,45 @@ Properties:
 ## Properties<a name="aws-resource-config-remediationconfiguration-properties"></a>
 
 `ConfigRuleName`  <a name="cfn-config-remediationconfiguration-configrulename"></a>
-The name of the AWS Config rule\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `64`  
+The name of the AWS Config rule\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `64`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Parameters`  <a name="cfn-config-remediationconfiguration-parameters"></a>
-An object of the RemediationParameterValue\.  
+An object of the RemediationParameterValue\.
 The type is a map of strings to RemediationParameterValue\.
-*Required*: No  
-*Type*: Json  
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceType`  <a name="cfn-config-remediationconfiguration-resourcetype"></a>
-The type of a resource\.   
-*Required*: No  
-*Type*: String  
+The type of a resource\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetId`  <a name="cfn-config-remediationconfiguration-targetid"></a>
-Target ID is the name of the public document\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `256`  
+Target ID is the name of the public document\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `256`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetType`  <a name="cfn-config-remediationconfiguration-targettype"></a>
-The type of the target\. Target executes remediation\. For example, SSM document\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `SSM_DOCUMENT`  
+The type of the target\. Target executes remediation\. For example, SSM document\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `SSM_DOCUMENT`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetVersion`  <a name="cfn-config-remediationconfiguration-targetversion"></a>
-Version of the target\. For example, version of the SSM document\.  
-*Required*: No  
-*Type*: String  
+Version of the target\. For example, version of the SSM document\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-config-remediationconfiguration-return-values"></a>
@@ -135,7 +135,7 @@ BasicRemediationConfiguration:
         Parameters:
             AutomationAssumeRole:
                 StaticValue:
-                    Values: 
+                    Values:
                     - automationAssumeRole
         InstanceId:
             StaticValue:

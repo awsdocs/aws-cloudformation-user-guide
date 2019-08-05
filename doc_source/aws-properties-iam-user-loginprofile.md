@@ -25,16 +25,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iam-user-loginprofile-properties"></a>
 
 `Password`  <a name="cfn-iam-user-loginprofile-password"></a>
-The user's password\.  
-*Required*: Yes  
-*Type*: String  
+The user's password\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PasswordResetRequired`  <a name="cfn-iam-user-loginprofile-passwordresetrequired"></a>
-Specifies whether the user is required to set a new password on next sign\-in\.  
-*Required*: No  
-*Type*: Boolean  
+Specifies whether the user is required to set a new password on next sign\-in\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-iam-user-loginprofile--seealso"></a>
-+  [LoginProfile](https://docs.aws.amazon.com/IAM/latest/APIReference/API_LoginProfile.html) in the *AWS Identity and Access Management API Reference* 
++  [LoginProfile](https://docs.aws.amazon.com/IAM/latest/APIReference/API_LoginProfile.html) in the *AWS Identity and Access Management API Reference*

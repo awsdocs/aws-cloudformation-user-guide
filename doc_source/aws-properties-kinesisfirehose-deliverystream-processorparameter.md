@@ -1,6 +1,6 @@
 # AWS::KinesisFirehose::DeliveryStream ProcessorParameter<a name="aws-properties-kinesisfirehose-deliverystream-processorparameter"></a>
 
-The `ProcessorParameter` property specifies a processor parameter in a data processor for an Amazon Kinesis Data Firehose delivery stream\. 
+The `ProcessorParameter` property specifies a processor parameter in a data processor for an Amazon Kinesis Data Firehose delivery stream\.
 
 ## Syntax<a name="aws-properties-kinesisfirehose-deliverystream-processorparameter-syntax"></a>
 
@@ -25,16 +25,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-processorparameter-properties"></a>
 
 `ParameterName`  <a name="cfn-kinesisfirehose-deliverystream-processorparameter-parametername"></a>
-The name of the parameter\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `BufferIntervalInSeconds | BufferSizeInMBs | LambdaArn | NumberOfRetries | RoleArn`  
+The name of the parameter\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `BufferIntervalInSeconds | BufferSizeInMBs | LambdaArn | NumberOfRetries | RoleArn`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ParameterValue`  <a name="cfn-kinesisfirehose-deliverystream-processorparameter-parametervalue"></a>
-The parameter value\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `512`  
+The parameter value\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `512`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

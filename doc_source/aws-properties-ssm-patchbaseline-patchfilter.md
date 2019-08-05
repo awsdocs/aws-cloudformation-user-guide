@@ -21,24 +21,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Key](#cfn-ssm-patchbaseline-patchfilter-key): String
-  [Values](#cfn-ssm-patchbaseline-patchfilter-values): 
+  [Values](#cfn-ssm-patchbaseline-patchfilter-values):
     - String
 ```
 
 ## Properties<a name="aws-properties-ssm-patchbaseline-patchfilter-properties"></a>
 
 `Key`  <a name="cfn-ssm-patchbaseline-patchfilter-key"></a>
-The key for the filter\.  
-For information about valid keys, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html) in the *AWS Systems Manager API Reference*\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `CLASSIFICATION | MSRC_SEVERITY | PATCH_ID | PATCH_SET | PRIORITY | PRODUCT | PRODUCT_FAMILY | SECTION | SEVERITY`  
+The key for the filter\.
+For information about valid keys, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html) in the *AWS Systems Manager API Reference*\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `CLASSIFICATION | MSRC_SEVERITY | PATCH_ID | PATCH_SET | PRIORITY | PRODUCT | PRODUCT_FAMILY | SECTION | SEVERITY`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Values`  <a name="cfn-ssm-patchbaseline-patchfilter-values"></a>
-The value for the filter key\.  
-For information about valid values for each key based on operating system type, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html) in the *AWS Systems Manager API Reference*\.  
-*Required*: No  
-*Type*: List of String  
-*Maximum*: `20`  
+The value for the filter key\.
+For information about valid values for each key based on operating system type, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html) in the *AWS Systems Manager API Reference*\.
+*Required*: No
+*Type*: List of String
+*Maximum*: `20`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

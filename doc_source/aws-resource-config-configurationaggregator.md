@@ -1,6 +1,6 @@
 # AWS::Config::ConfigurationAggregator<a name="aws-resource-config-configurationaggregator"></a>
 
-The details about the configuration aggregator, including information about source accounts, regions, and metadata of the aggregator\. 
+The details about the configuration aggregator, including information about source accounts, regions, and metadata of the aggregator\.
 
 ## Syntax<a name="aws-resource-config-configurationaggregator-syntax"></a>
 
@@ -23,43 +23,43 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Config::ConfigurationAggregator
-Properties: 
-  [AccountAggregationSources](#cfn-config-configurationaggregator-accountaggregationsources): 
+Properties:
+  [AccountAggregationSources](#cfn-config-configurationaggregator-accountaggregationsources):
     - [AccountAggregationSource](aws-properties-config-configurationaggregator-accountaggregationsource.md)
   [ConfigurationAggregatorName](#cfn-config-configurationaggregator-configurationaggregatorname): String
-  [OrganizationAggregationSource](#cfn-config-configurationaggregator-organizationaggregationsource): 
+  [OrganizationAggregationSource](#cfn-config-configurationaggregator-organizationaggregationsource):
     [OrganizationAggregationSource](aws-properties-config-configurationaggregator-organizationaggregationsource.md)
 ```
 
 ## Properties<a name="aws-resource-config-configurationaggregator-properties"></a>
 
 `AccountAggregationSources`  <a name="cfn-config-configurationaggregator-accountaggregationsources"></a>
-Provides a list of source accounts and regions to be aggregated\.  
-*Required*: No  
-*Type*: List of [AccountAggregationSource](aws-properties-config-configurationaggregator-accountaggregationsource.md)  
-*Maximum*: `1`  
+Provides a list of source accounts and regions to be aggregated\.
+*Required*: No
+*Type*: List of [AccountAggregationSource](aws-properties-config-configurationaggregator-accountaggregationsource.md)
+*Maximum*: `1`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConfigurationAggregatorName`  <a name="cfn-config-configurationaggregator-configurationaggregatorname"></a>
-The name of the aggregator\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `256`  
-*Pattern*: `[\w\-]+`  
+The name of the aggregator\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `256`
+*Pattern*: `[\w\-]+`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OrganizationAggregationSource`  <a name="cfn-config-configurationaggregator-organizationaggregationsource"></a>
-Provides an organization and list of regions to be aggregated\.  
-*Required*: No  
-*Type*: [OrganizationAggregationSource](aws-properties-config-configurationaggregator-organizationaggregationsource.md)  
+Provides an organization and list of regions to be aggregated\.
+*Required*: No
+*Type*: [OrganizationAggregationSource](aws-properties-config-configurationaggregator-organizationaggregationsource.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-config-configurationaggregator-return-values"></a>
 
 ### Ref<a name="aws-resource-config-configurationaggregator-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ConfigurationAggregatorName, such as `myConfigurationAggregator`\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ConfigurationAggregatorName, such as `myConfigurationAggregator`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

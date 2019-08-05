@@ -18,22 +18,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-dataset-datasetcontentdeliveryruledestination-syntax.yaml"></a>
 
 ```
-  [IotEventsDestinationConfiguration](#cfn-iotanalytics-dataset-datasetcontentdeliveryruledestination-ioteventsdestinationconfiguration): 
+  [IotEventsDestinationConfiguration](#cfn-iotanalytics-dataset-datasetcontentdeliveryruledestination-ioteventsdestinationconfiguration):
     [IotEventsDestinationConfiguration](aws-properties-iotanalytics-dataset-ioteventsdestinationconfiguration.md)
-  [S3DestinationConfiguration](#cfn-iotanalytics-dataset-datasetcontentdeliveryruledestination-s3destinationconfiguration): 
+  [S3DestinationConfiguration](#cfn-iotanalytics-dataset-datasetcontentdeliveryruledestination-s3destinationconfiguration):
     [S3DestinationConfiguration](aws-properties-iotanalytics-dataset-s3destinationconfiguration.md)
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-dataset-datasetcontentdeliveryruledestination-properties"></a>
 
 `IotEventsDestinationConfiguration`  <a name="cfn-iotanalytics-dataset-datasetcontentdeliveryruledestination-ioteventsdestinationconfiguration"></a>
-Configuration information for delivery of data set contents to AWS IoT Events\.  
-*Required*: No  
-*Type*: [IotEventsDestinationConfiguration](aws-properties-iotanalytics-dataset-ioteventsdestinationconfiguration.md)  
+Configuration information for delivery of data set contents to AWS IoT Events\.
+*Required*: No
+*Type*: [IotEventsDestinationConfiguration](aws-properties-iotanalytics-dataset-ioteventsdestinationconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3DestinationConfiguration`  <a name="cfn-iotanalytics-dataset-datasetcontentdeliveryruledestination-s3destinationconfiguration"></a>
-Configuration information for delivery of data set contents to Amazon S3\.  
-*Required*: No  
-*Type*: [S3DestinationConfiguration](aws-properties-iotanalytics-dataset-s3destinationconfiguration.md)  
+Configuration information for delivery of data set contents to Amazon S3\.
+*Required*: No
+*Type*: [S3DestinationConfiguration](aws-properties-iotanalytics-dataset-s3destinationconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

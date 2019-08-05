@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::EIP
-Properties: 
+Properties:
   [Domain](#cfn-ec2-eip-domain): String
   [InstanceId](#cfn-ec2-eip-instanceid): String
   [PublicIpv4Pool](#cfn-ec2-eip-publicipv4pool): String
@@ -40,25 +40,25 @@ Properties:
 ## Properties<a name="aws-properties-ec2-eip-properties"></a>
 
 `Domain`  <a name="cfn-ec2-eip-domain"></a>
-Set to `vpc` to allocate the address for use with instances in a VPC\.  
-Default: The address is for use with instances in EC2\-Classic\.  
-If you define an Elastic IP address and associate it with a VPC that is defined in the same template, you must declare a dependency on the VPC\-gateway attachment by using the [ DependsOn Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) on this resource\.  
-Required when allocating an address to a VPC  
-*Required*: Conditional  
-*Type*: String  
-*Allowed Values*: `standard | vpc`  
+Set to `vpc` to allocate the address for use with instances in a VPC\.
+Default: The address is for use with instances in EC2\-Classic\.
+If you define an Elastic IP address and associate it with a VPC that is defined in the same template, you must declare a dependency on the VPC\-gateway attachment by using the [ DependsOn Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) on this resource\.
+Required when allocating an address to a VPC
+*Required*: Conditional
+*Type*: String
+*Allowed Values*: `standard | vpc`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceId`  <a name="cfn-ec2-eip-instanceid"></a>
-The ID of the instance\.  
-*Required*: No  
-*Type*: String  
+The ID of the instance\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PublicIpv4Pool`  <a name="cfn-ec2-eip-publicipv4pool"></a>
-The ID of an address pool that you own\. Use this parameter to let Amazon EC2 select an address from the address pool\.  
-*Required*: No  
-*Type*: String  
+The ID of an address pool that you own\. Use this parameter to let Amazon EC2 select an address from the address pool\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-properties-ec2-eip-return-values"></a>

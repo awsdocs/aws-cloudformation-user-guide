@@ -4,7 +4,7 @@ When you need to make changes to a stack's settings or change its resources, you
 
 When you update a stack, you submit changes, such as new input parameter values or an updated template\. AWS CloudFormation compares the changes you submit with the current state of your stack and updates only the changed resources\. For a summary of the update workflow, see [How Does AWS CloudFormation Work?](cfn-whatis-howdoesitwork.md)\.
 
-**Note**  
+**Note**
 When updating a stack, AWS CloudFormation might interrupt resources or replace updated resources, depending on which properties you update\. For more information about resource update behaviors, see [Update Behaviors of Stack Resources](using-cfn-updating-stacks-update-behaviors.md)\.
 
 Update Methods

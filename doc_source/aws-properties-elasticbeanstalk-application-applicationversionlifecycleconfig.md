@@ -22,22 +22,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig-syntax.yaml"></a>
 
 ```
-  [MaxAgeRule](#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxagerule): 
+  [MaxAgeRule](#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxagerule):
     [MaxAgeRule](aws-properties-elasticbeanstalk-application-maxagerule.md)
-  [MaxCountRule](#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxcountrule): 
+  [MaxCountRule](#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxcountrule):
     [MaxCountRule](aws-properties-elasticbeanstalk-application-maxcountrule.md)
 ```
 
 ## Properties<a name="aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig-properties"></a>
 
 `MaxAgeRule`  <a name="cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxagerule"></a>
-Specify a max age rule to restrict the length of time that application versions are retained for an application\.  
-*Required*: No  
-*Type*: [MaxAgeRule](aws-properties-elasticbeanstalk-application-maxagerule.md)  
+Specify a max age rule to restrict the length of time that application versions are retained for an application\.
+*Required*: No
+*Type*: [MaxAgeRule](aws-properties-elasticbeanstalk-application-maxagerule.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxCountRule`  <a name="cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxcountrule"></a>
-Specify a max count rule to restrict the number of application versions that are retained for an application\.  
-*Required*: No  
-*Type*: [MaxCountRule](aws-properties-elasticbeanstalk-application-maxcountrule.md)  
+Specify a max count rule to restrict the number of application versions that are retained for an application\.
+*Required*: No
+*Type*: [MaxCountRule](aws-properties-elasticbeanstalk-application-maxcountrule.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

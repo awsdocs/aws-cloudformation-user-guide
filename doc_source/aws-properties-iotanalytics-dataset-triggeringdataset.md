@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotanalytics-dataset-triggeringdataset-properties"></a>
 
 `DatasetName`  <a name="cfn-iotanalytics-dataset-triggeringdataset-datasetname"></a>
-The name of the data set whose content generation triggers the new data set content generation\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
-*Pattern*: `^[a-zA-Z0-9_]+$`  
+The name of the data set whose content generation triggers the new data set content generation\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
+*Pattern*: `^[a-zA-Z0-9_]+$`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

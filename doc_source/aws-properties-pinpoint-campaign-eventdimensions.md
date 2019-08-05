@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Attributes](#cfn-pinpoint-campaign-eventdimensions-attributes): Json
-  [EventType](#cfn-pinpoint-campaign-eventdimensions-eventtype): 
+  [EventType](#cfn-pinpoint-campaign-eventdimensions-eventtype):
     [SetDimension](aws-properties-pinpoint-campaign-setdimension.md)
   [Metrics](#cfn-pinpoint-campaign-eventdimensions-metrics): Json
 ```
@@ -28,19 +28,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-campaign-eventdimensions-properties"></a>
 
 `Attributes`  <a name="cfn-pinpoint-campaign-eventdimensions-attributes"></a>
-One or more custom attributes that your app reports to Amazon Pinpoint\. You can use these attributes as selection criteria when you create an event filter\.  
-*Required*: No  
-*Type*: Json  
+One or more custom attributes that your app reports to Amazon Pinpoint\. You can use these attributes as selection criteria when you create an event filter\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventType`  <a name="cfn-pinpoint-campaign-eventdimensions-eventtype"></a>
-The name of the event that causes the campaign to be sent\. This can be a standard type of event that Amazon Pinpoint generates, such as `_session.start`, or a custom event that's specific to your app\.  
-*Required*: No  
-*Type*: [SetDimension](aws-properties-pinpoint-campaign-setdimension.md)  
+The name of the event that causes the campaign to be sent\. This can be a standard type of event that Amazon Pinpoint generates, such as `_session.start`, or a custom event that's specific to your app\.
+*Required*: No
+*Type*: [SetDimension](aws-properties-pinpoint-campaign-setdimension.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Metrics`  <a name="cfn-pinpoint-campaign-eventdimensions-metrics"></a>
-One or more custom metrics that your app reports to Amazon Pinpoint\. You can use these metrics as selection criteria when you create an event filter\.  
-*Required*: No  
-*Type*: Json  
+One or more custom metrics that your app reports to Amazon Pinpoint\. You can use these metrics as selection criteria when you create an event filter\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

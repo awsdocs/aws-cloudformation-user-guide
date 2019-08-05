@@ -22,43 +22,43 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [BrokerAZDistribution](#cfn-msk-cluster-brokernodegroupinfo-brokerazdistribution): String
-  [ClientSubnets](#cfn-msk-cluster-brokernodegroupinfo-clientsubnets): 
+  [ClientSubnets](#cfn-msk-cluster-brokernodegroupinfo-clientsubnets):
     - String
   [InstanceType](#cfn-msk-cluster-brokernodegroupinfo-instancetype): String
-  [SecurityGroups](#cfn-msk-cluster-brokernodegroupinfo-securitygroups): 
+  [SecurityGroups](#cfn-msk-cluster-brokernodegroupinfo-securitygroups):
     - String
-  [StorageInfo](#cfn-msk-cluster-brokernodegroupinfo-storageinfo): 
+  [StorageInfo](#cfn-msk-cluster-brokernodegroupinfo-storageinfo):
     [StorageInfo](aws-properties-msk-cluster-storageinfo.md)
 ```
 
 ## Properties<a name="aws-properties-msk-cluster-brokernodegroupinfo-properties"></a>
 
 `BrokerAZDistribution`  <a name="cfn-msk-cluster-brokernodegroupinfo-brokerazdistribution"></a>
-The distribution of broker nodes across Availability Zones\.  
-*Required*: No  
-*Type*: String  
+The distribution of broker nodes across Availability Zones\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ClientSubnets`  <a name="cfn-msk-cluster-brokernodegroupinfo-clientsubnets"></a>
-The list of subnets to connect to in the client virtual private cloud \(VPC\)\. AWS creates elastic network interfaces inside these subnets\. Client applications use elastic network interfaces to produce and consume data\. Client subnets can't be in Availability Zone us\-east\-1e\.  
-*Required*: Yes  
-*Type*: List of String  
+The list of subnets to connect to in the client virtual private cloud \(VPC\)\. AWS creates elastic network interfaces inside these subnets\. Client applications use elastic network interfaces to produce and consume data\. Client subnets can't be in Availability Zone us\-east\-1e\.
+*Required*: Yes
+*Type*: List of String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceType`  <a name="cfn-msk-cluster-brokernodegroupinfo-instancetype"></a>
-The type of Amazon EC2 instances to use for Kafka brokers\. The following instance types are allowed: kafka\.m5\.large, kafka\.m5\.xlarge, kafka\.m5\.2xlarge, kafka\.m5\.4xlarge, kafka\.m5\.12xlarge, and kafka\.m5\.24xlarge\.  
-*Required*: Yes  
-*Type*: String  
+The type of Amazon EC2 instances to use for Kafka brokers\. The following instance types are allowed: kafka\.m5\.large, kafka\.m5\.xlarge, kafka\.m5\.2xlarge, kafka\.m5\.4xlarge, kafka\.m5\.12xlarge, and kafka\.m5\.24xlarge\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecurityGroups`  <a name="cfn-msk-cluster-brokernodegroupinfo-securitygroups"></a>
-The AWS security groups to associate with the elastic network interfaces in order to specify who can connect to and communicate with the Amazon MSK cluster\. If you don't specify a security group, Amazon MSK uses the default security group associated with the VPC\.  
-*Required*: No  
-*Type*: List of String  
+The AWS security groups to associate with the elastic network interfaces in order to specify who can connect to and communicate with the Amazon MSK cluster\. If you don't specify a security group, Amazon MSK uses the default security group associated with the VPC\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageInfo`  <a name="cfn-msk-cluster-brokernodegroupinfo-storageinfo"></a>
-Contains information about storage volumes attached to MSK broker nodes\.  
-*Required*: No  
-*Type*: [StorageInfo](aws-properties-msk-cluster-storageinfo.md)  
+Contains information about storage volumes attached to MSK broker nodes\.
+*Required*: No
+*Type*: [StorageInfo](aws-properties-msk-cluster-storageinfo.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -25,32 +25,32 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppMesh::Mesh
-Properties: 
+Properties:
   [MeshName](#cfn-appmesh-mesh-meshname): String
-  [Spec](#cfn-appmesh-mesh-spec): 
+  [Spec](#cfn-appmesh-mesh-spec):
     [MeshSpec](aws-properties-appmesh-mesh-meshspec.md)
-  [Tags](#cfn-appmesh-mesh-tags): 
+  [Tags](#cfn-appmesh-mesh-tags):
     - [TagRef](aws-properties-appmesh-mesh-tagref.md)
 ```
 
 ## Properties<a name="aws-resource-appmesh-mesh-properties"></a>
 
 `MeshName`  <a name="cfn-appmesh-mesh-meshname"></a>
-The name to use for the service mesh\.  
-*Required*: Yes  
-*Type*: String  
+The name to use for the service mesh\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Spec`  <a name="cfn-appmesh-mesh-spec"></a>
-The service mesh specification to apply\.  
-*Required*: No  
-*Type*: [MeshSpec](aws-properties-appmesh-mesh-meshspec.md)  
+The service mesh specification to apply\.
+*Required*: No
+*Type*: [MeshSpec](aws-properties-appmesh-mesh-meshspec.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-appmesh-mesh-tags"></a>
-Optional metadata that you can apply to the service mesh to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.  
-*Required*: No  
-*Type*: List of [TagRef](aws-properties-appmesh-mesh-tagref.md)  
+Optional metadata that you can apply to the service mesh to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.
+*Required*: No
+*Type*: List of [TagRef](aws-properties-appmesh-mesh-tagref.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-appmesh-mesh-return-values"></a>
@@ -59,7 +59,7 @@ Optional metadata that you can apply to the service mesh to assist with categori
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ARN\. For example:
 
- `{ "Ref": "myMesh" }` 
+ `{ "Ref": "myMesh" }`
 
 When you pass the logical ID of an `AWS::AppMesh::Mesh` resource to the intrinsic Ref function, the function returns the mesh ARN, such as `arn:aws:appmesh:us-east-1:555555555555:mesh/myMesh `\.
 

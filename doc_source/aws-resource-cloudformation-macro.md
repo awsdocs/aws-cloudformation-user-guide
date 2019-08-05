@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CloudFormation::Macro
-Properties: 
+Properties:
   [Description](#cfn-cloudformation-macro-description): String
   [FunctionName](#cfn-cloudformation-macro-functionname): String
   [LogGroupName](#cfn-cloudformation-macro-loggroupname): String
@@ -36,33 +36,33 @@ Properties:
 ## Properties<a name="aws-resource-cloudformation-macro-properties"></a>
 
 `Description`  <a name="cfn-cloudformation-macro-description"></a>
-A description of the macro\.  
-*Required*: No  
-*Type*: String  
+A description of the macro\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FunctionName`  <a name="cfn-cloudformation-macro-functionname"></a>
-The Amazon Resource Name \(ARN\) of the underlying AWS Lambda function that you want AWS CloudFormation to invoke when the macro is run\.  
-*Required*: Yes  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of the underlying AWS Lambda function that you want AWS CloudFormation to invoke when the macro is run\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogGroupName`  <a name="cfn-cloudformation-macro-loggroupname"></a>
-The Amazon CloudWatch log group to which AWS CloudFormation sends error logging information when invoking the macro's underlying AWS Lambda function\.  
-*Required*: No  
-*Type*: String  
+The Amazon CloudWatch log group to which AWS CloudFormation sends error logging information when invoking the macro's underlying AWS Lambda function\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogRoleARN`  <a name="cfn-cloudformation-macro-logrolearn"></a>
-The ARN of the role AWS CloudFormation should assume when sending log entries to CloudWatch logs\.  
-*Required*: No  
-*Type*: String  
+The ARN of the role AWS CloudFormation should assume when sending log entries to CloudWatch logs\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-cloudformation-macro-name"></a>
-The name of the macro\. The name of the macro must be unique across all macros in the account\.  
-*Required*: Yes  
-*Type*: String  
+The name of the macro\. The name of the macro must be unique across all macros in the account\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-cloudformation-macro-return-values"></a>
@@ -71,11 +71,11 @@ The name of the macro\. The name of the macro must be unique across all macros i
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
 
- `{ "Ref": "myMacro" }` 
+ `{ "Ref": "myMacro" }`
 
 For the macro `myMacro`, `Ref` returns the name of the macro\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## See Also<a name="aws-resource-cloudformation-macro--seealso"></a>
-+  [Using AWS CloudFormation Macros to Perform Custom Processing on Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html) 
++  [Using AWS CloudFormation Macros to Perform Custom Processing on Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html)

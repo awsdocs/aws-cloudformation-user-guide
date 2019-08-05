@@ -10,11 +10,11 @@ Because stack sets perform stack operations across multiple accounts, before you
 
    The simplest \(and most permissive\) permissions configuration is where you give *all* users and groups in the administrator account the ability to create and update *all* the stack sets managed through that account\. If you need finer\-grained control, you can set up permissions to specify:
    + Which users and groups can perform stack set operations in which target accounts\.
-   + Which resources users and groups can include in their stack sets\. 
-   + Which stack set operations specific users and groups can perform\. 
+   + Which resources users and groups can include in their stack sets\.
+   + Which stack set operations specific users and groups can perform\.
 
 1. Create the necessary IAM service roles in your administrator and target accounts to define the permissions you want\.
-**Important**  
+**Important**
 The role in your administrator account must be named **AWSCloudFormationStackSetAdministrationRole**\. The role in each of your target accounts must be named **AWSCloudFormationStackSetExecutionRole**\.
 
 **Topics**
@@ -23,7 +23,7 @@ The role in your administrator account must be named **AWSCloudFormationStackSet
 
 ## Set Up Basic Permissions for Stack Sets Operations<a name="stacksets-prereqs-accountsetup"></a>
 
-The simplest \(and most permissive\) permissions configuration is where you give *all* users and groups in the administrator account the ability to create and update *all* the stack sets managed through that account\. To do this, you create IAM service roles for your administrator and all target accounts\. Anyone with permissions to the administrator account then has permissions to create, update, or delete any stack sets in any of the target accounts\. 
+The simplest \(and most permissive\) permissions configuration is where you give *all* users and groups in the administrator account the ability to create and update *all* the stack sets managed through that account\. To do this, you create IAM service roles for your administrator and all target accounts\. Anyone with permissions to the administrator account then has permissions to create, update, or delete any stack sets in any of the target accounts\.
 
 Your administrator account and target accounts must have service roles configured that create a trust relationship between the accounts, and grant the target accounts permission to create and manage the resources described in your template\.
 
@@ -70,7 +70,7 @@ If you structure your permissions this way, users do not pass an administrator r
    ```
 
 1. In each target account, create a service role named **AWSCloudFormationStackSetExecutionRole** that trusts the administrator account\. The role must have this exact name\. You can do this by creating a stack from the following AWS CloudFormation template, available online at [https://s3\.amazonaws\.com/cloudformation\-stackset\-sample\-templates\-us\-east\-1/AWSCloudFormationStackSetExecutionRole\.yml](https://s3.amazonaws.com/cloudformation-stackset-sample-templates-us-east-1/AWSCloudFormationStackSetExecutionRole.yml)\. When you use this template, you are prompted to provide the name of the administrator account with which your target account must have a trust relationship\.
-**Important**  
+**Important**
 Be aware that this template grants administrator access\. After you use the template to create a target account execution role, you must scope the permissions in the policy statement to the types of resources that you are creating by using StackSets\.
 
    The target account service role requires permissions to perform any operations that are specified in your AWS CloudFormation template\. For example, if your template is creating an S3 bucket, then you need permissions to create new objects for S3\. Your target account always needs full AWS CloudFormation permissions, which include permissions to create, update, delete, and describe stacks\. The role created by this template enables the following policy on a target account\.
@@ -96,7 +96,7 @@ Be aware that this template grants administrator access\. After you use the temp
        "Statement": [
            {
                "Effect": "Allow",
-               "Action": 
+               "Action":
                   [
                     "cloudformation:*",
                     "s3:*",
@@ -131,8 +131,8 @@ Be aware that this template grants administrator access\. After you use the temp
 
 If you require finer\-grained control over the stack sets that users and groups are creating through a single administrator account, you can use IAM roles to specify:
 + Which users and groups can perform stack set operations in which target accounts\.
-+ Which resources users and groups can include in their stack sets\. 
-+ Which stack set operations specific users and groups can perform\. 
++ Which resources users and groups can include in their stack sets\.
++ Which stack set operations specific users and groups can perform\.
 
 ### Set Up Permissions to Control Target Account Access<a name="stacksets-prereqs-multiadmin"></a>
 
@@ -142,13 +142,13 @@ For example, you can create Role A and Role B within your administrator account\
 
 ![\[Set up a trust relationship between a customized administrator role and the target accounts. The user then passes that role when creating the stack set.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/stacksets_perms_admin_target.png)
 
-Setting up the necessary permissions involves defining a customized administrator role, creating a service role for the target account, and granting users permission to pass the customized administrator role when performing stack set operations\. 
+Setting up the necessary permissions involves defining a customized administrator role, creating a service role for the target account, and granting users permission to pass the customized administrator role when performing stack set operations\.
 
 In general, here's how it works once you have the necessary permissions in place: When creating a stack set, the user must specify a customized administrator\. The user must have permission to pass the role to AWS CloudFormation\. In addition, the customized administrator role must have a trust relationship with the target accounts specified for the stack set\. AWS CloudFormation creates the stack set and associates the customized administrator role with it\. When updating a stack set, the user must explicitly specify a customized administrator role, even if it is the same customized administrator role used with this stack set previously\. AWS CloudFormation uses that role to update the stack, subject to the requirements above\.
 
 **Set up permissions for which users and groups can perform stack set operations in specific target accounts**
 
-1. For each stack set, create a customized administrator role with permissions to assume the **AWSCloudFormationStackSetExecutionRole** service role in the target accounts\. 
+1. For each stack set, create a customized administrator role with permissions to assume the **AWSCloudFormationStackSetExecutionRole** service role in the target accounts\.
 
    Create an [IAM service role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html.html) with a custom name, using the following permissions policy:
 
@@ -191,25 +191,25 @@ In general, here's how it works once you have the necessary permissions in place
    You must provide the following trust policy when you create the role to define the trust relationship:
 
    ```
-   { 
-     "Version": "2012-10-17", 
-     "Statement": [ 
-       { 
-         "Effect": "Allow", 
-         "Principal": { 
-           "Service": "cloudformation.amazonaws.com" 
-         }, 
-         "Action": "sts:AssumeRole" 
-       } 
-     ] 
+   {
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Effect": "Allow",
+         "Principal": {
+           "Service": "cloudformation.amazonaws.com"
+         },
+         "Action": "sts:AssumeRole"
+       }
+     ]
    }
    ```
 
 1. In each target account, create a service role named **AWSCloudFormationStackSetExecutionRole** that trusts the customized administration role you want to use with this account\.
-**Important**  
+**Important**
 You must scope the permissions in the policy statement to the types of resources that you are creating by using StackSets\.
 
-   The target account service role requires permissions to perform any operations that are specified in your AWS CloudFormation template\. For example, if your template is creating an S3 bucket, then you need permissions to create new objects in S3\. Your target account always needs full AWS CloudFormation permissions, which include permissions to create, update, delete, and describe stacks\. 
+   The target account service role requires permissions to perform any operations that are specified in your AWS CloudFormation template\. For example, if your template is creating an S3 bucket, then you need permissions to create new objects in S3\. Your target account always needs full AWS CloudFormation permissions, which include permissions to create, update, delete, and describe stacks\.
 
    The following example shows a policy statement with the *minimum* permissions for StackSets to work\. To create stacks in target accounts that use resources from services other than AWS CloudFormation, you must add those service actions and resources to the **AWSCloudFormationStackSetExecutionRole** permissions policy statement for each target account\.
 
@@ -219,7 +219,7 @@ You must scope the permissions in the policy statement to the types of resources
        "Statement": [
            {
                "Effect": "Allow",
-               "Action": 
+               "Action":
                   [
                     "cloudformation:*",
                     "s3:*",
@@ -234,23 +234,23 @@ You must scope the permissions in the policy statement to the types of resources
    You must provide the following trust policy when you create the role to define the trust relationship:
 
    ```
-   { 
-     "Version": "2012-10-17", 
-     "Statement": [ 
-       { 
-         "Effect": "Allow", 
-         "Principal": { 
-         "AWS": "arn:aws:iam::admin_account_id:role/customized_admin_role" 
-         }, 
+   {
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Effect": "Allow",
+         "Principal": {
+         "AWS": "arn:aws:iam::admin_account_id:role/customized_admin_role"
+         },
          "Action": "sts:AssumeRole"
-       } 
-     ] 
+       }
+     ]
    }
    ```
 
-1. Allow users to pass the customized administrator role when performing stack set operations\. 
+1. Allow users to pass the customized administrator role when performing stack set operations\.
 
-   Attach an IAM permissions policy to users or groups that allows them to pass the appropriate customized administrator role when creating or updating specific stack sets\. For more information, see [Granting a User Permissions to Pass a Role to an AWS Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html)\. In the example below, *customized\_admin\_role* refers to the administrator role the user needs to pass\. 
+   Attach an IAM permissions policy to users or groups that allows them to pass the appropriate customized administrator role when creating or updating specific stack sets\. For more information, see [Granting a User Permissions to Pass a Role to an AWS Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html)\. In the example below, *customized\_admin\_role* refers to the administrator role the user needs to pass\.
 
    ```
    {
@@ -282,7 +282,7 @@ Similarly, the user can also specify a customized execution role\. If they speci
 
 1. In the target accounts in which you want to create your stack sets, create a customized execution role that grants permissions to the services and resources that you want users and groups to be able to include in the stack sets\.
 
-   The following example provides the minimum permissions for stack sets, along with permission to create DynamoDB tables\. 
+   The following example provides the minimum permissions for stack sets, along with permission to create DynamoDB tables\.
 
    ```
    {
@@ -313,17 +313,17 @@ Similarly, the user can also specify a customized execution role\. If they speci
    You must provide the following trust policy when you create the role to define the trust relationship:
 
    ```
-   { 
-     "Version": "2012-10-17", 
-     "Statement": [ 
-       { 
-         "Effect": "Allow", 
-         "Principal": { 
-         "AWS": "arn:aws:iam::admin_account_id:role/customized_admin_role" 
-         }, 
+   {
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Effect": "Allow",
+         "Principal": {
+         "AWS": "arn:aws:iam::admin_account_id:role/customized_admin_role"
+         },
          "Action": "sts:AssumeRole"
-       } 
-     ] 
+       }
+     ]
    }
    ```
 
@@ -339,13 +339,13 @@ Similarly, the user can also specify a customized execution role\. If they speci
       "Sid": "Stmt1487980684000",
       "Effect": "Allow",
       "Action": [
-        "sts:AssumeRole" 
+        "sts:AssumeRole"
       ],
-      "Resource": [ 
+      "Resource": [
         "arn:aws:iam::*:role/AWSCloudFormationStackSetExecutionRole",
-        "arn:aws:iam::*:role/custom_execution_role" 
+        "arn:aws:iam::*:role/custom_execution_role"
       ]
-    } 
+    }
   ]
 }
 ```

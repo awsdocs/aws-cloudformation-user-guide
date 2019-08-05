@@ -21,20 +21,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ServiceRole](#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-servicerole): String
-  [VersionLifecycleConfig](#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-versionlifecycleconfig): 
+  [VersionLifecycleConfig](#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-versionlifecycleconfig):
     [ApplicationVersionLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.md)
 ```
 
 ## Properties<a name="aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig-properties"></a>
 
 `ServiceRole`  <a name="cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-servicerole"></a>
-The ARN of an IAM service role that Elastic Beanstalk has permission to assume\.  
-*Required*: No  
-*Type*: String  
+The ARN of an IAM service role that Elastic Beanstalk has permission to assume\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VersionLifecycleConfig`  <a name="cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-versionlifecycleconfig"></a>
-Defines lifecycle settings for application versions\.  
-*Required*: No  
-*Type*: [ApplicationVersionLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.md)  
+Defines lifecycle settings for application versions\.
+*Required*: No
+*Type*: [ApplicationVersionLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

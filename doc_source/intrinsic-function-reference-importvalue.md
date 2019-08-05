@@ -2,11 +2,11 @@
 
 The intrinsic function `Fn::ImportValue` returns the value of [an output exported](outputs-section-structure.md) by another stack\. You typically use this function to [create cross\-stack references](walkthrough-crossstackref.md)\. In the following example template snippets, Stack A exports VPC security group values and Stack B imports them\.
 
-**Note**  
-The following restrictions apply to cross\-stack references:  
+**Note**
+The following restrictions apply to cross\-stack references:
 For each AWS account, `Export` names must be unique within a region\.
 You can't create cross\-stack references across regions\. You can use the intrinsic function `Fn::ImportValue` to import only values that have been exported within the same region\.
-For outputs, the value of the `Name` property of an `Export` can't use `Ref` or `GetAtt` functions that depend on a resource\.  
+For outputs, the value of the `Name` property of an `Export` can't use `Ref` or `GetAtt` functions that depend on a resource\.
 Similarly, the `ImportValue` function can't include `Ref` or `GetAtt` functions that depend on a resource\.
 You can't delete a stack if another stack references one of its outputs\.
 You can't modify or remove an output value that is referenced by another stack\.
@@ -71,14 +71,14 @@ Alternatively, you can use the short form:
 !ImportValue sharedValueToImport
 ```
 
-**Important**  
-You can't use the short form of `!ImportValue` when it contains a `!Sub`\. The following example is valid for AWS CloudFormation, but *not* valid for YAML:   
+**Important**
+You can't use the short form of `!ImportValue` when it contains a `!Sub`\. The following example is valid for AWS CloudFormation, but *not* valid for YAML:
 
 ```
 !ImportValue
   !Sub "${NetworkStack}-SubnetID"
 ```
-Instead, you must use the full function name, for example:  
+Instead, you must use the full function name, for example:
 
 ```
 Fn::ImportValue:
@@ -87,7 +87,7 @@ Fn::ImportValue:
 
 ## Parameters<a name="w4784ab1c21c24c41c17"></a>
 
-sharedValueToImport  
+sharedValueToImport
 The stack output value that you want to import\.
 
 ## Return Value<a name="w4784ab1c21c24c41c19"></a>

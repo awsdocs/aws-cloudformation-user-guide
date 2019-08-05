@@ -26,10 +26,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::DomainName
-Properties: 
+Properties:
   [CertificateArn](#cfn-apigateway-domainname-certificatearn): String
   [DomainName](#cfn-apigateway-domainname-domainname): String
-  [EndpointConfiguration](#cfn-apigateway-domainname-endpointconfiguration): 
+  [EndpointConfiguration](#cfn-apigateway-domainname-endpointconfiguration):
     [EndpointConfiguration](aws-properties-apigateway-domainname-endpointconfiguration.md)
   [RegionalCertificateArn](#cfn-apigateway-domainname-regionalcertificatearn): String
 ```
@@ -37,27 +37,27 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-domainname-properties"></a>
 
 `CertificateArn`  <a name="cfn-apigateway-domainname-certificatearn"></a>
-The reference to an AWS\-managed certificate for use by the edge\-optimized endpoint for this domain name\. AWS Certificate Manager is the only supported source\. For requirements and additional information about setting up certificates, see [Get Certificates Ready in AWS Certificate Manager](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html#how-to-custom-domains-prerequisites) in the *API Gateway Developer Guide*\.  
-*Required*: No  
-*Type*: String  
+The reference to an AWS\-managed certificate for use by the edge\-optimized endpoint for this domain name\. AWS Certificate Manager is the only supported source\. For requirements and additional information about setting up certificates, see [Get Certificates Ready in AWS Certificate Manager](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html#how-to-custom-domains-prerequisites) in the *API Gateway Developer Guide*\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DomainName`  <a name="cfn-apigateway-domainname-domainname"></a>
-The custom domain name for your API\. Uppercase letters are not supported\.  
-*Required*: Yes  
-*Type*: String  
+The custom domain name for your API\. Uppercase letters are not supported\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EndpointConfiguration`  <a name="cfn-apigateway-domainname-endpointconfiguration"></a>
-A list of the endpoint types of the domain name\.  
-*Required*: No  
-*Type*: [EndpointConfiguration](aws-properties-apigateway-domainname-endpointconfiguration.md)  
+A list of the endpoint types of the domain name\.
+*Required*: No
+*Type*: [EndpointConfiguration](aws-properties-apigateway-domainname-endpointconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegionalCertificateArn`  <a name="cfn-apigateway-domainname-regionalcertificatearn"></a>
-The reference to an AWS\-managed certificate for use by the regional endpoint for the domain name\. AWS Certificate Manager is the only supported source\.  
-*Required*: No  
-*Type*: String  
+The reference to an AWS\-managed certificate for use by the regional endpoint for the domain name\. AWS Certificate Manager is the only supported source\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-apigateway-domainname-return-values"></a>
@@ -77,7 +77,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-apigateway-domainname-return-values-fn--getatt-fn--getatt"></a>
 
 `DistributionDomainName`  <a name="DistributionDomainName-fn::getatt"></a>
-The Amazon CloudFront distribution domain name that's mapped to the custom domain name\. This is only applicable for endpoints whose type is `EDGE`\.  
+The Amazon CloudFront distribution domain name that's mapped to the custom domain name\. This is only applicable for endpoints whose type is `EDGE`\.
 Example: `d111111abcdef8.cloudfront.net`
 
 `DistributionHostedZoneId`  <a name="DistributionHostedZoneId-fn::getatt"></a>
@@ -233,7 +233,7 @@ Resources:
       Name: !Ref restApiName
 Outputs:
   domainName:
-    Value: !GetAtt 
+    Value: !GetAtt
       - myDomainName
       - DistributionDomainName
 ```
@@ -280,7 +280,7 @@ The following example creates a custom domain name that specifies a regional cer
       }
     }
   },
-  "Outputs": {  
+  "Outputs": {
     "DomainName": {
       "Value": {
         "Ref": "myDomainName"
@@ -310,7 +310,7 @@ Resources:
         Types:
           - !Ref type
       RegionalCertificateArn: !Ref certificateArn
-Outputs:  
+Outputs:
   DomainName:
     Value: !Ref myDomainName
 ```
@@ -398,19 +398,19 @@ Resources:
       RegionalCertificateArn: !Ref certificateArn
 Outputs:
   DistributionDomainName:
-    Value: !GetAtt 
+    Value: !GetAtt
       - myDomainName
       - DistributionDomainName
   DistributionHostedZoneId:
-    Value: !GetAtt 
+    Value: !GetAtt
       - myDomainName
       - DistributionHostedZoneId
   RegionalDomainName:
-    Value: !GetAtt 
+    Value: !GetAtt
       - myDomainName
       - RegionalDomainName
   RegionalHostedZoneId:
-    Value: !GetAtt 
+    Value: !GetAtt
       - myDomainName
       - RegionalHostedZoneId
 ```

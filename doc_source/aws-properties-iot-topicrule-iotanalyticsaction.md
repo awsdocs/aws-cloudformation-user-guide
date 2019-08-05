@@ -25,15 +25,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-topicrule-iotanalyticsaction-properties"></a>
 
 `ChannelName`  <a name="cfn-iot-topicrule-iotanalyticsaction-channelname"></a>
-The name of the IoT Analytics channel to which message data will be sent\.  
-*Required*: Yes  
-*Type*: String  
+The name of the IoT Analytics channel to which message data will be sent\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-iot-topicrule-iotanalyticsaction-rolearn"></a>
-The ARN of the role which has a policy that grants IoT Analytics permission to send message data via IoT Analytics \(iotanalytics:BatchPutMessage\)\.  
-*Required*: Yes  
-*Type*: String  
+The ARN of the role which has a policy that grants IoT Analytics permission to send message data via IoT Analytics \(iotanalytics:BatchPutMessage\)\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-iot-topicrule-iotanalyticsaction--seealso"></a>

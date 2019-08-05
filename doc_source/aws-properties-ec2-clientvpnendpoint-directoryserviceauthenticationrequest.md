@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-clientvpnendpoint-directoryserviceauthenticationrequest-properties"></a>
 
 `DirectoryId`  <a name="cfn-ec2-clientvpnendpoint-directoryserviceauthenticationrequest-directoryid"></a>
-The ID of the Active Directory to be used for authentication\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the Active Directory to be used for authentication\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

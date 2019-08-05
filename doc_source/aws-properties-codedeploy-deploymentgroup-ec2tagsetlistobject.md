@@ -21,16 +21,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-ec2tagsetlistobject-syntax.yaml"></a>
 
 ```
-  [Ec2TagGroup](#cfn-codedeploy-deploymentgroup-ec2tagsetlistobject-ec2taggroup): 
+  [Ec2TagGroup](#cfn-codedeploy-deploymentgroup-ec2tagsetlistobject-ec2taggroup):
     - [EC2TagFilter](aws-properties-codedeploy-deploymentgroup-ec2tagfilter.md)
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-ec2tagsetlistobject-properties"></a>
 
 `Ec2TagGroup`  <a name="cfn-codedeploy-deploymentgroup-ec2tagsetlistobject-ec2taggroup"></a>
-A list that contains other lists of EC2 instance tag groups\. For an instance to be included in the deployment group, it must be identified by all of the tag groups in the list\.  
-*Required*: No  
-*Type*: List of [EC2TagFilter](aws-properties-codedeploy-deploymentgroup-ec2tagfilter.md)  
+A list that contains other lists of EC2 instance tag groups\. For an instance to be included in the deployment group, it must be identified by all of the tag groups in the list\.
+*Required*: No
+*Type*: List of [EC2TagFilter](aws-properties-codedeploy-deploymentgroup-ec2tagfilter.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-codedeploy-deploymentgroup-ec2tagsetlistobject--seealso"></a>

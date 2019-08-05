@@ -96,7 +96,7 @@ For more information, see [AWS::CloudFormation::Stack](https://docs.aws.amazon.c
 
 ### Using a Wait Condition with an Amazon EC2 Instance<a name="scenario-waitcondition"></a>
 
-**Important**  
+**Important**
 For Amazon EC2 and Auto Scaling resources, we recommend that you use a CreationPolicy attribute instead of wait conditions\. Add a CreationPolicy attribute to those resources, and use the cfn\-signal helper script to signal when an instance creation process has completed successfully\.
 
 If you can't use a creation policy, you view the following example template, which declares an Amazon EC2 instance with a wait condition\. The wait condition myWaitCondition uses myWaitConditionHandle for signaling, uses the [DependsOn attribute](aws-attribute-dependson.md) to specify that the wait condition will trigger after the Amazon EC2 instance resource has been created, and uses the Timeout property to specify a duration of 4500 seconds for the wait condition\. In addition, the presigned URL that signals the wait condition is passed to the Amazon EC2 instance with the UserData property of the Ec2Instance resource, thus enabling an application or script running on that Amazon EC2 instance to retrieve the pre\-signed URL and employ it to signal a success or failure to the wait condition\. Note that you need to use cfn\-signal or create the application or script that signals the wait condition\. The output value ApplicationData contains the data passed back from the wait condition signal\.
@@ -210,15 +210,15 @@ This example shows a cfn\-signal command line that signals success to a wait con
 "UserData": {
   "Fn::Base64": {
     "Fn::Join": [
-      "", 
+      "",
       [
          "#!/bin/bash -xe\n",
-         "/opt/aws/bin/cfn-signal --exit-code 0 '", 
+         "/opt/aws/bin/cfn-signal --exit-code 0 '",
          {
            "Ref": "myWaitHandle"
          },
          "'\n"
-      ]   
+      ]
     ]
   }
 }

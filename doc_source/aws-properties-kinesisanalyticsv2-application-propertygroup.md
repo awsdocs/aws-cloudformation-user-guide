@@ -25,19 +25,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-propertygroup-properties"></a>
 
 `PropertyGroupId`  <a name="cfn-kinesisanalyticsv2-application-propertygroup-propertygroupid"></a>
-Describes the key of an application execution property key\-value pair\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `50`  
-*Pattern*: `[a-zA-Z0-9_.-]+`  
+Describes the key of an application execution property key\-value pair\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `50`
+*Pattern*: `[a-zA-Z0-9_.-]+`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PropertyMap`  <a name="cfn-kinesisanalyticsv2-application-propertygroup-propertymap"></a>
-Describes the value of an application execution property key\-value pair\.  
-*Required*: No  
-*Type*: Json  
+Describes the value of an application execution property key\-value pair\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-kinesisanalyticsv2-application-propertygroup--seealso"></a>
-+  [PropertyGroup](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_PropertyGroup.html) in the *Amazon Kinesis Data Analytics API Reference* 
++  [PropertyGroup](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_PropertyGroup.html) in the *Amazon Kinesis Data Analytics API Reference*

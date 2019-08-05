@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IoT1Click::Device
-Properties: 
+Properties:
   [DeviceId](#cfn-iot1click-device-deviceid): String
   [Enabled](#cfn-iot1click-device-enabled): Boolean
 ```
@@ -30,15 +30,15 @@ Properties:
 ## Properties<a name="aws-resource-iot1click-device-properties"></a>
 
 `DeviceId`  <a name="cfn-iot1click-device-deviceid"></a>
-The ID of the device, such as `G030PX0312744DWM`\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the device, such as `G030PX0312744DWM`\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Enabled`  <a name="cfn-iot1click-device-enabled"></a>
-A Boolean value indicating whether the device is enabled \(`true`\) or not \(`false`\)\.  
-*Required*: Yes  
-*Type*: Boolean  
+A Boolean value indicating whether the device is enabled \(`true`\) or not \(`false`\)\.
+*Required*: Yes
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-iot1click-device-return-values"></a>

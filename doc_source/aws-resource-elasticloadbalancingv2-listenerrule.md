@@ -24,10 +24,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ElasticLoadBalancingV2::ListenerRule
-Properties: 
-  [Actions](#cfn-elasticloadbalancingv2-listenerrule-actions): 
+Properties:
+  [Actions](#cfn-elasticloadbalancingv2-listenerrule-actions):
     - [Action](aws-properties-elasticloadbalancingv2-listenerrule-actions.md)
-  [Conditions](#cfn-elasticloadbalancingv2-listenerrule-conditions): 
+  [Conditions](#cfn-elasticloadbalancingv2-listenerrule-conditions):
     - [RuleCondition](aws-properties-elasticloadbalancingv2-listenerrule-conditions.md)
   [ListenerArn](#cfn-elasticloadbalancingv2-listenerrule-listenerarn): String
   [Priority](#cfn-elasticloadbalancingv2-listenerrule-priority): Integer
@@ -36,29 +36,29 @@ Properties:
 ## Properties<a name="aws-resource-elasticloadbalancingv2-listenerrule-properties"></a>
 
 `Actions`  <a name="cfn-elasticloadbalancingv2-listenerrule-actions"></a>
-The actions\.  
-*Required*: Yes  
-*Type*: List of [Action](aws-properties-elasticloadbalancingv2-listenerrule-actions.md)  
+The actions\.
+*Required*: Yes
+*Type*: List of [Action](aws-properties-elasticloadbalancingv2-listenerrule-actions.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Conditions`  <a name="cfn-elasticloadbalancingv2-listenerrule-conditions"></a>
-The conditions\.  
-*Required*: Yes  
-*Type*: List of [RuleCondition](aws-properties-elasticloadbalancingv2-listenerrule-conditions.md)  
+The conditions\.
+*Required*: Yes
+*Type*: List of [RuleCondition](aws-properties-elasticloadbalancingv2-listenerrule-conditions.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ListenerArn`  <a name="cfn-elasticloadbalancingv2-listenerrule-listenerarn"></a>
-The Amazon Resource Name \(ARN\) of the listener\.  
-*Required*: Yes  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of the listener\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Priority`  <a name="cfn-elasticloadbalancingv2-listenerrule-priority"></a>
-The rule priority\. A listener can't have multiple rules with the same priority\.  
-*Required*: Yes  
-*Type*: Integer  
-*Minimum*: `1`  
-*Maximum*: `50000`  
+The rule priority\. A listener can't have multiple rules with the same priority\.
+*Required*: Yes
+*Type*: Integer
+*Minimum*: `1`
+*Maximum*: `50000`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-elasticloadbalancingv2-listenerrule-return-values"></a>
@@ -181,11 +181,11 @@ Resources:
       Namespace: AWS/ApplicationELB
       Dimensions:
         - Name: LoadBalancer
-          Value: !GetAtt 
+          Value: !GetAtt
             - LoadBalancer
             - LoadBalancerFullName
         - Name: TargetGroup
-          Value: !GetAtt 
+          Value: !GetAtt
             - TargetGroup1
             - TargetGroupFullName
       MetricName: UnHealthyHostCount
@@ -209,26 +209,26 @@ Outputs:
     Value: !Ref ListenerRule2
   LoadBalancersAssociatedWithTargetGroup1:
     Description: LoadBalancers associated with TargetGroup
-    Value: !Select 
+    Value: !Select
       - '0'
-      - !GetAtt 
+      - !GetAtt
         - TargetGroup1
         - LoadBalancerArns
   LoadBalancersAssociatedWithTargetGroup2:
     Description: LoadBalancers associated with TargetGroup
-    Value: !Select 
+    Value: !Select
       - '0'
-      - !GetAtt 
+      - !GetAtt
         - TargetGroup2
         - LoadBalancerArns
   TargetGroupFullName1:
     Description: FullName of TargetGroup1
-    Value: !GetAtt 
+    Value: !GetAtt
       - TargetGroup1
       - TargetGroupFullName
   TargetGroupFullName2:
     Description: FullName of TargetGroup2
-    Value: !GetAtt 
+    Value: !GetAtt
       - TargetGroup2
       - TargetGroupFullName
 ```
@@ -548,11 +548,11 @@ Resources:
       Namespace: AWS/ApplicationELB
       Dimensions:
         - Name: LoadBalancer
-          Value: !GetAtt 
+          Value: !GetAtt
             - LoadBalancer
             - LoadBalancerFullName
         - Name: TargetGroup
-          Value: !GetAtt 
+          Value: !GetAtt
             - TargetGroup1
             - TargetGroupFullName
       MetricName: UnHealthyHostCount
@@ -576,26 +576,26 @@ Outputs:
     Value: !Ref ListenerRule2
   LoadBalancersAssociatedWithTargetGroup1:
     Description: LoadBalancers associated with TargetGroup
-    Value: !Select 
+    Value: !Select
       - '0'
-      - !GetAtt 
+      - !GetAtt
         - TargetGroup1
         - LoadBalancerArns
   LoadBalancersAssociatedWithTargetGroup2:
     Description: LoadBalancers associated with TargetGroup
-    Value: !Select 
+    Value: !Select
       - '0'
-      - !GetAtt 
+      - !GetAtt
         - TargetGroup2
         - LoadBalancerArns
   TargetGroupFullName1:
     Description: FullName of TargetGroup1
-    Value: !GetAtt 
+    Value: !GetAtt
       - TargetGroup1
       - TargetGroupFullName
   TargetGroupFullName2:
     Description: FullName of TargetGroup2
-    Value: !GetAtt 
+    Value: !GetAtt
       - TargetGroup2
       - TargetGroupFullName
 ```
@@ -913,11 +913,11 @@ Resources:
       Namespace: AWS/ApplicationELB
       Dimensions:
         - Name: LoadBalancer
-          Value: !GetAtt 
+          Value: !GetAtt
             - LoadBalancer
             - LoadBalancerFullName
         - Name: TargetGroup
-          Value: !GetAtt 
+          Value: !GetAtt
             - TargetGroup1
             - TargetGroupFullName
       MetricName: UnHealthyHostCount
@@ -941,26 +941,26 @@ Outputs:
     Value: !Ref ListenerRule2
   LoadBalancersAssociatedWithTargetGroup1:
     Description: LoadBalancers associated with TargetGroup
-    Value: !Select 
+    Value: !Select
       - '0'
-      - !GetAtt 
+      - !GetAtt
         - TargetGroup1
         - LoadBalancerArns
   LoadBalancersAssociatedWithTargetGroup2:
     Description: LoadBalancers associated with TargetGroup
-    Value: !Select 
+    Value: !Select
       - '0'
-      - !GetAtt 
+      - !GetAtt
         - TargetGroup2
         - LoadBalancerArns
   TargetGroupFullName1:
     Description: FullName of TargetGroup1
-    Value: !GetAtt 
+    Value: !GetAtt
       - TargetGroup1
       - TargetGroupFullName
   TargetGroupFullName2:
     Description: FullName of TargetGroup2
-    Value: !GetAtt 
+    Value: !GetAtt
       - TargetGroup2
       - TargetGroupFullName
 ```
@@ -1286,11 +1286,11 @@ Resources:
       Namespace: AWS/ApplicationELB
       Dimensions:
         - Name: LoadBalancer
-          Value: !GetAtt 
+          Value: !GetAtt
             - LoadBalancer
             - LoadBalancerFullName
         - Name: TargetGroup
-          Value: !GetAtt 
+          Value: !GetAtt
             - TargetGroup1
             - TargetGroupFullName
       MetricName: UnHealthyHostCount
@@ -1314,26 +1314,26 @@ Outputs:
     Value: !Ref ListenerRule2
   LoadBalancersAssociatedWithTargetGroup1:
     Description: LoadBalancers associated with TargetGroup
-    Value: !Select 
+    Value: !Select
       - '0'
-      - !GetAtt 
+      - !GetAtt
         - TargetGroup1
         - LoadBalancerArns
   LoadBalancersAssociatedWithTargetGroup2:
     Description: LoadBalancers associated with TargetGroup
-    Value: !Select 
+    Value: !Select
       - '0'
-      - !GetAtt 
+      - !GetAtt
         - TargetGroup2
         - LoadBalancerArns
   TargetGroupFullName1:
     Description: FullName of TargetGroup1
-    Value: !GetAtt 
+    Value: !GetAtt
       - TargetGroup1
       - TargetGroupFullName
   TargetGroupFullName2:
     Description: FullName of TargetGroup2
-    Value: !GetAtt 
+    Value: !GetAtt
       - TargetGroup2
       - TargetGroupFullName
 ```
@@ -1542,5 +1542,5 @@ Outputs:
 ```
 
 ## See Also<a name="aws-resource-elasticloadbalancingv2-listenerrule--seealso"></a>
-+  [CreateRule](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateRule.html) in the *Elastic Load Balancing API Reference \(version 2015\-12\-01\)* 
-+  [Listener Rules](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html#listener-rules) in the *User Guide for Application Load Balancers* 
++  [CreateRule](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateRule.html) in the *Elastic Load Balancing API Reference \(version 2015\-12\-01\)*
++  [Listener Rules](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html#listener-rules) in the *User Guide for Application Load Balancers*

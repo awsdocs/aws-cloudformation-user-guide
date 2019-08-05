@@ -22,8 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Glue::SecurityConfiguration
-Properties: 
-  [EncryptionConfiguration](#cfn-glue-securityconfiguration-encryptionconfiguration): 
+Properties:
+  [EncryptionConfiguration](#cfn-glue-securityconfiguration-encryptionconfiguration):
     [EncryptionConfiguration](aws-properties-glue-securityconfiguration-encryptionconfiguration.md)
   [Name](#cfn-glue-securityconfiguration-name): String
 ```
@@ -31,15 +31,15 @@ Properties:
 ## Properties<a name="aws-resource-glue-securityconfiguration-properties"></a>
 
 `EncryptionConfiguration`  <a name="cfn-glue-securityconfiguration-encryptionconfiguration"></a>
-The encryption configuration associated with this security configuration\.  
-*Required*: Yes  
-*Type*: [EncryptionConfiguration](aws-properties-glue-securityconfiguration-encryptionconfiguration.md)  
+The encryption configuration associated with this security configuration\.
+*Required*: Yes
+*Type*: [EncryptionConfiguration](aws-properties-glue-securityconfiguration-encryptionconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-glue-securityconfiguration-name"></a>
-The name of the security configuration\.  
-*Required*: Yes  
-*Type*: String  
+The name of the security configuration\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-glue-securityconfiguration-return-values"></a>

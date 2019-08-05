@@ -25,16 +25,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ssm-association-s3outputlocation-properties"></a>
 
 `OutputS3BucketName`  <a name="cfn-ssm-association-s3outputlocation-outputs3bucketname"></a>
-The name of the Amazon S3 bucket\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `3`  
-*Maximum*: `63`  
+The name of the Amazon S3 bucket\.
+*Required*: No
+*Type*: String
+*Minimum*: `3`
+*Maximum*: `63`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OutputS3KeyPrefix`  <a name="cfn-ssm-association-s3outputlocation-outputs3keyprefix"></a>
-The Amazon S3 bucket subfolder\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `500`  
+The Amazon S3 bucket subfolder\.
+*Required*: No
+*Type*: String
+*Maximum*: `500`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

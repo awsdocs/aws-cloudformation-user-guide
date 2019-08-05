@@ -29,25 +29,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codepipeline-pipeline-stages-actions-actiontypeid-properties"></a>
 
 `Category`  <a name="cfn-codepipeline-pipeline-stages-actions-actiontypeid-category"></a>
-A category defines what kind of action can be taken in the stage, and constrains the provider type for the action\. Valid categories are limited to one of the values below\.  
-*Required*: Yes  
-*Type*: String  
+A category defines what kind of action can be taken in the stage, and constrains the provider type for the action\. Valid categories are limited to one of the values below\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Owner`  <a name="cfn-codepipeline-pipeline-stages-actions-actiontypeid-owner"></a>
-The creator of the action being called\.  
-*Required*: Yes  
-*Type*: String  
+The creator of the action being called\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Provider`  <a name="cfn-codepipeline-pipeline-stages-actions-actiontypeid-provider"></a>
-The provider of the service being called by the action\. Valid providers are determined by the action category\. For example, an action in the Deploy category type might have a provider of AWS CodeDeploy, which would be specified as CodeDeploy\. To reference a list of action providers by action type, see [Valid Action Types and Providers in CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)\.  
-*Required*: Yes  
-*Type*: String  
+The provider of the service being called by the action\. Valid providers are determined by the action category\. For example, an action in the Deploy category type might have a provider of AWS CodeDeploy, which would be specified as CodeDeploy\. To reference a list of action providers by action type, see [Valid Action Types and Providers in CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-codepipeline-pipeline-stages-actions-actiontypeid-version"></a>
-A string that describes the action version\.  
-*Required*: Yes  
-*Type*: String  
+A string that describes the action version\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

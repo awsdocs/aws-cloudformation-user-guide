@@ -30,93 +30,93 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceCatalog::CloudFormationProduct
-Properties: 
+Properties:
   [AcceptLanguage](#cfn-servicecatalog-cloudformationproduct-acceptlanguage): String
   [Description](#cfn-servicecatalog-cloudformationproduct-description): String
   [Distributor](#cfn-servicecatalog-cloudformationproduct-distributor): String
   [Name](#cfn-servicecatalog-cloudformationproduct-name): String
   [Owner](#cfn-servicecatalog-cloudformationproduct-owner): String
-  [ProvisioningArtifactParameters](#cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters): 
+  [ProvisioningArtifactParameters](#cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters):
     - [ProvisioningArtifactProperties](aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.md)
   [SupportDescription](#cfn-servicecatalog-cloudformationproduct-supportdescription): String
   [SupportEmail](#cfn-servicecatalog-cloudformationproduct-supportemail): String
   [SupportUrl](#cfn-servicecatalog-cloudformationproduct-supporturl): String
-  [Tags](#cfn-servicecatalog-cloudformationproduct-tags): 
+  [Tags](#cfn-servicecatalog-cloudformationproduct-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-servicecatalog-cloudformationproduct-properties"></a>
 
 `AcceptLanguage`  <a name="cfn-servicecatalog-cloudformationproduct-acceptlanguage"></a>
-The language code\.  
+The language code\.
 +  `en` \- English \(default\)
 +  `jp` \- Japanese
 +  `zh` \- Chinese
-*Required*: No  
-*Type*: String  
-*Maximum*: `100`  
+*Required*: No
+*Type*: String
+*Maximum*: `100`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-servicecatalog-cloudformationproduct-description"></a>
-The description of the product\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `8191`  
+The description of the product\.
+*Required*: No
+*Type*: String
+*Maximum*: `8191`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Distributor`  <a name="cfn-servicecatalog-cloudformationproduct-distributor"></a>
-The distributor of the product\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `8191`  
+The distributor of the product\.
+*Required*: No
+*Type*: String
+*Maximum*: `8191`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-servicecatalog-cloudformationproduct-name"></a>
-The name of the product\.  
-*Required*: Yes  
-*Type*: String  
-*Maximum*: `8191`  
+The name of the product\.
+*Required*: Yes
+*Type*: String
+*Maximum*: `8191`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Owner`  <a name="cfn-servicecatalog-cloudformationproduct-owner"></a>
-The owner of the product\.  
-*Required*: Yes  
-*Type*: String  
-*Maximum*: `8191`  
+The owner of the product\.
+*Required*: Yes
+*Type*: String
+*Maximum*: `8191`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProvisioningArtifactParameters`  <a name="cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters"></a>
-The configuration of the provisioning artifact \(also known as a version\)\.  
-*Required*: Yes  
-*Type*: List of [ProvisioningArtifactProperties](aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.md)  
+The configuration of the provisioning artifact \(also known as a version\)\.
+*Required*: Yes
+*Type*: List of [ProvisioningArtifactProperties](aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SupportDescription`  <a name="cfn-servicecatalog-cloudformationproduct-supportdescription"></a>
-The support information about the product\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `8191`  
+The support information about the product\.
+*Required*: No
+*Type*: String
+*Maximum*: `8191`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SupportEmail`  <a name="cfn-servicecatalog-cloudformationproduct-supportemail"></a>
-The contact email for product support\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `254`  
+The contact email for product support\.
+*Required*: No
+*Type*: String
+*Maximum*: `254`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SupportUrl`  <a name="cfn-servicecatalog-cloudformationproduct-supporturl"></a>
-The contact URL for product support\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `2083`  
+The contact URL for product support\.
+*Required*: No
+*Type*: String
+*Maximum*: `2083`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-servicecatalog-cloudformationproduct-tags"></a>
-One or more tags\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Maximum*: `20`  
+One or more tags\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+*Maximum*: `20`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-servicecatalog-cloudformationproduct-return-values"></a>

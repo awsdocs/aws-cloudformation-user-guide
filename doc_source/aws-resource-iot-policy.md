@@ -1,6 +1,6 @@
 # AWS::IoT::Policy<a name="aws-resource-iot-policy"></a>
 
-Use the `AWS::IoT::Policy` resource to declare an AWS IoT policy\. For more information about working with AWS IoT policies, see [Authorization](https://docs.aws.amazon.com/iot/latest/developerguide/authorization.html) in the *AWS IoT Developer Guide*\. 
+Use the `AWS::IoT::Policy` resource to declare an AWS IoT policy\. For more information about working with AWS IoT policies, see [Authorization](https://docs.aws.amazon.com/iot/latest/developerguide/authorization.html) in the *AWS IoT Developer Guide*\.
 
 ## Syntax<a name="aws-resource-iot-policy-syntax"></a>
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IoT::Policy
-Properties: 
+Properties:
   [PolicyDocument](#cfn-iot-policy-policydocument): Json
   [PolicyName](#cfn-iot-policy-policyname): String
 ```
@@ -30,15 +30,15 @@ Properties:
 ## Properties<a name="aws-resource-iot-policy-properties"></a>
 
 `PolicyDocument`  <a name="cfn-iot-policy-policydocument"></a>
-The JSON document that describes the policy\.  
-*Required*: Yes  
-*Type*: Json  
+The JSON document that describes the policy\.
+*Required*: Yes
+*Type*: Json
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PolicyName`  <a name="cfn-iot-policy-policyname"></a>
-The policy name\.  
-*Required*: No  
-*Type*: String  
+The policy name\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-iot-policy-return-values"></a>
@@ -47,7 +47,7 @@ The policy name\.
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the policy name\. For example:
 
- `{ "Ref": "MyPolicy" }` 
+ `{ "Ref": "MyPolicy" }`
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

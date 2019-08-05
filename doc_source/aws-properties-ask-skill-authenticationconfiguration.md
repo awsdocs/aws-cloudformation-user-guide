@@ -29,19 +29,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ask-skill-authenticationconfiguration-properties"></a>
 
 `ClientId`  <a name="cfn-ask-skill-authenticationconfiguration-clientid"></a>
-Client ID from Login with Amazon \(LWA\)\.  
-*Required*: Yes  
-*Type*: String  
+Client ID from Login with Amazon \(LWA\)\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClientSecret`  <a name="cfn-ask-skill-authenticationconfiguration-clientsecret"></a>
-Client secret from Login with Amazon \(LWA\)\.  
-*Required*: Yes  
-*Type*: String  
+Client secret from Login with Amazon \(LWA\)\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RefreshToken`  <a name="cfn-ask-skill-authenticationconfiguration-refreshtoken"></a>
-Refresh token from Login with Amazon \(LWA\)\.  
-*Required*: Yes  
-*Type*: String  
+Refresh token from Login with Amazon \(LWA\)\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

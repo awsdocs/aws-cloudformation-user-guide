@@ -29,21 +29,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-apigatewayv2-domainname-domainnameconfiguration-properties"></a>
 
 `CertificateArn`  <a name="cfn-apigatewayv2-domainname-domainnameconfiguration-certificatearn"></a>
-An AWS\-managed certificate that will be used by the edge\-optimized endpoint for this domain name\. AWS Certificate Manager is the only supported source\.  
-*Required*: No  
-*Type*: String  
+An AWS\-managed certificate that will be used by the edge\-optimized endpoint for this domain name\. AWS Certificate Manager is the only supported source\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CertificateName`  <a name="cfn-apigatewayv2-domainname-domainnameconfiguration-certificatename"></a>
-The user\-friendly name of the certificate that will be used by the edge\-optimized endpoint for this domain name\.  
-*Required*: No  
-*Type*: String  
+The user\-friendly name of the certificate that will be used by the edge\-optimized endpoint for this domain name\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointType`  <a name="cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype"></a>
-The endpoint type\.  
-*Required*: No  
-*Type*: String  
+The endpoint type\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-apigatewayv2-domainname-domainnameconfiguration--seealso"></a>

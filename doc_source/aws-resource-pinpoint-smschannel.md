@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Pinpoint::SMSChannel
-Properties: 
+Properties:
   [ApplicationId](#cfn-pinpoint-smschannel-applicationid): String
   [Enabled](#cfn-pinpoint-smschannel-enabled): Boolean
   [SenderId](#cfn-pinpoint-smschannel-senderid): String
@@ -36,29 +36,29 @@ Properties:
 ## Properties<a name="aws-resource-pinpoint-smschannel-properties"></a>
 
 `ApplicationId`  <a name="cfn-pinpoint-smschannel-applicationid"></a>
-The unique identifier for the Amazon Pinpoint app that the SMS channel applies to\.  
-*Required*: Yes  
-*Type*: String  
+The unique identifier for the Amazon Pinpoint app that the SMS channel applies to\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Enabled`  <a name="cfn-pinpoint-smschannel-enabled"></a>
-Specifies whether to enable the SMS channel for the app\.  
-*Required*: No  
-*Type*: Boolean  
+Specifies whether to enable the SMS channel for the app\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SenderId`  <a name="cfn-pinpoint-smschannel-senderid"></a>
-The identity that you want to display on recipients' devices when they receive messages from the SMS channel\.  
+The identity that you want to display on recipients' devices when they receive messages from the SMS channel\.
 SenderIDs are only supported in certain countries and regions\. For more information, see [Supported Countries and Regions](https://docs.aws.amazon.com/pinpoint/latest/userguide/channels-sms-countries.html) in the *Amazon Pinpoint User Guide*\.
-*Required*: No  
-*Type*: String  
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ShortCode`  <a name="cfn-pinpoint-smschannel-shortcode"></a>
-The registered short code that you want to use when you send messages through the SMS channel\.  
+The registered short code that you want to use when you send messages through the SMS channel\.
 For information about obtaining a dedicated short code for sending SMS messages, see [Requesting Dedicated Short Codes for SMS Messaging with Amazon Pinpoint](https://docs.aws.amazon.com/pinpoint/latest/userguide/channels-sms-awssupport-short-code.html) in the *Amazon Pinpoint User Guide*\.
-*Required*: No  
-*Type*: String  
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-pinpoint-smschannel-return-values"></a>

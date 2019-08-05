@@ -25,10 +25,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Lambda::LayerVersion
-Properties: 
-  [CompatibleRuntimes](#cfn-lambda-layerversion-compatibleruntimes): 
+Properties:
+  [CompatibleRuntimes](#cfn-lambda-layerversion-compatibleruntimes):
     - String
-  [Content](#cfn-lambda-layerversion-content): 
+  [Content](#cfn-lambda-layerversion-content):
     [Content](aws-properties-lambda-layerversion-content.md)
   [Description](#cfn-lambda-layerversion-description): String
   [LayerName](#cfn-lambda-layerversion-layername): String
@@ -38,43 +38,43 @@ Properties:
 ## Properties<a name="aws-resource-lambda-layerversion-properties"></a>
 
 `CompatibleRuntimes`  <a name="cfn-lambda-layerversion-compatibleruntimes"></a>
-A list of compatible [function runtimes](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html)\. Used for filtering with [ListLayers](https://docs.aws.amazon.com/lambda/latest/dg/API_ListLayers.html) and [ListLayerVersions](https://docs.aws.amazon.com/lambda/latest/dg/API_ListLayerVersions.html)\.  
-*Required*: No  
-*Type*: List of String  
-*Maximum*: `5`  
+A list of compatible [function runtimes](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html)\. Used for filtering with [ListLayers](https://docs.aws.amazon.com/lambda/latest/dg/API_ListLayers.html) and [ListLayerVersions](https://docs.aws.amazon.com/lambda/latest/dg/API_ListLayerVersions.html)\.
+*Required*: No
+*Type*: List of String
+*Maximum*: `5`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Content`  <a name="cfn-lambda-layerversion-content"></a>
-The function layer archive\.  
-*Required*: Yes  
-*Type*: [Content](aws-properties-lambda-layerversion-content.md)  
+The function layer archive\.
+*Required*: Yes
+*Type*: [Content](aws-properties-lambda-layerversion-content.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-lambda-layerversion-description"></a>
-The description of the version\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `256`  
+The description of the version\.
+*Required*: No
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `256`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LayerName`  <a name="cfn-lambda-layerversion-layername"></a>
-The name or Amazon Resource Name \(ARN\) of the layer\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `140`  
-*Pattern*: `(arn:[a-zA-Z0-9-]+:lambda:[a-zA-Z0-9-]+:\d{12}:layer:[a-zA-Z0-9-_]+)|[a-zA-Z0-9-_]+`  
+The name or Amazon Resource Name \(ARN\) of the layer\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `140`
+*Pattern*: `(arn:[a-zA-Z0-9-]+:lambda:[a-zA-Z0-9-]+:\d{12}:layer:[a-zA-Z0-9-_]+)|[a-zA-Z0-9-_]+`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LicenseInfo`  <a name="cfn-lambda-layerversion-licenseinfo"></a>
-The layer's software license\. It can be any of the following:  
+The layer's software license\. It can be any of the following:
 + An [SPDX license identifier](https://spdx.org/licenses/)\. For example, `MIT`\.
 + The URL of a license hosted on the internet\. For example, `https://opensource.org/licenses/MIT`\.
 + The full text of the license\.
-*Required*: No  
-*Type*: String  
-*Maximum*: `512`  
+*Required*: No
+*Type*: String
+*Maximum*: `512`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-lambda-layerversion-return-values"></a>
@@ -118,10 +118,10 @@ Create a layer named `my-layer`\.
 MyLayer:
   Type: "AWS::Lambda::LayerVersion"
   Properties:
-    CompatibleRuntimes: 
+    CompatibleRuntimes:
       - python3.6
       - python3.7
-    Content: 
+    Content:
       S3Bucket: my-bucket-us-west-2-123456789012
       S3Key: layer.zip
     Description: My layer

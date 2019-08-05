@@ -22,22 +22,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Glue::DataCatalogEncryptionSettings
-Properties: 
+Properties:
   [CatalogId](#cfn-glue-datacatalogencryptionsettings-catalogid): String
-  [DataCatalogEncryptionSettings](#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings): 
+  [DataCatalogEncryptionSettings](#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings):
     [DataCatalogEncryptionSettings](aws-properties-glue-datacatalogencryptionsettings-datacatalogencryptionsettings.md)
 ```
 
 ## Properties<a name="aws-resource-glue-datacatalogencryptionsettings-properties"></a>
 
 `CatalogId`  <a name="cfn-glue-datacatalogencryptionsettings-catalogid"></a>
-The ID of the Data Catalog in which the settings are created\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the Data Catalog in which the settings are created\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DataCatalogEncryptionSettings`  <a name="cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings"></a>
-Contains configuration information for maintaining Data Catalog security\.  
-*Required*: Yes  
-*Type*: [DataCatalogEncryptionSettings](aws-properties-glue-datacatalogencryptionsettings-datacatalogencryptionsettings.md)  
+Contains configuration information for maintaining Data Catalog security\.
+*Required*: Yes
+*Type*: [DataCatalogEncryptionSettings](aws-properties-glue-datacatalogencryptionsettings-datacatalogencryptionsettings.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

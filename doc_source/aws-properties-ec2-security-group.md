@@ -4,7 +4,7 @@ Specifies a security group\. To create a VPC security group, use the [VpcId](htt
 
 This type supports updates\. For more information about updating stacks, see [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)\.
 
-**Important**  
+**Important**
 If you want to cross\-reference two security groups in the ingress and egress rules of those security groups, use the [AWS::EC2::SecurityGroupEgress](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html) and [AWS::EC2::SecurityGroupIngress](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-ingress.html) resources to define your rules\. Do not use the embedded ingress and egress rules in the `AWS::EC2::SecurityGroup`\. Doing so creates a circular dependency, which CloudFormation doesn't allow\.
 
 ## Syntax<a name="aws-properties-ec2-security-group-syntax"></a>
@@ -31,14 +31,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::SecurityGroup
-Properties: 
+Properties:
   [GroupDescription](#cfn-ec2-securitygroup-groupdescription): String
   [GroupName](#cfn-ec2-securitygroup-groupname): String
-  [SecurityGroupEgress](#cfn-ec2-securitygroup-securitygroupegress): 
+  [SecurityGroupEgress](#cfn-ec2-securitygroup-securitygroupegress):
     - [Egress](aws-properties-ec2-security-group-rule.md)
-  [SecurityGroupIngress](#cfn-ec2-securitygroup-securitygroupingress): 
+  [SecurityGroupIngress](#cfn-ec2-securitygroup-securitygroupingress):
     - [Ingress](aws-properties-ec2-security-group-rule-1.md)
-  [Tags](#cfn-ec2-securitygroup-tags): 
+  [Tags](#cfn-ec2-securitygroup-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcId](#cfn-ec2-securitygroup-vpcid): String
 ```
@@ -46,45 +46,45 @@ Properties:
 ## Properties<a name="aws-properties-ec2-security-group-properties"></a>
 
 `GroupDescription`  <a name="cfn-ec2-securitygroup-groupdescription"></a>
-A description for the security group\. This is informational only\.  
-Constraints: Up to 255 characters in length  
-Constraints for EC2\-Classic: ASCII characters  
-Constraints for EC2\-VPC: a\-z, A\-Z, 0\-9, spaces, and \.\_\-:/\(\)\#,@\[\]\+=&;\{\}\!$\*  
-*Required*: Yes  
-*Type*: String  
+A description for the security group\. This is informational only\.
+Constraints: Up to 255 characters in length
+Constraints for EC2\-Classic: ASCII characters
+Constraints for EC2\-VPC: a\-z, A\-Z, 0\-9, spaces, and \.\_\-:/\(\)\#,@\[\]\+=&;\{\}\!$\*
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `GroupName`  <a name="cfn-ec2-securitygroup-groupname"></a>
-The name of the security group\.  
-Constraints: Up to 255 characters in length\. Cannot start with `sg-`\.  
-Constraints for EC2\-Classic: ASCII characters  
-Constraints for EC2\-VPC: a\-z, A\-Z, 0\-9, spaces, and \.\_\-:/\(\)\#,@\[\]\+=&;\{\}\!$\*  
-*Required*: No  
-*Type*: String  
+The name of the security group\.
+Constraints: Up to 255 characters in length\. Cannot start with `sg-`\.
+Constraints for EC2\-Classic: ASCII characters
+Constraints for EC2\-VPC: a\-z, A\-Z, 0\-9, spaces, and \.\_\-:/\(\)\#,@\[\]\+=&;\{\}\!$\*
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecurityGroupEgress`  <a name="cfn-ec2-securitygroup-securitygroupegress"></a>
-\[VPC only\] The outbound rules associated with the security group\.  
-*Required*: No  
-*Type*: List of [Egress](aws-properties-ec2-security-group-rule.md)  
+\[VPC only\] The outbound rules associated with the security group\.
+*Required*: No
+*Type*: List of [Egress](aws-properties-ec2-security-group-rule.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIngress`  <a name="cfn-ec2-securitygroup-securitygroupingress"></a>
-The inbound rules associated with the security group\.  
-*Required*: No  
-*Type*: List of [Ingress](aws-properties-ec2-security-group-rule-1.md)  
+The inbound rules associated with the security group\.
+*Required*: No
+*Type*: List of [Ingress](aws-properties-ec2-security-group-rule-1.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-ec2-securitygroup-tags"></a>
-Any tags assigned to the security group\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+Any tags assigned to the security group\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcId`  <a name="cfn-ec2-securitygroup-vpcid"></a>
-\[VPC only\] The ID of the VPC for the security group\.  
-*Required*: No  
-*Type*: String  
+\[VPC only\] The ID of the VPC for the security group\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-properties-ec2-security-group-return-values"></a>
@@ -113,7 +113,7 @@ The physical ID of the VPC\. You can obtain the physical ID by using a reference
 
 ### Define Basic Ingress and Egress Rules<a name="aws-properties-ec2-security-group--examples--Define_Basic_Ingress_and_Egress_Rules"></a>
 
-The following example specifies a security group with an ingress and egress rule\. 
+The following example specifies a security group with an ingress and egress rule\.
 
 #### JSON<a name="aws-properties-ec2-security-group--examples--Define_Basic_Ingress_and_Egress_Rules--json"></a>
 
@@ -162,7 +162,7 @@ InstanceSecurityGroup:
 
 ### Remove Default Rule<a name="aws-properties-ec2-security-group--examples--Remove_Default_Rule"></a>
 
-When you specify a VPC security group, Amazon EC2 creates a default egress rule that allows egress traffic on all ports and IP protocols to any location\. The default rule is removed only when you specify one or more egress rules\. If you want to remove the default rule and limit egress traffic to just the localhost \(127\.0\.0\.1/32\), use the following example\. 
+When you specify a VPC security group, Amazon EC2 creates a default egress rule that allows egress traffic on all ports and IP protocols to any location\. The default rule is removed only when you specify one or more egress rules\. If you want to remove the default rule and limit egress traffic to just the localhost \(127\.0\.0\.1/32\), use the following example\.
 
 #### JSON<a name="aws-properties-ec2-security-group--examples--Remove_Default_Rule--json"></a>
 

@@ -25,19 +25,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotanalytics-dataset-glueconfiguration-properties"></a>
 
 `DatabaseName`  <a name="cfn-iotanalytics-dataset-glueconfiguration-databasename"></a>
-The name of the database in your AWS Glue Data Catalog in which the table is located\. \(An AWS Glue Data Catalog database contains Glue Data tables\.\)  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `150`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
+The name of the database in your AWS Glue Data Catalog in which the table is located\. \(An AWS Glue Data Catalog database contains Glue Data tables\.\)
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `150`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TableName`  <a name="cfn-iotanalytics-dataset-glueconfiguration-tablename"></a>
-The name of the table in your AWS Glue Data Catalog which is used to perform the ETL \(extract, transform and load\) operations\. \(An AWS Glue Data Catalog table contains partitioned data and descriptions of data sources and targets\.\)  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `150`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
+The name of the table in your AWS Glue Data Catalog which is used to perform the ETL \(extract, transform and load\) operations\. \(An AWS Glue Data Catalog table contains partitioned data and descriptions of data sources and targets\.\)
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `150`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,7 +1,7 @@
 # Creating Wait Conditions in a Template<a name="using-cfn-waitcondition"></a>
 
-**Important**  
-For Amazon EC2 and Auto Scaling resources, we recommend that you use a CreationPolicy attribute instead of wait conditions\. Add a CreationPolicy attribute to those resources, and use the cfn\-signal helper script to signal when an instance creation process has completed successfully\.  
+**Important**
+For Amazon EC2 and Auto Scaling resources, we recommend that you use a CreationPolicy attribute instead of wait conditions\. Add a CreationPolicy attribute to those resources, and use the cfn\-signal helper script to signal when an instance creation process has completed successfully\.
 For more information, see [CreationPolicy](aws-attribute-creationpolicy.md) or [Deploying Applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
 
 Using the [AWS::CloudFormation::WaitConditionHandle](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html) resource and [CreationPolicy](aws-attribute-creationpolicy.md) attribute, you can do the following:
@@ -12,7 +12,7 @@ For example, you can start the creation of another resource after an application
 
 ## Using a Wait Condition Handle<a name="using-cfn-waitconditionhandle"></a>
 
-**Note**  
+**Note**
 If you use the [VPC endpoint](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html) feature, resources in the VPC that respond to wait conditions must have access to AWS CloudFormation\-specific Amazon Simple Storage Service \(Amazon S3\) buckets\. Resources must send wait condition responses to a pre\-signed Amazon S3 URL\. If they can't send responses to Amazon S3, AWS CloudFormation won't receive a response and the stack operation fails\. For more information, see [Setting Up VPC Endpoints for AWS CloudFormation](cfn-vpce-bucketnames.md) and [Example Bucket Policies for VPC Endpoints for Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies-vpc-endpoint.html)\.
 
 You can use the wait condition and wait condition handle to make AWS CloudFormation pause the creation of a stack and wait for a signal before it continues to create the stack\. For example, you might want to download and configure applications on an Amazon EC2 instance before considering the creation of that Amazon EC2 instance complete\.
@@ -125,7 +125,7 @@ Where:
 
 *UniqueId* identifies the signal to AWS CloudFormation\. If the Count property of the wait condition is greater than 1, the UniqueId value must be unique across all signals sent for a particular wait condition; otherwise, AWS CloudFormation will consider the signal a retransmission of the previously sent signal with the same UniqueId, and it will ignore the signal\.
 
-*Data* is any information that you want to send back with the signal\. The Data value can be accessed by calling the [Fn::GetAtt function](intrinsic-function-reference-getatt.md) within the template\. For example, if you create the following output value for the wait condition mywaitcondition, you can use the `aws cloudformation describe-stacks` command, [DescribeStacks action](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeStacks.html), or Outputs tab of the CloudFormation console to view the Data sent by valid signals sent to AWS CloudFormation: 
+*Data* is any information that you want to send back with the signal\. The Data value can be accessed by calling the [Fn::GetAtt function](intrinsic-function-reference-getatt.md) within the template\. For example, if you create the following output value for the wait condition mywaitcondition, you can use the `aws cloudformation describe-stacks` command, [DescribeStacks action](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeStacks.html), or Outputs tab of the CloudFormation console to view the Data sent by valid signals sent to AWS CloudFormation:
 
 ```
         "WaitConditionData" : {

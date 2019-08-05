@@ -23,8 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lambda-function-tracingconfig-properties"></a>
 
 `Mode`  <a name="cfn-lambda-function-tracingconfig-mode"></a>
-The tracing mode\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `Active | PassThrough`  
+The tracing mode\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `Active | PassThrough`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

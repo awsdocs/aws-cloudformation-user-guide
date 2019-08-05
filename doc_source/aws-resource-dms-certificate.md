@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DMS::Certificate
-Properties: 
+Properties:
   [CertificateIdentifier](#cfn-dms-certificate-certificateidentifier): String
   [CertificatePem](#cfn-dms-certificate-certificatepem): String
   [CertificateWallet](#cfn-dms-certificate-certificatewallet): String
@@ -32,28 +32,28 @@ Properties:
 ## Properties<a name="aws-resource-dms-certificate-properties"></a>
 
 `CertificateIdentifier`  <a name="cfn-dms-certificate-certificateidentifier"></a>
-The customer\-assigned name of the certificate\. Valid characters are A\-z and 0\-9\.  
-*Required*: No  
-*Type*: String  
+The customer\-assigned name of the certificate\. Valid characters are A\-z and 0\-9\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CertificatePem`  <a name="cfn-dms-certificate-certificatepem"></a>
-The contents of the \.pem X\.509 certificate file for the certificate\.  
-*Required*: No  
-*Type*: String  
+The contents of the \.pem X\.509 certificate file for the certificate\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CertificateWallet`  <a name="cfn-dms-certificate-certificatewallet"></a>
-The location of the imported Oracle Wallet certificate for use with SSL\.  
-*Required*: No  
-*Type*: String  
+The location of the imported Oracle Wallet certificate for use with SSL\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-dms-certificate-return-values"></a>
 
 ### Ref<a name="aws-resource-dms-certificate-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the certificate\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the certificate\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -83,9 +83,9 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 ```
 AWSTemplateFormatVersion: 2010-09-09
 Description: "Certificate test"
-Resources: 
-  BasicCertificate: 
-    Properties: 
+Resources:
+  BasicCertificate:
+    Properties:
       CertificatePem: |-
           -----BEGIN CERTIFICATE-----
            MIID/DCCAuSgAwIBAgABCDEFgkqhkiG9w0BAQsFADCBijEXAMPLE1UEBhMCVVMx...mqfEEuC7uUoPofXdBp2ObQ==
@@ -94,5 +94,5 @@ Resources:
 ```
 
 ## See Also<a name="aws-resource-dms-certificate--seealso"></a>
-+  [ImportCertificate](https://docs.aws.amazon.com/dms/latest/APIReference/API_ImportCertificate.html) in the *AWS Database Migration Service API Reference* 
-+  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 
++  [ImportCertificate](https://docs.aws.amazon.com/dms/latest/APIReference/API_ImportCertificate.html) in the *AWS Database Migration Service API Reference*
++  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)

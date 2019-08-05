@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPCDHCPOptionsAssociation
-Properties: 
+Properties:
   [DhcpOptionsId](#cfn-ec2-vpcdhcpoptionsassociation-dhcpoptionsid): String
   [VpcId](#cfn-ec2-vpcdhcpoptionsassociation-vpcid): String
 ```
@@ -32,15 +32,15 @@ Properties:
 ## Properties<a name="aws-resource-ec2-vpc-dhcp-options-assoc-properties"></a>
 
 `DhcpOptionsId`  <a name="cfn-ec2-vpcdhcpoptionsassociation-dhcpoptionsid"></a>
-The ID of the DHCP options set, or `default` to associate no DHCP options with the VPC\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the DHCP options set, or `default` to associate no DHCP options with the VPC\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcId`  <a name="cfn-ec2-vpcdhcpoptionsassociation-vpcid"></a>
-The ID of the VPC\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the VPC\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-vpc-dhcp-options-assoc-return-values"></a>
@@ -55,7 +55,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### VPC DHCP Options Association<a name="aws-resource-ec2-vpc-dhcp-options-assoc--examples--VPC_DHCP_Options_Association"></a>
 
-The following example uses the `Ref` intrinsic function to associate the myDHCPOptions DHCP options with the myVPC VPC\. The VPC and DHCP options can be declared in the same template or added as input parameters\. For more information about the VPC or the DHCP options resources, see AWS::EC2::VPC or AWS::EC2::DHCPOptions\. 
+The following example uses the `Ref` intrinsic function to associate the myDHCPOptions DHCP options with the myVPC VPC\. The VPC and DHCP options can be declared in the same template or added as input parameters\. For more information about the VPC or the DHCP options resources, see AWS::EC2::VPC or AWS::EC2::DHCPOptions\.
 
 #### JSON<a name="aws-resource-ec2-vpc-dhcp-options-assoc--examples--VPC_DHCP_Options_Association--json"></a>
 

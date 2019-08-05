@@ -26,11 +26,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::GuardDuty::Filter
-Properties: 
+Properties:
   [Action](#cfn-guardduty-filter-action): String
   [Description](#cfn-guardduty-filter-description): String
   [DetectorId](#cfn-guardduty-filter-detectorid): String
-  [FindingCriteria](#cfn-guardduty-filter-findingcriteria): 
+  [FindingCriteria](#cfn-guardduty-filter-findingcriteria):
     [FindingCriteria](aws-properties-guardduty-filter-findingcriteria.md)
   [Name](#cfn-guardduty-filter-name): String
   [Rank](#cfn-guardduty-filter-rank): Integer
@@ -39,39 +39,39 @@ Properties:
 ## Properties<a name="aws-resource-guardduty-filter-properties"></a>
 
 `Action`  <a name="cfn-guardduty-filter-action"></a>
-Specifies the action that is to be applied to the findings that match the filter\.  
-*Required*: Yes  
-*Type*: String  
+Specifies the action that is to be applied to the findings that match the filter\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-guardduty-filter-description"></a>
-The description of the filter\.  
-*Required*: Yes  
-*Type*: String  
+The description of the filter\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DetectorId`  <a name="cfn-guardduty-filter-detectorid"></a>
-The ID of the detector to associate the `Filter` with\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the detector to associate the `Filter` with\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FindingCriteria`  <a name="cfn-guardduty-filter-findingcriteria"></a>
-Represents the criteria to be used in the filter for querying findings\.  
-*Required*: Yes  
-*Type*: [FindingCriteria](aws-properties-guardduty-filter-findingcriteria.md)  
+Represents the criteria to be used in the filter for querying findings\.
+*Required*: Yes
+*Type*: [FindingCriteria](aws-properties-guardduty-filter-findingcriteria.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-guardduty-filter-name"></a>
-The name of the filter\.  
-*Required*: No  
-*Type*: String  
+The name of the filter\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Rank`  <a name="cfn-guardduty-filter-rank"></a>
-Specifies the position of the filter in the list of current filters\. Also specifies the order in which this filter is applied to the findings\.  
-*Required*: Yes  
-*Type*: Integer  
+Specifies the position of the filter in the list of current filters\. Also specifies the order in which this filter is applied to the findings\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-guardduty-filter-return-values"></a>
@@ -118,10 +118,10 @@ Properties:
     Action : "ARCHIVE"
     Description : "SampleFilter"
     DetectorId : "a12abc34d567e8fa901bc2d34e56789f0"
-    FindingCriteria : 
+    FindingCriteria :
         Criterion:
             "updatedAt":
-                Gte: 0	
+                Gte: 0
     Rank : 1
     Name : "SampleFilter"
 ```

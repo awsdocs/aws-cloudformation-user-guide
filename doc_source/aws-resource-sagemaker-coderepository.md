@@ -24,27 +24,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SageMaker::CodeRepository
-Properties: 
+Properties:
   [CodeRepositoryName](#cfn-sagemaker-coderepository-coderepositoryname): String
-  [GitConfig](#cfn-sagemaker-coderepository-gitconfig): 
+  [GitConfig](#cfn-sagemaker-coderepository-gitconfig):
     [GitConfig](aws-properties-sagemaker-coderepository-gitconfig.md)
 ```
 
 ## Properties<a name="aws-resource-sagemaker-coderepository-properties"></a>
 
 `CodeRepositoryName`  <a name="cfn-sagemaker-coderepository-coderepositoryname"></a>
-The name of the Git repository\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*$`  
+The name of the Git repository\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `63`
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*$`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `GitConfig`  <a name="cfn-sagemaker-coderepository-gitconfig"></a>
-Configuration details for the Git repository, including the URL where it is located and the ARN of the AWS Secrets Manager secret that contains the credentials used to access the repository\.  
-*Required*: Yes  
-*Type*: [GitConfig](aws-properties-sagemaker-coderepository-gitconfig.md)  
+Configuration details for the Git repository, including the URL where it is located and the ARN of the AWS Secrets Manager secret that contains the credentials used to access the repository\.
+*Required*: Yes
+*Type*: [GitConfig](aws-properties-sagemaker-coderepository-gitconfig.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-sagemaker-coderepository-return-values"></a>

@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-dynamodbv2action-syntax.yaml"></a>
 
 ```
-  [PutItem](#cfn-iot-topicrule-dynamodbv2action-putitem): 
+  [PutItem](#cfn-iot-topicrule-dynamodbv2action-putitem):
     [PutItemInput](aws-properties-iot-topicrule-putiteminput.md)
   [RoleArn](#cfn-iot-topicrule-dynamodbv2action-rolearn): String
 ```
@@ -28,17 +28,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-topicrule-dynamodbv2action-properties"></a>
 
 `PutItem`  <a name="cfn-iot-topicrule-dynamodbv2action-putitem"></a>
-Specifies the DynamoDB table to which the message data will be written\. For example:  
- `{ "dynamoDBv2": { "roleArn": "aws:iam:12341251:my-role" "putItem": { "tableName": "my-table" } } }`   
-Each attribute in the message payload will be written to a separate column in the DynamoDB database\.  
-*Required*: No  
-*Type*: [PutItemInput](aws-properties-iot-topicrule-putiteminput.md)  
+Specifies the DynamoDB table to which the message data will be written\. For example:
+ `{ "dynamoDBv2": { "roleArn": "aws:iam:12341251:my-role" "putItem": { "tableName": "my-table" } } }`
+Each attribute in the message payload will be written to a separate column in the DynamoDB database\.
+*Required*: No
+*Type*: [PutItemInput](aws-properties-iot-topicrule-putiteminput.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-iot-topicrule-dynamodbv2action-rolearn"></a>
-The ARN of the IAM role that grants access to the DynamoDB table\.  
-*Required*: No  
-*Type*: String  
+The ARN of the IAM role that grants access to the DynamoDB table\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-iot-topicrule-dynamodbv2action--seealso"></a>

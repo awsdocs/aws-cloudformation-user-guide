@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::Model
-Properties: 
+Properties:
   [ContentType](#cfn-apigateway-model-contenttype): String
   [Description](#cfn-apigateway-model-description): String
   [Name](#cfn-apigateway-model-name): String
@@ -36,34 +36,34 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-model-properties"></a>
 
 `ContentType`  <a name="cfn-apigateway-model-contenttype"></a>
-The content type for the model\.  
-*Required*: No  
-*Type*: String  
+The content type for the model\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-apigateway-model-description"></a>
-A description that identifies this model\.  
-*Required*: No  
-*Type*: String  
+A description that identifies this model\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-apigateway-model-name"></a>
-A name for the model\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
-If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\. 
-*Required*: No  
-*Type*: String  
+A name for the model\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.
+If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RestApiId`  <a name="cfn-apigateway-model-restapiid"></a>
-The ID of a REST API with which to associate this model\.  
-*Required*: Yes  
-*Type*: String  
+The ID of a REST API with which to associate this model\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Schema`  <a name="cfn-apigateway-model-schema"></a>
-The schema to use to transform data to one or more output formats\. Specify null \(`{}`\) if you don't want to specify a schema\.  
-*Required*: No  
-*Type*: Json  
+The schema to use to transform data to one or more output formats\. Specify null \(`{}`\) if you don't want to specify a schema\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-apigateway-model-return-values"></a>

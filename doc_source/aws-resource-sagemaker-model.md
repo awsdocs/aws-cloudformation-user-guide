@@ -1,6 +1,6 @@
 # AWS::SageMaker::Model<a name="aws-resource-sagemaker-model"></a>
 
-The `AWS::SageMaker::Model` resource to create a model to host at an Amazon SageMaker endpoint\. For more information, see [Deploying a Model on Amazon SageMaker Hosting Services](https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works-hosting.html) in the *Amazon SageMaker Developer Guide*\. 
+The `AWS::SageMaker::Model` resource to create a model to host at an Amazon SageMaker endpoint\. For more information, see [Deploying a Model on Amazon SageMaker Hosting Services](https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works-hosting.html) in the *Amazon SageMaker Developer Guide*\.
 
 ## Syntax<a name="aws-resource-sagemaker-model-syntax"></a>
 
@@ -26,64 +26,64 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SageMaker::Model
-Properties: 
-  [Containers](#cfn-sagemaker-model-containers): 
+Properties:
+  [Containers](#cfn-sagemaker-model-containers):
     - [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)
   [ExecutionRoleArn](#cfn-sagemaker-model-executionrolearn): String
   [ModelName](#cfn-sagemaker-model-modelname): String
-  [PrimaryContainer](#cfn-sagemaker-model-primarycontainer): 
+  [PrimaryContainer](#cfn-sagemaker-model-primarycontainer):
     [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)
-  [Tags](#cfn-sagemaker-model-tags): 
+  [Tags](#cfn-sagemaker-model-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-  [VpcConfig](#cfn-sagemaker-model-vpcconfig): 
+  [VpcConfig](#cfn-sagemaker-model-vpcconfig):
     [VpcConfig](aws-properties-sagemaker-model-vpcconfig.md)
 ```
 
 ## Properties<a name="aws-resource-sagemaker-model-properties"></a>
 
 `Containers`  <a name="cfn-sagemaker-model-containers"></a>
-Specifies the containers in the inference pipeline\.  
-*Required*: No  
-*Type*: List of [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)  
-*Maximum*: `5`  
+Specifies the containers in the inference pipeline\.
+*Required*: No
+*Type*: List of [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)
+*Maximum*: `5`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExecutionRoleArn`  <a name="cfn-sagemaker-model-executionrolearn"></a>
-The Amazon Resource Name \(ARN\) of the IAM role that Amazon SageMaker can assume to access model artifacts and docker image for deployment on ML compute instances or for batch transform jobs\. Deploying on ML compute instances is part of model hosting\. For more information, see [Amazon SageMaker Roles](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html)\.   
+The Amazon Resource Name \(ARN\) of the IAM role that Amazon SageMaker can assume to access model artifacts and docker image for deployment on ML compute instances or for batch transform jobs\. Deploying on ML compute instances is part of model hosting\. For more information, see [Amazon SageMaker Roles](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html)\.
 To be able to pass this role to Amazon SageMaker, the caller of this API must have the `iam:PassRole` permission\.
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `20`  
-*Maximum*: `2048`  
-*Pattern*: `^arn:aws[a-z\-]*:iam::\d{12}:role/?[a-zA-Z_0-9+=,.@\-_/]+$`  
+*Required*: Yes
+*Type*: String
+*Minimum*: `20`
+*Maximum*: `2048`
+*Pattern*: `^arn:aws[a-z\-]*:iam::\d{12}:role/?[a-zA-Z_0-9+=,.@\-_/]+$`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ModelName`  <a name="cfn-sagemaker-model-modelname"></a>
-The name of the new model\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+The name of the new model\.
+*Required*: No
+*Type*: String
+*Maximum*: `63`
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PrimaryContainer`  <a name="cfn-sagemaker-model-primarycontainer"></a>
-The location of the primary docker image containing inference code, associated artifacts, and custom environment map that the inference code uses when the model is deployed for predictions\.   
-*Required*: No  
-*Type*: [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)  
+The location of the primary docker image containing inference code, associated artifacts, and custom environment map that the inference code uses when the model is deployed for predictions\.
+*Required*: No
+*Type*: [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-sagemaker-model-tags"></a>
-A list of key\-value pairs to apply to this resource\.  
-For more information, see [Resource Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) and [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what) in the *AWS Billing and Cost Management User Guide*\.   
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Maximum*: `50`  
+A list of key\-value pairs to apply to this resource\.
+For more information, see [Resource Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) and [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what) in the *AWS Billing and Cost Management User Guide*\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+*Maximum*: `50`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcConfig`  <a name="cfn-sagemaker-model-vpcconfig"></a>
-A [VpcConfig](https://docs.aws.amazon.com/sagemaker/latest/dg/API_VpcConfig.html) object that specifies the VPC that you want your model to connect to\. Control access to and from your model container by configuring the VPC\. `VpcConfig` is used in hosting services and in batch transform\. For more information, see [Protect Endpoints by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html) and [Protect Data in Batch Transform Jobs by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/batch-vpc.html)\.  
-*Required*: No  
-*Type*: [VpcConfig](aws-properties-sagemaker-model-vpcconfig.md)  
+A [VpcConfig](https://docs.aws.amazon.com/sagemaker/latest/dg/API_VpcConfig.html) object that specifies the VPC that you want your model to connect to\. Control access to and from your model container by configuring the VPC\. `VpcConfig` is used in hosting services and in batch transform\. For more information, see [Protect Endpoints by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html) and [Protect Data in Batch Transform Jobs by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/batch-vpc.html)\.
+*Required*: No
+*Type*: [VpcConfig](aws-properties-sagemaker-model-vpcconfig.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-sagemaker-model-return-values"></a>
@@ -102,7 +102,7 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
+ `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 #### <a name="aws-resource-sagemaker-model-return-values-fn--getatt-fn--getatt"></a>
 
@@ -223,9 +223,9 @@ The following example creates an endpoint configuration from a trained model, an
     "EndpointName": {
       "Value": { "Fn::GetAtt" : [ "Endpoint", "EndpointName" ] }
     }
-    
+
   }
-  
+
 }
 ```
 
@@ -233,8 +233,8 @@ The following example creates an endpoint configuration from a trained model, an
 
 ```
 Description: "Basic Hosting entities test.  We need models to create endpoint configs."
-Mappings: 
-  RegionMap: 
+Mappings:
+  RegionMap:
     "us-west-2":
       "NullTransformer": "123456789012.dkr.ecr.us-west-2.amazonaws.com/mymodel:latest"
     "us-east-2":
@@ -273,27 +273,27 @@ Resources:
         Image: !FindInMap [RegionMap, !Ref "AWS::Region", "NullTransformer"]
       ExecutionRoleArn: !GetAtt ExecutionRole.Arn
 
-  ExecutionRole: 
+  ExecutionRole:
     Type: "AWS::IAM::Role"
-    Properties: 
-      AssumeRolePolicyDocument: 
+    Properties:
+      AssumeRolePolicyDocument:
         Version: "2012-10-17"
-        Statement: 
-          - 
+        Statement:
+          -
             Effect: "Allow"
-            Principal: 
-              Service: 
+            Principal:
+              Service:
                 - "sagemaker.amazonaws.com"
-            Action: 
+            Action:
               - "sts:AssumeRole"
       Path: "/"
-      Policies: 
-        - 
+      Policies:
+        -
           PolicyName: "root"
-          PolicyDocument: 
+          PolicyDocument:
             Version: "2012-10-17"
-            Statement: 
-              - 
+            Statement:
+              -
                 Effect: "Allow"
                 Action: "*"
                 Resource: "*"

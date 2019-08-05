@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::ClientVpnRoute
-Properties: 
+Properties:
   [ClientVpnEndpointId](#cfn-ec2-clientvpnroute-clientvpnendpointid): String
   [Description](#cfn-ec2-clientvpnroute-description): String
   [DestinationCidrBlock](#cfn-ec2-clientvpnroute-destinationcidrblock): String
@@ -34,31 +34,31 @@ Properties:
 ## Properties<a name="aws-resource-ec2-clientvpnroute-properties"></a>
 
 `ClientVpnEndpointId`  <a name="cfn-ec2-clientvpnroute-clientvpnendpointid"></a>
-The ID of the Client VPN endpoint to which to add the route\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the Client VPN endpoint to which to add the route\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-ec2-clientvpnroute-description"></a>
-A brief description of the route\.  
-*Required*: No  
-*Type*: String  
+A brief description of the route\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DestinationCidrBlock`  <a name="cfn-ec2-clientvpnroute-destinationcidrblock"></a>
-The IPv4 address range, in CIDR notation, of the route destination\. For example:  
-+ To add a route for Internet access, enter `0.0.0.0/0` 
+The IPv4 address range, in CIDR notation, of the route destination\. For example:
++ To add a route for Internet access, enter `0.0.0.0/0`
 + To add a route for a peered VPC, enter the peered VPC's IPv4 CIDR range
 + To add a route for an on\-premises network, enter the AWS Site\-to\-Site VPN connection's IPv4 CIDR range
-Route address ranges cannot overlap with the CIDR range specified for client allocation\.  
-*Required*: Yes  
-*Type*: String  
+Route address ranges cannot overlap with the CIDR range specified for client allocation\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TargetVpcSubnetId`  <a name="cfn-ec2-clientvpnroute-targetvpcsubnetid"></a>
-The ID of the subnet through which you want to route traffic\. The specified subnet must be an existing target network of the Client VPN endpoint\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the subnet through which you want to route traffic\. The specified subnet must be an existing target network of the Client VPN endpoint\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Examples<a name="aws-resource-ec2-clientvpnroute--examples"></a>
@@ -73,9 +73,9 @@ The following example adds a route for internet access to a Client VPN endpoint\
 myRoute:
   Type: "AWS::EC2::ClientVpnRoute"
   Properties:
-    ClientVpnEndpointId: 
+    ClientVpnEndpointId:
       Ref: myClientVpnEndpoint
-    TargetVpcSubnetId: 
+    TargetVpcSubnetId:
       Ref: mySubnet
     DestinationCidrBlock: "0.0.0.0/0"
     Description: "myRoute"

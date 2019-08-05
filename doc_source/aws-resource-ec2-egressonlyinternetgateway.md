@@ -21,16 +21,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::EgressOnlyInternetGateway
-Properties: 
+Properties:
   [VpcId](#cfn-ec2-egressonlyinternetgateway-vpcid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-egressonlyinternetgateway-properties"></a>
 
 `VpcId`  <a name="cfn-ec2-egressonlyinternetgateway-vpcid"></a>
-The ID of the VPC for which to create the egress\-only internet gateway\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the VPC for which to create the egress\-only internet gateway\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-egressonlyinternetgateway-return-values"></a>
@@ -48,9 +48,9 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### YAML<a name="aws-resource-ec2-egressonlyinternetgateway--examples----yaml"></a>
 
 ```
-myEgressOnlyInternetGateway: 
+myEgressOnlyInternetGateway:
     Type: AWS::EC2::EgressOnlyInternetGateway
-    Properties: 
+    Properties:
         VpcId: vpc-1a2b3c4d
 ```
 
@@ -70,4 +70,4 @@ myEgressOnlyInternetGateway:
 ```
 
 ## See Also<a name="aws-resource-ec2-egressonlyinternetgateway--seealso"></a>
-+  [CreateEgressOnlyInternetGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateEgressOnlyInternetGateway.html) in the *Amazon Elastic Compute Cloud API Reference* 
++  [CreateEgressOnlyInternetGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateEgressOnlyInternetGateway.html) in the *Amazon Elastic Compute Cloud API Reference*

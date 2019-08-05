@@ -16,7 +16,7 @@ For more information on the cooldown period, see [Requirements for Modifying EBS
 
 To control how AWS CloudFormation handles the volume when the stack is deleted, set a deletion policy for your volume\. You can choose to retain the volume, to delete the volume, or to create a snapshot of the volume\. For more information, see [DeletionPolicy Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)\.
 
-**Note**  
+**Note**
 If you set a deletion policy that creates a snapshot, all tags on the volume are included in the snapshot\.
 
 ## Syntax<a name="aws-properties-ec2-ebs-volume-syntax"></a>
@@ -46,7 +46,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::Volume
-Properties: 
+Properties:
   [AutoEnableIO](#cfn-ec2-ebs-volume-autoenableio): Boolean
   [AvailabilityZone](#cfn-ec2-ebs-volume-availabilityzone): String
   [Encrypted](#cfn-ec2-ebs-volume-encrypted): Boolean
@@ -54,7 +54,7 @@ Properties:
   [KmsKeyId](#cfn-ec2-ebs-volume-kmskeyid): String
   [Size](#cfn-ec2-ebs-volume-size): Integer
   [SnapshotId](#cfn-ec2-ebs-volume-snapshotid): String
-  [Tags](#cfn-ec2-ebs-volume-tags): 
+  [Tags](#cfn-ec2-ebs-volume-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VolumeType](#cfn-ec2-ebs-volume-volumetype): String
 ```
@@ -62,71 +62,71 @@ Properties:
 ## Properties<a name="aws-properties-ec2-ebs-volume-properties"></a>
 
 `AutoEnableIO`  <a name="cfn-ec2-ebs-volume-autoenableio"></a>
-Indicates whether the volume is auto\-enabled for I/O operations\. By default, Amazon EBS disables I/O to the volume from attached EC2 instances when it determines that a volume's data is potentially inconsistent\. If the consistency of the volume is not a concern, and you prefer that the volume be made available immediately if it's impaired, you can configure the volume to automatically enable I/O\.   
-*Required*: No  
-*Type*: Boolean  
+Indicates whether the volume is auto\-enabled for I/O operations\. By default, Amazon EBS disables I/O to the volume from attached EC2 instances when it determines that a volume's data is potentially inconsistent\. If the consistency of the volume is not a concern, and you prefer that the volume be made available immediately if it's impaired, you can configure the volume to automatically enable I/O\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailabilityZone`  <a name="cfn-ec2-ebs-volume-availabilityzone"></a>
-The Availability Zone in which to create the volume\.  
-*Required*: Yes  
-*Type*: String  
+The Availability Zone in which to create the volume\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Encrypted`  <a name="cfn-ec2-ebs-volume-encrypted"></a>
-Specifies whether the volume should be encrypted\. The effect of setting the encryption state to `true` depends on the volume origin \(new or from a snapshot\), starting encryption state, ownership, and whether encryption by default is enabled\. For more information, see [Encryption by Default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-by-default) in the *Amazon Elastic Compute Cloud User Guide*\.  
-Encrypted Amazon EBS volumes must be attached to instances that support Amazon EBS encryption\. For more information, see [Supported Instance Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)\.  
-*Required*: No  
-*Type*: Boolean  
+Specifies whether the volume should be encrypted\. The effect of setting the encryption state to `true` depends on the volume origin \(new or from a snapshot\), starting encryption state, ownership, and whether encryption by default is enabled\. For more information, see [Encryption by Default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-by-default) in the *Amazon Elastic Compute Cloud User Guide*\.
+Encrypted Amazon EBS volumes must be attached to instances that support Amazon EBS encryption\. For more information, see [Supported Instance Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Iops`  <a name="cfn-ec2-ebs-volume-iops"></a>
-The number of I/O operations per second \(IOPS\) to provision for the volume, with a maximum ratio of 50 IOPS/GiB\. Range is 100 to 64,000 IOPS for volumes in most Regions\. Maximum IOPS of 64,000 is guaranteed only on [Nitro\-based instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)\. Other instance families guarantee performance up to 32,000 IOPS\. For more information, see [Amazon EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
-This parameter is valid only for Provisioned IOPS SSD \(io1\) volumes\.  
-*Required*: No  
-*Type*: Integer  
+The number of I/O operations per second \(IOPS\) to provision for the volume, with a maximum ratio of 50 IOPS/GiB\. Range is 100 to 64,000 IOPS for volumes in most Regions\. Maximum IOPS of 64,000 is guaranteed only on [Nitro\-based instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)\. Other instance families guarantee performance up to 32,000 IOPS\. For more information, see [Amazon EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+This parameter is valid only for Provisioned IOPS SSD \(io1\) volumes\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-ec2-ebs-volume-kmskeyid"></a>
-The identifier of the AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) to use for Amazon EBS encryption\. If this parameter is not specified, your AWS managed CMK for EBS is used\. If `KmsKeyId` is specified, the encrypted state must be `true`\.  
-You can specify the CMK using any of the following:  
+The identifier of the AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) to use for Amazon EBS encryption\. If this parameter is not specified, your AWS managed CMK for EBS is used\. If `KmsKeyId` is specified, the encrypted state must be `true`\.
+You can specify the CMK using any of the following:
 + Key ID\. For example, key/1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.
 + Key alias\. For example, alias/ExampleAlias\.
 + Key ARN\. For example, arn:aws:kms:*us\-east\-1*:*012345678910*:key/*abcd1234\-a123\-456a\-a12b\-a123b4cd56ef*\.
 + Alias ARN\. For example, arn:aws:kms:*us\-east\-1*:*012345678910*:alias/*ExampleAlias*\.
-AWS authenticates the CMK asynchronously\. Therefore, if you specify an ID, alias, or ARN that is not valid, the action can appear to complete, but eventually fails\.  
-*Required*: No  
-*Type*: String  
+AWS authenticates the CMK asynchronously\. Therefore, if you specify an ID, alias, or ARN that is not valid, the action can appear to complete, but eventually fails\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Size`  <a name="cfn-ec2-ebs-volume-size"></a>
-The size of the volume, in GiBs\.  
-Constraints: 1\-16,384 for `gp2`, 4\-16,384 for `io1`, 500\-16,384 for `st1`, 500\-16,384 for `sc1`, and 1\-1,024 for `standard`\. If you specify a snapshot, the volume size must be equal to or larger than the snapshot size\.  
-Default: If you're creating the volume from a snapshot and don't specify a volume size, the default is the snapshot size\.  
+The size of the volume, in GiBs\.
+Constraints: 1\-16,384 for `gp2`, 4\-16,384 for `io1`, 500\-16,384 for `st1`, 500\-16,384 for `sc1`, and 1\-1,024 for `standard`\. If you specify a snapshot, the volume size must be equal to or larger than the snapshot size\.
+Default: If you're creating the volume from a snapshot and don't specify a volume size, the default is the snapshot size\.
 At least one of Size or SnapshotId is required\.
-*Required*: No  
-*Type*: Integer  
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnapshotId`  <a name="cfn-ec2-ebs-volume-snapshotid"></a>
-The snapshot from which to create the volume\.  
+The snapshot from which to create the volume\.
 At least one of Size or SnapshotId are required\.
-*Required*: No  
-*Type*: String  
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-ec2-ebs-volume-tags"></a>
-The tags to apply to the volume during creation\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+The tags to apply to the volume during creation\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeType`  <a name="cfn-ec2-ebs-volume-volumetype"></a>
-The volume type\. This can be `gp2` for General Purpose SSD, `io1` for Provisioned IOPS SSD, `st1` for Throughput Optimized HDD, `sc1` for Cold HDD, or `standard` for Magnetic volumes\.  
-Defaults: If no volume type is specified, the default is `standard` in us\-east\-1, eu\-west\-1, eu\-central\-1, us\-west\-2, us\-west\-1, sa\-east\-1, ap\-northeast\-1, ap\-northeast\-2, ap\-southeast\-1, ap\-southeast\-2, ap\-south\-1, us\-gov\-west\-1, and cn\-north\-1\. In all other Regions, EBS defaults to `gp2`\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `gp2 | io1 | sc1 | st1 | standard`  
+The volume type\. This can be `gp2` for General Purpose SSD, `io1` for Provisioned IOPS SSD, `st1` for Throughput Optimized HDD, `sc1` for Cold HDD, or `standard` for Magnetic volumes\.
+Defaults: If no volume type is specified, the default is `standard` in us\-east\-1, eu\-west\-1, eu\-central\-1, us\-west\-2, us\-west\-1, sa\-east\-1, ap\-northeast\-1, ap\-northeast\-2, ap\-southeast\-1, ap\-southeast\-2, ap\-south\-1, us\-gov\-west\-1, and cn\-north\-1\. In all other Regions, EBS defaults to `gp2`\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `gp2 | io1 | sc1 | st1 | standard`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-properties-ec2-ebs-volume-return-values"></a>
@@ -164,7 +164,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 ```
 NewVolume:
   Type: AWS::EC2::Volume
-  Properties: 
+  Properties:
     Size: 100
     Encrypted: true
     AvailabilityZone: !GetAtt Ec2Instance.AvailabilityZone
@@ -195,7 +195,7 @@ NewVolume:
 ```
 NewVolume:
   Type: AWS::EC2::Volume
-  Properties: 
+  Properties:
     Size: 100
     VolumeType: io1
     Iops: 100

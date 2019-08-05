@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-batch-jobdefinition-environment-properties"></a>
 
 `Name`  <a name="cfn-batch-jobdefinition-environment-name"></a>
-The name of the environment variable\.  
-*Required*: No  
-*Type*: String  
+The name of the environment variable\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-batch-jobdefinition-environment-value"></a>
-The value of the environment variable\.  
-*Required*: No  
-*Type*: String  
+The value of the environment variable\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

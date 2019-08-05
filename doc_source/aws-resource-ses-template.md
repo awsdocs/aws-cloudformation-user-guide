@@ -23,17 +23,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SES::Template
-Properties: 
-  [Template](#cfn-ses-template-template): 
+Properties:
+  [Template](#cfn-ses-template-template):
     [Template](aws-properties-ses-template-template.md)
 ```
 
 ## Properties<a name="aws-resource-ses-template-properties"></a>
 
 `Template`  <a name="cfn-ses-template-template"></a>
-The content of the email, composed of a subject line, an HTML part, and a text\-only part\.  
-*Required*: No  
-*Type*: [Template](aws-properties-ses-template-template.md)  
+The content of the email, composed of a subject line, an HTML part, and a text\-only part\.
+*Required*: No
+*Type*: [Template](aws-properties-ses-template-template.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-ses-template--examples"></a>

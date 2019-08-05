@@ -27,20 +27,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-lifecycleconfig-rule-transition-properties"></a>
 
 `StorageClass`  <a name="cfn-s3-bucket-lifecycleconfig-rule-transition-storageclass"></a>
-The storage class to which you want the object to transition\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `DEEP_ARCHIVE | GLACIER | INTELLIGENT_TIERING | ONEZONE_IA | STANDARD_IA`  
+The storage class to which you want the object to transition\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `DEEP_ARCHIVE | GLACIER | INTELLIGENT_TIERING | ONEZONE_IA | STANDARD_IA`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TransitionDate`  <a name="cfn-s3-bucket-lifecycleconfig-rule-transition-transitiondate"></a>
-Indicates when objects are transitioned to the specified storage class\. The date value must be in ISO 8601 format\. The time is always midnight UTC\.  
-*Required*: Conditional  
-*Type*: Timestamp  
+Indicates when objects are transitioned to the specified storage class\. The date value must be in ISO 8601 format\. The time is always midnight UTC\.
+*Required*: Conditional
+*Type*: Timestamp
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TransitionInDays`  <a name="cfn-s3-bucket-lifecycleconfig-rule-transition-transitionindays"></a>
-Indicates the number of days after creation when objects are transitioned to the specified storage class\. The value must be a positive integer\.  
-*Required*: Conditional  
-*Type*: Integer  
+Indicates the number of days after creation when objects are transitioned to the specified storage class\. The value must be a positive integer\.
+*Required*: Conditional
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

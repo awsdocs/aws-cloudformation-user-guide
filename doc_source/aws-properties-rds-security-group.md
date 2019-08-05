@@ -2,8 +2,8 @@
 
 The `AWS::RDS::DBSecurityGroup` resource creates or updates an Amazon RDS DB security group\.
 
-**Note**  
- If you use DB security groups, the settings that you can specify for your DB instances are limited\. For more information, see the [DBSecurityGroups](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbsecuritygroups) property of the `AWS::RDS::DBInstance` resource\.  
+**Note**
+ If you use DB security groups, the settings that you can specify for your DB instances are limited\. For more information, see the [DBSecurityGroups](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbsecuritygroups) property of the `AWS::RDS::DBInstance` resource\.
  When you specify an `AWS::RDS::DBSecurityGroup` as an argument to the `Ref` function, AWS CloudFormation returns the value of the `DBSecurityGroupName`\.
 
 ## Syntax<a name="aws-properties-rds-security-group-syntax"></a>
@@ -28,40 +28,40 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RDS::DBSecurityGroup
-Properties: 
-  [DBSecurityGroupIngress](#cfn-rds-dbsecuritygroup-dbsecuritygroupingress): 
+Properties:
+  [DBSecurityGroupIngress](#cfn-rds-dbsecuritygroup-dbsecuritygroupingress):
     - [Ingress](aws-properties-rds-security-group-rule.md)
   [EC2VpcId](#cfn-rds-dbsecuritygroup-ec2vpcid): String
   [GroupDescription](#cfn-rds-dbsecuritygroup-groupdescription): String
-  [Tags](#cfn-rds-dbsecuritygroup-tags): 
+  [Tags](#cfn-rds-dbsecuritygroup-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-properties-rds-security-group-properties"></a>
 
 `DBSecurityGroupIngress`  <a name="cfn-rds-dbsecuritygroup-dbsecuritygroupingress"></a>
-Ingress rules to be applied to the DB security group\.  
-*Required*: Yes  
-*Type*: List of [Ingress](aws-properties-rds-security-group-rule.md)  
+Ingress rules to be applied to the DB security group\.
+*Required*: Yes
+*Type*: List of [Ingress](aws-properties-rds-security-group-rule.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EC2VpcId`  <a name="cfn-rds-dbsecuritygroup-ec2vpcid"></a>
-The identifier of an Amazon VPC\. This property indicates the VPC that this DB security group belongs to\.  
+The identifier of an Amazon VPC\. This property indicates the VPC that this DB security group belongs to\.
 The `EC2VpcId` property is for backward compatibility with older regions, and is no longer recommended for providing security information to an RDS DB instance\.
-*Required*: No  
-*Type*: String  
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `GroupDescription`  <a name="cfn-rds-dbsecuritygroup-groupdescription"></a>
-Provides the description of the DB Security Group\.  
-*Required*: Yes  
-*Type*: String  
+Provides the description of the DB Security Group\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-rds-dbsecuritygroup-tags"></a>
-Tags to assign to the DB security group\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+Tags to assign to the DB security group\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-properties-rds-security-group-return-values"></a>
@@ -76,7 +76,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Single VPC security group<a name="aws-properties-rds-security-group--examples--Single_VPC_security_group"></a>
 
-The following example creates a single VPC security group, referred to by `EC2SecurityGroupName`\. 
+The following example creates a single VPC security group, referred to by `EC2SecurityGroupName`\.
 
 #### JSON<a name="aws-properties-rds-security-group--examples--Single_VPC_security_group--json"></a>
 
@@ -122,12 +122,12 @@ The following example creates a single VPC security group, referred to by `EC2Se
 #### YAML<a name="aws-properties-rds-security-group--examples--Single_VPC_security_group--yaml"></a>
 
 ```
-Resources: 
-  DBinstance: 
+Resources:
+  DBinstance:
     Type: AWS::RDS::DBInstance
-    Properties: 
-      DBSecurityGroups: 
-        - 
+    Properties:
+      DBSecurityGroups:
+        -
           Ref: "DbSecurityByEC2SecurityGroup"
       AllocatedStorage: "5"
       DBInstanceClass: "db.m1.small"
@@ -135,22 +135,22 @@ Resources:
       MasterUsername: "YourName"
       MasterUserPassword: "YourPassword"
     DeletionPolicy: "Snapshot"
-  DbSecurityByEC2SecurityGroup: 
+  DbSecurityByEC2SecurityGroup:
     Type: AWS::RDS::DBSecurityGroup
-    Properties: 
+    Properties:
       GroupDescription: "Ingress for Amazon EC2 security group"
-      DBSecurityGroupIngress: 
-        - 
+      DBSecurityGroupIngress:
+        -
           EC2SecurityGroupId: "sg-b0ff1111"
           EC2SecurityGroupOwnerId: "111122223333"
-        - 
+        -
           EC2SecurityGroupId: "sg-ffd722222"
           EC2SecurityGroupOwnerId: "111122223333"
 ```
 
 ### Multiple VPC security groups<a name="aws-properties-rds-security-group--examples--Multiple_VPC_security_groups"></a>
 
-The following example createsor updates multiple VPC security groups\. 
+The following example createsor updates multiple VPC security groups\.
 
 #### JSON<a name="aws-properties-rds-security-group--examples--Multiple_VPC_security_groups--json"></a>
 
@@ -170,14 +170,14 @@ The following example createsor updates multiple VPC security groups\.
 #### YAML<a name="aws-properties-rds-security-group--examples--Multiple_VPC_security_groups--yaml"></a>
 
 ```
-DBSecurityGroup: 
+DBSecurityGroup:
   Type: AWS::RDS::DBSecurityGroup
-  Properties: 
-    EC2VpcId: 
+  Properties:
+    EC2VpcId:
       Ref: "VpcId"
-    DBSecurityGroupIngress: 
-      - 
-        EC2SecurityGroupName: 
+    DBSecurityGroupIngress:
+      -
+        EC2SecurityGroupName:
           Ref: "WebServerSecurityGroup"
     GroupDescription: "Frontend Access"
 ```

@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appstream-fleet-computecapacity-properties"></a>
 
 `DesiredInstances`  <a name="cfn-appstream-fleet-computecapacity-desiredinstances"></a>
-The desired number of streaming instances\.  
-*Required*: Yes  
-*Type*: Integer  
+The desired number of streaming instances\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

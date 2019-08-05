@@ -23,11 +23,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dynamodb-table-pointintimerecoveryspecification-properties"></a>
 
 `PointInTimeRecoveryEnabled`  <a name="cfn-dynamodb-table-pointintimerecoveryspecification-pointintimerecoveryenabled"></a>
-Indicates whether point in time recovery is enabled \(true\) or disabled \(false\) on the table\.  
-*Required*: No  
-*Type*: Boolean  
+Indicates whether point in time recovery is enabled \(true\) or disabled \(false\) on the table\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-dynamodb-table-pointintimerecoveryspecification--seealso"></a>
 
- [PointInTimeRecoverySpecification](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PointInTimeRecoverySpecification.html) in the Amazon DynamoDB API Reference\. 
+ [PointInTimeRecoverySpecification](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PointInTimeRecoverySpecification.html) in the Amazon DynamoDB API Reference\.

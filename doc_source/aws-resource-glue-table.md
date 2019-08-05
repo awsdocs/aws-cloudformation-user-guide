@@ -23,31 +23,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Glue::Table
-Properties: 
+Properties:
   [CatalogId](#cfn-glue-table-catalogid): String
   [DatabaseName](#cfn-glue-table-databasename): String
-  [TableInput](#cfn-glue-table-tableinput): 
+  [TableInput](#cfn-glue-table-tableinput):
     [TableInput](aws-properties-glue-table-tableinput.md)
 ```
 
 ## Properties<a name="aws-resource-glue-table-properties"></a>
 
 `CatalogId`  <a name="cfn-glue-table-catalogid"></a>
-The ID of the Data Catalog in which to create the `Table`\. If none is supplied, the AWS account ID is used by default\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the Data Catalog in which to create the `Table`\. If none is supplied, the AWS account ID is used by default\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DatabaseName`  <a name="cfn-glue-table-databasename"></a>
-The name of the database where the table metadata resides\. For Hive compatibility, this must be all lowercase\.  
-*Required*: Yes  
-*Type*: String  
+The name of the database where the table metadata resides\. For Hive compatibility, this must be all lowercase\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TableInput`  <a name="cfn-glue-table-tableinput"></a>
-A structure used to define a table\.  
-*Required*: Yes  
-*Type*: [TableInput](aws-properties-glue-table-tableinput.md)  
+A structure used to define a table\.
+*Required*: Yes
+*Type*: [TableInput](aws-properties-glue-table-tableinput.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-glue-table-return-values"></a>

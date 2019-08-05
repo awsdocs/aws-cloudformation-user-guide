@@ -19,14 +19,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appsync-resolver-pipelineconfig-syntax.yaml"></a>
 
 ```
-  [Functions](#cfn-appsync-resolver-pipelineconfig-functions): 
+  [Functions](#cfn-appsync-resolver-pipelineconfig-functions):
     - String
 ```
 
 ## Properties<a name="aws-properties-appsync-resolver-pipelineconfig-properties"></a>
 
 `Functions`  <a name="cfn-appsync-resolver-pipelineconfig-functions"></a>
-A list of `Function` objects\.  
-*Required*: No  
-*Type*: List of String  
+A list of `Function` objects\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -37,160 +37,160 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Cognito::UserPool
-Properties: 
-  [AdminCreateUserConfig](#cfn-cognito-userpool-admincreateuserconfig): 
+Properties:
+  [AdminCreateUserConfig](#cfn-cognito-userpool-admincreateuserconfig):
     [AdminCreateUserConfig](aws-properties-cognito-userpool-admincreateuserconfig.md)
-  [AliasAttributes](#cfn-cognito-userpool-aliasattributes): 
+  [AliasAttributes](#cfn-cognito-userpool-aliasattributes):
     - String
-  [AutoVerifiedAttributes](#cfn-cognito-userpool-autoverifiedattributes): 
+  [AutoVerifiedAttributes](#cfn-cognito-userpool-autoverifiedattributes):
     - String
-  [DeviceConfiguration](#cfn-cognito-userpool-deviceconfiguration): 
+  [DeviceConfiguration](#cfn-cognito-userpool-deviceconfiguration):
     [DeviceConfiguration](aws-properties-cognito-userpool-deviceconfiguration.md)
-  [EmailConfiguration](#cfn-cognito-userpool-emailconfiguration): 
+  [EmailConfiguration](#cfn-cognito-userpool-emailconfiguration):
     [EmailConfiguration](aws-properties-cognito-userpool-emailconfiguration.md)
   [EmailVerificationMessage](#cfn-cognito-userpool-emailverificationmessage): String
   [EmailVerificationSubject](#cfn-cognito-userpool-emailverificationsubject): String
-  [LambdaConfig](#cfn-cognito-userpool-lambdaconfig): 
+  [LambdaConfig](#cfn-cognito-userpool-lambdaconfig):
     [LambdaConfig](aws-properties-cognito-userpool-lambdaconfig.md)
   [MfaConfiguration](#cfn-cognito-userpool-mfaconfiguration): String
-  [Policies](#cfn-cognito-userpool-policies): 
+  [Policies](#cfn-cognito-userpool-policies):
     [Policies](aws-properties-cognito-userpool-policies.md)
-  [Schema](#cfn-cognito-userpool-schema): 
+  [Schema](#cfn-cognito-userpool-schema):
     - [SchemaAttribute](aws-properties-cognito-userpool-schemaattribute.md)
   [SmsAuthenticationMessage](#cfn-cognito-userpool-smsauthenticationmessage): String
-  [SmsConfiguration](#cfn-cognito-userpool-smsconfiguration): 
+  [SmsConfiguration](#cfn-cognito-userpool-smsconfiguration):
     [SmsConfiguration](aws-properties-cognito-userpool-smsconfiguration.md)
   [SmsVerificationMessage](#cfn-cognito-userpool-smsverificationmessage): String
   [UserPoolName](#cfn-cognito-userpool-userpoolname): String
   [UserPoolTags](#cfn-cognito-userpool-userpooltags): Json
-  [UsernameAttributes](#cfn-cognito-userpool-usernameattributes): 
+  [UsernameAttributes](#cfn-cognito-userpool-usernameattributes):
     - String
 ```
 
 ## Properties<a name="aws-resource-cognito-userpool-properties"></a>
 
 `AdminCreateUserConfig`  <a name="cfn-cognito-userpool-admincreateuserconfig"></a>
-The type of configuration for creating a new user profile\.  
-*Required*: No  
-*Type*: [AdminCreateUserConfig](aws-properties-cognito-userpool-admincreateuserconfig.md)  
+The type of configuration for creating a new user profile\.
+*Required*: No
+*Type*: [AdminCreateUserConfig](aws-properties-cognito-userpool-admincreateuserconfig.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AliasAttributes`  <a name="cfn-cognito-userpool-aliasattributes"></a>
-Attributes supported as an alias for this user pool\. Possible values: **phone\_number**, **email**, or **preferred\_username**\.  
-*Required*: No  
-*Type*: List of String  
+Attributes supported as an alias for this user pool\. Possible values: **phone\_number**, **email**, or **preferred\_username**\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AutoVerifiedAttributes`  <a name="cfn-cognito-userpool-autoverifiedattributes"></a>
-The attributes to be auto\-verified\. Possible values: **email**, **phone\_number**\.  
-*Required*: No  
-*Type*: List of String  
+The attributes to be auto\-verified\. Possible values: **email**, **phone\_number**\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeviceConfiguration`  <a name="cfn-cognito-userpool-deviceconfiguration"></a>
-The type of configuration for the user pool's device tracking\.  
-*Required*: No  
-*Type*: [DeviceConfiguration](aws-properties-cognito-userpool-deviceconfiguration.md)  
+The type of configuration for the user pool's device tracking\.
+*Required*: No
+*Type*: [DeviceConfiguration](aws-properties-cognito-userpool-deviceconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailConfiguration`  <a name="cfn-cognito-userpool-emailconfiguration"></a>
-The email configuration\.  
-*Required*: No  
-*Type*: [EmailConfiguration](aws-properties-cognito-userpool-emailconfiguration.md)  
+The email configuration\.
+*Required*: No
+*Type*: [EmailConfiguration](aws-properties-cognito-userpool-emailconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailVerificationMessage`  <a name="cfn-cognito-userpool-emailverificationmessage"></a>
-A string representing the email verification message\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `6`  
-*Maximum*: `20000`  
-*Pattern*: `[\p{L}\p{M}\p{S}\p{N}\p{P}\s*]*\{####\}[\p{L}\p{M}\p{S}\p{N}\p{P}\s*]*`  
+A string representing the email verification message\.
+*Required*: No
+*Type*: String
+*Minimum*: `6`
+*Maximum*: `20000`
+*Pattern*: `[\p{L}\p{M}\p{S}\p{N}\p{P}\s*]*\{####\}[\p{L}\p{M}\p{S}\p{N}\p{P}\s*]*`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailVerificationSubject`  <a name="cfn-cognito-userpool-emailverificationsubject"></a>
-A string representing the email verification subject\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `140`  
-*Pattern*: `[\p{L}\p{M}\p{S}\p{N}\p{P}\s]+`  
+A string representing the email verification subject\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `140`
+*Pattern*: `[\p{L}\p{M}\p{S}\p{N}\p{P}\s]+`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LambdaConfig`  <a name="cfn-cognito-userpool-lambdaconfig"></a>
-The Lambda trigger configuration information for the new user pool\.  
-In a push model, event sources \(such as Amazon S3 and custom applications\) need permission to invoke a function\. So you will need to make an extra call to add permission for these event sources to invoke your Lambda function\.  
-For more information on using the Lambda API to add permission, see [ AddPermission ](https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html)\.   
+The Lambda trigger configuration information for the new user pool\.
+In a push model, event sources \(such as Amazon S3 and custom applications\) need permission to invoke a function\. So you will need to make an extra call to add permission for these event sources to invoke your Lambda function\.
+For more information on using the Lambda API to add permission, see [ AddPermission ](https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html)\.
 For adding permission using the AWS CLI, see [ add\-permission ](https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html)\.
-*Required*: No  
-*Type*: [LambdaConfig](aws-properties-cognito-userpool-lambdaconfig.md)  
+*Required*: No
+*Type*: [LambdaConfig](aws-properties-cognito-userpool-lambdaconfig.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MfaConfiguration`  <a name="cfn-cognito-userpool-mfaconfiguration"></a>
-Specifies multi\-factor authentication \(MFA\) configuration details\. Can be one of the following values:  
-`OFF` \- MFA tokens are not required and cannot be specified during user registration\.  
-`ON` \- MFA tokens are required for all user registrations\. You can only specify required when you are initially creating a user pool\.  
-`OPTIONAL` \- Users have the option when registering to create an MFA token\.  
-*Required*: No  
-*Type*: String  
+Specifies multi\-factor authentication \(MFA\) configuration details\. Can be one of the following values:
+`OFF` \- MFA tokens are not required and cannot be specified during user registration\.
+`ON` \- MFA tokens are required for all user registrations\. You can only specify required when you are initially creating a user pool\.
+`OPTIONAL` \- Users have the option when registering to create an MFA token\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Policies`  <a name="cfn-cognito-userpool-policies"></a>
-The policy associated with a user pool\.  
-*Required*: No  
-*Type*: [Policies](aws-properties-cognito-userpool-policies.md)  
+The policy associated with a user pool\.
+*Required*: No
+*Type*: [Policies](aws-properties-cognito-userpool-policies.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Schema`  <a name="cfn-cognito-userpool-schema"></a>
-An array of schema attributes for the new user pool\. These attributes can be standard or custom attributes\.  
-*Required*: No  
-*Type*: List of [SchemaAttribute](aws-properties-cognito-userpool-schemaattribute.md)  
-*Maximum*: `50`  
+An array of schema attributes for the new user pool\. These attributes can be standard or custom attributes\.
+*Required*: No
+*Type*: List of [SchemaAttribute](aws-properties-cognito-userpool-schemaattribute.md)
+*Maximum*: `50`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SmsAuthenticationMessage`  <a name="cfn-cognito-userpool-smsauthenticationmessage"></a>
-A string representing the SMS authentication message\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `6`  
-*Maximum*: `140`  
-*Pattern*: `.*\{####\}.*`  
+A string representing the SMS authentication message\.
+*Required*: No
+*Type*: String
+*Minimum*: `6`
+*Maximum*: `140`
+*Pattern*: `.*\{####\}.*`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SmsConfiguration`  <a name="cfn-cognito-userpool-smsconfiguration"></a>
-The SMS configuration\.  
-*Required*: No  
-*Type*: [SmsConfiguration](aws-properties-cognito-userpool-smsconfiguration.md)  
+The SMS configuration\.
+*Required*: No
+*Type*: [SmsConfiguration](aws-properties-cognito-userpool-smsconfiguration.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SmsVerificationMessage`  <a name="cfn-cognito-userpool-smsverificationmessage"></a>
-A string representing the SMS verification message\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `6`  
-*Maximum*: `140`  
-*Pattern*: `.*\{####\}.*`  
+A string representing the SMS verification message\.
+*Required*: No
+*Type*: String
+*Minimum*: `6`
+*Maximum*: `140`
+*Pattern*: `.*\{####\}.*`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserPoolName`  <a name="cfn-cognito-userpool-userpoolname"></a>
-A string used to name the user pool\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
-*Pattern*: `[\w\s+=,.@-]+`  
+A string used to name the user pool\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
+*Pattern*: `[\w\s+=,.@-]+`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UserPoolTags`  <a name="cfn-cognito-userpool-userpooltags"></a>
-The tag keys and values to assign to the user pool\. A tag is a label that you can use to categorize and manage user pools in different ways, such as by purpose, owner, environment, or other criteria\.  
-*Required*: No  
-*Type*: Json  
+The tag keys and values to assign to the user pool\. A tag is a label that you can use to categorize and manage user pools in different ways, such as by purpose, owner, environment, or other criteria\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UsernameAttributes`  <a name="cfn-cognito-userpool-usernameattributes"></a>
-Specifies whether email addresses or phone numbers can be specified as user names when a user signs up\. Possible values: `phone_number` or `email`\.  
-*Required*: No  
-*Type*: List of String  
+Specifies whether email addresses or phone numbers can be specified as user names when a user signs up\. Possible values: `phone_number` or `email`\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-cognito-userpool-return-values"></a>

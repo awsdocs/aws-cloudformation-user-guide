@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::ClientVpnTargetNetworkAssociation
-Properties: 
+Properties:
   [ClientVpnEndpointId](#cfn-ec2-clientvpntargetnetworkassociation-clientvpnendpointid): String
   [SubnetId](#cfn-ec2-clientvpntargetnetworkassociation-subnetid): String
 ```
@@ -30,15 +30,15 @@ Properties:
 ## Properties<a name="aws-resource-ec2-clientvpntargetnetworkassociation-properties"></a>
 
 `ClientVpnEndpointId`  <a name="cfn-ec2-clientvpntargetnetworkassociation-clientvpnendpointid"></a>
-The ID of the Client VPN endpoint\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the Client VPN endpoint\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetId`  <a name="cfn-ec2-clientvpntargetnetworkassociation-subnetid"></a>
-The ID of the subnet to associate with the Client VPN endpoint\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the subnet to associate with the Client VPN endpoint\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-clientvpntargetnetworkassociation-return-values"></a>
@@ -61,9 +61,9 @@ The following example associates a target network with a Client VPN endpoint\.
 myNetworkAssociation:
   Type: "AWS::EC2::ClientVpnTargetNetworkAssociation"
   Properties:
-    ClientVpnEndpointId: 
+    ClientVpnEndpointId:
       Ref: myClientVpnEndpoint
-    SubnetId: 
+    SubnetId:
       Ref: mySubnet
 ```
 

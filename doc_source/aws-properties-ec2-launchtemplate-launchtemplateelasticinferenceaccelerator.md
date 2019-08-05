@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator-properties"></a>
 
 `Type`  <a name="cfn-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator-type"></a>
- The type of elastic inference accelerator\. The possible values are eia1\.medium, eia1\.large, and eia1\.xlarge\.   
-*Required*: No  
-*Type*: String  
+ The type of elastic inference accelerator\. The possible values are eia1\.medium, eia1\.large, and eia1\.xlarge\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

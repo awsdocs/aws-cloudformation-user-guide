@@ -17,14 +17,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-mesh-meshspec-syntax.yaml"></a>
 
 ```
-  [EgressFilter](#cfn-appmesh-mesh-meshspec-egressfilter): 
+  [EgressFilter](#cfn-appmesh-mesh-meshspec-egressfilter):
     [EgressFilter](aws-properties-appmesh-mesh-egressfilter.md)
 ```
 
 ## Properties<a name="aws-properties-appmesh-mesh-meshspec-properties"></a>
 
 `EgressFilter`  <a name="cfn-appmesh-mesh-meshspec-egressfilter"></a>
-The egress filter rules for the service mesh\.  
-*Required*: No  
-*Type*: [EgressFilter](aws-properties-appmesh-mesh-egressfilter.md)  
+The egress filter rules for the service mesh\.
+*Required*: No
+*Type*: [EgressFilter](aws-properties-appmesh-mesh-egressfilter.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

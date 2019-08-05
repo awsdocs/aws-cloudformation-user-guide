@@ -24,44 +24,44 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IoTEvents::Input
-Properties: 
-  [InputDefinition](#cfn-iotevents-input-inputdefinition): 
+Properties:
+  [InputDefinition](#cfn-iotevents-input-inputdefinition):
     [InputDefinition](aws-properties-iotevents-input-inputdefinition.md)
   [InputDescription](#cfn-iotevents-input-inputdescription): String
   [InputName](#cfn-iotevents-input-inputname): String
-  [Tags](#cfn-iotevents-input-tags): 
+  [Tags](#cfn-iotevents-input-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-iotevents-input-properties"></a>
 
 `InputDefinition`  <a name="cfn-iotevents-input-inputdefinition"></a>
-The definition of the input\.  
-*Required*: No  
-*Type*: [InputDefinition](aws-properties-iotevents-input-inputdefinition.md)  
+The definition of the input\.
+*Required*: No
+*Type*: [InputDefinition](aws-properties-iotevents-input-inputdefinition.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputDescription`  <a name="cfn-iotevents-input-inputdescription"></a>
-A brief description of the input\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `128`  
+A brief description of the input\.
+*Required*: No
+*Type*: String
+*Maximum*: `128`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputName`  <a name="cfn-iotevents-input-inputname"></a>
-The name of the input\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
-*Pattern*: `^[a-zA-Z][a-zA-Z0-9_]*$`  
+The name of the input\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
+*Pattern*: `^[a-zA-Z][a-zA-Z0-9_]*$`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-iotevents-input-tags"></a>
-An array of key\-value pairs to apply to this resource\.  
-For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+An array of key\-value pairs to apply to this resource\.
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-iotevents-input-return-values"></a>

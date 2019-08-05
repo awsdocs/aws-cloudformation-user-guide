@@ -17,14 +17,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-virtualnode-logging-syntax.yaml"></a>
 
 ```
-  [AccessLog](#cfn-appmesh-virtualnode-logging-accesslog): 
+  [AccessLog](#cfn-appmesh-virtualnode-logging-accesslog):
     [AccessLog](aws-properties-appmesh-virtualnode-accesslog.md)
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-logging-properties"></a>
 
 `AccessLog`  <a name="cfn-appmesh-virtualnode-logging-accesslog"></a>
-The access log configuration for a virtual node\.  
-*Required*: No  
-*Type*: [AccessLog](aws-properties-appmesh-virtualnode-accesslog.md)  
+The access log configuration for a virtual node\.
+*Required*: No
+*Type*: [AccessLog](aws-properties-appmesh-virtualnode-accesslog.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -23,9 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticloadbalancingv2-targetgroup-matcher-properties"></a>
 
 `HttpCode`  <a name="cfn-elasticloadbalancingv2-targetgroup-matcher-httpcode"></a>
-The HTTP codes\.  
-For Application Load Balancers, you can specify values between 200 and 499, and the default value is 200\. You can specify multiple values \(for example, "200,202"\) or a range of values \(for example, "200\-299"\)\.  
-For Network Load Balancers, this is 200–399\.  
-*Required*: Yes  
-*Type*: String  
+The HTTP codes\.
+For Application Load Balancers, you can specify values between 200 and 499, and the default value is 200\. You can specify multiple values \(for example, "200,202"\) or a range of values \(for example, "200\-299"\)\.
+For Network Load Balancers, this is 200–399\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

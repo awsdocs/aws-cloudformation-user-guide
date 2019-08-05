@@ -23,8 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-ssekmsencryptedobjects-properties"></a>
 
 `Status`  <a name="cfn-s3-bucket-ssekmsencryptedobjects-status"></a>
-Specifies whether Amazon S3 replicates objects created with server\-side encryption using an AWS KMS\-managed key\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `Disabled | Enabled`  
+Specifies whether Amazon S3 replicates objects created with server\-side encryption using an AWS KMS\-managed key\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `Disabled | Enabled`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

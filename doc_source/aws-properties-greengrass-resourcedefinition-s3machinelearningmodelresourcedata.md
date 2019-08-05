@@ -27,17 +27,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-properties"></a>
 
 `DestinationPath`  <a name="cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-destinationpath"></a>
-The absolute local path of the resource inside the Lambda environment\.  
-*Required*: Yes  
-*Type*: String  
+The absolute local path of the resource inside the Lambda environment\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `S3Uri`  <a name="cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-s3uri"></a>
-The URI of the source model in an Amazon S3 bucket\. The model package must be in `tar.gz` or `.zip` format\.  
-*Required*: Yes  
-*Type*: String  
+The URI of the source model in an Amazon S3 bucket\. The model package must be in `tar.gz` or `.zip` format\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See Also<a name="aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata--seealso"></a>
-+  [S3MachineLearningModelResourceData](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-s3machinelearningmodelresourcedata.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [S3MachineLearningModelResourceData](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-s3machinelearningmodelresourcedata.html) in the * AWS IoT Greengrass API Reference *
++  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)

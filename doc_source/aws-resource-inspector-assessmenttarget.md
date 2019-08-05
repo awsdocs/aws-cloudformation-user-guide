@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Inspector::AssessmentTarget
-Properties: 
+Properties:
   [AssessmentTargetName](#cfn-inspector-assessmenttarget-assessmenttargetname): String
   [ResourceGroupArn](#cfn-inspector-assessmenttarget-resourcegrouparn): String
 ```
@@ -30,19 +30,19 @@ Properties:
 ## Properties<a name="aws-resource-inspector-assessmenttarget-properties"></a>
 
 `AssessmentTargetName`  <a name="cfn-inspector-assessmenttarget-assessmenttargetname"></a>
-The name of the Amazon Inspector assessment target\. The name must be unique within the AWS account\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `140`  
+The name of the Amazon Inspector assessment target\. The name must be unique within the AWS account\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `140`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ResourceGroupArn`  <a name="cfn-inspector-assessmenttarget-resourcegrouparn"></a>
-The ARN that specifies the resource group that is used to create the assessment target\. If `resourceGroupArn` is not specified, all EC2 instances in the current AWS account and Region are included in the assessment target\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `300`  
+The ARN that specifies the resource group that is used to create the assessment target\. If `resourceGroupArn` is not specified, all EC2 instances in the current AWS account and Region are included in the assessment target\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `300`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-inspector-assessmenttarget-return-values"></a>
@@ -81,9 +81,9 @@ The following examples shows how to declare an `AWS::Inspector::AssessmentTarget
 #### YAML<a name="aws-resource-inspector-assessmenttarget--examples--Declaring_an_Amazon_Inspector_Assessment_Target_Resource--yaml"></a>
 
 ```
-myassessmenttarget: 
+myassessmenttarget:
   Type: AWS::Inspector::AssessmentTarget
-  Properties: 
+  Properties:
       AssessmentTargetName : "MyAssessmentTarget"
       ResourceGroupArn : "arn:aws:inspector:us-west-2:123456789012:resourcegroup/0-AB6DMKnv"
 ```

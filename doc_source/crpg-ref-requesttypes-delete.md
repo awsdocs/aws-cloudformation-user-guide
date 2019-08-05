@@ -6,28 +6,28 @@ Custom resource provider requests with `RequestType` set to `"Delete"` are sent 
 
 Delete requests contain the following fields:
 
-RequestType  
+RequestType
 Will be "Delete"\.
 
-RequestId  
+RequestId
 A unique ID for the request\.
 
-ResponseURL  
+ResponseURL
 The response URL identifies a presigned S3 bucket that receives responses from the custom resource provider to AWS CloudFormation\.
 
-ResourceType  
+ResourceType
 The template developer\-chosen resource type of the custom resource in the AWS CloudFormation template\. Custom resource type names can be up to 60 characters long and can include alphanumeric and the following characters: `_@-`\.
 
-LogicalResourceId  
-The template developer\-chosen name \(logical ID\) of the custom resource in the AWS CloudFormation template\. 
+LogicalResourceId
+The template developer\-chosen name \(logical ID\) of the custom resource in the AWS CloudFormation template\.
 
-StackId  
+StackId
 The Amazon Resource Name \(ARN\) that identifies the stack that contains the custom resource\.
 
-PhysicalResourceId  
+PhysicalResourceId
 A required custom resource provider\-defined physical ID that is unique for that provider\.
 
-ResourceProperties  
+ResourceProperties
 This field contains the contents of the `Properties` object sent by the template developer\. Its contents are defined by the custom resource provider\.
 
 ### Example<a name="w4784ab1c17c25c17c19c14b5b6"></a>
@@ -55,19 +55,19 @@ This field contains the contents of the `Properties` object sent by the template
 
 When the delete request is successful, a response must be sent to the S3 bucket with the following fields:
 
-Status  
+Status
 Must be "SUCCESS"\.
 
-RequestId  
+RequestId
 A unique ID for the request\. This response value should be copied *verbatim* from the request\.
 
-LogicalResourceId  
+LogicalResourceId
 The template developer\-chosen name \(logical ID\) of the custom resource in the AWS CloudFormation template\. This response value should be copied *verbatim* from the request\.
 
-StackId  
+StackId
 The Amazon Resource Name \(ARN\) that identifies the stack that contains the custom resource\. This response value should be copied *verbatim* from the request\.
 
-PhysicalResourceId  
+PhysicalResourceId
 This value should be an identifier unique to the custom resource vendor, and can be up to 1 Kb in size\. The value must be a non\-empty string and must be identical for all responses for the same resource\.
 
 #### Example<a name="w4784ab1c17c25c17c19c14b7b2b6"></a>
@@ -86,22 +86,22 @@ This value should be an identifier unique to the custom resource vendor, and can
 
 When the delete request fails, a response must be sent to the S3 bucket with the following fields:
 
-Status  
+Status
 Must be "FAILED"\.
 
-Reason  
+Reason
 The reason for the failure\.
 
-RequestId  
+RequestId
 The `RequestId` value copied from the [delete request](#crpg-ref-requesttypes-delete-request)\.
 
-LogicalResourceId  
+LogicalResourceId
 The `LogicalResourceId` value copied from the [delete request](#crpg-ref-requesttypes-delete-request)\.
 
-StackId  
+StackId
 The `StackId` value copied from the [delete request](#crpg-ref-requesttypes-delete-request)\.
 
-PhysicalResourceId  
+PhysicalResourceId
 A required custom resource provider\-defined physical ID that is unique for that provider\.
 
 #### Example<a name="w4784ab1c17c25c17c19c14b7b4b6"></a>

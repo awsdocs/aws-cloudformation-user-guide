@@ -29,28 +29,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cognito-userpool-invitemessagetemplate-properties"></a>
 
 `EmailMessage`  <a name="cfn-cognito-userpool-invitemessagetemplate-emailmessage"></a>
-The message template for email messages\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `6`  
-*Maximum*: `20000`  
-*Pattern*: `[\p{L}\p{M}\p{S}\p{N}\p{P}\s*]*\{####\}[\p{L}\p{M}\p{S}\p{N}\p{P}\s*]*`  
+The message template for email messages\.
+*Required*: No
+*Type*: String
+*Minimum*: `6`
+*Maximum*: `20000`
+*Pattern*: `[\p{L}\p{M}\p{S}\p{N}\p{P}\s*]*\{####\}[\p{L}\p{M}\p{S}\p{N}\p{P}\s*]*`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailSubject`  <a name="cfn-cognito-userpool-invitemessagetemplate-emailsubject"></a>
-The subject line for email messages\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `140`  
-*Pattern*: `[\p{L}\p{M}\p{S}\p{N}\p{P}\s]+`  
+The subject line for email messages\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `140`
+*Pattern*: `[\p{L}\p{M}\p{S}\p{N}\p{P}\s]+`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SMSMessage`  <a name="cfn-cognito-userpool-invitemessagetemplate-smsmessage"></a>
-The message template for SMS messages\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `6`  
-*Maximum*: `140`  
-*Pattern*: `.*\{####\}.*`  
+The message template for SMS messages\.
+*Required*: No
+*Type*: String
+*Minimum*: `6`
+*Maximum*: `140`
+*Pattern*: `.*\{####\}.*`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

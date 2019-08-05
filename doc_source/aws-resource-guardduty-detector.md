@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::GuardDuty::Detector
-Properties: 
+Properties:
   [Enable](#cfn-guardduty-detector-enable): Boolean
   [FindingPublishingFrequency](#cfn-guardduty-detector-findingpublishingfrequency): String
 ```
@@ -30,15 +30,15 @@ Properties:
 ## Properties<a name="aws-resource-guardduty-detector-properties"></a>
 
 `Enable`  <a name="cfn-guardduty-detector-enable"></a>
-Specifies whether or not to enable the detector\.  
-*Required*: Yes  
-*Type*: Boolean  
+Specifies whether or not to enable the detector\.
+*Required*: Yes
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FindingPublishingFrequency`  <a name="cfn-guardduty-detector-findingpublishingfrequency"></a>
-A enumeration value that specifies how frequently finding updates are published\.  
-*Required*: No  
-*Type*: String  
+A enumeration value that specifies how frequently finding updates are published\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-guardduty-detector-return-values"></a>

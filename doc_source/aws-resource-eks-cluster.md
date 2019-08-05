@@ -1,6 +1,6 @@
 # AWS::EKS::Cluster<a name="aws-resource-eks-cluster"></a>
 
-Creates an Amazon EKS control plane\. 
+Creates an Amazon EKS control plane\.
 
 The Amazon EKS control plane consists of control plane instances that run the Kubernetes software, such as `etcd` and the API server\. The control plane runs in an account managed by AWS, and the Kubernetes API is exposed via the Amazon EKS API server endpoint\. Each Amazon EKS cluster control plane is single\-tenant and unique and runs on its own set of Amazon EC2 instances\.
 
@@ -32,9 +32,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EKS::Cluster
-Properties: 
+Properties:
   [Name](#cfn-eks-cluster-name): String
-  [ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig): 
+  [ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig):
     [ResourcesVpcConfig](aws-properties-eks-cluster-resourcesvpcconfig.md)
   [RoleArn](#cfn-eks-cluster-rolearn): String
   [Version](#cfn-eks-cluster-version): String
@@ -43,27 +43,27 @@ Properties:
 ## Properties<a name="aws-resource-eks-cluster-properties"></a>
 
 `Name`  <a name="cfn-eks-cluster-name"></a>
-The unique name to give to your cluster\.  
-*Required*: No  
-*Type*: String  
+The unique name to give to your cluster\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ResourcesVpcConfig`  <a name="cfn-eks-cluster-resourcesvpcconfig"></a>
-The VPC configuration used by the cluster control plane\. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes\. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the *Amazon EKS User Guide*\. You must specify at least two subnets\. You can specify up to five security groups, but we recommend that you use a dedicated security group for your cluster control plane\.  
-*Required*: Yes  
-*Type*: [ResourcesVpcConfig](aws-properties-eks-cluster-resourcesvpcconfig.md)  
+The VPC configuration used by the cluster control plane\. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes\. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the *Amazon EKS User Guide*\. You must specify at least two subnets\. You can specify up to five security groups, but we recommend that you use a dedicated security group for your cluster control plane\.
+*Required*: Yes
+*Type*: [ResourcesVpcConfig](aws-properties-eks-cluster-resourcesvpcconfig.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleArn`  <a name="cfn-eks-cluster-rolearn"></a>
-The Amazon Resource Name \(ARN\) of the IAM role that provides permissions for Amazon EKS to make calls to other AWS API operations on your behalf\. For more information, see [Amazon EKS Service IAM Role](https://docs.aws.amazon.com/eks/latest/userguide/service_IAM_role.html) in the * *Amazon EKS User Guide* *\.  
-*Required*: Yes  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of the IAM role that provides permissions for Amazon EKS to make calls to other AWS API operations on your behalf\. For more information, see [Amazon EKS Service IAM Role](https://docs.aws.amazon.com/eks/latest/userguide/service_IAM_role.html) in the * *Amazon EKS User Guide* *\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Version`  <a name="cfn-eks-cluster-version"></a>
-The desired Kubernetes version for your cluster\. If you don't specify a value here, the latest version available in Amazon EKS is used\.  
-*Required*: No  
-*Type*: String  
+The desired Kubernetes version for your cluster\. If you don't specify a value here, the latest version available in Amazon EKS is used\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-eks-cluster-return-values"></a>
@@ -72,7 +72,7 @@ The desired Kubernetes version for your cluster\. If you don't specify a value h
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
 
- `{ "Ref": "myCluster" }` 
+ `{ "Ref": "myCluster" }`
 
 For the Amazon EKS cluster `myCluster`, `Ref` returns the name of the cluster\.
 

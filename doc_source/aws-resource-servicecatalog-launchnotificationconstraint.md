@@ -25,10 +25,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceCatalog::LaunchNotificationConstraint
-Properties: 
+Properties:
   [AcceptLanguage](#cfn-servicecatalog-launchnotificationconstraint-acceptlanguage): String
   [Description](#cfn-servicecatalog-launchnotificationconstraint-description): String
-  [NotificationArns](#cfn-servicecatalog-launchnotificationconstraint-notificationarns): 
+  [NotificationArns](#cfn-servicecatalog-launchnotificationconstraint-notificationarns):
     - String
   [PortfolioId](#cfn-servicecatalog-launchnotificationconstraint-portfolioid): String
   [ProductId](#cfn-servicecatalog-launchnotificationconstraint-productid): String
@@ -37,44 +37,44 @@ Properties:
 ## Properties<a name="aws-resource-servicecatalog-launchnotificationconstraint-properties"></a>
 
 `AcceptLanguage`  <a name="cfn-servicecatalog-launchnotificationconstraint-acceptlanguage"></a>
-The language code\.  
+The language code\.
 +  `en` \- English \(default\)
 +  `jp` \- Japanese
 +  `zh` \- Chinese
-*Required*: No  
-*Type*: String  
-*Maximum*: `100`  
+*Required*: No
+*Type*: String
+*Maximum*: `100`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-servicecatalog-launchnotificationconstraint-description"></a>
-The description of the constraint\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `2000`  
+The description of the constraint\.
+*Required*: No
+*Type*: String
+*Maximum*: `2000`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NotificationArns`  <a name="cfn-servicecatalog-launchnotificationconstraint-notificationarns"></a>
-The notification ARNs\.  
-*Required*: Yes  
-*Type*: List of String  
+The notification ARNs\.
+*Required*: Yes
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PortfolioId`  <a name="cfn-servicecatalog-launchnotificationconstraint-portfolioid"></a>
-The portfolio identifier\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
-*Pattern*: `^[a-zA-Z0-9_\-]*`  
+The portfolio identifier\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
+*Pattern*: `^[a-zA-Z0-9_\-]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ProductId`  <a name="cfn-servicecatalog-launchnotificationconstraint-productid"></a>
-The product identifier\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
-*Pattern*: `^[a-zA-Z0-9_\-]*`  
+The product identifier\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
+*Pattern*: `^[a-zA-Z0-9_\-]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-servicecatalog-launchnotificationconstraint-return-values"></a>

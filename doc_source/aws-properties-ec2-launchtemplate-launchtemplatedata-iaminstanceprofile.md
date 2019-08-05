@@ -27,16 +27,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile-properties"></a>
 
 `Arn`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile-arn"></a>
-The Amazon Resource Name \(ARN\) of the instance profile\.  
-*Required*: No  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of the instance profile\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile-name"></a>
-The name of the instance profile\.  
-*Required*: No  
-*Type*: String  
+The name of the instance profile\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile--seealso"></a>
-+  [ LaunchTemplateIamInstanceProfileSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateIamInstanceProfileSpecificationRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
++  [ LaunchTemplateIamInstanceProfileSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateIamInstanceProfileSpecificationRequest.html) in the *Amazon Elastic Compute Cloud API Reference*

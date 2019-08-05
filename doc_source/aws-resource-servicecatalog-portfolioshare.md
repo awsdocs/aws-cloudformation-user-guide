@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceCatalog::PortfolioShare
-Properties: 
+Properties:
   [AcceptLanguage](#cfn-servicecatalog-portfolioshare-acceptlanguage): String
   [AccountId](#cfn-servicecatalog-portfolioshare-accountid): String
   [PortfolioId](#cfn-servicecatalog-portfolioshare-portfolioid): String
@@ -32,29 +32,29 @@ Properties:
 ## Properties<a name="aws-resource-servicecatalog-portfolioshare-properties"></a>
 
 `AcceptLanguage`  <a name="cfn-servicecatalog-portfolioshare-acceptlanguage"></a>
-The language code\.  
+The language code\.
 +  `en` \- English \(default\)
 +  `jp` \- Japanese
 +  `zh` \- Chinese
-*Required*: No  
-*Type*: String  
-*Maximum*: `100`  
+*Required*: No
+*Type*: String
+*Maximum*: `100`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AccountId`  <a name="cfn-servicecatalog-portfolioshare-accountid"></a>
-The AWS account ID\. For example, `123456789012`\.  
-*Required*: Yes  
-*Type*: String  
-*Pattern*: `^[0-9]{12}$`  
+The AWS account ID\. For example, `123456789012`\.
+*Required*: Yes
+*Type*: String
+*Pattern*: `^[0-9]{12}$`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PortfolioId`  <a name="cfn-servicecatalog-portfolioshare-portfolioid"></a>
-The portfolio identifier\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
-*Pattern*: `^[a-zA-Z0-9_\-]*`  
+The portfolio identifier\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
+*Pattern*: `^[a-zA-Z0-9_\-]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-servicecatalog-portfolioshare-return-values"></a>

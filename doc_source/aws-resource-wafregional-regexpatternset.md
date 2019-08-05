@@ -22,27 +22,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::WAFRegional::RegexPatternSet
-Properties: 
+Properties:
   [Name](#cfn-wafregional-regexpatternset-name): String
-  [RegexPatternStrings](#cfn-wafregional-regexpatternset-regexpatternstrings): 
+  [RegexPatternStrings](#cfn-wafregional-regexpatternset-regexpatternstrings):
     - String
 ```
 
 ## Properties<a name="aws-resource-wafregional-regexpatternset-properties"></a>
 
 `Name`  <a name="cfn-wafregional-regexpatternset-name"></a>
-A friendly name or description of the [AWS::WAFRegional::RegexPatternSet](#aws-resource-wafregional-regexpatternset)\. You can't change `Name` after you create a `RegexPatternSet`\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
+A friendly name or description of the [AWS::WAFRegional::RegexPatternSet](#aws-resource-wafregional-regexpatternset)\. You can't change `Name` after you create a `RegexPatternSet`\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RegexPatternStrings`  <a name="cfn-wafregional-regexpatternset-regexpatternstrings"></a>
-Specifies the regular expression \(regex\) patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`\.  
-*Required*: Yes  
-*Type*: List of String  
-*Maximum*: `10`  
+Specifies the regular expression \(regex\) patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`\.
+*Required*: Yes
+*Type*: List of String
+*Maximum*: `10`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-wafregional-regexpatternset-return-values"></a>
@@ -67,21 +67,21 @@ The following example defines a regular expression \(regex\) pattern for a web a
   "Properties": {
     "Name": "Regex Pattern Set",
     "RegexPatternStrings": ["badbot", "danger"]
-  }      
+  }
 }
 ```
 
 #### YAML<a name="aws-resource-wafregional-regexpatternset--examples--Define_Regular_Expression_Pattern--yaml"></a>
 
 ```
-MyRegexPatternSet: 
+MyRegexPatternSet:
   Type: "AWS::WAFRegional::RegexPatternSet"
-  Properties: 
+  Properties:
     Name: "Regex Pattern Set"
-    RegexPatternStrings: 
-      - 
+    RegexPatternStrings:
+      -
         "[B[a@]dB[o0]t"
-      - 
+      -
         "D[a@]ng[e3]rStr[i1]ng"
 ```
 
@@ -104,21 +104,21 @@ The following example associates the `MyRegexPatternSet` with a web ACL rule\.
         "Type" : "RegexMatch"
       }
     ]
-  }      
+  }
 }
 ```
 
 #### YAML<a name="aws-resource-wafregional-regexpatternset--examples--Associate_a_RegexPatternSet_with_a_Web_ACL_Rule--yaml"></a>
 
 ```
-MyRegexRule: 
+MyRegexRule:
   Type: "AWS::WAFRegional::Rule"
-  Properties: 
+  Properties:
     Name: "MyRegexRule"
     MetricName: "MyRegexRule"
-    Predicates: 
-      - 
-        DataId: 
+    Predicates:
+      -
+        DataId:
           Ref: "MyRegexPatternSet"
         Negated: false
     Type: "RegexMatch"
@@ -148,25 +148,25 @@ The following example associates the `MyRegexRule` rule with a web ACL\. The web
         "RuleId" : { "Ref" : "MyRegexRule" }
       }
     ]
-  }      
+  }
 }
 ```
 
 #### YAML<a name="aws-resource-wafregional-regexpatternset--examples--Create_a_Web_ACL--yaml"></a>
 
 ```
-MyWebACL: 
+MyWebACL:
   Type: "AWS::WAFRegional::WebACL"
-  Properties: 
+  Properties:
     Name: "WebACL to block certain regex strings"
-    DefaultAction: 
+    DefaultAction:
       Type: "ALLOW"
     MetricName: "MyWebACL"
-    Rules: 
-      - 
-        Action: 
+    Rules:
+      -
+        Action:
           Type: "BLOCK"
         Priority: 1
-        RuleId: 
+        RuleId:
     Ref: "MyRegexRule"
 ```

@@ -25,12 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RoboMaker::RobotApplication
-Properties: 
+Properties:
   [CurrentRevisionId](#cfn-robomaker-robotapplication-currentrevisionid): String
   [Name](#cfn-robomaker-robotapplication-name): String
-  [RobotSoftwareSuite](#cfn-robomaker-robotapplication-robotsoftwaresuite): 
+  [RobotSoftwareSuite](#cfn-robomaker-robotapplication-robotsoftwaresuite):
     [RobotSoftwareSuite](aws-properties-robomaker-robotapplication-robotsoftwaresuite.md)
-  [Sources](#cfn-robomaker-robotapplication-sources): 
+  [Sources](#cfn-robomaker-robotapplication-sources):
     - [SourceConfig](aws-properties-robomaker-robotapplication-sourceconfig.md)
   [Tags](#cfn-robomaker-robotapplication-tags): Json
 ```
@@ -38,43 +38,43 @@ Properties:
 ## Properties<a name="aws-resource-robomaker-robotapplication-properties"></a>
 
 `CurrentRevisionId`  <a name="cfn-robomaker-robotapplication-currentrevisionid"></a>
-The current revision id\.  
-*Required*: No  
-*Type*: String  
+The current revision id\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-robomaker-robotapplication-name"></a>
-The name of the robot application\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
-*Pattern*: `[a-zA-Z0-9_\-]*`  
+The name of the robot application\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `255`
+*Pattern*: `[a-zA-Z0-9_\-]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RobotSoftwareSuite`  <a name="cfn-robomaker-robotapplication-robotsoftwaresuite"></a>
-The robot software suite used by the robot application\.  
-*Required*: Yes  
-*Type*: [RobotSoftwareSuite](aws-properties-robomaker-robotapplication-robotsoftwaresuite.md)  
+The robot software suite used by the robot application\.
+*Required*: Yes
+*Type*: [RobotSoftwareSuite](aws-properties-robomaker-robotapplication-robotsoftwaresuite.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Sources`  <a name="cfn-robomaker-robotapplication-sources"></a>
-The sources of the robot application\.  
-*Required*: Yes  
-*Type*: List of [SourceConfig](aws-properties-robomaker-robotapplication-sourceconfig.md)  
+The sources of the robot application\.
+*Required*: Yes
+*Type*: List of [SourceConfig](aws-properties-robomaker-robotapplication-sourceconfig.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-robomaker-robotapplication-tags"></a>
-A map that contains tag keys and tag values that are attached to the robot application\.  
-*Required*: No  
-*Type*: Json  
+A map that contains tag keys and tag values that are attached to the robot application\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-robomaker-robotapplication-return-values"></a>
 
 ### Ref<a name="aws-resource-robomaker-robotapplication-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::RoboMaker::RobotApplication` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the robot application, such as `arn:aws:robomaker:us-west-2:123456789012:robot-application/MyRobotApplication/1546541208251`\. 
+When you pass the logical ID of an `AWS::RoboMaker::RobotApplication` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the robot application, such as `arn:aws:robomaker:us-west-2:123456789012:robot-application/MyRobotApplication/1546541208251`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

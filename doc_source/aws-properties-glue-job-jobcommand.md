@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-glue-job-jobcommand-properties"></a>
 
 `Name`  <a name="cfn-glue-job-jobcommand-name"></a>
-The name of the job command\. For an Apache Spark ETL job, this must be `glueetl`\. For a Python shell job, it must be `pythonshell`\.  
-*Required*: No  
-*Type*: String  
+The name of the job command\. For an Apache Spark ETL job, this must be `glueetl`\. For a Python shell job, it must be `pythonshell`\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScriptLocation`  <a name="cfn-glue-job-jobcommand-scriptlocation"></a>
-Specifies the Amazon Simple Storage Service \(Amazon S3\) path to a script that executes a job \(required\)\.  
-*Required*: No  
-*Type*: String  
+Specifies the Amazon Simple Storage Service \(Amazon S3\) path to a script that executes a job \(required\)\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

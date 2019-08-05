@@ -73,7 +73,7 @@ The Apache Web Server, PHP, and the simple PHP application are all installed by 
         "/opt/aws/bin/cfn-init -v ",
         "         --stack ", { "Ref" : "AWS::StackName" },
         "         --resource WebServerInstance ",
-        "         --region ", { "Ref" : "AWS::Region" }, "\n", 
+        "         --region ", { "Ref" : "AWS::Region" }, "\n",
         :
       ]]}}
     }
@@ -114,7 +114,7 @@ The template enables and configures the cfn\-hup daemon to listen for changes to
                 "triggers=post.update\n",
                 "path=Resources.WebServerInstance.Metadata.AWS::CloudFormation::Init\n",
                 "action=/opt/aws/bin/cfn-init -s ", { "Ref" : "AWS::StackId" }, " -r WebServerInstance ",
-                " --region     ", { "Ref" : "AWS::Region" }, "\n",  
+                " --region     ", { "Ref" : "AWS::Region" }, "\n",
                 "runas=root\n"
               ]]}
             }
@@ -131,7 +131,7 @@ The template enables and configures the cfn\-hup daemon to listen for changes to
         :
 
         "# Start up the cfn-hup daemon to listen for changes to the Web Server metadata\n",
-        "/opt/aws/bin/cfn-hup || error_exit 'Failed to start cfn-hup'\n",  
+        "/opt/aws/bin/cfn-hup || error_exit 'Failed to start cfn-hup'\n",
 
         :
       ]]}}
@@ -146,73 +146,73 @@ To complete the stack, the template creates an Amazon EC2 security group\.
   "AWSTemplateFormatVersion" : "2010-09-09",
 
   "Description" : "AWS CloudFormation Sample Template: Sample template that can be used to test EC2 updates. **WARNING** This template creates an Amazon Ec2 Instance. You will be billed for the AWS resources used if you create a stack from this template.",
-  
+
   "Parameters" : {
-          
+
     "InstanceType" : {
       "Description" : "WebServer EC2 instance type",
       "Type" : "String",
       "Default" : "t2.small",
-      "AllowedValues" : [ 
-        "t1.micro", 
-        "t2.nano", 
-        "t2.micro", 
-        "t2.small", 
-        "t2.medium", 
-        "t2.large", 
-        "m1.small", 
-        "m1.medium", 
-        "m1.large", 
-        "m1.xlarge", 
-        "m2.xlarge", 
-        "m2.2xlarge", 
-        "m2.4xlarge", 
-        "m3.medium", 
-        "m3.large", 
-        "m3.xlarge", 
-        "m3.2xlarge", 
-        "m4.large", 
-        "m4.xlarge", 
-        "m4.2xlarge", 
-        "m4.4xlarge", 
-        "m4.10xlarge", 
-        "c1.medium", 
-        "c1.xlarge", 
-        "c3.large", 
-        "c3.xlarge", 
-        "c3.2xlarge", 
-        "c3.4xlarge", 
-        "c3.8xlarge", 
-        "c4.large", 
-        "c4.xlarge", 
-        "c4.2xlarge", 
-        "c4.4xlarge", 
-        "c4.8xlarge", 
-        "g2.2xlarge", 
-        "g2.8xlarge", 
-        "r3.large", 
-        "r3.xlarge", 
-        "r3.2xlarge", 
-        "r3.4xlarge", 
-        "r3.8xlarge", 
-        "i2.xlarge", 
-        "i2.2xlarge", 
-        "i2.4xlarge", 
-        "i2.8xlarge", 
-        "d2.xlarge", 
-        "d2.2xlarge", 
-        "d2.4xlarge", 
-        "d2.8xlarge", 
-        "hi1.4xlarge", 
-        "hs1.8xlarge", 
-        "cr1.8xlarge", 
-        "cc2.8xlarge", 
+      "AllowedValues" : [
+        "t1.micro",
+        "t2.nano",
+        "t2.micro",
+        "t2.small",
+        "t2.medium",
+        "t2.large",
+        "m1.small",
+        "m1.medium",
+        "m1.large",
+        "m1.xlarge",
+        "m2.xlarge",
+        "m2.2xlarge",
+        "m2.4xlarge",
+        "m3.medium",
+        "m3.large",
+        "m3.xlarge",
+        "m3.2xlarge",
+        "m4.large",
+        "m4.xlarge",
+        "m4.2xlarge",
+        "m4.4xlarge",
+        "m4.10xlarge",
+        "c1.medium",
+        "c1.xlarge",
+        "c3.large",
+        "c3.xlarge",
+        "c3.2xlarge",
+        "c3.4xlarge",
+        "c3.8xlarge",
+        "c4.large",
+        "c4.xlarge",
+        "c4.2xlarge",
+        "c4.4xlarge",
+        "c4.8xlarge",
+        "g2.2xlarge",
+        "g2.8xlarge",
+        "r3.large",
+        "r3.xlarge",
+        "r3.2xlarge",
+        "r3.4xlarge",
+        "r3.8xlarge",
+        "i2.xlarge",
+        "i2.2xlarge",
+        "i2.4xlarge",
+        "i2.8xlarge",
+        "d2.xlarge",
+        "d2.2xlarge",
+        "d2.4xlarge",
+        "d2.8xlarge",
+        "hi1.4xlarge",
+        "hs1.8xlarge",
+        "cr1.8xlarge",
+        "cc2.8xlarge",
         "cg1.4xlarge"
       ],
       "ConstraintDescription" : "must be a valid EC2 instance type."
     }
   },
-    
+
   "Mappings" : {
     "AWSInstanceType2Arch" : {
       "t1.micro"    : { "Arch" : "HVM64"  },
@@ -291,10 +291,10 @@ To complete the stack, the template creates an Amazon EC2 security group\.
       "cn-northwest-1"   : {"HVM64" : "ami-6b6a7d09", "HVMG2" : "NOT_SUPPORTED"}
     }
   },
-    
-  "Resources" : {   
 
-    "WebServerInstance": {  
+  "Resources" : {
+
+    "WebServerInstance": {
       "Type" : "AWS::EC2::Instance",
       "Metadata" : {
         "Comment" : "Install a simple PHP application",
@@ -371,14 +371,14 @@ To complete the stack, the template creates an Amazon EC2 security group\.
              "         --region ", { "Ref" : "AWS::Region" }, "\n",
 
              "# Start up the cfn-hup daemon to listen for changes to the Web Server metadata\n",
-             "/opt/aws/bin/cfn-hup || error_exit 'Failed to start cfn-hup'\n",  
+             "/opt/aws/bin/cfn-hup || error_exit 'Failed to start cfn-hup'\n",
 
              "# Signal the status from cfn-init\n",
              "/opt/aws/bin/cfn-signal -e $? ",
              "         --stack ", { "Ref" : "AWS::StackName" },
              "         --resource WebServerInstance ",
              "         --region ", { "Ref" : "AWS::Region" }, "\n"
-        ]]}}        
+        ]]}}
       },
       "CreationPolicy" : {
         "ResourceSignal" : {
@@ -394,10 +394,10 @@ To complete the stack, the template creates an Amazon EC2 security group\.
         "SecurityGroupIngress" : [
           {"IpProtocol" : "tcp", "FromPort" : "80", "ToPort" : "80", "CidrIp" : "0.0.0.0/0"}
         ]
-      }      
-    }          
+      }
+    }
   },
-  
+
   "Outputs" : {
     "WebsiteURL" : {
       "Description" : "Application URL",
@@ -413,7 +413,7 @@ This example uses a single Amazon EC2 instance, but you can use the same mechani
 
 For the purposes of this example, we’ll use the AWS Management Console to create an initial stack from the sample template\.
 
-**Warning**  
+**Warning**
 Completing this procedure will deploy live AWS services\. You will be charged the standard usage rates as long as these services are running\.
 
 **To create the stack from the AWS Management Console**
@@ -476,7 +476,7 @@ Now, we'll update the stack\.
 
 1. On the AWS CloudFormation dashboard, click the stack you created previously, and then click **Update Stack**\.
 
-1. In the **Update Stack** wizard, on the **Select Template** screen, select **Upload a template to Amazon S3**, select the modified template, and then click **Next**\. 
+1. In the **Update Stack** wizard, on the **Select Template** screen, select **Upload a template to Amazon S3**, select the modified template, and then click **Next**\.
 
 1. On the **Options** screen, click **Next**\.
 
@@ -656,7 +656,7 @@ Let's use the template that we modified in the previous section to change the in
 
 1. On the AWS CloudFormation dashboard, click the stack you created previously, and then click **Update Stack**\.
 
-1. In the **Update Stack** wizard, on the **Select Template** screen, select **Use current template**, and then click **Next**\. 
+1. In the **Update Stack** wizard, on the **Select Template** screen, select **Use current template**, and then click **Next**\.
 
    The Specify Details page appears with the parameters that were used to create the initial stack are pre\-populated in the **Specify Parameters** section\.
 
@@ -674,7 +674,7 @@ To check the instance type from the AWS Management Console, open the Amazon EC2 
 
 ### Update the AMI on an Amazon EC2 instance<a name="update.walkthrough.ami"></a>
 
-Now let's look at how we might change the Amazon Machine Image \(AMI\) running on the instance\. We will trigger the AMI change by updating the stack to use a new Amazon EC2 instance type, such as t2\.medium, which is an HVM64 instance type\. 
+Now let's look at how we might change the Amazon Machine Image \(AMI\) running on the instance\. We will trigger the AMI change by updating the stack to use a new Amazon EC2 instance type, such as t2\.medium, which is an HVM64 instance type\.
 
 As in the previous section, we’ll use our existing template to change the instance type used by our example stack\. In the Stack Update wizard, on the Specify Parameters page, change the value of the Instance Type\.
 
@@ -712,7 +712,7 @@ So far, we've looked at changing existing properties of a resource in a template
 
    ```
      "Parameters" : {
-   
+
        "KeyName" : {
          "Description" : "Name of an existing Amazon EC2 key pair for SSH access",
          "Type": "AWS::EC2::KeyPair::KeyName"
@@ -725,7 +725,7 @@ So far, we've looked at changing existing properties of a resource in a template
          "Default": "0.0.0.0/0",
          "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
          "ConstraintDescription": "must be a valid IP CIDR range of the form x.x.x.x/x."
-       }  
+       }
        :
      },
    ```
@@ -869,7 +869,7 @@ This will create a simple, single instance PHP application using an Elastic IP a
 
    ```
    "WebsiteURL" : {
-     "Value" : { "Fn::Join" : ["", ["http://", 
+     "Value" : { "Fn::Join" : ["", ["http://",
          { "Fn::GetAtt" : [ "WebServerInstance", "PublicDnsName" ]}]]},
      "Description" : "Application URL"
    }
@@ -879,7 +879,7 @@ This will create a simple, single instance PHP application using an Elastic IP a
 
    ```
    "WebsiteURL" : {
-     "Value" : { "Fn::Join" : ["", ["http://", 
+     "Value" : { "Fn::Join" : ["", ["http://",
          { "Fn::GetAtt" : [ "ElasticLoadBalancer", "DNSName" ]}]]},
      "Description" : "Application URL"
    }
@@ -892,9 +892,9 @@ For reference, the following sample shows the complete template\. If you use thi
   "AWSTemplateFormatVersion" : "2010-09-09",
 
   "Description" : "AWS CloudFormation Sample Template: Sample template that can be used to test EC2 updates. **WARNING** This template creates an Amazon Ec2 Instance. You will be billed for the AWS resources used if you create a stack from this template.",
-  
+
   "Parameters" : {
-  
+
     "KeyName": {
       "Description" : "Name of an existing EC2 KeyPair to enable SSH access to the instance",
       "Type": "AWS::EC2::KeyPair::KeyName",
@@ -910,71 +910,71 @@ For reference, the following sample shows the complete template\. If you use thi
       "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
       "ConstraintDescription": "must be a valid IP CIDR range of the form x.x.x.x/x."
     },
-    
+
     "InstanceType" : {
       "Description" : "WebServer EC2 instance type",
       "Type" : "String",
       "Default" : "t2.small",
-      "AllowedValues" : [ 
-        "t1.micro", 
-        "t2.nano", 
-        "t2.micro", 
-        "t2.small", 
-        "t2.medium", 
-        "t2.large", 
-        "m1.small", 
-        "m1.medium", 
-        "m1.large", 
-        "m1.xlarge", 
-        "m2.xlarge", 
-        "m2.2xlarge", 
-        "m2.4xlarge", 
-        "m3.medium", 
-        "m3.large", 
-        "m3.xlarge", 
-        "m3.2xlarge", 
-        "m4.large", 
-        "m4.xlarge", 
-        "m4.2xlarge", 
-        "m4.4xlarge", 
-        "m4.10xlarge", 
-        "c1.medium", 
-        "c1.xlarge", 
-        "c3.large", 
-        "c3.xlarge", 
-        "c3.2xlarge", 
-        "c3.4xlarge", 
-        "c3.8xlarge", 
-        "c4.large", 
-        "c4.xlarge", 
-        "c4.2xlarge", 
-        "c4.4xlarge", 
-        "c4.8xlarge", 
-        "g2.2xlarge", 
-        "g2.8xlarge", 
-        "r3.large", 
-        "r3.xlarge", 
-        "r3.2xlarge", 
-        "r3.4xlarge", 
-        "r3.8xlarge", 
-        "i2.xlarge", 
-        "i2.2xlarge", 
-        "i2.4xlarge", 
-        "i2.8xlarge", 
-        "d2.xlarge", 
-        "d2.2xlarge", 
-        "d2.4xlarge", 
-        "d2.8xlarge", 
-        "hi1.4xlarge", 
-        "hs1.8xlarge", 
-        "cr1.8xlarge", 
-        "cc2.8xlarge", 
+      "AllowedValues" : [
+        "t1.micro",
+        "t2.nano",
+        "t2.micro",
+        "t2.small",
+        "t2.medium",
+        "t2.large",
+        "m1.small",
+        "m1.medium",
+        "m1.large",
+        "m1.xlarge",
+        "m2.xlarge",
+        "m2.2xlarge",
+        "m2.4xlarge",
+        "m3.medium",
+        "m3.large",
+        "m3.xlarge",
+        "m3.2xlarge",
+        "m4.large",
+        "m4.xlarge",
+        "m4.2xlarge",
+        "m4.4xlarge",
+        "m4.10xlarge",
+        "c1.medium",
+        "c1.xlarge",
+        "c3.large",
+        "c3.xlarge",
+        "c3.2xlarge",
+        "c3.4xlarge",
+        "c3.8xlarge",
+        "c4.large",
+        "c4.xlarge",
+        "c4.2xlarge",
+        "c4.4xlarge",
+        "c4.8xlarge",
+        "g2.2xlarge",
+        "g2.8xlarge",
+        "r3.large",
+        "r3.xlarge",
+        "r3.2xlarge",
+        "r3.4xlarge",
+        "r3.8xlarge",
+        "i2.xlarge",
+        "i2.2xlarge",
+        "i2.4xlarge",
+        "i2.8xlarge",
+        "d2.xlarge",
+        "d2.2xlarge",
+        "d2.4xlarge",
+        "d2.8xlarge",
+        "hi1.4xlarge",
+        "hs1.8xlarge",
+        "cr1.8xlarge",
+        "cc2.8xlarge",
         "cg1.4xlarge"
       ],
       "ConstraintDescription" : "must be a valid EC2 instance type."
     }
   },
-  
+
   "Mappings" : {
     "AWSInstanceType2Arch" : {
       "t1.micro"    : { "Arch" : "HVM64"  },
@@ -1052,9 +1052,9 @@ For reference, the following sample shows the complete template\. If you use thi
       "cn-northwest-1"   : {"HVM64" : "ami-6b6a7d09", "HVMG2" : "NOT_SUPPORTED"}
     }
   },
-    
-  "Resources" : {   
-  
+
+  "Resources" : {
+
     "ElasticLoadBalancer" : {
       "Type" : "AWS::ElasticLoadBalancing::LoadBalancer",
       "Properties" : {
@@ -1079,7 +1079,7 @@ For reference, the following sample shows the complete template\. If you use thi
         }
       }
     },
-    
+
     "WebServerGroup" : {
       "Type" : "AWS::AutoScaling::AutoScalingGroup",
       "Properties" : {
@@ -1104,8 +1104,8 @@ For reference, the following sample shows the complete template\. If you use thi
         }
       }
     },
-    
-    "LaunchConfig": {  
+
+    "LaunchConfig": {
       "Type" : "AWS::AutoScaling::LaunchConfiguration",
       "Metadata" : {
         "Comment" : "Install a simple PHP application",
@@ -1182,16 +1182,16 @@ For reference, the following sample shows the complete template\. If you use thi
              "         --stack ", { "Ref" : "AWS::StackName" },
              "         --resource LaunchConfig ",
              "         --region ", { "Ref" : "AWS::Region" }, "\n",
-             
+
              "# Start up the cfn-hup daemon to listen for changes to the Web Server metadata\n",
-             "/opt/aws/bin/cfn-hup || error_exit 'Failed to start cfn-hup'\n",  
+             "/opt/aws/bin/cfn-hup || error_exit 'Failed to start cfn-hup'\n",
 
              "# Signal the status from cfn-init\n",
              "/opt/aws/bin/cfn-signal -e $? ",
              "         --stack ", { "Ref" : "AWS::StackName" },
              "         --resource WebServerGroup ",
              "         --region ", { "Ref" : "AWS::Region" }, "\n"
-        ]]}}        
+        ]]}}
       }
     },
 
@@ -1204,9 +1204,9 @@ For reference, the following sample shows the complete template\. If you use thi
           {"IpProtocol" : "tcp", "FromPort" : "22", "ToPort" : "22", "CidrIp" : { "Ref" : "SSHLocation"}}
         ]
       }
-    }          
+    }
   },
-  
+
   "Outputs" : {
     "WebsiteURL" : {
       "Description" : "Application URL",
@@ -1227,8 +1227,8 @@ Different properties have different impacts on the resources in the stack\. You 
 ## Related Resources<a name="update.walkthrough.related"></a>
 
 For more information about using AWS CloudFormation to start applications and on integrating with other configuration and deployment services such as Puppet and Opscode Chef, see the following whitepapers:
-+  [ Bootstrapping Applications via AWS CloudFormation](https://s3.amazonaws.com/cloudformation-examples/BoostrappingApplicationsWithAWSCloudFormation.pdf) 
-+  [ Integrating AWS CloudFormation with Opscode Chef](https://s3.amazonaws.com/cloudformation-examples/IntegratingAWSCloudFormationWithOpscodeChef.pdf) 
-+  [ Integrating AWS CloudFormation with Puppet](https://s3.amazonaws.com/cloudformation-examples/IntegratingAWSCloudFormationWithPuppet.pdf) 
++  [ Bootstrapping Applications via AWS CloudFormation](https://s3.amazonaws.com/cloudformation-examples/BoostrappingApplicationsWithAWSCloudFormation.pdf)
++  [ Integrating AWS CloudFormation with Opscode Chef](https://s3.amazonaws.com/cloudformation-examples/IntegratingAWSCloudFormationWithOpscodeChef.pdf)
++  [ Integrating AWS CloudFormation with Puppet](https://s3.amazonaws.com/cloudformation-examples/IntegratingAWSCloudFormationWithPuppet.pdf)
 
 The template used throughout this section is a "Hello, World" PHP application\. The template library also has an Amazon ElastiCache sample template that shows how to integrate a PHP application with ElasticCache using cfn\-hup and cfn\-init to respond to changes in the Amazon ElastiCache Cache Cluster configuration, all of which can be performed by Update Stack\.

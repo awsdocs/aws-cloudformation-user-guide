@@ -25,16 +25,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dynamodb-attributedef-properties"></a>
 
 `AttributeName`  <a name="cfn-dynamodb-attributedef-attributename"></a>
-A name for the attribute\.  
-*Required*: Yes  
-*Type*: String  
+A name for the attribute\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AttributeType`  <a name="cfn-dynamodb-attributedef-attributename-attributetype"></a>
-The data type for the attribute, where:  
+The data type for the attribute, where:
 +  `S` \- the attribute is of type String
 +  `N` \- the attribute is of type Number
 +  `B` \- the attribute is of type Binary
-*Required*: Yes  
-*Type*: String  
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

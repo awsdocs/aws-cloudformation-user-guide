@@ -25,16 +25,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SES::ReceiptRuleSet
-Properties: 
+Properties:
   [RuleSetName](#cfn-ses-receiptruleset-rulesetname): String
 ```
 
 ## Properties<a name="aws-resource-ses-receiptruleset-properties"></a>
 
 `RuleSetName`  <a name="cfn-ses-receiptruleset-rulesetname"></a>
-The name of the receipt rule set that you want to reorder\.  
-*Required*: No  
-*Type*: String  
+The name of the receipt rule set that you want to reorder\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ses-receiptruleset-return-values"></a>

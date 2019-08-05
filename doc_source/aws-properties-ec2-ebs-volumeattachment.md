@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VolumeAttachment
-Properties: 
+Properties:
   [Device](#cfn-ec2-ebs-volumeattachment-device): String
   [InstanceId](#cfn-ec2-ebs-volumeattachment-instanceid): String
   [VolumeId](#cfn-ec2-ebs-volumeattachment-volumeid): String
@@ -38,21 +38,21 @@ Properties:
 ## Properties<a name="aws-properties-ec2-ebs-volumeattachment-properties"></a>
 
 `Device`  <a name="cfn-ec2-ebs-volumeattachment-device"></a>
-The device name \(for example, `/dev/sdh` or `xvdh`\)\.  
-*Required*: Yes  
-*Type*: String  
+The device name \(for example, `/dev/sdh` or `xvdh`\)\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceId`  <a name="cfn-ec2-ebs-volumeattachment-instanceid"></a>
-The ID of the instance to which the volume attaches\. This value can be a reference to an `AWS::EC2::Instance` resource, or it can be the physical ID of an existing EC2 instance\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the instance to which the volume attaches\. This value can be a reference to an `AWS::EC2::Instance` resource, or it can be the physical ID of an existing EC2 instance\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VolumeId`  <a name="cfn-ec2-ebs-volumeattachment-volumeid"></a>
-The ID of the Amazon EBS volume\. The volume and instance must be within the same Availability Zone\. This value can be a reference to an `AWS::EC2::Volume` resource, or it can be the volume ID of an existing Amazon EBS volume\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the Amazon EBS volume\. The volume and instance must be within the same Availability Zone\. This value can be a reference to an `AWS::EC2::Volume` resource, or it can be the volume ID of an existing Amazon EBS volume\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Examples<a name="aws-properties-ec2-ebs-volumeattachment--examples"></a>
@@ -75,7 +75,7 @@ This example attaches an EC2 EBS volume to the EC2 instance with the logical nam
       } ]
    }
 },
-            
+
 "MountPoint" : {
    "Type" : "AWS::EC2::VolumeAttachment",
    "Properties" : {
@@ -109,7 +109,7 @@ MountPoint:
 
 ## See Also<a name="aws-properties-ec2-ebs-volumeattachment--seealso"></a>
 +  [Amazon Elastic Block Store \(Amazon EBS\)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html) in the *Amazon Elastic Compute Cloud User Guide*
-+  [Attaching a Volume to an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html) in the *Amazon Elastic Compute Cloud User Guide* 
-+  [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) in the *Amazon Elastic Compute Cloud User Guide* 
-+  [AttachVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-AttachVolume.html) in the *Amazon Elastic Compute Cloud API Reference* 
-+  [DetachVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-DetachVolume.html) in the *Amazon Elastic Compute Cloud API Reference* 
++  [Attaching a Volume to an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html) in the *Amazon Elastic Compute Cloud User Guide*
++  [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) in the *Amazon Elastic Compute Cloud User Guide*
++  [AttachVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-AttachVolume.html) in the *Amazon Elastic Compute Cloud API Reference*
++  [DetachVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-DetachVolume.html) in the *Amazon Elastic Compute Cloud API Reference*

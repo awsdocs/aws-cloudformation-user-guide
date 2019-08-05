@@ -32,8 +32,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Glue::Crawler
-Properties: 
-  [Classifiers](#cfn-glue-crawler-classifiers): 
+Properties:
+  [Classifiers](#cfn-glue-crawler-classifiers):
     - String
   [Configuration](#cfn-glue-crawler-configuration): String
   [CrawlerSecurityConfiguration](#cfn-glue-crawler-crawlersecurityconfiguration): String
@@ -41,88 +41,88 @@ Properties:
   [Description](#cfn-glue-crawler-description): String
   [Name](#cfn-glue-crawler-name): String
   [Role](#cfn-glue-crawler-role): String
-  [Schedule](#cfn-glue-crawler-schedule): 
+  [Schedule](#cfn-glue-crawler-schedule):
     [Schedule](aws-properties-glue-crawler-schedule.md)
-  [SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy): 
+  [SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy):
     [SchemaChangePolicy](aws-properties-glue-crawler-schemachangepolicy.md)
   [TablePrefix](#cfn-glue-crawler-tableprefix): String
   [Tags](#cfn-glue-crawler-tags): Json
-  [Targets](#cfn-glue-crawler-targets): 
+  [Targets](#cfn-glue-crawler-targets):
     [Targets](aws-properties-glue-crawler-targets.md)
 ```
 
 ## Properties<a name="aws-resource-glue-crawler-properties"></a>
 
 `Classifiers`  <a name="cfn-glue-crawler-classifiers"></a>
-A list of UTF\-8 strings that specify the custom classifiers that are associated with the crawler\.  
-*Required*: No  
-*Type*: List of String  
+A list of UTF\-8 strings that specify the custom classifiers that are associated with the crawler\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Configuration`  <a name="cfn-glue-crawler-configuration"></a>
-Crawler configuration information\. This versioned JSON string allows users to specify aspects of a crawler's behavior\. For more information, see [Configuring a Crawler](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html)\.  
-*Required*: No  
-*Type*: String  
+Crawler configuration information\. This versioned JSON string allows users to specify aspects of a crawler's behavior\. For more information, see [Configuring a Crawler](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html)\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CrawlerSecurityConfiguration`  <a name="cfn-glue-crawler-crawlersecurityconfiguration"></a>
-The name of the `SecurityConfiguration` structure to be used by this crawler\.  
-*Required*: No  
-*Type*: String  
+The name of the `SecurityConfiguration` structure to be used by this crawler\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DatabaseName`  <a name="cfn-glue-crawler-databasename"></a>
-The name of the database in which the crawler's output is stored\.  
-*Required*: Yes  
-*Type*: String  
+The name of the database in which the crawler's output is stored\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-glue-crawler-description"></a>
-A description of the crawler\.  
-*Required*: No  
-*Type*: String  
+A description of the crawler\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-glue-crawler-name"></a>
-The name of the crawler\.  
-*Required*: No  
-*Type*: String  
+The name of the crawler\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Role`  <a name="cfn-glue-crawler-role"></a>
-The Amazon Resource Name \(ARN\) of an IAM role that's used to access customer resources, such as Amazon Simple Storage Service \(Amazon S3\) data\.  
-*Required*: Yes  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of an IAM role that's used to access customer resources, such as Amazon Simple Storage Service \(Amazon S3\) data\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Schedule`  <a name="cfn-glue-crawler-schedule"></a>
-For scheduled crawlers, the schedule when the crawler runs\.  
-*Required*: No  
-*Type*: [Schedule](aws-properties-glue-crawler-schedule.md)  
+For scheduled crawlers, the schedule when the crawler runs\.
+*Required*: No
+*Type*: [Schedule](aws-properties-glue-crawler-schedule.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SchemaChangePolicy`  <a name="cfn-glue-crawler-schemachangepolicy"></a>
-The policy that specifies update and delete behaviors for the crawler\.  
-*Required*: No  
-*Type*: [SchemaChangePolicy](aws-properties-glue-crawler-schemachangepolicy.md)  
+The policy that specifies update and delete behaviors for the crawler\.
+*Required*: No
+*Type*: [SchemaChangePolicy](aws-properties-glue-crawler-schemachangepolicy.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TablePrefix`  <a name="cfn-glue-crawler-tableprefix"></a>
-The prefix added to the names of tables that are created\.  
-*Required*: No  
-*Type*: String  
+The prefix added to the names of tables that are created\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-glue-crawler-tags"></a>
-The tags to use with this crawler request\. You can use tags to limit access to the crawler\. For more information about tags in AWS Glue, see [AWS Tags in AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html) in the developer guide\.  
-*Required*: No  
-*Type*: Json  
+The tags to use with this crawler request\. You can use tags to limit access to the crawler\. For more information about tags in AWS Glue, see [AWS Tags in AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html) in the developer guide\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-glue-crawler-targets"></a>
-A collection of targets to crawl\.  
-*Required*: Yes  
-*Type*: [Targets](aws-properties-glue-crawler-targets.md)  
+A collection of targets to crawl\.
+*Required*: Yes
+*Type*: [Targets](aws-properties-glue-crawler-targets.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-glue-crawler-return-values"></a>
@@ -137,7 +137,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### <a name="aws-resource-glue-crawler--examples--"></a>
 
-The following example creates a crawler for an Amazon S3 target\. 
+The following example creates a crawler for an Amazon S3 target\.
 
 #### JSON<a name="aws-resource-glue-crawler--examples----json"></a>
 
@@ -284,7 +284,7 @@ Resources:
                 Effect: "Allow"
                 Action: "*"
                 Resource: "*"
- 
+
   MyDatabase:
     Type: AWS::Glue::Database
     Properties:
@@ -296,7 +296,7 @@ Resources:
         Parameters:
           key1 : "value1"
           key2 : "value2"
- 
+
   MyClassifier:
     Type: AWS::Glue::Classifier
     Properties:
@@ -304,13 +304,13 @@ Resources:
         Name: "CrawlerClassifier"
         Classification: "wikiData"
         GrokPattern: "%{NOTSPACE:language} %{NOTSPACE:page_title} %{NUMBER:hits:long} %{NUMBER:retrieved_size:long}"
- 
+
   MyS3Bucket:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: "crawlertesttarget"
       AccessControl: "BucketOwnerFullControl"
- 
+
   MyCrawler2:
     Type: AWS::Glue::Crawler
     Properties:
@@ -331,7 +331,7 @@ Resources:
 
 ### Crawler Configuration<a name="aws-resource-glue-crawler--examples--Crawler_Configuration"></a>
 
-The following example specifies a configuration that controls a crawler's behavior\. 
+The following example specifies a configuration that controls a crawler's behavior\.
 
 #### JSON<a name="aws-resource-glue-crawler--examples--Crawler_Configuration--json"></a>
 

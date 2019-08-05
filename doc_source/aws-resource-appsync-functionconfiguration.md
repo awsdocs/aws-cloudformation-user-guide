@@ -1,6 +1,6 @@
 # AWS::AppSync::FunctionConfiguration<a name="aws-resource-appsync-functionconfiguration"></a>
 
-The `AWS::AppSync::FunctionConfiguration` resource defines the functions in GraphQL APIs to perform certain operations\. You can use pipeline resolvers to attach functions\. For more information, see [Pipeline Resolvers](https://docs.aws.amazon.com/appsync/latest/devguide/pipeline-resolvers.html) in the *AWS AppSync Developer Guide*\. 
+The `AWS::AppSync::FunctionConfiguration` resource defines the functions in GraphQL APIs to perform certain operations\. You can use pipeline resolvers to attach functions\. For more information, see [Pipeline Resolvers](https://docs.aws.amazon.com/appsync/latest/devguide/pipeline-resolvers.html) in the *AWS AppSync Developer Guide*\.
 
 ## Syntax<a name="aws-resource-appsync-functionconfiguration-syntax"></a>
 
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppSync::FunctionConfiguration
-Properties: 
+Properties:
   [ApiId](#cfn-appsync-functionconfiguration-apiid): String
   [DataSourceName](#cfn-appsync-functionconfiguration-datasourcename): String
   [Description](#cfn-appsync-functionconfiguration-description): String
@@ -44,72 +44,72 @@ Properties:
 ## Properties<a name="aws-resource-appsync-functionconfiguration-properties"></a>
 
 `ApiId`  <a name="cfn-appsync-functionconfiguration-apiid"></a>
-The AWS AppSync GraphQL API that you want to attach using this function\.  
-*Required*: Yes  
-*Type*: String  
+The AWS AppSync GraphQL API that you want to attach using this function\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DataSourceName`  <a name="cfn-appsync-functionconfiguration-datasourcename"></a>
-The name of data source this function will attach\.  
-*Required*: Yes  
-*Type*: String  
+The name of data source this function will attach\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-appsync-functionconfiguration-description"></a>
-The `Function` description\.  
-*Required*: No  
-*Type*: String  
+The `Function` description\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FunctionVersion`  <a name="cfn-appsync-functionconfiguration-functionversion"></a>
-The version of the request mapping template\. Currently only the 2018\-05\-29 version of the template is supported\.  
-*Required*: Yes  
-*Type*: String  
+The version of the request mapping template\. Currently only the 2018\-05\-29 version of the template is supported\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-appsync-functionconfiguration-name"></a>
-The name of the function\.  
-*Required*: Yes  
-*Type*: String  
+The name of the function\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RequestMappingTemplate`  <a name="cfn-appsync-functionconfiguration-requestmappingtemplate"></a>
-The `Function` request mapping template\. Functions support only the 2018\-05\-29 version of the request mapping template\.  
-*Required*: No  
-*Type*: String  
+The `Function` request mapping template\. Functions support only the 2018\-05\-29 version of the request mapping template\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RequestMappingTemplateS3Location`  <a name="cfn-appsync-functionconfiguration-requestmappingtemplates3location"></a>
-The location of a request mapping template in an Amazon S3 bucket\. Use this if you want to provision with a template file in Amazon S3 rather than embedding it in your CloudFormation template\.   
-*Required*: No  
-*Type*: String  
+The location of a request mapping template in an Amazon S3 bucket\. Use this if you want to provision with a template file in Amazon S3 rather than embedding it in your CloudFormation template\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResponseMappingTemplate`  <a name="cfn-appsync-functionconfiguration-responsemappingtemplate"></a>
-The `Function` response mapping template\.  
-*Required*: No  
-*Type*: String  
+The `Function` response mapping template\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResponseMappingTemplateS3Location`  <a name="cfn-appsync-functionconfiguration-responsemappingtemplates3location"></a>
-The location of a response mapping template in an Amazon S3 bucket\. Use this if you want to provision with a template file in Amazon S3 rather than embedding it in your CloudFormation template\.  
-*Required*: No  
-*Type*: String  
+The location of a response mapping template in an Amazon S3 bucket\. Use this if you want to provision with a template file in Amazon S3 rather than embedding it in your CloudFormation template\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-appsync-functionconfiguration-return-values"></a>
 
 ### Ref<a name="aws-resource-appsync-functionconfiguration-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::AppSync::FunctionConfiguration` resource to the intrinsic `Ref` function, the function returns the ARN of the FunctionConfiguration, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/functions/functionid`\. 
+When you pass the logical ID of an `AWS::AppSync::FunctionConfiguration` resource to the intrinsic `Ref` function, the function returns the ARN of the FunctionConfiguration, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/functions/functionid`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref)\.
 
 ### Fn::GetAtt<a name="aws-resource-appsync-functionconfiguration-return-values-fn--getatt"></a>
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
+ `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt)\. 
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt)\.
 
 #### <a name="aws-resource-appsync-functionconfiguration-return-values-fn--getatt-fn--getatt"></a>
 

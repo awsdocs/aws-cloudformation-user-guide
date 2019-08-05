@@ -25,9 +25,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPNGateway
-Properties: 
+Properties:
   [AmazonSideAsn](#cfn-ec2-vpngateway-amazonsideasn): Long
-  [Tags](#cfn-ec2-vpngateway-tags): 
+  [Tags](#cfn-ec2-vpngateway-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Type](#cfn-ec2-vpngateway-type): String
 ```
@@ -35,22 +35,22 @@ Properties:
 ## Properties<a name="aws-resource-ec2-vpn-gateway-properties"></a>
 
 `AmazonSideAsn`  <a name="cfn-ec2-vpngateway-amazonsideasn"></a>
-The private Autonomous System Number \(ASN\) for the Amazon side of a BGP session\.  
-*Required*: No  
-*Type*: Long  
+The private Autonomous System Number \(ASN\) for the Amazon side of a BGP session\.
+*Required*: No
+*Type*: Long
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ec2-vpngateway-tags"></a>
-Any tags assigned to the virtual private gateway\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+Any tags assigned to the virtual private gateway\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-ec2-vpngateway-type"></a>
-The type of VPN connection the virtual private gateway supports\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `ipsec.1`  
+The type of VPN connection the virtual private gateway supports\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `ipsec.1`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-vpn-gateway-return-values"></a>
@@ -82,11 +82,11 @@ The following example declares a VPN gateway that uses IPSec 1\.
 #### YAML<a name="aws-resource-ec2-vpn-gateway--examples--VPN_Gateway--yaml"></a>
 
 ```
-  myVPNGateway: 
+  myVPNGateway:
    Type: AWS::EC2::VPNGateway
-   Properties: 
+   Properties:
       Type: ipsec.1
-      Tags: 
+      Tags:
       - Key: Use
         Value: Test
 ```

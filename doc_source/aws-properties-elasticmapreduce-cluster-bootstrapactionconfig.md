@@ -19,23 +19,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Name](#cfn-elasticmapreduce-cluster-bootstrapactionconfig-name): String
-  [ScriptBootstrapAction](#cfn-elasticmapreduce-cluster-bootstrapactionconfig-scriptbootstrapaction): 
+  [ScriptBootstrapAction](#cfn-elasticmapreduce-cluster-bootstrapactionconfig-scriptbootstrapaction):
     [ScriptBootstrapActionConfig](aws-properties-elasticmapreduce-cluster-scriptbootstrapactionconfig.md)
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-bootstrapactionconfig-properties"></a>
 
 `Name`  <a name="cfn-elasticmapreduce-cluster-bootstrapactionconfig-name"></a>
-The name of the bootstrap action\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `256`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+The name of the bootstrap action\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `256`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScriptBootstrapAction`  <a name="cfn-elasticmapreduce-cluster-bootstrapactionconfig-scriptbootstrapaction"></a>
-The script run by the bootstrap action\.  
-*Required*: Yes  
-*Type*: [ScriptBootstrapActionConfig](aws-properties-elasticmapreduce-cluster-scriptbootstrapactionconfig.md)  
+The script run by the bootstrap action\.
+*Required*: Yes
+*Type*: [ScriptBootstrapActionConfig](aws-properties-elasticmapreduce-cluster-scriptbootstrapactionconfig.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -15,11 +15,11 @@ cfn-hup --config|-c config.dir \
 ## Options<a name="cfn-hup-options"></a>
 
 
-| Name | Description | Required | 
-| --- | --- | --- | 
-|   `--config\|-c config.dir`   |  Specifies the path that the cfn\-hup script looks for the `cfn-hup.conf` and the `hooks.d` directories\. On Windows, the default path is `system_drive\cfn`\. On Linux, the default path is `/etc/cfn`\.  |  No  | 
-|   `--no-daemon`   |  Specify this option to run the cfn\-hup script once and exit\.  |  No  | 
-|   `-v, --verbose `   |  Specify this option to use verbose mode\.  |  No  | 
+| Name | Description | Required |
+| --- | --- | --- |
+|   `--config\|-c config.dir`   |  Specifies the path that the cfn\-hup script looks for the `cfn-hup.conf` and the `hooks.d` directories\. On Windows, the default path is `system_drive\cfn`\. On Linux, the default path is `/etc/cfn`\.  |  No  |
+|   `--no-daemon`   |  Specify this option to run the cfn\-hup script once and exit\.  |  No  |
+|   `-v, --verbose `   |  Specify this option to use verbose mode\.  |  No  |
 
 ## cfn\-hup\.conf Configuration File<a name="cfn-hup-config-file"></a>
 
@@ -33,15 +33,15 @@ stack=<stack-name-or-id>
 ```
 
 
-| Name | Description | Required | 
-| --- | --- | --- | 
-|   `stack`   |  A stack name or ID\. *Type*: String  |  Yes  | 
-|   `credential-file`   |  An owner\-only credential file, in the same format used for the command line tools\. *Type*: String *Condition*: The `role` parameter supersedes this parameter\.  |  No  | 
-|   `role`   |  The name of an IAM role that is associated with the instance\. *Type*: String  |  No  | 
-|   `region`   |  The name of the AWS region containing the stack\. *Example*: `us-east-2`  |  No  | 
-|   `umask`   |  The umask used by the cfn\-hup daemon\. This value can be specified with or without a leading 0\. In both cases, it is interpreted as an octal number \(very similar to the Linux `umask` command\)\. This parameter has no effect on Windows\. *Type*: Octal integer between `0` and `0777` *Default*: `022`, version 1\.4\-22 and higher\. The default value of `022` masks group and world write permissions, so files created by the cfn\-hup daemon are not group or world writable by default\. The default value for versions 1\.4\-21 and earlier is `0`, which masks nothing\.  |  No  | 
-|   `interval`   |  The interval used to check for changes to the resource metadata in minutes *Type*: Number *Default*: `15`  |  No  | 
-|   `verbose`   |  Specifies whether to use verbose logging\. *Type*: Boolean *Default*: `false`  |  No  | 
+| Name | Description | Required |
+| --- | --- | --- |
+|   `stack`   |  A stack name or ID\. *Type*: String  |  Yes  |
+|   `credential-file`   |  An owner\-only credential file, in the same format used for the command line tools\. *Type*: String *Condition*: The `role` parameter supersedes this parameter\.  |  No  |
+|   `role`   |  The name of an IAM role that is associated with the instance\. *Type*: String  |  No  |
+|   `region`   |  The name of the AWS region containing the stack\. *Example*: `us-east-2`  |  No  |
+|   `umask`   |  The umask used by the cfn\-hup daemon\. This value can be specified with or without a leading 0\. In both cases, it is interpreted as an octal number \(very similar to the Linux `umask` command\)\. This parameter has no effect on Windows\. *Type*: Octal integer between `0` and `0777` *Default*: `022`, version 1\.4\-22 and higher\. The default value of `022` masks group and world write permissions, so files created by the cfn\-hup daemon are not group or world writable by default\. The default value for versions 1\.4\-21 and earlier is `0`, which masks nothing\.  |  No  |
+|   `interval`   |  The interval used to check for changes to the resource metadata in minutes *Type*: Number *Default*: `15`  |  No  |
+|   `verbose`   |  Specifies whether to use verbose logging\. *Type*: Boolean *Default*: `false`  |  No  |
 
 ## hooks\.conf Configuration File<a name="cfn-hup-hook-file"></a>
 
@@ -60,13 +60,13 @@ When the action is run, it is run in a copy of the current environment \(that cf
 The hooks configuration file is loaded at cfn\-hup daemon startup only, so new hooks will require the daemon to be restarted\. A cache of previous metadata values is stored at /var/lib/cfn\-hup/data/metadata\_db—you can delete this cache to force cfn\-hup to run all post\.add actions again\.
 
 
-| Name | Description | Required | 
-| --- | --- | --- | 
-|   `hookname`   |  A unique name for this hook *Type*: String  |  Yes  | 
-|   `triggers`   |  A comma\-delimited list of conditions to detect\. *Valid values*: `post.add`, `post.update`, or `post.remove` *Example*: `post.add, post.update`  |  Yes  | 
-|   `path`   |  The path to the metadata object\. Supports an arbitrarily deep path within the Metadata block\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-hup.html)  |  Yes  | 
-|   `action`   |  An arbitrary shell command that is run as given\.  |  Yes  | 
-|   `runas`   |  A user to run the commands as\. Cfn\-hup uses the su command to switch to the user\.  |  Yes  | 
+| Name | Description | Required |
+| --- | --- | --- |
+|   `hookname`   |  A unique name for this hook *Type*: String  |  Yes  |
+|   `triggers`   |  A comma\-delimited list of conditions to detect\. *Valid values*: `post.add`, `post.update`, or `post.remove` *Example*: `post.add, post.update`  |  Yes  |
+|   `path`   |  The path to the metadata object\. Supports an arbitrarily deep path within the Metadata block\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-hup.html)  |  Yes  |
+|   `action`   |  An arbitrary shell command that is run as given\.  |  Yes  |
+|   `runas`   |  A user to run the commands as\. Cfn\-hup uses the su command to switch to the user\.  |  Yes  |
 
 ## hooks\.d Directory<a name="cfn-hup-hooks-dir"></a>
 
@@ -99,7 +99,7 @@ In the following template snippet, AWS CloudFormation triggers the `cfn-auto-rel
                           "         --configsets wordpress_install ",
                           "         --region ", { "Ref" : "AWS::Region" }, "\n",
                   "runas=root\n"
-                ]]},          
+                ]]},
                 "mode"  : "000400",
                 "owner" : "root",
                 "group" : "root"

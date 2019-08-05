@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SNS::Subscription
-Properties: 
+Properties:
   [DeliveryPolicy](#cfn-sns-subscription-deliverypolicy): Json
   [Endpoint](#cfn-sns-endpoint): String
   [FilterPolicy](#cfn-sns-subscription-filterpolicy): Json
@@ -40,45 +40,45 @@ Properties:
 ## Properties<a name="aws-resource-sns-subscription-properties"></a>
 
 `DeliveryPolicy`  <a name="cfn-sns-subscription-deliverypolicy"></a>
-The JSON serialization of the subscription's delivery policy\. For more information, see ` [GetSubscriptionAttributes](https://docs.aws.amazon.com/sns/latest/api/API_GetSubscriptionAttributes.html) ` in the *Amazon Simple Notification Service API Reference*\.  
-*Required*: No  
-*Type*: Json  
+The JSON serialization of the subscription's delivery policy\. For more information, see ` [GetSubscriptionAttributes](https://docs.aws.amazon.com/sns/latest/api/API_GetSubscriptionAttributes.html) ` in the *Amazon Simple Notification Service API Reference*\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Endpoint`  <a name="cfn-sns-endpoint"></a>
-The subscription's endpoint\. The endpoint value depends on the protocol that you specify\. For more information, see the `Endpoint` parameter of the ` [Subscribe](https://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html) ` action in the *Amazon Simple Notification Service API Reference*\.  
-*Required*: No  
-*Type*: String  
+The subscription's endpoint\. The endpoint value depends on the protocol that you specify\. For more information, see the `Endpoint` parameter of the ` [Subscribe](https://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html) ` action in the *Amazon Simple Notification Service API Reference*\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FilterPolicy`  <a name="cfn-sns-subscription-filterpolicy"></a>
-The filter policy JSON assigned to the subscription\. For more information, see ` [GetSubscriptionAttributes](https://docs.aws.amazon.com/sns/latest/api/API_GetSubscriptionAttributes.html) ` in the *Amazon Simple Notification Service API Reference*\.  
-*Required*: No  
-*Type*: Json  
+The filter policy JSON assigned to the subscription\. For more information, see ` [GetSubscriptionAttributes](https://docs.aws.amazon.com/sns/latest/api/API_GetSubscriptionAttributes.html) ` in the *Amazon Simple Notification Service API Reference*\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Protocol`  <a name="cfn-sns-protocol"></a>
-The subscription's protocol\. For more information, see the `Protocol` parameter of the ` [Subscribe](https://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html) ` action in the *Amazon Simple Notification Service API Reference*\.  
-*Required*: Yes  
-*Type*: String  
+The subscription's protocol\. For more information, see the `Protocol` parameter of the ` [Subscribe](https://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html) ` action in the *Amazon Simple Notification Service API Reference*\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RawMessageDelivery`  <a name="cfn-sns-subscription-rawmessagedelivery"></a>
-When set to `true`, enables raw message delivery\. Raw messages don't contain any JSON formatting and can be sent to Amazon SQS and HTTP/S endpoints\. For more information, see ` [GetSubscriptionAttributes](https://docs.aws.amazon.com/sns/latest/api/API_GetSubscriptionAttributes.html) ` in the *Amazon Simple Notification Service API Reference*\.  
-*Required*: No  
-*Type*: Boolean  
+When set to `true`, enables raw message delivery\. Raw messages don't contain any JSON formatting and can be sent to Amazon SQS and HTTP/S endpoints\. For more information, see ` [GetSubscriptionAttributes](https://docs.aws.amazon.com/sns/latest/api/API_GetSubscriptionAttributes.html) ` in the *Amazon Simple Notification Service API Reference*\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Region`  <a name="cfn-sns-subscription-region"></a>
-For cross\-region subscriptions, the region in which the topic resides\.  
-*Required*: No  
-*Type*: String  
+For cross\-region subscriptions, the region in which the topic resides\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TopicArn`  <a name="topicarn"></a>
-The ARN of the topic to subscribe to\.  
-*Required*: Yes  
-*Type*: String  
+The ARN of the topic to subscribe to\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Examples<a name="aws-resource-sns-subscription--examples"></a>
@@ -115,7 +115,7 @@ MySubscription:
 
 The following example creates a subscription with a filter policy, delivery policy, and raw message delivery enabled\.
 
-**Note**  
+**Note**
 You can set subscription attributes only on standalone Amazon SNS subscriptions \(not on subscriptions nested in topics\)\.
 
 #### YAML<a name="aws-resource-sns-subscription--examples--Create_a_subscription_with_optional_attributes--yaml"></a>
@@ -129,7 +129,7 @@ Resources:
     Type: 'AWS::SNS::Subscription'
     Properties:
       TopicArn: !Ref CarSalesTopic
-      Endpoint: !GetAtt 
+      Endpoint: !GetAtt
         - ERPIntegrationQueue
         - Arn
       Protocol: sqs
@@ -138,7 +138,7 @@ Resources:
     Type: 'AWS::SNS::Subscription'
     Properties:
       TopicArn: !Ref CarSalesTopic
-      Endpoint: !GetAtt 
+      Endpoint: !GetAtt
         - CRMIntegrationQueue
         - Arn
       Protocol: sqs

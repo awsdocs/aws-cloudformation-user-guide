@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-abortincompletemultipartupload-properties"></a>
 
 `DaysAfterInitiation`  <a name="cfn-s3-bucket-abortincompletemultipartupload-daysafterinitiation"></a>
-Specifies the number of days after which Amazon S3 aborts an incomplete multipart upload\.  
-*Required*: Yes  
-*Type*: Integer  
+Specifies the number of days after which Amazon S3 aborts an incomplete multipart upload\.
+*Required*: Yes
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-secretsmanager-rotationschedule-rotationrules-properties"></a>
 
 `AutomaticallyAfterDays`  <a name="cfn-secretsmanager-rotationschedule-rotationrules-automaticallyafterdays"></a>
-Specifies the number of days after the previous rotation before Secrets Manager triggers the next automatic rotation\.  
-You can specify a minimum value of 1 and a maximum value of 1000\.  
-*Required*: No  
-*Type*: Integer  
+Specifies the number of days after the previous rotation before Secrets Manager triggers the next automatic rotation\.
+You can specify a minimum value of 1 and a maximum value of 1000\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-secretsmanager-rotationschedule-rotationrules--seealso"></a>

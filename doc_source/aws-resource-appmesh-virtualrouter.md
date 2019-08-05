@@ -2,7 +2,7 @@
 
 Creates a virtual router within a service mesh\.
 
-Any inbound traffic that your virtual router expects should be specified as a `listener`\. 
+Any inbound traffic that your virtual router expects should be specified as a `listener`\.
 
 Virtual routers handle traffic for one or more virtual services within your mesh\. After you create your virtual router, create and associate routes for your virtual router that direct incoming requests to different virtual nodes\.
 
@@ -28,11 +28,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::AppMesh::VirtualRouter
-Properties: 
+Properties:
   [MeshName](#cfn-appmesh-virtualrouter-meshname): String
-  [Spec](#cfn-appmesh-virtualrouter-spec): 
+  [Spec](#cfn-appmesh-virtualrouter-spec):
     [VirtualRouterSpec](aws-properties-appmesh-virtualrouter-virtualrouterspec.md)
-  [Tags](#cfn-appmesh-virtualrouter-tags): 
+  [Tags](#cfn-appmesh-virtualrouter-tags):
     - [TagRef](aws-properties-appmesh-virtualrouter-tagref.md)
   [VirtualRouterName](#cfn-appmesh-virtualrouter-virtualroutername): String
 ```
@@ -40,27 +40,27 @@ Properties:
 ## Properties<a name="aws-resource-appmesh-virtualrouter-properties"></a>
 
 `MeshName`  <a name="cfn-appmesh-virtualrouter-meshname"></a>
-The name of the service mesh to create the virtual router in\.  
-*Required*: Yes  
-*Type*: String  
+The name of the service mesh to create the virtual router in\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Spec`  <a name="cfn-appmesh-virtualrouter-spec"></a>
-The virtual router specification to apply\.  
-*Required*: Yes  
-*Type*: [VirtualRouterSpec](aws-properties-appmesh-virtualrouter-virtualrouterspec.md)  
+The virtual router specification to apply\.
+*Required*: Yes
+*Type*: [VirtualRouterSpec](aws-properties-appmesh-virtualrouter-virtualrouterspec.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-appmesh-virtualrouter-tags"></a>
-Optional metadata that you can apply to the virtual router to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.  
-*Required*: No  
-*Type*: List of [TagRef](aws-properties-appmesh-virtualrouter-tagref.md)  
+Optional metadata that you can apply to the virtual router to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.
+*Required*: No
+*Type*: List of [TagRef](aws-properties-appmesh-virtualrouter-tagref.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VirtualRouterName`  <a name="cfn-appmesh-virtualrouter-virtualroutername"></a>
-The name to use for the virtual router\.  
-*Required*: Yes  
-*Type*: String  
+The name to use for the virtual router\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-appmesh-virtualrouter-return-values"></a>
@@ -69,7 +69,7 @@ The name to use for the virtual router\.
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ARN\. For example:
 
- `{ "Ref": "myVirtualRouter" }` 
+ `{ "Ref": "myVirtualRouter" }`
 
 When you pass the logical ID of an `AWS::AppMesh::VirtualRouter` resource to the intrinsic Ref function, the function returns the virtual router ARN, such as `arn:aws:appmesh:us-east-1:555555555555:virtualRouter/myVirtualRouter `\.
 

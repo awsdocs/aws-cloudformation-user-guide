@@ -2,7 +2,7 @@
 
 Specifies a configuration set event destination\.
 
-**Note**  
+**Note**
 When you specify an event destination, you must provide one, and only one, destination\. The destination can be CloudWatch, Amazon Kinesis Data Firehose, or Amazon Simple Notification Service \(Amazon SNS\)\.
 
 An event destination is the AWS service to which Amazon SES publishes the email sending events associated with a configuration set\. For information about using configuration sets, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html)\.
@@ -29,24 +29,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SES::ConfigurationSetEventDestination
-Properties: 
+Properties:
   [ConfigurationSetName](#cfn-ses-configurationseteventdestination-configurationsetname): String
-  [EventDestination](#cfn-ses-configurationseteventdestination-eventdestination): 
+  [EventDestination](#cfn-ses-configurationseteventdestination-eventdestination):
     [EventDestination](aws-properties-ses-configurationseteventdestination-eventdestination.md)
 ```
 
 ## Properties<a name="aws-resource-ses-configurationseteventdestination-properties"></a>
 
 `ConfigurationSetName`  <a name="cfn-ses-configurationseteventdestination-configurationsetname"></a>
-The name of the configuration set that contains the event destination that you want to update\.  
-*Required*: Yes  
-*Type*: String  
+The name of the configuration set that contains the event destination that you want to update\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EventDestination`  <a name="cfn-ses-configurationseteventdestination-eventdestination"></a>
-The event destination object that you want to apply to the specified configuration set\.  
-*Required*: Yes  
-*Type*: [EventDestination](aws-properties-ses-configurationseteventdestination-eventdestination.md)  
+The event destination object that you want to apply to the specified configuration set\.
+*Required*: Yes
+*Type*: [EventDestination](aws-properties-ses-configurationseteventdestination-eventdestination.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-ses-configurationseteventdestination--examples"></a>

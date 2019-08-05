@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::OpsWorks::Volume
-Properties: 
+Properties:
   [Ec2VolumeId](#cfn-opsworks-volume-ec2volumeid): String
   [MountPoint](#cfn-opsworks-volume-mountpoint): String
   [Name](#cfn-opsworks-volume-name): String
@@ -34,27 +34,27 @@ Properties:
 ## Properties<a name="aws-resource-opsworks-volume-properties"></a>
 
 `Ec2VolumeId`  <a name="cfn-opsworks-volume-ec2volumeid"></a>
-The Amazon EC2 volume ID\.  
-*Required*: Yes  
-*Type*: String  
+The Amazon EC2 volume ID\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MountPoint`  <a name="cfn-opsworks-volume-mountpoint"></a>
-The volume mount point\. For example, "/mnt/disk1"\.  
-*Required*: No  
-*Type*: String  
+The volume mount point\. For example, "/mnt/disk1"\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-opsworks-volume-name"></a>
-The volume name\.  
-*Required*: No  
-*Type*: String  
+The volume name\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StackId`  <a name="cfn-opsworks-volume-stackid"></a>
-The stack ID\.  
-*Required*: Yes  
-*Type*: String  
+The stack ID\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-opsworks-volume-return-values"></a>

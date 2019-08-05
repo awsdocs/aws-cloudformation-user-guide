@@ -6,7 +6,7 @@ AWS CloudFormation ensures all stack resources are created or deleted as appropr
 
 You can work with stacks by using the AWS CloudFormation [console](https://console.aws.amazon.com/cloudformation/), [API](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/), or [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/cloudformation)\.
 
-**Note**  
+**Note**
 You are charged for the stack resources for the time they were operating \(even if you deleted the stack right away\)\.
 
 **Topics**

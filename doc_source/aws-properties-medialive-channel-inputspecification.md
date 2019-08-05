@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel InputSpecification<a name="aws-properties-medialive-channel-inputspecification"></a>
 
-The input specification for this channel\. It specifies the key characteristics of the inputs for this channel: the maximum bitrate, the resolution, and the codec\. 
+The input specification for this channel\. It specifies the key characteristics of the inputs for this channel: the maximum bitrate, the resolution, and the codec\.
 
 This entity is at the top level in the channel\.
 
@@ -29,19 +29,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-inputspecification-properties"></a>
 
 `Codec`  <a name="cfn-medialive-channel-inputspecification-codec"></a>
-The codec to include in the input specification for this channel\.  
-*Required*: No  
-*Type*: String  
+The codec to include in the input specification for this channel\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumBitrate`  <a name="cfn-medialive-channel-inputspecification-maximumbitrate"></a>
-The maximum input bitrate for any input attached to this channel\.  
-*Required*: No  
-*Type*: String  
+The maximum input bitrate for any input attached to this channel\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Resolution`  <a name="cfn-medialive-channel-inputspecification-resolution"></a>
-The resolution for any input attached to this channel\.  
-*Required*: No  
-*Type*: String  
+The resolution for any input attached to this channel\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

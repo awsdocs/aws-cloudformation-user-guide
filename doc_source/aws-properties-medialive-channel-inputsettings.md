@@ -27,73 +27,73 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-medialive-channel-inputsettings-syntax.yaml"></a>
 
 ```
-  [AudioSelectors](#cfn-medialive-channel-inputsettings-audioselectors): 
+  [AudioSelectors](#cfn-medialive-channel-inputsettings-audioselectors):
     - [AudioSelector](aws-properties-medialive-channel-audioselector.md)
-  [CaptionSelectors](#cfn-medialive-channel-inputsettings-captionselectors): 
+  [CaptionSelectors](#cfn-medialive-channel-inputsettings-captionselectors):
     - [CaptionSelector](aws-properties-medialive-channel-captionselector.md)
   [DeblockFilter](#cfn-medialive-channel-inputsettings-deblockfilter): String
   [DenoiseFilter](#cfn-medialive-channel-inputsettings-denoisefilter): String
   [FilterStrength](#cfn-medialive-channel-inputsettings-filterstrength): Integer
   [InputFilter](#cfn-medialive-channel-inputsettings-inputfilter): String
-  [NetworkInputSettings](#cfn-medialive-channel-inputsettings-networkinputsettings): 
+  [NetworkInputSettings](#cfn-medialive-channel-inputsettings-networkinputsettings):
     [NetworkInputSettings](aws-properties-medialive-channel-networkinputsettings.md)
   [SourceEndBehavior](#cfn-medialive-channel-inputsettings-sourceendbehavior): String
-  [VideoSelector](#cfn-medialive-channel-inputsettings-videoselector): 
+  [VideoSelector](#cfn-medialive-channel-inputsettings-videoselector):
     [VideoSelector](aws-properties-medialive-channel-videoselector.md)
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-inputsettings-properties"></a>
 
 `AudioSelectors`  <a name="cfn-medialive-channel-inputsettings-audioselectors"></a>
-Information about the specific audio to extract from the input\.  
-*Required*: No  
-*Type*: List of [AudioSelector](aws-properties-medialive-channel-audioselector.md)  
+Information about the specific audio to extract from the input\.
+*Required*: No
+*Type*: List of [AudioSelector](aws-properties-medialive-channel-audioselector.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CaptionSelectors`  <a name="cfn-medialive-channel-inputsettings-captionselectors"></a>
-Information about the specific captions to extract from the input\.  
-*Required*: No  
-*Type*: List of [CaptionSelector](aws-properties-medialive-channel-captionselector.md)  
+Information about the specific captions to extract from the input\.
+*Required*: No
+*Type*: List of [CaptionSelector](aws-properties-medialive-channel-captionselector.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeblockFilter`  <a name="cfn-medialive-channel-inputsettings-deblockfilter"></a>
-Enables or disables the deblock filter when filtering\.  
-*Required*: No  
-*Type*: String  
+Enables or disables the deblock filter when filtering\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DenoiseFilter`  <a name="cfn-medialive-channel-inputsettings-denoisefilter"></a>
-Enables or disables the denoise filter when filtering\.  
-*Required*: No  
-*Type*: String  
+Enables or disables the denoise filter when filtering\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FilterStrength`  <a name="cfn-medialive-channel-inputsettings-filterstrength"></a>
-Adjusts the magnitude of filtering from 1 \(minimal\) to 5 \(strongest\)\.  
-*Required*: No  
-*Type*: Integer  
+Adjusts the magnitude of filtering from 1 \(minimal\) to 5 \(strongest\)\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputFilter`  <a name="cfn-medialive-channel-inputsettings-inputfilter"></a>
-Turns on the filter for this input\. MPEG\-2 inputs have the deblocking filter enabled by default\. 1\) auto \- filtering is applied depending on input type/quality 2\) disabled \- no filtering is applied to the input 3\) forced \- filtering is applied regardless of the input type\.  
-*Required*: No  
-*Type*: String  
+Turns on the filter for this input\. MPEG\-2 inputs have the deblocking filter enabled by default\. 1\) auto \- filtering is applied depending on input type/quality 2\) disabled \- no filtering is applied to the input 3\) forced \- filtering is applied regardless of the input type\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkInputSettings`  <a name="cfn-medialive-channel-inputsettings-networkinputsettings"></a>
-Information about how to connect to the upstream system\.  
-*Required*: No  
-*Type*: [NetworkInputSettings](aws-properties-medialive-channel-networkinputsettings.md)  
+Information about how to connect to the upstream system\.
+*Required*: No
+*Type*: [NetworkInputSettings](aws-properties-medialive-channel-networkinputsettings.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceEndBehavior`  <a name="cfn-medialive-channel-inputsettings-sourceendbehavior"></a>
-The loop input if it is a file\.   
-*Required*: No  
-*Type*: String  
+The loop input if it is a file\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VideoSelector`  <a name="cfn-medialive-channel-inputsettings-videoselector"></a>
-Information about one video to extract from the input\.  
-*Required*: No  
-*Type*: [VideoSelector](aws-properties-medialive-channel-videoselector.md)  
+Information about one video to extract from the input\.
+*Required*: No
+*Type*: [VideoSelector](aws-properties-medialive-channel-videoselector.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

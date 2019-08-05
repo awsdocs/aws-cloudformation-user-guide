@@ -25,31 +25,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::NatGateway
-Properties: 
+Properties:
   [AllocationId](#cfn-ec2-natgateway-allocationid): String
   [SubnetId](#cfn-ec2-natgateway-subnetid): String
-  [Tags](#cfn-ec2-natgateway-tags): 
+  [Tags](#cfn-ec2-natgateway-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-ec2-natgateway-properties"></a>
 
 `AllocationId`  <a name="cfn-ec2-natgateway-allocationid"></a>
-The allocation ID of an Elastic IP address to associate with the NAT gateway\. If the Elastic IP address is associated with another resource, you must first disassociate it\.  
-*Required*: Yes  
-*Type*: String  
+The allocation ID of an Elastic IP address to associate with the NAT gateway\. If the Elastic IP address is associated with another resource, you must first disassociate it\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetId`  <a name="cfn-ec2-natgateway-subnetid"></a>
-The public subnet in which to create the NAT gateway\.  
-*Required*: Yes  
-*Type*: String  
+The public subnet in which to create the NAT gateway\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ec2-natgateway-tags"></a>
-The tags \(key–value pairs\) to associate with this resource\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+The tags \(key–value pairs\) to associate with this resource\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-ec2-natgateway-return-values"></a>

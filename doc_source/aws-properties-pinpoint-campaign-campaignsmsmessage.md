@@ -27,19 +27,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-campaign-campaignsmsmessage-properties"></a>
 
 `Body`  <a name="cfn-pinpoint-campaign-campaignsmsmessage-body"></a>
-The body of the SMS message\.  
-*Required*: No  
-*Type*: String  
+The body of the SMS message\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MessageType`  <a name="cfn-pinpoint-campaign-campaignsmsmessage-messagetype"></a>
-The type of SMS message\. Valid values are: `TRANSACTIONAL`, the message is critical or time\-sensitive, such as a one\-time password that supports a customer transaction; and, `PROMOTIONAL`, the message isn't critical or time\-sensitive, such as a marketing message\.  
-*Required*: No  
-*Type*: String  
+The type of SMS message\. Valid values are: `TRANSACTIONAL`, the message is critical or time\-sensitive, such as a one\-time password that supports a customer transaction; and, `PROMOTIONAL`, the message isn't critical or time\-sensitive, such as a marketing message\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SenderId`  <a name="cfn-pinpoint-campaign-campaignsmsmessage-senderid"></a>
-The sender ID to display on recipients' devices when they receive the SMS message\.  
-*Required*: No  
-*Type*: String  
+The sender ID to display on recipients' devices when they receive the SMS message\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

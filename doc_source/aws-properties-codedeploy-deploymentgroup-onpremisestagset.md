@@ -21,15 +21,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-onpremisestagset-syntax.yaml"></a>
 
 ```
-  [OnPremisesTagSetList](#cfn-codedeploy-deploymentgroup-onpremisestagset-onpremisestagsetlist): 
+  [OnPremisesTagSetList](#cfn-codedeploy-deploymentgroup-onpremisestagset-onpremisestagsetlist):
     - [OnPremisesTagSetListObject](aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject.md)
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-onpremisestagset-properties"></a>
 
 `OnPremisesTagSetList`  <a name="cfn-codedeploy-deploymentgroup-onpremisestagset-onpremisestagsetlist"></a>
-A list that contains other lists of on\-premises instance tag groups\. For an instance to be included in the deployment group, it must be identified by all of the tag groups in the list\.  
-Duplicates are not allowed\.   
-*Required*: No  
-*Type*: List of [OnPremisesTagSetListObject](aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject.md)  
+A list that contains other lists of on\-premises instance tag groups\. For an instance to be included in the deployment group, it must be identified by all of the tag groups in the list\.
+Duplicates are not allowed\.
+*Required*: No
+*Type*: List of [OnPremisesTagSetListObject](aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

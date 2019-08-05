@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::RoboMaker::Fleet
-Properties: 
+Properties:
   [Name](#cfn-robomaker-fleet-name): String
   [Tags](#cfn-robomaker-fleet-tags): Json
 ```
@@ -30,25 +30,25 @@ Properties:
 ## Properties<a name="aws-resource-robomaker-fleet-properties"></a>
 
 `Name`  <a name="cfn-robomaker-fleet-name"></a>
-The name of the fleet\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
-*Pattern*: `[a-zA-Z0-9_\-]*`  
+The name of the fleet\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `255`
+*Pattern*: `[a-zA-Z0-9_\-]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-robomaker-fleet-tags"></a>
-The list of all tags added to the fleet\.  
-*Required*: No  
-*Type*: Json  
+The list of all tags added to the fleet\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-robomaker-fleet-return-values"></a>
 
 ### Ref<a name="aws-resource-robomaker-fleet-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::RoboMaker::Fleet` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the fleet, such as `arn:aws:robomaker:us-west-2:123456789012:deployment-fleet/MyFleet/1539894765711`\. 
+When you pass the logical ID of an `AWS::RoboMaker::Fleet` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the fleet, such as `arn:aws:robomaker:us-west-2:123456789012:deployment-fleet/MyFleet/1539894765711`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

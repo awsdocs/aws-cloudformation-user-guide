@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-dvbsubsourcesettings-properties"></a>
 
 `Pid`  <a name="cfn-medialive-channel-dvbsubsourcesettings-pid"></a>
-When using DVB\-Sub with burn\-in or SMPTE\-TT, use this PID for the source content\. It is unused for DVB\-Sub passthrough\. All DVB\-Sub content is passed through, regardless of selectors\.  
-*Required*: No  
-*Type*: Integer  
+When using DVB\-Sub with burn\-in or SMPTE\-TT, use this PID for the source content\. It is unused for DVB\-Sub passthrough\. All DVB\-Sub content is passed through, regardless of selectors\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

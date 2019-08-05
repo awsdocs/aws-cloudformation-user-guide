@@ -4,7 +4,7 @@ Specifies a subnet for a VPC\.
 
 When you create each subnet, you provide the VPC ID and IPv4 CIDR block for the subnet\. After you create a subnet, you can't change its CIDR block\. The size of the subnet's IPv4 CIDR block can be the same as a VPC's IPv4 CIDR block, or a subset of a VPC's IPv4 CIDR block\. If you create more than one subnet in a VPC, the subnets' CIDR blocks must not overlap\. The smallest IPv4 subnet \(and VPC\) you can create uses a /28 netmask \(16 IPv4 addresses\), and the largest uses a /16 netmask \(65,536 IPv4 addresses\)\.
 
-If you've associated an IPv6 CIDR block with your VPC, you can create a subnet with an IPv6 CIDR block that uses a /64 prefix length\. 
+If you've associated an IPv6 CIDR block with your VPC, you can create a subnet with an IPv6 CIDR block that uses a /64 prefix length\.
 
 ## Syntax<a name="aws-resource-ec2-subnet-syntax"></a>
 
@@ -31,13 +31,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::Subnet
-Properties: 
+Properties:
   [AssignIpv6AddressOnCreation](#cfn-ec2-subnet-assignipv6addressoncreation): Boolean
   [AvailabilityZone](#cfn-ec2-subnet-availabilityzone): String
   [CidrBlock](#cfn-ec2-subnet-cidrblock): String
   [Ipv6CidrBlock](#cfn-ec2-subnet-ipv6cidrblock): String
   [MapPublicIpOnLaunch](#cfn-ec2-subnet-mappubliciponlaunch): Boolean
-  [Tags](#cfn-ec2-subnet-tags): 
+  [Tags](#cfn-ec2-subnet-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcId](#cfn-awsec2subnet-prop-vpcid): String
 ```
@@ -45,52 +45,52 @@ Properties:
 ## Properties<a name="aws-resource-ec2-subnet-properties"></a>
 
 `AssignIpv6AddressOnCreation`  <a name="cfn-ec2-subnet-assignipv6addressoncreation"></a>
-Indicates whether a network interface created in this subnet receives an IPv6 address\. The default value is `false`\.   
-If you specify a `true` or `false` value for `AssignIpv6AddressOnCreation`, `Ipv6CidrBlock` must also be specified\.  
+Indicates whether a network interface created in this subnet receives an IPv6 address\. The default value is `false`\.
+If you specify a `true` or `false` value for `AssignIpv6AddressOnCreation`, `Ipv6CidrBlock` must also be specified\.
 If `AssignIpv6AddressOnCreation` is specified, `MapPublicIpOnLaunch` cannot be specified\.
-*Required*: No  
-*Type*: Boolean  
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailabilityZone`  <a name="cfn-ec2-subnet-availabilityzone"></a>
-The Availability Zone of the subnet\.  
+The Availability Zone of the subnet\.
 If you update this property, you must also update the `CidrBlock` property\.
-*Required*: No  
-*Type*: String  
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CidrBlock`  <a name="cfn-ec2-subnet-cidrblock"></a>
-The IPv4 CIDR block assigned to the subnet\.  
-If you update this property, you must also update the `AvailabilityZone` property\.  
-*Required*: Yes  
-*Type*: String  
+The IPv4 CIDR block assigned to the subnet\.
+If you update this property, you must also update the `AvailabilityZone` property\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ipv6CidrBlock`  <a name="cfn-ec2-subnet-ipv6cidrblock"></a>
-The IPv6 CIDR block\.  
-If you specify a `true` or `false` value for `AssignIpv6AddressOnCreation`, `Ipv6CidrBlock` must be specified\.  
-*Required*: No  
-*Type*: String  
+The IPv6 CIDR block\.
+If you specify a `true` or `false` value for `AssignIpv6AddressOnCreation`, `Ipv6CidrBlock` must be specified\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MapPublicIpOnLaunch`  <a name="cfn-ec2-subnet-mappubliciponlaunch"></a>
-Indicates whether instances launched in this subnet receive a public IPv4 address\.  
+Indicates whether instances launched in this subnet receive a public IPv4 address\.
 If `MapPublicIpOnLaunch` is specified\. `AssignIpv6AddressOnCreation` cannot be specified\.
-*Required*: No  
-*Type*: Boolean  
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-ec2-subnet-tags"></a>
-Any tags assigned to the subnet\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+Any tags assigned to the subnet\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcId`  <a name="cfn-awsec2subnet-prop-vpcid"></a>
-The ID of the VPC the subnet is in\.  
+The ID of the VPC the subnet is in\.
 If you update this property, you must also update the `CidrBlock` property\.
-*Required*: Yes  
-*Type*: String  
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-subnet-return-values"></a>
@@ -110,8 +110,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-ec2-subnet-return-values-fn--getatt-fn--getatt"></a>
 
 `AvailabilityZone`  <a name="AvailabilityZone-fn::getatt"></a>
-The Availability Zone of this subnet\. For example:  
- `{ "Fn::GetAtt" : [ "mySubnet", "AvailabilityZone" ] } ` 
+The Availability Zone of this subnet\. For example:
+ `{ "Fn::GetAtt" : [ "mySubnet", "AvailabilityZone" ] } `
 
 `Ipv6CidrBlocks`  <a name="Ipv6CidrBlocks-fn::getatt"></a>
 A list of IPv6 CIDR blocks that are associated with the subnet, such as `[ 2001:db8:1234:1a00::/64 ]`\.

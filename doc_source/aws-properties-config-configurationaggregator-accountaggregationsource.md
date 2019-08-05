@@ -19,29 +19,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-config-configurationaggregator-accountaggregationsource-syntax.yaml"></a>
 
 ```
-  [AccountIds](#cfn-config-configurationaggregator-accountaggregationsource-accountids): 
+  [AccountIds](#cfn-config-configurationaggregator-accountaggregationsource-accountids):
     - String
   [AllAwsRegions](#cfn-config-configurationaggregator-accountaggregationsource-allawsregions): Boolean
-  [AwsRegions](#cfn-config-configurationaggregator-accountaggregationsource-awsregions): 
+  [AwsRegions](#cfn-config-configurationaggregator-accountaggregationsource-awsregions):
     - String
 ```
 
 ## Properties<a name="aws-properties-config-configurationaggregator-accountaggregationsource-properties"></a>
 
 `AccountIds`  <a name="cfn-config-configurationaggregator-accountaggregationsource-accountids"></a>
-The 12\-digit account ID of the account being aggregated\.   
-*Required*: Yes  
-*Type*: List of String  
+The 12\-digit account ID of the account being aggregated\.
+*Required*: Yes
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AllAwsRegions`  <a name="cfn-config-configurationaggregator-accountaggregationsource-allawsregions"></a>
-If true, aggregate existing AWS Config regions and future regions\.  
-*Required*: No  
-*Type*: Boolean  
+If true, aggregate existing AWS Config regions and future regions\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AwsRegions`  <a name="cfn-config-configurationaggregator-accountaggregationsource-awsregions"></a>
-The source regions being aggregated\.  
-*Required*: No  
-*Type*: List of String  
+The source regions being aggregated\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

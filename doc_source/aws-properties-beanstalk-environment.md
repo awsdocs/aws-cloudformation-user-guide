@@ -31,19 +31,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ElasticBeanstalk::Environment
-Properties: 
+Properties:
   [ApplicationName](#cfn-beanstalk-environment-applicationname): String
   [CNAMEPrefix](#cfn-beanstalk-environment-cnameprefix): String
   [Description](#cfn-beanstalk-environment-description): String
   [EnvironmentName](#cfn-beanstalk-environment-name): String
-  [OptionSettings](#cfn-beanstalk-environment-optionsettings): 
+  [OptionSettings](#cfn-beanstalk-environment-optionsettings):
     - [OptionSetting](aws-properties-beanstalk-option-settings.md)
   [PlatformArn](#cfn-beanstalk-environment-platformarn): String
   [SolutionStackName](#cfn-beanstalk-environment-solutionstackname): String
-  [Tags](#cfn-elasticbeanstalk-environment-tags): 
+  [Tags](#cfn-elasticbeanstalk-environment-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TemplateName](#cfn-beanstalk-environment-templatename): String
-  [Tier](#cfn-beanstalk-environment-tier): 
+  [Tier](#cfn-beanstalk-environment-tier):
     [Tier](aws-properties-beanstalk-environment-tier.md)
   [VersionLabel](#cfn-beanstalk-environment-versionlabel): String
 ```
@@ -51,88 +51,88 @@ Properties:
 ## Properties<a name="aws-properties-beanstalk-environment-properties"></a>
 
 `ApplicationName`  <a name="cfn-beanstalk-environment-applicationname"></a>
-The name of the application that is associated with this environment\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
+The name of the application that is associated with this environment\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CNAMEPrefix`  <a name="cfn-beanstalk-environment-cnameprefix"></a>
-If specified, the environment attempts to use this value as the prefix for the CNAME in your Elastic Beanstalk environment URL\. If not specified, the CNAME is generated automatically by appending a random alphanumeric string to the environment name\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `4`  
-*Maximum*: `63`  
+If specified, the environment attempts to use this value as the prefix for the CNAME in your Elastic Beanstalk environment URL\. If not specified, the CNAME is generated automatically by appending a random alphanumeric string to the environment name\.
+*Required*: No
+*Type*: String
+*Minimum*: `4`
+*Maximum*: `63`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-beanstalk-environment-description"></a>
-Your description for this environment\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `200`  
+Your description for this environment\.
+*Required*: No
+*Type*: String
+*Maximum*: `200`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnvironmentName`  <a name="cfn-beanstalk-environment-name"></a>
-A unique name for the environment\.  
-Constraint: Must be from 4 to 40 characters in length\. The name can contain only letters, numbers, and hyphens\. It can't start or end with a hyphen\. This name must be unique within a region in your account\.  
-If you don't specify the `CNAMEPrefix` parameter, the environment name becomes part of the CNAME, and therefore part of the visible URL for your application\.  
-If you don't specify an environment name, AWS CloudFormation generates a unique physical ID and uses that ID for the environment name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
+A unique name for the environment\.
+Constraint: Must be from 4 to 40 characters in length\. The name can contain only letters, numbers, and hyphens\. It can't start or end with a hyphen\. This name must be unique within a region in your account\.
+If you don't specify the `CNAMEPrefix` parameter, the environment name becomes part of the CNAME, and therefore part of the visible URL for your application\.
+If you don't specify an environment name, AWS CloudFormation generates a unique physical ID and uses that ID for the environment name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
-*Required*: No  
-*Type*: String  
-*Minimum*: `4`  
-*Maximum*: `40`  
+*Required*: No
+*Type*: String
+*Minimum*: `4`
+*Maximum*: `40`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OptionSettings`  <a name="cfn-beanstalk-environment-optionsettings"></a>
-Key\-value pairs defining configuration options for this environment, such as the instance type\. These options override the values that are defined in the solution stack or the [configuration template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-beanstalk-configurationtemplate.html)\. If you remove any options during a stack update, the removed options retain their current values\.  
- *Required*: Yes\. The `IamInstanceProfile` option is required\.  
-*Required*: No  
-*Type*: List of [OptionSetting](aws-properties-beanstalk-option-settings.md)  
+Key\-value pairs defining configuration options for this environment, such as the instance type\. These options override the values that are defined in the solution stack or the [configuration template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-beanstalk-configurationtemplate.html)\. If you remove any options during a stack update, the removed options retain their current values\.
+ *Required*: Yes\. The `IamInstanceProfile` option is required\.
+*Required*: No
+*Type*: List of [OptionSetting](aws-properties-beanstalk-option-settings.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PlatformArn`  <a name="cfn-beanstalk-environment-platformarn"></a>
-The Amazon Resource Name \(ARN\) of the custom platform to use with the environment\. For more information, see [ Custom Platforms](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/custom-platforms.html) in the *AWS Elastic Beanstalk Developer Guide*\.  
+The Amazon Resource Name \(ARN\) of the custom platform to use with the environment\. For more information, see [ Custom Platforms](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/custom-platforms.html) in the *AWS Elastic Beanstalk Developer Guide*\.
 If you specify `PlatformArn`, don't specify `SolutionStackName`\.
-*Required*: No  
-*Type*: String  
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SolutionStackName`  <a name="cfn-beanstalk-environment-solutionstackname"></a>
-The name of an Elastic Beanstalk solution stack \(platform version\) to use with the environment\. If specified, Elastic Beanstalk sets the configuration values to the default values associated with the specified solution stack\. For a list of current solution stacks, see [Elastic Beanstalk Supported Platforms](https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platforms-supported.html) in the *AWS Elastic Beanstalk Platforms* guide\.  
+The name of an Elastic Beanstalk solution stack \(platform version\) to use with the environment\. If specified, Elastic Beanstalk sets the configuration values to the default values associated with the specified solution stack\. For a list of current solution stacks, see [Elastic Beanstalk Supported Platforms](https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platforms-supported.html) in the *AWS Elastic Beanstalk Platforms* guide\.
 If you specify `SolutionStackName`, don't specify `PlatformArn` or `TemplateName`\.
-*Required*: No  
-*Type*: String  
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-elasticbeanstalk-environment-tags"></a>
-Specifies the tags applied to resources in the environment\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+Specifies the tags applied to resources in the environment\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TemplateName`  <a name="cfn-beanstalk-environment-templatename"></a>
-The name of the Elastic Beanstalk configuration template to use with the environment\.  
+The name of the Elastic Beanstalk configuration template to use with the environment\.
 If you specify `TemplateName`, then don't specify `SolutionStackName`\.
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tier`  <a name="cfn-beanstalk-environment-tier"></a>
-Specifies the tier to use in creating this environment\. The environment tier that you choose determines whether Elastic Beanstalk provisions resources to support a web application that handles HTTP\(S\) requests or a web application that handles background\-processing tasks\.  
-*Required*: No  
+Specifies the tier to use in creating this environment\. The environment tier that you choose determines whether Elastic Beanstalk provisions resources to support a web application that handles HTTP\(S\) requests or a web application that handles background\-processing tasks\.
+*Required*: No
 *Type*: [Tier](aws-properties-beanstalk-environment-tier.md)
 
 `VersionLabel`  <a name="cfn-beanstalk-environment-versionlabel"></a>
-The name of the application version to deploy\.  
-Default: If not specified, Elastic Beanstalk attempts to deploy the sample application\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
+The name of the application version to deploy\.
+Default: If not specified, Elastic Beanstalk attempts to deploy the sample application\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-properties-beanstalk-environment-return-values"></a>
@@ -152,11 +152,11 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-properties-beanstalk-environment-return-values-fn--getatt-fn--getatt"></a>
 
 `EndpointURL`  <a name="EndpointURL-fn::getatt"></a>
-For load\-balanced, autoscaling environments, the URL to the load balancer\. For single\-instance environments, the IP address of the instance\.  
-Example load balancer URL:  
- `awseb-myst-myen-132MQC4KRLAMD-1371280482.us-east-2.elb.amazonaws.com`     
-Example instance IP address:  
- `192.0.2.0` 
+For load\-balanced, autoscaling environments, the URL to the load balancer\. For single\-instance environments, the IP address of the instance\.
+Example load balancer URL:
+ `awseb-myst-myen-132MQC4KRLAMD-1371280482.us-east-2.elb.amazonaws.com`
+Example instance IP address:
+ `192.0.2.0`
 
 ## Examples<a name="aws-properties-beanstalk-environment--examples"></a>
 
@@ -181,8 +181,8 @@ Example instance IP address:
 
 ```
 Type: AWS::ElasticBeanstalk::Environment
-Properties: 
-  ApplicationName: 
+Properties:
+  ApplicationName:
     Ref: sampleApplication
   Description: "AWS Elastic Beanstalk Environment running PHP Sample Application"
   EnvironmentName: SamplePHPEnvironment
@@ -216,17 +216,17 @@ Properties:
 
 ```
 Type: AWS::ElasticBeanstalk::Environment
-Properties: 
-  ApplicationName: 
+Properties:
+  ApplicationName:
     Ref: sampleApplication
   Description: "AWS Elastic Beanstalk Environment running Python Sample Application"
   EnvironmentName: SamplePythonEnvironment
   SolutionStackName: "64bit Amazon Linux 2017.03 v2.5.0 running Python 2.7"
-  OptionSettings: 
-    - 
+  OptionSettings:
+    -
       Namespace: "aws:autoscaling:launchconfiguration"
       OptionName: EC2KeyName
-      Value: 
+      Value:
         Ref: KeyName
   VersionLabel: "Initial Version"
 ```
@@ -571,7 +571,7 @@ Resources:
       ApplicationVersions:
         - Description: Version 1.0
           SourceBundle:
-            S3Bucket: !Join 
+            S3Bucket: !Join
               - ''
               - - elasticbeanstalk-samples-
                 - !Ref 'AWS::Region'
@@ -661,27 +661,27 @@ Resources:
                   - 's3:PutObject'
                 Effect: Allow
                 Resource:
-                  - !Join 
+                  - !Join
                     - ''
                     - - 'arn:'
                       - !Ref Partition
                       - ':s3:::elasticbeanstalk-*-'
                       - !Ref 'AWS::AccountId'
-                  - !Join 
+                  - !Join
                     - ''
                     - - 'arn:'
                       - !Ref Partition
                       - ':s3:::elasticbeanstalk-*-'
                       - !Ref 'AWS::AccountId'
                       - /*
-                  - !Join 
+                  - !Join
                     - ''
                     - - 'arn:'
                       - !Ref Partition
                       - ':s3:::elasticbeanstalk-*-'
                       - !Ref 'AWS::AccountId'
                       - '-*'
-                  - !Join 
+                  - !Join
                     - ''
                     - - 'arn:'
                       - !Ref Partition
@@ -720,7 +720,7 @@ Resources:
                   - 'dynamodb:UpdateItem'
                 Effect: Allow
                 Resource:
-                  - !Join 
+                  - !Join
                     - ''
                     - - 'arn:'
                       - !Ref Partition
@@ -736,6 +736,6 @@ Resources:
 ```
 
 ## See Also<a name="aws-properties-beanstalk-environment--seealso"></a>
-+  [Creating an AWS Elastic Beanstalk Environment](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.environments.html) in the *AWS Elastic Beanstalk Developer Guide* 
-+  [Managing Environments](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.managing.html) in the *AWS Elastic Beanstalk Developer Guide* 
++  [Creating an AWS Elastic Beanstalk Environment](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.environments.html) in the *AWS Elastic Beanstalk Developer Guide*
++  [Managing Environments](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.managing.html) in the *AWS Elastic Beanstalk Developer Guide*
 + For a complete Elastic Beanstalk sample template, see [Elastic Beanstalk Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-elasticbeanstalk.html)\.

@@ -21,29 +21,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ApiId](#cfn-apigateway-usageplan-apistage-apiid): String
   [Stage](#cfn-apigateway-usageplan-apistage-stage): String
-  [Throttle](#cfn-apigateway-usageplan-apistage-throttle): 
+  [Throttle](#cfn-apigateway-usageplan-apistage-throttle):
     Key : Value
 ```
 
 ## Properties<a name="aws-properties-apigateway-usageplan-apistage-properties"></a>
 
 `ApiId`  <a name="cfn-apigateway-usageplan-apistage-apiid"></a>
-The ID of an API that is in the specified `Stage` property that you want to associate with the usage plan\.  
-*Required*: No  
-*Type*: String  
+The ID of an API that is in the specified `Stage` property that you want to associate with the usage plan\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Stage`  <a name="cfn-apigateway-usageplan-apistage-stage"></a>
-The name of the stage to associate with the usage plan\.  
-*Required*: No  
-*Type*: String  
+The name of the stage to associate with the usage plan\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Throttle`  <a name="cfn-apigateway-usageplan-apistage-throttle"></a>
-Map containing method\-level throttling information for API stage in a usage plan\.  
-Duplicates are not allowed\.  
-*Required*: No  
-*Type*: Map of [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)  
+Map containing method\-level throttling information for API stage in a usage plan\.
+Duplicates are not allowed\.
+*Required*: No
+*Type*: Map of [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-apigateway-usageplan-apistage--seealso"></a>

@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-syntax.yaml"></a>
 
 ```
-  [ReferenceSchema](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-referenceschema): 
+  [ReferenceSchema](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-referenceschema):
     [ReferenceSchema](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.md)
-  [S3ReferenceDataSource](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-s3referencedatasource): 
+  [S3ReferenceDataSource](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-s3referencedatasource):
     [S3ReferenceDataSource](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource.md)
   [TableName](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-tablename): String
 ```
@@ -29,24 +29,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-properties"></a>
 
 `ReferenceSchema`  <a name="cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-referenceschema"></a>
-Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in\-application stream\.  
-*Required*: Yes  
-*Type*: [ReferenceSchema](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.md)  
+Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in\-application stream\.
+*Required*: Yes
+*Type*: [ReferenceSchema](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3ReferenceDataSource`  <a name="cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-s3referencedatasource"></a>
-Identifies the S3 bucket and object that contains the reference data\. A Kinesis Data Analytics application loads reference data only once\. If the data changes, you call the [UpdateApplication](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_UpdateApplication.html) operation to trigger reloading of data into your application\.   
-*Required*: No  
-*Type*: [S3ReferenceDataSource](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource.md)  
+Identifies the S3 bucket and object that contains the reference data\. A Kinesis Data Analytics application loads reference data only once\. If the data changes, you call the [UpdateApplication](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_UpdateApplication.html) operation to trigger reloading of data into your application\.
+*Required*: No
+*Type*: [S3ReferenceDataSource](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TableName`  <a name="cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-tablename"></a>
-The name of the in\-application table to create\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `32`  
+The name of the in\-application table to create\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `32`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See Also<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource--seealso"></a>
-+  [ReferenceDataSource](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ReferenceDataSource.html) in the *Amazon Kinesis Data Analytics API Reference* 
++  [ReferenceDataSource](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ReferenceDataSource.html) in the *Amazon Kinesis Data Analytics API Reference*

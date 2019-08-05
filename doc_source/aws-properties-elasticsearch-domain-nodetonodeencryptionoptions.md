@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticsearch-domain-nodetonodeencryptionoptions-properties"></a>
 
 `Enabled`  <a name="cfn-elasticsearch-domain-nodetonodeencryptionoptions-enabled"></a>
-Specifies whether node\-to\-node encryption is enabled, as a Boolean\.  
-*Required*: No  
-*Type*: Boolean  
+Specifies whether node\-to\-node encryption is enabled, as a Boolean\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

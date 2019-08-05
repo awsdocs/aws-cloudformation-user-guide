@@ -1,6 +1,6 @@
 # AWS::ServiceDiscovery::HttpNamespace<a name="aws-resource-servicediscovery-httpnamespace"></a>
 
-The `HttpNamespace` resource is a Cloud Map resource type that contains information about an HTTP namespace\. Service instances that you register using an HTTP namespace can be discovered using a `DiscoverInstances` request but can't be discovered using DNS\. 
+The `HttpNamespace` resource is a Cloud Map resource type that contains information about an HTTP namespace\. Service instances that you register using an HTTP namespace can be discovered using a `DiscoverInstances` request but can't be discovered using DNS\.
 
 For the current limit on the number of namespaces that you can create using the same AWS account, see [AWS Cloud Map Limits](https://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html) in the *AWS Cloud Map Developer Guide*\.
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ServiceDiscovery::HttpNamespace
-Properties: 
+Properties:
   [Description](#cfn-servicediscovery-httpnamespace-description): String
   [Name](#cfn-servicediscovery-httpnamespace-name): String
 ```
@@ -32,17 +32,17 @@ Properties:
 ## Properties<a name="aws-resource-servicediscovery-httpnamespace-properties"></a>
 
 `Description`  <a name="cfn-servicediscovery-httpnamespace-description"></a>
-A description for the namespace\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `1024`  
+A description for the namespace\.
+*Required*: No
+*Type*: String
+*Maximum*: `1024`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-servicediscovery-httpnamespace-name"></a>
-The name that you want to assign to this namespace\.  
-*Required*: Yes  
-*Type*: String  
-*Maximum*: `1024`  
+The name that you want to assign to this namespace\.
+*Required*: Yes
+*Type*: String
+*Maximum*: `1024`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-servicediscovery-httpnamespace-return-values"></a>
@@ -95,4 +95,4 @@ Properties:
 ```
 
 ## See Also<a name="aws-resource-servicediscovery-httpnamespace--seealso"></a>
-+  [CreateHttpNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateHttpNamespace.html) in the *AWS Cloud Map API Reference* 
++  [CreateHttpNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateHttpNamespace.html) in the *AWS Cloud Map API Reference*

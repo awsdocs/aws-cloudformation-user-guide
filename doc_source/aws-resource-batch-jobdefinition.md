@@ -27,16 +27,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Batch::JobDefinition
-Properties: 
-  [ContainerProperties](#cfn-batch-jobdefinition-containerproperties): 
+Properties:
+  [ContainerProperties](#cfn-batch-jobdefinition-containerproperties):
     [ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md)
   [JobDefinitionName](#cfn-batch-jobdefinition-jobdefinitionname): String
-  [NodeProperties](#cfn-batch-jobdefinition-nodeproperties): 
+  [NodeProperties](#cfn-batch-jobdefinition-nodeproperties):
     [NodeProperties](aws-properties-batch-jobdefinition-nodeproperties.md)
   [Parameters](#cfn-batch-jobdefinition-parameters): Json
-  [RetryStrategy](#cfn-batch-jobdefinition-retrystrategy): 
+  [RetryStrategy](#cfn-batch-jobdefinition-retrystrategy):
     [RetryStrategy](aws-properties-batch-jobdefinition-retrystrategy.md)
-  [Timeout](#cfn-batch-jobdefinition-timeout): 
+  [Timeout](#cfn-batch-jobdefinition-timeout):
     [Timeout](aws-properties-batch-jobdefinition-timeout.md)
   [Type](#cfn-batch-jobdefinition-type): String
 ```
@@ -44,45 +44,45 @@ Properties:
 ## Properties<a name="aws-resource-batch-jobdefinition-properties"></a>
 
 `ContainerProperties`  <a name="cfn-batch-jobdefinition-containerproperties"></a>
-An object with various properties specific to container\-based jobs\.   
-*Required*: No  
-*Type*: [ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md)  
+An object with various properties specific to container\-based jobs\.
+*Required*: No
+*Type*: [ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JobDefinitionName`  <a name="cfn-batch-jobdefinition-jobdefinitionname"></a>
-The name of the job definition\.   
-*Required*: No  
-*Type*: String  
+The name of the job definition\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NodeProperties`  <a name="cfn-batch-jobdefinition-nodeproperties"></a>
-An object with various properties specific to multi\-node parallel jobs\.  
-*Required*: No  
-*Type*: [NodeProperties](aws-properties-batch-jobdefinition-nodeproperties.md)  
+An object with various properties specific to multi\-node parallel jobs\.
+*Required*: No
+*Type*: [NodeProperties](aws-properties-batch-jobdefinition-nodeproperties.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parameters`  <a name="cfn-batch-jobdefinition-parameters"></a>
-Default parameters or parameter substitution placeholders that are set in the job definition\. Parameters are specified as a key\-value pair mapping\. Parameters in a `SubmitJob` request override any corresponding parameter defaults from the job definition\. For more information about specifying parameters, see [Job Definition Parameters](https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html) in the *AWS Batch User Guide*\.  
-*Required*: No  
-*Type*: Json  
+Default parameters or parameter substitution placeholders that are set in the job definition\. Parameters are specified as a key\-value pair mapping\. Parameters in a `SubmitJob` request override any corresponding parameter defaults from the job definition\. For more information about specifying parameters, see [Job Definition Parameters](https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html) in the *AWS Batch User Guide*\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetryStrategy`  <a name="cfn-batch-jobdefinition-retrystrategy"></a>
-The retry strategy to use for failed jobs that are submitted with this job definition\.  
-*Required*: No  
-*Type*: [RetryStrategy](aws-properties-batch-jobdefinition-retrystrategy.md)  
+The retry strategy to use for failed jobs that are submitted with this job definition\.
+*Required*: No
+*Type*: [RetryStrategy](aws-properties-batch-jobdefinition-retrystrategy.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Timeout`  <a name="cfn-batch-jobdefinition-timeout"></a>
-The timeout configuration for jobs that are submitted with this job definition\. You can specify a timeout duration after which AWS Batch terminates your jobs if they have not finished\.  
-*Required*: No  
-*Type*: [Timeout](aws-properties-batch-jobdefinition-timeout.md)  
+The timeout configuration for jobs that are submitted with this job definition\. You can specify a timeout duration after which AWS Batch terminates your jobs if they have not finished\.
+*Required*: No
+*Type*: [Timeout](aws-properties-batch-jobdefinition-timeout.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-batch-jobdefinition-type"></a>
-The type of job definition\.  
-*Required*: Yes  
-*Type*: String  
+The type of job definition\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-batch-jobdefinition-return-values"></a>

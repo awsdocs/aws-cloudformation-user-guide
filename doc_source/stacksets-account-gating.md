@@ -33,7 +33,7 @@ The following list describes setup requirements for account gating\.
 The following sample AWS CloudFormation templates are available for you to create Lambda **AWSCloudFormationStackSetAccountGate** functions\. For more information about how to create a new stack using either of these templates, see [Creating a Stack](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-create-stack.html) in this guide\.
 
 
-|  Template Location  |  Description  | 
-| --- | --- | 
-|  [https://s3\.amazonaws\.com/cloudformation\-stackset\-templates\-us\-east\-1/cloudformation\-stack\-set\-accountgate\-succeeded\.template](https://s3.amazonaws.com/cloudformation-stackset-templates-us-east-1/cloudformation-stack-set-accountgate-succeeded.template)  |  Creates a stack that implements a Lambda account gate function that will return a status of `SUCCEEDED`\.  | 
-|  [https://s3\.amazonaws\.com/cloudformation\-stackset\-templates\-us\-east\-1/cloudformation\-stack\-set\-accountgate\-failed\.template](https://s3.amazonaws.com/cloudformation-stackset-templates-us-east-1/cloudformation-stack-set-accountgate-failed.template)  |  Creates a stack that implements a Lambda account gate function that will return a status of `FAILED`\.  | 
+|  Template Location  |  Description  |
+| --- | --- |
+|  [https://s3\.amazonaws\.com/cloudformation\-stackset\-templates\-us\-east\-1/cloudformation\-stack\-set\-accountgate\-succeeded\.template](https://s3.amazonaws.com/cloudformation-stackset-templates-us-east-1/cloudformation-stack-set-accountgate-succeeded.template)  |  Creates a stack that implements a Lambda account gate function that will return a status of `SUCCEEDED`\.  |
+|  [https://s3\.amazonaws\.com/cloudformation\-stackset\-templates\-us\-east\-1/cloudformation\-stack\-set\-accountgate\-failed\.template](https://s3.amazonaws.com/cloudformation-stackset-templates-us-east-1/cloudformation-stack-set-accountgate-failed.template)  |  Creates a stack that implements a Lambda account gate function that will return a status of `FAILED`\.  |

@@ -2,7 +2,7 @@
 
 The `LogConfig` property type specifies the logging configuration when writing GraphQL operations and tracing to Amazon CloudWatch for a AWS AppSync GraphQL API\.
 
- `LogConfig` is a property of the [AWS::AppSync::GraphQLApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html) property type\. 
+ `LogConfig` is a property of the [AWS::AppSync::GraphQLApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html) property type\.
 
 ## Syntax<a name="aws-properties-appsync-graphqlapi-logconfig-syntax"></a>
 
@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appsync-graphqlapi-logconfig-properties"></a>
 
 `CloudWatchLogsRoleArn`  <a name="cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn"></a>
-The service role that AWS AppSync will assume to publish to Amazon CloudWatch Logs in your account\.   
-*Required*: No  
-*Type*: String  
+The service role that AWS AppSync will assume to publish to Amazon CloudWatch Logs in your account\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldLogLevel`  <a name="cfn-appsync-graphqlapi-logconfig-fieldloglevel"></a>
-The field logging level\. Values can be NONE, ERROR, or ALL\.   
+The field logging level\. Values can be NONE, ERROR, or ALL\.
 +  **NONE**: No field\-level logs are captured\.
 +  **ERROR**: Logs the following information only for the fields that are in error:
   + The error section in the server response\.
@@ -42,6 +42,6 @@ The field logging level\. Values can be NONE, ERROR, or ALL\.
 +  **ALL**: The following information is logged for all fields in the query:
   + Field\-level tracing information\.
   + The generated request/response functions that got resolved for each field\.
-*Required*: No  
-*Type*: String  
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

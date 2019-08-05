@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotevents-detectormodel-cleartimer-properties"></a>
 
 `TimerName`  <a name="cfn-iotevents-detectormodel-cleartimer-timername"></a>
-The name of the timer\.  
-*Required*: No  
-*Type*: String  
+The name of the timer\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

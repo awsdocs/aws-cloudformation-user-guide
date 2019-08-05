@@ -23,11 +23,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-elb-policy-syntax.yaml"></a>
 
 ```
-  [Attributes](#cfn-ec2-elb-policy-attributes): 
+  [Attributes](#cfn-ec2-elb-policy-attributes):
     - Json
-  [InstancePorts](#cfn-ec2-elb-policy-instanceports): 
+  [InstancePorts](#cfn-ec2-elb-policy-instanceports):
     - String
-  [LoadBalancerPorts](#cfn-ec2-elb-policy-loadbalancerports): 
+  [LoadBalancerPorts](#cfn-ec2-elb-policy-loadbalancerports):
     - String
   [PolicyName](#cfn-ec2-elb-policy-policyname): String
   [PolicyType](#cfn-ec2-elb-policy-policytype): String
@@ -36,34 +36,34 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-elb-policy-properties"></a>
 
 `Attributes`  <a name="cfn-ec2-elb-policy-attributes"></a>
-The policy attributes\.  
-*Required*: Yes  
-*Type*: List of Json  
+The policy attributes\.
+*Required*: Yes
+*Type*: List of Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstancePorts`  <a name="cfn-ec2-elb-policy-instanceports"></a>
-The instance ports for the policy\. Required only for some policy types\.  
-*Required*: No  
-*Type*: List of String  
+The instance ports for the policy\. Required only for some policy types\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoadBalancerPorts`  <a name="cfn-ec2-elb-policy-loadbalancerports"></a>
-The load balancer ports for the policy\. Required only for some policy types\.  
-*Required*: No  
-*Type*: List of String  
+The load balancer ports for the policy\. Required only for some policy types\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyName`  <a name="cfn-ec2-elb-policy-policyname"></a>
-The name of the policy\.  
-*Required*: Yes  
-*Type*: String  
+The name of the policy\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyType`  <a name="cfn-ec2-elb-policy-policytype"></a>
-The name of the policy type\.  
-*Required*: Yes  
-*Type*: String  
+The name of the policy type\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-ec2-elb-policy--seealso"></a>
-+  [CreateLoadBalancerPolicy](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateLoadBalancerPolicy.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)* 
++  [CreateLoadBalancerPolicy](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateLoadBalancerPolicy.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)*

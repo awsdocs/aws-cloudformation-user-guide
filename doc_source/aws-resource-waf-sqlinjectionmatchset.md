@@ -22,26 +22,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::WAF::SqlInjectionMatchSet
-Properties: 
+Properties:
   [Name](#cfn-waf-sqlinjectionmatchset-name): String
-  [SqlInjectionMatchTuples](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples): 
+  [SqlInjectionMatchTuples](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples):
     - [SqlInjectionMatchTuple](aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.md)
 ```
 
 ## Properties<a name="aws-resource-waf-sqlinjectionmatchset-properties"></a>
 
 `Name`  <a name="cfn-waf-sqlinjectionmatchset-name"></a>
-The name, if any, of the `SqlInjectionMatchSet`\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
+The name, if any, of the `SqlInjectionMatchSet`\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SqlInjectionMatchTuples`  <a name="cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples"></a>
-Specifies the parts of web requests that you want to inspect for snippets of malicious SQL code\.  
-*Required*: No  
-*Type*: List of [SqlInjectionMatchTuple](aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.md)  
+Specifies the parts of web requests that you want to inspect for snippets of malicious SQL code\.
+*Required*: No
+*Type*: List of [SqlInjectionMatchTuple](aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-waf-sqlinjectionmatchset-return-values"></a>
@@ -80,13 +80,13 @@ The following example looks for snippets of SQL code in the query string of an H
 #### YAML<a name="aws-resource-waf-sqlinjectionmatchset--examples--Find_SQL_Injections--yaml"></a>
 
 ```
-SqlInjDetection: 
+SqlInjDetection:
   Type: "AWS::WAF::SqlInjectionMatchSet"
-  Properties: 
+  Properties:
     Name: "Find SQL injections in the query string"
-    SqlInjectionMatchTuples: 
-      - 
-        FieldToMatch: 
+    SqlInjectionMatchTuples:
+      -
+        FieldToMatch:
           Type: "QUERY_STRING"
 TextTransformation: "URL_DECODE"
 ```
@@ -117,14 +117,14 @@ The following example associates the `SqlInjDetection` match set with a web acce
 #### YAML<a name="aws-resource-waf-sqlinjectionmatchset--examples--Associate_a_SQL_Injection_Match_Set_with_a_Web_ACL_Rule--yaml"></a>
 
 ```
-SqlInjRule: 
+SqlInjRule:
   Type: "AWS::WAF::Rule"
-  Properties: 
+  Properties:
     Name: "SqlInjRule"
     MetricName: "SqlInjRule"
-    Predicates: 
-      - 
-        DataId: 
+    Predicates:
+      -
+        DataId:
           Ref: "SqlInjDetection"
         Negated: false
 Type: "SqlInjectionMatch"
@@ -161,18 +161,18 @@ The following example associates the `SqlInjRule` rule with a web ACL\. The web 
 #### YAML<a name="aws-resource-waf-sqlinjectionmatchset--examples--Create_a_Web_ACL--yaml"></a>
 
 ```
-MyWebACL: 
+MyWebACL:
   Type: "AWS::WAF::WebACL"
-  Properties: 
+  Properties:
     Name: "Web ACL to block SQL injection in the query string"
-    DefaultAction: 
+    DefaultAction:
       Type: "ALLOW"
     MetricName: "SqlInjWebACL"
-    Rules: 
-      - 
-        Action: 
+    Rules:
+      -
+        Action:
           Type: "BLOCK"
         Priority: 1
-        RuleId: 
+        RuleId:
 Ref: "SqlInjRule"
 ```

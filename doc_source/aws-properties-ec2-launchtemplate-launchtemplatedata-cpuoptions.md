@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-cpuoptions-properties"></a>
 
 `CoreCount`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions-corecount"></a>
-The number of CPU cores for the instance\.  
-*Required*: No  
-*Type*: Integer  
+The number of CPU cores for the instance\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThreadsPerCore`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions-threadspercore"></a>
-The number of CPU cores for the instance\.  
-*Required*: No  
-*Type*: Integer  
+The number of CPU cores for the instance\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -6,7 +6,7 @@ Resource names must be unique across all of your active stacks\. If you reuse te
 
 Also, do not manage stack resources outside of AWS CloudFormation\. For example, if you rename a resource that's part of a stack without using AWS CloudFormation, you might get an error any time you try to update or delete that stack\.
 
-**Important**  
+**Important**
 You can't perform an update that causes a custom\-named resource to be replaced\. If you must replace the resource, specify a new name\.
 
 ## Example<a name="aws-properties-name-example"></a>
@@ -41,17 +41,17 @@ If you want to use a custom name, specify a name property for that resource in y
 ### YAML<a name="aws-properties-name-example.yaml"></a>
 
 ```
-myDynamoDBTable: 
+myDynamoDBTable:
   Type: AWS::DynamoDB::Table
-  Properties: 
-    KeySchema: 
-      HashKeyElement: 
+  Properties:
+    KeySchema:
+      HashKeyElement:
         AttributeName: "AttributeName1"
         AttributeType: "S"
-      RangeKeyElement: 
+      RangeKeyElement:
         AttributeName: "AttributeName2"
         AttributeType: "N"
-    ProvisionedThroughput: 
+    ProvisionedThroughput:
       ReadCapacityUnits: "5"
       WriteCapacityUnits: "10"
     TableName: "SampleTable"

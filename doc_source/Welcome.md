@@ -12,7 +12,7 @@ Instead, you can create or modify an existing AWS CloudFormation template\. A te
 
 If your application requires additional availability, you might replicate it in multiple regions so that if one region becomes unavailable, your users can still use your application in other regions\. The challenge in replicating your application is that it also requires you to replicate your resources\. Not only do you need to record all the resources that your application requires, but you must also provision and configure those resources in each region\.
 
-When you use AWS CloudFormation, you can reuse your template to set up your resources consistently and repeatedly\. Just describe your resources once and then provision the same resources over and over in multiple regions\. 
+When you use AWS CloudFormation, you can reuse your template to set up your resources consistently and repeatedly\. Just describe your resources once and then provision the same resources over and over in multiple regions\.
 
 ## Easily Control and Track Changes to Your Infrastructure<a name="w4784ab1b5b9"></a>
 

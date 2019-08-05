@@ -2,8 +2,8 @@
 
 The `AWS::Greengrass::FunctionDefinitionVersion` resource represents a function definition version for AWS IoT Greengrass\. A function definition version contains contain a list of functions\.
 
-**Note**  
-To create a function definition version, you must specify the ID of the function definition that you want to associate with the version\. For information about creating a function definition, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinition.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinition.html)\.  
+**Note**
+To create a function definition version, you must specify the ID of the function definition that you want to associate with the version\. For information about creating a function definition, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinition.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinition.html)\.
 After you create a function definition version that contains the functions you want to deploy, you must add it to your group version\. For more information, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)\.
 
 ## Syntax<a name="aws-resource-greengrass-functiondefinitionversion-syntax"></a>
@@ -27,39 +27,39 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Greengrass::FunctionDefinitionVersion
-Properties: 
-  [DefaultConfig](#cfn-greengrass-functiondefinitionversion-defaultconfig): 
+Properties:
+  [DefaultConfig](#cfn-greengrass-functiondefinitionversion-defaultconfig):
     [DefaultConfig](aws-properties-greengrass-functiondefinitionversion-defaultconfig.md)
   [FunctionDefinitionId](#cfn-greengrass-functiondefinitionversion-functiondefinitionid): String
-  [Functions](#cfn-greengrass-functiondefinitionversion-functions): 
+  [Functions](#cfn-greengrass-functiondefinitionversion-functions):
     - [Function](aws-properties-greengrass-functiondefinitionversion-function.md)
 ```
 
 ## Properties<a name="aws-resource-greengrass-functiondefinitionversion-properties"></a>
 
 `DefaultConfig`  <a name="cfn-greengrass-functiondefinitionversion-defaultconfig"></a>
-The default configuration that applies to all Lambda functions in the group\. Individual Lambda functions can override these settings\.  
-*Required*: No  
-*Type*: [DefaultConfig](aws-properties-greengrass-functiondefinitionversion-defaultconfig.md)  
+The default configuration that applies to all Lambda functions in the group\. Individual Lambda functions can override these settings\.
+*Required*: No
+*Type*: [DefaultConfig](aws-properties-greengrass-functiondefinitionversion-defaultconfig.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FunctionDefinitionId`  <a name="cfn-greengrass-functiondefinitionversion-functiondefinitionid"></a>
-The ID of the function definition associated with this version\. This value is a GUID\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the function definition associated with this version\. This value is a GUID\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Functions`  <a name="cfn-greengrass-functiondefinitionversion-functions"></a>
-The functions in this version\.  
-*Required*: Yes  
-*Type*: List of [Function](aws-properties-greengrass-functiondefinitionversion-function.md)  
+The functions in this version\.
+*Required*: Yes
+*Type*: List of [Function](aws-properties-greengrass-functiondefinitionversion-function.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-greengrass-functiondefinitionversion-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-functiondefinitionversion-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the function definition version, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/functions/1234a5b6-78cd-901e-2fgh-3i45j6k178l9/versions/9876ac30-4bdb-4f9d-95af-b5fdb66be1a2`\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the function definition version, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/functions/1234a5b6-78cd-901e-2fgh-3i45j6k178l9/versions/9876ac30-4bdb-4f9d-95af-b5fdb66be1a2`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -146,7 +146,7 @@ TestFunctionDefinition:
 TestFunctionDefinitionVersion:
   Type: 'AWS::Greengrass::FunctionDefinitionVersion'
   Properties:
-    FunctionDefinitionId: !GetAtt 
+    FunctionDefinitionId: !GetAtt
       - TestFunctionDefinition
       - Id
     DefaultConfig:
@@ -178,5 +178,5 @@ TestFunctionDefinitionVersion:
 ```
 
 ## See Also<a name="aws-resource-greengrass-functiondefinitionversion--seealso"></a>
-+  [CreateFunctionDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createfunctiondefinitionversion-post.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [CreateFunctionDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createfunctiondefinitionversion-post.html) in the * AWS IoT Greengrass API Reference *
++  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)

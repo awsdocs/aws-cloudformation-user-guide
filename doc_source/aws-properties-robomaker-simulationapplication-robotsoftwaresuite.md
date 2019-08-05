@@ -25,15 +25,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-robomaker-simulationapplication-robotsoftwaresuite-properties"></a>
 
 `Name`  <a name="cfn-robomaker-simulationapplication-robotsoftwaresuite-name"></a>
-The name of the robot software suite\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `ROS`  
+The name of the robot software suite\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `ROS`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-robomaker-simulationapplication-robotsoftwaresuite-version"></a>
-The version of the robot software suite\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `Kinetic`  
+The version of the robot software suite\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `Kinetic`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -24,8 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPNGatewayRoutePropagation
-Properties: 
-  [RouteTableIds](#cfn-ec2-vpngatewayrouteprop-routetableids): 
+Properties:
+  [RouteTableIds](#cfn-ec2-vpngatewayrouteprop-routetableids):
     - String
   [VpnGatewayId](#cfn-ec2-vpngatewayrouteprop-vpngatewayid): String
 ```
@@ -33,15 +33,15 @@ Properties:
 ## Properties<a name="aws-resource-ec2-vpn-gatewayrouteprop-properties"></a>
 
 `RouteTableIds`  <a name="cfn-ec2-vpngatewayrouteprop-routetableids"></a>
-The ID of the route table\. The routing table must be associated with the same VPC that the virtual private gateway is attached to\.   
-*Required*: Yes  
-*Type*: List of String  
+The ID of the route table\. The routing table must be associated with the same VPC that the virtual private gateway is attached to\.
+*Required*: Yes
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpnGatewayId`  <a name="cfn-ec2-vpngatewayrouteprop-vpngatewayid"></a>
-The ID of the virtual private gateway that is attached to a VPC\. The virtual private gateway must be attached to the same VPC that the routing tables are associated with\.   
-*Required*: Yes  
-*Type*: String  
+The ID of the virtual private gateway that is attached to a VPC\. The virtual private gateway must be attached to the same VPC that the routing tables are associated with\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-ec2-vpn-gatewayrouteprop-return-values"></a>
@@ -76,9 +76,9 @@ The following example enables route propagation for the private route table name
 myVPNGatewayRouteProp:
 Type: AWS::EC2::VPNGatewayRoutePropagation
    Properties:
-       RouteTableIds: 
+       RouteTableIds:
         - !Ref PrivateRouteTable
-       VpnGatewayId: 
+       VpnGatewayId:
         - !Ref VPNGateway
 ```
 

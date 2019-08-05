@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EMR::SecurityConfiguration
-Properties: 
+Properties:
   [Name](#cfn-emr-securityconfiguration-name): String
   [SecurityConfiguration](#cfn-emr-securityconfiguration-securityconfiguration): Json
 ```
@@ -30,18 +30,18 @@ Properties:
 ## Properties<a name="aws-resource-emr-securityconfiguration-properties"></a>
 
 `Name`  <a name="cfn-emr-securityconfiguration-name"></a>
-The name of the security configuration\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `10280`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+The name of the security configuration\.
+*Required*: No
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `10280`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecurityConfiguration`  <a name="cfn-emr-securityconfiguration-securityconfiguration"></a>
-The security configuration details in JSON format\.  
-*Required*: Yes  
-*Type*: Json  
+The security configuration details in JSON format\.
+*Required*: Yes
+*Type*: Json
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-emr-securityconfiguration-return-values"></a>

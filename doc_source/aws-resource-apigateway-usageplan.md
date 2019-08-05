@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::UsagePlan
-Properties: 
-  [ApiStages](#cfn-apigateway-usageplan-apistages): 
+Properties:
+  [ApiStages](#cfn-apigateway-usageplan-apistages):
     - [ApiStage](aws-properties-apigateway-usageplan-apistage.md)
   [Description](#cfn-apigateway-usageplan-description): String
-  [Quota](#cfn-apigateway-usageplan-quota): 
+  [Quota](#cfn-apigateway-usageplan-quota):
     [QuotaSettings](aws-properties-apigateway-usageplan-quotasettings.md)
-  [Throttle](#cfn-apigateway-usageplan-throttle): 
+  [Throttle](#cfn-apigateway-usageplan-throttle):
     [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)
   [UsagePlanName](#cfn-apigateway-usageplan-usageplanname): String
 ```
@@ -39,33 +39,33 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-usageplan-properties"></a>
 
 `ApiStages`  <a name="cfn-apigateway-usageplan-apistages"></a>
-The API stages to associate with this usage plan\.  
-*Required*: No  
-*Type*: List of [ApiStage](aws-properties-apigateway-usageplan-apistage.md)  
+The API stages to associate with this usage plan\.
+*Required*: No
+*Type*: List of [ApiStage](aws-properties-apigateway-usageplan-apistage.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-apigateway-usageplan-description"></a>
-A description of the usage plan\.  
-*Required*: No  
-*Type*: String  
+A description of the usage plan\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Quota`  <a name="cfn-apigateway-usageplan-quota"></a>
-Configures the number of requests that users can make within a given interval\.  
-*Required*: No  
-*Type*: [QuotaSettings](aws-properties-apigateway-usageplan-quotasettings.md)  
+Configures the number of requests that users can make within a given interval\.
+*Required*: No
+*Type*: [QuotaSettings](aws-properties-apigateway-usageplan-quotasettings.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Throttle`  <a name="cfn-apigateway-usageplan-throttle"></a>
-Configures the overall request rate \(average requests per second\) and burst capacity\.  
-*Required*: No  
-*Type*: [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)  
+Configures the overall request rate \(average requests per second\) and burst capacity\.
+*Required*: No
+*Type*: [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UsagePlanName`  <a name="cfn-apigateway-usageplan-usageplanname"></a>
-A name for the usage plan\.  
-*Required*: No  
-*Type*: String  
+A name for the usage plan\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-apigateway-usageplan-return-values"></a>

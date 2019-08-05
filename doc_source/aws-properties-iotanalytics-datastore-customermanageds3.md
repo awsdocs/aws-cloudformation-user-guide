@@ -27,19 +27,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotanalytics-datastore-customermanageds3-properties"></a>
 
 `Bucket`  <a name="cfn-iotanalytics-datastore-customermanageds3-bucket"></a>
-The name of the Amazon S3 bucket in which data store data is stored\.  
-*Required*: Yes  
-*Type*: String  
+The name of the Amazon S3 bucket in which data store data is stored\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeyPrefix`  <a name="cfn-iotanalytics-datastore-customermanageds3-keyprefix"></a>
-\[Optional\] The prefix used to create the keys of the data store data objects\. Each object in an Amazon S3 bucket has a key that is its unique identifier within the bucket \(each object in a bucket has exactly one key\)\. The prefix must end with a '/'\.  
-*Required*: No  
-*Type*: String  
+\[Optional\] The prefix used to create the keys of the data store data objects\. Each object in an Amazon S3 bucket has a key that is its unique identifier within the bucket \(each object in a bucket has exactly one key\)\. The prefix must end with a '/'\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-iotanalytics-datastore-customermanageds3-rolearn"></a>
-The ARN of the role which grants AWS IoT Analytics permission to interact with your Amazon S3 resources\.  
-*Required*: Yes  
-*Type*: String  
+The ARN of the role which grants AWS IoT Analytics permission to interact with your Amazon S3 resources\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

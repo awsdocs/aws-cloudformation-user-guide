@@ -26,8 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPCEndpointConnectionNotification
-Properties: 
-  [ConnectionEvents](#cfn-ec2-vpcendpointconnectionnotification-connectionevents): 
+Properties:
+  [ConnectionEvents](#cfn-ec2-vpcendpointconnectionnotification-connectionevents):
     - String
   [ConnectionNotificationArn](#cfn-ec2-vpcendpointconnectionnotification-connectionnotificationarn): String
   [ServiceId](#cfn-ec2-vpcendpointconnectionnotification-serviceid): String
@@ -37,27 +37,27 @@ Properties:
 ## Properties<a name="aws-resource-ec2-vpcendpointconnectionnotification-properties"></a>
 
 `ConnectionEvents`  <a name="cfn-ec2-vpcendpointconnectionnotification-connectionevents"></a>
-One or more endpoint events for which to receive notifications\. Valid values are `Accept`, `Connect`, `Delete`, and `Reject`\.  
-*Required*: Yes  
-*Type*: List of String  
+One or more endpoint events for which to receive notifications\. Valid values are `Accept`, `Connect`, `Delete`, and `Reject`\.
+*Required*: Yes
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConnectionNotificationArn`  <a name="cfn-ec2-vpcendpointconnectionnotification-connectionnotificationarn"></a>
-The ARN of the SNS topic for the notifications\.  
-*Required*: Yes  
-*Type*: String  
+The ARN of the SNS topic for the notifications\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceId`  <a name="cfn-ec2-vpcendpointconnectionnotification-serviceid"></a>
-The ID of the endpoint service\.  
-*Required*: No  
-*Type*: String  
+The ID of the endpoint service\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VPCEndpointId`  <a name="cfn-ec2-vpcendpointconnectionnotification-vpcendpointid"></a>
-The ID of the endpoint\.   
-*Required*: No  
-*Type*: String  
+The ID of the endpoint\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-vpcendpointconnectionnotification-return-values"></a>

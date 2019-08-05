@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-segment-segmentdimensions-location-gpspoint-coordinates-properties"></a>
 
 `Latitude`  <a name="cfn-pinpoint-segment-segmentdimensions-location-gpspoint-coordinates-latitude"></a>
-The latitude coordinate of the location\.  
-*Required*: Yes  
-*Type*: Double  
+The latitude coordinate of the location\.
+*Required*: Yes
+*Type*: Double
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Longitude`  <a name="cfn-pinpoint-segment-segmentdimensions-location-gpspoint-coordinates-longitude"></a>
-The longitude coordinate of the location\.  
-*Required*: Yes  
-*Type*: Double  
+The longitude coordinate of the location\.
+*Required*: Yes
+*Type*: Double
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::OpsWorks::UserProfile
-Properties: 
+Properties:
   [AllowSelfManagement](#cfn-opsworks-userprofile-allowselfmanagement): Boolean
   [IamUserArn](#cfn-opsworks-userprofile-iamuserarn): String
   [SshPublicKey](#cfn-opsworks-userprofile-sshpublickey): String
@@ -34,27 +34,27 @@ Properties:
 ## Properties<a name="aws-resource-opsworks-userprofile-properties"></a>
 
 `AllowSelfManagement`  <a name="cfn-opsworks-userprofile-allowselfmanagement"></a>
-Whether users can specify their own SSH public key through the My Settings page\. For more information, see [Managing User Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/security-settingsshkey.html)\.  
-*Required*: No  
-*Type*: Boolean  
+Whether users can specify their own SSH public key through the My Settings page\. For more information, see [Managing User Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/security-settingsshkey.html)\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IamUserArn`  <a name="cfn-opsworks-userprofile-iamuserarn"></a>
-The user's IAM ARN\.  
-*Required*: Yes  
-*Type*: String  
+The user's IAM ARN\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SshPublicKey`  <a name="cfn-opsworks-userprofile-sshpublickey"></a>
-The user's SSH public key\.  
-*Required*: No  
-*Type*: String  
+The user's SSH public key\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SshUsername`  <a name="cfn-opsworks-userprofile-sshusername"></a>
-The user's SSH user name\.  
-*Required*: No  
-*Type*: String  
+The user's SSH user name\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-opsworks-userprofile-return-values"></a>

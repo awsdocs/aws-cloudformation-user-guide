@@ -29,19 +29,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appsync-datasource-dynamodbconfig-properties"></a>
 
 `AwsRegion`  <a name="cfn-appsync-datasource-dynamodbconfig-awsregion"></a>
-The AWS Region\.  
-*Required*: Yes  
-*Type*: String  
+The AWS Region\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TableName`  <a name="cfn-appsync-datasource-dynamodbconfig-tablename"></a>
-The table name\.  
-*Required*: Yes  
-*Type*: String  
+The table name\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UseCallerCredentials`  <a name="cfn-appsync-datasource-dynamodbconfig-usecallercredentials"></a>
-Set to `TRUE` to use AWS IAM with this data source\.  
-*Required*: No  
-*Type*: Boolean  
+Set to `TRUE` to use AWS IAM with this data source\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

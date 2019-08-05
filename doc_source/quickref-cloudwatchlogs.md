@@ -11,8 +11,8 @@ Amazon CloudWatch Logs can monitor your system, application, and custom log file
 
 The following template describes a web server and its custom metrics\. Log events from the web server's log provides the data for the custom metrics\. To send log events to a custom metric, the `UserData` field installs a CloudWatch Logs agent on the Amazon EC2 instance\. The configuration information for the agent, such as the location of the server log file, the log group name, and the log stream name, are defined in the `/tmp/cwlogs/apacheaccess.conf` file\. The log stream is created after the web server starts sending log events to the `/var/log/httpd/access_log` file\.
 
-**Note**  
-A note about permissions: The `WebServerHost` instance references the `LogRoleInstanceProfile` instance profile, which in turn references the `LogRole` role\. `LogRole` specifies the `s3:GetObject` permission for *arn:aws:s3:::\**\.  
+**Note**
+A note about permissions: The `WebServerHost` instance references the `LogRoleInstanceProfile` instance profile, which in turn references the `LogRole` role\. `LogRole` specifies the `s3:GetObject` permission for *arn:aws:s3:::\**\.
 This permission is required because `WebServerHost` downloads the CloudWatch Logs agent \(`awslogs-agent-setup.py`\) from Amazon S3 in the `UserData` section\.
 
 The two metric filters describe how the log information is transformed into CloudWatch metrics\. The 404 metric counts the number of 404 occurrences\. The size metric tracks the size of a request\. The two CloudWatch alarms will send notifications if there are more than two 404s within two minutes or if the average request size is over 3500 KB over 10 minutes\.
@@ -107,7 +107,7 @@ The two metric filters describe how the log information is transformed into Clou
                                       "logs:Create*",
                                       "logs:PutLogEvents",
                                       "s3:GetObject"
-                                    ],     
+                                    ],
                                     "Resource": [
                                         "arn:aws:logs:*:*:*",
                                         "arn:aws:s3:::*"
@@ -274,23 +274,23 @@ The two metric filters describe how the log information is transformed into Clou
                             "",
                             [
                                 "#!/bin/bash -xe\n",
-                               
+
                                 "# Get the latest CloudFormation package\n",
                                 "yum install -y aws-cfn-bootstrap\n",
-                                
+
                                 "# Start cfn-init\n",
                                 "/opt/aws/bin/cfn-init -s ", { "Ref": "AWS::StackId" }, " -r WebServerHost ", " --region ", { "Ref": "AWS::Region" },
                                 " || error_exit 'Failed to run cfn-init'\n",
-                                
+
                                 "# Start up the cfn-hup daemon to listen for changes to the EC2 instance metadata\n",
                                 "/opt/aws/bin/cfn-hup || error_exit 'Failed to start cfn-hup'\n",
-                                
+
                                 "# Get the CloudWatch Logs agent\n",
                                 "wget https://s3.amazonaws.com/aws-cloudwatch/downloads/latest/awslogs-agent-setup.py\n",
-                                
+
                                 "# Install the CloudWatch Logs agent\n",
                                 "python awslogs-agent-setup.py -n -r ", { "Ref" : "AWS::Region" }, " -c /tmp/cwlogs/apacheaccess.conf || error_exit 'Failed to run CloudWatch Logs agent setup'\n",
-                                
+
                                 "# All done so signal success\n",
                                 "/opt/aws/bin/cfn-signal -e $? ",
                                 "         --stack ", { "Ref" : "AWS::StackName" },
@@ -1522,19 +1522,19 @@ Resources:
       KeyName: !Ref 'KeyPair'
       ImageId: !FindInMap [AWSAMIRegionMap, !Ref 'AWS::Region', WS2012R2]
       InstanceType: t2.xlarge
-      SecurityGroupIds: 
+      SecurityGroupIds:
          - !Ref 'WebServerSecurityGroup'
       IamInstanceProfile: !Ref 'LogRoleInstanceProfile'
-      UserData: 
-        Fn::Base64: 
+      UserData:
+        Fn::Base64:
          !Sub |
           <script>
           wmic product where "description='Amazon SSM Agent' " uninstall
-          wmic product where "description='aws-cfn-bootstrap' " uninstall 
+          wmic product where "description='aws-cfn-bootstrap' " uninstall
           start /wait c:\\Windows\\system32\\msiexec /passive /qn /i https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-win64-latest.msi
           powershell.exe -Command "iwr https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/windows_amd64/AmazonSSMAgentSetup.exe  -UseBasicParsing -OutFile C:\\AmazonSSMAgentSetup.exe"
           start /wait C:\\AmazonSSMAgentSetup.exe /install /quiet
-          cfn-init.exe -v -c config -s ${AWS::StackName} --resource WebServerHost --region ${AWS::Region} 
+          cfn-init.exe -v -c config -s ${AWS::StackName} --resource WebServerHost --region ${AWS::Region}
           </script>
   LogGroup:
     Type: AWS::Logs::LogGroup

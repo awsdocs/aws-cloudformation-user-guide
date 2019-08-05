@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Lambda::LayerVersionPermission
-Properties: 
+Properties:
   [Action](#cfn-lambda-layerversionpermission-action): String
   [LayerVersionArn](#cfn-lambda-layerversionpermission-layerversionarn): String
   [OrganizationId](#cfn-lambda-layerversionpermission-organizationid): String
@@ -34,33 +34,33 @@ Properties:
 ## Properties<a name="aws-resource-lambda-layerversionpermission-properties"></a>
 
 `Action`  <a name="cfn-lambda-layerversionpermission-action"></a>
-The API action that grants access to the layer\. For example, `lambda:GetLayerVersion`\.  
-*Required*: Yes  
-*Type*: String  
-*Pattern*: `lambda:GetLayerVersion`  
+The API action that grants access to the layer\. For example, `lambda:GetLayerVersion`\.
+*Required*: Yes
+*Type*: String
+*Pattern*: `lambda:GetLayerVersion`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LayerVersionArn`  <a name="cfn-lambda-layerversionpermission-layerversionarn"></a>
-The Amazon Resource Name \(ARN\) of the layer\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `140`  
-*Pattern*: `(arn:[a-zA-Z0-9-]+:lambda:[a-zA-Z0-9-]+:\d{12}:layer:[a-zA-Z0-9-_]+)|[a-zA-Z0-9-_]+`  
+The Amazon Resource Name \(ARN\) of the layer\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `140`
+*Pattern*: `(arn:[a-zA-Z0-9-]+:lambda:[a-zA-Z0-9-]+:\d{12}:layer:[a-zA-Z0-9-_]+)|[a-zA-Z0-9-_]+`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OrganizationId`  <a name="cfn-lambda-layerversionpermission-organizationid"></a>
-With the principal set to `*`, grant permission to all accounts in the specified organization\.  
-*Required*: No  
-*Type*: String  
-*Pattern*: `o-[a-z0-9]{10,32}`  
+With the principal set to `*`, grant permission to all accounts in the specified organization\.
+*Required*: No
+*Type*: String
+*Pattern*: `o-[a-z0-9]{10,32}`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Principal`  <a name="cfn-lambda-layerversionpermission-principal"></a>
-An account ID, or `*` to grant permission to all AWS accounts\.  
-*Required*: Yes  
-*Type*: String  
-*Pattern*: `\d{12}|\*|arn:(aws[a-zA-Z-]*):iam::\d{12}:root`  
+An account ID, or `*` to grant permission to all AWS accounts\.
+*Required*: Yes
+*Type*: String
+*Pattern*: `\d{12}|\*|arn:(aws[a-zA-Z-]*):iam::\d{12}:root`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-lambda-layerversionpermission-return-values"></a>

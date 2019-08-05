@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::VPNConnectionRoute
-Properties: 
+Properties:
   [DestinationCidrBlock](#cfn-ec2-vpnconnectionroute-cidrblock): String
   [VpnConnectionId](#cfn-ec2-vpnconnectionroute-connectionid): String
 ```
@@ -32,15 +32,15 @@ Properties:
 ## Properties<a name="aws-resource-ec2-vpn-connection-route-properties"></a>
 
 `DestinationCidrBlock`  <a name="cfn-ec2-vpnconnectionroute-cidrblock"></a>
-The CIDR block associated with the local subnet of the customer network\.  
-*Required*: Yes  
-*Type*: String  
+The CIDR block associated with the local subnet of the customer network\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpnConnectionId`  <a name="cfn-ec2-vpnconnectionroute-connectionid"></a>
-The ID of the VPN connection\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the VPN connection\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-ec2-vpn-connection-route-return-values"></a>
@@ -72,11 +72,11 @@ The following example specifies a VPN connection route\.
 #### YAML<a name="aws-resource-ec2-vpn-connection-route--examples--VPN_Connection_Route--yaml"></a>
 
 ```
-MyConnectionRoute0: 
+MyConnectionRoute0:
   Type: AWS::EC2::VPNConnectionRoute
-  Properties: 
+  Properties:
      DestinationCidrBlock: 10.0.0.0/16
-     VpnConnectionId: 
+     VpnConnectionId:
      !Ref Connection0
 ```
 

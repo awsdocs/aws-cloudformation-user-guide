@@ -17,15 +17,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-spotfleet-classicloadbalancersconfig-syntax.yaml"></a>
 
 ```
-  [ClassicLoadBalancers](#cfn-ec2-spotfleet-classicloadbalancersconfig-classicloadbalancers): 
+  [ClassicLoadBalancers](#cfn-ec2-spotfleet-classicloadbalancersconfig-classicloadbalancers):
     - [ClassicLoadBalancer](aws-properties-ec2-spotfleet-classicloadbalancer.md)
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-classicloadbalancersconfig-properties"></a>
 
 `ClassicLoadBalancers`  <a name="cfn-ec2-spotfleet-classicloadbalancersconfig-classicloadbalancers"></a>
-One or more Classic Load Balancers\.  
-*Required*: Yes  
-*Type*: List of [ClassicLoadBalancer](aws-properties-ec2-spotfleet-classicloadbalancer.md)  
-*Maximum*: `5`  
+One or more Classic Load Balancers\.
+*Required*: Yes
+*Type*: List of [ClassicLoadBalancer](aws-properties-ec2-spotfleet-classicloadbalancer.md)
+*Maximum*: `5`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

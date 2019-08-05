@@ -18,22 +18,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalytics-application-mappingparameters-syntax.yaml"></a>
 
 ```
-  [CSVMappingParameters](#cfn-kinesisanalytics-application-mappingparameters-csvmappingparameters): 
+  [CSVMappingParameters](#cfn-kinesisanalytics-application-mappingparameters-csvmappingparameters):
     [CSVMappingParameters](aws-properties-kinesisanalytics-application-csvmappingparameters.md)
-  [JSONMappingParameters](#cfn-kinesisanalytics-application-mappingparameters-jsonmappingparameters): 
+  [JSONMappingParameters](#cfn-kinesisanalytics-application-mappingparameters-jsonmappingparameters):
     [JSONMappingParameters](aws-properties-kinesisanalytics-application-jsonmappingparameters.md)
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-application-mappingparameters-properties"></a>
 
 `CSVMappingParameters`  <a name="cfn-kinesisanalytics-application-mappingparameters-csvmappingparameters"></a>
-Provides additional mapping information when the record format uses delimiters \(for example, CSV\)\.  
-*Required*: No  
-*Type*: [CSVMappingParameters](aws-properties-kinesisanalytics-application-csvmappingparameters.md)  
+Provides additional mapping information when the record format uses delimiters \(for example, CSV\)\.
+*Required*: No
+*Type*: [CSVMappingParameters](aws-properties-kinesisanalytics-application-csvmappingparameters.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JSONMappingParameters`  <a name="cfn-kinesisanalytics-application-mappingparameters-jsonmappingparameters"></a>
-Provides additional mapping information when JSON is the record format on the streaming source\.  
-*Required*: No  
-*Type*: [JSONMappingParameters](aws-properties-kinesisanalytics-application-jsonmappingparameters.md)  
+Provides additional mapping information when JSON is the record format on the streaming source\.
+*Required*: No
+*Type*: [JSONMappingParameters](aws-properties-kinesisanalytics-application-jsonmappingparameters.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -24,8 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::IoT::Thing
-Properties: 
-  [AttributePayload](#cfn-iot-thing-attributepayload): 
+Properties:
+  [AttributePayload](#cfn-iot-thing-attributepayload):
     [AttributePayload](aws-properties-iot-thing-attributepayload.md)
   [ThingName](#cfn-iot-thing-thingname): String
 ```
@@ -33,15 +33,15 @@ Properties:
 ## Properties<a name="aws-resource-iot-thing-properties"></a>
 
 `AttributePayload`  <a name="cfn-iot-thing-attributepayload"></a>
-A string that contains up to three key–value pairs\. Maximum length of 800\. Duplicates not allowed\.  
-*Required*: No  
-*Type*: [AttributePayload](aws-properties-iot-thing-attributepayload.md)  
+A string that contains up to three key–value pairs\. Maximum length of 800\. Duplicates not allowed\.
+*Required*: No
+*Type*: [AttributePayload](aws-properties-iot-thing-attributepayload.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThingName`  <a name="cfn-iot-thing-thingname"></a>
-The name of the thing to update\.  
-*Required*: No  
-*Type*: String  
+The name of the thing to update\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-iot-thing-return-values"></a>
@@ -50,11 +50,11 @@ The name of the thing to update\.
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the thing name\. For example:
 
- `{ "Ref": "MyThing" }` 
+ `{ "Ref": "MyThing" }`
 
 For a stack named MyStack, a value similar to the following is returned:
 
- `MyStack-MyThing-AB1CDEFGHIJK` 
+ `MyStack-MyThing-AB1CDEFGHIJK`
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -89,7 +89,7 @@ The following example declares a thing and the values of its attributes\.
                   }
                }
             }
-         }  
+         }
       }
    },
    "Parameters": {
@@ -116,30 +116,30 @@ The following example declares a thing and the values of its attributes\.
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"
-Resources: 
-   MyThing: 
+Resources:
+   MyThing:
       Type: AWS::IoT::Thing
-      Properties: 
-         ThingName: 
+      Properties:
+         ThingName:
             Ref: "NameParameter"
-         AttributePayload: 
-            Attributes: 
-               myAttributeA: 
+         AttributePayload:
+            Attributes:
+               myAttributeA:
                   Ref: "MyAttributeValueA"
-               myAttributeB: 
+               myAttributeB:
                   Ref: "MyAttributeValueB"
-               myAttributeC: 
+               myAttributeC:
                   Ref: "MyAttributeValueC"
-Parameters: 
-   NameParameter: 
+Parameters:
+   NameParameter:
       Type: "String"
-   MyAttributeValueA: 
+   MyAttributeValueA:
       Type: "String"
       Default: "myStringA123"
-   MyAttributeValueB: 
+   MyAttributeValueB:
       Type: "String"
       Default: "myStringB123"
-   MyAttributeValueC: 
+   MyAttributeValueC:
       Type: "String"
       Default: "myStringC123"
 ```

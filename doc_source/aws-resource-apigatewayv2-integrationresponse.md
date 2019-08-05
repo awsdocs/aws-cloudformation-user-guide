@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGatewayV2::IntegrationResponse
-Properties: 
+Properties:
   [ApiId](#cfn-apigatewayv2-integrationresponse-apiid): String
   [ContentHandlingStrategy](#cfn-apigatewayv2-integrationresponse-contenthandlingstrategy): String
   [IntegrationId](#cfn-apigatewayv2-integrationresponse-integrationid): String
@@ -40,48 +40,48 @@ Properties:
 ## Properties<a name="aws-resource-apigatewayv2-integrationresponse-properties"></a>
 
 `ApiId`  <a name="cfn-apigatewayv2-integrationresponse-apiid"></a>
-The API identifier\.  
-*Required*: Yes  
-*Type*: String  
+The API identifier\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ContentHandlingStrategy`  <a name="cfn-apigatewayv2-integrationresponse-contenthandlingstrategy"></a>
-Specifies how to handle response payload content type conversions\. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`, with the following behaviors:  
- `CONVERT_TO_BINARY`: Converts a response payload from a Base64\-encoded string to the corresponding binary blob\.  
- `CONVERT_TO_TEXT`: Converts a response payload from a binary blob to a Base64\-encoded string\.  
-If this property is not defined, the response payload will be passed through from the integration response to the route response or method response without modification\.  
-*Required*: No  
-*Type*: String  
+Specifies how to handle response payload content type conversions\. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`, with the following behaviors:
+ `CONVERT_TO_BINARY`: Converts a response payload from a Base64\-encoded string to the corresponding binary blob\.
+ `CONVERT_TO_TEXT`: Converts a response payload from a binary blob to a Base64\-encoded string\.
+If this property is not defined, the response payload will be passed through from the integration response to the route response or method response without modification\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IntegrationId`  <a name="cfn-apigatewayv2-integrationresponse-integrationid"></a>
-The integration ID\.  
-*Required*: Yes  
-*Type*: String  
+The integration ID\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IntegrationResponseKey`  <a name="cfn-apigatewayv2-integrationresponse-integrationresponsekey"></a>
-The integration response key\.  
-*Required*: Yes  
-*Type*: String  
+The integration response key\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResponseParameters`  <a name="cfn-apigatewayv2-integrationresponse-responseparameters"></a>
-A key\-value map specifying response parameters that are passed to the method response from the backend\. The key is a method response header parameter name and the mapped value is an integration response header value, a static value enclosed within a pair of single quotes, or a JSON expression from the integration response body\. The mapping key must match the pattern of `method.response.header.{name} `, where name is a valid and unique header name\. The mapped non\-static value must match the pattern of `integration.response.header.{name} ` or `integration.response.body.{JSON-expression} `, where ` {name} ` is a valid and unique response header name and ` {JSON-expression} ` is a valid JSON expression without the `$` prefix\.  
-*Required*: No  
-*Type*: Json  
+A key\-value map specifying response parameters that are passed to the method response from the backend\. The key is a method response header parameter name and the mapped value is an integration response header value, a static value enclosed within a pair of single quotes, or a JSON expression from the integration response body\. The mapping key must match the pattern of `method.response.header.{name} `, where name is a valid and unique header name\. The mapped non\-static value must match the pattern of `integration.response.header.{name} ` or `integration.response.body.{JSON-expression} `, where ` {name} ` is a valid and unique response header name and ` {JSON-expression} ` is a valid JSON expression without the `$` prefix\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResponseTemplates`  <a name="cfn-apigatewayv2-integrationresponse-responsetemplates"></a>
-The collection of response templates for the integration response as a string\-to\-string map of key\-value pairs\. Response templates are represented as a key/value map, with a content\-type as the key and a template as the value\.  
-*Required*: No  
-*Type*: Json  
+The collection of response templates for the integration response as a string\-to\-string map of key\-value pairs\. Response templates are represented as a key/value map, with a content\-type as the key and a template as the value\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TemplateSelectionExpression`  <a name="cfn-apigatewayv2-integrationresponse-templateselectionexpression"></a>
-The template selection expression for the integration response\.  
-*Required*: No  
-*Type*: String  
+The template selection expression for the integration response\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-apigatewayv2-integrationresponse-return-values"></a>

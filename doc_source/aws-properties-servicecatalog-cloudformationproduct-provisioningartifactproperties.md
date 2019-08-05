@@ -29,28 +29,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties-properties"></a>
 
 `Description`  <a name="cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-description"></a>
-The description of the provisioning artifact, including how it differs from the previous provisioning artifact\.  
-*Required*: No  
-*Type*: String  
+The description of the provisioning artifact, including how it differs from the previous provisioning artifact\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DisableTemplateValidation`  <a name="cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-disabletemplatevalidation"></a>
-If set to true, AWS Service Catalog stops validating the specified provisioning artifact even if it is invalid\.  
-*Required*: No  
-*Type*: Boolean  
+If set to true, AWS Service Catalog stops validating the specified provisioning artifact even if it is invalid\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Info`  <a name="cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-info"></a>
-The URL of the CloudFormation template in Amazon S3\. Specify the URL in JSON format as follows:  
- `"LoadTemplateFromURL": "https://s3.amazonaws.com/cf-templates-ozkq9d3hgiq2-us-east-1/..."`   
-*Required*: Yes  
-*Type*: Json  
+The URL of the CloudFormation template in Amazon S3\. Specify the URL in JSON format as follows:
+ `"LoadTemplateFromURL": "https://s3.amazonaws.com/cf-templates-ozkq9d3hgiq2-us-east-1/..."`
+*Required*: Yes
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-name"></a>
-The name of the provisioning artifact \(for example, v1 v2beta\)\. No spaces are allowed\.  
-*Required*: No  
-*Type*: String  
+The name of the provisioning artifact \(for example, v1 v2beta\)\. No spaces are allowed\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties--seealso"></a>

@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-batch-jobdefinition-retrystrategy-properties"></a>
 
 `Attempts`  <a name="cfn-batch-jobdefinition-retrystrategy-attempts"></a>
-The number of times to move a job to the `RUNNABLE` status\. You may specify between 1 and 10 attempts\. If the value of `attempts` is greater than one, the job is retried on failure the same number of attempts as the value\.  
-*Required*: No  
-*Type*: Integer  
+The number of times to move a job to the `RUNNABLE` status\. You may specify between 1 and 10 attempts\. If the value of `attempts` is greater than one, the job is retried on failure the same number of attempts as the value\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

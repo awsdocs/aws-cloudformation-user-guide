@@ -31,91 +31,91 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EC2::NetworkInterface
-Properties: 
+Properties:
   [Description](#cfn-awsec2networkinterface-description): String
-  [GroupSet](#cfn-awsec2networkinterface-groupset): 
+  [GroupSet](#cfn-awsec2networkinterface-groupset):
     - String
   [InterfaceType](#cfn-ec2-networkinterface-interfacetype): String
   [Ipv6AddressCount](#cfn-ec2-networkinterface-ipv6addresscount): Integer
-  [Ipv6Addresses](#cfn-ec2-networkinterface-ipv6addresses): 
+  [Ipv6Addresses](#cfn-ec2-networkinterface-ipv6addresses):
     [InstanceIpv6Address](aws-properties-ec2-networkinterface-instanceipv6address.md)
   [PrivateIpAddress](#cfn-awsec2networkinterface-privateipaddress): String
-  [PrivateIpAddresses](#cfn-awsec2networkinterface-privateipaddresses): 
+  [PrivateIpAddresses](#cfn-awsec2networkinterface-privateipaddresses):
     - [PrivateIpAddressSpecification](aws-properties-ec2-network-interface-privateipspec.md)
   [SecondaryPrivateIpAddressCount](#cfn-awsec2networkinterface-secondaryprivateipcount): Integer
   [SourceDestCheck](#cfn-awsec2networkinterface-sourcedestcheck): Boolean
   [SubnetId](#cfn-awsec2networkinterface-subnetid): String
-  [Tags](#cfn-awsec2networkinterface-tags): 
+  [Tags](#cfn-awsec2networkinterface-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-ec2-network-interface-properties"></a>
 
 `Description`  <a name="cfn-awsec2networkinterface-description"></a>
-A description for the network interface\.  
-*Required*: No  
-*Type*: String  
+A description for the network interface\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GroupSet`  <a name="cfn-awsec2networkinterface-groupset"></a>
-A list of security group IDs associated with this network interface\.  
-*Required*: No  
-*Type*: List of String  
+A list of security group IDs associated with this network interface\.
+*Required*: No
+*Type*: List of String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InterfaceType`  <a name="cfn-ec2-networkinterface-interfacetype"></a>
-The type of network interface\.  
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `efa | interface | natGateway`  
+The type of network interface\.
+*Required*: No
+*Type*: String
+*Allowed Values*: `efa | interface | natGateway`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ipv6AddressCount`  <a name="cfn-ec2-networkinterface-ipv6addresscount"></a>
-The number of IPv6 addresses to assign to a network interface\. Amazon EC2 automatically selects the IPv6 addresses from the subnet range\. To specify specific IPv6 addresses, use the `Ipv6Addresses` property and don't specify this property\.  
-*Required*: No  
-*Type*: Integer  
+The number of IPv6 addresses to assign to a network interface\. Amazon EC2 automatically selects the IPv6 addresses from the subnet range\. To specify specific IPv6 addresses, use the `Ipv6Addresses` property and don't specify this property\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Ipv6Addresses`  <a name="cfn-ec2-networkinterface-ipv6addresses"></a>
-One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface\. If you're specifying a number of IPv6 addresses, use the `Ipv6AddressCount` property and don't specify this property\.  
-*Required*: No  
-*Type*: [InstanceIpv6Address](aws-properties-ec2-networkinterface-instanceipv6address.md)  
+One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface\. If you're specifying a number of IPv6 addresses, use the `Ipv6AddressCount` property and don't specify this property\.
+*Required*: No
+*Type*: [InstanceIpv6Address](aws-properties-ec2-networkinterface-instanceipv6address.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrivateIpAddress`  <a name="cfn-awsec2networkinterface-privateipaddress"></a>
-Assigns a single private IP address to the network interface, which is used as the primary private IP address\. If you want to specify multiple private IP address, use the `PrivateIpAddresses` property\.  
-*Required*: No  
-*Type*: String  
+Assigns a single private IP address to the network interface, which is used as the primary private IP address\. If you want to specify multiple private IP address, use the `PrivateIpAddresses` property\.
+*Required*: No
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PrivateIpAddresses`  <a name="cfn-awsec2networkinterface-privateipaddresses"></a>
-Assigns a list of private IP addresses to the network interface\. You can specify a primary private IP address by setting the value of the `Primary` property to `true` in the `PrivateIpAddressSpecification` property\. If you want EC2 to automatically assign private IP addresses, use the `SecondaryPrivateIpAddressCount` property and do not specify this property\.  
-*Required*: No  
+Assigns a list of private IP addresses to the network interface\. You can specify a primary private IP address by setting the value of the `Primary` property to `true` in the `PrivateIpAddressSpecification` property\. If you want EC2 to automatically assign private IP addresses, use the `SecondaryPrivateIpAddressCount` property and do not specify this property\.
+*Required*: No
 *Type*: List of [PrivateIpAddressSpecification](aws-properties-ec2-network-interface-privateipspec.md)
 
 `SecondaryPrivateIpAddressCount`  <a name="cfn-awsec2networkinterface-secondaryprivateipcount"></a>
-The number of secondary private IPv4 addresses to assign to a network interface\. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet's IPv4 CIDR range\. You can't specify this option and specify more than one private IP address using `privateIpAddresses`\.  
-The number of IP addresses you can assign to a network interface varies by instance type\. For more information, see [IP Addresses Per ENI Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) in the *Amazon Virtual Private Cloud User Guide*\.  
-*Required*: No  
-*Type*: Integer  
+The number of secondary private IPv4 addresses to assign to a network interface\. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet's IPv4 CIDR range\. You can't specify this option and specify more than one private IP address using `privateIpAddresses`\.
+The number of IP addresses you can assign to a network interface varies by instance type\. For more information, see [IP Addresses Per ENI Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) in the *Amazon Virtual Private Cloud User Guide*\.
+*Required*: No
+*Type*: Integer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceDestCheck`  <a name="cfn-awsec2networkinterface-sourcedestcheck"></a>
-Indicates whether traffic to or from the instance is validated\.  
-*Required*: No  
-*Type*: Boolean  
+Indicates whether traffic to or from the instance is validated\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetId`  <a name="cfn-awsec2networkinterface-subnetid"></a>
-The ID of the subnet to associate with the network interface\.  
-*Required*: Yes  
-*Type*: String  
+The ID of the subnet to associate with the network interface\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-awsec2networkinterface-tags"></a>
-An arbitrary set of tags \(key–value pairs\) for this network interface\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+An arbitrary set of tags \(key–value pairs\) for this network interface\.
+*Required*: No
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-ec2-network-interface-return-values"></a>
@@ -142,7 +142,7 @@ Returns the secondary private IP addresses of the network interface\. For exampl
 
 ## Examples<a name="aws-resource-ec2-network-interface--examples"></a>
 
- *Tip* 
+ *Tip*
 
 For more `NetworkInterface` template examples, see [Elastic Network Interface \(ENI\) Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-template-snippets-eni.html)\.
 

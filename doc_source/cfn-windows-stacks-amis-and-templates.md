@@ -6,7 +6,7 @@ With AWS CloudFormation, you can create Microsoft Windows stacks for running Win
 + [Windows\_Roles\_And\_Features\.template](https://s3.amazonaws.com/cloudformation-templates-us-east-1/Windows_Roles_And_Features.template) \- Create a single server specifying server roles running on Microsoft Windows Server® 2008 R2\.
 + [ElasticBeanstalk\_Windows\_Sample\.template](https://s3.amazonaws.com/cloudformation-templates-us-east-1/ElasticBeanstalk_Windows_Sample.template) \- Launch an AWS Elastic Beanstalk sample application on Windows Server 2008 R2 running IIS 7\.5\.
 
-**Note**  
+**Note**
 Microsoft, Windows Server, and SharePoint are trademarks of the Microsoft group of companies\.
 
-Although these stacks are already configured, you can use any EC2 Windows AMI as the basis of an AWS CloudFormation Windows stack\. 
+Although these stacks are already configured, you can use any EC2 Windows AMI as the basis of an AWS CloudFormation Windows stack\.

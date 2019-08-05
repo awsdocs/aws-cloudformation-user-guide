@@ -9,7 +9,7 @@
 
 ## Auto Scaling Launch Configuration Resource<a name="scenario-as-launch-config"></a>
 
-This example shows an Auto Scaling AWS::AutoScaling::LaunchConfiguration resource\. The SecurityGroups property specifies both an AWS::EC2::SecurityGroup resource named myEC2SecurityGroup and an existing EC2 security group named myExistingEC2SecurityGroup\. The BlockDeviceMappings property lists two devices: a 50 gigabyte EBS volume mapped to /dev/sdk and a virtual device ephemeral0 mapped to /dev/sdc\. 
+This example shows an Auto Scaling AWS::AutoScaling::LaunchConfiguration resource\. The SecurityGroups property specifies both an AWS::EC2::SecurityGroup resource named myEC2SecurityGroup and an existing EC2 security group named myExistingEC2SecurityGroup\. The BlockDeviceMappings property lists two devices: a 50 gigabyte EBS volume mapped to /dev/sdk and a virtual device ephemeral0 mapped to /dev/sdc\.
 
 ### JSON<a name="quickref-autoscaling-example-1.json"></a>
 

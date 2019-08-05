@@ -6,7 +6,7 @@ Imagine a release process where you submit an AWS CloudFormation template, which
 
 This walkthrough assumes that you have used CodePipeline and AWS CloudFormation, and know how pipelines and AWS CloudFormation templates and stacks work\. For more information about CodePipeline, see the [AWS CodePipeline User Guide](https://docs.aws.amazon.com/codepipeline/latest/userguide/)\. You also need to have an Amazon S3 [bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) in the same AWS region in which you will create your pipeline\.
 
-**Important**  
+**Important**
 The sample Word Press template creates an EC2 instance that requires a connection to the Internet\. Check that you have a default VPC and subnet that allow traffic to the Internet\.
 
 ## Walkthrough Overview<a name="w4429ab1c13c11b7"></a>
@@ -27,7 +27,7 @@ By the end of this walkthrough, you'll have a pipeline that performs the followi
 
    In your initial run, you won't have a production stack\. The change set shows you all of the resources that AWS CloudFormation will create\. If you approve, this stage executes the change set and builds your production stack\.
 
-**Note**  
+**Note**
 AWS CloudFormation is a free service\. However, you are charged for the AWS resources, such as the EC2 instance, that you include in your stack at the current rate for each\. For more information about AWS pricing, see the detail page for each product at [http://aws\.amazon\.com](http://aws.amazon.com)\.
 
 ## Step 1: Edit the Artifact and Upload It to an S3 Bucket<a name="w4429ab1c13c11b9"></a>
@@ -44,7 +44,7 @@ After you build your artifact, you'll upload it to an S3 bucket\.
 
    The artifact contains three files:
    + The sample WordPress template: `wordpress-single-instance.yaml`
-   + The template configuration file for the test stack\.: `test-stack-configuration.json` 
+   + The template configuration file for the test stack\.: `test-stack-configuration.json`
    + The template configuration file for the production stack: `prod-stack-configuration.json`
 
 1. Extract all of the files, and then use any text editor to modify the template configuration files\.
@@ -77,7 +77,7 @@ To create the WordPress pipeline, you'll use a sample AWS CloudFormation templat
 
 For more details about the configuration of the pipeline, see [What the Pipeline Does](#codepipeline-basic-walkthrough-template-details)\.
 
-**Important**  
+**Important**
 The sample WordPress template creates an EC2 instance that requires a connection to the Internet\. Check that your default VPC and subnet allow traffic to the Internet\.
 
 **To create the pipeline stack**
@@ -98,14 +98,14 @@ The sample WordPress template creates an EC2 instance that requires a connection
 
 1. For **Stack name**, type `sample-WordPress-pipeline`\.
 
-1. In the **Parameters** section, specify the following parameter values, and then choose **Next**\. When setting stack parameters, if you kept the same names for the WordPress template and its configuration files, you can use the default values\. If not, specify the filenames that you used\.  
-**PipelineName**  
-The name of your pipeline, such as `WordPress-test-pipeline`\.  
-**S3Bucket**  
-The name of the S3 bucket where you saved your artifact \(`.zip` file\)\.  
-**SourceS3Key**  
-The filename of your artifact\. If you saved the artifact in a folder, include it as part of the filename, such as `folder/subfolder/wordpress-single-instance.zip`\.  
-**Email**  
+1. In the **Parameters** section, specify the following parameter values, and then choose **Next**\. When setting stack parameters, if you kept the same names for the WordPress template and its configuration files, you can use the default values\. If not, specify the filenames that you used\.
+**PipelineName**
+The name of your pipeline, such as `WordPress-test-pipeline`\.
+**S3Bucket**
+The name of the S3 bucket where you saved your artifact \(`.zip` file\)\.
+**SourceS3Key**
+The filename of your artifact\. If you saved the artifact in a folder, include it as part of the filename, such as `folder/subfolder/wordpress-single-instance.zip`\.
+**Email**
 The email address to which CodePipeline sends pipeline notification, such as `myemail@example.com`\.
 
 1. For this walkthrough, you don't need to add tags or specify advanced settings, so choose **Next**\.
@@ -268,7 +268,7 @@ You've successfully used CodePipeline to build a continuous delivery workflow fo
 
 To make sure that you are not charged for unwanted services, delete your resources\.
 
-**Important**  
+**Important**
 Delete the test and production WordPress stacks before deleting the pipeline stack\. The pipeline stack contains a service role that's required to delete the WordPress stacks\. If you deleted the pipeline stack first, you can [associate another service role Amazon Resource Name \(ARN\)](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeleteStack.html) with the WordPress stacks, and then delete them\.
 
 **To delete objects in the artifact store**

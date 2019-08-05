@@ -22,27 +22,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption
-Properties: 
+Properties:
   [ApplicationName](#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-applicationname): String
-  [CloudWatchLoggingOption](#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption): 
+  [CloudWatchLoggingOption](#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption):
     [CloudWatchLoggingOption](aws-properties-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption.md)
 ```
 
 ## Properties<a name="aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption-properties"></a>
 
 `ApplicationName`  <a name="cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-applicationname"></a>
-The name of the application\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
-*Pattern*: `[a-zA-Z0-9_.-]+`  
+The name of the application\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
+*Pattern*: `[a-zA-Z0-9_.-]+`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CloudWatchLoggingOption`  <a name="cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption"></a>
-Provides a description of Amazon CloudWatch logging options, including the log stream Amazon Resource Name \(ARN\)\.   
-*Required*: Yes  
-*Type*: [CloudWatchLoggingOption](aws-properties-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption.md)  
+Provides a description of Amazon CloudWatch logging options, including the log stream Amazon Resource Name \(ARN\)\.
+*Required*: Yes
+*Type*: [CloudWatchLoggingOption](aws-properties-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption--examples"></a>
@@ -96,7 +96,7 @@ BasicApplicationV2CloudWatchLoggingOption:
   Properties:
     ApplicationName: !Ref BasicApplication
     CloudWatchLoggingOption:
-      LogStreamARN: !Join 
+      LogStreamARN: !Join
         - ':'
         - - 'arn:aws:logs'
           - !Ref 'AWS::Region'
@@ -108,4 +108,4 @@ BasicApplicationV2CloudWatchLoggingOption:
 ```
 
 ## See Also<a name="aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption--seealso"></a>
-+  [AddApplicationCloudWatchLoggingOption](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_AddApplicationCloudWatchLoggingOption.html) in the *Amazon Kinesis Data Analytics API Reference* 
++  [AddApplicationCloudWatchLoggingOption](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_AddApplicationCloudWatchLoggingOption.html) in the *Amazon Kinesis Data Analytics API Reference*

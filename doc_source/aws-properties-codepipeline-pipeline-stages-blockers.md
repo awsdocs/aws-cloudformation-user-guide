@@ -25,16 +25,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codepipeline-pipeline-stages-blockers-properties"></a>
 
 `Name`  <a name="cfn-codepipeline-pipeline-stages-blockers-name"></a>
-Reserved for future use\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `100`  
+Reserved for future use\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `100`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-codepipeline-pipeline-stages-blockers-type"></a>
-Reserved for future use\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `Schedule`  
+Reserved for future use\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `Schedule`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

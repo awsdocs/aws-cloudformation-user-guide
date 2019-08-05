@@ -6,18 +6,18 @@ You can create a stack set in either the AWS Management Console, or by using AWS
 
 1. Open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
-1. At the top of the page, choose **StackSets**, and then choose **Create stack set**\.  
+1. At the top of the page, choose **StackSets**, and then choose **Create stack set**\.
 ![\[StackSets home page\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/stacksets_home.png)
 
-1. On the **Select template** page of the **Create stack set** wizard, choose **Select a sample template from the following templates**\.  
+1. On the **Select template** page of the **Create stack set** wizard, choose **Select a sample template from the following templates**\.
 ![\[StackSets Select Template wizard page\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/create_stack_set_selecttemplate.png)
 
-1. Choose the **Enable AWS Config** sample template, and then choose **Next**\.  
+1. Choose the **Enable AWS Config** sample template, and then choose **Next**\.
 ![\[StackSets sample Enable AWS Config template\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/create_stack_set_cloudtrail.png)
 
 1. On the **Specify details** page of the wizard, provide the following information\.
 
-   1. Provide a name for the stack set\. Stack set names must begin with an alphabetical character, and contain only letters, numbers, and hyphens\. In this walkthrough, we use the name **my\-awsconfig\-stackset**\.  
+   1. Provide a name for the stack set\. Stack set names must begin with an alphabetical character, and contain only letters, numbers, and hyphens\. In this walkthrough, we use the name **my\-awsconfig\-stackset**\.
 ![\[Specify Details page, first section\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/stacksets_specify_details1.png)
 
    1. You are prompted to specify values for parameters that are used by AWS Config\. For more information about these parameters, see [Setting up AWS Config with the Console](http://docs.aws.amazon.com/config/latest/developerguide/gs-console.html) in the *AWS Config Developer Guide*\. In this walkthrough, we will leave default settings for all AWS Config parameters\.
@@ -28,7 +28,7 @@ You can create a stack set in either the AWS Management Console, or by using AWS
 
 1. When you are finished specifying parameters for AWS Config, choose **Next**\.
 
-1. On the **Set deployment options** page, provide the accounts and regions into which you want stacks in your stack set deployed\. AWS CloudFormation deploys stacks in the specified accounts within the first region, then moves on to the next, and so on, as long as a region's deployment failures do not exceed a specified failure tolerance\.  
+1. On the **Set deployment options** page, provide the accounts and regions into which you want stacks in your stack set deployed\. AWS CloudFormation deploys stacks in the specified accounts within the first region, then moves on to the next, and so on, as long as a region's deployment failures do not exceed a specified failure tolerance\.
 ![\[Set Deployment Options page\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/stacksets_setdepoptions.png)
 
    1. In the **Accounts** area, choose **Deploy stacks in accounts**\. Paste your target account numbers in the text box, separating multiple numbers with commas\.
@@ -37,10 +37,10 @@ You can create a stack set in either the AWS Management Console, or by using AWS
 
    1. In the **Preferences** area, keep the default value of **1** and **By number** for **Maximum concurrent accounts**\. This means that AWS CloudFormation deploys your stack in only one account at one time\. Keep **Failure tolerance** at the default value of **0**, and keep the **By number** default option\. This means that a maximum of one stack deployment can fail in one of your specified regions before AWS CloudFormation stops deployment in the current region, and cancels deployment in remaining regions\. Choose **Next**\.
 
-1. On the **Tags** page, add a tag by specifying a key and value pair\. In this walkthrough, we create a tag called **Stage**, with a value of **Test**\. Tags that you apply to stack sets are applied to all resources that are created by your stacks\. For more information about how tags are used in AWS, see [Using Cost Allocation Tags](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\. After you specify the key\-value pair, choose **\+** to save the tag\. Choose **Next**\.  
+1. On the **Tags** page, add a tag by specifying a key and value pair\. In this walkthrough, we create a tag called **Stage**, with a value of **Test**\. Tags that you apply to stack sets are applied to all resources that are created by your stacks\. For more information about how tags are used in AWS, see [Using Cost Allocation Tags](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\. After you specify the key\-value pair, choose **\+** to save the tag\. Choose **Next**\.
 ![\[Tags page\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/stacksets_create_tags.png)
 
-1. On the **Review** page, review your choices and your stack set's properties\. To make changes, choose **Edit** in the area in which you want to change properties\. Before you can create the stack set, you must fill the check box in the **Capabilities** area to acknowledge that some of the resources that you are creating with the stack set might require new IAM resources and permissions\. For more information about potentially required permissions, see [Acknowledging IAM Resources in AWS CloudFormation Templates](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-capabilities) in this guide\. When you are are ready to create your stack set, choose **Create**\.  
+1. On the **Review** page, review your choices and your stack set's properties\. To make changes, choose **Edit** in the area in which you want to change properties\. Before you can create the stack set, you must fill the check box in the **Capabilities** area to acknowledge that some of the resources that you are creating with the stack set might require new IAM resources and permissions\. For more information about potentially required permissions, see [Acknowledging IAM Resources in AWS CloudFormation Templates](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-capabilities) in this guide\. When you are are ready to create your stack set, choose **Create**\.
 ![\[Acknowledge required capabilities\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/stacksets_create_capabilities.png)
 
 1. AWS CloudFormation starts creating your stack set\. View the progress and status of the creation of the stacks in your stack set in the Properties page that opens when you choose **Create**\.
@@ -70,7 +70,7 @@ When you create stack sets by using AWS CLI commands, you run two separate comma
    ```
    aws cloudformation create-stack-instances --stack-set-name my-awsconfig-stackset --accounts '["account_ID_1","account_ID_2"]' --regions '["region_1","region_2"]' --operation-preferences FailureToleranceCount=0,MaxConcurrentCount=1
    ```
-**Important**  
+**Important**
 Wait until an operation is complete before starting another one\. You can run only one operation at a time\.
 
 1. Verify that the stack instances were created successfully\. Run `DescribeStackSetOperation` with the `operation-id` that is returned as part of the output of step 4\.

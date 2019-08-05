@@ -14,7 +14,7 @@ The configuration is separated into sections\. The following template snippet sh
 
 The metadata is organized into config keys, which you can group into configsets\. You can specify a configset when you call cfn\-init in your template\. If you don't specify a configset, cfn\-init looks for a single config key named *config*\.
 
-**Note**  
+**Note**
 The cfn\-init helper script processes these configuration sections in the following order: packages, groups, users, sources, files, commands, and then services\. If you require a different order, separate your sections into different config keys, and then use a configset that specifies the order in which the config keys should be processed\.
 
 ### JSON<a name="aws-resource-cloudformation-init-syntax.json"></a>
@@ -60,33 +60,33 @@ The cfn\-init helper script processes these configuration sections in the follow
 ### YAML<a name="aws-resource-cloudformation-init-syntax.yaml"></a>
 
 ```
-Resources: 
-  MyInstance: 
+Resources:
+  MyInstance:
     Type: AWS::EC2::Instance
-    Metadata: 
-      AWS::CloudFormation::Init: 
-        config: 
-          packages: 
+    Metadata:
+      AWS::CloudFormation::Init:
+        config:
+          packages:
             :
-          groups: 
+          groups:
             :
-          users: 
+          users:
             :
-          sources: 
+          sources:
             :
-          files: 
+          files:
             :
-          commands: 
+          commands:
             :
-          services: 
+          services:
             :
-    Properties: 
+    Properties:
       :
 ```
 
 ## Configsets<a name="aws-resource-init-configsets"></a>
 
-If you want to create more than one config key and to have cfn\-init process them in a specific order, create a configset that contains the config keys in the desired order\. 
+If you want to create more than one config key and to have cfn\-init process them in a specific order, create a configset that contains the config keys in the desired order\.
 
 ### Single Configset<a name="w4784ab1c17c15c15c21c13b4"></a>
 
@@ -124,26 +124,26 @@ The following template snippet creates configsets named `ascending` and `descend
 #### YAML<a name="aws-resource-cloudformation-init-configset-example1.yaml"></a>
 
 ```
-AWS::CloudFormation::Init: 
-  configSets: 
-    ascending: 
+AWS::CloudFormation::Init:
+  configSets:
+    ascending:
       - "config1"
       - "config2"
-    descending: 
+    descending:
       - "config2"
       - "config1"
-  config1: 
-    commands: 
-      test: 
+  config1:
+    commands:
+      test:
         command: "echo \"$CFNTEST\" > test.txt"
-        env: 
+        env:
           CFNTEST: "I come from config1."
         cwd: "~"
-  config2: 
-    commands: 
-      test: 
+  config2:
+    commands:
+      test:
         command: "echo \"$CFNTEST\" > test.txt"
-        env: 
+        env:
           CFNTEST: "I come from config2"
         cwd: "~"
 ```
@@ -203,30 +203,30 @@ You can create multiple configsets, and call a series of them using your cfn\-in
 #### YAML<a name="aws-resource-cloudformation-init-configset-example2.yaml"></a>
 
 ```
-AWS::CloudFormation::Init: 
-  1: 
-    commands: 
-      test: 
+AWS::CloudFormation::Init:
+  1:
+    commands:
+      test:
         command: "echo \"$MAGIC\" > test.txt"
-        env: 
+        env:
           MAGIC: "I come from the environment!"
         cwd: "~"
-  2: 
-    commands: 
-      test: 
+  2:
+    commands:
+      test:
         command: "echo \"$MAGIC\" >> test.txt"
-        env: 
+        env:
           MAGIC: "I am test 2!"
         cwd: "~"
-  configSets: 
-    test1: 
+  configSets:
+    test1:
       - "1"
-    test2: 
-      - 
+    test2:
+      -
         ConfigSet: "test1"
       - "2"
-    default: 
-      - 
+    default:
+      -
         ConfigSet: "test2"
 ```
 
@@ -260,14 +260,14 @@ The following calls to cfn\-init refer to the configSets declared in the precedi
 You can use the commands key to execute commands on the EC2 instance\. The commands are processed in alphabetical order by name\.
 
 
-| Key | Description | 
-| --- | --- | 
-|  command  |  Required\. Either an array or a string specifying the command to run\. If you use an array, you do not need to escape space characters or enclose command parameters in quotes\. Don't use the array to specify multiple commands\.  | 
-|  env  |  Optional\. Sets environment variables for the command\. This property overwrites, rather than appends, the existing environment\.  | 
-|  cwd  |  Optional\. The working directory  | 
-|  test  |  Optional\. A test command that determines whether cfn\-init runs commands that are specified in the command key\. If the test passes, cfn\-init runs the commands\. The cfn\-init script runs the test in a command interpreter, such as Bash or `cmd.exe`\. Whether a test passes depends on the exit code that the interpreter returns\. For Linux, the test command must return an exit code of `0` for the test to pass\. For Windows, the test command must return an %ERRORLEVEL% of `0`\.  | 
-|  ignoreErrors  |  Optional\. A Boolean value that determines whether cfn\-init continues to run if the command in contained in the command key fails \(returns a non\-zero value\)\. Set to `true` if you want cfn\-init to continue running even if the command fails\. Set to `false` if you want cfn\-init to stop running if the command fails\. The default value is `false`\.  | 
-|  waitAfterCompletion  |  Optional\. For Windows systems only\. Specifies how long to wait \(in seconds\) after a command has finished in case the command causes a reboot\. The default value is 60 seconds and a value of "forever" directs cfn\-init to exit and resume only after the reboot is complete\. Set this value to `0` if you do not want to wait for every command\.   | 
+| Key | Description |
+| --- | --- |
+|  command  |  Required\. Either an array or a string specifying the command to run\. If you use an array, you do not need to escape space characters or enclose command parameters in quotes\. Don't use the array to specify multiple commands\.  |
+|  env  |  Optional\. Sets environment variables for the command\. This property overwrites, rather than appends, the existing environment\.  |
+|  cwd  |  Optional\. The working directory  |
+|  test  |  Optional\. A test command that determines whether cfn\-init runs commands that are specified in the command key\. If the test passes, cfn\-init runs the commands\. The cfn\-init script runs the test in a command interpreter, such as Bash or `cmd.exe`\. Whether a test passes depends on the exit code that the interpreter returns\. For Linux, the test command must return an exit code of `0` for the test to pass\. For Windows, the test command must return an %ERRORLEVEL% of `0`\.  |
+|  ignoreErrors  |  Optional\. A Boolean value that determines whether cfn\-init continues to run if the command in contained in the command key fails \(returns a non\-zero value\)\. Set to `true` if you want cfn\-init to continue running even if the command fails\. Set to `false` if you want cfn\-init to stop running if the command fails\. The default value is `false`\.  |
+|  waitAfterCompletion  |  Optional\. For Windows systems only\. Specifies how long to wait \(in seconds\) after a command has finished in case the command causes a reboot\. The default value is 60 seconds and a value of "forever" directs cfn\-init to exit and resume only after the reboot is complete\. Set this value to `0` if you do not want to wait for every command\.   |
 
 ### Example<a name="w4784ab1c17c15c15c21c15b6"></a>
 
@@ -297,17 +297,17 @@ The following example snippet calls the echo command if the `~/test.txt` file do
 #### YAML<a name="aws-resource-init-commands-example.yaml"></a>
 
 ```
-commands: 
-  test: 
+commands:
+  test:
     command: "echo \"$MAGIC\" > test.txt"
-    env: 
+    env:
       MAGIC: "I come from the environment!"
     cwd: "~"
     test: "test ! -e ~/test.txt"
     ignoreErrors: "false"
-  test2: 
+  test2:
     command: "echo \"$MAGIC2\" > test2.txt"
-    env: 
+    env:
       MAGIC2: "I come from the environment!"
     cwd: "~"
     test: "test ! -e ~/test2.txt"
@@ -319,22 +319,22 @@ commands:
 You can use the `files` key to create files on the EC2 instance\. The content can be either inline in the template or the content can be pulled from a URL\. The files are written to disk in lexicographic order\. The following table lists the supported keys\.
 
 
-| Key | Description | 
-| --- | --- | 
-|  content  |  Either a string or a properly formatted JSON object\. If you use a JSON object as your content, the JSON will be written to a file on disk\. Any intrinsic functions such as Fn::GetAtt or Ref are evaluated before the JSON object is written to disk\. When you create a symlink, specify the symlink target as the content\.  If you create a symlink, the helper script modifies the permissions of the target file\. Currently, you can't create a symlink without modifying the permissions of the target file\.   | 
-|  source  |  A URL to load the file from\. This option cannot be specified with the content key\.  | 
-|  encoding  |  The encoding format\. Only used if the content is a string\. Encoding is not applied if you are using a source\. Valid values: `plain` \| `base64`  | 
-|  group  |  The name of the owning group for this file\. Not supported for Windows systems\.  | 
-|  owner  |  The name of the owning user for this file\. Not supported for Windows systems\.  | 
-|  mode  |  A six\-digit octal value representing the mode for this file\. Not supported for Windows systems\. Use the first three digits for symlinks and the last three digits for setting permissions\. To create a symlink, specify **120*xxx***, where `xxx` defines the permissions of the target file\. To specify permissions for a file, use the last three digits, such as **000644**\.  | 
-|  authentication  |  The name of an authentication method to use\. This overrides any default authentication\. You can use this property to select an authentication method you define with the [AWS::CloudFormation::Authentication](aws-resource-authentication.md) resource\.  | 
-|  context  |  Specifies a context for files that are to be processed as [Mustache templates](http://mustache.github.com/mustache.5.html)\. To use this key, you must have installed aws\-cfn\-bootstrap 1\.3\-11 or later as well as [pystache](https://github.com/defunkt/pystache)\.  | 
+| Key | Description |
+| --- | --- |
+|  content  |  Either a string or a properly formatted JSON object\. If you use a JSON object as your content, the JSON will be written to a file on disk\. Any intrinsic functions such as Fn::GetAtt or Ref are evaluated before the JSON object is written to disk\. When you create a symlink, specify the symlink target as the content\.  If you create a symlink, the helper script modifies the permissions of the target file\. Currently, you can't create a symlink without modifying the permissions of the target file\.   |
+|  source  |  A URL to load the file from\. This option cannot be specified with the content key\.  |
+|  encoding  |  The encoding format\. Only used if the content is a string\. Encoding is not applied if you are using a source\. Valid values: `plain` \| `base64`  |
+|  group  |  The name of the owning group for this file\. Not supported for Windows systems\.  |
+|  owner  |  The name of the owning user for this file\. Not supported for Windows systems\.  |
+|  mode  |  A six\-digit octal value representing the mode for this file\. Not supported for Windows systems\. Use the first three digits for symlinks and the last three digits for setting permissions\. To create a symlink, specify **120*xxx***, where `xxx` defines the permissions of the target file\. To specify permissions for a file, use the last three digits, such as **000644**\.  |
+|  authentication  |  The name of an authentication method to use\. This overrides any default authentication\. You can use this property to select an authentication method you define with the [AWS::CloudFormation::Authentication](aws-resource-authentication.md) resource\.  |
+|  context  |  Specifies a context for files that are to be processed as [Mustache templates](http://mustache.github.com/mustache.5.html)\. To use this key, you must have installed aws\-cfn\-bootstrap 1\.3\-11 or later as well as [pystache](https://github.com/defunkt/pystache)\.  |
 
 ### Examples<a name="w4784ab1c17c15c15c21c17b6"></a>
 
 The following example snippet creates a file named setup\.mysql as part of a larger installation\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
 "files" : {
@@ -354,12 +354,12 @@ The following example snippet creates a file named setup\.mysql as part of a lar
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
-files: 
-  /tmp/setup.mysql: 
-    content: !Sub | 
+files:
+  /tmp/setup.mysql:
+    content: !Sub |
       CREATE DATABASE ${DBName};
       CREATE USER '${DBUsername}'@'localhost' IDENTIFIED BY '${DBPassword}';
       GRANT ALL ON ${DBName}.* TO '${DBUsername}'@'localhost';
@@ -371,9 +371,9 @@ files:
 
 The full template is available at: [https://s3\.amazonaws\.com/cloudformation\-templates\-us\-east\-1/Drupal\_Single\_Instance\.template](https://s3.amazonaws.com/cloudformation-templates-us-east-1/Drupal_Single_Instance.template)
 
-The following example snippet creates a symlink `/tmp/myfile2.txt` that points at an existing file `/tmp/myfile1.txt`\. The permissions of the target file `/tmp/myfile1.txt` is defined by the mode value `644`\. 
+The following example snippet creates a symlink `/tmp/myfile2.txt` that points at an existing file `/tmp/myfile1.txt`\. The permissions of the target file `/tmp/myfile1.txt` is defined by the mode value `644`\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
 "files" : {
@@ -384,18 +384,18 @@ The following example snippet creates a symlink `/tmp/myfile2.txt` that points a
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
-files: 
-  /tmp/myfile2.txt: 
+files:
+  /tmp/myfile2.txt:
     content: "/tmp/myfile1.txt"
     mode: "120644"
 ```
 
 Mustache templates are used primarily to create configuration files\. For example, you can store a configuration file in an S3 bucket and interpolate Refs and GetAtts from the template, instead of using [`Fn::Join`](intrinsic-function-reference-join.md)\. The following example snippet outputs "Content for test9" to `/tmp/test9.txt`\.
 
-**Example JSON**  
+**Example JSON**
 
 ```
 "files" : {
@@ -406,21 +406,21 @@ Mustache templates are used primarily to create configuration files\. For exampl
 }
 ```
 
-**Example YAML**  
+**Example YAML**
 
 ```
-files: 
-  /tmp/test9.txt: 
+files:
+  /tmp/test9.txt:
     content: "Content for {{name}}"
-    context: 
+    context:
       name: "test9"
 ```
 
 When working with Mustache templates, note the following:
 + The context key must be present for the files to be processed\.
 + The context key must be a key\-value map, but it can be nested\.
-+ You can process files with inline content by using the content key and remote files by using the source key\. 
-+ Mustache support depends on the pystache version\. Version 0\.5\.2 supports the [Mustache 1\.1\.2 specification](https://github.com/mustache/spec/tree/v1.1.2)\. 
++ You can process files with inline content by using the content key and remote files by using the source key\.
++ Mustache support depends on the pystache version\. Version 0\.5\.2 supports the [Mustache 1\.1\.2 specification](https://github.com/mustache/spec/tree/v1.1.2)\.
 
 ## Groups<a name="aws-resource-init-groups"></a>
 
@@ -429,9 +429,9 @@ You can use the groups key to create Linux/UNIX groups and to assign group IDs\.
 To create a group, add a new key\-value pair that maps a new group name to an optional group ID\. The groups key can contain one or more group names\. The following table lists the available keys\.
 
 
-| Key | Description | 
-| --- | --- | 
-|   `gid`  |  A group ID number\. If a group ID is specified, and the group already exists by name, the group creation will fail\. If another group has the specified group ID, the OS may reject the group creation\. Example: `{ "gid" : "23" }`  | 
+| Key | Description |
+| --- | --- |
+|   `gid`  |  A group ID number\. If a group ID is specified, and the group already exists by name, the group creation will fail\. If another group has the specified group ID, the OS may reject the group creation\. Example: `{ "gid" : "23" }`  |
 
 ### Example snippet<a name="aws-resource-init-groups-snippet"></a>
 
@@ -449,9 +449,9 @@ The following snippet specifies a group named `groupOne` without assigning a gro
 #### YAML<a name="aws-resource-init-groups-snippet.yaml"></a>
 
 ```
-groups: 
+groups:
   groupOne: {}
-  groupTwo: 
+  groupTwo:
     gid: "45"
 ```
 
@@ -494,14 +494,14 @@ The following snippet specifies a version URL for rpm, requests the latest versi
 ##### YAML<a name="aws-resource-init-packages-example1.yaml"></a>
 
 ```
-rpm: 
+rpm:
   epel: "http://download.fedoraproject.org/pub/epel/5/i386/epel-release-5-4.noarch.rpm"
-yum: 
+yum:
   httpd: []
   php: []
   wordpress: []
-rubygems: 
-  chef: 
+rubygems:
+  chef:
     - "0.10.2"
 ```
 
@@ -520,7 +520,7 @@ The following snippet specifies a URL for an MSI package:
 ##### YAML<a name="aws-resource-init-packages-example2.yaml"></a>
 
 ```
-msi: 
+msi:
   awscli: "https://s3.amazonaws.com/aws-cli/AWSCLI64.msi"
 ```
 
@@ -533,14 +533,14 @@ The services key also allows you to specify dependencies on sources, packages an
 The following table lists the supported keys\.
 
 
-| Key | Description | 
-| --- | --- | 
-|  ensureRunning  |  Set to true to ensure that the service is running after cfn\-init finishes\. Set to false to ensure that the service is not running after cfn\-init finishes\. Omit this key to make no changes to the service state\.  | 
-|  enabled  |  Set to true to ensure that the service will be started automatically upon boot\. Set to false to ensure that the service will not be started automatically upon boot\. Omit this key to make no changes to this property\.  | 
-|  files  |  A list of files\. If cfn\-init changes one directly via the files block, this service will be restarted  | 
-|  sources  |  A list of directories\. If cfn\-init expands an archive into one of these directories, this service will be restarted\.  | 
-|  packages  |  A map of package manager to list of package names\. If cfn\-init installs or updates one of these packages, this service will be restarted\.  | 
-|  commands  |  A list of command names\. If cfn\-init runs the specified command, this service will be restarted\.  | 
+| Key | Description |
+| --- | --- |
+|  ensureRunning  |  Set to true to ensure that the service is running after cfn\-init finishes\. Set to false to ensure that the service is not running after cfn\-init finishes\. Omit this key to make no changes to the service state\.  |
+|  enabled  |  Set to true to ensure that the service will be started automatically upon boot\. Set to false to ensure that the service will not be started automatically upon boot\. Omit this key to make no changes to this property\.  |
+|  files  |  A list of files\. If cfn\-init changes one directly via the files block, this service will be restarted  |
+|  sources  |  A list of directories\. If cfn\-init expands an archive into one of these directories, this service will be restarted\.  |
+|  packages  |  A map of package manager to list of package names\. If cfn\-init installs or updates one of these packages, this service will be restarted\.  |
+|  commands  |  A list of command names\. If cfn\-init runs the specified command, this service will be restarted\.  |
 
 ### Examples<a name="w4784ab1c17c15c15c21c23c10"></a>
 
@@ -578,23 +578,23 @@ The following Linux snippet configures the services as follows:
 ##### YAML<a name="aws-resource-init-services-example1.yaml"></a>
 
 ```
-services: 
-  sysvinit: 
-    nginx: 
+services:
+  sysvinit:
+    nginx:
       enabled: "true"
       ensureRunning: "true"
-      files: 
+      files:
         - "/etc/nginx/nginx.conf"
-      sources: 
+      sources:
         - "/var/www/html"
-    php-fastcgi: 
+    php-fastcgi:
       enabled: "true"
       ensureRunning: "true"
-      packages: 
-        yum: 
+      packages:
+        yum:
           - "php"
           - "spawn-fcgi"
-    sendmail: 
+    sendmail:
       enabled: "false"
       ensureRunning: "false"
 ```
@@ -620,12 +620,12 @@ The following Windows snippet starts the `cfn-hup` service, sets it to automatic
 ##### YAML<a name="aws-resource-init-services-example2.yaml"></a>
 
 ```
-services: 
-  windows: 
-    cfn-hup: 
+services:
+  windows:
+    cfn-hup:
       enabled: "true"
       ensureRunning: "true"
-      files: 
+      files:
         - "c:\\cfn\\cfn-hup.conf"
         - "c:\\cfn\\hooks.d\\cfn-auto-reloader.conf"
 ```
@@ -634,7 +634,7 @@ services:
 
 You can use the sources key to download an archive file and unpack it in a target directory on the EC2 instance\. This key is fully supported for both Linux and Windows systems\.
 
-**Supported formats**  
+**Supported formats**
 Supported formats are tar, tar\+gzip, tar\+bz2 and zip\.
 
 ### Examples<a name="w4784ab1c17c15c15c21c25b6"></a>
@@ -644,7 +644,7 @@ Supported formats are tar, tar\+gzip, tar\+bz2 and zip\.
 If you use GitHub as a source control system, you can use cfn\-init and the sources package mechanism to pull a specific version of your application\. GitHub allows you to create a zip or a tar from a specific version via a URL as follows:
 
 ```
-https://github.com/<your directory>/(zipball|tarball)/<version> 
+https://github.com/<your directory>/(zipball|tarball)/<version>
 ```
 
 For example, the following snippet pulls down version *master* as a `.tar` file\.
@@ -660,7 +660,7 @@ For example, the following snippet pulls down version *master* as a `.tar` file\
 ##### YAML<a name="aws-resource-init-sources-example1.yaml"></a>
 
 ```
-sources: 
+sources:
   /etc/puppet: "https://github.com/user1/cfn-demo/tarball/master"
 ```
 
@@ -668,7 +668,7 @@ sources:
 
 The following example downloads a zip file from an Amazon S3 bucket and unpacks it into /etc/myapp:
 
-**Note**  
+**Note**
 You can use authentication credentials for a source\. However, you cannot put an authentication key in the sources block\. Instead, include a buckets key in your S3AccessCreds block\. For an example, see the [example template](https://s3.amazonaws.com/cloudformation-templates-us-east-1/S3Bucket_SourceAuth.template)\. For more information on Amazon S3 authentication credentials, see [AWS::CloudFormation::Authentication](aws-resource-authentication.md)\.
 
 ##### JSON<a name="aws-resource-init-sources-example2.json"></a>
@@ -682,7 +682,7 @@ You can use authentication credentials for a source\. However, you cannot put an
 ##### YAML<a name="aws-resource-init-sources-example2.yaml"></a>
 
 ```
-sources: 
+sources:
   /etc/myapp: "https://s3.amazonaws.com/mybucket/myapp.tar.gz"
 ```
 
@@ -693,11 +693,11 @@ You can use the users key to create Linux/UNIX users on the EC2 instance\. The u
 The following table lists the supported keys\.
 
 
-| Key | Description | 
-| --- | --- | 
-|  uid  |  A user ID\. The creation process fails if the user name exists with a different user ID\. If the user ID is already assigned to an existing user the operating system may reject the creation request\.  | 
-|  groups  |  A list of group names\. The user will be added to each group in the list\.  | 
-|  homeDir  |  The user's home directory\.  | 
+| Key | Description |
+| --- | --- |
+|  uid  |  A user ID\. The creation process fails if the user name exists with a different user ID\. If the user ID is already assigned to an existing user the operating system may reject the creation request\.  |
+|  groups  |  A list of group names\. The user will be added to each group in the list\.  |
+|  homeDir  |  The user's home directory\.  |
 
 ### Example<a name="w4784ab1c17c15c15c21c27b8"></a>
 
@@ -718,9 +718,9 @@ Users are created as non\-interactive system users with a shell of /sbin/nologin
 #### YAML<a name="aws-resource-init-users-example.yaml"></a>
 
 ```
-users: 
-  myUser: 
-    groups: 
+users:
+  myUser:
+    groups:
       - "groupOne"
       - "groupTwo"
     uid: "50"

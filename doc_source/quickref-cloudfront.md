@@ -36,7 +36,7 @@ The following example template shows an Amazon CloudFront [Distribution](https:/
 22.                     },
 23.                     "Aliases" : [ "mysite.example.com", "yoursite.example.com" ],
 24.                     "DefaultCacheBehavior" : {
-25.                         "AllowedMethods" : [ "DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT" ],  
+25.                         "AllowedMethods" : [ "DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT" ],
 26.                         "TargetOriginId" : "myS3Origin",
 27.                         "ForwardedValues" : {
 28.                             "QueryString" : "false",
@@ -52,7 +52,7 @@ The following example template shows an Amazon CloudFront [Distribution](https:/
 38.                            "Locations" : [ "AQ", "CV" ]
 39.                        }
 40.                    },
-41.                    "ViewerCertificate" : { "CloudFrontDefaultCertificate" : "true" }  
+41.                    "ViewerCertificate" : { "CloudFrontDefaultCertificate" : "true" }
 42.                 }
 43.             }
 44.         }
@@ -150,7 +150,7 @@ The following example template shows an Amazon CloudFront [Distribution](https:/
 28.                     ],
 29.                     "DefaultCacheBehavior" : {
 30.                         "TargetOriginId" : "myCustomOrigin",
-31.                         "SmoothStreaming" : "false",  
+31.                         "SmoothStreaming" : "false",
 32.                         "ForwardedValues" : {
 33.                             "QueryString" : "false",
 34.                             "Cookies" : { "Forward" : "all" }
@@ -255,7 +255,7 @@ The following example template shows how to declare a CloudFront [Distribution](
                         "S3OriginConfig" : {
                             "OriginAccessIdentity" : "origin-access-identity/cloudfront/E127EXAMPLE51Z"
                         }
-                     }, 
+                     },
                      {
                          "Id" : "myCustomOrigin",
                          "DomainName" : "www.example.com",
@@ -268,12 +268,12 @@ The following example template shows how to declare a CloudFront [Distribution](
                    ],
                    "Enabled" : "true",
                    "Comment" : "Some comment",
-                   "DefaultRootObject" : "index.html", 
+                   "DefaultRootObject" : "index.html",
                    "Logging" : {
                        "IncludeCookies" : "true",
                        "Bucket" : "mylogs.s3.amazonaws.com",
                        "Prefix" : "myprefix"
-                   },            
+                   },
                    "Aliases" : [ "mysite.example.com", "yoursite.example.com" ],
                    "DefaultCacheBehavior" : {
                        "TargetOriginId" : "myS3Origin",
@@ -287,7 +287,7 @@ The following example template shows how to declare a CloudFront [Distribution](
                        "SmoothStreaming" : "true"
                    },
                    "CacheBehaviors" : [ {
-                            "AllowedMethods" : [ "DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT" ],  
+                            "AllowedMethods" : [ "DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT" ],
                             "TargetOriginId" : "myS3Origin",
                             "ForwardedValues" : {
                                 "QueryString" : "true",
@@ -297,9 +297,9 @@ The following example template shows how to declare a CloudFront [Distribution](
                             "ViewerProtocolPolicy" : "allow-all",
                             "MinTTL" : "50",
                             "PathPattern" : "images1/*.jpg"
-                        }, 
+                        },
                         {
-                            "AllowedMethods" : [ "DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT" ],  
+                            "AllowedMethods" : [ "DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT" ],
                             "TargetOriginId" : "myCustomOrigin",
                             "ForwardedValues" : {
                                 "QueryString" : "true",

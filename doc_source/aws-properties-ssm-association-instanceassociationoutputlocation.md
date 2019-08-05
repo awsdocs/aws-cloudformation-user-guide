@@ -17,14 +17,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ssm-association-instanceassociationoutputlocation-syntax.yaml"></a>
 
 ```
-  [S3Location](#cfn-ssm-association-instanceassociationoutputlocation-s3location): 
+  [S3Location](#cfn-ssm-association-instanceassociationoutputlocation-s3location):
     [S3OutputLocation](aws-properties-ssm-association-s3outputlocation.md)
 ```
 
 ## Properties<a name="aws-properties-ssm-association-instanceassociationoutputlocation-properties"></a>
 
 `S3Location`  <a name="cfn-ssm-association-instanceassociationoutputlocation-s3location"></a>
- `S3OutputLocation` is a property of the [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html) property that specifies an Amazon S3 bucket where you want to store the results of this request\.   
-*Required*: No  
-*Type*: [S3OutputLocation](aws-properties-ssm-association-s3outputlocation.md)  
+ `S3OutputLocation` is a property of the [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html) property that specifies an Amazon S3 bucket where you want to store the results of this request\.
+*Required*: No
+*Type*: [S3OutputLocation](aws-properties-ssm-association-s3outputlocation.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

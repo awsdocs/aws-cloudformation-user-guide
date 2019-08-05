@@ -21,26 +21,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Id](#cfn-s3-bucket-metricsconfiguration-id): String
   [Prefix](#cfn-s3-bucket-metricsconfiguration-prefix): String
-  [TagFilters](#cfn-s3-bucket-metricsconfiguration-tagfilters): 
+  [TagFilters](#cfn-s3-bucket-metricsconfiguration-tagfilters):
     - [TagFilter](aws-properties-s3-bucket-tagfilter.md)
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-metricsconfiguration-properties"></a>
 
 `Id`  <a name="cfn-s3-bucket-metricsconfiguration-id"></a>
-The ID used to identify the metrics configuration\.  
-*Required*: Yes  
-*Type*: String  
+The ID used to identify the metrics configuration\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Prefix`  <a name="cfn-s3-bucket-metricsconfiguration-prefix"></a>
-The prefix that an object must have to be included in the metrics results\.  
-*Required*: No  
-*Type*: String  
+The prefix that an object must have to be included in the metrics results\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TagFilters`  <a name="cfn-s3-bucket-metricsconfiguration-tagfilters"></a>
-Specifies a list of tag filters to use as a metrics configuration filter\. The metrics configuration includes only objects that meet the filter's criteria\.  
-*Required*: No  
-*Type*: List of [TagFilter](aws-properties-s3-bucket-tagfilter.md)  
+Specifies a list of tag filters to use as a metrics configuration filter\. The metrics configuration includes only objects that meet the filter's criteria\.
+*Required*: No
+*Type*: List of [TagFilter](aws-properties-s3-bucket-tagfilter.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

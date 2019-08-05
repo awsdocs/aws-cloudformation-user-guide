@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Pinpoint::ADMChannel
-Properties: 
+Properties:
   [ApplicationId](#cfn-pinpoint-admchannel-applicationid): String
   [ClientId](#cfn-pinpoint-admchannel-clientid): String
   [ClientSecret](#cfn-pinpoint-admchannel-clientsecret): String
@@ -36,27 +36,27 @@ Properties:
 ## Properties<a name="aws-resource-pinpoint-admchannel-properties"></a>
 
 `ApplicationId`  <a name="cfn-pinpoint-admchannel-applicationid"></a>
-The unique identifier of the Amazon Pinpoint application that the ADM channel applies to\.  
-*Required*: Yes  
-*Type*: String  
+The unique identifier of the Amazon Pinpoint application that the ADM channel applies to\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ClientId`  <a name="cfn-pinpoint-admchannel-clientid"></a>
-The Client ID that you received from Amazon to send messages by using ADM\.  
-*Required*: Yes  
-*Type*: String  
+The Client ID that you received from Amazon to send messages by using ADM\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClientSecret`  <a name="cfn-pinpoint-admchannel-clientsecret"></a>
-The Client Secret that you received from Amazon to send messages by using ADM\.  
-*Required*: Yes  
-*Type*: String  
+The Client Secret that you received from Amazon to send messages by using ADM\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-pinpoint-admchannel-enabled"></a>
-Specifies whether to enable the ADM channel for the application\.  
-*Required*: No  
-*Type*: Boolean  
+Specifies whether to enable the ADM channel for the application\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-pinpoint-admchannel-return-values"></a>

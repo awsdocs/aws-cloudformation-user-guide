@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::EMR::Step
-Properties: 
+Properties:
   [ActionOnFailure](#cfn-elasticmapreduce-step-actiononfailure): String
-  [HadoopJarStep](#cfn-elasticmapreduce-step-hadoopjarstep): 
+  [HadoopJarStep](#cfn-elasticmapreduce-step-hadoopjarstep):
     [HadoopJarStepConfig](aws-properties-elasticmapreduce-step-hadoopjarstepconfig.md)
   [JobFlowId](#cfn-elasticmapreduce-step-jobflowid): String
   [Name](#cfn-elasticmapreduce-step-name): String
@@ -35,31 +35,31 @@ Properties:
 ## Properties<a name="aws-resource-emr-step-properties"></a>
 
 `ActionOnFailure`  <a name="cfn-elasticmapreduce-step-actiononfailure"></a>
-The action to take when the cluster step fails\. Possible values are TERMINATE\_CLUSTER, CANCEL\_AND\_WAIT, and CONTINUE\. TERMINATE\_JOB\_FLOW is provided for backward compatibility\. We recommend using TERMINATE\_CLUSTER instead\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `CANCEL_AND_WAIT | CONTINUE | TERMINATE_CLUSTER | TERMINATE_JOB_FLOW`  
+The action to take when the cluster step fails\. Possible values are TERMINATE\_CLUSTER, CANCEL\_AND\_WAIT, and CONTINUE\. TERMINATE\_JOB\_FLOW is provided for backward compatibility\. We recommend using TERMINATE\_CLUSTER instead\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `CANCEL_AND_WAIT | CONTINUE | TERMINATE_CLUSTER | TERMINATE_JOB_FLOW`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HadoopJarStep`  <a name="cfn-elasticmapreduce-step-hadoopjarstep"></a>
-The `HadoopJarStepConfig` property type specifies a job flow step consisting of a JAR file whose main function will be executed\. The main function submits a job for the cluster to execute as a step on the master node, and then waits for the job to finish or fail before executing subsequent steps\.  
-*Required*: Yes  
-*Type*: [HadoopJarStepConfig](aws-properties-elasticmapreduce-step-hadoopjarstepconfig.md)  
+The `HadoopJarStepConfig` property type specifies a job flow step consisting of a JAR file whose main function will be executed\. The main function submits a job for the cluster to execute as a step on the master node, and then waits for the job to finish or fail before executing subsequent steps\.
+*Required*: Yes
+*Type*: [HadoopJarStepConfig](aws-properties-elasticmapreduce-step-hadoopjarstepconfig.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `JobFlowId`  <a name="cfn-elasticmapreduce-step-jobflowid"></a>
-A string that uniquely identifies the cluster \(job flow\)\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `0`  
-*Maximum*: `256`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+A string that uniquely identifies the cluster \(job flow\)\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `0`
+*Maximum*: `256`
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-elasticmapreduce-step-name"></a>
-The name of the cluster step\.  
-*Required*: Yes  
-*Type*: String  
+The name of the cluster step\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-emr-step-return-values"></a>

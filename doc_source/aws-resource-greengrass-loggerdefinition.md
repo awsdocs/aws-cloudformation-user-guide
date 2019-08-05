@@ -4,8 +4,8 @@ The `AWS::Greengrass::LoggerDefinition` resource represents a logger definition 
 
 Logger definitions can reference multiple logger definition versions\. All logger definition versions must be associated with a logger definition\. Each logger definition version can contain one or more loggers\.
 
-**Note**  
-When you create a logger definition, you can optionally include an initial logger definition version\. To associate a logger definition version later, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html) resource and specify the ID of this logger definition\.  
+**Note**
+When you create a logger definition, you can optionally include an initial logger definition version\. To associate a logger definition version later, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html) resource and specify the ID of this logger definition\.
 After you create the logger definition version that contains the loggers you want to deploy, you must add it to your group version\. For more information, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)\.
 
 ## Syntax<a name="aws-resource-greengrass-loggerdefinition-syntax"></a>
@@ -28,8 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Greengrass::LoggerDefinition
-Properties: 
-  [InitialVersion](#cfn-greengrass-loggerdefinition-initialversion): 
+Properties:
+  [InitialVersion](#cfn-greengrass-loggerdefinition-initialversion):
     [LoggerDefinitionVersion](aws-properties-greengrass-loggerdefinition-loggerdefinitionversion.md)
   [Name](#cfn-greengrass-loggerdefinition-name): String
 ```
@@ -37,23 +37,23 @@ Properties:
 ## Properties<a name="aws-resource-greengrass-loggerdefinition-properties"></a>
 
 `InitialVersion`  <a name="cfn-greengrass-loggerdefinition-initialversion"></a>
-The logger definition version to include when the logger definition is created\. A logger definition version contains a list of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html) property types\.  
+The logger definition version to include when the logger definition is created\. A logger definition version contains a list of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html) property types\.
 To associate a logger definition version after the logger definition is created, create an [ `AWS::Greengrass::LoggerDefinitionVersion` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html) resource and specify the ID of this logger definition\.
-*Required*: No  
-*Type*: [LoggerDefinitionVersion](aws-properties-greengrass-loggerdefinition-loggerdefinitionversion.md)  
+*Required*: No
+*Type*: [LoggerDefinitionVersion](aws-properties-greengrass-loggerdefinition-loggerdefinitionversion.md)
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-greengrass-loggerdefinition-name"></a>
-The name of the logger definition\.  
-*Required*: Yes  
-*Type*: String  
+The name of the logger definition\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-greengrass-loggerdefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-loggerdefinition-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the logger definition, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the logger definition, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -66,16 +66,16 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-greengrass-loggerdefinition-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the `LoggerDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/loggers/1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
+The Amazon Resource Name \(ARN\) of the `LoggerDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/loggers/1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\.
 
 `Id`  <a name="Id-fn::getatt"></a>
-The ID of the `LoggerDefinition`, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
+The ID of the `LoggerDefinition`, such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\.
 
 `LatestVersionArn`  <a name="LatestVersionArn-fn::getatt"></a>
-The ARN of the last `LoggerDefinitionVersion` that was added to the `LoggerDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/loggers/1234a5b6-78cd-901e-2fgh-3i45j6k178l9/versions/9876ac30-4bdb-4f9d-95af-b5fdb66be1a2`\. 
+The ARN of the last `LoggerDefinitionVersion` that was added to the `LoggerDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/loggers/1234a5b6-78cd-901e-2fgh-3i45j6k178l9/versions/9876ac30-4bdb-4f9d-95af-b5fdb66be1a2`\.
 
 `Name`  <a name="Name-fn::getatt"></a>
-The name of the `LoggerDefinition`, such as `MyLoggerDefinition`\. 
+The name of the `LoggerDefinition`, such as `MyLoggerDefinition`\.
 
 ## Examples<a name="aws-resource-greengrass-loggerdefinition--examples"></a>
 
@@ -124,5 +124,5 @@ TestLoggerDefinition:
 ```
 
 ## See Also<a name="aws-resource-greengrass-loggerdefinition--seealso"></a>
-+  [CreateLoggerDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createloggerdefinition-post.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [CreateLoggerDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createloggerdefinition-post.html) in the * AWS IoT Greengrass API Reference *
++  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/)

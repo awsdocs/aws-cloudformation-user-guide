@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-dataexport-syntax.yaml"></a>
 
 ```
-  [Destination](#cfn-s3-bucket-dataexport-destination): 
+  [Destination](#cfn-s3-bucket-dataexport-destination):
     [Destination](aws-properties-s3-bucket-destination.md)
   [OutputSchemaVersion](#cfn-s3-bucket-dataexport-outputschemaversion): String
 ```
@@ -26,14 +26,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-dataexport-properties"></a>
 
 `Destination`  <a name="cfn-s3-bucket-dataexport-destination"></a>
-The place to store the data for an analysis\.  
-*Required*: Yes  
-*Type*: [Destination](aws-properties-s3-bucket-destination.md)  
+The place to store the data for an analysis\.
+*Required*: Yes
+*Type*: [Destination](aws-properties-s3-bucket-destination.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OutputSchemaVersion`  <a name="cfn-s3-bucket-dataexport-outputschemaversion"></a>
-The version of the output schema to use when exporting data\. Must be `V_1`\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed Values*: `V_1`  
+The version of the output schema to use when exporting data\. Must be `V_1`\.
+*Required*: Yes
+*Type*: String
+*Allowed Values*: `V_1`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -25,15 +25,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotanalytics-dataset-versioningconfiguration-properties"></a>
 
 `MaxVersions`  <a name="cfn-iotanalytics-dataset-versioningconfiguration-maxversions"></a>
-How many versions of data set contents will be kept\. The "unlimited" parameter must be false\.  
-*Required*: No  
-*Type*: Integer  
-*Minimum*: `1`  
-*Maximum*: `1000`  
+How many versions of data set contents will be kept\. The "unlimited" parameter must be false\.
+*Required*: No
+*Type*: Integer
+*Minimum*: `1`
+*Maximum*: `1000`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Unlimited`  <a name="cfn-iotanalytics-dataset-versioningconfiguration-unlimited"></a>
-If true, unlimited versions of data set contents will be kept\.  
-*Required*: No  
-*Type*: Boolean  
+If true, unlimited versions of data set contents will be kept\.
+*Required*: No
+*Type*: Boolean
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
