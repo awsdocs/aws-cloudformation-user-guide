@@ -188,7 +188,7 @@ The Amazon Resource Name \(ARN\) of the AWS Key Management Service master key th
 `MasterUserPassword`  <a name="cfn-rds-dbcluster-masteruserpassword"></a>
 The master password for the DB instance\.  
 If you specify the `SourceDBInstanceIdentifier` or `DBSnapshotIdentifier` property, don't specify this property\. The value is inherited from the source DB instance or snapshot\.
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
