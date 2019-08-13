@@ -363,7 +363,7 @@ Resources:
     Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
-        Version: 2012-10-17
+        Version: "2012-10-17"
         Statement:
           - Sid: ''
             Effect: Allow
@@ -378,7 +378,7 @@ Resources:
     Properties:
       PolicyName: firehose_delivery_policy
       PolicyDocument:
-        Version: 2012-10-17
+        Version: "2012-10-17"
         Statement:
           - Effect: Allow
             Action:
