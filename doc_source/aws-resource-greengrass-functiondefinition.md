@@ -19,7 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Greengrass::FunctionDefinition",
   "Properties" : {
       "[InitialVersion](#cfn-greengrass-functiondefinition-initialversion)" : [FunctionDefinitionVersion](aws-properties-greengrass-functiondefinition-functiondefinitionversion.md),
-      "[Name](#cfn-greengrass-functiondefinition-name)" : String
+      "[Name](#cfn-greengrass-functiondefinition-name)" : String,
+      "[Tags](#cfn-greengrass-functiondefinition-tags)" : Json
     }
 }
 ```
@@ -32,6 +33,7 @@ Properties:
   [InitialVersion](#cfn-greengrass-functiondefinition-initialversion): 
     [FunctionDefinitionVersion](aws-properties-greengrass-functiondefinition-functiondefinitionversion.md)
   [Name](#cfn-greengrass-functiondefinition-name): String
+  [Tags](#cfn-greengrass-functiondefinition-tags): Json
 ```
 
 ## Properties<a name="aws-resource-greengrass-functiondefinition-properties"></a>
@@ -47,6 +49,21 @@ To associate a function definition version after the function definition is crea
 The name of the function definition\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-greengrass-functiondefinition-tags"></a>
+Application\-specific metadata to attach to the function definition\. You can use tags in IAM policies to control access to AWS IoT Greengrass resources\. You can also use tags to categorize your resources\. For more information, see [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/latest/developerguide/tagging.html) in the *AWS IoT Greengrass Developer Guide*\.  
+This `Json` property type is processed as a map of key\-value pairs\. It uses the following format, which is different from most `Tags` implementations in AWS CloudFormation templates\.  
+
+```
+"Tags": {
+    "KeyName0": "value",
+    "KeyName1": "value",
+    "KeyName2": "value"
+}
+```
+*Required*: No  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-greengrass-functiondefinition-return-values"></a>
