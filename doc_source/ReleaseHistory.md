@@ -4,6 +4,92 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::EC2::ClientVpnEndpoint, AWS::Greengrass::Group, AWS::Greengrass::ConnectorDefinition, AWS::Greengrass::CoreDefinition, AWS::Greengrass::DeviceDefinition, AWS::Greengrass::FunctionDefinition, AWS::Greengrass::LoggerDefinition, AWS::Greengrass::ResourceDefinition, and AWS::Greengrass::SubscriptionDefinition\.  
+
+ [AWS::EC2::ClientVpnEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html)   
+Use the `SplitTunnel` parameter to specify whether split\-tunnel is enabled on the AWS Client VPN endpoint\. 
+
+ [AWS::Greengrass::ConnectorDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html)   
+Use the `Tags` property to attach metadata to the `AWS::Greengrass::ConnectorDefinition` resource\. 
+
+ [AWS::Greengrass::CoreDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinition.html)   
+Use the `Tags` property to attach metadata to the `AWS::Greengrass::CoreDefinition` resource\. 
+
+ [AWS::Greengrass::DeviceDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinition.html)   
+Use the `Tags` property to attach metadata to the `AWS::Greengrass::DeviceDefinition` resource\. 
+
+ [AWS::Greengrass::FunctionDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinition.html)   
+Use the `Tags` property to attach metadata to the `AWS::Greengrass::FunctionDefinition` resource\. 
+
+ [AWS::Greengrass::Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)   
+Use the `Tags` property to attach metadata to the `AWS::Greengrass::Group` resource\. 
+
+ [AWS::Greengrass::LoggerDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html)   
+Use the `Tags` property to attach metadata to the `AWS::Greengrass::LoggerDefinition` resource\. 
+
+ [AWS::Greengrass::ResourceDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinition.html)   
+Use the `Tags` property to attach metadata to the `AWS::Greengrass::ResourceDefinition` resource\. 
+
+ [AWS::Greengrass::SubscriptionDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinition.html)   
+Use the `Tags` property to attach metadata to the `AWS::Greengrass::SubscriptionDefinition` resource\.  | August 8, 2019 | 
+| [Updated resource](AWS_AppSync.md) | The following resource was updated: AWS::AppSync::GraphQLApi\. 
+
+ [AWS::AppSync::GraphQLApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html)   
+In the [LogConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html) property type, when set to `TRUE`, the `excludeVerboseContent` property excludes sections that contain information such as headers, context, and evaluated mapping templates, regardless of logging level\.  | August 8, 2019 | 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::ManagedBlockchain::Member and AWS::ManagedBlockchain::Node\. 
+
+ [AWS::ManagedBlockchain::Member](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-member.html)   
+Use the `Member` resource to create the first member or an additional member of an Amazon Managed Blockchain network\. 
+
+ [AWS::ManagedBlockchain::Node](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-node.html)   
+Use the `Node` resource to create a peer node in a member of an Amazon Managed Blockchain network\.  | August 8, 2019 | 
+| [New resource](AWS_Glue.md) | The following resource was added: AWS::Glue::MLTransform 
+
+ [AWS::Glue::MLTransform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-mltransform.html)   
+Use the `AWS::Glue::MLTransform` resource to manage machine learning transforms\.  | August 8, 2019 | 
+| [New resource](AWS_LakeFormation.md) | The following resource was added: AWS::LakeFormation::DataLakeSettings 
+
+ [AWS::LakeFormation::DataLakeSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datalakesettings.html)   
+Use the `AWS::LakeFormation::DataLakeSettings` resource to manage data lake settings\.  | August 8, 2019 | 
+| [New resource](AWS_LakeFormation.md) | The following resource was added: AWS::LakeFormation::Permissions 
+
+ [AWS::LakeFormation::Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-permissions.html)   
+Use the `AWS::LakeFormation:Permissions` resource to grant or revoke AWS Lake Formation permissions\.  | August 8, 2019 | 
+| [New resource](AWS_LakeFormation.md) | The following resource was added: AWS::LakeFormation::Resource 
+
+ [AWS::LakeFormation::Resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-resource.html)   
+Use the `AWS::LakeFormation::Resource` resource to define the resources to which permissions are to be granted\.  | August 8, 2019 | 
+| [New resource](AWS_CodeBuild.md) | The following resource was added: AWS::CodeBuild::SourceCredential 
+
+ [AWS::CodeBuild::SourceCredential](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-source-credential.html)   
+Use the `AWS::CodeBuild::SourceCredential` resource to specify information about the credentials for a GitHub, GitHub Enterprise, or Bitbucket repository used in an AWS CodeBuild build project\.  | August 7, 2019 | 
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::Batch::JobDefinition, AWS::Cognito::UserPool, AWS::Cognito::UserPoolClient, and AWS::Glue::Job\. 
+
+ [AWS::Batch::JobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html)   
+In the [ContainerProperties](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties.html) property type, use the `LinuxParameters` property to specify Linux\-specific modifications that are applied to the container, such as details for device mappings\. 
+
+[AWS::Cognito::UserPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html)  
+Use the `UserPoolAddOns` property to enable advanced security risk detection\.  
+Use the `VerificationMessageTemplate` property to define the template for verification messages\. 
+
+[AWS::Cognito::UserPoolClient](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html)  
+Use the `AnalyticsConfiguration` property to define the Amazon Pinpoint analytics configuration for collecting metrics for this user pool\. 
+
+ [AWS::Glue::Job](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html)   
+Use the `GlueVersion` property to determine the versions of Apache Spark and Python that AWS Glue supports\. The Python version indicates the version supported for jobs of type Spark\.  
+Use the `MaxCapacity` property to specify the number of AWS Glue data processing units \(DPUs\) that can be allocated when this job runs\. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory\.  
+For the `NumberofWorkers` property, when you specify a Python shell job \(`JobCommand.Name`="pythonshell"\), you can allocate either 0\.0625 or 1 DPU\. The default is 0\.0625 DPU\. When you specify an Apache Spark ETL job \(`JobCommand.Name`="glueetl"\), you can allocate from 2 to 100 DPUs\. The default is 10 DPUs\. This job type cannot have a fractional DPU allocation\.  
+Use the `WorkerType` property to specify the type of predefined worker that is allocated when a job runs\.  
+In the [JobCommand](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-jobcommand.html) property type, use the `PythonVersion` property to specify the Python version being used to execute a Python shell job\.  | August 2, 2019 | 
+| [Stack set limit increases](#ReleaseHistory) | You can now create a maximum of 100 stack sets in your administrator account, create a maximum of 2000 stack instances per stack set, and run a maximum of 3500 stack instance operations in each region at the same time, per administrator account\.For more details, see [AWS CloudFormation Limits](cloudformation-limits.md)\. | August 2, 2019 | 
+| [New resource](#ReleaseHistory) | The following resource was added: AWS::CodeStar::GitHubRepository\. 
+
+ [AWS::CodeStar::GitHubRepository](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html)   
+Use the `AWS::CodeStar::GitHubRepository` resource to create a GitHub repository where you can store source code for use with AWS workflows\. If provided, your source code is uploaded to the repository after it is created\.  | August 2, 2019 | 
+| [Updated resource](#ReleaseHistory) | You can now add tags to a CodeCommit repository in your AWS CloudFormation template\. 
+
+ [AWS::CodeCommit::Repository](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codecommit-repository.html)   
+Use the `Tags` property to provide information about one or more tag key\-value pairs to use when tagging a repository\.  | July 25, 2019 | 
 | [Updated resources](#ReleaseHistory) | The following resource was updated: AWS::AmazonMQ::Broker\. 
 
  [ AWS::AmazonMQ::Broker](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html)   

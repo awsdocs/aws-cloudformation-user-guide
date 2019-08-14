@@ -26,9 +26,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[SmsAuthenticationMessage](#cfn-cognito-userpool-smsauthenticationmessage)" : String,
       "[SmsConfiguration](#cfn-cognito-userpool-smsconfiguration)" : [SmsConfiguration](aws-properties-cognito-userpool-smsconfiguration.md),
       "[SmsVerificationMessage](#cfn-cognito-userpool-smsverificationmessage)" : String,
+      "[UsernameAttributes](#cfn-cognito-userpool-usernameattributes)" : [ String, ... ],
+      "[UserPoolAddOns](#cfn-cognito-userpool-userpooladdons)" : [UserPoolAddOns](aws-properties-cognito-userpool-userpooladdons.md),
       "[UserPoolName](#cfn-cognito-userpool-userpoolname)" : String,
       "[UserPoolTags](#cfn-cognito-userpool-userpooltags)" : Json,
-      "[UsernameAttributes](#cfn-cognito-userpool-usernameattributes)" : [ String, ... ]
+      "[VerificationMessageTemplate](#cfn-cognito-userpool-verificationmessagetemplate)" : [VerificationMessageTemplate](aws-properties-cognito-userpool-verificationmessagetemplate.md)
     }
 }
 ```
@@ -61,10 +63,14 @@ Properties:
   [SmsConfiguration](#cfn-cognito-userpool-smsconfiguration): 
     [SmsConfiguration](aws-properties-cognito-userpool-smsconfiguration.md)
   [SmsVerificationMessage](#cfn-cognito-userpool-smsverificationmessage): String
-  [UserPoolName](#cfn-cognito-userpool-userpoolname): String
-  [UserPoolTags](#cfn-cognito-userpool-userpooltags): Json
   [UsernameAttributes](#cfn-cognito-userpool-usernameattributes): 
     - String
+  [UserPoolAddOns](#cfn-cognito-userpool-userpooladdons): 
+    [UserPoolAddOns](aws-properties-cognito-userpool-userpooladdons.md)
+  [UserPoolName](#cfn-cognito-userpool-userpoolname): String
+  [UserPoolTags](#cfn-cognito-userpool-userpooltags): Json
+  [VerificationMessageTemplate](#cfn-cognito-userpool-verificationmessagetemplate): 
+    [VerificationMessageTemplate](aws-properties-cognito-userpool-verificationmessagetemplate.md)
 ```
 
 ## Properties<a name="aws-resource-cognito-userpool-properties"></a>
@@ -172,6 +178,18 @@ A string representing the SMS verification message\.
 *Pattern*: `.*\{####\}.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`UsernameAttributes`  <a name="cfn-cognito-userpool-usernameattributes"></a>
+Specifies whether email addresses or phone numbers can be specified as user names when a user signs up\. Possible values: `phone_number` or `email`\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`UserPoolAddOns`  <a name="cfn-cognito-userpool-userpooladdons"></a>
+Used to enable advanced security risk detection\. Set the key `AdvancedSecurityMode` to the value "AUDIT"\.  
+*Required*: No  
+*Type*: [UserPoolAddOns](aws-properties-cognito-userpool-userpooladdons.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `UserPoolName`  <a name="cfn-cognito-userpool-userpoolname"></a>
 A string used to name the user pool\.  
 *Required*: No  
@@ -187,11 +205,11 @@ The tag keys and values to assign to the user pool\. A tag is a label that you c
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`UsernameAttributes`  <a name="cfn-cognito-userpool-usernameattributes"></a>
-Specifies whether email addresses or phone numbers can be specified as user names when a user signs up\. Possible values: `phone_number` or `email`\.  
+`VerificationMessageTemplate`  <a name="cfn-cognito-userpool-verificationmessagetemplate"></a>
+The template for the verification message that the user sees when the app requests permission to access the user's information\.  
 *Required*: No  
-*Type*: List of String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Type*: [VerificationMessageTemplate](aws-properties-cognito-userpool-verificationmessagetemplate.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-cognito-userpool-return-values"></a>
 
