@@ -41,7 +41,7 @@ The location of the database \(for example, an HDFS path\)\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-glue-database-databaseinput-name"></a>
-The name of the database\. For Hive compatibility, this is folded to lowercase when it is stored\.  
+The name of the database\. For Hive compatibility, this is folded to lowercase when it is stored\. If not specified, Cloudformation may generate a database name which includes hypens \(`-`) e.g. `stackname-abcdef` which is [incompatible](https://docs.aws.amazon.com/athena/latest/ug/tables-databases-columns-names.html) with some functions in Athena\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
