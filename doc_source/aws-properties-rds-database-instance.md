@@ -340,6 +340,10 @@ Not applicable\. Mapping AWS IAM accounts to database accounts is managed by the
  **MySQL**   
 + For MySQL 5\.6, minor version 5\.6\.34 or higher
 + For MySQL 5\.7, minor version 5\.7\.16 or higher
+ **Postgres**
++ For Postgres 9\.5, minor version 9\.5\.13 or higher
++ For Postgres 9\.6, minor version 9\.6\.9 or higher
++ For Postgres 10\.4 and higher
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
