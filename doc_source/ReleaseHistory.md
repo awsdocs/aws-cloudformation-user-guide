@@ -4,6 +4,15 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_DMS.md) | The following resource was updated: AWS::DMS::ReplicationTask 
+
+ [AWS::DMS::ReplicationTask](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html)   
+Use the `CdcStartPosition` property to indicate when you want a change data capture \(CDC\) operation to start\.  
+Use the `CdcStopPosition` property to indicate when you want a change data capture \(CDC\) operation to stop\.  | August 16, 2019 | 
+| [New resource](AWS_SageMaker.md) | The following resource was added: AWS::SageMaker::Workteam 
+
+ [AWS::SageMaker::Workteam](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-workteam.html)   
+Use the `AWS::SageMaker::Workteam` resource to create a new work team for labeling your data\.  | August 16, 2019 | 
 | [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::EC2::ClientVpnEndpoint, AWS::Greengrass::Group, AWS::Greengrass::ConnectorDefinition, AWS::Greengrass::CoreDefinition, AWS::Greengrass::DeviceDefinition, AWS::Greengrass::FunctionDefinition, AWS::Greengrass::LoggerDefinition, AWS::Greengrass::ResourceDefinition, and AWS::Greengrass::SubscriptionDefinition\.  
 
  [AWS::EC2::ClientVpnEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html)   
@@ -666,7 +675,7 @@ The following attributes are now available using the `Fn::Getatt` intrinsic func
 + `AmqpEndpoints`
 + `StompEndpoints`
 + `WssEndpoints`  | December 13, 2018 | 
-| [Stack instance operation limit](#ReleaseHistory) | For StackSets, you can have a maximum of 1500 stack instance operations running in a given region at the same time, per administrator account\.For more information, see [Limitations of StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-limitations.html)\. | December 13, 2018 | 
+| [Stack instance operation limit](#ReleaseHistory) | For StackSets, you can have a maximum of 1500 stack instance operations running in a given region at the same time, per administrator account\.For more information, see [AWS CloudFormation Limits](cloudformation-limits.md)\. | December 13, 2018 | 
 | [New resources](#ReleaseHistory) | The following resources were added: AWS::AmazonMQ::ConfigurationAssociation, AWS::IoTAnalytics::Channel, AWS::IoTAnalytics::Dataset, AWS::IoTAnalytics::Datastore, and AWS::IoTAnalytics::Pipeline\. 
 
 [AWS::AmazonMQ::ConfigurationAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configurationassociation.html)  
