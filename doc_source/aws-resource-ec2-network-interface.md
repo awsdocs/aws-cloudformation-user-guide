@@ -144,7 +144,7 @@ Returns the secondary private IP addresses of the network interface\. For exampl
 
  *Tip* 
 
-For more `NetworkInterface` template examples, see [Elastic Network Interface \(ENI\) Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-template-snippets-eni.html)\.
+For more `NetworkInterface` template examples, see [Elastic Network Interface \(ENI\) Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2.html#cfn-template-snippets-eni)\.
 
 ### Simple Standalone ENI<a name="aws-resource-ec2-network-interface--examples--Simple_Standalone_ENI"></a>
 
