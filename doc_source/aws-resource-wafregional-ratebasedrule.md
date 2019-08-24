@@ -120,7 +120,7 @@ MyIPSetRateBasedRule:
     MetricName: "MyIPSetRateBasedRule"
     RateKey : "IP"
     RateLimit : 8000
-    Predicates: 
+    MatchPredicates: 
       - 
         DataId: 
           Ref: "MyIPSetBlacklist"
