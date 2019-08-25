@@ -154,7 +154,7 @@ The following example is a target tracking scaling policy based on the `ASGAvera
 
 ```
 {
-  "AWSTemplateFormatVersion":"2018-09-09",
+  "AWSTemplateFormatVersion":"2010-09-09",
   "Parameters":{
     "AMI":{
       "Type":"String"
@@ -219,7 +219,7 @@ The following example is a target tracking scaling policy based on the `ASGAvera
 #### YAML<a name="aws-properties-as-policy--examples--Target_Tracking_Scaling_Policy--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2018-09-09
+AWSTemplateFormatVersion: 2010-09-09
 Parameters:
   AMI:
     Type: String

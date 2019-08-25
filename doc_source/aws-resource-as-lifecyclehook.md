@@ -178,7 +178,7 @@ Note that the snippet uses the `NotificationTargetARN` and `RoleARN` properties 
 
 ```
 {
-  "AWSTemplateFormatVersion":"2018-09-09",
+  "AWSTemplateFormatVersion":"2010-09-09",
   "Parameters":{
     "Subnets":{
       "Type":"CommaDelimitedList"
@@ -242,7 +242,7 @@ Note that the snippet uses the `NotificationTargetARN` and `RoleARN` properties 
 #### YAML<a name="aws-resource-as-lifecyclehook--examples--Lifecycle_Hook_for_Instance_Launch--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2018-09-09
+AWSTemplateFormatVersion: 2010-09-09
 Parameters:
   Subnets:
     Type: CommaDelimitedList

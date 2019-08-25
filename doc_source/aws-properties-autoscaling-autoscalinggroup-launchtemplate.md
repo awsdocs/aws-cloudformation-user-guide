@@ -33,8 +33,8 @@ The launch template to use\. You must specify either the launch template ID or l
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Overrides`  <a name="cfn-as-group-launchtemplate-overrides"></a>
-Any properties that you specify override the same properties in the launch template\. Currently, the only supported override is instance type\.   
-You must specify between 2 and 20 overrides\.  
-*Required*: No  
+Any properties that you specify override the same properties in the launch template\. Currently, the only supported override is instance type\.  
+This property is not conditional\. You must specify at least 2 overrides \(20 maximum\)\.
+*Required*: Conditional  
 *Type*: List of [LaunchTemplateOverrides](aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
