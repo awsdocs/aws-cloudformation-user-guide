@@ -2,6 +2,8 @@
 
  `PredefinedLoadMetricSpecification` is a subproperty of [ScalingInstruction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html) that specifies a predefined load metric for predictive scaling to use with AWS Auto Scaling\.
 
+After creating your scaling plan, you can use the AWS Auto Scaling console to visualize forecasts for the specified metric\. For more information, see [View Scaling Information for a Resource](https://docs.aws.amazon.com/autoscaling/plans/userguide/gs-create-scaling-plan.html#gs-view-resource) in the *AWS Auto Scaling User Guide*\.
+
 ## Syntax<a name="aws-properties-autoscalingplans-scalingplan-predefinedloadmetricspecification-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -32,7 +34,7 @@ The metric type\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceLabel`  <a name="cfn-autoscalingplans-scalingplan-predefinedloadmetricspecification-resourcelabel"></a>
-Identifies the resource associated with the metric type\. You can't specify a resource label unless the metric type is `ALBRequestCountPerTarget` and there is a target group for an Application Load Balancer attached to the Auto Scaling group\.  
+Identifies the resource associated with the metric type\. You can't specify a resource label unless the metric type is `ALBTargetGroupRequestCount` and there is a target group for an Application Load Balancer attached to the Auto Scaling group\.  
 The format is app/<load\-balancer\-name>/<load\-balancer\-id>/targetgroup/<target\-group\-name>/<target\-group\-id>, where:  
 + app/<load\-balancer\-name>/<load\-balancer\-id> is the final portion of the load balancer ARN\.
 + targetgroup/<target\-group\-name>/<target\-group\-id> is the final portion of the target group ARN\.
