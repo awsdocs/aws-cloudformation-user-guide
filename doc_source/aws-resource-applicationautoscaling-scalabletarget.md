@@ -447,7 +447,7 @@ The following example creates a [ScheduledAction](https://docs.aws.amazon.com/AW
 
 ```
 {
-  "AWSTemplateFormatVersion":"2018-09-09",
+  "AWSTemplateFormatVersion":"2010-09-09",
   "Description":"Creating ECS service",
   "Parameters":{
     "AppName":{
@@ -658,7 +658,7 @@ The following example creates a [ScheduledAction](https://docs.aws.amazon.com/AW
 #### YAML<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Scheduled_Actions--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2018-09-09
+AWSTemplateFormatVersion: 2010-09-09
 Description: Creating ECS service
 Parameters:
   AppName:
@@ -772,3 +772,6 @@ Outputs:
         - !Ref cluster
         - !GetAtt service.Name
 ```
+
+## See Also<a name="aws-resource-applicationautoscaling-scalabletarget--seealso"></a>
++ [Application Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html) 

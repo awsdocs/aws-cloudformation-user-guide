@@ -74,3 +74,6 @@ The date and time that the action is scheduled to begin\.
 *Required*: No  
 *Type*: Timestamp  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See Also<a name="aws-properties-applicationautoscaling-scalabletarget-scheduledaction--seealso"></a>
++ [Scheduled Scaling](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-scheduled-scaling.html) in the *Application Auto Scaling User Guide* 
