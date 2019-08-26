@@ -56,7 +56,7 @@ The ID of the backup\. Specifies the backup to use if you're creating a file sys
 
 `FileSystemType`  <a name="cfn-fsx-filesystem-filesystemtype"></a>
 Type of file system\. Currently the only supported type is WINDOWS\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Allowed Values*: `LUSTRE | WINDOWS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -91,7 +91,7 @@ For Lustre file systems, the storage capacity has a minimum of 3,600 GiB\. Stora
 
 `SubnetIds`  <a name="cfn-fsx-filesystem-subnetids"></a>
 The IDs of the subnets to contain the endpoint for the file system\. One and only one is supported\. The file system is launched in the Availability Zone associated with this subnet\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: List of String  
 *Maximum*: `50`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
