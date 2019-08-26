@@ -2,8 +2,6 @@
 
 The `AWS::CloudFormation::Stack` type nests a stack as a resource in a top\-level template\.
 
-You can add output values from a nested stack within the containing template\. You use the [GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html) function with the nested stack's logical name and the name of the output value in the nested stack in the format `Outputs.NestedStackOutputName`\.
-
 **Important**  
 We strongly recommend that updates to nested stacks are run from the parent stack\.
 
@@ -97,6 +95,10 @@ Updates are not supported\.
  `arn:aws:cloudformation:us-east-2:123456789012:stack/mystack-mynestedstack-sggfrhxhum7w/f449b250-b969-11e0-a185-5081d0136786` 
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt
+
+You can access output values from the nested stack using the [GetAtt](intrinsic-function-reference-getatt.html) function with  the format Outputs.NestedStackOutputName.
 
 ## Examples<a name="aws-properties-stack--examples"></a>
 
