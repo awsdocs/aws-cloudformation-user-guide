@@ -113,8 +113,7 @@ MySNSTopic:
   Type: AWS::SNS::Topic
   Properties:
     Subscription:
-      -
-        Endpoint:
+      - Endpoint:
           Fn::GetAtt:
             - "MyQueue1"
             - "Arn"
