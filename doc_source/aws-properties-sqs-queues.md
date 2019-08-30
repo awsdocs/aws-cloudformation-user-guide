@@ -140,6 +140,7 @@ maxReceiveCount : Integer
 Parameters: 
 +  `deadLetterTargetArn` – The Amazon Resource Name \(ARN\) of the dead\-letter queue to which Amazon SQS moves messages after the value of `maxReceiveCount` is exceeded\.
 +  `maxReceiveCount` – The number of times a message is delivered to the source queue before being moved to the dead\-letter queue\.
+
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
