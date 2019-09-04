@@ -43,7 +43,7 @@ An array of conditions used to specify a set of resources to assign to a backup 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Resources`  <a name="cfn-backup-backupselection-backupselectionresourcetype-resources"></a>
-An array of strings that either contain Amazon Resource Names \(ARNs\) or match patterns such as "`arn:aws:ec2:us-east-1:123456789012:volume/*`" of resources to assign to a backup plan\.  
+An array of strings that contain Amazon Resource Names \(ARNs\) of resources to assign to a backup plan\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
