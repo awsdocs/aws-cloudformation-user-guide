@@ -13,12 +13,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::IAM::Role",
   "Properties" : {
       "[AssumeRolePolicyDocument](#cfn-iam-role-assumerolepolicydocument)" : Json,
+      "[Description](#cfn-iam-role-description)" : String,
       "[ManagedPolicyArns](#cfn-iam-role-managepolicyarns)" : [ String, ... ],
       "[MaxSessionDuration](#cfn-iam-role-maxsessionduration)" : Integer,
       "[Path](#cfn-iam-role-path)" : String,
       "[PermissionsBoundary](#cfn-iam-role-permissionsboundary)" : String,
       "[Policies](#cfn-iam-role-policies)" : [ [Policy](aws-properties-iam-policy.md), ... ],
-      "[RoleName](#cfn-iam-role-rolename)" : String
+      "[RoleName](#cfn-iam-role-rolename)" : String,
+      "[Tags](#cfn-iam-role-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -29,6 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::IAM::Role
 Properties: 
   [AssumeRolePolicyDocument](#cfn-iam-role-assumerolepolicydocument): Json
+  [Description](#cfn-iam-role-description): String
   [ManagedPolicyArns](#cfn-iam-role-managepolicyarns): 
     - String
   [MaxSessionDuration](#cfn-iam-role-maxsessionduration): Integer
@@ -37,6 +40,8 @@ Properties:
   [Policies](#cfn-iam-role-policies): 
     - [Policy](aws-properties-iam-policy.md)
   [RoleName](#cfn-iam-role-rolename): String
+  [Tags](#cfn-iam-role-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-iam-role-properties"></a>
@@ -45,6 +50,14 @@ Properties:
 The trust policy that is associated with this role\. Trust policies define which entities can assume the role\. You can associate only one trust policy with a role\. For an example of a policy that can be used to assume a role, see [Template Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-templateexamples)\. For more information about the elements that you can use in an IAM policy, see [IAM Policy Elements Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html) in the *IAM User Guide*\.  
 *Required*: Yes  
 *Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Description`  <a name="cfn-iam-role-description"></a>
+A description of the role that you provide\.  
+*Required*: No  
+*Type*: String  
+*Maximum*: `1000`  
+*Pattern*: `[\p{L}\p{M}\p{Z}\p{S}\p{N}\p{P}]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ManagedPolicyArns`  <a name="cfn-iam-role-managepolicyarns"></a>
@@ -100,6 +113,13 @@ Naming an IAM resource can cause an unrecoverable error if you reuse the same te
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-iam-role-tags"></a>
+A list of tags that are attached to the specified role\. For more information about tagging, see [Tagging IAM Identities](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html) in the *IAM User Guide*\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-iam-role-return-values"></a>
 

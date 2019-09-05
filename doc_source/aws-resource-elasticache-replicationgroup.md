@@ -14,14 +14,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AtRestEncryptionEnabled](#cfn-elasticache-replicationgroup-atrestencryptionenabled)" : Boolean,
       "[AuthToken](#cfn-elasticache-replicationgroup-authtoken)" : String,
-      "[AutoMinorVersionUpgrade](#cfn-elasticache-replicationgroup-autominorversionupgrade)" : Boolean,
       "[AutomaticFailoverEnabled](#cfn-elasticache-replicationgroup-automaticfailoverenabled)" : Boolean,
+      "[AutoMinorVersionUpgrade](#cfn-elasticache-replicationgroup-autominorversionupgrade)" : Boolean,
       "[CacheNodeType](#cfn-elasticache-replicationgroup-cachenodetype)" : String,
       "[CacheParameterGroupName](#cfn-elasticache-replicationgroup-cacheparametergroupname)" : String,
       "[CacheSecurityGroupNames](#cfn-elasticache-replicationgroup-cachesecuritygroupnames)" : [ String, ... ],
       "[CacheSubnetGroupName](#cfn-elasticache-replicationgroup-cachesubnetgroupname)" : String,
       "[Engine](#cfn-elasticache-replicationgroup-engine)" : String,
       "[EngineVersion](#cfn-elasticache-replicationgroup-engineversion)" : String,
+      "[KmsKeyId](#cfn-elasticache-replicationgroup-kmskeyid)" : String,
       "[NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration)" : [ [NodeGroupConfiguration](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md), ... ],
       "[NotificationTopicArn](#cfn-elasticache-replicationgroup-notificationtopicarn)" : String,
       "[NumCacheClusters](#cfn-elasticache-replicationgroup-numcacheclusters)" : Integer,
@@ -37,8 +38,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[SnapshotArns](#cfn-elasticache-replicationgroup-snapshotarns)" : [ String, ... ],
       "[SnapshotName](#cfn-elasticache-replicationgroup-snapshotname)" : String,
       "[SnapshotRetentionLimit](#cfn-elasticache-replicationgroup-snapshotretentionlimit)" : Integer,
-      "[SnapshotWindow](#cfn-elasticache-replicationgroup-snapshotwindow)" : String,
       "[SnapshottingClusterId](#cfn-elasticache-replicationgroup-snapshottingclusterid)" : String,
+      "[SnapshotWindow](#cfn-elasticache-replicationgroup-snapshotwindow)" : String,
       "[Tags](#cfn-elasticache-replicationgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TransitEncryptionEnabled](#cfn-elasticache-replicationgroup-transitencryptionenabled)" : Boolean
     }
@@ -52,8 +53,8 @@ Type: AWS::ElastiCache::ReplicationGroup
 Properties: 
   [AtRestEncryptionEnabled](#cfn-elasticache-replicationgroup-atrestencryptionenabled): Boolean
   [AuthToken](#cfn-elasticache-replicationgroup-authtoken): String
-  [AutoMinorVersionUpgrade](#cfn-elasticache-replicationgroup-autominorversionupgrade): Boolean
   [AutomaticFailoverEnabled](#cfn-elasticache-replicationgroup-automaticfailoverenabled): Boolean
+  [AutoMinorVersionUpgrade](#cfn-elasticache-replicationgroup-autominorversionupgrade): Boolean
   [CacheNodeType](#cfn-elasticache-replicationgroup-cachenodetype): String
   [CacheParameterGroupName](#cfn-elasticache-replicationgroup-cacheparametergroupname): String
   [CacheSecurityGroupNames](#cfn-elasticache-replicationgroup-cachesecuritygroupnames): 
@@ -61,6 +62,7 @@ Properties:
   [CacheSubnetGroupName](#cfn-elasticache-replicationgroup-cachesubnetgroupname): String
   [Engine](#cfn-elasticache-replicationgroup-engine): String
   [EngineVersion](#cfn-elasticache-replicationgroup-engineversion): String
+  [KmsKeyId](#cfn-elasticache-replicationgroup-kmskeyid): String
   [NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration): 
     - [NodeGroupConfiguration](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md)
   [NotificationTopicArn](#cfn-elasticache-replicationgroup-notificationtopicarn): String
@@ -80,8 +82,8 @@ Properties:
     - String
   [SnapshotName](#cfn-elasticache-replicationgroup-snapshotname): String
   [SnapshotRetentionLimit](#cfn-elasticache-replicationgroup-snapshotretentionlimit): Integer
-  [SnapshotWindow](#cfn-elasticache-replicationgroup-snapshotwindow): String
   [SnapshottingClusterId](#cfn-elasticache-replicationgroup-snapshottingclusterid): String
+  [SnapshotWindow](#cfn-elasticache-replicationgroup-snapshotwindow): String
   [Tags](#cfn-elasticache-replicationgroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TransitEncryptionEnabled](#cfn-elasticache-replicationgroup-transitencryptionenabled): Boolean
@@ -111,12 +113,6 @@ For more information, see [AUTH password](http://redis.io/commands/AUTH) at http
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`AutoMinorVersionUpgrade`  <a name="cfn-elasticache-replicationgroup-autominorversionupgrade"></a>
-This parameter is currently disabled\.  
-*Required*: No  
-*Type*: Boolean  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `AutomaticFailoverEnabled`  <a name="cfn-elasticache-replicationgroup-automaticfailoverenabled"></a>
 Specifies whether a read\-only replica is automatically promoted to read/write primary if the existing primary fails\.  
 If `true`, Multi\-AZ is enabled for this replication group\. If `false`, Multi\-AZ is disabled for this replication group\.  
@@ -126,6 +122,12 @@ Amazon ElastiCache for Redis does not support Multi\-AZ with automatic failover 
 + Redis versions earlier than 2\.8\.6\.
 + Redis \(cluster mode disabled\): T1 node types\.
 + Redis \(cluster mode enabled\): T1 node types\.
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AutoMinorVersionUpgrade`  <a name="cfn-elasticache-replicationgroup-autominorversionupgrade"></a>
+This parameter is currently disabled\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -203,10 +205,17 @@ The version number of the cache engine to be used for the clusters in this repli
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`KmsKeyId`  <a name="cfn-elasticache-replicationgroup-kmskeyid"></a>
+The ID of the KMS key used to encrypt the disk on the cluster\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `NodeGroupConfiguration`  <a name="cfn-elasticache-replicationgroup-nodegroupconfiguration"></a>
 `NodeGroupConfiguration ` is a property of the `AWS::ElastiCache::ReplicationGroup` resource that configures an Amazon ElastiCache \(ElastiCache\) Redis cluster node group\.   
 *Required*: No  
-*Type*: [List](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md) of [NodeGroupConfiguration](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md)
+*Type*: [List](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md) of [NodeGroupConfiguration](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md)  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `NotificationTopicArn`  <a name="cfn-elasticache-replicationgroup-notificationtopicarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service \(SNS\) topic to which notifications are sent\.  
@@ -228,7 +237,8 @@ The maximum permitted value for `NumCacheClusters` is 6 \(1 primary plus 5 repli
 An optional parameter that specifies the number of node groups \(shards\) for this Redis \(cluster mode enabled\) replication group\. For Redis \(cluster mode disabled\) either omit this parameter or set it to 1\.  
 Default: 1  
 *Required*: No  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Port`  <a name="cfn-elasticache-replicationgroup-port"></a>
 The port number on which each member of the replication group accepts connections\.  
@@ -284,7 +294,7 @@ A user\-created description for the replication group\.
 `ReplicationGroupId`  <a name="cfn-elasticache-replicationgroup-replicationgroupid"></a>
 The replication group identifier\. This parameter is stored as a lowercase string\.  
 Constraints:  
-+ A name must contain from 1 to 20 alphanumeric characters or hyphens\.
++ A name must contain from 1 to 40 alphanumeric characters or hyphens\.
 + The first character must be a letter\.
 + A name cannot end with a hyphen or contain two consecutive hyphens\.
 *Required*: No  
@@ -318,16 +328,16 @@ Default: 0 \(i\.e\., automatic backups are disabled for this cluster\)\.
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`SnapshotWindow`  <a name="cfn-elasticache-replicationgroup-snapshotwindow"></a>
-The daily time range \(in UTC\) during which ElastiCache begins taking a daily snapshot of your node group \(shard\)\.  
-Example: `05:00-09:00`   
-If you do not specify this parameter, ElastiCache automatically chooses an appropriate time range\.  
+`SnapshottingClusterId`  <a name="cfn-elasticache-replicationgroup-snapshottingclusterid"></a>
+The cluster ID that is used as the daily snapshot source for the replication group\. This parameter cannot be set for Redis \(cluster mode enabled\) replication groups\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`SnapshottingClusterId`  <a name="cfn-elasticache-replicationgroup-snapshottingclusterid"></a>
-The cluster ID that is used as the daily snapshot source for the replication group\. This parameter cannot be set for Redis \(cluster mode enabled\) replication groups\.  
+`SnapshotWindow`  <a name="cfn-elasticache-replicationgroup-snapshotwindow"></a>
+The daily time range \(in UTC\) during which ElastiCache begins taking a daily snapshot of your node group \(shard\)\.  
+Example: `05:00-09:00`   
+If you do not specify this parameter, ElastiCache automatically chooses an appropriate time range\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

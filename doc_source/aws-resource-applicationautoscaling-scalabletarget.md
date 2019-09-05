@@ -20,7 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[RoleARN](#cfn-applicationautoscaling-scalabletarget-rolearn)" : String,
       "[ScalableDimension](#cfn-applicationautoscaling-scalabletarget-scalabledimension)" : String,
       "[ScheduledActions](#cfn-applicationautoscaling-scalabletarget-scheduledactions)" : [ [ScheduledAction](aws-properties-applicationautoscaling-scalabletarget-scheduledaction.md), ... ],
-      "[ServiceNamespace](#cfn-applicationautoscaling-scalabletarget-servicenamespace)" : String
+      "[ServiceNamespace](#cfn-applicationautoscaling-scalabletarget-servicenamespace)" : String,
+      "[SuspendedState](#cfn-applicationautoscaling-scalabletarget-suspendedstate)" : [SuspendedState](aws-properties-applicationautoscaling-scalabletarget-suspendedstate.md)
     }
 }
 ```
@@ -38,6 +39,8 @@ Properties:
   [ScheduledActions](#cfn-applicationautoscaling-scalabletarget-scheduledactions): 
     - [ScheduledAction](aws-properties-applicationautoscaling-scalabletarget-scheduledaction.md)
   [ServiceNamespace](#cfn-applicationautoscaling-scalabletarget-servicenamespace): String
+  [SuspendedState](#cfn-applicationautoscaling-scalabletarget-suspendedstate): 
+    [SuspendedState](aws-properties-applicationautoscaling-scalabletarget-suspendedstate.md)
 ```
 
 ## Properties<a name="aws-resource-applicationautoscaling-scalabletarget-properties"></a>
@@ -83,6 +86,17 @@ The namespace of the AWS service that provides the resource or `custom-resource`
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`SuspendedState`  <a name="cfn-applicationautoscaling-scalabletarget-suspendedstate"></a>
+An embedded object that contains attributes and attribute values that are used to suspend and resume automatic scaling\. Setting the value of an attribute to `true` suspends the specified scaling activities\. Setting it to `false` \(default\) resumes the specified scaling activities\.   
+**Suspension Outcomes**  
++ For `DynamicScalingInSuspended`, while a suspension is in effect, all scale\-in activities that are triggered by a scaling policy are suspended\.
++ For `DynamicScalingOutSuspended`, while a suspension is in effect, all scale\-out activities that are triggered by a scaling policy are suspended\.
++ For `ScheduledScalingSuspended`, while a suspension is in effect, all scaling activities that involve scheduled actions are suspended\. 
+For more information, see [Suspend and Resume Application Auto Scaling](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-suspend-resume-scaling.html) in the *Application Auto Scaling User Guide*\.  
+*Required*: No  
+*Type*: [SuspendedState](aws-properties-applicationautoscaling-scalabletarget-suspendedstate.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-applicationautoscaling-scalabletarget-return-values"></a>
 

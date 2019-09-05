@@ -4,6 +4,77 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources ](#ReleaseHistory) | The following resources were updated: AWS::ApplicationAutoScaling::ScalableTarget, AWS::DynamoDB::Table, AWS::EC2::Instance, AWS::ECS::TaskDefinition, AWS::ElastiCache::ReplicationGroup, AWS::Events::Rule, AWS::IAM::Role, and AWS::Lambda::EventSourceMapping\. 
+
+ [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html)   
+Use the `SuspendedState` property to suspend and resume automatic scaling\. Setting the value of an attribute to `true` suspends the specified scaling activities\. Setting it to `false` \(default\) resumes the specified scaling activities\. 
+
+ [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)   
+In the [SSESpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ssespecification.html) property type, use the `SSEType` property to specify server\-side encryption type\. 
+
+ [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)   
+Use the `CpuOptions` property to specify the CPU options for the instance\.  
+In the [Ebs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-template.html) property type, use the `KmsKeyId` property to specify an identifier \(key ID, key alias, ID ARN, or alias ARN\) for a customer managed CMK under which the EBS volume is encrypted\. 
+
+ [AWS::ECS::TaskDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html)   
+Use the `IpcMode` property to specify the IPC resource namespace to use for the containers in the task\. The valid values are `host`, `task`, or `none`\.  
+Use the `PidMode` property to specify the process namespace to use for the containers in the task\. The valid values are `host` or `task`\.  
+In the [ContainerDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html) property type:  
++ When the `Interactive` property is set to `true`, this allows you to deploy containerized applications that require `stdin` or a `tty` to be allocated\.
++ When the `PseudoTerminal` proprety is set to `true`, a TTY is allocated\.
++ Use the `SystemControls` property to specify a list of namespaced kernel parameters to set in the container\. 
+In the [LogConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-logconfiguration.html) property type, use the `SecretOptions` property to specify the secrets to pass to the log configuration\. 
+
+ [AWS::ElastiCache::ReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html)   
+Use the `KmsKeyId` property to specify the ID of the KMS key used to encrypt the disk on the cluster\. 
+
+ [AWS::Events::Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html)   
+In the [EcsParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-ecsparameters.html) property type:  
++ Use the `Group` property to specify an ECS task group for the task\.
++ Use the `LaunchType` property to specify the launch type on which your task is running\.
++ If the ECS task uses the `awsvcp` network mode, use the `NetworkConfiguration` property to specify the VPC subnets and security groups associated with the task and whether a public IP address is to be used\.
++ Use the `PlatformVersion` property to specify the platform version for the task\. 
+
+ [AWS::IAM::Role](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html)   
+Use the `Description` property to provide a description for the role\.  
+Use the `Tags` property to specify a list of tags that are attached to the specified role\. 
+
+ [AWS::Lambda::EventSourceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html)   
+Use the `MaximumBatchingWindowInSeconds` property to specify the maximum amount of time to gather records before invoking the function, in seconds\.  | August 29, 2019 | 
+| [Updated resources](AWS_RDS.md) | The following resources were updated: AWS::RDS::DBCluster and AWS::RDS::DBInstance 
+
+ [AWS::RDS::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html)   
+Use the `AssociatedRoles` property to specify the AWS Identity and Access Management \(IAM\) roles associated with the DB instance\.  
+Use the `RestoreType` property to specify the type of restore to be performed\.   
+Use the `SourceDBClusterIdentifier` property to specify the identifier of the source DB cluster from which to restore\.   
+Use the `UseLatestRestorableTime` property to specify whether to restore the DB cluster to the latest restorable backup time\.  
+
+ [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)   
+Use the `AssociatedRoles` property to specify the AWS Identity and Access Management \(IAM\) roles associated with the DB instance\.  | August 29, 2019 | 
+| [Updated resource ](AWS_SNS.md) | The following resource was updated: AWS::SNS::Subscription\.  
+
+ [AWS::SNS::Subscription](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html)   
+The `Region` property no longer requires replacement when udpated\.  | August 29, 2019 | 
+| [Updated resource](AWS_CloudWatch.md) | The following resource was updated: AWS::CloudWatch::Alarm 
+
+ [AWS::CloudWatch::Alarm](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html)   
+Use the `ThresholdMetricId` property to specify the ID of the ANOMALY\_DETECTION\_BAND function used as the threshold for the alarm\.  | August 29, 2019 | 
+| [Updated resource](AWS_Elasticsearch.md) | The following resource was updated: AWS::Elasticsearch::Domain\. 
+
+ [AWS::Elasticsearch::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html)   
+In the [ElasticsearchClusterConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html) property type, use the `ZoneAwarenessConfig` property to specify zone awareness configuration options\.  | August 29, 2019 | 
+| [New resource ](AWS_Config.md) | The following resource was added: AWS::Config::OrganizationConfigRule 
+
+ [AWS::Config::OrganizationConfigRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconfigrule.html)   
+Use the `AWS::Config::OrganizationConfigRule` resource to create an OrganizationConfigRule that has information about config rules that AWS Config creates in the member accounts\.  | August 29, 2019 | 
+| [Updated resource](AWS_AppMesh.md) | The following resource was updated: Route 
+
+ [AWS::AppMesh::Route](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-route.html)   
+Use the `HeaderMatchMethod` property to specify which part of an HTTP header should match specified characters\. Use the `HttpRouteHeader` property to specify an HTTP header to match a route for\. Use the `HttpRouteMatch` property to specify the method and prefix to match on\. Use the `RouteSpec` property to specify a priority for matching a route\.  | August 22, 2019 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::Neptune::DBCluster\. 
+
+ [AWS::Neptune::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html)   
+Use the `EnableCloudwatchLogsExports` property to specify a list of log types that are enabled for export to CloudWatch Logs\.  | August 22, 2019 | 
 | [Updated resource](AWS_DMS.md) | The following resource was updated: AWS::DMS::ReplicationTask 
 
  [AWS::DMS::ReplicationTask](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html)   
