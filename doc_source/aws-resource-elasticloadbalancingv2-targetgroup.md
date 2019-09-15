@@ -131,7 +131,7 @@ This name must be unique per region per account, can have a maximum of 32 charac
 
 `Port`  <a name="cfn-elasticloadbalancingv2-targetgroup-port"></a>
 The port on which the targets receive traffic\. This port is used unless you specify a port override when registering the target\. If the target is a Lambda function, this parameter does not apply\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: Integer  
 *Minimum*: `1`  
 *Maximum*: `65535`  
