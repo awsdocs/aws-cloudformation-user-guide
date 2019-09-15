@@ -86,7 +86,7 @@ The verbosity for logging activity for this channel\. Charges for logging \(whic
 
 `Name`  <a name="cfn-medialive-channel-name"></a>
 A name for this audio selector\. The AudioDescription \(in an output\) references this name in order to identify a specific input audio to include in that output\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
