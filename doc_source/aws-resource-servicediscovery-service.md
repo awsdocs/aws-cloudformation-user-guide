@@ -83,7 +83,7 @@ The name of the service\.
 
 `NamespaceId`  <a name="cfn-servicediscovery-service-namespaceid"></a>
 The ID of the namespace that was used to create the service\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Maximum*: `64`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
