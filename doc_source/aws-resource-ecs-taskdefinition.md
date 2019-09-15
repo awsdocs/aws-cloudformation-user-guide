@@ -61,7 +61,7 @@ Properties:
 
 `ContainerDefinitions`  <a name="cfn-ecs-taskdefinition-containerdefinitions"></a>
 A list of container definitions in JSON format that describe the different containers that make up your task\. For more information about container definition parameters and defaults, see [Amazon ECS Task Definitions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_defintions.html) in the *Amazon Elastic Container Service Developer Guide*\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: List of [ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
