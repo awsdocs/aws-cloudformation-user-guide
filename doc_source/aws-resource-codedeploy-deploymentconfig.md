@@ -47,7 +47,7 @@ The type parameter takes either of the following values:
 The value parameter takes an integer\.  
 For example, to set a minimum of 95% healthy instance, specify a type of FLEET\_PERCENT and a value of 95\.  
  For more information about instance health, see [CodeDeploy Instance Health](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-health.html) in the AWS CodeDeploy User Guide\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: [MinimumHealthyHosts](aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
