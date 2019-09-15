@@ -32,7 +32,7 @@ Properties:
 
 `Template`  <a name="cfn-ses-template-template"></a>
 The content of the email, composed of a subject line, an HTML part, and a text\-only part\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [Template](aws-properties-ses-template-template.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
