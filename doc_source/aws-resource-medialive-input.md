@@ -70,7 +70,7 @@ Settings that apply only if the input is a MediaConnect input\.
 
 `Name`  <a name="cfn-medialive-input-name"></a>
 A name for the input\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
