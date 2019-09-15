@@ -40,7 +40,7 @@ A collection of tags for this input security group\. Each tag is a key\-value pa
 
 `WhitelistRules`  <a name="cfn-medialive-inputsecuritygroup-whitelistrules"></a>
 The list of IPv4 CIDR addresses to include in the input security group as "allowed" addresses\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: List of [InputWhitelistRuleCidr](aws-properties-medialive-inputsecuritygroup-inputwhitelistrulecidr.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
