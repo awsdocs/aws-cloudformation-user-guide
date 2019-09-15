@@ -43,14 +43,14 @@ Properties:
 
 `HostedZoneId`  <a name="cfn-route53-recordsetgroup-hostedzoneid"></a>
 The ID of the hosted zone that contains the resource record sets that you want to change\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Maximum*: `32`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HostedZoneName`  <a name="cfn-route53-recordsetgroup-hostedzonename"></a>
 The name of the hosted zone that you want to create, update, or delete resource record sets in\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Maximum*: `1024`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
