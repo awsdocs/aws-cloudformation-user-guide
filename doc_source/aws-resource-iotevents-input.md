@@ -37,7 +37,7 @@ Properties:
 
 `InputDefinition`  <a name="cfn-iotevents-input-inputdefinition"></a>
 The definition of the input\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [InputDefinition](aws-properties-iotevents-input-inputdefinition.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
