@@ -42,7 +42,7 @@ Properties:
 
 `Description`  <a name="cfn-sagemaker-workteam-description"></a>
 A description of the work team\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `200`  
