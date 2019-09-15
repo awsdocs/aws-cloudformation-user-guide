@@ -53,7 +53,7 @@ The description of the rule\.
 
 `EventPattern`  <a name="cfn-events-rule-eventpattern"></a>
 Describes which events CloudWatch Events routes to the specified target\. For more information, see [Event Patterns in CloudWatch Events](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEventsandEventPatterns.html) in the *Amazon CloudWatch Events User Guide*\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -77,7 +77,7 @@ The Amazon Resource Name \(ARN\) of the role that is used for target invocation\
 
 `ScheduleExpression`  <a name="cfn-events-rule-scheduleexpression"></a>
 The scheduling expression that determines when and how often the rule runs\. For more information, see [Schedule Expressions for Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html)\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Maximum*: `256`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
