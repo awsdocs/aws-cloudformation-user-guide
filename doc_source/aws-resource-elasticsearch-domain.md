@@ -76,7 +76,7 @@ If you specify a name, you cannot perform updates that require replacement of th
 
 `EBSOptions`  <a name="cfn-elasticsearch-domain-ebsoptions"></a>
 The configurations of Amazon Elastic Block Store \(Amazon EBS\) volumes that are attached to data nodes in the Amazon ES domain\. For more information, see [Configuring EBS\-based Storage](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs) in the *Amazon Elasticsearch Service Developer Guide*\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [EBSOptions](aws-properties-elasticsearch-domain-ebsoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
