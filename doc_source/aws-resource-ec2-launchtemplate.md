@@ -32,7 +32,7 @@ Properties:
 
 `LaunchTemplateData`  <a name="cfn-ec2-launchtemplate-launchtemplatedata"></a>
 The information for the launch template\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [LaunchTemplateData](aws-properties-ec2-launchtemplate-launchtemplatedata.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
