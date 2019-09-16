@@ -86,7 +86,8 @@ Specifies whether the trail is publishing events from global services such as IA
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IsLogging`  <a name="cfn-cloudtrail-trail-islogging"></a>
-Whether the CloudTrail is currently logging AWS API calls\.  
+Specifies whether or not the trail should publish logs to the S3 bucket and/or CloudWatch Logs log group\.
+If logging is disabled during an update of an existing trail then previous logs will remain accessible\.
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
