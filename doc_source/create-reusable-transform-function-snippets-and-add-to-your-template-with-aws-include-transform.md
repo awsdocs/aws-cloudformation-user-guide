@@ -4,7 +4,7 @@ Use the `AWS::Include` transform, which is a macro hosted by AWS CloudFormation,
 
 For example, you might have a Lambda function that you want to reuse in one or more AWS CloudFormation templates\. 
 
-Unlike custom macros, the `AWS::Include` transform doesn't require special permissions to use it because it is hosted by AWS CloudFormation\. It can be used by templates in any account within AWS CloudFormation\. Also, there is no charge incured when using this tranform\. AWS CloudFormation treats the `AWS::Include` transform the same as any other macro in terms of evaluation order and scope\. For more information about macros, see [Using AWS CloudFormation Macros to Perform Custom Processing on Templates](template-macros.md)\.
+Unlike custom macros, the `AWS::Include` transform doesn't require special permissions to use it because it is hosted by AWS CloudFormation\. It can be used by templates in any account within AWS CloudFormation\. Also, there is no charge incurred when using this transform\. AWS CloudFormation treats the `AWS::Include` transform the same as any other macro in terms of evaluation order and scope\. For more information about macros, see [Using AWS CloudFormation Macros to Perform Custom Processing on Templates](template-macros.md)\.
 
 ## Usage<a name="aws-include-transform-usage"></a>
 
@@ -75,6 +75,7 @@ When using `AWS::Include`, keep the following considerations in mind\. For gener
 + Anyone with access to the Amazon S3 URL can include the snippet in their template\.
 + Your template snippets must be valid YAML or JSON\.
 + Your template snippets must be valid key–value objects, for example `"KeyName": "keyValue"`\.
++ You can't use `AWS::Include` to reference a template snippet that also uses `AWS::Include`\.
 + If your snippets change, your stack doesn't automatically pick up those changes\. To get those changes, you must update the stack with the updated snippets\. If you update your stack, make sure your included snippets haven't changed without your knowledge\. To verify before updating the stack, check the change set\.
 + When creating templates and snippets, you can mix YAML and JSON template languages\.
 + We do not currently support using shorthand notations for YAML snippets\.

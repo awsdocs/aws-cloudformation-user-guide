@@ -31,7 +31,7 @@ You must create this stack before you create the web application stack\. If you 
 
 1. Open the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation/) and choose **Create Stack**\.
 
-1. In the **Select Template** section, choose **Upload a template to Amazon S3**, choose **Specify an Amazon S3 template URL**, and then copy and paste the following URL into the text box: `[https://s3\.amazonaws\.com/cloudformation\-examples/user\-guide/cross\-stack/SampleNetworkCrossStack\.template](https://s3.amazonaws.com/cloudformation-examples/user-guide/cross-stack/SampleNetworkCrossStack.template) ` 
+1. In the **Select Template** section, choose **Specify an Amazon S3 template URL**, and then copy and paste the following URL into the text box: `[https://s3\.amazonaws\.com/cloudformation\-examples/user\-guide/cross\-stack/SampleNetworkCrossStack\.template](https://s3.amazonaws.com/cloudformation-examples/user-guide/cross-stack/SampleNetworkCrossStack.template) ` 
 
    The link provides the location of the network stack template\. To see the resources that the stack will create, choose the link, which opens the template\. In the outputs section, you can see the networking resources that the sample template exports\. The names of the exported resources are prefixed with the stack's name in case you export networking resources from other stacks\. When users import networking resources, they can specify from which stack the resources are imported\.
 

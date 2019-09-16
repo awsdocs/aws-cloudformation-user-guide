@@ -1,14 +1,20 @@
-# IAM Policies<a name="aws-properties-iam-policy"></a>
+# AWS::IAM::Role Policy<a name="aws-properties-iam-policy"></a>
 
-`Policies` is a property of the [AWS::IAM::Role](aws-resource-iam-role.md), [AWS::IAM::Group](aws-properties-iam-group.md), and [AWS::IAM::User](aws-properties-iam-user.md) resources\. The `Policies` property describes what actions are allowed on what resources\. For more information about IAM policies, see [Overview of Policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/PoliciesOverview.html) and [AWS IAM Policy Reference](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html) in the *IAM User Guide*\.
+Contains information about an attached policy\.
 
-## Syntax<a name="w4ab1c21c14e1407b5"></a>
+An attached policy is a managed policy that has been attached to a user, group, or role\.
+
+For more information about managed policies, refer to [Managed Policies and Inline Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html) in the *Using IAM* guide\. 
+
+## Syntax<a name="aws-properties-iam-policy-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-iam-policy-syntax.json"></a>
 
 ```
 {
-  "[PolicyDocument](#cfn-iam-policies-policydocument)" : JSON,
+  "[PolicyDocument](#cfn-iam-policies-policydocument)" : Json,
   "[PolicyName](#cfn-iam-policies-policyname)" : String
 }
 ```
@@ -16,20 +22,29 @@
 ### YAML<a name="aws-properties-iam-policy-syntax.yaml"></a>
 
 ```
-[PolicyDocument](#cfn-iam-policies-policydocument): JSON
-[PolicyName](#cfn-iam-policies-policyname): String
+  [PolicyDocument](#cfn-iam-policies-policydocument): Json
+  [PolicyName](#cfn-iam-policies-policyname): String
 ```
 
-## Properties<a name="w4ab1c21c14e1407b7"></a>
+## Properties<a name="aws-properties-iam-policy-properties"></a>
 
 `PolicyDocument`  <a name="cfn-iam-policies-policydocument"></a>
-A policy document that describes what actions are allowed on which resources\.  
+The policy document\.  
 *Required*: Yes  
-*Type*: JSON object  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: Json  
+*Minimum*: `1`  
+*Maximum*: `131072`  
+*Pattern*: `[\u0009\u000A\u000D\u0020-\u00FF]+`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyName`  <a name="cfn-iam-policies-policyname"></a>
-The name of the policy\.  
+The friendly name \(not ARN\) identifying the policy\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `[\w+=,.@-]+`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See Also<a name="aws-properties-iam-policy--seealso"></a>
++  [PolicyDetail](https://docs.aws.amazon.com/IAM/latest/APIReference/API_PolicyDetail.html) in the *AWS Identity and Access Management API Reference* 

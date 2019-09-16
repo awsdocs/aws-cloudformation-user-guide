@@ -28,7 +28,7 @@ Best practices are recommendations that can help you use AWS CloudFormation more
 
 ## Organize Your Stacks By Lifecycle and Ownership<a name="organizingstacks"></a>
 
-Use the lifecycle and ownership of your AWS resources to help you decide what resources should go in each stack\. Normally, you might put all your resources in one stack, but as your stack grows in scale and broadens in scope, managing a single stack can be cumbersome and time consuming\. By grouping resources with common lifecycles and ownership, owners can make changes to their set of resources by using their own process and schedule without affecting other resources\.
+Use the lifecycle and ownership of your AWS resources to help you decide what resources should go in each stack\. Initially, you might put all your resources in one stack, but as your stack grows in scale and broadens in scope, managing a single stack can be cumbersome and time consuming\. By grouping resources with common lifecycles and ownership, owners can make changes to their set of resources by using their own process and schedule without affecting other resources\.
 
 For example, imagine a team of developers and engineers who own a website that is hosted on autoscaling instances behind a load balancer\. Because the website has its own lifecycle and is maintained by the website team, you can create a stack for the website and its resources\. Now imagine that the website also uses back\-end databases, where the databases are in a separate stack that are owned and maintained by database administrators\. Whenever the website team or database team needs to update their resources, they can do so without affecting each other's stack\. If all resources were in a single stack, coordinating and communicating updates can be difficult\.
 
@@ -60,9 +60,9 @@ After you have your stacks and resources set up, you can reuse your templates to
 
 ## Use Nested Stacks to Reuse Common Template Patterns<a name="nested"></a>
 
-As your infrastructure grows, common patterns can emerge in which you declare the same components in each of your templates\. You can separate out these common components and create dedicated templates for them\. That way, you can mix and match different templates but use nested stacks to create a single, unified stack\. Nested stacks are stacks that create other stacks\. To create nested stacks, use the [AWS::CloudFormation::Stack](aws-properties-stack.md) resource in your template to reference other templates\.
+As your infrastructure grows, common patterns can emerge in which you declare the same components in each of your templates\. You can separate out these common components and create dedicated templates for them\. That way, you can mix and match different templates but use nested stacks to create a single, unified stack\. Nested stacks are stacks that create other stacks\. To create nested stacks, use the [AWS::CloudFormation::Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html) resource in your template to reference other templates\.
 
-For example, assume that you have a load balancer configuration that you use for most of your stacks\. Instead of copying and pasting the same configurations into your templates, you can create a dedicated template for the load balancer\. Then, you just use the [AWS::CloudFormation::Stack](aws-properties-stack.md) resource to reference that template from within other templates\. If the load balancer template is updated, any stack that is referencing it will use the updated load balancer \(only after you update the stack\)\. In addition to simplifying updates, this approach lets you use experts to create and maintain components that you might not be necessarily familiar with\. All you need to do is reference their templates\.
+For example, assume that you have a load balancer configuration that you use for most of your stacks\. Instead of copying and pasting the same configurations into your templates, you can create a dedicated template for the load balancer\. Then, you just use the [AWS::CloudFormation::Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html) resource to reference that template from within other templates\. If the load balancer template is updated, any stack that is referencing it will use the updated load balancer \(only after you update the stack\)\. In addition to simplifying updates, this approach lets you use experts to create and maintain components that you might not be necessarily familiar with\. All you need to do is reference their templates\.
 
 ## Do Not Embed Credentials in Your Templates<a name="creds"></a>
 
@@ -82,7 +82,7 @@ With constraints, you can describe allowed input values so that AWS CloudFormati
 
 When you launch stacks, you can install and configure software applications on Amazon EC2 instances by using the cfn\-init helper script and the `AWS::CloudFormation::Init` resource\. By using `AWS::CloudFormation::Init`, you can describe the configurations that you want rather than scripting procedural steps\. You can also update configurations without recreating instances\. And if anything goes wrong with your configuration, AWS CloudFormation generates logs that you can use to investigate issues\.
 
-In your template, specify installation and configuration states in the [`AWS::CloudFormation::Init`](aws-resource-init.md) resource\. For a walkthrough that shows how to use cfn\-init and `AWS::CloudFormation::Init`, see [Deploying Applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
+In your template, specify installation and configuration states in the `AWS::CloudFormation::Init` resource\. For a walkthrough that shows how to use cfn\-init and `AWS::CloudFormation::Init`, see [Deploying Applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
 
 ## Use the Latest Helper Scripts<a name="helper-scripts"></a>
 

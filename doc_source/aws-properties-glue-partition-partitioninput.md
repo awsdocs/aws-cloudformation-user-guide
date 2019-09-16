@@ -1,8 +1,6 @@
-# AWS Glue Partition PartitionInput<a name="aws-properties-glue-partition-partitioninput"></a>
+# AWS::Glue::Partition PartitionInput<a name="aws-properties-glue-partition-partitioninput"></a>
 
-<a name="aws-properties-glue-partition-partitioninput-description"></a>The `PartitionInput` property type specifies the metadata that's used to create or update an AWS Glue partition\.
-
-<a name="aws-properties-glue-partition-partitioninput-inheritance"></a> `PartitionInput` is a property of the [AWS::Glue::Partition](aws-resource-glue-partition.md) resource\.
+The structure used to create and update a partition\.
 
 ## Syntax<a name="aws-properties-glue-partition-partitioninput-syntax"></a>
 
@@ -12,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Parameters](#cfn-glue-partition-partitioninput-parameters)" : JSON object,
-  "[StorageDescriptor](#cfn-glue-partition-partitioninput-storagedescriptor)" : [*StorageDescriptor*](aws-properties-glue-partition-storagedescriptor.md),
+  "[Parameters](#cfn-glue-partition-partitioninput-parameters)" : Json,
+  "[StorageDescriptor](#cfn-glue-partition-partitioninput-storagedescriptor)" : [StorageDescriptor](aws-properties-glue-partition-storagedescriptor.md),
   "[Values](#cfn-glue-partition-partitioninput-values)" : [ String, ... ]
 }
 ```
@@ -21,33 +19,32 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-partition-partitioninput-syntax.yaml"></a>
 
 ```
-[Parameters](#cfn-glue-partition-partitioninput-parameters): 
-  JSON object
-[StorageDescriptor](#cfn-glue-partition-partitioninput-storagedescriptor): 
-  [*StorageDescriptor*](aws-properties-glue-partition-storagedescriptor.md)
-[Values](#cfn-glue-partition-partitioninput-values): 
-  - String
+  [Parameters](#cfn-glue-partition-partitioninput-parameters): Json
+  [StorageDescriptor](#cfn-glue-partition-partitioninput-storagedescriptor): 
+    [StorageDescriptor](aws-properties-glue-partition-storagedescriptor.md)
+  [Values](#cfn-glue-partition-partitioninput-values): 
+    - String
 ```
 
 ## Properties<a name="aws-properties-glue-partition-partitioninput-properties"></a>
 
 `Parameters`  <a name="cfn-glue-partition-partitioninput-parameters"></a>
-UTF\-8 string–to–UTF\-8 string key\-value pairs that specify the parameters for the partition\.  
- *Required*: No  
- *Type*: JSON object  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+These key\-value pairs define partition parameters\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StorageDescriptor`  <a name="cfn-glue-partition-partitioninput-storagedescriptor"></a>
-Information about the physical storage of the partition\.  
- *Required*: No  
- *Type*: [AWS Glue Partition StorageDescriptor](aws-properties-glue-partition-storagedescriptor.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Provides information about the physical location where the partition is stored\.  
+*Required*: No  
+*Type*: [StorageDescriptor](aws-properties-glue-partition-storagedescriptor.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Values`  <a name="cfn-glue-partition-partitioninput-values"></a>
-A list of UTF\-8 strings that specify the values of the partition\.  
- *Required*: Yes  
- *Type*: List of String values  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+The values of the partition\. Although this parameter is not required by the SDK, you must specify this parameter for a valid input\.  
+*Required*: Yes  
+*Type*: List of String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-glue-partition-partitioninput-seealso"></a>
-+ [PartitionInput](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-PartitionInput) in the *AWS Glue Developer Guide*
+## See Also<a name="aws-properties-glue-partition-partitioninput--seealso"></a>
++  [PartitionInput](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-PartitionInput) in the *AWS Glue Developer Guide* 

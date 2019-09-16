@@ -1,8 +1,10 @@
-# Amazon Elastic File System FileSystem FileSystemTags<a name="aws-properties-efs-filesystem-filesystemtags"></a>
+# AWS::EFS::FileSystem ElasticFileSystemTag<a name="aws-properties-efs-filesystem-filesystemtags"></a>
 
-`FileSystemTags` is a property of the [AWS::EFS::FileSystem](aws-resource-efs-filesystem.md) resource that associates key\-value pairs with a file system\. You can use any of the following Unicode characters for keys and values: letters, digits, whitespace, \_, \., /, =, \+, and \-\.
+A tag is a key\-value pair attached to a file system\. Allowed characters in the `Key` and `Value` properties are letters, white space, and numbers that can be represented in UTF\-8, and the following characters:` + - = . _ : /` 
 
-## Syntax<a name="w4ab1c21c14e1010b5"></a>
+## Syntax<a name="aws-properties-efs-filesystem-filesystemtags-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-efs-filesystem-filesystemtags-syntax.json"></a>
 
@@ -16,18 +18,23 @@
 ### YAML<a name="aws-properties-efs-filesystem-filesystemtags-syntax.yaml"></a>
 
 ```
-[Key](#cfn-efs-filesystem-filesystemtags-key): String
-[Value](#cfn-efs-filesystem-filesystemtags-value): String
+  [Key](#cfn-efs-filesystem-filesystemtags-key): String
+  [Value](#cfn-efs-filesystem-filesystemtags-value): String
 ```
 
-## Properties<a name="w4ab1c21c14e1010b7"></a>
+## Properties<a name="aws-properties-efs-filesystem-filesystemtags-properties"></a>
 
 `Key`  <a name="cfn-efs-filesystem-filesystemtags-key"></a>
-The key name of the tag\. You can specify a value that is from 1 to 128 Unicode characters in length, but you cannot use the prefix `aws:`\.  
-*Required*: No  
-*Type*: String
+The tag key \(String\)\. The key can't start with `aws:`\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-efs-filesystem-filesystemtags-value"></a>
-The value of the tag key\. You can specify a value that is from 0 to 128 Unicode characters in length\.  
-*Required*: No  
-*Type*: String
+The value of the tag key\.  
+*Required*: Yes  
+*Type*: String  
+*Maximum*: `256`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,30 +1,30 @@
 # AWS::DAX::Cluster<a name="aws-resource-dax-cluster"></a>
 
-Use the `AWS::DAX::Cluster` resource to create a DAX cluster for use with Amazon DynamoDB\.
+Creates a DAX cluster\. All nodes in the cluster run the same DAX caching software\.
 
-For information about creating a DAX cluster, see [Creating a DAX Cluster](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.create-cluster.html) in the *Amazon DynamoDB Developer Guide* and [https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_dax_CreateCluster.html](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_dax_CreateCluster.html) in the *Amazon DynamoDB Developer Guide*\.
+## Syntax<a name="aws-resource-dax-cluster-syntax"></a>
 
-## Syntax<a name="w4ab1c21c10d338b7"></a>
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-resource-dax-cluster-syntax.json"></a>
 
 ```
 {
-   "Type": "AWS::DAX::Cluster",
-   "Properties": {
-      "[AvailabilityZones](#cfn-dax-cluster-availability-zones)": [ String, ... ],
-      "[ClusterName](#cfn-dax-cluster-cluster-name)": String,
-      "[Description](#cfn-dax-cluster-description)": String,
-      "[IAMRoleARN](#cfn-dax-cluster-iam-role-arn)": String,
-      "[NodeType](#cfn-dax-cluster-node-type)": String,
-      "[NotificationTopicARN](#cfn-dax-cluster-notification-topic-arn)": String,
-      "[ParameterGroupName](#cfn-dax-cluster-parameter-group-name)": String,
-      "[PreferredMaintenanceWindow](#cfn-dax-cluster-preferred-maintenance-window)": String,
-      "[ReplicationFactor](#cfn-dax-cluster-replication-factor)": Integer,
-      "[SecurityGroupIds](#cfn-dax-cluster-security-group-ids)": [ String, ... ],
-      "[SSESpecification](#cfn-dax-cluster-ssespecification)" : [*SSESpecification*](aws-properties-daxservice-cluster-ssespecification.md),
-      "[SubnetGroupName](#cfn-dax-cluster-subnet-group-name)": String,
-      "[Tags](#cfn-dax-cluster-tags)": { String:String, ... }
+  "Type" : "AWS::DAX::Cluster",
+  "Properties" : {
+      "[AvailabilityZones](#cfn-dax-cluster-availabilityzones)" : [ String, ... ],
+      "[ClusterName](#cfn-dax-cluster-clustername)" : String,
+      "[Description](#cfn-dax-cluster-description)" : String,
+      "[IAMRoleARN](#cfn-dax-cluster-iamrolearn)" : String,
+      "[NodeType](#cfn-dax-cluster-nodetype)" : String,
+      "[NotificationTopicARN](#cfn-dax-cluster-notificationtopicarn)" : String,
+      "[ParameterGroupName](#cfn-dax-cluster-parametergroupname)" : String,
+      "[PreferredMaintenanceWindow](#cfn-dax-cluster-preferredmaintenancewindow)" : String,
+      "[ReplicationFactor](#cfn-dax-cluster-replicationfactor)" : Integer,
+      "[SSESpecification](#cfn-dax-cluster-ssespecification)" : [SSESpecification](aws-properties-dax-cluster-ssespecification.md),
+      "[SecurityGroupIds](#cfn-dax-cluster-securitygroupids)" : [ String, ... ],
+      "[SubnetGroupName](#cfn-dax-cluster-subnetgroupname)" : String,
+      "[Tags](#cfn-dax-cluster-tags)" : Json
     }
 }
 ```
@@ -33,140 +33,142 @@ For information about creating a DAX cluster, see [Creating a DAX Cluster](https
 
 ```
 Type: AWS::DAX::Cluster
-Properties:
-      [AvailabilityZones](#cfn-dax-cluster-availability-zones): [ String, ... ]
-      [ClusterName](#cfn-dax-cluster-cluster-name): String
-      [Description](#cfn-dax-cluster-description): String
-      [IAMRoleARN](#cfn-dax-cluster-iam-role-arn): String
-      [NodeType](#cfn-dax-cluster-node-type): String
-      [NotificationTopicARN](#cfn-dax-cluster-notification-topic-arn): String
-      [ParameterGroupName](#cfn-dax-cluster-parameter-group-name): String
-      [PreferredMaintenanceWindow](#cfn-dax-cluster-preferred-maintenance-window): String
-      [ReplicationFactor](#cfn-dax-cluster-replication-factor): Integer
-      [SecurityGroupIds](#cfn-dax-cluster-security-group-ids): [ String, ... ]
-      [SSESpecification](#cfn-dax-cluster-ssespecification): 
-        [*SSESpecification*](aws-properties-daxservice-cluster-ssespecification.md)
-      [SubnetGroupName](#cfn-dax-cluster-subnet-group-name): String
-      [Tags](#cfn-dax-cluster-tags): { String:String, ... }
+Properties: 
+  [AvailabilityZones](#cfn-dax-cluster-availabilityzones): 
+    - String
+  [ClusterName](#cfn-dax-cluster-clustername): String
+  [Description](#cfn-dax-cluster-description): String
+  [IAMRoleARN](#cfn-dax-cluster-iamrolearn): String
+  [NodeType](#cfn-dax-cluster-nodetype): String
+  [NotificationTopicARN](#cfn-dax-cluster-notificationtopicarn): String
+  [ParameterGroupName](#cfn-dax-cluster-parametergroupname): String
+  [PreferredMaintenanceWindow](#cfn-dax-cluster-preferredmaintenancewindow): String
+  [ReplicationFactor](#cfn-dax-cluster-replicationfactor): Integer
+  [SSESpecification](#cfn-dax-cluster-ssespecification): 
+    [SSESpecification](aws-properties-dax-cluster-ssespecification.md)
+  [SecurityGroupIds](#cfn-dax-cluster-securitygroupids): 
+    - String
+  [SubnetGroupName](#cfn-dax-cluster-subnetgroupname): String
+  [Tags](#cfn-dax-cluster-tags): Json
 ```
 
 ## Properties<a name="aws-resource-dax-cluster-properties"></a>
 
-`AvailabilityZones`  <a name="cfn-dax-cluster-availability-zones"></a>
+`AvailabilityZones`  <a name="cfn-dax-cluster-availabilityzones"></a>
 The Availability Zones \(AZs\) in which the cluster nodes will be created\. All nodes belonging to the cluster are placed in these Availability Zones\. Use this parameter if you want to distribute the nodes across multiple AZs\.  
-You must specify one AZ per DAX node in the cluster\.  
 *Required*: No  
-*Type*: List of String values  
-*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`ClusterName`  <a name="cfn-dax-cluster-cluster-name"></a>
-The cluster identifier\. This parameter is stored as a lowercase string\.  
+`ClusterName`  <a name="cfn-dax-cluster-clustername"></a>
+The name of the DAX cluster\.  
+ Updates are not supported for this property\. 
 *Required*: No  
 *Type*: String  
-*Update requires*: Updates are not supported\.
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-dax-cluster-description"></a>
-A description of the cluster\.  
+The description of the cluster\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`IAMRoleARN`  <a name="cfn-dax-cluster-iam-role-arn"></a>
+`IAMRoleARN`  <a name="cfn-dax-cluster-iamrolearn"></a>
 A valid Amazon Resource Name \(ARN\) that identifies an IAM role\. At runtime, DAX will assume this role and use the role's permissions to access DynamoDB on your behalf\.  
+ Updates are not supported for this property\. 
 *Required*: Yes  
 *Type*: String  
-*Update requires*: Updates are not supported\.
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`NodeType`  <a name="cfn-dax-cluster-node-type"></a>
-The compute and memory capacity of the nodes in the cluster\.  
+`NodeType`  <a name="cfn-dax-cluster-nodetype"></a>
+The node type for the nodes in the cluster\. \(All nodes in a DAX cluster are of the same type\.\)  
+ Updates are not supported for this property\. 
 *Required*: Yes  
 *Type*: String  
-*Update requires*: Updates are not supported\.
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`NotificationTopicARN`  <a name="cfn-dax-cluster-notification-topic-arn"></a>
+`NotificationTopicARN`  <a name="cfn-dax-cluster-notificationtopicarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon SNS topic to which notifications will be sent\.  
 The Amazon SNS topic owner must be same as the DAX cluster owner\.
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`ParameterGroupName`  <a name="cfn-dax-cluster-parameter-group-name"></a>
+`ParameterGroupName`  <a name="cfn-dax-cluster-parametergroupname"></a>
 The parameter group to be associated with the DAX cluster\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`PreferredMaintenanceWindow`  <a name="cfn-dax-cluster-preferred-maintenance-window"></a>
-Specifies the weekly time range during which maintenance on the DAX cluster is performed\. It is specified as a range in the format `ddd:hh24:mi-ddd:hh24:mi` \(24H Clock UTC\)\. The minimum maintenance window is a 60 minute period\. Valid values for `ddd` are:  
-+  `sun` 
-+  `mon` 
-+  `tue` 
-+  `wed` 
-+  `thu` 
-+  `fri` 
-+  `sat` 
-Example: `sun:05:00-sun:09:00`  
-If you don't specify a preferred maintenance window when you create or modify a cache cluster, DAX assigns a 60\-minute maintenance window on a randomly selected day of the week\.
+`PreferredMaintenanceWindow`  <a name="cfn-dax-cluster-preferredmaintenancewindow"></a>
+A range of time when maintenance of DAX cluster software will be performed\. For example: `sun:01:00-sun:09:00`\. Cluster maintenance normally takes less than 30 minutes, and is performed automatically within the maintenance window\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`ReplicationFactor`  <a name="cfn-dax-cluster-replication-factor"></a>
+`ReplicationFactor`  <a name="cfn-dax-cluster-replicationfactor"></a>
 The number of nodes in the DAX cluster\. A replication factor of 1 will create a single\-node cluster, without any read replicas\. For additional fault tolerance, you can create a multiple node cluster with one or more read replicas\. To do this, set *ReplicationFactor* to 2 or more\.  
 AWS recommends that you have at least two read replicas per cluster\.
 *Required*: Yes  
 *Type*: Integer  
-*Update requires*: [Some interruptions](using-cfn-updating-stacks-update-behaviors.md#update-some-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`SecurityGroupIds`  <a name="cfn-dax-cluster-security-group-ids"></a>
+`SSESpecification`  <a name="cfn-dax-cluster-ssespecification"></a>
+Represents the settings used to enable server\-side encryption on the cluster\.  
+*Required*: No  
+*Type*: [SSESpecification](aws-properties-dax-cluster-ssespecification.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`SecurityGroupIds`  <a name="cfn-dax-cluster-securitygroupids"></a>
 A list of security group IDs to be assigned to each node in the DAX cluster\. \(Each of the security group ID is system\-generated\.\)  
 If this parameter is not specified, DAX assigns the default VPC security group to each node\.  
 *Required*: No  
-*Type*: List of String values  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`SSESpecification`  <a name="cfn-dax-cluster-ssespecification"></a>
-Whether server\-side encryption is enabled or not\.  
-*Required*: No  
-*Type*: [DAX Cluster SSESpecification](aws-properties-daxservice-cluster-ssespecification.md)   
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
-
-`SubnetGroupName`  <a name="cfn-dax-cluster-subnet-group-name"></a>
+`SubnetGroupName`  <a name="cfn-dax-cluster-subnetgroupname"></a>
 The name of the subnet group to be used for the replication group\.  
-DAX clusters can only run in an Amazon VPC environment\. All of the subnets that you specify in a subnet group must exist in the same VPC\.
-*Required*: Yes  
+DAX clusters can only run in an Amazon VPC environment\. All of the subnets that you specify in a subnet group must exist in the same VPC\.  
+ Updates are not supported for this property\. 
+*Required*: No  
 *Type*: String  
-*Update requires*: Updates are not supported\.
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-dax-cluster-tags"></a>
-A map of tags to associate with the DAX cluster\.  
+A set of tags to associate with the DAX cluster\.   
 *Required*: No  
-*Type*: String to String map  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-dax-cluster-returnvalues"></a>
+## Return Values<a name="aws-resource-dax-cluster-return-values"></a>
 
-### Ref<a name="aws-resource-dax-cluster-ref"></a>
+### Ref<a name="aws-resource-dax-cluster-return-values-ref"></a>
 
-When you provide the logical ID of this resource to the `Ref` intrinsic function, `Ref` returns the name of the created DAX cluster\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the created DAX cluster\. For example:
+
+ 
 
 ```
-{ "Ref": "MyDAXCluster" }
+{ "Ref": "MyResource" }
 ```
 
-Returns a value similar to the following:
+ Returns a value similar to the following: 
+
+ 
 
 ```
 MyDAXCluster
 ```
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Fn::GetAtt<a name="aws-resource-dax-cluster-getatt"></a>
+### Fn::GetAtt<a name="aws-resource-dax-cluster-return-values-fn--getatt"></a>
 
-`Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+ `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
-`Arn`  
+#### <a name="aws-resource-dax-cluster-return-values-fn--getatt-fn--getatt"></a>
+
+`Arn`  <a name="Arn-fn::getatt"></a>
 Returns the ARN of the DAX cluster\. For example:  
 
 ```
@@ -178,8 +180,8 @@ Returns a value similar to the following:
 arn:aws:dax:us-east-1:111122223333:cache/MyDAXCluster
 ```
 
-`ClusterDiscoveryEndpoint`  
-Returns the configuation endpoint of the DAX cluster\. For example:  
+`ClusterDiscoveryEndpoint`  <a name="ClusterDiscoveryEndpoint-fn::getatt"></a>
+Returns the configuration endpoint of the DAX cluster\. For example:  
 
 ```
 { "Fn::GetAtt": ["MyDAXCluster", "ClusterDiscoveryEndpoint"] }
@@ -190,13 +192,13 @@ Returns a value similar to the following:
 mydaxcluster.0h3d6x.clustercfg.dax.use1.cache.amazonaws.com:8111
 ```
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
+## Examples<a name="aws-resource-dax-cluster--examples"></a>
 
-## Example<a name="aws-resource-dax-cluster-example"></a>
+### Create Cluster<a name="aws-resource-dax-cluster--examples--Create_Cluster"></a>
 
 The following example creates a DAX cluster\.
 
-### JSON<a name="aws-resource-dax-cluster-example.json"></a>
+#### JSON<a name="aws-resource-dax-cluster--examples--Create_Cluster--json"></a>
 
 ```
 {
@@ -270,7 +272,7 @@ The following example creates a DAX cluster\.
 }
 ```
 
-### YAML<a name="aws-resource-dax-cluster-example.yaml"></a>
+#### YAML<a name="aws-resource-dax-cluster--examples--Create_Cluster--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"

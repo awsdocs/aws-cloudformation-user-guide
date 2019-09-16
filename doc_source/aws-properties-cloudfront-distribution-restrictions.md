@@ -1,29 +1,33 @@
-# CloudFront Distribution Restrictions<a name="aws-properties-cloudfront-distribution-restrictions"></a>
+# AWS::CloudFront::Distribution Restrictions<a name="aws-properties-cloudfront-distribution-restrictions"></a>
 
-`Restrictions` is a property of the [CloudFront Distribution DistributionConfig](aws-properties-cloudfront-distribution-distributionconfig.md) property type that lets you limit which viewers can access your content\.
+A complex type that identifies ways in which you want to restrict distribution of your content\.
 
-## Syntax<a name="w4ab1c21c14d326b5"></a>
+## Syntax<a name="aws-properties-cloudfront-distribution-restrictions-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-cloudfront-distribution-restrictions-syntax.json"></a>
 
 ```
 {
-  "[GeoRestriction](#cfn-cloudfront-distribution-restrictions-georestriction)" : GeoRestriction
+  "[GeoRestriction](#cfn-cloudfront-distribution-restrictions-georestriction)" : [GeoRestriction](aws-properties-cloudfront-distribution-georestriction.md)
 }
 ```
 
 ### YAML<a name="aws-properties-cloudfront-distribution-restrictions-syntax.yaml"></a>
 
 ```
-[GeoRestriction](#cfn-cloudfront-distribution-restrictions-georestriction): GeoRestriction
+  [GeoRestriction](#cfn-cloudfront-distribution-restrictions-georestriction): 
+    [GeoRestriction](aws-properties-cloudfront-distribution-georestriction.md)
 ```
 
-## Properties<a name="w4ab1c21c14d326b7"></a>
-
-**Note**  
-For more information about the constraints and valid values of each property, see the [Restrictions](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Restrictions.html) data type in the *Amazon CloudFront API Reference*\.
+## Properties<a name="aws-properties-cloudfront-distribution-restrictions-properties"></a>
 
 `GeoRestriction`  <a name="cfn-cloudfront-distribution-restrictions-georestriction"></a>
-The countries in which viewers are able to access your content\.  
+A complex type that controls the countries in which your content is distributed\. CloudFront determines the location of your users using `MaxMind` GeoIP databases\.  
 *Required*: Yes  
-*Type*: [CloudFront Distribution GeoRestriction](aws-properties-cloudfront-distribution-georestriction.md)
+*Type*: [GeoRestriction](aws-properties-cloudfront-distribution-georestriction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See Also<a name="aws-properties-cloudfront-distribution-restrictions--seealso"></a>
++  [Restrictions](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Restrictions.html) in the *Amazon CloudFront API Reference* 

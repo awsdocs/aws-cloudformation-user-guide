@@ -67,7 +67,7 @@ In addition to AWS CloudFormation actions, IAM users who create or delete stacks
 
 For a list of all AWS CloudFormation actions that you can allow or deny, see the [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/)\.
 
-### AWS CloudFormation Console\-Specific Actions<a name="w4ab1b7c14c11c16"></a>
+### AWS CloudFormation Console\-Specific Actions<a name="w4784ab1b7c14c11c16"></a>
 
 IAM users who use the AWS CloudFormation console require additional permissions that are not required for using the AWS Command Line Interface or AWS CloudFormation APIs\. Compared to the CLI and API, the console provides additional features that require additional permissions, such as template uploads to Amazon S3 buckets and drop\-down lists for [AWS\-specific parameter types](parameters-section-structure.md#aws-specific-parameter-types)\.
 
@@ -118,7 +118,7 @@ AWS CloudFormation supports resource\-level permissions, so you can specify acti
 
 The policy above uses a wild card at the end of the stack name so that delete stack and update stack are denied on the full stack ID \(such as `arn:aws:cloudformation:us-east-1:123456789012:stack/MyProductionStack/abc9dbf0-43c2-11e3-a6e8-50fa526be49c`\) and on the stack name \(such as `MyProductionStack`\)\.
 
-To allow `AWS::Serverless` transforms to create a change set, the policy should include the `arn:aws:cloudformation:<region>:aws:transform/Serverless-2016-10-31` resource\-level permission, as shown in the folllowing policy:
+To allow `AWS::Serverless` transforms to create a change set, the policy should include the `arn:aws:cloudformation:<region>:aws:transform/Serverless-2016-10-31` resource\-level permission, as shown in the following policy:
 
 **Example A sample policy that allows the create change set action for the transform**  
 
@@ -149,7 +149,7 @@ An AWS CloudFormation change set name that you want to associate with a policy\.
 
 `cloudformation:ResourceTypes`  
 The template resource types, such as `AWS::EC2::Instance`, that you want to associate with a policy\. Use this condition to control which resource types IAM users can work with when they create or update a stack\. This condition is checked against the resource types that users declare in the `ResourceTypes` parameter, which is currently supported only for CLI and API requests\. When using this parameter, users must specify all the resource types that are in their template\. For more information about the `ResourceTypes` parameter, see the [CreateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html) action in the *AWS CloudFormation API Reference*\.  
-The following list describes how to define resource types\. For a list of resource types, see [AWS Resource Types Reference](aws-template-resource-type-ref.md)\.    
+The following list describes how to define resource types\. For a list of resource types, see [AWS Resource and Property Types Reference](aws-template-resource-type-ref.md)\.    
 `AWS::*`  
 Specify all AWS resources\.  
 `AWS::service_name::*`  
@@ -172,7 +172,7 @@ To ensure that IAM users can only create or update stacks with the stack policie
 An Amazon S3 template URL that you want to associate with a policy\. Use this condition to control which templates IAM users can use when they create or update stacks\.  
 To ensure that IAM users can only create or update stacks with the templates that you uploaded, set the S3 bucket to `read only` for those users\.
 
-### Examples<a name="w4ab1b7c14c15c10"></a>
+### Examples<a name="w4784ab1b7c14c15c10"></a>
 
 The following example policy allows users to use only the `https://s3.amazonaws.com/testbucket/test.template` template URL to create or update a stack\.
 

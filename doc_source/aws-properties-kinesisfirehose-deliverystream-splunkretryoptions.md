@@ -1,8 +1,6 @@
-# Amazon Kinesis Data Firehose DeliveryStream SplunkRetryOptions<a name="aws-properties-kinesisfirehose-deliverystream-splunkretryoptions"></a>
+# AWS::KinesisFirehose::DeliveryStream SplunkRetryOptions<a name="aws-properties-kinesisfirehose-deliverystream-splunkretryoptions"></a>
 
-<a name="aws-properties-kinesisfirehose-deliverystream-splunkretryoptions-description"></a>The `SplunkRetryOptions` property type specifies retry behavior in case Kinesis Data Firehose is unable to deliver documents to Splunk or if it doesn't receive an acknowledgment from Splunk\.
-
-<a name="aws-properties-kinesisfirehose-deliverystream-splunkretryoptions-inheritance"></a> `SplunkRetryOptions` is a property of the [Amazon Kinesis Data Firehose DeliveryStream SplunkDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.md) property type\.
+The `SplunkRetryOptions` property type specifies retry behavior in case Kinesis Data Firehose is unable to deliver documents to Splunk or if it doesn't receive an acknowledgment from Splunk
 
 ## Syntax<a name="aws-properties-kinesisfirehose-deliverystream-splunkretryoptions-syntax"></a>
 
@@ -19,17 +17,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisfirehose-deliverystream-splunkretryoptions-syntax.yaml"></a>
 
 ```
-[DurationInSeconds](#cfn-kinesisfirehose-deliverystream-splunkretryoptions-durationinseconds): Integer
+  [DurationInSeconds](#cfn-kinesisfirehose-deliverystream-splunkretryoptions-durationinseconds): Integer
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-splunkretryoptions-properties"></a>
 
 `DurationInSeconds`  <a name="cfn-kinesisfirehose-deliverystream-splunkretryoptions-durationinseconds"></a>
-The total amount of time that Kinesis Data Firehose spends on retries\. This duration starts after the initial attempt to send data to Splunk fails and doesn't include the periods during which Kinesis Data Firehose waits for acknowledgment from Splunk after each attempt\.  
-Valid Range: Minimum value of 0\. Maximum value of 7200\.  
- *Required*: Yes  
- *Type*: Integer  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The total amount of time that Kinesis Data Firehose spends on retries\. This duration starts after the initial attempt to send data to Splunk fails\. It doesn't include the periods during which Kinesis Data Firehose waits for acknowledgment from Splunk after each attempt\.  
+*Required*: Yes  
+*Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `7200`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisfirehose-deliverystream-splunkretryoptions-seealso"></a>
-+ [SplunkRetryOptions](https://docs.aws.amazon.com/firehose/latest/APIReference/API_SplunkRetryOptions.html) in the *Amazon Kinesis Data Firehose API Reference*
+## See Also<a name="aws-properties-kinesisfirehose-deliverystream-splunkretryoptions--seealso"></a>
++  [SplunkRetryOptions](https://docs.aws.amazon.com/firehose/latest/APIReference/API_SplunkRetryOptions.html) in the *Amazon Kinesis Data Firehose API Reference*\. 

@@ -1,8 +1,6 @@
-# Amazon Kinesis Data Analytics Application InputLambdaProcessor<a name="aws-properties-kinesisanalytics-application-inputlambdaprocessor"></a>
+# AWS::KinesisAnalytics::Application InputLambdaProcessor<a name="aws-properties-kinesisanalytics-application-inputlambdaprocessor"></a>
 
-The `InputLambdaProcessor` property type specifies the Amazon Resource Name \(ARN\) of a Lambda function for preprocessing records in a stream before the SQL code for an Amazon Kinesis Data Analytics application executes\. 
-
- `InputLambdaProcessor` is a property of the [Kinesis Data Analytics Application Input](aws-properties-kinesisanalytics-application-input.md) property type\. 
+An object that contains the Amazon Resource Name \(ARN\) of the [AWS Lambda](https://docs.aws.amazon.com/lambda/) function that is used to preprocess records in the stream, and the ARN of the IAM role that is used to access the AWS Lambda function\. 
 
 ## Syntax<a name="aws-properties-kinesisanalytics-application-inputlambdaprocessor-syntax"></a>
 
@@ -27,13 +25,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisanalytics-application-inputlambdaprocessor-properties"></a>
 
 `ResourceARN`  <a name="cfn-kinesisanalytics-application-inputlambdaprocessor-resourcearn"></a>
-The ARN of the AWS Lambda function that operates on records in the stream\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The ARN of the [AWS Lambda](https://docs.aws.amazon.com/lambda/) function that operates on records in the stream\.  
+To specify an earlier version of the Lambda function than the latest, include the Lambda function version in the Lambda function ARN\. For more information about Lambda ARNs, see [Example ARNs: AWS Lambda](/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda) 
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `2048`  
+*Pattern*: `arn:.*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleARN`  <a name="cfn-kinesisanalytics-application-inputlambdaprocessor-rolearn"></a>
 The ARN of the IAM role that is used to access the AWS Lambda function\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `2048`  
+*Pattern*: `arn:aws:iam::\d{12}:role/?[a-zA-Z_0-9+=,.@\-_/]+`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

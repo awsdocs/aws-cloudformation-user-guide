@@ -1,99 +1,113 @@
-# Amazon Elastic Compute Cloud SpotFleet NetworkInterfaces<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces"></a>
+# AWS::EC2::SpotFleet InstanceNetworkInterfaceSpecification<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces"></a>
 
-`NetworkInterfaces` is a property of the [Amazon Elastic Compute Cloud SpotFleet LaunchSpecifications](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md) property that defines the network interface of the instances in a Spot fleet\.
+Describes a network interface\.
 
-## Syntax<a name="w4ab1c21c14d880b5"></a>
+## Syntax<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-syntax.json"></a>
 
 ```
 {
-  "[AssociatePublicIpAddress](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-associatepublicipaddress)" : Boolean,
-  "[DeleteOnTermination](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-deleteontermination)" : Boolean,
-  "[Description](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-description)" : String,
-  "[DeviceIndex](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-deviceindex)" : Integer,
-  "[Groups](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-groups)" : [ String, ... ],
-  "[Ipv6AddressCount](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-ipv6addresscount)" : Integer,
-  "[Ipv6Addresses](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-ipv6addresses)" : [ IPv6 Address Type, ... ],
-  "[NetworkInterfaceId](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-networkinterfaceid)" : String,
-  "[PrivateIpAddresses](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses)" : [ PrivateIpAddresses, ... ],
-  "[SecondaryPrivateIpAddressCount](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-secondaryprivateipaddresscount)" : Integer,
-  "[SubnetId](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-subnetid)" : String
+  "[AssociatePublicIpAddress](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-associatepublicipaddress)" : Boolean,
+  "[DeleteOnTermination](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deleteontermination)" : Boolean,
+  "[Description](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-description)" : String,
+  "[DeviceIndex](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deviceindex)" : Integer,
+  "[Groups](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-groups)" : [ String, ... ],
+  "[Ipv6AddressCount](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresscount)" : Integer,
+  "[Ipv6Addresses](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresses)" : [ [InstanceIpv6Address](aws-properties-ec2-spotfleet-instanceipv6address.md), ... ],
+  "[NetworkInterfaceId](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-networkinterfaceid)" : String,
+  "[PrivateIpAddresses](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-privateipaddresses)" : [ [PrivateIpAddressSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.md), ... ],
+  "[SecondaryPrivateIpAddressCount](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-secondaryprivateipaddresscount)" : Integer,
+  "[SubnetId](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-subnetid)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-syntax.yaml"></a>
 
 ```
-[AssociatePublicIpAddress](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-associatepublicipaddress): Boolean
-[DeleteOnTermination](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-deleteontermination): Boolean
-[Description](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-description): String
-[DeviceIndex](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-deviceindex): Integer
-[Groups](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-groups):
-  - String
-[Ipv6AddressCount](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-ipv6addresscount): Integer
-[Ipv6Addresses](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-ipv6addresses):
-  - IPv6 Address Type
-[NetworkInterfaceId](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-networkinterfaceid): String
-[PrivateIpAddresses](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses):
-  - PrivateIpAddresses
-[SecondaryPrivateIpAddressCount](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-secondaryprivateipaddresscount): Integer
-[SubnetId](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-subnetid): String
+  [AssociatePublicIpAddress](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-associatepublicipaddress): Boolean
+  [DeleteOnTermination](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deleteontermination): Boolean
+  [Description](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-description): String
+  [DeviceIndex](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deviceindex): Integer
+  [Groups](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-groups): 
+    - String
+  [Ipv6AddressCount](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresscount): Integer
+  [Ipv6Addresses](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresses): 
+    - [InstanceIpv6Address](aws-properties-ec2-spotfleet-instanceipv6address.md)
+  [NetworkInterfaceId](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-networkinterfaceid): String
+  [PrivateIpAddresses](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-privateipaddresses): 
+    - [PrivateIpAddressSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.md)
+  [SecondaryPrivateIpAddressCount](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-secondaryprivateipaddresscount): Integer
+  [SubnetId](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-subnetid): String
 ```
 
-## Properties<a name="w4ab1c21c14d880b7"></a>
+## Properties<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-properties"></a>
 
-`AssociatePublicIpAddress`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-associatepublicipaddress"></a>
-Indicates whether to assign a public IP address to an instance that you launch in a VPC\. You can assign the public IP address can only to a network interface for eth0, and only to a new network interface, not an existing one\.  
+`AssociatePublicIpAddress`  <a name="cfn-ec2-spotfleet-instancenetworkinterfacespecification-associatepublicipaddress"></a>
+Indicates whether to assign a public IPv4 address to an instance you launch in a VPC\. The public IP address can only be assigned to a network interface for eth0, and can only be assigned to a new network interface, not an existing one\. You cannot specify more than one network interface in the request\. If launching into a default subnet, the default value is `true`\.  
 *Required*: No  
-*Type*: Boolean
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`DeleteOnTermination`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-deleteontermination"></a>
-Indicates whether to delete the network interface when the instance terminates\.  
+`DeleteOnTermination`  <a name="cfn-ec2-spotfleet-instancenetworkinterfacespecification-deleteontermination"></a>
+If set to `true`, the interface is deleted when the instance is terminated\. You can specify `true` only if creating a new network interface when launching an instance\.  
 *Required*: No  
-*Type*: Boolean
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`Description`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-description"></a>
-The description of this network interface\.  
+`Description`  <a name="cfn-ec2-spotfleet-instancenetworkinterfacespecification-description"></a>
+The description of the network interface\. Applies only if creating a network interface when launching an instance\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`DeviceIndex`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-deviceindex"></a>
-The network interface's position in the attachment order\.  
+`DeviceIndex`  <a name="cfn-ec2-spotfleet-instancenetworkinterfacespecification-deviceindex"></a>
+The position of the network interface in the attachment order\. A primary network interface has a device index of 0\.  
+If you specify a network interface when launching an instance, you must specify the device index\.  
 *Required*: No  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`Groups`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-groups"></a>
-A list of security group IDs to associate with this network interface\.  
+`Groups`  <a name="cfn-ec2-spotfleet-instancenetworkinterfacespecification-groups"></a>
+The IDs of the security groups for the network interface\. Applies only if creating a network interface when launching an instance\.  
 *Required*: No  
-*Type*: List of String values
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`Ipv6AddressCount`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-ipv6addresscount"></a>
-The number of IPv6 addresses to associate with the network interface\. Amazon Elastic Compute Cloud automatically selects the IPv6 addresses from the subnet range\. To specify specific IPv6 addresses, use the `Ipv6Addresses` property and don't specify this property\.  
+`Ipv6AddressCount`  <a name="cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresscount"></a>
+A number of IPv6 addresses to assign to the network interface\. Amazon EC2 chooses the IPv6 addresses from the range of the subnet\. You cannot specify this option and the option to assign specific IPv6 addresses in the same request\. You can specify this option if you've specified a minimum number of instances to launch\.  
 *Required*: No  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`Ipv6Addresses`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-ipv6addresses"></a>
-One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface\. To specify a number of IPv6 addresses, use the `Ipv6AddressCount` property and don't specify this property\.  
+`Ipv6Addresses`  <a name="cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresses"></a>
+One or more IPv6 addresses to assign to the network interface\. You cannot specify this option and the option to assign a number of IPv6 addresses in the same request\. You cannot specify this option if you've specified a minimum number of instances to launch\.  
 *Required*: No  
-*Type*: List of [EC2 NetworkInterface Ipv6Addresses](aws-properties-ec2-networkinterface-ipv6addresses.md)
+*Type*: List of [InstanceIpv6Address](aws-properties-ec2-spotfleet-instanceipv6address.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`NetworkInterfaceId`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-networkinterfaceid"></a>
-A network interface ID\.  
+`NetworkInterfaceId`  <a name="cfn-ec2-spotfleet-instancenetworkinterfacespecification-networkinterfaceid"></a>
+The ID of the network interface\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`PrivateIpAddresses`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses"></a>
-One or more private IP addresses to assign to the network interface\.  
+`PrivateIpAddresses`  <a name="cfn-ec2-spotfleet-instancenetworkinterfacespecification-privateipaddresses"></a>
+One or more private IPv4 addresses to assign to the network interface\. Only one private IPv4 address can be designated as primary\. You cannot specify this option if you're launching more than one instance in a [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) request\.  
 *Required*: No  
-*Type*: List of [Amazon Elastic Compute Cloud SpotFleet NetworkInterfaces PrivateIpAddresses](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.md)
+*Type*: List of [PrivateIpAddressSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`SecondaryPrivateIpAddressCount`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-secondaryprivateipaddresscount"></a>
-The number of secondary private IP addresses that Amazon EC2 automatically assigns to the network interface\.  
+`SecondaryPrivateIpAddressCount`  <a name="cfn-ec2-spotfleet-instancenetworkinterfacespecification-secondaryprivateipaddresscount"></a>
+The number of secondary private IPv4 addresses\. You can't specify this option and specify more than one private IP address using the private IP addresses option\. You cannot specify this option if you're launching more than one instance in a [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) request\.  
 *Required*: No  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`SubnetId`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-subnetid"></a>
-The ID of the subnet to associate with the network interface\.  
-*Required*: Conditional\. If you don't specify the `NetworkInterfaceId` property, you must specify this property\.  
-*Type*: String
+`SubnetId`  <a name="cfn-ec2-spotfleet-instancenetworkinterfacespecification-subnetid"></a>
+The ID of the subnet associated with the network string\. Applies only if creating a network interface when launching an instance\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

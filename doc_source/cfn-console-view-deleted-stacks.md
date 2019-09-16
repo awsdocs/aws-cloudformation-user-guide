@@ -8,6 +8,6 @@ By default, the AWS CloudFormation console does not display stacks in the **DELE
 
   AWS CloudFormation lists all of your deleted stacks \(stacks with **DELETE\_COMPLETE** status\)\.
 
-## See Also<a name="w4ab1c15c13c29b7"></a>
+## See Also<a name="w4784ab1c15c13c29b7"></a>
 + [Deleting a Stack](cfn-console-delete-stack.md)
 + [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)

@@ -1,40 +1,45 @@
-# AWS IoT TopicRule KinesisAction<a name="aws-properties-iot-topicrule-kinesisaction"></a>
+# AWS::IoT::TopicRule KinesisAction<a name="aws-properties-iot-topicrule-kinesisaction"></a>
 
-`Kinesis` is a property of the `Actions` property that describes an action that writes data to an Kinesis stream\.
+Describes an action to write data to an Amazon Kinesis stream\.
 
-## Syntax<a name="w4ab1c21c14e1454b5"></a>
+## Syntax<a name="aws-properties-iot-topicrule-kinesisaction-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-iot-topicrule-kinesisaction-syntax.json"></a>
 
 ```
 {
-  "[PartitionKey](#cfn-iot-topicrule-kinesisaction-partitionkey)": String,
-  "[RoleArn](#cfn-iot-topicrule-kinesisaction-rolearn)": String,
-  "[StreamName](#cfn-iot-topicrule-kinesisaction-streamname)": String
+  "[PartitionKey](#cfn-iot-topicrule-kinesisaction-partitionkey)" : String,
+  "[RoleArn](#cfn-iot-topicrule-kinesisaction-rolearn)" : String,
+  "[StreamName](#cfn-iot-topicrule-kinesisaction-streamname)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-iot-topicrule-kinesisaction-syntax.yaml"></a>
 
 ```
-[PartitionKey](#cfn-iot-topicrule-kinesisaction-partitionkey): String
-[RoleArn](#cfn-iot-topicrule-kinesisaction-rolearn): String
-[StreamName](#cfn-iot-topicrule-kinesisaction-streamname): String
+  [PartitionKey](#cfn-iot-topicrule-kinesisaction-partitionkey): String
+  [RoleArn](#cfn-iot-topicrule-kinesisaction-rolearn): String
+  [StreamName](#cfn-iot-topicrule-kinesisaction-streamname): String
 ```
 
-## Properties<a name="w4ab1c21c14e1454b7"></a>
+## Properties<a name="aws-properties-iot-topicrule-kinesisaction-properties"></a>
 
 `PartitionKey`  <a name="cfn-iot-topicrule-kinesisaction-partitionkey"></a>
-The partition key \(the grouping of data by shard within an Kinesis stream\)\.  
+The partition key\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-iot-topicrule-kinesisaction-rolearn"></a>
-The ARN of the IAM role that grants access to an Kinesis stream\.  
+The ARN of the IAM role that grants access to the Amazon Kinesis stream\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StreamName`  <a name="cfn-iot-topicrule-kinesisaction-streamname"></a>
-The name of the Kinesis stream\.  
+The name of the Amazon Kinesis stream\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

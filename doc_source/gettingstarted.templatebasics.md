@@ -25,7 +25,7 @@ The Resources object contains a list of resource objects\. A resource declaratio
 AWS::ProductIdentifier::ResourceType
 ```
 
-For example, the resource type for an Amazon S3 bucket is [AWS::S3::Bucket](aws-properties-s3-bucket.md)\. For a full list of resource types, see [Template Reference](template-reference.md)\.
+For example, the resource type for an Amazon S3 bucket is [AWS::S3::Bucket](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html)\. For a full list of resource types, see [Template Reference](template-reference.md)\.
 
 Let's take a look at a very basic template\. The following template declares a single resource of type AWS::S3::Bucket: with the name HelloBucket\.
 
@@ -51,9 +51,9 @@ Resources:
 
 If you use this template to create a stack, AWS CloudFormation will create an Amazon S3 bucket\. Creating a bucket is simple, because AWS CloudFormation can create a bucket with default settings\. For other resources, such as an Auto Scaling group or EC2 instance, AWS CloudFormation requires more information\. Resource declarations use a `Properties` attribute to specify the information used to create a resource\.
 
- Depending on the resource type, some properties are required, such as the ImageId property for an [AWS::EC2::Instance](aws-properties-ec2-instance.md) resource, and others are optional\. Some properties have default values, such as the AccessControl property of the AWS::S3::Bucket resource, so specifying a value for those properties is optional\. Other properties are not required but may add functionality that you want, such as the WebsiteConfiguration property of the AWS::S3::Bucket resource\. Specifying a value for such properties is entirely optional and based on your needs\. In the example above, because the AWS::S3::Bucket resource has only optional properties and we didn't need any of the optional features, we could accept the defaults and omit the Properties attribute\. 
+ Depending on the resource type, some properties are required, such as the ImageId property for an [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource, and others are optional\. Some properties have default values, such as the AccessControl property of the AWS::S3::Bucket resource, so specifying a value for those properties is optional\. Other properties are not required but may add functionality that you want, such as the WebsiteConfiguration property of the AWS::S3::Bucket resource\. Specifying a value for such properties is entirely optional and based on your needs\. In the example above, because the AWS::S3::Bucket resource has only optional properties and we didn't need any of the optional features, we could accept the defaults and omit the Properties attribute\. 
 
- To view the properties for each resource type, see the topics in [Resource Property Types Reference](aws-product-property-reference.md)\.
+ To view the properties for each resource type, see the topics in [AWS Resource and Property Types Reference](aws-template-resource-type-ref.md)\.
 
 ## Resource Properties and Using Resources Together<a name="gettingstarted.templatebasics.multiple"></a>
 
@@ -84,7 +84,7 @@ Resources:
       AccessControl: PublicRead
 ```
 
-Some resources can have multiple properties, and some properties can have one or more subproperties\. For example, the [AWS::S3::Bucket](aws-properties-s3-bucket.md) resource has two properties, AccessControl and WebsiteConfiguration\. The WebsiteConfiguration property has two subproperties, IndexDocument and ErrorDocument\. The following template shows our original bucket resource with the additional properties\.
+Some resources can have multiple properties, and some properties can have one or more subproperties\. For example, the [AWS::S3::Bucket](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html) resource has two properties, AccessControl and WebsiteConfiguration\. The WebsiteConfiguration property has two subproperties, IndexDocument and ErrorDocument\. The following template shows our original bucket resource with the additional properties\.
 
 **Example JSON**  
 
@@ -120,7 +120,7 @@ Resources:
 
 One of the greatest benefits of templates and AWS CloudFormation is the ability to create a set of resources that work together to create an application or solution\. The name used for a resource within the template is a logical name\. When AWS CloudFormation creates the resource, it generates a physical name that is based on the combination of the logical name, the stack name, and a unique ID\.
 
- You're probably wondering how you set properties on one resource based on the name or property of another resource\. For example, you can create a CloudFront distribution backed by an S3 bucket or  an EC2 instance that uses EC2 security groups, and all of these resources can be created in the same template\. AWS CloudFormation has a number of intrinsic functions that you can use to refer to other resources and their properties\. You can use the [Ref function](intrinsic-function-reference-ref.md) to refer to an identifying property of a resource\. Frequently, this is the physical name of the resource; however, sometimes it can be an identifier, such as the IP address for an [AWS::EC2::EIP](aws-properties-ec2-eip.md) resource or an Amazon Resource Name \(ARN\) for an Amazon SNS topic\. For a list of values returned by the Ref function, see [Ref function](intrinsic-function-reference-ref.md)\. The following template contains an [AWS::EC2::Instance](aws-properties-ec2-instance.md) resource\. The resource's SecurityGroups property calls the Ref function to refer to the AWS::EC2::SecurityGroup resource InstanceSecurityGroup\.
+ You're probably wondering how you set properties on one resource based on the name or property of another resource\. For example, you can create a CloudFront distribution backed by an S3 bucket or  an EC2 instance that uses EC2 security groups, and all of these resources can be created in the same template\. AWS CloudFormation has a number of intrinsic functions that you can use to refer to other resources and their properties\. You can use the [Ref function](intrinsic-function-reference-ref.md) to refer to an identifying property of a resource\. Frequently, this is the physical name of the resource; however, sometimes it can be an identifier, such as the IP address for an [AWS::EC2::EIP](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html) resource or an Amazon Resource Name \(ARN\) for an Amazon SNS topic\. For a list of values returned by the Ref function, see [Ref function](intrinsic-function-reference-ref.md)\. The following template contains an [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource\. The resource's SecurityGroups property calls the Ref function to refer to the AWS::EC2::SecurityGroup resource InstanceSecurityGroup\.
 
 **Example JSON**  
 
@@ -242,7 +242,7 @@ Resources:
 
 MyExistingSecurityGroup is a string that refers to an existing EC2 security group instead of a security group declared in a template\. You use literal strings to refer to existing AWS resources\.
 
-In the example above, the KeyName property of the [AWS::EC2::Instance](aws-properties-ec2-instance.md) is the literal string mykey\. This means that a key pair with the name mykey must exist in the region where the stack is being created; otherwise, stack creation will fail because the key pair does not exist\. The key pair you use can vary with the region where you are creating the stack, or you may want to share the template with someone else so that they can use it with their AWS account\. If so, you can use an input parameter so that the key pair name can be specified when the stack is created\. The Ref function can refer to input parameters that are specified at stack creation time\. The following template adds a Parameters object containing the KeyName parameter, which is used to specify the KeyName property for the AWS::EC2::Instance resource\. The parameter type is `AWS::EC2::KeyPair::KeyName`, which ensures a user specifies a valid key pair name in his or her account and in the region where the stack is being created\.
+In the example above, the KeyName property of the [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) is the literal string mykey\. This means that a key pair with the name mykey must exist in the region where the stack is being created; otherwise, stack creation will fail because the key pair does not exist\. The key pair you use can vary with the region where you are creating the stack, or you may want to share the template with someone else so that they can use it with their AWS account\. If so, you can use an input parameter so that the key pair name can be specified when the stack is created\. The Ref function can refer to input parameters that are specified at stack creation time\. The following template adds a Parameters object containing the KeyName parameter, which is used to specify the KeyName property for the AWS::EC2::Instance resource\. The parameter type is `AWS::EC2::KeyPair::KeyName`, which ensures a user specifies a valid key pair name in his or her account and in the region where the stack is being created\.
 
 **Example JSON**  
 
@@ -548,7 +548,7 @@ Resources:
 In the RegionMap, each region is mapped to a name\-value pair\. The name\-value pair is a label, and the value to map\. In the RegionMap, AMI is the label and the AMI ID is the value\. To use a map to return a value, you use the [Fn::FindInMap](intrinsic-function-reference-findinmap.md) function, passing the name of the map, the value used to find the mapped value, and the label of the mapped value you want to return\. In the example above, the ImageId property of the resource Ec2Instance uses the Fn::FindInMap function to determine its value by specifying RegionMap as the map to use, AWS::Region as the input value to map from, and AMI as the label to identify the value to map to\. For example, if this template were used to create a stack in the us\-west\-1 region, ImageId would be set to ami\-655a0a20\. 
 
 **Tip**  
-The AWS::Region pseudo parameter enables you to get the region where the stack is created\. Some resources, such as [AWS::EC2::Instance](aws-properties-ec2-instance.md), [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md), and [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md), have a property that specifies availability zones\. You can use the [Fn::GetAZs function](intrinsic-function-reference-getavailabilityzones.md) to get the list of all availability zones in a region\.
+The AWS::Region pseudo parameter enables you to get the region where the stack is created\. Some resources, such as [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html), [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html), and [AWS::ElasticLoadBalancing::LoadBalancer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html), have a property that specifies availability zones\. You can use the [Fn::GetAZs function](intrinsic-function-reference-getavailabilityzones.md) to get the list of all availability zones in a region\.
 
 ## Constructed Values and Output Values<a name="gettingstarted.templatebasics.outputs"></a>
 
@@ -731,4 +731,4 @@ Of course, there are more advanced template and stack features\. Here is a list 
 + [DeletionPolicy attribute](aws-attribute-deletionpolicy.md) enables you to specify how AWS CloudFormation should handle the deletion of a resource\.
 + [Metadata](aws-attribute-metadata.md) attribute enables you to specify structured data with a resource\.
 
-[*AWS::CloudFormation::Stack*](aws-properties-stack.md) enables you to nest another stack as a resource within your template\.
+[https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html) enables you to nest another stack as a resource within your template\.

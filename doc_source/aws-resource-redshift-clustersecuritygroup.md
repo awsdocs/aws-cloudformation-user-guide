@@ -1,13 +1,8 @@
 # AWS::Redshift::ClusterSecurityGroup<a name="aws-resource-redshift-clustersecuritygroup"></a>
 
-Creates an Amazon Redshift security group\. You use security groups to control access to Amazon Redshift clusters that are not in a VPC\.
+Specifies a new Amazon Redshift security group\. You use security groups to control access to non\-VPC clusters\.
 
-**Topics**
-+ [Syntax](#aws-resource-redshift-clustersecuritygroup-syntax)
-+ [Properties](#w4ab1c21c10e1030b9)
-+ [Return Values](#w4ab1c21c10e1030c11)
-+ [Example](#w4ab1c21c10e1030c13)
-+ [See Also](#w4ab1c21c10e1030c15)
+ For information about managing security groups, go to [Amazon Redshift Cluster Security Groups](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html) in the *Amazon Redshift Cluster Management Guide*\.
 
 ## Syntax<a name="aws-resource-redshift-clustersecuritygroup-syntax"></a>
 
@@ -19,55 +14,55 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Redshift::ClusterSecurityGroup",
   "Properties" : {
-    "[Description](#cfn-redshift-clustersecuritygroup-description)" : String,
-    "[Tags](#cfn-redshift-clustersecuritygroup-tags)" : [ Resource Tag, ... ]
-  }
+      "[Description](#cfn-redshift-clustersecuritygroup-description)" : String,
+      "[Tags](#cfn-redshift-clustersecuritygroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-redshift-clustersecuritygroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::Redshift::ClusterSecurityGroup"
+Type: AWS::Redshift::ClusterSecurityGroup
 Properties: 
   [Description](#cfn-redshift-clustersecuritygroup-description): String
-  [Tags](#cfn-redshift-clustersecuritygroup-tags):
-    - Resource Tag
+  [Tags](#cfn-redshift-clustersecuritygroup-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
-## Properties<a name="w4ab1c21c10e1030b9"></a>
+## Properties<a name="aws-resource-redshift-clustersecuritygroup-properties"></a>
 
 `Description`  <a name="cfn-redshift-clustersecuritygroup-description"></a>
-A description of the security group\.  
+A description for the security group\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-redshift-clustersecuritygroup-tags"></a>
 Specifies an arbitrary set of tags \(key–value pairs\) to associate with this security group\. Use tags to manage your resources\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Resource Tags](aws-properties-resource-tags.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10e1030c11"></a>
+## Return Values<a name="aws-resource-redshift-clustersecuritygroup-return-values"></a>
 
-### Ref<a name="w4ab1c21c10e1030c11b2"></a>
+### Ref<a name="aws-resource-redshift-clustersecuritygroup-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
 
-```
-{ "Ref": "myClusterSecurityGroup" }
-```
+ `{ "Ref": "myClusterSecurityGroup" }` 
 
-For the Amazon Redshift cluster security group `myClusterSecurityGroup`, `Ref` returns the name of the cluster security group\.
+For the Amazon Redshift cluster security group `myClusterSecurityGroup`, Ref returns the name of the cluster security group\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Example<a name="w4ab1c21c10e1030c13"></a>
+## Examples<a name="aws-resource-redshift-clustersecuritygroup--examples"></a>
 
-The following example creates an Amazon Redshift cluster security group that you can associate cluster security group ingress rules with:
+### Specify a Cluster Security Group<a name="aws-resource-redshift-clustersecuritygroup--examples--Specify_a_Cluster_Security_Group"></a>
 
-### JSON<a name="aws-resource-redshift-clustersecuritygroup-example.json"></a>
+The following example describes an Amazon Redshift cluster security group that you can associate cluster security group ingress rules with\.
+
+#### JSON<a name="aws-resource-redshift-clustersecuritygroup--examples--Specify_a_Cluster_Security_Group--json"></a>
 
 ```
 "myClusterSecurityGroup": {
@@ -84,7 +79,7 @@ The following example creates an Amazon Redshift cluster security group that you
 }
 ```
 
-### YAML<a name="aws-resource-redshift-clustersecuritygroup-example.yaml"></a>
+#### YAML<a name="aws-resource-redshift-clustersecuritygroup--examples--Specify_a_Cluster_Security_Group--yaml"></a>
 
 ```
 myClusterSecurityGroup: 
@@ -95,6 +90,3 @@ myClusterSecurityGroup:
       - Key: foo
         Value: bar
 ```
-
-## See Also<a name="w4ab1c21c10e1030c15"></a>
-+ [AWS::Redshift::ClusterSecurityGroupIngress](aws-resource-redshift-clustersecuritygroupingress.md)

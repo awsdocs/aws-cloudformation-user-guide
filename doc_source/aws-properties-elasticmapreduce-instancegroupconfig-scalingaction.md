@@ -1,15 +1,17 @@
-# Amazon EMR InstanceGroupConfig ScalingAction<a name="aws-properties-elasticmapreduce-instancegroupconfig-scalingaction"></a>
+# AWS::EMR::InstanceGroupConfig ScalingAction<a name="aws-properties-elasticmapreduce-instancegroupconfig-scalingaction"></a>
 
-The `ScalingAction` property type specifies the scaling actions for an Auto Scaling group policy\. `ScalingAction` is the property type for the `Action` subproperty of the [Amazon EMR InstanceGroupConfig ScalingRule](aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.md) property type\.
+`ScalingAction` is a subproperty of the `ScalingRule` property type\. `ScalingAction` determines the type of adjustment the automatic scaling activity makes when triggered, and the periodicity of the adjustment\.
 
-## Syntax<a name="w4ab1c21c14e1282b5"></a>
+## Syntax<a name="aws-properties-elasticmapreduce-instancegroupconfig-scalingaction-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-elasticmapreduce-instancegroupconfig-scalingaction-syntax.json"></a>
 
 ```
 {
   "[Market](#cfn-elasticmapreduce-instancegroupconfig-scalingaction-market)" : String,
-  "[SimpleScalingPolicyConfiguration](#cfn-elasticmapreduce-instancegroupconfig-scalingaction-simplescalingpolicyconfiguration)" : SimpleScalingPolicyConfiguration
+  "[SimpleScalingPolicyConfiguration](#cfn-elasticmapreduce-instancegroupconfig-scalingaction-simplescalingpolicyconfiguration)" : [SimpleScalingPolicyConfiguration](aws-properties-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration.md)
 }
 ```
 
@@ -17,18 +19,21 @@ The `ScalingAction` property type specifies the scaling actions for an Auto Scal
 
 ```
   [Market](#cfn-elasticmapreduce-instancegroupconfig-scalingaction-market): String
-  [SimpleScalingPolicyConfiguration](#cfn-elasticmapreduce-instancegroupconfig-scalingaction-simplescalingpolicyconfiguration): SimpleScalingPolicyConfiguration
+  [SimpleScalingPolicyConfiguration](#cfn-elasticmapreduce-instancegroupconfig-scalingaction-simplescalingpolicyconfiguration): 
+    [SimpleScalingPolicyConfiguration](aws-properties-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration.md)
 ```
 
-## Properties<a name="w4ab1c21c14e1282b7"></a>
+## Properties<a name="aws-properties-elasticmapreduce-instancegroupconfig-scalingaction-properties"></a>
 
 `Market`  <a name="cfn-elasticmapreduce-instancegroupconfig-scalingaction-market"></a>
 Not available for instance groups\. Instance groups use the market type specified for the group\.  
-Valid values: `ON_DEMAND` or `SPOT`\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Allowed Values*: `ON_DEMAND | SPOT`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SimpleScalingPolicyConfiguration`  <a name="cfn-elasticmapreduce-instancegroupconfig-scalingaction-simplescalingpolicyconfiguration"></a>
-The type of adjustment that the automatic scaling activity makes when triggered, and the periodicity of the adjustment\.  
+The type of adjustment the automatic scaling activity makes when triggered, and the periodicity of the adjustment\.  
 *Required*: Yes  
-*Type*: [Amazon EMR InstanceGroupConfig SimpleScalingPolicyConfiguration](aws-properties-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration.md)
+*Type*: [SimpleScalingPolicyConfiguration](aws-properties-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

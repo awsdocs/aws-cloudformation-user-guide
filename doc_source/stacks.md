@@ -13,6 +13,7 @@ You are charged for the stack resources for the time they were operating \(even 
 + [Using the AWS CloudFormation Console](cfn-using-console.md)
 + [Using the AWS Command Line Interface](cfn-using-cli.md)
 + [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)
++ [Detecting Unmanaged Configuration Changes to Stacks and Resources](using-cfn-stack-drift.md)
 + [Exporting Stack Output Values](using-cfn-stack-exports.md)
 + [Listing Stacks That Import an Exported Output Value](using-cfn-stack-imports.md)
 + [Working with Nested Stacks](using-cfn-nested-stacks.md)

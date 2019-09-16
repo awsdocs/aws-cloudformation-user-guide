@@ -1,12 +1,6 @@
 # AWS::SSM::MaintenanceWindowTarget<a name="aws-resource-ssm-maintenancewindowtarget"></a>
 
-The `AWS::SSM::MaintenanceWindowTarget` resource registers a target with a Maintenance Window for AWS Systems Manager\. For more information, see [ RegisterTargetWithMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterTargetWithMaintenanceWindow.html) in the *AWS Systems Manager API Reference*\.
-
-**Topics**
-+ [Syntax](#aws-resource-ssm-maintenancewindowtarget-syntax)
-+ [Properties](#aws-resource-ssm-maintenancewindowtarget-properties)
-+ [Return Values](#aws-resource-ssm-maintenancewindowtarget-returnvalues)
-+ [See Also](#aws-resource-ssm-maintenancewindowtarget-seealso)
+The `AWS::SSM::MaintenanceWindowTarget` resource registers a target with a maintenance window for AWS Systems Manager\. For more information, see [ RegisterTargetWithMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterTargetWithMaintenanceWindow.html) in the *AWS Systems Manager API Reference*\.
 
 ## Syntax<a name="aws-resource-ssm-maintenancewindowtarget-syntax"></a>
 
@@ -18,80 +12,97 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SSM::MaintenanceWindowTarget",
   "Properties" : {
-    "[OwnerInformation](#cfn-ssm-maintenancewindowtarget-ownerinformation)" : String,
-    "[Description](#cfn-ssm-maintenancewindowtarget-description)" : String,
-    "[WindowId](#cfn-ssm-maintenancewindowtarget-windowid)" : String,
-    "[ResourceType](#cfn-ssm-maintenancewindowtarget-resourcetype)" : String,
-    "[Targets](#cfn-ssm-maintenancewindowtarget-targets)" : [ [*Targets*](aws-properties-ssm-maintenancewindowtarget-targets.md), ... ],
-    "[Name](#cfn-ssm-maintenancewindowtarget-name)" : String
-  }
+      "[Description](#cfn-ssm-maintenancewindowtarget-description)" : String,
+      "[Name](#cfn-ssm-maintenancewindowtarget-name)" : String,
+      "[OwnerInformation](#cfn-ssm-maintenancewindowtarget-ownerinformation)" : String,
+      "[ResourceType](#cfn-ssm-maintenancewindowtarget-resourcetype)" : String,
+      "[Targets](#cfn-ssm-maintenancewindowtarget-targets)" : [ [Targets](aws-properties-ssm-maintenancewindowtarget-targets.md), ... ],
+      "[WindowId](#cfn-ssm-maintenancewindowtarget-windowid)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-ssm-maintenancewindowtarget-syntax.yaml"></a>
 
 ```
-Type: "AWS::SSM::MaintenanceWindowTarget"
-Properties:
-  [OwnerInformation](#cfn-ssm-maintenancewindowtarget-ownerinformation): String
+Type: AWS::SSM::MaintenanceWindowTarget
+Properties: 
   [Description](#cfn-ssm-maintenancewindowtarget-description): String
-  [WindowId](#cfn-ssm-maintenancewindowtarget-windowid): String
+  [Name](#cfn-ssm-maintenancewindowtarget-name): String
+  [OwnerInformation](#cfn-ssm-maintenancewindowtarget-ownerinformation): String
   [ResourceType](#cfn-ssm-maintenancewindowtarget-resourcetype): String
   [Targets](#cfn-ssm-maintenancewindowtarget-targets): 
-    - [*Targets*](aws-properties-ssm-maintenancewindowtarget-targets.md)
-  [Name](#cfn-ssm-maintenancewindowtarget-name): String
+    - [Targets](aws-properties-ssm-maintenancewindowtarget-targets.md)
+  [WindowId](#cfn-ssm-maintenancewindowtarget-windowid): String
 ```
 
 ## Properties<a name="aws-resource-ssm-maintenancewindowtarget-properties"></a>
 
-`OwnerInformation`  <a name="cfn-ssm-maintenancewindowtarget-ownerinformation"></a>
-A user\-provided value to include in any events in CloudWatch Events that are raised while running tasks for these targets in this Maintenance Window\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
 `Description`  <a name="cfn-ssm-maintenancewindowtarget-description"></a>
 A description for the target\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
-`WindowId`  <a name="cfn-ssm-maintenancewindowtarget-windowid"></a>
-The ID of the Maintenance Window to register the target with\.   
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
-
-`ResourceType`  <a name="cfn-ssm-maintenancewindowtarget-resourcetype"></a>
-The type of target that's being registered with the Maintenance Window\.  
- *Required*: Yes  
- *Type*: String  
-*Valid values*: `INSTANCE`  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
-`Targets`  <a name="cfn-ssm-maintenancewindowtarget-targets"></a>
-The targets, either instances or tags\.  
-+ Specify instances by using `Key=instanceids,Values=instanceid1,instanceid2`\.
-+ Specify tags by using `Key=tag name,Values=tag value`\.
- *Required*: Yes  
- *Type*: List of [Systems Manager MaintenanceWindowTarget Targets](aws-properties-ssm-maintenancewindowtarget-targets.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ssm-maintenancewindowtarget-name"></a>
-An optional name for the target\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The name for the maintenance window target\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `3`  
+*Maximum*: `128`  
+*Pattern*: `^[a-zA-Z0-9_\-.]{3,128}$`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ssm-maintenancewindowtarget-returnvalues"></a>
+`OwnerInformation`  <a name="cfn-ssm-maintenancewindowtarget-ownerinformation"></a>
+A user\-provided value that will be included in any CloudWatch events that are raised while running tasks for these targets in this maintenance window\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-### Ref<a name="w4ab1c21c10e1186c11b3"></a>
+`ResourceType`  <a name="cfn-ssm-maintenancewindowtarget-resourcetype"></a>
+The type of target that is being registered with the maintenance window\.  
+*Required*: Yes  
+*Type*: String  
+*Allowed Values*: `INSTANCE`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-When you pass the logical ID of an `AWS::SSM::MaintenanceWindowTarget` resource to the intrinsic `Ref` function, the function returns the maintenance window target ID, such as `12a345b6-bbb7-4bb6-90b0-8c9577a2d2b9`\. 
+`Targets`  <a name="cfn-ssm-maintenancewindowtarget-targets"></a>
+The targets to register with the maintenance window\. In other words, the instances to run commands on when the maintenance window runs\.  
+You can specify targets using either instance IDs or tags that have been applied to instances\.  
+ **Example 1**: Specify instance IDs  
+ `Key=InstanceIds,Values=instance-id-1,instance-id-2,instance-id-3 `   
+ **Example 2**: Use tag key\-pairs applied to instances  
+ `Key=tag:my-tag-key,Values=my-tag-value-1,my-tag-value-2 `   
+ **Example 3**: Use tag\-keys applied to instances  
+ `Key=tag-key,Values=my-tag-key-1,my-tag-key-2 `   
+For more information about these examples formats, including the best use case for each one, see [Examples: Register Targets with a Maintenance Window](https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html) in the *AWS Systems Manager User Guide*\.  
+*Required*: Yes  
+*Type*: [List](aws-properties-ssm-maintenancewindowtarget-targets.md) of [Targets](aws-properties-ssm-maintenancewindowtarget-targets.md)  
+*Maximum*: `5`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+`WindowId`  <a name="cfn-ssm-maintenancewindowtarget-windowid"></a>
+The ID of the maintenance window to register the target with\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `20`  
+*Maximum*: `20`  
+*Pattern*: `^mw-[0-9a-f]{17}$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-resource-ssm-maintenancewindowtarget-seealso"></a>
-+ [AWS::SSM::MaintenanceWindow](aws-resource-ssm-maintenancewindow.md)
-+ [AWS::SSM::MaintenanceWindowTask](aws-resource-ssm-maintenancewindowtask.md)
-+ [ RegisterTargetWithMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterTargetWithMaintenanceWindow.html) in the *AWS Systems Manager API Reference*
+## Return Values<a name="aws-resource-ssm-maintenancewindowtarget-return-values"></a>
+
+### Ref<a name="aws-resource-ssm-maintenancewindowtarget-return-values-ref"></a>
+
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the maintenance window target ID, such as `12a345b6-bbb7-4bb6-90b0-8c9577a2d2b9`\.
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+## See Also<a name="aws-resource-ssm-maintenancewindowtarget--seealso"></a>
++  [AWS::SSM::MaintenanceWindow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html) 
++  [AWS::SSM::MaintenanceWindowTask](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html) 
++  [RegisterTaskWithMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterTaskWithMaintenanceWindow.html) in the *AWS Systems Manager API Reference*\.

@@ -162,9 +162,9 @@ AWS CloudFormation doesn't currently support the `SecureString` Systems Manager 
 
 ## AWS\-Specific Parameter Types<a name="aws-specific-parameter-types"></a>
 
-For AWS\-specific parameter types, template users must specify existing AWS values that are in their account\. AWS CloudFormation validates these parameter values against existing values in users' AWS accounts\. AWS\-specific parameter types are helpful in catching invalid values at the start of creating or updating a stack\.
+AWS\-specific parameter types are helpful in catching invalid values at the start of creating or updating a stack\. To specify parameters with AWS\-specific types, a template user must enter existing AWS values that are in their AWS account\. AWS CloudFormation validates these input values against existing values in the account\. For example, with the `AWS::EC2::VPC::Id` parameter type, a user must [enter an existing VPC ID](cfn-using-console-create-stack-parameters.md) that is in the account and region in which they are creating the stack\. 
 
-AWS CloudFormation validates input values for these types against existing values in a user's account\. For example, with the `AWS::EC2::VPC::Id` type, [a user must enter an existing VPC ID](cfn-using-console-create-stack-parameters.md) that is in the user's account and in the region in which the user is creating the stack\.
+If you want to allow template users to enter input values from different AWS accounts, don't define parameters with AWS\-specific types; instead, define parameters of type `String` \(or `CommaDelimitedList`\)\.
 
 ### Supported AWS\-Specific Parameter Types<a name="aws-specific-parameter-types-supported"></a>
 
@@ -231,7 +231,7 @@ An array of Amazon Route 53 hosted zone IDs, such as `Z23YXV4OVPL04A, Z23YXV4OV
 
 `SSM` parameter types correspond to existing parameters in Systems Manager Parameter Store\. You specify a Systems Manager parameter key as the value of the `SSM` parameter, and AWS CloudFormation fetches the latest value from Parameter Store to use for the stack\. For more information about Systems Manager parameters, see [ Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-paramstore.html) in the *AWS Systems Manager User Guide*\.
 
-You can also use the `ssm` or `ssm-secure` dynamic parameter pattern to specify parameter *values* in your template\. For more information, see [Using Dynamic References to Specify Template ValuesSpecifying Dynamic References in Stack Templates](dynamic-references.md)\.
+You can also use the `ssm` or `ssm-secure` dynamic parameter pattern to specify parameter *values* in your template\. For more information, see [Using Dynamic References to Specify Template Values](dynamic-references.md)\.
 
 When you create or update stacks and create change sets, AWS CloudFormation uses whatever values exist in Parameter Store at the time the operation is run\. If a specified parameter doesn't exist in Parameter Store under the caller's AWS account, AWS CloudFormation returns a validation error\.
 
@@ -276,7 +276,7 @@ A Systems Manager parameter whose value is a list of [AWS\-specific parameter ty
 AWS CloudFormation doesn't support the following `SSM` parameter type:
 + Lists of `SSM` parameter types—for example: `List<AWS::SSM::Parameter::Value<String>>`
 
-In addition, AWS CloudFormation does not support defining template parameters as `SecureString` Systems Manager parameter types\. However, you can specify Secure Strings as parameter *values* for certain resources by using dynamic parameter patterns\. For more information, see [Using Dynamic References to Specify Template ValuesSpecifying Dynamic References in Stack Templates](dynamic-references.md)\.
+In addition, AWS CloudFormation does not support defining template parameters as `SecureString` Systems Manager parameter types\. However, you can specify Secure Strings as parameter *values* for certain resources by using dynamic parameter patterns\. For more information, see [Using Dynamic References to Specify Template Values](dynamic-references.md)\.
 
 ## Grouping and Sorting Parameters in the AWS CloudFormation Console<a name="parameters-section-structure-grouping"></a>
 

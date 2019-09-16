@@ -1,12 +1,6 @@
 # AWS::ECR::Repository<a name="aws-resource-ecr-repository"></a>
 
-The `AWS::ECR::Repository` resource creates an Amazon Elastic Container Registry \(Amazon ECR\) repository, where users can push and pull Docker images\. For more information, see [Amazon ECR Repositories](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html) in the *Amazon Elastic Container Registry User Guide*\.
-
-**Topics**
-+ [Syntax](#aws-resource-ecr-repository-syntax)
-+ [Properties](#aws-resource-ecr-repository-properties)
-+ [Return Values](#aws-resource-ecr-repository-returnvalues)
-+ [Examples](#aws-resource-ecr-repository-examples)
+The `AWS::ECR::Repository` resource specifies an Amazon Elastic Container Registry \(Amazon ECR\) repository, where users can push and pull Docker images\. For more information, see [Amazon ECR Repositories](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html) in the *Amazon Elastic Container Registry User Guide*\.
 
 ## Syntax<a name="aws-resource-ecr-repository-syntax"></a>
 
@@ -18,10 +12,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ECR::Repository",
   "Properties" : {
-    "[LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy)" : [*LifecyclePolicy*](aws-properties-ecr-repository-lifecyclepolicy.md),
-    "[RepositoryName](#cfn-ecr-repository-repositoryname)" : String,
-    "[RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext)" : JSON object
-  }
+      "[LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy)" : [LifecyclePolicy](aws-properties-ecr-repository-lifecyclepolicy.md),
+      "[RepositoryName](#cfn-ecr-repository-repositoryname)" : String,
+      "[RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext)" : Json,
+      "[Tags](#cfn-ecr-repository-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
 }
 ```
 
@@ -30,57 +25,72 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ECR::Repository
 Properties: 
-  [LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy):
-    [*LifecyclePolicy*](aws-properties-ecr-repository-lifecyclepolicy.md)
+  [LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy): 
+    [LifecyclePolicy](aws-properties-ecr-repository-lifecyclepolicy.md)
   [RepositoryName](#cfn-ecr-repository-repositoryname): String
-  [RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext): JSON object
+  [RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext): Json
+  [Tags](#cfn-ecr-repository-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-ecr-repository-properties"></a>
 
 `LifecyclePolicy`  <a name="cfn-ecr-repository-lifecyclepolicy"></a>
-A lifecycle policy for the repository\.  
+Creates or updates a lifecycle policy\. For information about lifecycle policy syntax, see [Lifecycle Policy Template](https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html)\.  
 *Required*: No  
-*Type*: [Amazon ECR Repository LifecyclePolicy](aws-properties-ecr-repository-lifecyclepolicy.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: [LifecyclePolicy](aws-properties-ecr-repository-lifecyclepolicy.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RepositoryName`  <a name="cfn-ecr-repository-repositoryname"></a>
-A name for the image repository\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the repository name\. For more information, see [Name Type](aws-properties-name.md)\.  
+The name to use for the repository\. The repository name may be specified on its own \(such as `nginx-web-app`\) or it can be prepended with a namespace to group the repository into a category \(such as `project-a/nginx-web-app`\)\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the repository name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `2`  
+*Maximum*: `256`  
+*Pattern*: `(?:[a-z0-9]+(?:[._-][a-z0-9]+)*/)*[a-z0-9]+(?:[._-][a-z0-9]+)*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RepositoryPolicyText`  <a name="cfn-ecr-repository-repositorypolicytext"></a>
-A policy that controls who has access to the repository and which actions they can perform on it\. For more information, see [Amazon ECR Repository Policies](https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicies.html) in the *Amazon Elastic Container Registry User Guide*\.  
+The JSON repository policy text to apply to the repository\. For more information, see [Amazon ECR Repository Policy Examples](https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html) in the *Amazon Elastic Container Registry User Guide*\.  
 *Required*: No  
-*Type*: JSON object  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: Json  
+*Minimum*: `0`  
+*Maximum*: `10240`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ecr-repository-returnvalues"></a>
+`Tags`  <a name="cfn-ecr-repository-tags"></a>
+An array of key\-value pairs to apply to this resource\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-### Ref<a name="aws-resource-ecr-repository-ref"></a>
+## Return Values<a name="aws-resource-ecr-repository-return-values"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name, such as `test-repository`\.
+### Ref<a name="aws-resource-ecr-repository-return-values-ref"></a>
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name, such as `test-repository`\.
 
-### Fn::GetAtt<a name="aws-resource-ecr-repository-getatt"></a>
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-`Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+### Fn::GetAtt<a name="aws-resource-ecr-repository-return-values-fn--getatt"></a>
 
-`Arn`  
-Returns the Amazon Resource Name \(ARN\) for the specified `AWS::ECR::Repository` resource\. For example, `arn:aws:ecr:eu-west-1:123456789012:repository/test-repository`\.
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
-## Examples<a name="aws-resource-ecr-repository-examples"></a>
+#### <a name="aws-resource-ecr-repository-return-values-fn--getatt-fn--getatt"></a>
 
-### <a name="aws-resource-ecr-repository-example1"></a>
+`Arn`  <a name="Arn-fn::getatt"></a>
+Returns the Amazon Resource Name \(ARN\) for the specified `AWS::ECR::Repository` resource\. For example, `arn:aws:ecr:eu-west-1:123456789012:repository/test-repository `\.
 
-The following example creates a repository named `test-repository`\. Its policy permits the users `Bob` and `Alice` to push and pull images\. Note that the IAM users actually need to exist, or stack creation will fail\.
+## Examples<a name="aws-resource-ecr-repository--examples"></a>
 
-#### JSON<a name="aws-resource-ecr-repository-example1.json"></a>
+### Specify a repository<a name="aws-resource-ecr-repository--examples--Specify_a_repository"></a>
+
+The following example specifies a repository named `test-repository`\. Its policy permits the users `Bob` and `Alice` to push and pull images\. Note that the IAM users actually need to exist, or stack creation will fail\.
+
+#### JSON<a name="aws-resource-ecr-repository--examples--Specify_a_repository--json"></a>
 
 ```
 "MyRepository": {
@@ -115,7 +125,7 @@ The following example creates a repository named `test-repository`\. Its policy 
 }
 ```
 
-#### YAML<a name="aws-resource-ecr-repository-example1.yaml"></a>
+#### YAML<a name="aws-resource-ecr-repository--examples--Specify_a_repository--yaml"></a>
 
 ```
 MyRepository: 
@@ -142,11 +152,11 @@ MyRepository:
             - "ecr:CompleteLayerUpload"
 ```
 
-### <a name="aws-resource-ecr-repository-example2"></a>
+### Specify a repository with a lifecycle policy<a name="aws-resource-ecr-repository--examples--Specify_a_repository_with_a_lifecycle_policy"></a>
 
 The following example creates a repository with a lifecycle policy\.
 
-#### JSON<a name="aws-resource-ecr-repository-example2.json"></a>
+#### JSON<a name="aws-resource-ecr-repository--examples--Specify_a_repository_with_a_lifecycle_policy--json"></a>
 
 ```
 {
@@ -192,7 +202,7 @@ The following example creates a repository with a lifecycle policy\.
 }
 ```
 
-#### YAML<a name="aws-resource-ecr-repository-example2.yaml"></a>
+#### YAML<a name="aws-resource-ecr-repository--examples--Specify_a_repository_with_a_lifecycle_policy--yaml"></a>
 
 ```
 Parameters:    
@@ -214,3 +224,7 @@ Outputs:
   Arn:
     Value: !GetAtt MyRepository.Arn
 ```
+
+## See Also<a name="aws-resource-ecr-repository--seealso"></a>
++  [Creating a Lifecycle Policy](https://docs.aws.amazon.com/AmazonECR/latest/userguide/lp_creation.html) in the *Amazon Elastic Container Registry User Guide* 
++  [PutLifecyclePolicy](https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_PutLifecyclePolicy.html) in the *Amazon Elastic Container Registry API Reference* 

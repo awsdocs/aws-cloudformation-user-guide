@@ -14,7 +14,7 @@ To create or modify a template, use AWS CloudFormation Designer, a drag\-and\-dr
 
      Select an AWS CloudFormation template from a list of samples\. For descriptions of the templates, see [Sample Templates](cfn-sample-templates.md)\.
 
-     To create a stack from existing AWS resources by using the CloudFormer tool, select **CloudFormer** from the list\. For more information, see [Using CloudFormer to Create Templates](cfn-using-cloudformer.md)\.
+     To create a stack from existing AWS resources by using the CloudFormer tool, select **CloudFormer** from the list\. For more information, see [Using CloudFormer \(Beta\) to Create Templates](cfn-using-cloudformer.md)\.
    + **Upload a template to Amazon S3**\.
 
      Select an AWS CloudFormation template on your local computer\. Choose **Choose File** to select the template file that you want to upload\. The template can be a maximum size of 460,800 bytes\.

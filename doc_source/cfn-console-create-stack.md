@@ -33,6 +33,6 @@ After creating a stack, you can monitor the stack's progress, view the stack's r
    + Click **Launch CloudFormer** in the **CloudFormation Stacks** main window to create a stack from currently running resources\. This option is visible only if you have no running stacks\.  
 ![\[The Launch CloudFormer button in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-create-stack-cloudformer-button.png)
 
-     For more information about using CloudFormer to create AWS CloudFormation stacks, see [Using CloudFormer to Create Templates](cfn-using-cloudformer.md)\.
+     For more information about using CloudFormer to create AWS CloudFormation stacks, see [Using CloudFormer \(Beta\) to Create Templates](cfn-using-cloudformer.md)\.
 
 Next, you [choose a stack template](cfn-using-console-create-stack-template.md)\.

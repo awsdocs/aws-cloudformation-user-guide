@@ -1,14 +1,12 @@
-# DynamoDB Table PointInTimeRecoverySpecification<a name="aws-properties-dynamodb-table-pointintimerecoveryspecification"></a>
+# AWS::DynamoDB::Table PointInTimeRecoverySpecification<a name="aws-properties-dynamodb-table-pointintimerecoveryspecification"></a>
 
-<a name="aws-properties-dynamodb-table-pointintimerecoveryspecification-description"></a>The `PointInTimeRecoverySpecification` property type enables point in time recovery in a DynamoDB table\.
+The settings used to enable point in time recovery\.
 
-<a name="aws-properties-dynamodb-table-pointintimerecoveryspecification-inheritance"></a> `PointInTimeRecoverySpecification` is a property of the [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md) resource\.
-
-## Syntax<a name="aws-properties-ec2-launchtemplate-ipv6add-syntax"></a>
+## Syntax<a name="aws-properties-dynamodb-table-pointintimerecoveryspecification-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-properties-ec2-launchtemplate-ipv6add-syntax.json"></a>
+### JSON<a name="aws-properties-dynamodb-table-pointintimerecoveryspecification-syntax.json"></a>
 
 ```
 {
@@ -19,16 +17,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dynamodb-table-pointintimerecoveryspecification-syntax.yaml"></a>
 
 ```
-[PointInTimeRecoveryEnabled](#cfn-dynamodb-table-pointintimerecoveryspecification-pointintimerecoveryenabled): Boolean
+  [PointInTimeRecoveryEnabled](#cfn-dynamodb-table-pointintimerecoveryspecification-pointintimerecoveryenabled): Boolean
 ```
 
 ## Properties<a name="aws-properties-dynamodb-table-pointintimerecoveryspecification-properties"></a>
 
 `PointInTimeRecoveryEnabled`  <a name="cfn-dynamodb-table-pointintimerecoveryspecification-pointintimerecoveryenabled"></a>
 Indicates whether point in time recovery is enabled \(true\) or disabled \(false\) on the table\.  
- *Required*: No  
- *Type*: Boolean  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-dynamodb-table-pointintimerecoveryspecification-seealso"></a>
-+ [PointInTimeRecoverySpecification](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PointInTimeRecoverySpecification.html) in the *Amazon DynamoDB API Reference*
+## See Also<a name="aws-properties-dynamodb-table-pointintimerecoveryspecification--seealso"></a>
+
+ [PointInTimeRecoverySpecification](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PointInTimeRecoverySpecification.html) in the Amazon DynamoDB API Reference\. 

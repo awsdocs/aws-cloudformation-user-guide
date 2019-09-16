@@ -1,8 +1,6 @@
-# Amazon Kinesis Data Analytics ApplicationOutput DestinationSchema<a name="aws-properties-kinesisanalytics-applicationoutput-destinationschema"></a>
+# AWS::KinesisAnalytics::ApplicationOutput DestinationSchema<a name="aws-properties-kinesisanalytics-applicationoutput-destinationschema"></a>
 
-The `DestinationSchema` property describes the data format when records are written to the destination\.
-
- `DestinationSchema` is a property of the [Kinesis Data Analytics ApplicationOutput Output](aws-properties-kinesisanalytics-applicationoutput-output.md) property type\.
+Describes the data format when records are written to the destination\. For more information, see [Configuring Application Output](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/how-it-works-output.html)\. 
 
 ## Syntax<a name="aws-properties-kinesisanalytics-applicationoutput-destinationschema-syntax"></a>
 
@@ -26,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `RecordFormatType`  <a name="cfn-kinesisanalytics-applicationoutput-destinationschema-recordformattype"></a>
 Specifies the format of the records on the output stream\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: String  
+*Allowed Values*: `CSV | JSON`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

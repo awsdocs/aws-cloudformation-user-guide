@@ -1,15 +1,6 @@
 # AWS::EMR::Step<a name="aws-resource-emr-step"></a>
 
-The `AWS::EMR::Step` resource creates a unit of work \(a job flow step\) that you submit to an Amazon EMR \(Amazon EMR\) cluster\. The job flow step contains instructions for processing data on the cluster\.
-
-**Note**  
-You can't delete work flow steps\. During a stack update, if you remove a step, AWS CloudFormation takes no action\.
-
-**Topics**
-+ [Syntax](#aws-resource-emr-step-syntax)
-+ [Properties](#w4ab1c21c10d696c11)
-+ [Return Values](#w4ab1c21c10d696c13)
-+ [Example](#w4ab1c21c10d696c15)
+Use `Step` to specify a cluster \(job flow\) step, which runs only on the master node\. Steps are used to submit data processing jobs to a cluster\.
 
 ## Syntax<a name="aws-resource-emr-step-syntax"></a>
 
@@ -21,11 +12,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EMR::Step",
   "Properties" : {
-    "[ActionOnFailure](#cfn-emr-step-actiononfailure)" : String,
-    "[HadoopJarStep](#cfn-emr-step-hadoopjarstep)" : HadoopJarStepConfig,
-    "[JobFlowId](#cfn-emr-step-jobflowid)" : String,
-    "[Name](#cfn-emr-step-name)" : String
-  }
+      "[ActionOnFailure](#cfn-elasticmapreduce-step-actiononfailure)" : String,
+      "[HadoopJarStep](#cfn-elasticmapreduce-step-hadoopjarstep)" : [HadoopJarStepConfig](aws-properties-elasticmapreduce-step-hadoopjarstepconfig.md),
+      "[JobFlowId](#cfn-elasticmapreduce-step-jobflowid)" : String,
+      "[Name](#cfn-elasticmapreduce-step-name)" : String
+    }
 }
 ```
 
@@ -34,92 +25,47 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::EMR::Step
 Properties: 
-  [ActionOnFailure](#cfn-emr-step-actiononfailure): String
-  [HadoopJarStep](#cfn-emr-step-hadoopjarstep):
-    HadoopJarStepConfig
-  [JobFlowId](#cfn-emr-step-jobflowid): String
-  [Name](#cfn-emr-step-name): String
+  [ActionOnFailure](#cfn-elasticmapreduce-step-actiononfailure): String
+  [HadoopJarStep](#cfn-elasticmapreduce-step-hadoopjarstep): 
+    [HadoopJarStepConfig](aws-properties-elasticmapreduce-step-hadoopjarstepconfig.md)
+  [JobFlowId](#cfn-elasticmapreduce-step-jobflowid): String
+  [Name](#cfn-elasticmapreduce-step-name): String
 ```
 
-## Properties<a name="w4ab1c21c10d696c11"></a>
+## Properties<a name="aws-resource-emr-step-properties"></a>
 
-`ActionOnFailure`  <a name="cfn-emr-step-actiononfailure"></a>
-The action to take if the job flow step fails\. Currently, AWS CloudFormation supports `CONTINUE` and `CANCEL_AND_WAIT`\.  
-+ `CANCEL_AND_WAIT`: If the step fails, cancel the remaining steps\. If the cluster has auto\-terminate disabled, the cluster will not terminate\.
-
-  `CONTINUE`: If the step fails, continue to the next step\.
-For more information, see [Managing Cluster Termination](https://docs.aws.amazon.com//ElasticMapReduce/latest/ManagementGuide/UsingEMR_TerminationProtection.html) in the *Amazon EMR Management Guide*\.  
+`ActionOnFailure`  <a name="cfn-elasticmapreduce-step-actiononfailure"></a>
+The action to take when the cluster step fails\. Possible values are TERMINATE\_CLUSTER, CANCEL\_AND\_WAIT, and CONTINUE\. TERMINATE\_JOB\_FLOW is provided for backward compatibility\. We recommend using TERMINATE\_CLUSTER instead\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Allowed Values*: `CANCEL_AND_WAIT | CONTINUE | TERMINATE_CLUSTER | TERMINATE_JOB_FLOW`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`HadoopJarStep`  <a name="cfn-emr-step-hadoopjarstep"></a>
-The JAR file that includes the main function that Amazon EMR executes\.  
+`HadoopJarStep`  <a name="cfn-elasticmapreduce-step-hadoopjarstep"></a>
+The `HadoopJarStepConfig` property type specifies a job flow step consisting of a JAR file whose main function will be executed\. The main function submits a job for the cluster to execute as a step on the master node, and then waits for the job to finish or fail before executing subsequent steps\.  
 *Required*: Yes  
-*Type*: [Amazon EMR Step HadoopJarStepConfig](aws-properties-emr-step-hadoopjarstepconfig.md)  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Type*: [HadoopJarStepConfig](aws-properties-elasticmapreduce-step-hadoopjarstepconfig.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`JobFlowId`  <a name="cfn-emr-step-jobflowid"></a>
-The ID of a cluster in which you want to run this job flow step\.  
-*Required*: Yes  
-*Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
-
-`Name`  <a name="cfn-emr-step-name"></a>
-A name for the job flow step\.  
+`JobFlowId`  <a name="cfn-elasticmapreduce-step-jobflowid"></a>
+A string that uniquely identifies the cluster \(job flow\)\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `0`  
+*Maximum*: `256`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d696c13"></a>
+`Name`  <a name="cfn-elasticmapreduce-step-name"></a>
+The name of the cluster step\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-### Ref<a name="w4ab1c21c10d696c13b2"></a>
+## Return Values<a name="aws-resource-emr-step-return-values"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the step ID, such as `s-1A2BC3D4EFG56`\.
+### Ref<a name="aws-resource-emr-step-return-values-ref"></a>
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns returns the ID of the step\.
 
-## Example<a name="w4ab1c21c10d696c15"></a>
-
-The following example creates a step that submits work to the `TestCluster` cluster\. The step runs the `pi` program in the `hadoop-mapreduce-examples-2.6.0.jar` file with 5 maps and 10 samples, specified in the `Args` property\.
-
-### JSON<a name="aws-resource-emr-step-example.json"></a>
-
-```
-"TestStep": {
-  "Type": "AWS::EMR::Step",
-  "Properties": {
-    "ActionOnFailure": "CONTINUE",
-    "HadoopJarStep": {
-      "Args": [
-        "5",
-        "10"
-      ],
-      "Jar": "s3://emr-cfn-test/hadoop-mapreduce-examples-2.6.0.jar",
-      "MainClass": "pi"
-    },
-    "Name": "TestStep",
-    "JobFlowId": {
-      "Ref": "TestCluster"
-    }
-  }
-}
-```
-
-### YAML<a name="aws-resource-emr-step-example.yaml"></a>
-
-```
-TestStep: 
-  Type: AWS::EMR::Step
-  Properties: 
-    ActionOnFailure: "CONTINUE"
-    HadoopJarStep: 
-      Args: 
-        - "5"
-        - "10"
-      Jar: "s3://emr-cfn-test/hadoop-mapreduce-examples-2.6.0.jar"
-      MainClass: "pi"
-    Name: "TestStep"
-    JobFlowId: 
-      Ref: "TestCluster"
-```
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

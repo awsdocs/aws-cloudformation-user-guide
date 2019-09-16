@@ -1,12 +1,6 @@
 # AWS::SageMaker::NotebookInstanceLifecycleConfig<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig"></a>
 
-The `AWS::SageMaker::NotebookInstanceLifecycleConfig` resource specifies shell scripts that run when you create and/or start a notebook instance\. For more information, see [Customize a Notebook Instance](https://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html) in the *Amazon SageMaker Developer Guide*\. 
-
-**Topics**
-+ [Syntax](#aws-resource-sagemaker-notebookinstancelifecycleconfig-syntax)
-+ [Properties](#aws-resource-sagemaker-notebookinstancelifecycleconfig-properties)
-+ [Return Values](#aws-resource-sagemaker-notebookinstancelifecycleconfig-returnvalues)
-+ [Examples](#aws-resource-sagemaker-notebookinstancelifecycleconfig-examples)
+The `AWS::SageMaker::NotebookInstanceLifecycleConfig` resource creates shell scripts that run when you create and/or start a notebook instance\. For information about notebook instance lifestyle configurations, see [Customize a Notebook Instance](https://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html) in the *Amazon SageMaker Developer Guide*\.
 
 ## Syntax<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-syntax"></a>
 
@@ -18,69 +12,77 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::NotebookInstanceLifecycleConfig",
   "Properties" : {
-    "[OnStart](#cfn-sagemaker-notebookinstancelifecycleconfig-onstart)" : [ [*NotebookInstanceLifecycleHook*](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md), ... ],
-    "[NotebookInstanceLifecycleConfigName](#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecycleconfigname)" : String,
-    "[OnCreate](#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate)" : [ [*NotebookInstanceLifecycleHook*](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md), ... ]
-  }
+      "[NotebookInstanceLifecycleConfigName](#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecycleconfigname)" : String,
+      "[OnCreate](#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate)" : [ [NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md), ... ],
+      "[OnStart](#cfn-sagemaker-notebookinstancelifecycleconfig-onstart)" : [ [NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md), ... ]
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-syntax.yaml"></a>
 
 ```
-Type: "AWS::SageMaker::NotebookInstanceLifecycleConfig"
-Properties:
-  [OnStart](#cfn-sagemaker-notebookinstancelifecycleconfig-onstart): 
-    - [*NotebookInstanceLifecycleHook*](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md)  
+Type: AWS::SageMaker::NotebookInstanceLifecycleConfig
+Properties: 
   [NotebookInstanceLifecycleConfigName](#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecycleconfigname): String
   [OnCreate](#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate): 
-    - [*NotebookInstanceLifecycleHook*](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md)
+    - [NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md)
+  [OnStart](#cfn-sagemaker-notebookinstancelifecycleconfig-onstart): 
+    - [NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md)
 ```
 
 ## Properties<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-properties"></a>
 
-`OnStart`  <a name="cfn-sagemaker-notebookinstancelifecycleconfig-onstart"></a>
-A shell script that runs once when you create a notebook instance, and then each time you start the notebook instance\.  
- *Required*: No  
- *Type*: List of [Amazon SageMaker NotebookInstanceLifecycleConfig NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
 `NotebookInstanceLifecycleConfigName`  <a name="cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecycleconfigname"></a>
 The name of the lifecycle configuration\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Required*: No  
+*Type*: String  
+*Maximum*: `63`  
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OnCreate`  <a name="cfn-sagemaker-notebookinstancelifecycleconfig-oncreate"></a>
-A shell script that runs only once, when you create a notebook instance\.  
- *Required*: No  
- *Type*: List of [Amazon SageMaker NotebookInstanceLifecycleConfig NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+A shell script that runs only once, when you create a notebook instance\. The shell script must be a base64\-encoded string\.  
+*Required*: No  
+*Type*: List of [NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md)  
+*Maximum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-returnvalues"></a>
+`OnStart`  <a name="cfn-sagemaker-notebookinstancelifecycleconfig-onstart"></a>
+A shell script that runs every time you start a notebook instance, including when you create the notebook instance\. The shell script must be a base64\-encoded string\.  
+*Required*: No  
+*Type*: List of [NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md)  
+*Maximum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-### Ref<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-ref"></a>
+## Return Values<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-return-values"></a>
 
-When you pass the logical ID of an `AWS::SageMaker::NotebookInstanceLifecycleConfig` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the lifecycle configuration, such as `arn:aws:sagemaker:us-west-2:012345678901:notebook-instance-lifecycle-config/mylifecycleconfig`\. 
+### Ref<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-return-values-ref"></a>
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the endpoint configuration, such as `arn:aws:sagemaker:us-west-2:012345678901:notebook-instance-lifecycle-config/mylifecycleconfig` 
 
-### Fn::GetAtt<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-getatt"></a>
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
-`NotebookInstanceLifecycleConfigName`  
-The name of the lifecycle configuration, such as `MyLifecycleConfig`\. 
+#### <a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-return-values-fn--getatt-fn--getatt"></a>
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
+`NotebookInstanceLifecycleConfigName`  <a name="NotebookInstanceLifecycleConfigName-fn::getatt"></a>
+The name of the lifecycle configuration, such as `MyLifecycleConfig`\.
 
-## Examples<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-examples"></a>
+## Examples<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig--examples"></a>
 
-### Notebook Instance Lifecycle Config Example<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-example1"></a>
+### SageMaker NotebookInstanceLifecycleConfig Example<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig--examples--SageMaker_NotebookInstanceLifecycleConfig_Example"></a>
 
 The following example creates a notebook instance with an associated lifecycle configuration\.
 
-#### JSON<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-example1.json"></a>
+#### JSON<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig--examples--SageMaker_NotebookInstanceLifecycleConfig_Example--json"></a>
 
 ```
 {
@@ -154,7 +156,7 @@ The following example creates a notebook instance with an associated lifecycle c
 }
 ```
 
-#### YAML<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-example1.yaml"></a>
+#### YAML<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig--examples--SageMaker_NotebookInstanceLifecycleConfig_Example--yaml"></a>
 
 ```
 Description: "Basic NotebookInstance test"

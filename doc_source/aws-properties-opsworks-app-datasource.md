@@ -1,8 +1,10 @@
-# AWS OpsWorks App DataSource<a name="aws-properties-opsworks-app-datasource"></a>
+# AWS::OpsWorks::App DataSource<a name="aws-properties-opsworks-app-datasource"></a>
 
-`DataSource` is a property of the [AWS::OpsWorks::App](aws-resource-opsworks-app.md) resource that specifies a database to associate with an AWS OpsWorks app\.
+Describes an app's data source\.
 
 ## Syntax<a name="aws-properties-opsworks-app-datasource-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-opsworks-app-datasource-syntax.json"></a>
 
@@ -17,24 +19,27 @@
 ### YAML<a name="aws-properties-opsworks-app-datasource-syntax.yaml"></a>
 
 ```
-[Arn](#cfn-opsworks-app-datasource-arn): String
-[DatabaseName](#cfn-opsworks-app-datasource-databasename): String
-[Type](#cfn-opsworks-app-datasource-type): String
+  [Arn](#cfn-opsworks-app-datasource-arn): String
+  [DatabaseName](#cfn-opsworks-app-datasource-databasename): String
+  [Type](#cfn-opsworks-app-datasource-type): String
 ```
 
 ## Properties<a name="aws-properties-opsworks-app-datasource-properties"></a>
 
 `Arn`  <a name="cfn-opsworks-app-datasource-arn"></a>
-The ARN of the data source\.  
+The data source's ARN\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DatabaseName`  <a name="cfn-opsworks-app-datasource-databasename"></a>
-The name of the database\.  
+The database name\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-opsworks-app-datasource-type"></a>
-The type of the data source, such as `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`\. For valid values, see the [DataSource](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_DataSource.html) type in the *AWS OpsWorks Stacks API Reference*\.  
+The data source's type, `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, `RdsDbInstance`, or `None`\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

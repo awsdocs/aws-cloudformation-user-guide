@@ -1,12 +1,8 @@
 # AWS::Logs::MetricFilter<a name="aws-resource-logs-metricfilter"></a>
 
-The `AWS::Logs::MetricFilter` resource creates a metric filter that describes how Amazon CloudWatch Logs extracts information from logs that you specify and transforms it into Amazon CloudWatch metrics\. If you have multiple metric filters that are associated with a log group, all the filters are applied to the log streams in that group\.
+The `AWS::Logs::MetricFilter` resource specifies a metric filter that describes how CloudWatch Logs extracts information from logs and transforms it into Amazon CloudWatch metrics\. If you have multiple metric filters that are associated with a log group, all the filters are applied to the log streams in that group\.
 
-**Topics**
-+ [Syntax](#aws-resource-logs-metricfilter-syntax)
-+ [Properties](#w4ab1c21c10d911b9)
-+ [Examples](#w4ab1c21c10d911c11)
-+ [Additional Information](#w4ab1c21c10d911c13)
+The maximum number of metric filters that can be associated with a log group is 100\.
 
 ## Syntax<a name="aws-resource-logs-metricfilter-syntax"></a>
 
@@ -16,12 +12,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "Type": "AWS::Logs::MetricFilter",    
-  "Properties": {
-    "[FilterPattern](#cfn-cwl-metricfilter-filterpattern)": String,
-    "[LogGroupName](#cfn-cwl-metricfilter-loggroupname)": String,
-    "[MetricTransformations](#cfn-cwl-metricfilter-metrictransformations)": [ MetricTransformations, ... ]
-  }
+  "Type" : "AWS::Logs::MetricFilter",
+  "Properties" : {
+      "[FilterPattern](#cfn-cwl-metricfilter-filterpattern)" : String,
+      "[LogGroupName](#cfn-cwl-metricfilter-loggroupname)" : String,
+      "[MetricTransformations](#cfn-cwl-metricfilter-metrictransformations)" : [ [MetricTransformation](aws-properties-logs-metricfilter-metrictransformation.md), ... ]
+    }
 }
 ```
 
@@ -32,41 +28,41 @@ Type: AWS::Logs::MetricFilter
 Properties: 
   [FilterPattern](#cfn-cwl-metricfilter-filterpattern): String
   [LogGroupName](#cfn-cwl-metricfilter-loggroupname): String
-  [MetricTransformations](#cfn-cwl-metricfilter-metrictransformations):
-    MetricTransformations
+  [MetricTransformations](#cfn-cwl-metricfilter-metrictransformations): 
+    - [MetricTransformation](aws-properties-logs-metricfilter-metrictransformation.md)
 ```
 
-## Properties<a name="w4ab1c21c10d911b9"></a>
-
-**Note**  
-For more information about constraints and values for each property, see [PutMetricFilter](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutMetricFilter.html) in the *Amazon CloudWatch Logs API Reference*\.
+## Properties<a name="aws-resource-logs-metricfilter-properties"></a>
 
 `FilterPattern`  <a name="cfn-cwl-metricfilter-filterpattern"></a>
-Describes the pattern that CloudWatch Logs follows to interpret each entry in a log\. A log entry might contain fields such as timestamps, IP addresses, error codes, bytes transferred, and so on\. You use the pattern to specify those fields and to specify what to look for in the log file\. For example, if you're interested in error codes that begin with `1234`, your filter pattern might be `[timestamps, ip_addresses, error_codes = 1234*, size, ...]`\. For more information, see [ Filter and Pattern Syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html#extract-log-event-values) in the *Amazon CloudWatch User Guide*\.  
+A filter pattern for extracting metric data out of ingested log events\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogGroupName`  <a name="cfn-cwl-metricfilter-loggroupname"></a>
 The name of an existing log group that you want to associate with this metric filter\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `512`  
+*Pattern*: `[\.\-_/#A-Za-z0-9]+`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MetricTransformations`  <a name="cfn-cwl-metricfilter-metrictransformations"></a>
-Describes how to transform data from a log into a CloudWatch metric\.  
+The metric transformations\.  
 *Required*: Yes  
-*Type*: A list of [CloudWatch Logs MetricFilter MetricTransformation Property](aws-properties-logs-metricfilter-metrictransformation.md)  
-Currently, you can specify only one metric transformation for each metric filter\. If you want to specify multiple metric transformations, you must specify multiple metric filters\.
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of [MetricTransformation](aws-properties-logs-metricfilter-metrictransformation.md)  
+*Maximum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Examples<a name="w4ab1c21c10d911c11"></a>
+## Examples<a name="aws-resource-logs-metricfilter--examples"></a>
 
-### <a name="w4ab1c21c10d911c11b2"></a>
+### Create a Metric Filter<a name="aws-resource-logs-metricfilter--examples--Create_a_Metric_Filter"></a>
 
 The following example sends a value of `1` to the `404Count` metric whenever the status code field includes a `404` value\.
 
-#### JSON<a name="aws-resource-logs-metricfilter-example.json"></a>
+#### JSON<a name="aws-resource-logs-metricfilter--examples--Create_a_Metric_Filter--json"></a>
 
 ```
 "404MetricFilter": {
@@ -85,7 +81,7 @@ The following example sends a value of `1` to the `404Count` metric whenever the
 }
 ```
 
-#### YAML<a name="aws-resource-logs-metricfilter-example.yaml"></a>
+#### YAML<a name="aws-resource-logs-metricfilter--examples--Create_a_Metric_Filter--yaml"></a>
 
 ```
 404MetricFilter: 
@@ -100,7 +96,3 @@ The following example sends a value of `1` to the `404Count` metric whenever the
         MetricNamespace: "WebServer/404s"
         MetricName: "404Count"
 ```
-
-## Additional Information<a name="w4ab1c21c10d911c13"></a>
-
-For an additional sample template, see [Amazon CloudWatch Logs Template Snippets](quickref-cloudwatchlogs.md)\.

@@ -1,26 +1,29 @@
-# Amazon Elastic Compute Cloud SpotFleet SecurityGroups<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups"></a>
+# AWS::EC2::SpotFleet GroupIdentifier<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups"></a>
 
-`SecurityGroups` is a property of the [Amazon Elastic Compute Cloud SpotFleet LaunchSpecifications](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md) property that specifies a security group to associate with the instances\.
+Describes a security group\.
 
-## Syntax<a name="w4ab1c21c14d892b5"></a>
+## Syntax<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups-syntax.json"></a>
 
 ```
 {
-  "[GroupId](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups-groupid)" : String
+  "[GroupId](#cfn-ec2-spotfleet-groupidentifier-groupid)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups-syntax.yaml"></a>
 
 ```
-[GroupId](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups-groupid): String
+  [GroupId](#cfn-ec2-spotfleet-groupidentifier-groupid): String
 ```
 
-## Properties<a name="w4ab1c21c14d892b7"></a>
+## Properties<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups-properties"></a>
 
-`GroupId`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups-groupid"></a>
-The ID of a security group\.  
+`GroupId`  <a name="cfn-ec2-spotfleet-groupidentifier-groupid"></a>
+The ID of the security group\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

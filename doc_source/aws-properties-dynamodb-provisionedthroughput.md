@@ -1,38 +1,39 @@
-# Amazon DynamoDB Table ProvisionedThroughput<a name="aws-properties-dynamodb-provisionedthroughput"></a>
+# AWS::DynamoDB::Table ProvisionedThroughput<a name="aws-properties-dynamodb-provisionedthroughput"></a>
 
-Describes a set of provisioned throughput values for an [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md) resource\. DynamoDB uses these capacity units to allocate sufficient resources to provide the requested throughput\.
+Throughput for the specified table, which consists of values for `ReadCapacityUnits` and `WriteCapacityUnits`\. For more information about the contents of a provisioned throughput structure, see [Amazon DynamoDB Table ProvisionedThroughput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html)\. 
 
-For a complete discussion of DynamoDB provisioned throughput values, see [Specifying Read and Write Requirements](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#ProvisionedThroughput) in the *DynamoDB Developer Guide*\.
+## Syntax<a name="aws-properties-dynamodb-provisionedthroughput-syntax"></a>
 
-## Syntax<a name="w4ab1c21c14d689b7"></a>
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-dynamodb-provisionedthroughput-syntax.json"></a>
 
 ```
 {
-   "[ReadCapacityUnits](#cfn-dynamodb-provisionedthroughput-readcapacityunits)" : Number,
-   "[WriteCapacityUnits](#cfn-dynamodb-provisionedthroughput-writecapacityunits)" : Number
+  "[ReadCapacityUnits](#cfn-dynamodb-provisionedthroughput-readcapacityunits)" : Long,
+  "[WriteCapacityUnits](#cfn-dynamodb-provisionedthroughput-writecapacityunits)" : Long
 }
 ```
 
 ### YAML<a name="aws-properties-dynamodb-provisionedthroughput-syntax.yaml"></a>
 
 ```
-[ReadCapacityUnits](#cfn-dynamodb-provisionedthroughput-readcapacityunits): Number
-[WriteCapacityUnits](#cfn-dynamodb-provisionedthroughput-writecapacityunits): Number
+  [ReadCapacityUnits](#cfn-dynamodb-provisionedthroughput-readcapacityunits): Long
+  [WriteCapacityUnits](#cfn-dynamodb-provisionedthroughput-writecapacityunits): Long
 ```
 
-## Parameters<a name="w4ab1c21c14d689b9"></a>
+## Properties<a name="aws-properties-dynamodb-provisionedthroughput-properties"></a>
 
 `ReadCapacityUnits`  <a name="cfn-dynamodb-provisionedthroughput-readcapacityunits"></a>
-Sets the desired minimum number of consistent reads of items \(up to 1KB in size\) per second for the specified table before Amazon DynamoDB balances the load\.  
+The maximum number of strongly consistent reads consumed per second before DynamoDB returns a `ThrottlingException`\. For more information, see [Specifying Read and Write Requirements](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#ProvisionedThroughput) in the *Amazon DynamoDB Developer Guide*\.  
+If read/write capacity mode is `PAY_PER_REQUEST` the value is set to 0\.  
 *Required*: Yes  
-*Type*: Number
+*Type*: Long  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WriteCapacityUnits`  <a name="cfn-dynamodb-provisionedthroughput-writecapacityunits"></a>
-Sets the desired minimum number of consistent writes of items \(up to 1KB in size\) per second for the specified table before Amazon DynamoDB balances the load\.  
+The maximum number of writes consumed per second before DynamoDB returns a `ThrottlingException`\. For more information, see [Specifying Read and Write Requirements](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#ProvisionedThroughput) in the *Amazon DynamoDB Developer Guide*\.  
+If read/write capacity mode is `PAY_PER_REQUEST` the value is set to 0\.  
 *Required*: Yes  
-*Type*: Number
-
-**Note**  
-For detailed information about the limits of provisioned throughput values in DynamoDB, see [Limits in Amazon DynamoDB](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in the *DynamoDB Developer Guide*\.
+*Type*: Long  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

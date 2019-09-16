@@ -8,7 +8,7 @@ This walkthrough shows you how to create a custom resource and associate a Lambd
 
 Walkthrough Overview
 
-For this walkthrough, you'll create a stack with a custom resource, a Lambda function, and an EC2 instance\. The walkthough provides sample code and a sample template that you'll use to create the stack\.
+For this walkthrough, you'll create a stack with a custom resource, a Lambda function, and an EC2 instance\. The walkthrough provides sample code and a sample template that you'll use to create the stack\.
 
 The sample template uses the custom resource type to invoke and send input values to the Lambda function\. When you use the template, AWS CloudFormation invokes the function and sends information to it, such as the request type, input data, and a pre\-signed Amazon Simple Storage Service \(Amazon S3\) URL\. The function uses that information to look up the AMI ID, and then sends a response to the pre\-signed URL\.
 
@@ -88,7 +88,7 @@ To create the Lambda function, you declare the `AWS::Lambda::Function` resource,
       "S3Key": { "Ref": "S3Key" }
     },
     "Handler": { "Fn::Join" : [ "", [{ "Ref": "ModuleName" },".handler"] ] },
-    "Runtime": "nodejs4.3",
+    "Runtime": "nodejs8.10",
     "Timeout": "30",
     "Role": { "Fn::GetAtt" : ["LambdaExecutionRole", "Arn"] }
   }
@@ -105,12 +105,12 @@ AMIInfoFunction:
       S3Bucket: !Ref S3Bucket
       S3Key: !Ref S3Key
     Handler: !Sub "${ModuleName}.handler"
-    Runtime: nodejs4.3
+    Runtime: nodejs8.10
     Timeout: 30
     Role: !GetAtt LambdaExecutionRole.Arn
 ```
 
-The `Code` property specifies the Amazon S3 location \(bucket name and file name\) where you uploaded the sample package\. The sample template uses input parameters \(`"Ref": "S3Bucket"` and `"Ref": "S3Key"`\) to set the bucket and file names so that you are able to specify the names when you create the stack\. Similarly, the handler name, which corresponds to the name of the source file \(the JavaScript file\) in the `.zip` package, also uses an input parameter \(`"Ref": "ModuleName"`\)\. Because the source file is JavaScript code, the runtime is specified as `nodejs4.3`\.
+The `Code` property specifies the Amazon S3 location \(bucket name and file name\) where you uploaded the sample package\. The sample template uses input parameters \(`"Ref": "S3Bucket"` and `"Ref": "S3Key"`\) to set the bucket and file names so that you are able to specify the names when you create the stack\. Similarly, the handler name, which corresponds to the name of the source file \(the JavaScript file\) in the `.zip` package, also uses an input parameter \(`"Ref": "ModuleName"`\)\. Because the source file is JavaScript code, the runtime is specified as `nodejs8.10`\.
 
 For this walkthrough, the execution time for the function exceeds the default value of `3` seconds, so the timeout is set to `30` seconds\. If you don't specify a sufficiently long timeout, Lambda might cause a timeout before the function can complete, causing stack creation to fail\.
 
@@ -324,5 +324,5 @@ All the resources that you created are deleted\.
 
 Now that you understand how to create and use Lambda functions with AWS CloudFormation, you can use the sample template and code from this walkthrough to build other stacks and functions\.
 
-## Related Information<a name="w4ab1c17c25c14b7c29"></a>
+## Related Information<a name="w4784ab1c17c25c14b7c29"></a>
 + [AWS CloudFormation Custom Resource Reference](crpg-ref.md)

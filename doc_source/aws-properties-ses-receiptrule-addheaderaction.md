@@ -1,8 +1,8 @@
-# Amazon Simple Email Service ReceiptRule AddHeaderAction<a name="aws-properties-ses-receiptrule-addheaderaction"></a>
+# AWS::SES::ReceiptRule AddHeaderAction<a name="aws-properties-ses-receiptrule-addheaderaction"></a>
 
-<a name="aws-properties-ses-receiptrule-addheaderaction-description"></a>The `AddHeaderAction` property type add a header to email it recieves on behalf of one or more email addresses or domains that you own\.
+When included in a receipt rule, this action adds a header to the received email\.
 
-<a name="aws-properties-ses-receiptrule-addheaderaction-inheritance"></a> `AddHeaderAction` is a property of the [Amazon Simple Email Service ReceiptRule Action](aws-properties-ses-receiptrule-action.md) property type\.
+For information about adding a header using a receipt rule, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-action-add-header.html)\.
 
 ## Syntax<a name="aws-properties-ses-receiptrule-addheaderaction-syntax"></a>
 
@@ -12,33 +12,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[HeaderValue](#cfn-ses-receiptrule-addheaderaction-headervalue)" : String,
-  "[HeaderName](#cfn-ses-receiptrule-addheaderaction-headername)" : String
+  "[HeaderName](#cfn-ses-receiptrule-addheaderaction-headername)" : String,
+  "[HeaderValue](#cfn-ses-receiptrule-addheaderaction-headervalue)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-ses-receiptrule-addheaderaction-syntax.yaml"></a>
 
 ```
-[HeaderValue](#cfn-ses-receiptrule-addheaderaction-headervalue): String
-[HeaderName](#cfn-ses-receiptrule-addheaderaction-headername): String
+  [HeaderName](#cfn-ses-receiptrule-addheaderaction-headername): String
+  [HeaderValue](#cfn-ses-receiptrule-addheaderaction-headervalue): String
 ```
 
 ## Properties<a name="aws-properties-ses-receiptrule-addheaderaction-properties"></a>
 
 `HeaderName`  <a name="cfn-ses-receiptrule-addheaderaction-headername"></a>
-The name of the header to add\. Must be between 1 and 50 characters, inclusive, and consist of alphanumeric \(a\-z, A\-Z, 0\-9\) characters and dashes only\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The name of the header that you want to add to the incoming message\. The name has to contain at least one character, and can contain up to 50 characters\. It can only consist of alphanumeric \(a–z, A–Z, 0–9\) characters and dashes\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HeaderValue`  <a name="cfn-ses-receiptrule-addheaderaction-headervalue"></a>
-Must be less than 2048 characters, and must not contain newline characters \("\\r" or "\\n"\)\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
-## See Also<a name="aws-properties-ses-receiptrule-addheaderaction-seealso"></a>
-+ [Creating Receipt Rules for Amazon SES Email Receiving](url-ses-dev;receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*
-+ [CreateReceiptRule](url-ses-api;API_CreateReceiptRule.html) in the *Amazon Simple Email Service API Reference*
-+ [AddHeaderAction](url-ses-api;API_AddHeaderAction.html) in the *Amazon Simple Email Service API Reference*
+The content that you want to include in the header\. This value can contain up to 2048 characters\. It can't contain newline \(`\n`\) or carraige return \(`\r`\) characters\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

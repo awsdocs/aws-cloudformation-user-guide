@@ -1,15 +1,17 @@
-# Amazon Cognito IdentityPoolRoleAttachment RoleMapping<a name="aws-properties-cognito-identitypoolroleattachment-rolemapping"></a>
+# AWS::Cognito::IdentityPoolRoleAttachment RoleMapping<a name="aws-properties-cognito-identitypoolroleattachment-rolemapping"></a>
 
-`RoleMapping` is a property of the [AWS::Cognito::IdentityPoolRoleAttachment](aws-resource-cognito-identitypoolroleattachment.md) resource that defines the role mapping attributes of an Amazon Cognito identity pool\.
+`RoleMapping` is a property of the [AWS::Cognito::IdentityPoolRoleAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html) resource that defines the role mapping attributes of an Amazon Cognito identity pool\.
 
 ## Syntax<a name="aws-properties-cognito-identitypoolroleattachment-rolemapping-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-cognito-identitypoolroleattachment-rolemapping-syntax.json"></a>
 
 ```
 {
   "[AmbiguousRoleResolution](#cfn-cognito-identitypoolroleattachment-rolemapping-ambiguousroleresolution)" : String,
-  "[RulesConfiguration](#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration)" : RulesConfiguration,
+  "[RulesConfiguration](#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration)" : [RulesConfigurationType](aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.md),
   "[Type](#cfn-cognito-identitypoolroleattachment-rolemapping-type)" : String
 }
 ```
@@ -17,9 +19,10 @@
 ### YAML<a name="aws-properties-cognito-identitypoolroleattachment-rolemapping-syntax.yaml"></a>
 
 ```
-[AmbiguousRoleResolution](#cfn-cognito-identitypoolroleattachment-rolemapping-ambiguousroleresolution): String,
-[RulesConfiguration](#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration): RulesConfiguration,
-[Type](#cfn-cognito-identitypoolroleattachment-rolemapping-type): String
+  [AmbiguousRoleResolution](#cfn-cognito-identitypoolroleattachment-rolemapping-ambiguousroleresolution): String
+  [RulesConfiguration](#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration): 
+    [RulesConfigurationType](aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.md)
+  [Type](#cfn-cognito-identitypoolroleattachment-rolemapping-type): String
 ```
 
 ## Properties<a name="aws-properties-cognito-identitypoolroleattachment-rolemapping-properties"></a>
@@ -29,17 +32,17 @@ Specifies the action to be taken if either no rules match the claim value for th
 Valid values are `AuthenticatedRole` or `Deny`\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RulesConfiguration`  <a name="cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration"></a>
 The rules to be used for mapping users to roles\. If you specify Rules as the role mapping type, RulesConfiguration is required\.  
 *Required*: No  
-*Type*: [Amazon Cognito IdentityPoolRoleAttachment RoleMapping RulesConfiguration](aws-properties-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: [RulesConfigurationType](aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-cognito-identitypoolroleattachment-rolemapping-type"></a>
-The role mapping type\. `Token` will use `cognito:roles` and `cognito:preferred_role` claims from the Amazon Cognito identity provider token to map groups to roles\. `Rules` will attempt to match claims from the token to map to a role\.   
+The role mapping type\. Token will use `cognito:roles` and `cognito:preferred_role` claims from the Amazon Cognito identity provider token to map groups to roles\. `Rules` will attempt to match claims from the token to map to a role\.  
 Valid values are `Token` or `Rules`\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
