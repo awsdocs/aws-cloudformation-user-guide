@@ -12,7 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::LakeFormation::DataLakeSettings",
   "Properties" : {
-      "[Admins](#cfn-lakeformation-datalakesettings-admins)" : [Admins](aws-properties-lakeformation-datalakesettings-admins.md)
+        [
+             "[Admins](#cfn-lakeformation-datalakesettings-admins)" : [Admins](aws-properties-lakeformation-datalakesettings-admins.md)
+        ]
     }
 }
 ```
@@ -23,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::LakeFormation::DataLakeSettings
 Properties: 
   [Admins](#cfn-lakeformation-datalakesettings-admins): 
-    [Admins](aws-properties-lakeformation-datalakesettings-admins.md)
+    - [Admins](aws-properties-lakeformation-datalakesettings-admins.md)
 ```
 
 ## Properties<a name="aws-resource-lakeformation-datalakesettings-properties"></a>
