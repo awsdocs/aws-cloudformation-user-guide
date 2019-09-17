@@ -32,7 +32,7 @@ Use the `KmsKeyId` property to specify the ID of the KMS key used to encrypt the
 In the [EcsParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-ecsparameters.html) property type:  
 + Use the `Group` property to specify an ECS task group for the task\.
 + Use the `LaunchType` property to specify the launch type on which your task is running\.
-+ If the ECS task uses the `awsvcp` network mode, use the `NetworkConfiguration` property to specify the VPC subnets and security groups associated with the task and whether a public IP address is to be used\.
++ If the ECS task uses the `awsvpc` network mode, use the `NetworkConfiguration` property to specify the VPC subnets and security groups associated with the task and whether a public IP address is to be used\.
 + Use the `PlatformVersion` property to specify the platform version for the task\. 
 
  [AWS::IAM::Role](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html)   
