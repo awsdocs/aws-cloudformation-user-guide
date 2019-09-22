@@ -44,7 +44,7 @@ The type of usage plan key\. Currently, the only valid key type is `API_KEY`\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UsagePlanId`  <a name="cfn-apigateway-usageplankey-usageplanid"></a>
-The value of the usage plan key\.  
+The ID of the assiciated usage plan\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
