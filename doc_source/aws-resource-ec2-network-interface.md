@@ -225,7 +225,7 @@ Ec2Instance:
       NetworkInterfaces:
       - NetworkInterfaceId:
          Ref: controlXface
-         DeviceIndex: '1'
+        DeviceIndex: '0'
       Tags:
       - Key: Role
         Value: Test Instance
