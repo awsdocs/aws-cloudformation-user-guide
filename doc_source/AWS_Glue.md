@@ -13,3 +13,4 @@
 + [AWS::Glue::SecurityConfiguration](aws-resource-glue-securityconfiguration.md)
 + [AWS::Glue::Table](aws-resource-glue-table.md)
 + [AWS::Glue::Trigger](aws-resource-glue-trigger.md)
++ [AWS::Glue::Workflow](aws-resource-glue-workflow.md)

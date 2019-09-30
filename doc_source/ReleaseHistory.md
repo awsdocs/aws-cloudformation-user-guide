@@ -4,6 +4,28 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_Glue.md) | The following resource was updated: AWS::Glue::DevEndpoint 
+
+ [AWS::Glue::DevEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html)   
+Use the `WorkerType` property to specify a type of predefined worked allocated to the development endpoint\.  
+Use the `NumberOfWorkers` property to specify the number of workers of a defined `workerType` that are allocated to the development endpoint\.  
+Use the `GlueVersion` property to specify the versions of Apache Spark and Python that AWS Glue supports for the development endpoint\.  
+Use the `Arguments` property to specify a map of arguments used to configure the `DevEndpoint`\.  | September 27, 2019 | 
+| [Updated resource](AWS_Glue.md) | The following resource was updated: AWS::Glue::Job 
+
+ [AWS::Glue::Job](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html)   
+Use the `Timeout` property to specify the job timeout in minutes\.  
+Use the `NotificationProperty` property to specify the configuration properties of a notification\.  
+Use the `NotifyDelayAfter` property to specify the number of minutes to wait before sending a job run delay notification after a job run starts\.  | September 26, 2019 | 
+| [Updated resource](AWS_Glue.md) | The following resource was updated: AWS::Glue::Trigger 
+
+ [AWS::Glue::Trigger](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html)   
+Use the `StartOnCreation` property to specify starting `SCHEDULED` and `CONDITIONAL` triggers when created\.  
+Use the `WorkflowName` property to specify the name of the workflow associated with the trigger\.  | September 26, 2019 | 
+| [New resource](AWS_Glue.md) | The following resource was added: AWS::Glue::Workflow 
+
+ [AWS::Glue::Workflow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html)   
+Use the `AWS::Glue::Workflow` resource to manage AWS Glue workflows\.  | September 26, 2019 | 
 | [Updated resource](AWS_AppMesh.md) | The following resource was updated: AWS::AppMesh::Route 
 
  [AWS::AppMesh::Route](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-route.html)   
