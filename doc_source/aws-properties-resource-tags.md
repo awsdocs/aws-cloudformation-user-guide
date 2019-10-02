@@ -78,3 +78,7 @@ This example shows a `Tags` property\. You specify this property within the `Pro
 ## See Also<a name="w4429ab1c21c10d204c13c21"></a>
 + [Setting AWS CloudFormation Stack Options](cfn-console-add-tags.md)
 + [Viewing AWS CloudFormation Stack Data and Resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

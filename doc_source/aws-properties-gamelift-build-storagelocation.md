@@ -49,3 +49,7 @@ Amazon Resource Name \([ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-
 
 ## See Also<a name="aws-properties-gamelift-build-storagelocation--seealso"></a>
 +  [S3Location](https://docs.aws.amazon.com/gamelift/latest/apireference/API_S3Location.html) in the *Amazon GameLift API Reference* 
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

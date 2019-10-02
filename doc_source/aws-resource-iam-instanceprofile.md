@@ -88,3 +88,7 @@ This returns a value such as `arn:aws:iam::1234567890:instance-profile/MyProfile
 
 ## See Also<a name="aws-resource-iam-instanceprofile--seealso"></a>
 +  [CreateInstanceProfile](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateInstanceProfile.html) in the *AWS Identity and Access Management API Reference* 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

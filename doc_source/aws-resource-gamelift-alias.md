@@ -100,3 +100,7 @@ AliasResource:
 
 ## See Also<a name="aws-resource-gamelift-alias--seealso"></a>
 +  [CreateAlias](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateAlias.html) in the *Amazon GameLift API Reference* 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

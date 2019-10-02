@@ -82,3 +82,7 @@ The type of action\. Each rule must include exactly one of the following types o
 *Type*: String  
 *Allowed Values*: `authenticate-cognito | authenticate-oidc | fixed-response | forward | redirect`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

@@ -99,3 +99,14 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `WorkteamName`  <a name="WorkteamName-fn::getatt"></a>
 The name of the work team\.
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-southeast-2`
+- `eu-west-1`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

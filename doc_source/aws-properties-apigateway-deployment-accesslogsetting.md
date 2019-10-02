@@ -40,3 +40,7 @@ A single line format of the access logs of data, as specified by selected [$cont
 
 ## See Also<a name="aws-properties-apigateway-deployment-accesslogsetting--seealso"></a>
 + [accessLogSettings](https://docs.aws.amazon.com/api-reference/resource/stage/#accessLogSettings) in the *Amazon API Gateway REST API Reference*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

@@ -168,3 +168,7 @@ myDirectory:
 ## See Also<a name="aws-resource-directoryservice-simplead--seealso"></a>
 + [Getting Started with Simple AD](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/simple_ad_getting_started.html) in the *AWS Directory Service Admin Guide*\.\.
 + [CreateDirectory](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_CreateDirectory.html) in the *AWS Directory Service API Reference*\.
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

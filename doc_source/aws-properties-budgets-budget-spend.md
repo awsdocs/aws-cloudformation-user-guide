@@ -42,3 +42,22 @@ The unit of measurement that is used for the budget forecast, actual spend, or b
 
 ## See Also<a name="aws-properties-budgets-budget-spend--seealso"></a>
 +  [Spend](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_Spend.html) in the *AWS Cost Explorer Service Cost Management APIs* 
+
+## Supported Regions
+
+This PropertyType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-south-1`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `ca-central-1`
+- `eu-central-1`
+- `eu-west-1`
+- `eu-west-2`
+- `sa-east-1`
+- `us-east-1`
+- `us-east-2`
+- `us-west-1`
+- `us-west-2`

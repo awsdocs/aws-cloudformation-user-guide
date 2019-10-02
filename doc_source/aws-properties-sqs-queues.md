@@ -406,3 +406,7 @@ Outputs:
 ## See Also<a name="aws-properties-sqs-queues--seealso"></a>
 +  [What is Amazon Simple Queue Service?](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html) in the *Amazon Simple Queue Service Developer Guide* 
 +  ` [CreateQueue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_CreateQueue.html) ` in the *Amazon Simple Queue Service API Reference* 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

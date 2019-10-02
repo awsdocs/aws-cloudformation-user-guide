@@ -110,3 +110,11 @@ Resources:
         TextPart: !Ref TextPart
         HtmlPart: !Ref HtmlPart
 ```
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `eu-west-1`
+- `us-east-1`
+- `us-west-2`

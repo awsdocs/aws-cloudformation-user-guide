@@ -84,3 +84,7 @@ The following example creates a Network ACL in a VPC\.
 ## See Also<a name="aws-resource-ec2-network-acl--seealso"></a>
 + [CreateNetworkAcl](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateNetworkAcl.html) in the *Amazon EC2 API Reference*
 + [Network ACLs](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html) in the *Amazon Virtual Private Cloud User Guide*
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

@@ -76,3 +76,7 @@ The ARN of the task definition to use\. If no task revision is supplied, it defa
 *Minimum*: `1`  
 *Maximum*: `1600`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

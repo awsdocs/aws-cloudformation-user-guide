@@ -95,3 +95,16 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Endpoint`  <a name="Endpoint-fn::getatt"></a>
 The DNS endpoint of the container\. Use the endpoint to identify the specific container when sending requests to the data plane\. The service assigns this value when the container is created\. Once the value has been assigned, it does not change\.
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-southeast-2`
+- `eu-central-1`
+- `eu-north-1`
+- `eu-west-1`
+- `us-east-1`
+- `us-west-2`

@@ -160,3 +160,24 @@ The JSON specification doesn't allow any kind of comments\. See the YAML example
 +  [AWS::SecretsManager::Secret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html)
 +  [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)
 +  [AWS::SecretsManager::ResourcePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html)
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-south-1`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `ca-central-1`
+- `eu-central-1`
+- `eu-west-1`
+- `eu-west-2`
+- `eu-west-3`
+- `sa-east-1`
+- `us-east-1`
+- `us-east-2`
+- `us-gov-west-1`
+- `us-west-1`
+- `us-west-2`

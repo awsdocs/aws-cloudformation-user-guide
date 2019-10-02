@@ -52,3 +52,13 @@ Designates a trusted caller, an IAM principal, by registering this caller with t
 ## Return Values<a name="aws-resource-lakeformation-resource-return-values"></a>
 
 ### Ref<a name="aws-resource-lakeformation-resource-return-values-ref"></a>
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `eu-west-1`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

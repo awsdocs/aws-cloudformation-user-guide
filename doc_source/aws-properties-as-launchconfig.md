@@ -529,3 +529,7 @@ myLaunchConfig:
     InstanceType: "m1.large"
     EbsOptimized: "true"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

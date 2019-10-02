@@ -417,3 +417,7 @@ scalingPolicy:
 
 ## See Also<a name="aws-resource-applicationautoscaling-scalingpolicy--seealso"></a>
 + [Application Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html) 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

@@ -71,3 +71,7 @@ myEgressOnlyInternetGateway:
 
 ## See Also<a name="aws-resource-ec2-egressonlyinternetgateway--seealso"></a>
 +  [CreateEgressOnlyInternetGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateEgressOnlyInternetGateway.html) in the *Amazon Elastic Compute Cloud API Reference* 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

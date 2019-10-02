@@ -210,3 +210,7 @@ myEC2:
 
 ## See Also<a name="aws-resource-ssm-document--seealso"></a>
 +  [AWS Systems Manager Documents](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html) 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

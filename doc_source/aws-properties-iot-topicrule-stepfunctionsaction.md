@@ -46,3 +46,7 @@ The name of the Step Functions state machine whose execution will be started\.
 
 ## See Also<a name="aws-properties-iot-topicrule-stepfunctionsaction--seealso"></a>
 +  [StepFunctionsAction](https://docs.aws.amazon.com/https://docs.aws.amazon.com/iot/latest/apireference/API_StepFunctionsAction.html) in the *AWS IoT API Reference*\.
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

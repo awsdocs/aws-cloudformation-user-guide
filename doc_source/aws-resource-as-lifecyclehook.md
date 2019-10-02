@@ -272,3 +272,7 @@ Resources:
   SQS:
     Type: AWS::SQS::Queue
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

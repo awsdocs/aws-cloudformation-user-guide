@@ -145,3 +145,7 @@ association:
 
 ## See Also<a name="aws-resource-ssm-association--seealso"></a>
 +  [Reference: Cron and Rate Expressions for Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/reference-cron-and-rate-expressions.html) 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

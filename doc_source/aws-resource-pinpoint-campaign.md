@@ -156,3 +156,14 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 `CampaignId`  <a name="CampaignId-fn::getatt"></a>
 The unique ID of the campaign\.
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-south-1`
+- `ap-southeast-2`
+- `eu-central-1`
+- `eu-west-1`
+- `us-east-1`
+- `us-west-2`

@@ -189,3 +189,21 @@ Outputs:
 ## See Also<a name="aws-resource-appmesh-mesh--seealso"></a>
 +  [Service Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/meshes.html) in the * AWS App Mesh User Guide *\.
 +  [CreateMesh](https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateMesh.html) in the * AWS App Mesh API Reference *\.
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-south-1`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `ca-central-1`
+- `eu-central-1`
+- `eu-west-1`
+- `eu-west-2`
+- `us-east-1`
+- `us-east-2`
+- `us-west-1`
+- `us-west-2`

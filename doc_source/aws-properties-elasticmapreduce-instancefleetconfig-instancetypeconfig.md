@@ -80,3 +80,7 @@ The number of units that a provisioned instance of this type provides toward ful
 *Type*: Integer  
 *Minimum*: `0`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

@@ -28,3 +28,7 @@ The parameters for the runtime configuration of the document\.
 *Required*: Yes  
 *Type*: [List](#aws-properties-ssm-association-parametervalues) of [String](#aws-properties-ssm-association-parametervalues)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

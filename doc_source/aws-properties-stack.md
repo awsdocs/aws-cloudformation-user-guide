@@ -183,3 +183,8 @@ Resources:
 ## See Also<a name="aws-properties-stack--seealso"></a>
 + For sample template snippets, see Nested Stacks in [CloudFormation Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-cloudformation.html)\.
 + If you have nested stacks that are stuck in an in\-progress operation, see Troubleshooting Errors in [Troubleshooting AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html)\.
+
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

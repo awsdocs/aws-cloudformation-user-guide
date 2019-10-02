@@ -56,3 +56,7 @@ The protocol used for the port mapping\. Valid values are `tcp` and `udp`\. The 
 *Type*: String  
 *Allowed Values*: `tcp | udp`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

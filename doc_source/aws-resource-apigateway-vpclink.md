@@ -177,3 +177,26 @@ Resources:
 
 ## See Also<a name="aws-resource-apigateway-vpclink--seealso"></a>
 + [vpclink:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/vpclink-create/) in the *Amazon API Gateway REST API Reference*
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-east-1`
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-south-1`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `ca-central-1`
+- `cn-north-1`
+- `cn-northwest-1`
+- `eu-north-1`
+- `eu-west-1`
+- `eu-west-2`
+- `sa-east-1`
+- `us-east-1`
+- `us-east-2`
+- `us-gov-west-1`
+- `us-west-1`
+- `us-west-2`

@@ -111,3 +111,13 @@ The Amazon Resource Name \(ARN\) of the development environment, such as `arn:aw
 
 `Name`  <a name="Name-fn::getatt"></a>
 The name of the environment\.
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-southeast-1`
+- `eu-west-1`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

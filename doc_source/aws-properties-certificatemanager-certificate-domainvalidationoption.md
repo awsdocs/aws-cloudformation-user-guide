@@ -46,3 +46,7 @@ The domain name to which you want ACM to send validation emails\. This domain na
 *Maximum*: `253`  
 *Pattern*: `^(\*\.)?(((?!-)[A-Za-z0-9-]{0,62}[A-Za-z0-9])\.)+((?!-)[A-Za-z0-9-]{1,62}[A-Za-z0-9])$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

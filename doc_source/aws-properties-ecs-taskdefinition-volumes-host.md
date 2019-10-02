@@ -28,3 +28,7 @@ If you are using the Fargate launch type, the `sourcePath` parameter is not supp
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

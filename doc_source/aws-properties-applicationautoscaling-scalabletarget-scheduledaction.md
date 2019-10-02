@@ -77,3 +77,7 @@ The date and time that the action is scheduled to begin\.
 
 ## See Also<a name="aws-properties-applicationautoscaling-scalabletarget-scheduledaction--seealso"></a>
 + [Scheduled Scaling](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-scheduled-scaling.html) in the *Application Auto Scaling User Guide* 
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

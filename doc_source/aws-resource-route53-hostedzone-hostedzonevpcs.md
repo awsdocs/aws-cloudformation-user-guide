@@ -39,3 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See Also<a name="aws-resource-route53-hostedzone-hostedzonevpcs--seealso"></a>
 +  [VPC](https://docs.aws.amazon.com/Route53/latest/APIReference/API_VPC.html) in the *Amazon Route 53 API Reference* 
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

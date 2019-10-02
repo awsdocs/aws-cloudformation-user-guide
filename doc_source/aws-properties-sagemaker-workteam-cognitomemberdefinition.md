@@ -52,3 +52,14 @@ An identifier for a user pool\. The user pool must be in the same region as the 
 *Maximum*: `55`  
 *Pattern*: `[\w-]+_[0-9a-zA-Z]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Supported Regions
+
+This PropertyType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-southeast-2`
+- `eu-west-1`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

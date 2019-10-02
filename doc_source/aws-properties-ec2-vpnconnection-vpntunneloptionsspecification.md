@@ -44,3 +44,7 @@ Constraints: A size /30 CIDR block from the `169.254.0.0/16` range\. The followi
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

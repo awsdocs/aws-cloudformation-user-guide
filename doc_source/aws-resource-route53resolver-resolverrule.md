@@ -171,3 +171,14 @@ Properties :
 
 ## See Also<a name="aws-resource-route53resolver-resolverrule--seealso"></a>
 +  [ResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ResolverRule.html) in the *Amazon Route 53 API Reference* 
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-southeast-1`
+- `eu-west-1`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

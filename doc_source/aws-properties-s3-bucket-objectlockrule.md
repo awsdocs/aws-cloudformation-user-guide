@@ -28,3 +28,7 @@ The default retention period that you want to apply to new objects placed in the
 *Required*: No  
 *Type*: [DefaultRetention](aws-properties-s3-bucket-defaultretention.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

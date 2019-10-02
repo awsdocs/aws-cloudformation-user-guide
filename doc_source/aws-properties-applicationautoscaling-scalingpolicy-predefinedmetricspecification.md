@@ -46,3 +46,7 @@ The format is app/<load\-balancer\-name>/<load\-balancer\-id>/targetgroup/<targe
 
 ## See Also<a name="aws-properties-applicationautoscaling-scalingpolicy-predefinedmetricspecification--seealso"></a>
 + [Target Tracking Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html) in the *Application Auto Scaling User Guide* 
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

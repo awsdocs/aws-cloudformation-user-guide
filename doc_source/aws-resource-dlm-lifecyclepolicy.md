@@ -179,3 +179,22 @@ Resources:
 ## See Also<a name="aws-resource-dlm-lifecyclepolicy--seealso"></a>
 +  [CreateLifecyclePolicy](https://docs.aws.amazon.com/dlm/latest/APIReference/API_CreateLifecyclePolicy.html) in the *Amazon Data Lifecycle Manager API Reference* 
 +  [Automating the Amazon EBS Snapshot Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html) in the *Amazon Elastic Compute Cloud User Guide* 
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-south-1`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `ca-central-1`
+- `eu-central-1`
+- `eu-west-1`
+- `eu-west-2`
+- `sa-east-1`
+- `us-east-1`
+- `us-east-2`
+- `us-west-1`
+- `us-west-2`

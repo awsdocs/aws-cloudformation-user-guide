@@ -180,3 +180,7 @@ A map that defines the stage variables\. Variable names must consist of alphanum
 
 ## See Also<a name="aws-properties-apigateway-deployment-stagedescription--seealso"></a>
 + [Stage](https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/) in the *Amazon API Gateway REST API Reference*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

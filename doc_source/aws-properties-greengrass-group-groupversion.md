@@ -81,3 +81,21 @@ The ARN of the subscription definition version that contains the subscriptions y
 ## See Also<a name="aws-properties-greengrass-group-groupversion--seealso"></a>
 +  [GroupVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-groupversion.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
+
+## Supported Regions
+
+This PropertyType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-south-1`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `cn-north-1`
+- `eu-central-1`
+- `eu-west-1`
+- `eu-west-2`
+- `us-east-1`
+- `us-east-2`
+- `us-gov-west-1`
+- `us-west-2`

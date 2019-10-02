@@ -59,3 +59,7 @@ The name of the API's stage\.
 
 ## See Also<a name="aws-resource-apigateway-basepathmapping--seealso"></a>
 + [basepathmapping:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/basepathmapping-create/) in the *Amazon API Gateway REST API Reference*
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

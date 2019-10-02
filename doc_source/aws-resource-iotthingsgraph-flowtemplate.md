@@ -51,3 +51,13 @@ A workflow's definition document\.
 Ref returns the `FlowTemplateSummary` that describes the workflow\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-southeast-2`
+- `eu-west-1`
+- `us-east-1`
+- `us-west-2`

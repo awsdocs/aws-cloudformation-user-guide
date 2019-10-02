@@ -102,3 +102,18 @@ myRoute:
 ## See Also<a name="aws-resource-ec2-clientvpnroute--seealso"></a>
 + [Getting Started with Client VPN](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-getting-started.html) in the *AWS Client VPN Administrator Guide*
 + [Routes](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-working-routes.html) in the *AWS Client VPN Administrator Guide*
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-south-1`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `eu-central-1`
+- `eu-west-1`
+- `eu-west-2`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

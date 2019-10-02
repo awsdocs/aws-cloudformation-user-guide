@@ -89,3 +89,7 @@ LogStream:
     LogGroupName: "exampleLogGroup"
     LogStreamName: "MyAppLogStream"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

@@ -40,3 +40,7 @@ User\-defined criteria that maps to `Key`\. For example, if you specified `tag:S
 *Type*: List of String  
 *Maximum*: `50`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

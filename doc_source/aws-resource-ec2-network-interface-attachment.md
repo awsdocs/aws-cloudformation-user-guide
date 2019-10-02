@@ -96,3 +96,7 @@ NetworkInterfaceAttachment:
          Ref: MyNetworkInterface
       DeviceIndex: 1
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

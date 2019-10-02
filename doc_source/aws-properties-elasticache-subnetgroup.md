@@ -87,3 +87,7 @@ When the logical ID of this resource is provided to the Ref intrinsic function, 
             - Ref: "Subnet1"
             - Ref: "Subnet2"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

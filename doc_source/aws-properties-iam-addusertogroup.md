@@ -63,3 +63,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 ## See Also<a name="aws-properties-iam-addusertogroup--seealso"></a>
 + To view `AWS::IAM::UserToGroupAddition` template example snippets, see [Add Users to a Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-iam-addusertogroup)\. 
 +  [AddUserToGroup](https://docs.aws.amazon.com/IAM/latest/APIReference/API_AddUserToGroup.html) in the *AWS Identity and Access Management API Reference* 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

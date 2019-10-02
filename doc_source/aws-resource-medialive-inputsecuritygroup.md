@@ -64,3 +64,18 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 The ARN of the MediaLive input security group\. For example: arn:aws:medialive:us\-west\-1:111122223333:medialive:inputSecurityGroup:1234567
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-south-1`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `eu-central-1`
+- `eu-west-1`
+- `sa-east-1`
+- `us-east-1`
+- `us-west-2`

@@ -475,3 +475,7 @@ Ec2Instance:
 ## See Also<a name="aws-properties-ec2-instance--seealso"></a>
 +  [ RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) in the *Amazon EC2 API Reference* 
 +  [ EBS\-Optimized Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#EBSOptimized) in the *Amazon EC2 API Reference* 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

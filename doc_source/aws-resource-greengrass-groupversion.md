@@ -103,3 +103,21 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 ## See Also<a name="aws-resource-greengrass-groupversion--seealso"></a>
 +  [CreateGroupVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/creategroupversion-post.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-south-1`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `cn-north-1`
+- `eu-central-1`
+- `eu-west-1`
+- `eu-west-2`
+- `us-east-1`
+- `us-east-2`
+- `us-gov-west-1`
+- `us-west-2`

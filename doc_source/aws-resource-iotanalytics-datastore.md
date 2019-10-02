@@ -158,3 +158,14 @@ Resources:
 ## See Also<a name="aws-resource-iotanalytics-datastore--seealso"></a>
 +  [How to Use AWS IoT Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how) in the *AWS IoT Analytics User Guide* 
 +  [CreateDatastore](https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_CreateDatastore.html) in the *AWS IoT Analytics API Reference* 
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `eu-central-1`
+- `eu-west-1`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

@@ -100,3 +100,7 @@ opsworksVolume:
 ## See Also<a name="aws-resource-opsworks-volume--seealso"></a>
 +  [RegisterVolume](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_RegisterVolume.html) in the *AWS OpsWorks API Reference*\.
 +  [Resource Management](https://docs.aws.amazon.com/opsworks/latest/userguide/resources.html) in the *AWS OpsWorks User Guide*\.
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

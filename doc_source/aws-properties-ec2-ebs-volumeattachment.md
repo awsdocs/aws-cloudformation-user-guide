@@ -113,3 +113,7 @@ MountPoint:
 +  [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) in the *Amazon Elastic Compute Cloud User Guide* 
 +  [AttachVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-AttachVolume.html) in the *Amazon Elastic Compute Cloud API Reference* 
 +  [DetachVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-DetachVolume.html) in the *Amazon Elastic Compute Cloud API Reference* 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

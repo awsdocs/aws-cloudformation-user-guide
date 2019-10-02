@@ -28,3 +28,13 @@ The database and table in the AWS Glue Data Catalog that is used for input or ou
 *Required*: No  
 *Type*: [List](aws-properties-glue-mltransform-inputrecordtables-gluetables.md) of [GlueTables](aws-properties-glue-mltransform-inputrecordtables-gluetables.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by the following regions:
+
+- `ap-northeast-1`
+- `eu-west-1`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

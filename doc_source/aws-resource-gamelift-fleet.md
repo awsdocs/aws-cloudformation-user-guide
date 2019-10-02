@@ -208,3 +208,7 @@ FleetResource:
 
 ## See Also<a name="aws-resource-gamelift-fleet--seealso"></a>
 +  [CreateFleet](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateFleet.html) in the *Amazon GameLift API Reference* 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

@@ -31,3 +31,7 @@ If you specify multiple key/value pairs or values, the condition is satisfied if
 *Required*: No  
 *Type*: List of [QueryStringKeyValue](aws-properties-elasticloadbalancingv2-listenerrule-querystringkeyvalue.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

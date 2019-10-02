@@ -69,3 +69,7 @@ The name of the cluster step\.
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns returns the ID of the step\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

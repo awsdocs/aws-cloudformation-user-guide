@@ -63,3 +63,7 @@ The scope for the Docker volume that determines its lifecycle\. Docker volumes t
 *Type*: String  
 *Allowed Values*: `shared | task`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

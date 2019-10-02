@@ -595,3 +595,7 @@ Outputs:
   Cluster:
     Value: !Ref cluster
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

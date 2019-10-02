@@ -46,3 +46,18 @@ The type of client authentication to be used\. Specify `certificate-authenticati
 *Type*: String  
 *Allowed Values*: `certificate-authentication | directory-service-authentication`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-south-1`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `eu-central-1`
+- `eu-west-1`
+- `eu-west-2`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

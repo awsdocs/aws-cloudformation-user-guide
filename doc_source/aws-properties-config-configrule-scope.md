@@ -59,3 +59,7 @@ The tag value applied to only those AWS resources that you want to trigger an ev
 *Minimum*: `1`  
 *Maximum*: `256`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

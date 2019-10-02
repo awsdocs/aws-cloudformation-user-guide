@@ -159,3 +159,14 @@ The connection endpoint for the database\. For example: `mystack-mydb-1apw1j4phy
 
 `Port`  <a name="Port-fn::getatt"></a>
 The port number on which the database accepts connections\. For example: `8182`\.
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `eu-central-1`
+- `eu-west-1`
+- `eu-west-2`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

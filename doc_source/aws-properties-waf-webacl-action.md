@@ -31,3 +31,7 @@ Specifies how you want AWS WAF to respond to requests that match the settings in
 *Type*: String  
 *Allowed Values*: `ALLOW | BLOCK | COUNT`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

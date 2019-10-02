@@ -244,3 +244,7 @@ myDistribution:
       ViewerCertificate: 
 CloudFrontDefaultCertificate: "true"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

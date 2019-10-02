@@ -36,3 +36,7 @@ A list of endpoint types of an API or its custom domain name\. Valid values incl
 
 ## See Also<a name="aws-properties-apigateway-restapi-endpointconfiguration--seealso"></a>
 + [RestApi](https://docs.aws.amazon.com/apigateway/api-reference/resource/rest-api/) in the *Amazon API Gateway REST API Reference*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

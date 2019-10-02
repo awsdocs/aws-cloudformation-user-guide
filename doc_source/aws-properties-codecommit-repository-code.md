@@ -28,3 +28,13 @@ Information about the Amazon S3 bucket that contains a ZIP file of code to be co
 *Required*: Yes  
 *Type*: [S3](aws-properties-codecommit-repository-s3.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by the following regions:
+
+- `eu-west-1`
+- `us-east-1`
+- `us-east-2`
+- `us-gov-west-1`
+- `us-west-2`

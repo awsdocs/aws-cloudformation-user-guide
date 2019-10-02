@@ -394,3 +394,7 @@ The following example creates a trail that logs events in all regions, an Amazon
         IsLogging: true
         IsMultiRegionTrail: true
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

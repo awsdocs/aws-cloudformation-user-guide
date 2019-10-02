@@ -211,3 +211,7 @@ DNS:
 
 ## See Also<a name="aws-resource-route53-hostedzone--seealso"></a>
 +  [CreateHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html) in the *Amazon Route 53 API Reference*
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

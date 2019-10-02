@@ -198,3 +198,7 @@ MyWebACL:
         RuleId: 
 Ref: "BadReferersRule"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

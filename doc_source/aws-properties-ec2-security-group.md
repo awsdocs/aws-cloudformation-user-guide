@@ -199,3 +199,7 @@ sgwithoutegress:
 ## See Also<a name="aws-properties-ec2-security-group--seealso"></a>
 +  [Security Groups for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) in the *Amazon VPC User Guide*
 +  [Amazon EC2 Security Groups for Linux Instances ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html) in the *Amazon EC2 User Guide for Linux Instances*
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

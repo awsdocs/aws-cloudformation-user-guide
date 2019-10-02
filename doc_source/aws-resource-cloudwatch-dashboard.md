@@ -54,3 +54,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## See Also<a name="aws-resource-cloudwatch-dashboard--seealso"></a>
 +  [Amazon CloudWatch Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-cloudwatch.html) 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

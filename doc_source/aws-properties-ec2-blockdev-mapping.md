@@ -141,3 +141,7 @@ BlockDeviceMappings:
 
 ## See Also<a name="aws-properties-ec2-blockdev-mapping--seealso"></a>
 +  [ Amazon EC2 Instance Store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

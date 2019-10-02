@@ -71,3 +71,7 @@ The status code that API Gateway uses to map the integration response to a [Meth
 
 ## See Also<a name="aws-properties-apitgateway-method-integration-integrationresponse--seealso"></a>
 + [Method](https://docs.aws.amazon.com/apigateway/api-reference/resource/method/) in the *Amazon API Gateway REST API Reference*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

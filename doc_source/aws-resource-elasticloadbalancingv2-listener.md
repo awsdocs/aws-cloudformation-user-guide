@@ -144,3 +144,7 @@ HTTPlistener:
 +  [CreateListener](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateListener.html) in the *Elastic Load Balancing API Reference \(version 2015\-12\-01\)* 
 +  [Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html) in the *User Guide for Application Load Balancers* 
 +  [Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-listeners.html) in the *User Guide for Network Load Balancers* 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

@@ -59,3 +59,7 @@ A list of Java properties that are set when the step runs\. You can use these pr
 *Required*: No  
 *Type*: List of [KeyValue](aws-properties-elasticmapreduce-step-keyvalue.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

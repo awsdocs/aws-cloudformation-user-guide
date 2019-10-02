@@ -244,3 +244,7 @@ Resources:
 
 ## See Also<a name="aws-resource-apigateway-stage--seealso"></a>
 + [stage:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/stage-create/) in the *Amazon API Gateway REST API Reference*
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

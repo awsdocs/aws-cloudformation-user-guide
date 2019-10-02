@@ -286,3 +286,7 @@ AppPipeline:
         StageName: Release 
         Reason: "Disabling the transition until integration tests are completed"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

@@ -55,3 +55,14 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 ## See Also<a name="aws-resource-ec2-vpcendpointservice--seealso"></a>
 + [CreateVpcEndpointServiceConfiguration](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVpcEndpointServiceConfiguration.html) in the *Amazon EC2 API Reference*
 + [VPC Endpoint Services](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/endpoint-service.html) in the *Amazon Virtual Private Cloud User Guide*
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-east-1`
+- `ap-northeast-3`
+- `cn-north-1`
+- `cn-northwest-1`
+- `eu-north-1`
+- `us-east-1`

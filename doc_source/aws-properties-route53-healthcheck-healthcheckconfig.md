@@ -221,3 +221,7 @@ For more information, see [How Route 53 Determines Whether an Endpoint Is Health
 
 ## See Also<a name="aws-properties-route53-healthcheck-healthcheckconfig--seealso"></a>
 +  [HealthCheckConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html) in the *Amazon Route 53 API Reference*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

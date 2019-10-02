@@ -35,3 +35,7 @@ A list that contains other lists of EC2 instance tag groups\. For an instance to
 
 ## See Also<a name="aws-properties-codedeploy-deploymentgroup-ec2tagsetlistobject--seealso"></a>
 +  [EC2TagSet](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_EC2TagSet.html) in the *AWS CodeDeploy API Reference*\.
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

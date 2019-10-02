@@ -59,3 +59,14 @@ The preferred time to perform weekly maintenance, in the UTC time zone\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-southeast-2`
+- `eu-west-1`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

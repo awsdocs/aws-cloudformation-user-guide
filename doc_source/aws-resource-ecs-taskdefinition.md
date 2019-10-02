@@ -437,3 +437,7 @@ Resources:
             SourcePath: "/var/lib/docker/vfs/dir/"
           Name: "my-vol"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

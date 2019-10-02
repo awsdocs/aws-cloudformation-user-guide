@@ -417,3 +417,7 @@ Outputs:
 
 ## See Also<a name="aws-resource-apigateway-domainname--seealso"></a>
 + [domainname:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/domainname-create/) in the *Amazon API Gateway REST API Reference*
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

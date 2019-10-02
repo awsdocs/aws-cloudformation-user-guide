@@ -45,3 +45,7 @@ For the current list of CloudWatch regions, see [Amazon CloudWatch](http://docs.
 
 ## See Also<a name="aws-properties-route53-healthcheck-alarmidentifier--seealso"></a>
 +  [AlarmIdentifier](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AlarmIdentifier.html) in the *Amazon Route 53 API Reference* 
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

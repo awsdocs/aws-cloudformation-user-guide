@@ -989,3 +989,7 @@ Resources:
 
 ## See Also<a name="aws-properties-s3-bucket--seealso"></a>
 + [Amazon S3 Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-s3.html)
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

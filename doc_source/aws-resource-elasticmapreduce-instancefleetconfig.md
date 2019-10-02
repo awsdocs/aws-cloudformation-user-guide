@@ -102,3 +102,7 @@ If not specified or set to 0, only On\-Demand instances are provisioned for the 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns returns the ID of the instance fleet\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

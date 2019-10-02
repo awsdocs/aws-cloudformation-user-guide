@@ -175,3 +175,23 @@ AWS WAF is a web application firewall that lets you monitor the HTTP and HTTPS r
 
 ## See Also<a name="aws-properties-cloudfront-distribution-distributionconfig--seealso"></a>
 +  [DistributionConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_DistributionConfig.html) in the *Amazon CloudFront API Reference* 
+
+## Supported Regions
+
+This PropertyType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-south-1`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `ca-central-1`
+- `eu-central-1`
+- `eu-west-1`
+- `eu-west-2`
+- `eu-west-3`
+- `sa-east-1`
+- `us-east-1`
+- `us-east-2`
+- `us-west-1`
+- `us-west-2`

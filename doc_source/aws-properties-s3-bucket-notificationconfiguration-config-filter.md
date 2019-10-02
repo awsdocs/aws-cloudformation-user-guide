@@ -28,3 +28,7 @@ A container for object key name prefix and suffix filtering rules\.
 *Required*: Yes  
 *Type*: [S3KeyFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

@@ -104,3 +104,7 @@ RDSDBClusterParameterGroup:
       character_set_database: utf32
   Type: "AWS::RDS::DBClusterParameterGroup"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

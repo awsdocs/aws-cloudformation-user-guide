@@ -133,3 +133,7 @@ myDhcpOptions:
 ## See Also<a name="aws-resource-ec2-dhcp-options--seealso"></a>
 +  [CreateDhcpOptions](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateDhcpOptions.html) in the *Amazon Elastic Compute Cloud API Reference* 
 + [DHCP Options Sets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html) in the *Amazon Virtual Private Cloud User Guide*
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

@@ -36,3 +36,7 @@ Server\-side encryption algorithm to use for the default encryption\.
 *Type*: String  
 *Allowed Values*: `AES256 | aws:kms`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

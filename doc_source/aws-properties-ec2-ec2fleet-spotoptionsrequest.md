@@ -50,3 +50,7 @@ The number of Spot pools across which to allocate your target Spot capacity\. Va
 
 ## See Also<a name="aws-properties-ec2-ec2fleet-spotoptionsrequest--seealso"></a>
 +  [ SpotOptionsRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotOptionsRequest.html) in the *Amazon EC2 API Reference*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

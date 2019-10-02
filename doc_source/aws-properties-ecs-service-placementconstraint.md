@@ -36,3 +36,7 @@ The type of constraint\. Use `distinctInstance` to ensure that each task in a pa
 *Type*: String  
 *Allowed Values*: `distinctInstance | memberOf`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

@@ -37,3 +37,7 @@ The scale\-in and scale\-out rules that comprise the automatic scaling policy\.
 *Required*: Yes  
 *Type*: List of [ScalingRule](aws-properties-elasticmapreduce-cluster-scalingrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

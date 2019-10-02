@@ -71,3 +71,7 @@ If not specified or set to 0, only On\-Demand instances are provisioned for the 
 *Type*: Integer  
 *Minimum*: `0`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

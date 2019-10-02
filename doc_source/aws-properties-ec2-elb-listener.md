@@ -78,3 +78,7 @@ The Amazon Resource Name \(ARN\) of the server certificate\.
 +  [CreateLoadBalancerListeners](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateLoadBalancerListeners.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)* 
 +  [Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-listener-config.html) in the *User Guide for Classic Load Balancers* 
 +  [HTTPS Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-https-load-balancers.html) in the *User Guide for Classic Load Balancers* 
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

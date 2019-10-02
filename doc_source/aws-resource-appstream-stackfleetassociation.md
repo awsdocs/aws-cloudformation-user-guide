@@ -47,3 +47,16 @@ To associate a fleet with a stack, you must specify a dependency on the stack re
 
 ## See Also<a name="aws-resource-appstream-stackfleetassociation--seealso"></a>
 +  [AssociateFleet](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_AssociateFleet.html) in the *Amazon AppStream 2\.0 API Reference* 
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `eu-central-1`
+- `eu-west-1`
+- `us-east-1`
+- `us-west-2`

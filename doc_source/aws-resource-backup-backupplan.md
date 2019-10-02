@@ -66,3 +66,20 @@ Uniquely identifies a backup plan\.
 
 `VersionId`  <a name="VersionId-fn::getatt"></a>
 Unique, randomly generated, Unicode, UTF\-8 encoded strings that are at most 1,024 bytes long\. Version Ids cannot be edited\.
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `ca-central-1`
+- `eu-central-1`
+- `eu-west-1`
+- `eu-west-2`
+- `us-east-1`
+- `us-east-2`
+- `us-west-1`
+- `us-west-2`

@@ -66,3 +66,7 @@ AttributePayload:
       myAttributeC: 
          Ref: "MyAttributeValueC"
 ```
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

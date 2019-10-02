@@ -148,3 +148,23 @@ Resources:
 ## See Also<a name="aws-resource-ram-resourceshare--seealso"></a>
 +  [CreateResourceShare](https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html) in the *AWS Resource Access Manager API Reference* 
 +  [AWS Resource Access Manager User Guide](https://docs.aws.amazon.com/ram/latest/userguide) 
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-south-1`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `ca-central-1`
+- `eu-central-1`
+- `eu-north-1`
+- `eu-west-1`
+- `eu-west-2`
+- `eu-west-3`
+- `us-east-1`
+- `us-east-2`
+- `us-west-1`
+- `us-west-2`

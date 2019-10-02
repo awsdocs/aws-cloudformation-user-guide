@@ -190,3 +190,7 @@ SQLOptionGroup:
     OptionGroupDescription: "A test option group"
   Type: "AWS::RDS::OptionGroup"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

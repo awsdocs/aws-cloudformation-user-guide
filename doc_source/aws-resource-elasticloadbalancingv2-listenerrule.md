@@ -1544,3 +1544,7 @@ Outputs:
 ## See Also<a name="aws-resource-elasticloadbalancingv2-listenerrule--seealso"></a>
 +  [CreateRule](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateRule.html) in the *Elastic Load Balancing API Reference \(version 2015\-12\-01\)* 
 +  [Listener Rules](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html#listener-rules) in the *User Guide for Application Load Balancers* 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

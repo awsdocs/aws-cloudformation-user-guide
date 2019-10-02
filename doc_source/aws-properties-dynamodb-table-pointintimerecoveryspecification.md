@@ -31,3 +31,7 @@ Indicates whether point in time recovery is enabled \(true\) or disabled \(false
 ## See Also<a name="aws-properties-dynamodb-table-pointintimerecoveryspecification--seealso"></a>
 
  [PointInTimeRecoverySpecification](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PointInTimeRecoverySpecification.html) in the Amazon DynamoDB API Reference\. 
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

@@ -28,3 +28,7 @@ Specifies the replica ownership\. For default and valid values, see [PUT bucket 
 *Type*: String  
 *Allowed Values*: `Destination`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

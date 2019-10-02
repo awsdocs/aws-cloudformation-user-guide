@@ -130,3 +130,18 @@ For a push input, the destination or destinations for the input\. The destinatio
 
 `Sources`  <a name="Sources-fn::getatt"></a>
 For a pull input, the source or sources for the input\. The sources are the IP addresses on the upstream system where MediaLive pulls the content from for this input\. You included these IP addresses in the create request\.
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-south-1`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `eu-central-1`
+- `eu-west-1`
+- `sa-east-1`
+- `us-east-1`
+- `us-west-2`

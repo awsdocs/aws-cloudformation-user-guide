@@ -29,3 +29,7 @@ After an initial failure to deliver to Amazon ES, the total amount of time durin
 *Minimum*: `0`  
 *Maximum*: `7200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

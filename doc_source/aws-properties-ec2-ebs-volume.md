@@ -204,3 +204,7 @@ NewVolume:
 
 ## See Also<a name="aws-properties-ec2-ebs-volume--seealso"></a>
 +  [ CreateVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the *Amazon Elastic Compute Cloud API Reference*
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

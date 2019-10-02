@@ -143,3 +143,7 @@ Parameters:
       Type: "String"
       Default: "myStringC123"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

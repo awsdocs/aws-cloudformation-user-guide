@@ -107,3 +107,7 @@ myAppVersion:
 
 ## See Also<a name="aws-properties-beanstalk-version--seealso"></a>
 + For a complete Elastic Beanstalk sample template, see [Elastic Beanstalk Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-elasticbeanstalk.html)\.
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

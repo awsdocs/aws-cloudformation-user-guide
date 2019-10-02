@@ -76,3 +76,11 @@ Specifies whether Amazon SES should require that incoming email is delivered ove
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by the following regions:
+
+- `eu-west-1`
+- `us-east-1`
+- `us-west-2`

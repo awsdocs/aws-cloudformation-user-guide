@@ -151,3 +151,7 @@ WaitCondition:
 ## See Also<a name="aws-properties-waitcondition--seealso"></a>
 +  [Creating Wait Conditions in a Template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-waitcondition.html) 
 +  [DependsOn Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

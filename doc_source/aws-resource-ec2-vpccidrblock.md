@@ -194,3 +194,8 @@ Outputs:
   CidrBlockAssociation:
     Value: !Select [ 0, !GetAtt VPC.CidrBlockAssociations ]
 ```
+
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

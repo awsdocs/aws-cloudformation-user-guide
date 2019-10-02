@@ -89,3 +89,7 @@ TwentyFivePercentAtATime:
     Type: "FLEET_PERCENT"
     Value: 75
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

@@ -66,3 +66,7 @@ If you are using tasks that use the Fargate launch type, the `tmpfs` parameter i
 *Required*: No  
 *Type*: [List](aws-properties-ecs-taskdefinition-tmpfs.md) of [Tmpfs](aws-properties-ecs-taskdefinition-tmpfs.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

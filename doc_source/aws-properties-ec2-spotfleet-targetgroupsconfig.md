@@ -29,3 +29,7 @@ One or more target groups\.
 *Type*: List of [TargetGroup](aws-properties-ec2-spotfleet-targetgroup.md)  
 *Maximum*: `5`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

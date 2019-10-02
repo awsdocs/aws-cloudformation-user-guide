@@ -31,3 +31,7 @@ Use this structure to specify the VPC subnets and security groups for the task a
 
 ## See Also<a name="aws-properties-events-rule-networkconfiguration--seealso"></a>
 + [NetworkConfiguration](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_NetworkConfiguration.html)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

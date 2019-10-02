@@ -151,3 +151,7 @@ RedshiftClusterParameterGroup:
       - Key: foo
         Value: bar
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

@@ -738,3 +738,7 @@ Resources:
         PredefinedMetricSpecification:
           PredefinedMetricType: DynamoDBWriteCapacityUtilization
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

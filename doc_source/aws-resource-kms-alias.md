@@ -93,3 +93,7 @@ myAlias:
 
 ## See Also<a name="aws-resource-kms-alias--seealso"></a>
 +  [CreateAlias](https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateAlias.html) in the *AWS Key Management Service API Reference*\.
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

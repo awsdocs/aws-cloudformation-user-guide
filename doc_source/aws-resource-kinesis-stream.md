@@ -137,3 +137,7 @@ MyStream:
                 Key: Environment Value:
                 Production
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

@@ -57,3 +57,7 @@ The number of units to request, filled using `DefaultTargetCapacityType`\.
 
 ## See Also<a name="aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest--seealso"></a>
 +  [ TargetCapacitySpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TargetCapacitySpecificationRequest.html) in the *Amazon EC2 API Reference* 
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

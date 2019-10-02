@@ -46,3 +46,7 @@ The time period for which the maximum limit of requests applies, such as `DAY` o
 
 ## See Also<a name="aws-properties-apigateway-usageplan-quotasettings--seealso"></a>
 + [UsagePlan](https://docs.aws.amazon.com/apigateway/api-reference/resource/usage-plan/) in the *Amazon API Gateway REST API Reference*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

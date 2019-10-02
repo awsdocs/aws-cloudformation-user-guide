@@ -49,3 +49,7 @@ Information about the location of a revision stored in Amazon S3\.
 *Required*: No  
 *Type*: [S3Location](aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

@@ -90,3 +90,7 @@ Valid values: `standard` \| `io1` \| `gp2` \| `st1` \| `sc1`
 ## See Also<a name="aws-properties-as-launchconfig-blockdev-template--seealso"></a>
 + [Required CMK Key Policy for Use with Encrypted Volumes](https://docs.aws.amazon.com/autoscaling/ec2/userguide/key-policy-requirements-EBS-encryption.html) in the *Amazon EC2 Auto Scaling User Guide*
 + [Using Encryption with EBS\-Backed AMIs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIEncryption.html) in the *Amazon EC2 User Guide for Linux Instances*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

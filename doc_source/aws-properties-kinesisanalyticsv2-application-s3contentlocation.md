@@ -51,3 +51,18 @@ The version of the object containing the application code\.
 
 ## See Also<a name="aws-properties-kinesisanalyticsv2-application-s3contentlocation--seealso"></a>
 +  [S3ContentLocation](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_S3ContentLocation.html) in the *Amazon Kinesis Data Analytics API Reference* 
+
+## Supported Regions
+
+This PropertyType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `eu-central-1`
+- `eu-west-1`
+- `eu-west-2`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

@@ -93,3 +93,7 @@ The following example declares a VPN gateway that uses IPSec 1\.
 
 ## See Also<a name="aws-resource-ec2-vpn-gateway--seealso"></a>
 +  [CreateVPNGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVPNGateway.html) in the *Amazon EC2 API Reference*
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

@@ -56,3 +56,7 @@ The analytics only includes objects that meet the filter's criteria\. If no filt
 *Required*: No  
 *Type*: List of [TagFilter](aws-properties-s3-bucket-tagfilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

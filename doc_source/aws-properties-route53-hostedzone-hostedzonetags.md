@@ -46,3 +46,7 @@ The value of `Value` depends on the operation that you want to perform:
 
 ## See Also<a name="aws-properties-route53-hostedzone-hostedzonetags--seealso"></a>
 +  [Tag](https://docs.aws.amazon.com/Route53/latest/APIReference/API_Tag.html) in the *Amazon Route 53 API Reference*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

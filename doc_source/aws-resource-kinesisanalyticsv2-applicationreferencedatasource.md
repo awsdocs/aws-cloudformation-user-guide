@@ -123,3 +123,18 @@ ApplicationReferenceDataSource:
 
 ## See Also<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--seealso"></a>
 +  [AddApplicationReferenceDataSource](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_AddApplicationReferenceDataSource.html) in the *Amazon Kinesis Data Analytics API Reference* 
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `eu-central-1`
+- `eu-west-1`
+- `eu-west-2`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

@@ -132,3 +132,7 @@ myEventSubscription:
     SourceType: db-instance
   Type: "AWS::RDS::EventSubscription"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

@@ -42,3 +42,14 @@ The ID of the subnet that contains the IP address\.
 
 ## See Also<a name="aws-properties-route53resolver-resolverendpoint-ipaddressrequest--seealso"></a>
 +  [IpAddressRequest](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_IpAddressRequest.html) in the *Amazon Route 53 API Reference* 
+
+## Supported Regions
+
+This PropertyType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-southeast-1`
+- `eu-west-1`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

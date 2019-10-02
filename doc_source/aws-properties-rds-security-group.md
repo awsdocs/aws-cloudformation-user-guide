@@ -181,3 +181,7 @@ DBSecurityGroup:
           Ref: "WebServerSecurityGroup"
     GroupDescription: "Frontend Access"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

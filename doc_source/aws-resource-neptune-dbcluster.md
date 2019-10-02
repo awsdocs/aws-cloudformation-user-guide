@@ -186,3 +186,16 @@ The port number on which the DB cluster accepts connections\. For example: `8182
 
 `ReadEndpoint`  <a name="ReadEndpoint-fn::getatt"></a>
 The reader endpoint for the DB cluster\. For example: `mystack-mydbcluster-ro-1apw1j4phylrk.cg034hpkmmjt.us-east-2.rds.amazonaws.com` 
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `eu-central-1`
+- `eu-west-1`
+- `eu-west-2`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

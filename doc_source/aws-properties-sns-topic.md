@@ -128,3 +128,8 @@ MySNSTopic:
 
 ## See Also<a name="aws-properties-sns-topic--seealso"></a>
 +  [Using an AWS CloudFormation Template to Create a Topic that Sends Messages to Amazon SQS Queues](https://docs.aws.amazon.com/sns/latest/dg/SendMessageToSQS.cloudformation.html) in the *Amazon Simple Notification Service Developer Guide* 
+
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

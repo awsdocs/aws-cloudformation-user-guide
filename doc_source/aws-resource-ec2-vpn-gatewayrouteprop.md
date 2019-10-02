@@ -84,3 +84,7 @@ Type: AWS::EC2::VPNGatewayRoutePropagation
 
 ## See Also<a name="aws-resource-ec2-vpn-gatewayrouteprop--seealso"></a>
 +  [EnableVgwRoutePropagation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EnableVgwRoutePropagation.html) in the *Amazon EC2 API Reference*
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

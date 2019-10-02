@@ -498,3 +498,7 @@ Resources :
 
 ## See Also<a name="aws-resource-kinesisfirehose-deliverystream--seealso"></a>
 +  [CreateDeliveryStream](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html) in the *Amazon Kinesis Data Firehose API Reference*\.
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

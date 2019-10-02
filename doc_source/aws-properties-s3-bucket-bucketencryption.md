@@ -28,3 +28,7 @@ Specifies the default server\-side\-encryption configuration\.
 *Required*: Yes  
 *Type*: List of [ServerSideEncryptionRule](aws-properties-s3-bucket-serversideencryptionrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

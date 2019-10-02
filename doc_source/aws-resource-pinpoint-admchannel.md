@@ -66,3 +66,14 @@ Specifies whether to enable the ADM channel for the application\.
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the Amazon Pinpoint app that the channel is associated with\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-south-1`
+- `ap-southeast-2`
+- `eu-central-1`
+- `eu-west-1`
+- `us-east-1`
+- `us-west-2`

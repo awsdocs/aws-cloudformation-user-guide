@@ -103,3 +103,7 @@ SampleBucketPolicy:
                 - "http://www.example.com/*"
                 - "http://example.com/*"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

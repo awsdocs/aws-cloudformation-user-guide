@@ -276,3 +276,7 @@ MyEventsRule:
           TaskCount: 1
           TaskDefinitionArn: !Ref MyECSTask
 ```
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

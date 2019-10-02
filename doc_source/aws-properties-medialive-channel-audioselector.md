@@ -36,3 +36,18 @@ Information about the specific audio to extract from the input\.
 *Required*: No  
 *Type*: [AudioSelectorSettings](aws-properties-medialive-channel-audioselectorsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-south-1`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `eu-central-1`
+- `eu-west-1`
+- `sa-east-1`
+- `us-east-1`
+- `us-west-2`

@@ -79,3 +79,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## See Also<a name="aws-resource-cloudformation-macro--seealso"></a>
 +  [Using AWS CloudFormation Macros to Perform Custom Processing on Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html) 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

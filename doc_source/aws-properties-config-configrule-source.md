@@ -49,3 +49,7 @@ For custom rules, the identifier is the Amazon Resource Name \(ARN\) of the rule
 *Minimum*: `1`  
 *Maximum*: `256`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

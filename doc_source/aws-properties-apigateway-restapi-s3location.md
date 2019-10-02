@@ -57,3 +57,7 @@ For versioning\-enabled buckets, a specific version of the OpenAPI file\.
 
 ## See Also<a name="aws-properties-apigateway-restapi-s3location--seealso"></a>
 + [RestApi](https://docs.aws.amazon.com/apigateway/api-reference/resource/rest-api/) in the *Amazon API Gateway REST API Reference*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

@@ -67,3 +67,7 @@ The unit of the metric\.
 
 ## See Also<a name="aws-properties-applicationautoscaling-scalingpolicy-customizedmetricspecification--seealso"></a>
 + [Target Tracking Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html) in the *Application Auto Scaling User Guide* 
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

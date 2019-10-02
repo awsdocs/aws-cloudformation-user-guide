@@ -37,3 +37,13 @@ A list of AWS Lake Formation principals\.
 ## Return Values<a name="aws-resource-lakeformation-datalakesettings-return-values"></a>
 
 ### Ref<a name="aws-resource-lakeformation-datalakesettings-return-values-ref"></a>
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `eu-west-1`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

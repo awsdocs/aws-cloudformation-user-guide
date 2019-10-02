@@ -33,3 +33,7 @@ A list of endpoint types of an API or its custom domain name\. For an edge\-opti
 
 ## See Also<a name="aws-properties-apigateway-domainname-endpointconfiguration--seealso"></a>
 + [DomainName](https://docs.aws.amazon.com/apigateway/api-reference/resource/domain-name/) in the *Amazon API Gateway REST API Reference*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

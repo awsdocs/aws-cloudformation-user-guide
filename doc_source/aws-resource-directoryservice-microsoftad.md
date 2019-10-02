@@ -158,3 +158,7 @@ myDirectory:
 ## See Also<a name="aws-resource-directoryservice-microsoftad--seealso"></a>
 + [Getting Started with AWS Managed Microsoft AD](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_getting_started.html) in the *AWS Directory Service Admin Guide*\.\.
 + [CreateMicrosoftAD](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_CreateMicrosoftAD.html) in the *AWS Directory Service API Reference*\.
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

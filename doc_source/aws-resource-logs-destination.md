@@ -115,3 +115,7 @@ DestinationWithName:
     DestinationPolicy: >
       {"Version" : "2012-10-17","Statement" : [{"Effect" : "Allow", "Principal" : {"AWS" : "arn:aws:iam::234567890123:user/logger"},"Action" : "logs:PutSubscriptionFilter", "Resource" : "arn:aws:logs:us-east-1:123456789012:destination:TestDestination"}]}
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

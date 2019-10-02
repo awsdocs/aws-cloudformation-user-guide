@@ -109,3 +109,7 @@ MyVersion:
       Ref: "MyFunction"
     Description: "A test version of MyFunction"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

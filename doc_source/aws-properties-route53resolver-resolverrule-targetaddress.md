@@ -42,3 +42,14 @@ The port at `Ip` that you want to forward DNS queries to\.
 
 ## See Also<a name="aws-properties-route53resolver-resolverrule-targetaddress--seealso"></a>
 +  [TargetAddress](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_TargetAddress.html) in the *Amazon Route 53 API Reference* 
+
+## Supported Regions
+
+This PropertyType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-southeast-1`
+- `eu-west-1`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

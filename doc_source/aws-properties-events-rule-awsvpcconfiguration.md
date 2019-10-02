@@ -49,3 +49,7 @@ Specifies the subnets associated with the task\. These subnets must all be in th
 
 ## See Also<a name="aws-properties-events-rule-awsvpcconfiguration--seealso"></a>
 + [AwsVpcConfiguration](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_AwsVpcConfiguration.html)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

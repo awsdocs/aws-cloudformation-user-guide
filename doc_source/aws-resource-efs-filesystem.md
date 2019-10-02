@@ -203,3 +203,7 @@ Outputs:
 ## See Also<a name="aws-resource-efs-filesystem--seealso"></a>
 +  [Amazon EFS: How It Works](https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html) 
 +  [Creating an Amazon Elastic File System](https://docs.aws.amazon.com/efs/latest/ug/creating-using-fs.html) 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

@@ -179,3 +179,13 @@ Outputs:
   ParameterGroup:
 Value: !Ref MyDAXSubnetGroup
 ```
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `eu-west-1`
+- `us-east-1`
+- `us-west-1`
+- `us-west-2`

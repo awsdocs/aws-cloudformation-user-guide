@@ -175,3 +175,7 @@ MyCustomActionType:
       EntityUrlTemplate: "https://my-build-instance/job/{Config:ProjectName}/" 
       ExecutionUrlTemplate: "https://my-build-instance/job/{Config:ProjectName}/lastSuccessfulBuild/{ExternalExecutionId}/"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

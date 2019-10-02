@@ -84,3 +84,7 @@ myVPCDHCPOptionsAssociation:
 ## See Also<a name="aws-resource-ec2-vpc-dhcp-options-assoc--seealso"></a>
 +  [AssociateDhcpOptions](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AssociateDhcpOptions.html) in the *Amazon EC2 API Reference*
 + [DHCP Options Sets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html) in the *Amazon Virtual Private Cloud User Guide*
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

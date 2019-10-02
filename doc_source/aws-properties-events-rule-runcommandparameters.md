@@ -34,3 +34,7 @@ Currently, you can include only one `RunCommandTarget` block, which specifies a 
 *Type*: List of [RunCommandTarget](aws-properties-events-rule-runcommandtarget.md)  
 *Maximum*: `5`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

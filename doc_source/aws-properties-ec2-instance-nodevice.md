@@ -19,3 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 ```
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

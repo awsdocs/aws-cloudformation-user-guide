@@ -117,3 +117,7 @@ Resources:
           Value: String
     Type: "AWS::RDS::DBSubnetGroup"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

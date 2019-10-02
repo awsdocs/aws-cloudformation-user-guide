@@ -28,3 +28,7 @@ A set of allowed origins and methods\.
 *Required*: Yes  
 *Type*: List of [CorsRule](aws-properties-s3-bucket-cors-corsrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

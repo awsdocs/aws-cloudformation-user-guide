@@ -40,3 +40,7 @@ The type of constraint\. The `DistinctInstance` constraint ensures that each tas
 *Type*: String  
 *Allowed Values*: `memberOf`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

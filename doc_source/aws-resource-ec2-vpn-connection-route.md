@@ -82,3 +82,7 @@ MyConnectionRoute0:
 
 ## See Also<a name="aws-resource-ec2-vpn-connection-route--seealso"></a>
 +  [CreateVpnConnectionRoute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpnConnectionRoute.html) in the *Amazon EC2 API Reference*
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

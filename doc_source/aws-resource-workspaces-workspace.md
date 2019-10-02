@@ -103,3 +103,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 ## See Also<a name="aws-resource-workspaces-workspace--seealso"></a>
 +  [CreateWorkspaces](https://docs.aws.amazon.com/workspaces/latest/api/API_CreateWorkspaces.html) in the *Amazon WorkSpaces API Reference* 
 +  [Launch a Virtual Desktop Using Amazon WorkSpaces](https://docs.aws.amazon.com/workspaces/latest/adminguide/launch-workspaces-tutorials.html) in the *Amazon WorkSpaces Administration Guide* 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

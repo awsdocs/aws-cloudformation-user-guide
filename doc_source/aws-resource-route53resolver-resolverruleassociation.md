@@ -85,3 +85,15 @@ The ID of the VPC that you associated the resolver rule with, such as `vpc-03cf9
 
 ## See Also<a name="aws-resource-route53resolver-resolverruleassociation--seealso"></a>
 +  [ResolverRuleAssociation](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ResolverRuleAssociation.html) in the *Amazon Route 53 API Reference* 
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `eu-west-1`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

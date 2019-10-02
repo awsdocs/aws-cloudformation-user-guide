@@ -116,3 +116,24 @@ A properly structured JSON string that the generated password can be added to\. 
 
 ## See Also<a name="aws-properties-secretsmanager-secret-generatesecretstring--seealso"></a>
 +  [GetRandomPassword](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetRandomPassword.html) API in the AWS Secrets Manager API Reference
+
+## Supported Regions
+
+This PropertyType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-south-1`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `ca-central-1`
+- `eu-central-1`
+- `eu-west-1`
+- `eu-west-2`
+- `eu-west-3`
+- `sa-east-1`
+- `us-east-1`
+- `us-east-2`
+- `us-gov-west-1`
+- `us-west-1`
+- `us-west-2`

@@ -141,3 +141,7 @@ myVPC:
 ## See Also<a name="aws-resource-ec2-vpc--seealso"></a>
 +  [CreateVpc](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpc.html) in the *Amazon EC2 API Reference*
 +  [Your VPC and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon Virtual Private Cloud User Guide*
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

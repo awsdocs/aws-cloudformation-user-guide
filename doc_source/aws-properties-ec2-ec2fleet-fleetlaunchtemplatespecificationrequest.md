@@ -51,3 +51,7 @@ The version number of the launch template\.
 
 ## See Also<a name="aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest--seealso"></a>
 +  [ FleetLaunchTemplateSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_FleetLaunchTemplateSpecificationRequest.html) in the *Amazon EC2 API Reference*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

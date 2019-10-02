@@ -882,3 +882,7 @@ Resources:
         Version: 2012-10-17
     Type: "AWS::KMS::Key"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

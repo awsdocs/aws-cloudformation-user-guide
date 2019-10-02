@@ -53,3 +53,16 @@ The credentials for the service account used by the streaming instance to connec
 
 ## See Also<a name="aws-resource-appstream-directoryconfig--seealso"></a>
 +  [CreateDirectoryConfig](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateDirectoryConfig.html) in the *Amazon AppStream 2\.0 API Reference* 
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `eu-central-1`
+- `eu-west-1`
+- `us-east-1`
+- `us-west-2`

@@ -42,3 +42,7 @@ The tags to apply to the resource\.
 
 ## See Also<a name="aws-properties-ec2-ec2fleet-tagspecification--seealso"></a>
 +  [ TagSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TagSpecification.html) in the *Amazon EC2 API Reference*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

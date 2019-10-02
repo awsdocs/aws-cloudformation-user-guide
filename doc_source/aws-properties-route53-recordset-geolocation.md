@@ -54,3 +54,7 @@ The code for the subdivision\. Route 53 currently supports only states in the Un
 
 ## See Also<a name="aws-properties-route53-recordset-geolocation--seealso"></a>
 + [GeoLocation](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GeoLocation.html) in the *Amazon Route 53 API Reference*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

@@ -141,3 +141,9 @@ Resources:
   }
 }
 ```
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `us-east-1`

@@ -408,3 +408,8 @@ SGPing:
         ToPort: -1
         CidrIp: 10.0.0.0/24
 ```
+
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

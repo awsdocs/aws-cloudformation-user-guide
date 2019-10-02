@@ -118,3 +118,14 @@ The record value for the third token that you have to add to the DNS configurati
 
 ## See Also<a name="aws-resource-pinpointemail-identity--seealso"></a>
 + [Verifying Email Identities](https://docs.aws.amazon.com/pinpoint/latest/userguide/channels-email-manage-verify.html) in the *Amazon Pinpoint User Guide*
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-south-1`
+- `ap-southeast-2`
+- `eu-central-1`
+- `eu-west-1`
+- `us-east-1`
+- `us-west-2`

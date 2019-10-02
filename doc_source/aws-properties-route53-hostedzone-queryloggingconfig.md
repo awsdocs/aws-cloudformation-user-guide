@@ -30,3 +30,7 @@ The Amazon Resource Name \(ARN\) of the CloudWatch Logs log group that Amazon Ro
 
 ## See Also<a name="aws-properties-route53-hostedzone-queryloggingconfig--seealso"></a>
 + [QueryLoggingConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_QueryLoggingConfig.html) in the *Amazon Route 53 API Reference*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

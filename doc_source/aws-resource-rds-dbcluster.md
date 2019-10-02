@@ -510,3 +510,7 @@ RDSDBParameterGroup:
       sql_mode: IGNORE_SPACE
   Type: "AWS::RDS::DBParameterGroup"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

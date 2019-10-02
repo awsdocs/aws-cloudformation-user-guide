@@ -28,3 +28,7 @@ The name of the second alias, and the percentage of traffic that's routed to it\
 *Required*: Yes  
 *Type*: List of [VersionWeight](aws-properties-lambda-alias-versionweight.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

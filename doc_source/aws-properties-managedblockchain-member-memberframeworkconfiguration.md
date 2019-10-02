@@ -28,3 +28,9 @@ Configuration properties for Hyperledger Fabric\.
 *Required*: No  
 *Type*: [MemberFabricConfiguration](aws-properties-managedblockchain-member-memberfabricconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by the following regions:
+
+- `us-east-1`

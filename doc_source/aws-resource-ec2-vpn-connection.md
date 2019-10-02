@@ -133,3 +133,7 @@ The following example specifies a VPN connection between myVPNGateway and MyCust
 
 ## See Also<a name="aws-resource-ec2-vpn-connection--seealso"></a>
 +  [VPNConnection](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VPNConnection.html) in the *Amazon EC2 API Reference*
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

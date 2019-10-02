@@ -245,3 +245,7 @@ AMIIDLookup:
     TracingConfig:
       Mode: "Active"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

@@ -45,3 +45,7 @@ The tenancy of the instance \(if the instance is running in a VPC\)\. An instanc
 *Type*: String  
 *Allowed Values*: `dedicated | default | host`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

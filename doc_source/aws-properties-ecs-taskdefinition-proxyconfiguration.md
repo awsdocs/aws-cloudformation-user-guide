@@ -56,3 +56,7 @@ The proxy type\. The only supported value is `APPMESH`\.
 *Type*: String  
 *Allowed Values*: `APPMESH`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

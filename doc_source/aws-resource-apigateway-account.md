@@ -120,3 +120,7 @@ Account:
 
 ## See Also<a name="aws-resource-apigateway-account--seealso"></a>
 + [account:update](https://docs.aws.amazon.com/apigateway/api-reference/resource/account/) in the *Amazon API Gateway REST API Reference*
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

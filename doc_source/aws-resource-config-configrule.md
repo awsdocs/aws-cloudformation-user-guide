@@ -329,3 +329,7 @@ ConfigRuleForVolumeAutoEnableIO:
           - Arn
   DependsOn: ConfigPermissionToCallLambda
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

@@ -31,3 +31,7 @@ The input artifact of an action must exactly match the output artifact declared 
 *Maximum*: `100`  
 *Pattern*: `[a-zA-Z0-9_\-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

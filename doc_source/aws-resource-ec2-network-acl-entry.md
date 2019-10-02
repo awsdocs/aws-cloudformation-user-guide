@@ -157,3 +157,7 @@ The following example creates an entry in a network ACL with a specified rule nu
 ## See Also<a name="aws-resource-ec2-network-acl-entry--seealso"></a>
 + [NetworkAclEntry](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateNetworkAclEntry.html) in the *Amazon EC2 API Reference*
 + [Network ACLs](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html) in the *Amazon Virtual Private Cloud User Guide*
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

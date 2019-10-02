@@ -60,3 +60,7 @@ Ending value for a range of allowed port numbers\. Port numbers are end\-inclusi
 
 ## See Also<a name="aws-properties-gamelift-fleet-ec2inboundpermission--seealso"></a>
 +  [IpPermission](https://docs.aws.amazon.com/gamelift/latest/apireference/API_IpPermission.html) in the *Amazon GameLift API Reference* 
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

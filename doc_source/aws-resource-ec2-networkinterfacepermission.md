@@ -87,3 +87,7 @@ The following example creates a permission \(`INSTANCE-ATTACH`\) for a specified
          AwsAccountId: '11111111111'
          Permission: INSTANCE-ATTACH
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

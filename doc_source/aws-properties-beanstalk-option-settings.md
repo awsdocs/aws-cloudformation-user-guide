@@ -61,3 +61,7 @@ The current value for the configuration option\.
 ## See Also<a name="aws-properties-beanstalk-option-settings--seealso"></a>
 +  [ConfigurationOptionSetting](https://docs.aws.amazon.com/elasticbeanstalk/latest/api/API_ConfigurationOptionSetting.html) in the *AWS Elastic Beanstalk API Reference* 
 +  [Configuration Options](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html) in the *AWS Elastic Beanstalk Developer Guide* 
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

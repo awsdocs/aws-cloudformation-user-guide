@@ -112,3 +112,14 @@ Resources:
 
 ## See Also<a name="aws-resource-appsync-graphqlschema--seealso"></a>
 +  [StartSchemaCreation](https://docs.aws.amazon.com/appsync/latest/APIReference/API_StartSchemaCreation.html) operation in the *AWS AppSync API Reference*\.
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-southeast-2`
+- `eu-west-1`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

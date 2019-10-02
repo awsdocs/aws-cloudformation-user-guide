@@ -49,3 +49,7 @@ Whether the canary deployment uses the stage cache or not\.
 
 ## See Also<a name="aws-properties-apigateway-deployment-canarysetting--seealso"></a>
 + [Stage](https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/) in the *Amazon API Gateway REST API Reference*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

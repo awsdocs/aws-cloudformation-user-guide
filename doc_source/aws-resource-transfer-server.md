@@ -101,3 +101,24 @@ An example of a server ARN is: `arn:aws:transfer:us-east-1:123456789012:server/s
 `ServerId`  <a name="ServerId-fn::getatt"></a>
 The service\-assigned ID of the SFTP server that is created\.  
 An example `ServerId` is `s-01234567890abcdef`\.
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-south-1`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `ca-central-1`
+- `eu-central-1`
+- `eu-north-1`
+- `eu-west-1`
+- `eu-west-2`
+- `eu-west-3`
+- `sa-east-1`
+- `us-east-1`
+- `us-east-2`
+- `us-west-1`
+- `us-west-2`

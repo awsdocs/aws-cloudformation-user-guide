@@ -41,3 +41,7 @@ AWS CloudFormation supports blue/green deployments on AWS Lambda compute platfor
 
 ## See Also<a name="aws-properties-codedeploy-deploymentgroup-deploymentstyle--seealso"></a>
 +  [EC2TagFilter](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_EC2TagFilter.html) in the *AWS CodeDeploy API Reference*\.
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

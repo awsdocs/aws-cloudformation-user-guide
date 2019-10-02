@@ -154,3 +154,7 @@ SpotFleet:
 ## See Also<a name="aws-resource-ec2-spotfleet--seealso"></a>
 +  [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html)
 +  [AWS::ApplicationAutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html)
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

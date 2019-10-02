@@ -228,3 +228,7 @@ Outputs:
 ## See Also<a name="aws-resource-ecr-repository--seealso"></a>
 +  [Creating a Lifecycle Policy](https://docs.aws.amazon.com/AmazonECR/latest/userguide/lp_creation.html) in the *Amazon Elastic Container Registry User Guide* 
 +  [PutLifecyclePolicy](https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_PutLifecyclePolicy.html) in the *Amazon Elastic Container Registry API Reference* 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

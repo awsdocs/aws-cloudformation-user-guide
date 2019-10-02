@@ -591,3 +591,7 @@ Parameters:
 ## See Also<a name="aws-resource-opsworks-stack--seealso"></a>
 +  [CreateStack](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateStack.html) in the *AWS OpsWorks API Reference*\.
 +  [Create a New Stack](https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-creating.html) in the *AWS OpsWorks User Guide*\.
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

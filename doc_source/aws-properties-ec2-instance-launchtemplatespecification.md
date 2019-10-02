@@ -48,3 +48,7 @@ The version number of the launch template\.AWS CloudFormation does not support s
 
 ## See Also<a name="aws-properties-ec2-instance-launchtemplatespecification--seealso"></a>
 +  [ LaunchTemplateSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateSpecification.html) in the *Amazon EC2 API Reference* 
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

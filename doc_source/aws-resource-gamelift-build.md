@@ -161,3 +161,7 @@ IAMRole:
 
 ## See Also<a name="aws-resource-gamelift-build--seealso"></a>
 +  [CreateBuild](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateBuild.html) in the *Amazon GameLift API Reference* 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

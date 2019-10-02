@@ -44,3 +44,7 @@ If `Key` is `tag:` *tag\-key*, `Values` is a list of tag values\. If `Key` is `I
 *Type*: List of String  
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

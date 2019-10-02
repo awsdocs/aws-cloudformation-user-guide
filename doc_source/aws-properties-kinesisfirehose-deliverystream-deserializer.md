@@ -37,3 +37,7 @@ The OpenX SerDe\. Used by Kinesis Data Firehose for deserializing data, which me
 *Required*: No  
 *Type*: [OpenXJsonSerDe](aws-properties-kinesisfirehose-deliverystream-openxjsonserde.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

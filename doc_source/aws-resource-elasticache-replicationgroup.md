@@ -504,3 +504,7 @@ The following example declares a replication group with two nodes groups \(shard
 ## See Also<a name="aws-resource-elasticache-replicationgroup--seealso"></a>
 
 [CreateReplicationGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateReplicationGroup.html) in the * Amazon ElastiCache API Reference Guide* 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

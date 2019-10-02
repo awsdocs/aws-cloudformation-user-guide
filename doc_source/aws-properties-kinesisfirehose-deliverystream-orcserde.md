@@ -107,3 +107,7 @@ The number of bytes in each stripe\. The default is 64 MiB and the minimum is 8 
 *Type*: Integer  
 *Minimum*: `8388608`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

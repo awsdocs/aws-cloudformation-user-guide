@@ -76,3 +76,7 @@ The following sample declares an Amazon ECS cluster:
 MyCluster:
   Type: AWS::ECS::Cluster
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

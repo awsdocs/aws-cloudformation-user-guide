@@ -29,3 +29,7 @@ All specified subnets and security groups must be from the same VPC\.
 *Required*: No  
 *Type*: [AwsVpcConfiguration](aws-properties-ecs-service-awsvpcconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

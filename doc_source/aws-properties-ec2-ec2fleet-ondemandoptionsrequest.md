@@ -33,3 +33,7 @@ The order of the launch template overrides to use in fulfilling On\-Demand capac
 
 ## See Also<a name="aws-properties-ec2-ec2fleet-ondemandoptionsrequest--seealso"></a>
 +  [ OnDemandOptionsRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_OnDemandOptionsRequest.html) in the *Amazon EC2 API Reference*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

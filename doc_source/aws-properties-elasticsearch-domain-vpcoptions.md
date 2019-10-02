@@ -40,3 +40,7 @@ A list of subnet IDs that are associated with the VPC endpoints for the domain\.
 
 ## See Also<a name="aws-properties-elasticsearch-domain-vpcoptions--seealso"></a>
 + [VPC Support for Amazon Elasticsearch Service Domains](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html) in the *Amazon Elasticsearch Service Developer Guide*\.
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

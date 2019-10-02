@@ -43,3 +43,7 @@ Any parameters that you specify override the same parameters in the launch templ
 
 ## See Also<a name="aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest--seealso"></a>
 +  [ FleetLaunchTemplateConfigRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_FleetLaunchTemplateConfigRequest.html) in the *Amazon EC2 API Reference* 
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

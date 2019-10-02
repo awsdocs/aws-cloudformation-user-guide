@@ -76,3 +76,7 @@ Ipv6TestSubnetCidrBlock:
     Ipv6CidrBlock: !Ref Ipv6SubnetCidrBlock
     SubnetId: !Ref Ipv6TestSubnet
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

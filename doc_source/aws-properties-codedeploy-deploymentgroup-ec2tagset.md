@@ -34,3 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See Also<a name="aws-properties-codedeploy-deploymentgroup-ec2tagset--seealso"></a>
 +  [EC2TagSet](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_EC2TagSet.html) in the *AWS CodeDeploy API Reference*\.
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

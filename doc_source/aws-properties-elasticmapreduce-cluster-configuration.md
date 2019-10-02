@@ -48,3 +48,7 @@ A list of additional configurations to apply within a configuration object\.
 *Required*: No  
 *Type*: List of [Configuration](#aws-properties-elasticmapreduce-cluster-configuration)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

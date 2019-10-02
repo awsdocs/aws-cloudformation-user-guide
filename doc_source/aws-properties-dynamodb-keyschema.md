@@ -49,3 +49,7 @@ The sort key of an item is also known as its *range attribute*\. The term "range
 ## See Also<a name="aws-properties-dynamodb-keyschema--seealso"></a>
 
 For an example of a declared key schema, see [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)\. 
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

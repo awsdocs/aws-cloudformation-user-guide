@@ -56,3 +56,7 @@ The logical hierarchy you created for your Amazon S3 bucket, for example `my-buc
 ## See Also<a name="aws-properties-ec2-elb-accessloggingpolicy--seealso"></a>
 +  [ModifyLoadBalancerAttributes](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_ModifyLoadBalancerAttributes.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)* 
 +  [Access Logs](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/access-log-collection.html) in the *User Guide for Classic Load Balancers* 
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

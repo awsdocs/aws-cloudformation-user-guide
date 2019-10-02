@@ -49,3 +49,7 @@ The GUID for the customer\-managed AWS KMS key to use for encryption\. This valu
 *Minimum*: `1`  
 *Maximum*: `2048`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

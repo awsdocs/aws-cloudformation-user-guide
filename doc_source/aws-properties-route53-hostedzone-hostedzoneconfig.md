@@ -31,3 +31,7 @@ Any comments that you want to include about the hosted zone\.
 
 ## See Also<a name="aws-properties-route53-hostedzone-hostedzoneconfig--seealso"></a>
 +  [HostedZoneConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_HostedZoneConfig.html) in the *Amazon Route 53 API Reference*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

@@ -64,3 +64,7 @@ The size of the user storage\.
 
 ## See Also<a name="aws-properties-workspaces-workspace-workspaceproperties--seealso"></a>
 +  [WorkspaceProperties](https://docs.aws.amazon.com/workspaces/latest/api/API_WorkspaceProperties.html) in the *Amazon WorkSpaces API Reference* 
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

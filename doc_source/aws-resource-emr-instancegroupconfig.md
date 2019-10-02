@@ -322,3 +322,7 @@ MyInstanceGroupConfig:
               Unit: PERCENT
               MetricName: YARNMemoryAvailablePercentage
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

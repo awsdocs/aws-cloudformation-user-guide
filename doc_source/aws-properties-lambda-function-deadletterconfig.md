@@ -28,3 +28,7 @@ The Amazon Resource Name \(ARN\) of an Amazon SQS queue or Amazon SNS topic\.
 *Type*: String  
 *Pattern*: `(arn:(aws[a-zA-Z-]*)?:[a-z0-9-.]+:.*)|()`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

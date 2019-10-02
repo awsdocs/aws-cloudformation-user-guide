@@ -28,3 +28,21 @@ EBS volume information\.
 *Required*: No  
 *Type*: [EBSStorageInfo](aws-properties-msk-cluster-ebsstorageinfo.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Supported Regions
+
+This PropertyType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-south-1`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `eu-central-1`
+- `eu-north-1`
+- `eu-west-1`
+- `eu-west-2`
+- `eu-west-3`
+- `us-east-1`
+- `us-east-2`
+- `us-west-2`

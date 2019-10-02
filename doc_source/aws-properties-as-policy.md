@@ -346,3 +346,7 @@ ASGScaleOutPolicy:
       Ref: "myASGroup"
     ScalingAdjustment: 1
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

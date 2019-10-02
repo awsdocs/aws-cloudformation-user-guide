@@ -28,3 +28,7 @@ A list of containers for the key value pair that defines the criteria for the fi
 *Required*: Yes  
 *Type*: List of [FilterRule](aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

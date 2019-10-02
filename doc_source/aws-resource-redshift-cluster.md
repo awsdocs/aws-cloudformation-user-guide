@@ -397,3 +397,7 @@ myCluster:
 ## See Also<a name="aws-resource-redshift-cluster--seealso"></a>
 + For a complete example template, see [Amazon Redshift Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-redshift.html)\.
 +  [CreateCluster](https://docs.aws.amazon.com/redshift/latest/APIReference/API_CreateCluster.html) in the *Redshift API Reference*\.
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

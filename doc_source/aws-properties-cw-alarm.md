@@ -255,3 +255,7 @@ The ARN of the CloudWatch alarm, such as `arn:aws:cloudwatch:us-west-2:123456789
 
 ## See Also<a name="aws-properties-cw-alarm--seealso"></a>
 +  [Amazon CloudWatch Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-cloudwatch.html) 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

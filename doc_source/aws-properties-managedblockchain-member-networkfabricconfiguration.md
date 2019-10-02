@@ -28,3 +28,9 @@ The edition of Amazon Managed Blockchain that the network uses\. Valid values ar
 *Type*: String  
 *Allowed Values*: `STANDARD | STARTER`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by the following regions:
+
+- `us-east-1`

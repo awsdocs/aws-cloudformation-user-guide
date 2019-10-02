@@ -28,3 +28,7 @@ A lifecycle rule for individual objects in an Amazon S3 bucket\.
 *Required*: Yes  
 *Type*: List of [Rule](aws-properties-s3-bucket-lifecycleconfig-rule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

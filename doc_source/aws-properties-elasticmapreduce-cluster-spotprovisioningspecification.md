@@ -49,3 +49,7 @@ The spot provisioning timeout period in minutes\. If Spot instances are not prov
 *Type*: Integer  
 *Minimum*: `0`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

@@ -216,3 +216,7 @@ The following example creates a managed policy and associates it with the `TestD
 
 ## See Also<a name="aws-resource-iam-managedpolicy--seealso"></a>
 +  [CreatePolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicy.html) in the *AWS Identity and Access Management API Reference* 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

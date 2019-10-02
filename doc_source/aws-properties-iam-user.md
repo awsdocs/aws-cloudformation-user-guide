@@ -121,3 +121,7 @@ Returns the Amazon Resource Name \(ARN\) for the specified `AWS::IAM::User` reso
 ## See Also<a name="aws-properties-iam-user--seealso"></a>
 + To view `AWS::IAM::User` template example snippets, see [Declaring an IAM User Resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-iam-user)\. 
 +  [CreateUser](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateUser.html) in the *AWS Identity and Access Management API Reference* 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

@@ -145,3 +145,7 @@ Starts execution of a Step Functions state machine\.
 *Required*: No  
 *Type*: [StepFunctionsAction](aws-properties-iot-topicrule-stepfunctionsaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

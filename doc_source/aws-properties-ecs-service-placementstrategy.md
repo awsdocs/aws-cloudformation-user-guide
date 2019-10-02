@@ -36,3 +36,7 @@ The type of placement strategy\. The `random` placement strategy randomly places
 *Type*: String  
 *Allowed Values*: `binpack | random | spread`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

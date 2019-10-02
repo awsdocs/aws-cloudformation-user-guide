@@ -93,3 +93,7 @@ myClusterSecurityGroupIngressIP:
     Ref: "myClusterSecurityGroup"
     CIDRIP: "10.0.0.0/16"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

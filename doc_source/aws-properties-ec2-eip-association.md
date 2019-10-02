@@ -249,3 +249,7 @@ UserData:
     ec2ifup eth1
     service httpd start
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

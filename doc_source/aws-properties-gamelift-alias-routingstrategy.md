@@ -53,3 +53,7 @@ Possible routing types include the following:
 
 ## See Also<a name="aws-properties-gamelift-alias-routingstrategy--seealso"></a>
 +  [RoutingStrategy](https://docs.aws.amazon.com/gamelift/latest/apireference/API_RoutingStrategy.html) in the *Amazon GameLift API Reference* 
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

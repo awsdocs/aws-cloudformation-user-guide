@@ -88,3 +88,7 @@ Properties:
    PolicyDocument: JSON object
    PolicyName: String
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

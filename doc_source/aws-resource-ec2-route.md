@@ -158,3 +158,7 @@ The following example adds a route that is added to a gateway\.
 ## See Also<a name="aws-resource-ec2-route--seealso"></a>
 +  [CreateRoute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateRoute.html) in the *Amazon EC2 API Reference*
 +  [Route Tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html) in the *Amazon VPC User Guide*
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

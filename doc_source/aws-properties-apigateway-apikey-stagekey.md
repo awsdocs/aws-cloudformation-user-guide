@@ -38,3 +38,7 @@ The name of the stage with which to associate the API key\. The stage must be in
 
 ## See Also<a name="aws-properties-apigateway-apikey-stagekey--seealso"></a>
 + [stageKeys](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/apikey-create/#stageKeys) in the *Amazon API Gateway REST API Reference*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

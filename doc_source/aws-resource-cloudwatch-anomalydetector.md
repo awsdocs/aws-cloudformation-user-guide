@@ -126,3 +126,7 @@ Resources:
           - StartTime: 2019-07-01T00:00:00
             EndTime: 2019-07-01T23:59:59
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

@@ -96,3 +96,7 @@ The following example sends a value of `1` to the `404Count` metric whenever the
         MetricNamespace: "WebServer/404s"
         MetricName: "404Count"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

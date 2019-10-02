@@ -105,3 +105,7 @@ CodeDeployApplication:
 
 ## See Also<a name="aws-resource-codedeploy-application--seealso"></a>
 + For configuring your deployment and specifying your application revisions, see [ AWS::CodeDeploy::DeploymentConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html) and [ AWS::CodeDeploy::DeploymentGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html)\.
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

@@ -142,3 +142,7 @@ Resources:
       OptionGroupDescription: "testing creating optionGroup with APEX version"
     Type: "AWS::RDS::OptionGroup"
 ```
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

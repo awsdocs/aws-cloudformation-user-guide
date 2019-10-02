@@ -215,3 +215,11 @@ Resources:
               DimensionValueSource: !Ref DimensionValueSource2
               DefaultDimensionValue: !Ref DefaultDimensionValue2
 ```
+
+## Supported Regions
+
+This ResourceType is supported by the following regions:
+
+- `eu-west-1`
+- `us-east-1`
+- `us-west-2`

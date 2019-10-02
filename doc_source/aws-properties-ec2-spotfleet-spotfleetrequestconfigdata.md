@@ -141,3 +141,7 @@ The end date and time of the request, in UTC format \(*YYYY*\-*MM*\-*DD*T*HH*:*M
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

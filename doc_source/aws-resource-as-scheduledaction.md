@@ -156,3 +156,7 @@ ScheduledActionIn:
     MinSize: 1
     Recurrence: "0 19 * * *"
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

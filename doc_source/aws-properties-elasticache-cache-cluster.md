@@ -400,3 +400,8 @@ myCacheCluster:
 ## See Also<a name="aws-properties-elasticache-cache-cluster--seealso"></a>
 + [CreateCacheParameterGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheParameterGroup.html) in the * Amazon ElastiCache API Reference Guide* 
 + [ModifyCacheParameterGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheParameterGroup.html) in the * Amazon ElastiCache API Reference Guide* 
+
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

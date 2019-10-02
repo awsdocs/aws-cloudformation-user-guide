@@ -38,3 +38,7 @@ The minimum capacity\.
 
 ## See Also<a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction--seealso"></a>
 + [Application Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html) 
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

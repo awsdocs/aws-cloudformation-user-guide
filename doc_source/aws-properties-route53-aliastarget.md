@@ -130,3 +130,7 @@ Specify the hosted zone ID of your hosted zone\. \(An alias resource record set 
 
 ## See Also<a name="aws-properties-route53-aliastarget--seealso"></a>
 +  [AliasTarget](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) in the *Amazon Route 53 API Reference*
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

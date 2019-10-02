@@ -42,3 +42,7 @@ Input template where you specify placeholders that will be filled with the value
 *Minimum*: `1`  
 *Maximum*: `8192`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

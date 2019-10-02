@@ -129,3 +129,7 @@ Resources:
 
 ## See Also<a name="aws-resource-route53-recordsetgroup--seealso"></a>
 + For `AWS::Route53::RecordSetGroup` examples, see [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *Amazon Route 53 API Reference*
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

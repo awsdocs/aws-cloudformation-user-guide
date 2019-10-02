@@ -48,3 +48,7 @@ The friendly name \(not ARN\) identifying the policy\.
 
 ## See Also<a name="aws-properties-iam-policy--seealso"></a>
 +  [PolicyDetail](https://docs.aws.amazon.com/IAM/latest/APIReference/API_PolicyDetail.html) in the *AWS Identity and Access Management API Reference* 
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

@@ -215,3 +215,7 @@ Resources :
 
 ## See Also<a name="aws-resource-apigateway-gatewayresponse--seealso"></a>
 + [gatewayresponse:put](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/gatewayresponse-put/) in the *Amazon API Gateway REST API Reference*
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

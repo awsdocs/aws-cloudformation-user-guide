@@ -41,3 +41,7 @@ The URLs of the queues to which you want to add the policy\. You can use the `[R
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

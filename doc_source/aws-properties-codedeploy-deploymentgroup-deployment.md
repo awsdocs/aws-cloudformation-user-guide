@@ -47,3 +47,7 @@ Information about the location of stored application artifacts and the service f
 *Required*: Yes  
 *Type*: [RevisionLocation](aws-properties-codedeploy-deploymentgroup-deployment-revision.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

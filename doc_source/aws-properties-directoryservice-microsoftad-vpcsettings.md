@@ -37,3 +37,7 @@ The identifier of the VPC in which to create the directory\.
 *Type*: String  
 *Pattern*: `^(vpc-[0-9a-f]{8}|vpc-[0-9a-f]{17})$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

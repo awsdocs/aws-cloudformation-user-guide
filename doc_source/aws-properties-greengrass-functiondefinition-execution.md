@@ -48,3 +48,21 @@ Running as the root user increases risks to your data and device\. Do not run as
 ## See Also<a name="aws-properties-greengrass-functiondefinition-execution--seealso"></a>
 +  [FunctionExecutionConfig](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functionexecutionconfig.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
+
+## Supported Regions
+
+This PropertyType is supported by the following regions:
+
+- `ap-northeast-1`
+- `ap-northeast-2`
+- `ap-south-1`
+- `ap-southeast-1`
+- `ap-southeast-2`
+- `cn-north-1`
+- `eu-central-1`
+- `eu-west-1`
+- `eu-west-2`
+- `us-east-1`
+- `us-east-2`
+- `us-gov-west-1`
+- `us-west-2`

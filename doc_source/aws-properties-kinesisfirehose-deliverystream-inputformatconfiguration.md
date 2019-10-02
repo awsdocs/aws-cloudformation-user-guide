@@ -28,3 +28,7 @@ Specifies which deserializer to use\. You can choose either the Apache Hive JSON
 *Required*: Yes  
 *Type*: [Deserializer](aws-properties-kinesisfirehose-deliverystream-deserializer.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

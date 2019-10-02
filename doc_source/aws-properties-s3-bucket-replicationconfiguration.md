@@ -36,3 +36,7 @@ A container for one or more replication rules\. A replication configuration must
 *Required*: Yes  
 *Type*: List of [ReplicationRule](aws-properties-s3-bucket-replicationconfiguration-rules.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

@@ -90,3 +90,7 @@ The [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrins
    }
 }
 ```
+
+## Supported Regions
+
+This PropertyType is supported by ***all*** regions.

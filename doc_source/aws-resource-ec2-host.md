@@ -98,3 +98,7 @@ Host:
     AvailabilityZone: us-east-1a
     InstanceType: c3.large
 ```
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

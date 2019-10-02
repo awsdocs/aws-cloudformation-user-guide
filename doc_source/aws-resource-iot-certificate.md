@@ -69,3 +69,7 @@ Returns the Amazon Resource Name \(ARN\) for the instance profile\. For example:
  `{ "Fn::GetAtt": ["MyCertificate", "Arn"] }`   
 A value similar to the following is returned:  
  `arn:aws:iot:ap-southeast-2:123456789012:cert/a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2` 
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.

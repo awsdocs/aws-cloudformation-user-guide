@@ -45,3 +45,7 @@ A description for the cache security group\.
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. 
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+## Supported Regions
+
+This ResourceType is supported by ***all*** regions.
