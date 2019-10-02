@@ -343,4 +343,4 @@ Resources:
 
 ## Supported Regions
 
-This ResourceType is supported by ***all*** regions.
+This ResourceType and PropertyType is supported by ***all*** regions.
