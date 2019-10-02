@@ -91,6 +91,12 @@ Represents information about a stage and its definition\.
 *Type*: List of [StageDeclaration](aws-properties-codepipeline-pipeline-stages.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Tags` <a name="cfn-codepipeline-pipeline-tags"></a>
+Resource tags that will be attached to your CodePipeline pipeline\. 
+*Required*: No  
+*Type*: [Resource Tags](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)  
+
 ## Return Values<a name="aws-resource-codepipeline-pipeline-return-values"></a>
 
 ### Ref<a name="aws-resource-codepipeline-pipeline-return-values-ref"></a>
