@@ -193,7 +193,7 @@ The path, if any, that you want Amazon Route 53 to request when performing healt
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SearchString`  <a name="cfn-route53-healthcheck-healthcheckconfig-searchstring"></a>
-If the value of Type is `HTTP_STR_MATCH` or `HTTP_STR_MATCH`, the string that you want Amazon Route 53 to search for in the response body from the specified resource\. If the string appears in the response body, Route 53 considers the resource healthy\.  
+If the value of Type is `HTTP_STR_MATCH` or `HTTPS_STR_MATCH`, the string that you want Amazon Route 53 to search for in the response body from the specified resource\. If the string appears in the response body, Route 53 considers the resource healthy\.  
 Route 53 considers case when searching for `SearchString` in the response body\.   
 *Required*: No  
 *Type*: String  
