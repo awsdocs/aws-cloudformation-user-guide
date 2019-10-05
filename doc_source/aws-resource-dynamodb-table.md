@@ -494,7 +494,7 @@ mySecondDDBTable:
             Ref: "WriteCapacityUnits"
     Tags:
       - Key: foo
-Value: bar
+        Value: bar
 ```
 
 ### DynamoDB Table with Application Auto Scaling<a name="aws-resource-dynamodb-table--examples--DynamoDB_Table_with_Application_Auto_Scaling"></a>
