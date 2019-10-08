@@ -4,6 +4,59 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](AWS_Pinpoint.md) | The following resource was updated: AWS::Pinpoint::App, AWS::Pinpoint::Campaign, and AWS::Pinpoint::Segment\. 
+
+ [AWS::Pinpoint::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-app.html)   
+The `ARN` attribute returns the Amazon Resource Name \(ARN\) of the application\.  
+Use the `Tags` property to specify a string\-to\-string map of key\-value pairs that defines the tags to associate with the application\. 
+
+ [AWS::Pinpoint::Campaign](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html)   
+The `ARN` attribute returns the Amazon Resource Name \(ARN\) of the campaign\.  
+Use the `Tags` property to specify a string\-to\-string map of key\-value pairs that defines the tags to associate with the campaign\. 
+
+ [AWS::Pinpoint::Segment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-segment.html)   
+The `ARN` attribute returns the Amazon Resource Name \(ARN\) of the segment\.  
+Use the `Tags` property to specify a string\-to\-string map of key\-value pairs that defines the tags to associate with the segment\.  | October 3, 2019 | 
+| [Updated resource](AWS_Budgets.md) | The following resource was updated: AWS::Budgets::Budget 
+
+ [AWS::Budgets::Budget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budget.html)   
+In the [BudgetData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-budgetdata.html) property type, use the `PlannedBudgetLimits` property to specify a map containing multiple budget limits, including current or future limits\.  | October 3, 2019 | 
+| [New resources](AWS_Cognito.md) | The following resources were added: AWS::Cognito::UserPoolDomain, AWS::Cognito::UserPoolResourceServer, AWS::Cognito::UserPoolIdentityProvider, AWS::Cognito::RiskConfigurationAttachment, AWS::Cognito::UICustomizationAttachment\.  
+
+ [AWS::Cognito::UserPoolDomain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html)   
+Use the `AWS::Cognito::UserPoolDomain` resource to create a new domain for a user pool\.\. 
+
+ [AWS::Cognito::UserPoolResourceServer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html)   
+Use the `AWS::Cognito::UserPoolResourceServer` resource to create a new OAuth2\.0 resource server and define custom scopes in it\. 
+
+ [AWS::Cognito::UserPoolIdentityProvider](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html)   
+Use the `AWS::Cognito::UserPoolIdentityProvider` resource to create an identity provider for a user pool\. 
+
+ [AWS::Cognito::UserPoolRiskConfigurationAttachment ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html)   
+Use the `AWS::Cognito::UserPoolRiskConfigurationAttachment` resource to set the risk configuration that is used for Amazon Cognito advanced security features\. 
+
+ [AWS::Cognito::UserPoolUICustomizationAttachment ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html)   
+Use the `AWS::Cognito::UserPoolUICustomizationAttachment` resource to set the UI customization information for a user pool's built\-in app UI\.  | October 3, 2019 | 
+| [New resource](AWS_Events.md) | The following resource was added: AWS::Events::EventBus 
+
+ [AWS::Events::EventBus](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html)   
+Use the `EventBus` resource to create or update a custom event bus or a partner event bus\.  | October 3, 2019 | 
+| [New resource](AWS_EC2.md) | The following resource was added: AWS::EC2::TrafficMirrorFilter 
+
+ [AWS::EC2::TrafficMirrorFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilter.html)   
+Use the `AWS::EC2::TrafficMirrorFilter` resource to specify a traffic mirror filter\.  | October 3, 2019 | 
+| [New resource](AWS_EC2.md) | The following resource was added: AWS::EC2::TrafficMirrorFilterRule 
+
+ [AWS::EC2::TrafficMirrorFilterRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilterrule.html)   
+Use the `AWS::EC2::TrafficMirrorFilterRule` resource to manage traffic mirror filter rules\.  | October 3, 2019 | 
+| [New resource](AWS_EC2.md) | The following resource was added: AWS::EC2::TrafficMirrorSession 
+
+ [AWS::EC2::TrafficMirrorSession](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html)   
+Use the `AWS::EC2::TrafficMirrorSession` resource to specify a traffic mirror session\.  | October 3, 2019 | 
+| [New resource](AWS_EC2.md) | The following resource was added: AWS::EC2::TrafficMirrorTarget 
+
+ [AWS::EC2::TrafficMirrorTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrortarget.html)   
+Use the `AWS::EC2::TrafficMirrorTarget` resource to specify a traffic mirror target\.  | October 3, 2019 | 
 | [Updated resource](AWS_Glue.md) | The following resource was updated: AWS::Glue::DevEndpoint 
 
  [AWS::Glue::DevEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html)   
@@ -22,6 +75,10 @@ Use the `NotifyDelayAfter` property to specify the number of minutes to wait bef
  [AWS::Glue::Trigger](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html)   
 Use the `StartOnCreation` property to specify starting `SCHEDULED` and `CONDITIONAL` triggers when created\.  
 Use the `WorkflowName` property to specify the name of the workflow associated with the trigger\.  | September 26, 2019 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::DocDB::DBCluster\. 
+
+ [AWS::DocDB::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html)   
+Use the `EnableCloudwatchLogsExports` property to specify the list of log types that need to be enabled for exporting to CloudWatch Logs\.  | September 26, 2019 | 
 | [New resource](AWS_Glue.md) | The following resource was added: AWS::Glue::Workflow 
 
  [AWS::Glue::Workflow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html)   
