@@ -118,7 +118,7 @@ CloudFormation marks the Auto Scaling group as successful \(by setting its statu
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckGracePeriod`  <a name="cfn-as-group-healthcheckgraceperiod"></a>
-The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2 instance that has come into service\.  
+The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2 instance that has come into service\. The default value is `0`\.  
 For more information, see [Health Checks for Auto Scaling Instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
 If you are adding an `ELB` health check, you must specify this property\.  
 *Required*: Conditional  
@@ -273,7 +273,7 @@ The following examples create or make changes to an Auto Scaling group\. To view
 
 ### Auto Scaling Group with Load Balancer and Multiple Properties<a name="aws-properties-as-group--examples--Auto_Scaling_Group_with_Load_Balancer_and_Multiple_Properties"></a>
 
-The following example attaches an Elastic Load Balancing load balancer to an Auto Scaling group named `myASGroup`\. It enables two group metrics using the `MetricsCollection` property and creates tags using the `Tags` property\. The first tag, `Environment`=`Production`, is assigned to the Auto Scaling group and to any EC2 instances launched as part of the Auto Scaling group\. The second tag, `Purpose`=`WebServerGroup`, is assigned only to the Auto Scaling group itself\. 
+The following example attaches an Elastic Load Balancing load balancer to an Auto Scaling group named `myASG`\. It enables two group metrics using the `MetricsCollection` property and creates tags using the `Tags` property\. The first tag, `Environment`=`Production`, is assigned to the Auto Scaling group and to any EC2 instances launched as part of the Auto Scaling group\. The second tag, `Purpose`=`WebServerGroup`, is assigned only to the Auto Scaling group itself\. 
 
 It also specifies the launch configuration that the Auto Scaling group uses to launch EC2 instances\. The `AvailabilityZones` property specifies the Availability Zones where the Auto Scaling group's instances will be created\. The [Fn::GetAZs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getavailabilityzones.html) function call \{ "Fn::GetAZs" : "" \} specifies all Availability Zones for the region in which the stack is created\. Amazon EC2 Auto Scaling can scale the number of instances in the group at a minimum of 1 instance and a maximum of 4 based on the values for `MinSize` and `MaxSize`\.
 
@@ -281,7 +281,7 @@ It also specifies the launch configuration that the Auto Scaling group uses to l
 
 ```
 {
-  "myASGroup":{
+  "myASG":{
     "Type":"AWS::AutoScaling::AutoScalingGroup",
     "Properties":{
       "AvailabilityZones":{
@@ -326,7 +326,7 @@ It also specifies the launch configuration that the Auto Scaling group uses to l
 #### YAML<a name="aws-properties-as-group--examples--Auto_Scaling_Group_with_Load_Balancer_and_Multiple_Properties--yaml"></a>
 
 ```
-myASGroup: 
+myASG: 
   Type: AWS::AutoScaling::AutoScalingGroup
   Properties: 
     AvailabilityZones: 
@@ -364,7 +364,7 @@ While the stack update is in progress, the following Auto Scaling processes are 
 
 ```
 {
-  "myASGroup":{
+  "myASG":{
     "UpdatePolicy":{
       "AutoScalingRollingUpdate":{
         "MinInstancesInService":"1",
@@ -399,7 +399,7 @@ While the stack update is in progress, the following Auto Scaling processes are 
 #### YAML<a name="aws-properties-as-group--examples--Rolling_Updates_with_Batch_Update_Policy--yaml"></a>
 
 ```
-myASGroup: 
+myASG: 
   UpdatePolicy: 
     AutoScalingRollingUpdate: 
       MinInstancesInService: "1"
@@ -424,13 +424,13 @@ myASGroup:
 
 ### Batch Update Policy with Wait Condition<a name="aws-properties-as-group--examples--Batch_Update_Policy_with_Wait_Condition"></a>
 
-The following example demonstrates a batch update policy that instructs CloudFormation to wait for new instances to signal the Auto Scaling group before the group proceeds to update the next batch of instances\. In the [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html), the `WaitOnResourceSignals` attribute is set to `true`\. AWS CloudFormation must receive a signal from each new instance within the specified `PauseTime` before continuing the update\. To signal the Auto Scaling group, a [cfn\-signal](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-signal.html) helper script \(not shown\) is run on each instance\. 
+The following example demonstrates a batch update policy that instructs CloudFormation to wait for new instances to signal the Auto Scaling group before the group proceeds to update the next batch of instances\. In the [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html), the `WaitOnResourceSignals` attribute is set to `true`\. CloudFormation must receive a signal from each new instance within the specified `PauseTime` before continuing the update\. To signal the Auto Scaling group, a [cfn\-signal](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-signal.html) helper script \(not shown\) is run on each instance\. 
 
 #### JSON<a name="aws-properties-as-group--examples--Batch_Update_Policy_with_Wait_Condition--json"></a>
 
 ```
 {
-  "myASGroup":{
+  "myASG":{
     "UpdatePolicy":{
       "AutoScalingRollingUpdate":{
         "MinInstancesInService":"1",
@@ -466,7 +466,7 @@ The following example demonstrates a batch update policy that instructs CloudFor
 #### YAML<a name="aws-properties-as-group--examples--Batch_Update_Policy_with_Wait_Condition--yaml"></a>
 
 ```
-myASGroup: 
+myASG: 
   UpdatePolicy: 
     AutoScalingRollingUpdate: 
       MinInstancesInService: "1"
@@ -488,6 +488,114 @@ myASGroup:
       Ref: "myLaunchConfig"
     MaxSize: "3"
     MinSize: "1"
+```
+
+### Auto Scaling Group and Launch Template<a name="aws-properties-as-group--examples--Auto_Scaling_Group_and_Launch_Template"></a>
+
+The following example creates an Auto Scaling group and a launch template that the Auto Scaling group uses to launch EC2 instances\. It uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) intrinsic function to customize the name of the launch template to include the stack name\.
+
+The launch template provisions T2 instances in unlimited mode using the `CPUCredits` property\. By referencing a [parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) value for `ImageId`, the AMI is specified when launching the stack\. A block device mapping specifies an EBS volume to attach to each instance, in addition to attaching the volumes specified by the AMI\. Because `Monitoring` is enabled, EC2 metric data will be available at 1\-minute intervals \(known as detailed monitoring\) through CloudWatch\. 
+
+The example stack creates an Auto Scaling group with a minimum size of 1 and a maximum size of 6\. The initial size of the group is 2 based on the value for `DesiredCapacity`\. The `VPCZoneIdentifier` property specifies the subnets where the instances will be created\. Each instance has 300 seconds to warm up before receiving its first health check\. 
+
+#### JSON<a name="aws-properties-as-group--examples--Auto_Scaling_Group_and_Launch_Template--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion":"2010-09-09",
+  "Parameters":{
+    "myImageId":{
+      "Type":"AWS::EC2::Image::Id"
+    }
+  },
+  "Resources":{
+    "LaunchTemplate":{
+      "Type":"AWS::EC2::LaunchTemplate",
+      "Properties":{
+        "LaunchTemplateName":{"Fn::Sub":"${AWS::StackName}-launch-template"},
+        "LaunchTemplateData":{
+          "BlockDeviceMappings":[{
+            "Ebs":{"VolumeSize":8},
+            "DeviceName":"/dev/sdf"}],
+          "CreditSpecification":{
+            "CpuCredits":"unlimited"
+          },
+          "ImageId":{"Ref":"myImageId"},
+          "KeyName":"my-key-pair-useast2",
+          "InstanceType":"t2.micro",
+          "Monitoring":{"Enabled":true},
+          "SecurityGroupIds":["sg-7c227019", "sg-903004f8"]
+        }
+      }
+    },
+    "myASG":{
+      "Type":"AWS::AutoScaling::AutoScalingGroup",
+      "Properties":{
+        "AutoScalingGroupName":"myASG",
+        "MinSize":1,
+        "MaxSize":6,
+        "DesiredCapacity":2,
+        "HealthCheckGracePeriod":300,
+        "LaunchTemplate":{
+          "LaunchTemplateId":{
+            "Ref":"LaunchTemplate"
+          },
+          "Version":{
+            "Fn::GetAtt":[
+              "LaunchTemplate",
+              "LatestVersionNumber"
+            ]
+          }
+        },
+        "VPCZoneIdentifier":["subnet-5ea0c127", "subnet-6194ea3b", "subnet-c934b782"]
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-properties-as-group--examples--Auto_Scaling_Group_and_Launch_Template--yaml"></a>
+
+```
+AWSTemplateFormatVersion: '2010-09-09'
+Parameters:
+  myImageId:
+    Type: AWS::EC2::Image::Id
+Resources:
+  LaunchTemplate:
+    Type: AWS::EC2::LaunchTemplate
+    Properties: 
+      LaunchTemplateName: !Sub ${AWS::StackName}-launch-template
+      LaunchTemplateData: 
+        BlockDeviceMappings: 
+          - Ebs:
+              VolumeSize: 8
+            DeviceName: /dev/sdf
+        CreditSpecification: 
+          CpuCredits: Unlimited
+        ImageId: !Ref myImageId
+        InstanceType: t2.micro
+        KeyName: my-key-pair-useast2
+        Monitoring: 
+          Enabled: true
+        SecurityGroupIds: 
+          - sg-7c227019
+          - sg-903004f8
+  myASG:
+    Type: AWS::AutoScaling::AutoScalingGroup
+    Properties:
+      AutoScalingGroupName: myASG
+      MinSize: "1"
+      MaxSize: "6"
+      DesiredCapacity: "2"
+      HealthCheckGracePeriod: 300
+      LaunchTemplate:
+        LaunchTemplateId: !Ref LaunchTemplate
+        Version: !GetAtt LaunchTemplate.LatestVersionNumber
+      VPCZoneIdentifier:
+        - subnet-5ea0c127
+        - subnet-6194ea3b
+        - subnet-c934b782
 ```
 
 ## See Also<a name="aws-properties-as-group--seealso"></a>

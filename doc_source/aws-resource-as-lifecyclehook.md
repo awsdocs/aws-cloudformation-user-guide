@@ -122,7 +122,7 @@ The following examples specify lifecycle hooks\.
 
 ### Lifecycle Hook for Instance Termination<a name="aws-resource-as-lifecyclehook--examples--Lifecycle_Hook_for_Instance_Termination"></a>
 
-The following example specifies a lifecycle hook that supports a custom action at instance termination\. It uses the `Ref` intrinsic function to refer to an Auto Scaling group \(whose logical name is `myASGroup`\) that is declared elsewhere in the same template\.
+The following example specifies a lifecycle hook that supports a custom action at instance termination\. It uses the `Ref` intrinsic function to refer to an Auto Scaling group \(whose logical name is `myASG`\) that is declared elsewhere in the same template\.
 
 Note that the snippet uses the `NotificationTargetARN` and `RoleARN` properties to specify the Amazon SNS topic and IAM role to use to receive notification when a lifecycle action occurs\.
 
@@ -134,7 +134,7 @@ Note that the snippet uses the `NotificationTargetARN` and `RoleARN` properties 
     "Type":"AWS::AutoScaling::LifecycleHook",
     "Properties":{
       "AutoScalingGroupName":{
-        "Ref":"myASGroup"
+        "Ref":"myASG"
       },
       "LifecycleTransition":"autoscaling:EC2_INSTANCE_TERMINATING",
       "NotificationTargetARN":{
@@ -158,7 +158,7 @@ myLifecycleHook:
   Type: AWS::AutoScaling::LifecycleHook
   Properties: 
     AutoScalingGroupName: 
-      Ref: myASGroup
+      Ref: myASG
     LifecycleTransition: "autoscaling:EC2_INSTANCE_TERMINATING"
     NotificationTargetARN: 
       Ref: lifecycleHookTopic
@@ -188,7 +188,7 @@ Note that the snippet uses the `NotificationTargetARN` and `RoleARN` properties 
     }
   },
   "Resources":{
-    "myASGroup":{
+    "myASG":{
       "Type":"AWS::AutoScaling::AutoScalingGroup",
       "Properties":{
         "AvailabilityZones":[
@@ -249,7 +249,7 @@ Parameters:
   AZs:
     Type: CommaDelimitedList
 Resources:
-  myASGroup:
+  myASG:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
       AvailabilityZones:
