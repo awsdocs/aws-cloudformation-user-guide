@@ -67,7 +67,7 @@ The ID of the endpoint that the rule is associated with\.
 This value is always `FORWARD`\. Other resolver rule types aren't supported\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `FORWARD | RECURSIVE | SYSTEM`  
+*Allowed Values*: `FORWARD`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-route53resolver-resolverrule-tags"></a>
