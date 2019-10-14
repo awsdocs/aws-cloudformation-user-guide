@@ -21,7 +21,7 @@ Resources:
     Properties:
       Handler: index.handler
       Runtime: nodejs8.10
-      CodeUri: /home/user/code/lambdafunction
+      Code: /home/user/code/lambdafunction
 ```
 
 The following command creates a \.zip file containing the function's source code folder, and then uploads the \.zip file to the root folder of the `my-bucket` bucket\.
@@ -29,10 +29,10 @@ The following command creates a \.zip file containing the function's source code
 **Package Command**
 
 ```
-aws cloudformation package --template /path_to_template/template.json --s3-bucket mybucket --output json > packaged-template.json
+aws cloudformation package --template /path_to_template/template.json --s3-bucket mybucket --use-json > packaged-template.json
 ```
 
-The command saves the template that it generates to the path specified by the `--output` option\. The command replaces the artifact with the S3 location, as shown in the following example:
+The command saves the template that it generates to the path specified by the `--output-template-file` option\. The command replaces the artifact with the S3 location, as shown in the following example:
 
 **Resulting Template**
 
@@ -45,5 +45,5 @@ Resources:
     Properties:
       Handler: index.handler
       Runtime: nodejs8.10
-      CodeUri: s3://mybucket/lambdafunction.zip
+      Code: s3://mybucket/lambdafunction.zip
 ```
