@@ -14,10 +14,10 @@ The following template specifies the local artifact for a Lambda function's sour
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'
-Transform: 'AWS::Serverless-2016-10-31'
+Transform: 'AWS::Lambda-2016-10-31'
 Resources:
   MyFunction:
-    Type: 'AWS::Serverless::Function'
+    Type: 'AWS::Lambda::Function'
     Properties:
       Handler: index.handler
       Runtime: nodejs8.10
@@ -38,10 +38,10 @@ The command saves the template that it generates to the path specified by the `-
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'
-Transform: 'AWS::Serverless-2016-10-31'
+Transform: 'AWS::Lambda-2016-10-31'
 Resources:
   MyFunction:
-    Type: 'AWS::Serverless::Function'
+    Type: 'AWS::Lambda::Function'
     Properties:
       Handler: index.handler
       Runtime: nodejs8.10
