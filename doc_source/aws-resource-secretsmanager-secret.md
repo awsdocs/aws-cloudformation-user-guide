@@ -70,8 +70,8 @@ Either `SecretString` or `SecretBinary` must have a value, but not both\. They c
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-secretsmanager-secret-kmskeyid"></a>
-Specifies the ARN, Key ID, or alias of the AWS KMS customer master key \(CMK\) that's used to encrypt the `SecretString` or `SecretBinary` values for versions of this secret\. If you don't specify this value, then Secrets Manager defaults to the AWS account's CMK \(the one named `aws/secretsmanager`\)\. If an AWS KMS CMK with that name doesn't yet exist, Secrets Manager creates it for you automatically the first time it needs to encrypt a version's `SecretString` or `SecretBinary` fields\.  
-You can use the account's default CMK to encrypt and decrypt only if you call this operation using credentials from the same account that owns the secret\. If the secret is in a different account, then you must create a custom CMK and specify the ARN in this field\. 
+Specifies Key ID or alias of the AWS KMS customer master key \(CMK\) that's used to encrypt the `SecretString` or `SecretBinary` values for versions of this secret\. If you don't specify this value, then Secrets Manager defaults to the AWS account's CMK \(the one named `aws/secretsmanager`\)\. If an AWS KMS CMK with that name doesn't yet exist, Secrets Manager creates it for you automatically the first time it needs to encrypt a version's `SecretString` or `SecretBinary` fields\.  
+You can use the account's default CMK to encrypt and decrypt only if you call this operation using credentials from the same account that owns the secret\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
