@@ -63,26 +63,57 @@ The following example shows how to attach a resource\-based policy to the specif
 #### JSON<a name="aws-resource-secretsmanager-resourcepolicy--examples--Attach_a_resource-based_policy_to_a_secret--json"></a>
 
 ```
- { "MySecret": { "Type": "AWS::SecretsManager::Secret",
-            "Properties": { "Description": "This is a secret that I want to attach a resource-based
-            policy to" } }, "MySecretResourcePolicy": { "Type":
-            "AWS::SecretsManager::ResourcePolicy", "Properties": { "SecretId": {"Ref": "MySecret"},
-            "ResourcePolicy": { "Version": "2012-10-17", "Statement": [ { "Effect": "Deny",
-            "Principal": {"AWS": {"Fn::Sub": "arn:aws:iam::${AWS::AccountId}:root"}}, "Action":
-            "secretsmanager:DeleteSecret", "Resource": "*" } ] } } } }
+{
+	"MySecret": {
+		"Type": "AWS::SecretsManager::Secret",
+		"Properties": {
+			"Description": "This is a secret that I want to attach a resource-based policy to "
+		}
+	},
+	"MySecretResourcePolicy ": {
+		"Type ": "AWS::SecretsManager::ResourcePolicy",
+		"Properties": {
+			"SecretId": {
+				"Ref": "MySecret"
+			},
+			"ResourcePolicy": {
+				"Version": "2012-10-17",
+				"Statement": [{
+					"Effect": "Deny",
+					"Principal": {
+						"AWS": {
+							"Fn::Sub": "arn:aws:iam::${AWS::AccountId}:root"
+						}
+					},
+					"Action": "secretsmanager:DeleteSecret",
+					"Resource": "*"
+				}]
+			}
+		}
+	}
+}
 ```
 
 #### YAML<a name="aws-resource-secretsmanager-resourcepolicy--examples--Attach_a_resource-based_policy_to_a_secret--yaml"></a>
 
 ```
- MySecret: Type: AWS::SecretsManager::Secret Properties:
-            Description: "This is a secret that I want to attach a resource-based policy to" # This
-            is a ResourcePolicy resource which attaches a resource policy to the referenced secret.
-            # The resource policy denies the DeleteSecret action to all principals in the current
-            account. MySecretResourcePolicy: Type: AWS::SecretsManager::ResourcePolicy Properties:
-            SecretId: !Ref MySecret ResourcePolicy: Version: "2012-10-17" Statement: - Effect:
-            "Deny" Principal: AWS: !Sub "arn:aws:iam::${AWS::AccountId}:root" Action:
-            "secretsmanager:DeleteSecret" Resource: "*"
+MySecret: 
+  Type: AWS::SecretsManager::Secret 
+  Properties:
+  Description: "This is a secret that I want to attach a resource-based policy to" 
+  
+# This is a ResourcePolicy resource which attaches a resource policy to the referenced secret.
+# The resource policy denies the DeleteSecret action to all principals in the current account. 
+MySecretResourcePolicy: 
+  Type: AWS::SecretsManager::ResourcePolicy
+  Properties:
+    SecretId: !Ref MySecret 
+    ResourcePolicy: 
+      Version: "2012-10-17" 
+      Statement: 
+      - Effect: "Deny" 
+        Principal: AWS: !Sub "arn:aws:iam::${AWS::AccountId}:root" 
+        Action: "secretsmanager:DeleteSecret" Resource: "*"
 ```
 
 ## See Also<a name="aws-resource-secretsmanager-resourcepolicy--seealso"></a>
