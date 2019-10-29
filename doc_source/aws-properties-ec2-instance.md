@@ -183,7 +183,7 @@ If you specify host for the `Affinity` property, the ID of a dedicated host that
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `IamInstanceProfile`  <a name="cfn-ec2-instance-iaminstanceprofile"></a>
-The IAM instance profile\.  
+The name of the IAM Instance Profile this EC2 Instance will use\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -308,7 +308,7 @@ Specifies whether to enable an instance launched in a VPC to perform NAT\. This 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SsmAssociations`  <a name="cfn-ec2-instance-ssmassociations"></a>
-The SSM [ document](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html) and parameter values in AWS Systems Manager to associate with this instance\. To use this property, you must specify an IAM instance profile role for the instance\. For more information, see [ Create an Instance Profile for Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-configuring-access-role.html) in the *AWS Systems Manager User Guide*\.  
+The SSM [ document](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html) and parameter values in AWS Systems Manager to associate with this instance\. To use this property, you must specify an IAM Instance Profile role for the instance\. For more information, see [ Create an Instance Profile for Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-configuring-access-role.html) in the *AWS Systems Manager User Guide*\.  
 You can currently associate only one document with an instance\.
 *Required*: No  
 *Type*: List of [SsmAssociation](aws-properties-ec2-instance-ssmassociations.md)  
