@@ -4,6 +4,40 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](#ReleaseHistory) | The following resource was updated: AWS::MSK::Cluster\. 
+
+ [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
+Use the `NumberOfBrokerNodes` property to submit an update to change the number of broker nodes in the cluster\.  | October 17, 2019 | 
+| [Updated resource](AWS_Cognito.md) | The following resource was updated: AWS::Cognito::IdentityPoolRoleAttachment 
+
+ [AWS::Cognito::IdentityPoolRoleAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html)   
+Use the `IdentityProvider` parameter to specify the identity provider for which the role is mapped\.  | October 17, 2019 | 
+| [Updated resource](AWS_FSx.md) | The following resource was updated: AWS::FSx::FileSystem 
+
+ [AWS::FSx::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_FSx.html)   
+Use the `SelfManagedActiveDirectoryConfiguration` property to join an Amazon FSx Windows File Server instance to your self\-managed \(including on\-premises\) Microsoft Active Directory \(AD\) directory\.  | October 17, 2019 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::FSx::FileSystem 
+
+ [AWS::FSx::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)   
+Use the `SelfManagedActiveDirectoryConfiguration` property to join an Amazon FSx Windows File Server instance to your self\-managed \(including on\-premises\) Microsoft Active Directory \(AD\) directory\.  | October 17, 2019 | 
+| [Updated resource](#ReleaseHistory) | The following resources were updated: AWS::Cognito::IdentityPoolRoleAttachment, AWS::Cognito::UserPool\. 
+
+ [AWS::Cognito::IdentityPoolRoleAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html)   
+Use the `IdentityProvider` parameter to specify the identity provider for which the role is mapped\. 
+
+ [AWS::Cognito::UserPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html)   
+Use the `EnabledMfas` parameter to enable MFA on a specified user pool\.  | October 17, 2019 | 
+| [Updated Resource](#ReleaseHistory) | The following resource was updated: AWS::Batch::ComputeEnvironment 
+
+ [ComputeResources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html)  
+In the [ComputeResources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html) property type, use the `AllocationStrategy` property to specify the strategy to use to select instance types\.  | October 17, 2019 | 
+| [Updated resources](AWS_Events.md) | The following resource were updated: AWS::Events::EventBusPolicy, AWS::Events::Rule 
+
+ [AWS::Events::EventBusPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html)   
+Use the `EventBusName` property to specify the name of the event bus to associate with this policy\. 
+
+ [AWS::Events::Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html)   
+Use the `EventBusName` property to specify the name of the event bus to associate with this rule\.  | October 3, 2019 | 
 | [Updated resources](AWS_Pinpoint.md) | The following resource was updated: AWS::Pinpoint::App, AWS::Pinpoint::Campaign, and AWS::Pinpoint::Segment\. 
 
  [AWS::Pinpoint::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-app.html)   
@@ -21,10 +55,14 @@ Use the `Tags` property to specify a string\-to\-string map of key\-value pairs 
 
  [AWS::Budgets::Budget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budget.html)   
 In the [BudgetData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-budgetdata.html) property type, use the `PlannedBudgetLimits` property to specify a map containing multiple budget limits, including current or future limits\.  | October 3, 2019 | 
+| [Updated resource](AWS_Cognito.md) | The following resource was updated: AWS::Cognito::UserPool 
+
+ [AWS::Cognito::UserPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html)   
+Use the `EnabledMfas` parameter to enable MFA on a specified user pool\.  | October 3, 2019 | 
 | [New resources](AWS_Cognito.md) | The following resources were added: AWS::Cognito::UserPoolDomain, AWS::Cognito::UserPoolResourceServer, AWS::Cognito::UserPoolIdentityProvider, AWS::Cognito::RiskConfigurationAttachment, AWS::Cognito::UICustomizationAttachment\.  
 
  [AWS::Cognito::UserPoolDomain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html)   
-Use the `AWS::Cognito::UserPoolDomain` resource to create a new domain for a user pool\.\. 
+Use the `AWS::Cognito::UserPoolDomain` resource to create a new domain for a user pool\. 
 
  [AWS::Cognito::UserPoolResourceServer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html)   
 Use the `AWS::Cognito::UserPoolResourceServer` resource to create a new OAuth2\.0 resource server and define custom scopes in it\. 
@@ -37,26 +75,23 @@ Use the `AWS::Cognito::UserPoolRiskConfigurationAttachment` resource to set the 
 
  [AWS::Cognito::UserPoolUICustomizationAttachment ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html)   
 Use the `AWS::Cognito::UserPoolUICustomizationAttachment` resource to set the UI customization information for a user pool's built\-in app UI\.  | October 3, 2019 | 
+| [New resources](AWS_EC2.md) | The following resource were added: AWS::EC2::TrafficMirrorFilter, AWS::EC2::TrafficMirrorFilterRule, AWS::EC2::TrafficMirrorSession, and AWS::EC2::TrafficMirrorTarget 
+
+ [AWS::EC2::TrafficMirrorFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilter.html)   
+Use the `AWS::EC2::TrafficMirrorFilter` resource to specify a traffic mirror filter\. 
+
+ [AWS::EC2::TrafficMirrorFilterRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilterrule.html)   
+Use the `AWS::EC2::TrafficMirrorFilterRule` resource to manage traffic mirror filter rules\. 
+
+ [AWS::EC2::TrafficMirrorSession](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html)   
+Use the `AWS::EC2::TrafficMirrorSession` resource to specify a traffic mirror session\. 
+
+ [AWS::EC2::TrafficMirrorTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrortarget.html)   
+Use the `AWS::EC2::TrafficMirrorTarget` resource to specify a traffic mirror target\.  | October 3, 2019 | 
 | [New resource](AWS_Events.md) | The following resource was added: AWS::Events::EventBus 
 
  [AWS::Events::EventBus](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html)   
 Use the `EventBus` resource to create or update a custom event bus or a partner event bus\.  | October 3, 2019 | 
-| [New resource](AWS_EC2.md) | The following resource was added: AWS::EC2::TrafficMirrorFilter 
-
- [AWS::EC2::TrafficMirrorFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilter.html)   
-Use the `AWS::EC2::TrafficMirrorFilter` resource to specify a traffic mirror filter\.  | October 3, 2019 | 
-| [New resource](AWS_EC2.md) | The following resource was added: AWS::EC2::TrafficMirrorFilterRule 
-
- [AWS::EC2::TrafficMirrorFilterRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilterrule.html)   
-Use the `AWS::EC2::TrafficMirrorFilterRule` resource to manage traffic mirror filter rules\.  | October 3, 2019 | 
-| [New resource](AWS_EC2.md) | The following resource was added: AWS::EC2::TrafficMirrorSession 
-
- [AWS::EC2::TrafficMirrorSession](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html)   
-Use the `AWS::EC2::TrafficMirrorSession` resource to specify a traffic mirror session\.  | October 3, 2019 | 
-| [New resource](AWS_EC2.md) | The following resource was added: AWS::EC2::TrafficMirrorTarget 
-
- [AWS::EC2::TrafficMirrorTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrortarget.html)   
-Use the `AWS::EC2::TrafficMirrorTarget` resource to specify a traffic mirror target\.  | October 3, 2019 | 
 | [Updated resource](AWS_Glue.md) | The following resource was updated: AWS::Glue::DevEndpoint 
 
  [AWS::Glue::DevEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html)   
