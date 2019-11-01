@@ -113,7 +113,8 @@ MySecretResourcePolicy:
       Statement: 
       - Effect: "Deny" 
         Principal: AWS: !Sub "arn:aws:iam::${AWS::AccountId}:root" 
-        Action: "secretsmanager:DeleteSecret" Resource: "*"
+        Action: "secretsmanager:DeleteSecret" 
+	Resource: "*"
 ```
 
 ## See Also<a name="aws-resource-secretsmanager-resourcepolicy--seealso"></a>
