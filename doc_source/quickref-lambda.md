@@ -80,7 +80,7 @@ In the example, when AWS CloudFormation creates the `AllSecurityGroups` custom r
         "Role": { "Fn::GetAtt" : ["LambdaExecutionRole", "Arn"] },
         "Code": {
           "ZipFile":  { "Fn::Join": ["", [
-            "var response = require('cfn-response');",
+            "var response = require('./cfn-response');",
             "exports.handler = function(event, context) {",
             "   var responseData = {Value: event.ResourceProperties.List};",
             "   responseData.Value.push(event.ResourceProperties.AppendedItem);",
@@ -215,7 +215,7 @@ Resources:
       Role: !GetAtt LambdaExecutionRole.Arn
       Code:
         ZipFile: !Sub |
-          var response = require('cfn-response');
+          var response = require('./cfn-response');
           exports.handler = function(event, context) {
              var responseData = {Value: event.ResourceProperties.List};
              responseData.Value.push(event.ResourceProperties.AppendedItem);

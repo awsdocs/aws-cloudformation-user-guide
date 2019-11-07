@@ -12,7 +12,7 @@ The `cfn-response` module is available only when you use the `ZipFile` property 
 For Node\.js functions, use the `require()` function to load the `cfn-response` module\. For example, the following code example creates a `cfn-response` object with the name `response`:
 
 ```
-var response = require('cfn-response');
+var response = require('./cfn-response');
 ```
 
 For Python, use the `import` statement to load the `cfnresponse` module, as shown in the following example:
@@ -56,7 +56,7 @@ In the following Node\.js example, the inline Lambda function takes an input val
 
 ```
 "ZipFile": { "Fn::Join": ["", [
-  "var response = require('cfn-response');",
+  "var response = require('./cfn-response');",
   "exports.handler = function(event, context) {",
   "  var input = parseInt(event.ResourceProperties.Input);",
   "  var responseData = {Value: input * 5};",
@@ -69,7 +69,7 @@ In the following Node\.js example, the inline Lambda function takes an input val
 
 ```
 ZipFile: >
-  var response = require('cfn-response');
+  var response = require('./cfn-response');
   exports.handler = function(event, context) {
     var input = parseInt(event.ResourceProperties.Input);
     var responseData = {Value: input * 5};
