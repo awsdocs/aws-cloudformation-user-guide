@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DisplayName](#cfn-sns-topic-displayname)" : String,
       "[KmsMasterKeyId](#cfn-sns-topic-kmsmasterkeyid)" : String,
       "[Subscription](#cfn-sns-topic-subscription)" : [ [Subscription](aws-properties-sns-subscription.md), ... ],
+      "[Tags](#cfn-sns-topic-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TopicName](#cfn-sns-topic-topicname)" : String
     }
 }
@@ -33,6 +34,8 @@ Properties:
   [KmsMasterKeyId](#cfn-sns-topic-kmsmasterkeyid): String
   [Subscription](#cfn-sns-topic-subscription): 
     - [Subscription](aws-properties-sns-subscription.md)
+  [Tags](#cfn-sns-topic-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TopicName](#cfn-sns-topic-topicname): String
 ```
 
@@ -55,6 +58,13 @@ This property applies only to [server\-side\-encryption](https://docs.aws.amazon
 The SNS subscriptions \(endpoints\) for this topic\.  
 *Required*: No  
 *Type*: [List](aws-properties-sns-subscription.md) of [Subscription](aws-properties-sns-subscription.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-sns-topic-tags"></a>
+The list of tags to add to a new topic\.  
+To be able to tag a topic on creation, you must have the `sns:CreateTopic` and `sns:TagResource` permissions\.
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TopicName`  <a name="cfn-sns-topic-topicname"></a>
@@ -86,9 +96,9 @@ Returns the name of an Amazon SNS topic\.
 
 ## Examples<a name="aws-properties-sns-topic--examples"></a>
 
-### An Amazon SNS topic subscribed to which two Amazon SQS queues are subscribed<a name="aws-properties-sns-topic--examples--An_Amazon_SNS_topic_subscribed_to_which_two_Amazon_SQS_queues_are_subscribed"></a>
+### An Amazon SNS topic with two Amazon SQS queue subscriptions<a name="aws-properties-sns-topic--examples--An_Amazon_SNS_topic_with_two_Amazon_SQS_queue_subscriptions"></a>
 
-#### JSON<a name="aws-properties-sns-topic--examples--An_Amazon_SNS_topic_subscribed_to_which_two_Amazon_SQS_queues_are_subscribed--json"></a>
+#### JSON<a name="aws-properties-sns-topic--examples--An_Amazon_SNS_topic_with_two_Amazon_SQS_queue_subscriptions--json"></a>
 
 ```
 "MySNSTopic" : {
@@ -106,7 +116,7 @@ Returns the name of an Amazon SNS topic\.
 }
 ```
 
-#### YAML<a name="aws-properties-sns-topic--examples--An_Amazon_SNS_topic_subscribed_to_which_two_Amazon_SQS_queues_are_subscribed--yaml"></a>
+#### YAML<a name="aws-properties-sns-topic--examples--An_Amazon_SNS_topic_with_two_Amazon_SQS_queue_subscriptions--yaml"></a>
 
 ```
 MySNSTopic:
@@ -117,12 +127,12 @@ MySNSTopic:
           Fn::GetAtt:
             - "MyQueue1"
             - "Arn"
-          Protocol: "sqs"
+        Protocol: "sqs"
       - Endpoint:
           Fn::GetAtt:
             - "MyQueue2"
             - "Arn"
-          Protocol: "sqs"
+        Protocol: "sqs"
     TopicName: "SampleTopic"
 ```
 

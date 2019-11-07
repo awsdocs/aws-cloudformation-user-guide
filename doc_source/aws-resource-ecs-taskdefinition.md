@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Cpu](#cfn-ecs-taskdefinition-cpu)" : String,
       "[ExecutionRoleArn](#cfn-ecs-taskdefinition-executionrolearn)" : String,
       "[Family](#cfn-ecs-taskdefinition-family)" : String,
+      "[InferenceAccelerators](#cfn-ecs-taskdefinition-inferenceaccelerators)" : [ [InferenceAccelerator](aws-properties-ecs-taskdefinition-inferenceaccelerator.md), ... ],
       "[IpcMode](#cfn-ecs-taskdefinition-ipcmode)" : String,
       "[Memory](#cfn-ecs-taskdefinition-memory)" : String,
       "[NetworkMode](#cfn-ecs-taskdefinition-networkmode)" : String,
@@ -40,6 +41,8 @@ Properties:
   [Cpu](#cfn-ecs-taskdefinition-cpu): String
   [ExecutionRoleArn](#cfn-ecs-taskdefinition-executionrolearn): String
   [Family](#cfn-ecs-taskdefinition-family): String
+  [InferenceAccelerators](#cfn-ecs-taskdefinition-inferenceaccelerators): 
+    - [InferenceAccelerator](aws-properties-ecs-taskdefinition-inferenceaccelerator.md)
   [IpcMode](#cfn-ecs-taskdefinition-ipcmode): String
   [Memory](#cfn-ecs-taskdefinition-memory): String
   [NetworkMode](#cfn-ecs-taskdefinition-networkmode): String
@@ -89,6 +92,12 @@ To use revision numbers when you update a task definition, specify this property
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`InferenceAccelerators`  <a name="cfn-ecs-taskdefinition-inferenceaccelerators"></a>
+The Elastic Inference accelerators to use for the containers in the task\.  
+*Required*: No  
+*Type*: List of [InferenceAccelerator](aws-properties-ecs-taskdefinition-inferenceaccelerator.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `IpcMode`  <a name="cfn-ecs-taskdefinition-ipcmode"></a>
 The IPC resource namespace to use for the containers in the task\. The valid values are `host`, `task`, or `none`\. If `host` is specified, then all containers within the tasks that specified the `host` IPC mode on the same container instance share the same IPC resources with the host Amazon EC2 instance\. If `task` is specified, all containers within the specified task share the same IPC resources\. If `none` is specified, then IPC resources within the containers of a task are private and not shared with other containers in a task or on the container instance\. If no value is specified, then the IPC resource namespace sharing depends on the Docker daemon setting on the container instance\. For more information, see [IPC settings](https://docs.docker.com/engine/reference/run/#ipc-settings---ipc) in the *Docker run reference*\.  
 If the `host` IPC mode is used, be aware that there is a heightened risk of undesired IPC namespace expose\. For more information, see [Docker security](https://docs.docker.com/engine/security/security/)\.  
@@ -128,7 +137,7 @@ For more information, see [Network settings](https://docs.docker.com/engine/refe
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PidMode`  <a name="cfn-ecs-taskdefinition-pidmode"></a>
-The process namespace to use for the containers in the task\. The valid values are `host` or `task`\. If `host` is specified, then all containers within the tasks that specified the `host` PID mode on the same container instance share the same IPC resources with the host Amazon EC2 instance\. If `task` is specified, all containers within the specified task share the same process namespace\. If no value is specified, the default is a private namespace\. For more information, see [PID settings](https://docs.docker.com/engine/reference/run/#pid-settings---pid) in the *Docker run reference*\.  
+The process namespace to use for the containers in the task\. The valid values are `host` or `task`\. If `host` is specified, then all containers within the tasks that specified the `host` PID mode on the same container instance share the same process namespace with the host Amazon EC2 instance\. If `task` is specified, all containers within the specified task share the same process namespace\. If no value is specified, the default is a private namespace\. For more information, see [PID settings](https://docs.docker.com/engine/reference/run/#pid-settings---pid) in the *Docker run reference*\.  
 If the `host` PID mode is used, be aware that there is a heightened risk of undesired process namespace expose\. For more information, see [Docker security](https://docs.docker.com/engine/security/security/)\.  
 This parameter is not supported for Windows containers or tasks using the Fargate launch type\.
 *Required*: No  
@@ -231,7 +240,7 @@ The following example defines an Amazon ECS task definition, which includes two 
         "-D",
         "FOREGROUND"
       ],
-      "Memory":"500",
+      "Memory":"0.5GB",
       "Essential": "true"
     },
     {
@@ -242,7 +251,7 @@ The following example defines an Amazon ECS task definition, which includes two 
         "sh",
         "-c"
       ],
-      "Memory": "500",
+      "Memory": "0.5GB",
       "Command": [
         "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
       ],
@@ -290,7 +299,7 @@ taskdefinition:
           - "/usr/sbin/apache2"
           - "-D"
           - "FOREGROUND"
-        Memory: "500"
+        Memory: "0.5GB"
         Essential: true
       - 
         Name: "busybox"
@@ -299,7 +308,7 @@ taskdefinition:
         EntryPoint: 
           - "sh"
           - "-c"
-        Memory: "500"
+        Memory: "0.5GB"
         Command: 
           - "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
         Essential: false
@@ -347,7 +356,7 @@ The following example defines an Amazon ECS task definition that specifies EC2 a
               "-D",
               "FOREGROUND"
             ],
-            "Memory": "500",
+            "Memory": "0.5GB",
             "Essential": "true"
           },
           {
@@ -358,7 +367,7 @@ The following example defines an Amazon ECS task definition that specifies EC2 a
               "sh",
               "-c"
             ],
-            "Memory": "500",
+            "Memory": "0.5GB",
             "Command": [
               "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
             ],
@@ -412,7 +421,7 @@ Resources:
             - "/usr/sbin/apache2"
             - "-D"
             - "FOREGROUND"
-          Memory: "500"
+          Memory: "0.5GB"
           Essential: true
         - 
           Name: "busybox"
@@ -421,7 +430,7 @@ Resources:
           EntryPoint: 
             - "sh"
             - "-c"
-          Memory: "500"
+          Memory: "0.5GB"
           Command: 
             - "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
           Essential: false

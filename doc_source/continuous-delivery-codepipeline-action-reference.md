@@ -3,10 +3,11 @@
 When you build a CodePipeline pipeline, you add a `Deploy` action to the pipeline with AWS CloudFormation as a provider\. You then must specify which AWS CloudFormation action the pipeline invokes and the action's settings\. This topic describes the AWS CloudFormation configuration properties\. To specify properties, you can use the CodePipeline console, or you can create a [JSON object](https://docs.aws.amazon.com/codepipeline/latest/userguide/how-to-create-pipelines.html#how-to-create-pipeline-cli) to use for the AWS CLI, CodePipeline API, or AWS CloudFormation templates\.
 
 **Topics**
-+ [Configuration Properties \(Console\)](#w4425ab1c13c13b7)
-+ [Configuration Properties \(JSON Object\)](#w4425ab1c13c13b9)
++ [Configuration Properties \(Console\)](#w4905ab1c13c14b7)
++ [Configuration Properties \(JSON Object\)](#w4905ab1c13c14b9)
++ [See Also](#w4905ab1c13c14c13)
 
-## Configuration Properties \(Console\)<a name="w4425ab1c13c13b7"></a>
+## Configuration Properties \(Console\)<a name="w4905ab1c13c14b7"></a>
 
 The CodePipeline [console](https://console.aws.amazon.com/codepipeline/) shows the configuration properties and indicates the properties that are required based on the action mode that you choose\.
 
@@ -58,7 +59,7 @@ The following example defines a value for the `ParameterName` parameter by using
 }
 ```
 
-## Configuration Properties \(JSON Object\)<a name="w4425ab1c13c13b9"></a>
+## Configuration Properties \(JSON Object\)<a name="w4905ab1c13c14b9"></a>
 
 When you specify `CloudFormation` as a provider for a stage action, define the following properties in the `Configuration` property\. Use the [JSON object](https://docs.aws.amazon.com/codepipeline/latest/userguide/how-to-create-pipelines.html#how-to-create-pipeline-cli) for the AWS CLI, CodePipeline API, or AWS CloudFormation templates\. For examples, see [Walkthrough: Building a Pipeline for Test and Production Stacks](continuous-delivery-codepipeline-basic-walkthrough.md) and [AWS CloudFormation Configuration Properties Reference](#continuous-delivery-codepipeline-action-reference)\.
 
@@ -155,9 +156,30 @@ The name of an existing stack or a stack that you want to create\.
 This property is required for all action modes\.
 
 `TemplateConfiguration`  
-The location of a template configuration file, which follows the format `ArtifactName::TemplateConfigurationFileName`\. The template configuration file can contain template parameter values and a stack policy\. If you include sensitive information, such as passwords, restrict access to this file\. For more information, see [AWS CloudFormation Artifacts](continuous-delivery-codepipeline-cfn-artifacts.md)\.  
+`TemplateConfiguration` is the template configuration file\. You include the file in an input artifact to this action\. The template configuration filename follows this format:   
+`Artifactname::TemplateConfigurationFileName`  
+`Artifactname` is the input artifact name as it appears in CodePipeline\. For example, a source stage with the artifact name of `SourceArtifact` and a `test-configuration.json` file name creates a `TemplateConfiguration` name as shown in this example:  
+
+```
+"TemplateConfiguration": "SourceArtifact::test-configuration.json"
+```
+The template configuration file can contain template parameter values and a stack policy\. If you include sensitive information, such as passwords, restrict access to this file\. For an example template configuration file, see [AWS CloudFormation Artifacts](continuous-delivery-codepipeline-cfn-artifacts.md)\.  
 This property is optional\.
 
 `TemplatePath`  
-The location of an AWS CloudFormation template file, which follows the format `ArtifactName::TemplateFileName`\.   
+`TemplatePath` represents the AWS CloudFormation template file\. You include the file in an input artifact to this action\. The file name follows this format:  
+`Artifactname::TemplateFileName`  
+`Artifactname` is the input artifact name as it appears in CodePipeline\. For example, a source stage with the artifact name of `SourceArtifact` and a `template.yaml` file name creates a `TemplatePath` name, as shown in this example:  
+
+```
+"TemplatePath": "SourceArtifact::template.yaml"
+```
 This property is required for the following action modes: `CREATE_UPDATE`, `REPLACE_ON_FAILURE`, and `CHANGE_SET_REPLACE`\. For all other action modes, this property is ignored\.
+
+## See Also<a name="w4905ab1c13c14c13"></a>
+
+The following related resources can help you as you work with these parameters\.
++ For more information about the AWS CloudFormation action parameters in CodePipeline, see the [AWS CloudFormation](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference-CloudFormation.html) action configuration reference in the *AWS CodePipeline User Guide*\.
++ For example template values by action provider, such as for the `Owner` field or the `configuration` fields, see the [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) in the *AWS CodePipeline User Guide*\.
++ To download example pipeline stack templates in YAML or JSON format, see the tutorials under [Create a Pipeline with AWS CloudFormation](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-cloudformation.html) in the *AWS CodePipeline User Guide*\.
++ For an example template configuration file, see [AWS CloudFormation Artifacts](https://docs.aws.amazon.com/codepipeline/latest/userguide/continuous-delivery-codepipeline-cfn-artifacts.html)\.

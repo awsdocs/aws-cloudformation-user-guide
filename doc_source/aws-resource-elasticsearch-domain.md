@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ElasticsearchClusterConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig)" : [ElasticsearchClusterConfig](aws-properties-elasticsearch-domain-elasticsearchclusterconfig.md),
       "[ElasticsearchVersion](#cfn-elasticsearch-domain-elasticsearchversion)" : String,
       "[EncryptionAtRestOptions](#cfn-elasticsearch-domain-encryptionatrestoptions)" : [EncryptionAtRestOptions](aws-properties-elasticsearch-domain-encryptionatrestoptions.md),
+      "[LogPublishingOptions](#cfn-elasticsearch-domain-logpublishingoptions)" : {Key : Value, ...},
       "[NodeToNodeEncryptionOptions](#cfn-elasticsearch-domain-nodetonodeencryptionoptions)" : [NodeToNodeEncryptionOptions](aws-properties-elasticsearch-domain-nodetonodeencryptionoptions.md),
       "[SnapshotOptions](#cfn-elasticsearch-domain-snapshotoptions)" : [SnapshotOptions](aws-properties-elasticsearch-domain-snapshotoptions.md),
       "[Tags](#cfn-elasticsearch-domain-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -43,6 +44,8 @@ Properties:
   [ElasticsearchVersion](#cfn-elasticsearch-domain-elasticsearchversion): String
   [EncryptionAtRestOptions](#cfn-elasticsearch-domain-encryptionatrestoptions): 
     [EncryptionAtRestOptions](aws-properties-elasticsearch-domain-encryptionatrestoptions.md)
+  [LogPublishingOptions](#cfn-elasticsearch-domain-logpublishingoptions): 
+    Key : Value
   [NodeToNodeEncryptionOptions](#cfn-elasticsearch-domain-nodetonodeencryptionoptions): 
     [NodeToNodeEncryptionOptions](aws-properties-elasticsearch-domain-nodetonodeencryptionoptions.md)
   [SnapshotOptions](#cfn-elasticsearch-domain-snapshotoptions): 
@@ -98,6 +101,12 @@ Whether the domain should encrypt data at rest, and if so, the AWS Key Managemen
 *Type*: [EncryptionAtRestOptions](aws-properties-elasticsearch-domain-encryptionatrestoptions.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`LogPublishingOptions`  <a name="cfn-elasticsearch-domain-logpublishingoptions"></a>
+Key\-value pairs to configure slow log publishing\.  
+*Required*: No  
+*Type*: Map of [LogPublishingOption](aws-properties-elasticsearch-domain-logpublishingoption.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `NodeToNodeEncryptionOptions`  <a name="cfn-elasticsearch-domain-nodetonodeencryptionoptions"></a>
 Specifies whether node\-to\-node encryption is enabled\.  
 *Required*: No  
@@ -152,11 +161,11 @@ The following example create an Amazon ES domain that contains two data nodes an
 #### JSON<a name="aws-resource-elasticsearch-domain--examples--Create_an_Amazon_ES_domain_that_contains_two_data_nodes_and_three_master_nodes--json"></a>
 
 ```
-"ElasticsearchDomain":{  
+"ElasticsearchDomain":{
    "Type":"AWS::Elasticsearch::Domain",
-   "Properties":{  
+   "Properties":{
       "DomainName":"test",
-      "ElasticsearchClusterConfig":{  
+      "ElasticsearchClusterConfig":{
          "DedicatedMasterEnabled":"true",
          "InstanceCount":"2",
          "ZoneAwarenessEnabled":"true",
@@ -164,21 +173,21 @@ The following example create an Amazon ES domain that contains two data nodes an
          "DedicatedMasterType":"m3.medium.elasticsearch",
          "DedicatedMasterCount":"3"
       },
-      "EBSOptions":{  
+      "EBSOptions":{
          "EBSEnabled":true,
          "Iops":0,
          "VolumeSize":20,
          "VolumeType":"gp2"
       },
-      "SnapshotOptions":{  
+      "SnapshotOptions":{
          "AutomatedSnapshotStartHour":"0"
       },
-      "AccessPolicies":{  
+      "AccessPolicies":{
          "Version":"2012-10-17",
-         "Statement":[  
-            {  
+         "Statement":[
+            {
                "Effect":"Allow",
-               "Principal":{  
+               "Principal":{
                   "AWS":"arn:aws:iam::123456789012:user/es-user"
                },
                "Action":"es:*",
@@ -186,7 +195,7 @@ The following example create an Amazon ES domain that contains two data nodes an
             }
          ]
       },
-      "AdvancedOptions":{  
+      "AdvancedOptions":{
          "rest.action.multi.allow_explicit_index":"true"
       }
    }
@@ -196,34 +205,34 @@ The following example create an Amazon ES domain that contains two data nodes an
 #### YAML<a name="aws-resource-elasticsearch-domain--examples--Create_an_Amazon_ES_domain_that_contains_two_data_nodes_and_three_master_nodes--yaml"></a>
 
 ```
-ElasticsearchDomain: 
+ElasticsearchDomain:
   Type: AWS::Elasticsearch::Domain
   Properties:
     DomainName: "test"
-    ElasticsearchClusterConfig: 
+    ElasticsearchClusterConfig:
       DedicatedMasterEnabled: "true"
       InstanceCount: "2"
       ZoneAwarenessEnabled: "true"
       InstanceType: "m3.medium.elasticsearch"
       DedicatedMasterType: "m3.medium.elasticsearch"
       DedicatedMasterCount: "3"
-    EBSOptions: 
+    EBSOptions:
       EBSEnabled: true
       Iops: 0
       VolumeSize: 20
       VolumeType: "gp2"
-    SnapshotOptions: 
+    SnapshotOptions:
       AutomatedSnapshotStartHour: "0"
-    AccessPolicies: 
+    AccessPolicies:
       Version: "2012-10-17"
-      Statement: 
-        - 
+      Statement:
+        -
           Effect: "Allow"
-          Principal: 
+          Principal:
             AWS: "arn:aws:iam::123456789012:user/es-user"
           Action: "es:*"
           Resource: "arn:aws:es:us-east-1:846973539254:domain/test/*"
-    AdvancedOptions: 
+    AdvancedOptions:
       rest.action.multi.allow_explicit_index: "true"
 ```
 
