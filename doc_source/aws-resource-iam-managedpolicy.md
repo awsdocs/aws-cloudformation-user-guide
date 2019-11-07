@@ -210,8 +210,8 @@ The following example creates a managed policy and associates it with the `TestD
                         Condition:
                           StringEquals:
                             rds:DatabaseClass: "db.t2.micro"
-           Groups:
-             - "TestDBGroup"
+              Groups:
+                - "TestDBGroup"
 ```
 
 ## See Also<a name="aws-resource-iam-managedpolicy--seealso"></a>
