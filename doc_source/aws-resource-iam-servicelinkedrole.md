@@ -99,7 +99,7 @@ The following example creates a service\-linked role that can be assumed by the 
             Description: "SLR resource create test - &AS;"
             Resources:
               BasicSLR:
-              Type: "AWS::&IAM;::ServiceLinkedRole"
+              Type: "AWS::IAM::ServiceLinkedRole"
               Properties:
                 AWSServiceName: "autoscaling.amazonaws.com" 
                 Description: "Test SLR description"
