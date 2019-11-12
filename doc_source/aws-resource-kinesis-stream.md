@@ -12,12 +12,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Kinesis::Stream",
   "Properties" : {
-      "[Name](#cfn-kinesis-stream-name)" : String,
-      "[RetentionPeriodHours](#cfn-kinesis-stream-retentionperiodhours)" : Integer,
-      "[ShardCount](#cfn-kinesis-stream-shardcount)" : Integer,
-      "[StreamEncryption](#cfn-kinesis-stream-streamencryption)" : [StreamEncryption](aws-properties-kinesis-stream-streamencryption.md),
-      "[Tags](#cfn-kinesis-stream-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
-    }
+    "[Name](#cfn-kinesis-stream-name)" : String,
+    "[RetentionPeriodHours](#cfn-kinesis-stream-retentionperiodhours)" : Integer,
+    "[ShardCount](#cfn-kinesis-stream-shardcount)" : Integer,
+    "[StreamEncryption](#cfn-kinesis-stream-streamencryption)" : [StreamEncryption](aws-properties-kinesis-stream-streamencryption.md),
+    "[Tags](#cfn-kinesis-stream-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+  }
 }
 ```
 
@@ -104,36 +104,36 @@ The following example creates a `Stream` resource that uses three shards, sets a
 
 ```
 "MyStream": { 
-    "Type": "AWS::Kinesis::Stream", 
-    "Properties": {
-        "Name": "MyKinesisStream", 
-        "RetentionPeriodHours" : 168, 
-        "ShardCount": 3,
-        "StreamEncryption": { 
-            "EncryptionType": "KMS", 
-            "KeyId": "!Ref myKey" 
-            }, 
-        "Tags": [ {
-            "Key": "Environment", 
-            "Value": "Production" } ] 
-        } 
+  "Type": "AWS::Kinesis::Stream", 
+  "Properties": {
+    "Name": "MyKinesisStream", 
+    "RetentionPeriodHours" : 168, 
+    "ShardCount": 3,
+    "StreamEncryption": { 
+      "EncryptionType": "KMS", 
+      "KeyId": "!Ref myKey" 
+    }, 
+    "Tags": [{
+      "Key": "Environment", 
+      "Value": "Production"
+    }]
+  } 
 }
 ```
 
 #### YAML<a name="aws-resource-kinesis-stream--examples--Create_a_Stream--yaml"></a>
 
 ```
-MyStream: 
-    Type: AWS::Kinesis::Stream 
-    Properties: 
-        Name: MyKinesisStream 
-        RetentionPeriodHours: 168 
-        ShardCount: 3 
-        StreamEncryption:
-            EncryptionType: KMS 
-            KeyId: !Ref myKey 
-        Tags: 
-            -
-                Key: Environment Value:
-                Production
+MyStream:
+  Type: AWS::Kinesis::Stream
+  Properties:
+    Name: MyKinesisStream
+    RetentionPeriodHours: 168
+    ShardCount: 3
+    StreamEncryption:
+    EncryptionType: KMS
+    KeyId: !Ref myKey
+    Tags:
+      - Key: Environment
+        Value: Production
 ```
