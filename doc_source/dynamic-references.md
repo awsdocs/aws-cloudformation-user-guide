@@ -34,7 +34,7 @@ Currently, SecureString parameters are not supported by Systems Manager in the `
 + `secretsmanager`: AWS Secrets Manager secret\.
 
 **reference\-key**  
-The reference key\. Depending on the type of dynamic reference, the reference key may be comprised of mutliple segments\.  
+The reference key\. Depending on the type of dynamic reference, the reference key may be comprised of multiple segments\.  
 Required\.
 
 ## SSM Parameters<a name="dynamic-references-ssm"></a>

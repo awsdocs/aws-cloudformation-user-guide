@@ -158,88 +158,96 @@ For more information about IDs, see [IAM Identifiers](https://docs.aws.amazon.co
 
 This example shows an embedded policy in the `AWS::IAM::Role`\. The policy is specified inline in the `Policies` property of the `AWS::IAM::Role`\.
 
-#### JSON<a name="aws-resource-iam-role--examples--IAM_Role_with_Embedded_Policy_and_Instance_Profiles--json"></a>
+#### <a name="aws-resource-iam-role--examples--IAM_Role_with_Embedded_Policy_and_Instance_Profiles--language_sc3_fgs_qjb"></a>
 
 ```
-            {
-              "AWSTemplateFormatVersion": "2010-09-09",
-              "Resources": {
-                 "RootRole": {
-                   "Type": "AWS::IAM::Role",
-                   "Properties": {
-                     "AssumeRolePolicyDocument": {
-                        "Version" : "2012-10-17",
-                        "Statement": [ {
-                          "Effect": "Allow",
-                          "Principal": {
-                             "Service": [ "ec2.&api-domain;" ]
-                          },
-                          "Action": [ "sts:AssumeRole" ]
-                       } ]
-                       },
-                       "Path": "/",
-                       "Policies": [ {
-                          "PolicyName": "root",
-                          "PolicyDocument": {
-                             "Version" : "2012-10-17",
-                             "Statement": [ {
-                               "Effect": "Allow",
-                               "Action": "*",
-                               "Resource": "*"
-                             } ]
-                          }
-                          } ]
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "RootRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "ec2.&api-domain;"
+                                ]
+                            },
+                            "Action": [
+                                "sts:AssumeRole"
+                            ]
                         }
-                 },
-                 "RootInstanceProfile": {
-                   "Type": "AWS::IAM::InstanceProfile",
-                   "Properties": {
-                     "Path": "/",
-                     "Roles": [ {
-                       "Ref": "RootRole"
-                     } ]
-                   }
-                 }
-                }
-               }
+                    ]
+                },
+                "Path": "/",
+                "Policies": [
+                    {
+                        "PolicyName": "root",
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Effect": "Allow",
+                                    "Action": "*",
+                                    "Resource": "*"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "RootInstanceProfile": {
+            "Type": "AWS::IAM::InstanceProfile",
+            "Properties": {
+                "Path": "/",
+                "Roles": [
+                    {
+                        "Ref": "RootRole"
+                    }
+                ]
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-iam-role--examples--IAM_Role_with_Embedded_Policy_and_Instance_Profiles--yaml"></a>
 
 ```
-            AWSTemplateFormatVersion: "2010-09-09"
-            Resources:
-              RootRole:
-                Type: "AWS::IAM::Role"
-                Properties:
-                  AssumeRolePolicyDocument:
-                    Version: "2012-10-17"
-                    Statement:
-                      -
-                        Effect: "Allow"
-                        Principal:
-                          Service:
-                            - "ec2.&api-domain;" 
-                        Action: 
-                          - "sts:AssumeRole"
-                 Path: "/"
-                 Policies:
-                   -
-                     PolicyName: "root"
-                     PolicyDocument:
-                       Version: "2012-10-17"
-                       Statement:
-                         -
-                           Effect: "Allow"
-                           Action: "*"
-                           Resource: "*"
-           RootInstanceProfile:
-             Type: "AWS::IAM::InstanceProfile"
-             Properties:
-               Path: "/"
-               Roles:
-                 -
-                   Ref: "RootRole"
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  RootRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - ec2.&api-domain;
+            Action:
+              - 'sts:AssumeRole'
+      Path: /
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action: '*'
+                Resource: '*'
+  RootInstanceProfile:
+    Type: 'AWS::IAM::InstanceProfile'
+    Properties:
+      Path: /
+      Roles:
+        - !Ref RootRole
 ```
 
 ### IAM Role with External Policy and Instance Profiles<a name="aws-resource-iam-role--examples--IAM_Role_with_External_Policy_and_Instance_Profiles"></a>

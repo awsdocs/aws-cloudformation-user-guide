@@ -64,7 +64,9 @@ The ID of the endpoint that the rule is associated with\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleType`  <a name="cfn-route53resolver-resolverrule-ruletype"></a>
-This value is always `FORWARD`\. Other resolver rule types aren't supported\.  
+When you want to forward DNS queries for specified domain name to resolvers on your network, specify `FORWARD`\.  
+When you have a forwarding rule to forward DNS queries for a domain to your network and you want Resolver to process queries for a subdomain of that domain, choose `SYSTEM`\.  
+For example, to forward DNS queries for example\.com to resolvers on your network, you create a rule and specify `FORWARD` for `RuleType`\. To then have Resolver process queries for apex\.example\.com, you create a rule and specify `SYSTEM` for `RuleType`\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `FORWARD | RECURSIVE | SYSTEM`  
@@ -140,10 +142,12 @@ The following example creates an Amazon Route 53 outbound resolver rule\.
     ],
     "TargetIps" : [
       {
-        "IP" : "192.0.2.6"
+        "Ip" : "192.0.2.6",
+        "Port: "53"
       },
       {
-        "IP" : "192.0.2.99"
+        "Ip" : "192.0.2.99,
+        "Port: "53""
       }
     ]
   }
@@ -165,8 +169,11 @@ Properties :
       Value : Engineering
   TargetIps :
     - 
-      IP : 192.0.2.6
-      IP : 192.0.2.99
+      Ip : 192.0.2.6
+      Port : 53
+    -  
+      Ip : 192.0.2.99
+      Port : 53
 ```
 
 ## See Also<a name="aws-resource-route53resolver-resolverrule--seealso"></a>

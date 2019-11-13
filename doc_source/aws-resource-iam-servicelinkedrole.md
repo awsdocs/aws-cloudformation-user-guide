@@ -70,43 +70,42 @@ The following example creates a service\-linked role that can be assumed by the 
 #### JSON<a name="aws-resource-iam-servicelinkedrole--examples--Create_an_IAM_Service-Linked_Role_for_Auto_Scaling--json"></a>
 
 ```
-            { 
-              "Description": "SLR resource create test - Auto Scaling",
-              "Resources": {
-                "BasicSLR": {
-                  "Type": "AWS::IAM::ServiceLinkedRole",
-                  "Properties": {
-                     "AWSServiceName": "autoscaling.amazonaws.com",
-                     "Description": "Test SLR description",
-                     "CustomSuffix":
-                     "TestSuffix"
-                     }
-                    }
-                   },
-                   "Outputs": {
-                     "SLRId": {
-                       "Value": {
-                       "Ref": "BasicSLR"
-                    }
-                   }
-                  }
-                }
+{
+    "Description": "SLR resource create test - Auto Scaling",
+    "Resources": {
+        "BasicSLR": {
+            "Type": "AWS::IAM::ServiceLinkedRole",
+            "Properties": {
+                "AWSServiceName": "autoscaling.amazonaws.com",
+                "Description": "Test SLR description",
+                "CustomSuffix": "TestSuffix"
+            }
+        }
+    },
+    "Outputs": {
+        "SLRId": {
+            "Value": {
+                "Ref": "BasicSLR"
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-iam-servicelinkedrole--examples--Create_an_IAM_Service-Linked_Role_for_Auto_Scaling--yaml"></a>
 
 ```
-            Description: "SLR resource create test - &AS;"
-            Resources:
-              BasicSLR:
-              Type: "AWS::IAM::ServiceLinkedRole"
-              Properties:
-                AWSServiceName: "autoscaling.amazonaws.com" 
-                Description: "Test SLR description"
-                CustomSuffix: "TestSuffix"
-            Outputs:
-              SLRId:
-                Value: !Ref BasicSLR
+Description: SLR resource create test - Auto Scaling
+Resources:
+  BasicSLR:
+    Type: 'AWS::IAM::ServiceLinkedRole'
+    Properties:
+      AWSServiceName: autoscaling.amazonaws.com
+      Description: Test SLR description
+      CustomSuffix: TestSuffix
+Outputs:
+  SLRId:
+    Value: !Ref BasicSLR
 ```
 
 ## See Also<a name="aws-resource-iam-servicelinkedrole--seealso"></a>
