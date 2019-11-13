@@ -79,7 +79,7 @@ Set to `True` if the client is allowed to follow the OAuth protocol when interac
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AllowedOAuthScopes`  <a name="cfn-cognito-userpoolclient-allowedoauthscopes"></a>
-A list of allowed `OAuth` scopes\. Currently supported values are `"phone"`, `"email"`, `"openid"`, and `"Cognito"`\.  
+A list of allowed `OAuth` scopes\. Currently supported values are `"phone"`, `"email"`, `"openid"`, `"profile"` and `"aws.cognito.signin.user.admin"`\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `25`  
