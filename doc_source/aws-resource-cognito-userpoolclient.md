@@ -66,7 +66,8 @@ Properties:
 
 `AllowedOAuthFlows`  <a name="cfn-cognito-userpoolclient-allowedoauthflows"></a>
 Set to `code` to initiate a code grant flow, which provides an authorization code as the response\. This code can be exchanged for access tokens with the token endpoint\.  
-Set to `token` to specify that the client should get the access token \(and, optionally, ID token, based on scopes\) directly\.  
+Set to `implicit` to specify that the client should get the access token \(and, optionally, ID token, based on scopes\) directly\.
+Set to `client_credentials` to specify that the client should get the access token \(and, optionally, ID token, based on scopes\) from the token endpoint using a client and client_secret combination\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `3`  
