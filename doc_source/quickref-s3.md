@@ -233,7 +233,7 @@ For more information about using a custom domain, see [Setting Up a Static Websi
                         "Type": "CNAME",
                         "TTL" : "900",
                         "ResourceRecords" : [
-                            {"Fn::GetAtt":["WWWBucket", "DomainName"]}
+                          { "Fn::Join": [".", ["www", { "Ref": "RootDomainName"}, { "Fn::FindInMap": [ "RegionMap", { "Ref": "AWS::Region"}, "websiteendpoint" ]} ]}
                         ]
                     }
                 ]
@@ -321,8 +321,11 @@ Resources:
             - Domain: !Ref RootDomainName
         Type: CNAME
         TTL: 900
-        ResourceRecords:
-        - !GetAtt WWWBucket.DomainName
+        ResourceRecords: 
+        - !Sub
+          - www.${BucketDomain}.${RegionEndpoint}
+          - BucketDomain: !Ref RootDomainName
+            RegionEndpoint: !FindInMap [ RegionMap, !Ref 'AWS::Region', websiteendpoint]
 Outputs:
   WebsiteURL:
     Value: !GetAtt RootBucket.WebsiteURL
