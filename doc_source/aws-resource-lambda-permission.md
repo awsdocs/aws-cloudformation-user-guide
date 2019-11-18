@@ -80,7 +80,7 @@ The AWS service or account that invokes the function\. If you specify a service,
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceAccount`  <a name="cfn-lambda-permission-sourceaccount"></a>
-For AWS services, the ID of the account that owns the resource\. Use this instead of `SourceArn` to grant permission to resources that are owned by another account \(for example, all of an account's Amazon S3 buckets\)\. Or use it together with `SourceArn` to ensure that the resource is owned by the specified account\. For example, an Amazon S3 bucket could be deleted by its owner and recreated by another account\.  
+For AWS services, the ID of the account that owns the resource\. Use this instead of `SourceArn` to grant permission to resources that are owned by another account \(for example, all of an account's Amazon S3 buckets\)\. Or use it together with `SourceArn` to ensure that the resource is owned by the specified account\. For example, an Amazon S3 bucket could be deleted by its owner and recreated by another account\. Note: `SourceAccount` is not supported for Cloudwatch Events sources\.  
 *Required*: No  
 *Type*: String  
 *Pattern*: `\d{12}`  
