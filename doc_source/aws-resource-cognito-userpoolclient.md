@@ -131,7 +131,7 @@ App callback URLs such as myapp://example are also supported\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExplicitAuthFlows`  <a name="cfn-cognito-userpoolclient-explicitauthflows"></a>
-The explicit authentication flows, which can be one of the following: `ALLOW_CUSTOM_AUTH`, `ADMIN_NO_SRP_AUTH`, `ALLOW_REFRESH_TOKEN_AUTH`, `ALLOW_USER_PASSWORD_AUTH`, `ALLOW_USER_SRP_AUTH`, `CUSTOM_AUTH_FLOW_ONLY`, `USER_PASSWORD_AUTH`, `ALLOW_ADMIN_USER_PASSWORD_AUTH`\.  
+The explicit authentication flows, which can be one of the following: `ALLOW_CUSTOM_AUTH`, `ADMIN_NO_SRP_AUTH`, `ALLOW_REFRESH_TOKEN_AUTH`, `ALLOW_USER_PASSWORD_AUTH`, `ALLOW_USER_SRP_AUTH`, `CUSTOM_AUTH_FLOW_ONLY`, `USER_PASSWORD_AUTH` or `ALLOW_ADMIN_USER_PASSWORD_AUTH`\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
