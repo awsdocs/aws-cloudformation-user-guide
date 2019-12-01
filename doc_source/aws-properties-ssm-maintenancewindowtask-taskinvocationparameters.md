@@ -1,6 +1,6 @@
 # AWS::SSM::MaintenanceWindowTask TaskInvocationParameters<a name="aws-properties-ssm-maintenancewindowtask-taskinvocationparameters"></a>
 
-The `TaskInvocationParameters` property type specifies the task execution parameters for a Maintenance Window task in AWS Systems Manager\.
+The `TaskInvocationParameters` property type specifies the task execution parameters for a maintenance window task in AWS Systems Manager\.
 
  `TaskInvocationParameters` is a property of the [AWS::SSM::MaintenanceWindowTask](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html) property type\.
 

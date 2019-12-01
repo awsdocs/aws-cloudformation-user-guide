@@ -47,7 +47,7 @@ The type of document to create\. Valid document types include: `Command`, `Polic
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ssm-document-tags"></a>
-AWS CloudFormation resource tags to apply to the document, which can help you identify and categorize these resources\.   
+AWS CloudFormation resource tags to apply to the document\. Use tags to help you identify and categorize resources\.   
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `1000`  

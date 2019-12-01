@@ -21,7 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AllowedPattern](#cfn-ssm-parameter-allowedpattern)" : String,
       "[Description](#cfn-ssm-parameter-description)" : String,
       "[Name](#cfn-ssm-parameter-name)" : String,
+      "[Policies](#cfn-ssm-parameter-policies)" : String,
       "[Tags](#cfn-ssm-parameter-tags)" : Json,
+      "[Tier](#cfn-ssm-parameter-tier)" : String,
       "[Type](#cfn-ssm-parameter-type)" : String,
       "[Value](#cfn-ssm-parameter-value)" : String
     }
@@ -36,7 +38,9 @@ Properties:
   [AllowedPattern](#cfn-ssm-parameter-allowedpattern): String
   [Description](#cfn-ssm-parameter-description): String
   [Name](#cfn-ssm-parameter-name): String
+  [Policies](#cfn-ssm-parameter-policies): String
   [Tags](#cfn-ssm-parameter-tags): Json
+  [Tier](#cfn-ssm-parameter-tier): String
   [Type](#cfn-ssm-parameter-type): String
   [Value](#cfn-ssm-parameter-value): String
 ```
@@ -67,11 +71,25 @@ The name of the parameter\.
 *Maximum*: `2048`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`Policies`  <a name="cfn-ssm-parameter-policies"></a>
+Information about the policies assigned to a parameter\.  
+ [Working with Parameter Policies](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-policies.html) in the *AWS Systems Manager User Guide*\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Tags`  <a name="cfn-ssm-parameter-tags"></a>
 An array of key\-value pairs to apply to this resource\.  
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tier`  <a name="cfn-ssm-parameter-tier"></a>
+The parameter tier\.  
+*Required*: No  
+*Type*: String  
+*Allowed Values*: `Advanced | Standard`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-ssm-parameter-type"></a>

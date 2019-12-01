@@ -92,38 +92,38 @@ The following node types are supported by ElastiCache\. Generally speaking, the 
 + General purpose:
   + Current generation: 
 
-     **T2 node types:** `cache.t2.micro`, `cache.t2.small`, `cache.t2.medium` 
+    **M5 node types:** `cache.m5.large`, `cache.m5.xlarge`, `cache.m5.2xlarge`, `cache.m5.4xlarge`, `cache.m5.12xlarge`, `cache.m5.24xlarge` 
 
-     **M3 node types:** `cache.m3.medium`, `cache.m3.large`, `cache.m3.xlarge`, `cache.m3.2xlarge` 
+    **M4 node types:** `cache.m4.large`, `cache.m4.xlarge`, `cache.m4.2xlarge`, `cache.m4.4xlarge`, `cache.m4.10xlarge`
 
-     **M4 node types:** `cache.m4.large`, `cache.m4.xlarge`, `cache.m4.2xlarge`, `cache.m4.4xlarge`, `cache.m4.10xlarge` 
+    **T2 node types:** `cache.t2.micro`, `cache.t2.small`, `cache.t2.medium`
   + Previous generation: \(not recommended\)
 
-     **T1 node types:** `cache.t1.micro` 
+    **T1 node types:** `cache.t1.micro`
 
-     **M1 node types:** `cache.m1.small`, `cache.m1.medium`, `cache.m1.large`, `cache.m1.xlarge` 
+    **M1 node types:** `cache.m1.small`, `cache.m1.medium`, `cache.m1.large`, `cache.m1.xlarge`
+
+    **M3 node types:** `cache.m3.medium`, `cache.m3.large`, `cache.m3.xlarge`, `cache.m3.2xlarge`
 + Compute optimized:
   + Previous generation: \(not recommended\)
 
-     **C1 node types:** `cache.c1.xlarge` 
+    **C1 node types:** `cache.c1.xlarge`
 + Memory optimized:
   + Current generation: 
 
-     **R3 node types:** `cache.r3.large`, `cache.r3.xlarge`, `cache.r3.2xlarge`, `cache.r3.4xlarge`, `cache.r3.8xlarge` 
+    **R5 node types:** `cache.r5.large`, `cache.r5.xlarge`, `cache.r5.2xlarge`, `cache.r5.4xlarge`, `cache.r5.12xlarge`, `cache.r5.24xlarge`
 
-     **R4 node types;** `cache.r4.large`, `cache.r4.xlarge`, `cache.r4.2xlarge`, `cache.r4.4xlarge`, `cache.r4.8xlarge`, `cache.r4.16xlarge` 
+    **R4 node types:** `cache.r4.large`, `cache.r4.xlarge`, `cache.r4.2xlarge`, `cache.r4.4xlarge`, `cache.r4.8xlarge`, `cache.r4.16xlarge`
   + Previous generation: \(not recommended\)
 
-     **M2 node types:** `cache.m2.xlarge`, `cache.m2.2xlarge`, `cache.m2.4xlarge` 
- **Notes:**   
-+ All T2 instances are created in an Amazon Virtual Private Cloud \(Amazon VPC\)\.
-+ Redis \(cluster mode disabled\): Redis backup/restore is not supported on T1 and T2 instances\. 
-+ Redis \(cluster mode enabled\): Backup/restore is not supported on T1 instances\.
-+ Redis Append\-only files \(AOF\) functionality is not supported for T1 or T2 instances\.
-For a complete listing of node types and specifications, see:  
-+  [Amazon ElastiCache Product Features and Details](http://aws.amazon.com/elasticache/details) 
-+  [Cache Node Type\-Specific Parameters for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/ParameterGroups.Memcached.html#ParameterGroups.Memcached.NodeSpecific) 
-+  [Cache Node Type\-Specific Parameters for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/ParameterGroups.Redis.html#ParameterGroups.Redis.NodeSpecific) 
+    **M2 node types:** `cache.m2.xlarge`, `cache.m2.2xlarge`, `cache.m2.4xlarge`
+
+    **R3 node types:** `cache.r3.large`, `cache.r3.xlarge`, `cache.r3.2xlarge`, `cache.r3.4xlarge`, `cache.r3.8xlarge`
+**Additional node type info**  
++ All current generation instance types are created in Amazon VPC by default\.
++ Redis append\-only files \(AOF\) are not supported for T1 or T2 instances\.
++ Redis Multi\-AZ with automatic failover is not supported on T1 instances\.
++ Redis configuration variables `appendonly` and `appendfsync` are not supported on Redis version 2\.8\.22 and later\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -360,6 +360,7 @@ ElasticacheCluster:
         Fn::GetAtt:
           - "ElasticacheSecurityGroup"
           - "GroupId"
+
 ```
 
 ### Memcached Nodes in Multiple Availability Zones<a name="aws-properties-elasticache-cache-cluster--examples--Memcached_Nodes_in_Multiple_Availability_Zones"></a>

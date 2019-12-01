@@ -94,13 +94,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ```
 MyParameterGroup: 
-            Type: AWS::ElastiCache::ParameterGroup
-            Properties: 
-            Description: "MyNewParameterGroup"
-            CacheParameterGroupFamily: "memcached1.4"
-            Properties: 
-            cas_disabled: "1"
-            chunk_size_growth_factor: "1.02"
+   Type: AWS::ElastiCache::ParameterGroup
+   Properties: 
+      Description: "MyNewParameterGroup"
+      CacheParameterGroupFamily: "memcached1.4"
+      Properties: 
+         cas_disabled: "1"
+         chunk_size_growth_factor: "1.02"
 ```
 
 ## See Also<a name="aws-properties-elasticache-parameter-group--seealso"></a>

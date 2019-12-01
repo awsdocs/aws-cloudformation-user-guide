@@ -12,11 +12,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Cognito::UserPoolClient",
   "Properties" : {
+      "[AllowedOAuthFlows](#cfn-cognito-userpoolclient-allowedoauthflows)" : [ String, ... ],
+      "[AllowedOAuthFlowsUserPoolClient](#cfn-cognito-userpoolclient-allowedoauthflowsuserpoolclient)" : Boolean,
+      "[AllowedOAuthScopes](#cfn-cognito-userpoolclient-allowedoauthscopes)" : [ String, ... ],
+      "[AnalyticsConfiguration](#cfn-cognito-userpoolclient-analyticsconfiguration)" : [AnalyticsConfiguration](aws-properties-cognito-userpoolclient-analyticsconfiguration.md),
+      "[CallbackURLs](#cfn-cognito-userpoolclient-callbackurls)" : [ String, ... ],
       "[ClientName](#cfn-cognito-userpoolclient-clientname)" : String,
+      "[DefaultRedirectURI](#cfn-cognito-userpoolclient-defaultredirecturi)" : String,
       "[ExplicitAuthFlows](#cfn-cognito-userpoolclient-explicitauthflows)" : [ String, ... ],
       "[GenerateSecret](#cfn-cognito-userpoolclient-generatesecret)" : Boolean,
+      "[LogoutURLs](#cfn-cognito-userpoolclient-logouturls)" : [ String, ... ],
       "[ReadAttributes](#cfn-cognito-userpoolclient-readattributes)" : [ String, ... ],
       "[RefreshTokenValidity](#cfn-cognito-userpoolclient-refreshtokenvalidity)" : Double,
+      "[SupportedIdentityProviders](#cfn-cognito-userpoolclient-supportedidentityproviders)" : [ String, ... ],
       "[UserPoolId](#cfn-cognito-userpoolclient-userpoolid)" : String,
       "[WriteAttributes](#cfn-cognito-userpoolclient-writeattributes)" : [ String, ... ]
     }
@@ -28,19 +36,74 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Cognito::UserPoolClient
 Properties: 
+  [AllowedOAuthFlows](#cfn-cognito-userpoolclient-allowedoauthflows): 
+    - String
+  [AllowedOAuthFlowsUserPoolClient](#cfn-cognito-userpoolclient-allowedoauthflowsuserpoolclient): Boolean
+  [AllowedOAuthScopes](#cfn-cognito-userpoolclient-allowedoauthscopes): 
+    - String
+  [AnalyticsConfiguration](#cfn-cognito-userpoolclient-analyticsconfiguration): 
+    [AnalyticsConfiguration](aws-properties-cognito-userpoolclient-analyticsconfiguration.md)
+  [CallbackURLs](#cfn-cognito-userpoolclient-callbackurls): 
+    - String
   [ClientName](#cfn-cognito-userpoolclient-clientname): String
+  [DefaultRedirectURI](#cfn-cognito-userpoolclient-defaultredirecturi): String
   [ExplicitAuthFlows](#cfn-cognito-userpoolclient-explicitauthflows): 
     - String
   [GenerateSecret](#cfn-cognito-userpoolclient-generatesecret): Boolean
+  [LogoutURLs](#cfn-cognito-userpoolclient-logouturls): 
+    - String
   [ReadAttributes](#cfn-cognito-userpoolclient-readattributes): 
     - String
   [RefreshTokenValidity](#cfn-cognito-userpoolclient-refreshtokenvalidity): Double
+  [SupportedIdentityProviders](#cfn-cognito-userpoolclient-supportedidentityproviders): 
+    - String
   [UserPoolId](#cfn-cognito-userpoolclient-userpoolid): String
   [WriteAttributes](#cfn-cognito-userpoolclient-writeattributes): 
     - String
 ```
 
 ## Properties<a name="aws-resource-cognito-userpoolclient-properties"></a>
+
+`AllowedOAuthFlows`  <a name="cfn-cognito-userpoolclient-allowedoauthflows"></a>
+Set to `code` to initiate a code grant flow, which provides an authorization code as the response\. This code can be exchanged for access tokens with the token endpoint\.  
+Set to `token` to specify that the client should get the access token \(and, optionally, ID token, based on scopes\) directly\.  
+*Required*: No  
+*Type*: List of String  
+*Maximum*: `3`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AllowedOAuthFlowsUserPoolClient`  <a name="cfn-cognito-userpoolclient-allowedoauthflowsuserpoolclient"></a>
+Set to `True` if the client is allowed to follow the OAuth protocol when interacting with Cognito user pools\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`AllowedOAuthScopes`  <a name="cfn-cognito-userpoolclient-allowedoauthscopes"></a>
+A list of allowed `OAuth` scopes\. Currently supported values are `"phone"`, `"email"`, `"openid"`, and `"Cognito"`\.  
+*Required*: No  
+*Type*: List of String  
+*Maximum*: `25`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AnalyticsConfiguration`  <a name="cfn-cognito-userpoolclient-analyticsconfiguration"></a>
+The Amazon Pinpoint analytics configuration for collecting metrics for this user pool\.  
+*Required*: No  
+*Type*: [AnalyticsConfiguration](aws-properties-cognito-userpoolclient-analyticsconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CallbackURLs`  <a name="cfn-cognito-userpoolclient-callbackurls"></a>
+A list of allowed redirect \(callback\) URLs for the identity providers\.  
+A redirect URI must:  
++ Be an absolute URI\.
++ Be registered with the authorization server\.
++ Not include a fragment component\.
+See [OAuth 2\.0 \- Redirection Endpoint](https://tools.ietf.org/html/rfc6749#section-3.1.2)\.  
+Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes only\.  
+App callback URLs such as myapp://example are also supported\.  
+*Required*: No  
+*Type*: List of String  
+*Maximum*: `100`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClientName`  <a name="cfn-cognito-userpoolclient-clientname"></a>
 The client name for the user pool client you would like to create\.  
@@ -49,6 +112,22 @@ The client name for the user pool client you would like to create\.
 *Minimum*: `1`  
 *Maximum*: `128`  
 *Pattern*: `[\w\s+=,.@-]+`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DefaultRedirectURI`  <a name="cfn-cognito-userpoolclient-defaultredirecturi"></a>
+The default redirect URI\. Must be in the `CallbackURLs` list\.  
+A redirect URI must:  
++ Be an absolute URI\.
++ Be registered with the authorization server\.
++ Not include a fragment component\.
+See [OAuth 2\.0 \- Redirection Endpoint](https://tools.ietf.org/html/rfc6749#section-3.1.2)\.  
+Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes only\.  
+App callback URLs such as myapp://example are also supported\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
+*Pattern*: `[\p{L}\p{M}\p{S}\p{N}\p{P}]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExplicitAuthFlows`  <a name="cfn-cognito-userpoolclient-explicitauthflows"></a>
@@ -63,6 +142,13 @@ Boolean to specify whether you want to generate a secret for the user pool clien
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`LogoutURLs`  <a name="cfn-cognito-userpoolclient-logouturls"></a>
+A list of allowed logout URLs for the identity providers\.  
+*Required*: No  
+*Type*: List of String  
+*Maximum*: `100`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ReadAttributes`  <a name="cfn-cognito-userpoolclient-readattributes"></a>
 The read attributes\.  
 *Required*: No  
@@ -75,6 +161,12 @@ The time limit, in days, after which the refresh token is no longer valid and ca
 *Type*: Double  
 *Minimum*: `0`  
 *Maximum*: `3650`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SupportedIdentityProviders`  <a name="cfn-cognito-userpoolclient-supportedidentityproviders"></a>
+A list of provider names for the identity providers that are supported on this client\. The following are supported: `COGNITO`, `Facebook`, `Google` and `LoginWithAmazon`\.  
+*Required*: No  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserPoolId`  <a name="cfn-cognito-userpoolclient-userpoolid"></a>

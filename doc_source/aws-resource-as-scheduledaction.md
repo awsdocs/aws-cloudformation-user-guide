@@ -115,7 +115,7 @@ The following template snippet includes two scheduled actions that scale the num
     "Type":"AWS::AutoScaling::ScheduledAction",
     "Properties":{
       "AutoScalingGroupName":{
-        "Ref":"myASGroup"
+        "Ref":"myASG"
       },
       "MaxSize":"10",
       "MinSize":"5",
@@ -126,7 +126,7 @@ The following template snippet includes two scheduled actions that scale the num
     "Type":"AWS::AutoScaling::ScheduledAction",
     "Properties":{
       "AutoScalingGroupName":{
-        "Ref":"myASGroup"
+        "Ref":"myASG"
       },
       "MaxSize":"1",
       "MinSize":"1",
@@ -143,7 +143,7 @@ ScheduledActionOut:
   Type: AWS::AutoScaling::ScheduledAction
   Properties:
     AutoScalingGroupName: 
-      Ref: "myASGroup"
+      Ref: "myASG"
     MaxSize: 10
     MinSize: 5
     Recurrence: "0 7 * * *"
@@ -151,7 +151,7 @@ ScheduledActionIn:
   Type: AWS::AutoScaling::ScheduledAction
   Properties:
     AutoScalingGroupName: 
-      Ref: "myASGroup"
+      Ref: "myASG"
     MaxSize: 1
     MinSize: 1
     Recurrence: "0 19 * * *"

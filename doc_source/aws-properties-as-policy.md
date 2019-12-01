@@ -105,12 +105,10 @@ Valid only if the policy type is `StepScaling` or `SimpleScaling`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyType`  <a name="cfn-as-scalingpolicy-policytype"></a>
-The policy type\. The valid values are `SimpleScaling`, `StepScaling`, and `TargetTrackingScaling`\. By default, AWS CloudFormation specifies `SimpleScaling`\.   
+The policy type\. The default value is `SimpleScaling`\.   
+*Allowed Values*: `SimpleScaling`, `StepScaling`, or `TargetTrackingScaling`  
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `64`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScalingAdjustment`  <a name="cfn-as-scalingpolicy-scalingadjustment"></a>
@@ -154,7 +152,7 @@ The following example is a target tracking scaling policy based on the `ASGAvera
 
 ```
 {
-  "AWSTemplateFormatVersion":"2018-09-09",
+  "AWSTemplateFormatVersion":"2010-09-09",
   "Parameters":{
     "AMI":{
       "Type":"String"
@@ -183,7 +181,7 @@ The following example is a target tracking scaling policy based on the `ASGAvera
       "Type":"AWS::AutoScaling::ScalingPolicy",
       "Properties":{
         "AutoScalingGroupName":{
-          "Ref":"myASGroup"
+          "Ref":"myASG"
         },
         "PolicyType":"TargetTrackingScaling",
         "TargetTrackingConfiguration":{
@@ -196,7 +194,7 @@ The following example is a target tracking scaling policy based on the `ASGAvera
         }
       }
     },
-    "myASGroup":{
+    "myASG":{
       "Type":"AWS::AutoScaling::AutoScalingGroup",
       "Properties":{
         "MaxSize":"2",
@@ -219,7 +217,7 @@ The following example is a target tracking scaling policy based on the `ASGAvera
 #### YAML<a name="aws-properties-as-policy--examples--Target_Tracking_Scaling_Policy--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2018-09-09
+AWSTemplateFormatVersion: 2010-09-09
 Parameters:
   AMI:
     Type: String
@@ -238,13 +236,13 @@ Resources:
   myCPUPolicy:
     Type: AWS::AutoScaling::ScalingPolicy
     Properties:
-      AutoScalingGroupName: !Ref myASGroup
+      AutoScalingGroupName: !Ref myASG
       PolicyType: TargetTrackingScaling
       TargetTrackingConfiguration:
         PredefinedMetricSpecification:
           PredefinedMetricType: ASGAverageCPUUtilization
         TargetValue: !Ref PolicyTargetValue
-  myASGroup:
+  myASG:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
       MaxSize: '2'
@@ -267,7 +265,7 @@ The following example is a step scaling policy that increases the number instanc
     "Properties":{
       "AdjustmentType":"ChangeInCapacity",
       "AutoScalingGroupName":{
-        "Ref":"myASGroup"
+        "Ref":"myASG"
       },
       "PolicyType":"StepScaling",
       "MetricAggregationType":"Average",
@@ -296,7 +294,7 @@ ASGScaleOutPolicy:
   Properties: 
     AdjustmentType: "ChangeInCapacity"
     AutoScalingGroupName: 
-      Ref: "myASGroup"
+      Ref: "myASG"
     PolicyType: "StepScaling"
     MetricAggregationType: "Average"
     EstimatedInstanceWarmup: "60"
@@ -325,7 +323,7 @@ The following example is a simple scaling policy that increases the number insta
       "PolicyType":"SimpleScaling",
       "Cooldown":"60",
       "AutoScalingGroupName":{
-        "Ref":"myASGroup"
+        "Ref":"myASG"
       },
       "ScalingAdjustment":1
     }
@@ -343,6 +341,6 @@ ASGScaleOutPolicy:
     PolicyType: "SimpleScaling"
     Cooldown: "60"
     AutoScalingGroupName: 
-      Ref: "myASGroup"
+      Ref: "myASG"
     ScalingAdjustment: 1
 ```

@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CustomerGatewayId](#cfn-ec2-vpnconnection-customergatewayid)" : String,
       "[StaticRoutesOnly](#cfn-ec2-vpnconnection-StaticRoutesOnly)" : Boolean,
       "[Tags](#cfn-ec2-vpnconnection-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[TransitGatewayId](#cfn-ec2-vpnconnection-transitgatewayid)" : String,
       "[Type](#cfn-ec2-vpnconnection-type)" : String,
       "[VpnGatewayId](#cfn-ec2-vpnconnection-vpngatewayid)" : String,
       "[VpnTunnelOptionsSpecifications](#cfn-ec2-vpnconnection-vpntunneloptionsspecifications)" : [ [VpnTunnelOptionsSpecification](aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.md), ... ]
@@ -33,6 +34,7 @@ Properties:
   [StaticRoutesOnly](#cfn-ec2-vpnconnection-StaticRoutesOnly): Boolean
   [Tags](#cfn-ec2-vpnconnection-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [TransitGatewayId](#cfn-ec2-vpnconnection-transitgatewayid): String
   [Type](#cfn-ec2-vpnconnection-type): String
   [VpnGatewayId](#cfn-ec2-vpnconnection-vpngatewayid): String
   [VpnTunnelOptionsSpecifications](#cfn-ec2-vpnconnection-vpntunneloptionsspecifications): 
@@ -60,6 +62,13 @@ Any tags assigned to the VPN connection\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`TransitGatewayId`  <a name="cfn-ec2-vpnconnection-transitgatewayid"></a>
+The ID of the transit gateway associated with the VPN connection\.  
+You must specify either `TransitGatewayId` or `VpnGatewayId`, but not both\.  
+*Required*: Conditional  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `Type`  <a name="cfn-ec2-vpnconnection-type"></a>
 The type of VPN connection\.  
 *Required*: Yes  
@@ -69,7 +78,8 @@ The type of VPN connection\.
 
 `VpnGatewayId`  <a name="cfn-ec2-vpnconnection-vpngatewayid"></a>
 The ID of the virtual private gateway at the AWS side of the VPN connection\.  
-*Required*: Yes  
+You must specify either `TransitGatewayId` or `VpnGatewayId`, but not both\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -83,7 +93,7 @@ The tunnel options for a VPN connection\.
 
 ### Ref<a name="aws-resource-ec2-vpn-connection-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the VPN connection\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the VPN connection\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

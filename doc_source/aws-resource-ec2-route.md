@@ -22,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[NatGatewayId](#cfn-ec2-route-natgatewayid)" : String,
       "[NetworkInterfaceId](#cfn-ec2-route-networkinterfaceid)" : String,
       "[RouteTableId](#cfn-ec2-route-routetableid)" : String,
+      "[TransitGatewayId](#cfn-ec2-route-transitgatewayid)" : String,
       "[VpcPeeringConnectionId](#cfn-ec2-route-vpcpeeringconnectionid)" : String
     }
 }
@@ -40,6 +41,7 @@ Properties:
   [NatGatewayId](#cfn-ec2-route-natgatewayid): String
   [NetworkInterfaceId](#cfn-ec2-route-networkinterfaceid): String
   [RouteTableId](#cfn-ec2-route-routetableid): String
+  [TransitGatewayId](#cfn-ec2-route-transitgatewayid): String
   [VpcPeeringConnectionId](#cfn-ec2-route-vpcpeeringconnectionid): String
 ```
 
@@ -54,7 +56,7 @@ You must specify the `DestinationCidrBlock` or `DestinationIpv6CidrBlock` proper
 
 `DestinationIpv6CidrBlock`  <a name="cfn-ec2-route-destinationipv6cidrblock"></a>
 The IPv6 CIDR block used for the destination match\.  
-You must specify the `DestinationCidrBlock` or `DestinationCidrBlock` property\.  
+You must specify the `DestinationCidrBlock` or `DestinationIpv6CidrBlock` property\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -99,6 +101,12 @@ The ID of the route table\. The routing table must be associated with the same V
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`TransitGatewayId`  <a name="cfn-ec2-route-transitgatewayid"></a>
+The ID of a transit gateway\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `VpcPeeringConnectionId`  <a name="cfn-ec2-route-vpcpeeringconnectionid"></a>
 The ID of a VPC peering connection\.  
 *Required*: No  
@@ -109,7 +117,7 @@ The ID of a VPC peering connection\.
 
 ### Ref<a name="aws-resource-ec2-route-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the route\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the route\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

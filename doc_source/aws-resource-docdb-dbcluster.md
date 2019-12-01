@@ -17,10 +17,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DBClusterIdentifier](#cfn-docdb-dbcluster-dbclusteridentifier)" : String,
       "[DBClusterParameterGroupName](#cfn-docdb-dbcluster-dbclusterparametergroupname)" : String,
       "[DBSubnetGroupName](#cfn-docdb-dbcluster-dbsubnetgroupname)" : String,
+      "[EnableCloudwatchLogsExports](#cfn-docdb-dbcluster-enablecloudwatchlogsexports)" : [ String, ... ],
       "[EngineVersion](#cfn-docdb-dbcluster-engineversion)" : String,
       "[KmsKeyId](#cfn-docdb-dbcluster-kmskeyid)" : String,
-      "[MasterUserPassword](#cfn-docdb-dbcluster-masteruserpassword)" : String,
       "[MasterUsername](#cfn-docdb-dbcluster-masterusername)" : String,
+      "[MasterUserPassword](#cfn-docdb-dbcluster-masteruserpassword)" : String,
       "[Port](#cfn-docdb-dbcluster-port)" : Integer,
       "[PreferredBackupWindow](#cfn-docdb-dbcluster-preferredbackupwindow)" : String,
       "[PreferredMaintenanceWindow](#cfn-docdb-dbcluster-preferredmaintenancewindow)" : String,
@@ -43,10 +44,12 @@ Properties:
   [DBClusterIdentifier](#cfn-docdb-dbcluster-dbclusteridentifier): String
   [DBClusterParameterGroupName](#cfn-docdb-dbcluster-dbclusterparametergroupname): String
   [DBSubnetGroupName](#cfn-docdb-dbcluster-dbsubnetgroupname): String
+  [EnableCloudwatchLogsExports](#cfn-docdb-dbcluster-enablecloudwatchlogsexports): 
+    - String
   [EngineVersion](#cfn-docdb-dbcluster-engineversion): String
   [KmsKeyId](#cfn-docdb-dbcluster-kmskeyid): String
-  [MasterUserPassword](#cfn-docdb-dbcluster-masteruserpassword): String
   [MasterUsername](#cfn-docdb-dbcluster-masterusername): String
+  [MasterUserPassword](#cfn-docdb-dbcluster-masteruserpassword): String
   [Port](#cfn-docdb-dbcluster-port): Integer
   [PreferredBackupWindow](#cfn-docdb-dbcluster-preferredbackupwindow): String
   [PreferredMaintenanceWindow](#cfn-docdb-dbcluster-preferredmaintenancewindow): String
@@ -61,7 +64,7 @@ Properties:
 ## Properties<a name="aws-resource-docdb-dbcluster-properties"></a>
 
 `AvailabilityZones`  <a name="cfn-docdb-dbcluster-availabilityzones"></a>
-A list of Amazon EC2 Availability Zones that instances in the DB cluster can be created in\.  
+A list of Amazon EC2 Availability Zones that instances in the cluster can be created in\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -76,7 +79,7 @@ Constraints:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DBClusterIdentifier`  <a name="cfn-docdb-dbcluster-dbclusteridentifier"></a>
-The DB cluster identifier\. This parameter is stored as a lowercase string\.  
+The cluster identifier\. This parameter is stored as a lowercase string\.  
 Constraints:  
 + Must contain from 1 to 63 letters, numbers, or hyphens\.
 + The first character must be a letter\.
@@ -87,18 +90,24 @@ Example: `my-cluster`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DBClusterParameterGroupName`  <a name="cfn-docdb-dbcluster-dbclusterparametergroupname"></a>
- The name of the DB cluster parameter group to associate with this DB cluster\.  
+ The name of the cluster parameter group to associate with this cluster\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DBSubnetGroupName`  <a name="cfn-docdb-dbcluster-dbsubnetgroupname"></a>
-A DB subnet group to associate with this DB cluster\.  
+A subnet group to associate with this cluster\.  
 Constraints: Must match the name of an existing `DBSubnetGroup`\. Must not be default\.  
 Example: `mySubnetgroup`   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EnableCloudwatchLogsExports`  <a name="cfn-docdb-dbcluster-enablecloudwatchlogsexports"></a>
+A list of log types that need to be enabled for exporting to Amazon CloudWatch Logs\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineVersion`  <a name="cfn-docdb-dbcluster-engineversion"></a>
 The version number of the database engine to use\.  
@@ -107,33 +116,33 @@ The version number of the database engine to use\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-docdb-dbcluster-kmskeyid"></a>
-The AWS KMS key identifier for an encrypted DB cluster\.  
-The AWS KMS key identifier is the Amazon Resource Name \(ARN\) for the AWS KMS encryption key\. If you are creating a DB cluster using the same AWS account that owns the AWS KMS encryption key that is used to encrypt the new DB cluster, you can use the AWS KMS key alias instead of the ARN for the AWS KMS encryption key\.  
+The AWS KMS key identifier for an encrypted cluster\.  
+The AWS KMS key identifier is the Amazon Resource Name \(ARN\) for the AWS KMS encryption key\. If you are creating a cluster using the same AWS account that owns the AWS KMS encryption key that is used to encrypt the new cluster, you can use the AWS KMS key alias instead of the ARN for the AWS KMS encryption key\.  
 If an encryption key is not specified in `KmsKeyId`:  
 + If `ReplicationSourceIdentifier` identifies an encrypted source, then Amazon DocumentDB uses the encryption key that is used to encrypt the source\. Otherwise, Amazon DocumentDB uses your default encryption key\. 
 + If the `StorageEncrypted` parameter is `true` and `ReplicationSourceIdentifier` is not specified, Amazon DocumentDB uses your default encryption key\.
 AWS KMS creates the default encryption key for your AWS account\. Your AWS account has a different default encryption key for each AWS Region\.  
-If you create a replica of an encrypted DB cluster in another AWS Region, you must set `KmsKeyId` to a KMS key ID that is valid in the destination AWS Region\. This key is used to encrypt the replica in that AWS Region\.  
+If you create a replica of an encrypted cluster in another AWS Region, you must set `KmsKeyId` to a KMS key ID that is valid in the destination AWS Region\. This key is used to encrypt the replica in that AWS Region\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`MasterUserPassword`  <a name="cfn-docdb-dbcluster-masteruserpassword"></a>
-The password for the master database user\. This password can contain any printable ASCII character except forward slash \(/\), double quote \("\), or the "at" symbol \(@\)\.  
-Constraints: Must contain from 8 to 41 characters\.  
-*Required*: Conditional  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `MasterUsername`  <a name="cfn-docdb-dbcluster-masterusername"></a>
-The name of the master user for the DB cluster\.  
+The name of the master user for the cluster\.  
 Constraints:  
-+ Must be from 1 to 16 letters or numbers\.
++ Must be from 1 to 63 letters or numbers\.
 + The first character must be a letter\.
 + Cannot be a reserved word for the chosen database engine\.
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`MasterUserPassword`  <a name="cfn-docdb-dbcluster-masteruserpassword"></a>
+The password for the master database user\. This password can contain any printable ASCII character except forward slash \(/\), double quote \("\), or the "at" symbol \(@\)\.  
+Constraints: Must contain from 8 to 100 characters\.  
+*Required*: Conditional  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Port`  <a name="cfn-docdb-dbcluster-port"></a>
 Specifies the port that the database engine is listening on\.  
@@ -164,8 +173,8 @@ Constraints: Minimum 30\-minute window\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnapshotIdentifier`  <a name="cfn-docdb-dbcluster-snapshotidentifier"></a>
-The identifier for the DB snapshot or DB cluster snapshot to restore from\.  
-You can use either the name or the Amazon Resource Name \(ARN\) to specify a DB cluster snapshot\. However, you can use only the ARN to specify a DB snapshot\.  
+The identifier for the snapshot or cluster snapshot to restore from\.  
+You can use either the name or the Amazon Resource Name \(ARN\) to specify a cluster snapshot\. However, you can use only the ARN to specify a snapshot\.  
 Constraints:  
 + Must match the identifier of an existing snapshot\.
 *Required*: No  
@@ -173,19 +182,19 @@ Constraints:
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageEncrypted`  <a name="cfn-docdb-dbcluster-storageencrypted"></a>
-Specifies whether the DB cluster is encrypted\.  
+Specifies whether the cluster is encrypted\.  
 *Required*: Conditional  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-docdb-dbcluster-tags"></a>
-The tags to be assigned to the DB cluster\.  
+The tags to be assigned to the cluster\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcSecurityGroupIds`  <a name="cfn-docdb-dbcluster-vpcsecuritygroupids"></a>
-A list of EC2 VPC security groups to associate with this DB cluster\.  
+A list of EC2 VPC security groups to associate with this cluster\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -207,16 +216,16 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-docdb-dbcluster-return-values-fn--getatt-fn--getatt"></a>
 
 `ClusterResourceId`  <a name="ClusterResourceId-fn::getatt"></a>
-The resource id for the DB cluster; for example: `cluster-ABCD1234EFGH5678IJKL90MNOP`\. The cluster ID uniquely identifies the cluster and is used in things like IAM authentication policies\. 
+The resource id for the cluster; for example: `cluster-ABCD1234EFGH5678IJKL90MNOP`\. The cluster ID uniquely identifies the cluster and is used in things like IAM authentication policies\. 
 
 `Endpoint`  <a name="Endpoint-fn::getatt"></a>
-The connection endpoint for the DB cluster, such as `sample-cluster.cluster-cozrlsfrcjoc.us-east-1.docdb.amazonaws.com`\.
+The connection endpoint for the cluster, such as `sample-cluster.cluster-cozrlsfrcjoc.us-east-1.docdb.amazonaws.com`\.
 
 `Port`  <a name="Port-fn::getatt"></a>
-The port number on which the DB cluster accepts connections\. For example: `27017`\.
+The port number on which the cluster accepts connections\. For example: `27017`\.
 
 `ReadEndpoint`  <a name="ReadEndpoint-fn::getatt"></a>
-The reader endpoint for the DB cluster\. For example: `sample-cluster.cluster-ro-cozrlsfrcjoc.us-east-1.docdb.amazonaws.com`\.
+The reader endpoint for the cluster\. For example: `sample-cluster.cluster-ro-cozrlsfrcjoc.us-east-1.docdb.amazonaws.com`\.
 
 ## Examples<a name="aws-resource-docdb-dbcluster--examples"></a>
 
@@ -232,10 +241,10 @@ The reader endpoint for the DB cluster\. For example: `sample-cluster.cluster-ro
          "Type" : "AWS::DocDB::DBCluster",
          "Properties" : {
             "BackupRetentionPeriod" : 8,
-            "DBClusterIdentufier" : "sample-cluster",
+            "DBClusterIdentifier" : "sample-cluster",
             "DBClusterParameterGroupName" : "default.docdb3.6",
             "DBSubnetGroupName" : "default",
-            "KMSKeyId" : "your-kms-key-id",
+            "KmsKeyId" : "your-kms-key-id",
             "MasterUsername" : "your-master-username",
             "MasterUserPassword" : "your-master-user-password",
             "Port" : "27017",
@@ -259,10 +268,10 @@ Resources:
       Type: "AWS::DocDB::DBCluster"
       Properties: 
          BackupRetentionPeriod : 8
-         DBClusterIdentufier : "sample-cluster"
+         DBClusterIdentifier : "sample-cluster"
          DBClusterParameterGroupName : "default.docdb3.6"
          DBSubnetGroupName : "default"
-         KMSKeyId : "your-kms-key-id"
+         KmsKeyId : "your-kms-key-id"
          MasterUsername : "your-master-username"
          MasterUserPassword : "your-master-user-password"
          Port : "27017"

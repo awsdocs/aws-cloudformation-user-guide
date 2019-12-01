@@ -46,7 +46,10 @@ Properties:
 ## Properties<a name="aws-properties-ec2-security-group-properties"></a>
 
 `GroupDescription`  <a name="cfn-ec2-securitygroup-groupdescription"></a>
-The sets of IP permissions\.  
+A description for the security group\. This is informational only\.  
+Constraints: Up to 255 characters in length  
+Constraints for EC2\-Classic: ASCII characters  
+Constraints for EC2\-VPC: a\-z, A\-Z, 0\-9, spaces, and \.\_\-:/\(\)\#,@\[\]\+=&;\{\}\!$\*  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -141,7 +144,7 @@ The following example specifies a security group with an ingress and egress rule
 ```
 InstanceSecurityGroup:
   Type: AWS::EC2::SecurityGroup
-   Properties:
+  Properties:
       GroupDescription: Allow http to client host
       VpcId:
          Ref: myVPC

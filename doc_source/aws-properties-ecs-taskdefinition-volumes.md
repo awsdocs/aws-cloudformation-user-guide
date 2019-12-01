@@ -1,6 +1,6 @@
 # AWS::ECS::TaskDefinition Volume<a name="aws-properties-ecs-taskdefinition-volumes"></a>
 
-The `Volume` property specifies a data volume used in a task definition\. For tasks that use a Docker volume, specify a `DockerVolumeConfiguration`\. For tasks that use a bind mount host volume, specify a `host` and optional `sourcePath`\. For more information, see [Using Data Volumes in Tasks](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html)\.
+The `Volume` property specifies a data volume used in a task definition\. For tasks that use a Docker volume, specify a `DockerVolumeConfiguration`\. For tasks that use a bind mount host volume, specify a `host` and optional `sourcePath`\. For more information, see [Using Data Volumes in Tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html)\.
 
 ## Syntax<a name="aws-properties-ecs-taskdefinition-volumes-syntax"></a>
 

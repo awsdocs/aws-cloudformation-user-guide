@@ -50,7 +50,7 @@ The Amazon Resource Name \(ARN\) of the IAM role to use for this state machine\.
 `StateMachineName`  <a name="cfn-stepfunctions-statemachine-statemachinename"></a>
 The name of the state machine\.   
 A name must *not* contain:  
-+ whitespace
++ white space
 + brackets `< > { } [ ]` 
 + wildcard characters `? *` 
 + special characters `" # % \ ^ | ~ ` $ & , ; : /` 
@@ -61,7 +61,7 @@ A name must *not* contain:
 
 `Tags`  <a name="cfn-stepfunctions-statemachine-tags"></a>
 The list of tags to add to a resource\.  
-Tags may only contain unicode letters, digits, whitespace, or these symbols: `_ . : / = + - @`\.  
+Tags may only contain Unicode letters, digits, white space, or these symbols: `_ . : / = + - @`\.  
 *Required*: No  
 *Type*: List of [TagsEntry](aws-properties-stepfunctions-statemachine-tagsentry.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

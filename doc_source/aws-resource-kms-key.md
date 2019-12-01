@@ -1,6 +1,6 @@
 # AWS::KMS::Key<a name="aws-resource-kms-key"></a>
 
-The `AWS::KMS::Key` resource specifies a [customer master key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) \(CMK\) in AWS Key Management Service \(AWS KMS\)\. Authorized users can use the CMK to encrypt and decrypt small amounts of data \(up to 4096 bytes\), but they are more commonly used to generate data keys\. You can also use CMKs to encrypt data stored in AWS services that are [integrated with AWS KMS](https://aws.amazon.com/kms/features/#AWS_Service_Integration) or within their applications\. For more information, see [What is the AWS Key Management Service?](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) in the *AWS Key Management Service Developer Guide*\.
+The `AWS::KMS::Key` resource specifies a [customer master key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) \(CMK\) in AWS Key Management Service \(AWS KMS\)\. Authorized users can use the CMK to encrypt and decrypt small amounts of data \(up to 4096 bytes\), but they are more commonly used to generate data keys\. You can also use CMKs to encrypt data stored in AWS services that are [integrated with AWS KMS](http://aws.amazon.com/kms/features/#AWS_Service_Integration) or within their applications\. For more information, see [What is the AWS Key Management Service?](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) in the *AWS Key Management Service Developer Guide*\.
 
 ## Syntax<a name="aws-resource-kms-key-syntax"></a>
 

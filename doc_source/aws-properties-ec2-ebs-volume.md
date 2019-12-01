@@ -68,54 +68,62 @@ Indicates whether the volume is auto\-enabled for I/O operations\. By default, A
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailabilityZone`  <a name="cfn-ec2-ebs-volume-availabilityzone"></a>
-The Availability Zone in which to create the new volume\.  
+The Availability Zone in which to create the volume\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Encrypted`  <a name="cfn-ec2-ebs-volume-encrypted"></a>
-Indicates whether the volume is encrypted\. You can attach encrypted Amazon EBS volumes only to instance types that support Amazon EBS encryption\. Volumes that are created from encrypted snapshots are automatically encrypted\. You can't create an encrypted volume from an unencrypted snapshot, or vice versa\. If your AMI uses encrypted volumes, you can launch the AMI only on supported instance types\.  
-Requirement is conditional: If you specify the `KmsKeyId` property, you must enable encryption\.   
+Specifies whether the volume should be encrypted\. The effect of setting the encryption state to `true` depends on the volume origin \(new or from a snapshot\), starting encryption state, ownership, and whether encryption by default is enabled\. For more information, see [Encryption by Default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-by-default) in the *Amazon Elastic Compute Cloud User Guide*\.  
+Encrypted Amazon EBS volumes must be attached to instances that support Amazon EBS encryption\. For more information, see [Supported Instance Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Iops`  <a name="cfn-ec2-ebs-volume-iops"></a>
-The number of I/O operations per second \(IOPS\) that the volume supports\. For Provisioned IOPS SSD volumes, this represents the number of IOPS that are provisioned for the volume\. For General Purpose SSD volumes, this represents the baseline performance of the volume and the rate at which the volume accumulates I/O credits for bursting\. For more information, see [Amazon EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
-Constraints: Range is 100\-16,000 IOPS for `gp2` volumes and 100 to 64,000IOPS for `io1` volumes, in most Regions\. The maximum IOPS for `io1` of 64,000 is guaranteed only on [Nitro\-based instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)\. Other instance families guarantee performance up to 32,000 IOPS\.  
-Requirement is conditional: This parameter is required for requests to create `io1` volumes; it is not used in requests to create `gp2`, `st1`, `sc1`, or `standard` volumes\.  
+The number of I/O operations per second \(IOPS\) to provision for the volume, with a maximum ratio of 50 IOPS/GiB\. Range is 100 to 64,000 IOPS for volumes in most Regions\. Maximum IOPS of 64,000 is guaranteed only on [Nitro\-based instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)\. Other instance families guarantee performance up to 32,000 IOPS\. For more information, see [Amazon EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+This parameter is valid only for Provisioned IOPS SSD \(io1\) volumes\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-ec2-ebs-volume-kmskeyid"></a>
-The Amazon Resource Name \(ARN\) of the AWS Key Management Service master key that is used to create the encrypted volume, such as `arn:aws:kms:us-east-2:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef`\. If you create an encrypted volume and don't specify this property, AWS CloudFormation uses the default master key\.  
+The identifier of the AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) to use for Amazon EBS encryption\. If this parameter is not specified, your AWS managed CMK for EBS is used\. If `KmsKeyId` is specified, the encrypted state must be `true`\.  
+You can specify the CMK using any of the following:  
++ Key ID\. For example, key/1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.
++ Key alias\. For example, alias/ExampleAlias\.
++ Key ARN\. For example, arn:aws:kms:*us\-east\-1*:*012345678910*:key/*abcd1234\-a123\-456a\-a12b\-a123b4cd56ef*\.
++ Alias ARN\. For example, arn:aws:kms:*us\-east\-1*:*012345678910*:alias/*ExampleAlias*\.
+AWS authenticates the CMK asynchronously\. Therefore, if you specify an ID, alias, or ARN that is not valid, the action can appear to complete, but eventually fails\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Size`  <a name="cfn-ec2-ebs-volume-size"></a>
-The size of the volume, in gibibytes \(GiBs\)\.  
- If you specify the `SnapshotId` property, specify a size that is equal to or greater than the size of the snapshot\. If you don't specify a size, EC2 uses the size of the snapshot as the volume size\.  
-Requirement is conditional: If you don't specify a value for the `SnapshotId` property, then you must specify this property\.  
+The size of the volume, in GiBs\.  
+Constraints: 1\-16,384 for `gp2`, 4\-16,384 for `io1`, 500\-16,384 for `st1`, 500\-16,384 for `sc1`, and 1\-1,024 for `standard`\. If you specify a snapshot, the volume size must be equal to or larger than the snapshot size\.  
+Default: If you're creating the volume from a snapshot and don't specify a volume size, the default is the snapshot size\.  
+At least one of Size or SnapshotId is required\.
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnapshotId`  <a name="cfn-ec2-ebs-volume-snapshotid"></a>
 The snapshot from which to create the volume\.  
+At least one of Size or SnapshotId are required\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-ec2-ebs-volume-tags"></a>
-An arbitrary set of tags \(key–value pairs\) for this volume\.  
+The tags to apply to the volume during creation\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeType`  <a name="cfn-ec2-ebs-volume-volumetype"></a>
-The volume type\. This can be `gp2` for General Purpose SSD, `io1` for Provisioned IOPS SSD, `st1` for Throughput Optimized HDD, `sc1` for Cold HDD, or `standard` for Magnetic volumes\. If you set the type to `io1`, you must also set the `Iops` property\.  
+The volume type\. This can be `gp2` for General Purpose SSD, `io1` for Provisioned IOPS SSD, `st1` for Throughput Optimized HDD, `sc1` for Cold HDD, or `standard` for Magnetic volumes\.  
+Defaults: If no volume type is specified, the default is `standard` in us\-east\-1, eu\-west\-1, eu\-central\-1, us\-west\-2, us\-west\-1, sa\-east\-1, ap\-northeast\-1, ap\-northeast\-2, ap\-southeast\-1, ap\-southeast\-2, ap\-south\-1, us\-gov\-west\-1, and cn\-north\-1\. In all other Regions, EBS defaults to `gp2`\.  
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `gp2 | io1 | sc1 | st1 | standard`  
@@ -151,6 +159,21 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 }
 ```
 
+#### YAML<a name="aws-properties-ec2-ebs-volume--examples--Encrypted_Amazon_EBS_Volume_with_DeletionPolicy_to_Make_a_Snapshot_on_Delete--yaml"></a>
+
+```
+NewVolume:
+  Type: AWS::EC2::Volume
+  Properties: 
+    Size: 100
+    Encrypted: true
+    AvailabilityZone: !GetAtt Ec2Instance.AvailabilityZone
+    Tags:
+      - Key: MyTag
+        Value: TagValue
+  DeletionPolicy: Snapshot
+```
+
 ### Amazon EBS Volume with 100 Provisioned IOPS<a name="aws-properties-ec2-ebs-volume--examples--Amazon_EBS_Volume_with_100_Provisioned_IOPS"></a>
 
 #### JSON<a name="aws-properties-ec2-ebs-volume--examples--Amazon_EBS_Volume_with_100_Provisioned_IOPS--json"></a>
@@ -165,6 +188,18 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
       "AvailabilityZone" : { "Fn::GetAtt" : [ "EC2Instance", "AvailabilityZone" ] }
    }
 }
+```
+
+#### YAML<a name="aws-properties-ec2-ebs-volume--examples--Amazon_EBS_Volume_with_100_Provisioned_IOPS--yaml"></a>
+
+```
+NewVolume:
+  Type: AWS::EC2::Volume
+  Properties: 
+    Size: 100
+    VolumeType: io1
+    Iops: 100
+    AvailabilityZone: !GetAtt Ec2Instance.AvailabilityZone
 ```
 
 ## See Also<a name="aws-properties-ec2-ebs-volume--seealso"></a>

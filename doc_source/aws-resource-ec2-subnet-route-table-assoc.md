@@ -73,11 +73,11 @@ The following example associates a subnet with a route table\.
 ```
   mySubnetRouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
-     Properties:
-       SubnetId:
-         Ref: mySubnet
-       RouteTableId:
-         Ref: myRouteTable
+    Properties:
+      SubnetId:
+        Ref: mySubnet
+      RouteTableId:
+        Ref: myRouteTable
 ```
 
 ## See Also<a name="aws-resource-ec2-subnet-route-table-assoc--seealso"></a>

@@ -28,6 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[LoggingConfiguration](#cfn-s3-bucket-loggingconfig)" : [LoggingConfiguration](aws-properties-s3-bucket-loggingconfig.md),
       "[MetricsConfigurations](#cfn-s3-bucket-metricsconfigurations)" : [ [MetricsConfiguration](aws-properties-s3-bucket-metricsconfiguration.md), ... ],
       "[NotificationConfiguration](#cfn-s3-bucket-notification)" : [NotificationConfiguration](aws-properties-s3-bucket-notificationconfig.md),
+      "[ObjectLockConfiguration](#cfn-s3-bucket-objectlockconfiguration)" : [ObjectLockConfiguration](aws-properties-s3-bucket-objectlockconfiguration.md),
+      "[ObjectLockEnabled](#cfn-s3-bucket-objectlockenabled)" : Boolean,
       "[PublicAccessBlockConfiguration](#cfn-s3-bucket-publicaccessblockconfiguration)" : [PublicAccessBlockConfiguration](aws-properties-s3-bucket-publicaccessblockconfiguration.md),
       "[ReplicationConfiguration](#cfn-s3-bucket-replicationconfiguration)" : [ReplicationConfiguration](aws-properties-s3-bucket-replicationconfiguration.md),
       "[Tags](#cfn-s3-bucket-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -62,6 +64,9 @@ Properties:
     - [MetricsConfiguration](aws-properties-s3-bucket-metricsconfiguration.md)
   [NotificationConfiguration](#cfn-s3-bucket-notification): 
     [NotificationConfiguration](aws-properties-s3-bucket-notificationconfig.md)
+  [ObjectLockConfiguration](#cfn-s3-bucket-objectlockconfiguration): 
+    [ObjectLockConfiguration](aws-properties-s3-bucket-objectlockconfiguration.md)
+  [ObjectLockEnabled](#cfn-s3-bucket-objectlockenabled): Boolean
   [PublicAccessBlockConfiguration](#cfn-s3-bucket-publicaccessblockconfiguration): 
     [PublicAccessBlockConfiguration](aws-properties-s3-bucket-publicaccessblockconfiguration.md)
   [ReplicationConfiguration](#cfn-s3-bucket-replicationconfiguration): 
@@ -143,6 +148,19 @@ Configuration that defines how Amazon S3 handles bucket notifications\.
 *Required*: No  
 *Type*: [NotificationConfiguration](aws-properties-s3-bucket-notificationconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ObjectLockConfiguration`  <a name="cfn-s3-bucket-objectlockconfiguration"></a>
+Places an object lock configuration on the specified bucket\. The rule specified in the object lock configuration will be applied by default to every new object placed in the specified bucket\.  
+*Required*: No  
+*Type*: [ObjectLockConfiguration](aws-properties-s3-bucket-objectlockconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ObjectLockEnabled`  <a name="cfn-s3-bucket-objectlockenabled"></a>
+Indicates whether this bucket has an object lock configuration enabled\.  
+*Required*: No  
+*Type*: Boolean  
+*Allowed Values*: `Enabled`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PublicAccessBlockConfiguration`  <a name="cfn-s3-bucket-publicaccessblockconfiguration"></a>
 Configuration that defines how Amazon S3 handles public access\.  

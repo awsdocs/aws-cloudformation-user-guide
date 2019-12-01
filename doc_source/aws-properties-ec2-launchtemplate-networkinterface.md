@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Description](#cfn-ec2-launchtemplate-networkinterface-description)" : String,
   "[DeviceIndex](#cfn-ec2-launchtemplate-networkinterface-deviceindex)" : Integer,
   "[Groups](#cfn-ec2-launchtemplate-networkinterface-groups)" : [ String, ... ],
+  "[InterfaceType](#cfn-ec2-launchtemplate-networkinterface-interfacetype)" : String,
   "[Ipv6AddressCount](#cfn-ec2-launchtemplate-networkinterface-ipv6addresscount)" : Integer,
   "[Ipv6Addresses](#cfn-ec2-launchtemplate-networkinterface-ipv6addresses)" : [ [Ipv6Add](aws-properties-ec2-launchtemplate-ipv6add.md), ... ],
   "[NetworkInterfaceId](#cfn-ec2-launchtemplate-networkinterface-networkinterfaceid)" : String,
@@ -36,6 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DeviceIndex](#cfn-ec2-launchtemplate-networkinterface-deviceindex): Integer
   [Groups](#cfn-ec2-launchtemplate-networkinterface-groups): 
     - String
+  [InterfaceType](#cfn-ec2-launchtemplate-networkinterface-interfacetype): String
   [Ipv6AddressCount](#cfn-ec2-launchtemplate-networkinterface-ipv6addresscount): Integer
   [Ipv6Addresses](#cfn-ec2-launchtemplate-networkinterface-ipv6addresses): 
     - [Ipv6Add](aws-properties-ec2-launchtemplate-ipv6add.md)
@@ -77,6 +79,14 @@ The device index for the network interface attachment\.
 The IDs of one or more security groups\.  
 *Required*: No  
 *Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`InterfaceType`  <a name="cfn-ec2-launchtemplate-networkinterface-interfacetype"></a>
+The type of network interface\. To create an Elastic Fabric Adapter \(EFA\), specify `efa`\. For more information, see [Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+If you are not creating an EFA, specify `interface` or omit this parameter\.  
+Valid values: `interface` \| `efa`   
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Ipv6AddressCount`  <a name="cfn-ec2-launchtemplate-networkinterface-ipv6addresscount"></a>

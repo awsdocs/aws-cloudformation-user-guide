@@ -80,7 +80,7 @@ myCustomerGateway:
     Properties: 
         Type: ipsec.1
         BgpAsn: 65534
-        IpAddress 12.1.2.3
+        IpAddress: 12.1.2.3
 ```
 
 ### <a name="aws-resource-ec2-customer-gateway--examples--"></a>

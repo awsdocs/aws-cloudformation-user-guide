@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::IoTAnalytics::Channel",
   "Properties" : {
       "[ChannelName](#cfn-iotanalytics-channel-channelname)" : String,
+      "[ChannelStorage](#cfn-iotanalytics-channel-channelstorage)" : [ChannelStorage](aws-properties-iotanalytics-channel-channelstorage.md),
       "[RetentionPeriod](#cfn-iotanalytics-channel-retentionperiod)" : [RetentionPeriod](aws-properties-iotanalytics-channel-retentionperiod.md),
       "[Tags](#cfn-iotanalytics-channel-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -25,6 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::IoTAnalytics::Channel
 Properties: 
   [ChannelName](#cfn-iotanalytics-channel-channelname): String
+  [ChannelStorage](#cfn-iotanalytics-channel-channelstorage): 
+    [ChannelStorage](aws-properties-iotanalytics-channel-channelstorage.md)
   [RetentionPeriod](#cfn-iotanalytics-channel-retentionperiod): 
     [RetentionPeriod](aws-properties-iotanalytics-channel-retentionperiod.md)
   [Tags](#cfn-iotanalytics-channel-tags): 
@@ -41,6 +44,12 @@ The name of the channel\.
 *Maximum*: `128`  
 *Pattern*: `^[a-zA-Z0-9_]+$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ChannelStorage`  <a name="cfn-iotanalytics-channel-channelstorage"></a>
+Where channel data is stored\.  
+*Required*: No  
+*Type*: [ChannelStorage](aws-properties-iotanalytics-channel-channelstorage.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetentionPeriod`  <a name="cfn-iotanalytics-channel-retentionperiod"></a>
 How long, in days, message data is kept for the channel\.  

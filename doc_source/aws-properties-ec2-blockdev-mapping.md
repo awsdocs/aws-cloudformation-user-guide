@@ -81,6 +81,18 @@ This example sets the EBS\-backed root device \(/dev/sda1\) size to 50 GiB, and 
 ]
 ```
 
+#### YAML<a name="aws-properties-ec2-blockdev-mapping--examples--Block_Device_Mapping_with_two_EBS_Volumes--yaml"></a>
+
+```
+BlockDeviceMappings:
+  - DeviceName: /dev/sda1
+    Ebs:
+      VolumeSize: 50
+  - DeviceName: /dev/sdm
+    Ebs:
+      VolumeSize: 100
+```
+
 ### Block Device Mapping with an Ephemeral Drive<a name="aws-properties-ec2-blockdev-mapping--examples--Block_Device_Mapping_with_an_Ephemeral_Drive"></a>
 
 This example maps an ephemeral drive to device /dev/sdc\.
@@ -96,6 +108,14 @@ This example maps an ephemeral drive to device /dev/sdc\.
 ]
 ```
 
+#### YAML<a name="aws-properties-ec2-blockdev-mapping--examples--Block_Device_Mapping_with_an_Ephemeral_Drive--yaml"></a>
+
+```
+BlockDeviceMappings:
+  - DeviceName: /dev/sdc
+    VirtualName: ephemeral0
+```
+
 ### Unmapping an AMI\-defined Device<a name="aws-properties-ec2-blockdev-mapping--examples--Unmapping_an_AMI-defined_Device"></a>
 
 To unmap a device defined in the AMI, set the `NoDevice` property to an empty map, as shown here:
@@ -109,6 +129,14 @@ To unmap a device defined in the AMI, set the `NoDevice` property to an empty ma
       "NoDevice": {}
    }
 ]
+```
+
+#### YAML<a name="aws-properties-ec2-blockdev-mapping--examples--Unmapping_an_AMI-defined_Device--yaml"></a>
+
+```
+BlockDeviceMappings:
+  - DeviceName: /dev/sde
+    NoDevice:
 ```
 
 ## See Also<a name="aws-properties-ec2-blockdev-mapping--seealso"></a>

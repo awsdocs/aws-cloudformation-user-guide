@@ -12,7 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::DMS::ReplicationTask",
   "Properties" : {
+      "[CdcStartPosition](#cfn-dms-replicationtask-cdcstartposition)" : String,
       "[CdcStartTime](#cfn-dms-replicationtask-cdcstarttime)" : Double,
+      "[CdcStopPosition](#cfn-dms-replicationtask-cdcstopposition)" : String,
       "[MigrationType](#cfn-dms-replicationtask-migrationtype)" : String,
       "[ReplicationInstanceArn](#cfn-dms-replicationtask-replicationinstancearn)" : String,
       "[ReplicationTaskIdentifier](#cfn-dms-replicationtask-replicationtaskidentifier)" : String,
@@ -30,7 +32,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::DMS::ReplicationTask
 Properties: 
+  [CdcStartPosition](#cfn-dms-replicationtask-cdcstartposition): String
   [CdcStartTime](#cfn-dms-replicationtask-cdcstarttime): Double
+  [CdcStopPosition](#cfn-dms-replicationtask-cdcstopposition): String
   [MigrationType](#cfn-dms-replicationtask-migrationtype): String
   [ReplicationInstanceArn](#cfn-dms-replicationtask-replicationinstancearn): String
   [ReplicationTaskIdentifier](#cfn-dms-replicationtask-replicationtaskidentifier): String
@@ -44,27 +48,45 @@ Properties:
 
 ## Properties<a name="aws-resource-dms-replicationtask-properties"></a>
 
+`CdcStartPosition`  <a name="cfn-dms-replicationtask-cdcstartposition"></a>
+Indicates when you want a change data capture \(CDC\) operation to start\. Use either CdcStartPosition or CdcStartTime to specify when you want a CDC operation to start\. Specifying both values results in an error\.  
+ The value can be in date, checkpoint, or LSN/SCN format\.  
+Date Example: \-\-cdc\-start\-position “2018\-03\-08T12:12:12”  
+Checkpoint Example: \-\-cdc\-start\-position "checkpoint:V1\#27\#mysql\-bin\-changelog\.157832:1975:\-1:2002:677883278264080:mysql\-bin\-changelog\.157832:1876\#0\#0\#\*\#0\#93"  
+LSN Example: \-\-cdc\-start\-position “mysql\-bin\-changelog\.000024:373”  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `CdcStartTime`  <a name="cfn-dms-replicationtask-cdcstarttime"></a>
 Indicates the start time for a change data capture \(CDC\) operation\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`CdcStopPosition`  <a name="cfn-dms-replicationtask-cdcstopposition"></a>
+Indicates when you want a change data capture \(CDC\) operation to stop\. The value can be either server time or commit time\.  
+Server time example: \-\-cdc\-stop\-position “server\_time:3018\-02\-09T12:12:12”  
+Commit time example: \-\-cdc\-stop\-position “commit\_time: 3018\-02\-09T12:12:12 “  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `MigrationType`  <a name="cfn-dms-replicationtask-migrationtype"></a>
-The migration type\.  
+The migration type\. Valid values: `full-load` \| `cdc` \| `full-load-and-cdc`   
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `cdc | full-load | full-load-and-cdc`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReplicationInstanceArn`  <a name="cfn-dms-replicationtask-replicationinstancearn"></a>
-The Amazon Resource Name \(ARN\) of the replication instance\.  
+The Amazon Resource Name \(ARN\) of a replication instance\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ReplicationTaskIdentifier`  <a name="cfn-dms-replicationtask-replicationtaskidentifier"></a>
-The replication task identifier\.  
+An identifier for the replication task\.  
 Constraints:  
 + Must contain from 1 to 255 alphanumeric characters or hyphens\.
 + First character must be a letter\.
@@ -74,32 +96,31 @@ Constraints:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReplicationTaskSettings`  <a name="cfn-dms-replicationtask-replicationtasksettings"></a>
-Settings for the task, such as target metadata settings\. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html) in the *AWS Database Migration User Guide\.*   
+Overall settings for the task, in JSON format\. For more information, see [Task Settings](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html) in the *AWS Database Migration User Guide\.*   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceEndpointArn`  <a name="cfn-dms-replicationtask-sourceendpointarn"></a>
-The Amazon Resource Name \(ARN\) string that uniquely identifies the endpoint\.  
+An Amazon Resource Name \(ARN\) that uniquely identifies the source endpoint\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TableMappings`  <a name="cfn-dms-replicationtask-tablemappings"></a>
-When using the AWS CLI or boto3, provide the path of the JSON file that contains the table mappings\. Precede the path with "file://"\. When working with the DMS API, provide the JSON as the parameter value\.  
-For example, \-\-table\-mappings file://mappingfile\.json  
+The table mappings for the task, in JSON format\. For more information, see [Table Mapping](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html) in the *AWS Database Migration User Guide\.*   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-dms-replicationtask-tags"></a>
-Tags to be added to the replication instance\.  
+One or more tags to be assigned to the replication task\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TargetEndpointArn`  <a name="cfn-dms-replicationtask-targetendpointarn"></a>
-The Amazon Resource Name \(ARN\) string that uniquely identifies the endpoint\.  
+An Amazon Resource Name \(ARN\) that uniquely identifies the target endpoint\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

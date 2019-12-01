@@ -101,11 +101,11 @@ HTTPlistener:
      DefaultActions:
        - Type: "redirect"
          RedirectConfig:
-           Protocol: "HTTPS",
-           Port: "443",
-           Host: "#{host}",
-           Path: "/#{path}",
-           Query: "#{query}",
+           Protocol: "HTTPS"
+           Port: "443"
+           Host: "#{host}"
+           Path: "/#{path}"
+           Query: "#{query}"
            StatusCode: "HTTP_301"
      LoadBalancerArn: !Ref myLoadBalancer
      Port: 80
