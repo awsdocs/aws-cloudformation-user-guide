@@ -338,28 +338,29 @@ For the cache cluster, the `VpcSecurityGroupIds` property is used to associate t
 
 ```
 ElasticacheSecurityGroup:
-            Type: AWS::EC2::SecurityGroup
-            Properties:
-            GroupDescription: "Elasticache Security Group"
-            SecurityGroupIngress:
-            -
-            IpProtocol: "tcp"
-            FromPort: "11211"
-            ToPort: "11211"
-            SourceSecurityGroupName:
-            Ref: "InstanceSecurityGroup"
+  Type: AWS::EC2::SecurityGroup
+  Properties:
+    GroupDescription: "Elasticache Security Group"
+    SecurityGroupIngress:
+      -
+        IpProtocol: "tcp"
+        FromPort: "11211"
+        ToPort: "11211"
+        SourceSecurityGroupName:
+        Ref: "InstanceSecurityGroup"
 ElasticacheCluster:
-            Type: AWS::ElastiCache::CacheCluster
-            Properties:
-            AutoMinorVersionUpgrade: "true"
-            Engine: "memcached"
-            CacheNodeType: "cache.t2.micro"
-            NumCacheNodes: "1"
-            VpcSecurityGroupIds:
-            -
-            Fn::GetAtt:
-            - "ElasticacheSecurityGroup"
-            - "GroupId"
+  Type: AWS::ElastiCache::CacheCluster
+  Properties:
+    AutoMinorVersionUpgrade: "true"
+    Engine: "memcached"
+    CacheNodeType: "cache.t2.micro"
+    NumCacheNodes: "1"
+    VpcSecurityGroupIds:
+      -
+        Fn::GetAtt:
+          - "ElasticacheSecurityGroup"
+          - "GroupId"
+
 ```
 
 ### Memcached Nodes in Multiple Availability Zones<a name="aws-properties-elasticache-cache-cluster--examples--Memcached_Nodes_in_Multiple_Availability_Zones"></a>
@@ -385,16 +386,16 @@ The following example launches a cache cluster with three nodes, where two nodes
 
 ```
 myCacheCluster:
-            Type: AWS::ElastiCache::CacheCluster
-            Properties:
-            AZMode: "cross-az"
-            CacheNodeType: "cache.m3.medium"
-            Engine: "memcached"
-            NumCacheNodes: "3"
-            PreferredAvailabilityZones:
-            - "us-west-2a"
-            - "us-west-2a"
-            - "us-west-2b"
+  Type: AWS::ElastiCache::CacheCluster
+  Properties:
+    AZMode: "cross-az"
+    CacheNodeType: "cache.m3.medium"
+    Engine: "memcached"
+    NumCacheNodes: "3"
+    PreferredAvailabilityZones:
+      - "us-west-2a"
+      - "us-west-2a"
+      - "us-west-2b"
 ```
 
 ## See Also<a name="aws-properties-elasticache-cache-cluster--seealso"></a>
