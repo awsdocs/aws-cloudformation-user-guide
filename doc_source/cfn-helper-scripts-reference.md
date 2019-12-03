@@ -24,10 +24,10 @@ The AWS CloudFormation helper scripts are preinstalled on Amazon Linux AMI image
 
 | File Format | Download URL | 
 | --- | --- | 
-|  RPM  |  [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.amzn1\.noarch\.rpm](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.amzn1.noarch.rpm) Source files: [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.src\.rpm](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.src.rpm)  | 
-|  TAR\.GZ  |  [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.tar\.gz](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.tar.gz) Uses the Python easy\-install tools\. To complete the installation for Ubuntu, you must create a symlink: `ln -s /root/aws-cfn-bootstrap-latest/init/ubuntu/cfn-hup /etc/init.d/cfn-hup`  | 
-|  ZIP  |  [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.zip](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.zip)  | 
-|  MSI  |  32\-bit Windows: [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-latest\.msi](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.msi)  64\-bit Windows: [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-win64\-latest\.msi](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-win64-latest.msi)  | 
+|  RPM  |  [ https://cloudformation\-examples\.s3\.amazonaws\.com/aws\-cfn\-bootstrap\-latest\.amzn1\.noarch\.rpm](https://cloudformation-examples.s3.amazonaws.com/aws-cfn-bootstrap-latest.amzn1.noarch.rpm) Source files: [ https://cloudformation\-examples\.s3\.amazonaws\.com/aws\-cfn\-bootstrap\-latest\.src\.rpm](https://cloudformation-examples.s3.amazonaws.com/aws-cfn-bootstrap-latest.src.rpm)  | 
+|  TAR\.GZ  |  [ https://cloudformation\-examples\.s3\.amazonaws\.com/aws\-cfn\-bootstrap\-latest\.tar\.gz](https://cloudformation-examples.s3.amazonaws.com/aws-cfn-bootstrap-latest.tar.gz) Uses the Python easy\-install tools\. To complete the installation for Ubuntu, you must create a symlink: `ln -s /root/aws-cfn-bootstrap-latest/init/ubuntu/cfn-hup /etc/init.d/cfn-hup`  | 
+|  ZIP  |  [ https://cloudformation\-examples\.s3\.amazonaws\.com/aws\-cfn\-bootstrap\-latest\.zip](https://cloudformation-examples.s3.amazonaws.com/aws-cfn-bootstrap-latest.zip)  | 
+|  MSI  |  32\-bit Windows: [ https://cloudformation\-examples\.s3\.amazonaws\.com/aws\-cfn\-bootstrap\-latest\.msi](https://cloudformation-examples.s3.amazonaws.com/aws-cfn-bootstrap-latest.msi)  64\-bit Windows: [ https://cloudformation\-examples\.s3\.amazonaws\.com/aws\-cfn\-bootstrap\-win64\-latest\.msi](https://cloudformation-examples.s3.amazonaws.com/aws-cfn-bootstrap-win64-latest.msi)  | 
 
 ## Permissions for helper scripts<a name="cfn-helper-scripts-reference-permissions"></a>
 
