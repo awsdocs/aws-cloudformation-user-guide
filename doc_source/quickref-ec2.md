@@ -340,7 +340,7 @@ Resources:
           Value: Test Instance
       UserData:
         Fn::Base64: !Sub |
-          #!/bin/bash -xe
+          #!/bin/bash -x
           yum install ec2-net-utils -y
           ec2ifup eth1
           service httpd start

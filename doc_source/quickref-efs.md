@@ -419,7 +419,10 @@ If you make an update to the mount target that causes it to be replaced, instanc
             "commands" : {
               "01_createdir" : {
                 "command" : {"Fn::Join" : [ "", [ "mkdir /", { "Ref" : "MountPoint" }]]}
-              }
+              },
+              "02_runcrontab" : {
+                "command" : "crontab /home/ec2-user/crontab"
+              },
             }
           },
           "mount" : {
@@ -446,7 +449,7 @@ If you make an update to the mount target that causes it to be replaced, instanc
         "SecurityGroups": [ { "Ref": "InstanceSecurityGroup" } ],
         "IamInstanceProfile" : { "Ref" : "CloudWatchPutMetricsInstanceProfile" },
         "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
-             "#!/bin/bash -xe\n",
+             "#!/bin/bash -x\n",
              "yum install -y aws-cfn-bootstrap\n",
 
              "/opt/aws/bin/cfn-init -v ",
@@ -454,8 +457,6 @@ If you make an update to the mount target that causes it to be replaced, instanc
              "         --resource LaunchConfiguration ",
              "         --configsets MountConfig ",
              "         --region ", { "Ref" : "AWS::Region" }, "\n",
-
-             "crontab /home/ec2-user/crontab\n",
 
              "/opt/aws/bin/cfn-signal -e $? ",
              "         --stack ", { "Ref" : "AWS::StackName" },
@@ -976,6 +977,8 @@ Resources:
           commands:
             01_createdir:
               command: !Sub "mkdir /${MountPoint}"
+            02_runcrontab:
+              command: crontab /home/ec2-user/crontab
         mount:
           commands:
             01_mount:
@@ -1003,10 +1006,9 @@ Resources:
         Ref: CloudWatchPutMetricsInstanceProfile
       UserData:
         Fn::Base64: !Sub |
-          #!/bin/bash -xe
+          #!/bin/bash -x
           yum install -y aws-cfn-bootstrap
           /opt/aws/bin/cfn-init -v --stack ${AWS::StackName} --resource LaunchConfiguration --configsets MountConfig --region ${AWS::Region}
-          crontab /home/ec2-user/crontab
           /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource AutoScalingGroup --region ${AWS::Region}
   AutoScalingGroup:
     Type: AWS::AutoScaling::AutoScalingGroup

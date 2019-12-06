@@ -344,7 +344,7 @@ In the following example, sections marked with an ellipsis \(`...`\) are omitted
         "SecurityGroups" : [ {"Ref" : "WebServerSecurityGroup"} ],
         "KeyName"        : { "Ref" : "KeyName" },
         "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
-             "#!/bin/bash -xe\n",
+             "#!/bin/bash -x\n",
              "yum install -y aws-cfn-bootstrap\n",
 
              "# Install the files and packages from the metadata\n",
@@ -526,7 +526,7 @@ Now that we have a template that installs Linux, Apache, MySQL, and PHP, we'll n
         "SecurityGroups" : [ {"Ref" : "WebServerSecurityGroup"} ],
         "KeyName"        : { "Ref" : "KeyName" },
         "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
-          "#!/bin/bash -xe\n",
+          "#!/bin/bash -x\n",
           "yum install -y aws-cfn-bootstrap\n",
           
           "# Install the files and packages from the metadata\n",
@@ -579,7 +579,7 @@ The following example adds a creation policy to the Amazon EC2 instance to ensur
         "SecurityGroups" : [ {"Ref" : "WebServerSecurityGroup"} ],
         "KeyName"        : { "Ref" : "KeyName" },
         "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
-             "#!/bin/bash -xe\n",
+             "#!/bin/bash -x\n",
              "yum update aws-cfn-bootstrap\n",
 
              "# Install the files and packages from the metadata\n",
@@ -981,7 +981,7 @@ The following example shows final complete template\. You can also view the temp
         "SecurityGroups" : [ {"Ref" : "WebServerSecurityGroup"} ],
         "KeyName"        : { "Ref" : "KeyName" },
         "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
-             "#!/bin/bash -xe\n",
+             "#!/bin/bash -x\n",
              "yum install -y aws-cfn-bootstrap\n",
 
              "# Install the files and packages from the metadata\n",

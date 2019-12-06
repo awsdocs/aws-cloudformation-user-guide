@@ -103,7 +103,7 @@ To have instances wait for an Elastic Load Balancing health check before they si
     "UserData": {
       "Fn::Base64": {
         "Fn::Join" : [ "", [
-          "#!/bin/bash -xe\n",
+          "#!/bin/bash -x\n",
           "yum install -y aws-cfn-bootstrap\n",
           "/opt/aws/bin/cfn-signal -e 0 --stack ", { "Ref": "AWS::StackName" },
           " --resource AutoScalingGroup ",
@@ -148,7 +148,7 @@ LaunchConfig:
     UserData:
       "Fn::Base64":
         !Sub |
-          #!/bin/bash -xe
+          #!/bin/bash -x
           yum update -y aws-cfn-bootstrap
           /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource AutoScalingGroup --region ${AWS::Region}
 ```

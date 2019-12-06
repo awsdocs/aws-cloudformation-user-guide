@@ -226,7 +226,7 @@ The following example shows commands in the EC2 user data that use the pseudo pa
 
 ```
  1.           "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
- 2.              "#!/bin/bash -xe\n",
+ 2.              "#!/bin/bash -x\n",
  3.              "yum install -y aws-cfn-bootstrap\n",
  4. 
  5.              "/opt/aws/bin/cfn-init -v ",
@@ -247,7 +247,7 @@ The following example shows commands in the EC2 user data that use the pseudo pa
 ```
 1. UserData:
 2.   Fn::Base64: !Sub |
-3.      #!/bin/bash -xe
+3.      #!/bin/bash -x
 4.      yum update -y aws-cfn-bootstrap
 5.      /opt/aws/bin/cfn-init -v --stack ${AWS::StackName} --resource LaunchConfig --region ${AWS::Region}
 6.      /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource WebServerGroup --region ${AWS::Region}

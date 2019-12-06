@@ -346,7 +346,7 @@ You can get the latest version of this sample template at [https://s3\.amazonaws
         "SecurityGroups" : [ { "Ref" : "InstanceSecurityGroup" } ],
         "InstanceType" : { "Ref" : "InstanceType" },
         "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
-             "#!/bin/bash -xe\n",
+             "#!/bin/bash -x\n",
              "yum update -y aws-cfn-bootstrap\n",
 
              "/opt/aws/bin/cfn-init -v ",

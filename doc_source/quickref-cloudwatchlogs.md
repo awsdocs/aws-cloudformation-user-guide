@@ -273,26 +273,35 @@ The two metric filters describe how the log information is transformed into Clou
                         "Fn::Join": [
                             "",
                             [
-                                "#!/bin/bash -xe\n",
-                               
+                                "#!/bin/bash -x\n",
+                                
+                                "# Define a Function to Handle Failures\n",
+                                "exit_and_signal() {\n",
+                                "  /opt/aws/bin/cfn-signal -s false ",
+                                "         --stack ", { "Ref" : "AWS::StackName" },
+                                "         --resource WebServerHost ",
+                                "         --region ", { "Ref" : "AWS::Region" }, "\n"
+                                "  error_exit $1\n",
+                                "}\n",
+                                
                                 "# Get the latest CloudFormation package\n",
                                 "yum install -y aws-cfn-bootstrap\n",
                                 
                                 "# Start cfn-init\n",
                                 "/opt/aws/bin/cfn-init -s ", { "Ref": "AWS::StackId" }, " -r WebServerHost ", " --region ", { "Ref": "AWS::Region" },
-                                " || error_exit 'Failed to run cfn-init'\n",
+                                " || exit_and_signal 'Failed to run cfn-init'\n",
                                 
                                 "# Start up the cfn-hup daemon to listen for changes to the EC2 instance metadata\n",
-                                "/opt/aws/bin/cfn-hup || error_exit 'Failed to start cfn-hup'\n",
+                                "/opt/aws/bin/cfn-hup || exit_and_signal 'Failed to start cfn-hup'\n",
                                 
                                 "# Get the CloudWatch Logs agent\n",
                                 "wget https://s3.amazonaws.com/aws-cloudwatch/downloads/latest/awslogs-agent-setup.py\n",
                                 
                                 "# Install the CloudWatch Logs agent\n",
-                                "python awslogs-agent-setup.py -n -r ", { "Ref" : "AWS::Region" }, " -c /tmp/cwlogs/apacheaccess.conf || error_exit 'Failed to run CloudWatch Logs agent setup'\n",
+                                "python awslogs-agent-setup.py -n -r ", { "Ref" : "AWS::Region" }, " -c /tmp/cwlogs/apacheaccess.conf || exit_and_signal 'Failed to run CloudWatch Logs agent setup'\n",
                                 
                                 "# All done so signal success\n",
-                                "/opt/aws/bin/cfn-signal -e $? ",
+                                "/opt/aws/bin/cfn-signal -s true ",
                                 "         --stack ", { "Ref" : "AWS::StackName" },
                                 "         --resource WebServerHost ",
                                 "         --region ", { "Ref" : "AWS::Region" }, "\n"
@@ -581,19 +590,24 @@ Resources:
       UserData:
         "Fn::Base64":
           !Sub |
-            #!/bin/bash -xe
+            #!/bin/bash -x
+            # Define a Function to Handle Failures
+            exit_and_signal() {\n",
+              /opt/aws/bin/cfn-signal -s false --stack ${AWS::StackName} --resource WebServerHost --region ${AWS::Region}
+              error_exit $1
+            }
             # Get the latest CloudFormation package
             yum update -y aws-cfn-bootstrap
             # Start cfn-init
-            /opt/aws/bin/cfn-init -s ${AWS::StackId} -r WebServerHost --region ${AWS::Region} || error_exit 'Failed to run cfn-init'
+            /opt/aws/bin/cfn-init -s ${AWS::StackId} -r WebServerHost --region ${AWS::Region} || exit_and_signal 'Failed to run cfn-init'
             # Start up the cfn-hup daemon to listen for changes to the EC2 instance metadata
-            /opt/aws/bin/cfn-hup || error_exit 'Failed to start cfn-hup'
+            /opt/aws/bin/cfn-hup || exit_and_signal 'Failed to start cfn-hup'
             # Get the CloudWatch Logs agent
             wget https://s3.amazonaws.com/aws-cloudwatch/downloads/latest/awslogs-agent-setup.py
             # Install the CloudWatch Logs agent
-            python awslogs-agent-setup.py -n -r ${AWS::Region} -c /tmp/cwlogs/apacheaccess.conf || error_exit 'Failed to run CloudWatch Logs agent setup'
+            python awslogs-agent-setup.py -n -r ${AWS::Region} -c /tmp/cwlogs/apacheaccess.conf || exit_and_signal 'Failed to run CloudWatch Logs agent setup'
             # All done so signal success
-            /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackId} --resource WebServerHost --region ${AWS::Region}
+            /opt/aws/bin/cfn-signal -s true --stack ${AWS::StackId} --resource WebServerHost --region ${AWS::Region}
   WebServerLogGroup:
     Type: AWS::Logs::LogGroup
     Properties:

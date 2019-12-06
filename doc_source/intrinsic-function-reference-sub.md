@@ -119,7 +119,7 @@ For readability, the JSON example uses the `Fn::Join` function to separate each 
 
 ```
 "UserData": { "Fn::Base64": { "Fn::Join": ["\n", [
-  "#!/bin/bash -xe",
+  "#!/bin/bash -x",
   "yum update -y aws-cfn-bootstrap",
   { "Fn::Sub": "/opt/aws/bin/cfn-init -v --stack ${AWS::StackName} --resource LaunchConfig --configsets wordpress_install --region ${AWS::Region}" },
   { "Fn::Sub": "/opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource WebServerGroup --region ${AWS::Region}" }]]
@@ -134,7 +134,7 @@ The YAML example uses a literal block to specify the user data script\.
 UserData:
   Fn::Base64:
     !Sub |
-      #!/bin/bash -xe
+      #!/bin/bash -x
       yum update -y aws-cfn-bootstrap
       /opt/aws/bin/cfn-init -v --stack ${AWS::StackName} --resource LaunchConfig --configsets wordpress_install --region ${AWS::Region}
       /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource WebServerGroup --region ${AWS::Region}

@@ -64,7 +64,7 @@ For a complete example template, see [Deploying Applications on Amazon EC2 with 
 ```
 "UserData" : { "Fn::Base64" :
   { "Fn::Join" : ["", [
-     "#!/bin/bash -xe\n",
+     "#!/bin/bash -x\n",
      "# Install the files and packages from the metadata\n",
      "/opt/aws/bin/cfn-init -v ",
      "         --stack ", { "Ref" : "AWS::StackName" },
@@ -82,7 +82,7 @@ UserData: !Base64
   'Fn::Join':
     - ''
     - - |
-        #!/bin/bash -xe
+        #!/bin/bash -x
       - |
         # Install the files and packages from the metadata
       - '/opt/aws/bin/cfn-init -v '
