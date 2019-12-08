@@ -246,7 +246,7 @@ Sample template showing how to create an instance with two elastic network inter
 								{ "NetworkInterfaceId" : {"Ref" : "webXface"}, "DeviceIndex" : "1" }],
         "Tags" : [ {"Key" : "Role", "Value" : "Test Instance"}],
         "UserData" : {"Fn::Base64" : { "Fn::Join" : ["",[
-			"#!/bin/bash -ex","\n",
+			"#!/bin/bash -x","\n",
             "\n","yum install ec2-net-utils -y","\n",
 			"ec2ifup eth1","\n",
 			"service httpd start"]]}
