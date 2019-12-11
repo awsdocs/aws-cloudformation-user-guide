@@ -386,10 +386,10 @@ Redis \(cluster mode disabled\) replication groups don't have this attribute\. T
 The port number that the cache engine is listening on\. 
 
 `PrimaryEndPoint.Address`  <a name="PrimaryEndPoint.Address-fn::getatt"></a>
-The DNS address of the primary read\-write cache node\. 
+The DNS address of the primary read\-write cache node\. Redis \(cluster mode enabled\) replication groups don't have this attribute\. Therefore, `Fn::GetAtt` returns a value for this attribute only if the replication group is not clustered\. Otherwise, `Fn::GetAtt` fails\.
 
 `PrimaryEndPoint.Port`  <a name="PrimaryEndPoint.Port-fn::getatt"></a>
-The number of the port that the primary read\-write cache engine is listening on\. 
+The number of the port that the primary read\-write cache engine is listening on\. Redis \(cluster mode enabled\) replication groups don't have this attribute\. Therefore, `Fn::GetAtt` returns a value for this attribute only if the replication group is not clustered\. Otherwise, `Fn::GetAtt` fails\.
 
 `ReadEndPoint.Addresses`  <a name="ReadEndPoint.Addresses-fn::getatt"></a>
 A string with a list of endpoints for the read\-only replicas\. The order of the addresses maps to the order of the ports from the `ReadEndPoint.Ports` attribute\. 
