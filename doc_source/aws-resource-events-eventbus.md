@@ -105,7 +105,7 @@ The following example creates a custom event bus named `MyCustomEventBus`\.
 "SampleCustomEventBus": {
     "Type": "AWS::Events::EventBus",
     "Properties": {
-        "Name": "aws.partner/PartnerName/acct1/repo1"
+        "Name": "MyCustomEventBus"
     }
 }
 ```
@@ -116,5 +116,5 @@ The following example creates a custom event bus named `MyCustomEventBus`\.
 SampleCustomEventBus: 
     Type: AWS::Events::EventBus
     Properties: 
-        Name: "aws.partner/PartnerName/acct1/repo1"
+        Name: "MyCustomEventBus"
 ```
