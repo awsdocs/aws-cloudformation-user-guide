@@ -32,8 +32,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Glue::Crawler
-Properties: 
-  [Classifiers](#cfn-glue-crawler-classifiers): 
+Properties:
+  [Classifiers](#cfn-glue-crawler-classifiers):
     - String
   [Configuration](#cfn-glue-crawler-configuration): String
   [CrawlerSecurityConfiguration](#cfn-glue-crawler-crawlersecurityconfiguration): String
@@ -43,11 +43,11 @@ Properties:
   [Role](#cfn-glue-crawler-role): String
   [Schedule](#cfn-glue-crawler-schedule): 
     [Schedule](aws-properties-glue-crawler-schedule.md)
-  [SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy): 
+  [SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy):
     [SchemaChangePolicy](aws-properties-glue-crawler-schemachangepolicy.md)
   [TablePrefix](#cfn-glue-crawler-tableprefix): String
   [Tags](#cfn-glue-crawler-tags): Json
-  [Targets](#cfn-glue-crawler-targets): 
+  [Targets](#cfn-glue-crawler-targets):
     [Targets](aws-properties-glue-crawler-targets.md)
 ```
 
