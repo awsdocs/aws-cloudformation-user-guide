@@ -35,7 +35,7 @@ The dimensions for the metric\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricName`  <a name="cfn-cloudwatch-alarm-metric-metricname"></a>
-The name of the metric\.
+The name of the metric\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
