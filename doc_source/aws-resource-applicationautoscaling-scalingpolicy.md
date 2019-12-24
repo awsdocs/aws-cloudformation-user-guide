@@ -58,7 +58,7 @@ The name of the scaling policy\.
 The Application Auto Scaling policy type\.   
 The following policy types are supported:   
 `TargetTrackingScaling`—Not supported for Amazon EMR  
-`StepScaling`—Not supported for DynamoDB  
+`StepScaling`—Not supported for DynamoDB, Comprehend, or Lambda  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

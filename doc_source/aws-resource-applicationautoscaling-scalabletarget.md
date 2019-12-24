@@ -152,9 +152,64 @@ ScalableTarget:
     ResourceId: fleet/sample-fleet
 ```
 
+### Register a Scalable Target with Fn::Join and Fn::Sub<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Register_a_Scalable_Target_with_Fn::Join_and_Fn::Sub"></a>
+
+The following example registers the provisioned concurrency for a function alias \([AWS::Lambda::Alias](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html)\) called BLUE, with a minimum capacity of 0 and a maximum capacity of 100\.
+
+This example uses the [Fn::Join](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-join.html) and [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) intrinsic functions in the `RoleARN` property to specify the ARN of the service\-linked role\. It uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) intrinsic function to construct the `ResourceId` property\. 
+
+#### JSON<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Register_a_Scalable_Target_with_Fn::Join_and_Fn::Sub--json"></a>
+
+```
+{
+  "ScalableTarget":{
+    "Type":"AWS::ApplicationAutoScaling::ScalableTarget",
+    "Properties":{
+      "MaxCapacity":100,
+      "MinCapacity":0,
+      "RoleARN":{
+        "Fn::Join":[
+          ":",
+          [
+            "arn:aws:iam:",
+            {
+              "Ref":"AWS::AccountId"
+            },
+            "role/aws-service-role/lambda.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_Lambda"
+          ]
+        ]
+      },
+      "ServiceNamespace":"lambda",
+      "ScalableDimension":"lambda:function:ProvisionedConcurrency",
+      "ResourceId":{
+        "Fn::Sub":"function:${MyFunction}:BLUE"
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Register_a_Scalable_Target_with_Fn::Join_and_Fn::Sub--yaml"></a>
+
+```
+ScalableTarget:
+  Type: AWS::ApplicationAutoScaling::ScalableTarget
+  Properties:
+    MaxCapacity: 100
+    MinCapacity: 0
+    RoleARN: !Join 
+      - ':'
+      - - 'arn:aws:iam:'
+        - !Ref 'AWS::AccountId'
+        - role/aws-service-role/lambda.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_Lambda
+    ServiceNamespace: lambda
+    ScalableDimension: lambda:function:ProvisionedConcurrency
+    ResourceId: !Sub function:${MyFunction}:BLUE
+```
+
 ### Spot Fleet with a Scheduled Action<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Spot_Fleet_with_a_Scheduled_Action"></a>
 
-The following example registers an [AWS::EC2::SpotFleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html) as a scalable target and creates a scheduled action\. It also uses the [Fn::Join](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-join.html) and [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) intrinsic functions to construct the `ResourceId` property of the scaling target\. 
+The following example registers an [AWS::EC2::SpotFleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html) as a scalable target and creates a scheduled action\. It uses the [Fn::Join](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-join.html) and [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) intrinsic functions to construct the `ResourceId` property\. 
 
 #### JSON<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Spot_Fleet_with_a_Scheduled_Action--json"></a>
 
@@ -223,7 +278,7 @@ SpotFleetScalableTarget:
 
 ### Amazon DynamoDB<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Amazon_DynamoDB"></a>
 
-This example registers the read and write capacity \(throughput\) of an [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html) and its global secondary index as scalable targets\.
+This example registers the read and write capacity \(throughput\) of an [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html) and its global secondary index as scalable targets\. It uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) intrinsic function to construct the `ResourceId` properties\. 
 
 #### JSON<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Amazon_DynamoDB--json"></a>
 
