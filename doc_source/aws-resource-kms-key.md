@@ -201,7 +201,8 @@ myKey:
        -
           Sid: "Enable IAM User Permissions"
           Effect: "Allow"
-          Principal: AWS: "arn:aws:iam::111122223333:root"
+          Principal:
+            AWS: "arn:aws:iam::111122223333:root"
           Action: "kms:*"
           Resource: "*"
        - 
