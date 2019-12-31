@@ -71,7 +71,7 @@ Indicates whether the volume is auto\-enabled for I/O operations\. By default, A
 The Availability Zone in which to create the volume\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: Updates are not supported\.
 
 `Encrypted`  <a name="cfn-ec2-ebs-volume-encrypted"></a>
 Specifies whether the volume should be encrypted\. The effect of setting the encryption state to `true` depends on the volume origin \(new or from a snapshot\), starting encryption state, ownership, and whether encryption by default is enabled\. For more information, see [Encryption by Default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-by-default) in the *Amazon Elastic Compute Cloud User Guide*\.  
