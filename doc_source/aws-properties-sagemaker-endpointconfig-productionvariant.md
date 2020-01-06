@@ -1,6 +1,6 @@
 # AWS::SageMaker::EndpointConfig ProductionVariant<a name="aws-properties-sagemaker-endpointconfig-productionvariant"></a>
 
-Specifies a model that you want to host and the resources to deploy for hosting it\. If you are deploying multiple models, tell Amazon SageMaker how to distribute traffic among the models by specifying the `InitiaVariantWeight` objects\. 
+Specifies a model that you want to host and the resources to deploy for hosting it\. If you are deploying multiple models, tell Amazon SageMaker how to distribute traffic among the models by specifying the `InitialVariantWeight` objects\. 
 
 ## Syntax<a name="aws-properties-sagemaker-endpointconfig-productionvariant-syntax"></a>
 
