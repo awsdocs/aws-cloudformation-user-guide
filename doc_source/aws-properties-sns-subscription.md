@@ -2,6 +2,9 @@
 
  `Subscription` is an embedded property that describes the subscription endpoints of an Amazon SNS topic\.
 
+**Note**  
+For full control over subscription behavior such as delivery policy, filtering, raw message delivery, cross-region subscriptions, etc. use ` [AWS::SNS::Subscription](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html) ` resource instead of this embedded property \.
+
 ## Syntax<a name="aws-properties-sns-subscription-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

@@ -15,7 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ApplicationId](#cfn-pinpoint-segment-applicationid)" : String,
       "[Dimensions](#cfn-pinpoint-segment-dimensions)" : [SegmentDimensions](aws-properties-pinpoint-segment-segmentdimensions.md),
       "[Name](#cfn-pinpoint-segment-name)" : String,
-      "[SegmentGroups](#cfn-pinpoint-segment-segmentgroups)" : [SegmentGroups](aws-properties-pinpoint-segment-segmentgroups.md)
+      "[SegmentGroups](#cfn-pinpoint-segment-segmentgroups)" : [SegmentGroups](aws-properties-pinpoint-segment-segmentgroups.md),
+      "[Tags](#cfn-pinpoint-segment-tags)" : Json
     }
 }
 ```
@@ -31,6 +32,7 @@ Properties:
   [Name](#cfn-pinpoint-segment-name): String
   [SegmentGroups](#cfn-pinpoint-segment-segmentgroups): 
     [SegmentGroups](aws-properties-pinpoint-segment-segmentgroups.md)
+  [Tags](#cfn-pinpoint-segment-tags): Json
 ```
 
 ## Properties<a name="aws-resource-pinpoint-segment-properties"></a>
@@ -54,9 +56,15 @@ The name of the segment\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SegmentGroups`  <a name="cfn-pinpoint-segment-segmentgroups"></a>
-The segment group, which consists of zero or more base segments, to use and the dimensions to apply to those base segments in order to build the segment\. Your request can include only one segment group\.  
+The segment group to use and the dimensions to apply to the group's base segments in order to build the segment\. A segment group can consist of zero or more base segments\. Your request can include only one segment group\.  
 *Required*: No  
 *Type*: [SegmentGroups](aws-properties-pinpoint-segment-segmentgroups.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-pinpoint-segment-tags"></a>
+A string\-to\-string map of key\-value pairs that defines the tags to associate with the segment\. Each tag consists of a required tag key and an associated tag value\.  
+*Required*: No  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-pinpoint-segment-return-values"></a>
@@ -69,7 +77,14 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Fn::GetAtt<a name="aws-resource-pinpoint-segment-return-values-fn--getatt"></a>
 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
 #### <a name="aws-resource-pinpoint-segment-return-values-fn--getatt-fn--getatt"></a>
+
+`Arn`  <a name="Arn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the segment\.
 
 `SegmentId`  <a name="SegmentId-fn::getatt"></a>
 The unique identifier for the segment\.

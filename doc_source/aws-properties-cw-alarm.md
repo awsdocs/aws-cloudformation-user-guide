@@ -34,6 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Period](#cfn-cloudwatch-alarms-period)" : Integer,
       "[Statistic](#cfn-cloudwatch-alarms-statistic)" : String,
       "[Threshold](#cfn-cloudwatch-alarms-threshold)" : Double,
+      "[ThresholdMetricId](#cfn-cloudwatch-alarms-dynamic-threshold)" : String,
       "[TreatMissingData](#cfn-cloudwatch-alarms-treatmissingdata)" : String,
       "[Unit](#cfn-cloudwatch-alarms-unit)" : String
     }
@@ -68,6 +69,7 @@ Properties:
   [Period](#cfn-cloudwatch-alarms-period): Integer
   [Statistic](#cfn-cloudwatch-alarms-statistic): String
   [Threshold](#cfn-cloudwatch-alarms-threshold): Double
+  [ThresholdMetricId](#cfn-cloudwatch-alarms-dynamic-threshold): String
   [TreatMissingData](#cfn-cloudwatch-alarms-treatmissingdata): String
   [Unit](#cfn-cloudwatch-alarms-unit): String
 ```
@@ -109,7 +111,7 @@ The arithmetic operation to use when comparing the specified statistic and thres
 You can specify the following values: `GreaterThanThreshold`, `GreaterThanOrEqualToThreshold`, `LessThanThreshold`, or `LessThanOrEqualToThreshold`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `GreaterThanOrEqualToThreshold | GreaterThanThreshold | LessThanOrEqualToThreshold | LessThanThreshold`  
+*Allowed Values*: `GreaterThanOrEqualToThreshold | GreaterThanThreshold | GreaterThanUpperThreshold | LessThanLowerOrGreaterThanUpperThreshold | LessThanLowerThreshold | LessThanOrEqualToThreshold | LessThanThreshold`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DatapointsToAlarm`  <a name="cfn-cloudwatch-alarm-datapointstoalarm"></a>
@@ -204,8 +206,16 @@ For an alarm based on a math expression, you can't specify `Statistic`\. Instead
 
 `Threshold`  <a name="cfn-cloudwatch-alarms-threshold"></a>
 The value to compare with the specified statistic\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: Double  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ThresholdMetricId`  <a name="cfn-cloudwatch-alarms-dynamic-threshold"></a>
+In an alarm based on an anomaly detection model, this is the ID of the `ANOMALY_DETECTION_BAND` function used as the threshold for the alarm\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TreatMissingData`  <a name="cfn-cloudwatch-alarms-treatmissingdata"></a>

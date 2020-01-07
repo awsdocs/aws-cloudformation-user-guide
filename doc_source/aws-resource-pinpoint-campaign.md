@@ -24,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Schedule](#cfn-pinpoint-campaign-schedule)" : [Schedule](aws-properties-pinpoint-campaign-schedule.md),
       "[SegmentId](#cfn-pinpoint-campaign-segmentid)" : String,
       "[SegmentVersion](#cfn-pinpoint-campaign-segmentversion)" : Integer,
+      "[Tags](#cfn-pinpoint-campaign-tags)" : Json,
       "[TreatmentDescription](#cfn-pinpoint-campaign-treatmentdescription)" : String,
       "[TreatmentName](#cfn-pinpoint-campaign-treatmentname)" : String
     }
@@ -52,6 +53,7 @@ Properties:
     [Schedule](aws-properties-pinpoint-campaign-schedule.md)
   [SegmentId](#cfn-pinpoint-campaign-segmentid): String
   [SegmentVersion](#cfn-pinpoint-campaign-segmentversion): Integer
+  [Tags](#cfn-pinpoint-campaign-tags): Json
   [TreatmentDescription](#cfn-pinpoint-campaign-treatmentdescription): String
   [TreatmentName](#cfn-pinpoint-campaign-treatmentname): String
 ```
@@ -107,7 +109,7 @@ The message configuration settings for the campaign\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-pinpoint-campaign-name"></a>
-The custom name of the campaign\.  
+The name of the message template to use for the message\. If specified, this value must match the name of an existing message template\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -128,6 +130,12 @@ The unique identifier for the segment to associate with the campaign\.
 The version of the segment to associate with the campaign\.  
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-pinpoint-campaign-tags"></a>
+A string\-to\-string map of key\-value pairs that defines the tags to associate with the campaign\. Each tag consists of a required tag key and an associated tag value\.  
+*Required*: No  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TreatmentDescription`  <a name="cfn-pinpoint-campaign-treatmentdescription"></a>
@@ -152,7 +160,14 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Fn::GetAtt<a name="aws-resource-pinpoint-campaign-return-values-fn--getatt"></a>
 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
 #### <a name="aws-resource-pinpoint-campaign-return-values-fn--getatt-fn--getatt"></a>
+
+`Arn`  <a name="Arn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the campaign\.
 
 `CampaignId`  <a name="CampaignId-fn::getatt"></a>
 The unique ID of the campaign\.

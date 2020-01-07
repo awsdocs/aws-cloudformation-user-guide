@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Amplify::App",
   "Properties" : {
       "[AccessToken](#cfn-amplify-app-accesstoken)" : String,
+      "[AutoBranchCreationConfig](#cfn-amplify-app-autobranchcreationconfig)" : [AutoBranchCreationConfig](aws-properties-amplify-app-autobranchcreationconfig.md),
       "[BasicAuthConfig](#cfn-amplify-app-basicauthconfig)" : [BasicAuthConfig](aws-properties-amplify-app-basicauthconfig.md),
       "[BuildSpec](#cfn-amplify-app-buildspec)" : String,
       "[CustomRules](#cfn-amplify-app-customrules)" : [ [CustomRule](aws-properties-amplify-app-customrule.md), ... ],
@@ -33,6 +34,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Amplify::App
 Properties: 
   [AccessToken](#cfn-amplify-app-accesstoken): String
+  [AutoBranchCreationConfig](#cfn-amplify-app-autobranchcreationconfig): 
+    [AutoBranchCreationConfig](aws-properties-amplify-app-autobranchcreationconfig.md)
   [BasicAuthConfig](#cfn-amplify-app-basicauthconfig): 
     [BasicAuthConfig](aws-properties-amplify-app-basicauthconfig.md)
   [BuildSpec](#cfn-amplify-app-buildspec): String
@@ -55,6 +58,12 @@ Properties:
  Personal Access token for 3rd party source control system for an Amplify App, used to create webhook and read\-only deploy key\. Token is not stored\.   
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AutoBranchCreationConfig`  <a name="cfn-amplify-app-autobranchcreationconfig"></a>
+ Sets the configuration for your automatic branch creation\.   
+*Required*: No  
+*Type*: [AutoBranchCreationConfig](aws-properties-amplify-app-autobranchcreationconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BasicAuthConfig`  <a name="cfn-amplify-app-basicauthconfig"></a>

@@ -34,6 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BrokerName](#cfn-amazonmq-broker-brokername)" : String,
       "[Configuration](#cfn-amazonmq-broker-configuration)" : [ConfigurationId](aws-properties-amazonmq-broker-configurationid.md),
       "[DeploymentMode](#cfn-amazonmq-broker-deploymentmode)" : String,
+      "[EncryptionOptions](#cfn-amazonmq-broker-encryptionoptions)" : [EncryptionOptions](aws-properties-amazonmq-broker-encryptionoptions.md),
       "[EngineType](#cfn-amazonmq-broker-enginetype)" : String,
       "[EngineVersion](#cfn-amazonmq-broker-engineversion)" : String,
       "[HostInstanceType](#cfn-amazonmq-broker-hostinstancetype)" : String,
@@ -58,6 +59,8 @@ Properties:
   [Configuration](#cfn-amazonmq-broker-configuration): 
     [ConfigurationId](aws-properties-amazonmq-broker-configurationid.md)
   [DeploymentMode](#cfn-amazonmq-broker-deploymentmode): String
+  [EncryptionOptions](#cfn-amazonmq-broker-encryptionoptions): 
+    [EncryptionOptions](aws-properties-amazonmq-broker-encryptionoptions.md)
   [EngineType](#cfn-amazonmq-broker-enginetype): String
   [EngineVersion](#cfn-amazonmq-broker-engineversion): String
   [HostInstanceType](#cfn-amazonmq-broker-hostinstancetype): String
@@ -97,9 +100,17 @@ A list of information about the configuration\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeploymentMode`  <a name="cfn-amazonmq-broker-deploymentmode"></a>
-The deployment mode of the broker\.  
+The deployment mode of the broker\. Available values:  
++ `SINGLE_INSTANCE`
++ `ACTIVE_STANDBY_MULTI_AZ`
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EncryptionOptions`  <a name="cfn-amazonmq-broker-encryptionoptions"></a>
+Encryption options for the broker\.  
+*Required*: No  
+*Type*: [EncryptionOptions](aws-properties-amazonmq-broker-encryptionoptions.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineType`  <a name="cfn-amazonmq-broker-enginetype"></a>
@@ -109,7 +120,7 @@ The type of broker engine\. Note: Currently, Amazon MQ supports only ACTIVEMQ\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineVersion`  <a name="cfn-amazonmq-broker-engineversion"></a>
-The version of the broker engine\. For a list of supported engine versions, see [Engine](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) in the *Amazon MQ Developer Guide*\.   
+The version of the broker engine\. For a list of supported engine versions, see https://docs\.aws\.amazon\.com/amazon\-mq/latest/developer\-guide/broker\-engine\.html\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Enabled](#cfn-lambda-eventsourcemapping-enabled)" : Boolean,
       "[EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn)" : String,
       "[FunctionName](#cfn-lambda-eventsourcemapping-functionname)" : String,
+      "[MaximumBatchingWindowInSeconds](#cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds)" : Integer,
       "[StartingPosition](#cfn-lambda-eventsourcemapping-startingposition)" : String
     }
 }
@@ -35,6 +36,7 @@ Properties:
   [Enabled](#cfn-lambda-eventsourcemapping-enabled): Boolean
   [EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn): String
   [FunctionName](#cfn-lambda-eventsourcemapping-functionname): String
+  [MaximumBatchingWindowInSeconds](#cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds): Integer
   [StartingPosition](#cfn-lambda-eventsourcemapping-startingposition): String
 ```
 
@@ -81,6 +83,14 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 *Minimum*: `1`  
 *Maximum*: `140`  
 *Pattern*: `(arn:(aws[a-zA-Z-]*)?:lambda:)?([a-z]{2}(-gov)?-[a-z]+-\d{1}:)?(\d{12}:)?(function:)?([a-zA-Z0-9-_]+)(:(\$LATEST|[a-zA-Z0-9-_]+))?`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MaximumBatchingWindowInSeconds`  <a name="cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds"></a>
+The maximum amount of time to gather records before invoking the function, in seconds\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `300`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StartingPosition`  <a name="cfn-lambda-eventsourcemapping-startingposition"></a>

@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ApiStages](#cfn-apigateway-usageplan-apistages)" : [ [ApiStage](aws-properties-apigateway-usageplan-apistage.md), ... ],
       "[Description](#cfn-apigateway-usageplan-description)" : String,
       "[Quota](#cfn-apigateway-usageplan-quota)" : [QuotaSettings](aws-properties-apigateway-usageplan-quotasettings.md),
+      "[Tags](#cfn-apigateway-usageplan-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Throttle](#cfn-apigateway-usageplan-throttle)" : [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md),
       "[UsagePlanName](#cfn-apigateway-usageplan-usageplanname)" : String
     }
@@ -31,6 +32,8 @@ Properties:
   [Description](#cfn-apigateway-usageplan-description): String
   [Quota](#cfn-apigateway-usageplan-quota): 
     [QuotaSettings](aws-properties-apigateway-usageplan-quotasettings.md)
+  [Tags](#cfn-apigateway-usageplan-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Throttle](#cfn-apigateway-usageplan-throttle): 
     [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)
   [UsagePlanName](#cfn-apigateway-usageplan-usageplanname): String
@@ -54,6 +57,12 @@ A description of the usage plan\.
 Configures the number of requests that users can make within a given interval\.  
 *Required*: No  
 *Type*: [QuotaSettings](aws-properties-apigateway-usageplan-quotasettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-apigateway-usageplan-tags"></a>
+An array of arbitrary tags \(key\-value pairs\) to associate with the usage plan\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Throttle`  <a name="cfn-apigateway-usageplan-throttle"></a>

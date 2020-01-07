@@ -348,7 +348,7 @@ ElasticacheSecurityGroup:
             ToPort: "11211"
             SourceSecurityGroupName:
             Ref: "InstanceSecurityGroup"
-            ElasticacheCluster:
+ElasticacheCluster:
             Type: AWS::ElastiCache::CacheCluster
             Properties:
             AutoMinorVersionUpgrade: "true"

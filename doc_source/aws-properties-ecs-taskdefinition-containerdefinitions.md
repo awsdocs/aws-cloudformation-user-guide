@@ -25,6 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[HealthCheck](#cfn-ecs-taskdefinition-containerdefinition-healthcheck)" : [HealthCheck](aws-properties-ecs-taskdefinition-healthcheck.md),
   "[Hostname](#cfn-ecs-taskdefinition-containerdefinition-hostname)" : String,
   "[Image](#cfn-ecs-taskdefinition-containerdefinition-image)" : String,
+  "[Interactive](#cfn-ecs-taskdefinition-containerdefinition-interactive)" : Boolean,
   "[Links](#cfn-ecs-taskdefinition-containerdefinition-links)" : [ String, ... ],
   "[LinuxParameters](#cfn-ecs-taskdefinition-containerdefinition-linuxparameters)" : [LinuxParameters](aws-properties-ecs-taskdefinition-linuxparameters.md),
   "[LogConfiguration](#cfn-ecs-taskdefinition-containerdefinition-logconfiguration)" : [LogConfiguration](aws-properties-ecs-taskdefinition-containerdefinitions-logconfiguration.md),
@@ -34,10 +35,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Name](#cfn-ecs-taskdefinition-containerdefinition-name)" : String,
   "[PortMappings](#cfn-ecs-taskdefinition-containerdefinition-portmappings)" : [ [PortMapping](aws-properties-ecs-taskdefinition-containerdefinitions-portmappings.md), ... ],
   "[Privileged](#cfn-ecs-taskdefinition-containerdefinition-privileged)" : Boolean,
+  "[PseudoTerminal](#cfn-ecs-taskdefinition-containerdefinition-pseudoterminal)" : Boolean,
   "[ReadonlyRootFilesystem](#cfn-ecs-taskdefinition-containerdefinition-readonlyrootfilesystem)" : Boolean,
   "[RepositoryCredentials](#cfn-ecs-taskdefinition-containerdefinition-repositorycredentials)" : [RepositoryCredentials](aws-properties-ecs-taskdefinition-repositorycredentials.md),
+  "[ResourceRequirements](#cfn-ecs-taskdefinition-containerdefinition-resourcerequirements)" : [ [ResourceRequirement](aws-properties-ecs-taskdefinition-resourcerequirement.md), ... ],
+  "[Secrets](#cfn-ecs-taskdefinition-containerdefinition-secrets)" : [ [Secret](aws-properties-ecs-taskdefinition-secret.md), ... ],
   "[StartTimeout](#cfn-ecs-taskdefinition-containerdefinition-starttimeout)" : Integer,
   "[StopTimeout](#cfn-ecs-taskdefinition-containerdefinition-stoptimeout)" : Integer,
+  "[SystemControls](#cfn-ecs-taskdefinition-containerdefinition-systemcontrols)" : [ [SystemControl](aws-properties-ecs-taskdefinition-systemcontrol.md), ... ],
   "[Ulimits](#cfn-ecs-taskdefinition-containerdefinition-ulimits)" : [ [Ulimit](aws-properties-ecs-taskdefinition-containerdefinitions-ulimit.md), ... ],
   "[User](#cfn-ecs-taskdefinition-containerdefinition-user)" : String,
   "[VolumesFrom](#cfn-ecs-taskdefinition-containerdefinition-volumesfrom)" : [ [VolumeFrom](aws-properties-ecs-taskdefinition-containerdefinitions-volumesfrom.md), ... ],
@@ -73,6 +78,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     [HealthCheck](aws-properties-ecs-taskdefinition-healthcheck.md)
   [Hostname](#cfn-ecs-taskdefinition-containerdefinition-hostname): String
   [Image](#cfn-ecs-taskdefinition-containerdefinition-image): String
+  [Interactive](#cfn-ecs-taskdefinition-containerdefinition-interactive): Boolean
   [Links](#cfn-ecs-taskdefinition-containerdefinition-links): 
     - String
   [LinuxParameters](#cfn-ecs-taskdefinition-containerdefinition-linuxparameters): 
@@ -87,11 +93,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [PortMappings](#cfn-ecs-taskdefinition-containerdefinition-portmappings): 
     - [PortMapping](aws-properties-ecs-taskdefinition-containerdefinitions-portmappings.md)
   [Privileged](#cfn-ecs-taskdefinition-containerdefinition-privileged): Boolean
+  [PseudoTerminal](#cfn-ecs-taskdefinition-containerdefinition-pseudoterminal): Boolean
   [ReadonlyRootFilesystem](#cfn-ecs-taskdefinition-containerdefinition-readonlyrootfilesystem): Boolean
   [RepositoryCredentials](#cfn-ecs-taskdefinition-containerdefinition-repositorycredentials): 
     [RepositoryCredentials](aws-properties-ecs-taskdefinition-repositorycredentials.md)
+  [ResourceRequirements](#cfn-ecs-taskdefinition-containerdefinition-resourcerequirements): 
+    - [ResourceRequirement](aws-properties-ecs-taskdefinition-resourcerequirement.md)
+  [Secrets](#cfn-ecs-taskdefinition-containerdefinition-secrets): 
+    - [Secret](aws-properties-ecs-taskdefinition-secret.md)
   [StartTimeout](#cfn-ecs-taskdefinition-containerdefinition-starttimeout): Integer
   [StopTimeout](#cfn-ecs-taskdefinition-containerdefinition-stoptimeout): Integer
+  [SystemControls](#cfn-ecs-taskdefinition-containerdefinition-systemcontrols): 
+    - [SystemControl](aws-properties-ecs-taskdefinition-systemcontrol.md)
   [Ulimits](#cfn-ecs-taskdefinition-containerdefinition-ulimits): 
     - [Ulimit](aws-properties-ecs-taskdefinition-containerdefinitions-ulimit.md)
   [User](#cfn-ecs-taskdefinition-containerdefinition-user): String
@@ -160,7 +173,7 @@ A key/value map of labels to add to the container\. This parameter maps to `Labe
 `DockerSecurityOptions`  <a name="cfn-ecs-taskdefinition-containerdefinition-dockersecurityoptions"></a>
 A list of strings to provide custom labels for SELinux and AppArmor multi\-level security systems\. This field is not valid for containers in tasks using the Fargate launch type\.  
 This parameter maps to `SecurityOpt` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--security-opt` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
-The Amazon ECS container agent running on a container instance must register with the `ECS_SELINUX_CAPABLE=true` or `ECS_APPARMOR_CAPABLE=true` environment variables before containers placed on that instance can use these security options\. For more information, see [Amazon ECS Container Agent Configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+The Amazon ECS container agent running on a container instance must register with the `ECS_SELINUX_CAPABLE=true` or `ECS_APPARMOR_CAPABLE=true` environment variables before containers placed on that instance can use these security options\. For more information, see [Amazon ECS Container Agent Configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html) in the *Amazon Elastic Container Service Developer Guide*\.
 This parameter is not supported for Windows containers\.
 *Required*: No  
 *Type*: List of String  
@@ -218,8 +231,14 @@ The image used to start a container\. This string is passed directly to the Dock
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`Interactive`  <a name="cfn-ecs-taskdefinition-containerdefinition-interactive"></a>
+When this parameter is `true`, this allows you to deploy containerized applications that require `stdin` or a `tty` to be allocated\. This parameter maps to `OpenStdin` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--interactive` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `Links`  <a name="cfn-ecs-taskdefinition-containerdefinition-links"></a>
-The `link` parameter allows containers to communicate with each other without the need for port mappings\. Only supported if the network mode of a task definition is set to `bridge`\. The `name:internalName` construct is analogous to `name:alias` in Docker links\. Up to 255 letters \(uppercase and lowercase\), numbers, and hyphens are allowed\. For more information about linking Docker containers, go to [https://docs\.docker\.com/engine/userguide/networking/default\_network/dockerlinks/](https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/)\. This parameter maps to `Links` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--link` option to [ `docker run` ](https://docs.docker.com/engine/reference/commandline/run/)\.  
+The `links` parameter allows containers to communicate with each other without the need for port mappings\. This parameter is only supported if the network mode of a task definition is `bridge`\. The `name:internalName` construct is analogous to `name:alias` in Docker links\. Up to 255 letters \(uppercase and lowercase\), numbers, and hyphens are allowed\. For more information about linking Docker containers, go to [Legacy container links](https://docs.docker.com/network/links/) in the Docker documentation\. This parameter maps to `Links` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--link` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
 This parameter is not supported for Windows containers\.
 Containers that are collocated on a single container instance may be able to communicate with each other without requiring links or host port mappings\. Network isolation is achieved on the container instance using security groups and VPC settings\.
 *Required*: No  
@@ -245,17 +264,17 @@ The Amazon ECS container agent running on a container instance must register the
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Memory`  <a name="cfn-ecs-taskdefinition-containerdefinition-memory"></a>
-The hard limit \(in MiB\) of memory to present to the container\. If your container attempts to exceed the memory specified here, the container is killed\. This parameter maps to `Memory` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--memory` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
-If your containers are part of a task using the Fargate launch type, this field is optional and the only requirement is that the total amount of memory reserved for all containers within a task be lower than the task `memory` value\.  
-For containers that are part of a task using the EC2 launch type, you must specify a non\-zero integer for one or both of `memory` or `memoryReservation` in container definitions\. If you specify both, `memory` must be greater than `memoryReservation`\. If you specify `memoryReservation`, then that value is subtracted from the available memory resources for the container instance on which the container is placed\. Otherwise, the value of `memory` is used\.  
-The Docker daemon reserves a minimum of 4 MiB of memory for a container, so you should not specify fewer than 4 MiB of memory for your containers\.   
+The amount \(in MiB\) of memory to present to the container\. If your container attempts to exceed the memory specified here, the container is killed\. The total amount of memory reserved for all containers within a task must be lower than the task `memory` value, if one is specified\. This parameter maps to `Memory` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--memory` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
+If using the Fargate launch type, this parameter is optional\.  
+If using the EC2 launch type, you must specify either a task\-level memory value or a container\-level memory value\. If you specify both a container\-level `memory` and `memoryReservation` value, `memory` must be greater than `memoryReservation`\. If you specify `memoryReservation`, then that value is subtracted from the available memory resources for the container instance on which the container is placed\. Otherwise, the value of `memory` is used\.  
+The Docker daemon reserves a minimum of 4 MiB of memory for a container, so you should not specify fewer than 4 MiB of memory for your containers\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MemoryReservation`  <a name="cfn-ecs-taskdefinition-containerdefinition-memoryreservation"></a>
 The soft limit \(in MiB\) of memory to reserve for the container\. When system memory is under heavy contention, Docker attempts to keep the container memory to this soft limit\. However, your container can consume more memory when it needs to, up to either the hard limit specified with the `memory` parameter \(if applicable\), or all of the available memory on the container instance, whichever comes first\. This parameter maps to `MemoryReservation` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--memory-reservation` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
-You must specify a non\-zero integer for one or both of `memory` or `memoryReservation` in container definitions\. If you specify both, `memory` must be greater than `memoryReservation`\. If you specify `memoryReservation`, then that value is subtracted from the available memory resources for the container instance on which the container is placed\. Otherwise, the value of `memory` is used\.  
+If a task\-level memory value is not specified, you must specify a non\-zero integer for one or both of `memory` or `memoryReservation` in a container definition\. If you specify both, `memory` must be greater than `memoryReservation`\. If you specify `memoryReservation`, then that value is subtracted from the available memory resources for the container instance on which the container is placed\. Otherwise, the value of `memory` is used\.  
 For example, if your container normally uses 128 MiB of memory, but occasionally bursts to 256 MiB of memory for short periods of time, you can set a `memoryReservation` of 128 MiB, and a `memory` hard limit of 300 MiB\. This configuration would allow the container to only reserve 128 MiB of memory from the remaining resources on the container instance, but also allow the container to consume more memory resources when needed\.  
 The Docker daemon reserves a minimum of 4 MiB of memory for a container, so you should not specify fewer than 4 MiB of memory for your containers\.   
 *Required*: No  
@@ -293,6 +312,12 @@ This parameter is not supported for Windows containers or tasks using the Fargat
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`PseudoTerminal`  <a name="cfn-ecs-taskdefinition-containerdefinition-pseudoterminal"></a>
+When this parameter is `true`, a TTY is allocated\. This parameter maps to `Tty` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--tty` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `ReadonlyRootFilesystem`  <a name="cfn-ecs-taskdefinition-containerdefinition-readonlyrootfilesystem"></a>
 When this parameter is true, the container is given read\-only access to its root file system\. This parameter maps to `ReadonlyRootfs` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--read-only` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
 This parameter is not supported for Windows containers\.
@@ -306,8 +331,20 @@ The private repository authentication credentials to use\.
 *Type*: [RepositoryCredentials](aws-properties-ecs-taskdefinition-repositorycredentials.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`ResourceRequirements`  <a name="cfn-ecs-taskdefinition-containerdefinition-resourcerequirements"></a>
+The type and amount of a resource to assign to a container\. The only supported resource is a GPU\.  
+*Required*: No  
+*Type*: List of [ResourceRequirement](aws-properties-ecs-taskdefinition-resourcerequirement.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Secrets`  <a name="cfn-ecs-taskdefinition-containerdefinition-secrets"></a>
+The secrets to pass to the container\. For more information, see [Specifying Sensitive Data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+*Required*: No  
+*Type*: List of [Secret](aws-properties-ecs-taskdefinition-secret.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `StartTimeout`  <a name="cfn-ecs-taskdefinition-containerdefinition-starttimeout"></a>
-Time duration to wait before giving up on resolving dependencies for a container\. For example, you specify two containers in a task definition with containerA having a dependency on containerB reaching a `COMPLETE`, `SUCCESS`, or `HEALTHY` status\. If a `startTimeout` value is specified for containerB and it does not reach the desired status within that time then containerA will give up and not start\. This results in the task transitioning to a `STOPPED` state\.  
+Time duration \(in seconds\) to wait before giving up on resolving dependencies for a container\. For example, you specify two containers in a task definition with containerA having a dependency on containerB reaching a `COMPLETE`, `SUCCESS`, or `HEALTHY` status\. If a `startTimeout` value is specified for containerB and it does not reach the desired status within that time then containerA will give up and not start\. This results in the task transitioning to a `STOPPED` state\.  
 For tasks using the EC2 launch type, the container instances require at least version 1\.26\.0 of the container agent to enable a container start timeout value\. However, we recommend using the latest container agent version\. For information about checking your agent version and updating to the latest version, see [Updating the Amazon ECS Container Agent](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html) in the *Amazon Elastic Container Service Developer Guide*\. If you are using an Amazon ECS\-optimized Linux AMI, your instance needs at least version 1\.26\.0\-1 of the `ecs-init` package\. If your container instances are launched from version `20190301` or later, then they contain the required versions of the container agent and `ecs-init`\. For more information, see [Amazon ECS\-optimized Linux AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 This parameter is available for tasks using the Fargate launch type in the Ohio \(us\-east\-2\) region only and the task or service requires platform version 1\.3\.0 or later\.  
 *Required*: No  
@@ -315,10 +352,17 @@ This parameter is available for tasks using the Fargate launch type in the Ohio 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StopTimeout`  <a name="cfn-ecs-taskdefinition-containerdefinition-stoptimeout"></a>
-Time duration to wait before the container is forcefully killed if it doesn't exit normally on its own\. For tasks using the Fargate launch type, the max `stopTimeout` value is 2 minutes\. This parameter is available for tasks using the Fargate launch type in the Ohio \(us\-east\-2\) region only and the task or service requires platform version 1\.3\.0 or later\.  
+Time duration \(in seconds\) to wait before the container is forcefully killed if it doesn't exit normally on its own\. For tasks using the Fargate launch type, the max `stopTimeout` value is 2 minutes\. This parameter is available for tasks using the Fargate launch type in the Ohio \(us\-east\-2\) region only and the task or service requires platform version 1\.3\.0 or later\.  
 For tasks using the EC2 launch type, the stop timeout value for the container takes precedence over the `ECS_CONTAINER_STOP_TIMEOUT` container agent configuration parameter, if used\. Container instances require at least version 1\.26\.0 of the container agent to enable a container stop timeout value\. However, we recommend using the latest container agent version\. For information about checking your agent version and updating to the latest version, see [Updating the Amazon ECS Container Agent](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html) in the *Amazon Elastic Container Service Developer Guide*\. If you are using an Amazon ECS\-optimized Linux AMI, your instance needs at least version 1\.26\.0\-1 of the `ecs-init` package\. If your container instances are launched from version `20190301` or later, then they contain the required versions of the container agent and `ecs-init`\. For more information, see [Amazon ECS\-optimized Linux AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`SystemControls`  <a name="cfn-ecs-taskdefinition-containerdefinition-systemcontrols"></a>
+A list of namespaced kernel parameters to set in the container\. This parameter maps to `Sysctls` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--sysctl` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
+It is not recommended that you specify network\-related `systemControls` parameters for multiple containers in a single task that also uses either the `awsvpc` or `host` network modes\. For tasks that use the `awsvpc` network mode, the container that is started last determines which `systemControls` parameters take effect\. For tasks that use the `host` network mode, it changes the container instance's namespaced kernel parameters as well as the containers\.
+*Required*: No  
+*Type*: List of [SystemControl](aws-properties-ecs-taskdefinition-systemcontrol.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ulimits`  <a name="cfn-ecs-taskdefinition-containerdefinition-ulimits"></a>

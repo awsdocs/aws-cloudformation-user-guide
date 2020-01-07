@@ -31,9 +31,9 @@ CloudFormer is itself an AWS CloudFormation stack, so the first step is to creat
 
 **To create a CloudFormer stack using the AWS CloudFormation Console**
 
-1.  Log in to the AWS CloudFormation console and click **Create New Stack** to launch the stack creation wizard\. For instructions on how to log in, see [Logging in to the AWS CloudFormation Console](cfn-console-login.html)\. 
+1.  Log in to the AWS CloudFormation console and click **Create stack**\. For instructions on how to log in, see [Logging in to the AWS CloudFormation Console](cfn-console-login.html)\. 
 
-1. In the **Choose a template** section, select **Select a sample template** and then select **CloudFormer** from the drop\-down list\.
+1. Select **Use a sample template**, and in the **Select a sample template** section, select **Choose a sample template** and then select **CloudFormer** from the drop\-down list\.
 
 1. Click **Next** to specify the stack name and input parameters\.
 

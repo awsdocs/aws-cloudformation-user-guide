@@ -17,7 +17,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CertificateArn](#cfn-apigateway-domainname-certificatearn)" : String,
       "[DomainName](#cfn-apigateway-domainname-domainname)" : String,
       "[EndpointConfiguration](#cfn-apigateway-domainname-endpointconfiguration)" : [EndpointConfiguration](aws-properties-apigateway-domainname-endpointconfiguration.md),
-      "[RegionalCertificateArn](#cfn-apigateway-domainname-regionalcertificatearn)" : String
+      "[RegionalCertificateArn](#cfn-apigateway-domainname-regionalcertificatearn)" : String,
+      "[SecurityPolicy](#cfn-apigateway-domainname-securitypolicy)" : String,
+      "[Tags](#cfn-apigateway-domainname-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -32,6 +34,9 @@ Properties:
   [EndpointConfiguration](#cfn-apigateway-domainname-endpointconfiguration): 
     [EndpointConfiguration](aws-properties-apigateway-domainname-endpointconfiguration.md)
   [RegionalCertificateArn](#cfn-apigateway-domainname-regionalcertificatearn): String
+  [SecurityPolicy](#cfn-apigateway-domainname-securitypolicy): String
+  [Tags](#cfn-apigateway-domainname-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-apigateway-domainname-properties"></a>
@@ -58,6 +63,19 @@ A list of the endpoint types of the domain name\.
 The reference to an AWS\-managed certificate for use by the regional endpoint for the domain name\. AWS Certificate Manager is the only supported source\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SecurityPolicy`  <a name="cfn-apigateway-domainname-securitypolicy"></a>
+The Transport Layer Security \(TLS\) version \+ cipher suite for this domain name\.  
+Valid values include `TLS_1_0` and `TLS_1_2`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-apigateway-domainname-tags"></a>
+An array of arbitrary tags \(key\-value pairs\) to associate with the domain name\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-apigateway-domainname-return-values"></a>

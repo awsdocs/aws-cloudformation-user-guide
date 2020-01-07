@@ -155,7 +155,7 @@ You could use the following template to embed a stack \(myStackWithParams\) usin
     "myStackWithParams" : {
       "Type" : "AWS::CloudFormation::Stack",
       "Properties" : {
-      "TemplateURL" : "https://s3.amazonaws.com/cloudformation-templates-us-east-2/EC2ChooseAMI.template",
+        "TemplateURL" : "https://s3.amazonaws.com/cloudformation-templates-us-east-2/EC2ChooseAMI.template",
         "Parameters" : {
           "InstanceType" : "t1.micro",
           "KeyName" : "mykey"
@@ -174,7 +174,7 @@ Resources:
   myStackWithParams: 
     Type: AWS::CloudFormation::Stack
     Properties: 
-    TemplateURL: "https://s3.amazonaws.com/cloudformation-templates-us-east-2/EC2ChooseAMI.template"
+      TemplateURL: "https://s3.amazonaws.com/cloudformation-templates-us-east-2/EC2ChooseAMI.template"
       Parameters: 
         InstanceType: "t1.micro"
         KeyName: "mykey"

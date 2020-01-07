@@ -9,14 +9,15 @@ You can add as many files as you need to your repository\. For example, you migh
 This topic describes each artifact type\.
 
 **Topics**
-+ [Stack Template File](#w4784ab1c13c15c13)
-+ [Template Configuration File](#w4784ab1c13c15c15)
++ [Stack Template File](#w4905ab1c13c17c13)
++ [Template Configuration File](#w4905ab1c13c17c15)
++ [See Also](#w4905ab1c13c17c19)
 
-## Stack Template File<a name="w4784ab1c13c15c13"></a>
+## Stack Template File<a name="w4905ab1c13c17c13"></a>
 
 A stack template file defines the resources that AWS CloudFormation provisions and configures\. These files are the same template files that you use when you create or update stacks using AWS CloudFormation\. You can use YAML or JSON\-formatted templates\. For more information about templates, see [Template Anatomy](template-anatomy.md)\.
 
-## Template Configuration File<a name="w4784ab1c13c15c15"></a>
+## Template Configuration File<a name="w4905ab1c13c17c15"></a>
 
 A template configuration file is a JSON\-formatted text file that can specify template parameter values, a [stack policy](protect-stack-resources.md), and tags\. Use these configuration files to specify parameter values or a stack policy for a stack\. All of the parameter values that you specify must be declared in the associated template\.
 
@@ -64,3 +65,10 @@ The following example specifies `TestEC2Key` for the `KeyName` parameter, adds a
   }
 }
 ```
+
+## See Also<a name="w4905ab1c13c17c19"></a>
+
+The following related resources can help you as you work with these parameters\.
++ For more information about the AWS CloudFormation action parameters in CodePipeline, see the [AWS CloudFormation](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference-CloudFormation.html) action configuration reference in the *AWS CodePipeline User Guide*\.
++ For example template values by action provider, such as for the `Owner` field or the `configuration` fields, see the [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) in the *AWS CodePipeline User Guide*\.
++ To download example pipeline stack templates in YAML or JSON format, see the tutorials under [Create a Pipeline with AWS CloudFormation](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-cloudformation.html) in the *AWS CodePipeline User Guide*\.

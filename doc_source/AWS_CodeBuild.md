@@ -2,3 +2,4 @@
 
 **Resource Types**
 + [AWS::CodeBuild::Project](aws-resource-codebuild-project.md)
++ [AWS::CodeBuild::SourceCredential](aws-resource-codebuild-sourcecredential.md)

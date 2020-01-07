@@ -16,9 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[FailureThreshold](#cfn-route53-healthcheck-healthcheckconfig-failurethreshold)" : Integer,
   "[FullyQualifiedDomainName](#cfn-route53-healthcheck-healthcheckconfig-fullyqualifieddomainname)" : String,
   "[HealthThreshold](#cfn-route53-healthcheck-healthcheckconfig-healththreshold)" : Integer,
-  "[IPAddress](#cfn-route53-healthcheck-healthcheckconfig-ipaddress)" : String,
   "[InsufficientDataHealthStatus](#cfn-route53-healthcheck-healthcheckconfig-insufficientdatahealthstatus)" : String,
   "[Inverted](#cfn-route53-healthcheck-healthcheckconfig-inverted)" : Boolean,
+  "[IPAddress](#cfn-route53-healthcheck-healthcheckconfig-ipaddress)" : String,
   "[MeasureLatency](#cfn-route53-healthcheck-healthcheckconfig-measurelatency)" : Boolean,
   "[Port](#cfn-route53-healthcheck-healthcheckconfig-port)" : Integer,
   "[Regions](#cfn-route53-healthcheck-healthcheckconfig-regions)" : [ String, ... ],
@@ -40,9 +40,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [FailureThreshold](#cfn-route53-healthcheck-healthcheckconfig-failurethreshold): Integer
   [FullyQualifiedDomainName](#cfn-route53-healthcheck-healthcheckconfig-fullyqualifieddomainname): String
   [HealthThreshold](#cfn-route53-healthcheck-healthcheckconfig-healththreshold): Integer
-  [IPAddress](#cfn-route53-healthcheck-healthcheckconfig-ipaddress): String
   [InsufficientDataHealthStatus](#cfn-route53-healthcheck-healthcheckconfig-insufficientdatahealthstatus): String
   [Inverted](#cfn-route53-healthcheck-healthcheckconfig-inverted): Boolean
+  [IPAddress](#cfn-route53-healthcheck-healthcheckconfig-ipaddress): String
   [MeasureLatency](#cfn-route53-healthcheck-healthcheckconfig-measurelatency): Boolean
   [Port](#cfn-route53-healthcheck-healthcheckconfig-port): Integer
   [Regions](#cfn-route53-healthcheck-healthcheckconfig-regions): 
@@ -97,9 +97,9 @@ When Route 53 checks the health of an endpoint, here is how it constructs the `H
 If you don't specify a value for `FullyQualifiedDomainName`, Route 53 substitutes the value of `IPAddress` in the `Host` header in each of the preceding cases\.  
  **If you don't specify a value for `IPAddress` **:  
 Route 53 sends a DNS request to the domain that you specify for `FullyQualifiedDomainName` at the interval that you specify for `RequestInterval`\. Using an IPv4 address that DNS returns, Route 53 then checks the health of the endpoint\.  
-If you don't specify a value for `IPAddress`, Route 53 uses only IPv4 to send health checks to the endpoint\. If there's no resource record set with a type of A for the name that you specify for `FullyQualifiedDomainName`, the health check fails with a "DNS resolution failed" error\.
-If you want to check the health of weighted, latency, or failover resource record sets and you choose to specify the endpoint only by `FullyQualifiedDomainName`, we recommend that you create a separate health check for each endpoint\. For example, create a health check for each HTTP server that is serving content for www\.example\.com\. For the value of `FullyQualifiedDomainName`, specify the domain name of the server \(such as us\-east\-2\-www\.example\.com\), not the name of the resource record sets \(www\.example\.com\)\.  
-In this configuration, if you create a health check for which the value of `FullyQualifiedDomainName` matches the name of the resource record sets and you then associate the health check with those resource record sets, health check results will be unpredictable\.
+If you don't specify a value for `IPAddress`, Route 53 uses only IPv4 to send health checks to the endpoint\. If there's no record with a type of A for the name that you specify for `FullyQualifiedDomainName`, the health check fails with a "DNS resolution failed" error\.
+If you want to check the health of multiple records that have the same name and type, such as multiple weighted records, and if you choose to specify the endpoint only by `FullyQualifiedDomainName`, we recommend that you create a separate health check for each endpoint\. For example, create a health check for each HTTP server that is serving content for www\.example\.com\. For the value of `FullyQualifiedDomainName`, specify the domain name of the server \(such as us\-east\-2\-www\.example\.com\), not the name of the records \(www\.example\.com\)\.  
+In this configuration, if you create a health check for which the value of `FullyQualifiedDomainName` matches the name of the records and you then associate the health check with those records, health check results will be unpredictable\.
 In addition, if the value that you specify for `Type` is `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, or `HTTPS_STR_MATCH`, Route 53 passes the value of `FullyQualifiedDomainName` in the `Host` header, as it does when you specify a value for `IPAddress`\. If the value of `Type` is `TCP`, Route 53 doesn't pass a `Host` header\.  
 *Required*: No  
 *Type*: String  
@@ -115,6 +115,22 @@ Note the following:
 *Type*: Integer  
 *Minimum*: `0`  
 *Maximum*: `256`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`InsufficientDataHealthStatus`  <a name="cfn-route53-healthcheck-healthcheckconfig-insufficientdatahealthstatus"></a>
+When CloudWatch has insufficient data about the metric to determine the alarm state, the status that you want Amazon Route 53 to assign to the health check:  
++  `Healthy`: Route 53 considers the health check to be healthy\.
++  `Unhealthy`: Route 53 considers the health check to be unhealthy\.
++  `LastKnownStatus`: Route 53 uses the status of the health check from the last time that CloudWatch had sufficient data to determine the alarm state\. For new health checks that have no last known status, the default status for the health check is healthy\.
+*Required*: No  
+*Type*: String  
+*Allowed Values*: `Healthy | LastKnownStatus | Unhealthy`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Inverted`  <a name="cfn-route53-healthcheck-healthcheckconfig-inverted"></a>
+Specify whether you want Amazon Route 53 to invert the status of a health check, for example, to consider a health check unhealthy when it otherwise would be considered healthy\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IPAddress`  <a name="cfn-route53-healthcheck-healthcheckconfig-ipaddress"></a>
@@ -135,22 +151,6 @@ When the value of `Type` is `CALCULATED` or `CLOUDWATCH_METRIC`, omit `IPAddress
 *Pattern*: `(^((([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]))$|^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`InsufficientDataHealthStatus`  <a name="cfn-route53-healthcheck-healthcheckconfig-insufficientdatahealthstatus"></a>
-When CloudWatch has insufficient data about the metric to determine the alarm state, the status that you want Amazon Route 53 to assign to the health check:  
-+  `Healthy`: Route 53 considers the health check to be healthy\.
-+  `Unhealthy`: Route 53 considers the health check to be unhealthy\.
-+  `LastKnownStatus`: Route 53 uses the status of the health check from the last time that CloudWatch had sufficient data to determine the alarm state\. For new health checks that have no last known status, the default status for the health check is healthy\.
-*Required*: No  
-*Type*: String  
-*Allowed Values*: `Healthy | LastKnownStatus | Unhealthy`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`Inverted`  <a name="cfn-route53-healthcheck-healthcheckconfig-inverted"></a>
-Specify whether you want Amazon Route 53 to invert the status of a health check, for example, to consider a health check unhealthy when it otherwise would be considered healthy\.  
-*Required*: No  
-*Type*: Boolean  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `MeasureLatency`  <a name="cfn-route53-healthcheck-healthcheckconfig-measurelatency"></a>
 Specify whether you want Amazon Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint, and to display CloudWatch latency graphs on the **Health Checks** page in the Route 53 console\.  
 You can't change the value of `MeasureLatency` after you create a health check\.
@@ -159,7 +159,8 @@ You can't change the value of `MeasureLatency` after you create a health check\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Port`  <a name="cfn-route53-healthcheck-healthcheckconfig-port"></a>
-The port on the endpoint on which you want Amazon Route 53 to perform health checks\. Specify a value for `Port` only when you specify a value for `IPAddress`\.  
+The port on the endpoint that you want Amazon Route 53 to perform health checks on\.  
+Don't specify a value for `Port` when you specify a value for [Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html#cfn-route53-healthcheck-healthcheckconfig-type) of `CLOUDWATCH_METRIC` or `CALCULATED`\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -193,7 +194,7 @@ The path, if any, that you want Amazon Route 53 to request when performing healt
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SearchString`  <a name="cfn-route53-healthcheck-healthcheckconfig-searchstring"></a>
-If the value of Type is `HTTP_STR_MATCH` or `HTTP_STR_MATCH`, the string that you want Amazon Route 53 to search for in the response body from the specified resource\. If the string appears in the response body, Route 53 considers the resource healthy\.  
+If the value of Type is `HTTP_STR_MATCH` or `HTTPS_STR_MATCH`, the string that you want Amazon Route 53 to search for in the response body from the specified resource\. If the string appears in the response body, Route 53 considers the resource healthy\.  
 Route 53 considers case when searching for `SearchString` in the response body\.   
 *Required*: No  
 *Type*: String  
@@ -216,7 +217,7 @@ If you specify `HTTPS` for the value of `Type`, the endpoint must support TLS v1
 For more information, see [How Route 53 Determines Whether an Endpoint Is Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html) in the *Amazon Route 53 Developer Guide*\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CALCULATED | CLOUDWATCH_METRIC | HTTP | HTTPS | HTTPS_STR_MATCH | HTTP_STR_MATCH | TCP`  
+*Allowed Values*: `CALCULATED | CLOUDWATCH_METRIC | HTTP | HTTP_STR_MATCH | HTTPS | HTTPS_STR_MATCH | TCP`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See Also<a name="aws-properties-route53-healthcheck-healthcheckconfig--seealso"></a>

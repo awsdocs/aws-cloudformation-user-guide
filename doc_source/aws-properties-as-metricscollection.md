@@ -28,16 +28,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-as-metricscollection-properties"></a>
 
 `Granularity`  <a name="cfn-as-metricscollection-granularity"></a>
-The frequency at which Amazon EC2 Auto Scaling sends aggregated data to CloudWatch\. The only valid value is `1Minute`\.  
+The frequency at which Amazon EC2 Auto Scaling sends aggregated data to CloudWatch\.  
+*Allowed Values*: `1Minute`  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Metrics`  <a name="cfn-as-metricscollection-metrics"></a>
 The list of Auto Scaling group metrics to collect\. If you specify `Granularity` and don't specify any metrics, all metrics are enabled\.   
+*Allowed Values*:  
 + `GroupMinSize`
 + `GroupMaxSize`
 + `GroupDesiredCapacity`
@@ -48,7 +47,4 @@ The list of Auto Scaling group metrics to collect\. If you specify `Granularity`
 + `GroupTotalInstances`
 *Required*: No  
 *Type*: List of String  
-*Minimum*: `1`  
-*Maximum*: `255`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -198,7 +198,7 @@ SGBaseIngress:
       IpProtocol: tcp
       FromPort: 80
       ToPort: 80
-      SourceSecurityGroupId: !Ref SGBase
+      SourceSecurityGroupId: !GetAtt SGBase.GroupId
 ```
 
 ### Allow Traffic from a Security Group in a Peered VPC<a name="aws-properties-ec2-security-group-ingress--examples--Allow_Traffic_from_a_Security_Group_in_a_Peered_VPC"></a>

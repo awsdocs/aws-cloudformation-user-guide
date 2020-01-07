@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Name](#cfn-glue-job-jobcommand-name)" : String,
+  "[PythonVersion](#cfn-glue-job-jobcommand-pythonversion)" : String,
   "[ScriptLocation](#cfn-glue-job-jobcommand-scriptlocation)" : String
 }
 ```
@@ -19,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Name](#cfn-glue-job-jobcommand-name): String
+  [PythonVersion](#cfn-glue-job-jobcommand-pythonversion): String
   [ScriptLocation](#cfn-glue-job-jobcommand-scriptlocation): String
 ```
 
@@ -26,6 +28,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Name`  <a name="cfn-glue-job-jobcommand-name"></a>
 The name of the job command\. For an Apache Spark ETL job, this must be `glueetl`\. For a Python shell job, it must be `pythonshell`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PythonVersion`  <a name="cfn-glue-job-jobcommand-pythonversion"></a>
+The Python version being used to execute a Python shell job\. Allowed values are 2 or 3\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -19,7 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Greengrass::ConnectorDefinition",
   "Properties" : {
       "[InitialVersion](#cfn-greengrass-connectordefinition-initialversion)" : [ConnectorDefinitionVersion](aws-properties-greengrass-connectordefinition-connectordefinitionversion.md),
-      "[Name](#cfn-greengrass-connectordefinition-name)" : String
+      "[Name](#cfn-greengrass-connectordefinition-name)" : String,
+      "[Tags](#cfn-greengrass-connectordefinition-tags)" : Json
     }
 }
 ```
@@ -32,6 +33,7 @@ Properties:
   [InitialVersion](#cfn-greengrass-connectordefinition-initialversion): 
     [ConnectorDefinitionVersion](aws-properties-greengrass-connectordefinition-connectordefinitionversion.md)
   [Name](#cfn-greengrass-connectordefinition-name): String
+  [Tags](#cfn-greengrass-connectordefinition-tags): Json
 ```
 
 ## Properties<a name="aws-resource-greengrass-connectordefinition-properties"></a>
@@ -47,6 +49,21 @@ To associate a connector definition version after the connector definition is cr
 The name of the connector definition\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-greengrass-connectordefinition-tags"></a>
+Application\-specific metadata to attach to the connector definition\. You can use tags in IAM policies to control access to AWS IoT Greengrass resources\. You can also use tags to categorize your resources\. For more information, see [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/latest/developerguide/tagging.html) in the *AWS IoT Greengrass Developer Guide*\.  
+This `Json` property type is processed as a map of key\-value pairs\. It uses the following format, which is different from most `Tags` implementations in AWS CloudFormation templates\.  
+
+```
+"Tags": {
+    "KeyName0": "value",
+    "KeyName1": "value",
+    "KeyName2": "value"
+}
+```
+*Required*: No  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-greengrass-connectordefinition-return-values"></a>

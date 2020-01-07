@@ -17,8 +17,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-glue-trigger-name)" : String,
       "[Predicate](#cfn-glue-trigger-predicate)" : [Predicate](aws-properties-glue-trigger-predicate.md),
       "[Schedule](#cfn-glue-trigger-schedule)" : String,
+      "[StartOnCreation](#cfn-glue-trigger-startoncreation)" : Boolean,
       "[Tags](#cfn-glue-trigger-tags)" : Json,
-      "[Type](#cfn-glue-trigger-type)" : String
+      "[Type](#cfn-glue-trigger-type)" : String,
+      "[WorkflowName](#cfn-glue-trigger-workflowname)" : String
     }
 }
 ```
@@ -35,8 +37,10 @@ Properties:
   [Predicate](#cfn-glue-trigger-predicate): 
     [Predicate](aws-properties-glue-trigger-predicate.md)
   [Schedule](#cfn-glue-trigger-schedule): String
+  [StartOnCreation](#cfn-glue-trigger-startoncreation): Boolean
   [Tags](#cfn-glue-trigger-tags): Json
   [Type](#cfn-glue-trigger-type): String
+  [WorkflowName](#cfn-glue-trigger-workflowname): String
 ```
 
 ## Properties<a name="aws-resource-glue-trigger-properties"></a>
@@ -71,8 +75,14 @@ A `cron` expression used to specify the schedule\. For more information, see [Ti
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`StartOnCreation`  <a name="cfn-glue-trigger-startoncreation"></a>
+Set to true to start `SCHEDULED` and `CONDITIONAL` triggers when created\. True is not supported for `ON_DEMAND` triggers\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Tags`  <a name="cfn-glue-trigger-tags"></a>
-The tags to use with this trigger\. You can use tags to limit access to the trigger\. For more information about tags in AWS Glue, see [AWS Tags in AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html) in the developer guide\.\.  
+The tags to use with this trigger\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -82,6 +92,12 @@ The type of trigger that this is\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`WorkflowName`  <a name="cfn-glue-trigger-workflowname"></a>
+The name of the workflow associated with the trigger\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-glue-trigger-return-values"></a>
 
