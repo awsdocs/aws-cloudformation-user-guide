@@ -150,7 +150,7 @@ In general, here's how it works once you have the necessary permissions in place
 
 1. For each stack set, create a customized administrator role with permissions to assume the **AWSCloudFormationStackSetExecutionRole** service role in the target accounts\. 
 
-   Create an [IAM service role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html.html) with a custom name, using the following permissions policy:
+   Create an [IAM service role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) with a custom name, using the following permissions policy:
 
    ```
    {
