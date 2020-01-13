@@ -115,12 +115,12 @@ The following example creates an Amazon EKS cluster called prod\.
                 "ResourcesVpcConfig": {
                     "SecurityGroupIds": [
                         "sg-6979fe18"
+                    ],
+                    "SubnetIds": [
+                        "subnet-6782e71e",
+                        "subnet-e7e761ac"
                     ]
-                },
-                "SubnetIds": [
-                    "subnet-6782e71e",
-                    "subnet-e7e761ac"
-                ]
+                } 
             }
         }
     }
