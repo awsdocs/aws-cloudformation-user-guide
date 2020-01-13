@@ -39,13 +39,13 @@ The customer\-assigned name of the certificate\. Valid characters are A\-z and 0
 
 `CertificatePem`  <a name="cfn-dms-certificate-certificatepem"></a>
 The contents of the \.pem X\.509 certificate file for the certificate\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CertificateWallet`  <a name="cfn-dms-certificate-certificatewallet"></a>
 The location of the imported Oracle Wallet certificate for use with SSL\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
