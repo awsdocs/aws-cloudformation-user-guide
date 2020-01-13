@@ -48,7 +48,6 @@ The name of the database\. For Hive compatibility, this is folded to lowercase w
 
 `Parameters`  <a name="cfn-glue-database-databaseinput-parameters"></a>
 These key\-value pairs define parameters and properties of the database\.  
-These key\-value pairs define parameters and properties of the database\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
