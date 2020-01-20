@@ -57,7 +57,7 @@ If a resource is replaced, the UpdateReplacePolicy retains the old physical reso
 
 Snapshot  
 For resources that support snapshots, AWS CloudFormation creates a snapshot for the resource before deleting it\. Note that snapshots that are created with this policy continue to exist and continue to incur applicable charges until you delete those snapshots\.  
-If you specify the `snapshot` option in the UpdateReplacePolicy for a resource that does not support snapshots, CloudFormation reverts to the default option, which is `Delete`\.
+If you specify the `Snapshot` option in the UpdateReplacePolicy for a resource that does not support snapshots, CloudFormation reverts to the default option, which is `Delete`\.
 Resources that support snapshots include:  
 + `[AWS::EC2::Volume](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html)`
 + `[AWS::ElastiCache::CacheCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html)`

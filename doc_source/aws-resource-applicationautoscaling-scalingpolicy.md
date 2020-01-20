@@ -55,8 +55,10 @@ The name of the scaling policy\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PolicyType`  <a name="cfn-applicationautoscaling-scalingpolicy-policytype"></a>
-The Application Auto Scaling policy type\. Valid values are `StepScaling` and `TargetTrackingScaling`\.  
-For DynamoDB, only `TargetTrackingScaling` is supported\. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported\. For any other service, only `StepScaling` is supported\.   
+The Application Auto Scaling policy type\.   
+The following policy types are supported:   
+`TargetTrackingScaling`—Not supported for Amazon EMR  
+`StepScaling`—Not supported for DynamoDB, Comprehend, or Lambda  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -113,11 +115,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 The following examples create scaling policies for a scalable target that is registered with Application Auto Scaling\. For more information, see [PutScalingPolicy](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_PutScalingPolicy.html) in the *Application Auto Scaling API Reference*\.
 
-### Target Tracking Scaling Policy with an Amazon DynamoDB Table<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_with_an_Amazon_DynamoDB_Table"></a>
+### Target Tracking Scaling Policy with a Predefined Metric Specification for an Amazon DynamoDB Table<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_with_a_Predefined_Metric_Specification_for_an_Amazon_DynamoDB_Table"></a>
 
-This example both registers a [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html) as a scalable target and defines a `TargetTrackingScaling` scaling policy that scales the `WriteCapacityUnits` throughput for the table\. 
+This example both registers an [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html) as a scalable target and defines a `TargetTrackingScaling` scaling policy that scales the table's write capacity \(throughput\) to maintain the target utilization \(50%\) based on the write capacity utilization metric\.
 
-#### JSON<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_with_an_Amazon_DynamoDB_Table--json"></a>
+#### JSON<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_with_a_Predefined_Metric_Specification_for_an_Amazon_DynamoDB_Table--json"></a>
 
 ```
 {
@@ -178,6 +180,9 @@ This example both registers a [AWS::DynamoDB::Table](https://docs.aws.amazon.com
       "Properties":{
         "MaxCapacity":15,
         "MinCapacity":5,
+        "RoleARN":"arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable",
+        "ServiceNamespace":"dynamodb",
+        "ScalableDimension":"dynamodb:table:WriteCapacityUnits",
         "ResourceId":{
           "Fn::Join":[
             "/",
@@ -188,60 +193,7 @@ This example both registers a [AWS::DynamoDB::Table](https://docs.aws.amazon.com
               }
             ]
           ]
-        },
-        "RoleARN":{
-          "Fn::GetAtt":[
-            "ScalingRole",
-            "Arn"
-          ]
-        },
-        "ScalableDimension":"dynamodb:table:WriteCapacityUnits",
-        "ServiceNamespace":"dynamodb"
-      }
-    },
-    "ScalingRole":{
-      "Type":"AWS::IAM::Role",
-      "Properties":{
-        "AssumeRolePolicyDocument":{
-          "Version":"2012-10-17",
-          "Statement":[
-            {
-              "Effect":"Allow",
-              "Principal":{
-                "Service":[
-                  "application-autoscaling.amazonaws.com"
-                ]
-              },
-              "Action":[
-                "sts:AssumeRole"
-              ]
-            }
-          ]
-        },
-        "Path":"/",
-        "Policies":[
-          {
-            "PolicyName":"root",
-            "PolicyDocument":{
-              "Version":"2012-10-17",
-              "Statement":[
-                {
-                  "Effect":"Allow",
-                  "Action":[
-                    "dynamodb:DescribeTable",
-                    "dynamodb:UpdateTable",
-                    "cloudwatch:PutMetricAlarm",
-                    "cloudwatch:DescribeAlarms",
-                    "cloudwatch:GetMetricStatistics",
-                    "cloudwatch:SetAlarmState",
-                    "cloudwatch:DeleteAlarms"
-                  ],
-                  "Resource":"*"
-                }
-              ]
-            }
-          }
-        ]
+        }
       }
     },
     "WriteScalingPolicy":{
@@ -266,7 +218,7 @@ This example both registers a [AWS::DynamoDB::Table](https://docs.aws.amazon.com
 }
 ```
 
-#### YAML<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_with_an_Amazon_DynamoDB_Table--yaml"></a>
+#### YAML<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_with_a_Predefined_Metric_Specification_for_an_Amazon_DynamoDB_Table--yaml"></a>
 
 ```
 Resources:
@@ -274,30 +226,21 @@ Resources:
     Type: AWS::DynamoDB::Table
     Properties:
       AttributeDefinitions:
-        -
-          AttributeName: "ArtistId"
-
+        - AttributeName: "ArtistId"
           AttributeType: "S"
-        -
-          AttributeName: "Concert"
-
+        - AttributeName: "Concert"
           AttributeType: "S"
-        -
-          AttributeName: "TicketSales"
+        - AttributeName: "TicketSales"
           AttributeType: "S"
       KeySchema:
-        -
-          AttributeName: "ArtistId"
+        - AttributeName: "ArtistId"
           KeyType: "HASH"
-        -
-          AttributeName: "Concert"
+        - AttributeName: "Concert"
           KeyType: "RANGE"
       GlobalSecondaryIndexes:
-        -
-          IndexName: "GSI"
+        - IndexName: "GSI"
           KeySchema:
-            -
-              AttributeName: "TicketSales"
+            - AttributeName: "TicketSales"
               KeyType: "HASH"
           Projection:
             ProjectionType: "KEYS_ONLY"
@@ -312,44 +255,13 @@ Resources:
     Properties:
       MaxCapacity: 15
       MinCapacity: 5
+      RoleARN: arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable
+      ServiceNamespace: dynamodb
+      ScalableDimension: dynamodb:table:WriteCapacityUnits
       ResourceId: !Join
         - /
         - - table
           - !Ref DDBTable
-      RoleARN: !GetAtt ScalingRole.Arn
-      ScalableDimension: dynamodb:table:WriteCapacityUnits
-      ServiceNamespace: dynamodb
-  ScalingRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Version: "2012-10-17"
-        Statement:
-          -
-            Effect: "Allow"
-            Principal:
-              Service:
-                - application-autoscaling.amazonaws.com
-            Action:
-              - "sts:AssumeRole"
-      Path: "/"
-      Policies:
-        -
-          PolicyName: "root"
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              -
-                Effect: "Allow"
-                Action:
-                  - "dynamodb:DescribeTable"
-                  - "dynamodb:UpdateTable"
-                  - "cloudwatch:PutMetricAlarm"
-                  - "cloudwatch:DescribeAlarms"
-                  - "cloudwatch:GetMetricStatistics"
-                  - "cloudwatch:SetAlarmState"
-                  - "cloudwatch:DeleteAlarms"
-                Resource: "*"
   WriteScalingPolicy:
     Type: AWS::ApplicationAutoScaling::ScalingPolicy
     Properties:
@@ -364,31 +276,180 @@ Resources:
           PredefinedMetricType: DynamoDBWriteCapacityUtilization
 ```
 
-### Step Scaling Policy for Scale Out<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Step_Scaling_Policy_for_Scale_Out"></a>
+### Target Tracking Scaling Policy for Scale Out Only for an ECS Service<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_for_Scale_Out_Only_for_an_ECS_Service"></a>
 
-The following example creates a step scaling policy for a specified scalable target\. When an associated alarm is triggered, the policy increases the capacity of the scalable target by 200%, with a cooldown period of 60 seconds\. 
+The following example both registers an [AWS::ECS::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html) as a scalable target and defines a `TargetTrackingScaling` scaling policy\. The policy is used to add capacity to the ECS service when the average CPU utilization metric exceeds the target utilization\. Because the value of `DisableScaleIn` is set to true, the target tracking policy won't remove capacity from the scalable resource\.
 
-#### JSON<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Step_Scaling_Policy_for_Scale_Out--json"></a>
+#### JSON<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_for_Scale_Out_Only_for_an_ECS_Service--json"></a>
 
 ```
 {
-  "scalingPolicy":{
-    "Type":"AWS::ApplicationAutoScaling::ScalingPolicy",
-    "Properties":{
-      "PolicyName":"MyStepPolicy",
-      "PolicyType":"StepScaling",
-      "ScalingTargetId":{
-        "Ref":"scalableTarget"
-      },
-      "StepScalingPolicyConfiguration":{
-        "AdjustmentType":"PercentChangeInCapacity",
-        "Cooldown":60,
-        "MetricAggregationType":"Average",
-        "StepAdjustments":[
-          {
-            "MetricIntervalLowerBound":0,
-            "ScalingAdjustment":200
+  "AWSTemplateFormatVersion":"2010-09-09",
+  "Description":"Creating ECS service",
+  "Parameters":{
+    "AppName":{
+      "Type":"String",
+      "Description":"Name of app requiring ELB exposure",
+      "Default":"simple-app"
+    },
+    "AppContainerPort":{
+      "Type":"Number",
+      "Description":"Container port of app requiring ELB exposure",
+      "Default":"80"
+    },
+    "AppHostPort":{
+      "Type":"Number",
+      "Description":"Host port of app requiring ELB exposure",
+      "Default":"80"
+    }
+  },
+  "Resources":{
+    "ScalableTarget":{
+      "Type":"AWS::ApplicationAutoScaling::ScalableTarget",
+      "Properties":{
+        "MaxCapacity":"2",
+        "MinCapacity":"1",
+        "RoleARN":"arn:aws:iam::012345678910:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService",
+        "ServiceNamespace":"ecs",
+        "ScalableDimension":"ecs:service:DesiredCount",
+        "ResourceId":{
+          "Fn::Join":[
+            "/",
+            [
+              "service",
+              {
+                "Ref":"cluster"
+              },
+              {
+                "Fn::GetAtt":[
+                  "service",
+                  "Name"
+                ]
+              }
+            ]
+          ]
+        }
+      }
+    },
+    "TargetTrackingScalingPolicy":{
+      "Type":"AWS::ApplicationAutoScaling::ScalingPolicy",
+      "Properties":{
+        "PolicyName":"TargetTrackingScalingPolicy",
+        "PolicyType":"TargetTrackingScaling",
+        "ScalingTargetId":{
+          "Ref":"ScalableTarget"
+        },
+        "TargetTrackingScalingPolicyConfiguration":{
+          "TargetValue":70.0,
+          "ScaleInCooldown":60,
+          "ScaleOutCooldown":60,
+          "DisableScaleIn":true,
+          "PredefinedMetricSpecification":{
+            "PredefinedMetricType":"ECSServiceAverageCPUUtilization"
           }
+        }
+      }
+    },
+    "cluster":{
+      "Type":"AWS::ECS::Cluster"
+    },
+    "taskdefinition":{
+      "Type":"AWS::ECS::TaskDefinition",
+      "Properties":{
+        "ContainerDefinitions":[
+          {
+            "Name":{
+              "Ref":"AppName"
+            },
+            "MountPoints":[
+              {
+                "SourceVolume":"my-vol",
+                "ContainerPath":"/var/www/my-vol"
+              }
+            ],
+            "Image":"amazon/amazon-ecs-sample",
+            "Cpu":"10",
+            "PortMappings":[
+              {
+                "ContainerPort":{
+                  "Ref":"AppContainerPort"
+                },
+                "HostPort":{
+                  "Ref":"AppHostPort"
+                }
+              }
+            ],
+            "EntryPoint":[
+              "/usr/sbin/apache2",
+              "-D",
+              "FOREGROUND"
+            ],
+            "Memory":"500",
+            "Essential":"true"
+          },
+          {
+            "Name":"busybox",
+            "Image":"busybox",
+            "Cpu":"10",
+            "EntryPoint":[
+              "sh",
+              "-c"
+            ],
+            "Memory":"500",
+            "Command":[
+              "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
+            ],
+            "Essential":"false",
+            "VolumesFrom":[
+              {
+                "SourceContainer":{
+                  "Ref":"AppName"
+                }
+              }
+            ]
+          }
+        ],
+        "Volumes":[
+          {
+            "Host":{
+              "SourcePath":"/var/lib/docker/vfs/dir/"
+            },
+            "Name":"my-vol"
+          }
+        ]
+      }
+    },
+    "service":{
+      "Type":"AWS::ECS::Service",
+      "Properties":{
+        "Cluster":{
+          "Ref":"cluster"
+        },
+        "DesiredCount":0,
+        "TaskDefinition":{
+          "Ref":"taskdefinition"
+        }
+      }
+    }
+  },
+  "Outputs":{
+    "resourceId":{
+      "Description":"ResourceId",
+      "Value":{
+        "Fn::Join":[
+          "/",
+          [
+            "service",
+            {
+              "Ref":"cluster"
+            },
+            {
+              "Fn::GetAtt":[
+                "service",
+                "Name"
+              ]
+            }
+          ]
         ]
       }
     }
@@ -396,23 +457,105 @@ The following example creates a step scaling policy for a specified scalable tar
 }
 ```
 
-#### YAML<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Step_Scaling_Policy_for_Scale_Out--yaml"></a>
+#### YAML<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_for_Scale_Out_Only_for_an_ECS_Service--yaml"></a>
 
 ```
-scalingPolicy:
-  Type: AWS::ApplicationAutoScaling::ScalingPolicy
-  Properties:
-    PolicyName: MyStepPolicy
-    PolicyType: StepScaling
-    ScalingTargetId:
-      Ref: scalableTarget
-    StepScalingPolicyConfiguration:
-      AdjustmentType: PercentChangeInCapacity
-      Cooldown: 60
-      MetricAggregationType: Average
-      StepAdjustments:
-      - MetricIntervalLowerBound: 0
-        ScalingAdjustment: 200
+AWSTemplateFormatVersion: 2010-09-09
+Description: Creating ECS service
+Parameters:
+  AppName:
+    Type: String
+    Description: Name of app requiring ELB exposure
+    Default: simple-app
+  AppContainerPort:
+    Type: Number
+    Description: Container port of app requiring ELB exposure
+    Default: '80'
+  AppHostPort:
+    Type: Number
+    Description: Host port of app requiring ELB exposure
+    Default: '80'
+Resources:
+  ScalableTarget:
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
+    Properties:
+      MaxCapacity: '2'
+      MinCapacity: '1'
+      RoleARN: arn:aws:iam::012345678910:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService
+      ServiceNamespace: ecs
+      ScalableDimension: 'ecs:service:DesiredCount'
+      ResourceId: !Join 
+        - /
+        - - service
+          - !Ref cluster
+          - !GetAtt service.Name
+  TargetTrackingScalingPolicy:
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
+    Properties:
+      PolicyName: TargetTrackingScalingPolicy
+      PolicyType: TargetTrackingScaling
+      ScalingTargetId:
+        Ref: ScalableTarget
+      TargetTrackingScalingPolicyConfiguration:
+        TargetValue: 70.0
+        ScaleInCooldown: 60
+        ScaleOutCooldown: 60
+        DisableScaleIn: true
+        PredefinedMetricSpecification:
+          PredefinedMetricType: ECSServiceAverageCPUUtilization
+  cluster:
+    Type: AWS::ECS::Cluster
+  taskdefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      ContainerDefinitions:
+        - Name: !Ref AppName
+          MountPoints:
+            - SourceVolume: my-vol
+              ContainerPath: /var/www/my-vol
+          Image: amazon/amazon-ecs-sample
+          Cpu: '10'
+          PortMappings:
+            - ContainerPort: !Ref AppContainerPort
+              HostPort: !Ref AppHostPort
+          EntryPoint:
+            - /usr/sbin/apache2
+            - '-D'
+            - FOREGROUND
+          Memory: '500'
+          Essential: 'true'
+        - Name: busybox
+          Image: busybox
+          Cpu: '10'
+          EntryPoint:
+            - sh
+            - '-c'
+          Memory: '500'
+          Command:
+            - >-
+              /bin/sh -c "while true; do /bin/date > /var/www/my-vol/date; sleep
+              1; done"
+          Essential: 'false'
+          VolumesFrom:
+            - SourceContainer: !Ref AppName
+      Volumes:
+        - Host:
+            SourcePath: /var/lib/docker/vfs/dir/
+          Name: my-vol
+  service:
+    Type: AWS::ECS::Service
+    Properties:
+      Cluster: !Ref cluster
+      DesiredCount: 0
+      TaskDefinition: !Ref taskdefinition
+Outputs:
+  resourceId:
+    Description: ResourceId
+    Value: !Join 
+      - /
+      - - service
+        - !Ref cluster
+        - !GetAtt service.Name
 ```
 
 ## See Also<a name="aws-resource-applicationautoscaling-scalingpolicy--seealso"></a>

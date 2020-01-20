@@ -52,7 +52,7 @@ In this walkthrough, we provide the following example template, called `template
                 ],
                 "ProvisionedThroughput": {
                     "ReadCapacityUnits": 5,
-                    "WriteCapacityUnis": 1
+                    "WriteCapacityUnits": 1
                 }
             }
         }

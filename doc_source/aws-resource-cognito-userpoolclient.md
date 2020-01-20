@@ -65,6 +65,7 @@ Properties:
 ## Properties<a name="aws-resource-cognito-userpoolclient-properties"></a>
 
 `AllowedOAuthFlows`  <a name="cfn-cognito-userpoolclient-allowedoauthflows"></a>
+The allowed OAuth flows\. Possible values are: `code`, `implicit`, and `client_credentials`\.
 Set to `code` to initiate a code grant flow, which provides an authorization code as the response\. This code can be exchanged for access tokens with the token endpoint\.  
 Set to `implicit` to specify that the client should get the access token \(and, optionally, ID token, based on scopes\) directly\.
 Set to `client_credentials` to specify that the client should get the access token \(and, optionally, ID token, based on scopes\) from the token endpoint using a client and client_secret combination\.  
@@ -80,7 +81,7 @@ Set to `True` if the client is allowed to follow the OAuth protocol when interac
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AllowedOAuthScopes`  <a name="cfn-cognito-userpoolclient-allowedoauthscopes"></a>
-A list of allowed `OAuth` scopes\. Currently supported values are `"phone"`, `"email"`, `"openid"`, and `"Cognito"`\.  
+The allowed `OAuth` scopes\. Possible values provided by OAuth are: `phone`, `email`, `openid`, and `profile`\. Possible values provided by AWS are: `aws.cognito.signin.user.admin`\. Custom scopes created in Resource Servers are also supported\.
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `25`  

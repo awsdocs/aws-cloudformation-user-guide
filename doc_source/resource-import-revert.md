@@ -53,7 +53,7 @@ To revert an import operation, specify a `Retain` deletion policy for the resour
                    ],
                    "ProvisionedThroughput": {
                        "ReadCapacityUnits": 5,
-                       "WriteCapacityUnis": 1
+                       "WriteCapacityUnits": 1
                    }
                }
            }
@@ -164,7 +164,7 @@ To revert an import operation, specify a `Retain` deletion policy for the resour
                    ],
                    "ProvisionedThroughput": {
                        "ReadCapacityUnits": 5,
-                       "WriteCapacityUnis": 1
+                       "WriteCapacityUnits": 1
                    }
                }
            }
