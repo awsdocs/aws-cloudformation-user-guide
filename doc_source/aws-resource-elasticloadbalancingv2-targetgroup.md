@@ -139,7 +139,7 @@ The port on which the targets receive traffic\. This port is used unless you spe
 
 `Protocol`  <a name="cfn-elasticloadbalancingv2-targetgroup-protocol"></a>
 The protocol to use for routing traffic to the targets\. For Application Load Balancers, the supported protocols are HTTP and HTTPS\. For Network Load Balancers, the supported protocols are TCP and TLS\. If the target is a Lambda function, this parameter does not apply\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Allowed Values*: `HTTP | HTTPS | TCP | TLS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
