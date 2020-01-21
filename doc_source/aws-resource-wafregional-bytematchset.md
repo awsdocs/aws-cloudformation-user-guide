@@ -110,7 +110,7 @@ BadReferers:
           Data: "referer"
         TargetString: "badrefer2"
         TextTransformation: "NONE"
-PositionalConstraint: "CONTAINS"
+        PositionalConstraint: "CONTAINS"
 ```
 
 ### Associate a ByteMatchSet with a Web ACL Rule<a name="aws-resource-wafregional-bytematchset--examples--Associate_a_ByteMatchSet_with_a_Web_ACL_Rule"></a>
@@ -149,7 +149,7 @@ BadReferersRule:
         DataId: 
           Ref: "BadReferers"
         Negated: false
-Type: "ByteMatch"
+        Type: "ByteMatch"
 ```
 
 ### Create a Web ACL<a name="aws-resource-wafregional-bytematchset--examples--Create_a_Web_ACL"></a>
@@ -196,5 +196,5 @@ MyWebACL:
           Type: "BLOCK"
         Priority: 1
         RuleId: 
-Ref: "BadReferersRule"
+          Ref: "BadReferersRule"
 ```

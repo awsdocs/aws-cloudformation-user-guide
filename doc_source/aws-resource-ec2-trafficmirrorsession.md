@@ -78,7 +78,7 @@ Valid values are 1\-32766\.
 The tags to assign to a Traffic Mirror session\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TrafficMirrorFilterId`  <a name="cfn-ec2-trafficmirrorsession-trafficmirrorfilterid"></a>
 The ID of the Traffic Mirror filter\.  

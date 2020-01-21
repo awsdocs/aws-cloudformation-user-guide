@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPoolUser AttributeType<a name="aws-properties-cognito-userpooluser-attributetype"></a>
 
-`AttributeType` is a property of the [AWS::Cognito::UserPoolUser](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html) resource that defines name\-value pairs for a user in an Amazon Cognito User Pool\.
+Specifies whether the attribute is standard or custom\.
 
 ## Syntax<a name="aws-properties-cognito-userpooluser-attributetype-syntax"></a>
 

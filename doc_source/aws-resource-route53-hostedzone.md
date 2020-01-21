@@ -5,7 +5,7 @@ The `AWS::Route53::HostedZone` resource is a Route 53 resource type that contain
 + Records in a private hosted zone define how you want to route traffic within one or more Amazon Virtual Private Clouds \(Amazon VPCs\)\. 
 
 **Important**  
-You can't convert a public hosted zone to a private hosted zone or vice versa\. Instead, you must create a new hosted zone with the same name and create new resource record sets\.
+You can't convert a public hosted zone to a private hosted zone or vice versa\. Instead, you must create a new hosted zone with the same name and create new records\.
 
 For more information about charges for hosted zones, see [Amazon Route 53 Pricing](http://aws.amazon.com/route53/pricing/)\.
 
@@ -13,7 +13,10 @@ Note the following:
 + You can't create a hosted zone for a top\-level domain \(TLD\) such as \.com\.
 + For public hosted zones, Amazon Route 53 automatically creates a default SOA record and four NS records for the zone\. For more information about SOA and NS records, see [NS and SOA Records that Route 53 Creates for a Hosted Zone](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/SOA-NSrecords.html) in the *Amazon Route 53 Developer Guide*\.
 
-  If you want to use the same name servers for multiple public hosted zones, you can optionally associate a reusable delegation set with the hosted zone\. See the `DelegationSetId` element\.
+  If you want to use the same name servers for multiple public hosted zones, you can optionally associate a reusable delegation set with the hosted zone\. Using CloudFormation to create reusable delegation sets isn't supported, but you can create them programmatically using other methods, such as the [Route 53 API](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateReusableDelegationSet.html), the [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/route53/create-reusable-delegation-set.html), or [AWS SDKs](https://docs.aws.amazon.com/) \(see the "SDKs & Toolkits" section\)\. 
++ To create a private hosted zone, specify the VPC ID and Region for one VPC in the [VPCs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-vpcs) object\.
+**Note**  
+You can specify only one Amazon VPC when you create a private hosted zone\. To associate additional Amazon VPCs with the hosted zone, use [AssociateVPCWithHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AssociateVPCWithHostedZone.html) after you create the hosted zone\. 
 + If your domain is registered with a registrar other than Route 53, you must update the name servers with your registrar to make Route 53 the DNS service for the domain\. For more information, see [Making Amazon Route 53 the DNS Service for an Existing Domain](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html) in the *Amazon Route 53 Developer Guide*\. 
 
 When you submit a `CreateHostedZone` request, the initial status of the hosted zone is `PENDING`\. For public hosted zones, this means that the NS and SOA records are not yet available on all Route 53 DNS servers\. When the NS and SOA records are available, the status of the zone changes to `INSYNC`\.
@@ -56,10 +59,8 @@ Properties:
 ## Properties<a name="aws-resource-route53-hostedzone-properties"></a>
 
 `HostedZoneConfig`  <a name="cfn-route53-hostedzone-hostedzoneconfig"></a>
-\(Optional\) A complex type that contains the following optional values:  
-+ For public and private hosted zones, an optional comment
-+ For private hosted zones, an optional `PrivateZone` element
-If you don't specify a comment or the `PrivateZone` element, omit `HostedZoneConfig` and the other elements\.  
+A complex type that contains an optional comment\.  
+If you don't want to specify a comment, omit the `HostedZoneConfig` and `Comment` elements\.  
 *Required*: No  
 *Type*: [HostedZoneConfig](aws-properties-route53-hostedzone-hostedzoneconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -73,7 +74,7 @@ For information about using tags for cost allocation, see [Using Cost Allocation
 
 `Name`  <a name="cfn-route53-hostedzone-name"></a>
 The name of the domain\. Specify a fully qualified domain name, for example, *www\.example\.com*\. The trailing dot is optional; Amazon Route 53 assumes that the domain name is fully qualified\. This means that Route 53 treats *www\.example\.com* \(without a trailing dot\) and *www\.example\.com\.* \(with a trailing dot\) as identical\.  
-If you're creating a public hosted zone, this is the name you have registered with your DNS registrar\. If your domain name is registered with a registrar other than Route 53, change the name servers for your domain to the set of `NameServers` that `CreateHostedZone` returns in `DelegationSet`\.  
+If you're creating a public hosted zone, this is the name you have registered with your DNS registrar\. If your domain name is registered with a registrar other than Route 53, change the name servers for your domain to the set of `NameServers` that are returned by the `Fn::GetAtt` intrinsic function\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `1024`  
@@ -124,9 +125,11 @@ If you want Route 53 to stop sending query logs to CloudWatch Logs, delete the q
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VPCs`  <a name="cfn-route53-hostedzone-vpcs"></a>
-A complex type that contains information about the VPCs that are associated with the specified hosted zone\.  
+*Private hosted zones:* A complex type that contains information about the VPCs that are associated with the specified hosted zone\.  
+For public hosted zones, omit `VPCs`, `VPCId`, and `VPCRegion`\.
 *Required*: No  
-*Type*: List of [VPC](aws-resource-route53-hostedzone-hostedzonevpcs.md)
+*Type*: List of [VPC](aws-resource-route53-hostedzone-hostedzonevpcs.md)  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 ## Return Values<a name="aws-resource-route53-hostedzone-return-values"></a>
 
@@ -150,63 +153,69 @@ This attribute is not supported for private hosted zones\.
 
 ## Examples<a name="aws-resource-route53-hostedzone--examples"></a>
 
-### Create private hosted zone<a name="aws-resource-route53-hostedzone--examples--Create_private_hosted_zone"></a>
+### Creating a private hosted zone<a name="aws-resource-route53-hostedzone--examples--Creating_a_private_hosted_zone"></a>
 
 The following template snippet creates a private hosted zone for the example\.com domain\.
 
-#### JSON<a name="aws-resource-route53-hostedzone--examples--Create_private_hosted_zone--json"></a>
+#### JSON<a name="aws-resource-route53-hostedzone--examples--Creating_a_private_hosted_zone--json"></a>
 
 ```
-"DNS": {
-  "Type": "AWS::Route53::HostedZone",
-  "Properties": {
-    "HostedZoneConfig": {
-      "Comment": "My hosted zone for example.com"
-    },
-    "Name": "example.com",
-    "VPCs": [{
-      "VPCId": "vpc-abcd1234",
-      "VPCRegion": "ap-northeast-1"
-    },
-    {
-      "VPCId": "vpc-efgh5678",
-      "VPCRegion": "us-west-2"
-    }],
-    "HostedZoneTags" : [{
-      "Key": "SampleKey1",
-      "Value": "SampleValue1"
-    },
-    {
-      "Key": "SampleKey2",
-      "Value": "SampleValue2"
-    }]
-  }
+{
+   "DNS": {
+      "Type": "AWS: : Route53: : HostedZone",
+      "Properties": {
+         "HostedZoneConfig": {
+            "Comment": "Myhostedzoneforexample.com"
+         },
+         "Name": "example.com",
+         "VPCs": [
+            {
+               "VPCId": "vpc-abcd1234",
+               "VPCRegion": "ap-northeast-1"
+            },
+            {
+               "VPCId": "vpc-efgh5678",
+               "VPCRegion": "us-west-2"
+            }
+         ],
+         "HostedZoneTags": [
+            {
+               "Key": "SampleKey1",
+               "Value": "SampleValue1"
+            },
+            {
+               "Key": "SampleKey2",
+               "Value": "SampleValue2"
+            }
+         ]
+      }
+   }
 }
 ```
 
-#### YAML<a name="aws-resource-route53-hostedzone--examples--Create_private_hosted_zone--yaml"></a>
+#### YAML<a name="aws-resource-route53-hostedzone--examples--Creating_a_private_hosted_zone--yaml"></a>
 
 ```
 DNS: 
   Type: "AWS::Route53::HostedZone"
   Properties: 
     HostedZoneConfig: 
-      Comment: "My hosted zone for example.com"
-    Name: "example.com"
+      Comment: 'My hosted zone for example.com'
+    Name: 'example.com'
     VPCs: 
       - 
-        VPCId: "vpc-abcd1234"
-        VPCRegion: "ap-northeast-1"
+        VPCId: 'vpc-abcd1234'
+        VPCRegion: 'ap-northeast-1'
       - 
-        VPCId: "vpc-efgh5678"
-        VPCRegion: "us-west-2"
+        VPCId: 'vpc-efgh5678'
+        VPCRegion: 'us-west-2'
     HostedZoneTags: 
       - 
-        Key: "SampleKey1"
-        Value: "SampleValue1"
+        Key: 'SampleKey1'
+        Value: 'SampleValue1'
       - 
-        Key: "SampleKey2"
-        Value: "SampleValue2"
+        Key: 'SampleKey2'
+        Value: 'SampleValue2'
 ```
 
 ## See Also<a name="aws-resource-route53-hostedzone--seealso"></a>

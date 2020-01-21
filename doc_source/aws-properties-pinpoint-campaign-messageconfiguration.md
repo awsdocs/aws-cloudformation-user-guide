@@ -48,7 +48,7 @@ The message that the campaign sends through the ADM \(Amazon Device Messaging\) 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `APNSMessage`  <a name="cfn-pinpoint-campaign-messageconfiguration-apnsmessage"></a>
-The message that the campaign sends through the APNS \(Apple Push Notification service\) channel\. This message overrides the default message\.  
+The message that the campaign sends through the APNs \(Apple Push Notification service\) channel\. This message overrides the default message\.  
 *Required*: No  
 *Type*: [Message](aws-properties-pinpoint-campaign-message.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

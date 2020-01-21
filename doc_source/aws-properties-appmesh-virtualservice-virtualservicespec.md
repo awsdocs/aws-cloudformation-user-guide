@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualService VirtualServiceSpec<a name="aws-properties-appmesh-virtualservice-virtualservicespec"></a>
 
-An object representing the specification of a virtual service\.
+An object that represents the specification of a virtual service\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualservice-virtualservicespec-syntax"></a>
 

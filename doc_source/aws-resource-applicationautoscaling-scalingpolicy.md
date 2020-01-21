@@ -278,7 +278,7 @@ Resources:
 
 ### Target Tracking Scaling Policy for Scale Out Only for an ECS Service<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_for_Scale_Out_Only_for_an_ECS_Service"></a>
 
-The following example both registers an [AWS::ECS::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html) as a scalable target and defines a `TargetTrackingScaling` scaling policy\. The policy is used to add capacity to the ECS service when the average CPU utilization metric exceeds the target utilization\. Because the value of `DisableScaleIn` is set to true, the target tracking policy won't remove capacity from the scalable resource\.
+The following example both registers an [AWS::ECS::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html) as a scalable target and defines a `TargetTrackingScaling` scaling policy\. The policy is used to add capacity to the ECS service when the average CPU utilization metric exceeds the target utilization\. Because the value of `DisableScaleIn` is set to true, the target tracking policy won't remove capacity from the scalable resource\. The ELB resources referenced are in a separate nested template\.
 
 #### JSON<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_for_Scale_Out_Only_for_an_ECS_Service--json"></a>
 
@@ -560,3 +560,4 @@ Outputs:
 
 ## See Also<a name="aws-resource-applicationautoscaling-scalingpolicy--seealso"></a>
 + [Application Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html) 
++ [Examples](https://docs.aws.amazon.com/cli/latest/reference/application-autoscaling/put-scaling-policy.html#examples) of Application Auto Scaling scaling policies in the * AWS CLI Command Reference*

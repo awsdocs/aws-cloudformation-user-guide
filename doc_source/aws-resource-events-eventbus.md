@@ -4,7 +4,7 @@ The `AWS::Events::EventBus` resource creates or updates a partner event bus or c
 
 Custom event buses can receive events from your own custom applications\.
 
-Each event bus in your account can have up to 100 rules associated with it\.
+To review the limit for how many rules each event bus may have, see [Service Limits](https://docs.aws.amazon.com/eventbridge/latest/userguide/cloudwatch-limits-eventbridge.html)\.
 
 ## Syntax<a name="aws-resource-events-eventbus-syntax"></a>
 

@@ -29,9 +29,9 @@ You must create this stack before you create the web application stack\. If you 
 
 **To create the network stack**
 
-1. Open the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation/) and choose **Create Stack**\.
+1. Open the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation/) and choose **Create stack**\.
 
-1. In the **Select Template** section, choose **Specify an Amazon S3 template URL**, and then copy and paste the following URL into the text box: `[https://s3\.amazonaws\.com/cloudformation\-examples/user\-guide/cross\-stack/SampleNetworkCrossStack\.template](https://s3.amazonaws.com/cloudformation-examples/user-guide/cross-stack/SampleNetworkCrossStack.template) ` 
+1. Choose **Template is ready**, and in the **Specify template** section choose **Amazon S3 URL**\. Copy and paste the following URL into the text box: `[https://s3\.amazonaws\.com/cloudformation\-examples/user\-guide/cross\-stack/SampleNetworkCrossStack\.template](https://s3.amazonaws.com/cloudformation-examples/user-guide/cross-stack/SampleNetworkCrossStack.template) ` 
 
    The link provides the location of the network stack template\. To see the resources that the stack will create, choose the link, which opens the template\. In the outputs section, you can see the networking resources that the sample template exports\. The names of the exported resources are prefixed with the stack's name in case you export networking resources from other stacks\. When users import networking resources, they can specify from which stack the resources are imported\.
 
@@ -43,11 +43,11 @@ Record the name of this stack\. You'll need the stack name when you launch the w
 
 1. Choose **Next**\. For this walkthrough, you don't need to add tags or specify advanced settings\.
 
-1. Ensure that the stack name and template URL are correct, and then choose **Create**\.
+1. Ensure that the stack name and template URL are correct, and then choose **Create stack**\.
 
    It might take several minutes for AWS CloudFormation to create your stack\. Wait until all resources have been successfully created before proceeding to create the web application stack\.
 
-1. To monitor progress, view the stack events\. For more information, see [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)\.
+1. To monitor progress, view the stack events\. For more information, see [Viewing AWS CloudFormation Stack Data and Resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)\.
 
 ## Step 2: Use a Sample Template to Create a Web Application Stack<a name="walkthrough-crossstackref-create-ec2-stack"></a>
 
@@ -58,9 +58,9 @@ You must create this stack in the same region as the network stack\.
 
 **To create the web application stack**
 
-1. Open the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation/), and choose **Create Stack**\.
+1. Open the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation/), and choose **Create stack**\.
 
-1. In the **Select Template** section, choose **Specify an Amazon S3 template URL**, and then copy and paste the following URL into the text box: [https://s3\.amazonaws\.com/cloudformation\-examples/user\-guide/cross\-stack/SampleWebAppCrossStack\.template](https://s3.amazonaws.com/cloudformation-examples/user-guide/cross-stack/SampleWebAppCrossStack.template) 
+1. Choose **Template is ready**, and in the **Specify template** section choose **Amazon S3 URL**\. Copy and paste the following URL into the text box: [https://s3\.amazonaws\.com/cloudformation\-examples/user\-guide/cross\-stack/SampleWebAppCrossStack\.template](https://s3.amazonaws.com/cloudformation-examples/user-guide/cross-stack/SampleWebAppCrossStack.template) 
 
    The link provides the location of the web application template\. To see the resources that the stack will create, choose the link, which will open the template\. In the resources section, view the EC2 instance's properties\. You can see how the networking resources are imported from another stack by using the `Fn::ImportValue` function\.
 
@@ -72,15 +72,15 @@ You must create this stack in the same region as the network stack\.
 
 1. Choose **Next**\. For this walkthrough, you don't need to add tags or specify advanced settings\.
 
-1. Ensure that the stack name and template URL are correct, and then choose **Create**\.
+1. Ensure that the stack name and template URL are correct, and then choose **Create stack**\.
 
    It might take several minutes for AWS CloudFormation to create your stack\.
 
-1. After the stack has been created, view its resources and note the instance ID\. For more information on viewing stack resources, see [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)\.
+1. After the stack has been created, view its resources and note the instance ID\. For more information on viewing stack resources, see [Viewing AWS CloudFormation Stack Data and Resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)\.
 
    To verify the instance's security group and subnet, view the instance's properties in the [Amazon EC2 console](https://console.aws.amazon.com/ec2/)\. If the instance uses the security group and subnet from the `SampleNetworkCrossStack` stack, you have successfully created a cross\-stack reference\.
 
-   Use the console to view the stack outputs and the example website URL to verify that the web application is running\. For more information, see [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)\.
+   Use the console to view the stack outputs and the example website URL to verify that the web application is running\. For more information, see [Viewing AWS CloudFormation Stack Data and Resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)\.
 
 ## Step 3: Clean Up Your Resources<a name="walkthrough-crossstackref-clean-up"></a>
 
@@ -90,9 +90,9 @@ To ensure that you are not charged for unwanted services, delete the stacks\.
 
 1. In the AWS CloudFormation console, choose the SampleWebAppCrossStack stack\.
 
-1. Choose **Actions**, and then choose **Delete Stack**\.
+1. Choose **Actions**, and then choose **Delete stack**\.
 
-1. In the confirmation message, choose **Yes, Delete**\.
+1. In the confirmation message, choose **Delete**\.
 
 1. After the stack has been deleted, repeat the same steps for the SampleNetworkCrossStack stack\.
 **Note**  

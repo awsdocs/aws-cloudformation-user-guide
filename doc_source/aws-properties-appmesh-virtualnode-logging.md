@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualNode Logging<a name="aws-properties-appmesh-virtualnode-logging"></a>
 
-An object representing the logging information for a virtual node\.
+An object that represents the logging information for a virtual node\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualnode-logging-syntax"></a>
 

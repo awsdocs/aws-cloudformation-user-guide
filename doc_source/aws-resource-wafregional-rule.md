@@ -102,5 +102,5 @@ MyIPSetRule:
         DataId: 
           Ref: "MyIPSetBlacklist"
         Negated: false
-    Type: "IPMatch"
+        Type: "IPMatch"
 ```

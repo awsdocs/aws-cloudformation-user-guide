@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Segment Behavior<a name="aws-properties-pinpoint-segment-segmentdimensions-behavior"></a>
 
-The behavior\-based criteria for the segment, such as how recently users have used your app\.
+Specifies behavior\-based criteria for the segment, such as how recently users have used your app\.
 
 ## Syntax<a name="aws-properties-pinpoint-segment-segmentdimensions-behavior-syntax"></a>
 

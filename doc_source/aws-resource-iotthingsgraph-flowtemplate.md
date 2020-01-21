@@ -46,8 +46,6 @@ A workflow's definition document\.
 
 ### Ref<a name="aws-resource-iotthingsgraph-flowtemplate-return-values-ref"></a>
 
- `{ "Ref": "summary" }` 
-
-Ref returns the `FlowTemplateSummary` that describes the workflow\.
+ When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the URN of the workflow template, such as `urn:tdm:us-west-2/123456789101/default:workflow:flowname`\. 
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

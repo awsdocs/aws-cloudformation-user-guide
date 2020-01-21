@@ -64,8 +64,8 @@ The resource identifier to associate with this scalable target\. This string con
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleARN`  <a name="cfn-applicationautoscaling-scalabletarget-rolearn"></a>
-Specify the Amazon Resource Name \(ARN\) of an AWS Identity and Access Management \(IAM\) role that allows Application Auto Scaling to modify the scalable target on your behalf\. This can be either an IAM service role that Application Auto Scaling can assume to make calls to other AWS resources on your behalf, or a service\-linked role for the specified service\. For more information, see [Service\-Linked Roles](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-service-linked-roles.html) in the *Application Auto Scaling User Guide*\.  
-To automatically create a service\-linked role, specify the full ARN of the service\-linked role in your stack template\. For examples of the ARN format, see the Examples section at the bottom of this page and in [AWS::ApplicationAutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html)\.   
+Specify the Amazon Resource Name \(ARN\) of an AWS Identity and Access Management \(IAM\) role that allows Application Auto Scaling to modify the scalable target on your behalf\. This can be either an IAM service role that Application Auto Scaling can assume to make calls to other AWS resources on your behalf, or a service\-linked role for the specified service\. For more information, see [How Application Auto Scaling Works with IAM](https://docs.aws.amazon.com/autoscaling/application/userguide/security_iam_service-with-iam.html) in the *Application Auto Scaling User Guide*\.  
+To automatically create a service\-linked role, specify the full ARN of the service\-linked role in your stack template\. For examples of the ARN format and more information, see [Service\-Linked Roles](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-service-linked-roles.html) in the *Application Auto Scaling User Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -118,7 +118,7 @@ Each scalable target has a service namespace, scalable dimension, and resource I
 
 The following example creates a scalable target for an [AWS::AppStream::Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html)\. Application Auto Scaling can scale the number of fleet instances at a minimum of 1 instance and a maximum of 20\. 
 
-To register a different resource supported by Application Auto Scaling, specify its namespace in `ServiceNamespace`, its scalable dimension in `ScalableDimension`, and its resource ID in `ResourceId`\. For examples, see [Examples](https://docs.aws.amazon.com/cli/latest/reference/application-autoscaling/register-scalable-target.html#examples) for registering scalable targets in the * AWS CLI Command Reference*\.
+To register a different resource supported by Application Auto Scaling, specify its namespace in `ServiceNamespace`, its scalable dimension in `ScalableDimension`, its resource ID in `ResourceId`, and its service\-linked role in `RoleARN`\.
 
 #### JSON<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Register_a_Scalable_Target--json"></a>
 
@@ -154,7 +154,7 @@ ScalableTarget:
 
 ### Register a Scalable Target with Fn::Join and Fn::Sub<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Register_a_Scalable_Target_with_Fn::Join_and_Fn::Sub"></a>
 
-The following example registers the provisioned concurrency for a function alias \([AWS::Lambda::Alias](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html)\) called BLUE, with a minimum capacity of 0 and a maximum capacity of 100\.
+The following example registers the provisioned concurrency for a function alias \([AWS::Lambda::Alias](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html)\) called BLUE, with a minimum capacity of 1 and a maximum capacity of 100\.
 
 This example uses the [Fn::Join](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-join.html) and [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) intrinsic functions in the `RoleARN` property to specify the ARN of the service\-linked role\. It uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) intrinsic function to construct the `ResourceId` property\. 
 
@@ -166,7 +166,7 @@ This example uses the [Fn::Join](https://docs.aws.amazon.com/AWSCloudFormation/l
     "Type":"AWS::ApplicationAutoScaling::ScalableTarget",
     "Properties":{
       "MaxCapacity":100,
-      "MinCapacity":0,
+      "MinCapacity":1,
       "RoleARN":{
         "Fn::Join":[
           ":",
@@ -175,7 +175,7 @@ This example uses the [Fn::Join](https://docs.aws.amazon.com/AWSCloudFormation/l
             {
               "Ref":"AWS::AccountId"
             },
-            "role/aws-service-role/lambda.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_Lambda"
+            "role/aws-service-role/lambda.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_LambdaConcurrency"
           ]
         ]
       },
@@ -196,7 +196,7 @@ ScalableTarget:
   Type: AWS::ApplicationAutoScaling::ScalableTarget
   Properties:
     MaxCapacity: 100
-    MinCapacity: 0
+    MinCapacity: 1
     RoleARN: !Join 
       - ':'
       - - 'arn:aws:iam:'
@@ -444,3 +444,4 @@ Resources:
 
 ## See Also<a name="aws-resource-applicationautoscaling-scalabletarget--seealso"></a>
 + [Application Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html) 
++ [Examples](https://docs.aws.amazon.com/cli/latest/reference/application-autoscaling/register-scalable-target.html#examples) of Application Auto Scaling scalable targets in the * AWS CLI Command Reference*

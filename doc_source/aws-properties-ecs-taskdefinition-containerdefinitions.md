@@ -22,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Environment](#cfn-ecs-taskdefinition-containerdefinition-environment)" : [ [KeyValuePair](aws-properties-ecs-taskdefinition-containerdefinitions-environment.md), ... ],
   "[Essential](#cfn-ecs-taskdefinition-containerdefinition-essential)" : Boolean,
   "[ExtraHosts](#cfn-ecs-taskdefinition-containerdefinition-extrahosts)" : [ [HostEntry](aws-properties-ecs-taskdefinition-containerdefinitions-hostentry.md), ... ],
+  "[FirelensConfiguration](#cfn-ecs-taskdefinition-containerdefinition-firelensconfiguration)" : [FirelensConfiguration](aws-properties-ecs-taskdefinition-firelensconfiguration.md),
   "[HealthCheck](#cfn-ecs-taskdefinition-containerdefinition-healthcheck)" : [HealthCheck](aws-properties-ecs-taskdefinition-healthcheck.md),
   "[Hostname](#cfn-ecs-taskdefinition-containerdefinition-hostname)" : String,
   "[Image](#cfn-ecs-taskdefinition-containerdefinition-image)" : String,
@@ -74,6 +75,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Essential](#cfn-ecs-taskdefinition-containerdefinition-essential): Boolean
   [ExtraHosts](#cfn-ecs-taskdefinition-containerdefinition-extrahosts): 
     - [HostEntry](aws-properties-ecs-taskdefinition-containerdefinitions-hostentry.md)
+  [FirelensConfiguration](#cfn-ecs-taskdefinition-containerdefinition-firelensconfiguration): 
+    [FirelensConfiguration](aws-properties-ecs-taskdefinition-firelensconfiguration.md)
   [HealthCheck](#cfn-ecs-taskdefinition-containerdefinition-healthcheck): 
     [HealthCheck](aws-properties-ecs-taskdefinition-healthcheck.md)
   [Hostname](#cfn-ecs-taskdefinition-containerdefinition-hostname): String
@@ -125,7 +128,6 @@ The command that is passed to the container\. This parameter maps to `Cmd` in th
 The number of `cpu` units reserved for the container\. This parameter maps to `CpuShares` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--cpu-shares` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
 This field is optional for tasks using the Fargate launch type, and the only requirement is that the total amount of CPU reserved for all containers within a task be lower than the task\-level `cpu` value\.  
 You can determine the number of CPU units that are available per EC2 instance type by multiplying the vCPUs listed for that instance type on the [Amazon EC2 Instances](http://aws.amazon.com/ec2/instance-types/) detail page by 1,024\.
-For example, if you run a single\-container task on a single\-core instance type with 512 CPU units specified for that container, and that is the only task running on the container instance, that container could use the full 1,024 CPU unit share at any given time\. However, if you launched another copy of the same task on that container instance, each task would be guaranteed a minimum of 512 CPU units when needed, and each container could float to higher CPU usage if the other container was not using it, but if both tasks were 100% active all of the time, they would be limited to 512 CPU units\.  
 Linux containers share unallocated CPU units with other containers on the container instance with the same ratio as their allocated amount\. For example, if you run a single\-container task on a single\-core instance type with 512 CPU units specified for that container, and that is the only task running on the container instance, that container could use the full 1,024 CPU unit share at any given time\. However, if you launched another copy of the same task on that container instance, each task would be guaranteed a minimum of 512 CPU units when needed, and each container could float to higher CPU usage if the other container was not using it, but if both tasks were 100% active all of the time, they would be limited to 512 CPU units\.  
 On Linux container instances, the Docker daemon on the container instance uses the CPU value to calculate the relative CPU share ratios for running containers\. For more information, see [CPU share constraint](https://docs.docker.com/engine/reference/run/#cpu-share-constraint) in the Docker documentation\. The minimum valid CPU share value that the Linux kernel allows is 2\. However, the CPU parameter is not required, and you can use CPU values below 2 in your container definitions\. For CPU values below 2 \(including null\), the behavior varies based on your Amazon ECS container agent version:  
 +  **Agent versions less than or equal to 1\.1\.0:** Null and zero CPU values are passed to Docker as 0, which Docker then converts to 1,024 CPU shares\. CPU values of 1 are passed to Docker as 1, which the Linux kernel converts to two CPU shares\.
@@ -138,7 +140,7 @@ On Windows container instances, the CPU limit is enforced as an absolute limit, 
 `DependsOn`  <a name="cfn-ecs-taskdefinition-containerdefinition-dependson"></a>
 The dependencies defined for container startup and shutdown\. A container can contain multiple dependencies\. When a dependency is defined for container startup, for container shutdown it is reversed\.  
 For tasks using the EC2 launch type, the container instances require at least version 1\.26\.0 of the container agent to enable container dependencies\. However, we recommend using the latest container agent version\. For information about checking your agent version and updating to the latest version, see [Updating the Amazon ECS Container Agent](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html) in the *Amazon Elastic Container Service Developer Guide*\. If you are using an Amazon ECS\-optimized Linux AMI, your instance needs at least version 1\.26\.0\-1 of the `ecs-init` package\. If your container instances are launched from version `20190301` or later, then they contain the required versions of the container agent and `ecs-init`\. For more information, see [Amazon ECS\-optimized Linux AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in the *Amazon Elastic Container Service Developer Guide*\.  
-For tasks using the Fargate launch type the task or service requires platform version 1\.3\.0 or later\.  
+For tasks using the Fargate launch type, the task or service requires platform version `1.3.0` or later\.  
 *Required*: No  
 *Type*: List of [ContainerDependency](aws-properties-ecs-taskdefinition-containerdependency.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -172,9 +174,9 @@ A key/value map of labels to add to the container\. This parameter maps to `Labe
 
 `DockerSecurityOptions`  <a name="cfn-ecs-taskdefinition-containerdefinition-dockersecurityoptions"></a>
 A list of strings to provide custom labels for SELinux and AppArmor multi\-level security systems\. This field is not valid for containers in tasks using the Fargate launch type\.  
+With Windows containers, this parameter can be used to reference a credential spec file when configuring a container for Active Directory authentication\. For more information, see [Using gMSAs for Windows Containers](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows-gmsa.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 This parameter maps to `SecurityOpt` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--security-opt` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
 The Amazon ECS container agent running on a container instance must register with the `ECS_SELINUX_CAPABLE=true` or `ECS_APPARMOR_CAPABLE=true` environment variables before containers placed on that instance can use these security options\. For more information, see [Amazon ECS Container Agent Configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html) in the *Amazon Elastic Container Service Developer Guide*\.
-This parameter is not supported for Windows containers\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -205,6 +207,12 @@ A list of hostnames and IP address mappings to append to the `/etc/hosts` file o
 This parameter is not supported for Windows containers or tasks that use the `awsvpc` network mode\.
 *Required*: No  
 *Type*: List of [HostEntry](aws-properties-ecs-taskdefinition-containerdefinitions-hostentry.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`FirelensConfiguration`  <a name="cfn-ecs-taskdefinition-containerdefinition-firelensconfiguration"></a>
+The FireLens configuration for the container\. This is used to specify and configure a log router for container logs\. For more information, see [Custom Log Routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+*Required*: No  
+*Type*: [FirelensConfiguration](aws-properties-ecs-taskdefinition-firelensconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HealthCheck`  <a name="cfn-ecs-taskdefinition-containerdefinition-healthcheck"></a>
@@ -346,13 +354,14 @@ The secrets to pass to the container\. For more information, see [Specifying Sen
 `StartTimeout`  <a name="cfn-ecs-taskdefinition-containerdefinition-starttimeout"></a>
 Time duration \(in seconds\) to wait before giving up on resolving dependencies for a container\. For example, you specify two containers in a task definition with containerA having a dependency on containerB reaching a `COMPLETE`, `SUCCESS`, or `HEALTHY` status\. If a `startTimeout` value is specified for containerB and it does not reach the desired status within that time then containerA will give up and not start\. This results in the task transitioning to a `STOPPED` state\.  
 For tasks using the EC2 launch type, the container instances require at least version 1\.26\.0 of the container agent to enable a container start timeout value\. However, we recommend using the latest container agent version\. For information about checking your agent version and updating to the latest version, see [Updating the Amazon ECS Container Agent](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html) in the *Amazon Elastic Container Service Developer Guide*\. If you are using an Amazon ECS\-optimized Linux AMI, your instance needs at least version 1\.26\.0\-1 of the `ecs-init` package\. If your container instances are launched from version `20190301` or later, then they contain the required versions of the container agent and `ecs-init`\. For more information, see [Amazon ECS\-optimized Linux AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in the *Amazon Elastic Container Service Developer Guide*\.  
-This parameter is available for tasks using the Fargate launch type in the Ohio \(us\-east\-2\) region only and the task or service requires platform version 1\.3\.0 or later\.  
+For tasks using the Fargate launch type, the task or service requires platform version `1.3.0` or later\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StopTimeout`  <a name="cfn-ecs-taskdefinition-containerdefinition-stoptimeout"></a>
-Time duration \(in seconds\) to wait before the container is forcefully killed if it doesn't exit normally on its own\. For tasks using the Fargate launch type, the max `stopTimeout` value is 2 minutes\. This parameter is available for tasks using the Fargate launch type in the Ohio \(us\-east\-2\) region only and the task or service requires platform version 1\.3\.0 or later\.  
+Time duration \(in seconds\) to wait before the container is forcefully killed if it doesn't exit normally on its own\.  
+For tasks using the Fargate launch type, the max `stopTimeout` value is 2 minutes and the task or service requires platform version `1.3.0` or later\.  
 For tasks using the EC2 launch type, the stop timeout value for the container takes precedence over the `ECS_CONTAINER_STOP_TIMEOUT` container agent configuration parameter, if used\. Container instances require at least version 1\.26\.0 of the container agent to enable a container stop timeout value\. However, we recommend using the latest container agent version\. For information about checking your agent version and updating to the latest version, see [Updating the Amazon ECS Container Agent](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html) in the *Amazon Elastic Container Service Developer Guide*\. If you are using an Amazon ECS\-optimized Linux AMI, your instance needs at least version 1\.26\.0\-1 of the `ecs-init` package\. If your container instances are launched from version `20190301` or later, then they contain the required versions of the container agent and `ecs-init`\. For more information, see [Amazon ECS\-optimized Linux AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: Integer  

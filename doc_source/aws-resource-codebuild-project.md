@@ -22,8 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-codebuild-project-name)" : String,
       "[QueuedTimeoutInMinutes](#cfn-codebuild-project-queuedtimeoutinminutes)" : Integer,
       "[SecondaryArtifacts](#cfn-codebuild-project-secondaryartifacts)" : [ [Artifacts](aws-properties-codebuild-project-artifacts.md), ... ],
-      "[SecondarySourceVersions](#cfn-codebuild-project-secondarysourceversions)" : [ [ProjectSourceVersion](aws-properties-codebuild-project-projectsourceversion.md), ... ],
       "[SecondarySources](#cfn-codebuild-project-secondarysources)" : [ [Source](aws-properties-codebuild-project-source.md), ... ],
+      "[SecondarySourceVersions](#cfn-codebuild-project-secondarysourceversions)" : [ [ProjectSourceVersion](aws-properties-codebuild-project-projectsourceversion.md), ... ],
       "[ServiceRole](#cfn-codebuild-project-servicerole)" : String,
       "[Source](#cfn-codebuild-project-source)" : [Source](aws-properties-codebuild-project-source.md),
       "[SourceVersion](#cfn-codebuild-project-sourceversion)" : String,
@@ -55,10 +55,10 @@ Properties:
   [QueuedTimeoutInMinutes](#cfn-codebuild-project-queuedtimeoutinminutes): Integer
   [SecondaryArtifacts](#cfn-codebuild-project-secondaryartifacts): 
     - [Artifacts](aws-properties-codebuild-project-artifacts.md)
-  [SecondarySourceVersions](#cfn-codebuild-project-secondarysourceversions): 
-    - [ProjectSourceVersion](aws-properties-codebuild-project-projectsourceversion.md)
   [SecondarySources](#cfn-codebuild-project-secondarysources): 
     - [Source](aws-properties-codebuild-project-source.md)
+  [SecondarySourceVersions](#cfn-codebuild-project-secondarysourceversions): 
+    - [ProjectSourceVersion](aws-properties-codebuild-project-projectsourceversion.md)
   [ServiceRole](#cfn-codebuild-project-servicerole): String
   [Source](#cfn-codebuild-project-source): 
     [Source](aws-properties-codebuild-project-source.md)
@@ -146,17 +146,17 @@ The name of the build project\. The name must be unique across all of the projec
 *Maximum*: `12`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`SecondarySourceVersions`  <a name="cfn-codebuild-project-secondarysourceversions"></a>
- An array of `ProjectSourceVersion` objects\. If `secondarySourceVersions` is specified at the build level, then they take over these `secondarySourceVersions` \(at the project level\)\.   
-*Required*: No  
-*Type*: List of [ProjectSourceVersion](aws-properties-codebuild-project-projectsourceversion.md)  
-*Maximum*: `12`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `SecondarySources`  <a name="cfn-codebuild-project-secondarysources"></a>
  An array of `ProjectSource` objects\.   
 *Required*: No  
 *Type*: List of [Source](aws-properties-codebuild-project-source.md)  
+*Maximum*: `12`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SecondarySourceVersions`  <a name="cfn-codebuild-project-secondarysourceversions"></a>
+ An array of `ProjectSourceVersion` objects\. If `secondarySourceVersions` is specified at the build level, then they take over these `secondarySourceVersions` \(at the project level\)\.   
+*Required*: No  
+*Type*: List of [ProjectSourceVersion](aws-properties-codebuild-project-projectsourceversion.md)  
 *Maximum*: `12`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -175,7 +175,7 @@ The source code settings for the project, such as the source code's repository t
 
 `SourceVersion`  <a name="cfn-codebuild-project-sourceversion"></a>
 A version of the build input to be built for this project\. If not specified, the latest version is used\. If specified, it must be one of:  
-+ For AWS CodeCommit: the commit ID to use\.
++ For AWS CodeCommit: the commit ID, branch, or Git tag to use\.
 + For GitHub: the commit ID, pull request ID, branch name, or tag name that corresponds to the version of the source code you want to build\. If a pull request ID is specified, it must use the format `pr/pull-request-ID` \(for example `pr/25`\)\. If a branch name is specified, the branch's HEAD commit ID is used\. If not specified, the default branch's HEAD commit ID is used\.
 + For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of the source code you want to build\. If a branch name is specified, the branch's HEAD commit ID is used\. If not specified, the default branch's HEAD commit ID is used\.
 + For Amazon Simple Storage Service \(Amazon S3\): the version ID of the object that represents the build input ZIP file to use\.

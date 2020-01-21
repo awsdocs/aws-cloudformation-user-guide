@@ -45,6 +45,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AutoMinorVersionUpgrade](#cfn-rds-dbinstance-autominorversionupgrade)" : Boolean,
       "[AvailabilityZone](#cfn-rds-dbinstance-availabilityzone)" : String,
       "[BackupRetentionPeriod](#cfn-rds-dbinstance-backupretentionperiod)" : Integer,
+      "[CACertificateIdentifier](#cfn-rds-dbinstance-cacertificateidentifier)" : String,
       "[CharacterSetName](#cfn-rds-dbinstance-charactersetname)" : String,
       "[CopyTagsToSnapshot](#cfn-rds-dbinstance-copytagstosnapshot)" : Boolean,
       "[DBClusterIdentifier](#cfn-rds-dbinstance-dbclusteridentifier)" : String,
@@ -69,6 +70,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[LicenseModel](#cfn-rds-dbinstance-licensemodel)" : String,
       "[MasterUsername](#cfn-rds-dbinstance-masterusername)" : String,
       "[MasterUserPassword](#cfn-rds-dbinstance-masteruserpassword)" : String,
+      "[MaxAllocatedStorage](#cfn-rds-dbinstance-maxallocatedstorage)" : Integer,
       "[MonitoringInterval](#cfn-rds-dbinstance-monitoringinterval)" : Integer,
       "[MonitoringRoleArn](#cfn-rds-dbinstance-monitoringrolearn)" : String,
       "[MultiAZ](#cfn-rds-dbinstance-multiaz)" : Boolean,
@@ -105,6 +107,7 @@ Properties:
   [AutoMinorVersionUpgrade](#cfn-rds-dbinstance-autominorversionupgrade): Boolean
   [AvailabilityZone](#cfn-rds-dbinstance-availabilityzone): String
   [BackupRetentionPeriod](#cfn-rds-dbinstance-backupretentionperiod): Integer
+  [CACertificateIdentifier](#cfn-rds-dbinstance-cacertificateidentifier): String
   [CharacterSetName](#cfn-rds-dbinstance-charactersetname): String
   [CopyTagsToSnapshot](#cfn-rds-dbinstance-copytagstosnapshot): Boolean
   [DBClusterIdentifier](#cfn-rds-dbinstance-dbclusteridentifier): String
@@ -131,6 +134,7 @@ Properties:
   [LicenseModel](#cfn-rds-dbinstance-licensemodel): String
   [MasterUsername](#cfn-rds-dbinstance-masterusername): String
   [MasterUserPassword](#cfn-rds-dbinstance-masteruserpassword): String
+  [MaxAllocatedStorage](#cfn-rds-dbinstance-maxallocatedstorage): Integer
   [MonitoringInterval](#cfn-rds-dbinstance-monitoringinterval): Integer
   [MonitoringRoleArn](#cfn-rds-dbinstance-monitoringrolearn): String
   [MultiAZ](#cfn-rds-dbinstance-multiaz): Boolean
@@ -196,12 +200,21 @@ Default: A random, system\-chosen Availability Zone in the endpoint's region\.
 
 `BackupRetentionPeriod`  <a name="cfn-rds-dbinstance-backupretentionperiod"></a>
 The number of days for which automated backups are retained\. Setting this parameter to a positive number enables backups\. Setting this parameter to 0 disables automated backups\.  
+**Amazon Aurora**  
+Not applicable\. The retention period for automated backups is managed by the DB cluster\.  
 Default: 1  
 Constraints:  
-+ Must be a value from 0 to 8
-+ Cannot be set to 0 if the DB Instance is a master instance with read replicas
++ Must be a value from 0 to 35
++ Can't be set to 0 if the DB instance is a source to Read Replicas
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
+
+`CACertificateIdentifier`  <a name="cfn-rds-dbinstance-cacertificateidentifier"></a>
+The identifier of the CA certificate for this DB instance\.  
+Specifying or updating this property triggers a reboot\.
+*Required*: No  
+*Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `CharacterSetName`  <a name="cfn-rds-dbinstance-charactersetname"></a>
@@ -351,12 +364,16 @@ A value that indicates whether to remove automated backups immediately after the
 
 `DeletionProtection`  <a name="cfn-rds-dbinstance-deletionprotection"></a>
 A value that indicates whether the DB instance has deletion protection enabled\. The database can't be deleted when deletion protection is enabled\. By default, deletion protection is disabled\. For more information, see [ Deleting a DB Instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html)\.   
+ **Amazon Aurora**   
+Not applicable\. You can enable or disable deletion protection for the DB cluster\. For more information, see `CreateDBCluster`\. DB instances in a DB cluster can be deleted even when deletion protection is enabled for the DB cluster\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Domain`  <a name="cfn-rds-dbinstance-domain"></a>
-For an Amazon RDS DB instance that's running Microsoft SQL Server, this parameter specifies the Active Directory directory ID to create the instance in\. Amazon RDS uses Windows Authentication to authenticate users that connect to the DB instance\. For more information, see [Using Windows Authentication with an Amazon RDS DB Instance Running Microsoft SQL Server](https://docs.aws.amazon.com/AmazonRDS/latest/DeveloperGuide/USER_SQLServerWinAuth.html) in the *Amazon RDS User Guide*\.   
+The Active Directory directory ID to create the DB instance in\. Currently, only Microsoft SQL Server and Oracle DB instances can be created in an Active Directory Domain\.  
+For Microsoft SQL Server DB instances, Amazon RDS can use Windows Authentication to authenticate users that connect to the DB instance\. For more information, see [ Using Windows Authentication with an Amazon RDS DB Instance Running Microsoft SQL Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_SQLServerWinAuth.html) in the *Amazon RDS User Guide*\.  
+For Oracle DB instance, Amazon RDS can use Kerberos Authentication to authenticate users that connect to the DB instance\. For more information, see [ Using Kerberos Authentication with Amazon RDS for Oracle](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-kerberos.html) in the *Amazon RDS User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -451,16 +468,27 @@ If you specify the `SourceDBInstanceIdentifier` or `DBSnapshotIdentifier` proper
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MasterUserPassword`  <a name="cfn-rds-dbinstance-masteruserpassword"></a>
-The password for the master database user\. Can be any printable ASCII character except "/", "\\", or "@"\.  
-Type: String  
+The password for the master user\. The password can include any printable ASCII character except "/", """, or "@"\.  
+ **Amazon Aurora**   
+Not applicable\. The password for the master user is managed by the DB cluster\.  
+ **MariaDB**   
+Constraints: Must contain from 8 to 41 characters\.  
+ **Microsoft SQL Server**   
+Constraints: Must contain from 8 to 128 characters\.  
  **MySQL**   
-Constraints: Must contain from 8 to 41 alphanumeric characters\.  
+Constraints: Must contain from 8 to 41 characters\.  
  **Oracle**   
-Constraints: Must contain from 8 to 30 alphanumeric characters\.  
- **SQL Server**   
-Constraints: Must contain from 8 to 128 alphanumeric characters\.  
+Constraints: Must contain from 8 to 30 characters\.  
+ **PostgreSQL**   
+Constraints: Must contain from 8 to 128 characters\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MaxAllocatedStorage`  <a name="cfn-rds-dbinstance-maxallocatedstorage"></a>
+The upper limit to which Amazon RDS can automatically scale the storage of the DB instance\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MonitoringInterval`  <a name="cfn-rds-dbinstance-monitoringinterval"></a>
@@ -560,7 +588,7 @@ If you want to create a Read Replica DB instance, specify the ID of the source D
  The `SourceDBInstanceIdentifier` property determines whether a DB instance is a Read Replica\. If you remove the `SourceDBInstanceIdentifier` property from your template and then update your stack, AWS CloudFormation deletes the Read Replica and creates a new DB instance \(not a Read Replica\)\.   
 + If you specify a source DB instance that uses VPC security groups, we recommend that you specify the `VPCSecurityGroups` property\. If you don't specify the property, the Read Replica inherits the value of the `VPCSecurityGroups` property from the source DB when you create the replica\. However, if you update the stack, AWS CloudFormation reverts the replica's `VPCSecurityGroups` property to the default value because it's not defined in the stack's template\. This change might cause unexpected issues\.
 + Read Replicas don't support deletion policies\. AWS CloudFormation ignores any deletion policy that's associated with a Read Replica\.
-+ If you specify `SourceDBInstanceIdentifier`, don't set the `MultiAZ` property to `true`, and don't specify the `DBSnapshotIdentifier` property\. You can't deploy Read Replicas in multiple Availability Zones, and you can't create a Read Replica from a snapshot\.
++ If you specify `SourceDBInstanceIdentifier`, don't specify the `DBSnapshotIdentifier` property\. You can't create a Read Replica from a snapshot\.
 +  Don't set the `BackupRetentionPeriod`, `DBName`, `MasterUsername`, `MasterUserPassword`, and `PreferredBackupWindow` properties\. The database attributes are inherited from the source DB instance, and backups are disabled for Read Replicas\.
 + If the source DB instance is in a different region than the Read Replica, specify the source region in `SourceRegion`, and specify an ARN for a valid DB instance in `SourceDBInstanceIdentifier`\. For more information, see [Constructing a Amazon RDS Amazon Resource Name \(ARN\)](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN) in the *Amazon RDS User Guide*\.
 + For DB instances in Amazon Aurora clusters, don't specify this property\. Amazon RDS automatically assigns writer and reader DB instances\.
@@ -575,7 +603,7 @@ The ID of the region that contains the source DB instance for the Read Replica\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageEncrypted`  <a name="cfn-rds-dbinstance-storageencrypted"></a>
-A value that indicates whether the DB instance is encrypted\. By default, it is not encrypted\.  
+A value that indicates whether the DB instance is encrypted\. By default, it isn't encrypted\.  
  **Amazon Aurora**   
 Not applicable\. The encryption for DB instances is managed by the DB cluster\.  
 *Required*: No  
@@ -583,7 +611,11 @@ Not applicable\. The encryption for DB instances is managed by the DB cluster\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageType`  <a name="cfn-rds-dbinstance-storagetype"></a>
-Specifies storage type to be associated with the DB Instance\.  
+Specifies the storage type to be associated with the DB instance\.  
+ Valid values: `standard | gp2 | io1`   
+ If you specify `io1`, you must also include a value for the `Iops` parameter\.   
+ Default: `io1` if the `Iops` parameter is specified, otherwise `gp2`   
+For more information, see [Amazon RDS DB Instance Storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html) in the *Amazon RDS User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

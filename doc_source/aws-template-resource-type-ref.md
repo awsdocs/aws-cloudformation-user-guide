@@ -9,6 +9,7 @@ service-provider::service-name::data-type-name
 ```
 
 **Topics**
++ [AccessAnalyzer](AWS_AccessAnalyzer.md)
 + [ASK](Alexa_ASK.md)
 + [AmazonMQ](AWS_AmazonMQ.md)
 + [Amplify Console](AWS_Amplify.md)
@@ -59,6 +60,7 @@ service-provider::service-name::data-type-name
 + [Elastic Load Balancing](AWS_ElasticLoadBalancing.md)
 + [ElasticLoadBalancingV2](AWS_ElasticLoadBalancingV2.md)
 + [Amazon EMR](AWS_EMR.md)
++ [EventSchemas](AWS_EventSchemas.md)
 + [FSx](AWS_FSx.md)
 + [GameLift](AWS_GameLift.md)
 + [AWS Glue](AWS_Glue.md)
@@ -108,6 +110,7 @@ service-provider::service-name::data-type-name
 + [Systems Manager](AWS_SSM.md)
 + [AWS SFTP](AWS_Transfer.md)
 + [WAF](AWS_WAF.md)
++ [WAFv2](AWS_WAFv2.md)
 + [WAF Regional](AWS_WAFRegional.md)
 + [WorkSpaces](AWS_WorkSpaces.md)
 + [Shared Property Types](cfn-reference-shared.md)

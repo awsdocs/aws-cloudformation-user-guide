@@ -124,6 +124,12 @@ The instance type to use when launching the image builder\. The following instan
 + stream\.memory\.2xlarge
 + stream\.memory\.4xlarge
 + stream\.memory\.8xlarge
++ stream\.memory\.z1d\.large
++ stream\.memory\.z1d\.xlarge
++ stream\.memory\.z1d\.2xlarge
++ stream\.memory\.z1d\.3xlarge
++ stream\.memory\.z1d\.6xlarge
++ stream\.memory\.z1d\.12xlarge
 + stream\.graphics\-design\.large
 + stream\.graphics\-design\.xlarge
 + stream\.graphics\-design\.2xlarge

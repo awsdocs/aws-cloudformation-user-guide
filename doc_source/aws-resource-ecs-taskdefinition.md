@@ -86,7 +86,8 @@ The Amazon Resource Name \(ARN\) of the task execution role that containers in t
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Family`  <a name="cfn-ecs-taskdefinition-family"></a>
-The name of a family that this task definition is registered to\. A family groups multiple versions of a task definition\. Amazon ECS gives the first task definition that you registered to a family a revision number of 1\. Amazon ECS gives sequential revision numbers to each task definition that you add\.  
+The name of a family that this task definition is registered to\. Up to 255 letters \(uppercase and lowercase\), numbers, hyphens, and underscores are allowed\.  
+A family groups multiple versions of a task definition\. Amazon ECS gives the first task definition that you registered to a family a revision number of 1\. Amazon ECS gives sequential revision numbers to each task definition that you add\.  
 To use revision numbers when you update a task definition, specify this property\. If you don't specify a value, AWS CloudFormation generates a new task definition each time that you update it\.
 *Required*: No  
 *Type*: String  

@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Path](#cfn-iam-user-path)" : String,
       "[PermissionsBoundary](#cfn-iam-user-permissionsboundary)" : String,
       "[Policies](#cfn-iam-user-policies)" : [ [Policy](aws-properties-iam-policy-2.md), ... ],
+      "[Tags](#cfn-iam-user-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[UserName](#cfn-iam-user-username)" : String
     }
 }
@@ -40,6 +41,8 @@ Properties:
   [PermissionsBoundary](#cfn-iam-user-permissionsboundary): String
   [Policies](#cfn-iam-user-policies): 
     - [Policy](aws-properties-iam-policy-2.md)
+  [Tags](#cfn-iam-user-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [UserName](#cfn-iam-user-username): String
 ```
 
@@ -89,6 +92,14 @@ For information about limits on the number of inline policies that you can embed
 *Type*: List of [Policy](aws-properties-iam-policy-2.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Tags`  <a name="cfn-iam-user-tags"></a>
+A list of tags that you want to attach to the newly created user\. Each tag consists of a key name and an associated value\. For more information about tagging, see [Tagging IAM Identities](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html) in the *IAM User Guide*\.  
+If any one of the tags is invalid or if you exceed the allowed number of tags per user, then the entire request fails and the user is not created\.
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `UserName`  <a name="cfn-iam-user-username"></a>
 The name of the user to create\. Do not include the path in this value\.  
 This parameter allows \(per its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces\. You can also include any of the following characters: \_\+=,\.@\-\. The user name must be unique within the account\. User names are not distinguished by case\. For example, you cannot create users named both "John" and "john"\.  
@@ -117,6 +128,43 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) for the specified `AWS::IAM::User` resource\. For example: `arn:aws:iam::123456789012:user/mystack-myuser-1CCXAFG2H2U4D`\.
+
+## Examples<a name="aws-properties-iam-user--examples"></a>
+
+### User<a name="aws-properties-iam-user--examples--User"></a>
+
+In this example, create a user named "MyUser"\.
+
+#### JSON<a name="aws-properties-iam-user--examples--User--json"></a>
+
+```
+{
+   "AWSTemplateFormatVersion": "2010-09-09",
+   "Resources" : {
+     "MyUser" : {
+       "Type" : "AWS::IAM::User",
+       "Properties" : {
+         "LoginProfile": {
+           "Password": { "Ref" : "MyPassword" }
+         }
+       }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-properties-iam-user--examples--User--yaml"></a>
+
+```
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  MyUser:
+    Type: AWS::IAM::User
+    Properties:
+      LoginProfile:
+        Password:
+          Ref: MyPassword
+```
 
 ## See Also<a name="aws-properties-iam-user--seealso"></a>
 + To view `AWS::IAM::User` template example snippets, see [Declaring an IAM User Resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-iam-user)\. 

@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPoolClient AnalyticsConfiguration<a name="aws-properties-cognito-userpoolclient-analyticsconfiguration"></a>
 
-`AnalyticsConfiguration` is a property of the [AWS::Cognito::UserPoolClient](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html) resource that defines the Amazon Pinpoint analytics configuration for collecting metrics for this user pool\.
+The Amazon Pinpoint analytics configuration for collecting metrics for a user pool\.
 
 ## Syntax<a name="aws-properties-cognito-userpoolclient-analyticsconfiguration-syntax"></a>
 

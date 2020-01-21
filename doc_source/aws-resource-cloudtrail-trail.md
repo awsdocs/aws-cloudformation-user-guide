@@ -1,6 +1,6 @@
 # AWS::CloudTrail::Trail<a name="aws-resource-cloudtrail-trail"></a>
 
-Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket\. A maximum of five trails can exist in a region, irrespective of the region in which they were created\.
+Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket\. 
 
 ## Syntax<a name="aws-resource-cloudtrail-trail-syntax"></a>
 

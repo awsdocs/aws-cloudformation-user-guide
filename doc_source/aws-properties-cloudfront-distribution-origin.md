@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `CustomOriginConfig`  <a name="cfn-cloudfront-distribution-origin-customoriginconfig"></a>
 A complex type that contains information about a custom origin\. If the origin is an Amazon S3 bucket, use the `S3OriginConfig` element instead\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [CustomOriginConfig](aws-properties-cloudfront-distribution-customoriginconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -86,7 +86,7 @@ When a user enters `example.com/acme/index.html` in a browser, CloudFront sends 
 
 `S3OriginConfig`  <a name="cfn-cloudfront-distribution-origin-s3originconfig"></a>
 A complex type that contains information about the Amazon S3 origin\. If the origin is a custom origin, use the `CustomOriginConfig` element instead\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [S3OriginConfig](aws-properties-cloudfront-distribution-s3originconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

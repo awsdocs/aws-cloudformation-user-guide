@@ -53,7 +53,7 @@ A CloudWatch metric dimension\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EvaluationPeriods`  <a name="cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-evaluationperiods"></a>
-The number of periods, expressed in seconds using `Period`, during which the alarm condition must exist before the alarm triggers automatic scaling activity\. The default value is `1`\.  
+The number of periods, in five\-minute increments, during which the alarm condition must exist before the alarm triggers automatic scaling activity\. The default value is `1`\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

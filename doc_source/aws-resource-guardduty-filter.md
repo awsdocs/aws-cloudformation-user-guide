@@ -64,7 +64,7 @@ Represents the criteria to be used in the filter for querying findings\.
 
 `Name`  <a name="cfn-guardduty-filter-name"></a>
 The name of the filter\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

@@ -1,8 +1,8 @@
 # AWS::Pinpoint::APNSVoipChannel<a name="aws-resource-pinpoint-apnsvoipchannel"></a>
 
-A *channel* is a type of platform that you can deliver messages to\. You can use the APNs VoIP channel to send VoIP notification messages to the Apple Push Notification service \(APNs\)\. Before you use Amazon Pinpoint to send VoIP notifications to APNs, you have to enable the APNs VoIP channel for an Amazon Pinpoint app\.
+A *channel* is a type of platform that you can deliver messages to\. You can use the APNs VoIP channel to send VoIP notification messages to the Apple Push Notification service \(APNs\)\. Before you can use Amazon Pinpoint to send VoIP notifications to APNs, you have to enable the APNs VoIP channel for an Amazon Pinpoint application\.
 
-The APNs VoIP Channel resource represents the status and authentication settings of the APNs VoIP channel for a specific application\. You can use this resource to retrieve information about, update, or disable \(delete\) the APNs VoIP channel for an application\.
+The APNSVoipChannel resource represents the status and authentication settings of the APNs VoIP channel for an application\.
 
 ## Syntax<a name="aws-resource-pinpoint-apnsvoipchannel-syntax"></a>
 
@@ -46,7 +46,7 @@ Properties:
 ## Properties<a name="aws-resource-pinpoint-apnsvoipchannel-properties"></a>
 
 `ApplicationId`  <a name="cfn-pinpoint-apnsvoipchannel-applicationid"></a>
-The unique identifier of the Amazon Pinpoint application that the APNs VoIP channel applies to\.  
+The unique identifier for the Amazon Pinpoint application that the APNs VoIP channel applies to\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -103,6 +103,6 @@ The key identifier that's assigned to your APNs signing key\. Specify this value
 
 ### Ref<a name="aws-resource-pinpoint-apnsvoipchannel-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the Amazon Pinpoint app that the channel is associated with\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the unique identifier \(`ApplicationId`\) for the Amazon Pinpoint application that the channel is associated with\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

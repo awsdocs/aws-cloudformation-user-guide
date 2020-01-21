@@ -1,6 +1,6 @@
 # AWS::AppMesh::Route TcpRoute<a name="aws-properties-appmesh-route-tcproute"></a>
 
-An object representing the TCP routing specification for a route\.
+An object that represents a TCP route type\.
 
 ## Syntax<a name="aws-properties-appmesh-route-tcproute-syntax"></a>
 

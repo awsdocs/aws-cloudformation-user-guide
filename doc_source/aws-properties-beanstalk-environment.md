@@ -124,7 +124,8 @@ If you specify `TemplateName`, then don't specify `SolutionStackName`\.
 `Tier`  <a name="cfn-beanstalk-environment-tier"></a>
 Specifies the tier to use in creating this environment\. The environment tier that you choose determines whether Elastic Beanstalk provisions resources to support a web application that handles HTTP\(S\) requests or a web application that handles background\-processing tasks\.  
 *Required*: No  
-*Type*: [Tier](aws-properties-beanstalk-environment-tier.md)
+*Type*: [Tier](aws-properties-beanstalk-environment-tier.md)  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `VersionLabel`  <a name="cfn-beanstalk-environment-versionlabel"></a>
 The name of the application version to deploy\.  
@@ -154,7 +155,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `EndpointURL`  <a name="EndpointURL-fn::getatt"></a>
 For load\-balanced, autoscaling environments, the URL to the load balancer\. For single\-instance environments, the IP address of the instance\.  
 Example load balancer URL:  
- `awseb-myst-myen-132MQC4KRLAMD-1371280482.us-east-2.elb.amazonaws.com`     
+ `awseb-myst-myen-132MQC4KRLAMD-1371280482.us-east-2.elb.amazonaws.com`   
 Example instance IP address:  
  `192.0.2.0` 
 

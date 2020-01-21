@@ -6,15 +6,14 @@ When you are finished with the AWS CloudFormation StackSets Getting Started walk
 
 After you have deleted all stack instances, you can delete the stack set\.
 
-**To delete a stack set by using the AWS Management Console**
+**To delete a stack set by using the AWS CloudFormation console**
 
-1. On the StackSets home page, select the stack set that you created in [Create a New Stack Set](stacksets-getting-started-create.md)\. In this walkthrough, we created a stack set named `my-awsconfig-stackset`\.  
-![\[Select stack set\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/stacksets_my_awsconfig.png)
+1. On the **StackSets** page, select the stack set that you created in [Create a New Stack Set](stacksets-getting-started-create.md)\. In this walkthrough, we created a stack set named `my-awsconfig-stackset`\.
 
-1. With the stack set selected, choose **Delete stack set** from the **Actions** menu\.
+1. With the stack set selected, choose **Delete StackSet** from the **Actions** menu\.  
+![\[Select stack set and choose Delete stack set from the Actions menu.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacksets-action-delete-stackset.png)
 
-1. When you are prompted to confirm that you want to delete the stack set, choose **Yes, Delete**\.  
-![\[Delete stack set confirmation\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/stacksets_delete_stackset.png)
+1. When you are prompted to confirm that you want to delete the stack set, choose **Delete StackSet**\.
 
 **To delete a stack set by using the AWS CLI**
 

@@ -12,7 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Types](#cfn-apigateway-restapi-endpointconfiguration-types)" : [ String, ... ]
+  "[Types](#cfn-apigateway-restapi-endpointconfiguration-types)" : [ String, ... ],
+  "[VpcEndpointIds](#cfn-apigateway-restapi-endpointconfiguration-vpcendpointids)" : [ String, ... ]
 }
 ```
 
@@ -20,6 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Types](#cfn-apigateway-restapi-endpointconfiguration-types): 
+    - String
+  [VpcEndpointIds](#cfn-apigateway-restapi-endpointconfiguration-vpcendpointids): 
     - String
 ```
 
@@ -30,6 +33,12 @@ A list of endpoint types of an API or its custom domain name\. Valid values incl
 + `EDGE`: For an edge\-optimized API and its custom domain name\.
 + `REGIONAL`: For a regional API and its custom domain name\.
 + `PRIVATE`: For a private API\.
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`VpcEndpointIds`  <a name="cfn-apigateway-restapi-endpointconfiguration-vpcendpointids"></a>
+A list of VPC endpoint IDs of an API \([AWS::ApiGateway::RestApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html)\) against which to create Route53 ALIASes\. It is only supported for `PRIVATE` endpoint type\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

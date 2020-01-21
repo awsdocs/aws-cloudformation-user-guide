@@ -68,7 +68,7 @@ The name of the detector model\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Key`  <a name="cfn-iotevents-detectormodel-key"></a>
-The input attribute key used to identify a device or system to create a detector \(an instance of the detector model\) and then to route each input received to the appropriate detector \(instance\)\. This parameter uses a JSON\-path expression to specify the attribute\-value pair in the message payload of each input that is used to identify the device associated with the input\.  
+The input attribute key used to identify a device or system in order to create a detector \(an instance of the detector model\) and then to route each input received to the appropriate detector \(instance\)\. This parameter uses a JSON\-path expression to specify the attribute\-value pair in the message payload of each input that is used to identify the device associated with the input\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

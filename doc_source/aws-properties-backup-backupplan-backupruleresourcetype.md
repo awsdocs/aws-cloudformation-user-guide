@@ -54,7 +54,7 @@ To help organize your resources, you can assign your own metadata to the resourc
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleName`  <a name="cfn-backup-backupplan-backupruleresourcetype-rulename"></a>
-An optional display name for a backup rule\.  
+A display name for a backup rule\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

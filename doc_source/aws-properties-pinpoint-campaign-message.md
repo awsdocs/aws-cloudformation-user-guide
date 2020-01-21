@@ -90,7 +90,7 @@ The URL of the image or video to display in the push notification\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RawContent`  <a name="cfn-pinpoint-campaign-message-rawcontent"></a>
-The raw, JSON\-formatted string to use as the payload for the notification message\. This value overrides other values for the message\.  
+The raw, JSON\-formatted string to use as the payload for the notification message\. If specified, this value overrides all other content for the message\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

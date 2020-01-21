@@ -1,6 +1,6 @@
 # AWS::S3::Bucket Rule<a name="aws-properties-s3-bucket-lifecycleconfig-rule"></a>
 
-Specifies lifecycle rules for an Amazon S3 bucket\. For more information, see [PUT Bucket lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTlifecycle.html) in the *Amazon Simple Storage Service API Reference*\.
+Specifies lifecycle rules for an Amazon S3 bucket\. For more information, see [Put Bucket Lifecycle Configuration](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTlifecycle.html) in the *Amazon Simple Storage Service API Reference*\. For examples, see [Put Bucket Lifecycle Configuration Examples](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketLifecycleConfiguration.html#API_PutBucketLifecycleConfiguration_Examples) 
 
 ## Syntax<a name="aws-properties-s3-bucket-lifecycleconfig-rule-syntax"></a>
 

@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Segment Demographic<a name="aws-properties-pinpoint-segment-segmentdimensions-demographic"></a>
 
-The demographic\-based criteria, such as device platform, for the segment\.
+Specifies demographic\-based criteria, such as device platform, for the segment\.
 
 ## Syntax<a name="aws-properties-pinpoint-segment-segmentdimensions-demographic-syntax"></a>
 

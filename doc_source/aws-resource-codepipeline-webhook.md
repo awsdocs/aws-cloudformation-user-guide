@@ -2,6 +2,11 @@
 
 The `AWS::CodePipeline::Webhook` resource creates and registers your webhook\. After the webhook is created and registered, it triggers your pipeline to start every time an external event occurs\. For more information, see [Configure Your GitHub Pipelines to Use Webhooks for Change Detection](https://docs.aws.amazon.com/codepipeline/latest/userguide/pipelines-webhooks-migration.html) in the *AWS CodePipeline User Guide*\.
 
+We strongly recommend that you use AWS Secrets Manager to store your credentials\. If you use Secrets Manager, you must have secrets in your secrets manager\. For more information, see [ Using Dynamic References to Specify Template Values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)\. 
+
+**Important**  
+When passing secret parameters, do not enter the value directly into the template\. The value is rendered as plain text and is readable\. For security purposes, do not use plain text in your CloudFormation template to store your credentials\.
+
 ## Syntax<a name="aws-resource-codepipeline-webhook-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -44,10 +49,10 @@ Properties:
 ## Properties<a name="aws-resource-codepipeline-webhook-properties"></a>
 
 `Authentication`  <a name="cfn-codepipeline-webhook-authentication"></a>
-Supported options are GITHUB\_HMAC, IP and UNAUTHENTICATED\.  
+Supported options are GITHUB\_HMAC, IP, and UNAUTHENTICATED\.  
 + For information about the authentication scheme implemented by GITHUB\_HMAC, see [Securing your webhooks](https://developer.github.com/webhooks/securing/) on the GitHub Developer website\.
-+  IP will reject webhooks trigger requests unless they originate from an IP within the IP range whitelisted in the authentication configuration\.
-+  UNAUTHENTICATED will accept all webhook trigger requests regardless of origin\.
++  IP rejects webhooks trigger requests unless they originate from an IP address in the IP range whitelisted in the authentication configuration\.
++  UNAUTHENTICATED accepts all webhook trigger requests regardless of origin\.
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `GITHUB_HMAC | IP | UNAUTHENTICATED`  

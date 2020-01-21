@@ -1,8 +1,8 @@
 # AWS::Pinpoint::APNSSandboxChannel<a name="aws-resource-pinpoint-apnssandboxchannel"></a>
 
-A *channel* is a type of platform that you can deliver messages to\. You can use the APNs sandbox channel to send push notification messages to the sandbox environment of the Apple Push Notification service \(APNs\)\. Before you use Amazon Pinpoint to send notifications to the APNs sandbox environment, you have to enable the APNs sandbox channel for an Amazon Pinpoint app\.
+A *channel* is a type of platform that you can deliver messages to\. You can use the APNs sandbox channel to send push notification messages to the sandbox environment of the Apple Push Notification service \(APNs\)\. Before you can use Amazon Pinpoint to send notifications to the APNs sandbox environment, you have to enable the APNs sandbox channel for an Amazon Pinpoint application\.
 
-The APNs Sandbox Channel resource represents the status and authentication settings of the APNs sandbox channel for a specific application\. You can use this resource to retrieve information about, update, or disable \(delete\) the APNs sandbox channel for an application\.
+The APNSSandboxChannel resource represents the status and authentication settings of the APNs sandbox channel for an application\.
 
 ## Syntax<a name="aws-resource-pinpoint-apnssandboxchannel-syntax"></a>
 
@@ -46,7 +46,7 @@ Properties:
 ## Properties<a name="aws-resource-pinpoint-apnssandboxchannel-properties"></a>
 
 `ApplicationId`  <a name="cfn-pinpoint-apnssandboxchannel-applicationid"></a>
-The unique identifier of the Amazon Pinpoint application that the APNs sandbox channel applies to\.  
+The unique identifier for the Amazon Pinpoint application that the APNs sandbox channel applies to\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -103,6 +103,6 @@ The key identifier that's assigned to your APNs signing key\. Specify this value
 
 ### Ref<a name="aws-resource-pinpoint-apnssandboxchannel-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the Amazon Pinpoint app that the channel is associated with\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the unique identifier \(`ApplicationId`\) for the Amazon Pinpoint application that the channel is associated with\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

@@ -68,7 +68,7 @@ You define a stack policy with five elements: `Effect`, `Action`, `Principal`, `
 }
 ```
 
-Effect  
+`Effect`  
 Determines whether the actions that you specify are denied or allowed on the resource\(s\) that you specify\. You can specify only `Deny` or `Allow`, such as:  
 
 ```
@@ -105,7 +105,7 @@ To allow all update actions except for one, use `NotAction`\. For example, to al
   ]
 }
 ```
-For more information about stack updates, see [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)\.
+For more information about stack updates, see [AWS CloudFormation Stack Updates](using-cfn-updating-stacks.md)\.
 
 Principal  
 The `Principal` element specifies the entity that the policy applies to\. This element is required but supports only the wild card \(`*`\), which means that the policy applies to all [principals](https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#principal)\.
@@ -189,13 +189,13 @@ For information about writing stack policies, see [Defining a Stack Policy](#sta
 
 1. Open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
-1. On the **CloudFormation Stacks** page, choose **Create Stack**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-create-stack-button2.png)
+1. On the **CloudFormation Stacks** page, choose **Create stack**\.
 
-1. In the Create Stack wizard, on the **Options** page, expand the **Advanced** section\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-create-stack-advanced-options.png)
+1. In the Create Stack wizard, on the **Configure stack options** page, expand the **Advanced** section and then choose **Stack policy**\.
 
-1. Choose `Browse`, and then choose the file that contains the stack policy, or type the policy in the `Stack policy` text box\.
+1. Specify the stack policy:
+   + To write a policy directly in the console, choose **Enter stack policy** and then type the stack policy directly in the text field\.
+   + To use a policy defined in a separate file, choose **Upload a file**, then **Choose file** to select the file containing the stack policy\.
 
 **To set a stack policy when you create a stack \(CLI\)**
 + Use the `[aws cloudformation create\-stack](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html)` command with the `--stack-policy-body` option to type in a modified policy or the `--stack-policy-url` option to specify a file containing the policy\. 
@@ -218,22 +218,31 @@ During a stack update, AWS CloudFormation automatically updates resources that d
 
 1. Open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
-1. Select the stack that you want to update, choose **Actions**, and then choose **Update Stack**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cfn-update-stack-initiating.png)
+1. Select the stack that you want to update, choose **Stack actions**, and then choose **Update stack**\.
 
-1. If you modified the stack template, specify the location of the updated template\. If not, choose **Use current template**\.
-   + For a template stored locally on your computer, choose **Upload a template to Amazon S3**\. Choose **Choose File** to navigate to the file, select it, and then choose **Next**\.
-   + For a template stored in an Amazon S3 bucket, choose **Specify an Amazon S3 URL**\. Type or paste the URL for the template, and then choose **Next**\.
+1. If you *haven't* modified the stack template, select **Use current template**, and then click **Next**\. If you have modified the template, select **Replace current template** and specify the location of the updated template in the **Specify template** section:
+   + For a template stored locally on your computer, select **Upload a template file**\. Choose **Choose File** to navigate to the file and select it, and then click **Next**\.
+   + For a template stored in an Amazon S3 bucket, select **Amazon S3 URL**\. Enter or paste the URL for the template, and then click **Next**\.
 
      If you have a template in a versioning\-enabled bucket, you can specify a specific version of the template, such as `https://s3.amazonaws.com/templates/myTemplate.template?versionId=123ab1cdeKdOW5IH4GAcYbEngcpTJTDW`\. For more information, see [Managing Objects in a Versioning\-Enabled Bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/managing-objects-versioned-bucket.html) in the *Amazon Simple Storage Service Console User Guide*\.
 
-1. If your template contains parameters, on the **Specify Parameters** page, enter or modify the parameter values, and then choose **Next**\.
+1. If your template contains parameters, on the **Specify stack details** page, enter or modify the parameter values, and then choose **Next**\.
 
    AWS CloudFormation populates each parameter with the value that is currently set in the stack except for parameters declared with the `NoEcho` attribute\. You can use current values for those parameters by choosing **Use existing value**\.
 
-1. On the **Options** page, choose the file that contains the overriding stack policy or type a policy, and then choose **Next**\. The override policy must specify an `Allow` statement for the protected resources that you want to update\.
+   For more information about using `NoEcho` to mask sensitive information, as well as using dynamic parameters to manage secrets, see the [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
-   For example, to update all protected resources, specify a temporary override policy that allows all updates:
+1. Specify an override stack policy\.
+
+   1. On the **Configure stack options** page, in the **Advanced options** section, select **Stack policy**\.
+
+   1. Select **Upload a file**\.
+
+   1. Click **Choose file** and navigate to the file that contains the overriding stack policy or type a policy\.
+
+   1. Choose **Next**\. 
+
+   The override policy must specify an `Allow` statement for the protected resources that you want to update\. For example, to update all protected resources, specify a temporary override policy that allows all updates:
 
    ```
    {
@@ -252,15 +261,17 @@ AWS CloudFormation applies the override policy only during this update\. The ove
 
 1. Review the stack information and the changes that you submitted\.
 
-   In the **Review** section, check that you submitted the correct information, such as the correct parameter values or template URL\. If your template contains IAM resources, choose **I acknowledge that this template may create IAM resources** to specify that you want to use IAM resources in the template\. For more information about using IAM resources in templates, see [Controlling Access with AWS Identity and Access Management](using-iam-template.md)\.
+   Check that you submitted the correct information, such as the correct parameter values or template URL\. If your template contains IAM resources, choose **I acknowledge that this template may create IAM resources** to specify that you want to use IAM resources in the template\. For more information about using IAM resources in templates, see [Controlling Access with AWS Identity and Access Management](using-iam-template.md)\.
 
    In the **Preview your changes** section, check that AWS CloudFormation will make all the changes that you expect\. For example, check that AWS CloudFormation adds, removes, and modifies the resources that you intended to add, remove, or modify\. AWS CloudFormation generates this preview by creating a change set for the stack\. For more information, see [Updating Stacks Using Change Sets](using-cfn-updating-stacks-changesets.md)\.
 
-1. Choose **Update**\.
+1. When you are satisfied with your changes, click **Update**\.
+**Note**  
+At this point, you also have the option to view the change set to review your proposed updates more thoroughly\. To do so, click **View change set** instead of **Update**\. CloudFormation displays the change set generated based on your updates\. When you are ready to perform the stack update, click **Execute**\.
 
-   Your stack enters the **UPDATE\_IN\_PROGRESS** state\. After it has finished updating, the state is set to **UPDATE\_COMPLETE**\.
+   CloudFormation displays the **Stack details** page for your stack\. Your stack now has a status of **UPDATE\_IN\_PROGRESS**\. After CloudFormation has successfully finished updating the stack, it sets the stack status to **UPDATE\_COMPLETE**\.
 
-   If the stack update fails, AWS CloudFormation automatically rolls back changes, and sets the state to **UPDATE\_ROLLBACK\_COMPLETE**\.
+   If the stack update fails, CloudFormation; automatically rolls back changes, and sets the stack status to **UPDATE\_ROLLBACK\_COMPLETE**\.
 
 **To update a protected resource \(CLI\)**
 + Use the `[aws cloudformation update\-stack](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html)` command with the `--stack-policy-during-update-body` option to type in a modified policy or the `--stack-policy-during-update-url` option to specify a file containing the policy\.
@@ -295,7 +306,7 @@ You can't delete a stack policy\. To remove all protection from all resources, y
 
 The following example policies show how to prevent updates to all stack resources and to specific resources, and prevent specific types of updates\.
 
-### Prevent Updates to All Stack Resources<a name="w4784ab1c15c17c29c21b4"></a>
+### Prevent Updates to All Stack Resources<a name="w5508ab1c15c17c29c21b4"></a>
 
 To prevent updates to all stack resources, the following policy specifies a `Deny` statement for all update actions on all resources\.
 
@@ -312,7 +323,7 @@ To prevent updates to all stack resources, the following policy specifies a `Den
 }
 ```
 
-### Prevent Updates to a Single Resource<a name="w4784ab1c15c17c29c21b6"></a>
+### Prevent Updates to a Single Resource<a name="w5508ab1c15c17c29c21b6"></a>
 
 The following policy denies all update actions on the database with the `MyDatabase` logical ID\. It allows all update actions on all other stack resources with an `Allow` statement\. The `Allow` statement doesn't apply to the `MyDatabase` resource because the `Deny` statement always overrides allow actions\.
 
@@ -353,7 +364,7 @@ You can achieve the same result as the previous example by using a default denia
 **Important**  
 There is risk in using a default denial\. If you have an `Allow` statement elsewhere in the policy \(such as an `Allow` statement that uses a wildcard\), you might unknowingly grant update permission to resources that you don't intend to\. Because an explicit denial overrides any allow actions, you can ensure that a resource is protected by using a `Deny` statement\.
 
-### Prevent Updates to All Instances of a Resource Type<a name="w4784ab1c15c17c29c21b8"></a>
+### Prevent Updates to All Instances of a Resource Type<a name="w5508ab1c15c17c29c21b8"></a>
 
 The following policy denies all update actions on the RDS DB instance resource type\. It allows all update actions on all other stack resources with an `Allow` statement\. The `Allow` statement doesn't apply to the RDS DB instance resources because a `Deny` statement always overrides allow actions\.
 
@@ -381,7 +392,7 @@ The following policy denies all update actions on the RDS DB instance resource t
 }
 ```
 
-### Prevent Replacement Updates for an Instance<a name="w4784ab1c15c17c29c21c10"></a>
+### Prevent Replacement Updates for an Instance<a name="w5508ab1c15c17c29c21c10"></a>
 
 The following policy denies updates that would cause a replacement of the instance with the `MyInstance` logical ID\. It allows all update actions on all other stack resources with an `Allow` statement\. The `Allow` statement doesn't apply to the `MyInstance` resource because the `Deny` statement always overrides allow actions\.
 
@@ -404,7 +415,7 @@ The following policy denies updates that would cause a replacement of the instan
 }
 ```
 
-### Prevent Updates to Nested Stacks<a name="w4784ab1c15c17c29c21c12"></a>
+### Prevent Updates to Nested Stacks<a name="w5508ab1c15c17c29c21c12"></a>
 
 The following policy denies all update actions on the AWS CloudFormation stack resource type \(nested stacks\)\. It allows all update actions on all other stack resources with an `Allow` statement\. The `Allow` statement doesn't apply to the AWS CloudFormationstack resources because the `Deny` statement always overrides allow actions\.
 

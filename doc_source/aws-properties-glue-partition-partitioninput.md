@@ -42,6 +42,7 @@ Provides information about the physical location where the partition is stored\.
 
 `Values`  <a name="cfn-glue-partition-partitioninput-values"></a>
 The values of the partition\. Although this parameter is not required by the SDK, you must specify this parameter for a valid input\.  
+The values for the keys for the new partition must be passed as an array of String objects that must be ordered in the same order as the partition keys appearing in the Amazon S3 prefix\. Otherwise AWS Glue will add the values to the wrong keys\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

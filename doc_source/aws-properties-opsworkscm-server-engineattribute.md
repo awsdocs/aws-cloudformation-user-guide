@@ -34,6 +34,8 @@ The name of the engine attribute\.
 +  `PUPPET_R10K_PRIVATE_KEY` 
 *Required*: No  
 *Type*: String  
+*Maximum*: `10000`  
+*Pattern*: `(?s).*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-opsworkscm-server-engineattribute-value"></a>
@@ -50,6 +52,8 @@ The value of the engine attribute\.
 +  `PUPPET_R10K_PRIVATE_KEY`: If you are using a private Git repository, add `PUPPET_R10K_PRIVATE_KEY` to specify a PEM\-encoded private SSH key\.
 *Required*: No  
 *Type*: String  
+*Maximum*: `10000`  
+*Pattern*: `(?s).*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-opsworkscm-server-engineattribute--seealso"></a>

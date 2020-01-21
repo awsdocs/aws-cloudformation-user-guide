@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-ec2-clientvpnendpoint-description)" : String,
       "[DnsServers](#cfn-ec2-clientvpnendpoint-dnsservers)" : [ String, ... ],
       "[ServerCertificateArn](#cfn-ec2-clientvpnendpoint-servercertificatearn)" : String,
+      "[SplitTunnel](#cfn-ec2-clientvpnendpoint-splittunnel)" : Boolean,
       "[TagSpecifications](#cfn-ec2-clientvpnendpoint-tagspecifications)" : [ [TagSpecification](aws-properties-ec2-clientvpnendpoint-tagspecification.md), ... ],
       "[TransportProtocol](#cfn-ec2-clientvpnendpoint-transportprotocol)" : String
     }
@@ -38,6 +39,7 @@ Properties:
   [DnsServers](#cfn-ec2-clientvpnendpoint-dnsservers): 
     - String
   [ServerCertificateArn](#cfn-ec2-clientvpnendpoint-servercertificatearn): String
+  [SplitTunnel](#cfn-ec2-clientvpnendpoint-splittunnel): Boolean
   [TagSpecifications](#cfn-ec2-clientvpnendpoint-tagspecifications): 
     - [TagSpecification](aws-properties-ec2-clientvpnendpoint-tagspecification.md)
   [TransportProtocol](#cfn-ec2-clientvpnendpoint-transportprotocol): String
@@ -75,7 +77,7 @@ A brief description of the Client VPN endpoint\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DnsServers`  <a name="cfn-ec2-clientvpnendpoint-dnsservers"></a>
-Information about the DNS servers to be used for DNS resolution\. A Client VPN endpoint can have up to two DNS servers\. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server\.  
+Information about the DNS servers to be used for DNS resolution\. A Client VPN endpoint can have up to two DNS servers\. If no DNS server is specified, the DNS address configured on the device is used for the DNS server\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -84,6 +86,14 @@ Information about the DNS servers to be used for DNS resolution\. A Client VPN e
 The ARN of the server certificate\. For more information, see the [AWS Certificate Manager User Guide](https://docs.aws.amazon.com/acm/latest/userguide/)\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SplitTunnel`  <a name="cfn-ec2-clientvpnendpoint-splittunnel"></a>
+Indicates whether split\-tunnel is enabled on the AWS Client VPN endpoint\.  
+By default, split\-tunnel on a VPN endpoint is disabled\.  
+For information about split\-tunnel VPN endpoints, see [Split\-Tunnel AWS Client VPN Endpoint](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html) in the *AWS Client VPN Administrator Guide*\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TagSpecifications`  <a name="cfn-ec2-clientvpnendpoint-tagspecifications"></a>

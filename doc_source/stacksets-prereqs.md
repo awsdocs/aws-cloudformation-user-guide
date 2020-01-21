@@ -4,7 +4,7 @@ Because stack sets perform stack operations across multiple accounts, before you
 
 1. Determine which AWS account is the *administrator account*\.
 
-   Stack sets are created in this administator account\. A *target account* is the account in which you create individual stacks that belong to a stack set\.
+   Stack sets are created in this administrator account\. A *target account* is the account in which you create individual stacks that belong to a stack set\.
 
 1. Determine how you want to structure permissions for the stack sets\.
 

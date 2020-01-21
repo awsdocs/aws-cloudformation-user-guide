@@ -1,8 +1,6 @@
 # AWS::Pinpoint::ApplicationSettings<a name="aws-resource-pinpoint-applicationsettings"></a>
 
-Specifies the settings for an Amazon Pinpoint app\.
-
-In Amazon Pinpoint, an *app* \(also referred to as a *project*\) is a collection of settings, customer information, segments, and campaigns\.
+Specifies the settings for an Amazon Pinpoint application\. In Amazon Pinpoint, an *application* \(also referred to as an *app* or *project*\) is a collection of related settings, customer information, segments, and campaigns, and other types of Amazon Pinpoint resources\.
 
 ## Syntax<a name="aws-resource-pinpoint-applicationsettings-syntax"></a>
 
@@ -41,7 +39,7 @@ Properties:
 ## Properties<a name="aws-resource-pinpoint-applicationsettings-properties"></a>
 
 `ApplicationId`  <a name="cfn-pinpoint-applicationsettings-applicationid"></a>
-The unique ID of the Amazon Pinpoint app\.  
+The unique identifier for the Amazon Pinpoint application\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -79,6 +77,6 @@ To override the default quiet time settings for a specific campaign, use the Cam
 
 ### Ref<a name="aws-resource-pinpoint-applicationsettings-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the Amazon Pinpoint app that you're specifying the settings for\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the unique identifier \(`ApplicationId`\) for the Amazon Pinpoint application that you're specifying the settings for\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

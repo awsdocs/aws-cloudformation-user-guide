@@ -37,7 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-blockdev-template-properties"></a>
 
 `DeleteOnTermination`  <a name="cfn-ec2-blockdev-template-deleteontermination"></a>
-Indicates whether the EBS volume is deleted on instance termination\. For more information, see [Preserving Amazon EBS Volumes on Instance Termination](url-doc-domain;AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) in the Amazon Elastic Compute Cloud User Guide\.   
+Indicates whether the EBS volume is deleted on instance termination\. For more information, see [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) in the Amazon Elastic Compute Cloud User Guide\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -79,7 +79,7 @@ Constraints: 1\-16384 for General Purpose SSD \(`gp2`\), 4\-16384 for Provisione
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeType`  <a name="cfn-ec2-blockdev-template-volumetype"></a>
-The volume type\. If you set the type to `io1`, you must also specify the IOPS that the volume supports\.  
+The volume type\. If you set the type to `io1`, you must also specify the **Iops** parameter\. If you set the type to `gp2`, `st1`, `sc1`, or `standard`, you must omit the **Iops** parameter\.  
 Default: `gp2`   
 *Required*: No  
 *Type*: String  

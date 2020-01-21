@@ -15,6 +15,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AssociatePublicIpAddress](#cfn-opsworkscm-server-associatepublicipaddress)" : Boolean,
       "[BackupId](#cfn-opsworkscm-server-backupid)" : String,
       "[BackupRetentionCount](#cfn-opsworkscm-server-backupretentioncount)" : Integer,
+      "[CustomCertificate](#cfn-opsworkscm-server-customcertificate)" : String,
+      "[CustomDomain](#cfn-opsworkscm-server-customdomain)" : String,
+      "[CustomPrivateKey](#cfn-opsworkscm-server-customprivatekey)" : String,
       "[DisableAutomatedBackup](#cfn-opsworkscm-server-disableautomatedbackup)" : Boolean,
       "[Engine](#cfn-opsworkscm-server-engine)" : String,
       "[EngineAttributes](#cfn-opsworkscm-server-engineattributes)" : [ [EngineAttribute](aws-properties-opsworkscm-server-engineattribute.md), ... ],
@@ -41,6 +44,9 @@ Properties:
   [AssociatePublicIpAddress](#cfn-opsworkscm-server-associatepublicipaddress): Boolean
   [BackupId](#cfn-opsworkscm-server-backupid): String
   [BackupRetentionCount](#cfn-opsworkscm-server-backupretentioncount): Integer
+  [CustomCertificate](#cfn-opsworkscm-server-customcertificate): String
+  [CustomDomain](#cfn-opsworkscm-server-customdomain): String
+  [CustomPrivateKey](#cfn-opsworkscm-server-customprivatekey): String
   [DisableAutomatedBackup](#cfn-opsworkscm-server-disableautomatedbackup): Boolean
   [Engine](#cfn-opsworkscm-server-engine): String
   [EngineAttributes](#cfn-opsworkscm-server-engineattributes): 
@@ -73,6 +79,7 @@ Properties:
 *Required*: No  
 *Type*: String  
 *Maximum*: `79`  
+*Pattern*: `[a-zA-Z][a-zA-Z0-9\-\.\:]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BackupRetentionCount`  <a name="cfn-opsworkscm-server-backupretentioncount"></a>
@@ -81,6 +88,35 @@ Properties:
 *Type*: Integer  
 *Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CustomCertificate`  <a name="cfn-opsworkscm-server-customcertificate"></a>
+Supported on servers running Chef Automate 2\.0 only\. A PEM\-formatted HTTPS certificate\. The value can be be a single, self\-signed certificate, or a certificate chain\. If you specify a custom certificate, you must also specify values for `CustomDomain` and `CustomPrivateKey`\. The following are requirements for the `CustomCertificate` value:  
++ You can provide either a self\-signed, custom certificate, or the full certificate chain\.
++ The certificate must be a valid X509 certificate, or a certificate chain in PEM format\.
++ The certificate must be valid at the time of upload\. A certificate can't be used before its validity period begins \(the certificate's `NotBefore` date\), or after it expires \(the certificate's `NotAfter` date\)\.
++ The certificate’s common name or subject alternative names \(SANs\), if present, must match the value of `CustomDomain`\.
++ The certificate must match the value of `CustomPrivateKey`\.
+*Required*: No  
+*Type*: String  
+*Maximum*: `2097152`  
+*Pattern*: `(?s)\s*-----BEGIN CERTIFICATE-----.+-----END CERTIFICATE-----\s*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`CustomDomain`  <a name="cfn-opsworkscm-server-customdomain"></a>
+Supported on servers running Chef Automate 2\.0 only\. An optional public endpoint of a server, such as `https://aws.my-company.com`\. To access the server, create a CNAME DNS record in your preferred DNS service that points the custom domain to the endpoint that is generated when the server is created \(the value of the CreateServer Endpoint attribute\)\. You cannot access the server by using the generated `Endpoint` value if the server is using a custom domain\. If you specify a custom domain, you must also specify values for `CustomCertificate` and `CustomPrivateKey`\.  
+*Required*: No  
+*Type*: String  
+*Maximum*: `253`  
+*Pattern*: `^(((?!-)[A-Za-z0-9-]{0,62}[A-Za-z0-9])\.)+((?!-)[A-Za-z0-9-]{1,62}[A-Za-z0-9])$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`CustomPrivateKey`  <a name="cfn-opsworkscm-server-customprivatekey"></a>
+Supported on servers running Chef Automate 2\.0 only\. A private key in PEM format for connecting to the server by using HTTPS\. The private key must not be encrypted; it cannot be protected by a password or passphrase\. If you specify a custom private key, you must also specify values for `CustomDomain` and `CustomCertificate`\.  
+*Required*: No  
+*Type*: String  
+*Maximum*: `4096`  
+*Pattern*: `(?ms)\s*^-----BEGIN (?-s:.*)PRIVATE KEY-----$.*?^-----END (?-s:.*)PRIVATE KEY-----$\s*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DisableAutomatedBackup`  <a name="cfn-opsworkscm-server-disableautomatedbackup"></a>
  Enable or disable scheduled backups\. Valid values are `true` or `false`\. The default value is `true`\.   
@@ -92,13 +128,15 @@ Properties:
  The configuration management engine to use\. Valid values include `ChefAutomate` and `Puppet`\.   
 *Required*: No  
 *Type*: String  
+*Maximum*: `10000`  
+*Pattern*: `(?s).*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineAttributes`  <a name="cfn-opsworkscm-server-engineattributes"></a>
 Optional engine attributes on a specified server\.   
 
 **Attributes accepted in a Chef createServer request:**
-+  `CHEF_AUTOMATE_PIVOTAL_KEY`: A base64\-encoded RSA public key\. The corresponding private key is required to access the Chef API\. When no CHEF\_AUTOMATE\_PIVOTAL\_KEY is set, a private key is generated and returned in the response\. 
++  `CHEF_AUTOMATE_PIVOTAL_KEY`: A base64\-encoded RSA public key\. The corresponding private key is required to access the Chef API\. When no CHEF\_AUTOMATE\_PIVOTAL\_KEY is set, a private key is generated and returned in the response\. When you are specifying the value of CHEF\_AUTOMATE\_PIVOTAL\_KEY as a parameter in the AWS CloudFormation console, you must add newline \(`\n`\) characters at the end of each line of the pivotal key value\. 
 +  `CHEF_AUTOMATE_ADMIN_PASSWORD`: The password for the administrative user in the Chef Automate web\-based dashboard\. The password length is a minimum of eight characters, and a maximum of 32\. The password can contain letters, numbers, and special characters \(\!/@\#$%^&\+=\_\)\. The password must contain at least one lower case letter, one upper case letter, one number, and one special character\. When no CHEF\_AUTOMATE\_ADMIN\_PASSWORD is set, one is generated and returned in the response\.
 
 **Attributes accepted in a Puppet createServer request:**
@@ -113,18 +151,23 @@ Optional engine attributes on a specified server\.
  The engine model of the server\. Valid values in this release include `Monolithic` for Puppet and `Single` for Chef\.   
 *Required*: No  
 *Type*: String  
+*Maximum*: `10000`  
+*Pattern*: `(?s).*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineVersion`  <a name="cfn-opsworkscm-server-engineversion"></a>
  The major release version of the engine that you want to use\. For a Chef server, the valid value for EngineVersion is currently `12`\. For a Puppet server, the valid value is `2017`\.   
 *Required*: No  
 *Type*: String  
+*Maximum*: `10000`  
+*Pattern*: `(?s).*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceProfileArn`  <a name="cfn-opsworkscm-server-instanceprofilearn"></a>
 The ARN of the instance profile that your Amazon EC2 instances use\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `10000`  
 *Pattern*: `arn:aws:iam::[0-9]{12}:instance-profile/.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -132,12 +175,16 @@ The ARN of the instance profile that your Amazon EC2 instances use\.
  The Amazon EC2 instance type to use\. For example, `m5.large`\.   
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `10000`  
+*Pattern*: `(?s).*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KeyPair`  <a name="cfn-opsworkscm-server-keypair"></a>
  The Amazon EC2 key pair to set for the instance\. This parameter is optional; if desired, you may specify this parameter to connect to your instances by using SSH\.   
 *Required*: No  
 *Type*: String  
+*Maximum*: `10000`  
+*Pattern*: `.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PreferredBackupWindow`  <a name="cfn-opsworkscm-server-preferredbackupwindow"></a>
@@ -178,6 +225,7 @@ The specified time is in coordinated universal time \(UTC\)\. The default value 
  The service role that the AWS OpsWorks CM service backend uses to work with your account\. Although the AWS OpsWorks management console typically creates the service role for you, if you are using the AWS CLI or API commands, run the service\-role\-creation\.yaml AWS CloudFormation template, located at https://s3\.amazonaws\.com/opsworks\-cm\-us\-east\-1\-prod\-default\-assets/misc/opsworks\-cm\-roles\.yaml\. This template creates a CloudFormation stack that includes the service role and instance profile that you need\.   
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `10000`  
 *Pattern*: `arn:aws:iam::[0-9]{12}:role/.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -236,6 +284,9 @@ The following example creates an AWS OpsWorks for Chef Automate server\.
             "Type": "AWS::OpsWorksCM::Server",
             "Properties": {
                 "BackupRetentionCount": "12",
+                "CustomCertificate": "-----BEGIN CERTIFICATE----- EXAMPLEqEXAMPLE== -----END CERTIFICATE-----",
+                "CustomDomain": "https://aws.my-company.com",
+                "CustomPrivateKey": "-----BEGIN RSA PRIVATE KEY----- EXAMPLEqEXAMPLE= -----END RSA PRIVATE KEY-----",
                 "DisableAutomatedBackup": false,
                 "Engine": "ChefAutomate",
                 "EngineVersion": "2",
@@ -290,6 +341,9 @@ Resources:
     Type: AWS::OpsWorksCM::Server
     Properties:
       BackupRetentionCount: '12'
+      CustomCertificate: '-----BEGIN CERTIFICATE----- EXAMPLEqEXAMPLE== -----END CERTIFICATE-----'
+      CustomDomain: 'https://aws.my-company.com'
+      CustomPrivateKey: '-----BEGIN RSA PRIVATE KEY----- EXAMPLEqEXAMPLE= -----END RSA PRIVATE KEY-----'
       DisableAutomatedBackup: False
       Engine: 'ChefAutomate'
       EngineVersion: '2'

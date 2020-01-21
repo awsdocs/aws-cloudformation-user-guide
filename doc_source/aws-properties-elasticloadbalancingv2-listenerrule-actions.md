@@ -57,7 +57,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Order`  <a name="cfn-elasticloadbalancingv2-listenerrule-action-order"></a>
-The order for the action\. This value is required for rules with multiple actions\. The action with the lowest value for order is performed first\. The final action to be performed must be a `forward` or a `fixed-response` action\.  
+The order for the action\. This value is required for rules with multiple actions\. The action with the lowest value for order is performed first\. The last action to be performed must be one of the following types of actions: a `forward`, `fixed-response`, or `redirect`\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -71,13 +71,13 @@ The order for the action\. This value is required for rules with multiple action
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetGroupArn`  <a name="cfn-elasticloadbalancingv2-listener-actions-targetgrouparn"></a>
-The Amazon Resource Name \(ARN\) of the target group\. Specify only when `Type` is `forward`\.  
+The Amazon Resource Name \(ARN\) of the target group\. Specify only when `Type` is `forward` and you want to route to a single target group\. To route to one or more target groups, use `ForwardConfig` instead\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-elasticloadbalancingv2-listener-actions-type"></a>
-The type of action\. Each rule must include exactly one of the following types of actions: `forward`, `fixed-response`, or `redirect`\.  
+The type of action\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `authenticate-cognito | authenticate-oidc | fixed-response | forward | redirect`  

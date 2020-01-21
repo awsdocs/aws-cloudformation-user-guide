@@ -28,6 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The `InvocationRole` parameter provides the type of `InvocationRole` used to authenticate the user account\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `20`  
+*Maximum*: `2048`  
 *Pattern*: `arn:.*role/.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -35,4 +37,5 @@ The `InvocationRole` parameter provides the type of `InvocationRole` used to aut
 The `Url` parameter provides contains the location of the service endpoint used to authenticate users\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

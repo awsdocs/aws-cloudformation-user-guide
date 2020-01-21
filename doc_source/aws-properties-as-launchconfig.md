@@ -328,14 +328,14 @@ myLaunchConfig:
     InstanceType: 
       Ref: "InstanceType"
     BlockDeviceMappings: 
-      - DeviceName: "/dev/sda1"
+      - DeviceName: /dev/sda1
         Ebs: 
-          VolumeSize: "50"
+          VolumeSize: 50
           VolumeType: "io1"
           Iops: 200
-      - DeviceName: "/dev/sdm"
+      - DeviceName: /dev/sdm
         Ebs: 
-          VolumeSize: "100"
+          VolumeSize: 100
           DeleteOnTermination: "false"
 ```
 

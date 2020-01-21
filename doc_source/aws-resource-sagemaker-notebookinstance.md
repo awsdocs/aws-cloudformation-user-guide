@@ -189,11 +189,11 @@ The name of the notebook instance, such as `MyNotebookInstance`\.
 
 ## Examples<a name="aws-resource-sagemaker-notebookinstance--examples"></a>
 
-### SageMaker Notebook Instance Example<a name="aws-resource-sagemaker-notebookinstance--examples--SageMaker_Notebook_Instance_Example"></a>
+### SageMaker Notebook Instance Examples<a name="aws-resource-sagemaker-notebookinstance--examples--SageMaker_Notebook_Instance_Examples"></a>
 
 The following example creates a notebook instance\.
 
-#### JSON<a name="aws-resource-sagemaker-notebookinstance--examples--SageMaker_Notebook_Instance_Example--json"></a>
+#### JSON<a name="aws-resource-sagemaker-notebookinstance--examples--SageMaker_Notebook_Instance_Examples--json"></a>
 
 ```
 {
@@ -253,7 +253,7 @@ The following example creates a notebook instance\.
 }
 ```
 
-#### YAML<a name="aws-resource-sagemaker-notebookinstance--examples--SageMaker_Notebook_Instance_Example--yaml"></a>
+#### YAML<a name="aws-resource-sagemaker-notebookinstance--examples--SageMaker_Notebook_Instance_Examples--yaml"></a>
 
 ```
 Description: "Basic NotebookInstance test update to a different instance type"

@@ -48,7 +48,3 @@ Designates a trusted caller, an IAM principal, by registering this caller with t
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-## Return Values<a name="aws-resource-lakeformation-resource-return-values"></a>
-
-### Ref<a name="aws-resource-lakeformation-resource-return-values-ref"></a>

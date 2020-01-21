@@ -28,3 +28,18 @@ Environment variable key\-value pairs\.
 *Required*: No  
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-lambda-function-environment--examples"></a>
+
+### Environment Variables<a name="aws-properties-lambda-function-environment--examples--Environment_Variables"></a>
+
+Add environment variables to a function\.
+
+#### YAML<a name="aws-properties-lambda-function-environment--examples--Environment_Variables--yaml"></a>
+
+```
+      Environment:
+        Variables:
+          databaseName: lambdadb
+          databaseUser: admin
+```

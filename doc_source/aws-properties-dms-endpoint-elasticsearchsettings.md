@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dms-endpoint-elasticsearchsettings-properties"></a>
 
 `EndpointUri`  <a name="cfn-dms-endpoint-elasticsearchsettings-endpointuri"></a>
-The endpoint for the ElasticSearch cluster\.  
+The endpoint for the Elasticsearch cluster\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

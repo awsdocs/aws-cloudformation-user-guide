@@ -79,25 +79,25 @@ Information about the policies assigned to a parameter\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-ssm-parameter-tags"></a>
-An array of key\-value pairs to apply to this resource\.  
-For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
+Optional metadata that you assign to a resource in the form of an arbitrary set of tags \(key\-value pairs\)\. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment\. For example, you might want to tag a Systems Manager parameter to identify the type of resource to which it applies, the environment, or the type of configuration data referenced by the parameter\.  
 *Required*: No  
 *Type*: Json  
+*Maximum*: `1000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tier`  <a name="cfn-ssm-parameter-tier"></a>
 The parameter tier\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Advanced | Standard`  
+*Allowed Values*: `Advanced | Intelligent-Tiering | Standard`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-ssm-parameter-type"></a>
-The type of parameter\. Valid values include the following: `String` or `StringList`\.  
-AWS CloudFormation doesn't support the `SecureString` parameter type\.
+The type of parameter\.  
+AWS CloudFormation doesn't support creating a `SecureString` parameter type\.
+*Allowed Values*: String \| StringList  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `SecureString | String | StringList`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-ssm-parameter-value"></a>
@@ -132,83 +132,133 @@ Returns the value of the parameter\.
 
 ### AWS Systems Manager Parameter String Example<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_String_Example"></a>
 
-The following example snippet creates a Systems Manager parameter with a `String` type and adds the tag key\-value pair `"Environment":"Dev"`\.
+The following example creates a Systems Manager parameter named command with a `String` type and adds the tag key\-value pair `"Environment":"Dev"`\.
 
 #### JSON<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_String_Example--json"></a>
 
 ```
 {
-   "Description": "Create SSM Parameter",
-   "Resources": {
-      "BasicParameter": {
-         "Type": "AWS::SSM::Parameter",
-         "Properties": {
-            "Name": "command",
-            "Type": "String",
-            "Value": "date",
-            "Description": "SSM Parameter for running date command.",
-            "AllowedPattern" : "^[a-zA-Z]{1,10}$",
-            "Tags": {
-               "Environment": "DEV"
+    "Resources": {
+        "BasicParameter": {
+            "Type": "AWS::SSM::Parameter",
+            "Properties": {
+                "Name": "command",
+                "Type": "String",
+                "Value": "date",
+                "Description": "SSM Parameter for running date command.",
+                "AllowedPattern": "^[a-zA-Z]{1,10}$",
+                "Tags": {
+                    "Environment": "DEV"
+                }
             }
-         }
-      }
-   }
+        }
+    }
 }
 ```
 
 #### YAML<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_String_Example--yaml"></a>
 
 ```
-Description: "Create SSM Parameter"
+---
 Resources:
   BasicParameter:
-    Type: "AWS::SSM::Parameter"
+    Type: AWS::SSM::Parameter
     Properties:
-      Name: "command"
-      Type: "String"
-      Value: "date"
-      Description: "SSM Parameter for running date command."
+      Name: command
+      Type: String
+      Value: date
+      Description: SSM Parameter for running date command.
       AllowedPattern: "^[a-zA-Z]{1,10}$"
       Tags:
-        "Environment": "DEV"
+        Environment: DEV
 ```
 
 ### AWS Systems Manager Parameter StringList Example<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_StringList_Example"></a>
 
-The following example creates a Systems Manager parameter with a `StringList` type\.
+The following example creates a Systems Manager parameter named commands with a `StringList` type\.
 
 #### JSON<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_StringList_Example--json"></a>
 
 ```
 {
-   "Description": "Create SSM Parameter",
-   "Resources": {
-      "BasicParameter": {
-         "Type": "AWS::SSM::Parameter",
-         "Properties": {
-            "Name": "commands",
-            "Type": "StringList",
-            "Value": "date,ls",
-            "Description": "SSM Parameter of type StringList.",
-            "AllowedPattern" : "^[a-zA-Z]{1,10}$"
-         }
-      }
-   }
+    "Resources": {
+        "BasicParameter": {
+            "Type": "AWS::SSM::Parameter",
+            "Properties": {
+                "Name": "commands",
+                "Type": "StringList",
+                "Value": "date,ls",
+                "Description": "SSM Parameter of type StringList.",
+                "AllowedPattern": "^[a-zA-Z]{1,10}$"
+            }
+        }
+    }
 }
 ```
 
 #### YAML<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_StringList_Example--yaml"></a>
 
 ```
-Description: "Create SSM Parameter"
+---
 Resources:
   BasicParameter:
-    Type: "AWS::SSM::Parameter"
+    Type: AWS::SSM::Parameter
     Properties:
-      Name: "commands"
-      Type: "StringList"
-      Value: "date,ls"
-      Description: "SSM Parameter of type StringList."
+      Name: commands
+      Type: StringList
+      Value: date,ls
+      Description: SSM Parameter of type StringList.
       AllowedPattern: "^[a-zA-Z]{1,10}$"
 ```
+
+### AWS Systems Manager Parameter Advanced Tier and Policies Example<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_Advanced_Tier_and_Policies_Example"></a>
+
+The following example creates a Systems Manager advanced tier parameter named command with a `String` type and a parameter policy\.
+
+#### JSON<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_Advanced_Tier_and_Policies_Example--json"></a>
+
+```
+{
+    "Resources": {
+        "BasicParameter": {
+            "Type": "AWS::SSM::Parameter",
+            "Properties": {
+                "Name": "command",
+                "Type": "String",
+                "Value": "date",
+                "Tier": "Advanced",
+                "Policies": "[{\"Type\":\"Expiration\",\"Version\":\"1.0\",\"Attributes\":{\"Timestamp\":\"2020-05-13T00:00:00.000Z\"}},{\"Type\":\"ExpirationNotification\",\"Version\":\"1.0\",\"Attributes\":{\"Before\":\"5\",\"Unit\":\"Days\"}},{\"Type\":\"NoChangeNotification\",\"Version\":\"1.0\",\"Attributes\":{\"After\":\"60\",\"Unit\":\"Days\"}}]",
+                "Description": "SSM Parameter for running date command.",
+                "AllowedPattern": "^[a-zA-Z]{1,10}$",
+                "Tags": {
+                    "Environment": "DEV"
+                }
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_Advanced_Tier_and_Policies_Example--yaml"></a>
+
+```
+---
+Resources:
+  BasicParameter:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: command
+      Type: String
+      Value: date
+      Tier: Advanced
+      Policies: '[{"Type":"Expiration","Version":"1.0","Attributes":{"Timestamp":"2020-05-13T00:00:00.000Z"}},{"Type":"ExpirationNotification","Version":"1.0","Attributes":{"Before":"5","Unit":"Days"}},{"Type":"NoChangeNotification","Version":"1.0","Attributes":{"After":"60","Unit":"Days"}}]'
+      Description: SSM Parameter for running date command.
+      AllowedPattern: "^[a-zA-Z]{1,10}$"
+      Tags:
+        Environment: DEV
+```
+
+## See Also<a name="aws-resource-ssm-parameter--seealso"></a>
++  [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) 
++  [About Advanced Parameters](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html)
++  [Working with Parameter Policies](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-policies.html) 

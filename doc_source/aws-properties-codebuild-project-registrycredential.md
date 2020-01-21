@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Credential`  <a name="cfn-codebuild-project-registrycredential-credential"></a>
  The Amazon Resource Name \(ARN\) or name of credentials created using AWS Secrets Manager\.   
- The `credential` can use the name of the credentials only if they exist in your current region\. 
+ The `credential` can use the name of the credentials only if they exist in your current AWS Region\. 
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

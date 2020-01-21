@@ -1,6 +1,6 @@
 # AWS::EventSchemas::Registry<a name="aws-resource-eventschemas-registry"></a>
 
-Use the `AWS::EventSchemas::Registry` to create a schema registry\. Schema registries are containers for Schemas\. Registries collect and organize schemas so that your schemas are in logical groups\.
+Use the `AWS::EventSchemas::Registry` to specify a schema registry\. Schema registries are containers for Schemas\. Registries collect and organize schemas so that your schemas are in logical groups\.
 
 ## Syntax<a name="aws-resource-eventschemas-registry-syntax"></a>
 

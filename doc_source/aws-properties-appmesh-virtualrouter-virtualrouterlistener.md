@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualRouter VirtualRouterListener<a name="aws-properties-appmesh-virtualrouter-virtualrouterlistener"></a>
 
-An object representing a virtual router listener\.
+An object that represents a virtual router listener\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualrouter-virtualrouterlistener-syntax"></a>
 

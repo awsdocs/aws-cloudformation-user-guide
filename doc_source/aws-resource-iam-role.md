@@ -47,7 +47,7 @@ Properties:
 ## Properties<a name="aws-resource-iam-role-properties"></a>
 
 `AssumeRolePolicyDocument`  <a name="cfn-iam-role-assumerolepolicydocument"></a>
-The trust policy that is associated with this role\. Trust policies define which entities can assume the role\. You can associate only one trust policy with a role\. For an example of a policy that can be used to assume a role, see [Template Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-templateexamples)\. For more information about the elements that you can use in an IAM policy, see [IAM Policy Elements Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html) in the *IAM User Guide*\.  
+The trust policy that is associated with this role\. Trust policies define which entities can assume the role\. You can associate only one trust policy with a role\. For an example of a policy that can be used to assume a role, see [Template Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#aws-resource-iam-role--examples)\. For more information about the elements that you can use in an IAM policy, see [IAM Policy Elements Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html) in the *IAM User Guide*\.  
 *Required*: Yes  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -174,7 +174,7 @@ This example shows an embedded policy in the `AWS::IAM::Role`\. The policy is sp
                             "Effect": "Allow",
                             "Principal": {
                                 "Service": [
-                                    "ec2.&api-domain;"
+                                    "ec2.amazonaws.com"
                                 ]
                             },
                             "Action": [
@@ -230,7 +230,7 @@ Resources:
           - Effect: Allow
             Principal:
               Service:
-                - ec2.&api-domain;
+              - ec2.amazonaws.com
             Action:
               - 'sts:AssumeRole'
       Path: /

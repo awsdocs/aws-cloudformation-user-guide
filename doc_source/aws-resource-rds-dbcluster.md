@@ -27,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DBSubnetGroupName](#cfn-rds-dbcluster-dbsubnetgroupname)" : String,
       "[DeletionProtection](#cfn-rds-dbcluster-deletionprotection)" : Boolean,
       "[EnableCloudwatchLogsExports](#cfn-rds-dbcluster-enablecloudwatchlogsexports)" : [ String, ... ],
+      "[EnableHttpEndpoint](#cfn-rds-dbcluster-enablehttpendpoint)" : Boolean,
       "[EnableIAMDatabaseAuthentication](#cfn-rds-dbcluster-enableiamdatabaseauthentication)" : Boolean,
       "[Engine](#cfn-rds-dbcluster-engine)" : String,
       "[EngineMode](#cfn-rds-dbcluster-enginemode)" : String,
@@ -69,6 +70,7 @@ Properties:
   [DeletionProtection](#cfn-rds-dbcluster-deletionprotection): Boolean
   [EnableCloudwatchLogsExports](#cfn-rds-dbcluster-enablecloudwatchlogsexports): 
     - String
+  [EnableHttpEndpoint](#cfn-rds-dbcluster-enablehttpendpoint): Boolean
   [EnableIAMDatabaseAuthentication](#cfn-rds-dbcluster-enableiamdatabaseauthentication): Boolean
   [Engine](#cfn-rds-dbcluster-engine): String
   [EngineMode](#cfn-rds-dbcluster-enginemode): String
@@ -169,6 +171,14 @@ The list of log types that need to be enabled for exporting to CloudWatch Logs\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`EnableHttpEndpoint`  <a name="cfn-rds-dbcluster-enablehttpendpoint"></a>
+A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless DB cluster\. By default, the HTTP endpoint is disabled\.  
+When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora Serverless DB cluster\. You can also query your database from inside the RDS console with the query editor\.  
+For more information, see [Using the Data API for Aurora Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the *Amazon Aurora User Guide*\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `EnableIAMDatabaseAuthentication`  <a name="cfn-rds-dbcluster-enableiamdatabaseauthentication"></a>
 A value that indicates whether to enable mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts\. By default, mapping is disabled\.  
 For more information, see [ IAM Database Authentication](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html) in the *Amazon Aurora User Guide\.*   
@@ -185,6 +195,11 @@ Valid Values: `aurora` \(for MySQL 5\.6\-compatible Aurora\), `aurora-mysql` \(f
 
 `EngineMode`  <a name="cfn-rds-dbcluster-enginemode"></a>
 The DB engine mode of the DB cluster, either `provisioned`, `serverless`, `parallelquery`, `global`, or `multimaster`\.  
+Limitations and requirements apply to some DB engine modes\. For more information, see the following sections in the *Amazon Aurora User Guide*:  
++  [ Limitations of Aurora Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations) 
++  [ Limitations of Parallel Query](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations) 
++  [ Requirements for Aurora Global Databases](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations) 
++  [ Limitations of Multi\-Master Clusters](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html#aurora-multi-master-limitations) 
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -312,7 +327,6 @@ Tags to assign to the DB cluster\.
 
 `UseLatestRestorableTime`  <a name="cfn-rds-dbcluster-uselatestrestorabletime"></a>
 A value that indicates whether to restore the DB cluster to the latest restorable backup time\. By default, the DB cluster is not restored to the latest restorable backup time\.   
-Constraints: Can't be specified if `RestoreToTime` parameter is provided\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -353,6 +367,9 @@ The reader endpoint for the DB cluster\. For example: `mystack-mydbcluster-ro-1a
 ### <a name="aws-resource-rds-dbcluster--examples--"></a>
 
 The following example creates an Amazon Aurora DB cluster and adds two DB instances to it\. Because Amazon RDS automatically assigns a writer and reader DB instances in the cluster, use the cluster endpoint to read and write data, not the individual DB instance endpoints\. 
+
+**Note**  
+The example uses the `time_zone` Aurora MySQL parameter\. For Aurora PostgreSQL, use the `timezone` parameter instead\.
 
 #### JSON<a name="aws-resource-rds-dbcluster--examples----json"></a>
 

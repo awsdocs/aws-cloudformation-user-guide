@@ -44,13 +44,13 @@ Properties:
 ## Properties<a name="aws-resource-batch-jobdefinition-properties"></a>
 
 `ContainerProperties`  <a name="cfn-batch-jobdefinition-containerproperties"></a>
-An object with various properties specific to container\-based jobs\.   
+An object with various properties specific to container\-based jobs\.  
 *Required*: No  
 *Type*: [ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JobDefinitionName`  <a name="cfn-batch-jobdefinition-jobdefinitionname"></a>
-The name of the job definition\.   
+The name of the job definition\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -83,6 +83,7 @@ The timeout configuration for jobs that are submitted with this job definition\.
 The type of job definition\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed Values*: `container | multinode`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-batch-jobdefinition-return-values"></a>

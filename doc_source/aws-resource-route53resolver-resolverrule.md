@@ -1,6 +1,6 @@
 # AWS::Route53Resolver::ResolverRule<a name="aws-resource-route53resolver-resolverrule"></a>
 
-For DNS queries that originate in your VPCs, specifies which resolver endpoint the queries pass through, one domain name that you want to forward to your network, and the IP addresses of the DNS resolvers in your network\.
+For DNS queries that originate in your VPCs, specifies which Resolver endpoint the queries pass through, one domain name that you want to forward to your network, and the IP addresses of the DNS resolvers in your network\.
 
 ## Syntax<a name="aws-resource-route53resolver-resolverrule-syntax"></a>
 
@@ -40,7 +40,7 @@ Properties:
 ## Properties<a name="aws-resource-route53resolver-resolverrule-properties"></a>
 
 `DomainName`  <a name="cfn-route53resolver-resolverrule-domainname"></a>
-DNS queries for this domain name are forwarded to the IP addresses that are specified in `TargetIps`\. If a query matches multiple resolver rules \(example\.com and www\.example\.com\), the query is routed using the resolver rule that contains the most specific domain name \(www\.example\.com\)\.  
+DNS queries for this domain name are forwarded to the IP addresses that are specified in `TargetIps`\. If a query matches multiple Resolver rules \(example\.com and www\.example\.com\), the query is routed using the Resolver rule that contains the most specific domain name \(www\.example\.com\)\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -48,7 +48,7 @@ DNS queries for this domain name are forwarded to the IP addresses that are spec
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-route53resolver-resolverrule-name"></a>
-The name for the resolver rule, which you specified when you created the resolver rule\.  
+The name for the Resolver rule, which you specified when you created the Resolver rule\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `64`  

@@ -84,7 +84,7 @@ Grant layer use permission to accounts in organization `o-t194hfs8cz`\.
     "Type": "AWS::Lambda::LayerVersionPermission",
     "Properties": {
         "Action": "lambda:GetLayerVersion",
-        "LayerVersionArn": "arn:aws:lambda:us-west-2:011685312445:layer:my-layer:1",
+        "LayerVersionArn": "arn:aws:lambda:us-west-2:123456789012:layer:my-layer:1",
         "OrganizationId": "o-t194hfs8cz",
         "Principal": "*"
     }
@@ -95,10 +95,10 @@ Grant layer use permission to accounts in organization `o-t194hfs8cz`\.
 
 ```
 MyLayerPermission:
-  Type: "AWS::Lambda::LayerVersionPermission"
+  Type: AWS::Lambda::LayerVersionPermission
   Properties:
     Action: lambda:GetLayerVersion
-    LayerVersionArn: arn:aws:lambda:us-west-2:011685312445:layer:my-layer:1
+    LayerVersionArn: arn:aws:lambda:us-west-2:123456789012:layer:my-layer:1
     OrganizationId: o-t194hfs8cz
     Principal: *
 ```

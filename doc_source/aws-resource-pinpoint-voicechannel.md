@@ -1,6 +1,8 @@
 # AWS::Pinpoint::VoiceChannel<a name="aws-resource-pinpoint-voicechannel"></a>
 
-Updates the status and settings of the voice channel for an application\.
+A *channel* is a type of platform that you can deliver messages to\. To send a voice message, you send the message through the voice channel\. Before you can use Amazon Pinpoint to send voice messages, you have to enable the voice channel for an Amazon Pinpoint application\.
+
+The VoiceChannel resource represents the status and other information about the voice channel for an application\. 
 
 ## Syntax<a name="aws-resource-pinpoint-voicechannel-syntax"></a>
 
@@ -30,7 +32,7 @@ Properties:
 ## Properties<a name="aws-resource-pinpoint-voicechannel-properties"></a>
 
 `ApplicationId`  <a name="cfn-pinpoint-voicechannel-applicationid"></a>
-The unique ID of the Amazon Pinpoint app that you're setting up the voice channel for\.  
+The unique identifier for the Amazon Pinpoint application that the voice channel applies to\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -45,6 +47,6 @@ Specifies whether to enable the voice channel for the application\.
 
 ### Ref<a name="aws-resource-pinpoint-voicechannel-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the Amazon Pinpoint app that the channel is associated with\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the unique identifier \(`ApplicationId`\) for the Amazon Pinpoint application that the channel is associated with\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

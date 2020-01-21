@@ -1,6 +1,6 @@
 # AWS::CloudFront::Distribution<a name="aws-resource-cloudfront-distribution"></a>
 
-The distribution's information\.
+A distribution tells CloudFront where you want content to be delivered from, and the details about how to track and manage content delivery\.
 
 ## Syntax<a name="aws-resource-cloudfront-distribution-syntax"></a>
 

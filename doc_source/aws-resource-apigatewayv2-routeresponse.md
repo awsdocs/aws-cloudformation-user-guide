@@ -44,7 +44,7 @@ The API identifier\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ModelSelectionExpression`  <a name="cfn-apigatewayv2-routeresponse-modelselectionexpression"></a>
-The model selection expression for the route response\.  
+The model selection expression for the route response\. Supported only for WebSocket APIs\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,8 +1,8 @@
 # AWS::Pinpoint::App<a name="aws-resource-pinpoint-app"></a>
 
-Specifies an app\. In Amazon Pinpoint, an *app* \(also referred to as a *project*\) is a collection of settings, customer information, segments, and campaigns\.
+An *app* is an Amazon Pinpoint application, also referred to as a *project*\. An application is a collection of related settings, customer information, segments, campaigns, and other types of Amazon Pinpoint resources\.
 
-You can use the App resource to retrieve information about or delete an existing application\. To create a new application, use the Apps resource and send a POST request to the `/apps` URI\.
+The App resource represents an Amazon Pinpoint application\.
 
 ## Syntax<a name="aws-resource-pinpoint-app-syntax"></a>
 
@@ -47,7 +47,7 @@ A string\-to\-string map of key\-value pairs that defines the tags to associate 
 
 ### Ref<a name="aws-resource-pinpoint-app-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the unique ID of the Amazon Pinpoint app\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the unique identifier \(`ApplicationId`\) for the Amazon Pinpoint application\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -60,4 +60,4 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-pinpoint-app-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the app\.
+The Amazon Resource Name \(ARN\) of the application\.

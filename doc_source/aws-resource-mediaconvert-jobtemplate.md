@@ -74,25 +74,42 @@ The name of the job template you are creating\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Priority`  <a name="cfn-mediaconvert-jobtemplate-priority"></a>
-Specify the relative priority for this job\. In any given queue, the service begins processing the job with the highest value first\. When more than one job has the same priority, the service begins processing the job that you submitted first\. If you don't specify a priority, the service uses the default value 0\.  
+Specify the relative priority for this job\. In any given queue, the service begins processing the job with the highest value first\. When more than one job has the same priority, the service begins processing the job that you submitted first\. If you don't specify a priority, the service uses the default value 0\. Minimum: \-50 Maximum: 50  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Queue`  <a name="cfn-mediaconvert-jobtemplate-queue"></a>
-Optional\. The queue that jobs created from this template are assigned to\. If you don't specify this, jobs will go to the default queue\.  
+Optional\. The queue that jobs created from this template are assigned to\. Specify the Amazon Resource Name \(ARN\) of the queue\. For example, arn:aws:mediaconvert:us\-west\-2:505474453218:queues/Default\. If you don't specify this, jobs will go to the default queue\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SettingsJson`  <a name="cfn-mediaconvert-jobtemplate-settingsjson"></a>
-Specify the name and location of the JSON file that specifies the transcoding settings for this job template\. You can use the AWS Elemental MediaConvert console at https://console\.aws\.amazon\.com/mediaconvert to set up a job template visually\. For more information about job templates, see [Working with AWS Elemental MediaConvert Job Templates](https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-job-templates.html) in the *AWS Elemental MediaConvert User Guide*\.  
+Specify, in JSON format, the transcoding job settings for this job template\. This specification must conform to the AWS Elemental MediaConvert job validation\. For information about forming this specification, see the Remarks section later in this topic\.   
+For more information about MediaConvert job templates, see [Working with AWS Elemental MediaConvert Job Templates](https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-job-templates.html) in the *AWS Elemental MediaConvert User Guide*\.  
 *Required*: Yes  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StatusUpdateInterval`  <a name="cfn-mediaconvert-jobtemplate-statusupdateinterval"></a>
 Specify how often MediaConvert sends STATUS\_UPDATE events to Amazon CloudWatch Events\. Set the interval, in seconds, between status updates\. MediaConvert sends an update at this interval from the time the service begins processing your job to the time it completes the transcode or encounters an error\.  
+Specify one of the following enums:  
+SECONDS\_10  
+SECONDS\_12  
+SECONDS\_15  
+SECONDS\_20  
+SECONDS\_30  
+SECONDS\_60  
+SECONDS\_120  
+SECONDS\_180  
+SECONDS\_240  
+SECONDS\_300  
+SECONDS\_360  
+SECONDS\_420  
+SECONDS\_480  
+SECONDS\_540  
+SECONDS\_600  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

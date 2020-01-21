@@ -14,6 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[EndpointConfigName](#cfn-sagemaker-endpoint-endpointconfigname)" : String,
       "[EndpointName](#cfn-sagemaker-endpoint-endpointname)" : String,
+      "[ExcludeRetainedVariantProperties](#cfn-sagemaker-endpoint-excluderetainedvariantproperties)" : [ [VariantProperty](aws-properties-sagemaker-endpoint-variantproperty.md), ... ],
+      "[RetainAllVariantProperties](#cfn-sagemaker-endpoint-retainallvariantproperties)" : Boolean,
       "[Tags](#cfn-sagemaker-endpoint-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -26,6 +28,9 @@ Type: AWS::SageMaker::Endpoint
 Properties: 
   [EndpointConfigName](#cfn-sagemaker-endpoint-endpointconfigname): String
   [EndpointName](#cfn-sagemaker-endpoint-endpointname): String
+  [ExcludeRetainedVariantProperties](#cfn-sagemaker-endpoint-excluderetainedvariantproperties): 
+    - [VariantProperty](aws-properties-sagemaker-endpoint-variantproperty.md)
+  [RetainAllVariantProperties](#cfn-sagemaker-endpoint-retainallvariantproperties): Boolean
   [Tags](#cfn-sagemaker-endpoint-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -47,6 +52,18 @@ The name of the endpoint\. The name must be unique within an AWS Region in your 
 *Maximum*: `63`  
 *Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ExcludeRetainedVariantProperties`  <a name="cfn-sagemaker-endpoint-excluderetainedvariantproperties"></a>
+Not supported\.  
+*Required*: No  
+*Type*: List of [VariantProperty](aws-properties-sagemaker-endpoint-variantproperty.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RetainAllVariantProperties`  <a name="cfn-sagemaker-endpoint-retainallvariantproperties"></a>
+Not supported\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-sagemaker-endpoint-tags"></a>
 A list of key\-value pairs to apply to this resource\.  
@@ -70,8 +87,6 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
-
 #### <a name="aws-resource-sagemaker-endpoint-return-values-fn--getatt-fn--getatt"></a>
 
 `EndpointName`  <a name="EndpointName-fn::getatt"></a>
@@ -79,11 +94,11 @@ The name of the endpoint, such as `MyEndpoint`\.
 
 ## Examples<a name="aws-resource-sagemaker-endpoint--examples"></a>
 
-### SageMaker Endpoint Example<a name="aws-resource-sagemaker-endpoint--examples--SageMaker_Endpoint_Example"></a>
+### SageMaker Endpoint Examples<a name="aws-resource-sagemaker-endpoint--examples--SageMaker_Endpoint_Examples"></a>
 
 The following example creates an endpoint configuration from a trained model, and then creates an endpoint\.
 
-#### JSON<a name="aws-resource-sagemaker-endpoint--examples--SageMaker_Endpoint_Example--json"></a>
+#### JSON<a name="aws-resource-sagemaker-endpoint--examples--SageMaker_Endpoint_Examples--json"></a>
 
 ```
 {
@@ -197,7 +212,7 @@ The following example creates an endpoint configuration from a trained model, an
 }
 ```
 
-#### YAML<a name="aws-resource-sagemaker-endpoint--examples--SageMaker_Endpoint_Example--yaml"></a>
+#### YAML<a name="aws-resource-sagemaker-endpoint--examples--SageMaker_Endpoint_Examples--yaml"></a>
 
 ```
 Description: "Basic Hosting entities test.  We need models to create endpoint configs."

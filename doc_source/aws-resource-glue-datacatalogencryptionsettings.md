@@ -41,3 +41,7 @@ Contains configuration information for maintaining Data Catalog security\.
 *Required*: Yes  
 *Type*: [DataCatalogEncryptionSettings](aws-properties-glue-datacatalogencryptionsettings-datacatalogencryptionsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Return Values<a name="aws-resource-glue-datacatalogencryptionsettings-return-values"></a>
+
+### Ref<a name="aws-resource-glue-datacatalogencryptionsettings-return-values-ref"></a>

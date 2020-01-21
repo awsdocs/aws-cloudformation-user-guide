@@ -47,14 +47,18 @@ A list of up to two IP addresses of DNS servers or domain controllers in the sel
 The fully qualified domain name of the self\-managed AD directory, such as `corp.example.com`\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `^.{1,255}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FileSystemAdministratorsGroup`  <a name="cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-filesystemadministratorsgroup"></a>
-\(Optional\) The name of the domain group whose members are granted administrative privileges for the file system\. Administrative privileges include taking ownership of files and folders, and setting audit controls \(audit ACLs\) on files and folders\. The group that you specify must already exist in your domain\. If you don't provide one, your AD domain's Domain Admins group is used\.  
+\(Optional\) The name of the domain group whose members are granted administrative privileges for the file system\. Administrative privileges include taking ownership of files and folders, setting audit controls \(audit ACLs\) on files and folders, and administering the file system remotely by using the FSx Remote PowerShell\. The group that you specify must already exist in your domain\. If you don't provide one, your AD domain's Domain Admins group is used\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `256`  
+*Pattern*: `^.{1,256}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OrganizationalUnitDistinguishedName`  <a name="cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-organizationalunitdistinguishedname"></a>
@@ -64,6 +68,7 @@ Only Organizational Unit \(OU\) objects can be the direct parent of the file sys
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2000`  
+*Pattern*: `^.{1,2000}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Password`  <a name="cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-password"></a>
@@ -74,6 +79,7 @@ Alternatively, you can use the `NoEcho` property to obfuscate the password param
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `256`  
+*Pattern*: `^.{1,256}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserName`  <a name="cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-username"></a>
@@ -82,4 +88,5 @@ The user name for the service account on your self\-managed AD domain that Amazo
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `256`  
+*Pattern*: `^.{1,256}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

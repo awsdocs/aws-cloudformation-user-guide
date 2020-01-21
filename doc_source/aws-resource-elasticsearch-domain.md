@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AccessPolicies](#cfn-elasticsearch-domain-accesspolicies)" : Json,
       "[AdvancedOptions](#cfn-elasticsearch-domain-advancedoptions)" : {Key : Value, ...},
+      "[CognitoOptions](#cfn-elasticsearch-domain-cognitooptions)" : [CognitoOptions](aws-properties-elasticsearch-domain-cognitooptions.md),
       "[DomainName](#cfn-elasticsearch-domain-domainname)" : String,
       "[EBSOptions](#cfn-elasticsearch-domain-ebsoptions)" : [EBSOptions](aws-properties-elasticsearch-domain-ebsoptions.md),
       "[ElasticsearchClusterConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig)" : [ElasticsearchClusterConfig](aws-properties-elasticsearch-domain-elasticsearchclusterconfig.md),
@@ -36,6 +37,8 @@ Properties:
   [AccessPolicies](#cfn-elasticsearch-domain-accesspolicies): Json
   [AdvancedOptions](#cfn-elasticsearch-domain-advancedoptions): 
     Key : Value
+  [CognitoOptions](#cfn-elasticsearch-domain-cognitooptions): 
+    [CognitoOptions](aws-properties-elasticsearch-domain-cognitooptions.md)
   [DomainName](#cfn-elasticsearch-domain-domainname): String
   [EBSOptions](#cfn-elasticsearch-domain-ebsoptions): 
     [EBSOptions](aws-properties-elasticsearch-domain-ebsoptions.md)
@@ -70,6 +73,12 @@ Additional options to specify for the Amazon ES domain\. For more information, s
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`CognitoOptions`  <a name="cfn-elasticsearch-domain-cognitooptions"></a>
+Configures Amazon ES to use Amazon Cognito authentication for Kibana\.  
+*Required*: No  
+*Type*: [CognitoOptions](aws-properties-elasticsearch-domain-cognitooptions.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `DomainName`  <a name="cfn-elasticsearch-domain-domainname"></a>
 A name for the Amazon ES domain\. For valid values, see the [DomainName](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-configuration-api.html#es-configuration-api-datatypes-domainname) data type in the *Amazon Elasticsearch Service Developer Guide*\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the domain name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
@@ -91,9 +100,10 @@ ElasticsearchClusterConfig is a property of the AWS::Elasticsearch::Domain resou
 
 `ElasticsearchVersion`  <a name="cfn-elasticsearch-domain-elasticsearchversion"></a>
 The version of Elasticsearch to use, such as 2\.3\. If not specified, 1\.5 is used as the default\. For information about the versions that Amazon ES supports, see the Elasticsearch\-Version parameter for the [CreateElasticsearchDomain](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-configuration-api.html#es-configuration-api-actions-createelasticsearchdomain) action in the *Amazon Elasticsearch Service Developer Guide*\.  
+If you set the [UpgradeElasticsearchVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html#cfn-attributes-updatepolicy-upgradeelasticsearchversion) update policy to `true`, you can update `ElasticsearchVersion` without interruption\. When `UpgradeElasticsearchVersion` is set to `false`, or is not specified, updating `ElasticsearchVersion` results in [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `EncryptionAtRestOptions`  <a name="cfn-elasticsearch-domain-encryptionatrestoptions"></a>
 Whether the domain should encrypt data at rest, and if so, the AWS Key Management Service \(KMS\) key to use\. Can only be used to create a new domain, not update an existing one\.  

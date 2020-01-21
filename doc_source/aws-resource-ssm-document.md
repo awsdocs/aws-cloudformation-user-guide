@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Content](#cfn-ssm-document-content)" : Json,
       "[DocumentType](#cfn-ssm-document-documenttype)" : String,
+      "[Name](#cfn-ssm-document-name)" : String,
       "[Tags](#cfn-ssm-document-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -26,6 +27,7 @@ Type: AWS::SSM::Document
 Properties: 
   [Content](#cfn-ssm-document-content): Json
   [DocumentType](#cfn-ssm-document-documenttype): String
+  [Name](#cfn-ssm-document-name): String
   [Tags](#cfn-ssm-document-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -40,10 +42,21 @@ A valid JSON or YAML string\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DocumentType`  <a name="cfn-ssm-document-documenttype"></a>
-The type of document to create\. Valid document types include: `Command`, `Policy`, `Automation`, `Session`, and `Package`\.  
+The type of document to create\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Automation | Command | Package | Policy | Session`  
+*Allowed Values*: `ApplicationConfiguration | ApplicationConfigurationSchema | Automation | ChangeCalendar | Command | DeploymentStrategy | Package | Policy | Session`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Name`  <a name="cfn-ssm-document-name"></a>
+A name for the Systems Manager document\.  
+Do not use the following to begin the names of documents you create\. They are reserved by AWS for use as document prefixes:  
++  `aws` 
++  `amazon` 
++  `amzn` 
+*Required*: No  
+*Type*: String  
+*Pattern*: `^[a-zA-Z0-9_\-.]{3,128}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ssm-document-tags"></a>

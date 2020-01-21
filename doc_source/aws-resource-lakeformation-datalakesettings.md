@@ -33,7 +33,3 @@ A list of AWS Lake Formation principals\.
 *Required*: No  
 *Type*: [Admins](aws-properties-lakeformation-datalakesettings-admins.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-## Return Values<a name="aws-resource-lakeformation-datalakesettings-return-values"></a>
-
-### Ref<a name="aws-resource-lakeformation-datalakesettings-return-values-ref"></a>

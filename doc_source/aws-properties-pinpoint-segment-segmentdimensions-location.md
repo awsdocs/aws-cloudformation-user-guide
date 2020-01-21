@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Segment Location<a name="aws-properties-pinpoint-segment-segmentdimensions-location"></a>
 
-The location\-based criteria, such as region or GPS coordinates, for the segment\.
+Specifies location\-based criteria, such as region or GPS coordinates, for the segment\.
 
 ## Syntax<a name="aws-properties-pinpoint-segment-segmentdimensions-location-syntax"></a>
 

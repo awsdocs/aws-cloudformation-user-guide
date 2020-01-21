@@ -42,7 +42,8 @@ Properties:
 ## Properties<a name="aws-resource-transfer-user-properties"></a>
 
 `HomeDirectory`  <a name="cfn-transfer-user-homedirectory"></a>
-The landing directory \(folder\) for a user when they log in to the server using their SFTP client\. An example is `/home/username `\.  
+The landing directory \(folder\) for a user when they log in to the server using their SFTP client\.   
+An example is <`your-Amazon-S3-bucket-name>/home/username`\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `1024`  
@@ -56,12 +57,15 @@ For an example of a scope\-down policy, see [Creating a Scope\-Down Policy](http
 For more information, see [AssumeRole](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html) in the *AWS Security Token Service API Reference*\.
 *Required*: No  
 *Type*: String  
+*Maximum*: `2048`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Role`  <a name="cfn-transfer-user-role"></a>
 The IAM role that controls your user's access to your Amazon S3 bucket\. The policies attached to this role will determine the level of access you want to provide your users when transferring files into and out of your Amazon S3 bucket or buckets\. The IAM role should also contain a trust relationship that allows the SFTP server to access your resources when servicing your SFTP user's transfer requests\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `20`  
+*Maximum*: `2048`  
 *Pattern*: `arn:.*role/.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -69,6 +73,8 @@ The IAM role that controls your user's access to your Amazon S3 bucket\. The pol
 A system\-assigned unique identifier for an SFTP server instance\. This is the specific SFTP server that you added your user to\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `19`  
+*Maximum*: `19`  
 *Pattern*: `^s-([0-9a-f]{17})$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -90,6 +96,8 @@ Key\-value pairs that can be used to group and search for users\. Tags are metad
 A unique string that identifies a user and is associated with a server as specified by the `ServerId`\. This user name must be a minimum of 3 and a maximum of 32 characters long\. The following are valid characters: a\-z, A\-Z, 0\-9, underscore, and hyphen\. The user name can't start with a hyphen\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `3`  
+*Maximum*: `32`  
 *Pattern*: `^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,31}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

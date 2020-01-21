@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPool Policies<a name="aws-properties-cognito-userpool-policies"></a>
 
-`Policies` is a property of the [AWS::Cognito::UserPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html) resource that defines the password policies of an Amazon Cognito User Pool\.
+The policy associated with a user pool\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-policies-syntax"></a>
 

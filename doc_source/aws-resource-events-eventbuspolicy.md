@@ -1,6 +1,6 @@
 # AWS::Events::EventBusPolicy<a name="aws-resource-events-eventbuspolicy"></a>
 
-The `AWS::Events::EventBusPolicy` resource creates an event bus policy for Amazon CloudWatch Events\. An event bus policy enables your account to receive events from other AWS accounts\. These events can trigger CloudWatch Events rules created in your account\. For more information, see [Sending and Receiving Events Between AWS Accounts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEvents-CrossAccountEventDelivery.html) in the *Amazon CloudWatch Events User Guide*\.
+The `AWS::Events::EventBusPolicy` resource creates an event bus policy for Amazon EventBridge\. An event bus policy enables your account to receive events from other AWS accounts\. These events can trigger EventBridge rules created in your account\. For more information, see [Sending and Receiving Events Between AWS Accounts](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-cross-account-event-delivery.html) in the *Amazon EventBridge User Guide*\.
 
 If you grant permissions using `Condition` and specifying an organization, then accounts in that organization must specify a `RoleArn` with proper permissions when they use `PutTarget` to add your account's event bus as a target\.
 
@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Action](#cfn-events-eventbuspolicy-action)" : String,
       "[Condition](#cfn-events-eventbuspolicy-condition)" : [Condition](aws-properties-events-eventbuspolicy-condition.md),
+      "[EventBusName](#cfn-events-eventbuspolicy-eventbusname)" : String,
       "[Principal](#cfn-events-eventbuspolicy-principal)" : String,
       "[StatementId](#cfn-events-eventbuspolicy-statementid)" : String
     }
@@ -32,6 +33,7 @@ Properties:
   [Action](#cfn-events-eventbuspolicy-action): String
   [Condition](#cfn-events-eventbuspolicy-condition): 
     [Condition](aws-properties-events-eventbuspolicy-condition.md)
+  [EventBusName](#cfn-events-eventbuspolicy-eventbusname): String
   [Principal](#cfn-events-eventbuspolicy-principal): String
   [StatementId](#cfn-events-eventbuspolicy-statementid): String
 ```
@@ -54,6 +56,12 @@ If you specify `Condition` with an AWS organization ID and specify "\*" as the v
 *Required*: No  
 *Type*: [Condition](aws-properties-events-eventbuspolicy-condition.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EventBusName`  <a name="cfn-events-eventbuspolicy-eventbusname"></a>
+The name of the event bus to associate with this policy\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Principal`  <a name="cfn-events-eventbuspolicy-principal"></a>
 The 12\-digit AWS account ID that you are permitting to put events to your default event bus\. Specify "\*" to permit any account to put events to your default event bus\.  

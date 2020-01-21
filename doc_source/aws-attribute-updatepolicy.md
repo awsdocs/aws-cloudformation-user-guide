@@ -1,6 +1,6 @@
 # UpdatePolicy Attribute<a name="aws-attribute-updatepolicy"></a>
 
-Use the `UpdatePolicy` attribute to specify how AWS CloudFormation handles updates to the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html), or [AWS::ElastiCache::ReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html) resources\.
+Use the `UpdatePolicy` attribute to specify how AWS CloudFormation handles updates to the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html), or [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html) resources\.
 + For `AWS::AutoScaling::AutoScalingGroup` resources, AWS CloudFormation invokes one of three update policies depending on the type of change you make or whether a scheduled action is associated with the Auto Scaling group\.
   + The `AutoScalingReplacingUpdate` and `AutoScalingRollingUpdate` policies apply *only* when you do one or more of the following:
     + Change the Auto Scaling group's `[AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html)`\.
@@ -10,8 +10,9 @@ Use the `UpdatePolicy` attribute to specify how AWS CloudFormation handles updat
 
     If both the `AutoScalingReplacingUpdate` and `AutoScalingRollingUpdate` policies are specified, setting the `WillReplace` property to `true` gives `AutoScalingReplacingUpdate` precedence\.
   + The `AutoScalingScheduledAction` policy applies when you update a stack that includes an Auto Scaling group with an associated scheduled action\.
-+ For `AWS::Lambda::Alias` resources, AWS CloudFormation performs an CodeDeploy deployment when the version changes on the alias\. For more information, see [CodeDeployLambdaAliasUpdate Policy](#cfn-attributes-updatepolicy-codedeploylambdaaliasupdate)\.
 + For `AWS::ElastiCache::ReplicationGroup` resources, AWS CloudFormation can modify a replication group's shards by adding or removing shards, rather than replacing the entire resource\. For more information, see [UseOnlineResharding Policy](#cfn-attributes-updatepolicy-useonlineresharding)\. 
++ For `AWS::Elasticsearch::Domain` resources, AWS CloudFormation can upgrade an Amazon ES domain to a new version of Elasticsearch without replacing the entire resource\. For more information, see [EnableVersionUpgrade Policy](#cfn-attributes-updatepolicy-upgradeelasticsearchdomain)\.
++ For `AWS::Lambda::Alias` resources, AWS CloudFormation performs an CodeDeploy deployment when the version changes on the alias\. For more information, see [CodeDeployLambdaAliasUpdate Policy](#cfn-attributes-updatepolicy-codedeploylambdaaliasupdate)\.
 
 ## AutoScalingReplacingUpdate Policy<a name="cfn-attributes-updatepolicy-replacingupdate"></a>
 
@@ -139,7 +140,7 @@ To specify how AWS CloudFormation handles updates for the `MinSize`, `MaxSize`, 
 
 With scheduled actions, the group size properties of an Auto Scaling group can change at any time\. When you update a stack with an Auto Scaling group and scheduled action, AWS CloudFormation always sets the group size property values of your Auto Scaling group to the values that are defined in the `AWS::AutoScaling::AutoScalingGroup` resource of your template, even if a scheduled action is in effect\. 
 
-If you do not want AWS CloudFormation to change any of the group size property values when you have a scheduled action in effect, use the `AutoScalingScheduledAction` update policy to prevent AWS CloudFormation from changing the `MinSize`, `MaxSize`, or `DesiredCapacity` properties unless you have modified these values in your template\.
+If you do not want AWS CloudFormation to change any of the group size property values when you have a scheduled action in effect, use the `AutoScalingScheduledAction` update policy and set `IgnoreUnmodifiedGroupSizeProperties` to `true` to prevent AWS CloudFormation from changing the `MinSize`, `MaxSize`, or `DesiredCapacity` properties unless you have modified these values in your template\.
 
 ### Syntax<a name="cfn-attributes-updatepolicy-scheduledactions-syntax"></a>
 
@@ -164,10 +165,83 @@ UpdatePolicy:
 ### Properties<a name="cfn-attributes-updatepolicy-scheduledactions-properties"></a>
 
 `IgnoreUnmodifiedGroupSizeProperties`  <a name="cfn-attributes-updatepolicy-scheduledactions-ignoreunmodifiedgroupsizeproperties"></a>
-Specifies whether AWS CloudFormation ignores differences in group size properties between your current Auto Scaling group and the Auto Scaling group described in the `AWS::AutoScaling::AutoScalingGroup` resource of your template during a stack update\. If you modify any of the group size property values in your template, AWS CloudFormation uses the modified values and updates your Auto Scaling group\.  
+If `true`, AWS CloudFormation ignores differences in group size properties between your current Auto Scaling group and the Auto Scaling group described in the `AWS::AutoScaling::AutoScalingGroup` resource of your template during a stack update\. If you modify any of the group size property values in your template, AWS CloudFormation uses the modified values and updates your Auto Scaling group\.  
 *Default*: `false`  
 *Type*: Boolean  
 *Required*: No
+
+## UseOnlineResharding Policy<a name="cfn-attributes-updatepolicy-useonlineresharding"></a>
+
+To modify a replication group's shards by adding or removing shards, rather than replacing the entire [AWS::ElastiCache::ReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html) resource, use the `UseOnlineResharding` update policy\.
+
+If `UseOnlineResharding` is set to `true`, you can update the `NumNodeGroups` and `NodeGroupConfiguration` properties of the `AWS::ElastiCache::ReplicationGroup` resource, and CloudFormation will update those properties without interruption\. When `UseOnlineResharding` is set to `false`, or not specified, updating the `NumNodeGroups` and `NodeGroupConfiguration` properties results in CloudFormation replacing the entire `AWS::ElastiCache::ReplicationGroup` resource\.
+
+The `UseOnlineResharding` update policy has no properties\.
+
+Things to consider when setting the `UseOnlineResharding` update policy to `true`:
++ We strongly recommend you perform updates to the `NumNodeGroups` and `NodeGroupConfiguration` properties as the only updates in a given stack update operation\.
+
+  Updating the node group configuration of a replication group is a resource\-intensive operation\. If a stack update fails, CloudFormation does not roll back changes to the node group configuration of a replication group\. However, CloudFormation will roll back any other properties that were changed as part of the failed update operation\.
++ Any node group updates require identifying all node groups\.
+
+  If you specify the `NodeGroupConfiguration` property, you must also specify the NodeGroupId for each node group configuration in order for CloudFormation to update the number of nodes without interruption\. 
+
+  When creating a replication group, if you do not specify an ID for each node group, ElastiCache automatically generates an ID for each node group\. To update the replication group without interruption, use the ElastiCache console \([https://console\.aws\.amazon\.com/elasticache/](https://console.aws.amazon.com/elasticache/)\) or [DescribeReplicationGroups](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DescribeReplicationGroups.html) to retrieve the IDs for all node groups in the replication group\. Then specify the ID for each node group in your stack template before attempting to add or remove shards\.
+**Note**  
+As a best practice, when you create a replication group in a stack template, include an ID for each node group you specify\.
+
+  In addition, updating the number of nodes without interruption requires that you have accurately specified the `PrimaryAvailabilityZone`, `ReplicaAvailabilityZones`, and `ReplicaCount` properties for each `NodeGroupConfiguration` as well\. Again, you can use the ElastiCache console \([https://console\.aws\.amazon\.com/elasticache/](https://console.aws.amazon.com/elasticache/)\) or [DescribeReplicationGroups](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DescribeReplicationGroups.html) to retrieve the actual values for each node group and compare them to the values in your stack template\. You can update the property values of the node groups as a separate stack update, or as part of the same stack update that changes the number of node groups\.
+
+  When you use an `UseOnlineResharding` update policy to update the number of node groups without interruption, ElastiCache evenly distributes the keyspaces between the specified number of slots\. This cannot be updated later\. Therefore, after updating the number of node groups in this way, you should remove the value specified for the `Slots` property of each `NodeGroupConfiguration` from the stack template, as it no longer reflects the actual values in each node group\.
++ Actual node group removal results may vary\.
+
+  When you specify a `NumNodeGroups` value that is less than the current number of node groups, CloudFormation instructs ElastiCache to remove as many node groups as necessary to reach the specified number of nodes\. However, ElastiCache may not always be able to remove the desired number of node groups\. In the event ElastiCache cannot remove the desired number of node groups, CloudFormation generates a stack event alerting you to this\. In cases where ElastiCache cannot remove *any* node groups, the CloudFormation resource update fails\.
+
+For more information on modifying replication groups, see [ModifyReplicationGroupShardConfiguration](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyReplicationGroupShardConfiguration.html) in the *Amazon ElastiCache API Reference*\.
+
+### Syntax<a name="cfn-attributes-updatepolicy-useonlineresharding-syntax"></a>
+
+#### JSON<a name="cfn-attributes-updatepolicy-useonlineresharding-syntax.json"></a>
+
+```
+"UpdatePolicy" : {
+  "[UseOnlineResharding](#cfn-attributes-updatepolicy-useonlineresharding)" : Boolean
+}
+```
+
+#### YAML<a name="cfn-attributes-updatepolicy-useonlineresharding-syntax.yaml"></a>
+
+```
+UpdatePolicy:
+  [UseOnlineResharding](#cfn-attributes-updatepolicy-useonlineresharding): Boolean
+```
+
+## EnableVersionUpgrade Policy<a name="cfn-attributes-updatepolicy-upgradeelasticsearchdomain"></a>
+
+To upgrade an Amazon ES domain to a new version of Elasticsearch rather than replacing the entire [AWS::Elasticsearch::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html) resource, use the `EnableVersionUpgrade` update policy\.
+
+If `EnableVersionUpgrade` is set to `true`, you can update the `ElasticsearchVersion` property of the `AWS::Elasticsearch::Domain` resource, and CloudFormation will update that property without interruption\. When `EnableVersionUpgrade` is set to `false`, or not specified, updating the `ElasticsearchVersion` property results in CloudFormation replacing the entire `AWS::Elasticsearch::Domain` resource\.
+
+The `EnableVersionUpgrade` update policy has no properties\.
+
+For more information about upgrading Amazon ES domains, see [UpgradeElasticsearchDomain](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-configuration-api.html#es-configuration-api-actions-upgrade-domain) in the Amazon Elasticsearch Service Developer Guide\.
+
+### Syntax<a name="cfn-attributes-updatepolicy-upgradeelasticsearchdomain-syntax"></a>
+
+#### JSON<a name="cfn-attributes-updatepolicy-upgradeelasticsearchdomain-syntax.json"></a>
+
+```
+"UpdatePolicy" : {
+  "[EnableVersionUpgrade](#cfn-attributes-updatepolicy-upgradeelasticsearchdomain)" : Boolean
+}
+```
+
+#### YAML<a name="cfn-attributes-updatepolicy-upgradeelasticsearchdomain-syntax.yaml"></a>
+
+```
+UpdatePolicy:
+  [EnableVersionUpgrade](#cfn-attributes-updatepolicy-upgradeelasticsearchdomain): Boolean
+```
 
 ## CodeDeployLambdaAliasUpdate Policy<a name="cfn-attributes-updatepolicy-codedeploylambdaaliasupdate"></a>
 
@@ -223,57 +297,11 @@ The name of the CodeDeploy deployment group\. This is where the traffic\-shiftin
 
 For an example that specifies the `UpdatePolicy` attribute for an `AWS::Lambda::Alias` resource, see [Lambda Alias Update Policy](#aws-resource-lambda-alias-example)\.
 
-## UseOnlineResharding Policy<a name="cfn-attributes-updatepolicy-useonlineresharding"></a>
-
-To modify a replication group's shards by adding or removing shards, rather than replacing the entire [AWS::ElastiCache::ReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html) resource, use the `UseOnlineResharding` update policy\.
-
-If `UseOnlineResharding` is set to `true`, you can update the `NumNodeGroups` and `NodeGroupConfiguration` properties of the `AWS::ElastiCache::ReplicationGroup` resource, and CloudFormation will update those properties without interruption\. When `UseOnlineResharding` is set to `false`, or not specified, updating the `NumNodeGroups` and `NodeGroupConfiguration` properties results in CloudFormation replacing the entire `AWS::ElastiCache::ReplicationGroup` resource\.
-
-The `UseOnlineResharding` update policy has no properties\.
-
-Things to consider when setting the `UseOnlineResharding` update policy to `true`:
-+ We strongly recommend you perform updates to the `NumNodeGroups` and `NodeGroupConfiguration` properties as the only updates in a given stack update operation\.
-
-  Updating the node group configuration of a replication group is a resource\-intensive operation\. If a stack update fails, CloudFormation does not roll back changes to the node group configuration of a replication group\. However, CloudFormation will roll back any other properties that were changed as part of the failed update operation\.
-+ Any node group updates require identifying all node groups
-
-  If you specify the `NodeGroupConfiguration` property, you must also specify the NodeGroupId for each node group configuration in order for CloudFormation to update the number of nodes without interruption\. 
-
-  When creating a replication group, if you do not specify an ID for each node group, ElastiCache automatically generates an ID for each node group\. To update the replication group without interruption, use the ElastiCache console \([https://console\.aws\.amazon\.com/elasticache/](https://console.aws.amazon.com/elasticache/)\) or [DescribeReplicationGroups](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DescribeReplicationGroups.html) to retrieve the IDs for all node groups in the replication group\. Then specify the ID for each node group in your stack template before attempting to add or remove shards\.
-**Note**  
-As a best practice, when you create a replication group in a stack template, include an ID for each node group you specify\.
-
-  In addition, updating the number of nodes without interruption requires that you have accurately specified the `PrimaryAvailabilityZone`, `ReplicaAvailabilityZones`, and `ReplicaCount` properties for each `NodeGroupConfiguration` as well\. Again, you can use the ElastiCache console \([https://console\.aws\.amazon\.com/elasticache/](https://console.aws.amazon.com/elasticache/)\) or [DescribeReplicationGroups](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DescribeReplicationGroups.html) to retrieve the actual values for each node group and compare them to the values in your stack template\. You can update the property values of the node groups as a separate stack update, or as part of the same stack update that changes the number of node groups\.
-
-  When you use an `UseOnlineResharding` update policy to update the number of node groups without interruption, ElastiCache evenly distributes the keyspaces between the specified number of slots\. This cannot be updated later\. Therefore, after updating the number of node groups in this way, you should remove the value specified for the `Slots` property of each `NodeGroupConfiguration` from the stack template, as it no longer reflects the actual values in each node group\.
-+ Actual node group removal results may vary
-
-  When you specify a `NumNodeGroups` value that is less than the current number of node groups, CloudFormation instructs ElastiCache to remove as many node groups as necessary to reach the specified number of nodes\. However, ElastiCache may not always be able to remove the desired number of node groups\. In the event ElastiCache cannot remove the desired number of node groups, CloudFormation generates a stack event alerting you to this\. In cases where ElastiCache cannot remove *any* node groups, the CloudFormation resource update fails\.
-
-For more information on modifying replication groups, see [ModifyReplicationGroupShardConfiguration\.html](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyReplicationGroupShardConfiguration.html) in the *Amazon ElastiCache API Reference*\.
-
-### Syntax<a name="cfn-attributes-updatepolicy-useonlineresharding-syntax"></a>
-
-#### JSON<a name="cfn-attributes-updatepolicy-useonlineresharding-syntax.json"></a>
-
-```
-"UpdatePolicy" : {
-  "[UseOnlineResharding](#cfn-attributes-updatepolicy-useonlineresharding)" : Boolean
-}
-```
-
-#### YAML<a name="cfn-attributes-updatepolicy-useonlineresharding-syntax.yaml"></a>
-
-```
-UpdatePolicy:
-  [UseOnlineResharding](#cfn-attributes-updatepolicy-useonlineresharding): Boolean
-```
-
 ## Examples<a name="aws-attribute-updatepolicy-examples"></a>
 
 The following examples show how to add an update policy to an Auto Scaling group and how to maintain availability when updating metadata\.
 
-### Add an UpdatePolicy to an Auto Scaling Group<a name="w4784ab1c21c19c23c17b4"></a>
+### Add an UpdatePolicy to an Auto Scaling Group<a name="w5508ab1c26c19c23c19b4"></a>
 
 The following example shows how to add an update policy\. During an update, the Auto Scaling group updates instances in batches of two and keeps a minimum of one instance in service\. Because the `WaitOnResourceSignals` flag is set, the Auto Scaling group waits for new instances that are added to the group\. The new instances must signal the Auto Scaling group before it updates the next batch of instances\.
 
@@ -349,7 +377,7 @@ ScheduledAction:
     StartTime: '2017-06-02T20 : 00 : 00Z'
 ```
 
-### AutoScalingReplacingUpdate Policy<a name="w4784ab1c21c19c23c17b6"></a>
+### AutoScalingReplacingUpdate Policy<a name="w5508ab1c26c19c23c19b6"></a>
 
 The following example declares a policy that forces an associated Auto Scaling group to be replaced during an update\. For the update to succeed, a percentage of instances \(specified by the `MinSuccessfulPercentParameter` parameter\) must signal success within the `Timeout` period\.
 
@@ -386,7 +414,7 @@ CreationPolicy:
     MinSuccessfulInstancesPercent: !Ref 'MinSuccessfulPercentParameter'
 ```
 
-### Maintain Availability When Updating the Metadata for the cfn\-init Helper Script<a name="w4784ab1c21c19c23c17b8"></a>
+### Maintain Availability When Updating the Metadata for the cfn\-init Helper Script<a name="w5508ab1c26c19c23c19b8"></a>
 
 When you install software applications on your instances, you might use the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html) metadata key and the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html) helper script to bootstrap the instances in your Auto Scaling group\. AWS CloudFormation installs the packages, runs the commands, and performs other bootstrapping actions described in the metadata\.
 
@@ -397,7 +425,7 @@ Forcing a rolling update requires AWS CloudFormation to create a new instance an
 
 To force a rolling update, change the logical ID of the launch configuration resource, and then update the stack and any references pointing to the original logic ID \(such as the associated Auto Scaling group\)\. AWS CloudFormation triggers a rolling update on the Auto Scaling group, replacing all instances\.
 
-### Original Template<a name="w4784ab1c21c19c23c17c10"></a>
+### Original Template<a name="w5508ab1c26c19c23c19c10"></a>
 
 ```
 "LaunchConfig": {
@@ -411,7 +439,7 @@ To force a rolling update, change the logical ID of the launch configuration res
 }
 ```
 
-### Updated Logical ID<a name="w4784ab1c21c19c23c17c12"></a>
+### Updated Logical ID<a name="w5508ab1c26c19c23c19c12"></a>
 
 ```
 "LaunchConfigUpdateRubygemsPkg": {

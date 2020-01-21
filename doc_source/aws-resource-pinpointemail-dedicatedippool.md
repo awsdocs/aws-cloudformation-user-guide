@@ -32,7 +32,7 @@ Properties:
 
 `PoolName`  <a name="cfn-pinpointemail-dedicatedippool-poolname"></a>
 The name of the dedicated IP pool\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

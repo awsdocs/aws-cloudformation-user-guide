@@ -41,16 +41,16 @@ Properties:
 ## Properties<a name="aws-resource-transfer-server-properties"></a>
 
 `EndpointDetails`  <a name="cfn-transfer-server-endpointdetails"></a>
-The virtual private cloud \(VPC\) endpoint settings that you want to configure for your SFTP server\. This parameter is required when you specify a value for the `EndpointType` parameter\.  
+The virtual private cloud \(VPC\) endpoint settings that are configured for your SFTP server\. With a VPC endpoint, you can restrict access to your SFTP server to resources only within your VPC\. To control incoming internet traffic, you will need to invoke the `UpdateServer` API and attach an Elastic IP to your server's endpoint\.   
 *Required*: No  
 *Type*: [EndpointDetails](aws-properties-transfer-server-endpointdetails.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointType`  <a name="cfn-transfer-server-endpointtype"></a>
-The type of VPC endpoint that you want your SFTP server to connect to\. If you connect to a VPC endpoint, your SFTP server isn't accessible over the public internet\.  
+The type of VPC endpoint that you want your SFTP server to connect to\. You can choose to connect to the public internet or a virtual private cloud \(VPC\) endpoint\. With a VPC endpoint, you can restrict access to your SFTP server and resources only within your VPC\.  
 *Required*: Conditional  
 *Type*: String  
-*Allowed Values*: `PUBLIC | VPC_ENDPOINT`  
+*Allowed Values*: `PUBLIC | VPC | VPC_ENDPOINT`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IdentityProviderDetails`  <a name="cfn-transfer-server-identityproviderdetails"></a>
@@ -70,6 +70,8 @@ Specifies the mode of authentication for the SFTP server\. The default value is 
 A value that allows the service to write your SFTP users' activity to your Amazon CloudWatch logs for monitoring and auditing purposes\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `20`  
+*Maximum*: `2048`  
 *Pattern*: `arn:.*role/.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

@@ -1,5 +1,9 @@
 # AWS::WAFRegional::GeoMatchSet<a name="aws-resource-wafregional-geomatchset"></a>
 
+**Note**  
+This is **AWS WAF Classic** documentation\. For more information, see [AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the developer guide\.  
+ **For the latest version of AWS WAF**, use the AWS WAFV2 API and see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. With the latest version, AWS WAF has a single set of endpoints for regional and global use\. 
+
 Contains one or more countries that AWS WAF will search for\.
 
 ## Syntax<a name="aws-resource-wafregional-geomatchset-syntax"></a>
@@ -92,7 +96,7 @@ MyGeoConstraints:
         Value: "AE"
       - 
         Type: "Country"
-    Value: "AE"
+        Value: "AE"
 ```
 
 ### Associate a GeoMatchSet with a Web ACL Rule<a name="aws-resource-wafregional-geomatchset--examples--Associate_a_GeoMatchSet_with_a_Web_ACL_Rule"></a>
@@ -131,7 +135,7 @@ MyGeoMatchRule:
         DataId: 
           Ref: "MyGeoConstraints"
         Negated: false
-    Type: "GeoMatch"
+        Type: "GeoMatch"
 ```
 
 ### Create a Web ACL<a name="aws-resource-wafregional-geomatchset--examples--Create_a_Web_ACL"></a>
@@ -178,5 +182,5 @@ MyWebACL:
           Type: "BLOCK"
         Priority: 1
         RuleId: 
-    Ref: "MyGeoMatchRule"
+          Ref: "MyGeoMatchRule"
 ```

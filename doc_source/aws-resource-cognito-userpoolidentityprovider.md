@@ -70,7 +70,7 @@ The identity provider name\.
 The identity provider type\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Facebook | Google | LoginWithAmazon | OIDC | SAML`  
+*Allowed Values*: `Facebook | Google | LoginWithAmazon | OIDC | SAML | SignInWithApple`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UserPoolId`  <a name="cfn-cognito-userpoolidentityprovider-userpoolid"></a>
@@ -104,39 +104,39 @@ The following example creates the identity provider "YourProviderName" in the re
 
 ```
 {
-   "UserPoolIdentityProvider": {
-      "Type": "AWS::Cognito::UserPoolIdentityProvider",
-      "Properties": {
-         "UserPoolId": {"Ref": "UserPool"},
-         "ProviderName": "YourProviderName",
-         "ProviderDetails": {
-            "MetadataURL": "YourMetadataURL"
-         },
-         "ProviderType": "SAML",
-         "AttributeMapping": {
-            "Email": "Attribute"
-         },
-         "IdpIdentifiers": [
-            "IdpIdentifier"
-         ]
-      }
-   }
-}
+      "UserPoolIdentityProvider": {
+          "Type": "AWS::Cognito::UserPoolIdentityProvider",
+          "Properties": {
+               "UserPoolId": {"Ref": "UserPool"},
+               "ProviderName": "YourProviderName",
+               "ProviderDetails": {
+                   "MetadataURL": "YourMetadataURL"
+              },
+              "ProviderType": "SAML",
+              "AttributeMapping": {
+                  "Email": "Attribute"
+               },
+               "IdpIdentifiers": [
+                    "IdpIdentifier"
+                ]
+             }
+         }
+     }
 ```
 
 #### YAML<a name="aws-resource-cognito-userpoolidentityprovider--examples--Creating_a_new_identity_provider--yaml"></a>
 
 ```
-UserPoolIdentityProvider:
-  Type: AWS::Cognito::UserPoolIdentityProvider
-  Properties:
-    UserPoolId: !Ref UserPool
-    ProviderName: "YourProviderName"
-    ProviderDetails:
-      MetadataURL: "YourMetadataURL"
-    ProviderType: "SAML"
-    AttributeMapping:
-      Email: "Attribute"
-    IdpIdentifiers:
-      - "IdpIdentifier"
+UserPoolIdentityProvider: 
+        Type: AWS::Cognito::UserPoolIdentityProvider
+        Properties:
+            UserPoolId: !Ref UserPool
+            ProviderName: "YourProviderName"
+            ProviderDetails:
+              MetadataURL: "YourMetadataURL"
+            ProviderType: "SAML"
+            AttributeMapping:
+                Email: "Attribute"
+             IdpIdentifiers:
+                - "IdpIdentifier"
 ```

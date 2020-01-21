@@ -37,4 +37,4 @@ The ARN of the role which has a policy that grants IoT Analytics permission to s
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-iot-topicrule-iotanalyticsaction--seealso"></a>
-+  [IotAnalyticsAction](https://docs.aws.amazon.com/https://docs.aws.amazon.com/iot/latest/apireference/API_IotAnalyticsAction.html) in the *AWS IoT API Reference*\.
++  [IotAnalyticsAction](https://docs.aws.amazon.com/iot/latest/apireference/API_IotAnalyticsAction.html) in the *AWS IoT API Reference*\.

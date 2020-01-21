@@ -1,6 +1,6 @@
 # AWS::EventSchemas::Schema<a name="aws-resource-eventschemas-schema"></a>
 
-Use the `AWS::EventSchemas::Schema` resource to create an event schema\.
+Use the `AWS::EventSchemas::Schema` resource to specify an event schema\.
 
 ## Syntax<a name="aws-resource-eventschemas-schema-syntax"></a>
 

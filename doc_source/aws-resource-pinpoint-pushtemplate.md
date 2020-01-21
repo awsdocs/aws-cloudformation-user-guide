@@ -16,8 +16,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[APNS](#cfn-pinpoint-pushtemplate-apns)" : [APNSPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.md),
       "[Baidu](#cfn-pinpoint-pushtemplate-baidu)" : [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md),
       "[Default](#cfn-pinpoint-pushtemplate-default)" : [DefaultPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.md),
+      "[DefaultSubstitutions](#cfn-pinpoint-pushtemplate-defaultsubstitutions)" : String,
       "[GCM](#cfn-pinpoint-pushtemplate-gcm)" : [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md),
       "[Tags](#cfn-pinpoint-pushtemplate-tags)" : Json,
+      "[TemplateDescription](#cfn-pinpoint-pushtemplate-templatedescription)" : String,
       "[TemplateName](#cfn-pinpoint-pushtemplate-templatename)" : String
     }
 }
@@ -36,9 +38,11 @@ Properties:
     [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md)
   [Default](#cfn-pinpoint-pushtemplate-default): 
     [DefaultPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.md)
+  [DefaultSubstitutions](#cfn-pinpoint-pushtemplate-defaultsubstitutions): String
   [GCM](#cfn-pinpoint-pushtemplate-gcm): 
     [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md)
   [Tags](#cfn-pinpoint-pushtemplate-tags): Json
+  [TemplateDescription](#cfn-pinpoint-pushtemplate-templatedescription): String
   [TemplateName](#cfn-pinpoint-pushtemplate-templatename): String
 ```
 
@@ -68,6 +72,12 @@ The default message template to use for push notification channels\.
 *Type*: [DefaultPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`DefaultSubstitutions`  <a name="cfn-pinpoint-pushtemplate-defaultsubstitutions"></a>
+A JSON object that specifies the default values to use for message variables in the message template\. This object is a set of key\-value pairs\. Each key defines a message variable in the template\. The corresponding value defines the default value for that variable\. When you create a message that's based on the template, you can override these defaults with message\-specific and address\-specific variables and values\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `GCM`  <a name="cfn-pinpoint-pushtemplate-gcm"></a>
 The message template to use for the GCM channel, which is used to send notifications through the Firebase Cloud Messaging \(FCM\), formerly Google Cloud Messaging \(GCM\), service\. This message template overrides the default template for push notification channels \(`Default`\)\.  
 *Required*: No  
@@ -78,6 +88,12 @@ The message template to use for the GCM channel, which is used to send notificat
 A string\-to\-string map of key\-value pairs that defines the tags to associate with the message template\. Each tag consists of a required tag key and an associated tag value\.  
 *Required*: No  
 *Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TemplateDescription`  <a name="cfn-pinpoint-pushtemplate-templatedescription"></a>
+A custom description of the message template\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TemplateName`  <a name="cfn-pinpoint-pushtemplate-templatename"></a>

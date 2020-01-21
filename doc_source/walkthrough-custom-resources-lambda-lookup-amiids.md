@@ -65,7 +65,9 @@ To create the sample Amazon EC2 stack, you'll use a sample template that include
 
 During stack creation, the custom resource invokes the Lambda function and waits until the function sends a response to the pre\-signed Amazon S3 URL\. In the response, the function returns the ID of the latest AMI that corresponds to the EC2 instance type and region in which you are creating the instance\. The data from the function's response is stored as an attribute of the custom resource, which is used to specify the AMI ID of the EC2 instance\.
 
-The following snippets explain relevant parts of the sample template to help you understand how to associate a Lambda function with a custom resource and how to use the function's response\. To view the entire sample template, see:
+The following snippets explain relevant parts of the sample template to help you understand how to associate a Lambda function with a custom resource and how to use the function's response\. 
+
+To view the entire sample template, see:
 
 **Linux template**  
 [https://s3\.amazonaws\.com/cloudformation\-examples/lambda/LambdaAMILookupSample\.template](https://s3.amazonaws.com/cloudformation-examples/lambda/LambdaAMILookupSample.template)
@@ -300,7 +302,7 @@ Now that you understand what the template does, use the sample template to creat
 
 1. Ensure that the stack name and template URL are correct, and then choose **Create**\.
 
-It might take several minutes for AWS CloudFormation to create your stack\. To monitor progress, view the stack events\. For more information, see [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)\.
+It might take several minutes for AWS CloudFormation to create your stack\. To monitor progress, view the stack events\. For more information, see [Viewing AWS CloudFormation Stack Data and Resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)\.
 
 If stack creation succeeds, all resources in the stack, such as the Lambda function, custom resource, and EC2 instance, were created\. You successfully used a Lambda function and custom resource to specify the AMI ID of an EC2 instance\. You don't need to create and maintain a mapping of AMI IDs in this template\.
 
@@ -324,5 +326,5 @@ All the resources that you created are deleted\.
 
 Now that you understand how to create and use Lambda functions with AWS CloudFormation, you can use the sample template and code from this walkthrough to build other stacks and functions\.
 
-## Related Information<a name="w4784ab1c17c25c14b7c29"></a>
+## Related Information<a name="w5508ab1c20c25c14b7c29"></a>
 + [AWS CloudFormation Custom Resource Reference](crpg-ref.md)

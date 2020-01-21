@@ -1,8 +1,8 @@
 # AWS::Pinpoint::ADMChannel<a name="aws-resource-pinpoint-admchannel"></a>
 
-A *channel* is a type of platform that you can deliver messages to\. You can use the ADM channel to send push notifications through the Amazon Device Messaging \(ADM\) service to apps that run on Amazon devices, such as Kindle Fire tablets\. Before you use Amazon Pinpoint to send messages to Amazon devices, you have to enable the ADM channel for an Amazon Pinpoint application\.
+A *channel* is a type of platform that you can deliver messages to\. You can use the ADM channel to send push notifications through the Amazon Device Messaging \(ADM\) service to apps that run on Amazon devices, such as Kindle Fire tablets\. Before you can use Amazon Pinpoint to send messages to Amazon devices, you have to enable the ADM channel for an Amazon Pinpoint application\.
 
-The ADM Channel resource represents the status and authentication settings for the ADM channel for a specific application\. You can use this resource to retrieve information about, update, or disable \(delete\) the ADM channel for an application\.
+The ADMChannel resource represents the status and authentication settings for the ADM channel for an application\.
 
 ## Syntax<a name="aws-resource-pinpoint-admchannel-syntax"></a>
 
@@ -36,7 +36,7 @@ Properties:
 ## Properties<a name="aws-resource-pinpoint-admchannel-properties"></a>
 
 `ApplicationId`  <a name="cfn-pinpoint-admchannel-applicationid"></a>
-The unique identifier of the Amazon Pinpoint application that the ADM channel applies to\.  
+The unique identifier for the Amazon Pinpoint application that the ADM channel applies to\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -63,6 +63,6 @@ Specifies whether to enable the ADM channel for the application\.
 
 ### Ref<a name="aws-resource-pinpoint-admchannel-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the Amazon Pinpoint app that the channel is associated with\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the unique identifier \(`ApplicationId`\) for the Amazon Pinpoint application that the channel is associated with\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

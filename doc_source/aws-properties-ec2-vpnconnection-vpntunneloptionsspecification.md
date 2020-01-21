@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `PreSharedKey`  <a name="cfn-ec2-vpnconnection-vpntunneloptionsspecification-presharedkey"></a>
 The pre\-shared key \(PSK\) to establish initial authentication between the virtual private gateway and customer gateway\.  
-Constraints: Allowed characters are alphanumeric characters and \.\_\. Must be between 8 and 64 characters in length and cannot start with zero \(0\)\.  
+Constraints: Allowed characters are alphanumeric characters, periods \(\.\), and underscores \(\_\)\. Must be between 8 and 64 characters in length and cannot start with zero \(0\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

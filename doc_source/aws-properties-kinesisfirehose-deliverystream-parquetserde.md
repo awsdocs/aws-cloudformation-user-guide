@@ -40,7 +40,7 @@ The Hadoop Distributed File System \(HDFS\) block size\. This is useful if you i
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Compression`  <a name="cfn-kinesisfirehose-deliverystream-parquetserde-compression"></a>
-The compression code to use over data blocks\. The possible values are `UNCOMPRESSED`, `SNAPPY`, and `GZIP`, with the default being `SNAPPY`\. Use `SNAPPY` for higher decompression speed\. Use `GZIP` if the compression ration is more important than speed\.  
+The compression code to use over data blocks\. The possible values are `UNCOMPRESSED`, `SNAPPY`, and `GZIP`, with the default being `SNAPPY`\. Use `SNAPPY` for higher decompression speed\. Use `GZIP` if the compression ratio is more important than speed\.  
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `GZIP | SNAPPY | UNCOMPRESSED`  

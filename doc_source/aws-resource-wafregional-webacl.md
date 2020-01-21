@@ -141,7 +141,7 @@ MyWebACL:
           Type: "BLOCK"
         Priority: 3
         RuleId: 
-Ref: "SqlInjRule"
+          Ref: "SqlInjRule"
 ```
 
 ### Associate a Web ACL with a CloudFront Distribution<a name="aws-resource-wafregional-webacl--examples--Associate_a_Web_ACL_with_a_CloudFront_Distribution"></a>
@@ -242,5 +242,5 @@ myDistribution:
             - "AQ"
             - "CV"
       ViewerCertificate: 
-CloudFrontDefaultCertificate: "true"
+      CloudFrontDefaultCertificate: "true"
 ```

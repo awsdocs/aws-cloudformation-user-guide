@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualService VirtualServiceProvider<a name="aws-properties-appmesh-virtualservice-virtualserviceprovider"></a>
 
-An object representing the provider for a virtual service\.
+An object that represents the provider for a virtual service\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualservice-virtualserviceprovider-syntax"></a>
 

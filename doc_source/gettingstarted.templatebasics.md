@@ -450,7 +450,13 @@ For AWS\-specific parameter types, AWS CloudFormation validates input values aga
 
  For the `Number` type, you can declare the following constraints: `MinValue`, `MaxValue`, `Default`, and `AllowedValues`\. A number can be an integer or a float value\. In the example above, the `WebServerPort` parameter must be a number between 1 and 65535 inclusive \(`MinValue`, `MaxValue`\)\. 
 
-Earlier in this section, we mentioned that parameters are a good way to specify sensitive or implementation\-specific data, such as passwords or user names, that you need to use but do not want to embed in the template itself\. For sensitive information, you can use the `NoEcho` attribute to prevent a parameter value from being displayed in the console, command line tools, or API\. If you set the `NoEcho` attribute to `true`, the parameter value is returned as asterisks \(`*****`\)\. In the example above, the `WordPressUser` parameter value is not visible to anyone viewing the stack's settings, and its value is returned as asterisks\. 
+Earlier in this section, we mentioned that parameters are a good way to specify sensitive or implementation\-specific data, such as passwords or user names, that you need to use but do not want to embed in the template itself\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events\. In the example above, the `WordPressUser` parameter value is not visible to anyone viewing the stack's settings, and its value is returned as asterisks\. 
+
+**Important**  
+Rather than embedding sensitive information directly in your AWS CloudFormation templates, we strongly suggest you do one of the following:   
+Use input parameters to pass in information whenever you create or update a stack, using the `NoEcho` property to obfuscate the parameter value\.
+Use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the Systems Manager Parameter Store or Secrets Manager\.
+For more information, see the [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
 ## Specifying Conditional Values Using Mappings<a name="gettingstarted.templatebasics.mappings"></a>
 

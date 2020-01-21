@@ -118,4 +118,3 @@ mycert:
           - DomainName: example.com
             ValidationDomain: example.com
 ```
-```

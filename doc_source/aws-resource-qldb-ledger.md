@@ -57,7 +57,7 @@ The permissions mode to assign to the ledger that you want to create\.
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `ALLOW_ALL`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-qldb-ledger-tags"></a>
 An array of key\-value pairs to apply to this resource\.  
