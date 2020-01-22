@@ -39,7 +39,7 @@ Properties:
 ## Properties<a name="aws-resource-cognito-userpoolidentityprovider-properties"></a>
 
 `AttributeMapping`  <a name="cfn-cognito-userpoolidentityprovider-attributemapping"></a>
-A mapping of identity provider attributes to standard and custom user pool attributes\.  
+A mapping of identity provider attributes to standard and custom user pool attributes\. Available user pool attributes shall be formatted in snake_case, i.e. "FamilyName" user pool attribute shall be referenced as "family_name" in AttributeMapping JSON\.
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -114,7 +114,8 @@ The following example creates the identity provider "YourProviderName" in the re
               },
               "ProviderType": "SAML",
               "AttributeMapping": {
-                  "Email": "Attribute"
+                  "email": "Attribute",
+                  "family_name": "Attribute"
                },
                "IdpIdentifiers": [
                     "IdpIdentifier"
@@ -136,7 +137,8 @@ UserPoolIdentityProvider:
               MetadataURL: "YourMetadataURL"
             ProviderType: "SAML"
             AttributeMapping:
-                Email: "Attribute"
+                email: "Attribute"
+                family_name: "Attribute"
              IdpIdentifiers:
                 - "IdpIdentifier"
 ```
