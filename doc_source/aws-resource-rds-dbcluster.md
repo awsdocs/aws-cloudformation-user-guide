@@ -17,31 +17,36 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::RDS::DBCluster",
   "Properties" : {
+      "[AssociatedRoles](#cfn-rds-dbcluster-associatedroles)" : [ [DBClusterRole](aws-properties-rds-dbcluster-dbclusterrole.md), ... ],
       "[AvailabilityZones](#cfn-rds-dbcluster-availabilityzones)" : [ String, ... ],
       "[BacktrackWindow](#cfn-rds-dbcluster-backtrackwindow)" : Long,
       "[BackupRetentionPeriod](#cfn-rds-dbcluster-backuprententionperiod)" : Integer,
+      "[DatabaseName](#cfn-rds-dbcluster-databasename)" : String,
       "[DBClusterIdentifier](#cfn-rds-dbcluster-dbclusteridentifier)" : String,
       "[DBClusterParameterGroupName](#cfn-rds-dbcluster-dbclusterparametergroupname)" : String,
       "[DBSubnetGroupName](#cfn-rds-dbcluster-dbsubnetgroupname)" : String,
-      "[DatabaseName](#cfn-rds-dbcluster-databasename)" : String,
       "[DeletionProtection](#cfn-rds-dbcluster-deletionprotection)" : Boolean,
       "[EnableCloudwatchLogsExports](#cfn-rds-dbcluster-enablecloudwatchlogsexports)" : [ String, ... ],
+      "[EnableHttpEndpoint](#cfn-rds-dbcluster-enablehttpendpoint)" : Boolean,
       "[EnableIAMDatabaseAuthentication](#cfn-rds-dbcluster-enableiamdatabaseauthentication)" : Boolean,
       "[Engine](#cfn-rds-dbcluster-engine)" : String,
       "[EngineMode](#cfn-rds-dbcluster-enginemode)" : String,
       "[EngineVersion](#cfn-rds-dbcluster-engineversion)" : String,
       "[KmsKeyId](#cfn-rds-dbcluster-kmskeyid)" : String,
-      "[MasterUserPassword](#cfn-rds-dbcluster-masteruserpassword)" : String,
       "[MasterUsername](#cfn-rds-dbcluster-masterusername)" : String,
+      "[MasterUserPassword](#cfn-rds-dbcluster-masteruserpassword)" : String,
       "[Port](#cfn-rds-dbcluster-port)" : Integer,
       "[PreferredBackupWindow](#cfn-rds-dbcluster-preferredbackupwindow)" : String,
       "[PreferredMaintenanceWindow](#cfn-rds-dbcluster-preferredmaintenancewindow)" : String,
       "[ReplicationSourceIdentifier](#cfn-rds-dbcluster-replicationsourceidentifier)" : String,
+      "[RestoreType](#cfn-rds-dbcluster-restoretype)" : String,
       "[ScalingConfiguration](#cfn-rds-dbcluster-scalingconfiguration)" : [ScalingConfiguration](aws-properties-rds-dbcluster-scalingconfiguration.md),
       "[SnapshotIdentifier](#cfn-rds-dbcluster-snapshotidentifier)" : String,
+      "[SourceDBClusterIdentifier](#cfn-rds-dbcluster-sourcedbclusteridentifier)" : String,
       "[SourceRegion](#cfn-rds-dbcluster-sourceregion)" : String,
       "[StorageEncrypted](#cfn-rds-dbcluster-storageencrypted)" : Boolean,
       "[Tags](#cfn-rds-dbcluster-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[UseLatestRestorableTime](#cfn-rds-dbcluster-uselatestrestorabletime)" : Boolean,
       "[VpcSecurityGroupIds](#cfn-rds-dbcluster-vpcsecuritygroupids)" : [ String, ... ]
     }
 }
@@ -52,40 +57,52 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::RDS::DBCluster
 Properties: 
+  [AssociatedRoles](#cfn-rds-dbcluster-associatedroles): 
+    - [DBClusterRole](aws-properties-rds-dbcluster-dbclusterrole.md)
   [AvailabilityZones](#cfn-rds-dbcluster-availabilityzones): 
     - String
   [BacktrackWindow](#cfn-rds-dbcluster-backtrackwindow): Long
   [BackupRetentionPeriod](#cfn-rds-dbcluster-backuprententionperiod): Integer
+  [DatabaseName](#cfn-rds-dbcluster-databasename): String
   [DBClusterIdentifier](#cfn-rds-dbcluster-dbclusteridentifier): String
   [DBClusterParameterGroupName](#cfn-rds-dbcluster-dbclusterparametergroupname): String
   [DBSubnetGroupName](#cfn-rds-dbcluster-dbsubnetgroupname): String
-  [DatabaseName](#cfn-rds-dbcluster-databasename): String
   [DeletionProtection](#cfn-rds-dbcluster-deletionprotection): Boolean
   [EnableCloudwatchLogsExports](#cfn-rds-dbcluster-enablecloudwatchlogsexports): 
     - String
+  [EnableHttpEndpoint](#cfn-rds-dbcluster-enablehttpendpoint): Boolean
   [EnableIAMDatabaseAuthentication](#cfn-rds-dbcluster-enableiamdatabaseauthentication): Boolean
   [Engine](#cfn-rds-dbcluster-engine): String
   [EngineMode](#cfn-rds-dbcluster-enginemode): String
   [EngineVersion](#cfn-rds-dbcluster-engineversion): String
   [KmsKeyId](#cfn-rds-dbcluster-kmskeyid): String
-  [MasterUserPassword](#cfn-rds-dbcluster-masteruserpassword): String
   [MasterUsername](#cfn-rds-dbcluster-masterusername): String
+  [MasterUserPassword](#cfn-rds-dbcluster-masteruserpassword): String
   [Port](#cfn-rds-dbcluster-port): Integer
   [PreferredBackupWindow](#cfn-rds-dbcluster-preferredbackupwindow): String
   [PreferredMaintenanceWindow](#cfn-rds-dbcluster-preferredmaintenancewindow): String
   [ReplicationSourceIdentifier](#cfn-rds-dbcluster-replicationsourceidentifier): String
+  [RestoreType](#cfn-rds-dbcluster-restoretype): String
   [ScalingConfiguration](#cfn-rds-dbcluster-scalingconfiguration): 
     [ScalingConfiguration](aws-properties-rds-dbcluster-scalingconfiguration.md)
   [SnapshotIdentifier](#cfn-rds-dbcluster-snapshotidentifier): String
+  [SourceDBClusterIdentifier](#cfn-rds-dbcluster-sourcedbclusteridentifier): String
   [SourceRegion](#cfn-rds-dbcluster-sourceregion): String
   [StorageEncrypted](#cfn-rds-dbcluster-storageencrypted): Boolean
   [Tags](#cfn-rds-dbcluster-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [UseLatestRestorableTime](#cfn-rds-dbcluster-uselatestrestorabletime): Boolean
   [VpcSecurityGroupIds](#cfn-rds-dbcluster-vpcsecuritygroupids): 
     - String
 ```
 
 ## Properties<a name="aws-resource-rds-dbcluster-properties"></a>
+
+`AssociatedRoles`  <a name="cfn-rds-dbcluster-associatedroles"></a>
+Provides a list of the AWS Identity and Access Management \(IAM\) roles that are associated with the DB cluster\. IAM roles that are associated with a DB cluster grant permission for the DB cluster to access other AWS services on your behalf\.  
+*Required*: No  
+*Type*: List of [DBClusterRole](aws-properties-rds-dbcluster-dbclusterrole.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailabilityZones`  <a name="cfn-rds-dbcluster-availabilityzones"></a>
 A list of Availability Zones \(AZs\) where instances in the DB cluster can be created\. For information on AWS Regions and Availability Zones, see [Choosing the Regions and Availability Zones](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.RegionsAndAvailabilityZones.html) in the *Amazon Aurora User Guide*\.   
@@ -111,6 +128,12 @@ Constraints:
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`DatabaseName`  <a name="cfn-rds-dbcluster-databasename"></a>
+The name of your database\. If you don't provide a name, then Amazon RDS won't create a database in this DB cluster\. For naming constraints, see [Naming Constraints](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints) in the *Amazon RDS User Guide*\.   
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `DBClusterIdentifier`  <a name="cfn-rds-dbcluster-dbclusteridentifier"></a>
 The DB cluster identifier\. This parameter is stored as a lowercase string\.  
 Constraints:  
@@ -124,6 +147,7 @@ Example: `my-cluster1`
 
 `DBClusterParameterGroupName`  <a name="cfn-rds-dbcluster-dbclusterparametergroupname"></a>
 The name of the DB cluster parameter group to associate with this DB cluster\.  
+If you apply a parameter group to an existing DB cluster, then its DB instances might need to reboot\. This can result in an outage while the DB instances are rebooting\.
  If this argument is omitted, `default.aurora5.6` is used\. If `default.aurora5.6` is used, specifying `aurora-mysql` or `aurora-postgresql` for the `Engine` property might result in an error\.
 *Required*: No  
 *Type*: String  
@@ -131,12 +155,6 @@ The name of the DB cluster parameter group to associate with this DB cluster\.
 
 `DBSubnetGroupName`  <a name="cfn-rds-dbcluster-dbsubnetgroupname"></a>
 A DB subnet group that you want to associate with this DB cluster\.   
-*Required*: No  
-*Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`DatabaseName`  <a name="cfn-rds-dbcluster-databasename"></a>
-The name of your database\. If you don't provide a name, then Amazon RDS won't create a database in this DB cluster\. For naming constraints, see [Naming Constraints](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints) in the *Amazon RDS User Guide*\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -153,8 +171,17 @@ The list of log types that need to be enabled for exporting to CloudWatch Logs\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`EnableHttpEndpoint`  <a name="cfn-rds-dbcluster-enablehttpendpoint"></a>
+A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless DB cluster\. By default, the HTTP endpoint is disabled\.  
+When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora Serverless DB cluster\. You can also query your database from inside the RDS console with the query editor\.  
+For more information, see [Using the Data API for Aurora Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the *Amazon Aurora User Guide*\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `EnableIAMDatabaseAuthentication`  <a name="cfn-rds-dbcluster-enableiamdatabaseauthentication"></a>
 A value that indicates whether to enable mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts\. By default, mapping is disabled\.  
+For more information, see [ IAM Database Authentication](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html) in the *Amazon Aurora User Guide\.*   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -167,14 +194,24 @@ Valid Values: `aurora` \(for MySQL 5\.6\-compatible Aurora\), `aurora-mysql` \(f
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineMode`  <a name="cfn-rds-dbcluster-enginemode"></a>
-The DB engine mode of the DB cluster, either `provisioned`, `serverless`, `parallelquery`, or `global`\.  
+The DB engine mode of the DB cluster, either `provisioned`, `serverless`, `parallelquery`, `global`, or `multimaster`\.  
+Limitations and requirements apply to some DB engine modes\. For more information, see the following sections in the *Amazon Aurora User Guide*:  
++  [ Limitations of Aurora Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations) 
++  [ Limitations of Parallel Query](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations) 
++  [ Requirements for Aurora Global Databases](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations) 
++  [ Limitations of Multi\-Master Clusters](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html#aurora-multi-master-limitations) 
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineVersion`  <a name="cfn-rds-dbcluster-engineversion"></a>
 The version number of the database engine to use\.  
-To prevent automatic upgrades, be sure to specify the full version number \(for example, 5\.6\.13\)\. If the default version for the database engine changes and you specify only the major version \(for example, 5\.6\), your DB instance will be upgraded to use the new default version\. Note that the default version is not necessarily the latest supported version\. 
+To list all of the available engine versions for `aurora` \(for MySQL 5\.6\-compatible Aurora\), use the following command:  
+`aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"`  
+To list all of the available engine versions for `aurora-mysql` \(for MySQL 5\.7\-compatible Aurora\), use the following command:  
+`aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"`  
+To list all of the available engine versions for `aurora-postgresql`, use the following command:  
+`aws rds describe-db-engine-versions --engine aurora-postgresql --query "DBEngineVersions[].EngineVersion"`  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -185,19 +222,19 @@ The Amazon Resource Name \(ARN\) of the AWS Key Management Service master key th
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`MasterUserPassword`  <a name="cfn-rds-dbcluster-masteruserpassword"></a>
-The master password for the DB instance\.  
-If you specify the `SourceDBInstanceIdentifier` or `DBSnapshotIdentifier` property, don't specify this property\. The value is inherited from the source DB instance or snapshot\.
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `MasterUsername`  <a name="cfn-rds-dbcluster-masterusername"></a>
 The name of the master user for the DB cluster\.  
 You must specify `MasterUsername`, unless you specify `SnapshotIdentifier`\. In that case, don't specify `MasterUsername`\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`MasterUserPassword`  <a name="cfn-rds-dbcluster-masteruserpassword"></a>
+The master password for the DB instance\.  
+If you specify the `SourceDBInstanceIdentifier` or `DBSnapshotIdentifier` property, don't specify this property\. The value is inherited from the source DB instance or snapshot\.
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Port`  <a name="cfn-rds-dbcluster-port"></a>
 The port number on which the instances in the DB cluster accept connections\.  
@@ -234,6 +271,16 @@ The Amazon Resource Name \(ARN\) of the source DB instance or DB cluster if this
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`RestoreType`  <a name="cfn-rds-dbcluster-restoretype"></a>
+The type of restore to be performed\. You can specify one of the following values:  
++  `full-copy` \- The new DB cluster is restored as a full copy of the source DB cluster\.
++  `copy-on-write` \- The new DB cluster is restored as a clone of the source DB cluster\.
+Constraints: You can't specify `copy-on-write` if the engine version of the source DB cluster is earlier than 1\.11\.  
+If you don't specify a `RestoreType` value, then the new DB cluster is restored as a full copy of the source DB cluster\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `ScalingConfiguration`  <a name="cfn-rds-dbcluster-scalingconfiguration"></a>
 The `ScalingConfiguration` property type specifies the scaling configuration of an Aurora Serverless DB cluster\.  
 *Required*: No  
@@ -243,8 +290,17 @@ The `ScalingConfiguration` property type specifies the scaling configuration of 
 `SnapshotIdentifier`  <a name="cfn-rds-dbcluster-snapshotidentifier"></a>
 The identifier for the DB snapshot or DB cluster snapshot to restore from\.  
 You can use either the name or the Amazon Resource Name \(ARN\) to specify a DB cluster snapshot\. However, you can use only the ARN to specify a DB snapshot\.  
+After you restore a DB cluster with a `SnapshotIdentifier` property, you must specify the same `SnapshotIdentifier` property for any future updates to the DB cluster\. When you specify this property for an update, the DB cluster is not restored from the snapshot again, and the data in the database is not changed\. However, if you don't specify the `SnapshotIdentifier` property, an empty DB cluster is created, and the original DB cluster is deleted\. If you specify a property that is different from the previous snapshot restore property, the DB cluster is restored from the specified `SnapshotIdentifier` property, and the original DB cluster is deleted\.  
 Constraints:  
 + Must match the identifier of an existing Snapshot\.
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`SourceDBClusterIdentifier`  <a name="cfn-rds-dbcluster-sourcedbclusteridentifier"></a>
+The identifier of the source DB cluster from which to restore\.  
+Constraints:  
++ Must match the identifier of an existing DBCluster\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -268,6 +324,12 @@ Tags to assign to the DB cluster\.
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`UseLatestRestorableTime`  <a name="cfn-rds-dbcluster-uselatestrestorabletime"></a>
+A value that indicates whether to restore the DB cluster to the latest restorable backup time\. By default, the DB cluster is not restored to the latest restorable backup time\.   
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcSecurityGroupIds`  <a name="cfn-rds-dbcluster-vpcsecuritygroupids"></a>
 A list of EC2 VPC security groups to associate with this DB cluster\.  
@@ -305,6 +367,9 @@ The reader endpoint for the DB cluster\. For example: `mystack-mydbcluster-ro-1a
 ### <a name="aws-resource-rds-dbcluster--examples--"></a>
 
 The following example creates an Amazon Aurora DB cluster and adds two DB instances to it\. Because Amazon RDS automatically assigns a writer and reader DB instances in the cluster, use the cluster endpoint to read and write data, not the individual DB instance endpoints\. 
+
+**Note**  
+The example uses the `time_zone` Aurora MySQL parameter\. For Aurora PostgreSQL, use the `timezone` parameter instead\.
 
 #### JSON<a name="aws-resource-rds-dbcluster--examples----json"></a>
 

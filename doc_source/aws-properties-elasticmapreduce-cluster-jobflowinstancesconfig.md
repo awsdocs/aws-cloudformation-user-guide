@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CoreInstanceGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-coreinstancegroup)" : [InstanceGroupConfig](aws-properties-elasticmapreduce-cluster-instancegroupconfig.md),
   "[Ec2KeyName](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2keyname)" : String,
   "[Ec2SubnetId](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetid)" : String,
+  "[Ec2SubnetIds](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetids)" : [ String, ... ],
   "[EmrManagedMasterSecurityGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-emrmanagedmastersecuritygroup)" : String,
   "[EmrManagedSlaveSecurityGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-emrmanagedslavesecuritygroup)" : String,
   "[HadoopVersion](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-hadoopversion)" : String,
@@ -41,6 +42,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     [InstanceGroupConfig](aws-properties-elasticmapreduce-cluster-instancegroupconfig.md)
   [Ec2KeyName](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2keyname): String
   [Ec2SubnetId](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetid): String
+  [Ec2SubnetIds](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetids): 
+    - String
   [EmrManagedMasterSecurityGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-emrmanagedmastersecuritygroup): String
   [EmrManagedSlaveSecurityGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-emrmanagedslavesecuritygroup): String
   [HadoopVersion](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-hadoopversion): String
@@ -91,13 +94,19 @@ The name of the EC2 key pair that can be used to ssh to the master node as the u
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ec2SubnetId`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetid"></a>
-Applies to clusters that use the uniform instance group configuration\. To launch the cluster in Amazon Virtual Private Cloud \(Amazon VPC\), set this parameter to the identifier of the Amazon VPC subnet where you want the cluster to launch\. If you do not specify this value, the cluster launches in the normal Amazon Web Services cloud, outside of an Amazon VPC, if the account launching the cluster supports EC2 Classic networks in the region where the cluster launches\.  
-Amazon VPC currently does not support cluster compute quadruple extra large \(cc1\.4xlarge\) instances\. Thus you cannot specify the cc1\.4xlarge instance type for clusters launched in an Amazon VPC\.  
+Applies to clusters that use the uniform instance group configuration\. To launch the cluster in Amazon Virtual Private Cloud \(Amazon VPC\), set this parameter to the identifier of the Amazon VPC subnet where you want the cluster to launch\. If you do not specify this value and your account supports EC2\-Classic, the cluster launches in EC2\-Classic\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `256`  
 *Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Ec2SubnetIds`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetids"></a>
+Applies to clusters that use the instance fleet configuration\. When multiple EC2 subnet IDs are specified, Amazon EMR evaluates them and launches instances in the optimal subnet\.  
+The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\.
+*Required*: No  
+*Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EmrManagedMasterSecurityGroup`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-emrmanagedmastersecuritygroup"></a>

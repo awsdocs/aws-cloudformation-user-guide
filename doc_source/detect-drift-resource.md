@@ -8,36 +8,28 @@ When performing drift detection on a resource, CloudFormation also updates the o
 
 1. Open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
-1. From the list of stacks, select the stack that contains the resource\. 
+1. From the list of stacks, select the stack that contains the resource\. CloudFormation displays the stack details for that stack\.
 
-   CloudFormation displays the **Stack Detail** page\.
+1. In the left navigation pane, under **Stacks**, choose **Drifts**\.
 
-1. Under **Resources**, choose **Drift details page**\.
-
-1. Under **Resource drift details**, choose the resource and then select **Detect drift for resource**\.  
+1. Under **Resource drift status**, choose the resource and then select **Detect drift for resource**\.  
 ![\[The Resource drift status section of the Drift Details page, with a resource selected and the Detect drift for resource button highlighted.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacks-drifts-resource-drift-status-detect.png)
 
    CloudFormation performs drift detection on the selected resource\. If successful, CloudFormation updates the resource's drift status, and the overall stack drift status, if necessary\. CloudFormation also updates time stamp for when drift detection was last performed on the resource, and the stack as a whole\. If the resource has been modified, CloudFormation displays detailed drift information about the expected and current property values of the resource\.
 
 1. Review the drift detection results for the resource\.
 
-   To display resources based on their drift status\.
-
-   1. To display resources based on their drift status\.
-
-      1. For **Filter**, select the drift status for the resources you want to view\. To view all resources, select **All**\.
-
    1. To view the details on a modified resource\.
 
-      1. Choose the expand icon next to the resource's logical ID \(1\)\.
+     1. With the modified resource selected, select **View drift details**\.
 
-        CloudFormation displays the resource's expected \(2\) and current \(3\) property values, and any differences between the two \(4\)\.
+       CloudFormation displays the drift details for that resource, including the resource's expected and current property values, and any differences between the two\. 
 
-        To highlight a difference, in the **Differences** column choose the property name, or **Select all** to highlight all differences \(5\)\.
-        + Added properties are highlighted in green in the **Current** column\.
-        + Deleted properties are highlighted in red in the **Expected** column\.
-        + Properties whose value have been changed are highlighted in yellow in the both **Expected** and **Current** columns\.  
-![\[The Resource drift status section of the Drift Details page, which contains drift information for each resource in the stack that supports drift detection. Details include drift status and expected and current property values.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacks-drifts-drift-details-differences.png)
+       To highlight a difference, in the **Differences** section select the property name\.
+       + Added properties are highlighted in green in the **Current** column of the **Details** section\.
+       + Deleted properties are highlighted in red in the **Expected** column of the **Details** section\.
+       + Properties whose value have been changed are highlighted in yellow in the both **Expected** and **Current** columns\.  
+![\[The Resource drift status section of the Drift Details page, which contains drift information for each resource in the stack that supports drift detection. Details include drift status and expected and current property values.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacks-drifts-drift-details-differences-1.png)
 
 **To detect drift on an individual resource using the AWS CLI**
 + To detect drift on an individual resource using the AWS CLI, use the `aws cloudformation detect-stack-resource-drift` command\. Specify the logical ID of the resource, as well as the stack in which it is contained\.

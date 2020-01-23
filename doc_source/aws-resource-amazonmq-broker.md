@@ -34,6 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BrokerName](#cfn-amazonmq-broker-brokername)" : String,
       "[Configuration](#cfn-amazonmq-broker-configuration)" : [ConfigurationId](aws-properties-amazonmq-broker-configurationid.md),
       "[DeploymentMode](#cfn-amazonmq-broker-deploymentmode)" : String,
+      "[EncryptionOptions](#cfn-amazonmq-broker-encryptionoptions)" : [EncryptionOptions](aws-properties-amazonmq-broker-encryptionoptions.md),
       "[EngineType](#cfn-amazonmq-broker-enginetype)" : String,
       "[EngineVersion](#cfn-amazonmq-broker-engineversion)" : String,
       "[HostInstanceType](#cfn-amazonmq-broker-hostinstancetype)" : String,
@@ -41,6 +42,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MaintenanceWindowStartTime](#cfn-amazonmq-broker-maintenancewindowstarttime)" : [MaintenanceWindow](aws-properties-amazonmq-broker-maintenancewindow.md),
       "[PubliclyAccessible](#cfn-amazonmq-broker-publiclyaccessible)" : Boolean,
       "[SecurityGroups](#cfn-amazonmq-broker-securitygroups)" : [ String, ... ],
+      "[StorageType](#cfn-amazonmq-broker-storagetype)" : String,
       "[SubnetIds](#cfn-amazonmq-broker-subnetids)" : [ String, ... ],
       "[Tags](#cfn-amazonmq-broker-tags)" : [ [TagsEntry](aws-properties-amazonmq-broker-tagsentry.md), ... ],
       "[Users](#cfn-amazonmq-broker-users)" : [ [User](aws-properties-amazonmq-broker-user.md), ... ]
@@ -58,6 +60,8 @@ Properties:
   [Configuration](#cfn-amazonmq-broker-configuration): 
     [ConfigurationId](aws-properties-amazonmq-broker-configurationid.md)
   [DeploymentMode](#cfn-amazonmq-broker-deploymentmode): String
+  [EncryptionOptions](#cfn-amazonmq-broker-encryptionoptions): 
+    [EncryptionOptions](aws-properties-amazonmq-broker-encryptionoptions.md)
   [EngineType](#cfn-amazonmq-broker-enginetype): String
   [EngineVersion](#cfn-amazonmq-broker-engineversion): String
   [HostInstanceType](#cfn-amazonmq-broker-hostinstancetype): String
@@ -68,6 +72,7 @@ Properties:
   [PubliclyAccessible](#cfn-amazonmq-broker-publiclyaccessible): Boolean
   [SecurityGroups](#cfn-amazonmq-broker-securitygroups): 
     - String
+  [StorageType](#cfn-amazonmq-broker-storagetype): String
   [SubnetIds](#cfn-amazonmq-broker-subnetids): 
     - String
   [Tags](#cfn-amazonmq-broker-tags): 
@@ -97,9 +102,17 @@ A list of information about the configuration\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeploymentMode`  <a name="cfn-amazonmq-broker-deploymentmode"></a>
-The deployment mode of the broker\.  
+The deployment mode of the broker\. Available values:  
++ `SINGLE_INSTANCE`
++ `ACTIVE_STANDBY_MULTI_AZ`
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EncryptionOptions`  <a name="cfn-amazonmq-broker-encryptionoptions"></a>
+Encryption options for the broker\.  
+*Required*: No  
+*Type*: [EncryptionOptions](aws-properties-amazonmq-broker-encryptionoptions.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineType`  <a name="cfn-amazonmq-broker-enginetype"></a>
@@ -118,7 +131,7 @@ The version of the broker engine\. For a list of supported engine versions, see 
 The broker's instance type\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Logs`  <a name="cfn-amazonmq-broker-logs"></a>
 Enables Amazon CloudWatch logging for brokers\.  
@@ -142,6 +155,12 @@ Enables connections from applications outside of the VPC that hosts the broker's
 The list of rules \(1 minimum, 125 maximum\) that authorize connections to brokers\.  
 *Required*: No  
 *Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`StorageType`  <a name="cfn-amazonmq-broker-storagetype"></a>
+The broker's storage type\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-amazonmq-broker-subnetids"></a>

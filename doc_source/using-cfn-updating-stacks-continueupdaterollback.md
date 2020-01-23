@@ -13,8 +13,7 @@ If you use nested stacks, rolling back the parent stack will attempt to roll bac
 
 1. Open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
-1. Select the stack that you want to update, choose **Actions**, and then choose **Continue Update Rollback**\.  
-![\[The Continue Update Rollback option in the Actions menu.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cfn-update-stack-continue-update-rollback.png)
+1. Select the stack that you want to update, choose **Stack actions**, and then choose **Continue update rollback**\.
 
    If none of the solutions in the [troubleshooting guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html#troubleshooting-errors-update-rollback-failed) worked, you can use the advanced option to skip the resources that AWS CloudFormation can't successfully roll back\. You must [look up](cfn-console-view-stack-data-resources.md) and type the logical IDs of the resources that you want to skip\. Specify only resources that went into the `UPDATE_FAILED` state during the UpdateRollback and not during the forward update\.
 **Warning**  

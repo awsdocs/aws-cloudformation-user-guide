@@ -1,8 +1,8 @@
 # AWS::Route53Resolver::ResolverEndpoint<a name="aws-resource-route53resolver-resolverendpoint"></a>
 
-Creates a resolver endpoint\. There are two types of resolver endpoints, inbound and outbound:
-+ An *inbound resolver endpoint* forwards DNS queries to the DNS service for a VPC from your network or another VPC\.
-+ An *outbound resolver endpoint* forwards DNS queries from the DNS service for a VPC to your network or another VPC\.
+Creates a Resolver endpoint\. There are two types of Resolver endpoints, inbound and outbound:
++ An *inbound Resolver endpoint* forwards DNS queries to the DNS service for a VPC from your network\.
++ An *outbound Resolver endpoint* forwards DNS queries from the DNS service for a VPC to your network\.
 
 ## Syntax<a name="aws-resource-route53resolver-resolverendpoint-syntax"></a>
 
@@ -41,9 +41,9 @@ Properties:
 ## Properties<a name="aws-resource-route53resolver-resolverendpoint-properties"></a>
 
 `Direction`  <a name="cfn-route53resolver-resolverendpoint-direction"></a>
-Indicates whether the resolver endpoint allows inbound or outbound DNS queries:  
-+  `INBOUND`: allows DNS queries to your VPC from your network or another VPC
-+  `OUTBOUND`: allows DNS queries from your VPC to your network or another VPC
+Indicates whether the Resolver endpoint allows inbound or outbound DNS queries:  
++  `INBOUND`: allows DNS queries to your VPC from your network
++  `OUTBOUND`: allows DNS queries from your VPC to your network
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `INBOUND | OUTBOUND`  

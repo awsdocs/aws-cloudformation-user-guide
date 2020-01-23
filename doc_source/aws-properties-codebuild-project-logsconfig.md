@@ -1,6 +1,6 @@
 # AWS::CodeBuild::Project LogsConfig<a name="aws-properties-codebuild-project-logsconfig"></a>
 
- `LogsConfig` is a property of the [AWS CodeBuild Project](https://docs.aws.amazon.com/aws-properties-codebuild-project-source.html) resource that specifies information about logs for a build project\. These can be logs in Amazon CloudWatch Logs, built in a specified S3 bucket, or both\. 
+ `LogsConfig` is a property of the [AWS CodeBuild Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html) resource that specifies information about logs for a build project\. These can be logs in Amazon CloudWatch Logs, built in a specified S3 bucket, or both\. 
 
 ## Syntax<a name="aws-properties-codebuild-project-logsconfig-syntax"></a>
 

@@ -59,3 +59,158 @@ When you pass the logical ID of an `AWS::AutoScalingPlans::ScalingPlan` resource
 `arn:aws:autoscaling:region:123456789012:scalingPlan:scalingPlanName/plan-name:scalingPlanVersion/plan-version `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
+
+## Examples<a name="aws-resource-autoscalingplans-scalingplan--examples"></a>
+
+### Scaling Plan<a name="aws-resource-autoscalingplans-scalingplan--examples--Scaling_Plan"></a>
+
+The following example creates a scaling plan named `myScalingPlan` for an existing Auto Scaling group whose name you specify \(along with other values\) when launching the stack using this template\. It specifies the `TagFilters` property as the application source and enables predictive scaling and dynamic scaling\. 
+
+#### JSON<a name="aws-resource-autoscalingplans-scalingplan--examples--Scaling_Plan--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion":"2010-09-09",
+  "Parameters":{
+    "myTagKey":{
+      "Type":"String"
+    },
+    "myTagValue":{
+      "Type":"String"
+    },
+    "myASGroup":{
+      "Type":"String",
+      "Description":"Name of the Auto Scaling group"
+    },
+    "ASGMinCapacity":{
+      "Type":"Number"
+    },
+    "ASGMaxCapacity":{
+      "Type":"Number"
+    },
+    "ASGTargetUtilization":{
+      "Type":"Number",
+      "Default":"50.0"
+    },
+    "ASGEstimatedInstanceWarmup":{
+      "Type":"Number",
+      "Default":"600"
+    }
+  },
+  "Resources":{
+    "myScalingPlan":{
+      "Type":"AWS::AutoScalingPlans::ScalingPlan",
+      "Properties":{
+        "ApplicationSource":{
+          "TagFilters":[
+            {
+              "Key":{
+                "Ref":"myTagKey"
+              },
+              "Values":[{
+                "Ref":"myTagValue"
+              }]
+            }
+          ]
+        },
+        "ScalingInstructions":[
+          {
+            "MinCapacity":{
+              "Ref":"ASGMinCapacity"
+            }, 
+            "MaxCapacity":{
+              "Ref":"ASGMaxCapacity"
+            }, 
+            "ServiceNamespace":"autoscaling",
+            "ScalableDimension":"autoscaling:autoScalingGroup:DesiredCapacity",
+            "ResourceId":{
+              "Fn::Join":[
+                "/",
+                [
+                  "autoScalingGroup",
+                  {
+                    "Ref":"myASGroup"
+                  }
+                ]
+              ]
+            },
+            "TargetTrackingConfigurations":[
+              {
+                "PredefinedScalingMetricSpecification":{
+                  "PredefinedScalingMetricType":"ASGAverageCPUUtilization"
+                },
+                "TargetValue":{
+                  "Ref":"ASGTargetUtilization"
+                }, 
+                "EstimatedInstanceWarmup":{
+                  "Ref":"ASGEstimatedInstanceWarmup"
+                }
+              }
+            ],
+            "PredefinedLoadMetricSpecification":{
+              "PredefinedLoadMetricType":"ASGTotalCPUUtilization"
+            },
+            "PredictiveScalingMode":"ForecastAndScale",
+            "PredictiveScalingMaxCapacityBehavior":"SetMaxCapacityAboveForecastCapacity",
+            "PredictiveScalingMaxCapacityBuffer":25,
+            "ScheduledActionBufferTime":600
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-autoscalingplans-scalingplan--examples--Scaling_Plan--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Parameters:
+  myTagKey:
+    Type: String
+  myTagValue:
+    Type: String
+  myASGroup:
+    Type: String
+    Description: Name of the Auto Scaling group
+  ASGMinCapacity:
+    Type: Number
+  ASGMaxCapacity:
+    Type: Number
+  ASGTargetUtilization:
+    Type: Number
+    Default: 50.0
+  ASGEstimatedInstanceWarmup:
+    Type: Number
+    Default: 600
+Resources:
+  myScalingPlan:
+    Type: AWS::AutoScalingPlans::ScalingPlan
+    Properties:
+      ApplicationSource:
+        TagFilters:
+          - Key: !Ref myTagKey
+            Values:
+              - !Ref myTagValue
+      ScalingInstructions:
+        - MinCapacity: !Ref ASGMinCapacity
+          MaxCapacity: !Ref ASGMaxCapacity
+          ServiceNamespace: autoscaling
+          ScalableDimension: autoscaling:autoScalingGroup:DesiredCapacity
+          ResourceId: !Join
+            - /
+            - - autoScalingGroup
+              - !Ref myASGroup
+          TargetTrackingConfigurations:
+            - PredefinedScalingMetricSpecification:
+                PredefinedScalingMetricType: "ASGAverageCPUUtilization"
+              TargetValue: !Ref ASGTargetUtilization
+              EstimatedInstanceWarmup: !Ref ASGEstimatedInstanceWarmup
+          PredefinedLoadMetricSpecification:
+            PredefinedLoadMetricType: "ASGTotalCPUUtilization"
+          PredictiveScalingMode: "ForecastAndScale"
+          PredictiveScalingMaxCapacityBehavior: "SetMaxCapacityAboveForecastCapacity"
+          PredictiveScalingMaxCapacityBuffer: 25
+          ScheduledActionBufferTime: 600
+```

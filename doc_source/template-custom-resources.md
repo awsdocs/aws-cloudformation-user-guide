@@ -53,7 +53,8 @@ In this example, `ResourceProperties` allows AWS CloudFormation to create a cust
 
    In the response, the custom resource provider can also include name\-value pairs that the template developer can access\. For example, the response can include output data if the request succeeded or an error message if the request failed\. For more information about responses, see [Custom Resource Response Objects](crpg-ref-responses.md)\.
 **Important**  
-If the name\-value pairs contain sensitive information, you should use the `NoEcho` field to mask the output of the custom resource\. Otherwise, the values are visible through APIs that surface property values \(such as `DescribeStackEvents`\)\.
+If the name\-value pairs contain sensitive information, you should use the `NoEcho` field to mask the output of the custom resource\. Otherwise, the values are visible through APIs that surface property values \(such as `DescribeStackEvents`\)\.  
+For more information about using `NoEcho` to mask sensitive information, see the [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
    The custom resource provider is responsible for listening and responding to the request\. For example, for Amazon SNS notifications, the custom resource provider must listen and respond to notifications that are sent to a specific topic ARN\. AWS CloudFormation waits and listens for a response in the pre\-signed URL location\.
 

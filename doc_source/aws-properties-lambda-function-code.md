@@ -58,7 +58,42 @@ For versioned objects, the version of the deployment package object to use\.
 `ZipFile`  <a name="cfn-lambda-function-code-zipfile"></a>
 \(Node\.js and Python\) The source code of your Lambda function\. If you include your function source inline with this parameter, AWS CloudFormation places it in a file named `index` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/deployment-package-v2.html)\. For the `Handler` property, the first part of the handler identifier must be `index`\. For example, `index.handler`\.  
 Your source code can contain up to 4096 characters\. For JSON, you must escape quotes and special characters such as newline \(`\n`\) with a backslash\.  
-If you specify a function that interacts with an AWS CloudFormation custom resource, you don't have to write your own functions to send responses to the custom resource that invoked the function\. AWS CloudFormation provides a response module \(`cfn-module`\) that simplifies sending responses\.  
+If you specify a function that interacts with an AWS CloudFormation custom resource, you don't have to write your own functions to send responses to the custom resource that invoked the function\. AWS CloudFormation provides a response module \([cfn\-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html)\) that simplifies sending responses\. See [Using AWS Lambda with AWS CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html) for details\.   
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-lambda-function-code--examples"></a>
+
+### Inline Function<a name="aws-properties-lambda-function-code--examples--Inline_Function"></a>
+
+Inline Node\.js function that uses the cfn\-response library\.
+
+#### YAML<a name="aws-properties-lambda-function-code--examples--Inline_Function--yaml"></a>
+
+```
+      Code:
+        ZipFile: |
+          var aws = require('aws-sdk')
+          var response = require('cfn-response')
+          exports.handler = function(event, context) {
+              console.log("REQUEST RECEIVED:\n" + JSON.stringify(event))
+              // For Delete requests, immediately send a SUCCESS response.
+              if (event.RequestType == "Delete") {
+                  response.send(event, context, "SUCCESS")
+                  return
+              }
+              var responseStatus = "FAILED"
+              var responseData = {}
+              var functionName = event.ResourceProperties.FunctionName
+              var lambda = new aws.Lambda()
+              lambda.invoke({ FunctionName: functionName }, function(err, invokeResult) {
+                  if (err) {
+                      responseData = {Error: "Invoke call failed"}
+                      console.log(responseData.Error + ":\n", err)
+                  }
+                  else responseStatus = "SUCCESS"
+                  response.send(event, context, responseStatus, responseData)
+              })
+          }
+```

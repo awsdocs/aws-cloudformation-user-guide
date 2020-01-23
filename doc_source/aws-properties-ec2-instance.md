@@ -4,14 +4,6 @@ Specifies an EC2 instance\.
 
 If an Elastic IP address is attached to your instance, AWS CloudFormation reattaches the Elastic IP address after it updates the instance\. For more information about updating stacks, see [ AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)\.
 
-You can download templates that show how to use `AWS::EC2::Instance` to create a virtual private cloud \(VPC\):
-+ [Single instance in a single subnet](https://s3.amazonaws.com/cloudformation-templates-us-east-1/vpc_single_instance_in_subnet.template)
-+ [Multiple subnets with ELB and Auto Scaling group](https://s3.amazonaws.com/cloudformation-templates-us-east-1/vpc_multiple_subnets.template)
-
-For more information about an `AWS::EC2::Instance` that has an IAM instance profile, see: [Create an EC2 instance with an associated instance profile](https://s3.amazonaws.com/cloudformation-templates-us-east-1/ec2_instance_with_instance_profile.template)\.
-
-For more information about Amazon EC2 template examples, see: [Amazon EC2 Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2.html)\.
-
 ## Syntax<a name="aws-properties-ec2-instance-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -26,12 +18,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Affinity](#cfn-ec2-instance-affinity)" : String,
       "[AvailabilityZone](#cfn-ec2-instance-availabilityzone)" : String,
       "[BlockDeviceMappings](#cfn-ec2-instance-blockdevicemappings)" : [ [BlockDeviceMapping](aws-properties-ec2-blockdev-mapping.md), ... ],
+      "[CpuOptions](#cfn-ec2-instance-cpuoptions)" : [CpuOptions](aws-properties-ec2-instance-cpuoptions.md),
       "[CreditSpecification](#cfn-ec2-instance-creditspecification)" : [CreditSpecification](aws-properties-ec2-instance-creditspecification.md),
       "[DisableApiTermination](#cfn-ec2-instance-disableapitermination)" : Boolean,
       "[EbsOptimized](#cfn-ec2-instance-ebsoptimized)" : Boolean,
       "[ElasticGpuSpecifications](#cfn-ec2-instance-elasticgpuspecifications)" : [ [ElasticGpuSpecification](aws-properties-ec2-instance-elasticgpuspecification.md), ... ],
       "[ElasticInferenceAccelerators](#cfn-ec2-instance-elasticinferenceaccelerators)" : [ [ElasticInferenceAccelerator](aws-properties-ec2-instance-elasticinferenceaccelerator.md), ... ],
+      "[HibernationOptions](#cfn-ec2-instance-hibernationoptions)" : [HibernationOptions](aws-properties-ec2-instance-hibernationoptions.md),
       "[HostId](#cfn-ec2-instance-hostid)" : String,
+      "[HostResourceGroupArn](#cfn-ec2-instance-hostresourcegrouparn)" : String,
       "[IamInstanceProfile](#cfn-ec2-instance-iaminstanceprofile)" : String,
       "[ImageId](#cfn-ec2-instance-imageid)" : String,
       "[InstanceInitiatedShutdownBehavior](#cfn-ec2-instance-instanceinitiatedshutdownbehavior)" : String,
@@ -70,6 +65,8 @@ Properties:
   [AvailabilityZone](#cfn-ec2-instance-availabilityzone): String
   [BlockDeviceMappings](#cfn-ec2-instance-blockdevicemappings): 
     - [BlockDeviceMapping](aws-properties-ec2-blockdev-mapping.md)
+  [CpuOptions](#cfn-ec2-instance-cpuoptions): 
+    [CpuOptions](aws-properties-ec2-instance-cpuoptions.md)
   [CreditSpecification](#cfn-ec2-instance-creditspecification): 
     [CreditSpecification](aws-properties-ec2-instance-creditspecification.md)
   [DisableApiTermination](#cfn-ec2-instance-disableapitermination): Boolean
@@ -78,7 +75,10 @@ Properties:
     - [ElasticGpuSpecification](aws-properties-ec2-instance-elasticgpuspecification.md)
   [ElasticInferenceAccelerators](#cfn-ec2-instance-elasticinferenceaccelerators): 
     - [ElasticInferenceAccelerator](aws-properties-ec2-instance-elasticinferenceaccelerator.md)
+  [HibernationOptions](#cfn-ec2-instance-hibernationoptions): 
+    [HibernationOptions](aws-properties-ec2-instance-hibernationoptions.md)
   [HostId](#cfn-ec2-instance-hostid): String
+  [HostResourceGroupArn](#cfn-ec2-instance-hostresourcegrouparn): String
   [IamInstanceProfile](#cfn-ec2-instance-iaminstanceprofile): String
   [ImageId](#cfn-ec2-instance-imageid): String
   [InstanceInitiatedShutdownBehavior](#cfn-ec2-instance-instanceinitiatedshutdownbehavior): String
@@ -119,12 +119,14 @@ Properties:
 `AdditionalInfo`  <a name="cfn-ec2-instance-additionalinfo"></a>
 Reserved\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Affinity`  <a name="cfn-ec2-instance-affinity"></a>
 Indicates whether the instance is associated with a dedicated host\. If you want the instance to always restart on the same host on which it was launched, specify `host`\. If you want the instance to restart on any available host, but try to launch onto the last host it ran on \(on a best\-effort basis\), specify `default`\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `AvailabilityZone`  <a name="cfn-ec2-instance-availabilityzone"></a>
 The Availability Zone of the instance\.  
@@ -134,19 +136,27 @@ If not specified, an Availability Zone will be automatically chosen for you base
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BlockDeviceMappings`  <a name="cfn-ec2-instance-blockdevicemappings"></a>
-The block device mapping entries\.  
+The block device mapping entries that defines the block devices to attach to the instance at launch\.  
+By default, the block devices specified in the block device mapping for the AMI are used\. You can override the AMI block device mapping using the instance block device mapping\. For the root volume, you can only override the volume size, volume type, and `DeleteOnTermination` setting\. After the instance is running, you can only modify the `DeleteOnTermination` settings of the attached EBS volumes\.  
 *Required*: No  
-*Type*: List of [BlockDeviceMapping](aws-properties-ec2-blockdev-mapping.md)
+*Type*: List of [BlockDeviceMapping](aws-properties-ec2-blockdev-mapping.md)  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
+
+`CpuOptions`  <a name="cfn-ec2-instance-cpuoptions"></a>
+The CPU options for the instance\.  
+*Required*: No  
+*Type*: [CpuOptions](aws-properties-ec2-instance-cpuoptions.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CreditSpecification`  <a name="cfn-ec2-instance-creditspecification"></a>
-The credit option for CPU usage of the T2 or T3 instance\. Valid values are `standard` and `unlimited`\. To change this attribute after launch, use [ ModifyInstanceCreditSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceCreditSpecification.html)\. For more information, see [Burstable Performance Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
-Default: `standard` \(T2 instances\) or `unlimited` \(T3 instances\)  
+The credit option for CPU usage of the burstable performance instance\. Valid values are `standard` and `unlimited`\. To change this attribute after launch, use [ ModifyInstanceCreditSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceCreditSpecification.html)\. For more information, see [Burstable Performance Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+Default: `standard` \(T2 instances\) or `unlimited` \(T3/T3a instances\)  
 *Required*: No  
 *Type*: [CreditSpecification](aws-properties-ec2-instance-creditspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DisableApiTermination`  <a name="cfn-ec2-instance-disableapitermination"></a>
-If you set this parameter to `true`, you can't terminate the instance using the Amazon EC2 console, CLI, or API; otherwise, you can\. To change this attribute to `false` after launch, use ModifyInstanceAttribute\. Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate`, you can terminate the instance by running the shutdown command from the instance\.  
+If you set this parameter to `true`, you can't terminate the instance using the Amazon EC2 console, CLI, or API; otherwise, you can\. To change this attribute after launch, use [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html)\. Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate`, you can terminate the instance by running the shutdown command from the instance\.  
 Default: `false`   
 *Required*: No  
 *Type*: Boolean  
@@ -156,7 +166,8 @@ Default: `false`
 Indicates whether the instance is optimized for Amazon EBS I/O\. This optimization provides dedicated throughput to Amazon EBS and an optimized configuration stack to provide optimal Amazon EBS I/O performance\. This optimization isn't available with all instance types\. Additional usage charges apply when using an EBS\-optimized instance\.  
 Default: `false`   
 *Required*: No  
-*Type*: Boolean
+*Type*: Boolean  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `ElasticGpuSpecifications`  <a name="cfn-ec2-instance-elasticgpuspecifications"></a>
 An elastic GPU to associate with the instance\. An Elastic GPU is a GPU resource that you can attach to your Windows instance to accelerate the graphics performance of your applications\. For more information, see [ Amazon EC2 Elastic GPUs](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
@@ -170,10 +181,23 @@ An elastic inference accelerator to associate with the instance\. Elastic infere
 *Type*: List of [ElasticInferenceAccelerator](aws-properties-ec2-instance-elasticinferenceaccelerator.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`HibernationOptions`  <a name="cfn-ec2-instance-hibernationoptions"></a>
+Indicates whether the instance is enabled for hibernation\.  
+*Required*: No  
+*Type*: [HibernationOptions](aws-properties-ec2-instance-hibernationoptions.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `HostId`  <a name="cfn-ec2-instance-hostid"></a>
 If you specify host for the `Affinity` property, the ID of a dedicated host that the instance is associated with\. If you don't specify an ID, Amazon EC2 launches the instance onto any available, compatible dedicated host in your account\. This type of launch is called an untargeted launch\. Note that for untargeted launches, you must have a compatible, dedicated host available to successfully launch instances\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
+
+`HostResourceGroupArn`  <a name="cfn-ec2-instance-hostresourcegrouparn"></a>
+The ARN of the host resource group in which to launch the instances\. If you specify a host resource group ARN, omit the **Tenancy** parameter or set it to `host`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IamInstanceProfile`  <a name="cfn-ec2-instance-iaminstanceprofile"></a>
 The IAM instance profile\.  
@@ -182,8 +206,8 @@ The IAM instance profile\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ImageId`  <a name="cfn-ec2-instance-imageid"></a>
-The ID of the AMI, which you can get by calling DescribeImages\. An AMI ID is required to launch an instance and must be specified here or in a launch template\.  
-*Required*: No  
+The ID of the AMI\. An AMI ID is required to launch an instance and must be specified here or in a launch template\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -200,7 +224,8 @@ The instance type\. For more information, see [Instance Types](https://docs.aws.
 Default: `m1.small`   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `a1.2xlarge | a1.4xlarge | a1.large | a1.medium | a1.xlarge | c1.medium | c1.xlarge | c3.2xlarge | c3.4xlarge | c3.8xlarge | c3.large | c3.xlarge | c4.2xlarge | c4.4xlarge | c4.8xlarge | c4.large | c4.xlarge | c5.18xlarge | c5.2xlarge | c5.4xlarge | c5.9xlarge | c5.large | c5.xlarge | c5d.18xlarge | c5d.2xlarge | c5d.4xlarge | c5d.9xlarge | c5d.large | c5d.xlarge | c5n.18xlarge | c5n.2xlarge | c5n.4xlarge | c5n.9xlarge | c5n.large | c5n.xlarge | cc1.4xlarge | cc2.8xlarge | cg1.4xlarge | cr1.8xlarge | d2.2xlarge | d2.4xlarge | d2.8xlarge | d2.xlarge | f1.16xlarge | f1.2xlarge | f1.4xlarge | g2.2xlarge | g2.8xlarge | g3.16xlarge | g3.4xlarge | g3.8xlarge | g3s.xlarge | h1.16xlarge | h1.2xlarge | h1.4xlarge | h1.8xlarge | hi1.4xlarge | hs1.8xlarge | i2.2xlarge | i2.4xlarge | i2.8xlarge | i2.xlarge | i3.16xlarge | i3.2xlarge | i3.4xlarge | i3.8xlarge | i3.large | i3.metal | i3.xlarge | i3en.12xlarge | i3en.24xlarge | i3en.2xlarge | i3en.3xlarge | i3en.6xlarge | i3en.large | i3en.metal | i3en.xlarge | m1.large | m1.medium | m1.small | m1.xlarge | m2.2xlarge | m2.4xlarge | m2.xlarge | m3.2xlarge | m3.large | m3.medium | m3.xlarge | m4.10xlarge | m4.16xlarge | m4.2xlarge | m4.4xlarge | m4.large | m4.xlarge | m5.12xlarge | m5.24xlarge | m5.2xlarge | m5.4xlarge | m5.large | m5.metal | m5.xlarge | m5a.12xlarge | m5a.24xlarge | m5a.2xlarge | m5a.4xlarge | m5a.large | m5a.xlarge | m5ad.12xlarge | m5ad.16xlarge | m5ad.24xlarge | m5ad.2xlarge | m5ad.4xlarge | m5ad.8xlarge | m5ad.large | m5ad.xlarge | m5d.12xlarge | m5d.24xlarge | m5d.2xlarge | m5d.4xlarge | m5d.large | m5d.metal | m5d.xlarge | p2.16xlarge | p2.8xlarge | p2.xlarge | p3.16xlarge | p3.2xlarge | p3.8xlarge | p3dn.24xlarge | r3.2xlarge | r3.4xlarge | r3.8xlarge | r3.large | r3.xlarge | r4.16xlarge | r4.2xlarge | r4.4xlarge | r4.8xlarge | r4.large | r4.xlarge | r5.12xlarge | r5.24xlarge | r5.2xlarge | r5.4xlarge | r5.large | r5.metal | r5.xlarge | r5a.12xlarge | r5a.24xlarge | r5a.2xlarge | r5a.4xlarge | r5a.large | r5a.xlarge | r5ad.12xlarge | r5ad.16xlarge | r5ad.24xlarge | r5ad.2xlarge | r5ad.4xlarge | r5ad.8xlarge | r5ad.large | r5ad.xlarge | r5d.12xlarge | r5d.24xlarge | r5d.2xlarge | r5d.4xlarge | r5d.large | r5d.metal | r5d.xlarge | t1.micro | t2.2xlarge | t2.large | t2.medium | t2.micro | t2.nano | t2.small | t2.xlarge | t3.2xlarge | t3.large | t3.medium | t3.micro | t3.nano | t3.small | t3.xlarge | t3a.2xlarge | t3a.large | t3a.medium | t3a.micro | t3a.nano | t3a.small | t3a.xlarge | u-12tb1.metal | u-6tb1.metal | u-9tb1.metal | x1.16xlarge | x1.32xlarge | x1e.16xlarge | x1e.2xlarge | x1e.32xlarge | x1e.4xlarge | x1e.8xlarge | x1e.xlarge | z1d.12xlarge | z1d.2xlarge | z1d.3xlarge | z1d.6xlarge | z1d.large | z1d.metal | z1d.xlarge`
+*Allowed Values*: `a1.2xlarge | a1.4xlarge | a1.large | a1.medium | a1.metal | a1.xlarge | c1.medium | c1.xlarge | c3.2xlarge | c3.4xlarge | c3.8xlarge | c3.large | c3.xlarge | c4.2xlarge | c4.4xlarge | c4.8xlarge | c4.large | c4.xlarge | c5.12xlarge | c5.18xlarge | c5.24xlarge | c5.2xlarge | c5.4xlarge | c5.9xlarge | c5.large | c5.metal | c5.xlarge | c5d.12xlarge | c5d.18xlarge | c5d.24xlarge | c5d.2xlarge | c5d.4xlarge | c5d.9xlarge | c5d.large | c5d.metal | c5d.xlarge | c5n.18xlarge | c5n.2xlarge | c5n.4xlarge | c5n.9xlarge | c5n.large | c5n.xlarge | cc1.4xlarge | cc2.8xlarge | cg1.4xlarge | cr1.8xlarge | d2.2xlarge | d2.4xlarge | d2.8xlarge | d2.xlarge | f1.16xlarge | f1.2xlarge | f1.4xlarge | g2.2xlarge | g2.8xlarge | g3.16xlarge | g3.4xlarge | g3.8xlarge | g3s.xlarge | g4dn.12xlarge | g4dn.16xlarge | g4dn.2xlarge | g4dn.4xlarge | g4dn.8xlarge | g4dn.xlarge | h1.16xlarge | h1.2xlarge | h1.4xlarge | h1.8xlarge | hi1.4xlarge | hs1.8xlarge | i2.2xlarge | i2.4xlarge | i2.8xlarge | i2.xlarge | i3.16xlarge | i3.2xlarge | i3.4xlarge | i3.8xlarge | i3.large | i3.metal | i3.xlarge | i3en.12xlarge | i3en.24xlarge | i3en.2xlarge | i3en.3xlarge | i3en.6xlarge | i3en.large | i3en.metal | i3en.xlarge | inf1.24xlarge | inf1.2xlarge | inf1.6xlarge | inf1.xlarge | m1.large | m1.medium | m1.small | m1.xlarge | m2.2xlarge | m2.4xlarge | m2.xlarge | m3.2xlarge | m3.large | m3.medium | m3.xlarge | m4.10xlarge | m4.16xlarge | m4.2xlarge | m4.4xlarge | m4.large | m4.xlarge | m5.12xlarge | m5.16xlarge | m5.24xlarge | m5.2xlarge | m5.4xlarge | m5.8xlarge | m5.large | m5.metal | m5.xlarge | m5a.12xlarge | m5a.16xlarge | m5a.24xlarge | m5a.2xlarge | m5a.4xlarge | m5a.8xlarge | m5a.large | m5a.xlarge | m5ad.12xlarge | m5ad.16xlarge | m5ad.24xlarge | m5ad.2xlarge | m5ad.4xlarge | m5ad.8xlarge | m5ad.large | m5ad.xlarge | m5d.12xlarge | m5d.16xlarge | m5d.24xlarge | m5d.2xlarge | m5d.4xlarge | m5d.8xlarge | m5d.large | m5d.metal | m5d.xlarge | m5dn.12xlarge | m5dn.16xlarge | m5dn.24xlarge | m5dn.2xlarge | m5dn.4xlarge | m5dn.8xlarge | m5dn.large | m5dn.xlarge | m5n.12xlarge | m5n.16xlarge | m5n.24xlarge | m5n.2xlarge | m5n.4xlarge | m5n.8xlarge | m5n.large | m5n.xlarge | p2.16xlarge | p2.8xlarge | p2.xlarge | p3.16xlarge | p3.2xlarge | p3.8xlarge | p3dn.24xlarge | r3.2xlarge | r3.4xlarge | r3.8xlarge | r3.large | r3.xlarge | r4.16xlarge | r4.2xlarge | r4.4xlarge | r4.8xlarge | r4.large | r4.xlarge | r5.12xlarge | r5.16xlarge | r5.24xlarge | r5.2xlarge | r5.4xlarge | r5.8xlarge | r5.large | r5.metal | r5.xlarge | r5a.12xlarge | r5a.16xlarge | r5a.24xlarge | r5a.2xlarge | r5a.4xlarge | r5a.8xlarge | r5a.large | r5a.xlarge | r5ad.12xlarge | r5ad.16xlarge | r5ad.24xlarge | r5ad.2xlarge | r5ad.4xlarge | r5ad.8xlarge | r5ad.large | r5ad.xlarge | r5d.12xlarge | r5d.16xlarge | r5d.24xlarge | r5d.2xlarge | r5d.4xlarge | r5d.8xlarge | r5d.large | r5d.metal | r5d.xlarge | r5dn.12xlarge | r5dn.16xlarge | r5dn.24xlarge | r5dn.2xlarge | r5dn.4xlarge | r5dn.8xlarge | r5dn.large | r5dn.xlarge | r5n.12xlarge | r5n.16xlarge | r5n.24xlarge | r5n.2xlarge | r5n.4xlarge | r5n.8xlarge | r5n.large | r5n.xlarge | t1.micro | t2.2xlarge | t2.large | t2.medium | t2.micro | t2.nano | t2.small | t2.xlarge | t3.2xlarge | t3.large | t3.medium | t3.micro | t3.nano | t3.small | t3.xlarge | t3a.2xlarge | t3a.large | t3a.medium | t3a.micro | t3a.nano | t3a.small | t3a.xlarge | u-12tb1.metal | u-18tb1.metal | u-24tb1.metal | u-6tb1.metal | u-9tb1.metal | x1.16xlarge | x1.32xlarge | x1e.16xlarge | x1e.2xlarge | x1e.32xlarge | x1e.4xlarge | x1e.8xlarge | x1e.xlarge | z1d.12xlarge | z1d.2xlarge | z1d.3xlarge | z1d.6xlarge | z1d.large | z1d.metal | z1d.xlarge`  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Ipv6AddressCount`  <a name="cfn-ec2-instance-ipv6addresscount"></a>
 \[EC2\-VPC\] The number of IPv6 addresses to associate with the primary network interface\. Amazon EC2 chooses the IPv6 addresses from the range of your subnet\. You cannot specify this option and the option to assign specific IPv6 addresses in the same request\. You can specify this option if you've specified a minimum number of instances to launch\.  
@@ -220,7 +245,8 @@ You cannot specify this option and the network interfaces option in the same req
 The ID of the kernel\.  
 We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more information, see [ PV\-GRUB](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html) in the *Amazon Elastic Compute Cloud User Guide*\.
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `KeyName`  <a name="cfn-ec2-instance-keyname"></a>
 The name of the key pair\. You can create a key pair using [CreateKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateKeyPair.html) or [ImportKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportKeyPair.html)\.  
@@ -274,13 +300,15 @@ If you make an update to an instance that requires replacement, you must assign 
 The ID of the RAM disk to select\. Some kernels require additional drivers at launch\. Check the kernel requirements for information about whether you need to specify a RAM disk\. To find kernel requirements, go to the AWS Resource Center and search for the kernel ID\.  
 We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more information, see [ PV\-GRUB](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html) in the *Amazon Elastic Compute Cloud User Guide*\.
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `SecurityGroupIds`  <a name="cfn-ec2-instance-securitygroupids"></a>
 The IDs of the security groups\. You can create a security group using [CreateSecurityGroup](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSecurityGroup.html)\.  
 If you specify a network interface, you must specify any security groups as part of the network interface\.  
 *Required*: Conditional  
-*Type*: List of String
+*Type*: List of String  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `SecurityGroups`  <a name="cfn-ec2-instance-securitygroups"></a>
 \[EC2\-Classic, default VPC\] The names of the security groups\. For a nondefault VPC, you must use security group IDs instead\.  
@@ -305,7 +333,7 @@ You can currently associate only one document with an instance\.
 
 `SubnetId`  <a name="cfn-ec2-instance-subnetid"></a>
 \[EC2\-VPC\] The ID of the subnet to launch the instance into\.  
-You cannot specify this option and the network interfaces option in the same request\.  
+If you specify a network interface, you must specify any subnets as part of the network interface\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -317,15 +345,17 @@ The tags to apply to the resources during launch\. You can only tag instances an
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tenancy`  <a name="cfn-ec2-instance-tenancy"></a>
-The tenancy of the instance \(if the instance is running in a VPC\)\. An instance with a tenancy of `dedicated` runs on single\-tenant hardware\. The `host` tenancy is not supported for the ImportInstance command\.  
+The tenancy of the instance \(if the instance is running in a VPC\)\. An instance with a tenancy of `dedicated` runs on single\-tenant hardware\.   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `dedicated | default | host`
+*Allowed Values*: `dedicated | default | host`  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `UserData`  <a name="cfn-ec2-instance-userdata"></a>
 The user data to make available to the instance\. For more information, see [Running Commands on Your Linux Instance at Launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) \(Linux\) and [Adding User Data](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data) \(Windows\)\. If you are using a command line tool, base64\-encoding is performed for you, and you can load the text from a file\. Otherwise, you must provide base64\-encoded text\. User data is limited to 16 KB\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Volumes`  <a name="cfn-ec2-instance-volumes"></a>
 The volumes to attach to the instance\.  
@@ -460,5 +490,5 @@ Ec2Instance:
 ```
 
 ## See Also<a name="aws-properties-ec2-instance--seealso"></a>
-+  [ RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotOptionsRequest.html) in the *Amazon EC2 API Reference* 
++  [ RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) in the *Amazon EC2 API Reference* 
 +  [ EBS\-Optimized Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#EBSOptimized) in the *Amazon EC2 API Reference* 

@@ -1,6 +1,6 @@
 # Template Reference<a name="template-reference"></a>
 
-This section details the supported resources, type names, intrinsic functions and pseudo parameters used in AWS CloudFormation templates\.
+This section details the supported resources, type names, intrinsic functions, and pseudo parameters used in AWS CloudFormation templates\.
 
 **Topics**
 + [AWS Resource and Property Types Reference](aws-template-resource-type-ref.md)

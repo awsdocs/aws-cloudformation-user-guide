@@ -28,7 +28,7 @@ Best practices are recommendations that can help you use AWS CloudFormation more
 
 ## Organize Your Stacks By Lifecycle and Ownership<a name="organizingstacks"></a>
 
-Use the lifecycle and ownership of your AWS resources to help you decide what resources should go in each stack\. Normally, you might put all your resources in one stack, but as your stack grows in scale and broadens in scope, managing a single stack can be cumbersome and time consuming\. By grouping resources with common lifecycles and ownership, owners can make changes to their set of resources by using their own process and schedule without affecting other resources\.
+Use the lifecycle and ownership of your AWS resources to help you decide what resources should go in each stack\. Initially, you might put all your resources in one stack, but as your stack grows in scale and broadens in scope, managing a single stack can be cumbersome and time consuming\. By grouping resources with common lifecycles and ownership, owners can make changes to their set of resources by using their own process and schedule without affecting other resources\.
 
 For example, imagine a team of developers and engineers who own a website that is hosted on autoscaling instances behind a load balancer\. Because the website has its own lifecycle and is maintained by the website team, you can create a stack for the website and its resources\. Now imagine that the website also uses back\-end databases, where the databases are in a separate stack that are owned and maintained by database administrators\. Whenever the website team or database team needs to update their resources, they can do so without affecting each other's stack\. If all resources were in a single stack, coordinating and communicating updates can be difficult\.
 
@@ -66,9 +66,21 @@ For example, assume that you have a load balancer configuration that you use for
 
 ## Do Not Embed Credentials in Your Templates<a name="creds"></a>
 
-Rather than embedding sensitive information in your AWS CloudFormation templates, use input parameters to pass in information whenever you create or update a stack\. If you do, make sure to use the `NoEcho` property to obfuscate the parameter value\.
+Rather than embedding sensitive information in your AWS CloudFormation templates, we strongly suggest you do one of the following: 
++ Use input parameters to pass in information whenever you create or update a stack, using the `NoEcho` property to obfuscate the parameter value\.
++ Use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the Systems Manager Parameter Store or Secrets Manager\. 
+
+### Using Input Parameters with NoEcho for Credentials<a name="creds-noecho"></a>
+
+Define input parameters in your stack template, so that users can pass in sensitive information whenever they create or update a stack\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events\. 
 
 For example, suppose your stack creates a new database instance\. When the database is created, AWS CloudFormation needs to pass a database administrator password\. You can pass in a password by using an input parameter instead of embedding it in your template\. For more information, see [Parameters](parameters-section-structure.md)\.
+
+### Using Dynamic References to Retrieve Credentials<a name="creds-dynamic-reference"></a>
+
+Dynamic references provide a compact, powerful way for you to reference external values that are stored and managed in other services, such as the Systems Manager Parameter Store or Secrets Manager\. When you use a dynamic reference, CloudFormation retrieves the value of the specified reference when necessary during stack and change set operations, and passes the value to the appropriate resource\. However, CloudFormation never stores the actual parameter value\. For more information, see [Using Dynamic References to Specify Template Values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)\.
+
+For more information on defining template parameters, see [Parameters](parameters-section-structure.md)\.
 
 ## Use AWS\-Specific Parameter Types<a name="parmtypes"></a>
 

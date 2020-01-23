@@ -1,6 +1,6 @@
 # AWS::ECS::TaskDefinition Volume<a name="aws-properties-ecs-taskdefinition-volumes"></a>
 
-The `Volume` property specifies a data volume used in a task definition\. For tasks that use a Docker volume, specify a `DockerVolumeConfiguration`\. For tasks that use a bind mount host volume, specify a `host` and optional `sourcePath`\. For more information, see [Using Data Volumes in Tasks](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html)\.
+The `Volume` property specifies a data volume used in a task definition\. For tasks that use a Docker volume, specify a `DockerVolumeConfiguration`\. For tasks that use a bind mount host volume, specify a `host` and optional `sourcePath`\. For more information, see [Using Data Volumes in Tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html)\.
 
 ## Syntax<a name="aws-properties-ecs-taskdefinition-volumes-syntax"></a>
 
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-taskdefinition-volumes-properties"></a>
 
 `DockerVolumeConfiguration`  <a name="cfn-ecs-taskdefinition-volume-dockervolumeconfiguration"></a>
-This parameter is specified when you are using Docker volumes\. Docker volumes are only supported when you are using the EC2 launch type\. Windows containers only support the use of the `local` driver\. To use bind mounts, specify a `host` instead\.  
+This parameter is specified when you are using Docker volumes\. Docker volumes are only supported when you are using the EC2 launch type\. Windows containers only support the use of the `local` driver\. To use bind mounts, specify the `host` parameter instead\.  
 *Required*: No  
 *Type*: [DockerVolumeConfiguration](aws-properties-ecs-taskdefinition-dockervolumeconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

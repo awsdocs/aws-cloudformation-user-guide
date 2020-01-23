@@ -394,7 +394,7 @@ Metadata:
       AggregatorAccount:
         default: Aggregator account
       AggregatorRegion:
-        default: Aggregator account
+        default: Aggregator region
       SourceAccounts:
         default: Source accounts
       SourceRegions:
@@ -521,7 +521,7 @@ Resources:
     Type: AWS::Config::ConfigurationAggregator
     Condition: CreateAggregator
     Properties:
-      Name: default
+    ConfigurationAggregatorName: default
       AccountAggregationSources:
         - AccountIds: !Ref SourceAccounts
           AwsRegions: !Ref SourceRegions

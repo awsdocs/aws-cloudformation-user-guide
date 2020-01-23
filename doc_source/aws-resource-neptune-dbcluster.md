@@ -22,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DBClusterIdentifier](#cfn-neptune-dbcluster-dbclusteridentifier)" : String,
       "[DBClusterParameterGroupName](#cfn-neptune-dbcluster-dbclusterparametergroupname)" : String,
       "[DBSubnetGroupName](#cfn-neptune-dbcluster-dbsubnetgroupname)" : String,
+      "[EnableCloudwatchLogsExports](#cfn-neptune-dbcluster-enablecloudwatchlogsexports)" : [ String, ... ],
       "[IamAuthEnabled](#cfn-neptune-dbcluster-iamauthenabled)" : Boolean,
       "[KmsKeyId](#cfn-neptune-dbcluster-kmskeyid)" : String,
       "[Port](#cfn-neptune-dbcluster-port)" : Integer,
@@ -46,6 +47,8 @@ Properties:
   [DBClusterIdentifier](#cfn-neptune-dbcluster-dbclusteridentifier): String
   [DBClusterParameterGroupName](#cfn-neptune-dbcluster-dbclusterparametergroupname): String
   [DBSubnetGroupName](#cfn-neptune-dbcluster-dbsubnetgroupname): String
+  [EnableCloudwatchLogsExports](#cfn-neptune-dbcluster-enablecloudwatchlogsexports): 
+    - String
   [IamAuthEnabled](#cfn-neptune-dbcluster-iamauthenabled): Boolean
   [KmsKeyId](#cfn-neptune-dbcluster-kmskeyid): String
   [Port](#cfn-neptune-dbcluster-port): Integer
@@ -93,6 +96,12 @@ Specifies information on the subnet group associated with the DB cluster, includ
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`EnableCloudwatchLogsExports`  <a name="cfn-neptune-dbcluster-enablecloudwatchlogsexports"></a>
+Specifies a list of log types that are enabled for export to CloudWatch Logs\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `IamAuthEnabled`  <a name="cfn-neptune-dbcluster-iamauthenabled"></a>
 True if mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts is enabled, and otherwise false\.  
 *Required*: No  
@@ -125,7 +134,9 @@ Specifies the weekly time range during which system maintenance can occur, in Un
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnapshotIdentifier`  <a name="cfn-neptune-dbcluster-snapshotidentifier"></a>
-Contains the identifier of the source DB cluster if this DB cluster is a Read Replica\.  
+Specifies the identifier for a DB cluster snapshot\. Must match the identifier of an existing snapshot\.  
+After you restore a DB cluster using a `SnapshotIdentifier`, you must specify the same `SnapshotIdentifier` for any future updates to the DB cluster\. When you specify this property for an update, the DB cluster is not restored from the snapshot again, and the data in the database is not changed\.  
+However, if you don't specify the `SnapshotIdentifier`, an empty DB cluster is created, and the original DB cluster is deleted\. If you specify a property that is different from the previous snapshot restore property, the DB cluster is restored from the snapshot specified by the `SnapshotIdentifier`, and the original DB cluster is deleted\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

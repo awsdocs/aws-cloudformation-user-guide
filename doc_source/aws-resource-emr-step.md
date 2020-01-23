@@ -35,10 +35,9 @@ Properties:
 ## Properties<a name="aws-resource-emr-step-properties"></a>
 
 `ActionOnFailure`  <a name="cfn-elasticmapreduce-step-actiononfailure"></a>
-The action to take when the cluster step fails\. Possible values are TERMINATE\_CLUSTER, CANCEL\_AND\_WAIT, and CONTINUE\. TERMINATE\_JOB\_FLOW is provided for backward compatibility\. We recommend using TERMINATE\_CLUSTER instead\.  
+This specifies what action to take when the cluster step fails\. Possible values are `CANCEL_AND_WAIT` and `CONTINUE`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CANCEL_AND_WAIT | CONTINUE | TERMINATE_CLUSTER | TERMINATE_JOB_FLOW`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HadoopJarStep`  <a name="cfn-elasticmapreduce-step-hadoopjarstep"></a>

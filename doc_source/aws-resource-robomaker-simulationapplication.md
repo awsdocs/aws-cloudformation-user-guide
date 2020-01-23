@@ -65,7 +65,7 @@ The rendering engine for the simulation application\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RobotSoftwareSuite`  <a name="cfn-robomaker-simulationapplication-robotsoftwaresuite"></a>
-The robot software suite of the simulation application\.  
+The robot software suite \(ROS distribution\) used by the simulation application\.  
 *Required*: Yes  
 *Type*: [RobotSoftwareSuite](aws-properties-robomaker-simulationapplication-robotsoftwaresuite.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

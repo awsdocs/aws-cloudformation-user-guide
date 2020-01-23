@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualNode Backend<a name="aws-properties-appmesh-virtualnode-backend"></a>
 
-An object representing the backends that a virtual node is expected to send outbound traffic to\. 
+An object that represents the backends that a virtual node is expected to send outbound traffic to\. 
 
 ## Syntax<a name="aws-properties-appmesh-virtualnode-backend-syntax"></a>
 

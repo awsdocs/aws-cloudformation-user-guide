@@ -12,26 +12,40 @@ To learn how to override stack set parameter values when you create stack instan
 
 1. Open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
-1. At the top of the page, choose **StackSets**\. On the StackSets home page, select the stack set that you created in [Create a New Stack Set](stacksets-getting-started-create.md)\. In that walkthrough, we created a stack set named `my-awsconfig-stackset`\.
+1. From the navigation pane, choose **StackSets**\. On the StackSets page, select the stack set that you created in [Create a New Stack Set](stacksets-getting-started-create.md)\. In that walkthrough, we created a stack set named `my-awsconfig-stackset`\.
 
-1. With the stack set selected, choose **Manage stacks in StackSet** from the **Actions** menu\.
+1. With the stack set selected, choose **Override StackSet parameters** from the **Actions** menu\.  
+![\[Manage stacks in stack set page\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacksets-action-override-parameters.png)
 
-1. Choose **Override parameters for selected stacks**, and then choose **Next**
+1. On the **Set deployment options** page, provide the accounts and regions for the stack instances whose parameters you want to override\. 
 
-1. On the **Set deployment options** page, in the **Specify accounts** area, choose **Update stacks in account**\.
+   AWS CloudFormation will deploy stacks in the specified accounts within the first region, then moves on to the next, and so on, as long as a region's deployment failures do not exceed a specified failure tolerance\.
 
-1. In the **Account** text box, paste some or all target account IDs that you used to create your stack set in [Create a New Stack Set](stacksets-getting-started-create.md)\.
+   1. For **Accounts**, choose **Deploy stacks in accounts**\. Paste some or all the target account IDs that you used to create your stack set in [Create a New Stack Set](stacksets-getting-started-create.md)\.
 
-1. In the **Specify regions** area, choose all regions \(hold down **Ctrl** while selecting regions to select multiple regions\), and then choose **Add** to add all stack set regions to the list\. 
+   1. For **Specify regions**, add one or more of the regions into which you have deployed stack instances for this stack set\. 
 
-1. In the **Deployment options** area, leave the default value of **1** and **By number** for **Maximum concurrent accounts**, and change the value of **Failure tolerance** to **1**\. Be sure **Failure tolerance** is also set to **By number**\. Choose **Next**\.
+      If you add multiple regions, the order of the regions under **Specify regions** determines their deployment order\.
 
-1. On the **Set overrides** page, in the **Delivery Channel Configuration** section, for the **Snapshot delivery frequency** parameter check **Override existing value** and then select **6hours**\. You are instructing AWS CloudFormation to override the **Snapshot delivery frequency** parameter value and use **6hours** for all the stack instances for the specified accounts in the specified regions\. Choose **Next**\.
+   1. For **Deployment options**: 
+      + For **Maximum concurrent accounts**, keep the default values of **Number** and **1**\.
+
+        This means that AWS CloudFormation deploys your stack in only one account at one time\.
+      + For **Failure tolerance**, keep the defauls of **Number** and **0**\.
+
+        This means that a maximum of one stack deployment can fail in one of your specified regions before AWS CloudFormation stops deployment in the current region, and cancels deployment in remaining regions\.
+
+      Choose **Next**\.
+
+1. On the **Specify Overrides** page, check the **Frequency** parameter and then choose **Override StackSet value** from the **Edit override value** menu\.  
+![\[Select parameters to override and then select Override StackSet value\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-override-parameters-edit-value.png)
+
+1. In **Override StackSet parameter values**, select **6hours** for the **Frequency** parameter, and choose **Save changes**\. You are instructing AWS CloudFormation to override the **Frequency** parameter value and use **6hours** for all the stack instances for the specified accounts in the specified regions\. Choose **Next**\.
 **Note**  
-To set any overridden parameters back to using the value specified in the stack set, select **Revert all parameters to StackSet values**\. Doing so removes all overridden values once you update the stack instances\.
+To set any overridden parameters back to using the value specified in the stack set, check all parameters and choose **Set to StackSet value** from the **Edit override value** menu\. Doing so removes all overridden values once you update the stack instances\.
 
-1. Click **Next**\.
+1. On the **Review** page, review your choices\. Note that the **Frequency** parameter displays a value in the **Override value** column, indicating that its value has been overridden at the stack level\.
 
-1. On the **Review** page, review your choices\. Note that the **Snapshot delivery frequency** parameter displays an **override** icon, indicating that its value has been overridden at the stack level\.
+   Before you can override parameters for these stack instances, you must fill the check box in the **Capabilities** area to acknowledge that some of the resources that you are creating with the stack set might require new IAM resources and permissions\. For more information about potentially required permissions, see [Acknowledging IAM Resources in AWS CloudFormation Templates](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-capabilities) in this guide\. When you are are ready, choose **Submit**\.
 
-   Choose **Edit** in the upper right corner of each section to go back and make any changes, if necessary\. When you are ready to update your stacks with the overridden parameter, choose **Update stacks**\.
+1. AWS CloudFormation starts updating your stack instances\. View the progress and status of the stack instances in the stack set details page that opens when you choose **Submit**\. 

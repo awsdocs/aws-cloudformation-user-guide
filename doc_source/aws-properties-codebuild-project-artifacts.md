@@ -117,7 +117,9 @@ For example, if `path` is set to `MyArtifacts`, `namespaceType` is set to `NONE`
 
 `Type`  <a name="cfn-codebuild-project-artifacts-type"></a>
 The type of build output artifact\. Valid values include:  
-+  `CODEPIPELINE`: The build project has build output generated through AWS CodePipeline\.
++  `CODEPIPELINE`: The build project has build output generated through AWS CodePipeline\. 
+**Note**  
+The `CODEPIPELINE` type is not supported for `secondaryArtifacts`\.
 +  `NO_ARTIFACTS`: The build project does not produce any build output\.
 +  `S3`: The build project stores build output in Amazon Simple Storage Service \(Amazon S3\)\.
 *Required*: Yes  

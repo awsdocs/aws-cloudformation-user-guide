@@ -41,6 +41,7 @@ Properties:
 
 `Certificates`  <a name="cfn-elasticloadbalancingv2-listener-certificates"></a>
 The default SSL server certificate\. You must provide exactly one certificate if the listener protocol is HTTPS or TLS\.  
+To create a certificate list for the listener, use [AWS::ElasticLoadBalancingV2::ListenerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)\.  
 *Required*: Conditional  
 *Type*: List of [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates-1.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -66,14 +67,24 @@ The port on which the load balancer is listening\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Protocol`  <a name="cfn-elasticloadbalancingv2-listener-protocol"></a>
-The protocol for connections from clients to the load balancer\. For Application Load Balancers, the supported protocols are HTTP and HTTPS\. For Network Load Balancers, the supported protocols are TCP and TLS\.  
+The protocol for connections from clients to the load balancer\. For Application Load Balancers, the supported protocols are HTTP and HTTPS\. For Network Load Balancers, the supported protocols are TCP, TLS, UDP, and TCP\_UDP\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `HTTP | HTTPS | TCP | TLS`  
+*Allowed Values*: `HTTP | HTTPS | TCP | TCP_UDP | TLS | UDP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SslPolicy`  <a name="cfn-elasticloadbalancingv2-listener-sslpolicy"></a>
-\[HTTPS and TLS listeners\] The security policy that defines which ciphers and protocols are supported\. The default is the current predefined security policy\.  
+\[HTTPS and TLS listeners\] The security policy that defines which protocols and ciphers are supported\. The following are the possible values:  
++  `ELBSecurityPolicy-2016-08` 
++  `ELBSecurityPolicy-TLS-1-0-2015-04` 
++  `ELBSecurityPolicy-TLS-1-1-2017-01` 
++  `ELBSecurityPolicy-TLS-1-2-2017-01` 
++  `ELBSecurityPolicy-TLS-1-2-Ext-2018-06` 
++  `ELBSecurityPolicy-FS-2018-06` 
++  `ELBSecurityPolicy-FS-1-1-2019-08` 
++  `ELBSecurityPolicy-FS-1-2-2019-08` 
++  `ELBSecurityPolicy-FS-1-2-Res-2019-08` 
+For more information, see [Security Policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies) in the *Application Load Balancers Guide* and [Security Policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/create-tls-listener.html#describe-ssl-policies) in the *Network Load Balancers Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -101,11 +112,11 @@ HTTPlistener:
      DefaultActions:
        - Type: "redirect"
          RedirectConfig:
-           Protocol: "HTTPS",
-           Port: "443",
-           Host: "#{host}",
-           Path: "/#{path}",
-           Query: "#{query}",
+           Protocol: "HTTPS"
+           Port: "443"
+           Host: "#{host}"
+           Path: "/#{path}"
+           Query: "#{query}"
            StatusCode: "HTTP_301"
      LoadBalancerArn: !Ref myLoadBalancer
      Port: 80

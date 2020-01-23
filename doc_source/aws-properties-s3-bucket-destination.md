@@ -1,6 +1,6 @@
 # AWS::S3::Bucket Destination<a name="aws-properties-s3-bucket-destination"></a>
 
-Specifies information about where to publish analysis or configuration results for an Amazon S3 bucket\.
+Specifies information about where to publish analysis or configuration results for an Amazon S3 bucket and S3 Replication Time Control \(S3 RTC\)\.
 
 ## Syntax<a name="aws-properties-s3-bucket-destination-syntax"></a>
 

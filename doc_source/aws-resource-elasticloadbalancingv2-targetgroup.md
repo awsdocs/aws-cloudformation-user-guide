@@ -27,8 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Protocol](#cfn-elasticloadbalancingv2-targetgroup-protocol)" : String,
       "[Tags](#cfn-elasticloadbalancingv2-targetgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TargetGroupAttributes](#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes)" : [ [TargetGroupAttribute](aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.md), ... ],
-      "[TargetType](#cfn-elasticloadbalancingv2-targetgroup-targettype)" : String,
       "[Targets](#cfn-elasticloadbalancingv2-targetgroup-targets)" : [ [TargetDescription](aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.md), ... ],
+      "[TargetType](#cfn-elasticloadbalancingv2-targetgroup-targettype)" : String,
       "[UnhealthyThresholdCount](#cfn-elasticloadbalancingv2-targetgroup-unhealthythresholdcount)" : Integer,
       "[VpcId](#cfn-elasticloadbalancingv2-targetgroup-vpcid)" : String
     }
@@ -56,9 +56,9 @@ Properties:
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TargetGroupAttributes](#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes): 
     - [TargetGroupAttribute](aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.md)
-  [TargetType](#cfn-elasticloadbalancingv2-targetgroup-targettype): String
   [Targets](#cfn-elasticloadbalancingv2-targetgroup-targets): 
     - [TargetDescription](aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.md)
+  [TargetType](#cfn-elasticloadbalancingv2-targetgroup-targettype): String
   [UnhealthyThresholdCount](#cfn-elasticloadbalancingv2-targetgroup-unhealthythresholdcount): Integer
   [VpcId](#cfn-elasticloadbalancingv2-targetgroup-vpcid): String
 ```
@@ -94,10 +94,10 @@ The port the load balancer uses when performing health checks on targets\. The d
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckProtocol`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthcheckprotocol"></a>
-The protocol the load balancer uses when performing health checks on targets\. For Application Load Balancers, the default is HTTP\. For Network Load Balancers, the default is TCP\. The TCP protocol is supported for health checks only if the protocol of the target group is TCP or TLS\. The TLS protocol is not supported for health checks\.  
+The protocol the load balancer uses when performing health checks on targets\. For Application Load Balancers, the default is HTTP\. For Network Load Balancers, the default is TCP\. The TCP protocol is supported for health checks only if the protocol of the target group is TCP, TLS, UDP, or TCP\_UDP\. The TLS, UDP, and TCP\_UDP protocols are not supported for health checks\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `HTTP | HTTPS | TCP | TLS`  
+*Allowed Values*: `HTTP | HTTPS | TCP | TCP_UDP | TLS | UDP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckTimeoutSeconds`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthchecktimeoutseconds"></a>
@@ -138,10 +138,10 @@ The port on which the targets receive traffic\. This port is used unless you spe
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Protocol`  <a name="cfn-elasticloadbalancingv2-targetgroup-protocol"></a>
-The protocol to use for routing traffic to the targets\. For Application Load Balancers, the supported protocols are HTTP and HTTPS\. For Network Load Balancers, the supported protocols are TCP and TLS\. If the target is a Lambda function, this parameter does not apply\.  
+The protocol to use for routing traffic to the targets\. For Application Load Balancers, the supported protocols are HTTP and HTTPS\. For Network Load Balancers, the supported protocols are TCP, TLS, UDP, or TCP\_UDP\. A TCP\_UDP listener must be associated with a TCP\_UDP target group\. If the target is a Lambda function, this parameter does not apply\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `HTTP | HTTPS | TCP | TLS`  
+*Allowed Values*: `HTTP | HTTPS | TCP | TCP_UDP | TLS | UDP`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-elasticloadbalancingv2-targetgroup-tags"></a>
@@ -156,21 +156,21 @@ The attributes\.
 *Type*: List of [TargetGroupAttribute](aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Targets`  <a name="cfn-elasticloadbalancingv2-targetgroup-targets"></a>
+The targets\.  
+*Required*: No  
+*Type*: List of [TargetDescription](aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `TargetType`  <a name="cfn-elasticloadbalancingv2-targetgroup-targettype"></a>
 The type of target that you must specify when registering targets with this target group\. You can't specify targets for a target group using more than one target type\.  
-+  `instance` \- Targets are specified by instance ID\. This is the default value\.
++  `instance` \- Targets are specified by instance ID\. This is the default value\. If the target group protocol is UDP or TCP\_UDP, the target type must be `instance`\.
 +  `ip` \- Targets are specified by IP address\. You can specify IP addresses from the subnets of the virtual private cloud \(VPC\) for the target group, the RFC 1918 range \(10\.0\.0\.0/8, 172\.16\.0\.0/12, and 192\.168\.0\.0/16\), and the RFC 6598 range \(100\.64\.0\.0/10\)\. You can't specify publicly routable IP addresses\.
 +  `lambda` \- The target groups contains a single Lambda function\.
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `instance | ip | lambda`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`Targets`  <a name="cfn-elasticloadbalancingv2-targetgroup-targets"></a>
-The targets\.  
-*Required*: No  
-*Type*: List of [TargetDescription](aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UnhealthyThresholdCount`  <a name="cfn-elasticloadbalancingv2-targetgroup-unhealthythresholdcount"></a>
 The number of consecutive health check failures required before considering a target unhealthy\. For target groups with a protocol of HTTP or HTTPS, the default is 2\. For target groups with a protocol of TCP or TLS, this value must be the same as the healthy threshold count\. If the target type is `lambda`, the default is 2\.  
@@ -181,8 +181,8 @@ The number of consecutive health check failures required before considering a ta
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcId`  <a name="cfn-elasticloadbalancingv2-targetgroup-vpcid"></a>
-The identifier of the virtual private cloud \(VPC\)\. If the target is a Lambda function, this parameter does not apply\.  
-*Required*: No  
+The identifier of the virtual private cloud \(VPC\)\. If the target is a Lambda function, this parameter does not apply\. Otherwise, this parameter is required\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -255,7 +255,7 @@ Resources:
               "isBase64Encoded": False,
               "headers": {
                 "Content-Type": "text/html; charset=utf-8"
-            }
+              }
             }
 
             response['body'] = """<html>
@@ -263,9 +263,9 @@ Resources:
             <title>Hello World!</title>
             <style>
             html, body {
-            margin: 0; padding: 0;
-            font-family: arial; font-weight: 700; font-size: 3em;
-            text-align: center;
+              margin: 0; padding: 0;
+              font-family: arial; font-weight: 700; font-size: 3em;
+              text-align: center;
             }
             </style>
             </head>

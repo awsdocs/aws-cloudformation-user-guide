@@ -27,7 +27,7 @@ The Amazon Resource Name \(ARN\) that identifies the stack that contains the cus
 ResourceProperties  
 This field contains the contents of the `Properties` object sent by the template developer\. Its contents are defined by the custom resource provider\.
 
-### Example<a name="w4669ab1c17c25c17c19c11b5b6"></a>
+### Example<a name="w5508ab1c20c25c17c19c11b5b6"></a>
 
 ```
 {
@@ -67,13 +67,14 @@ PhysicalResourceId
 This value should be an identifier unique to the custom resource vendor, and can be up to 1 Kb in size\. The value must be a non\-empty string and must be identical for all responses for the same resource\.
 
 NoEcho  
-Optional\. Indicates whether to mask the output of the custom resource when retrieved by using the `Fn::GetAtt` function\. If set to `true`, all returned values are masked with asterisks \(\*\*\*\*\*\)\. The default value is `false`\.
+Optional\. Indicates whether to mask the output of the custom resource when retrieved by using the `Fn::GetAtt` function\. If set to `true`, all returned values are masked with asterisks \(\*\*\*\*\*\)\. The default value is `false`\.  
+For more information about using `NoEcho` to mask sensitive information, see the [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
 Data  
 Optional\. The custom resource provider\-defined name\-value pairs to send with the response\. You can access the values provided here by name in the template with `Fn::GetAtt`\.  
 If the name\-value pairs contain sensitive information, you should use the `NoEcho` field to mask the output of the custom resource\. Otherwise, the values are visible through APIs that surface property values \(such as `DescribeStackEvents`\)\.
 
-#### Example<a name="w4669ab1c17c25c17c19c11b7b2b6"></a>
+#### Example<a name="w5508ab1c20c25c17c19c11b7b2b6"></a>
 
 ```
 {
@@ -111,7 +112,7 @@ The Amazon Resource Name \(ARN\) that identifies the stack that contains the cus
 PhysicalResourceId  
 This value should be an identifier unique to the custom resource vendor, and can be up to 1 Kb in size\. The value must be a non\-empty string and must be identical for all responses for the same resource\.
 
-#### Example<a name="w4669ab1c17c25c17c19c11b7b4b6"></a>
+#### Example<a name="w5508ab1c20c25c17c19c11b7b4b6"></a>
 
 ```
 {

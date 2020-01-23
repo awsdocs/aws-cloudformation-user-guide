@@ -1,6 +1,6 @@
 # AWS::S3::Bucket SourceSelectionCriteria<a name="aws-properties-s3-bucket-sourceselectioncriteria"></a>
 
-A container that describes additional filters for identifying the source objects that you want to replicate\. You can choose to enable or disable the replication of these objects\. Currently, Amazon S3 supports only the filter that you can specify for objects created with server\-side encryption using an AWS KMS\-Managed Key \(SSE\-KMS\)\.
+A container that describes additional filters for identifying the source objects that you want to replicate\. You can choose to enable or disable the replication of these objects\. Currently, Amazon S3 supports only the filter that you can specify for objects created with server\-side encryption using a customer master key \(CMK\) stored in AWS Key Management Service \(SSE\-KMS\)\.
 
 ## Syntax<a name="aws-properties-s3-bucket-sourceselectioncriteria-syntax"></a>
 

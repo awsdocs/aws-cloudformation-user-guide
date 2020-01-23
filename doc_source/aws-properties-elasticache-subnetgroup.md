@@ -67,23 +67,32 @@ When the logical ID of this resource is provided to the Ref intrinsic function, 
 #### JSON<a name="aws-properties-elasticache-subnetgroup--examples----json"></a>
 
 ```
-"SubnetGroup" : {
-            "Type" : "AWS::ElastiCache::SubnetGroup",
-            "Properties" : {
-            "Description" : "Cache Subnet Group",
-            "SubnetIds" : [ { "Ref" : "Subnet1" }, { "Ref" : "Subnet2" } ]
-            }
-            }
+{
+    "SubnetGroup": {
+        "Type": "AWS::ElastiCache::SubnetGroup",
+        "Properties": {
+            "Description": "Cache Subnet Group",
+            "SubnetIds": [
+                {
+                    "Ref": "Subnet1"
+                },
+                {
+                    "Ref": "Subnet2"
+                }
+            ]
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-properties-elasticache-subnetgroup--examples----yaml"></a>
 
 ```
- SubnetGroup: 
-            Type: AWS::ElastiCache::SubnetGroup
-            Properties: 
-            Description: "Cache Subnet Group"
-            SubnetIds: 
-            - Ref: "Subnet1"
-            - Ref: "Subnet2"
+SubnetGroup:
+  Type: 'AWS::ElastiCache::SubnetGroup'
+  Properties:
+    Description: Cache Subnet Group
+    SubnetIds:
+      - !Ref Subnet1
+      - !Ref Subnet2
 ```

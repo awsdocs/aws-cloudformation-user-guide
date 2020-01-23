@@ -13,8 +13,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::StepFunctions::StateMachine",
   "Properties" : {
       "[DefinitionString](#cfn-stepfunctions-statemachine-definitionstring)" : String,
+      "[LoggingConfiguration](#cfn-stepfunctions-statemachine-loggingconfiguration)" : [LoggingConfiguration](aws-properties-stepfunctions-statemachine-loggingconfiguration.md),
       "[RoleArn](#cfn-stepfunctions-statemachine-rolearn)" : String,
       "[StateMachineName](#cfn-stepfunctions-statemachine-statemachinename)" : String,
+      "[StateMachineType](#cfn-stepfunctions-statemachine-statemachinetype)" : String,
       "[Tags](#cfn-stepfunctions-statemachine-tags)" : [ [TagsEntry](aws-properties-stepfunctions-statemachine-tagsentry.md), ... ]
     }
 }
@@ -27,8 +29,11 @@ Type: AWS::StepFunctions::StateMachine
 Properties: 
   [DefinitionString](#cfn-stepfunctions-statemachine-definitionstring): 
     String
+  [LoggingConfiguration](#cfn-stepfunctions-statemachine-loggingconfiguration): 
+    [LoggingConfiguration](aws-properties-stepfunctions-statemachine-loggingconfiguration.md)
   [RoleArn](#cfn-stepfunctions-statemachine-rolearn): String
   [StateMachineName](#cfn-stepfunctions-statemachine-statemachinename): String
+  [StateMachineType](#cfn-stepfunctions-statemachine-statemachinetype): String
   [Tags](#cfn-stepfunctions-statemachine-tags): 
     - [TagsEntry](aws-properties-stepfunctions-statemachine-tagsentry.md)
 ```
@@ -41,6 +46,13 @@ The Amazon States Language definition of the state machine\. See [Amazon States 
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`LoggingConfiguration`  <a name="cfn-stepfunctions-statemachine-loggingconfiguration"></a>
+Defines what execution history events are logged and where they are logged\.  
+The `loggingConfiguration` parameter is only valid when `StateMachineType` is set to `EXPRESS`\. By default, the `level` is set to `OFF`\. For more information see [Log Levels](https://docs.aws.amazon.com/step-functions/latest/dg/cloudwatch-log-level.html) in the AWS Step Functions User Guide\.
+*Required*: No  
+*Type*: [LoggingConfiguration](aws-properties-stepfunctions-statemachine-loggingconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `RoleArn`  <a name="cfn-stepfunctions-statemachine-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role to use for this state machine\.  
 *Required*: Yes  
@@ -50,18 +62,25 @@ The Amazon Resource Name \(ARN\) of the IAM role to use for this state machine\.
 `StateMachineName`  <a name="cfn-stepfunctions-statemachine-statemachinename"></a>
 The name of the state machine\.   
 A name must *not* contain:  
-+ whitespace
++ white space
 + brackets `< > { } [ ]` 
 + wildcard characters `? *` 
 + special characters `" # % \ ^ | ~ ` $ & , ; : /` 
 + control characters \(`U+0000-001F`, `U+007F-009F`\)
+If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\. 
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`StateMachineType`  <a name="cfn-stepfunctions-statemachine-statemachinetype"></a>
+Determines whether a `STANDARD` or `EXPRESS` state machine is created\. The default is `STANDARD`\. You cannot update the `type` of a state machine once it has been created\. For more information on `STANDARD` and `EXPRESS` worklfows, see [Standard Versus Express Workflows](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-standard-vs-express.html) in the AWS Step Functions Developer Guide\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-stepfunctions-statemachine-tags"></a>
 The list of tags to add to a resource\.  
-Tags may only contain unicode letters, digits, whitespace, or these symbols: `_ . : / = + - @`\.  
+Tags may only contain Unicode letters, digits, white space, or these symbols: `_ . : / = + - @`\.  
 *Required*: No  
 *Type*: List of [TagsEntry](aws-properties-stepfunctions-statemachine-tagsentry.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -112,6 +131,7 @@ The following examples create a Step Functions state machine\.
          "Type":"AWS::StepFunctions::StateMachine",
          "Properties":{  
             "StateMachineName":"HelloWorld-StateMachine",
+            "StateMachineType":"STANDARD",
             "DefinitionString":"{\"StartAt\": \"HelloWorld\", 
             \"States\": {\"HelloWorld\": {\"Type\": \"Task\", \"Resource\": 
             \"arn:aws:lambda:us-east-1:111122223333;:function:HelloFunction\", \"End\": true}}}",
@@ -135,6 +155,7 @@ The following examples create a Step Functions state machine\.
           "Type": "AWS::StepFunctions::StateMachine",
              "Properties": {
                 "StateMachineName" : "HelloWorld-StateMachine",
+                "StateMachineType":"STANDARD",
                 "DefinitionString" : {
                    "Fn::Join": [
                       "\n",

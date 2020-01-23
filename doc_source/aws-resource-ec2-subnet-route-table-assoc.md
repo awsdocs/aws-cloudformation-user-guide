@@ -1,6 +1,6 @@
 # AWS::EC2::SubnetRouteTableAssociation<a name="aws-resource-ec2-subnet-route-table-assoc"></a>
 
-Associates a subnet with a route table\. The subnet and route table must be in the same VPC\. This association causes traffic originating from the subnet to be routed according to the routes in the route table\. A route table can be associated with multiple subnets\.
+Associates a subnet with a route table\. The subnet and route table must be in the same VPC\. This association causes traffic originating from the subnet to be routed according to the routes in the route table\. A route table can be associated with multiple subnets\. If you want to associate a route table with a VPC, see [ AWS::EC2::RouteTable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route-table.html)\.
 
 ## Syntax<a name="aws-resource-ec2-subnet-route-table-assoc-syntax"></a>
 
@@ -46,7 +46,7 @@ The ID of the subnet\.
 
 ### Ref<a name="aws-resource-ec2-subnet-route-table-assoc-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the subnet route table association\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the subnet route table association\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -73,11 +73,11 @@ The following example associates a subnet with a route table\.
 ```
   mySubnetRouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
-     Properties:
-       SubnetId:
-         Ref: mySubnet
-       RouteTableId:
-         Ref: myRouteTable
+    Properties:
+      SubnetId:
+        Ref: mySubnet
+      RouteTableId:
+        Ref: myRouteTable
 ```
 
 ## See Also<a name="aws-resource-ec2-subnet-route-table-assoc--seealso"></a>

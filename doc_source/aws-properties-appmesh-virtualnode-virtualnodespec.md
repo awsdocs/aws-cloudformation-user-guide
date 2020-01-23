@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualNode VirtualNodeSpec<a name="aws-properties-appmesh-virtualnode-virtualnodespec"></a>
 
-An object representing the specification of a virtual node\.
+An object that represents the specification of a virtual node\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualnode-virtualnodespec-syntax"></a>
 
@@ -39,7 +39,7 @@ The backends that the virtual node is expected to send outbound traffic to\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Listeners`  <a name="cfn-appmesh-virtualnode-virtualnodespec-listeners"></a>
-The listeners that the virtual node is expected to receive inbound traffic from\. Currently only one listener is supported per virtual node\.  
+The listener that the virtual node is expected to receive inbound traffic from\. You can specify one listener\.  
 *Required*: No  
 *Type*: List of [Listener](aws-properties-appmesh-virtualnode-listener.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -51,7 +51,7 @@ The inbound and outbound access logging information for the virtual node\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceDiscovery`  <a name="cfn-appmesh-virtualnode-virtualnodespec-servicediscovery"></a>
-The service discovery information for the virtual node\. If your virtual node does not expect ingress traffic, you can omit this parameter\.  
+The service discovery information for the virtual node\. If your virtual node does not expect ingress traffic, you can omit this parameter\. If you specify a `listener`, then you must specify service discovery information\.  
 *Required*: No  
 *Type*: [ServiceDiscovery](aws-properties-appmesh-virtualnode-servicediscovery.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

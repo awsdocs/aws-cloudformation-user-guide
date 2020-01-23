@@ -95,5 +95,5 @@ The following example creates a log group that retains events for 7 days\.
 myLogGroup: 
   Type: AWS::Logs::LogGroup
   Properties: 
-  RetentionInDays: 7
+    RetentionInDays: 7
 ```

@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Classifiers](#cfn-glue-crawler-classifiers)" : [ String, ... ],
       "[Configuration](#cfn-glue-crawler-configuration)" : String,
+      "[CrawlerSecurityConfiguration](#cfn-glue-crawler-crawlersecurityconfiguration)" : String,
       "[DatabaseName](#cfn-glue-crawler-databasename)" : String,
       "[Description](#cfn-glue-crawler-description)" : String,
       "[Name](#cfn-glue-crawler-name)" : String,
@@ -21,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Schedule](#cfn-glue-crawler-schedule)" : [Schedule](aws-properties-glue-crawler-schedule.md),
       "[SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy)" : [SchemaChangePolicy](aws-properties-glue-crawler-schemachangepolicy.md),
       "[TablePrefix](#cfn-glue-crawler-tableprefix)" : String,
+      "[Tags](#cfn-glue-crawler-tags)" : Json,
       "[Targets](#cfn-glue-crawler-targets)" : [Targets](aws-properties-glue-crawler-targets.md)
     }
 }
@@ -34,6 +36,7 @@ Properties:
   [Classifiers](#cfn-glue-crawler-classifiers): 
     - String
   [Configuration](#cfn-glue-crawler-configuration): String
+  [CrawlerSecurityConfiguration](#cfn-glue-crawler-crawlersecurityconfiguration): String
   [DatabaseName](#cfn-glue-crawler-databasename): String
   [Description](#cfn-glue-crawler-description): String
   [Name](#cfn-glue-crawler-name): String
@@ -43,6 +46,7 @@ Properties:
   [SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy): 
     [SchemaChangePolicy](aws-properties-glue-crawler-schemachangepolicy.md)
   [TablePrefix](#cfn-glue-crawler-tableprefix): String
+  [Tags](#cfn-glue-crawler-tags): Json
   [Targets](#cfn-glue-crawler-targets): 
     [Targets](aws-properties-glue-crawler-targets.md)
 ```
@@ -61,9 +65,15 @@ Crawler configuration information\. This versioned JSON string allows users to s
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`CrawlerSecurityConfiguration`  <a name="cfn-glue-crawler-crawlersecurityconfiguration"></a>
+The name of the `SecurityConfiguration` structure to be used by this crawler\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `DatabaseName`  <a name="cfn-glue-crawler-databasename"></a>
 The name of the database in which the crawler's output is stored\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -101,6 +111,12 @@ The policy that specifies update and delete behaviors for the crawler\.
 The prefix added to the names of tables that are created\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-glue-crawler-tags"></a>
+The tags to use with this crawler\.  
+*Required*: No  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-glue-crawler-targets"></a>
@@ -335,4 +351,23 @@ The following example specifies a configuration that controls a crawler's behavi
         "Configuration": "{\"Version\":1.0,\"CrawlerOutput\":{\"Partitions\":{\"AddOrUpdateBehavior\":\"InheritFromTable\"},\"Tables\":{\"AddOrUpdateBehavior\":\"MergeNewColumns\"}}}"
     }
 }
+```
+
+#### YAML<a name="aws-resource-glue-crawler--examples--Crawler_Configuration--yaml"></a>
+
+```
+Type: AWS::Glue::Crawler
+Properties:
+  Role: role1
+  Classifiers:
+    - ''
+  Description: example classifier
+  SchemaChangePolicy: ''
+  Schedule: Schedule
+  DatabaseName: test
+  Targets:
+    - ''
+  TablePrefix: test-
+  Name: my-crawler
+  Configuration: "{\"Version\":1.0,\"CrawlerOutput\":{\"Partitions\":{\"AddOrUpdateBehavior\":\"InheritFromTable\"},\"Tables\":{\"AddOrUpdateBehavior\":\"MergeNewColumns\"}}}"
 ```

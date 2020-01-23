@@ -39,6 +39,7 @@ The type of application revision:
 + S3: An application revision stored in Amazon S3\.
 + GitHub: An application revision stored in GitHub \(EC2/On\-premises deployments only\)\.
 + String: A YAML\-formatted or JSON\-formatted string \(AWS Lambda deployments only\)\.
++ AppSpecContent: An `AppSpecContent` object that contains the contents of an AppSpec file for an AWS Lambda or Amazon ECS deployment\. The content is formatted as JSON or YAML stored as a RawString\.
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `AppSpecContent | GitHub | S3 | String`  

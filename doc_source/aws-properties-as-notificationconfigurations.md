@@ -28,7 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-as-notificationconfigurations-properties"></a>
 
 `NotificationTypes`  <a name="cfn-as-group-notificationconfigurations-notificationtypes"></a>
-A list of event types that trigger a notification\. Event types can include any of the following types:   
+A list of event types that trigger a notification\. Event types can include any of the following types\.   
+*Allowed Values*:  
 + `autoscaling:EC2_INSTANCE_LAUNCH`
 + `autoscaling:EC2_INSTANCE_LAUNCH_ERROR`
 + `autoscaling:EC2_INSTANCE_TERMINATE`
@@ -36,9 +37,6 @@ A list of event types that trigger a notification\. Event types can include any 
 + `autoscaling:TEST_NOTIFICATION`
 *Required*: No  
 *Type*: List of String  
-*Minimum*: `1`  
-*Maximum*: `255`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TopicARN`  <a name="cfn-autoscaling-autoscalinggroup-notificationconfigurations-topicarn"></a>

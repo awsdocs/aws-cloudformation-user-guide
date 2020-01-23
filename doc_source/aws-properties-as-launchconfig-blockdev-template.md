@@ -42,7 +42,8 @@ Indicates whether to delete the volume when the instance is terminated\. For Ama
 
 `Encrypted`  <a name="cfn-as-launchconfig-blockdev-template-encrypted"></a>
 Specifies whether the EBS volume is encrypted\. Encrypted EBS volumes can only be attached to instances that support Amazon EBS encryption\. For more information, see [Supported Instance Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)\. If your AMI uses encrypted volumes, you can also only launch it on supported instance types\.  
-If you are creating a volume from a snapshot, you cannot specify an encryption value\. This is because only blank volumes can be encrypted on creation\. Volumes that are created from encrypted snapshots are automatically encrypted, and volumes that are created from unencrypted snapshots are automatically unencrypted\. By default, encrypted snapshots use the default CMK \(AWS managed key\), but when you create the snapshot, you can specify a custom CMK\. The ability to encrypt a snapshot during copying also allows you to apply a new CMK to an already\-encrypted snapshot that you own\. Volumes restored from the resulting copy are only accessible using the new CMK\. 
+If you are creating a volume from a snapshot, you cannot specify an encryption value\. Volumes that are created from encrypted snapshots are automatically encrypted, and volumes that are created from unencrypted snapshots are automatically unencrypted\. By default, encrypted snapshots use the AWS managed CMK that is used for EBS encryption, but you can specify a custom CMK when you create the snapshot\. The ability to encrypt a snapshot during copying also allows you to apply a new CMK to an already\-encrypted snapshot\. Volumes restored from the resulting copy are only accessible using the new CMK\.   
+Enabling [encryption by default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-by-default) results in all EBS volumes being encrypted with the AWS managed CMK or a customer managed CMK, whether or not the snapshot was encrypted\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -87,5 +88,5 @@ Valid values: `standard` \| `io1` \| `gp2` \| `st1` \| `sc1`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-as-launchconfig-blockdev-template--seealso"></a>
-+ [Using Encryption with EBS\-Backed AMIs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIEncryption.html) in the *Amazon EC2 User Guide for Linux Instances*
 + [Required CMK Key Policy for Use with Encrypted Volumes](https://docs.aws.amazon.com/autoscaling/ec2/userguide/key-policy-requirements-EBS-encryption.html) in the *Amazon EC2 Auto Scaling User Guide*
++ [Using Encryption with EBS\-Backed AMIs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIEncryption.html) in the *Amazon EC2 User Guide for Linux Instances*

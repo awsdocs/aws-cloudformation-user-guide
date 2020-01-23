@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualNode VirtualServiceBackend<a name="aws-properties-appmesh-virtualnode-virtualservicebackend"></a>
 
-An object representing a virtual service backend for a virtual node\.
+An object that represents a virtual service backend for a virtual node\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualnode-virtualservicebackend-syntax"></a>
 

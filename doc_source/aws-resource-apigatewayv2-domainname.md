@@ -15,7 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ApiGatewayV2::DomainName",
   "Properties" : {
       "[DomainName](#cfn-apigatewayv2-domainname-domainname)" : String,
-      "[DomainNameConfigurations](#cfn-apigatewayv2-domainname-domainnameconfigurations)" : [ [DomainNameConfiguration](aws-properties-apigatewayv2-domainname-domainnameconfiguration.md), ... ]
+      "[DomainNameConfigurations](#cfn-apigatewayv2-domainname-domainnameconfigurations)" : [ [DomainNameConfiguration](aws-properties-apigatewayv2-domainname-domainnameconfiguration.md), ... ],
+      "[Tags](#cfn-apigatewayv2-domainname-tags)" : Json
     }
 }
 ```
@@ -28,6 +29,7 @@ Properties:
   [DomainName](#cfn-apigatewayv2-domainname-domainname): String
   [DomainNameConfigurations](#cfn-apigatewayv2-domainname-domainnameconfigurations): 
     - [DomainNameConfiguration](aws-properties-apigatewayv2-domainname-domainnameconfiguration.md)
+  [Tags](#cfn-apigatewayv2-domainname-tags): Json
 ```
 
 ## Properties<a name="aws-resource-apigatewayv2-domainname-properties"></a>
@@ -42,6 +44,12 @@ The custom domain name for your API in Amazon API Gateway\. Uppercase letters ar
 The domain name configurations\.  
 *Required*: No  
 *Type*: List of [DomainNameConfiguration](aws-properties-apigatewayv2-domainname-domainnameconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-apigatewayv2-domainname-tags"></a>
+The collection of tags associated with a domain name\.  
+*Required*: No  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-apigatewayv2-domainname-return-values"></a>

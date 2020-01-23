@@ -43,14 +43,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `AuthMechanism`  <a name="cfn-dms-endpoint-mongodbsettings-authmechanism"></a>
  The authentication mechanism you use to access the MongoDB source endpoint\.  
 Valid values: DEFAULT, MONGODB\_CR, SCRAM\_SHA\_1   
-DEFAULT – For MongoDB version 2\.x, use MONGODB\_CR\. For MongoDB version 3\.x, use SCRAM\_SHA\_1\. This attribute is not used when authType=No\.  
+DEFAULT – For MongoDB version 2\.x, use MONGODB\_CR\. For MongoDB version 3\.x, use SCRAM\_SHA\_1\. This setting is not used when authType=No\.  
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `default | mongodb_cr | scram_sha_1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthSource`  <a name="cfn-dms-endpoint-mongodbsettings-authsource"></a>
- The MongoDB database name\. This attribute is not used when `authType=NO`\.   
+ The MongoDB database name\. This setting is not used when `authType=NO`\.   
 The default is admin\.  
 *Required*: No  
 *Type*: String  
@@ -72,14 +72,14 @@ When NO is selected, user name and password parameters are not used and can be e
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DocsToInvestigate`  <a name="cfn-dms-endpoint-mongodbsettings-docstoinvestigate"></a>
- Indicates the number of documents to preview to determine the document organization\. Use this attribute when `NestingLevel` is set to ONE\.   
+ Indicates the number of documents to preview to determine the document organization\. Use this setting when `NestingLevel` is set to ONE\.   
 Must be a positive value greater than 0\. Default value is 1000\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExtractDocId`  <a name="cfn-dms-endpoint-mongodbsettings-extractdocid"></a>
- Specifies the document ID\. Use this attribute when `NestingLevel` is set to NONE\.   
+ Specifies the document ID\. Use this setting when `NestingLevel` is set to NONE\.   
 Default value is false\.   
 *Required*: No  
 *Type*: String  

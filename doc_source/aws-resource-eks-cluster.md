@@ -92,6 +92,10 @@ The ARN of the cluster, such as `arn:aws:eks:us-west-2:666666666666:cluster/prod
 `CertificateAuthorityData`  <a name="CertificateAuthorityData-fn::getatt"></a>
 The `certificate-authority-data` for your cluster\.
 
+`ClusterSecurityGroupId`  <a name="ClusterSecurityGroupId-fn::getatt"></a>
+The cluster security group that was created by Amazon EKS for the cluster\. Managed node groups use this security group for control plane to data plane communication\.  
+This parameter is only returned by Amazon EKS clusters that support managed node groups\. For more information, see [Managed Node Groups](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html) in the *Amazon EKS User Guide*\. 
+
 `Endpoint`  <a name="Endpoint-fn::getatt"></a>
 The endpoint for your Kubernetes API server, such as `https://5E1D0CEXAMPLEA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com`\.
 
@@ -105,38 +109,45 @@ The following example creates an Amazon EKS cluster called prod\.
 
 ```
 {
-  "Type": "AWS::EKS::Cluster",
-  "Properties": {
-    "Name": "prod",
-    "Version": "1.11",
-    "RoleArn": "arn:aws:iam::012345678910:role/eks-service-role-AWSServiceRoleForAmazonEKS-EXAMPLEBQ4PI",
-    "ResourcesVpcConfig": {
-      "SecurityGroupIds": [
-        "sg-6979fe18"
-      ],
-      "SubnetIds": [
-        "subnet-6782e71e",
-        "subnet-e7e761ac"
-      ]
+    "Resources": {
+        "myCluster": {
+            "Type": "AWS::EKS::Cluster",
+            "Properties": {
+                "Name": "prod",
+                "Version": "1.14",
+                "RoleArn": "arn:aws:iam::012345678910:role/eks-service-role-AWSServiceRoleForAmazonEKS-EXAMPLEBQ4PI",
+                "ResourcesVpcConfig": {
+                    "SecurityGroupIds": [
+                        "sg-6979fe18"
+                    ],
+                    "SubnetIds": [
+                        "subnet-6782e71e",
+                        "subnet-e7e761ac"
+                    ]
+                }
+            }
+        }
     }
-  }
 }
 ```
 
 #### YAML<a name="aws-resource-eks-cluster--examples--Create_a_Cluster--yaml"></a>
 
 ```
-Type: AWS::EKS::Cluster
-Properties:
-  Name: prod
-  Version: '1.11'
-  RoleArn: arn:aws:iam::012345678910:role/eks-service-role-AWSServiceRoleForAmazonEKS-EXAMPLEBQ4PI
-  ResourcesVpcConfig:
-    SecurityGroupIds:
-    - sg-6979fe18
-    SubnetIds:
-    - subnet-6782e71e
-    - subnet-e7e761ac
+Resources:
+  myCluster:
+    Type: 'AWS::EKS::Cluster'
+    Properties:
+      Name: prod
+      Version: '1.14'
+      RoleArn: >-
+        arn:aws:iam::012345678910:role/eks-service-role-AWSServiceRoleForAmazonEKS-EXAMPLEBQ4PI
+      ResourcesVpcConfig:
+        SecurityGroupIds:
+          - sg-6979fe18
+        SubnetIds:
+          - subnet-6782e71e
+          - subnet-e7e761ac
 ```
 
 ## See Also<a name="aws-resource-eks-cluster--seealso"></a>

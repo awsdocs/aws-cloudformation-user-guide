@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Image](#cfn-batch-jobdefinition-containerproperties-image)" : String,
   "[InstanceType](#cfn-batch-jobdefinition-containerproperties-instancetype)" : String,
   "[JobRoleArn](#cfn-batch-jobdefinition-containerproperties-jobrolearn)" : String,
+  "[LinuxParameters](#cfn-batch-jobdefinition-containerproperties-linuxparameters)" : [LinuxParameters](aws-properties-batch-jobdefinition-containerproperties-linuxparameters.md),
   "[Memory](#cfn-batch-jobdefinition-containerproperties-memory)" : Integer,
   "[MountPoints](#cfn-batch-jobdefinition-containerproperties-mountpoints)" : [ [MountPoints](aws-properties-batch-jobdefinition-mountpoints.md), ... ],
   "[Privileged](#cfn-batch-jobdefinition-containerproperties-privileged)" : Boolean,
@@ -37,6 +38,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Image](#cfn-batch-jobdefinition-containerproperties-image): String
   [InstanceType](#cfn-batch-jobdefinition-containerproperties-instancetype): String
   [JobRoleArn](#cfn-batch-jobdefinition-containerproperties-jobrolearn): String
+  [LinuxParameters](#cfn-batch-jobdefinition-containerproperties-linuxparameters): 
+    [LinuxParameters](aws-properties-batch-jobdefinition-containerproperties-linuxparameters.md)
   [Memory](#cfn-batch-jobdefinition-containerproperties-memory): Integer
   [MountPoints](#cfn-batch-jobdefinition-containerproperties-mountpoints): 
     - [MountPoints](aws-properties-batch-jobdefinition-mountpoints.md)
@@ -88,6 +91,12 @@ The instance type to use for a multi\-node parallel job\. Currently all node gro
 The Amazon Resource Name \(ARN\) of the IAM role that the container can assume for AWS permissions\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LinuxParameters`  <a name="cfn-batch-jobdefinition-containerproperties-linuxparameters"></a>
+Linux\-specific modifications that are applied to the container, such as details for device mappings\.  
+*Required*: No  
+*Type*: [LinuxParameters](aws-properties-batch-jobdefinition-containerproperties-linuxparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Memory`  <a name="cfn-batch-jobdefinition-containerproperties-memory"></a>

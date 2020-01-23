@@ -371,6 +371,14 @@ The `UserData` property runs two shell commands: install the AWS CloudFormation 
 
 Now that we have a template that installs Linux, Apache, MySQL, and PHP, we'll need to expand the template so that it automatically configures and runs Apache, MySQL, and PHP\. In the following example, we expand on the `Parameters` section, `AWS::CloudFormation::Init` resource, and `UserData` property to complete the configuration\. As with the previous template, sections marked with an ellipsis \(\.\.\.\) are omitted for brevity\. Additions to the template are shown in red italic text\.
 
+Note that the example defines the `DBUsername` and `DBPassword` parameters with their `NoEcho` property set to `true`\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events\.
+
+**Important**  
+Rather than embedding sensitive information directly in your AWS CloudFormation templates, we strongly suggest you do one of the following:   
+Use input parameters to pass in information whenever you create or update a stack, using the `NoEcho` property to obfuscate the parameter value\.
+Use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the Systems Manager Parameter Store or Secrets Manager\.
+For more information, see the [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
+
 ```
 {
   "AWSTemplateFormatVersion" : "2010-09-09",
@@ -550,7 +558,7 @@ The example adds more parameters to obtain information for configuring the MySQL
 
 In the `AWS::CloudFormation::Init` resource, we added a MySQL setup file, containing the database name, user name, and password\. The example also adds a `services` property to ensure that the httpd and mysqld services are running \(`ensureRunning` set to `true`\) and to ensure that the services are restarted if the instance is rebooted \(`enabled` set to `true`\)\. A good practice is to also include the [cfn\-hup](cfn-hup.md) helper script, with which you can make configuration updates to running instances by updating the stack template\. For example, you could change the sample PHP application and then run a stack update to deploy the change\.
 
-In order to run the MySQL commands after the installation is complete, the example adds another configuration set to run the commands\. Configuration sets are useful when you have a series of tasks that must be completed in a specific order\. The example first runs the `Installation` configuration set and then the `Configure` configuration set\. The `Configure` configuration set specifies the database root password and then creates a database\. In the commands section, the commands are processed in alphabetical order by name, so the example adds a number before each command name to indicate its desired run order\.
+In order to run the MySQL commands after the installation is complete, the example adds another configuration set to run the commands\. Configuration sets are useful when you have a series of tasks that must be completed in a specific order\. The example first runs the `Install` configuration set and then the `Configure` configuration set\. The `Configure` configuration set specifies the database root password and then creates a database\. In the commands section, the commands are processed in alphabetical order by name, so the example adds a number before each command name to indicate its desired run order\.
 
 ## CreationPolicy Attribute<a name="deployment-walkthrough-cfn-signal"></a>
 
@@ -618,7 +626,9 @@ The creation policy attribute uses the ISO 8601 format to define a timeout perio
 
 In the `UserData` property, the template runs the cfn\-signal script to send a success signal with an exit code if all the services are configured and started successfully\. When you use the cfn\-signal script, you must include the stack ID or name and the logical ID of the resource that you want to signal\. If the configuration fails, cfn\-signal sends a failure signal that causes the resource creation to fail\. The resource creation also fails if AWS CloudFormation doesn't receive a success signal within the timeout period\.
 
-The following example shows final complete template\. You can also view the template at the following location:
+The following example shows the final complete template\.
+
+You can also view the template at the following location:
 
 [https://s3\.amazonaws\.com/cloudformation\-templates\-us\-east\-1/LAMP\_Single\_Instance\.template](https://s3.amazonaws.com/cloudformation-templates-us-east-1/LAMP_Single_Instance.template)
 

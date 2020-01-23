@@ -35,18 +35,19 @@ Properties:
 `Name`  <a name="cfn-stepfunctions-activity-name"></a>
 The name of the activity\.  
 A name must *not* contain:  
-+ whitespace
++ white space
 + brackets `< > { } [ ]` 
 + wildcard characters `? *` 
 + special characters `" # % \ ^ | ~ ` $ & , ; : /` 
 + control characters \(`U+0000-001F`, `U+007F-009F`\)
+For an `EXPRESS` state machine, the name should only contain 0\-9, A\-Z, a\-z, \- and \_ to enable logging with CloudWatch Logs\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-stepfunctions-activity-tags"></a>
 The list of tags to add to a resource\.  
-Tags may only contain unicode letters, digits, whitespace, or these symbols: `_ . : / = + - @`\.  
+Tags may only contain Unicode letters, digits, white space, or these symbols: `_ . : / = + - @`\.  
 *Required*: No  
 *Type*: List of [TagsEntry](aws-properties-stepfunctions-activity-tagsentry.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

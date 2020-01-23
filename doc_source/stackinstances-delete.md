@@ -6,32 +6,31 @@ You can delete stack instances from a stack set in either the AWS Management Con
 
 1. Open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
-1. At the top of the page, choose **StackSets**\. On the StackSets home page, select the stack set that you created in [Create a New Stack Set](stacksets-getting-started-create.md)\. In this walkthrough, we created a stack set named `my-awsconfig-stackset`\.  
-![\[Select stack set\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/stacksets_my_awsconfig.png)
+1. Choose **StackSets** from the navigation pane\. On the StackSets page, select the stack set that you created in [Create a New Stack Set](stacksets-getting-started-create.md)\. In this walkthrough, we created a stack set named `my-awsconfig-stackset`\.
 
-1. With the stack set selected, choose **Manage stacks in stack set** from the **Actions** menu\.
+1. With the stack set selected, choose **Delete stacks from StackSet** from the **Actions** menu\.  
+![\[Select stack set and choose Delete stacks from stack set.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacksets-action-delete-stacks.png)
 
-1. Choose **Delete stacks**, and then choose **Next**\.  
-![\[Manage stacks in stack set, Delete stacks selected\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/stacksets_manage_delete.png)
+1. On the **Set deployment options** page: 
 
-1. On the **Set deployment options** page, in the **Accounts** area, choose **Delete stacks from account**\.  
-![\[Delete stacks from all accounts\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/stacksets_delete_accounts.png)
+   1. For **Accounts**, choose **Deploy stacks in accounts**\. Paste your target account numbers in the text box, separating multiple numbers with commas\.
 
-1. In the **Delete stacks from account** text box, paste all target account IDs that you used to create your stack set in [Create a New Stack Set](stacksets-getting-started-create.md)\.
+   1. For **Specify regions**, choose the regions from which you want to delete stack instances\. In this case, US East \(N\. Virginia\) Region and US West \(Oregon\) Region\.
 
-1. In the **Regions** area, choose all regions \(hold down **Ctrl** while selecting regions to select multiple regions\), and then choose **Add** to add all stack set regions to the list\. You are instructing AWS CloudFormation to delete all stacks, in all target accounts across all regions\.
+   1. For **Deployment options**: 
+      + For **Maximum concurrent accounts**, keep the default values of **Number** and **1**\.
+      + For **Failure tolerance**, keep the defauls of **Number** and **0**\.
 
-1. In the **Preferences** area, leave the default value of **1** and **By number** for **Maximum concurrent accounts**, and change the value of **Failure tolerance** to **1**\. Be sure **Failure tolerance** is also set to **By number**\.
+      In the **Retain stacks** area, keep the default setting of disabled\.
 
-1. In the **Retain stacks** area, keep the default setting, **No**\.
+      When you are deleting stacks from a stack set, the **Retain stacks** option lets you choose to remove the stack instances from your stack set, but save the stacks and their associated resources\. When you save stacks from a stack set by choosing the **Retain stacks** option, the stack's resources stay in their current state, but the stack is no longer part of the stack set\. You cannot reassociate a retained stack, or add an existing, saved stack to a new stack set\. The stack is permanently independent of a stack set\. In this procedure, we are deleting all stacks in preparation for deleting the entire stack set, so we are not retaining stacks\.
 
-   When you are deleting stacks from a stack set, the **Retain stacks** option lets you choose to remove the stack instances from your stack set, but save the stacks and their associated resources\. When you save stacks from a stack set by choosing the **Retain stacks** option, the stack's resources stay in their current state, but the stack is no longer part of the stack set\. You cannot reassociate a retained stack, or add an existing, saved stack to a new stack set\. The stack is permanently independent of a stack set\. In this procedure, we are deleting all stacks in preparation for deleting the entire stack set, so we are not retaining stacks\.
+      Choose **Next**\.
 
-1. Choose **Next**\.
+1. On the **Review** page, review your choices and choose **Submit**\.
 
-1. On the **Review** page, review your choices\. Choose **Edit** in the upper right corner of each section to go back and make any changes, if necessary\. When you are ready to delete your stacks, choose **Delete stacks**\.
-
-1. After stack deletion is finished, you can verify that stack instances were deleted from your stack set in the StackSets management console, on the home page\.
+1. After stack deletion is finished, you can verify that stack instances were deleted from your stack set in the StackSet detail page, on the **Stack instances** tab\.  
+![\[Use the Stack instances tab of the stack set details page to view information on your stack instances.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-detail-stack-instances.png)
 
 **To delete stack instances by using the AWS CLI**
 

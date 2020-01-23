@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ElastiCache::CacheCluster",
   "Properties" : {
-      "[AZMode](#cfn-elasticache-cachecluster-azmode)" : String,
       "[AutoMinorVersionUpgrade](#cfn-elasticache-cachecluster-autominorversionupgrade)" : Boolean,
+      "[AZMode](#cfn-elasticache-cachecluster-azmode)" : String,
       "[CacheNodeType](#cfn-elasticache-cachecluster-cachenodetype)" : String,
       "[CacheParameterGroupName](#cfn-elasticache-cachecluster-cacheparametergroupname)" : String,
       "[CacheSecurityGroupNames](#cfn-elasticache-cachecluster-cachesecuritygroupnames)" : [ String, ... ],
@@ -42,8 +42,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ElastiCache::CacheCluster
 Properties: 
-  [AZMode](#cfn-elasticache-cachecluster-azmode): String
   [AutoMinorVersionUpgrade](#cfn-elasticache-cachecluster-autominorversionupgrade): Boolean
+  [AZMode](#cfn-elasticache-cachecluster-azmode): String
   [CacheNodeType](#cfn-elasticache-cachecluster-cachenodetype): String
   [CacheParameterGroupName](#cfn-elasticache-cachecluster-cacheparametergroupname): String
   [CacheSecurityGroupNames](#cfn-elasticache-cachecluster-cachesecuritygroupnames): 
@@ -72,19 +72,20 @@ Properties:
 
 ## Properties<a name="aws-properties-elasticache-cache-cluster-properties"></a>
 
+`AutoMinorVersionUpgrade`  <a name="cfn-elasticache-cachecluster-autominorversionupgrade"></a>
+This parameter is currently disabled\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `AZMode`  <a name="cfn-elasticache-cachecluster-azmode"></a>
 Specifies whether the nodes in this Memcached cluster are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region\.  
 This parameter is only supported for Memcached clusters\.  
 If the `AZMode` and `PreferredAvailabilityZones` are not specified, ElastiCache assumes `single-az` mode\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `cross-az | single-az`
-
-`AutoMinorVersionUpgrade`  <a name="cfn-elasticache-cachecluster-autominorversionupgrade"></a>
-This parameter is currently disabled\.  
-*Required*: No  
-*Type*: Boolean  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Allowed Values*: `cross-az | single-az`  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `CacheNodeType`  <a name="cfn-elasticache-cachecluster-cachenodetype"></a>
 The compute and memory capacity of the nodes in the node group \(shard\)\.  
@@ -92,38 +93,38 @@ The following node types are supported by ElastiCache\. Generally speaking, the 
 + General purpose:
   + Current generation: 
 
-     **T2 node types:** `cache.t2.micro`, `cache.t2.small`, `cache.t2.medium` 
+    **M5 node types:** `cache.m5.large`, `cache.m5.xlarge`, `cache.m5.2xlarge`, `cache.m5.4xlarge`, `cache.m5.12xlarge`, `cache.m5.24xlarge` 
 
-     **M3 node types:** `cache.m3.medium`, `cache.m3.large`, `cache.m3.xlarge`, `cache.m3.2xlarge` 
+    **M4 node types:** `cache.m4.large`, `cache.m4.xlarge`, `cache.m4.2xlarge`, `cache.m4.4xlarge`, `cache.m4.10xlarge`
 
-     **M4 node types:** `cache.m4.large`, `cache.m4.xlarge`, `cache.m4.2xlarge`, `cache.m4.4xlarge`, `cache.m4.10xlarge` 
+    **T2 node types:** `cache.t2.micro`, `cache.t2.small`, `cache.t2.medium`
   + Previous generation: \(not recommended\)
 
-     **T1 node types:** `cache.t1.micro` 
+    **T1 node types:** `cache.t1.micro`
 
-     **M1 node types:** `cache.m1.small`, `cache.m1.medium`, `cache.m1.large`, `cache.m1.xlarge` 
+    **M1 node types:** `cache.m1.small`, `cache.m1.medium`, `cache.m1.large`, `cache.m1.xlarge`
+
+    **M3 node types:** `cache.m3.medium`, `cache.m3.large`, `cache.m3.xlarge`, `cache.m3.2xlarge`
 + Compute optimized:
   + Previous generation: \(not recommended\)
 
-     **C1 node types:** `cache.c1.xlarge` 
+    **C1 node types:** `cache.c1.xlarge`
 + Memory optimized:
   + Current generation: 
 
-     **R3 node types:** `cache.r3.large`, `cache.r3.xlarge`, `cache.r3.2xlarge`, `cache.r3.4xlarge`, `cache.r3.8xlarge` 
+    **R5 node types:** `cache.r5.large`, `cache.r5.xlarge`, `cache.r5.2xlarge`, `cache.r5.4xlarge`, `cache.r5.12xlarge`, `cache.r5.24xlarge`
 
-     **R4 node types;** `cache.r4.large`, `cache.r4.xlarge`, `cache.r4.2xlarge`, `cache.r4.4xlarge`, `cache.r4.8xlarge`, `cache.r4.16xlarge` 
+    **R4 node types:** `cache.r4.large`, `cache.r4.xlarge`, `cache.r4.2xlarge`, `cache.r4.4xlarge`, `cache.r4.8xlarge`, `cache.r4.16xlarge`
   + Previous generation: \(not recommended\)
 
-     **M2 node types:** `cache.m2.xlarge`, `cache.m2.2xlarge`, `cache.m2.4xlarge` 
- **Notes:**   
-+ All T2 instances are created in an Amazon Virtual Private Cloud \(Amazon VPC\)\.
-+ Redis \(cluster mode disabled\): Redis backup/restore is not supported on T1 and T2 instances\. 
-+ Redis \(cluster mode enabled\): Backup/restore is not supported on T1 instances\.
-+ Redis Append\-only files \(AOF\) functionality is not supported for T1 or T2 instances\.
-For a complete listing of node types and specifications, see:  
-+  [Amazon ElastiCache Product Features and Details](http://aws.amazon.com/elasticache/details) 
-+  [Cache Node Type\-Specific Parameters for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/ParameterGroups.Memcached.html#ParameterGroups.Memcached.NodeSpecific) 
-+  [Cache Node Type\-Specific Parameters for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/ParameterGroups.Redis.html#ParameterGroups.Redis.NodeSpecific) 
+    **M2 node types:** `cache.m2.xlarge`, `cache.m2.2xlarge`, `cache.m2.4xlarge`
+
+    **R3 node types:** `cache.r3.large`, `cache.r3.xlarge`, `cache.r3.2xlarge`, `cache.r3.4xlarge`, `cache.r3.8xlarge`
+**Additional node type info**  
++ All current generation instance types are created in Amazon VPC by default\.
++ Redis append\-only files \(AOF\) are not supported for T1 or T2 instances\.
++ Redis Multi\-AZ with automatic failover is not supported on T1 instances\.
++ Redis configuration variables `appendonly` and `appendfsync` are not supported on Redis version 2\.8\.22 and later\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -181,7 +182,8 @@ The Amazon SNS topic owner must be the same as the cluster owner\.
 The number of cache nodes that the cache cluster should have\.  
 However, if the `PreferredAvailabilityZone` and `PreferredAvailabilityZones `properties were not previously specified and you don't specify any new values, an update requires [ replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)\. 
 *Required*: Yes  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Port`  <a name="cfn-elasticache-cachecluster-port"></a>
 The port number on which each of the cache nodes accepts connections\.  
@@ -194,7 +196,8 @@ The EC2 Availability Zone in which the cluster is created\.
 All nodes belonging to this Memcached cluster are placed in the preferred Availability Zone\. If you want to create your nodes across multiple Availability Zones, use `PreferredAvailabilityZones`\.  
 Default: System chosen Availability Zone\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `PreferredAvailabilityZones`  <a name="cfn-elasticache-cachecluster-preferredavailabilityzones"></a>
 A list of the Availability Zones in which cache nodes are created\. The order of the zones in the list is not important\.  
@@ -204,7 +207,8 @@ The number of Availability Zones listed must equal the value of `NumCacheNodes`\
 If you want all the nodes in the same Availability Zone, use `PreferredAvailabilityZone` instead, or repeat the Availability Zone multiple times in the list\.  
 Default: System chosen Availability Zones\.  
 *Required*: No  
-*Type*: List of String
+*Type*: List of String  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `PreferredMaintenanceWindow`  <a name="cfn-elasticache-cachecluster-preferredmaintenancewindow"></a>
 Specifies the weekly time range during which maintenance on the cluster is performed\. It is specified as a range in the format ddd:hh24:mi\-ddd:hh24:mi \(24H Clock UTC\)\. The minimum maintenance window is a 60 minute period\. Valid values for `ddd` are:  
@@ -309,57 +313,66 @@ For the cache cluster, the `VpcSecurityGroupIds` property is used to associate t
 #### JSON<a name="aws-properties-elasticache-cache-cluster--examples--Cluster_in_a_Default_VPC--json"></a>
 
 ```
- "ElasticacheSecurityGroup":{ 
-     "Type": "AWS::EC2::SecurityGroup",
-     "Properties": {
-         "GroupDescription": "Elasticache Security Group",
-         "SecurityGroupIngress": [ {
-         "IpProtocol": "tcp",
-         "FromPort": "11211",
-         "ToPort": "11211",
-         "SourceSecurityGroupName": {"Ref": "InstanceSecurityGroup"
-         }
-         } ]
-      }
-  },
-  "ElasticacheCluster": {
-  "Type": "AWS::ElastiCache::CacheCluster",
-     "Properties": {
-        "AutoMinorVersionUpgrade": "true",
-        "Engine": "memcached",
-        "CacheNodeType": "cache.t2.micro",
-        "NumCacheNodes": "1",
-        "VpcSecurityGroupIds": [{"Fn::GetAtt": [ "ElasticacheSecurityGroup", "GroupId"]}]
-      }
- }
+{
+    "ElasticacheSecurityGroup": {
+        "Type": "AWS::EC2::SecurityGroup",
+        "Properties": {
+            "GroupDescription": "Elasticache Security Group",
+            "SecurityGroupIngress": [
+                {
+                    "IpProtocol": "tcp",
+                    "FromPort": "11211",
+                    "ToPort": "11211",
+                    "SourceSecurityGroupName": {
+                        "Ref": "InstanceSecurityGroup"
+                    }
+                }
+            ]
+        }
+    },
+    "ElasticacheCluster": {
+        "Type": "AWS::ElastiCache::CacheCluster",
+        "Properties": {
+            "AutoMinorVersionUpgrade": "true",
+            "Engine": "memcached",
+            "CacheNodeType": "cache.t2.micro",
+            "NumCacheNodes": "1",
+            "VpcSecurityGroupIds": [
+                {
+                    "Fn::GetAtt": [
+                        "ElasticacheSecurityGroup",
+                        "GroupId"
+                    ]
+                }
+            ]
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-properties-elasticache-cache-cluster--examples--Cluster_in_a_Default_VPC--yaml"></a>
 
 ```
 ElasticacheSecurityGroup:
-            Type: AWS::EC2::SecurityGroup
-            Properties:
-            GroupDescription: "Elasticache Security Group"
-            SecurityGroupIngress:
-            -
-            IpProtocol: "tcp"
-            FromPort: "11211"
-            ToPort: "11211"
-            SourceSecurityGroupName:
-            Ref: "InstanceSecurityGroup"
-            ElasticacheCluster:
-            Type: AWS::ElastiCache::CacheCluster
-            Properties:
-            AutoMinorVersionUpgrade: "true"
-            Engine: "memcached"
-            CacheNodeType: "cache.t2.micro"
-            NumCacheNodes: "1"
-            VpcSecurityGroupIds:
-            -
-            Fn::GetAtt:
-            - "ElasticacheSecurityGroup"
-            - "GroupId"
+  Type: 'AWS::EC2::SecurityGroup'
+  Properties:
+    GroupDescription: Elasticache Security Group
+    SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: '11211'
+        ToPort: '11211'
+        SourceSecurityGroupName: !Ref InstanceSecurityGroup
+ElasticacheCluster:
+  Type: 'AWS::ElastiCache::CacheCluster'
+  Properties:
+    AutoMinorVersionUpgrade: 'true'
+    Engine: memcached
+    CacheNodeType: cache.t2.micro
+    NumCacheNodes: '1'
+    VpcSecurityGroupIds:
+      - !GetAtt 
+        - ElasticacheSecurityGroup
+        - GroupId
 ```
 
 ### Memcached Nodes in Multiple Availability Zones<a name="aws-properties-elasticache-cache-cluster--examples--Memcached_Nodes_in_Multiple_Availability_Zones"></a>
@@ -369,15 +382,21 @@ The following example launches a cache cluster with three nodes, where two nodes
 #### JSON<a name="aws-properties-elasticache-cache-cluster--examples--Memcached_Nodes_in_Multiple_Availability_Zones--json"></a>
 
 ```
-"myCacheCluster" : {
-    "Type": "AWS::ElastiCache::CacheCluster",
-    "Properties" : {
-        "AZMode" : "cross-az",
-        "CacheNodeType" : "cache.m3.medium",
-        "Engine" : "memcached",
-        "NumCacheNodes" : "3",
-        "PreferredAvailabilityZones" : [ "us-west-2a", "us-west-2a", "us-west-2b" ]
-     }
+{
+    "myCacheCluster": {
+        "Type": "AWS::ElastiCache::CacheCluster",
+        "Properties": {
+            "AZMode": "cross-az",
+            "CacheNodeType": "cache.m3.medium",
+            "Engine": "memcached",
+            "NumCacheNodes": "3",
+            "PreferredAvailabilityZones": [
+                "us-west-2a",
+                "us-west-2a",
+                "us-west-2b"
+            ]
+        }
+    }
 }
 ```
 
@@ -385,16 +404,16 @@ The following example launches a cache cluster with three nodes, where two nodes
 
 ```
 myCacheCluster:
-            Type: AWS::ElastiCache::CacheCluster
-            Properties:
-            AZMode: "cross-az"
-            CacheNodeType: "cache.m3.medium"
-            Engine: "memcached"
-            NumCacheNodes: "3"
-            PreferredAvailabilityZones:
-            - "us-west-2a"
-            - "us-west-2a"
-            - "us-west-2b"
+  Type: 'AWS::ElastiCache::CacheCluster'
+  Properties:
+    AZMode: cross-az
+    CacheNodeType: cache.m3.medium
+    Engine: memcached
+    NumCacheNodes: '3'
+    PreferredAvailabilityZones:
+      - us-west-2a
+      - us-west-2a
+      - us-west-2b
 ```
 
 ## See Also<a name="aws-properties-elasticache-cache-cluster--seealso"></a>

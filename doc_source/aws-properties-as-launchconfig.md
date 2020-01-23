@@ -71,10 +71,9 @@ Properties:
 ## Properties<a name="aws-properties-as-launchconfig-properties"></a>
 
 `AssociatePublicIpAddress`  <a name="cf-as-launchconfig-associatepubip"></a>
-Used for groups that launch instances into a virtual private cloud \(VPC\)\. Specifies whether to assign a public IP address to each instance\. If you specify `true`, each instance in the Auto Scaling group receives a unique public IP address\.   
-For more information, see [Launching Auto Scaling Instances in a VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
-Default: If the instance is launched into a default subnet, the default is to assign a public IP address\. If the instance is launched into a nondefault subnet, the default is not to assign a public IP address\.   
-If this resource has a public IP address and is also in a VPC that is defined in the same template, you must use the [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) to declare a dependency on the [VPC\-gateway attachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html)\.
+For Auto Scaling groups that are running in a virtual private cloud \(VPC\), specifies whether to assign a public IP address to the group's instances\. If you specify `true`, each instance in the Auto Scaling group receives a unique public IP address\. For more information, see [Launching Auto Scaling Instances in a VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
+If an instance receives a public IP address and is also in a VPC that is defined in the same stack template, you must use the [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) to declare a dependency on the [VPC\-gateway attachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html)\.   
+If the instance is launched into a default subnet, the default is to assign a public IP address, unless you disabled the option to assign a public IP address on the subnet\. If the instance is launched into a nondefault subnet, the default is not to assign a public IP address, unless you enabled the option to assign a public IP address on the subnet\. 
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -182,7 +181,7 @@ The name of the launch configuration\. This name must be unique per Region per a
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PlacementTenancy`  <a name="cfn-as-launchconfig-placementtenancy"></a>
-The tenancy of the instance, either `default` or `dedicated`\. An instance with `dedicated` tenancy runs in an isolated, single\-tenant hardware and can only be launched into a VPC\. You must set the value of this property to `dedicated` if want to launch dedicated instances in a shared tenancy VPC \(a VPC with the instance placement tenancy attribute set to default\)\.   
+The tenancy of the instance, either `default` or `dedicated`\. An instance with `dedicated` tenancy runs on isolated, single\-tenant hardware and can only be launched into a VPC\. You must set the value of this property to `dedicated` if want to launch dedicated instances in a shared tenancy VPC \(a VPC with the instance placement tenancy attribute set to default\)\.   
 If you specify this property, you must specify at least one subnet in the `VPCZoneIdentifier` property of the [AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource\.   
 For more information, see [Instance Placement Tenancy](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-vpc-tenancy) in the *Amazon EC2 Auto Scaling User Guide*\.   
 *Required*: No  
@@ -203,16 +202,15 @@ We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more i
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecurityGroups`  <a name="cfn-as-launchconfig-securitygroups"></a>
-A list that contains the security groups to assign to the instances in the Auto Scaling group\. The list can contain the IDs of existing security groups or references to [SecurityGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html) resources created in the template\.   
+A list that contains the security groups to assign to the instances in the Auto Scaling group\. The list can contain both the IDs of existing security groups and references to [SecurityGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html) resources created in the template\.  
 For more information, see [Security Groups for Your VPC](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html) in the *Amazon Virtual Private Cloud User Guide*\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SpotPrice`  <a name="cfn-as-launchconfig-spotprice"></a>
-The maximum hourly price to be paid for any Spot Instance launched to fulfill the request\. Spot Instances are launched when the price you specify exceeds the current Spot market price\. For more information, see [Launching Spot Instances in your Auto Scaling Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
-If a Spot price is set, then the Auto Scaling group will only launch when the Spot price has been met, regardless of the setting in the Auto Scaling group's `DesiredCapacity`\.   
-When you change your Spot price by creating a new launch configuration, running instances will continue to run as long as the Spot price for those running instances is higher than the current Spot market price\.
+The maximum hourly price to be paid for any Spot Instance launched to fulfill the request\. Spot Instances are launched when the price you specify exceeds the current Spot price\. For more information, see [Launching Spot Instances in your Auto Scaling Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
+When you change your maximum price by creating a new launch configuration, running instances will continue to run as long as the maximum price for those running instances is higher than the current Spot price\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -220,7 +218,7 @@ When you change your Spot price by creating a new launch configuration, running 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UserData`  <a name="cfn-as-launchconfig-userdata"></a>
-The user data available to the launched EC2 instances\.   
+The Base64\-encoded user data to make available to the launched EC2 instances\.  
 For more information, see [Instance Metadata and User Data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
 *Required*: No  
 *Type*: String  
@@ -330,20 +328,20 @@ myLaunchConfig:
     InstanceType: 
       Ref: "InstanceType"
     BlockDeviceMappings: 
-      - DeviceName: "/dev/sda1"
+      - DeviceName: /dev/sda1
         Ebs: 
-          VolumeSize: "50"
+          VolumeSize: 50
           VolumeType: "io1"
           Iops: 200
-      - DeviceName: "/dev/sdm"
+      - DeviceName: /dev/sdm
         Ebs: 
-          VolumeSize: "100"
+          VolumeSize: 100
           DeleteOnTermination: "false"
 ```
 
 ### Launch Configuration with Spot Price<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_Spot_Price"></a>
 
-This example shows a launch configuration that launches Spot Instances in the Auto Scaling group\. This launch configuration will only be active if the current Spot market price is less than the price in the template specification \(0\.05\)\.
+This example shows a launch configuration that launches Spot Instances in the Auto Scaling group\. This launch configuration will only be active if the current Spot price is less than the price in the template specification \(0\.05\)\.
 
 #### JSON<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_Spot_Price--json"></a>
 
@@ -503,7 +501,8 @@ For more performance tips, see [Amazon EBS Volume Performance on Linux Instances
       "SecurityGroups":[
         {
           "Ref":"InstanceSecurityGroup"
-        }
+        },
+        "sg-903004f8" 
       ],
       "InstanceType":"m1.large",
       "EbsOptimized":"true"
@@ -526,6 +525,7 @@ myLaunchConfig:
         Ref: "WebServerPort"
     SecurityGroups: 
       - Ref: "InstanceSecurityGroup"
+      - sg-903004f8
     InstanceType: "m1.large"
     EbsOptimized: "true"
 ```

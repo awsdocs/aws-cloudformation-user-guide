@@ -71,6 +71,17 @@ For the Amazon EFS file system mount target `fsmt-12345678`, Ref returns the mou
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-efs-mounttarget-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-efs-mounttarget-return-values-fn--getatt-fn--getatt"></a>
+
+`IpAddress`  <a name="IpAddress-fn::getatt"></a>
+The IPv4 address of the mount target\.
+
 ## Examples<a name="aws-resource-efs-mounttarget--examples"></a>
 
 ### Declare a Mount Target for an EFS File System<a name="aws-resource-efs-mounttarget--examples--Declare_a_Mount_Target_for_an_EFS_File_System"></a>

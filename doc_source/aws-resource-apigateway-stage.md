@@ -89,7 +89,7 @@ The ID of the client certificate that API Gateway uses to call your integration 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeploymentId`  <a name="cfn-apigateway-stage-deploymentid"></a>
-The ID of the deployment that the stage is associated with\.  
+The ID of the deployment that the stage is associated with\. This parameter is required\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

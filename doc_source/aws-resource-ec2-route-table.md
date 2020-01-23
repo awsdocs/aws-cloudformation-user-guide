@@ -48,7 +48,7 @@ The ID of the VPC\.
 
 ### Ref<a name="aws-resource-ec2-route-table-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the route table\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the route table\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -84,7 +84,7 @@ The following example uses the VPC ID from a VPC named myVPC that was declared e
 ```
 
 ## See Also<a name="aws-resource-ec2-route-table--seealso"></a>
-+  [AWS::EC2::Route](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route-table.html)
++  [AWS::EC2::Route](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html)
 +  [CreateRouteTable](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateRouteTable.html) in the *Amazon EC2 API Reference*
 +  [Route Tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html) in the *Amazon VPC User Guide*
 +  [Using Tags](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html) in the *Amazon Elastic Compute Cloud User Guide*

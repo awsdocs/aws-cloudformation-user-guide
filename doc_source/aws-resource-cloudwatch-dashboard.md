@@ -2,7 +2,7 @@
 
 The `AWS::CloudWatch::Dashboard` resource specifies an Amazon CloudWatch dashboard\. A dashboard is a customizable home page in the CloudWatch console that you can use to monitor your AWS resources in a single view\.
 
-There is no limit to the number of dashboards in your account\. All dashboards in your account are global, not region\-specific\.
+All dashboards in your account are global, not region\-specific\.
 
 ## Syntax<a name="aws-resource-cloudwatch-dashboard-syntax"></a>
 

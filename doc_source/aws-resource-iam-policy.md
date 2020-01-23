@@ -46,7 +46,7 @@ Properties:
 
 `Groups`  <a name="cfn-iam-policy-groups"></a>
 The name of the group to associate the policy with\.  
-&regex\-name;\.  
+This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces\. You can also include any of the following characters: \_\+=,\.@\-\.  
 *Required*: No  
 *Type*: List of String  
 *Minimum*: `1`  
@@ -111,46 +111,50 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### JSON<a name="aws-resource-iam-policy--examples--IAM_Policy_with_policy_group--json"></a>
 
 ```
+{
+    "Type": "AWS::IAM::Policy",
+    "Properties": {
+        "PolicyName": "CFNUsers",
+        "PolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Action": [
+                        "cloudformation:Describe*",
+                        "cloudformation:List*",
+                        "cloudformation:Get*"
+                    ],
+                    "Resource": "*"
+                }
+            ]
+        },
+        "Groups": [
             {
-              "Type" : "AWS::IAM::Policy",
-              "Properties" : {
-              "PolicyName" : "CFNUsers",
-              "PolicyDocument" : {
-                "Version" : "2012-10-17",
-                "Statement": [ {
-                "Effect" : "Allow",
-                "Action" : [
-                "cloudformation:Describe*",
-                "cloudformation:List*",
-                "cloudformation:Get*"
-             ],
-                "Resource" : "*" 
-             } ]
-           },
-             "Groups" : [ { "Ref" : "CFNUserGroup" } ]
-          } 
-        }
+                "Ref": "CFNUserGroup"
+            }
+        ]
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-iam-policy--examples--IAM_Policy_with_policy_group--yaml"></a>
 
 ```
-            Type: AWS::IAM::Policy
-            Properties:
-              PolicyName: "CFNUsers"
-              PolicyDocument:
-                Version: "2012-10-17"
-                Statement:
-                  -
-                    Effect: "Allow"
-                    Action:
-                      - "cloudformation:Describe*"
-                      - "cloudformation:List*"
-                      - "cloudformation:Get*"
-                    Resource: "*" 
-              Groups:
-                -
-                  Ref: "CFNUserGroup"
+Type: 'AWS::IAM::Policy'
+Properties:
+  PolicyName: CFNUsers
+  PolicyDocument:
+    Version: 2012-10-17
+    Statement:
+      - Effect: Allow
+        Action:
+          - 'cloudformation:Describe*'
+          - 'cloudformation:List*'
+          - 'cloudformation:Get*'
+        Resource: '*'
+  Groups:
+    - !Ref CFNUserGroup
 ```
 
 ### IAM Policy with specified role<a name="aws-resource-iam-policy--examples--IAM_Policy_with_specified_role"></a>
@@ -158,37 +162,43 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### JSON<a name="aws-resource-iam-policy--examples--IAM_Policy_with_specified_role--json"></a>
 
 ```
+{
+    "Type": "AWS::IAM::Policy",
+    "Properties": {
+        "PolicyName": "root",
+        "PolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Action": "*",
+                    "Resource": "*"
+                }
+            ]
+        },
+        "Roles": [
             {
-              "Type": "AWS::IAM::Policy",
-              "Properties": {
-              "PolicyName": "root",
-              "PolicyDocument": {
-                "Version" : "2012-10-17",
-                "Statement": [
-                   { "Effect": "Allow", "Action": "*", "Resource": "*" }
-                 ]
-               },
-               "Roles": [ { "Ref": "RootRole" } ]
-             }
+                "Ref": "RootRole"
             }
+        ]
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-iam-policy--examples--IAM_Policy_with_specified_role--yaml"></a>
 
 ```
-            Type: AWS::IAM::Policy 
-            Properties:
-              PolicyName: "root"
-              PolicyDocument:
-                Version: "2012-10-17"
-                Statement:
-                  -
-                    Effect: "Allow"
-                    Action: "*"
-                    Resource: "*"
-              Roles:
-                -
-                 Ref: "RootRole"
+Type: 'AWS::IAM::Policy'
+Properties:
+  PolicyName: root
+  PolicyDocument:
+    Version: 2012-10-17
+    Statement:
+      - Effect: Allow
+        Action: '*'
+        Resource: '*'
+  Roles:
+    - !Ref RootRole
 ```
 
 ## See Also<a name="aws-resource-iam-policy--seealso"></a>

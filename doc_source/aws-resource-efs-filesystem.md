@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Encrypted](#cfn-efs-filesystem-encrypted)" : Boolean,
       "[FileSystemTags](#cfn-efs-filesystem-filesystemtags)" : [ [ElasticFileSystemTag](aws-properties-efs-filesystem-filesystemtags.md), ... ],
       "[KmsKeyId](#cfn-efs-filesystem-kmskeyid)" : String,
+      "[LifecyclePolicies](#cfn-elasticfilesystem-filesystem-lifecyclepolicies)" : [ [LifecyclePolicy](aws-properties-elasticfilesystem-filesystem-lifecyclepolicy.md), ... ],
       "[PerformanceMode](#cfn-efs-filesystem-performancemode)" : String,
       "[ProvisionedThroughputInMibps](#cfn-elasticfilesystem-filesystem-provisionedthroughputinmibps)" : Double,
       "[ThroughputMode](#cfn-elasticfilesystem-filesystem-throughputmode)" : String
@@ -31,6 +32,8 @@ Properties:
   [FileSystemTags](#cfn-efs-filesystem-filesystemtags): 
     - [ElasticFileSystemTag](aws-properties-efs-filesystem-filesystemtags.md)
   [KmsKeyId](#cfn-efs-filesystem-kmskeyid): String
+  [LifecyclePolicies](#cfn-elasticfilesystem-filesystem-lifecyclepolicies): 
+    - [LifecyclePolicy](aws-properties-elasticfilesystem-filesystem-lifecyclepolicy.md)
   [PerformanceMode](#cfn-efs-filesystem-performancemode): String
   [ProvisionedThroughputInMibps](#cfn-elasticfilesystem-filesystem-provisionedthroughputinmibps): Double
   [ThroughputMode](#cfn-elasticfilesystem-filesystem-throughputmode): String
@@ -62,6 +65,12 @@ If `KmsKeyId` is specified, the `Encrypted` parameter must be set to true\.
 *Minimum*: `1`  
 *Maximum*: `2048`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`LifecyclePolicies`  <a name="cfn-elasticfilesystem-filesystem-lifecyclepolicies"></a>
+A list of policies used by EFS lifecycle management to transition files to the Infrequent Access \(IA\) storage class\.  
+*Required*: No  
+*Type*: List of [LifecyclePolicy](aws-properties-elasticfilesystem-filesystem-lifecyclepolicy.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PerformanceMode`  <a name="cfn-efs-filesystem-performancemode"></a>
 The performance mode of the file system\. We recommend `generalPurpose` performance mode for most file systems\. File systems using the `maxIO` performance mode can scale to higher levels of aggregate throughput and operations per second with a tradeoff of slightly higher latencies for most file operations\. The performance mode can't be changed after the file system has been created\.  

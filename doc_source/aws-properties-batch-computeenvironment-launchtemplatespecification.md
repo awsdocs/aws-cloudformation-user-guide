@@ -1,6 +1,6 @@
 # AWS::Batch::ComputeEnvironment LaunchTemplateSpecification<a name="aws-properties-batch-computeenvironment-launchtemplatespecification"></a>
 
-An object representing a launch template associated with a compute resource\. You must specify either the launch template ID or launch template name in the request, but not both\. 
+An object representing a launch template associated with a compute resource\. You must specify either the launch template ID or launch template name in the request, but not both\.
 
 ## Syntax<a name="aws-properties-batch-computeenvironment-launchtemplatespecification-syntax"></a>
 

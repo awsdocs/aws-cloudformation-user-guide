@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-cloudwatchloggingoptions)" : [CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md),
   "[CompressionFormat](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-compressionformat)" : String,
   "[EncryptionConfiguration](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-encryptionconfiguration)" : [EncryptionConfiguration](aws-properties-kinesisfirehose-deliverystream-encryptionconfiguration.md),
+  "[ErrorOutputPrefix](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-erroroutputprefix)" : String,
   "[Prefix](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-prefix)" : String,
   "[RoleARN](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-rolearn)" : String
 }
@@ -31,6 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CompressionFormat](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-compressionformat): String
   [EncryptionConfiguration](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-encryptionconfiguration): 
     [EncryptionConfiguration](aws-properties-kinesisfirehose-deliverystream-encryptionconfiguration.md)
+  [ErrorOutputPrefix](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-erroroutputprefix): String
   [Prefix](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-prefix): String
   [RoleARN](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-rolearn): String
 ```
@@ -69,6 +71,12 @@ The type of compression that Kinesis Data Firehose uses to compress the data tha
 Configures Amazon Simple Storage Service \(Amazon S3\) server\-side encryption\. Kinesis Data Firehose uses AWS Key Management Service \(AWS KMS\) to encrypt the data that it delivers to your Amazon S3 bucket\.   
 *Required*: No  
 *Type*: [EncryptionConfiguration](aws-properties-kinesisfirehose-deliverystream-encryptionconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ErrorOutputPrefix`  <a name="cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-erroroutputprefix"></a>
+A prefix that Kinesis Data Firehose evaluates and adds to failed records before writing them to S3\. This prefix appears immediately following the bucket name\. For information about how to specify this prefix, see [Custom Prefixes for Amazon S3 Objects](https://docs.aws.amazon.com/firehose/latest/dev/s3-prefixes.html)\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Prefix`  <a name="cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-prefix"></a>

@@ -31,7 +31,7 @@ The following example creates a stack with the name `myteststack` using the `sam
 22. ]
 ```
 
-The following example describes the `myteststack` stack:
+The following example describes the `myteststack` stack events:
 
 ```
  1. PROMPT> aws cloudformation describe-stack-events --stack-name myteststack

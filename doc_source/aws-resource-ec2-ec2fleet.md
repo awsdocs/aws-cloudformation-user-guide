@@ -67,7 +67,7 @@ The configuration for the EC2 Fleet\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OnDemandOptions`  <a name="cfn-ec2-ec2fleet-ondemandoptions"></a>
-The allocation strategy of On\-Demand Instances in an EC2 Fleet\.  
+Describes the configuration of On\-Demand Instances in an EC2 Fleet\.  
 *Required*: No  
 *Type*: [OnDemandOptionsRequest](aws-properties-ec2-ec2fleet-ondemandoptionsrequest.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -91,7 +91,7 @@ The key\-value pair for tagging the EC2 Fleet request on creation\. The value fo
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TargetCapacitySpecification`  <a name="cfn-ec2-ec2fleet-targetcapacityspecification"></a>
-The `TotalTargetCapacity`, `OnDemandTargetCapacity`, `SpotTargetCapacity`, and `DefaultCapacityType` structure\.  
+The number of units to request\.  
 *Required*: Yes  
 *Type*: [TargetCapacitySpecificationRequest](aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

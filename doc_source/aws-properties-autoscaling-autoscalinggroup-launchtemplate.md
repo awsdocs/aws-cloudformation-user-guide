@@ -27,14 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-autoscaling-autoscalinggroup-launchtemplate-properties"></a>
 
 `LaunchTemplateSpecification`  <a name="cfn-as-group-launchtemplate-launchtemplatespecification"></a>
-The launch template to use\. You must specify either the launch template ID or launch template name in the request\.   
+The launch template to use\. You must specify either the launch template ID or launch template name in the request\.  
 *Required*: Yes  
 *Type*: [LaunchTemplateSpecification](aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Overrides`  <a name="cfn-as-group-launchtemplate-overrides"></a>
-Any properties that you specify override the same properties in the launch template\. Currently, the only supported override is instance type\.   
-You must specify between 2 and 20 overrides\.  
+An optional setting\. Any properties that you specify override the same properties in the launch template\. Currently, the only supported override is instance type\. You can specify between 1 and 20 instance types\.  
 *Required*: No  
 *Type*: List of [LaunchTemplateOverrides](aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

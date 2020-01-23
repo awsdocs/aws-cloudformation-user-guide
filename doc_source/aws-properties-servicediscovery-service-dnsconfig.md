@@ -35,6 +35,7 @@ An array that contains one `DnsRecord` object for each Route 53 DNS record that 
 
 `NamespaceId`  <a name="cfn-servicediscovery-service-dnsconfig-namespaceid"></a>
 The ID of the namespace to use for DNS configuration\.  
+You must specify a value for `NamespaceId` either for `DnsConfig` or for the [service properties](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html)\. Don't specify a value in both places\. 
 *Required*: No  
 *Type*: String  
 *Maximum*: `64`  
@@ -60,4 +61,5 @@ For more information about the weighted routing policy, see [Weighted Routing](h
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-servicediscovery-service-dnsconfig--seealso"></a>
++  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#aws-resource-servicediscovery-service-return-values) in the topic [AWS::ServiceDiscovery::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html) 
 +  [DnsConfig](https://docs.aws.amazon.com/cloud-map/latest/api/API_DnsConfig.html) in the *AWS Cloud Map API Reference* 

@@ -75,7 +75,7 @@ If set to `ALLOWED`, lets users change tags in a [CloudFormationProvisionedProdu
 If set to `NOT_ALLOWED`, prevents users from changing tags in a [CloudFormationProvisionedProduct](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html) resource\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-servicecatalog-resourceupdateconstraint-return-values"></a>
 

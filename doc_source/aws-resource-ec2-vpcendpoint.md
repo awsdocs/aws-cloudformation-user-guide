@@ -70,7 +70,8 @@ Default: `false`
 
 `SecurityGroupIds`  <a name="cfn-ec2-vpcendpoint-securitygroupids"></a>
 \(Interface endpoint\) The ID of one or more security groups to associate with the endpoint network interface\.  
-*Required*: No  
+This field is required when the endpoint is an interface\.  
+*Required*: Conditional  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -82,7 +83,8 @@ The service name\. To get a list of available services, use the [DescribeVpcEndp
 
 `SubnetIds`  <a name="cfn-ec2-vpcendpoint-subnetids"></a>
 \(Interface endpoint\) The ID of one or more subnets in which to create an endpoint network interface\.  
-*Required*: No  
+This field is required when the endpoint is an interface\.  
+*Required*: Conditional  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -96,7 +98,8 @@ Default: Gateway
 
 `VpcId`  <a name="cfn-ec2-vpcendpoint-vpcid"></a>
 The ID of the VPC in which the endpoint will be used\.  
-*Required*: Yes  
+This field is required when the endpoint is an interface\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -150,7 +153,7 @@ The following example specifies a VPC endpoint that allows only the s3:GetObject
          }]
    },
    "RouteTableIds" : [ {"Ref" : "routetableA"}, {"Ref" : "routetableB"} ],
-   "ServiceName" : { "Fn::Join": [ "", [ "com.amazonaws.", { "Ref": "AWS::Region" }, ".s3" ] ] },
+   "ServiceName" : { "Fn::Sub": "com.amazonaws.${AWS::Region}.s3" },
    "VpcId" : {"Ref" : "VPCID"}
  }
 }
@@ -159,25 +162,20 @@ The following example specifies a VPC endpoint that allows only the s3:GetObject
 #### YAML<a name="aws-resource-ec2-vpcendpoint--examples--VPC_Endpoint--yaml"></a>
 
 ```
-S3Endpoint:
-  Type: AWS::EC2::VPCEndpoint
-  Properties:
-     PolicyDocument:
-       Version: 2012-10-17
-       Statement:
-         - Effect: Allow
-         Principal: '*'
-         Action:
-           - 's3:GetObject'
-         Resource:
-           - 'arn:aws:s3:::examplebucket/*'
-         RouteTableIds:
-          - !Ref routetableA
-          - !Ref routetableB
-         ServiceName: !Join 
-            - ''
-            - - com.amazonaws.
-              - !Ref 'AWS::Region'
-              - .s3
-         VpcId: !Ref VPCID
+Type: AWS::EC2::VPCEndpoint
+Properties:
+  PolicyDocument: '{
+    "Version":"2012-10-17",
+    "Statement":[{
+      "Effect":"Allow",
+      "Principal": "*",
+      "Action":["s3:GetObject"],
+      "Resource":["arn:aws:s3:::examplebucket/*"]
+    }]
+  }'
+  RouteTableIds:
+    - !Ref routetableA
+    - !Ref routetableB
+  ServiceName: !Sub com.amazonaws.${AWS::Region}.s3
+  VpcId: !Ref VPCID
 ```

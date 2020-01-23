@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DedicatedMasterType](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastertype)" : String,
   "[InstanceCount](#cfn-elasticsearch-domain-elasticseachclusterconfig-instancecount)" : Integer,
   "[InstanceType](#cfn-elasticsearch-domain-elasticseachclusterconfig-instnacetype)" : String,
+  "[ZoneAwarenessConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig-zoneawarenessconfig)" : [ZoneAwarenessConfig](aws-properties-elasticsearch-domain-zoneawarenessconfig.md),
   "[ZoneAwarenessEnabled](#cfn-elasticsearch-domain-elasticseachclusterconfig-zoneawarenessenabled)" : Boolean
 }
 ```
@@ -27,6 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DedicatedMasterType](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastertype): String
   [InstanceCount](#cfn-elasticsearch-domain-elasticseachclusterconfig-instancecount): Integer
   [InstanceType](#cfn-elasticsearch-domain-elasticseachclusterconfig-instnacetype): String
+  [ZoneAwarenessConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig-zoneawarenessconfig): 
+    [ZoneAwarenessConfig](aws-properties-elasticsearch-domain-zoneawarenessconfig.md)
   [ZoneAwarenessEnabled](#cfn-elasticsearch-domain-elasticseachclusterconfig-zoneawarenessenabled): Boolean
 ```
 
@@ -45,7 +48,7 @@ Indicates whether to use a dedicated master node for the Amazon ES domain\. A de
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DedicatedMasterType`  <a name="cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastertype"></a>
-The hardware configuration of the computer that hosts the dedicated master node, such as m3\.medium\.elasticsearch\. If you specify this property, you must specify true for the DedicatedMasterEnabled property\. For valid values, see [Configuring Amazon ES Domains](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains-configure-cluster-cli) in the *Amazon Elasticsearch Service Developer Guide*\.  
+The hardware configuration of the computer that hosts the dedicated master node, such as `m3.medium.elasticsearch`\. If you specify this property, you must specify true for the `DedicatedMasterEnabled` property\. For valid values, see [Supported Instance Types](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html) in the *Amazon Elasticsearch Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -57,9 +60,15 @@ The number of data nodes \(instances\) to use in the Amazon ES domain\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceType`  <a name="cfn-elasticsearch-domain-elasticseachclusterconfig-instnacetype"></a>
-The instance type for your data nodes, such as m3\.medium\.elasticsearch\. For valid values, see [Configuring Amazon ES Domains](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains-configure-cluster-cli) in the *Amazon Elasticsearch Service Developer Guide*\.  
+The instance type for your data nodes, such as `m3.medium.elasticsearch`\. For valid values, see [Supported Instance Types](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html) in the *Amazon Elasticsearch Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ZoneAwarenessConfig`  <a name="cfn-elasticsearch-domain-elasticsearchclusterconfig-zoneawarenessconfig"></a>
+Specifies zone awareness configuration options\. Only use if `ZoneAwarenessEnabled` is `true`\.  
+*Required*: No  
+*Type*: [ZoneAwarenessConfig](aws-properties-elasticsearch-domain-zoneawarenessconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ZoneAwarenessEnabled`  <a name="cfn-elasticsearch-domain-elasticseachclusterconfig-zoneawarenessenabled"></a>

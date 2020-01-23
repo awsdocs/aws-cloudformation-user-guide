@@ -1,6 +1,6 @@
 # AWS::CloudFront::StreamingDistribution<a name="aws-resource-cloudfront-streamingdistribution"></a>
 
-A streaming distribution\. 
+A streaming distribution tells CloudFront where you want RTMP content to be delivered from, and the details about how to track and manage content delivery\.
 
 ## Syntax<a name="aws-resource-cloudfront-streamingdistribution-syntax"></a>
 

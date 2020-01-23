@@ -43,7 +43,7 @@ The name of the launch template\. You must specify either a template name or a t
 *Type*: String  
 *Minimum*: `3`  
 *Maximum*: `128`  
-*Pattern*: `[a-zA-Z0-9\(\)\.\-/_]+`  
+*Pattern*: `[a-zA-Z0-9\(\)\.-/_]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-autoscaling-autoscalinggroup-launchtemplatespecification-version"></a>

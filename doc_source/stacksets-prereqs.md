@@ -4,7 +4,7 @@ Because stack sets perform stack operations across multiple accounts, before you
 
 1. Determine which AWS account is the *administrator account*\.
 
-   Stack sets are created in this administator account\. A *target account* is the account in which you create individual stacks that belong to a stack set\.
+   Stack sets are created in this administrator account\. A *target account* is the account in which you create individual stacks that belong to a stack set\.
 
 1. Determine how you want to structure permissions for the stack sets\.
 
@@ -150,7 +150,7 @@ In general, here's how it works once you have the necessary permissions in place
 
 1. For each stack set, create a customized administrator role with permissions to assume the **AWSCloudFormationStackSetExecutionRole** service role in the target accounts\. 
 
-   Create an [IAM service role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html.html) with a custom name, using the following permissions policy:
+   Create an [IAM service role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) with a custom name, using the following permissions policy:
 
    ```
    {

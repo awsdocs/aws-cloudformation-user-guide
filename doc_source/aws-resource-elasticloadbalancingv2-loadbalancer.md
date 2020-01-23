@@ -71,7 +71,7 @@ If you don't specify a name, AWS CloudFormation generates a unique physical ID f
 
 `Scheme`  <a name="cfn-elasticloadbalancingv2-loadbalancer-scheme"></a>
 The nodes of an Internet\-facing load balancer have public IP addresses\. The DNS name of an Internet\-facing load balancer is publicly resolvable to the public IP addresses of the nodes\. Therefore, Internet\-facing load balancers can route requests from clients over the internet\.  
-The nodes of an internal load balancer have only private IP addresses\. The DNS name of an internal load balancer is publicly resolvable to the private IP addresses of the nodes\. Therefore, internal load balancers can only route requests from clients with access to the VPC for the load balancer\.  
+The nodes of an internal load balancer have only private IP addresses\. The DNS name of an internal load balancer is publicly resolvable to the private IP addresses of the nodes\. Therefore, internal load balancers can route requests only from clients with access to the VPC for the load balancer\.  
 The default is an Internet\-facing load balancer\.  
 *Required*: No  
 *Type*: String  
@@ -87,13 +87,13 @@ The default is an Internet\-facing load balancer\.
 `SubnetMappings`  <a name="cfn-elasticloadbalancingv2-loadbalancer-subnetmappings"></a>
 The IDs of the public subnets\. You can specify only one subnet per Availability Zone\. You must specify either subnets or subnet mappings\.  
 \[Application Load Balancers\] You must specify subnets from at least two Availability Zones\. You cannot specify Elastic IP addresses for your subnets\.  
-\[Network Load Balancers\] You can specify subnets from one or more Availability Zones\. You can specify one Elastic IP address per subnet\.  
+\[Network Load Balancers\] You can specify subnets from one or more Availability Zones\. You can specify one Elastic IP address per subnet if you need static IP addresses for your internet\-facing load balancer\. For internal load balancers, you can specify one private IP address per subnet from the IPv4 range of the subnet\.  
 *Required*: No  
 *Type*: List of [SubnetMapping](aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Subnets`  <a name="cfn-elasticloadbalancingv2-loadbalancer-subnets"></a>
-The IDs of the public subnets\. You can specify only one subnet per Availability Zone\. You must specify either subnets or subnet mappings\.  
+The IDs of the subnets\. You can specify only one subnet per Availability Zone\. You must specify either subnets or subnet mappings\.  
 \[Application Load Balancers\] You must specify subnets from at least two Availability Zones\. When you specify subnets for an existing Application Load Balancer, they replace the previously enabled subnets\.  
 \[Network Load Balancers\] You can specify subnets from one or more Availability Zones when you create the load balancer\. You can't change the subnets for an existing Network Load Balancer\.  
 *Required*: No  
@@ -101,7 +101,7 @@ The IDs of the public subnets\. You can specify only one subnet per Availability
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-elasticloadbalancingv2-loadbalancer-tags"></a>
-The tags\. Each resource can have a maximum of 10 tags\.  
+One or more tags to assign to the load balancer\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

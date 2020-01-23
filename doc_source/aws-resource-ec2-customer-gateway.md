@@ -64,7 +64,7 @@ The type of VPN connection that this customer gateway supports \(`ipsec.1`\)\.
 
 ### Ref<a name="aws-resource-ec2-customer-gateway-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the customer gateway\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the customer gateway\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -80,7 +80,7 @@ myCustomerGateway:
     Properties: 
         Type: ipsec.1
         BgpAsn: 65534
-        IpAddress 12.1.2.3
+        IpAddress: 12.1.2.3
 ```
 
 ### <a name="aws-resource-ec2-customer-gateway--examples--"></a>

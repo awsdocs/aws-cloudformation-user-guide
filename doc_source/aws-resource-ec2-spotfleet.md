@@ -43,13 +43,14 @@ Properties:
 `SpotFleetRequestConfigData`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata"></a>
 Describes the configuration of a Spot Fleet request\.  
 *Required*: Yes  
-*Type*: [SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md)
+*Type*: [SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md)  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 ## Return Values<a name="aws-resource-ec2-spotfleet-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-spotfleet-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the Spot Fleet\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the Spot Fleet\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

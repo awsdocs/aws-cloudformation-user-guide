@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPool InviteMessageTemplate<a name="aws-properties-cognito-userpool-invitemessagetemplate"></a>
 
-`InviteMessageTemplate` is a subproperty of the [AdminCreateUserConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-admincreateuserconfig.html) property that defines the email and SMS invitation message structure of an Amazon Cognito User Pool\.
+The message template to be used for the welcome message to new users\.
 
 See also [Customizing User Invitation Messages](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-message-customizations.html#cognito-user-pool-settings-user-invitation-message-customization)\.
 

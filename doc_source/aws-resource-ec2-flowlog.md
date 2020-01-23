@@ -48,7 +48,7 @@ If you specify `LogDestinationType` as `s3`, do not specify `DeliverLogsPermissi
 
 `LogDestination`  <a name="cfn-ec2-flowlog-logdestination"></a>
 Specifies the destination to which the flow log data is to be published\. Flow log data can be published to a CloudWatch Logs log group or an Amazon S3 bucket\. The value specified for this parameter depends on the value specified for `LogDestinationType`\.  
-If LogDestinationType is not specified or `cloud-watch-logs`, specify the Amazon Resource Name \(ARN\) of the CloudWatch Logs log group\.  
+If `LogDestinationType` is not specified or `cloud-watch-logs`, specify the Amazon Resource Name \(ARN\) of the CloudWatch Logs log group\. For example, to publish to a log group called `my-logs`, specify `arn:aws:logs:us-east-1:123456789012:log-group:my-logs`\. Alternatively, use `LogGroupName` instead\.  
 If LogDestinationType is `s3`, specify the ARN of the Amazon S3 bucket\. You can also specify a subfolder in the bucket\. To specify a subfolder in the bucket, use the following ARN format: `bucket_ARN/subfolder_name/`\. For example, to specify a subfolder named `my-logs` in a bucket named `my-bucket`, use the following ARN: `arn:aws:s3:::my-bucket/my-logs/`\. You cannot use `AWSLogs` as a subfolder name\. This is a reserved term\.  
 *Required*: No  
 *Type*: String  
@@ -118,4 +118,17 @@ The following example creates a flow log for the VPC called MyVPC and logs all t
     "TrafficType" : "ALL"
   }
 }
+```
+
+#### YAML<a name="aws-resource-ec2-flowlog--examples--Creating_a_flow_log_that_monitors_all_traffic_types--yaml"></a>
+
+```
+MyFlowLog:
+  Type: AWS::EC2::FlowLog
+  Properties:
+    DeliverLogsPermissionArn: !GetAtt FlowLogRole.Arn
+    LogGroupName: FlowLogsGroup
+    ResourceId: !Ref MyVPC
+    ResourceType: VPC
+    TrafficType: ALL
 ```

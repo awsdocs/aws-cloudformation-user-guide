@@ -341,20 +341,20 @@ DBInstance:
     InstanceType: "m1.small"
     TimeBasedAutoScaling: 
       Friday: 
-        12: "on"
-        13: "on"
-        14: "on"
-        15: "on"
+        "12": "on"
+        "13": "on"
+        "14": "on"
+        "15": "on"
       Saturday: 
-        12: "on"
-        13: "on"
-        14: "on"
-        15: "on"
+        "12": "on"
+        "13": "on"
+        "14": "on"
+        "15": "on"
       Sunday: 
-        12: "on"
-        13: "on"
-        14: "on"
-        15: "on"
+        "12": "on"
+        "13": "on"
+        "14": "on"
+        "15": "on"
 ```
 
 ## See Also<a name="aws-resource-opsworks-instance--seealso"></a>

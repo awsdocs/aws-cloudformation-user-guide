@@ -1,6 +1,6 @@
 # AWS::SSM::MaintenanceWindowTask NotificationConfig<a name="aws-properties-ssm-maintenancewindowtask-notificationconfig"></a>
 
-The `NotificationConfig` property type specifies configurations for sending notifications for a Maintenance Window task in AWS Systems Manager\.
+The `NotificationConfig` property type specifies configurations for sending notifications for a maintenance window task in AWS Systems Manager\.
 
  `NotificationConfig` is a property of the [MaintenanceWindowRunCommandParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html) property type\.
 
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ssm-maintenancewindowtask-notificationconfig-properties"></a>
 
 `NotificationArn`  <a name="cfn-ssm-maintenancewindowtask-notificationconfig-notificationarn"></a>
-An Amazon Resource Name \(ARN\) for a Simple Notification Service \(SNS\) topic\. Run Command pushes notifications about command status changes to this topic\.  
+An Amazon Resource Name \(ARN\) for an Amazon Simple Notification Service \(Amazon SNS\) topic\. Run Command pushes notifications about command status changes to this topic\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

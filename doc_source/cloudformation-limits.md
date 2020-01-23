@@ -18,12 +18,35 @@ Your AWS account has AWS CloudFormation limits that you might need to know when 
 |  [Parameter name](template-anatomy.md)  |  Maximum size of a parameter name\.  |  255 characters  |   | 
 |  [Parameter value](template-anatomy.md)  |  Maximum size of a parameter value\.  |  4,096 bytes  |  To use a larger parameter value, create multiple parameters and then use `Fn::Join` to append the multiple values into a single value\.  | 
 |  [Resources](template-anatomy.md)  |  Maximum number of resources that you can declare in your AWS CloudFormation template\.  |  200 resources  |  To specify more resources, separate your template into multiple templates by using, for example, [nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html)\.  | 
-|  [Resources in concurrent stack operations](template-anatomy.md)   |  Maximum number of resources you can have involved in stack operations \(create, update, or delete operations\) in your region at a given time\.  |  Limits will vary according to the region size, or the total peak traffic currently provisioned for in a region\.  |  The limits are designed to allow for usual traffic and to protect from unusually high traffic from a single customer that would affect the ability of CloudFormation to serve the region as a whole\.  Use the [DescribeAccountLimits](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeAccountLimits.html) API to determine the current limit for an account in a specific region\.  | 
-|  [Resource name](template-anatomy.md)  |  Maximum size of a resource name\.  |  255 characters  |   | 
+|  [Resources in concurrent stack operations](template-anatomy.md)   |  Maximum number of resources you can have involved in stack operations \(create, update, or delete operations\) in your region at a given time\.  | Use the [DescribeAccountLimits](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeAccountLimits.html) API to determine the current limit for an account in a specific region\. |  | 
+|  [Resource name](template-anatomy.md)  |  Maximum size of a resource name\.  |  255 characters  |  | 
 |  [Stacks](stacks.md)  |  Maximum number of AWS CloudFormation stacks that you can create\.  |  200 stacks  |  To create more stacks, delete stacks that you don't need or request an increase in the maximum number of stacks in your AWS account\. For more information, see [AWS Service Limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.  | 
-|  [StackSets](what-is-cfnstacksets.md)  |  Maximum number of AWS CloudFormation stack sets you can create in your administrator account\.  |  20 stack sets  |  To create more stack sets, delete stack sets that you don't need or request an increase in the maximum number of stack sets in your AWS account\. For more information, see [AWS Service Limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.  | 
-|  [Stack instances](what-is-cfnstacksets.md)  |  Maximum number of stack instances you can create per stack set\.  |  500 stack instances per stack set  |  To create more stack instances, delete stack instances that you don't need or request an increase in the maximum number of stack instances in your AWS account\. For more information, see [AWS Service Limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.  | 
-|  [StackSets instance operations](what-is-cfnstacksets.md)  |  Maximum number of stack instance operations you can run in each region at the same time, per administrator account\.  |  1500 operations  |   | 
+|  [StackSets](what-is-cfnstacksets.md)  |  Maximum number of AWS CloudFormation stack sets you can create in your administrator account\.  |  100 stack sets  |  To create more stack sets, delete stack sets that you don't need or request an increase in the maximum number of stack sets in your AWS account\. For more information, see [AWS Service Limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.  | 
+|  [Stack instances](what-is-cfnstacksets.md)  |  Maximum number of stack instances you can create per stack set\.  |  2000 stack instances per stack set  |  To create more stack instances, delete stack instances that you don't need or request an increase in the maximum number of stack instances in your AWS account\. For more information, see [AWS Service Limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.  | 
+|  [StackSets instance operations](what-is-cfnstacksets.md)  |  Maximum number of stack instance operations you can run in each region at the same time, per administrator account\.  |  3500 operations  |  This limit applies *per region*, and is regardless of the number of stack sets involved\. It includes stack instances affected by StackSet creation and update operations, as well as creating, updating, or deleting stack instances directly\.  | 
 |  [Template body size in a request](template-anatomy.md)  |  Maximum size of a template body that you can pass in a `CreateStack`, `UpdateStack`, or `ValidateTemplate` request\.  |  51,200 bytes  |  To use a larger template body, separate your template into multiple templates by using, for example, [nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html)\. Or upload the template to an Amazon S3 bucket\.  | 
 |  [Template body size in an Amazon S3 object](template-anatomy.md)  |  Maximum size of a template body that you can pass in an Amazon S3 object for a `CreateStack`, `UpdateStack`, `ValidateTemplate` request with an Amazon S3 template URL\.  |  460,800 bytes  |  To use a larger template body, separate your template into multiple templates by using, for example, [nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html)\.  | 
 |  [Template description](template-anatomy.md)  |  Maximum size of a template description\.  |  1,024 bytes  |   | 
+
+## StackSet Availability<a name="stacksets-availability"></a>
+
+StackSets is supported in the following regions:
++ US East \(N\. Virginia\)
++ US East \(Ohio\)
++ US West \(N\. California\)
++ US West \(Oregon\)
++ Canada \(Central\)
++ Asia Pacific \(Mumbai\)
++ Asia Pacific \(Seoul\)
++ Asia Pacific \(Singapore\)
++ Asia Pacific \(Sydney\)
++ Asia Pacific \(Tokyo\)
++ EU \(Frankfurt\)
++ EU \(Ireland\)
++ EU \(London\)
++ EU \(Paris\)
++ South America \(São Paulo\)
+
+## StackSets and Macros<a name="stacksets-macros"></a>
+
+StackSets does not currently support templates that use macros, including transforms, which are macros hosted by AWS CloudFormation\. For more information about macros, see [Template Macros](template-macros.md)\.

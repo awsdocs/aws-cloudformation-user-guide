@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application MonitoringConfiguration<a name="aws-properties-kinesisanalyticsv2-application-monitoringconfiguration"></a>
 
-Describes configuration parameters for Amazon CloudWatch logging for a Java\-based Kinesis Data Analytics application\. For more information about CloudWatch logging, see [Monitoring](https://docs.aws.amazon.com/https://docs.aws.amazon.com/kinesisanalytics/latest/java/monitoring-overview.html)\.
+Describes configuration parameters for Amazon CloudWatch logging for a Java\-based Kinesis Data Analytics application\. For more information about CloudWatch logging, see [Monitoring](https://docs.aws.amazon.com/kinesisanalytics/latest/java/monitoring-overview.html)\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-monitoringconfiguration-syntax"></a>
 
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-monitoringconfiguration-properties"></a>
 
 `ConfigurationType`  <a name="cfn-kinesisanalyticsv2-application-monitoringconfiguration-configurationtype"></a>
-Describes whether to use the default CloudWatch logging configuration for an application\.  
+Describes whether to use the default CloudWatch logging configuration for an application\. You must set this property to `CUSTOM` in order to set the `LogLevel` or `MetricsLevel` parameters\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `CUSTOM | DEFAULT`  

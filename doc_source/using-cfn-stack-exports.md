@@ -13,13 +13,13 @@ A nested stack is a stack that you create within another stack by using the [AWS
 
 If you want to isolate information sharing to within a nested stack group, we suggest that you use nested stacks\. To share information with other stacks \(not just within the group of nested stacks\), export values\. For example, you can create a single stack with a subnet and then export its ID\. Other stacks can use that subnet by importing its ID; each stack doesn't need to create its own subnet\. Note that as long as stacks are importing the subnet ID, you can't change or delete it\.
 
-## Listing Exported Output Values<a name="w4669ab1c15c21c11"></a>
+## Listing Exported Output Values<a name="using-cfn-stack-exports-listing"></a>
 
 To see the values that you can import, list all of the exported output values by using the AWS CloudFormation console, AWS CLI, or AWS CloudFormation API\. AWS CloudFormation shows the names and values of the exported outputs for the current region and the stack from which the outputs are exported\. To reference an exported output value in a stack's template, use the export name and the [`Fn::ImportValue`](intrinsic-function-reference-importvalue.md) function\.
 
 **To list exported output values \(console\)**
-+ In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), from the **CloudFormation** drop\-down menu, choose **Exports**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-cfn-exports.png)
++ In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), from the **CloudFormation** navigation pane, choose **Exports**\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-exports.png)
 
 **To list exported output values \(AWS CLI\)**
 + Run the [aws cloudformation list\-exports](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html) command\.

@@ -5,13 +5,13 @@ The `AWS::SecretsManager::Secret` resource creates a secret and stores it in Sec
 To specify the `SecretString` encrypted value for the secret, specify either the `SecretString` or the `GenerateSecretString` property in this resource\. You must specify one or the other, but you can't specify both\. See the [first two examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html#aws-resource-secretsmanager-secret-hardcoded) later in this topic\.
 
 **Note**  
-You can't generate a secret with a `SecretBinary` secret value using AWS CloudFormation\. You can create only a `SecretString` text\-based secret value\.
+You can't generate a secret with a `SecretBinary` secret value using AWS CloudFormation\. You can only create a `SecretString` text\-based secret value\.
 
 **Note**  
-Do not create a dynamic reference that has a backslash `(\)`as the final value\. AWS CloudFormation cannot resolve those references, which results in a resource failure\. 
+Do not create a dynamic reference using a backslash `(\)` as the final value\. AWS CloudFormation cannot resolve those references, which causes a resource failure\. 
 
 After you create the basic secret, you can do any of the following:
-+ Configure your secret with details of the [Secrets Manager supported database or service](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html#full-rotation-support) whose credentials are stored in this secret\. 
++ Configure your secret with details of the [Secrets Manager supported database or service](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html#full-rotation-support) with credentials stored in this secret\. 
 + Attach a resource\-based permissions policy to the secret\. To do this, define a [AWS::SecretsManager::ResourcePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html) resource type\.
 + You can optionally configure a secret to rotate after a specified number of days\. See [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)\.
 
@@ -61,17 +61,17 @@ Specifies a user\-provided description of the secret\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GenerateSecretString`  <a name="cfn-secretsmanager-secret-generatesecretstring"></a>
-A structure that specifies how to generate a random password by using the functionality of the [GetRandomPassword API](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetRandomPassword.html)\. You can return that string directly to use as the secret value, or you can specify both the `SecretStringTemplate` and the `GenerateSecretKey`parameters\. Secrets Manager uses the value in `GenerateSecretKey`parameters\. Secrets Manager uses the value in `GenerateSecretKey` as the key name and combines it with the randomly generated password to make a JSON key\-value pair\. It then inserts that pair into the JSON structure that's specified in the `SecretStringTemplate`parameter\. Secrets Manager stores the completed string as the secret value in the initial version of the secret\. For more information about how to use this property, see [Secrets Manager Secret GenerateSecretString](https://docs.aws.amazon.com/AWSCloudFormation/latest/userguide/aws-properties-secretsmanager-secret-generatesecretstring.html) and the [first example](https://docs.aws.amazon.com/AWSCloudFormation/latest/userguide/aws-resource-secretsmanager-secret.html#aws-resource-secretsmanager-secret-generated) in the following Examples section\.  
-Either `SecretString` or `SecretBinary` must have a value, but not both\. They cannot both be empty\.  
+A structure that specifies generating a random password by using the functionality of the [GetRandomPassword API](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetRandomPassword.html)\. You can return that string directly to use as the secret value, or you can specify both the `SecretStringTemplate` and the `GenerateSecretKey` parameters\. Secrets Manager uses the value in `GenerateSecretKey` parameters\. Secrets Manager uses the value in `GenerateSecretKey` as the key name and combines it with the randomly generated password to make a JSON key\-value pair\. Secrets Manager then inserts the pair into the JSON structure specified in the `SecretStringTemplate` parameter\. Secrets Manager stores the completed string as the secret value in the initial version of the secret\. For more information about how to use this property, see [Secrets Manager Secret GenerateSecretString](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-secret-generatesecretstring.html) and the [first example](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html#aws-resource-secretsmanager-secret-generated) in the following Examples section\.  
+Either `SecretString` or `GenerateSecretString` must have a value, but not both\. They cannot both be empty\.  
 *Required*: No  
 *Type*: [GenerateSecretString](aws-properties-secretsmanager-secret-generatesecretstring.md)  
 *Minimum*: `0`  
-*Maximum*: `7168`  
+*Maximum*: `10240`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-secretsmanager-secret-kmskeyid"></a>
-Specifies the ARN, Key ID, or alias of the AWS KMS customer master key \(CMK\) that's used to encrypt the `SecretString` or `SecretBinary` values for versions of this secret\. If you don't specify this value, then Secrets Manager defaults to the AWS account's CMK \(the one named `aws/secretsmanager`\)\. If an AWS KMS CMK with that name doesn't yet exist, Secrets Manager creates it for you automatically the first time it needs to encrypt a version's `SecretString` or `SecretBinary` fields\.  
-You can use the account's default CMK to encrypt and decrypt only if you call this operation using credentials from the same account that owns the secret\. If the secret is in a different account, then you must create a custom CMK and specify the ARN in this field\. 
+Specifies the ARN, Key ID, or alias of the AWS KMS customer master key \(CMK\) used to encrypt the `SecretString` or `SecretBinary` values for versions of this secret\. If you don't specify this value, then Secrets Manager defaults to the AWS account CMK, `aws/secretsmanager`\. If an AWS KMS CMK with that name doesn't exist, Secrets Manager creates the CMK for you automatically the first time it encrypts a version `SecretString` or `SecretBinary` fields\.  
+You can use the account default CMK to encrypt and decrypt only if you call this operation using credentials from the same account that owns the secret\. If the secret is in a different account, then you must create a custom CMK and specify the ARN in this field\. 
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -88,9 +88,9 @@ The friendly name of the secret\. You can use forward slashes in the name to rep
 
 `SecretString`  <a name="cfn-secretsmanager-secret-secretstring"></a>
 Specifies a literal string to use as the secret value for the secret\. You can use any text you like, but remember that Lambda rotation functions require a specific JSON structure to be present in this field\.   
-Alternatively, instead of hardcoding the password in this string parameter, we recommend that you use the `GenerateSecretString` parameter instead\.  
+Alternatively, instead of hardcoding the password in this string parameter, we recommend you use the `GenerateSecretString` parameter instead\.  
 You must specify either `SecretString` or `GenerateSecretString`, but not both\.  
-Stack updates that modify a `SecretString` property, will immediately change the secret's value\. 
+Stack updates that modify a `SecretString` property, immediately changes the secret value\. 
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -113,13 +113,13 @@ When you pass the logical ID of an `AWS::SecretsManager::Secret` resource to the
 
 If you know the ARN of a secret, you can reference a secret that you created in one part of the stack template from within the definition of another resource in the same template\. You typically use the `Ref` function with the [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html) resource type to get references to both the secret and its associated database\.
 
-For more information about using the `Ref` function, see [Ref](AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
+For more information about using the `Ref` function, see [Ref](url-doc-domain/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
 
 ## Examples<a name="aws-resource-secretsmanager-secret--examples"></a>
 
 ### Creating a Secret with a Dynamically Generated Password<a name="aws-resource-secretsmanager-secret--examples--Creating_a_Secret_with_a_Dynamically_Generated_Password"></a>
 
-The following example creates a secret, constructing the secret value from a string template that's combined with a dynamically generated random password\. The result of this example is a `SecretString` value that looks like the following:
+The following example creates a secret, constructing the secret value from a string template combined with a dynamically generated random password\. The result of this example is a `SecretString` value that looks like the following:
 
 `{"username": "test-user", "password": "rzDtILsQNfmmHwkJBPsTVhkRvWRtSn" )`
 
@@ -171,7 +171,7 @@ MySecretA:
 
 ### Creating a Secret with a Hardcoded Password<a name="aws-resource-secretsmanager-secret--examples--Creating_a_Secret_with_a_Hardcoded_Password"></a>
 
-The following example creates a secret and provides the secret value as a literal string that's stored in the secret\. We recommend that you don't hardcode your password this way\. Instead use the [SecretsManager Secret GenerateSecretString](https://docs.aws.amazon.com/AWSCloudFormation/latest/ug/aws-properties-secretsmanager-secret-generatesecretstring.html) property\. See the previous example for the recommended option\.
+The following example creates a secret and provides the secret value as a literal string stored in the secret\. We recommend that you don't hardcode your password this way\. Instead use the [SecretsManager Secret GenerateSecretString](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-secret-generatesecretstring.html) property\. See the previous example for the recommended option\.
 
 #### JSON<a name="aws-resource-secretsmanager-secret--examples--Creating_a_Secret_with_a_Hardcoded_Password--json"></a>
 

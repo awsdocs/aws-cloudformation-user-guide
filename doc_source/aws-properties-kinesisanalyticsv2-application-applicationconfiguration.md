@@ -37,7 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `ApplicationCodeConfiguration`  <a name="cfn-kinesisanalyticsv2-application-applicationconfiguration-applicationcodeconfiguration"></a>
 The code location and type parameters for a Java\-based Kinesis Data Analytics application\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [ApplicationCodeConfiguration](aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

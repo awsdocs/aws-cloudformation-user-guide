@@ -13,7 +13,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Capabilities](#cfn-ecs-taskdefinition-linuxparameters-capabilities)" : [KernelCapabilities](aws-properties-ecs-taskdefinition-kernelcapabilities.md),
   "[Devices](#cfn-ecs-taskdefinition-linuxparameters-devices)" : [ [Device](aws-properties-ecs-taskdefinition-device.md), ... ],
   "[InitProcessEnabled](#cfn-ecs-taskdefinition-linuxparameters-initprocessenabled)" : Boolean,
+  "[MaxSwap](#cfn-ecs-taskdefinition-linuxparameters-maxswap)" : Integer,
   "[SharedMemorySize](#cfn-ecs-taskdefinition-linuxparameters-sharedmemorysize)" : Integer,
+  "[Swappiness](#cfn-ecs-taskdefinition-linuxparameters-swappiness)" : Integer,
   "[Tmpfs](#cfn-ecs-taskdefinition-linuxparameters-tmpfs)" : [ [Tmpfs](aws-properties-ecs-taskdefinition-tmpfs.md), ... ]
 }
 ```
@@ -26,7 +28,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Devices](#cfn-ecs-taskdefinition-linuxparameters-devices): 
     - [Device](aws-properties-ecs-taskdefinition-device.md)
   [InitProcessEnabled](#cfn-ecs-taskdefinition-linuxparameters-initprocessenabled): Boolean
+  [MaxSwap](#cfn-ecs-taskdefinition-linuxparameters-maxswap): Integer
   [SharedMemorySize](#cfn-ecs-taskdefinition-linuxparameters-sharedmemorysize): Integer
+  [Swappiness](#cfn-ecs-taskdefinition-linuxparameters-swappiness): Integer
   [Tmpfs](#cfn-ecs-taskdefinition-linuxparameters-tmpfs): 
     - [Tmpfs](aws-properties-ecs-taskdefinition-tmpfs.md)
 ```
@@ -53,9 +57,24 @@ Run an `init` process inside the container that forwards signals and reaps proce
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`MaxSwap`  <a name="cfn-ecs-taskdefinition-linuxparameters-maxswap"></a>
+The total amount of swap memory \(in MiB\) a container can use\. This parameter will be translated to the `--memory-swap` option to [docker run](https://docs.docker.com/engine/reference/run/) where the value would be the sum of the container memory plus the `maxSwap` value\.  
+If a `maxSwap` value of `0` is specified, the container will not use swap\. Accepted values are `0` or any positive integer\. If the `maxSwap` parameter is omitted, the container will use the swap configuration for the container instance it is running on\. A `maxSwap` value must be set for the `swappiness` parameter to be used\.  
+If you are using tasks that use the Fargate launch type, the `maxSwap` parameter is not supported\.
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `SharedMemorySize`  <a name="cfn-ecs-taskdefinition-linuxparameters-sharedmemorysize"></a>
 The value for the size \(in MiB\) of the `/dev/shm` volume\. This parameter maps to the `--shm-size` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
 If you are using tasks that use the Fargate launch type, the `sharedMemorySize` parameter is not supported\.
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Swappiness`  <a name="cfn-ecs-taskdefinition-linuxparameters-swappiness"></a>
+This allows you to tune a container's memory swappiness behavior\. A `swappiness` value of `0` will cause swapping to not happen unless absolutely necessary\. A `swappiness` value of `100` will cause pages to be swapped very aggressively\. Accepted values are whole numbers between `0` and `100`\. If the `swappiness` parameter is not specified, a default value of `60` is used\. If a value is not specified for `maxSwap` then this parameter is ignored\. This parameter maps to the `--memory-swappiness` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
+If you are using tasks that use the Fargate launch type, the `swappiness` parameter is not supported\.
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
