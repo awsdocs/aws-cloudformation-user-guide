@@ -108,11 +108,13 @@ The following example creates a notification rule with a name of My Notification
 {
     "Type": "AWS::CodeStarNotifications::NotificationRule",
     "Properties": {
-        "Name": "My Notification Rule for Comments on Commits",
+        "Name": "My Notification Rule for Comments on Deploys",
         "DetailType": "FULL",
         "Resource": "arn:aws:codecommit:us-east-2:123456789012:MyDemoRepo",
         "EventTypeIds": [
-            "codecommit-repository-comments-on-commits"
+            "codedeploy-application-deployment-failed"
+            "codedeploy-application-deployment-succeeded"
+            "codedeploy-application-deployment-started"
         ],
         "Targets": [
             {
@@ -134,11 +136,13 @@ The following example creates a notification rule with a name of My Notification
 ```
 Type: 'AWS::CodeStarNotifications::NotificationRule'
 Properties:
-        Name: 'My Notification Rule for Comments on Commits'
+        Name: 'My Notification Rule for Comments on Deploys'
         DetailType: FULL
         Resource: 'arn:aws:codecommit:us-east-2:123456789012:MyDemoRepo'
         EventTypeIds: 
-            - codecommit-repository-comments-on-commits
+            - codedeploy-application-deployment-failed
+            - codedeploy-application-deployment-succeeded
+            - codedeploy-application-deployment-started
         Targets: 
             - TargetType: SNS, 
               TargetAddress: 'Fn::Sub': 'arn:aws:sns:us-east-2:123456789012:MyNotificationTopic'
