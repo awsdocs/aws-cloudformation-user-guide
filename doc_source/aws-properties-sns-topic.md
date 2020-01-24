@@ -41,7 +41,7 @@ Properties:
 ## Properties<a name="aws-properties-sns-topic-properties"></a>
 
 `DisplayName`  <a name="cfn-sns-topic-displayname"></a>
-The display name to use for an Amazon SNS topic with SMS subscriptions\.  
+The display name to use for an Amazon SNS topic with SNS subscriptions\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
