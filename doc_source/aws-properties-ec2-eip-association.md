@@ -161,7 +161,7 @@ For additional examples, see [Assigning an Amazon EC2 Elastic IP Using AWS::EC2:
             "KeyName" : { "Ref" : "KeyName" },
             "NetworkInterfaces" : [ { "NetworkInterfaceId" : {"Ref" : "controlXface"}, "DeviceIndex" : "0" }, { "NetworkInterfaceId" : {"Ref" : "webXface"}, "DeviceIndex" : "1" }],
             "Tags" : [ {"Key" : "Role", "Value" : "Test Instance"}],
-            "UserData" : {"Fn::Base64" : { "Fn::Join" : ["",["#!/bin/bash -ex","\n", "\n","yum install ec2-net-utils -y","\n", "ec2ifup eth1","\n", "service httpd start"]]}}
+            "UserData" : {"Fn::Base64" : { "Fn::Join" : ["",["#!/bin/bash -x","\n", "\n","yum install ec2-net-utils -y","\n", "ec2ifup eth1","\n", "service httpd start"]]}}
         }
     }
 }
@@ -248,7 +248,7 @@ Resources:
         Value: Test Instance
 UserData:
   Fn::Base64: !Sub |
-    #!/bin/bash -xe
+    #!/bin/bash -x
     yum install ec2-net-utils -y
     ec2ifup eth1
     service httpd start

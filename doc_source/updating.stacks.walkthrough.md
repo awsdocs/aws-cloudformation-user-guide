@@ -361,7 +361,7 @@ To complete the stack, the template creates an Amazon EC2 security group\.
         "InstanceType"   : { "Ref" : "InstanceType" },
         "SecurityGroups" : [ {"Ref" : "WebServerSecurityGroup"} ],
         "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
-             "#!/bin/bash -xe\n",
+             "#!/bin/bash -x\n",
              "yum install -y aws-cfn-bootstrap\n",
 
              "# Install the files and packages from the metadata\n",
@@ -369,9 +369,6 @@ To complete the stack, the template creates an Amazon EC2 security group\.
              "         --stack ", { "Ref" : "AWS::StackName" },
              "         --resource WebServerInstance ",
              "         --region ", { "Ref" : "AWS::Region" }, "\n",
-
-             "# Start up the cfn-hup daemon to listen for changes to the Web Server metadata\n",
-             "/opt/aws/bin/cfn-hup || error_exit 'Failed to start cfn-hup'\n",  
 
              "# Signal the status from cfn-init\n",
              "/opt/aws/bin/cfn-signal -e $? ",
@@ -1174,7 +1171,7 @@ For reference, the following sample shows the complete template\. If you use thi
         "KeyName"        : { "Ref" : "KeyName" },
         "SecurityGroups" : [ {"Ref" : "WebServerSecurityGroup"} ],
         "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
-             "#!/bin/bash -xe\n",
+             "#!/bin/bash -x\n",
              "yum install -y aws-cfn-bootstrap\n",
 
              "# Install the files and packages from the metadata\n",
@@ -1182,10 +1179,7 @@ For reference, the following sample shows the complete template\. If you use thi
              "         --stack ", { "Ref" : "AWS::StackName" },
              "         --resource LaunchConfig ",
              "         --region ", { "Ref" : "AWS::Region" }, "\n",
-             
-             "# Start up the cfn-hup daemon to listen for changes to the Web Server metadata\n",
-             "/opt/aws/bin/cfn-hup || error_exit 'Failed to start cfn-hup'\n",  
-
+            
              "# Signal the status from cfn-init\n",
              "/opt/aws/bin/cfn-signal -e $? ",
              "         --stack ", { "Ref" : "AWS::StackName" },

@@ -344,7 +344,7 @@ In the following example, sections marked with an ellipsis \(`...`\) are omitted
         "SecurityGroups" : [ {"Ref" : "WebServerSecurityGroup"} ],
         "KeyName"        : { "Ref" : "KeyName" },
         "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
-             "#!/bin/bash -xe\n",
+             "#!/bin/bash -x\n",
              "yum install -y aws-cfn-bootstrap\n",
 
              "# Install the files and packages from the metadata\n",
@@ -534,7 +534,7 @@ For more information, see the [Do Not Embed Credentials in Your Templates](https
         "SecurityGroups" : [ {"Ref" : "WebServerSecurityGroup"} ],
         "KeyName"        : { "Ref" : "KeyName" },
         "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
-          "#!/bin/bash -xe\n",
+          "#!/bin/bash -x\n",
           "yum install -y aws-cfn-bootstrap\n",
           
           "# Install the files and packages from the metadata\n",
@@ -587,7 +587,7 @@ The following example adds a creation policy to the Amazon EC2 instance to ensur
         "SecurityGroups" : [ {"Ref" : "WebServerSecurityGroup"} ],
         "KeyName"        : { "Ref" : "KeyName" },
         "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
-             "#!/bin/bash -xe\n",
+             "#!/bin/bash -x\n",
              "yum update aws-cfn-bootstrap\n",
 
              "# Install the files and packages from the metadata\n",
@@ -991,7 +991,7 @@ You can also view the template at the following location:
         "SecurityGroups" : [ {"Ref" : "WebServerSecurityGroup"} ],
         "KeyName"        : { "Ref" : "KeyName" },
         "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
-             "#!/bin/bash -xe\n",
+             "#!/bin/bash -x\n",
              "yum install -y aws-cfn-bootstrap\n",
 
              "# Install the files and packages from the metadata\n",

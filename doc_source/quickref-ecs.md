@@ -402,7 +402,7 @@ For the latest AMI IDs, see [Amazon ECS\-optimized AMI](https://docs.aws.amazon.
             "Fn::Join":[
               "",
               [
-                "#!/bin/bash -xe\n",
+                "#!/bin/bash -x\n",
                 "echo ECS_CLUSTER=",
                 {
                   "Ref":"ECSCluster"
@@ -915,7 +915,7 @@ Resources:
       KeyName: !Ref 'KeyName'
       UserData:
         Fn::Base64: !Sub |
-          #!/bin/bash -xe
+          #!/bin/bash -x
           echo ECS_CLUSTER=${ECSCluster} >> /etc/ecs/ecs.config
           yum install -y aws-cfn-bootstrap
           /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource ECSAutoScalingGroup --region ${AWS::Region}

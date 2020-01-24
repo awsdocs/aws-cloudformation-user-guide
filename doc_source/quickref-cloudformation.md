@@ -212,7 +212,7 @@ This example shows a cfn\-signal command line that signals success to a wait con
     "Fn::Join": [
       "", 
       [
-         "#!/bin/bash -xe\n",
+         "#!/bin/bash -x\n",
          "/opt/aws/bin/cfn-signal --exit-code 0 '", 
          {
            "Ref": "myWaitHandle"
@@ -232,7 +232,7 @@ UserData:
     'Fn::Join':
       - ''
       - - |
-          #!/bin/bash -xe
+          #!/bin/bash -x
         - /opt/aws/bin/cfn-signal --exit-code 0 '
         - Ref: myWaitHandle
         - |

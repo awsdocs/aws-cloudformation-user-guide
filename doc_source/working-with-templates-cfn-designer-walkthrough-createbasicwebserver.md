@@ -810,7 +810,7 @@ JSON
                "Fn::Join": [
                  "",
                  [
-                   "#!/bin/bash -xe\n",
+                   "#!/bin/bash -x\n",
                    "yum install -y aws-cfn-bootstrap\n",
                    "# Install the files and packages from the metadata\n",
                    "/opt/aws/bin/cfn-init -v ",
@@ -865,7 +865,7 @@ YAML
            'Fn::Join':
              - ''
              - - |
-                 #!/bin/bash -xe
+                 #!/bin/bash -x
                - |
                  yum install -y aws-cfn-bootstrap
                - |

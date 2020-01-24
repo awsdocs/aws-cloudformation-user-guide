@@ -30,7 +30,7 @@ The Resources section contains the definitions of the AWS resources you want to 
  9.       "SecurityGroups" : [ {"Ref" : "WebServerSecurityGroup"} ],
 10.       "KeyName"        : { "Ref" : "KeyName" },
 11.       "UserData" : { "Fn::Base64" : { "Fn::Join" : ["", [
-12.                      "#!/bin/bash -xe\n",
+12.                      "#!/bin/bash -x\n",
 13.                      "yum update -y aws-cfn-bootstrap\n",
 14. 
 15.                      "/opt/aws/bin/cfn-init -v ",
@@ -79,7 +79,7 @@ The Resources section contains the definitions of the AWS resources you want to 
 12.       - Ref: WebServerSecurityGroup
 13.       UserData:
 14.         Fn::Base64: !Sub |
-15.            #!/bin/bash -xe
+15.            #!/bin/bash -x
 16.            yum update -y aws-cfn-bootstrap
 17.            /opt/aws/bin/cfn-init -v --stack ${AWS::StackId} --resource WebServer --configsets wordpress_install --region ${AWS::Region}
 18.            /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackId} --resource WebServer --region ${AWS::Region}
