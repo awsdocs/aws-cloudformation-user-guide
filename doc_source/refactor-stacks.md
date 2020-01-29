@@ -1,6 +1,6 @@
 # Moving Resources Between Stacks<a name="refactor-stacks"></a>
 
-Using the `resource import` feature, you can move resources between, or *refactor*, stacks\. You need to first add a `Retain` deletion policy to the resource you want to move to ensure that the resource is preserved when you remote it from the source stack and import it to the target stack\.
+Using the `resource import` feature, you can move resources between, or *refactor*, stacks\. You need to first add a `Retain` deletion policy to the resource you want to move to ensure that the resource is preserved when you remove it from the source stack and import it to the target stack\.
 
 **Important**  
 Not all resources support import operations\. See [Resources that Support Import Operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import-supported-resources.html) before you remove a resource from your stack\. If you remove a resource that doesn't support import operations from your stack, you can't import the resource into another stack or bring it back into the source stack\.
