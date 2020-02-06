@@ -26,6 +26,6 @@ Before you configure VPC endpoints for AWS CloudFormation, be aware of the follo
 
 To create the VPC endpoint for the AWS CloudFormation service, use the [Creating an Interface Endpoint](https://docs.aws.amazon.com/vpc/latest/userguide/vpce-interface.html#create-interface-endpoint) procedure in the Amazon VPC User Guide to create the following endpoint:
 
-**com\.amazonaws\.*region*\.cloudformation**
+**com\.amazonaws\.*region*\.s3**
 
 *region* represents the region identifier for an AWS region supported by AWS CloudFormation, such as `us-east-2` for the US East \(Ohio\) Region\. 
